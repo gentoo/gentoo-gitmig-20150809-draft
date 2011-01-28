@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.3.1.ebuild,v 1.1 2010/12/02 15:10:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.3.1.ebuild,v 1.2 2011/01/28 23:31:24 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit vdr-plugin
 
@@ -19,35 +19,44 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.6.0
 	app-misc/lirc"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	vdr-plugin_src_prepare
+
+	sed -i "${WORKDIR}"/extb/src/LinPIC/Makefile \
+		-e "s:\$(LDLIBS):\$(LDFLAGS) \$(LDLIBS):"
 
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}_vdr-1.7.13.diff"
 }
 
+src_compile() {
+	vdr-plugin_src_compile
+
+	emake -C "${WORKDIR}/extb/src/LinPIC" all
+}
 src_install() {
 	vdr-plugin_src_install
 
 	dodoc README.de
-	dodoc "${S}/../lircd.conf.extb_FW1.08"
+	dodoc "${WORKDIR}/lircd.conf.extb_FW1.08"
 	docinto wakeup
 	dodoc "${S}/wakeup/README.de"
 
-	dobin "${S}/../extb/bin/extb.sh"
-	dobin "${S}/../extb/bin/picdl"
-	dobin "${S}/../extb/bin/status.sh"
-	dobin "${S}/../extb/bin/tx.sh"
+	dobin "${WORKDIR}/extb/src/LinPIC/picdl"
+	dobin "${WORKDIR}/extb/bin/extb.sh"
+	dobin "${WORKDIR}/extb/bin/status.sh"
+	dobin "${WORKDIR}/extb/bin/tx.sh"
 	dobin "${S}/wakeup/extb-poweroff.pl"
 	dobin "${S}/wakeup/examples/checkscript.sh"
 
 	insinto /usr/share/extb/
-	doins "${S}/../extb_1.08.hex"
+	doins "${WORKDIR}/extb_1.08.hex"
 
 	insinto /etc/extb
-	doins "${S}/../extb/bin/PICflags.conf"
+	doins "${WORKDIR}/extb/bin/PICflags.conf"
 	doins "${S}/wakeup/examples/extb-poweroff.conf"
 }
 
