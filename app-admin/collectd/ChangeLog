@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/collectd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.12 2010/12/24 13:49:22 a3li Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.13 2011/01/28 21:34:21 dilfridge Exp $
+
+  28 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  collectd-4.10.2-r2.ebuild:
+  Add hints about the changed configuration of the perl and python plugins
+  to config file (bug 351265, thanks drobbins!)
 
   24 Dec 2010; Alex Legler <a3li@gentoo.org> -collectd-4.10.1-r4.ebuild:
   Removing vulnerable ebuilds, bug 347622.

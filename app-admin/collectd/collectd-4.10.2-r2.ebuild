@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2-r2.ebuild,v 1.1 2010/12/21 21:14:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2-r2.ebuild,v 1.2 2011/01/28 21:34:21 dilfridge Exp $
 
 EAPI="2"
 
@@ -283,6 +283,9 @@ src_install() {
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/logrotate" collectd || die
+
+	sed -i -e 's:^.*LoadPlugin perl$:# The new, correct way to load the perl plugin -- \n# <LoadPlugin perl>\n#   Globals true\n# </LoadPlugin>:' "${D}"/etc/collectd.conf || die
+	sed -i -e 's:^.*LoadPlugin python$:# The new, correct way to load the python plugin -- \n# <LoadPlugin python>\n#   Globals true\n# </LoadPlugin>:' "${D}"/etc/collectd.conf || die
 }
 
 collectd_rdeps() {
