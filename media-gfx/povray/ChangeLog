@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/povray
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.108 2010/12/20 14:24:17 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.109 2011/01/28 19:01:32 lavajoe Exp $
+
+*povray-3.7.0_rc3 (28 Jan 2011)
+
+  28 Jan 2011; Joe Peterson <lavajoe@gentoo.org> -povray-3.7.0_beta35.ebuild,
+  -povray-3.7.0_beta38.ebuild, +povray-3.7.0_rc3.ebuild,
+  -files/povray-3.7.0_beta35-configure-allow-libpng14.patch,
+  -files/povray-3.7.0_beta35-libpng14.patch,
+  -files/povray-3.7.0_beta35-print-extend-expiration-info.patch:
+  Add new 3.7.9_rc3; remove old
 
 *povray-3.7.0_beta40 (20 Dec 2010)
 

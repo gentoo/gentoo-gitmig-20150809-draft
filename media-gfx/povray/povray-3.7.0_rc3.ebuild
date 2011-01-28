@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta38.ebuild,v 1.4 2010/11/14 14:40:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.1 2011/01/28 19:01:32 lavajoe Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit autotools eutils flag-o-matic versionator
 POVRAY_MAJOR_VER=$(get_version_component_range 1-3)
 POVRAY_MINOR_VER=$(get_version_component_range 4)
 if [ -n "$POVRAY_MINOR_VER" ]; then
-	POVRAY_MINOR_VER=${POVRAY_MINOR_VER/beta/beta.}
+	POVRAY_MINOR_VER=${POVRAY_MINOR_VER/rc/RC}
 	MY_PV="${POVRAY_MAJOR_VER}.${POVRAY_MINOR_VER}"
 else
 	MY_PV=${POVRAY_MAJOR_VER}
@@ -25,7 +25,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd
 IUSE="debug mkl openexr tiff X"
 
 DEPEND="
-	>=dev-libs/boost-1.36
+	>=dev-libs/boost-1.41
 	media-libs/jpeg
 	media-libs/libpng
 	sys-libs/zlib
@@ -40,10 +40,6 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_prepare() {
-	# Print info on how to extend the expiration date of the beta
-	# if it has expired.
-	epatch "${FILESDIR}"/${P}-print-extend-expiration-info.patch
-
 	# Change some destination directories that cannot be adjusted via configure
 	cp configure.ac configure.ac.orig
 	sed \
@@ -99,7 +95,7 @@ src_configure() {
 		--disable-strip \
 		--disable-optimiz \
 		--disable-optimiz-arch \
-		--with-boost-libdir="${EPREFIX}"/usr/$(get_libdir)
+		--with-boost-libdir="${EPREFIX}/usr/$(get_libdir)"
 }
 
 src_test() {
@@ -126,18 +122,4 @@ pkg_preinst() {
 			done
 		fi
 	done
-}
-
-pkg_postinst() {
-	ewarn "POV-Ray betas have expiration dates, but these can be extended for up to"
-	ewarn "a year.  If expired, you will get the following error when running povray:"
-	ewarn
-	ewarn "    povray: this pre-release version of POV-Ray for Unix has expired"
-	ewarn
-	ewarn "To extend the license period (a week at a time), you can do"
-	ewarn "something like the following (adjust syntax for your shell):"
-	ewarn
-	ewarn "    export POVRAY_BETA=\`povray --betacode 2>&1\`"
-	ewarn
-	ewarn "You will need to repeat this each time it expires."
 }
