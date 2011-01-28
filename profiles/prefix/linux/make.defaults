@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/make.defaults,v 1.4 2010/08/12 20:11:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/make.defaults,v 1.5 2011/01/28 20:51:17 darkside Exp $
 
 # 'Sane' defaults
 ELIBC="glibc"
@@ -23,7 +23,7 @@ USE="${USE} -acl"
 # direction with how LDFLAGS will be set by default, this entry
 # may move.
 # 2010/08/12 - Fabian Groffen <grobian@gentoo.org>
-# Unlike default/prefix, we do NOT have --as-needed here, as it seems to
+# Unlike default/linux, we do NOT have --as-needed here, as it seems to
 # break a random amount of packages, that don't break (or just not
 # enough) for non-Prefix installs.
 LDFLAGS="-Wl,-O1"
