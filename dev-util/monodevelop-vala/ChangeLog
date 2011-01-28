@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop-vala
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.9 2010/11/27 16:10:30 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.10 2011/01/28 13:22:45 pacho Exp $
+
+*monodevelop-vala-2.4-r1 (28 Jan 2011)
+
+  28 Jan 2011; Pacho Ramos <pacho@gentoo.org> +monodevelop-vala-2.4-r1.ebuild:
+  This doesn't really need so old vala version, 0.10 slot is enough.
 
   27 Nov 2010; Peter Alfredsen <loki_val@gentoo.org>
   monodevelop-vala-2.4.ebuild:
