@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-decruft
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.6 2009/05/07 19:42:09 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.7 2011/01/28 18:49:56 hd_brummy Exp $
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-decruft-0.0.4.ebuild, vdr-decruft-0.0.4-r1.ebuild:
+  eapi=3; cleanup
 
   07 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-decruft-0.0.4-r1.ebuild:
