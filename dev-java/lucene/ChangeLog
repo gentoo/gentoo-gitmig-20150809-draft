@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/lucene
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.72 2010/06/01 14:49:21 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.73 2011/01/28 14:04:40 fordfrog Exp $
+
+*lucene-3.0.3 (28 Jan 2011)
+
+  28 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> +lucene-3.0.3.ebuild:
+  Version bump. The new ebuild removes bundled jars and puts junit on classpath
+  for compilation always, because javacc builds tests too.
 
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org> lucene-3.0.0.ebuild:
   Marked ppc stable for bug #300002.
