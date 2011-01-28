@@ -10,3 +10,4 @@ move kde-misc/kcm_tablet kde-misc/wacomtablet
 move games-strategy/wormux games-strategy/warmux
 move app-vim/latexsuite app-vim/vim-latex
 move sci-biology/allpaths sci-biology/allpathslg
+slotmove gnome-base/gnome-applets 2 0
