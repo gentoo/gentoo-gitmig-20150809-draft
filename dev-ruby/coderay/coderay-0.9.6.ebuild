@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-0.9.6.ebuild,v 1.2 2010/12/04 16:10:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-0.9.6.ebuild,v 1.3 2011/01/28 10:09:05 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_DOCDIR="doc"
