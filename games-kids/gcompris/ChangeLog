@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.58 2011/01/21 06:01:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.59 2011/01/28 07:47:53 mr_bones_ Exp $
+
+  28 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> gcompris-9.5.ebuild,
+  +files/gcompris-9.5-cursor.patch:
+  add upstream patch to fix cursor visibility (bug #353009)
 
   21 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> gcompris-9.5.ebuild:
   add media-plugins/gst-plugins-alsa for bug #351116 - tracked down by Peter
