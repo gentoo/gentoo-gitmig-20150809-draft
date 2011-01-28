@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-4.8.1.ebuild,v 1.1 2011/01/28 15:15:05 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-4.8.1.ebuild,v 1.2 2011/01/28 17:06:04 mr_bones_ Exp $
 
 EAPI=2
 
@@ -65,7 +65,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	# Inform about set-user-ID bit of mount.cifs 
+	# Inform about set-user-ID bit of mount.cifs
 	if use setuid ; then
 		ewarn "Setting SETUID bit for mount.cifs."
 		ewarn "However, there may be severe security implications. Also see:"
