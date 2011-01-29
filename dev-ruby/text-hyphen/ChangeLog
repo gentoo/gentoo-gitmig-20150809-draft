@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/text-hyphen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.28 2010/12/27 20:51:45 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/ChangeLog,v 1.29 2011/01/29 11:17:06 graaff Exp $
+
+  29 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  text-hyphen-1.0.0-r2.ebuild, text-hyphen-1.0.0-r3.ebuild:
+  Move forward ~ppc keyword, not clear why this was dropped in the first
+  place.
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   text-hyphen-1.0.0-r3.ebuild:
