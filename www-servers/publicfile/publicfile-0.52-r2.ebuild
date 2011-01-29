@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r2.ebuild,v 1.1 2009/10/14 11:55:10 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r2.ebuild,v 1.2 2011/01/29 23:30:17 bangert Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
-RDEPEND=">=sys-process/daemontools-0.70
+RDEPEND="virtual/daemontools
 	>=sys-apps/ucspi-tcp-0.83
 	selinux? ( sec-policy/selinux-publicfile )
 	!net-ftp/netkit-ftpd"
