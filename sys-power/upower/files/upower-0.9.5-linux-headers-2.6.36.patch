@@ -1,0 +1,12 @@
+http://cgit.freedesktop.org/upower/commit/?id=04dd349103ac1db8660d5c4fd86e91e3b488650c
+
+--- src/linux/sysfs-utils.c
++++ src/linux/sysfs-utils.c
+@@ -36,6 +36,7 @@
+ #include <fcntl.h>
+ #include <pwd.h>
+ #include <grp.h>
++#include <stdint.h>
+ #include <linux/fs.h>
+ #include <sys/ioctl.h>
+ #include <glib.h>
