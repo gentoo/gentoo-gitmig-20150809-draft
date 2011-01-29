@@ -1,10 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.10.1.ebuild,v 1.10 2011/01/24 14:33:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.10.1.ebuild,v 1.11 2011/01/29 01:23:16 arfrever Exp $
 
 EAPI="3"
+PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
-inherit gnome2 flag-o-matic multilib
+inherit gnome2 python
 
 DESCRIPTION="GTK+2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
@@ -29,5 +33,19 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF} $(use_enable doc docs)"
+	python_pkg_setup
 }
-# There are no .py files installed, so no python_mod_* are required
+
+src_prepare() {
+	gnome2_src_prepare
+	python_src_prepare
+}
+
+src_configure() {
+	python_execute_function -s gnome2_src_configure
+}
+
+src_install() {
+	python_execute_function -s gnome2_src_install
+	python_clean_installation_image
+}
