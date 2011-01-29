@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.8 2010/09/29 10:02:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.9 2011/01/29 23:06:40 bangert Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~arm ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/bglibs-1.106"
-RDEPEND="sys-process/daemontools"
+RDEPEND="virtual/daemontools"
 PROVIDE="virtual/logger"
 
 pkg_setup() {
