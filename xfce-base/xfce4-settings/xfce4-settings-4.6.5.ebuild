@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.5.ebuild,v 1.9 2010/09/06 17:53:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.5.ebuild,v 1.10 2011/01/29 20:23:38 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	>=xfce-base/libxfcegui4-4.6
 	>=xfce-base/xfconf-4.6
 	>=xfce-base/exo-0.3.100
-	libnotify? ( >=x11-libs/libnotify-0.1.3 )
+	libnotify? ( <x11-libs/libnotify-0.7 )
 	keyboard? ( >=x11-libs/libxklavier-0.3 )
 	sound? ( media-libs/libcanberra )
 	!<x11-base/xorg-server-1.5.3"
