@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4.ebuild,v 1.6 2008/08/30 14:40:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.6.4.ebuild,v 1.7 2011/01/29 20:05:33 ssuominen Exp $
 
+EAPI=3
 GCONF_DEBUG=no
-
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GnomeBaker is a GTK2/Gnome cd burning application."
 HOMEPAGE="http://sourceforge.net/projects/gnomebaker"
@@ -33,14 +33,20 @@ RDEPEND=">=x11-libs/gtk+-2.8
 		>=media-libs/libogg-1.1.2
 		media-libs/gst-plugins-good )"
 DEPEND="${RDEPEND}
-	app-text/scrollkeeper
-	dev-util/pkgconfig
+	app-text/rarian
 	dev-util/intltool
-	sys-devel/gettext
-	dev-perl/XML-Parser"
+	dev-util/pkgconfig
+	sys-devel/gettext"
 
 pkg_setup() {
-	G2CONF="${G2CONF} --disable-dependency-tracking $(use_enable libnotify)"
+	G2CONF="${G2CONF}
+		--disable-dependency-tracking
+		$(use_enable libnotify)"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	gnome2_src_prepare
 }
 
 src_install() {

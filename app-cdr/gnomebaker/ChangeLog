@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gnomebaker
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.56 2008/09/28 09:23:28 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.57 2011/01/29 20:05:33 ssuominen Exp $
+
+  29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> gnomebaker-0.6.4.ebuild,
+  +files/gnomebaker-0.6.4-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   28 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
   -files/gnomebaker-0.6.1-export-dynamic_for_glade.patch,
