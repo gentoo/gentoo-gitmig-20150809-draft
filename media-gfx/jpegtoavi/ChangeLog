@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpegtoavi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegtoavi/ChangeLog,v 1.1 2010/03/02 21:11:58 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegtoavi/ChangeLog,v 1.2 2011/01/29 17:58:48 wired Exp $
+
+  29 Jan 2011; Alex Alexander <wired@gentoo.org> metadata.xml:
+  fixed metadata.xml
 
 *jpegtoavi-1.5 (02 Mar 2010)
 
