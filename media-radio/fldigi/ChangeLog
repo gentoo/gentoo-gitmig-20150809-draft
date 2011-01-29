@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/fldigi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.11 2010/12/29 11:29:59 tomjbe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/ChangeLog,v 1.12 2011/01/29 17:50:02 hwoarang Exp $
+
+  29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> fldigi-3.20.34.ebuild:
+  Stable on amd64 wrt bug #351779
 
 *fldigi-3.20.34 (29 Dec 2010)
 
