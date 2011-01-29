@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.67 2011/01/25 17:08:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.68 2011/01/29 18:42:56 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> dnspython-1.9.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #351026
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> dnspython-1.9.2.ebuild:
   Stable for HPPA (bug #351026).

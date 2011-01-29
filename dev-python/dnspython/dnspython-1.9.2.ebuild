@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.9.2.ebuild,v 1.6 2011/01/25 17:08:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/dnspython-1.9.2.ebuild,v 1.7 2011/01/29 18:42:56 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://www.dnspython.org/kits/${PV}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
 IUSE="examples"
 
 DEPEND="dev-python/pycrypto"
