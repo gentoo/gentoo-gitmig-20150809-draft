@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.1 2010/10/22 18:06:37 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.2 2011/01/29 23:16:27 bangert Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="auth"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	sys-process/daemontools
+	virtual/daemontools
 	sys-apps/ucspi-tcp"
 
 pkg_setup() {

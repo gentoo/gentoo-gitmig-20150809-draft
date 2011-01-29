@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.4 2008/01/26 17:27:08 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.5 2011/01/29 23:16:27 bangert Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ IUSE="auth"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	sys-process/daemontools
+	virtual/daemontools
 	sys-apps/ucspi-tcp"
 
 pkg_setup() {
