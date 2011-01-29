@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnomevfs-sharp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.44 2011/01/29 15:43:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnomevfs-sharp/ChangeLog,v 1.45 2011/01/29 17:05:21 hwoarang Exp $
+
+  29 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  gnomevfs-sharp-2.24.2.ebuild:
+  Stable on amd64 wrt bug #352808
 
   29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   gnomevfs-sharp-2.24.2.ebuild:

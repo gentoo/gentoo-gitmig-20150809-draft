@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.6-r1.ebuild,v 1.3 2011/01/29 15:47:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.6-r1.ebuild,v 1.4 2011/01/29 17:04:35 hwoarang Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A simple library to embed Gecko (xulrunner) in the Mono Winforms We
 HOMEPAGE="http://mono-project.com/Gluezilla"
 
 LICENSE="LGPL-2 MPL-1.1"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.71 2011/01/29 15:45:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.72 2011/01/29 17:04:02 hwoarang Exp $
+
+  29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> art-sharp-2.24.2.ebuild:
+  Stable on amd64 wrt bug #352808
 
   29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   art-sharp-2.24.2.ebuild:

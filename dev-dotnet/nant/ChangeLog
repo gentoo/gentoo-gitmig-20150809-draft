@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.34 2011/01/29 15:50:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.35 2011/01/29 17:05:54 hwoarang Exp $
+
+  29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> nant-0.90.ebuild:
+  Stable on amd64 wrt bug #352808
 
   29 Jan 2011; Christian Faulhammer <fauli@gentoo.org> nant-0.90.ebuild:
   stable x86, bug 352808
