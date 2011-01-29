@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/vdr-infosatepg-0.0.10.ebuild,v 1.2 2011/01/29 23:29:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/vdr-infosatepg-0.0.11.ebuild,v 1.1 2011/01/29 23:29:34 hd_brummy Exp $
 
 EAPI="3"
 
 inherit vdr-plugin
 
-VERSION="163" # every bump, new version!
+VERSION="324" # every bump, new version!
 
 DESCRIPTION="VDR Plugin: Reads the contents of infosat and writes the data into the EPG."
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-infosatepg"
@@ -19,3 +19,10 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.6.0"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	vdr-plugin_src_prepare
+
+	sed '2a\
+#include <cctype>' -i global.cpp
+}
