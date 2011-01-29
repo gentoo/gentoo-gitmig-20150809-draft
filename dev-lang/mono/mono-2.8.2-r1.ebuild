@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.2-r1.ebuild,v 1.2 2011/01/27 18:52:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.8.2-r1.ebuild,v 1.3 2011/01/29 15:41:41 fauli Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.go-mono.com"
 
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="hardened minimal xen"
 
