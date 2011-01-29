@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.117 2011/01/29 05:35:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.118 2011/01/29 17:16:27 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> ncftp-3.2.4.1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #351670
 
 *ncftp-3.2.5 (29 Jan 2011)
 
