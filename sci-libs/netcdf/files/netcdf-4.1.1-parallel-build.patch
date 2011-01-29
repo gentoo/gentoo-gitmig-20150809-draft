@@ -4,7 +4,7 @@ https://bugs.gentoo.org/296174
 
 --- netcdf-4.1.1/f90/Makefile.am
 +++ netcdf-4.1.1/f90/Makefile.am
-@@ -101,17 +101,24 @@
+@@ -101,17 +101,25 @@
  # Some fortran compilers change the file names of .mod files to all
  # uppercase. Just to be special.
  if UPPER_CASE_MOD
@@ -21,7 +21,8 @@ https://bugs.gentoo.org/296174
 +NETCDF_MODULES = typesizes.mod netcdf.mod 
  endif
  
-+$(NETCDF_O): typeSizes.o
++NETCDF_LO := $(NETCDF_O:.o=.lo)
++$(NETCDF_LO): typeSizes.o
 +install-data-local:
 +	test -z "$(includedir)" || $(MKDIR_P) "$(DESTDIR)$(includedir)"
 +	@list='$(NETCDF_MODULES)'; test -n "$(includedir)" || list=; \
