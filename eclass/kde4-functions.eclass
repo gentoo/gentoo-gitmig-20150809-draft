@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.43 2011/01/28 05:05:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.44 2011/01/29 18:05:42 scarabeus Exp $
 
 inherit versionator
 
@@ -17,7 +17,7 @@ inherit versionator
 # By default kde4 eclasses want EAPI 2 which might be redefinable to newer
 # versions.
 case ${EAPI:-0} in
-	2|3) : ;;
+	2|3|4) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
