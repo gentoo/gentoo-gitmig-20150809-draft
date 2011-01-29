@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.7.0.ebuild,v 1.1 2010/11/23 10:14:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.7.0.ebuild,v 1.2 2011/01/29 16:34:35 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -15,14 +15,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="btrfs dmraid fat gnome hfs jfs kde mdadm ntfs reiserfs reiser4 xfs xfce"
+IUSE="btrfs dmraid fat gtk hfs jfs kde mdadm ntfs reiserfs reiser4 xfs"
 
 common_depends=">=sys-block/parted-2.3
 	>=dev-cpp/gtkmm-2.16:2.4"
 
 RDEPEND="${common_depends}
-	gnome? ( x11-libs/gksu )
-	xfce? ( x11-libs/gksu )
+	gtk? ( x11-libs/gksu )
 	kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 
 	>=sys-fs/e2fsprogs-1.41
@@ -77,9 +76,9 @@ src_install() {
 		echo "OnlyShowIn=KDE;" >> "${D}"/usr/share/applications/gparted-kde.desktop
 	fi
 
-	if use gnome || use xfce; then
+	if use gtk; then
 		sed -i "s:Exec=:Exec=gksu :" "${D}"/usr/share/applications/gparted.desktop
-		echo "OnlyShowIn=GNOME;XFCE;" >> "${D}"/usr/share/applications/gparted.desktop
+		echo "NotShowIn=KDE;" >> "${D}"/usr/share/applications/gparted.desktop
 	else
 		echo "OnlyShowIn=X-NeverShowThis;" >> "${D}"/usr/share/applications/gparted.desktop
 	fi

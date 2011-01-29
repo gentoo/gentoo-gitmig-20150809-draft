@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.88 2010/11/23 10:14:20 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.89 2011/01/29 16:34:35 ssuominen Exp $
+
+  29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> gparted-0.7.0.ebuild:
+  Replace USE="gnome xfce" with USE="gtk" wrt #353121.
 
 *gparted-0.7.0 (23 Nov 2010)
 
