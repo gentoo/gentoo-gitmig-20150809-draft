@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12404 2011/01/27 12:05:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12405 2011/01/29 07:15:12 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -411,13 +411,6 @@ x11-themes/gion-icon-theme
 #
 # Masked for removal in 30 days.
 app-editors/mousepad
-
-# Torsten Veller <tove@gentoo.org> (22 Jan 2011)
-# Mask perl-5.12.3
-# - until the virtuals are updated
-# - for testing (change INC order: prefer former vendor-/site-
-#   dirs to current priv-/archlib)
-~dev-lang/perl-5.12.3
 
 # Ryan Hill <dirtyepic@gentoo.org> (22 Jan 2011)
 # Mask development versions due to unstable API
