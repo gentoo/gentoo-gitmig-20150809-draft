@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.14 2011/01/29 17:24:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.15 2011/01/29 17:26:48 scarabeus Exp $
+
+  29 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  synaptiks-0.4.0-r1.ebuild:
+  Fix repoman warning.
 
   29 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -synaptiks-0.3.2-r1.ebuild, synaptiks-0.4.0-r1.ebuild:
