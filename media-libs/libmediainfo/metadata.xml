@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>media-video</herd>
+  <herd>video</herd>
+  <maintainer>
+    <email>media-video@gentoo.org</email>
+  </maintainer>
   <use>
-	<flag name="libmms">Support for Microsoft Media Server (MMS) streams via libmms</flag>
+    <flag name="libmms">Support for Microsoft Media Server (MMS) streams via libmms</flag>
   </use>
 </pkgmetadata>
