@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.7 2009/03/23 05:13:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.8 2011/01/29 23:36:52 bangert Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -20,7 +20,7 @@ LICENSE="public-domain"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 
 RDEPEND="
-	>=sys-process/daemontools-0.70
+	virtual/daemontools
 	sys-apps/ucspi-tcp
 	doc? ( app-doc/djbdns-man )
 	selinux? ( sec-policy/selinux-djbdns )

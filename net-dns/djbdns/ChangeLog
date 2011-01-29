@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.118 2010/07/20 18:34:59 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.119 2011/01/29 23:36:52 bangert Exp $
+
+  29 Jan 2011; Thilo Bangert <bangert@gentoo.org> djbdns-1.05-r23.ebuild:
+  dep on virtual/daemontools
 
   20 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
   -djbdns-1.05-r17.ebuild, -djbdns-1.05-r19.ebuild, -djbdns-1.05-r21.ebuild,
