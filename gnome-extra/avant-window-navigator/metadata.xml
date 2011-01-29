@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <use>
-    <flag name="vala">Enables support for applets written in <pkg>dev-lang/vala</pkg>.</flag>
-    <flag name='xfce'>Enables support for the XFCE 4 desktop environment</flag>
+    <flag name='thunar'>Enables support for the deprecated Thunar VFS layer</flag>
+    <flag name='vala'>Enables support for applets written in <pkg>dev-lang/vala</pkg>.</flag>
   </use>
   <herd>desktop-effects</herd>
   <longdescription>
