@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0-r1.ebuild,v 1.2 2011/01/16 22:35:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0-r1.ebuild,v 1.3 2011/01/29 00:10:30 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit vdr-plugin eutils
 
