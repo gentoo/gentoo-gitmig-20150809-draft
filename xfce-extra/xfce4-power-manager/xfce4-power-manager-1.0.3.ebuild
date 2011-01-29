@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.0.3.ebuild,v 1.3 2011/01/17 15:11:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.0.3.ebuild,v 1.4 2011/01/29 14:35:36 ssuominen Exp $
 
 EAPI=3
-inherit xfconf
+inherit flag-o-matic xfconf
 
 DESCRIPTION="Power manager for the Xfce desktop environment"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-power-manager"
@@ -37,6 +37,9 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto"
 
 pkg_setup() {
+	has_version ">=x11-libs/libnotify-0.7" && append-cppflags -DHAVE_LIBNOTIFY_07
+	PATCHES=( "${FILESDIR}"/${P}-libnotify-0.7.patch )
+
 	XFCONF=(
 		--disable-dependency-tracking
 		$(use_enable policykit polkit)
