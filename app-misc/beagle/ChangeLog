@@ -3,6 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.118
 # 2010/09/13 04:26:28 josejx Exp $
 
+  29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> beagle-0.3.9-r4.ebuild:
+  Stable on amd64 wrt bug #352808
+
   29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   beagle-0.3.9-r4.ebuild:
   stable x86, bug 352808
