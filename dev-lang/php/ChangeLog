@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.466 2011/01/11 19:20:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.467 2011/01/29 22:05:22 mabi Exp $
+
+*php-5.3.5-r1 (29 Jan 2011)
+
+  29 Jan 2011; Matti Bickel <mabi@gentoo.org> php-5.2.17.ebuild,
+  +php-5.3.5-r1.ebuild:
+  fixed bugs #327049 (phar locale failure), #348567 (crypt_r typo), #352560
+  (suhosin caused circular dep), #329071 (disable phpize autoconf checks)
 
   11 Jan 2011; Jeroen Roovers <jer@gentoo.org> php-5.2.17.ebuild,
   php-5.3.5.ebuild:
