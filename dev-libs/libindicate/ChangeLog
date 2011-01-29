@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.10 2011/01/17 09:34:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.11 2011/01/29 16:09:34 tampakrap Exp $
+
+*libindicate-0.4.4-r1 (29 Jan 2011)
+
+  29 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +libindicate-0.4.4-r1.ebuild:
+  Version bump, fix tests, support USE=introspection. Ebuild and patches by
+  Dennis Schridde
 
 *libindicate-0.4.4 (17 Jan 2011)
 
