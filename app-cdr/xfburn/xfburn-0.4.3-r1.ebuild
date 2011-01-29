@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r1.ebuild,v 1.5 2010/12/04 16:21:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r1.ebuild,v 1.6 2011/01/29 07:11:41 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -17,12 +17,13 @@ IUSE="dbus debug gstreamer thunar"
 RDEPEND=">=dev-libs/libburn-0.4.2
 	>=dev-libs/libisofs-0.6.2
 	>=x11-libs/gtk+-2.10:2
+	x11-themes/hicolor-icon-theme
 	>=xfce-base/libxfcegui4-4.4
 	>=xfce-base/exo-0.3
-	dbus? ( dev-libs/dbus-glib )
+	dbus? ( >=dev-libs/dbus-glib-0.88 )
 	gstreamer? ( media-libs/gstreamer
 		>=media-libs/gst-plugins-base-0.10.20 )
-	thunar? ( || ( xfce-extra/thunar-vfs <xfce-base/thunar-1.1.0 ) )"
+	thunar? ( xfce-extra/thunar-vfs )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
