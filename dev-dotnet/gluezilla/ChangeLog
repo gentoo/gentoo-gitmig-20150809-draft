@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gluezilla
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.20 2010/10/14 10:28:43 ali_bush Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.21 2011/01/29 15:47:45 fauli Exp $
+
+  29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  gluezilla-2.6-r1.ebuild:
+  stable x86, bug 352808
 
 *gluezilla-2.6-r1 (14 Oct 2010)
 
