@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.3 2010/03/27 09:52:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.4 2011/01/29 20:55:47 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="A download manager that works exclusively with aria2"
@@ -29,9 +29,12 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-syntax.patch )
+	XFCONF=(
+		--disable-dependency-tracking
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS README"
-	XFCONF="--disable-dependency-tracking"
-	PATCHES=( "${FILESDIR}/${P}-syntax.patch" )
 }
 
 src_prepare() {

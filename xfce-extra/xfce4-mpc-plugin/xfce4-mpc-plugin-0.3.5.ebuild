@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/xfce4-mpc-plugin-0.3.5.ebuild,v 1.5 2010/08/11 20:55:38 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/xfce4-mpc-plugin-0.3.5.ebuild,v 1.6 2011/01/29 20:56:50 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 EAUTORECONF=yes
 inherit xfconf
 
@@ -25,8 +25,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-exo_and_libxfcegui4.patch )
-	XFCONF="--disable-dependency-tracking
+	XFCONF=(
+		--disable-dependency-tracking
 		$(use_enable libmpd)
-		$(xfconf_use_debug)"
+		$(xfconf_use_debug)
+		)
+
 	DOCS="AUTHORS ChangeLog README TODO"
 }

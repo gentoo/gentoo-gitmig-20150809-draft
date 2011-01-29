@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/xfce4-linelight-plugin-0.1.6-r1.ebuild,v 1.3 2010/11/05 13:56:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-linelight-plugin/xfce4-linelight-plugin-0.1.6-r1.ebuild,v 1.4 2011/01/29 20:58:14 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 EAUTORECONF=yes
 inherit xfconf
 
@@ -28,6 +28,10 @@ pkg_setup() {
 		"${FILESDIR}"/${P}-libxfce4panel_h.patch
 		"${FILESDIR}"/${P}-port-to-gio.patch
 		)
-	XFCONF="--disable-dependency-tracking"
+
+	XFCONF=(
+		--disable-dependency-tracking
+		)
+
 	DOCS="AUTHORS ChangeLog NEWS"
 }
