@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminator
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.13 2010/12/05 16:27:24 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.14 2011/01/29 18:31:23 jlec Exp $
+
+  29 Jan 2011; Justin Lecher <jlec@gentoo.org> terminator-0.95.ebuild:
+  Moved dependencies from dev-python/gnome-python to splitted ones
 
   05 Dec 2010; Justin Lecher <jlec@gentoo.org> -terminator-0.93.ebuild,
   -terminator-0.94.ebuild:

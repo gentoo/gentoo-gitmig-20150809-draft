@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.95.ebuild,v 1.3 2010/12/05 16:21:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.95.ebuild,v 1.4 2011/01/29 18:31:23 jlec Exp $
 
 EAPI="2"
 
@@ -23,7 +23,12 @@ IUSE="dbus gnome"
 RDEPEND="
 	>=x11-libs/vte-0.16[python]
 	dbus? ( sys-apps/dbus )
-	gnome? ( dev-python/gnome-python )"
+	gnome? (
+		dev-python/gconf-python
+		dev-python/libgnome-python
+		dev-python/pygobject
+		dev-python/pygtk
+		)"
 DEPEND="dev-util/intltool"
 
 src_prepare() {
