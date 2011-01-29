@@ -12,8 +12,7 @@
 			<pkg>www-client/firefox</pkg>
 		</flag>
 		<flag name="mozilla">Install GUI theme tweaks for mozilla based
-			browsers, including version 2 of
-			<pkg>www-client/firefox</pkg>
+			browsers <pkg>www-client/firefox</pkg>
 		</flag>
 	</use>
 </pkgmetadata>

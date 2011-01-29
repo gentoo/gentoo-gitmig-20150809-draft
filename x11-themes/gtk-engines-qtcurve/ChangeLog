@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.103 2011/01/29 13:44:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.104 2011/01/29 17:44:33 scarabeus Exp $
+
+*gtk-engines-qtcurve-1.8.5 (29 Jan 2011)
+
+  29 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -gtk-engines-qtcurve-0.65.2.ebuild, -gtk-engines-qtcurve-1.7.2.ebuild,
+  -gtk-engines-qtcurve-1.8.1.ebuild, +gtk-engines-qtcurve-1.8.5.ebuild,
+  metadata.xml:
+  Version bump. Drop older. Cleanup mozilla useflag handling.
 
   29 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gtk-engines-qtcurve-1.6.4.ebuild:
