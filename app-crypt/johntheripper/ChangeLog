@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.123 2011/01/06 20:56:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.124 2011/01/29 13:34:48 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> johntheripper-1.7.6-r1.ebuild:
+  alpha/sparc stable wrt #350730
 
   06 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   johntheripper-1.7.6-r1.ebuild:
