@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.13.ebuild,v 1.1 2010/12/19 14:44:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.13.ebuild,v 1.2 2011/01/29 14:10:41 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime gnome2-utils qt4-r2
@@ -41,6 +41,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	sed -i -e 's:-ggdb3::g' configure || die
 	# Magnet link support
 	if use kde; then
