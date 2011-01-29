@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1-r1.ebuild,v 1.17 2010/09/19 17:03:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1-r1.ebuild,v 1.18 2011/01/29 16:20:21 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
-inherit python
+inherit eutils python
 
 DESCRIPTION="Python bindings for libnotify"
 HOMEPAGE="http://www.galago-project.org/"
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 RESTRICT_PYTHON_ABIS="3.*"
 
 src_prepare() {
+	has_version ">=x11-libs/libnotify-0.7" && epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	# Disable byte-compilation.
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
@@ -37,6 +39,7 @@ src_prepare() {
 
 src_install() {
 	python_src_install
+	python_clean_installation_image
 	dodoc AUTHORS ChangeLog NEWS README
 }
 
