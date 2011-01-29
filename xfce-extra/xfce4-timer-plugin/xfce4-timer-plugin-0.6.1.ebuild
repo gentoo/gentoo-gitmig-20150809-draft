@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.1.ebuild,v 1.2 2009/10/08 17:47:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.1.ebuild,v 1.3 2011/01/29 07:21:29 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
-DESCRIPTION="Timer plugin for Xfce4 panel"
-HOMEPAGE="http://www.xfce.org/"
+DESCRIPTION="A simple timer plug-in for the Xfce desktop environment"
+HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -22,6 +22,11 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
+	PATCHES=( "${FILESDIR}"/${P}-segfault_with_48_panel.patch )
+
+	XFCONF=(
+		--disable-dependency-tracking
+		)
+
 	DOCS="AUTHORS ChangeLog README TODO"
-	XFCONF="--disable-dependency-tracking"
 }
