@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.4.ebuild,v 1.7 2011/01/24 03:41:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/symlinks-1.4.ebuild,v 1.8 2011/01/29 17:26:01 armin76 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/linux/utils/file/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc64 sparc x86"
 IUSE="static"
 
 src_compile() {

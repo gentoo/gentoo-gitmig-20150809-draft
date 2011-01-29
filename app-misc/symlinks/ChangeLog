@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/symlinks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.31 2011/01/24 03:41:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/symlinks/ChangeLog,v 1.32 2011/01/29 17:26:01 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> symlinks-1.4.ebuild:
+  alpha/ia64 stable wrt #350698
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> symlinks-1.4.ebuild:
   Stable for SPARC (bug #350698).
