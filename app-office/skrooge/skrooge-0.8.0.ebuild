@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.8.0.ebuild,v 1.1 2011/01/03 17:32:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.8.0.ebuild,v 1.2 2011/01/29 14:57:07 scarabeus Exp $
 
 EAPI=3
 KDE_LINGUAS="bg ca ca@valencia cs da de el en_GB eo es et fr ga gl hu it ja ko lt ms nb
@@ -15,7 +15,7 @@ SRC_URI="http://skrooge.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug +handbook test"
 
 DEPEND=">=dev-libs/libofx-0.9.1
@@ -24,7 +24,8 @@ DEPEND=">=dev-libs/libofx-0.9.1
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdesdk-scripts)"
 
-# Opens X11 display and hangs forever with test 26.
+# Tests hangs forever with Openbigtest
+# Quite few others fail (in all versions)
 RESTRICT="test"
 
 DOCS="AUTHORS CHANGELOG README TODO"
