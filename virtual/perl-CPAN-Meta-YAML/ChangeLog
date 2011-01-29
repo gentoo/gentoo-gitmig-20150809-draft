@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CPAN-Meta-YAML
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.1 2011/01/28 09:13:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.2 2011/01/29 17:27:21 jer Exp $
+
+  29 Jan 2011; Jeroen Roovers <jer@gentoo.org> perl-CPAN-Meta-YAML-0.3.ebuild:
+  Marked ~hppa (bug #353115).
 
 *perl-CPAN-Meta-YAML-0.3 (28 Jan 2011)
 
