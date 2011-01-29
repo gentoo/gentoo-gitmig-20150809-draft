@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-ExtUtils-CBuilder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-CBuilder/ChangeLog,v 1.37 2011/01/24 08:47:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-CBuilder/ChangeLog,v 1.38 2011/01/29 18:23:57 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  perl-ExtUtils-CBuilder-0.280.200.ebuild,
+  perl-ExtUtils-CBuilder-0.280.201.ebuild,
+  perl-ExtUtils-CBuilder-0.280.202.ebuild:
+  Add ~alpha/~arm/~ia64/~m68k/~s390/~sh/~sparc wrt #351526
 
 *perl-ExtUtils-CBuilder-0.280.202 (24 Jan 2011)
 
