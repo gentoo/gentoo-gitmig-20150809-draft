@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/parted
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.2 2010/10/29 15:42:37 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.3 2011/01/29 05:45:06 jer Exp $
+
+*parted-2.3-r1 (29 Jan 2011)
+
+  29 Jan 2011; Jeroen Roovers <jer@gentoo.org> +parted-2.3-r1.ebuild:
+  Move to xz.
 
   29 Oct 2010; Jeroen Roovers <jer@gentoo.org> parted-2.3.ebuild:
   Add dev-util/pkgconfig to DEPEND by Mike Hiretsky (bug #343239). Set
