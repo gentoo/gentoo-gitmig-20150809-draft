@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono-basic
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.32 2010/10/08 08:44:45 ali_bush Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.33 2011/01/29 15:51:42 fauli Exp $
+
+  29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  mono-basic-2.8.ebuild:
+  stable x86, bug 352808
 
 *mono-basic-2.8 (08 Oct 2010)
 
