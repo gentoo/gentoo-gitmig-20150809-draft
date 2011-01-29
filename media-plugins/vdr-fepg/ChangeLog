@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-fepg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fepg/ChangeLog,v 1.11 2009/05/07 21:06:05 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fepg/ChangeLog,v 1.12 2011/01/29 00:06:23 hd_brummy Exp $
+
+  29 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-fepg-0.2.1.ebuild, -vdr-fepg-0.2.1-r1.ebuild, -vdr-fepg-0.3.1.ebuild,
+  -vdr-fepg-0.4.0.ebuild, vdr-fepg-0.4.1.ebuild:
+  eapi=3; cleanup; stable amd64 x86
 
   07 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   -files/vdr-fepg-0.2.1-default-no-mute.patch, vdr-fepg-0.4.0.ebuild,
