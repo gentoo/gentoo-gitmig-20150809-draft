@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes-plugin/xfce4-eyes-plugin-4.4.0.ebuild,v 1.3 2009/10/08 17:33:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes-plugin/xfce4-eyes-plugin-4.4.0.ebuild,v 1.4 2011/01/29 21:01:23 ssuominen Exp $
 
 EAUTORECONF=yes
 EINTLTOOLIZE=yes
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="panel plugin that adds eyes which watch your every step"
@@ -25,14 +25,16 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}/${P}-libtool.patch" )
+	PATCHES=( "${FILESDIR}"/${P}-libtool.patch )
 	DOCS="AUTHORS ChangeLog README"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(use_enable debug)
+		)
 }
 
 src_prepare() {
 	sed -i -e "/^AC_INIT/s/eyes_version()/eyes_version/" \
-		configure.in || die "sed failed"
+		configure.in || die
 	xfconf_src_prepare
 }
