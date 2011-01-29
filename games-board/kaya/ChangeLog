@@ -1,6 +1,11 @@
 # ChangeLog for games-board/kaya
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/ChangeLog,v 1.1 2010/12/18 00:32:19 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/ChangeLog,v 1.2 2011/01/29 21:07:27 dilfridge Exp $
+
+*kaya-0.4 (29 Jan 2011)
+
+  29 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kaya-0.4.ebuild:
+  Version bump
 
 *kaya-0.3 (18 Dec 2010)
 
