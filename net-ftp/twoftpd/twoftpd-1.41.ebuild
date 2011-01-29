@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.41.ebuild,v 1.1 2010/02/12 09:46:37 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.41.ebuild,v 1.2 2011/01/29 23:18:46 bangert Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="breakrfc"
 DEPEND=">=dev-libs/bglibs-1.106
 	>=net-libs/cvm-0.96"
 RDEPEND="sys-apps/ucspi-tcp
-	sys-process/daemontools
+	virtual/daemontools
 	${DEPEND}"
 
 src_prepare() {
