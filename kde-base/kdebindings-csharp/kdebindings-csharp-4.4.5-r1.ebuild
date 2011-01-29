@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/kdebindings-csharp-4.4.5-r1.ebuild,v 1.1 2011/01/28 17:33:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/kdebindings-csharp-4.4.5-r1.ebuild,v 1.2 2011/01/29 15:45:56 fauli Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ WEBKIT_REQUIRED="optional"
 inherit kde4-meta mono
 
 DESCRIPTION="C# bindings for KDE and Qt"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="akonadi debug +phonon plasma qimageblitz qscintilla semantic-desktop"
 
 DEPEND="
