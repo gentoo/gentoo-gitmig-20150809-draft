@@ -1,0 +1,10 @@
+# ChangeLog for app-benchmarks/i7z
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/ChangeLog,v 1.1 2011/01/29 15:01:20 jlec Exp $
+
+*i7z-0.26 (29 Jan 2011)
+
+  29 Jan 2011; Justin Lecher <jlec@gentoo.org> +files/0.26-gentoo.patch,
+  +i7z-0.26.ebuild, +metadata.xml:
+  New package, written by me, fixes #324477
+
