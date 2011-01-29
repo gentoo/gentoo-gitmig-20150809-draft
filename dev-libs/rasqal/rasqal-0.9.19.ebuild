@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.19.ebuild,v 1.4 2010/10/25 19:23:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/rasqal-0.9.19.ebuild,v 1.5 2011/01/29 21:43:08 ssuominen Exp $
 
 EAPI=3
 inherit libtool
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/flex
 	test? ( dev-perl/XML-DOM )"
+
+RESTRICT="test" #342611
 
 src_prepare() {
 	elibtoolize
