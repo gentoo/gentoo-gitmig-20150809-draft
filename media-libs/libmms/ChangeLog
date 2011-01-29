@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.44 2011/01/19 19:04:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.45 2011/01/29 21:56:38 abcd Exp $
+
+  29 Jan 2011; Jonathan Callen <abcd@gentoo.org> libmms-0.6.2.ebuild:
+  Add ~x86-freebsd/~amd64-linux/~x86-linux keywords
 
 *libmms-0.6.2 (19 Jan 2011)
 
