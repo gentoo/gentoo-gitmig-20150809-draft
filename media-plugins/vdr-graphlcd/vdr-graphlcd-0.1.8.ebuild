@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.8.ebuild,v 1.2 2010/12/26 22:55:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.8.ebuild,v 1.3 2011/01/29 01:05:21 hd_brummy Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils vdr-plugin
 
