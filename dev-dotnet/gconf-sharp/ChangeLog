@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gconf-sharp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.65 2010/11/18 08:55:36 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.66 2011/01/29 16:02:41 fauli Exp $
+
+  29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  gconf-sharp-2.24.2.ebuild:
+  stable x86, bug 352808
 
 *gconf-sharp-2.24.2 (18 Nov 2010)
 
