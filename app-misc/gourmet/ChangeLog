@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gourmet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.19 2010/10/10 16:30:10 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.20 2011/01/29 02:54:56 nixphoeni Exp $
+
+*gourmet-0.15.7 (29 Jan 2011)
+
+  29 Jan 2011; Joe Sapp <nixphoeni@gentoo.org> +gourmet-0.15.7.ebuild:
+  Version bump
 
   10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gourmet-0.15.6.ebuild:
