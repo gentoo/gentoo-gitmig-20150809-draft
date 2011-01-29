@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-joystick/vdr-joystick-0.0.3.ebuild,v 1.1 2007/12/03 20:47:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-joystick/vdr-joystick-0.0.3.ebuild,v 1.2 2011/01/29 23:55:45 hd_brummy Exp $
+
+EAPI="3"
 
 inherit vdr-plugin
 
@@ -14,6 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.6"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	vdr-plugin_src_install
