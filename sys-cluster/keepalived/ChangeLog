@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.70 2011/01/26 14:35:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.71 2011/01/29 19:00:30 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> keepalived-1.1.20.ebuild:
+  alpha/ia64/s390/sparc stable wrt #352015
 
   26 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   keepalived-1.1.20.ebuild:
