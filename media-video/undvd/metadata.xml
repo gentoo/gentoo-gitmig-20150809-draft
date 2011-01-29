@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>media-video</herd>
-<maintainer>
-  <email>gregkh@gentoo.org</email>
-  <name>Greg Kroah-Hartman</name>
-</maintainer>
-<use>
-  <flag name="ogm">Support for OGM container format</flag>
-</use>
+  <herd>video</herd>
+  <maintainer>
+    <email>gregkh@gentoo.org</email>
+    <name>Greg Kroah-Hartman</name>
+  </maintainer>
+  <use>
+    <flag name="ogm">Support for OGM container format</flag>
+  </use>
 </pkgmetadata>
