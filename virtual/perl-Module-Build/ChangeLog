@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.45 2011/01/29 09:57:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.46 2011/01/29 18:32:42 jer Exp $
+
+  29 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  perl-Module-Build-0.362.400.ebuild:
+  Marked ~hppa (bug #353115).
 
 *perl-Module-Build-0.362.400 (29 Jan 2011)
 
