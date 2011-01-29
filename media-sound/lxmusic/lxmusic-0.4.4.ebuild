@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lxmusic/lxmusic-0.4.4.ebuild,v 1.2 2010/08/07 17:30:24 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lxmusic/lxmusic-0.4.4.ebuild,v 1.3 2011/01/29 20:19:40 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="A simple GUI XMMS2 client with minimal functionality"
 HOMEPAGE="http://lxde.sourceforge.net/"
@@ -19,7 +20,11 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS README || die "dodoc failed"
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS README
 }
