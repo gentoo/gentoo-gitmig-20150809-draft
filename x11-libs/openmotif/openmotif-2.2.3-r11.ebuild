@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r11.ebuild,v 1.3 2011/01/01 21:22:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r11.ebuild,v 1.4 2011/01/29 10:58:47 ulm Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ src_prepare() {
 	sed -i -e '/^SUBDIRS/{:x;/\\$/{N;bx;};s/=.*/= lib clients/;}' Makefile.am
 	sed -i -e '/^SUBDIRS/{:x;/\\$/{N;bx;};s/=.*/= uil/;}' clients/Makefile.am
 
-	eautoreconf
+	AM_OPTS="--force-missing" eautoreconf
 }
 
 src_configure() {
@@ -56,7 +56,7 @@ src_configure() {
 	# feel free to fix properly if you care
 	append-flags -fno-strict-aliasing
 
-	econf --with-x
+	econf --with-x --disable-static
 }
 
 src_compile() {
