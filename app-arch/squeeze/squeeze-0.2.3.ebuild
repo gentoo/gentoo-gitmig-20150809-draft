@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/squeeze-0.2.3.ebuild,v 1.4 2010/05/26 12:41:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/squeeze/squeeze-0.2.3.ebuild,v 1.5 2011/01/29 07:46:01 ssuominen Exp $
 
-EAPI=2
-inherit eutils fdo-mime gnome2-utils
+EAPI=3
+inherit fdo-mime gnome2-utils
 
 DESCRIPTION="a GTK+ based and advanced archive manager for use with Thunar file manager."
 HOMEPAGE="http://squeeze.xfce.org/"
@@ -16,9 +16,9 @@ KEYWORDS="~alpha ~amd64 -hppa ~ia64 ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd"
 IUSE="debug +pathbar +toolbar"
 
 RDEPEND="x11-libs/gtk+:2
-	dev-libs/dbus-glib
+	>=dev-libs/dbus-glib-0.88
 	>=xfce-base/libxfce4util-4.4
-	|| ( xfce-extra/thunar-vfs <xfce-base/thunar-1.1.0 )"
+	xfce-extra/thunar-vfs"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
