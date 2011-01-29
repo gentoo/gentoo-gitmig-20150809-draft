@@ -1,0 +1,42 @@
+http://cgit.freedesktop.org/udisks/commit/?id=1f97cf90f30a6184486cee8877494eb828a34da4
+
+--- src/device.c
++++ src/device.c
+@@ -36,6 +36,7 @@
+ #include <fcntl.h>
+ #include <pwd.h>
+ #include <grp.h>
++#include <stdint.h>
+ #include <linux/fs.h>
+ #include <sys/ioctl.h>
+ #include <linux/cdrom.h>
+--- src/helpers/job-drive-benchmark.c
++++ src/helpers/job-drive-benchmark.c
+@@ -28,6 +28,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++#include <stdint.h>
+ #include <linux/fs.h>
+ #include <fcntl.h>
+ #include <string.h>
+--- src/helpers/job-shared.h
++++ src/helpers/job-shared.h
+@@ -30,6 +30,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
++#include <stdint.h>
+ #include <linux/fs.h>
+ 
+ #include <glib.h>
+--- src/helpers/partutil.c
++++ src/helpers/partutil.c
+@@ -34,6 +34,7 @@
+ #include <errno.h>
+ #include <sys/ioctl.h>
+ #include <ctype.h>
++#include <stdint.h>
+ #include <linux/fs.h>
+ 
+ #include <linux/hdreg.h>

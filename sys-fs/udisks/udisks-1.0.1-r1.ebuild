@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1-r1.ebuild,v 1.10 2010/10/29 06:24:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.1-r1.ebuild,v 1.11 2011/01/29 17:11:37 ssuominen Exp $
 
 EAPI=3
 inherit eutils bash-completion
@@ -38,7 +38,8 @@ DEPEND="${COMMON_DEPEND}
 RESTRICT="test"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-lvm2_api_support.patch
+	epatch "${FILESDIR}"/${P}-lvm2_api_support.patch \
+		"${FILESDIR}"/${P}-linux-headers-2.6.36.patch
 }
 
 src_configure() {
