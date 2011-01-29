@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.77 2011/01/26 14:23:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.78 2011/01/29 18:58:34 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> cheetah-2.4.4.ebuild:
+  alpha/ia64/sparc stable wrt #352728
 
   26 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cheetah-2.4.4.ebuild:
   x86 stable wrt bug #352728
