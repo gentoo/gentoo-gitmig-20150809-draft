@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.46 2011/01/21 15:44:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.47 2011/01/29 17:12:21 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> libnl-1.1-r2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #350460
 
   21 Jan 2011; Jeroen Roovers <jer@gentoo.org> libnl-1.1-r2.ebuild:
   Stable for HPPA (bug #350460).
