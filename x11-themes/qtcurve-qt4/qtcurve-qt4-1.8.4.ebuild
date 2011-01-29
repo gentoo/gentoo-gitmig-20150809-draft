@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.7.2.ebuild,v 1.1 2010/11/17 08:48:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.8.4.ebuild,v 1.1 2011/01/29 18:12:52 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 KDE_REQUIRED="optional"
 inherit confutils cmake-utils kde4-base
 
@@ -18,8 +18,10 @@ IUSE="kde windeco"
 
 DEPEND="x11-libs/qt-gui:4[dbus]
 	x11-libs/qt-svg:4
-	kde? ( >=kde-base/systemsettings-${KDE_MINIMAL}
-		windeco? ( >=kde-base/kwin-${KDE_MINIMAL} ) )"
+	kde? (
+	$(add_kdebase_dep systemsettings)
+		windeco? ( $(add_kdebase_dep kwin) )
+	)"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -27,22 +29,23 @@ DOCS="ChangeLog README TODO"
 
 PATCHES=( "${FILESDIR}/${PN}_kwin_automagic_fix.patch" )
 
+REQUIRED_USE="windeco? ( kde )"
+
 pkg_setup() {
-	if ! use kde && use windeco; then
-		ewarn
-		ewarn "Auto-disabling the windeco USE flag since it requires the kde USE"
-		ewarn "flag. To fix this, please enable the kde USE flag."
-		ewarn
-	fi
 	use kde && kde4-base_pkg_setup
 }
 
 src_configure() {
+	local mycmakeargs
 	if use kde; then
-		mycmakeargs="$(use windeco && echo "-DQTC_KWIN=true")"
+		mycmakeargs=(
+			$(cmake-utils_use windeco QTC_KWIN)
+		)
 		kde4-base_src_configure
 	else
-		mycmakeargs="-DQTC_QT_ONLY=true"
+		mycmakeargs=(
+			"-DQTC_QT_ONLY=true"
+		)
 		cmake-utils_src_configure
 	fi
 }

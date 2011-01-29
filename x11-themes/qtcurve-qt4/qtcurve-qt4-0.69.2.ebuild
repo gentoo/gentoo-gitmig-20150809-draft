@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.69.2.ebuild,v 1.9 2010/08/09 12:46:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.69.2.ebuild,v 1.10 2011/01/29 18:12:52 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 KDE_REQUIRED="optional"
 inherit flag-o-matic cmake-utils kde4-base
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.6.4-r1.ebuild,v 1.7 2011/01/29 14:02:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.6.4-r1.ebuild,v 1.8 2011/01/29 18:12:52 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 KDE_REQUIRED="optional"
 inherit confutils cmake-utils kde4-base
 
