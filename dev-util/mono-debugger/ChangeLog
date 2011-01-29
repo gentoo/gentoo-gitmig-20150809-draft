@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.45 2011/01/29 15:52:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.46 2011/01/29 17:06:27 hwoarang Exp $
+
+  29 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  mono-debugger-2.8.1-r1.ebuild:
+  Stable on amd64 wrt bug #352808
 
   29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   mono-debugger-2.8.1-r1.ebuild:
