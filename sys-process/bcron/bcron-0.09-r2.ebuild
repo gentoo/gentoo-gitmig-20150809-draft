@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09-r2.ebuild,v 1.1 2010/08/09 09:41:21 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09-r2.ebuild,v 1.2 2011/01/29 21:52:10 bangert Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="!virtual/cron
 	>=sys-process/cronbase-0.3.2
 	virtual/mta
 	sys-apps/ucspi-unix
-	sys-process/daemontools"
+	virtual/daemontools"
 PROVIDE="virtual/cron"
 
 CRON_SYSTEM_CRONTAB="yes"
