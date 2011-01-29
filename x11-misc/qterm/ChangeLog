@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.37 2010/10/08 08:34:49 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.38 2011/01/29 18:21:58 scarabeus Exp $
+
+  29 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> -qterm-0.5.2-r2.ebuild,
+  -files/qterm-0.5.2-abs.patch, -files/qterm-0.5.2-as-needed.patch,
+  -files/qterm-0.5.2-include.patch, -qterm-0.5.7.ebuild,
+  -qterm-0.5.7-r1.ebuild, -files/qterm-0.5.7-gentoo.patch, -qterm-0.5.8.ebuild,
+  qterm-0.5.11.ebuild:
+  Stabilise latest. Drop old. Cleanup ebuild a bit.
 
 *qterm-0.5.11 (08 Oct 2010)
 
