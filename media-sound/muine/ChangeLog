@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.65 2011/01/29 16:10:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.66 2011/01/29 17:07:30 hwoarang Exp $
+
+  29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> muine-0.8.11-r2.ebuild:
+  Stable on amd64 wrt bug #352808
 
   29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   muine-0.8.11-r2.ebuild:
