@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.1.ebuild,v 1.1 2011/01/24 23:48:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.1.ebuild,v 1.2 2011/01/29 12:59:42 ssuominen Exp $
 
 EAPI="3"
 
@@ -44,8 +44,10 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS || die "dodoc failed"
+	emake install DESTDIR="${D}" || die
+	dodoc AUTHORS ChangeLog NEWS || die
+
+	find "${ED}" -name '*.la' -exec rm -f '{}' +
 }
 
 pkg_preinst() {
