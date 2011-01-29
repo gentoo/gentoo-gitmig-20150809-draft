@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgee
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.17 2010/09/26 22:16:25 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.18 2011/01/29 21:11:52 nirbheek Exp $
+
+*libgee-0.6.1 (29 Jan 2011)
+
+  29 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +libgee-0.6.1.ebuild:
+  Bump to 0.6.1, memory leak fix in LinkedList
 
 *libgee-0.6.0 (26 Sep 2010)
 
