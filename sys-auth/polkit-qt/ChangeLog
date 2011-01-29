@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.14 2011/01/26 19:49:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.15 2011/01/29 19:41:29 dilfridge Exp $
+
+  29 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  polkit-qt-0.99.0.ebuild:
+  Require qt built with glib support (bug 353143)
 
   26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> polkit-qt-0.99.0.ebuild:
   readd accidently dropped keywords
