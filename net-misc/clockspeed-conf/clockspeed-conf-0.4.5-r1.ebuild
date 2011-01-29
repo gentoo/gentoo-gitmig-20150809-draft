@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed-conf/clockspeed-conf-0.4.5-r1.ebuild,v 1.1 2005/04/22 21:49:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed-conf/clockspeed-conf-0.4.5-r1.ebuild,v 1.2 2011/01/29 23:23:18 bangert Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="net-misc/clockspeed
-	sys-process/daemontools"
+	virtual/daemontools"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
