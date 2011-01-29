@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kbibtex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.36 2011/01/02 08:21:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/ChangeLog,v 1.37 2011/01/29 21:20:33 dilfridge Exp $
+
+  29 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kbibtex-0.3.0_pre20100222.ebuild, kbibtex-0.3.0_pre20110102.ebuild:
+  Remove old; bump EAPI
 
 *kbibtex-0.3.0_pre20110102 (02 Jan 2011)
 
