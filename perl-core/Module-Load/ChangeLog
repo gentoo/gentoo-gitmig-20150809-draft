@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Load
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/ChangeLog,v 1.7 2011/01/24 07:20:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/ChangeLog,v 1.8 2011/01/29 17:58:25 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> Module-Load-0.18.ebuild:
+  Add ~alpha/~arm/~ia64/~m68k/~s390/~sh/~sparc wrt #351526
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> Module-Load-0.18.ebuild:
   Marked ~hppa (bug #351526).

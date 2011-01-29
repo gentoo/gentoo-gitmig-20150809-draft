@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IPC-Cmd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.16 2011/01/24 07:24:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.17 2011/01/29 18:14:39 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> IPC-Cmd-0.680.ebuild:
+  Add ~alpha/~arm/~ia64/~m68k/~s390/~sh/~sparc wrt #351526
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> IPC-Cmd-0.680.ebuild:
   Marked ~hppa (bug #351526).
