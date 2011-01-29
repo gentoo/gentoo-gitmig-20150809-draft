@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmudmount
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.4 2010/12/26 13:01:52 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.5 2011/01/29 14:17:33 ssuominen Exp $
+
+  29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> wmudmount-1.8.ebuild,
+  +files/wmudmount-1.8-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
 *wmudmount-1.8 (26 Dec 2010)
 

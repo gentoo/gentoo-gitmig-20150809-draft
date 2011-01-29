@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/wmudmount-1.8.ebuild,v 1.1 2010/12/26 13:01:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/wmudmount-1.8.ebuild,v 1.2 2011/01/29 14:17:33 ssuominen Exp $
 
 EAPI=2
-inherit gnome2-utils
+inherit flag-o-matic gnome2-utils
 
 DESCRIPTION="A filesystem mounter that uses udisks to handle notification and mounting"
 HOMEPAGE="http://sourceforge.net/projects/wmudmount/"
@@ -22,7 +22,13 @@ RDEPEND=">=x11-libs/gtk+-2.18:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+}
+
 src_configure() {
+	has_version ">=x11-libs/libnotify-0.7" && append-cppflags -DHAVE_LIBNOTIFY_07
+
 	econf \
 		--disable-dependency-tracking \
 		$(use_with libnotify) \
