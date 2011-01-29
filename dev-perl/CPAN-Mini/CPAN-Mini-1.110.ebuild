@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-1.100630.ebuild,v 1.1 2010/03/05 08:36:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-1.110.ebuild,v 1.1 2011/01/29 08:33:19 tove Exp $
 
-EAPI=2
+EAPI=3
 
 MODULE_AUTHOR=RJBS
+MODULE_VERSION=1.110
 inherit perl-module
 
 DESCRIPTION="create a minimal mirror of CPAN"
