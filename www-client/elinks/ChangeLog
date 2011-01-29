@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.135 2011/01/10 21:14:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.136 2011/01/29 13:06:33 armin76 Exp $
+
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> elinks-0.11.7.ebuild:
+  ia64 stable
 
   10 Jan 2011; Michał Januszewski <spock@gentoo.org>
   +files/elinks-0.10.1-utf_8_io-default.patch:
