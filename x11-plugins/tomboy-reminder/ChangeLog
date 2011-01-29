@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/tomboy-reminder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/tomboy-reminder/ChangeLog,v 1.9 2010/09/11 17:25:01 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/tomboy-reminder/ChangeLog,v 1.10 2011/01/29 16:15:46 fauli Exp $
+
+  29 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  tomboy-reminder-0.9.2.ebuild:
+  stable x86, bug 352808
 
 *tomboy-reminder-0.9.2 (11 Sep 2010)
 
