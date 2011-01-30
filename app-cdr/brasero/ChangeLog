@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.117 2011/01/19 21:33:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.118 2011/01/30 19:33:22 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> brasero-2.30.3.ebuild:
+  alpha/arm/ia64/sparc stable wrt #348987
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> brasero-2.30.3.ebuild:
   Stable on amd64 wrt bug #348987
