@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.10.ebuild,v 1.4 2010/11/02 15:46:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.10.ebuild,v 1.5 2011/01/30 08:36:58 ssuominen Exp $
 
-EAPI=2
-inherit flag-o-matic
+EAPI=3
+inherit eutils flag-o-matic
 
 DESCRIPTION="A handy personal organizer"
 HOMEPAGE="http://clayo.org/osmo/"
@@ -25,6 +25,11 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_prepare() {
+	has_version ">=x11-libs/libnotify-0.7" && epatch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch
+}
+
 src_configure() {
 	append-flags -I/usr/include/libical
 
@@ -35,5 +40,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README TRANSLATORS || die
+	dodoc AUTHORS ChangeLog README TRANSLATORS
 }

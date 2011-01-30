@@ -1,6 +1,10 @@
 # ChangeLog for app-office/osmo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.12 2010/11/02 15:46:13 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.13 2011/01/30 08:36:58 ssuominen Exp $
+
+  30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> osmo-0.2.10.ebuild,
+  +files/osmo-0.2.10-libnotify-0.7.patch:
+  Import Fedora patch to fix building with x11-libs/libnotify >= 0.7.
 
   02 Nov 2010; Thomas Kahle <tomka@gentoo.org> osmo-0.2.10.ebuild:
   x86 stable per bug #331173
