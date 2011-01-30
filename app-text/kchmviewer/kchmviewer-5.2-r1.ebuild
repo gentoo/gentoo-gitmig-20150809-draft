@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.2-r1.ebuild,v 1.3 2010/10/26 20:58:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-5.2-r1.ebuild,v 1.4 2011/01/30 12:40:58 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 KDE_REQUIRED="never"
 inherit fdo-mime qt4-r2 kde4-base
 
@@ -15,14 +15,15 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="kde"
 
-RDEPEND="dev-libs/chmlib
+RDEPEND="
+	dev-libs/chmlib
 	>=x11-libs/qt-dbus-4.5:4
 	>=x11-libs/qt-webkit-4.5:4
 	!kde? ( >=x11-libs/qt-gui-4.5:4 )
-	kde? ( >=kde-base/kdelibs-4.1
-			!kde-base/okular[chm] )"
-DEPEND="${RDEPEND}
-		kde? ( dev-util/cmake )"
+	kde? ( $(add_kdebase_dep kdelibs)
+			!kde-base/okular[chm] )
+"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/build-${PV}
 
