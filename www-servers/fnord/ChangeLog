@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/fnord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.22 2011/01/29 23:16:27 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.23 2011/01/30 19:20:04 bangert Exp $
+
+  30 Jan 2011; Thilo Bangert <bangert@gentoo.org> -files/fnord-1.8-gentoo.diff:
+  remove unused file
 
   29 Jan 2011; Thilo Bangert <bangert@gentoo.org> fnord-1.10-r1.ebuild,
   fnord-1.10-r2.ebuild:
