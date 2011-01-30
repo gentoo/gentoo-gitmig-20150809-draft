@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-0.97.ebuild,v 1.1 2011/01/30 12:01:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-0.97-r1.ebuild,v 1.1 2011/01/30 12:30:07 xarthisius Exp $
 
 EAPI=3
 
-inherit toolchain-funcs versionator
+inherit eutils toolchain-funcs
 
 MY_P=${PN}${PV}
 
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+:2
+RDEPEND="x11-libs/gtk+:2
 	>=media-libs/libsndfile-1
-	media-libs/libpng
-	media-libs/jpeg"
-RDEPEND="${DEPEND}"
+	>=media-libs/libpng-1.4
+	virtual/jpeg"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
@@ -36,7 +37,6 @@ src_compile() {
 src_install() {
 	dobin src/Release/${PN} || die
 	dodoc README.txt CHANGE_LOG.txt || die
-	dodir /usr/share/${PN}
 	insinto /usr/share/${PN}
 	doins -r .${PN}/* || die
 }

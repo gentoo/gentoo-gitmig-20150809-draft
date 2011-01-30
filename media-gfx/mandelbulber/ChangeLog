@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/mandelbulber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.1 2011/01/30 12:01:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.2 2011/01/30 12:30:07 xarthisius Exp $
+
+*mandelbulber-0.97-r1 (30 Jan 2011)
+
+  30 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -mandelbulber-0.97.ebuild, +mandelbulber-0.97-r1.ebuild, metadata.xml:
+  Skip versionator.eclass since it's not used, add eutils, fix dependencies,
+  remove pointless dodir. Add graphics herd. Thanks to Samuli for pointing all
+  of the above.
 
 *mandelbulber-0.97 (30 Jan 2011)
 
