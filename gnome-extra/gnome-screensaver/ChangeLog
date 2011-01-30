@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.131 2011/01/19 21:25:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.132 2011/01/30 18:55:11 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  gnome-screensaver-2.30.2.ebuild:
+  alpha/ia64/sparc stable wrt #348987
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   gnome-screensaver-2.30.2.ebuild:
