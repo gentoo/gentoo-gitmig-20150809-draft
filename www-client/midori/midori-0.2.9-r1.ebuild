@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.9-r1.ebuild,v 1.1 2011/01/16 18:32:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.9-r1.ebuild,v 1.2 2011/01/30 21:19:32 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib python xfconf
@@ -36,6 +36,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	# moving docs to version-specific directory
 	sed -i -e "s:/${PN}/user/midori.html:/user/midori.html:g" midori/midori-browser.c || die
 }

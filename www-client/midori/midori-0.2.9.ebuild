@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.9.ebuild,v 1.2 2010/12/18 18:02:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.9.ebuild,v 1.3 2011/01/30 21:19:32 ssuominen Exp $
 
 EAPI=2
 inherit pax-utils eutils multilib python xfconf
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ~ppc x86 ~x86-fbsd"
 IUSE="doc gnome +html idn libnotify nls +unique"
 
-RDEPEND="libnotify? ( x11-libs/libnotify )
+RDEPEND="libnotify? ( <x11-libs/libnotify-0.7 )
 	>=net-libs/libsoup-2.25.2
 	>=net-libs/webkit-gtk-1.1.1
 	>=dev-db/sqlite-3.0
