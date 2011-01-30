@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4995 2011/01/30 16:07:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4996 2011/01/30 19:57:00 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jan 2011; Tony Vroon <chainsaw@gentoo.org> package.mask:
+  Mask Audacious & libmowgli alpha releases.
 
   30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite net-p2p/lince.
