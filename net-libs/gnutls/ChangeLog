@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.290 2011/01/28 16:09:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.291 2011/01/30 17:49:46 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gnutls-2.10.4.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #352744
 
   28 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnutls-2.10.4.ebuild:
   x86 stable wrt bug #352744
