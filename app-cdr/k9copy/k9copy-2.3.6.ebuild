@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.6.ebuild,v 1.3 2011/01/28 15:44:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.6.ebuild,v 1.4 2011/01/30 09:00:31 phajdan.jr Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://k9copy.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug +handbook"
 
 DEPEND="
