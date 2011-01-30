@@ -1,6 +1,18 @@
 # ChangeLog for app-editors/emacs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.405 2010/12/29 13:09:01 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.406 2011/01/30 08:42:03 ulm Exp $
+
+*emacs-23.2-r3 (30 Jan 2011)
+*emacs-22.3-r7 (30 Jan 2011)
+*emacs-21.4-r23 (30 Jan 2011)
+
+  30 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +emacs-21.4-r23.ebuild,
+  +emacs-22.3-r7.ebuild, +emacs-23.2-r3.ebuild:
+  Apply changes from prefix overlay and from bug 268793. Thanks to Matsui
+  Tetsushi <VED03370@nifty.ne.jp> and Fabian Groffen <grobian@gentoo.org>.
+  Respect the --with-crt-dir configure option also on 32 bit architectures,
+  fixes bug 350532. Remove unnecessary automake dependency. Don't compress
+  GNU Info dir. Update ebuilds to EAPI 4, for docompress and REQUIRED_USE.
 
   29 Dec 2010; Ulrich Mueller <ulm@gentoo.org> emacs-22.3-r6.ebuild,
   emacs-23.2-r2.ebuild:
