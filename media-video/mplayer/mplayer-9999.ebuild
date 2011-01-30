@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.88 2011/01/14 16:26:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.89 2011/01/30 11:20:53 scarabeus Exp $
 
 EAPI=3
 
@@ -74,7 +74,7 @@ RDEPEND+="
 			media-libs/libggiwmh
 		)
 		opengl? ( virtual/opengl )
-		vdpau? ( || ( x11-libs/libvdpau >=x11-drivers/nvidia-drivers-180.51 ) )
+		vdpau? ( x11-libs/libvdpau )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? (
