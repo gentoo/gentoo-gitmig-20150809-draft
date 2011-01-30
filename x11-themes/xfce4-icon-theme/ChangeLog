@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/xfce4-icon-theme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.9 2009/12/01 18:00:30 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.10 2011/01/30 18:32:43 ssuominen Exp $
+
+  30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-icon-theme-4.4.3.ebuild:
+  USE="minimal" to control Inherits from index.theme because of missing icons
+  in the Xfce desktop environment.
 
   01 Dec 2009; Jeremy Olexa <darkside@gentoo.org>
   xfce4-icon-theme-4.4.3.ebuild:
