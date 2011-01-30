@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6327 2011/01/30 11:53:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6328 2011/01/30 19:53:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1028,6 +1028,7 @@ dev-libs/ecore:glib - Enable dev-libs/glib eventloop support
 dev-libs/ecore:inotify - Enable support for inotify
 dev-libs/ecore:tslib - Build with tslib support for touchscreen devices.
 dev-libs/ecore:xprint - Enable X11 Xprint support
+dev-libs/efreet:cache - Enable caching of icons
 dev-libs/eggdbus:largefile - Support for large files
 dev-libs/eina:default-mempool - By default use system's allocator (pass-through) instead of custom choice for Eina's own data structures.
 dev-libs/eina:mempool-buddy - Compile "buddy" memory pool allocation.
