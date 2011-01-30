@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/dhex
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dhex/ChangeLog,v 1.1 2011/01/30 16:25:41 dilfridge Exp $
+
+*dhex-0.63 (30 Jan 2011)
+
+  30 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> +dhex-0.63.ebuild,
+  +files/dhex-0.63-Makefile.patch, +metadata.xml:
+  New application, fixes bug 121086. Thanks to Adrian Frühwirth for the
+  original ebuild.
+
