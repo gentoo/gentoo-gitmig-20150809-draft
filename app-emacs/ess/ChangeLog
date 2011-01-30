@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.73 2011/01/08 00:52:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.74 2011/01/30 11:59:33 ulm Exp $
+
+*ess-5.12-r1 (30 Jan 2011)
+
+  30 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +ess-5.12-r1.ebuild:
+  Don't call prepalldocs, it is no longer needed with EAPI 4.
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org> ess-5.12.ebuild:
   Marking ess-5.12 ppc for bug 348198
