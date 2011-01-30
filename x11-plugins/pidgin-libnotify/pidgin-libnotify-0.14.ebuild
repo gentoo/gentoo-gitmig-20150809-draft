@@ -1,9 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.14.ebuild,v 1.7 2010/07/22 20:19:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.14.ebuild,v 1.8 2011/01/30 09:04:13 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils
 
 DESCRIPTION="pidgin-libnotify provides popups for pidgin via a libnotify interface"
@@ -17,13 +16,14 @@ IUSE="nls debug"
 
 RDEPEND=">=x11-libs/libnotify-0.3.2
 	net-im/pidgin[gtk]
-	>=x11-libs/gtk+-2"
-
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/pidgin-libnotify-showbutton.patch
+	epatch \
+		"${FILESDIR}"/pidgin-libnotify-showbutton.patch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch
 }
 
 src_configure() {
@@ -34,7 +34,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "make install failed"
+	emake install DESTDIR="${D}" || die
 	find "${D}" -name '*.la' -delete
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO VERSION || die
+	dodoc AUTHORS ChangeLog NEWS README TODO VERSION || die
 }
