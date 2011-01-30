@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6326 2011/01/30 11:33:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6327 2011/01/30 11:53:30 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -328,7 +328,12 @@ app-emulation/emul-linux-x86-baselibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-cpplibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gtklibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gtkmmlibs:development - Install pkgconfig files
+app-emulation/emul-linux-x86-medialibs:development - Install pkgconfig files
+app-emulation/emul-linux-x86-motif:development - Install pkgconfig files
 app-emulation/emul-linux-x86-opengl:development - Install pkgconfig files
+app-emulation/emul-linux-x86-qtlibs:development - Install pkgconfig files
+app-emulation/emul-linux-x86-sdl:development - Install pkgconfig files
+app-emulation/emul-linux-x86-soundlibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-xlibs:development - Install pkgconfig files
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library app-emulation/libdsk
 app-emulation/ganeti:drbd - Enable DRBD support
