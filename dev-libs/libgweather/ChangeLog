@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.73 2011/01/19 21:21:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.74 2011/01/30 18:01:18 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> libgweather-2.30.3.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #348987
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> libgweather-2.30.3.ebuild:
   Stable on amd64 wrt bug #348987
