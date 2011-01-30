@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.6.ebuild,v 1.1 2011/01/27 10:46:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.6.ebuild,v 1.2 2011/01/30 17:08:04 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -265,6 +265,9 @@ src_configure() {
 	# Depending on GCC version the warnings are different and we don't want
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
+
+	# Avoid a build error with -Os, bug #352457.
+	replace-flags "-Os" "-O2"
 
 	egyp ${myconf} || die
 }
