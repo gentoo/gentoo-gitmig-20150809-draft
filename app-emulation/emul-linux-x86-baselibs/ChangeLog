@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.117 2010/10/04 12:49:58 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.118 2011/01/30 11:12:34 pacho Exp $
+
+*emul-linux-x86-baselibs-20110129 (30 Jan 2011)
+
+  30 Jan 2011; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-baselibs-20100611.ebuild,
+  +emul-linux-x86-baselibs-20110129.ebuild:
+  Version bump, remove old.
 
   04 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-baselibs-20100915-r1.ebuild:
