@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-geoip/pecl-geoip-1.0.7.ebuild,v 1.1 2009/06/27 23:31:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-geoip/pecl-geoip-1.0.7.ebuild,v 1.2 2011/01/30 23:45:38 mabi Exp $
 
 PHP_EXT_NAME="geoip"
 PHP_EXT_INI="yes"
