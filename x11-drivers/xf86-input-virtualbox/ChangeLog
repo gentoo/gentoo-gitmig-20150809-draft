@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.55 2011/01/18 19:33:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.56 2011/01/30 12:09:21 polynomial-c Exp $
+
+*xf86-input-virtualbox-4.0.2-r1 (30 Jan 2011)
+
+  30 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-input-virtualbox-4.0.2.ebuild, +xf86-input-virtualbox-4.0.2-r1.ebuild:
+  Install xorg and udev rules if we are on xorg-server-1.8 or higher. Thanks to
+  Eriks Latosheks for reporting this in bug #353217.
 
   18 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
   -xf86-input-virtualbox-3.2.10-r1.ebuild:
