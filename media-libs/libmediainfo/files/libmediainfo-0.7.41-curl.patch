@@ -1,0 +1,24 @@
+--- MediaInfoLib/Source/MediaInfo/Reader/Reader_libcurl.cpp.orig
++++ MediaInfoLib/Source/MediaInfo/Reader/Reader_libcurl.cpp
+@@ -35,7 +35,7 @@
+ //---------------------------------------------------------------------------
+ 
+ //---------------------------------------------------------------------------
+-#define LIBCURL_DLL_RUNTIME
++//#define LIBCURL_DLL_RUNTIME
+ #include "MediaInfo/Reader/Reader_libcurl.h"
+ #include "MediaInfo/File__Analyze.h"
+ #if defined LIBCURL_DLL_RUNTIME
+@@ -182,8 +182,10 @@
+ //---------------------------------------------------------------------------
+ size_t Reader_libcurl::Format_Test(MediaInfo_Internal* MI, const String &File_Name)
+ {
+-    if (libcurl_Module_Count==0)
+-        return 0; //No libcurl library
++    #if defined LIBCURL_DLL_RUNTIME
++		if (libcurl_Module_Count==0)
++			return 0; //No libcurl library
++	#endif
+         
+     //Configuring
+     curl_data Curl_Data;

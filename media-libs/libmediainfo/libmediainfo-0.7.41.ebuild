@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.37.ebuild,v 1.1 2010/11/27 05:43:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.41.ebuild,v 1.1 2011/01/30 22:52:22 radhermit Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit autotools multilib
+inherit autotools multilib eutils
 
 MY_PN="MediaInfo"
 DESCRIPTION="MediaInfo libraries"
@@ -19,7 +19,7 @@ IUSE="curl debug doc libmms static-libs"
 RDEPEND="sys-libs/zlib
 	>=media-libs/libzen-0.4.14[static-libs=]
 	curl? ( net-misc/curl )
-	libmms? ( >=media-libs/libmms-0.4 )"
+	libmms? ( >=media-libs/libmms-0.6.1[static-libs=] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
@@ -27,28 +27,23 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
 
 src_prepare() {
-	# https://bugs.launchpad.net/libmms/+bug/531326
-	sed -i -e 's/mmsx/mms/g' \
-		"${WORKDIR}/${MY_PN}Lib/Source/MediaInfo/Reader/Reader_libmms.cpp" \
-		|| die "sed failed"
-
 	# Fix linking problem for bug #343125
-	sed -i -e "s:\(#define LIBCURL_DLL_RUNTIME\)://\1:" \
-		"${WORKDIR}/${MY_PN}Lib/Source/MediaInfo/Reader/Reader_libcurl.cpp" \
-		|| die "sed failed"
-
+	EPATCH_OPTS="-p1 -d ${WORKDIR}/${MY_PN}Lib" epatch "${FILESDIR}"/${P}-curl.patch
 	eautoreconf
 }
 
 src_configure() {
+	local myconf
+	use debug && myconf="${myconf} --enable-debug"
+	use curl && myconf="${myconf} --with-libcurl"
+	use libmms && myconf="${myconf} --with-libmms"
+	use static-libs && myconf="${myconf} --enable-staticlibs"
+
 	econf \
 		--disable-dependency-tracking \
 		--enable-shared \
-		$(use_enable debug) \
-		$(use_with curl libcurl) \
-		$(use_with libmms) \
 		$(use_enable static-libs static) \
-		$(use_enable static-libs staticlibs)
+		${myconf}
 }
 
 src_compile() {
