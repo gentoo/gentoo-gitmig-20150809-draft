@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2c.ebuild,v 1.1 2010/10/05 10:50:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2c.ebuild,v 1.2 2011/01/30 18:40:24 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="cs da de el en_GB es et fr ga gl it ja km ku lt lv mai nb nds nl
 nn pl pt pt_BR ro ru sk sv tr uk zh_CN zh_TW"
 inherit kde4-base
@@ -13,15 +13,19 @@ SRC_URI="http://kmplayer.kde.org/pkgs/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2 LGPL-2.1"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cairo debug expat handbook npp"
 
 DEPEND="media-sound/phonon
 	expat? ( >=dev-libs/expat-2.0.1 )
-	cairo? ( x11-libs/cairo
-		x11-libs/pango )
-	npp? ( dev-libs/dbus-glib
-		>=x11-libs/gtk+-2.10.14:2 )"
+	cairo? (
+		x11-libs/cairo
+		x11-libs/pango
+	)
+	npp? (
+		dev-libs/dbus-glib
+		>=x11-libs/gtk+-2.10.14:2
+	)"
 RDEPEND="${DEPEND}
 	media-video/mplayer"
 
