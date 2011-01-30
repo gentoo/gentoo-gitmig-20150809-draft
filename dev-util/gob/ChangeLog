@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.76 2011/01/25 18:27:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.77 2011/01/30 18:28:18 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gob-2.0.17.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #348987
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> gob-2.0.17.ebuild:
   Stable for HPPA (bug #348987).
