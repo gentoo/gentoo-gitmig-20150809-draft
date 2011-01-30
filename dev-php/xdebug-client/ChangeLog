@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xdebug-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.25 2011/01/08 01:58:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.26 2011/01/30 16:54:12 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> xdebug-client-2.1.0.ebuild:
+  ia64/sparc stable
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org> xdebug-client-2.1.0.ebuild:
   Marking xdebug-client-2.1.0 ppc for bug 349659
