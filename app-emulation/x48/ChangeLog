@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/x48
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.17 2009/09/22 17:56:44 vostorga Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.18 2011/01/30 19:47:27 flameeyes Exp $
+
+*x48-0.6.3 (30 Jan 2011)
+
+  30 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> -x48-0.4.3.ebuild,
+  -x48-0.6.1.ebuild, +x48-0.6.3.ebuild, +files/x48-0.6.3-no-readline.patch,
+  +files/x48-0.6.3-off-by-one.patch, metadata.xml:
+  Proxy commit from Kevin McCarthy: version bump to 0.6.3: cleanup with EAPI=3,
+  fix dependencies, don't install the ROM dumps as their license is unclear,
+  fix buffer overflow, add readline USE flag and fix build with it disabled.
+  Update metadata.
 
 *x48-0.6.1 (22 Sep 2009)
 
