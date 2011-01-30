@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.83 2011/01/24 12:39:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.84 2011/01/30 13:16:50 scarabeus Exp $
+
+*mlocate-0.23.1-r1 (30 Jan 2011)
+
+  30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> -mlocate-0.22.4.ebuild,
+  -mlocate-0.23.1.ebuild, +mlocate-0.23.1-r1.ebuild, files/mlocate.cron-r2:
+  Revision bump with perserved stable keywords. Fix typo in cronfile that
+  prevented cronjob to operate per bug #353122. Drop older affected version to
+  ensure everyone upgrade.
 
   24 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> files/mlocate.cron-r2,
   files/mlocate-cron.conf, files/updatedb.conf:

@@ -35,6 +35,7 @@ fi
 # alter the priority of the updatedb process
 if [ -x /usr/bin/renice ]; then
 	/usr/bin/renice +${NICE:-19} -p $$ > /dev/null 2>&1
+fi
 if [ -x /usr/bin/ionice ] && /usr/bin/ionice -c3 true 2>/dev/null; then
 	/usr/bin/ionice -c${IONICE_CLASS:-2} -n${IONICE_PRIORITY:-7} -p $$ > /dev/null 2>&1
 fi

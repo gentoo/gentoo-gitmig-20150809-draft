@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.22.4.ebuild,v 1.10 2010/10/05 18:49:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/mlocate-0.23.1-r1.ebuild,v 1.1 2011/01/30 13:16:50 scarabeus Exp $
 
-EAPI=3
+EAPI="3"
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/m/l/mlocate/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="!sys-apps/slocate
@@ -32,12 +32,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog README NEWS
 
 	insinto /etc
-	doins "${FILESDIR}/updatedb.conf"
-	fperms 0644 /etc/updatedb.conf
-
-	insinto /etc
-	doins "${FILESDIR}/mlocate-cron.conf"
-	fperms 0644 /etc/mlocate-cron.conf
+	doins "${FILESDIR}"/updatedb.conf || die
+	doins "${FILESDIR}"/mlocate-cron.conf || die
+	fperms 0644 /etc/{updatedb,mlocate-cron}.conf
 
 	insinto /etc/cron.daily
 	newins "${FILESDIR}/mlocate.cron-r2" mlocate
@@ -46,12 +43,15 @@ src_install() {
 	fowners 0:locate /usr/bin/locate
 	fperms go-r,g+s /usr/bin/locate
 
-	chown -R 0:locate "${D}/var/lib/mlocate"
-	fperms 0750 /var/lib/mlocate
 	keepdir /var/lib/mlocate
+	chown -R 0:locate "${D}"/var/lib/mlocate
+	fperms 0750 /var/lib/mlocate
 }
 
 pkg_postinst() {
-	elog "Note that the /etc/updatedb.conf file is generic"
-	elog "Please customize it to your system requirements"
+	elog "The database for the locate command is generated daily by a cron job,"
+	elog "if you install for the first time you can run the updatedb command manually now."
+	elog
+	elog "Note that the /etc/updatedb.conf file is generic,"
+	elog "please customize it to your system requirements."
 }
