@@ -14,6 +14,7 @@
 </maintainer>
 <use>
 <flag name="nss">Prefer NSS over libgcrypt as the crypto engine</flag>
+<flag name="sql">Build the sql independant probes</flag>
 </use>
 <longdescription lang="en">
 </longdescription>

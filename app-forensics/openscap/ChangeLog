@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/openscap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.1 2010/11/05 23:49:24 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.2 2011/01/30 22:35:51 hwoarang Exp $
+
+*openscap-0.6.7 (30 Jan 2011)
+
+  30 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +openscap-0.6.7.ebuild,
+  metadata.xml:
+  Version bump
 
 *openscap-0.6.4 (05 Nov 2010)
 
