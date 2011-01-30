@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.74 2011/01/29 09:22:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.75 2011/01/30 18:00:16 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> py-1.4.0.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #351493
 
   29 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> py-1.4.0.ebuild:
   x86 stable wrt bug #351493
