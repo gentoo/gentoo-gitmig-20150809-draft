@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/nabi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.26 2009/06/02 10:24:00 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.27 2011/01/30 00:12:37 matsuu Exp $
+
+*nabi-0.99.8 (30 Jan 2011)
+
+  30 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> -nabi-0.13.ebuild,
+  -nabi-0.14.ebuild, +nabi-0.99.8.ebuild, +files/xinput-nabi:
+  Version bumped, bug #352702. Added imsettings related file. Removed old
+  versions.
 
 *nabi-0.99.3 (02 Jun 2009)
 
