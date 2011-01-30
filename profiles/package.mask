@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12408 2011/01/30 14:34:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12409 2011/01/30 16:07:55 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,11 +31,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Samuli Suominen <ssuominen@gentoo.org> (30 Jan 2011)
+# Forces downgrade of rb_libtorrent that pulls in old slot
+# of python. Fails to build with rb_libtorrent-0.15 series.
+# And most likely will fail to build with libnotify-0.7.
+# Bug 353238. Removal in 30 days.
+net-p2p/lince
+
 # MATSUU Takuto <matsuu@gentoo.org> (30 Jan 2011)
 # mask for security bug #352569
 >=net-dns/maradns-2
 
-# Alexey Shvetsov <alexxy@gentoo.org> (26 Jam 2011)
+# Alexey Shvetsov <alexxy@gentoo.org> (26 Jan 2011)
 # Mask KDE SC 4.6.0 and deps
 ~kde-base/kdeplasma-addons-4.6.0
 ~kde-base/kde-l10n-4.6.0
