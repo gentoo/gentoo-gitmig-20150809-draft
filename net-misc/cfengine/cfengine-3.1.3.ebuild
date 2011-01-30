@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.3.ebuild,v 1.4 2011/01/23 15:35:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.3.ebuild,v 1.5 2011/01/30 20:39:30 idl0r Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ DEPEND=">=sys-libs/db-4
 	postgres? ( dev-db/postgresql-base )
 	selinux? ( sys-libs/libselinux )
 	tokyocabinet? ( dev-db/tokyocabinet )
-	qdbm? ( dev-db/qdbm )
+	!tokyocabinet? ( qdbm? ( dev-db/qdbm ) )
 	!tokyocabinet? ( !qdbm? ( >=sys-libs/db-4 ) )
 	>=dev-libs/openssl-0.9.7
 	dev-libs/libpcre"
@@ -47,8 +47,16 @@ src_configure() {
 		myconf="--without-sql"
 	fi
 
+	# BDB by default, prefer tokyocabinet above qdbm...
 	if ! use qdbm && ! use tokyocabinet; then
 		myconf="${myconf} --with-berkeleydb=/usr"
+	elif use qdbm && use tokyocabinet; then
+		elog "QDBM and Tokyo Cabinet can't be used together, using Tokyo Cabinet by default"
+		myconf="${myconf} --with-tokyocabinet"
+	elif use qdbm && ! use tokyocabinet; then
+		myconf="${myconf} --with-qdbm"
+	elif ! use qdbm && use tokyocabinet; then
+		myconf="${myconf} --with-tokyocabinet"
 	fi
 
 	# Enforce /var/cfengine for historical compatibility
@@ -61,9 +69,7 @@ src_configure() {
 		$(use_with gd) \
 		$(use_with graphviz) \
 		$(use_with ldap) \
-		$(use_with qdbm) \
-		$(use_enable selinux) \
-		$(use_with tokyocabinet)
+		$(use_enable selinux)
 
 	# Fix Makefile to skip inputs, see below "examples"
 	sed -i -e 's/\(SUBDIRS.*\) inputs/\1/' Makefile || die
