@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.6 2011/01/29 21:46:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.7 2011/01/30 00:23:33 pacho Exp $
 
 #
 # Original Author: Mike Doty <kingtaco@gentoo.org>
@@ -36,8 +36,8 @@ emul-linux-x86_src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	has development "${IUSE//+}" && use development && ALLOWED="${ALLOWED}|/usr/lib32/pkgconfig"
 	ALLOWED=${ALLOWED:-^${S}/etc/env.d}
+	has development "${IUSE//+}" && use development && ALLOWED="${ALLOWED}|/usr/lib32/pkgconfig"
 	find "${S}" ! -type d ! -name '*.so*' | egrep -v "${ALLOWED}" | xargs -d $'\n' rm -f || die 'failed to remove everything but *.so*'
 }
 
