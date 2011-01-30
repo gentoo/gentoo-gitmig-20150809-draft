@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.0.2.ebuild,v 1.4 2010/10/12 06:30:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.0.2.ebuild,v 1.5 2011/01/30 12:57:27 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 # Bug 330051
 RESTRICT="test"

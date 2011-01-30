@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.0.2.ebuild,v 1.4 2010/10/12 06:24:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.0.2.ebuild,v 1.5 2011/01/30 12:53:50 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 # Bug 328269
 RESTRICT="test"
@@ -21,12 +21,12 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="+cmake +cxx debug +qmake qthelp"
 
 DEPEND="
-	>=kde-base/ksysguard-${KDE_MINIMAL}
-	>=kde-base/libkworkspace-${KDE_MINIMAL}
+	$(add_kdebase_dep ksysguard)
+	$(add_kdebase_dep libkworkspace)
 	qthelp? ( >=x11-libs/qt-assistant-4.4:4 )
 "
 RDEPEND="${DEPEND}
-	>=kde-base/kapptemplate-${KDE_MINIMAL}
+	$(add_kdebase_dep kapptemplate)
 	cxx? ( >=sys-devel/gdb-7.0[python] )
 "
 

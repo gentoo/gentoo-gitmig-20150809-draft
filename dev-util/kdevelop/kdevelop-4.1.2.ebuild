@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.1.2.ebuild,v 1.1 2011/01/17 01:39:06 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.1.2.ebuild,v 1.2 2011/01/30 12:53:50 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 # Bug 328269
 RESTRICT="test"

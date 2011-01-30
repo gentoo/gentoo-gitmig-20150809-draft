@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.0.2.ebuild,v 1.3 2010/10/12 06:21:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.0.2.ebuild,v 1.4 2011/01/30 12:53:01 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 # Bug 276208
 RESTRICT="test"
@@ -34,7 +34,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!<dev-util/kdevelop-${KDEVELOP_VERSION}
-	>=kde-base/konsole-${KDE_MINIMAL}
+	$(add_kdebase_dep konsole)
 	cvs? ( dev-vcs/cvs )
 "
 
