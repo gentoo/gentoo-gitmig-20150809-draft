@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-launcher/vdr-launcher-0.0.4.ebuild,v 1.2 2009/05/07 21:49:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-launcher/vdr-launcher-0.0.4.ebuild,v 1.3 2011/01/30 00:24:21 hd_brummy Exp $
+
+EAPI="3"
 
 inherit vdr-plugin
 
