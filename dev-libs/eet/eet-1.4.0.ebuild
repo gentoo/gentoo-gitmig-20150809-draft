@@ -1,16 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.4.0_beta2.ebuild,v 1.2 2010/11/18 23:52:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.4.0.ebuild,v 1.1 2011/01/30 19:29:57 tommy Exp $
 
 EAPI=2
-
-MY_P=${P/_beta/.beta}
 
 inherit enlightenment
 
 DESCRIPTION="E file chunk reading/writing library"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Eet"
-SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="debug examples gnutls ssl static-libs test +threads"
@@ -23,12 +21,6 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 DEPEND="${RDEPEND}
 	test? ( dev-libs/check
 		dev-util/lcov )"
-
-S=${WORKDIR}/${MY_P}
-
-#the tarball is missing pem files for the crypto tests
-#reported upstream, will be included in the next release
-RESTRICT="test"
 
 src_configure() {
 	local SSL_FLAGS=""
