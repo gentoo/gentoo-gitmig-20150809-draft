@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.15.5.ebuild,v 1.2 2010/07/04 21:48:24 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpdbg/phpdbg-2.15.5.ebuild,v 1.3 2011/01/30 16:40:37 armin76 Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-source-r1
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 DESCRIPTION="A PHP debugger useable with some editors like phpedit."
 HOMEPAGE="http://dd.cron.ru/dbg/"
