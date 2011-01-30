@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.5 2010/11/04 17:36:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.6 2011/01/30 14:07:55 ssuominen Exp $
 
 EAPI="2"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="SFLphone is a robust standards-compliant enterprise softphone, for desktop and embedded systems."
 HOMEPAGE="http://www.sflphone.org/"
@@ -52,6 +52,8 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	if ! use gnome; then
 		ewarn
 		ewarn "No clients selected. Use USE=gnome to get the gnome client."
