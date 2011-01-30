@@ -1,11 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/kcometen4-1.0.7.ebuild,v 1.1 2010/12/14 15:31:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/kcometen4-1.0.7.ebuild,v 1.2 2011/01/30 15:14:19 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 OPENGL_REQUIRED="always"
-
 inherit kde4-base
 
 HOMEPAGE="http://www.kde-apps.org/content/show.php?content=87586"
@@ -18,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="${DEPEND}
-	>=kde-base/kscreensaver-4.1.4[opengl]
+	$(add_kdebase_dep kscreensaver 'opengl')
 	media-libs/libart_lgpl
 	virtual/opengl"
 RDEPEND="${DEPEND}"
