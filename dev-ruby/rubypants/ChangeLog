@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubypants
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.10 2011/01/30 11:53:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.11 2011/01/30 17:27:22 graaff Exp $
+
+  30 Jan 2011; Hans de Graaff <graaff@gentoo.org> -rubypants-0.2.0.ebuild:
+  Remove old version.
 
   30 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   rubypants-0.2.0-r1.ebuild:
