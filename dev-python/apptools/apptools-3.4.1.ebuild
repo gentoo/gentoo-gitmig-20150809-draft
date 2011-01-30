@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.4.1.ebuild,v 1.1 2011/01/30 17:38:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-3.4.1.ebuild,v 1.2 2011/01/30 18:05:48 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,9 +25,9 @@ IUSE="doc examples test"
 RDEPEND="dev-python/configobj
 	>=dev-python/enthoughtbase-3.1.0
 	dev-python/numpy
+	dev-python/setuptools
 	>=dev-python/traitsgui-3.6.0"
-DEPEND="dev-python/setuptools
-	doc? ( dev-python/sphinx )
+DEPEND="doc? ( dev-python/sphinx )
 	test? (
 		dev-python/coverage
 		dev-python/nose

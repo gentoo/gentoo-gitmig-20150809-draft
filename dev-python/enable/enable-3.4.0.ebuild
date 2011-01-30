@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.4.0.ebuild,v 1.1 2011/01/30 17:02:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.4.0.ebuild,v 1.2 2011/01/30 18:07:12 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,6 +25,7 @@ IUSE="doc examples test"
 RDEPEND=">=dev-python/enthoughtbase-3.1.0
 	dev-python/numpy
 	dev-python/reportlab
+	dev-python/setuptools
 	>=dev-python/traitsgui-3.6.0[wxwidgets]
 	>=media-libs/freetype-2
 	virtual/opengl
@@ -32,7 +33,6 @@ RDEPEND=">=dev-python/enthoughtbase-3.1.0
 DEPEND="${RDEPEND}
 	dev-lang/swig
 	dev-python/cython
-	dev-python/setuptools
 	doc? ( dev-python/sphinx )
 	test? (
 		dev-python/coverage

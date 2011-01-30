@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.2.0.ebuild,v 1.1 2011/01/30 17:56:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/envisagecore-3.2.0.ebuild,v 1.2 2011/01/30 18:02:55 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,9 +24,9 @@ IUSE="doc examples test"
 
 RDEPEND=">=dev-python/apptools-3.4.1
 	>=dev-python/enthoughtbase-3.1.0
+	dev-python/setuptools
 	>=dev-python/traits-3.6.0"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
 	doc? ( dev-python/sphinx )
 	test? (
 		dev-python/coverage
