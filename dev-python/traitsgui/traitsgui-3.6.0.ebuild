@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.6.0.ebuild,v 1.1 2011/01/30 04:54:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.6.0.ebuild,v 1.2 2011/01/30 14:58:28 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS="docs/*.txt docs/*.pdf"
+DOCS="docs/*.txt"
 PYTHON_MODNAME="enthought"
 
 src_compile() {
@@ -50,6 +50,7 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
+		dodoc docs/*.pdf || die "Installation of PDF documentation failed"
 		pushd docs/build/html > /dev/null
 		insinto /usr/share/doc/${PF}/html
 		doins -r [a-z]* _static || die "Installation of documentation failed"
