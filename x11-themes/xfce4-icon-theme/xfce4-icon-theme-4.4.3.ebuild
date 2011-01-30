@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/xfce4-icon-theme-4.4.3.ebuild,v 1.8 2011/01/30 18:32:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/xfce4-icon-theme-4.4.3.ebuild,v 1.9 2011/01/30 20:36:23 ssuominen Exp $
 
 EAPI=3
 inherit gnome2-utils
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-fre
 IUSE="minimal"
 
 RDEPEND="x11-themes/hicolor-icon-theme
-	minimal? ( || ( x11-themes/tango-icon-theme x11-themes/gnome-icon-theme ) )"
+	!minimal? ( || ( x11-themes/tango-icon-theme x11-themes/gnome-icon-theme ) )"
 DEPEND="dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
