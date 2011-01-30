@@ -1,6 +1,10 @@
 # ChangeLog for virtual/emacs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.40 2010/03/10 18:30:18 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.41 2011/01/30 10:03:35 ulm Exp $
+
+  29 Jan 2011; Ulrich Mueller <ulm@gentoo.org> emacs-23.ebuild,
+  -emacs-24.ebuild:
+  Remove virtual/emacs-24, there is no final Emacs 24 yet.
 
 *emacs-24 (10 Mar 2010)
 

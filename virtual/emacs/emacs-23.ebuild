@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/emacs-23.ebuild,v 1.25 2010/01/31 11:52:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/emacs-23.ebuild,v 1.26 2011/01/30 10:03:35 ulm Exp $
 
 EAPI=2
 
@@ -15,4 +15,4 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="|| ( app-editors/emacs:23
-		app-editors/emacs-vcs:23 )"
+		>=app-editors/emacs-vcs-23.1 )"
