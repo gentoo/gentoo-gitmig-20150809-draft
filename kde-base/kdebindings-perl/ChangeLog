@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/ChangeLog,v 1.9 2011/01/26 20:28:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/ChangeLog,v 1.10 2011/01/30 13:23:34 tampakrap Exp $
+
+  30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kdebindings-perl-4.5.5.ebuild, kdebindings-perl-4.6.0.ebuild:
+  EAPI3
 
 *kdebindings-perl-4.6.0 (26 Jan 2011)
 
