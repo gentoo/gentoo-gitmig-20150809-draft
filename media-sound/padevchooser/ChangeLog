@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/padevchooser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.16 2010/03/08 20:30:59 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.17 2011/01/30 08:54:16 ssuominen Exp $
+
+  30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  padevchooser-0.9.3-r1.ebuild, +files/padevchooser-0.9.3-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   08 Mar 2010; Markus Meier <maekke@gentoo.org>
   padevchooser-0.9.3-r1.ebuild:

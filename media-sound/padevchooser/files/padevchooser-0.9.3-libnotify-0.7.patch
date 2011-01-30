@@ -1,0 +1,19 @@
+--- src/padevchooser.c
++++ src/padevchooser.c
+@@ -162,7 +162,15 @@
+         
+     if (!notification) {
+         s = g_strdup_printf("<i>%s</i>\n%s", title, text);
+-        notification = notify_notification_new(title, s, "audio-card", GTK_WIDGET(tray_icon));
++#ifdef NOTIFY_CHECK_VERSION
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++        notification = notify_notification_new(title, s, "audio-card");
++#else
++        notification = notify_notification_new(title, s, "audio-card", GTK_WIDGET(tray_icon));
++#endif
++#else
++        notification = notify_notification_new(title, s, "audio-card", GTK_WIDGET(tray_icon));
++#endif
+         notify_notification_set_category(notification, "device.added");
+         notify_notification_set_urgency(notification, NOTIFY_URGENCY_LOW);
+         g_signal_connect_swapped(G_OBJECT(notification), "closed", G_CALLBACK(notification_closed), NULL);
