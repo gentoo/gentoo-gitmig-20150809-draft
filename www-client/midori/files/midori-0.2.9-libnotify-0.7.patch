@@ -1,3 +1,5 @@
+http://bugs.launchpad.net/midori/+bug/710352
+
 --- midori/midori-app.c
 +++ midori/midori-app.c
 @@ -42,6 +42,9 @@
