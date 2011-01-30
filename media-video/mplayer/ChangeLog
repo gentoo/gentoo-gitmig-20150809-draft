@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.777 2011/01/30 12:55:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.778 2011/01/30 21:08:15 scarabeus Exp $
+
+  30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild:
+  Clone the ffmpeg from git as svn external was removed.
 
   30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild:
   Update live verison to eapi4 and use_required syntax. Fix default
