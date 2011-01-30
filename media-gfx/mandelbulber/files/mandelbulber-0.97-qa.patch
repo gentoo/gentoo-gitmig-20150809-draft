@@ -1,0 +1,30 @@
+--- src/Release/makefile.orig	2011-01-30 12:17:24.774427282 +0100
++++ src/Release/makefile	2011-01-30 12:19:06.741766666 +0100
+@@ -43,7 +43,7 @@
+ mandelbulber: $(OBJS) $(USER_OBJS)
+ 	@echo 'Building target: $@'
+ 	@echo 'Invoking: GCC C++ Linker'
+-	g++ `pkg-config --libs gtk+-2.0 gthread-2.0` -o"mandelbulber" $(OBJS) $(USER_OBJS) $(LIBS)
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o "mandelbulber" $(OBJS) $(USER_OBJS) `pkg-config --libs gtk+-2.0 gthread-2.0` $(LIBS)
+ 	@echo 'Finished building target: $@'
+ 	@echo ' '
+ 
+--- src/Release/subdir.mk.orig	2011-01-30 12:18:22.699456900 +0100
++++ src/Release/subdir.mk	2011-01-30 12:18:50.772927083 +0100
+@@ -65,14 +65,14 @@
+ Render3D.o: ../Render3D.cpp
+ 	@echo 'Building file: $<'
+ 	@echo 'Invoking: GCC C++ Compiler'
+-	g++ -O2 -ffast-math -Wall -c -fmessage-length=0 `pkg-config --cflags gtk+-2.0 gthread-2.0;` -MMD -MP -MF"$(@:%.o=%.d)" -MT"Render3D.d" -o"$@" "$<"
++	$(CXX) $(CXXFLAGS) -Wall -c -fmessage-length=0 `pkg-config --cflags gtk+-2.0 gthread-2.0;` -MMD -MP -MF"$(@:%.o=%.d)" -MT"Render3D.d" -o"$@" "$<"
+ 	@echo 'Finished building: $<'
+ 	@echo ' '
+ 
+ %.o: ../%.cpp
+ 	@echo 'Building file: $<'
+ 	@echo 'Invoking: GCC C++ Compiler'
+-	g++ -O2 -ffast-math -Wall -c -fmessage-length=0 `pkg-config --cflags gtk+-2.0 gthread-2.0;` -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
++	$(CXX) $(CXXFLAGS) -Wall -c -fmessage-length=0 `pkg-config --cflags gtk+-2.0 gthread-2.0;` -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+ 	@echo 'Finished building: $<'
+ 	@echo ' '
+ 

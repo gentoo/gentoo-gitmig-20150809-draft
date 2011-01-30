@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/mandelbulber
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.1 2011/01/30 12:01:46 xarthisius Exp $
+
+*mandelbulber-0.97 (30 Jan 2011)
+
+  30 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  +mandelbulber-0.97.ebuild, +files/mandelbulber-0.97-qa.patch, +metadata.xml:
+  Initial import. Ebuild written by me.
+
