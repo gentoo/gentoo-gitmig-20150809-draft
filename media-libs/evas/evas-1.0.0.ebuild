@@ -1,23 +1,22 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.0.0_beta2.ebuild,v 1.1 2010/11/18 13:34:47 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.0.0.ebuild,v 1.1 2011/01/30 14:39:45 tommy Exp $
 
 EAPI=2
-
-MY_P=${P/_beta/.beta}
 
 inherit enlightenment
 
 DESCRIPTION="hardware-accelerated retained canvas API"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Evas"
-SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="altivec bidi +cache directfb +eet fbcon +fontconfig gif +jpeg mmx opengl +png sdl sse svg static-libs +threads tiff X xcb xpm"
+IUSE="altivec bidi +cache directfb +eet fbcon +fontconfig gles gif +jpeg mmx opengl +png sdl sse svg static-libs +threads tiff X xcb xpm"
 
 RDEPEND=">=dev-libs/eina-1.0.0_beta
 	>=media-libs/freetype-2.3.9
 	fontconfig? ( media-libs/fontconfig )
+	gles? ( media-libs/mesa[gallium,gles] )
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
@@ -43,7 +42,6 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 		x11-libs/libsvg-cairo
 	)"
 DEPEND="${RDEPEND}"
-S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	if use X ; then
@@ -86,8 +84,11 @@ src_configure() {
 		$(use_enable doc)
 		$(use_enable fbcon fb)
 		$(use_enable fontconfig)
+		$(use_enable gles gl-flavor-gles)
+		$(use_enable gles gles-variety-sgx)
 		$(use_enable gif image-loader-gif)
 		$(use_enable jpeg image-loader-jpeg)
+		$(use_enable eet font-loader-eet)
 		$(use_enable eet image-loader-eet)
 		$(use_enable mmx cpu-mmx)
 		$(use_enable png image-loader-png)
@@ -100,12 +101,11 @@ src_configure() {
 		$(use_enable threads async-preload)
 		$(use_enable X software-xlib static)
 		$(use_enable X xrender-x11 static)
+		$(use_enable X software-16-x11 static)
 		$(use_enable xpm image-loader-xpm static)
 		--enable-evas-magic-debug \
 		--enable-static-software-generic \
 		--enable-buffer \
-		--enable-image-loader-eet \
-		--enable-font-loader-eet \
 		--enable-cpu-c \
 		--enable-scale-sample \
 		--enable-scale-smooth \
