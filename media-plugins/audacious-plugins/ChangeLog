@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.191 2011/01/29 22:33:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.192 2011/01/30 20:29:13 chainsaw Exp $
+
+*audacious-plugins-2.5_alpha1 (30 Jan 2011)
+
+  30 Jan 2011; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-2.5_alpha1.ebuild:
+  This is to become 2.5 with time. Masked for your protection. If you unmask &
+  use this, note that bugs go upstream at http://jira.atheme.org/ for the
+  Audacious or Audacious-Plugins project as appropriate. Replace make with
+  emake as suggested by Agostino "ago" Sarubbo in bug #349858.
 
 *audacious-plugins-2.4.3-r1 (29 Jan 2011)
 
