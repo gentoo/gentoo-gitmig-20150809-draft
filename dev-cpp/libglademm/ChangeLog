@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.82 2011/01/25 18:23:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.83 2011/01/30 17:47:18 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> libglademm-2.6.7.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #348987
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> libglademm-2.6.7.ebuild:
   Stable for HPPA (bug #348987).
