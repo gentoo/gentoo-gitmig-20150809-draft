@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.37.ebuild,v 1.2 2010/11/28 22:01:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.41.ebuild,v 1.1 2011/01/30 22:56:14 radhermit Exp $
 
-EAPI="2"
+EAPI="3"
 
 WX_GTK_VER="2.8"
 inherit autotools wxwidgets multilib
@@ -11,26 +11,19 @@ DESCRIPTION="MediaInfo supplies technical and tag information about media files"
 HOMEPAGE="http://mediainfo.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/source/${PN}/${PV}/${PN}_${PV}.tar.bz2"
 
-S="${WORKDIR}/MediaInfo"
-
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="curl debug libmms static wxwidgets"
+IUSE="curl debug libmms wxwidgets"
 
-RDEPEND="
-	sys-libs/zlib
-	!static? (
-		media-libs/libzen
-		~media-libs/lib${P}[curl=,libmms=]
-	)
+RDEPEND="sys-libs/zlib
+	media-libs/libzen
+	~media-libs/lib${P}[curl=,libmms=]
 	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	static? (
-		media-libs/libzen[static-libs]
-		~media-libs/lib${P}[curl=,libmms=,static-libs]
-	)"
+	dev-util/pkgconfig"
+
+S="${WORKDIR}/MediaInfo"
 
 pkg_setup() {
 	TARGETS="CLI"
@@ -52,10 +45,8 @@ src_configure() {
 		econf \
 			${myconf} \
 			--disable-dependency-tracking \
-			$(use_enable debug) \
-			$(use_enable !static shared) \
-			$(use_enable static static) \
-			$(use_enable static staticlibs)
+			--enable-shared \
+			$(use_enable debug)
 	done
 }
 
