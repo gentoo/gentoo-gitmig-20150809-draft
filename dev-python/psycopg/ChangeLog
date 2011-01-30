@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.115 2011/01/28 17:24:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.116 2011/01/30 17:56:34 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> psycopg-2.3.2.ebuild:
+  alpha/ia64/sparc stable wrt #352730
 
   28 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> psycopg-2.3.2.ebuild:
   x86 stable wrt bug #352730
