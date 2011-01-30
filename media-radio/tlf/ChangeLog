@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tlf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.19 2011/01/27 10:50:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.20 2011/01/30 18:25:21 phajdan.jr Exp $
+
+  30 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tlf-1.0.0.ebuild:
+  x86 stable wrt bug #352619
 
   27 Jan 2011; Markos Chandras <hwoarang@gentoo.org> tlf-1.0.0.ebuild:
   Stable on amd64 wrt bug #352619
