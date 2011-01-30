@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r1.ebuild,v 1.1 2011/01/29 02:38:25 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r1.ebuild,v 1.2 2011/01/30 21:00:25 nixphoeni Exp $
 
 EAPI=2
 # desklets don't run with USE=debug
@@ -22,6 +22,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
+# is libgsf needed for runtime or just compiling?
 RDEPEND=">=dev-libs/glib-2.4
 	>=gnome-base/librsvg-2.8
 	>=gnome-base/libgtop-2.8.2
@@ -51,6 +52,7 @@ pkg_setup() {
 
 src_prepare() {
 
+	epatch "${FILESDIR}/${P}-.in-files.patch"
 	gnome2_src_prepare
 
 	# Postpone pyc compiling until pkg_postinst

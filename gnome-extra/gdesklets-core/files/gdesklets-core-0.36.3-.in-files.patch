@@ -1,0 +1,41 @@
+=== modified file 'Makefile_gdesklets.am'
+--- Makefile_gdesklets.am	2011-01-06 11:01:06 +0000
++++ Makefile_gdesklets.am	2011-01-30 20:12:07 +0000
+@@ -20,28 +20,31 @@
+ 
+ dist_man_MANS = doc/man/gdesklets.1
+ 
++# The .desktop file
++desktop_in_files = data/gdesklets.desktop.in
++# The shared mime XML file
++sharedmimepackage_in_files = data/gdesklets.xml.in
++
+ EXTRA_DIST =             \
+   AUTHORS                \
+   COPYING                \
+   README                 \
+   TODO                   \
+   NEWS                   \
+-  contrib/bash/gdesklets
++  contrib/bash/gdesklets \
++  $(desktop_in_files)    \
++  $(sharedmimepackage_in_files)
+ 
+ # See http://www.gnu.org/software/hello/manual/automake/Clean.html
+ CLEANFILES =   \
+   po/.intltool-merge-cache
+ 
+ # The .desktop file
+-desktop_in_files = data/gdesklets.desktop.in
+-dist_desktop_DATA= $(desktop_in_files)
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ autostart_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ @INTLTOOL_DESKTOP_RULE@
+ 
+ # The shared mime XML file
+-sharedmimepackage_in_files = data/gdesklets.xml.in
+-dist_sharedmimepackage_DATA = $(sharedmimepackage_in_files)
+ sharedmimepackage_DATA = $(sharedmimepackage_in_files:.xml.in=.xml)
+ @INTLTOOL_XML_RULE@
+ 
+

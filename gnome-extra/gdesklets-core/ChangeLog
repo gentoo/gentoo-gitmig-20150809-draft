@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.138 2011/01/29 02:38:25 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.139 2011/01/30 21:00:25 nixphoeni Exp $
+
+  30 Jan 2011; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.36.3-r1.ebuild,
+  +files/gdesklets-core-0.36.3-.in-files.patch:
+  Added patch to not install .in files
 
 *gdesklets-core-0.36.3-r1 (29 Jan 2011)
 
