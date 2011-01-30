@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-0.9.6.ebuild,v 1.4 2011/01/28 19:19:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-0.9.6.ebuild,v 1.5 2011/01/30 15:22:44 scarabeus Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ DESCRIPTION="A WebKit KPart for konqueror"
 HOMEPAGE="http://opendesktop.org/content/show.php?content=127960"
 SRC_URI="http://opendesktop.org/CONTENT/content-files/127960-${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="4"
 IUSE="debug"

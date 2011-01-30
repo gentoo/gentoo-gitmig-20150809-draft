@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kwebkitpart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.4 2011/01/28 19:19:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.5 2011/01/30 15:22:44 scarabeus Exp $
+
+  30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  kwebkitpart-0.9.6.ebuild:
+  Update to eapi3. Fix license.
 
   28 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   kwebkitpart-0.9.6.ebuild:
