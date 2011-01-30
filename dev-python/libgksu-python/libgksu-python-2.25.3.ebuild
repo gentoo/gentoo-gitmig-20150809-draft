@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/libgksu-python-2.25.3.ebuild,v 1.6 2010/10/10 10:23:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/libgksu-python-2.25.3.ebuild,v 1.7 2011/01/30 18:17:00 armin76 Exp $
 
 EAPI="2"
 # The 'gksu' and 'gksuui' bindings are not supported. We don't have =libgksu-1*
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2"
 DESCRIPTION="Python bindings for libgksu"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=">=x11-libs/libgksu-2.0.4"
