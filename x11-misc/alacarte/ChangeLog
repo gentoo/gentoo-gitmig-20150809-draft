@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.105 2011/01/19 21:30:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.106 2011/01/30 19:19:17 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> alacarte-0.13.2.ebuild:
+  alpha/ia64/sparc stable wrt #348987
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org> alacarte-0.13.2.ebuild:
   Stable on amd64 wrt bug #348987
