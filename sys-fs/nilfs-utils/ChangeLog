@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/nilfs-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.10 2010/04/10 17:50:43 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.11 2011/01/30 00:50:43 matsuu Exp $
+
+  30 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> -nilfs-utils-2.0.14.ebuild,
+  -nilfs-utils-2.0.16.ebuild, -nilfs-utils-2.0.17.ebuild,
+  +nilfs-utils-2.0.21.ebuild:
+  Version bumped. Added statc-libs USE flag. Fixed LICENSE. Removed old
+  versions.
+
+*nilfs-utils-2.0.21 (30 Jan 2011)
+
+  30 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> -nilfs-utils-2.0.14.ebuild,
+  -nilfs-utils-2.0.16.ebuild, -nilfs-utils-2.0.17.ebuild,
+  +nilfs-utils-2.0.20.ebuild, +nilfs-utils-2.0.21.ebuild:
+  Version bumped. Removed old versions.
 
 *nilfs-utils-2.0.18 (10 Apr 2010)
 
