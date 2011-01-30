@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/skey
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.13 2010/02/23 01:01:42 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.14 2011/01/30 18:17:44 ulm Exp $
+
+  30 Jan 2011; Ulrich Mueller <ulm@gentoo.org> skey-1.1.5-r7.ebuild:
+  Add die statements throughout.
 
   23 Feb 2010; Jeroen Roovers <jer@gentoo.org> skey-1.1.5-r7.ebuild:
   Respect CC (and actually use toolchain-funcs).

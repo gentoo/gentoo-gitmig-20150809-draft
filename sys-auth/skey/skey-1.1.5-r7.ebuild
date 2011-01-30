@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r7.ebuild,v 1.13 2010/02/23 01:01:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r7.ebuild,v 1.14 2011/01/30 18:17:44 ulm Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -60,7 +60,7 @@ src_unpack() {
 	# is no longer the case. #64971
 	sed -i \
 		's#\(md4\) \((the default)\), \(md5\) or \(sha1.\)#\1, \3 \2 or \4#g' \
-		skeyinit.1
+		skeyinit.1 || die
 
 	# skey(3): shared library is in /lib; we don't install a profiling library
 	sed -i 's:/usr\(/lib/libskey.so\):\1:;/It.*libskey_p/{N;d;}' skey.3 || die
@@ -68,38 +68,38 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC
-	econf --sysconfdir=/etc/skey || die
+	econf --sysconfdir=/etc/skey
 	emake || die
 }
 
 src_install() {
-	doman skey.1 skeyaudit.1 skeyinfo.1 skeyinit.1 skey.3 skeyprune.8
+	doman skey.1 skeyaudit.1 skeyinfo.1 skeyinit.1 skey.3 skeyprune.8 || die
 	dobin skey skeyinit skeyinfo || die
 
-	dosym skey /usr/bin/otp-md4
-	dosym skey /usr/bin/otp-sha1
-	dosym skey /usr/bin/otp-md5
+	dosym skey /usr/bin/otp-md4 || die
+	dosym skey /usr/bin/otp-sha1 || die
+	dosym skey /usr/bin/otp-md5 || die
 
-	newsbin skeyprune.pl skeyprune
-	newbin skeyaudit.sh skeyaudit
+	newsbin skeyprune.pl skeyprune || die
+	newbin skeyaudit.sh skeyaudit || die
 
-	dolib.a libskey.a
+	dolib.a libskey.a || die
 
 	into /
 	dolib.so libskey.so.1.1.5 libskey.so.1.1 libskey.so.1 libskey.so || die
 	gen_usr_ldscript libskey.so
 
 	insinto /usr/include
-	doins skey.h
+	doins skey.h || die
 
-	keepdir /etc/skey
+	keepdir /etc/skey || die
 
 	# only root needs to have access to these files.
-	fperms g-rx,o-rx /etc/skey
+	fperms g-rx,o-rx /etc/skey || die
 
 	# skeyinit and skeyinfo must be suid root so users
 	# can generate their passwords.
-	fperms u+s,og-r /usr/bin/skeyinit /usr/bin/skeyinfo
+	fperms u+s,og-r /usr/bin/skeyinit /usr/bin/skeyinfo || die
 
 	dodoc README CHANGES
 }
