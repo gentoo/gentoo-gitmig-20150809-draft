@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.119 2010/11/04 14:46:11 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.120 2011/01/30 15:06:36 scarabeus Exp $
+
+  30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> quassel-9999.ebuild:
+  Move live ebuild to eapi4.
 
   04 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> quassel-9999.ebuild,
   metadata.xml:

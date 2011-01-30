@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.55 2010/11/04 14:46:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.56 2011/01/30 15:06:36 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
 EGIT_BRANCH="master"
@@ -55,14 +55,6 @@ RDEPEND="
 		server? ( ${SERVER_RDEPEND} )
 		X? ( ${GUI_RDEPEND} )
 	)
-	!monolithic? (
-		!server? (
-			!X? (
-				${SERVER_RDEPEND}
-				${GUI_RDEPEND}
-			)
-		)
-	)
 	"
 DEPEND="${RDEPEND}"
 
@@ -70,15 +62,18 @@ DOCS="AUTHORS ChangeLog README"
 
 S="${WORKDIR}/${P/_/-}"
 
-pkg_setup() {
-	if ! use monolithic && ! use server && ! use X ; then
-		ewarn "You have to build at least one of the monolithic client (USE=monolithic),"
-		ewarn "the quasselclient (USE=X) or the quasselcore (USE=server)."
-		echo
-		ewarn "Enabling monolithic by default."
-		FORCED_MONO="yes"
-	fi
+REQUIRED_USE="
+	|| ( X server monolithic )
+	crypt? ( || ( server monolithic ) )
+	postgres? ( || ( server monolithic ) )
+	kde? ( || ( X monolithic ) )
+	phonon? ( || ( X monolithic ) )
+	dbus? ( || ( X monolithic ) )
+	ayatana? ( || ( X monolithic ) )
+	webkit? ( || ( X monolithic ) )
+"
 
+pkg_setup() {
 	if use server; then
 		QUASSEL_DIR=/var/lib/${PN}
 		QUASSEL_USER=${PN}
@@ -104,8 +99,6 @@ src_configure() {
 		"-DEMBED_DATA=OFF"
 	)
 
-	[[ ${FORCED_MONO} == "yes" ]] && mycmakeargs+=( '-DWANT_MONO=ON' )
-
 	cmake-utils_src_configure
 }
 
@@ -128,7 +121,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ( use monolithic || [[ "${FORCED_MONO}" == "yes" ]] ) && use ssl ; then
+	if use monolithic && use ssl ; then
 		elog "Information on how to enable SSL support for client/core connections"
 		elog "is available at http://bugs.quassel-irc.org/wiki/quassel-irc."
 	fi
