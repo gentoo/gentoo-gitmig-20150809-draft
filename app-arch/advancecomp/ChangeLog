@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/advancecomp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.37 2009/10/12 16:28:50 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/ChangeLog,v 1.38 2011/01/30 09:24:36 xarthisius Exp $
+
+  30 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  advancecomp-1.15.ebuild:
+  Add ~ppc64 wrt #346383, despite failing tests (#282441)
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> advancecomp-1.15.ebuild:
   QA fixes; unquoted variables
