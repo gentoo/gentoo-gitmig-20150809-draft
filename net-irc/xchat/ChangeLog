@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.294 2011/01/30 09:51:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.295 2011/01/30 17:34:09 polynomial-c Exp $
+
+  30 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
+  xchat-2.8.8-r2.ebuild:
+  No binary gets installed with -gtk USE flag. Work around this by enabling the
+  text-only interface when -gtk is in USE (bug #353106).
 
 *xchat-2.8.8-r2 (30 Jan 2011)
 

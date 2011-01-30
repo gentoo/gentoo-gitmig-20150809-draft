@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.1 2011/01/30 09:51:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.2 2011/01/30 17:34:09 polynomial-c Exp $
 
 EAPI=2
 
@@ -78,6 +78,7 @@ src_configure() {
 		$(use_enable ssl openssl) \
 		$(use_enable tcl) \
 		$(use_enable gtk gtkfe) \
+		$(use_enable !gtk textfe) \
 		$(use_enable fastscroll xft)
 }
 
