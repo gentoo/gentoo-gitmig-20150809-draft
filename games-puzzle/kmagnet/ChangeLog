@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/kmagnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kmagnet/ChangeLog,v 1.7 2011/01/10 20:37:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kmagnet/ChangeLog,v 1.8 2011/01/30 13:19:03 tampakrap Exp $
+
+  30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kmagnet-0.09.ebuild:
+  EAPI3
 
   10 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kmagnet-0.09.ebuild:
   x86 stable wrt bug #350776
