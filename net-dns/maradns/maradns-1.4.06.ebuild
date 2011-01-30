@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.01.ebuild,v 1.1 2011/01/24 13:22:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.4.06.ebuild,v 1.1 2011/01/30 14:33:27 matsuu Exp $
 
-EAPI="3"
+EAPI="2"
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Proxy DNS server with permanent caching"
 HOMEPAGE="http://www.maradns.org/"
-SRC_URI="http://www.maradns.org/download/${PV%.*}/${PV}/${P}.tar.bz2"
+SRC_URI="http://www.maradns.org/download/1.4/${PV}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ipv6"
+IUSE="authonly"
 
 DEPEND="dev-lang/perl"
 
@@ -23,22 +23,31 @@ src_prepare() {
 		build/install.locations || die
 	sed -i \
 		-e "s:-O2:\$(CFLAGS) \$(LDFLAGS):" \
-		-e "s:make:\$(MAKE):g" \
 		-e "s:\$(CC):$(tc-getCC):g" \
+		-e "s:make:\$(MAKE):g" \
 		build/Makefile.linux || die
-	sed -e "/provide dns/d" "${FILESDIR}/maradns.rc6" > "${T}/maradns.rc6" || die
+	if use authonly ; then
+		sed -e "/provide dns/d" \
+			"${FILESDIR}/maradns.rc6" > "${T}/maradns.rc6" || die
+	else
+		cp "${FILESDIR}/maradns.rc6" "${T}/maradns.rc6" || die
+	fi
 }
 
 src_configure() {
 	local myconf
-
-	use ipv6 && myconf="${myconf} --ipv6"
-
+	if use authonly ; then
+		myconf="${myconf} --authonly"
+	fi
 	./configure ${myconf} # || die
 }
 
 src_install() {
-	dosbin server/maradns || die
+	if use authonly ; then
+		newsbin server/maradns.authonly maradns || die
+	else
+		dosbin server/maradns || die
+	fi
 
 	dosbin tcp/zoneserver || die
 
