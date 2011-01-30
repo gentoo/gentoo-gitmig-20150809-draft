@@ -1,15 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.0.0_beta2.ebuild,v 1.1 2010/11/18 13:54:42 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.0.0.ebuild,v 1.1 2011/01/30 14:43:21 tommy Exp $
 
 EAPI=2
 
-MY_P=${P/_beta/.beta}
-
-inherit enlightenment
+inherit virtualx enlightenment
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
-SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
 IUSE="ares curl directfb +evas fbcon glib gnutls +inotify opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
@@ -43,7 +41,6 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 	)
 	!X? ( xcb? ( x11-libs/xcb-util ) )"
 DEPEND="${RDEPEND}"
-S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
@@ -186,7 +183,7 @@ src_configure() {
 	$(use_enable inotify)
 	$(use_enable sdl ecore-sdl)
 	$(use_enable test tests)
-	$(use_enable threads pthread)
+	$(use_enable threads posix-threads)
 	$(use_enable tslib)
 	$(use_enable X xim)
 	${SSL_FLAGS}
@@ -194,4 +191,8 @@ src_configure() {
 	${X_FLAGS}
 	"
 	enlightenment_src_configure
+}
+
+src_test() {
+	Xemake check
 }

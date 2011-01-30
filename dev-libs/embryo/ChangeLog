@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/embryo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.9 2010/12/17 18:33:30 tommy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.10 2011/01/30 14:45:37 tommy Exp $
+
+*embryo-1.0.0 (30 Jan 2011)
+
+  30 Jan 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -embryo-1.0.0_beta2.ebuild, +embryo-1.0.0.ebuild:
+  Version bump, drop old
 
 *embryo-1.0.0_beta3 (17 Dec 2010)
 
