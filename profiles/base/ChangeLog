@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.198 2011/01/19 09:20:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.199 2011/01/30 08:38:20 ford_prefect Exp $
+
+  30 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
+  Mask orc USE flag on gst-plugins-ffmpeg (unmasked only on supported arches).
 
   19 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Restrict gnome-extra/gnome-games clutter use-flag masking to =2.3*

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.114 2011/01/22 19:41:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.115 2011/01/30 08:38:20 ford_prefect Exp $
+
+  30 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
+  Unmask orc USE flag on gst-plugins-ffmpeg
 
   22 Jan 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Update wine package.use.mask entry.
