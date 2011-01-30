@@ -1,6 +1,5 @@
-diff -ur kerneloops-0.12.orig/Makefile kerneloops-0.12/Makefile
---- kerneloops-0.12.orig/Makefile	2008-04-10 01:02:24.000000000 +0300
-+++ kerneloops-0.12/Makefile	2011-01-30 11:23:39.000000000 +0200
+--- Makefile
++++ Makefile
 @@ -10,16 +10,16 @@
  MANDIR=/usr/share/man/man8
  CC?=gcc

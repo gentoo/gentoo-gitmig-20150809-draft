@@ -1,6 +1,5 @@
-diff -ur kerneloops-0.12.orig/kerneloops-applet.c kerneloops-0.12/kerneloops-applet.c
---- kerneloops-0.12.orig/kerneloops-applet.c	2008-09-13 18:27:50.000000000 +0300
-+++ kerneloops-0.12/kerneloops-applet.c	2011-01-30 11:26:13.000000000 +0200
+--- kerneloops-applet.c
++++ kerneloops-applet.c
 @@ -240,8 +240,15 @@
  	/* if there's a notification active already, close it first */
  	close_notification();
