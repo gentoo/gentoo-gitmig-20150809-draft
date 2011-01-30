@@ -1,0 +1,39 @@
+diff -ur kerneloops-0.12.orig/kerneloops-applet.c kerneloops-0.12/kerneloops-applet.c
+--- kerneloops-0.12.orig/kerneloops-applet.c	2008-09-13 18:27:50.000000000 +0300
++++ kerneloops-0.12/kerneloops-applet.c	2011-01-30 11:26:13.000000000 +0200
+@@ -240,8 +240,15 @@
+ 	/* if there's a notification active already, close it first */
+ 	close_notification();
+ 
+-	notify = notify_notification_new(summary, message,
+-				"/usr/share/kerneloops/icon.png", NULL);
++#ifdef NOTIFY_CHECK_VERSION
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++	notify = notify_notification_new(summary, message, "/usr/share/kerneloops/icon.png");
++#else
++	notify = notify_notification_new(summary, message, "/usr/share/kerneloops/icon.png", NULL);
++#endif
++#else
++	notify = notify_notification_new(summary, message, "/usr/share/kerneloops/icon.png", NULL);
++#endif
+ 
+ 	notify_notification_set_timeout(notify, 0);
+ 	notify_notification_set_urgency(notify, NOTIFY_URGENCY_CRITICAL);
+@@ -306,8 +313,15 @@
+ 
+ 	url_to_oops[0] = 0;
+ 
+-	notify = notify_notification_new(summary, message,
+-				"/usr/share/kerneloops/icon.png", NULL);
++#ifdef NOTIFY_CHECK_VERSION
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++	notify = notify_notification_new(summary, message, "/usr/share/kerneloops/icon.png");
++#else
++	notify = notify_notification_new(summary, message, "/usr/share/kerneloops/icon.png", NULL);
++#endif
++#else
++	notify = notify_notification_new(summary, message, "/usr/share/kerneloops/icon.png", NULL);
++#endif
+ 
+ 	notify_notification_set_timeout(notify, 5000);
+ 	notify_notification_set_urgency(notify, NOTIFY_URGENCY_LOW);

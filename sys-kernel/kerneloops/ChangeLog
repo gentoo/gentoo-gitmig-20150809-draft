@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/kerneloops
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.13 2010/02/07 19:31:52 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/ChangeLog,v 1.14 2011/01/30 09:29:45 ssuominen Exp $
+
+  30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> files/0.12-FLAGS.patch,
+  +files/0.12-libnotify-0.7.patch, kerneloops-0.12-r1.ebuild:
+  Fix building with x11-libs/libnotify >= 0.7. Fix missing -I and -l flags for
+  dbus-glib-1 in -FLAGS.patch.
 
 *kerneloops-0.12-r1 (07 Feb 2010)
 

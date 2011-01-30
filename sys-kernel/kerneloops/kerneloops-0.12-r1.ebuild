@@ -1,9 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/kerneloops-0.12-r1.ebuild,v 1.1 2010/02/07 19:31:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kerneloops/kerneloops-0.12-r1.ebuild,v 1.2 2011/01/30 09:29:45 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool to automatically collect and submit Linux kernel crash signatures"
@@ -15,29 +14,32 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="net-misc/curl
-		sys-apps/dbus
-		x11-libs/gtk+
-		x11-libs/libnotify
-		dev-util/desktop-file-utils"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-libs/dbus-glib-0.88
+	net-misc/curl
+	x11-libs/gtk+:2
+	x11-libs/libnotify
+	dev-util/desktop-file-utils"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-FLAGS.patch
+	epatch \
+		"${FILESDIR}"/${PV}-FLAGS.patch \
+		"${FILESDIR}"/${PV}-libnotify-0.7.patch
 }
 
 src_compile() {
 	emake \
-		CC=$(tc-getCC) \
+		CC="$(tc-getCC)" \
 		kerneloops kerneloops-applet || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install-system || die "Install of system failed"
-	emake DESTDIR="${D}" install-kerneloops || die "Install of deamon failed"
-	emake DESTDIR="${D}" install-applet || die "Install of applet failed"
+	emake DESTDIR="${D}" install-system || die
+	emake DESTDIR="${D}" install-kerneloops || die
+	emake DESTDIR="${D}" install-applet || die
 
-	doinitd "${FILESDIR}"/kerneloops || die "doinitd failed"
+	doinitd "${FILESDIR}"/kerneloops || die
 
 	dosed 's:\(nodaemon\):\1 --file "${LOGFILE}":g' /etc/init.d/${PN}
 
