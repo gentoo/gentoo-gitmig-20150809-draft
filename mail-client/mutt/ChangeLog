@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.205 2010/12/07 07:48:35 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.206 2011/01/30 19:24:39 grobian Exp $
+
+  30 Jan 2011; Fabian Groffen <grobian@gentoo.org> mutt-1.5.21-r1.ebuild:
+  Add urls for our mercurial sources, don't compress files, fixes bug #352764
 
   07 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   -files/mutt-1.5.13-prefix-mailcap.patch,

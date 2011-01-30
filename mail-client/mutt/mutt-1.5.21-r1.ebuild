@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r1.ebuild,v 1.2 2010/12/07 02:37:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r1.ebuild,v 1.3 2011/01/30 19:24:40 grobian Exp $
 
 EAPI="3"
 
@@ -59,9 +59,11 @@ PATCHDIR="${WORKDIR}"/${P}-gentoo-patches${PATCHSET_REV}
 src_prepare() {
 	# Post-release hot-fixes grabbed from HG, this is what all following
 	# patches are based on in my Mercurial patchqueue (mq).
-	# If you ever take over or need to modify patches here, just ask me
-	# (grobian) for a Mercurial clone of my gentoo branch(es) and
-	# patchqueue as it'll save you a lot of work.
+	# If you ever take over or need to modify patches here, just check
+	# out the gentoo branch(es) of Gentoo's Mutt Mercurial clone, and
+	# the patchqueue as it'll save you a lot of work.
+	# http://prefix.gentooexperimental.org:8000/mutt/
+	# http://prefix.gentooexperimental.org:8000/mutt-patches/
 	for rev in $(eval echo {0..${PR#r}}) ; do
 		local revpatch="${PATCHDIR}"/mutt-gentoo-${PV}-r${rev}.patch
 		[[ -e ${revpatch} ]] && \
@@ -184,7 +186,6 @@ src_configure() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
-	find "${ED}"/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
 		newins "${FILESDIR}"/Muttrc.mbox Muttrc
