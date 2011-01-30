@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.0.ebuild,v 1.1 2011/01/26 20:29:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.0.ebuild,v 1.2 2011/01/30 13:09:48 tampakrap Exp $
 
-EAPI="3"
+EAPI=3
 
 KMNAME="kdebindings"
 KMMODULE="ruby"
