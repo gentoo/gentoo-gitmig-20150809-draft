@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.186 2011/01/19 21:23:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.187 2011/01/30 18:48:54 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> libgnomeprint-2.18.8.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #348987
 
   19 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   libgnomeprint-2.18.8.ebuild:
