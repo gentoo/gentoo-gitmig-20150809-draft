@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.11.ebuild,v 1.1 2011/01/30 08:01:08 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.11-r1.ebuild,v 1.1 2011/01/30 08:40:58 ford_prefect Exp $
+
+EAPI=1
 
 inherit flag-o-matic eutils base
 
@@ -19,20 +21,20 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="+orc"
 
 S=${WORKDIR}/${MY_P}
 
 RDEPEND=">=media-libs/gstreamer-0.10.25
 	>=media-libs/gst-plugins-base-0.10.25
-	>=dev-libs/liboil-0.3.6"
+	orc? ( >=dev-lang/orc-0.4.5 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
 	append-flags -fno-strict-aliasing
 
-	econf
+	econf $(use_enable orc)
 	emake || die "emake failed."
 }
 
