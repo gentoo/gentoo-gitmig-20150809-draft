@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1-r1.ebuild,v 1.6 2010/09/13 14:03:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1-r1.ebuild,v 1.7 2011/01/30 18:37:46 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 if [[ ${PV} = *9999* ]]; then
 	KMNAME="extragear/base"
