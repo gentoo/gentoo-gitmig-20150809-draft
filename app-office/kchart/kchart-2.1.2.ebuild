@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/kchart-2.1.2.ebuild,v 1.3 2010/10/20 20:28:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/kchart-2.1.2.ebuild,v 1.4 2011/01/30 12:15:09 tampakrap Exp $
 
-EAPI="2"
+EAPI="3"
 
 KMNAME="koffice"
 KMMODULE="${PN}"
