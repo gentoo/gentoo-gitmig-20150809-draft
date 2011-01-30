@@ -1,15 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.0.0_beta2-r1.ebuild,v 1.1 2010/11/26 17:10:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.0.0.ebuild,v 1.1 2011/01/30 14:10:16 tommy Exp $
 
 EAPI="2"
-
-MY_P=${P/_beta/.beta}
 
 inherit enlightenment
 
 DESCRIPTION="Enlightenment's data types library (List, hash, etc) in C"
-SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 
 KEYWORDS="~amd64 ~x86"
@@ -25,7 +23,6 @@ DEPEND="${RDEPEND}
 		dev-libs/glib
 		dev-util/lcov
 	)"
-S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local MODULE_ARGUMENT="static"
@@ -52,13 +49,13 @@ src_configure() {
 	$(use_enable sse2 cpu-sse2)
 	$(use_enable threads posix-threads)
 	$(use test && echo " --disable-amalgamation")
+	$(use_enable test e17)
 	$(use_enable test tests)
 	$(use_enable test coverage)
 	$(use_enable test benchmark)
 	--enable-magic-debug
 	--enable-safety-checks
 	"
-#	$(use_enable test e17)
 
 	enlightenment_src_configure
 }

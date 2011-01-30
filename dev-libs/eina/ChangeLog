@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/eina
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.3 2010/12/17 17:04:34 tommy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.4 2011/01/30 14:10:16 tommy Exp $
+
+*eina-1.0.0 (30 Jan 2011)
+
+  30 Jan 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -eina-1.0.0_beta2-r1.ebuild, +eina-1.0.0.ebuild:
+  Version bump, drop old
 
 *eina-1.0.0_beta3 (17 Dec 2010)
 
