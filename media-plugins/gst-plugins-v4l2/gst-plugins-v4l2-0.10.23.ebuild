@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-0.10.23.ebuild,v 1.5 2011/01/18 21:30:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/gst-plugins-v4l2-0.10.23.ebuild,v 1.6 2011/01/30 19:05:35 armin76 Exp $
 
 inherit gst-plugins-good
 
 DESCRIPION="plugin to allow capture from video4linux2 devices"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.29"
