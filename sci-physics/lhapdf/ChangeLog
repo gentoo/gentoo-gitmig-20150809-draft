@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/lhapdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.14 2011/01/20 12:16:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.15 2011/01/30 21:00:20 bicatali Exp $
+
+*lhapdf-5.8.4-r1 (30 Jan 2011)
+
+  30 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org> lhapdf-5.8.4.ebuild,
+  +lhapdf-5.8.4-r1.ebuild:
+  Added more upstream fixes. Switched to EAPI=4. Added static-libs flag, force
+  octave flag to depend on C++ wrappers (bug #352055).
 
   20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> lhapdf-5.8.4.ebuild:
   Stable on amd64 wrt bug #352055
