@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gdisk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/ChangeLog,v 1.10 2010/11/28 17:09:29 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gdisk/ChangeLog,v 1.11 2011/01/30 19:27:16 alexxy Exp $
+
+*gdisk-0.6.14 (30 Jan 2011)
+
+  30 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> +gdisk-0.6.14.ebuild:
+  Version bump per Hanno Boeck request
 
   28 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> gdisk-0.6.13.ebuild:
   x86 stable wrt bug #343147
