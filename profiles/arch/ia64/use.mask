@@ -47,6 +47,7 @@ celt
 capi
 lensfun
 kde
+quvi
 
 # Stuff we don't want
 antlr

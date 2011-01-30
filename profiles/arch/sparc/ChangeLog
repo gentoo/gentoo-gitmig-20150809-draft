@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.117 2011/01/27 18:09:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.118 2011/01/30 18:26:30 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask quvi
 
   27 Jan 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Mask more gst-plugins-meta USE flags.

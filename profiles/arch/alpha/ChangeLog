@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.84 2011/01/06 12:45:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.85 2011/01/30 18:24:33 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask quvi
 
   06 Jan 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask libev

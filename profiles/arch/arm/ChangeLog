@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.110 2011/01/27 18:05:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.111 2011/01/30 18:25:08 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask quvi
 
   27 Jan 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Mask more gst-plugins-meta USE flags.
