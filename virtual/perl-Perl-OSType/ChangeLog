@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Perl-OSType
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.2 2011/01/29 17:29:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.3 2011/01/30 18:11:23 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> perl-Perl-OSType-1.2.ebuild:
+  Add ~alpha/~arm/~ia64/~m68k/~s390/~sh/~sparc wrt #353115
 
   29 Jan 2011; Jeroen Roovers <jer@gentoo.org> perl-Perl-OSType-1.2.ebuild:
   Marked ~hppa (bug #353115).
