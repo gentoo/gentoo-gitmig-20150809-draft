@@ -1,0 +1,18 @@
+--- src/libawn-extras/notify.c
++++ src/libawn-extras/notify.c
+@@ -43,7 +43,15 @@
+ 		expire_timeout=timeout;
+ 	}			
+     notify_init("notify-send");
++#ifdef NOTIFY_CHECK_VERSION
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++	notify = notify_notification_new(summary, body, icon_str);
++#else
+ 	notify = notify_notification_new(summary, body, icon_str, NULL);
++#endif
++#else
++	notify = notify_notification_new(summary, body, icon_str, NULL);
++#endif
+ 	if (notify)
+ 	{
+ 		notify_notification_set_category(notify, type);

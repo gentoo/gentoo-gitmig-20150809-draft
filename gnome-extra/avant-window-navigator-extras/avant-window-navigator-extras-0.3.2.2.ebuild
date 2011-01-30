@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.3.2.2.ebuild,v 1.2 2010/06/23 14:37:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.3.2.2.ebuild,v 1.3 2011/01/30 17:26:44 ssuominen Exp $
 
 EAPI="2"
 
@@ -85,6 +85,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	# Disable pyc compiling.
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
@@ -110,6 +112,8 @@ src_install() {
 		mv "${D}/etc/gconf/schemas/places.schemas" \
 			"${D}/etc/gconf/schemas/awn-places.schemas"
 	fi
+
+	find "${D}" -name '*.la' -exec rm -f '{}' +
 }
 
 pkg_postinst() {
