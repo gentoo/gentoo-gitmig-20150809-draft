@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.56 2010/12/18 17:50:33 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.57 2011/01/30 16:26:53 ssuominen Exp $
+
+*terminal-0.4.6 (30 Jan 2011)
+
+  30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +terminal-0.4.6.ebuild:
+  Version bump.
 
   18 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> terminal-0.4.5.ebuild:
   Remove USE="doc" wrt #344623 (and install pregenerated ones if available).
