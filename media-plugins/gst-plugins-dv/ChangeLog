@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-dv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.73 2011/01/06 17:01:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dv/ChangeLog,v 1.74 2011/01/30 18:06:30 jer Exp $
+
+  30 Jan 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-dv-0.10.23.ebuild:
+  Marked ~hppa (bug #352977).
 
   06 Jan 2011; Raúl Porcel <armin76@gentoo.org> gst-plugins-dv-0.10.23.ebuild:
   alpha stable wrt #346981

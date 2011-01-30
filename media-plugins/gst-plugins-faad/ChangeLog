@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-faad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.98 2011/01/30 17:16:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.99 2011/01/30 18:09:48 jer Exp $
+
+  30 Jan 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-faad-0.10.19.ebuild:
+  Marked ~hppa (bug #352977).
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-faad-0.10.14.ebuild, gst-plugins-faad-0.10.17.ebuild,
