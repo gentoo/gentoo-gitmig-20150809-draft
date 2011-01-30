@@ -1,6 +1,15 @@
 # ChangeLog for app-office/gnucash
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.222 2010/12/23 11:41:00 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.223 2011/01/30 22:47:21 eva Exp $
+
+  30 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> gnucash-2.4.0.ebuild,
+  +files/gnucash-2.4.0-disable-dynload-test.patch,
+  +files/gnucash-2.4.0-fix-tests-linking.patch:
+  Fix multiple python slots support, fix test failures, disable python module
+  test due to missing files, workaround guile configuration problem, bug
+  #202205. Pin dependencies to appropriate slots. Add missing gnome-keyring
+  dependencies, sort dependencies. Re-enable parallel build since it does not
+  fail for me to get a bit more testing. Closes #346919.
 
   23 Dec 2010; Torsten Veller <tove@gentoo.org> -gnucash-2.3.15.ebuild:
   Cleanup

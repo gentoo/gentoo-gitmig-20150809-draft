@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.0.ebuild,v 1.1 2010/12/23 11:39:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.0.ebuild,v 1.2 2011/01/30 22:47:21 eva Exp $
 
-EAPI=3
+EAPI="3"
+PYTHON_DEPEND="python? 2:2.4"
 
-#PYTHON_DEPEND="python? 2:2.4"
-
-inherit eutils gnome2
-inherit python
+inherit autotools eutils gnome2 python
 
 DOC_VER="2.2.0"
 
@@ -22,18 +20,21 @@ IUSE="+doc ofx hbci chipcard debug mysql python quotes sqlite postgres webkit"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.in)
 
-RDEPEND=">=dev-libs/glib-2.6.3
+RDEPEND=">=dev-libs/glib-2.13:2
+	>=dev-libs/popt-1.5
+	>=dev-libs/libxml2-2.5.10
 	>=dev-scheme/guile-1.8.3[deprecated,regex]
 	dev-scheme/guile-www
 	>=dev-scheme/slib-3.1.4
-	>=sys-libs/zlib-1.1.4
-	>=dev-libs/popt-1.5
-	>=x11-libs/gtk+-2.10
+	>=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2.4
 	>=gnome-base/libglade-2.4
-	>=dev-libs/libxml2-2.5.10
-	>=gnome-base/gconf-2
-	>=x11-libs/goffice-0.6[gnome]
+	|| ( <gnome-base/gnome-keyring-2.29 gnome-base/libgnome-keyring )
+	media-libs/libart_lgpl
+	>=sys-libs/zlib-1.1.4
+	>=x11-libs/gtk+-2.14:2
+	x11-libs/goffice:0.8[gnome]
+	x11-libs/pango
 	ofx? ( >=dev-libs/libofx-0.9.1 )
 	hbci? (
 		|| (
@@ -46,25 +47,26 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		>=dev-perl/Finance-Quote-1.11
 		dev-perl/HTML-TableExtract )
 	webkit? ( net-libs/webkit-gtk )
-	!webkit? ( >=gnome-extra/gtkhtml-3.14 )
+	!webkit? ( >=gnome-extra/gtkhtml-3.16:3.14 )
 	sqlite? ( dev-db/libdbi dev-db/libdbi-drivers[sqlite3] )
 	postgres? ( dev-db/libdbi dev-db/libdbi-drivers[postgres] )
 	mysql? ( dev-db/libdbi dev-db/libdbi-drivers[mysql] )
-	media-libs/libart_lgpl
-	x11-libs/pango"
-
+"
 DEPEND="${RDEPEND}
+	>=app-text/scrollkeeper-0.3
 	dev-util/pkgconfig
 	dev-util/intltool
+	gnome-base/gnome-common
 	sys-devel/libtool
-	>=app-text/scrollkeeper-0.3"
+"
 
 PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
 #ELTCONF="--patch-only"
 DOCS="doc/README.OFX doc/README.HBCI"
 
 # FIXME: no the best thing to do but it'd be even better to fix autofoo
-MAKEOPTS="${MAKEOPTS} -j1"
+# XXX: does not break here
+#MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	if use webkit ; then
@@ -89,13 +91,40 @@ pkg_setup() {
 
 	if use python ; then
 		python_set_active_version 2
-		python_pkg_setup
 	fi
+}
+
+src_configure() {
+	# guile wrongly exports LDFLAGS as LIBS which breaks modules
+	# Filter until a better ebuild is available, bug #202205
+	local GUILE_LIBS=""
+	local lib
+	for lib in $(guile-config link); do
+		if [ "${lib#-Wl}" = "$lib" ]; then
+			GUILE_LIBS="$GUILE_LIBS $lib"
+		fi
+	done
+
+	econf GUILE_LIBS="${GUILE_LIBS}" ${G2CONF}
 }
 
 src_prepare() {
 	gnome2_src_prepare
 	: > "${S}"/py-compile
+
+	# Disable test broken by libtool magic ???
+	epatch "${FILESDIR}/${PN}-2.4.0-disable-dynload-test.patch"
+
+	# Fix test linking issues
+	epatch "${FILESDIR}/${PN}-2.4.0-fix-tests-linking.patch"
+
+	# Disable python binding tests because of missing file
+	sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' \
+		-i src/optional/python-bindings/Makefile.{am,in} \
+		|| die "python tests sed failed"
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }
 
 src_test() {
