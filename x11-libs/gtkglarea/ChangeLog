@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.41 2011/01/25 18:27:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.42 2011/01/30 19:13:42 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gtkglarea-2.0.1.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #348987
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> gtkglarea-2.0.1.ebuild:
   Stable for HPPA (bug #348987).
