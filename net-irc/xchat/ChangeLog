@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.293 2011/01/30 09:32:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.294 2011/01/30 09:51:43 polynomial-c Exp $
+
+*xchat-2.8.8-r2 (30 Jan 2011)
+
+  30 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
+  +xchat-2.8.8-r2.ebuild, files/xchat-2.8.8-libnotify07.patch:
+  Better patch for >=libnotify-0.7. Don't impose this to stable users yet so
+  moving this to -r2.
 
   30 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
   +files/xchat-2.8.8-libnotify07.patch:

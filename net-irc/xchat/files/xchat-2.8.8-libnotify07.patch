@@ -1,24 +1,51 @@
-diff -up xchat-2.8.8/src/fe-gtk/plugin-tray.c.libnotify07 xchat-2.8.8/src/fe-gtk/plugin-tray.c
---- xchat-2.8.8/src/fe-gtk/plugin-tray.c.libnotify07	2010-11-15 17:32:15.708325783 -0500
-+++ xchat-2.8.8/src/fe-gtk/plugin-tray.c	2010-11-15 18:05:17.322141789 -0500
-@@ -125,8 +125,9 @@ static void *nn_mod = NULL;
- /* prototypes */
- static gboolean (*nn_init) (char *);
- static void (*nn_uninit) (void);
--static void *(*nn_new_with_status_icon) (const gchar *summary, const gchar *message, const gchar *icon, GtkStatusIcon *status_icon);
--static void *(*nn_new) (const gchar *summary, const gchar *message, const gchar *icon, GtkWidget *attach);
-+/* recent versions of libnotify don't take the fourth GtkWidget argument, but passing an
-+ * extra NULL argument will be fine */
-+static void *(*nn_new) (const gchar *summary, const gchar *message, const gchar *icon, gpointer dummy);
- static gboolean (*nn_show) (void *noti, GError **error);
- static void (*nn_set_timeout) (void *noti, gint timeout);
+Port libnotify support to 0.7
+
+* Forwards/backwards-compatible, don't need a recompile when upgrading libnotify
+* Haven't tested with older libnotify, but should work fine
+* nn_new() takes the same no. of arguments because everything except the first
+  argument is optional, and the last argument passed is supposed to be NULL.
+
+---
+--- a/src/fe-gtk/plugin-tray.c
++++ b/src/fe-gtk/plugin-tray.c
+@@ -145,6 +145,7 @@
+ libnotify_notify_new (const char *title, const char *text, GtkStatusIcon *icon)
+ {
+ 	void *noti;
++	int libnotify_version = 0;
  
-@@ -160,8 +161,6 @@ libnotify_notify_new (const char *title,
- 			goto bad;
+ 	if (!nn_mod)
+ 	{
+@@ -152,8 +153,13 @@
+ 		if (!nn_mod)
+ 		{
+ 			nn_mod = g_module_open ("libnotify.so.1", G_MODULE_BIND_LAZY);
+-			if (!nn_mod)
+-				return FALSE;
++			if (!nn_mod) {
++				nn_mod = g_module_open ("libnotify.so.4", G_MODULE_BIND_LAZY);
++				if (!nn_mod)
++					return FALSE;
++				libnotify_version = 4;
++			}
++			libnotify_version = 1;
+ 		}
+ 
+ 		if (!g_module_symbol (nn_mod, "notify_init", (gpointer)&nn_init))
+@@ -161,7 +167,15 @@
  		if (!g_module_symbol (nn_mod, "notify_uninit", (gpointer)&nn_uninit))
  			goto bad;
--		if (!g_module_symbol (nn_mod, "notify_notification_new_with_status_icon", (gpointer)&nn_new_with_status_icon))
+ 		if (!g_module_symbol (nn_mod, "notify_notification_new_with_status_icon", (gpointer)&nn_new_with_status_icon))
 -			goto bad;
++			if (libnotify_version == 1)
++				/* We know we're using API version 1, but something is wrong */
++				goto bad;
++			else
++				/* It's probably API version 4, aka libnotify-0.7 */
++				libnotify_version = 4;
++		else
++			/* Only this API version has notify_notification_new_with_status_icon */
++			libnotify_version = 1;
  		if (!g_module_symbol (nn_mod, "notify_notification_new", (gpointer)&nn_new))
  			goto bad;
  		if (!g_module_symbol (nn_mod, "notify_notification_show", (gpointer)&nn_show))
