@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.102 2010/10/04 12:50:23 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.103 2011/01/30 11:23:41 pacho Exp $
+
+*emul-linux-x86-xlibs-20110129 (30 Jan 2011)
+
+  30 Jan 2011; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-xlibs-20100611.ebuild, +emul-linux-x86-xlibs-20110129.ebuild,
+  metadata.xml:
+  Version bump, remove old. Split motif stuff due its license (bug #337967).
 
   04 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-xlibs-20100915.ebuild:

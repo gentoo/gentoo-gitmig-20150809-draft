@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.65 2010/10/04 12:52:48 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.66 2011/01/30 11:33:08 pacho Exp $
+
+*emul-linux-x86-qtlibs-20110129 (30 Jan 2011)
+
+  30 Jan 2011; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-qtlibs-20100611.ebuild,
+  +emul-linux-x86-qtlibs-20110129.ebuild, metadata.xml:
+  Version bump, remove old. Now needs emul-linux-x86-medialibs due phonon
+  addition (as it needs gstreamer), that is required by new qt-webkit.
 
   04 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-qtlibs-20100915.ebuild:

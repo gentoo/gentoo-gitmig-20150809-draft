@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20100611.ebuild,v 1.2 2010/06/27 13:14:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110129.ebuild,v 1.1 2011/01/30 11:24:18 pacho Exp $
 
 inherit emul-linux-x86
 
 LICENSE="GPL-3 GPL-2 LGPL-2 LGPL-2.1 FTL MIT || ( LGPL-2.1 MPL-1.1 )"
-KEYWORDS="-* amd64"
-
-IUSE=""
+KEYWORDS="-* ~amd64"
 
 DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
@@ -43,7 +41,7 @@ pkg_postinst() {
 	einfo "Generating gtk+ immodules/gdk-pixbuf loaders listing..."
 	mkdir -p ${GTK2_CONFDIR}
 	gtk-query-immodules-2.0-32 > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
-	gdk-pixbuf-query-loaders32 > "${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders"
+	gdk-pixbuf-query-loaders32 > "${ROOT}usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders.cache"
 
 	# gdk-pixbuf.loaders should be in their CHOST directories respectively.
 	if [[ -e ${ROOT}/etc/gtk-2.0/gdk-pixbuf.loaders ]] ; then
