@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.4.1.ebuild,v 1.1 2011/01/30 23:11:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.4.1.ebuild,v 1.2 2011/01/30 23:13:11 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,12 +27,12 @@ RDEPEND=">=dev-python/apptools-3.4.1
 	>=dev-python/envisageplugins-3.2.0
 	dev-python/ipython
 	dev-python/numpy
+	dev-python/setuptools
 	>=dev-python/traitsgui-3.6.0[qt4?,wxwidgets]
 	dev-python/wxpython:2.8[opengl]
 	>=sci-libs/vtk-5[python]
 	qt4? ( dev-python/PyQt4[X,opengl] )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
 	doc? (
 		dev-python/sphinx
 		media-fonts/font-cursor-misc
