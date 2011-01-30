@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.7.5.ebuild,v 1.11 2011/01/25 18:01:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.7.5.ebuild,v 1.12 2011/01/30 08:20:29 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=xfce-base/xfce4-panel-4.6
 	>=dev-libs/libical-0.43
 	berkdb? ( >=sys-libs/db-4 )
-	libnotify? ( x11-libs/libnotify )
+	libnotify? ( <x11-libs/libnotify-0.7 )
 	dbus? ( >=dev-libs/dbus-glib-0.88 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
