@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.3 2011/01/30 07:54:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.4 2011/01/30 07:59:56 ssuominen Exp $
 
 EAPI=3
 
@@ -30,16 +30,19 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 
 src_prepare() {
 	rm -f py-compile
 	ln -s $(type -P true) py-compile
+
+	gnome2_src_prepare
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	gnome2_src_install
 
 	python_convert_shebangs 2 "${D}"/usr/bin/${PN}
 }
