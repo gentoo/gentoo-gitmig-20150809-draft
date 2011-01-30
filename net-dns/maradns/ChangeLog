@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/maradns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.37 2011/01/30 14:33:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.38 2011/01/30 16:33:29 xarthisius Exp $
+
+  30 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> maradns-1.4.06.ebuild:
+  ppc stable wrt #352569
 
 *maradns-1.4.06 (30 Jan 2011)
 
