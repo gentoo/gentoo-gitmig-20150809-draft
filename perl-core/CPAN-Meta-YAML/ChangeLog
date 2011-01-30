@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CPAN-Meta-YAML
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.2 2011/01/29 17:26:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.3 2011/01/30 18:14:59 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> CPAN-Meta-YAML-0.3.ebuild:
+  Add ~alpha/~arm/~ia64/~m68k/~s390/~sh/~sparc wrt #353115
 
   29 Jan 2011; Jeroen Roovers <jer@gentoo.org> CPAN-Meta-YAML-0.3.ebuild:
   Marked ~hppa (bug #353115).
