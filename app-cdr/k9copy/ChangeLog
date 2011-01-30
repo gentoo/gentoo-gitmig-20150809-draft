@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.60 2011/01/30 09:00:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.61 2011/01/30 12:13:13 tampakrap Exp $
+
+  30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -k9copy-2.3.5.ebuild:
+  Remove old
 
   30 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> k9copy-2.3.6.ebuild:
   x86 stable wrt bug #353039
