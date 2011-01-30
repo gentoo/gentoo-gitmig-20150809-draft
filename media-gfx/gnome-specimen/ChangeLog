@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnome-specimen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/ChangeLog,v 1.5 2010/05/31 15:06:58 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/ChangeLog,v 1.6 2011/01/30 07:54:17 ssuominen Exp $
+
+  30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-specimen-0.4.ebuild:
+  Fix dependencies wrt #352927. Fix python.eclass handling wrt #322249.
 
   31 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gnome-specimen-0.4.ebuild:

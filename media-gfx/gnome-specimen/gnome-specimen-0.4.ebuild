@@ -1,10 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.2 2010/05/31 15:06:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.3 2011/01/30 07:54:17 ssuominen Exp $
+
+EAPI=3
 
 GCONF_DEBUG=no
+PYTHON_DEPEND="2:2.6"
 
-inherit gnome2 multilib python
+inherit gnome2 python
 
 DESCRIPTION="Font preview application"
 HOMEPAGE="http://uwstopia.nl"
@@ -15,30 +18,38 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=gnome-base/gconf-2
-	dev-python/gnome-python"
+RDEPEND="dev-python/gconf-python
+	dev-python/libgnome-python
+	dev-python/pygtk
+	dev-python/pygobject"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
 	dev-util/intltool
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	ln -nfs $(type -P true) py-compile || die "ln failed."
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	rm -f py-compile
+	ln -s $(type -P true) py-compile
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
+
+	python_convert_shebangs 2 "${D}"/usr/bin/${PN}
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/specimen
+	python_mod_optimize specimen
 	gnome2_pkg_postinst
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/specimen
+	python_mod_cleanup specimen
 	gnome2_pkg_postrm
 }
