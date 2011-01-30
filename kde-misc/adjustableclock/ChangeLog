@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/adjustableclock
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/ChangeLog,v 1.1 2010/10/01 21:47:12 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/ChangeLog,v 1.2 2011/01/30 13:54:01 tampakrap Exp $
+
+  30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  adjustableclock-2.6.1.ebuild:
+  EAPI3
 
 *adjustableclock-2.6.1 (01 Oct 2010)
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/adjustableclock-2.6.1.ebuild,v 1.1 2010/10/01 21:47:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/adjustableclock/adjustableclock-2.6.1.ebuild,v 1.2 2011/01/30 13:54:01 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit kde4-base
 
@@ -16,8 +16,8 @@ SLOT="4"
 IUSE="debug"
 
 DEPEND="
-	>=kde-base/libplasmaclock-${KDE_MINIMAL}
+	$(add_kdebase_dep libplasmaclock)
 "
 RDEPEND="${DEPEND}
-	>=kde-base/plasma-workspace-${KDE_MINIMAL}
+	$(add_kdebase_dep plasma-workspace)
 "
