@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.3 2010/06/29 08:57:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.4 2011/01/30 09:41:45 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
+inherit eutils
 
 DESCRIPTION="Notifications for syslog entries via libnotify"
 HOMEPAGE="http://jtniehof.github.com/syslog-notify/"
@@ -17,13 +18,17 @@ DEPEND="x11-libs/libnotify"
 RDEPEND="${DEPEND}
 	app-admin/syslog-ng"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+}
+
 src_install() {
-	dosbin src/syslog-notify || die "install failed"
+	dosbin src/syslog-notify || die
 	ebegin "Creating /var/spool/syslog-notify FIFO"
-	dodir /var/spool/ || die "dodir failed"
-	mkfifo "${D}"var/spool/syslog-notify || die "mkfifo failed"
+	dodir /var/spool/ || die
+	mkfifo "${D}"var/spool/syslog-notify || die
 	eend $?
-	dodoc AUTHORS INSTALL README || die "dodoc failed"
+	dodoc AUTHORS INSTALL README || die
 }
 
 pkg_postinst() {
