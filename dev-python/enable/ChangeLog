@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/enable
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.9 2010/10/18 14:16:23 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.10 2011/01/30 17:02:25 arfrever Exp $
+
+*enable-3.4.0 (30 Jan 2011)
+
+  30 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/enable-3.0.2-nofreetype.patch, -enable-3.3.2.ebuild,
+  +enable-3.4.0.ebuild:
+  Version bump.
 
 *enable-3.3.2 (18 Oct 2010)
 
