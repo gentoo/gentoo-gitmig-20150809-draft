@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5-r1.ebuild,v 1.3 2011/01/17 22:38:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5-r1.ebuild,v 1.4 2011/01/30 15:12:42 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 KDE_LINGUAS="ar ca de el es et fi fr gl hu it ja nl pt_BR ru sk tr zh_CN zh_TW"
 inherit kde4-base
@@ -25,7 +25,7 @@ COMMONDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	gif? ( media-libs/giflib )
-	konqueror? ( >=kde-base/libkonq-${KDE_MINIMAL} )
+	konqueror? ( $(add_kdebase_dep libkonq) )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 "
 DEPEND="${COMMONDEPEND}
@@ -33,8 +33,7 @@ DEPEND="${COMMONDEPEND}
 	xscreensaver? ( x11-proto/scrnsaverproto )
 "
 RDEPEND="${COMMONDEPEND}
-	konqueror? ( >=kde-base/konqueror-${KDE_MINIMAL} )
-	kde-base/oxygen-icons
+	konqueror? ( $(add_kdebase_dep konqueror) )
 "
 
 S="${WORKDIR}/${MY_P}"

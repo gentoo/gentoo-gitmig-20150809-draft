@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-9999.ebuild,v 1.1 2010/10/23 19:34:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-9999.ebuild,v 1.2 2011/01/30 15:12:42 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 EGIT_HAS_SUBMODULES="true"
 KDE_LINGUAS="ar ca da de el es et fi fr hu it ko nb nl pt_BR sk sl sv th tr zh_CN zh_TW"
@@ -24,7 +24,7 @@ COMMONDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	gif? ( media-libs/giflib )
-	konqueror? ( >=kde-base/libkonq-${KDE_MINIMAL} )
+	konqueror? ( $(add_kdebase_dep libkonq) )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 "
 DEPEND="${COMMONDEPEND}
@@ -32,7 +32,7 @@ DEPEND="${COMMONDEPEND}
 "
 RDEPEND="${COMMONDEPEND}
 	!net-im/kmess:0
-	konqueror? ( >=kde-base/konqueror-${KDE_MINIMAL} )
+	konqueror? ( $(add_kdebase_dep konqueror) )
 "
 RESTRICT="test"
 
