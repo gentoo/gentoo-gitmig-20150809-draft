@@ -1,5 +1,9 @@
---- src/Release/makefile.orig	2011-01-30 12:17:24.774427282 +0100
-+++ src/Release/makefile	2011-01-30 12:19:06.741766666 +0100
+Respect CXX,CXXFLAGS, fix as-needed
+
+Patch written by Kacper Kowalik <xarthisius@gentoo.org>
+
+--- a/src/Release/makefile
++++ b/src/Release/makefile
 @@ -43,7 +43,7 @@
  mandelbulber: $(OBJS) $(USER_OBJS)
  	@echo 'Building target: $@'
@@ -9,8 +13,8 @@
  	@echo 'Finished building target: $@'
  	@echo ' '
  
---- src/Release/subdir.mk.orig	2011-01-30 12:18:22.699456900 +0100
-+++ src/Release/subdir.mk	2011-01-30 12:18:50.772927083 +0100
+--- a/src/Release/subdir.mk
++++ b/src/Release/subdir.mk
 @@ -65,14 +65,14 @@
  Render3D.o: ../Render3D.cpp
  	@echo 'Building file: $<'
