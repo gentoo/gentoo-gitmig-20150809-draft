@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.41 2010/10/27 08:58:43 djc Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.42 2011/01/30 17:02:31 djc Exp $
+
+*couchdb-1.0.2 (30 Jan 2011)
+
+  30 Jan 2011; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.0.2.ebuild:
+  Version bump to 1.0.2.
 
 *couchdb-1.0.1-r2 (27 Oct 2010)
 
