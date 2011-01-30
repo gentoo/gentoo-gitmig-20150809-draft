@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.2.ebuild,v 1.2 2010/12/31 08:26:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.2.ebuild,v 1.3 2011/01/30 09:27:47 graaff Exp $
 
 EAPI=3
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -19,7 +19,7 @@ HOMEPAGE="http://rubyforge.org/projects/rdoc/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "
