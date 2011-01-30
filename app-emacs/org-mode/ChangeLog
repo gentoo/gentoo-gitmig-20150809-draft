@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.123 2011/01/08 02:16:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.124 2011/01/30 12:15:59 ulm Exp $
+
+*org-mode-7.4-r1 (30 Jan 2011)
+
+  30 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +org-mode-7.4-r1.ebuild:
+  Don't call prepalldocs, it is no longer needed with EAPI 4. Bug 262925.
 
   08 Jan 2011; Ulrich Mueller <ulm@gentoo.org> -org-mode-7.01h-r1.ebuild,
   -org-mode-7.02.ebuild:
