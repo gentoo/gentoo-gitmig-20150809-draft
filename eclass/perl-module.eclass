@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.128 2011/01/23 22:12:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.129 2011/01/30 08:18:42 tove Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 
@@ -21,7 +21,7 @@ case "${EAPI:-0}" in
 	0|1)
 		PERL_EXPF+=" pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm"
 		;;
-	2|3)
+	2|3|4)
 		PERL_EXPF+=" src_prepare src_configure"
 		[[ ${CATEGORY} == "perl-core" ]] && \
 			PERL_EXPF+=" pkg_postinst pkg_postrm"
