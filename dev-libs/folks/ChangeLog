@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.3 2011/01/26 16:24:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.4 2011/01/30 16:57:05 armin76 Exp $
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> folks-0.2.1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #347744
 
   26 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> folks-0.2.1.ebuild:
   add ~ppc wrt #347744
