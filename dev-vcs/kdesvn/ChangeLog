@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/kdesvn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.15 2010/11/05 13:28:07 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/ChangeLog,v 1.16 2011/01/30 12:59:25 tampakrap Exp $
+
+  30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -kdesvn-1.5.3.ebuild:
+  Remove old
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> kdesvn-1.5.5.ebuild:
   Stable on amd64 wrt bug #338887
