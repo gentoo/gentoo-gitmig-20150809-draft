@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.8 2010/10/10 21:51:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.9 2011/01/30 21:52:38 bicatali Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils toolchain-funcs
 
 DEB_PN=cernlib
@@ -41,9 +41,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-nogfortran.patch"
 	# set some default paths
 	sed -i \
-		-e "s:/usr/local:/usr:g" \
+		-e "s:/usr/local:${EPREFIX}/usr:g" \
 		-e "s:prefix)/lib:prefix)/$(get_libdir):" \
-		-e 's:$(prefix)/etc:/etc:' \
+		-e "s:\$(prefix)/etc:${EPREFIX}/etc:" \
 		-e 's:$(prefix)/man:$(prefix)/share/man:' \
 		debian/add-ons/cernlib.mk || die "sed failed"
 
@@ -61,6 +61,7 @@ src_prepare() {
 	einfo "Applying Debian patches"
 	emake -j1 patch || die "debian patch failed"
 
+	epatch "${FILESDIR}/${P}-fgets.patch"
 	# since we depend on cfortran, do not use the one from cernlib
 	rm -f src/include/cfortran/cfortran.h
 
