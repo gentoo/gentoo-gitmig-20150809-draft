@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.2-r3.ebuild,v 1.1 2011/01/30 08:42:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.2-r3.ebuild,v 1.2 2011/01/31 20:33:26 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -141,13 +141,8 @@ src_configure() {
 		myconf="${myconf} $(use_with sound)"
 	fi
 
-	if use aqua; then
-		einfo "Configuring to build with Cocoa support"
-		use X && ewarn "aqua USE flag disables X."
-		myconf="${myconf} --with-ns --disable-ns-self-contained"
-		myconf="${myconf} --without-x"
-	elif use X; then
-		myconf="${myconf} --with-x"
+	if use X; then
+		myconf="${myconf} --with-x --without-ns"
 		myconf="${myconf} $(use_with gconf)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
@@ -188,8 +183,13 @@ src_configure() {
 				&& ewarn "USE flag \"${f}\" ignored (superseded by \"${tk}\")"
 			tk="${tk}${tk:+ }${f}"
 		done
-	else
+	elif use aqua; then
+		einfo "Configuring to build with Cocoa support"
+		use X && ewarn "aqua USE flag disables X."
+		myconf="${myconf} --with-ns --disable-ns-self-contained"
 		myconf="${myconf} --without-x"
+	else
+		myconf="${myconf} --without-x --without-ns"
 	fi
 
 	myconf="${myconf} $(use_with hesiod)"
