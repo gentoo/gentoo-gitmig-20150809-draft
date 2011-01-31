@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdesudo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdesudo/ChangeLog,v 1.1 2010/01/27 20:18:48 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdesudo/ChangeLog,v 1.2 2011/01/31 04:19:42 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kdesudo-3.4.2.3.ebuild:
+  EAPI3, use array for DOCS
 
 *kdesudo-3.4.2.3 (27 Jan 2010)
 
