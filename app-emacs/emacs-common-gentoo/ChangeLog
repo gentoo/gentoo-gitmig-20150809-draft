@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.35 2011/01/13 16:58:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.36 2011/01/31 19:02:11 ulm Exp $
+
+*emacs-common-gentoo-1.2-r2 (31 Jan 2011)
+
+  31 Jan 2011; Ulrich Mueller <ulm@gentoo.org>
+  +emacs-common-gentoo-1.2-r2.ebuild:
+  Test REPLACING_VERSIONS to detect a new install. Change ebuild to EAPI 4.
 
   13 Jan 2011; Ulrich Mueller <ulm@gentoo.org> -emacs-common-gentoo-1.2.ebuild:
   Remove old.
