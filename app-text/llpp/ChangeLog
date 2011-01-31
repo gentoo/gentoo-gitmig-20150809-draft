@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.1 2011/01/31 14:51:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.2 2011/01/31 21:01:38 xmw Exp $
+
+  31 Jan 2011; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  added use flage dependecy glut for dev-ml/lablgl
 
 *llpp-9999 (31 Jan 2011)
 
