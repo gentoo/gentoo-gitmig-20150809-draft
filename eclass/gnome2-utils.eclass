@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.20 2011/01/20 23:50:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.21 2011/01/31 17:03:45 eva Exp $
 
 #
 # gnome2-utils.eclass
@@ -12,7 +12,7 @@
 #
 
 case "${EAPI:-0}" in
-	0|1|2|3) ;;
+	0|1|2|3|4) ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
