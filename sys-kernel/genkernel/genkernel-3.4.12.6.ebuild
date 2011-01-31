@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.12.2.ebuild,v 1.1 2011/01/27 10:47:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.12.6.ebuild,v 1.1 2011/01/31 12:07:03 sping Exp $
 
 # genkernel-9999        -> latest Git master
 # genkernel-99999       -> latest Git experimental
