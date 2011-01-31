@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-2.32.1.ebuild,v 1.2 2011/01/31 18:53:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-2.32.1.ebuild,v 1.3 2011/01/31 18:57:56 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit autotools eutils gnome2
 
 DESCRIPTION="Disk Utility for GNOME using devicekit-disks"
-HOMEPAGE="http://git.gnome.org/cgit/gnome-disk-utility/"
+HOMEPAGE="http://git.gnome.org/browse/gnome-disk-utility"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
