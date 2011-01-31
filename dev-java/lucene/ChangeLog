@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.74 2011/01/28 14:32:09 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.75 2011/01/31 21:19:52 grobian Exp $
+
+  31 Jan 2011; Fabian Groffen <grobian@gentoo.org> lucene-2.1.0-r1.ebuild,
+  lucene-2.2.0.ebuild, lucene-2.4.1.ebuild, lucene-2.9.4.ebuild,
+  lucene-3.0.0.ebuild, lucene-3.0.3.ebuild:
+  Fix all slots for Prefix, bug #351447
 
 *lucene-2.9.4 (28 Jan 2011)
 

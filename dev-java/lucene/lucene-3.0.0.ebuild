@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-3.0.0.ebuild,v 1.4 2010/06/01 14:49:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-3.0.0.ebuild,v 1.5 2011/01/31 21:19:52 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 JAVA_PKG_IUSE="doc source test"
 JAVA_PKG_BSFIX_ALL="no"
 JAVA_PKG_BSFIX_NAME="build.xml common-build.xml"
@@ -34,7 +34,7 @@ src_compile() {
 	# doesn't use it - it's to fool the <available> test, first time
 	# it's useful not to have ignoresystemclasses=true...
 	ANT_TASKS="ant-nodeps javacc" eant \
-		-Djavacc.home=/usr/share/javacc/lib javacc
+		-Djavacc.home="${EPREFIX}"/usr/share/javacc/lib javacc
 	ANT_TASKS="none" eant -Dversion=${PV} jar-core jar-demo $(use_doc javadocs-core javadocs-demo)
 }
 
