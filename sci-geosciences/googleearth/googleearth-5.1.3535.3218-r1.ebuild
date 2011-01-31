@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218-r1.ebuild,v 1.4 2010/06/20 16:41:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218-r1.ebuild,v 1.5 2011/01/31 16:05:44 caster Exp $
 
 EAPI=2
 
@@ -10,13 +10,12 @@ DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
 # no upstream versioning, version determined from help/about
 # incorrect digest means upstream bumped and thus needs version bump
-SRC_URI="http://dl.google.com/earth/client/advanced/previous/GoogleEarthLinux.bin
-			-> GoogleEarthLinux-${PV}.bin"
+SRC_URI="GoogleEarthLinux-${PV}.bin"
 
 LICENSE="googleearth GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-RESTRICT="mirror strip"
+RESTRICT="fetch strip"
 IUSE="mdns-bundled qt-bundled"
 
 GCC_NEEDED="4.2"
@@ -146,4 +145,13 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+}
+
+pkg_nofetch() {
+	elog "This version is no longer available from Google and the license prevents mirroring."
+	elog "This ebuild is intended for users who already downloaded it previously and have problems with 5.2+."
+	elog "If you can get the distfile from e.g. another computer of yours,"
+	elog "copy the file ${SRC_URI} to ${DISTDIR}."
+	elog "Otherwise, you need to unmask 5.2 or higher version."
+#	elog "stabilization is tracked at https://bugs.gentoo.org/show_bug.cgi?id=320065"
 }

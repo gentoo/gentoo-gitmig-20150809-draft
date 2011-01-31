@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.2.1.1588.ebuild,v 1.3 2011/01/31 16:05:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-6.0.1.2032_beta.ebuild,v 1.1 2011/01/31 16:05:44 caster Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
 # no upstream versioning, version determined from help/about
 # incorrect digest means upstream bumped and thus needs version bump
-SRC_URI="http://dl.google.com/earth/client/advanced/previous/GoogleEarthLinux.bin
+SRC_URI="http://dl.google.com/earth/client/current/GoogleEarthLinux.bin
 			-> GoogleEarthLinux-${PV}.bin"
 
 LICENSE="googleearth GPL-2"
@@ -55,6 +55,8 @@ RDEPEND=">=sys-devel/gcc-${GCC_NEEDED}[-nocxx]
 	)
 	virtual/ttf-fonts"
 
+DEPEND="dev-util/patchelf"
+
 S="${WORKDIR}"
 
 pkg_nofetch() {
@@ -89,6 +91,7 @@ opt/googleearth/libgps.so
 opt/googleearth/libgooglesearch.so
 opt/googleearth/plugins/imageformats/libqjpeg.so
 opt/googleearth/libmeasure.so
+opt/googleearth/libspatial.so
 "
 
 pkg_setup() {
@@ -131,6 +134,10 @@ src_prepare() {
 	cd "${WORKDIR}"/bin || die
 	# bug #262780
 	epatch "${FILESDIR}/decimal-separator.patch"
+
+	# we have no ld-lsb.so.3 symlink
+	# thanks to Nathan Phillip Brink <ohnobinki@ohnopublishing.net> for suggesting patchelf
+	patchelf --set-interpreter /lib/ld-linux.so.2 googleearth-bin || die "patchelf failed"
 
 	# make the postinst script only create the files; it's  installation
 	# are too complicated and inserting them ourselves is easier than

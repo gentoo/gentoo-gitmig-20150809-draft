@@ -1,6 +1,16 @@
 # ChangeLog for sci-geosciences/googleearth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.19 2010/09/13 14:38:55 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.20 2011/01/31 16:05:44 caster Exp $
+
+*googleearth-6.0.1.2032_beta (31 Jan 2011)
+
+  31 Jan 2011; Vlastimil Babka <caster@gentoo.org>
+  googleearth-5.1.3535.3218-r1.ebuild, googleearth-5.2.1.1588.ebuild,
+  +googleearth-6.0.1.2032_beta.ebuild:
+  Version bump, fixes bug #348911. Thanks to Nathan Phillip Brink
+  <ohnobinki@ohnopublishing.net> for suggesting patchelf to work around missing
+  lsb symlinks. Update SRC_URI for 5.2.1. Mark 5.1 as fetch restricted as the
+  distfile is gone.
 
   13 Sep 2010; Vlastimil Babka <caster@gentoo.org>
   -googleearth-5.2.1.1547_beta.ebuild, googleearth-5.2.1.1588.ebuild:
