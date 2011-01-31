@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.9-r1.ebuild,v 1.1 2011/01/31 15:14:12 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.9-r1.ebuild,v 1.2 2011/01/31 15:16:55 idl0r Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install || die "emake install failed"
+	emake DESTDIR="${D}" PREFIX=/usr DOCDIR=/usr/share/doc/${PF} install || die "emake install failed"
 
 	newinitd "${FILESDIR}/incrond.init" incrond || die
 
