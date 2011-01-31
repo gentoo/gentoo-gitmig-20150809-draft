@@ -1,0 +1,14 @@
+# ChangeLog for sci-libs/linux-gpib
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.1 2011/01/31 22:29:39 dilfridge Exp $
+
+*linux-gpib-3.2.15 (31 Jan 2011)
+
+  31 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +linux-gpib-3.2.15.ebuild, +files/linux-gpib-3.2.15-build.patch,
+  +metadata.xml:
+  New package, fixes bug 165399. Thanks to antonmx and Ben Schwartz for
+  their work. Initially pmasked since the ebuild still needs a lot of QA
+  cleanup (especially concerning the language bindings) and requires exotic
+  hardware for testing.
+
