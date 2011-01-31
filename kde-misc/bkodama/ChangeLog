@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/bkodama
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/bkodama/ChangeLog,v 1.2 2010/12/14 22:55:40 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/bkodama/ChangeLog,v 1.3 2011/01/31 02:56:06 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -bkodama-0.2.1.ebuild,
+  bkodama-0.3.1.ebuild:
+  EAPI3, slotmove to 4, remove old
 
 *bkodama-0.3.1 (14 Dec 2010)
 
