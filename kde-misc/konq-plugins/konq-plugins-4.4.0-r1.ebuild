@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.4.0-r1.ebuild,v 1.1 2010/10/29 12:26:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.4.0-r1.ebuild,v 1.2 2011/01/31 15:25:49 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
 # FIXME. Missing sr@ijekavian in desc.
 KDE_LINGUAS="af ar ast be bg bn br ca ca@valencia cs cy da de el en_GB eo es et
@@ -19,16 +19,16 @@ SRC_URI="mirror://kde/stable/${PV}/src/extragear/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="debug +handbook tidy"
 
 DEPEND="
-	>=kde-base/libkonq-${KDE_MINIMAL}
+	$(add_kdebase_dep libkonq)
 	tidy? ( app-text/htmltidy )
 "
 RDEPEND="${DEPEND}
-	>=kde-base/kcmshell-${KDE_MINIMAL}
-	>=kde-base/konqueror-${KDE_MINIMAL}
+	$(add_kdebase_dep kcmshell)
+	$(add_kdebase_dep konqueror)
 "
 
 PATCHES=(
