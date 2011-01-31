@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.118 2011/01/30 19:33:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.119 2011/01/31 12:36:27 pacho Exp $
+
+  31 Jan 2011; Pacho Ramos <pacho@gentoo.org> brasero-2.32.1.ebuild:
+  RDEPENDs on x11-themes/hicolor-icon-theme as reported in bug #350377 by
+  Oschtan and confirmed by me.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> brasero-2.30.3.ebuild:
   alpha/arm/ia64/sparc stable wrt #348987
