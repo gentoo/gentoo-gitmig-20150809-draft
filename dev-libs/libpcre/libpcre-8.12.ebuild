@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.10.ebuild,v 1.1 2010/12/12 09:35:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.12.ebuild,v 1.1 2011/01/31 19:52:03 flameeyes Exp $
 
 EAPI=2
 
@@ -11,7 +11,9 @@ HOMEPAGE="http://www.pcre.org/"
 if [[ ${PV} == ${PV/_rc} ]]
 then
 	MY_P="pcre-${PV}"
-	SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${MY_P}.tar.bz2"
+	# Only the final releases are available here.
+	SRC_URI="mirror://sourceforge/pcre/${MY_P}.tar.bz2
+		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/${MY_P}.tar.bz2"
 else
 	MY_P="pcre-${PV/_rc/-RC}"
 	SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/Testing/${MY_P}.tar.bz2"
@@ -51,11 +53,4 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	gen_usr_ldscript -a pcre
 	find "${D}" -type f -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
-}
-
-pkg_postinst() {
-	elog "This version of ${PN} has stopped installing .la files. This may"
-	elog "cause compilation failures in other packages. To fix this problem,"
-	elog "install dev-util/lafilefixer and run:"
-	elog "lafilefixer --justfixit"
 }

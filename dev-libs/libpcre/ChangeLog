@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.172 2011/01/18 05:44:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.173 2011/01/31 19:52:03 flameeyes Exp $
+
+*libpcre-8.12 (31 Jan 2011)
+
+  31 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org> -libpcre-8.10.ebuild,
+  -libpcre-8.11.ebuild, +libpcre-8.12.ebuild:
+  Version bump, remove old 8.1x series ebuilds as 8.12 is the next stable
+  candidate instead.
 
   18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> libpcre-8.02.ebuild:
   ppc64 stable wrt #348487
