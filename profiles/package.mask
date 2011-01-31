@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12412 2011/01/31 06:27:36 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12413 2011/01/31 09:44:53 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (31 Jan 2011)
+# Needs libnotify-0.7, mask till that can be unmasked
+>=sys-apps/gnome-disk-utility-2.32.1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (31 Jan 2011)
 # ... also mask clutter-gst-1.3

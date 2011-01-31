@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4997 2011/01/31 06:27:36 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4998 2011/01/31 09:44:53 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Mask sys-apps/gnome-disk-utility-2.32.1, which needs libnotify-0.7
 
   31 Jan 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Add clutter-gst-1.3 to the clutter mask
