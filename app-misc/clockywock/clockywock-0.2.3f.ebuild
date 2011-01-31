@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/clockywock-0.2.3f.ebuild,v 1.1 2011/01/31 20:29:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/clockywock-0.2.3f.ebuild,v 1.2 2011/01/31 20:50:44 ssuominen Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P=${P/f/F}
 
@@ -23,6 +23,11 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
+}
+
+src_compile() {
+	tc-export CXX
+	emake || die
 }
 
 src_install() {

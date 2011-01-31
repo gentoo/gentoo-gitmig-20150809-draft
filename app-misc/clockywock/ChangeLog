@@ -1,11 +1,11 @@
 # ChangeLog for app-misc/clockywock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.8 2011/01/31 20:29:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.9 2011/01/31 20:50:44 ssuominen Exp $
 
 *clockywock-0.2.3f (31 Jan 2011)
 
   31 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
-  +clockywock-0.2.3f.ebuild:
+  +clockywock-0.2.3f.ebuild, +files/clockywock-0.2.3f-makefile.patch:
   Version bump wrt #353082 by Kevin McCarthy.
 
 *clockywock-0.2.3d (26 Mar 2010)
