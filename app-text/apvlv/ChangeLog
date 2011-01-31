@@ -1,6 +1,11 @@
 # ChangeLog for app-text/apvlv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.9 2011/01/17 23:47:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.10 2011/01/31 21:06:18 radhermit Exp $
+
+*apvlv-0.1.1 (31 Jan 2011)
+
+  31 Jan 2011; Tim Harder <radhermit@gentoo.org> +apvlv-0.1.1.ebuild:
+  Version bump
 
 *apvlv-0.1.0 (17 Jan 2011)
 
