@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/ufdbguard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.10 2010/12/07 09:11:50 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.11 2011/01/31 05:37:32 jer Exp $
+
+*ufdbguard-1.23-r1 (31 Jan 2011)
+
+  31 Jan 2011; Jeroen Roovers <jer@gentoo.org> -ufdbguard-1.23.ebuild,
+  +ufdbguard-1.23-r1.ebuild, files/ufdbUpdate.cron:
+  /etc/cron.daily/ufdbUpdate: line 10: return: can only `return\' from a
+  function or sourced script.
 
 *ufdbguard-1.23 (07 Dec 2010)
 
