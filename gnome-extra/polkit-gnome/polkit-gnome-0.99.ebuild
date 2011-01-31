@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.99.ebuild,v 1.2 2010/12/28 18:38:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.99.ebuild,v 1.3 2011/01/31 16:41:42 eva Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples +introspection"
 
-RDEPEND=">=x11-libs/gtk+-2.17.1
+RDEPEND=">=x11-libs/gtk+-2.17.1:2
 	>=sys-auth/polkit-0.97
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	!lxde-base/lxpolkit"

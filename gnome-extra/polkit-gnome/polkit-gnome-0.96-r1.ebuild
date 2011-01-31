@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.96-r1.ebuild,v 1.6 2010/12/26 13:55:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.96-r1.ebuild,v 1.7 2011/01/31 16:41:42 eva Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc examples" #introspection
 
-RDEPEND=">=x11-libs/gtk+-2.17.1
+RDEPEND=">=x11-libs/gtk+-2.17.1:2
 	>=gnome-base/gconf-2.8
 	>=dev-libs/dbus-glib-0.71
 	>=sys-auth/polkit-0.95
