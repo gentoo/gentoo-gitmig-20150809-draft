@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.0.0.ebuild,v 1.1 2011/01/08 06:15:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.0.0.ebuild,v 1.2 2011/01/31 18:24:05 ssuominen Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ SRC_URI="http://imsettings.googlecode.com/files/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="qt4 static-libs xfce"
+IUSE="qt4 static-libs xfconf"
 
 # X11 connections are required for test.
 RESTRICT="test"
@@ -24,20 +24,29 @@ RDEPEND=">=dev-libs/check-0.9.4
 	x11-libs/libnotify
 	x11-libs/libX11
 	qt4? ( x11-libs/qt-core:4 )
-	xfce? ( xfce-base/xfconf )"
+	xfconf? ( xfce-base/xfconf )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 MY_XINPUTSH="90-xinput"
 
+src_prepare() {
+	# Prevent automagic linking to libxfconf-0.
+	if ! use xfconf; then
+		sed -i -e 's:libxfconf-0:dIsAbLe&:' configure || die
+	fi
+}
+
 src_configure() {
 	econf \
 		$(use_enable static-libs static) \
-		--with-xinputsh="${MY_XINPUTSH}" || die
+		--with-xinputsh="${MY_XINPUTSH}"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+
+	find "${ED}" -name '*.la' -exec rm -f '{}' +
 
 	fperms 0755 /usr/libexec/xinputinfo.sh || die
 	fperms 0755 "/etc/X11/xinit/xinitrc.d/${MY_XINPUTSH}" || die

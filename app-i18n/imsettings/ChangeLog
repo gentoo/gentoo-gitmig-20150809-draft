@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/imsettings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/ChangeLog,v 1.1 2011/01/08 06:15:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/ChangeLog,v 1.2 2011/01/31 18:24:05 ssuominen Exp $
+
+  31 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> imsettings-1.0.0.ebuild,
+  metadata.xml:
+  Prevent automagic linking to libxfconf-0 and rename USE="xfce" to
+  USE="xfconf" wrt #353117.
 
 *imsettings-1.0.0 (08 Jan 2011)
 
