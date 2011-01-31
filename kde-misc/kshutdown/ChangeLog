@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kshutdown
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.31 2011/01/31 06:07:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.32 2011/01/31 17:05:12 hwoarang Exp $
+
+  31 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  kshutdown-2.0_beta11.ebuild:
+  Stable on amd64 wrt bug #353317
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   kshutdown-2.0_beta11.ebuild:
