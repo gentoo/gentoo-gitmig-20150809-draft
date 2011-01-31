@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/squashfs-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.72 2010/11/14 13:49:59 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.73 2011/01/31 02:53:19 jer Exp $
+
+*squashfs-tools-4.1-r1 (31 Jan 2011)
+
+  31 Jan 2011; Jeroen Roovers <jer@gentoo.org> +squashfs-tools-4.1-r1.ebuild:
+  Die sooner (and explain why) when no compression USE flag is set (bug
+  #352861). Fix USE=-lzma case (it tried to fix xz_SUPPORT in the Makefile
+  instead of XZ_SUPPORT, so it would always link against liblzma or die if not
+  found).
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> squashfs-tools-3.2_p2.ebuild,
   squashfs-tools-3.4.ebuild, squashfs-tools-4.0.ebuild,
