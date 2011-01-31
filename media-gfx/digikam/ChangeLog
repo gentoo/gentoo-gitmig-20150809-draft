@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.172 2011/01/29 17:37:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.173 2011/01/31 08:39:45 phajdan.jr Exp $
+
+  31 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  digikam-1.2.0-r4.ebuild:
+  x86 stable wrt bug #353087
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> digikam-1.2.0-r4.ebuild:
   Stable on amd64 wrt bug #353087
