@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.7 2011/01/22 20:28:53 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.8 2011/01/31 14:09:01 scarabeus Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -83,7 +83,7 @@
 # Keep variable names synced with cmake-utils and the other way around!
 
 case ${EAPI:-0} in
-	2|3) ;;
+	2|3|4) ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
