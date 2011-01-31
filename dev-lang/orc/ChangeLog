@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.12 2010/10/30 15:54:09 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.13 2011/01/31 17:05:31 hwoarang Exp $
+
+  31 Jan 2011; Markos Chandras <hwoarang@gentoo.org> orc-0.4.11.ebuild:
+  Stable on amd64 wrt bug #353321
 
   30 Oct 2010; Fabian Groffen <grobian@gentoo.org> orc-0.4.11.ebuild:
   Also drop any optimisation flags on Intel/Darwin, because of a similar
