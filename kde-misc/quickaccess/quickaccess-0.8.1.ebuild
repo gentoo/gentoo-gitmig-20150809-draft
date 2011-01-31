@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.1.ebuild,v 1.1 2010/05/11 16:19:11 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.1.ebuild,v 1.2 2011/01/31 06:28:47 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit kde4-base
 
@@ -15,12 +15,12 @@ SRC_URI="http://kde-look.org/CONTENT/content-files/101968-${MY_P}.orig.tar.gz"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
-SLOT="0"
+SLOT="4"
 IUSE="debug"
 
 RDEPEND="
 	!kde-plasmoids/quickaccess
-	>=kde-base/plasma-workspace-${KDE_MINIMAL}
+	$(add_kdebase_dep plasma-workspace)
 "
 
 S="${WORKDIR}/${MY_PN}-${PV}"
