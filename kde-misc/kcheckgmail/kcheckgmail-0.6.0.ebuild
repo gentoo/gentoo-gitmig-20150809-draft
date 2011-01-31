@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcheckgmail/kcheckgmail-0.6.0.ebuild,v 1.1 2010/01/14 14:41:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcheckgmail/kcheckgmail-0.6.0.ebuild,v 1.2 2011/01/31 03:36:18 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="ar ca cs da de el es et fr hu it ko lt pl pt_BR pt ru sk sv tr wa zh_CN"
 inherit kde4-base
 
@@ -15,4 +15,4 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
-DOCS="AUTHORS README TODO"
+DOCS=( AUTHORS README TODO )
