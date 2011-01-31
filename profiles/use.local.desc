@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6329 2011/01/30 22:53:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6330 2011/01/31 18:33:28 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -480,7 +480,7 @@ app-i18n/ibus-mozc:scim - Enable support for app-i18n/scim
 app-i18n/ibus-table-xingma:extra-phrases - Add extra phrases into builded Engine
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
-app-i18n/imsettings:xfce - Enable integration in XFCE desktop
+app-i18n/imsettings:xfconf - Enable integration in the Xfce desktop environment with xfce-base/xfconf
 app-i18n/kimera:anthy - Support for Anthy input method
 app-i18n/libtomoe-gtk:gucharmap - Enable gucharmap dictionary plugin
 app-i18n/scim-tomoe:gucharmap - Enable gucharmap dictionary plugin
