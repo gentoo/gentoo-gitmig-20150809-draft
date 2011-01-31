@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/freeipmi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.29 2010/10/05 19:52:13 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.30 2011/01/31 17:46:49 flameeyes Exp $
+
+*freeipmi-1.0.1 (31 Jan 2011)
+
+  31 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -freeipmi-0.6.10.ebuild, -files/freeipmi-0.6.10+glibc-2.8.patch,
+  +freeipmi-1.0.1.ebuild:
+  Version bump, remove old version and patch. Thanks to Christian (idl0r) in
+  bug #353327.
 
   05 Oct 2010; Markus Meier <maekke@gentoo.org> freeipmi-0.8.9.ebuild:
   x86 stable, bug #339140
