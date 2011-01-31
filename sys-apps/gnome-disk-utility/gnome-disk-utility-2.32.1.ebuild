@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-2.32.1.ebuild,v 1.1 2011/01/31 09:47:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-2.32.1.ebuild,v 1.2 2011/01/31 18:53:53 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit autotools eutils gnome2
 
 DESCRIPTION="Disk Utility for GNOME using devicekit-disks"
-HOMEPAGE="http://git.gnome.org/browse/gnome-disk-utility"
+HOMEPAGE="http://git.gnome.org/cgit/gnome-disk-utility/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -23,15 +23,14 @@ CDEPEND="
 	=sys-fs/udisks-1.0*[remote-access?]
 	>=dev-libs/libatasmart-0.14
 	>=x11-libs/libnotify-0.6.1
-
-	>=gnome-base/nautilus-2.24
-
 	avahi? ( >=net-dns/avahi-0.6.25[gtk] )
 	gnome-keyring? ( || (
 		gnome-base/libgnome-keyring
 		<gnome-base/gnome-keyring-2.29.4 ) )
+	nautilus? ( >=gnome-base/nautilus-2.24 )
 "
 RDEPEND="${CDEPEND}
+	x11-misc/xdg-utils
 	fat? ( sys-fs/dosfstools )
 	!!sys-apps/udisks"
 DEPEND="${CDEPEND}
@@ -57,6 +56,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	sed -i \
+		-e '/printf/s:nautilus:xdg-open:' \
+		src/palimpsest/gdu-section-volumes.c || die #350919
+
 	# Keep avahi optional, upstream bug #631986
 	epatch "${FILESDIR}/${PN}-2.30.1-optional-avahi.patch"
 
