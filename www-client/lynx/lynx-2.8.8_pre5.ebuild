@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre5.ebuild,v 1.2 2011/01/21 07:03:13 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre5.ebuild,v 1.3 2011/01/31 16:56:47 darkside Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils versionator
 
@@ -32,7 +32,7 @@ SRC_URI="http://lynx.isc.org/current/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="bzip2 cjk gnutls idn ipv6 nls ssl unicode"
 
 RDEPEND="sys-libs/ncurses[unicode?]
@@ -68,6 +68,7 @@ src_prepare() {
 
 	# fix configure for openssl compiled with kerberos (bug #267749)
 	epatch "${FILESDIR}/lynx-2.8.7-configure-openssl.patch"
+	epatch "${FILESDIR}"/${PN}-2.8.6-mint.patch
 }
 
 src_configure() {
@@ -116,11 +117,11 @@ src_install() {
 	make install DESTDIR="${D}" || die
 
 	sed -i -e "s|^HELPFILE.*$|HELPFILE:file://localhost/usr/share/doc/${PF}/lynx_help/lynx_help_main.html|" \
-			"${D}"/etc/lynx.cfg || die "lynx.cfg not found"
+			"${ED}"/etc/lynx.cfg || die "lynx.cfg not found"
 	if use unicode
 	then
 		sed -i -e '/^#CHARACTER_SET:/ c\CHARACTER_SET:utf-8' \
-				"${D}"/etc/lynx.cfg || die "lynx.cfg not found"
+				"${ED}"/etc/lynx.cfg || die "lynx.cfg not found"
 	fi
 	dodoc CHANGES COPYHEADER PROBLEMS README
 	docinto docs

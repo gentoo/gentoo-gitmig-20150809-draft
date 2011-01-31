@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.105 2011/01/21 07:03:13 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.106 2011/01/31 16:56:47 darkside Exp $
+
+  31 Jan 2011; Jeremy Olexa <darkside@gentoo.org>
+  +files/lynx-2.8.6-mint.patch, lynx-2.8.8_pre5.ebuild:
+  Port changes from Gentoo Prefix, use ED, add KEYWORDS, convert to EAPI3,
+  add FreeMiNT patch. bug 352712
 
   21 Jan 2011; Stephanie Lockwood-Childs <wormo@gentoo.org>
   -lynx-2.8.6-r2.ebuild, -lynx-2.8.6-r4.ebuild, lynx-2.8.8_pre5.ebuild:
