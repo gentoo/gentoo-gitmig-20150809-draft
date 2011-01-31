@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.121 2011/01/31 20:22:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.122 2011/01/31 20:27:12 scarabeus Exp $
+
+  31 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> quassel-0.7.1.ebuild,
+  quassel-9999.ebuild:
+  Whitespace.
 
   31 Jan 2011; Patrick Lauer <patrick@gentoo.org> quassel-0.7.1.ebuild,
   quassel-9999.ebuild:
