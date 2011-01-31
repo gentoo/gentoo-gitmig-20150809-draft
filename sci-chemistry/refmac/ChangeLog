@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/refmac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.41 2011/01/28 15:39:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.42 2011/01/31 21:14:39 dberkholz Exp $
+
+*refmac-5.6.0102-r1 (31 Jan 2011)
+*refmac-5.5.0110-r3 (31 Jan 2011)
+
+  31 Jan 2011; Donnie Berkholz <dberkholz@gentoo.org>;
+  +refmac-5.5.0110-r3.ebuild, +refmac-5.6.0102-r1.ebuild:
+  Fix for ARP/wARP. It looked for Refmac in a location where we didn't have it,
+  so make another symlink.
 
 *refmac-5.6.0102 (28 Jan 2011)
 
