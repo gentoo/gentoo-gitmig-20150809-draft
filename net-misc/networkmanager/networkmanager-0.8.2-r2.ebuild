@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.2-r2.ebuild,v 1.1 2010/12/17 12:17:05 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.2-r2.ebuild,v 1.2 2011/01/31 15:17:30 ssuominen Exp $
 
 EAPI="2"
 
-inherit gnome.org linux-info
+inherit eutils gnome.org linux-info
 
 # NetworkManager likes itself with capital letters
 MY_PN=${PN/networkmanager/NetworkManager}
@@ -66,6 +66,9 @@ sysfs_deprecated_check() {
 }
 
 pkg_setup() {
+	# FIXME. Required by -confchanges.patch, but the patch is invalid as
+	# ConsoleKit and PolicyKit is enough to get authorization.
+	enewgroup plugdev
 
 	if use kernel_linux; then
 		get_version
