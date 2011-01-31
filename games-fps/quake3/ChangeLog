@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.55 2010/11/28 05:29:05 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.56 2011/01/31 00:30:47 mr_bones_ Exp $
+
+  31 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> quake3-1.36.ebuild,
+  +files/quake3-1.36-bots.patch:
+  add Redhat patch to fix bot loading on 64bit (bug #353257)
 
   28 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> quake3-1.36.ebuild,
   quake3-9999.ebuild:
