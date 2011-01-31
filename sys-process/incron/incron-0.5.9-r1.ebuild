@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.9-r1.ebuild,v 1.2 2011/01/31 15:16:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.9-r1.ebuild,v 1.3 2011/01/31 20:16:42 idl0r Exp $
 
 EAPI="3"
 
@@ -27,6 +27,7 @@ src_prepare() {
 	# http://bts.aiken.cz/view.php?id=447
 	epatch "${FILESDIR}"/${P}-gcc44.patch
 
+	# http://bts.aiken.cz/view.php?id=512
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 }
 
