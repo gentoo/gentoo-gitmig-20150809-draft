@@ -1,6 +1,11 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.136 2011/01/29 13:06:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.137 2011/01/31 16:53:59 darkside Exp $
+
+  31 Jan 2011; Jeremy Olexa <darkside@gentoo.org>
+  elinks-0.12_pre5-r1.ebuild:
+  Port changes from Gentoo Prefix, use EPREFIX/ED, add KEYWORDS, convert to
+  EAPI3. bug 352839
 
   29 Jan 2011; Raúl Porcel <armin76@gentoo.org> elinks-0.11.7.ebuild:
   ia64 stable
