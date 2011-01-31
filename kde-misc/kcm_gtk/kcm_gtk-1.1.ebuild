@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/kcm_gtk-1.1.ebuild,v 1.4 2010/02/10 20:39:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/kcm_gtk-1.1.ebuild,v 1.5 2011/01/31 03:40:54 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 CMAKE_IN_SOURCE_BUILD="1"
 KDE_LINGUAS="bg cs de es fr it nn ru sv tr"
 

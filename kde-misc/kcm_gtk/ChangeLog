@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm_gtk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/ChangeLog,v 1.3 2010/02/10 20:39:56 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/ChangeLog,v 1.4 2011/01/31 03:40:54 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kcm_gtk-1.1.ebuild:
+  EAPI3
 
   10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> kcm_gtk-1.1.ebuild:
   amd64/x86 stable
