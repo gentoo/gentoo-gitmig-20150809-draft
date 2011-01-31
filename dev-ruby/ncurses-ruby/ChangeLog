@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.54 2011/01/30 18:53:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.55 2011/01/31 07:17:28 graaff Exp $
+
+  31 Jan 2011; Hans de Graaff <graaff@gentoo.org>
+  -ncurses-ruby-1.2.3.ebuild:
+  Remove old version.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> ncurses-ruby-1.2.4-r1.ebuild:
   alpha/sparc stable wrt #344243
