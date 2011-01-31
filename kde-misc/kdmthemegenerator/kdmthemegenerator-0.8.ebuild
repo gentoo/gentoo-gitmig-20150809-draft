@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmthemegenerator/kdmthemegenerator-0.8.ebuild,v 1.1 2009/11/05 12:54:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmthemegenerator/kdmthemegenerator-0.8.ebuild,v 1.2 2011/01/31 04:53:59 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 inherit kde4-base
 
 MY_P=KdmThemeGenerator
@@ -16,7 +16,9 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND=">=kde-base/kdm-${KDE_MINIMAL}"
+RDEPEND="
+	$(add_kdebase_dep kdm)
+"
 
 S=${WORKDIR}/${MY_P}
 
