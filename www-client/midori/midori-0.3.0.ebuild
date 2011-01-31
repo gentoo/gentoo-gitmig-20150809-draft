@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.0.ebuild,v 1.1 2011/01/31 21:23:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.0.ebuild,v 1.2 2011/01/31 21:39:31 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib python xfconf
@@ -70,10 +70,4 @@ src_compile() {
 src_install() {
 	DESTDIR=${D} ./waf install || die
 	dodoc AUTHORS ChangeLog INSTALL TODO || die
-}
-
-pkg_postinst() {
-	xfconf_pkg_postinst
-	ewarn "Midori tends to crash due to bugs in WebKit."
-	ewarn "Report bugs at http://www.twotoasts.de/bugs"
 }
