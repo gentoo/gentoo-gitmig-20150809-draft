@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/kosd-0.6.0.ebuild,v 1.1 2011/01/06 16:52:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/kosd-0.6.0.ebuild,v 1.2 2011/01/31 05:56:17 tampakrap Exp $
 
 EAPI=3
 KDE_MINIMAL=4.5
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde-apps.org/content/show.php/KOSD?content=81457"
 SRC_URI="http://kde-apps.org/CONTENT/content-files/81457-${P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT=4
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
