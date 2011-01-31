@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/qtrans/qtrans-0.2.2.6.ebuild,v 1.1 2011/01/03 20:58:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/qtrans/qtrans-0.2.2.6.ebuild,v 1.2 2011/01/31 06:25:39 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 WEBKIT_REQUIRED=always
 inherit kde4-base
 
@@ -15,9 +15,9 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DOCS="ChangeLog README"
+DOCS=( ChangeLog README )
 
 src_install() {
 	kde4-base_src_install
-	rm -f "${D}"usr/share/apps/qtrans/{ChangeLog,README}
+	rm -f "${ED}"usr/share/apps/qtrans/{ChangeLog,README}
 }
