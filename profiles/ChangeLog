@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.4999 2011/01/31 16:47:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5000 2011/01/31 22:22:45 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Added pmask for sci-libs/linux-gpib (about to be committed)
 
   31 Jan 2011; Patrick Lauer <patrick@gentoo.org> package.mask:
   Masking postgres 8.1 as it is EOL upstream

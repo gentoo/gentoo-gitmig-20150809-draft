@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12415 2011/01/31 16:54:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12416 2011/01/31 22:22:45 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (31 Jan 2011)
+# New package, masked for an initial testing period. Needs exotic
+# hardware. Please post feedback on bug 165399.
+>=sci-libs/linux-gpib-3.2.15
 
 # Patrick Lauer <patrick@gentoo.org> (31 Jan 2011)
 # EOL by upstream, getting removed soon
