@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_beta2.ebuild,v 1.2 2010/11/12 23:18:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_beta2.ebuild,v 1.3 2011/01/31 06:03:37 tampakrap Exp $
 
 EAPI=3
 
@@ -28,6 +28,6 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P/_/-}
 
-DOCS="AUTHORS BUGS README TODO ChangeLog"
+DOCS=( AUTHORS BUGS README TODO ChangeLog )
 
-RESTRICT=test
+RESTRICT="test"
