@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kio_gopher
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/ChangeLog,v 1.4 2009/11/03 13:30:12 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/ChangeLog,v 1.5 2011/01/31 05:11:16 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kio_gopher-0.1.3.ebuild:
+  EAPI3
 
 *kio_gopher-0.1.3 (03 Nov 2009)
 
