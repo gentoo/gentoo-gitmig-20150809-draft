@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.9 2010/07/13 18:32:38 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.10 2011/01/31 05:23:14 jer Exp $
+
+  31 Jan 2011; Jeroen Roovers <jer@gentoo.org> surf-0.4.1.ebuild:
+  RDEPEND on x11-misc/dmenu thanks to bobby (bug #353105).
 
   13 Jul 2010; Markos Chandras <hwoarang@gentoo.org> surf-0.4.1.ebuild:
   keyworded for amd64 wrt bug #328123
