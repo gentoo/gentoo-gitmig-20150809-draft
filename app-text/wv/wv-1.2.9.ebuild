@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9.ebuild,v 1.1 2011/01/31 13:06:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9.ebuild,v 1.2 2011/01/31 14:00:53 pacho Exp $
 
 EAPI="3"
+
+inherit eutils
 
 DESCRIPTION="Tool for conversion of MSWord doc and rtf files to something readable"
 SRC_URI="http://abiword.org/downloads/${PN}/${PV}/${P}.tar.gz"
@@ -25,18 +27,21 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 src_configure() {
-	econf $(use_with wmf libwmf) || die "./configure failed"
+	econf $(use_with wmf libwmf)
+}
+
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libwv-1.2.so.3
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libwv-1.2.so.3
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 	dodoc README NEWS || die
 
 	rm -f "${ED}"/usr/share/man/man1/wvConvert.1
 	dosym  /usr/share/man/man1/wvWare.1 /usr/share/man/man1/wvConvert.1 || die
-}
-
-pkg_postinst() {
-	ewarn "You have to re-emerge packages that linked against wv by running:"
-	ewarn "revdep-rebuild"
 }
