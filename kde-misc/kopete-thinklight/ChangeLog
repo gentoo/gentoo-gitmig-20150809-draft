@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kopete-thinklight
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-thinklight/ChangeLog,v 1.1 2009/11/09 13:27:25 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-thinklight/ChangeLog,v 1.2 2011/01/31 05:53:52 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kopete-thinklight-0.50.ebuild:
+  EAPI3
 
 *kopete-thinklight-0.50 (09 Nov 2009)
 
