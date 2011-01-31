@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.3.2.ebuild,v 1.2 2011/01/26 14:03:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.3.2.ebuild,v 1.3 2011/01/31 10:31:48 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://websvn.tigris.org/files/documents/1380/${DOWNLOAD_NUMBER}/${MY_P
 
 LICENSE="GPL-2"
 IUSE="enscript"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 
 DEPEND=""
 RDEPEND="dev-vcs/subversion

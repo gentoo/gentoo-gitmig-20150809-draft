@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.46 2011/01/26 14:03:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.47 2011/01/31 10:31:48 phajdan.jr Exp $
+
+  31 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> websvn-2.3.2.ebuild:
+  x86 stable wrt bug #352732
 
   26 Jan 2011; Markos Chandras <hwoarang@gentoo.org> websvn-2.3.2.ebuild:
   Stable on amd64 wrt bug #352732
