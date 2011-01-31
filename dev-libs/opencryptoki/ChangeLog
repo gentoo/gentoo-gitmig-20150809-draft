@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/opencryptoki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.17 2011/01/21 03:26:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.18 2011/01/31 00:12:52 flameeyes Exp $
+
+*opencryptoki-2.3.3-r3 (31 Jan 2011)
+
+  31 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -opencryptoki-2.3.3-r2.ebuild, +opencryptoki-2.3.3-r3.ebuild:
+  Remove compatibility symlink (we don't have software needing them in
+  Portage), and move libopencryptoki to the linkers' search path instead of
+  changing those paths.
 
   21 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -opencryptoki-2.3.2.ebuild, opencryptoki-2.3.3-r2.ebuild:

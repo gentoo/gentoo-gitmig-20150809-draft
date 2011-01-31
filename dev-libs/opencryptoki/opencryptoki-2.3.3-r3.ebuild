@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r2.ebuild,v 1.5 2011/01/21 03:26:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r3.ebuild,v 1.1 2011/01/31 00:12:52 flameeyes Exp $
 
 EAPI="2"
 
@@ -84,6 +84,13 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 
+	# Install libopencryptoki in the standard directory for libraries.
+	mv "${D}"/usr/$(get_libdir)/opencryptoki/libopencryptoki.so* "${D}"/usr/$(get_libdir) || die
+
+	# Remove compatibility symlinks as we _never_ required those and
+	# they seem unused even upstream.
+	find "${D}" -name 'PKCS11_*' -delete
+
 	# doesn't use libltdl; only dlopen()-based interfaces
 	find "${D}" -name '*.la' -delete
 
@@ -99,11 +106,6 @@ src_install() {
 		> "${T}"/pkcsslotd.init || die
 
 	newinitd "${T}/pkcsslotd.init" pkcsslotd
-
-	dodir /etc/env.d
-	cat - > "${D}"/etc/env.d/50${PN} <<EOF
-LDPATH=/usr/$(get_libdir)/opencryptoki:/usr/$(get_libdir)/opencryptoki/stdll
-EOF
 
 	dodoc README AUTHORS FAQ TODO doc/openCryptoki-HOWTO.pdf || die
 }
