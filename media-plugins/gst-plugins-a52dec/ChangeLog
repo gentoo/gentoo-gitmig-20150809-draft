@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-a52dec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.115 2010/12/27 12:44:58 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.116 2011/01/31 19:33:54 hwoarang Exp $
+
+  31 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-a52dec-0.10.16.ebuild:
+  Stable on amd64 wrt bug #353264
 
 *gst-plugins-a52dec-0.10.16 (27 Dec 2010)
 
