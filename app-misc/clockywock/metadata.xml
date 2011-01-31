@@ -2,7 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-	<email>maintainer-needed@gentoo.org</email>
-</maintainer>
+  <maintainer>
+    <email>signals42@gmail.com</email>
+	<name>Kevin McCarthy</name>
+  </maintainer>
+  <maintainer>
+    <email>ssuominen@gentoo.org</email>
+    <name>Samuli Suominen</name>
+  </maintainer>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+    <name>Diego Elio Pettenò</name>
+  </maintainer>
 </pkgmetadata>
