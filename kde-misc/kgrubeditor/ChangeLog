@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kgrubeditor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/ChangeLog,v 1.1 2009/05/10 12:28:10 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/ChangeLog,v 1.2 2011/01/31 05:00:05 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kgrubeditor-0.8.5.ebuild:
+  EAPI3, slotmove to 4
 
 *kgrubeditor-0.8.5 (10 May 2009)
 
