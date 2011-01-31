@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kshutdown
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.30 2010/12/20 12:07:11 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.31 2011/01/31 06:07:40 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kshutdown-2.0_beta11.ebuild:
+  EAPI3, remove old
 
 *kshutdown-2.0_beta11 (20 Dec 2010)
 

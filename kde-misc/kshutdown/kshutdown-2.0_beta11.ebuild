@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-2.0_beta11.ebuild,v 1.1 2010/12/20 12:07:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-2.0_beta11.ebuild,v 1.2 2011/01/31 06:07:40 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 
 KDE_LINGUAS="ar bg cs da de el es fr hu it nb nl pl pt_BR ru sk sr@Latn sr sv tr zh_CN"
 inherit kde4-base
@@ -18,7 +18,9 @@ SLOT="4"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-RDEPEND="$(add_kdebase_dep libkworkspace)"
+RDEPEND="
+	$(add_kdebase_dep libkworkspace)
+"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 "
