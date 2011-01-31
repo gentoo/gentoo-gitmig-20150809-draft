@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.5 2011/01/30 18:24:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.6 2011/01/31 16:47:53 ssuominen Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/${PN}/${MY_PN}-${PV}.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="linguas_hu"
 
 RDEPEND="dev-libs/glib:2
