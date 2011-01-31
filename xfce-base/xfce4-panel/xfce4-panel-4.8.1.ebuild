@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.8.1.ebuild,v 1.1 2011/01/30 16:53:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.8.1.ebuild,v 1.2 2011/01/31 17:40:34 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Panel for the Xfce desktop environment"
@@ -41,4 +41,9 @@ pkg_setup() {
 		)
 
 	DOCS="AUTHORS ChangeLog NEWS THANKS"
+}
+
+src_install() {
+	xfconf_src_install
+	docompress /usr/share/doc/${PF}
 }
