@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.26.ebuild,v 1.5 2011/01/31 18:00:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.26.ebuild,v 1.6 2011/01/31 18:04:39 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="libnotify"
 
 RDEPEND=">=mail-client/claws-mail-3.7.7
-	>=x11-libs/gtk+-2.10
+	>=x11-libs/gtk+-2.10:2
 	libnotify? ( x11-libs/libnotify )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
