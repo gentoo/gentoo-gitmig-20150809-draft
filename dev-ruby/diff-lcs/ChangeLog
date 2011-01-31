@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/diff-lcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.23 2011/01/30 15:56:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.24 2011/01/31 19:40:31 fauli Exp $
+
+  31 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  diff-lcs-1.1.2-r2.ebuild:
+  stable x86, bug 353130
 
   30 Jan 2011; Markos Chandras <hwoarang@gentoo.org> diff-lcs-1.1.2-r2.ebuild:
   Stable on amd64 wrt bug #353130
