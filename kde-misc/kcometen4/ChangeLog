@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcometen4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/ChangeLog,v 1.7 2011/01/30 15:14:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/ChangeLog,v 1.8 2011/01/31 04:00:15 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kcometen4-1.0.7.ebuild:
+  slotmove to 4
 
   30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> kcometen4-1.0.7.ebuild:
   Move to eapi3. Fix deps.
