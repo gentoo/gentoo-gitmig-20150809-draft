@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/dawn-3.90b.ebuild,v 1.4 2011/01/24 04:02:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/dawn-3.90b.ebuild,v 1.5 2011/01/31 19:42:04 fauli Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs versionator
@@ -14,7 +14,7 @@ SRC_URI="http://geant4.kek.jp/~tanaka/src/${MYP}.tgz"
 LICENSE="public-domain"
 SLOT="0"
 
-KEYWORDS="amd64 hppa ppc ~sparc ~x86"
+KEYWORDS="amd64 hppa ppc ~sparc x86"
 IUSE="doc opengl X"
 
 RDEPEND="dev-lang/tk
