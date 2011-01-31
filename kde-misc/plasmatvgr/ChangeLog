@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/plasmatvgr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmatvgr/ChangeLog,v 1.2 2010/07/01 14:16:27 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmatvgr/ChangeLog,v 1.3 2011/01/31 06:19:50 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  -plasmatvgr-0.46.ebuild, plasmatvgr-0.47.ebuild:
+  EAPI3, slotmove to 4, remove old
 
 *plasmatvgr-0.47 (01 Jul 2010)
 

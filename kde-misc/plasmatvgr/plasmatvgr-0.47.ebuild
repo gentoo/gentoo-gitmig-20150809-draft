@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmatvgr/plasmatvgr-0.47.ebuild,v 1.1 2010/07/01 14:16:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmatvgr/plasmatvgr-0.47.ebuild,v 1.2 2011/01/31 06:19:50 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit kde4-base versionator
 
@@ -15,9 +15,10 @@ SRC_URI="http://www.kde-look.org/CONTENT/content-files/75728-${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
-SLOT="0"
+SLOT="4"
 IUSE="debug"
 
-RDEPEND=">=kde-base/plasma-workspace-${KDE_MINIMAL}"
-
+RDEPEND="
+	$(add_kdebase_dep plasma-workspace)
+"
 S="${WORKDIR}/${PN}"
