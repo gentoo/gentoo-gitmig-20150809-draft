@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.1.1.ebuild,v 1.5 2010/09/29 15:13:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.1.1.ebuild,v 1.6 2011/01/31 08:37:00 joker Exp $
 
 EAPI=2
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="C library for encoding data in a QR Code symbol"
 HOMEPAGE="http://megaui.net/fukuchi/works/qrencode/index.en.html"
@@ -19,10 +19,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	sed -i \
-		-e 's:libpng12:libpng:' \
-		configure.ac || die
-
+	epatch "${FILESDIR}/${P}-pngregenfix.patch"
 	eautoreconf
 }
 
