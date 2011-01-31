@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.5 2010/12/30 07:51:39 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.6 2011/01/31 19:06:00 fauli Exp $
+
+  31 Jan 2011; Christian Faulhammer <fauli@gentoo.org> libzen-0.4.16.ebuild:
+  stable x86, bug 347037
 
 *libzen-0.4.17 (30 Dec 2010)
 
