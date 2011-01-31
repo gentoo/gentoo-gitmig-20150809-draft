@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.1 2011/01/29 21:07:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.2 2011/01/31 15:54:44 mr_bones_ Exp $
 
 EAPI=3
 USE_RUBY="ruby18"
 CMAKE_IN_SOURCE_BUILD=1
 
-# Could in principle also work with other ruby implementations, 
+# Could in principle also work with other ruby implementations,
 # but kdebindings is ruby18-only atm...
 
 inherit kde4-base ruby-ng
