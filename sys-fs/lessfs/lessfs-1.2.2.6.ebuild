@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.2.2.6.ebuild,v 1.3 2011/01/31 19:14:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.2.2.6.ebuild,v 1.4 2011/01/31 20:21:35 hwoarang Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="A high performance inline data deduplicating filesystem"
 HOMEPAGE="http://www.lessfs.com"
-SRC_URI="http://downloads.sourceforge.net/project/${PN}/${PN}/${P/_beta*/-beta}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${P/_beta*/-beta}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
