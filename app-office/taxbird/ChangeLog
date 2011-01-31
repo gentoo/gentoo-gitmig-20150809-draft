@@ -1,6 +1,11 @@
 # ChangeLog for app-office/taxbird
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.25 2010/07/10 15:18:12 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.26 2011/01/31 22:33:44 hanno Exp $
+
+*taxbird-0.16 (31 Jan 2011)
+
+  31 Jan 2011; Hanno Boeck <hanno@gentoo.org> +taxbird-0.16.ebuild:
+  Version bump.
 
   10 Jul 2010; Christian Faulhammer <fauli@gentoo.org> taxbird-0.15.ebuild:
   stable x86, bug 319827
