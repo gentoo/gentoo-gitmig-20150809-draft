@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.4.ebuild,v 1.1 2008/02/19 15:09:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9.ebuild,v 1.1 2011/01/31 13:06:54 pacho Exp $
 
-inherit eutils
+EAPI="3"
 
 DESCRIPTION="Tool for conversion of MSWord doc and rtf files to something readable"
-SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
+SRC_URI="http://abiword.org/downloads/${PN}/${PV}/${P}.tar.gz"
 HOMEPAGE="http://wvware.sourceforge.net/"
 
 IUSE="wmf"
@@ -18,33 +18,25 @@ RDEPEND=">=dev-libs/glib-2
 	sys-libs/zlib
 	media-libs/libpng
 	dev-libs/libxml2
+	app-text/texlive-core
+	dev-texlive/texlive-latex
 	wmf? ( >=media-libs/libwmf-0.2.2 )"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
-src_compile() {
-
-	econf `use_with wmf libwmf` || die "./configure failed"
-
-	emake || die "Compilation failed"
-
+src_configure() {
+	econf $(use_with wmf libwmf) || die "./configure failed"
 }
 
 src_install () {
-
 	make DESTDIR="${D}" install || die "Installation failed"
+	dodoc README NEWS || die
 
-	dodoc README
-
-	rm -f "${D}"/usr/share/man/man1/wvConvert.1
-	dosym  /usr/share/man/man1/wvWare.1 /usr/share/man/man1/wvConvert.1
-
+	rm -f "${ED}"/usr/share/man/man1/wvConvert.1
+	dosym  /usr/share/man/man1/wvWare.1 /usr/share/man/man1/wvConvert.1 || die
 }
 
 pkg_postinst() {
-
 	ewarn "You have to re-emerge packages that linked against wv by running:"
 	ewarn "revdep-rebuild"
-
 }
