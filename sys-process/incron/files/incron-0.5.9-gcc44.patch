@@ -1,0 +1,79 @@
+From 09eee740a4b962b4d8140b3256bddc62b6cd8cb5 Mon Sep 17 00:00:00 2001
+From: Christian Ruppert <idl0r@gentoo.org>
+Date: Mon, 31 Jan 2011 15:04:10 +0100
+Subject: [PATCH 1/2] GCC 4.4 fixes
+
+http://bts.aiken.cz/view.php?id=385
+http://bts.aiken.cz/view.php?id=447
+---
+ appargs.cpp   |    1 +
+ appinst.h     |    1 +
+ incroncfg.cpp |    2 +-
+ incroncfg.h   |    1 +
+ inotify-cxx.h |    1 +
+ 5 files changed, 5 insertions(+), 1 deletions(-)
+
+diff --git a/appargs.cpp b/appargs.cpp
+index 3bac9b7..ac238b2 100644
+--- a/appargs.cpp
++++ b/appargs.cpp
+@@ -21,6 +21,7 @@
+ 
+ 
+ #include <cstring>
++#include <cstdio>
+ 
+ #include "strtok.h"
+ 
+diff --git a/appinst.h b/appinst.h
+index d5f2cbe..bdbc8e7 100644
+--- a/appinst.h
++++ b/appinst.h
+@@ -23,6 +23,7 @@
+ 
+ 
+ #include <string>
++#include <cstdio>
+ 
+ 
+ #define APPLOCK_BASEDIR "/var/run"
+diff --git a/incroncfg.cpp b/incroncfg.cpp
+index 6ff4d76..54fcfc5 100644
+--- a/incroncfg.cpp
++++ b/incroncfg.cpp
+@@ -181,7 +181,7 @@ bool IncronCfg::ParseLine(const char* s, std::string& rKey, std::string& rVal)
+ 
+ bool IncronCfg::IsComment(const char* s)
+ {
+-  char* sx = strchr(s, '#');
++  const char* sx = strchr(s, '#');
+   if (sx == NULL)
+     return false;
+     
+diff --git a/incroncfg.h b/incroncfg.h
+index 5d2c5b2..12aaf7d 100644
+--- a/incroncfg.h
++++ b/incroncfg.h
+@@ -19,6 +19,7 @@
+ 
+ 
+ #include <cstring>
++#include <cstdio>
+ #include <map>
+ 
+ /// Configuration class.
+diff --git a/inotify-cxx.h b/inotify-cxx.h
+index bb3a0e6..1d98bd7 100644
+--- a/inotify-cxx.h
++++ b/inotify-cxx.h
+@@ -30,6 +30,7 @@
+ #include <string>
+ #include <deque>
+ #include <map>
++#include <cstdio>
+ 
+ // Please ensure that the following headers take the right place
+ #include <sys/syscall.h>
+-- 
+1.7.3.4
+

@@ -1,6 +1,16 @@
 # ChangeLog for sys-process/incron
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.13 2010/03/04 19:47:36 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.14 2011/01/31 15:14:12 idl0r Exp $
+
+*incron-0.5.9-r1 (31 Jan 2011)
+
+  31 Jan 2011; Christian Ruppert <idl0r@gentoo.org> -incron-0.5.7.ebuild,
+  -files/incron-0.5.7-gcc43.patch, -files/incron-0.5.7-gentoo.patch,
+  -incron-0.5.9.ebuild, +incron-0.5.9-r1.ebuild,
+  +files/incron-0.5.9-Makefile.patch, +files/incron-0.5.9-gcc44.patch,
+  +files/incrond.init, metadata.xml:
+  Take maintainership. Revision bump. Reorder patches. Add separate init
+  script. Fix INOTIFY check. Remove old ebuilds/patches.
 
   04 Mar 2010; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from metadata.xml
