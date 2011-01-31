@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnome-specimen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/ChangeLog,v 1.7 2011/01/30 16:30:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/ChangeLog,v 1.8 2011/01/31 13:34:08 phajdan.jr Exp $
+
+  31 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-specimen-0.4.ebuild:
+  x86 stable wrt bug #353202
 
   30 Jan 2011; Markos Chandras <hwoarang@gentoo.org> gnome-specimen-0.4.ebuild:
   Stable on amd64 wrt bug #353202

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.5 2011/01/30 16:30:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.6 2011/01/31 13:34:08 phajdan.jr Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://uwstopia.nl/geek/projects/${PN}/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/gconf-python
