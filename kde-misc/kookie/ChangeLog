@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kookie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kookie/ChangeLog,v 1.2 2011/01/06 17:19:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kookie/ChangeLog,v 1.3 2011/01/31 05:37:26 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -kookie-0.1.ebuild:
+  remove old
 
 *kookie-0.1.1 (06 Jan 2011)
 
