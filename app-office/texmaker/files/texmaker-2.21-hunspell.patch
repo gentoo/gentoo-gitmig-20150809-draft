@@ -1,0 +1,124 @@
+diff --git a/latexeditor.h b/latexeditor.h
+index d339f7b..32a7f0e 100644
+--- a/latexeditor.h
++++ b/latexeditor.h
+@@ -22,7 +22,7 @@
+ 
+ #include "latexhighlighter.h"
+ #include "parenmatcher.h"
+-#include "hunspell/hunspell.hxx"
++#include <hunspell.hxx>
+ 
+ //class QCompleter;
+ //class ParenMatcher;
+diff --git a/latexeditorview.h b/latexeditorview.h
+index 5635464..8fb37cb 100644
+--- a/latexeditorview.h
++++ b/latexeditorview.h
+@@ -18,7 +18,7 @@
+ #include "latexeditor.h"
+ #include "linenumberwidget.h"
+ #include "findwidget.h"
+-#include "hunspell/hunspell.hxx"
++#include <hunspell.hxx>
+ 
+ class LatexEditorView : public QWidget  {
+    Q_OBJECT
+diff --git a/latexhighlighter.h b/latexhighlighter.h
+index 453bab7..c0b9fde 100644
+--- a/latexhighlighter.h
++++ b/latexhighlighter.h
+@@ -19,7 +19,7 @@
+ #include <QTextCharFormat>
+ #include <QColor>
+ #include <QTextBlockUserData>
+-#include "hunspell/hunspell.hxx"
++#include <hunspell.hxx>
+ 
+ class QTextDocument;
+ 
+diff --git a/spellerdialog.h b/spellerdialog.h
+index 88e1c93..2622834 100644
+--- a/spellerdialog.h
++++ b/spellerdialog.h
+@@ -13,7 +13,7 @@
+ 
+ #include "ui_spellerdialog.h"
+ #include "latexeditor.h"
+-#include "hunspell/hunspell.hxx"
++#include <hunspell.hxx>
+ 
+ #include <QTextCursor>
+ 
+diff --git a/texmaker.h b/texmaker.h
+index a959fe8..551fe20 100644
+--- a/texmaker.h
++++ b/texmaker.h
+@@ -43,7 +43,7 @@
+ #include "logeditor.h"
+ #include "gotolinedialog.h"
+ #include "replacedialog.h"
+-#include "hunspell/hunspell.hxx"
++#include <hunspell.hxx>
+ #include "browser.h"
+ #include "pdfviewer.h"
+ 
+diff --git a/texmaker.pro b/texmaker.pro
+index f36cf16..dbd73b8 100755
+--- a/texmaker.pro
++++ b/texmaker.pro
+@@ -4,7 +4,8 @@ TARGET	 = texmaker
+ QT += network \
+       xml \
+       webkit
+-CONFIG	+= qt warn_off release
++CONFIG	+= qt warn_off release link_pkgconfig
++PKGCONFIG = hunspell
+ TEXMAKERVERSION=2.2.1
+ DEFINES += TEXMAKERVERSION=\\\"$${TEXMAKERVERSION}\\\"
+ DEFINES += HAVE_SPLASH
+@@ -54,25 +55,6 @@ HEADERS	+= texmaker.h \
+ 	userquickdialog.h \
+ 	synctex_parser.h \
+ 	synctex_parser_utils.h \
+-	hunspell/affentry.hxx \
+-	hunspell/affixmgr.hxx \
+-	hunspell/atypes.hxx \
+-	hunspell/baseaffix.hxx \
+-	hunspell/csutil.hxx \
+-	hunspell/dictmgr.hxx \
+-	hunspell/hashmgr.hxx \
+-	hunspell/htypes.hxx \
+-	hunspell/hunspell.hxx \
+-	hunspell/hunspell.h \
+-	hunspell/langnum.hxx \
+-	hunspell/license.hunspell \
+-	hunspell/phonet.hxx \
+-	hunspell/suggestmgr.hxx \
+-	hunspell/license.myspell \
+-	hunspell/filemgr.hxx \
+-	hunspell/hunzip.hxx \
+-	hunspell/replist.hxx \
+-	hunspell/w_char.hxx \
+ 	singleapp/qtlocalpeer.h \
+ 	singleapp/qtlockedfile.h \
+ 	singleapp/qtsingleapplication.h \
+@@ -121,18 +103,6 @@ SOURCES	+= main.cpp \
+ 	userquickdialog.cpp \
+ 	synctex_parser.c \
+ 	synctex_parser_utils.c \
+-	hunspell/affentry.cxx \
+-	hunspell/affixmgr.cxx \
+-	hunspell/csutil.cxx \
+-	hunspell/dictmgr.cxx \
+-	hunspell/hashmgr.cxx \
+-	hunspell/hunspell.cxx \
+-	hunspell/phonet.cxx \
+-	hunspell/suggestmgr.cxx \
+-	hunspell/utf_info.cxx \
+-	hunspell/filemgr.cxx \
+-	hunspell/replist.cxx \
+-	hunspell/hunzip.cxx \
+ 	singleapp/qtlocalpeer.cpp \
+ 	singleapp/qtlockedfile.cpp \
+ 	singleapp/qtsingleapplication.cpp \
