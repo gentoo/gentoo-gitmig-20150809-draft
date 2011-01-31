@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.10 2011/01/20 21:19:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.11 2011/01/31 22:19:45 mgorny Exp $
+
+*uam-0.1.1 (31 Jan 2011)
+
+  31 Jan 2011; Michał Górny <mgorny@gentoo.org> -uam-0.1.ebuild,
+  +uam-0.1.1.ebuild:
+  Version bump. The new version fixes trying to mount whole UDF volume (bug
+  #353151) and introduces support for device filtering through uam.conf.
 
 *uam-0.1 (20 Jan 2011)
 
