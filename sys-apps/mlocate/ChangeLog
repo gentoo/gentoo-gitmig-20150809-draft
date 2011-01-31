@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.84 2011/01/30 13:16:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.85 2011/01/31 13:17:10 scarabeus Exp $
+
+  31 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> files/mlocate.cron-r2:
+  Fix premature removing of the lock file and parse the args more sanely when
+  there is no config around. This fixes bug #353270.
 
 *mlocate-0.23.1-r1 (30 Jan 2011)
 

@@ -12,13 +12,13 @@ fi
 
 # check if we are already running (lockfile)
 LOCKFILE="/var/lock/mlocate.daily.lock"
-trap "rm -f ${LOCKFILE}" EXIT
 if [ -e "${LOCKFILE}" ]; then
 	echo >&2 "Warning: \"${LOCKFILE}\" already present, not running updatedb."
 	exit 1
-else
-	touch "${LOCKFILE}"
 fi
+touch "${LOCKFILE}"
+# trap the lockfile only if we really run the updatedb
+trap "rm -f ${LOCKFILE}" EXIT
 
 # source the user specified variables
 if [ -f /etc/mlocate-cron.conf ]; then
@@ -26,10 +26,9 @@ if [ -f /etc/mlocate-cron.conf ]; then
 fi
 
 # check the config file
-ARGS=""
+NODEVS=""
 if [ ! -f /etc/updatedb.conf ]; then
-	nodevs=$(< /proc/filesystems awk '$1 == "nodev" && $2 != "rootfs" { print $2 }')
-	ARGS="-f ${nodevs}"
+	NODEVS=$(< /proc/filesystems awk '$1 == "nodev" && $2 != "rootfs" { print $2 }')
 fi
 
 # alter the priority of the updatedb process
@@ -42,7 +41,7 @@ fi
 
 # run the updatedb if possible
 if [ -x /usr/bin/updatedb ]; then
-	/usr/bin/updatedb ${ARGS}
+	/usr/bin/updatedb -f "${NODEVS}"
 else
 	echo >&2 "Warning: \"/usr/bin/updatedb\" is not executable, unable to run updatedb."
 	exit 0
