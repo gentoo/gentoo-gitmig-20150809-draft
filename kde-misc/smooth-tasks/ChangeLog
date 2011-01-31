@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/smooth-tasks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/ChangeLog,v 1.1 2010/11/06 22:58:48 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/ChangeLog,v 1.2 2011/01/31 06:44:39 tampakrap Exp $
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  smooth-tasks-20101106.ebuild:
+  EAPI3
 
 *smooth-tasks-20101106 (06 Nov 2010)
 

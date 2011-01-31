@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/smooth-tasks-20101106.ebuild,v 1.1 2010/11/06 22:58:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/smooth-tasks-20101106.ebuild,v 1.2 2011/01/31 06:44:39 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 KDE_LINGUAS="cs de fr hu pl ru zh_CN"
 
@@ -20,10 +20,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="
-	>=kde-base/libtaskmanager-${KDE_MINIMAL}
+	$(add_kdebase_dep libtaskmanager)
 "
 RDEPEND="${DEPEND}
-	>=kde-base/plasma-workspace-${KDE_MINIMAL}
+	$(add_kdebase_dep plasma-workspace)
 "
 
 S="${WORKDIR}/${PN}-src-wip-${MY_PV}"
