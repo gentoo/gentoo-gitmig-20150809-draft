@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_touchpad/kcm_touchpad-0.3.1.ebuild,v 1.3 2010/07/15 08:58:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_touchpad/kcm_touchpad-0.3.1.ebuild,v 1.4 2011/01/31 03:44:39 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="de es nl pl"
 inherit kde4-base
 
@@ -17,7 +17,10 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND="x11-libs/libXi"
+DEPEND="
+	x11-libs/libXi
+"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -25,5 +28,5 @@ DOCS="AUTHORS README"
 
 src_install() {
 	kde4-base_src_install
-	rm -rf "${D}"usr/share/doc/${PN}
+	rm -rf "${ED}"usr/share/doc/${PN}
 }
