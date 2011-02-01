@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.21_alpha.ebuild,v 1.1 2011/01/17 13:46:16 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.22_alpha.ebuild,v 1.1 2011/02/01 02:42:49 chiiph Exp $
 
 EAPI=3
 
@@ -37,7 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable debug)
+	econf $(use_enable debug) --docdir=/usr/share/doc/${PF}/
 }
 
 src_install() {
