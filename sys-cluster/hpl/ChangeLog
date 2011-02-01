@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/hpl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.16 2010/09/13 15:21:23 jsbronder Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/ChangeLog,v 1.17 2011/02/01 18:27:08 jsbronder Exp $
+
+*hpl-2.0-r1 (01 Feb 2011)
+
+  01 Feb 2011; Justin Bronder <jsbronder@gentoo.org> -hpl-2.0.ebuild,
+  +hpl-2.0-r1.ebuild:
+  Fix SRC_URI (thanks to renihs in #-cluster) and general cleanup.
 
   13 Sep 2010; Justin Bronder <jsbronder@gentoo.org> hpl-2.0.ebuild:
   Respect LDFLAGS #336969.
