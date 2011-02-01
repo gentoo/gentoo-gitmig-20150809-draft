@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/gimp-help
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.67 2010/03/18 05:07:37 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.68 2011/02/01 06:46:03 pva Exp $
+
+*gimp-help-2.6.1 (01 Feb 2011)
+
+  01 Feb 2011; Peter Volkov <pva@gentoo.org> +gimp-help-2.6.1.ebuild:
+  Version bump, #353276, thank Tim Harder for report.
 
   18 Mar 2010; Peter Volkov <pva@gentoo.org>
   -files/gimp-help-0.13-image-files.patch,
