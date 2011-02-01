@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-htscanner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.13 2011/01/04 15:19:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-htscanner/ChangeLog,v 1.14 2011/02/01 19:47:05 olemarkus Exp $
+
+*pecl-htscanner-1.0.0 (01 Feb 2011)
+
+  01 Feb 2011; <olemarkus@gentoo.org> +pecl-htscanner-1.0.0.ebuild:
+  Version bump
 
   04 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   pecl-htscanner-0.9.0-r1.ebuild:
