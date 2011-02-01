@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/supervise-scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.8 2011/01/29 23:14:00 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.9 2011/02/01 09:24:06 bangert Exp $
+
+  01 Feb 2011; Thilo Bangert <bangert@gentoo.org> supervise-scripts-4.0.ebuild:
+  dont inherit unused eclasses
 
   29 Jan 2011; Thilo Bangert <bangert@gentoo.org> supervise-scripts-3.5.ebuild,
   supervise-scripts-4.0.ebuild:
