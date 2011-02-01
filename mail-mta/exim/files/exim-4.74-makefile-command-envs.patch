@@ -1,0 +1,59 @@
+From: Phil Pennock <pdp@exim.org>
+Date: Fri, 28 Jan 2011 00:07:05 +0000 (-0500)
+Subject: Permit make values to be indented or in env.
+X-Git-Url: http://git.exim.org/exim.git/commitdiff_plain/0cc9542ab26b35cba3a5523acb8991eb18ce0656
+
+Permit make values to be indented or in env.
+
+It appears some make(1)s are not complaining about variables defined
+with leading whitespace on the line.  Permit that where we can, for the
+lookups, but it's not tenable for CFLAGS_DYNAMIC.
+
+Some people are specifying knobs on the make command-line, so we get
+them via the environment.
+
+Tested: indented LOOKUP_CDB and commented out LOOKUP_DNSDB, supplying it
+via { make LOOKUP_DNSDB=yes }.  { exim -d --version } shows both are
+built-in, no results from { fgrep DNSDB build-*/Makefile }.
+---
+
+diff --git a/src/scripts/lookups-Makefile b/src/scripts/lookups-Makefile
+index dd0472b..d5c450e 100755
+--- a/src/scripts/lookups-Makefile
++++ b/src/scripts/lookups-Makefile
+@@ -21,6 +21,9 @@ tab='	'
+ # We always do something now, since there should always be a lookup,
+ # and now we need to run in order to put the OBJ=$(OBJ)+ rules in.
+ 
++# nb: do not permit leading whitespace for this, as CFLAGS_DYNAMIC is exported
++# to the lookups subdir via a line with leading whitespace which otherwise
++# matches
+ if grep -q "^CFLAGS_DYNAMIC[ $tab]*=" "$defs_source"
+ then
+   # we have a definition, we're good to go
+@@ -32,14 +35,23 @@ fi
+ 
+ tmp="$target.t"
+ 
++# For the want_ checks, we need to let the user override values from the make
++# command-line, not just check the Makefile.
++
+ want_dynamic() {
+   local dyn_name="$1"
+-  grep -q "^LOOKUP_${dyn_name}[ $tab]*=[ $tab]*2" "$defs_source"
++  local re="LOOKUP_${dyn_name}[ $tab]*=[ $tab]*2"
++  env | grep -q "^$re"
++  if [ $? -eq 0 ]; then return 0; fi
++  grep -q "^[ $tab]*$re" "$defs_source"
+ }
+ 
+ want_at_all() {
+   local want_name="$1"
+-  grep -q "^LOOKUP_${want_name}[ $tab]*=[ $tab]*." "$defs_source"
++  local re="LOOKUP_${want_name}[ $tab]*=[ $tab]*."
++  env | grep -q "^$re"
++  if [ $? -eq 0 ]; then return 0; fi
++  grep -q "^[ $tab]*$re" "$defs_source"
+ }
+ 
+ # The values of these variables will be emitted into the Makefile.

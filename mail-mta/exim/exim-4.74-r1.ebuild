@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74.ebuild,v 1.1 2011/02/01 08:03:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.1 2011/02/01 11:42:02 grobian Exp $
 
 EAPI="3"
 
@@ -61,6 +61,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.14-tail.patch
 	epatch "${FILESDIR}"/exim-4.43-r2-localscan_dlopen.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
+	# from upstream
+	epatch "${FILESDIR}"/${P}-pcre.patch
+	epatch "${FILESDIR}"/${P}-makefile-posix.patch
+	epatch "${FILESDIR}"/${P}-makefile-command-envs.patch
 
 	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
 	use dsn && epatch "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch

@@ -1,0 +1,86 @@
+From: Tony Finch <dot@dotat.at>
+Date: Thu, 27 Jan 2011 16:26:36 +0000 (+0000)
+Subject: Fix portability of Makefiles to HP-UX and other non-extended makes.
+X-Git-Url: http://git.exim.org/exim.git/commitdiff_plain/159f52d231c010cbc4e149502b7f906293233f94
+
+Fix portability of Makefiles to HP-UX and other non-extended makes.
+---
+
+diff --git a/src/scripts/lookups-Makefile b/src/scripts/lookups-Makefile
+index 2c4dc96..dd0472b 100755
+--- a/src/scripts/lookups-Makefile
++++ b/src/scripts/lookups-Makefile
+@@ -19,7 +19,7 @@ tag_marker='MAGIC-TAG-MODS-OBJ-RULES-GO-HERE'
+ tab='	'
+ 
+ # We always do something now, since there should always be a lookup,
+-# and now we need to run in order to put the OBJ+= rules in.
++# and now we need to run in order to put the OBJ=$(OBJ)+ rules in.
+ 
+ if grep -q "^CFLAGS_DYNAMIC[ $tab]*=" "$defs_source"
+ then
+@@ -42,6 +42,11 @@ want_at_all() {
+   grep -q "^LOOKUP_${want_name}[ $tab]*=[ $tab]*." "$defs_source"
+ }
+ 
++# The values of these variables will be emitted into the Makefile.
++
++MODS=""
++OBJ=""
++
+ emit_module_rule() {
+   local lookup_name="$1"
+   local mod_name
+@@ -59,13 +64,13 @@ emit_module_rule() {
+       echo >&2 "Inhibited dynamic modules prevents building dynamic $lookup_name"
+       exit 1
+     fi
+-    echo "MODS += ${mod_name}.so"
++    MODS="${MODS} ${mod_name}.so"
+     grep "^LOOKUP_${lookup_name}_" "$defs_source"
+     echo "LOOKUP_${mod_name}_INCLUDE = \$(LOOKUP_${lookup_name}_INCLUDE)"
+     echo "LOOKUP_${mod_name}_LIBS = \$(LOOKUP_${lookup_name}_LIBS)"
+   elif want_at_all "$lookup_name"
+   then
+-    echo "OBJ += ${mod_name}.o"
++    OBJ="${OBJ} ${mod_name}.o"
+   fi
+ }
+ 
+@@ -83,9 +88,18 @@ done
+ 
+ if want_at_all LDAP
+ then
+-  echo "OBJ += ldap.o"
++  OBJ="${OBJ} ldap.o"
+ fi
+ 
++# Because the variable is EXPERIMENTAL_SPF and not LOOKUP_SPF we
++# always include spf.o and compile a dummy if EXPERIMENTAL_SPF is not
++# defined.
++
++OBJ="${OBJ} spf.o"
++
++echo "MODS = $MODS"
++echo "OBJ = $OBJ"
++
+ sed -n "/$tag_marker/,\$p" < "$input"
+ 
+ exec >&5
+diff --git a/src/src/lookups/Makefile b/src/src/lookups/Makefile
+index 623f24f..2495348 100644
+--- a/src/src/lookups/Makefile
++++ b/src/src/lookups/Makefile
+@@ -8,12 +8,6 @@
+ # This is called from the main make file, after cd'ing
+ # to the lookups subdirectory.
+ 
+-# because the variable is EXPERIMENTAL_SPF and not LOOKUP_SPF
+-# we put this one here by default and compile a dummy if
+-# EXPERIMENTAL_SPF is not defined
+-OBJ=spf.o
+-MODS=
+-
+ # MAGIC-TAG-MODS-OBJ-RULES-GO-HERE
+ 
+ 
