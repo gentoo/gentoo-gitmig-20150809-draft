@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libbluray
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.1 2010/07/17 02:55:14 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.2 2011/02/01 12:37:40 radhermit Exp $
+
+  01 Feb 2011; Tim Harder <radhermit@gentoo.org> libbluray-9999.ebuild,
+  metadata.xml:
+  Update live ebuild for bug #352033 thanks to Nikoli. Update dependencies and
+  add static-libs, utils, and xine USE flags. Allow for building and installing
+  BD-J support.
 
 *libbluray-9999 (17 Jul 2010)
 
