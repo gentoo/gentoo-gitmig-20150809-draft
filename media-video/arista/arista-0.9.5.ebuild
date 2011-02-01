@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.1 2010/11/27 08:10:20 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.2 2011/02/01 05:48:04 ford_prefect Exp $
 
 EAPI=2
 
@@ -33,6 +33,7 @@ RDEPEND=">=x11-libs/gtk+-2.16
 	dev-python/gst-python
 	media-libs/gst-plugins-base:0.10
 	media-libs/gst-plugins-good:0.10
+	media-libs/gst-plugins-bad
 	media-plugins/gst-plugins-meta:0.10
 	media-plugins/gst-plugins-ffmpeg:0.10
 	nautilus? ( dev-python/nautilus-python )

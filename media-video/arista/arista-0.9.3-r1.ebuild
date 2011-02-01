@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.3-r1.ebuild,v 1.5 2011/01/05 16:24:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.3-r1.ebuild,v 1.6 2011/02/01 05:48:04 ford_prefect Exp $
 
 EAPI=2
 
@@ -30,6 +30,7 @@ RDEPEND="dev-lang/python[xml]
 	dev-python/gst-python
 	media-libs/gst-plugins-base:0.10
 	media-libs/gst-plugins-good:0.10
+	media-libs/gst-plugins-bad
 	media-plugins/gst-plugins-meta:0.10
 	media-plugins/gst-plugins-ffmpeg:0.10
 	faac? ( media-plugins/gst-plugins-faac:0.10 )

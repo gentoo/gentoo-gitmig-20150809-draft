@@ -1,6 +1,10 @@
 # ChangeLog for media-video/arista
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.7 2011/01/05 16:24:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.8 2011/02/01 05:48:04 ford_prefect Exp $
+
+  01 Feb 2011; Arun Raghavan <ford_prefect@gentoo.org> arista-0.9.3-r1.ebuild,
+  arista-0.9.5.ebuild:
+  Depend on gst-plugins-bad, which is needed for qtmux.
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> arista-0.9.3-r1.ebuild:
   Stable on amd64 wrt bug #284545
