@@ -1,0 +1,10 @@
+# ChangeLog for x11-drivers/xf86-video-qxl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.1 2011/02/01 14:50:03 chithanh Exp $
+
+*xf86-video-qxl-0.0.13 (01 Feb 2011)
+
+  01 Feb 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-qxl-0.0.13.ebuild, +metadata.xml:
+  New ebuild for the QEMU QXL video driver.
+
