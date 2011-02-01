@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.1.0.ebuild,v 1.1 2011/01/29 23:49:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.1.0.ebuild,v 1.2 2011/02/01 02:19:06 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
 	test? (
 		dev-python/etsdevtools
-		>=dev-python/nose-0.10.3
+		dev-python/nose
 		dev-python/traits
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
