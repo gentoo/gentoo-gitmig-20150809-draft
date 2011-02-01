@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/Audio-Scan-0.85.ebuild,v 1.1 2010/09/10 08:34:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/Audio-Scan-0.850.ebuild,v 1.1 2011/02/01 08:38:32 tove Exp $
 
-EAPI=2
+EAPI=3
 
 MODULE_AUTHOR=AGRUNDMA
+MODULE_VERSION=0.85
 inherit perl-module
 
 DESCRIPTION="Fast C metadata and tag reader for all common audio file formats"

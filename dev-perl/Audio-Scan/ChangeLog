@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Audio-Scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/ChangeLog,v 1.16 2011/01/14 18:44:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/ChangeLog,v 1.17 2011/02/01 08:38:32 tove Exp $
+
+*Audio-Scan-0.850 (01 Feb 2011)
+*Audio-Scan-0.840 (01 Feb 2011)
+
+  01 Feb 2011; Torsten Veller <tove@gentoo.org> -Audio-Scan-0.85.ebuild,
+  +Audio-Scan-0.840.ebuild, +Audio-Scan-0.850.ebuild:
+  Add 0.84 again for the new squeezeboxserver-7.5.3 (#353376). Version
+  conversion
 
   14 Jan 2011; Torsten Veller <tove@gentoo.org> -Audio-Scan-0.59.ebuild,
   -Audio-Scan-0.62.ebuild, -Audio-Scan-0.83.ebuild, -Audio-Scan-0.84.ebuild:
