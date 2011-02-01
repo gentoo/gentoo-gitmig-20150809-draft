@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.8 2011/01/31 14:09:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.9 2011/02/01 00:08:19 reavertm Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -240,7 +240,7 @@ autotools-utils_src_install() {
 
 	_check_build_dir
 	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null
-	base_src_install
+	base_src_install "$@"
 	popd > /dev/null
 
 	# Remove libtool files and unnecessary static libs
