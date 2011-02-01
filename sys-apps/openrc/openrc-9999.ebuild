@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.76 2011/02/01 00:04:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.77 2011/02/01 19:26:39 williamh Exp $
 
 EAPI="1"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="debug elibc_glibc ncurses pam unicode kernel_linux kernel_FreeBSD"
+IUSE="debug elibc_glibc ncurses pam selinux unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
 	kernel_FreeBSD? ( sys-process/fuser-bsd )
@@ -47,6 +47,9 @@ make_args() {
 	elif use kernel_FreeBSD ; then
 		MAKE_ARGS="${MAKE_ARGS} OS=FreeBSD"
 		brand="FreeBSD"
+	fi
+	if use selinux; then
+			MAKE_ARGS="${MAKE_ARGS} MKSELINUX=yes"
 	fi
 	export BRANDING="Gentoo ${brand}"
 }
