@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.1 2011/02/01 11:42:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.2 2011/02/01 12:56:28 grobian Exp $
 
 EAPI="3"
 
@@ -61,6 +61,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.14-tail.patch
 	epatch "${FILESDIR}"/exim-4.43-r2-localscan_dlopen.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
+	epatch "${FILESDIR}"/exim-4.74-radius-db-ENV-clash.patch # 287426
 	# from upstream
 	epatch "${FILESDIR}"/${P}-pcre.patch
 	epatch "${FILESDIR}"/${P}-makefile-posix.patch
@@ -76,7 +77,6 @@ src_configure() {
 	sed -i "/SYSTEM_ALIASES_FILE/ s'SYSTEM_ALIASES_FILE'${EPREFIX}/etc/mail/aliases'" "${S}"/src/configure.default
 	cp "${S}"/src/configure.default "${S}"/src/configure.default.orig
 
-	# includes typo fix for bug #47106
 	sed -e "48i\CFLAGS=${CFLAGS}" \
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
@@ -160,9 +160,7 @@ src_configure() {
 		sed -i "s:# RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:RADIUS_CONFIG_FILE=${EPREFIX}/etc/radiusclient/radiusclient.conf:" Makefile
 		sed -i "s:# RADIUS_LIB_TYPE=RADIUSCLIENT$:RADIUS_LIB_TYPE=RADIUSCLIENT:" Makefile
 	fi
-	if [[ -n ${myconf} ]] ; then
-		echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
-	fi
+	echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
 
 	# make iconv usage explicit
 	echo "HAVE_ICONV=yes" >> Makefile
@@ -205,11 +203,13 @@ src_configure() {
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/postgresql"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lpq"
 	fi
+
 	if use sqlite; then
 		sed -i "s:# LOOKUP_SQLITE=yes: LOOKUP_SQLITE=yes:" Local/Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/sqlite"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lsqlite3"
 	fi
+
 	if [[ -n ${LOOKUP_INCLUDE} ]]; then
 		sed -i "s:# LOOKUP_INCLUDE=-I /usr/local/ldap/include -I /usr/local/mysql/include -I /usr/local/pgsql/include:LOOKUP_INCLUDE=$LOOKUP_INCLUDE:" \
 			Local/Makefile
@@ -248,7 +248,7 @@ src_configure() {
 	fi
 
 	# use the "native" interface to the DBM library
-	echo "USE_DB=yes" >> "${S}"/Local/Makefile
+	echo "USE_DB=yes" >> Local/Makefile
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.175 2011/02/01 11:42:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.176 2011/02/01 12:56:28 grobian Exp $
+
+  01 Feb 2011; Fabian Groffen <grobian@gentoo.org> exim-4.74-r1.ebuild,
+  +files/exim-4.74-radius-db-ENV-clash.patch:
+  Build related fixes for #287426 and possibly #352265
 
 *exim-4.74-r1 (01 Feb 2011)
 
