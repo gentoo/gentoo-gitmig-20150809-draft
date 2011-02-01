@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ngircd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.51 2009/09/23 18:44:41 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.52 2011/02/01 17:38:24 scarabeus Exp $
+
+*ngircd-17.1 (01 Feb 2011)
+
+  01 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> +ngircd-17.1.ebuild,
+  files/ngircd.init.d:
+  Add new version. From my dev overlay. Polised thanks to Nathan Phillip Brink
+  (binki).
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ngircd-0.12.1.ebuild,
   ngircd-13.ebuild:
