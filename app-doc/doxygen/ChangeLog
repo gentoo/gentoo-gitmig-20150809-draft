@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.195 2011/01/18 14:07:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.196 2011/02/01 04:12:47 nerdboy Exp $
+
+*doxygen-1.7.3 (01 Feb 2011)
+
+  01 Feb 2011; Steve Arnold <nerdboy@gentoo.org> +doxygen-1.7.3.ebuild:
+  Added latest upstream release, closes bug #351578.
 
   18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.7.2.ebuild:
   ppc64 stable wrt #338632
