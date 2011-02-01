@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/codetools-3.2.0.ebuild,v 1.1 2011/01/30 00:42:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/codetools-3.2.0.ebuild,v 1.2 2011/02/01 01:25:46 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -23,11 +23,16 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
 RDEPEND="dev-python/numpy
+	>=dev-python/scimath-3.0.7
 	>=dev-python/traits-3.6.0"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )
-	test? ( dev-python/nose )"
+	test? (
+		>=dev-python/blockcanvas-3.2.1
+		>=dev-python/etsdevtools-3.1.1
+		dev-python/nose
+	)"
 
 S="${WORKDIR}/${MY_P}"
 
