@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.2 2011/01/31 21:01:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.3 2011/02/01 15:50:16 xmw Exp $
 
 EAPI=3
 
@@ -20,7 +20,8 @@ IUSE=""
 RDEPEND="=app-text/mupdf-9999
 	dev-ml/lablgl[glut]
 	media-libs/jbig2dec
-	media-libs/openjpeg"
+	media-libs/openjpeg
+	x11-misc/xsel"
 DEPEND="${RDEPEND}"
 
 src_compile() {
