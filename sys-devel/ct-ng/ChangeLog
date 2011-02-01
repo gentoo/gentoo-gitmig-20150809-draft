@@ -1,5 +1,10 @@
 
 
+*ct-ng-1.9.2 (01 Feb 2011)
+
+  01 Feb 2011; Anthony G. Basile <blueness@gentoo.org> +ct-ng-1.9.2.ebuild:
+  Version bump to 1.9.2
+
 *ct-ng-1.9.1 (30 Dec 2010)
 
   30 Dec 2010; Anthony G. Basile <blueness@gentoo.org> +ct-ng-1.9.1.ebuild:
