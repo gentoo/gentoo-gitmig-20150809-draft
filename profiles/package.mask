@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12416 2011/01/31 22:22:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12417 2011/02/01 19:06:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (01 Feb 2011)
+# Masked for QA because the package has not been installable for an year now.
+# See http://bugs.gentoo.org/show_bug.cgi?id=302456
+# Removal in 30 days
+net-dialup/slmodem
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (31 Jan 2011)
 # New package, masked for an initial testing period. Needs exotic

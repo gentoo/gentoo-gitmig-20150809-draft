@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5000 2011/01/31 22:22:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5001 2011/02/01 19:06:12 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite net-dialup/slmodem.
 
   31 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Added pmask for sci-libs/linux-gpib (about to be committed)
