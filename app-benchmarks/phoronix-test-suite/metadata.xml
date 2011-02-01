@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>benchmarks</herd>
 	<maintainer>
-		<email>cardoe@gentoo.org</email>
-		<name>Doug Goldstein</name>
-	</maintainer>
-	<maintainer>
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>

@@ -1,6 +1,14 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.11 2010/11/10 20:18:09 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.12 2011/02/01 21:50:49 cardoe Exp $
+
+*phoronix-test-suite-2.8.1-r1 (01 Feb 2011)
+
+  01 Feb 2011; Doug Goldstein <cardoe@gentoo.org>
+  phoronix-test-suite-2.8.1.ebuild, +phoronix-test-suite-2.8.1-r1.ebuild,
+  metadata.xml:
+  Add necessary curl USE flag depend on PHP. bug #352791. Add an EAPI=4 version
+  to clean up depends.
 
 *phoronix-test-suite-2.8.1 (10 Nov 2010)
 

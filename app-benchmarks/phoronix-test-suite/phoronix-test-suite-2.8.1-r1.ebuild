@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.8.1.ebuild,v 1.2 2011/02/01 21:50:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.8.1-r1.ebuild,v 1.1 2011/02/01 21:50:49 cardoe Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils
 
@@ -13,12 +13,12 @@ SRC_URI="http://www.phoronix-test-suite.com/download.php?file=${P} -> ${P}.tar.g
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gd gtk"
+IUSE="gtk"
 
 DEPEND=""
 
 # php 5.3 doesn't have pcre useflag anymore
-RDEPEND="|| ( dev-lang/php:5.3[cli,curl,gd,posix,pcntl,truetype] dev-lang/php:5.2[cli,curl,gd,posix,pcntl,truetype,pcre] )
+RDEPEND=">=dev-lang/php-5.2[cli,curl,gd,posix,pcntl,pcre(+),truetype]
 		app-arch/unzip
 		dev-php5/pecl-ps
 		gtk? ( dev-php5/php-gtk )"
