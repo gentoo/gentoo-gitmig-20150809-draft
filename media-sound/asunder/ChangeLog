@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/asunder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.35 2010/12/21 02:23:26 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.36 2011/02/01 23:07:35 ssuominen Exp $
+
+*asunder-2.1 (01 Feb 2011)
+
+  01 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +asunder-2.1.ebuild:
+  Version bump.
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> asunder-2.0.ebuild:
   Stable on amd64 wrt bug #347201
