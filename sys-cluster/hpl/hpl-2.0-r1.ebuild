@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0-r1.ebuild,v 1.1 2011/02/01 18:27:08 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpl/hpl-2.0-r1.ebuild,v 1.2 2011/02/01 21:44:39 jsbronder Exp $
 
+EAPI=4
 inherit eutils
 
 DESCRIPTION="A Portable Implementation of the High-Performance Linpack Benchmark for Distributed-Memory Computers"
@@ -17,9 +18,7 @@ DEPEND="virtual/mpi
 	virtual/lapack"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	cp setup/Make.Linux_PII_FBLAS Make.gentoo_hpl_fblas_x86
 	sed -i \
 		-e "/^TOPdir/s,= .*,= ${S}," \
@@ -31,22 +30,22 @@ src_unpack() {
 		-e '/^LINKER\>/s,= .*,= mpicc,' \
 		-e '/^CC\>/s,= .*,= mpicc,' \
 		-e "/^LINKFLAGS\>/s|= .*|= ${LDFLAGS}|" \
-		Make.gentoo_hpl_fblas_x86
+		Make.gentoo_hpl_fblas_x86 || die
 }
 
 src_compile() {
-	# parallel make failure — bug #321539
-	HOME=${WORKDIR} emake -j1 arch=gentoo_hpl_fblas_x86 || die "Failed to build"
+	# parallel make failure â bug #321539
+	HOME=${WORKDIR} emake -j1 arch=gentoo_hpl_fblas_x86
 }
 
 src_install() {
-	dobin bin/gentoo_hpl_fblas_x86/xhpl || die
-	dolib lib/gentoo_hpl_fblas_x86/libhpl.a || die
+	dobin bin/gentoo_hpl_fblas_x86/xhpl
+	dolib lib/gentoo_hpl_fblas_x86/libhpl.a
 	dodoc INSTALL BUGS COPYRIGHT HISTORY README TUNING \
-		bin/gentoo_hpl_fblas_x86/HPL.dat || die
-	doman man/man3/*.3 || die
+		bin/gentoo_hpl_fblas_x86/HPL.dat
+	doman man/man3/*.3
 	if use doc; then
-		dohtml -r www/* || die
+		dohtml -r www/*
 	fi
 }
 
