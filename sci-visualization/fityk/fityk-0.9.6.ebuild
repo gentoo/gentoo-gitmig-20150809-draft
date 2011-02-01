@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.6.ebuild,v 1.1 2011/01/26 17:44:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.9.6.ebuild,v 1.2 2011/02/01 19:24:33 bicatali Exp $
 
 EAPI="3"
 
@@ -60,9 +60,9 @@ src_configure() {
 }
 
 src_compile() {
+	use python && python_copy_sources swig
 	default
 	if use python; then
-		python_copy_sources swig
 		compilation() {
 			emake \
 				PYTHON_CPPFLAGS="-I$(python_get_includedir)" \
