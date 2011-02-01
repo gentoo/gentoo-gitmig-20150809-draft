@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.2.12.ebuild,v 1.1 2011/02/01 02:53:26 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.2.12.ebuild,v 1.2 2011/02/01 08:24:21 je_fro Exp $
 
 EAPI="2"
 
@@ -53,8 +53,8 @@ src_prepare() {
 
 	if use xft; then
 		sed -i \
-			-e "s:^#USE_XFT .*:USE_XFT = -DUSE_XFT $(xft-config --cflags):" \
-			-e "s:-lXft:$(xft-config --libs):" \
+			-e "s:^#USE_XFT .*:USE_XFT = -DUSE_XFT $(pkg-config --cflags xft):" \
+			-e "s:-lXft:$(pkg-config --libs xft):" \
 			Makefile || die "sed failed while editing Makefile to enable xft"
 	else
 		sed -i -e "s:-lXft::" Makefile || die
