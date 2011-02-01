@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.73.ebuild,v 1.1 2011/01/10 18:48:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74.ebuild,v 1.1 2011/02/01 08:03:32 grobian Exp $
 
 EAPI="3"
 
@@ -248,7 +248,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" FULLECHO='' || die "make failed"
+	emake -j1 CC="$(tc-getCC)" FULLECHO='' || die "make failed"
 }
 
 src_install () {
