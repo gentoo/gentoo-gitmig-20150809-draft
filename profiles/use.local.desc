@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6333 2011/02/01 07:53:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6334 2011/02/01 12:53:25 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1941,6 +1941,9 @@ media-libs/gstreamer:introspection - Use dev-libs/gobject-introspection for intr
 media-libs/imlib:deprecated - Enable deprecated GTK+-1.2 support
 media-libs/libass:enca - Enables support for charset discovery and conversion.
 media-libs/libbluray:aacs - Add support for decryption of AACS
+media-libs/libbluray:java - Add support for BD-J
+media-libs/libbluray:utils - Install command-line utilities and examples
+media-libs/libbluray:xine - Build Blu-ray input plugin for Xine
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
 media-libs/libcanberra:gstreamer - Enables gstreamer sound driver. Not useful when alsa or pulseaudio is available.
 media-libs/libcanberra:gtk - Enables building of gtk+ helper library, gtk+ runtime sound effects and the canberra-gtk-play utility. To enable the gtk+ sound effects add canberra-gtk-module to the colon separated list of modules in the GTK_MODULES environment variable.
