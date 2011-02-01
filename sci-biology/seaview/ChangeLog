@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/seaview
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.36 2010/07/16 22:05:28 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.37 2011/02/01 02:53:26 je_fro Exp $
+
+*seaview-4.2.12 (01 Feb 2011)
+
+  01 Feb 2011; Jeff Gardner <je_fro@gentoo.org> +seaview-4.2.12.ebuild:
+  Adding latest version.
 
   16 Jul 2010; Markos Chandras <hwoarang@gentoo.org> seaview-4.2.5.ebuild:
   Stable on amd64 wrt bug #328429
