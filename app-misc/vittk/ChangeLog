@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/vittk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vittk/ChangeLog,v 1.1 2011/02/01 11:11:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vittk/ChangeLog,v 1.2 2011/02/01 11:23:36 radhermit Exp $
+
+  01 Feb 2011; Tim Harder <radhermit@gentoo.org> vittk-1.1.1.ebuild,
+  files/vittk-1.1.1-configure.patch:
+  Move dev-lang/tk to RDEPEND and replace the last reference of wish with tclsh
+  in the configure script.
 
 *vittk-1.1.1 (01 Feb 2011)
 

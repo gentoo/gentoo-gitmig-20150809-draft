@@ -6,9 +6,10 @@
  
 -AC_PATH_PROG(WISH, wish, NOT_FOUND)
 -if test "$WISH" = "NOT_FOUND"; then
+-  AC_MSG_ERROR([can not continue: wish not found])
 +AC_PATH_PROG(TCLSH, tclsh, NOT_FOUND)
 +if test "$TCLSH" = "NOT_FOUND"; then
-   AC_MSG_ERROR([can not continue: wish not found])
++  AC_MSG_ERROR([can not continue: tclsh not found])
  fi
 -AC_SUBST(WISH)
 +AC_SUBST(TCLSH)
