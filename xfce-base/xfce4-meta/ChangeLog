@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.19 2011/01/25 20:30:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/ChangeLog,v 1.20 2011/02/01 20:29:42 ssuominen Exp $
+
+  01 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> xfce4-meta-4.8.ebuild:
+  Replace deprecated xfce4-icon-theme (Rodent) with tango-icon-theme to get
+  more complete icon theme per upstream's advise.
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> xfce4-meta-4.8.ebuild:
   Stable for HPPA (bug #349053).

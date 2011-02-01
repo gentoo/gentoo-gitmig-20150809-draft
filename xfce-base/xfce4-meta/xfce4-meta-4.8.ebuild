@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/xfce4-meta-4.8.ebuild,v 1.4 2011/01/25 20:30:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/xfce4-meta-4.8.ebuild,v 1.5 2011/02/01 20:29:42 ssuominen Exp $
 
 EAPI=3
 
@@ -21,6 +21,6 @@ RDEPEND="x11-themes/gtk-engines-xfce
 	>=xfce-base/xfce4-settings-4.8
 	x11-themes/hicolor-icon-theme
 	!minimal? ( media-fonts/dejavu
-		x11-themes/xfce4-icon-theme )
+		x11-themes/tango-icon-theme )
 	session? ( >=xfce-base/xfce4-session-4.8 )
 	svg? ( gnome-base/librsvg )"
