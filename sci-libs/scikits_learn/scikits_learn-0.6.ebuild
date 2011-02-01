@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.6.ebuild,v 1.1 2011/01/08 19:22:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.6.ebuild,v 1.2 2011/02/01 17:01:57 bicatali Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ inherit distutils
 MY_P="${P/scikits_/scikits.}"
 
 DESCRIPTION="A set of python modules for machine learning and data mining"
-HOMEPAGE="http://scikits-learn.sourceforge.net/"
+HOMEPAGE="http://scikit-learn.sourceforge.net/"
 SRC_URI="mirror://sourceforge/scikit-learn/${MY_P}.tar.gz"
 
 LICENSE="BSD"
