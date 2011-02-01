@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.4.1.ebuild,v 1.2 2011/01/30 23:13:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.4.1.ebuild,v 1.3 2011/02/01 19:05:53 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-VIRTUALX_REQUIRED="manual"
 
-inherit distutils eutils virtualx
+inherit distutils eutils
 
 MY_PN="Mayavi"
 MY_P="${MY_PN}-${PV}"
@@ -33,12 +32,7 @@ RDEPEND=">=dev-python/apptools-3.4.1
 	>=sci-libs/vtk-5[python]
 	qt4? ( dev-python/PyQt4[X,opengl] )"
 DEPEND="${RDEPEND}
-	doc? (
-		dev-python/sphinx
-		media-fonts/font-cursor-misc
-		media-fonts/font-misc-misc
-		x11-apps/xhost
-	)"
+	doc? ( app-arch/unzip )"
 
 S="${WORKDIR}"/${MY_P}
 
@@ -50,45 +44,40 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_prepare() {
-	distutils_src_prepare
-
-	sed -e "s/self.run_command('build_docs')/pass/" -i setup.py || die "sed setup.py failed"
+src_unpack() {
+	default
+	if use doc; then
+		cd "${S}"/docs
+		# building docs is buggy and requires X
+		# so use the bundled ones
+		unpack ./html.zip
+		rm -rf html/*/_sources
+	fi
 }
 
-src_compile() {
-	distutils_src_compile
-
-	if use doc; then
-		einfo "Generation of documentation"
-		pushd docs > /dev/null
-		doc_generation() {
-			emake html || die "Generation of documentation failed"
-		}
-		maketype="doc_generation" virtualmake
-		popd > /dev/null
-	fi
+src_prepare() {
+	distutils_src_prepare
+	sed -i \
+		-e "s/self.run_command('gen_docs')/pass/" \
+		-e "s/self.run_command('build_docs')/pass/" \
+		setup.py || die "sed setup.py failed"
 }
 
 src_install() {
 	find -name "*LICENSE*.txt" -delete
 	distutils_src_install
 
+	insinto /usr/share/doc/${PF}
 	if use doc; then
-		pushd docs/build/mayavi/html > /dev/null
-		insinto /usr/share/doc/${PF}/html/mayavi
-		doins -r [a-z]* _downloads _images _static || die "Installation of documentation failed"
-		popd > /dev/null
-
-		pushd docs/build/tvtk/html > /dev/null
-		insinto /usr/share/doc/${PF}/html/tvtk
-		doins -r [a-z]* _static || die "Installation of documentation failed"
-		popd > /dev/null
+		doins -r docs/html || die "Installation of documentation failed"
+		dosym  /usr/share/doc/${PF}/html/mayavi \
+			$(python_get_sitedir)/enthought/mayavi/html
+		dosym  /usr/share/doc/${PF}/html/tvtk \
+			$(python_get_sitedir)/enthought/tvtk/html
 	fi
 
 	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins -r examples/* || die "Installation of examples failed"
+		doins -r examples || die "Installation of examples failed"
 	fi
 
 	newicon enthought/mayavi/core/ui/images/m2.png mayavi2.png

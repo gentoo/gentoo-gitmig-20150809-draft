@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.19 2011/02/01 01:56:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.20 2011/02/01 19:05:53 bicatali Exp $
+
+  01 Feb 2011; Sébastien Fabbro <bicatali@gentoo.org> mayavi-3.4.1.ebuild,
+  metadata.xml:
+  Removed doc building because buggy. Now unzip the bundled docs and link in
+  proper directory, fixing bug #341753. Updated longdescription to reflect
+  mayavi2
 
   01 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -mayavi-1.5-r1.ebuild, -files/mayavi-1.5-tkinter_objects.patch:
