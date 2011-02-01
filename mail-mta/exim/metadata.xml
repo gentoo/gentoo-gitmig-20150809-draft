@@ -33,4 +33,10 @@
 		<flag name='spf'>Adds support for Sender Policy Framework</flag>
 		<flag name='srs'>Adds support for Sender Rewriting Scheme</flag>
 	</use>
+	<upstream>
+		<bugs-to>http://bugs.exim.org/</bugs-to>
+		<!-- stupid DTD doesn't allow this
+		<vcs>http://git.exim.org/exim.git</vcs>
+		-->
+	</upstream>
 </pkgmetadata>
