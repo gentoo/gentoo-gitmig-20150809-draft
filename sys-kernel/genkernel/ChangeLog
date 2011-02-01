@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.243 2011/01/31 12:07:03 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.244 2011/02/01 12:02:57 sping Exp $
+
+  01 Feb 2011; Sebastian Pipping <sping@gentoo.org> Manifest:
+  Seems like I forgot to upload tarball of 3.4.12.6 (bug #353344). Old copies
+  deleted, new tarball has new checksum, therefore the new upload needs an
+  update.
 
 *genkernel-3.4.12.6 (31 Jan 2011)
 
