@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.4.0.ebuild,v 1.3 2011/02/02 07:17:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.5.0.ebuild,v 1.1 2011/02/02 07:17:35 radhermit Exp $
 
 EAPI=3
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="bzip2 debug lzo pch wxwidgets"
 
 RDEPEND="
-	>=dev-libs/libebml-1.0.0
-	>=media-libs/libmatroska-1.0.0
+	>=dev-libs/libebml-1.2.0
+	>=media-libs/libmatroska-1.1.0
 	dev-libs/boost
 	dev-libs/expat
 	media-libs/flac

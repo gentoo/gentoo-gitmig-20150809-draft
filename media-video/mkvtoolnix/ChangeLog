@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.135 2011/01/21 17:51:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.136 2011/02/02 07:17:35 radhermit Exp $
+
+*mkvtoolnix-4.5.0 (02 Feb 2011)
+
+  02 Feb 2011; Tim Harder <radhermit@gentoo.org> mkvtoolnix-4.4.0.ebuild,
+  +mkvtoolnix-4.5.0.ebuild:
+  Version bump for bug #353405. Remove unnecessary eautoreconf call and fix
+  wxwidgets QA warning.
 
   21 Jan 2011; Dror Levin <spatz@gentoo.org> -mkvtoolnix-3.2.0.ebuild,
   -mkvtoolnix-3.3.0.ebuild, -files/mkvtoolnix-4.0.0-qt4.patch,
