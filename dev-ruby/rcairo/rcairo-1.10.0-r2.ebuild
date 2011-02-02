@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r1.ebuild,v 1.1 2011/02/02 19:24:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r2.ebuild,v 1.1 2011/02/02 20:02:07 graaff Exp $
 
 EAPI=2
 
@@ -20,7 +20,9 @@ RUBY_FAKEGEM_DOCDIR="doc"
 
 RUBY_FAKEGEM_EXTRADOC="AUTHORS NEWS"
 
-inherit multilib ruby-ng ruby-fakegem
+RUBY_FAKEGEM_EXTRAINSTALL="src"
+
+inherit multilib ruby-fakegem
 
 DESCRIPTION="Ruby bindings for cairo"
 HOMEPAGE="http://cairographics.org/rcairo/"
@@ -59,6 +61,8 @@ each_ruby_compile() {
 
 	# again, try to make it more standard, to install it more easily.
 	cp ext/cairo/cairo$(get_modname) lib/ || die
+	mkdir src || die
+	cp ext/cairo/rb_cairo.h src/ || die
 }
 
 each_ruby_test() {
@@ -66,13 +70,6 @@ each_ruby_test() {
 	# their hierarchy, do it manually.
 	${RUBY} -Ilib -r ./test/cairo-test-utils.rb \
 		-e 'gem "test-unit"; require "test/unit"; Dir.glob("test/**/test_*.rb") {|f| load f}' || die "tests failed"
-}
-
-each_ruby_install() {
-	each_fakegem_install
-
-	insinto $(ruby_get_hdrdir)
-	doins ext/cairo/rb_cairo.h || die "Cannot install header file."
 }
 
 all_ruby_install() {
