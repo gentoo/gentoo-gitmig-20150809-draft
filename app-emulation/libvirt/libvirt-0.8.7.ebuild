@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.4 2011/01/21 16:27:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.5 2011/02/02 19:25:07 cardoe Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -57,7 +57,7 @@ RDEPEND="sys-libs/readline
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( >=sys-fs/udev-145 >=x11-libs/libpciaccess-0.10.9 )
 	virt-network? ( net-dns/dnsmasq
-		>=net-firewall/iptables-1.4.9
+		>=net-firewall/iptables-1.4.10
 		net-firewall/ebtables
 		sys-apps/iproute2 )"
 # one? ( dev-libs/xmlrpc-c )

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.88 2011/01/27 21:02:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.89 2011/02/02 19:25:07 cardoe Exp $
+
+  02 Feb 2011; Doug Goldstein <cardoe@gentoo.org> libvirt-0.8.5-r2.ebuild,
+  libvirt-0.8.6-r1.ebuild, libvirt-0.8.7.ebuild, libvirt-0.8.7-r1.ebuild:
+  Update iptables depend for the checksum-fill option that libvirt tries to
+  use. bug #334921
 
 *libvirt-0.8.7-r1 (27 Jan 2011)
 
