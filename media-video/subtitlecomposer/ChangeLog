@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitlecomposer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.7 2010/10/12 06:47:41 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.8 2011/02/02 05:22:33 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  subtitlecomposer-0.5.3.ebuild:
+  EAPI3
 
   12 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   subtitlecomposer-0.5.3.ebuild:
