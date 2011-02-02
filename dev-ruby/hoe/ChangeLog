@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.102 2011/01/16 09:48:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.103 2011/02/02 07:06:15 graaff Exp $
+
+*hoe-2.9.0 (02 Feb 2011)
+
+  02 Feb 2011; Hans de Graaff <graaff@gentoo.org> +hoe-2.9.0.ebuild:
+  Version bump.
 
   16 Jan 2011; Markos Chandras <hwoarang@gentoo.org> hoe-2.6.0-r1.ebuild:
   Stable on amd64 wrt bug #333947
