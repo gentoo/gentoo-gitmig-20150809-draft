@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-wallpapers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.160 2011/01/26 20:28:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.161 2011/02/02 11:36:34 scarabeus Exp $
+
+  02 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdeartwork-wallpapers-4.6.0.ebuild:
+  Fix blockers. Per bug #353455.
 
 *kdeartwork-wallpapers-4.6.0 (26 Jan 2011)
 
