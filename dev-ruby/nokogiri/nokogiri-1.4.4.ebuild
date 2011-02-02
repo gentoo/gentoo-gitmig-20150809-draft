@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.4.ebuild,v 1.4 2011/01/10 18:21:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.4.ebuild,v 1.5 2011/02/02 13:34:39 flameeyes Exp $
 
 EAPI=2
 
@@ -34,6 +34,7 @@ ruby_add_bdepend "
 	dev-ruby/rake-compiler
 	dev-ruby/rexical
 	dev-ruby/hoe
+	dev-ruby/racc
 	test? ( dev-ruby/minitest )"
 
 ruby_add_rdepend "ffi? ( virtual/ruby-ffi )"
@@ -71,5 +72,14 @@ each_ruby_compile() {
 
 each_ruby_test() {
 	nokogiri_ffi && export NOKOGIRI_FFI=yes
+
+	case ${RUBY} in
+		*jruby)
+			einfo "We don't have all the required libraries to test Nokogiri with JRuby."
+			einfo "the tests will be skipped for this implementation."
+			return
+			;;
+	esac
+
 	each_fakegem_test
 }
