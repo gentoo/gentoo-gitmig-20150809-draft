@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.32 2011/01/26 19:39:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.33 2011/02/02 05:36:13 jer Exp $
+
+  02 Feb 2011; Jeroen Roovers <jer@gentoo.org> wavemon-0.6.7.ebuild:
+  Stable for HPPA (bug #352810).
 
   26 Jan 2011; Markos Chandras <hwoarang@gentoo.org> wavemon-0.7.1.ebuild:
   Stable on amd64 wrt bug #352810
