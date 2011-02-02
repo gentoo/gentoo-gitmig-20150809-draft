@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/gluon-0.70.0.ebuild,v 1.1 2010/06/06 21:02:19 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/gluon-0.70.0.ebuild,v 1.2 2011/02/02 03:45:48 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 
 OPENGL_REQUIRED="always"
 inherit kde4-base
@@ -13,7 +13,7 @@ SRC_URI="http://gluon.gamingfreedom.org/sites/default/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
-SLOT="0"
+SLOT="4"
 IUSE=""
 
 COMMON_DEPEND="

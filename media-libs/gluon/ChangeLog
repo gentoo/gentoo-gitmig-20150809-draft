@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gluon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/ChangeLog,v 1.1 2010/06/06 21:02:19 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gluon/ChangeLog,v 1.2 2011/02/02 03:45:48 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> gluon-0.70.0.ebuild:
+  EAPI3, slotmove to 4
 
 *gluon-0.70.0 (06 Jun 2010)
 
