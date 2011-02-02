@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-1.0.2.ebuild,v 1.1 2010/06/16 13:36:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-1.0.2.ebuild,v 1.2 2011/02/02 05:26:10 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="cs de es fr it pl pt_BR ru uk"
 inherit kde4-base
 
@@ -15,4 +15,4 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
-DOCS="AUTHORS ChangeLog README"
+DOCS=( AUTHORS ChangeLog README )

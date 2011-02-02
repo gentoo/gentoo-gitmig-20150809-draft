@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.42 2010/06/16 13:36:06 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.43 2011/02/02 05:26:10 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  knutclient-1.0.2.ebuild:
+  EAPI3, use array for DOCS
 
 *knutclient-1.0.2 (16 Jun 2010)
 
