@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.124 2011/01/29 13:34:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.125 2011/02/02 06:16:28 jer Exp $
+
+  02 Feb 2011; Jeroen Roovers <jer@gentoo.org> johntheripper-1.7.6-r1.ebuild:
+  Remove extra escapes. Stable for HPPA (bug #350730).
 
   29 Jan 2011; Raúl Porcel <armin76@gentoo.org> johntheripper-1.7.6-r1.ebuild:
   alpha/sparc stable wrt #350730

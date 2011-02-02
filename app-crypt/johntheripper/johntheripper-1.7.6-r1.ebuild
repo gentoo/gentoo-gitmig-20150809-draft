@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.5 2011/01/29 13:34:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.6 2011/02/02 06:16:28 jer Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 # This package can't be marked stable for ppc or ppc64 before bug 327211 is closed.
-KEYWORDS="alpha amd64 ~hppa ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ~ppc ~ppc64 sparc x86"
 IUSE="altivec custom-cflags -minimal mmx openmp sse2"
 #IUSE="altivec custom-cflags -minimal mmx -mpi sse2"
 
@@ -95,8 +95,8 @@ src_compile() {
 	use custom-cflags || strip-flags
 	append-flags -fPIC -fPIE \
 		'-DJOHN_SYSTEMWIDE' \
-		'-DJOHN_SYSTEMWIDE_HOME=\\\"/etc/john\\\"' \
-		'-DJOHN_SYSTEMWIDE_EXEC=\\\"/usr/libexec/john\\\"'
+		'-DJOHN_SYSTEMWIDE_HOME=\"/etc/john\"' \
+		'-DJOHN_SYSTEMWIDE_EXEC=\"/usr/libexec/john\"'
 	gcc-specs-pie && append-ldflags -nopie
 	use openmp && OMP="-fopenmp"
 
