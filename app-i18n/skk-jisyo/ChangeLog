@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.59 2011/01/01 16:18:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.60 2011/02/02 01:37:47 jer Exp $
+
+  02 Feb 2011; Jeroen Roovers <jer@gentoo.org> skk-jisyo-201101.ebuild:
+  Stable for HPPA (bug #353411).
 
 *skk-jisyo-201101 (01 Jan 2011)
 
