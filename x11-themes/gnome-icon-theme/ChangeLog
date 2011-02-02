@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.187 2011/01/08 11:05:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.188 2011/02/02 11:15:12 pacho Exp $
+
+*gnome-icon-theme-2.91.6 (02 Feb 2011)
+
+  02 Feb 2011; Pacho Ramos <pacho@gentoo.org> +gnome-icon-theme-2.91.6.ebuild:
+  Version bump.
 
   08 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnome-icon-theme-2.91.0.ebuild:
   Don't enable branding per default as won't work for people using
