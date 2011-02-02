@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.6 2011/01/18 16:21:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.7 2011/02/02 05:36:52 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
@@ -35,7 +35,7 @@ RDEPEND=">=dev-libs/glib-2.14.0:2
 		( >=gnome-base/libgnome-2.14.0
 		>=gnome-base/libgnomeui-2.14.0 ) ) )
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10.21.3:0.10 )
-	kde? ( kontact? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} ) )
+	kde? ( kontact? ( $(add_kdebase_dep kdepimlibs) ) )
 	ldap? ( dev-libs/cyrus-sasl:2
 		net-nds/openldap )
 	libnotify? ( x11-libs/libnotify )
