@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.12.ebuild,v 1.1 2011/01/31 22:30:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.12.ebuild,v 1.2 2011/02/02 11:21:58 hanno Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="dev-libs/libxml2
 	dev-libs/libxslt
-	dev-libs/xmlsec
+	>=dev-libs/xmlsec-1.2.16
 	dev-libs/nspr
 	dev-libs/nss
 	sys-libs/zlib"
