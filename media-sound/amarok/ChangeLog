@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.398 2011/01/14 02:39:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.399 2011/02/02 04:11:38 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> amarok-2.3.2-r1.ebuild,
+  amarok-2.4.0.ebuild:
+  EAPI3, sync with live ebuild about git eclass handling, use add_kdebase_dep
 
   14 Jan 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   amarok-2.4.0.ebuild:

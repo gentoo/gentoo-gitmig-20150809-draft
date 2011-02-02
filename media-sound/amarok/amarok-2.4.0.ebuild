@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.2 2011/01/14 02:39:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.3 2011/02/02 04:11:38 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 # Translations are only in the tarballs, not the git repo
 if [[ ${PV} != *9999* ]]; then
@@ -11,13 +11,12 @@ if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 else
-	EGIT_REPO_URI="git://anongit.kde.org/${PN}"
-	GIT_ECLASS="git"
+	KDE_SCM="git"
 	KEYWORDS=""
 fi
 
 KDE_REQUIRED="never"
-inherit flag-o-matic kde4-base ${GIT_ECLASS}
+inherit flag-o-matic kde4-base
 
 DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
@@ -37,15 +36,15 @@ COMMONDEPEND="
 	player? (
 		app-crypt/qca:2
 		>=app-misc/strigi-0.5.7[dbus,qt4]
-		>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
+		$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
 		sys-libs/zlib
 		>=virtual/mysql-5.1
 		x11-libs/qt-script
 		>=x11-libs/qtscriptgenerator-0.1.0
 		cdda? (
-			>=kde-base/libkcddb-${KDE_MINIMAL}
-			>=kde-base/libkcompactdisc-${KDE_MINIMAL}
-			>=kde-base/kdemultimedia-kioslaves-${KDE_MINIMAL}
+			$(add_kdebase_dep libkcddb)
+			$(add_kdebase_dep libkcompactdisc)
+			$(add_kdebase_dep kdemultimedia-kioslaves)
 		)
 		embedded? (
 			|| (
@@ -78,7 +77,7 @@ DEPEND="${COMMONDEPEND}
 "
 RDEPEND="${COMMONDEPEND}
 	!media-sound/amarok-utils
-	player? ( >=kde-base/phonon-kde-${KDE_MINIMAL} )
+	player? ( $(add_kdebase_dep phonon-kde) )
 "
 
 src_prepare() {
