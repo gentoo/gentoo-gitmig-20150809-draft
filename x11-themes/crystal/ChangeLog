@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/crystal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.42 2009/12/05 15:44:52 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.43 2011/02/02 05:48:35 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> crystal-2.0.5.ebuild:
+  EAPI3, use add_kdebase_dep, use array for docs
 
   05 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> crystal-2.0.5.ebuild:
   Fix kde-base/kwin depend wrt #295593, thanks to AntiXpucT for reporting.

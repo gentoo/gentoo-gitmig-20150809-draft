@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-2.0.5.ebuild,v 1.5 2009/12/05 15:44:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-2.0.5.ebuild,v 1.6 2011/02/02 05:48:35 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 inherit kde4-base
 
 DESCRIPTION="Crystal decoration theme for KDE4.x"
@@ -14,8 +14,10 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND=">=kde-base/kwin-${KDE_MINIMAL}"
+DEPEND="
+	$(add_kdebase_dep kwin)
+"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
-DOCS="AUTHORS README"
+DOCS=( AUTHORS README )
