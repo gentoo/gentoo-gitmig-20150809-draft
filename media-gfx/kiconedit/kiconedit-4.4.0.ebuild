@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/kiconedit-4.4.0.ebuild,v 1.3 2010/08/09 16:16:08 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/kiconedit-4.4.0.ebuild,v 1.4 2011/02/02 03:03:58 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 KDE_LINGUAS="af ar be bg br ca ca@valencia cs cy da de el en_GB eo es et eu fa
 fi fr ga gl he hi hne hr hu is it ja km ko lt lv mai mk ms nb nds ne nl nn oc pa
