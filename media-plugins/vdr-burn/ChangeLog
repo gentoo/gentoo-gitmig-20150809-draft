@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.48 2011/01/28 17:53:27 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.49 2011/02/02 19:59:18 hd_brummy Exp $
+
+*vdr-burn-0.2.0_beta5 (02 Feb 2011)
+
+  02 Feb 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-burn-0.2.0_beta5.ebuild,
+  +files/vdr-burn-0.2.0_beta5_gentoo-path.diff,
+  +files/vdr-burn-0.2.0_beta5_makefile.diff,
+  +files/vdr-burn-0.2.0_beta5_setdefaults.diff, files/rc-addon.sh,
+  metadata.xml:
+  beta5 bump
 
   28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-burn-0.1.0_pre21-r6.ebuild, vdr-burn-0.1.0_pre22_p1.ebuild,
