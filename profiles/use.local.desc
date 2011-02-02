@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6334 2011/02/01 12:53:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6335 2011/02/02 05:13:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2141,7 +2141,6 @@ media-sound/hydrogen:archive - Use libarchive instead of libtar
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
 media-sound/jack-audio-connection-kit:netjack - Build with support for Realtime Audio Transport over generic IP
-media-sound/kwave:phonon - Enable media-sound/phonon support
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
 media-sound/listen:libsexy - Enable libsexy support
 media-sound/listen:webkit - Enable webkit rendering engine instead of mozembed
