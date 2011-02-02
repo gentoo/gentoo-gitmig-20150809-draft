@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.62 2010/11/07 12:20:27 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.63 2011/02/02 05:06:53 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kdenlive-0.7.7.1.ebuild, kdenlive-0.7.8.ebuild, metadata.xml:
+  EAPI3, use array for DOCS, use add_kdebase_dep
 
   07 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> kdenlive-0.7.8.ebuild:
   Update deps on mlt per bug #344471
