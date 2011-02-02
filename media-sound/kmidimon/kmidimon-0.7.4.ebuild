@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.4.ebuild,v 1.3 2010/10/29 14:31:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.4.ebuild,v 1.4 2011/02/02 04:42:22 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 inherit kde4-base
 
 DESCRIPTION="A MIDI monitor for ALSA sequencer"
@@ -14,16 +14,18 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +handbook"
 
-RDEPEND="media-libs/alsa-lib
-	>=media-sound/drumstick-0.5"
+RDEPEND="
+	media-libs/alsa-lib
+	>=media-sound/drumstick-0.5
+"
 DEPEND="${RDEPEND}"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 src_configure() {
 	mycmakeargs=(
 		-DSTATIC_DRUMSTICK=OFF
-		)
+	)
 
 	kde4-base_src_configure
 }

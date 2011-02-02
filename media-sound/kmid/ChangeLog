@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kmid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/ChangeLog,v 1.14 2010/10/29 13:58:32 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/ChangeLog,v 1.15 2011/02/02 04:40:06 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kmid-2.3.0-r1.ebuild,
+  kmid-2.4.0.ebuild:
+  EAPI3, use array for DOCS
 
 *kmid-2.4.0 (29 Oct 2010)
 
