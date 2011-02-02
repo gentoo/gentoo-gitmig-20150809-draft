@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.67.ebuild,v 1.1 2011/01/19 10:18:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.84.ebuild,v 1.1 2011/02/02 10:07:14 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,7 @@ RDEPEND="app-arch/bzip2
 	system-sqlite? (
 		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
 	)
-	system-v8? ( >=dev-lang/v8-2.5.9.7 )
+	system-v8? ( >=dev-lang/v8-2.5.9.11 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -256,6 +256,9 @@ src_configure() {
 	# Depending on GCC version the warnings are different and we don't want
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
+
+	# Avoid a build error with -Os, bug #352457.
+	replace-flags "-Os" "-O2"
 
 	egyp ${myconf} || die
 }
