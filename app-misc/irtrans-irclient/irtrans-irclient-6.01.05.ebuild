@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/irtrans-irclient-6.01.05.ebuild,v 1.1 2011/02/02 10:01:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/irtrans-irclient-6.01.05.ebuild,v 1.2 2011/02/02 11:54:04 hd_brummy Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~arm"
 IUSE=""
 
-RDEPEND="virtual/libc"
+DEPEND=""
+RDEPEND="${RDEPND}"
 
 S="${WORKDIR}"
 
