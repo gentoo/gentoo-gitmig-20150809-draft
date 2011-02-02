@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-1.1.3.ebuild,v 1.1 2009/11/20 16:42:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-1.1.3.ebuild,v 1.2 2011/02/02 03:26:58 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="af ar be bg br ca cs cy da de el en_GB es et eu fa fi fr ga gl he
 hi hr hu is it ja km lt mk ms nb nds ne nl nn oc pl pt pt_BR ro ru se sk sl sv
 ta tg tr uk vi xh zh_CN zh_TW"
@@ -23,4 +23,4 @@ DEPEND="media-gfx/povray"
 
 S=${WORKDIR}/${MY_P}
 
-DOCS="AUTHORS BUGS ChangeLog README StyleConvention TODO"
+DOCS=( AUTHORS BUGS ChangeLog README StyleConvention TODO )
