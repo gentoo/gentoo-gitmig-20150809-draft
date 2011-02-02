@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.7.0.ebuild,v 1.2 2010/08/09 16:11:10 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.7.0.ebuild,v 1.3 2011/02/02 04:48:05 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 
 inherit kde4-base
 
@@ -24,4 +24,4 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/${PN}
 
-DOCS=(TODO.odt)
+DOCS=( TODO.odt )
