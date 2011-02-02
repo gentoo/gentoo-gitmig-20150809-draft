@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.36 2011/01/15 11:59:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.37 2011/02/02 08:55:46 djc Exp $
+
+*mercurial-1.7.5 (02 Feb 2011)
+
+  02 Feb 2011; Dirkjan Ochtman <djc@gentoo.org> +mercurial-1.7.5.ebuild:
+  Version bump to 1.7.5.
 
   15 Jan 2011; Raúl Porcel <armin76@gentoo.org> mercurial-1.7.ebuild:
   alpha/ia64/sparc stable wrt #348499
