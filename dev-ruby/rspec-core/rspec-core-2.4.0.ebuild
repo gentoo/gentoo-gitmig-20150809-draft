@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.4.0.ebuild,v 1.1 2011/01/15 17:02:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.4.0.ebuild,v 1.2 2011/02/02 14:12:44 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19"
@@ -42,8 +42,7 @@ all_ruby_prepare() {
 	# Also clean the /usr/lib/rubyee path (which is our own invention).
 	sed -i -e 's#lib\\d\*\\/ruby\\/#lib\\d*\\/ruby(ee|)\\/#' lib/rspec/core/configuration.rb || die
 
-	# Fix spec: https://github.com/rspec/rspec-core/issues/issue/278
-	sed -i -e '157c].reverse)' spec/rspec/core/rake_task_spec.rb || die
+	epatch "${FILESDIR}"/${P}-tests.patch
 }
 
 all_ruby_compile() {
