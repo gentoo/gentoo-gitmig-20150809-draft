@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.31 2011/01/18 13:54:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.32 2011/02/02 11:31:18 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> wally-2.3.2.ebuild,
+  -wally-2.4.ebuild, wally-2.4.1.ebuild:
+  EAPI3, slotmove to 4, use array for makeargs, remove old
 
   18 Jan 2011; Markos Chandras <hwoarang@gentoo.org> wally-2.4.1.ebuild:
   Adjust kdelibs dependency

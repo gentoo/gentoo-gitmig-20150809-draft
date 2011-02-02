@@ -1,23 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.1.ebuild,v 1.2 2011/01/18 13:54:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.1.ebuild,v 1.3 2011/02/02 11:31:18 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 KDE_REQUIRED="optional"
-inherit cmake-utils kde4-base
+inherit kde4-base
 
-DESCRIPTION="A Qt4 wallpaper changer"
+DESCRIPTION="A Qt4/KDE4 wallpaper changer"
 HOMEPAGE="http://www.becrux.com/index.php?page=projects&name=wally"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug kde"
 
-DEPEND="media-libs/libexif
+DEPEND="
+	media-libs/libexif
 	x11-libs/qt-svg:4
-	kde? (	>=kde-base/kdelibs-4.5.5 )"
+	kde? ( $(add_kdebase_dep kdelibs) )
+"
 RDEPEND="${DEPEND}"
 
 PATCHES=(
@@ -30,7 +32,9 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs="${mycmakeargs} -DSTATIC=FALSE"
+	mycmakeargs=(
+		-DSTATIC=FALSE
+	)
 	cmake-utils_src_configure
 }
 
