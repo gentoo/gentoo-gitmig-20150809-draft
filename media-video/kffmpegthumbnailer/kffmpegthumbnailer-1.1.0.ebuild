@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kffmpegthumbnailer/kffmpegthumbnailer-1.1.0.ebuild,v 1.3 2010/07/15 20:38:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kffmpegthumbnailer/kffmpegthumbnailer-1.1.0.ebuild,v 1.4 2011/02/02 05:16:09 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 inherit kde4-base
 
 DESCRIPTION="A thumbnailer for KDE based on ffmpegthumbnailer"
@@ -14,6 +14,8 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND=">=media-video/ffmpegthumbnailer-2"
+DEPEND="
+	>=media-video/ffmpegthumbnailer-2
+"
 
-DOCS="Changelog README"
+DOCS=( Changelog README )

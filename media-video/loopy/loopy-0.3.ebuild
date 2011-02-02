@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/loopy/loopy-0.3.ebuild,v 1.1 2010/03/01 11:52:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/loopy/loopy-0.3.ebuild,v 1.2 2011/02/02 05:19:56 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="de"
 inherit kde4-base
 
@@ -17,8 +17,6 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND=">=media-sound/phonon-4.3.80"
-
 S=${WORKDIR}/${MY_P}
 
-DOCS="THEMING"
+DOCS=( THEMING )
