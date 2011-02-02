@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaudiocreator/kaudiocreator-1.2.90.ebuild,v 1.1 2010/08/31 17:36:12 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaudiocreator/kaudiocreator-1.2.90.ebuild,v 1.2 2011/02/02 04:27:39 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 inherit kde4-base
 
 DESCRIPTION="KDE CD ripper and audio encoder frontend"
@@ -14,11 +14,13 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND=">=kde-base/kdemultimedia-kioslaves-${KDE_MINIMAL}"
+RDEPEND="
+	$(add_kdebase_dep kdemultimedia-kioslaves)
+"
 DEPEND="${RDEPEND}
-	>=kde-base/libkcddb-${KDE_MINIMAL}
-	>=kde-base/libkcompactdisc-${KDE_MINIMAL}
+	$(add_kdebase_dep libkcddb)
+	$(add_kdebase_dep libkcompactdisc)
 	media-libs/libdiscid
 	>=media-libs/taglib-1.5"
 
-DOCS="Changelog TODO"
+DOCS=( Changelog TODO )
