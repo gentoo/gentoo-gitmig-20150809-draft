@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-1.2.0.ebuild,v 1.1 2011/02/02 03:30:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-1.2.0.ebuild,v 1.2 2011/02/02 03:40:30 radhermit Exp $
 
 EAPI=2
 
@@ -14,6 +14,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
+
+DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/${P}/make/linux"
 

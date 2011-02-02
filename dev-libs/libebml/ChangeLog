@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.100 2011/02/02 03:30:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.101 2011/02/02 03:40:30 radhermit Exp $
+
+  02 Feb 2011; Tim Harder <radhermit@gentoo.org> libebml-1.2.0.ebuild:
+  Explicitly set empty DEPEND and RDEPEND.
 
 *libebml-1.2.0 (02 Feb 2011)
 
