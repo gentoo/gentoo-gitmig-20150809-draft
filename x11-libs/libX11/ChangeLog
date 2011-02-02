@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.161 2011/01/27 16:50:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.162 2011/02/02 21:07:20 darkside Exp $
+
+  02 Feb 2011; Jeremy Olexa <darkside@gentoo.org> libX11-1.4.1.ebuild:
+  fix typo in KEYWORDS
 
   27 Jan 2011; Jeremy Olexa <darkside@gentoo.org>
   +files/libX11-1.1.4-aix-pthread.patch, +files/libX11-1.1.5-solaris.patch,
