@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/rspec-mocks-2.4.0.ebuild,v 1.1 2011/01/15 17:02:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/rspec-mocks-2.4.0.ebuild,v 1.2 2011/02/02 14:13:26 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19"
@@ -25,9 +25,8 @@ IUSE=""
 ruby_add_bdepend "test? (
 		dev-ruby/rspec-core:2
 		dev-ruby/rspec-expectations:2
-		dev-util/cucumber
 	)
-	doc? ( dev-ruby/rspec-core:2 dev-util/cucumber )"
+	doc? ( dev-ruby/rspec-core:2 )"
 
 # Not clear yet to what extend we need those (now)
 #	>=dev-ruby/cucumber-0.6.2
@@ -39,6 +38,8 @@ all_ruby_prepare() {
 
 	# Remove the Gemfile to avoid running through 'bundle exec'
 	rm Gemfile || die
+
+	epatch "${FILESDIR}"/${P}-no-cucumber.patch
 }
 
 all_ruby_compile() {
