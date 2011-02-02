@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mongodb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.9 2010/08/16 15:37:22 lu_zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.10 2011/02/02 18:14:42 phajdan.jr Exp $
+
+  02 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mongodb-1.6.0.ebuild,
+  metadata.xml:
+  Add support for V8 JavaScript engine, bug #340028 by Johan Bergstroem
+  <bugs@bergstroem.nu>.
 
 *mongodb-1.6.0 (16 Aug 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.6.0.ebuild,v 1.1 2010/08/16 15:37:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.6.0.ebuild,v 1.2 2011/02/02 18:14:42 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -16,9 +16,10 @@ SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="v8"
 
-RDEPEND="dev-lang/spidermonkey[unicode]
+RDEPEND="!v8? ( dev-lang/spidermonkey[unicode] )
+	v8? ( dev-lang/v8 )
 	dev-libs/boost
 	dev-libs/libpcre"
 
@@ -33,19 +34,32 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
+
+	scons_opts="${MAKEOPTS}"
+	if use v8; then
+		scons_opts+=" --usev8"
+	else
+		scons_opts+=" --usesm"
+	fi
 }
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-scons.patch"
 #}	epatch "${FILESDIR}"/"${PN}"-"${MY_PATCHVER}"-modify-*.patch
+
+	if use v8; then
+		# Suppress known test failure with v8:
+		# http://jira.mongodb.org/browse/SERVER-1147
+		sed -e '/add< NumberLong >/d' -i dbtests/jstests.cpp || die
+	fi
 }
 
 src_compile() {
-	scons ${MAKEOPTS} all || die "Compile failed"
+	scons ${scons_opts} all || die "Compile failed"
 }
 
 src_install() {
-	scons ${MAKEOPTS} --full --nostrip install --prefix="${D}"/usr || die "Install failed"
+	scons ${scons_opts} --full --nostrip install --prefix="${D}"/usr || die "Install failed"
 
 	for x in /var/{lib,log,run}/${PN}; do
 		dodir "${x}" || die "Install failed"
@@ -60,5 +74,5 @@ src_install() {
 }
 
 src_test() {
-	scons ${MAKEOPTS} smoke --smokedbprefix='testdir' test || die "Tests failed"
+	scons ${scons_opts} smoke --smokedbprefix='testdir' test || die "Tests failed"
 }
