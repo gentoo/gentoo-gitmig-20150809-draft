@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/icaclient
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.77 2010/10/12 10:25:30 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.78 2011/02/02 20:34:42 fauli Exp $
+
+  02 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  icaclient-11.100-r1.ebuild:
+  Adjust depdendency for amd64 emul libs as described in bug 353347 by
+  Arnaud Lech <arnaud AT bdefracte DOT org>
 
   12 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   icaclient-11.100-r1.ebuild:
