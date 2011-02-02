@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/skulpture
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/skulpture/ChangeLog,v 1.2 2010/03/25 19:56:01 spatz Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/skulpture/ChangeLog,v 1.3 2011/02/02 20:38:55 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  -skulpture-0.2.3.ebuild, skulpture-0.2.4.ebuild:
+  EAPI3, slotmove to 4
 
 *skulpture-0.2.4 (25 Mar 2010)
 
