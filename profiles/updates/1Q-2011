@@ -25,3 +25,4 @@ slotmove kde-misc/openofficeorg-thumbnail 0 4
 slotmove kde-misc/plasmatvgr 0 4
 slotmove kde-misc/quickaccess 0 4
 slotmove kde-misc/plasma-applet-daisy 0 4
+slotmove media-libs/gluon 0 4
