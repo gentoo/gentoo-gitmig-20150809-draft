@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.10 2010/06/22 18:19:45 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/ChangeLog,v 1.11 2011/02/02 04:22:46 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  audex-0.72_beta1.ebuild:
+  EAPI3, slotmove to 4, use add_kdebase_dep
 
   22 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
   audex-0.72_beta1.ebuild, +files/audex-0.72_beta1-gcc45.patch:
