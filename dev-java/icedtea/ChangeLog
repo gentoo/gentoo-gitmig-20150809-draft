@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.21 2011/01/21 22:51:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.22 2011/02/02 00:06:07 caster Exp $
+
+*icedtea-6.1.9.5 (02 Feb 2011)
+
+  02 Feb 2011; Vlastimil Babka <caster@gentoo.org> +files/6.1.9.5-sparc.patch,
+  +icedtea-6.1.9.5.ebuild, +files/icedtea-old.env, -files/6.1.9.3-sparc.patch,
+  -icedtea-6.1.9.3.ebuild, icedtea-6.1.9.4.ebuild, files/icedtea.env:
+  Version bump, security bug #353418. Use get_libdir to set proper lib dir in
+  the env file.
 
   21 Jan 2011; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.9.3.ebuild,
   icedtea-6.1.9.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.3.ebuild,v 1.5 2011/01/21 22:51:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.5.ebuild,v 1.1 2011/02/02 00:06:07 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -177,7 +177,7 @@ src_prepare() {
 src_configure() {
 	local config procs rhino_jar
 	local vm=$(java-pkg_get-current-vm)
-	local vmhome="/usr/lib/jvm/${vm}"
+	local vmhome="/usr/$(get_libdir)/jvm/${vm}"
 
 	# IcedTea6 can't be built using IcedTea7; its class files are too new
 	if [[ "${vm}" == "icedtea6" ]] || [[ "${vm}" == "icedtea6-bin" ]] ; then
@@ -254,12 +254,12 @@ src_compile() {
 }
 
 src_install() {
-	local dest="${ROOT}usr/$(get_libdir)/icedtea${SLOT}"
+	local dest="/usr/$(get_libdir)/icedtea${SLOT}"
 	local ddest="${D}/${dest}"
 	dodir "${dest}" || die
 
 	dodoc README NEWS AUTHORS THANKYOU || die
-	dosym "${ROOT}usr/share/doc/${PF}" "${ROOT}usr/share/doc/${PN}${SLOT}"
+	dosym "/usr/share/doc/${PF}" "/usr/share/doc/${PN}${SLOT}"
 
 	cd "${S}/openjdk.build/j2sdk-image" || die
 
@@ -304,8 +304,9 @@ src_install() {
 	cp -vRP cacerts "${ddest}/jre/lib/security/" || die
 	chmod 644 "${ddest}/jre/lib/security/cacerts" || die
 
-	sed -e "s/@SLOT@/${SLOT}/g" \
-		-e "s/@PV@/${ICEDTEA_VER}/g" \
+	sed -e "s#@SLOT@#${SLOT}#g" \
+		-e "s#@PV@#${ICEDTEA_VER}#g" \
+		-e "s#@LIBDIR@#$(get_libdir)#g" \
 		< "${FILESDIR}/icedtea.env" > "${T}/icedtea.env"
 	set_java_env "${T}/icedtea.env"
 }

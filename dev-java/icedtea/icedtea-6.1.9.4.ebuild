@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.4.ebuild,v 1.2 2011/01/21 22:51:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.4.ebuild,v 1.3 2011/02/02 00:06:07 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -306,7 +306,7 @@ src_install() {
 
 	sed -e "s/@SLOT@/${SLOT}/g" \
 		-e "s/@PV@/${ICEDTEA_VER}/g" \
-		< "${FILESDIR}/icedtea.env" > "${T}/icedtea.env"
+		< "${FILESDIR}/icedtea-old.env" > "${T}/icedtea.env"
 	set_java_env "${T}/icedtea.env"
 }
 
