@@ -1,6 +1,9 @@
 # ChangeLog for app-text/odt2txt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.6 2011/01/29 18:33:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/odt2txt/ChangeLog,v 1.7 2011/02/02 15:57:28 halcy0n Exp $
+
+  02 Feb 2011; Mark Loeser <halcy0n@gentoo.org> odt2txt-0.4-r1.ebuild:
+  Mark ~ppc64; bug #296794
 
   29 Jan 2011; Raúl Porcel <armin76@gentoo.org> odt2txt-0.4-r1.ebuild:
   alpha/ia64/sparc stable wrt #351794
