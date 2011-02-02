@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.4 2011/01/25 22:22:07 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.5 2011/02/02 09:11:56 suka Exp $
 
 EAPI="3"
 
@@ -328,6 +328,9 @@ src_prepare() {
 	echo "--with-system-redland" >> ${CONFFILE}
 	echo "--without-writer2latex" >> ${CONFFILE}
 	echo "--without-junit" >> ${CONFFILE}
+
+	#fix desktop files bug #352955
+	sed -i 's/Exec=oo/Exec=lo/g' "${S}"/desktop/*.desktop.in.in || die "Could not fix desktop files"
 
 	# needed for sun-templates patch
 	eautoreconf
