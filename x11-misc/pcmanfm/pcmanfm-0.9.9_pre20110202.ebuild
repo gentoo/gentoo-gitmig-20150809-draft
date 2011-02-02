@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.8.ebuild,v 1.4 2010/12/26 21:51:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110202.ebuild,v 1.1 2011/02/02 22:18:03 hwoarang Exp $
 
 EAPI=2
 
@@ -9,7 +9,8 @@ if [[ ${PV} == 9999 ]]; then
 	inherit autotools git
 	SRC_URI=""
 else
-	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+	inherit autotools
+	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86"
 fi
 
@@ -25,7 +26,7 @@ IUSE="debug"
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
 	>=lxde-base/menu-cache-0.3.2
-	>=x11-libs/libfm-0.1.14"
+	>=x11-libs/libfm-0.1.15_pre20110202"
 RDEPEND="${COMMON_DEPEND}
 	virtual/eject"
 DEPEND="${COMMON_DEPEND}
@@ -34,10 +35,8 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	if [[ ${PV} == 9999 ]]; then
-		intltoolize --force --copy --automake || die
-		eautoreconf
-	fi
+	intltoolize --force --copy --automake || die
+	eautoreconf
 }
 
 src_configure() {
