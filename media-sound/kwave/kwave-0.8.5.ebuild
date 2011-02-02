@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.5.ebuild,v 1.1 2009/12/26 13:45:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.5.ebuild,v 1.2 2011/02/02 04:52:24 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="cs de fr"
 inherit kde4-base
 
@@ -13,24 +13,29 @@ SRC_URI="mirror://sourceforge/kwave/${P}-1.tar.bz2"
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa debug flac +handbook mad oss phonon pulseaudio vorbis"
+IUSE="alsa debug flac +handbook mad oss pulseaudio vorbis"
 
-RDEPEND="media-libs/audiofile
+RDEPEND="
+	media-libs/audiofile
 	>=sci-libs/fftw-3
 	media-libs/libsamplerate
 	alsa? ( media-libs/alsa-lib )
 	flac? ( media-libs/flac )
-	mad? ( media-libs/id3lib
-		media-libs/libmad )
-	phonon? ( media-sound/phonon )
+	mad? (
+		media-libs/id3lib
+		media-libs/libmad
+	)
 	pulseaudio? ( media-sound/pulseaudio )
-	vorbis? ( media-libs/libogg
-		media-libs/libvorbis )"
+	vorbis? (
+		media-libs/libogg
+		media-libs/libvorbis
+	)
+"
 DEPEND="${RDEPEND}
-	>=kde-base/kdesdk-misc-${KDE_MINIMAL}
+	$(add_kdebase_dep kdesdk-misc)
 	media-gfx/imagemagick"
 
-DOCS="AUTHORS CHANGES README TODO"
+DOCS=( AUTHORS CHANGES README TODO )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kwave
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.18 2009/12/26 13:45:29 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.19 2011/02/02 04:52:24 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kwave-0.8.5.ebuild,
+  metadata.xml:
+  EAPI3, use add_kdebase_dep, sort deps, get rid of the phonon useflag, it is a
+  kdelibs dep either way
 
 *kwave-0.8.5 (26 Dec 2009)
 
