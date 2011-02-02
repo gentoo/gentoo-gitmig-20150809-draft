@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.5.ebuild,v 1.2 2010/09/03 22:03:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.5.ebuild,v 1.3 2011/02/02 22:23:10 cardoe Exp $
 
 BACKPORTS=1
 
@@ -34,7 +34,8 @@ RDEPEND=">=dev-python/pygtk-1.99.12
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 	policykit? ( gnome-extra/polkit-gnome )"
 DEPEND="${RDEPEND}
-	app-text/rarian"
+	app-text/rarian
+	dev-util/intltool"
 
 src_prepare() {
 	sed -e "s/python/python2/" -i src/virt-manager.in || \
