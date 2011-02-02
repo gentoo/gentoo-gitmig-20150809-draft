@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a.ebuild,v 1.3 2010/07/12 17:57:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.6a.ebuild,v 1.4 2011/02/02 05:27:40 tampakrap Exp $
 
-EAPI=2
+EAPI=3
 KDE_LINGUAS="ar br cs da de el en_GB eo es et eu fr ga gl hi hne it ja ka lt
 ms nb nds nl nn pa pl pt pt_BR ro ru sv tr uk zh_CN zh_TW"
 inherit kde4-base
@@ -17,9 +17,12 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="+crypt debug"
 
-RDEPEND="crypt? ( dev-libs/libgcrypt )"
+RDEPEND="
+	crypt? ( dev-libs/libgcrypt )
+"
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+	sys-devel/gettext
+"
 
 S=${WORKDIR}/${P}-kde4
 
