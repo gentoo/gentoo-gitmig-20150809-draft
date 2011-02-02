@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.2.ebuild,v 1.1 2011/02/01 19:24:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.2.ebuild,v 1.2 2011/02/02 08:52:12 polynomial-c Exp $
 
 EAPI="3"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Convert DOS or MAC text files to UNIX format or vice versa"
 HOMEPAGE="http://www.xs4all.nl/~waterlan/dos2unix.html http://sourceforge.net/projects/dos2unix/"
@@ -24,6 +24,8 @@ RDEPEND="
 	!app-text/unix2dos"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-5.2-makefile.patch
+
 	sed \
 		-e '/^LDFLAGS/s|=|+=|' \
 		-e '/^CC/s|=|?=|' \
