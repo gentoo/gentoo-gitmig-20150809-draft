@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.407 2011/01/31 20:33:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.408 2011/02/02 17:41:55 ulm Exp $
+
+  02 Feb 2011; Ulrich Mueller <ulm@gentoo.org> emacs-22.3-r7.ebuild,
+  emacs-23.2-r3.ebuild:
+  Fix duplicate items in GNU Info directory, upstream bug 7942.
 
   31 Jan 2011; Ulrich Mueller <ulm@gentoo.org> emacs-23.2-r3.ebuild:
   Add explicit --without-ns configure option.
