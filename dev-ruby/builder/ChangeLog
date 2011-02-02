@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.54 2011/01/02 08:53:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.55 2011/02/02 13:28:42 flameeyes Exp $
+
+  02 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> builder-3.0.0.ebuild,
+  +files/builder-3.0.0+ruby-1.9.2.patch:
+  Add patch to fix tests with Ruby 1.9.2 and add ruby19 compatibility.
 
 *builder-3.0.0 (02 Jan 2011)
 
