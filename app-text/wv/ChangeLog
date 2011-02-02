@@ -1,6 +1,14 @@
 # ChangeLog for app-text/wv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.55 2011/01/31 14:00:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.56 2011/02/02 18:36:05 pacho Exp $
+
+*wv-1.2.9-r1 (02 Feb 2011)
+
+  02 Feb 2011; Pacho Ramos <pacho@gentoo.org> +wv-1.2.9-r1.ebuild,
+  metadata.xml:
+  Build and install tools only when requested since they are considered
+  deprecated in favor of using AbiWord, this also allows us to not depend on
+  latex always.
 
   31 Jan 2011; Pacho Ramos <pacho@gentoo.org> wv-1.2.9.ebuild:
   ebuild cleanups by Gilles.
