@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-5.11.10.ebuild,v 1.2 2008/08/11 04:41:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/irtrans-irserver-6.03.08.ebuild,v 1.1 2011/02/02 10:04:33 hd_brummy Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,25 +10,25 @@ RESTRICT="strip"
 
 DESCRIPTION="IRTrans Server"
 HOMEPAGE="http://www.irtrans.de"
-SRC_URI="http://ftp.mars.arge.at/irtrans/irserver-src-${PV}.tar.gz"
+SRC_URI="http://www.irtrans.de/download/Server/Linux/irserver-src.tar.gz -> irserver-src-${PV}.tar.gz
+	http://ftp.disconnected-by-peer.at/irtrans/irserver-src-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~arm"
 IUSE=""
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
 
-src_unpack() {
-	unpack ${A}
-	cd "${WORKDIR}"
+S="${WORKDIR}"
 
-	epatch "${FILESDIR}/${PN}"-5.11.08-arm_remotes-1.patch
+src_prepare() {
+	epatch "${FILESDIR}/${P}"-arm-1.patch
 }
 
 src_compile() {
 
-	append-flags -DLINUX -Icommon
+	append-flags -DLINUX
 
 	# Set sane defaults (arm target has no -D flags added)
 	irbuild=irserver_arm_noccf
@@ -48,7 +50,7 @@ src_compile() {
 	einfo "Build Binary=\"${irserver}\""
 
 	# Build
-	emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" "${irbuild}" || die "emake irserver failed"
+	emake CXX="$(tc-getCXX)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" "${irbuild}" || die "emake irserver failed"
 }
 
 src_install() {
