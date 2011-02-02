@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kplayer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.40 2009/10/18 18:25:21 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.41 2011/02/02 05:18:26 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kplayer-0.7.ebuild:
+  EAPI3, slotmove to 4
 
   18 Oct 2009; Markus Meier <maekke@gentoo.org> kplayer-0.7.ebuild:
   x86 stable, bug #288837
