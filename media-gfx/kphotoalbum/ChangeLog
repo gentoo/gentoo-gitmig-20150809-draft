@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.47 2010/11/11 23:22:46 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.48 2011/02/02 03:09:53 tampakrap Exp $
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kphotoalbum-4.1.1.ebuild:
+  EAPI3, use array for mycmakeargs, use add_kdebase_dep
 
   11 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   kphotoalbum-4.1.1.ebuild, +files/kphotoalbum-4.1.1-docbook_fix.patch:
