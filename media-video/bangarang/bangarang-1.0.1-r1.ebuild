@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-1.0.1-r1.ebuild,v 1.1 2010/07/28 00:02:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-1.0.1-r1.ebuild,v 1.2 2011/02/02 04:55:48 tampakrap Exp $
 
-EAPI="2"
+EAPI=3
 
 KDE_LINGUAS="cs de fr it nl pl pt_BR zh_CN"
 KDE_LINGUAS_DIR="translations"
@@ -20,10 +20,9 @@ SLOT="4"
 IUSE="debug"
 
 RDEPEND="
-	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop]
-	>=kde-base/kdemultimedia-kioslaves-${KDE_MINIMAL}
+	$(add_kdebase_dep kdelibs 'semantic-desktop')
+	$(add_kdebase_dep kdemultimedia-kioslaves)
 	media-libs/taglib
-	media-sound/phonon
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
