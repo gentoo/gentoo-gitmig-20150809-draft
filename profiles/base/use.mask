@@ -1,6 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.108 2010/12/08 13:41:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.109 2011/02/02 13:25:14 tampakrap Exp $
+
+# Its deps are not mature enough yet
+ayatana
 
 # Only available on x86
 fdftk
@@ -17,7 +20,7 @@ gluon
 # KDE4 specific enablefinal flag
 # Uses huge amounts of ram, and those ricers would be spamming bugzilla.
 # By huge i mean around 8Gigs at least.
-# Most applications also fails with this approach now
+# Most applications also fail with this approach now
 kdeenablefinal
 
 # profile specific USE flags

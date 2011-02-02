@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.191 2011/01/30 08:30:35 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.192 2011/02/02 13:25:14 tampakrap Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -45,10 +45,6 @@ www-client/chromium system-v8
 # Mask vala USE flag since it depends on a masked revision
 # of dev-libs/gobject-introspection
 <net-libs/telepathy-glib-0.12.5 vala
-
-# Theo Chatzimichos <tampakrap@gentoo.org> (16 Sep 2010)
-# Mask ayatana USE flag, as its deps aren't in good shape
-net-irc/quassel ayatana
 
 # Patrick Lauer <patrick@gentoo.org> (15 Sep 2010)
 # Feature broken in dovecot-1, see #337014
