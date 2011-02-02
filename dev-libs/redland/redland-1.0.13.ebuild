@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.12.ebuild,v 1.4 2011/01/25 19:27:02 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.13.ebuild,v 1.1 2011/02/02 20:08:17 ssuominen Exp $
 
 EAPI=3
 inherit libtool
@@ -12,7 +12,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
-IUSE="berkdb iodbc mysql odbc postgres sqlite ssl static-libs xml"
+IUSE="berkdb iodbc mysql odbc postgres sqlite ssl static-libs +xml"
 
 # libltdl is used for loading plugins, don't remove .la files
 RDEPEND=">=sys-devel/libtool-2.2.6
@@ -23,7 +23,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6
 	!xml? ( dev-libs/expat )
 	ssl? ( dev-libs/openssl )
 	media-libs/raptor:2
-	>=dev-libs/rasqal-0.9.20
+	>=dev-libs/rasqal-0.9.22
 	postgres? ( dev-db/postgresql-base )
 	iodbc? ( dev-db/libiodbc )
 	odbc? ( dev-db/unixODBC )"
@@ -48,7 +48,6 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
-		--enable-raptor2 \
 		$(use_with berkdb bdb) \
 		--with-xml-parser=${parser} \
 		$(use_with ssl openssl-digests) \

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.78 2011/01/25 19:27:02 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.79 2011/02/02 20:08:17 ssuominen Exp $
+
+*redland-1.0.13 (02 Feb 2011)
+
+  02 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +redland-1.0.13.ebuild:
+  Version bump.
 
   25 Jan 2011; Dror Levin <spatz@gentoo.org> redland-1.0.12.ebuild:
   Update raptor dep.
