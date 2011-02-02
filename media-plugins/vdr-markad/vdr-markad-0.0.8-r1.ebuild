@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.0.8.ebuild,v 1.2 2011/01/27 02:09:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.0.8-r1.ebuild,v 1.1 2011/02/02 21:50:05 hd_brummy Exp $
 
 EAPI="3"
 
@@ -31,6 +31,10 @@ src_prepare() {
 	cd "${S2}"
 	sed -i Makefile \
 		-e "s:\$(CXXFLAGS) \$(OBJS):\$(CXXFLAGS) \$(LDFLAGS) \$(OBJS):"
+
+	if has_version ">=media-video/vdr-1.7.15"; then
+		sed -e "s:2001:6419:" -i markad-standalone.cpp
+	fi
 }
 
 src_compile() {
