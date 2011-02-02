@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12422 2011/02/02 20:07:49 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12423 2011/02/02 22:19:16 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -781,11 +781,6 @@ dev-scheme/sisc
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
 # Masked until reverse dependencies are sorted out (bug #342461)
 =dev-libs/libnl-2*
-
-# Markos Chandras <hwoarang@gentoo.org> (17 Oct 2010)
-# Masking experimental releases
-=x11-libs/libfm-0.1.14
-=x11-misc/pcmanfm-0.9.8
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2010)
 # dev-libs/soprano with USE redland is unported to raptor2 API
