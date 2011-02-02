@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110113.ebuild,v 1.2 2011/01/17 12:46:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110202.ebuild,v 1.1 2011/02/02 17:18:02 jlec Exp $
 
 EAPI="3"
 
@@ -64,7 +64,7 @@ src_prepare() {
 	if use opengl; then
 		GLUT_NEED_INIT="-DNEED_GLUT_INIT"
 		IGNORE_GL_FLAG=""
-		GL_FLAG="-DUSE_GL_FALSE"
+		GL_FLAG="-DUSE_GL_TRUE"
 		GL_DIR="${EPREFIX}/usr"
 		GL_LIB="-lglut -lGLU -lGL"
 		GL_INCLUDE_FLAGS="-I\$(GL_DIR)/include"
@@ -102,7 +102,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -C c all links
+	emake -C c all links || die
 }
 
 src_install() {
