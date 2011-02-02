@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.642.2-r1.ebuild,v 1.1 2011/01/22 16:18:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.11.ebuild,v 1.1 2011/02/02 12:54:02 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.0.7"
+V8_DEPEND="3.0.12"
 
 inherit eutils flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
@@ -107,11 +107,11 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
 
-	# Make sure we don't use bundled xdg-utils.
-	epatch "${FILESDIR}"/${PN}-system-xdg-utils-r0.patch
-
 	# Make sure we don't use bundled FLAC.
 	epatch "${FILESDIR}"/${PN}-system-flac-r0.patch
+
+	# Fix build, http://crbug.com/70606.
+	epatch "${FILESDIR}"/${PN}-webkit-version.patch
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -265,6 +265,9 @@ src_configure() {
 	# Depending on GCC version the warnings are different and we don't want
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
+
+	# Avoid a build error with -Os, bug #352457.
+	replace-flags "-Os" "-O2"
 
 	egyp ${myconf} || die
 }
