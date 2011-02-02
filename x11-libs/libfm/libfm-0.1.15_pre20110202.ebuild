@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.14.ebuild,v 1.4 2010/12/26 04:43:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110202.ebuild,v 1.1 2011/02/02 22:17:41 hwoarang Exp $
 
 EAPI=2
 
@@ -8,9 +8,11 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
 	inherit autotools git
 	SRC_URI=""
-	EXTRA_DEPEND="dev-util/gtk-doc-am"
+	EXTRA_DEPEND="dev-util/gtk-doc
+		dev-util/gtk-doc-am"
 else
-	SRC_URI="mirror://sourceforge/pcmanfm/${P}.tar.gz"
+	inherit autotools
+	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86"
 fi
 
@@ -37,11 +39,9 @@ DEPEND="${COMMON_DEPEND}
 	${EXTRA_DEPEND}"
 
 src_prepare() {
-	if [[ ${PV} == 9999 ]]; then
-		gtkdocize --copy || die
-		intltoolize --force --copy --automake || die
-		eautoreconf
-	fi
+	gtkdocize --copy || die
+	intltoolize --force --copy --automake || die
+	eautoreconf
 }
 
 src_configure() {
