@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.87 2011/01/31 11:05:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.88 2011/02/02 22:14:41 dilfridge Exp $
+
+  02 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kipi-plugins-1.2.0-r2.ebuild, -kipi-plugins-1.7.0.ebuild:
+  Cleanup
 
   31 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   kipi-plugins-1.2.0-r3.ebuild:
