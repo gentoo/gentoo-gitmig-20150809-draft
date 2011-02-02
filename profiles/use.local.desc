@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6336 2011/02/02 18:13:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6337 2011/02/02 18:34:16 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -785,6 +785,7 @@ dev-db/mariadb:minimal - Install client programs only, no server
 dev-db/mariadb:pbxt - Add experimental support for PBXT storage engine
 dev-db/mariadb:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mariadb:test - Install upstream testsuites for end use.
+dev-db/mongodb:v8 - Use V8 JavaScript engine (dev-lang/v8) instead of SpiderMonkey (dev-lang/spidermonkey)
 dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering (deprecated)
 dev-db/mysql:community - Enables the community features from upstream.
