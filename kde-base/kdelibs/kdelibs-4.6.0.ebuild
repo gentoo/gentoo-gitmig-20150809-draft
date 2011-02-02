@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.0.ebuild,v 1.1 2011/01/26 20:28:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.0.ebuild,v 1.2 2011/02/02 02:11:33 dilfridge Exp $
 
 EAPI="3"
 
@@ -133,6 +133,7 @@ PATCHES=(
 #	"${FILESDIR}/${PN}-4.5.74-klauncher_mac.patch" - FIXME read above
 	"${FILESDIR}/${PN}-4.5.90-mimetypes.patch"
 	"${FILESDIR}/${PN}-4.4.90-xslt.patch"
+	"${FILESDIR}/${PN}-4.6.0-logoutcrash.patch"
 )
 
 src_prepare() {
