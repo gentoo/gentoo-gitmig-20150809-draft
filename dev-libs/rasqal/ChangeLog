@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.49 2011/01/25 19:23:54 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.50 2011/02/02 19:59:43 ssuominen Exp $
+
+*rasqal-0.9.24 (02 Feb 2011)
+
+  02 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +rasqal-0.9.24.ebuild:
+  Version bump.
 
 *rasqal-0.9.22 (25 Jan 2011)
 
