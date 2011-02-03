@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.45 2011/01/07 16:51:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.46 2011/02/03 18:55:50 arfrever Exp $
+
+  03 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  jinja-2.5.5.ebuild:
+  Add "vim-syntax" USE flag (bug #273474).
 
   07 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -jinja-2.3.1.ebuild, -files/jinja2-2.3.1-python-3.2.patch,
