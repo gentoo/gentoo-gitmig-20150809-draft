@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.5.ebuild,v 1.1 2011/02/03 01:01:41 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.5.ebuild,v 1.2 2011/02/03 02:09:52 weaver Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://augustus.gobics.de/"
 SRC_URI="http://augustus.gobics.de/binaries/${PN}.${PV}.tar.gz"
 
 LICENSE="Artistic"
-SLOT="0"B
+SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
