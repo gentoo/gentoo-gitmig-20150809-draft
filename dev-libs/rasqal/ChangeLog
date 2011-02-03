@@ -1,9 +1,9 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.51 2011/02/03 19:26:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.52 2011/02/03 20:15:16 xarthisius Exp $
 
   03 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> rasqal-0.9.24.ebuild:
-  Add ~ppc wrt #341149
+  Add ~ppc/~ppc64 wrt #341149
 
 *rasqal-0.9.24 (02 Feb 2011)
 
@@ -19,7 +19,7 @@
   27 Oct 2010; Markus Meier <maekke@gentoo.org> rasqal-0.9.20.ebuild:
   add ~arm, bug #341149
 
-  25 Oct 2010; Raúl Porcel <armin76@gentoo.org> rasqal-0.9.17.ebuild,
+  25 Oct 2010; RaÃºl Porcel <armin76@gentoo.org> rasqal-0.9.17.ebuild,
   rasqal-0.9.19.ebuild, rasqal-0.9.20.ebuild:
   Drop ia64/sparc keywords
 
@@ -31,7 +31,7 @@
   16 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +rasqal-0.9.20.ebuild:
   Version bump.
 
-  11 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> rasqal-0.9.19.ebuild:
+  11 Aug 2010; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> rasqal-0.9.19.ebuild:
   Disable static libs.
 
   03 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> rasqal-0.9.17.ebuild:
@@ -48,7 +48,7 @@
   18 Apr 2010; <nixnut@gentoo.org> rasqal-0.9.17.ebuild:
   ppc stable #301306
 
-  06 Mar 2010; Raúl Porcel <armin76@gentoo.org> rasqal-0.9.17.ebuild:
+  06 Mar 2010; RaÃºl Porcel <armin76@gentoo.org> rasqal-0.9.17.ebuild:
   arm/ia64/sparc stable wrt #301306
 
   23 Feb 2010; Christian Faulhammer <fauli@gentoo.org> rasqal-0.9.17.ebuild:
@@ -60,7 +60,7 @@
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> rasqal-0.9.17.ebuild:
   Stable for HPPA (bug #301306).
 
-  10 Jan 2010; Raúl Porcel <armin76@gentoo.org> rasqal-0.9.16.ebuild,
+  10 Jan 2010; RaÃºl Porcel <armin76@gentoo.org> rasqal-0.9.16.ebuild,
   rasqal-0.9.17.ebuild:
   Add ~arm
 
@@ -75,7 +75,7 @@
   22 Jun 2009; Alexis Ballier <aballier@gentoo.org> rasqal-0.9.16.ebuild:
   keyword ~x86-fbsd
 
-  22 May 2009; Raúl Porcel <armin76@gentoo.org> rasqal-0.9.16.ebuild:
+  22 May 2009; RaÃºl Porcel <armin76@gentoo.org> rasqal-0.9.16.ebuild:
   ia64 stable wrt #269523
 
   21 May 2009; Brent Baude <ranger@gentoo.org> rasqal-0.9.16.ebuild:
@@ -136,7 +136,7 @@
   18 Jan 2008; Samuli Suominen <drac@gentoo.org> +rasqal-0.9.15.ebuild:
   Version bump.
 
-  18 Jan 2008; Diego Pettenò <flameeyes@gentoo.org> rasqal-0.9.14.ebuild:
+  18 Jan 2008; Diego PettenÃ² <flameeyes@gentoo.org> rasqal-0.9.14.ebuild:
   Add elibtoolize call.
 
   28 Nov 2007; Markus Rothe <corsair@gentoo.org> rasqal-0.9.14.ebuild:
