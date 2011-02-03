@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/haildb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.4 2011/02/03 12:23:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/haildb/ChangeLog,v 1.5 2011/02/03 12:24:55 flameeyes Exp $
+
+  03 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> haildb-2.3.2.ebuild:
+  Fix header (why does repoman not stop me?)
 
 *haildb-2.3.2 (03 Feb 2011)
 
