@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-0.99.3.ebuild,v 1.3 2009/09/23 20:29:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-1.0.1-r1.ebuild,v 1.1 2011/02/03 03:07:06 robbat2 Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+EAPI=2
+
+inherit eutils toolchain-funcs flag-o-matic linux-info
 
 DESCRIPTION="btrace can show detailed info about what is happening on a block device io queue."
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/axboe/blktrace/"
@@ -17,14 +19,22 @@ RDEPEND=""
 # This is a Linux specific app!
 DEPEND="${RDEPEND}
 		|| ( sys-kernel/linux-headers sys-kernel/mips-headers )
-		doc? ( virtual/latex-base )
+		doc? ( virtual/latex-base app-text/dvipdfm )
 		dev-libs/libaio"
-S="${WORKDIR}/${MY_PN}"
+S="${WORKDIR}/${MY_P}"
+
+CONFIG_CHECK="~BLK_DEV_IO_TRACE"
+WARNING_BLK_DEV_IO_TRACE="you need to enable BLK_DEV_IO_TRACE kernel option if you want to gather traces from this machine"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.0.1-ldflags-parallel-make.patch
+}
 
 src_compile() {
 	append-flags -DLVM_REMAP_WORKAROUND -W -I"${S}"
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 	if use doc; then
+		export VARTEXFONTS="${T}/fonts"
 		emake docs || die "emake docs failed"
 	fi
 }
