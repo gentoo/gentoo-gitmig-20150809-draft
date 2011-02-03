@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.9.12.ebuild,v 1.1 2011/01/07 14:12:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.9.12.ebuild,v 1.2 2011/02/03 13:12:50 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -17,6 +17,9 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+RDEPEND=">=dev-db/couchdb-0.10.0
+	>=net-misc/rabbitmq-server-1.7.0"
 
 ruby_add_rdepend "~app-admin/chef-${PV}
 	>=dev-ruby/json-1.4.4

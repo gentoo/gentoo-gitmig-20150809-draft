@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/chef-server-api
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/ChangeLog,v 1.7 2011/01/07 14:12:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/ChangeLog,v 1.8 2011/02/03 13:12:50 hollow Exp $
+
+  03 Feb 2011; Benedikt Böhm <hollow@gentoo.org>
+  chef-server-api-0.9.12.ebuild:
+  add couchdb and rabbitmq as RDEPEND so a webui-less install does not
+  uninstall them
 
 *chef-server-api-0.9.12 (07 Jan 2011)
 
