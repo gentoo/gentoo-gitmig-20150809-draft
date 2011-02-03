@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.139 2011/01/30 21:00:25 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.140 2011/02/03 02:40:46 nixphoeni Exp $
+
+*gdesklets-core-0.36.3-r2 (03 Feb 2011)
+
+  03 Feb 2011; Joe Sapp <nixphoeni@gentoo.org>
+  -gdesklets-core-0.36.3-r1.ebuild, +gdesklets-core-0.36.3-r2.ebuild,
+  files/gdesklets-core-0.36.3-.in-files.patch:
+  Updated patch to include installation of icon
 
   30 Jan 2011; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.36.3-r1.ebuild,
   +files/gdesklets-core-0.36.3-.in-files.patch:

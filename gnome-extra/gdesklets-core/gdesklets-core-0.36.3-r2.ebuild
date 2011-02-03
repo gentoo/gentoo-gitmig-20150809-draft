@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r1.ebuild,v 1.2 2011/01/30 21:00:25 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r2.ebuild,v 1.1 2011/02/03 02:40:46 nixphoeni Exp $
 
 EAPI=2
 # desklets don't run with USE=debug
