@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rexima
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.13 2008/12/20 03:38:42 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.14 2011/02/03 07:32:40 radhermit Exp $
+
+  03 Feb 2011; Tim Harder <radhermit@gentoo.org> rexima-1.4.ebuild:
+  Update HOMEPAGE (bug #353382 thanks to Malte Starostik).
 
   20 Dec 2008; Alexis Ballier <aballier@gentoo.org> rexima-1.4.ebuild:
   Honour CC and LDLFAGS; dont prestrip files, bug #239890, remove unused sed

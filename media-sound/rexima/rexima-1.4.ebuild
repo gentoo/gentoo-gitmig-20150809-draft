@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/rexima-1.4.ebuild,v 1.15 2008/12/31 03:37:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/rexima-1.4.ebuild,v 1.16 2011/02/03 07:32:40 radhermit Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="A curses-based interactive mixer which can also be used from the command-line."
-HOMEPAGE="http://rus.members.beeb.net/rexima.html"
+HOMEPAGE="http://www.svgalib.org/rus/rexima.html"
 SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/sound/mixers/${P}.tar.gz"
 
 LICENSE="GPL-2"
