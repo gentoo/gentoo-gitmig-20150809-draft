@@ -1,0 +1,26 @@
+# ChangeLog for net-mail/mu
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.1 2011/02/03 10:11:42 tomka Exp $
+
+*mu-0.9.2 (03 Feb 2011)
+
+  03 Feb 2011; Thomas Kahle <tomka@gentoo.org> +mu-0.9.2.ebuild, +metadata.xml:
+  Bumped and imported to main-tree. Kudos to contributors to sunrise, and
+  Dirk-Jan C. Binnema.
+
+  29 Jan 2011; Thomas Kahle <tomka@gentoo.org> mu-0.9.1.ebuild,
+  +files/remove-failing-sandbox-test.patch:
+  Bump to 0.9.1
+
+  25 Mar 2010; Cédric Cabessa (ced_c) <ced@ryick.net> mu-0.7.ebuild:
+  add postinst elog about migration from 0.6
+
+  20 Mar 2010; Cédric Cabessa (ced_c) <ced@ryick.net> -mu-0.6.ebuild,
+  +mu-0.7.ebuild:
+  Version bump, add NEWS in DOCS
+
+  18 Feb 2010; Cédric Cabessa (ced_c) <ced@ryick.net> +mu-0.6.ebuild,
+  +metadata.xml:
+  New ebuild for bug 305073, thanks to Tommy[D], hwoarang, Xarthisius and
+  sedzimir
+
