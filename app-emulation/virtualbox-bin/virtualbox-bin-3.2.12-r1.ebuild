@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.12-r1.ebuild,v 1.4 2011/01/07 15:13:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.2.12-r1.ebuild,v 1.5 2011/02/03 07:47:55 tomka Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
 RESTRICT="mirror"
 
