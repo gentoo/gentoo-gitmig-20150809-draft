@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/recon
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/recon/ChangeLog,v 1.1 2011/02/03 01:58:47 weaver Exp $
+
+*recon-1.06 (03 Feb 2011)
+
+  03 Feb 2011; Andrey Kislyuk <weaver@gentoo.org> +recon-1.06.ebuild,
+  +metadata.xml:
+  New package, dependency of sci-biology/repeatmodeler. Ebuild written by me
+
