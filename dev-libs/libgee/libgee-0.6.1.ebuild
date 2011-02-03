@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.6.1.ebuild,v 1.1 2011/01/29 21:11:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.6.1.ebuild,v 1.2 2011/02/03 22:28:25 eva Exp $
 
-EAPI="1"
+EAPI="3"
 
 inherit gnome2 multilib
 
@@ -19,9 +19,8 @@ RDEPEND=">=dev-libs/glib-2.12
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README"
 	G2CONF="${G2CONF} $(use_enable introspection)"
 }
 
