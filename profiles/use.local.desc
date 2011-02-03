@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6339 2011/02/02 20:13:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6340 2011/02/03 10:34:02 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1610,6 +1610,7 @@ kde-base/kdebindings-perl:qthelp - Compile bindings for QtHelp from x11-libs/qt-
 kde-base/kdebindings-perl:qwt - Compile bindings for x11-libs/qwt.
 kde-base/kdebindings-perl:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/kdebindings-ruby:akonadi - Compile bindings for Akonadi.
+kde-base/kdebindings-ruby:declarative - Compile bindings for x11-libs/qt-declarative.
 kde-base/kdebindings-ruby:kate - Compile bindings for KDE Advanced Text Editor.
 kde-base/kdebindings-ruby:okular - Compile bindings for kde-base/okular.
 kde-base/kdebindings-ruby:phonon - Compile bindings for Phonon.
