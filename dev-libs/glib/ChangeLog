@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.440 2011/01/30 18:00:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.441 2011/02/03 10:17:09 pacho Exp $
+
+  03 Feb 2011; Pacho Ramos <pacho@gentoo.org> glib-2.26.1-r1.ebuild:
+  Disable dtrace and systemtap supports until bug #351931 is solved instead of
+  letting them be automagic.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> glib-2.24.2.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #348987

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.26.1-r1.ebuild,v 1.2 2011/01/24 13:55:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.26.1-r1.ebuild,v 1.3 2011/02/03 10:17:09 pacho Exp $
 
 EAPI="3"
 
@@ -115,15 +115,17 @@ src_configure() {
 
 	# Always use internal libpcre, bug #254659
 	econf ${myconf} \
-		  $(use_enable xattr) \
-		  $(use_enable doc man) \
-		  $(use_enable doc gtk-doc) \
-		  $(use_enable fam) \
-		  $(use_enable selinux) \
-		  $(use_enable static-libs static) \
-		  --enable-regex \
-		  --with-pcre=internal \
-		  --with-threads=posix
+		$(use_enable xattr) \
+		$(use_enable doc man) \
+		$(use_enable doc gtk-doc) \
+		$(use_enable fam) \
+		$(use_enable selinux) \
+		$(use_enable static-libs static) \
+		--enable-regex \
+		--with-pcre=internal \
+		--with-threads=posix \
+		--disable-dtrace \
+		--disable-systemtap
 }
 
 src_install() {
