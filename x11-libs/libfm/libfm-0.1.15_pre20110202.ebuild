@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110202.ebuild,v 1.1 2011/02/02 22:17:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110202.ebuild,v 1.2 2011/02/03 21:01:51 hwoarang Exp $
 
 EAPI=2
 
@@ -33,10 +33,11 @@ RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
 	udev? ( sys-fs/udisks )"
 DEPEND="${COMMON_DEPEND}
+	dev-util/gtk-doc
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
-	sys-devel/gettext
-	${EXTRA_DEPEND}"
+	sys-devel/gettext"
 
 src_prepare() {
 	gtkdocize --copy || die
