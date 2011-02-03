@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nautilus-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.6 2011/01/22 16:29:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.7 2011/02/03 07:37:09 pva Exp $
+
+*nautilus-python-0.7.0 (03 Feb 2011)
+
+  03 Feb 2011; Peter Volkov <pva@gentoo.org> +nautilus-python-0.7.0.ebuild:
+  Version bump, #350751 thank Michael Weber for report and Rion for this job.
 
   22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   nautilus-python-0.6.1.ebuild:
