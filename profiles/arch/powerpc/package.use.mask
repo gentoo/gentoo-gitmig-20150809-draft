@@ -1,12 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.70 2011/02/03 09:21:10 xarthisius Exp $
-
-# Kacper Kowalik <xarthisius@gentoo.org>
-# kde-base/kdebindings-meta-4.6.0 [java,ruby] 
-# wrt #353538 and #280629. 
-# resolve #353129 before removing this mask
-=kde-base/kdebindings-meta-4.6.0 java ruby
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.71 2011/02/03 13:53:54 xarthisius Exp $
 
 # Joseph Jezak <JoseJX@gentoo.org> (25 Jan 2011)
 # x11-libs/qt-webkit doesn't have a working JIT yet on PowerPC
