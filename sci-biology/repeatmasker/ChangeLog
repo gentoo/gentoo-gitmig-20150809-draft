@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/repeatmasker
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/repeatmasker/ChangeLog,v 1.4 2009/08/20 13:41:10 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/repeatmasker/ChangeLog,v 1.5 2011/02/03 01:34:28 weaver Exp $
+
+*repeatmasker-3.2.9 (03 Feb 2011)
+
+  03 Feb 2011; Andrey Kislyuk <weaver@gentoo.org>
+  +repeatmasker-3.2.9.ebuild:
+  Version bump, switch over to sci-biology/rmblast
 
 *repeatmasker-3.2.8 (20 Aug 2009)
 
