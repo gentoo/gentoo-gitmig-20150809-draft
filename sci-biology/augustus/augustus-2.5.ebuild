@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.4.ebuild,v 1.2 2011/02/03 01:01:41 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.5.ebuild,v 1.1 2011/02/03 01:01:41 weaver Exp $
 
 EAPI="2"
 
@@ -8,17 +8,17 @@ inherit base eutils
 
 DESCRIPTION="Eukaryotic gene predictor"
 HOMEPAGE="http://augustus.gobics.de/"
-SRC_URI="http://augustus.gobics.de/binaries/old/${PN}.${PV}.src.tar.gz"
+SRC_URI="http://augustus.gobics.de/binaries/${PN}.${PV}.tar.gz"
 
 LICENSE="Artistic"
-SLOT="0"
+SLOT="0"B
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND=""
 
-#S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}.${PV}"
 
 src_compile() {
 	emake -C src clean || die
