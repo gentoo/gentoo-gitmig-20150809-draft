@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/velvet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.12 2010/06/20 18:06:38 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.13 2011/02/03 02:40:47 weaver Exp $
+
+*velvet-1.0.18 (03 Feb 2011)
+
+  03 Feb 2011; Andrey Kislyuk <weaver@gentoo.org> +velvet-1.0.18.ebuild,
+  +files/velvet-1.0.18-gentoo.diff:
+  Version bump
 
   20 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> -velvet-0.7.50.ebuild:
   Remove old
