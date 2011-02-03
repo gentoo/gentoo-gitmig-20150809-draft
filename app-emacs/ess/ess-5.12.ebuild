@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.12.ebuild,v 1.5 2011/01/30 18:46:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.12.ebuild,v 1.6 2011/02/03 20:27:47 ulm Exp $
 
 EAPI=3
 
@@ -35,7 +35,7 @@ src_install() {
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 
 	# Most documentation is installed by the package's build system
-	rm -f "${ED}${SITELISP}/ess/lisp/ChangeLog"
+	rm -f "${ED}${SITELISP}/${PN}/ChangeLog"
 	dodoc ChangeLog *NEWS doc/{TODO,ess-intro.pdf} || die "dodoc failed"
 	newdoc lisp/ChangeLog ChangeLog-lisp || die "newdoc failed"
 	prepalldocs
