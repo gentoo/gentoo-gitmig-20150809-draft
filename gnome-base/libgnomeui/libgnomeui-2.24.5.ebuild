@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+po# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.1 2011/02/02 10:54:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.2 2011/02/03 23:31:03 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,8 +22,8 @@ RDEPEND=">=dev-libs/libxml2-2.4.20
 	>=gnome-base/libbonoboui-2.13.1
 	>=gnome-base/gconf-2
 	>=x11-libs/pango-1.1.2
-	>=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.14
+	>=dev-libs/glib-2.16:2
+	>=x11-libs/gtk+-2.14:2
 	>=gnome-base/gnome-vfs-2.7.3
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-keyring-0.4
