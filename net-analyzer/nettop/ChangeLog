@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nettop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.19 2010/09/20 00:31:45 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.20 2011/02/03 09:43:19 jlec Exp $
+
+*nettop-0.2.3-r2 (03 Feb 2011)
+
+  03 Feb 2011; Justin Lecher <jlec@gentoo.org> +nettop-0.2.3-r2.ebuild:
+  Respect CC, moved to EAPI=3
 
   20 Sep 2010; Michael Weber <xmw@gentoo.org> nettop-0.2.3-r1.ebuild:
   Added ~arm keyword
