@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>desktop-misc</herd>
+  <maintainer>
+    <email>signals42@gmail.com</email>
+    <name>Kevin McCarthy</name>
+  </maintainer>
+  <maintainer>
+    <email>ssuominen@gentoo.org</email>
+    <name>Samuli Suominen</name>
+  </maintainer>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+    <name>Diego Elio Pettenò</name>
+  </maintainer>
+</pkgmetadata>

@@ -1,0 +1,10 @@
+# ChangeLog for app-office/teapot
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/ChangeLog,v 1.1 2011/02/03 16:26:10 ssuominen Exp $
+
+*teapot-2.2.0 (03 Feb 2011)
+
+  03 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +teapot-2.2.0.ebuild,
+  +files/teapot-2.2.0-doc-dir.patch, +files/teapot-2.2.0-helpfile.patch:
+  Initial commit wrt #353579 by Kevin McCarthy.
+
