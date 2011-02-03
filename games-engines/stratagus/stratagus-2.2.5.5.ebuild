@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.2 2010/11/30 15:31:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.3 2011/02/03 19:59:57 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/libX11
 	bzip2? ( app-arch/bzip2 )
 	mikmod? ( media-libs/libmikmod )
 	mng? ( media-libs/libmng )
-	theora? ( media-libs/libtheora )
+	theora? ( media-libs/libtheora media-libs/libvorbis )
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"

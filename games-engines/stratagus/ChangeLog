@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/stratagus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.19 2010/11/29 06:40:37 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.20 2011/02/03 19:59:57 mr_bones_ Exp $
+
+  03 Feb 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  stratagus-2.2.5.5.ebuild:
+  theora needs vorbis
 
 *stratagus-2.2.5.5 (29 Nov 2010)
 
