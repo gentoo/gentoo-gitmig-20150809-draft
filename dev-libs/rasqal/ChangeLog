@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.50 2011/02/02 19:59:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.51 2011/02/03 19:26:10 xarthisius Exp $
+
+  03 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> rasqal-0.9.24.ebuild:
+  Add ~ppc wrt #341149
 
 *rasqal-0.9.24 (02 Feb 2011)
 
