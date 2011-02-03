@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.656 2011/02/01 20:19:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.657 2011/02/03 14:10:21 aballier Exp $
+
+  03 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-1.1.7.ebuild:
+  Fix build with libmatroska-1.1.0, by Ambroz Bizjak, bug #353491
 
   01 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> vlc-1.1.7.ebuild:
   ppc/ppc64 stable wrt #353326
