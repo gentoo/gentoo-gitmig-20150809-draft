@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.0.ebuild,v 1.1 2011/01/25 19:24:54 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.0.ebuild,v 1.2 2011/02/03 18:18:36 xarthisius Exp $
 
 EAPI=3
 inherit eutils libtool
@@ -13,7 +13,7 @@ SRC_URI="http://download.librdf.org/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="2"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+curl debug json static-libs unicode +xml"
 
 RDEPEND="unicode? ( dev-libs/glib:2 )
