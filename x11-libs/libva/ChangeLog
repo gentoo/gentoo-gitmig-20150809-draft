@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.11 2010/12/26 14:08:17 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.12 2011/02/03 14:15:01 aballier Exp $
+
+*libva-0.31.1_p5 (03 Feb 2011)
+
+  03 Feb 2011; Alexis Ballier <aballier@gentoo.org> +libva-0.31.1_p5.ebuild:
+  version bump
 
   26 Dec 2010; Alexis Ballier <aballier@gentoo.org> -libva-0.31.0_p13.ebuild,
   -files/libva-dont-install-tests.patch:
