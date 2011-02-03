@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/amos
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.7 2010/02/12 02:36:43 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.8 2011/02/03 00:57:20 weaver Exp $
+
+*amos-3.0.0 (03 Feb 2011)
+
+  03 Feb 2011; Andrey Kislyuk <weaver@gentoo.org> +amos-3.0.0.ebuild:
+  Version bump
 
   11 Feb 2010; Andrey Kislyuk <weaver@gentoo.org> -amos-2.0.8.ebuild:
   Drop old ebuild
