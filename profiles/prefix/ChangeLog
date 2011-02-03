@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.241 2011/01/25 19:44:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.242 2011/02/03 14:20:27 grobian Exp $
+
+  03 Feb 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask sys-devel/flex-2.5.35_p10 for bug #353609
 
   25 Jan 2011; Fabian Groffen <grobian@gentoo.org> linux/package.mask:
   Fix mistake, really unmask e2fsprogs-1.4.14 on Linux

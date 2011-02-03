@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.85 2011/01/24 17:52:38 grobian Exp $
+# $Id: package.mask,v 1.86 2011/02/03 14:20:27 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+
+# Fabian Groffen <grobian@gentoo.org> (03 Feb 2011)
+# Diego's experimental flex for fixing from autoconf problem, breaks
+# bootstrapping, bug #353609
+=sys-devel/flex-2.5.35_p10
 
 # Fabian Groffen <grobian@gentoo.org> (24 Jan 2011)
 # This release breaks in multiple ways (posix_memalign, O_DIRECT), wait
