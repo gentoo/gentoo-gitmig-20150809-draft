@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.12.14.ebuild,v 1.3 2011/01/13 22:34:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.12.14.ebuild,v 1.4 2011/02/04 22:24:14 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -32,7 +32,7 @@ RDEPEND="dev-python/docutils
 	net-zope/initgroups
 	net-zope/missing
 	net-zope/multimapping
-	net-zope/namespaces
+	|| ( net-zope/namespaces-zope[Products,Shared,Shared-DC] net-zope/namespaces )
 	net-zope/persistence
 	net-zope/record
 	net-zope/tempstorage
