@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.11 2011/01/24 18:55:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.12 2011/02/04 11:20:34 pacho Exp $
 
 EAPI="3"
 
@@ -14,18 +14,17 @@ LICENSE="LGPL-3"
 
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="gtk svg t1lib"
+IUSE="gtk mathml svg t1lib"
 
 RDEPEND=">=dev-libs/glib-2.2.1:2
-		 >=dev-libs/popt-1.7
-		 >=dev-libs/libxml2-2.6.7
-		 gtk?	(
-		 			>=x11-libs/gtk+-2.2.1:2
-					>=media-libs/t1lib-5
-		 			>=dev-libs/gmetadom-0.1.8
-					  x11-libs/pango
-				)
-		 t1lib?	( >=media-libs/t1lib-5 )"
+	>=dev-libs/popt-1.7
+	>=dev-libs/libxml2-2.6.7
+	gtk? ( >=x11-libs/gtk+-2.2.1:2
+		>=media-libs/t1lib-5
+		>=dev-libs/gmetadom-0.1.8
+		x11-libs/pango )
+	mathml? ( media-fonts/texcm-ttf )
+	t1lib?	( >=media-libs/t1lib-5 )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
@@ -48,8 +47,7 @@ src_configure() {
 		--enable-tfm=2 \
 		--enable-builder-cache \
 		--enable-breaks \
-		--enable-boxml \
-		|| die "configure failed"
+		--enable-boxml
 }
 
 src_install() {

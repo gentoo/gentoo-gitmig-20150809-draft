@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.35 2011/01/24 18:55:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.36 2011/02/04 11:20:34 pacho Exp $
+
+  04 Feb 2011; Pacho Ramos <pacho@gentoo.org> gtkmathview-0.8.0.ebuild,
+  metadata.xml:
+  Install additional fonts for proper mathml support (bug #344665 by Denis
+  Demidov).
 
   24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gtkmathview-0.7.6.ebuild, gtkmathview-0.8.0.ebuild:
