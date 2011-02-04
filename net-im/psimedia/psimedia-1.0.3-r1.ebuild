@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r1.ebuild,v 1.1 2011/02/01 06:34:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r1.ebuild,v 1.2 2011/02/04 21:23:55 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -37,7 +37,6 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 "
-
 
 src_prepare() {
 	sed -e '/^TEMPLATE/a CONFIG += ordered' -i psimedia.pro || die
