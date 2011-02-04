@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.1 2011/01/13 16:16:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.2 2011/02/04 15:24:59 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -58,16 +58,18 @@ src_prepare() {
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
 
-	# virt-manager's autogen.sh touches this and eautoreconf fails
-	# unless we do this
-	touch config.rpath
+	if [[ ${PV} = *9999* ]]; then
+		# virt-manager's autogen.sh touches this and eautoreconf fails
+		# unless we do this
+		touch config.rpath
 
-	rm -f config.status
-	intltoolize --automake --copy --force
-	perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in
-	perl -i -p -e 's,^GETTEXT_PACKAGE.*$,GETTEXT_PACKAGE = virt-manager,' \
-		po/Makefile.in.i
-	eautoreconf
+		rm -f config.status
+		intltoolize --automake --copy --force
+		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in
+		perl -i -p -e 's,^GETTEXT_PACKAGE.*$,GETTEXT_PACKAGE = virt-manager,' \
+			po/Makefile.in.i
+		eautoreconf
+	fi
 
 	gnome2_src_prepare
 }
