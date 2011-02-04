@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.0.ebuild,v 1.10 2010/10/17 14:50:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.0.ebuild,v 1.11 2011/02/04 00:37:22 abcd Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils libtool multilib
 
 DESCRIPTION="High level XKB library"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gswitchit/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="doc"
 
 RDEPEND="x11-misc/xkeyboard-config
@@ -32,21 +32,12 @@ src_prepare() {
 }
 
 src_configure() {
-	local xkbbase
-
-	# see bug #113108
-	if has_version x11-apps/xkbcomp; then
-		xkbbase=/usr/share/X11/xkb
-	else
-		xkbbase=/usr/$(get_libdir)/X11/xkb
-	fi
-
 	econf \
 		--disable-dependency-tracking \
 		--disable-static \
-		--with-html-dir=/usr/share/doc/${PF}/html \
-		--with-xkb-base=${xkbbase} \
-		--with-xkb-bin-base=/usr/bin \
+		--with-html-dir="${EPREFIX}/usr/share/doc/${PF}/html" \
+		--with-xkb-base="${EPREFIX}/usr/share/X11/xkb" \
+		--with-xkb-bin-base="${EPREFIX}/usr/bin" \
 		$(use_enable doc gtk-doc)
 }
 
