@@ -9,7 +9,9 @@
   <flag name='math'>Enable support for <pkg>x11-libs/gtkmathview</pkg></flag>
   <flag name='openxml'>Enable OpenXML support</flag>
   <flag name='ots'>Enable Text Summarizer plugin</flag>
-  <flag name='plugins'>Enable plugins build</flag>
+  <flag name='plugins'>Enable plugins build (see
+  http://www.abisource.com/wiki/PluginMatrix for more information). If your
+  file cannot be opened due lack of support, try enabling this.</flag>
   <flag name='thesaurus'>Enable thesaurus support</flag>
   <flag name='wordperfect'>Enable wordperfect file support via
     <pkg>app-text/libwpd</pkg></flag>

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.231 2011/01/26 21:21:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.232 2011/02/04 10:06:43 pacho Exp $
+
+  04 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Give more information about 'plugins' USE flag.
 
   26 Jan 2011; Pacho Ramos <pacho@gentoo.org> abiword-2.8.6.ebuild:
   Fix asio DEPEND (bug #343469 by Pablo Cholaky).
