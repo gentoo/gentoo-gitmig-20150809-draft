@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-8.0.552.237.ebuild,v 1.1 2011/01/14 07:57:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9.0.597.84.ebuild,v 1.1 2011/02/04 14:47:17 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -29,7 +29,8 @@ RDEPEND="app-arch/bzip2
 	media-libs/fontconfig
 	media-libs/freetype
 	=media-libs/libpng-1.4*
-	>=media-video/ffmpeg-0.6_p25423[threads]
+	media-libs/libvpx
+	>=media-video/ffmpeg-0.6_p25767[threads]
 	>=net-print/cups-1.4.4
 	sys-apps/dbus
 	>=sys-libs/glibc-2.11.2
@@ -38,6 +39,7 @@ RDEPEND="app-arch/bzip2
 	x11-libs/cairo
 	>=x11-libs/gtk+-2.14.7
 	x11-libs/libXScrnSaver
+	x11-libs/libXtst
 	x11-libs/pango
 	x11-misc/xdg-utils
 	virtual/jpeg
