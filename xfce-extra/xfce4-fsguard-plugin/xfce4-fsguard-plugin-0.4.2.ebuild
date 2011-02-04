@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard-plugin/xfce4-fsguard-plugin-0.4.2.ebuild,v 1.2 2009/10/08 17:34:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard-plugin/xfce4-fsguard-plugin-0.4.2.ebuild,v 1.3 2011/02/04 17:56:20 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="Filesystem guard panel plugin"
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(use_enable debug)
+		)
 }

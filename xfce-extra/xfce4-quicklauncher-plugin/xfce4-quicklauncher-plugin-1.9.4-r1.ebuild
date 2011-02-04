@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4-r1.ebuild,v 1.8 2010/08/29 18:06:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4-r1.ebuild,v 1.9 2011/02/04 17:59:06 ssuominen Exp $
 
+EAPI=3
 EAUTORECONF=yes
 EINTLTOOLIZE=yes
-EAPI=2
 inherit xfconf
 
 DESCRIPTION="Xfce4 panel quicklauncher plugin"
@@ -24,9 +24,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog TODO"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
-	PATCHES=( "${FILESDIR}/${P}-X-XFCE-Module-Path.patch" )
+	XFCONF=(
+		--disable-dependency-tracking
+		$(use_enable debug)
+		)
+	PATCHES=( "${FILESDIR}"/${P}-X-XFCE-Module-Path.patch )
 }
 
 src_prepare() {

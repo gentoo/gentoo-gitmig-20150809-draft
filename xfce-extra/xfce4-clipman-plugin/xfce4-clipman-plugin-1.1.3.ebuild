@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-1.1.3.ebuild,v 1.7 2010/04/14 17:44:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-1.1.3.ebuild,v 1.8 2011/02/04 17:58:22 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 EAUTORECONF=yes
 inherit xfconf
 
@@ -31,7 +31,9 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(use_enable debug)
+		)
 	PATCHES=( "${FILESDIR}/${PN}-1.1.1-exo.patch" )
 }

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/xfce4-notes-plugin-1.7.6.ebuild,v 1.8 2010/08/29 18:05:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/xfce4-notes-plugin-1.7.6.ebuild,v 1.9 2011/02/04 17:57:38 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit xfconf
 
 DESCRIPTION="Xfce4 panel sticky notes plugin"
@@ -27,7 +27,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
-	XFCONF="--disable-dependency-tracking
+
+	XFCONF=(
+		--disable-dependency-tracking
 		--disable-static
-		$(xfconf_use_debug)"
+		$(xfconf_use_debug)
+		)
 }
