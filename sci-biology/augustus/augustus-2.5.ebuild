@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.5.ebuild,v 1.2 2011/02/03 02:09:52 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.5.ebuild,v 1.3 2011/02/04 18:42:45 weaver Exp $
 
 EAPI="2"
 
@@ -19,6 +19,10 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/${PN}.${PV}"
+
+src_prepare() {
+		sed -i 's/${CFLAGS}/${CFLAGS} ${LDFLAGS}/' src/Makefile || die
+}
 
 src_compile() {
 	emake -C src clean || die
