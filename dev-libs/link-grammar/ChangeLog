@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/link-grammar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.28 2010/03/23 14:00:43 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.29 2011/02/04 10:45:58 pacho Exp $
+
+*link-grammar-4.7.2 (04 Feb 2011)
+
+  04 Feb 2011; Pacho Ramos <pacho@gentoo.org> +link-grammar-4.7.2.ebuild,
+  metadata.xml:
+  Version bump, thanks a lot to Tim Harder for his help in bug #340217. Move to
+  gnome-office.
 
   23 Mar 2010; Pacho Ramos <pacho@gentoo.org> link-grammar-4.2.4-r1.ebuild:
   Fix HOMEPAGE, thanks to John Keeping for noticing in bug 310873. Also make
