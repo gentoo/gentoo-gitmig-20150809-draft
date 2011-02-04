@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.3 2011/02/01 12:52:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.4 2011/02/04 19:51:04 radhermit Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools java-pkg-opt-2 git flag-o-matic
 
@@ -16,14 +16,25 @@ SLOT="0"
 KEYWORDS=""
 IUSE="aacs java static-libs utils xine"
 
-COMMON_DEPEND="dev-libs/libxml2
-	xine? ( media-libs/xine-lib )"
-RDEPEND="${COMMON_DEPEND}
+COMMON_DEPEND="
+	dev-libs/libxml2
+	xine? ( media-libs/xine-lib )
+"
+RDEPEND="
+	${COMMON_DEPEND}
 	aacs? ( media-video/aacskeys )
-	java? ( >=virtual/jre-1.6 )"
-DEPEND="${COMMON_DEPEND}
-	java? ( >=virtual/jdk-1.6 )
-	dev-util/pkgconfig"
+	java? ( >=virtual/jre-1.6 )
+"
+DEPEND="
+	${COMMON_DEPEND}
+	java? (
+		>=virtual/jdk-1.6
+		dev-java/ant-core
+	)
+	dev-util/pkgconfig
+"
+
+DOCS="doc/README README.txt TODO.txt"
 
 src_prepare() {
 	use java && export JDK_HOME="$(java-config -g JAVA_HOME)"
@@ -49,26 +60,24 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	emake
 
 	if use xine; then
-		cd player_wrappers/xine || die
-		emake || die
+		cd player_wrappers/xine
+		emake
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-
-	dodoc doc/README README.txt TODO.txt || die
+	default_src_install
 
 	if use utils; then
 		cd src/examples/
-		dobin clpi_dump index_dump mobj_dump mpls_dump sound_dump || die
+		dobin clpi_dump index_dump mobj_dump mpls_dump sound_dump
 		cd .libs/
-		dobin bd_info bdsplice hdmv_test libbluray_test list_titles || die
+		dobin bd_info bdsplice hdmv_test libbluray_test list_titles
 		if use java; then
-			dobin bdj_test || die
+			dobin bdj_test
 		fi
 	fi
 
@@ -78,8 +87,8 @@ src_install() {
 	fi
 
 	if use xine; then
-		cd "${S}"/player_wrappers/xine || die
-		emake DESTDIR="${D}" install || die
+		cd "${S}"/player_wrappers/xine
+		emake DESTDIR="${D}" install
 		newdoc HOWTO README.xine
 	fi
 }

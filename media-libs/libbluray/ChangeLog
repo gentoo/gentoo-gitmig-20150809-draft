@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.3 2011/02/01 12:52:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.4 2011/02/04 19:51:04 radhermit Exp $
+
+  04 Feb 2011; Tim Harder <radhermit@gentoo.org> libbluray-9999.ebuild:
+  Add dependency on dev-java/ant-core for bug #353635. Bump to EAPI 4 and use
+  diff friendly dependency lines.
 
   01 Feb 2011; Tim Harder <radhermit@gentoo.org> +files/90libbluray,
   libbluray-9999.ebuild:
