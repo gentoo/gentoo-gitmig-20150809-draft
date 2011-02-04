@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.240 2010/11/25 15:32:02 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.241 2011/02/04 23:17:07 robbat2 Exp $
+
+*lvm2-2.02.83 (04 Feb 2011)
+
+  04 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.83.ebuild:
+  Version bump.
 
   25 Nov 2010; Brent Baude <ranger@gentoo.org> lvm2-2.02.73-r1.ebuild:
   Marking lvm2-2.02.73-r1 ppc64 for bug 334087
