@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.6.ebuild,v 1.2 2011/01/30 17:08:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.18.ebuild,v 1.1 2011/02/04 14:34:31 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.0.9"
+V8_DEPEND="3.0.12.8"
 
 inherit eutils flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
