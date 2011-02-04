@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gource
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.9 2010/09/06 18:30:34 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.10 2011/02/04 15:41:52 flameeyes Exp $
+
+*gource-0.29 (04 Feb 2011)
+
+  04 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> -gource-0.26b.ebuild,
+  -gource-0.27.ebuild, +gource-0.29.ebuild:
+  Version bump by Enrico; remove old versions.
 
 *gource-0.28 (06 Sep 2010)
 

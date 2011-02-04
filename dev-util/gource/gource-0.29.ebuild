@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.27.ebuild,v 1.1 2010/08/01 04:18:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.29.ebuild,v 1.1 2011/02/04 15:41:52 flameeyes Exp $
 
 EAPI=2
 
