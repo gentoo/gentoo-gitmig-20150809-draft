@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.2-r1.ebuild,v 1.3 2010/11/05 17:19:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.2-r1.ebuild,v 1.4 2011/02/04 18:06:35 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit multilib nsplugins xfconf
 
 DESCRIPTION="a simple media player based on the GStreamer framework for the Xfce4 desktop"
@@ -33,10 +33,12 @@ pkg_setup() {
 	export BROWSER_PLUGIN_DIR="/usr/$(get_libdir)/${PLUGINS_DIR}" #333517
 
 	PATCHES=( "${FILESDIR}"/${P}-64bit.patch )
-	XFCONF="--disable-dependency-tracking
+	XFCONF=(
+		--disable-dependency-tracking
 		$(use_enable libnotify)
 		$(use_enable taglib)
 		$(use_enable nsplugin browser-plugin)
-		$(xfconf_use_debug)"
+		$(xfconf_use_debug)
+		)
 	DOCS="AUTHORS ChangeLog README THANKS TODO"
 }
