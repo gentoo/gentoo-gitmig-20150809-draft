@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.205 2011/01/10 21:43:12 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.206 2011/02/04 18:29:17 fuzzyray Exp $
+
+  04 Feb 2011; Paul Varner <fuzzyray@gentoo.org>
+  gentoolkit-0.3.0_rc11-r3.ebuild:
+  Completely remove revdep-rebuild for prefix users that are not running on AIX
+  (Bug 353654). Remove redundant chown and chmod of /var/cache/revdep-rebuild
+  in pkg_postinst().
 
   10 Jan 2011; Paul Varner <fuzzyray@gentoo.org>
   gentoolkit-0.2.4.6.1-r1.ebuild:
