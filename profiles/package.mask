@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12424 2011/02/04 00:01:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12425 2011/02/04 11:26:42 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -624,12 +624,6 @@ sys-fs/gnomevfs-mount
 # tracer bug 349918
 =app-text/poppler-0.16.0
 
-# Pacho Ramos <pacho@gentoo.org> (28 Dec 2010)
-# Masked for removal in 30 days, abandoned by
-# upstream and crashers like bug #337210
-# Use net-im/empathy as a replacement
-net-im/gossip
-
 # Kacper Kowalik <xarthisius@gentoo.org> (28 Dec 2010)
 # Masked for removal in 30 days, abandoned by
 # upstream, bugs #238796, #241344, #316941
@@ -1054,7 +1048,6 @@ games-strategy/xscorch
 # Please don't ask for including testing packages in other emul
 # packages, this is an exception to current policy because some people
 # from X11 team needed 3D support even with bleeding edge Xorg.
-=app-emulation/emul-linux-x86-opengl-20100915-r99
 =app-emulation/emul-linux-x86-opengl-20110129-r99
 
 # Robert Piasek <dagger@gentoo.org> (09 Apr 2010)
