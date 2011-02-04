@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12427 2011/02/04 16:04:28 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12428 2011/02/04 22:49:49 reavertm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -324,13 +324,6 @@ media-libs/gle
 # Replaced by gvfs-mount from gnome-base/gvfs.
 # Masked for removal in 30 days.
 sys-fs/gnomevfs-mount
-
-# Thomas Sachau <tommy@gentoo.org> (29 Dec 2010)
-# Masked because of ABI change, breaks
-# depending packages. Keep masked until depended packages
-# got fixed (adjusted dependency or fixing version bump).
-# tracer bug 349918
-=app-text/poppler-0.16.0
 
 # Kacper Kowalik <xarthisius@gentoo.org> (28 Dec 2010)
 # Masked for removal in 30 days, abandoned by

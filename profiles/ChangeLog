@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5013 2011/02/04 16:04:28 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5014 2011/02/04 22:49:49 reavertm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Feb 2011; Maciej Mrozowski <reavertm@gentoo.org> package.mask:
+  Unmask poppler-0.16.x
 
   04 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   Unmask KDE SC 4.6.0
