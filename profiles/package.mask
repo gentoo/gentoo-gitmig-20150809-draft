@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12423 2011/02/02 22:19:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12424 2011/02/04 00:01:08 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (04 Feb 2011)
+# New glib/gtk+ mask, for testing purpose
+# Needs a new gvfs as well
+>=dev-libs/glib-2.27
+=x11-libs/gtk+-2.14
 
 # Hans de Graaff <graaff@gentoo.org> (02 Feb 2011)
 # Masked for removal in 30 days. Superseded by

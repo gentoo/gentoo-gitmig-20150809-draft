@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5008 2011/02/02 22:19:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5009 2011/02/04 00:01:08 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Install mask entries for new glib/gtk+.
 
   02 Feb 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   broken libfm and pcmanfm are no longer on tree
