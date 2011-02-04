@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.4.ebuild,v 1.1 2011/01/04 20:35:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.4.ebuild,v 1.2 2011/02/04 18:46:35 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="Pygments"
 MY_P="${MY_PN}-${PV}"
@@ -28,6 +28,11 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES"
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-fix_tests.patch"
+}
 
 src_test() {
 	testing() {
