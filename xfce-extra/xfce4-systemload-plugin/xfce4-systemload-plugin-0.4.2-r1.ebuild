@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/xfce4-systemload-plugin-0.4.2-r1.ebuild,v 1.8 2010/08/29 18:09:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-systemload-plugin/xfce4-systemload-plugin-0.4.2-r1.ebuild,v 1.9 2011/02/04 18:01:05 ssuominen Exp $
 
+EAPI=3
 EAUTORECONF=yes
 EINTLTOOLIZE=yes
-EAPI=2
 inherit xfconf
 
 DESCRIPTION="System load monitor panel plugin"
@@ -25,15 +25,19 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}/${P}-libtool.patch"
-		"${FILESDIR}/${P}-fix-tooltip-gtk2.12.patch" )
+	PATCHES=(
+		"${FILESDIR}"/${P}-libtool.patch
+		"${FILESDIR}"/${P}-fix-tooltip-gtk2.12.patch
+		)
 	DOCS="AUTHORS ChangeLog NEWS README"
-	XFCONF="--disable-dependency-tracking
-		$(use_enable debug)"
+	XFCONF=(
+		--disable-dependency-tracking
+		$(use_enable debug)
+		)
 }
 
 src_prepare() {
 	sed -i -e "/^AC_INIT/s/systemload_version()/systemload_version/" \
-		configure.in || die "sed failed"
+		configure.in || die
 	xfconf_src_prepare
 }
