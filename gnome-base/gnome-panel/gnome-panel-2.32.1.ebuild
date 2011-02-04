@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.3 2011/01/15 19:54:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.4 2011/02/04 11:03:45 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -28,7 +28,6 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	gnome-base/librsvg
 	>=dev-libs/dbus-glib-0.80
 	>=sys-apps/dbus-1.1.2
-	dev-libs/eggdbus
 	>=x11-libs/cairo-1
 	x11-libs/libXau
 	>=x11-libs/libXrandr-1.2
