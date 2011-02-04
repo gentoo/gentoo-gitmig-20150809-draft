@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.2 2011/01/29 23:16:27 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.3 2011/02/04 03:05:01 jer Exp $
 
 EAPI="3"
 
-inherit flag-o-matic eutils
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Yet another small httpd."
 HOMEPAGE="http://www.fefe.de/fnord/"
@@ -12,7 +12,7 @@ SRC_URI="http://www.fefe.de/fnord/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ppc ~sparc ~x86"
+KEYWORDS="hppa ~ppc ~sparc ~x86"
 IUSE="auth"
 
 DEPEND=""
@@ -36,7 +36,8 @@ src_compile() {
 	use auth && \
 		append-flags -DAUTH
 
-	emake DIET="" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake DIET="" CC=$(tc-getCC) \
+		CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install () {
