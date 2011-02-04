@@ -1,10 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.57 2011/02/04 14:53:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.58 2011/02/04 17:54:54 mgorny Exp $
 
-  04 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
-  +libpciaccess-0.12.1.ebuild:
-  Version bump.
+  04 Feb 2011; Michał Górny <mgorny@gentoo.org> libpciaccess-0.12.1.ebuild:
+  Fix scanpci location.
 
 *libpciaccess-0.12.1 (04 Feb 2011)
 

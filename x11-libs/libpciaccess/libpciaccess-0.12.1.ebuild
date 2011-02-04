@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.12.1.ebuild,v 1.1 2011/02/04 14:53:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.12.1.ebuild,v 1.2 2011/02/04 17:54:54 mgorny Exp $
 
 EAPI=3
 
@@ -22,5 +22,5 @@ pkg_setup() {
 
 src_install() {
 	xorg-2_src_install
-	use minimal || { dobin src/.libs/scanpci || die ; }
+	use minimal || { dobin scanpci/scanpci || die ; }
 }
