@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.21 2011/01/27 17:32:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.22 2011/02/04 17:23:35 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -100,7 +100,7 @@ xfconf_src_prepare() {
 	base_src_prepare
 
 	if [[ "${EINTLTOOLIZE}" == "yes" ]]; then
-		intltoolize --force --copy --automake || die "intltoolize failed"
+		intltoolize --force --copy --automake || die
 	fi
 
 	if [[ "${EAUTORECONF}" == "yes" ]]; then
@@ -121,7 +121,7 @@ xfconf_src_configure() {
 	if [[ "$(declare -p XFCONF 2>/dev/null 2>&1)" != "declare -a"* ]]; then
 		XFCONF=( ${XFCONF} )
 	fi
-	
+
 	econf ${XFCONF[@]}
 }
 
@@ -131,7 +131,7 @@ xfconf_src_configure() {
 xfconf_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 	has src_configure ${XFCONF_EXPF} || xfconf_src_configure
-	emake || die "emake failed"
+	emake || die
 }
 
 # @FUNCTION: xfconf_src_install
@@ -139,10 +139,10 @@ xfconf_src_compile() {
 # Run emake install and install documentation in DOCS variable
 xfconf_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
-	emake DESTDIR="${D}" "$@" install || die "emake install failed"
+	emake DESTDIR="${D}" "$@" install || die
 
 	if [[ -n ${DOCS} ]]; then
-		dodoc ${DOCS} || die "dodoc failed"
+		dodoc ${DOCS} || die
 	fi
 
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && ED="${D}"
