@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.5 2011/02/02 19:25:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.6 2011/02/04 17:39:52 angelos Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -21,7 +21,7 @@ SRC_URI="http://libvirt.org/sources/${P}.tar.gz
 		http://dev.gentoo.org/~cardoe/${PN}/${P}-backports-${BACKPORTS}.tar.bz2}"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap +network nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
 	uml virtualbox virt-network xen"
