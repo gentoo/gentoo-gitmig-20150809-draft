@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.62 2011/01/28 21:48:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.63 2011/02/04 16:46:42 arfrever Exp $
+
+*cython-0.14.1 (04 Feb 2011)
+
+  04 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cython-0.14-r1.ebuild, -cython-0.14.1_rc1.ebuild, -cython-0.14.1_rc2.ebuild,
+  -cython-0.14.1_rc3.ebuild, +cython-0.14.1.ebuild,
+  -files/cython-0.14-__new__.patch, -files/cython-0.14-python-3.patch:
+  Version bump.
 
 *cython-0.14.1_rc3 (28 Jan 2011)
 
