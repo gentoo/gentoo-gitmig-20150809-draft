@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.4 2011/02/02 10:06:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.5 2011/02/04 23:24:28 fauli Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
 
 PROVIDE="virtual/mta"
 
