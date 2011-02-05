@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ustr-1.0.4-r1.ebuild,v 1.1 2009/08/02 04:42:37 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ustr-1.0.4-r1.ebuild,v 1.2 2011/02/05 22:24:54 arfrever Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit multilib
 
 DESCRIPTION="Low-overhead managed string library for C"
 HOMEPAGE="http://www.and.org/ustr"
@@ -13,14 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+DEPEND=""
+RDEPEND=""
+
 src_compile() {
-	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" HIDE= all-shared || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" HIDE= all-shared || die
 }
 
 src_install() {
 	emake install DESTDIR="${D}" HIDE= \
+		libdir="/usr/$(get_libdir)" \
 		mandir="/usr/share/man" \
 		SHRDIR="/usr/share/doc/${PF}" \
 		DOCSHRDIR="/usr/share/doc/${PF}" || die
-	dodoc ChangeLog README README-DEVELOPERS AUTHORS NEWS TODO
+	dodoc ChangeLog README README-DEVELOPERS AUTHORS NEWS TODO || die
 }
