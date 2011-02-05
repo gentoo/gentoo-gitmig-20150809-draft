@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.19 2010/11/14 18:10:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.20 2011/02/05 15:37:16 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -234,6 +234,10 @@ src_unpack() {
 		# export typechecker internals even if ghci is disabled
 		# http://hackage.haskell.org/trac/ghc/ticket/3558
 		epatch "${FILESDIR}/ghc-6.12.3-ghciless-haddock-3558.patch"
+
+		# This patch unbreaks ghci on GRSEC kernels hardened with
+		# TPE (Trusted Path Execution) protection.
+		epatch "${FILESDIR}/ghc-6.12.3-libffi-incorrect-detection-of-selinux.patch"
 
 		# as we have changed the build system
 		eautoreconf
