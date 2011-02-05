@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/privoxy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.59 2010/11/23 13:13:45 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.60 2011/02/05 11:31:09 fauli Exp $
+
+  05 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  privoxy-3.0.17.ebuild:
+  stable x86, bug 353284
 
 *privoxy-3.0.17 (23 Nov 2010)
 
