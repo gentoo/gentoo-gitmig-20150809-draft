@@ -1,1 +1,3 @@
-SEARCH_DIRS_MASK="/usr/lib/openoffice /usr/lib32/openoffice /usr/lib64/openoffice"
+SEARCH_DIRS_MASK="@GENTOO_PORTAGE_EPREFIX@/usr/lib/openoffice
+@GENTOO_PORTAGE_EPREFIX@/usr/lib32/openoffice
+@GENTOO_PORTAGE_EPREFIX@/usr/lib64/openoffice"

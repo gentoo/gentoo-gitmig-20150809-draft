@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1.ebuild,v 1.3 2010/11/15 11:10:48 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1.ebuild,v 1.4 2011/02/05 11:24:09 suka Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit eutils fdo-mime rpm multilib
+inherit eutils fdo-mime pax-utils prefix rpm multilib
 
 IUSE="gnome java kde"
 
@@ -48,11 +48,11 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="!app-office/openoffice
 	x11-libs/libXaw
-	sys-libs/glibc
+	!prefix? ( sys-libs/glibc )
 	>=dev-lang/perl-5.0
 	app-arch/zip
 	app-arch/unzip
@@ -78,6 +78,8 @@ QA_TEXTRELS="usr/$(get_libdir)/openoffice/basis3.2/program/libvclplug_genli.so \
 src_unpack() {
 
 	unpack ${A}
+	cp "${FILESDIR}"/{50-openoffice-bin,wrapper.in} "${T}"
+	eprefixify "${T}"/{50-openoffice-bin,wrapper.in}
 
 	cd "${S}"
 
@@ -132,11 +134,11 @@ src_install () {
 
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
-	mv "${WORKDIR}"/opt/openoffice.org/* "${D}${INSTDIR}" || die
-	mv "${WORKDIR}"/opt/openoffice.org3/* "${D}${INSTDIR}" || die
+	mv "${WORKDIR}"/opt/openoffice.org/* "${ED}${INSTDIR}" || die
+	mv "${WORKDIR}"/opt/openoffice.org3/* "${ED}${INSTDIR}" || die
 
 	#Menu entries, icons and mime-types
-	cd "${D}${INSTDIR}/share/xdg/"
+	cd "${ED}${INSTDIR}/share/xdg/"
 
 	for desk in base calc draw impress math printeradmin qstart writer; do
 		mv ${desk}.desktop openoffice.org-${desk}.desktop
@@ -150,11 +152,11 @@ src_install () {
 	done
 
 	# Make sure the permissions are right
-	fowners -R root:0 /
+	use prefix || fowners -R root:0 /
 
 	# Install wrapper script
-	newbin "${FILESDIR}/wrapper.in" ooffice
-	sed -i -e s/LIBDIR/$(get_libdir)/g "${D}/usr/bin/ooffice" || die
+	newbin "${T}/wrapper.in" ooffice
+	sed -i -e s/LIBDIR/$(get_libdir)/g "${ED}/usr/bin/ooffice" || die
 
 	# Component symlinks
 	for app in base calc draw impress math writer; do
@@ -164,17 +166,17 @@ src_install () {
 	dosym ${INSTDIR}/program/spadmin /usr/bin/ooffice-printeradmin
 	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
-	rm -f "${D}${INSTDIR}/basis-link" || die
+	rm -f "${ED}${INSTDIR}/basis-link" || die
 	dosym ${INSTDIR}/basis3.2 ${INSTDIR}/basis-link
 
 	# Change user install dir
-	sed -i -e "s/.openoffice.org\/3/.ooo3/g" "${D}${INSTDIR}/program/bootstraprc" || die
+	sed -i -e "s/.openoffice.org\/3/.ooo3/g" "${ED}${INSTDIR}/program/bootstraprc" || die
 
 	# Non-java weirdness see bug #99366
-	use !java && rm -f "${D}${INSTDIR}/ure/bin/javaldx"
+	use !java && rm -f "${ED}${INSTDIR}/ure/bin/javaldx"
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
-	insinto /etc/revdep-rebuild && doins "${FILESDIR}/50-openoffice-bin"
+	insinto /etc/revdep-rebuild && doins "${T}/50-openoffice-bin"
 
 }
 
@@ -183,15 +185,15 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 
-	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/program/soffice.bin
+	pax-mark -m /usr/$(get_libdir)/openoffice/program/soffice.bin
 
 	elog " openoffice-bin does not provide integration with system spell "
 	elog " dictionaries. Please install them manually through the Extensions "
 	elog " Manager (Tools > Extensions Manager) or use the source based "
 	elog " package instead. "
 	elog
-	elog " Dictionaries for english, french and spanish are provided in "
-	elog " /usr/$(get_libdir)/openoffice/share/extension/install "
+	elog " Dictionaries for English, French and Spanish are provided in "
+	elog " ${EPREFIX}/usr/$(get_libdir)/openoffice/share/extension/install "
 	elog " Other dictionaries can be found at Suns extension site. "
 	elog
 
