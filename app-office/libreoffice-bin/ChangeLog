@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.5 2011/01/27 14:59:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.6 2011/02/05 09:11:16 suka Exp $
+
+  05 Feb 2011; Andreas Proschofsky <suka@gentoo.org>
+  libreoffice-bin-3.3.0.ebuild:
+  Fix pax check, bug #353587
 
   27 Jan 2011; Andreas Proschofsky <suka@gentoo.org>
   libreoffice-bin-3.3.0.ebuild, metadata.xml:
