@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.13 2011/01/31 17:05:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.14 2011/02/05 16:29:43 phajdan.jr Exp $
+
+  05 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> orc-0.4.11.ebuild:
+  x86 stable wrt bug #353321
 
   31 Jan 2011; Markos Chandras <hwoarang@gentoo.org> orc-0.4.11.ebuild:
   Stable on amd64 wrt bug #353321
