@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.8 2011/02/02 09:11:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.9 2011/02/05 08:58:04 suka Exp $
+
+  05 Feb 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.3.0.ebuild,
+  files/gentoo-3.3.0.diff:
+  Cleanup work: Prefix fixes, remove outated deps and config-flags, fix pax
+  stuff
 
   02 Feb 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.3.0.ebuild:
   Fix desktop files, thanks to Sanders Sweers <Sander.Sweers@gmail.com>, see

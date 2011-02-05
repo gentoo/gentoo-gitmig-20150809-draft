@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.5 2011/02/02 09:11:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.6 2011/02/05 08:58:04 suka Exp $
 
 EAPI="3"
 
@@ -12,9 +12,9 @@ CMAKE_REQUIRED="never"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 
-inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base multilib python toolchain-funcs
+inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base multilib pax-utils python toolchain-funcs
 
-IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl pam templates"
+IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl templates"
 
 MY_PV=3.3.0.4
 MY_P="${PN}-build-${MY_PV}"
@@ -140,8 +140,7 @@ COMMON_DEPEND="!app-office/libreoffice-bin
 			>=media-libs/gst-plugins-base-0.10 )
 	java? ( >=dev-java/bsh-2.0_beta4
 		dev-java/lucene:2.3
-		dev-java/lucene-analyzers:2.3
-		dev-java/rhino:1.5 )
+		dev-java/lucene-analyzers:2.3 )
 	nsplugin? ( net-libs/xulrunner:1.9
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
@@ -188,8 +187,6 @@ DEPEND="${COMMON_DEPEND}
 	sys-libs/zlib
 	sys-apps/coreutils
 	dev-util/cppunit
-	pam? ( sys-libs/pam
-		sys-apps/shadow[pam] )
 	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
 		>=dev-java/ant-core-1.7 )
 	ldap? ( net-nds/openldap )"
@@ -211,7 +208,7 @@ pkg_setup() {
 
 	# Check if we have enough RAM and free diskspace to build this beast
 	CHECKREQS_MEMORY="512"
-	use debug && CHECKREQS_DISK_BUILD="12288" || CHECKREQS_DISK_BUILD="6144"
+	use debug && CHECKREQS_DISK_BUILD="12288" || CHECKREQS_DISK_BUILD="7144"
 	check_reqs
 
 	strip-linguas ${LANGS}
@@ -287,11 +284,9 @@ src_prepare() {
 		echo "--with-jvm-path=/usr/$(get_libdir)/" >> ${CONFFILE}
 		echo "--with-system-beanshell" >> ${CONFFILE}
 		echo "--with-system-lucene" >> ${CONFFILE}
-		echo "--with-system-rhino" >> ${CONFFILE}
 		echo "--with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)" >> ${CONFFILE}
 		echo "--with-lucene-core-jar=$(java-pkg_getjar lucene-2.3 lucene-core.jar)" >> ${CONFFILE}
 		echo "--with-lucene-analyzers-jar=$(java-pkg_getjar lucene-analyzers-2.3 lucene-analyzers.jar)" >> ${CONFFILE}
-		echo "--with-rhino-jar=$(java-pkg_getjar rhino-1.5 js.jar)" >> ${CONFFILE}
 	fi
 
 	echo $(use_enable nsplugin mozilla) >> ${CONFFILE}
@@ -319,14 +314,12 @@ src_prepare() {
 	echo "--enable-minimizer" >> ${CONFFILE}
 	echo "--enable-presenter-console" >> ${CONFFILE}
 	echo "--enable-presenter-extra-ui" >> ${CONFFILE}
-	echo "--enable-presenter-screen" >> ${CONFFILE}
 
 	# Misc stuff
 	echo "--disable-graphite" >> ${CONFFILE}
 	echo "--with-system-cppunit" >> ${CONFFILE}
 	echo "--with-system-openssl" >> ${CONFFILE}
 	echo "--with-system-redland" >> ${CONFFILE}
-	echo "--without-writer2latex" >> ${CONFFILE}
 	echo "--without-junit" >> ${CONFFILE}
 
 	#fix desktop files bug #352955
@@ -373,13 +366,14 @@ src_configure() {
 
 	cd "${S}"
 	./configure --with-distro="Gentoo" \
+		--prefix="${EPREFIX}"/usr \
+		--sysconfdir="${EPREFIX}"/etc \
 		--with-arch="${ARCH}" \
 		--with-srcdir="${DISTDIR}" \
 		--with-lang="${LINGUAS_OOO}" \
 		--with-num-cpus="${JOBS}" \
 		--without-binsuffix \
 		--with-installed-ooo-dirname="libreoffice" \
-		--with-tag="${MST}" \
 		--with-drink="True Blood" \
 		--without-git \
 		--with-split \
@@ -389,7 +383,6 @@ src_configure() {
 		$(use_enable kde kde4) \
 		$(use_enable !debug strip) \
 		$(use_enable odk) \
-		$(use_enable pam) \
 		$(use_with java) \
 		$(use_with templates sun-templates) \
 		--disable-access \
@@ -397,8 +390,8 @@ src_configure() {
 		--enable-extensions \
 		--without-system-libwpd \
 		--without-system-libwpg \
-		--mandir=/usr/share/man \
-		--libdir=/usr/$(get_libdir) \
+		--mandir="${EPREFIX}"/usr/share/man \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		|| die "Configuration failed!"
 
 }
@@ -438,10 +431,10 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	BASHCOMPLETION_NAME=libreoffice && bash-completion_pkg_postinst
 
-	( [[ -x /sbin/chpax ]] || [[ -x /sbin/paxctl ]] ) && [[ -e /usr/$(get_libdir)/${PN}/program/soffice.bin ]] && scanelf -Xzm /usr/$(get_libdir)/${PN}/program/soffice.bin
+	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 
 	# Add available & useful jars to LibreOffice classpath
-	use java && /usr/$(get_libdir)/${PN}/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
+	use java && "${EPREFIX}"/usr/$(get_libdir)/${PN}/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
 
 	kde4-base_pkg_postinst
 
