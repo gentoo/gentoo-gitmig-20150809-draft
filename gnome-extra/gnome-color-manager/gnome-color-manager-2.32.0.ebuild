@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-2.32.0.ebuild,v 1.2 2011/01/03 21:55:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-2.32.0.ebuild,v 1.3 2011/02/05 13:31:15 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Color profile manager for the GNOME desktop"
 HOMEPAGE="http://projects.gnome.org/gnome-color-manager/"
@@ -42,5 +42,12 @@ DEPEND="${RDEPEND}
 # FIXME: run test-suite with files on live file-system
 RESTRICT="test"
 
-# Always enable tests since they are check_PROGRAMS anyway
-G2CONF="${G2CONF} --enable-tests --disable-packagekit"
+pkg_setup() {
+	# Always enable tests since they are check_PROGRAMS anyway
+	G2CONF="${G2CONF} --enable-tests --disable-packagekit"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	gnome2_src_prepare
+}
