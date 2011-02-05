@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.32.1.ebuild,v 1.1 2010/11/29 18:40:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.32.1.ebuild,v 1.2 2011/02/05 13:49:01 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Tool to display dialogs from the commandline and shell scripts"
 HOMEPAGE="http://live.gnome.org/Zenity"
@@ -35,6 +35,11 @@ pkg_setup() {
 		--with-gtk=2.0
 		$(use_enable libnotify)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	gnome2_src_prepare
 }
 
 src_install() {
