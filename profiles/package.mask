@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12428 2011/02/04 22:49:49 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12429 2011/02/05 09:49:32 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,11 +314,6 @@ media-libs/gle
 # For other complaints go to bug 350785
 <dev-lang/perl-5.12.2
 <sys-devel/libperl-5.10.1
-
-# Michał Górny <mgorny@gentoo.org> (05 Jan 2011)
-# Moved to my dev overlay (found in layman as 'mgorny').
-# Masked for removal in 30 days.
-=net-im/ekg2-9999
 
 # Samuli Suominen <ssuominen@gentoo.org> (04 Jan 2011)
 # Replaced by gvfs-mount from gnome-base/gvfs.
