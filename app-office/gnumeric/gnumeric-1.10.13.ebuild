@@ -1,21 +1,22 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.11.ebuild,v 1.1 2010/10/04 21:03:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.1 2011/02/05 15:31:47 pacho Exp $
 
 EAPI="3"
+GCONF_DEBUG="no"
 PYTHON_DEPEND="python? 2:2.4"
 
 inherit gnome2 flag-o-matic python
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
-HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
+HOMEPAGE="http://projects.gnome.org/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="gnome perl python"
-# libgda
+# Missing gnome-extra/libgnomedb required version in tree
 
 # lots of missing files, wait for next release
 # also fails tests due to 80-bit long story
@@ -31,7 +32,6 @@ RDEPEND="sys-libs/zlib
 
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/cairo[svg]
-	>=gnome-base/libglade-2.3.6
 
 	gnome? (
 		>=gnome-base/gconf-2
@@ -50,8 +50,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	app-text/scrollkeeper"
 
-DOCS="AUTHORS BEVERAGES BUGS ChangeLog HACKING MAINTAINERS NEWS README"
-
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--enable-ssindex
@@ -61,6 +59,8 @@ pkg_setup() {
 		$(use_with perl)
 		$(use_with python)
 		$(use_with gnome)"
+	DOCS="AUTHORS BEVERAGES BUGS ChangeLog HACKING MAINTAINERS NEWS README"
+	use python && python_set_active_version 2
 }
 
 src_install() {
