@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/pam_ssh_agent_auth
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent_auth/ChangeLog,v 1.1 2011/02/05 22:35:49 flameeyes Exp $
+
+*pam_ssh_agent_auth-0.9.2 (05 Feb 2011)
+
+  05 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pam_ssh_agent_auth-0.9.2.ebuild, +metadata.xml:
+  Initial import of pam_ssh_agent_auth; ebuild based on the work by Andrian
+  Nord.
+
