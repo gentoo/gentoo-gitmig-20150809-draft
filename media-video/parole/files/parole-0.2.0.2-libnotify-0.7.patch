@@ -1,0 +1,25 @@
+--- plugins/tray/tray-provider.c
++++ plugins/tray/tray-provider.c
+@@ -29,6 +29,9 @@
+ 
+ #ifdef HAVE_LIBNOTIFY
+ #include <libnotify/notify.h>
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
+ #endif
+ 
+ #include <libxfcegui4/libxfcegui4.h>
+@@ -260,8 +263,11 @@
+     }
+     
+     message = g_strdup_printf ("%s %s %s %s", _("<b>Playing:</b>"), title, _("<b>Duration:</b>"), timestring);
+-    
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++    tray->n = notify_notification_new (title, message, NULL);
++#else
+     tray->n = notify_notification_new (title, message, NULL, NULL);
++#endif
+     g_free (title);
+     g_free (message);
+     
