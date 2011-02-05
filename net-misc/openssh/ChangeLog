@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.402 2011/01/25 06:40:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.403 2011/02/05 19:08:36 vapier Exp $
+
+*openssh-5.8_p1 (05 Feb 2011)
+
+  05 Feb 2011; Mike Frysinger <vapier@gentoo.org> +openssh-5.8_p1.ebuild,
+  +files/openssh-5.8_p1-x509-hpn-glue.patch:
+  Version bump #353673. Default HPN to on when available #347193 by Jeremy
+  Olexa.
 
 *openssh-5.7_p1-r1 (25 Jan 2011)
 
