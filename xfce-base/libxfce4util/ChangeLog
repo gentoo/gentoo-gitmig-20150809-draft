@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.157 2011/01/25 20:19:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.158 2011/02/05 18:11:18 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> libxfce4util-4.8.1.ebuild:
+  arm stable, bug #349053
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> libxfce4util-4.8.1.ebuild:
   Stable for HPPA (bug #349053).

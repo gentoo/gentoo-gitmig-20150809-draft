@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.181 2011/01/30 16:53:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.182 2011/02/05 18:19:52 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> xfce4-panel-4.8.0.ebuild:
+  arm stable, bug #349053
 
 *xfce4-panel-4.8.1 (30 Jan 2011)
 

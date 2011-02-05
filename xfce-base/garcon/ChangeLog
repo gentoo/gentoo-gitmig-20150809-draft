@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.18 2011/01/25 20:25:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.19 2011/02/05 18:18:22 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> garcon-0.1.5.ebuild:
+  arm stable, bug #349053
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> garcon-0.1.5.ebuild:
   Stable for HPPA (bug #349053).
