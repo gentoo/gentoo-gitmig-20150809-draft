@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-1.6.ebuild,v 1.1 2011/02/05 05:38:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-1.6.ebuild,v 1.2 2011/02/05 05:43:54 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6 3"
@@ -9,7 +9,7 @@ PYTHON_MODNAME="PySFML"
 inherit eutils multilib toolchain-funcs distutils
 
 MY_P="SFML-${PV}"
-DESCRIPTION="Simple and fast multimedia library"
+DESCRIPTION="Simple and Fast Multimedia Library (SFML)"
 HOMEPAGE="http://sfml.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sfml/${MY_P}-sdk-linux-32.tar.gz
 	csfml? ( mirror://sourceforge/sfml/${MY_P}-c-sdk-linux-32.tar.gz )
