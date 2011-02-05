@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.658 2011/02/04 23:38:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.659 2011/02/05 23:16:41 klausman Exp $
+
+  05 Feb 2011; Tobias Klausmann <klausman@gentoo.org> vlc-1.1.7.ebuild:
+  Stable on alpha, bug #353326
 
   04 Feb 2011; Christian Faulhammer <fauli@gentoo.org> vlc-1.1.7.ebuild:
   stable x86, security bug 353326
