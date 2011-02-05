@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd-ui
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.3 2010/12/12 02:27:39 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.4 2011/02/05 16:34:01 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> dhcpcd-ui-0.5.1.ebuild,
+  +files/dhcpcd-ui-0.5.1-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
 *dhcpcd-ui-0.5.1 (12 Dec 2010)
 
