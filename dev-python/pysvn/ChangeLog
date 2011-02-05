@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.17 2011/02/05 11:26:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.18 2011/02/05 22:49:58 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> pysvn-1.7.4.ebuild:
+  add ~arm, bug #350648
 
   05 Feb 2011; Christian Faulhammer <fauli@gentoo.org> pysvn-1.7.4.ebuild:
   stable amd64, bug 353642
