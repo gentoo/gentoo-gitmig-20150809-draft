@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5015 2011/02/05 09:49:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5016 2011/02/05 14:01:36 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Re-add libnotify-0.7 mask according to general consensus on #gentoo-dev.
+  We need to fix the broken packages first.
 
   05 Feb 2011; Michał Górny <mgorny@gentoo.org> package.mask:
   Remove mask for ekg2-9999 (the ebuild was removed).
