@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.200 2011/02/05 12:07:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.201 2011/02/05 19:36:17 blueness Exp $
+
+  05 Feb 2011; Anthony G. Basile <blueness@gentoo.org> package.mask:
+  Masked new selinux policies.
 
   05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="test" for x11-libs/libnotify because of x11-libs/gtk+:3
