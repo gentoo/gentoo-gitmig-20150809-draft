@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twittare/twittare-0.7.42.ebuild,v 1.4 2010/06/29 08:42:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twittare/twittare-0.7.42.ebuild,v 1.5 2011/02/05 13:20:07 ssuominen Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit eutils qt4
 
 DESCRIPTION="Twitter client for Linux using Qt4"
 HOMEPAGE="http://www.twittare.com"
@@ -25,6 +25,8 @@ PATCHES=(
 )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	# fix LDFLAGS issue
 	sed -i "s/-fpic/${LDFLAGS}\ -fpic/" "${S}"/libtwnotification/makefile || die "sed failed"
 	sed -i "s/-shared/${LDFLAGS}\ -shared/" "${S}"/libtwnotification/makefile || die "sed failed"

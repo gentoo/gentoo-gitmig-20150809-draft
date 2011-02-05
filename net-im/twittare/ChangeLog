@@ -1,6 +1,10 @@
 # ChangeLog for net-im/twittare
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twittare/ChangeLog,v 1.4 2010/06/29 08:42:20 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/twittare/ChangeLog,v 1.5 2011/02/05 13:20:07 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> twittare-0.7.42.ebuild,
+  +files/twittare-0.7.42-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   29 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   twittare-0.7.42.ebuild:
