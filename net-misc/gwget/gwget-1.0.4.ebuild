@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.4 2010/10/14 17:02:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.5 2011/02/05 16:41:11 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GTK2 WGet Frontend"
 HOMEPAGE="http://gnome.org/projects/gwget/"
@@ -38,6 +38,11 @@ pkg_setup() {
 		$(use_enable libnotify)
 		--disable-static
 		--disable-schemas-install"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	gnome2_src_prepare
 }
 
 src_install() {
