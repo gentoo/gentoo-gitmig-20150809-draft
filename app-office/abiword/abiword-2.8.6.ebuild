@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.13 2011/01/26 21:21:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6.ebuild,v 1.14 2011/02/05 20:35:04 abcd Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="collab cups gnome grammar latex libgda math ots openxml plugins readline spell wordperfect wmf thesaurus" # svg
 
 # libgsf raised to make sure it provides gio backend (ebuild)
@@ -135,9 +135,9 @@ src_install() {
 	gnome2_src_install
 
 	sed "s:Exec=abiword:Exec=abiword-${MY_MAJORV}:" \
-		-i "${D}"/usr/share/applications/abiword.desktop || die "sed 3 failed"
+		-i "${ED}"/usr/share/applications/abiword.desktop || die "sed 3 failed"
 
-	mv "${D}/usr/bin/abiword" "${D}/usr/bin/AbiWord-${MY_MAJORV}"
+	mv "${ED}/usr/bin/abiword" "${ED}/usr/bin/AbiWord-${MY_MAJORV}"
 	dosym AbiWord-${MY_MAJORV} /usr/bin/abiword-${MY_MAJORV}
 
 	dodoc AUTHORS user/wp/readme.txt || die "dodoc failed"
