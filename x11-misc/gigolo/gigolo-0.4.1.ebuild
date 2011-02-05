@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.1 2010/08/02 18:41:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.2 2011/02/05 12:42:22 ssuominen Exp $
 
-EAPI="2"
-EAUTORECONF="yes"
-EINTLTOOLIZE="yes"
+EAPI=3
+EAUTORECONF=yes
+EINTLTOOLIZE=yes
 inherit xfconf
 
 DESCRIPTION="a frontend to easily manage connections to remote filesystems using
@@ -27,5 +27,5 @@ pkg_setup() {
 
 src_install() {
 	xfconf_src_install
-	rm -rf "${D}"/usr/share/doc/${PN} || die "rm failed"
+	rm -rf "${D}"/usr/share/doc/${PN}
 }
