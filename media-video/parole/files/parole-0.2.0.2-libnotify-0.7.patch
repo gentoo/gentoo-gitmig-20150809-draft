@@ -1,3 +1,5 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=7239
+
 --- plugins/tray/tray-provider.c
 +++ plugins/tray/tray-provider.c
 @@ -29,6 +29,9 @@
