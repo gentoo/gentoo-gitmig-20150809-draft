@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/policycoreutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.77 2010/04/04 21:56:32 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.78 2011/02/05 11:23:24 blueness Exp $
+
+*policycoreutils-2.0.69-r2 (05 Feb 2011)
+
+  05 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  +policycoreutils-2.0.69-r2.ebuild,
+  +files/policycoreutils-2.0.69-setfiles.diff:
+  Fixed bug #300613
 
   04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   policycoreutils-2.0.55.ebuild, policycoreutils-2.0.69.ebuild,
