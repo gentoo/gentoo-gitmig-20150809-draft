@@ -1,15 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1-r1.ebuild,v 1.4 2010/11/17 14:40:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1-r1.ebuild,v 1.5 2011/02/05 10:40:31 suka Exp $
 
 WANT_AUTOMAKE="1.9"
-EAPI="2"
+EAPI="3"
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 
-inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base multilib python toolchain-funcs
+inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base multilib pax-utils python toolchain-funcs
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl pam templates"
 
@@ -63,7 +63,7 @@ HOMEPAGE="http://go-oo.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="!app-office/openoffice-bin
 	x11-libs/libXaw
@@ -227,6 +227,9 @@ src_prepare() {
 	cp -f "${FILESDIR}/neon-remove-SSPI-support.diff" "${S}/patches/hotfixes" || die
 	cp -f "${FILESDIR}/libX11-fix.diff" "${S}/patches/hotfixes" || die
 
+	# Prefix patch
+	epatch "${FILESDIR}/ooo-build-3.0.1.2-prefix.patch"
+
 	#Use flag checks
 	if use java ; then
 		echo "--with-ant-home=${ANT_HOME}" >> ${CONFFILE}
@@ -319,6 +322,8 @@ src_configure() {
 
 	cd "${S}"
 	./configure --with-distro="Gentoo" \
+		--prefix="${EPREFIX}"/usr \
+		--sysconfdir="${EPREFIX}"/etc \
 		--with-arch="${ARCH}" \
 		--with-srcdir="${DISTDIR}" \
 		--with-lang="${LINGUAS_OOO}" \
@@ -343,8 +348,8 @@ src_configure() {
 		--enable-extensions \
 		--with-system-libwpd \
 		--with-system-libwpg \
-		--mandir=/usr/share/man \
-		--libdir=/usr/$(get_libdir) \
+		--mandir="${EPREFIX}"/usr/share/man \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		|| die "Configuration failed!"
 
 }
@@ -363,18 +368,18 @@ src_install() {
 	make DESTDIR="${D}" install || die "Installation failed!"
 
 	# Fix the permissions for security reasons
-	chown -RP root:0 "${D}"
+	chown -RP root:0 "${ED}"
 
 	# record java libraries
 	if use java; then
-			java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
-			java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/ure/share/java/*.jar
+			java-pkg_regjar "${ED}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
+			java-pkg_regjar "${ED}"/usr/$(get_libdir)/openoffice/ure/share/java/*.jar
 	fi
 
 	# Upstream places the bash-completion module in /etc. Gentoo places them in
 	# /usr/share/bash-completion. bug 226061
-	dobashcompletion "${D}"/etc/bash_completion.d/ooffice.sh ooffice
-	rm -rf "${D}"/etc/bash_completion.d/ || die "rm failed"
+	dobashcompletion "${ED}"/etc/bash_completion.d/ooffice.sh ooffice
+	rm -rf "${ED}"/etc/bash_completion.d/ || die "rm failed"
 
 }
 
@@ -384,10 +389,10 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	BASHCOMPLETION_NAME=ooffice && bash-completion_pkg_postinst
 
-	( [[ -x /sbin/chpax ]] || [[ -x /sbin/paxctl ]] ) && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && scanelf -Xzm /usr/$(get_libdir)/openoffice/program/soffice.bin
+	pax-mark -m /usr/$(get_libdir)/openoffice/program/soffice.bin
 
 	# Add available & useful jars to openoffice classpath
-	use java && /usr/$(get_libdir)/openoffice/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
+	use java && "${EPREFIX}"/usr/$(get_libdir)/openoffice/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
 
 	elog " Some aditional functionality can be installed via Extension Manager: "
 	elog " *) PDF Import "

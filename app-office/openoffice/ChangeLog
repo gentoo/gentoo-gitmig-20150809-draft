@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.544 2010/11/17 14:40:23 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.545 2011/02/05 10:40:31 suka Exp $
+
+  05 Feb 2011; Andreas Proschofsky <suka@gentoo.org>
+  +files/ooo-build-3.0.1.2-prefix.patch, openoffice-3.2.1-r1.ebuild:
+  EAPI3 and prefix fixes, bug #353035, also clean up pax-stuff, bug #353587
 
   17 Nov 2010; Markus Meier <maekke@gentoo.org> openoffice-3.2.1-r1.ebuild:
   x86 stable, bug #345309
