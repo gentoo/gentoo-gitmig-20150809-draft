@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-ucspi-tcp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.26 2009/12/16 02:54:09 pebenito Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ucspi-tcp/ChangeLog,v 1.27 2011/02/05 12:07:10 blueness Exp $
+
+*selinux-ucspi-tcp-2.20101213 (05 Feb 2011)
+
+  05 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  +selinux-ucspi-tcp-2.20101213.ebuild:
+  New upstream policy.
 
 *selinux-ucspi-tcp-2.20091215 (16 Dec 2009)
 
