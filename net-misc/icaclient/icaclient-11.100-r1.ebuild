@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.100-r1.ebuild,v 1.4 2011/02/02 20:34:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.100-r1.ebuild,v 1.5 2011/02/05 20:08:33 ulm Exp $
 
 EAPI=1
 
@@ -47,8 +47,8 @@ RDEPEND="x11-terms/xterm
 	)
 	amd64? (
 		|| (
-		   ( >=app-emulation/emul-linux-x86-xlibs-20110129 >=app-emulation/emul-linux-x86-motif-20110129  )
-		   <=app-emulation/emul-linux-x86-xlibs-20110129
+			( >=app-emulation/emul-linux-x86-xlibs-20110129 >=app-emulation/emul-linux-x86-motif-20110129 )
+			<app-emulation/emul-linux-x86-xlibs-20110129
 		)
 		nsplugin? (
 			www-plugins/nspluginwrapper
