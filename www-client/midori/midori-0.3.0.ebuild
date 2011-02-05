@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.0.ebuild,v 1.2 2011/01/31 21:39:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.0.ebuild,v 1.3 2011/02/05 12:46:32 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils multilib python xfconf
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
