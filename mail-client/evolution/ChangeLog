@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.322 2011/02/05 14:24:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.323 2011/02/05 15:17:00 pacho Exp $
+
+  05 Feb 2011; Pacho Ramos <pacho@gentoo.org> -evolution-2.32.1.ebuild:
+  Remove old and broken version.
 
   05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
   evolution-2.32.1-r1.ebuild, +files/evolution-2.32.1-libnotify-0.7.patch:
