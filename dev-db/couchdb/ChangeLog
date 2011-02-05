@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.44 2011/02/01 18:27:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.45 2011/02/05 00:16:00 fauli Exp $
+
+  05 Feb 2011; Christian Faulhammer <fauli@gentoo.org> couchdb-1.0.2.ebuild:
+  stable x86, security bug 353243
 
   01 Feb 2011; Markos Chandras <hwoarang@gentoo.org> couchdb-1.0.2.ebuild:
   Revert my commit
