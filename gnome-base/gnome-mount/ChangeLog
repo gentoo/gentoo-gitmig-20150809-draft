@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.76 2011/01/26 20:05:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.77 2011/02/05 13:13:13 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-mount-0.8-r2.ebuild:
+  Disable x11-libs/libnotify support because it's unported to >= 0.7 API and
+  this package is obsolete.
 
   26 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
   gnome-mount-0.8-r2.ebuild:

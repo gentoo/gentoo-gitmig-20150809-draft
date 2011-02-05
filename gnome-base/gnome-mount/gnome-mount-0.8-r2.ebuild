@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r2.ebuild,v 1.3 2011/01/26 20:07:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r2.ebuild,v 1.4 2011/02/05 13:13:13 ssuominen Exp $
 
 # This package is used by FreeBSD long as gnome-base/gvfs has USE hal. Linux has
 # gnome-base/gvfs with USE gdu and udev.
@@ -15,14 +15,13 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86-fbsd"
-IUSE="libnotify nautilus kernel_FreeBSD"
+IUSE="nautilus kernel_FreeBSD"
 
 RDEPEND=">=dev-libs/glib-2.15:2
 	>=x11-libs/gtk+-2.8:2
 	>=sys-apps/hal-0.5.8.1
 	|| ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 )
 	>=gnome-base/gconf-2
-	libnotify? ( >=x11-libs/libnotify-0.3 )
 	nautilus? (
 		>=gnome-base/libglade-2
 		>=gnome-base/nautilus-2.21.2 )
@@ -36,7 +35,7 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-static
-		$(use_enable libnotify)
+		--disable-libnotify
 		$(use_enable nautilus nautilus-extension)"
 }
 
