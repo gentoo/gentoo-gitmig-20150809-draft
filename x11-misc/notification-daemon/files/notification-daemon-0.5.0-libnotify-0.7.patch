@@ -1,6 +1,5 @@
-diff -ur notification-daemon-0.5.0.orig/src/capplet/notification-properties.c notification-daemon-0.5.0/src/capplet/notification-properties.c
---- notification-daemon-0.5.0.orig/src/capplet/notification-properties.c	2010-05-28 17:41:17.000000000 +0300
-+++ notification-daemon-0.5.0/src/capplet/notification-properties.c	2011-02-05 12:47:22.000000000 +0200
+--- src/capplet/notification-properties.c
++++ src/capplet/notification-properties.c
 @@ -27,6 +27,10 @@
  #include <string.h>
  #include <libnotify/notify.h>
