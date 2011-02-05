@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.12 2011/01/27 12:29:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.13 2011/02/05 22:56:35 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> buildbot-slave-0.8.3.ebuild:
+  arm stable, bug #352741
 
   27 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   buildbot-slave-0.8.3.ebuild:
