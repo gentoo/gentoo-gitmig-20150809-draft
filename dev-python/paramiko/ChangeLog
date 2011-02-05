@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.54 2010/05/18 11:13:48 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.55 2011/02/05 22:42:44 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> paramiko-1.7.6.ebuild:
+  arm stable, bug #346985
 
   18 May 2010; Fabian Groffen <grobian@gentoo.org> paramiko-1.7.6.ebuild:
   Marked ~ppc-macos

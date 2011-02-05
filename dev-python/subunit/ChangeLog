@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.7 2011/01/22 16:22:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.8 2011/02/05 22:45:58 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> subunit-0.0.6.ebuild:
+  arm stable, bug #346985
 
   22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> subunit-0.0.6.ebuild:
   x86 stable wrt bug #346985

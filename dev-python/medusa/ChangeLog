@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/medusa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.30 2010/07/06 20:47:30 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.31 2011/02/05 22:41:18 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> medusa-0.5.4.ebuild:
+  arm stable, bug #346985
 
   06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   medusa-0.5.4.ebuild:
