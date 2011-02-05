@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.310 2011/01/07 23:37:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.311 2011/02/05 13:38:45 idl0r Exp $
+
+*bind-9.6.3 (05 Feb 2011)
+
+  05 Feb 2011; Christian Ruppert <idl0r@gentoo.org> +bind-9.6.3.ebuild:
+  Version bump to 9.6.3.
 
 *bind-9.7.2_p3-r3 (07 Jan 2011)
 
