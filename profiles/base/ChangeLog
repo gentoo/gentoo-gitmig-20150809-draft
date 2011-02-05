@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.199 2011/01/30 08:38:20 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.200 2011/02/05 12:07:36 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="test" for x11-libs/libnotify because of x11-libs/gtk+:3
+  requirement.
 
   30 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org> package.use.mask:
   Mask orc USE flag on gst-plugins-ffmpeg (unmasked only on supported arches).
