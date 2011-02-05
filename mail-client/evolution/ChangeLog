@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.321 2011/01/30 19:38:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.322 2011/02/05 14:24:38 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
+  evolution-2.32.1-r1.ebuild, +files/evolution-2.32.1-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> evolution-2.30.3.ebuild:
   alpha/ia64/sparc stable wrt #348987
