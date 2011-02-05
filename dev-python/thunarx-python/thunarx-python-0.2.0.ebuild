@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.2.0.ebuild,v 1.4 2010/11/04 22:05:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.2.0.ebuild,v 1.5 2011/02/05 12:40:39 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 PYTHON_DEPEND=2
 inherit python xfconf
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/gtk+:2
 	>=dev-python/gnome-python-base-2.12
 	>=dev-python/pygobject-2.16:2
 	dev-python/pygtk:2
-	xfce-base/thunar"
+	>=xfce-base/thunar-1.2.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
