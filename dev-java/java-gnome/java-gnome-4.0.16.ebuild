@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.16.ebuild,v 1.4 2010/12/15 16:26:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.16.ebuild,v 1.5 2011/02/05 12:36:20 ssuominen Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source"
@@ -28,6 +28,7 @@ RDEPEND=">=dev-libs/glib-2.22
 	>=x11-libs/gtksourceview-2.6.2
 	>=app-text/gtkspell-2.0.15-r1
 	>=x11-libs/libnotify-0.4.5
+	<x11-libs/libnotify-0.7
 	>=dev-libs/libunique-1.0.8
 	>=virtual/jre-1.5"
 DEPEND="${RDEPEND}

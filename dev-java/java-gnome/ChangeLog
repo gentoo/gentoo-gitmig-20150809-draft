@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-gnome
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.103 2010/12/29 23:06:59 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.104 2011/02/05 12:36:20 ssuominen Exp $
+
+*java-gnome-4.0.18-r1 (05 Feb 2011)
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +java-gnome-4.0.18-r1.ebuild, +files/java-gnome-4.0.18-libnotify-0.7.patch:
+  Fix compability with x11-libs/libnotify >= 0.7.
 
 *java-gnome-4.0.18 (29 Dec 2010)
 
