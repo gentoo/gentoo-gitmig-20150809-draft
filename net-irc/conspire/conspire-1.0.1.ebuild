@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.2 2011/02/05 17:38:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.3 2011/02/05 17:40:34 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -24,6 +24,7 @@ RDEPEND=">=dev-libs/libmowgli-0.6.0
 	x11-libs/libnotify
 	x11-libs/libsexy
 	dbus? ( >=dev-libs/dbus-glib-0.88 )
+	gnutls? ( net-libs/gnutls )
 	python? ( >=dev-lang/python-2.2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
