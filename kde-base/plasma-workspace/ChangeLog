@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.90 2011/02/04 13:28:34 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.91 2011/02/05 13:28:43 tampakrap Exp $
+
+  05 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  files/plasma-workspace-4.6.0-optional_akonadi-server.patch:
+  Properly fix bug 350850 in making akonadi optional
+  Should also fix bug 353730 and bug 353744
+  Patch taken from upstream commit 5d49ab8a005166563e925e0768857517fea9228e
 
   04 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   plasma-workspace-4.6.0.ebuild,
