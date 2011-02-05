@@ -1,10 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.1 2011/02/05 11:15:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.2 2011/02/05 23:02:24 arfrever Exp $
 
-IUSE=""
+EAPI="2"
+PYTHON_DEPEND="*"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 
-inherit eutils multilib python toolchain-funcs
+inherit multilib python toolchain-funcs
 
 SEPOL_VER="2.0.41"
 SELNX_VER="2.0.94"
@@ -12,9 +15,12 @@ SELNX_VER="2.0.94"
 DESCRIPTION="SELinux kernel and policy management library"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20100525/devel/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
+
 DEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	>=sys-libs/libselinux-${SELNX_VER}
 	dev-libs/ustr"
@@ -24,10 +30,7 @@ RDEPEND="${DEPEND}"
 # full SELinux userland repo
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	echo "# Set this to true to save the linked policy." >> "${S}/src/semanage.conf"
 	echo "# This is normally only useful for analysis" >> "${S}/src/semanage.conf"
 	echo "# or debugging of policy." >> "${S}/src/semanage.conf"
@@ -53,22 +56,37 @@ src_unpack() {
 }
 
 src_compile() {
-	emake PYLIBVER="python$(python_get_version)" all || die
-	emake PYLIBVER="python$(python_get_version)" pywrap || die
+	emake AR="$(tc-getAR)" CC="$(tc-getCC)" all || die
+
+	python_copy_sources src
+	building() {
+		emake CC="$(tc-getCC)" PYLIBVER="python$(python_get_version)" pywrap
+	}
+	python_execute_function -s --source-dir src building
 }
 
 src_install() {
-	python_need_rebuild
-	make DESTDIR="${D}" PYLIBVER="python$(python_get_version)" \
-		LIBDIR="${D}/usr/$(get_libdir)/" \
-		SHLIBDIR="${D}/$(get_libdir)/" install install-pywrap
-	dosym "../../$(get_libdir)/libsemanage.so.1" "/usr/$(get_libdir)/libsemanage.so"
+	emake \
+		DESTDIR="${D}" \
+		LIBDIR="${D}usr/$(get_libdir)" \
+		SHLIBDIR="${D}$(get_libdir)" \
+		install || die
+	dosym "../../$(get_libdir)/libsemanage.so.1" "/usr/$(get_libdir)/libsemanage.so" || die
+
+	installation() {
+		emake \
+			DESTDIR="${D}" \
+			PYLIBVER="python$(python_get_version)" \
+			LIBDIR="${D}usr/$(get_libdir)" \
+			install-pywrap
+	}
+	python_execute_function -s --source-dir src installation
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)
+	python_mod_optimize semanage.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)
+	python_mod_cleanup semanage.py
 }
