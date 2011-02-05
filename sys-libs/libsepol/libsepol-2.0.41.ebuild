@@ -1,17 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.0.41.ebuild,v 1.1 2011/02/05 11:18:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.0.41.ebuild,v 1.2 2011/02/05 21:52:13 arfrever Exp $
 
-IUSE=""
+EAPI="2"
 
-inherit multilib eutils
+inherit multilib toolchain-funcs
 
 DESCRIPTION="SELinux binary policy representation library"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20100525/devel/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 DEPEND=""
 RDEPEND=""
@@ -20,10 +22,7 @@ RDEPEND=""
 # full SELinux userland repo
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# fix up paths for multilib
 	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" src/Makefile \
 		|| die "Fix for multilib LIBDIR failed."
@@ -32,9 +31,9 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	emake AR="$(tc-getAR)" CC="$(tc-getCC)" || die
 }
 
 src_install() {
-	make DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 }
