@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.9.ebuild,v 1.2 2011/02/02 09:47:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.9.ebuild,v 1.3 2011/02/05 17:18:14 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://freeworld.thc.org/releases/${P}-src.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="gtk ssl"
 
 DEPEND="
