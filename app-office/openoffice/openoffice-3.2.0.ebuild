@@ -1,15 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.29 2010/11/07 19:45:55 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.30 2011/02/05 10:45:17 suka Exp $
 
 WANT_AUTOMAKE="1.9"
-EAPI="2"
+EAPI="3"
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 
-inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base mono multilib python toolchain-funcs
+inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base mono multilib pax-utils python toolchain-funcs
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
 
@@ -364,18 +364,18 @@ src_install() {
 	make DESTDIR="${D}" install || die "Installation failed!"
 
 	# Fix the permissions for security reasons
-	chown -RP root:0 "${D}"
+	chown -RP root:0 "${ED}"
 
 	# record java libraries
 	if use java; then
-			java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
-			java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/ure/share/java/*.jar
+			java-pkg_regjar "${ED}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
+			java-pkg_regjar "${ED}"/usr/$(get_libdir)/openoffice/ure/share/java/*.jar
 	fi
 
 	# Upstream places the bash-completion module in /etc. Gentoo places them in
 	# /usr/share/bash-completion. bug 226061
-	dobashcompletion "${D}"/etc/bash_completion.d/ooffice.sh ooffice
-	rm -rf "${D}"/etc/bash_completion.d/ || die "rm failed"
+	dobashcompletion "${ED}"/etc/bash_completion.d/ooffice.sh ooffice
+	rm -rf "${ED}"/etc/bash_completion.d/ || die "rm failed"
 
 }
 
@@ -385,7 +385,7 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	BASHCOMPLETION_NAME=ooffice && bash-completion_pkg_postinst
 
-	( [[ -x /sbin/chpax ]] || [[ -x /sbin/paxctl ]] ) && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && scanelf -Xzm /usr/$(get_libdir)/openoffice/program/soffice.bin
+	pax-mark -m /usr/$(get_libdir)/openoffice/program/soffice.bin
 
 	# Add available & useful jars to openoffice classpath
 	use java && /usr/$(get_libdir)/openoffice/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
