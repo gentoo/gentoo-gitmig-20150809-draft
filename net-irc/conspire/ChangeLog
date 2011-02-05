@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/conspire
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.15 2010/09/26 21:50:45 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.16 2011/02/05 17:38:40 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> conspire-1.0.1.ebuild,
+  +files/conspire-1.0.1-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7. Enable USE="gnutls" by default
+  until #339204 is solved.
 
   26 Sep 2010; <chainsaw@gentoo.org> -conspire-0.12.0.ebuild,
   -conspire-0.13.1.ebuild, -conspire-1.0_beta1.ebuild:

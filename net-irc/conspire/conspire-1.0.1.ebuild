@@ -1,29 +1,39 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.1 2010/09/26 21:39:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.2 2011/02/05 17:38:40 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
-MY_P="${P/_/-}"
-S="${WORKDIR}/${MY_P}"
+MY_P=${P/_/-}
+S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="A high quality IRC client which uses a multitude of interfaces"
 HOMEPAGE="http://www.nenolod.net/conspire/"
 SRC_URI="http://distfiles.atheme.org/${MY_P}.tbz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
-IUSE="python gnutls ipv6 nls mmx socks5 dbus"
-DEPEND="nls? ( dev-util/intltool )
-	dev-util/pkgconfig"
+# Enable gnutls by default until bug 339204 is solved.
+IUSE="python +gnutls ipv6 nls mmx socks5 dbus"
+
 RDEPEND=">=dev-libs/libmowgli-0.6.0
-	>=x11-libs/gtk+-2.10
+	>=x11-libs/gtk+-2.10:2
 	>=dev-libs/glib-2.14
 	x11-libs/libnotify
 	x11-libs/libsexy
-	dbus? ( >=dev-libs/dbus-glib-0.60 )
+	dbus? ( >=dev-libs/dbus-glib-0.88 )
 	python? ( >=dev-lang/python-2.2 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	nls? ( dev-util/intltool )"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+}
+
+src_configure() {
 	econf \
 		$(use_enable socks5 socks) \
 		$(use_enable ipv6) \
@@ -33,12 +43,10 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable dbus) \
 		--enable-spell=libsexy \
-		--enable-regex \
-		|| die
-	emake || die "emake failed"
+		--enable-regex
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc NEWS TODO
 }
