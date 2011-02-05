@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.4 2011/02/05 09:11:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.5 2011/02/05 11:07:55 suka Exp $
 
 EAPI="3"
 
-inherit eutils fdo-mime gnome2-utils pax-utils rpm multilib
+inherit eutils fdo-mime gnome2-utils pax-utils prefix rpm multilib
 
 IUSE="gnome java kde offlinehelp"
 
@@ -47,13 +47,13 @@ HOMEPAGE="http://www.documentfoundation.org"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="!app-office/libreoffice
 	!app-office/openoffice
 	!app-office/openoffice-bin
 	x11-libs/libXaw
-	sys-libs/glibc
+	!prefix? ( sys-libs/glibc )
 	>=dev-lang/perl-5.0
 	app-arch/zip
 	app-arch/unzip
@@ -82,6 +82,9 @@ RESTRICT="mirror"
 src_unpack() {
 
 	unpack ${A}
+
+	cp "${FILESDIR}"/{50-libreoffice-bin,wrapper.in} "${T}"
+	eprefixify "${T}"/{50-libreoffice-bin,wrapper.in}
 
 	for i in base binfilter calc core01 core02 core03 core04 core05 core06 \
 		core07 draw graphicfilter images impress math ogltrans ooofonts \
@@ -161,7 +164,7 @@ src_install () {
 	doins -r "${WORKDIR}"/usr/share/mime
 
 	# Install wrapper script
-	newbin "${FILESDIR}/wrapper.in" libreoffice
+	newbin "${T}/wrapper.in" libreoffice
 	sed -i -e s/LIBDIR/$(get_libdir)/g "${ED}/usr/bin/libreoffice" || die
 
 	# Component symlinks
@@ -180,7 +183,7 @@ src_install () {
 	use !java && rm -f "${ED}${INSTDIR}/ure/bin/javaldx"
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
-	insinto /etc/revdep-rebuild && doins "${FILESDIR}/50-libreoffice-bin"
+	insinto /etc/revdep-rebuild && doins "${T}/50-libreoffice-bin"
 
 }
 
