@@ -1,6 +1,6 @@
-po# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.2 2011/02/03 23:31:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.24.5.ebuild,v 1.3 2011/02/05 02:05:24 zmedico Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
