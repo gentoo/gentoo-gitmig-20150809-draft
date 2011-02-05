@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7-r1.ebuild,v 1.2 2010/10/23 10:07:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.7-r1.ebuild,v 1.3 2011/02/05 09:50:03 ssuominen Exp $
 
 EAPI="2"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -34,7 +34,7 @@ RDEPEND="X? (
 	gtk? ( >=x11-libs/gtk+-2.4 )
 	kde? ( >=kde-base/kdelibs-4 )
 	libedit? ( dev-libs/libedit )
-	libnotify? ( >=x11-libs/libnotify-0.4 )
+	libnotify? ( >=x11-libs/libnotify-0.4 <x11-libs/libnotify-0.7 )
 	m17n-lib? ( >=dev-libs/m17n-lib-1.3.1 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
