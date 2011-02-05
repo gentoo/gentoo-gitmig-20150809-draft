@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.183 2011/01/30 18:42:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.184 2011/02/05 18:50:37 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> xfdesktop-4.8.0.ebuild:
+  arm stable, bug #349053
 
 *xfdesktop-4.8.1 (30 Jan 2011)
 
