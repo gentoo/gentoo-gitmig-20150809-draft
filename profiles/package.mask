@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12429 2011/02/05 09:49:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12430 2011/02/05 12:05:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,10 +58,6 @@ net-dialup/slmodem
 =dev-db/postgresql-base-8.1*
 =dev-db/postgresql-server-8.1*
 =dev-db/postgresql-docs-8.1*
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (31 Jan 2011)
-# Needs libnotify-0.7, mask till that can be unmasked
->=sys-apps/gnome-disk-utility-2.32.1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (31 Jan 2011)
 # ... also mask clutter-gst-1.3
@@ -129,15 +125,6 @@ dev-util/plan9port
 # nothing in the tree uses it (bug #342023).
 # Removal in 30 days.
 dev-dotnet/ndoc
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Jan 2011)
-# Replaced by sys-auth/polkit. Removal in 30 days.
-# Bug 340331.
-sys-auth/policykit
-
-# Gilles Dartiguelongue <eva@gentoo.org> (25 Jan 2011)
-# API breaking release, added for early patch testing
->=x11-libs/libnotify-0.7
 
 # Andreas Proschofsky <suka@gentoo.org> (24 Jan 2011)
 # New package, masked for testing
@@ -315,11 +302,6 @@ media-libs/gle
 <dev-lang/perl-5.12.2
 <sys-devel/libperl-5.10.1
 
-# Samuli Suominen <ssuominen@gentoo.org> (04 Jan 2011)
-# Replaced by gvfs-mount from gnome-base/gvfs.
-# Masked for removal in 30 days.
-sys-fs/gnomevfs-mount
-
 # Kacper Kowalik <xarthisius@gentoo.org> (28 Dec 2010)
 # Masked for removal in 30 days, abandoned by
 # upstream, bugs #238796, #241344, #316941
@@ -441,11 +423,6 @@ net-analyzer/ncrack
 # Tomáš Chvátal <scarabeus@gentoo.org> (01 Nov 2010)
 # Useless since we don't have xfs. Remove in 30 days.
 x11-apps/xfsinfo
-
-# Samuli Suominen <ssuominen@gentoo.org> (30 Oct 2010)
-# Uninstallable for over a year now, bug 276203
-# Removal in 30 days
-dev-scheme/sisc
 
 # Peter Volkov <pva@gentoo.org> (29 Oct 2010)
 # mask beta release
