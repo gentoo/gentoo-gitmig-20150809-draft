@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.261 2011/01/30 19:12:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.262 2011/02/05 16:13:05 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> epiphany-2.30.6.ebuild,
+  +files/epiphany-2.30.6-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> epiphany-2.30.6.ebuild:
   alpha/ia64/sparc stable wrt #348987

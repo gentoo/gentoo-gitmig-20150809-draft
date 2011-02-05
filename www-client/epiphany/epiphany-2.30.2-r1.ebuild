@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.8 2010/10/17 15:38:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.9 2011/02/05 16:13:05 ssuominen Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ RDEPEND=">=dev-libs/glib-2.19.7
 	>=dev-libs/libxslt-1.1.7
 	>=x11-libs/startup-notification-0.5
 	>=x11-libs/libnotify-0.4
+	<x11-libs/libnotify-0.7
 	>=dev-libs/dbus-glib-0.71
 	>=gnome-base/gconf-2
 	>=app-text/iso-codes-0.35
