@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.4 2009/08/02 02:58:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.5 2011/02/05 11:28:10 blueness Exp $
 
 # Eclass for installing SELinux policy, and optionally
-# reloading the reference-policy based modules
+# reloading the reference-policy based modules.
 
 inherit eutils
 
@@ -32,7 +32,6 @@ selinux-policy-2_src_unpack() {
 	for i in ${MODS}; do
 		modfiles="`find ${S}/refpolicy/policy/modules -iname $i.te` $modfiles"
 		modfiles="`find ${S}/refpolicy/policy/modules -iname $i.fc` $modfiles"
-		# use .if from headers
 	done
 
 	for i in ${POLICY_TYPES}; do
@@ -42,8 +41,12 @@ selinux-policy-2_src_unpack() {
 		cp ${modfiles} "${S}"/${i}
 
 		if [ -n "${POLICY_PATCH}" ]; then
-			cd "${S}"/${i}
-			epatch "${POLICY_PATCH}" || die "failed patch ${i}"
+			for POLPATCH in "${POLICY_PATCH}";
+			do
+				cd "${S}"/${i}
+				einfo "Patching ${i}"
+				epatch "${POLPATCH}" || die "failed patch ${POLPATCH}"
+			done
 		fi
 
 	done
@@ -78,26 +81,12 @@ selinux-policy-2_pkg_postinst() {
 	done
 	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
 
-	if has "loadpolicy" $FEATURES ; then
-		for i in ${POLICY_TYPES}; do
-			einfo "Inserting the following modules into the $i module store: ${MODS}"
+	for i in ${POLICY_TYPES}; do
+		einfo "Inserting the following modules into the $i module store: ${MODS}"
 
-			cd /usr/share/selinux/${i}
-			semodule -s ${i} ${COMMAND}
-		done
-	else
-		echo
-		echo
-		eerror "Policy has not been loaded.  It is strongly suggested"
-		eerror "that the policy be loaded before continuing!!"
-		echo
-		einfo "Automatic policy loading can be enabled by adding"
-		einfo "\"loadpolicy\" to the FEATURES in make.conf."
-		echo
-		echo
-		ebeep 4
-		epause 4
-	fi
+		cd /usr/share/selinux/${i}
+		semodule -s ${i} ${COMMAND}
+	done
 }
 
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
