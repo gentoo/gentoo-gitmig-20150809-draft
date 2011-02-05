@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.6.1.ebuild,v 1.1 2011/01/08 06:21:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.6.1.ebuild,v 1.2 2011/02/05 07:37:11 ssuominen Exp $
 
 EAPI="3"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -93,9 +93,10 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PN}-1.6.0-gentoo.patch" \
-		"${FILESDIR}/${PN}-1.5.4-zhTW.patch" \
-		"${FILESDIR}/${PN}-1.6.0-linker.patch"
+		"${FILESDIR}"/${PN}-1.6.0-gentoo.patch \
+		"${FILESDIR}"/${PN}-1.5.4-zhTW.patch \
+		"${FILESDIR}"/${PN}-1.6.0-linker.patch \
+		"${FILESDIR}"/${PN}-1.6.1-libnotify-0.7.patch
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die

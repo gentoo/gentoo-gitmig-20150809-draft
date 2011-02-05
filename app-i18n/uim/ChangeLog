@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.227 2011/01/08 06:21:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.228 2011/02/05 07:37:11 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> uim-1.6.1.ebuild,
+  +files/uim-1.6.1-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
 *uim-1.6.1 (08 Jan 2011)
 
