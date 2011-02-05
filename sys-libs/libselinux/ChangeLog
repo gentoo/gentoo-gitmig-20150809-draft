@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libselinux
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.66 2010/09/29 22:58:55 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.67 2011/02/05 11:13:11 blueness Exp $
+
+*libselinux-2.0.94 (05 Feb 2011)
+
+  05 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libselinux-2.0.94.ebuild:
+  New upstream release.
 
   29 Sep 2010; Mike Frysinger <vapier@gentoo.org> libselinux-2.0.85.ebuild,
   +files/libselinux-2.0.85-headers.patch:
