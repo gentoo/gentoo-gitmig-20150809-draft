@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/gmpc-libnotify-0.20.0.ebuild,v 1.1 2010/05/25 09:45:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/gmpc-libnotify-0.20.0.ebuild,v 1.2 2011/02/05 13:09:57 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="This plugin sends an announcement to the notification daemon on song change"
 HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_LIBNOTIFY"
@@ -20,6 +21,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+}
 
 src_configure() {
 	econf \
