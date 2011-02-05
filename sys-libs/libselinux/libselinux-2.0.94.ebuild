@@ -1,21 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.94.ebuild,v 1.1 2011/02/05 11:13:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.94.ebuild,v 1.2 2011/02/05 22:07:40 arfrever Exp $
 
 EAPI="2"
-IUSE="ruby"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 RUBY_OPTIONAL="yes"
 
-inherit eutils multilib python
+inherit multilib python toolchain-funcs
 
 SEPOL_VER="2.0.41"
 
 DESCRIPTION="SELinux userland library"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20100525/devel/${P}.tar.gz"
+
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="ruby"
 
 DEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	dev-lang/swig
@@ -23,11 +27,6 @@ DEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	ruby? ( dev-lang/ruby )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-}
 
 src_prepare() {
 	# fix up paths for multilib
@@ -38,17 +37,26 @@ src_prepare() {
 }
 
 src_compile() {
-	emake LDFLAGS="-fPIC ${LDFLAGS}" all || die
-	emake PYLIBVER="python$(python_get_version)" LDFLAGS="-fPIC ${LDFLAGS}" pywrap || die
+	emake AR="$(tc-getAR)" CC="$(tc-getCC)" LDFLAGS="-fPIC ${LDFLAGS}" all || die
+
+	python_copy_sources src
+	building() {
+		emake CC="$(tc-getCC)" PYLIBVER="python$(python_get_version)" LDFLAGS="-fPIC ${LDFLAGS}" pywrap
+	}
+	python_execute_function -s --source-dir src building
 
 	if use ruby; then
-		emake rubywrap || die
+		emake CC="$(tc-getCC)" rubywrap || die
 	fi
 }
 
 src_install() {
-	python_need_rebuild
-	make DESTDIR="${D}" PYLIBVER="python$(python_get_version)" install install-pywrap || die
+	emake DESTDIR="${D}" install || die
+
+	installation() {
+		emake DESTDIR="${D}" PYLIBVER="python$(python_get_version)" install-pywrap
+	}
+	python_execute_function -s --source-dir src installation
 
 	if use ruby; then
 		emake DESTDIR="${D}" install-rubywrap || die
@@ -56,9 +64,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)
+	python_mod_optimize selinux
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)
+	python_mod_cleanup selinux
 }
