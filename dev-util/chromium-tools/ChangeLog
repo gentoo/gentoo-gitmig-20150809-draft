@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/chromium-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/chromium-tools/ChangeLog,v 1.7 2011/02/05 11:26:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/chromium-tools/ChangeLog,v 1.8 2011/02/05 22:51:23 maekke Exp $
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> chromium-tools-0.1.6.ebuild:
+  add ~arm, bug #350648
 
   05 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
   chromium-tools-0.1.6.ebuild:
