@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0-r1.ebuild,v 1.4 2010/04/20 10:49:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0-r1.ebuild,v 1.5 2011/02/05 17:46:49 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools eutils multilib virtualx
 
 DESCRIPTION="Tk-based Calendar program"
@@ -14,15 +14,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="dev-lang/tcl
+RDEPEND="dev-lang/tcl
 	dev-lang/tk"
-
-# FIXME wrt bug #315949
-RESTRICT="test"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-newtcl.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-newtcl.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
 
 	sed -i \
 		-e 's:8.4 8.3:8.6 8.5 8.4 8.3:g' \
@@ -43,7 +43,9 @@ src_compile() {
 }
 
 src_test() {
-	Xmake check || die
+	if [[ ${EUID} != 0 ]]; then
+		Xmake -j1 check || die
+	fi
 }
 
 src_install() {
