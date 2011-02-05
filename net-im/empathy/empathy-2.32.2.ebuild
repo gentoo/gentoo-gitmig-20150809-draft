@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.5 2011/01/30 16:59:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.6 2011/02/05 17:10:33 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 PYTHON_DEPEND="2:2.4"
 
-inherit gnome2 multilib python
+inherit eutils gnome2 multilib python
 
 DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
@@ -87,6 +87,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	# Remove unnecessary restriction. Should get punted from configure.ac.
+	sed -i -e '/libnotify/s:0.7:9999:' configure || die
 	gnome2_src_prepare
 	python_convert_shebangs -r 2 .
 }
