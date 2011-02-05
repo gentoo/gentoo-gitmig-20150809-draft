@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mp3fs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.8 2010/09/05 14:51:27 dragonheart Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mp3fs/ChangeLog,v 1.9 2011/02/05 18:23:14 vapier Exp $
+
+*mp3fs-0.30 (05 Feb 2011)
+
+  05 Feb 2011; Mike Frysinger <vapier@gentoo.org> +mp3fs-0.30.ebuild:
+  Version bump.
 
 *mp3fs-0.21 (05 Sep 2010)
 
