@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gejengel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.16 2010/10/03 20:11:48 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.17 2011/02/05 11:59:36 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> gejengel-0.1.4.ebuild,
+  +files/gejengel-0.1.4-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   03 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   -files/gejengel-0.1.2-plugin.patch, -files/gejengel-0.1.2_64bit_fix.patch,

@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.3 2010/08/31 12:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.4 2011/02/05 11:59:36 ssuominen Exp $
 
-EAPI=2
-inherit base eutils multilib
+EAPI=3
+inherit eutils multilib
 
 DESCRIPTION="Lightweight audio player"
 HOMEPAGE="http://code.google.com/p/gejengel"
@@ -33,6 +33,10 @@ RDEPEND=">=dev-cpp/gtkmm-2.16
 DEPEND="${RDEPEND}
 	dev-libs/libxdg-basedir
 	>=sys-devel/automake-1.11"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+}
 
 src_configure() {
 	econf \
