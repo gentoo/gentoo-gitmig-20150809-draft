@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.84.ebuild,v 1.2 2011/02/05 11:29:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.84.ebuild,v 1.3 2011/02/05 22:52:27 maekke Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite system-v8"
 
 RDEPEND="app-arch/bzip2
