@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.104 2011/01/24 16:33:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.105 2011/02/05 10:07:19 ssuominen Exp $
+
+  05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> balsa-2.4.8.ebuild,
+  +files/balsa-2.4.8-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> balsa-2.4.8.ebuild:
   Pin dependencies to appropriate slots.
