@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/memtester
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.36 2010/12/13 21:54:42 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.37 2011/02/05 08:51:41 vapier Exp $
+
+*memtester-4.2.1 (05 Feb 2011)
+
+  05 Feb 2011; Mike Frysinger <vapier@gentoo.org> +memtester-4.2.1.ebuild:
+  Version bump #348845 by Justin Lecher.
 
   13 Dec 2010; Matt Turner <mattst88@gentoo.org> memtester-4.1.2.ebuild:
   Add ~mips, bug 348421
