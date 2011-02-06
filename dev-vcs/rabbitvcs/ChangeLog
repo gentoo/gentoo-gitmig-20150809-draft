@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/rabbitvcs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.1 2010/10/26 20:59:03 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.2 2011/02/06 18:34:40 xmw Exp $
+
+*rabbitvcs-0.14.1.1 (06 Feb 2011)
+
+  06 Feb 2011; Michael Weber <xmw@gentoo.org> +rabbitvcs-0.14.1.1.ebuild:
+  Version bump (thanks to Rion <rion4ik@gmail.com> for the ebuild on bug
+  350686) and added use flag git.
 
 *rabbitvcs-0.13.3 (26 Oct 2010)
 
