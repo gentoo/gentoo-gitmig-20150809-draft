@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ezmlm-idx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.31 2010/10/01 02:57:34 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.32 2011/02/06 10:06:08 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
+  Drop to ~mips
 
 *ezmlm-idx-7.0.0-r2 (01 Oct 2010)
 

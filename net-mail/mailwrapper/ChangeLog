@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailwrapper
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.39 2009/04/21 04:06:48 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.40 2011/02/06 10:09:58 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> mailwrapper-0.2.1.ebuild:
+  Drop to ~mips
 
   21 Apr 2009; Mike Frysinger <vapier@gentoo.org>
   +files/mailwrapper-0.2.1-headers.patch, mailwrapper-0.2.1,
