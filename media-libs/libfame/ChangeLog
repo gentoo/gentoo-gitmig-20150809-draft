@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfame
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.52 2009/02/15 00:08:23 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.53 2011/02/06 12:10:24 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libfame-0.9.1-r1.ebuild:
+  Drop to ~mips
 
   15 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/libfame-0.9.1-gcc43.patch, -libfame-0.9.0.ebuild,

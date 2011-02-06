@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.35 2011/01/05 10:37:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.36 2011/02/06 12:09:21 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> gle-3.0.1-r2.ebuild:
+  Drop to ~mips
 
 *gle-3.1.0-r2 (05 Jan 2011)
 

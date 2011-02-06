@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aalib
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.40 2008/12/14 10:43:30 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.41 2011/02/06 12:08:49 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> aalib-1.4_rc5.ebuild:
+  Drop to ~mips
 
   14 Dec 2008; Fabian Groffen <grobian@gentoo.org> aalib-1.4_rc5.ebuild:
   Fix quoting n00bness

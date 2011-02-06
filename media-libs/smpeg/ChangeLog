@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/smpeg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.56 2007/08/25 03:04:15 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.57 2011/02/06 12:11:58 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> smpeg-0.4.4-r9.ebuild:
+  Drop to ~mips
 
   25 Aug 2007; Joseph Jezak <josejx@gentoo.org> smpeg-0.4.4-r9.ebuild:
   Marked ppc64 stable for bug #189359.
