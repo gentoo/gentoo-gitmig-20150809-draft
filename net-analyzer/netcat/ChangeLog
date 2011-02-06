@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.40 2010/07/14 03:47:50 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.41 2011/02/06 07:48:56 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> netcat-110-r8.ebuild:
+  Drop to ~mips
 
 *netcat-110-r9 (14 Jul 2010)
 
