@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.47 2009/05/30 20:50:39 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.48 2011/02/06 10:26:21 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> portmap-6.0.ebuild:
+  Drop to ~mips
 
   30 May 2009; Mike Frysinger <vapier@gentoo.org> files/portmap.rc6:
   Add check for SUNRPC_REGISTER_V4=y in kernel config.
