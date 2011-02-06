@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpthread-stubs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.14 2010/11/16 09:24:06 mduft Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.15 2011/02/06 12:39:02 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libpthread-stubs-0.1.ebuild:
+  Drop to ~mips
 
   16 Nov 2010; Markus Duft <mduft@gentoo.org> libpthread-stubs-0.1.ebuild:
   migrate to xorg-2 eclass

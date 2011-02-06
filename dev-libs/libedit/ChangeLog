@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libedit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.48 2010/12/13 22:11:30 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.49 2011/02/06 12:37:00 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libedit-20050930.ebuild:
+  Drop to ~mips
 
   13 Dec 2010; Matt Turner <mattst88@gentoo.org>
   libedit-20100424.3.0.ebuild:

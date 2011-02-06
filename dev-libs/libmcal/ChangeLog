@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmcal
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.39 2008/05/14 21:27:41 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.40 2011/02/06 12:37:55 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libmcal-0.7-r3.ebuild,
+  libmcal-0.7-r5.ebuild:
+  Drop to ~mips
 
   14 May 2008; Diego Pettenò <flameeyes@gentoo.org> libmcal-0.7-r5.ebuild:
   Depend on virtual/pam as the code builds fine with OpenPAM.

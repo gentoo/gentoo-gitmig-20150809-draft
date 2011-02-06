@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlwrapp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.33 2010/06/20 12:24:17 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.34 2011/02/06 12:40:51 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> xmlwrapp-0.5.0-r1.ebuild:
+  Drop to ~mips
 
 *xmlwrapp-0.6.2 (20 Jun 2010)
 
