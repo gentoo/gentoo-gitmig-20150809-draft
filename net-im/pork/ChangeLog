@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pork
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.41 2010/01/07 15:31:04 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/ChangeLog,v 1.42 2011/02/06 08:12:24 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> pork-0.99.8.1.ebuild:
+  Drop to ~mips
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pork-0.99.8.1.ebuild:
   Transfer Prefix keywords
