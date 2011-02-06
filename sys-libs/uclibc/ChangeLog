@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/uclibc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.57 2010/01/18 23:41:46 solar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.58 2011/02/06 21:36:14 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> uclibc-0.9.27-r1.ebuild:
+  Drop to ~mips
 
   18 Jan 2010; <solar@gentoo.org> uclibc-0.9.27-r1.ebuild,
   uclibc-0.9.28.3.ebuild, uclibc-0.9.28.3-r3.ebuild,

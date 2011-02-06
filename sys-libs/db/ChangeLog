@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.316 2011/01/07 19:30:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.317 2011/02/06 21:34:37 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> db-1.85-r3.ebuild:
+  Drop to ~mips
 
 *db-5.0.32 (07 Jan 2011)
 

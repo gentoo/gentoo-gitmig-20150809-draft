@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pwdb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.39 2008/02/07 14:58:41 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.40 2011/02/06 21:35:40 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> pwdb-0.62.ebuild:
+  Drop to ~mips
 
   07 Feb 2008; Raúl Porcel <armin76@gentoo.org> pwdb-0.62.ebuild:
   Fix HOMEPAGE
