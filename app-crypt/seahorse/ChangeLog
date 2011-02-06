@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.141 2010/11/24 14:02:43 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.142 2011/02/06 12:50:14 ssuominen Exp $
+
+  06 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> seahorse-2.32.0.ebuild,
+  +files/seahorse-2.32.0-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
   24 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -files/seahorse-2.28.0-as-needed.patch, -seahorse-2.28.1.ebuild:
