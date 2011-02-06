@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/genext2fs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.9 2007/04/29 02:10:35 dragonheart Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/ChangeLog,v 1.10 2011/02/06 10:51:06 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> genext2fs-1.3-r1.ebuild:
+  Drop to ~mips
 
 *genext2fs-1.4.1 (29 Apr 2007)
 
