@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2-r2.ebuild,v 1.2 2011/01/28 21:34:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.2-r2.ebuild,v 1.3 2011/02/06 12:25:42 ssuominen Exp $
 
 EAPI="2"
 
@@ -99,8 +99,10 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	collectd_plugins_syslog?		( virtual/logger )"
 
-PATCHES=( "${FILESDIR}/${PN}-4.10.1"-{libperl,libiptc,noowniptc}.patch
-	"${FILESDIR}/${P}"-libocci.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.10.1-{libperl,libiptc,noowniptc}.patch
+	"${FILESDIR}"/${PN}-4.10.2-{libocci,libnotify-0.7}.patch
+	)
 
 # @FUNCTION: collectd_plugin_kernel_linux
 # @DESCRIPTION:
