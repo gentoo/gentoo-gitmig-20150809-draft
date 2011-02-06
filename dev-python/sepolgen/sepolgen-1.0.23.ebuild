@@ -1,25 +1,27 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.23.ebuild,v 1.1 2011/02/06 18:44:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.23.ebuild,v 1.2 2011/02/06 23:18:18 arfrever Exp $
+
+EAPI="2"
+PYTHON_DEPEND="2:2.5"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 
 inherit python
-
-IUSE=""
 
 DESCRIPTION="SELinux policy generation library"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20101221/devel/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
-DEPEND=""
-RDEPEND=">=dev-lang/python-2.5
-	>=sys-libs/libselinux-2.0"
+DEPEND=">=sys-libs/libselinux-2.0[python]"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	# fix up default paths to not be RH specific
 	sed -i -e 's:/usr/share/selinux/devel:/usr/share/selinux/strict:' \
 		"${S}/src/sepolgen/defaults.py" || die
@@ -28,27 +30,28 @@ src_unpack() {
 }
 
 src_compile() {
-	return
+	:
 }
 
 src_test() {
 	if has_version sec-policy/selinux-base-policy; then
-		make test
+		python_src_test
 	else
 		ewarn "Sepolgen requires sec-policy/selinux-base-policy to run tests."
 	fi
 }
 
 src_install() {
-	python_need_rebuild
-	make DESTDIR="${D}" PYTHONLIBDIR="$(python_get_sitedir)" \
-		 install || die "install failed"
+	installation() {
+		emake DESTDIR="${D}" PYTHONLIBDIR="$(python_get_sitedir)" install
+	}
+	python_execute_function installation
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)
+	python_mod_optimize sepolgen
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)
+	python_mod_cleanup sepolgen
 }
