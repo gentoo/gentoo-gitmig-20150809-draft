@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86rushproto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.28 2010/01/14 17:21:21 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.29 2011/02/06 10:46:56 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> xf86rushproto-1.1.2.ebuild:
+  Drop to ~mips
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   xf86rushproto-1.1.2.ebuild:
