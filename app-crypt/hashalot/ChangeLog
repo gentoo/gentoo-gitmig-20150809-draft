@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/hashalot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.28 2007/02/21 17:55:42 alonbl Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.29 2011/02/06 05:26:24 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> hashalot-0.3-r2.ebuild:
+  Drop to ~mips
 
   21 Feb 2007; Alon Bar-Lev <alonbl@gentoo.org>
   files/digest-hashalot-0.3-r2, Manifest:
