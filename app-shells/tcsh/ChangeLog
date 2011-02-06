@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.99 2010/10/08 14:29:18 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.100 2011/02/06 22:03:07 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> tcsh-6.15-r2.ebuild:
+  Drop to ~mips
 
   08 Oct 2010; Fabian Groffen <grobian@gentoo.org> tcsh-6.16.ebuild:
   Remove leftover RDEPEND=DEPEND line, thanks Kevin Pyle again

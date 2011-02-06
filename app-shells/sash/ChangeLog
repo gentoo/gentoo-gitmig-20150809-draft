@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.38 2010/09/06 01:13:45 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.39 2011/02/06 22:02:34 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> sash-3.7-r1.ebuild:
+  Drop to ~mips
 
 *sash-3.7-r2 (06 Sep 2010)
 
