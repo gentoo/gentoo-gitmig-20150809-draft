@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.53 2010/11/20 12:00:36 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.54 2011/02/06 12:24:36 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> meanwhile-1.0.2.ebuild:
+  Drop to ~mips
 
   20 Nov 2010; Michael Weber <xmw@gentoo.org> meanwhile-1.0.2.ebuild:
   Added ~arm keyword (bug 343505)
