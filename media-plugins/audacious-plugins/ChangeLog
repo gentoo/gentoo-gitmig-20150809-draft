@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.192 2011/01/30 20:29:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.193 2011/02/06 17:20:56 ssuominen Exp $
+
+  06 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +files/2.4.3-libnotify-0.7.patch, audacious-plugins-2.4.3-r1.ebuild,
+  audacious-plugins-2.5_alpha1.ebuild:
+  Fix building with x11-libs/libnotify >= 0.7 wrt #353859.
 
 *audacious-plugins-2.5_alpha1 (30 Jan 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5_alpha1.ebuild,v 1.1 2011/01/30 20:29:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5_alpha1.ebuild,v 1.2 2011/02/06 17:20:56 ssuominen Exp $
 
 EAPI=3
 
@@ -59,6 +59,10 @@ mp3_warning() {
 	if ! use mp3 ; then
 		ewarn "MP3 support is optional, you may want to enable the mp3 USE-flag"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/2.4.3-libnotify-0.7.patch
 }
 
 src_configure() {
