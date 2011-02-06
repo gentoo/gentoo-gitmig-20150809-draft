@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dejagnu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.20 2010/04/09 08:39:56 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dejagnu/ChangeLog,v 1.21 2011/02/06 22:07:17 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> dejagnu-1.4.4-r1.ebuild:
+  Drop to ~mips
 
 *dejagnu-1.4.4-r3 (09 Apr 2010)
 
