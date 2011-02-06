@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/c-ares
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.58 2010/12/11 09:43:37 dragonheart Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.59 2011/02/06 22:36:57 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> c-ares-1.4.0.ebuild:
+  Drop to ~mips
 
 *c-ares-1.7.4 (11 Dec 2010)
 
