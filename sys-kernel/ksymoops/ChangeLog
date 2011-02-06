@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ksymoops
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.27 2010/09/11 19:54:52 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.28 2011/02/06 11:10:46 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> ksymoops-2.4.9.ebuild,
+  ksymoops-2.4.11.ebuild:
+  Drop to ~mips
 
 *ksymoops-2.4.11-r1 (11 Sep 2010)
 
