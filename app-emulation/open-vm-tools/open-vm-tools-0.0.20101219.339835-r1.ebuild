@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20101219.339835.ebuild,v 1.1 2011/01/18 19:23:05 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20101219.339835-r1.ebuild,v 1.1 2011/02/06 13:53:05 vadimk Exp $
 
 EAPI="2"
 
@@ -109,6 +109,8 @@ src_install() {
 
 	if use X;
 	then
+		dobin "${S}"/scripts/common/vmware-xdg-detect-de
+
 		insinto /etc/xdg/autostart
 		doins "${FILESDIR}/open-vm-tools.desktop" || die "failed to install .desktop"
 
