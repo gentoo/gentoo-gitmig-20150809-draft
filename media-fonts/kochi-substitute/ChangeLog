@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/kochi-substitute
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.30 2010/02/02 14:52:00 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.31 2011/02/06 21:22:17 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org>
+  kochi-substitute-20030809-r3.ebuild:
+  Drop to ~mips
 
   02 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   kochi-substitute-20030809-r3.ebuild:
