@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/sqlite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.359 2010/12/13 04:43:54 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.360 2011/02/06 14:03:29 arfrever Exp $
+
+*sqlite-3.7.5 (06 Feb 2011)
+
+  06 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +sqlite-3.7.5.ebuild, +files/sqlite-3.7.5-utimes.patch:
+  Version bump (bug #353772). Fix building on FreeMiNT (bug #344353). Fixed
+  building of tests with USE="-threadsafe" (bug #348435).
 
   13 Dec 2010; Jeroen Roovers <jer@gentoo.org> sqlite-3.7.3.ebuild:
   Stable for HPPA PPC (bug #348079).
