@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.10 2011/02/06 14:54:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.11 2011/02/06 21:09:29 grobian Exp $
 
 EAPI="2"
 
@@ -39,7 +39,7 @@ find_locale() {
 	# available, in which case it is better not to hardcode to use it
 	l=$(get_locale en_US)
 	if [[ -z ${l} ]] ; then
-		for t in "en_.*" ".*" ; do
+		for t in "en_GB" "en_.*" ".*" ; do
 			l=$(get_locale ${t})
 			if [[ -n ${l} ]] ; then
 				l=${l%%$'\n'*}
