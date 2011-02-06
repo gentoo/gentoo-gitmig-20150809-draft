@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/setools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.62 2010/05/12 13:30:25 pebenito Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.63 2011/02/06 21:37:43 arfrever Exp $
+
+  06 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  setools-3.3.7.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #308279). Fix building with SWIG 2.
 
 *setools-3.3.7 (12 May 2010)
 
