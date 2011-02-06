@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.2 2011/02/05 23:02:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.3 2011/02/06 14:57:34 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="*"
@@ -21,10 +21,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=sys-libs/libsepol-${SEPOL_VER}
+RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	>=sys-libs/libselinux-${SELNX_VER}
 	dev-libs/ustr"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-lang/swig"
 
 # tests are not meant to be run outside of the
 # full SELinux userland repo
