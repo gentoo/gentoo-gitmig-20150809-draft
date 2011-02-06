@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ispell
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.44 2010/04/06 17:11:14 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.45 2011/02/06 05:59:58 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> ispell-3.2.06-r6.ebuild:
+  Drop to ~mips
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> ispell-3.3.02-r1.ebuild:
   Bump to EAPI=3, add prefix keywords
