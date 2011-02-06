@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.94.ebuild,v 1.3 2011/02/06 14:58:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.94.ebuild,v 1.4 2011/02/06 19:26:38 arfrever Exp $
 
 EAPI="2"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
@@ -18,14 +18,18 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20100525/devel/${P}.tar.gz
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ruby"
-
-DEPEND=">=sys-libs/libsepol-${SEPOL_VER}
-	dev-lang/swig
-	ruby? ( dev-lang/ruby )"
+IUSE="python ruby"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	ruby? ( dev-lang/ruby )"
+DEPEND="${RDEPEND}
+	ruby? ( dev-lang/swig )"
+
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	# fix up paths for multilib
@@ -38,11 +42,13 @@ src_prepare() {
 src_compile() {
 	emake AR="$(tc-getAR)" CC="$(tc-getCC)" LDFLAGS="-fPIC ${LDFLAGS}" all || die
 
-	python_copy_sources src
-	building() {
-		emake CC="$(tc-getCC)" PYLIBVER="python$(python_get_version)" LDFLAGS="-fPIC ${LDFLAGS}" pywrap
-	}
-	python_execute_function -s --source-dir src building
+	if use python; then
+		python_copy_sources src
+		building() {
+			emake CC="$(tc-getCC)" PYLIBVER="python$(python_get_version)" LDFLAGS="-fPIC ${LDFLAGS}" pywrap
+		}
+		python_execute_function -s --source-dir src building
+	fi
 
 	if use ruby; then
 		emake CC="$(tc-getCC)" rubywrap || die
@@ -52,10 +58,12 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	installation() {
-		emake DESTDIR="${D}" PYLIBVER="python$(python_get_version)" install-pywrap
-	}
-	python_execute_function -s --source-dir src installation
+	if use python; then
+		installation() {
+			emake DESTDIR="${D}" PYLIBVER="python$(python_get_version)" install-pywrap
+		}
+		python_execute_function -s --source-dir src installation
+	fi
 
 	if use ruby; then
 		emake DESTDIR="${D}" install-rubywrap || die
@@ -63,9 +71,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize selinux
+	if use python; then
+		python_mod_optimize selinux
+	fi
 }
 
 pkg_postrm() {
-	python_mod_cleanup selinux
+	if use python; then
+		python_mod_cleanup selinux
+	fi
 }

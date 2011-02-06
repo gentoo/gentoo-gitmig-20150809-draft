@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.68 2011/02/05 22:07:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.69 2011/02/06 19:26:38 arfrever Exp $
+
+  06 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libselinux-2.0.94.ebuild:
+  Add "python" USE flag.
 
   05 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libselinux-2.0.94.ebuild:
