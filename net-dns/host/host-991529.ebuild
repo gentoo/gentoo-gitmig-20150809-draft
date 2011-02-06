@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-991529.ebuild,v 1.2 2006/06/11 15:33:29 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-991529.ebuild,v 1.3 2011/02/06 08:09:22 leio Exp $
 
 # This is somewhat old tool, has not been changed since 1999,
 # Still looks like host from bind does not provide all possible functionality
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.ripe.net/tools/dns/${PN}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 RESTRICT="test"
