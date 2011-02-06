@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.9 2011/02/06 14:14:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.10 2011/02/06 14:54:09 grobian Exp $
 
 EAPI="2"
 
@@ -28,18 +28,41 @@ src_prepare() {
 	eautoreconf
 }
 
+get_locale() {
+	locale -a | grep -i "$1\.utf.*8\$"
+}
+
+find_locale() {
+	local l t
+
+	# we basically prefer to find en_US.UTF-8, but it may not always be
+	# available, in which case it is better not to hardcode to use it
+	l=$(get_locale en_US)
+	if [[ -z ${l} ]] ; then
+		for t in "en_.*" ".*" ; do
+			l=$(get_locale ${t})
+			if [[ -n ${l} ]] ; then
+				l=${l%%$'\n'*}
+				break;
+			fi
+		done
+	fi
+	[[ -z ${l} ]] && die "Failed to find a unicode locale"
+	echo "${l}"
+}
+
 src_configure() {
 	# need hardwired locale simply because locale -a | grep -i utf-8 | head -n1
 	# isn't always returning the most sensical (and working) locale
 	econf \
 		$(use_enable unicode multibyte) \
-		$(use_with unicode unicode-locale en_US.UTF-8)
+		$(use_with unicode unicode-locale $(find_locale))
 }
 
 src_test() {
-	if $(locale -a | grep -iq en_US.utf8); then
-	emake -j1 \
-		check || die
+	if $(locale -a | grep -iq "en_US\.utf.*8"); then
+		emake -j1 \
+			check || die
 	else
 		ewarn "If you like to run the test,"
 		ewarn "please make sure en_US.UTF-8 is installed."

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.32 2011/02/06 14:14:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.33 2011/02/06 14:54:09 grobian Exp $
+
+  06 Feb 2011; Fabian Groffen <grobian@gentoo.org> vilistextum-2.6.9.ebuild:
+  Search for an UTF-8 locale for people that lack en_US.UTF-8, such that we
+  don't blindly hardcode an invalid locale to be used that causes invalid
+  locale errors at runtime
 
   06 Feb 2011; Fabian Groffen <grobian@gentoo.org> vilistextum-2.6.9.ebuild:
   Marked ~x86-solaris
