@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.95 2011/01/31 15:17:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.96 2011/02/06 15:06:17 qiaomuf Exp $
+
+*networkmanager-0.8.2-r5 (06 Feb 2011)
+
+  06 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> +networkmanager-0.8.2-r5.ebuild,
+  +files/networkmanager-0.8.2-fix-tests.patch,
+  +files/networkmanager-0.8.2-fix-timestamp.patch:
+  Fix bug #353807 and bug #353549
 
   31 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
   networkmanager-0.8-r1.ebuild, networkmanager-0.8.1-r6.ebuild,
