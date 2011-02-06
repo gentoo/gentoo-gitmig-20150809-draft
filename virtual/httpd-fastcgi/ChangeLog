@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-fastcgi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/ChangeLog,v 1.7 2010/03/07 18:25:53 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/ChangeLog,v 1.8 2011/02/06 11:59:27 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> httpd-fastcgi-0.ebuild:
+  Drop to ~mips
 
   07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> httpd-fastcgi-0.ebuild:
   fix typo wrt #308347

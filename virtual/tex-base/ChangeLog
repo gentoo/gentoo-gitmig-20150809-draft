@@ -1,6 +1,9 @@
 # ChangeLog for virtual/tex-base
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/ChangeLog,v 1.6 2010/01/11 11:15:20 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/ChangeLog,v 1.7 2011/02/06 12:02:28 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> tex-base-0.ebuild:
+  Drop to ~mips
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> tex-base-0.ebuild:
   Set empty HOMEPAGE and LICENSE.

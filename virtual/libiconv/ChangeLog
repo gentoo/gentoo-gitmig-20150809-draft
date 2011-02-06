@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libiconv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.7 2010/02/25 00:32:15 solar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.8 2011/02/06 11:59:58 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libiconv-0.ebuild:
+  Drop to ~mips
 
   25 Feb 2010; <solar@gentoo.org> libiconv-0.ebuild:
   - Not all profiles can abuse use.force for USE_EXPANDed variables. So we

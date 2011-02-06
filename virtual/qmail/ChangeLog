@@ -1,6 +1,9 @@
 # ChangeLog for virtual/qmail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.10 2010/01/11 11:12:59 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.11 2011/02/06 12:01:58 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> qmail-1.03.ebuild:
+  Drop to ~mips
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> qmail-1.03.ebuild:
   Set empty HOMEPAGE and LICENSE.

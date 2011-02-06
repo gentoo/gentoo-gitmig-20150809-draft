@@ -1,6 +1,9 @@
 # ChangeLog for virtual/editor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.19 2010/03/13 19:41:30 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.20 2011/02/06 11:56:55 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> editor-0.ebuild:
+  Drop to ~mips
 
   13 Mar 2010; Ulrich Mueller <ulm@gentoo.org> editor-0.ebuild:
   Remove sys-apps/busybox, fixes bug 309147.
