@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1-r1.ebuild,v 1.7 2010/10/17 15:26:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/seahorse-plugins-2.30.1-r1.ebuild,v 1.8 2011/02/06 12:58:10 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="applet debug gedit libnotify nautilus test"
 
 RDEPEND="
 	>=gnome-base/gconf-2.0
-	>=x11-libs/gtk+-2.18
+	>=x11-libs/gtk+-2.18:2
 	>=dev-libs/glib-2.16
 	>=dev-libs/dbus-glib-0.72
 	>=app-crypt/gpgme-1.0.0
@@ -53,10 +53,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 
 	# Use gpgme_engine_check_version() before gpgm_new() due current gpgme, bug #281729
-	epatch "${FILESDIR}/${PN}-2.28.1-gpgme_check_version.patch"
+	epatch "${FILESDIR}"/${PN}-2.28.1-gpgme_check_version.patch
+
+	gnome2_src_prepare
 }
 
 src_install() {
