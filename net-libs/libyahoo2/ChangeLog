@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libyahoo2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libyahoo2/ChangeLog,v 1.9 2009/04/25 11:33:28 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libyahoo2/ChangeLog,v 1.10 2011/02/06 18:18:46 ssuominen Exp $
+
+*libyahoo2-1.0.1 (06 Feb 2011)
+
+  06 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +libyahoo2-1.0.1.ebuild,
+  +files/libyahoo2-1.0.1-asneeded.patch:
+  Version bump.
 
 *libyahoo2-0.7.7 (25 Apr 2009)
 
