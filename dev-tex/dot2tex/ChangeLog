@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2tex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.16 2011/01/26 19:34:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.17 2011/02/06 21:51:48 maekke Exp $
+
+  06 Feb 2011; Markus Meier <maekke@gentoo.org> dot2tex-2.8.7.ebuild:
+  add ~arm, bug #352300
 
   26 Jan 2011; Fabian Groffen <grobian@gentoo.org> dot2tex-2.8.7.ebuild:
   Marked ~ppc-macos for bug #352300

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.6 2011/01/26 19:35:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.7 2011/02/06 21:52:29 maekke Exp $
+
+  06 Feb 2011; Markus Meier <maekke@gentoo.org> dot2texi-3.0.ebuild:
+  add ~arm, bug #352300
 
   26 Jan 2011; Fabian Groffen <grobian@gentoo.org> dot2texi-3.0.ebuild:
   Marked ~ppc-macos for bug #352300
