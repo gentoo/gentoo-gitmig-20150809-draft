@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.179 2011/01/29 13:02:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.180 2011/02/06 11:34:34 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> gdb-6.6-r2.ebuild:
+  Drop to ~mips
 
   29 Jan 2011; Raúl Porcel <armin76@gentoo.org> gdb-7.2.ebuild:
   alpha/ia64/s390/sparc stable wrt #350259

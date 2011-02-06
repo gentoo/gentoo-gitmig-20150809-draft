@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/crossdev
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.72 2010/10/11 09:00:42 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.73 2011/02/06 11:31:49 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> crossdev-0.9.18-r10.ebuild,
+  crossdev-20100620.ebuild, crossdev-20100814.ebuild:
+  Drop to ~mips
 
 *crossdev-20101011 (11 Oct 2010)
 

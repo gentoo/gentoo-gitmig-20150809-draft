@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.207 2010/12/22 21:16:55 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.208 2011/02/06 11:32:25 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> distcc-2.18.3-r10.ebuild:
+  Drop to ~mips
 
 *distcc-3.1-r5 (22 Dec 2010)
 

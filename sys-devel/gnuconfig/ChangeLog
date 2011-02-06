@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gnuconfig
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.52 2010/12/09 01:33:20 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.53 2011/02/06 11:35:41 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> gnuconfig-20100403.ebuild,
+  gnuconfig-20100924.ebuild:
+  Drop to ~mips
 
   09 Dec 2010; Mike Frysinger <vapier@gentoo.org> gnuconfig-20100924.ebuild:
   Stabilize for everyone.

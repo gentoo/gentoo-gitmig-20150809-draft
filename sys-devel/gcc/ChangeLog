@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.799 2011/01/01 00:59:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.800 2011/02/06 11:33:20 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> gcc-3.2.3-r4.ebuild,
+  gcc-4.1.2.ebuild:
+  Drop to ~mips
 
   01 Jan 2011; Ryan Hill <dirtyepic@gentoo.org> files/gcc-spec-env.patch:
   GET_ENVIRONMENT is poisoned in 4.6. Use getenv() instead.  No functional

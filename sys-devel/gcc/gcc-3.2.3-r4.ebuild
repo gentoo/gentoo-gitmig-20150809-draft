@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.28 2008/08/17 04:18:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.29 2011/02/06 11:33:20 leio Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -99,7 +99,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # this is a glibc-propolice forced bump to a gcc without guard
 # when no binary on the system has references to guard@@libgcc
 # hppa has no dependency on propolice for gcc - skip this arch
-KEYWORDS="x86 ppc sparc mips alpha -hppa ia64 s390"
+KEYWORDS="alpha -hppa ia64 ~mips ppc s390 sparc x86"
 IUSE="static nls bootstrap java build"
 
 # Ok, this is a hairy one again, but lets assume that we
