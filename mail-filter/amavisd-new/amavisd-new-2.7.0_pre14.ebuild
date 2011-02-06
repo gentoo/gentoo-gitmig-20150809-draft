@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre13.ebuild,v 1.1 2011/01/26 13:43:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre14.ebuild,v 1.1 2011/02/06 14:24:13 eras Exp $
 
 EAPI=3
 
@@ -83,11 +83,6 @@ src_prepare() {
 	fi
 }
 
-pkg_setup() {
-	enewgroup amavis
-	enewuser amavis -1 -1 "${AMAVIS_ROOT}" amavis
-}
-
 src_install() {
 	dosbin amavisd amavisd-agent amavisd-nanny amavisd-release \
 		amavisd-signer || die
@@ -142,6 +137,8 @@ src_install() {
 }
 
 pkg_preinst() {
+	enewgroup amavis
+	enewuser amavis -1 -1 "${AMAVIS_ROOT}" amavis
 	if use razor ; then
 		if [ ! -d "${ROOT}${AMAVIS_ROOT}/.razor" ] ; then
 			elog "Setting up initial razor config files..."
