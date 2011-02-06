@@ -1,6 +1,9 @@
 # ChangeLog for app-text/scrollkeeper-dtd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper-dtd/ChangeLog,v 1.3 2010/04/06 01:07:37 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper-dtd/ChangeLog,v 1.4 2011/02/06 07:39:55 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> scrollkeeper-dtd-1.0.ebuild:
+  Drop to ~mips
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org>
   scrollkeeper-dtd-1.0.ebuild:

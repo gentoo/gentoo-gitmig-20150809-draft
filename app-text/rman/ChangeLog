@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.35 2010/06/15 11:00:47 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.36 2011/02/06 07:37:15 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> rman-3.2.ebuild:
+  Drop to ~mips
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> rman-3.2.ebuild,
   metadata.xml:
