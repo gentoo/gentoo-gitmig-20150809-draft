@@ -7,7 +7,7 @@
     <description>Primary Maintainer (until Amir returns...)</description>
   </maintainer>
   <maintainer>
-    <email>flameeyes@gmail.com</email>
+    <email>flameeyes@gentoo.org</email>
   </maintainer>
   <longdescription>
     Quagga is a modern fork of Zebra. Quagga is a routing software package that provides TCP/IP
@@ -45,7 +45,7 @@
       Interface Shell (vtysh).
     </flag>
     <flag name="pam">
-      Add support for PAM (via<pkg>sys-libs/pam</pkg>) to the Quagga Virtual Terminal Interface
+      Add support for PAM (via <pkg>sys-libs/pam</pkg>) to the Quagga Virtual Terminal Interface
       Shell (vtysh); if the readline USE flag is disabled, this flag is ignored.
     </flag>
   </use>
