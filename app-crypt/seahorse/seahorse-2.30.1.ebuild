@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.30.1.ebuild,v 1.9 2010/10/17 15:26:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.30.1.ebuild,v 1.10 2011/02/06 12:51:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ RDEPEND="
 
 	avahi? ( >=net-dns/avahi-0.6 )
 	ldap? ( net-nds/openldap )
-	libnotify? ( >=x11-libs/libnotify-0.3.2 )"
+	libnotify? ( >=x11-libs/libnotify-0.3.2 <x11-libs/libnotify-0.7 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=app-text/gnome-doc-utils-0.3.2
