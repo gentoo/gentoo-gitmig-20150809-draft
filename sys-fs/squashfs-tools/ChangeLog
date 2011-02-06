@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.73 2011/01/31 02:53:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.74 2011/02/06 11:03:19 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> squashfs-tools-3.4.ebuild:
+  Drop to ~mips
 
 *squashfs-tools-4.1-r1 (31 Jan 2011)
 
