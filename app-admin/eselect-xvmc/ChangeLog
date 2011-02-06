@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.10 2008/10/29 14:37:29 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.11 2011/02/06 05:14:57 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> eselect-xvmc-0.1.ebuild:
+  Drop to ~mips
 
 *eselect-xvmc-0.2 (29 Oct 2008)
 

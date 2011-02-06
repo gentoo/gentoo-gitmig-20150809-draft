@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-vi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.45 2010/10/29 22:14:00 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.46 2011/02/06 05:13:22 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> eselect-vi-1.1.4.ebuild:
+  Drop to ~mips
 
   29 Oct 2010; Mark Loeser <halcy0n@gentoo.org> eselect-vi-1.1.7-r1.ebuild:
   Stable for ppc64; bug #251659
