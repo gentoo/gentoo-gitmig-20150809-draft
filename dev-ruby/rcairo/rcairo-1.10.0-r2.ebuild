@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r2.ebuild,v 1.1 2011/02/02 20:02:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.10.0-r2.ebuild,v 1.2 2011/02/06 17:00:01 flameeyes Exp $
 
 EAPI=2
 
@@ -39,9 +39,11 @@ DEPEND="${DEPEND}
 	>=x11-libs/cairo-1.2.0[svg]
 	dev-util/pkgconfig"
 
-ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.1.0-r1:2 )"
+ruby_add_bdepend "
+	dev-ruby/ruby-glib2
+	test? ( >=dev-ruby/test-unit-2.1.0-r1:2 )"
 
-each_ruby_prepare() {
+all_ruby_prepare() {
 	# Remove a failing test for the new recording surface. It's not
 	# clear if this is a test failure or not, but we need to move on
 	# with cairo 1.10.
