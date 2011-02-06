@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.4 2011/02/06 16:09:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.5 2011/02/06 21:46:27 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
@@ -31,6 +31,12 @@ DEPEND="${RDEPEND}
 # tests are not meant to be run outside of the
 # full SELinux userland repo
 RESTRICT="test"
+
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	echo "# Set this to true to save the linked policy." >> "${S}/src/semanage.conf"
