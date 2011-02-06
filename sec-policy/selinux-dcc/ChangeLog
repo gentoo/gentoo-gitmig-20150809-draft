@@ -1,0 +1,7 @@
+# ChangeLog for sec-policy/selinux-dcc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dcc/ChangeLog,v 1.1 2011/02/06 00:00:34 blueness Exp $
+
+  05 Feb 2011; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Initial commit to portage.
+
