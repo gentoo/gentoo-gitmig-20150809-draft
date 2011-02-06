@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.194 2011/01/30 19:14:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.195 2011/02/06 01:45:10 abcd Exp $
+
+  06 Feb 2011; Jonathan Callen <abcd@gentoo.org> gtksourceview-1.8.5-r1.ebuild,
+  gtksourceview-2.10.5-r1.ebuild:
+  Add prefix keywords; require eautoreconf for :1.0 (needed on Interix); depend
+  on ige-mac-integration on Darwin in :2.0
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gtksourceview-2.10.5-r1.ebuild:
