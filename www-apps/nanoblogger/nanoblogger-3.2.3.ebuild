@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.2.3.ebuild,v 1.9 2007/03/17 18:30:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.2.3.ebuild,v 1.10 2011/02/06 10:48:33 leio Exp $
 
 inherit bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 mips ppc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc x86"
 IUSE=""
 
 RDEPEND="app-shells/bash"

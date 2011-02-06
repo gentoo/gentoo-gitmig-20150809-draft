@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/nanoblogger
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.24 2007/06/03 19:48:40 rl03 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.25 2011/02/06 10:48:33 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> nanoblogger-3.2.3.ebuild:
+  Drop to ~mips
 
 *nanoblogger-3.3 (03 Jun 2007)
 
