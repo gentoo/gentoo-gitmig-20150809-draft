@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dwarves
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.10 2010/09/10 05:14:56 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.11 2011/02/06 15:42:01 flameeyes Exp $
+
+  06 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> dwarves-1.8.ebuild,
+  dwarves-9999.ebuild, metadata.xml:
+  Add dummy src_test since there are no tests; update my name in metadata.
 
   10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> dwarves-1.8.ebuild,
   +files/dwarves-1.8-glibc-212.patch:

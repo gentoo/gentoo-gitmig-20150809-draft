@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-9999.ebuild,v 1.4 2009/11/07 20:34:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-9999.ebuild,v 1.5 2011/02/06 15:42:01 flameeyes Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/acme/pahole.git"
 
@@ -26,6 +26,8 @@ src_compile() {
 	mycmakeargs="-D__LIB=$(get_libdir)"
 	cmake-utils_src_compile
 }
+
+src_test() { :; }
 
 src_install() {
 	cmake-utils_src_install
