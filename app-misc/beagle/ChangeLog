@@ -1,7 +1,6 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.118
-# 2010/09/13 04:26:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.124 2011/02/06 16:28:01 idl0r Exp $
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> beagle-0.3.9-r4.ebuild:
   Stable on amd64 wrt bug #352808
