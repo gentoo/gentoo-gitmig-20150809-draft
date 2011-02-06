@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mingetty
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.55 2008/04/26 16:29:18 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.56 2011/02/06 22:35:42 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> mingetty-1.07-r1.ebuild:
+  Drop to ~mips
 
   26 Apr 2008; nixnut <nixnut@gentoo.org> mingetty-1.08.ebuild:
   Stable on ppc wrt bug 214651
