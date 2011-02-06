@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.12 2010/01/15 04:16:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8.ebuild,v 1.13 2011/02/06 22:09:54 leio Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://folk.uio.no/gisle/enjoy/${PN}${PV//./}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="mips ppc sparc x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~mips ppc sparc x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-arch/unzip"

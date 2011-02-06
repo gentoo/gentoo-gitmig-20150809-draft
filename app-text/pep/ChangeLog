@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.19 2010/09/13 15:45:10 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.20 2011/02/06 22:09:54 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> pep-2.8.ebuild:
+  Drop to ~mips
 
   13 Sep 2010; Fabian Groffen <grobian@gentoo.org> pep-2.8-r1.ebuild:
   Make compilation on Darwin working again (flag-o-matic inherit was
