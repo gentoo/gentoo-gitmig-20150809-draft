@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ogmrip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.43 2010/12/06 23:46:17 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.44 2011/02/06 17:01:45 ssuominen Exp $
+
+  06 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> ogmrip-0.13.6.ebuild,
+  +files/ogmrip-0.13.6-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
 
 *ogmrip-0.13.6 (06 Dec 2010)
 

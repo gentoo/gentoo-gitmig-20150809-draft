@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.6.ebuild,v 1.1 2010/12/06 23:46:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.6.ebuild,v 1.2 2011/02/06 17:01:45 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -77,6 +77,8 @@ src_prepare() {
 	sed -i \
 		-e '/DISABLE_DEPRECATED/d' \
 		configure || die
+
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 
 	gnome2_src_prepare
 }
