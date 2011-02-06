@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg2vidcodec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.21 2010/01/07 15:21:40 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2vidcodec/ChangeLog,v 1.22 2011/02/06 07:47:05 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> mpeg2vidcodec-12-r1.ebuild:
+  Drop to ~mips
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   mpeg2vidcodec-12-r1.ebuild:
