@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.132 2011/01/22 22:47:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.133 2011/02/06 00:41:10 chainsaw Exp $
+
+*alsa-plugins-1.0.24 (06 Feb 2011)
+
+  06 Feb 2011; Tony Vroon <chainsaw@gentoo.org> +alsa-plugins-1.0.24.ebuild:
+  Version bump. Port to EAPI=3.
 
   22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   alsa-plugins-1.0.23-r1.ebuild:
