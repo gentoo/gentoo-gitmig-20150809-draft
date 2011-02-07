@@ -14,7 +14,4 @@
 	as a fully-featured multimedia library for building games or interactive
 	programs.
 	</longdescription>
-	<use>
-		<flag name="csfml">Build the C libraries for SFML</flag>
-	</use>
 </pkgmetadata>
