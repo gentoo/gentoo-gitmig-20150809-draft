@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.243 2011/02/07 20:51:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.244 2011/02/07 20:52:20 darkside Exp $
+
+  07 Feb 2011; Jeremy Olexa <darkside@gentoo.org> linux/package.provided:
+  remove util-linux provided entry
 
   07 Feb 2011; Jeremy Olexa <darkside@gentoo.org> linux/package.mask:
   mask procps-3.2.8-r2, bug 353630
