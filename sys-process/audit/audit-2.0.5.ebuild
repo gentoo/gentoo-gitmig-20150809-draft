@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.2 2011/02/07 21:00:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.3 2011/02/07 21:38:55 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit autotools multilib toolchain-funcs python linux-info
 
@@ -31,8 +33,8 @@ CONFIG_CHECK="~AUDIT"
 
 pkg_setup() {
 	linux-info_pkg_setup
-	python_set_active_version 2
 	python_pkg_setup
+	PYTHON_DIRS="bindings/python swig"
 }
 
 src_prepare() {
@@ -67,6 +69,10 @@ src_prepare() {
 	# Don't build static version of Python module.
 	epatch "${FILESDIR}"/${P}-python.patch
 
+	# Python bindings are built/installed manually.
+	sed -e "/^SUBDIRS =/s/ python//" -i bindings/Makefile.am
+	sed -e "/^SUBDIRS =/s/ swig//" -i Makefile.am
+
 	# Regenerate autotooling
 	eautoreconf
 
@@ -83,8 +89,37 @@ src_configure() {
 	econf --sbindir=/sbin $(use_with prelude)
 }
 
+src_compile() {
+	default
+
+	python_copy_sources ${PYTHON_DIRS}
+
+	building() {
+		emake \
+			PYTHON_VERSION="$(python_get_version)" \
+			pyexecdir="$(python_get_sitedir)"
+	}
+	local dir
+	for dir in ${PYTHON_DIRS}; do
+		python_execute_function -s --source-dir ${dir} building
+	done
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	installation() {
+		emake \
+			DESTDIR="${D}" \
+			PYTHON_VERSION="$(python_get_version)" \
+			pyexecdir="$(python_get_sitedir)" \
+			install
+	}
+	local dir
+	for dir in ${PYTHON_DIRS}; do
+		python_execute_function -s --source-dir ${dir} installation
+	done
+
 	dodoc AUTHORS ChangeLog README* THANKS TODO
 	docinto contrib
 	dodoc contrib/*
