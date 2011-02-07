@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.47 2010/11/23 20:56:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.48 2011/02/07 21:48:53 ulm Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -132,7 +132,7 @@ elisp_src_configure() { :; }
 # @DESCRIPTION:
 # Call elisp-compile to byte-compile all Emacs Lisp (*.el) files.
 # If ELISP_TEXINFO lists any Texinfo sources, call makeinfo to generate
-# GNU Info files from then.
+# GNU Info files from them.
 
 elisp_src_compile() {
 	elisp-compile *.el || die
