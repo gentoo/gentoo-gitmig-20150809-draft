@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.2.ebuild,v 1.1 2011/02/07 10:07:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.2.ebuild,v 1.2 2011/02/07 14:57:46 flameeyes Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -36,6 +36,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	weather? ( >=dev-libs/libgweather-2.25.4:2 )
 "
 DEPEND="${RDEPEND}
+	dev-util/gperf
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35.5
 	sys-devel/bison
