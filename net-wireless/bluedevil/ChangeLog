@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.2 2011/01/27 12:18:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.3 2011/02/07 23:19:05 scarabeus Exp $
+
+  07 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> bluedevil-1.0.1.ebuild:
+  Fix depending on obexd[server]. Fixes bug #353825.
 
 *bluedevil-1.0.1 (27 Jan 2011)
 
