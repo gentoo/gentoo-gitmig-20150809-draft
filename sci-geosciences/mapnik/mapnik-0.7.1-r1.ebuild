@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.2 2010/11/08 17:30:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.3 2011/02/07 06:54:11 nerdboy Exp $
 
 EAPI=2
 
 PYTHON_DEPEND="python? 2"
-inherit eutils python distutils toolchain-funcs versionator
+inherit eutils flag-o-matic python distutils toolchain-funcs versionator
 
 DESCRIPTION="A Free Toolkit for developing mapping applications."
 HOMEPAGE="http://www.mapnik.org/"
@@ -37,41 +37,40 @@ RDEPEND="dev-libs/boost
 		>=dev-db/postgis-1.5.2
 	)
 	python? ( dev-libs/boost[python] )
-	sqlite? ( dev-db/sqlite:3 )
-"
+	sqlite? ( dev-db/sqlite:3 )"
+
 DEPEND="${RDEPEND}
-	>=dev-util/scons-1.0.0
 	doc? ( dev-python/epydoc )
-"
+	dev-util/scons"
 
 src_prepare() {
 	sed -i \
 		-e "s|/usr/local|/usr|g" \
 		-e "s|Action(env\[config\]|Action('%s --help' % env\[config\]|" \
-		SConstruct || die
+		SConstruct || die "sed 1 failed"
 
 	sed -i \
 		-e "s:mapniklibpath + '/fonts':'/usr/share/fonts/dejavu/':g" \
-	    bindings/python/SConscript || die "sed 1 failed"
+	    bindings/python/SConscript || die "sed 2 failed"
 	rm -rf agg || die
 	epatch "${FILESDIR}"/${P}-libagg.patch
 }
 
 src_configure() {
-	MAKEOPTS="SYSTEM_FONTS=/usr/share/fonts/dejavu"
+	EMAKEOPTS="SYSTEM_FONTS=/usr/share/fonts/dejavu"
 
-	MAKEOPTS="${MAKEOPTS} INPUT_PLUGINS="
-	use postgres && MAKEOPTS="${MAKEOPTS}postgis,"
-	use gdal     && MAKEOPTS="${MAKEOPTS}gdal,ogr,"
-	use sqlite   && MAKEOPTS="${MAKEOPTS}sqlite,"
-	use curl     && MAKEOPTS="${MAKEOPTS}osm,"
-	MAKEOPTS="${MAKEOPTS}shape,raster"
+	EMAKEOPTS="${EMAKEOPTS} INPUT_PLUGINS="
+	use postgres && EMAKEOPTS="${EMAKEOPTS}postgis,"
+	use gdal     && EMAKEOPTS="${EMAKEOPTS}gdal,ogr,"
+	use sqlite   && EMAKEOPTS="${EMAKEOPTS}sqlite,"
+	use curl     && EMAKEOPTS="${EMAKEOPTS}osm,"
+	EMAKEOPTS="${EMAKEOPTS}shape,raster"
 
-	use cairo  || MAKEOPTS="${MAKEOPTS} CAIRO=false"
-	use python || MAKEOPTS="${MAKEOPTS} BINDINGS=none"
-	use debug  && MAKEOPTS="${MAKEOPTS} DEBUG=yes"
+	use cairo  || EMAKEOPTS="${EMAKEOPTS} CAIRO=false"
+	use python || EMAKEOPTS="${EMAKEOPTS} BINDINGS=none"
+	use debug  && EMAKEOPTS="${EMAKEOPTS} DEBUG=yes"
 
-	use postgres && use sqlite && MAKEOPTS="${MAKEOPTS} PGSQL2SQLITE=yes"
+	use postgres && use sqlite && EMAKEOPTS="${EMAKEOPTS} PGSQL2SQLITE=yes"
 
 	BOOST_PKG="$(best_version "dev-libs/boost")"
 	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
@@ -86,19 +85,27 @@ src_configure() {
 	# Passing things doesn't seem to hit all the right paths; another
 	# poster-child for just a bit too much complexity for its own good.
 	# See bug #301674 for more info.
-#	sed -i -e "s|BOOST_INCLUDE_DIR = None|BOOST_INCLUDE_DIR = \'${BOOST_INC}\'|" \
-#		-i -e "s|BOOST_LIB_DIR = None|BOOST_LIB_DIR = \'${BOOST_LIB}\'|" \
 	sed -i -e "s|searchDir, LIBDIR_SCHEMA|searchDir, \'${BOOST_LIBDIR_SCHEMA}\'|" \
 		-i -e "s|include/boost*|include/boost-${BOOST_VERSION}|" \
 		"${S}"/SConstruct || die "sed boost paths failed..."
 
-	scons CXX="$(tc-getCXX)" ${MAKEOPTS} DESTDIR="${D}" configure \
+	# this seems to be the only way to force user-flags, since nothing
+	# gets through the scons configure except the nuclear sed option.
+	sed -i -e "s:\-O%s:${CXXFLAGS}:" \
+		-i -e "s:env\['OPTIMIZATION'\]\,::" \
+		SConstruct || die "sed 3 failed"
+	sed -i -e "s:LINKFLAGS=linkflags:LINKFLAGS=linkflags + \" ${LDFLAGS}\":" \
+		src/SConscript || die "sed 4 failed"
+
+	scons CC="$(tc-getCC)" CXX="$(tc-getCXX)" ${EMAKEOPTS} configure \
 		|| die "scons configure failed"
 }
 
 src_compile() {
-	scons BOOST_INCLUDES=${BOOST_INC} BOOST_LIBS=${BOOST_LIB} \
-		BOOST_VERSION=${BOOST_VERSION} || die "scons make failed"
+	# note passing CXXFLAGS to scons does *not* work
+	scons CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
+		shared=1 || die "scons make failed"
+
 	if use doc; then
 		export PYTHONPATH="${S}/bindings/python:$(python_get_sitedir)"
 		cd docs/epydoc_config
@@ -108,8 +115,7 @@ src_compile() {
 }
 
 src_install() {
-	scons BOOST_INCLUDES=${BOOST_INC} BOOST_LIBS=${BOOST_LIB} \
-		BOOST_VERSION=${BOOST_VERSION} install || die "scons install failed"
+	scons DESTDIR="${D}" install || die "scons install failed"
 
 	if use python ; then
 	    fperms 0755 "$(python_get_sitedir)"/mapnik/paths.py

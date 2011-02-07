@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapnik
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.21 2010/11/08 17:30:15 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.22 2011/02/07 06:54:11 nerdboy Exp $
+
+  07 Feb 2011; Steve Arnold <nerdboy@gentoo.org> mapnik-0.7.1-r1.ebuild:
+  Updated with sed hacks to force scons to use specified C,CXX,LDFLAGS.
+  (closes bug #343809)  Please report any issues on a new bug.
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
   mapnik-0.6.1-r3.ebuild, mapnik-0.7.1-r1.ebuild:
