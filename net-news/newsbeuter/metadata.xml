@@ -6,6 +6,10 @@
 		<email>tanderson@gentoo.org</email>
 		<name>Thomas Anderson</name>
 	</maintainer>
+	<maintainer>
+		<email>radhermit@gentoo.org</email>
+		<name>Tim Harder</name>
+	</maintainer>
 	<longdescription lang="en">
 		newsbeuter is an RSS feed reader for the text console. It is designed
 		to run Unix-like operating systems such as Linux.
