@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.5.ebuild,v 1.1 2010/11/01 05:37:41 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-1.5.ebuild,v 1.2 2011/02/07 04:48:43 vapier Exp $
 
 inherit games
 
@@ -9,11 +9,11 @@ REV=${PV:2:1}
 
 DESCRIPTION="On the Rain-Slick Precipice of Darkness, Episode One"
 HOMEPAGE="http://rainslick.com/"
-SRC_URI="http://files.playgreenhouse.com/rainslickep${EP}_linux_r${REV}.tgz"
+SRC_URI="http://a.pa-cdn.com/greenhouse/rainslickep${EP}_linux_r${REV}.tgz"
 
 LICENSE="as-is"
 SLOT="${EP}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
