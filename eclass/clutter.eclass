@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/clutter.eclass,v 1.2 2010/06/26 01:26:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/clutter.eclass,v 1.3 2011/02/07 16:50:42 nirbheek Exp $
 
 #
 # @ECLASS: clutter.eclass
@@ -24,6 +24,12 @@ LICENSE="${LICENSE:-LGPL-2.1}"
 
 # This will be used by all clutter packages
 DEPEND="dev-util/pkgconfig"
+
+# @ECLASS-VARIABLE: CLUTTER_LA_PUNT
+# @DESCRIPTION:
+# Set to anything except 'no' to remove *all* .la files before installing.
+# Not to be used without due consideration, sometimes .la files *are* needed.
+CLUTTER_LA_PUNT="${CLUTTER_LA_PUNT:-"no"}"
 
 # @ECLASS-VARIABLE: DOCS
 # @DESCRIPTION:
@@ -58,6 +64,11 @@ clutter_src_install() {
 				doins ${example} || die "doins ${example} failed!"
 			fi
 		done
+	fi
+
+	# Delete all .la files
+	if [[ "${CLUTTER_LA_PUNT}" != "no" ]]; then
+		find "${D}" -name '*.la' -exec rm -f '{}' + || die
 	fi
 }
 
