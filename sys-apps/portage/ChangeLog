@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.796 2011/02/06 19:36:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.797 2011/02/07 00:52:34 zmedico Exp $
+
+*portage-2.2.0_alpha21 (07 Feb 2011)
+
+  07 Feb 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha21.ebuild:
+  2.2.0_alpha21 version bump. This includes all of the fixes in
+  portage-2.1.9.37.
+
+*portage-2.1.9.37 (07 Feb 2011)
+
+  07 Feb 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.37.ebuild:
+  2.1.9.37 version bump. This fixes bug #353836 (test failure without
+  python[sqlite]) and bug #353897 (fix default_src_test to work with
+  EAPI 4). Bug #349307 tracks all bugs fixed since 2.1.9.25.
 
   06 Feb 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.8.3.ebuild,
   portage-2.1.9.25.ebuild, portage-2.1.9.35.ebuild, portage-2.1.9.36.ebuild,
