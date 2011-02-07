@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.1.ebuild,v 1.3 2011/02/05 10:15:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.1.ebuild,v 1.4 2011/02/07 16:16:07 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils gnome.org
@@ -8,7 +8,7 @@ inherit autotools eutils gnome.org
 DESCRIPTION="Notifications library"
 HOMEPAGE="http://www.galago-project.org/"
 SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~ssuominen/introspection-20110205.m4.tar.bz2"
+	mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -29,10 +29,19 @@ PDEPEND="|| (
 	kde-base/knotify
 )"
 
+src_unpack() {
+	# If gobject-introspection is installed, we don't need the extra .m4
+	if use introspection; then
+		unpack ${P}.tar.bz2
+	else
+		unpack ${A}
+	fi
+}
+
 src_prepare() {
 	# Add configure switch for gtk+:3 based tests
 	# and make tests build only when needed
-	epatch "${FILESDIR}/${PN}-0.7.1-gtk3-tests.patch"
+	epatch "${FILESDIR}"/${PN}-0.7.1-gtk3-tests.patch
 
 	AT_M4DIR=${WORKDIR} eautoreconf
 }
