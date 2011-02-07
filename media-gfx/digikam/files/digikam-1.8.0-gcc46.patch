@@ -1,0 +1,15 @@
+--- trunk/extragear/graphics/digikam/libs/threads/dynamicthread.cpp	2011/02/06 10:48:24	1219102
++++ trunk/extragear/graphics/digikam/libs/threads/dynamicthread.cpp	2011/02/06 11:02:50	1219103
+@@ -257,6 +257,12 @@
+             kDebug() << "Transition to Running: Invalid Inactive state" << q;
+             return false;
+         }
++        default:
++        {
++            kDebug() << "libs/threads/dynanamicthread.cpp : Should never reach here: assert?" << q;
++            return false;
++        }
++
+     }
+ }
+ 

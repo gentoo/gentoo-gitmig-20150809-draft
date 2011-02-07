@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.8.0.ebuild,v 1.2 2011/01/28 19:15:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.8.0.ebuild,v 1.3 2011/02/07 21:33:56 dilfridge Exp $
 
 EAPI=3
 
@@ -65,7 +65,7 @@ DEPEND="${CDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=( "${FILESDIR}/${PN}"-1.7.0-docs.patch
-	"${FILESDIR}/${P}"-tests.patch )
+	"${FILESDIR}/${P}"-{tests,gcc46}.patch )
 
 src_prepare() {
 	if use handbook; then

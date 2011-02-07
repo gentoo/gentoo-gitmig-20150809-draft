@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.174 2011/02/02 22:11:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.175 2011/02/07 21:33:56 dilfridge Exp $
+
+  07 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  digikam-1.8.0.ebuild, +files/digikam-1.8.0-gcc46.patch:
+  Added upstream build fix for newer gcc/kde versions (bug 353751)
 
   02 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -digikam-1.2.0-r3.ebuild, -digikam-1.7.0.ebuild:
