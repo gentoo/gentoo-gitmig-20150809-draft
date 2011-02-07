@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5018 2011/02/07 15:29:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5019 2011/02/07 20:49:32 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Feb 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  desc/video_cards.desc:
+  Add qxl to VIDEO_CARDS.
 
   07 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Temporarily mask net-misc/pino until upstream release is out.
