@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.6 2011/02/02 06:16:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.7 2011/02/07 14:03:16 c1pher Exp $
 
 EAPI="2"
 
@@ -94,9 +94,9 @@ src_compile() {
 
 	use custom-cflags || strip-flags
 	append-flags -fPIC -fPIE \
-		'-DJOHN_SYSTEMWIDE' \
-		'-DJOHN_SYSTEMWIDE_HOME=\"/etc/john\"' \
-		'-DJOHN_SYSTEMWIDE_EXEC=\"/usr/libexec/john\"'
+		'-DJOHN_SYSTEMWIDE=1' \
+		'-DJOHN_SYSTEMWIDE_HOME=\\\"/etc/john\\\"' \
+		'-DJOHN_SYSTEMWIDE_EXEC=\\\"/usr/libexec/john\\\"'
 	gcc-specs-pie && append-ldflags -nopie
 	use openmp && OMP="-fopenmp"
 
