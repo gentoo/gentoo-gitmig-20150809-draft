@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-AIO
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.15 2011/01/27 02:36:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.16 2011/02/07 18:38:52 robbat2 Exp $
+
+  07 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> IO-AIO-3.710.ebuild:
+  Convert MODULE_VERSION back to explicit number for detection by update-ng
+  script.
 
 *IO-AIO-3.710 (27 Jan 2011)
 

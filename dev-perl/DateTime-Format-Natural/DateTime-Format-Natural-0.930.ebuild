@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Natural/DateTime-Format-Natural-0.930.ebuild,v 1.1 2011/02/07 18:28:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Natural/DateTime-Format-Natural-0.930.ebuild,v 1.2 2011/02/07 18:38:26 robbat2 Exp $
 
 EAPI=3
 
 MODULE_AUTHOR=SCHUBIGER
-MODULE_VERSION=${PV:0:4}
+MODULE_VERSION=0.93
 inherit perl-module
 
 DESCRIPTION="Create machine readable date/time with natural parsing logic"

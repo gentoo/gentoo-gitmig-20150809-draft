@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Graphics/Bio-Graphics-2.190.ebuild,v 1.1 2011/02/07 18:17:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Graphics/Bio-Graphics-2.190.ebuild,v 1.2 2011/02/07 18:37:35 robbat2 Exp $
 
 EAPI="3"
 
 MODULE_AUTHOR=LDS
-MODULE_VERSION=${PV:0:4}
+MODULE_VERSION=2.19
 inherit perl-module
 
 DESCRIPTION="Generate images from Bio::Seq objects for visualization purposes"

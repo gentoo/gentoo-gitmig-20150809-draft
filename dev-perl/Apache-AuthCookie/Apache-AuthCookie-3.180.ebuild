@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/Apache-AuthCookie-3.180.ebuild,v 1.1 2011/01/27 02:46:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/Apache-AuthCookie-3.180.ebuild,v 1.2 2011/02/07 18:37:10 robbat2 Exp $
 
 EAPI=3
 
 MODULE_AUTHOR=MSCHOUT
-MODULE_VERSION=${PV:0:4}
+MODULE_VERSION=3.18
 inherit perl-module
 
 DESCRIPTION="Perl Authentication and Authorization via cookies"
