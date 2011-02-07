@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-1.6-r1.ebuild,v 1.1 2011/02/07 10:43:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-1.6-r1.ebuild,v 1.2 2011/02/07 18:37:21 radhermit Exp $
 
 EAPI=4
 
@@ -28,11 +28,11 @@ DEPEND="media-libs/freetype:2
 	x11-libs/libXrandr"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-destdir.patch
-	epatch "${FILESDIR}"/${P}-deps-and-flags.patch
+	epatch "${FILESDIR}"/${P}-destdir.patch \
+		"${FILESDIR}"/${P}-deps-and-flags.patch
 }
 
 src_compile() {
@@ -51,6 +51,7 @@ src_install() {
 
 	if use examples ; then
 		docompress -x /usr/share/doc/${PF}/examples
+		local i
 		for i in ftp opengl pong post-fx qt sockets sound sound_capture voip window wxwidgets X11 ; do
 			insinto /usr/share/doc/${PF}/examples/$i
 			doins samples/$i/*

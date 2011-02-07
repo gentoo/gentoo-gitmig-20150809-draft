@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsfml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.4 2011/02/07 18:07:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.5 2011/02/07 18:37:21 radhermit Exp $
+
+  07 Feb 2011; Tim Harder <radhermit@gentoo.org> libsfml-1.6-r1.ebuild:
+  Minor fixes as suggested by Mr_Bones.
 
   07 Feb 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Moving to no-herd for now.
