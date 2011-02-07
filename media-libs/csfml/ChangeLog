@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/csfml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/csfml/ChangeLog,v 1.1 2011/02/07 11:08:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/csfml/ChangeLog,v 1.2 2011/02/07 18:08:45 radhermit Exp $
+
+  07 Feb 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Moving to no-herd for now.
 
 *csfml-1.6 (07 Feb 2011)
 
