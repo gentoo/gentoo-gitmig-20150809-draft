@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/eugene
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.7 2010/09/10 16:41:31 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.8 2011/02/07 15:35:52 phajdan.jr Exp $
+
+  07 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> eugene-3.6-r1.ebuild:
+  x86 stable wrt bug #353575
 
 *eugene-3.6-r1 (10 Sep 2010)
 
