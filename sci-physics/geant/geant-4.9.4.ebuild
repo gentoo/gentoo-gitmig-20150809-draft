@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4.ebuild,v 1.1 2011/01/22 02:28:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4.ebuild,v 1.2 2011/02/07 18:51:57 bicatali Exp $
 
 EAPI=3
 
@@ -53,7 +53,7 @@ src_configure() {
 		$(cmake-utils_use_enable gdml GEANT4_USE_GDML)
 		$(cmake-utils_use_enable geant3 GEANT4_USE_GEANT3TOGEANT4)
 		$(cmake-utils_use_enable granular GEANT4_BUILD_GRANULAR_BUILD)
-		$(cmake-utils_use_enable dawn GEANT4_USE_NETWORKVRML)
+		$(cmake-utils_use_enable vrml GEANT4_USE_NETWORKVRML)
 		$(cmake-utils_use_enable qt4 GEANT4_USE_QT)
 		$(cmake-utils_use_enable zlib GEANT4_USE_SYSTEM_ZLIB)
 		$(cmake-utils_use_build static-libs STATIC_LIBS)
