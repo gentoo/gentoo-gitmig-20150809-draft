@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r2.ebuild,v 1.17 2010/01/14 15:24:08 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/relay-ctrl/relay-ctrl-3.1.1-r2.ebuild,v 1.18 2011/02/07 10:53:55 bangert Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="sys-apps/ucspi-tcp
-	 sys-process/daemontools"
+	 virtual/daemontools"
 
 RELAYCTRL_BASE="/var/spool/relay-ctrl"
 # this is relative to RELAYCTRL_BASE
