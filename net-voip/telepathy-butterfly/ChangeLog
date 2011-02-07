@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-butterfly
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.31 2011/02/07 19:04:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.32 2011/02/07 19:26:07 pacho Exp $
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org>
+  telepathy-butterfly-0.5.15.ebuild:
+  Restrict python3 as it wasn't really working (thanks again to Arfrever).
 
   07 Feb 2011; Pacho Ramos <pacho@gentoo.org>
   telepathy-butterfly-0.5.15.ebuild:

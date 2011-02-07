@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.15.ebuild,v 1.2 2011/02/07 19:04:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.15.ebuild,v 1.3 2011/02/07 19:26:07 pacho Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="*:2.5"
+RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit python multilib
