@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.38.ebuild,v 1.1 2011/01/08 10:15:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.44.ebuild,v 1.1 2011/02/07 23:50:38 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.6
@@ -10,7 +10,7 @@ inherit python distutils eutils fdo-mime bash-completion multilib
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
-SRC_URI="http://calibre-ebook.com/downloads/$P.tar.gz"
+SRC_URI="http://calibre-ebook.googlecode.com/files/$P.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -85,6 +85,14 @@ src_install() {
 	# Unset DISPLAY in order to prevent xdg-mime from triggering a sandbox
 	# violation with kbuildsycoca as in bug #287067, comment #13.
 	export -n DISPLAY
+
+	# Bug #352625 - Some LANGUAGE values can trigger the following ValueError:
+	#   File "/usr/lib/python2.6/locale.py", line 486, in getdefaultlocale
+	#    return _parse_localename(localename)
+	#  File "/usr/lib/python2.6/locale.py", line 418, in _parse_localename
+	#    raise ValueError, 'unknown locale: %s' % localename
+	#ValueError: unknown locale: 46
+	export -n LANGUAGE
 
 	# Bug #295672 - Avoid sandbox violation in ~/.config by forcing
 	# variables to point to our fake temporary $HOME.
