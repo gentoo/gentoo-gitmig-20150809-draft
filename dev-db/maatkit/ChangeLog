@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/maatkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.17 2011/01/04 00:24:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.18 2011/02/07 19:56:38 robbat2 Exp $
+
+*maatkit-7207 (07 Feb 2011)
+
+  07 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> +maatkit-7207.ebuild:
+  Version bump.
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> maatkit-6070.ebuild:
   sparc stable (bug 345809)
