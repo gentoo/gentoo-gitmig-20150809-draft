@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r4.ebuild,v 1.17 2011/02/06 22:26:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r4.ebuild,v 1.18 2011/02/07 07:27:39 kumba Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1041,7 +1041,7 @@ DEPEND=">=sys-devel/gcc-3.4.4
 	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
 	ppc? ( >=sys-devel/gcc-4.1.0 )
 	ppc64? ( >=sys-devel/gcc-4.1.0 )
-	nptl? ( || ( >=sys-kernel/mips-headers-${NPTL_KERNEL_VERSION} >=sys-kernel/linux-headers-${NPTL_KERNEL_VERSION} ) )
+	nptl? ( >=sys-kernel/linux-headers-${NPTL_KERNEL_VERSION} )
 	>=sys-devel/binutils-2.15.94
 	>=sys-devel/gcc-config-1.3.12
 	>=app-misc/pax-utils-0.1.10
@@ -1056,11 +1056,7 @@ if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 	DEPEND="${DEPEND} !crosscompile_opts_headers-only? ( ${CATEGORY}/gcc )"
 
 	if [[ ${CATEGORY} == *-linux* ]] ; then
-		if [[ ${CATEGORY} == cross-mips* ]] ; then
-			DEPEND="${DEPEND} >=${CATEGORY}/mips-headers-2.6.10"
-		else
-			DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
-		fi
+		DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
 	fi
 else
 	DEPEND="${DEPEND} >=sys-libs/timezone-data-2007c"
