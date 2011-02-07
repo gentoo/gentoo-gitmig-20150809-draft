@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-farsight
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.14 2010/09/29 10:46:31 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.15 2011/02/07 18:21:41 pacho Exp $
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add gnome to metadata as talked between us since empathy relies on this.
 
 *telepathy-farsight-0.0.15 (29 Sep 2010)
 
