@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.148 2011/01/30 16:00:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.149 2011/02/07 09:46:23 phajdan.jr Exp $
+
+  07 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> eric-4.4.11.ebuild,
+  eric-5.0.5.ebuild:
+  x86 stable wrt bug #353710
 
   30 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> eric-4.4.10.ebuild,
   eric-5.0.4.ebuild:
