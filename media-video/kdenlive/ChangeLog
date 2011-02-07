@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.63 2011/02/02 05:06:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.64 2011/02/07 09:43:09 phajdan.jr Exp $
+
+  07 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kdenlive-0.7.8.ebuild:
+  x86 stable wrt bug #353477
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   kdenlive-0.7.7.1.ebuild, kdenlive-0.7.8.ebuild, metadata.xml:
