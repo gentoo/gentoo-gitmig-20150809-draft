@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.4.ebuild,v 1.3 2011/02/04 18:42:45 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.4.ebuild,v 1.4 2011/02/07 08:06:05 weaver Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ RDEPEND=""
 
 src_prepare() {
 	sed -i 's/${CFLAGS}/${CFLAGS} ${LDFLAGS}/' src/Makefile || die
+	sed -i -e 's/CFLAGS :=/CFLAGS +=/' -e 's/gcc $(CFLAGS)/gcc $(CFLAGS) $(LDFLAGS)/' scripts/*/Makefile || die
 }
 
 src_compile() {
