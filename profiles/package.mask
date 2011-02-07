@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12434 2011/02/07 15:29:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12435 2011/02/07 20:58:14 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -983,6 +983,7 @@ dev-libs/cygwin
 dev-util/mingw-runtime
 dev-util/mingw64-runtime
 dev-util/w32api
+sys-libs/newlib
 
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
 # Masked waiting on >=portage-2.2* to be unmasked
