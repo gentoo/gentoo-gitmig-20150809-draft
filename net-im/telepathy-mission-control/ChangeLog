@@ -1,6 +1,9 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.36 2011/01/29 22:44:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.37 2011/02/07 19:54:48 pacho Exp $
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add gnome to metadata as talked between us since empathy relies on this.
 
 *telepathy-mission-control-5.6.1 (29 Jan 2011)
 
