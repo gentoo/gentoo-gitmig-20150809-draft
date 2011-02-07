@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.1.ebuild,v 1.4 2011/02/07 16:16:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.1.ebuild,v 1.5 2011/02/07 16:19:54 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils gnome.org
@@ -31,7 +31,7 @@ PDEPEND="|| (
 
 src_unpack() {
 	# If gobject-introspection is installed, we don't need the extra .m4
-	if use introspection; then
+	if has_version "dev-libs/gobject-introspection"; then
 		unpack ${P}.tar.bz2
 	else
 		unpack ${A}
