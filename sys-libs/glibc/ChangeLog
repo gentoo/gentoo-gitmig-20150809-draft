@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.742 2011/02/07 07:27:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.743 2011/02/07 19:18:12 ssuominen Exp $
+
+  07 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> glibc-2.13.ebuild:
+  Abort if sys-devel/prelink is installed wrt #353814.
 
   07 Feb 2011; Joshua Kinard <kumba@gentoo.org> glibc-2.5-r4.ebuild,
   glibc-2.5.1.ebuild:

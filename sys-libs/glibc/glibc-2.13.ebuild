@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.13.ebuild,v 1.2 2011/02/06 15:59:39 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.13.ebuild,v 1.3 2011/02/07 19:18:12 ssuominen Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -196,6 +196,12 @@ pkg_setup() {
 		eerror "Please rebuild coreutils with USE=-static, then install"
 		eerror "glibc, then you may rebuild coreutils with USE=static."
 		die "Avoiding system meltdown #332927"
+	fi
+
+	if has_version sys-devel/prelink; then
+		eerror "Aborting. Your system might be prelinked."
+		eerror "Unprelink your system and uninstall sys-devel/prelink first."
+		die "Avoid system meltdown #353814"
 	fi
 }
 
