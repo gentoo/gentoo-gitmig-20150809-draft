@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-gabble
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.66 2010/11/22 19:42:59 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.67 2011/02/07 18:45:37 pacho Exp $
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add gnome to metadata as talked between us since empathy relies on this.
 
   22 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
   telepathy-gabble-0.10.4.ebuild:
