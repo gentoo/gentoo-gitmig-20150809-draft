@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.61 2011/01/27 14:20:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.62 2011/02/07 18:18:51 pacho Exp $
+
+*telepathy-glib-0.12.7 (07 Feb 2011)
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org> +telepathy-glib-0.12.7.ebuild,
+  metadata.xml:
+  Version bump with important bugfixes (like some crashers), add gnome to
+  metadata as talked between us since empathy relies on this.
 
   26 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   telepathy-glib-0.12.5.ebuild:
