@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.1 2011/01/25 03:35:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.2 2011/02/07 21:00:11 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -65,7 +65,7 @@ src_prepare() {
 	fi
 
 	# Don't build static version of Python module.
-	epatch "${FILESDIR}"/${PN}-1.7.17-python.patch
+	epatch "${FILESDIR}"/${P}-python.patch
 
 	# Regenerate autotooling
 	eautoreconf
