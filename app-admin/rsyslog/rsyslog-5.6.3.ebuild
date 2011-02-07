@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.6.2.ebuild,v 1.1 2011/01/10 11:16:13 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.6.3.ebuild,v 1.1 2011/02/07 12:55:32 ultrabug Exp $
 
 EAPI=3
 
