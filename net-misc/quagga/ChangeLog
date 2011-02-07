@@ -1,8 +1,7 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation
-# Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.99 2011/02/06 23:57:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.100 2011/02/07 00:04:03 flameeyes Exp $
 
   06 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fix email address and missing space.
