@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2-r1.ebuild,v 1.7 2011/01/30 19:39:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2-r1.ebuild,v 1.8 2011/02/07 14:13:10 ssuominen Exp $
 
 EAPI="2"
 
@@ -190,9 +190,5 @@ pkg_postinst() {
 	elog "such as Gentoo/FreeBSD systems. A global USE=fam can also"
 	elog "be useful for other packages that do not use the new file"
 	elog "monitoring API yet that the new glib provides."
-	elog
-	elog
-	elog "Add yourself to the plugdev group if you want"
-	elog "automounting to work."
 	elog
 }
