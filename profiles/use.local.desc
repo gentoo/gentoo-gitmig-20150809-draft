@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6346 2011/02/06 18:52:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6347 2011/02/07 03:33:05 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1141,6 +1141,7 @@ dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using objec
 dev-perl/App-Nopaste:clipboard - copying of URLs with -x/--copy
 dev-perl/App-Nopaste:github - Github authentication
 dev-perl/App-Nopaste:pastebin - pastebin.com support
+dev-perl/DBD-mysql:embedded - Support embedded server (libmysqld)
 dev-perl/DBIx-Class:admin -  Modules required for the DBIx::Class administrative library 
 dev-perl/DBIx-Class:admin_script -  Modules required for the CLI DBIx::Class interface dbicadmin 
 dev-perl/DBIx-Class:deploy -  Modules required for "deploy" in DBIx::Class::Storage::DBI and "deploymen_statements" in DBIx::Class::Storage::DBI 
@@ -3197,7 +3198,7 @@ net-misc/ps3mediaserver:tsmuxer - Install optional dependencies for transcoding 
 net-misc/quagga:bgpclassless -  Apply unofficial patch to enable classless prefixes for BGP. Patch and information to be found at http://hasso.linux.ee/doku.php/english:network:quagga 
 net-misc/quagga:multipath -  Enable multipath routes support for any number of routes 
 net-misc/quagga:ospfapi -  Enable OSPFAPI support for client applications accessing the OSPF link state database 
-net-misc/quagga:pam -  Add support for PAM (viasys-libs/pam) to the Quagga Virtual Terminal Interface Shell (vtysh); if the readline USE flag is disabled, this flag is ignored. 
+net-misc/quagga:pam -  Add support for PAM (via sys-libs/pam) to the Quagga Virtual Terminal Interface Shell (vtysh); if the readline USE flag is disabled, this flag is ignored. 
 net-misc/quagga:readline -  Enable support for sys-libs/readline to provide the Quagga Virtual Terminal Interface Shell (vtysh). 
 net-misc/quagga:realms -  Apply unofficial patch to enable realms support. Patch and information to be found at http://vcalinus.gemenii.ro/quaggarealms.html and http://linux.mantech.ro/quagga+realm_en.php 
 net-misc/quagga:tcp-zebra -  Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain sockets are chosen otherwise. 
