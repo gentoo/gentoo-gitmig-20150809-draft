@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-1.0.1-r1.ebuild,v 1.2 2011/02/03 07:13:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/btrace-1.0.1-r1.ebuild,v 1.3 2011/02/07 07:30:58 kumba Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="doc"
 RDEPEND=""
 # This is a Linux specific app!
 DEPEND="${RDEPEND}
-		|| ( sys-kernel/linux-headers sys-kernel/mips-headers )
+		sys-kernel/linux-headers
 		doc? ( virtual/latex-base app-text/dvipdfm )
 		dev-libs/libaio"
 S="${WORKDIR}/${MY_P}"
