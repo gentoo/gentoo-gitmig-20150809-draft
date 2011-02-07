@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/qmail-scanner
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.56 2011/01/16 10:37:22 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.57 2011/02/07 11:00:10 bangert Exp $
+
+  07 Feb 2011; Thilo Bangert <bangert@gentoo.org> qmail-scanner-2.05.ebuild,
+  qmail-scanner-2.06.ebuild, qmail-scanner-2.08.ebuild:
+  sys-process/daemontools -> virtual/daemontools (#353211)
 
 *qmail-scanner-2.08 (14 Oct 2009)
 

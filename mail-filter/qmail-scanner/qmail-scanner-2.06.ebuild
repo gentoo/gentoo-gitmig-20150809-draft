@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.06.ebuild,v 1.2 2009/06/25 07:40:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.06.ebuild,v 1.3 2011/02/07 11:00:10 bangert Exp $
 EAPI=2
 
 inherit fixheadtails toolchain-funcs eutils
@@ -25,7 +25,7 @@ RDEPEND="dev-lang/perl
 	mail-filter/maildrop
 	virtual/qmail
 	app-arch/unzip
-	sys-process/daemontools
+	virtual/daemontools
 	clamav? ( app-antivirus/clamav )
 	spamassassin? ( mail-filter/spamassassin )"
 DEPEND="${RDEPEND}"
