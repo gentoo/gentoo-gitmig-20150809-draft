@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/serialmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.20 2011/01/30 19:18:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.21 2011/02/07 10:43:44 bangert Exp $
+
+*serialmail-0.75-r4 (07 Feb 2011)
+
+  07 Feb 2011; Thilo Bangert <bangert@gentoo.org> +serialmail-0.75-r4.ebuild:
+  dont install setlock (#248095)
 
 *serialmail-0.75-r3 (30 Jan 2011)
 
