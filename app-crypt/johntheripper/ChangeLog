@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.126 2011/02/07 14:03:16 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.127 2011/02/07 15:03:56 c1pher Exp $
+
+  07 Feb 2011; Dane Smith <c1pher@gentoo.org>
+  files/johntheripper-1.7.6-cflags.patch:
+  Fix typos in -cflags.patch wrt bug 353969.
 
   07 Feb 2011; Dane Smith <c1pher@gentoo.org> johntheripper-1.7.6-r1.ebuild:
   Re-fix some escaping issues wrt bug 327211. Thanks Kevin Quinn for making

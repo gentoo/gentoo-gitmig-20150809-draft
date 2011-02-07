@@ -5,7 +5,7 @@
  	$(LN) ppc32alt.h arch.h
  	$(MAKE) $(PROJ) \
 -		CFLAGS="-c -Wall -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -Wall -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -Wall -fomit-frame-pointer" \
  		OPT_NORMAL="-fast -mcpu=7450" \
  		OPT_INLINE="-fast -mcpu=7450 -finline-limit=4000 -faltivec -maltivec"
  
@@ -14,7 +14,7 @@
  	$(MAKE) $(PROJ) \
  		ASFLAGS="$(ASFLAGS) -arch ppc" \
 -		CFLAGS="-c -Wall -arch ppc -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -Wall -arch ppc -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -Wall -arch ppc -fomit-frame-pointer" \
  		LDFLAGS="$(LDFLAGS) -arch ppc" \
  		OPT_NORMAL="-fast -mcpu=7450" \
  		OPT_INLINE="-fast -mcpu=7450 -finline-limit=4000 -faltivec -maltivec"
@@ -23,7 +23,7 @@
  	$(MAKE) $(PROJ) \
  		CC=cc \
 -		CFLAGS="-c -traditional-cpp" \
-+		CFLAGS="$(CLFAGS) -c -traditional-cpp" \
++		CFLAGS="$(CFLAGS) -c -traditional-cpp" \
  		OPT_NORMAL="-O2" \
  		OPT_INLINE="-O3"
  
@@ -32,7 +32,7 @@
  	$(MAKE) $(PROJ) \
  		ASFLAGS="$(ASFLAGS) -arch ppc" \
 -		CFLAGS="-c -Wall -arch ppc -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -Wall -arch ppc -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -Wall -arch ppc -fomit-frame-pointer" \
  		LDFLAGS="$(LDFLAGS) -arch ppc" \
  		OPT_NORMAL="-O2" \
  		OPT_INLINE="-O3 -finline-limit=4000"
@@ -41,7 +41,7 @@
  	$(LN) ppc64alt.h arch.h
  	$(MAKE) $(PROJ) \
 -		CFLAGS="-c -m64 -Wall -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -m64 -Wall -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -m64 -Wall -fomit-frame-pointer" \
  		LDFLAGS="$(LDFLAGS) -m64" \
  		OPT_NORMAL="-fast" \
  		OPT_INLINE="-fast -finline-limit=4000 -faltivec -maltivec"
@@ -50,7 +50,7 @@
  	$(MAKE) $(PROJ) \
  		ASFLAGS="$(ASFLAGS) -arch ppc" \
 -		CFLAGS="-c -arch ppc -m64 -Wall -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -arch ppc -m64 -Wall -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -arch ppc -m64 -Wall -fomit-frame-pointer" \
  		LDFLAGS="$(LDFLAGS) -arch ppc -m64" \
  		OPT_NORMAL="-fast" \
  		OPT_INLINE="-fast -finline-limit=4000 -faltivec -maltivec"
@@ -59,7 +59,7 @@
  	$(LN) ppc64.h arch.h
  	$(MAKE) $(PROJ) \
 -		CFLAGS="-c -m64 -Wall -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -m64 -Wall -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -m64 -Wall -fomit-frame-pointer" \
  		LDFLAGS="$(LDFLAGS) -m64" \
  		OPT_NORMAL="-fast" \
  		OPT_INLINE="-fast -finline-limit=4000"
@@ -68,7 +68,7 @@
  	$(MAKE) $(PROJ) \
  		ASFLAGS="$(ASFLAGS) -arch ppc" \
 -		CFLAGS="-c -arch ppc -m64 -Wall -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -arch ppc -m64 -Wall -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -arch ppc -m64 -Wall -fomit-frame-pointer" \
  		LDFLAGS="$(LDFLAGS) -arch ppc -m64" \
  		OPT_NORMAL="-fast" \
  		OPT_INLINE="-fast -finline-limit=4000"
@@ -77,7 +77,7 @@
  	$(MAKE) $(PROJ) \
  		ASFLAGS="$(ASFLAGS) -arch ppc" \
 -		CFLAGS="-c -Wall -arch ppc -fomit-frame-pointer" \
-+		CFLAGS="$(CLFAGS) -c -Wall -arch ppc -fomit-frame-pointer" \
++		CFLAGS="$(CFLAGS) -c -Wall -arch ppc -fomit-frame-pointer" \
  		LDFLAGS="$(LDFLAGS) -arch ppc" \
  		OPT_NORMAL="-fast -mcpu=7450" \
  		OPT_INLINE="-fast -mcpu=7450 -finline-limit=4000 -faltivec -maltivec"
