@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.3.16.ebuild,v 1.1 2011/01/29 15:58:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.3.16.ebuild,v 1.2 2011/02/07 09:56:46 tampakrap Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/libxml2:2
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
-    introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
+	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
 	test? ( dev-libs/json-glib[introspection=] )
 	dev-util/intltool
 	dev-util/pkgconfig"

@@ -1,6 +1,21 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.5 2011/01/29 15:58:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.6 2011/02/07 09:56:46 tampakrap Exp $
+
+*libdbusmenu-0.3.16-r2 (07 Feb 2011)
+
+  07 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  files/libdbusmenu-0.3.14-optional-dumper.patch,
+  +libdbusmenu-0.3.16-r2.ebuild,
+  +files/libdbusmenu-0.3.16-fix-introspection.patch,
+  files/libdbusmenu-0.3.16-optional-gtk.patch,
+  files/libdbusmenu-0.3.16-optional-tests.patch,
+  +files/libdbusmenu-0.3.16-optional-vala.patch,
+  +files/libdbusmenu-0.3.94-decouple-testapp.patch,
+  +files/libdbusmenu-0.3.94-fix-introspection.patch,
+  +files/libdbusmenu-0.3.94-optional-gtk.patch:
+  Revision bump, improved patches, fix tests, bug 315217, ebuild and patches by
+  Dennis Schridde
 
 *libdbusmenu-0.3.16 (29 Jan 2011)
 
