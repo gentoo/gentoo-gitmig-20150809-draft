@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.2 2010/10/27 18:23:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.3 2011/02/07 14:55:08 mgorny Exp $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:
@@ -118,7 +118,7 @@ scons_clean_makeopts() {
 					shift
 				else
 					# no value means no limit, let's pass a random int
-					new_makeopts=${new_makeopts+${new_makeopts} }${1}=255
+					new_makeopts=${new_makeopts+${new_makeopts} }${1}=5
 				fi
 				;;
 			# strip other long options
@@ -141,7 +141,7 @@ scons_clean_makeopts() {
 								new_optstr="${new_optstr}j ${2}"
 								shift
 							else
-								new_optstr="${new_optstr}j 255"
+								new_optstr="${new_optstr}j 5"
 							fi
 							;;
 						# otherwise, everything after -j is treated as an arg

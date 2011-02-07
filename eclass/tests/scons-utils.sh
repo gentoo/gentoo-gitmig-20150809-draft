@@ -22,7 +22,7 @@ test-scons_clean_makeopts() {
 }
 
 # jobcount expected for non-specified state
-jc=255
+jc=5
 # failed test counter
 failed=0
 
