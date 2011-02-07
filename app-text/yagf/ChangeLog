@@ -1,6 +1,12 @@
 # ChangeLog for app-text/yagf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.4 2011/01/19 17:46:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.5 2011/02/07 19:23:32 pva Exp $
+
+*yagf-0.8.5 (07 Feb 2011)
+
+  07 Feb 2011; Peter Volkov <pva@gentoo.org> -yagf-0.8.0.ebuild,
+  -yagf-0.8.1.ebuild, +yagf-0.8.5.ebuild:
+  Version bump, thank yaleks. Drop old.
 
 *yagf-0.8.4 (19 Jan 2011)
 
