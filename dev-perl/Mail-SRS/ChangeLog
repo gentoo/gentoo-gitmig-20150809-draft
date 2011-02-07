@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.10 2011/02/07 17:13:36 ssuominen Exp $
+# ChangeLog for dev-perl/Mail-SRS
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.11 2011/02/07 17:16:11 ssuominen Exp $
 
   16 Jul 2009; Torsten Veller <tove@gentoo.org> Mail-SRS-0.31.ebuild:
   Remove test dependencies from RDEPEND
