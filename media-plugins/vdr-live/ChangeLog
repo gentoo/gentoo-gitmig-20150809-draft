@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-live
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.24 2011/01/27 17:58:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.25 2011/02/07 22:21:51 hd_brummy Exp $
+
+  07 Feb 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-live-0.2.0.20110118-r1.ebuild:
+  added info for pass:login on first install
 
 *vdr-live-0.2.0.20110118-r1 (27 Jan 2011)
 

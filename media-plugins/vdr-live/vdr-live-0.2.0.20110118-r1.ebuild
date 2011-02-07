@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110118-r1.ebuild,v 1.1 2011/01/27 17:58:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110118-r1.ebuild,v 1.2 2011/02/07 22:21:51 hd_brummy Exp $
 
 EAPI="3"
 
@@ -70,10 +70,12 @@ pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
 	elog "To be able to use all functions of vdr-live"
-	elog "you should emerge and enable vdr-epgsearch"
-	elog
-	elog "\temerge >=vdr-epgsearch-0.9.25_beta7"
-	elog "\teselect vdr-plugin enable epgsearch"
+	elog "you should emerge and enable"
+	elog "=media-plugins/vdr-epgsearch-0.9.25_beta* to search the EPG,"
+	elog "media-plugins/vdr-streamdev-0.5.0 for Live-TV streaming"
+	echo
+	elog "On first install use login:pass"
+	elog "\tadmin:live"
 	echo
 	ewarn "This is a developer snapshot"
 	einfo "On problems, use the stable amd64, x86 versions of"
