@@ -1,0 +1,9 @@
+# ChangeLog for dev-php/igbinary
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.1 2011/02/07 10:20:45 olemarkus Exp $
+
+*igbinary-1.1.1 (07 Feb 2011)
+
+  07 Feb 2011; <olemarkus@gentoo.org> +igbinary-1.1.1.ebuild, +metadata.xml:
+  First dev-php/igbinary ebuild. Thanks to jbergstroem
+
