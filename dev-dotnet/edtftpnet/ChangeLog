@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/edtftpnet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/edtftpnet/ChangeLog,v 1.4 2007/11/22 16:45:28 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/edtftpnet/ChangeLog,v 1.5 2011/02/07 18:15:48 pacho Exp $
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainership as none of us is willing to maintain it neither use or
+  bump.
 
   22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
   Add DOCTYPE to metadata for validation
