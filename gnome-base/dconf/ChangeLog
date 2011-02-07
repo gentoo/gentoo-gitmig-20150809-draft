@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.6 2011/02/06 11:50:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.7 2011/02/07 12:56:01 pacho Exp $
+
+*dconf-0.5.1-r2 (07 Feb 2011)
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org> +dconf-0.5.1-r2.ebuild:
+  Upstream considers 'dconf' backend should be used if possible if dconf is
+  installed, setting it as default when dconf and gconf are present (thanks to
+  Gilles for remembering the issue).
 
   06 Feb 2011; Raúl Porcel <armin76@gentoo.org> dconf-0.5.1-r1.ebuild:
   Add ~ia64/~sh wrt #341503
