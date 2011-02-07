@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.120 2011/02/07 03:11:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.121 2011/02/07 18:00:40 robbat2 Exp $
+
+  07 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> DBD-mysql-4.18-r1.ebuild:
+  Change the built-with-USE dep to not pass -embedded per bug #268698 followup
+  comments.
 
 *DBD-mysql-4.18-r1 (07 Feb 2011)
 
