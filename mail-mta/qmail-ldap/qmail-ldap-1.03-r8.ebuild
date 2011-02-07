@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.2 2009/07/07 20:41:30 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.3 2011/02/07 11:04:46 bangert Exp $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42
@@ -51,7 +51,7 @@ RDEPEND="
 	!mailwrapper? ( !virtual/mta )
 	>=sys-apps/ucspi-tcp-0.88-r17
 	ssl? ( >=sys-apps/ucspi-ssl-0.70-r1 )
-	>=sys-process/daemontools-0.76-r6
+	virtual/daemontools
 	>=net-mail/dot-forward-0.71-r3
 	${DEPEND}
 "

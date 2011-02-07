@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.24 2010/10/19 05:35:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.25 2011/02/07 11:07:57 bangert Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -38,7 +38,7 @@ RDEPEND="
 	mailwrapper? ( net-mail/mailwrapper )
 	!mailwrapper? ( !virtual/mta )
 	sys-apps/ucspi-tcp
-	sys-process/daemontools
+	virtual/daemontools
 	net-mail/dot-forward
 	!noauthcram? (
 		|| ( >=net-mail/checkpassword-0.90 >=net-mail/checkpassword-pam-0.99 )

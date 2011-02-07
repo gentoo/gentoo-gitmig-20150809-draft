@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail-ldap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.29 2011/01/16 10:36:24 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.30 2011/02/07 11:04:46 bangert Exp $
+
+  07 Feb 2011; Thilo Bangert <bangert@gentoo.org> qmail-ldap-1.03-r8.ebuild:
+  sys-process/daemontools -> virtual/daemontools (#353211)
 
   04 Mar 2010; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from metadata.xml

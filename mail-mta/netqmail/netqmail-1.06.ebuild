@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.06.ebuild,v 1.9 2011/01/13 22:01:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.06.ebuild,v 1.10 2011/02/07 11:07:57 bangert Exp $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42
@@ -44,7 +44,7 @@ RDEPEND="
 	!mailwrapper? ( !virtual/mta )
 	>=sys-apps/ucspi-tcp-0.88-r17
 	ssl? ( >=sys-apps/ucspi-ssl-0.70-r1 )
-	>=sys-process/daemontools-0.76-r6
+	virtual/daemontools
 	>=net-mail/dot-forward-0.71-r3
 	virtual/checkpassword
 	authcram? ( >=net-mail/cmd5checkpw-0.30 )
