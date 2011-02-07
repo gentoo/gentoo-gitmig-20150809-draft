@@ -5,4 +5,7 @@
   <upstream>
     <remote-id type="cpan">DBD-mysql</remote-id>
   </upstream>
+<use>
+  <flag name='embedded'>Support embedded server (libmysqld)</flag>
+</use>
 </pkgmetadata>
