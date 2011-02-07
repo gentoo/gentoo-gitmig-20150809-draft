@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.31.ebuild,v 1.2 2011/02/07 04:51:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.31.ebuild,v 1.3 2011/02/07 08:41:14 leio Exp $
 
 EAPI=1
 
@@ -30,6 +30,11 @@ DEPEND="${RDEPEND}
 GST_PLUGINS_BUILD=""
 
 DOCS="AUTHORS NEWS README RELEASE"
+
+src_unpack() {
+	gnome2_src_unpack
+	epatch "$FILESDIR/${P}-fix-tag-test-linking.patch"
+}
 
 src_compile() {
 	# gst doesnt handle opts well, last tested with 0.10.15
