@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.7-r1.ebuild,v 1.1 2011/02/07 13:06:20 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.7-r1.ebuild,v 1.2 2011/02/07 17:18:23 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils python
+inherit distutils
 
 DESCRIPTION="Recipe Organizer and Shopping List Generator for Gnome"
 HOMEPAGE="http://grecipe-manager.sourceforge.net/"
@@ -19,7 +21,8 @@ IUSE="gnome-print pdf rtf"
 RDEPEND=">=dev-python/pygtk-2.3.93
 	>=dev-python/libgnome-python-2
 	>=gnome-base/libglade-2
-	|| ( >=dev-lang/python-2.4[sqlite] dev-python/pysqlite:2 )
+	|| ( =dev-lang/python-2*[sqlite] dev-python/pysqlite:2 )
+	dev-python/sqlalchemy
 	!=dev-python/sqlalchemy-0.6.4
 	dev-python/imaging
 	dev-python/gtkspell-python
@@ -29,8 +32,6 @@ RDEPEND=">=dev-python/pygtk-2.3.93
 	gnome-print? ( >=dev-python/libgnomeprint-python-2
 	               dev-python/python-poppler )"
 DEPEND="${RDEPEND}"
-
-RESTRICT_PYTHON_ABIS="3.*"
 
 # distutils gets a bunch of default docs
 DOCS="TESTS FAQ"
