@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.15.ebuild,v 1.1 2011/02/07 18:44:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/telepathy-butterfly-0.5.15.ebuild,v 1.2 2011/02/07 19:04:09 pacho Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -30,4 +30,12 @@ src_prepare() {
 	ln -s $(type -P true) py-compile
 
 	python_copy_sources
+}
+
+pkg_postinst() {
+	python_mod_optimize butterfly
+}
+
+pkg_postrm() {
+	python_mod_cleanup butterfly
 }
