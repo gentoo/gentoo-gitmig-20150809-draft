@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5021 2011/02/08 14:47:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5022 2011/02/08 17:12:58 hanno Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Feb 2011; Hanno Boeck <hanno@gentoo.org> license_groups:
+  Add HTML-Tidy to MISC_FREE license group, BSD-alike.
 
   08 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> base/package.mask,
   uclibc/package.mask:
