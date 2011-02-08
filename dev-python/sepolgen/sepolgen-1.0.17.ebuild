@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.17.ebuild,v 1.3 2010/04/04 18:53:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.17.ebuild,v 1.4 2011/02/08 17:17:56 arfrever Exp $
 
 inherit python
 
@@ -28,9 +28,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)
+	python_mod_optimize $(python_get_sitedir)/sepolgen
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)
+	python_mod_cleanup $(python_get_sitedir)/sepolgen
 }
