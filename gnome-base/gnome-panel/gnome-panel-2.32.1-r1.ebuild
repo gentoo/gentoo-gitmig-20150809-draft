@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.1 2011/02/08 10:24:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.2 2011/02/08 17:58:21 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -10,6 +10,7 @@ inherit gnome2 python eutils autotools
 
 DESCRIPTION="The GNOME panel"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="${SRC_URI} mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
@@ -67,6 +68,15 @@ pkg_setup() {
 	python_set_active_version 2
 }
 
+src_unpack() {
+	# If gobject-introspection is installed, we don't need the extra .m4
+	if has_version "dev-libs/gobject-introspection"; then
+		unpack ${P}.tar.bz2
+	else
+		unpack ${A}
+	fi
+}
+
 src_prepare() {
 	gnome2_src_prepare
 
@@ -78,7 +88,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.32.1-fix-multiscreen2.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
+	AT_M4DIR=${WORKDIR} eautoreconf
 }
 
 pkg_postinst() {
