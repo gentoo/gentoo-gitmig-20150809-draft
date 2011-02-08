@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.45.ebuild,v 1.1 2010/11/20 08:25:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.45.ebuild,v 1.2 2011/02/08 17:32:24 bicatali Exp $
 
 EAPI=2
 
@@ -52,12 +52,15 @@ src_test() {
 		$(ls main0{1..9}*.cc | sed -e 's/.cc//') \
 		|| die "emake tests failed"
 	for i in main0{1..9}*.exe; do
-		./${i} > ${i}.out || die "test ${i} failed"
+		LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" \
+			./${i} > ${i}.out || die "test ${i} failed"
 	done
 	if use hepmc; then
 		emake main31 main32 || die "emake tests for hepmc failed"
-		./main31.exe > main31.exe.out || die
-		./main32.exe main32.cmnd hepmcout32.dat > main32.exe.out || die
+		LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" \
+			./main31.exe > main31.exe.out || die
+		LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" \
+			./main32.exe main32.cmnd hepmcout32.dat > main32.exe.out || die
 	fi
 	emake clean && rm -f main*out
 }
