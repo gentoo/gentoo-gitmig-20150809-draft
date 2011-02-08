@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.0.0.ebuild,v 1.6 2011/01/21 15:24:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.0.0.ebuild,v 1.7 2011/02/08 23:37:37 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
-# DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils eutils
 
@@ -48,11 +47,12 @@ src_compile() {
 
 src_test() {
 	testing() {
-		# Tests fail with Python 3.
-		# http://code.google.com/p/python-nose/issues/detail?id=387
-		[[ "${PYTHON_ABI}" == 3.* ]] && return
+		if [[ "${PYTHON_ABI}" == 3.* ]]; then
+			rm -fr build || return 1
+			"$(PYTHON)" setup.py build_tests || return 1
+		fi
 
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" setup.py build -b build-${PYTHON_ABI} test
+		"$(PYTHON)" selftest.py -v
 	}
 	python_execute_function testing
 }
