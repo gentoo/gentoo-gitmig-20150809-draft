@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-user-share
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.10 2010/09/28 19:05:16 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.11 2011/02/08 22:41:35 eva Exp $
+
+  08 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-user-share-2.30.0.ebuild, gnome-user-share-2.30.1.ebuild:
+  Add missing nautilus dependency, drop unneeded la files. Pin gtk+ dependency
+  to slot 2.
 
 *gnome-user-share-2.30.1 (28 Sep 2010)
 

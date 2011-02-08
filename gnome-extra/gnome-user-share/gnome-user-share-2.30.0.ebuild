@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.30.0.ebuild,v 1.3 2010/08/01 12:04:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.30.0.ebuild,v 1.4 2011/02/08 22:41:35 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Personal file sharing for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -20,11 +20,12 @@ IUSE=""
 # FIXME: gnome-bluetooth is a hard-dep
 # bluetooth is pure runtime dep (dbus)
 RDEPEND=">=dev-libs/glib-2.16.0
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.14:2
 	>=app-mobilephone/obex-data-server-0.4
 	>=dev-libs/dbus-glib-0.70
 	dev-libs/libunique
 	>=gnome-base/gconf-2.10
+	>=gnome-base/nautilus-2
 	media-libs/libcanberra[gtk]
 	>=net-wireless/gnome-bluetooth-2.27.7.2:2
 	>=net-wireless/bluez-4.18
@@ -39,9 +40,8 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2"
 
-DOCS="AUTHORS ChangeLog NEWS README"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF}
 		--with-httpd=apache2
 		--with-modules-path=/usr/lib/apache2/modules/"
