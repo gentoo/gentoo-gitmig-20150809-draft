@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.798 2011/02/08 01:32:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.799 2011/02/08 22:03:06 zmedico Exp $
+
+  08 Feb 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild,
+  metadata.xml:
+  Support USE=python2, for cases in which portage dependencies such as
+  libselinux only work with python2.
 
 *portage-2.2.0_alpha22 (08 Feb 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.17 2011/02/06 19:36:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.18 2011/02/08 22:03:07 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -13,12 +13,12 @@ LICENSE="GPL-2"
 KEYWORDS=""
 PROVIDE="virtual/portage"
 SLOT="0"
-IUSE="build doc epydoc +ipc python3 selinux"
+IUSE="build doc epydoc +ipc python2 python3 selinux"
 
 python_dep="python3? ( =dev-lang/python-3* )
 	!python3? (
-		build? ( || ( dev-lang/python:2.8 dev-lang/python:2.7 dev-lang/python:2.6 ) )
-		!build? ( || ( dev-lang/python:2.8 dev-lang/python:2.7 dev-lang/python:2.6 >=dev-lang/python-3 ) )
+		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) )
+		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 !python2? ( >=dev-lang/python-3 ) ) )
 	)"
 
 # The pysqlite blocker is for bug #282760.
@@ -64,7 +64,10 @@ compatible_python_is_selected() {
 }
 
 pkg_setup() {
-	if ! use python3 && ! compatible_python_is_selected ; then
+	if use python2 && use python3 ; then
+		die "Do not enable python2 and python3 USE flags simultaneously"
+	fi
+	if ! use python2 && ! use python3 && ! compatible_python_is_selected ; then
 		ewarn "Attempting to select a compatible default python interpreter"
 		local x success=0
 		for x in /usr/bin/python2.* ; do
@@ -84,7 +87,9 @@ pkg_setup() {
 		fi
 	fi
 
-	if use python3; then
+	if use python2; then
+		python_set_active_version 2
+	elif use python3; then
 		python_set_active_version 3
 	fi
 }
@@ -107,7 +112,10 @@ src_prepare() {
 			die "failed to patch AbstractEbuildProcess.py"
 	fi
 
-	if use python3; then
+	if use python2; then
+		einfo "Converting shebangs for python2..."
+		python_convert_shebangs -r 2 .
+	elif use python3; then
 		einfo "Converting shebangs for python3..."
 		python_convert_shebangs -r 3 .
 	fi
