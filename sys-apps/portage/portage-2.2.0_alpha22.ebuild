@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.36.ebuild,v 1.2 2011/02/06 19:36:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha22.ebuild,v 1.1 2011/02/08 01:32:32 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -10,7 +10,7 @@ inherit eutils multilib python
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 PROVIDE="virtual/portage"
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_pl python3 selinux"
@@ -26,14 +26,14 @@ DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 !<=dev-python/pysqlite-2.4.1 )"
-
+# Require sandbox-2.2 for bug #288863.
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-1.2 )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
-	elibc_glibc? ( >=sys-apps/sandbox-1.6 )
-	elibc_uclibc? ( >=sys-apps/sandbox-1.6 )
+	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
+	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
 	!<app-shells/bash-3.2_p17"
@@ -58,7 +58,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=$PV
+TARBALL_PV=2.2.0_alpha21
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -174,6 +174,8 @@ src_install() {
 	insinto /etc
 	doins etc-update.conf dispatch-conf.conf || die
 
+	insinto "$portage_share_config/sets"
+	doins "$S"/cnf/sets/*.conf || die
 	insinto "$portage_share_config"
 	doins "$S/cnf/make.globals" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
@@ -283,6 +285,19 @@ pkg_preinst() {
 		rm "${ROOT}/etc/make.globals"
 	fi
 
+	has_version "<${CATEGORY}/${PN}-2.2_alpha"
+	MINOR_UPGRADE=$?
+
+	has_version "<=${CATEGORY}/${PN}-2.2_pre5"
+	WORLD_MIGRATION_UPGRADE=$?
+
+	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
+	# assume that the NEEDED.ELF.2 files have already been generated.
+	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
+		! ( [ -e "$ROOT"var/lib/portage/preserved_libs_registry ] && \
+		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" )
+	NEEDED_REBUILD_UPGRADE=$?
+
 	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12"
 	REPO_LAYOUT_CONF_WARN=$?
 }
@@ -291,6 +306,32 @@ pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
+
+	if [ $WORLD_MIGRATION_UPGRADE = 0 ] ; then
+		einfo "moving set references from the worldfile into world_sets"
+		cd "${ROOT}/var/lib/portage/"
+		grep "^@" world >> world_sets
+		sed -i -e '/^@/d' world
+	fi
+
+	if [ $NEEDED_REBUILD_UPGRADE = 0 ] ; then
+		einfo "rebuilding NEEDED.ELF.2 files"
+		for cpv in "${ROOT}/var/db/pkg"/*/*; do
+			if [ -f "${cpv}/NEEDED" ]; then
+				rm -f "${cpv}/NEEDED.ELF.2"
+				while read line; do
+					filename=${line% *}
+					needed=${line#* }
+					needed=${needed//+/++}
+					needed=${needed//#/##}
+					needed=${needed//%/%%}
+					newline=$(scanelf -BF "%a;%F;%S;%r;${needed}" $filename)
+					newline=${newline//  -  }
+					echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
+				done < "${cpv}/NEEDED"
+			fi
+		done
+	fi
 
 	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then
 		ewarn
@@ -306,6 +347,20 @@ pkg_postinst() {
 	einfo "For help with using portage please consult the Gentoo Handbook"
 	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
 	einfo
+
+	if [ $MINOR_UPGRADE = 0 ] ; then
+		elog "If you're upgrading from a pre-2.2 version of portage you might"
+		elog "want to remerge world (emerge -e world) to take full advantage"
+		elog "of some of the new features in 2.2."
+		elog "This is not required however for portage to function properly."
+		elog
+	fi
+
+	if [ -z "${PV/*_alpha*}" ]; then
+		elog "If you always want to use the latest development version of portage"
+		elog "please read http://www.gentoo.org/proj/en/portage/doc/testing.xml"
+		elog
+	fi
 }
 
 pkg_postrm() {
