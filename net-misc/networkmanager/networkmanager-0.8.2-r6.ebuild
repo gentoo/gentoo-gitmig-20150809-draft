@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.2-r5.ebuild,v 1.1 2011/02/06 15:06:17 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.2-r6.ebuild,v 1.1 2011/02/08 13:31:01 dagger Exp $
 
 EAPI="2"
 
@@ -97,6 +97,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-timestamp.patch"
 	# fix tests wrt bug #353549
 	epatch "${FILESDIR}/${P}-fix-tests.patch"
+	# fix temporary files creation bug #349003
+	epatch "${FILESDIR}/${P}-fix-tempfiles.patch"
 	eautoreconf
 }
 
