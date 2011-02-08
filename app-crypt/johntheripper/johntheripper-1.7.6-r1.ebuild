@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.8 2011/02/08 12:50:10 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.9 2011/02/08 13:34:07 c1pher Exp $
 
 EAPI="2"
 
@@ -93,16 +93,16 @@ src_compile() {
 	local OMP=''
 
 	use custom-cflags || strip-flags
-	append-flags -fPIC -fPIE \
-		'-DJOHN_SYSTEMWIDE=1' \
-		'-DJOHN_SYSTEMWIDE_HOME=\\\"/etc/john\\\"' \
-		'-DJOHN_SYSTEMWIDE_EXEC=\\\"/usr/libexec/john\\\"'
+	echo '#define JOHN_SYSTEMWIDE 1' >> config.gentoo
+	echo '#define JOHN_SYSTEMWIDE_HOME "/etc/john"' >> config.gentoo
+	echo '#define JOHN_SYSTEMWIDE_EXEC "/usr/libexec/john"' >> config.gentoo
+	append-flags -fPIC -fPIE -include "${S}"/config.gentoo
 	gcc-specs-pie && append-ldflags -nopie
 	use openmp && OMP="-fopenmp"
 
 	CPP=$(tc-getCXX) CC=$(tc-getCC) AS=$(tc-getCC) LD=$(tc-getCC)
 #	use mpi && CPP=mpicxx CC=mpicc AS=mpicc LD=mpicc
-	emake -C src/\
+	emake -C src/ \
 		CPP=${CPP} CC=${CC} AS=${AS} LD=${LD} \
 		CFLAGS="-c -Wall ${CFLAGS} ${OMP}" \
 		LDFLAGS="${LDFLAGS}" \
