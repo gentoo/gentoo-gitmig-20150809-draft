@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2.ebuild,v 1.2 2011/02/08 17:12:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r1.ebuild,v 1.1 2011/02/08 17:12:54 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,9 +16,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-
-# connman is not ready to be stabilized, bug #353440
-IUSE="clutter crypt doc gstreamer kerberos ldap networkmanager python ssl"
+IUSE="clutter connman crypt doc gstreamer kerberos ldap networkmanager python ssl"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -47,6 +45,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=dev-libs/libgdata-0.4
 
 	clutter? ( media-libs/clutter:1.0[gtk] )
+	connman? ( net-misc/connman )
 	crypt? ( || (
 				  ( >=app-crypt/gnupg-2.0.1-r2
 					${PINENTRY_DEPEND} )
@@ -62,7 +61,6 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 		>=dev-libs/nss-3.11 )
 
 	!<gnome-extra/evolution-exchange-2.32"
-# connman? ( net-misc/connman )
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.16
@@ -91,7 +89,7 @@ pkg_setup() {
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
 		$(use_enable networkmanager nm)
-		--disable-connman
+		$(use_enable connman)
 		$(use_enable gstreamer audio-inline)
 		--disable-profiling
 		--disable-pst-import
@@ -121,10 +119,10 @@ pkg_setup() {
 	fi
 
 	# NM and connman support cannot coexist
-#	if use networkmanager && use connman ; then
-#		ewarn "It is not possible to enable both ConnMan and NetworkManager, disabling connman..."
-#		G2CONF="${G2CONF} --disable-connman"
-#	fi
+	if use networkmanager && use connman ; then
+		ewarn "It is not possible to enable both ConnMan and NetworkManager, disabling connman..."
+		G2CONF="${G2CONF} --disable-connman"
+	fi
 
 	python_set_active_version 2
 }

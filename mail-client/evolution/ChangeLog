@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.324 2011/02/07 11:32:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.325 2011/02/08 17:12:54 pacho Exp $
+
+*evolution-2.32.2-r1 (08 Feb 2011)
+
+  08 Feb 2011; Pacho Ramos <pacho@gentoo.org> evolution-2.32.2.ebuild,
+  +evolution-2.32.2-r1.ebuild:
+  net-misc/connman is not ready to go to stable, drop RDEPEND from stable
+  candidate, -r1 for testing still has connman support.
 
 *evolution-2.32.2 (07 Feb 2011)
 
