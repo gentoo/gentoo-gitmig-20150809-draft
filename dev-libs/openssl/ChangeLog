@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.383 2010/12/10 19:08:50 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.384 2011/02/08 19:00:53 vapier Exp $
+
+*openssl-1.0.0d (08 Feb 2011)
+
+  08 Feb 2011; Mike Frysinger <vapier@gentoo.org> +openssl-1.0.0d.ebuild:
+  Version bump.
 
   10 Dec 2010; Brent Baude <ranger@gentoo.org> openssl-1.0.0c.ebuild:
   Marking openssl-1.0.0c ppc64 for bug 347623
