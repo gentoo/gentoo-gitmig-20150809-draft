@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncevolution/syncevolution-1.1.1.ebuild,v 1.1 2011/01/10 03:58:46 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncevolution/syncevolution-1.1.1.ebuild,v 1.2 2011/02/08 15:32:16 ssuominen Exp $
 
 EAPI=2
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A SyncML desktop client and server"
 HOMEPAGE="http://syncevolution.org/"
@@ -64,4 +64,9 @@ pkg_setup() {
 	else
 		G2CONF="${G2CONF} --enable-gui=no"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.5.x.patch
+	gnome2_src_prepare
 }
