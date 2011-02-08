@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.5 2011/01/18 14:19:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.6 2011/02/08 19:04:13 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -83,6 +83,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	gnome2_src_prepare
 
 	# disable pyc compiling
