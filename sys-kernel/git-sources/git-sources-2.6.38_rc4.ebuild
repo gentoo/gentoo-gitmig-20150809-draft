@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.38_rc4.ebuild,v 1.1 2011/02/08 02:01:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.38_rc4.ebuild,v 1.2 2011/02/08 19:55:57 gmsoft Exp $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
@@ -19,7 +19,7 @@ DESCRIPTION="The very latest -git version of the Linux kernel"
 HOMEPAGE="http://www.kernel.org"
 #SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/v2.6/snapshots/patch-${KV_FULL}.bz2"
 SRC_URI="${KERNEL_URI}"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
 
 K_EXTRAEINFO="This kernel is not supported by Gentoo due to its unstable and
