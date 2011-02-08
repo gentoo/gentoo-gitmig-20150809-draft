@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.405 2011/02/08 18:20:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.406 2011/02/08 21:39:12 xarthisius Exp $
+
+  08 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> openssh-5.8_p1.ebuild:
+  ppc64 stable wrt #353673
 
   08 Feb 2011; Tobias Klausmann <klausman@gentoo.org> openssh-5.8_p1.ebuild:
   Stable on alpha, bug #353673
