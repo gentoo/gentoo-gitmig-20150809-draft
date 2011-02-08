@@ -1,6 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/package.mask,v 1.19 2009/12/23 06:06:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/package.mask,v 1.20 2011/02/08 14:47:18 flameeyes Exp $
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
+#  on behalf of QA team <qa@gentoo.org
+#
+# Make sure uClibc is available as sys-libs/uclibc only on uclibc
+# profiles, as the "dynamic slot generation" is broken. The package is
+# still available on default profiles to be used with crossdev.
+-sys-libs/uclibc
 
 sys-libs/glibc
 

@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5020 2011/02/07 20:58:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5021 2011/02/08 14:47:18 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> base/package.mask,
+  uclibc/package.mask:
+  Make sys-libs/uclibc appear masked on non-uclibc profiles. This hides the
+  ebuild that has broken dynamic SLOT generation (the same as newlib).
 
   07 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Add newlib to the list of crossdev-only packages. The SLOT tricks it has been
