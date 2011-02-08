@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.69-r1.ebuild,v 1.2 2010/04/04 21:56:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.69-r1.ebuild,v 1.3 2011/02/08 17:33:35 arfrever Exp $
 
 IUSE="nls"
 
@@ -97,9 +97,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)
+	python_mod_optimize $(python_get_sitedir)/seobject.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)
+	python_mod_cleanup $(python_get_sitedir)/seobject.py
 }
