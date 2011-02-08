@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.53 2011/02/05 11:08:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.54 2011/02/08 17:39:01 arfrever Exp $
+
+  08 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  checkpolicy-2.0.21.ebuild:
+  Respect CC.
 
 *checkpolicy-2.0.21 (05 Feb 2011)
 
