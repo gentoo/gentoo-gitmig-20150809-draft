@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.12.1.ebuild,v 1.2 2011/02/04 17:54:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.12.1.ebuild,v 1.3 2011/02/08 21:11:46 abcd Exp $
 
 EAPI=3
 
@@ -17,10 +17,13 @@ pkg_setup() {
 	xorg-2_pkg_setup
 
 	CONFIGURE_OPTIONS="$(use_with zlib)
-		--with-pciids-path=/usr/share/misc"
+		--with-pciids-path=${EPREFIX}/usr/share/misc"
 }
 
 src_install() {
 	xorg-2_src_install
-	use minimal || { dobin scanpci/scanpci || die ; }
+	if ! use minimal; then
+		dodir /usr/bin || die
+		${BASH} "${AUTOTOOLS_BUILD_DIR:-${S}}/libtool" --mode=install "$(type -P install)" -c "${AUTOTOOLS_BUILD_DIR:-${S}}/scanpci/scanpci" "${ED}"/usr/bin || die
+	fi
 }
