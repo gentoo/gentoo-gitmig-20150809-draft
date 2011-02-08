@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<maintainer>
+  <email>pchrist@gentoo.org</email>
+  <name>Panagiotis Christopoulos</name>
+  <description>primary-maintainer</description>
+</maintainer>
+<maintainer>
+  <email>sionescu+gentoo@cddr.org</email>
+  <name>Stelian Ionescu (fe[nl]ix)</name>
+  <description>second-maintainer</description>
+</maintainer>
 <herd>common-lisp</herd>
 <longdescription>
 Steel Bank Common Lisp is an open source Common Lisp implementation.  It
