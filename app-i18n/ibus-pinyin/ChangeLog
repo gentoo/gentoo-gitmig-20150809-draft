@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-pinyin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.29 2010/11/05 14:28:59 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.30 2011/02/08 18:31:49 tomka Exp $
+
+  08 Feb 2011; Thomas Kahle <tomka@gentoo.org> ibus-pinyin-1.3.11.ebuild:
+  x86 stable per bug 350625
 
 *ibus-pinyin-1.3.99.20101029 (05 Nov 2010)
 
