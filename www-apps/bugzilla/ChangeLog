@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.196 2011/01/30 17:31:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.197 2011/02/08 08:14:01 tove Exp $
+
+*bugzilla-3.6.4-r1 (08 Feb 2011)
+
+  08 Feb 2011; Torsten Veller <tove@gentoo.org> +bugzilla-3.6.4-r1.ebuild:
+  Add dev-perl/Math-Random-Secure as optional dependency (#352794)
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> bugzilla-3.2.10.ebuild,
   bugzilla-3.6.4.ebuild:
