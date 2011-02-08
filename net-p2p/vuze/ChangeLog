@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.45 2011/01/24 19:51:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.46 2011/02/08 23:37:59 caster Exp $
+
+*vuze-4.6.0.2 (08 Feb 2011)
+
+  08 Feb 2011; Vlastimil Babka <caster@gentoo.org> -vuze-4.1.0.4-r1.ebuild,
+  -vuze-4.2.0.2-r1.ebuild, -vuze-4.4.0.6.ebuild, -vuze-4.5.0.4.ebuild,
+  +vuze-4.6.0.2.ebuild:
+  Version bump.
 
   24 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   vuze-4.3.1.4-r2.ebuild:
