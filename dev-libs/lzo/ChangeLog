@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.51 2011/02/06 12:39:35 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.52 2011/02/08 20:32:38 tomka Exp $
+
+  08 Feb 2011; Thomas Kahle <tomka@gentoo.org> lzo-2.04.ebuild:
+  x86 stable per bug 353842
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> lzo-2.02-r1.ebuild:
   Drop to ~mips
