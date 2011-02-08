@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.26.ebuild,v 1.1 2011/01/29 15:01:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.26.ebuild,v 1.2 2011/02/08 17:55:39 jlec Exp $
 
 EAPI="3"
 
@@ -32,11 +32,10 @@ src_compile() {
 		eqmake4 GUI.pro
 		emake || die
 	fi
-
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${ED}" install || die
 	if use X; then
 		newsbin GUI/GUI i7z_GUI || die
 	fi
