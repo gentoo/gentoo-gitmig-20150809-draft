@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.276 2011/02/08 13:20:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.277 2011/02/08 13:24:59 phajdan.jr Exp $
+
+  08 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-8.0.552.237.ebuild, -chromium-9.0.597.83.ebuild:
+  Remove old versions, security bug #353626.
 
   08 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999.ebuild:
   Fix build, bug #353643 by Mike Gilbert <floppymaster@gmail.com>.
