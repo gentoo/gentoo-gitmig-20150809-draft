@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>sping@gentoo.org</email>
-  <name>Sebastian Pipping</name>
-  <description>Primary maintainer</description>
-</maintainer>
-<use>
-  <flag name='bazaar'>Support <pkg>dev-vcs/bzr</pkg> based overlays</flag>
-  <flag name='darcs'>Support <pkg>dev-vcs/darcs</pkg> based overlays</flag>
-  <flag name='git'>Support <pkg>dev-vcs/git</pkg> based overlays</flag>
-  <flag name='mercurial'>Support <pkg>dev-vcs/mercurial</pkg> based overlays</flag>
-</use>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
+	</maintainer>
+	<maintainer>
+		<email>brian.dolbec@gmail.com</email>
+		<name>Brian Dolbec</name>
+		<description>Proxied co-maintainer, please CC on all bugs</description>
+	</maintainer>
+	<use>
+		<flag name="bazaar">Support <pkg>dev-vcs/bzr</pkg> based overlays</flag>
+		<flag name="darcs">Support <pkg>dev-vcs/darcs</pkg> based overlays</flag>
+		<flag name="git">Support <pkg>dev-vcs/git</pkg> based overlays</flag>
+		<flag name="mercurial">Support <pkg>dev-vcs/mercurial</pkg> based overlays</flag>
+	</use>
 </pkgmetadata>
