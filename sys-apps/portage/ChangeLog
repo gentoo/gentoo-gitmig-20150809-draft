@@ -1,6 +1,27 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.799 2011/02/08 22:03:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.800 2011/02/08 23:00:59 zmedico Exp $
+
+*portage-2.2.0_alpha23 (08 Feb 2011)
+
+  08 Feb 2011; Zac Medico <zmedico@gentoo.org> -portage-2.2.0_alpha22.ebuild,
+  +portage-2.2.0_alpha23.ebuild:
+  2.2.0_alpha23 version bump. This includes all of the fixes in
+  portage-2.1.9.39. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.39 (08 Feb 2011)
+
+  08 Feb 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.38.ebuild,
+  +portage-2.1.9.39.ebuild:
+  2.1.9.39 version bump. This fixes bug #354057 (test failure involving
+  ENODATA on FreeBSD), bug #354137 (clarify emerge man page description
+  of package arguments), and bug #354141 (support paths starting with
+  ../ for emerge package arguments). This also fixes a regression in
+  2.1.9.38 which can cause emerge to crash with an AttributeError.
+  Bug #349307 tracks all bugs fixed since 2.1.9.25.
+
+  08 Feb 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Prefer python3 if both python2 and python3 are enabled.
 
   08 Feb 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild,
   metadata.xml:
