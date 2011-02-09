@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5026 2011/02/09 21:06:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5027 2011/02/09 21:22:10 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Feb 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Fix gtk+-2.24 masking (bug #354275 by Dennis Schridde).
 
   09 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org> updates/1Q-2011:
   Change libunique SLOT from 0 to 1, new SLOT=3 ebuild coming

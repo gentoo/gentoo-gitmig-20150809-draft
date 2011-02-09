@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12439 2011/02/09 20:18:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12440 2011/02/09 21:22:10 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -55,7 +55,7 @@ dev-php5/mongo
 # New glib/gtk+ mask, for testing purpose
 # Needs a new gvfs as well
 >=dev-libs/glib-2.27
-=x11-libs/gtk+-2.24.0
+>=x11-libs/gtk+-2.24.0
 
 # Hans de Graaff <graaff@gentoo.org> (02 Feb 2011)
 # Masked for removal in 30 days. Superseded by
