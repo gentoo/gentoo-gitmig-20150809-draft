@@ -4,33 +4,26 @@
 <herd>kerberos</herd>
 <longdescription>Kerberos 5 implementation from KTH</longdescription>
 <use>
-	<flag name='ssl'>
-		Enable usage of openssl
-	</flag>
 	<flag name='berkdb'>
-		Berkeley DB is preferred before NDBM, but if you for
-		some reason want to use NDBM instead, you can disable
-		this USE flag.
+		Enable BerkeleyDB support instead of NDBM as a database backend
 	</flag>
 	<flag name='ipv6'>
-		Enable/Disable ipv6 support. No magic here.
+		Enable ipv6 support
 	</flag>
 	<flag name='X'>
-		Building X applications
+		Build X applications
 	</flag>
 	<flag name='threads'>
 		Enable pthread support
 	</flag>
 	<flag name='otp'>
-		Enable support for one-time passwords (OTP) in some
-		heimdal apps
+		Enable one-time password (OTP) support
 	</flag>
 	<flag name='pkinit'>
-		Enable pkinit support to get the initial ticket
+		Enable pkinit support for the initial ticket
 	</flag>
 	<flag name='hdb-ldap'>
-		Enable support for LDAP as database backend (not
-		suggested to use)
+		Enable LDAP support as a database backend
 	</flag>
 </use>
 </pkgmetadata>
