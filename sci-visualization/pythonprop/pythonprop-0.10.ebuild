@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pythonprop/pythonprop-0.10.ebuild,v 1.1 2011/02/06 10:56:55 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pythonprop/pythonprop-0.10.ebuild,v 1.2 2011/02/09 18:34:42 arfrever Exp $
 
-EAPI="2"
-
+EAPI="3"
 PYTHON_DEPEND="2"
+
 inherit python
 
 DESCRIPTION="Scripts to prepare and plot VOACAP propagation predictions"
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
