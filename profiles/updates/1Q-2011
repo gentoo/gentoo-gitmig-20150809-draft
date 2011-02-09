@@ -33,3 +33,4 @@ slotmove net-misc/guidedog 0 4
 slotmove x11-themes/skulpture 0 4
 slotmove media-gfx/wally 0 4
 slotmove x11-libs/libwnck 2.90 3
+slotmove dev-libs/libunique 0 1
