@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6351 2011/02/09 16:33:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6352 2011/02/09 21:33:27 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -229,13 +229,9 @@ app-crypt/gnupg:openct - build using dev-libs/openct compat
 app-crypt/gnupg:pcsc-lite - build with sys-apps/pcsc-lite
 app-crypt/gpgme:common-lisp - Install common-lisp files
 app-crypt/gpgme:pth - Enable support for GNU Portable Threads multithreading library
-app-crypt/heimdal:X -  Build X applications 
-app-crypt/heimdal:berkdb -  Enable BerkeleyDB support instead of NDBM as a database backend 
-app-crypt/heimdal:hdb-ldap -  Enable LDAP support as a database backend 
-app-crypt/heimdal:ipv6 -  Enable ipv6 support 
-app-crypt/heimdal:otp -  Enable one-time password (OTP) support 
-app-crypt/heimdal:pkinit -  Enable pkinit support for the initial ticket 
-app-crypt/heimdal:threads -  Enable pthread support 
+app-crypt/heimdal:hdb-ldap -  Adds support for LDAP as a database backend 
+app-crypt/heimdal:otp -  Adds support for one-time passwords 
+app-crypt/heimdal:pkinit -  Adds support for PKINIT for the initial ticket 
 app-crypt/kstart:afs -  Enables afs support which means you can acquire an afs token and set PAGs. It's recommended to set this USE if you need authenticated access to an AFS cell for your daemon/app. 
 app-crypt/mit-krb5:doc -  Creates and installs the API and implementation documentation. This is only useful if you want to develop software which depends on kerberos. 
 app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket.
