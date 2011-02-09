@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.3.ebuild,v 1.1 2011/02/09 08:52:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.3.ebuild,v 1.2 2011/02/09 11:48:50 radhermit Exp $
 
 EAPI=4
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="examples qt4"
 
 DEPEND="dev-lang/lua
+	dev-libs/boost
 	qt4? ( x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}"
 
