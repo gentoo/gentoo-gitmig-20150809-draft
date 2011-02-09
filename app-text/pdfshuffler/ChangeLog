@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdfshuffler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/ChangeLog,v 1.5 2011/01/08 17:34:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/ChangeLog,v 1.6 2011/02/09 10:37:40 phajdan.jr Exp $
+
+  09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pdfshuffler-0.5.1.ebuild:
+  x86 stable wrt bug #354029
 
 *pdfshuffler-0.5.1 (08 Jan 2011)
 
