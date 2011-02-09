@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0.ebuild,v 1.5 2011/02/05 11:07:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0-r1.ebuild,v 1.1 2011/02/09 08:20:50 suka Exp $
 
 EAPI="3"
 
@@ -113,6 +113,7 @@ src_unpack() {
 	# English support installed by default
 	rpm_unpack "./${UP}/${BASIS}-en-US-${BVER}.${LOARCH}.rpm"
 	rpm_unpack "./${UP}/libreoffice3-en-US-${BVER}.${LOARCH}.rpm"
+	rpm_unpack "./${UP}/libreoffice3-dict-en-${BVER}.${LOARCH}.rpm"
 	use offlinehelp && rpm_unpack "./LibO_${MY_PV2}_Linux_${LOARCH2}_helppack-rpm_en-US/RPMS//${BASIS}-en-US-help-${BVER}.${LOARCH}.rpm"
 	for s in base binfilter calc math res writer ; do
 		rpm_unpack "./${UP}/${BASIS}-en-US-${s}-${BVER}.${LOARCH}.rpm"
@@ -132,6 +133,15 @@ src_unpack() {
 			for n in base binfilter calc math res writer; do
 				rpm_unpack "./${LANGDIR}/${BASIS}-${m}-${n}-${BVER}.${LOARCH}.rpm"
 			done
+
+			for DICT_FILE in `find "./${LANGDIR}" -name "libreoffice3-dict-*-${BVER}.${LOARCH}.rpm"`; do
+				DICT_REGEX="s/libreoffice3-dict-(.*?)-${BVER}.${LOARCH}.rpm/\1/"
+				DICT_LOCALE=`basename "$DICT_FILE" | sed -E "${DICT_REGEX}"`
+				if [[ -n "${DICT_LOCALE}" && ! -d "${WORKDIR}/opt/libreoffice/share/extensions/dict-${DICT_LOCALE}" ]] ; then
+					rpm_unpack "${DICT_FILE}"
+				fi
+			done
+
 			# Help files
 			if use offlinehelp; then
 				LANGDIR2="LibO_${MY_PV2}_Linux_${LOARCH2}_helppack-rpm_${m}/RPMS/"
@@ -198,12 +208,6 @@ pkg_postinst() {
 	use gnome && gnome2_icon_cache_update
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
-
-	elog " libreoffice-bin does not provide integration with system spell "
-	elog " dictionaries. Please install them manually through the Extensions "
-	elog " Manager (Tools > Extensions Manager) or use the source based "
-	elog " package instead. "
-	elog
 
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.7 2011/02/05 11:07:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.8 2011/02/09 08:20:50 suka Exp $
+
+*libreoffice-bin-3.3.0-r1 (09 Feb 2011)
+
+  09 Feb 2011; Andreas Proschofsky <suka@gentoo.org>
+  -libreoffice-bin-3.3.0.ebuild, +libreoffice-bin-3.3.0-r1.ebuild:
+  Revision bump for automatic spell dictionary installation, thanks to Matthew
+  Turnbull <sparky@bluefang-logic.com> for the patch, bug #353010
 
   05 Feb 2011; Andreas Proschofsky <suka@gentoo.org> files/50-libreoffice-bin,
   libreoffice-bin-3.3.0.ebuild, files/wrapper.in:
