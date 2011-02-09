@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.1 2011/02/02 18:36:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.2 2011/02/09 17:22:05 pacho Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ src_prepare() {
 		sed -i -e '/bin_/d' GNUmakefile.am || die
 		sed -i -e '/SUBDIRS/d' GNUmakefile.am || die
 		sed -i -e '/\/GNUmakefile/d' configure.ac || die
-		sed -i -e '/wv[A-Z]/d' configure.ac || die
+		sed -i -e '/wv[[:upper:]]/d' configure.ac || die
 		eautoreconf
 	fi
 }
