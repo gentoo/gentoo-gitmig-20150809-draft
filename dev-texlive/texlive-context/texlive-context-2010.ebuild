@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2010.ebuild,v 1.2 2010/11/07 19:48:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2010.ebuild,v 1.3 2011/02/09 19:38:38 aballier Exp $
 
 EAPI="3"
 
@@ -19,6 +19,7 @@ DEPEND=">=dev-texlive/texlive-basic-2010
 >=dev-texlive/texlive-latex-2010
 !<dev-texlive/texlive-latex-2010
 >=app-text/texlive-core-2010[xetex]
+>=dev-texlive/texlive-metapost-2010
 "
 RDEPEND="${DEPEND} dev-lang/ruby
 "
