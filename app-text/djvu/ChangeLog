@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.109 2010/10/15 14:06:47 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.110 2011/02/09 14:54:50 scarabeus Exp $
+
+  09 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> djvu-3.5.23.ebuild:
+  QA: Use pretty loop instead of repeating the same commands.
 
 *djvu-3.5.23 (15 Oct 2010)
 
