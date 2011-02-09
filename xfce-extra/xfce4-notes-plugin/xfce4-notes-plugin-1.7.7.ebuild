@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/xfce4-notes-plugin-1.7.7.ebuild,v 1.1 2010/11/07 11:47:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/xfce4-notes-plugin-1.7.7.ebuild,v 1.2 2011/02/09 21:19:50 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=xfce-base/libxfce4util-4.4
 	>=xfce-base/xfce4-panel-4.4
 	>=xfce-base/xfconf-4.6
-	>=dev-libs/libunique-1"
+	=dev-libs/libunique-1*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"

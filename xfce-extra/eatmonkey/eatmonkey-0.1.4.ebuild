@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.4 2011/01/29 20:55:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/eatmonkey-0.1.4.ebuild,v 1.5 2011/02/09 21:16:53 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.12:2
-	>=dev-libs/libunique-1
+	=dev-libs/libunique-1*
 	>=xfce-base/libxfce4util-4.4
 	>=net-libs/libsoup-2.26"
 RDEPEND="${COMMON_DEPEND}
