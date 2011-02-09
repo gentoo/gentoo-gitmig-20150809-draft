@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/chmlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.19 2011/01/29 05:02:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.20 2011/02/09 12:50:14 phajdan.jr Exp $
+
+  09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chmlib-0.40-r1.ebuild:
+  x86 stable wrt bug #352473
 
   29 Jan 2011; Jeroen Roovers <jer@gentoo.org> chmlib-0.40-r1.ebuild:
   Stable for HPPA (bug #352473).
