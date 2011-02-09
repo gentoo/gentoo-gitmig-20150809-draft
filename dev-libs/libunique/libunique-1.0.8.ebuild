@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.0.8.ebuild,v 1.19 2010/02/28 06:52:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.0.8.ebuild,v 1.20 2011/02/09 21:06:42 nirbheek Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="a library for writing single instance application"
 HOMEPAGE="http://live.gnome.org/LibUnique"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="dbus debug doc"
 
