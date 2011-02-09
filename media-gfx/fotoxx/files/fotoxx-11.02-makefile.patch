@@ -1,10 +1,7 @@
-Index: fotoxx-10.11.2/Makefile
-===================================================================
---- fotoxx-10.11.2.orig/Makefile
-+++ fotoxx-10.11.2/Makefile
-@@ -5,30 +5,30 @@ VERSION = 10.11.2
- SOURCE = $(PROGRAM)-$(VERSION).cc
- 
+diff -r -U1 fotoxx-11.02.orig/Makefile fotoxx-11.02/Makefile
+--- fotoxx-11.02.orig/Makefile	2011-02-01 16:16:20.000000000 +0600
++++ fotoxx-11.02/Makefile	2011-02-10 00:09:50.000000000 +0600
+@@ -7,8 +7,8 @@
  # defaults for parameters that may be pre-defined
 -CXXFLAGS ?= -O3 -g -Wall
 -LDFLAGS ?= -O3 -g -Wall -rdynamic
@@ -17,27 +14,23 @@ Index: fotoxx-10.11.2/Makefile
 +CXXFLAGS += -c `pkg-config --cflags gtk+-2.0`
 +LIBS = `pkg-config --libs gtk+-2.0 gthread-2.0`
  
- BINDIR = $(PREFIX)/bin
+@@ -16,3 +16,3 @@
  DATADIR = $(PREFIX)/share/$(PROGRAM)
 -DOCDIR = $(PREFIX)/share/doc/$(PROGRAM)
 +DOCDIR = $(PREFIX)/share/doc/$(PF)
  MANDIR = $(PREFIX)/share/man/man1
- ICONDIR = $(DATADIR)/icons
- DESKTOP = $(DATADIR)/kornelix-$(PROGRAM).desktop
- 
+@@ -22,3 +22,3 @@
  $(PROGRAM): $(PROGRAM).o zfuncs.o
- 	@ ./dependencies.sh
 -	$(CXX) $(LFLAGS) -ltiff -o $(PROGRAM) $(PROGRAM).o zfuncs.o
 +	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o -ltiff $(LIBS)
- 
+ 	@ ./dependencies.sh
+@@ -26,3 +26,3 @@
  $(PROGRAM).o: $(SOURCE)
--	$(CXX) $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
-+	$(CXX) $(CXXFLAGS) -o $(PROGRAM).o $(SOURCE)            \
+-	$(CXX) $(CFLAGS) -o $(PROGRAM).o $(SOURCE)   \
++	$(CXX) $(CXXFLAGS) -o $(PROGRAM).o $(SOURCE) \
  	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\""
- 
+@@ -30,3 +30,3 @@
  zfuncs.o: zfuncs.cc
--	$(CXX) $(CFLAGS) zfuncs.cc	\
-+	$(CXX) $(CXXFLAGS) zfuncs.cc	\
+-	$(CXX) $(CFLAGS) zfuncs.cc	         \
++	$(CXX) $(CXXFLAGS) zfuncs.cc \
  	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\"" -D "BINDIR=\"$(BINDIR)\""
- 
- install: $(PROGRAM)
