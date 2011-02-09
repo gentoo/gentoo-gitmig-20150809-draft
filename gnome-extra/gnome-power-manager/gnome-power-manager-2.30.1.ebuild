@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.13 2011/02/09 21:22:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.14 2011/02/09 21:38:34 nirbheek Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.13.0:2
 	>=x11-apps/xrandr-1.3
 	>=x11-libs/cairo-1.0.0
 	>=x11-libs/libnotify-0.4.3
-	>=x11-libs/libwnck-2.10.0:0
+	>=x11-libs/libwnck-2.10.0:1
 	x11-libs/libX11
 	x11-libs/libXext
 	>=x11-libs/libXrandr-1.3
