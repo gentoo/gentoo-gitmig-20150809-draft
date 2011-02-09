@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/rtl8192se-2.6.0018.1013.2010.ebuild,v 1.2 2010/10/23 11:53:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/rtl8192se-2.6.0019.1207.2010.ebuild,v 1.1 2011/02/09 22:19:16 chithanh Exp $
 
 EAPI=3
 
