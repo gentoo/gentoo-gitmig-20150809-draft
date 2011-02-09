@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.1.ebuild,v 1.1 2011/01/07 20:21:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.2.ebuild,v 1.1 2011/02/09 05:24:46 radhermit Exp $
 
 EAPI=2
+CMAKE_MIN_VERSION="2.8.3"
 
 inherit versionator cmake-utils
 
