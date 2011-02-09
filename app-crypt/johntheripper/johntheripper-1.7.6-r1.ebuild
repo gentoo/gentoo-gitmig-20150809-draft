@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.10 2011/02/08 15:12:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.11 2011/02/09 18:44:09 c1pher Exp $
 
 EAPI="2"
 
@@ -22,8 +22,10 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 # This package can't be marked stable for ppc or ppc64 before bug 327211 is closed.
-KEYWORDS="alpha amd64 hppa ~mips ~ppc ~ppc64 sparc x86"
-IUSE="altivec custom-cflags -minimal mmx openmp sse2"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+IUSE="custom-cflags -minimal mmx openmp sse2"
+#Remove AltiVec USE flag. Appears to be an upstream issue.
+#IUSE="altivec custom-cflags -minimal mmx openmp sse2"
 #IUSE="altivec custom-cflags -minimal mmx -mpi sse2"
 
 # Seems a bit fussy with other MPI implementations.
@@ -50,19 +52,19 @@ get_target() {
 	elif use amd64; then
 		echo "linux-x86-64"
 	elif use ppc64; then
-		if use altivec; then
-			echo "linux-ppc32-altivec"
-		else
+		#if use altivec; then
+		#	echo "linux-ppc32-altivec"
+		#else
 			echo "linux-ppc64"
-		fi
+		#fi
 		# linux-ppc64-altivec is slightly slower than linux-ppc32-altivec for most hash types.
 		# as per the Makefile comments
 	elif use ppc; then
-		if use altivec; then
-			echo "linux-ppc32-altivec"
-		else
+		#if use altivec; then
+		#	echo "linux-ppc32-altivec"
+		#else
 			echo "linux-ppc32"
-		fi
+		#fi
 	else
 		echo "generic"
 	fi
