@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/hepmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.21 2011/02/07 19:34:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.22 2011/02/09 09:22:14 phajdan.jr Exp $
+
+  09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hepmc-2.06.03.ebuild:
+  x86 stable wrt bug #354011
 
 *hepmc-2.06.04 (07 Feb 2011)
 
