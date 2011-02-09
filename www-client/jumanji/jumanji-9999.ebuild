@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-9999.ebuild,v 1.2 2010/08/24 22:53:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-9999.ebuild,v 1.3 2011/02/09 21:12:45 nirbheek Exp $
 
 EAPI=2
 
@@ -17,9 +17,9 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.22.4:2
-	>=dev-libs/libunique-1.1.6:0
+	>=dev-libs/libunique-1.1.6:1
 	>=net-libs/libsoup-2.30.2:2.4
-	>=net-libs/webkit-gtk-1.2.1
+	>=net-libs/webkit-gtk-1.2.1:2
 	>=x11-libs/gtk+-2.18.6:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
