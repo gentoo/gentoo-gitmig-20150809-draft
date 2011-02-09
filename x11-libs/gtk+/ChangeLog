@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.484 2011/01/12 16:24:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.485 2011/02/09 17:18:19 eva Exp $
+
+*gtk+-2.24.0 (09 Feb 2011)
+
+  09 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> -gtk+-2.18.9.ebuild,
+  -gtk+-2.22.0.ebuild, -gtk+-2.22.1.ebuild, gtk+-2.22.1-r1.ebuild,
+  +gtk+-2.24.0.ebuild:
+  Clean up unused la files. Disable recentmanager tests, bug #285687. Drop
+  jpeg, jpeg2k and tiff use flags unneeded since the gdk-pixbuf split. Version
+  bump to 2.24. Drop old revisions.
 
   12 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> gtk+-2.22.1-r1.ebuild:
   Always apply multilib patch, will avoid falling into bug #288549 again, and
