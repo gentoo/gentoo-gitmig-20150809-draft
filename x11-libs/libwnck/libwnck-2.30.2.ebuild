@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.30.2.ebuild,v 1.11 2010/10/17 14:50:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.30.2.ebuild,v 1.12 2011/02/09 21:35:26 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ DESCRIPTION="A window navigation construction kit"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 SRC_URI="${SRC_URI}
