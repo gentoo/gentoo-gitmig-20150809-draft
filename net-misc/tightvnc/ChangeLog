@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.146 2010/12/25 16:09:54 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.147 2011/02/09 14:18:34 anarchy Exp $
+
+  09 Feb 2011; Jory A. Pratt <anarchy@gentoo.org> tightvnc-1.3.10-r1.ebuild:
+  convert to virtual/jpeg
 
   25 Dec 2010; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.10-r1.ebuild:
   Block net-misc/tigervnc
