@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.22.1-r1.ebuild,v 1.4 2011/02/09 17:18:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.22.1-r1.ebuild,v 1.5 2011/02/09 21:47:30 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gtk.org/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="aqua cups debug doc examples +introspection test vim-syntax xinerama"
+IUSE="aqua cups debug doc examples +introspection jpeg jpeg2k tiff test vim-syntax xinerama"
 
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
 RDEPEND="!aqua? (
@@ -28,11 +28,11 @@ RDEPEND="!aqua? (
 		x11-libs/libXcomposite
 		x11-libs/libXdamage
 		>=x11-libs/cairo-1.6[X,svg]
-		x11-libs/gdk-pixbuf:2[X,introspection?]
+		x11-libs/gdk-pixbuf:2[X,introspection?,jpeg?,jpeg2k?,tiff?]
 	)
 	aqua? (
 		>=x11-libs/cairo-1.6[aqua,svg]
-		x11-libs/gdk-pixbuf:2[introspection?]
+		x11-libs/gdk-pixbuf:2[introspection?,jpeg?,jpeg2k?,tiff?]
 	)
 	xinerama? ( x11-libs/libXinerama )
 	>=dev-libs/glib-2.25.10

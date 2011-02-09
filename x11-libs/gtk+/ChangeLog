@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.485 2011/02/09 17:18:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.486 2011/02/09 21:47:30 ssuominen Exp $
+
+  09 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> gtk+-2.22.1-r1.ebuild:
+  Revert removing USE="jpeg jpeg2k tiff" until gentoo-x86 is compatible with it
+  wrt #354279.
 
 *gtk+-2.24.0 (09 Feb 2011)
 
