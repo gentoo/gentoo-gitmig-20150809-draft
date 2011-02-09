@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/HTML-Clean
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.21 2009/03/12 17:28:42 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.22 2011/02/09 16:45:26 idl0r Exp $
 
   12 Mar 2009; Torsten Veller <tove@gentoo.org> HTML-Clean-0.8-r1.ebuild:
   Block <app-text/html-xml-utils-5.3 (#218146). Fix LICENSE
@@ -48,7 +48,6 @@
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/HTML-Clean
 
 *HTML-Clean-0.8 (24 Oct 2002)
 

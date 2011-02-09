@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/p5-Palm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.21 2010/07/16 07:40:05 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.22 2011/02/09 17:02:05 idl0r Exp $
 
 *p5-Palm-1.012 (16 Jul 2010)
 *p5-Palm-1.003 (16 Jul 2010)
@@ -58,7 +58,6 @@
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/p5-Palm
 
 *p5-Palm-1.2.4 (16 Jul 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/AppConfig
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.65 2010/12/03 02:21:25 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.66 2011/02/09 16:37:12 idl0r Exp $
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> AppConfig-1.66.ebuild:
   add ~arm (bug 302981)
@@ -222,7 +222,6 @@
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/AppConfig
 
 *AppConfig-1.52 (07 AUG 2002)
 

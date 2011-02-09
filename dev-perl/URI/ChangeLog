@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/URI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.85 2011/01/23 15:28:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.86 2011/02/09 16:58:36 idl0r Exp $
 
 *URI-1.580 (23 Jan 2011)
 
@@ -289,7 +289,6 @@
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/URI
 
 *URI-1.18 (6 May 2002)
 
