@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.93 2011/02/08 18:09:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.94 2011/02/09 13:02:10 phajdan.jr Exp $
+
+  09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  zziplib-0.13.60.ebuild:
+  x86 stable wrt bug #353274
 
   08 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   zziplib-0.13.60.ebuild:
