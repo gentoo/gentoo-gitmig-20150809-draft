@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/rakudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/ChangeLog,v 1.13 2011/01/16 13:29:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/ChangeLog,v 1.14 2011/02/09 10:03:02 patrick Exp $
+
+*rakudo-2011.01 (09 Feb 2011)
+
+  09 Feb 2011; Patrick Lauer <patrick@gentoo.org> +rakudo-2011.01.ebuild:
+  Bump for #354217
 
 *rakudo-2010.12 (16 Jan 2011)
 
