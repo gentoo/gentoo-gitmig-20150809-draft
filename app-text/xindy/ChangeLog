@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xindy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.11 2010/09/29 17:47:22 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.12 2011/02/09 09:02:34 radhermit Exp $
+
+  09 Feb 2011; Tim Harder <radhermit@gentoo.org> xindy-2.4.ebuild,
+  +files/xindy-2.4-locale.patch:
+  Apply patch for a locale related compile failure (bug #340008).
 
 *xindy-2.4 (29 Sep 2010)
 

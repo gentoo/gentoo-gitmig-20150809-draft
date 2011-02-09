@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.4.ebuild,v 1.1 2010/09/29 17:47:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.4.ebuild,v 1.2 2011/02/09 09:02:34 radhermit Exp $
 
 EAPI=3
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-configure.patch
+	epatch "${FILESDIR}"/${P}-locale.patch
 	eautoreconf
 }
 
