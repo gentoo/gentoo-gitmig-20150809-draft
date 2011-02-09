@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.157 2011/01/28 10:01:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.158 2011/02/09 00:04:42 dilfridge Exp $
+
+  09 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org> kword-2.3.1.ebuild:
+  There are broken ebuilds for dcmtk floating around. Make sure
+  they dont interfere with kword (bug 353746).
 
   28 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kword-2.1.2.ebuild,
   kword-2.2.2.ebuild:

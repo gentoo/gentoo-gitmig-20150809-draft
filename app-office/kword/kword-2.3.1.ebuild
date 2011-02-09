@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.3.1.ebuild,v 1.1 2011/01/20 00:09:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.3.1.ebuild,v 1.2 2011/02/09 00:04:42 dilfridge Exp $
 
 EAPI=3
 
@@ -37,6 +37,7 @@ KMLOADLIBS="koffice-libs"
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with wpd)
+		-DWITH_DCMTK=OFF
 	)
 
 	kde4-meta_src_configure
