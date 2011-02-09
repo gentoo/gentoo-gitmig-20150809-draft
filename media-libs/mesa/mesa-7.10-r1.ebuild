@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.ebuild,v 1.2 2011/01/27 16:44:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10-r1.ebuild,v 1.1 2011/02/09 22:25:09 zorry Exp $
 
 EAPI=3
 
@@ -45,7 +45,7 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	+classic debug +gallium gles llvm motif +nptl pic selinux kernel_FreeBSD"
+	+classic debug +gallium gles llvm motif +nptl pic selinux kernel_FreeBSD hardened"
 
 LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.23"
 # keep correct libdrm and dri2proto dep
@@ -134,6 +134,10 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 		epatch
 	fi
+
+	# bug 240956
+	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch
+	
 	# FreeBSD 6.* doesn't have posix_memalign().
 	if [[ ${CHOST} == *-freebsd6.* ]]; then
 		sed -i \
@@ -217,6 +221,9 @@ src_configure() {
 			elog "Enable gallium useflag if you want to use them."
 		fi
 	fi
+
+	# bug 240956
+	use x86 && myconf="${myconf} $(use_enable hardened glx-rts)"
 
 	# --with-driver=dri|xlib|osmesa || do we need osmesa?
 	econf \
