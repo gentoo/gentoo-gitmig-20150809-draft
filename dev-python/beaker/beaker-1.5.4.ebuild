@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-1.5.4.ebuild,v 1.6 2010/12/09 13:17:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/beaker-1.5.4.ebuild,v 1.7 2011/02/09 01:41:20 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,13 +25,6 @@ DEPEND="dev-python/setuptools
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	distutils_src_prepare
-
-	# Disable failing tests.
-	rm -f tests/test_cookie_only.py
-}
 
 src_test() {
 	testing() {
