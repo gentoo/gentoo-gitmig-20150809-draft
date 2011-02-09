@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.0.8.ebuild,v 1.1 2010/10/21 07:39:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.0.8.ebuild,v 1.2 2011/02/09 13:19:13 phajdan.jr Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/w/whois/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="iconv idn nls"
 RESTRICT="test" #59327
 
