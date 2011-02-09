@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-0.9.7.ebuild,v 1.1 2010/11/01 20:19:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-0.9.12.ebuild,v 1.1 2011/02/09 17:55:16 billie Exp $
 
 EAPI=2
 
@@ -25,7 +25,9 @@ RDEPEND=">=dev-python/PyQt4-4.5
 	>=dev-python/configobj-4.7.2
 	>=dev-python/python-musicbrainz-0.7.0
 	cover? ( >=dev-python/imaging-1.1.7 )
-	quodlibet? ( >=media-sound/quodlibet-2.2.1 )"
+	quodlibet? ( >=media-sound/quodlibet-2.2.1 )
+	>=dev-python/sip-4.10.2
+	>=dev-python/lxml-2.2.8"
 
 pkg_setup() {
 	python_set_active_version 2
