@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/zsync-0.6.2.ebuild,v 1.1 2011/02/09 22:01:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/zsync-0.6.2.ebuild,v 1.2 2011/02/09 22:02:26 robbat2 Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -44,4 +44,3 @@ src_install() {
 	dodoc NEWS README
 	doman doc/zsync.1 doc/zsyncmake.1
 }
-
