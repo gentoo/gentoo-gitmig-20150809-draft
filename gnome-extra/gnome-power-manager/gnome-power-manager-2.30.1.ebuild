@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.12 2010/12/12 17:05:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.30.1.ebuild,v 1.13 2011/02/09 21:22:39 nirbheek Exp $
 
 EAPI="2"
 
@@ -19,19 +19,19 @@ IUSE="doc +hal policykit test"
 RESTRICT="test"
 
 # HAL is used purely as a fallback for setting brightness if xrandr fail
-COMMON_DEPEND=">=dev-libs/glib-2.13.0
-	>=x11-libs/gtk+-2.17.7
-	>=gnome-base/gconf-2.10
+COMMON_DEPEND=">=dev-libs/glib-2.13.0:2
+	>=x11-libs/gtk+-2.17.7:2
+	>=gnome-base/gconf-2.10:2
 	>=gnome-base/gnome-keyring-0.6.0
 	>=gnome-base/gnome-panel-2
 	>=dev-libs/dbus-glib-0.71
-	>=dev-libs/libunique-1
+	>=dev-libs/libunique-1:1
 	>=media-libs/libcanberra-0.10[gtk]
 	sys-power/upower
 	>=x11-apps/xrandr-1.3
 	>=x11-libs/cairo-1.0.0
 	>=x11-libs/libnotify-0.4.3
-	>=x11-libs/libwnck-2.10.0
+	>=x11-libs/libwnck-2.10.0:0
 	x11-libs/libX11
 	x11-libs/libXext
 	>=x11-libs/libXrandr-1.3

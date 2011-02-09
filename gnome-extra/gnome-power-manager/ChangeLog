@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.144 2010/12/12 16:53:55 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.145 2011/02/09 21:22:39 nirbheek Exp $
+
+  09 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-power-manager-2.30.1.ebuild, gnome-power-manager-2.32.0.ebuild:
+  Fix slot dependencies, f.ex: libunique got a slotmove from 0 to 1
 
   12 Dec 2010; Raúl Porcel <armin76@gentoo.org>
   gnome-power-manager-2.32.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0.ebuild,v 1.5 2010/12/12 16:53:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.32.0.ebuild,v 1.6 2011/02/09 21:22:39 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,18 +18,18 @@ IUSE="doc policykit test"
 # FIXME: Interactive testsuite (upstream ? I'm so...pessimistic)
 RESTRICT="test"
 
-COMMON_DEPEND=">=dev-libs/glib-2.13.0
+COMMON_DEPEND=">=dev-libs/glib-2.13.0:2
 	>=x11-libs/gtk+-2.17.7:2
 	>=gnome-base/gnome-keyring-0.6.0
 	>=dev-libs/dbus-glib-0.71
 	>=x11-libs/libnotify-0.4.3
-	>=x11-libs/libwnck-2.10.0
+	>=x11-libs/libwnck-2.10.0:0
 	>=x11-libs/cairo-1
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
-	>=gnome-base/gconf-2.10
+	>=gnome-base/gconf-2.10:2
 	>=media-libs/libcanberra-0.10[gtk]
 	>=sys-power/upower-0.9.1
-	>=dev-libs/libunique-1.1:0
+	>=dev-libs/libunique-1.1:1
 	>=x11-apps/xrandr-1.3
 	>=x11-proto/xproto-7.0.15
 	x11-libs/libX11
