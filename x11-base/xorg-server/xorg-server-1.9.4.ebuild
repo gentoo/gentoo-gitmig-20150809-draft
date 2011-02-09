@@ -1,11 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.902.ebuild,v 1.2 2010/12/27 05:05:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.4.ebuild,v 1.1 2011/02/09 08:55:02 scarabeus Exp $
 
 EAPI=3
-# They generate the configure.ac with wrong version of util-macros
-# see bug #339988
-XORG_EAUTORECONF="yes"
 inherit xorg-2 multilib versionator
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
