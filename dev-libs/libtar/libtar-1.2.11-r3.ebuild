@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r3.ebuild,v 1.5 2010/05/09 19:26:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/libtar-1.2.11-r3.ebuild,v 1.6 2011/02/09 19:58:58 grobian Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools eutils multilib
 
 p_level=6
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.feep.net/pub/software/libtar/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-linux ~ppc-macos"
 IUSE="static-libs zlib"
 
 DEPEND="zlib? ( sys-libs/zlib )
@@ -28,7 +28,8 @@ src_prepare() {
 		-e '/INSTALL_PROGRAM/s:-s::' \
 		{doc,lib{,tar}}/Makefile.in || die
 
-	eautoreconf
+	sed -i -e "/\/usr\/share\/aclocal/s:/usr:$EPREFIX/usr:" aclocal.m4
+	eautoreconf # reconf for missing config.sub
 }
 
 src_configure() {
@@ -46,5 +47,5 @@ src_install() {
 	newdoc listhash/TODO TODO.listhash
 	newdoc debian/changelog ChangeLog.debian
 
-	rm -f "${D}"/usr/$(get_libdir)/${PN}.la
+	rm -f "${ED}"/usr/$(get_libdir)/${PN}.la
 }

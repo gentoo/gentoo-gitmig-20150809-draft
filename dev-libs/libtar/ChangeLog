@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.12 2010/05/09 19:26:13 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.13 2011/02/09 19:58:58 grobian Exp $
+
+  09 Feb 2011; Fabian Groffen <grobian@gentoo.org> libtar-1.2.11-r3.ebuild:
+  Fixed for Prefix by Jack Edge in bug #353713
 
   09 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libtar-1.2.11-r3.ebuild:
