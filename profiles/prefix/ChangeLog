@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.244 2011/02/07 20:52:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.245 2011/02/09 18:59:26 ulm Exp $
+
+  09 Feb 2011; Ulrich Mueller <ulm@gentoo.org> -darwin/macos/10.5/package.mask,
+  -darwin/macos/10.6/package.mask, darwin/macos/package.use.mask:
+  Remove obsolete mask entries for Emacs.
 
   07 Feb 2011; Jeremy Olexa <darkside@gentoo.org> linux/package.provided:
   remove util-linux provided entry
