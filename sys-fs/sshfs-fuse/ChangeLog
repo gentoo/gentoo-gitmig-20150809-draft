@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.50 2010/05/22 11:30:07 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.51 2011/02/09 19:18:55 darkside Exp $
+
+  09 Feb 2011; Jeremy Olexa <darkside@gentoo.org> sshfs-fuse-2.2.ebuild:
+  add ~arm, tested by myself
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)
