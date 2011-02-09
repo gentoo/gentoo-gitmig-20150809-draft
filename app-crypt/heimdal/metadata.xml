@@ -4,26 +4,14 @@
 <herd>kerberos</herd>
 <longdescription>Kerberos 5 implementation from KTH</longdescription>
 <use>
-	<flag name='berkdb'>
-		Enable BerkeleyDB support instead of NDBM as a database backend
-	</flag>
-	<flag name='ipv6'>
-		Enable ipv6 support
-	</flag>
-	<flag name='X'>
-		Build X applications
-	</flag>
-	<flag name='threads'>
-		Enable pthread support
-	</flag>
 	<flag name='otp'>
-		Enable one-time password (OTP) support
+		Adds support for one-time passwords
 	</flag>
 	<flag name='pkinit'>
-		Enable pkinit support for the initial ticket
+		Adds support for PKINIT for the initial ticket
 	</flag>
 	<flag name='hdb-ldap'>
-		Enable LDAP support as a database backend
+		Adds support for LDAP as a database backend
 	</flag>
 </use>
 </pkgmetadata>
