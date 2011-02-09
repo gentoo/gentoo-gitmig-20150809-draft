@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.8 2010/09/22 19:48:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.9 2011/02/09 18:16:28 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI=""
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="doc examples mysql postgres sqlite test"
+IUSE="doc mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
 	sqlite? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) )
@@ -63,14 +63,9 @@ src_install() {
 
 	dobashcompletion extras/django_bash_completion
 
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
-
 	if use doc; then
 		rm -fr docs/_build/html/_sources
-		dohtml -A txt -r docs/_build/html/*
+		dohtml -A txt -r docs/_build/html/* || die "dohtml failed"
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
