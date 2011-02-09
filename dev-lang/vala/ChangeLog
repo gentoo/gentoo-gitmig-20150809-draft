@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.40 2011/02/02 19:45:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.41 2011/02/09 12:46:40 phajdan.jr Exp $
+
+  09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vala-0.8.1.ebuild:
+  x86 stable wrt bug #343737
 
   02 Feb 2011; Raúl Porcel <armin76@gentoo.org> vala-0.8.1.ebuild,
   vala-0.9.3.ebuild, vala-0.10.1.ebuild, vala-0.10.2.ebuild,
