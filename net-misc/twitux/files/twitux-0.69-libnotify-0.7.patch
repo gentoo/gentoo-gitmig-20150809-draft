@@ -1,0 +1,30 @@
+--- src/twitux-app.c
++++ src/twitux-app.c
+@@ -31,6 +31,10 @@
+ #include <glib/gi18n.h>
+ #include <libnotify/notify.h>
+ 
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
++
+ #include <libtwitux/twitux-debug.h>
+ #include <libtwitux/twitux-conf.h>
+ #include <libtwitux/twitux-paths.h>
+@@ -1444,10 +1448,12 @@
+ 		NotifyNotification *notification;
+ 		GError             *error = NULL;
+ 
+-		notification = notify_notification_new (PACKAGE_NAME,
+-												msg,
+-												"twitux",
+-												NULL);
++		notification = notify_notification_new (PACKAGE_NAME, msg, "twitux"
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++		);
++#else
++		, NULL);
++#endif
+ 
+ 		notify_notification_set_timeout (notification, 8 * 1000);
+ 		notify_notification_show (notification, &error);
