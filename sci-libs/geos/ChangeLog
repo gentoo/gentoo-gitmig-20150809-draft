@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.49 2011/01/07 10:11:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.50 2011/02/10 18:02:03 arfrever Exp $
+
+  10 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +files/3.2.2-disable_static_modules.patch, geos-3.2.2.ebuild:
+  Restrict Jython ABIs. Don't install .a files in Python and Ruby directories.
+  Call python_mod_optimize() and python_mod_cleanup().
 
   07 Jan 2011; Hans de Graaff <graaff@gentoo.org> geos-3.1.1.ebuild,
   geos-3.2.0.ebuild, geos-3.2.0-r1.ebuild, geos-3.2.2.ebuild:

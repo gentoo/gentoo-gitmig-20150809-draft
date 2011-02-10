@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.2 2011/01/07 10:11:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.3 2011/02/10 18:02:03 arfrever Exp $
 
-EAPI=3
-
+EAPI="3"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit autotools eutils python
 
@@ -35,7 +34,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/3.2.0-multipy.patch \
 		"${FILESDIR}"/3.2.0-swig2.0.patch \
 		"${FILESDIR}"/3.2.0-python.patch \
-		"${FILESDIR}"/3.2.0-darwin.patch
+		"${FILESDIR}"/3.2.0-darwin.patch \
+		"${FILESDIR}"/3.2.2-disable_static_modules.patch
 	eautoreconf
 	echo "#!${EPREFIX}/bin/bash" > py-compile
 }
@@ -82,5 +82,17 @@ src_install() {
 	if use doc; then
 		cd "${S}/doc"
 		dohtml -r doxygen_docs/html/* || die
+	fi
+}
+
+pkg_postinst() {
+	if use python; then
+		python_mod_optimize geos/geos.py
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		python_mod_cleanup geos/geos.py
 	fi
 }
