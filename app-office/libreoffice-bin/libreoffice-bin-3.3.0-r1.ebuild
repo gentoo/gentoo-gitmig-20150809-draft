@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0-r1.ebuild,v 1.1 2011/02/09 08:20:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.0-r1.ebuild,v 1.2 2011/02/10 21:20:22 suka Exp $
 
 EAPI="3"
 
 inherit eutils fdo-mime gnome2-utils pax-utils prefix rpm multilib
 
-IUSE="gnome java kde offlinehelp"
+IUSE="gnome java offlinehelp"
 
 MY_PV="${PV/_/-}"
 MY_PV2="${PV}rc4"
@@ -102,7 +102,6 @@ src_unpack() {
 	rpm_unpack "./${UP}/desktop-integration/libreoffice3.3-freedesktop-menus-3.3-6.noarch.rpm"
 
 	use gnome && rpm_unpack "./${UP}/${BASIS}-gnome-integration-${BVER}.${LOARCH}.rpm"
-	use kde && rpm_unpack "./${UP}/${BASIS}-kde-integration-${BVER}.${LOARCH}.rpm"
 	use java && rpm_unpack "./${UP}/${BASIS}-javafilter-${BVER}.${LOARCH}.rpm"
 
 	# Extensions
