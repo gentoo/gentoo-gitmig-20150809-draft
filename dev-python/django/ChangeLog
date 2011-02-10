@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.63 2011/02/09 04:37:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.64 2011/02/10 11:26:21 phajdan.jr Exp $
+
+  10 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> django-1.2.5.ebuild:
+  x86 stable wrt security bug #354183
 
 *django-1.2.5 (09 Feb 2011)
 
