@@ -1,6 +1,19 @@
 # ChangeLog for net-fs/ncpfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.26 2010/10/08 16:22:59 mabi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ChangeLog,v 1.27 2011/02/10 09:26:38 kumba Exp $
+
+*ncpfs-2.2.6-r2 (10 Feb 2011)
+
+  10 Feb 2011; Joshua Kinard <kumba@gentoo.org> -ncpfs-2.2.6.ebuild,
+  +ncpfs-2.2.6-r2.ebuild, +files/ncpfs-2.2.6-multiple-vulns.patch,
+  +files/ncpfs-2.2.6-remove-packed-attrib.patch, +files/ipx.confd,
+  +files/ipx.init:
+  Add two patches to ncpfs, one to correct several vulnerabilities (#308071)
+  and another to remove unneeded __attribute((packed)) directives to make the
+  build look a lot cleaner. Also imported an init.d script and companion conf.d
+  file for starting up/shutting down IPX through the init system. The init
+  script should address #238688 in this package. Also fixed #126323 by
+  installing headers for ncpfs into /usr/include. And removed the -r0 ebuild.
 
   08 Oct 2010; Matti Bickel <mabi@gentoo.org> ncpfs-2.2.6-r1.ebuild:
   change virtual/php to dev-lang/php (bug #319623)
