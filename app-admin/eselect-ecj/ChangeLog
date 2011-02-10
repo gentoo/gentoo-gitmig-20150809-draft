@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-ecj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.8 2010/10/31 17:17:43 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.9 2011/02/10 23:28:39 hwoarang Exp $
+
+  10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> eselect-ecj-0.6.ebuild:
+  Stable on amd64 wrt bug #344375
 
 *eselect-ecj-0.6 (31 Oct 2010)
 
