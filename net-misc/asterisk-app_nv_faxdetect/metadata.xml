@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <herd>voip</herd>
-  <longdescription>Asterisk application plugins app_nv_faxdetect to detect faxes
-	  and app_nv_backgrounddetect to detect faxes, dtmf and voice. Useable with
-	  all channel types.</longdescription>
-</pkgmetadata>
