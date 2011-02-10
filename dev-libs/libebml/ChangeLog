@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.102 2011/02/07 11:04:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.103 2011/02/10 23:24:22 hwoarang Exp $
+
+  10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> libebml-1.0.0.ebuild:
+  Stable on amd64 wrt bug #329633
 
   07 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libebml-1.0.0.ebuild:
   x86 stable wrt bug #329633
