@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.11.23.ebuild,v 1.1 2011/02/10 18:00:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.11.23.ebuild,v 1.2 2011/02/10 18:09:44 grobian Exp $
 
 EAPI=3
 
@@ -20,10 +20,6 @@ KEYWORDS="~ppc-aix ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~p
 IUSE="doc emacs"
 
 DEPEND=">=sys-libs/zlib-1.1.4"
-
-src_unpack() {
-	unpack ${A}
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-CVE-2010-3846.patch
