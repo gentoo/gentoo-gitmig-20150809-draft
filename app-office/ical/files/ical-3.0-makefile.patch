@@ -1,4 +1,5 @@
 Add LDFLAGS to linker calls
+Fix deps on check targets for parallel tests
 
 Patch by Kevin McCarthy <signals42@gmail.com>
 
@@ -21,3 +22,12 @@ Patch by Kevin McCarthy <signals42@gmail.com>
  
  $(LIB1): FRC
  	@echo making in calendar
+@@ -195,7 +195,7 @@
+ check_text:
+ 	@ICAL_LIBRARY=$(srcdir) ./ical -nodisplay -f $(srcdir)/tests/no_x.tcl
+ 
+-check_x:
++check_x: check_text
+ 	@ICAL_LIBRARY=$(srcdir) ./ical -f $(srcdir)/tests/x.tcl
+ 
+ # Rules for shipping html documentation
