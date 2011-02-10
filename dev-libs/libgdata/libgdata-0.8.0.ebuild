@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.8.0.ebuild,v 1.1 2011/01/13 16:08:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.8.0.ebuild,v 1.2 2011/02/10 18:35:17 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -21,8 +21,8 @@ RDEPEND=">=dev-libs/glib-2.19:2
 		>=x11-libs/gdk-pixbuf-2.14:2
 		>=x11-libs/gtk+-2.14:2 )
 	>=dev-libs/libxml2-2
-	>=net-libs/libsoup-2.26.1:2.4
-	gnome? ( >=net-libs/libsoup-gnome-2.26.1:2.4 )
+	>=net-libs/libsoup-2.26.1:2.4[introspection?]
+	gnome? ( >=net-libs/libsoup-gnome-2.26.1:2.4[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
