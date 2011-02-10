@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.4.0.12.ebuild,v 1.1 2010/02/09 23:22:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.4.0.15.ebuild,v 1.1 2011/02/10 13:09:38 voyageur Exp $
 
 EAPI=2
 inherit eutils versionator
