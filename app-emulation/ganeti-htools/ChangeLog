@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/ganeti-htools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ChangeLog,v 1.5 2010/12/23 16:52:40 ramereth Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ChangeLog,v 1.6 2011/02/10 20:54:09 ramereth Exp $
+
+*ganeti-htools-0.3.0 (10 Feb 2011)
+
+  10 Feb 2011; Lance Albertson <ramereth@gentoo.org>
+  +ganeti-htools-0.3.0.ebuild:
+  Version bump, add blocker to older ganeti versions
 
 *ganeti-htools-0.2.8 (23 Dec 2010)
 
