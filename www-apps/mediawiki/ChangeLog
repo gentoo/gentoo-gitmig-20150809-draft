@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.153 2011/02/07 16:43:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.154 2011/02/10 22:38:36 hwoarang Exp $
+
+  10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> mediawiki-1.16.2.ebuild:
+  Stable on amd64 wrt bug #353475
 
   07 Feb 2011; Brent Baude <ranger@gentoo.org> mediawiki-1.16.2.ebuild:
   Marking mediawiki-1.16.2 ppc for bug 353475
