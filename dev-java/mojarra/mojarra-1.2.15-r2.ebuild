@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/mojarra-1.2.15-r2.ebuild,v 1.2 2011/01/12 17:56:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/mojarra-1.2.15-r2.ebuild,v 1.3 2011/02/10 19:33:37 tomka Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="https://javaserverfaces.dev.java.net/files/documents/1866/151669/${PN}-
 
 LICENSE="CDDL"
 SLOT="1.2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
