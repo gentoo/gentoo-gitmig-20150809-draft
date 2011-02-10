@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6352 2011/02/09 21:33:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6353 2011/02/10 04:13:12 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2686,6 +2686,7 @@ net-firewall/ipsec-tools:hybrid - Makes available both mode-cfg and xauth suppor
 net-firewall/ipsec-tools:idea - Enable support for the patented IDEA algorithm
 net-firewall/ipsec-tools:nat - Enable NAT-Traversal
 net-firewall/ipsec-tools:rc5 - Enable support for the patented RC5 algorithm
+net-firewall/iptables:netlink - Build against libnfnetlink which enables the nfnl_osf util
 net-firewall/nufw:nfconntrack - Use netfilter_conntrack
 net-firewall/nufw:nfqueue - Use NFQUEUE instead of QUEUE
 net-firewall/nufw:pam_nuauth - Add support for pam nufw from PAM
