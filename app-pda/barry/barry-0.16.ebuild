@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.9 2010/10/09 07:38:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.10 2011/02/10 20:11:13 ssuominen Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/barry/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="boost doc gui opensync"
+IUSE="boost doc gui"
 
 RDEPEND="dev-libs/libusb:0
 	dev-libs/openssl
@@ -22,8 +22,7 @@ RDEPEND="dev-libs/libusb:0
 	gui?	( >=dev-cpp/gtkmm-2.4
 			  >=dev-cpp/libglademm-2.4
 			  >=dev-cpp/glibmm-2.4
-			  >=dev-libs/libtar-1.2.11-r2 )
-	opensync? ( =app-pda/libopensync-0.22* )"
+			  >=dev-libs/libtar-1.2.11-r2 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -43,7 +42,7 @@ src_configure() {
 		$(use_enable gui) \
 		$(use_with gui libtar /usr) \
 		$(use_with gui libz) \
-		$(use_enable opensync opensync-plugin)
+		--disable-opensync-plugin
 }
 
 src_compile() {
