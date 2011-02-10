@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.222.ebuild,v 1.10 2011/02/10 09:38:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.222.ebuild,v 1.11 2011/02/10 09:39:33 pacho Exp $
 
 EAPI=3
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	>=dev-perl/extutils-depends-0.300
 	>=dev-perl/extutils-pkgconfig-1.030"
 
-#RDEPEND+=" || ( <x11-libs/gtk+-2.22.1-r1[jpeg] x11-libs/gdk-pixbuf )"
+#RDEPEND+=" || ( <x11-libs/gtk+-2.22.1-r1[jpeg] x11-libs/gdk-pixbuf[jpeg] )"
 #SRC_TEST=do
 #src_test(){
 #	Xmake test || die
