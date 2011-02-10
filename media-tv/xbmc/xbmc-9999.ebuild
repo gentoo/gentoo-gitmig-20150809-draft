@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.73 2011/02/06 07:34:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.74 2011/02/10 02:51:55 vapier Exp $
 
 EAPI="2"
 
@@ -49,7 +49,6 @@ COMMON_DEPEND="virtual/opengl
 	bluray? ( media-libs/libbluray )
 	css? ( media-libs/libdvdcss )
 	media-libs/libmad
-	media-libs/libmms
 	media-libs/libmodplug
 	media-libs/libmpeg2
 	media-libs/libogg
