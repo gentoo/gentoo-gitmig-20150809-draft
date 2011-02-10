@@ -1,6 +1,10 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.137 2011/01/27 11:00:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.138 2011/02/10 18:19:45 radhermit Exp $
+
+  10 Feb 2011; Tim Harder <radhermit@gentoo.org> bitlbee-3.0.1.ebuild,
+  +files/bitlbee-3.0.1-no-ssl.patch:
+  Fix compile when the ssl USE flag isn't selected.
 
   27 Jan 2011; Markos Chandras <hwoarang@gentoo.org> bitlbee-3.0.1.ebuild,
   +files/bitlbee-3.0.1-ldflags.patch:

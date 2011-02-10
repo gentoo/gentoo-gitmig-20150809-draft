@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.1.ebuild,v 1.6 2011/01/27 11:00:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.1.ebuild,v 1.7 2011/02/10 18:19:45 radhermit Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs confutils multilib
@@ -88,6 +88,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-3.0-configure.patch
 	epatch "${FILESDIR}"/${PN}-3.0.1-ldflags.patch
+	epatch "${FILESDIR}"/${P}-no-ssl.patch
 }
 
 src_configure() {
