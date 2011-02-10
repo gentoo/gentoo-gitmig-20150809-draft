@@ -5,6 +5,9 @@
 <maintainer>
 	<email>pva@gentoo.org</email>
 </maintainer>
+<use>
+ <flag name='netlink'>Build against libnfnetlink which enables the nfnl_osf util</flag>
+</use>
 <longdescription>
   iptables is the userspace command line program used to set up, maintain, and
   inspect the tables of IPv4 packet filter rules in the Linux kernel. It's a
