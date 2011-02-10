@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.245 2011/02/08 16:53:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.246 2011/02/10 17:19:16 sping Exp $
+
+*genkernel-3.4.13 (10 Feb 2011)
+
+  10 Feb 2011; Sebastian Pipping <sping@gentoo.org> +genkernel-3.4.13.ebuild:
+  Bump to 3.4.13
 
 *genkernel-3.4.12.6-r2 (08 Feb 2011)
 
