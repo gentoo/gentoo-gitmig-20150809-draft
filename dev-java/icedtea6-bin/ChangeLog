@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea6-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.48 2011/02/04 23:20:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.49 2011/02/10 00:23:41 caster Exp $
+
+*icedtea6-bin-1.9.6 (10 Feb 2011)
+
+  10 Feb 2011; Vlastimil Babka <caster@gentoo.org> +icedtea6-bin-1.9.6.ebuild:
+  Version bump, security bug #354231.
 
   04 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
   icedtea6-bin-1.9.5.ebuild:
