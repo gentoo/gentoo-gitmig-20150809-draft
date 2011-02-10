@@ -1,6 +1,11 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.15 2011/01/14 22:46:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.16 2011/02/10 13:07:19 scarabeus Exp $
+
+*rekonq-0.6.80 (10 Feb 2011)
+
+  10 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> +rekonq-0.6.80.ebuild:
+  Add newest alpha release.
 
   14 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   rekonq-0.6.1.ebuild, +files/rekonq-0.6.1-tests.patch:
