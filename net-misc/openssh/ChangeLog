@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.408 2011/02/10 02:32:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.409 2011/02/10 02:44:53 vapier Exp $
+
+  10 Feb 2011; Mike Frysinger <vapier@gentoo.org> openssh-5.8_p1-r1.ebuild,
+  +files/openssh-5.8_p1-selinux.patch:
+  Drop openssl build patch since it doesn't seem to be needed anymore, and
+  apply simple build fix for selinux from upstream #354247 by MarisN.
 
   10 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> openssh-5.8_p1.ebuild:
   Also add AES-CTR fix to 5.8_p1 presently under stabilization.
