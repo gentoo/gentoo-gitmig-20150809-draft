@@ -1,10 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.35 2011/02/10 04:05:53 vapier Exp $
-
-# Mike Frysinger <vapier@gentoo.org> (10 Feb 2011)
-# Waiting for keywording #354309
-net-firewall/iptables netlink
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.36 2011/02/10 07:18:11 xarthisius Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (04 Feb 2011)
 # media-fonts/texcm-ttf not stable on ppc64
