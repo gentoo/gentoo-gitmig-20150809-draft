@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysfml/pysfml-1.6.ebuild,v 1.1 2011/02/07 11:44:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysfml/pysfml-1.6.ebuild,v 1.2 2011/02/10 14:02:48 arfrever Exp $
 
-EAPI=3
-PYTHON_DEPEND="2:2.6 3"
-PYTHON_MODNAME="PySFML"
+EAPI="3"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 
 inherit distutils
 
@@ -21,6 +21,10 @@ DEPEND="media-libs/libsfml"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/SFML-${PV}/python"
+
+PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing")
+
+PYTHON_MODNAME="PySFML"
 
 src_install() {
 	distutils_src_install
