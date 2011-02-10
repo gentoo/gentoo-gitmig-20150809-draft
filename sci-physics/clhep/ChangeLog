@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.31 2011/02/09 09:10:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.32 2011/02/10 23:04:38 hwoarang Exp $
+
+  10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> clhep-2.1.0.1.ebuild:
+  Stable on amd64 wrt bug #354009
 
   09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> clhep-2.1.0.1.ebuild:
   x86 stable wrt bug #354009
