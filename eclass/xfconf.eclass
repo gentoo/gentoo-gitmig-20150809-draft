@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.22 2011/02/04 17:23:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.23 2011/02/10 18:14:53 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -54,13 +54,12 @@ DEPEND="${_xfce4_intltool}
 unset _xfce4_intltool
 unset _xfce4_m4
 
-XFCONF_EXPF="src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm"
 case ${EAPI:-0} in
-	4|3|2) XFCONF_EXPF="${XFCONF_EXPF} src_prepare src_configure" ;;
-	1|0) ;;
+	4|3) ;;
 	*) die "Unknown EAPI." ;;
 esac
-EXPORT_FUNCTIONS ${XFCONF_EXPF}
+
+EXPORT_FUNCTIONS src_prepare src_configure src_install pkg_preinst pkg_postinst pkg_postrm
 
 # @FUNCTION: xfconf_use_debug
 # @DESCRIPTION:
@@ -82,16 +81,6 @@ xfconf_use_debug() {
 	fi
 }
 
-# @FUNCTION: xfconf_src_unpack
-# @DESCRIPTION:
-# Run base_src_util autopatch and eautoreconf or elibtoolize
-xfconf_src_unpack() {
-	debug-print-function ${FUNCNAME} "$@"
-	unpack ${A}
-	cd "${S}"
-	has src_prepare ${XFCONF_EXPF} || xfconf_src_prepare
-}
-
 # @FUNCTION: xfconf_src_prepare
 # @DESCRIPTION:
 # Run base_src_util autopatch and eautoreconf or elibtoolize
@@ -104,7 +93,6 @@ xfconf_src_prepare() {
 	fi
 
 	if [[ "${EAUTORECONF}" == "yes" ]]; then
-		has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 		AT_M4DIR="${EPREFIX}/usr/share/xfce4/dev-tools/m4macros" eautoreconf
 	else
 		elibtoolize
@@ -125,15 +113,6 @@ xfconf_src_configure() {
 	econf ${XFCONF[@]}
 }
 
-# @FUNCTION: xfconf_src_compile
-# @DESCRIPTION:
-# Run econf with opts in XFCONF variable
-xfconf_src_compile() {
-	debug-print-function ${FUNCNAME} "$@"
-	has src_configure ${XFCONF_EXPF} || xfconf_src_configure
-	emake || die
-}
-
 # @FUNCTION: xfconf_src_install
 # @DESCRIPTION:
 # Run emake install and install documentation in DOCS variable
@@ -145,7 +124,6 @@ xfconf_src_install() {
 		dodoc ${DOCS} || die
 	fi
 
-	has "${EAPI:-0}" 0 1 2 && ! use prefix && ED="${D}"
 	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	validate_desktop_entries
