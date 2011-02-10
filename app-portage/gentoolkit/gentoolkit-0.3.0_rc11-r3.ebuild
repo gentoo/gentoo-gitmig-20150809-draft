@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc11-r3.ebuild,v 1.4 2011/02/04 18:29:17 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0_rc11-r3.ebuild,v 1.5 2011/02/10 17:25:51 darkside Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -57,14 +57,12 @@ src_install() {
 
 	# remove on Gentoo Prefix platforms where it's broken anyway
 	if use prefix; then
-		if [[ ${CHOST} != *-aix* ]]; then
-			elog "The revdep-rebuild command is removed, the preserve-libs"
-			elog "feature of portage will handle issues."
-			rm "${ED}"/usr/bin/revdep-rebuild
-			rm "${ED}"/usr/share/man/man1/revdep-rebuild.1.bz2
-			rm -rf "${ED}"/etc/revdep-rebuild
-			rm -rf "${ED}"/var
-		fi
+		elog "The revdep-rebuild command is removed, the preserve-libs"
+		elog "feature of portage will handle issues."
+		rm "${ED}"/usr/bin/revdep-rebuild
+		rm "${ED}"/usr/share/man/man1/revdep-rebuild.1.bz2
+		rm -rf "${ED}"/etc/revdep-rebuild
+		rm -rf "${ED}"/var
 	fi
 
 	# Can distutils handle this?

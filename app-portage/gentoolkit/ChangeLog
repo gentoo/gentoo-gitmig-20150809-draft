@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.207 2011/02/04 18:59:54 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.208 2011/02/10 17:25:51 darkside Exp $
+
+  10 Feb 2011; Jeremy Olexa <darkside@gentoo.org>
+  gentoolkit-0.3.0_rc11-r3.ebuild, gentoolkit-9999.ebuild:
+  remove AIX special case to keep revdep-rebuild as preserve-libs works
+  there too
 
   04 Feb 2011; Paul Varner <fuzzyray@gentoo.org> gentoolkit-9999.ebuild:
   Completely remove revdep-rebuild for prefix users that are not running on AIX
