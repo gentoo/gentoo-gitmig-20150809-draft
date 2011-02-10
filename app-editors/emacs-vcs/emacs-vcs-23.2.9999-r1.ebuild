@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999-r1.ebuild,v 1.2 2011/02/02 19:02:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999-r1.ebuild,v 1.3 2011/02/10 20:09:59 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -8,10 +8,10 @@ WANT_AUTOMAKE="none"
 inherit autotools elisp-common eutils flag-o-matic multilib
 
 if [ "${PV##*.}" = "9999" ]; then
+	EBZR_PROJECT="emacs"
+	EBZR_BRANCH="emacs-23"
+	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}"
 	inherit bzr
-	EMACS_BRANCH="emacs-23"
-	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EMACS_BRANCH}/"
-	EBZR_CACHE_DIR="emacs-${EMACS_BRANCH#emacs-}"
 	SRC_URI=""
 else
 	SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz
@@ -77,13 +77,22 @@ RDEPEND="${RDEPEND}
 EMACS_SUFFIX="emacs-${SLOT}-vcs"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
+pkg_setup() {
+	local olddir="${EBZR_STORE_DIR}/emacs-${EBZR_BRANCH#emacs-}"
+	if [ -d "${olddir}" ]; then
+		ewarn "bzr.eclass uses branches instead of checkouts now."
+		ewarn "Therefore, you may remove the old bzr checkout:"
+		ewarn "rm -rf ${olddir}"
+	fi
+}
+
 src_prepare() {
 	if [ "${PV##*.}" = "9999" ]; then
 		FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
 			| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
 		[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
 		echo
-		einfo "Emacs branch: ${EMACS_BRANCH}"
+		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Emacs version number: ${FULL_VERSION}"
 		[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
