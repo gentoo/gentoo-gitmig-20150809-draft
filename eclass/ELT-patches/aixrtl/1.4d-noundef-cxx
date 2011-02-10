@@ -1,9 +1,0 @@
---- configure
-+++ configure
-@@ -2508,5 +2508,5 @@
-     if test "$aix_use_runtimelinking" = yes; then
-       # Warning - without using the other runtime loading flags (-brtl),
-       # -berok will link without error, but may produce a broken library.
--      allow_undefined_flag_CXX='-berok'
-+      allow_undefined_flag_CXX=unsupported
-       # Determine the default libpath from the value encoded in an empty executable.
