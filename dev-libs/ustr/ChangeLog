@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ustr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.4 2011/02/05 22:24:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.5 2011/02/10 11:20:29 phajdan.jr Exp $
+
+  10 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ustr-1.0.4-r1.ebuild:
+  x86 stable wrt bug #353781
 
   05 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ustr-1.0.4-r1.ebuild:
