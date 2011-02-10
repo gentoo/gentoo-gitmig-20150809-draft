@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12442 2011/02/10 14:46:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12443 2011/02/10 14:56:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,7 +35,7 @@
 # Unmaintained and completely broken wrt bugs
 # 185475, 211262, 247268, 276220, 287751, 293501, 298109,
 # 301729, 308801, 311763, 311765, 328691, 340605, 348483,
-# 352506
+# 352506, 237366, 250054
 # Removal in 30 days
 app-pda/barry
 app-pda/libopensync
