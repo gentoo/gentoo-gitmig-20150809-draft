@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clamz
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/ChangeLog,v 1.1 2010/05/27 14:37:32 lack Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clamz/ChangeLog,v 1.2 2011/02/10 23:45:54 hwoarang Exp $
+
+  10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> clamz-0.4.ebuild:
+  Stable on amd64 wrt bug #353125
 
 *clamz-0.4 (27 May 2010)
 
