@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.1 2011/02/06 07:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.2 2011/02/10 02:21:26 vapier Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.13.49-SDL-test.patch
+	epatch "${FILESDIR}"/${PN}-0.13.60-ldflags.patch #354051
 
 	# workaround AX_CREATE_PKGCONFIG_INFO bug #353195
 	sed -i \

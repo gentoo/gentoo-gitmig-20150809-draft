@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.94 2011/02/09 13:02:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.95 2011/02/10 02:21:26 vapier Exp $
+
+  10 Feb 2011; Mike Frysinger <vapier@gentoo.org> zziplib-0.13.60-r1.ebuild,
+  +files/zziplib-0.13.60-ldflags.patch:
+  Fix by Ryan Hill for LDFLAGS usage #354051.
 
   09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   zziplib-0.13.60.ebuild:
