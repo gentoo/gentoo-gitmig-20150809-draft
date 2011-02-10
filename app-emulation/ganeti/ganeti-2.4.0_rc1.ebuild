@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.4.0_beta1.ebuild,v 1.1 2011/01/22 02:07:43 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.4.0_rc1.ebuild,v 1.1 2011/02/10 20:16:49 ramereth Exp $
 
 EAPI=2
 
 inherit eutils confutils bash-completion
 
-#MY_PV="${PV/_rc/~rc}"
-MY_PV="${PV/_beta/~beta}"
+MY_PV="${PV/_rc/~rc}"
+#MY_PV="${PV/_beta/~beta}"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="Ganeti is a virtual server management software tool"
 HOMEPAGE="http://code.google.com/p/ganeti/"
@@ -70,7 +70,8 @@ src_install () {
 	dodoc INSTALL UPGRADE NEWS README doc/*.rst
 	rm -rf "${D}"/usr/share/doc/ganeti
 	docinto examples
-	dodoc doc/examples/{dumb-allocator,ganeti.cron,gnt-config-backup}
+	#dodoc doc/examples/{basic-oob,ganeti.cron,gnt-config-backup}
+	dodoc doc/examples/{ganeti.cron,gnt-config-backup}
 	docinto examples/hooks
 	dodoc doc/examples/hooks/{ipsec,ethers}
 
