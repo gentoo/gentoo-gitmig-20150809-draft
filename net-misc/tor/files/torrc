@@ -1,0 +1,5 @@
+User tor
+Group tor
+PIDFile /var/run/tor/tor.pid
+Log notice file /var/log/tor/tor.log
+DataDirectory   /var/lib/tor/data
