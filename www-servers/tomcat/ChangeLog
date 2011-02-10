@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.239 2011/02/10 13:08:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.240 2011/02/10 14:10:55 fordfrog Exp $
+
+  10 Feb 2011; Miroslav Šulc <fordfrog@gentoo.org> metadata.xml:
+  Removing mike@weisso.com (Mike Weissman) from maintainer as I did not see any
+  activity from him lately. If the removal is not correct then please re-add
+  him.
 
 *tomcat-6.0.32 (10 Feb 2011)
 
