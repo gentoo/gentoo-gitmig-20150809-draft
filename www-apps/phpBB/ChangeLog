@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.35 2011/02/07 23:36:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.36 2011/02/10 00:50:36 radhermit Exp $
+
+  10 Feb 2011; Tim Harder <radhermit@gentoo.org> -phpBB-3.0.7_p1.ebuild:
+  Remove old.
 
 *phpBB-3.0.8 (07 Feb 2011)
 
