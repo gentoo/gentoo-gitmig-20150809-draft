@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.7_p1-r1.ebuild,v 1.2 2011/02/10 02:30:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.8_p1-r1.ebuild,v 1.1 2011/02/10 02:30:27 robbat2 Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -10,7 +10,7 @@ inherit eutils flag-o-matic multilib autotools pam
 PARCH=${P/_/}
 
 HPN_PATCH="${PARCH}-hpn13v10.diff.bz2"
-LDAP_PATCH="${PARCH/-/-lpk-}-0.3.13.patch.gz"
+LDAP_PATCH="${PARCH/-5.8/-lpk-5.7}-0.3.13.patch.gz"
 X509_VER="6.2.4" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
@@ -24,7 +24,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="hpn kerberos ldap libedit pam selinux skey static tcpd X X509"
+IUSE="${HPN_PATCH:++}hpn kerberos ldap libedit pam selinux skey static tcpd X X509"
 
 RDEPEND="pam? ( virtual/pam )
 	kerberos? ( virtual/krb5 )
@@ -75,12 +75,12 @@ src_prepare() {
 	cp version.h version.h.pristine
 
 	if use X509 ; then
-		epatch "${DISTDIR}"/${X509_PATCH}
-		epatch "${FILESDIR}"/${PN}-5.7_p1-x509-hpn-glue.patch
+		epatch "${WORKDIR}"/${X509_PATCH%.*}
+		epatch "${FILESDIR}"/${PN}-5.8_p1-x509-hpn-glue.patch
 	fi
 	if ! use X509 ; then
 		if [[ -n ${LDAP_PATCH} ]] && use ldap ; then
-			epatch "${DISTDIR}"/${LDAP_PATCH}
+			epatch "${WORKDIR}"/${LDAP_PATCH%.*}
 			epatch "${FILESDIR}"/${PN}-5.2p1-ldap-stdargs.diff #266654
 			# version.h patch conflict avoidence
 			mv version.h version.h.lpk
@@ -92,7 +92,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.4_p1-openssl.patch
 	epatch "${FILESDIR}"/${PN}-4.7_p1-GSSAPI-dns.patch #165444 integrated into gsskex
 	if [[ -n ${HPN_PATCH} ]] && use hpn; then
-		epatch "${DISTDIR}"/${HPN_PATCH}
+		epatch "${WORKDIR}"/${HPN_PATCH%.*}
 		epatch "${FILESDIR}"/${PN}-5.6_p1-hpn-progressmeter.patch
 		# version.h patch conflict avoidence
 		mv version.h version.h.hpn
@@ -105,7 +105,6 @@ src_prepare() {
 			-e '/aes...-ctr.*SSH_CIPHER_SSH2/s,evp_aes_ctr_mt,evp_aes_128_ctr,' \
 			cipher.c || die
 	fi
-	epatch "${FILESDIR}"/${PN}-5.2_p1-autoconf.patch
 
 	sed -i "s:-lcrypto:$(pkg-config --libs openssl):" configure{,.ac} || die
 

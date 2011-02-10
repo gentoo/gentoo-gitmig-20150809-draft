@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.6_p1-r2.ebuild,v 1.8 2010/12/04 17:11:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.6_p1-r2.ebuild,v 1.9 2011/02/10 02:30:27 robbat2 Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -102,7 +102,7 @@ src_prepare() {
 		# The AES-CTR multithreaded variant is temporarily broken, and
 		# causes random hangs when combined with the -f switch of ssh.
 		# To avoid this, we change the internal table to use the non-multithread
-		# version for the meantime.
+		# version for the meantime. Do NOT remove this in new versions.
 		sed -i \
 			-e '/aes...-ctr.*SSH_CIPHER_SSH2/s,evp_aes_ctr_mt,evp_aes_128_ctr,' \
 			cipher.c || die
