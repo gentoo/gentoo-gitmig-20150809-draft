@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5031 2011/02/10 14:46:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5032 2011/02/10 21:39:00 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2011; Ulrich Mueller <ulm@gentoo.org> updates/1Q-2011:
+  Move packages easygit, qgit, rapidsvn, rcsi, and svn2cl to dev-vcs.
 
   10 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite app-pda/libopensync and reverse dependencies.

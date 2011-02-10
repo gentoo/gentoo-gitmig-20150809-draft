@@ -35,3 +35,8 @@ slotmove media-gfx/wally 0 4
 slotmove x11-libs/libwnck 2.90 3
 slotmove dev-libs/libunique 0 1
 slotmove x11-libs/libwnck 0 1
+move dev-util/easygit dev-vcs/easygit
+move dev-util/qgit dev-vcs/qgit
+move dev-util/rapidsvn dev-vcs/rapidsvn
+move dev-util/rcsi dev-vcs/rcsi
+move dev-util/svn2cl dev-vcs/svn2cl
