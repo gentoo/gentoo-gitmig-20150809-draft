@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12441 2011/02/10 11:49:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12442 2011/02/10 14:46:46 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,29 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2011)
+# Unmaintained and completely broken wrt bugs
+# 185475, 211262, 247268, 276220, 287751, 293501, 298109,
+# 301729, 308801, 311763, 311765, 328691, 340605, 348483,
+# 352506
+# Removal in 30 days
+app-pda/barry
+app-pda/libopensync
+app-pda/libopensync-plugin-evolution2
+app-pda/libopensync-plugin-file
+app-pda/libopensync-plugin-gnokii
+app-pda/libopensync-plugin-google-calendar
+app-pda/libopensync-plugin-gpe
+app-pda/libopensync-plugin-irmc
+app-pda/libopensync-plugin-palm
+app-pda/libopensync-plugin-python
+app-pda/libopensync-plugin-sunbird
+app-pda/libopensync-plugin-syncml
+app-pda/libopensync-plugin-vformat
+app-pda/msynctool
+app-pda/multisync-gui
+app-pda/osynctool
 
 # Hans de Graaff <graaff@gentoo.org> (09 Feb 2011)
 # No longer supported by upstream, and has open security bug.
