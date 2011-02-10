@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.0.ebuild,v 1.5 2011/02/04 22:26:06 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.0.ebuild,v 1.6 2011/02/10 08:28:03 dilfridge Exp $
 
 EAPI=3
 
@@ -64,6 +64,7 @@ all_ruby_prepare() {
 		ruby/qtruby/src/Qt.cpp \
 		ruby/qtruby/src/marshall_types.cpp \
 		ruby/qtruby/modules/phonon/phonon.cpp \
+		ruby/qtruby/modules/qscintilla/qscintilla.cpp \
 		ruby/qtruby/modules/qtdeclarative/qtdeclarative.cpp \
 		ruby/qtruby/modules/qtuitools/qtuitools.cpp \
 		ruby/qtruby/modules/qtscript/qtscript.cpp \
@@ -74,9 +75,11 @@ all_ruby_prepare() {
 		ruby/korundum/src/Korundum.cpp \
 		ruby/korundum/modules/soprano/soprano.cpp \
 		ruby/korundum/modules/akonadi/akonadi.cpp \
+		ruby/korundum/modules/kate/kate.cpp \
 		ruby/korundum/modules/khtml/khtml.cpp \
 		ruby/korundum/modules/kio/kio.cpp \
 		ruby/korundum/modules/ktexteditor/ktexteditor.cpp \
+		ruby/korundum/modules/okular/okular.cpp \
 		ruby/korundum/modules/solid/solid.cpp \
 		ruby/korundum/modules/nepomuk/nepomuk.cpp \
 		ruby/korundum/modules/plasma/src/plasma.cpp \
