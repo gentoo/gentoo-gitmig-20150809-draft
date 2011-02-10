@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.22_alpha.ebuild,v 1.1 2011/02/01 02:42:49 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.22_alpha-r1.ebuild,v 1.1 2011/02/10 00:21:13 blueness Exp $
 
 EAPI=3
 
@@ -53,6 +53,9 @@ src_install() {
 	fperms 755 /var/run/tor
 	fowners tor:tor /var/lib/tor /var/log/tor /var/run/tor
 
+	insinto /etc/tor/
+	doins "${FILESDIR}"/torrc
+
 	insinto /etc/logrotate.d
 	newins contrib/tor.logrotate tor
 
@@ -62,9 +65,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You must create /etc/tor/torrc, you can use the sample that is in that directory"
-	elog "To have privoxy and tor working together you must add:"
+	elog
+	elog "We created a configuration file for tor, /etc/tor/torrc, but you can"
+	elog "change it according to your needs.  Use the torrc.sample that is in"
+	elog "that directory as a guide.  Also, to have privoxy work with tor"
+	elog "just add the following line"
+	elog
 	elog "forward-socks4a / localhost:9050 ."
-	elog "(notice the . at the end of the line)"
-	elog "to /etc/privoxy/config"
+	elog
+	elog "to /etc/privoxy/config.  Notice the . at the end!"
+	elog
 }
