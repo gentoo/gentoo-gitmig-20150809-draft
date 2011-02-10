@@ -1,17 +1,21 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.161.23_pre20101117.ebuild,v 1.1 2010/12/01 13:51:02 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.152.27_p201011173.ebuild,v 1.1 2011/02/10 21:07:04 lack Exp $
 
 EAPI=3
 inherit nsplugins multilib toolchain-funcs versionator
 
+# Note: There is no "square" for 32-bit!  Just use the current 32-bit release:
+PV_REL=$(get_version_component_range 1-4)
+MY_32B_URI="http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-${PV_REL}-release.i386.rpm"
+
 # Specal version parsing for date-based 'square' releases
-# For proper date ordering in the ebuild we are using preCCYYMMDD whereas Adobe
-# uses MMDDYY
+# For proper date ordering in the ebuild we are using CCYYMMDD,  whereas Adobe
+# uses MMDDYY in their filename.  Plus we tack on the release number, too.
 EBUILD_DATE=$(get_version_component_range $(get_version_component_count))
-DATE_SUFFIX=${EBUILD_DATE: -4}${EBUILD_DATE:5:2}
-MY_32B_URI="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_2_p2_32bit_linux_${DATE_SUFFIX}.tar.gz"
-MY_64B_URI="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_2_p3_64bit_linux_${DATE_SUFFIX}.tar.gz"
+DATE_SUFFIX=${EBUILD_DATE: -5:4}${EBUILD_DATE:3:2}
+REL_SUFFIX=${EBUILD_DATE: -1}
+MY_64B_URI="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_2_p${REL_SUFFIX}_64bit_linux_${DATE_SUFFIX}.tar.gz"
 
 DESCRIPTION="Adobe Flash Player"
 SRC_URI="x86? ( ${MY_32B_URI} )
@@ -24,7 +28,7 @@ amd64? (
 )"
 #HOMEPAGE="http://www.adobe.com/"
 HOMEPAGE="http://labs.adobe.com/technologies/flashplayer10/"
-IUSE="multilib nspluginwrapper +32bit +64bit"
+IUSE="multilib nspluginwrapper +32bit +64bit vdpau"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
@@ -37,9 +41,11 @@ NATIVE_DEPS="x11-libs/gtk+:2
 	media-libs/fontconfig
 	dev-libs/nss
 	net-misc/curl
+	32bit? ( vdpau? ( x11-libs/libvdpau ) )
 	>=sys-libs/glibc-2.4"
 
-EMUL_DEPS=">=app-emulation/emul-linux-x86-gtklibs-20100409-r1
+EMUL_DEPS="vdpau? ( >=app-emulation/emul-linux-x86-xlibs-20110129 )
+	>=app-emulation/emul-linux-x86-gtklibs-20100409-r1
 	app-emulation/emul-linux-x86-soundlibs"
 
 DEPEND="amd64? ( multilib? ( 32bit? ( nspluginwrapper? (
@@ -95,6 +101,15 @@ pkg_setup() {
 			# Also, check if *any* of the processors are affected (bug #286159)
 			if grep '^flags' /proc/cpuinfo | grep -qv 'lahf_lm'; then
 				export need_lahf_wrapper=1
+			fi
+
+			if use vdpau; then
+				ewarn "You have tried to enable VDPAU acceleration, but this is only"
+				ewarn "available for the 32-bit flash plugin at this time."
+				ewarn "Continuing with an unaccelerated 64-bit plugin."
+				if [[ $amd64_32bit ]]; then
+					ewarn "The 32-bit plugin will be accelerated."
+				fi
 			fi
 		fi
 	fi
