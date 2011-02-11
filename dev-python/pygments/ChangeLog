@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.69 2011/02/09 13:17:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.70 2011/02/11 18:35:47 hwoarang Exp $
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> pygments-1.4.ebuild:
+  Stable on amd64 wrt bug #353715
 
   09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pygments-1.4.ebuild:
   x86 stable wrt bug #353715
