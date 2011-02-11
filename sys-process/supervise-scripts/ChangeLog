@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/supervise-scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.10 2011/02/09 13:05:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.11 2011/02/11 12:43:03 hwoarang Exp $
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  supervise-scripts-4.0.ebuild:
+  Stable on amd64 wrt bug #353386
 
   09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   supervise-scripts-4.0.ebuild:
