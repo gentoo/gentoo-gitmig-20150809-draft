@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/clapack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.9 2010/09/18 22:44:41 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.10 2011/02/11 20:32:58 xarthisius Exp $
+
+  11 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  clapack-3.2.1-r3.ebuild:
+  Marked ~ppc wrt #309421. Thanks to Massimo Burcheri
+  <massimo.burcheri@gmx.de> for testing.
 
   18 Sep 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   clapack-3.2.1-r3.ebuild:
