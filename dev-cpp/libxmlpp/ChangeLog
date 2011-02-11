@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.98 2011/01/17 16:54:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.99 2011/02/11 16:34:13 pacho Exp $
+
+*libxmlpp-2.33.2 (11 Feb 2011)
+
+  11 Feb 2011; Pacho Ramos <pacho@gentoo.org> +libxmlpp-2.33.2.ebuild:
+  Version bump for 2.33 series fixing memory management problems and others.
 
 *libxmlpp-2.33.1 (17 Jan 2011)
 
