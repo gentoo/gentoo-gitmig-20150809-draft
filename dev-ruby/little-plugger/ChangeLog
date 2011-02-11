@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/little-plugger
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/ChangeLog,v 1.4 2010/05/22 13:18:32 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/ChangeLog,v 1.5 2011/02/11 08:33:52 graaff Exp $
+
+  11 Feb 2011; Hans de Graaff <graaff@gentoo.org>
+  little-plugger-1.1.2-r1.ebuild:
+  Drop bones-extras dependency because this is now a no-op. Fix tests
+  accordingly.
 
   22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -little-plugger-1.1.1.ebuild, -little-plugger-1.1.2.ebuild,
