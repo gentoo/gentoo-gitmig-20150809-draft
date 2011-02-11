@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tinyxml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.7 2010/06/05 14:56:23 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.8 2011/02/11 18:43:31 xarthisius Exp $
+
+  11 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> tinyxml-2.6.1.ebuild:
+  Marked ~ppc wrt #314833
 
   05 Jun 2010; Raúl Porcel <armin76@gentoo.org>
   tinyxml-2.5.3_p20090813-r1.ebuild, tinyxml-2.6.1.ebuild:

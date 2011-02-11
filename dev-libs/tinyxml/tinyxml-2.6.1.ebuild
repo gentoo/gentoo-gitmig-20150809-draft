@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.1.ebuild,v 1.2 2010/06/05 14:56:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.1.ebuild,v 1.3 2011/02/11 18:43:31 xarthisius Exp $
 
 EAPI=2
 inherit flag-o-matic toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV//./_}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="debug doc +stl"
 
 RDEPEND=""
