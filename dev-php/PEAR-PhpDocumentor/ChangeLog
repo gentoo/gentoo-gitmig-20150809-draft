@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PhpDocumentor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.53 2011/02/10 22:17:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.54 2011/02/11 07:09:12 jer Exp $
+
+  11 Feb 2011; Jeroen Roovers <jer@gentoo.org>
+  PEAR-PhpDocumentor-1.4.3-r1.ebuild:
+  Stable for HPPA (bug #213318).
 
   10 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   PEAR-PhpDocumentor-1.4.3-r1.ebuild:
