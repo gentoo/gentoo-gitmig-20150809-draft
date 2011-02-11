@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-XSLoader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.9 2011/01/22 10:14:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.10 2011/02/11 07:26:41 tove Exp $
+
+  11 Feb 2011; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add ~s390 ~sh (#345605)
 
   22 Jan 2011; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
   Add perl-5.12.3 as provider
