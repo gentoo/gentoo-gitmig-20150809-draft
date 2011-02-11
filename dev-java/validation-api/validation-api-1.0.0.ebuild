@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/validation-api/validation-api-1.0.0.ebuild,v 1.1 2010/08/19 17:11:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/validation-api/validation-api-1.0.0.ebuild,v 1.2 2011/02/11 19:10:19 hwoarang Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="https://repository.jboss.org/nexus/service/local/repo_groups/public/con
 
 LICENSE="Apache-2.0"
 SLOT="1.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE=""
 

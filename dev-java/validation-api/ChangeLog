@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/validation-api
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/validation-api/ChangeLog,v 1.1 2010/08/19 17:11:37 nelchael Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/validation-api/ChangeLog,v 1.2 2011/02/11 19:10:19 hwoarang Exp $
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  validation-api-1.0.0.ebuild:
+  Stable on amd64 wrt bug #353888
 
 *validation-api-1.0.0 (19 Aug 2010)
 
