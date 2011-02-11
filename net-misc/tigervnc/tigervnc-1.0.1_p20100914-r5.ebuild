@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_pre20100306-r1.ebuild,v 1.9 2010/08/09 02:24:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_p20100914-r5.ebuild,v 1.1 2011/02/11 19:50:50 armin76 Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib autotools
 
-XSERVER_VERSION="1.7.6"
+XSERVER_VERSION="1.9.4"
 OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="Remote desktop viewer display system"
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="nptl +opengl server +xorgmodule"
 
 RDEPEND="sys-libs/zlib
@@ -34,6 +34,7 @@ RDEPEND="sys-libs/zlib
 		x11-libs/pixman
 		x11-apps/xauth
 		x11-apps/xsetroot
+		x11-misc/xkeyboard-config
 		media-fonts/font-adobe-100dpi
 		media-fonts/font-adobe-75dpi
 		media-fonts/font-alias
@@ -111,8 +112,9 @@ src_unpack() {
 
 	eautoreconf
 	cd unix
+
 	if use server ; then
-		epatch xserver17.patch
+		epatch xserver19.patch
 		cd xserver
 		eautoreconf
 	fi
