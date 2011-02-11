@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainworkshop/brainworkshop-4.8.1.ebuild,v 1.1 2011/01/10 20:33:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/brainworkshop/brainworkshop-4.8.1.ebuild,v 1.2 2011/02/11 20:35:37 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,8 +16,7 @@ IUSE=""
 
 RDEPEND="dev-python/pyopenal
 	|| ( >=dev-python/pyglet-1.1.4[openal]
-		 >=dev-python/pyglet-1.1.4[alsa] )
-	dev-python/pyopenal"
+		 >=dev-python/pyglet-1.1.4[alsa] )"
 DEPEND="app-arch/unzip"
 
 src_unpack() {
