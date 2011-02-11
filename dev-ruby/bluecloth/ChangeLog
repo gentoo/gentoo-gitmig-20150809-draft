@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.40 2011/02/11 08:10:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.41 2011/02/11 13:14:49 flameeyes Exp $
+
+  11 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  bluecloth-2.0.11.ebuild:
+  Hoe is required even for build, so add it as general build-time dependency.
 
 *bluecloth-2.0.11 (11 Feb 2011)
 
