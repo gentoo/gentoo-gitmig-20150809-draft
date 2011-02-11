@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12447 2011/02/11 19:23:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12448 2011/02/11 20:04:40 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (11 Feb 2011)
+# Upstream dead for a long time, replaced by app-text/evince
+# Removal in 30 days.
+app-text/ggv
 
 # Pacho Ramos <pacho@gentoo.org> (11 Feb 2011)
 # Upstream dead since a lot of time, still using gnome-vfs and
