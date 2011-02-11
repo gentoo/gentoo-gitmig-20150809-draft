@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6356 2011/02/10 21:13:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6357 2011/02/11 14:33:20 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1149,6 +1149,8 @@ dev-perl/Sysadm-Install:hammer - Enable hammer() funtion to run a command in the
 dev-php/PEAR-HTTP_Download:minimal - Do not include support for PEAR-MIME_Type
 dev-php/PEAR-HTTP_Download:postgres - Send postgres LOBs without buffering
 dev-php/PEAR-PHP_Shell:auto-completion - Enable tab-completion
+dev-php/smarty-docs:html - Install the documentation in HTML format
+dev-php/smarty-docs:pdf - Install the documentation in PDF format
 dev-php5/ZendFramework:cli - Enables the CLI
 dev-php5/ZendFramework:doc - Installs the documentation
 dev-php5/ZendFramework:examples - Installs the examples
