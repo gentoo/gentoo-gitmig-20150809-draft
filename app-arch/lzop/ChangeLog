@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.30 2011/02/08 20:31:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.31 2011/02/11 13:10:12 hwoarang Exp $
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> lzop-1.03.ebuild:
+  Stable on amd64 wrt bug #353842
 
   08 Feb 2011; Thomas Kahle <tomka@gentoo.org> lzop-1.03.ebuild:
   x86 stable per bug 353842
