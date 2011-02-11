@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.3.ebuild,v 1.2 2011/02/10 11:22:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.3.ebuild,v 1.3 2011/02/11 19:11:06 hwoarang Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xpilot/xpilot_ng/${P}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="openal sdl"
 
 RDEPEND="x11-libs/libX11
