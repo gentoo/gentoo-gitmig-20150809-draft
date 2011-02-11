@@ -1,21 +1,19 @@
---- configure.in
-+++ configure.in
-@@ -243,11 +243,9 @@
+--- work/Heartbeat-3-0-STABLE-3.0.4/configure.in	2010-12-09 21:09:47.000000000 +0100
++++ work2/Heartbeat-3-0-STABLE-3.0.4/configure.in	2010-12-28 17:37:45.080773140 +0100
+@@ -243,9 +243,9 @@
  mandir=`var "$mandir" "$exec_prefix/man"`
  dnl docdir is available in autoconf 2.60+, for older versions preseed
  dnl with the same value that 2.60+ uses
 -docdir=`var "$docdir" "${datadir}/doc/${PACKAGE_NAME}"`
--stdocdir="${docdir}/stonith"
 -libdir=`var "$libdir" "$exec_prefix/lib"`
 -libexecdir=`var "$libexecdir" "$exec_prefix/libexec"`
--noarchlibdir=`var "$noarchlibdir" "$prefix/lib"`
 +dnl docdir=`var "$docdir" "${datadir}/doc/${PACKAGE_NAME}"`
-+dnl stdocdir="${docdir}/stonith"
++dnl libdir=`var "$libdir" "$exec_prefix/lib"`
 +dnl libexecdir=`var "$libexecdir" "$exec_prefix/libexec"`
+ noarchlibdir=`var "$noarchlibdir" "$prefix/lib"`
  
  
- 
-@@ -285,60 +283,11 @@
+@@ -284,59 +284,11 @@
    LIBC=`${LDD} ${tmpOutfile} | grep libc | sed -e 's%.*=> *%%' -e 's% .*$%%'`
    LibCdir=`dirname $LIBC`
    dirlist=`echo $LibCdir | tr '/' ' '`
@@ -72,11 +70,10 @@
 -	libexecdir=`dirname $libexecdir`/$LibDirSuffix
 -	AC_MSG_WARN([Overriding libexecdir to: $libexecdir]);;
 -esac
--
+ 
  for j in exec_prefix bindir sbindir datadir sysconfdir localstatedir \
  	includedir oldincludedir mandir docdir stdocdir libdir noarchlibdir
- do 
-@@ -387,7 +336,6 @@
+@@ -386,7 +338,6 @@
  fi
  
  AC_CHECK_HEADERS(heartbeat/glue_config.h)
@@ -84,7 +81,7 @@
  if test "$ac_cv_header_heartbeat_glue_config_h" = "yes";  then
     GLUE_HEADER=heartbeat/glue_config.h
  else
-@@ -454,15 +402,6 @@
+@@ -453,15 +404,6 @@
  
  dnl	We use this in the RPM specfile...
  AC_SUBST(ac_configure_args)

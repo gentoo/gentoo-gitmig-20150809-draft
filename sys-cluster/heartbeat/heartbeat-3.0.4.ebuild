@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.3-r2.ebuild,v 1.1 2010/10/06 09:25:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.4.ebuild,v 1.1 2011/02/11 11:04:47 ultrabug Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ RDEPEND="sys-cluster/cluster-glue
 	virtual/ssh
 	net-libs/gnutls
 	ipmi? ( sys-libs/openipmi )
-	snmp? ( net-analyzer/net-snmp )	"
+	snmp? ( net-analyzer/net-snmp )
+	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/swig"
@@ -59,7 +60,6 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable doc) \
 		--disable-tipc \
-		--enable-libnet \
 		$(use_enable ipmi ipmilan) \
 		--enable-dopd \
 		--libdir=/usr/$(get_libdir) \

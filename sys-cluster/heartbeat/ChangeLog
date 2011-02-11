@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/heartbeat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.87 2010/10/06 09:25:37 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.88 2011/02/11 11:04:47 ultrabug Exp $
+
+*heartbeat-3.0.4 (11 Feb 2011)
+
+  11 Feb 2011; Ultrabug <ultrabug@gentoo.org> +files/3.0.4-docs.patch,
+  +files/3.0.4-fix_configure.patch, +files/3.0.4-python_tests.patch,
+  -files/3.0.3-docs.patch, -files/3.0.3-fix_configure.patch,
+  -heartbeat-3.0.3-r2.ebuild, -files/3.0.3-python_tests.patch,
+  +heartbeat-3.0.4.ebuild:
+  Version bump, drop old unstable.
 
 *heartbeat-3.0.3-r2 (06 Oct 2010)
 
