@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.19 2011/02/05 22:47:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.20 2011/02/11 23:21:41 fauli Exp $
+
+*bzr-2.3.0 (11 Feb 2011)
+
+  11 Feb 2011; Christian Faulhammer <fauli@gentoo.org> +bzr-2.3.0.ebuild:
+  version bump
 
   05 Feb 2011; Markus Meier <maekke@gentoo.org> bzr-2.2.2-r1.ebuild:
   arm stable, bug #346985
