@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.29 2010/12/28 09:19:53 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.30 2011/02/11 15:55:53 graaff Exp $
+
+  11 Feb 2011; Hans de Graaff <graaff@gentoo.org> minitest-1.7.2.ebuild:
+  Drop ruby19 to create a stable candidate.
 
 *minitest-2.0.2 (28 Dec 2010)
 
