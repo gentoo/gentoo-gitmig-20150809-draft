@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.14 2010/09/20 15:50:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.15 2011/02/11 03:01:06 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -24,6 +24,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}*.patch
 	sed -i \
 		-e "/^run from/d" \
 		-e "/data.zip/ s:the directory where xrick is:$(games_get_libdir)/${PN}.:" \
