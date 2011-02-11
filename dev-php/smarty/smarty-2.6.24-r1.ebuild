@@ -1,23 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.26.ebuild,v 1.2 2011/01/06 13:10:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.24-r1.ebuild,v 1.1 2011/02/11 16:04:26 tomk Exp $
 
-inherit php-lib-r1 eutils
+inherit php-lib-r1 eutils versionator
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 MY_P="Smarty-${PV}"
+MAJOR_PV=$(get_version_component_range 1-2)
 
 DESCRIPTION="A template engine for PHP."
 HOMEPAGE="http://www.smarty.net/"
-SRC_URI="http://www.smarty.net/distributions/${MY_P}.tar.gz"
+SRC_URI="http://www.smarty.net/files/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc"
 
-DEPEND=""
-RDEPEND=""
-PDEPEND="doc? ( dev-php/smarty-docs )"
+DEPEND=">=dev-lang/php-4.0.6"
+RDEPEND="${DEPEND}"
+PDEPEND="doc? ( =dev-php/smarty-docs-${MAJOR_PV} )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -39,4 +40,11 @@ pkg_postinst() {
 	elog
 	elog "If you're upgrading from a previous version make sure to clear out your"
 	elog "templates_c and cache directories as some include paths have changed!"
+
+	if use doc; then
+		elog
+		elog "The versioning scheme for the smarty documentation has changed so installing"
+		elog "dev-php/smarty-docs-${MAJOR_PV} is not a downgrade despite what your package"
+		elog "manager might say."
+	fi
 }
