@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.156 2010/07/11 04:07:18 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.157 2011/02/11 18:50:02 pacho Exp $
+
+  11 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  As talked with the rest of the team, none of us is willing to maintain this.
 
   11 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
   files/pwlib-1.10.10-openssl-1.patch:
