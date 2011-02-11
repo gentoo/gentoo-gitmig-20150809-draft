@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.44 2011/01/07 22:28:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.45 2011/02/11 12:30:53 phajdan.jr Exp $
+
+  11 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  irrlicht-1.7.2.ebuild:
+  x86 stable wrt bug #353991
 
 *irrlicht-1.7.2 (07 Jan 2011)
 
