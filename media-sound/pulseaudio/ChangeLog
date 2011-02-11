@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.206 2011/01/19 05:44:02 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.207 2011/02/11 08:49:58 radhermit Exp $
+
+  11 Feb 2011; Tim Harder <radhermit@gentoo.org> pulseaudio-0.9.22.ebuild:
+  Set the minimum required xcb-util version (bug #354359 by Nguyen Thai Ngoc
+  Duy).
 
 *pulseaudio-9999 (19 Jan 2011)
 
