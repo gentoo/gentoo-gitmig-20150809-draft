@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.17 2011/02/09 11:38:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.18 2011/02/11 21:09:03 nirbheek Exp $
+
+*clutter-1.6.2-r1 (11 Feb 2011)
+
+  11 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +clutter-1.6.2-r1.ebuild:
+  Remove .la files
 
 *clutter-1.6.2 (09 Feb 2011)
 
