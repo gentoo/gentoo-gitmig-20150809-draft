@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.7 2011/02/03 17:50:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.8 2011/02/11 18:41:01 scarabeus Exp $
+
+*yajl-1.0.11-r1 (11 Feb 2011)
+
+  11 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> yajl-1.0.11.ebuild,
+  +yajl-1.0.11-r1.ebuild, +files/yajl-fix_static_linking.patch:
+  Fix static linking and tests per Diego's request.
 
   03 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> yajl-1.0.11.ebuild:
   Added ~ppc/~ppc64 wrt #341149

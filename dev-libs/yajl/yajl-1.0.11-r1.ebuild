@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-1.0.11.ebuild,v 1.7 2011/02/11 18:41:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-1.0.11-r1.ebuild,v 1.1 2011/02/11 18:41:01 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
 inherit cmake-utils
 
@@ -12,19 +12,19 @@ SRC_URI="http://github.com/lloyd/yajl/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
 IUSE=""
-
-CMAKE_IN_SOURCE_BUILD="1"
 
 src_prepare() {
 	cd "${WORKDIR}"/lloyd-${PN}-*
 	S=$(pwd)
 
-	epatch "${FILESDIR}"/${PN}-fix_tests.patch
+	epatch "${FILESDIR}"/${PN}-fix_static_linking.patch
 }
 
 src_test() {
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 	emake test
+	popd > /dev/null
 }
