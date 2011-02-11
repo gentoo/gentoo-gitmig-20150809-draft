@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1.ebuild,v 1.1 2011/02/01 19:45:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1.ebuild,v 1.2 2011/02/11 19:41:07 ssuominen Exp $
 
 EAPI="3"
 
@@ -44,7 +44,6 @@ RDEPEND="!gnome-base/gnome
 	>=gnome-base/libbonobo-2.24.3
 	>=gnome-base/libbonoboui-2.24.4
 	>=gnome-base/libgnome-2.32.0
-	>=gnome-base/libgnomeui-2.24.4
 	>=gnome-base/libgnomecanvas-2.30.2
 	>=gnome-base/libglade-2.6.4
 
