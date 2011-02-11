@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.51 2011/02/11 12:35:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.52 2011/02/11 19:11:58 hwoarang Exp $
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> geos-3.2.2.ebuild:
+  Stable on amd64 wrt bug #354389
 
   11 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> geos-3.2.2.ebuild:
   x86 stable wrt bug #354389
