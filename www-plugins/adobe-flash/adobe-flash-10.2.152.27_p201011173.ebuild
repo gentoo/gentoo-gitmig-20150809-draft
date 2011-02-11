@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.152.27_p201011173.ebuild,v 1.1 2011/02/10 21:07:04 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.152.27_p201011173.ebuild,v 1.2 2011/02/11 13:44:45 lack Exp $
 
 EAPI=3
-inherit nsplugins multilib toolchain-funcs versionator
+inherit rpm nsplugins multilib toolchain-funcs versionator
 
 # Note: There is no "square" for 32-bit!  Just use the current 32-bit release:
 PV_REL=$(get_version_component_range 1-4)
@@ -115,20 +115,6 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	# In this pre-release version, both tarballs have just 'libflashplayer.so'
-	# and no prefix directory, so put the 32-bit one somewhere else.
-	if [[ $amd64_32bit ]]; then
-		mkdir 32bit
-		pushd "${S}/32bit"
-			unpack $(basename $MY_32B_URI)
-		popd
-		unpack $(basename $MY_64B_URI)
-	else
-		default_src_unpack
-	fi
-}
-
 src_compile() {
 	if [[ $need_lahf_wrapper ]]; then
 		# This experimental wrapper, from Maks Verver via bug #268336 should
@@ -141,9 +127,17 @@ src_compile() {
 
 src_install() {
 	if [[ $native_install ]]; then
+		# 32b RPM has things hidden in funny places
+		use x86 && pushd "${S}/usr/lib/flash-plugin"
+
 		exeinto /${INSTALL_BASE}
 		doexe libflashplayer.so
 		inst_plugin /${INSTALL_BASE}/libflashplayer.so
+
+		use x86 && popd
+
+		# 64b tarball has no readme file.
+		use x86 && dodoc "${S}/usr/share/doc/flash-plugin-${PV_REL}/readme.txt"
 	fi
 
 	if [[ $need_lahf_wrapper ]]; then
@@ -159,7 +153,7 @@ src_install() {
 		ABI="x86"
 
 		# 32b plugin
-		pushd "${S}/32bit"
+		pushd "${S}/usr/lib/flash-plugin"
 			exeinto /${INSTALL_BASE}32
 			doexe libflashplayer.so
 			inst_plugin /${INSTALL_BASE}32/libflashplayer.so
