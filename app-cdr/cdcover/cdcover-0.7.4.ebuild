@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdcover/cdcover-0.7.3.ebuild,v 1.3 2010/12/27 22:15:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdcover/cdcover-0.7.4.ebuild,v 1.1 2011/02/11 19:58:58 ssuominen Exp $
 
 EAPI=2
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="tk"
+
+PYTHON_DEPEND=2
+PYTHON_USE_WITH=tk
 
 inherit eutils python
 
@@ -18,7 +19,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cddb"
 
 RDEPEND="cddb? ( dev-python/cddb-py )
-	app-text/ggv
 	media-sound/cd-discid"
 DEPEND=""
 
@@ -30,18 +30,23 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-install_all_images.patch
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+	sed -i -e 's:ggv:gv:' dotcdcover.{example,m4} || die
 }
 
 src_compile() {
-	emake prefix="${D}/usr" target="/usr" || die "emake failed."
+	emake prefix="${D}"/usr target=/usr || die
 }
 
 src_install() {
-	emake prefix="${D}/usr" docdir="${D}/usr/share/doc/${PF}" \
-		install || die "emake install failed."
+	emake prefix="${D}"/usr docdir="${D}"/usr/share/doc/${PF} install || die
+
 	python_convert_shebangs -r 2 "${D}"
-	newicon share/images/document-save.png ${PN}.png
-	make_desktop_entry ${PN} ${PN} ${PN}
+
+	make_desktop_entry ${PN} ${PN}
+
+	insinto /usr/share/doc/${PF}/pdf
+	doins doc/cdcover.pdf
+
 	prepalldocs
 }
