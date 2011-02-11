@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/qt-creator
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.66 2010/11/25 19:32:59 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.67 2011/02/11 09:50:08 hwoarang Exp $
+
+*qt-creator-2.1.0_rc1-r1 (11 Feb 2011)
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  +qt-creator-2.1.0_rc1-r1.ebuild,
+  +files/qt-creator-2.1.0_rc1-qml-plugin.patch:
+  Apply patch to fix missing qml components. Bug #347987. Thanks to Bas
+  Nedermeijer <bas@lijer.nl>
 
 *qt-creator-2.1.0_rc1 (25 Nov 2010)
 
