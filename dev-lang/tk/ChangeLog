@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.148 2011/02/09 08:14:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.149 2011/02/11 17:30:08 jer Exp $
+
+  11 Feb 2011; Jeroen Roovers <jer@gentoo.org> tk-8.5.9-r1.ebuild:
+  Stable for HPPA (bug #353854).
 
   09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tk-8.5.9-r1.ebuild:
   x86 stable wrt bug #353854
