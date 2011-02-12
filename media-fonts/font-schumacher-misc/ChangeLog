@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-schumacher-misc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.39 2010/12/31 19:40:01 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.40 2011/02/12 17:07:41 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  font-schumacher-misc-1.1.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #344827
 
   31 Dec 2010; Jeroen Roovers <jer@gentoo.org>
   font-schumacher-misc-1.1.2.ebuild:
