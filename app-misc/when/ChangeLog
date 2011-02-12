@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.43 2011/01/11 22:16:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.44 2011/02/12 18:35:34 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> when-1.1.22.ebuild:
+  sparc stable wrt #350709
 
   11 Jan 2011; Markus Meier <maekke@gentoo.org> when-1.1.22.ebuild:
   x86 stable, bug #350709
