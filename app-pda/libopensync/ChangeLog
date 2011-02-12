@@ -1,6 +1,19 @@
 # ChangeLog for app-pda/libopensync
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.37 2010/09/27 13:07:35 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.38 2011/02/12 03:51:19 dirtyepic Exp $
+
+*libopensync-0.39-r1 (12 Feb 2011)
+
+  12 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> -libopensync-0.39.ebuild,
+  +libopensync-0.39-r1.ebuild:
+  Revision bump, remove broken version.
+    - fix dependencies (bug #354407)
+    - use CMake native module for FindPythonLibs (bug #276220 with thanks
+	  to John W Eckhart)
+    - support multiabi python (bug #311763) and fix bindings getting built
+	  with USE="-python"
+    - drop test USE flag since tests are still restricted
+    - port to EAPI 3
 
   27 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -libopensync-0.38.ebuild:
