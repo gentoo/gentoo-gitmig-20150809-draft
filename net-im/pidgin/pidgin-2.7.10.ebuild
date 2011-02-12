@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.10.ebuild,v 1.1 2011/02/12 01:38:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.10.ebuild,v 1.2 2011/02/12 09:23:32 pva Exp $
 
 EAPI=2
 
@@ -120,12 +120,6 @@ pkg_setup() {
 		python_set_active_version 2
 		python_pkg_setup
 	fi
-}
-
-src_prepare() {
-	gnome2_src_prepare
-	epatch "${FILESDIR}"/${PN}-2.7.3-ldflags.patch
-	eautoreconf
 }
 
 src_configure() {
