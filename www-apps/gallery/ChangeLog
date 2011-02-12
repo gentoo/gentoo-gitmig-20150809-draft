@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.178 2010/12/09 09:20:20 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.179 2011/02/12 09:51:29 hwoarang Exp $
+
+  12 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gallery-2.3.1.ebuild:
+  Stable on amd64 wrt bug #354541
 
   09 Dec 2010; Tim Harder <radhermit@gentoo.org> gallery-2.3.1.ebuild:
   Add USE flag defaults on gd and mysql for bug #261030.
