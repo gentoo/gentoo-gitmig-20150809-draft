@@ -10,7 +10,6 @@
 		Personal photo manager for gnome 2 desktop that uses mono
 	</longdescription>
 	<use>
-		<flag name="beagle">Enable app-misc/beagle support for searches</flag>
 		<flag name="flickr">Enable building of the Flickr exported.</flag>
 	</use>
 </pkgmetadata>
