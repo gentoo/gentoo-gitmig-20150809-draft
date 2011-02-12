@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.51 2011/02/06 17:00:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.52 2011/02/12 18:32:09 xarthisius Exp $
+
+  12 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  rcairo-1.8.5-r1.ebuild:
+  Marked ~ppc wrt #330549
 
   06 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   rcairo-1.10.0-r2.ebuild:

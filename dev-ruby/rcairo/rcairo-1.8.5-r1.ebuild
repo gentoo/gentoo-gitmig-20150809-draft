@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.8.5-r1.ebuild,v 1.1 2010/09/29 18:03:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.8.5-r1.ebuild,v 1.2 2011/02/12 18:32:09 xarthisius Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ SRC_URI="mirror://rubygems/cairo-${PV}.gem"
 
 SLOT="0"
 LICENSE="|| ( Ruby GPL-2 )"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 RDEPEND="${RDEPEND}
 	>=x11-libs/cairo-1.2.0[svg]
