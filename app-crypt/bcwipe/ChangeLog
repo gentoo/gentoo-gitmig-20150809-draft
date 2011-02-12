@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.48 2011/02/12 18:23:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.49 2011/02/12 18:34:40 arfrever Exp $
+
+  12 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/bcwipe-1.9.1-fix_warnings.patch, -bcwipe-1.9.3.ebuild,
+  -bcwipe-1.9.6.ebuild:
+  Delete.
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> bcwipe-1.9.7.ebuild:
   sparc stable wrt #345483
