@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-9.ebuild,v 1.2 2011/02/12 12:31:50 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-9.ebuild,v 1.3 2011/02/12 14:41:30 rich0 Exp $
 
 EAPI="3"
 
@@ -85,4 +85,6 @@ pkg_postinst() {
 	elog "See http://developer.android.com/sdk/adding-components.html for more"
 	elog "information."
 	elog "If you have problems downloading the SDK, see http://code.google.com/p/android/issues/detail?id=4406"
+	elog "You need to run env-update and source /etc/profile in any open shells"
+	elog "if you get an SWT error."
 }
