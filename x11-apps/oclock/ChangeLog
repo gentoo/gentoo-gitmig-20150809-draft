@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/oclock
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/oclock/ChangeLog,v 1.23 2010/12/29 22:09:45 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/oclock/ChangeLog,v 1.24 2011/02/12 17:45:47 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> oclock-1.0.2.ebuild:
+  alpha/s390/sh/sparc stable wrt #344827
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> oclock-1.0.2.ebuild:
   arm stable, bug #344827
