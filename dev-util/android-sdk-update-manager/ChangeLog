@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/android-sdk-update-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.15 2011/02/06 17:51:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.16 2011/02/12 12:25:33 rich0 Exp $
+
+*android-sdk-update-manager-9 (12 Feb 2011)
+
+  12 Feb 2011; Richard Freeman <rich0@gentoo.org>
+  +android-sdk-update-manager-9.ebuild:
+  Revision bump - thanks to ProTech for the update
 
   06 Feb 2011; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
   Remove myself from list of maintainers.
