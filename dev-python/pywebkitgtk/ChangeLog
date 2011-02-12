@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywebkitgtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.22 2011/01/06 22:19:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.23 2011/02/12 18:21:24 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> pywebkitgtk-1.1.8.ebuild:
+  sparc stable wrt #342489
 
   06 Jan 2011; Brent Baude <ranger@gentoo.org> pywebkitgtk-1.1.8.ebuild:
   Marking pywebkitgtk-1.1.8 ppc for bug 342489
