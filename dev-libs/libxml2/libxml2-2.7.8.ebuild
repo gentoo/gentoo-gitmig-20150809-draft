@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8.ebuild,v 1.1 2011/02/11 17:30:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8.ebuild,v 1.2 2011/02/12 11:27:21 pacho Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit libtool flag-o-matic eutils python autotools
+inherit libtool flag-o-matic eutils python autotools prefix
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="debug doc examples icu ipv6 python readline test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
@@ -56,6 +56,12 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Patches needed for prefix support
+	epatch "${FILESDIR}"/${PN}-2.7.1-catalog_path.patch
+	epatch "${FILESDIR}"/${PN}-2.7.2-winnt.patch
+
+	eprefixify catalog.c xmlcatalog.c runtest.c xmllint.c
+
 	epunt_cxx
 
 	# Reactivate the shared library versionning script
@@ -89,9 +95,9 @@ src_configure() {
 
 	# --with-mem-debug causes unusual segmentation faults (bug #105120).
 
-	local myconf="--with-zlib
+	local myconf="--with-zlib=${EPREFIX}/usr
 		--with-html-subdir=${PF}/html
-		--docdir=/usr/share/doc/${PF}
+		--docdir=${EPREFIX}/usr/share/doc/${PF}
 		$(use_with debug run-debug)
 		$(use_with icu)
 		$(use_with python)
@@ -111,8 +117,8 @@ src_compile() {
 	if use python; then
 		python_copy_sources python
 		building() {
-			emake PYTHON_INCLUDES="$(python_get_includedir)" \
-				PYTHON_SITE_PACKAGES="$(python_get_sitedir)"
+			emake PYTHON_INCLUDES="${EPREFIX}$(python_get_includedir)" \
+				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir python building
 	fi
@@ -131,15 +137,24 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" \
-		EXAMPLES_DIR=/usr/share/doc/${PF}/examples \
+		EXAMPLES_DIR="${EPREFIX}"/usr/share/doc/${PF}/examples \
 		install || die "Installation failed"
+
+	# on windows, xmllint is installed by interix libxml2 in parent prefix.
+	# this is the version to use. the native winnt version does not support
+	# symlinks, which makes repoman fail if the portage tree is linked in
+	# from another location (which is my default). -- mduft
+	if [[ ${CHOST} == *-winnt* ]]; then
+		rm -rf "${ED}"/usr/bin/xmllint
+		rm -rf "${ED}"/usr/bin/xmlcatalog
+	fi
 
 	if use python; then
 		installation() {
 			emake DESTDIR="${D}" \
-				PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
-				docsdir=/usr/share/doc/${PF}/python \
-				exampledir=/usr/share/doc/${PF}/python/examples \
+				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
+				docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
+				exampledir="${EPREFIX}"/usr/share/doc/${PF}/python/examples \
 				install
 		}
 		python_execute_function -s --source-dir python installation
@@ -173,7 +188,7 @@ pkg_postinst() {
 
 	# We don't want to do the xmlcatalog during stage1, as xmlcatalog will not
 	# be in / and stage1 builds to ROOT=/tmp/stage1root. This fixes bug #208887.
-	if [ "${EROOT}" != "/" ]
+	if [ "${ROOT}" != "/" ]
 	then
 		elog "Skipping XML catalog creation for stage building (bug #208887)."
 	else
@@ -185,7 +200,7 @@ pkg_postinst() {
 		# <obz@gentoo.org>
 		if [ ! -e ${CATALOG} ]; then
 			[ -d "${EROOT}etc/xml" ] || mkdir -p "${EROOT}etc/xml"
-			/usr/bin/xmlcatalog --create > ${CATALOG}
+			"${EPREFIX}"/usr/bin/xmlcatalog --create > ${CATALOG}
 			einfo "Created XML catalog in ${CATALOG}"
 		fi
 	fi
