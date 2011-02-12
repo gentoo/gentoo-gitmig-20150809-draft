@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5037 2011/02/12 01:40:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5038 2011/02/12 15:39:59 suka Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Feb 2011; Andreas Proschofsky <suka@gentoo.org> package.mask:
+  Mask new LibreOffice 3.3.1 release candidate
 
   12 Feb 2011; Peter Volkov <pva@gentoo.org> package.mask:
   Masked =net-p2p/transmission-2.21 as it depends on libevent-2.
