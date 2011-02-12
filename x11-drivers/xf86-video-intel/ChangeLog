@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.61 2011/01/09 23:10:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.62 2011/02/12 11:29:21 hwoarang Exp $
+
+  12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  xf86-video-intel-2.14.0.ebuild:
+  Stable on amd64 wrt bug #354237
 
   09 Jan 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xf86-video-intel-2.14.0.ebuild:

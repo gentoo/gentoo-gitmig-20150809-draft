@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/radeon-ucode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.10 2011/01/08 20:56:10 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.11 2011/02/12 11:28:25 hwoarang Exp $
+
+  12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  radeon-ucode-20110106.ebuild:
+  Stable on amd64 wrt bug #354237
 
 *radeon-ucode-20110106 (08 Jan 2011)
 
