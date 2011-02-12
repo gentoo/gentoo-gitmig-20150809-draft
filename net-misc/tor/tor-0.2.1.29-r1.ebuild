@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.29-r1.ebuild,v 1.1 2011/02/10 00:00:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.29-r1.ebuild,v 1.2 2011/02/12 17:50:38 armin76 Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl
