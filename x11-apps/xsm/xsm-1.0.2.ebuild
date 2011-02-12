@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsm/xsm-1.0.2.ebuild,v 1.7 2010/12/31 20:31:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsm/xsm-1.0.2.ebuild,v 1.8 2011/02/12 18:37:42 armin76 Exp $
 
 EAPI=3
 
 inherit xorg-2
 
 DESCRIPTION="X Session Manager"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="rsh"
 RDEPEND="x11-libs/libXaw
 	x11-libs/libX11
