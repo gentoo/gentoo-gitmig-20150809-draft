@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.88 2011/02/12 16:16:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.89 2011/02/12 21:35:06 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> pixman-0.20.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #344827
 
   12 Feb 2011; Christian Faulhammer <fauli@gentoo.org> pixman-0.20.2.ebuild:
   stable x86, bug 354237
