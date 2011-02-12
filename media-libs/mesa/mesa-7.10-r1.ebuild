@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10-r1.ebuild,v 1.1 2011/02/09 22:25:09 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10-r1.ebuild,v 1.2 2011/02/12 23:23:28 mr_bones_ Exp $
 
 EAPI=3
 
@@ -137,7 +137,7 @@ src_prepare() {
 
 	# bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch
-	
+
 	# FreeBSD 6.* doesn't have posix_memalign().
 	if [[ ${CHOST} == *-freebsd6.* ]]; then
 		sed -i \
