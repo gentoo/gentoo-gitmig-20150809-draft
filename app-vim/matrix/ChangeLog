@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/matrix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/matrix/ChangeLog,v 1.19 2011/01/07 22:37:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/matrix/ChangeLog,v 1.20 2011/02/12 18:26:28 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> matrix-1.10.ebuild:
+  sparc stable wrt #345079
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> matrix-1.10.ebuild:
   stable ppc, bug 345079
