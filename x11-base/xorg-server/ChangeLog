@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.563 2011/02/12 11:27:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.564 2011/02/12 17:22:26 fauli Exp $
+
+  12 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  xorg-server-1.9.4.ebuild:
+  stable x86, bug 354237
 
   12 Feb 2011; Markos Chandras <hwoarang@gentoo.org> xorg-server-1.9.4.ebuild:
   Stable on amd64 wrt bug #354237
