@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.53 2011/01/13 20:49:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.54 2011/02/12 18:43:24 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> fpc-2.4.0.ebuild:
+  sparc stable wrt #345663
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> fpc-2.4.0.ebuild:
   stable ppc, bug 345663
