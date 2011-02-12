@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.257 2011/02/12 15:59:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.258 2011/02/12 17:24:18 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> mit-krb5-1.8.3-r3.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #352859
 
   12 Feb 2011; Eray Aslan <eras@gentoo.org> -mit-krb5-1.9.ebuild:
   Remove vulnerable version.
