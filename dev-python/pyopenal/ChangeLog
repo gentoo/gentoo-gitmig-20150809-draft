@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.22 2010/12/26 16:10:18 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.23 2011/02/12 21:17:51 hwoarang Exp $
+
+  12 Feb 2011; Markos Chandras <hwoarang@gentoo.org> pyopenal-0.1.6.ebuild:
+  Stable on amd64 wrt bug #=dev-python/pyopenal-0.1.6
 
   26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyopenal-0.1.6.ebuild:
