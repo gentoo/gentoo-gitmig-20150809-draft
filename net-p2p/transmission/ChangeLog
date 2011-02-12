@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.138 2011/01/29 14:10:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.139 2011/02/12 01:47:49 pva Exp $
+
+*transmission-2.21 (12 Feb 2011)
+
+  12 Feb 2011; Peter Volkov <pva@gentoo.org> +transmission-2.21.ebuild,
+  +files/transmission-daemon.confd.3, +files/transmission-daemon.initd.6:
+  Version bump, #351399, now it is compatible (actually depends) with
+  libevent-2, thank Anthony Basile for report. Added possibility to use syslog,
+  #349803, thank Maxime de Roucy for report and feedback. Added ewarn for
+  dropping permissions until better solution will be found, #349867, thank Tony
+  Levi for report.
 
   29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> transmission-2.13.ebuild,
   +files/transmission-2.13-libnotify-0.7.patch:
