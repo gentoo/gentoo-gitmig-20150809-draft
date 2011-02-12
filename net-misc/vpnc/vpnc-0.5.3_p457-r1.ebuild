@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p457.ebuild,v 1.1 2011/02/12 16:04:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p457-r1.ebuild,v 1.1 2011/02/12 23:57:06 fauli Exp $
 
 EAPI=3
 
