@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/newlib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.13 2010/02/28 20:12:04 lu_zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.14 2011/02/12 23:49:01 vapier Exp $
+
+  12 Feb 2011; Mike Frysinger <vapier@gentoo.org> newlib-1.18.0.ebuild:
+  Do not allow newlib to install alongside glibc.
 
   28 Feb 2010; Luca Barbato <lu_zero@gentoo.org> newlib-1.18.0.ebuild:
   Make use of newlib-multithread as suggested by Olivier Huber

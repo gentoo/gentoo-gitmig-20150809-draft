@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.18.0.ebuild,v 1.2 2010/02/28 20:12:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.18.0.ebuild,v 1.3 2011/02/12 23:49:01 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,11 +10,6 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
-fi
-
-# Handle the case where we want newlib on glibc ...
-if [[ ${CTARGET} == ${CHOST} ]] && [[ ${CHOST} != *-newlib ]] ; then
-	export CTARGET=${CHOST%%-*}-pc-linux-newlib
 fi
 
 DESCRIPTION="Newlib is a C library intended for use on embedded systems"
@@ -29,10 +24,17 @@ KEYWORDS="-* ~arm ~hppa ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="nls threads unicode crosscompile_opts_headers-only"
 RESTRICT="strip"
 
-DEPEND=""
-RDEPEND=""
-
 NEWLIBBUILD="${WORKDIR}/build"
+
+pkg_setup() {
+	# Reject newlib-on-glibc type installs
+	if [[ ${CTARGET} == ${CHOST} ]] ; then
+		case ${CHOST} in
+			*-newlib|*-elf) ;;
+			*) die "Use sys-devel/crossdev to build a newlib toolchain" ;;
+		esac
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -66,7 +68,7 @@ src_compile() {
 
 src_install() {
 	cd "${NEWLIBBUILD}"
-	emake -j1 DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install || die
 #	env -uRESTRICT CHOST=${CTARGET} prepallstrip
 	# minor hack to keep things clean
 	rm -fR "${D}"/usr/share/info
