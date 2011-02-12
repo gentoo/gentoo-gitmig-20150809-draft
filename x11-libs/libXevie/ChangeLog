@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXevie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.46 2011/02/06 10:33:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXevie/ChangeLog,v 1.47 2011/02/12 20:05:54 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> libXevie-1.0.3.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #344827
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libXevie-1.0.2.ebuild:
   Drop to ~mips
