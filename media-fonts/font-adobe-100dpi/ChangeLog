@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-adobe-100dpi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-100dpi/ChangeLog,v 1.40 2010/12/31 19:19:55 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-adobe-100dpi/ChangeLog,v 1.41 2011/02/12 16:09:44 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  font-adobe-100dpi-1.0.3.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #344827
 
   31 Dec 2010; Jeroen Roovers <jer@gentoo.org> font-adobe-100dpi-1.0.3.ebuild:
   Stable for HPPA (bug #344827).

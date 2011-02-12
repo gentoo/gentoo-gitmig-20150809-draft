@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bh-lucidatypewriter-100dpi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-100dpi/ChangeLog,v 1.35 2011/01/06 19:52:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-lucidatypewriter-100dpi/ChangeLog,v 1.36 2011/02/12 16:26:52 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  font-bh-lucidatypewriter-100dpi-1.0.3.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #344827
 
   06 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -font-bh-lucidatypewriter-100dpi-1.0.0.ebuild:
