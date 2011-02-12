@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12452 2011/02/12 15:39:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12453 2011/02/12 15:51:20 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (12 Feb 2011)
+# Masked for removal.
+# Replaced by  udisks-glue, udiskie, uam or traydevice.
+# You have 60 days left to migrate your configuration.
+dev-libs/boolstuff
+sys-apps/halevt
 
 # Andreas Proschofsky <suka@gentoo.org> (12 Feb 2011)
 # release candidate
