@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.36 2011/01/11 22:28:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.37 2011/02/12 18:37:35 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> openmsx-0.7.2.ebuild,
+  openmsx-0.8.0.ebuild:
+  Drop sparc keywords
 
   11 Jan 2011; Brent Baude <ranger@gentoo.org> openmsx-0.8.0.ebuild:
   Marking openmsx-0.8.0 ppc for bug 344021
