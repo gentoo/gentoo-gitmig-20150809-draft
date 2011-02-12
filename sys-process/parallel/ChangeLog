@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/parallel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.6 2011/01/25 15:30:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.7 2011/02/12 15:45:08 fauli Exp $
+
+*parallel-20110205 (12 Feb 2011)
+
+  12 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  -parallel-20101222-r1.ebuild, +parallel-20110205.ebuild:
+  version bump and clean up
 
   25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   -parallel-20101222.ebuild:
