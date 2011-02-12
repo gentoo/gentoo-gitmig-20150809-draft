@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.14 2011/02/09 15:10:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.15 2011/02/12 12:29:16 idl0r Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -21,7 +21,7 @@ IUSE="bazaar cvs darcs git mercurial subversion test"
 COMMON_DEPS="dev-lang/python[xml]"
 DEPEND="${COMMON_DEPS}
 	test? ( dev-vcs/subversion )
-	app-text/xmlto"
+	app-text/asciidoc"
 RDEPEND="${COMMON_DEPS}
 	bazaar? ( dev-vcs/bzr )
 	cvs? ( dev-vcs/cvs )
