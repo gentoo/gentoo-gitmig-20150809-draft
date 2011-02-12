@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdbedizzy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdbedizzy/ChangeLog,v 1.25 2010/12/29 22:02:00 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdbedizzy/ChangeLog,v 1.26 2011/02/12 18:01:59 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> xdbedizzy-1.1.0.ebuild:
+  s390/sh stable wrt #344827
 
   29 Dec 2010; Markus Meier <maekke@gentoo.org> xdbedizzy-1.1.0.ebuild:
   arm stable, bug #344827
