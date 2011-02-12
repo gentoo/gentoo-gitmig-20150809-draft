@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.139 2011/02/12 01:47:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.140 2011/02/12 09:28:16 pva Exp $
+
+  12 Feb 2011; Peter Volkov <pva@gentoo.org> transmission-2.04-r1.ebuild,
+  transmission-2.12.ebuild, transmission-2.13.ebuild, transmission-2.21.ebuild,
+  metadata.xml:
+  Rename sound to libcanberra local USE flag, bug #354585, thank Ulrich Müller
+  for report.
 
 *transmission-2.21 (12 Feb 2011)
 
