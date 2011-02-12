@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.119 2011/01/31 12:36:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.120 2011/02/12 18:11:55 pacho Exp $
+
+  12 Feb 2011; Pacho Ramos <pacho@gentoo.org> brasero-2.32.1.ebuild:
+  Drop beagle support as it will be dropped soon.
 
   31 Jan 2011; Pacho Ramos <pacho@gentoo.org> brasero-2.32.1.ebuild:
   RDEPENDs on x11-themes/hicolor-icon-theme as reported in bug #350377 by
