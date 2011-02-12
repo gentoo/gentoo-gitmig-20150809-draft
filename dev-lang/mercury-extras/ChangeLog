@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.88 2011/01/21 20:04:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.89 2011/02/12 18:29:05 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  mercury-extras-0.13.1-r1.ebuild, mercury-extras-10.04.ebuild,
+  mercury-extras-10.04-r1.ebuild, mercury-extras-10.04.1.ebuild,
+  mercury-extras-10.04.2.ebuild, mercury-extras-10.04.2-r1.ebuild,
+  mercury-extras-11.01_beta1.ebuild:
+  Drop sparc keywords
 
   21 Jan 2011; <keri@gentoo.org> mercury-extras-11.01_beta1.ebuild:
   Ensure the mercury-cairo packages has an install target

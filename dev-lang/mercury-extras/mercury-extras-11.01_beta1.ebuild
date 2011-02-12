@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.01_beta1.ebuild,v 1.2 2011/01/21 20:04:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.01_beta1.ebuild,v 1.3 2011/02/12 18:29:05 armin76 Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.mercury.cs.mu.oz.au/download/files/beta-releases/11.01-beta/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="X cairo examples glut iodbc ncurses odbc opengl ssl tcl tk xml"
 
