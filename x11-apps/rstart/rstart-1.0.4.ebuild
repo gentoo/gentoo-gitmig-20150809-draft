@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/rstart-1.0.4.ebuild,v 1.5 2010/12/29 21:11:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/rstart-1.0.4.ebuild,v 1.6 2011/02/12 17:47:52 armin76 Exp $
 
 EAPI=3
 
 inherit xorg-2
 
 DESCRIPTION="X.Org rstart application"
-KEYWORDS="amd64 arm ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="amd64 arm ~mips ~ppc ppc64 s390 sh ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-proto/xproto"
