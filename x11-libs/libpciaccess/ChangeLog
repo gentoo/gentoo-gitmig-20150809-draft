@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.59 2011/02/08 21:11:46 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.60 2011/02/12 11:32:09 hwoarang Exp $
+
+  12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  libpciaccess-0.12.1.ebuild:
+  Stable on amd64 wrt bug #354237
 
   08 Feb 2011; Jonathan Callen <abcd@gentoo.org> libpciaccess-0.12.1.ebuild:
   Let libtool find & install the proper scanpci binary. Fix bugs 354145 and
