@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.2.0.ebuild,v 1.2 2011/01/03 18:24:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.2.0.ebuild,v 1.3 2011/02/12 10:43:32 ssuominen Exp $
 
 EAPI=2
 inherit autotools
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND="dev-libs/dbus-glib
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.88
 	dev-libs/glib:2
 	dev-libs/confuse"
 RDEPEND="${COMMON_DEPEND}
