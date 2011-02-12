@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.205 2010/12/31 23:53:28 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.206 2011/02/12 15:16:29 arfrever Exp $
+
+  12 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libxslt-1.1.26.ebuild:
+  Link against correct Python library (bug #354593).
 
   31 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libxslt-1.1.26.ebuild:

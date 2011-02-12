@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.14 2010/12/31 23:53:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.15 2011/02/12 15:16:29 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -63,7 +63,8 @@ src_compile() {
 		python_copy_sources python
 		building() {
 			emake PYTHON_INCLUDES="$(python_get_includedir)" \
-				PYTHON_SITE_PACKAGES="$(python_get_sitedir)"
+				PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
+				PYTHON_VERSION="$(python_get_version)"
 		}
 		python_execute_function -s --source-dir python building
 	fi
