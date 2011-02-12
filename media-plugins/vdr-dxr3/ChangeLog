@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-dxr3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.20 2011/02/12 13:38:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.21 2011/02/12 13:39:31 zzam Exp $
+
+  12 Feb 2011; Matthias Schwarzott <zzam@gentoo.org> vdr-dxr3-0.2.8.ebuild:
+  Make repoman happy and set RDEPEND explicitly.
 
 *vdr-dxr3-0.2.12 (12 Feb 2011)
 

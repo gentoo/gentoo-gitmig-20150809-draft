@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.8.ebuild,v 1.3 2008/12/13 18:48:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.8.ebuild,v 1.4 2011/02/12 13:39:31 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND="media-video/em8300-libraries
 	>=media-video/vdr-1.4.0
 	media-video/ffmpeg"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	vdr-plugin_src_unpack
