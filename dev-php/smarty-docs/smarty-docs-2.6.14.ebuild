@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/smarty-docs-2.6.14.ebuild,v 1.9 2011/01/06 13:09:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/smarty-docs-2.6.14.ebuild,v 1.10 2011/02/12 17:33:32 ssuominen Exp $
 
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 MY_P="Smarty-${PV}-docs"
 
