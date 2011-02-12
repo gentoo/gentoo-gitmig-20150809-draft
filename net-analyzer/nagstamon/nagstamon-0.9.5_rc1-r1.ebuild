@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.5_rc1-r1.ebuild,v 1.1 2011/02/12 02:37:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.5_rc1-r1.ebuild,v 1.2 2011/02/12 13:03:19 idl0r Exp $
 
 EAPI="3"
 
@@ -49,7 +49,7 @@ src_install() {
 
 		insinto $(python_get_sitedir)/${MY_PN}
 		doins {GUI,Config,Objects,Custom,Actions}.py || die
-		touch $(python_get_sitedir)/${MY_PN}/__init__.py || die
+		touch "${D}/$(python_get_sitedir)/${MY_PN}/__init__.py" || die
 		doins -r Server/ || die
 
 		insinto /usr/share/${PN}/resources
