@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.1.ebuild,v 1.2 2011/02/12 09:53:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.1.ebuild,v 1.3 2011/02/12 20:57:36 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/4.8/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="debug +keyboard libcanberra libnotify"
+IUSE="debug libcanberra libnotify +xklavier"
 
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.88
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=xfce-base/exo-0.6
 	libcanberra? ( >=media-libs/libcanberra-0.25[sound] )
 	libnotify? ( >=x11-libs/libnotify-0.1.3 )
-	keyboard? ( >=x11-libs/libxklavier-0.3 )"
+	xklavier? ( >=x11-libs/libxklavier-0.3 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
@@ -41,7 +41,7 @@ pkg_setup() {
 		--disable-dependency-tracking
 		--disable-static
 		$(use_enable libnotify)
-		$(use_enable keyboard libxklavier)
+		$(use_enable xklavier libxklavier)
 		$(use_enable libcanberra sound-settings)
 		$(xfconf_use_debug)
 		)
