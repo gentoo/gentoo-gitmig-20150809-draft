@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.3.2.ebuild,v 1.2 2011/02/12 11:29:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.3.2.ebuild,v 1.3 2011/02/12 17:32:53 fauli Exp $
 
 EAPI=3
 
 inherit xorg-2
 
 DESCRIPTION="S3 Savage video driver"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
 
 IUSE="dri"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
