@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.1 2010/12/19 20:12:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.2 2011/02/12 17:51:05 xarthisius Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Personal photo management application for the gnome desktop"
 HOMEPAGE="http://f-spot.org"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc flickr raw"
 
 RDEPEND=">=dev-lang/mono-2.2
