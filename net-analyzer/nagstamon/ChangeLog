@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.14 2011/02/12 02:37:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.15 2011/02/12 14:48:05 arfrever Exp $
+
+  12 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nagstamon-0.9.3.ebuild, nagstamon-0.9.4.ebuild,
+  nagstamon-0.9.5_rc1-r1.ebuild:
+  Restrict Jython ABIs.
 
 *nagstamon-0.9.5_rc1-r1 (12 Feb 2011)
 
