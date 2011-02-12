@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.32.ebuild,v 1.1 2011/02/10 13:08:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.32-r1.ebuild,v 1.1 2011/02/12 16:51:04 fordfrog Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -156,6 +156,7 @@ src_install() {
 
 	cd "${D}/usr/share/${TOMCAT_NAME}/lib" || die
 	java-pkg_jar-from tomcat-servlet-api-2.5
+	java-pkg_jar-from eclipse-ecj-3.3
 
 	# symlink the directories to make CATALINA_BASE possible
 	dosym /etc/${TOMCAT_NAME} ${CATALINA_BASE}/conf
