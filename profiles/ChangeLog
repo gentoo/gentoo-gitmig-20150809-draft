@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5040 2011/02/12 19:01:28 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5041 2011/02/12 23:17:27 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> -use.local.desc:
+  use.local.desc is now generated purely in the rsync tier and is no longer
+  required in CVS. If you were looking to change it, you should be using
+  metadata.xml instead.
 
   12 Feb 2011; Rafael G. Martins <rafaelmartins@gentoo.org> package.mask:
   =sci-mathematics/octave-3.4* pmasked for testing.
