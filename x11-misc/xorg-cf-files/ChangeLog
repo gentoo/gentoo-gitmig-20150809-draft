@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.38 2011/02/12 11:33:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.39 2011/02/12 16:39:53 fauli Exp $
+
+  12 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  xorg-cf-files-1.0.4.ebuild:
+  stable x86, bug 354237
 
   12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   xorg-cf-files-1.0.4.ebuild:
