@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.0.ebuild,v 1.7 2010/12/24 13:34:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.0.ebuild,v 1.8 2011/02/12 09:11:16 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://blog.pierlux.com/projects/libchamplain/en/"
 LICENSE="LGPL-2"
 SLOT="0.8"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc gtk html introspection python"
+IUSE="debug doc gtk html +introspection python"
 
 RDEPEND="
 	>=dev-libs/glib-2.16
@@ -44,7 +44,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 G2CONF="${G2CONF}
 	--disable-static
 	--enable-memphis
-	--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
+	--with-html-dir="${EPREFIX}/usr/share/doc/${PF}/html"
 	$(use_enable debug)
 	$(use_enable gtk)
 	$(use_enable html gtk-doc-html)
