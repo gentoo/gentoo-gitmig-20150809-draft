@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/roundup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.57 2011/01/06 23:04:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.58 2011/02/12 18:22:18 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> roundup-1.4.16.ebuild:
+  sparc stable wrt #345477
 
   06 Jan 2011; Brent Baude <ranger@gentoo.org> roundup-1.4.16.ebuild:
   Marking roundup-1.4.16 ppc for bug 345477
