@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.5.ebuild,v 1.10 2011/01/29 20:23:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.5.ebuild,v 1.11 2011/02/12 09:53:18 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/4.6/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
-IUSE="debug +keyboard libnotify sound"
+IUSE="debug +keyboard libcanberra libnotify"
 
 RDEPEND=">=dev-libs/glib-2.12:2
 	>=dev-libs/dbus-glib-0.34
@@ -30,8 +30,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	>=xfce-base/exo-0.3.100
 	libnotify? ( <x11-libs/libnotify-0.7 )
 	keyboard? ( >=x11-libs/libxklavier-0.3 )
-	sound? ( media-libs/libcanberra )
-	!<x11-base/xorg-server-1.5.3"
+	libcanberra? ( media-libs/libcanberra )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
@@ -43,7 +42,7 @@ pkg_setup() {
 	XFCONF="--disable-dependency-tracking
 		$(use_enable libnotify)
 		$(use_enable keyboard libxklavier)
-		$(use_enable sound sound-settings)
+		$(use_enable libcanberra sound-settings)
 		$(xfconf_use_debug)"
 	DOCS="AUTHORS ChangeLog NEWS TODO"
 	PATCHES=( "${FILESDIR}/${PN}-4.6.3-exo.patch" )
