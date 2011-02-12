@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12450 2011/02/11 23:31:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12451 2011/02/12 01:40:40 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -905,6 +905,7 @@ dev-lisp/gcl
 # Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
 # Masked until reverse dependencies are fixed (bug #333077)
 =dev-libs/libevent-2*
+=net-p2p/transmission-2.21
 
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing
