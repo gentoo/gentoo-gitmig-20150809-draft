@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-alias
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.41 2010/12/31 19:23:16 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-alias/ChangeLog,v 1.42 2011/02/12 16:19:07 armin76 Exp $
+
+  12 Feb 2011; Raúl Porcel <armin76@gentoo.org> font-alias-1.0.3.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #344827
 
   31 Dec 2010; Jeroen Roovers <jer@gentoo.org> font-alias-1.0.3.ebuild:
   Stable for HPPA (bug #344827).
