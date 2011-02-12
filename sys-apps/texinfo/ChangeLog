@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.111 2011/02/10 03:42:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.112 2011/02/12 22:50:18 vapier Exp $
+
+  12 Feb 2011; Mike Frysinger <vapier@gentoo.org> texinfo-4.13-r1.ebuild:
+  Keep from regenerating man pages since their content is unchanged #354589 by
+  Alexey Sychev.
 
 *texinfo-4.13-r1 (10 Feb 2011)
 

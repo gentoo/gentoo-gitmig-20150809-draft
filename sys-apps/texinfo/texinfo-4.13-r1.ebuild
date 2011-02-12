@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.13-r1.ebuild,v 1.1 2011/02/10 03:42:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.13-r1.ebuild,v 1.2 2011/02/12 22:50:18 vapier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-xz.patch #269742
+	touch doc/install-info.1 #354589
 	epatch "${FILESDIR}"/${P}-texi2dvi-regexp-range.patch #311885
+	touch doc/{texi2dvi,texi2pdf,pdftexi2dvi}.1 #354589
 }
 
 src_configure() {
