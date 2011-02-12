@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0-r2.ebuild,v 1.1 2011/02/06 18:06:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.4.0a.ebuild,v 1.1 2011/02/12 22:19:02 nelchael Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded-2.patch
+	epatch "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch
 	eautoreconf
 
 	if use python; then
