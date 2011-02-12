@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7-r1.ebuild,v 1.7 2010/11/24 14:55:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7-r1.ebuild,v 1.8 2011/02/12 18:08:15 armin76 Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11"
