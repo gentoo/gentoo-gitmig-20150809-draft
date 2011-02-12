@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/x11perf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.57 2011/02/12 11:25:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.58 2011/02/12 16:49:48 fauli Exp $
+
+  12 Feb 2011; Christian Faulhammer <fauli@gentoo.org> x11perf-1.5.3.ebuild:
+  stable x86, bug 354237
 
   12 Feb 2011; Markos Chandras <hwoarang@gentoo.org> x11perf-1.5.3.ebuild:
   Stable on amd64 wrt bug #354237
