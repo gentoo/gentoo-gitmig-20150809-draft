@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5039 2011/02/12 15:51:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5040 2011/02/12 19:01:28 rafaelmartins Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Feb 2011; Rafael G. Martins <rafaelmartins@gentoo.org> package.mask:
+  =sci-mathematics/octave-3.4* pmasked for testing.
 
   12 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite sys-apps/halevt.
