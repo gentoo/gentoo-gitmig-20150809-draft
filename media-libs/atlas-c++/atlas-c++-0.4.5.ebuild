@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.15 2009/09/23 15:20:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.16 2011/02/12 18:06:53 armin76 Exp $
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.worldforge.org/pub/worldforge/libs/${MY_PN}/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="=dev-libs/libsigc++-1.0*"
