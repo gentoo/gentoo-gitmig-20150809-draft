@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/newlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.14 2011/02/12 23:49:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.15 2011/02/12 23:49:27 vapier Exp $
+
+*newlib-1.19.0 (12 Feb 2011)
+
+  12 Feb 2011; Mike Frysinger <vapier@gentoo.org> +newlib-1.19.0.ebuild:
+  Version bump.
 
   12 Feb 2011; Mike Frysinger <vapier@gentoo.org> newlib-1.18.0.ebuild:
   Do not allow newlib to install alongside glibc.
