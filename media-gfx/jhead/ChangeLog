@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/jhead
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.110 2010/01/07 22:10:36 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.111 2011/02/12 16:48:33 vanquirius Exp $
+
+*jhead-2.90 (12 Feb 2011)
+
+  12 Feb 2011; Marcelo Goes <vanquirius@gentoo.org> +jhead-2.90.ebuild,
+  +files/jhead-2.90-mkstemp_respect_flags.patch:
+  2.90 version bump.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> jhead-2.87.ebuild:
   Transfer Prefix keywords
