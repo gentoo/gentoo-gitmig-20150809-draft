@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.31.ebuild,v 1.2 2011/02/11 00:56:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.31.ebuild,v 1.3 2011/02/12 03:38:23 leio Exp $
 
 EAPI=2
 
@@ -25,8 +25,8 @@ RDEPEND=">=dev-libs/glib-2.20:2
 	# ^^ queue2 move, mustn't have both libgstcoreleements.so and libgstqueue2.so at runtime providing the element at once
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-util/gtk-doc-am
 	nls? ( sys-devel/gettext )"
+	# dev-util/gtk-doc-am # Only if eautoreconf'ing
 
 src_configure() {
 	# Disable static archives, dependency tracking and examples
