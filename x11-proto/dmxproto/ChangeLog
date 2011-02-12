@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/dmxproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/dmxproto/ChangeLog,v 1.44 2011/01/15 18:30:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/dmxproto/ChangeLog,v 1.45 2011/02/12 11:33:44 hwoarang Exp $
+
+  12 Feb 2011; Markos Chandras <hwoarang@gentoo.org> dmxproto-2.3.1.ebuild:
+  Stable on amd64 wrt bug #354237
 
 *dmxproto-2.3.1 (15 Jan 2011)
 
