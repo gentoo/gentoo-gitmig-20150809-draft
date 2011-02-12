@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/fort/fort-0.4.2.ebuild,v 1.3 2010/11/28 12:42:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/fort/fort-0.4.2.ebuild,v 1.4 2011/02/12 16:01:46 xarthisius Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/ocaml"

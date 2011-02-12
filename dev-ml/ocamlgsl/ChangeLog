@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlgsl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgsl/ChangeLog,v 1.4 2010/11/28 12:42:58 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgsl/ChangeLog,v 1.5 2011/02/12 16:02:42 xarthisius Exp $
+
+  12 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> ocamlgsl-0.6.0.ebuild:
+  Marked ~ppc wrt #322673
 
   28 Nov 2010; Markos Chandras <hwoarang@gentoo.org> ocamlgsl-0.6.0.ebuild:
   Stable on amd64 wrt bug #344435
