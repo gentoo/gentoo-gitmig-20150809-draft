@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.1.ebuild,v 1.1 2011/02/11 14:59:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.1.ebuild,v 1.2 2011/02/13 08:52:18 grobian Exp $
 
 EAPI="3"
 
@@ -39,10 +39,10 @@ src_install() {
 
 pkg_preinst() {
 #	has_version ${CATEGORY}/${PN}:1.4 && return 0
-	preserve_old_lib /usr/$(get_libdir)/libpng14.so.0
+	preserve_old_lib /usr/$(get_libdir)/libpng14$(get_libname 0)
 }
 
 pkg_postinst() {
 #	has_version ${CATEGORY}/${PN}:1.4 && return 0
-	preserve_old_lib_notify /usr/$(get_libdir)/libpng14.so.0
+	preserve_old_lib_notify /usr/$(get_libdir)/libpng14$(get_libname 0)
 }
