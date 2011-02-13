@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.800 2011/02/06 11:33:20 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.801 2011/02/13 04:53:21 dirtyepic Exp $
+
+  13 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> -gcc-4.4.3-r2.ebuild,
+  -gcc-4.4.4-r1.ebuild, gcc-4.4.4-r2.ebuild, gcc-4.4.5.ebuild:
+  Release 4.4.4 p1.4 and 4.4.5 p1.2 with fix for HPPA wrong-code (bug #349113).
+  Remove old.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> gcc-3.2.3-r4.ebuild,
   gcc-4.1.2.ebuild:
