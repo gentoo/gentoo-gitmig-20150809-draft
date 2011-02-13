@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.78 2011/01/18 17:11:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.79 2011/02/13 12:42:56 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> root-5.26.00-r2.ebuild,
+  root-5.26.00e-r1.ebuild:
+  Drop sparc keywords
 
   18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -root-5.26.00-r4.ebuild:
   Drop old.
