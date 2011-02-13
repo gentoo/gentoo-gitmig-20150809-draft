@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p3.ebuild,v 1.4 2010/12/17 18:22:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p5.ebuild,v 1.1 2011/02/13 12:09:12 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ MY_P="${MY_PN}_${MY_PV}"
 
 DESCRIPTION="Crystallography and NMR System"
 HOMEPAGE="http://cns.csb.yale.edu/"
-SRC_URI="${MY_P/p3}_all.tar.gz
+SRC_URI="${MY_P/p5}_all.tar.gz
 	aria? ( aria2.3.1.tar.gz )"
 
 SLOT="0"
@@ -24,7 +24,7 @@ RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
 
 RESTRICT="fetch"
-S="${WORKDIR}/${MY_P/p3}"
+S="${WORKDIR}/${MY_P/p5}"
 
 pkg_nofetch() {
 	elog "Fill out the form at http://cns.csb.yale.edu/cns_request/"
@@ -92,11 +92,13 @@ src_prepare() {
 	sed -i \
 		-e "s:_CNSsolve_location_:${S}:g" \
 		-e "17 s:\(.*\):\1\nsetenv _POSIX2_VERSION 199209:g" \
-		"${S}"/cns_solve_env
+		"${S}"/cns_solve_env || die
 	sed -i \
 		-e "s:_CNSsolve_location_:${S}:g" \
 		-e "17 s:\(.*\):\1\nexport _POSIX2_VERSION; _POSIX2_VERSION=199209:g" \
-		"${T}"/cns_solve_env_sh
+		-e "s:setenv OMP_STACKSIZE 256m:export OMP_STACKSIZE= 256m:g" \
+		-e "s:limit:ulimit:g" \
+		"${T}"/cns_solve_env_sh || die
 
 	ebegin "Fixing shebangs..."
 		find "${S}" -type f \
