@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.146 2011/02/09 21:38:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.147 2011/02/13 10:11:34 ssuominen Exp $
+
+  13 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-power-manager-2.32.0.ebuild,
+  +files/gnome-power-manager-2.32.0-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7 wrt #354135 by Diego Elio
+  Pettenò.
 
   09 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-power-manager-2.30.1.ebuild, gnome-power-manager-2.32.0.ebuild:
