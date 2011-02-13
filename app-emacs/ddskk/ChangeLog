@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ddskk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.33 2010/11/05 06:59:31 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.34 2011/02/13 19:13:56 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> ddskk-13.1-r1.ebuild,
+  ddskk-14.1.ebuild:
+  Drop alpha/sparc keywords
 
 *ddskk-14.1 (04 Nov 2010)
 
