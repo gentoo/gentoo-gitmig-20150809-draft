@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.19 2010/12/27 21:03:06 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.20 2011/02/13 20:40:05 grobian Exp $
+
+  13 Feb 2011; Fabian Groffen <grobian@gentoo.org> markupsafe-0.11.ebuild:
+  Marked ~sparc-solaris and ~sparc64-solaris
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> markupsafe-0.11.ebuild:
   Marking markupsafe-0.11 ppc64 for bug 341165
