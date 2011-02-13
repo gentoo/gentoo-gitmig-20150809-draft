@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.7 2010/11/12 09:37:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.8 2011/02/13 19:15:20 armin76 Exp $
 
 EAPI="1"
 inherit confutils eutils gnome2-utils multilib python
@@ -11,7 +11,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="doc nls"
 
 RDEPEND=">=dev-libs/glib-2.18
