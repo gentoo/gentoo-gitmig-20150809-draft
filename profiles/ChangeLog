@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5044 2011/02/13 17:50:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5045 2011/02/13 18:09:39 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  hardened/linux/amd64/make.defaults, hardened/linux/ia64/make.defaults,
+  hardened/linux/make.defaults, hardened/linux/powerpc/ppc32/make.defaults,
+  hardened/linux/powerpc/ppc64/make.defaults,
+  hardened/linux/x86/10.0/make.defaults, hardened/linux/x86/make.defaults:
+  Avoid duplication of USE flags in hardened profiles.
 
   13 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +default/linux/package.use, default/bsd/fbsd/package.use:
