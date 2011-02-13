@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.194 2011/02/13 11:32:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.195 2011/02/13 12:51:10 armin76 Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
+# Masked until devs know how to use repoman
+<media-video/mplayer-9999 bluray 
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Feb 2011)
 # Mask until x11-libs/gtk+:3 is in tree.
