@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.4 2011/01/27 07:21:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-2.0.8-r1.ebuild,v 1.5 2011/02/13 17:10:04 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="yes"
@@ -20,7 +20,9 @@ RDEPEND=">=dev-libs/glib-2.6:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.2 )
-	test? ( >=dev-libs/check-0.9.7 )"
+	>=dev-libs/check-0.9.7"
+# FIXME: check should only be needed with USE 'test', bug #349301
+#	test? ( >=dev-libs/check-0.9.7 )"
 
 pkg_setup() {
 	DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README* TODO"
