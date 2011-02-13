@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.67 2011/01/25 14:49:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.68 2011/02/13 12:24:48 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> qjackctl-0.3.2.ebuild,
+  qjackctl-0.3.7.ebuild:
+  Drop sparc keywords
 
   25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> qjackctl-0.3.7.ebuild:
   Stable on amd64 wrt bug #331157
