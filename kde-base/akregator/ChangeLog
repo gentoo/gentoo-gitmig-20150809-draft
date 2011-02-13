@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.178 2011/01/28 19:16:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.179 2011/02/13 19:58:05 scarabeus Exp $
+
+  13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -akregator-4.4.6.ebuild,
+  -akregator-4.4.7.ebuild, -akregator-4.4.8.ebuild:
+  Drop older KDEPIM releases
 
   28 Jan 2011; Thomas Kahle <tomka@gentoo.org> akregator-4.4.9.ebuild:
   x86 stable per bug 351345

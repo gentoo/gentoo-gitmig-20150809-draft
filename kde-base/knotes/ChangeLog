@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.163 2011/01/28 19:44:18 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.164 2011/02/13 20:02:22 scarabeus Exp $
+
+  13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -knotes-4.4.6.ebuild,
+  -knotes-4.4.7.ebuild, -knotes-4.4.8.ebuild:
+  Drop older KDEPIM releases
 
   28 Jan 2011; Thomas Kahle <tomka@gentoo.org> knotes-4.4.9.ebuild:
   x86 stable per bug 351345

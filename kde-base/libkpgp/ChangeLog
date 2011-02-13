@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.147 2011/01/28 19:51:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.148 2011/02/13 19:58:24 scarabeus Exp $
+
+  13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libkpgp-4.4.6.ebuild,
+  -libkpgp-4.4.7.ebuild, -libkpgp-4.4.8.ebuild:
+  Drop older KDEPIM releases
 
   28 Jan 2011; Thomas Kahle <tomka@gentoo.org> libkpgp-4.4.9.ebuild:
   x86 stable per bug 351345
