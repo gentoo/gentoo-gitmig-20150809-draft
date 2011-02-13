@@ -1,10 +1,28 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5042 2011/02/13 11:32:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5043 2011/02/13 16:53:39 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  arch/amd64/make.defaults, base/make.defaults,
+  default/bsd/fbsd/amd64/7.2/make.defaults,
+  default/bsd/fbsd/amd64/8.0/make.defaults,
+  default/bsd/fbsd/x86/7.2/make.defaults,
+  default/bsd/fbsd/x86/8.0/make.defaults,
+  hardened/amd64/multilib/make.defaults,
+  prefix/darwin/macos/10.4/x86/make.defaults,
+  prefix/darwin/macos/10.5/x64/make.defaults,
+  prefix/darwin/macos/10.5/x86/make.defaults,
+  prefix/darwin/macos/10.6/x64/make.defaults,
+  prefix/darwin/macos/10.6/x86/make.defaults, prefix/linux/make.defaults,
+  releases/10.0/make.defaults, releases/2008.0/make.defaults,
+  releases/freebsd-7.2/make.defaults:
+  Don't include ${USE} in the first assignment to USE in make.defaults files to
+  avoid incorrect interactions between enabled and disabled flags in different
+  files.
 
   13 Feb 2011; Tim Harder <radhermit@gentoo.org> base/package.use.mask:
   Remove mask on the bluray USE flag for mplayer.

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/make.defaults,v 1.5 2011/01/28 20:51:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/make.defaults,v 1.6 2011/02/13 16:53:40 arfrever Exp $
 
 # 'Sane' defaults
 ELIBC="glibc"
@@ -8,7 +8,7 @@ KERNEL="linux"
 
 # 2006/10/28 - Luca Barbato <lu_zero@gentoo.org>
 # on glibc system you cannot turn it off
-USE="${USE} iconv"
+USE="iconv"
 
 # build gcc with mudflap (pointer checking) and parallelization support
 USE="${USE} mudflap openmp"
