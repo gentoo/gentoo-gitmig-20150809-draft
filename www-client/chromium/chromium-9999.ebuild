@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.131 2011/02/08 13:20:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.132 2011/02/13 11:43:52 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -24,7 +24,7 @@ RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
-	dev-libs/libxml2
+	dev-libs/libxml2[icu]
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
 	gnome? ( >=gnome-base/gconf-2.24.0 )
