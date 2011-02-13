@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.297 2011/02/12 11:27:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.298 2011/02/13 00:56:31 fauli Exp $
+
+  13 Feb 2011; Christian Faulhammer <fauli@gentoo.org> libxml2-2.7.8.ebuild:
+  stable x86, security bug 345555
 
   12 Feb 2011; Pacho Ramos <pacho@gentoo.org>
   +files/libxml2-2.7.1-catalog_path.patch, +files/libxml2-2.7.2-winnt.patch,
