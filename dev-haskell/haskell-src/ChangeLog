@@ -1,6 +1,18 @@
 # ChangeLog for dev-haskell/haskell-src
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.34 2010/11/08 11:06:18 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.35 2011/02/13 20:16:15 slyfox Exp $
+
+  13 Feb 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-src-1.0.1.3.ebuild:
+  restored ~ppc64 keyword
+
+  13 Feb 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-src-1.0.1.3.ebuild:
+  restored ~alpha keyword
+
+  13 Feb 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-src-1.0.1.3.ebuild:
+  sparc stable (bug #344343)
 
   08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   haskell-src-1.0.1.3.ebuild:
