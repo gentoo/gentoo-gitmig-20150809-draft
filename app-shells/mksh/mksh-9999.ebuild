@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-9999.ebuild,v 1.1 2011/02/11 15:50:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-9999.ebuild,v 1.2 2011/02/13 00:22:39 patrick Exp $
 
 inherit eutils cvs
 
@@ -9,14 +9,13 @@ ECVS_MODULE="mksh"
 ECVS_USER="_anoncvs"
 ECVS_AUTH="ext"
 
-DESCRIPTION="MirBSD KSH Shell"
+DESCRIPTION="MirBSD Korn Shell"
 HOMEPAGE="http://mirbsd.de/mksh"
-ARC4_VERSION="1.14"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
-DEPEND="app-arch/cpio"
+DEPEND=""
 RDEPEND=""
 S="${WORKDIR}/${PN}"
 
