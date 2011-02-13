@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.33 2011/02/11 12:44:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.34 2011/02/13 18:22:48 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> decorator-3.3.0.ebuild:
+  alpha/ia64/sparc stable wrt #353451
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> decorator-3.3.0.ebuild:
   Stable on amd64 wrt bug #353451
