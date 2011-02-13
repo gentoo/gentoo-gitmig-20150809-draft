@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.18 2010/03/04 23:47:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.19 2011/02/13 11:46:22 caster Exp $
 
 DESCRIPTION="Virtual for JDK"
 HOMEPAGE=""
@@ -18,26 +18,51 @@ IUSE=""
 # see #287615
 # note that this "voodoo" is pretty annoying for Prefix, and that we didn't
 # invent it in the first place!
-RDEPEND="|| (
-		amd64? ( dev-java/icedtea6-bin )
-		x86? ( dev-java/icedtea6-bin )
-		amd64-linux? ( dev-java/icedtea6-bin )
-		x86-linux? ( dev-java/icedtea6-bin )
-		amd64? ( =dev-java/icedtea-6* )
-		x86? ( =dev-java/icedtea-6* )
-		amd64? ( =dev-java/sun-jdk-1.6.0* )
-		x86? ( =dev-java/sun-jdk-1.6.0* )
-		amd64-linux? ( =dev-java/sun-jdk-1.6.0* )
-		x86-linux? ( =dev-java/sun-jdk-1.6.0* )
-		x64-solaris? ( =dev-java/sun-jdk-1.6.0* )
-		x86-solaris? ( =dev-java/sun-jdk-1.6.0* )
-		sparc-solaris? ( =dev-java/sun-jdk-1.6.0* )
-		sparc64-solaris? ( =dev-java/sun-jdk-1.6.0* )
+
+COMMON_INC="
 		=dev-java/ibm-jdk-bin-1.6.0*
 		=dev-java/hp-jdk-bin-1.6.0*
 		=dev-java/diablo-jdk-1.6.0*
 		=dev-java/soylatte-jdk-bin-1.0*
 		=dev-java/apple-jdk-bin-1.6.0*
 		=dev-java/winjdk-bin-1.6.0*
+"
+
+X86_OPTS="|| (
+		dev-java/icedtea6-bin
+		=dev-java/icedtea-6*
+		=dev-java/sun-jdk-1.6.0*
+		${COMMON_INC}
+	)"
+
+X86_PREFIX_OPTS="|| (
+		dev-java/icedtea6-bin
+		=dev-java/sun-jdk-1.6.0*
+		${COMMON_INC}
+	)"
+
+PPC_OPTS="|| (
+		=dev-java/ibm-jdk-bin-1.6.0*
+		=dev-java/icedtea-6*
+	)"
+
+COMMON_OPTS="|| (
+		${COMMON_INC}
+		)"
+
+RDEPEND="|| (
+		amd64? ( ${X86_OPTS} )
+		x86? ( ${X86_OPTS} )
+		ppc? ( ${PPC_OPTS} )
+		ppc64? ( ${PPC_OPTS} )
+		amd64-linux? ( ${X86_PREFIX_OPTS} )
+		x86-linux? ( ${X86_PREFIX_OPTS} )
+		x64-solaris? ( ${X86_PREFIX_OPTS} )
+		x86-solaris? ( ${X86_PREFIX_OPTS} )
+		sparc-solaris? ( ${X86_PREFIX_OPTS} )
+		sparc64-solaris? ( ${X86_PREFIX_OPTS} )
+		!amd64? ( !x86? ( !ppc? ( !ppc64? ( !amd64-linux? ( !x86-linux? ( !x64-solaris? ( !x86-solaris? ( !sparc-solaris? ( !sparc64-solaris? (
+			${COMMON_OPTS}
+		) ) ) ) ) ) ) ) ) )
 	)"
 DEPEND=""
