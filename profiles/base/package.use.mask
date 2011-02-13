@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.193 2011/02/05 12:07:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.194 2011/02/13 11:32:26 radhermit Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -36,10 +36,6 @@ mail-client/evolution clutter
 # Mask valgrind use flag for net-libs/gnutls as valgrind isn't usable
 # on several of the archs gnutls is stable for.
 net-libs/gnutls valgrind
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (07 Nov 2010)
-# Masked since there is no release just git version of the library
-<media-video/mplayer-9999 bluray
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (29 Oct 2010)
 # Masked, it's work in progress not supported by upstream.
