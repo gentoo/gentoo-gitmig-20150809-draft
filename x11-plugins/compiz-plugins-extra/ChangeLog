@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/compiz-plugins-extra
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.12 2010/09/04 22:15:21 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.13 2011/02/13 18:32:25 flameeyes Exp $
+
+  13 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -compiz-plugins-extra-0.8.4.ebuild, compiz-plugins-extra-0.8.4-r1.ebuild,
+  -compiz-plugins-extra-0.8.6.ebuild, compiz-plugins-extra-0.8.6-r1.ebuild,
+  +files/compiz-plugins-extra-0.8.6-libnotify.patch:
+  Resolve automagic dependencies over libnotify: force it on 0.8.4-r1, and
+  patch 0.8.6-r1 to respect a libnotify USE flag instead. Drop old version.
 
 *compiz-plugins-extra-0.8.6-r1 (04 Sep 2010)
 
