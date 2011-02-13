@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.179 2011/02/12 09:51:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.180 2011/02/13 18:42:59 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> gallery-1.5.10.ebuild,
+  gallery-2.3.ebuild, gallery-2.3-r1.ebuild, gallery-2.3-r2.ebuild,
+  gallery-2.3.1.ebuild:
+  Drop alpha/sparc keywords
 
   12 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gallery-2.3.1.ebuild:
   Stable on amd64 wrt bug #354541
