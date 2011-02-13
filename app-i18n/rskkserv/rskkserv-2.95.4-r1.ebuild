@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4-r1.ebuild,v 1.1 2010/05/29 10:31:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4-r1.ebuild,v 1.2 2011/02/13 19:12:36 armin76 Exp $
 
 EAPI="2"
 # dev-ruby/ruby-tcpwrap doesn't work with jruby
@@ -15,7 +15,7 @@ SRC_URI="http://www.unixuser.org/~ysjj/rskkserv/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 ruby_add_bdepend dev-ruby/ruby-tcpwrap

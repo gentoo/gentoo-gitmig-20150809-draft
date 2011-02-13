@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-uim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.33 2010/04/03 03:10:52 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.34 2011/02/13 19:17:02 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> scim-uim-0.2.0-r1.ebuild,
+  scim-uim-0.2.0-r2.ebuild:
+  Drop alpha keywords
 
 *scim-uim-0.2.0-r2 (03 Apr 2010)
 
