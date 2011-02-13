@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5043 2011/02/13 16:53:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5044 2011/02/13 17:50:16 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +default/linux/package.use, default/bsd/fbsd/package.use:
+  Disable deprecated bsddb module of Python 2 by default.
 
   13 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   arch/amd64/make.defaults, base/make.defaults,
