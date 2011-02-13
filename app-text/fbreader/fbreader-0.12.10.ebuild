@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.10.ebuild,v 1.3 2010/04/26 21:10:25 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.10.ebuild,v 1.4 2011/02/13 19:32:22 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
-inherit eutils confutils
+inherit eutils
 
 DESCRIPTION="E-Book Reader. Supports many e-book formats."
 HOMEPAGE="http://www.fbreader.org/"
@@ -26,9 +26,7 @@ DEPEND="dev-libs/expat
 	"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	confutils_require_one qt4 gtk
-}
+REQUIRED_USE=" ^^ ( qt4 gtk )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc45.patch" # bug 317189
@@ -43,18 +41,19 @@ src_prepare() {
 	echo "TARGET_ARCH = desktop" > makefiles/target.mk
 	echo "LIBDIR = /usr/$(get_libdir)" >> makefiles/target.mk
 
-	if use qt4 ; then
+	if use qt4; then
 	# qt4
 		echo "UI_TYPE = qt4" >> makefiles/target.mk
 
 		sed -i "s:MOC = moc-qt4:MOC = /usr/bin/moc:" makefiles/arch/desktop.mk || die "updating desktop.mk failed"
 		sed -i "s:UILIBS = -lQtGui:UILIBS = -L/usr/lib/qt4 -lQtGui:" makefiles/arch/desktop.mk
-	elif use gtk ; then
+	fi
+	if use gtk; then
 	# gtk
 		echo "UI_TYPE = gtk" >> makefiles/target.mk
 	fi
 
-	if use debug ; then
+	if use debug; then
 		echo "TARGET_STATUS = debug" >> makefiles/target.mk
 	else
 		echo "TARGET_STATUS = release" >> makefiles/target.mk
