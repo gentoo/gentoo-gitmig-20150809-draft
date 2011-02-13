@@ -1,10 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/jupidator-0.2.0.ebuild,v 1.4 2009/04/04 15:19:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/jupidator-0.6.0.ebuild,v 1.1 2011/02/13 13:12:40 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
+WANT_ANT_TASKS="ant-nodeps"
+EAPI="2"
 
-inherit java-pkg-2 java-ant-2
+inherit java-pkg-2 java-ant-2 eutils
 
 MY_P="${PN}.${PV}"
 
@@ -13,29 +15,28 @@ HOMEPAGE="http://www.sourceforge.net/projects/jupidator"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="nls"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 RDEPEND=">=virtual/jre-1.5
 	dev-java/ant-core"
 DEPEND=">=virtual/jdk-1.5
 	dev-java/ant-core
-	nls? ( sys-devel/gettext )"
+	doc? ( app-text/xmlto )
+	sys-devel/gettext"
 
-S="${WORKDIR}"
+S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}" || die
+java_prepare() {
 	rm -v dist/*.jar || die
-	rm -v src/java/com/panayotis/jupidator/i18n/*.class || die
 	rm -rv src/java/org/apache/tools/bzip2 || die
 	#Bundled ant classes
 	java-ant_rewrite-classpath nbproject/build-impl.xml
+	chmod +x i18n/make.sh || die
 }
 
 src_compile() {
-	eant -Dgentoo.classpath="$(java-pkg_getjars ant-core)" $(use nls && echo i18n) compile jar
+	ANT_TASKS="ant-nodeps" eant -Dgentoo.classpath="$(java-pkg_getjars ant-core)" compile jar
 }
 
 src_install() {
