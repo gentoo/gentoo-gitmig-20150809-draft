@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-a52dec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.118 2011/02/05 16:33:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.119 2011/02/13 12:42:03 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-a52dec-0.10.16.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #353264
 
   05 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gst-plugins-a52dec-0.10.16.ebuild:
