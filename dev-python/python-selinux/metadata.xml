@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>hardened</herd>
-	<maintainer>
-		<email>pebenito@gentoo.org</email>
-		<name>Chris PeBenito</name>
-	</maintainer>
-	<longdescription>
-		Python bindings for SELinux libselinux fuctions.
-	</longdescription>
+	<herd>selinux</herd>
+	<longdescription>Python bindings for SELinux libselinux fuctions.</longdescription>
 </pkgmetadata>
