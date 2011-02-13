@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BaseDir/File-BaseDir-0.03.ebuild,v 1.8 2010/10/23 08:22:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BaseDir/File-BaseDir-0.03.ebuild,v 1.9 2011/02/13 19:57:58 armin76 Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Use the Freedesktop.org base directory specification"
 
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="test"
 
 RDEPEND=""
