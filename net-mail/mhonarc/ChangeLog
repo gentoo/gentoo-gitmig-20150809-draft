@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mhonarc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.17 2011/02/06 10:13:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.18 2011/02/13 11:21:04 kumba Exp $
+
+*mhonarc-2.6.18 (13 Feb 2011)
+
+  13 Feb 2011; Joshua Kinard <kumba@gentoo.org> mhonarc-2.6.10.ebuild,
+  mhonarc-2.6.11.ebuild, mhonarc-2.6.16-r1.ebuild, +mhonarc-2.6.18.ebuild:
+  Update to 2.6.18 to address a security vulnerability. This should correct
+  #349563. Also fix minor QA issues and update copyright dates.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> mhonarc-2.6.10.ebuild:
   Drop to ~mips

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.16-r1.ebuild,v 1.3 2008/05/09 22:27:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.16-r1.ebuild,v 1.4 2011/02/13 11:21:04 kumba Exp $
 
 inherit perl-app
 
@@ -19,7 +19,7 @@ KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc x86"
 S="${WORKDIR}/${P/mhonarc/MHonArc}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	epatch "${FILESDIR}"/${P}-list-output-order.patch
 }
 
