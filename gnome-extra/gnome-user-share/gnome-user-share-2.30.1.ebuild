@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.30.1.ebuild,v 1.2 2011/02/08 22:41:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.30.1.ebuild,v 1.3 2011/02/13 10:22:29 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
-inherit gnome2 multilib
+inherit eutils gnome2 multilib
 
 DESCRIPTION="Personal file sharing for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -45,6 +45,12 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--with-httpd=apache2
 		--with-modules-path=/usr/$(get_libdir)/apache2/modules/"
+}
+
+src_prepare() {
+	has_version ">=x11-libs/libnotify-0.7" && epatch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch
+	gnome2_src_prepare
 }
 
 src_install() {
