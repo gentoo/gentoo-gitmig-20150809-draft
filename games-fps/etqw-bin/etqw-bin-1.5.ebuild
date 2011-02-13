@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/etqw-bin-1.5.ebuild,v 1.4 2010/10/01 17:04:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/etqw-bin-1.5.ebuild,v 1.5 2011/02/13 17:45:56 nyhm Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.i3d.net/Games/Enemy%20Territory%20Quake%20Wars/Patches/ETQW-c
 
 LICENSE="ETQW"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="cdinstall"
 RESTRICT="strip"
 
