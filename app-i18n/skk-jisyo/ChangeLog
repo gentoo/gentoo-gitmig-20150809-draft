@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.62 2011/02/11 00:07:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.63 2011/02/13 19:13:25 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> skk-jisyo-9999.ebuild,
+  skk-jisyo-200705.ebuild, skk-jisyo-200812.ebuild, skk-jisyo-201101.ebuild:
+  Drop alpha/sparc keywords
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> skk-jisyo-201101.ebuild:
   Stable on amd64 wrt bug #353411

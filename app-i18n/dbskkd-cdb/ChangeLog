@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/dbskkd-cdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.23 2009/11/14 17:17:28 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.24 2011/02/13 19:14:26 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> dbskkd-cdb-2.00.ebuild:
+  Drop alpha/sparc keywords
 
   14 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -dbskkd-cdb-1.71.ebuild:
