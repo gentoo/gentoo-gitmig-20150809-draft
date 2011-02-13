@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gorilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/ChangeLog,v 1.3 2011/02/13 17:08:19 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/ChangeLog,v 1.4 2011/02/13 19:00:19 hwoarang Exp $
+
+  13 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gorilla-1.4.ebuild:
+  Stable on amd64 wrt bug #350707
 
   13 Feb 2011; Thomas Kahle <tomka@gentoo.org> gorilla-1.4.ebuild:
   x86 stable per bug 350707

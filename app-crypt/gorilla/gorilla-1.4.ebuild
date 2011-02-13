@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/gorilla-1.4.ebuild,v 1.3 2011/02/13 17:08:19 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/gorilla-1.4.ebuild,v 1.4 2011/02/13 19:00:19 hwoarang Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.fpx.de/fp/Software/Gorilla/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.4.19
