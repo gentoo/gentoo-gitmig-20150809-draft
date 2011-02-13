@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.55 2011/02/11 00:00:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.56 2011/02/13 18:17:00 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> plotutils-2.6.ebuild:
+  alpha/ia64/s390/sparc stable wrt #353433
 
   10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> plotutils-2.6.ebuild:
   Stable on amd64 wrt bug #353433
