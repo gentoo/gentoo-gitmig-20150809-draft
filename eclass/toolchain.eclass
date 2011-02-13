@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.449 2011/01/18 07:00:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.450 2011/02/13 12:10:12 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1927,12 +1927,15 @@ gcc-compiler_src_install() {
 	chown -R root:0 "${D}"${LIBPATH}
 
 	# Move pretty-printers to gdb datadir to shut ldconfig up
-	gdbdir=/usr/share/gdb/auto-load
-	for module in $(find "${D}" -iname "*-gdb.py" -print); do
-		insinto ${gdbdir}/$(dirname "${module/${D}/}" | \
-				sed -e "s:/lib/:/$(get_libdir)/:g")
-		doins "${module}"
-		rm "${module}"
+	gdbdir=/usr/share/gdb/auto-load${LIBPATH/\/lib\//\/$(get_libdir)\/}
+	for i in "${D}"${LIBPATH}{,/32}/*-gdb.py; do
+		if [[ -e ${i} ]]; then
+			basedir="$(dirname ${i/${D}${LIBPATH}/})"
+			sed -i -e "s:^\(libdir = \).*:\1'${LIBPATH}${basedir}':" "${i}" #348128
+			insinto "${gdbdir}${basedir}"
+			doins "${i}"
+			rm "${i}"
+		fi
 	done
 
 	# Don't scan .gox files for executable stacks - false positives
