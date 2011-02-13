@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/perl-support
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.31 2011/02/12 18:25:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.32 2011/02/13 00:44:05 radhermit Exp $
+
+  13 Feb 2011; Tim Harder <radhermit@gentoo.org> -perl-support-3.8.1.ebuild:
+  Remove old
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> perl-support-4.8.ebuild:
   sparc stable wrt #345061
