@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/dawn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.14 2011/01/31 19:42:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.15 2011/02/13 12:41:37 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> dawn-3.88a.ebuild,
+  dawn-3.90b.ebuild:
+  Drop sparc keywords
 
   31 Jan 2011; Christian Faulhammer <fauli@gentoo.org> dawn-3.90b.ebuild:
   stable x86, bug 352057
