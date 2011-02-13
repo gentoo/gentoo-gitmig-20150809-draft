@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/tlf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.20 2011/01/30 18:25:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.21 2011/02/13 19:19:43 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> tlf-0.9.31.2.ebuild,
+  tlf-0.9.31.2-r1.ebuild, tlf-1.0.0.ebuild:
+  Drop alpha keywords
 
   30 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tlf-1.0.0.ebuild:
   x86 stable wrt bug #352619
