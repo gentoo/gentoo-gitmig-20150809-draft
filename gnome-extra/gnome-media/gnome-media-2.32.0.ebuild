@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.32.0.ebuild,v 1.2 2011/02/03 21:53:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.32.0.ebuild,v 1.3 2011/02/13 11:45:59 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit eutils gnome2
 
 DESCRIPTION="Multimedia related programs for the GNOME desktop"
-HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
+HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2 GPL-2 FDL-1.1"
 SLOT="2"
