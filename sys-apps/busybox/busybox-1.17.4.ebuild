@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.9 2011/02/13 11:19:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.17.4.ebuild,v 1.10 2011/02/13 23:57:15 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -57,7 +57,7 @@ else
 fi
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="debug ipv6 make-symlinks +mdev -pam selinux static elibc_glibc"
 RESTRICT="test"
 
