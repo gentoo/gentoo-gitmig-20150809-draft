@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.44 2010/11/30 21:20:19 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.45 2011/02/13 12:33:29 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> scummvm-tools-1.2.0.ebuild:
+  Drop sparc keywords
 
   30 Nov 2010; Markus Meier <maekke@gentoo.org> scummvm-tools-1.2.0.ebuild:
   amd64/x86 stable, bug #347121
