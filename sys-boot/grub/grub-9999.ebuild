@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.27 2011/01/09 03:22:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.28 2011/02/13 07:41:16 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -102,11 +102,14 @@ setup_boot_dir() {
 }
 
 pkg_postinst() {
-	mount-boot_pkg_postinst
+	mount-boot_mount_boot_partition
 
 	if use multislot ; then
 		elog "You have installed grub2 with USE=multislot, so to coexist"
 		elog "with grub1, the grub2 install binary is named grub2-install."
 	fi
 	setup_boot_dir "${ROOT}"boot
+
+	# needs to be after we call setup_boot_dir
+	mount-boot_pkg_postinst
 }

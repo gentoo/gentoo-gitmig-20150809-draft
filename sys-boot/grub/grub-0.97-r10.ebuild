@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r10.ebuild,v 1.8 2011/01/09 03:22:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r10.ebuild,v 1.9 2011/02/13 07:41:16 vapier Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -257,7 +257,7 @@ setup_boot_dir() {
 }
 
 pkg_postinst() {
-	mount-boot_pkg_postinst
+	mount-boot_mount_boot_partition
 
 	if [[ -n ${DONT_MOUNT_BOOT} ]]; then
 		elog "WARNING: you have DONT_MOUNT_BOOT in effect, so you must apply"
@@ -276,6 +276,8 @@ pkg_postinst() {
 	elog "Alternately, you can export GRUB_ALT_INSTALLDIR=/path/to/use to tell"
 	elog "grub where to install in a non-interactive way."
 
+	# needs to be after we call setup_boot_dir
+	mount-boot_pkg_postinst
 }
 
 pkg_config() {
