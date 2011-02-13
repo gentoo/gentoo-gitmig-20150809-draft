@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0_beta5.ebuild,v 1.1 2011/02/02 19:59:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0_beta5-r1.ebuild,v 1.1 2011/02/13 13:16:00 hd_brummy Exp $
 
 EAPI="3"
 
@@ -46,6 +46,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}_gentoo-path.diff"
 	epatch "${FILESDIR}/${P}_setdefaults.diff"
 	epatch "${FILESDIR}/${P}_makefile.diff"
+	epatch "${FILESDIR}/${P}_ldflags.diff"
 
 	use dvdarchive && sed -i Makefile \
 		-e "s:#ENABLE_DMH_ARCHIVE:ENABLE_DMH_ARCHIVE:"
