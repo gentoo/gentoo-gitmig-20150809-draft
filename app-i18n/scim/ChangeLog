@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.141 2010/05/11 17:58:45 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.142 2011/02/13 18:03:43 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> scim-1.4.7-r2.ebuild,
+  scim-1.4.9-r1.ebuild:
+  Drop sparc keywords
 
   11 May 2010; Brent Baude <ranger@gentoo.org> scim-1.4.9-r1.ebuild:
   Marking scim-1.4.9-r1 ppc64 for bug 306035

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91-r2.ebuild,v 1.6 2009/11/25 19:32:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91-r2.ebuild,v 1.7 2011/02/13 18:07:56 armin76 Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 IUSE="nls"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc64 sparc"
+KEYWORDS="ppc64"
 
 RDEPEND="x11-libs/libXt
 	|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )

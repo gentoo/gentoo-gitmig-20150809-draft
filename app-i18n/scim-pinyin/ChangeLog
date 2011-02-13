@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-pinyin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.39 2009/12/31 14:06:42 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.40 2011/02/13 18:07:56 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> scim-pinyin-0.5.91-r2.ebuild,
+  scim-pinyin-0.5.91-r3.ebuild:
+  Drop sparc keywords
 
   31 Dec 2009; Brent Baude <ranger@gentoo.org> scim-pinyin-0.5.91-r3.ebuild:
   Marking scim-pinyin-0.5.91-r3 ppc64 for bug 289644

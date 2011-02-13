@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.2.3.ebuild,v 1.2 2009/04/19 16:36:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/scim-m17n-0.2.3.ebuild,v 1.3 2011/02/13 18:05:58 armin76 Exp $
 
 DESCRIPTION="scim-m17n is an input module for Smart Common Input Method (SCIM) which uses m17n as backend"
 HOMEPAGE="http://www.scim-im.org/projects/imengines"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=app-i18n/scim-1.4
