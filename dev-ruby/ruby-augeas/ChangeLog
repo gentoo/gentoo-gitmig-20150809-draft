@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-augeas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.15 2011/02/10 11:17:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.16 2011/02/13 17:34:35 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> ruby-augeas-0.3.0-r1.ebuild:
+  sparc stable wrt #353213
 
   10 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ruby-augeas-0.3.0-r1.ebuild:
