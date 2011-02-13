@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnice
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.18 2010/11/20 12:26:05 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.19 2011/02/13 11:31:05 pacho Exp $
+
+  13 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add gnome to metadata as talked between us since empathy relies on this.
 
   20 Nov 2010; Michael Weber <xmw@gentoo.org> libnice-0.0.10.ebuild,
   libnice-0.0.13.ebuild:
