@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.51 2011/02/09 23:01:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.52 2011/02/13 12:32:21 fauli Exp $
+
+  13 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  libproxy-0.4.6.ebuild:
+  stable x86, bug 343069
 
   09 Feb 2011; Michael Weber <xmw@gentoo.org> libproxy-0.4.6.ebuild:
   arm/sparc stable wrt #343069
