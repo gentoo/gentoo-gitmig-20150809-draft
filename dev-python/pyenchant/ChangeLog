@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.41 2011/02/08 22:45:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.42 2011/02/13 17:24:39 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> pyenchant-1.6.5.ebuild:
+  sparc stable wrt #352775
 
   08 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   pyenchant-1.6.5.ebuild:
