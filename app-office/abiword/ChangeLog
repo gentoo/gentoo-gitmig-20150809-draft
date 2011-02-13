@@ -1,6 +1,13 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.233 2011/02/05 20:35:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.234 2011/02/13 14:39:39 pacho Exp $
+
+*abiword-2.8.6-r1 (13 Feb 2011)
+
+  13 Feb 2011; Pacho Ramos <pacho@gentoo.org> abiword-2.4.6.ebuild,
+  -abiword-2.6.8.ebuild, +abiword-2.8.6-r1.ebuild:
+  Drop libgda plugin still relying on old libgnomedb (bug #354241). Remove old
+  and keep 2.4 only for bsd.
 
   05 Feb 2011; Jonathan Callen <abcd@gentoo.org> abiword-2.8.6.ebuild:
   Add ~amd64-linux/~x86-linux, use ED instead of D in a couple places
