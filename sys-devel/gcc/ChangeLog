@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.801 2011/02/13 04:53:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.802 2011/02/13 12:03:21 dirtyepic Exp $
+
+  13 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.5.2.ebuild:
+  Bump patchset to 1.1. Fixes for arm and testsuite stuff.
 
   13 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> -gcc-4.4.3-r2.ebuild,
   -gcc-4.4.4-r1.ebuild, gcc-4.4.4-r2.ebuild, gcc-4.4.5.ebuild:
