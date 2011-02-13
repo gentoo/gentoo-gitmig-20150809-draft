@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.6.3.ebuild,v 1.4 2010/12/05 17:18:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.6.3.ebuild,v 1.5 2011/02/13 17:26:40 armin76 Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1 NPL-1.1"
 # KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 IUSE="modperl extras graphviz mysql postgres"
 
