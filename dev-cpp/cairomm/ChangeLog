@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.44 2011/01/22 07:31:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.45 2011/02/13 13:30:11 pacho Exp $
+
+*cairomm-1.8.6 (13 Feb 2011)
+
+  13 Feb 2011; Pacho Ramos <pacho@gentoo.org> -cairomm-1.4.4.ebuild,
+  -cairomm-1.6.0.ebuild, +cairomm-1.8.6.ebuild:
+  Version bump with multiple bugfixes and solving warnings caused by broken
+  cairommconfig.h (bug #331405 by David King). Remove old.
 
 *cairomm-1.9.8 (22 Jan 2011)
 
