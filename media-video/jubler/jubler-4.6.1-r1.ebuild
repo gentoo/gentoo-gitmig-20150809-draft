@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1.ebuild,v 1.1 2011/02/13 13:19:47 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r1.ebuild,v 1.1 2011/02/13 20:56:02 serkan Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"
@@ -65,9 +65,9 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/Jubler.jar
 	use nls && java-pkg_dojar dist/i18n/*.jar
-	#insinto /usr/share/jubler/lib/lib
-	#doins dist/lib/*.jar  || die "Plugin installation failed"
-	java-pkg_dojar dist/lib/*.jar
+	nsinto /usr/share/jubler/lib/lib
+	doins dist/lib/*.jar  || die "Plugin installation failed"
+	#java-pkg_dojar dist/lib/*.jar
 	use spell && java-pkg_register-dependency zemberek zemberek2-cekirdek.jar
 	use spell && java-pkg_register-dependency zemberek zemberek2-tr.jar
 	java-pkg_doso resources/ffmpeg/ffdecode/libffdecode.so
