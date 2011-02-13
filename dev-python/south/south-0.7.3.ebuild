@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.7.3.ebuild,v 1.1 2011/01/31 12:14:01 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.7.3.ebuild,v 1.2 2011/02/13 10:49:08 betelgeuse Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.aeracode.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="dev-python/django"
