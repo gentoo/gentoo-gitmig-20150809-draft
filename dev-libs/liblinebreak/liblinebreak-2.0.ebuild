@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinebreak/liblinebreak-1.0.ebuild,v 1.2 2009/04/26 14:18:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinebreak/liblinebreak-2.0.ebuild,v 1.1 2011/02/13 19:43:39 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
 DESCRIPTION="Line breaking library"
 HOMEPAGE="http://vimgadgets.sourceforge.net/liblinebreak/"
@@ -11,11 +11,9 @@ SRC_URI="mirror://sourceforge/vimgadgets/${P}.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="static-libs"
 
-DEPEND=""
-RDEPEND=""
-
-src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+src_configure() {
+	econf \
+		$(use_enable static-libs static)
 }
