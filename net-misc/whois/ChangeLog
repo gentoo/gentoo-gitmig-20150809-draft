@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.151 2011/02/11 18:36:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.152 2011/02/13 18:35:30 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> whois-5.0.8.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #353737
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> whois-5.0.8.ebuild:
   Stable on amd64 wrt bug #353737
