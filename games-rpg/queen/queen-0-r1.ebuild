@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/queen-0-r1.ebuild,v 1.3 2007/07/05 20:01:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/queen-0-r1.ebuild,v 1.4 2011/02/13 17:55:41 armin76 Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scummvm/FOTAQ_Talkie.zip"
 
 LICENSE="queen"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND="games-engines/scummvm"

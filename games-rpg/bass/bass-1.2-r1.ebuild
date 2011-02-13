@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.3 2007/07/05 20:02:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.4 2011/02/13 17:54:35 armin76 Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/scummvm/bass-cd-${PV}.zip
 
 LICENSE="bass"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=games-engines/scummvm-0.5.0"

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/bass
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.11 2007/07/05 20:02:21 corsair Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/ChangeLog,v 1.12 2011/02/13 17:54:35 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> bass-1.2-r1.ebuild:
+  Drop sparc keywords, move to ~ppc as scummvm is not stable
 
   05 Jul 2007; Markus Rothe <corsair@gentoo.org> bass-1.2-r1.ebuild:
   Added ~ppc64; bug #183570
