@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.266 2011/01/08 00:56:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.267 2011/02/13 11:19:14 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> busybox-1.17.4.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #349309
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org> busybox-1.17.4.ebuild:
   Marking busybox-1.17.4 ppc for bug 349309
