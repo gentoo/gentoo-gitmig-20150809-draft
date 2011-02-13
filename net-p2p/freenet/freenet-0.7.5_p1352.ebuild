@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1344.ebuild,v 1.1 2011/02/06 01:30:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1352.ebuild,v 1.1 2011/02/13 11:02:07 tommy Exp $
 
 EAPI="2"
-DATE=20110106
+DATE=20110212
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib
@@ -11,7 +11,8 @@ inherit eutils java-pkg-2 java-ant-2 multilib
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="http://www.freenetproject.org/"
 SRC_URI="http://github.com/${PN}/fred-official/zipball/build0${PV#*p} -> ${P}.zip
-	mirror://gentoo/seednodes-${DATE}.fref"
+	mirror://gentoo/seednodes-${DATE}.fref.bz2
+	mirror://gentoo/freenet-ant-1.7.1.jar"
 
 LICENSE="as-is GPL-2"
 SLOT="0"
@@ -31,7 +32,8 @@ CDEPEND="dev-db/db-je:3.3
 DEPEND="app-arch/unzip
 	>=virtual/jdk-1.5
 	${CDEPEND}
-	test? ( dev-java/junit )"
+	test? ( dev-java/junit )
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.5
 	net-libs/nativebiginteger
 	${CDEPEND}"
@@ -57,6 +59,10 @@ pkg_setup() {
 	enewuser freenet -1 -1 /var/freenet freenet
 }
 
+src_unpack() {
+	unpack ${P}.zip seednodes-${DATE}.fref.bz2
+}
+
 src_prepare() {
 	mv "${WORKDIR}"/freenet-fred-* "${S}"
 	cd "${S}"
@@ -64,7 +70,9 @@ src_prepare() {
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
 	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch
 	epatch "${FILESDIR}"/strip-openjdk-check.patch
-	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
+	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" \
+		-e "s:/usr/share/ant-core/lib/ant.jar:/usr/share/freenet/lib/ant.jar:g" \
+		freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath "${EANT_BUILD_XML}"
 	java-pkg-2_src_prepare
@@ -72,6 +80,7 @@ src_prepare() {
 
 src_install() {
 	java-pkg_dojar dist/freenet.jar
+	java-pkg_newjar "${DISTDIR}"/freenet-ant-1.7.1.jar ant.jar
 	if has_version =sys-apps/baselayout-2*; then
 		doinitd "${FILESDIR}"/freenet
 	else
@@ -82,7 +91,7 @@ src_install() {
 	doins freenet-wrapper.conf || die
 	insinto /var/freenet
 	doins run.sh || die
-	newins "${DISTDIR}"/seednodes-${DATE}.fref seednodes.fref || die
+	newins "${WORKDIR}"/seednodes-${DATE}.fref seednodes.fref || die
 	fperms +x /var/freenet/run.sh
 	dosym java-service-wrapper/libwrapper.so /usr/$(get_libdir)/libwrapper.so
 	use doc && java-pkg_dojavadoc javadoc
