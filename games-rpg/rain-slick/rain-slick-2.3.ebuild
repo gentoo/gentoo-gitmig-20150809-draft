@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-2.3.ebuild,v 1.1 2011/02/07 04:49:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-2.3.ebuild,v 1.2 2011/02/13 22:07:19 vapier Exp $
 
 inherit games
 
@@ -34,5 +34,7 @@ src_install() {
 	dodir "${dir}"
 	cp -pPR * "${D}/${dir}/" || die
 	games_make_wrapper RainSlickEp${EP} "${dir}/RainSlickEp${EP}" || die
+	newicon rainslick.png ${PN}-${EP}.png || die
+	make_desktop_entry RainSlickEp${EP} "Rain-Slick Precipice of Darkness (Ep${EP})" ${PN}-${EP}
 	prepgamesdirs
 }
