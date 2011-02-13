@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.107 2011/01/01 23:24:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.108 2011/02/13 11:03:32 radhermit Exp $
+
+  13 Feb 2011; Tim Harder <radhermit@gentoo.org> hugin-2010.0.0.ebuild,
+  hugin-2010.2.0.ebuild, hugin-2010.4.0.ebuild:
+  Depend on wxGTK with the X USE flag enabled (bug #354223 by Grygoriy
+  Fuchedzhy).
 
 *hugin-2010.4.0 (01 Jan 2011)
 
