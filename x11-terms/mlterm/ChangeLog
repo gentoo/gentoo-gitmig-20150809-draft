@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/mlterm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.73 2010/06/29 16:23:19 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.74 2011/02/13 18:01:20 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> mlterm-2.9.3-r1.ebuild,
+  mlterm-2.9.4-r4.ebuild, mlterm-3.0.1.ebuild:
+  Drop sparc keywords
 
 *mlterm-3.0.1 (29 Jun 2010)
 
