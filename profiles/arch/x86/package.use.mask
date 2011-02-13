@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.44 2011/01/30 08:30:35 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.45 2011/02/13 22:52:55 radhermit Exp $
 
 # This file requires >=portage-2.1.1
+
+# Tim Harder <radhermit@gentoo.org> (13 Feb 2011)
+# Masked in base, unmask for amd64/x86
+>=media-video/mplayer-1.0_rc4_p20101219 -bluray
 
 # Thomas Kahle <tomka@gentoo.org> (15 Jan 2011)
 # we dropped stable prelude but don't want to drop stable nufw

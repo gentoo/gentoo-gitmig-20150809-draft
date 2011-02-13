@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.81 2011/01/30 08:30:35 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.82 2011/02/13 22:55:18 radhermit Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (13 Feb 2011)
+# Masked in base, unmask for amd64/x86
+>=media-video/mplayer-1.0_rc4_p20101219 -bluray
 
 # doomsday doesn't work on amd64 so mask off things that pull it in.
 games-fps/doom-data doomsday
