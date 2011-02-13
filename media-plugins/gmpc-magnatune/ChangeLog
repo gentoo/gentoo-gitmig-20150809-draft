@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-magnatune
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.29 2010/05/25 09:30:50 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.30 2011/02/13 18:02:42 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> gmpc-magnatune-0.18.0.ebuild,
+  gmpc-magnatune-0.20.0.ebuild:
+  Drop sparc keywords
 
 *gmpc-magnatune-0.20.0 (25 May 2010)
 

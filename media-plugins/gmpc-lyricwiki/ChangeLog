@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-lyricwiki
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.15 2010/05/25 09:52:11 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.16 2011/02/13 18:01:51 armin76 Exp $
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> gmpc-lyricwiki-0.19.0.ebuild,
+  gmpc-lyricwiki-0.20.0.ebuild:
+  Drop sparc keywords
 
 *gmpc-lyricwiki-0.20.0 (25 May 2010)
 
