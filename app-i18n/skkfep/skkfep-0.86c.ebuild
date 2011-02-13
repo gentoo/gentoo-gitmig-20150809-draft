@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.86c.ebuild,v 1.6 2005/09/09 16:45:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.86c.ebuild,v 1.7 2011/02/13 19:08:49 armin76 Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www1.interq.or.jp/~deton/jvim-skk/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ppc ~sparc x86"
+KEYWORDS="alpha ppc x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4

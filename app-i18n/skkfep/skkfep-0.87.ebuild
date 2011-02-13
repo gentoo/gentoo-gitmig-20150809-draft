@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.87.ebuild,v 1.2 2007/01/05 16:34:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.87.ebuild,v 1.3 2011/02/13 19:08:49 armin76 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://homepage2.nifty.com/aito/skkfep/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~alpha ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4
