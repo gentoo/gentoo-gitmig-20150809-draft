@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.268 2011/02/13 23:57:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.269 2011/02/13 23:57:50 vapier Exp $
+
+*busybox-1.18.3 (13 Feb 2011)
+
+  13 Feb 2011; Mike Frysinger <vapier@gentoo.org> +busybox-1.18.3.ebuild,
+  +files/busybox-1.18.3-buildsys.patch, +files/busybox-1.18.3-modutils24.patch,
+  +files/busybox-1.18.3-wget.patch:
+  Version bump #352592.
 
   13 Feb 2011; Mike Frysinger <vapier@gentoo.org> busybox-1.17.4.ebuild:
   Mark ppc64 stable #349309.
