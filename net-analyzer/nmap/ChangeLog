@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.239 2010/11/15 16:34:31 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.240 2011/02/13 23:17:49 spock Exp $
+
+*nmap-5.51 (13 Feb 2011)
+
+  13 Feb 2011; Michał Januszewski <spock@gentoo.org> +nmap-5.51.ebuild:
+  Version bump (bug #353095).
 
   15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   nmap-5.21-r1.ebuild, nmap-5.35.ebuild:
