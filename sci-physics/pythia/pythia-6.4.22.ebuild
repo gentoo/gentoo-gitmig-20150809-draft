@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.22.ebuild,v 1.5 2010/07/10 19:02:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.22.ebuild,v 1.6 2011/02/13 17:35:53 armin76 Exp $
 
 EAPI=2
 inherit versionator autotools
@@ -24,7 +24,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="public-domain"
 SLOT="6"
-KEYWORDS="amd64 hppa sparc x86"
+KEYWORDS="amd64 hppa x86"
 IUSE="doc examples"
 DEPEND=""
 RDEPEND="${DEPEND}"
