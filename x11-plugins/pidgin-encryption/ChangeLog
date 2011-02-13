@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-encryption
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.17 2011/02/12 10:04:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.18 2011/02/13 12:28:10 fauli Exp $
+
+  13 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  pidgin-encryption-3.1.ebuild:
+  stable x86, bug 354559
 
   12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   pidgin-encryption-3.1.ebuild:
