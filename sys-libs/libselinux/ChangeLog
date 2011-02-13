@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.69 2011/02/06 19:26:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.70 2011/02/13 19:16:58 blueness Exp $
+
+  13 Feb 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Updated metadata.xml to reflect new selinux herd.
 
   06 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libselinux-2.0.94.ebuild:
