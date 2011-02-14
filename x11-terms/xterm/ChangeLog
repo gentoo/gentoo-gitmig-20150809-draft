@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.312 2011/02/13 19:12:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.313 2011/02/14 23:45:47 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> xterm-267.ebuild:
+  ppc stable wrt #344827, #354237
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -xterm-262.ebuild:
   old
