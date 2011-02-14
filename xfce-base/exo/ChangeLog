@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.52 2011/02/05 18:17:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.53 2011/02/14 19:18:38 ssuominen Exp $
+
+  14 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> exo-0.6.0.ebuild:
+  alpha/ia64/sparc stable wrt #349053
 
   05 Feb 2011; Markus Meier <maekke@gentoo.org> exo-0.6.0.ebuild:
   arm stable, bug #349053
