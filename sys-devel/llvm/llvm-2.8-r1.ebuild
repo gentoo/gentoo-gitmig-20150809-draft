@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r1.ebuild,v 1.5 2010/11/11 17:31:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r1.ebuild,v 1.6 2011/02/14 11:19:33 xarthisius Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.tgz -> ${P}-r1.tgz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~ppc-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~ppc-macos"
 IUSE="alltargets debug +libffi llvm-gcc ocaml test udis86"
 
 DEPEND="dev-lang/perl

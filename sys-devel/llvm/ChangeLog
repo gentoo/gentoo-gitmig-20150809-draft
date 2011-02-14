@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.30 2010/12/19 22:45:41 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.31 2011/02/14 11:19:33 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> llvm-2.8-r1.ebuild:
+  ppc stable wrt #336371
 
 *llvm-2.8-r2 (19 Dec 2010)
 
