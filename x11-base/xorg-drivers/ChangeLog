@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.39 2011/02/12 18:43:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.40 2011/02/14 15:49:52 scarabeus Exp $
+
+  14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> xorg-drivers-1.7.ebuild,
+  xorg-drivers-1.9.ebuild:
+  Say goodbye to xgi video card.
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> xorg-drivers-1.9.ebuild:
   alpha/ia64/sh/sparc stable wrt #344827

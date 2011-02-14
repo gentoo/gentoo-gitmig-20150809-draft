@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.18 2010/09/19 08:48:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.7.ebuild,v 1.19 2011/02/14 15:49:52 scarabeus Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -73,7 +73,6 @@ IUSE_VIDEO_CARDS="
 	video_cards_virtualbox
 	video_cards_vmware
 	video_cards_voodoo
-	video_cards_xgi
 	video_cards_fglrx
 	video_cards_nvidia
 "
@@ -137,7 +136,6 @@ PDEPEND="
 	video_cards_virtualbox?    ( x11-drivers/xf86-video-virtualbox )
 	video_cards_vmware?        ( x11-drivers/xf86-video-vmware )
 	video_cards_voodoo?        ( x11-drivers/xf86-video-voodoo )
-	video_cards_xgi?           ( x11-drivers/xf86-video-xgi )
 
 	!x11-drivers/xf86-input-citron
 	!x11-drivers/xf86-input-elographics
