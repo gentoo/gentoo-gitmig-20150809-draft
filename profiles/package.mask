@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12456 2011/02/13 11:41:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12457 2011/02/14 15:25:45 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (14 Feb 2011)
+# I felt in love with this package so I am taking it with me.
+# On serious note, this is not maintained anymore + has known
+# bugs. Based on bug #348001 I am masking it for removal in
+# 30 days.
+x11-drivers/xf86-video-xgi
 
 # Rafael G. Martins <rafaelmartins@gentoo.org> (12 Feb 2011)
 # Masked for testing.
