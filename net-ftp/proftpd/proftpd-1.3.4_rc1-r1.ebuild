@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4_rc1.ebuild,v 1.1 2011/01/21 20:38:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4_rc1-r1.ebuild,v 1.1 2011/02/14 15:00:25 voyageur Exp $
 
-EAPI="2"
+EAPI=4
 inherit eutils autotools
 
 MOD_CASE="0.4"
@@ -26,7 +26,9 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl authfile ban +caps case clamav copy +ctrls deflate diskuse doc exec hardened ifsession ifversion ident ipv6 kerberos ldap mysql ncurses nls pam postgres qos radius ratio readme rewrite selinux sftp shaper sitemisc softquota sqlite ssl tcpd trace vroot xinetd"
+IUSE="acl authfile ban +caps case clamav copy +ctrls deflate diskuse doc exec hardened ifsession ifversion
+	ident ipv6 kerberos ldap mysql ncurses nls pam postgres qos radius ratio readme rewrite selinux sftp
+	shaper sitemisc softquota sqlite ssl tcpd trace vroot xinetd"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	caps? ( sys-libs/libcap )
@@ -62,6 +64,9 @@ src_prepare() {
 		rm -rf "${WORKDIR}"/mod_clamav-${MOD_CLAMAV}
 	fi
 	use vroot && __prepare_module mod_vroot
+
+	# Fix ProFTPD Bug #3586
+	epatch "${FILESDIR}"/proftpd-bug3586.patch
 
 	# Manipulate build system
 	sed -i -e "s/utils install-conf install/utils install/g" Makefile.in
@@ -139,7 +144,7 @@ src_configure() {
 	if use sftp ; then
 		mym="${mym}:mod_sftp"
 		use pam && mym="${mym}:mod_sftp_pam"
-		if use mysql || use postgres ; then
+		if use mysql || use postgres || use sqlite ; then
 			mym="${mym}:mod_sftp_sql"
 		fi
 	fi
@@ -174,12 +179,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
+	emake DESTDIR="${ED}" install
+	newinitd "${FILESDIR}"/proftpd.initd proftpd
 	insinto /etc/proftpd
 	doins "${FILESDIR}"/proftpd.conf.sample
-	keepdir /var/run/proftpd
-	newinitd "${FILESDIR}"/proftpd.initd proftpd
+
 	if use xinetd ; then
 		insinto /etc/xinetd.d
 		newins "${FILESDIR}"/proftpd.xinetd proftpd
