@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r1.ebuild,v 1.1 2011/02/13 20:56:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r2.ebuild,v 1.1 2011/02/14 20:13:45 serkan Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"
@@ -65,7 +65,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/Jubler.jar
 	use nls && java-pkg_dojar dist/i18n/*.jar
-	nsinto /usr/share/jubler/lib/lib
+	insinto /usr/share/jubler/lib/lib
 	doins dist/lib/*.jar  || die "Plugin installation failed"
 	#java-pkg_dojar dist/lib/*.jar
 	use spell && java-pkg_register-dependency zemberek zemberek2-cekirdek.jar
@@ -87,8 +87,10 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
