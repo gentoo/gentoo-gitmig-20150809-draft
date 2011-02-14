@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/thunar-vfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/ChangeLog,v 1.11 2011/02/05 22:38:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/ChangeLog,v 1.12 2011/02/14 19:50:52 ssuominen Exp $
+
+  14 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> thunar-vfs-1.2.0.ebuild:
+  alpha/hppa/ia64/ppc64/sparc stable wrt #349053
 
   05 Feb 2011; Markus Meier <maekke@gentoo.org> thunar-vfs-1.2.0.ebuild:
   arm stable, bug #349053
