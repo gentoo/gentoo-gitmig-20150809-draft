@@ -1,0 +1,11 @@
+# ChangeLog for app-crypt/pius
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.1 2011/02/14 12:59:44 tomk Exp $
+
+*pius-2.0.8 (14 Feb 2011)
+
+  14 Feb 2011; Tom Knight <tomk@gentoo.org> +pius-2.0.8.ebuild,
+  +metadata.xml:
+  New package - PIUS: A tool for signing and email all UIDs on a set of PGP
+  keys
+
