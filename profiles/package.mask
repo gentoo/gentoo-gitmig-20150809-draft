@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12458 2011/02/14 17:08:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12459 2011/02/14 19:54:04 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (14 Feb 2011)
+# Old, unmaintained by upstream and nothing in the tree needs
+# it. See bug #354243 for reference. Will be removed in 30 days.
+app-office/abiword-plugins
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (14 Feb 2011)
 # I felt in love with this package so I am taking it with me.
