@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5045 2011/02/13 18:09:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5046 2011/02/14 17:08:09 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Feb 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Suggest replacement in xf86-video-xgi mask comment
 
   13 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   hardened/linux/amd64/make.defaults, hardened/linux/ia64/make.defaults,
