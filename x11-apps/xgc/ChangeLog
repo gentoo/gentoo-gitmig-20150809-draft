@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xgc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgc/ChangeLog,v 1.30 2011/02/12 18:12:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgc/ChangeLog,v 1.31 2011/02/14 23:40:56 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> xgc-1.0.3.ebuild:
+  ppc stable wrt #344827, #354237
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> xgc-1.0.3.ebuild:
   s390/sh/sparc stable wrt #344827
