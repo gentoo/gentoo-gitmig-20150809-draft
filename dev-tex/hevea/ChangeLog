@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.28 2011/02/12 18:45:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.29 2011/02/14 11:54:02 aballier Exp $
+
+  14 Feb 2011; Alexis Ballier <aballier@gentoo.org> -files/99hevea,
+  -hevea-1.10.ebuild:
+  remove old
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> hevea-1.10-r1.ebuild:
   sparc stable wrt #349631
