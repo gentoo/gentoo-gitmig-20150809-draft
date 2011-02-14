@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.42 2011/02/10 23:23:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.43 2011/02/14 22:40:47 eva Exp $
+
+*vala-0.11.6 (14 Feb 2011)
+
+  14 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> -vala-0.11.3.ebuild,
+  -vala-0.11.4.ebuild, +vala-0.11.6.ebuild:
+  Bindings updates and fixes. Adds clutter-gtk-1 and pixmap-1 bindings. Clean
+  up old revisions from slot 0.12.
 
   10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> vala-0.8.1.ebuild:
   Stable on amd64 wrt bug #343737
