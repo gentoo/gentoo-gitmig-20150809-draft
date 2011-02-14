@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/rendercheck
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.17 2010/12/25 20:39:05 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.18 2011/02/14 22:52:59 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  rendercheck-1.4.ebuild:
+  ppc stable wrt #344827, #354237
 
   25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
   rendercheck-1.4.ebuild:
