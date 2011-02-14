@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.42 2011/02/12 18:40:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.43 2011/02/14 18:57:31 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> xwd-1.0.4.ebuild:
+  ppc stable wrt #344827, #354237
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> xwd-1.0.4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #344827
