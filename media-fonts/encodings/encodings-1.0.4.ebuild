@@ -1,9 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/encodings-1.0.3-r1.ebuild,v 1.11 2010/10/21 00:50:50 ranger Exp $
-
-# Must be before x-modular eclass is inherited
-#SNAPSHOT="yes"
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/encodings-1.0.4.ebuild,v 1.10 2011/02/14 17:24:48 scarabeus Exp $
 
 EAPI=3
 inherit xorg-2
