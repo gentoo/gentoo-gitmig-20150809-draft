@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-2010.08.30-r1.ebuild,v 1.2 2010/09/12 21:54:43 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-2010.12.25-r1.ebuild,v 1.1 2011/02/14 07:49:34 wired Exp $
 
 EAPI=3
 
@@ -34,18 +34,23 @@ COMMON_DEPEND="
 "
 
 DEPEND="
-	dev-util/gperf
 	sys-apps/help2man
 	${COMMON_DEPEND}
 "
 
 RDEPEND="
 	${COMMON_DEPEND}
+	dev-lua/luafilesystem
 	helpers? (
 		x11-misc/dmenu
 	)
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
+
+PATCHES=(
+	# bug 354355
+	"${FILESDIR}/${P}-fix-deprecated.patch"
+)
 
 src_prepare() {
 	if [[ ${PV} == *9999* ]]; then
@@ -53,6 +58,7 @@ src_prepare() {
 	else
 		cd "${WORKDIR}"/mason-larobina-luakit-*
 		S=$(pwd)
+		base_src_prepare
 	fi
 }
 
