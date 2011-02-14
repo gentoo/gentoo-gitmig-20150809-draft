@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0.ebuild,v 1.14 2011/01/29 21:04:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0.ebuild,v 1.15 2011/02/14 20:31:24 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -18,7 +18,7 @@ IUSE="debug"
 RDEPEND=">=x11-libs/gtk+-2.6:2
 	>=xfce-base/libxfce4util-4.3.90.2
 	>=xfce-base/libxfcegui4-4.3.90.2
-	|| ( xfce-extra/thunar-vfs <xfce-base/thunar-1.1.0 )
+	xfce-extra/thunar-vfs
 	>=xfce-base/exo-0.3.1.1
 	>=xfce-base/xfce4-panel-4.5.92"
 DEPEND="${RDEPEND}
