@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.39-r1.ebuild,v 1.2 2011/02/14 20:14:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.36-r2.ebuild,v 1.1 2011/02/14 20:14:23 dirtyepic Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ LICENSE="LGPL-2.1"
 IUSE="debug doc python" # test
 
 RDEPEND="dev-db/sqlite:3
-	>=dev-libs/glib-2.12:2
+	dev-libs/glib:2
 	dev-libs/libxml2
 	dev-libs/libxslt"
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	python?	( >=dev-lang/swig-1.3.17 )"
 #	test?	( >=dev-libs/check-0.9.2 )"
 
-DOCS="AUTHORS CODING ChangeLog README"
+DOCS="AUTHORS CODING README"
 
 # Tests don't pass
 RESTRICT="test"
@@ -122,6 +122,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "For >=app-pda/libopensync-0.39 use app-pda/osynctool instead of"
-	elog "the older app-pda/msynctool."
+	elog "Enabling the 'debug' useflag is required for bug reports."
+	elog "Also see: http://www.opensync.org/wiki/tracing"
 }

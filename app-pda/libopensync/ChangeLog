@@ -1,6 +1,21 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.38 2011/02/12 03:51:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.39 2011/02/14 20:14:23 dirtyepic Exp $
+
+*libopensync-0.36-r2 (14 Feb 2011)
+*libopensync-0.22-r1 (14 Feb 2011)
+
+  14 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> +libopensync-0.22-r1.ebuild,
+  -files/libopensync-py2.6.patch, +files/libopensync-0.22-pythonpath.patch,
+  +files/libopensync-0.22-swig-typeerror.patch, -libopensync-0.36-r1.ebuild,
+  +libopensync-0.36-r2.ebuild, libopensync-0.39-r1.ebuild, metadata.xml:
+  Revision bumps, remove old.
+    - backport all ebuild fixes from 0.39
+    - patch 0.22 to find python correctly and add swig version detection for
+      versions greater than 1.3.x (bug #328691)
+    - fix TypeError in python wrapper (bug #340605)
+    - add debug support back to 0.39
+    - drop .la files
 
 *libopensync-0.39-r1 (12 Feb 2011)
 
