@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/amyedit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.24 2010/06/12 10:47:26 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.25 2011/02/14 18:27:55 aballier Exp $
+
+*amyedit-1.0-r2 (14 Feb 2011)
+
+  14 Feb 2011; Alexis Ballier <aballier@gentoo.org> +amyedit-1.0-r2.ebuild,
+  +files/amyedit-1.0-sourceviewmm2.patch:
+  Convert to gtksourceview2 and remove bundled gtksourceviewmm1 bindings
 
   12 Jun 2010; Alexis Ballier <aballier@gentoo.org> amyedit-1.0-r1.ebuild,
   +files/amyedit-1.0-gcc45.patch:
