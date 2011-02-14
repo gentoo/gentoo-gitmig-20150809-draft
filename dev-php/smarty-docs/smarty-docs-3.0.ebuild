@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/smarty-docs-3.0.ebuild,v 1.1 2011/02/11 14:27:24 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/smarty-docs-3.0.ebuild,v 1.2 2011/02/14 11:02:16 scarabeus Exp $
 
 EAPI=4
-
-inherit confutils
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pdf html"
@@ -28,9 +26,7 @@ SLOT="0"
 DEPEND="html? ( app-arch/unzip )"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	confutils_require_any html pdf
-}
+REQUIRED_USE="|| ( html pdf )"
 
 src_unpack() {
 	mkdir -p "${S}"
