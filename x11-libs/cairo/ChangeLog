@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.271 2011/02/12 17:34:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.272 2011/02/14 23:22:41 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  cairo-1.10.2-r1.ebuild:
+  ppc stable wrt #344827, #354237
 
   12 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
   cairo-1.10.2-r1.ebuild:
