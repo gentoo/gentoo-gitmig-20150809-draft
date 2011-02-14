@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.15 2011/02/12 12:29:16 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.16 2011/02/14 16:48:58 idl0r Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -60,15 +60,15 @@ src_test() {
 
 src_compile() {
 	distutils_src_compile
-	emake -C doc || die "emake -C doc failed"
+	# override MAKEOPTS to prevent build failure
+	emake -j1 -C doc || die "emake -C doc failed"
 }
 
 src_install() {
 	distutils_src_install
 
-	dodir /etc/layman
-
-	cp etc/layman.cfg "${D}"/etc/layman/
+	insinto /etc/layman
+	doins etc/layman.cfg || die
 
 	doman doc/layman.8
 	dohtml doc/layman.8.html
