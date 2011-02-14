@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ogg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.173 2011/02/11 00:58:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.174 2011/02/14 18:02:53 phajdan.jr Exp $
+
+  14 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-ogg-0.10.31.ebuild:
+  x86 stable wrt bug #353434
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-ogg-0.10.31.ebuild:
