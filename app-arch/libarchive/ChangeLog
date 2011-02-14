@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/libarchive
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.85 2010/12/31 09:18:01 ferringb Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.86 2011/02/14 00:41:04 ferringb Exp $
+
+  14 Feb 2011; Brian Harring <ferringb@gentoo.org> libarchive-2.8.3.ebuild,
+  libarchive-2.8.4.ebuild:
+  add missing libxml2/expat dep for xar support. bug #352464
 
   31 Dec 2010; Brian Harring <ferringb@gentoo.org> libarchive-2.7.1-r1.ebuild,
   -libarchive-2.8.0.ebuild, libarchive-2.8.3.ebuild, libarchive-2.8.4.ebuild,
