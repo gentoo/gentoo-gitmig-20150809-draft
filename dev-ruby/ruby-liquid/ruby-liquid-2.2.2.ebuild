@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-liquid/ruby-liquid-2.2.2.ebuild,v 1.1 2010/09/19 11:44:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-liquid/ruby-liquid-2.2.2.ebuild,v 1.2 2011/02/14 06:51:59 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ree18"
 
 # Drop tests and documentation tasks for 2.1.2 since they are no
 # longer included in the gem, and github is not tagged and it's not
