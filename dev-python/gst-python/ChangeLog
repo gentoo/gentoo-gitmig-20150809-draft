@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.89 2011/02/11 01:00:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.90 2011/02/14 18:11:58 phajdan.jr Exp $
+
+  14 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-python-0.10.20.ebuild:
+  x86 stable wrt bug #353434
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gst-python-0.10.20.ebuild:
   Stable on amd64 wrt bug #353434
