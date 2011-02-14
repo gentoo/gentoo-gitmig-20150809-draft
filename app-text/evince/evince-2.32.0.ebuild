@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0.ebuild,v 1.2 2010/12/07 19:38:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0.ebuild,v 1.3 2011/02/14 17:51:19 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -22,6 +22,7 @@ RDEPEND="
 	>=app-text/libspectre-0.2.0
 	>=dev-libs/glib-2.25.11:2
 	>=dev-libs/libxml2-2.5
+	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/gtk+-2.21.5:2[introspection?]
 	>=x11-libs/libSM-1
 	|| (
