@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.245 2011/02/09 18:59:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.246 2011/02/14 16:21:32 grobian Exp $
+
+  14 Feb 2011; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
+  Mask gdb-7.2.50.20101117.4.15 on Solaris, it doesn't compile due to some
+  incompatible proc_fs calls
 
   09 Feb 2011; Ulrich Mueller <ulm@gentoo.org> -darwin/macos/10.5/package.mask,
   -darwin/macos/10.6/package.mask, darwin/macos/package.use.mask:

@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.23 2010/06/23 12:11:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.24 2011/02/14 16:21:32 grobian Exp $
+
+
+# Fabian Groffen <grobian@gentoo.org> (14 Feb 2010)
+# fails to compile, offical 7.2 works like a charm
+=sys-devel/gdb-7.2.50.20101117.4.15
 
 # Fabian Groffen <grobian@gentoo.org> (23 May 2010)
 # ld: target elf32-i386 not found
