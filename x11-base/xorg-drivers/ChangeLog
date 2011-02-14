@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.40 2011/02/14 15:49:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.41 2011/02/14 23:58:29 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xorg-drivers-1.9.ebuild:
+  ppc stable wrt #344827, #354237
 
   14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> xorg-drivers-1.7.ebuild,
   xorg-drivers-1.9.ebuild:
