@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/suspend
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.17 2010/12/31 01:14:33 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.18 2011/02/14 22:20:54 sping Exp $
+
+  14 Feb 2011; Sebastian Pipping <sping@gentoo.org> suspend-0.9_pre0.ebuild:
+  For USE=crypt depend on dev-libs/libgcrypt[static-libs] and
+  dev-libs/libgpg-error[static-libs]. Compile errors reported by K. Posern.
 
   31 Dec 2010; Michael Weber <xmw@gentoo.org> suspend-0.9_pre0.ebuild:
   Add use-dep on dev-libs/lzo[static-libs] (thanks to alexxy and Stefan Botz
