@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.743 2011/02/07 19:18:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.744 2011/02/14 18:03:48 vapier Exp $
+
+*glibc-2.13-r1 (14 Feb 2011)
+
+  14 Feb 2011; Mike Frysinger <vapier@gentoo.org> +glibc-2.13-r1.ebuild:
+  Fix from upstream for ldso prelink segfaults #353814 and fix static linking
+  with fortify symbols #353816 by Harris Landgarten.
 
   07 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> glibc-2.13.ebuild:
   Abort if sys-devel/prelink is installed wrt #353814.
