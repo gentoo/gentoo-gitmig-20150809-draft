@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.4.ebuild,v 1.1 2010/12/22 05:33:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.4.ebuild,v 1.2 2011/02/14 15:35:20 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit kde4-base
 
@@ -12,12 +12,11 @@ SRC_URI="mirror://sourceforge/rkward/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND=">=dev-lang/R-2.7.0"
-RDEPEND="${DEPEND}
-	!<=sci-mathematics/rkward-0.5.0b"
+DEPEND="dev-lang/R"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	kde4-base_src_install
