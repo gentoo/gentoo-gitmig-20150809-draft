@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.33.ebuild,v 1.2 2011/01/15 07:07:18 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.9.38.ebuild,v 1.1 2011/02/14 22:49:17 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -35,7 +35,7 @@ RDEPEND="
 	sys-apps/util-linux
 
 	applet? (
-		|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
+		>=gnome-base/gnome-panel-2.32
 		>=x11-libs/gtk+-2.18:2 )
 	eds? (
 		>=mail-client/evolution-2.29.1
@@ -47,7 +47,7 @@ RDEPEND="
 	gsf? (
 		app-text/odt2txt
 		>=gnome-extra/libgsf-1.13 )
-	upnp? ( >=media-libs/gupnp-dlna-0.3 <media-libs/gupnp-dlna-0.5 )
+	upnp? ( >=media-libs/gupnp-dlna-0.5 )
 	!upnp? (
 		gstreamer? ( >=media-libs/gstreamer-0.10.12 )
 		!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
@@ -81,10 +81,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	>=dev-util/pkgconfig-0.20
-	applet? ( >=dev-lang/vala-0.11.2:0.12 )
+	applet? ( >=dev-lang/vala-0.11.4:0.12 )
 	gtk? (
 		app-office/dia
-		>=dev-lang/vala-0.11.2:0.12
+		>=dev-lang/vala-0.11.4:0.12
 		>=dev-libs/libgee-0.3 )
 	doc? (
 		>=dev-util/gtk-doc-1.8
@@ -188,7 +188,6 @@ src_prepare() {
 	python_convert_shebangs 2 "${S}"/examples/rss-reader/*.py
 
 	# FIXME: report broken tests
-	epatch "${FILESDIR}/${PN}-0.8.17-tests-fixes.patch"
 	sed -e '/\/libtracker-miner\/tracker-password-provider\/setting/,+1 s:^\(.*\)$:/*\1*/:' \
 		-e '/\/libtracker-miner\/tracker-password-provider\/getting/,+1 s:^\(.*\)$:/*\1*/:' \
 		-i tests/libtracker-miner/tracker-password-provider-test.c || die
