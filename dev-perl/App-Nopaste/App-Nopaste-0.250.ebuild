@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/App-Nopaste-0.250.ebuild,v 1.1 2011/01/15 09:09:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/App-Nopaste-0.250.ebuild,v 1.2 2011/02/14 09:15:09 robbat2 Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ DESCRIPTION="Easy access to any pastebin"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+pastebin +clipboard +github"
+IUSE="+pastebin clipboard github"
 
 DEPEND="
 	dev-perl/WWW-Mechanize
