@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-8.1.0.ebuild,v 1.1 2011/02/07 08:04:31 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-8.1.0.ebuild,v 1.2 2011/02/14 14:17:19 jer Exp $
 
 inherit eutils
 
 DESCRIPTION="Collection of programs that can be used to automate common tasks in debian/rules"
 HOMEPAGE="http://packages.qa.debian.org/d/debhelper.html http://kitenet.net/~joey/code/debhelper.html"
-SRC_URI="http://launchpad.net/${PN}/main/${PV}/+download/${P/-/_}.tar.gz"
+SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
