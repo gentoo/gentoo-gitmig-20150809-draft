@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.104 2011/02/05 12:36:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.105 2011/02/14 22:47:14 serkan Exp $
+
+*java-gnome-4.0.19 (14 Feb 2011)
+*java-gnome-4.0.18-r2 (14 Feb 2011)
+
+  14 Feb 2011; Serkan Kaba <serkan@gentoo.org> -java-gnome-4.0.18-r1.ebuild,
+  +java-gnome-4.0.18-r2.ebuild, +java-gnome-4.0.19.ebuild,
+  +files/java-gnome-4.0.19-libnotify-0.7.patch:
+  Revbump previous release to fix src_prepare phase bypassing. Version bump.
 
 *java-gnome-4.0.18-r1 (05 Feb 2011)
 
