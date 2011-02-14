@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.5.ebuild,v 1.2 2011/02/02 04:52:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.5.ebuild,v 1.3 2011/02/14 23:46:58 dilfridge Exp $
 
 EAPI=3
 KDE_LINGUAS="cs de fr"
@@ -32,10 +32,12 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	$(add_kdebase_dep kdesdk-misc)
+	$(add_kdebase_dep kdesdk-misc extras)
 	media-gfx/imagemagick"
 
 DOCS=( AUTHORS CHANGES README TODO )
+
+PATCHES=( "${FILESDIR}/${P}"-qt47.patch )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
@@ -44,7 +46,7 @@ src_configure() {
 		$(cmake-utils_use_with mad MP3)
 		$(cmake-utils_use_with vorbis OGG)
 		$(cmake-utils_use_with oss)
-		$(cmake-utils_use_with phonon)
+		-DWITH_PHONON=ON
 		$(cmake-utils_use_with pulseaudio)
 		$(cmake-utils_use debug)"
 

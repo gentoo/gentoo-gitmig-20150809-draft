@@ -1,0 +1,161 @@
+Index: plugins/fileinfo/FileInfoDlg.ui
+===================================================================
+--- plugins/fileinfo/FileInfoDlg.ui	(Revision 2565)
++++ plugins/fileinfo/FileInfoDlg.ui	(Revision 2566)
+@@ -43,7 +43,7 @@
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+-     <widget class="QWidget" name="tab">
++     <widget class="QWidget" name="tab1">
+       <attribute name="title">
+        <string>File</string>
+       </attribute>
+@@ -609,7 +609,7 @@
+        </item>
+       </layout>
+      </widget>
+-     <widget class="QWidget" name="tab">
++     <widget class="QWidget" name="tab2">
+       <attribute name="title">
+        <string>Compression</string>
+       </attribute>
+@@ -736,7 +736,7 @@
+        </item>
+       </layout>
+      </widget>
+-     <widget class="QWidget" name="tab">
++     <widget class="QWidget" name="tab3">
+       <attribute name="title">
+        <string>MPEG</string>
+       </attribute>
+@@ -1235,7 +1235,7 @@
+        </item>
+       </layout>
+      </widget>
+-     <widget class="QWidget" name="tab">
++     <widget class="QWidget" name="tab4">
+       <attribute name="title">
+        <string>Content</string>
+       </attribute>
+@@ -1501,7 +1501,7 @@
+        </item>
+       </layout>
+      </widget>
+-     <widget class="QWidget" name="tab">
++     <widget class="QWidget" name="tab5">
+       <attribute name="title">
+        <string>Source</string>
+       </attribute>
+@@ -1846,7 +1846,7 @@
+        </item>
+       </layout>
+      </widget>
+-     <widget class="QWidget" name="tab">
++     <widget class="QWidget" name="tab6">
+       <attribute name="title">
+        <string>Author/Copyright</string>
+       </attribute>
+@@ -2127,7 +2127,7 @@
+        </item>
+       </layout>
+      </widget>
+-     <widget class="QWidget" name="tab">
++     <widget class="QWidget" name="tab7">
+       <attribute name="title">
+        <string>Miscellaneous</string>
+       </attribute>
+Index: plugins/sonagram/SonagramDialog.cpp
+===================================================================
+--- plugins/sonagram/SonagramDialog.cpp	(Revision 2565)
++++ plugins/sonagram/SonagramDialog.cpp	(Revision 2566)
+@@ -105,7 +105,7 @@
+     list.clear();
+ 
+     // parameter #0: number of fft points
+-    param = pointbox ? pointbox->currentText() : QString(0);
++    param = pointbox ? pointbox->currentText() : QString();
+     list.append(param);
+ 
+     // parameter #1: index of the window function
+Index: plugins/record/RecordDlg.ui
+===================================================================
+--- plugins/record/RecordDlg.ui	(Revision 2565)
++++ plugins/record/RecordDlg.ui	(Revision 2566)
+@@ -49,7 +49,7 @@
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+-        <widget class="QWidget" name="tab">
++        <widget class="QWidget" name="tab1">
+          <attribute name="title">
+           <string>Recording</string>
+          </attribute>
+@@ -375,7 +375,7 @@
+           </item>
+          </layout>
+         </widget>
+-        <widget class="QWidget" name="tab">
++        <widget class="QWidget" name="tab2">
+          <attribute name="title">
+           <string>Level</string>
+          </attribute>
+@@ -616,7 +616,7 @@
+           </item>
+          </layout>
+         </widget>
+-        <widget class="QWidget" name="tab">
++        <widget class="QWidget" name="tab3">
+          <attribute name="title">
+           <string>For&amp;mat</string>
+          </attribute>
+@@ -973,7 +973,7 @@
+           </item>
+          </layout>
+         </widget>
+-        <widget class="QWidget" name="tab">
++        <widget class="QWidget" name="tab4">
+          <attribute name="title">
+           <string>Source</string>
+          </attribute>
+Index: libgui/KwaveFileDialog.h
+===================================================================
+--- libgui/KwaveFileDialog.h	(Revision 2565)
++++ libgui/KwaveFileDialog.h	(Revision 2566)
+@@ -43,8 +43,8 @@
+      */
+     KwaveFileDialog(const QString& startDir, const QString& filter,
+                     QWidget *parent, bool modal,
+-                    const QString last_url = 0,
+-                    const QString last_ext = 0);
++                    const QString last_url = QString(),
++                    const QString last_ext = QString());
+ 
+     /** Destructor */
+     virtual ~KwaveFileDialog()
+Index: libgui/KwaveFileDialog.cpp
+===================================================================
+--- libgui/KwaveFileDialog.cpp	(Revision 2565)
++++ libgui/KwaveFileDialog.cpp	(Revision 2566)
+@@ -34,7 +34,7 @@
+     const QString &filter, QWidget *parent, bool modal,
+     const QString last_url, const QString last_ext)
+     :KFileDialog(startDir, filter, parent),
+-     m_config_group(0), m_last_url(last_url), m_last_ext(last_ext)
++     m_config_group(), m_last_url(last_url), m_last_ext(last_ext)
+ {
+     setModal(modal);
+ 
+Index: libgui/MenuItem.cpp
+===================================================================
+--- libgui/MenuItem.cpp	(Revision 2565)
++++ libgui/MenuItem.cpp	(Revision 2566)
+@@ -38,7 +38,7 @@
+                    const QKeySequence &shortcut,
+                    const QString &uid)
+     :MenuNode(parent, name, command, shortcut, uid),
+-     m_exclusive_group(0), m_action(0)
++     m_exclusive_group(), m_action(0)
+ {
+     Q_ASSERT(parent);
+     if (!parent) return;
