@@ -3,16 +3,16 @@
 <pkgmetadata>
 	<herd>printing</herd>
 	<maintainer>
-		<email>calchan@gentoo.org</email>
-		<name>Denis Dupeyron</name>
+		<email>billie@gentoo.org</email>
+		<name>Daniel Pielmeier</name>
 	</maintainer>
 	<maintainer>
 		<email>flameeyes@gentoo.org</email>
 		<name>Diego Elio Pettenò</name>
 	</maintainer>
 	<maintainer>
-		<email>billie@gentoo.org</email>
-		<name>Daniel Pielmeier</name>
+		<email>calchan@gentoo.org</email>
+		<name>Denis Dupeyron</name>
 	</maintainer>
 	<use>
 		<flag name="doc">Build documentation</flag>

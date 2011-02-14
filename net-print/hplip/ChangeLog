@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.180 2011/02/01 19:24:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.181 2011/02/14 19:53:22 billie Exp $
+
+  14 Feb 2011; Daniel Pielmeier <billie@gentoo.org> hplip-3.10.9-r1.ebuild,
+  hplip-3.11.1-r2.ebuild, metadata.xml:
+  Ebuild cleanup. Remove elog messages and refer to the updated printing guide
+  instead.
 
 *hplip-3.11.1-r2 (01 Feb 2011)
 

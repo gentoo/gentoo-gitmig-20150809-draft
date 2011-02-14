@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.1-r2.ebuild,v 1.1 2011/02/01 19:24:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.1-r2.ebuild,v 1.2 2011/02/14 19:53:23 billie Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ PYTHON_USE_WITH_OPT="!minimal"
 
 inherit fdo-mime linux-info python autotools
 
-DESCRIPTION="HP Linux Imaging and Printing System. Includes printer, scanner, fax drivers and service tools."
+DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz"
 
@@ -18,7 +18,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
-# zeroconf does not work properly with >=cups-1.4. thus support for it is also disabled in hplip.
+# zeroconf does not work properly with >=cups-1.4.
+# Thus support for it is also disabled in hplip.
 IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds -udev-acl X"
 
 COMMON_DEPEND="
@@ -69,7 +70,7 @@ RDEPEND="${COMMON_DEPEND}
 	)"
 
 CONFIG_CHECK="~PARPORT ~PPDEV"
-ERROR_PARPORT="Please make sure parallel port support is enabled in your kernel (PARPORT and PPDEV)."
+ERROR_PARPORT="Please make sure kernel parallel port support is enabled (PARPORT and PPDEV)."
 
 pkg_setup() {
 	if ! use minimal; then
@@ -117,7 +118,8 @@ src_prepare() {
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483136
 	epatch "${FILESDIR}"/${PN}-3.9.12-cupsddk.patch
 
-	# Htmldocs are not installed under docdir/html so enable htmldir configure switch
+	# Htmldocs are not installed under docdir/html so enable htmldir configure
+	# switch
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483217
 	epatch "${FILESDIR}"/${P}-htmldir.patch
 
@@ -142,10 +144,10 @@ src_prepare() {
 	# Use system foomatic-rip for hpijs driver instead of foomatic-rip-hplip
 	# The hpcups driver does not use foomatic-rip
 	local i
-	for i in ppd/hpijs/*.ppd.gz
-	do
+	for i in ppd/hpijs/*.ppd.gz ; do
 		rm -f ${i}.temp
-		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | gzip > ${i}.temp || die
+		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | \
+			gzip > ${i}.temp || die
 		mv ${i}.temp ${i}
 	done
 
@@ -248,19 +250,9 @@ pkg_postinst() {
 	use !minimal && python_mod_optimize /usr/share/${PN}
 	fdo-mime_desktop_database_update
 
-	elog "You should run hp-setup as root if you are installing hplip for the first time,"
-	elog "and may also need to run it if you are upgrading from an earlier version."
-	elog
-	elog "If your device is connected using USB, users will need to be in the lp group to"
-	elog "access it."
-	elog
-	elog "Starting with versions of hplip >=3.9.8 mDNS is the default network search"
-	elog "mechanism. To make use of it you need to activate the zeroconf flag on cups."
-	elog "If you prefer the SLP method you have to choose this when configuring the"
-	elog "device."
-	elog "Note: For cups-1.4.x SLP is the only supported method as mDNS (zeroconf) is not"
-	elog "available here."
-
+	elog "For more information on setting up your printer please take"
+	elog "a look at the hplip section of the gentoo printing guide:"
+	elog "http://www.gentoo.org/doc/en/printing-howto.xml"
 }
 
 pkg_postrm() {
