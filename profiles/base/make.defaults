@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.61 2011/02/13 16:53:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.62 2011/02/14 18:23:43 pacho Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -25,6 +25,10 @@ ELIBC="glibc"
 KERNEL="linux"
 USERLAND="GNU"
 INPUT_DEVICES="keyboard mouse"
+
+# Pacho Ramos <pacho@gentoo.org> (14 Feb 2010)
+# Enable 'ptp2' by default as it is available for most cameras.
+CAMERAS="ptp2"
 
 # Ole Markus With <olemarkus@gentoo.org> (09 Oct 2010)
 # Default PHP targets (should always be latest stable version)
