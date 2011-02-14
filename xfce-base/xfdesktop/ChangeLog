@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.185 2011/02/09 21:11:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.186 2011/02/14 19:39:57 ssuominen Exp $
+
+  14 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> xfdesktop-4.8.0.ebuild:
+  alpha/ia64/sparc stable wrt #349053
 
   09 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> xfdesktop-4.6.2.ebuild:
   Remove x11-libs/gtk+:2[jpeg] USE depend wrt #354279 by Dennis Schridde.
