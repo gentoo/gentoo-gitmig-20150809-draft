@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.86 2011/02/14 00:41:04 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.87 2011/02/14 13:29:07 ferringb Exp $
+
+*libarchive-2.8.4-r1 (14 Feb 2011)
+*libarchive-2.8.3-r1 (14 Feb 2011)
+
+  14 Feb 2011; Brian Harring <ferringb@gentoo.org> +libarchive-2.8.3-r1.ebuild,
+  +libarchive-2.8.4-r1.ebuild:
+  revisit 352464; revbump (missed in the last round), add IUSE=expat to
+  enforce linkage via expat, else libxml2 is used.
 
   14 Feb 2011; Brian Harring <ferringb@gentoo.org> libarchive-2.8.3.ebuild,
   libarchive-2.8.4.ebuild:
