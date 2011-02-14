@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/accerciser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.16 2010/10/20 21:12:25 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.17 2011/02/14 19:49:22 pacho Exp $
+
+  14 Feb 2011; Pacho Ramos <pacho@gentoo.org> -accerciser-1.12.0.ebuild,
+  accerciser-1.12.1.ebuild:
+  RDEPEND was wrong, it needs dev-python/pygtksourceview instead of
+  dev-python/gtksourceview-python.
 
 *accerciser-1.12.1 (20 Oct 2010)
 

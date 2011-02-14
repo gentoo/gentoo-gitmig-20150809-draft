@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.12.1.ebuild,v 1.1 2010/10/20 21:12:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.12.1.ebuild,v 1.2 2011/02/14 19:49:22 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="dev-python/ipython
 	dev-python/pycairo
 	dev-python/libgnome-python
 	dev-python/libwnck-python
-	dev-python/gtksourceview-python
+	dev-python/pygtksourceview
 	dev-python/gconf-python
 	dev-python/librsvg-python
 	>=gnome-extra/at-spi-1.7
