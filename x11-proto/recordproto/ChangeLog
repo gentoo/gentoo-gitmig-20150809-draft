@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/recordproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.46 2011/02/12 21:53:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.47 2011/02/14 14:21:28 xarthisius Exp $
+
+  14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  recordproto-1.14.1.ebuild:
+  ppc stable wrt #344827, #354237
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> recordproto-1.14.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #344827
