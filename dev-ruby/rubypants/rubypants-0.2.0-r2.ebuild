@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r2.ebuild,v 1.1 2011/01/28 10:01:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r2.ebuild,v 1.2 2011/02/15 21:12:24 flameeyes Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18 ruby19 jruby ree18"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST="test"
+RUBY_FAKEGEM_TASK_TEST=""
 
 inherit ruby-fakegem
 
@@ -25,4 +25,10 @@ each_ruby_install() {
 	ruby_fakegem_install_gemspec
 
 	ruby_fakegem_newins rubypants.rb lib/rubypants.rb
+}
+
+each_ruby_test() {
+	# The rakefile doesn't really implement it properly, so simply
+	# replace it here.
+	${RUBY} -I. test_rubypants.rb || die "tests failed"
 }
