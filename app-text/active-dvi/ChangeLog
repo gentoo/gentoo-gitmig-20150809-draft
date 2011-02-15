@@ -1,6 +1,12 @@
 # ChangeLog for app-text/active-dvi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.36 2009/12/26 19:39:04 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.37 2011/02/15 15:51:29 aballier Exp $
+
+*active-dvi-1.9 (15 Feb 2011)
+
+  15 Feb 2011; Alexis Ballier <aballier@gentoo.org> +active-dvi-1.9.ebuild,
+  +files/active-dvi-1.9-htmlcflags.patch:
+  version bump, bug #316131
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> active-dvi-1.8.ebuild:
   virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
