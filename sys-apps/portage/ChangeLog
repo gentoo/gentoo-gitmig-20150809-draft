@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.800 2011/02/08 23:00:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.801 2011/02/15 18:59:27 zmedico Exp $
+
+*portage-2.2.0_alpha24 (15 Feb 2011)
+
+  15 Feb 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha24.ebuild:
+  2.2.0_alpha24 version bump. This includes all of the fixes in
+  portage-2.1.9.40. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.40 (15 Feb 2011)
+
+  15 Feb 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.40.ebuild:
+  2.1.9.40 version bump. This fixes bug #353933 (distorted virtual atoms in
+  unsatisfied dep messages), bug #354387 (ebuild.1 man page references
+  BUILD_PREFIX instead of PORTAGE_TMPDIR), bug #354437 (cross-reference
+  --newuse and --reinstall=changed-use), bug #354441 (regression causing
+  unnecessary reinstall of binary packages), bug #354685 (repoman
+  variable.usedwithhelpers errors triggered by comments), bug #354687
+  (egencache -update-use-local-desc error handling tweaks), and bug #354747
+  (unsatisfied dep messages should show packages scheduled for merge when
+  possible). Bug #349307 tracks all bugs fixed since 2.1.9.25.
 
 *portage-2.2.0_alpha23 (08 Feb 2011)
 
