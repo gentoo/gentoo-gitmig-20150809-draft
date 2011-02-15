@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.124 2011/02/06 16:28:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.125 2011/02/15 11:07:27 pacho Exp $
+
+*beagle-0.3.9-r5 (15 Feb 2011)
+
+  15 Feb 2011; Pacho Ramos <pacho@gentoo.org> +beagle-0.3.9-r5.ebuild,
+  +files/beagle-0.3.9-UnixConnectionHandler-exceptions.patch:
+  Fix crash on second search (bug #353533 by Kai Wüstermann and fix by
+  Alexandre Rostovtsev).
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> beagle-0.3.9-r4.ebuild:
   Stable on amd64 wrt bug #352808
