@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1352.ebuild,v 1.1 2011/02/13 11:02:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1352.ebuild,v 1.2 2011/02/15 21:19:42 tommy Exp $
 
 EAPI="2"
 DATE=20110212
@@ -25,7 +25,6 @@ CDEPEND="dev-db/db-je:3.3
 	dev-java/db4o-jdk11
 	dev-java/db4o-jdk12
 	dev-java/db4o-jdk5
-	=dev-java/ant-core-1.7*
 	dev-java/lzma
 	dev-java/lzmajio
 	dev-java/mersennetwister"
@@ -98,7 +97,7 @@ src_install() {
 	use source && java-pkg_dosrc src
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	elog " "
 	elog "1. Start freenet with /etc/init.d/freenet start."
 	elog "2. Open localhost:8888 in your browser for the web interface."
