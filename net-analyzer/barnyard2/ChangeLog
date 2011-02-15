@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/barnyard2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.3 2010/06/17 21:44:24 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.4 2011/02/15 19:06:02 patrick Exp $
+
+*barnyard2-1.9 (15 Feb 2011)
+
+  15 Feb 2011; Patrick Lauer <patrick@gentoo.org> +barnyard2-1.9.ebuild,
+  metadata.xml:
+  Bump for #354915, thanks to Jason Wallace
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> barnyard2-1.8.ebuild:
   Migrating away from deprecated postgres virtuals
