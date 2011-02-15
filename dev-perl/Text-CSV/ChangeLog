@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-CSV
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.36 2011/01/14 15:50:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.37 2011/02/15 07:15:10 phajdan.jr Exp $
+
+  15 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Text-CSV-1.210.ebuild:
+  x86 stable wrt bug #354773
 
   14 Jan 2011; Torsten Veller <tove@gentoo.org> -Text-CSV-1.17.ebuild,
   -Text-CSV-1.18.ebuild, -Text-CSV-1.19.ebuild, -Text-CSV-1.20.ebuild:
