@@ -1,5 +1,5 @@
---- ../orig/display.c	2007-06-11 23:53:25.000000000 +0200
-+++ ./display.c	2007-06-11 23:33:48.153146590 +0200
+--- display.c
++++ display.c
 @@ -5,6 +5,7 @@
   * hints that are left in the windows by the commands
   */
@@ -16,8 +16,8 @@
    int i;
  
    (*term.t_open) ();
---- ../orig/line.c	2007-06-11 23:53:25.000000000 +0200
-+++ ./line.c	2007-06-11 23:34:05.491501515 +0200
+--- line.c
++++ line.c
 @@ -47,7 +47,6 @@
  {
    LINE *lp;
@@ -35,8 +35,8 @@
    char *nbufp;
  
    if (kused == ksize)
---- ../orig/tcap.c	2007-06-11 23:53:25.000000000 +0200
-+++ ./tcap.c	2007-06-11 23:34:32.617363295 +0200
+--- tcap.c
++++ tcap.c
 @@ -2,6 +2,7 @@
  
  #define	termdef	1		/* don't define "term" external */
@@ -45,8 +45,8 @@
  #include <stdio.h>		/* puts(3), snprintf(3) */
  #include "estruct.h"
  #include "edef.h"
---- ../orig/termio.c	2007-06-11 23:53:25.000000000 +0200
-+++ ./termio.c	2007-06-11 23:41:19.979217690 +0200
+--- termio.c
++++ termio.c
 @@ -5,6 +5,7 @@
   */
  
