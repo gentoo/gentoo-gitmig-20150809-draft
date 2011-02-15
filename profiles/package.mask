@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12460 2011/02/15 10:51:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12461 2011/02/15 15:42:36 vadimk Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vadim Kuznetsov <vadimk@gentoo.org> (15 Feb 2011)
+# Upstream EOS Reached. Unmaintained. 
+# Bug #354383 
+=app-emulation/vmware-server-1*
+=app-emulation/vmware-player-1*
+=app-emulation/vmware-modules-1.0.0.15*
 
 # Vlastimil Babka <caster@gentoo.org> (15 Feb 2011)
 # Masked for removal of all versions older than 1.8.1 in few weeks.

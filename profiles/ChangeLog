@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5049 2011/02/15 10:51:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5050 2011/02/15 15:42:36 vadimk Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Feb 2011; Vadim Kuznetsov <vadimk@gentoo.org> package.mask:
+  Last rites for vmware-{server,player,modules}-1
 
   15 Feb 2011; <caster@gentoo.org> package.mask:
   Last rites for <dev-java/ant*-1.8.1
