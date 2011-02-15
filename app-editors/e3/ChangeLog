@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/e3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.33 2011/02/12 16:28:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.34 2011/02/15 14:41:19 ulm Exp $
+
+  15 Feb 2011; Ulrich Mueller <ulm@gentoo.org> e3-2.8.ebuild:
+  Fix build failure for 32 bit version. Thanks to Stelian Ionescu.
 
 *e3-2.8 (12 Feb 2011)
 

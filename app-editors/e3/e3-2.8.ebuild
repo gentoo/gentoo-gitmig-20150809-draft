@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.8.ebuild,v 1.1 2011/02/12 16:28:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.8.ebuild,v 1.2 2011/02/15 14:41:19 ulm Exp $
 
 EAPI=3
 
@@ -16,6 +16,10 @@ RESTRICT="strip"
 
 DEPEND=">=dev-lang/nasm-2.09.04"
 RDEPEND=""
+
+src_prepare() {
+	sed -i 's/-D$(EXMODE)//' Makefile || die
+}
 
 src_compile() {
 	if use amd64; then
