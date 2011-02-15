@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.33.ebuild,v 1.10 2010/08/20 13:46:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.33.ebuild,v 1.11 2011/02/15 20:15:21 aballier Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc212.patch
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 	elibtoolize
 }
 
