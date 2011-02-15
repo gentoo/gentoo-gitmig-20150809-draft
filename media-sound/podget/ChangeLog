@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/podget
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/podget/ChangeLog,v 1.1 2011/02/15 05:00:58 darkside Exp $
+
+*podget-0.6 (15 Feb 2011)
+
+  15 Feb 2011; Jeremy Olexa <darkside@gentoo.org> +podget-0.6.ebuild,
+  +metadata.xml:
+  Initial ebuild written by Jeremy Olexa
+
