@@ -3,7 +3,4 @@
 <pkgmetadata>
 <herd>net-irc</herd>
 <herd>gnome</herd>
-<use>
-	<flag name='sound'>Enable sound event support with <pkg>media-libs/libcanberra</pkg></flag>
-</use>
 </pkgmetadata>
