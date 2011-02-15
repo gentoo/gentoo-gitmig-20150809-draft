@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.802 2011/02/13 12:03:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.803 2011/02/15 14:03:44 xarthisius Exp $
+
+  15 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> gcc-4.4.5.ebuild:
+  ppc/ppc64 stable wrt #354881. Thanks Alex Buell <alex.buell@munted.org.uk>
+  for testing.
 
   13 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.5.2.ebuild:
   Bump patchset to 1.1. Fixes for arm and testsuite stuff.
