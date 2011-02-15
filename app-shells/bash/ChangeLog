@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.275 2011/02/06 22:01:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.276 2011/02/15 03:44:16 vapier Exp $
+
+*bash-4.2 (15 Feb 2011)
+
+  15 Feb 2011; Mike Frysinger <vapier@gentoo.org> +bash-4.2.ebuild:
+  Version bump.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> bash-3.1_p17.ebuild:
   Drop to ~mips
