@@ -1,20 +1,35 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.5.14.ebuild,v 1.1 2011/01/24 21:29:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.4.ebuild,v 1.1 2011/02/15 20:20:11 nirbheek Exp $
 
 EAPI="2"
+WANT_AUTOMAKE="1.11"
+CLUTTER_LA_PUNT="yes"
 
 inherit clutter
 
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 SLOT="1.0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="debug doc +introspection"
+if [[ ${PV} = 9999 ]]; then
+	inherit autotools git
+	EGIT_BOOTSTRAP="echo > build/config.rpath
+		gtkdocize
+		cp "${ROOT}/usr/share/gettext/po/Makefile.in.in" po/
+		eautoreconf"
+	EGIT_REPO_URI="git://git.clutter-project.org/${PN}.git"
+	SRC_URI=""
+	KEYWORDS=""
+	DEPEND=">=dev-util/gtk-doc-1.13"
+else
+	KEYWORDS="~amd64 ~ppc64 ~x86"
+fi
 
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
 # We always use the gdk-pixbuf backend now since it's been split out
-RDEPEND=">=dev-libs/glib-2.26
+RDEPEND="${RDEPEND}
+	>=dev-libs/glib-2.26
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
@@ -36,6 +51,7 @@ RDEPEND=">=dev-libs/glib-2.26
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 "
 DEPEND="${RDEPEND}
+	${DEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig
 	>=dev-util/gtk-doc-am-1.13
