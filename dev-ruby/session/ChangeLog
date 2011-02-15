@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/session
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.14 2010/12/27 20:28:29 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.15 2011/02/15 18:36:11 flameeyes Exp $
+
+*session-3.1.0-r1 (15 Feb 2011)
+
+  15 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> -session-3.1.0.ebuild,
+  +session-3.1.0-r1.ebuild:
+  Revision bump to avoid installing a broken gemspec (closes bug #355063).
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org> session-3.1.0.ebuild:
   Added Prefix keywords

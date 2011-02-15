@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-3.1.0.ebuild,v 1.6 2010/12/27 20:28:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-3.1.0-r1.ebuild,v 1.1 2011/02/15 18:36:11 flameeyes Exp $
 
 EAPI=2
 
