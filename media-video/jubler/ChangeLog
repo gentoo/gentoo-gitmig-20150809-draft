@@ -1,6 +1,13 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.37 2011/02/14 20:13:45 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.38 2011/02/15 18:32:38 serkan Exp $
+
+*jubler-4.6.1-r3 (15 Feb 2011)
+
+  15 Feb 2011; Serkan Kaba <serkan@gentoo.org> -jubler-4.6.1-r2.ebuild,
+  +jubler-4.6.1-r3.ebuild, files/jubler-4.6.1-gentoo.patch:
+  Revbump to fix bug #336235 reported by Diego Elio Pettenò
+  <flameeyes@gentoo.org>.
 
 *jubler-4.6.1-r2 (14 Feb 2011)
 

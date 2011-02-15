@@ -116,7 +116,7 @@ diff -Nur Jubler-4.6.1/core/src/com/panayotis/jubler/os/SystemFileFinder.java Ju
                  DEBUG.debug(e);
 diff -Nur Jubler-4.6.1/resources/ffmpeg/ffdecode/Makefile Jubler-4.6.1_patched/resources/ffmpeg/ffdecode/Makefile
 --- Jubler-4.6.1/resources/ffmpeg/ffdecode/Makefile	2011-01-31 16:26:26.000000000 +0200
-+++ Jubler-4.6.1_patched/resources/ffmpeg/ffdecode/Makefile	2011-02-12 14:30:05.612780001 +0200
++++ Jubler-4.6.1_patched/resources/ffmpeg/ffdecode/Makefile	2011-02-15 20:26:34.213149001 +0200
 @@ -12,9 +12,6 @@
  # Name of the produced library
  PROJ=ffdecode
@@ -152,3 +152,12 @@ diff -Nur Jubler-4.6.1/resources/ffmpeg/ffdecode/Makefile Jubler-4.6.1_patched/r
  
  
  develop:javacheck
+@@ -208,7 +203,7 @@
+ LIB:${LIBNAME}
+ 
+ ${LIBNAME}:${LIBRARYREQ} ${OBJS} ${RANLIBREQ}
+-	${LD} ${GCCOPTS} -o ${LIBNAME} ${OBJS} ${LIBS}
++	${LD} ${LDFLAGS} ${GCCOPTS} -o ${LIBNAME} ${OBJS} ${LIBS}
+ 	${STRIPCMD} ${LIBNAME}
+ 
+ 
