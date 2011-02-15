@@ -6,6 +6,5 @@
 	<flag name='artworkextra'>Installs extra artwork for various games</flag>
 	<flag name='clutter'>Build games that use <pkg>media-libs/clutter</pkg> and
 		are written in JavaScript using <pkg>dev-libs/seed</pkg></flag>
-	<flag name='sound'>Enable sound using <pkg>media-libs/libcanberra</pkg></flag>
 </use>
 </pkgmetadata>
