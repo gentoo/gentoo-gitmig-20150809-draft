@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/drumstick
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.8 2010/10/27 12:45:02 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.9 2011/02/15 06:57:00 phajdan.jr Exp $
+
+  15 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  drumstick-0.5.0.ebuild:
+  x86 stable wrt bug #353476
 
   27 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   drumstick-0.4.1.ebuild:
