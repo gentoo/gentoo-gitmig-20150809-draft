@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0.ebuild,v 1.1 2011/02/12 19:05:07 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0.ebuild,v 1.2 2011/02/15 20:20:29 rafaelmartins Exp $
 
 EAPI="2"
-inherit flag-o-matic xemacs-elisp-common
+inherit multilib
 
 DESCRIPTION="High-level interactive language for numerical computations"
 LICENSE="GPL-3"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.octave.org/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-IUSE="curl doc emacs fftw readline sparse test xemacs zlib"
+IUSE="curl doc fftw readline sparse test zlib"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="dev-libs/libpcre
@@ -35,7 +35,6 @@ RDEPEND="dev-libs/libpcre
 		sci-libs/colamd
 		sci-libs/cxsparse
 		sci-libs/umfpack )
-	xemacs? ( app-editors/xemacs )
 	zlib? ( sys-libs/zlib )
 	!sci-mathematics/octave-forge"
 
@@ -53,7 +52,7 @@ src_configure() {
 		--localstatedir=/var/state/octave \
 		--enable-shared \
 		--without-hdf5 \
-		--with-gplk \
+		--with-glpk \
 		--with-opengl \
 		--with-qrupdate \
 		--with-blas="$(pkg-config --libs blas)" \
@@ -62,21 +61,12 @@ src_configure() {
 		$(use_with curl) \
 		$(use_with fftw fftw3) \
 		$(use_with fftw fftw3f) \
-		$(use_with sparse arpack) \
 		$(use_with sparse umfpack) \
 		$(use_with sparse colamd) \
 		$(use_with sparse ccolamd) \
 		$(use_with sparse cholmod) \
 		$(use_with sparse cxsparse) \
 		$(use_with zlib z)
-}
-
-src_compile() {
-	emake || die "emake failed"
-	if use xemacs; then
-		cd "${S}/emacs"
-		xemacs-elisp-comp *.el
-	fi
 }
 
 src_install() {
@@ -88,16 +78,6 @@ src_install() {
 		doins $(find doc -name \*.pdf)
 	fi
 
-	if use emacs || use xemacs; then
-		cd emacs
-		exeinto /usr/bin
-		doexe octave-tags || die "Failed to install octave-tags"
-		doman octave-tags.1 || die "Failed to install octave-tags.1"
-		if use xemacs; then
-			xemacs-elisp-install ${PN} *.el *.elc
-		fi
-		cd ..
-	fi
 	use test && dodoc test/fntests.log
 	echo "LDPATH=/usr/$(get_libdir)/octave-${PV}" > 99octave
 	doenvd 99octave || die
