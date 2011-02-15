@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.8 2011/01/23 00:03:56 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.9 2011/02/15 17:08:39 idl0r Exp $
+
+*gitolite-gentoo-1.5.9 (15 Feb 2011)
+
+  15 Feb 2011; Christian Ruppert <idl0r@gentoo.org>
+  -gitolite-gentoo-1.5.7.ebuild, -gitolite-gentoo-1.5.8.ebuild,
+  -gitolite-gentoo-1.5.8.1-r1.ebuild,
+  -files/gitolite-gentoo-1.5.8.1-missing-bracket.patch,
+  +gitolite-gentoo-1.5.9.ebuild:
+  Version bump to 1.5.9. Remove old ebuilds.
 
   23 Jan 2011; Christian Ruppert <idl0r@gentoo.org>
   gitolite-gentoo-1.5.8.1-r1.ebuild:
