@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/obrowser-1.1.ebuild,v 1.2 2011/01/20 23:39:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/obrowser/obrowser-1.1.ebuild,v 1.3 2011/02/15 21:17:11 tomka Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://ocsigen.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 GPL-3 WTFPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ocaml-3.11.0"
