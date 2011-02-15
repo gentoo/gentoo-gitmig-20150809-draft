@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.22 2011/01/15 17:55:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.23 2011/02/15 12:13:58 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -313,7 +313,6 @@ xorg-2_src_configure() {
 			myopts+=" $(use_enable static-libs static)"
 		fi
 		econf \
-			--disable-dependency-tracking \
 			${FONT_OPTIONS} \
 			${CONFIGURE_OPTIONS} \
 			${myopts}
