@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2011.02.15.ebuild,v 1.1 2011/02/15 21:20:19 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2011.02.15.ebuild,v 1.2 2011/02/15 21:29:09 wired Exp $
 
 EAPI="4"
 
@@ -81,13 +81,17 @@ pkg_setup() {
 		einfo "You have enabled the *helpers* USE flag that installs"
 		einfo "various optional applications used by uzbl's extra scripts."
 	fi
+	ewarn
+	ewarn "This version introduces some backwards-incompatible changes."
+	ewarn "Please read http://www.uzbl.org/news.php?id=32 for more details."
+	ewarn
 }
 
 src_unpack() {
 	if [[ ${PV} == *9999* ]]; then
 		git_src_unpack
 	else
-		unpack "${A}"
+		unpack ${A}
 		mv Dieterbe-uzbl-* "${S}"
 	fi
 }
