@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.36 2011/01/26 01:40:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.37 2011/02/15 18:45:48 aballier Exp $
+
+  15 Feb 2011; Alexis Ballier <aballier@gentoo.org> libass-0.9.11.ebuild:
+  drop png useflag: it is only needed for the test program that we do not
+  install and causes libass.so to be linked needlessly to libpng... moreover,
+  it doesnt build against libpng15, bug #354997
 
   26 Jan 2011; Jeroen Roovers <jer@gentoo.org> libass-0.9.11.ebuild:
   Stable for HPPA (bug #343977).
