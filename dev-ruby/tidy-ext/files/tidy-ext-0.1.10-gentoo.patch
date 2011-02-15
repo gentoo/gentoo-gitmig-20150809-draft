@@ -1,0 +1,88 @@
+diff --git a/ruby/Rakefile b/ruby/Rakefile
+index 031dfa2..ccd7c91 100644
+--- a/ruby/Rakefile
++++ b/ruby/Rakefile
+@@ -1,6 +1,5 @@
+ require 'rubygems'
+ require 'rake'
+-require 'rake/extensiontask'
+ 
+ begin
+   require 'jeweler'
+@@ -14,6 +13,8 @@ begin
+     gem.extensions = FileList["ext/**/extconf.rb"]
+   end
+   Jeweler::GemcutterTasks.new
++
++  task :spec => :check_dependencies
+ rescue LoadError
+   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+ end
+@@ -23,6 +24,7 @@ task :console do
+   exec("irb -I lib -r tidy/alone")
+ end
+ 
++begin
+ require 'spec/rake/spectask'
+ Spec::Rake::SpecTask.new(:spec) do |spec|
+   spec.libs << 'lib' << 'spec'
+@@ -35,9 +37,10 @@ Spec::Rake::SpecTask.new(:rcov) do |spec|
+   spec.rcov = true
+ end
+ 
+-task :spec => :check_dependencies
+-
+ task :default => :spec
++rescue LoadError
++  puts "RSpec (or a dependency) not available. Install it with: gem install rspec"
++end
+ 
+ require 'rake/rdoctask'
+ Rake::RDocTask.new do |rdoc|
+@@ -49,11 +52,16 @@ Rake::RDocTask.new do |rdoc|
+   rdoc.rdoc_files.include('lib/**/*.rb')
+ end
+ 
++begin
++  require 'rake/extensiontask'
+ Rake::ExtensionTask.new do |ext|
+   ext.name = 'tidy'
+   ext.ext_dir = 'ext/tidy'
+   ext.config_options << '--with-coverage' if ENV['COV']
+ end
++rescue LoadError
++  puts "rake-compiler not available. Install it with: gem install rake-compiler"
++end
+ 
+ namespace :gcov do
+ 
+diff --git a/ruby/spec/tidy/compat_spec.rb b/ruby/spec/tidy/compat_spec.rb
+index 0bb1e77..63b285a 100644
+--- a/ruby/spec/tidy/compat_spec.rb
++++ b/ruby/spec/tidy/compat_spec.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "spec_helper")
++require "spec_helper"
+ 
+ describe "tidy compatibility methods" do
+ 
+diff --git a/ruby/spec/tidy/remote_uri_spec.rb b/ruby/spec/tidy/remote_uri_spec.rb
+index 8426ab7..c3e0ba8 100644
+--- a/ruby/spec/tidy/remote_uri_spec.rb
++++ b/ruby/spec/tidy/remote_uri_spec.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "spec_helper")
++require "spec_helper"
+ require 'open-uri'
+ 
+ describe "tidy class methods" do
+diff --git a/ruby/spec/tidy/tidy_spec.rb b/ruby/spec/tidy/tidy_spec.rb
+index 2ad49e6..bb7ffc7 100644
+--- a/ruby/spec/tidy/tidy_spec.rb
++++ b/ruby/spec/tidy/tidy_spec.rb
+@@ -1,4 +1,4 @@
+-require File.join(File.dirname(__FILE__), "..", "spec_helper")
++require "spec_helper"
+ 
+ describe "tidy class methods" do
+ 

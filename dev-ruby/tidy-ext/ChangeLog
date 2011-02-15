@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tidy-ext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.1 2011/01/25 06:50:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.2 2011/02/15 22:15:53 flameeyes Exp $
+
+  15 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> tidy-ext-0.1.10.ebuild,
+  +files/tidy-ext-0.1.10-gentoo.patch:
+  Add patch to work on Ruby 1.9.2 and add ruby19 to the list of compatible
+  implementations.
 
 *tidy-ext-0.1.10 (25 Jan 2011)
 

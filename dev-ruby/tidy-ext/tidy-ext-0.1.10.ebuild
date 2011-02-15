@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.10.ebuild,v 1.1 2011/01/25 06:50:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.10.ebuild,v 1.2 2011/02/15 22:15:53 flameeyes Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_DOCDIR="rdoc"
 
@@ -19,10 +19,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
+
+RUBY_PATCHES="${FILESDIR}/${P}-gentoo.patch"
+
 each_ruby_prepare() {
 	mkdir lib || die
-
-	sed -i -e '/check_dependencies/d' Rakefile || die
 }
 
 each_ruby_configure() {
