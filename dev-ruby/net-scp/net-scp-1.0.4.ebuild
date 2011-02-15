@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4.ebuild,v 1.2 2010/12/21 19:14:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4.ebuild,v 1.3 2011/02/15 19:06:27 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -30,5 +30,5 @@ ruby_add_bdepend "
 ruby_add_rdepend ">=dev-ruby/net-ssh-2.0.17-r1"
 
 each_ruby_test() {
-	${RUBY} test/test_all.rb || die
+	${RUBY} -Ilib:test test/test_all.rb || die
 }

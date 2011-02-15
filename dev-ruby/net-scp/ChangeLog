@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-scp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.20 2010/12/21 19:14:34 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.21 2011/02/15 19:06:27 flameeyes Exp $
+
+  15 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> net-scp-1.0.4.ebuild:
+  Fix tests when using Ruby 1.9.2 (closes bug #351025).
 
   21 Dec 2010; Hans de Graaff <graaff@gentoo.org> net-scp-1.0.4.ebuild:
   Keyword ~x86-macos.
