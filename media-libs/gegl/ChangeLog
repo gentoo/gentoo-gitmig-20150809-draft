@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gegl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.35 2010/11/07 18:53:16 anarchy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.36 2011/02/15 23:40:34 hanno Exp $
+
+*gegl-0.1.6 (15 Feb 2011)
+
+  15 Feb 2011; Hanno Boeck <hanno@gentoo.org> +gegl-0.1.6.ebuild:
+  Version bump.
 
   07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> gegl-0.1.2.ebuild:
   Convert media-libs/jpeg to virtual/jpeg
