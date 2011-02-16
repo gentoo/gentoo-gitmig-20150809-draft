@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.58 2011/01/27 07:11:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.59 2011/02/16 19:30:39 ssuominen Exp $
+
+  16 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> check-0.9.8.ebuild:
+  USE="static-libs" and punt useless libtool archive. Fix LICENSE from GPL-2 to
+  LGPL-2.1.
 
   27 Jan 2011; Christian Faulhammer <fauli@gentoo.org> check-0.9.8.ebuild:
   stable x86, bug 348987
