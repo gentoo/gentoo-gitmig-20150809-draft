@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.662 2011/02/16 13:21:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.663 2011/02/16 14:39:41 aballier Exp $
+
+  16 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  Convert to EAPI-4, make use of REQUIRED_USE, simplify and remove useless
+  eclass inherits.
 
   16 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   remoteosd is now controlled by the gcrypt useflag
