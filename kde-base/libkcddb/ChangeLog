@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkcddb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.166 2011/01/26 20:29:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.167 2011/02/16 21:21:27 dilfridge Exp $
+
+  16 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkcddb-4.6.0.ebuild:
+  Tests need network access. So, permanently restricting.
 
 *libkcddb-4.6.0 (26 Jan 2011)
 
