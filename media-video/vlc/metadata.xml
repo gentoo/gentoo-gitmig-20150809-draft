@@ -9,6 +9,8 @@
   <use>
     <flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
 	<flag name="audioqueue">Enables AudioQueue audio module for Mac OS X.</flag>
+	<flag name="avcodec">Enables libavcodec support for video/audio	encoding/decoding. libavcodec is part of FFmpeg.</flag>
+	<flag name="avformat">Enables libformat support for reading and writing various media containers. libavformat is part of FFmpeg.</flag>
 	<flag name="bda">Enables Win32 DirectShow BDA support.</flag>
 	<flag name="bluray">Enables libbluray for Blu-ray disc support.</flag>
     <flag name="dc1394">Enables IIDC cameras support.</flag>
@@ -48,6 +50,7 @@
 	<flag name="matroska">Enables matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)</flag>
 	<flag name="omxil">Enables OpenMAX Integration Layer codec module.</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
+	<flag name="postproc">Enables image post-processing via libpostproc (part of FFmpeg).</flag>
     <flag name="projectm">Enables the projectM visualization plugin.</flag>
     <flag name="pvr">Enables PVR cards access module.</flag>
     <flag name="qt4" restrict="&gt;=media-video/vlc-0.9">Builds a <pkg>x11-libs/qt</pkg> based frontend. It is now the most up-to-date graphical interface available.</flag>
@@ -62,6 +65,7 @@
     <flag name="skins">Enables support for the skins2 interface.</flag>
     <flag name="stream">Enables sout module for audio/video data streaming/transcoding/etc..</flag>
 	<flag name="switcher">Enables MPEG2 video switcher stream output module.</flag>
+	<flag name="swscale">Enables image scaling and conversion via libswscale (part of FFmpeg).</flag>
     <flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
     <flag name="upnp">Enables support for Intel UPnP stack.</flag>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>

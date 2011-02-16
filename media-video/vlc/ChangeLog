@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.678 2011/02/16 20:45:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.679 2011/02/16 21:11:14 aballier Exp $
+
+  16 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild,
+  metadata.xml:
+  split ffmpeg in avcodec, avformat, postproc and swscale useflags as done
+  upstream to allow a more finegrained control on what to install.
 
   16 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild,
   metadata.xml:
