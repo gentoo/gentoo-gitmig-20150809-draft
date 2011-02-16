@@ -5,9 +5,9 @@
   <maintainer>
     <email>bass@gentoo.org</email>
   </maintainer>
-  <maintainer restrict="=net-proxy/ufdbguard-1.23*">
+  <maintainer restrict=">=net-proxy/ufdbguard-1.23">
     <email>flameeyes@gentoo.org</email>
-    <description>Co-maintainer for version 1.23</description>
+    <description>Co-maintainer for version 1.23 and later</description>
   </maintainer>
   <longdescription>
     The fastest URL filter with 25,000 URL verifications/sec to filter
