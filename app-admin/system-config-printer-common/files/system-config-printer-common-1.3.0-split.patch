@@ -1,13 +1,13 @@
 diff -ruN system-config-printer-1.3.0/Makefile.am my/Makefile.am
 --- system-config-printer-1.3.0/Makefile.am	2011-02-16 14:02:45.000000000 +0100
-+++ my/Makefile.am	2011-02-16 20:19:11.586000001 +0100
++++ my/Makefile.am	2011-02-16 20:48:09.990000001 +0100
 @@ -1,4 +1,4 @@
 -AM_CFLAGS=-g -O2 -Wall $(GLIB_CFLAGS)
 +AM_CFLAGS=-Wall $(GLIB_CFLAGS)
  
  SUBDIRS=po
  
-@@ -83,102 +83,23 @@
+@@ -83,102 +83,22 @@
  	rm -f .stamp-distutils-in-builddir
  
  nobase_pkgdata_SCRIPTS=				\
@@ -39,7 +39,7 @@ diff -ruN system-config-printer-1.3.0/Makefile.am my/Makefile.am
  	installpackage.py				\
 -	jobviewer.py					\
  	monitor.py					\
- 	newprinter.py					\
+-	newprinter.py					\
 -	options.py					\
 -	optionwidgets.py				\
  	PhysicalDevice.py				\
@@ -112,7 +112,7 @@ diff -ruN system-config-printer-1.3.0/Makefile.am my/Makefile.am
  
  if UDEV_RULES
  udevrulesdir=$(sysconfdir)/udev/rules.d
-@@ -193,10 +114,6 @@
+@@ -193,56 +113,17 @@
  	udev/udev-add-printer
  endif
  
@@ -123,10 +123,16 @@ diff -ruN system-config-printer-1.3.0/Makefile.am my/Makefile.am
  dbus_DATA =					\
  	dbus/com.redhat.NewPrinterNotification.conf		\
  	dbus/com.redhat.PrinterDriversInstaller.conf
-@@ -210,39 +127,12 @@
- 	dbus/org.fedoraproject.Config.Printing.service
- dbusservicesdir = $(datadir)/dbus-1/services/
+ dbusdir = $(sysconfdir)/dbus-1/system.d/
  
+-dbusinterfaces_DATA =				\
+-	dbus/org.fedoraproject.Config.Printing.xml
+-dbusinterfacesdir = $(datadir)/dbus-1/interfaces/
+-
+-dbusservices_DATA =				\
+-	dbus/org.fedoraproject.Config.Printing.service
+-dbusservicesdir = $(datadir)/dbus-1/services/
+-
 -desktop_DATA =\
 -	system-config-printer.desktop \
 -	print-applet.desktop
