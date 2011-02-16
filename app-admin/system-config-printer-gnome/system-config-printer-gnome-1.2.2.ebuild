@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.2.ebuild,v 1.8 2010/10/28 18:50:55 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.2.ebuild,v 1.9 2011/02/16 19:00:09 reavertm Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 WANT_AUTOMAKE="1.11"
 inherit python autotools
 
@@ -23,10 +24,9 @@ IUSE="gnome-keyring"
 RESTRICT="test"
 
 RDEPEND="
-	>=app-admin/system-config-printer-common-${PV}
+	~app-admin/system-config-printer-common-${PV}
 	dev-python/notify-python
 	>=dev-python/pygtk-2.4
-	dev-python/pyxml
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 "
 DEPEND="${RDEPEND}

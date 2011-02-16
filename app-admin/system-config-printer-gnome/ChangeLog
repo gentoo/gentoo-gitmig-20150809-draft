@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.19 2011/01/27 13:24:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.20 2011/02/16 19:00:09 reavertm Exp $
+
+  16 Feb 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  system-config-printer-gnome-1.2.2.ebuild,
+  -system-config-printer-gnome-1.2.4.ebuild,
+  -system-config-printer-gnome-1.2.5.ebuild,
+  system-config-printer-gnome-1.2.6.ebuild:
+  Fix bug 354301 (depend on python[xml] instead of pyxml). Stricten
+  system-config-printer-common version dependencies. Remove old.
 
   27 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   system-config-printer-gnome-1.2.6.ebuild:
