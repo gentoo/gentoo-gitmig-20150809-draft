@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r13.ebuild,v 1.3 2010/10/10 19:13:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r13.ebuild,v 1.4 2011/02/16 16:24:52 aballier Exp $
 
 EAPI=2
 inherit autotools eutils elisp-common
@@ -12,7 +12,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
 HOMEPAGE="http://timidity.sourceforge.net/"
 SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patchset-1.tar.bz2"
+	mirror://gentoo/${P}-patchset-2.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,8 +32,7 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	speex? ( media-libs/speex )
 	ao? ( >=media-libs/libao-0.8.5 )
 	motif? ( >=x11-libs/openmotif-2.3:0 )
-	X? ( x11-libs/libXaw
-		x11-libs/libXext )
+	X? ( x11-libs/libXaw x11-libs/libXext >=media-libs/libpng-1.4.2 )
 	!~media-libs/libpng-1.4.1"
 RDEPEND="${DEPEND}
 	alsa? ( media-sound/alsa-utils )
