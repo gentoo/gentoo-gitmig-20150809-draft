@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.0.2.ebuild,v 1.1 2010/12/15 19:26:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.0.2.ebuild,v 1.2 2011/02/16 16:44:20 ssuominen Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	local guis
-	use fox && guis="${guis} fox"
+	use fox && guis="${guis} fox16"
 	use gtk && guis="${guis} gtk2"
 	use qt4 && guis="${guis} qt4"
 

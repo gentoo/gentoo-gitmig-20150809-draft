@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.83 2010/12/15 19:26:01 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.84 2011/02/16 16:44:20 ssuominen Exp $
+
+  16 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> gwenhywfar-4.0.2.ebuild:
+  Fix building with USE="fox" wrt #355077 by Agostino Sarubbo.
 
 *gwenhywfar-4.0.2 (15 Dec 2010)
 
