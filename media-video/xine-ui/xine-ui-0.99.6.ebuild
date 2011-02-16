@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.6.ebuild,v 1.11 2010/05/30 18:41:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.6.ebuild,v 1.12 2011/02/16 14:56:39 aballier Exp $
 
 EAPI=3
-inherit fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils eutils
 
 DESCRIPTION="Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="aalib curl debug libcaca lirc nls readline vdr X xinerama"
 
-RDEPEND=">=media-libs/libpng-1.2.40
+RDEPEND=">=media-libs/libpng-1.4
 	>=media-libs/xine-lib-1.1.17[aalib?,libcaca?]
 	aalib? ( media-libs/aalib )
 	curl? ( >=net-misc/curl-7.10.2 )
@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	rm -f misc/xine-bugreport
+	epatch "${FILESDIR}/${P}-libpng15.patch"
 }
 
 src_configure() {
