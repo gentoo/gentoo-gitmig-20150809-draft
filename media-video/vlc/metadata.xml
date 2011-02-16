@@ -25,6 +25,7 @@
 		from various video formats to standard ones, needed to use v4l2 devices
 		with strange formats).</flag>
     <flag name="libtiger">Enables Ogg Kate subtitles rendering using libtiger.</flag>
+	<flag name="linsys">Enables support for Linux Linear Systems Ltd. SDI and HD-SDI input cards.</flag>
     <flag name="live">Enables live555 streaming media support (client support for rtsp).</flag>
 	<flag name="matroska">Enables matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
