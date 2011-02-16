@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/sparsehash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sparsehash/ChangeLog,v 1.5 2011/02/11 13:04:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sparsehash/ChangeLog,v 1.6 2011/02/16 18:25:58 weaver Exp $
+
+*sparsehash-1.10 (16 Feb 2011)
+
+  16 Feb 2011; Andrey Kislyuk <weaver@gentoo.org> +sparsehash-1.10.ebuild:
+  Version bump
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> sparsehash-1.5.2.ebuild:
   Stable on amd64 wrt bug #353570
