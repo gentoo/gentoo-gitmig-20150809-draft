@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.105 2011/02/16 15:20:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.106 2011/02/16 15:23:21 aballier Exp $
 
 EAPI="4"
 
@@ -46,12 +46,12 @@ else
 	KEYWORDS=""
 fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
-	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
+	debug dirac directfb dts dvb dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gme gnome gnutls httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 rtsp run-as-root samba
-	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse stream
+	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse
 	svg taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
 	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
@@ -151,7 +151,7 @@ REQUIRED_USE="
 	qt4? ( X )
 	skins? ( truetype qt4 )
 	vaapi? ( ffmpeg )
-	vlm? ( stream )
+	vlm? ( encode )
 	xv? ( xcb )
 "
 
@@ -200,6 +200,7 @@ src_configure() {
 		$(use_enable dts dca) \
 		$(use_enable dvb) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
+		$(use_enable encode sout) \
 		$(use_enable fbcon fb) \
 		$(use_enable ffmpeg avcodec) $(use_enable ffmpeg avformat) $(use_enable ffmpeg swscale) $(use_enable ffmpeg postproc) \
 		$(use_enable flac) \
@@ -255,7 +256,6 @@ src_configure() {
 		$(use_enable speex) \
 		$(use_enable sqlite) \
 		$(use_enable sse) \
-		$(use_enable stream sout) \
 		$(use_enable svg) \
 		$(use_enable taglib) \
 		$(use_enable theora) \
