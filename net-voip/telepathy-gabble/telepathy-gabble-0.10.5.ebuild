@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.5.ebuild,v 1.1 2011/02/16 18:07:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.5.ebuild,v 1.2 2011/02/16 18:36:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -28,13 +28,13 @@ RDEPEND=">=dev-libs/glib-2.24
 	!<net-im/telepathy-mission-control-5.5.0"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	>=dev-lang/python-2.5
 	test? ( >=dev-python/twisted-0.8.2
 		>=dev-python/twisted-words-0.8.2
 		>=dev-python/dbus-python-0.83 )"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
