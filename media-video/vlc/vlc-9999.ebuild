@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.116 2011/02/16 19:25:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.117 2011/02/16 19:37:11 aballier Exp $
 
 EAPI="4"
 
@@ -46,14 +46,14 @@ else
 	KEYWORDS=""
 fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc1394
-	debug dirac directfb dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode fbcon fluidsynth +ffmpeg flac fontconfig
+	debug dirac direct2d directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 linsys lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse
 	svg switcher taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
-	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
+	vorbis waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -202,7 +202,9 @@ src_configure() {
 		$(use_enable cddb libcddb) \
 		$(use_enable dbus) $(use_enable dbus dbus-control) \
 		$(use_enable dirac) \
+		$(use_enable direct2d) \
 		$(use_enable directfb) \
+		$(use_enable directx) \
 		$(use_enable dc1394) \
 		$(use_enable debug) \
 		$(use_enable dshow) \
@@ -284,7 +286,9 @@ src_configure() {
 		$(use_enable vaapi libva) \
 		$(use_enable vlm) \
 		$(use_enable vorbis) \
+		$(use_enable waveout) \
 		$(use_enable win32codecs loader) \
+		$(use_enable wingdi) \
 		$(use_enable wma-fixed) \
 		$(use_with X x) \
 		$(use_enable x264) \

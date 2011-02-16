@@ -12,6 +12,8 @@
 	<flag name="bluray">Enables libbluray for Blu-ray disc support.</flag>
     <flag name="dc1394">Enables IIDC cameras support.</flag>
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
+	<flag name="direct2d">Enable Win7/VistaPU Direct2D support.</flag>
+	<flag name="directx">Enable Win32 DirectX support.</flag>
 	<flag name="dvbpsi">Enable ts mux and demux module via libdvbpsi.</flag>
 	<flag name="dshow">Enables Win32 DirectShow support.</flag>
 	<flag name="dxva2">Enables Win32 DxVA2 support.</flag>
@@ -55,6 +57,8 @@
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
     <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
     <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
+	<flag name="waveout">Enable win32 waveOut plugin.</flag>
+	<flag name="wingdi">Enable Win32 GDI module.</flag>
     <flag name="wma-fixed">Enables fixed point WMA decoder.</flag>
     <flag name="X">Enables support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface.</flag>
     <flag name="zvbi">Enables support for teletext subtitles via the zvbi library.</flag>
