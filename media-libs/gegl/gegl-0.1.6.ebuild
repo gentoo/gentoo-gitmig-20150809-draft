@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.1 2011/02/15 23:40:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.2 2011/02/16 19:16:24 hanno Exp $
 
 EAPI="2"
 
@@ -41,6 +41,10 @@ RDEPEND="${DEPEND}"
 RESTRICT="test"
 
 src_prepare() {
+	# upstream bug report:
+	# https://bugzilla.gnome.org/show_bug.cgi?id=642494
+	epatch "${FILESDIR}"/gegl-doubledestdir.diff
+
 	# fix OSX loadable module filename extension
 	sed -i -e 's/\.dylib/.bundle/' configure.ac || die
 	eautoreconf
