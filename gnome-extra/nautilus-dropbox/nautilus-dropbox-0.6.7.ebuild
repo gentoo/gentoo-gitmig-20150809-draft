@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7.ebuild,v 1.1 2011/01/28 16:51:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7.ebuild,v 1.2 2011/02/16 19:32:37 darkside Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ SRC_URI="http://www.dropbox.com/download?dl=packages/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-linux"
 IUSE="debug"
 
 RDEPEND="gnome-base/nautilus
@@ -43,9 +43,12 @@ src_install () {
 	local extensiondir="$(pkg-config --variable=extensiondir libnautilus-extension)"
 	[ -z ${extensiondir} ] && die "pkg-config unable to get nautilus extensions dir"
 
-	find "${D}" -name '*.la' -exec rm -f {} + || die
+	# Strip $EPREFIX from $extensiondir as fowners/fperms act on $ED not $D
+	extensiondir="${extensiondir#${EPREFIX}}"
 
-	fowners root:dropbox "${extensiondir}"/libnautilus-dropbox.so
+	find "${ED}" -name '*.la' -exec rm -f {} + || die
+
+	use prefix || fowners root:dropbox "${extensiondir}"/libnautilus-dropbox.so
 	fperms o-rwx "${extensiondir}"/libnautilus-dropbox.so
 }
 
