@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.115 2011/02/16 19:07:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.116 2011/02/16 19:25:31 aballier Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ else
 	KEYWORDS=""
 fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc1394
-	debug dirac directfb dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
+	debug dirac directfb dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 linsys lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
@@ -72,6 +72,7 @@ RDEPEND="
 		dts? ( media-libs/libdca )
 		dvbpsi? ( >=media-libs/libdvbpsi-0.1.6 )
 		dvd? (	media-libs/libdvdread >=media-libs/libdvdnav-0.1.9 )
+		egl? ( virtual/opengl )
 		elibc_glibc? ( >=sys-libs/glibc-2.8 )
 		ffmpeg? ( >=media-video/ffmpeg-0.6 )
 		flac? ( media-libs/libogg >=media-libs/flac-1.1.2 )
@@ -210,6 +211,7 @@ src_configure() {
 		$(use_enable dvbpsi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
 		$(use_enable dxva2) \
+		$(use_enable egl) \
 		$(use_enable encode sout) \
 		$(use_enable fbcon fb) \
 		$(use_enable ffmpeg avcodec) $(use_enable ffmpeg avformat) $(use_enable ffmpeg swscale) $(use_enable ffmpeg postproc) \
