@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.112 2011/02/16 18:04:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.113 2011/02/16 18:28:20 aballier Exp $
 
 EAPI="4"
 
@@ -49,7 +49,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc139
 	debug dirac directfb dshow dts dvb +dvbpsi dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 linsys lirc live lua matroska mmx
-	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
+	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse
 	svg taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
@@ -243,6 +243,7 @@ src_configure() {
 		$(use_enable musepack mpc) \
 		$(use_enable ncurses) \
 		$(use_enable ogg) \
+		$(use_enable omxil) \
 		$(use_enable opengl glx) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
