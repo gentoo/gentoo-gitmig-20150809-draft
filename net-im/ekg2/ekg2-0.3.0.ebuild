@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0_rc7.ebuild,v 1.1 2011/01/22 14:14:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0.ebuild,v 1.1 2011/02/16 17:35:12 mgorny Exp $
 
 EAPI=3
 inherit autotools-utils versionator
