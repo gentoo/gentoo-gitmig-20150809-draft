@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110213.ebuild,v 1.1 2011/02/13 18:31:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110213.ebuild,v 1.2 2011/02/16 16:16:42 hwoarang Exp $
 
 EAPI=2
 
@@ -8,8 +8,6 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
 	inherit autotools git
 	SRC_URI=""
-	EXTRA_DEPEND="dev-util/gtk-doc
-		dev-util/gtk-doc-am"
 else
 	inherit autotools
 	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
@@ -23,7 +21,7 @@ HOMEPAGE="http://pcmanfm.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug examples udev"
+IUSE="debug doc examples udev"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
@@ -33,14 +31,21 @@ RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
 	udev? ( sys-fs/udisks )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/gtk-doc
-	dev-util/gtk-doc-am
+	doc? (
+		dev-util/gtk-doc
+		dev-util/gtk-doc-am
+	)
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {
-	gtkdocize --copy || die
+	if ! use doc; then
+		sed -ie '/SUBDIRS=/s#docs##' "${WORKDIR}"/Makefile.am || die "sed failed"
+		sed -ie '/^[[:space:]]*docs/d' configure.ac || die "sed failed"
+	else
+		gtkdocize --copy || die
+	fi
 	intltoolize --force --copy --automake || die
 	eautoreconf
 }
@@ -53,6 +58,7 @@ src_configure() {
 		$(use_enable udev udisks) \
 		$(use_enable examples demo) \
 		$(use_enable debug) \
+		$(use_enable doc gtk_doc) \
 		--with-html-dir=/usr/share/doc/${PF}/html
 }
 
