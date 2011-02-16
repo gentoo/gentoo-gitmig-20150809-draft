@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.121 2011/02/16 21:39:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.122 2011/02/16 22:08:18 aballier Exp $
 
 EAPI="4"
 
@@ -53,7 +53,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec +avformat bda
 	libv4l2 linsys lirc live lua +macosx +macosx-audio +macosx-dialog-provider
 	+macosx-eyetv +macosx-quartztext +macosx-qtcapture +macosx-vout matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
-	png +postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba
+	png portaudio +postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout sid skins snapshot speex sqlite sse
 	svg +swscale switcher taglib theora truetype twolame udev upnp v4l2 vaapi
 	vcdx vlm vorbis waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd
@@ -111,6 +111,7 @@ RDEPEND="
 		ogg? ( media-libs/libogg )
 		opengl? ( virtual/opengl || ( >=x11-libs/libX11-1.3.99.901 <x11-libs/libX11-1.3.99.901[xcb] ) )
 		png? ( media-libs/libpng sys-libs/zlib )
+		portaudio? ( >=media-libs/portaudio-19_pre )
 		postproc? ( >=media-video/ffmpeg-0.6 )
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
@@ -277,7 +278,7 @@ src_configure() {
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
 		$(use_enable png) \
-		--disable-portaudio \
+		$(use_enable portaudio) \
 		$(use_enable postproc) \
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
