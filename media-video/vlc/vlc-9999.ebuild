@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.102 2011/01/02 14:40:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.103 2011/02/16 13:21:28 aballier Exp $
 
 EAPI="3"
 
@@ -50,7 +50,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	+gcrypt gme gnome gnutls httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
-	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
+	png projectm pulseaudio pvr +qt4 rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse stream
 	svg taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
 	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
@@ -104,7 +104,6 @@ RDEPEND="
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libX11 )
-		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( || ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.4 ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.6 )
 		sdl? ( >=media-libs/libsdl-1.2.8
@@ -167,7 +166,6 @@ vlc_use_enable_force() {
 
 pkg_setup() {
 	# Useflags we need to forcefuly enable
-	vlc_use_force remoteosd gcrypt
 	vlc_use_force gnutls gcrypt
 	vlc_use_force skins truetype
 	vlc_use_force skins qt4
@@ -277,7 +275,6 @@ src_configure() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr) \
 		$(use_enable qt4) \
-		$(use_enable remoteosd) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
 		$(use_enable samba smb) \
@@ -320,7 +317,6 @@ src_configure() {
 		$(vlc_use_enable_force vlm sout) \
 		$(vlc_use_enable_force skins qt4) \
 		$(vlc_use_enable_force skins freetype) \
-		$(vlc_use_enable_force remoteosd libgcrypt) \
 		$(vlc_use_enable_force gnutls libgcrypt) \
 		$(vlc_use_enable_force vaapi avcodec)
 }

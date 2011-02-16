@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.661 2011/02/14 11:55:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.662 2011/02/16 13:21:28 aballier Exp $
+
+  16 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  remoteosd is now controlled by the gcrypt useflag
 
   14 Feb 2011; Alexis Ballier <aballier@gentoo.org> -vlc-1.1.4.ebuild,
   -vlc-1.1.4.1.ebuild, -vlc-1.1.5.ebuild, -vlc-1.1.6.ebuild:
