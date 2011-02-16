@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.14 2011/02/09 05:13:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.15 2011/02/16 09:48:59 hwoarang Exp $
+
+  16 Feb 2011; Markos Chandras <hwoarang@gentoo.org> quvi-0.2.13.ebuild:
+  Stable on amd64 wrt bug #354739
 
 *quvi-0.2.13 (09 Feb 2011)
 
