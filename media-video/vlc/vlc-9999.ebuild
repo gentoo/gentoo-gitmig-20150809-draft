@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.110 2011/02/16 17:14:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.111 2011/02/16 17:58:30 aballier Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi cdda cddb dbus dc1394
+IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc1394
 	debug dirac directfb dshow dts dvb dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 linsys lirc live lua matroska mmx
@@ -64,6 +64,7 @@ RDEPEND="
 		alsa? ( >=media-libs/alsa-lib-1.0.23 )
 		avahi? ( >=net-dns/avahi-0.6[dbus] )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
+		bluray? ( media-libs/libbluray )
 		cddb? ( >=media-libs/libcddb-1.2.0 )
 		dbus? ( >=sys-apps/dbus-1.0.2 )
 		dc1394? ( >=sys-libs/libraw1394-2.0.1 >=media-libs/libdc1394-2.0.2 )
@@ -192,6 +193,7 @@ src_configure() {
 		$(use_enable avahi bonjour) \
 		$(use_enable bda) \
 		$(use_enable bidi fribidi) \
+		$(use_enable bluray) \
 		$(use_enable cdda vcd) \
 		$(use_enable cddb libcddb) \
 		$(use_enable dbus) $(use_enable dbus dbus-control) \
