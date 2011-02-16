@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.9 2010/10/31 13:28:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.08.1.ebuild,v 1.10 2011/02/16 19:31:00 angelos Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygtk-2.6
-	x11-libs/gtk+:2[jpeg]
+	|| ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2[jpeg] )
 	x11-themes/gnome-icon-theme"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
