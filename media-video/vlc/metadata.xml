@@ -14,6 +14,7 @@
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
 	<flag name="dvbpsi">Enable ts mux and demux module via libdvbpsi.</flag>
 	<flag name="dshow">Enables Win32 DirectShow support.</flag>
+	<flag name="dxva2">Enables Win32 DxVA2 support.</flag>
     <flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis (with external sound fonts).</flag>
     <flag name="gcrypt">Enables cryptography support via libgcrypt.</flag>
     <flag name="gme">Enables support for <pkg>media-libs/game-music-emu</pkg> for playing various video game music formats.</flag>
