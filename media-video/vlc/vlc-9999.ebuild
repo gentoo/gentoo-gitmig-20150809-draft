@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.109 2011/02/16 16:55:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.110 2011/02/16 17:14:39 aballier Exp $
 
 EAPI="4"
 
@@ -45,8 +45,8 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
-	debug dirac directfb dts dvb dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
+IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi cdda cddb dbus dc1394
+	debug dirac directfb dshow dts dvb dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 linsys lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
@@ -190,6 +190,7 @@ src_configure() {
 		$(use_enable altivec) \
 		$(use_enable atmo) \
 		$(use_enable avahi bonjour) \
+		$(use_enable bda) \
 		$(use_enable bidi fribidi) \
 		$(use_enable cdda vcd) \
 		$(use_enable cddb libcddb) \
@@ -198,6 +199,7 @@ src_configure() {
 		$(use_enable directfb) \
 		$(use_enable dc1394) \
 		$(use_enable debug) \
+		$(use_enable dshow) \
 		$(use_enable dts dca) \
 		$(use_enable dvb) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
