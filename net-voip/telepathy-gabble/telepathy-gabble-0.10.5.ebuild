@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.4.ebuild,v 1.2 2010/11/22 19:42:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.5.ebuild,v 1.1 2011/02/16 18:07:57 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
 inherit eutils python
@@ -35,6 +35,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	python_convert_shebangs -r 2 .
 }
 
 src_configure() {
