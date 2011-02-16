@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.55.ebuild,v 1.3 2011/02/16 19:33:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.56.ebuild,v 1.1 2011/02/16 19:33:07 chutzpah Exp $
 
 EAPI=2
 
