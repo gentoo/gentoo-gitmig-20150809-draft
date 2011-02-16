@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.37 2011/02/15 07:12:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.38 2011/02/16 09:49:58 hwoarang Exp $
+
+  16 Feb 2011; Markos Chandras <hwoarang@gentoo.org> drivel-3.0.0.ebuild:
+  Stable on amd64 wrt bug #354755
 
   15 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> drivel-3.0.0.ebuild:
   x86 stable wrt bug #354755
