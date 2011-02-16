@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.117 2011/02/16 19:37:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.118 2011/02/16 19:45:50 aballier Exp $
 
 EAPI="4"
 
@@ -113,6 +113,7 @@ RDEPEND="
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
 		shout? ( media-libs/libshout )
 		sid? ( media-libs/libsidplay:2 )
+		skins? ( x11-libs/libXext x11-libs/libXpm )
 		speex? ( media-libs/speex )
 		sqlite? ( >=dev-db/sqlite-3.6.0:3 )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
@@ -154,7 +155,7 @@ REQUIRED_USE="
 	libtiger? ( kate )
 	libv4l2? ( v4l2 )
 	qt4? ( X )
-	skins? ( truetype qt4 )
+	skins? ( truetype qt4 X )
 	switcher? ( ffmpeg )
 	vaapi? ( ffmpeg )
 	vlm? ( encode )
