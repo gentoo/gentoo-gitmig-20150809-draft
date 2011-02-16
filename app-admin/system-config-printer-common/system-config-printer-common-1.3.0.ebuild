@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.2.4.ebuild,v 1.2 2010/09/19 17:00:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.0.ebuild,v 1.1 2011/02/16 19:27:35 reavertm Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ MY_P="${PN%-common}-${PV}"
 
 DESCRIPTION="Common modules of Red Hat's printer administration tool"
 HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
-SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.2/${MY_P}.tar.xz"
+SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.3/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
@@ -28,8 +28,8 @@ COMMON_DEPEND="
 	dev-libs/libusb
 	dev-libs/libxml2[python]
 	dev-python/dbus-python
-	dev-python/pycups
-	dev-python/pygobject
+	>=dev-python/pycups-1.9.53
+	>=dev-python/pygobject-2.21.5
 	net-print/cups[dbus]
 	sys-fs/udev
 "
@@ -49,7 +49,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.2.2-split.patch"
+	epatch "${FILESDIR}/${PN}-1.3.0-split.patch"
 
 	eautoreconf
 }
@@ -74,12 +74,12 @@ src_install() {
 		dohtml -r html/ || die "installing html docs failed"
 	fi
 
-	emake DESTDIR="${D}" install \
+	emake DESTDIR="${ED}" install \
 		udevrulesdir=/lib/udev/rules.d \
 		udevhelperdir=/lib/udev \
 		|| die "emake install failed"
 
-	python_convert_shebangs -q -r $(python_get_version) "${D}"
+	python_convert_shebangs -q -r $(python_get_version) "${ED}"
 }
 
 pkg_postinst() {
