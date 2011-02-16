@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110215.ebuild,v 1.1 2011/02/15 09:01:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110215.ebuild,v 1.2 2011/02/16 11:15:34 jlec Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
 SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
-	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${PATCHSET}.patch.bz2"
+	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.bz2"
 HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
@@ -52,7 +52,7 @@ pkg_setup() {
 
 src_prepare() {
 	[[ -n ${PATCHSET} ]] && \
-		epatch "${WORKDIR}"/ccpn-update-${PATCHSET}.patch
+		epatch "${WORKDIR}"/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch
 
 	epatch "${FILESDIR}"/${MY_PV}-parallel.patch
 
