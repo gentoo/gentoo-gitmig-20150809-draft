@@ -37,6 +37,7 @@
     <flag name="libv4l2">Enables Libv4l2 Video4Linux2 support (for conversion
 		from various video formats to standard ones, needed to use v4l2 devices
 		with strange formats).</flag>
+	<flag name="libtar">Uses libtar instead of the built-in tar reader for reading custom skins.</flag>
     <flag name="libtiger">Enables Ogg Kate subtitles rendering using libtiger.</flag>
 	<flag name="linsys">Enables support for Linux Linear Systems Ltd. SDI and HD-SDI input cards.</flag>
     <flag name="live">Enables live555 streaming media support (client support for rtsp).</flag>

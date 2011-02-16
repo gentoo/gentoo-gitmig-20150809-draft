@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.122 2011/02/16 22:08:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.123 2011/02/16 22:32:15 aballier Exp $
 
 EAPI="4"
 
@@ -50,14 +50,14 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec +avformat bda
 	dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode fbcon fbosd
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls growl httpd
 	ieee1394 ios-vout jack kate kde libass libcaca libnotify libproxy libtiger
-	libv4l2 linsys lirc live lua +macosx +macosx-audio +macosx-dialog-provider
-	+macosx-eyetv +macosx-quartztext +macosx-qtcapture +macosx-vout matroska mmx
-	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
-	png portaudio +postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba
-	schroedinger sdl sdl-image shine shout sid skins snapshot speex sqlite sse
-	svg +swscale switcher taglib theora truetype twolame udev upnp v4l2 vaapi
-	vcdx vlm vorbis waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd
-	xv zvbi"
+	libv4l2 linsys libtar lirc live lua +macosx +macosx-audio
+	+macosx-dialog-provider +macosx-eyetv +macosx-quartztext +macosx-qtcapture
+	+macosx-vout matroska mmx modplug mp3 mpeg mtp musepack ncurses ogg omxil
+	opengl optimisememory oss png portaudio +postproc projectm pulseaudio pvr
+	+qt4 rtsp run-as-root samba schroedinger sdl sdl-image shine shout sid skins
+	snapshot speex sqlite sse svg +swscale switcher taglib theora truetype
+	twolame udev upnp v4l2 vaapi vcdx vlm vorbis waveout win32codecs wingdi
+	wma-fixed +X x264 +xcb xml xosd	xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -95,6 +95,7 @@ RDEPEND="
 		libcaca? ( >=media-libs/libcaca-0.99_beta14 )
 		libnotify? ( x11-libs/libnotify x11-libs/gtk+:2 )
 		libproxy? ( net-libs/libproxy )
+		libtar? ( >=dev-libs/libtar-1.2.11-r3 )
 		libtiger? ( media-libs/libtiger )
 		linsys? ( >=media-libs/zvbi-0.2.28 )
 		lirc? ( app-misc/lirc )
@@ -164,6 +165,7 @@ REQUIRED_USE="
 	ffmpeg? ( avcodec avformat postproc swscale )
 	fontconfig? ( truetype )
 	gnutls? ( gcrypt )
+	libtar? ( skins )
 	libtiger? ( kate )
 	libv4l2? ( v4l2 )
 	qt4? ( X )
@@ -251,7 +253,7 @@ src_configure() {
 		$(use_enable gcrypt libgcrypt) \
 		$(use_enable libnotify notify) \
 		$(use_enable libproxy) \
-		--disable-libtar \
+		$(use_enable libtar) \
 		$(use_enable libtiger tiger) \
 		$(use_enable libv4l2) \
 		$(use_enable linsys) \
