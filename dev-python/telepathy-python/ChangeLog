@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/telepathy-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.31 2011/02/08 09:39:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/ChangeLog,v 1.32 2011/02/16 18:47:32 pacho Exp $
+
+  16 Feb 2011; Pacho Ramos <pacho@gentoo.org> -telepathy-python-0.15.18.ebuild,
+  telepathy-python-0.15.19.ebuild:
+  Run python_src_prepare at the end of src_prepare as told by Arfrever, this
+  should fix bug #355141 (by wangbin). Remove old.
 
   08 Feb 2011; Pacho Ramos <pacho@gentoo.org> telepathy-python-0.15.19.ebuild,
   +files/telepathy-python-0.15.19-install-twice.patch:
