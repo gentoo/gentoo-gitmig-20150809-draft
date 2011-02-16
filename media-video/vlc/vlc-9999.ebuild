@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.114 2011/02/16 18:32:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.115 2011/02/16 19:07:30 aballier Exp $
 
 EAPI="4"
 
@@ -52,7 +52,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc139
 	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 rtsp run-as-root samba
 	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse
-	svg taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
+	svg switcher taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
 	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
@@ -154,6 +154,7 @@ REQUIRED_USE="
 	libv4l2? ( v4l2 )
 	qt4? ( X )
 	skins? ( truetype qt4 )
+	switcher? ( ffmpeg )
 	vaapi? ( ffmpeg )
 	vlm? ( encode )
 	xv? ( xcb )
@@ -269,6 +270,7 @@ src_configure() {
 		$(use_enable sqlite) \
 		$(use_enable sse) \
 		$(use_enable svg) \
+		$(use_enable switcher) \
 		$(use_enable taglib) \
 		$(use_enable theora) \
 		$(use_enable truetype freetype) \
