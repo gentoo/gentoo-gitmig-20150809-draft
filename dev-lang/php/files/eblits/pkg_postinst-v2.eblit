@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.10 2011/01/06 23:35:43 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v2.eblit,v 1.11 2011/02/16 08:12:28 olemarkus Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -51,6 +51,6 @@ eblit-php-pkg_postinst() {
 	fi
 	ewarn
 	ewarn "For more details on how minor version slotting works (PHP_TARGETS) please read the upgrade guide:"
-	ewarn "http://www.gentoo.org/proj/en/php/php-guide.xml"
+	ewarn "http://www.gentoo.org/proj/en/php/php-upgrading.xml"
 }
 
