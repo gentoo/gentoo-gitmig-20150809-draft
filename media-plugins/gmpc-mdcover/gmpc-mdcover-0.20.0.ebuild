@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/gmpc-mdcover-0.20.0.ebuild,v 1.2 2011/02/13 18:03:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/gmpc-mdcover-0.20.0.ebuild,v 1.3 2011/02/16 19:25:02 angelos Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="nls"
 
 RDEPEND=">=media-sound/gmpc-${PV}
 	dev-libs/libxml2
-	x11-libs/gtk+:2[jpeg]"
+	|| ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2[jpeg] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool
