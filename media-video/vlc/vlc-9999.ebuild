@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.123 2011/02/16 22:32:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.124 2011/02/16 22:53:45 aballier Exp $
 
 EAPI="4"
 
@@ -52,12 +52,12 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec +avformat bda
 	ieee1394 ios-vout jack kate kde libass libcaca libnotify libproxy libtiger
 	libv4l2 linsys libtar lirc live lua +macosx +macosx-audio
 	+macosx-dialog-provider +macosx-eyetv +macosx-quartztext +macosx-qtcapture
-	+macosx-vout matroska mmx modplug mp3 mpeg mtp musepack ncurses ogg omxil
-	opengl optimisememory oss png portaudio +postproc projectm pulseaudio pvr
-	+qt4 rtsp run-as-root samba schroedinger sdl sdl-image shine shout sid skins
-	snapshot speex sqlite sse svg +swscale switcher taglib theora truetype
-	twolame udev upnp v4l2 vaapi vcdx vlm vorbis waveout win32codecs wingdi
-	wma-fixed +X x264 +xcb xml xosd	xv zvbi"
+	+macosx-vout matroska mmx modplug mp3 mpeg mtp musepack ncurses neon ogg
+	omxil opengl optimisememory oss png portaudio +postproc projectm pulseaudio
+	pvr +qt4 rtsp run-as-root samba schroedinger sdl sdl-image shine shout sid
+	skins snapshot speex sqlite sse svg +swscale switcher taglib theora
+	truetype twolame udev upnp v4l2 vaapi vcdx vlm vorbis waveout win32codecs
+	wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -274,6 +274,7 @@ src_configure() {
 		$(use_enable mtp) \
 		$(use_enable musepack mpc) \
 		$(use_enable ncurses) \
+		$(use_enable neon) \
 		$(use_enable ogg) \
 		$(use_enable omxil) \
 		$(use_enable opengl glx) \
