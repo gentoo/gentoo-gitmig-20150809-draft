@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.199 2011/02/16 19:35:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.200 2011/02/16 20:37:51 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -251,3 +251,5 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Alexis Ballier <aballier@gentoo.org> <16 Feb 2011>
 # Win32 specific useflags for vlc. Can be used for cross-compiling.
 media-video/vlc bda direct2d directx dshow dxva2 waveout wingdi
+# Mac OSX / iPhone OS specific useflags
+media-video/vlc audioqueue ios-vout macosx macosx-audio macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtcapture macosx-vout
