@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.120 2011/02/16 21:11:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.121 2011/02/16 21:39:35 aballier Exp $
 
 EAPI="4"
 
@@ -54,10 +54,10 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec +avformat bda
 	+macosx-eyetv +macosx-quartztext +macosx-qtcapture +macosx-vout matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
 	png +postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba
-	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse svg
-	+swscale switcher taglib theora truetype twolame udev upnp v4l2 vaapi vcdx
-	vlm vorbis waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv
-	zvbi"
+	schroedinger sdl sdl-image shine shout sid skins snapshot speex sqlite sse
+	svg +swscale switcher taglib theora truetype twolame udev upnp v4l2 vaapi
+	vcdx vlm vorbis waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd
+	xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -293,6 +293,7 @@ src_configure() {
 		$(use_enable sid) \
 		$(use_enable shout) \
 		$(use_enable skins skins2) \
+		$(use_enable snapshot) \
 		$(use_enable speex) \
 		$(use_enable sqlite) \
 		$(use_enable sse) \
@@ -321,7 +322,6 @@ src_configure() {
 		$(use_enable xosd) \
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
-		--disable-snapshot \
 		--disable-optimizations \
 		--enable-fast-install
 }
