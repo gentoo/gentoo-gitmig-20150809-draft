@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.3.1.ebuild,v 1.1 2011/01/20 00:09:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.3.1.ebuild,v 1.2 2011/02/16 21:53:19 dilfridge Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ DEPEND="
 	~app-office/kspread-${PV}:${SLOT}
 	freetds? ( dev-db/freetds )
 	mysql? ( virtual/mysql )
-	postgres? ( =dev-libs/libpqxx-2.6* )
+	postgres? ( dev-libs/libpqxx )
 	reports? ( ~app-office/koffice-libs-${PV}:${SLOT}[reports] )
 	xbase? ( dev-db/xbase )
 "
