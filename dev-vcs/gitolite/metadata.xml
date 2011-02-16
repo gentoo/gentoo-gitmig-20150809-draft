@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd></herd>
+	<herd>no-herd</herd>
 	<maintainer>
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
@@ -11,5 +11,8 @@
 	control down to the branch level, including specifying who can and cannot
 	rewind a given branch.
 	</longdescription>
+	<use>
+		<flag name="contrib">Install user-contributed files</flag>
+	</use>
 </pkgmetadata>
 
