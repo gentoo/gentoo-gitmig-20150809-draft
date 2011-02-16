@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7-r1.ebuild,v 1.2 2010/11/07 21:43:12 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7-r1.ebuild,v 1.3 2011/02/16 19:34:58 billie Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit eutils ssl-cert
 
 DESCRIPTION="WWW Admin for the Video Disk Recorder"
 HOMEPAGE="http://andreas.vdr-developer.org/vdradmin-am/index.html"
-SRC_URI="http://andreas.vdr-developer.org/download/${P}.tar.bz2"
+SRC_URI="http://andreas.vdr-developer.org/vdradmin-am/download/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -61,7 +61,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i vdradmind.pl \
-		-e "/COMPILE_DIR/s-/tmp-${CACHE_DIR}-" \
 		-e "s-FILES_IN_SYSTEM    = 0;-FILES_IN_SYSTEM    = 1;-g" || die
 }
 
@@ -85,7 +84,7 @@ src_install() {
 
 	newman vdradmind.pl.1 vdradmind.8 || die
 
-	dodoc CREDITS HISTORY INSTALL README* REQUIREMENTS FAQ ChangeLog || die
+	dodoc CREDITS ChangeLog FAQ HISTORY INSTALL README* REQUIREMENTS || die
 	docinto contrib
 	dodoc "${S}"/contrib/* || die
 
@@ -95,8 +94,12 @@ src_install() {
 }
 
 pkg_preinst() {
+	install -m 0644 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} /dev/null \
+		"${D}"${ETC_DIR}/vdradmind.conf || die
+
 	if [[ -f "${ROOT}"${ETC_DIR}/vdradmind.conf ]]; then
-		cp "${ROOT}"${ETC_DIR}/vdradmind.conf "${D}"${ETC_DIR}/vdradmind.conf || die
+		cp "${ROOT}"${ETC_DIR}/vdradmind.conf \
+			"${D}"${ETC_DIR}/vdradmind.conf || die
 	else
 		elog
 		elog "Creating a new config-file."
@@ -115,7 +118,8 @@ pkg_preinst() {
 			| "${D}"/usr/bin/vdradmind --cfgdir "${D}"${ETC_DIR} --config \
 			|sed -e 's/: /: \n/g'
 
-		[[ ${PIPESTATUS[1]} == "0" ]] || die "Failed to create initial configuration."
+		[[ ${PIPESTATUS[1]} == "0" ]] \
+			|| die "Failed to create initial configuration."
 
 		elog
 		elog "Created default user/password: gentoo-vdr/gentoo-vdr"
@@ -124,9 +128,6 @@ pkg_preinst() {
 		elog "do not match your installation or change them in the Setup-Menu"
 		elog "of the Web-Interface."
 	fi
-
-	chmod 0644 "${D}"${ETC_DIR}/vdradmind.conf || die
-	chown ${VDRADMIN_USER}:${VDRADMIN_GROUP} "${D}"${ETC_DIR}/vdradmind.conf || die
 }
 
 pkg_postinst() {
@@ -141,10 +142,15 @@ pkg_postinst() {
 		elog "To use ssl connection to your vdr"
 		elog "you need to enable it in ${ROOT%/}/etc/conf.d/vdradmin"
 
-		create_ssl_cert
-		local base=$(get_base 1)
-		install -D -m 0400 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} "${base}".key "${ROOT}"${CERTS_DIR}/server-key.pem || die
-		install -D -m 0444 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} "${base}".crt "${ROOT}"${CERTS_DIR}/server-cert.pem || die
+		if [[ ! -f "${ROOT}"${CERTS_DIR}/server-cert.pem || \
+			! -f "${ROOT}"${CERTS_DIR}/server-key.pem ]]; then
+			create_ssl_cert
+			local base=$(get_base 1)
+			install -D -m 0400 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} \
+				"${base}".key "${ROOT}"${CERTS_DIR}/server-key.pem || die
+			install -D -m 0444 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} \
+				"${base}".crt "${ROOT}"${CERTS_DIR}/server-cert.pem || die
+		fi
 	fi
 
 	elog
@@ -153,12 +159,6 @@ pkg_postinst() {
 	elog "media-plugins/vdr-streamdev for livetv streaming and/or"
 	elog "media-video/vdr with USE=\"liemikuutio\" to rename recordings"
 	elog "on the machine running the VDR you connect to with ${PN}."
-}
-
-pkg_postrm() {
-	rm -f "${ROOT}"${CERTS_DIR}/server-{cert,key}.pem
-	rmdir --ignore-fail-on-non-empty "${ROOT}"${CERTS_DIR} \
-		"${ROOT}"${ETC_DIR}
 }
 
 pkg_config() {
