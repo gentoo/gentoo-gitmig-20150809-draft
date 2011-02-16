@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.107 2011/02/16 15:25:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.108 2011/02/16 16:18:20 aballier Exp $
 
 EAPI="4"
 
@@ -47,7 +47,7 @@ else
 fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
-	+gcrypt gme gnome gnutls httpd ieee1394 jack kate kde libass libcaca
+	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
 	png projectm pulseaudio pvr +qt4 rtsp run-as-root samba
@@ -209,6 +209,7 @@ src_configure() {
 		$(use_enable gme) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
+		$(use_enable growl) \
 		$(use_enable httpd) \
 		$(use_enable ieee1394 dv) \
 		$(use_enable jack) \
@@ -278,7 +279,6 @@ src_configure() {
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-snapshot \
-		--disable-growl \
 		--disable-optimizations \
 		--enable-fast-install
 }

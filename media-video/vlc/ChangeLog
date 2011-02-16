@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.666 2011/02/16 15:25:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.667 2011/02/16 16:18:20 aballier Exp $
+
+  16 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild,
+  metadata.xml:
+  Add growl useflag for growl notification support (over UDP for remote access
+  and native on OSX)
 
   16 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   libnotify plugin requires gtk+-2.0
