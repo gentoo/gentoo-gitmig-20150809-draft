@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.196 2011/02/16 16:59:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.197 2011/02/16 17:13:28 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -247,3 +247,7 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 >=media-libs/gst-plugins-base-0.10.30 orc
 >=media-plugins/gst-plugins-a52dec-0.10.16 orc
 >=media-plugins/gst-plugins-ffmpeg-0.10.11 orc
+
+# Alexis Ballier <aballier@gentoo.org> <16 Feb 2011>
+# Win32 specific useflags for vlc. Can be used for cross-compiling.
+media-video/vlc dshow bda
