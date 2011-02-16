@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.111 2011/02/16 17:58:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.112 2011/02/16 18:04:28 aballier Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ else
 	KEYWORDS=""
 fi
 IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc1394
-	debug dirac directfb dshow dts dvb dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
+	debug dirac directfb dshow dts dvb +dvbpsi dvd elibc_glibc +encode fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
 	libnotify libproxy libtiger libv4l2 linsys lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses ogg opengl optimisememory oss
@@ -57,7 +57,6 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc139
 
 RDEPEND="
 		sys-libs/zlib
-		>=media-libs/libdvbpsi-0.1.6
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
 		aalib? ( media-libs/aalib )
 		aac? ( >=media-libs/faad2-2.6.1 )
@@ -71,6 +70,7 @@ RDEPEND="
 		dirac? ( >=media-video/dirac-0.10.0 )
 		directfb? ( dev-libs/DirectFB sys-libs/zlib )
 		dts? ( media-libs/libdca )
+		dvbpsi? ( >=media-libs/libdvbpsi-0.1.6 )
 		dvd? (	media-libs/libdvdread >=media-libs/libdvdnav-0.1.9 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8 )
 		ffmpeg? ( >=media-video/ffmpeg-0.6 )
@@ -146,6 +146,7 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="
 	bidi? ( truetype )
 	cddb? ( cdda )
+	dvb? ( dvbpsi )
 	fontconfig? ( truetype )
 	gnutls? ( gcrypt )
 	libtiger? ( kate )
@@ -204,6 +205,7 @@ src_configure() {
 		$(use_enable dshow) \
 		$(use_enable dts dca) \
 		$(use_enable dvb) \
+		$(use_enable dvbpsi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
 		$(use_enable encode sout) \
 		$(use_enable fbcon fb) \
