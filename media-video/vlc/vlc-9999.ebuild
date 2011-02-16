@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.118 2011/02/16 19:45:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.119 2011/02/16 20:45:26 aballier Exp $
 
 EAPI="4"
 
@@ -45,15 +45,18 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="a52 aac aalib alsa altivec atmo avahi bda bidi bluray cdda cddb dbus dc1394
-	debug dirac direct2d directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode fbcon fluidsynth +ffmpeg flac fontconfig
-	+gcrypt gme gnome gnutls growl httpd ieee1394 jack kate kde libass libcaca
-	libnotify libproxy libtiger libv4l2 linsys lirc live lua matroska mmx
-	modplug mp3 mpeg mtp musepack ncurses ogg omxil opengl optimisememory oss
-	png projectm pulseaudio pvr +qt4 rtsp run-as-root samba
-	schroedinger sdl sdl-image shine shout sid skins speex sqlite sse
-	svg switcher taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm
-	vorbis waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
+IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi bda bidi bluray cdda
+	cddb dbus dc1394 debug dirac direct2d directfb directx dshow dts dvb +dvbpsi
+	dvd dxva2 elibc_glibc egl +encode fbcon fbosd fluidsynth +ffmpeg flac fontconfig
+	+gcrypt gme gnome gnutls growl httpd ieee1394 ios-vout jack kate kde libass
+	libcaca libnotify libproxy libtiger libv4l2 linsys lirc live lua +macosx
+	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
+	+macosx-qtcapture +macosx-vout matroska mmx modplug mp3 mpeg mtp musepack
+	ncurses ogg omxil opengl optimisememory oss png projectm pulseaudio pvr +qt4
+	rtsp run-as-root samba schroedinger sdl sdl-image shine shout sid skins
+	speex sqlite sse svg switcher taglib theora truetype twolame udev upnp v4l2
+	vaapi vcdx vlm vorbis waveout win32codecs wingdi wma-fixed +X x264 +xcb xml
+	xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -83,6 +86,7 @@ RDEPEND="
 		gnome? ( gnome-base/gnome-vfs )
 		gnutls? ( >=net-libs/gnutls-1.7.4 )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1 >=sys-libs/libavc1394-0.5.3 )
+		ios-vout? ( virtual/opengl )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		kate? ( >=media-libs/libkate-0.1.1 )
 		libass? ( >=media-libs/libass-0.9.6 media-libs/fontconfig )
@@ -94,6 +98,7 @@ RDEPEND="
 		lirc? ( app-misc/lirc )
 		live? ( >=media-plugins/live-2010.10.15 )
 		lua? ( >=dev-lang/lua-5.1 )
+		macosx-vout? ( virtual/opengl )
 		matroska? (	>=dev-libs/libebml-1.0.0 >=media-libs/libmatroska-1.0.0 )
 		modplug? ( >=media-libs/libmodplug-0.8.8.1 )
 		mp3? ( media-libs/libmad )
@@ -140,6 +145,7 @@ DEPEND="${RDEPEND}
 	!!<=media-video/vlc-1.1.99999
 	alsa? ( >=media-sound/alsa-headers-1.0.23 )
 	dvb? ( sys-kernel/linux-headers )
+	fbosd? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
 	v4l2? ( >=sys-kernel/linux-headers-2.6.25 )
 	xcb? ( x11-proto/xproto )
@@ -195,6 +201,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable altivec) \
 		$(use_enable atmo) \
+		$(use_enable audioqueue) \
 		$(use_enable avahi bonjour) \
 		$(use_enable bda) \
 		$(use_enable bidi fribidi) \
@@ -217,6 +224,7 @@ src_configure() {
 		$(use_enable egl) \
 		$(use_enable encode sout) \
 		$(use_enable fbcon fb) \
+		$(use_enable fbosd) \
 		$(use_enable ffmpeg avcodec) $(use_enable ffmpeg avformat) $(use_enable ffmpeg swscale) $(use_enable ffmpeg postproc) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
@@ -227,6 +235,7 @@ src_configure() {
 		$(use_enable growl) \
 		$(use_enable httpd) \
 		$(use_enable ieee1394 dv) \
+		$(use_enable ios-vout) \
 		$(use_enable jack) \
 		$(use_enable kate) \
 		$(use_with kde kde-solid) \
@@ -242,6 +251,12 @@ src_configure() {
 		$(use_enable lirc) \
 		$(use_enable live live555) \
 		$(use_enable lua) \
+		$(use_enable macosx-audio) \
+		$(use_enable macosx-dialog-provider) \
+		$(use_enable macosx-eyetv) \
+		$(use_enable macosx-qtcapture) \
+		$(use_enable macosx-quartztext) \
+		$(use_enable macosx-vout) \
 		$(use_enable matroska mkv) \
 		$(use_enable mmx) \
 		$(use_enable modplug mod) \
