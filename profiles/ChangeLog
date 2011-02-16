@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5052 2011/02/15 20:27:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5053 2011/02/16 10:12:48 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Feb 2011; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Unmask ant due to breaking ppc and ia64 stable trees.
 
   15 Feb 2011; Christoph Junghans <ottxor@gentoo.org> license_groups:
   Add google-talkplugin to EULA license group
