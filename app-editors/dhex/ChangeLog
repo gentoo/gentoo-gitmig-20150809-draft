@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/dhex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dhex/ChangeLog,v 1.1 2011/01/30 16:25:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dhex/ChangeLog,v 1.2 2011/02/16 00:55:39 dilfridge Exp $
+
+*dhex-0.65 (16 Feb 2011)
+
+  16 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org> +dhex-0.65.ebuild:
+  Version bump
 
 *dhex-0.63 (30 Jan 2011)
 
