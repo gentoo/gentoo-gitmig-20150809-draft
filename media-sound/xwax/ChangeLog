@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.26 2011/02/11 19:10:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.27 2011/02/16 21:02:23 nixphoeni Exp $
+
+  16 Feb 2011; Joe Sapp <nixphoeni@gentoo.org> -files/xwax-0.4-fonts.patch,
+  -files/xwax-0.6-execlp.patch:
+  Removed old patches
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> xwax-0.8.ebuild:
   Stable on amd64 wrt bug #353961
