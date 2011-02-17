@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.5.328052.ebuild,v 1.3 2011/01/25 09:28:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.5.328052.ebuild,v 1.4 2011/02/17 21:04:19 tomka Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip fetch binchecks"
 PROPERTIES="interactive"
