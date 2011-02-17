@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.01.1190.ebuild,v 1.5 2011/02/17 18:16:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.10.2005.ebuild,v 1.1 2011/02/17 18:16:05 jer Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-11 LGPL-2 LGPL-3"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="test"
@@ -20,14 +20,14 @@ RESTRICT="test"
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
-O_U="mirror://opera/"
-O_D="${O_V//.}"
+O_D="sushi_${O_V}-${O_B}"
 O_P="${PN}-${O_V}-${O_B}"
+O_U="http://snapshot.opera.com/unix/"
 
 SRC_URI="
-	amd64? ( ${O_U}linux/${O_D}/${O_P}.x86_64.linux.tar.xz )
-	x86? ( ${O_U}linux/${O_D}/${O_P}.i386.linux.tar.xz )
-	x86-fbsd? ( ${O_U}unix/${O_D}/${O_P}.i386.freebsd.tar.xz )
+	amd64? ( ${O_U}${O_D}/${O_P}.x86_64.linux.tar.xz )
+	x86? ( ${O_U}${O_D}/${O_P}.i386.linux.tar.xz )
+	x86-fbsd? ( ${O_U}${O_D}/${O_P/2005/2004}.i386.freebsd.tar.xz )
 "
 
 OPREFIX="/usr/$(get_libdir)"
@@ -36,9 +36,8 @@ QA_DT_HASH="${OPREFIX}/${PN}/.*"
 QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
 
 O_LINGUAS="
-	be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka
-	ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk vi zh-CN zh-HK
-	zh-TW
+	be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy gd hi hr hu id it ja
+	ka ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk vi zh-CN zh-TW
 "
 
 for O_LINGUA in ${O_LINGUAS}; do
@@ -103,13 +102,23 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Remove unwanted linguas
+	LNGDIR="share/${PN}/locale"
+	einfo "Keeping these locales (linguas): ${LINGUAS}."
+	for LINGUA in ${O_LINGUAS}; do
+		if ! use linguas_${LINGUA/-/_}; then
+			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
+			rm -r "${LINGUA}"
+		fi
+	done
+
 	# Remove doc directory but keep the LICENSE under another name (bug #315473)
 	mv share/doc/opera/LICENSE share/opera/defaults/license.txt
 	rm -rf share/doc
-	for license in share/opera/locale/*/license.txt; do
-		rm -v "${license}"
-		ln -svn /usr/share/opera/defaults/license.txt "${license}" \
-			|| die "mv license"
+	for locale in share/opera/locale/*; do
+		rm -f "${locale}/license.txt"
+		ln -sn /usr/share/opera/defaults/license.txt "${locale}/license.txt" \
+			|| die "ln -sn license.txt"
 	done
 
 	# Remove package directory
@@ -169,16 +178,6 @@ src_prepare() {
 }
 
 src_install() {
-	# Remove unwanted linguas
-	LNGDIR="share/${PN}/locale"
-	einfo "Installing these locales (linguas): ${LINGUAS}."
-	for LINGUA in ${O_LINGUAS}; do
-		if ! use linguas_${LINGUA/-/_}; then
-			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
-			rm -r "${LINGUA}"
-		fi
-	done
-
 	# We install into usr instead of opt as Opera does not support the latter
 	dodir /usr
 	mv lib/  "${D}/${OPREFIX}" || die "mv lib/ failed"
