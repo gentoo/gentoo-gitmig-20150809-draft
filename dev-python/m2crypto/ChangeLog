@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.60 2011/01/15 23:20:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.61 2011/02/17 21:07:23 hwoarang Exp $
+
+  17 Feb 2011; Markos Chandras <hwoarang@gentoo.org> m2crypto-0.21.1.ebuild:
+  Stable on amd64 wrt bug #355267
 
 *m2crypto-0.21.1 (15 Jan 2011)
 
