@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.1 2011/02/05 15:31:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.2 2011/02/17 07:53:49 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
 	app-arch/bzip2
-	>=dev-libs/glib-2.12
+	>=dev-libs/glib-2.12:2
 	>=gnome-extra/libgsf-1.14.19[gnome?]
 	>=x11-libs/goffice-0.8.10:0.8
 	>=dev-libs/libxml2-2.4.12
@@ -46,7 +46,7 @@ RDEPEND="sys-libs/zlib
 #		>=gnome-extra/libgda-4.1.1:4.0
 #		>=gnome-extra/libgnomedb-3.99.6:4.0 )
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.25
+	>=dev-util/intltool-0.35.0
 	>=dev-util/pkgconfig-0.18
 	app-text/scrollkeeper"
 
