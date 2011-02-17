@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.1_rc8.ebuild,v 1.8 2008/02/05 03:19:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/progsreiserfs-0.3.1_rc8.ebuild,v 1.9 2011/02/17 05:24:38 vapier Exp $
 
 inherit libtool flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="nls debug"
 
 RDEPEND=""
 DEPEND="sys-fs/e2fsprogs
-		nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -40,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "Install failed"
+	emake install DESTDIR="${D}" || die
 	# Make sure users only use the official namesys binaries
 	rm -r "${D}"/usr/{sbin,share/man} || die "cant punt the cruft"
 
@@ -53,6 +53,7 @@ src_install() {
 pkg_postinst() {
 	progsreiserfs_warning
 }
+
 pkg_preinst() {
 	progsreiserfs_warning
 }

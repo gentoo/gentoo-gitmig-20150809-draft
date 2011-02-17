@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/progsreiserfs
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/ChangeLog,v 1.16 2008/02/05 03:19:57 wolf31o2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/ChangeLog,v 1.17 2011/02/17 05:24:38 vapier Exp $
+
+  17 Feb 2011; Mike Frysinger <vapier@gentoo.org>
+  progsreiserfs-0.3.1_rc8.ebuild:
+  Touch up style and use emake when installing.
 
   05 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   progsreiserfs-0.3.1_rc8.ebuild:
