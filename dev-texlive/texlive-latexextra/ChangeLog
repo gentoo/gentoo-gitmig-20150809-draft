@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-latexextra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.43 2011/02/17 13:41:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.44 2011/02/17 19:46:40 aballier Exp $
+
+*texlive-latexextra-2010-r1 (17 Feb 2011)
+
+  17 Feb 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-latexextra-2010-r1.ebuild:
+  remove pdfannotextractor, it has its own ebuild now, part of bug #342317
 
   17 Feb 2011; Alexis Ballier <aballier@gentoo.org>
   texlive-latexextra-2010.ebuild, +files/vpe_invocation.patch:
