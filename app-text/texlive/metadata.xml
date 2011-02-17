@@ -29,6 +29,7 @@
     (<pkg>dev-texlive/texlive-music</pkg>)</flag>
   <flag name='omega'>Add omega packages
     (<pkg>dev-texlive/texlive-omega</pkg>)</flag>
+  <flag name='pdfannotextractor'>Add <pkg>dev-tex/pdfannotextractor</pkg> support, for extracting annotations from PDF files.</flag>
   <flag name='pstricks'>Add pstricks packages
     (<pkg>dev-texlive/texlive-pstricks</pkg>)</flag>
   <flag name='publishers'>Add support for publishers
