@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.8_rc3.ebuild,v 1.1 2011/02/15 13:04:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.8.ebuild,v 1.1 2011/02/17 14:14:19 flameeyes Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -32,6 +32,8 @@ IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap +network nfs \
 	uml virtualbox virt-network xen"
 # IUSE=one : bug #293416 & bug #299011
 
+# gettext.sh command is used by the libvirt command wrappers, and it's
+# non-optional, so put it into RDEPEND.
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
@@ -40,6 +42,7 @@ RDEPEND="sys-libs/readline
 	>=net-libs/gnutls-1.0.25
 	sys-fs/sysfsutils
 	sys-apps/util-linux
+	sys-devel/gettext
 	>=net-analyzer/netcat6-1.0-r2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
@@ -67,8 +70,7 @@ RDEPEND="sys-libs/readline
 		sys-apps/iproute2 )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2
