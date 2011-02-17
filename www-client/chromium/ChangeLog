@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.283 2011/02/14 09:42:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.284 2011/02/17 15:16:40 phajdan.jr Exp $
+
+*chromium-10.0.648.82 (17 Feb 2011)
+
+  17 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -files/chromium-locale-glib-r1.patch, -chromium-10.0.648.18.ebuild,
+  -files/chromium-system-icu-r1.patch, +chromium-10.0.648.82.ebuild,
+  -files/chromium-system-icu-r2.patch, -files/extract_v8_version.py:
+  Version bump for dev channel release. Remove old ebuilds and patches.
 
 *chromium-9.0.597.98 (14 Feb 2011)
 
