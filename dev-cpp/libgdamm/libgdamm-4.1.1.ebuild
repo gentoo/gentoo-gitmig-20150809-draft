@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-4.1.1.ebuild,v 1.1 2011/02/17 09:58:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/libgdamm-4.1.1.ebuild,v 1.2 2011/02/17 10:15:01 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-cpp/glibmm-2.12.8:2[doc?]
-	>=gnome-extra/libgda-4.1.7"
+	>=gnome-extra/libgda-4.1.7:4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
