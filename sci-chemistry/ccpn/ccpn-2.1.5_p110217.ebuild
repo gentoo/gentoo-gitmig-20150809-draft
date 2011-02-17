@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110215.ebuild,v 1.2 2011/02/16 11:15:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110217.ebuild,v 1.1 2011/02/17 11:39:12 jlec Exp $
 
 EAPI="3"
 
