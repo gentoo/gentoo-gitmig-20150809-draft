@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.4 2011/02/17 02:18:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.5 2011/02/17 14:08:38 xmw Exp $
+
+  17 Feb 2011; Michael Weber <xmw@gentoo.org> llpp-0_p20110202.ebuild:
+  Forgot SRC_URI/S
 
 *llpp-0_p20110202 (17 Feb 2011)
 

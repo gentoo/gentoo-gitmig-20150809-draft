@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-0_p20110202.ebuild,v 1.1 2011/02/17 02:18:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-0_p20110202.ebuild,v 1.2 2011/02/17 14:08:38 xmw Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="a graphical PDF viewer which aims to superficially resemble less(1)"
 HOMEPAGE="http://repo.or.cz/w/llpp.git"
-SRC_URI=""
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -21,6 +21,8 @@ RDEPEND=">=app-text/mupdf-0.7_p20110212
 	media-libs/openjpeg
 	x11-misc/xsel"
 DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	ocamlopt -c -o link.o -ccopt -O link.c || die
