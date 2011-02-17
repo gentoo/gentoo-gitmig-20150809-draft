@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.85 2011/01/17 18:05:03 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.86 2011/02/17 17:37:56 bicatali Exp $
+
+  17 Feb 2011; Sébastien Fabbro <bicatali@gentoo.org> -maxima-5.19.2.ebuild,
+  -maxima-5.20.1-r2.ebuild, -files/maxima-5.20.1-ecl-10.4.1.patch,
+  -files/maxima-5.20.1-emacs-version.patch, -maxima-5.21.1-r1.ebuild,
+  -files/maxima-5.21.1-emacs-version.patch, -files/maxima-5.21.1.patch,
+  -maxima-5.22.1.ebuild, -files/maxima-5.22.1-emacs-version.patch,
+  -files/maxima-5.22.1.patch, maxima-5.23.2.ebuild,
+  -files/maxima-clozurecl.patch:
+  Fix maintainer mode, thanks Francois Bissey, bug #343331. Remove old.
 
 *maxima-5.23.2 (17 Jan 2011)
 
