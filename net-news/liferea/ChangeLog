@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.198 2011/01/11 20:28:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.199 2011/02/17 21:22:04 hwoarang Exp $
+
+  17 Feb 2011; Markos Chandras <hwoarang@gentoo.org> liferea-1.6.5.ebuild:
+  Stable on amd64 wrt bug #355345
 
   11 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> liferea-1.6.4.ebuild:
   ppc stable wrt #338934, keyword ~ppc64 wrt #279241
