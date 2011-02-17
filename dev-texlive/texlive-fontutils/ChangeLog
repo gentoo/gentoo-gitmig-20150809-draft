@@ -1,6 +1,13 @@
 # ChangeLog for dev-texlive/texlive-fontutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.17 2011/01/23 09:46:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.18 2011/02/17 15:12:16 aballier Exp $
+
+*texlive-fontutils-2010-r1 (17 Feb 2011)
+
+  17 Feb 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-fontutils-2010-r1.ebuild, +files/epstopdf_invocation.patch:
+  Add a patch from debian to fix epstopdf invocation wrt its shebang, part of
+  bug #289818
 
   23 Jan 2011; Fabian Groffen <grobian@gentoo.org>
   texlive-fontutils-2010.ebuild:
