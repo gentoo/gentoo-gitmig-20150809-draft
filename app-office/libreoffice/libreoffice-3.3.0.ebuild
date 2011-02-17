@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.8 2011/02/08 21:12:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.0.ebuild,v 1.9 2011/02/17 10:23:31 suka Exp $
 
 EAPI="3"
 
@@ -276,6 +276,7 @@ src_prepare() {
 	epatch "${FILESDIR}/enable-startup-notification.diff"
 	epatch "${FILESDIR}/libreoffice-3.3-prefix.patch"
 	use java && cp -f "${FILESDIR}/sdext-presenter.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/libreoffice-3.3.0_libxmlsec_fix_extern_c.diff" "${S}/patches/hotfixes"
 
 	#Use flag checks
 	if use java ; then
