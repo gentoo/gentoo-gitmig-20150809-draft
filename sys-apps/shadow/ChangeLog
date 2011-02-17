@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.254 2011/02/17 05:56:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.255 2011/02/17 19:52:40 hwoarang Exp $
+
+  17 Feb 2011; Markos Chandras <hwoarang@gentoo.org> shadow-4.1.4.3.ebuild:
+  Stable on amd64 wrt bug #355207
 
 *shadow-4.1.4.3 (17 Feb 2011)
 
