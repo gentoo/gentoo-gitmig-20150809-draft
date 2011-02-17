@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r4.ebuild,v 1.8 2010/10/10 17:37:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r4.ebuild,v 1.9 2011/02/17 13:50:24 aballier Exp $
 
 EAPI=2
 
-inherit fdo-mime gnome2 eutils flag-o-matic
+inherit fdo-mime gnome2 eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/"
@@ -43,6 +43,8 @@ src_prepare() {
 	export EPATCH_SOURCE="${PATCHDIR}"
 	epatch
 	use nodrm && epatch "${PATCHDIR}/xpdf-3.02-poppler-nodrm.patch"
+	has_version '>=app-text/poppler-0.16' && epatch	"${FILESDIR}/${P}-poppler-0.16.patch"
+	mv parseargs.c parseargs.cc
 }
 
 src_configure() {
@@ -50,6 +52,7 @@ src_configure() {
 }
 
 src_compile() {
+	tc-export CXX
 	emake || die
 }
 
