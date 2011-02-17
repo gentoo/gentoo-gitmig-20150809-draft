@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.317 2011/02/17 17:16:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.318 2011/02/17 17:26:29 sping Exp $
+
+  17 Feb 2011; Sebastian Pipping <sping@gentoo.org> alsa-lib-1.0.20-r1.ebuild,
+  alsa-lib-1.0.21a.ebuild, alsa-lib-1.0.22.ebuild, alsa-lib-1.0.22-r1.ebuild,
+  alsa-lib-1.0.23.ebuild, alsa-lib-1.0.24.1.ebuild:
+  Fix typo alsa-drivers to alsa-driver (bug #345009)
 
   17 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> alsa-lib-1.0.24.1.ebuild:
   USE="static-libs" to control building of static archive libasound.a. Remove
@@ -345,7 +350,7 @@
 
   27 Jun 2007; Tony Vroon <chainsaw@gentoo.org> +alsa-lib-1.0.14a.ebuild:
   Version bump to 1.0.14a as requested in bug #181042. Change advisory message
-  to recommend in-kernel ALSA instead of the alsa-drivers ebuild as per new
+  to recommend in-kernel ALSA instead of the alsa-driver ebuild as per new
   ALSA policy.
 
   01 Jun 2007; Joshua Kinard <kumba@gentoo.org> alsa-lib-1.0.14_rc3.ebuild:
@@ -1070,7 +1075,7 @@
 
   19 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +alsa-lib-1.0.5-r1.ebuild:
-  Add symlink to alsa driver headers if alsa-drivers is not installed. This
+  Add symlink to alsa driver headers if alsa-driver is not installed. This
   should take care of problems like bug #54381.
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>

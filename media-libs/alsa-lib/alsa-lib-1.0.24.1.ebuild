@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.24.1.ebuild,v 1.2 2011/02/17 17:16:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.24.1.ebuild,v 1.3 2011/02/17 17:26:29 sping Exp $
 
 EAPI=3
 
@@ -90,8 +90,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Please try in-kernel ALSA drivers instead of the alsa-drivers ebuild."
-	elog "If alsa-drivers works for you where a *recent* kernel does not, we want "
+	elog "Please try in-kernel ALSA drivers instead of the alsa-driver ebuild."
+	elog "If alsa-driver works for you where a *recent* kernel does not, we want "
 	elog "to know about this. Our e-mail address is alsa-bugs@gentoo.org"
 	elog "However, if you notice no sound output or instability, please try to "
 	elog "upgrade your kernel to a newer version first."
