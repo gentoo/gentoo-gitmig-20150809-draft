@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdrip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.133 2010/10/12 15:55:10 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.134 2011/02/17 16:44:40 ssuominen Exp $
+
+  17 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> dvdrip-0.98.11.ebuild:
+  Fix USE="jpeg" depend for x11-libs/gdk-pixbuf:2 split wrt #354279.
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> dvdrip-0.98.11.ebuild:
   sparc stable wrt #338997
