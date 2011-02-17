@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.316 2011/02/06 00:05:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.317 2011/02/17 17:16:46 ssuominen Exp $
+
+  17 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> alsa-lib-1.0.24.1.ebuild:
+  USE="static-libs" to control building of static archive libasound.a. Remove
+  useless libtool archive(s).
 
 *alsa-lib-1.0.24.1 (06 Feb 2011)
 

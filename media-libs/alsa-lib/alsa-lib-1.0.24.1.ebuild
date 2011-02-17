@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.24.1.ebuild,v 1.1 2011/02/06 00:05:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.24.1.ebuild,v 1.2 2011/02/17 17:16:46 ssuominen Exp $
+
+EAPI=3
 
 PYTHON_DEPEND="python? 2"
 
-inherit eutils libtool python
+inherit eutils libtool python multilib
 
-MY_P="${P/_rc/rc}"
-S="${WORKDIR}/${MY_P}"
+MY_P=${P/_rc/rc}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -16,7 +18,7 @@ SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc debug alisp python"
+IUSE="doc debug alisp python static-libs"
 
 DEPEND=">=media-sound/alsa-headers-1.0.24
 	doc? ( >=app-doc/doxygen-1.2.6 )"
@@ -43,20 +45,17 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	elibtoolize
 	epunt_cxx
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	use elibc_uclibc && myconf="--without-versioned"
 
 	econf \
-		--enable-static \
+		$(use_enable static-libs static) \
 		--enable-shared \
 		--disable-resmgr \
 		--enable-rawmidi \
@@ -68,8 +67,10 @@ src_compile() {
 		--with-pcm-plugins="${ALSA_PCM_PLUGINS}" \
 		--disable-dependency-tracking \
 		${myconf}
+}
 
-	emake || die "make failed"
+src_compile() {
+	emake || die
 
 	if use doc; then
 		emake doc || die "failed to generate docs"
@@ -79,7 +80,10 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}"/usr/$(get_libdir)/alsa-lib -name '*.a' -exec rm -f {} +
 
 	dodoc ChangeLog TODO || die
 	use doc && dohtml -r doc/doxygen/html/*
