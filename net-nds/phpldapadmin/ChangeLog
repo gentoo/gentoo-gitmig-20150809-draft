@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/phpldapadmin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.51 2010/07/03 15:41:09 mabi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/ChangeLog,v 1.52 2011/02/17 08:20:01 radhermit Exp $
+
+*phpldapadmin-1.2.0.5 (17 Feb 2011)
+
+  17 Feb 2011; Tim Harder <radhermit@gentoo.org> +phpldapadmin-1.2.0.5.ebuild:
+  Version bump for bug #324529. Add explicit DEPEND and use src_prepare instead
+  of src_unpack.
 
 *phpldapadmin-1.2.0.4-r1 (03 Jul 2010)
 
