@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.1 2011/01/31 14:45:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.2 2011/02/17 02:15:26 xmw Exp $
 
 EAPI=2
 
@@ -27,9 +27,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.7-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-0.7_p20110212-buildsystem.patch
 
-	epatch "${FILESDIR}"/${P}-zoom.patch
+	epatch "${FILESDIR}"/${PN}-0.7_p20110212-zoom.patch
 
 	sed -i -e '/CFLAGS/s: -DNDEBUG : :' Makerules || die
 }
@@ -38,12 +38,12 @@ src_compile() {
 	my_pdfexe=
 	use X || my_pdfexe="PDFVIEW_EXE="
 
-	emake build=release ${my_pdfexe} CC="$(tc-getCC)" verbose=true || die
+	emake build=release ${my_pdfexe} CC="$(tc-getCC)" verbose=true -j1 || die
 }
 
 src_install() {
 	emake build=release ${my_pdfexe} prefix="${D}usr" \
-		libprefix="${D}usr/$(get_libdir)" verbose=true install || die
+		LIBDIR="${D}usr/$(get_libdir)" verbose=true install || die
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins debian/mupdf.pc || die

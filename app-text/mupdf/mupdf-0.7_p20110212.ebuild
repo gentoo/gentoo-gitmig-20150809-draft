@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.7.ebuild,v 1.2 2010/11/11 17:34:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.7_p20110212.ebuild,v 1.1 2011/02/17 02:15:26 xmw Exp $
 
 EAPI=2
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-SRC_URI="http://${PN}.com/download/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,18 +26,22 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-buildsystem.patch
+
+	epatch "${FILESDIR}"/${P}-zoom.patch
+
+	sed -i -e '/CFLAGS/s: -DNDEBUG : :' Makerules || die
 }
 
 src_compile() {
 	my_pdfexe=
 	use X || my_pdfexe="PDFVIEW_EXE="
 
-	emake build=release ${my_pdfexe} CC="$(tc-getCC)" verbose=true || die
+	emake build=release ${my_pdfexe} CC="$(tc-getCC)" verbose=true -j1 || die
 }
 
 src_install() {
 	emake build=release ${my_pdfexe} prefix="${D}usr" \
-		libprefix="${D}usr/$(get_libdir)" verbose=true install || die
+		LIBDIR="${D}usr/$(get_libdir)" verbose=true install || die
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins debian/mupdf.pc || die
