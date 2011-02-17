@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.386 2011/02/17 20:03:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.387 2011/02/17 20:13:42 xarthisius Exp $
+
+  17 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> openssl-1.0.0d.ebuild:
+  ppc/ppc64 stable wrt #354139
 
   17 Feb 2011; Markos Chandras <hwoarang@gentoo.org> openssl-0.9.8r.ebuild,
   openssl-1.0.0d.ebuild:
