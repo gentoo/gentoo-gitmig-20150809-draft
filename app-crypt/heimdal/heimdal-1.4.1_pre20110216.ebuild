@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.4.1_pre20110216.ebuild,v 1.1 2011/02/16 22:14:12 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.4.1_pre20110216.ebuild,v 1.2 2011/02/17 17:06:20 arfrever Exp $
 
 EAPI=2
+# PYTHON_BDEPEND="2"
 VIRTUALX_REQUIRED="manual"
 
-inherit libtool virtualx eutils toolchain-funcs db-use autotools
+inherit autotools db-use eutils libtool python toolchain-funcs virtualx
 
 MY_P="${P}"
 DESCRIPTION="Kerberos 5 implementation from KTH"
@@ -28,6 +29,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	!!app-crypt/mit-krb5"
 
 DEPEND="${RDEPEND}
+	=dev-lang/python-2*
 	dev-util/pkgconfig
 	>=sys-devel/autoconf-2.62
 	test? ( X? ( ${VIRTUALX_DEPEND} ) )"
@@ -35,6 +37,11 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/krb5"
 
 S="${WORKDIR}/${PN}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/heimdal_db5.patch"
