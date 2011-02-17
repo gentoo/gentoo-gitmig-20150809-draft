@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/gmpc-avahi-0.20.0.ebuild,v 1.1 2010/05/24 13:52:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/gmpc-avahi-0.20.0.ebuild,v 1.2 2011/02/17 13:53:29 hwoarang Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.sarine.nl/Programs/gmpc/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="nls"
 
 RDEPEND=">=media-sound/gmpc-${PV}

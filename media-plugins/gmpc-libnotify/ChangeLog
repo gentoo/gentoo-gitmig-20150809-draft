@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-libnotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/ChangeLog,v 1.14 2011/02/05 13:09:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/ChangeLog,v 1.15 2011/02/17 13:54:47 hwoarang Exp $
+
+  17 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  gmpc-libnotify-0.20.0.ebuild:
+  Stable on amd64 wrt bug #325621
 
   05 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
   gmpc-libnotify-0.20.0.ebuild,
