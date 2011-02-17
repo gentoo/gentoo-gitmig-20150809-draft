@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.7 2011/02/05 07:53:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.8 2011/02/17 10:28:44 dev-zero Exp $
+
+*spice-0.7.3 (17 Feb 2011)
+*spice-0.6.4 (17 Feb 2011)
+
+  17 Feb 2011; Tiziano Müller <dev-zero@gentoo.org>
+  -files/0001-Added-initial-connection-url-handling-using-the-urip.patch,
+  -spice-0.5.3.ebuild, -spice-0.6.3.ebuild, +spice-0.6.4.ebuild,
+  -spice-0.7.1.ebuild, -spice-0.7.2.ebuild, +spice-0.7.3.ebuild,
+  -files/spice.protocol, -files/spice.schemas:
+  Version bump. Dropped old.
 
 *spice-0.7.2 (05 Feb 2011)
 

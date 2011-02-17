@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.5.3.ebuild,v 1.2 2010/11/18 12:52:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.6.4.ebuild,v 1.1 2011/02/17 10:28:44 dev-zero Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="SPICE server and client."
 HOMEPAGE="http://spice-space.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+gui opengl static-libs"
+IUSE="+gui static-libs"
 
 RDEPEND="~app-emulation/spice-protocol-${PV}
 	>=x11-libs/pixman-0.17.7
@@ -22,23 +22,24 @@ RDEPEND="~app-emulation/spice-protocol-${PV}
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
+	x11-libs/libXfixes
 	virtual/jpeg
 	sys-libs/zlib
-	gui? ( dev-games/cegui[opengl?] )
-	opengl? ( virtual/opengl )"
+	gui? ( =dev-games/cegui-0.6* )"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
+
+# maintainer notes:
+# * opengl support is currently broken
 
 src_configure() {
 	local myconf=""
 	use gui && myconf+="--enable-gui "
-	use opengl && myconf+="--enable-opengl "
 	econf ${myconf} \
 		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc NEWS TODO
+	default
 	use static-libs || rm "${D}"/usr/lib*/*.la
 }
