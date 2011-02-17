@@ -1,12 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.4 2011/02/17 02:18:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-0_p20110202.ebuild,v 1.1 2011/02/17 02:18:08 xmw Exp $
 
 EAPI=3
 
-EGIT_REPO_URI="git://repo.or.cz/llpp.git"
-
-inherit git toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="a graphical PDF viewer which aims to superficially resemble less(1)"
 HOMEPAGE="http://repo.or.cz/w/llpp.git"
@@ -14,7 +12,7 @@ SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=app-text/mupdf-0.7_p20110212
