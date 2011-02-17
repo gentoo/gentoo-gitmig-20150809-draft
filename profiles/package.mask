@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12465 2011/02/17 06:59:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12466 2011/02/17 07:42:12 mattm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthew Marlowe <mattm@gentoo.org> (16 Feb 2011)
+# Masked for removal.  Obsolete and unmaintained
+# package.  Users migrated to vmware server or
+# esxi several years ago. No known dependencies.
+app-emulation/vmware-gsx-console
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (15 Feb 2011)
 # Dropping support for 1.7 xorg-server series.
