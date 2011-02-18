@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/samtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.3 2011/02/17 09:05:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.4 2011/02/18 05:05:41 weaver Exp $
+
+*samtools-0.1.12a (18 Feb 2011)
+
+  18 Feb 2011; Andrey Kislyuk <weaver@gentoo.org> +samtools-0.1.12a.ebuild:
+  Address bug 354941, build library, correct versioning
 
   17 Feb 2011; Thomas Kahle <tomka@gentoo.org> samtools-0.1.12.ebuild:
   x86 stable per bug 353566
