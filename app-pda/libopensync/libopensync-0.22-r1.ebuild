@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22-r1.ebuild,v 1.1 2011/02/14 20:14:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22-r1.ebuild,v 1.2 2011/02/18 06:21:48 dirtyepic Exp $
 
 EAPI="3"
 
@@ -36,8 +36,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-fbsd.patch
 	epatch "${FILESDIR}"/${P}-pythonpath.patch
 	epatch "${FILESDIR}"/${P}-swig-typeerror.patch
-	eautoreconf # for pythonpath
-	find "${S}" -name Makefile.in -print0 | xargs -0 sed -i -e 's: -Werror::'
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+	eautoreconf
+
+	find "${S}" -name Makefile.in -print0 | xargs -0 sed -i -e 's: -Werror::' \
+		-e 's: -R $(libdir)::g'
 
 	use python && python_copy_sources
 }
@@ -51,10 +54,15 @@ src_configure() {
 			$(use_enable debug) \
 			$(use_enable debug tracing)
 			#$(use_enable test unit-tests)
+
+			sed -i -e 's:^\(hardcode_libdir_flag_spec=\).*:\1"":g' \
+				-e 's:^\(runpath_var=\).*:\1DIE_RPATH_DIE:g' \
+				-e 's:func_apped:func_append:g' \
+				libtool
 	}
 
 	use python && python_execute_function -s do_configure
-	do_configure # do even when USE=python to generate Doxyfile in ${S}
+	do_configure # do this even when USE=python - we need to generate Doxyfile
 }
 
 src_compile() {

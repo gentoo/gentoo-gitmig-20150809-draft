@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.39 2011/02/14 20:14:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.40 2011/02/18 06:21:48 dirtyepic Exp $
+
+  18 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> libopensync-0.22-r1.ebuild,
+  +files/libopensync-0.22-Makefile.patch:
+  Prevent relinking against outgoing system libs on downgrade (bug #355291).
 
 *libopensync-0.36-r2 (14 Feb 2011)
 *libopensync-0.22-r1 (14 Feb 2011)
