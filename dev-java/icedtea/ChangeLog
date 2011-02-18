@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.23 2011/02/09 22:34:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.24 2011/02/18 12:42:27 caster Exp $
+
+*icedtea-6.1.9.7-r1 (18 Feb 2011)
+
+  18 Feb 2011; Vlastimil Babka <caster@gentoo.org> -files/6.1.9.4-sparc.patch,
+  -icedtea-6.1.9.4.ebuild, -icedtea-6.1.9.5.ebuild, +icedtea-6.1.9.7-r1.ebuild,
+  -files/6.1.9.5-sparc.patch, -files/icedtea-old.env:
+  Version bump, security bug #355127. Webstart and nsplugin are now deferred to
+  separate icedtea-web package via PDEPEND.
 
 *icedtea-6.1.9.6 (09 Feb 2011)
 

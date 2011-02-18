@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.5.ebuild,v 1.1 2011/02/02 00:06:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.7-r1.ebuild,v 1.1 2011/02/18 12:42:27 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,7 +9,7 @@
 
 EAPI="2"
 
-inherit autotools pax-utils java-pkg-2 java-vm-2 versionator
+inherit pax-utils java-pkg-2 java-vm-2 versionator
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="6"
@@ -60,7 +60,6 @@ RDEPEND=">=net-print/cups-1.2.12
 	 >=sys-libs/zlib-1.2.3
 	 x11-proto/inputproto
 	 x11-proto/xineramaproto
-	 nsplugin? ( >=net-libs/xulrunner-1.9.1 )
 	 pulseaudio?  ( >=media-sound/pulseaudio-0.9.11 )
 	 javascript? ( dev-java/rhino:1.6 )
 	 zero? ( virtual/libffi )
@@ -103,6 +102,9 @@ DEPEND="${RDEPEND}
 	)
 	sys-apps/lsb-release"
 
+PDEPEND="webstart? ( dev-java/icedtea-web:6 )
+	nsplugin? ( dev-java/icedtea-web:6[nsplugin] )"
+
 # a bit of hack so the VM switching is triggered without causing dependency troubles
 JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.5"
 JAVA_PKG_WANT_SOURCE="1.5"
@@ -123,8 +125,7 @@ pkg_setup() {
 #	fi
 
 	if use nsplugin && ! use webstart ; then
-		eerror "WebStart is required if building the plugin."
-		die 'Re-try with USE="webstart"'
+		elog "Note that the nsplugin flag implies the webstart flag. Enable it to remove this message."
 	fi
 
 	# quite a hack since java-config does not provide a way for a package
@@ -167,11 +168,6 @@ src_unpack() {
 
 unset_vars() {
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${PV}-sparc.patch"
-	eautoreconf
 }
 
 src_configure() {
@@ -228,7 +224,6 @@ src_configure() {
 		--with-abs-install-dir=/usr/$(get_libdir)/icedtea${SLOT} \
 		$(use_enable !debug optimizations) \
 		$(use_enable doc docs) \
-		$(use_enable nsplugin plugin) \
 		$(use_with javascript rhino ${rhino_jar}) \
 		$(use_enable cacao) \
 		$(use_enable pulseaudio pulse-java) \
@@ -236,7 +231,8 @@ src_configure() {
 		$(use_enable systemtap) \
 		$(use_enable nio2) \
 		$(use_enable nss) \
-		$(use_enable webstart) \
+		--disable-webstart \
+		--disable-plugin \
 		|| die "configure failed"
 }
 
@@ -268,6 +264,10 @@ src_install() {
 		java-pkg_dohtml -r ../docs/* || die "Failed to install documentation"
 	fi
 
+	# Collides with icedtea-web, remove files here until upstream bug is solved.
+	# http://icedtea.classpath.org/bugzilla/show_bug.cgi?id=633
+	rm -fv man/man1/javaws.1 man/ja_JP.eucJP/man1/javaws.1
+
 	# doins can't handle symlinks.
 	cp -vRP bin include jre lib man "${ddest}" || die "failed to copy"
 
@@ -286,12 +286,6 @@ src_install() {
 
 	# Fix the permissions.
 	find "${ddest}" \! -type l \( -perm /111 -exec chmod 755 {} \; -o -exec chmod 644 {} \; \) || die
-
-	if use nsplugin; then
-		local arch=${ARCH};
-		use x86 && arch=i386;
-		install_mozilla_plugin "${dest}/jre/lib/${arch}/IcedTeaPlugin.so";
-	fi
 
 	# We need to generate keystore - bug #273306
 	einfo "Generating cacerts file from certificates in /usr/share/ca-certificates/"
@@ -318,10 +312,4 @@ use_zero() {
 pkg_postinst() {
 	# Set as default VM if none exists
 	java-vm-2_pkg_postinst
-
-	if use nsplugin; then
-		elog "The icedtea${SLOT} browser plugin (NPPlugin) can be enabled using eselect java-nsplugin"
-		elog "Note that the plugin works only in browsers based on xulrunner-1.9.1 or later"
-		elog "such as Firefox 3.5+, Chromium and perhaps some others too."
-	fi
 }
