@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/apache-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.84 2010/09/19 17:40:01 gmsoft Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.85 2011/02/18 17:15:03 hollow Exp $
+
+*apache-tools-2.2.17 (18 Feb 2011)
+
+  18 Feb 2011; Benedikt Böhm <hollow@gentoo.org>
+  +apache-tools-2.2.17.ebuild:
+  version bump wrt #342055
 
   19 Sep 2010; Guy Martin <gmsoft@gentoo.org> apache-tools-2.2.16.ebuild:
   hppa stable wrt #330195
