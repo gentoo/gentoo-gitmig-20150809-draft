@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.0.2.ebuild,v 1.2 2011/02/16 16:44:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.0.2.ebuild,v 1.3 2011/02/18 12:25:11 hanno Exp $
 
 EAPI=2
 
@@ -26,6 +26,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )"
+
+# broken upstream, reported but got no reply
+RESTRICT="test"
 
 src_configure() {
 	local guis
