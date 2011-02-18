@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12474 2011/02/18 16:15:47 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12475 2011/02/18 19:05:59 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -445,10 +445,6 @@ net-mail/cyrus-imspd
 #
 # Removal on 2011-03-11
 app-i18n/skktools
-
-# Tiziano Müller <dev-zero@gentoo.org> (07 Jan 2011)
-# Masked for testing
-=www-servers/uwsgi-0.9.6.6
 
 # Tiziano Müller <dev-zero@gentoo.org> (06 Jan 2011)
 # Masked for testing
