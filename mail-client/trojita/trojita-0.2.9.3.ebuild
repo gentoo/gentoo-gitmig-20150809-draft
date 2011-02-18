@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.2.9.ebuild,v 1.2 2011/01/11 22:13:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.2.9.3.ebuild,v 1.1 2011/02/18 11:53:22 scarabeus Exp $
 
 EAPI=3
 
