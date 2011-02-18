@@ -1,12 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20110129-r99.ebuild,v 1.2 2011/02/18 18:01:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20110129-r1.ebuild,v 1.1 2011/02/18 18:01:01 pacho Exp $
 
 inherit emul-linux-x86
 
 LICENSE="BSD LGPL-2 MIT kilgard"
-
-SRC_URI="http://dev.gentoo.org/~pacho/emul/${P}-r99.tar.bz2"
 
 KEYWORDS="-* ~amd64 ~amd64-linux"
 
@@ -23,7 +21,7 @@ src_unpack() {
 
 pkg_postinst() {
 	# Update GL symlinks
-	eselect opengl set --use-old
+	eselect opengl set --use-old || die
 	# And the same for mesa (bug #355393)
 	eselect mesa set 32bit --auto || die
 }

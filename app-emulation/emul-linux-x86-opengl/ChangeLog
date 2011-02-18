@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-opengl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.10 2011/02/12 20:19:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.11 2011/02/18 18:01:01 pacho Exp $
+
+*emul-linux-x86-opengl-20110129-r1 (18 Feb 2011)
+
+  18 Feb 2011; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-opengl-20110129-r1.ebuild,
+  emul-linux-x86-opengl-20110129-r99.ebuild:
+  Revision bump to update mesa links (bug #355393 by Y Liu and fix by
+  Chí-Thanh Christopher Nguyễn). For people using masked version, simply
+  reemerge it.
 
   12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-opengl-20110129.ebuild:
