@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/pyclutter-gst-1.0.0-r1.ebuild,v 1.1 2011/02/18 07:31:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/pyclutter-gst-1.0.0-r1.ebuild,v 1.2 2011/02/18 14:49:27 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
 inherit python clutter
@@ -36,10 +36,10 @@ src_prepare(){
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/cluttergst
+	python_mod_optimize cluttergst
 	python_need_rebuild
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/lib*/python*/site-packages/cluttergst
+	python_mod_cleanup cluttergst
 }
