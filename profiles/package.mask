@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12471 2011/02/18 10:51:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12472 2011/02/18 12:06:38 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -77,6 +77,16 @@ app-emulation/vmware-gsx-console
 <x11-libs/libXtst-1.1.0
 <x11-libs/libfontenc-1.1.0
 <x11-libs/libxcb-1.7
+=x11-drivers/nvidia-drivers-256.44
+=x11-drivers/nvidia-drivers-195.36.31
+=x11-drivers/nvidia-drivers-195.36.24
+=x11-drivers/nvidia-drivers-190.53-r1
+=x11-drivers/nvidia-drivers-173.14.27
+=x11-drivers/nvidia-drivers-173.14.25
+=x11-drivers/nvidia-drivers-96.43.18
+=x11-drivers/nvidia-drivers-96.43.16
+=x11-drivers/ati-drivers-10.9-r1
+=x11-drivers/ati-drivers-10.8
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Feb 2011)
 # Upstream discontinued qbankmanager. Use kmymoney or gnucash

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5059 2011/02/18 10:51:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5060 2011/02/18 12:06:38 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Feb 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Add more reverse dependencies to xorg-server-1.7 mask
 
   18 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Unmask www-client/chromium and dev-lang/v8 beta channel releases.
