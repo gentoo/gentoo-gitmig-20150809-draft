@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12472 2011/02/18 12:06:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12473 2011/02/18 16:14:45 vadimk Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vadim Kuznetsov <vadimk@gentoo.org> (15 Feb 2011)
+# Upstream EOS Reached. Masked for removal 
+# in 30 days.
+# Bug #354383 
+=app-emulation/vmware-workstation-5.5.9.126128
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (18 Feb 2011)
 # Dev channel releases are only for people who are developers or want more
