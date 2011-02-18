@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/c-icap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.3 2010/12/26 16:35:39 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.4 2011/02/18 02:27:22 flameeyes Exp $
+
+*c-icap-0.1.4 (18 Feb 2011)
+
+  18 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> +c-icap-0.1.4.ebuild,
+  +files/c-icap.logrotate:
+  Version bump; add a logrotate file so that logs don't fill in your disk.
 
   26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> c-icap-0.1.3.ebuild,
   +files/c-icap-0.1.3+db-5.0.patch:
