@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/ply
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.13 2010/08/16 16:37:11 djc Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.14 2011/02/18 18:37:01 arfrever Exp $
+
+*ply-3.4 (18 Feb 2011)
+
+  18 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ply-3.3.ebuild, +ply-3.4.ebuild:
+  Version bump. Fixed support for Python 3 in ply.cpp (bug #343641). Fixed
+  tests with Python 3.2 (bug #343753).
 
   16 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> ply-3.3.ebuild:
   Update license (see homepage; bug 333025).
