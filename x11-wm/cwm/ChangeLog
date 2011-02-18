@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/cwm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.8 2010/11/21 19:37:03 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.9 2011/02/18 15:37:05 xmw Exp $
+
+*cwm-99999999 (18 Feb 2011)
+*cwm-20110213 (18 Feb 2011)
+
+  18 Feb 2011; Michael Weber <xmw@gentoo.org> +cwm-20110213.ebuild,
+  +files/cwm-20110213-Makefile.patch, +cwm-99999999.ebuild:
+  Version bump
 
   21 Nov 2010; Michael Weber <xmw@gentoo.org> cwm-20100930.ebuild:
   Added ~arm and ~sparc keyword
