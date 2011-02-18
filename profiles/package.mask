@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12470 2011/02/18 10:29:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12471 2011/02/18 10:51:48 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -464,11 +464,6 @@ dev-util/devel-chroots
 # to be maintainable.
 dev-haskell/hsshellscript
 
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (17 Dec 2010)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-3.0 versions are used for chromium-10.x versions.
->=dev-lang/v8-3.0
-
 # Tiziano Müller <dev-zero@gentoo.org> (13 Dec 2010)
 # Mask for testing the passenger-3.0.1 module
 =www-servers/nginx-0.8.53-r1
@@ -871,13 +866,6 @@ sys-libs/ss
 # since long time included in media-tv/gentoo-vdr-scripts
 media-tv/vdr-dvd-scripts
 media-tv/vdrplugin-rebuild
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Jan 2010)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
-~www-client/chromium-10.0.648.18
-~www-client/chromium-10.0.648.45
-~www-client/chromium-10.0.648.82
 
 # Christian Parpart <trapni@gentoo.org> (23 Dec 2009)
 # Masked for testing/feedback.
