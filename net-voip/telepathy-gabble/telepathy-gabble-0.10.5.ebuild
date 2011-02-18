@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.5.ebuild,v 1.2 2011/02/16 18:36:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.10.5.ebuild,v 1.3 2011/02/18 13:22:51 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -20,11 +20,15 @@ RDEPEND=">=dev-libs/glib-2.24
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.82
 	>=net-libs/telepathy-glib-0.11.16
-	net-libs/libsoup:2.4[ssl]
 	>=net-libs/libnice-0.0.11
 	>=net-libs/gnutls-2.10.2
+
 	dev-db/sqlite:3
 	dev-libs/libxml2
+
+	|| ( net-libs/libsoup:2.4[ssl]
+		 >=net-libs/libsoup-2.33.1 )
+
 	!<net-im/telepathy-mission-control-5.5.0"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
