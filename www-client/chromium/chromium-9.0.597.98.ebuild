@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.98.ebuild,v 1.1 2011/02/14 09:42:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9.0.597.98.ebuild,v 1.2 2011/02/18 10:46:51 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -15,12 +15,9 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite system-v8"
+IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-v8"
 
 RDEPEND="app-arch/bzip2
-	system-sqlite? (
-		>=dev-db/sqlite-3.6.23.1[fts3,icu,secure-delete,threadsafe]
-	)
 	system-v8? ( >=dev-lang/v8-2.5.9.15 )
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
@@ -139,11 +136,6 @@ src_prepare() {
 		einfo "Bundled V8 version: ${v8_bundled}"
 	fi
 
-	if use system-sqlite; then
-		remove_bundled_lib "third_party/sqlite/src"
-		remove_bundled_lib "third_party/sqlite/preprocessed"
-	fi
-
 	if use system-v8; then
 		# Provide our own gyp file that links with the system v8.
 		# TODO: move this upstream.
@@ -184,10 +176,6 @@ src_configure() {
 		-Duse_system_libxml=1
 		-Duse_system_vpx=1
 		-Duse_system_zlib=1"
-
-	if use system-sqlite; then
-		myconf+=" -Duse_system_sqlite=1"
-	fi
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then

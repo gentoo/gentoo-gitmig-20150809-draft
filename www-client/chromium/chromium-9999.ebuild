@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.132 2011/02/13 11:43:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.133 2011/02/18 10:46:51 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -189,6 +189,12 @@ src_prepare() {
 	# Remove bundled v8.
 	find v8 -type f \! -iname '*.gyp*' -delete || die
 
+	# Disable experimental extensions incompatible with system-provided V8,
+	# bug #354343.
+	cp "${FILESDIR}/experimental.gyp" "v8/src/extensions/experimental" || die
+	sed -e 's/ENABLE_JAVASCRIPT_I18N_API=1/ENABLE_JAVASCRIPT_I18N_API=0/g' \
+		-i build/features_override.gypi || die
+
 	# The implementation files include v8 headers with full path,
 	# like #include "v8/include/v8.h". Make sure the system headers
 	# will be used.
@@ -210,7 +216,7 @@ src_configure() {
 
 	# Use system-provided libraries.
 	# TODO: use_system_hunspell (upstream changes needed).
-	# TODO: use_system_ssl (need to consult upstream).
+	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
 		-Duse_system_bzip2=1

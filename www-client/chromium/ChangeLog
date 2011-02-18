@@ -1,6 +1,17 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.284 2011/02/17 15:16:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.285 2011/02/18 10:46:51 phajdan.jr Exp $
+
+*chromium-11.0.672.2 (18 Feb 2011)
+
+  18 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-9.0.597.94.ebuild, chromium-9.0.597.98.ebuild,
+  -chromium-10.0.648.45.ebuild, chromium-10.0.648.82.ebuild,
+  +chromium-11.0.672.2.ebuild, chromium-9999.ebuild,
+  +files/experimental.gyp, metadata.xml:
+  Version bump for dev channel release. Fixed bug #354343 by Julien Sanchez
+  <julien.sanchez@gmail.com>. Dropped support for system-sqlite
+  (http://crbug.com/70589). Removed old.
 
 *chromium-10.0.648.82 (17 Feb 2011)
 

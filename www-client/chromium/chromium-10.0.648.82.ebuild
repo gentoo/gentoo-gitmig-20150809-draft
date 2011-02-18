@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.82.ebuild,v 1.1 2011/02/17 15:16:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.82.ebuild,v 1.2 2011/02/18 10:46:51 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -16,12 +16,9 @@ SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite"
+IUSE="cups +gecko-mediaplayer gnome gnome-keyring"
 
 RDEPEND="app-arch/bzip2
-	system-sqlite? (
-		>=dev-db/sqlite-3.7.2[fts3,icu,secure-delete,threadsafe]
-	)
 	>=dev-lang/v8-${V8_DEPEND}
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
@@ -164,13 +161,6 @@ src_prepare() {
 	rmdir v8/include || die
 	ln -s /usr/include v8/include || die
 
-	if use system-sqlite; then
-		# Remove bundled sqlite, preserving the shim header.
-		find third_party/sqlite -type f \! -iname '*.gyp*' \
-			\! -path 'third_party/sqlite/sqlite3.h' \
-			-delete || die
-	fi
-
 	# Make sure the build system will use the right python, bug #344367.
 	# Only convert directories that need it, to save time.
 	python_convert_shebangs -q -r 2 build tools
@@ -199,10 +189,6 @@ src_configure() {
 		-Duse_system_vpx=1
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
-
-	if use system-sqlite; then
-		myconf+=" -Duse_system_sqlite=1"
-	fi
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then

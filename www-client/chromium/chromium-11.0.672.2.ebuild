@@ -1,27 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.45.ebuild,v 1.2 2011/02/13 11:43:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.672.2.ebuild,v 1.1 2011/02/18 10:46:51 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.0.12.12"
+V8_DEPEND="3.1.4"
 
 inherit eutils flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="http://build.chromium.org/buildbot/official/${P}.tar.bz2"
+SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups +gecko-mediaplayer gnome gnome-keyring system-sqlite"
+IUSE="cups +gecko-mediaplayer gnome gnome-keyring"
 
 RDEPEND="app-arch/bzip2
-	system-sqlite? (
-		>=dev-db/sqlite-3.7.2[fts3,icu,secure-delete,threadsafe]
-	)
 	>=dev-lang/v8-${V8_DEPEND}
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
@@ -110,9 +107,6 @@ src_prepare() {
 	# Make sure we don't use bundled FLAC.
 	epatch "${FILESDIR}"/${PN}-system-flac-r0.patch
 
-	# Fix build, http://crbug.com/70606.
-	epatch "${FILESDIR}"/${PN}-webkit-version.patch
-
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
@@ -126,6 +120,7 @@ src_prepare() {
 		\! -path 'third_party/harfbuzz/*' \
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
+		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libwebp/*' \
@@ -157,19 +152,18 @@ src_prepare() {
 	# Remove bundled v8.
 	find v8 -type f \! -iname '*.gyp*' -delete || die
 
+	# Disable experimental extensions incompatible with system-provided V8,
+	# bug #354343.
+	cp "${FILESDIR}/experimental.gyp" "v8/src/extensions/experimental" || die
+	sed -e 's/ENABLE_JAVASCRIPT_I18N_API=1/ENABLE_JAVASCRIPT_I18N_API=0/g' \
+		-i build/features_override.gypi || die
+
 	# The implementation files include v8 headers with full path,
 	# like #include "v8/include/v8.h". Make sure the system headers
 	# will be used.
 	# TODO: find a solution that can be upstreamed.
 	rmdir v8/include || die
 	ln -s /usr/include v8/include || die
-
-	if use system-sqlite; then
-		# Remove bundled sqlite, preserving the shim header.
-		find third_party/sqlite -type f \! -iname '*.gyp*' \
-			\! -path 'third_party/sqlite/sqlite3.h' \
-			-delete || die
-	fi
 
 	# Make sure the build system will use the right python, bug #344367.
 	# Only convert directories that need it, to save time.
@@ -185,7 +179,8 @@ src_configure() {
 
 	# Use system-provided libraries.
 	# TODO: use_system_hunspell (upstream changes needed).
-	# TODO: use_system_ssl (need to consult upstream).
+	# TODO: use_system_ssl (http://crbug.com/58087).
+	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_ffmpeg=1
@@ -199,10 +194,6 @@ src_configure() {
 		-Duse_system_vpx=1
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
-
-	if use system-sqlite; then
-		myconf+=" -Duse_system_sqlite=1"
-	fi
 
 	# The dependency on cups is optional, see bug #324105.
 	if use cups; then
