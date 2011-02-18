@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.30.1.ebuild,v 1.9 2010/10/17 15:04:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.30.1.ebuild,v 1.10 2011/02/18 13:46:22 nirbheek Exp $
+
+EAPI="2"
 
 inherit autotools eutils gnome2 python virtualx
 
@@ -44,14 +46,12 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 # an ebuild restricted environment
 RESTRICT="test"
 
-pkg_setup() {
+src_prepare() {
+	gnome2_src_prepare
+
 	G2CONF="${G2CONF}
 		--enable-sm
 		--disable-xevie"
-}
-
-src_unpack() {
-	gnome2_src_unpack
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
