@@ -4,3 +4,7 @@ media-sound/pulseaudio policykit
 
 # requires gcc-4.4
 app-emulation/wine win64
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (18 Feb 2011)
+# sys-apps/portage depends on sys-libs/libselinux, which currently does not support Python 3.
+sys-apps/portage python3
