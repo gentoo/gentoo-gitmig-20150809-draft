@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/storable
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.15 2010/09/09 13:12:42 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/storable/ChangeLog,v 1.16 2011/02/18 07:14:33 graaff Exp $
+
+*storable-0.8.6 (18 Feb 2011)
+
+  18 Feb 2011; Hans de Graaff <graaff@gentoo.org> +storable-0.8.6.ebuild:
+  Version bump.
 
 *storable-0.8.2 (09 Sep 2010)
 
