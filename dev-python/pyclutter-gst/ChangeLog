@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyclutter-gst
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/ChangeLog,v 1.1 2010/02/26 22:56:31 nirbheek Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclutter-gst/ChangeLog,v 1.2 2011/02/18 07:31:24 nirbheek Exp $
+
+*pyclutter-gst-1.0.0-r1 (18 Feb 2011)
+
+  18 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +pyclutter-gst-1.0.0-r1.ebuild:
+  Fix bug 345513
 
 *pyclutter-gst-1.0.0 (26 Feb 2010)
 
