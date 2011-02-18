@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.176 2011/01/26 20:28:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.177 2011/02/18 20:07:03 dilfridge Exp $
+
+  18 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org> ark-4.6.0.ebuild:
+  Add elog about rar archive support
 
 *ark-4.6.0 (26 Jan 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.6.0.ebuild,v 1.1 2011/01/26 20:28:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ark-4.6.0.ebuild,v 1.2 2011/02/18 20:07:03 dilfridge Exp $
 
 EAPI="3"
 
@@ -27,4 +27,9 @@ src_configure() {
 		$(cmake-utils_use_with lzma LibLZMA)
 	)
 	kde4-meta_src_configure
+}
+
+pkg_postinst() {
+	kde4-meta_pkg_postinst
+	elog "For creating rar archives, install app-arch/rar"
 }
