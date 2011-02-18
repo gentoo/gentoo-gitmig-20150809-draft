@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Pod-Spell
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/ChangeLog,v 1.1 2011/02/18 07:01:16 tove Exp $
+
+*Pod-Spell-1.10 (18 Feb 2011)
+
+  18 Feb 2011; Torsten Veller <tove@gentoo.org> +Pod-Spell-1.10.ebuild,
+  +metadata.xml:
+  Initial commit for Perl-Critic
+
