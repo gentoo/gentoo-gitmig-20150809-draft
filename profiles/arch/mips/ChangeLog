@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.43 2011/02/15 15:42:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.44 2011/02/18 03:17:06 mattst88 Exp $
+
+  18 Feb 2011; Matt Turner <mattst88@gentoo.org> +mips64/n32/make.defaults,
+  +mipsel/mips64el/n32/make.defaults:
+  Add make.defaults to n32 profiles to set LIBDIR to the correct location.
 
   15 Feb 2011; Matt Turner <mattst88@gentoo.org> make.defaults:
   Added -openmp to default MIPS USE flags.
