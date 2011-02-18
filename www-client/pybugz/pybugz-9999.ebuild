@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.1 2010/07/30 20:33:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.2 2011/02/18 00:21:00 williamh Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -33,6 +33,7 @@ RDEPEND="${DEPEND}
 src_install() {
 	distutils_src_install
 
+doman man/bugz.1
 	dobashcompletion contrib/bash-completion bugz
 
 	if use zsh-completion ; then
