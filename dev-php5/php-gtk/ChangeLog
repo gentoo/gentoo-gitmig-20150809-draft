@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/php-gtk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.23 2010/11/04 17:50:57 mabi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.24 2011/02/18 12:22:41 scarabeus Exp $
+
+  18 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -php-gtk-2.0.1-r2.ebuild, -php-gtk-2.0.1-r3.ebuild:
+  QA: Drop eapi1 ebuilds so virtualx eclass can require eapi2 unconditionally.
 
 *php-gtk-2.0.1-r4 (04 Nov 2010)
 
