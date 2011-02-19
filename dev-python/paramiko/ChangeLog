@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.55 2011/02/05 22:42:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.56 2011/02/19 17:04:58 arfrever Exp $
+
+  19 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/paramiko-1.6.3-no-setuptools.patch,
+  -files/paramiko-1.7.2-tests_cleanup.patch, -paramiko-1.7.5.ebuild:
+  Delete.
 
   05 Feb 2011; Markus Meier <maekke@gentoo.org> paramiko-1.7.6.ebuild:
   arm stable, bug #346985
