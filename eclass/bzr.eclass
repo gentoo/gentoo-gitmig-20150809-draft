@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.11 2011/02/10 20:08:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.12 2011/02/19 14:43:57 ulm Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -82,14 +82,14 @@ esac
 # make sure that dev-vcs/bzr was built with USE="sftp".  In EAPI 2 or
 # later, the eclass will depend on dev-vcs/bzr[sftp].
 
-# @ECLASS-VARIABLE: EBZR_MIRROR_URI
+# @ECLASS-VARIABLE: EBZR_INITIAL_URI
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# The URI of a fast mirror of the source repository.  If this variable
-# is set, the initial branch will be cloned from the mirror, followed
-# by a pull from the original repository.  This is intended for special
-# cases, where download from the original repository is slow, but a fast
-# mirror exists but may be out of date.
+# The URI used for initial branching of the source repository.  If this
+# variable is set, the initial branch will be cloned from the location
+# specified, followed by a pull from ${EBZR_REPO_URI}.  This is intended
+# for special cases, e.g. when download from the original repository is
+# slow, but a fast mirror exists but may be out of date.
 #
 # Normally, this variable needs not be set.
 
@@ -236,15 +236,18 @@ bzr_fetch() {
 				|| die "${EBZR}: can't create shared repository"
 		fi
 
-		if [[ -z ${EBZR_MIRROR_URI} ]]; then
+		if [[ -z ${EBZR_INITIAL_URI} ]]; then
 			bzr_initial_fetch "${EBZR_REPO_URI}" "${branch_dir}"
 		else
 			# Workaround for faster initial download. This clones the
-			# branch from a fast mirror (which may be out of date), and
+			# branch from a fast server (which may be out of date), and
 			# subsequently pulls from the slow original repository.
-			bzr_initial_fetch "${EBZR_MIRROR_URI}" "${branch_dir}"
-			EBZR_UPDATE_CMD="${EBZR_UPDATE_CMD} --remember --overwrite" \
-				EBZR_OFFLINE="" bzr_update "${EBZR_REPO_URI}" "${branch_dir}"
+			bzr_initial_fetch "${EBZR_INITIAL_URI}" "${branch_dir}"
+			if [[ ${EBZR_REPO_URI} != "${EBZR_INITIAL_URI}" ]]; then
+				EBZR_UPDATE_CMD="${EBZR_UPDATE_CMD} --remember --overwrite" \
+					EBZR_OFFLINE="" \
+					bzr_update "${EBZR_REPO_URI}" "${branch_dir}"
+			fi
 		fi
 	else
 		bzr_update "${EBZR_REPO_URI}" "${branch_dir}"
