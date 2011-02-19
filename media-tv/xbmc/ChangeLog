@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.80 2011/02/10 02:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.81 2011/02/19 18:08:27 vapier Exp $
+
+  19 Feb 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Drop faad2 dep since xbmc no longer uses it #355371 by BT.
 
   10 Feb 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Drop libmms dep since xbmc now uses ffmpeg #353919 by BT.

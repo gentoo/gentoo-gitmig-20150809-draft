@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.74 2011/02/10 02:51:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.75 2011/02/19 18:08:27 vapier Exp $
 
 EAPI="2"
 
@@ -37,7 +37,6 @@ COMMON_DEPEND="virtual/opengl
 	dev-libs/lzo
 	>=dev-python/pysqlite-2
 	media-libs/alsa-lib
-	media-libs/faad2
 	media-libs/flac
 	media-libs/fontconfig
 	media-libs/freetype
