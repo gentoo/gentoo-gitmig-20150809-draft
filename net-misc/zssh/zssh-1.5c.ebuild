@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5c.ebuild,v 1.2 2008/01/26 17:27:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5c.ebuild,v 1.3 2011/02/19 19:00:16 xarthisius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/zssh/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="sparc x86"
+KEYWORDS="~ppc sparc x86"
 IUSE="readline nls"
 
 DEPEND=""
