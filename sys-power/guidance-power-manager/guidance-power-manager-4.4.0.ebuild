@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/guidance-power-manager/guidance-power-manager-4.4.0.ebuild,v 1.4 2011/01/13 15:11:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/guidance-power-manager/guidance-power-manager-4.4.0.ebuild,v 1.5 2011/02/19 13:24:58 dilfridge Exp $
 
 EAPI=3
 
@@ -23,7 +23,9 @@ DEPEND="
 	dev-python/sip
 	>=kde-base/pykde4-${KDE_MINIMAL}
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	sys-apps/hal
+"
 
 pkg_postinst() {
 	kde4-base_pkg_postinst
