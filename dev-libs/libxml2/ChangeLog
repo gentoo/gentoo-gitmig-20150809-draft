@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.302 2011/02/16 09:52:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.303 2011/02/19 19:49:48 grobian Exp $
+
+  19 Feb 2011; Fabian Groffen <grobian@gentoo.org> libxml2-2.7.8.ebuild:
+  Drop --with-zlib argument for Prefix, it's no longer necessary
 
   16 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> libxml2-2.7.8.ebuild:
   ppc/ppc64 stable wrt #345555

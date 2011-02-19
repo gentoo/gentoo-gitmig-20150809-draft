@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8.ebuild,v 1.7 2011/02/16 09:52:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8.ebuild,v 1.8 2011/02/19 19:49:48 grobian Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -95,8 +95,7 @@ src_configure() {
 
 	# --with-mem-debug causes unusual segmentation faults (bug #105120).
 
-	local myconf="--with-zlib=${EPREFIX}/usr
-		--with-html-subdir=${PF}/html
+	local myconf="--with-html-subdir=${PF}/html
 		--docdir=${EPREFIX}/usr/share/doc/${PF}
 		$(use_with debug run-debug)
 		$(use_with icu)
