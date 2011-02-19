@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.170 2011/01/12 18:37:32 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.171 2011/02/19 17:23:00 scarabeus Exp $
+
+*curl-7.21.4 (19 Feb 2011)
+*curl-7.21.3-r1 (19 Feb 2011)
+
+  19 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -curl-7.21.2.ebuild,
+  -curl-7.21.3.ebuild, +curl-7.21.3-r1.ebuild,
+  +files/curl-7.21.3-buffer-overflow.patch, +curl-7.21.4.ebuild,
+  +files/curl-respect-cflags.patch:
+  Revision bump to fix tftpd per bug #351478. Version bump to fix bug #343681
+  and bug #337506.
 
 *curl-7.21.3 (12 Jan 2011)
 

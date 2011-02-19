@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.3.ebuild,v 1.1 2011/01/12 18:37:32 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.3-r1.ebuild,v 1.1 2011/02/19 17:23:00 scarabeus Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -55,7 +55,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.20.0-strip-ldflags.patch \
 		"${FILESDIR}"/${PN}-7.19.7-test241.patch \
-		"${FILESDIR}"/${PN}-7.18.2-prefix.patch
+		"${FILESDIR}"/${PN}-7.18.2-prefix.patch \
+		"${FILESDIR}"/${PN}-7.21.3-buffer-overflow.patch
 
 	eprefixify curl-config.in
 	# for FreeMiNT
