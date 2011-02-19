@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.74 2011/01/25 16:09:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.75 2011/02/19 19:12:52 hwoarang Exp $
+
+  19 Feb 2011; Markos Chandras <hwoarang@gentoo.org> libgpg-error-1.10.ebuild:
+  Stable on amd64 wrt bug #355265
 
   25 Jan 2011; Jeremy Olexa <darkside@gentoo.org> libgpg-error-1.10.ebuild:
   Port changes from Gentoo Prefix, use ED, add KEYWORDS. Fixes bug 352228
