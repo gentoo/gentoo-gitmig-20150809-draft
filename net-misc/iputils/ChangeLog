@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.95 2011/01/07 20:57:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.96 2011/02/19 18:09:48 vapier Exp $
+
+*iputils-20101006 (19 Feb 2011)
+
+  19 Feb 2011; Mike Frysinger <vapier@gentoo.org> +iputils-20101006.ebuild,
+  +files/iputils-20101006-tracepath-error-typo.patch, iputils-99999999.ebuild:
+  Version bump, and unify git/non-git ebuilds in the process.
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> iputils-20100418-r1.ebuild:
   stable ppc, bug 342277

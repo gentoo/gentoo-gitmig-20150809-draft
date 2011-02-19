@@ -1,0 +1,29 @@
+http://bugs.gentoo.org/355337
+
+From 171324751917bd9c000077edffba9681f7181843 Mon Sep 17 00:00:00 2001
+From: Jeroen Roovers <jer@gentoo.org>
+Date: Sat, 19 Feb 2011 12:47:44 -0500
+Subject: [PATCH] tracepath: fix typo in -l error message
+
+Signed-off-by: Jeroen Roovers <jer@gentoo.org>
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ tracepath.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/tracepath.c b/tracepath.c
+index 0a14b1b..90e1b28 100644
+--- a/tracepath.c
++++ b/tracepath.c
+@@ -306,7 +306,7 @@ main(int argc, char **argv)
+ 			break;
+ 		case 'l':
+ 			if ((mtu = atoi(optarg)) <= overhead) {
+-				fprintf(stderr, "Error: length must be >= %d\n", overhead);
++				fprintf(stderr, "Error: length must be > %d\n", overhead);
+ 				exit(1);
+ 			}
+ 			break;
+-- 
+1.7.4.1
+
