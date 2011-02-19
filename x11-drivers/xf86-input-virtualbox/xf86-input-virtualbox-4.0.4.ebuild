@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.0.ebuild,v 1.3 2011/01/08 17:21:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.4.ebuild,v 1.1 2011/02/19 08:37:01 polynomial-c Exp $
 
 EAPI=2
 
@@ -14,12 +14,11 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="hal"
+IUSE=""
 
 RDEPEND="x11-base/xorg-server
 	|| ( x11-drivers/xf86-input-mouse
-	    x11-drivers/xf86-input-evdev )
-	hal? ( sys-apps/hal )"
+	    x11-drivers/xf86-input-evdev )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.5-r1
 	>=dev-lang/yasm-0.6.2
@@ -69,21 +68,26 @@ src_install() {
 		insinto /usr/$(get_libdir)/xorg/modules/input
 
 		# xorg-server-1.9
-		if has_version ">=x11-base/xorg-server-1.9" ; then
+		if has_version "=x11-base/xorg-server-1.9*" ; then
 				newins vboxmouse_drv_19.so vboxmouse_drv.so
 		# xorg-server-1.8
-		elif has_version ">=x11-base/xorg-server-1.8" ; then
+		elif has_version "=x11-base/xorg-server-1.8*" ; then
 				newins vboxmouse_drv_18.so vboxmouse_drv.so
 		# xorg-server-1.7
 		else
 				newins vboxmouse_drv_17.so vboxmouse_drv.so
 		fi
 
-		# install hal information file about the mouse driver
-		if use hal; then
-			cd "${S}/src/VBox/Additions/linux/installer"
-			insinto /etc/hal/fdi/policy
-			doins 90-vboxguest.fdi
+		cd "${S}/src/VBox/Additions/linux/installer" || die
+
+		if has_version ">=x11-base/xorg-server-1.8" ; then
+			# install udev information file about the mouse driver
+			insinto /etc/udev/rules.d
+			doins 70-xorg-vboxmouse.rules
+
+			# install X11 information file about the mouse driver
+			insinto /etc/X11/xorg.conf.d
+			doins "${S}/src/VBox/Additions/x11/Installer/50-vboxmouse.conf"
 		fi
 }
 
@@ -94,9 +98,6 @@ pkg_postinst() {
 		elog ""
 		elog "in the Core Pointer's InputDevice section (Section \"InputDevice\")"
 		elog ""
-		elog "Up to version 1.8, X.Org Server can do mouse auto-detection."
-		elog "This ebuild provides a working default which has been installed into:"
-		elog "    /etc/hal/fdi/policy/90-vboxguest.fdi"
 		elog "This is no longer necessary for X.Org Server 1.9 or higher. Use"
 		elog "the server's udev autodetection with such versions."
 }
