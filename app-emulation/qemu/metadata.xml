@@ -6,14 +6,21 @@
   <email>lu_zero@gentoo.org</email>
 </maintainer>
 <use>
-		<flag name='kqemu'>Enables the kernel acceleration module on a x86/x86-64 cpu</flag>
-		<flag name='kvm'>Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware</flag>
-		<flag name='alsa'>Enable alsa output for sound emulation</flag>
-		<flag name='esd'>Enable esound output for sound emulation</flag>
-		<flag name='gnutls'>Enable TLS support for the VNC console server</flag>
-		<flag name='ncurses'>Enable the ncurses-based console</flag>
-		<flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
-		<flag name='sdl'>Enable the SDL-based console</flag>
-		<flag name='vde'>Enable Virtual Distributed Ethernet (VDE) based networking</flag>
+	<flag name='aio'>Enables support for Linux's Async IO</flag>
+    <flag name='brltty'>Adds support for braille displays using brltty</flag>
+    <flag name='fdt'>Enables firmware device tree support</flag>
+	<flag name='kqemu'>Enables the kernel acceleration module on a x86/x86-64 cpu</flag>
+	<flag name='kvm'>Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware</flag>
+	<flag name='alsa'>Enable alsa output for sound emulation</flag>
+	<flag name='esd'>Enable esound output for sound emulation</flag>
+	<flag name='gnutls'>Enable TLS support for the VNC console server</flag>
+	<flag name='ncurses'>Enable the ncurses-based console</flag>
+	<flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
+	<flag name='qemu-ifup'>Provides the qemu-ifup script for use with
+						   QEMU's built in bridging</flag>
+	<flag name='sdl'>Enable the SDL-based console</flag>
+	<flag name='static'>Enable static build, useful to chroot in user-mode
+						emulation</flag>
+	<flag name='vde'>Enable Virtual Distributed Ethernet (VDE) based networking</flag>
 </use>
 </pkgmetadata>
