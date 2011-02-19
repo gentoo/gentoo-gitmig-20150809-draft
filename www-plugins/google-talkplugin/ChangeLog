@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/google-talkplugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.1 2011/02/15 20:36:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.2 2011/02/19 18:41:08 alexxy Exp $
+
+  19 Feb 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  google-talkplugin-1.8.0.0.ebuild:
+  Add ~amd64 keyword since it works here
 
 *google-talkplugin-1.8.0.0 (15 Feb 2011)
 
