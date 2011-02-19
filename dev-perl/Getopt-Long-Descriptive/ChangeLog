@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Getopt-Long-Descriptive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/ChangeLog,v 1.16 2011/02/08 07:22:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long-Descriptive/ChangeLog,v 1.17 2011/02/19 18:45:00 xarthisius Exp $
+
+  19 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  Getopt-Long-Descriptive-0.89.ebuild:
+  Mark ~ppc wrt #345435
 
 *Getopt-Long-Descriptive-0.89 (08 Feb 2011)
 
