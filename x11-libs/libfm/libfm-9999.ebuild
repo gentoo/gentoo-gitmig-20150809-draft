@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.10 2011/02/16 16:16:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.11 2011/02/19 23:23:44 hwoarang Exp $
 
 EAPI=2
 
@@ -12,6 +12,7 @@ else
 	inherit autotools
 	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86"
+	S="${WORKDIR}"
 fi
 
 inherit fdo-mime
@@ -41,7 +42,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	if ! use doc; then
-		sed -ie '/SUBDIRS=/s#docs##' "${WORKDIR}"/Makefile.am || die "sed failed"
+		sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
 		sed -ie '/^[[:space:]]*docs/d' configure.ac || die "sed failed"
 	else
 		gtkdocize --copy || die
