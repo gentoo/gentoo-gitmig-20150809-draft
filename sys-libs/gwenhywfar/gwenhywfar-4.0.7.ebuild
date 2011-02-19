@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.0.1.ebuild,v 1.1 2010/11/03 12:17:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.0.7.ebuild,v 1.1 2011/02/19 08:57:38 ssuominen Exp $
 
 EAPI=2
 
 DESCRIPTION="A multi-platform helper library for other libraries"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
-SRC_URI="http://www.aquamaniac.de/sites/download/download.php?package=01&release=54&file=01&dummy=${P}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://www.aquamaniac.de/sites/download/download.php?package=01&release=59&file=01&dummy=${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -27,9 +27,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )"
 
+# broken upstream, reported but got no reply
+RESTRICT="test"
+
 src_configure() {
 	local guis
-	use fox && guis="${guis} fox"
+	use fox && guis="${guis} fox16"
 	use gtk && guis="${guis} gtk2"
 	use qt4 && guis="${guis} qt4"
 

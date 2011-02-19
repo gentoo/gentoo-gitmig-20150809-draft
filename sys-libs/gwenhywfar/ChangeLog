@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.85 2011/02/18 12:25:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.86 2011/02/19 08:57:38 ssuominen Exp $
+
+*gwenhywfar-4.0.7 (19 Feb 2011)
+
+  19 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +gwenhywfar-4.0.7.ebuild:
+  Version bump.
 
   18 Feb 2011; Hanno Boeck <hanno@gentoo.org> gwenhywfar-4.0.2.ebuild:
   Restrict tests, they are broken in upstream's package.
