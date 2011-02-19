@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.1.ebuild,v 1.1 2011/01/29 22:44:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.1.ebuild,v 1.2 2011/02/19 11:34:07 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
-inherit eutils
+inherit eutils python
 
 DESCRIPTION="Telepathy Mission Control"
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -27,6 +28,14 @@ DEPEND="${RDEPEND}
 
 # Tests are broken, see upstream bug #29334
 RESTRICT="test"
+
+pkg_setup() {
+	python_set_active_version 2
+}
+
+src_prepare() {
+	python_convert_shebangs -r 2 .
+}
 
 src_configure() {
 	# creds is not available and no support mcd-plugins for now
