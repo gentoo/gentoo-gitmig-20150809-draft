@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.70 2010/11/29 17:07:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.71 2011/02/19 10:12:42 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
 # Copyright 2004-2005 Mamoru Komachi <usata@gentoo.org>
 # Copyright 2007-2008 Christian Faulhammer <fauli@gentoo.org>
-# Copyright 2007-2010 Ulrich Müller <ulm@gentoo.org>
+# Copyright 2007-2011 Ulrich Müller <ulm@gentoo.org>
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -284,7 +284,7 @@ elisp-site-file-install() {
 		|| ewarn "elisp-site-file-install: bad name of site-init file"
 	sf="${T}/${sf/%-gentoo*.el/-gentoo.el}"
 	ebegin "Installing site initialisation file for GNU Emacs"
-	[[ $1 = ${sf} ]] || cp "$1" "${sf}"
+	[[ $1 = "${sf}" ]] || cp "$1" "${sf}"
 	sed -i -e "1{:x;/^\$/{n;bx;};/^;.*${PN}/I!s:^:${header}\n\n:;1s:^:\n:;}" \
 		-e "s:@SITELISP@:${EPREFIX}${SITELISP}/${my_pn}:g" \
 		-e "s:@SITEETC@:${EPREFIX}${SITEETC}/${my_pn}:g;\$q" "${sf}"
