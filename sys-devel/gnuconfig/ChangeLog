@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.53 2011/02/06 11:35:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.54 2011/02/19 17:40:01 vapier Exp $
+
+*gnuconfig-20110202 (19 Feb 2011)
+
+  19 Feb 2011; Mike Frysinger <vapier@gentoo.org> +gnuconfig-20110202.ebuild:
+  Version bump.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> gnuconfig-20100403.ebuild,
   gnuconfig-20100924.ebuild:
