@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.1-r1.ebuild,v 1.1 2011/02/14 22:27:08 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.1-r1.ebuild,v 1.2 2011/02/19 08:50:22 billie Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ MY_PV=20110209
 DESCRIPTION="PFL is an online searchable file/package database for Gentoo"
 HOMEPAGE="http://www.portagefilelist.de/index.php/Special:PFLQuery2"
 SRC_URI="http://files.portagefilelist.de/${P}
-	http://linuxfire.com.cn/~lily/e-file-${MY_PV}"
+	http://files.portagefilelist.de/e-file-${MY_PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,8 +25,6 @@ RDEPEND="${DEPEND}
 	dev-python/pyxml
 	net-misc/curl
 	sys-apps/portage"
-
-RESTRICT="mirror"
 
 pkg_setup() {
 	python_set_active_version 2

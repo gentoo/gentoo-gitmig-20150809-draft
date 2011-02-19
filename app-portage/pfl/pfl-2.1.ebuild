@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.1.ebuild,v 1.4 2011/01/02 14:48:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.1.ebuild,v 1.5 2011/02/19 08:50:22 billie Exp $
 
 EAPI=3
 
@@ -25,8 +25,6 @@ RDEPEND="${DEPEND}
 	dev-python/pyxml
 	net-misc/curl
 	sys-apps/portage"
-
-RESTRICT="mirror"
 
 pkg_setup() {
 	python_set_active_version 2

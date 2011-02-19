@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.22 2011/02/14 22:27:08 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.23 2011/02/19 08:50:22 billie Exp $
+
+  19 Feb 2011; Daniel Pielmeier <billie@gentoo.org> pfl-2.1.ebuild,
+  pfl-2.1-r1.ebuild:
+  Use a more reliable SRC_URI for e-file. This fixes bug #355391. Thanks to
+  Azamat H. Hackimov for reporting. Remove mirror restriction.
 
 *pfl-2.1-r1 (14 Feb 2011)
 
