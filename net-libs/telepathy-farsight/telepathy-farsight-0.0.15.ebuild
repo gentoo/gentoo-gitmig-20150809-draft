@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/telepathy-farsight-0.0.15.ebuild,v 1.2 2011/02/19 11:24:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/telepathy-farsight-0.0.15.ebuild,v 1.3 2011/02/19 13:35:24 arfrever Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="python? 2:2.6"
 
 inherit python
 
@@ -28,11 +28,16 @@ RDEPEND=">=dev-libs/glib-2.16:2
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
-	python_convert_shebangs -r 2 .
+	if use python; then
+		python_convert_shebangs -r 2 .
+	fi
 }
 
 src_configure() {
