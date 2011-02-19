@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libassa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.10 2010/05/28 15:16:46 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.11 2011/02/19 17:11:13 angelos Exp $
+
+  19 Feb 2011; <angelos@gentoo.org> libassa-3.5.0.ebuild,
+  +files/libassa-3.5.0-ldflags.patch:
+  Respect LDFLAGS (bug #335545)
 
   28 May 2010; Christoph Mende <angelos@gentoo.org> libassa-3.5.0.ebuild,
   +files/libassa-3.5.0-fix-tests.patch:
