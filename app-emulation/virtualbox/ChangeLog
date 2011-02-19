@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.60 2011/02/03 07:50:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.61 2011/02/19 08:35:21 polynomial-c Exp $
+
+*virtualbox-4.0.4 (18 Feb 2011)
+
+  18 Feb 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-4.0.0-r1.ebuild,
+  -files/virtualbox-4.0.0-restore_old_machines_dir.patch,
+  +virtualbox-4.0.4.ebuild, +files/virtualbox-4-vnc.patch:
+  Version bump. Removed old. Readded vnc USE flag as requested by Branko Majic
+  in bug #355481.
 
   03 Feb 2011; Thomas Kahle <tomka@gentoo.org> virtualbox-3.2.12-r4.ebuild:
   x86 stable per bug 336465

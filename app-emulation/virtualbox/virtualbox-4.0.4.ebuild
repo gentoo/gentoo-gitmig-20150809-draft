@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.0-r1.ebuild,v 1.6 2011/01/21 16:52:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4.ebuild,v 1.1 2011/02/19 08:35:21 polynomial-c Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 sdk vboxwebsrv"
+IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -46,7 +46,8 @@ RDEPEND="!app-emulation/virtualbox-bin
 		x11-libs/libXmu
 		x11-libs/libXt
 		media-libs/libsdl[X,video]
-	)"
+	)
+	vnc? ( >=net-libs/libvncserver-0.9.7 )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.5-r1
 	>=dev-lang/yasm-0.6.2
@@ -144,7 +145,10 @@ src_prepare() {
 		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
-	epatch "${FILESDIR}/${PN}-4.0.0-restore_old_machines_dir.patch"
+	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
+
+	# add the --enable-vnc option to configure script (bug #348204)
+	epatch "${FILESDIR}/${PN}-4-vnc.patch"
 
 	# add correct java path
 	if use java ; then
@@ -161,6 +165,7 @@ src_configure() {
 	use python     || myconf+=" --disable-python"
 	use java       || myconf+=" --disable-java"
 	use vboxwebsrv && myconf+=" --enable-webservice"
+	use vnc        && myconf+=" --enable-vnc"
 	use doc        || myconf+=" --disable-docs"
 	if ! use headless ; then
 		use qt4 || myconf+=" --disable-qt4"
@@ -189,8 +194,8 @@ src_compile() {
 		TOOL_GCC3_AS="$(tc-getCC)" TOOL_GCC3_AR="$(tc-getAR)" \
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
 		TOOL_GCC3_CFLAGS="${CFLAGS}" TOOL_GCC3_CXXFLAGS="${CXXFLAGS}" \
-		TOOL_YASM_AS=yasm KBUILD_PATH="${S}/kBuild" \
 		VBOX_GCC_OPT="${CXXFLAGS}" \
+		TOOL_YASM_AS=yasm KBUILD_PATH="${S}/kBuild" \
 		all || die "kmk failed"
 }
 
@@ -290,6 +295,9 @@ src_install() {
 	if ! use headless && use qt4 ; then
 		doins -r nls
 	fi
+
+	# VRDPAuth only works with this (bug #351949)
+	dosym VBoxAuth.so  /usr/$(get_libdir)/${PN}/VRDPAuth.so
 
 	# set an env-variable for 3rd party tools
 	echo -n "VBOX_APP_HOME=/usr/$(get_libdir)/${PN}" > "${T}/90virtualbox"

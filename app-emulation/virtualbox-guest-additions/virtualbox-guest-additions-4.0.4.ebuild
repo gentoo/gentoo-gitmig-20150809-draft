@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.0.ebuild,v 1.3 2011/01/08 17:23:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.4.ebuild,v 1.1 2011/02/19 08:37:58 polynomial-c Exp $
 
 EAPI=2
 

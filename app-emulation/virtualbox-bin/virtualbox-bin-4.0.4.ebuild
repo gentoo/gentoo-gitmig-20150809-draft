@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.0-r1.ebuild,v 1.3 2011/01/07 21:31:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.4.ebuild,v 1.1 2011/02/19 08:34:49 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-69151
+MY_PV=${PV}-70112
 SDK_PV=${MY_PV}
 MY_P=VirtualBox-${MY_PV}-Linux
 EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
