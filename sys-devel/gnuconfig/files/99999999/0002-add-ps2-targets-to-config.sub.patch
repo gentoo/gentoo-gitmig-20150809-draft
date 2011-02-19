@@ -1,4 +1,4 @@
-From c3b83311b9633d326fb05b236b563b77613421c4 Mon Sep 17 00:00:00 2001
+From 2a8ea33368fa9084a964d5776d015ffbbf8cc570 Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Thu, 9 Oct 2008 15:51:35 -0400
 Subject: [PATCH 2/2] add ps2 targets to config.sub
@@ -8,7 +8,7 @@ Subject: [PATCH 2/2] add ps2 targets to config.sub
  1 files changed, 20 insertions(+), 2 deletions(-)
 
 diff --git a/config.sub b/config.sub
-index 320e303..216604d 100755
+index 83da356..eda465b 100755
 --- a/config.sub
 +++ b/config.sub
 @@ -253,7 +253,7 @@ case $basic_machine in
@@ -55,5 +55,5 @@ index 320e303..216604d 100755
  	      | -morphos* | -superux* | -rtmk* | -rtmk-nova* | -windiss* \
  	      | -powermax* | -dnix* | -nx6 | -nx7 | -sei* | -dragonfly* \
 -- 
-1.7.3
+1.7.4.1
 
