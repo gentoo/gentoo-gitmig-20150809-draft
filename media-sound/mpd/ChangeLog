@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.237 2011/01/14 09:36:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.238 2011/02/19 23:00:28 angelos Exp $
+
+*mpd-0.16.1-r2 (19 Feb 2011)
+
+  19 Feb 2011; <angelos@gentoo.org> -mpd-0.15.9.ebuild, -mpd-0.15.10.ebuild,
+  -mpd-0.15.12-r2.ebuild, -mpd-0.15.13.ebuild, +mpd-0.16.1-r2.ebuild,
+  metadata.xml:
+  Updated the 0.16.1 ebuild to EAPI4 and removed old versions
 
 *mpd-0.16.1-r1 (14 Jan 2011)
 
