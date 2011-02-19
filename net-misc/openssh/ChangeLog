@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.414 2011/02/13 11:59:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.415 2011/02/19 18:20:47 vapier Exp $
+
+  19 Feb 2011; Mike Frysinger <vapier@gentoo.org> -openssh-5.8_p1.ebuild,
+  openssh-5.8_p1-r1.ebuild:
+  We want openssh-5.8_p1-r1 going stable.
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> openssh-5.8_p1.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #353673
