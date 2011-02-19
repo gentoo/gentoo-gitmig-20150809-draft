@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/aqbanking
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.85 2010/11/12 09:49:36 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.86 2011/02/19 09:07:41 ssuominen Exp $
+
+*aqbanking-5.0.4 (19 Feb 2011)
+
+  19 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +aqbanking-5.0.4.ebuild:
+  Version bump.
 
   12 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   aqbanking-4.2.0.ebuild, aqbanking-4.2.3.ebuild, aqbanking-4.2.4.ebuild:
