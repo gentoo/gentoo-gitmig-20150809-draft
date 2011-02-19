@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/Email-Abstract-3.003.ebuild,v 1.2 2010/12/05 18:46:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/Email-Abstract-3.003.ebuild,v 1.3 2011/02/19 18:56:29 xarthisius Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ inherit perl-module
 DESCRIPTION="unified interface to mail representations"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-perl/MRO-Compat

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.18 2011/01/14 18:34:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.19 2011/02/19 18:53:12 xarthisius Exp $
+
+  19 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> Class-C3-0.23.ebuild:
+  Mark ~ppc64 wrt #345439
 
   14 Jan 2011; Torsten Veller <tove@gentoo.org> -Class-C3-0.21.ebuild,
   -Class-C3-0.22.ebuild:
