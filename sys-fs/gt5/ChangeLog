@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/gt5
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.8 2008/06/13 09:24:44 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gt5/ChangeLog,v 1.9 2011/02/19 16:58:43 angelos Exp $
+
+*gt5-1.4.0-r2 (19 Feb 2011)
+
+  19 Feb 2011; <angelos@gentoo.org> +gt5-1.4.0-r2.ebuild,
+  +files/gt5-1.4.0-empty-dirs.patch:
+  Fixed "directory seems to be empty" (bug #350114)
 
   13 Jun 2008; Raúl Porcel <armin76@gentoo.org> gt5-1.4.0-r1.ebuild:
   x86 stable wrt #225353
