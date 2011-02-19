@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-9999.ebuild,v 1.1 2011/01/31 05:49:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-9999.ebuild,v 1.2 2011/02/19 23:37:19 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.11"
@@ -22,7 +22,7 @@ if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 	DEPEND=">=dev-util/gtk-doc-1.13"
 else
-	KEYWORDS="~amd64 ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
