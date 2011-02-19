@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/fudge
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/ChangeLog,v 1.1 2011/02/19 16:59:44 arfrever Exp $
+
+*fudge-1.0.0 (19 Feb 2011)
+
+  19 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +fudge-1.0.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
