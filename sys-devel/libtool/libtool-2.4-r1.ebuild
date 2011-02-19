@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4-r1.ebuild,v 1.1 2010/11/29 15:12:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4-r1.ebuild,v 1.2 2011/02/19 17:30:19 vapier Exp $
 
 EAPI="3"
 
@@ -18,11 +18,11 @@ IUSE="vanilla"
 
 RDEPEND="sys-devel/gnuconfig
 	!<sys-devel/autoconf-2.62:2.5
-	!<sys-devel/automake-1.10.1:1.10
+	!<sys-devel/automake-1.11.1
 	!=sys-devel/libtool-2*:1.5"
 DEPEND="${RDEPEND}
 	>=sys-devel/binutils-2.20
-	|| ( app-arch/xz-utils app-arch/lzma-utils )"
+	app-arch/xz-utils"
 
 src_prepare() {
 	if ! use vanilla ; then
