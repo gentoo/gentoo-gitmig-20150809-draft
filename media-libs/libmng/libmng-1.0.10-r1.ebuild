@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10-r1.ebuild,v 1.1 2011/02/19 18:25:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.10-r1.ebuild,v 1.2 2011/02/19 18:31:42 ssuominen Exp $
 
 EAPI=3
 inherit autotools
@@ -37,7 +37,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
 
 	dodoc CHANGES README*
 	dodoc doc/doc.readme doc/libmng.txt
