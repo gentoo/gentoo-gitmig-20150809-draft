@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.8 2011/01/30 17:53:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.9 2011/02/19 16:36:39 scarabeus Exp $
 
 EAPI="1"
 
@@ -110,16 +110,16 @@ RDEPEND="
 	sane_backends_mustek_pp? ( sys-libs/libieee1284 )
 	usb? ( virtual/libusb:0 )
 	gphoto2? (
-				media-libs/libgphoto2
-				virtual/jpeg
-			)
+		media-libs/libgphoto2
+		virtual/jpeg
+	)
 	v4l? ( media-libs/libv4l )"
 
 DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
 	doc? (
 		virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex )
+		|| ( dev-texlive/texlive-latexextra app-text/ptex )
 	)
 	>=sys-apps/sed-4"
 
@@ -181,7 +181,7 @@ src_compile() {
 		$(use_with gphoto2) \
 		$(use_enable ipv6) \
 		$(use_enable avahi) \
-		${myconf} || die "econf failed"
+		${myconf}
 
 	emake VARTEXFONTS="${T}/fonts" || die
 
