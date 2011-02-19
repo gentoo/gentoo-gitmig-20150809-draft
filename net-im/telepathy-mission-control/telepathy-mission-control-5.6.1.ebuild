@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.1.ebuild,v 1.2 2011/02/19 11:34:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.1.ebuild,v 1.3 2011/02/19 12:52:41 arfrever Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.5"
 
-inherit eutils python
+inherit python
 
 DESCRIPTION="Telepathy Mission Control"
 HOMEPAGE="http://telepathy.freedesktop.org"
@@ -23,8 +23,7 @@ RDEPEND=">=net-libs/telepathy-glib-0.11.9
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
-	test? ( >=virtual/python-2.5
-		dev-python/twisted-words )"
+	test? ( dev-python/twisted-words )"
 
 # Tests are broken, see upstream bug #29334
 RESTRICT="test"
