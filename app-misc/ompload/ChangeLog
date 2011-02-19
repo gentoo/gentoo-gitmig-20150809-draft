@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ompload
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.16 2011/02/13 19:21:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.17 2011/02/19 15:13:44 xmw Exp $
+
+*ompload-20101220 (18 Feb 2011)
+
+  18 Feb 2011; Michael Weber <xmw@gentoo.org> -ompload-226.ebuild,
+  -ompload-226-r1.ebuild, +ompload-20101220.ebuild:
+  Version bump
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> ompload-226.ebuild,
   ompload-226-r1.ebuild, ompload-20100909.ebuild:
