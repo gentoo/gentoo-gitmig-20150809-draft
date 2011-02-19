@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.76.0.ebuild,v 1.1 2010/09/04 15:15:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.76.1.ebuild,v 1.1 2011/02/19 21:18:01 flameeyes Exp $
 
 DESCRIPTION="XSL Stylesheets for Docbook"
 HOMEPAGE="http://wiki.docbook.org/topic/DocBookXslStylesheets"
@@ -27,8 +27,7 @@ src_test() {
 
 src_install() {
 	# Create the installation directory
-	DEST="/usr/share/sgml/docbook/xsl-stylesheets"
-	insinto ${DEST}
+	insinto /usr/share/sgml/docbook/xsl-stylesheets
 
 	local i
 	for sheet in $(find . -maxdepth 1 -mindepth 1 -type d); do
