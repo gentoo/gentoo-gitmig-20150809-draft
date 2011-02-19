@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.276 2011/02/15 03:44:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.277 2011/02/19 17:20:15 vapier Exp $
+
+  19 Feb 2011; Mike Frysinger <vapier@gentoo.org> bash-4.2.ebuild,
+  +files/bash-4.2-patmatch.patch, +files/bash-4.2-rhs-split.patch,
+  +files/bash-4.2-vidomove.patch:
+  Add some fixes from upstream.
 
 *bash-4.2 (15 Feb 2011)
 

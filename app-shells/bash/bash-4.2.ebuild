@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2.ebuild,v 1.1 2011/02/15 03:44:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2.ebuild,v 1.2 2011/02/19 17:20:15 vapier Exp $
 
 EAPI="1"
 
@@ -69,6 +69,10 @@ src_unpack() {
 	cd lib/readline
 	[[ ${READLINE_PLEVEL} -gt 0 ]] && epatch $(patches -s ${READLINE_PLEVEL} readline ${READLINE_VER})
 	cd ../..
+
+	epatch "${FILESDIR}"/${P}-patmatch.patch
+	epatch "${FILESDIR}"/${P}-vidomove.patch
+	epatch "${FILESDIR}"/${P}-rhs-split.patch
 }
 
 src_compile() {

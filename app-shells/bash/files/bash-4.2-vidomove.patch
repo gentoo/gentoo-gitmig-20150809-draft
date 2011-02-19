@@ -1,0 +1,27 @@
+*** ../bash-4.2/lib/readline/vi_mode.c	2010-11-20 19:51:39.000000000 -0500
+--- lib/readline/vi_mode.c	2011-02-17 20:24:25.000000000 -0500
+***************
+*** 1115,1119 ****
+        _rl_vi_last_motion = c;
+        RL_UNSETSTATE (RL_STATE_VIMOTION);
+!       return (0);
+      }
+  #if defined (READLINE_CALLBACKS)
+--- 1115,1119 ----
+        _rl_vi_last_motion = c;
+        RL_UNSETSTATE (RL_STATE_VIMOTION);
+!       return (vidomove_dispatch (m));
+      }
+  #if defined (READLINE_CALLBACKS)
+*** ../bash-4.2/lib/readline/callback.c	2010-06-06 12:18:58.000000000 -0400
+--- lib/readline/callback.c	2011-02-17 20:43:28.000000000 -0500
+***************
+*** 149,152 ****
+--- 149,155 ----
+  	  /* Should handle everything, including cleanup, numeric arguments,
+  	     and turning off RL_STATE_VIMOTION */
++ 	  if (RL_ISSTATE (RL_STATE_NUMERICARG) == 0)
++ 	    _rl_internal_char_cleanup ();
++ 
+  	  return;
+  	}
