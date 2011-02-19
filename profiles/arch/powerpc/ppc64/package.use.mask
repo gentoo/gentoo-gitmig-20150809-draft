@@ -1,10 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.36 2011/02/10 07:18:11 xarthisius Exp $
-
-# Pacho Ramos <pacho@gentoo.org> (04 Feb 2011)
-# media-fonts/texcm-ttf not stable on ppc64
-x11-libs/gtkmathview mathml
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.37 2011/02/19 13:53:14 xarthisius Exp $
 
 # Alexey Shvetsov <alexxy#gentoo.org> (26 Jan 2011)
 # Mask gps for marble
