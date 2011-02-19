@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.316 2011/02/16 22:23:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.317 2011/02/19 10:03:50 xarthisius Exp $
+
+  19 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  linux-headers-2.6.36.1.ebuild:
+  ppc/ppc64 stable wrt #352335
 
   16 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   linux-headers-2.6.36.1.ebuild:
