@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.5 2011/02/19 20:30:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110128.ebuild,v 1.1 2011/02/19 20:30:46 chithanh Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ else
 fi
 
 LICENSE="GPL-1 GPL-2 GPL-3 BSD freedist"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 

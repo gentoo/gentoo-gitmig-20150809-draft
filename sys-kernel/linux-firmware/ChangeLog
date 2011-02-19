@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linux-firmware
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.6 2010/10/20 18:24:47 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.7 2011/02/19 20:30:46 chithanh Exp $
+
+*linux-firmware-20110128 (19 Feb 2011)
+
+  19 Feb 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +linux-firmware-20110128.ebuild, linux-firmware-99999999.ebuild:
+  New snapshot. Add more blockers, bug #274343. Unify live and snaphot
+  ebuilds.
 
 *linux-firmware-20100930 (20 Oct 2010)
 
