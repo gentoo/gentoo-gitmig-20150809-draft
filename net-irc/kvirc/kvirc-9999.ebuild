@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.27 2010/12/31 16:29:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.28 2011/02/19 12:46:02 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -70,15 +70,14 @@ src_prepare() {
 
 src_configure() {
 	local libdir="$(get_libdir)"
-	local mycmakeargs="
-		-DCMAKE_INSTALL_PREFIX=/usr
-		-DCOEXISTENCE=1
+	local mycmakeargs=(
 		-DLIB_SUFFIX=${libdir#lib}
 		-DMANUAL_REVISION=${VERSIO_PRAESENS}
-		-DUSE_ENV_FLAGS=1
-		-DVERBOSE=1
+		-DWANT_COEXISTENCE=1
 		-DWANT_CRYPT=1
-		-DWANT_NO_EMBEDDED_CODE=1
+		-DWANT_CRYPTOPP=1
+		-DWANT_ENV_FLAGS=1
+		-DWANT_VERBOSE=1
 		$(cmake-utils_use_want audiofile AUDIOFILE)
 		$(cmake-utils_use_want dcc_video DCC_VIDEO)
 		$(cmake-utils_use_want dcc_voice DCC_VOICE)
@@ -98,7 +97,8 @@ src_configure() {
 		$(cmake-utils_use_want qt-webkit QTWEBKIT)
 		$(cmake-utils_use_want ssl OPENSSL)
 		$(cmake-utils_use_want theora OGG_THEORA)
-		$(cmake-utils_use_want transparency TRANSPARENCY)"
+		$(cmake-utils_use_want transparency TRANSPARENCY)
+	)
 
 	cmake-utils_src_configure
 }
