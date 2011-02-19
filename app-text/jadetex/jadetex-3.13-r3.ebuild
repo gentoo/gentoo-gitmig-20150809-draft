@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r3.ebuild,v 1.2 2010/11/24 13:45:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r3.ebuild,v 1.3 2011/02/19 18:54:21 aballier Exp $
 
 inherit latex-package texlive-common
 
@@ -48,9 +48,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ "$ROOT" = "/" ] && [ -x /usr/sbin/texmf-update ] ; then
-		/usr/sbin/texmf-update
-	fi
+	etexmf-update
 	elog
 	elog "If jadetex fails with \"TeX capacity exceeded, sorry [save size=5000]\","
 	elog "increase save_size in /etc/texmf/texmf.d/80jadetex.cnf and."
@@ -59,7 +57,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ "$ROOT" = "/" ] && [ -x /usr/sbin/texmf-update ] ; then
-		/usr/sbin/texmf-update
-	fi
+	etexmf-update
 }
