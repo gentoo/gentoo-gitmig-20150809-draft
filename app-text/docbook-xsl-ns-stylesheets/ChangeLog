@@ -1,6 +1,14 @@
 # ChangeLog for app-text/docbook-xsl-ns-stylesheets
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.21 2010/09/04 15:18:41 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.22 2011/02/19 20:55:49 flameeyes Exp $
+
+*docbook-xsl-ns-stylesheets-1.76.1 (19 Feb 2011)
+
+  19 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  docbook-xsl-ns-stylesheets-1.75.2.ebuild,
+  -docbook-xsl-ns-stylesheets-1.76.0.ebuild,
+  +docbook-xsl-ns-stylesheets-1.76.1.ebuild:
+  Version bump (to fix a few issues with 1.76.0); fix repoman false positive.
 
 *docbook-xsl-ns-stylesheets-1.76.0 (04 Sep 2010)
 
