@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.119 2011/01/27 04:51:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.120 2011/02/19 12:31:23 blueness Exp $
+
+*valgrind-3.6.1 (19 Feb 2011)
+
+  19 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  +valgrind-3.6.1.ebuild, +files/valgrind-3.6.1-user-enable-qt4.patch:
+  Version bump, added patch to fix qtcore automagic
 
   27 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> valgrind-3.6.0.ebuild,
   +files/valgrind-3.6.0-glibc-2.13.patch,
