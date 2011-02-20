@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ps2pkm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.5 2010/12/01 18:10:37 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.6 2011/02/20 09:53:13 xarthisius Exp $
+
+  20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ps2pkm-1.5_p20100722.ebuild:
+  Marked ~ppc/~ppc64 wrt #342513
 
   01 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   ps2pkm-1.5_p20100722.ebuild:
