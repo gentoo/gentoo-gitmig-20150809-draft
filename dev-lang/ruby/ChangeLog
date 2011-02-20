@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.483 2011/02/20 11:04:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.484 2011/02/20 12:08:50 phajdan.jr Exp $
+
+  20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ruby-1.8.7_p334.ebuild:
+  x86 stable wrt security bug #355439
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ruby-1.8.7_p334.ebuild:
