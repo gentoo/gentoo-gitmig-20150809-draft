@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.87 2011/02/14 14:48:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.88 2011/02/20 12:17:00 scarabeus Exp $
+
+  20 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> libSM-1.2.0.ebuild:
+  Depend on new enough libICE. Per bug #355483.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> libSM-1.2.0.ebuild:
   ppc stable wrt #344827, #354237
