@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.111 2011/01/30 18:25:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.112 2011/02/20 17:36:23 maekke Exp $
+
+  20 Feb 2011; Markus Meier <maekke@gentoo.org> use.mask:
+  use.mask pdfannotextractor (needs java)
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask quvi

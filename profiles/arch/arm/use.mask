@@ -79,6 +79,7 @@ frei0r
 google-gadgets
 oracle
 libvirt
+pdfannotextractor
 
 # havent tested yet
 cupsddk
