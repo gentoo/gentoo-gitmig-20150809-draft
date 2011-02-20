@@ -1,23 +1,23 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1.ebuild,v 1.2 2010/11/07 21:34:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1.ebuild,v 1.3 2011/02/20 17:59:29 vapier Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=none
+# SDL support is disabled in this version by upstream
 
-inherit eutils toolchain-funcs autotools
+EAPI="2"
 
-DESCRIPTION="links is a fast lightweight text and graphic web-browser"
-HOMEPAGE="http://links.twibright.com/"
+inherit eutils autotools
+
 # To handle pre-version ...
 MY_P="${P/_/}"
-S="${WORKDIR}/${MY_P}"
+DESCRIPTION="links is a fast lightweight text and graphic web-browser"
+HOMEPAGE="http://links.twibright.com/"
 SRC_URI="http://links.twibright.com/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="bzip2 directfb fbcon gpm jpeg livecd png sdl ssl svga tiff unicode X zlib"
+IUSE="bzip2 directfb fbcon gpm jpeg livecd ssl svga tiff unicode X zlib"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
 # mode. libpng is required to compile links in graphic mode
@@ -25,46 +25,55 @@ IUSE="bzip2 directfb fbcon gpm jpeg livecd png sdl ssl svga tiff unicode X zlib"
 
 # We've also made USE=livecd compile in graphics mode.  This closes bug #75685.
 
+#	sdl? ( >=media-libs/libsdl-1.2.0 )
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
-	png? ( >=media-libs/libpng-1.4 )
 	jpeg? ( virtual/jpeg )
-	fbcon? ( >=media-libs/libpng-1.4
+	fbcon? (
+		>=media-libs/libpng-1.4
 		virtual/jpeg
-		sys-libs/gpm )
+		sys-libs/gpm
+	)
 	tiff? ( >=media-libs/tiff-3.5.7 )
-	svga? ( >=media-libs/svgalib-1.4.3
-		>=media-libs/libpng-1.4 )
-	X? ( x11-libs/libXext
-		>=media-libs/libpng-1.4 )
+	svga? (
+		>=media-libs/svgalib-1.4.3
+		>=media-libs/libpng-1.4
+	)
+	X? (
+		x11-libs/libXext
+		>=media-libs/libpng-1.4
+	)
 	directfb? ( dev-libs/DirectFB )
-	sdl? ( >=media-libs/libsdl-1.2.0 )
 	sys-libs/ncurses
-	livecd? ( >=media-libs/libpng-1.4
+	livecd? (
+		>=media-libs/libpng-1.4
 		virtual/jpeg
-		sys-libs/gpm )"
-
+		sys-libs/gpm
+	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack (){
-	unpack ${A}; cd "${S}"
+S="${WORKDIR}/${MY_P}"
 
-	epatch "${FILESDIR}"/configure-LANG.patch #131440
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng-1.5.patch
 
 	if use unicode ; then
-		cd "${S}/intl" && ./gen-intl && cd .. || die "gen-intl failed"
-		cd "${S}/intl" && ./synclang && cd .. || die "synclang failed"
+		pushd intl >/dev/null
+		./gen-intl || die
+		./synclang || die
+		popd >/dev/null
 	fi
-	# Upstream configure produced by broken autoconf-2.13. See #131440 and
-	# #103483#c23
-	eautoconf || die "autoconf failed"
+
+	# Upstream configure produced by broken autoconf-2.13.  See #131440 and
+	# #103483#c23.  This also fixes toolchain detection.
+	eautoconf || die
 }
 
-src_compile (){
+src_configure() {
 	local myconf
 
-	if use X || use fbcon || use directfb || use svga || use livecd; then
+	if use X || use fbcon || use directfb || use svga || use livecd ; then
 		myconf="${myconf} --enable-graphics"
 	fi
 
@@ -74,39 +83,32 @@ src_compile (){
 	# we use the autoconf trick
 	( use gpm || use fbcon || use livecd ) || export ac_cv_lib_gpm_Gpm_Open="no"
 
-	export LANG=C
-
-	if use fbcon || use livecd; then
+	if use fbcon || use livecd ; then
 		myconf="${myconf} --with-fb"
 	else
 		myconf="${myconf} --without-fb"
 	fi
 
 	# force --with-libjpeg if livecd flag is set
-	if use livecd; then
+	if use livecd ; then
 		myconf="${myconf} --with-libjpeg"
 	fi
 
-	# hack to allow cross-compilation
-	export CC="$(tc-getCC)"
-
+	#	$(use_with sdl)
 	econf \
 		$(use_with X x) \
-		$(use_with png libpng) \
 		$(use_with jpeg libjpeg) \
 		$(use_with tiff libtiff) \
 		$(use_with svga svgalib) \
 		$(use_with directfb) \
 		$(use_with ssl) \
-		$(use_with sdl) \
 		$(use_with zlib) \
 		$(use_with bzip2) \
-		${myconf} || die "configure failed"
-	emake || die "make failed"
+		${myconf}
 }
 
 src_install() {
-	einstall || die
+	emake install DESTDIR="${D}" || die
 
 	# Only install links icon if X driver was compiled in ...
 	use X && doicon graphics/links.xpm

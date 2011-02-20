@@ -1,6 +1,13 @@
 # ChangeLog for www-client/links
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.125 2010/11/07 21:34:44 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.126 2011/02/20 17:59:29 vapier Exp $
+
+  20 Feb 2011; Mike Frysinger <vapier@gentoo.org> links-2.3_pre1.ebuild,
+  +files/links-2.3_pre1-libpng-1.5.patch:
+  Fix building with libpng-1.5, convert to EAPI=2, disable unneeded configure
+  workarounds, comment out SDL since upstream has it disabled, remove optional
+  png flag since all graphics mode implicitly need it, and convert to DESTDIR
+  install.
 
   07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> links-2.2.ebuild,
   links-2.3_pre1.ebuild:
