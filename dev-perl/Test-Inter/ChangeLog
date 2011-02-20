@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.7 2010/10/23 08:54:29 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.8 2011/02/20 16:13:02 xarthisius Exp $
+
+  20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> Test-Inter-1.01.ebuild:
+  No stable keywords for prefix
 
   23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   Test-Inter-1.01.ebuild:
