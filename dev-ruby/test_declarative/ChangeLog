@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/test_declarative
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.1 2011/02/20 14:42:19 graaff Exp $
+
+*test_declarative-0.0.5 (20 Feb 2011)
+
+  20 Feb 2011; Hans de Graaff <graaff@gentoo.org>
+  +test_declarative-0.0.5.ebuild, +metadata.xml:
+  Initial import. New dependency for dev-ruby/i18n.
+
