@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.2.7.ebuild,v 1.2 2011/02/20 15:35:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.2.7.ebuild,v 1.3 2011/02/20 16:03:13 jlec Exp $
 
 EAPI="3"
 
@@ -42,12 +42,11 @@ done
 
 src_prepare() {
 	for l in ${LANGS} ; do
-		if use linguas_${l} ; then
-			LANGS="${LANGS/${l}/}"
+		if ! use linguas_${l} ; then
+			sed \
+				-e "/${l}/d" \
+				-i po/CMakeLists.txt || die
 		fi
 	done
-	llangs=$(echo ${LANGS})
-	re="${llangs// /\\|}"
-	sed -i -e "/ADD_SUBDIRECTORY( \(${re}\) )/d" po/CMakeLists.txt || die
 	base_src_prepare
 }

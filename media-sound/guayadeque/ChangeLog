@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/guayadeque
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/ChangeLog,v 1.2 2011/02/20 15:35:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/ChangeLog,v 1.3 2011/02/20 16:03:13 jlec Exp $
+
+  20 Feb 2011; Justin Lecher <jlec@gentoo.org> guayadeque-0.2.7.ebuild,
+  metadata.xml:
+  Better handling of langs, corrected maintainer email
 
   20 Feb 2011; Justin Lecher <jlec@gentoo.org> guayadeque-0.2.7.ebuild:
   No tests available
