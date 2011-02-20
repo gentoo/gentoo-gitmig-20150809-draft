@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.10 2011/01/07 11:10:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.11 2011/02/20 13:02:47 graaff Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+ruby_add_bdepend "dev-ruby/rake test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
 	# for Ruby 1.9.2 compatibility
@@ -59,7 +59,7 @@ each_ruby_compile() {
 each_ruby_test() {
 	case ${RUBY} in
 		*jruby)
-			ewarn "Using JRuby 1.4.0 the tests are currently badly broken,"
+			ewarn "Using JRuby 1.5.2 the tests are currently badly broken,"
 			ewarn "so they are disabled until a new racc or a new JRuby is"
 			ewarn "released."
 			;;
