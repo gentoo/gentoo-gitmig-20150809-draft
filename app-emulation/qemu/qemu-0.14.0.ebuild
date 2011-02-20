@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.14.0.ebuild,v 1.2 2011/02/20 03:26:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.14.0.ebuild,v 1.3 2011/02/20 22:07:37 zmedico Exp $
 
 EAPI="2"
 
@@ -176,10 +176,10 @@ src_install() {
 
 	if [ ! -z "${softmmu_targets}" ]; then
 		exeinto /etc/qemu
-		use qemu-ifup && doexe \
+		use qemu-ifup && { doexe \
 			"${FILESDIR}/qemu-ifup" \
 			"${FILESDIR}/qemu-ifdown" \
-			|| die "qemu interface scripts missing"
+			|| die "qemu interface scripts missing" ; }
 	fi
 
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
