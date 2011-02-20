@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.0.0.ebuild,v 1.1 2011/01/30 14:39:45 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.0.0.ebuild,v 1.2 2011/02/20 01:20:28 vapier Exp $
 
 EAPI=2
 
@@ -42,6 +42,11 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 		x11-libs/libsvg-cairo
 	)"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	enlightenment_src_prepare
+	epatch "${FILESDIR}"/${P}-libpng-1.5.patch
+}
 
 src_configure() {
 	if use X ; then
