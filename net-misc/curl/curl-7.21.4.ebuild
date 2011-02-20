@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.4.ebuild,v 1.2 2011/02/20 13:19:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.4.ebuild,v 1.3 2011/02/20 14:22:58 ulm Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 
 # ares must be disabled for threads and both can be disabled
 # one can use wether gnutls or nss if ssl is enabled
-REQUIRED_USE="^^ ( ares threads ( !ares !threads ) )
+REQUIRED_USE="threads? ( !ares )
 	gnutls? ( ssl )
 	nss? ( ssl )"
 
