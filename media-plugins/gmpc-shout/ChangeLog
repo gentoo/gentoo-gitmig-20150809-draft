@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-shout
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-shout/ChangeLog,v 1.4 2011/02/17 13:56:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-shout/ChangeLog,v 1.5 2011/02/20 17:43:16 phajdan.jr Exp $
+
+  20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gmpc-shout-0.20.0.ebuild:
+  x86 stable wrt bug #325621
 
   17 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gmpc-shout-0.20.0.ebuild:
   Stable on amd64 wrt bug #325621

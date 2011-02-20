@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.32 2011/02/20 15:36:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.33 2011/02/20 17:42:16 phajdan.jr Exp $
+
+  20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gmpc-mdcover-0.20.0.ebuild:
+  x86 stable wrt bug #325621
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gmpc-mdcover-0.20.0.ebuild:

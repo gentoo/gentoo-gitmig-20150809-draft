@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/ChangeLog,v 1.23 2011/02/20 15:33:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/ChangeLog,v 1.24 2011/02/20 17:37:38 phajdan.jr Exp $
+
+  20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gmpc-avahi-0.20.0.ebuild:
+  x86 stable wrt bug #325621
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gmpc-avahi-0.20.0.ebuild:
