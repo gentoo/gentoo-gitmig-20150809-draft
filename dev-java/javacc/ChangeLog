@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.33 2011/01/29 11:07:07 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.34 2011/02/20 14:40:20 xarthisius Exp $
+
+  20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> javacc-4.2.ebuild:
+  Marked ~ppc64 wrt #355353
 
   29 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> javacc-5.0.ebuild:
   Did some fixes with regard to jdk version in the ebuild, but it still fails
