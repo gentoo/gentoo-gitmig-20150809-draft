@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-serbian
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.4 2010/11/01 22:27:22 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.5 2011/02/20 09:59:53 xarthisius Exp $
+
+  20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  texlive-documentation-serbian-2010.ebuild:
+  Marked ~ppc/~ppc64 wrt #342513
 
   01 Nov 2010; Markus Meier <maekke@gentoo.org>
   texlive-documentation-serbian-2010.ebuild:
