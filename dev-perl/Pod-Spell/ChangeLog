@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Spell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/ChangeLog,v 1.1 2011/02/18 07:01:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/ChangeLog,v 1.2 2011/02/20 10:56:25 xarthisius Exp $
+
+  20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> Pod-Spell-1.10.ebuild:
+  Marked ~ppc wrt #355385
 
 *Pod-Spell-1.10 (18 Feb 2011)
 
