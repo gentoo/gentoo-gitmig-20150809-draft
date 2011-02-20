@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.9 2011/02/17 02:15:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.10 2011/02/20 10:26:00 xarthisius Exp $
+
+  20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  mupdf-0.7_p20110212.ebuild:
+  Marked ~ppc wrt #341449. Thansk to hiyuh <hiyuh.root@gmail.com> for report
+  and testing.
 
 *mupdf-0.7_p20110212 (17 Feb 2011)
 
