@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.40 2011/02/18 06:21:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.41 2011/02/20 03:31:30 dirtyepic Exp $
+
+  20 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> libopensync-9999.ebuild:
+  Update live ebuild.
 
   18 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> libopensync-0.22-r1.ebuild,
   +files/libopensync-0.22-Makefile.patch:

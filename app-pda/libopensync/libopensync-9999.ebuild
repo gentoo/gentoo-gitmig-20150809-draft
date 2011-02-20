@@ -1,8 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.6 2009/11/15 22:02:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.7 2011/02/20 03:31:30 dirtyepic Exp $
 
-inherit cmake-utils subversion
+EAPI="3"
+
+PYTHON_DEPEND="python? 2:2.5"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit cmake-utils subversion python
 
 DESCRIPTION="OpenSync synchronisation framework library"
 HOMEPAGE="http://www.opensync.org/"
@@ -13,33 +18,73 @@ ESVN_REPO_URI="http://svn.opensync.org/trunk"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="LGPL-2.1"
-IUSE="doc python test"
+IUSE="debug doc python" # test
 
-RDEPEND=">=dev-db/sqlite-3
-	>=dev-libs/glib-2.12
+RDEPEND="dev-db/sqlite:3
+	>=dev-libs/glib-2.12:2
 	dev-libs/libxml2
-	python? ( >=dev-lang/python-2.2 )"
+	dev-libs/libxslt"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
-	doc? ( app-doc/doxygen )
-	python? ( >=dev-lang/swig-1.3.17 )
-	test? ( >=dev-libs/check-0.9.2 )"
+	doc?	( app-doc/doxygen
+			  media-gfx/graphviz )
+	python? ( >=dev-lang/swig-1.3.17 )"
+#	test? ( >=dev-libs/check-0.9.2 )
+
+DOCS="AUTHORS CODING ChangeLog README"
+
+# tests don't pass
+RESTRICT="test"
+RESTRICT_PYTHON_ABIS="3.*"
+
+src_prepare() {
+	# Use cmake's instead - bug #276220
+	rm "${S}"/cmake/modules/FindPythonLibs.cmake
+
+	use python && python_copy_sources
+}
+
+src_configure() {
+	local mycmakeargs="-DCMAKE_SKIP_RPATH=ON
+		$(cmake-utils_use_build doc DOCUMENTATION)
+		$(cmake-utils_use_enable python WRAPPER)
+		$(cmake-utils_use python OPENSYNC_PYTHONBINDINGS)
+		$(cmake-utils_use debug OPENSYNC_DEBUG_MODULES)
+		$(cmake-utils_use debug OPENSYNC_TRACE)"
+#		$(cmake-utils_use test OPENSYNC_UNITTESTS)
+
+	do_configure() {
+		if use python; then
+			CMAKE_BUILD_DIR="${WORKDIR}/${P}-${PYTHON_ABI}"
+			CMAKE_USE_DIR="${CMAKE_BUILD_DIR}"
+			# since we're using cmake's FindPythonLibs PYTHON_VERSION is not defined
+			sed -i -e "s:\${PYTHON_VERSION}:${PYTHON_ABI}:g" \
+				"${CMAKE_BUILD_DIR}"/wrapper/CMakeLists.txt
+		fi
+		cmake-utils_src_configure || die
+	}
+
+	use python \
+		&& python_execute_function -s do_configure \
+		|| do_configure
+}
 
 src_compile() {
-	DOCS="AUTHORS CODING ChangeLog README"
+	do_compile() {
+		if use python; then
+			CMAKE_BUILD_DIR="${WORKDIR}/${P}-${PYTHON_ABI}"
+			CMAKE_USE_DIR="${CMAKE_BUILD_DIR}"
+		fi
+		cmake-utils_src_compile || die
+	}
 
-	local mycmakeargs="
-		-DCMAKE_SKIP_RPATH=ON
-		$(cmake-utils_use_enable python WRAPPER)
-		$(cmake-utils_use_build doc DOCUMENTATION)
-		$(cmake-utils_use test OPENSYNC_UNITTESTS)
-	"
-
-	cmake-utils_src_compile
+	use python \
+		&& python_execute_function -s do_compile \
+		|| do_compile
 
 	if use doc ; then
-		cmake-utils_src_make DoxygenDoc || die "Failed to generate docs."
+		cmake-utils_src_make DoxygenDoc || die
 	fi
 }
 
@@ -54,11 +99,23 @@ src_test() {
 }
 
 src_install() {
-	cmake-utils_src_install
+	do_install() {
+		if use python; then
+			CMAKE_BUILD_DIR="${WORKDIR}/${P}-${PYTHON_ABI}"
+			CMAKE_USE_DIR="${CMAKE_BUILD_DIR}"
+		fi
+		cmake-utils_src_install || die
+	}
 
-	if use doc ; then
+	use python \
+		&& python_execute_function -s do_install \
+		|| do_install
+
+	find "${D}" -name '*.la' -exec rm -f {} + || die
+
+	if use doc; then
 		cd "${CMAKE_BUILD_DIR}"
-		dohtml docs/html/* || die "Failed to install docs."
+		dohtml docs/html/* || die
 	fi
 }
 
