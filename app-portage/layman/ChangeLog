@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.127 2011/02/14 16:48:58 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.128 2011/02/20 14:54:44 fuzzyray Exp $
+
+  20 Feb 2011; Paul Varner <fuzzyray@gentoo.org> metadata.xml:
+  Add to tools-portage herd.
 
   14 Feb 2011; Christian Ruppert <idl0r@gentoo.org> -layman-1.2.4-r3.ebuild,
   -files/layman-1.2.4-non-ascii-backport.patch,
