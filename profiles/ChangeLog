@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5063 2011/02/19 19:08:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5064 2011/02/20 08:42:57 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Feb 2011; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask net-mail/imapsync because it "is no longer gratis on the homepage" and
+  we don't have access to the latest fixes/improvements/releases (#354831)
 
   19 Feb 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
