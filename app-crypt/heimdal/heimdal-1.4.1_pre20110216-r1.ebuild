@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.4.1_pre20110216-r1.ebuild,v 1.1 2011/02/20 10:22:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.4.1_pre20110216-r1.ebuild,v 1.2 2011/02/20 18:16:10 eras Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
@@ -51,6 +51,12 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf=""
+	if use berkdb; then
+		myconf="--with-berkeley-db --with-berkeley-db-include=$(db_includedir)"
+	else
+		myconf="--without-berkeley-db"
+	fi
 	econf \
 		--enable-kcm \
 		--disable-osfc2 \
@@ -64,13 +70,12 @@ src_configure() {
 		$(use_enable pkinit kx509) \
 		$(use_enable pkinit pk-init) \
 		$(use_enable threads pthread-support) \
-		$(use_with berkdb berkeley-db) \
-		$(use_with berkdb berkeley-db-include=$(db_includedir)) \
 		$(use_with caps capng) \
 		$(use_with hdb-ldap openldap /usr) \
 		$(use_with ipv6) \
 		$(use_with ssl openssl /usr) \
-		$(use_with X x)
+		$(use_with X x) \
+		${myconf}
 }
 
 src_compile() {
