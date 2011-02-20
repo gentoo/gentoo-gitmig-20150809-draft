@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xye
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.19 2011/02/16 09:36:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.20 2011/02/20 17:55:34 phajdan.jr Exp $
+
+  20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xye-0.9.3.ebuild:
+  x86 stable wrt bug #355103
 
   16 Feb 2011; Markos Chandras <hwoarang@gentoo.org> xye-0.9.3.ebuild:
   Stable on amd64 wrt bug #355103
