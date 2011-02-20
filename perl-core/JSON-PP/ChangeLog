@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/JSON-PP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.1 2011/01/28 08:03:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.2 2011/02/20 23:54:56 josejx Exp $
+
+  20 Feb 2011; Joseph Jezak <josejx@gentoo.org> JSON-PP-2.271.40.ebuild:
+  Marked ~ppc for bug #353020.
 
 *JSON-PP-2.271.40 (28 Jan 2011)
 
