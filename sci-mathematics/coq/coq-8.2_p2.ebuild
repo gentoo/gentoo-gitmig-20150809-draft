@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2_p2.ebuild,v 1.4 2010/11/11 20:29:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2_p2.ebuild,v 1.5 2011/02/20 07:36:09 tomka Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -35,6 +35,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make-3.82.patch
+	epatch "${FILESDIR}"/${P}-camlp5-6-compat.patch
 }
 
 src_configure() {

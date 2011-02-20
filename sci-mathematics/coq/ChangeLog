@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.59 2011/01/20 19:42:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.60 2011/02/20 07:36:09 tomka Exp $
+
+  20 Feb 2011; Thomas Kahle <tomka@gentoo.org> coq-8.2_p2.ebuild,
+  +files/coq-8.2_p2-camlp5-6-compat.patch:
+  Added camlp5-6 support to the 8.2 branch (bug 355297), patch by
+  Jonathan-Christofer Demay
 
 *coq-8.3_p1 (20 Jan 2011)
 
