@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-x
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.103 2011/02/14 18:09:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.104 2011/02/20 22:08:36 maekke Exp $
+
+  20 Feb 2011; Markus Meier <maekke@gentoo.org> gst-plugins-x-0.10.31.ebuild:
+  arm stable, bug #353434
 
   14 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gst-plugins-x-0.10.31.ebuild:

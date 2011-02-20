@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gnomevfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.184 2011/02/14 18:01:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.185 2011/02/20 21:58:52 maekke Exp $
+
+  20 Feb 2011; Markus Meier <maekke@gentoo.org>
+  gst-plugins-gnomevfs-0.10.31.ebuild:
+  arm stable, bug #353434
 
   14 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gst-plugins-gnomevfs-0.10.31.ebuild:
