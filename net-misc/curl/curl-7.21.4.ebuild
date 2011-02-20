@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.4.ebuild,v 1.1 2011/02/19 17:23:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.4.ebuild,v 1.2 2011/02/20 13:19:17 scarabeus Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -39,9 +39,9 @@ DEPEND="${RDEPEND}
 	)"
 # used - but can do without in self test: net-misc/stunnel
 
-# ares must be disabled for threads
+# ares must be disabled for threads and both can be disabled
 # one can use wether gnutls or nss if ssl is enabled
-REQUIRED_USE="^^ ( ares threads )
+REQUIRED_USE="^^ ( ares threads ( !ares !threads ) )
 	gnutls? ( ssl )
 	nss? ( ssl )"
 

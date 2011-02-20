@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.171 2011/02/19 17:23:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.172 2011/02/20 13:19:17 scarabeus Exp $
+
+  20 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> curl-7.21.4.ebuild:
+  Update REQUIRED_USE to allow disabling of both ares and threads useflag.
+  Thanks to Brian for hint.
 
 *curl-7.21.4 (19 Feb 2011)
 *curl-7.21.3-r1 (19 Feb 2011)
