@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libopensync-plugin-python
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-python/ChangeLog,v 1.8 2009/11/15 23:51:39 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-python/ChangeLog,v 1.9 2011/02/20 03:40:57 dirtyepic Exp $
+
+  20 Feb 2011; Ryan Hill <dirtyepic@gentoo.org>
+  libopensync-plugin-python-0.22.ebuild, libopensync-plugin-python-0.36.ebuild,
+  libopensync-plugin-python-9999.ebuild:
+  Fix dependencies, port to python eclass (bug #311765) and EAPI 3. Fix
+  building against new
+  python versions (bug #276220).
 
   15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libopensync-plugin-python-0.21.ebuild,
