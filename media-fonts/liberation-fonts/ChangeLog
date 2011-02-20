@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/liberation-fonts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.12 2011/01/19 17:44:56 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.13 2011/02/20 16:17:58 xarthisius Exp $
+
+  20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  liberation-fonts-1.04.ebuild:
+  No stable keywords for prefix
 
 *liberation-fonts-1.06.0.20100721 (19 Jan 2011)
 
