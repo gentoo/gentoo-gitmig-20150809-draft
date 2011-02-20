@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/python-mode
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.49 2010/10/12 22:30:04 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.50 2011/02/20 13:48:07 ulm Exp $
+
+*python-mode-5.2.0 (20 Feb 2011)
+
+  20 Feb 2011; Ulrich Mueller <ulm@gentoo.org> +files/50python-mode-gentoo.el,
+  python-mode-5.1.0.ebuild, +python-mode-5.2.0.ebuild:
+  Version bump. Call elisp-site-regen in postinst phase, fixes bug 355451.
 
   12 Oct 2010; Ulrich Mueller <ulm@gentoo.org> -files/setup.py:
   Remove unused file, fixes bug 340705.
