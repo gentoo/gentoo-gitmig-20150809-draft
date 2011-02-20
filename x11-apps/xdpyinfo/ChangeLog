@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xdpyinfo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.60 2010/01/23 18:51:29 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.61 2011/02/20 14:11:26 scarabeus Exp $
+
+*xdpyinfo-1.2.0 (20 Feb 2011)
+
+  20 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> +xdpyinfo-1.2.0.ebuild:
+  Version bump
 
   23 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xdpyinfo-1.0.2.ebuild, -xdpyinfo-1.0.3.ebuild:
