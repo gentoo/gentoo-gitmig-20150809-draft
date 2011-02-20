@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.515 2011/01/06 19:11:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.516 2011/02/20 12:27:45 armin76 Exp $
+
+  20 Feb 2011; Raúl Porcel <armin76@gentoo.org> python-2.6.6-r1.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #342927
 
   06 Jan 2011; Brent Baude <ranger@gentoo.org> python-2.6.6-r1.ebuild:
   Marking python-2.6.6-r1 ppc for bug 342927
