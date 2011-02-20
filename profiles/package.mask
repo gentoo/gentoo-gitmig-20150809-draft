@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12477 2011/02/20 08:42:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12478 2011/02/20 23:55:16 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -365,12 +365,6 @@ app-editors/mousepad
 # Sebastien Fabbro <bicatali@gentoo.org> (22 Jan 2011)
 # new CMake building system still beta
 =sci-physics/geant-4.9.4
-
-# Anthony G. Basile <blueness@gentoo.org> (20 Jan 2011)
-# Replaced by dev-lua/luaevent
-# Masked for removal in 30 days on 20 Feb 2011
-# bug #333097
-dev-lua/luaevent-prosody
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2010)
 # testing mask for upcoming exult release
