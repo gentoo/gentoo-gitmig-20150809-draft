@@ -145,10 +145,10 @@ x86             default/linux/x86/10.0/developer                stable
 x86             default/linux/x86/10.0/server                   stable
 
 # Gentoo/FreeBSD Profiles
-amd64-fbsd	default/bsd/fbsd/amd64/7.2			dev
-amd64-fbsd	default/bsd/fbsd/amd64/8.0			dev
-sparc-fbsd	default/bsd/fbsd/sparc/7.2			dev
-sparc-fbsd	default/bsd/fbsd/sparc/8.0			dev
+amd64-fbsd	default/bsd/fbsd/amd64/7.2			exp
+amd64-fbsd	default/bsd/fbsd/amd64/8.0			exp
+sparc-fbsd	default/bsd/fbsd/sparc/7.2			exp
+sparc-fbsd	default/bsd/fbsd/sparc/8.0			exp
 x86-fbsd	default/bsd/fbsd/x86/7.2			dev
 x86-fbsd	default/bsd/fbsd/x86/8.0			dev
 
