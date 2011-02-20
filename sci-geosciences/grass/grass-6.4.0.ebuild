@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.3 2010/11/08 17:27:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.4 2011/02/20 23:44:25 nerdboy Exp $
 
 EAPI="3"
 
@@ -40,7 +40,7 @@ RDEPEND="
 		virtual/lapack
 	)
 	jpeg? ( virtual/jpeg )
-	mysql? ( dev-db/mysql )
+	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	png? ( media-libs/libpng )
 	postgres? (

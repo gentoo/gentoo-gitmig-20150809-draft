@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.92 2010/11/08 17:27:39 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.93 2011/02/20 23:44:24 nerdboy Exp $
+
+  20 Feb 2011; Steve Arnold <nerdboy@gentoo.org> grass-6.4.0.ebuild:
+  Migrating to requested mysql virtual: dev-db/mysql -> virtual/mysql
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> grass-6.3.0.ebuild,
   grass-6.4.0.ebuild:
