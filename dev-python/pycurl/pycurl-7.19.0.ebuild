@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.17 2011/02/05 22:39:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0.ebuild,v 1.18 2011/02/20 15:03:10 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="python binding for curl/libcurl"
 HOMEPAGE="http://pycurl.sourceforge.net/ http://pypi.python.org/pypi/pycurl"
@@ -23,6 +23,11 @@ RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="curl"
 
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-linking.patch"
+}
+
 src_test() {
 	testing() {
 		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" tests/test_internals.py -q
@@ -35,11 +40,10 @@ src_install() {
 
 	distutils_src_install
 
-	dohtml -r doc/*
+	dohtml -r doc/* || die "dohtml failed"
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples
-		doins -r tests
+		doins -r examples tests || die "doins failed"
 	fi
 }

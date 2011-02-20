@@ -1,0 +1,13 @@
+--- setup.py
++++ setup.py
+@@ -96,9 +96,7 @@
+                 include_dirs.append(e[2:])
+         else:
+             extra_compile_args.append(e)
+-    libs = split_quoted(
+-        os.popen("'%s' --libs" % CURL_CONFIG).read()+\
+-        os.popen("'%s' --static-libs" % CURL_CONFIG).read())
++    libs = split_quoted(os.popen("'%s' --libs" % CURL_CONFIG).read())
+     for e in libs:
+         if e[:2] == "-l":
+             libraries.append(e[2:])
