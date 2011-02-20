@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.14.0_pre20080316.ebuild,v 1.1 2009/03/16 19:07:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.3.0.ebuild,v 1.1 2011/02/20 21:42:03 angelos Exp $
 
-EAPI=1
+EAPI=4
 
 DESCRIPTION="a client for MPD which submits your tracks to last.fm"
-HOMEPAGE="http://ngls.zakx.de/scmpc/"
-SRC_URI="http://ngls.zakx.de/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://scmpc.berlios.de/"
+SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,9 +17,13 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/confuse
 	net-misc/curl"
 
+pkg_setup() {
+	DOCS="AUTHORS NEWS README scmpc.conf.example"
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS NEWS README scmpc.conf.example
+	default_src_install
+
 	newinitd "${FILESDIR}"/${PN}-2.init ${PN}
 	insinto /etc
 	insopts -m600
