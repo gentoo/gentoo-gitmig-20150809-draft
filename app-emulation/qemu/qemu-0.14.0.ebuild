@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.14.0.ebuild,v 1.1 2011/02/19 14:03:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.14.0.ebuild,v 1.2 2011/02/20 03:26:03 lu_zero Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ else
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
-DESCRIPTION="QEMU "
+DESCRIPTION="QEMU emulator and ABI wrapper"
 HOMEPAGE="http://www.qemu.org"
 
 LICENSE="GPL-2"
