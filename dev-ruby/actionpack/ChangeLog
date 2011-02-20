@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.169 2011/02/13 21:12:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.170 2011/02/20 15:55:24 graaff Exp $
+
+  20 Feb 2011; Hans de Graaff <graaff@gentoo.org> actionpack-2.3.10.ebuild,
+  +files/actionpack-2.3.10-i18n-0.4.2.patch,
+  +files/actionpack-2.3.11-rails3.patch:
+  Fix tests with i18n-0.4.2.
 
   13 Feb 2011; Thomas Kahle <tomka@gentoo.org> actionpack-3.0.3-r1.ebuild:
   keyworded ~x86 per bug 351835

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.10.ebuild,v 1.2 2011/01/07 09:29:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.10.ebuild,v 1.3 2011/02/20 15:55:24 graaff Exp $
 
 EAPI=2
 
@@ -22,13 +22,14 @@ SLOT="2.3"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-#RUBY_PATCHES=( "${P}-custom-cookie-fix.patch" )
+RUBY_PATCHES=( "${PN}-2.3.11-rails3.patch" "${P}-i18n-0.4.2.patch" )
 
 ruby_add_rdepend "~dev-ruby/activesupport-${PV}
 	>=dev-ruby/rack-1.1.0"
 
 ruby_add_bdepend "
 	test? (
+		>=dev-ruby/mocha-0.9.7
 		dev-ruby/activerecord:${SLOT}
 		dev-ruby/actionmailer:${SLOT}
 		!dev-ruby/test-unit:2
@@ -50,4 +51,8 @@ all_ruby_prepare() {
 	# MemCacheStore tests no longer fail gracefully, and it's unlikely for
 	# someone to have them running anyway, so remove them for now.
 	rm test/controller/session/mem_cache_store_test.rb || die
+
+	# Fix tests when run against i18n 0.4.2 which ignores locale
+	# definitions with an empty data section.
+	sed -i -e 's/, {}/, {:test => "test"}/' test/template/render_test.rb || die
 }
