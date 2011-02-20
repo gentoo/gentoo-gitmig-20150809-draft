@@ -1,16 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.3_rc1.ebuild,v 1.1 2010/12/07 22:01:42 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.3.ebuild,v 1.1 2011/02/20 22:11:52 tgurr Exp $
 
 EAPI="2"
 
 inherit eutils multilib qt4-r2
 
-MY_P="${P/_/-}"
-
-DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software."
+DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software"
 HOMEPAGE="http://mumble.sourceforge.net/"
-SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,8 +18,7 @@ IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio speech zeroconf"
 RDEPEND=">=dev-libs/boost-1.41.0
 	>=dev-libs/openssl-1.0.0b
 	>=dev-libs/protobuf-2.2.0
-	>=media-libs/celt-0.7.0
-	>=media-libs/libsndfile-1.0.20
+	>=media-libs/libsndfile-1.0.20[-minimal]
 	>=media-libs/speex-1.2_rc1
 	sys-apps/lsb-release
 	x11-libs/qt-core:4[ssl]
@@ -40,8 +37,6 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	local conf_add
@@ -65,7 +60,6 @@ src_configure() {
 	eqmake4 "${S}/main.pro" -recursive \
 		CONFIG+="${conf_add} \
 			no-11x \
-			no-bundled-celt \
 			no-bundled-speex \
 			no-embed-qt-translations \
 			no-server \
@@ -101,7 +95,8 @@ src_install() {
 
 	insopts -o root -g root -m 0755
 	insinto "/usr/$(get_libdir)/mumble"
-	doins "${dir}"/lib*.so* || die "Installing plugins failed."
+	doins "${dir}"/libmumble.so.${PV} || die "Installing mumble lib failed."
+	doins "${dir}"/libcelt0.so.0.{7,11}.0 || die "Installing celt libs failed."
 	doins "${dir}"/plugins/lib*.so* || die "Installing plugins failed."
 }
 

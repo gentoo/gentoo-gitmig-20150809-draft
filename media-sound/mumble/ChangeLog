@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mumble
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.28 2010/12/07 22:01:42 tgurr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.29 2011/02/20 22:11:52 tgurr Exp $
+
+*mumble-1.2.3 (20 Feb 2011)
+
+  20 Feb 2011; Timo Gurr <tgurr@gentoo.org> -mumble-1.2.3_rc1.ebuild,
+  +mumble-1.2.3.ebuild:
+  Version bump, remove old. Don't use system celt library for compatibility
+  reasons wrt bug #354991.
 
 *mumble-1.2.3_rc1 (07 Dec 2010)
 
