@@ -1,6 +1,7 @@
-diff -ur grip-3.3.1.orig/src/id3.c grip-3.3.1/src/id3.c
---- grip-3.3.1.orig/src/id3.c	2010-04-24 10:17:23.000000000 +0200
-+++ grip-3.3.1/src/id3.c	2010-04-24 10:16:42.000000000 +0200
+http://bugs.gentoo.org/285105
+
+--- grip-3.3.1/src/id3.c
++++ grip-3.3.1/src/id3.c
 @@ -252,8 +252,8 @@
        
        if ( frames[ i ] ) {
