@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110216.ebuild,v 1.2 2011/02/19 23:23:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110216.ebuild,v 1.3 2011/02/20 11:54:36 hwoarang Exp $
 
 EAPI=2
 
@@ -59,7 +59,9 @@ src_configure() {
 		$(use_enable udev udisks) \
 		$(use_enable examples demo) \
 		$(use_enable debug) \
-		$(use_enable doc gtk_doc) \
+		# Documentation fails to build at the moment
+		# $(use_enable doc gtk-doc) \
+		# $(use_enable doc gtk-doc-html) \
 		--with-html-dir=/usr/share/doc/${PF}/html
 }
 
