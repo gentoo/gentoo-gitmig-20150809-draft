@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.61 2011/02/19 08:35:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.62 2011/02/20 18:32:05 polynomial-c Exp $
+
+  20 Feb 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -files/virtualbox-ose-3.0.0-mesa-check.patch, -virtualbox-3.1.8.ebuild,
+  -files/virtualbox-ose-3.1.8-iasl-length-calculation-fix.patch:
+  Removed ancient 3.1.8 version.
 
 *virtualbox-4.0.4 (18 Feb 2011)
 
