@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.29 2011/01/23 08:40:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.30 2011/02/20 14:42:37 graaff Exp $
+
+*i18n-0.5.0-r1 (20 Feb 2011)
+
+  20 Feb 2011; Hans de Graaff <graaff@gentoo.org> +i18n-0.5.0-r1.ebuild:
+  Enable tests now that test_declarative is in the tree. Drop keywords due
+  to new dependency, bug 355697.
 
   23 Jan 2011; Hans de Graaff <graaff@gentoo.org> i18n-0.4.2.ebuild:
   Remove broken blocker on test-unit:2 since this no longer appears to be a
