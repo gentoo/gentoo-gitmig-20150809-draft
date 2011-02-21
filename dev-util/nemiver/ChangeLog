@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nemiver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.31 2011/01/12 23:25:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.32 2011/02/21 10:44:47 eva Exp $
+
+  21 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> -nemiver-0.7.2.ebuild,
+  -nemiver-0.7.3.ebuild, -files/nemiver-0.7.3-gcc45.patch:
+  Clean up old revisions.
 
 *nemiver-0.8.1 (12 Jan 2011)
 
