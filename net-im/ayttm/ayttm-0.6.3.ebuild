@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.6.3.ebuild,v 1.1 2011/02/21 16:56:31 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ayttm/ayttm-0.6.3.ebuild,v 1.2 2011/02/21 20:14:56 signals Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ayttm/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="crypt esd icq irc jabber lj msn nls oscar smtp webcam xscreensaver yahoo"
 
 CDEPEND="app-text/enchant
