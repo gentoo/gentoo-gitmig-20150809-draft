@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r10.ebuild,v 1.3 2011/01/09 03:24:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r10.ebuild,v 1.4 2011/02/21 19:46:16 hwoarang Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="mirror://gentoo/${PF}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 DEPEND="!sys-boot/grub"
 RDEPEND="${DEPEND}"
