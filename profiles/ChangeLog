@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5065 2011/02/20 23:55:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5066 2011/02/21 13:07:34 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.mask:
+  Mask Python 3.2.
 
   20 Feb 2011; Anthony G. Basile <blueness@gentoo.org> package.mask:
   Remove package.mask for dev-lua/luaevent-prosody since it was removed from
