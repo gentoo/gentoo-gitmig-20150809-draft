@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.14.ebuild,v 1.3 2008/12/21 14:51:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.14.ebuild,v 1.4 2011/02/21 17:43:40 vapier Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -20,7 +22,11 @@ DEPEND="media-libs/libdvdread
 	dev-libs/fribidi
 	media-libs/libpng"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng-1.5.patch #355039
+}
+
 src_install() {
-	make install DESTDIR="${D}" || die "installation failed"
+	emake install DESTDIR="${D}" || die
 	dodoc README TODO ChangeLog
 }
