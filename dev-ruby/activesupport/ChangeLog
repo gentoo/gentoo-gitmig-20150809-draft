@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.134 2011/02/13 21:19:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.135 2011/02/21 20:08:48 graaff Exp $
+
+  21 Feb 2011; Hans de Graaff <graaff@gentoo.org>
+  +activesupport-2.3.11.ebuild:
+  Version bump for Rails 2.3.11.
+
+*activesupport-2.3.11 (21 Feb 2011)
+
+  21 Feb 2011; Hans de Graaff <graaff@gentoo.org>
+  +activesupport-2.3.11.ebuild:
+  Version bump for Rails 2.3.11.
 
   13 Feb 2011; Thomas Kahle <tomka@gentoo.org> activesupport-3.0.3.ebuild:
   keyworded ~x86 per bug 351835
