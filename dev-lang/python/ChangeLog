@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.516 2011/02/20 12:27:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.517 2011/02/21 22:13:45 arfrever Exp $
+
+*python-2.6.6-r2 (21 Feb 2011)
+
+  21 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.6.6-r2.ebuild:
+  Fix DoS vulnerability in smtpd (Python issue #9129). Fix regression in
+  unicodedata.normalize() (Python issue #10254). Don't skip test_ctypes tests
+  on hardened/PAX (Gentoo bug #348745).
 
   20 Feb 2011; Raúl Porcel <armin76@gentoo.org> python-2.6.6-r1.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #342927
