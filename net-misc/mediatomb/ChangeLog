@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.19 2010/10/08 21:25:14 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.20 2011/02/21 06:58:14 darkside Exp $
+
+  21 Feb 2011; Jeremy Olexa <darkside@gentoo.org> mediatomb-0.12.1.ebuild,
+  +files/mediatomb-0.12.1-gcc46.patch:
+  Add patch for gcc-4.6, bug 353733 by Ryan Hill
 
   08 Oct 2010; Jeremy Olexa <darkside@gentoo.org>
   -files/mediatomb-0.11.0+curl-7.18.patch,

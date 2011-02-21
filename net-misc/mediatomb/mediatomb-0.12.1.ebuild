@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.3 2010/04/18 12:29:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.4 2011/02/21 06:58:14 darkside Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -46,6 +46,10 @@ pkg_setup() {
 	fi
 	enewgroup mediatomb
 	enewuser mediatomb -1 -1 /dev/null mediatomb
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gcc46.patch"
 }
 
 src_configure() {
