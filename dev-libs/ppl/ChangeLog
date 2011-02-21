@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.32 2011/01/23 20:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.33 2011/02/21 02:38:15 dirtyepic Exp $
+
+*ppl-0.11.1 (21 Feb 2011)
+
+  21 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> +ppl-0.11.1.ebuild:
+  Version bump.
 
   23 Jan 2011; Mike Frysinger <vapier@gentoo.org> ppl-0.11.ebuild:
   Inherit eutils for epause #352519 by Diego Elio Pettenò.
