@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12479 2011/02/21 13:07:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12480 2011/02/21 14:57:38 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -93,6 +93,7 @@ app-emulation/vmware-gsx-console
 <x11-libs/libXtst-1.1.0
 <x11-libs/libfontenc-1.1.0
 <x11-libs/libxcb-1.7
+=net-misc/tigervnc-1.0.1_p20100914
 =x11-drivers/nvidia-drivers-256.44
 =x11-drivers/nvidia-drivers-195.36.31
 =x11-drivers/nvidia-drivers-195.36.24
