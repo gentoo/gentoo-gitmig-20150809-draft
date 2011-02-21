@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.3.ebuild,v 1.1 2011/02/20 22:11:52 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.3.ebuild,v 1.2 2011/02/21 19:46:12 tgurr Exp $
 
 EAPI="2"
 
@@ -59,6 +59,7 @@ src_configure() {
 
 	eqmake4 "${S}/main.pro" -recursive \
 		CONFIG+="${conf_add} \
+			bundled-celt \
 			no-11x \
 			no-bundled-speex \
 			no-embed-qt-translations \
