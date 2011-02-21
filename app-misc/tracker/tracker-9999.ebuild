@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.34 2011/02/08 22:53:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.35 2011/02/21 22:28:45 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -25,6 +25,7 @@ RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7[threadsafe]
 	>=dev-libs/glib-2.26:2
+	>=dev-libs/icu-4
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 		media-gfx/graphicsmagick[imagemagick,png,jpeg=] )
@@ -33,11 +34,11 @@ RDEPEND="
 	sys-apps/util-linux
 
 	applet? (
-		>=gnome-base/gnome-panel-2.32
-		>=x11-libs/gtk+-2.18:2 )
+		>=gnome-base/gnome-panel-2.91
+		>=x11-libs/gtk+-3:3 )
 	eds? (
-		>=mail-client/evolution-2.29.1
-		>=gnome-extra/evolution-data-server-2.29.1 )
+		>=mail-client/evolution-2.91.90
+		>=gnome-extra/evolution-data-server-2.91.90 )
 	exif? ( >=media-libs/libexif-0.6 )
 	flac? ( >=media-libs/flac-1.2.1 )
 	gif? ( media-libs/giflib )
@@ -139,7 +140,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--enable-tracker-fts
 		--with-enca
-		--with-unicode-support=glib
+		--with-unicode-support=libicu
 		--enable-guarantee-metadata
 		$(use_enable applet tracker-status-icon)
 		$(use_enable applet tracker-search-bar)
