@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.685 2011/02/19 12:22:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.686 2011/02/21 14:10:45 aballier Exp $
+
+  21 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  Bump xcb/xcb-util requirements
 
   19 Feb 2011; Alexis Ballier <aballier@gentoo.org> vlc-1.1.7.ebuild:
   Add patch to fix build with libnotify 0.7, by Samuli Suominen, bug #353848
