@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.13 2011/02/11 20:20:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.14 2011/02/21 06:29:17 darkside Exp $
+
+  21 Feb 2011; Jeremy Olexa <darkside@gentoo.org> libva-0.32.0_p1.ebuild:
+  Add ~amd64-linux as tested on bug 351553
 
 *libva-0.32.0_p1 (11 Feb 2011)
 
