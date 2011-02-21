@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.285 2011/01/30 18:41:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.286 2011/02/21 16:30:13 darkside Exp $
+
+  21 Feb 2011; Jeremy Olexa <darkside@gentoo.org> -dovecot-1.1.19.ebuild,
+  -dovecot-1.2.15.ebuild, dovecot-2.0.9.ebuild:
+  Add ~x86-fbsd based on Dmitri Bogomolov's report in bug 341123. Remove old
+  versions
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> dovecot-1.2.16.ebuild:
   alpha/sparc stable wrt #348978
