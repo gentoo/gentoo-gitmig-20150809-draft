@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.6.4.ebuild,v 1.1 2011/02/20 10:46:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.6.4.ebuild,v 1.2 2011/02/21 16:13:51 graaff Exp $
 
 EAPI=2
 
@@ -27,4 +27,5 @@ IUSE=""
 
 RUBY_PATCHES=( "${FILESDIR}/${P}-yaml.patch" "${FILESDIR}/${P}-config-file-feature.patch" )
 
+ruby_add_bdepend "doc? ( || ( dev-ruby/bluecloth dev-ruby/maruku dev-ruby/rdiscount dev-ruby/kramdown ) )"
 ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/redcloth )"

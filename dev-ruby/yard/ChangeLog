@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.12 2011/02/20 10:46:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.13 2011/02/21 16:13:51 graaff Exp $
+
+  21 Feb 2011; Hans de Graaff <graaff@gentoo.org> yard-0.6.4.ebuild:
+  Documentation generation requires at least one markdown provider.
 
 *yard-0.6.4 (20 Feb 2011)
 
