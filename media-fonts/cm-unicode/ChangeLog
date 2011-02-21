@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/cm-unicode
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cm-unicode/ChangeLog,v 1.1 2011/02/21 18:14:24 spatz Exp $
+
+*cm-unicode-0.7.0 (21 Feb 2011)
+
+  21 Feb 2011; Dror Levin <spatz@gentoo.org> +cm-unicode-0.7.0.ebuild,
+  +metadata.xml:
+  Initial import, improved versions of ebuild on bug 146163.
+
