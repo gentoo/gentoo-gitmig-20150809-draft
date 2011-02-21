@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.10.ebuild,v 1.3 2011/01/07 09:32:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.10.ebuild,v 1.4 2011/02/21 19:55:35 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -38,6 +38,8 @@ ruby_add_bdepend "
 	)"
 
 all_ruby_prepare() {
+	epatch "${FILESDIR}/${P}-rails3.patch"
+
 	# Custom template not found in package
 	sed -i -e '/horo/d' Rakefile || die
 }
