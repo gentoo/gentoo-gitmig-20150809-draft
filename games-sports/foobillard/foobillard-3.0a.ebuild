@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.14 2010/09/16 17:02:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.15 2011/02/21 20:28:58 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -29,7 +29,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-no_nvidia.patch \
 		"${FILESDIR}"/${P}-fbsd.patch \
-		"${FILESDIR}"/${P}-as-needed.patch
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-gl-clamp.patch
 
 	eautoreconf
 }

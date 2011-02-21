@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/foobillard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.17 2010/09/16 17:02:08 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.18 2011/02/21 20:28:58 mr_bones_ Exp $
+
+  21 Feb 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  foobillard-3.0a.ebuild, +files/foobillard-3.0a-gl-clamp.patch:
+  work around issues with some drivers related to GL_CLAMP (bug #355821)
+  - patch submitted by Alan Swanson
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   foobillard-3.0a.ebuild:
