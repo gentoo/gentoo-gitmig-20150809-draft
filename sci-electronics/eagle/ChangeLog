@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.45 2011/02/21 19:34:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.46 2011/02/21 23:24:08 nixphoeni Exp $
+
+*eagle-5.11.0 (21 Feb 2011)
+
+  21 Feb 2011; Joe Sapp <nixphoeni@gentoo.org> +eagle-5.11.0.ebuild:
+  Version bump: added versions to pretty much everything that gets installed
+  (for potential SLOTting later); made the desktop menu entry more descriptive
 
   21 Feb 2011; Markos Chandras <hwoarang@gentoo.org> eagle-5.10.0-r1.ebuild:
   Stable on amd64 wrt bug #355863
