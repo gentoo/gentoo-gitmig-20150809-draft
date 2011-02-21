@@ -1,0 +1,38 @@
+# ChangeLog for sys-boot/plymouth
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.1 2011/02/21 21:08:17 aidecoe Exp $
+
+*plymouth-0.8.3 (21 Feb 2011)
+
+  21 Feb 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.8.3-drm-reduce-minimum-build-requirements.patch,
+  +files/0.8.3-gentoo-fb-path.patch, +plymouth-0.8.3.ebuild,
+  +files/0.8.3-image-replace-deprecated-libpng-function.patch,
+  +files/gentoo-logo.png, +files/plymouth.initd, +metadata.xml:
+  Initial ebuild is derived from attachment #208174[0] (by Christoph Brill
+  <egore@gmx.de> in year 2009) and has gone through major modifications (see
+  bug #274065[1] for its history) to eventually see the light of day.
+
+  I'd like to thank to all contributors for improving the ebuild (in time
+  order):
+
+    Christoph Brill <egore@gmx.de>
+    jcat <jcat@nysasounds.co.uk>
+    Martin Benz <benson@gmx.ch>
+    Anton Bolshakov <anton.bugs@gmail.com>
+    Favero Francesco <francbilug@gmail.com>
+    Lucian Muresan <lucianm@users.sourceforge.net>
+
+  Thanks to Lucian Muresan also for patch making DRM drivers optional (already
+  applied upstream).
+
+  Special thanks to people who helped me with testing (alphabetical order):
+
+    Michael "brot" Groh <brot@minad.de>
+    Szymon "chaos" Szypulski <ch4os@gen2.org> (who also provided me with
+    hardware to continue testing)
+
+  Gentoo Logo was customized by Michael Groh.
+
+  [0] https://bugs.gentoo.org/attachment.cgi?id=208174
+  [1] https://bugs.gentoo.org/274065
