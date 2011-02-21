@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/corosync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.13 2011/02/21 06:46:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.14 2011/02/21 08:35:58 jer Exp $
+
+  21 Feb 2011; Jeroen Roovers <jer@gentoo.org> corosync-1.3.0.ebuild:
+  Stable for HPPA (bug #354461).
 
   21 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   corosync-1.3.0.ebuild:

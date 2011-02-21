@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4.ebuild,v 1.4 2011/02/21 06:47:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4.ebuild,v 1.5 2011/02/21 08:36:38 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp:${PN}.org@${PN}.org/downloads/${P}/${P}.tar.gz"
 
 LICENSE="BSD public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 
 RDEPEND="sys-cluster/corosync"
