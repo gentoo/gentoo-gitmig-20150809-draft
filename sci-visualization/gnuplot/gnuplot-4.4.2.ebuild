@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2.ebuild,v 1.8 2011/01/21 17:01:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2.ebuild,v 1.9 2011/02/21 17:29:42 ulm Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ RESTRICT="wxwidgets? ( test )"
 RDEPEND="!app-emacs/gnuplot-mode
 	cairo? ( x11-libs/cairo
 		x11-libs/pango
-		>=x11-libs/gtk+-2.8 )
+		>=x11-libs/gtk+-2.8:2 )
 	emacs? ( virtual/emacs )
 	gd? ( media-libs/gd[png] )
 	ggi? ( media-libs/libggi )
@@ -36,7 +36,7 @@ RDEPEND="!app-emacs/gnuplot-mode
 	wxwidgets? ( x11-libs/wxGTK:2.8[X]
 		x11-libs/cairo
 		x11-libs/pango
-		>=x11-libs/gtk+-2.8 )
+		>=x11-libs/gtk+-2.8:2 )
 	X? ( x11-libs/libXaw )
 	xemacs? ( app-editors/xemacs
 		app-xemacs/xemacs-base
