@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20110116.ebuild,v 1.1 2011/01/16 20:20:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5_p20110116.ebuild,v 1.2 2011/02/21 06:17:02 darkside Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="spell"
 
 RDEPEND="spell? ( virtual/aspell-dict )
@@ -40,10 +40,22 @@ src_prepare() {
 src_configure() {
 	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:" -e "s:check_tif_rule::" \
 		makefiles/Makefile.linux || die
+	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:"                  \
+		   -e "s:MOTIFDIR=/usr/local:MOTIFDIR=${EPREFIX}/usr:" \
+		   -e "s:-lX11:-lX11 -lXmu -liconv:"                   \
+		   -e "s:check_tif_rule::"                             \
+		makefiles/Makefile.macosx || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" linux || die
+	case ${CHOST} in
+		*-darwin*)
+			emake CC="$(tc-getCC)" macosx || die
+			;;
+		*-linux*)
+			emake CC="$(tc-getCC)" linux || die
+			;;
+	esac
 	emake VERSION="NEdit ${PV}" -j1 -C doc all || die
 }
 
