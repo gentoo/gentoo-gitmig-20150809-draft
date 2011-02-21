@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/redshift
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.6 2010/09/21 07:46:06 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.7 2011/02/21 17:26:29 ssuominen Exp $
+
+*redshift-1.6 (21 Feb 2011)
+
+  21 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +redshift-1.6.ebuild:
+  Version bump wrt #345687 by Anton Bolshakov.
 
   21 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   redshift-1.4.1.ebuild, redshift-1.5.ebuild:
