@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3.ebuild,v 1.3 2011/02/21 20:39:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3-r1.ebuild,v 1.1 2011/02/21 20:39:00 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,16 +13,13 @@ HOMEPAGE="http://projects.gnome.org/totem/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc +introspection"
+IUSE="doc quvi +introspection"
 
 RDEPEND=">=dev-libs/glib-2.24:2
 	dev-libs/gmime:2.4
 	>=net-libs/libsoup-gnome-2.30:2.4
-	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
-
-# FIXME: quvi support disabled due upstream bug #642906
-#       quvi? ( >=media-libs/quvi-0.2.11 )"
-
+	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
+	quvi? ( >=media-libs/quvi-0.2.11 )"
 DEPEND="${RDEPEND}
 	!<media-video/totem-2.21
 	>=sys-devel/gettext-0.17
@@ -35,7 +32,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
-		--disable-quvi
+		$(use_enable quvi)
 		$(use_enable introspection)"
 	DOCS="AUTHORS ChangeLog NEWS"
 }
