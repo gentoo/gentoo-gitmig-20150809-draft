@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.0.ebuild,v 1.2 2011/02/11 19:12:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.0.ebuild,v 1.3 2011/02/21 06:46:26 phajdan.jr Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp:${PN}.org@${PN}.org/downloads/${P}/${P}.tar.gz"
 
 LICENSE="BSD-2 public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE="doc infiniband ssl"
 
 RDEPEND="!sys-cluster/heartbeat
