@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.76 2011/01/09 00:09:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.77 2011/02/21 17:30:11 vapier Exp $
+
+  21 Feb 2011; Mike Frysinger <vapier@gentoo.org> ming-0.4.3-r1.ebuild,
+  +files/ming-0.4.3-libpng-1.5.patch:
+  Add patch from upstream for building with libpng-1.5. Use emake everywhere.
+  Build in parallel as it seems to work for me.
 
   09 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> ming-0.4.3-r1.ebuild:
   Bug #351098: Use the new PHP_EXT_OPTIONAL_USE optional to make PHP support

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.2 2011/01/09 00:09:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.3 2011/02/21 17:30:11 vapier Exp $
 
 EAPI="3"
 
@@ -10,13 +10,15 @@ PYTHON_DEPEND="python? 2"
 
 inherit eutils autotools flag-o-matic multilib php-ext-source-r2 perl-module python
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 DESCRIPTION="An Open Source library for Flash movie generation."
 HOMEPAGE="http://ming.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ming/${P}.tar.bz2"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="+perl +python php"
+
 RDEPEND="perl? ( dev-lang/perl )
 	python? ( virtual/python )
 	media-libs/freetype
@@ -38,6 +40,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng-1.5.patch
+
 	# Let's get rid of the TEXTRELS, link dynamic. Use gif.
 	sed -i \
 		-e 's/libming.a/libming.so/' \
@@ -64,7 +68,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 DESTDIR="${D}" || die "emake failed"
+	emake || die
 
 	if use php; then
 		cd "${S}"/php_ext
@@ -76,11 +80,11 @@ src_compile() {
 }
 
 src_test() {
-	make check || die "tests failed"
+	emake check || die
 }
 
 src_install() {
-	make DESTDIR="${D}" INSTALLDIRS="vendor" install
+	emake DESTDIR="${D}" INSTALLDIRS="vendor" install || die
 
 	fixlocalpod
 
