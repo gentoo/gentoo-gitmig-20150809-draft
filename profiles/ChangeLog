@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5067 2011/02/21 20:49:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5068 2011/02/21 21:35:40 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/amd64/parent, hardened/linux/ia64/parent,
+  hardened/linux/powerpc/parent, hardened/linux/powerpc/ppc32/parent,
+  hardened/linux/powerpc/ppc64/parent, hardened/linux/x86/parent:
+  Reordered profile stacking to fix USE="-unicode" on hardened profiles.
 
   21 Feb 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking x11-misc/talika for removal. Bug #355901
