@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95.ebuild,v 1.4 2010/10/18 09:03:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95-r1.ebuild,v 1.1 2011/02/21 03:29:14 nerdboy Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 GPSD_PROTOCOLS="ashtech aivdm clientdebug earthmate evermore fv18 garmin
 	garmintxt gpsclock itrax mtk3301 nmea ntrip navcom oceanserver
@@ -23,6 +23,7 @@ GPSD_PROTOCOLS="ashtech aivdm clientdebug earthmate evermore fv18 garmin
 for protocol in ${GPSD_PROTOCOLS}; do
 	IUSE_GPSD_PROTOCOLS+=" gpsd_protocols_${protocol}"
 done
+
 IUSE="${IUSE_GPSD_PROTOCOLS} dbus ipv6 ntp qt4"
 
 # those harddeps are de-facto automagicall
@@ -35,9 +36,10 @@ RDEPEND="
 		dev-libs/dbus-glib
 	)
 	ntp? ( net-misc/ntp )
-	qt4? ( x11-libs/qt-gui )
-"
-DEPEND="${RDEPEND}"
+	qt4? ( x11-libs/qt-gui )"
+
+DEPEND="${RDEPEND}
+	app-text/xmlto"
 
 PATCHES=(
 	"${FILESDIR}/${PV}-disable-strip.patch"
@@ -64,27 +66,37 @@ src_configure() {
 		myopts+=" $(use_enable gpsd_protocols_${protocol} ${protocol})"
 	done
 
+	if ! use qt4 ;  then
+		myopts+=" --disable-libQgpsmm --disable-libgpsmm ${myopts}"
+	fi
+
 	# --disable-bluetooth: considered experimental -> disable
-	# hack to make it not generate docs on the fly
-	WITH_XSLTPROC=no WITH_XMLTO=no \
-	econf \
+	# --enable-static is required for tests, see bug 355071
+	# Hack to make it not generate docs on the fly; xmlto is
+	# needed for man pages (xsltproc is only needed for web pages)
+	econf WITH_XMLTO=yes WITH_XSLTPROC=no \
+		--build=${CBUILD} \
 		--disable-dependency-tracking \
 		--disable-bluetooth \
-		--disable-static \
-		--enable-libgpsmm \
+		--enable-static \
 		--enable-gpsd-user=gpsd \
 		--enable-gpsd-group=uucp \
 		$(use_enable dbus) \
 		$(use_enable ipv6) \
 		$(use_enable ntp ntpshm) \
 		$(use_enable ntp pps) \
-		$(use_enable qt4 libQgpsmm) \
 		${myopts}
 }
 
 src_install() {
 	# no it can't be done using emake cause it is non-compliant
 	make DESTDIR="${D}" install || die
+
+	# needs this header for libQgpsmm
+	if use qt4 ; then
+		insinto /usr/include
+		doins libQgpsmm/libQgpsmm_global.h
+	fi
 
 	# no need for .la files here
 	find "${D}" -type f -name '*.la' -exec rm -f '{}' +
