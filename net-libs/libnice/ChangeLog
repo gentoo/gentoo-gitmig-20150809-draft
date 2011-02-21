@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.19 2011/02/13 11:31:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.20 2011/02/21 07:25:04 nirbheek Exp $
+
+*libnice-0.1.0 (21 Feb 2011)
+
+  21 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +libnice-0.1.0.ebuild:
+  Bump to 0.1.0, EAPI is now 3, passes all tests
 
   13 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Add gnome to metadata as talked between us since empathy relies on this.
