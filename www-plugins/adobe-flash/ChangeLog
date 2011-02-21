@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.65 2011/02/17 20:43:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.66 2011/02/21 15:02:51 lack Exp $
+
+  21 Feb 2011; Jim Ramsay <lack@gentoo.org>
+  adobe-flash-10.2.152.27_p201011173-r2.ebuild:
+  memcpy-to-memmove.sh requires bash, no just any sh (Bug #354073)
 
 *adobe-flash-10.2.152.27_p201011173-r2 (17 Feb 2011)
 

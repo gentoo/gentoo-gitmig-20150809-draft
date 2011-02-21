@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.152.27_p201011173-r2.ebuild,v 1.1 2011/02/17 20:43:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.152.27_p201011173-r2.ebuild,v 1.2 2011/02/21 15:02:51 lack Exp $
 
 EAPI=3
 inherit rpm nsplugins multilib toolchain-funcs versionator
@@ -127,7 +127,7 @@ src_compile() {
 		# Bug #354073: Patch binary to use memmove instead of memcpy from
 		# Redhat's bug https://bugzilla.redhat.com/show_bug.cgi?id=638477#c94
 		cp libflashplayer.so libflashplayer.so.orig
-		sh "${FILESDIR}/memcpy-to-memmove.sh" libflashplayer.so \
+		bash "${FILESDIR}/memcpy-to-memmove.sh" libflashplayer.so \
 			|| die "memcpy-to-memmove.sh failed"
 	fi
 	# TODO: Apparently changing memcpy to memmove helps the 32-bit plugin too...
