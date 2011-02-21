@@ -2,10 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>no-herd</herd>
-
   <maintainer>
-    <email>signals42@gentoo.org</email>
+    <email>signals@gentoo.org</email>
     <name>Kevin McCarthy</name>
   </maintainer>
-
 </pkgmetadata>
