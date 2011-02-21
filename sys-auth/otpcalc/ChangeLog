@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/otpcalc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.10 2010/10/18 20:38:18 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.11 2011/02/21 17:35:01 ulm Exp $
+
+  21 Feb 2011; Ulrich Mueller <ulm@gentoo.org> otpcalc-0.97-r5.ebuild:
+  Depend on slot 2 of gtk+.
 
 *otpcalc-0.97-r5 (18 Oct 2010)
 
