@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bas/ChangeLog,v 1.1 2011/02/02 17:54:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bas/ChangeLog,v 1.2 2011/02/21 16:15:27 signals Exp $
+
+  21 Feb 2011; Kevin McCarthy <signals@gentoo.org> metadata.xml:
+  Take direct maintainership and remove proxy maintainers.
 
 *bas-2.1 (02 Feb 2011)
 

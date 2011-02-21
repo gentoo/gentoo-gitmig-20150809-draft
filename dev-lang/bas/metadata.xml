@@ -3,16 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
   <maintainer>
-    <email>signals42@gmail.com</email>
+    <email>signals@gentoo.org</email>
     <name>Kevin McCarthy</name>
-  </maintainer>
-  <maintainer>
-    <email>ssuominen@gentoo.org</email>
-    <name>Samuli Suominen</name>
-  </maintainer>
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-    <name>Diego Elio Pettenò</name>
   </maintainer>
   <use>
     <flag name='lr0'>Use the LR0 parser instead of the recursive descending parser</flag>
