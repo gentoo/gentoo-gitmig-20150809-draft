@@ -35,8 +35,8 @@ name should be bumped, but the patch content should stay fairly the same.
 +		if test "$installed" = yes; then
 +		  # Rather use S=WORKDIR if our version of portage supports it.
 +		  # This is because some ebuild (gcc) do not use $S as buildroot.
-+		  if test "$PWORKDIR"; then
-+		    S="$PWORKDIR"
++		  if test "$WORKDIR"; then
++		    S="$WORKDIR"
 +		  fi
 +		  # We do not want portage's build root ($S) present.
 +		  my_little_ninja_foo_2=`echo $deplib |$EGREP -e "$S"`
