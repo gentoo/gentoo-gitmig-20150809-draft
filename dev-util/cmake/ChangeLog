@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.151 2011/01/17 23:29:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.152 2011/02/21 14:52:57 scarabeus Exp $
+
+*cmake-2.8.4 (21 Feb 2011)
+
+  21 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> +cmake-2.8.4.ebuild,
+  +files/cmake-2.8.4-FindBoost.patch,
+  +files/cmake-2.8.4-FindPythonInterp.patch,
+  +files/cmake-2.8.4-FindPythonLibs.patch:
+  Version bump to the latest (some tests still fail, to be fixed).
 
   17 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> cmake-2.8.3-r1.ebuild:
   Fix tests per bug #315223.
