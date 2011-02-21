@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r1.ebuild,v 1.1 2010/10/30 01:12:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r1.ebuild,v 1.2 2011/02/21 04:16:56 nerdboy Exp $
 
 EAPI=2
 
@@ -25,6 +25,7 @@ COMMON_DEP=">=sci-geosciences/gpsd-2.94
 	dev-libs/libxml2
 	dev-db/sqlite:3
 	x11-libs/gtk+:2
+	x11-libs/gdk-pixbuf:2
 	dbus? ( dev-libs/dbus-glib )
 	gdal? ( sci-libs/gdal )
 	kismet? ( net-wireless/kismet )
@@ -67,7 +68,8 @@ src_prepare() {
 		-e "s:Graphics;Network;Geography:Education;Science;Geography;GPS:g" \
 		data/gpsdrive.desktop || die "sed failed"
 
-	epatch "${FILESDIR}"/gpsdrive-2.11_DefineOptions_gpsd.patch
+	epatch "${FILESDIR}"/${P}_DefineOptions_gpsd.patch
+	epatch "${FILESDIR}"/${P}-add-gdk-pixbuf2.patch
 }
 
 src_configure() {
