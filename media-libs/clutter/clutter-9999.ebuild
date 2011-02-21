@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-9999.ebuild,v 1.2 2011/02/19 23:37:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-9999.ebuild,v 1.3 2011/02/21 20:56:53 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.11"
+[[ ${PV} = 9999 ]] && GIT_ECLASS="autotools git"
 
-inherit clutter
+inherit clutter ${GIT_ECLASS}
 
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 SLOT="1.0"
 IUSE="debug doc +introspection"
 if [[ ${PV} = 9999 ]]; then
-	inherit autotools git
 	EGIT_BOOTSTRAP="echo > build/config.rpath
 		gtkdocize
 		cp "${ROOT}/usr/share/gettext/po/Makefile.in.in" po/
@@ -28,11 +28,11 @@ fi
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
 # We always use the gdk-pixbuf backend now since it's been split out
 RDEPEND="${RDEPEND}
-	>=dev-libs/glib-2.26
+	>=dev-libs/glib-2.26:2
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
-	>=dev-libs/atk-1.7
+	>=dev-libs/atk-1.17
 
 	virtual/opengl
 	x11-libs/libdrm
@@ -44,8 +44,8 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/libXfixes-3
 	>=x11-libs/libXcomposite-0.4
 
-	|| ( x11-libs/gdk-pixbuf
-		 >=x11-libs/gtk+-2.0 )
+	|| ( x11-libs/gdk-pixbuf:2
+		 >=x11-libs/gtk+-2.0:2 )
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 "

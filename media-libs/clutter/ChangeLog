@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.21 2011/02/19 23:37:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.22 2011/02/21 20:56:53 nirbheek Exp $
+
+*clutter-1.6.6 (21 Feb 2011)
+
+  21 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org> clutter-1.6.4.ebuild,
+  +clutter-1.6.6.ebuild, clutter-9999.ebuild:
+  Bump to 1.6.6, fix slot-deps, do only one inherit: avoids DESCRIPTION and
+  other variables from being overriden by eclasses
 
   19 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -clutter-1.6.2.ebuild,
   -clutter-1.6.2-r1.ebuild, clutter-9999.ebuild:
