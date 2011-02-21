@@ -1,42 +1,45 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.13 2009/10/07 16:16:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.14 2011/02/21 17:46:50 ssuominen Exp $
 
 EAPI=2
 
-DESCRIPTION="A general-purpose library-driver for iRiver's iFP portable audio players."
+DESCRIPTION="A general-purpose library for iRiver's iFP portable audio players"
 HOMEPAGE="http://ifp-driver.sourceforge.net/libifp/"
 SRC_URI="mirror://sourceforge/ifp-driver/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86"
-IUSE="doc examples"
+IUSE="doc examples static-libs"
 
-RDEPEND=">=dev-libs/libusb-0.1"
+RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.3.7 )
 	sys-apps/sed"
 
 src_prepare() {
-	sed -e '/CFLAGS=/s:-g -O2:${CFLAGS}:' \
+	sed -i \
+		-e '/CFLAGS=/s:-g -O2:${CFLAGS}:' \
 		-e '/CXXFLAGS=/s:-g -O2:${CXXFLAGS}:' \
-		-i configure || die "sed failed"
+		configure || die
 }
 
 src_configure() {
-	# hack to prevent docs from building
-	use doc || DOCS="have_doxygen=no"
+	use doc || export have_doxygen=no
 
-	eval $DOCS econf \
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
+		$(use_enable examples) \
 		--with-libusb \
-		--with-libifp \
-		--without-kmodule \
-		$(use_enable examples)
+		--without-kmodule
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
+
+	find "${D}" -name '*.la' -exec rm -f {} +
 
 	# clean /usr/bin after installation
 	# by moving examples to examples dir
@@ -49,8 +52,4 @@ src_install() {
 	fi
 
 	use doc && dodoc README ChangeLog TODO
-}
-
-pkg_postinst() {
-	elog "Install media-sound/libifp-module for kernel support."
 }

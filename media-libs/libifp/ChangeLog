@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libifp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.13 2009/10/07 16:12:45 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.14 2011/02/21 17:46:50 ssuominen Exp $
+
+  21 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> libifp-1.0.0.2.ebuild:
+  USE="static-libs" and remove useless libtool archive. Use virtual/libusb:0.
 
   07 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> libifp-1.0.0.2.ebuild:
   Replace USE modules with postinst message wrt #286081, because
