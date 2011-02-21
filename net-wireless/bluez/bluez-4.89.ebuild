@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.80.ebuild,v 1.5 2011/01/23 09:14:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.89.ebuild,v 1.1 2011/02/21 19:24:48 pacho Exp $
 
 EAPI="3"
 
@@ -9,12 +9,15 @@ inherit multilib eutils
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
 
-OUIDATE="20101126" # Needed because of bug #345263
+# Because of oui.txt changing from time to time without noticement, we need to supply it
+# ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
+# See bugs #345263 and #349473 for reference.
+OUIDATE="20110221" # Needed because of bug #345263
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
-	http://standards.ieee.org/regauth/oui/oui.txt -> oui-${OUIDATE}.txt"
+	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
 IUSE="alsa attrib caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmcia pnat test-programs usb"
 
@@ -28,7 +31,7 @@ CDEPEND="alsa? (
 	usb? ( dev-libs/libusb )
 	cups? ( net-print/cups )
 	>=sys-fs/udev-146[extras]
-	>=dev-libs/glib-2.14
+	>=dev-libs/glib-2.14:2
 	sys-apps/dbus
 	media-libs/libsndfile
 	>=dev-libs/libnl-1.1
@@ -93,7 +96,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog README || die
 
@@ -125,7 +128,7 @@ src_install() {
 		serial/serial.conf \
 		|| die
 
-	insinto /etc/udev/rules.d/
+	insinto /$(get_libdir)/udev/rules.d/
 	newins "${FILESDIR}/${PN}-4.18-udev.rules" 70-bluetooth.rules || die
 	exeinto /$(get_libdir)/udev/
 	newexe "${FILESDIR}/${PN}-4.18-udev.script" bluetooth.sh || die
