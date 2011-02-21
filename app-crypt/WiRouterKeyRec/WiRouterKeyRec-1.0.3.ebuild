@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/WiRouterKeyRec-1.0.3.ebuild,v 1.2 2011/02/17 21:10:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/WiRouterKeyRec-1.0.3.ebuild,v 1.3 2011/02/21 14:02:33 c1pher Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit toolchain-funcs
 MY_PN="WiRouter_KeyRec"
 MY_P="${MY_PN}_${PV}"
 
-DESCRIPTION="Recovery tool for wpa passhprase"
+DESCRIPTION="Recovery tool for wpa passphrase"
 HOMEPAGE="http://www.salvatorefresta.net"
 SRC_URI="http://tools.salvatorefresta.net/${MY_P}.zip -> ${P}.zip"
 
