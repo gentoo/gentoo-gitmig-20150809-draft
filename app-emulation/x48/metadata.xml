@@ -4,14 +4,8 @@
   <herd>no-herd</herd>
 
   <maintainer>
-    <email>signals42@gmail.com</email>
+    <email>signals42@gentoo.org</email>
     <name>Kevin McCarthy</name>
-    <description>Proxied maintainer, assign bugs to him</description>
   </maintainer>
 
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-    <name>Diego Elio Pettenò</name>
-    <description>Proxy maintainer, CC him on bugs</description>
-  </maintainer>
 </pkgmetadata>
