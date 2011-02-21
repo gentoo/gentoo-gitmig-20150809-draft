@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.53 2011/01/31 21:43:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.54 2011/02/21 06:54:11 phajdan.jr Exp $
+
+  21 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pgadmin3-1.12.2.ebuild:
+  x86 stable wrt bug #355321
 
 *pgadmin3-1.12.2 (31 Jan 2011)
 
