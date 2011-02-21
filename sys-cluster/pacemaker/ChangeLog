@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/pacemaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.10 2011/02/21 08:38:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.11 2011/02/21 14:39:27 ultrabug Exp $
+
+*pacemaker-1.1.4-r4 (21 Feb 2011)
+
+  21 Feb 2011; Ultrabug <ultrabug@gentoo.org> +pacemaker-1.1.4-r4.ebuild,
+  +files/pacemaker-1.1.4-autotools-r2.patch, +files/pacemaker.initd,
+  +files/pacemaker.service:
+  pacemaker 1.1.x series bump
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> pacemaker-1.0.10.ebuild:
   Stable for HPPA (bug #354461).
