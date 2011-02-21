@@ -1,6 +1,9 @@
 # ChangeLog for app-office/teapot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/ChangeLog,v 1.1 2011/02/03 16:26:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/teapot/ChangeLog,v 1.2 2011/02/21 16:22:52 signals Exp $
+
+  21 Feb 2011; Kevin McCarthy <signals@gentoo.org> metadata.xml:
+  Remove proxy maintainers and take direct maintainership.
 
 *teapot-2.2.0 (03 Feb 2011)
 
