@@ -1,6 +1,11 @@
 # ChangeLog for games-server/crossfire-server
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.17 2010/03/24 14:15:39 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.18 2011/02/21 14:17:21 tupone Exp $
+
+  21 Feb 2011; Tupone Alfredo <tupone@gentoo.org>
+  crossfire-server-1.11.0.ebuild,
+  +files/crossfire-server-1.11.0-libpng15.patch:
+  Fix build with media-libs/libpng-1.5 Bug #355123 by Lars Wendler
 
   24 Mar 2010; Brent Baude <ranger@gentoo.org>
   crossfire-server-1.11.0.ebuild:
