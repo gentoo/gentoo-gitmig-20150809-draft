@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gummi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.15 2011/01/25 12:49:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.16 2011/02/21 18:50:14 hwoarang Exp $
+
+*gummi-0.5.5-r1 (21 Feb 2011)
+
+  21 Feb 2011; Markos Chandras <hwoarang@gentoo.org> +gummi-0.5.5-r1.ebuild,
+  +files/gummi-0.5.5-halt-on-error.patch:
+  Revision bump including a patch sent from upstream developer
 
   25 Jan 2011; Christian Faulhammer <fauli@gentoo.org> gummi-0.5.5.ebuild:
   stable x86, bug 352013
