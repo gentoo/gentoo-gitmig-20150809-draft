@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.9 2011/02/21 13:21:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.10 2011/02/21 16:07:30 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils eutils python
+inherit distutils
 
 MY_PN="SilverCity"
 MY_P="${MY_PN}-${PV}"
@@ -26,21 +26,19 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
+PYTHON_NONVERSIONED_EXECUTABLES=("/usr/bin/source2html.py")
+
 PYTHON_MODNAME="${MY_PN}"
 
-src_install() {
-	distutils_src_install
+src_prepare() {
+	distutils_src_prepare
 
-	# Remove useless documentation.
-	rm "${D}usr/share/doc/${P}/PKG-INFO"*
+	# Fix line endings.
+	find -type f -exec sed -e 's/\r$//' -i \{\} \; || die "sed failed"
 
 	# Fix permissions.
-	chmod 644 "${D}"usr/$(get_libdir)/python*/site-packages/SilverCity/default.css
+	chmod -x CSS/default.css || die "chmod failed"
 
-	# Fix CR/LF issue.
-	find "${D}usr/bin" -iname "*.py" -exec sed -e 's/\r$//' -i \{\} \;
-
-	# Fix path.
-	dosed -i 's|#!/usr/home/sweetapp/bin/python|#!/usr/bin/env python|' \
-		/usr/bin/cgi-styler-form.py || die "dosed failed"
+	# Fix shebang.
+	sed -e 's:#!/usr/home/sweetapp/bin/python:#!/usr/bin/env python:' -i PySilverCity/Scripts/cgi-styler-form.py || die "sed failed"
 }
