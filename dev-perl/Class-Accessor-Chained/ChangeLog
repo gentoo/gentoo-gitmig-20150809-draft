@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Accessor-Chained
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Chained/ChangeLog,v 1.5 2011/02/18 09:41:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Chained/ChangeLog,v 1.6 2011/02/21 18:43:54 hwoarang Exp $
+
+  21 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  Class-Accessor-Chained-0.10.ebuild:
+  Stable on amd64 wrt bug #355213
 
   18 Feb 2011; Torsten Veller <tove@gentoo.org>
   Class-Accessor-Chained-0.10.ebuild:
