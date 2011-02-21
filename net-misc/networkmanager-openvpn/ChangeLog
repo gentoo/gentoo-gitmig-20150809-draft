@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/networkmanager-openvpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.15 2011/02/19 17:46:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.16 2011/02/21 13:04:17 dagger Exp $
+
+*networkmanager-openvpn-0.8.2-r1 (21 Feb 2011)
+*networkmanager-openvpn-0.8.1-r1 (21 Feb 2011)
+
+  21 Feb 2011; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-openvpn-0.8.1.ebuild,
+  +networkmanager-openvpn-0.8.1-r1.ebuild,
+  -networkmanager-openvpn-0.8.2.ebuild,
+  +networkmanager-openvpn-0.8.2-r1.ebuild:
+  Remove rdep on gnome-base/libgnomeui. It's not longer required. Fixes
+  bug #355201
 
 *networkmanager-openvpn-0.8-r1 (19 Feb 2011)
 

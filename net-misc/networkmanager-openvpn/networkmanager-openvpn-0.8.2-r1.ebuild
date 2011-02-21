@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.8.2.ebuild,v 1.1 2010/11/10 13:11:02 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.8.2-r1.ebuild,v 1.1 2011/02/21 13:04:17 dagger Exp $
 
 EAPI="2"
 
@@ -27,7 +27,6 @@ RDEPEND="
 		gnome-base/gconf:2
 		gnome-base/gnome-keyring
 		gnome-base/libglade:2.0
-		gnome-base/libgnomeui
 	)"
 
 DEPEND="${RDEPEND}
