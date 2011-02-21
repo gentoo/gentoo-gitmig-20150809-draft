@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-2.3.10.ebuild,v 1.2 2011/01/07 09:30:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/actionmailer-2.3.10.ebuild,v 1.3 2011/02/21 19:42:10 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -17,6 +17,8 @@ LICENSE="MIT"
 SLOT="2.3"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
+
+RUBY_PATCHES=( "${P}-rails3.patch" )
 
 ruby_add_rdepend "~dev-ruby/actionpack-${PV}
 	>=dev-ruby/text-format-0.6.3
