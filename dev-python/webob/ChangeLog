@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.25 2011/02/20 19:36:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.26 2011/02/21 20:03:27 arfrever Exp $
+
+*webob-1.0.3 (21 Feb 2011)
+
+  21 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +webob-1.0.3.ebuild:
+  Version bump.
 
 *webob-1.0.2 (20 Feb 2011)
 
