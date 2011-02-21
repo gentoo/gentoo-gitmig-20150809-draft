@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.2 2011/01/01 15:59:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.3 2011/02/21 15:09:51 scarabeus Exp $
 
 EAPI=3
 
@@ -29,15 +29,16 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		$(cmake-utils_use_with debug DEBUG_CALLTRACE)
 		$(cmake-utils_use_with debug DEBUG_CRYPTO)
 		$(cmake-utils_use_with gcrypt)
-		$(cmake-utils_use_with zlib LIBZ)
+		$(cmake-utils_use_with pcap)
+		$(cmake-utils_use_with server)
 		$(cmake-utils_use_with sftp)
 		$(cmake-utils_use_with ssh1)
-		$(cmake-utils_use_with server)
 		$(cmake-utils_use_with static-libs STATIC_LIB)
+		$(cmake-utils_use_with zlib LIBZ)
 	)
 
 	cmake-utils_src_configure
@@ -47,7 +48,7 @@ src_install() {
 	cmake-utils_src_install
 
 	if use examples; then
-		insinto "${EROOT}"usr/share/doc/"${PF}"/examples
+		insinto /usr/share/doc/"${PF}"/examples
 		doins examples/*.c
 	fi
 }

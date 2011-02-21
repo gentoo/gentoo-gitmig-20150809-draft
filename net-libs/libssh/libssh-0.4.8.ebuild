@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.4.8.ebuild,v 1.1 2011/02/01 07:49:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.4.8.ebuild,v 1.2 2011/02/21 15:09:51 scarabeus Exp $
 
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
 EAPI=3
 
-inherit cmake-utils
+inherit eutils cmake-utils
 
 DESCRIPTION="Access a working SSH implementation by means of a library"
 HOMEPAGE="http://www.libssh.org/"
 SRC_URI="http://www.${PN}.org/files/${PV:0:3}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~s390 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="debug examples gcrypt pcap +sftp ssh1 server static-libs zlib"
 
@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		$(cmake-utils_use_with debug DEBUG_CALLTRACE)
 		$(cmake-utils_use_with debug DEBUG_CRYPTO)
 		$(cmake-utils_use_with gcrypt)
@@ -50,7 +50,7 @@ src_install() {
 	cmake-utils_src_install
 
 	if use examples; then
-		insinto "${EROOT}"usr/share/doc/"${PF}"/examples
+		insinto /usr/share/doc/"${PF}"/examples
 		doins examples/*.c
 	fi
 }
