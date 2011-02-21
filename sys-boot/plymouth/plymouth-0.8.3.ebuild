@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3.ebuild,v 1.1 2011/02/21 21:08:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3.ebuild,v 1.2 2011/02/21 21:54:33 aidecoe Exp $
 
 EAPI="3"
 
@@ -8,7 +8,8 @@ inherit autotools-utils
 
 DESCRIPTION="Graphical boot animation (splash) and logger"
 HOMEPAGE="http://cgit.freedesktop.org/plymouth/"
-SRC_URI="http://cgit.freedesktop.org/${PN}/snapshot/${P}.tar.bz2"
+SRC_URI="http://cgit.freedesktop.org/${PN}/snapshot/${P}.tar.bz2
+	http://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/gentoo-logo.png"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
@@ -59,8 +60,7 @@ src_install() {
 
 	if use branding ; then
 		insinto /usr/share/plymouth
-		newins "${FILESDIR}"/gentoo-logo.png bizcom.png \
-			|| die 'branding failed'
+		newins "${DISTDIR}"/gentoo-logo.png bizcom.png || die 'branding failed'
 	fi
 }
 
