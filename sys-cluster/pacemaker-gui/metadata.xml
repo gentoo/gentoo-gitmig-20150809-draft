@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>cluster</herd>
+	<longdescription>Pacemaker python GUI and management daemon</longdescription>
+    <use>
+       <flag name="heartbeat">Enable support for heartbeat based <pkg>sys-cluster/pacemaker</pkg>.</flag>
+    </use>
+</pkgmetadata>
