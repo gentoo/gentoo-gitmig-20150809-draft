@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.7 2010/11/08 01:01:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.8 2011/02/21 06:25:32 darkside Exp $
 
-EAPI=2
+EAPI=3
 inherit multilib toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
@@ -11,10 +11,10 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 elif [[ ${PV} == *pre* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux"
 else
 	SRC_URI="http://webm.googlecode.com/files/${PN}-v${PV}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux"
 fi
 
 DESCRIPTION="WebM VP8 Codec SDK"
@@ -36,8 +36,8 @@ DEPEND="amd64? ( dev-lang/yasm )
 src_configure() {
 	tc-export CC
 	./configure \
-		--prefix=/usr \
-		--libdir=/usr/$(get_libdir) \
+		--prefix="${EPREFIX}"/usr \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--enable-pic \
 		--enable-vp8 \
 		--enable-shared \

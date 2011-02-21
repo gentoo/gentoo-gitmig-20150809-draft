@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.13 2011/02/05 22:50:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.14 2011/02/21 06:25:32 darkside Exp $
+
+  21 Feb 2011; Jeremy Olexa <darkside@gentoo.org> libvpx-0.9.5-r1.ebuild,
+  libvpx-9999.ebuild:
+  Port changes for Gentoo Prefix, bug 351560 by Robert Blenkinsopp
+  (XenoPhoenix)
 
   05 Feb 2011; Markus Meier <maekke@gentoo.org> libvpx-0.9.5-r1.ebuild:
   add ~arm, bug #350648
