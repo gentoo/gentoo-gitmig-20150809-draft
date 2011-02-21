@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/libopensync-plugin-google-calendar
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-google-calendar/ChangeLog,v 1.10 2009/11/15 23:45:00 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-google-calendar/ChangeLog,v 1.11 2011/02/21 11:11:46 dirtyepic Exp $
+
+  21 Feb 2011; Ryan Hill <dirtyepic@gentoo.org>
+  libopensync-plugin-google-calendar-0.22.ebuild,
+  +files/libopensync-plugin-google-calendar-0.22-recurrent.patch,
+  libopensync-plugin-google-calendar-0.36.ebuild,
+  libopensync-plugin-google-calendar-9999.ebuild, metadata.xml:
+  Fix dependencies (including bug #247268), add patch for recurrent calendar
+  entries (bug #185475). Port to EAPI 3 and various QA fixes.
 
   15 Nov 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libopensync-plugin-google-calendar-0.21.ebuild,
