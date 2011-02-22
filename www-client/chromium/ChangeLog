@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.286 2011/02/20 17:37:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.287 2011/02/22 13:33:06 phajdan.jr Exp $
+
+*chromium-11.0.672.2-r1 (22 Feb 2011)
+
+  22 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-launcher-r1.sh, +chromium-11.0.672.2-r1.ebuild,
+  chromium-9999.ebuild:
+  Rename the launcher from chromium to chromium-browser, for xdg-open; bug
+  #355517 by Dean Matzkov <Bapabooiee@gmail.com>.
 
   20 Feb 2011; Markus Meier <maekke@gentoo.org> chromium-10.0.648.82.ebuild:
   add ~arm, bug #350648
