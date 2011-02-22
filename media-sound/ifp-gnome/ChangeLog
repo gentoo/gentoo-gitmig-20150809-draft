@@ -1,12 +1,10 @@
 # ChangeLog for media-sound/ifp-gnome
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ChangeLog,v 1.3 2007/08/19 16:54:31 drac Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ChangeLog,v 1.4 2011/02/22 17:21:19 ssuominen Exp $
 
-  19 Aug 2007; Samuli Suominen <drac@gentoo.org> ifp-gnome-0.7.ebuild:
-  Clean up install functions.
-
-  03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
-  Regenerate digest in Manifest2 format.
+  22 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> ifp-gnome-0.7.ebuild:
+  Use python.eclass to convert shebang. Fix gnome-python dependencies wrt
+  #352928 by Pacho Ramos.
 
 *ifp-gnome-0.7 (27 Jan 2006)
 
