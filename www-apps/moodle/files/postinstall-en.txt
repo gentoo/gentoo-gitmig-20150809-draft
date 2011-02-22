@@ -98,8 +98,51 @@ NEW INSTALLS
 
 UPGRADES
 
-   TODO - When the next release is out, I will fill this
-   section in.
+0  Before any upgade you should backup your database in case you have
+   to roll back.  The moodle dirroot directory ($CFG->dirroot in the
+   config.php file) isn't as critical since you can always reinstall
+   that with web-apps.  The moodle data root ($CFG->dataroot in config.php),
+   where files are uploaded, will not be touched.  But the upgrade will
+   probably change your db schema, and the new format may not be backward
+   compatible.  For mysql use
+
+	mysqldump -u moodle_user -p -C -Q -e --create-options moodle_db > moodle-backup.sql
+
+   or for postgresql use
+
+	su - postgres
+	pg_dump moodle_db > moodle-backup.sql
+
+   If you have to fall back, you can do so using
+
+	mysql -p -u moodle_user moodle_db < moodle-backup.sql
+
+   or
+
+	su - postgres
+	psql moodle_db < moodle-backup.sql
+
+   TEST THIS!  PRACTICE THIS!  Make sure it will work for you if you
+   have to fall back.
+
+1  Emerge the new moodle ebuild.  Be prepared to add USE flags for
+   php and re-emerge it since upgrades may require new functionality
+   from php.  Remember to restart apache after re-emerging php!
+
+2  If the ebuild didn't do it for you, update using
+
+	webapp-config -d moodle -U moodle X.Y.Z
+
+3  Aim your browser to the URL in the config.php file defined
+   by $CFG->wwwroot.  You will get a message that you are about
+   to automatically upgrade your server and cannot go back.
+   This is why you backed up your db in step 1.  You can go back
+   if you use webapp-config to install the older version AND
+   drop the new db and restart the old one.  You did practice
+   restoring, right?
+
+4  Click "Continue" and follow through with the upgrade.
+
 
 =================================================================
 
@@ -174,3 +217,4 @@ ADDITIONAL PHP REQUIREMENTS
    	LDAP or CAS		ldap
 	External database	odbc
 	RADIUS			radius
+
