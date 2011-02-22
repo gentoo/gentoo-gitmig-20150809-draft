@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.15.ebuild,v 1.10 2011/01/09 17:37:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.15.ebuild,v 1.11 2011/02/22 02:48:32 vapier Exp $
 
 EAPI="3"
 
@@ -21,6 +21,7 @@ RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-uclibc-sched_param-def.patch #336484
+	epatch "${FILESDIR}"/${P}-git-version-gen.patch
 }
 
 src_configure() {
