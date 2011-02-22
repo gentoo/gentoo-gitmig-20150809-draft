@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.35 2011/01/10 07:29:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.36 2011/02/22 21:54:00 eva Exp $
+
+*gssdp-0.9.2 (22 Feb 2011)
+
+  22 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> +gssdp-0.9.2.ebuild:
+  Version bump. Required for recent rygel releases, with permission from herd.
 
 *gssdp-0.8.2 (10 Jan 2011)
 
