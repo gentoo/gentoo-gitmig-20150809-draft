@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/cherokee
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.80 2011/02/22 21:25:44 bass Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.81 2011/02/22 21:43:58 bass Exp $
+
+  22 Feb 2011; <bass@gentoo.org> +files/cherokee-initd-1.2.0,
+  cherokee-1.2.0.ebuild:
+  New init script. thx #333925
 
 *cherokee-1.2.0 (22 Feb 2011)
 

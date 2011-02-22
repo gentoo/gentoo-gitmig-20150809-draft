@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.0.ebuild,v 1.1 2011/02/22 21:25:44 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.0.ebuild,v 1.2 2011/02/22 21:43:58 bass Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -91,7 +91,7 @@ src_install () {
 	dodoc AUTHORS ChangeLog
 
 	use pam && pamd_mimic system-auth cherokee auth account session
-	newinitd "${FILESDIR}/${PN}-initd-0.99.23" ${PN} || die "newinitd failed"
+	newinitd "${FILESDIR}/${PN}-initd-1.2.0" ${PN} || die "newinitd failed"
 
 	dodir /usr/share/doc/${PF}/contrib
 	insinto /usr/share/${PF}/contrib
