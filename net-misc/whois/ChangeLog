@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.154 2011/02/21 08:11:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.155 2011/02/22 18:27:01 nixnut Exp $
+
+  22 Feb 2011; nixnut <nixnut@gentoo.org> whois-5.0.8.ebuild:
+  ppc stable #353737
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> whois-5.0.8.ebuild:
   Stable for HPPA (bug #353737).
