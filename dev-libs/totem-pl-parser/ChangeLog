@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.82 2011/02/21 20:39:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.83 2011/02/22 17:59:19 pacho Exp $
+
+  22 Feb 2011; Pacho Ramos <pacho@gentoo.org> -totem-pl-parser-2.32.2.ebuild,
+  totem-pl-parser-2.32.3.ebuild, totem-pl-parser-2.32.3-r1.ebuild:
+  Fix building without dev-libs/gobject-introspection (bug #355979 by Timo A.
+  Hummel). Remove old.
 
 *totem-pl-parser-2.32.3-r1 (21 Feb 2011)
 

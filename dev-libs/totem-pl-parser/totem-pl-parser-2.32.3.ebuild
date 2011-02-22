@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3.ebuild,v 1.3 2011/02/21 20:39:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3.ebuild,v 1.4 2011/02/22 17:59:19 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -9,6 +9,7 @@ inherit gnome2 eutils autotools
 
 DESCRIPTION="Playlist parsing library"
 HOMEPAGE="http://projects.gnome.org/totem/"
+SRC_URI="${SRC_URI} mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -40,6 +41,15 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS"
 }
 
+src_unpack() {
+	# If gobject-introspection is installed, we don't need the extra .m4
+	if has_version "dev-libs/gobject-introspection"; then
+		unpack ${P}.tar.bz2
+	else
+		unpack ${A}
+	fi
+}
+
 src_prepare() {
 	gnome2_src_prepare
 
@@ -52,7 +62,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-quvi.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
+	AT_M4DIR=${WORKDIR} eautoreconf
 }
 
 src_test() {
