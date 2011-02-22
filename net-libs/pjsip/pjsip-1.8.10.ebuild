@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-1.6.ebuild,v 1.4 2011/02/22 10:59:09 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-1.8.10.ebuild,v 1.1 2011/02/22 10:59:09 elvanor Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.pjsip.org/release/${PV}/pjproject-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa doc epoll examples ext-sound g711 g722 g7221 gsm ilbc l16
 oss python speex"
 #small-filter large-filter speex-aec ssl
@@ -40,9 +40,6 @@ src_prepare() {
 		-e '/PJLIB_UTIL_CFLAGS/ s/(_CFLAGS)/(_CFLAGS) -fPIC/g' \
 		Makefile \
 		build.mak.in || die "sed failed."
-
-	# Disable symlinking (lib-target_name to lib)
-	sed -i -e '/cd \$/b1;b;:1 N;N;d' Makefile || die "sed failed."
 
 	# TODO: remove deps to shipped codecs and libs, use system ones
 	# rm -r third_party
@@ -78,7 +75,7 @@ src_install() {
 	DESTDIR="${D}" emake install || die "emake install failed."
 
 	if use python; then
-		pushd pjsip-apps/src/py_pjsua
+		pushd pjsip-apps/src/python
 		python setup.py install --prefix="${D}/usr/"
 		popd
 	fi
