@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5072 2011/02/22 15:03:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5073 2011/02/22 15:51:38 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org> thirdpartymirrors:
+  gnome: prefer http mirror over ftp mirror
 
   22 Feb 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask new dev-ml/bin-prot as it requires masked type-conv
