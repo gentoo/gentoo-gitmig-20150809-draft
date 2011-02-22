@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexedit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.43 2010/01/22 20:06:46 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.44 2011/02/22 08:15:03 kumba Exp $
+
+  22 Feb 2011; Joshua Kinard <kumba@gentoo.org> hexedit-1.2.12.ebuild:
+  Added ~mips to KEYWORDS
 
   22 Jan 2010; Jeremy Olexa <darkside@gentoo.org> hexedit-1.2.12.ebuild:
   Add ~x86-macos, as tested in bug 301534
