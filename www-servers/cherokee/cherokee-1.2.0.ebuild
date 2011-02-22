@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.10.ebuild,v 1.1 2010/11/25 12:56:01 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.0.ebuild,v 1.1 2011/02/22 21:25:44 bass Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -14,8 +14,7 @@ HOMEPAGE="http://www.cherokee-project.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="ipv6 nls ssl static pam coverpage threads kernel_linux admin debug geoip
-ldap mysql ffmpeg fastcgi rrdtool"
+IUSE="ipv6 nls ssl static pam coverpage kernel_linux admin debug geoip ldap mysql ffmpeg fastcgi rrdtool"
 
 RDEPEND="
 	>=sys-libs/zlib-1.1.4-r1
@@ -60,12 +59,14 @@ src_configure() {
 	esac
 
 	# No options to enable or disable ssl since Cherokee 0.11
+
+	# This make cherokee 1.2 sad
+	#	$(use_enable threads pthread) \
 	econf \
 		${myconf} \
 		$(use_enable pam) \
 		$(use_enable ipv6) \
 		$(use_enable nls) \
-		$(use_enable threads pthread) \
 		$(use_enable kernel_linux epoll) \
 		$(use_with geoip) \
 		$(use_with ldap) \
@@ -81,7 +82,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install () {
