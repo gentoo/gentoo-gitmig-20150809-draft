@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>python</herd>
 <herd>sound</herd>
-<maintainer>
-  <email>chutzpah@gentoo.org</email>
-    <name>Patrick McLean</name>
-</maintainer>
-<longdescription lang="en">
-Python bindings for libifp library for accessing iRiver iFP devices.
-</longdescription>
 </pkgmetadata>
