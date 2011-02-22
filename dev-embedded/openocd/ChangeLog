@@ -1,6 +1,14 @@
 # ChangeLog for dev-embedded/openocd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.10 2010/03/07 04:44:21 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.11 2011/02/22 17:09:37 hwoarang Exp $
+
+*openocd-0.4.0 (22 Feb 2011)
+*openocd-0.3.1-r1 (22 Feb 2011)
+
+  22 Feb 2011; Markos Chandras <hwoarang@gentoo.org> +openocd-0.3.1-r1.ebuild,
+  +openocd-0.4.0.ebuild, metadata.xml:
+  Detect ftd2xx library correctly. Bug #355563. Version bump thanks to Stephen
+  Bridges <widget@stdin.co.uk>. Bug #320045
 
   07 Mar 2010; Mike Frysinger <vapier@gentoo.org> openocd-0.3.1.ebuild,
   openocd-9999.ebuild:
