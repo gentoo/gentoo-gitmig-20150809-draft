@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xml2doc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.25 2009/06/20 11:51:43 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.26 2011/02/22 16:36:27 scarabeus Exp $
+
+  22 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  xml2doc-20030510-r1.ebuild:
+  Say goodbye to pdflib and pdf useflag. Didn't compile with it anyway.
 
   20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -xml2doc-20030510.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.9 2009/06/19 21:37:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.10 2011/02/22 16:36:27 scarabeus Exp $
 
 inherit eutils
 
@@ -10,13 +10,12 @@ HOMEPAGE="http://xml2doc.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
-IUSE="pdf"
+IUSE=""
 SLOT="0"
 
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
 
-DEPEND=">=dev-libs/libxml2-2.5
-	pdf? ( >=media-libs/pdflib-4 )"
+DEPEND=">=dev-libs/libxml2-2.5"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
@@ -37,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable pdf) || die "./configure failed"
+	econf --disable-pdf
 	emake || die "Compilation failed"
 
 	cd "${S}/doc"
