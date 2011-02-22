@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.802 2011/02/22 16:44:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.803 2011/02/22 19:46:40 zmedico Exp $
+
+*portage-2.2.0_alpha25 (22 Feb 2011)
+
+  22 Feb 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha25.ebuild:
+  2.2.0_alpha25 version bump. This includes all of the fixes in
+  portage-2.1.9.41. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.41 (22 Feb 2011)
+
+  22 Feb 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.41.ebuild:
+  2.1.9.41 version bump. This fixes bug #269534 (omit 'null' category from
+  umatched atoms for --unmerge), bug #354787 (suggest --depclean after world
+  updates), bug #355447 (support post_emerge hook), bug #355621 (repoman
+  variable.usedwithhelpers false positives), bug #355629 (REQUIRED_USE
+  malformed syntax message for missing IUSE), bug #355635 (make EAPI 4
+  default_src_install conform to PMS for empty DOC setting), and bug #355803
+  (fix plurality of emerge 'config files need updating' message).
+  Bug #349307 tracks all bugs fixed since 2.1.9.25.
 
   22 Feb 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.35.ebuild,
   -portage-2.1.9.39.ebuild, -portage-2.2.0_alpha19.ebuild,
