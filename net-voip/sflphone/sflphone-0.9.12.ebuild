@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.12.ebuild,v 1.1 2011/02/22 14:12:11 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.12.ebuild,v 1.2 2011/02/22 14:14:30 elvanor Exp $
 
 EAPI="2"
 
@@ -20,7 +20,6 @@ CDEPEND="dev-cpp/commoncpp2
 	dev-libs/openssl
 	dev-libs/libpcre
 	dev-libs/libyaml
-	>=dev-util/astyle-1.24
 	media-libs/alsa-lib
 	media-libs/celt
 	media-libs/libsamplerate
@@ -50,6 +49,7 @@ CDEPEND="dev-cpp/commoncpp2
 		x11-libs/libSM )"
 
 DEPEND="${CDEPEND}
+		>=dev-util/astyle-1.24
 		gnome? ( app-text/gnome-doc-utils )"
 
 RDEPEND="${CDEPEND}"
