@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/goocanvas
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.20 2010/11/19 09:01:14 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.21 2011/02/22 22:33:38 eva Exp $
+
+*goocanvas-1.0.0 (22 Feb 2011)
+
+  22 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> +goocanvas-1.0.0.ebuild:
+  Version bump, bug #342273.
 
   19 Nov 2010; Justin Lecher <jlec@gentoo.org> goocanvas-0.14.ebuild:
   Cleaned DESCRIPTION to fit ebuild writing guide lines
