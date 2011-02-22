@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.5 2011/02/22 07:36:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.6 2011/02/22 12:05:48 ulm Exp $
 
 EAPI=2
 
@@ -72,13 +72,14 @@ src_configure() {
 	fi
 
 	local myconf
-	myconf="--with-gihdir=/usr/share/${PN}/gih --without-lisp-files"
+	myconf="${myconf} --without-lisp-files"
+	myconf="${myconf} --without-pdf"
+	myconf="${myconf} --with-gihdir=/usr/share/${PN}/gih"
 	myconf="${myconf} $(use_with X x)"
 	myconf="${myconf} $(use_with svga linux-vga)"
 	myconf="${myconf} $(use_with gd)"
 	myconf="${myconf} $(use_enable wxwidgets)"
 	myconf="${myconf} $(use_with plotutils plot /usr/$(get_libdir))"
-	#myconf="${myconf} $(use_with pdf pdf /usr/$(get_libdir))"
 	myconf="${myconf} $(use_with lua)"
 	myconf="${myconf} $(use_with doc tutorial)"
 	myconf="${myconf} $(use_with ggi ggi /usr/$(get_libdir))"

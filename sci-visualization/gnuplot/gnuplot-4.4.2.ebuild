@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2.ebuild,v 1.10 2011/02/22 07:36:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2.ebuild,v 1.11 2011/02/22 12:05:48 ulm Exp $
 
 EAPI=3
 
@@ -68,6 +68,7 @@ src_configure() {
 
 	local myconf
 	myconf="${myconf} --without-lisp-files"
+	myconf="${myconf} --without-pdf"
 	myconf="${myconf} --with-texdir=${TEXMF}/tex/latex/${PN}"
 	myconf="${myconf} $(use_with cairo)"
 	myconf="${myconf} $(use_with doc tutorial)"
@@ -75,7 +76,6 @@ src_configure() {
 	myconf="${myconf} $(use_with ggi ggi ${EPREFIX}/usr/$(get_libdir))"
 	myconf="${myconf} $(use_with ggi xmi ${EPREFIX}/usr/$(get_libdir))"
 	myconf="${myconf} $(use_with lua)"
-	#myconf="${myconf} $(use_with pdf pdf "${EPREFIX}"/usr/$(get_libdir))"
 	myconf="${myconf} $(use_with plotutils plot "${EPREFIX}"/usr/$(get_libdir))"
 	myconf="${myconf} $(use_with svga linux-vga)"
 	myconf="${myconf} $(use_enable thin-splines)"
