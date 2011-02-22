@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12483 2011/02/22 05:13:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12484 2011/02/22 08:47:17 angelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christoph Mende <angelos@gentoo.org> (22 Feb 2011)
+# Masked for removal, inotify support has been in tail -f since coreutils-7.5
+sys-apps/inotail
 
 # Jeremy Olexa <darkside@gentoo.org> (22 Feb 2011)
 # Masked for removal in 60 days by treecleaners
