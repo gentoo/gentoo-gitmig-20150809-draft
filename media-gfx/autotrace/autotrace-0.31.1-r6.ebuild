@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r6.ebuild,v 1.1 2010/07/10 18:31:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r6.ebuild,v 1.2 2011/02/22 21:33:53 vapier Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -30,7 +30,8 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-{m4,libpng14,pkgconfig}.patch \
 		"${FILESDIR}"/${P}-swf-output.patch \
-		"${FILESDIR}"/${P}-GetOnePixel.patch
+		"${FILESDIR}"/${P}-GetOnePixel.patch \
+		"${FILESDIR}"/${P}-libpng-1.5.patch
 
 	eautoreconf
 }
