@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.14-r2.ebuild,v 1.9 2010/10/14 18:33:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.14-r2.ebuild,v 1.10 2011/02/22 23:30:40 hwoarang Exp $
 
 EAPI=1
 
@@ -57,6 +57,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.4.12-pgsqlconfigure.patch
 	epatch "${FILESDIR}"/${P}-vserver.patch
 	epatch "${FILESDIR}"/${P}-implicit-pointer-conversion.patch
+	epatch "${FILESDIR}"/${PN}-1.4.15-openldap.patch
 	eautoreconf
 }
 
@@ -76,6 +77,7 @@ src_compile() {
 	econf \
 		$(use_with mysql) \
 		$(use_with ipv6) \
+		$(use_with ldap) \
 		${conf} \
 		--host=${CHOST} \
 		--prefix=/usr \
