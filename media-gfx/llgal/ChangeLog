@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/llgal
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.27 2009/10/13 17:14:02 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/llgal/ChangeLog,v 1.28 2011/02/22 15:58:08 aballier Exp $
+
+*llgal-0.13.16 (22 Feb 2011)
+
+  22 Feb 2011; Alexis Ballier <aballier@gentoo.org> +llgal-0.13.16.ebuild:
+  version bump, by Massimo Burcheri <massimo.burcheri@gmx.de>, bug #355183
 
   13 Oct 2009; Alexis Ballier <aballier@gentoo.org> -llgal-0.13.13.ebuild:
   remove old
