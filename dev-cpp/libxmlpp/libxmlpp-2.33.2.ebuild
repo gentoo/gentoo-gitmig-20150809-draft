@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.33.2.ebuild,v 1.1 2011/02/11 16:34:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.33.2.ebuild,v 1.2 2011/02/22 17:43:50 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -40,5 +40,5 @@ src_install() {
 	gnome2_src_install
 
 	rm -fr "${ED}"usr/share/doc/libxml++*
-	use doc && dohtml docs/reference/${PV%.*}/html/*
+	use doc && dohtml docs/reference/html/*
 }
