@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.4 2010/11/08 17:31:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.5 2011/02/22 16:28:31 scarabeus Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -17,7 +17,7 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 
 # I must check for mygis use flag availability
-IUSE="agg doc flash gdal geos java pdf perl php postgis proj python ruby tcl threads tiff unicode xml xpm" # mono
+IUSE="agg doc flash gdal geos java perl php postgis proj python ruby tcl threads tiff unicode xml xpm" # mono
 
 # compilation fails with jdk > 1.4 on some native part probably
 RDEPEND="media-libs/libpng
@@ -30,7 +30,6 @@ RDEPEND="media-libs/libpng
 	gdal? ( >sci-libs/gdal-1.2.6 )
 	geos? ( sci-libs/geos )
 	java? ( >=virtual/jdk-1.4 )
-	pdf? ( media-libs/pdflib )
 	perl? ( dev-perl/DBI )
 	php? ( dev-lang/php )
 	postgis? ( dev-db/postgis )
@@ -113,7 +112,9 @@ src_compile() {
 	fi
 
 	cd "${S}"
-	econf $(use_with gdal) \
+	econf \
+		--without-pdf \
+		$(use_with gdal) \
 		$(use_with agg) \
 		$(use_with perl) \
 		$(use_with python) \
@@ -122,7 +123,6 @@ src_compile() {
 		$(use_with proj) \
 		$(use_with postgis) \
 		$(use_with tiff) \
-		$(use_with pdf) \
 		$(use_with flash ming) \
 		$(use_with java) \
 		$(use_with unicode iconv) \
@@ -252,10 +252,6 @@ src_install() {
 
 	cd "${S}"
 	into /usr
-
-	if use pdf ; then
-		dobin shp2pdf || die "Unable to setup shp2pdf"
-	fi
 
 	dobin shp2img legend shptree shptreevis shp2img legend shptreetst scalebar \
 			sortshp tile4ms msencrypt mapserver-config \

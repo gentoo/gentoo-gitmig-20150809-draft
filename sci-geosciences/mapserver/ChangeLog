@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.25 2010/12/25 14:30:31 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.26 2011/02/22 16:28:31 scarabeus Exp $
+
+  22 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> mapserver-5.4.2.ebuild,
+  mapserver-5.4.2-r1.ebuild:
+  Bye bye pdflib. Remove the pdf support as it is broken and non-free.
 
   25 Dec 2010; Justin Lecher <jlec@gentoo.org> mapserver-5.4.2-r1.ebuild:
   Removed definition of src_unpack again, as it is not necessary, noticed by
