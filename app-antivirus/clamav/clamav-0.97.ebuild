@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.ebuild,v 1.1 2011/02/22 10:23:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.ebuild,v 1.2 2011/02/22 16:04:43 radhermit Exp $
 
-EAPI=4
+EAPI=2
 
 inherit eutils flag-o-matic
 
@@ -52,8 +52,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install
-	rm -rf "${ED}"/var/lib/clamav
+	emake DESTDIR="${D}" install || die "emake install failed"
+	rm -rf "${D}"/var/lib/clamav
 	dodoc AUTHORS BUGS ChangeLog FAQ INSTALL NEWS README UPGRADE
 	newinitd "${FILESDIR}"/clamd.rc clamd
 	newconfd "${FILESDIR}"/clamd.conf clamd
@@ -77,7 +77,7 @@ src_install() {
 		-e "s:^\#\(LogFile\) .*:\1 /var/log/clamav/clamd.log:" \
 		-e "s:^\#\(LogTime\).*:\1 yes:" \
 		-e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
-		"${ED}"/etc/clamd.conf
+		"${D}"/etc/clamd.conf
 	sed -i -e "s:^\(Example\):\# \1:" \
 		-e "s:.*\(PidFile\) .*:\1 /var/run/clamav/freshclam.pid:" \
 		-e "s:.*\(DatabaseOwner\) .*:\1 clamav:" \
@@ -85,7 +85,7 @@ src_install() {
 		-e "s:^\#\(NotifyClamd\).*:\1 /etc/clamd.conf:" \
 		-e "s:^\#\(ScriptedUpdates\).*:\1 yes:" \
 		-e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
-		"${ED}"/etc/freshclam.conf
+		"${D}"/etc/freshclam.conf
 
 	if use milter ; then
 		# MilterSocket one to include ' /' because there is a 2nd line for
@@ -98,8 +98,8 @@ src_install() {
 			-e "s+^\#\(MilterSocket\) /.*+\1 unix:/var/run/clamav/clamav-milter.sock+" \
 			-e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
 			-e "s:^\#\(LogFile\) .*:\1 /var/log/clamav/clamav-milter.log:" \
-			"${ED}"/etc/clamav-milter.conf
-		cat << EOF >> "${ED}"/etc/conf.d/clamd
+			"${D}"/etc/clamav-milter.conf
+		cat << EOF >> "${D}"/etc/conf.d/clamd
 MILTER_NICELEVEL=19
 START_MILTER=no
 EOF
