@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpano13
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.25 2010/12/05 16:29:41 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.26 2011/02/22 21:03:11 vapier Exp $
+
+  22 Feb 2011; Mike Frysinger <vapier@gentoo.org> libpano13-2.9.17.ebuild,
+  +files/libpano13-2.9.17-libpng-1.5.patch:
+  Add fix from upstream tracker for building with libpng-1.5.
 
   05 Dec 2010; Markos Chandras <hwoarang@gentoo.org> libpano13-2.9.17.ebuild:
   Stable on amd64 wrt bug #347633
