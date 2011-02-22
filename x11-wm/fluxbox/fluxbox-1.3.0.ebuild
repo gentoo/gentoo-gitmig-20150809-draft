@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.0.ebuild,v 1.1 2011/02/22 13:22:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.0.ebuild,v 1.2 2011/02/22 13:31:16 scarabeus Exp $
 
-EAPI="4"
+EAPI=4
 inherit eutils prefix
 
 IUSE="nls xinerama bidi +truetype gnome +imlib +slit +toolbar vim-syntax"
@@ -88,7 +88,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/fluxbox
-	emake DESTDIR="${D}" STRIP="" install || die "install failed"
+	emake DESTDIR="${D}" STRIP="" install
 	dodoc README* AUTHORS TODO* ChangeLog NEWS
 
 	dodir /usr/share/xsessions
@@ -103,7 +103,7 @@ src_install() {
 	# Styles menu framework
 	dodir /usr/share/fluxbox/menu.d/styles
 	insinto /usr/share/fluxbox/menu.d/styles
-	doins "${FILESDIR}/styles-menu-fluxbox" || die
-	doins "${FILESDIR}/styles-menu-commonbox" || die
-	doins "${FILESDIR}/styles-menu-user" || die
+	doins "${FILESDIR}/styles-menu-fluxbox"
+	doins "${FILESDIR}/styles-menu-commonbox"
+	doins "${FILESDIR}/styles-menu-user"
 }
