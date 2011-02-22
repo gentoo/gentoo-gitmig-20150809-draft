@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capifwd/capifwd-0.6.3-r1.ebuild,v 1.2 2007/07/13 08:09:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capifwd/capifwd-0.6.3-r1.ebuild,v 1.3 2011/02/22 11:58:58 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A daemon forwarding CAPI messages to capi20proxy clients"
 HOMEPAGE="http://capi20proxy.sourceforge.net/"
@@ -28,6 +28,8 @@ src_unpack() {
 	sed -i -e 's:sys_errlist *\[ *errno *\]:strerror(errno):' \
 		src/capifwd.c src/capi/waitforsignal.c src/auth/auth.c || \
 		die "failed to replace sys_errlist"
+
+	eautoreconf
 }
 
 src_install() {
