@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110216.ebuild,v 1.1 2011/02/16 19:30:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110216.ebuild,v 1.2 2011/02/22 18:55:08 hwoarang Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="debug"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
-	>=x11-libs/gtk+-2.16:2
+	>=x11-libs/gtk+-2.12.1:2
 	>=lxde-base/menu-cache-0.3.2
 	>=x11-libs/libfm-0.1.15_pre20110202"
 RDEPEND="${COMMON_DEPEND}
