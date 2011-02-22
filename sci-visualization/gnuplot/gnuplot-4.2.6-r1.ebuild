@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.4 2011/02/21 17:29:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r1.ebuild,v 1.5 2011/02/22 07:36:11 ulm Exp $
 
 EAPI=2
 
@@ -15,13 +15,12 @@ SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz
 LICENSE="gnuplot GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc emacs +gd ggi latex lua pdf plotutils readline svga wxwidgets X xemacs"
+IUSE="doc emacs +gd ggi latex lua plotutils readline svga wxwidgets X xemacs"
 RESTRICT="wxwidgets? ( test )"
 
 RDEPEND="
 	xemacs? ( app-editors/xemacs app-xemacs/texinfo app-xemacs/xemacs-base )
 	emacs? ( virtual/emacs !app-emacs/gnuplot-mode )
-	pdf? ( media-libs/pdflib )
 	lua? ( >=dev-lang/lua-5.1 )
 	ggi? ( media-libs/libggi )
 	gd? ( >=media-libs/gd-2[png] )
@@ -79,7 +78,7 @@ src_configure() {
 	myconf="${myconf} $(use_with gd)"
 	myconf="${myconf} $(use_enable wxwidgets)"
 	myconf="${myconf} $(use_with plotutils plot /usr/$(get_libdir))"
-	myconf="${myconf} $(use_with pdf pdf /usr/$(get_libdir))"
+	#myconf="${myconf} $(use_with pdf pdf /usr/$(get_libdir))"
 	myconf="${myconf} $(use_with lua)"
 	myconf="${myconf} $(use_with doc tutorial)"
 	myconf="${myconf} $(use_with ggi ggi /usr/$(get_libdir))"
