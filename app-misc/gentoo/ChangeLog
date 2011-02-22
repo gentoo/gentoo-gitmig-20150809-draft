@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gentoo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.90 2010/08/13 12:46:50 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.91 2011/02/22 19:47:50 jer Exp $
+
+*gentoo-0.19.9 (22 Feb 2011)
+
+  22 Feb 2011; Jeroen Roovers <jer@gentoo.org> +gentoo-0.19.9.ebuild:
+  Version bump thanks to Cedric (bug #356103).
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> gentoo-0.15.6.ebuild:
   Marked ppc stable for bug #325877.
