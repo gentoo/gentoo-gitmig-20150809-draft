@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/libftd2xx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.4 2009/06/17 09:56:18 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.5 2011/02/22 17:02:24 hwoarang Exp $
+
+*libftd2xx-0.4.16-r1 (22 Feb 2011)
+
+  22 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  +libftd2xx-0.4.16-r1.ebuild:
+  Install enviromental file. Bug #355563
 
 *libftd2xx-0.4.16 (17 Jun 2009)
 
