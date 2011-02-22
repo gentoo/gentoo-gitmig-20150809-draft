@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.4 2010/11/24 20:52:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.5 2011/02/22 17:02:49 scarabeus Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="fortran fftw jpeg netcdf pdf png"
+IUSE="fortran fftw jpeg netcdf png"
 
 DEPEND=">=x11-libs/openmotif-2.3:0
 	sys-libs/zlib
@@ -22,8 +22,7 @@ DEPEND=">=x11-libs/openmotif-2.3:0
 	fftw? ( sci-libs/fftw:2.1 )
 	netcdf? ( sci-libs/netcdf )
 	png? ( media-libs/libpng )
-	jpeg? ( virtual/jpeg )
-	pdf? ( media-libs/pdflib )"
+	jpeg? ( virtual/jpeg )"
 
 RDEPEND="${DEPEND}
 	x11-misc/xdg-utils"
@@ -39,9 +38,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.1.21-netcdf.patch
 	# fix for missing defines when fortran is disabled
 	epatch "${FILESDIR}"/${PN}-5.1.21-fortran.patch
-	# fix a leak and pdf driver (from freebsd)
-	epatch "${FILESDIR}"/${P}-dlmodule.patch
-	epatch "${FILESDIR}"/${P}-pdfdrv.patch \
+	# fix a leak (from freebsd)
+	epatch "${FILESDIR}"/${P}-dlmodule.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
 
 	# don't strip if not asked for
@@ -73,6 +71,7 @@ src_configure() {
 	# the configure script just produces a basic Make.conf
 	# and a config.h
 	econf \
+		--disable-pdfdrv \
 		--disable-xmhtml \
 		--without-bundled-xbae \
 		--without-bundled-t1lib \
@@ -85,7 +84,6 @@ src_configure() {
 		$(use_enable netcdf) \
 		$(use_enable jpeg jpegdrv) \
 		$(use_enable png pngdrv) \
-		$(use_enable pdf pdfdrv) \
 		${myconf}
 }
 

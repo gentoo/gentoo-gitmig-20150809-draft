@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.46 2010/11/24 20:52:12 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.47 2011/02/22 17:02:49 scarabeus Exp $
+
+  22 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> grace-5.1.22-r1.ebuild,
+  grace-5.1.22-r2.ebuild, -files/grace-5.1.22-pdfdrv.patch:
+  Say goodbye to pdflib and respective pdf useflag.
 
   24 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> grace-5.1.22-r2.ebuild:
   more prefix fixes, thanks Andrew Davis, bug #342419
