@@ -1,11 +1,12 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.148 2011/02/22 12:05:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.149 2011/02/22 16:31:25 ulm Exp $
 
   22 Feb 2011; Ulrich Mueller <ulm@gentoo.org> gnuplot-4.2.6-r1.ebuild,
   gnuplot-4.4.2.ebuild:
   Don't link against media-libs/pdflib, because it would violate clause 2.1 of
-  the PDFLite license. Configure --without-pdf, bug 356005.
+  the PDFLite license. Configure --without-pdf, bug 356005. Drop unnecessary
+  x11-libs/gtk+ dependency with USE=cairo.
 
   21 Feb 2011; Ulrich Mueller <ulm@gentoo.org> -gnuplot-4.2.6.ebuild,
   gnuplot-4.2.6-r1.ebuild, -gnuplot-4.4.0.ebuild, gnuplot-4.4.2.ebuild:
