@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.103 2011/01/10 18:51:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.104 2011/02/22 11:55:59 flameeyes Exp $
+
+*pcsc-lite-1.6.6-r1 (22 Feb 2011)
+
+  22 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pcsc-lite-1.6.6-r1.ebuild,
+  +files/pcsc-lite-1.6.6-libusb-multiinterface.patch:
+  Add patch from upstream and me to avoid a feature regression with libusb.
 
   10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -pcsc-lite-1.6.1.ebuild, -files/pcscd-confd, -files/pcscd-init,
