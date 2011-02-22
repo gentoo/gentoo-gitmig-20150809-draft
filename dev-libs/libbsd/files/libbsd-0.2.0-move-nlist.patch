@@ -1,0 +1,16 @@
+Update Makefile to use bsd/nlist.h instead of nlist.h so it won't
+conflict with dev-libs/elfutils
+
+Patch by Kevin McCarthy <signals@gentoo.org>
+
+--- Makefile
++++ Makefile
+@@ -65,7 +65,7 @@
+ 	bsd/stdlib.h \
+ 	bsd/readpassphrase.h \
+ 	bsd/unistd.h \
+-	nlist.h \
++	bsd/nlist.h \
+ 	vis.h \
+ 	libutil.h
+ 

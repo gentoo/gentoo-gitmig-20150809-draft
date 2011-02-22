@@ -1,0 +1,15 @@
+Add missing prototypes for arc4random_buf and arc4random_uniform
+
+Patch by Kevin McCarthy <signals@gentoo.org>
+
+--- include/bsd/stdlib.h
++++ include/bsd/stdlib.h
+@@ -45,6 +45,8 @@
+ u_int32_t arc4random();
+ void arc4random_stir();
+ void arc4random_addrandom(u_char *dat, int datlen);
++void arc4random_buf(void *_buf, size_t n);
++u_int32_t arc4random_uniform(u_int32_t upper_bound);
+ 
+ int dehumanize_number(const char *str, int64_t *size);
+ 
