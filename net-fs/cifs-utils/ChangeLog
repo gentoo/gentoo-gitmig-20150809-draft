@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.1 2011/01/28 15:15:05 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.2 2011/02/22 19:50:31 xarthisius Exp $
+
+  22 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  cifs-utils-4.8.1.ebuild:
+  Marked ~ppc wrt #355997. Thanks to hiyuh <hiyuh.root@gmail.com> for report
+  and testing.
 
 *cifs-utils-4.8.1 (28 Jan 2011)
 
