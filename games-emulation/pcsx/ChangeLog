@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/pcsx
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.10 2007/02/24 00:53:40 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/ChangeLog,v 1.11 2011/02/22 20:57:27 mr_bones_ Exp $
+
+  22 Feb 2011; Michael Sterrett <mr_bones_@gentoo.org> pcsx-1.5-r1.ebuild:
+  EAPI=2; tidy
 
   24 Feb 2007; Tristan Heaven <nyhm@gentoo.org> files/pcsx,
   pcsx-1.5-r1.ebuild:

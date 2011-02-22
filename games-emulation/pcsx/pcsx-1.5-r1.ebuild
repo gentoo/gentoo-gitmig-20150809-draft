@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.11 2007/04/06 05:47:54 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.12 2011/02/22 20:57:27 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="PlayStation emulator"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="-ppc x86"
 IUSE="opengl"
 
-DEPEND=">=x11-libs/gtk+-2
+DEPEND="x11-libs/gtk+:2
 	gnome-base/libglade"
 RDEPEND="${DEPEND}
 	games-emulation/psemu-cdr
@@ -26,10 +27,7 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/PcsxSrc-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	edos2unix $(find -regex '.*\.[ch]')
 
 	epatch \
@@ -49,10 +47,13 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	cd Linux
-	egamesconf || die
-	emake OPTIMIZE="${CFLAGS}" STRIP=true || die "emake failed"
+	egamesconf
+}
+
+src_compile() {
+	emake -C Linux OPTIMIZE="${CFLAGS}" STRIP=true || die "emake failed"
 }
 
 src_install() {
