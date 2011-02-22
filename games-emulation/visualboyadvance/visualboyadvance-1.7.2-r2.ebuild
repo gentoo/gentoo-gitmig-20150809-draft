@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r2.ebuild,v 1.4 2010/11/02 14:48:59 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r2.ebuild,v 1.5 2011/02/22 21:07:44 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils flag-o-matic games
 
 DESCRIPTION="gameboy, gameboy color, and gameboy advance emulator"
@@ -18,9 +18,9 @@ IUSE="gtk mmx nls"
 RDEPEND="media-libs/libpng
 	media-libs/libsdl
 	gtk? (
-		>=x11-libs/gtk+-2.4
-		>=dev-cpp/gtkmm-2.4
-		>=dev-cpp/libglademm-2.4
+		>=x11-libs/gtk+-2.4:2
+		>=dev-cpp/gtkmm-2.4:2.4
+		>=dev-cpp/libglademm-2.4:2.4
 	)
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
