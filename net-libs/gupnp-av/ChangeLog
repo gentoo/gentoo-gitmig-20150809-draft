@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gupnp-av
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.10 2011/01/10 12:19:40 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.11 2011/02/22 22:01:33 eva Exp $
+
+*gupnp-av-0.7.1 (22 Feb 2011)
+
+  22 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> +gupnp-av-0.7.1.ebuild:
+  Version bump. Required for recent rygel releases, with permission from herd.
 
 *gupnp-av-0.6.3 (10 Jan 2011)
 
