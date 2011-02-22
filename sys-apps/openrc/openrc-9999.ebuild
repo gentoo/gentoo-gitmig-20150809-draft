@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.77 2011/02/01 19:26:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.78 2011/02/22 03:03:43 robbat2 Exp $
 
 EAPI="1"
 
@@ -103,7 +103,7 @@ src_install() {
 	emake ${MAKE_ARGS} DESTDIR="${D}" install || die
 
 	# install the readme for the new network scripts
-	dodoc README.net
+	dodoc README.newnet
 
 	# move the shared libs back to /usr so ldscript can install
 	# more of a minimal set of files
