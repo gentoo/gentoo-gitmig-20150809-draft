@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.44 2011/02/22 07:53:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.45 2011/02/22 21:23:17 sping Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
-# No dev-util/source-highlight and media-sound/lilypond here, yet
+# No media-sound/lilypond here, yet (bug #356069)
 app-text/asciidoc test
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (17 Dec 2010)

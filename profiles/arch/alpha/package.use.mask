@@ -1,10 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.55 2011/02/22 07:53:43 sping Exp $
-
-# Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
-# No dev-util/source-highlight here, yet
-app-text/asciidoc test
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.56 2011/02/22 21:23:17 sping Exp $
 
 # Mike Frysinger <vapier@gentoo.org> (10 Feb 2011)
 # Waiting for keywording #354309
