@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.46.ebuild,v 1.1 2011/02/19 09:34:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.46.ebuild,v 1.2 2011/02/22 20:10:04 zmedico Exp $
 
 EAPI=3
-PYTHON_DEPEND=2:2.6
+PYTHON_DEPEND=2:2.7
 PYTHON_USE_WITH=sqlite
 
 inherit python distutils eutils fdo-mime bash-completion multilib
@@ -33,7 +33,7 @@ SHARED_DEPEND="
 	>=dev-python/lxml-2.2.1
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1
-	>=dev-python/PyQt4-4.7[X,svg,webkit]
+	>=dev-python/PyQt4-4.8.2[X,svg,webkit]
 	|| ( >=media-gfx/imagemagick-6.5.9 media-gfx/graphicsmagick[imagemagick] )
 	>=media-libs/libwmf-0.2.8
 	virtual/libusb:0

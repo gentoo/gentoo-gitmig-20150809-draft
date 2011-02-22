@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.132 2011/02/19 09:34:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.133 2011/02/22 20:10:04 zmedico Exp $
+
+  22 Feb 2011; Zac Medico <zmedico@gentoo.org> calibre-0.7.46.ebuild:
+  Bug #355639 - Increase python and PyQt4 deps.
 
 *calibre-0.7.46 (19 Feb 2011)
 
