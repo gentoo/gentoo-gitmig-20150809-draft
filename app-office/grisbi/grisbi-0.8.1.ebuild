@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.8.0.ebuild,v 1.1 2011/02/21 20:19:34 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.8.1.ebuild,v 1.1 2011/02/22 08:29:00 remi Exp $
 
 EAPI="2"
 
