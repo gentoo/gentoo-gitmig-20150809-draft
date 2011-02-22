@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaml/pecl-yaml-1.0.0.ebuild,v 1.1 2011/02/21 07:27:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-yaml/pecl-yaml-1.0.1.ebuild,v 1.1 2011/02/22 14:06:25 olemarkus Exp $
 
 EAPI="2"
 
