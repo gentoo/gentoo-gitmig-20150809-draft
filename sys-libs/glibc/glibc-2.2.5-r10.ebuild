@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.8 2009/09/23 22:04:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.9 2011/02/22 03:23:18 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -156,9 +156,6 @@ src_install() {
 	# Prevent overwriting of the /etc/localtime symlink.  We'll handle the
 	# creation of the "factory" symlink in pkg_postinst().
 	rm -f "${D}"/etc/localtime
-
-	# Some things want this, notably ash.
-	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
 }
 
 pkg_postinst() {

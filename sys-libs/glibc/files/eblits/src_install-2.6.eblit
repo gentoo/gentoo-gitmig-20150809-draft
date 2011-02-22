@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install-2.6.eblit,v 1.2 2008/06/29 16:39:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install-2.6.eblit,v 1.3 2011/02/22 03:23:18 vapier Exp $
 
 toolchain-glibc_src_install() {
 	# These should not be set, else the
@@ -81,9 +81,6 @@ toolchain-glibc_src_install() {
 
 	# We'll take care of the cache ourselves
 	rm -f "${D}"/etc/ld.so.cache
-
-	# Some things want this, notably ash.
-	dosym libbsd-compat.a $(alt_usrlibdir)/libbsd.a
 
 	# Handle includes for different ABIs
 	prep_ml_includes $(alt_headers)

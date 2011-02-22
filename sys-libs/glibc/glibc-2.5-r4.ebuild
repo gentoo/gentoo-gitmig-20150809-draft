@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r4.ebuild,v 1.18 2011/02/07 07:27:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5-r4.ebuild,v 1.19 2011/02/22 03:23:18 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -427,9 +427,6 @@ toolchain-glibc_src_install() {
 
 	# We'll take care of the cache ourselves
 	rm -f "${D}"/etc/ld.so.cache
-
-	# Some things want this, notably ash.
-	dosym libbsd-compat.a $(alt_usrlibdir)/libbsd.a
 
 	# Handle includes for different ABIs
 	prep_ml_includes $(alt_headers)
