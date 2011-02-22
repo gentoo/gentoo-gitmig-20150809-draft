@@ -1,14 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.202 2011/02/22 07:31:20 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.203 2011/02/22 07:53:44 sping Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
-
-# Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
-# Upcoming tests pull in many dependencies with less keywords than asciidoc
-# Please contact me if you know know a better way
-app-text/asciidoc test
 
 # Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
 # Masked until devs know how to use repoman

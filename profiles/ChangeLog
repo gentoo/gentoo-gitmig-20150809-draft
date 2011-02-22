@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5070 2011/02/22 05:13:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5071 2011/02/22 07:53:43 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2011; Sebastian Pipping <sping@gentoo.org>
+  arch/alpha/package.use.mask, arch/arm/package.use.mask,
+  arch/hppa/package.use.mask, arch/ia64/package.use.mask,
+  arch/powerpc/package.use.mask, arch/sparc/package.use.mask,
+  base/package.use.mask:
+  Move use flag mask "app-text/asciidoc test" down to affected arches
 
   22 Feb 2011; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask yafc, atftp, gwydion-dylan for removal in 60 days
