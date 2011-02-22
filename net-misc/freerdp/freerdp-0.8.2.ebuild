@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-0.8.2.ebuild,v 1.1 2011/01/21 18:06:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-0.8.2.ebuild,v 1.2 2011/02/22 16:36:53 hwoarang Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.11"
@@ -27,7 +27,8 @@ DEPEND="
 	libsamplerate? ( media-libs/libsamplerate )
 	cups? ( net-print/cups )
 	iconv? ( virtual/libiconv )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	x11-apps/setxkbmap"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
 
