@@ -1,12 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.76 2011/02/22 07:53:43 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.77 2011/02/22 13:17:39 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
-# No dev-util/source-highlight and media-sound/lilypond here, yet
-app-text/asciidoc test
 
 # Jeroen Roovers <jer@gentoo.org> (21 Jan 2011)
 # Pulls in either GNOME or LXDE, neither are keyworded (bug #296548)

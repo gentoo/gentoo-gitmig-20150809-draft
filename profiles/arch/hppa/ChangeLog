@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.108 2011/01/21 17:14:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.109 2011/02/22 13:17:39 jer Exp $
+
+  22 Feb 2011; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove stupid app-text/asciidoc[test] mask.
 
   21 Jan 2011; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask sys-auth/polkit[gtk] (bug #296548).
