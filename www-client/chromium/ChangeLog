@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.287 2011/02/22 13:33:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.288 2011/02/22 18:24:22 phajdan.jr Exp $
+
+  22 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-10.0.648.82.ebuild, chromium-11.0.672.2.ebuild,
+  chromium-11.0.672.2-r1.ebuild, chromium-9999.ebuild:
+  Remove themes from RDEPEND that do not satisfy the dependency fully (i.e.
+  the Downloads page does not have icons). I discovered this while working
+  on bug #352263.
 
 *chromium-11.0.672.2-r1 (22 Feb 2011)
 

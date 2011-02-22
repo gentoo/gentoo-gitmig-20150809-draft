@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.82.ebuild,v 1.3 2011/02/20 17:37:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.82.ebuild,v 1.4 2011/02/22 18:24:22 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -50,8 +50,6 @@ DEPEND="${RDEPEND}
 RDEPEND+="
 	|| (
 		x11-themes/gnome-icon-theme
-		x11-themes/oxygen-molecule
-		x11-themes/tango-icon-theme
 		x11-themes/xfce4-icon-theme
 	)
 	x11-misc/xdg-utils
