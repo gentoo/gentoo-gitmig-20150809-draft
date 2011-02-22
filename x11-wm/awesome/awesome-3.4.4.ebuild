@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.4.ebuild,v 1.8 2010/11/05 23:42:06 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.4.ebuild,v 1.9 2011/02/22 14:10:46 wired Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
@@ -60,6 +60,7 @@ mycmakeargs="-DPREFIX=/usr
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.4.2-backtrace.patch"
+	epatch "${FILESDIR}/${PN}-3.4.4-cmake-2.8.4.patch"
 }
 
 src_compile() {
