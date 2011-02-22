@@ -40,3 +40,4 @@ move dev-util/qgit dev-vcs/qgit
 move dev-util/rapidsvn dev-vcs/rapidsvn
 move dev-util/rcsi dev-vcs/rcsi
 move dev-util/svn2cl dev-vcs/svn2cl
+move app-emulation/qemu-softmmu app-emulation/qemu
