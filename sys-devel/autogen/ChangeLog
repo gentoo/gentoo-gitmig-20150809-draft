@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autogen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.68 2010/12/27 17:02:14 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.69 2011/02/22 03:24:18 vapier Exp $
+
+*autogen-5.11.6 (22 Feb 2011)
+
+  22 Feb 2011; Mike Frysinger <vapier@gentoo.org> +autogen-5.11.6.ebuild:
+  Version bump #355943 by Arfrever Frehtes Taifersar Arahesis.
 
 *autogen-5.11.5 (27 Dec 2010)
 
