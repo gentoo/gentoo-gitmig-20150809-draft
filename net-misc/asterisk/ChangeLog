@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.289 2011/02/03 19:17:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.290 2011/02/22 16:24:36 chainsaw Exp $
+
+*asterisk-1.8.2.4 (22 Feb 2011)
+
+  22 Feb 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.2.2.ebuild,
+  -asterisk-1.8.2.3.ebuild, +asterisk-1.8.2.4.ebuild:
+  Trim down 1.8 branch by culling vulnerable ebuilds for AST-2011-002. Adding
+  1.8.2.4 which fixes overflows in both stack & heap based arrays that can be
+  exploited through specially crafted UDPTL packets, particularly for T.38
+  pass-through & termination.
 
 *asterisk-1.8.2.3 (03 Feb 2011)
 
