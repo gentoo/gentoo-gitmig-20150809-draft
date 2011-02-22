@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12487 2011/02/22 17:09:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12488 2011/02/22 22:17:48 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -70,6 +70,7 @@ dev-lang/gwydion-dylan
 # Gilles Dartiguelongue <eva@gentoo.org> (21 Feb 2011)
 # Depends on gstreamer-0.10.32 which is not in tree yet.
 =media-libs/gupnp-dlna-0.5.1
+=net-libs/gupnp-vala-0.7.5
 
 # Markos Chandras <hwoarang@gentoo.org> (21 Feb 2011)
 # Does not work with gnome-panel-2.32.1. Bug #355901
