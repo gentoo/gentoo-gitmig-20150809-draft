@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.33 2011/01/11 05:36:26 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.34 2011/02/22 22:27:52 eva Exp $
+
+*gupnp-0.15.1 (22 Feb 2011)
+
+  22 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> +gupnp-0.15.1.ebuild:
+  Version bump. Enable gzip compression, dropped dependency on dbus-glib.
 
   11 Jan 2011; Arun Raghavan <ford_prefect@gentoo.org> gupnp-0.13.2.ebuild:
   Clarify gssdp dep as per bug #326805
