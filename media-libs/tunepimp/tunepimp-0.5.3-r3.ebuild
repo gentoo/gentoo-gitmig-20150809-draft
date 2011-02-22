@@ -1,9 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r3.ebuild,v 1.1 2010/02/11 17:09:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r3.ebuild,v 1.2 2011/02/22 23:59:07 arfrever Exp $
 
-EAPI=2
-inherit autotools eutils distutils multilib
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
+
+inherit autotools distutils eutils multilib
 
 MY_P=lib${P}
 
@@ -35,6 +39,12 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 S=${WORKDIR}/${MY_P}
 
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
+}
+
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc43.patch \
@@ -58,6 +68,12 @@ src_configure() {
 
 src_compile() {
 	default
+
+	if use python; then
+		pushd python > /dev/null
+		distutils_src_compile
+		popd > /dev/null
+	fi
 }
 
 src_install() {
@@ -65,11 +81,24 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 
 	if use python; then
-		cd python
+		pushd python > /dev/null
 		distutils_src_install
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/* || die "doins failed"
+		popd > /dev/null
 	fi
 
 	find "${D}" -name '*.la' -delete
+}
+
+pkg_postinst() {
+	if use python; then
+		distutils_pkg_postinst
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		distutils_pkg_postrm
+	fi
 }
