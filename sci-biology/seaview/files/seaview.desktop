@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=Seaview
-Comment=Multiple Sequence Alignment Tool
-Exec=seaview
-Icon=/usr/share/pixmaps/seaview.xpm
-Terminal=false
-Type=Application
-Categories=Application;Graphics;Science;

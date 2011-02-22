@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.2.12.ebuild,v 1.2 2011/02/01 08:24:21 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.2.12.ebuild,v 1.3 2011/02/22 16:53:39 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,10 +13,9 @@ SRC_URI="ftp://pbil.univ-lyon1.fr/pub/mol_phylogeny/seaview/archive/${PN}_${PV}.
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+pdf +xft"
+IUSE="+xft"
 
 DEPEND="x11-libs/fltk:1.1
-	pdf? ( media-libs/pdflib )
 	xft? (	x11-libs/libXft
 			x11-libs/fltk:1.1[xft] )"
 RDEPEND="${DEPEND}
@@ -38,18 +37,6 @@ src_prepare() {
 		-e "s:^#HELPFILE:HELPFILE:" \
 		-e "s:^#PHYMLNAME:PHYMLNAME:" \
 		Makefile || die "sed failed while editing Makefile"
-
-	if use pdf; then
-		sed -i \
-			-e "s:PDF_PS_FLAGS = -DNO_PDF:#PDF_PS_FLAGS = -DNO_PDF:" \
-			-e "s:PDF_PS = postscript:#PDF_PS = postscript:" \
-			-e "s:#PDF_INC = \$(HOME)/PDFlibLite:PDF_INC = /usr/include:" \
-			-e "s:#PDF_LIB = \$(HOME)/PDFlibLite:PDF_LIB = /usr/lib:" \
-			-e "s:#PDF_PS = pdf:PDF_PS = pdf:" \
-			-e "s:#PDF_PS_FLAGS = -I\$(PDF_INC):PDF_PS_FLAGS = -I\$(PDF_INC):" \
-			-e "s:#LPDF = -L\$(PDF_LIB) -lpdf:LPDF = -L\$(PDF_LIB) -lpdf:" \
-			Makefile || die "sed failed while editing Makefile to enable pdf output"
-	fi
 
 	if use xft; then
 		sed -i \

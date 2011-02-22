@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.38 2011/02/01 08:24:21 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.39 2011/02/22 16:53:39 scarabeus Exp $
+
+  22 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -seaview-4.1.ebuild,
+  -seaview-4.2.3.ebuild, seaview-4.2.5.ebuild, seaview-4.2.12.ebuild,
+  -files/seaview-20071113-glibc-2.10.patch, -files/seaview.desktop:
+  Remove old. Say goodbye to pdflib pdf useflag.
 
   01 Feb 2011; Jeff Gardner <je_fro@gentoo.org> seaview-4.2.12.ebuild:
   Fix to use pkg-config instead of deprecated xft-config.
