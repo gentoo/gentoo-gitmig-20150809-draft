@@ -1,5 +1,5 @@
---- ifp-gnome.py.orig	2006-01-27 10:15:36.000000000 -0500
-+++ ifp-gnome.py	2006-01-27 10:28:33.000000000 -0500
+--- ifp-gnome.py
++++ ifp-gnome.py
 @@ -21,7 +21,7 @@
  
  class GiRiverApp:
