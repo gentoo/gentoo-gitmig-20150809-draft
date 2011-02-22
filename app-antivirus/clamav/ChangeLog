@@ -1,6 +1,15 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.375 2011/01/07 16:31:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.376 2011/02/22 10:23:14 radhermit Exp $
+
+*clamav-0.97 (22 Feb 2011)
+
+  22 Feb 2011; Tim Harder <radhermit@gentoo.org> +clamav-0.97.ebuild,
+  +files/clamav-0.97-nls.patch:
+  Version bump (bug #354019) with ebuild updates thanks to Bernd Lommerzheim.
+  Update to EAPI 4, don't install signature files (fixes bugs #336842 and
+  #345965), remove dependencies in the system set, update zlib dependency,
+  other minor cleanups and style changes.
 
   07 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> clamav-0.96.5.ebuild:
   stable ppc64 wrt #347627
