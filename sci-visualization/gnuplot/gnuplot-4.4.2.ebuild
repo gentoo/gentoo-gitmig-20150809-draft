@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2.ebuild,v 1.12 2011/02/22 16:31:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2.ebuild,v 1.13 2011/02/23 08:48:23 ulm Exp $
 
 EAPI=3
 
@@ -190,7 +190,12 @@ pkg_postinst() {
 	use emacs && elisp-site-regen
 	use latex && texmf-update
 
+	einfo "Gnuplot no longer links against pdflib, see the ChangeLog for"
+	einfo "details. You can use the \"pdfcairo\" terminal for PDF output."
+	use cairo || einfo "It is available with USE=\"cairo\"."
+
 	if use svga; then
+		echo
 		einfo "In order to enable ordinary users to use SVGA console graphics"
 		einfo "gnuplot needs to be set up as setuid root.  Please note that"
 		einfo "this is usually considered to be a security hazard."
