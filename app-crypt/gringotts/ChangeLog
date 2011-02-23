@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gringotts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.34 2009/10/14 00:54:37 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.35 2011/02/23 22:39:14 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gringotts-1.2.10.ebuild:
+  Stable on amd64 wrt bug #353436
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> gringotts-1.2.9.ebuild:
   QA fixes; remove redundant setting of WANT_AUTOCONF and WANT_AUTOMAKE to
