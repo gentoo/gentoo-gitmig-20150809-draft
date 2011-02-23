@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.4-r2.ebuild,v 1.2 2011/02/23 09:02:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.4-r2.ebuild,v 1.3 2011/02/23 19:50:26 pacho Exp $
 
 EAPI="3"
 
@@ -19,6 +19,7 @@ WANT_AUTOCONF="2.56"
 
 RDEPEND=">=dev-libs/glib-2.6:2"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-apps/help2man"
 
 src_prepare() {
