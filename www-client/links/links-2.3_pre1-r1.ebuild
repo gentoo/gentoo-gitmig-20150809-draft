@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1-r1.ebuild,v 1.2 2011/02/21 18:25:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1-r1.ebuild,v 1.3 2011/02/23 12:41:24 xarthisius Exp $
 
 # SDL support is disabled in this version by upstream
 
@@ -16,7 +16,7 @@ SRC_URI="http://links.twibright.com/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bzip2 directfb fbcon gpm jpeg livecd ssl svga tiff unicode X zlib"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
