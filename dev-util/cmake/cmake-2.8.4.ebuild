@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4.ebuild,v 1.3 2011/02/21 15:55:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4.ebuild,v 1.4 2011/02/23 14:01:02 scarabeus Exp $
 
 EAPI=4
 
@@ -125,8 +125,7 @@ src_test() {
 	#    SimpleCOnly_sdcc: sdcc choke on global cflags so just skip the test
 	#        as it was never intended to be used this way.
 	"${CMAKE_BUILD_DIR}"/bin/ctest \
-		-E BootstrapTest \
-		-E SimpleCOnly_sdcc \
+		-E BootstrapTest SimpleCOnly_sdcc \
 		|| die "Tests failed"
 	popd > /dev/null
 }

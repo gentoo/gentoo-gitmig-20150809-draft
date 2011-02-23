@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.154 2011/02/21 15:55:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.155 2011/02/23 14:01:02 scarabeus Exp $
+
+  23 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> cmake-2.8.4.ebuild:
+  Use only one -E exclude parameter, obviously duplication is not working.
 
   21 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> cmake-2.8.4.ebuild:
   Exclude sdcc test.
