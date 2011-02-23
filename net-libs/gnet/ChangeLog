@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.71 2011/02/13 17:10:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.72 2011/02/23 23:08:54 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gnet-2.0.8-r1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   13 Feb 2011; Pacho Ramos <pacho@gentoo.org> gnet-2.0.8-r1.ebuild:
   Always DEPEND on >=dev-libs/check-0.9.7 until bug #349301 is fixed.
