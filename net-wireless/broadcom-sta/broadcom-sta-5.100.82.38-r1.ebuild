@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.38-r1.ebuild,v 1.1 2011/01/01 15:28:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.38-r1.ebuild,v 1.2 2011/02/23 18:22:28 zmedico Exp $
 
 EAPI="2"
 inherit eutils linux-mod
@@ -25,11 +25,7 @@ S="${WORKDIR}"
 MODULE_NAMES="wl(net/wireless)"
 MODULESD_WL_ALIASES=("wlan0 wl")
 
-PROPERTIES="interactive"
-
 pkg_setup() {
-	check_license
-
 	# bug #300570
 	# NOTE<lxnay>: module builds correctly anyway with b43 and SSB enabled
 	# make checks non-fatal. The correct fix is blackisting ssb and, perhaps
