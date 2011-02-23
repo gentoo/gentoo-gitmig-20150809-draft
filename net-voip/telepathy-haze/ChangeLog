@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.19 2011/02/22 18:29:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.20 2011/02/23 23:22:26 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  telepathy-haze-0.4.0-r1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   22 Feb 2011; Pacho Ramos <pacho@gentoo.org> telepathy-haze-0.4.0-r1.ebuild:
   Bump to eapi3, use python2 for compiling.
