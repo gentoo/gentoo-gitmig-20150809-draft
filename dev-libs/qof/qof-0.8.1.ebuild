@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.1.ebuild,v 1.3 2011/01/13 19:43:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.8.1.ebuild,v 1.4 2011/02/23 23:16:42 hwoarang Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="2"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="doc nls sqlite"
 
