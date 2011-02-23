@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.277 2011/01/27 07:18:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.278 2011/02/23 22:51:35 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  gnome-session-2.32.1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   27 Jan 2011; Mart Raudsepp <leio@gentoo.org> gnome-session-2.30.2.ebuild:
   Require older upower versions for 2.30, that still provide
