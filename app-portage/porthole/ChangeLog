@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porthole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.51 2011/01/08 18:11:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.52 2011/02/23 07:20:23 fuzzyray Exp $
+
+  23 Feb 2011; Paul Varner <fuzzyray@gentoo.org> porthole-0.6.1-r1.ebuild,
+  porthole-0.6.1-r2.ebuild:
+  Adjust porthole dependencies to use slots, due to upcoming addition of gtk3.
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -porthole-0.6.0.ebuild:
