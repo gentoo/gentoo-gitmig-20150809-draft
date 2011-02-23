@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.3.ebuild,v 1.1 2011/02/05 13:38:45 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.3.ebuild,v 1.2 2011/02/23 20:52:26 idl0r Exp $
 
 EAPI="3"
 
@@ -73,18 +73,14 @@ src_prepare() {
 	done
 
 	if use dlz; then
-		epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
-
 		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 		# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
 		if use mysql && has_version ">=dev-db/mysql-5"; then
 			epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
 		fi
 
-		if use ldap; then
-			# bug 238681
-			epatch "${FILESDIR}/bind-9.6.1-dlz-patch-ldap-url.patch" \
-				"${FILESDIR}/bind-9.6.1-dlz-patch-dollar2.patch"
+		if use odbc; then
+			epatch "${FILESDIR}/${PN}-9.7.3-odbc-dlz-detect.patch"
 		fi
 	fi
 
