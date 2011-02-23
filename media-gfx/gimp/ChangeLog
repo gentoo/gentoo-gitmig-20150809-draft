@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.319 2011/02/16 11:17:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.320 2011/02/23 06:56:47 xarthisius Exp $
+
+  23 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> gimp-2.6.11-r1.ebuild:
+  ppc/ppc64 stable wrt #350915
 
 *gimp-2.6.11-r1 (16 Feb 2011)
 

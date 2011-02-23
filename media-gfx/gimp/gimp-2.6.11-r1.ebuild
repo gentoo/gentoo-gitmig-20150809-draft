@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.11-r1.ebuild,v 1.1 2011/02/16 11:17:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.11-r1.ebuild,v 1.2 2011/02/23 06:56:47 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="mirror://gimp/v2.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec curl dbus debug doc exif gnome hal jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
 
