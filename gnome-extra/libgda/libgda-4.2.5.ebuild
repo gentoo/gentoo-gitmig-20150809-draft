@@ -1,18 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.10.ebuild,v 1.2 2010/09/13 20:59:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.5.ebuild,v 1.1 2011/02/23 22:14:48 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="yes"
 
-inherit db-use eutils flag-o-matic gnome2 java-pkg-opt-2
+inherit autotools db-use eutils flag-o-matic gnome2 java-pkg-opt-2
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2 LGPL-2"
 
 # MDB support currently works with CVS only, so disable it in the meantime
-# experimental IUSE: introspection
-IUSE="berkdb bindist canvas doc firebird freetds gnome-keyring gtk graphviz ldap mysql oci8 odbc postgres sourceview xbase"
+IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json mysql oci8 postgres sourceview ssl"
 SLOT="4"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
@@ -20,44 +20,43 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 # FIXME: autoconf is a hell of inconsistencies
 RDEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.16
+	>=dev-libs/glib-2.16:2
 	>=dev-libs/libxml2-2
 	dev-libs/libxslt
 	dev-libs/libunique
 	sys-libs/readline
 	sys-libs/ncurses
-	>=net-libs/libsoup-2.24:2.4
 	berkdb?   ( sys-libs/db )
-	freetds?  ( >=dev-db/freetds-0.62 )
 	!bindist? ( firebird? ( dev-db/firebird ) )
 	gtk? (
-		>=x11-libs/gtk+-2.12
+		|| ( >=x11-libs/gtk+-2.12:2 x11-libs/gdk-pixbuf:2 )
 		canvas? ( x11-libs/goocanvas )
 		sourceview? ( x11-libs/gtksourceview:2.0 )
 		graphviz? ( media-gfx/graphviz )
 	)
 	gnome-keyring? ( || ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 ) )
-	ldap?     ( >=net-nds/openldap-2.0.25 )
+	http? ( >=net-libs/libsoup-2.24:2.4 )
+	introspection? ( >=dev-libs/gobject-introspection-0.6.5 )
+	json?     ( dev-libs/json-glib )
 	mysql?    ( virtual/mysql )
-	odbc?     ( >=dev-db/unixODBC-2.0.6 )
 	postgres? ( dev-db/postgresql-base )
-	xbase?    ( dev-db/xbase )
+	ssl?      ( dev-libs/openssl )
 	>=dev-db/sqlite-3.6.22:3"
-#   json?     ( dev-libs/json-glib )
 #	mdb?      ( >app-office/mdbtools-0.5 )
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
 	>=dev-util/intltool-0.35.5
 	>=app-text/gnome-doc-utils-0.9
+	>=dev-util/gtk-doc-am-1
 	doc? ( >=dev-util/gtk-doc-1 )"
-
-DOCS="AUTHORS ChangeLog NEWS README"
 
 # Tests are not really good
 RESTRICT="test"
 
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README"
+
 	if use canvas || use graphviz || use sourceview; then
 		if ! use gtk; then
 			ewarn "You must enable USE=gtk to make use of canvas, graphivz or sourceview USE flag."
@@ -73,21 +72,18 @@ pkg_setup() {
 
 	G2CONF="${G2CONF}
 		--with-unique
-		--with-libsoup
 		--disable-scrollkeeper
-		--disable-introspection
 		--disable-static
 		--enable-system-sqlite
+		$(use_with berkdb bdb /usr)
 		$(use_with gnome-keyring)
 		$(use_with gtk ui)
-		$(use_with berkdb bdb /usr)
-		$(use_with odbc odbc /usr)
+		$(use_with http libsoup)
+		$(use_enable introspection)
+		$(use_with java java $JAVA_HOME)
 		$(use_with mysql mysql /usr)
 		$(use_with postgres postgres /usr)
-		$(use_with freetds tds /usr)
-		$(use_with xbase xbase /usr)
-		$(use_with ldap ldap /usr)
-		$(use_with java java $JAVA_HOME)
+		$(use_enable ssl crypto)
 		--without-mdb"
 #		$(use_with mdb mdb /usr)
 
@@ -99,16 +95,31 @@ pkg_setup() {
 	fi
 
 	use berkdb && append-cppflags "-I$(db_includedir)"
+	# --disable-json doesn't work, upstream bug #636439
+	use json && G2CONF="${G2CONF} --enable-json"
 	use oci8 || G2CONF="${G2CONF} --without-oracle"
 
 	# Not in portage
 	G2CONF="${G2CONF}
-		--without-msql
-		--without-sybase
-		--without-ibmdb2
 		--disable-default-binary"
 }
 
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix build order for generated content, upstream #630958
+	epatch "${FILESDIR}/${PN}-4.2.2-fix-build-order.patch"
+
+	# Fix compilation failure of keyword_hash.c, upstream #630959
+	epatch "${FILESDIR}/${PN}-4.2.0-missing-include-in-keyword_hash-generator.patch"
+
+	# Don't break when running autoreconf, upstream bug #639319
+	epatch "${FILESDIR}/${PN}-4.2.5-missing-m4.patch"
+
+	intltoolize --force --copy --automake || die
+	eautoreconf
+}
+
 src_test() {
-	emake check HOME=$(unset HOME; echo "~") || die "tests failed"
+	emake check XDG_DATA_HOME="${T}/.local" || die "tests failed"
 }
