@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/corefonts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.34 2010/01/09 21:22:09 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/ChangeLog,v 1.35 2011/02/23 10:11:09 robbat2 Exp $
+
+*corefonts-1-r5 (23 Feb 2011)
+
+  23 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> +corefonts-1-r5.ebuild:
+  To fully comply with the license, we need to make sure a copy of it ends up
+  on the system (and inside any binpkgs we generate). Revbump to support the
+  new LiveDVD release.
 
   09 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   corefonts-1-r4.ebuild:
