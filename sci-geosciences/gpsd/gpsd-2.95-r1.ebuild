@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95-r1.ebuild,v 1.1 2011/02/21 03:29:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95-r1.ebuild,v 1.2 2011/02/23 21:47:59 patrick Exp $
 
 EAPI=3
 
@@ -39,7 +39,8 @@ RDEPEND="
 	qt4? ( x11-libs/qt-gui )"
 
 DEPEND="${RDEPEND}
-	app-text/xmlto"
+	app-text/xmlto
+	=app-text/docbook-xml-dtd-4.1*"
 
 PATCHES=(
 	"${FILESDIR}/${PV}-disable-strip.patch"
