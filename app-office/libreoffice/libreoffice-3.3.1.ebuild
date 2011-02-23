@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1_rc1.ebuild,v 1.2 2011/02/17 10:23:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.1 2011/02/23 13:46:58 suka Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl templates"
 
-MY_PV=3.3.1.1
+MY_PV=3.3.1.2
 MY_P="${PN}-build-${MY_PV}"
 PATCHLEVEL=OOO320
 SRC=OOo_${PV}_src

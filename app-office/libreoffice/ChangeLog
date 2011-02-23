@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.13 2011/02/17 10:23:31 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.14 2011/02/23 13:46:58 suka Exp $
+
+*libreoffice-3.3.1 (23 Feb 2011)
+
+  23 Feb 2011; Andreas Proschofsky <suka@gentoo.org>
+  -libreoffice-3.3.1_rc1.ebuild, +libreoffice-3.3.1.ebuild,
+  -files/gentoo-3.3.1_rc1.diff, +files/gentoo-3.3.1.diff:
+  Bump to LibreOffice 3.3.1, bugfix release
 
   17 Feb 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.3.0.ebuild,
   +files/libreoffice-3.3.0_libxmlsec_fix_extern_c.diff,
