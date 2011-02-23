@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.127 2011/01/24 15:51:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.128 2011/02/23 22:48:07 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> anjuta-2.32.1.1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -files/anjuta-2.24.2-fix-build-with-graphviz-2.22.patch,

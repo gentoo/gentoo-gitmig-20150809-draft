@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.52 2011/01/17 12:41:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.53 2011/02/23 22:49:02 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gtk-doc-am-1.16.ebuild:
+  Stable on amd64 wrt bug #353436
 
 *gtk-doc-am-1.16 (17 Jan 2011)
 
