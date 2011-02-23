@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libp11
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.52 2010/12/17 15:40:56 c1pher Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.53 2011/02/23 14:04:54 arfrever Exp $
+
+  23 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -libp11-0.2.6.ebuild:
+  Delete.
 
   17 Dec 2010; Dane Smith <c1pher@gentoo.org> libp11-0.2.6.ebuild,
   libp11-0.2.7.ebuild:
