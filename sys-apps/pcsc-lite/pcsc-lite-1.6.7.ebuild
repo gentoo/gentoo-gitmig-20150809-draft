@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6-r1.ebuild,v 1.1 2011/02/22 11:55:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.7.ebuild,v 1.1 2011/02/23 00:19:38 flameeyes Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit multilib eutils
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
 
-STUPID_NUM="3479"
+STUPID_NUM="3516"
 MY_P="${PN}-${PV/_/-}"
 SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
@@ -30,15 +30,6 @@ pkg_setup() {
 	enewgroup pcscd
 }
 
-src_prepare() {
-	# upstream deprecates libusb in favour of libhal, but we don't want
-	# libhal. Problem is that with 1.6.6 release, there is no way for
-	# multi-interface devices to work without libhal. This patch was
-	# written by me (Flameeyes) and edited by upstream to support such
-	# device. I also have one to test.
-	epatch "${FILESDIR}"/${P}-libusb-multiinterface.patch
-}
-
 src_configure() {
 	econf \
 		--disable-maintainer-mode \
@@ -51,6 +42,8 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${D}" -name '*.la' -delete
+
 	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog || die
 
 	newinitd "${FILESDIR}/pcscd-init.3" pcscd || die
