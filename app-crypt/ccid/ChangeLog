@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.61 2011/01/10 18:48:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.62 2011/02/23 10:45:19 flameeyes Exp $
+
+*ccid-1.4.2 (23 Feb 2011)
+
+  23 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> -ccid-1.3.11.ebuild,
+  -ccid-1.3.13-r1.ebuild, -ccid-1.4.1-r2.ebuild, +ccid-1.4.2.ebuild:
+  Version bump, remove old versions (which are not compatible with latest
+  pcsc-lite anyway), and also drop 1.4.1-r2 in favour of the new 1.4.2 (which
+  has the original patch applied).
 
   10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/ccid-1.3.13-bcm5880v3.patch:
