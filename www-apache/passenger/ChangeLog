@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.32 2011/02/23 20:11:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.33 2011/02/23 20:15:49 graaff Exp $
+
+  23 Feb 2011; Hans de Graaff <graaff@gentoo.org> passenger-3.0.2.ebuild:
+  Request support for source highlighting in documentation building, fixing
+  bug 344289.
 
   23 Feb 2011; Hans de Graaff <graaff@gentoo.org> -passenger-3.0.0.ebuild,
   -passenger-3.0.0-r1.ebuild:
