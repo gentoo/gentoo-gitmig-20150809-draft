@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia2code
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.15 2009/10/07 16:56:38 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.16 2011/02/23 23:15:56 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> dia2code-0.8.3.ebuild:
+  Stable on amd64 wrt bug #353436
 
   07 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> dia2code-0.8.3.ebuild:
   Add die with messages.
