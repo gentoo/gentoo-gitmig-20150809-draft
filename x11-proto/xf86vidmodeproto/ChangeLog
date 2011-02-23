@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86vidmodeproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.46 2011/02/14 14:11:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.47 2011/02/23 16:41:50 jer Exp $
+
+  23 Feb 2011; Jeroen Roovers <jer@gentoo.org> xf86vidmodeproto-2.3.1.ebuild:
+  Stable for HPPA (bug #354237).
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xf86vidmodeproto-2.3.1.ebuild:

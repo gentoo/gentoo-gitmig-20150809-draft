@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xineramaproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.47 2011/02/14 14:13:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.48 2011/02/23 16:42:27 jer Exp $
+
+  23 Feb 2011; Jeroen Roovers <jer@gentoo.org> xineramaproto-1.2.1.ebuild:
+  Stable for HPPA (bug #354237).
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xineramaproto-1.2.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/printproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.45 2011/02/14 14:29:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.46 2011/02/23 16:39:55 jer Exp $
+
+  23 Feb 2011; Jeroen Roovers <jer@gentoo.org> printproto-1.0.5.ebuild:
+  Stable for HPPA (bug #354237).
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   printproto-1.0.5.ebuild:
