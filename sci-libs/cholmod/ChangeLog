@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cholmod
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.24 2010/12/25 18:49:44 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.25 2011/02/23 19:53:33 bicatali Exp $
+
+*cholmod-1.7.3 (23 Feb 2011)
+
+  23 Feb 2011; Sébastien Fabbro <bicatali@gentoo.org> +cholmod-1.7.3.ebuild:
+  Bump
 
   22 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> cholmod-1.7.1.ebuild:
   Added static-libs flag. Enable supernodal flag by default.

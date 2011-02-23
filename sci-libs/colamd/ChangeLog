@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/colamd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.15 2010/12/25 18:50:11 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.16 2011/02/23 20:02:21 bicatali Exp $
+
+*colamd-2.7.3 (23 Feb 2011)
+
+  23 Feb 2011; Sébastien Fabbro <bicatali@gentoo.org> +colamd-2.7.3.ebuild:
+  Bump
 
   25 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> colamd-2.7.1.ebuild:
   Added static-libs flag
