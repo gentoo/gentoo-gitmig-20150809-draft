@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>signals@gentoo.org</email>
+  <name>Kevin McCarthy</name>
 </maintainer>
 </pkgmetadata>

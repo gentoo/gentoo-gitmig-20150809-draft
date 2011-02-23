@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/biew
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.26 2010/02/21 09:46:24 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.27 2011/02/23 16:27:48 signals Exp $
+
+*biew-6.1.0-r1 (23 Feb 2011)
+
+  23 Feb 2011; Kevin McCarthy <signals@gentoo.org> +biew-6.1.0-r1.ebuild,
+  metadata.xml:
+  Fix installation layout problems (bug #351534). Fix "gpm" USE flag. Clean up
+  ebuild and bump to EAPI=4. Added myself to metadata as maintainer.
 
 *biew-6.1.0 (21 Feb 2010)
 
