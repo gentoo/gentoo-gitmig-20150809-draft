@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.1.0.ebuild,v 1.1 2011/02/21 10:40:55 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.1.0.ebuild,v 1.2 2011/02/23 15:11:36 hanno Exp $
 
 EAPI=3
 
@@ -23,6 +23,7 @@ DEPEND="
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
 	x11-libs/qt-sql:4
+	x11-libs/qt-webkit:4
 "
 RDEPEND="${DEPEND}
 	sci-geosciences/gpsbabel"
