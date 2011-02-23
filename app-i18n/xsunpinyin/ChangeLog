@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/xsunpinyin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/ChangeLog,v 1.1 2011/02/20 05:03:11 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/ChangeLog,v 1.2 2011/02/23 02:27:59 qiaomuf Exp $
+
+  23 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> xsunpinyin-2.0.3.ebuild:
+  Add export-dynamic to ldflags wrt bug #356091
 
 *xsunpinyin-2.0.3 (20 Feb 2011)
 

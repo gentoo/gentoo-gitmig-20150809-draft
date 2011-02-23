@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/xsunpinyin-2.0.3.ebuild,v 1.2 2011/02/20 06:49:18 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/xsunpinyin-2.0.3.ebuild,v 1.3 2011/02/23 02:27:59 qiaomuf Exp $
 
 EAPI="1"
-inherit scons-utils
+inherit flag-o-matic scons-utils
 
 DESCRIPTION="The SunPinyin IMEngine Wrapper for XIM Framework"
 HOMEPAGE="http://sunpinyin.googlecode.com"
@@ -20,6 +20,7 @@ DEPEND="app-i18n/sunpinyin
 RDEPEND="${DEPEND}"
 
 src_compile() {
+	append-ldflags -Wl,--export-dynamic
 	escons --prefix="/usr"
 }
 
