@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.206 2011/02/14 17:51:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.207 2011/02/23 23:19:58 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> evince-2.32.0-r1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   14 Feb 2011; Pacho Ramos <pacho@gentoo.org> evince-2.32.0.ebuild:
   Add gnome-base/gsettings-desktop-schemas to RDEPEND as asked by Nirbheek.
