@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1.ebuild,v 1.1 2010/11/08 23:22:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1.ebuild,v 1.2 2011/02/23 23:13:13 hwoarang Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X debug doc +introspection jpeg jpeg2k tiff test"
 
 # librsvg blocker is for the new pixbuf loader API, you lose icons otherwise

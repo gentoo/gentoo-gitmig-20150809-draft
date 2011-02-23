@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-2.1.2-r1.ebuild,v 1.1 2011/02/02 19:00:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/gtk+extra-2.1.2-r1.ebuild,v 1.2 2011/02/23 23:13:47 hwoarang Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gtkextra/${P}.tar.gz"
 
 LICENSE="FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static-libs"
 
 RDEPEND="x11-libs/gtk+:2
