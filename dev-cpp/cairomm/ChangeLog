@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.45 2011/02/13 13:30:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.46 2011/02/23 23:17:29 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> cairomm-1.8.6.ebuild:
+  Stable on amd64 wrt bug #353436
 
 *cairomm-1.8.6 (13 Feb 2011)
 
