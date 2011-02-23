@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/deskbar-applet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.146 2010/12/08 20:18:09 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.147 2011/02/23 22:55:18 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  deskbar-applet-2.32.0.ebuild:
+  Stable on amd64 wrt bug #353436
 
   08 Dec 2010; Pacho Ramos <pacho@gentoo.org> deskbar-applet-2.32.0.ebuild:
   Needs gnome-panel with bonobo support.

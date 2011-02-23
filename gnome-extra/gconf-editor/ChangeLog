@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gconf-editor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.169 2010/11/01 13:51:16 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.170 2011/02/23 22:56:34 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  gconf-editor-2.32.0.ebuild:
+  Stable on amd64 wrt bug #353436
 
   01 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org>
   gconf-editor-2.30.0.ebuild, gconf-editor-2.32.0.ebuild:

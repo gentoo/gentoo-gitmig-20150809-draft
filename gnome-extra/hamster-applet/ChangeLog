@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/hamster-applet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.37 2010/12/08 23:36:58 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.38 2011/02/23 22:58:27 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  hamster-applet-2.32.1.ebuild:
+  Stable on amd64 wrt bug #353436
 
 *hamster-applet-2.32.1 (08 Dec 2010)
 

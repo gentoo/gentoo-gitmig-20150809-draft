@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.210 2011/02/04 18:38:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.211 2011/02/23 22:57:39 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  gnome-utils-2.32.0-r1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   04 Feb 2011; Pacho Ramos <pacho@gentoo.org> gnome-utils-2.32.0-r1.ebuild:
   gnome-panel dep is only required for gdict-applet (behind 'bonobo' USE flag).
