@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5079 2011/02/23 06:43:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5080 2011/02/23 08:52:22 sping Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Feb 2011; Sebastian Pipping <sping@gentoo.org>
+  default/bsd/package.use.mask:
+  app-text/asciidoc: Add upcoming flag "highlight" to BSD package.use.mask (bug
+  #344289)
 
   23 Feb 2011; Ulrich Mueller <ulm@gentoo.org> use.desc:
   Add "sound" as global USE flag.
