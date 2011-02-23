@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.2.0.ebuild,v 1.1 2011/02/04 14:57:06 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.2.0.ebuild,v 1.2 2011/02/23 16:03:26 tampakrap Exp $
 
 EAPI=3
 
@@ -31,7 +31,7 @@ DEPEND="
 	subversion? ( >=dev-vcs/subversion-1.3 )
 "
 RDEPEND="${DEPEND}
-	!<dev-util/kdevelop-${KDEVELOP_VERSION}
+	!<dev-util/kdevelop-${KDEVELOP_VERSION}:4
 	!dev-util/kdevelop-git
 	$(add_kdebase_dep konsole)
 	cvs? ( dev-vcs/cvs )
