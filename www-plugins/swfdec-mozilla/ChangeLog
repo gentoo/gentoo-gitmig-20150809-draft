@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/swfdec-mozilla
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/ChangeLog,v 1.3 2010/10/08 22:53:35 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/ChangeLog,v 1.4 2011/02/23 23:12:58 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  swfdec-mozilla-0.8.2-r1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   08 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
   -swfdec-mozilla-0.6.0.ebuild, -swfdec-mozilla-0.8.0.ebuild,
