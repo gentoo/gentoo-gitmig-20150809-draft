@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/rkward
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.26 2011/02/14 15:35:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.27 2011/02/23 14:45:26 tampakrap Exp $
+
+  23 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> rkward-0.5.4.ebuild:
+  cleanup, slotmove to 4
 
   14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -rkward-0.5.1.ebuild,
   -rkward-0.5.2.ebuild, rkward-0.5.4.ebuild:
