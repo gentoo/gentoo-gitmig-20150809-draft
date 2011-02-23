@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.314 2011/02/23 20:52:26 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.315 2011/02/23 21:07:43 idl0r Exp $
+
+  23 Feb 2011; Christian Ruppert <idl0r@gentoo.org> -files/named.conf-r4,
+  -files/named.confd-r3, -files/named.init-r7:
+  Remove unused files
 
   23 Feb 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.6.3.ebuild,
   bind-9.7.3.ebuild, +files/bind-9.7.3-odbc-dlz-detect.patch:
