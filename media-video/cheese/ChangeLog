@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.40 2011/02/15 08:12:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.41 2011/02/23 23:07:38 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> cheese-2.32.0.ebuild:
+  Stable on amd64 wrt bug #353436
 
   15 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> cheese-2.32.0.ebuild:
   Fix gdk-pixbuf/gtk+ USE flag dependencies.
