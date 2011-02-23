@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MooseX-ClassAttribute
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-ClassAttribute/ChangeLog,v 1.15 2011/02/14 08:01:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-ClassAttribute/ChangeLog,v 1.16 2011/02/23 07:17:40 tove Exp $
+
+*MooseX-ClassAttribute-0.240 (23 Feb 2011)
+
+  23 Feb 2011; Torsten Veller <tove@gentoo.org>
+  +MooseX-ClassAttribute-0.240.ebuild:
+  Version bump
 
 *MooseX-ClassAttribute-0.230 (14 Feb 2011)
 
