@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.108 2011/01/28 19:39:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.109 2011/02/23 22:47:13 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  pygobject-2.26.0-r1.ebuild:
+  Stable on amd64 wrt bug #353436
 
   28 Jan 2011; Pacho Ramos <pacho@gentoo.org> pygobject-2.26.0-r1.ebuild,
   +files/pygobject-2.26.0-disabled-threads.patch:

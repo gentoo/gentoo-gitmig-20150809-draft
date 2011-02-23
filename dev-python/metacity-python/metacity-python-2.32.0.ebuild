@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/metacity-python-2.32.0.ebuild,v 1.1 2010/11/05 23:25:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/metacity-python-2.32.0.ebuild,v 1.2 2011/02/23 22:46:57 hwoarang Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ inherit gnome-python-common
 DESCRIPTION="Python bindings for the Metacity window manager"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-wm/metacity-2.21.5
