@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12490 2011/02/23 14:37:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12491 2011/02/23 18:53:54 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Ruppert <idl0r@gentoo.org> (23 Feb 2011)
+# Masked for removal in 30 days. EOL for 9.4.x, replaced by 9.6.x and 9.7.x
+=net-dns/bind-9.4*
+=net-dns/bind-tools-9.4*
 
 # Samuli Suominen <ssuominen@gentoo.org> (22 Feb 2011)
 # Fails to build with Linux 2.6.31 and up wrt bug 286081.
