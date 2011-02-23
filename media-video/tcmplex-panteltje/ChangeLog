@@ -1,6 +1,11 @@
 # ChangeLog for media-video/tcmplex-panteltje
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.10 2007/11/27 11:39:43 zzam Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcmplex-panteltje/ChangeLog,v 1.11 2011/02/23 17:11:30 hd_brummy Exp $
+
+  23 Feb 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -tcmplex-panteltje-0.3.ebuild, -files/tcmplex-panteltje-0.3.patch,
+  tcmplex-panteltje-0.4.7.ebuild:
+  clean up; eapi=3; respect LDFLAGS now bug #335182
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   tcmplex-panteltje-0.3.ebuild, tcmplex-panteltje-0.4.7.ebuild:
