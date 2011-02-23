@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.130 2011/02/13 13:06:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.131 2011/02/23 21:10:13 idl0r Exp $
+
+  23 Feb 2011; Christian Ruppert <idl0r@gentoo.org> -files/cfportage.README:
+  Remove unused files/cfportage.README
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> cfengine-3.1.2.ebuild:
   sparc stable wrt #352280
