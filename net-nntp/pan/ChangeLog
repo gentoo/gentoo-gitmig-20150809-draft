@@ -1,6 +1,12 @@
 # ChangeLog for net-nntp/pan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.79 2010/12/17 23:10:37 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.80 2011/02/23 22:23:24 eva Exp $
+
+*pan-0.134 (23 Feb 2011)
+
+  23 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> +pan-0.134.ebuild,
+  pan-9999.ebuild:
+  Version bump.
 
   17 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> pan-0.133-r1.ebuild:
   Pin glib/gtk+ to SLOT 2.
