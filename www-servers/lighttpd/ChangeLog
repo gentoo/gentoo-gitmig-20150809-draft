@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.242 2011/01/25 17:01:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.243 2011/02/23 12:16:13 hwoarang Exp $
+
+*lighttpd-1.4.28-r1 (23 Feb 2011)
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  +lighttpd-1.4.28-r1.ebuild, +files/lighttpd-1.4.28-detect-libev.patch:
+  Backport upstream patch to detect libev >4.0 correctly. Thanks to Stefan
+  Bühler <lighttpd@stbuehler.de>. Bug #351371. Upstream
+  commit:http://cgit.lighttpd.net/lighttpd/lighttpd2/commit/?id=eea9b56d16c705c
+  31110e522540febc5cd0282c9
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.28.ebuild:
   Stable for HPPA (bug #349213).
