@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.4 2011/02/12 18:11:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.5 2011/02/23 22:39:02 hwoarang Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://projects.gnome.org/brasero/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+cdr +css doc +introspection +libburn nautilus playlist test"
 
 COMMON_DEPEND="
