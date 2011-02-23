@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/pkcs11-helper
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.35 2009/06/09 02:23:38 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.36 2011/02/23 15:27:08 arfrever Exp $
+
+*pkcs11-helper-1.08 (23 Feb 2011)
+
+  23 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pkcs11-helper-1.05.ebuild, -pkcs11-helper-1.06.ebuild,
+  +pkcs11-helper-1.08.ebuild:
+  Version bump.
 
   09 Jun 2009; Jeroen Roovers <jer@gentoo.org> pkcs11-helper-1.07.ebuild:
   Stable for HPPA (bug #269994).
