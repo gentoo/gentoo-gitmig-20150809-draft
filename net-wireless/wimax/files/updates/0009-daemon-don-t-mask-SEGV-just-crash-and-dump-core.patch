@@ -1,0 +1,140 @@
+From cd0435d6ec9a721188900a811f61d3ea19b58932 Mon Sep 17 00:00:00 2001
+From: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+Date: Tue, 23 Nov 2010 16:17:56 -0800
+Subject: [PATCH 09/20] daemon: don't mask SEGV, just crash and dump core
+
+Signed-off-by: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+---
+ .../Skeletons/AppSrv/GenericConsole.c              |    5 +--
+ .../Skeletons/AppSrv/GenericDaemon.c               |    1 -
+ InfraStack/OSDependent/Linux/wimaxcu/wimaxcu.c     |   17 +--------------
+ .../OSDependent/Linux/wimaxcu/wimaxcu_main.c       |   22 --------------------
+ 4 files changed, 3 insertions(+), 42 deletions(-)
+
+diff --git a/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericConsole.c b/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericConsole.c
+index 63e8e90..b07b8e0 100644
+--- a/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericConsole.c
++++ b/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericConsole.c
+@@ -104,7 +104,7 @@ void print_callstack_to_file(int sig, siginfo_t *info, void *secret)
+ 	// printf("Came here %d\n", __LINE__);
+ 	char command[MAX_STR_LEN + MAX_FILENAME_LEN];
+ 	/* Do something useful with siginfo_t */
+-  	if ((sig != SIGSEGV) && (sig != SIGINT)) {
++  	if (sig != SIGINT) {
+ 		syslog(LOG_ERR,"Got signal %d#92", sig);
+ 		// printf("Came here %d\n", __LINE__);
+ 		return;
+@@ -167,7 +167,7 @@ void console_signal_handler(int sig, siginfo_t *info, void *secret)
+ 	// printf("First ctrl +c recieived \n");
+ 	no_of_signals++;
+ 	
+-	if ((sig == SIGSEGV) && (sig == SIGINT)) {
++	if (sig == SIGINT) {
+ 		syslog(LOG_ERR,"Got signal %d", sig);
+ 		print_callstack_to_file(sig, info, secret);
+ 	}
+@@ -201,7 +201,6 @@ int main_console(void)
+   	sigemptyset (&sa.sa_mask);
+   	sa.sa_flags = SA_RESTART | SA_SIGINFO;
+ 	
+-  	sigaction(SIGSEGV, &sa, NULL);
+   	sigaction(SIGUSR1, &sa, NULL);   // install our handler
+ 	sigaction(SIGINT, &sa, NULL);
+   	sigaction(SIGTERM, &sa, NULL);   // install our handler
+diff --git a/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericDaemon.c b/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericDaemon.c
+index bdf6e22..0637790 100644
+--- a/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericDaemon.c
++++ b/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericDaemon.c
+@@ -254,7 +254,6 @@ int main_daemon(void)
+ 	sigemptyset (&sa.sa_mask);
+ 	sa.sa_flags = SA_RESTART | SA_SIGINFO;
+ 
+-	sigaction(SIGSEGV, &sa, NULL);
+ 	sigaction(SIGUSR1, &sa, NULL);  
+ 
+ 	signal(SIGINT, stop_signal_handler);
+diff --git a/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu.c b/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu.c
+index ad187c4..dfa94db 100644
+--- a/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu.c
++++ b/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu.c
+@@ -3055,7 +3055,7 @@ void print_callstack_to_file(int sig, siginfo_t *info,
+ //	 printf("Came here %d\n", __LINE__);
+ 	char command[MAX_STR_LEN + MAX_FILENAME_LEN];
+ 	 /* Do something useful with siginfo_t */
+-  	if ((sig != SIGSEGV) && (sig != SIGINT)) {
++  	if (sig != SIGINT) {
+ 		syslog(LOG_ERR,"Got signal %d#92", sig);
+ //		 printf("Came here %d\n", __LINE__);
+ 		return;
+@@ -3136,20 +3136,6 @@ void wimaxcu_signal_handler(int sig, siginfo_t *info,
+ 	printf("Please check /var/log/wimax folder \n");
+ 
+  	print_callstack_to_file(sig, info, secret);
+-	
+-	
+-	// kalyan
+-	// If wimaxcu recieved segmentation fault 
+-	// Stack might be corrupted
+-	// So it is good idea to just exit
+-	// This may recives some system resources hanging
+-
+-	if(sig == SIGSEGV) {
+-		printf("Exit \n");
+-		exit(0);
+-	}
+-		
+-
+ 	wimaxcu_stop_signal_handler(sig);
+ 	
+ }
+@@ -3191,7 +3177,6 @@ int main(int argc, char *argv[])
+     	sigemptyset (&sa.sa_mask);
+     	sa.sa_flags = SA_RESTART | SA_SIGINFO;
+ 
+-    	sigaction(SIGSEGV, &sa, NULL);
+     	sigaction(SIGUSR1, &sa, NULL);  
+ 
+     	signal(SIGINT, wimaxcu_stop_signal_handler);
+diff --git a/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_main.c b/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_main.c
+index faf0f36..d14a2ae 100644
+--- a/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_main.c
++++ b/InfraStack/OSDependent/Linux/wimaxcu/wimaxcu_main.c
+@@ -330,27 +330,6 @@ void wimaxcu_stop_signal_handler(int sig)
+ 	
+ }
+ 
+-
+-void handler(int sig)
+-{
+-	void *array[10];
+-	size_t size;
+-	size_t i;
+-	char **strings;
+-	size = backtrace(array,10);
+-	fprintf(stderr,"Error: signal %d: \n",sig);
+-	strings = backtrace_symbols (array, size);
+-
+-	printf ("Obtained %zd stack frames.\n", size);
+-     
+-       for (i = 0; i < size; i++)
+-          printf ("%s\n", strings[i]);
+-     
+-       free (strings);
+-  
+-//	backtrace_symbols_fd(array,size,2);
+-	exit(1);
+-}
+ /*
+  * Function: main
+  * Description: main function calls functions for intialization and 
+@@ -402,7 +381,6 @@ int main(int argc, char *argv[])
+ 	// sleep(1);
+ 	// Execute the command
+ 	ret = cmd_handler(&gbl_device_id, &out_cmd);
+-	signal(SIGSEGV,handler);
+ 	// Finalize the SDK
+ 	wimaxcu_finalize(&gbl_device_id);
+ 
+-- 
+1.7.4.1
+

@@ -1,0 +1,29 @@
+From dc866f55d03daf36dc018418dee2f99cc330a284 Mon Sep 17 00:00:00 2001
+From: Doug Kehn <rdkehn@yahoo.com>
+Date: Wed, 26 Jan 2011 14:27:44 -0800
+Subject: [PATCH 16/20] Wrappers: wmx_SystemStateUpdate alignment
+
+Commented out dummyCompilerHappy[3] from wmx_SystemStateUpdate.  This
+change resolved alignment problems on ARM XSCALE (big-endian) processor.
+
+Signed-off-by: Doug Kehn <rdkehn@yahoo.com>
+---
+ .../WiMax/Wrappers/Include/wmxSDK_Nds_1.h          |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h
+index 7fb5817..e7bd050 100644
+--- a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h
++++ b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_1.h
+@@ -248,7 +248,7 @@ typedef struct _wmx_SystemStateUpdate
+ 	wmx_LinkStatus_t linkStatus;
+ 	wmx_MediaStatus_t MediaStatus;
+ 	wmx_ChannedInfo_t channelInfo;
+-	UINT8				dummyCompilerHappy[3];
++//	UINT8				dummyCompilerHappy[3];
+ 	wmx_RfSwitchesStatus_t rfSwitchesStatus;	
+ } wmx_SystemStateUpdate, *wmx_pSystemStateUpdate;
+ 
+-- 
+1.7.4.1
+

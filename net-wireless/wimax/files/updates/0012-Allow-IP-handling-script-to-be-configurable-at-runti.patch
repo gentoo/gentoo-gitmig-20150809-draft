@@ -1,0 +1,155 @@
+From 616a37c88c7a70008d8fc24d763e6b40bbd2d2d1 Mon Sep 17 00:00:00 2001
+From: Dan Williams <dcbw@redhat.com>
+Date: Mon, 20 Dec 2010 17:51:16 -0600
+Subject: [PATCH 12/20] Allow IP handling script to be configurable at runtime
+
+Instead of hard-coding a script that unconditionally runs something,
+allow an alternate script to be given.  This can allow connection
+managers that handle the IP details themselves to better integrate
+with the wimax daemon.
+---
+ .../Skeletons/AppSrv/GenericMain.c                 |   35 +++++++++++++++++---
+ .../Linux/OSAL/Services/wimax_osal_services.c      |   25 +++++++++-----
+ 2 files changed, 46 insertions(+), 14 deletions(-)
+
+diff --git a/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericMain.c b/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericMain.c
+index bdd2bc7..9c2a161 100644
+--- a/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericMain.c
++++ b/InfraStack/OSDependent/Linux/InfraStackModules/Skeletons/AppSrv/GenericMain.c
+@@ -34,6 +34,8 @@ POSSIBILITY OF SUCH DAMAGE.
+ #include <libgen.h>
+ #include <unistd.h>
+ #include <sys/types.h>
++#include <sys/stat.h>
++#include <unistd.h>
+ 
+ #include "wimax_osal_primitives.h"
+ #include "wimax_osal_config_controler.h"
+@@ -45,6 +47,7 @@ extern char *g_ifacename;
+ static char *progname;
+ int g_kill = 0;
+ int g_daemon = -1;
++extern char *g_script;
+ 
+ static 
+ void do_help(FILE *f)
+@@ -58,6 +61,7 @@ void do_help(FILE *f)
+ 		"-k              Kill existing instance (requires -i)\n"
+ 		"-d              Debug mode, work in console and don't become a daemon\n"
+ 		"-b              Force working in background and become a daemon\n"
++		"-s SCRIPT       Script to run on network interface IP change events\n"
+ 		"-h              This help\n", progname);
+ }
+ 
+@@ -65,18 +69,15 @@ int main(int argc, char *argv[])
+ {
+ 	BOOL res;
+ 	char target[MAX_TARGET_NAME] = {0};
+-	if (geteuid() != (uid_t) 0) {
+-		fprintf(stderr,	"ERROR: You do not possess sufficient privileges to perform this action.\n");
+-		return 1;
+-	}
+ 	int c;
+ 	int ret;
+ 	int pid;
++	struct stat st;
+ 
+ 	opterr = 0;
+ 	progname = basename(argv[0]);
+ 	
+-	while ((c = getopt(argc, argv, "i:kdbk")) != -1)
++	while ((c = getopt(argc, argv, "i:s:kdbk")) != -1)
+ 		switch (c)
+ 		{
+ 		case 'i':
+@@ -91,6 +92,9 @@ int main(int argc, char *argv[])
+ 		case 'b':
+ 			g_daemon = 1;
+ 			break;
++		case 's':
++			g_script = optarg;
++			break;
+ 		case 'h':
+ 			do_help(stdout);
+ 			return 1;
+@@ -112,6 +116,27 @@ int main(int argc, char *argv[])
+ 			"ERROR: You do not possess sufficient privileges to perform this action.\n");
+ 		return 1;
+ 	}
++
++	// check the script file
++	if (g_script) {
++		if (stat (g_script, &st) != 0) {
++			fprintf(stderr,
++				"ERROR: Script '%s' is not accessible.\n", g_script);
++			return 1;
++		}
++
++		if (st.st_uid != 0) {
++			fprintf(stderr,
++				"ERROR: Script '%s' not owned by root.\n", g_script);
++			return 1;
++		}
++
++		if ((st.st_mode & S_IXUSR) == 0) {
++			fprintf(stderr,
++				"ERROR: Script '%s' is not executable.\n", g_script);
++			return 1;
++		}
++	}
+ 	
+ 	pid = IsDaemonRunning();
+ 	if (g_kill) {
+diff --git a/InfraStack/OSDependent/Linux/OSAL/Services/wimax_osal_services.c b/InfraStack/OSDependent/Linux/OSAL/Services/wimax_osal_services.c
+index 4f15620..27d35e4 100644
+--- a/InfraStack/OSDependent/Linux/OSAL/Services/wimax_osal_services.c
++++ b/InfraStack/OSDependent/Linux/OSAL/Services/wimax_osal_services.c
+@@ -56,6 +56,7 @@
+ 
+ int linkup_redundant = 0;
+ char * g_ifacename = NULL;
++char * g_script = NULL;
+ 
+ #define TRACE(x, y, z, ...)
+ 
+@@ -284,7 +285,7 @@ UINT32 OSAL_RenewIP( UINT32 mediaStatus )
+ 
+ void *ManageIPThread(void *param)
+ {
+-#define DHCP_RENEW_FILE_NAME "dhcp_renew.sh"
++#define DEFAULT_DHCP_RENEW_FILE_NAME "dhcp_renew.sh"
+ 
+ 	char file_name[MAX_FILENAME_LEN + 10]; // 10 more chacters to add interface name	
+ 	int len = 0;
+@@ -294,14 +295,20 @@ void *ManageIPThread(void *param)
+ 
+ 	OSALTRACE(OSAL_ERROR, ("Enter"));
+ 
+-	strcpy(file_name, PKG_DATA_DIR);
+-	len = strlen(file_name);
+-	
+-	if(file_name[len-1] != '/') {
+-		strcat(file_name,"/");
+-	} 
+-	
+-	strcat(file_name, DHCP_RENEW_FILE_NAME);	
++	if (g_script == NULL)
++	{
++		strcpy(file_name, PKG_DATA_DIR);
++		len = strlen(file_name);
++
++		if(file_name[len-1] != '/')
++			strcat(file_name,"/");
++
++		strcat(file_name, DEFAULT_DHCP_RENEW_FILE_NAME);
++	}
++	else
++	{
++		strcpy(file_name, g_script);
++	}
+ 	
+ 	interface_name[0] = '\0';
+ 
+-- 
+1.7.4.1
+

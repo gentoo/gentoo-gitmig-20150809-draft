@@ -1,0 +1,40 @@
+From c300707009417e45ab50bafc74cd4b9488e9f365 Mon Sep 17 00:00:00 2001
+From: Doug Kehn <rdkehn@yahoo.com>
+Date: Wed, 26 Jan 2011 14:26:57 -0800
+Subject: [PATCH 15/20] Wrappers: wmx_Preambles_t alignment
+
+Update the size of wmx_Preambles_t to be a power of 2.  This change
+resolved alignment problems on ARM XSCALE (big-endian) processor.
+
+The PREAMBLES_LENGTH define, used extensively throughout the code, was
+not altered.
+
+Signed-off-by: Doug Kehn <rdkehn@yahoo.com>
+---
+ .../WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h        |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h
+index 21fdf62..457a25c 100644
+--- a/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h
++++ b/InfraStack/OSAgnostic/WiMax/Wrappers/Include/wmxSDK_Nds_Cmn.h
+@@ -41,6 +41,7 @@
+ #define MAX_VERBOSE_NSP_NAME_SIZE 256
+ #define MAX_SP_LOCK_CODE_SIZE 32
+ #define PREAMBLES_LENGTH	15
++#define PREAMBLES_SIZE		16
+ #define WMX_CHANNELS_MAX_NUM 64
+ #define MAX_INSTALLAION_VERSION_SIZE 50
+ 
+@@ -75,7 +76,7 @@ typedef UINT8 wmx_BSidMask_t[6], *wmx_pBSidMask_t;
+ /// </summary>
+ typedef UINT16 wmx_ChannelID_t, *wmx_pChannelID_t;
+ typedef UINT32 wmx_PPMFreqError_t, *wmx_pPPMFreqError_t;
+-typedef UINT8 wmx_Preambles_t[PREAMBLES_LENGTH], *wmx_pPreambles_t;
++typedef UINT8 wmx_Preambles_t[PREAMBLES_SIZE], *wmx_pPreambles_t;
+ 
+ /// <summary>
+ /// Type definition for a variable containing the ID of a NSP. 
+-- 
+1.7.4.1
+

@@ -1,0 +1,32 @@
+From 648897ebad3718ed52432fa39c8de80b30d7c1d9 Mon Sep 17 00:00:00 2001
+From: Doug Kehn <rdkehn@yahoo.com>
+Date: Wed, 26 Jan 2011 14:29:14 -0800
+Subject: [PATCH 17/20] L4_INTEL_80216_INDICATION typedef redefinition
+
+The variable holding L3_L4_OPCODE_* value undergoes various typecasting
+changes as it moves along the call stack.  The end result, on big-endian
+machines, is that the variable holding the opcode (indication_id) will
+always equal 0.  Changing the typedef from UINT16 to UINT32 resolves
+this problem.
+
+Signed-off-by: Doug Kehn <rdkehn@yahoo.com>
+---
+ .../OSAgnostic/Product/AppSrvInfra/L4MsgProxy.h    |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.h b/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.h
+index 5f8753e..178d319 100644
+--- a/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.h
++++ b/InfraStack/OSAgnostic/Product/AppSrvInfra/L4MsgProxy.h
+@@ -57,7 +57,7 @@ extern L5_CONNECTION l4Proxy_Connection;
+ extern tL5DispatcherFunctions *l4Proxy_pFuncs;
+ 
+ 
+-typedef UINT16 L4_INTEL_80216_INDICATION;
++typedef UINT32 L4_INTEL_80216_INDICATION;
+ 
+ 
+ // AppSrv Agent Interface:
+-- 
+1.7.4.1
+

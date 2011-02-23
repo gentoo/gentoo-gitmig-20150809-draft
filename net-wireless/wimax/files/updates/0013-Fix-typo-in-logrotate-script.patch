@@ -1,0 +1,26 @@
+From 79a60814470c37c832210626cfea7dcd02bc7c26 Mon Sep 17 00:00:00 2001
+From: Alexey I. Froloff <raorn@altlinux.org>
+Date: Mon, 10 Jan 2011 06:10:00 -0800
+Subject: [PATCH 13/20] Fix typo in logrotate script
+
+Signed-off-by: Alexey I. Froloff <raorn@altlinux.org>
+---
+ InfraStack/OSDependent/Linux/OSAL/logrotate.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/InfraStack/OSDependent/Linux/OSAL/logrotate.in b/InfraStack/OSDependent/Linux/OSAL/logrotate.in
+index 6407044..b6d2cb4 100644
+--- a/InfraStack/OSDependent/Linux/OSAL/logrotate.in
++++ b/InfraStack/OSDependent/Linux/OSAL/logrotate.in
+@@ -2,7 +2,7 @@
+         daily
+ 	delaycompress
+ 	copytruncate
+-        externsion log
++        extension log
+         missingok
+         rotate 9
+ }
+-- 
+1.7.4.1
+

@@ -1,6 +1,33 @@
 # ChangeLog for net-wireless/wimax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.6 2011/01/02 14:37:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.7 2011/02/23 11:12:08 alexxy Exp $
+
+*wimax-1.5.1-r1 (23 Feb 2011)
+
+  23 Feb 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/updates/0001-wimax-network-service-64-bit-fixes.patch,
+  +files/updates/0002-cleanup-fix-struct-packing-and-type-casting-issues.patch,
+  +files/updates/0003-Fix-pthread_mutex_unlock-duplicate-call-in-OSALTrace.patch,
+  +files/updates/0004-Fix-a-lot-of-warnings-about-undefined-malloc-free.patch,
+  +files/updates/0005-remove-duplicate-typedef-for-u8.patch,
+  +files/updates/0006-wimaxcu-fix-array-size.patch,
+  +files/updates/0007-supplicant-fix-invocation-of-eap_peer_sm_init.patch,
+  +files/updates/0008-supplicant-Fix-eap_methods-array-setup-and-declarati.patch,
+  +files/updates/0009-daemon-don-t-mask-SEGV-just-crash-and-dump-core.patch,
+  +files/updates/0010-OSAL-fix-OSAL_wcsmp-for-Linux-environments.patch,
+  +files/updates/0011-configure-remove-O2-by-default.patch,
+  +files/updates/0012-Allow-IP-handling-script-to-be-configurable-at-runti.patch,
+  +files/updates/0013-Fix-typo-in-logrotate-script.patch,
+  +files/updates/0014-KDapi-Big-endian-support.patch,
+  +files/updates/0015-Wrappers-wmx_Preambles_t-alignment.patch,
+  +files/updates/0016-Wrappers-wmx_SystemStateUpdate-alignment.patch,
+  +files/updates/0017-L4_INTEL_80216_INDICATION-typedef-redefinition.patch,
+  +files/updates/0018-L5Common-Big-endian-support.patch,
+  +files/updates/0019-Supplicant-Big-endian-support.patch,
+  +files/updates/0020-endianess-use-endian.h-to-determine-endianess-vs-sta.patch,
+  +wimax-1.5.1-r1.ebuild,
+  files/wimax:
+  Add updates from git. Also fix bug #356121
 
   02 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org> wimax-1.5.1.ebuild:
   Fix bug #331289

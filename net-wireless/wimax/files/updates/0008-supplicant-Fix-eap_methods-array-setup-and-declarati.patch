@@ -1,0 +1,49 @@
+From 339c280e7dea7f0a590b9637bdacaae791c25b06 Mon Sep 17 00:00:00 2001
+From: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+Date: Tue, 23 Nov 2010 15:56:37 -0800
+Subject: [PATCH 08/20] supplicant: Fix eap_methods array setup and declaration
+
+The eap_methods array has to be EAP_VENDOR_IETF:EAP_TYPE_NONE
+terminated, thus it has to be one slot bigger than 2. As well, the
+proper pointer wasn't set to eap_ctx.eap_config.eap_methods. All
+fixed.
+
+Signed-off-by: Inaky Perez-Gonzalez <inaky.perez-gonzalez@intel.com>
+---
+ .../Agents/Supplicant/Source/SupplicantAgent.c     |    6 ++++--
+ 1 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c b/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c
+index 742c57b..7cb5196 100644
+--- a/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c
++++ b/InfraStack/OSAgnostic/WiMax/Agents/Supplicant/Source/SupplicantAgent.c
+@@ -174,7 +174,7 @@ SupplicantData g_SuppData1; //[findme][amirs] buffer for 64bit
+ 
+ SupplicantConfig g_SuppConfig1; //[findme][amirs] buffer for 64bit
+ #endif
+-static struct eap_method_type eap_methods[2];
++static struct eap_method_type eap_methods[3];
+ SupplicantConfig g_SuppConfig;
+ 
+ OSAL_dynlib_t	g_DSlib = NULL;
+@@ -480,6 +480,8 @@ wmx_Status_t InitSupplicantLibrary(VOID)
+ 
+ #if defined(WPA_OPEN_SOURCE)
+ 	memset(&eap_methods, 0, sizeof(eap_methods));
++	eap_methods[2].vendor = EAP_VENDOR_IETF;
++	eap_methods[2].method = EAP_TYPE_NONE;
+ 	memset(&eap_ctx, 0, sizeof(eap_ctx));
+ 
+ 	eap_ctx.eap_config.identity = (u8 *) os_strdup("user");
+@@ -488,7 +490,7 @@ wmx_Status_t InitSupplicantLibrary(VOID)
+ 	eap_ctx.eap_config.password_len = 8;
+ 	eap_ctx.eap_config.ca_cert = (u8 *) os_strdup("ca.pem");
+ 	eap_ctx.eap_config.fragment_size = TLS_MAX_SIZE;
+-	eap_ctx.eap_config.eap_methods = &eap_methods;
++	eap_ctx.eap_config.eap_methods = eap_methods;
+ 
+ 	memset(&eap_cb, 0, sizeof(eap_cb));
+ 	eap_cb.get_config = peer_get_config;
+-- 
+1.7.4.1
+
