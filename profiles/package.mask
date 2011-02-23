@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12488 2011/02/22 22:17:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12489 2011/02/23 08:57:53 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -151,7 +151,6 @@ app-emulation/vmware-gsx-console
 =x11-drivers/ati-drivers-10.9-r1
 =x11-drivers/ati-drivers-10.8
 x11-drivers/nouveau-firmware
-=x11-base/nouveau-drm-20100520
 =x11-base/nouveau-drm-20100316
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Feb 2011)
