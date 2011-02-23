@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.0.6.ebuild,v 1.2 2011/02/10 02:15:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.0.6.ebuild,v 1.3 2011/02/23 03:18:47 vapier Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs flag-o-matic
 
 MY_PN=${PN}src
 DESCRIPTION="Uncompress rar files"
@@ -19,6 +19,7 @@ RDEPEND="!<=app-arch/unrar-gpl-0.0.1_p20080417"
 S=${WORKDIR}/unrar
 
 src_compile() {
+	append-lfs-flags #356155
 	emake \
 		-f makefile.unix \
 		CXXFLAGS="${CXXFLAGS}" \

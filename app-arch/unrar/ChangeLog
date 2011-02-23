@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.148 2011/02/10 02:13:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.149 2011/02/23 03:18:47 vapier Exp $
+
+  23 Feb 2011; Mike Frysinger <vapier@gentoo.org> unrar-4.0.6.ebuild:
+  Enable lfs flags #356155 by Rafał Mużyło.
 
 *unrar-4.0.6 (10 Feb 2011)
 
