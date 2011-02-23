@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.133-r1.ebuild,v 1.2 2010/12/17 23:10:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.133-r1.ebuild,v 1.3 2011/02/23 23:12:01 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="spell"
 
 RDEPEND=">=dev-libs/glib-2.4:2
