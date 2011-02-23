@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r1.ebuild,v 1.1 2011/02/08 17:12:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r1.ebuild,v 1.2 2011/02/23 17:39:34 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -143,7 +143,7 @@ src_prepare() {
 	fi
 
 	# Fix compilation flags crazyness
-	sed -e 's/CFLAGS="$CFLAGS $WARNING_FLAGS"//' \
+	sed -e 's/-D.*_DISABLE_DEPRECATED//' \
 		-i configure.ac configure || die "sed 1 failed"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
