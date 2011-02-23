@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2.ebuild,v 1.2 2011/02/08 17:12:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2.ebuild,v 1.3 2011/02/23 23:05:47 hwoarang Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 # connman is not ready to be stabilized, bug #353440
 IUSE="clutter crypt doc gstreamer kerberos ldap networkmanager python ssl"
