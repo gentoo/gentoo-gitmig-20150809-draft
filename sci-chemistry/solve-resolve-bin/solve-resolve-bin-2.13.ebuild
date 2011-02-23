@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/solve-resolve-bin/solve-resolve-bin-2.13.ebuild,v 1.1 2010/02/02 22:23:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/solve-resolve-bin/solve-resolve-bin-2.13.ebuild,v 1.2 2011/02/23 15:39:44 jlec Exp $
 
 EAPI="3"
 
@@ -8,8 +8,9 @@ inherit eutils
 
 DESCRIPTION="Automated crystallographic structure solution for MIR, SAD, and MAD"
 HOMEPAGE="http://www.solve.lanl.gov/index.html"
-SRC_URI="x86? ( http://solve.lanl.gov/pub/solve/${PV}/solve-${PV}-linux.tar.gz )
-		 amd64? ( http://solve.lanl.gov/pub/solve/${PV}/solve-${PV}-linux-64.tar.gz )"
+SRC_URI="
+	x86? ( http://solve.lanl.gov/pub/solve/${PV}/solve-${PV}-linux.tar.gz )
+	amd64? ( http://solve.lanl.gov/pub/solve/${PV}/solve-${PV}-linux-64.tar.gz )"
 
 SLOT="0"
 LICENSE="solve"
@@ -26,7 +27,7 @@ IN_PATH="/opt/solve-resolve/"
 
 src_install(){
 	exeinto ${IN_PATH}bin/
-	doexe bin/*
+	doexe bin/* || die
 
 	insinto ${IN_PATH}lib/
 	doins -r lib/{*sym,sym*,hist*,*dat,segments,patterns} || die
@@ -49,12 +50,12 @@ src_install(){
 	PATH="${EPREFIX}/${IN_PATH}bin"
 	EOF
 
-	doenvd "${T}"/20solve-resolve
+	doenvd "${T}"/20solve-resolve || die
 }
 
 pkg_postinst(){
 	einfo "Get a valid license key from"
 	einfo "http://solve.lanl.gov/license.html"
 	einfo "and place it in"
-	einfo "${EPREFIX}/${IN_PATH}lib/"
+	einfo "${EPREFIX}${IN_PATH}lib/"
 }
