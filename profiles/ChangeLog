@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5082 2011/02/23 21:12:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5083 2011/02/23 21:21:36 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> base/package.use.mask:
+  Use mask libgnome[esd] and related, bug #348644 and bug #352260.
 
   23 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Mask gtetrinet and monster-masher due to libgnome[esd] removal, bug #348644.

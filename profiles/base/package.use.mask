@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.203 2011/02/22 07:53:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.204 2011/02/23 21:21:36 eva Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Feb 2011)
+# libgnome[esd] ABI broken, bug #348644 and bug #352260.
+>=gnome-base/libgnome-2.32 esd
+app-text/stardict pronounce
 
 # Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
 # Masked until devs know how to use repoman
