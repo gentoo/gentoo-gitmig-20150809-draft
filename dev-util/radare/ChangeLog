@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/radare
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.15 2010/09/25 15:18:56 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.16 2011/02/23 16:00:09 signals Exp $
+
+*radare-1.5-r2 (23 Feb 2011)
+
+  23 Feb 2011; Kevin McCarthy <signals@gentoo.org> +radare-1.5-r2.ebuild,
+  +files/radare-1.5-more-ldflags.patch:
+  Drop "vala" use flag because it can no longer be built without vala support
+  (See bug #348431). Fixes to respect user LDFLAGS.
 
   25 Sep 2010; Gilles Dartiguelongue <eva@gentoo.org> -radare-0.9.9.ebuild,
   -radare-1.2.1.ebuild, -radare-1.2.1-r1.ebuild, -radare-1.2.2.ebuild,
