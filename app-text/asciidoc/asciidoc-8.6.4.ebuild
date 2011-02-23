@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.4.ebuild,v 1.2 2011/02/22 14:15:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.4.ebuild,v 1.3 2011/02/23 08:57:42 sping Exp $
 
 EAPI="3"
 
@@ -19,17 +19,18 @@ if [ "$PV" == "9999" ]; then
 	S=${WORKDIR}/hg
 else
 	SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="examples test vim-syntax"
+IUSE="examples highlight test vim-syntax"
 
 RDEPEND=">=app-text/docbook-xsl-stylesheets-1.75
 		dev-libs/libxslt
 		media-gfx/graphviz
 		app-text/docbook-xml-dtd:4.5
+		highlight? ( dev-util/source-highlight )
 "
 DEPEND="test? ( dev-util/source-highlight
 			media-sound/lilypond

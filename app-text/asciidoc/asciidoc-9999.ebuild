@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-9999.ebuild,v 1.2 2011/02/22 07:40:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-9999.ebuild,v 1.3 2011/02/23 08:57:42 sping Exp $
 
 EAPI="3"
 
@@ -24,12 +24,13 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="examples test vim-syntax"
+IUSE="examples highlight test vim-syntax"
 
 RDEPEND=">=app-text/docbook-xsl-stylesheets-1.75
 		dev-libs/libxslt
 		media-gfx/graphviz
 		app-text/docbook-xml-dtd:4.5
+		highlight? ( dev-util/source-highlight )
 "
 DEPEND="test? ( dev-util/source-highlight
 			media-sound/lilypond

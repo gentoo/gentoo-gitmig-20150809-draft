@@ -1,6 +1,11 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.66 2011/02/22 14:15:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.67 2011/02/23 08:57:42 sping Exp $
+
+  23 Feb 2011; Sebastian Pipping <sping@gentoo.org> asciidoc-8.6.4.ebuild,
+  metadata.xml:
+  Bring back ~hppa keyword (bug #356069), add use flag "highlight" (bug
+  #344289)
 
   22 Feb 2011; Jeroen Roovers <jer@gentoo.org> asciidoc-8.6.4.ebuild:
   Drop HPPA because of missing dep on media-sound/lilypond (bug #356069).
