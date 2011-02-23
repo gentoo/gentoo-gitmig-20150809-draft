@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.31 2011/01/29 17:05:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.32 2011/02/23 23:36:13 hwoarang Exp $
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> upower-0.9.8.ebuild:
+  Stable on amd64 wrt bug #354505
 
   29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.5.ebuild,
   +files/upower-0.9.5-linux-headers-2.6.36.patch:
