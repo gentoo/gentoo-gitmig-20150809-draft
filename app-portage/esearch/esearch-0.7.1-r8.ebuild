@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.1-r8.ebuild,v 1.1 2011/02/23 16:42:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.1-r8.ebuild,v 1.2 2011/02/23 17:01:42 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.4
 PYTHON_USE_WITH=readline
 
-inherit base eutils python
+inherit base eutils multilib python
 
 DESCRIPTION="Replacement for 'emerge --search' with search-index"
 HOMEPAGE="http://david-peter.de/esearch.html"
@@ -29,17 +29,22 @@ PATCHES=( "${FILESDIR}"/97462-esearch-metadata.patch
 	"${FILESDIR}"/186994-esync-quiet.patch
 	"${FILESDIR}"/146555-esearch-manifest2.patch )
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_compile() { :; }
 
 src_install() {
 	dodir /usr/bin/ /usr/sbin/ || die "dodir failed"
 
-	exeinto /usr/lib/esearch
+	exeinto /usr/$(get_libdir)/esearch
 	doexe eupdatedb.py esearch.py esync.py common.py || die "doexe failed"
 
-	dosym /usr/lib/esearch/esearch.py /usr/bin/esearch || die "dosym failed"
-	dosym /usr/lib/esearch/eupdatedb.py /usr/sbin/eupdatedb || die "dosym failed"
-	dosym /usr/lib/esearch/esync.py /usr/sbin/esync || die "dosym failed"
+	dosym /usr/$(get_libdir)/esearch/esearch.py /usr/bin/esearch || die "dosym failed"
+	dosym /usr/$(get_libdir)/esearch/eupdatedb.py /usr/sbin/eupdatedb || die "dosym failed"
+	dosym /usr/$(get_libdir)/esearch/esync.py /usr/sbin/esync || die "dosym failed"
 
 	doman en/{esearch,eupdatedb,esync}.1 || die "doman failed"
 	dodoc ChangeLog "${FILESDIR}/eupdatedb.cron" || die "dodoc failed"
@@ -50,4 +55,12 @@ src_install() {
 	fi
 
 	python_convert_shebangs -r 2 "${D}"
+}
+
+pkg_postinst() {
+	python_mod_optimize /usr/$(get_libdir)/esearch
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/$(get_libdir)/esearch
 }
