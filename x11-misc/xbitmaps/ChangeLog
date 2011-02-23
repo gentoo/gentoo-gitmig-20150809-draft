@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbitmaps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.39 2011/02/14 14:09:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.40 2011/02/23 16:37:15 jer Exp $
+
+  23 Feb 2011; Jeroen Roovers <jer@gentoo.org> xbitmaps-1.1.1.ebuild:
+  Stable for HPPA (bug #354237).
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> xbitmaps-1.1.1.ebuild:
   ppc stable wrt #344827, #354237
