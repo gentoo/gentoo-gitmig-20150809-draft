@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.100.ebuild,v 1.1 2011/02/23 13:31:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.100.ebuild,v 1.2 2011/02/23 14:05:34 ssuominen Exp $
 
 EAPI="3"
 inherit eutils pam
@@ -39,7 +39,7 @@ src_configure() {
 	use pam && myauth="--with-authfw=pam --with-pam-module-dir=$(getpam_mod_dir)"
 
 	econf \
-		--localstatedir=${EPREFIX}/var \
+		--localstatedir="${EPREFIX}"/var \
 		--disable-dependency-tracking \
 		--disable-static \
 		$(use_enable debug verbose-mode) \
