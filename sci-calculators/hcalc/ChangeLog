@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/hcalc
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/ChangeLog,v 1.8 2008/03/24 16:44:47 coldwind Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/ChangeLog,v 1.9 2011/02/23 07:32:08 jlec Exp $
+
+*hcalc-1.0-r1 (23 Feb 2011)
+
+  23 Feb 2011; Justin Lecher <jlec@gentoo.org> +files/1.0-gentoo.patch,
+  hcalc-1.0.ebuild, +hcalc-1.0-r1.ebuild:
+  Respect LDFLAGS, #335339
 
   24 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> hcalc-1.0.ebuild:
   amd64 stable
