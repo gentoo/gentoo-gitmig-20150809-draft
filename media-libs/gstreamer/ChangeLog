@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.280 2011/02/20 21:51:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.281 2011/02/24 05:18:57 leio Exp $
+
+*gstreamer-0.10.32 (24 Feb 2011)
+
+  24 Feb 2011; Mart Raudsepp <leio@gentoo.org> +gstreamer-0.10.32.ebuild:
+  Version bump. valve, input-selector and output-selector elements have
+  matured and moved from gst-plugins-bad to here, while ignoring the old
+  ones if -bad isn't upgraded yet. Lots of performance improvements in
+  heavily-used code paths. Many other improvements and bug fixes.
 
   20 Feb 2011; Markus Meier <maekke@gentoo.org> gstreamer-0.10.31.ebuild:
   arm stable, bug #353434
