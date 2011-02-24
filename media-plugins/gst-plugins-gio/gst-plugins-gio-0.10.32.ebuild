@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/gst-plugins-gio-0.10.30.ebuild,v 1.1 2010/11/19 05:39:54 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/gst-plugins-gio-0.10.32.ebuild,v 1.1 2011/02/24 06:49:30 leio Exp $
 
 inherit gst-plugins-base
 
