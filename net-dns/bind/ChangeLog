@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.315 2011/02/23 21:07:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.316 2011/02/24 15:03:23 phajdan.jr Exp $
+
+  24 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bind-9.7.3.ebuild:
+  x86 stable wrt security bug #356223
 
   23 Feb 2011; Christian Ruppert <idl0r@gentoo.org> -files/named.conf-r4,
   -files/named.confd-r3, -files/named.init-r7:
