@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/gst-plugins-xvideo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.164 2011/02/20 22:10:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/ChangeLog,v 1.165 2011/02/24 07:56:38 leio Exp $
+
+*gst-plugins-xvideo-0.10.32 (24 Feb 2011)
+
+  24 Feb 2011; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  -gst-plugins-xvideo-0.10.24.ebuild, -gst-plugins-xvideo-0.10.25.ebuild,
+  -gst-plugins-xvideo-0.10.28.ebuild, -gst-plugins-xvideo-0.10.30.ebuild,
+  +gst-plugins-xvideo-0.10.32.ebuild:
+  Version bump. New read-only properties window-width and window-height.
+  Small memory leak fix. Remove old
 
   20 Feb 2011; Markus Meier <maekke@gentoo.org>
   gst-plugins-xvideo-0.10.31.ebuild:
