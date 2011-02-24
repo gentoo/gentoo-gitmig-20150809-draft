@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.35 2011/02/23 22:39:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.36 2011/02/24 18:34:07 tomka Exp $
+
+  24 Feb 2011; Thomas Kahle <tomka@gentoo.org> gringotts-1.2.10.ebuild:
+  x86 stable per bug 353436
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gringotts-1.2.10.ebuild:
   Stable on amd64 wrt bug #353436
