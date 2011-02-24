@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.1.ebuild,v 1.3 2011/02/23 22:38:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.1.ebuild,v 1.4 2011/02/24 18:32:59 tomka Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://fileroller.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="nautilus"
 
 RDEPEND=">=dev-libs/glib-2.25.5
