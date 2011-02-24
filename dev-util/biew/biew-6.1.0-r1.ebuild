@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-6.1.0-r1.ebuild,v 1.1 2011/02/23 16:27:48 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-6.1.0-r1.ebuild,v 1.2 2011/02/24 14:18:23 signals Exp $
 
 EAPI=4
-inherit flag-o-matic toolchain-funcs versionator
+inherit eutils flag-o-matic toolchain-funcs versionator
 
 MY_P=${PN}-$(replace_all_version_separators "")
 
@@ -21,6 +21,8 @@ RDEPEND="gpm? ( sys-libs/gpm )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-610-fix_localedep-1.patch"
+	epatch "${FILESDIR}/${PN}-610-portable_configure-1.patch"
 	sed -i -e 's^man/man1/biew.1^share/man/man1/biew.1^' makefile || die "Failed to edit makefile."
 }
 
