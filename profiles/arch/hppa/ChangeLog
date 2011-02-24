@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.109 2011/02/22 13:17:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.110 2011/02/24 18:34:22 jer Exp $
+
+  24 Feb 2011; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask app-text/texlive[pdfannotextractor] (bug #355353).
 
   22 Feb 2011; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove stupid app-text/asciidoc[test] mask.
