@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.27 2010/10/24 15:54:26 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.28 2011/02/24 22:24:36 xarthisius Exp $
+
+  24 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> boxes-1.1-r1.ebuild:
+  ppc64 stable wrt #350556
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> boxes-1.1-r1.ebuild:
   stable ppc, bug 342145
