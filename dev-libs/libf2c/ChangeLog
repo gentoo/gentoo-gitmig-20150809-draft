@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.36 2010/05/11 10:58:13 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.37 2011/02/24 07:25:42 jlec Exp $
+
+  24 Feb 2011; Justin Lecher <jlec@gentoo.org> libf2c-20070912.ebuild,
+  libf2c-20090407-r1.ebuild:
+  Correct license to as-is, #356271
 
   11 May 2010; Justin Lecher <jlec@gentoo.org> libf2c-20090407-r1.ebuild:
   Keyworded for ~amd64-linux ~x86-linux

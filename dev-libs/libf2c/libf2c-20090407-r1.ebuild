@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20090407-r1.ebuild,v 1.2 2010/05/11 10:58:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20090407-r1.ebuild,v 1.3 2011/02/24 07:25:42 jlec Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://ftp.netlib.org/f2c/index.html"
 #SRC_URI="ftp://ftp.netlib.org/f2c/${PN}.zip"
 SRC_URI="mirror://gentoo/${P}.zip"
 
-LICENSE="libf2c"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="static-libs"
@@ -23,9 +23,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/20051004-add-ofiles-dep.patch
-	epatch "${FILESDIR}"/${PV}-link-shared-libf2c-correctly.patch
-	epatch "${FILESDIR}"/${PV}-main.patch
+	epatch \
+		"${FILESDIR}"/20051004-add-ofiles-dep.patch \
+		"${FILESDIR}"/${PV}-link-shared-libf2c-correctly.patch \
+		"${FILESDIR}"/${PV}-main.patch
 }
 
 src_compile() {
