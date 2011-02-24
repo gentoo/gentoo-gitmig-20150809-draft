@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.156 2011/02/20 21:52:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.157 2011/02/24 06:32:41 leio Exp $
+
+*gst-plugins-base-0.10.32 (24 Feb 2011)
+
+  24 Feb 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-base-0.10.32.ebuild:
+  Version bump. Don't build examples as they aren't installed, avoids issues
+  like bug 348623 too. Has new encodebin element as a playbin2 alike
+  convenience aggregate element, but for encoding instead of playback for
+  the benefit of encoding/transcoding applications once they port to it;
+  encode profile system to go along with it to have 'profiles' of encoding
+  targets. Many other improvements and bug fixes
 
   20 Feb 2011; Markus Meier <maekke@gentoo.org>
   gst-plugins-base-0.10.31.ebuild:
