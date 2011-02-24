@@ -1,6 +1,13 @@
 # ChangeLog for media-radio/xlog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.19 2010/12/09 22:39:24 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.20 2011/02/24 05:10:03 tomjbe Exp $
+
+*xlog-2.0.5 (24 Feb 2011)
+
+  24 Feb 2011; Thomas Beierlein <tomjbe@gentoo.org> -xlog-2.0.3.ebuild,
+  -xlog-2.0.3-r1.ebuild, -files/xlog-2.0.3-dxcc.patch,
+  -files/xlog-2.0.3-memmove.patch, +xlog-2.0.5.ebuild:
+  Maintenance release. Drop old versions.
 
   09 Dec 2010; Thomas Kahle <tomka@gentoo.org> xlog-2.0.4.ebuild:
   x86 stable per bug 346937
