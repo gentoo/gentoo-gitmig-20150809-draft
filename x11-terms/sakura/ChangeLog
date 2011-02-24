@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/sakura
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.10 2010/10/29 10:25:10 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.11 2011/02/24 20:00:27 jmbsvicetto Exp $
+
+*sakura-2.4.0 (24 Feb 2011)
+
+  24 Feb 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +sakura-2.4.0.ebuild, metadata.xml:
+  Non-maintainer commit.
+  Bumped sakura to the 2.4.0 release - fixes bug 356333.
 
   29 Oct 2010; Markos Chandras <hwoarang@gentoo.org> sakura-2.3.8.ebuild:
   Stable on amd64 wrt bug #348943
