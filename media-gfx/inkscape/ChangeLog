@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.154 2011/02/23 19:14:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.155 2011/02/24 20:47:18 radhermit Exp $
+
+  24 Feb 2011; Tim Harder <radhermit@gentoo.org> inkscape-0.48.1.ebuild,
+  +files/inkscape-0.48.1-lcms.patch:
+  Fix compile when the lcms USE flag is disabled (bug #356285). Fix thanks to
+  Shannon.
 
 *inkscape-0.48.1 (23 Feb 2011)
 
