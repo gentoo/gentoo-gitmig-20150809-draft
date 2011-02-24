@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.200 2011/02/16 19:33:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.201 2011/02/24 16:44:26 chutzpah Exp $
+
+*dnsmasq-2.57 (24 Feb 2011)
+
+  24 Feb 2011; Patrick McLean <chutzpah@gentoo.org> +dnsmasq-2.57.ebuild:
+  Version bump, some cleanups suggested by Jan Psota <jasiu@kkfsa.pl>. Remove
+  sed workaround for bug #214865 as the Makefile no longer calls any form of
+  awk.
 
 *dnsmasq-2.56 (16 Feb 2011)
 
