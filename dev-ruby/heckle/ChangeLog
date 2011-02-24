@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/heckle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.18 2010/12/28 08:16:05 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.19 2011/02/24 06:51:50 graaff Exp $
+
+  24 Feb 2011; Hans de Graaff <graaff@gentoo.org> -heckle-1.4.3-r1.ebuild:
+  Remove old version.
 
   28 Dec 2010; Fabian Groffen <grobian@gentoo.org> heckle-1.4.3-r2.ebuild:
   Marked ~x64-solaris
