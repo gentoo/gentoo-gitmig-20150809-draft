@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.43 2011/02/23 23:09:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.44 2011/02/24 20:39:52 tomka Exp $
+
+  24 Feb 2011; Thomas Kahle <tomka@gentoo.org> libsoup-gnome-2.32.2.ebuild:
+  x86 stable per bug 353436
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   libsoup-gnome-2.32.2.ebuild:
