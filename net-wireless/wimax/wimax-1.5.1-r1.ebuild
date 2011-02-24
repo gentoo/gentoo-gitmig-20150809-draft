@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.1-r1.ebuild,v 1.1 2011/02/23 11:12:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.1-r1.ebuild,v 1.2 2011/02/24 10:42:15 alexxy Exp $
 
 EAPI="3"
 
-inherit linux-info base
+inherit linux-info base autotools
 
 DESCRIPTION="Intel WiMAX daemon used to interface to the hardware"
 HOMEPAGE="http://www.linuxwimax.org/"
@@ -46,6 +46,13 @@ PATCHES=(
 
 pkg_setup() {
 	linux-info_pkg_setup
+}
+
+src_prepare() {
+	for x in ${PATCHES[@]}; do
+		epatch ${x}
+	done
+	eautoreconf
 }
 
 src_configure() {
