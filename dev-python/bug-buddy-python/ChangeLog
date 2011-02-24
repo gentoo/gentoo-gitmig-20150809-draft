@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bug-buddy-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.44 2011/02/23 22:43:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.45 2011/02/24 18:43:28 tomka Exp $
+
+  24 Feb 2011; Thomas Kahle <tomka@gentoo.org> bug-buddy-python-2.32.0.ebuild:
+  x86 stable per bug 353436
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   bug-buddy-python-2.32.0.ebuild:

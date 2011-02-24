@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.109 2011/02/23 22:47:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.110 2011/02/24 18:50:36 tomka Exp $
+
+  24 Feb 2011; Thomas Kahle <tomka@gentoo.org> pygobject-2.26.0-r1.ebuild:
+  x86 stable per bug 353436
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   pygobject-2.26.0-r1.ebuild:

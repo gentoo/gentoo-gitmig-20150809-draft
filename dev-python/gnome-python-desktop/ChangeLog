@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.112 2011/02/23 22:45:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.113 2011/02/24 18:47:01 tomka Exp $
+
+  24 Feb 2011; Thomas Kahle <tomka@gentoo.org>
+  gnome-python-desktop-2.32.0.ebuild:
+  x86 stable per bug 353436
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   gnome-python-desktop-2.32.0.ebuild:
