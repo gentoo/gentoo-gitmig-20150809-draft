@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gsettings-desktop-schemas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.5 2011/02/23 22:52:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.6 2011/02/24 19:17:39 tomka Exp $
+
+  24 Feb 2011; Thomas Kahle <tomka@gentoo.org>
+  gsettings-desktop-schemas-0.1.1.ebuild:
+  x86 stable per bug 353436
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   gsettings-desktop-schemas-0.1.1.ebuild:
