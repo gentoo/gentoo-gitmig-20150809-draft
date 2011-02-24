@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wimax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.7 2011/02/23 11:12:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.8 2011/02/24 10:24:42 alexxy Exp $
+
+  24 Feb 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  files/updates/0009-daemon-don-t-mask-SEGV-just-crash-and-dump-core.patch:
+  Fix bug #356221
 
 *wimax-1.5.1-r1 (23 Feb 2011)
 
