@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20101029.ebuild,v 1.4 2011/01/26 15:50:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20101029.ebuild,v 1.5 2011/02/24 12:33:41 aballier Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs versionator
@@ -46,7 +46,7 @@ src_configure() {
 		--disable-lavf \
 		--disable-swscale \
 		--disable-gpac \
-		$(use_enable threads pthread) \
+		$(use threads || echo "--disable-pthread") \
 		--enable-pic \
 		--enable-shared \
 		--extra-asflags="${ASFLAGS}" \
