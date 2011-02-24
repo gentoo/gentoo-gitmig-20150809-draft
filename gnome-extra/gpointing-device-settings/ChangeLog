@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gpointing-device-settings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/ChangeLog,v 1.9 2011/02/13 12:39:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/ChangeLog,v 1.10 2011/02/24 09:30:11 dev-zero Exp $
+
+*gpointing-device-settings-1.5.1-r2 (24 Feb 2011)
+
+  24 Feb 2011; Tiziano Müller <dev-zero@gentoo.org>
+  +gpointing-device-settings-1.5.1-r2.ebuild,
+  +files/gpointing-device-settings-1.5.1-gsd-crash.patch:
+  Added patch to fix crash on VT switch (bug #345343, thanks to Alexandre
+  Rostovtsev for the patch and Robert Swain for the analysis), removed our own
+  desktop entry (bug #345959).
 
   13 Feb 2011; Pacho Ramos <pacho@gentoo.org>
   gpointing-device-settings-1.5.1.ebuild:
