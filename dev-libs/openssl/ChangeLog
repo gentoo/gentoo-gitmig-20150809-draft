@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.390 2011/02/21 18:33:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.391 2011/02/24 20:37:19 fauli Exp $
+
+  24 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  openssl-0.9.8r.ebuild:
+  stable x86, security bug 354139
+
+  24 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  openssl-0.9.8r.ebuild:
+  stable x86, security bug 354139
 
   21 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
   openssl-1.0.0d.ebuild:
