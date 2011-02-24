@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-file/libopensync-plugin-file-0.36.ebuild,v 1.2 2008/07/13 07:09:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-file/libopensync-plugin-file-0.36.ebuild,v 1.3 2011/02/24 05:13:44 dirtyepic Exp $
+
+EAPI="3"
 
 inherit cmake-utils
 
@@ -13,5 +15,13 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE=""
 
-DEPEND="=app-pda/libopensync-${PV}*"
-RDEPEND="${DEPEND}"
+RDEPEND="~app-pda/libopensync-${PV}
+	dev-libs/glib:2
+	dev-libs/libxml2"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+
+src_install() {
+	cmake-utils_src_install
+	find "${D}" -name '*.la' -exec rm -f {} + || die
+}
