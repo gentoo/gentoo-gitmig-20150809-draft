@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.106 2011/02/16 21:53:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.107 2011/02/24 12:00:56 dilfridge Exp $
+
+*kexi-2.3.3 (24 Feb 2011)
+
+  24 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kexi-2.3.3.ebuild:
+  Version bump
 
   16 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org> kexi-2.3.1.ebuild:
   Works also with newer dev-libs/libpqxx now
