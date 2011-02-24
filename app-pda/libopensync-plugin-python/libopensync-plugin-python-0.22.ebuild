@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-python/libopensync-plugin-python-0.22.ebuild,v 1.3 2011/02/24 05:21:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-python/libopensync-plugin-python-0.22.ebuild,v 1.4 2011/02/24 05:27:21 dirtyepic Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -16,10 +16,10 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE=""
 
-DEPEND="~app-pda/libopensync-${PV}
-	dev-libs/glib:2
+RDEPEND="~app-pda/libopensync-${PV}
+	dev-libs/glib:2"
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
-RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	python_set_active_version 2
