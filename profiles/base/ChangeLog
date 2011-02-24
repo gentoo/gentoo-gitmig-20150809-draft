@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.209 2011/02/22 07:31:20 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.210 2011/02/24 13:54:58 aballier Exp $
+
+  24 Feb 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask android useflag for vlc
 
   22 Feb 2011; Sebastian Pipping <sping@gentoo.org> package.use.mask:
   Mask use flag "test" on app-text/asciidoc

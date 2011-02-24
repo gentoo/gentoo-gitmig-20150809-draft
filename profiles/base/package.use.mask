@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.204 2011/02/23 21:21:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.205 2011/02/24 13:54:58 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -261,3 +261,5 @@ media-video/vlc audioqueue ios-vout macosx macosx-audio macosx-dialog-provider m
 # arm specific useflag, someone from the arm team should unmask this on their
 # profiles
 media-video/vlc neon
+# should be enabled iff building for the android platform
+media-video/vlc android
