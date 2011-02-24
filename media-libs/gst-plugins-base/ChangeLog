@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.157 2011/02/24 06:32:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.158 2011/02/24 08:02:29 leio Exp $
+
+  24 Feb 2011; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  -gst-plugins-base-0.10.24.ebuild, -gst-plugins-base-0.10.25.ebuild,
+  -gst-plugins-base-0.10.28.ebuild, -gst-plugins-base-0.10.30.ebuild:
+  Remove old. gstreamer@ is sole maintainer right now, document it
 
 *gst-plugins-base-0.10.32 (24 Feb 2011)
 
