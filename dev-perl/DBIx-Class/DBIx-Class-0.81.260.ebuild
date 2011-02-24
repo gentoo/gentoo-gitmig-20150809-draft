@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.81.260.ebuild,v 1.1 2011/01/13 20:36:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.81.260.ebuild,v 1.2 2011/02/24 07:14:14 tove Exp $
 
 EAPI=3
 
@@ -57,7 +57,7 @@ RDEPEND="
 	>=dev-perl/DBD-SQLite-1.29
 	>=dev-perl/Carp-Clan-6.00
 	>=dev-perl/Class-Accessor-Grouped-0.100.20
-	>=dev-perl/Class-C3-Componentised-1.0005
+	>=dev-perl/Class-C3-Componentised-1.0.500
 	>=dev-perl/Class-Inspector-1.24
 	>=dev-perl/Config-Any-0.20
 	>=dev-perl/Data-Page-2.01
