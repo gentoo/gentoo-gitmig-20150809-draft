@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.59 2011/02/21 20:33:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.60 2011/02/24 21:18:56 billie Exp $
+
+  24 Feb 2011; Daniel Pielmeier <billie@gentoo.org> libisoburn-1.0.0.ebuild:
+  Raise required libburn and libisofs version.
 
   21 Feb 2011; Markos Chandras <hwoarang@gentoo.org> libisoburn-1.0.0.ebuild:
   Stable on amd64 wrt bug #355097
