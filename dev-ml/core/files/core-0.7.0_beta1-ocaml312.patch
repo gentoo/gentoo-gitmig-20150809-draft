@@ -1,0 +1,27 @@
+diff -cr lib.orig/core_gc.ml lib/core_gc.ml
+*** lib.orig/core_gc.ml	Sat Dec 11 00:11:49 2010
+--- lib/core_gc.ml	Sat Feb 19 12:19:33 2011
+***************
+*** 86,91 ****
+--- 86,92 ----
+      fragments : int;
+      compactions : int;
+      top_heap_words : int;
++     stack_size : int;
+    } with bin_io, sexp
+    type binable = t
+    type sexpable = t
+diff -cr lib.orig/core_gc.mli lib/core_gc.mli
+*** lib.orig/core_gc.mli	Sat Dec 11 00:11:49 2010
+--- lib/core_gc.mli	Sat Feb 19 12:19:55 2011
+***************
+*** 103,108 ****
+--- 103,110 ----
+  
+      top_heap_words : int;
+      (** Maximum size reached by the major heap, in words. *)
++ 
++     stack_size : int;
+    }
+    include Binable.S with type binable = t
+    include Sexpable.S with type sexpable = t
