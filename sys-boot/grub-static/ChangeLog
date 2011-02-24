@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.29 2011/02/24 09:22:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.30 2011/02/24 09:25:11 robbat2 Exp $
+
+  24 Feb 2011; Robin H. Johnson <robbat2@gentoo.org>
+  grub-static-0.97-r10.ebuild:
+  One more bit for hanno. I_KNOW_WHAT_IM_DOING=1 will now enable you to install
+  an unusable grub on amd64 systems without IA32_EMULATION, for specific rescue
+  situations.
 
   24 Feb 2011; Robin H. Johnson <robbat2@gentoo.org>
   grub-static-0.97-r10.ebuild:
