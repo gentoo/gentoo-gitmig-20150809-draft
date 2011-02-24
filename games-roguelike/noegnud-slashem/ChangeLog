@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/noegnud-slashem
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-slashem/ChangeLog,v 1.9 2010/10/14 08:57:00 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/noegnud-slashem/ChangeLog,v 1.10 2011/02/24 14:46:03 tupone Exp $
+
+  24 Feb 2011; Tupone Alfredo <tupone@gentoo.org> noegnud-slashem-0.8.2.ebuild:
+  Further fix LDFLAGS respecting. Bug #356051 by flameeyes@gentoo.org
 
   14 Oct 2010; Tupone Alfredo <tupone@gentoo.org>
   noegnud-slashem-0.8.2.ebuild, +files/noegnud-slashem-0.8.2-ldflags.patch:
