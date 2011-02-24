@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>desktop-misc</herd>
+  <herd>desktop-misc</herd>
+  <maintainer>
+    <email>signals@gentoo.org</email>
+    <name>Kevin McCarthy</name>
+  </maintainer>
+  <use>
+    <flag name="gtk">Enables the gtk-based wbar-config GUI</flag>
+  </use>
 </pkgmetadata>
+

@@ -1,0 +1,30 @@
+Fix unused result on fgets() in Run.cc and "format not a string
+literal" on gtk_message_dialog_new() in Functions.cc
+
+These are just warinings, but cause compile failures with -Wall -Werror
+
+Patch by Kevin McCarthy <signals@gentoo.org>
+
+--- src/config/Run.cc
++++ src/config/Run.cc
+@@ -33,7 +33,8 @@
+     if (process)
+     {
+         char spid[50];
+-        fgets(spid, sizeof(spid), process);
++        char* tmp;
++        tmp=fgets(spid, sizeof(spid), process);
+         pclose(process);
+ 
+         pid = atoi(spid);
+--- src/config/Functions.cc
++++ src/config/Functions.cc
+@@ -680,7 +680,7 @@
+                                   GTK_DIALOG_DESTROY_WITH_PARENT,
+                                   GTK_MESSAGE_ERROR,
+                                   GTK_BUTTONS_OK,
+-                                  (_("Error save config in ") + filename).c_str());
++                                  "%s",(_("Error save config in ") + filename).c_str());
+ 
+         gtk_dialog_run (GTK_DIALOG (dialog));
+         gtk_widget_destroy (dialog);
