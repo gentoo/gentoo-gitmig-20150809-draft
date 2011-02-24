@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5c-r1.ebuild,v 1.4 2008/09/20 13:45:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5c-r1.ebuild,v 1.5 2011/02/24 17:49:11 jer Exp $
 
 inherit eutils
 
@@ -16,10 +16,11 @@ IUSE="doc"
 
 DEPEND="net-libs/libpcap
 	dev-libs/libdnet
-	>=dev-libs/libevent-1.2
+	=dev-libs/libevent-1*
 	dev-libs/libdnsres
 	dev-libs/libpcre
 	sys-libs/zlib"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
