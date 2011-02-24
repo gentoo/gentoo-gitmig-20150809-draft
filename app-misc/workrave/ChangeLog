@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.73 2011/02/23 22:39:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.74 2011/02/24 18:35:55 tomka Exp $
+
+  24 Feb 2011; Thomas Kahle <tomka@gentoo.org> workrave-1.9.3.ebuild:
+  x86 stable per bug 353436
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> workrave-1.9.3.ebuild:
   Stable on amd64 wrt bug #353436
