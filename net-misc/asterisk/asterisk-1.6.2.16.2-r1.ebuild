@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.16.2.ebuild,v 1.1 2011/02/22 18:16:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.16.2-r1.ebuild,v 1.1 2011/02/24 09:33:36 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="alsa +caps dahdi doc freetds iconv jabber ldap lua keepsrc misdn newt +samples oss postgres radius snmp span speex ssl sqlite vorbis"
+IUSE="alsa +caps dahdi doc freetds iconv jabber ldap lua keepsrc newt +samples oss postgres radius snmp span speex ssl sqlite vorbis"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
@@ -32,7 +32,6 @@ RDEPEND="sys-libs/ncurses
 	jabber? ( dev-libs/iksemel )
 	ldap?	( net-nds/openldap )
 	lua? ( dev-lang/lua )
-	misdn? ( net-dialup/misdnuser )
 	newt? ( dev-libs/newt )
 	postgres? ( dev-db/postgresql-base )
 	radius? ( net-dialup/radiusclient-ng )
@@ -86,9 +85,6 @@ src_configure() {
 		$(use_with iconv) \
 		$(use_with jabber iksemel) \
 		$(use_with lua) \
-		$(use_with misdn isdnnet) \
-		$(use_with misdn suppserv) \
-		$(use_with misdn) \
 		$(use_with newt) \
 		$(use_with oss) \
 		$(use_with postgres) \

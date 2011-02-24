@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.291 2011/02/22 18:16:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.292 2011/02/24 09:33:36 chainsaw Exp $
+
+*asterisk-1.6.2.16.2-r1 (24 Feb 2011)
+
+  24 Feb 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.16.2.ebuild,
+  +asterisk-1.6.2.16.2-r1.ebuild:
+  Drop problematic misdn dependencies from the 1.6.2 branch to aid in security
+  stabilisation. Both the 1.2 and the 1.4 branch are slated for removal and
+  will be masked soon.
 
 *asterisk-1.6.2.16.2 (22 Feb 2011)
 
