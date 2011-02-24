@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.128 2011/02/22 13:53:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.129 2011/02/24 13:59:29 aballier Exp $
 
 EAPI="4"
 
@@ -45,12 +45,12 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec +avformat bda
-	bidi bluray cdda cddb dbus dc1394 debug dirac direct2d directfb directx
-	dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode fbcon fbosd
-	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls growl httpd
-	ieee1394 ios-vout jack kate kde libass libcaca libnotify libproxy libtiger
-	libv4l2 linsys libtar lirc live lua +macosx +macosx-audio
+IUSE="a52 aac aalib alsa altivec android atmo +audioqueue avahi +avcodec
+	+avformat bda bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
+	directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
+	fbcon fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
+	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
+	libproxy libtiger libv4l2 linsys libtar lirc live lua +macosx +macosx-audio
 	+macosx-dialog-provider +macosx-eyetv +macosx-quartztext +macosx-qtcapture
 	+macosx-vout matroska media-library mmx modplug mp3 mpeg mtp musepack
 	ncurses neon ogg omxil opengl optimisememory oss png portaudio +postproc
@@ -212,6 +212,7 @@ src_configure() {
 		$(use_enable aac faad) \
 		$(use_enable alsa) \
 		$(use_enable altivec) \
+		$(use_enable android) \
 		$(use_enable atmo) \
 		$(use_enable audioqueue) \
 		$(use_enable avahi bonjour) \
