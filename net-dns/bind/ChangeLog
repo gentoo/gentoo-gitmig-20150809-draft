@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.316 2011/02/24 15:03:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.317 2011/02/24 16:57:29 xarthisius Exp $
+
+  24 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> bind-9.7.3.ebuild:
+  ppc/ppc64 stable wrt #356223
 
   24 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bind-9.7.3.ebuild:
   x86 stable wrt security bug #356223
