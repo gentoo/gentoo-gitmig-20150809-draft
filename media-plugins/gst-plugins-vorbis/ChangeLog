@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.188 2011/02/20 22:06:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.189 2011/02/24 07:47:32 leio Exp $
+
+*gst-plugins-vorbis-0.10.32 (24 Feb 2011)
+
+  24 Feb 2011; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  -gst-plugins-vorbis-0.10.24.ebuild, -gst-plugins-vorbis-0.10.25.ebuild,
+  -gst-plugins-vorbis-0.10.28.ebuild, -gst-plugins-vorbis-0.10.30.ebuild,
+  +gst-plugins-vorbis-0.10.32.ebuild:
+  Version bump. Minor fixes in this release. Remove old
 
   20 Feb 2011; Markus Meier <maekke@gentoo.org>
   gst-plugins-vorbis-0.10.31.ebuild:

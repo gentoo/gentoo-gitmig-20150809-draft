@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-v4l
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.84 2011/02/20 22:05:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.85 2011/02/24 07:42:46 leio Exp $
+
+*gst-plugins-v4l-0.10.32 (24 Feb 2011)
+
+  24 Feb 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-v4l-0.10.24.ebuild, -gst-plugins-v4l-0.10.25.ebuild,
+  -gst-plugins-v4l-0.10.28.ebuild, -gst-plugins-v4l-0.10.30.ebuild,
+  +gst-plugins-v4l-0.10.32.ebuild:
+  Version bump. Minor fixes in this release. Remove old
 
   20 Feb 2011; Markus Meier <maekke@gentoo.org> gst-plugins-v4l-0.10.31.ebuild:
   arm stable, bug #353434
