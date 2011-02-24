@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/f2c
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.25 2008/11/26 17:02:05 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.26 2011/02/24 07:43:29 ulm Exp $
+
+  24 Feb 2011; Ulrich Mueller <ulm@gentoo.org> f2c-20060507.ebuild:
+  Correct license to as-is, bug 356271.
 
   26 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/f2c-20030320-CAN-2005-0017.patch, -f2c-20030320-r1.ebuild:
