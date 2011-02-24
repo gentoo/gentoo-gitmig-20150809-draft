@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/basemap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.19 2010/07/12 10:17:17 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.20 2011/02/24 00:56:30 bicatali Exp $
+
+*basemap-1.0.1 (24 Feb 2011)
+
+  24 Feb 2011; Sébastien Fabbro <bicatali@gentoo.org> -basemap-0.99.4.ebuild,
+  +basemap-1.0.1.ebuild:
+  Version bump
 
   12 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   basemap-1.0.ebuild:
