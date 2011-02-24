@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12492 2011/02/23 21:12:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12493 2011/02/24 17:54:29 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -490,10 +490,6 @@ net-print/gqueue
 #
 # Removal on 2011-03-12
 net-mail/cyrus-imspd
-
-# Anthony G. Basile <blueness@gentoo.org> (10 Jan 2011)
-# Masked until libevent-2* is unmasked (bug #333077)
-=net-misc/tor-0.2.2*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (10 Jan 2011)
 #  on behalf of QA team
@@ -1056,11 +1052,6 @@ dev-lisp/gcl
 # upgrading and tests fail and configure of python bindings sucks.
 =app-office/gnucash-2.3*
 ~app-office/gnucash-2.4.0
-
-# Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
-# Masked until reverse dependencies are fixed (bug #333077)
-=dev-libs/libevent-2*
-=net-p2p/transmission-2.21
 
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing
