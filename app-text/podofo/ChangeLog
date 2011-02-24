@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.19 2011/01/19 21:55:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.20 2011/02/24 17:31:10 zmedico Exp $
+
+  24 Feb 2011; Zac Medico <zmedico@gentoo.org> podofo-0.8.4.ebuild:
+  Bug #356293 - libpng-1.5 compatibility
 
   19 Jan 2011; Zac Medico <zmedico@gentoo.org> podofo-0.8.4.ebuild:
   Bug #352125 - Disable FontTest::testFonts since it fails depending on

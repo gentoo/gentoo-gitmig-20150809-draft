@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.4.ebuild,v 1.2 2011/01/19 21:55:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.4.ebuild,v 1.3 2011/02/24 17:31:10 zmedico Exp $
 
 EAPI=2
-inherit cmake-utils multilib
+inherit cmake-utils eutils multilib
 
 DESCRIPTION="PoDoFo is a C++ library to work with the PDF file format."
 HOMEPAGE="http://sourceforge.net/projects/podofo/"
-SRC_URI="mirror://sourceforge/podofo/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/podofo/${P}.tar.gz
+http://sourceforge.net/apps/mantisbt/podofo/file_download.php?file_id=15&type=bug -> podofo-0.8.4-libpng15.patch"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -29,6 +30,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog TODO"
 
 src_prepare() {
+	# Bug #356293 - libpng-1.5 compatibility
+	epatch "$DISTDIR"/$P-libpng15.patch
+
 	sed -i \
 		-e "s:LIBDIRNAME \"lib\":LIBDIRNAME \"$(get_libdir)\":" \
 		CMakeLists.txt || die
