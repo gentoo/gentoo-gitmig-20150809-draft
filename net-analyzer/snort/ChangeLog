@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.171 2011/01/14 22:40:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.172 2011/02/24 17:31:46 patrick Exp $
+
+*snort-2.9.0.4 (24 Feb 2011)
+
+  24 Feb 2011; Patrick Lauer <patrick@gentoo.org> +snort-2.9.0.4.ebuild,
+  +files/disabledynamic.patch, metadata.xml:
+  Bump for #355865, thanks to Jason Wallace
 
   14 Jan 2011; Markos Chandras <hwoarang@gentoo.org> snort-2.9.0.3.ebuild:
   Stable on amd64 wrt bug #351549

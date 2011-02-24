@@ -5,14 +5,30 @@
 	<maintainer>
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
+		<description>Maintainer</description>
 	</maintainer>
 	<maintainer>
 		<email>jason.r.wallace@gmail.com</email>
 		<name>Jason Wallace</name>
+		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 	<longdescription>
-		The de facto standard for intrusion detection and prevention
+		Snort is an open source network intrusion prevention and detection
+		system (IDS/IPS) developed by Sourcefire. Combining the benefits of
+		signature, protocol, and anomaly-based inspection, Snort is the most
+		widely deployed IDS/IPS technology worldwide. With millions of downloads
+		and approximately 300,000 registered users, Snort has become the de facto 
+		standard for IPS.
 	</longdescription>
+	<upstream>
+		<maintainer>
+			<email>snort-team@sourcefire.com</email>
+			<name>Snort Team</name>
+		</maintainer>
+		<changelog>http://www.snort.org/snort-downloads</changelog>
+		<doc>http://www.snort.org/docs</doc>
+		<bugs-to>http://www.snort.org/snort-downloads/submit-a-bug/</bugs-to>
+	</upstream>
 	<use>
 		<flag name='aruba'>
 			Adds support for monitoring wireless traffic using a Aruba Mobility
