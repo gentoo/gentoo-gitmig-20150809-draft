@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.353 2011/01/09 02:16:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.354 2011/02/25 21:58:19 ulm Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -291,9 +291,9 @@ epatch() {
 		local a=${patchname#*_} # strip the ???_
 		a=${a%%_*}              # strip the _foo.patch
 		if ! [[ ${SINGLE_PATCH} == "yes" || \
-		        ${EPATCH_FORCE} == "yes" || \
-		        ${a} == all     || \
-		        ${a} == ${ARCH} ]]
+				${EPATCH_FORCE} == "yes" || \
+				${a} == all     || \
+				${a} == ${ARCH} ]]
 		then
 			continue
 		fi
@@ -1949,30 +1949,6 @@ EOF
 		newbin "${tmpwrapper}" "${wrapper}" || die
 	fi
 }
-
-# @FUNCTION: prepalldocs
-# @USAGE:
-# @DESCRIPTION:
-# Compress files in /usr/share/doc which are not already
-# compressed, excluding /usr/share/doc/${PF}/html.
-# Uses the ecompressdir to do the compression.
-# 2009-02-18 by betelgeuse:
-# Commented because ecompressdir is even more internal to
-# Portage than prepalldocs (it's not even mentioned in man 5
-# ebuild). Please submit a better version for review to gentoo-dev
-# if you want prepalldocs here.
-#prepalldocs() {
-#	if [[ -n $1 ]] ; then
-#		ewarn "prepalldocs: invalid usage; takes no arguments"
-#	fi
-
-#	cd "${D}"
-#	[[ -d usr/share/doc ]] || return 0
-
-#	find usr/share/doc -exec gzip {} +
-#	ecompressdir --ignore /usr/share/doc/${PF}/html
-#	ecompressdir --queue /usr/share/doc
-#}
 
 # @FUNCTION: path_exists
 # @USAGE: [-a|-o] <paths>
