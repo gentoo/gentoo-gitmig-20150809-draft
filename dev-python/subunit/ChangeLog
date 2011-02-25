@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.9 2011/02/25 19:57:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.10 2011/02/25 22:39:58 fauli Exp $
+
+  25 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  -subunit-0.0.5.ebuild:
+  clean up
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> subunit-0.0.6.ebuild:
   ppc/ppc64 stable wrt #346985
