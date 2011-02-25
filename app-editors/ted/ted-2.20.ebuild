@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.20.ebuild,v 1.7 2010/05/24 18:50:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.20.ebuild,v 1.8 2011/02/25 18:18:48 signals Exp $
 
 EAPI=2
 inherit eutils
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="x11-libs/gtk+
 	>=media-libs/tiff-3.5.7
-	>=media-libs/jpeg-6b:0
+	virtual/jpeg
 	>=media-libs/libpng-1.2.3"
 RDEPEND="${DEPEND}"
 

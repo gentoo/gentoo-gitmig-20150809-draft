@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ted
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.36 2010/05/24 19:10:32 truedfx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.37 2011/02/25 18:18:48 signals Exp $
+
+  25 Feb 2011; Kevin McCarthy <signals@gentoo.org> ted-2.20.ebuild,
+  ted-2.21.ebuild:
+  Update depends from media-libs/jpeg to virtual/jpeg
 
   24 May 2010; Harald van Dĳk <truedfx@gentoo.org> -ted-2.12.ebuild,
   -ted-2.17-r1.ebuild, -files/ted-2.17-motif.patch:
