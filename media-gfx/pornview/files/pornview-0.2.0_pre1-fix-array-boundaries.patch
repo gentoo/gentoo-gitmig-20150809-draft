@@ -1,0 +1,13 @@
+diff --git a/pornview-0.2.0pre1.old/src/support/file_utils.c b/pornview-0.2.0pre1/src/support/file_utils.c
+index fc88617..5eb7184 100644
+--- a/pornview-0.2.0pre1.old/src/support/file_utils.c
++++ b/pornview-0.2.0pre1/src/support/file_utils.c
+@@ -787,7 +787,7 @@ gid2str (gid_t gid)
+ gchar  *
+ mode2str (mode_t mode)
+ {
+-    gchar   permission[11] = { "----------" };
++    gchar   permission[12] = { "----------" };
+ 
+     switch (mode & S_IFMT)
+     {

@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pornview
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.36 2010/07/09 08:41:13 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.37 2011/02/25 19:10:37 scarabeus Exp $
+
+  25 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  pornview-0.2.0_pre1-r1.ebuild,
+  +files/pornview-0.2.0_pre1-fix-array-boundaries.patch,
+  +files/pornview-0.2.0_pre1-fix-segfault-comment.patch:
+  Fix segmentation fault in comments and qa array boundaries warning.
 
   09 Jul 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update metadata.xml. antarus is staffer now (#119161)
