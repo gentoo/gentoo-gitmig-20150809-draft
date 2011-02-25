@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GD
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.96 2010/12/07 08:31:02 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.97 2011/02/25 20:10:37 signals Exp $
+
+  25 Feb 2011; Kevin McCarthy <signals@gentoo.org> GD-2.44.ebuild,
+  GD-2.45.ebuild:
+  Update depends from media-libs/jpeg to virtual/jpeg
 
 *GD-2.45-r1 (07 Dec 2010)
 

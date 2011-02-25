@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.45.ebuild,v 1.2 2010/07/19 21:47:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.45.ebuild,v 1.3 2011/02/25 20:10:37 signals Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/gd-2.0.33
 	)
 	jpeg? (
 		media-libs/gd[jpeg]
-		media-libs/jpeg
+		virtual/jpeg
 	)
 	truetype? (
 		media-libs/gd[truetype]

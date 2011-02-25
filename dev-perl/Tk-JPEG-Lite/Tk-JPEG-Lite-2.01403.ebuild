@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/Tk-JPEG-Lite-2.01403.ebuild,v 1.12 2010/09/03 07:20:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/Tk-JPEG-Lite-2.01403.ebuild,v 1.13 2011/02/25 20:13:37 signals Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	dev-perl/perl-tk"
 DEPEND="${RDEPEND}"
 
