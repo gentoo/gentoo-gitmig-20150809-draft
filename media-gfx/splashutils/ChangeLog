@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.185 2011/01/06 22:03:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.186 2011/02/25 13:43:02 ssuominen Exp $
+
+  25 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
+  splashutils-1.5.4.3-r3.ebuild:
+  Fix media-libs/libmng depend to require USE="static-libs" wrt #356231 by
+  candrews.
 
   06 Jan 2011; Michał Januszewski <spock@gentoo.org>
   splashutils-1.5.4.3-r3.ebuild:
