@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/mtl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.37 2010/10/19 21:38:41 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.38 2011/02/25 12:58:38 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> mtl-1.1.0.2.ebuild:
+  ppc/ppc64 stable wrt #339580
 
   19 Oct 2010; Thomas Kahle <tomka@gentoo.org> mtl-1.1.0.2.ebuild:
   x86 stable per bug 339580

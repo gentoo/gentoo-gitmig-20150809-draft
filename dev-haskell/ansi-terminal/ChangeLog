@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/ansi-terminal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.8 2010/11/20 23:04:57 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.9 2011/02/25 13:10:25 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ansi-terminal-0.5.0.ebuild:
+  ppc/ppc64 stable wrt #339580
 
   20 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org>
   ansi-terminal-0.5.0.ebuild:

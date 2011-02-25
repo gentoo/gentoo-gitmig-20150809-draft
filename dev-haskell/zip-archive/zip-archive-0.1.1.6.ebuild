@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.1.1.6.ebuild,v 1.8 2010/11/20 23:11:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.1.1.6.ebuild,v 1.9 2011/02/25 13:13:05 xarthisius Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 inherit haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6.1
