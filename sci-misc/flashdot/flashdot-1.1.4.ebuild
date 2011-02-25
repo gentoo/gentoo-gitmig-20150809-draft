@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/flashdot/flashdot-1.1.4.ebuild,v 1.1 2010/11/08 00:35:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/flashdot/flashdot-1.1.4.ebuild,v 1.2 2011/02/25 09:59:31 tomka Exp $
 
 EAPI=2
 
@@ -18,6 +18,7 @@ IUSE="+ocamlopt"
 DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]
 	dev-ml/ocamlsdl
 	dev-ml/ocamlgsl
+	dev-ml/lablgl[glut]
 	x11-apps/xdpyinfo"
 RDEPEND="${DEPEND}"
 
