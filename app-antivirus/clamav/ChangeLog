@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.377 2011/02/22 16:04:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.378 2011/02/25 17:03:35 jer Exp $
+
+  25 Feb 2011; Jeroen Roovers <jer@gentoo.org> clamav-0.97.ebuild:
+  Stable for HPPA SPARC (bug #354019).
 
   22 Feb 2011; Tim Harder <radhermit@gentoo.org> clamav-0.97.ebuild:
   Revert back to EAPI 2 for stabilization.
