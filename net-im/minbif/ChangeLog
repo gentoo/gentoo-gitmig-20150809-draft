@@ -1,6 +1,11 @@
 # ChangeLog for net-im/minbif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/ChangeLog,v 1.8 2011/01/01 14:40:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/ChangeLog,v 1.9 2011/02/25 19:41:41 cedk Exp $
+
+*minbif-1.0.4 (25 Feb 2011)
+
+  25 Feb 2011; Cédric Krier <cedk@gentoo.org> +minbif-1.0.4.ebuild:
+  Version bump
 
   01 Jan 2011; Michael Weber <xmw@gentoo.org> minbif-1.0.3.ebuild:
   add ~arm keyword (bug 343511)
