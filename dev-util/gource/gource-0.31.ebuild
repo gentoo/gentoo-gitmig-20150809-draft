@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.31.ebuild,v 1.3 2011/02/25 19:37:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.31.ebuild,v 1.4 2011/02/25 20:54:44 signals Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-libs/libpcre:3
 	>=media-libs/ftgl-2.1.3_rc5
 	>=media-libs/libpng-1.2
-	>=media-libs/jpeg-6b-r9
+	virtual/jpeg
 	media-libs/mesa
 	media-fonts/freefont-ttf
 	>=media-libs/glew-1.5
