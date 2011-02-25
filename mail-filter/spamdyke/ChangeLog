@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamdyke
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.17 2010/02/18 08:41:05 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.18 2011/02/25 08:08:46 tupone Exp $
+
+*spamdyke-4.2.0 (25 Feb 2011)
+
+  25 Feb 2011; Alfredo Tupone <tupone@gentoo.org> +spamdyke-4.2.0.ebuild:
+  Version bump to 4.2.0
 
 *spamdyke-4.0.10-r1 (18 Feb 2010)
 
