@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.38 2011/02/25 19:16:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.39 2011/02/25 19:53:46 signals Exp $
+
+*pornview-0.2.0_pre1-r2 (25 Feb 2011)
+
+  25 Feb 2011; Kevin McCarthy <signals@gentoo.org>
+  +pornview-0.2.0_pre1-r2.ebuild:
+  Disable gcc optimization in comment.c to fix #325879. Revbump for
+  runtime fix. Drop mplayer use flag.
 
   25 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   pornview-0.2.0_pre1-r1.ebuild:
