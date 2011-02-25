@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/synce-sync-engine
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/ChangeLog,v 1.9 2011/02/25 16:09:15 ssuominen Exp $
+
+*synce-sync-engine-0.15.1 (25 Feb 2011)
+
+  25 Feb 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +synce-sync-engine-0.15.1.ebuild:
+  Initial commit.
+
