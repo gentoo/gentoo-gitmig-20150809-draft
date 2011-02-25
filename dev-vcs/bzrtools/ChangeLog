@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzrtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.12 2011/02/11 23:30:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.13 2011/02/25 20:35:02 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> bzrtools-2.2.0.ebuild:
+  ppc/ppc64 stable wrt #346985
 
 *bzrtools-2.3.0 (11 Feb 2011)
 
