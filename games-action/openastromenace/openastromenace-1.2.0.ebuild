@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.8 2010/04/11 00:54:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.9 2011/02/25 21:39:56 signals Exp $
 
 EAPI=2
 inherit flag-o-matic cmake-utils eutils games
@@ -27,7 +27,7 @@ DEPEND="virtual/opengl
 	media-libs/freealut
 	media-libs/libogg
 	media-libs/libvorbis
-	media-libs/jpeg"
+	virtual/jpeg"
 
 S=${WORKDIR}/OpenAstroMenaceSVN
 
