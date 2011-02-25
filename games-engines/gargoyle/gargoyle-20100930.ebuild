@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20100930.ebuild,v 1.3 2010/11/17 10:54:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20100930.ebuild,v 1.4 2011/02/25 22:15:24 signals Exp $
 
 # Notes:
 #  - fmod support is based on an old version of fmod which is not in portage,
@@ -33,7 +33,7 @@ KEYWORDS="~amd64 x86"
 IUSE="sdl"
 
 RDEPEND="media-libs/freetype:2
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	media-fonts/liberation-fonts
 	media-fonts/libertine-ttf
