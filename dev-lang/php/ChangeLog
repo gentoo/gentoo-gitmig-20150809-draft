@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.470 2011/02/25 11:57:50 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.471 2011/02/25 19:00:15 signals Exp $
+
+  25 Feb 2011; Kevin McCarthy <signals@gentoo.org> php-5.2.14.ebuild,
+  php-5.2.16.ebuild, php-5.2.17.ebuild, php-5.3.3-r1.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
   25 Feb 2011; Ole Markus With <olemarkus@gentoo.org> php-5.3.5.ebuild,
   php-5.3.6_rc1.ebuild:

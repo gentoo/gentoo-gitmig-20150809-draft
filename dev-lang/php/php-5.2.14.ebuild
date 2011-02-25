@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.11 2010/09/07 21:22:40 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.12 2011/02/25 19:00:15 signals Exp $
 
 EAPI=2
 
@@ -103,7 +103,7 @@ DEPEND="app-admin/php-toolkit
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( || ( dev-db/cdb dev-db/tinycdb ) )
 	cjk? ( !gd? ( !gd-external? (
-		>=media-libs/jpeg-6b
+		virtual/jpeg
 		media-libs/libpng
 		sys-libs/zlib
 	) ) )
@@ -115,13 +115,13 @@ DEPEND="app-admin/php-toolkit
 	empress-bcs? ( >=dev-db/unixODBC-1.8.13 )
 	esoob? ( >=dev-db/unixODBC-1.8.13 )
 	exif? ( !gd? ( !gd-external? (
-		>=media-libs/jpeg-6b
+		virtual/jpeg
 		media-libs/libpng
 		sys-libs/zlib
 	) ) )
 	fdftk? ( app-text/fdftk )
 	firebird? ( dev-db/firebird )
-	gd? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
+	gd? ( virtual/jpeg media-libs/libpng sys-libs/zlib )
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( >=dev-libs/gmp-4.1.2 )
@@ -160,7 +160,7 @@ DEPEND="app-admin/php-toolkit
 		=media-libs/freetype-2*
 		>=media-libs/t1lib-5.0.0
 		!gd? ( !gd-external? (
-			>=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) )
+			virtual/jpeg media-libs/libpng sys-libs/zlib ) )
 	)
 	wddx? ( >=dev-libs/libxml2-2.6.8 )
 	xml? ( >=dev-libs/libxml2-2.6.8 )
@@ -169,7 +169,7 @@ DEPEND="app-admin/php-toolkit
 	xmlwriter? ( >=dev-libs/libxml2-2.6.8 )
 	xpm? (
 		x11-libs/libXpm
-		>=media-libs/jpeg-6b
+		virtual/jpeg
 		media-libs/libpng sys-libs/zlib
 	)
 	xsl? ( dev-libs/libxslt >=dev-libs/libxml2-2.6.8 )
