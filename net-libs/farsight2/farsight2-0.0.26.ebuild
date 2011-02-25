@@ -1,29 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.20.ebuild,v 1.8 2011/02/25 22:13:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.26.ebuild,v 1.1 2011/02/25 22:13:14 nirbheek Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit autotools eutils python
+inherit python
 
 DESCRIPTION="Farsight2 is an audio/video conferencing framework specifically designed for Instant Messengers."
 HOMEPAGE="http://farsight.freedesktop.org/"
 SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="python test msn upnp"
 SLOT="0"
 
-# tests are sometimes broken (hopefully will be fixed by 0.0.21))
-RESTRICT=test
+# Tests often fail due to races
+RESTRICT="test"
 
 COMMONDEPEND=">=media-libs/gstreamer-0.10.26
 	>=media-libs/gst-plugins-base-0.10.26
 	>=dev-libs/glib-2.16:2
-	>=net-libs/libnice-0.0.9[gstreamer]
-	<net-libs/libnice-0.1.0
+	>=net-libs/libnice-0.1.0[gstreamer]
 	python? (
 		>=dev-python/pygobject-2.16:2
 		>=dev-python/gst-python-0.10.10 )
@@ -43,15 +42,11 @@ pkg_setup() {
 	python_set_active_version 2
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-make-382.patch
-	eautoreconf
-}
-
 src_configure() {
 	plugins="fsrtpconference,funnel,rtcpfilter,videoanyrate"
 	use msn && plugins="${plugins},fsmsnconference"
-	econf $(use_enable python) \
+	econf --disable-static \
+		$(use_enable python) \
 		$(use_enable upnp gupnp) \
 		--with-plugins=${plugins}
 }
@@ -59,13 +54,17 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 	dodoc AUTHORS README ChangeLog
+
+	# Remove .la files since static libs are no longer being installed
+	find "${D}" -name '*.la' -exec rm -f '{}' + || die
 }
 
-src_test()
-{
-	use msn || { einfo "Tests disabled without msn use flag"; return ;}
-	if ! emake -j1 check; then
-		hasq test $FEATURES && die "Make check failed. See above for details."
-		hasq test $FEATURES || eerror "Make check failed. See above for details."
+src_test() {
+	# FIXME: do an out-of-tree build for tests if USE=-msn
+	if ! use msn; then
+		elog "Tests disabled without msn use flag"
+		return
 	fi
+
+	emake -j1 check
 }
