@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1.ebuild,v 1.2 2011/02/25 16:28:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1.ebuild,v 1.3 2011/02/25 16:34:46 ssuominen Exp $
 
 # TODO:
 # Figure out synce-opensync-plugin-2x.py and synce-opensync-plugin-3x.py install path when libopensync is unmasked.
@@ -13,7 +13,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="A sync engine for SynCE"
+DESCRIPTION="A synchronization engine for SynCE"
 HOMEPAGE="http://www.synce.org/"
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
@@ -40,7 +40,7 @@ src_install() {
 	insinto /usr/share/dbus-1/services
 	doins config/org.synce.SyncEngine.service || die
 
-	insinto /usr/share/${PN}
+	insinto /etc
 	doins config/syncengine.conf.xml || die
 
 	distutils_src_install
