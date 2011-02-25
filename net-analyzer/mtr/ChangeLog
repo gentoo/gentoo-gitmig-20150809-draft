@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/mtr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.98 2010/07/24 15:36:40 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.99 2011/02/25 08:02:27 jlec Exp $
+
+*mtr-0.80 (25 Feb 2011)
+
+  25 Feb 2011; Justin Lecher <jlec@gentoo.org> +files/0.80-impl-dec.patch,
+  mtr-0.79.ebuild, +mtr-0.80.ebuild:
+  Version Bump
 
   24 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> mtr-0.79.ebuild:
   ppc64 stable wrt #327985
