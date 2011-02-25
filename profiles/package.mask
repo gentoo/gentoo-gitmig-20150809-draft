@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12493 2011/02/24 17:54:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12494 2011/02/25 00:28:30 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (24 Feb 2011)
+# Masked as it's crashing on startup
+=x11-terms/sakura-2.4.0
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Feb 2011)
 # Masked for removal due to libgnome ABI breakage
