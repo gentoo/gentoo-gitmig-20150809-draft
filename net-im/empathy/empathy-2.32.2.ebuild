@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.8 2011/02/24 20:38:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.9 2011/02/25 23:31:20 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -41,6 +41,7 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	x11-libs/libX11
 	net-voip/telepathy-connection-managers
 	>=net-im/telepathy-logger-0.1.5
+	<net-im/telepathy-logger-0.2.0
 
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	nautilus? ( >=gnome-extra/nautilus-sendto-2.31.7 )
@@ -51,7 +52,7 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	webkit? ( >=net-libs/webkit-gtk-1.1.15 )"
 #	map? (
 #		>=media-libs/libchamplain-0.7.1[gtk]
-#		>=media-libs/clutter-gtk-0.10:1.0 )
+#		>=media-libs/clutter-gtk-0.10:0.10 )
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.17.3
