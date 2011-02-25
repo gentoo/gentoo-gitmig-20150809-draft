@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.63 2011/02/21 22:00:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.64 2011/02/25 08:41:35 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> check-0.9.8.ebuild:
+  ppc/ppc64 stable wrt #287514
 
   21 Feb 2011; Michael Weber <xmw@gentoo.org> check-0.9.8.ebuild:
   sparc stable, bug 287514
