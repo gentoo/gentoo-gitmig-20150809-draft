@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3.ebuild,v 1.2 2010/07/13 17:59:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3.ebuild,v 1.3 2011/02/25 20:20:10 signals Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ RDEPEND="app-text/silvercity
 	>=dev-python/pyrex-0.5
 	>=dev-python/pyxml-0.8.2
 	>=dev-python/soappy-0.11.1
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
