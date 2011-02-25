@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.20-r1.ebuild,v 1.1 2011/01/21 19:15:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.20-r1.ebuild,v 1.2 2011/02/25 21:13:50 xarthisius Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://plugins.geany.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="enchant gtkspell lua nls soup webkit"
 
 LINGUAS="be ca da de es fr gl ja pt pt_BR ru tr zh_CN"
