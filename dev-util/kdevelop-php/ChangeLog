@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdevelop-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.18 2011/02/04 14:57:33 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.19 2011/02/25 22:46:39 dilfridge Exp $
+
+  25 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdevelop-php-1.0.2.ebuild, kdevelop-php-1.1.2.ebuild,
+  kdevelop-php-1.2.0.ebuild:
+  Added RDEPEND on kdevelop, since that is the only host available in
+  portage. Bug 333255.
 
 *kdevelop-php-1.2.0 (04 Feb 2011)
 
