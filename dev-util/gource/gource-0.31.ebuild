@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.31.ebuild,v 1.2 2011/02/25 19:08:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.31.ebuild,v 1.3 2011/02/25 19:37:23 cardoe Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ RDEPEND="
 	media-libs/mesa
 	media-fonts/freefont-ttf
 	>=media-libs/glew-1.5
-	dev-libs/tinyxml
+	dev-libs/tinyxml[-stl]
 	"
 DEPEND="
 	${RDEPEND}
