@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.5 2010/10/05 09:58:29 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.6 2011/02/25 22:00:30 signals Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="media-libs/libsdl
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libvorbis"
 DEPEND="${RDEPEND}
 	media-libs/freetype:2"
