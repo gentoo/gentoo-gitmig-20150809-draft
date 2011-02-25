@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.5.ebuild,v 1.5 2008/04/01 23:54:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.5.ebuild,v 1.6 2011/02/25 18:13:56 signals Exp $
 
 DESCRIPTION="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
 HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
@@ -12,7 +12,7 @@ IUSE="static reiserfs ntfs jpeg"
 # WARNING: reiserfs support does NOT work with reiserfsprogs
 # you MUST use progsreiserfs-0.3.1_rc8 (the last version ever released).
 DEPEND=">=sys-libs/ncurses-5.2
-		jpeg? ( media-libs/jpeg )
+		jpeg? ( virtual/jpeg )
 	  	ntfs? ( >=sys-fs/ntfsprogs-1.9.4 )
 	  	reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
 	  	>=sys-fs/e2fsprogs-1.35"
