@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.8 2011/02/21 19:54:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.9 2011/02/25 20:03:48 ranger Exp $
+
+  25 Feb 2011; Brent Baude <ranger@gentoo.org> xmms2-0.7-r2.ebuild:
+  Marking xmms2-0.7-r2 ppc for bug 354061
 
   21 Feb 2011; Markos Chandras <hwoarang@gentoo.org> xmms2-0.7-r2.ebuild:
   Stable on amd64 wrt bug #354061
