@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.23 2011/02/19 08:50:22 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.24 2011/02/25 19:29:07 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> pfl-2.1-r1.ebuild:
+  Marked ~ppc per Michael Weber <xmw@gentoo.org> request.
 
   19 Feb 2011; Daniel Pielmeier <billie@gentoo.org> pfl-2.1.ebuild,
   pfl-2.1-r1.ebuild:
