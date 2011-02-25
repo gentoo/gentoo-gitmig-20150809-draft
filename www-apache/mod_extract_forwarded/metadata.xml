@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>apache</herd>
+	<use>
+		<flag name="mod_proxy">Enable support for Apache's internal proxy</flag>
+	</use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_extract_forwarded
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_extract_forwarded/ChangeLog,v 1.3 2009/09/17 10:42:19 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_extract_forwarded/ChangeLog,v 1.4 2011/02/25 19:44:37 idl0r Exp $
+
+  25 Feb 2011; Christian Ruppert <idl0r@gentoo.org>
+  mod_extract_forwarded-2.0.2.ebuild metadata.xml:
+  Make the mod_proxy dependency optional, bug 347703.
 
   17 Sep 2009; Benedikt Böhm <hollow@gentoo.org>
   mod_extract_forwarded-2.0.2.ebuild:
