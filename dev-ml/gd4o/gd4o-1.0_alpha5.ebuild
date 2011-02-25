@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/gd4o/gd4o-1.0_alpha5.ebuild,v 1.1 2010/08/08 08:23:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/gd4o/gd4o-1.0_alpha5.ebuild,v 1.2 2011/02/25 20:07:40 signals Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ IUSE="doc +ocamlopt"
 
 DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 	media-libs/gd
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib
 	media-libs/libpng
 	media-libs/freetype:2"
