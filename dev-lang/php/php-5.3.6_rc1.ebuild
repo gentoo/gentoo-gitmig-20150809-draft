@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.6_rc1.ebuild,v 1.1 2011/02/18 09:18:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.6_rc1.ebuild,v 1.2 2011/02/25 11:57:50 olemarkus Exp $
 
 EAPI=2
 
@@ -137,7 +137,6 @@ DEPEND="!dev-lang/php:5
 		sys-libs/zlib
 	) ) )
 	firebird? ( dev-db/firebird )
-	fpm? ( >=dev-libs/libevent-1.4.12 )
 	gd? ( virtual/jpeg media-libs/libpng sys-libs/zlib )
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
