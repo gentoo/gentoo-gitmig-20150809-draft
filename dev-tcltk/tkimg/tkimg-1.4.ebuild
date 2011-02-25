@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4.ebuild,v 1.2 2011/01/27 10:52:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4.ebuild,v 1.3 2011/02/25 20:50:20 signals Exp $
 
 EAPI="3"
 VIRTUALX_USE=test
@@ -20,7 +20,7 @@ KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 RDEPEND="dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
 	>=media-libs/libpng-1.4
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/tiff"
 DEPEND="${RDEPEND}
 	test? ( x11-apps/xhost
