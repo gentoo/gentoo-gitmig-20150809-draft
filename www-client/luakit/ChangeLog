@@ -1,6 +1,9 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.16 2011/02/25 09:23:01 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.17 2011/02/25 15:35:22 wired Exp $
+
+  25 Feb 2011; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
+  removed dmenu from RDEPEND, helpers USE, not needed anymore
 
 *luakit-2010.12.25_p2 (25 Feb 2011)
 
