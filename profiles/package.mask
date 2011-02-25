@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12497 2011/02/25 19:46:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12498 2011/02/25 20:30:25 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,10 +36,6 @@
 # depend of old "synce" not anymore in tree either. 
 # removal in 30 days.
 dev-libs/libmimedir
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (24 Feb 2011)
-# Masked as it's crashing on startup
-=x11-terms/sakura-2.4.0
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Feb 2011)
 # Masked for removal due to libgnome ABI breakage
