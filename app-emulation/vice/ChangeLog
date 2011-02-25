@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.72 2010/04/11 17:04:29 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.73 2011/02/25 17:41:56 signals Exp $
+
+  25 Feb 2011; Kevin McCarthy <signals@gentoo.org> vice-2.2.ebuild:
+  Depend on virtual/jpeg instead of media-libs/jpeg
 
   11 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> vice-2.2.ebuild:
   x86 stable wrt bug #302506
