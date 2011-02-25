@@ -1,8 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1.ebuild,v 1.5 2011/02/24 18:51:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1.ebuild,v 1.6 2011/02/25 23:13:47 arfrever Exp $
 
+EAPI="3"
 GCONF_DEBUG="no"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit gnome2 python
 
@@ -29,22 +34,25 @@ DOCS="AUTHORS ChangeLog NEWS"
 pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable doc docs)"
+	python_pkg_setup
 }
 
 src_prepare() {
 	sed -e 's/^\(SUBDIRS =.*\)demo\(.*\)$/\1\2/' \
 		-i Makefile.am Makefile.in || die "sed 1 failed"
+	python_src_prepare
+}
+
+src_configure() {
+	python_execute_function -s gnome2_src_configure
 }
 
 src_install() {
-	gnome2_src_install
+	python_execute_function -s gnome2_src_install
+	python_clean_installation_image
 
 	if use examples; then
 		rm demo/Makefile*
 		cp -R demo "${D}"/usr/share/doc/${PF}
 	fi
-}
-
-pkg_postinst() {
-	python_need_rebuild
 }
