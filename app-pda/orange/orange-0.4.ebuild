@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.4.ebuild,v 1.2 2010/11/04 20:03:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.4.ebuild,v 1.3 2011/02/25 14:42:03 ssuominen Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
-RDEPEND=">=app-pda/synce-libsynce-0.12
+RDEPEND="dev-libs/libsynce
 	>=app-pda/dynamite-0.1.1
 	>=app-arch/unshield-0.5.1
 	sys-apps/file
@@ -35,5 +35,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog TODO
 
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
