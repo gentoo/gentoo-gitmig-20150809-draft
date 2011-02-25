@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-svn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/ChangeLog,v 1.8 2011/01/22 16:26:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-svn/ChangeLog,v 1.9 2011/02/25 22:31:12 fauli Exp $
+
+  25 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-svn-1.0.1.ebuild, -bzr-svn-1.0.3.ebuild:
+  clean up
 
   22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bzr-svn-1.0.4.ebuild:
   x86 stable wrt bug #346985
