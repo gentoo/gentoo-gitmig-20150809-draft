@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.5.ebuild,v 1.7 2011/01/22 18:11:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.5.ebuild,v 1.8 2011/02/25 19:31:02 signals Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -37,7 +37,7 @@ IUSE="debug doc fbcon gif jpeg mmx png sdl sse static-libs sysfs truetype v4l v4
 RDEPEND="sdl? ( media-libs/libsdl )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	sysfs? ( sys-fs/sysfsutils )
 	zlib? ( sys-libs/zlib )
 	truetype? ( >=media-libs/freetype-2.0.1 )
