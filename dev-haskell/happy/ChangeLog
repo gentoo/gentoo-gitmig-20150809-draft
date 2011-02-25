@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.47 2010/11/14 18:38:14 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.48 2011/02/25 12:45:43 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> happy-1.18.2.ebuild:
+  ppc/ppc64 stable wrt #339161
 
   14 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> happy-1.18.2.ebuild,
   happy-1.18.4.ebuild:
