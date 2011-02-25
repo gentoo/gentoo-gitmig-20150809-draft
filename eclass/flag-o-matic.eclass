@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.149 2011/02/01 05:41:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.150 2011/02/25 10:51:44 dirtyepic Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -36,7 +36,7 @@ setup-allowed-flags() {
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fbounds-checking -fno-strict-overflow"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-PIE -fno-pie -fno-unit-at-a-time"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -g -g[0-9] -ggdb -ggdb[0-9] -gstabs -gstabs+"
-		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-ident"
+		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-ident -fpermissive"
 		export ALLOWED_FLAGS="${ALLOWED_FLAGS} -W* -w"
 	fi
 	# allow a bunch of flags that negate features / control ABI
