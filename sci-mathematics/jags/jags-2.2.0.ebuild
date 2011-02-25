@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-2.2.0.ebuild,v 1.1 2011/02/12 11:50:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-2.2.0.ebuild,v 1.2 2011/02/25 18:09:37 grobian Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools-utils
 
 MYP="JAGS-${PV}"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="virtual/blas
 	virtual/lapack"
