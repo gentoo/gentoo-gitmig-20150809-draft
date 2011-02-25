@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1-r1.ebuild,v 1.2 2011/02/25 21:38:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1-r1.ebuild,v 1.3 2011/02/25 22:13:34 ssuominen Exp $
 
 EAPI=3
 
@@ -21,6 +21,7 @@ IUSE=""
 
 RDEPEND="dev-libs/librapi2[python]
 	dev-libs/librra[python]
+	dev-libs/librtfcomp[python]
 	dev-libs/libxml2[python]
 	dev-libs/libxslt[python]
 	dev-python/dbus-python
