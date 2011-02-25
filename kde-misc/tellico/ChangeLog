@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.95 2011/01/31 06:51:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.96 2011/02/25 07:03:51 tomka Exp $
+
+  25 Feb 2011; Thomas Kahle <tomka@gentoo.org> tellico-2.3.2.ebuild:
+  x86 stable per bug 328583
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -tellico-2.2.ebuild,
   -tellico-2.3.ebuild, tellico-2.3.2.ebuild:
