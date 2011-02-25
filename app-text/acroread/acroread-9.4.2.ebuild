@@ -1,35 +1,33 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.0.ebuild,v 1.3 2010/10/11 11:25:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.2.ebuild,v 1.1 2011/02/25 21:04:41 tgurr Exp $
 
-inherit eutils gnome2-utils nsplugins versionator
+inherit eutils gnome2-utils nsplugins
 
 DESCRIPTION="Adobe's PDF reader"
 HOMEPAGE="http://www.adobe.com/products/reader/"
 IUSE="cups ldap minimal nsplugin"
 
-SRC_HEAD="ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/${PV}"
+SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PV}"
 SRC_FOOT=".tar.bz2"
 
 # languages not available yet: it:ita es:esp pt:ptb sv:sve zh_CN:chs zh_TW:cht fi:suo nb:nor nl:nld ko:kor da:dan
 LINGUA_LIST="de:deu en:enu fr:fra ja:jpn"
-# idiots, seriously...
-FIX_PV=$(get_version_component_range 1-2)
-DEFAULT_URI="${SRC_HEAD}/enu/AdbeRdr${FIX_PV}-1_i486linux_enu${SRC_FOOT}"
+DEFAULT_URI="${SRC_HEAD}/enu/AdbeRdr${PV}-1_i486linux_enu${SRC_FOOT}"
 for ll in ${LINGUA_LIST} ; do
 	iuse_l="linguas_${ll/:*}"
 	src_l=${ll/*:}
 	IUSE="${IUSE} ${iuse_l}"
 	DEFAULT_URI="!${iuse_l}? ( ${DEFAULT_URI} )"
 	SRC_URI="${SRC_URI}
-		${iuse_l}? ( ${SRC_HEAD}/${src_l}/AdbeRdr${FIX_PV}-1_i486linux_${src_l}${SRC_FOOT} )"
+		${iuse_l}? ( ${SRC_HEAD}/${src_l}/AdbeRdr${PV}-1_i486linux_${src_l}${SRC_FOOT} )"
 done
 SRC_URI="${SRC_URI}
 	${DEFAULT_URI}"
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip mirror"
 
 # mozilla-firefox-bin won't work because it doesn't have gtkembedmoz.so
