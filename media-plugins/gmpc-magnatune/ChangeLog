@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-magnatune
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.34 2011/02/20 17:41:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.35 2011/02/25 23:00:12 xmw Exp $
+
+  25 Feb 2011; Michael Weber <xmw@gentoo.org> gmpc-magnatune-0.20.0.ebuild:
+  Added ~sparc (bug 325621)
 
   20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gmpc-magnatune-0.20.0.ebuild:
