@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12494 2011/02/25 00:28:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12495 2011/02/25 16:51:51 signals Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kevin McCarthy <signals@gentoo.org> (25 Feb 2011)
+# Crashes when opening images wrt #325879
+# Upstream dead since 2004. No gentoo maintainer.
+# Many alternatives in tree: eog, gqview, mirage, etc.
+# Removal in 30 days
+media-gfx/pornview
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (24 Feb 2011)
 # Masked as it's crashing on startup
