@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/json-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.13 2011/02/25 08:46:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.14 2011/02/25 23:55:49 xmw Exp $
+
+  25 Feb 2011; Michael Weber <xmw@gentoo.org> json-glib-0.10.2.ebuild:
+  sparc stable (bug 327053)
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   json-glib-0.10.2.ebuild:
