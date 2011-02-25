@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.7 2009/11/28 01:45:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35_p3.ebuild,v 1.8 2011/02/25 22:10:41 signals Exp $
 
 EAPI=2
 inherit autotools eutils toolchain-funcs games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="+sdlaudio svga"
 
-DEPEND="media-libs/jpeg
+DEPEND="virtual/jpeg
 	media-libs/libsdl[joystick,video]
 	sdlaudio? ( media-libs/libsdl[audio] )
 	svga? ( media-libs/svgalib )"
