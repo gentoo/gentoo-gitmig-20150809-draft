@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1.ebuild,v 1.3 2011/02/25 16:34:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1.ebuild,v 1.4 2011/02/25 16:44:33 ssuominen Exp $
 
 # TODO:
 # Figure out synce-opensync-plugin-2x.py and synce-opensync-plugin-3x.py install path when libopensync is unmasked.
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}"
 PYTHON_MODNAME="plugins SyncEngine"
 
 src_prepare() {
-	sed -i -e 's:share/doc/sync-engine:tmp:' setup.py || die
+	sed -i -e 's:share/doc/sync-engine:foobar:' setup.py || die
 	distutils_src_prepare
 }
 
@@ -45,5 +45,5 @@ src_install() {
 
 	distutils_src_install
 
-	rm -rf "${D}"/tmp
+	rm -rf "${D}"/usr/foobar
 }
