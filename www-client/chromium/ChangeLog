@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.289 2011/02/24 10:34:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.290 2011/02/25 10:37:57 wired Exp $
+
+*chromium-11.0.672.2-r2 (25 Feb 2011)
+
+  25 Feb 2011; Alex Alexander <wired@gentoo.org>
+  +chromium-11.0.672.2-r2.ebuild, chromium-9999.ebuild:
+  restored chromium symlink, to avoid confusion and frustration.
+  chromium-browser is still the default.
 
 *chromium-10.0.648.114 (24 Feb 2011)
 
