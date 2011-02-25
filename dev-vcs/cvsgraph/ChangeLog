@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/cvsgraph
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsgraph/ChangeLog,v 1.1 2010/06/19 00:31:17 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsgraph/ChangeLog,v 1.2 2011/02/25 20:57:39 signals Exp $
+
+  25 Feb 2011; Kevin McCarthy <signals@gentoo.org> cvsgraph-1.6.1.ebuild,
+  cvsgraph-1.7.0.ebuild:
+  Update depends from media-libs/jpeg to virtual/jpeg
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> +cvsgraph-1.6.1.ebuild,
   +cvsgraph-1.7.0.ebuild, +metadata.xml:

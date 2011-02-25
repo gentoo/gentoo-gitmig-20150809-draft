@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsgraph/cvsgraph-1.7.0.ebuild,v 1.1 2010/06/19 00:31:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsgraph/cvsgraph-1.7.0.ebuild,v 1.2 2011/02/25 20:57:39 signals Exp $
 
 DESCRIPTION="CVS/RCS repository grapher"
 HOMEPAGE="http://www.akhphd.au.dk/~bertho/cvsgraph"
@@ -15,7 +15,7 @@ DEPEND="media-libs/gd
 	zlib? ( sys-libs/zlib )
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	truetype? ( media-libs/freetype )"
 
 src_compile() {
