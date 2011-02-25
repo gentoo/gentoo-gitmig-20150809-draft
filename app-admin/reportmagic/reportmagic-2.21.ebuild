@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.14 2010/01/22 16:38:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.15 2011/02/25 18:08:05 signals Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ DEPEND="sys-libs/zlib
 	media-libs/libpng
 	media-libs/gd
 	truetype? ( media-libs/freetype )
-	media-libs/jpeg:0
+	virtual/jpeg
 	dev-perl/GD
 	dev-perl/Config-IniFiles
 	virtual/perl-File-Spec
