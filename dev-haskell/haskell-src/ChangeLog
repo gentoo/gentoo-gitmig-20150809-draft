@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskell-src
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.35 2011/02/13 20:16:15 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.36 2011/02/25 13:22:59 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  haskell-src-1.0.1.3.ebuild:
+  ppc/ppc64 stable wrt #344343
 
   13 Feb 2011; Sergei Trofimovich <slyfox@gentoo.org>
   haskell-src-1.0.1.3.ebuild:
