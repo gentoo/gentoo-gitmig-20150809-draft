@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.112-r1.ebuild,v 1.2 2010/09/16 16:41:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.112-r1.ebuild,v 1.3 2011/02/25 19:25:58 signals Exp $
 
 DESCRIPTION="Pike programming language and runtime"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -18,7 +18,7 @@ DEPEND="dev-libs/nettle
 	fftw? ( sci-libs/fftw )
 	gdbm? ( sys-libs/gdbm )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	kerberos? ( virtual/krb5 )
 	mysql? ( virtual/mysql )
 	opengl? ( virtual/opengl media-libs/freeglut )
