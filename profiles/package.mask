@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12496 2011/02/25 19:38:52 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12497 2011/02/25 19:46:43 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (25 Feb 2011)
+# libmimedir static archive and header for it. not used by anything in tree.
+# depend of old "synce" not anymore in tree either. 
+# removal in 30 days.
+dev-libs/libmimedir
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (24 Feb 2011)
 # Masked as it's crashing on startup
