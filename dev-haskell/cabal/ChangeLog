@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cabal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.62 2010/11/14 18:13:23 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.63 2011/02/25 12:40:32 xarthisius Exp $
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  cabal-1.8.0.6-r1.ebuild:
+  ppc/ppc64 stable wrt #338652
 
   14 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org>
   cabal-1.8.0.6-r1.ebuild:
