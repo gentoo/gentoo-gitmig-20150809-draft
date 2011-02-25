@@ -1,6 +1,6 @@
-diff -Naur xml-xalan.orig/c/src/xalanc/Makefile.in xml-xalan/c/src/xalanc/Makefile.in
---- xml-xalan.orig/c/src/xalanc/Makefile.in	2009-07-27 00:47:45.704317114 +0200
-+++ xml-xalan/c/src/xalanc/Makefile.in	2009-07-27 01:18:22.914130631 +0200
+diff -urN xml-xalan.orig//c/src/xalanc/Makefile.in xml-xalan/c/src/xalanc/Makefile.in
+--- xml-xalan.orig//c/src/xalanc/Makefile.in	2010-02-23 10:51:30.058353490 +0100
++++ xml-xalan/c/src/xalanc/Makefile.in	2010-02-23 10:52:53.251679288 +0100
 @@ -84,6 +84,10 @@
  SAMPLES_DIR = ${XALANCROOT}/samples
  TESTS_DIR = ${XALANCROOT}/Tests
@@ -12,7 +12,17 @@ diff -Naur xml-xalan.orig/c/src/xalanc/Makefile.in xml-xalan/c/src/xalanc/Makefi
  ALL_VPATH_CPP = \
  $(XALANDOM_DIR):$(PLATFORMSUPPORT_DIR):$(DOMSUPPORT_DIR):$(XMLSUPPORT_DIR): \
  $(XPATH_DIR):$(XERCESPARSERLIAISON_DIR):$(DEPRECATED_XERCESPARSERLIAISON_DIR):$(XALANSOURCETREE_DIR):$(XPATHCAPI_DIR): \
-@@ -188,28 +192,28 @@
+@@ -169,6 +173,9 @@
+ 
+ compile:	 $(ALL_OBJECTS) 
+ 
++$(ALL_OBJECTS) $(TESTXSLT_OBJS) $(XALANEXE_OBJS) $(TESTXPATH_OBJS): locale
++locale: prepare
++
+ ifeq (${OS390BATCH},1)
+ XalanExe: lib  "//'$(LOADSAMP)(${BATCH_XALAN_UTIL_NAME})'"
+ 
+@@ -188,28 +195,28 @@
  
  else # Not OS390BATCH
  
