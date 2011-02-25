@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r3.ebuild,v 1.11 2010/01/22 16:37:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r3.ebuild,v 1.12 2011/02/25 17:59:30 signals Exp $
 
 EAPI=2
 
@@ -17,9 +17,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/libpcre-3.4
 	>=media-libs/gd-1.8.4-r2[jpeg,png]
-	sys-libs/zlib
-	media-libs/jpeg:0
-	media-libs/libpng"
+	sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
