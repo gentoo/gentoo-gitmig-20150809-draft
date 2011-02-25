@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.7.1.ebuild,v 1.6 2010/10/15 12:50:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.7.1.ebuild,v 1.7 2011/02/25 18:39:11 signals Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	media-libs/libpng
 	app-arch/bzip2
 	virtual/opengl

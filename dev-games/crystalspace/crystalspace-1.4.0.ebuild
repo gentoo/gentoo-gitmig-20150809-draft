@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.7 2010/11/10 16:42:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.8 2011/02/25 18:34:11 signals Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets versionator
@@ -25,7 +25,7 @@ COMMON_DEP="virtual/opengl
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	ode? ( dev-games/ode )
 	cal3d? ( >=media-libs/cal3d-0.11 )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	bullet? ( sci-physics/bullet )
 	sdl? ( media-libs/libsdl )
 	vorbis? ( media-libs/libvorbis )
