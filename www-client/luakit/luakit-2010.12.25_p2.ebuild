@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.13 2011/02/25 09:23:01 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-2010.12.25_p2.ebuild,v 1.1 2011/02/25 09:23:01 wired Exp $
 
 EAPI=3
 
@@ -27,7 +27,6 @@ LICENSE="GPL-3"
 SLOT="0"
 
 COMMON_DEPEND="
-	dev-db/sqlite:3
 	>=dev-lang/lua-5.1
 	dev-libs/glib:2
 	net-libs/libsoup
@@ -50,6 +49,11 @@ RDEPEND="
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 
+PATCHES=(
+	# bug 354355
+	"${FILESDIR}/${PN}-2010.12.25-fix-deprecated.patch"
+)
+
 src_prepare() {
 	if [[ ${PV} == *9999* ]]; then
 		git_src_prepare
@@ -62,9 +66,9 @@ src_prepare() {
 
 src_compile() {
 	if [[ ${PV} == *9999* ]]; then
-		emake PREFIX="/usr" DEVELOPMENT_PATHS=0
+		emake PREFIX="/usr"
 	else
-		emake PREFIX="/usr" VERSION="${PV}" DEVELOPMENT_PATHS=0
+		emake PREFIX="/usr" VERSION="${PV}"
 	fi
 }
 
