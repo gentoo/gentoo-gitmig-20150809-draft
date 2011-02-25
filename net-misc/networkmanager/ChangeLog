@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.97 2011/02/08 13:31:01 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.98 2011/02/25 09:54:42 qiaomuf Exp $
+
+*networkmanager-0.8.2-r7 (25 Feb 2011)
+
+  25 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> +networkmanager-0.8.2-r7.ebuild,
+  +files/networkmanager-0.8.2-ifnet-smarter-write.patch, metadata.xml:
+  Won't write when nothing changed
 
 *networkmanager-0.8.2-r6 (08 Feb 2011)
 

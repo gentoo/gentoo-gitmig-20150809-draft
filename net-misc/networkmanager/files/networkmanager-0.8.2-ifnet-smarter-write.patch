@@ -1,0 +1,53 @@
+From ad30f01d6108a7e8e05e5e90c93b2a750b7be240 Mon Sep 17 00:00:00 2001
+From: Mu Qiao <qiaomuf@gentoo.org>
+Date: Fri, 25 Feb 2011 16:25:07 +0000
+Subject: [PATCH 3/3] Won't write when nothing changed
+ Signed-off-by: Mu Qiao <qiaomuf@gentoo.org>
+
+---
+ system-settings/plugins/ifnet/net_parser.c |   14 ++++++++++----
+ system-settings/plugins/ifnet/wpa_parser.c |    3 ++-
+ 2 files changed, 12 insertions(+), 5 deletions(-)
+
+diff --git a/system-settings/plugins/ifnet/net_parser.c b/system-settings/plugins/ifnet/net_parser.c
+index de2db8a..e01b092 100644
+--- a/system-settings/plugins/ifnet/net_parser.c
++++ b/system-settings/plugins/ifnet/net_parser.c
+@@ -413,10 +413,16 @@ ifnet_set_data (gchar * conn_name, gchar * key, gchar * value)
+ 	if (g_hash_table_lookup_extended (conn, key, &orin_key, &orin_value)) {
+ 		if (new_value && !strcmp (orin_value, new_value))
+ 			return;
+-		g_hash_table_remove (conn, orin_key);
+-		g_free (orin_key);
+-		g_free (orin_value);
+-	}
++		/* Won't remove dns_servers wrt bug #356339 */
++		if (strcmp (orin_key, "dns_servers")){
++			g_hash_table_remove (conn, orin_key);
++			g_free (orin_key);
++			g_free (orin_value);
++		} else
++			return;
++	/* old key/value doesn't exist but new value is NULL  */
++	} else if (!value)
++		return;
+ 	if (new_value)
+ 		g_hash_table_insert (conn, g_strdup (key), new_value);
+ 	net_parser_data_changed = TRUE;
+diff --git a/system-settings/plugins/ifnet/wpa_parser.c b/system-settings/plugins/ifnet/wpa_parser.c
+index 42c52c3..2c3869e 100644
+--- a/system-settings/plugins/ifnet/wpa_parser.c
++++ b/system-settings/plugins/ifnet/wpa_parser.c
+@@ -468,7 +468,8 @@ wpa_set_data (gchar * ssid, gchar * key, gchar * value)
+ 		g_hash_table_remove (security, orig_key);
+ 		g_free (orig_key);
+ 		g_free (orig_value);
+-	}
++	} else if (!value)
++		return;
+ 
+ 	/* Add new key value */
+ 	if (new_value)
+-- 
+1.7.3.4
+

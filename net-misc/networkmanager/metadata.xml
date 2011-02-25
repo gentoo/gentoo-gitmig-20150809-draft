@@ -14,6 +14,11 @@
                 <email>steev@gentoo.org</email>
                 <name>Stephen Klimaszewski</name>
         </maintainer>
+	<maintainer>
+		<email>qiaomuf@gentoo.org</email>
+		<name>Mu Qiao</name>
+	</maintainer>
+
 	<use>
 		<flag name="dhclient">Use dhclient from <pkg>net-misc/dhcp</pkg> for getting ip.</flag>
 		<flag name="dhcpcd">Use <pkg>net-misc/dhcpcd</pkg> for getting ip.</flag>
