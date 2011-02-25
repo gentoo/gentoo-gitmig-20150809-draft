@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.8 2011/02/25 19:10:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.9 2011/02/25 19:16:17 scarabeus Exp $
 
-EAPI=4
+EAPI=3
 
 inherit eutils toolchain-funcs
 
