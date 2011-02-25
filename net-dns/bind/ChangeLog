@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.317 2011/02/24 16:57:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.318 2011/02/25 12:42:11 idl0r Exp $
+
+*bind-9.7.3-r1 (25 Feb 2011)
+*bind-9.6.3-r1 (25 Feb 2011)
+
+  25 Feb 2011; Christian Ruppert <idl0r@gentoo.org> +bind-9.6.3-r1.ebuild,
+  +bind-9.7.3-r1.ebuild, +files/named.confd-r6, +files/named.init-r10,
+  metadata.xml:
+  Revision bumps.
+
+  Create /var/bind/dyn by default, writeable by bind itself, bug 354679.
+  Add a CHROOT_NOCHECK option to the init/conf.d script, bug 354375.
+  Add sdb-ldap back in bind 9.7.3-r1, bug 302735.
 
   24 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> bind-9.7.3.ebuild:
   ppc/ppc64 stable wrt #356223
