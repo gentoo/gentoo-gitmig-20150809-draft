@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/libmimedir-0.4.ebuild,v 1.2 2010/05/07 01:22:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/libmimedir-0.4.ebuild,v 1.3 2011/02/25 21:54:40 ssuominen Exp $
 
-inherit eutils autotools
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="Library for manipulating MIME directory profiles (RFC2425)"
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -10,23 +11,21 @@ SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="sys-devel/flex
-	sys-devel/bison"
 RDEPEND=""
+DEPEND="sys-devel/bison
+	sys-devel/flex"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-distdir.patch
 	eautoreconf
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc README
 }
