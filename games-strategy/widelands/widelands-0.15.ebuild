@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.15.ebuild,v 1.6 2011/01/11 22:11:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.15.ebuild,v 1.7 2011/02/26 16:44:28 signals Exp $
 
 EAPI=2
 inherit eutils versionator cmake-utils games
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="dev-games/ggz-client-libs
 	dev-lang/lua
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng:0
 	media-libs/libsdl[video]
 	media-libs/sdl-image[jpeg,png]
