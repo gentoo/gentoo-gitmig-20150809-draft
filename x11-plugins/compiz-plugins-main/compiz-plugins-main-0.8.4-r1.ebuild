@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.4-r1.ebuild,v 1.1 2010/01/31 17:00:45 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.4-r1.ebuild,v 1.2 2011/02/26 22:51:00 signals Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="gnome"
 RDEPEND="
 	!x11-plugins/compiz-fusion-plugins-main
 	>=gnome-base/librsvg-2.14.0
-	media-libs/jpeg
+	virtual/jpeg
 	x11-libs/cairo
 	~x11-libs/compiz-bcop-${PV}
 	~x11-wm/compiz-${PV}[gnome?]

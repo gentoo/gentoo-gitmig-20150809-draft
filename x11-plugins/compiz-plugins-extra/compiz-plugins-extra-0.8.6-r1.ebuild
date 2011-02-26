@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.6-r1.ebuild,v 1.2 2011/02/13 18:32:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.6-r1.ebuild,v 1.3 2011/02/26 22:49:51 signals Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ MY_PV="0.8.4"
 
 RDEPEND="
 	>=gnome-base/librsvg-2.14.0
-	media-libs/jpeg
+	virtual/jpeg
 	>=x11-libs/compiz-bcop-${MY_PV}
 	>=x11-plugins/compiz-plugins-main-${PV}
 	>=x11-wm/compiz-${PV}[gconf?]
