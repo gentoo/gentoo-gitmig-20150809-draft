@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vcscommand
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.13 2010/10/10 16:08:12 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.14 2011/02/26 16:39:40 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  vcscommand-1.99.42.ebuild:
+  Marked ~ppc wrt #339672
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> vcscommand-1.99.42.ebuild:
   Add ~alpha/~ia64/~sparc wrt #339672
