@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.30.1.ebuild,v 1.6 2011/01/30 17:58:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.30.1.ebuild,v 1.7 2011/02/26 19:12:35 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ DESCRIPTION="The Gnome Devtool Libraries"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="1"
 KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
