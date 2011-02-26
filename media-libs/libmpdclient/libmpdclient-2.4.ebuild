@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.4.ebuild,v 1.2 2011/02/26 00:48:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.4.ebuild,v 1.3 2011/02/26 08:28:36 angelos Exp $
 
 EAPI=3
 
@@ -11,10 +11,11 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 arm ~hppa ppc ~ppc64 sparc ~x86"
-IUSE=""
+IUSE="examples"
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 	rm -rf "${D}"/usr/share/doc/${PN}
 	dodoc AUTHORS NEWS README
+	use examples && dodoc src/example.c
 }

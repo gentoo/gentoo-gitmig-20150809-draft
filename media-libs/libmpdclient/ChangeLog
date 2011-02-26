@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.26 2011/02/26 00:48:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.27 2011/02/26 08:28:36 angelos Exp $
+
+  26 Feb 2011; <angelos@gentoo.org> libmpdclient-2.4.ebuild:
+  Added examples USE flag to install example.c
 
   26 Feb 2011; Michael Weber <xmw@gentoo.org> libmpdclient-2.4.ebuild:
   arm/ppc/sparc stable (bug 356527)
