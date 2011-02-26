@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/crack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.18 2010/12/28 08:25:46 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.19 2011/02/26 16:12:47 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> crack-0.1.8.ebuild:
+  Marked ~ppc64 wrt #339565
 
   28 Dec 2010; Fabian Groffen <grobian@gentoo.org> crack-0.1.8.ebuild:
   Added Prefix keywords

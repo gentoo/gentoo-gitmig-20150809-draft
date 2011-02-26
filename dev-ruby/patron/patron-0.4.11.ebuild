@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/patron-0.4.11.ebuild,v 1.1 2011/01/02 15:15:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/patron-0.4.11.ebuild,v 1.2 2011/02/26 16:11:09 xarthisius Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -15,7 +15,7 @@ HOMEPAGE="http://toland.github.com/patron/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 #ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"

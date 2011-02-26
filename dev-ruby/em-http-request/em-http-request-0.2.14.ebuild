@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/em-http-request-0.2.14.ebuild,v 1.3 2010/12/27 20:17:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/em-http-request-0.2.14.ebuild,v 1.4 2011/02/26 16:10:43 xarthisius Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://github.com/igrigorik/em-http-request"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 # Tests depend on em-websocket which we don't have packaged yet.

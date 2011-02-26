@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/em-http-request
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.5 2010/12/27 20:17:25 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.6 2011/02/26 16:10:43 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  em-http-request-0.2.14.ebuild:
+  Marked ~ppc64 wrt #339565
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   em-http-request-0.2.14.ebuild:
