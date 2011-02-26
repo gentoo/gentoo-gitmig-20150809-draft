@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/agg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.21 2010/09/21 07:47:26 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.22 2011/02/26 18:06:35 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> agg-2.5-r2.ebuild:
+  Marked ~ppc64 wrt #342535. Thanks to Stephen Lewis
+  <lewis+gentoo@freeshell.org> for report and testing.
 
   21 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> agg-2.5-r2.ebuild:
   Update the dep on libX11 this time using proper version.
