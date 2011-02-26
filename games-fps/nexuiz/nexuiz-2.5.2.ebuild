@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.3 2010/03/25 13:24:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.4 2011/02/26 14:45:16 signals Exp $
 
 EAPI=2
 inherit eutils games
@@ -36,7 +36,7 @@ UIDEPEND="x11-proto/xextproto
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto
 	x11-proto/xproto"
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	net-misc/curl
 	opengl? ( ${UIRDEPEND} )
 	!dedicated? ( !opengl? ( ${UIRDEPEND} ) )"
