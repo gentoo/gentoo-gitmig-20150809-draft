@@ -1,9 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.2020-r1.ebuild,v 1.11 2010/01/10 19:40:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/PlRPC-0.202.0.ebuild,v 1.1 2011/02/26 10:01:42 tove Exp $
+
+EAPI=3
 
 MODULE_AUTHOR=MNOONING
 MODULE_SECTION=${PN}
+MODULE_VERSION=0.2020
 inherit perl-module
 
 S=${WORKDIR}/${PN}
@@ -15,8 +18,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x8
 IUSE=""
 
 RDEPEND=">=virtual/perl-Storable-1.0.7
-	>=dev-perl/Net-Daemon-0.34
-	dev-lang/perl"
+	>=dev-perl/Net-Daemon-0.34"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}/perldoc-remove.patch" )
