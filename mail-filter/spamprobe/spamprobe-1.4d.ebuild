@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.4d.ebuild,v 1.6 2011/01/10 20:17:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.4d.ebuild,v 1.7 2011/02/26 17:05:15 signals Exp $
 
 EAPI=2
 inherit eutils
@@ -16,7 +16,7 @@ IUSE="berkdb gif jpeg png"
 
 DEPEND="berkdb? ( >=sys-libs/db-3.2 )
 	gif? ( media-libs/giflib )
-	jpeg? ( media-libs/jpeg:0 )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )"
 
 src_prepare() {
