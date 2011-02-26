@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.293 2011/02/26 17:24:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.294 2011/02/26 19:01:27 chainsaw Exp $
+
+*asterisk-1.6.2.16.2-r2 (26 Feb 2011)
+
+  26 Feb 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.16.2-r1.ebuild,
+  +asterisk-1.6.2.16.2-r2.ebuild, metadata.xml:
+  Transfer stable X86 keyword from -r1 to -r2; removing defective keepsrc
+  USE-flag from ebuild & metadata.xml now. Removal of 1.2 & 1.4 is immanent.
 
   26 Feb 2011; Thomas Kahle <tomka@gentoo.org> asterisk-1.6.2.16.2-r1.ebuild:
   x86 stable per bug 352059

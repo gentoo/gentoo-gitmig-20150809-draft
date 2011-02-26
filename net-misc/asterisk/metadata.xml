@@ -12,7 +12,6 @@
     <flag name="lowmem">Build Asterisk for environments with low amounts of memory (embedded devices)</flag>
     <flag name="nosamples">Don't install sample sound and configuration files</flag>
     <flag name="osp">Enable support for the Open Settlement Protocol</flag>
-    <flag name="keepsrc">Install sources into /usr/src for custom patching</flag>
     <flag name="misdn">Build with mISDN (chan_misdn) support for BRI ISDN cards</flag>
     <flag name="newt">Include additional tools that require redhats windowing toolkit</flag>
     <flag name="dahdi">Support Digium compatible hardware (formerly known as Zaptel).</flag>

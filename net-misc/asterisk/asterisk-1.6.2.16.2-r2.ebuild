@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.16.2-r1.ebuild,v 1.2 2011/02/26 17:24:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.16.2-r2.ebuild,v 1.1 2011/02/26 19:01:27 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 
-IUSE="alsa +caps dahdi doc freetds iconv jabber ldap lua keepsrc newt +samples oss postgres radius snmp span speex ssl sqlite vorbis"
+IUSE="alsa +caps dahdi doc freetds iconv jabber ldap lua newt +samples oss postgres radius snmp span speex ssl sqlite vorbis"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
@@ -147,23 +147,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/1.6.2/asterisk.initd2 asterisk
 	newconfd "${FILESDIR}"/1.6.0/asterisk.confd asterisk
-
-	# some people like to keep the sources around for custom patching
-	# copy the whole source tree to /usr/src/asterisk-${PVF} and run make clean there
-	if use keepsrc
-	then
-		dodir /usr/src
-
-		ebegin "Copying sources into /usr/src"
-		cp -dPR "${S}" "${D}"/usr/src/${PF} || die "Unable to copy sources"
-		eend $?
-
-		ebegin "Cleaning source tree"
-		emake -C "${D}"/usr/src/${PF} clean &>/dev/null || die "Unable to clean sources"
-		eend $?
-
-		einfo "Clean sources are available in "${ROOT}"usr/src/${PF}"
-	fi
 
 	# install the upgrade documentation
 	#
