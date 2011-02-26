@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libwnck-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/ChangeLog,v 1.45 2011/02/24 18:49:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/ChangeLog,v 1.46 2011/02/26 13:04:48 eva Exp $
+
+  26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  libwnck-python-2.32.0.ebuild:
+  Add missing eclass variables for proper python-updater behavior, bug #344833.
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> libwnck-python-2.32.0.ebuild:
   x86 stable per bug 353436
