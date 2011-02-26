@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.36 2011/02/26 13:26:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.37 2011/02/26 19:22:50 eva Exp $
+
+  26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> gdl-python-2.25.3.ebuild:
+  Pin gdl dependency to slot 1.
 
   26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gdl-python-2.19.1-r2.ebuild, -files/gdl-python-2.19.1-gdlicons.patch,
