@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.72 2011/02/21 08:10:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.73 2011/02/26 14:51:24 xmw Exp $
+
+  26 Feb 2011; Michael Weber <xmw@gentoo.org> sharutils-4.10.ebuild:
+  ppc/sparc stable (bug 353870)
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> sharutils-4.10.ebuild:
   Stable for HPPA (bug #353870).
