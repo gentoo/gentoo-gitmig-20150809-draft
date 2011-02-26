@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.72 2011/02/26 08:17:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.73 2011/02/26 08:40:40 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> beecrypt-4.2.1.ebuild:
+  ppc64 stable wrt #342387
 
   26 Feb 2011; Michael Weber <xmw@gentoo.org> beecrypt-4.2.1.ebuild:
   ppc/sparc stable (bug 342387)
