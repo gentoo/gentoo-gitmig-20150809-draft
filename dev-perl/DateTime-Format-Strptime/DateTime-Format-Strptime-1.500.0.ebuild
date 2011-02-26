@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/DateTime-Format-Strptime-1.5000.ebuild,v 1.1 2010/10/18 07:33:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/DateTime-Format-Strptime-1.500.0.ebuild,v 1.1 2011/02/26 09:00:51 tove Exp $
 
 EAPI=3
 
 MODULE_AUTHOR=DROLSKY
+MODULE_VERSION=1.5000
 inherit perl-module
 
 DESCRIPTION="Parse and Format DateTimes using Strptime"
