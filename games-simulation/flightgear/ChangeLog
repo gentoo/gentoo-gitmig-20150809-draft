@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.48 2010/10/14 20:24:06 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.49 2011/02/26 13:30:27 armin76 Exp $
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> flightgear-1.9.1.ebuild,
+  flightgear-2.0.0.ebuild:
+  Drop sparc keywords
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> flightgear-1.9.1.ebuild:
   Marking flightgear-1.9.1 ppc for bug 313613
