@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4.ebuild,v 1.2 2009/03/25 06:03:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4.ebuild,v 1.3 2011/02/26 18:57:57 signals Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -29,7 +29,7 @@ COMMON_DEPEND="
 
 	xine? ( >=media-libs/xine-lib-1.1.1 )
 
-	media-libs/jpeg
+	virtual/jpeg
 	libextractor? ( >=media-libs/libextractor-0.5.20 )"
 
 DEPEND="${COMMON_DEPEND}

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.2.ebuild,v 1.1 2008/10/06 13:32:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.2.ebuild,v 1.2 2011/02/26 18:57:57 signals Exp $
 
 inherit vdr-plugin eutils multilib versionator
 
@@ -21,7 +21,7 @@ IUSE="fbcon X libextractor"
 
 RDEPEND=">=media-video/vdr-1.4.0
 		>=media-libs/xine-lib-1.1.1
-		media-libs/jpeg
+		virtual/jpeg
 		libextractor? ( >=media-libs/libextractor-0.5.20 )
 		X? (
 			x11-proto/xextproto
