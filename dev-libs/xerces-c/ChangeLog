@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.93 2011/02/25 22:38:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.94 2011/02/26 13:13:34 armin76 Exp $
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> xerces-c-3.1.0.ebuild:
+  alpha stable wrt #308009
 
   25 Feb 2011; Michael Weber <xmw@gentoo.org> xerces-c-3.1.0.ebuild:
   Stable sparc wrt bug 308009, thanks Alex Buell.
