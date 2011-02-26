@@ -1,4 +1,4 @@
-From 5b018326db5c9ebad8a63e1e231f49d2ca65e28c Mon Sep 17 00:00:00 2001
+From 776fafc133e18df48dc92a717c662e1b2858567e Mon Sep 17 00:00:00 2001
 From: Mu Qiao <qiaomuf@gentoo.org>
 Date: Fri, 25 Feb 2011 16:25:07 +0000
 Subject: [PATCH 3/3] Won't write when nothing changed
@@ -7,17 +7,35 @@ Subject: [PATCH 3/3] Won't write when nothing changed
 
 Signed-off-by: Mu Qiao <qiaomuf@gentoo.org>
 ---
- system-settings/plugins/ifnet/connection_parser.c |   24 ++++++--------------
- system-settings/plugins/ifnet/net_parser.c        |    8 +++++-
- system-settings/plugins/ifnet/plugin.c            |    4 ---
- system-settings/plugins/ifnet/wpa_parser.c        |    7 ++++-
- 4 files changed, 18 insertions(+), 25 deletions(-)
+ system-settings/plugins/ifnet/connection_parser.c |   33 +++++++++-----------
+ system-settings/plugins/ifnet/net_parser.c        |    8 ++++-
+ system-settings/plugins/ifnet/plugin.c            |    4 --
+ system-settings/plugins/ifnet/wpa_parser.c        |    7 +++-
+ 4 files changed, 26 insertions(+), 26 deletions(-)
 
 diff --git a/system-settings/plugins/ifnet/connection_parser.c b/system-settings/plugins/ifnet/connection_parser.c
-index 9b5ddc1..8600142 100644
+index 9b5ddc1..4ac2173 100644
 --- a/system-settings/plugins/ifnet/connection_parser.c
 +++ b/system-settings/plugins/ifnet/connection_parser.c
-@@ -627,23 +627,13 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
+@@ -55,9 +55,16 @@ update_connection_id (NMConnection * connection, gchar * conn_name)
+ 	gchar *idstr = NULL;
+ 	gchar *uuid_base = NULL;
+ 	gchar *uuid = NULL;
++	int name_len;
+ 	NMSettingConnection *setting;
+ 
+-	idstr = g_strdup_printf ("%s (%s)", get_prefix (), conn_name);
++	name_len = strlen (conn_name);
++	if ((name_len > 2) && (g_str_has_prefix (conn_name, "0x"))) {
++		gchar * conn_name_printable = utils_hexstr2bin (conn_name + 2, name_len - 2);
++		idstr = g_strdup_printf ("%s (%s)", get_prefix (), conn_name_printable);
++		g_free (conn_name_printable);
++	} else
++		idstr = g_strdup_printf ("%s (%s)", get_prefix (), conn_name);
+ 	uuid_base = idstr;
+ 	uuid = nm_utils_uuid_generate_from_string (uuid_base);
+ 	setting =
+@@ -627,23 +634,13 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
  				g_object_set (ip4_setting,
  					      NM_SETTING_IP4_CONFIG_IGNORE_AUTO_ROUTES,
  					      TRUE, NULL);
@@ -44,7 +62,7 @@ index 9b5ddc1..8600142 100644
  		}
  		g_object_set (ip4_setting,
  			      NM_SETTING_IP4_CONFIG_METHOD,
-@@ -2276,11 +2266,12 @@ write_wireless_setting (NMConnection * connection,
+@@ -2276,11 +2273,12 @@ write_wireless_setting (NMConnection * connection,
  		return FALSE;
  	}
  
@@ -60,7 +78,7 @@ index 9b5ddc1..8600142 100644
  			hex_ssid = TRUE;
  			break;
  		}
-@@ -2487,7 +2478,6 @@ write_ip4_setting (NMConnection * connection, gchar * conn_name,
+@@ -2487,7 +2485,6 @@ write_ip4_setting (NMConnection * connection, gchar * conn_name,
  		ifnet_set_data (conn_name, "config", "dhcp");
  
  	/* DNS Servers */
