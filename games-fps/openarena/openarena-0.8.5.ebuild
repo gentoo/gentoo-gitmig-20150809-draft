@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.5.ebuild,v 1.3 2010/10/22 14:15:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.5.ebuild,v 1.4 2011/02/26 15:09:58 signals Exp $
 
 EAPI=2
 inherit eutils flag-o-matic versionator games
@@ -23,7 +23,7 @@ IUSE="+curl +openal +vorbis"
 RDEPEND="virtual/opengl
 	media-libs/libsdl[joystick,opengl,video]
 	media-libs/speex
-	media-libs/jpeg
+	virtual/jpeg
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXau

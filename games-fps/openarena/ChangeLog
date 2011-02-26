@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/openarena
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.20 2010/10/22 14:15:28 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.21 2011/02/26 15:09:58 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> openarena-0.8.5.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
   22 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   openarena-0.8.5.ebuild:
