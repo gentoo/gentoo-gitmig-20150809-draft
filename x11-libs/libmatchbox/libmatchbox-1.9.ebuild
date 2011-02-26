@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.11 2010/07/10 19:46:35 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.9.ebuild,v 1.12 2011/02/26 22:37:04 signals Exp $
 
 inherit eutils libtool
 
@@ -16,7 +16,7 @@ IUSE="debug doc jpeg pango png test truetype X xsettings"
 RDEPEND="x11-libs/libXext
 	truetype? ( x11-libs/libXft )
 	pango? ( x11-libs/pango )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
 	xsettings? ( x11-libs/libxsettings-client )"
 

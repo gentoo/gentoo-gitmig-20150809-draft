@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xforms
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.48 2010/11/25 21:21:43 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.49 2011/02/26 22:40:48 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> xforms-1.0.90-r1.ebuild,
+  xforms-1.0.92.ebuild, xforms-1.0.92_p2.ebuild, xforms-1.0.93_p1.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
 *xforms-1.0.93_p1 (25 Nov 2010)
 

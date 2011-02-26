@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.15 2009/05/05 08:04:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90-r1.ebuild,v 1.16 2011/02/26 22:40:48 signals Exp $
 
 inherit autotools
 
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libICE
 	x11-libs/libSM
 	x11-proto/xproto
 	opengl? ( virtual/opengl )
-	media-libs/jpeg"
+	virtual/jpeg"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

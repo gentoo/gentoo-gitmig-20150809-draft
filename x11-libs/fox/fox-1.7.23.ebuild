@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.23.ebuild,v 1.1 2010/10/31 22:15:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.23.ebuild,v 1.2 2011/02/26 22:34:32 signals Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ RDEPEND="x11-libs/libXrandr
 	x11-libs/fox-wrapper
 	>=sys-devel/autoconf-2.67
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
-	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg? ( virtual/jpeg )
 	opengl? ( virtual/opengl )
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )

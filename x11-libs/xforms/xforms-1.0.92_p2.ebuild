@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.92_p2.ebuild,v 1.1 2010/02/03 22:00:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.92_p2.ebuild,v 1.2 2011/02/26 22:40:48 signals Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-m
 IUSE="doc opengl"
 
 RDEPEND="
-	media-libs/jpeg
+	virtual/jpeg
 	x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libSM

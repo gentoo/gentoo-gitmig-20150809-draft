@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.257 2011/01/23 01:05:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.258 2011/02/26 22:38:24 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> wxGTK-2.6.4.0-r6.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
 *wxGTK-2.9.1.1 (23 Jan 2011)
 

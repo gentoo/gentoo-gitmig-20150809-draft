@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.40.ebuild,v 1.7 2010/10/29 06:50:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.40.ebuild,v 1.8 2011/02/26 22:34:32 signals Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ RDEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/fox-wrapper
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
-	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg? ( virtual/jpeg )
 	opengl? ( virtual/opengl )
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
