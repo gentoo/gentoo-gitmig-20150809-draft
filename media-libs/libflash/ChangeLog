@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libflash
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.16 2010/01/22 13:47:11 cla Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.17 2011/02/26 18:46:42 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> libflash-0.4.10-r1.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
   22 Jan 2010; Dawid Węgliński <cla@gentoo.org> libflash-0.4.10-r1.ebuild:
   Respect user CXXFLAGS (bug #240812)
