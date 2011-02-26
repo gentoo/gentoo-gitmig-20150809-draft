@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.73 2011/02/25 22:54:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.74 2011/02/26 12:17:50 xmw Exp $
+
+  26 Feb 2011; Michael Weber <xmw@gentoo.org> gmpc-0.20.0.ebuild:
+  sparc dropping keywords (bug 325621)
 
   25 Feb 2011; Michael Weber <xmw@gentoo.org> gmpc-0.20.0.ebuild:
   Added ~sparc (bug 325621)

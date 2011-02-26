@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.20.0.ebuild,v 1.8 2011/02/25 22:54:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.20.0.ebuild,v 1.9 2011/02/26 12:17:50 xmw Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://download.sarine.nl/Programs/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="nls xspf"
 
 RDEPEND=">=dev-libs/glib-2.16:2
