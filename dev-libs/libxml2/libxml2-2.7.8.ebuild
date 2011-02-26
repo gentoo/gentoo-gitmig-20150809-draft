@@ -1,8 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8.ebuild,v 1.8 2011/02/19 19:49:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8.ebuild,v 1.9 2011/02/26 17:17:33 arfrever Exp $
 
 EAPI="3"
+PYTHON_DEPEND="python? 2"
+PYTHON_USE_WITH="-build xml"
+PYTHON_USE_WITH_OPT="python"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
@@ -29,7 +32,6 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz
 
 RDEPEND="sys-libs/zlib
 	icu? ( dev-libs/icu )
-	python? ( || ( <dev-lang/python-3[xml] ( <dev-lang/python-3 dev-python/pyxml ) ) )
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
@@ -73,6 +75,8 @@ src_prepare() {
 	# Fix a potential freeing error in XPath
 	epatch "${FILESDIR}/${P}-xpath-freeing.patch"
 	epatch "${FILESDIR}/${P}-xpath-freeing2.patch"
+
+	epatch "${FILESDIR}/${P}-disable_static_modules.patch"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.

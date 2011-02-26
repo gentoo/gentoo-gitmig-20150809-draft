@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.303 2011/02/19 19:49:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.304 2011/02/26 17:17:33 arfrever Exp $
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libxml2-2.7.8.ebuild, +files/libxml2-2.7.8-disable_static_modules.patch:
+  Don't install .a files in Python site-packages directories.
 
   19 Feb 2011; Fabian Groffen <grobian@gentoo.org> libxml2-2.7.8.ebuild:
   Drop --with-zlib argument for Prefix, it's no longer necessary
