@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.23 2010/11/20 12:22:47 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.24 2011/02/26 18:05:33 armin76 Exp $
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  alpha stable wrt #355719
 
   20 Nov 2010; Michael Weber <xmw@gentoo.org> gupnp-igd-0.1.7.ebuild:
   Added ~arm keyword (bug 343505)
