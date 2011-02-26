@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.34 2011/02/24 20:42:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.35 2011/02/26 19:20:13 eva Exp $
+
+  26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-disk-utility-2.32.0.ebuild, gnome-disk-utility-2.32.0-r1.ebuild,
+  gnome-disk-utility-2.32.1.ebuild:
+  Pin libunique to slot 1. Remove old revision.
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org>
   gnome-disk-utility-2.32.0-r1.ebuild:
