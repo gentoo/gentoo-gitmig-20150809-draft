@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-sunpinyin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sunpinyin/ChangeLog,v 1.1 2011/02/20 05:05:14 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sunpinyin/ChangeLog,v 1.2 2011/02/26 08:21:36 qiaomuf Exp $
+
+*scim-sunpinyin-2.0.3-r1 (26 Feb 2011)
+
+  26 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> +scim-sunpinyin-2.0.3-r1.ebuild,
+  +files/scim-sunpinyin-2.0.3-force-switch.patch:
+  Include upstream patch.
 
 *scim-sunpinyin-2.0.3 (20 Feb 2011)
 
