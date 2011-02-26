@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.10.0.ebuild,v 1.2 2011/02/26 07:49:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.9 2011/02/26 07:49:12 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_TEST_TASK=""
 
-RUBY_FAKEGEM_TASK_DOC="apidocs"
+RUBY_FAKEGEM_TASK_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="docs/api"
 RUBY_FAKEGEM_EXTRADOC="ChangeLog Contributors README"
 
@@ -27,6 +27,10 @@ DEPEND="${DEPEND}
 	dev-db/postgresql-base
 	test? ( dev-db/postgresql-server )"
 
+# For the rakefile (and thus doc generation and testing) to work as
+# intended, you need both rake-compiler _and_ the real RubyGems
+# package; what is shipped with Ruby 1.9 is not good enough as it
+# lacks the packaging tasks for Rake.
 ruby_add_bdepend "
 	doc? (
 		dev-ruby/rake-compiler
