@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libchipcard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.90 2010/11/03 12:58:17 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.91 2011/02/26 11:25:29 ssuominen Exp $
+
+  26 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> libchipcard-5.0.0.ebuild:
+  amd64 stable wrt #355077
 
 *libchipcard-5.0.0 (03 Nov 2010)
 
