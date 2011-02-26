@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.81.260.ebuild,v 1.2 2011/02/24 07:14:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.81.260.ebuild,v 1.3 2011/02/26 10:05:11 tove Exp $
 
 EAPI=3
 
@@ -48,7 +48,7 @@ RDEPEND="
 		>=dev-perl/Text-CSV-1.16
 	)
 	deploy? (
-		>=dev-perl/SQL-Translator-0.11006
+		>=dev-perl/SQL-Translator-0.110.60
 	)
 	replicated? (
 		${RDEPEND_MOOSE_BASIC}
