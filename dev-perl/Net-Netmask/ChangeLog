@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-Netmask
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.43 2010/02/18 20:31:58 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.44 2011/02/26 09:35:35 tove Exp $
+
+*Net-Netmask-1.901.500 (26 Feb 2011)
+
+  26 Feb 2011; Torsten Veller <tove@gentoo.org> +Net-Netmask-1.901.500.ebuild,
+  -Net-Netmask-1.9015.ebuild:
+  Change version scheme. Looks like a downgrade
 
   18 Feb 2010; Jeremy Olexa <darkside@gentoo.org> Net-Netmask-1.9015.ebuild:
   Add ~arm kw for bug 305631
