@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gconf-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.37 2011/01/30 19:43:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.38 2011/02/26 13:26:33 eva Exp $
+
+  26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -gconf-python-2.28.0.ebuild, gconf-python-2.28.1.ebuild:
+  Add missing eclass variables for proper python-updater behavior, bug #344833.
+  Clean up old revision.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gconf-python-2.28.1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #348987

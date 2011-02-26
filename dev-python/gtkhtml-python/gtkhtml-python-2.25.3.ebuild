@@ -1,10 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkhtml-python/gtkhtml-python-2.25.3.ebuild,v 1.7 2011/01/30 18:12:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkhtml-python/gtkhtml-python-2.25.3.ebuild,v 1.8 2011/02/26 13:23:21 eva Exp $
 
 EAPI="2"
 G_PY_PN="gnome-python-extras"
 G_PY_BINDINGS="gtkhtml2"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_DEPEND="2"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit gnome-python-common
 
