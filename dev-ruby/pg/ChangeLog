@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.23 2011/01/22 07:45:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.24 2011/02/26 07:33:58 graaff Exp $
+
+  26 Feb 2011; Hans de Graaff <graaff@gentoo.org> -pg-0.9.0-r1.ebuild:
+  Remove old version.
 
   22 Jan 2011; Hans de Graaff <graaff@gentoo.org> pg-0.10.1.ebuild:
   Add missing dependency on yard to enable documenation generation. Fixes
