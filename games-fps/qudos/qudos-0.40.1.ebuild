@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.11 2010/03/10 21:02:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.12 2011/02/26 15:15:19 signals Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -24,7 +24,7 @@ UIDEPEND="alsa? ( media-libs/alsa-lib )
 		virtual/opengl
 		virtual/glu )
 	sdl? ( media-libs/libsdl )
-	media-libs/jpeg:0
+	virtual/jpeg
 	media-libs/libogg
 	media-libs/libpng
 	media-libs/libvorbis
