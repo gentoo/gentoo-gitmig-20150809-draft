@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.163 2011/02/26 09:36:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.164 2011/02/26 11:44:39 phajdan.jr Exp $
+
+  26 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  acroread-9.4.2.ebuild:
+  x86 stable wrt security bug #354211
 
   26 Feb 2011; Markos Chandras <hwoarang@gentoo.org> acroread-9.4.2.ebuild:
   Stable on amd64 wrt bug #354211
