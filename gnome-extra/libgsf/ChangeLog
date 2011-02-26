@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.168 2011/02/24 20:29:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.169 2011/02/26 16:49:18 arfrever Exp $
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libgsf-1.14.19.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #313467).
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> libgsf-1.14.19.ebuild:
   x86 stable per bug 353436

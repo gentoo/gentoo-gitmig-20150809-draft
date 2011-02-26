@@ -1,9 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.19.ebuild,v 1.4 2011/02/24 20:29:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.19.ebuild,v 1.5 2011/02/26 16:49:18 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
+PYTHON_DEPEND="python? 2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
 inherit autotools eutils gnome2 python multilib
 
@@ -51,6 +54,10 @@ pkg_setup() {
 		$(use_with python)
 		$(use_with gtk gdk-pixbuf)
 		$(use_with thumbnail gconf)"
+
+	if use python; then
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -68,12 +75,48 @@ src_prepare() {
 	# Fix build with FEATURES="stricter"
 	epatch "${FILESDIR}/${PN}-1.14.19-missing-declaration.patch"
 
+	# Python bindings are built/installed manually.
+	sed -e "/SUBDIRS += python/d" -i Makefile.am
+
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+}
+
+src_compile() {
+	gnome2_src_compile
+
+	if use python; then
+		python_copy_sources python
+
+		building() {
+			emake \
+				PYTHON_INCLUDES="-I$(python_get_includedir)" \
+				pyexecdir="$(python_get_sitedir)" \
+				pythondir="$(python_get_sitedir)"
+		}
+		python_execute_function -s --source-dir python building
+	fi
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use python; then
+		installation() {
+			emake \
+				DESTDIR="${D}" \
+				pyexecdir="$(python_get_sitedir)" \
+				pythondir="$(python_get_sitedir)" \
+				install
+		}
+		python_execute_function -s --source-dir python installation
+
+		python_clean_installation_image
+	fi
 }
 
 pkg_preinst() {
@@ -84,9 +127,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
+
 	if use python; then
-		python_need_rebuild
-		python_mod_optimize $(python_get_sitedir)/gsf
+		python_mod_optimize gsf
 	fi
 
 	preserve_old_lib_notify /usr/$(get_libdir)/libgsf-1.so.1
@@ -95,5 +138,8 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/gsf
+
+	if use python; then
+		python_mod_cleanup gsf
+	fi
 }
