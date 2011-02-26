@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.4.ebuild,v 1.3 2010/10/28 10:01:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/capi4hylafax-01.03.00.99.300.4.ebuild,v 1.4 2011/02/26 21:49:22 signals Exp $
 
 inherit eutils versionator autotools
 
@@ -26,7 +26,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="net-dialup/capi4k-utils
 	media-libs/tiff
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib"
 
 RDEPEND="${DEPEND}
