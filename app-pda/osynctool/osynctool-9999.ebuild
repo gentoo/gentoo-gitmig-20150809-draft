@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/osynctool/osynctool-9999.ebuild,v 1.1 2010/05/26 12:43:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/osynctool/osynctool-9999.ebuild,v 1.2 2011/02/26 05:35:51 dirtyepic Exp $
+
+EAPI="3"
 
 inherit cmake-utils subversion
 
@@ -10,10 +12,18 @@ SRC_URI=""
 
 ESVN_REPO_URI="http://svn.opensync.org/osynctool/trunk"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="=app-pda/libopensync-${PV}*"
-RDEPEND="${DEPEND}"
+RDEPEND="~app-pda/libopensync-${PV}
+	dev-libs/glib:2"
+DEPEND="${DEPEND}"
+
+DOCS="AUTHORS CODING"
+
+src_prepare() {
+	sed -i -e 's:/etc/bash_completion.d:/share/bash-completion:g' \
+		tools/CMakeLists.txt
+}

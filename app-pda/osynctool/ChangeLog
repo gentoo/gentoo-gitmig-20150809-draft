@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/osynctool
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/osynctool/ChangeLog,v 1.2 2010/05/26 12:43:13 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/osynctool/ChangeLog,v 1.3 2011/02/26 05:35:51 dirtyepic Exp $
+
+  26 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> osynctool-0.39.ebuild,
+  osynctool-9999.ebuild:
+  EAPI 3, dependencies, docs, etc.
 
 *osynctool-9999 (26 May 2010)
 
