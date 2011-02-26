@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1-r1.ebuild,v 1.7 2011/01/30 18:37:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde/polkit-kde-0.95.1-r1.ebuild,v 1.8 2011/02/26 20:02:49 dilfridge Exp $
 
 EAPI=3
 
@@ -24,6 +24,8 @@ IUSE="debug"
 
 DEPEND="
 	>=sys-auth/polkit-qt-0.95.1
+	!>=sys-auth/polkit-qt-0.99
+	!sys-auth/polkit-kde-agent
 "
 RDEPEND="${DEPEND}"
 
