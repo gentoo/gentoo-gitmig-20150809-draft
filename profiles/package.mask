@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12499 2011/02/25 21:26:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12500 2011/02/26 10:57:09 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Ruppert <idl0r@gentoo.org> (26 Feb 2011)
+# Early rc, links against the old/system libdns instead of the one taken from $WORKDIR and
+# fails to start in some cases, bug 356519
+=net-dns/bind-9.8*
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Feb 2011)
 # Masked for removal due to libgnome ABI breakage
