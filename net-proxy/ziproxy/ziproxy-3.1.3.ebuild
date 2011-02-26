@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-3.1.3.ebuild,v 1.1 2010/07/21 00:23:33 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-3.1.3.ebuild,v 1.2 2011/02/26 22:11:49 signals Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="jpeg2k xinetd"
 
 DEPEND="media-libs/giflib
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib
 	jpeg2k? ( media-libs/jasper )"
 
