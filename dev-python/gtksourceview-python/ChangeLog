@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtksourceview-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.46 2011/02/24 18:47:25 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.47 2011/02/26 13:07:01 eva Exp $
+
+  26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gtksourceview-python-2.32.0.ebuild:
+  Add missing eclass variables for proper python-updater behavior, bug #344833.
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org>
   gtksourceview-python-2.32.0.ebuild:

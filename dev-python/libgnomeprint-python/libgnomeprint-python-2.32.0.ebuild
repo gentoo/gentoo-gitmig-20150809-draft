@@ -1,11 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/libgnomeprint-python-2.32.0.ebuild,v 1.3 2011/02/24 18:47:57 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/libgnomeprint-python-2.32.0.ebuild,v 1.4 2011/02/26 13:06:28 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 G_PY_PN="gnome-python-desktop"
 G_PY_BINDINGS="gnomeprint gnomeprintui"
+SUPPORT_PYTHON_ABIS="1"
+PYTHON_DEPEND="2"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit gnome-python-common
 
