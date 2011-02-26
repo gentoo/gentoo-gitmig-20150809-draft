@@ -1,6 +1,10 @@
 # ChangeLog for games-util/atlas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.24 2011/02/26 13:35:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.25 2011/02/26 16:55:11 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org>
+  atlas-0.3.1_p20100302.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
   26 Feb 2011; Raúl Porcel <armin76@gentoo.org> atlas-0.3.1_p20100302.ebuild,
   atlas-0.3.1_p20101101.ebuild:
