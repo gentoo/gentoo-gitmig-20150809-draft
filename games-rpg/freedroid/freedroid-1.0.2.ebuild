@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.11 2009/08/13 21:24:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.12 2011/02/26 15:29:53 signals Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="vorbis"
 
 DEPEND=">=media-libs/libsdl-1.2.3
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib
 	media-libs/libpng
 	media-libs/sdl-image
