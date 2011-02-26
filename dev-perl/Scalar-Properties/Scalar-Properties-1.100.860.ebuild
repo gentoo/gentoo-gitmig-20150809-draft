@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-Properties/Scalar-Properties-1.100860.ebuild,v 1.4 2010/10/18 19:32:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-Properties/Scalar-Properties-1.100.860.ebuild,v 1.1 2011/02/26 10:12:18 tove Exp $
 
 EAPI=2
 
 MODULE_AUTHOR=MARCEL
+MODULE_VERSION=1.100860
 inherit perl-module
 
 DESCRIPTION="run-time properties on scalar variables"
