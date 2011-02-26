@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.31 2011/02/25 17:21:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.32 2011/02/26 18:34:53 armin76 Exp $
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> i18n-0.5.0-r1.ebuild:
+  Add ~ia64/~sparc/~x86 wrt #355697
 
   25 Feb 2011; Jeroen Roovers <jer@gentoo.org> i18n-0.5.0-r1.ebuild:
   Marked ~hppa (bug #355697).
