@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lcms
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.124 2010/12/12 10:09:25 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.125 2011/02/26 18:18:37 arfrever Exp $
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  lcms-1.19.ebuild, +files/lcms-1.19-disable_static_modules.patch:
+  Set SUPPORT_PYTHON_ABIS, don't install .a files in Python site-packages
+  directories (bug #356601).
 
 *lcms-2.1 (12 Dec 2010)
 
