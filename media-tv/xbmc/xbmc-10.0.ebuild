@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.0.ebuild,v 1.7 2011/02/26 00:50:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.0.ebuild,v 1.8 2011/02/26 19:16:48 signals Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ RDEPEND="virtual/opengl
 	media-libs/glew
 	media-libs/jasper
 	media-libs/jbigkit
-	media-libs/jpeg:0
+	virtual/jpeg
 	>=media-libs/libass-0.9.7
 	css? ( media-libs/libdvdcss )
 	media-libs/libmad
