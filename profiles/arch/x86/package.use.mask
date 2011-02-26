@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.46 2011/02/22 09:01:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.47 2011/02/26 13:02:14 tomka Exp $
 
 # This file requires >=portage-2.1.1
+
+# Thomas Kahle <tomka@gentoo.org> package.use.mask (26 Feb 2011)
+# libprelude can't go stable at this point, snort can.
+=net-analyzer/snort-2.9.0.4 prelude
 
 # Kacper Kowalik <xarthisius@gentoo.org> (22 Feb 2011)
 # >=heartbeat-3.0 is pmasked

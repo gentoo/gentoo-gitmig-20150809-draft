@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.57 2011/02/22 09:01:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.58 2011/02/26 13:02:14 tomka Exp $
+
+  26 Feb 2011; Thomas Kahle <tomka@gentoo.org> package.use.mask:
+  libprelude can't go stable at this point, snort can.
 
   22 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Mask pacemaker-gui[heartbeat] since >=heartbeat-3.0 is still masked
