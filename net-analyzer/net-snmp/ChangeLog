@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.218 2010/11/06 20:22:32 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.219 2011/02/26 19:12:31 arfrever Exp $
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -net-snmp-5.4.2.1-r1.ebuild:
+  Delete.
 
   06 Nov 2010; Mark Loeser <halcy0n@gentoo.org> net-snmp-5.4.2.1-r4.ebuild:
   Stable for ppc64; bug #323197
