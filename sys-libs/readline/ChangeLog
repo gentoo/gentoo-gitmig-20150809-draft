@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.165 2011/02/22 18:42:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.166 2011/02/26 18:03:40 armin76 Exp $
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> readline-6.1_p2.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #354939
 
   22 Feb 2011; nixnut <nixnut@gentoo.org> readline-6.1_p2.ebuild:
   ppc stable #354939
