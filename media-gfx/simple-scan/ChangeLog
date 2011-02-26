@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/simple-scan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.4 2010/12/07 22:56:01 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.5 2011/02/26 18:24:37 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> simple-scan-2.31.91.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
 *simple-scan-2.32.0.1 (07 Dec 2010)
 

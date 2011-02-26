@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.101 2009/04/27 13:36:26 lavajoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.102 2011/02/26 18:31:17 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> xv-3.10a-r15.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
   27 Apr 2009; Joe Peterson <lavajoe@gentoo.org> xv-3.10a-r15:
   Set RDEPEND

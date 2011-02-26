@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/swftools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.36 2010/12/08 02:21:11 vanquirius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.37 2011/02/26 18:27:35 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> swftools-0.8.1.ebuild,
+  swftools-0.9.1.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
   08 Dec 2010; Marcelo Goes <vanquirius@gentoo.org> -swftools-0.9.0.ebuild:
   Clean old ebuild.

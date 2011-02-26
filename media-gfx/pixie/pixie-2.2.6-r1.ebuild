@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.6 2010/09/18 16:15:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.7 2011/02/26 18:19:19 signals Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ IUSE="X static-libs"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	media-libs/tiff
 	media-libs/libpng
 	x11-libs/fltk:1.1[opengl]

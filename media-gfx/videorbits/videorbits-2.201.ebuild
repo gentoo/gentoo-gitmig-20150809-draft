@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.15 2010/03/10 17:32:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.16 2011/02/26 18:29:10 signals Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="x11-libs/libX11
 	sys-libs/zlib
 	media-libs/libpng
-	media-libs/jpeg:0"
+	virtual/jpeg"
 
 src_prepare() {
 	cd "${S}"/images
