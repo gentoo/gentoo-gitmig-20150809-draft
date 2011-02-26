@@ -1,44 +1,131 @@
-From ad30f01d6108a7e8e05e5e90c93b2a750b7be240 Mon Sep 17 00:00:00 2001
+From 5b018326db5c9ebad8a63e1e231f49d2ca65e28c Mon Sep 17 00:00:00 2001
 From: Mu Qiao <qiaomuf@gentoo.org>
 Date: Fri, 25 Feb 2011 16:25:07 +0000
 Subject: [PATCH 3/3] Won't write when nothing changed
  Signed-off-by: Mu Qiao <qiaomuf@gentoo.org>
+ Make log less excessive, accept non-alnum ssid (bug #356337)
 
+Signed-off-by: Mu Qiao <qiaomuf@gentoo.org>
 ---
- system-settings/plugins/ifnet/net_parser.c |   14 ++++++++++----
- system-settings/plugins/ifnet/wpa_parser.c |    3 ++-
- 2 files changed, 12 insertions(+), 5 deletions(-)
+ system-settings/plugins/ifnet/connection_parser.c |   24 ++++++--------------
+ system-settings/plugins/ifnet/net_parser.c        |    8 +++++-
+ system-settings/plugins/ifnet/plugin.c            |    4 ---
+ system-settings/plugins/ifnet/wpa_parser.c        |    7 ++++-
+ 4 files changed, 18 insertions(+), 25 deletions(-)
 
+diff --git a/system-settings/plugins/ifnet/connection_parser.c b/system-settings/plugins/ifnet/connection_parser.c
+index 9b5ddc1..8600142 100644
+--- a/system-settings/plugins/ifnet/connection_parser.c
++++ b/system-settings/plugins/ifnet/connection_parser.c
+@@ -627,23 +627,13 @@ make_ip4_setting (NMConnection * connection, gchar * conn_name, GError ** error)
+ 				g_object_set (ip4_setting,
+ 					      NM_SETTING_IP4_CONFIG_IGNORE_AUTO_ROUTES,
+ 					      TRUE, NULL);
+-			if (nm_setting_ip4_config_add_address
+-			    (ip4_setting, ip4_addr)) {
+-				PLUGIN_PRINT (IFNET_PLUGIN_NAME,
+-					      "new address: %d", iblock->ip);
+-				PLUGIN_PRINT (IFNET_PLUGIN_NAME,
+-					      "ipv4 addresses count: %d",
+-					      nm_setting_ip4_config_get_num_addresses
+-					      (ip4_setting));
+-			} else {
+-				PLUGIN_WARN (IFNET_PLUGIN_NAME,
+-					     "ignoring duplicate IP4 address");
+-			}
++			if (!nm_setting_ip4_config_add_address (ip4_setting, ip4_addr))
++				PLUGIN_WARN (IFNET_PLUGIN_NAME, 
++						"ignoring duplicate IP4 address");
+ 			nm_ip4_address_unref (ip4_addr);
+ 			current_iblock = iblock;
+ 			iblock = iblock->next;
+ 			destroy_ip_block (current_iblock);
+-
+ 		}
+ 		g_object_set (ip4_setting,
+ 			      NM_SETTING_IP4_CONFIG_METHOD,
+@@ -2276,11 +2266,12 @@ write_wireless_setting (NMConnection * connection,
+ 		return FALSE;
+ 	}
+ 
+-	/* If the SSID contains any non-printable characters, we need to use the
+-	 * hex notation of the SSID instead.
++	/* If the SSID contains any non-alnum characters, we need to use 
++	 * the hex notation of the SSID instead. (Because openrc doesn't 
++	 * support these characters, see bug #356337)
+ 	 */
+ 	for (i = 0; i < ssid->len; i++) {
+-		if (!isprint (ssid->data[i])) {
++		if (!isalnum (ssid->data[i])) {
+ 			hex_ssid = TRUE;
+ 			break;
+ 		}
+@@ -2487,7 +2478,6 @@ write_ip4_setting (NMConnection * connection, gchar * conn_name,
+ 		ifnet_set_data (conn_name, "config", "dhcp");
+ 
+ 	/* DNS Servers */
+-	ifnet_set_data (conn_name, "dns_servers", NULL);
+ 	num = nm_setting_ip4_config_get_num_dns (s_ip4);
+ 	if (num > 0) {
+ 		dns = g_string_new (NULL);
 diff --git a/system-settings/plugins/ifnet/net_parser.c b/system-settings/plugins/ifnet/net_parser.c
-index de2db8a..e01b092 100644
+index de2db8a..57f3688 100644
 --- a/system-settings/plugins/ifnet/net_parser.c
 +++ b/system-settings/plugins/ifnet/net_parser.c
-@@ -413,10 +413,16 @@ ifnet_set_data (gchar * conn_name, gchar * key, gchar * value)
+@@ -411,12 +411,16 @@ ifnet_set_data (gchar * conn_name, gchar * key, gchar * value)
+ 	}
+ 	/* Remove existing key value pair */
  	if (g_hash_table_lookup_extended (conn, key, &orin_key, &orin_value)) {
- 		if (new_value && !strcmp (orin_value, new_value))
+-		if (new_value && !strcmp (orin_value, new_value))
++		if (new_value && !strcmp (orin_value, new_value)){
++			g_free (new_value);
  			return;
--		g_hash_table_remove (conn, orin_key);
--		g_free (orin_key);
--		g_free (orin_value);
++		}
+ 		g_hash_table_remove (conn, orin_key);
+ 		g_free (orin_key);
+ 		g_free (orin_value);
 -	}
-+		/* Won't remove dns_servers wrt bug #356339 */
-+		if (strcmp (orin_key, "dns_servers")){
-+			g_hash_table_remove (conn, orin_key);
-+			g_free (orin_key);
-+			g_free (orin_value);
-+		} else
-+			return;
 +	/* old key/value doesn't exist but new value is NULL  */
 +	} else if (!value)
 +		return;
  	if (new_value)
  		g_hash_table_insert (conn, g_strdup (key), new_value);
  	net_parser_data_changed = TRUE;
+diff --git a/system-settings/plugins/ifnet/plugin.c b/system-settings/plugins/ifnet/plugin.c
+index 94f9e79..3952e91 100644
+--- a/system-settings/plugins/ifnet/plugin.c
++++ b/system-settings/plugins/ifnet/plugin.c
+@@ -91,8 +91,6 @@ update_system_hostname (gpointer config)
+ {
+ 	SCPluginIfnetPrivate *priv = SC_PLUGIN_IFNET_GET_PRIVATE (config);
+ 
+-	PLUGIN_PRINT (IFNET_PLUGIN_NAME, "Updating hostname");
+-
+ 	if (priv->hostname)
+ 		g_free (priv->hostname);
+ 	priv->hostname = read_hostname (IFNET_SYSTEM_HOSTNAME_FILE);
+@@ -184,8 +182,6 @@ monitor_file_changes (const char *filename,
+ 				   info);
+ 		g_signal_connect (monitor, "changed", G_CALLBACK (file_changed),
+ 				  info);
+-		PLUGIN_PRINT (IFNET_PLUGIN_NAME, "Monitoring %s", filename);
+-
+ 	} else
+ 		PLUGIN_WARN (IFNET_PLUGIN_NAME,
+ 			     "Monitoring %s failed, error: %s", filename,
 diff --git a/system-settings/plugins/ifnet/wpa_parser.c b/system-settings/plugins/ifnet/wpa_parser.c
-index 42c52c3..2c3869e 100644
+index 42c52c3..338c338 100644
 --- a/system-settings/plugins/ifnet/wpa_parser.c
 +++ b/system-settings/plugins/ifnet/wpa_parser.c
-@@ -468,7 +468,8 @@ wpa_set_data (gchar * ssid, gchar * key, gchar * value)
+@@ -463,12 +463,15 @@ wpa_set_data (gchar * ssid, gchar * key, gchar * value)
+ 	/* Remove old key value pairs */
+ 	if (g_hash_table_lookup_extended
+ 	    (security, key, &orig_key, &orig_value)) {
+-		if (new_value && !strcmp(orig_value, new_value))
++		if (new_value && !strcmp(orig_value, new_value)){
++			g_free (new_value);
+ 			return;
++		}
  		g_hash_table_remove (security, orig_key);
  		g_free (orig_key);
  		g_free (orig_value);
