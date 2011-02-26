@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.55 2011/02/20 17:35:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.56 2011/02/26 12:15:13 xmw Exp $
+
+  26 Feb 2011; Michael Weber <xmw@gentoo.org> libmpd-0.20.0.ebuild,
+  libmpd-0.20.0-r1.ebuild:
+  sparc dropping keywords (bug 325621)
 
   20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libmpd-0.20.0-r1.ebuild:
