@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.28.ebuild,v 1.1 2010/12/28 17:47:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.28.ebuild,v 1.2 2011/02/26 22:05:51 signals Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="java"
 
 RDEPEND="sys-libs/zlib
-	media-libs/jpeg
+	virtual/jpeg
 	dev-libs/openssl
 	dev-lang/tk
 	net-misc/stunnel

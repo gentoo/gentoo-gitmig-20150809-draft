@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.2a.ebuild,v 1.8 2009/12/04 21:51:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncsnapshot/vncsnapshot-1.2a.ebuild,v 1.9 2011/02/26 22:07:18 signals Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://vncsnapshot.sourceforge.net/"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 SLOT="0"
-DEPEND=">=media-libs/jpeg-6b
+DEPEND="virtual/jpeg
 		>=sys-libs/zlib-1.1.4"
 
 src_unpack() {
