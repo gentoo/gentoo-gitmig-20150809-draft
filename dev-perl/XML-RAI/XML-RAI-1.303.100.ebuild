@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.3031.ebuild,v 1.1 2009/08/15 13:50:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.303.100.ebuild,v 1.1 2011/02/26 10:28:23 tove Exp $
 
-EAPI=2
+EAPI=3
 
 MODULE_AUTHOR=TIMA
+MODULE_VERSION=1.3031
 inherit perl-module
 
 DESCRIPTION="RSS Abstraction Interface."

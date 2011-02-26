@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/XML-RAI
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.14 2009/08/15 13:50:57 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/ChangeLog,v 1.15 2011/02/26 10:28:23 tove Exp $
+
+*XML-RAI-1.303.100 (26 Feb 2011)
+*XML-RAI-1.302.200 (26 Feb 2011)
+
+  26 Feb 2011; Torsten Veller <tove@gentoo.org> +XML-RAI-1.302.200.ebuild,
+  +XML-RAI-1.303.100.ebuild, -XML-RAI-1.3022.ebuild, -XML-RAI-1.3031.ebuild:
+  Change version scheme. Looks like a downgrade
 
 *XML-RAI-1.3031 (15 Aug 2009)
 
