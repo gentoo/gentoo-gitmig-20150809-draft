@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.187 2011/01/18 21:36:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.188 2011/02/26 10:21:54 phajdan.jr Exp $
+
+  26 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> file-5.05.ebuild:
+  x86 stable wrt bug #355277
 
   18 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   file-5.05.ebuild:
