@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/pathfinder-1.6.36.ebuild,v 1.5 2010/07/27 01:34:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/pathfinder-1.6.36.ebuild,v 1.6 2011/02/26 22:43:43 signals Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 hppa ppc ppc64 ~sparc x86"
 IUSE="jpeg png tiff"
 
 DEPEND="x11-libs/fox:1.6
-	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg? ( virtual/jpeg )
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
 
