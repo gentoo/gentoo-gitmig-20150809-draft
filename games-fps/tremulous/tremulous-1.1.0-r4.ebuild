@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.5 2010/10/15 12:30:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.6 2011/02/26 15:20:35 signals Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="dedicated openal +opengl +vorbis"
 
 UIDEPEND="
-	media-libs/jpeg:0
+	virtual/jpeg
 	media-libs/libsdl[opengl?]
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	openal? ( media-libs/openal )
