@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/SQL-Translator-0.11007.ebuild,v 1.1 2010/12/03 07:48:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/SQL-Translator-0.110.70.ebuild,v 1.1 2011/02/26 10:10:02 tove Exp $
 
 EAPI=3
 
-MODULE_AUTHOR="RIBASUSHI"
 MODULE_AUTHOR=JROBINSON
+MODULE_VERSION=0.11007
 inherit perl-module
 
 DESCRIPTION="Convert RDBMS SQL CREATE syntax"
