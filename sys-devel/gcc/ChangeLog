@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.804 2011/02/25 23:24:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.805 2011/02/26 09:43:09 hwoarang Exp $
+
+  26 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gcc-4.4.5.ebuild:
+  Stable on amd64 wrt bug #354881
 
   25 Feb 2011; Christian Faulhammer <fauli@gentoo.org> gcc-4.4.5.ebuild:
   stable x86, bug 354881
