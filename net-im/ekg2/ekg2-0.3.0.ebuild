@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0.ebuild,v 1.1 2011/02/16 17:35:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.0.ebuild,v 1.2 2011/02/26 19:45:07 signals Exp $
 
 EAPI=3
 inherit autotools-utils versionator
@@ -32,7 +32,7 @@ RDEPEND="
 
 	gadu? ( net-libs/libgadu
 		gif? ( media-libs/giflib )
-		jpeg? ( media-libs/jpeg ) )
+		jpeg? ( virtual/jpeg ) )
 	jabber? ( dev-libs/expat
 		gnutls? ( net-libs/gnutls ) )
 	ncurses? ( sys-libs/ncurses[unicode?]

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.8.ebuild,v 1.6 2010/03/18 21:29:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.8.ebuild,v 1.7 2011/02/26 19:41:09 signals Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	jabber? (
 		otr? ( net-libs/libotr )
 		crypt? ( >=app-crypt/gpgme-1.0.2 )

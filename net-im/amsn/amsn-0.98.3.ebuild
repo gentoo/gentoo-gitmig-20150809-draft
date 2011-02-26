@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.3.ebuild,v 1.6 2010/10/15 22:00:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.3.ebuild,v 1.7 2011/02/26 19:38:07 signals Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ IUSE="debug"
 
 DEPEND=">=dev-lang/tcl-8.4
 	>=dev-lang/tk-8.4
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	>=dev-tcltk/snack-2.2.10
 	>=net-libs/gupnp-igd-0.1.3

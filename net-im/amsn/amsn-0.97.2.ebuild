@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.97.2.ebuild,v 1.5 2008/08/08 18:55:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.97.2.ebuild,v 1.6 2011/02/26 19:38:07 signals Exp $
 
 inherit autotools eutils fdo-mime gnome2-utils
 
@@ -22,7 +22,7 @@ IUSE="debug static"
 DEPEND=">=dev-lang/tcl-8.4
 	>=dev-lang/tk-8.4
 	>=dev-tcltk/tls-1.4.1
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	>=dev-tcltk/snack-2.2.10"
 

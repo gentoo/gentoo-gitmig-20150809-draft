@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.8_rc1.ebuild,v 1.3 2010/01/27 21:10:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.8_rc1.ebuild,v 1.4 2011/02/26 19:43:22 signals Exp $
 
 inherit autotools eutils
 
@@ -24,7 +24,7 @@ RDEPEND="net-libs/libgadu
 	python? ( dev-lang/python )
 	spell? ( >=app-text/aspell-0.50.3 )
 	gif? ( media-libs/giflib )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	gtk? ( >=x11-libs/gtk+-2.0 )"
 
 DEPEND=">=sys-devel/automake-1.7
