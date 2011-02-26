@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.6.0.ebuild,v 1.2 2010/05/25 20:38:47 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.6.0.ebuild,v 1.3 2011/02/26 14:55:44 remi Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 # minimum gtk 2.10 to have print support
 RDEPEND="dev-libs/libxml2
-	>=x11-libs/gtk+-2.10.0
+	>=x11-libs/gtk+-2.10.0:2
 	ssl? ( dev-libs/openssl )
 	ofx? ( >=dev-libs/libofx-0.7.0 )"
 

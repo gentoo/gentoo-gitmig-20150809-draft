@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.8.1.ebuild,v 1.1 2011/02/22 08:29:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.8.1.ebuild,v 1.2 2011/02/26 14:55:44 remi Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="dev-libs/libxml2
 	>=dev-libs/glib-2.18.0
-	>=x11-libs/gtk+-2.12.0
+	>=x11-libs/gtk+-2.12.0:2
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	ofx? ( >=dev-libs/libofx-0.7.0 )"
 

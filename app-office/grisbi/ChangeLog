@@ -1,6 +1,10 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.45 2011/02/26 14:50:49 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.46 2011/02/26 14:55:44 remi Exp $
+
+  26 Feb 2011; Rémi Cardona <remi@gentoo.org> grisbi-0.6.0_rc2.ebuild,
+  grisbi-0.6.0.ebuild, grisbi-0.8.1.ebuild, grisbi-0.8.2.ebuild, metadata.xml:
+  Use slotted deps for gtk, clean up USE description in metadata.xml
 
   26 Feb 2011; Rémi Cardona <remi@gentoo.org> -grisbi-0.5.8.ebuild,
   -grisbi-0.5.9.ebuild:

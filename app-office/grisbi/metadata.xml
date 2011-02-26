@@ -11,7 +11,4 @@
   <description>Third party maintainer, through the gnome-office herd 
     as a proxy</description>
 </maintainer>
-<use>
-  <flag name='print'>Enable printing support</flag>
-</use>
 </pkgmetadata>
