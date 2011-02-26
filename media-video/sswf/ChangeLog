@@ -1,6 +1,10 @@
 # ChangeLog for media-video/sswf
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.9 2009/04/24 20:24:09 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sswf/ChangeLog,v 1.10 2011/02/26 19:32:16 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> sswf-1.8.2.ebuild,
+  sswf-1.8.4.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
 *sswf-1.8.4 (24 Apr 2009)
 

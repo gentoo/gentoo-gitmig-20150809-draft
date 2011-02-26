@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.6.ebuild,v 1.4 2008/03/26 00:21:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.8.6.ebuild,v 1.5 2011/02/26 19:28:25 signals Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND=">=media-video/mplayer-0.90-r2
 		>=x11-libs/gtk+-2.2.1
 		media-libs/libsdl
 		>=media-video/ffmpeg-0.4.8
-		>=media-libs/jpeg-6b-r3
+		virtual/jpeg
 		>=media-sound/sox-12.17.3-r3
 		virtual/cdrtools
 		theora? ( media-libs/libtheora )

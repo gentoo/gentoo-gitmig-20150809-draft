@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-3.5.ebuild,v 1.4 2010/04/18 14:07:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-3.5.ebuild,v 1.5 2011/02/26 19:24:48 signals Exp $
 
 DESCRIPTION="Digital Video (DV) grabber for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -15,7 +15,7 @@ RDEPEND=">=sys-libs/libraw1394-1.1
 	>=media-libs/libdv-0.103
 	>=media-libs/libiec61883-1
 	>=sys-libs/libavc1394-0.5.1
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	quicktime? ( media-libs/libquicktime )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

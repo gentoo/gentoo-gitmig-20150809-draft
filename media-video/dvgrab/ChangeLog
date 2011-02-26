@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvgrab
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.40 2010/04/18 14:07:21 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.41 2011/02/26 19:24:48 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> dvgrab-3.5.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
   18 Apr 2010; <nixnut@gentoo.org> dvgrab-3.5.ebuild:
   ppc stable #302481

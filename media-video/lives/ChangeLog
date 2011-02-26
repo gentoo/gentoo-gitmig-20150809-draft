@@ -1,6 +1,10 @@
 # ChangeLog for media-video/lives
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.28 2009/09/05 15:22:35 lu_zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.29 2011/02/26 19:28:25 signals Exp $
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> lives-0.9.8.6.ebuild,
+  lives-0.9.8.12.ebuild, lives-1.0.0.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
 
 *lives-1.0.0 (05 Sep 2009)
 

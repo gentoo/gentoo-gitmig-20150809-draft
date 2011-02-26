@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r2.ebuild,v 1.6 2009/12/28 09:35:13 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r2.ebuild,v 1.7 2011/02/26 19:30:17 signals Exp $
 
 inherit eutils libtool
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 IUSE="alsa altivec css mmx oss xv"
 
 RDEPEND="css? ( >=media-libs/libdvdcss-1.2.2 )
-	media-libs/jpeg
+	virtual/jpeg
 	>=media-libs/libdvdread-0.9.4
 	media-libs/libmad
 	x11-libs/libXinerama
