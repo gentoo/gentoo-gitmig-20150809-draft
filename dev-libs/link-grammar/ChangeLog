@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.31 2011/02/24 20:49:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.32 2011/02/26 11:41:38 pacho Exp $
+
+*link-grammar-4.7.4 (26 Feb 2011)
+
+  26 Feb 2011; Pacho Ramos <pacho@gentoo.org> link-grammar-4.7.2.ebuild,
+  +link-grammar-4.7.4.ebuild:
+  Version bump. Also fix building without hunspell support (bug #356455 by
+  Faustus).
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> link-grammar-4.7.2.ebuild:
   x86 stable per bug 353436
