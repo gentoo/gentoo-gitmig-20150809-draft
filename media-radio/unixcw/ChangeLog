@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/unixcw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.3 2011/01/10 19:14:09 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.4 2011/02/26 14:47:03 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> unixcw-2.3-r6.ebuild:
+  Marked ~ppc wrt #338662
 
   10 Jan 2011; Thomas Beierlein <tomjbe@gentoo.org> unixcw-2.3-r6.ebuild:
   Add blocker against <=app-misc/cw-1.0.16-r1 wrt bug #351293
