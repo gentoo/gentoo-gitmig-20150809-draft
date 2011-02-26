@@ -1,0 +1,10 @@
+--- kde4/src/mpeg2/kdecmpeg2.cpp	2009/11/23 21:58:43	450
++++ kde4/src/mpeg2/kdecmpeg2.cpp	2011/02/06 20:41:08	561
+@@ -286,6 +286,7 @@
+ 	      }
+     	}
+     }
++    return 0;
+ }
+ 
+ void kDecMPEG2::sync() {

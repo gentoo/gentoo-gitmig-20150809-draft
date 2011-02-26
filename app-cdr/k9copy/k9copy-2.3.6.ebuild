@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.6.ebuild,v 1.4 2011/01/30 09:00:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.6.ebuild,v 1.5 2011/02/26 23:11:47 dilfridge Exp $
 
 EAPI=3
 
@@ -39,6 +39,8 @@ RDEPEND="${DEPEND}
 "
 
 DOCS=( README )
+
+PATCHES=( "${FILESDIR}/${P}-return.patch" )
 
 pkg_postinst() {
 	kde4-base_pkg_postinst

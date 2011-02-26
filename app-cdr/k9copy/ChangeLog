@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.61 2011/01/30 12:13:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.62 2011/02/26 23:11:47 dilfridge Exp $
+
+  26 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/k9copy-2.3.5-gcc45.patch, k9copy-2.3.6.ebuild,
+  +files/k9copy-2.3.6-return.patch:
+  Add upstream patch to fix compilation with kde-4.6, bug 350352
 
   30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -k9copy-2.3.5.ebuild:
   Remove old
