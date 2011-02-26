@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.34 2011/02/25 22:58:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.35 2011/02/26 12:10:50 xmw Exp $
+
+  26 Feb 2011; Michael Weber <xmw@gentoo.org> gmpc-mdcover-0.20.0.ebuild:
+  sparc dropping keywords (bug 325621)
 
   25 Feb 2011; Michael Weber <xmw@gentoo.org> gmpc-mdcover-0.20.0.ebuild:
   Added ~sparc (bug 325621)
