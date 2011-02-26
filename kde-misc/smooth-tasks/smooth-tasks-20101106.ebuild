@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/smooth-tasks-20101106.ebuild,v 1.2 2011/01/31 06:44:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/smooth-tasks/smooth-tasks-20101106.ebuild,v 1.3 2011/02/26 18:21:22 dilfridge Exp $
 
 EAPI=3
 
 KDE_LINGUAS="cs de fr hu pl ru zh_CN"
-
+KDE_MINIMAL="4.5"
 inherit kde4-base
 
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
