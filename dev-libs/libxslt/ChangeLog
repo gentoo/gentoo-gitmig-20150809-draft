@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.206 2011/02/12 15:16:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.207 2011/02/26 17:31:21 arfrever Exp $
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libxslt-1.1.26.ebuild, +files/libxslt-1.1.26-disable_static_modules.patch:
+  Don't install .a files in Python site-packages directories.
 
   12 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libxslt-1.1.26.ebuild:

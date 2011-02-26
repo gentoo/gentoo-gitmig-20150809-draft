@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.15 2011/02/12 15:16:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.16 2011/02/26 17:31:21 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -30,7 +30,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/libxslt.m4-${P}.patch \
 		"${FILESDIR}"/${PN}-1.1.23-parallel-install.patch \
-		"${FILESDIR}"/${P}-undefined.patch
+		"${FILESDIR}"/${P}-undefined.patch \
+		"${FILESDIR}"/${P}-disable_static_modules.patch
 
 	# Python bindings are built/tested/installed manually.
 	sed -e "s/@PYTHON_SUBDIR@//" -i Makefile.am || die "sed failed"
