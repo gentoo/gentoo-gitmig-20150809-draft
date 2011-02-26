@@ -1,5 +1,5 @@
---- a/python-lzo-1.08/setup.py.orig	2007-04-14 11:10:48.000000000 +1000
-+++ b/python-lzo-1.08/setup.py	2007-04-14 11:17:13.000000000 +1000
+--- setup.py
++++ setup.py
 @@ -24,8 +24,8 @@
      include_dirs.append(os.path.join(CURL_DIR, "include"))
      extra_objects.append(os.path.join(CURL_DIR, "lzo.lib"))
