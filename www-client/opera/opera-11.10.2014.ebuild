@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.10.2014.ebuild,v 1.1 2011/02/24 17:01:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.10.2014.ebuild,v 1.2 2011/02/26 17:16:50 jer Exp $
 
 EAPI="3"
 
@@ -48,42 +48,41 @@ DEPEND="
 	>=sys-apps/sed-4
 	app-arch/xz-utils
 "
+GTKRDEPEND="
+	=x11-libs/gtk+-2*
+	dev-libs/atk
+	dev-libs/glib
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf
+	x11-libs/pango
+	x11-libs/pixman
+"
+KDERDEPEND="
+	kde-base/kdelibs
+	x11-libs/qt-core
+	x11-libs/qt-gui
+"
+GSTRDEPEND="
+	dev-libs/glib
+	dev-libs/libxml2
+	media-plugins/gst-plugins-meta
+	media-libs/gstreamer
+"
 RDEPEND="
-	gtk? (
-		=x11-libs/gtk+-2*
-		dev-libs/atk
-		dev-libs/glib
-		x11-libs/cairo
-		x11-libs/pango
-		x11-libs/pixman
-	)
-	kde? (
-		kde-base/kdelibs
-	)
-	dev-libs/expat
 	media-libs/fontconfig
 	media-libs/freetype
-	gstreamer? ( media-plugins/gst-plugins-meta )
 	sys-apps/util-linux
 	sys-libs/zlib
 	virtual/opengl
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXcomposite
-	x11-libs/libXcursor
-	x11-libs/libXdamage
-	x11-libs/libXdmcp
 	x11-libs/libXext
-	x11-libs/libXfixes
-	x11-libs/libXi
-	x11-libs/libXmu
-	x11-libs/libXrandr
+	x11-libs/libXft
 	x11-libs/libXrender
-	x11-libs/libXt
-	x11-libs/libxcb
-	x11-libs/xcb-util
+	gtk? ( ${GTKRDEPEND} )
+	kde? ( ${KDERDEPEND} )
+	gstreamer? ( ${GSTRDEPEND} )
 "
 
 pkg_setup() {
