@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20101101.ebuild,v 1.1 2010/11/01 18:26:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20101101.ebuild,v 1.2 2011/02/26 13:35:50 armin76 Exp $
 
 EAPI=2
 inherit autotools games
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=games-simulation/flightgear-2
