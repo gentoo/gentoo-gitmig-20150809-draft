@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.0.ebuild,v 1.5 2010/10/15 09:33:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.0.ebuild,v 1.6 2011/02/26 17:06:55 signals Exp $
 
 MY_P="Argyll_V${PV}"
 DESCRIPTION="Open source, ICC compatible color management system"
@@ -13,7 +13,7 @@ KEYWORDS="amd64 x86"
 IUSE="doc"
 
 RDEPEND="media-libs/tiff
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXau

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.13 2010/02/16 04:12:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-1.0b.ebuild,v 1.14 2011/02/26 17:08:40 signals Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 arm ~ppc ppc64 sh x86"
 IUSE="gif jpeg png"
 
 DEPEND="gif? ( media-libs/giflib )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )"
 
 src_unpack() {

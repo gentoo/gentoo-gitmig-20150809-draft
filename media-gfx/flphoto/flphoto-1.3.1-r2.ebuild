@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/flphoto/flphoto-1.3.1-r2.ebuild,v 1.1 2011/01/06 12:41:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/flphoto/flphoto-1.3.1-r2.ebuild,v 1.2 2011/02/26 17:12:41 signals Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ IUSE="cups debug gphoto2 nls"
 
 DEPEND="
 	dev-libs/openssl
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libpng
 	sys-libs/zlib
 	x11-libs/fltk:1.1
