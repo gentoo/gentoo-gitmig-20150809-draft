@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/v86d
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.31 2010/11/28 18:27:20 spock Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.32 2011/02/26 00:34:44 spock Exp $
+
+*v86d-0.1.10 (26 Feb 2011)
+
+  26 Feb 2011; Michał Januszewski <spock@gentoo.org> +v86d-0.1.10.ebuild:
+  Version bump.
 
   28 Nov 2010; Michał Januszewski <spock@gentoo.org> v86d-0.1.9.ebuild:
   Disable stack protector (bug #346397).
