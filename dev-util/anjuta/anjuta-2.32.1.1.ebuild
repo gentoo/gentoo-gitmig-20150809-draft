@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.4 2011/02/24 18:52:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.5 2011/02/26 19:17:30 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -23,8 +23,8 @@ RDEPEND=">=dev-libs/glib-2.25.15:2
 	>=gnome-base/gconf-2.12
 	>=x11-libs/vte-0.13.1
 	>=dev-libs/libxml2-2.4.23
-	>=dev-libs/gdl-2.27.1
-	>=dev-libs/libunique-1
+	>=dev-libs/gdl-2.27.1:1
+	>=dev-libs/libunique-1:1
 
 	dev-libs/libxslt
 	>=dev-lang/perl-5
