@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.5 2011/01/30 17:16:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.6 2011/02/26 15:19:37 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,9 +19,9 @@ IUSE=""
 # Unfortunately the configure.ac is wildly insufficient, so dependencies have
 # to be got from the RPM .spec file...
 # But the .spec file got removed :/
-COMMON_DEPEND=">=x11-libs/gtk+-2.6.0
-	>=dev-python/pygtk-2.16
-	>=dev-python/pygobject-2.15
+COMMON_DEPEND=">=x11-libs/gtk+-2.6:2
+	>=dev-python/pygtk-2.16:2
+	>=dev-python/pygobject-2.15:2
 	app-admin/pessulus
 	x11-libs/pango
 	dev-python/python-ldap
