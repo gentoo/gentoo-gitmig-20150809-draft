@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.3-r1.ebuild,v 1.4 2010/10/15 13:12:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.3-r1.ebuild,v 1.5 2011/02/26 15:33:43 signals Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-db/sqlite:3
 	dev-games/ode
 	dev-lang/lua[deprecated]
-	media-libs/jpeg:0
+	virtual/jpeg
 	media-libs/libpng
 	media-libs/libsdl[joystick]
 	media-libs/sdl-mixer[vorbis]

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.20 2010/09/16 17:51:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.21 2011/02/26 15:32:17 signals Exp $
 
 EAPI=2
 inherit eutils games
@@ -21,7 +21,7 @@ DEPEND="x11-libs/libXi
 	virtual/opengl
 	dev-lang/tcl
 	media-libs/giflib
-	media-libs/jpeg:0
+	virtual/jpeg
 	media-libs/libpng
 	media-libs/plib"
 
