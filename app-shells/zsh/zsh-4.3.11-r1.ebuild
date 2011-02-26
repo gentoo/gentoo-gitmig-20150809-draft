@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.11-r1.ebuild,v 1.1 2011/01/18 18:36:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.11-r1.ebuild,v 1.2 2011/02/26 07:39:53 tove Exp $
 
 EAPI=3
 
@@ -48,7 +48,7 @@ RDEPEND=">=sys-libs/ncurses-5.1
 	pcre? ( >=dev-libs/libpcre-3.9
 		static? ( >=dev-libs/libpcre-3.9[static-libs] ) )
 	gdbm? ( sys-libs/gdbm )"
-DEPEND="|| ( sys-apps/groff app-doc/heirloom-doctools )
+DEPEND="sys-apps/groff
 	examples? ( app-text/asciidoc )
 	${RDEPEND}"
 
