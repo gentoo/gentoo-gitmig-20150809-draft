@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/lastfmlib-0.4.0.ebuild,v 1.3 2010/04/18 12:28:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/lastfmlib-0.4.0.ebuild,v 1.4 2011/02/26 17:02:35 xarthisius Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug syslog"
 
 RDEPEND="net-misc/curl"
