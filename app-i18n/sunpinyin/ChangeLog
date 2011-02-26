@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/sunpinyin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.6 2011/02/20 13:22:37 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/ChangeLog,v 1.7 2011/02/26 08:09:49 qiaomuf Exp $
+
+*sunpinyin-2.0.3-r1 (26 Feb 2011)
+
+  26 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> -sunpinyin-2.0.3.ebuild,
+  +sunpinyin-2.0.3-r1.ebuild, +files/sunpinyin-2.0.3-force-switch.patch:
+  Include upstream patch.
 
   20 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> sunpinyin-2.0.3.ebuild:
   Fix compilation for userpriv, thanks to Alphat-PC.

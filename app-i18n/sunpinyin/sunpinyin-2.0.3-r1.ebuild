@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.3.ebuild,v 1.3 2011/02/20 13:22:37 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.3-r1.ebuild,v 1.1 2011/02/26 08:09:49 qiaomuf Exp $
 
 EAPI="1"
-inherit scons-utils
+inherit eutils scons-utils
 
 DESCRIPTION="SunPinyin is a SLM (Statistical Language Model) based IME"
 HOMEPAGE="http://sunpinyin.googlecode.com"
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack "${P}.tar.gz"
 	ln -s "${DISTDIR}/dict.utf8.tar.bz2" "${S}/raw/" || die "dict file not found"
 	ln -s "${DISTDIR}/lm_sc.t3g.arpa.tar.bz2" "${S}/raw/" || die "dict file not found"
+	cd "${S}" && epatch "${FILESDIR}/${P}-force-switch.patch"
 }
 
 src_compile() {
