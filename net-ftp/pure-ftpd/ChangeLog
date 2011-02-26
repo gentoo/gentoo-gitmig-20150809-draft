@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.100 2010/10/30 11:22:50 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.101 2011/02/26 16:55:25 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  pure-ftpd-1.0.29-r2.ebuild:
+  Marked ~ppc64 wrt #340455
 
   30 Oct 2010; Markus Meier <maekke@gentoo.org> pure-ftpd-1.0.29-r2.ebuild:
   restore ~arm, bug #340455
