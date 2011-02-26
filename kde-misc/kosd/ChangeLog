@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kosd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/ChangeLog,v 1.3 2011/01/31 05:56:17 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/ChangeLog,v 1.4 2011/02/26 20:38:31 dilfridge Exp $
+
+*kosd-0.6.2 (26 Feb 2011)
+
+  26 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kosd-0.6.2.ebuild:
+  Version bump
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -kosd-0.4.2.ebuild,
   kosd-0.6.0.ebuild:
