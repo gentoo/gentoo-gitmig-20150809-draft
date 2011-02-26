@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.29 2011/02/26 10:32:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.30 2011/02/26 13:37:47 arfrever Exp $
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cryptlib-3.3.3-r1.ebuild:
+  Delete.
 
   26 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   cryptlib-3.4.0.ebuild:
