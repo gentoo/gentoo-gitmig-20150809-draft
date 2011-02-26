@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5088 2011/02/25 20:30:25 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5089 2011/02/26 19:13:27 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> updates/1Q-2011:
+  Move dev-libs/gdl to slot 1.
 
   25 Feb 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:
