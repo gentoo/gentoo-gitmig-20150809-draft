@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.382 2011/02/20 12:05:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.383 2011/02/26 16:44:43 armin76 Exp $
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> openldap-2.4.24.ebuild:
+  alpha/arm/ia64/s390/sh stable wrt #355333
 
   20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   openldap-2.4.24.ebuild:
