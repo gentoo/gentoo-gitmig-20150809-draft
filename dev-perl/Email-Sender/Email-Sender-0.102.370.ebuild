@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/Email-Sender-0.102370.ebuild,v 1.2 2010/08/26 13:11:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/Email-Sender-0.102.370.ebuild,v 1.1 2011/02/26 09:06:38 tove Exp $
 
-EAPI=2
+EAPI=3
 
 MODULE_AUTHOR=RJBS
+MODULE_VERSION=0.102370
 inherit perl-module
 
 DESCRIPTION="A library for sending email"
