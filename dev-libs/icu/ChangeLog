@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.139 2011/01/28 16:36:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.140 2011/02/26 12:58:16 xmw Exp $
+
+  26 Feb 2011; Michael Weber <xmw@gentoo.org> icu-4.6.ebuild:
+  sparc stable (bug 350861)
 
   28 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   icu-4.6.ebuild, +files/icu-4.6-pkgdata.patch:
