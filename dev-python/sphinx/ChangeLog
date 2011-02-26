@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.88 2011/02/21 06:52:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.89 2011/02/26 17:59:30 armin76 Exp $
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> sphinx-1.0.7.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #355275
 
   21 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sphinx-1.0.7.ebuild:
   x86 stable wrt bug #355275
