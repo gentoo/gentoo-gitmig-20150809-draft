@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.53 2011/01/17 16:00:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.54 2011/02/26 18:07:48 xarthisius Exp $
+
+  26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> gnash-0.8.8.ebuild:
+  Marked ~ppc64 wrt #342535. Thanks to Stephen Lewis
+  <lewis+gentoo@freeshell.org> for report and testing.
 
   17 Jan 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/gnash-0.8.5-moc-qt4.patch, -files/gnash-0.8.x-libpng14.patch,
