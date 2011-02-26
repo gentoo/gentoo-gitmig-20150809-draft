@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.ebuild,v 1.3 2010/11/09 16:02:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.ebuild,v 1.4 2011/02/26 16:35:39 signals Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -26,7 +26,7 @@ RDEPEND="!dedicated? (
 		media-libs/sdl-image[jpeg,png]
 		media-libs/sdl-ttf
 		media-libs/sdl-mixer
-		media-libs/jpeg
+		virtual/jpeg
 		media-libs/libpng
 		media-libs/libogg
 		media-libs/libvorbis
@@ -37,7 +37,7 @@ RDEPEND="!dedicated? (
 	sys-libs/zlib
 	editor? (
 		dev-libs/libxml2
-		media-libs/jpeg
+		virtual/jpeg
 		media-libs/openal
 		x11-libs/gtkglext
 		x11-libs/gtksourceview
