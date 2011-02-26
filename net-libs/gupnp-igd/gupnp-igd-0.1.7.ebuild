@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.1.7.ebuild,v 1.9 2011/02/26 18:05:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.1.7.ebuild,v 1.10 2011/02/26 19:31:10 arfrever Exp $
 
-EAPI=2
-inherit autotools eutils
+EAPI="3"
+PYTHON_DEPEND="python? 2:2.5"
+
+inherit autotools eutils python
 
 DESCRIPTION="This is a library to handle UPnP IGD port mapping for GUPnP."
 HOMEPAGE="http://gupnp.org"
@@ -21,6 +23,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/gtk-doc-am"
+
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make-382.patch
