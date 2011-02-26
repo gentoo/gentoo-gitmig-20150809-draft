@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/File-chdir
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.23 2010/04/30 07:17:03 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/ChangeLog,v 1.24 2011/02/26 09:12:42 tove Exp $
+
+*File-chdir-0.100.300 (26 Feb 2011)
+*File-chdir-0.100.200 (26 Feb 2011)
+
+  26 Feb 2011; Torsten Veller <tove@gentoo.org> +File-chdir-0.100.200.ebuild,
+  +File-chdir-0.100.300.ebuild, -File-chdir-0.1002.ebuild,
+  -File-chdir-0.1003.ebuild:
+  Change version scheme. Looks like a downgrade. EAPI=3. Fix LICENSE.
+  Maintenance
 
 *File-chdir-0.1003 (30 Apr 2010)
 

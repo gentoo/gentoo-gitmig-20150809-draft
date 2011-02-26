@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/File-chdir-0.1003.ebuild,v 1.1 2010/04/30 07:17:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chdir/File-chdir-0.100.300.ebuild,v 1.1 2011/02/26 09:12:42 tove Exp $
 
 EAPI=3
 
 MODULE_AUTHOR=DAGOLDEN
+MODULE_VERSION=0.1003
 inherit perl-module
 
 DESCRIPTION="An alternative to File::Spec and CWD"
