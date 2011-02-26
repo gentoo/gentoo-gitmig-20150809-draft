@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.805 2011/02/26 09:43:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.806 2011/02/26 14:38:53 gmsoft Exp $
+
+  26 Feb 2011; Guy Martin <gmsoft@gentoo.org> ChangeLog:
+  Stable on hppa wrt bug #354881.
 
   26 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gcc-4.4.5.ebuild:
   Stable on amd64 wrt bug #354881
