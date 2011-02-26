@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Markdown/Text-Markdown-1.000031.ebuild,v 1.1 2010/03/22 10:39:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Markdown/Text-Markdown-1.0.31.ebuild,v 1.1 2011/02/26 10:15:18 tove Exp $
 
-EAPI=2
+EAPI=3
 
 MODULE_AUTHOR=BOBTFISH
-#MODULE_A=${P}.tgz
+MODULE_VERSION=1.000031
 inherit perl-module
 
 DESCRIPTION="Convert MultiMarkdown syntax to (X)HTML"
