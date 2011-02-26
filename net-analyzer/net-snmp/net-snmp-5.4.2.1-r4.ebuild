@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.11 2010/11/06 20:22:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.12 2011/02/26 19:15:45 arfrever Exp $
 
-EAPI=2
+EAPI="3"
 
 inherit fixheadtails flag-o-matic perl-module python autotools
 
@@ -195,7 +195,7 @@ src_install () {
 
 pkg_postinst() {
 	if use python; then
-		python_mod_optimize $(python_get_sitedir)/netsnmp
+		python_mod_optimize netsnmp
 	fi
 
 	elog "An example configuration file has been installed in"
@@ -204,6 +204,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if use python; then
-		python_mod_cleanup $(python_get_sitedir)/netsnmp
+		python_mod_cleanup netsnmp
 	fi
 }
