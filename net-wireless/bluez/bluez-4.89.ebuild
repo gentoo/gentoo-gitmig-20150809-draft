@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.89.ebuild,v 1.1 2011/02/21 19:24:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.89.ebuild,v 1.2 2011/02/26 12:31:44 ssuominen Exp $
 
 EAPI="3"
 
@@ -41,7 +41,7 @@ DEPEND="sys-devel/flex
 	>=dev-util/pkgconfig-0.20
 	${CDEPEND}"
 RDEPEND="${CDEPEND}
-	consolekit? ( sys-auth/pambase[consolekit] )
+	consolekit? ( sys-auth/consolekit )
 	test-programs? (
 		dev-python/dbus-python
 		dev-python/pygobject )"
