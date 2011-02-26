@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.4.5.ebuild,v 1.5 2010/08/09 17:34:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.4.5.ebuild,v 1.6 2011/02/26 16:57:47 signals Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ RESTRICT="test"
 DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
 	>=media-gfx/exiv2-0.18
-	media-libs/jpeg
+	virtual/jpeg
 	kipi? ( $(add_kdebase_dep libkipi) )
 "
 RDEPEND="${DEPEND}"
