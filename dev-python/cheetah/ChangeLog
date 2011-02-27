@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.79 2011/02/27 18:02:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.80 2011/02/27 21:24:01 arfrever Exp $
+
+  27 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cheetah-2.4.3.ebuild:
+  Delete.
 
   27 Feb 2011; Brent Baude <ranger@gentoo.org> cheetah-2.4.4.ebuild:
   stable ppc, bug 352728
