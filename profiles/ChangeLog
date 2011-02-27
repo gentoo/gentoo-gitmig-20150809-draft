@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5090 2011/02/27 09:31:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5091 2011/02/27 16:03:35 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/powerpc/parent, hardened/linux/powerpc/ppc32/parent,
+  hardened/linux/powerpc/ppc64/parent:
+  Restructured profile inheritance for hardened/linux/powerpc/ppc32,
+  hardened/linux/powerpc/ppc64
 
   27 Feb 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/bones-extras for removal.
