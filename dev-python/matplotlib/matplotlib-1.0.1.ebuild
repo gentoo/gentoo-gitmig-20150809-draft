@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1.ebuild,v 1.3 2011/02/11 19:37:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1.ebuild,v 1.4 2011/02/27 18:11:55 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 IUSE="cairo doc excel examples fltk gtk latex qt4 traits tk wxwidgets"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 LICENSE="PYTHON BSD"
 
 CDEPEND="dev-python/numpy
