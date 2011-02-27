@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.12.0.0.ebuild,v 1.1 2010/11/07 17:40:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.12.0.0.ebuild,v 1.2 2011/02/27 13:14:40 aballier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit versionator eutils toolchain-funcs flag-o-matic multilib
 
 OCAML_VERSION=3.12.0
 OCAML_TARBALL=ocaml-${OCAML_VERSION}.tar.bz2
-OCAML_PATCHLEVEL=2
+OCAML_PATCHLEVEL=3
 OCAML_GENTOO_PATCHES=ocaml-patches-${OCAML_PATCHLEVEL}.tar.bz2
 
 DESCRIPTION="OCamlDuce is a merger between OCaml and CDuce"
