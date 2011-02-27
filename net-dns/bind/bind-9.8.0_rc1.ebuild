@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_rc1.ebuild,v 1.1 2011/02/25 12:43:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_rc1.ebuild,v 1.2 2011/02/27 22:27:48 idl0r Exp $
 
 EAPI="3"
 
-inherit eutils autotools toolchain-funcs flag-o-matic
+inherit eutils autotools toolchain-funcs flag-o-matic multilib
 
 MY_PV="${PV/_p/-P}"
 MY_PV="${MY_PV/_rc/rc}"
@@ -232,6 +232,12 @@ src_install() {
 	newinitd "${FILESDIR}"/named.init-r10 named || die
 	newconfd "${FILESDIR}"/named.confd-r6 named || die
 
+	if use ssl -a -e /usr/lib/engines/libgost.so; then
+		sed -i -e 's:^OPENSSL_LIBGOST=0$:OPENSSL_LIBGOST=1:' "${D}/etc/init.d/named" || die
+	else
+		sed -i -e 's:^OPENSSL_LIBGOST=1$:OPENSSL_LIBGOST=0:' "${D}/etc/init.d/named" || die
+	fi
+
 	newenvd "${FILESDIR}"/10bind.env 10bind || die
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
@@ -337,9 +343,16 @@ pkg_config() {
 	mkdir -m 0755 -p ${CHROOT}/{dev,etc,var/{run,log}}
 	mkdir -m 0750 -p ${CHROOT}/etc/bind
 	mkdir -m 0770 -p ${CHROOT}/var/{bind,{run,log}/named}
+	# As of bind 9.8.0
+	if has_version net-dns/bind[ssl] -a -e /usr/lib/engines/libgost.so; then
+		if [ "$(get_libdir)" = "lib64" ]; then
+			mkdir -m 0755 -p ${CHROOT}/usr/lib64/engines
+			ln -s lib64 ${CHROOT}/usr/lib
+		else
+			mkdir -m 0755 -p ${CHROOT}/usr/lib/engines
+		fi
+	fi
 	chown root:named ${CHROOT} ${CHROOT}/var/{bind,{run,log}/named} ${CHROOT}/etc/bind
-
-	cp /etc/localtime ${CHROOT}/etc/localtime
 
 	mknod ${CHROOT}/dev/null c 1 3
 	chmod 0666 ${CHROOT}/dev/null

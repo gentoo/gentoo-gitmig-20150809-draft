@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3-r1.ebuild,v 1.1 2011/02/25 12:42:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3-r1.ebuild,v 1.2 2011/02/27 22:27:48 idl0r Exp $
 
 EAPI="3"
 
@@ -335,8 +335,6 @@ pkg_config() {
 	mkdir -m 0750 -p ${CHROOT}/etc/bind
 	mkdir -m 0770 -p ${CHROOT}/var/{bind,{run,log}/named}
 	chown root:named ${CHROOT} ${CHROOT}/var/{bind,{run,log}/named} ${CHROOT}/etc/bind
-
-	cp /etc/localtime ${CHROOT}/etc/localtime
 
 	mknod ${CHROOT}/dev/null c 1 3
 	chmod 0666 ${CHROOT}/dev/null

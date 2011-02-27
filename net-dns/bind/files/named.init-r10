@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r10,v 1.1 2011/02/25 12:42:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r10,v 1.2 2011/02/27 22:27:48 idl0r Exp $
 
 opts="start stop reload restart checkconfig checkzones"
 
@@ -12,6 +12,8 @@ depend() {
 }
 
 NAMED_CONF=${CHROOT}/etc/bind/named.conf
+
+OPENSSL_LIBGOST=0
 
 _mount() {
 	local from
@@ -63,10 +65,16 @@ check_chroot() {
 		[ ! -d "${CHROOT}/var/run" ] || [ ! -d "${CHROOT}/var/log" ] && return 1
 		[ ! -d "${CHROOT}/etc/bind" ] || [ ! -d "${CHROOT}/var/bind" ] && return 1
 		[ ! -d "${CHROOT}/var/log/named" ] && return 1
-		[ ! -e "${CHROOT}/etc/localtime" ] && return 1
 		[ ! -c "${CHROOT}/dev/null" ] || [ ! -c "${CHROOT}/dev/zero" ] && return 1
 		[ ! -c "${CHROOT}/dev/random" ] && [ ! -c "${CHROOT}/dev/urandom" ] && return 1
 		[ "${CHROOT_GEOIP:-0}" -eq 1 ] && [ ! -d "${CHROOT}/usr/share/GeoIP" ] && return 1
+		if [ ${OPENSSL_LIBGOST:-0} -eq 1 ]; then
+			if [ -d "/usr/lib64" ]; then
+				[ ! -d "${CHROOT}/usr/lib64/engines" ] && return 1
+			elif [ -d "/usr/lib" ]; then
+				[ ! -d "${CHROOT}/usr/lib/engines" ] && return 1
+			fi
+		fi
 	fi
 
 	return 0
@@ -100,12 +108,28 @@ start() {
 
 	ebegin "Starting ${CHROOT:+chrooted }named"
 
-	if [ -n "${CHROOT}" -a "${CHROOT_NOCHECK:-0}" -eq 0 ]; then
-		check_chroot || {
-			eend 1
-			eerror "Your chroot dir ${CHROOT} is inconsistent, please run 'emerge --config net-dns/bind' first"
-			return 1
-		}
+	if [ -n "${CHROOT}" ]; then
+		if [ ${CHROOT_NOCHECK:-0} -eq 0 ]; then
+			check_chroot || {
+				eend 1
+				eerror "Your chroot dir ${CHROOT} is inconsistent, please run 'emerge --config net-dns/bind' first"
+				return 1
+			}
+		fi
+
+		if [ ${OPENSSL_LIBGOST:-0} -eq 1 ]; then
+			if [ ! -e /usr/lib/engines/libgost.so ]; then
+				eend 1
+				eerror "Couldn't find /usr/lib/engines/libgost.so but bind has been built with openssl and libgost support"
+				return 1
+			fi
+			cp -Lp /usr/lib/engines/libgost.so "${CHROOT}/usr/lib/engines/libgost.so" || {
+				eend 1
+				eerror "Couldn't copy /usr/lib/engines/libgost.so into '${CHROOT}/usr/lib/engines/'"
+				return 1
+			}
+		fi
+		cp -Lp /etc/localtime "${CHROOT}/etc/localtime"
 
 		if [ "${CHROOT_NOMOUNT:-0}" -eq 0 ]; then
 			einfo "Mounting chroot dirs"
