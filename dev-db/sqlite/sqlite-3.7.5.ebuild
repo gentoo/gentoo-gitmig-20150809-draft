@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.5.ebuild,v 1.1 2011/02/06 14:03:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.5.ebuild,v 1.2 2011/02/27 18:21:04 arfrever Exp $
 
 EAPI="3"
 
@@ -51,6 +51,7 @@ src_prepare() {
 	else
 		epatch "${FILESDIR}/${P}-utimes.patch"
 		epatch "${FILESDIR}/${PN}-3.6.22-dlopen.patch"
+		epatch "${FILESDIR}/${P}-SQLITE_OMIT_WAL.patch"
 	fi
 
 	eautoreconf
