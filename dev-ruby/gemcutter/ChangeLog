@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gemcutter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.10 2010/12/31 12:23:08 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemcutter/ChangeLog,v 1.11 2011/02/27 07:29:43 graaff Exp $
+
+*gemcutter-0.7.0 (27 Feb 2011)
+
+  27 Feb 2011; Hans de Graaff <graaff@gentoo.org> +gemcutter-0.7.0.ebuild:
+  Version bump.
 
   31 Dec 2010; Hans de Graaff <graaff@gentoo.org> -gemcutter-0.3.0.ebuild,
   -gemcutter-0.5.0.ebuild:
