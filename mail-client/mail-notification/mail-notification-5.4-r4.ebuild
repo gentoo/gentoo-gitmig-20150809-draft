@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r4.ebuild,v 1.6 2010/10/10 18:08:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r4.ebuild,v 1.7 2011/02/27 09:25:43 graaff Exp $
 
 EAPI=2
 
@@ -23,7 +23,6 @@ IUSE="evo gmail imap ipv6 maildir mbox mh mozilla pop sasl ssl sylpheed"
 RDEPEND=">=x11-libs/gtk+-2.12
 	>=dev-libs/glib-2.14
 	>=gnome-base/gconf-2.4.0
-	>=gnome-base/gnome-panel-2.6
 	>=gnome-base/gconf-2.6
 	>=gnome-base/libgnomeui-2.14
 	>=gnome-base/libglade-2.0
