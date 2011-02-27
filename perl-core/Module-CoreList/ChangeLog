@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-CoreList
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.30 2011/02/27 10:03:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.31 2011/02/27 10:48:20 grobian Exp $
+
+  27 Feb 2011; Fabian Groffen <grobian@gentoo.org>
+  Module-CoreList-2.450.ebuild:
+  Add Prefix keywords, bug #351526
 
   27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   Module-CoreList-2.450.ebuild:
