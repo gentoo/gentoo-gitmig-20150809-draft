@@ -3,10 +3,10 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>tommy@gentoo.org</email>
+		<email>jlec@gentoo.org</email>
 	</maintainer>
 	<maintainer>
-		<email>jlec@gentoo.org</email>
+		<email>tommy@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name='debug'>Enable additional debugging support</flag>

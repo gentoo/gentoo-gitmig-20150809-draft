@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110120.ebuild,v 1.2 2011/01/21 07:37:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110120.ebuild,v 1.3 2011/02/27 13:09:23 jlec Exp $
 
 EAPI="2"
 
@@ -47,8 +47,8 @@ pkg_setup() {
 			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null
 			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null
 			epatch "${FILESDIR}"/aufs2-{base,standalone}-${KV_PATCH}.patch
-			elog "You need to compile your kernel with the applied patch"
-			elog "to be able to load and use the aufs kernel module"
+			ewarn "You need to compile your kernel with the applied patch"
+			ewarn "to be able to load and use the aufs kernel module"
 		else
 			eerror "You need to apply a patch to your kernel to compile and run the aufs2 module"
 			eerror "Either enable the kernel-patch useflag to do it with this ebuild"

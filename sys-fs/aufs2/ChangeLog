@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.32 2011/01/21 07:37:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.33 2011/02/27 13:09:23 jlec Exp $
+
+  27 Feb 2011; Justin Lecher <jlec@gentoo.org> aufs2-0_p20100809.ebuild,
+  aufs2-0_p20101122.ebuild, aufs2-0_p20110120.ebuild, metadata.xml:
+  Increase Warning level for rebuilding kernel with patches, #356267; Changed
+  to me as the primary maintainer
 
   21 Jan 2011; Justin Lecher <jlec@gentoo.org> aufs2-0_p20110120.ebuild:
   Mirror the distfiles
