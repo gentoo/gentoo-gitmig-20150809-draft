@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r1.ebuild,v 1.2 2011/02/23 17:39:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r1.ebuild,v 1.3 2011/02/27 15:12:39 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pi
 # pst is not mature enough and changes API/ABI frequently
 RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=x11-libs/gtk+-2.20.0:2
-	>=dev-libs/libunique-1.1.2
+	>=dev-libs/libunique-1.1.2:1
 	>=gnome-base/gnome-desktop-2.26:2
 	>=dev-libs/libgweather-2.25.3:2
 	media-libs/libcanberra[gtk]
