@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sidplay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.23 2011/02/26 20:38:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.24 2011/02/27 16:20:59 fauli Exp $
+
+  27 Feb 2011; Christian Faulhammer <fauli@gentoo.org> sidplay-2.0.9.ebuild:
+  stable x86, security bug 354061
 
   26 Feb 2011; Tobias Klausmann <klausman@gentoo.org> sidplay-2.0.9.ebuild:
   Stable on alpha, bug #354061
