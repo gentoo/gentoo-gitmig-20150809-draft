@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.85 2011/02/27 14:49:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.86 2011/02/27 14:52:42 aballier Exp $
+
+  27 Feb 2011; Alexis Ballier <aballier@gentoo.org> -libdvdcss-1.2.9.ebuild,
+  -libdvdcss-1.2.9-r1.ebuild, -files/libdvdcss-1.2.9-doc.patch,
+  -files/libdvdcss-1.2.9-latex-character-encoding.patch:
+  remove old
 
   27 Feb 2011; Alexis Ballier <aballier@gentoo.org> libdvdcss-1.2.10.ebuild:
   add missing tex deps with doc useflag, bug #348248
