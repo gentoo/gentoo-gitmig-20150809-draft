@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.74 2011/01/29 17:08:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.75 2011/02/27 13:14:11 pacho Exp $
+
+*mod_mono-2.10 (27 Feb 2011)
+
+  27 Feb 2011; Pacho Ramos <pacho@gentoo.org> +mod_mono-2.10.ebuild:
+  Version bump for mono-2.10
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> mod_mono-2.8.2.ebuild:
   Stable on amd64 wrt bug #352808
