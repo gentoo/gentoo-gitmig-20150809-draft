@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.138 2011/02/26 15:59:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.139 2011/02/27 13:59:17 hwoarang Exp $
+
+  27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> gramps-3.2.5.ebuild:
+  Stable on amd64 wrt bug #328105
 
   26 Feb 2011; Michael Weber <xmw@gentoo.org> gramps-3.2.5.ebuild:
   ppc/sparc stable (bug 328105)
