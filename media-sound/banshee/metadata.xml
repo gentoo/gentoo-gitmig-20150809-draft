@@ -9,11 +9,9 @@
     <flag name="daap">Build with Daap support</flag>
     <flag name="karma">Build with karma support</flag>
     <flag name="podcast">Build with podcasting support</flag>
-	<flag name="wikipedia">Enable the Wikipedia context pane (require
-		<pkg>net-libs/webkit-gtk</pkg>)</flag>
-	<flag name="web">Enable support for plugins that access web-based services
+   <flag name="web">Enable support for plugins that access web-based services
 		such as Amazon and wikipedia (requires
 		<pkg>net-libs/webkit-gtk</pkg>)</flag>
-	<flag name="youtube">Enable the Youtube plugin</flag>
+   <flag name="youtube">Enable the Youtube plugin</flag>
   </use>
 </pkgmetadata>
