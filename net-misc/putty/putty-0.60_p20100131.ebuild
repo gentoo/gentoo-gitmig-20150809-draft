@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60_p20100131.ebuild,v 1.7 2011/02/21 06:55:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60_p20100131.ebuild,v 1.8 2011/02/27 14:57:02 klausman Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~ppc ~sparc x86"
 IUSE="doc ipv6 kerberos"
 
 RDEPEND="
