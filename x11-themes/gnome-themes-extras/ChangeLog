@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.61 2009/02/02 21:56:54 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.62 2011/02/27 15:50:48 eva Exp $
+
+  27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-themes-extras-2.22.0-r1.ebuild:
+  Pin gtk+ and gtk-engines to slot 2. Bump EAPI to 2.
 
   02 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-themes-extras-2.20.ebuild, -gnome-themes-extras-2.22.0.ebuild:
