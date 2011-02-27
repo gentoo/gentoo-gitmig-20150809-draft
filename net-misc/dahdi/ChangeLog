@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.13 2011/02/26 17:20:53 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.14 2011/02/27 18:57:01 chainsaw Exp $
+
+  27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-2.4.0-r1.ebuild:
+  Mark stable on AMD64 for security bug #352059. Arch testing by Agostino "ago"
+  Sarubbo.
 
   26 Feb 2011; Thomas Kahle <tomka@gentoo.org> dahdi-2.4.0-r1.ebuild:
   x86 stable per bug 352059

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.9 2011/02/27 16:07:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.10 2011/02/27 18:58:35 chainsaw Exp $
+
+  27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-tools-2.4.0.ebuild:
+  Mark stable on AMD64 for security bug #352059. Arch testing by Agostino "ago"
+  Sarubbo.
 
   27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-tools-2.4.0.ebuild:
   USE=ppp should DEPEND on net-dialup/ppp. As pointed out by Agostino "ago"
