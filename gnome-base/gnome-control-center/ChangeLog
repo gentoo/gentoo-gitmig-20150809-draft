@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.76 2011/02/24 18:57:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.77 2011/02/27 15:56:55 eva Exp $
+
+  27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-control-center-2.32.1.ebuild:
+  Pin libunique dependency to slot 1.
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org>
   gnome-control-center-2.32.1.ebuild:
