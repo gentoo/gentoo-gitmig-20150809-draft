@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/zoneminder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.39 2010/06/02 23:09:15 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.40 2011/02/27 20:09:33 ssuominen Exp $
+
+  27 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> zoneminder-1.23.3.ebuild,
+  zoneminder-1.24.2.ebuild:
+  Use virtual/jpeg wrt #356747 by "LuVar".
 
   02 Jun 2010; Alex Alexander <wired@gentoo.org>
   +files/1.24.2/zm_build_fix.patch, zoneminder-1.24.2.ebuild:
