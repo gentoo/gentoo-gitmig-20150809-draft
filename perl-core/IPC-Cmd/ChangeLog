@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IPC-Cmd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.19 2011/02/27 10:11:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.20 2011/02/27 11:25:59 grobian Exp $
+
+  27 Feb 2011; Fabian Groffen <grobian@gentoo.org> IPC-Cmd-0.700.ebuild:
+  Add Prefix keywords, bug #351526
 
   27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> IPC-Cmd-0.700.ebuild:
   Marked ~ppc64 wrt #351526
