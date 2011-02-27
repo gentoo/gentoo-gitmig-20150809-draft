@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.192 2011/01/23 20:24:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.193 2011/02/27 01:24:33 swegener Exp $
+
+*avahi-0.6.28-r1 (27 Feb 2011)
+
+  27 Feb 2011; Sven Wegener <swegener@gentoo.org> +avahi-0.6.28-r1.ebuild,
+  +files/avahi-0.6.28-CVE-2011-1002.patch:
+  Revision bump, security bug #355583.
 
   23 Jan 2011; Sven Wegener <swegener@gentoo.org> avahi-0.6.28.ebuild,
   +files/netlink-request-all-matches-when-requesting-interface.patch:
