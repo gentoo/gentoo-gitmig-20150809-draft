@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.5.99.ebuild,v 1.1 2010/12/08 00:45:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.6.20.ebuild,v 1.1 2011/02/27 09:09:27 dirtyepic Exp $
 
 EAPI=2
 SUPPORT_PYTHON_ABIS=1

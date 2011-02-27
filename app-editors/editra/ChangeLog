@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.19 2011/01/16 06:56:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.20 2011/02/27 09:09:27 dirtyepic Exp $
+
+*editra-0.6.20 (27 Feb 2011)
+
+  27 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> -editra-0.5.86.ebuild,
+  -editra-0.5.99.ebuild, +editra-0.6.20.ebuild:
+  Version bump.
 
 *editra-0.6.0 (16 Jan 2011)
 
