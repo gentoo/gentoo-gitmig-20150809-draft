@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7-r1.ebuild,v 1.3 2011/02/16 19:34:58 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7-r1.ebuild,v 1.4 2011/02/27 11:21:45 hd_brummy Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://andreas.vdr-developer.org/vdradmin-am/download/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ipv6 ssl +vdr"
 
 DEPEND="dev-lang/perl
