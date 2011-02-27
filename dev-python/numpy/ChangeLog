@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.133 2011/02/26 13:22:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.134 2011/02/27 14:18:51 klausman Exp $
+
+  27 Feb 2011; Tobias Klausmann <klausman@gentoo.org> numpy-1.5.1.ebuild:
+  Stable on alpha, bug #351487
 
   26 Feb 2011; Michael Weber <xmw@gentoo.org> numpy-1.5.1.ebuild:
   sparc stable (bug 351487)
