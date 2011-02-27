@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.1.3.ebuild,v 1.5 2011/02/26 19:11:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.1.3.ebuild,v 1.6 2011/02/27 13:49:30 ranger Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.yars.free.net/pub/source/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="ssl gnutls socks5 nls"
 
 RDEPEND="
