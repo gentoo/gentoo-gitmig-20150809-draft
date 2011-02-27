@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.22 2011/01/25 20:39:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.23 2011/02/27 12:19:42 klausman Exp $
+
+  27 Feb 2011; Tobias Klausmann <klausman@gentoo.org> libcuefile-465.ebuild:
+  Stable on alpha, bug #348512
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> libcuefile-465.ebuild:
   Stable for HPPA (bug #348512).
