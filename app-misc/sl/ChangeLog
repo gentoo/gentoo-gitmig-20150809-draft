@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.22 2011/01/23 12:19:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.23 2011/02/27 22:28:59 scarabeus Exp $
+
+  27 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -sl-3.03.ebuild:
+  old
 
   23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> sl-3.03-r1.ebuild:
   ppc64 stable wrt #345923
