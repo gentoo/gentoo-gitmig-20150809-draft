@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.189 2011/02/24 07:47:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.190 2011/02/27 15:31:37 ranger Exp $
+
+  27 Feb 2011; Brent Baude <ranger@gentoo.org>
+  gst-plugins-vorbis-0.10.31.ebuild:
+  Marking gst-plugins-vorbis-0.10.31 ppc stable for bug 353434
 
 *gst-plugins-vorbis-0.10.32 (24 Feb 2011)
 
