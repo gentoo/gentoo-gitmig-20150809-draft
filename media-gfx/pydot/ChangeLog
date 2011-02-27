@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.16 2011/02/06 21:50:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.17 2011/02/27 16:31:02 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org> pydot-1.0.2-r1.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
 
   06 Feb 2011; Markus Meier <maekke@gentoo.org> pydot-1.0.2-r1.ebuild:
   add ~arm, bug #352300
