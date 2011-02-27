@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.21 2011/02/26 15:40:48 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.22 2011/02/27 18:55:02 chainsaw Exp $
+
+  27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> spandsp-0.0.6_pre12-r1.ebuild:
+  Mark stable on AMD64 for security bug #352059. Arch testing by Agostino "ago"
+  Sarubbo.
 
   26 Feb 2011; Thomas Kahle <tomka@gentoo.org> spandsp-0.0.6_pre12-r1.ebuild:
   x86 stable per bug 352059
