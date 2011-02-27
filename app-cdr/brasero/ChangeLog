@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.122 2011/02/24 18:33:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.123 2011/02/27 15:09:59 eva Exp $
+
+  27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> brasero-2.32.1.ebuild:
+  Pin libunique dependency to slot 1.
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> brasero-2.32.1.ebuild:
   x86 stable per bug 353436

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.6 2011/02/24 18:33:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.7 2011/02/27 15:09:59 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	>=media-libs/gstreamer-0.10.15
 	>=media-libs/gst-plugins-base-0.10
 	>=dev-libs/libxml2-2.6
-	>=dev-libs/libunique-1
+	>=dev-libs/libunique-1:1
 	x11-libs/libSM
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
 	libburn? (
