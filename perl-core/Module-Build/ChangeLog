@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.43 2011/01/30 18:17:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.44 2011/02/27 10:33:15 xarthisius Exp $
+
+  27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  Module-Build-0.362.400.ebuild:
+  Marked ~ppc/~ppc64 wrt #353115
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> Module-Build-0.362.400.ebuild:
   Add ~alpha/~arm/~ia64/~m68k/~s390/~sh/~sparc wrt #353115
