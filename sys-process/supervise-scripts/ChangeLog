@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/supervise-scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.12 2011/02/13 18:21:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.13 2011/02/27 13:51:48 ranger Exp $
+
+  27 Feb 2011; Brent Baude <ranger@gentoo.org> supervise-scripts-4.0.ebuild:
+  stable ppc, bug 353386
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> supervise-scripts-4.0.ebuild:
   alpha/sparc stable wrt #353386
