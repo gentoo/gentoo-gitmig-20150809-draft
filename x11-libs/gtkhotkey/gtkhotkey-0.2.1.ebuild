@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/gtkhotkey-0.2.1.ebuild,v 1.3 2010/04/26 07:24:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/gtkhotkey-0.2.1.ebuild,v 1.4 2011/02/27 16:04:55 serkan Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.12"
+	>=x11-libs/gtk+-2.12:2"
 
 RDEPEND="${COMMON_DEPEND}
 	virtual/libintl"
