@@ -1,6 +1,11 @@
 # ChangeLog for media-video/flvstreamer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/ChangeLog,v 1.12 2010/07/17 10:09:53 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/ChangeLog,v 1.13 2011/02/27 10:24:50 xarthisius Exp $
+
+  27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  flvstreamer-2.1c.ebuild:
+  Marked ~ppc wrt #3350153. Thanks to Michael Jorgenson <Jorgenson@cf.ac.uk>
+  for report and testing.
 
   17 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   -flvstreamer-1.8i.ebuild, -flvstreamer-1.9.ebuild,
