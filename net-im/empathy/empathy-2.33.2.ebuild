@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.11 2011/02/27 17:28:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.33.2.ebuild,v 1.1 2011/02/27 17:28:32 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -13,23 +13,22 @@ HOMEPAGE="http://live.gnome.org/Empathy"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 # FIXME: Add location support once geoclue stops being idiotic with automagic deps
-IUSE="eds nautilus networkmanager spell test webkit" # map
+IUSE="eds map nautilus networkmanager spell test webkit"
 
 # FIXME: libnotify & libcanberra hard deps
 # gst-plugins-bad is required for the valve plugin. This should move to good
 # eventually at which point the dep can be dropped
-RDEPEND=">=dev-libs/glib-2.25.9:2
+RDEPEND=">=dev-libs/glib-2.27.2:2
 	>=x11-libs/gtk+-2.22:2
 	>=dev-libs/dbus-glib-0.51
-	>=net-libs/telepathy-glib-0.11.15
+	>=net-libs/telepathy-glib-0.13.12
 	>=media-libs/libcanberra-0.4[gtk]
-	>=x11-libs/libnotify-0.4.4
+	>=x11-libs/libnotify-0.7
 	>=gnome-base/gnome-keyring-2.26
 	>=net-libs/gnutls-2.8.5
-	>=dev-libs/folks-0.1.15
-	<dev-libs/folks-0.3
+	>=dev-libs/folks-0.3.5
 
 	>=dev-libs/libunique-1.1.6:1
 	net-libs/farsight2
@@ -41,19 +40,19 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	dev-libs/libxml2
 	x11-libs/libX11
 	net-voip/telepathy-connection-managers
-	>=net-im/telepathy-logger-0.1.5
-	<net-im/telepathy-logger-0.2.0
+	>=net-im/telepathy-logger-0.2.0
 
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
+	map? (
+		>=media-libs/libchamplain-0.7.1:0.8[gtk]
+		>=media-libs/clutter-gtk-0.10:0.10 )
 	nautilus? ( >=gnome-extra/nautilus-sendto-2.31.7 )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35 )
-	webkit? ( >=net-libs/webkit-gtk-1.1.15 )"
-#	map? (
-#		>=media-libs/libchamplain-0.7.1[gtk]
-#		>=media-libs/clutter-gtk-0.10:0.10 )
+	webkit? ( >=net-libs/webkit-gtk-1.1.15 )
+"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.17.3
@@ -69,19 +68,22 @@ PDEPEND=">=net-im/telepathy-mission-control-5"
 pkg_setup() {
 	DOCS="CONTRIBUTORS AUTHORS ChangeLog NEWS README"
 
-	# Hard disable favourite_contacts and tpl, TpLogger is buggy.
+	# call support needs unreleased telepathy-farstream
 	G2CONF="${G2CONF}
+		--enable-silent-rules
+		--disable-coding-style-checks
+		--disable-schemas-compile
 		--disable-static
+		--disable-call
 		--disable-location
-		--disable-map
 		--disable-control-center-embedding
 		--disable-Werror
 		$(use_enable debug)
 		$(use_with eds)
+		$(use_enable map)
 		$(use_enable nautilus nautilus-sendto)
 		$(use_with networkmanager connectivity nm)
 		$(use_enable spell)
-		$(use_enable test coding-style-checks)
 		$(use_enable webkit)"
 
 	# Build time python tools needs python2
@@ -89,9 +91,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
-	# Remove unnecessary restriction. Should get punted from configure.ac.
-	sed -i -e '/libnotify/s:0.7:9999:' configure || die
 	gnome2_src_prepare
 	python_convert_shebangs -r 2 .
 }
@@ -99,6 +98,12 @@ src_prepare() {
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	emake check || die "emake check failed."
+}
+
+src_install() {
+	gnome2_pkg_postinst
+	# nautilus-sendto plugin doesn't need this
+	find "${ED}" -name "*.la" -delete
 }
 
 pkg_postinst() {

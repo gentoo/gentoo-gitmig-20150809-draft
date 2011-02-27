@@ -1,6 +1,13 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.76 2011/02/27 15:16:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.77 2011/02/27 17:28:32 eva Exp $
+
+*empathy-2.33.2 (27 Feb 2011)
+
+  27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> empathy-2.32.2.ebuild,
+  +empathy-2.33.2.ebuild, metadata.xml:
+  Add <folks-0.3 blocker for empathy-2.32. Bump to 2.33.2, uses new
+  telepathy-logger and folks APIs.
 
   27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> empathy-2.32.2.ebuild:
   Pin libunique dependency to slot 1.
