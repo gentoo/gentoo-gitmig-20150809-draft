@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/winki-0.4.5.ebuild,v 1.3 2008/08/31 16:04:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/winki-0.4.5.ebuild,v 1.4 2011/02/27 17:05:12 pacho Exp $
 
-inherit distutils eutils
+EAPI="3"
+
+inherit distutils
 
 DESCRIPTION="A Python frontend to many popular encoding programs."
 HOMEPAGE="http://www.winki-the-ripper.de/"
@@ -12,11 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="css dvd matroska mjpeg mp3 ogg vcd"
 DEPEND=">=dev-lang/python-2.3
-		>=dev-python/gnome-python-2
-		>=dev-python/pygtk-2
+		>=dev-python/pygtk-2:2
 		>=dev-python/pyorbit-2"
 RDEPEND="${DEPEND}
-		media-video/mplayer
+		media-video/mplayer[encode]
 		media-video/lsdvd
 		media-video/ffmpeg
 		dvd? ( media-video/dvdauthor )
@@ -30,11 +31,3 @@ RDEPEND="${DEPEND}
 		css? ( media-libs/libdvdcss )"
 
 DOCS="winkirip/README winkirip/CHANGELOG winkirip/TODO winkirip/AUTHORS"
-
-pkg_setup() {
-	if ! built_with_use media-video/mplayer encode; then
-		eerror "You need media-video/mplayer built with the \"encode\" useflag to"
-		eerror "use winki. Please rebuild mplayer with the \"encode\" useflag."
-		die "Missing \"encode\" useflag on mplayer."
-	fi
-}

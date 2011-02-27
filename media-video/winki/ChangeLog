@@ -1,6 +1,10 @@
 # ChangeLog for media-video/winki
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.21 2008/08/31 16:04:51 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.22 2011/02/27 17:05:12 pacho Exp $
+
+  27 Feb 2011; Pacho Ramos <pacho@gentoo.org> winki-0.4.5.ebuild:
+  Fix gnome-python meta DEPEND (bug #352932), bump to eapi3 to drop
+  built_with_use usage.
 
   31 Aug 2008; Brent Baude <ranger@gentoo.org> winki-0.4.5.ebuild:
   stable ppc, bug 235277
