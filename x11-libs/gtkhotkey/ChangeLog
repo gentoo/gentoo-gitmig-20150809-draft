@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkhotkey
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.11 2010/04/26 07:24:51 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.12 2011/02/27 16:09:49 serkan Exp $
+
+  27 Feb 2011; Serkan Kaba <serkan@gentoo.org>
+  -files/gtkhotkey-0.2.0-buildfixes.patch,
+  -files/gtkhotkey-0.2.0-fix-implicit-declaration.patch:
+  Remove unneeded patches.
 
   26 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gtkhotkey-0.2.1.ebuild:
