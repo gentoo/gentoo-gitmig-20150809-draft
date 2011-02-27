@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-2.2.2.ebuild,v 1.7 2011/01/28 09:55:03 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-2.2.2.ebuild,v 1.8 2011/02/27 22:00:26 dilfridge Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ KMLOADLIBS="koffice-libs"
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use_with python PythonLibs)
+		-DWITH_PythonLibs=OFF 
 		-DBUILD_kplato=ON
 	)
 

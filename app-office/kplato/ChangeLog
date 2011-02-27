@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.91 2011/02/27 21:57:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.92 2011/02/27 22:00:26 dilfridge Exp $
+
+  27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kplato-2.2.2.ebuild:
+  Dont activate new code in stable version, python remains disabled
 
   27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kplato-2.3.1.ebuild:
