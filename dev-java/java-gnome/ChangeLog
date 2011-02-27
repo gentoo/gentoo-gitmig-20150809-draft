@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.105 2011/02/14 22:47:14 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.106 2011/02/27 15:54:03 serkan Exp $
+
+  27 Feb 2011; Serkan Kaba <serkan@gentoo.org> java-gnome-4.0.15.ebuild,
+  java-gnome-4.0.16.ebuild, java-gnome-4.0.17.ebuild, java-gnome-4.0.18.ebuild,
+  java-gnome-4.0.18-r2.ebuild, java-gnome-4.0.19.ebuild:
+  Use slot deps in preparation for gtk3
 
 *java-gnome-4.0.19 (14 Feb 2011)
 *java-gnome-4.0.18-r2 (14 Feb 2011)
