@@ -1,8 +1,0 @@
-#
-# udev rules for zaptel
-#
-KERNEL=="zapctl",	NAME="zap/ctl", MODE="0660", GROUP="dialout"
-KERNEL=="zaptimer",	NAME="zap/timer", MODE="0660", GROUP="dialout"
-KERNEL=="zapchannel",	NAME="zap/channel", MODE="0660", GROUP="dialout"
-KERNEL=="zappseudo",	NAME="zap/pseudo", MODE="0660", GROUP="dialout"
-KERNEL=="zap[0-9]*",	NAME="zap/%n", MODE="0660", GROUP="dialout"

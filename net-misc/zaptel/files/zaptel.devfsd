@@ -1,6 +1,0 @@
-#
-# devfs rules for zaptel
-#
-REGISTER     ^zap		PERMISSIONS root.dialout rwxrwx---
-REGISTER     ^zap/.*		PERMISSIONS root.dialout rw-rw----
-REGISTER     ^zap/span[0-9]*	PERMISSIONS root.dialout rwxrwx---
