@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.238 2011/02/27 17:00:49 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.239 2011/02/27 22:59:09 blueness Exp $
+
+  27 Feb 2011; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.1.29.ebuild:
+  Reverted removal of only stable ebuild on most arches.
 
 *tor-0.2.1.30 (27 Feb 2011)
 
