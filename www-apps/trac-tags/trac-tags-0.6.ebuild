@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-tags/trac-tags-0.6.ebuild,v 1.1 2011/02/27 16:41:01 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-tags/trac-tags-0.6.ebuild,v 1.2 2011/02/27 16:46:23 rafaelmartins Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://trac-hacks.org/wiki/TagsPlugin"
 SRC_URI="http://trac-hacks.org/changeset/${MY_REV}/${MY_DIR}?old_path=%2F&format=zip
 	-> ${P}.zip"
 
-LICENSE="GPL-3"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
