@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.92 2011/02/26 07:52:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.93 2011/02/27 21:41:20 hwoarang Exp $
+
+  27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> mysql-ruby-2.8.2.ebuild:
+  Stable on amd64 wrt bug #356549
 
 *mysql-ruby-2.8.2-r1 (26 Feb 2011)
 
