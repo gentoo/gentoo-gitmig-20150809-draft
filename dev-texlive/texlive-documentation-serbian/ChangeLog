@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-serbian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.5 2011/02/20 09:59:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.6 2011/02/27 16:00:12 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  texlive-documentation-serbian-2010.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   texlive-documentation-serbian-2010.ebuild:
