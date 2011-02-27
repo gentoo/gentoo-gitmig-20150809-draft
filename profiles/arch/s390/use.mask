@@ -49,6 +49,9 @@ java-internal
 java-external
 hardened
 
+# Needs java
+pdfannotextractor
+
 # don't quite know about this one, I'll need to revisit
 socks5
 

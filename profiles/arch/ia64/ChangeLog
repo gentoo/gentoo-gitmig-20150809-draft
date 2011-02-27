@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.99 2011/01/30 18:25:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.100 2011/02/27 16:16:47 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask pdfannotextractor
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask quvi

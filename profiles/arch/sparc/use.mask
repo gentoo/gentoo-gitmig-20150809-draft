@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.66 2011/01/30 18:26:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.67 2011/02/27 16:17:45 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -52,6 +52,9 @@ dar64
 # 2006/09/05 - Tupone Alfredo <tupone@gentoo.org>
 # doomsday ebuild is not available on this architecture
 doomsday
+
+# Needs java
+pdfannotextractor
 
 # Stuff that won't ever work on sparc
 3dfx

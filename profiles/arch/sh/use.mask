@@ -13,6 +13,7 @@ hardened
 java
 java-internal
 java-external
+pdfannotextractor
 
 # broken upstream, see libavcodec/sh4/idct_sh4.c:#error
 ffmpeg
