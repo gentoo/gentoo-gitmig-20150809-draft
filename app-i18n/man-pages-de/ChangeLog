@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/man-pages-de
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.10 2010/02/20 21:57:07 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.11 2011/02/27 16:41:33 jmbsvicetto Exp $
+
+*man-pages-de-0.8 (27 Feb 2011)
+*man-pages-de-0.7 (27 Feb 2011)
+
+  27 Feb 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +man-pages-de-0.7.ebuild, +man-pages-de-0.8.ebuild:
+  Non-maintainer commit.
+  Added new versions of man-pages-de from a new upstream. Thanks to Tobias
+  Quathamer <t.quathamer AT gmx DOT net> - fixes bug 356205.
 
   20 Feb 2010; Ulrich Mueller <ulm@gentoo.org> man-pages-de-0.5-r1.ebuild:
   Fix LICENSE.
