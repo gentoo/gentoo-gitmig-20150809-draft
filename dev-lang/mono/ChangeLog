@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.210 2011/01/29 17:02:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.211 2011/02/27 12:52:41 pacho Exp $
+
+*mono-2.10.1 (27 Feb 2011)
+
+  27 Feb 2011; Pacho Ramos <pacho@gentoo.org> +mono-2.10.1.ebuild,
+  +files/mono-2.10.1-libdir.patch:
+  Version bump to 2.10, build against system boehm (bug #252547 by Diego Elio
+  Pettenò), drop some no longer needed changes at src_install.
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> mono-2.8.2-r1.ebuild:
   Stable on amd64 wrt bug #352808
