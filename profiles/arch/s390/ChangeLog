@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.35 2011/02/27 16:18:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.36 2011/02/27 16:43:25 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org> -package.mask:
+  Punt package.mask
 
   27 Feb 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask pdfannotextractor
