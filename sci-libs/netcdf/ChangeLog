@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.81 2011/01/29 20:17:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.82 2011/02/27 10:28:15 klausman Exp $
+
+  27 Feb 2011; Tobias Klausmann <klausman@gentoo.org> netcdf-4.1.1-r4.ebuild:
+  Stable on alpha, bug #325069
 
   29 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   files/netcdf-4.1.1-parallel-build.patch:
