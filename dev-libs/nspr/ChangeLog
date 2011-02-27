@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.155 2011/01/14 13:37:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.156 2011/02/27 10:14:49 grobian Exp $
+
+  27 Feb 2011; Fabian Groffen <grobian@gentoo.org> nspr-4.8.7.ebuild:
+  Change from file to scanelf/scanmacho, such that detection of platform
+  bitwidth is easier and less prone to changes across systems and output of
+  file, bug #354483
 
 *nspr-4.8.7 (14 Jan 2011)
 
