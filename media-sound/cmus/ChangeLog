@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cmus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.39 2010/10/12 10:33:08 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.40 2011/02/27 15:20:37 fauli Exp $
+
+*cmus-2.3.4 (27 Feb 2011)
+
+  27 Feb 2011; Christian Faulhammer <fauli@gentoo.org> +cmus-2.3.4.ebuild:
+  version bump, fixes bug 356667 by radhermit
 
   12 Oct 2010; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   remove zsh-completion USE flag description as it is the same as the global
