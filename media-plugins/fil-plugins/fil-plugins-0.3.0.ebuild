@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/fil-plugins-0.3.0.ebuild,v 1.1 2009/08/04 08:01:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/fil-plugins-0.3.0.ebuild,v 1.2 2011/02/27 10:27:12 aballier Exp $
 
 inherit multilib toolchain-funcs eutils
 
@@ -31,8 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS README
+	dodoc AUTHORS README || die
 	insinto /usr/$(get_libdir)/ladspa
 	insopts -m0755
-	doins *.so
+	doins *.so || die
 }
