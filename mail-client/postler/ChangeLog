@@ -1,0 +1,9 @@
+# ChangeLog for mail-client/postler
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.1 2011/02/27 10:56:23 angelos Exp $
+
+*postler-0.1.0 (27 Feb 2011)
+
+  27 Feb 2011; <angelos@gentoo.org> +postler-0.1.0.ebuild:
+  Initial import
+
