@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IPC-Cmd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.23 2011/02/27 10:12:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.24 2011/02/27 11:30:10 grobian Exp $
+
+  27 Feb 2011; Fabian Groffen <grobian@gentoo.org> perl-IPC-Cmd-0.700.ebuild:
+  Add Prefix keywords, bug #351526
 
   27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   perl-IPC-Cmd-0.700.ebuild:
