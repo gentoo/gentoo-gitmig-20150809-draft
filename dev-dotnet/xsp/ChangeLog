@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.91 2011/01/29 17:06:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.92 2011/02/27 13:11:00 pacho Exp $
+
+*xsp-2.10 (27 Feb 2011)
+
+  27 Feb 2011; Pacho Ramos <pacho@gentoo.org> +xsp-2.10.ebuild:
+  Version bump for mono-2.10
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> xsp-2.8.2.ebuild:
   Stable on amd64 wrt bug #352808
