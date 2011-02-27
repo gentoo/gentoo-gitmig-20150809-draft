@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Metadata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.5 2011/02/27 10:32:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.6 2011/02/27 11:47:09 grobian Exp $
+
+  27 Feb 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-Module-Metadata-1.0.4.ebuild:
+  Add Prefix keywords, bug #353115
 
   27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   perl-Module-Metadata-1.0.4.ebuild:
