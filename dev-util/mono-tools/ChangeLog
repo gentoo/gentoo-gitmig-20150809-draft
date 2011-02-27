@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.78 2011/01/29 17:06:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.79 2011/02/27 13:30:01 pacho Exp $
+
+*mono-tools-2.10 (27 Feb 2011)
+
+  27 Feb 2011; Pacho Ramos <pacho@gentoo.org> +mono-tools-2.10.ebuild:
+  Version bump for mono-2.10
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> mono-tools-2.8.ebuild:
   Stable on amd64 wrt bug #352808
