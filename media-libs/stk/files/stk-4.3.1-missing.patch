@@ -1,4 +1,0 @@
---- /dev/null	2008-06-04 20:47:47.568000746 +0200
-+++ stk-4.3.1/projects/demo/Banded	2008-07-04 03:35:48.000000000 +0200
-@@ -0,0 +1 @@
-+wish < tcl/Banded.tcl | ./demo BandedWG -or -ip
