@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.6.0.ebuild,v 1.1 2011/01/26 20:28:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.6.0.ebuild,v 1.2 2011/02/27 13:31:29 dilfridge Exp $
 
 EAPI="3"
 
@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="consolekit debug kerberos pam"
 
 DEPEND="
+	$(add_kdebase_dep libkworkspace)
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	x11-libs/libXtst

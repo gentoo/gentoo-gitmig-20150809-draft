@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.236 2011/01/26 20:28:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.237 2011/02/27 13:31:29 dilfridge Exp $
+
+  27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org> kdm-4.6.0.ebuild:
+  Add missing dependency on libkworkspace, bug 354987
 
 *kdm-4.6.0 (26 Jan 2011)
 
