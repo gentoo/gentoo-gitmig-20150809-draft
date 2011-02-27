@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imdbpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.9 2011/01/26 19:57:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.10 2011/02/27 20:49:24 hwoarang Exp $
+
+  27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> imdbpy-4.7.ebuild:
+  Stable on amd64 wrt bug #356439
 
 *imdbpy-4.7 (26 Jan 2011)
 
