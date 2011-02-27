@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.49 2011/02/26 18:15:20 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.50 2011/02/27 13:54:03 dilfridge Exp $
+
+*kphotoalbum-4.1.1-r1 (27 Feb 2011)
+
+  27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kphotoalbum-4.1.1.ebuild, +kphotoalbum-4.1.1-r1.ebuild,
+  +files/kphotoalbum-4.1.1-exiv2.patch:
+  Added upstream patch to fix compilation with exiv2-0.21, bug 349535
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> kphotoalbum-4.1.1.ebuild:
   Updated depends from media-libs/jpeg to virtual/jpeg
