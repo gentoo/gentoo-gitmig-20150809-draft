@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.62 2011/02/21 00:52:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.63 2011/02/27 18:17:29 ranger Exp $
+
+  27 Feb 2011; Brent Baude <ranger@gentoo.org> m2crypto-0.21.1.ebuild:
+  stable ppc, bug 355267
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> m2crypto-0.21.1.ebuild:
   Stable for HPPA (bug #355267).
