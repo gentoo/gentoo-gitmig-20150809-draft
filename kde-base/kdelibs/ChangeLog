@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.718 2011/02/02 11:13:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.719 2011/02/27 20:48:57 dilfridge Exp $
+
+  27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.6.0-r1.ebuild, +files/kdelibs-4.6.0-kateacc.patch:
+  Include no accessibility fix, bug 355969
 
 *kdelibs-4.6.0-r1 (02 Feb 2011)
 
