@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/caps-plugins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.25 2009/11/14 14:49:29 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.26 2011/02/27 10:12:43 aballier Exp $
+
+  27 Feb 2011; Alexis Ballier <aballier@gentoo.org> caps-plugins-0.4.4.ebuild:
+  use cxxflags with g++, add missing die's
 
   14 Nov 2009; Alexis Ballier <aballier@gentoo.org>
   -files/caps-plugins-0.1.10-fpic.patch, -caps-plugins-0.3.0-r1.ebuild,
