@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.29.ebuild,v 1.6 2011/01/24 21:12:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.30.ebuild,v 1.1 2011/02/27 17:00:49 chiiph Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl
@@ -55,12 +55,14 @@ src_install() {
 	keepdir /var/{lib,log,run}/tor
 
 	dodoc README ChangeLog AUTHORS ReleaseNotes \
-		doc/{HACKING,TODO} \
-		doc/spec/*.txt
+		doc/{HACKING,TODO}
 
 	fperms 750 /var/lib/tor /var/log/tor
 	fperms 755 /var/run/tor
 	fowners tor:tor /var/lib/tor /var/log/tor /var/run/tor
+
+	insinto /etc/tor/
+	doins "${FILESDIR}"/torrc
 
 	insinto /etc/logrotate.d
 	newins contrib/tor.logrotate tor
@@ -71,9 +73,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You must create /etc/tor/torrc, you can use the sample that is in that directory"
-	elog "To have privoxy and tor working together you must add:"
+	elog
+	elog "We created a configuration file for tor, /etc/tor/torrc, but you can"
+	elog "change it according to your needs.  Use the torrc.sample that is in"
+	elog "that directory as a guide.  Also, to have privoxy work with tor"
+	elog "just add the following line"
+	elog
 	elog "forward-socks4a / localhost:9050 ."
-	elog "(notice the . at the end of the line)"
-	elog "to /etc/privoxy/config"
+	elog
+	elog "to /etc/privoxy/config.  Notice the . at the end!"
+	elog
 }
