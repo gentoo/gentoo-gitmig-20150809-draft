@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.71 2011/02/24 18:35:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.72 2011/02/27 16:42:20 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org> texlive-2010-r1.ebuild,
+  texlive-2010-r2.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
 
   24 Feb 2011; Jeroen Roovers <jer@gentoo.org> texlive-2010-r2.ebuild:
   Marked ~hppa (bug #355353).
