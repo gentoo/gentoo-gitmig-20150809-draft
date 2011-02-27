@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.86 2011/02/04 13:30:06 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.87 2011/02/27 21:42:24 dilfridge Exp $
+
+  27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkworkspace-4.6.0.ebuild:
+  Add missing dependencies on libxkbfile and libXcomposite, bug 356587
 
   04 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   libkworkspace-4.6.0.ebuild:
