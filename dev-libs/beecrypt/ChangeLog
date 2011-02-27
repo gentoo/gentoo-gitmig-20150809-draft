@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.73 2011/02/26 08:40:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.74 2011/02/27 11:13:19 klausman Exp $
+
+  27 Feb 2011; Tobias Klausmann <klausman@gentoo.org> beecrypt-4.2.1.ebuild:
+  Stable on alpha, bug #342387
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> beecrypt-4.2.1.ebuild:
   ppc64 stable wrt #342387
