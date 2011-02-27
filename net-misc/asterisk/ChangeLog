@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.294 2011/02/26 19:01:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.295 2011/02/27 19:04:18 chainsaw Exp $
+
+  27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> asterisk-1.6.2.16.2-r2.ebuild:
+  Mark stable on AMD64 for security bug #352059. Arch testing by Agostino "ago"
+  Sarubbo.
 
 *asterisk-1.6.2.16.2-r2 (26 Feb 2011)
 
