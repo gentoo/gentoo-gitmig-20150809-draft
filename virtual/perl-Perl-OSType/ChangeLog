@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Perl-OSType
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.4 2011/02/27 10:31:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Perl-OSType/ChangeLog,v 1.5 2011/02/27 11:59:58 grobian Exp $
+
+  27 Feb 2011; Fabian Groffen <grobian@gentoo.org> perl-Perl-OSType-1.2.ebuild:
+  Add Prefix keywords, bug #353115
 
   27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   perl-Perl-OSType-1.2.ebuild:
