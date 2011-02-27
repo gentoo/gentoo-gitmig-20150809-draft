@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.126 2011/02/24 12:00:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.127 2011/02/27 21:57:00 dilfridge Exp $
+
+  27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kspread-2.3.1.ebuild:
+  Cleanup
 
 *kspread-2.3.3 (24 Feb 2011)
 
