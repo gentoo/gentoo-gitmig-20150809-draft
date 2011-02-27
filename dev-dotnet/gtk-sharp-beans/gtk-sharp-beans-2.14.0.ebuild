@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-beans/gtk-sharp-beans-2.14.0.ebuild,v 1.1 2011/02/27 19:26:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-beans/gtk-sharp-beans-2.14.0.ebuild,v 1.2 2011/02/27 19:32:08 ssuominen Exp $
 
 EAPI=2
 inherit autotools mono
@@ -37,4 +37,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README
+
+	mono_multilib_comply
 }
