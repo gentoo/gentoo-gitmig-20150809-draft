@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.25 2011/02/24 06:49:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.26 2011/02/27 21:56:49 hwoarang Exp $
+
+  27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> syntax-1.0.0-r2.ebuild:
+  Stable on amd64 wrt bug #356269
 
 *syntax-1.0.0-r3 (24 Feb 2011)
 

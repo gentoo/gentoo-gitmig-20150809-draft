@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.2.1.ebuild,v 1.10 2010/10/23 15:41:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.2.1.ebuild,v 1.11 2011/02/27 21:56:33 hwoarang Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://github.com/defunkt/fakefs"
 
 LICENSE="as-is" # truly
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 all_ruby_prepare() {
