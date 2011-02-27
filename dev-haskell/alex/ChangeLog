@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.44 2011/02/25 12:44:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.45 2011/02/27 20:15:23 slyfox Exp $
+
+  27 Feb 2011; Sergei Trofimovich <slyfox@gentoo.org> -alex-2.1.0.ebuild,
+  -alex-2.2.ebuild:
+  removed old
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> alex-2.3.2.ebuild:
   ppc/ppc64 stable wrt #339161
