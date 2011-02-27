@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.173 2011/01/31 19:52:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.174 2011/02/27 12:09:48 klausman Exp $
+
+  27 Feb 2011; Tobias Klausmann <klausman@gentoo.org> libpcre-8.02.ebuild:
+  Stable on alpha, bug #348487
 
 *libpcre-8.12 (31 Jan 2011)
 
