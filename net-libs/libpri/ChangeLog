@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.84 2011/02/27 18:53:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.85 2011/02/27 19:40:00 chainsaw Exp $
+
+  27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> -libpri-1.2.5.ebuild:
+  The 1.2.5 ebuild was dependent upon Asterisk 1.2 & zaptel and has no
+  standalone functionality to offer now that these has been removed from the
+  tree. Arch teams have signed off on the loss of keywords for Asterisk &
+  related packages.
 
   27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> libpri-1.4.11.4.ebuild:
   Mark stable on AMD64 for security bug #352059. Arch testing by Agostino "ago"
