@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.2.0-r4.ebuild,v 1.5 2011/02/11 20:33:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.2.0-r4.ebuild,v 1.6 2011/02/27 11:55:04 dilfridge Exp $
 
 EAPI=3
 
@@ -43,6 +43,7 @@ CDEPEND="
 	geolocation? ( >=kde-base/marble-${KDE_MINIMAL} )
 	gphoto2? ( media-libs/libgphoto2 )
 	lensfun? ( media-libs/lensfun )
+	<kde-base/kdelibs-4.6
 "
 RDEPEND="${CDEPEND}
 	>=kde-base/kreadconfig-${KDE_MINIMAL}
