@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.4-r1.ebuild,v 1.1 2010/11/17 16:35:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.4-r1.ebuild,v 1.2 2011/02/27 14:26:39 hwoarang Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -23,7 +23,7 @@ DEPEND=">=virtual/jdk-1.6
 		${COMMON_DEP}"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 S="${WORKDIR}/${P}-src"
