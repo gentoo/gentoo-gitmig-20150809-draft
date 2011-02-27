@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.295 2011/02/27 19:04:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.296 2011/02/27 19:14:53 chainsaw Exp $
+
+  27 Feb 2011; Tony Vroon <chainsaw@gentoo.org>
+  -files/1.0.0/asterisk-1.0.5-uclibc-dns.diff,
+  -files/1.2.0/asterisk-1.2.1-uclibc-getloadavg.diff,
+  -files/1.2.0/asterisk-1.2.21.1-h323-dumb-makefile.diff,
+  -files/1.2.0/asterisk-1.2.35-lpc10-prototypes.diff,
+  -files/1.2.0/asterisk.confd, -files/1.2.0/asterisk.rc6,
+  -files/1.2.0/asterisk-updater, -files/1.4.0/asterisk.confd,
+  -files/1.2.0/asterisk-1.2.31.1-comma-is-not-pipe.diff,
+  -files/1.4.0/asterisk.initd, -files/1.4.0/asterisk.logrotate,
+  -files/1.4.0/func_devstate-r6.c, -files/1.4.0/func_volume.c,
+  -asterisk-1.2.37.ebuild, -asterisk-1.2.40.ebuild,
+  -asterisk-1.4.39.1-r1.ebuild:
+  Remove insecure ebuilds now that security stabilisation has been completed.
+  Arch teams have signed off on their loss of keywording for this package.
 
   27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> asterisk-1.6.2.16.2-r2.ebuild:
   Mark stable on AMD64 for security bug #352059. Arch testing by Agostino "ago"
