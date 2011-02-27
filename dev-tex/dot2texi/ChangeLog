@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.8 2011/02/20 15:50:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.9 2011/02/27 16:39:16 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org> dot2texi-3.0.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> dot2texi-3.0.ebuild:
   Marked ~ppc/~ppc64 wrt #352300
