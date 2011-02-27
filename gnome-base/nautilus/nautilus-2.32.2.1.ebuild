@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.32.2.1.ebuild,v 1.3 2011/02/24 19:21:57 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.32.2.1.ebuild,v 1.4 2011/02/27 15:10:14 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.25.9
 	>=dev-libs/libxml2-2.4.7
 	>=media-libs/libexif-0.5.12
 	>=gnome-base/gconf-2
-	dev-libs/libunique
+	dev-libs/libunique:1
 	x11-libs/libXext
 	x11-libs/libXrender
 	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )
