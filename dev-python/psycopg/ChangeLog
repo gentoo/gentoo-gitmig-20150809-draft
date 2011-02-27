@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.118 2011/02/08 22:51:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.119 2011/02/27 23:53:48 arfrever Exp $
+
+*psycopg-2.4 (27 Feb 2011)
+
+  27 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +psycopg-2.4.ebuild:
+  Version bump.
 
   08 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -psycopg-2.0.14.ebuild, -psycopg-2.2.2.ebuild, -psycopg-2.3.1.ebuild:
