@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.9 2011/02/27 09:10:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.10 2011/02/27 15:45:11 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  kpathsea-6.0.0_p20100722.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
 
   27 Feb 2011; Fabian Groffen <grobian@gentoo.org>
   kpathsea-6.0.0_p20100722.ebuild:
