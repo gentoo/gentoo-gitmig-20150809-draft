@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.11 2011/02/25 21:48:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.12 2011/02/27 15:13:31 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -21,7 +21,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.26.1-r1:2
 	>=x11-libs/libnotify-0.4.3
 	>=gnome-base/gconf-2.6
 	>=dev-libs/dbus-glib-0.74
-	dev-libs/libunique
+	dev-libs/libunique:1
 	nautilus? ( >=gnome-extra/nautilus-sendto-2.31.7 )"
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-4.34
