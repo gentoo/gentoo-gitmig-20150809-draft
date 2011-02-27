@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.0.0_p20100722.ebuild,v 1.8 2011/02/20 09:31:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.0.0_p20100722.ebuild,v 1.9 2011/02/27 09:10:28 grobian Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc source static-libs"
 
 DEPEND="!<app-text/texlive-core-2010
@@ -49,13 +49,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" web2cdir="/usr/share/texmf/web2c" install || die
+	emake DESTDIR="${D}" web2cdir="${EPREFIX}/usr/share/texmf/web2c" install || die
 	find "${D}" -name '*.la' -delete
 
 	dodir /usr/share # just in case
-	cp -pR "${WORKDIR}"/texmf "${D}/usr/share/" || die "failed to install texmf trees"
+	cp -pR "${WORKDIR}"/texmf "${ED}/usr/share/" || die "failed to install texmf trees"
 	if use source ; then
-		cp -pR "${WORKDIR}"/tlpkg "${D}/usr/share/" || die "failed to install tlpkg files"
+		cp -pR "${WORKDIR}"/tlpkg "${ED}/usr/share/" || die "failed to install tlpkg files"
 	fi
 
 	# The default configuration expects it to be world writable, bug #266680
@@ -69,14 +69,14 @@ src_install() {
 	# Remove default texmf.cnf to ship our own, greatly based on texlive dvd's
 	# texmf.cnf
 	# It will also be generated from /etc/texmf/texmf.d files by texmf-update
-	rm -f "${D}${TEXMF_PATH}/web2c/texmf.cnf"
+	rm -f "${ED}${TEXMF_PATH}/web2c/texmf.cnf"
 
 	insinto /etc/texmf/texmf.d
 	doins "${WORKDIR}/texmf.d/"*.cnf || die "failed to install texmf.d configuration files"
 
 	# Remove fmtutil.cnf, it will be regenerated from /etc/texmf/fmtutil.d files
 	# by texmf-update
-	rm -f "${D}${TEXMF_PATH}/web2c/fmtutil.cnf"
+	rm -f "${ED}${TEXMF_PATH}/web2c/fmtutil.cnf"
 
 	dosym /etc/texmf/web2c/fmtutil.cnf ${TEXMF_PATH}/web2c/fmtutil.cnf
 	dosym /etc/texmf/web2c/texmf.cnf ${TEXMF_PATH}/web2c/texmf.cnf
