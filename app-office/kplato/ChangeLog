@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.89 2011/02/24 12:00:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.90 2011/02/27 21:50:50 dilfridge Exp $
+
+  27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kplato-2.3.3.ebuild:
+  Added missing python in IUSE
 
 *kplato-2.3.3 (24 Feb 2011)
 
