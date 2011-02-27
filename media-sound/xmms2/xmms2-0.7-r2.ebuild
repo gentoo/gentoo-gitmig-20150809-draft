@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.8 2011/02/25 20:03:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r2.ebuild,v 1.9 2011/02/27 16:09:29 fauli Exp $
 
 EAPI=3
 
@@ -28,8 +28,9 @@ RDEPEND="server? (
 		airplay? ( dev-libs/openssl )
 		alsa? ( media-libs/alsa-lib )
 		ao? ( media-libs/libao )
-		avahi? ( net-dns/avahi )
-		cdda? ( >=media-libs/libdiscid-0.1.1
+		avahi? ( net-dns/avahi[mdnsresponder-compat] )
+		cdda? ( dev-libs/libcdio
+			>=media-libs/libdiscid-0.1.1
 			>=media-sound/cdparanoia-3.9.8 )
 		curl? ( >=net-misc/curl-7.15.1 )
 		ffmpeg? ( media-video/ffmpeg )

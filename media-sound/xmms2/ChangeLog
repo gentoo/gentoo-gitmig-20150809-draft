@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.9 2011/02/25 20:03:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.10 2011/02/27 16:09:29 fauli Exp $
+
+  27 Feb 2011; Christian Faulhammer <fauli@gentoo.org> xmms2-0.7-r2.ebuild:
+  Correct dependencies as outlined by Andreas Schürch <andreas DOT schuerch
+  AT nativenet.ch> in bug 354061
 
   25 Feb 2011; Brent Baude <ranger@gentoo.org> xmms2-0.7-r2.ebuild:
   Marking xmms2-0.7-r2 ppc for bug 354061
