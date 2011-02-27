@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.75 2011/02/26 12:31:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.76 2011/02/27 20:47:52 hwoarang Exp $
+
+  27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> bluez-4.87.ebuild:
+  Stable on amd64 wrt bug #356255
 
   26 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> bluez-4.89.ebuild:
   Replace sys-auth/pambase[consolekit] RDEPEND with sys-auth/consolekit because
