@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.85 2011/02/27 19:40:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.86 2011/02/27 19:46:36 chainsaw Exp $
+
+  27 Feb 2011; Tony Vroon <chainsaw@gentoo.org>
+  -files/libpri-1.2.5-gcc42.patch, -files/libpri-1.2.5-gentoo.diff,
+  -files/libpri-1.2.5-multilib.patch, -libpri-1.4.9.ebuild,
+  -files/libpri-1.4.9-multilib.patch, -files/libpri-1.4.9-respect-cflags.patch,
+  -libpri-1.4.10.1.ebuild, -libpri-1.4.10.2.ebuild,
+  -files/libpri-1.4.10.2-respect-ldflags.patch, -libpri-1.4.11.1.ebuild,
+  -libpri-1.4.11.2.ebuild, -libpri-1.4.11.3.ebuild:
+  Remove old ebuilds & patches up to current stable.
 
   27 Feb 2011; Tony Vroon <chainsaw@gentoo.org> -libpri-1.2.5.ebuild:
   The 1.2.5 ebuild was dependent upon Asterisk 1.2 & zaptel and has no
