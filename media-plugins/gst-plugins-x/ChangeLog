@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-x
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.105 2011/02/24 07:49:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.106 2011/02/27 15:32:08 ranger Exp $
+
+  27 Feb 2011; Brent Baude <ranger@gentoo.org> gst-plugins-x-0.10.31.ebuild:
+  Marking gst-plugins-x-0.10.31 ppc stable for bug 353434
 
 *gst-plugins-x-0.10.32 (24 Feb 2011)
 
