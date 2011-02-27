@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.9 2011/02/25 23:31:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.10 2011/02/27 15:16:28 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	>=net-libs/gnutls-2.8.5
 	>=dev-libs/folks-0.1.15
 
-	>=dev-libs/libunique-1.1.6
+	>=dev-libs/libunique-1.1.6:1
 	net-libs/farsight2
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
