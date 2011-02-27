@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.2.ebuild,v 1.3 2011/02/24 20:34:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.2.ebuild,v 1.4 2011/02/27 10:45:51 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ IUSE="cdr exif gnome-keyring gstreamer http raw slideshow tiff test"
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.20:2
 	>=gnome-base/gconf-2.6
-	>=dev-libs/libunique-1.1.2
+	>=dev-libs/libunique-1.1.2:1
 	media-libs/libpng:0
 	virtual/jpeg:0
 	cdr? ( >=app-cdr/brasero-2.28 )

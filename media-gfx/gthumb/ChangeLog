@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.125 2011/02/24 20:34:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.126 2011/02/27 10:45:51 eva Exp $
+
+  27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> -gthumb-2.12.0.ebuild,
+  -gthumb-2.12.1.ebuild, gthumb-2.12.2.ebuild:
+  Pin libunique dependency to slot 1. Clean up old revisions.
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> gthumb-2.12.2.ebuild:
   x86 stable per bug 353436
