@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.4-r1.ebuild,v 1.1 2011/01/07 05:10:33 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/gnomad-2.9.4-r1.ebuild,v 1.2 2011/02/27 22:10:54 hwoarang Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="nls"
 
 RDEPEND="sys-apps/hal
