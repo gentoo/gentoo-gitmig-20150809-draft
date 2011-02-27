@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.6.0.ebuild,v 1.1 2011/01/26 20:29:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.6.0.ebuild,v 1.2 2011/02/27 15:32:11 dilfridge Exp $
 EAPI="3"
 
 KDE_HANDBOOK="optional"
@@ -12,6 +12,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug fits indi"
 
 DEPEND="
+	dev-cpp/eigen
 	$(add_kdebase_dep libkdeedu)
 	fits? ( >=sci-libs/cfitsio-0.390 )
 	indi? ( >=sci-libs/indilib-0.6.2[fits?] )
