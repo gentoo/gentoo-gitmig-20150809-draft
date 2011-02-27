@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.01.ebuild,v 1.1 2011/01/23 07:50:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.01.ebuild,v 1.2 2011/02/27 22:11:42 hwoarang Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://download.gna.org/warmux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug nls unicode"
 
 RDEPEND="media-libs/libsdl[joystick,video]
