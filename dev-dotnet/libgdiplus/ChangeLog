@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.127 2011/01/29 17:05:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.128 2011/02/27 12:46:28 pacho Exp $
+
+*libgdiplus-2.10 (27 Feb 2011)
+
+  27 Feb 2011; Pacho Ramos <pacho@gentoo.org> +libgdiplus-2.10.ebuild,
+  +files/libgdiplus-2.10.1-libpng15.patch, -libgdiplus-9999.ebuild:
+  Version bump for mono-2.10, remove 9999 as we don't support neither maintain
+  it. Fix libpng-1.5 building (bug #355113 by Lars Wendler).
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> libgdiplus-2.8.1.ebuild:
   Stable on amd64 wrt bug #352808

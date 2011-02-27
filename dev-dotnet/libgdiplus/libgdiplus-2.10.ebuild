@@ -1,25 +1,20 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-9999.ebuild,v 1.6 2010/11/07 22:06:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.10.ebuild,v 1.1 2011/02/27 12:46:28 pacho Exp $
 
 EAPI=2
 
-EGIT_REPO_URI="http://github.com/mono/${PN}.git"
-EGIT_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR:-${DISTDIR}}/git-src/${P}"
-
-inherit go-mono mono flag-o-matic git autotools
+inherit eutils go-mono mono flag-o-matic
 
 DESCRIPTION="Library for using System.Drawing with mono"
-HOMEPAGE="http://www.go-mono.com/"
-
-SRC_URI=""
+HOMEPAGE="http://www.mono-project.com"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="cairo"
 
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 		>=media-libs/freetype-2.3.7
 		>=media-libs/fontconfig-2.6
 		>=media-libs/libpng-1.4
@@ -36,9 +31,9 @@ DEPEND="${RDEPEND}"
 
 RESTRICT="test"
 
+PATCHES=( "${FILESDIR}/${PN}-2.10.1-libpng15.patch" )
+
 src_prepare() {
-	rm -rf cairo pixman
-	sed -i -e 's:pixman cairo::' Makefile.am || die
 	go-mono_src_prepare
 	sed -i -e 's:ungif:gif:g' configure || die
 }
