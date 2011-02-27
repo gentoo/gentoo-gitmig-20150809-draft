@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.1.ebuild,v 1.3 2011/02/24 20:40:51 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.1.ebuild,v 1.4 2011/02/27 15:11:07 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.17:2
 	>=gnome-base/gconf-2
 	>=sys-apps/dbus-1.2.3
 	>=net-libs/libsoup-2.24:2.4
-	>=dev-libs/libunique-1
+	>=dev-libs/libunique-1:1
 	dev-libs/dbus-glib
 	x11-libs/libXext
 	x11-libs/libXtst
