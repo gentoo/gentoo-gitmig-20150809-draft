@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1.ebuild,v 1.1 2011/02/27 12:52:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1-r1.ebuild,v 1.1 2011/02/27 14:52:48 pacho Exp $
 
 EAPI="2"
 
@@ -101,8 +101,7 @@ src_configure() {
 		--without-ikvm-native \
 		--with-jit \
 		--disable-dtrace \
-		--with-profile4 \
-		--with-gc=boehm
+		--with-profile4
 }
 
 src_test() {
