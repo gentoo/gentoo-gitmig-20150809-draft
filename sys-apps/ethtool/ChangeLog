@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.63 2011/02/27 14:16:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.64 2011/02/27 14:59:38 klausman Exp $
+
+  27 Feb 2011; Tobias Klausmann <klausman@gentoo.org> ethtool-2.6.36.ebuild:
+  Stable on alpha, bug #355713
 
   27 Feb 2011; Brent Baude <ranger@gentoo.org> ethtool-2.6.36.ebuild:
   stable ppc, bug 355713
