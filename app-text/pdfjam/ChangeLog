@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdfjam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.28 2010/12/26 01:36:50 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.29 2011/02/27 16:00:06 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org> pdfjam-2.05.ebuild,
+  pdfjam-2.08.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
 
 *pdfjam-2.08 (26 Dec 2010)
 

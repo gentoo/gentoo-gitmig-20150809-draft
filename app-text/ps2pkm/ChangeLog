@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ps2pkm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.6 2011/02/20 09:53:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.7 2011/02/27 15:56:45 armin76 Exp $
+
+  27 Feb 2011; Raúl Porcel <armin76@gentoo.org> ps2pkm-1.5_p20100722.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ps2pkm-1.5_p20100722.ebuild:
