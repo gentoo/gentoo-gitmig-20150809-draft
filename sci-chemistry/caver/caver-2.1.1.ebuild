@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-2.1.1.ebuild,v 1.1 2011/01/17 19:08:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-2.1.1.ebuild,v 1.2 2011/02/27 09:58:22 xarthisius Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="${MY_P}.zip"
 
 LICENSE="CAVER"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
