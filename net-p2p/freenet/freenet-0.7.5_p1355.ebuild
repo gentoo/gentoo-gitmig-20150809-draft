@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1355.ebuild,v 1.1 2011/02/17 18:58:02 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1355.ebuild,v 1.2 2011/02/27 10:31:31 tommy Exp $
 
 EAPI="2"
-DATE=20110212
+DATE=20110227
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib
@@ -41,7 +41,7 @@ PDEPEND="net-libs/NativeThread
 
 EANT_BUILD_TARGET="package"
 EANT_BUILD_XML="build-clean.xml"
-EANT_GENTOO_CLASSPATH="ant-core db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
+EANT_GENTOO_CLASSPATH="db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
 EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.junit.present=true"
 use test || export EANT_EXTRA_ARGS+=" -Dtest.skip=true"
 use test && EANT_GENTOO_CLASSPATH+=" junit"
@@ -74,6 +74,7 @@ src_prepare() {
 		freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath "${EANT_BUILD_XML}"
+	cp "${DISTDIR}"/freenet-ant-1.7.1.jar lib/ant.jar || die
 	java-pkg-2_src_prepare
 }
 
