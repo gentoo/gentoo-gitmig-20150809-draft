@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/freedoom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.17 2011/01/24 00:52:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.18 2011/02/27 21:45:28 hwoarang Exp $
+
+  27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> freedoom-0.7.ebuild:
+  Stable on amd64 wrt bug #356487
 
   24 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> freedoom-0.7.ebuild:
   doomsday doesn't actually work with freedoom
