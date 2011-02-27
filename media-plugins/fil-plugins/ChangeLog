@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/fil-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.12 2011/02/27 10:27:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.13 2011/02/27 20:24:16 hwoarang Exp $
+
+  27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> fil-plugins-0.3.0.ebuild:
+  Stable on amd64 wrt bug #353697
 
   27 Feb 2011; Alexis Ballier <aballier@gentoo.org> fil-plugins-0.3.0.ebuild:
   add missing die's
