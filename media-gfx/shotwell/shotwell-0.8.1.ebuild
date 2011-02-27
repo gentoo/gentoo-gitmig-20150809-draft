@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.8.1.ebuild,v 1.1 2011/02/18 19:37:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.8.1.ebuild,v 1.2 2011/02/27 15:15:35 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND=">=dev-db/sqlite-3.5.9:3
 	>=dev-libs/dbus-glib-0.80
 	>=dev-libs/libgee-0.5.0
-	>=dev-libs/libunique-1.0.0
+	>=dev-libs/libunique-1:1
 	>=dev-libs/libxml2-2.6.32
 	>=gnome-base/gconf-2.22.0
 	>=media-libs/libexif-0.6.16
@@ -53,7 +53,7 @@ src_prepare() {
 
 src_install() {
 	# This is needed so that gnome2_gconf_savelist() works correctly.
-	insinto "${EPREFIX}"/etc/gconf/schemas
+	insinto /etc/gconf/schemas
 	doins misc/shotwell.schemas || die "install gconf schema failed"
 	gnome2_src_install
 }

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.8 2011/02/18 19:37:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.9 2011/02/27 15:15:36 eva Exp $
+
+  27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> shotwell-0.7.2.ebuild,
+  shotwell-0.8.1.ebuild:
+  Pin libunique dependency to slot 1. Drop eprefix from insinto, it is not
+  required as stated by repoman.
 
 *shotwell-0.8.1 (18 Feb 2011)
 
