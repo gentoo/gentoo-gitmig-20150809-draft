@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.56 2011/02/15 07:32:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.57 2011/02/28 18:27:52 mgorny Exp $
+
+  28 Feb 2011; Michał Górny <mgorny@gentoo.org>
+  xf86-input-synaptics-1.3.0.ebuild:
+  Replace DOCS var with an array due to xorg-2 eclass changes.
 
   15 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xf86-input-synaptics-1.3.0.ebuild:
