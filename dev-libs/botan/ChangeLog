@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.68 2011/02/28 01:02:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.69 2011/02/28 15:31:34 arfrever Exp $
+
+  28 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/botan-1.8.8-darwin-install_name-fix.patch,
+  -files/botan-1.8.8-use_negative_lea_displacement.patch, -botan-1.8.10.ebuild:
+  Delete.
 
   28 Feb 2011; Brent Baude <ranger@gentoo.org> botan-1.8.11.ebuild:
   stable ppc, bug 353858
