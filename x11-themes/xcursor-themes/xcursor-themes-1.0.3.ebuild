@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/xcursor-themes-1.0.3.ebuild,v 1.8 2011/02/14 23:43:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/xcursor-themes-1.0.3.ebuild,v 1.9 2011/02/28 22:59:29 scarabeus Exp $
 
 EAPI=3
 
 XORG_STATIC=no
-MODULE=data
+MODULE=data/
 inherit xorg-2
 
 DESCRIPTION="X.Org cursor themes: whiteglass, redglass and handhelds"
