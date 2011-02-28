@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.279 2011/02/28 18:25:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.280 2011/02/28 23:54:40 ranger Exp $
+
+  28 Feb 2011; Brent Baude <ranger@gentoo.org> bash-4.1_p9.ebuild:
+  stable ppc64, bug 352383
 
 *bash-4.1_p10 (28 Feb 2011)
 
