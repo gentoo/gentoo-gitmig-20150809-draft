@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.74 2011/02/12 18:10:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.75 2011/02/28 20:21:39 sping Exp $
+
+  28 Feb 2011; Sebastian Pipping <sping@gentoo.org> filezilla-3.3.5.1.ebuild,
+  +files/filezilla-3.3.5.1-debug.patch:
+  No longer append "-g" to compile flags (bug #356173)
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> filezilla-3.3.4.1.ebuild:
   sparc stable wrt #343711

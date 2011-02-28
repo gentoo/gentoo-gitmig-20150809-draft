@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.3.5.1.ebuild,v 1.1 2010/11/21 21:47:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.3.5.1.ebuild,v 1.2 2011/02/28 20:21:39 sping Exp $
 
 EAPI=2
 
 WX_GTK_VER="2.8"
 
-inherit eutils multilib wxwidgets
+inherit eutils autotools multilib wxwidgets
 
 MY_PV=${PV/_/-}
 MY_P="FileZilla_${MY_PV}"
@@ -32,6 +32,11 @@ DEPEND="${RDEPEND}
 	test? ( dev-util/cppunit )"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-debug.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf $(use_with dbus) $(use_enable nls locales) \
