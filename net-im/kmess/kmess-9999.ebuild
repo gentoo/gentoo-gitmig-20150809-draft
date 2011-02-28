@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-9999.ebuild,v 1.2 2011/01/30 15:12:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-9999.ebuild,v 1.3 2011/02/28 20:00:12 hwoarang Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.kmess.org"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="4"
-IUSE="debug gif konqueror xscreensaver"
+IUSE="debug gif konqueror libnotify xscreensaver"
 
 COMMONDEPEND="
 	app-crypt/qca:2
@@ -25,6 +25,7 @@ COMMONDEPEND="
 	dev-libs/libxslt
 	gif? ( media-libs/giflib )
 	konqueror? ( $(add_kdebase_dep libkonq) )
+	libnotify? ( $(add_kdebase_dep knotify) )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 "
 DEPEND="${COMMONDEPEND}

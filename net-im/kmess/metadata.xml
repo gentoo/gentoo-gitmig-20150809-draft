@@ -8,5 +8,7 @@
 </maintainer>
 <use>
 	<flag name="konqueror">Enable integration with konqueror</flag>
+	<flag name="libnotify">Enable desktop notifications using the knotify
+	library</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5-r1.ebuild,v 1.4 2011/01/30 15:12:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.5-r1.ebuild,v 1.5 2011/02/28 20:00:12 hwoarang Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${P}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 SLOT="4"
-IUSE="debug gif konqueror xscreensaver"
+IUSE="debug gif konqueror libnotify xscreensaver"
 RESTRICT="test"
 
 COMMONDEPEND="
@@ -26,6 +26,7 @@ COMMONDEPEND="
 	dev-libs/libxslt
 	gif? ( media-libs/giflib )
 	konqueror? ( $(add_kdebase_dep libkonq) )
+	libnotify? ( $(add_kdebase_dep knotify) )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 "
 DEPEND="${COMMONDEPEND}
