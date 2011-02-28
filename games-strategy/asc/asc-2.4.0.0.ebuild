@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.4.0.0.ebuild,v 1.4 2010/02/16 01:02:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.4.0.0.ebuild,v 1.5 2011/02/28 18:10:28 ssuominen Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/libsdl
 	media-libs/libpng
 	media-libs/sdl-image[gif,jpeg,png]

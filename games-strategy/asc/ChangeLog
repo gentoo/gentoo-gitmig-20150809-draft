@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/asc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.35 2010/02/16 01:02:01 dirtyepic Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.36 2011/02/28 18:10:28 ssuominen Exp $
+
+  28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> asc-2.4.0.0.ebuild:
+  Use virtual/jpeg.
 
   16 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> asc-2.4.0.0.ebuild:
   games gets inherited last.
