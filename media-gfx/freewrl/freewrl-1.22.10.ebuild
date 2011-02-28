@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.10.ebuild,v 1.1 2010/11/02 18:24:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.10.ebuild,v 1.2 2011/02/28 17:50:26 ssuominen Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ COMMONDEPEND="x11-libs/libXau
 	glew? ( media-libs/glew )
 	virtual/opengl
 	media-libs/libpng
-	media-libs/jpeg
+	virtual/jpeg
 	media-libs/imlib2
 	>=media-libs/freetype-2
 	media-libs/fontconfig

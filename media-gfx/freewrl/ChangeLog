@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freewrl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.29 2010/11/02 18:24:07 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.30 2011/02/28 17:50:26 ssuominen Exp $
+
+  28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> freewrl-1.22.9.ebuild,
+  freewrl-1.22.10.ebuild:
+  Use virtual/jpeg.
 
 *freewrl-1.22.10 (02 Nov 2010)
 

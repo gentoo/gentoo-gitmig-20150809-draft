@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.9.ebuild,v 1.3 2009/09/28 15:55:19 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.9.ebuild,v 1.4 2011/02/28 17:49:08 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=media-libs/svgalib-1.4.2
-	>=media-libs/jpeg-6b-r2
+	virtual/jpeg
 	media-libs/libpng
 	>=media-libs/tiff-3.5.5
 	>=sys-libs/zlib-1.1.4
