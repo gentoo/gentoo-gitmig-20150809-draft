@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.89 2011/01/26 20:28:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.90 2011/02/28 17:21:38 jmbsvicetto Exp $
+
+  28 Feb 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdepimlibs-4.6.0.ebuild:
+  Bumped app-crypt/gpgme dependency. Thanks to Andrej Kacian <andrej AT kacian
+  DOT sk> - fixes bug 356717.
 
 *kdepimlibs-4.6.0 (26 Jan 2011)
 
