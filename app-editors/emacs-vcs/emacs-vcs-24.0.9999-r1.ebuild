@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.6 2011/02/19 14:43:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.7 2011/02/28 16:31:09 ulm Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit autotools elisp-common eutils flag-o-matic multilib
 if [ "${PV##*.}" = "9999" ]; then
 	EBZR_PROJECT="emacs"
 	EBZR_BRANCH="trunk"
-	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}"
+	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
 	# The mirror at launchpad has much better performance.
 	EBZR_INITIAL_URI="lp:emacs"
 	inherit bzr

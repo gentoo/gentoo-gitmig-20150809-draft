@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.48 2011/02/15 06:57:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.49 2011/02/28 16:31:09 ulm Exp $
+
+  28 Feb 2011; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  The sound USE flag is global now.
 
 *emacs-vcs-23.2.94 (15 Feb 2011)
 
