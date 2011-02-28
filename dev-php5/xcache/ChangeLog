@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/xcache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/ChangeLog,v 1.24 2011/01/05 20:26:37 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xcache/ChangeLog,v 1.25 2011/02/28 19:30:00 hwoarang Exp $
+
+  28 Feb 2011; Markos Chandras <hwoarang@gentoo.org> xcache-1.3.1.ebuild:
+  Stable on amd64 wrt bug #355487
 
   05 Jan 2011; Ole Markus With <olemarkus@gentoo.org> -xcache-1.2.2.ebuild:
   Removed old versions
