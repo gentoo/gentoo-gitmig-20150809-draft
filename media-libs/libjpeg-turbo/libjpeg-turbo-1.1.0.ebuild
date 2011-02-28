@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.0.90.1.ebuild,v 1.4 2011/01/19 21:09:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.0.ebuild,v 1.1 2011/02/28 17:36:42 ssuominen Exp $
 
 EAPI=2
-inherit autotools libtool toolchain-funcs
+inherit libtool toolchain-funcs
 
-DESCRIPTION="MMX, SSE, and SSE2 SIMD accellerated jpeg library"
-HOMEPAGE="http://sourceforge.net/projects/libjpeg-turbo/"
-SRC_URI="http://dev.gentoo.org/~anarchy/dist/${P}.tar.bz2
-	mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8b-1.debian.tar.gz"
+DESCRIPTION="MMX, SSE, and SSE2 SIMD accellerated JPEG library"
+HOMEPAGE="http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8c-1.debian.tar.gz"
 
 LICENSE="as-is LGPL-2.1 wxWinLL-3.1"
 SLOT="0"
@@ -19,18 +19,15 @@ RDEPEND="!media-libs/jpeg:0"
 DEPEND="${RDEPEND}
 	dev-lang/nasm"
 
-S=${WORKDIR}/${PN}
-
 src_prepare() {
-	eautoreconf -fiv
 	elibtoolize
 }
 
 src_configure() {
 	econf \
-		--with-jpeg8 \
 		--disable-dependency-tracking \
-		$(use_enable static-libs static)
+		$(use_enable static-libs static) \
+		--with-jpeg8
 }
 
 src_compile() {
@@ -43,7 +40,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc BUILDING.txt ChangeLog.txt example.c README-turbo.txt
-	find "${D}" -name '*.la' -delete
+	find "${D}" -name '*.la' -exec rm -f {} +
 
 	cd ../debian/extra || die
 	emake DESTDIR="${D}" prefix=/usr install || die
