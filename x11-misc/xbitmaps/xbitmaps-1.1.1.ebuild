@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/xbitmaps-1.1.1.ebuild,v 1.5 2011/02/23 16:37:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/xbitmaps-1.1.1.ebuild,v 1.6 2011/02/28 23:44:01 scarabeus Exp $
 
 EAPI=3
 
-MODULE=data
+MODULE=data/
 XORG_STATIC=no
 inherit xorg-2
 
