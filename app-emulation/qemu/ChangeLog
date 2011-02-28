@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.82 2011/02/20 22:07:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.83 2011/02/28 16:36:49 cardoe Exp $
+
+  28 Feb 2011; Doug Goldstein <cardoe@gentoo.org> -qemu-0.9.1.ebuild:
+  Remove old version
 
   20 Feb 2011; Zac Medico <zmedico@gentoo.org> qemu-0.14.0.ebuild:
   Bug #355589 - Fix qemu-ifup die logic.
