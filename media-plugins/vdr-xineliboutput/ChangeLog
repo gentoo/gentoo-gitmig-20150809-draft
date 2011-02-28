@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.62 2011/02/26 18:57:57 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.63 2011/02/28 16:17:48 idl0r Exp $
+
+  28 Feb 2011; Christian Ruppert <idl0r@gentoo.org>
+  vdr-xineliboutput-9999.ebuild:
+  Add optional libcap dependency
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org>
   vdr-xineliboutput-1.0.2.ebuild, vdr-xineliboutput-1.0.3.ebuild,

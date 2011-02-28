@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.8 2011/02/26 18:57:57 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.9 2011/02/28 16:17:48 idl0r Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -20,12 +20,13 @@ ECVS_MODULE="${PN}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS=""
-IUSE="dbus fbcon jpeg libextractor nls +vdr vdpau +X +xine xinerama"
+IUSE="caps dbus fbcon jpeg libextractor nls +vdr vdpau +X +xine xinerama"
 
 COMMON_DEPEND="
 	vdr? (
 		>=media-video/vdr-1.6.0
 		libextractor? ( >=media-libs/libextractor-0.5.20 )
+		caps? ( sys-libs/libcap )
 	)
 
 	xine? (
@@ -105,6 +106,7 @@ src_configure() {
 		$(use_enable vdr) \
 		$(use_enable xine libxine) \
 		$(use_enable libextractor) \
+		$(use_enable caps libcap) \
 		$(use_enable jpeg libjpeg) \
 		$(use_enable xinerama) \
 		$(use_enable vdpau) \
