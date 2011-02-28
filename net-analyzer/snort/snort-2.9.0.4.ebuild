@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.4.ebuild,v 1.3 2011/02/26 13:04:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.4.ebuild,v 1.4 2011/02/28 20:54:43 jer Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -130,9 +130,6 @@ src_install() {
 		doc/* \
 		tools/u2boat/README.u2boat \
 		schemas/* || die "Failed to install snort docs"
-	docinto support
-	dodoc "${WORKDIR}/${PF}/config.log" \
-		"${T}/build.log" || die "Failed to install support files"
 
 	insinto /etc/snort
 	doins etc/attribute_table.dtd \

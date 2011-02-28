@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.174 2011/02/26 13:04:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.175 2011/02/28 20:54:43 jer Exp $
+
+  28 Feb 2011; Jeroen Roovers <jer@gentoo.org> snort-2.9.0.4.ebuild:
+  Do not install temporary log files (bug #356547).
 
   26 Feb 2011; Thomas Kahle <tomka@gentoo.org> snort-2.9.0.4.ebuild:
   x86 stable per bug 351549
