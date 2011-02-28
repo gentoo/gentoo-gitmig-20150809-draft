@@ -1,0 +1,161 @@
+Fixes bug #356683. Patch from upstream author. Thanks to
+genbug AT piments DOT com.
+
+--- src/File.cpp
++++ src/File.cpp
+@@ -326,7 +326,7 @@
+ 
+ 
+ // Copy ordinary file
+-FXbool File::copyfile(const FXString& source, const FXString& target, const FXbool preserve_date)
++FXint File::copyfile(const FXString& source, const FXString& target, const FXbool preserve_date)
+ {
+ 	FXString destfile;
+ 	FXuchar buffer[32768];
+@@ -499,7 +499,6 @@
+ 		restartTimeout();
+ 		if(answer == BOX_CLICKED_CANCEL)
+ 		{
+-			::close(dst);
+ 			::close(src);
+ 			cancelled=TRUE;
+ 			return FALSE;
+@@ -512,7 +511,7 @@
+ 
+ 
+ // Copy directory
+-FXbool File::copydir(const FXString& source,const FXString& target,struct stat& parentinfo,inodelist* inodes, const FXbool preserve_date)
++FXint File::copydir(const FXString& source,const FXString& target,struct stat& parentinfo,inodelist* inodes, const FXbool preserve_date)
+ {
+     DIR *dirp;
+     struct dirent *dp;
+@@ -635,7 +634,7 @@
+ 
+ 
+ // Recursive copy
+-FXbool File::copyrec(const FXString& source,const FXString& target,inodelist* inodes, const FXbool preserve_date)
++FXint File::copyrec(const FXString& source,const FXString& target,inodelist* inodes, const FXbool preserve_date)
+ {
+     struct stat linfo1, linfo2;
+ 	
+@@ -666,7 +665,7 @@
+  	// Remove target if it already exists
+  	if (::exists(target))
+  	{
+- 		FXbool ret=File::remove(target);
++ 		FXint ret=File::remove(target);
+  		if (!ret)
+  			return FALSE;
+ 	}
+@@ -695,7 +694,7 @@
+ // Copy file (with progress dialog)
+ // Return  0 to allow displaying an error message in the calling routine
+ // Return -1 to prevent displaying an error message in the calling routine
+-FXbool File::copy(const FXString& source, const FXString& target, const FXbool confirm_dialog, const FXbool preserve_date)
++FXint File::copy(const FXString& source, const FXString& target, const FXbool confirm_dialog, const FXbool preserve_date)
+ {
+ 	FXString targetfile;
+ 
+@@ -793,7 +792,7 @@
+ 
+ 
+ // Remove file or directory (with progress dialog)
+-FXbool File::remove(const FXString& file)
++FXint File::remove(const FXString& file)
+ {
+ 	FXString dirname;
+     struct stat linfo;
+@@ -935,7 +934,7 @@
+ // Rename a file or a directory (no progress dialog)
+ // Return  0 to allow displaying an error message in the calling routine
+ // Return -1 to prevent displaying an error message in the calling routine
+-FXbool File::rename(const FXString& source, const FXString& target)
++FXint File::rename(const FXString& source, const FXString& target)
+ {
+ 	// Source doesn't exist
+     if(!::exists(source))
+@@ -1002,7 +1001,7 @@
+ 	}
+ 
+ 	// If files are on different file systems, use the copy/delete scheme and preserve the original date
+-	FXbool ret=this->copy(source,target,FALSE,TRUE);
++	FXint ret=this->copy(source,target,FALSE,TRUE);
+ 	if (ret)
+ 		return (remove(source.text())==TRUE);
+ 	else
+@@ -1013,7 +1012,7 @@
+ // Move files
+ // Return  0 to allow displaying an error message in the calling routine
+ // Return -1 to prevent displaying an error message in the calling routine
+-FXbool File::move(const FXString& source,const FXString& target,const FXbool restore)
++FXint File::move(const FXString& source,const FXString& target,const FXbool restore)
+ {
+ 	// Source doesn't exist
+ 	if(!::exists(source))
+@@ -1031,6 +1030,16 @@
+ 		return -1;
+ 	}
+ 
++	// Source path is included into target path
++	FXString str=source + PATHSEPSTRING;
++	if (target.left(str.length()) == str)
++	{
++		forceTimeout();
++		MessageBox::error(this,BOX_OK,_("Error"),_("Source path %s is included into target path"),source.text());
++		return -1;
++		
++	}
++
+ 	// Target is an existing directory (don't do this in the restore case)
+ 	FXString targetfile;
+ 	if (!restore && ::isDirectory(target))
+@@ -1129,7 +1138,7 @@
+ 	targetfile=FXPath::directory(targetfile);
+ 
+ 	// If files are on different file systems, use the copy/delete scheme and preserve the original date
+-	FXbool ret=this->copy(source,targetfile,FALSE,TRUE);
++	FXint ret=this->copy(source,targetfile,FALSE,TRUE);
+ 	if (ret)
+ 		return (remove(source.text())==TRUE);
+ 	else
+@@ -1140,7 +1149,7 @@
+ // Symbolic Link file (no progress dialog)
+ // Return  0 to allow displaying an error message in the calling routine
+ // Return -1 to prevent displaying an error message in the calling routine
+-FXbool File::symlink(const FXString& source,const FXString& target)
++FXint File::symlink(const FXString& source,const FXString& target)
+ {
+ 	// Source doesn't exist
+     if(!::exists(source))
+--- src/File.h
++++ src/File.h
+@@ -64,9 +64,9 @@
+     long fullread(FXint fd, FXuchar* ptr, long len);
+     long fullwrite(FXint fd, const FXuchar* ptr, long len);
+ 	FXuint getOverwriteAnswer(FXString, FXString);
+-    FXbool copyfile(const FXString& source, const FXString& target, const FXbool preserve_date);
+-	FXbool copyrec(const FXString& source,const FXString& target,inodelist* inodes, const FXbool preserve_date);
+-    FXbool copydir(const FXString& source,const FXString& target,struct stat& parentstatus,inodelist* inodes, const FXbool preserve_date);
++    FXint copyfile(const FXString& source, const FXString& target, const FXbool preserve_date);
++	FXint copyrec(const FXString& source,const FXString& target,inodelist* inodes, const FXbool preserve_date);
++    FXint copydir(const FXString& source,const FXString& target,struct stat& parentstatus,inodelist* inodes, const FXbool preserve_date);
+     FXint rchmod(FXchar* path, FXchar* file, mode_t mode, const FXbool dironly, const FXbool fileonly);
+     FXint rchown(FXchar* path, FXchar* file, uid_t uid, gid_t gid, const FXbool dironly, const FXbool fileonly);
+     FXLabel *uplabel;
+@@ -107,11 +107,11 @@
+ 		restartTimeout();
+ 	}
+ 
+-	FXbool copy(const FXString& source, const FXString& target, const FXbool confirm_dialog=TRUE, const FXbool preserve_date=TRUE);
+-    FXbool rename(const FXString& source, const FXString& target);
+-    FXbool move(const FXString& source, const FXString& target, const FXbool restore=FALSE);
+-    FXbool symlink(const FXString& source, const FXString& target);
+-    FXbool remove(const FXString& file);
++	FXint copy(const FXString& source, const FXString& target, const FXbool confirm_dialog=TRUE, const FXbool preserve_date=TRUE);
++    FXint rename(const FXString& source, const FXString& target);
++    FXint move(const FXString& source, const FXString& target, const FXbool restore=FALSE);
++    FXint symlink(const FXString& source, const FXString& target);
++    FXint remove(const FXString& file);
+ 
+     FXint chmod(FXchar* path, FXchar* file, mode_t mode, const FXbool rec, const FXbool dironly=FALSE, const FXbool fileonly=FALSE);
+ 	FXint chown(FXchar* path, FXchar *file, uid_t uid, gid_t gid, const FXbool rec, const FXbool dironly=FALSE, const FXbool fileonly=FALSE);
