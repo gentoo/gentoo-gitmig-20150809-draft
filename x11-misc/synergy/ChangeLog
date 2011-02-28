@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.64 2011/02/28 12:53:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.65 2011/02/28 20:35:32 xmw Exp $
+
+  28 Feb 2011; Michael Weber <xmw@gentoo.org> synergy-1.3.6.ebuild:
+  Added manpages
 
 *synergy-1.3.6 (28 Feb 2011)
 

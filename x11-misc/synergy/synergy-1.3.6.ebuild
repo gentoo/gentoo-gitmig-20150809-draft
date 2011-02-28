@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.3.6.ebuild,v 1.1 2011/02/28 12:53:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.3.6.ebuild,v 1.2 2011/02/28 20:35:32 xmw Exp $
 
 EAPI=3
 
@@ -33,6 +33,10 @@ src_install () {
 
 	insinto /etc
 	doins examples/synergy.conf || die
+
+	mv doc/${PN}c.man  doc/${PN}c.1 || die
+	mv doc/${PN}s.man  doc/${PN}s.1 || die
+	doman doc/${PN}{c,s}.1 || die
 
 	dodoc README || die
 }
