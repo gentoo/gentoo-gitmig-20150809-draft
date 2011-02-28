@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.27 2011/01/30 15:40:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.28 2011/02/28 12:34:04 olemarkus Exp $
+
+  28 Feb 2011; Ole Markus With <olemarkus@gentoo.org>
+  -eselect-php-0.6.1.ebuild, +eselect-php-0.6.4.ebuild:
+  Fixed prefix support and support for multilib. Bug #356467 and #350092
+
+*eselect-php-0.6.4 (28 Feb 2011)
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> eselect-php-0.6.2.ebuild:
   alpha/ia64/s390/sh/sparc stable
