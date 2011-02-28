@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.12 2011/02/26 13:36:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.13 2011/02/28 17:46:15 ssuominen Exp $
 
 EAPI=2
 
@@ -47,7 +47,7 @@ RDEPEND="
 	ffmpeg? ( media-video/ffmpeg )
 	gdal? ( sci-libs/gdal )
 	gif? ( media-libs/giflib )
-	jpeg? ( media-libs/jpeg:0 )
+	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	openexr? (
 		media-libs/ilmbase
