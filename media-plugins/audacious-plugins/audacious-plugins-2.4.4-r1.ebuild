@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.4.4.ebuild,v 1.1 2011/02/28 00:09:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.4.4-r1.ebuild,v 1.1 2011/02/28 11:43:03 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="aac adplug alsa aqua bs2b cdda cue ffmpeg flac fluidsynth gnome ipv6 jack
-lame lirc midi mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile sse2 vorbis wavpack"
+lame libnotify libsamplerate lirc midi mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile sse2 vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
@@ -36,6 +36,8 @@ RDEPEND="app-arch/unzip
 	jack? ( >=media-libs/bio2jack-0.4
 		media-sound/jack-audio-connection-kit )
 	lame? ( media-sound/lame )
+	libnotify? ( x11-libs/libnotify )
+	libsamplerate? ( media-libs/libsamplerate )
 	lirc? ( app-misc/lirc )
 	mp3? ( >=media-sound/mpg123-1.12.1 )
 	mtp? ( media-libs/libmtp )
@@ -86,6 +88,8 @@ src_compile() {
 		$(use_enable jack) \
 		$(use_enable gnome gnomeshortcuts) \
 		$(use_enable lame filewriter_mp3) \
+		$(use_enable libnotify notify) \
+		$(use_enable libsamplerate resample) \
 		$(use_enable lirc) \
 		$(use_enable mp3) \
 		$(use_enable midi amidiplug) \

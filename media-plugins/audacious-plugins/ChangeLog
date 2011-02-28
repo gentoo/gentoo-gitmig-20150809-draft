@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.195 2011/02/28 00:09:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.196 2011/02/28 11:43:03 chainsaw Exp $
+
+*audacious-plugins-2.4.4-r1 (28 Feb 2011)
+
+  28 Feb 2011; Tony Vroon <chainsaw@gentoo.org>
+  -audacious-plugins-2.4.4.ebuild, +audacious-plugins-2.4.4-r1.ebuild:
+  Redo ebuild with missed libnotify changes. Patch from Samuli is upstream now.
 
 *audacious-plugins-2.4.4 (28 Feb 2011)
 
