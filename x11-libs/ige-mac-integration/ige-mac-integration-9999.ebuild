@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ige-mac-integration/ige-mac-integration-9999.ebuild,v 1.2 2010/09/30 10:33:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ige-mac-integration/ige-mac-integration-9999.ebuild,v 1.3 2011/02/28 22:50:06 abcd Exp $
 
 EAPI="3"
 
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="x11-libs/gtk+
-		dev-python/pygtk"
+RDEPEND="x11-libs/gtk+:2
+		dev-python/pygtk:2"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
