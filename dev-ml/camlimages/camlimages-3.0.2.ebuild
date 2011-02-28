@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.8 2011/02/15 21:01:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/camlimages-3.0.2.ebuild,v 1.9 2011/02/28 18:10:41 ssuominen Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/ocaml-3.10.2[X,ocamlopt]
 	gif? ( media-libs/giflib )
 	gtk? ( dev-ml/lablgtk )
 	gs? ( app-text/ghostscript-gpl )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	tiff? ( media-libs/tiff )
 	>=media-libs/libpng-1.4
 	truetype? ( >=media-libs/freetype-2 )
