@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.8 2010/06/22 21:43:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.9 2011/02/28 18:02:57 ssuominen Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="X v4l crypt xinerama threads fbcon system-libvncserver"
 
 RDEPEND="dev-libs/lzo
 	sys-apps/tcp-wrappers
-	media-libs/jpeg
+	virtual/jpeg
 	sys-libs/zlib
 	dev-libs/openssl
 	x11-libs/qt-core
