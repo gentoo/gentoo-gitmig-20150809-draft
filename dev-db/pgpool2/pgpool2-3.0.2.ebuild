@@ -1,17 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.0.1.ebuild,v 1.1 2011/01/26 16:49:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.0.2.ebuild,v 1.1 2011/02/28 17:29:05 scarabeus Exp $
 
-EAPI=3
-
-inherit autotools-utils
+EAPI=4
 
 MY_P="${PN/2/-II}-${PV}"
+inherit autotools-utils autotools
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://pgpool.projects.postgresql.org/"
-SRC_URI="http://pgfoundry.org/frs/download.php/2841/${MY_P}.tar.gz"
-
+SRC_URI="http://pgfoundry.org/frs/download.php/2946/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -27,11 +25,6 @@ DEPEND="${DEPEND}
 
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-tmpdir.patch"
-	"${FILESDIR}/${PV}-fix_md5_malloc.patch"
-)
-
 DOCS=(
 	"NEWS"
 	"doc/where_to_send_queries.pdf"
@@ -41,7 +34,18 @@ HTML_DOCS=(
 	"doc/tutorial-en.html"
 )
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	sed -i \
+		-e 's:/tmp/:/var/run/postgresql:g' \
+		pgpool.conf.sample pool.h || die
+	sed -i \
+		-e '/ACLOCAL_AMFLAGS/ d' \
+		Makefile.am || die
+	autotools-utils_src_prepare
+	eautoreconf
+}
 
 src_configure() {
 	local myeconfargs=(
@@ -60,5 +64,5 @@ src_install() {
 	# move misc data to proper folder
 	mv "${ED}/usr/share/${PN/2/-II}" "${ED}/usr/share/${PN}" || die
 
-	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 }
