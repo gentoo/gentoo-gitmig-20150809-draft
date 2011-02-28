@@ -1,0 +1,12 @@
+--- cone-0.85.20110124/rfc2045/Makefile.am.orig
++++ cone-0.85.20110124/rfc2045/Makefile.am
+@@ -76,6 +76,6 @@
+ TESTSUITE=testsuite.txt.noidn
+ endif
+ 
+-check-am:
+-	@SHELL@ $(srcdir)/testsuite | cmp -s - $(srcdir)/$(TESTSUITE)
+-	@SHELL@ $(srcdir)/testsuitemm | cmp -s - $(srcdir)/testsuitemm.txt
++#check-am:
++#    @SHELL@ $(srcdir)/testsuite | cmp -s - $(srcdir)/$(TESTSUITE)
++#    @SHELL@ $(srcdir)/testsuitemm | cmp -s - $(srcdir)/testsuitemm.txt
