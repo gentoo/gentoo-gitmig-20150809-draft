@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.0.ebuild,v 1.1 2011/02/27 10:56:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.0.ebuild,v 1.2 2011/02/28 21:05:21 angelos Exp $
 
 EAPI=3
 inherit gnome2-utils waf-utils
@@ -12,7 +12,7 @@ SRC_URI="http://git.xfce.org/apps/${PN}/snapshot/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="indicate"
+IUSE="ayatana"
 
 RDEPEND=">=dev-libs/glib-2.26:2
 	dev-libs/libunique
@@ -22,20 +22,22 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	net-libs/webkit-gtk
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/libnotify
-	indicate? ( dev-libs/libindicate )"
+	ayatana? ( dev-libs/libindicate )"
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.10
 	dev-util/intltool
 	sys-devel/gettext"
 
-pkg_setup() {
-	DOCS="README"
-}
-
 src_configure() {
 	VALAC="$(type -p valac-0.10)" \
 		   waf-utils_src_configure \
-		   $(use_enable indicate libindicate)
+		   --disable-docs \
+		   $(use_enable ayatana libindicate)
+}
+
+src_install() {
+	waf-utils_src_install
+	dodoc README || die "dodoc failed"
 }
 
 src_test() {

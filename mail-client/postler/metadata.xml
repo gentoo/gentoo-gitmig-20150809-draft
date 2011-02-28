@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
-    <flag name='indicate'>Enable Messaging Menu support (Ayatana)</flag>
+    <flag name='ayatana'>Enable Messaging Menu support via
+		<pkg>dev-libs/libindicate</pkg></flag>
   </use>
 </pkgmetadata>
