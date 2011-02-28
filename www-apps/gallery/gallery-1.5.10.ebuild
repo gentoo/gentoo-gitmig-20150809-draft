@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.10.ebuild,v 1.6 2011/02/13 18:42:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.10.ebuild,v 1.7 2011/02/28 18:06:37 ssuominen Exp $
 
 inherit webapp depend.php confutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 hppa ppc x86"
 IUSE="imagemagick netpbm unzip zip"
 
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	imagemagick? ( >=media-gfx/imagemagick-5.4.9.1-r1 )
 	netpbm? ( >=media-libs/netpbm-9.12 >=media-gfx/jhead-2.2 )
 	unzip? ( app-arch/unzip )
