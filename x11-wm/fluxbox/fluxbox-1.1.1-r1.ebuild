@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.1-r1.ebuild,v 1.8 2010/08/16 19:43:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.1.1-r1.ebuild,v 1.9 2011/02/28 00:32:30 lack Exp $
 
 EAPI="3"
 inherit eutils prefix
@@ -45,7 +45,7 @@ src_prepare() {
 	epatch "${FILESDIR}/gentoo_style_location-1.1.x.patch"
 	eprefixify util/fluxbox-generate_menu.in
 
-	epatch "${FILESDIR}"/${P}-osx-has-otool.patch
+	epatch "${FILESDIR}"/osx-has-otool.patch
 
 	# Patch to handle a broken key file gracefully, #263379
 	epatch "${FILESDIR}/macrocmd-crash-1.1.1.patch"
