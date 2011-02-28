@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.1-r2.ebuild,v 1.1 2011/02/19 23:00:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.1-r2.ebuild,v 1.2 2011/02/28 17:26:51 angelos Exp $
 
 EAPI=4
-
 inherit eutils flag-o-matic linux-info multilib
 
 DESCRIPTION="The Music Player Daemon (mpd)"
@@ -91,11 +90,12 @@ src_configure() {
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
 			--enable-httpd-output $(use_enable lame lame-encoder)
-			$(use_enable twolame twolame-encoder)"
+			$(use_enable twolame twolame-encoder)
+			$(use_enable audiofile wave-encoder)"
 	else
 		mpdconf+=" --disable-shout --disable-vorbis-encoder
 			--disable-httpd-output --disable-lame-encoder
-			--disable-twolame-encoder"
+			--disable-twolame-encoder --disable-wave-encoder"
 	fi
 
 	if use flac && use ogg; then
@@ -120,7 +120,6 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable ao) \
 		$(use_enable audiofile) \
-		$(use_enable audiofile wave-encoder) \
 		$(use_with zeroconf zeroconf avahi) \
 		$(use_enable bzip2) \
 		$(use_enable cdio iso9660) \
