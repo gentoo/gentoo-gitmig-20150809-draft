@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/dokuwiki
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.48 2010/11/09 22:17:08 ramereth Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.49 2011/02/28 02:55:56 ramereth Exp $
+
+*dokuwiki-20101107a (28 Feb 2011)
+
+  28 Feb 2011; Lance Albertson <ramereth@gentoo.org>
+  +dokuwiki-20101107a.ebuild:
+  Version bump, resolves #354549
+
+  Thanks to Azamat H. Hackimov for the user contributed ebuild bump.
 
 *dokuwiki-20101107 (09 Nov 2010)
 
