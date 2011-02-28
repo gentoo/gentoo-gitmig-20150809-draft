@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.5 2010/08/17 07:16:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.6 2011/02/28 18:09:13 ssuominen Exp $
 
 EAPI="2"
 
@@ -43,7 +43,7 @@ RDEPEND=">=dev-lang/python-2.5[xml]
 	)
 	flac? ( media-libs/flac )
 	gphoto2? ( media-libs/libgphoto2 )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	lame? ( media-sound/lame )
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
 	matrox? ( >=media-video/matroxset-0.3 )
