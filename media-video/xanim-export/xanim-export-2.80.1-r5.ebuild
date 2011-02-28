@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r5.ebuild,v 1.1 2010/07/01 19:52:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r5.ebuild,v 1.2 2011/02/28 18:12:12 ssuominen Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -62,8 +62,8 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/jpeg-6b
-	>=media-libs/libpng-1.2.1
+RDEPEND="virtual/jpeg
+	media-libs/libpng
 	x11-libs/libXext
 	x11-libs/libXt
 	media-libs/libquicktime"
