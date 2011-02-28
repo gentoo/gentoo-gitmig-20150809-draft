@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.126 2011/02/26 10:21:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.127 2011/02/28 20:14:23 ssuominen Exp $
+
+  28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> xfce4-mixer-4.8.0.ebuild:
+  Missing .po files from upstream git wrt #356759 by Jonathan Heaney and Martin
+  von Gagern.
 
 *xfce4-mixer-4.8.0 (26 Feb 2011)
 
