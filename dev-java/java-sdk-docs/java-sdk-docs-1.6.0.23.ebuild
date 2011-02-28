@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0.23.ebuild,v 1.1 2011/01/15 21:41:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0.23.ebuild,v 1.2 2011/02/28 19:18:52 hwoarang Exp $
 
 ORIG_NAME="jdk-6u23-docs.zip"
 SRC_URI="jdk-6u23-docs.zip"
@@ -8,7 +8,7 @@ DESCRIPTION="Sun's documentation bundle (including API) for Java SE"
 HOMEPAGE="http://java.sun.com/javase/6/docs/"
 LICENSE="sun-j2sl-6"
 SLOT="1.6.0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
