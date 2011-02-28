@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.7 2011/02/02 05:36:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.7.ebuild,v 1.8 2011/02/28 17:15:37 ssuominen Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 GCONF_DEBUG="no" # debug managed by the ebuild
 
-inherit kde4-base gnome2
+inherit eutils kde4-base gnome2
 # gnome2 at the end to make it default
 
 DESCRIPTION="H.323 and SIP VoIP softphone"
@@ -117,6 +117,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+
 	gnome2_src_prepare
 
 	# remove call to gconftool-2 --shutdown, upstream bug 555976
