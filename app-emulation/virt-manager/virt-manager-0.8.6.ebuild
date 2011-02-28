@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.6.ebuild,v 1.1 2011/02/04 15:43:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.6.ebuild,v 1.2 2011/02/28 00:03:35 flameeyes Exp $
 
 BACKPORTS=1
 
@@ -26,7 +26,7 @@ else
 	SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
 		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
-	VIRTINSTDEP=">=app-emulation/virtinst-0.500.4"
+	VIRTINSTDEP=">=app-emulation/virtinst-0.500.5"
 fi
 
 DESCRIPTION="A graphical tool for administering virtual machines (KVM/Xen)"
