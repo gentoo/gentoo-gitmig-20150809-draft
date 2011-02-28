@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.232 2011/01/29 18:54:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.233 2011/02/28 00:00:18 radhermit Exp $
+
+*postfix-2.8.1 (28 Feb 2011)
+
+  28 Feb 2011; Tim Harder <radhermit@gentoo.org> +postfix-2.8.1.ebuild:
+  Version bump. Update vda patch, add doc and examples USE flags to selectively
+  install optional files, use mysql_config to get the mysql linking libraries,
+  don't install legacy sendmail symlink, remove unnecessary config files, and
+  don't install a new main.cf config file if one already exists (fixes bug
+  #349944).
 
   29 Jan 2011; Raúl Porcel <armin76@gentoo.org> postfix-2.7.2.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #352654
