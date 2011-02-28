@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5094 2011/02/28 00:17:51 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5095 2011/02/28 19:25:22 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Feb 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Add wxWinLL-3.1 to MISC-FREE license group.
 
   28 Feb 2011; Rafael G. Martins <rafaelmartins@gentoo.org> package.mask:
   Unmasked =sci-mathematics/octave-3.4*
