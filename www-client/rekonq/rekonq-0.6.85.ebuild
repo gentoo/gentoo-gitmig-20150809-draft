@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.85.ebuild,v 1.1 2011/02/28 14:34:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.85.ebuild,v 1.2 2011/02/28 14:43:10 scarabeus Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="A browser based on qt-webkit"
-HOMEPAGE="http://rekonq.sourceforge.net/"
+HOMEPAGE="http://rekonq.kde.org/"
 [[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.1.ebuild,v 1.2 2011/01/14 22:46:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.1.ebuild,v 1.3 2011/02/28 14:43:10 scarabeus Exp $
 
 EAPI=3
 
@@ -26,7 +26,7 @@ inherit kde4-base ${GIT_ECLASS}
 unset GIT_ECLASS
 
 DESCRIPTION="A browser based on qt-webkit"
-HOMEPAGE="http://rekonq.sourceforge.net/"
+HOMEPAGE="http://rekonq.kde.org/"
 
 LICENSE="GPL-3"
 SLOT="4"
