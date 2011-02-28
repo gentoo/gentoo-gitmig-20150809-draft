@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.23 2011/02/15 12:13:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.24 2011/02/28 18:16:40 mgorny Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -38,7 +38,7 @@ if [[ ${PN} == font* \
 	FONT_ECLASS="font"
 fi
 
-inherit eutils base libtool multilib toolchain-funcs flag-o-matic autotools \
+inherit autotools-utils eutils libtool multilib toolchain-funcs flag-o-matic autotools \
 	${FONT_ECLASS} ${GIT_ECLASS}
 
 EXPORTED_FUNCTIONS="src_unpack src_compile src_install pkg_postinst pkg_postrm"
@@ -68,28 +68,28 @@ BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/releases/individual"
 # inherit to override the default autoconfigured module.
 if [[ -z ${MODULE} ]]; then
 	case ${CATEGORY} in
-		app-doc)             MODULE="doc"     ;;
-		media-fonts)         MODULE="font"    ;;
-		x11-apps|x11-wm)     MODULE="app"     ;;
-		x11-misc|x11-themes) MODULE="util"    ;;
-		x11-drivers)         MODULE="driver"  ;;
-		x11-base)            MODULE="xserver" ;;
-		x11-proto)           MODULE="proto"   ;;
-		x11-libs)            MODULE="lib"     ;;
-		*)                   MODULE=""        ;;
+		app-doc)             MODULE=doc/     ;;
+		media-fonts)         MODULE=font/    ;;
+		x11-apps|x11-wm)     MODULE=app/     ;;
+		x11-misc|x11-themes) MODULE=util/    ;;
+		x11-base)            MODULE=xserver/ ;;
+		x11-drivers)         MODULE=driver/  ;;
+		x11-proto)           MODULE=proto/   ;;
+		x11-libs)            MODULE=lib/     ;;
+		*)                   MODULE=         ;;
 	esac
 fi
 
 # @ECLASS-VARIABLE: PACKAGE_NAME
 # @DESCRIPTION:
-# For git checkout the git repository migth differ from package name.
+# For git checkout the git repository might differ from package name.
 # This variable can be used for proper directory specification
 : ${PACKAGE_NAME:=${PN}}
 
 if [[ -n ${GIT_ECLASS} ]]; then
-	EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/${MODULE}/${PACKAGE_NAME}"
+	EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/${MODULE}${PACKAGE_NAME}"
 else
-	SRC_URI+=" ${BASE_INDIVIDUAL_URI}/${MODULE}/${P}.tar.bz2"
+	SRC_URI+=" ${BASE_INDIVIDUAL_URI}/${MODULE}${P}.tar.bz2"
 fi
 
 : ${SLOT:=0}
@@ -174,9 +174,54 @@ fi
 
 DEPEND+=" >=dev-util/pkgconfig-0.23"
 
-# Check deps on xorg-server
-has dri ${IUSE//+} && DEPEND+=" dri? ( >=x11-base/xorg-server-1.6.3.901-r2[-minimal] )"
-[[ -n "${DRIVER}" ]] && DEPEND+=" x11-base/xorg-server[xorg]"
+# Check deps on drivers
+if has dri ${IUSE//+}; then
+	COMMON_DEPEND+=" dri? (
+		x11-base/xorg-server[-minimal]
+		x11-libs/libdrm
+	)"
+	DEPEND+=" dri? (
+		x11-proto/xf86driproto
+		x11-proto/glproto
+		x11-proto/dri2proto
+	)"
+fi
+if [[ -n "${DRIVER}" ]]; then
+	COMMON_DEPEND+="
+		x11-base/xorg-server[xorg]
+		x11-libs/libpciaccess
+	"
+	# we also needs some protos and libs in all cases
+	DEPEND+="
+		x11-proto/fontsproto
+		x11-proto/randrproto
+		x11-proto/renderproto
+		x11-proto/videoproto
+		x11-proto/xextproto
+		x11-proto/xineramaproto
+		x11-proto/xproto
+	"
+fi
+
+# Add deps on documentation
+# Most docbooks use dtd version 4.2 and 4.3 add more when found
+if has doc ${IUSE//+}; then
+	DEPEND+="
+		doc? (
+			app-text/xmlto
+			app-doc/doxygen
+			app-text/docbook-xml-dtd:4.2
+			app-text/docbook-xml-dtd:4.3
+		)
+	"
+fi
+
+DEPEND+=" ${COMMON_DEPEND}"
+RDEPEND+=" ${COMMON_DEPEND}"
+unset COMMON_DEPEND
+
+debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: DEPEND=${DEPEND}"
+debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: RDEPEND=${RDEPEND}"
 
 # @FUNCTION: xorg-2_pkg_setup
 # @DESCRIPTION:
@@ -214,7 +259,7 @@ xorg-2_patch_source() {
 	EPATCH_SUFFIX=${EPATCH_SUFFIX:=patch}
 
 	[[ -d "${EPATCH_SOURCE}" ]] && epatch
-	base_src_prepare "$@"
+	autotools-utils_src_prepare "$@"
 }
 
 # @FUNCTION: xorg-2_reconf_source
@@ -253,24 +298,29 @@ xorg-2_font_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	if has nls ${IUSE//+} && ! use nls; then
-		FONT_OPTIONS+="
-			--disable-iso8859-2
-			--disable-iso8859-3
-			--disable-iso8859-4
-			--disable-iso8859-5
-			--disable-iso8859-6
-			--disable-iso8859-7
-			--disable-iso8859-8
-			--disable-iso8859-9
-			--disable-iso8859-10
-			--disable-iso8859-11
-			--disable-iso8859-12
-			--disable-iso8859-13
-			--disable-iso8859-14
-			--disable-iso8859-15
-			--disable-iso8859-16
-			--disable-jisx0201
-			--disable-koi8-r"
+		if grep -q -s "disable-all-encodings" ${ECONF_SOURCE:-.}/configure; then
+			FONT_OPTIONS+="
+				--disable-all-encodings"
+		else
+			FONT_OPTIONS+="
+				--disable-iso8859-2
+				--disable-iso8859-3
+				--disable-iso8859-4
+				--disable-iso8859-5
+				--disable-iso8859-6
+				--disable-iso8859-7
+				--disable-iso8859-8
+				--disable-iso8859-9
+				--disable-iso8859-10
+				--disable-iso8859-11
+				--disable-iso8859-12
+				--disable-iso8859-13
+				--disable-iso8859-14
+				--disable-iso8859-15
+				--disable-iso8859-16
+				--disable-jisx0201
+				--disable-koi8-r"
+		fi
 	fi
 }
 
@@ -298,25 +348,23 @@ xorg-2_flags_setup() {
 # Perform any necessary pre-configuration steps, then run configure
 xorg-2_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
-	local myopts=""
 
 	xorg-2_flags_setup
-	[[ -n "${FONT}" ]] && xorg-2_font_configure
 
 	# @VARIABLE: CONFIGURE_OPTIONS
 	# @DESCRIPTION:
 	# Any options to pass to configure
 	# @DEFAULT_UNSET
 	CONFIGURE_OPTIONS=${CONFIGURE_OPTIONS:=""}
-	if [[ -x ${ECONF_SOURCE:-.}/configure ]]; then
-		if has static-libs ${IUSE//+}; then
-			myopts+=" $(use_enable static-libs static)"
-		fi
-		econf \
-			${FONT_OPTIONS} \
-			${CONFIGURE_OPTIONS} \
-			${myopts}
-	fi
+
+	[[ -n "${FONT}" ]] && xorg-2_font_configure
+	local myeconfargs=(
+		--disable-dependency-tracking
+		${CONFIGURE_OPTIONS}
+		${FONT_OPTIONS}
+	)
+
+	autotools-utils_src_configure "$@"
 }
 
 # @FUNCTION: xorg-2_src_compile
@@ -325,7 +373,7 @@ xorg-2_src_configure() {
 xorg-2_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	base_src_compile "$@"
+	autotools-utils_src_compile "$@"
 }
 
 # @FUNCTION: xorg-2_src_install
@@ -336,16 +384,12 @@ xorg-2_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	if [[ ${CATEGORY} == x11-proto ]]; then
-		emake \
-			${PN/proto/}docdir=${EPREFIX}/usr/share/doc/${PF} \
-			docdir=${EPREFIX}/usr/share/doc/${PF} \
-			DESTDIR="${D}" \
-			install || die "emake install failed"
+		autotools-utils_src_install \
+			${PN/proto/}docdir="${EPREFIX}/usr/share/doc/${PF}" \
+			docdir="${EPREFIX}/usr/share/doc/${PF}"
 	else
-		emake \
-			docdir=${EPREFIX}/usr/share/doc/${PF} \
-			DESTDIR="${D}" \
-			install || die "emake install failed"
+		autotools-utils_src_install \
+			docdir="${EPREFIX}/usr/share/doc/${PF}"
 	fi
 
 	if [[ -n ${GIT_ECLASS} ]]; then
@@ -357,19 +401,9 @@ xorg-2_src_install() {
 	if [[ -e "${S}"/ChangeLog ]]; then
 		dodoc "${S}"/ChangeLog || die "dodoc failed"
 	fi
-	# @VARIABLE: DOCS
-	# @DESCRIPTION:
-	# Any documentation to install
-	# @DEFAULT_UNSET
-	if [[ -n ${DOCS} ]]; then
-		dodoc ${DOCS} || die "dodoc failed"
-	fi
 
-	# Don't install libtool archives for server modules
-	if [[ -e "${D%/}${EPREFIX}/usr/$(get_libdir)/xorg/modules" ]]; then
-		find "${D%/}${EPREFIX}/usr/$(get_libdir)/xorg/modules" -name '*.la' \
-			-exec rm -f {} ';'
-	fi
+	# Don't install libtool archives (even with static-libs)
+	remove_libtool_files all
 
 	[[ -n ${FONT} ]] && remove_font_metadata
 }
