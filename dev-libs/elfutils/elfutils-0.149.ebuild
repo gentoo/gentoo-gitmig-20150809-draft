@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.149.ebuild,v 1.7 2011/01/22 11:25:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.149.ebuild,v 1.8 2011/02/28 15:38:59 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="https://fedorahosted.org/releases/e/l/elfutils/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2-with-exceptions"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE="bzip2 lzma nls zlib elibc_glibc"
 
 # This pkg does not actually seem to compile currently in a uClibc

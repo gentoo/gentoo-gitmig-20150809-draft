@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.151 2011/02/27 09:39:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.152 2011/02/28 15:38:59 ranger Exp $
+
+  28 Feb 2011; Brent Baude <ranger@gentoo.org> elfutils-0.149.ebuild:
+  stable ppc, bug 348407
 
 *elfutils-0.152 (27 Feb 2011)
 
