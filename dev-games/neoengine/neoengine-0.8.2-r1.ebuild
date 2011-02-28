@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2-r1.ebuild,v 1.4 2010/01/22 20:11:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2-r1.ebuild,v 1.5 2011/02/28 18:04:44 ssuominen Exp $
 
 EAPI=2
-inherit eutils autotools
+inherit autotools eutils
 
 DESCRIPTION="An open source, platform independent, 3D game engine written in C++"
 HOMEPAGE="http://www.neoengine.org/"
@@ -17,41 +17,41 @@ IUSE="doc"
 RDEPEND="virtual/opengl
 	media-libs/alsa-lib
 	media-libs/libpng
-	media-libs/jpeg"
+	virtual/jpeg"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/neoengine
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}"-gcc41.patch \
+	epatch \
+		"${FILESDIR}/${P}"-gcc41.patch \
 		"${FILESDIR}/${P}"-gcc43.patch \
 		"${FILESDIR}"/${P}-nolibs.patch \
 		"${FILESDIR}"/${P}-gcc44.patch
 
 	./setbuildtype.sh dynamic
 
-	eautoreconf || die "eautoreconf failed"
-	eautomake neodevopengl/Makefile || die "eautomake neodevopengl failed"
-	eautomake neodevalsa/Makefile || die "eautomake neodevalsa failed"
+	eautoreconf
+	eautomake neodevopengl/Makefile
+	eautomake neodevalsa/Makefile
 }
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
-		|| die "econf failed"
+		--disable-dependency-tracking
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake || die
 
 	if use doc; then
-		emake doc || die "emake doc failed"
+		emake doc || die
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog* NEWS README
 	use doc && dohtml -r *-api
 }
