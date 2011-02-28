@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.1.1.ebuild,v 1.7 2011/02/27 13:54:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.1.1.ebuild,v 1.8 2011/02/28 16:26:14 mr_bones_ Exp $
 
 EAPI=3
 KDE_LINGUAS="ar be bg ca cs da de el en_GB eo es et fi fr ga gl hi hne is it ja
@@ -20,7 +20,7 @@ DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
 	virtual/jpeg
 	>=x11-libs/qt-sql-4.4:4[sqlite]
-	exif? ( >=media-gfx/exiv2-0.17 
+	exif? ( >=media-gfx/exiv2-0.17
 		<media-gfx/exiv2-0.21 )
 	geolocation? ( $(add_kdebase_dep marble) )
 	kipi? ( $(add_kdebase_dep libkipi) )
