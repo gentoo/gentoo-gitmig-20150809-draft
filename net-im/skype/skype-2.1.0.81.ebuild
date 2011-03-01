@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.7 2010/03/26 14:32:15 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.8 2011/03/01 01:03:23 darkside Exp $
 
 EAPI=3
 inherit gnome2-utils eutils qt4 pax-utils
@@ -25,6 +25,7 @@ RDEPEND="
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-${EMUL_VER}
 			>=app-emulation/emul-linux-x86-baselibs-${EMUL_VER}
 			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_VER}
+			>=app-emulation/emul-linux-x86-opengl-${EMUL_VER}
 			!qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-${EMUL_VER} ) )
 	x86? ( >=media-libs/alsa-lib-1.0.11
 		x11-libs/libXScrnSaver
