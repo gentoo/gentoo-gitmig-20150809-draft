@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.3 2011/01/09 03:27:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.4 2011/03/01 09:55:46 aidecoe Exp $
 
 EAPI=2
 
@@ -26,6 +26,7 @@ DM_DEPS="|| ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 )"
 RDEPEND="
 	>=app-shells/bash-4.0
 	>=app-shells/dash-0.5.4.11
+	>=sys-apps/baselayout-1.12.14-r1
 	>=sys-apps/module-init-tools-3.5
 	>=sys-apps/sysvinit-2.87-r3
 	>=sys-apps/util-linux-2.16
@@ -175,16 +176,6 @@ pkg_postinst() {
 	elog 'modules and kernel drivers for this system, use the "-H" option.'
 	elog 'Some modules need to be explicitly added with "-a" option even if'
 	elog 'required tools are installed.'
-
-	[[ $(base_sys_maj_ver) = 1 ]] && {
-		echo
-		ewarn 'You might encounter following problem during boot time when using'
-		ewarn 'baselayout1:'
-		ewarn '    devpts is already mounted or /dev/pts is busy'
-		ewarn 'See discussion on the Gentoo Forums:'
-		ewarn 'http://forums.gentoo.org/viewtopic-p-6377431.html'
-	}
-
 	echo
 	ewarn 'dhcp-3 is known to not work with QEMU. You will need dhcp-4 or'
 	ewarn 'later for it.'

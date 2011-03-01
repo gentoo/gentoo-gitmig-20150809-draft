@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.10 2011/03/01 09:48:12 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.11 2011/03/01 09:55:46 aidecoe Exp $
+
+  01 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-007.ebuild:
+  Added dependency on baselayout-1.12.14-r1 or above.
 
   01 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-008.ebuild:
   Added notice about new options format.
