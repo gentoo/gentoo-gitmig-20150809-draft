@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.291 2011/03/01 07:18:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.292 2011/03/01 07:23:50 phajdan.jr Exp $
+
+  01 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-9.0.597.107.ebuild, chromium-10.0.648.114.ebuild,
+  -chromium-11.0.672.2.ebuild, chromium-11.0.672.2-r2.ebuild,
+  chromium-9999.ebuild:
+  Prepare for gtk+-3.x (slotted dependencies). Remove old.
 
 *chromium-9.0.597.107 (01 Mar 2011)
 
