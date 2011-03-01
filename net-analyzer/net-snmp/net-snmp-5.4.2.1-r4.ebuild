@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.12 2011/02/26 19:15:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1-r4.ebuild,v 1.13 2011/03/01 20:02:12 arfrever Exp $
 
 EAPI="3"
+PYTHON_DEPEND="python? 2"
 
 inherit fixheadtails flag-o-matic perl-module python autotools
 
@@ -43,6 +44,13 @@ DEPEND="${COMMON}
 	>=sys-devel/autoconf-2.61-r2
 	>=sys-apps/sed-4
 	doc? ( app-doc/doxygen )"
+
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	# Fix CVE-2008-6123
