@@ -1,0 +1,19 @@
+# Copyright 2011 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dracut_modules.desc,v 1.1 2011/03/01 01:14:59 aidecoe Exp $
+
+# This file contains descriptions of DRACUT_MODULES USE_EXPAND flags.
+
+btrfs - Add support for root on Btrfs
+crypt - Add support for encrypted partitions with cryptsetup/LUKS
+dmraid - Add support for dmraid devices, also known as ATA-RAID, or Fake RAID.
+dmsquash-live - Module which might be used for Live CDs
+gensplash - Add support for framebuffer splash at boot-time
+iscsi - Add support for iSCSI
+lvm - Add support for the Logical Volume Manager (sys-apps/lvm2)
+mdraid - Add support for MD devices, also known as software RAID devices
+multipath - Add support for Device Mapper multipathing
+nbd - Add support for network block devices
+nfs - Add support for NFS
+syslog - Add support for syslog
+xen - Add support for Xen
