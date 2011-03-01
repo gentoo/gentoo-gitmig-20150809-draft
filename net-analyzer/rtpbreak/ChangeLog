@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/rtpbreak
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/ChangeLog,v 1.6 2009/12/23 16:16:08 vostorga Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/ChangeLog,v 1.7 2011/03/01 20:22:30 idl0r Exp $
+
+  01 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
+  -files/rtpbreak-1.0-ldflags.patch, -files/rtpbreak-1.2-build.patch,
+  -files/rtpbreak-1.2-ldflags.patch:
+  Remove unused patches
 
   23 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> -rtpbreak-1.0.ebuild,
   -rtpbreak-1.2.ebuild, rtpbreak-1.3a.ebuild:
