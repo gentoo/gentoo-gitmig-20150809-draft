@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-6.1.ebuild,v 1.1 2011/02/08 16:24:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-6.1.ebuild,v 1.2 2011/03/01 22:44:01 jer Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="gtk ssl"
 
 DEPEND="
 	dev-libs/openssl
-	gtk? ( >=x11-libs/gtk+-1.2 )
+	gtk? ( x11-libs/gtk+:2 )
 	ssl? ( >=net-libs/libssh-0.4.0 )
 "
 RDEPEND="${DEPEND}"

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.50 2011/02/08 16:24:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.51 2011/03/01 22:44:01 jer Exp $
+
+  01 Mar 2011; Jeroen Roovers <jer@gentoo.org> hydra-5.8.ebuild,
+  hydra-5.9.ebuild, hydra-6.0.ebuild, hydra-6.1.ebuild:
+  Use SLOTted gtk+ dep.
 
 *hydra-6.1 (08 Feb 2011)
 
