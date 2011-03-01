@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.1.5-r1.ebuild,v 1.3 2008/04/08 01:39:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.1.5-r1.ebuild,v 1.4 2011/03/01 07:22:24 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="An entertaining game based on the old DOS game lines"
@@ -13,28 +14,25 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND="=x11-libs/gtk+-2*
+RDEPEND="x11-libs/gtk+:2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.10.38 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^nlsdir=/s:=.*:=/usr/share/locale:' \
 		-e '/^localedir/s:=.*:=/usr/share/locale:' \
 		configure po/Makefile.in.in || die "sed locale failed"
 }
 
-src_compile() {
-	egamesconf $(use_enable nls) || die
-	emake || die "emake failed"
+src_configure() {
+	egamesconf $(use_enable nls)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog AUTHORS README* TODO NEWS || die "dodoc failed"
 	newicon gnome-gtkballs.png ${PN}.png
 	make_desktop_entry gtkballs "GTK Balls"
