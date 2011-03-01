@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-1.1.5.ebuild,v 1.2 2010/08/07 18:01:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-1.1.5.ebuild,v 1.3 2011/03/01 15:36:32 jer Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Commandline tool for popular vector formats convertion"
 HOMEPAGE="http://sk1project.org/modules.php?name=Products&product=uniconvertor"
 SRC_URI="http://uniconvertor.googlecode.com/files/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 IUSE=""
