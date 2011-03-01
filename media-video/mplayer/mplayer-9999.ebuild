@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.91 2011/01/30 21:08:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.92 2011/03/01 15:31:15 scarabeus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 [[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r32598
 
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
-bs2b +cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac
+bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac
 directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 mpg123 nas
@@ -589,9 +589,11 @@ src_configure() {
 	myconf="--cc=$(tc-getCC)
 		--host-cc=$(tc-getBUILD_CC)
 		--prefix=${EPREFIX}/usr
-		--confdir=${EPREFIX}/etc/mplayer
-		--datadir=${EPREFIX}/usr/share/mplayer
+		--bindir=${EPREFIX}/usr/bin
 		--libdir=${EPREFIX}/usr/$(get_libdir)
+		--confdir=${EPREFIX}/etc/mplayer
+		--datadir=${EPREFIX}/usr/share/mplayer${namesuf}
+		--mandir=${EPREFIX}/usr/share/man
 		${myconf}"
 
 	CFLAGS="${CFLAGS}" ./configure ${myconf} || die
@@ -621,12 +623,8 @@ src_compile() {
 src_install() {
 	local i
 
-	emake prefix="${ED}/usr" \
-		BINDIR="${ED}/usr/bin" \
-		LIBDIR="${ED}/usr/$(get_libdir)" \
-		CONFDIR="${ED}/etc/mplayer" \
-		DATADIR="${ED}/usr/share/mplayer" \
-		MANDIR="${ED}/usr/share/man" \
+	emake \
+		DESTDIR="${D}" \
 		INSTALLSTRIP="" \
 		install
 
