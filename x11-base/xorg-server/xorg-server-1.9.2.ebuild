@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.ebuild,v 1.9 2011/02/12 18:45:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.2.ebuild,v 1.10 2011/03/01 12:18:43 scarabeus Exp $
 
 EAPI=3
 # They generate the configure.ac with wrong version of util-macros
@@ -205,7 +205,7 @@ src_install() {
 
 	if ! use minimal &&	use xorg; then
 		# Install xorg.conf.example into docs
-		dodoc hw/xfree86/xorg.conf.example \
+		dodoc "${AUTOTOOLS_BUILD_DIR}"/hw/xfree86/xorg.conf.example \
 			|| die "couldn't install xorg.conf.example"
 	fi
 
