@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/gtklife
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.14 2008/07/13 16:37:37 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/ChangeLog,v 1.15 2011/03/01 07:23:15 mr_bones_ Exp $
+
+  01 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> gtklife-5.1.ebuild:
+  EAPI=2; tidy
 
   13 Jul 2008; Jeroen Roovers <jer@gentoo.org> gtklife-5.1.ebuild:
   Stable for HPPA too.
