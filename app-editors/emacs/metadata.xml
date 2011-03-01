@@ -26,7 +26,6 @@
   <flag name='hesiod'>Enable support for <pkg>net-dns/hesiod</pkg></flag>
   <flag name='leim'>Add support for Emacs input methods</flag>
   <flag name='sendmail'>Build Emacs with MTA support</flag>
-  <flag name='sound'>Enable sound</flag>
   <flag name='toolkit-scroll-bars'>Use the selected toolkit's scrollbars in
     preference to Emacs' own scrollbars</flag>
 </use>
