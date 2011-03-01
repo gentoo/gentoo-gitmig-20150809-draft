@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.746 2011/03/01 16:45:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.747 2011/03/01 21:53:46 tomka Exp $
+
+  01 Mar 2011; Thomas Kahle <tomka@gentoo.org> glibc-2.11.3.ebuild:
+  x86 stable per bug 350744
 
   01 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> glibc-2.11.3.ebuild:
   ppc/ppc64 stable wrt #350744
