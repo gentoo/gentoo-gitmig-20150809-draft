@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.31.ebuild,v 1.1 2010/12/15 18:37:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.31.ebuild,v 1.2 2011/03/01 18:37:42 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc nls readline static-libs"
 
 CDEPEND="dev-db/sqlite:3
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.6:2
 	dev-libs/glib:2
 	gnome-base/libglade:2.0
 	dev-libs/libsigc++:2
