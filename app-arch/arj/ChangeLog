@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/arj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.41 2010/10/14 19:18:57 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.42 2011/03/01 19:50:59 idl0r Exp $
+
+  01 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
+  -files/001_arches_align.patch, -files/002_no_remove_static_const.patch,
+  -files/003_64_bit_clean.patch:
+  Remove unused patches
 
 *arj-3.10.22-r3 (14 Oct 2010)
 
