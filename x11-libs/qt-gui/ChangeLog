@@ -1,9 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.138 2011/03/01 19:18:22 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.139 2011/03/01 19:48:09 tampakrap Exp $
 
   01 Mar 2011; Theo Chatzimichos <tampakrap@gentoo.org> qt-gui-4.7.2.ebuild:
-  msg
+  Raster is not default any more, bug 353248
 
 *qt-gui-4.7.2 (01 Mar 2011)
 
