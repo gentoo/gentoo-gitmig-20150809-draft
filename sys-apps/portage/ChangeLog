@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.804 2011/02/25 20:46:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.805 2011/03/01 23:04:52 zmedico Exp $
+
+  01 Mar 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.40.ebuild,
+  -portage-2.2.0_alpha24.ebuild:
+  Remove old versions.
 
   25 Feb 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Fix broken doexe call with all symlinks.
