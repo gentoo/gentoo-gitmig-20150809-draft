@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.60 2011/02/24 21:18:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.61 2011/03/01 15:22:52 jer Exp $
+
+  01 Mar 2011; Jeroen Roovers <jer@gentoo.org> libisoburn-1.0.0.ebuild:
+  Stable for HPPA (bug #355097).
 
   24 Feb 2011; Daniel Pielmeier <billie@gentoo.org> libisoburn-1.0.0.ebuild:
   Raise required libburn and libisofs version.
