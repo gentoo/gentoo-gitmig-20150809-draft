@@ -1,26 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.2 2011/03/01 14:41:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.686.0.ebuild,v 1.1 2011/03/01 14:41:18 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
+V8_DEPEND="3.1.6.1"
 
 inherit eutils fdo-mime flag-o-matic multilib pax-utils portability python \
-	subversion toolchain-funcs versionator virtualx
+	toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-# subversion eclass fetches gclient, which will then fetch chromium itself
-ESVN_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
-EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
+SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 
 LICENSE="BSD"
-SLOT="live"
-KEYWORDS=""
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="cups gnome gnome-keyring"
 
 RDEPEND="app-arch/bzip2
-	dev-lang/v8
+	>=dev-lang/v8-${V8_DEPEND}
 	dev-libs/dbus-glib
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
@@ -49,56 +48,12 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2"
 RDEPEND+="
-	!=www-client/chromium-9999
 	|| (
 		x11-themes/gnome-icon-theme
 		x11-themes/xfce4-icon-theme
 	)
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
-
-src_unpack() {
-	subversion_src_unpack
-	mv "${S}" "${WORKDIR}"/depot_tools
-
-	# Most subversion checks and configurations were already run
-	EGCLIENT="${WORKDIR}"/depot_tools/gclient
-	cd "${ESVN_STORE_DIR}" || die "gclient: can't chdir to ${ESVN_STORE_DIR}"
-
-	if [[ ! -d ${PN} ]]; then
-		mkdir -p "${PN}" || die "gclient: can't mkdir ${PN}."
-	fi
-
-	cd "${PN}" || die "gclient: can't chdir to ${PN}"
-
-	if [[ ! -f .gclient ]]; then
-		einfo "gclient config -->"
-		${EGCLIENT} config ${EGCLIENT_REPO_URI} || die "gclient: error creating config"
-	fi
-
-	einfo "gclient sync start -->"
-	einfo "     repository: ${EGCLIENT_REPO_URI}"
-	${EGCLIENT} sync --nohooks || die
-	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
-
-	mkdir -p "${S}"
-	# From export_tarball.py
-	CHROMIUM_EXCLUDES="--exclude=src/chrome/test/data
-	--exclude=src/chrome/tools/test/reference_build
-	--exclude=src/chrome_frame --exclude=src/gears/binaries
-	--exclude=src/net/data/cache_tests --exclude=src/o3d/documentation
-	--exclude=src/o3d/samples --exclude=src/third_party/lighttpd
-	--exclude=src/third_party/WebKit/LayoutTests
-	--exclude=src/webkit/data/layout_tests
-	--exclude=src/webkit/tools/test/reference_build"
-	rsync -rlpgo --exclude=".svn/" ${CHROMIUM_EXCLUDES} src/ "${S}" || die "gclient: can't export to ${S}."
-
-	# Display correct svn revision in about box, and log new version
-	CREV=$(subversion__svn_info "src" "Revision")
-	echo ${CREV} > "${S}"/build/LASTCHANGE.in || die "setting revision failed"
-	. src/chrome/VERSION
-	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH}_p${CREV} "
-}
 
 egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
@@ -107,8 +62,7 @@ egyp() {
 }
 
 pkg_setup() {
-	SUFFIX="-${SLOT}"
-	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser${SUFFIX}"
+	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
 
 	# Make sure the build system will use the right tools, bug #340795.
 	tc-export AR CC CXX RANLIB
@@ -144,6 +98,9 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
 
+	# Make sure we don't use bundled ICU headers.
+	epatch "${FILESDIR}"/${PN}-system-icu-r0.patch
+
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
@@ -174,6 +131,13 @@ src_prepare() {
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
+
+	# Check for the maintainer to ensure that the dependencies
+	# are up-to-date.
+	local v8_bundled="$(v8-extract-version v8/src/version.cc)"
+	if [ "${V8_DEPEND}" != "${v8_bundled}" ]; then
+		die "update v8 dependency to ${v8_bundled}"
+	fi
 
 	# Remove bundled v8.
 	find v8 -type f \! -iname '*.gyp*' -delete || die
@@ -313,18 +277,12 @@ src_install() {
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
 	newexe "${FILESDIR}"/chromium-launcher-r1.sh chromium-launcher.sh || die
-	sed "s:chromium-browser:chromium-browser${SUFFIX}:g" \
-		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
-	sed "s:chromium.desktop:chromium${SUFFIX}.desktop:g" \
-		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
-	sed "s:plugins:plugins --user-data-dir=\${HOME}/.config/chromium${SUFFIX}:" \
-		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
 
 	# It is important that we name the target "chromium-browser",
 	# xdg-utils expect it; bug #355517.
-	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser${SUFFIX} || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser || die
 	# keep the old symlink around for consistency
-	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium${SUFFIX} || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium || die
 
 	insinto "${CHROMIUM_HOME}"
 	doins out/Release/chrome.pak || die
@@ -333,8 +291,8 @@ src_install() {
 	doins -r out/Release/locales || die
 	doins -r out/Release/resources || die
 
-	newman out/Release/chrome.1 chromium${SUFFIX}.1 || die
-	newman out/Release/chrome.1 chromium-browser${SUFFIX}.1 || die
+	newman out/Release/chrome.1 chromium.1 || die
+	newman out/Release/chrome.1 chromium-browser.1 || die
 
 	# Chromium looks for these in its folder
 	# See media_posix.cc and base_paths_linux.cc
@@ -344,8 +302,8 @@ src_install() {
 
 	# Install icon and desktop entry.
 	newicon chrome/app/theme/chromium/product_logo_48.png \
-		chromium-browser${SUFFIX}.png || die
-	make_desktop_entry chromium-browser${SUFFIX} "Chromium ${SLOT}" chromium-browser${SUFFIX} \
+		chromium-browser.png || die
+	make_desktop_entry chromium-browser "Chromium" chromium-browser \
 		"Network;WebBrowser" "MimeType=text/html;text/xml;application/xhtml+xml;"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop || die
 
@@ -353,23 +311,10 @@ src_install() {
 	if use gnome; then
 		dodir /usr/share/gnome-control-center/default-apps || die
 		insinto /usr/share/gnome-control-center/default-apps
-		newins "${FILESDIR}"/chromium-browser.xml chromium-browser${SUFFIX}.xml || die
-		sed "s:chromium-browser:chromium-browser${SUFFIX}:g" -i \
-			"${D}"/usr/share/gnome-control-center/default-apps/chromium-browser${SUFFIX}.xml
+		doins "${FILESDIR}"/chromium-browser.xml || die
 	fi
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
-
-	elog
-	elog "The live ebuild of chromium is now in its own slot."
-	elog "This means that you can have it installed alongside a versioned"
-	elog "release and it has its own configuration folder, located at"
-	elog "	\${HOME}/.config/chromium-live"
-	elog "If you want to use any existing, old configuration, you'll have to"
-	elog "rename the old config directory *before* launching chromium-live:"
-	elog "	mv \${HOME}/.config/chromium \${HOME}/.config/chromium-live"
-	elog "To run, execute chromium-live or chromium-browser-live."
-	elog
 }
