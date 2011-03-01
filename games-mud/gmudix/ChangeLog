@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gmudix
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.12 2008/03/07 01:21:47 wolf31o2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/ChangeLog,v 1.13 2011/03/01 07:19:18 mr_bones_ Exp $
+
+  01 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> gmudix-1.0.ebuild:
+  EAPI=2; slot gtk+ dep
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> gmudix-1.0.ebuild:
   QA cleanup: Shorten DESCRIPTION.
