@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9.0.597.84.ebuild,v 1.1 2011/02/04 14:47:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9.0.597.84.ebuild,v 1.2 2011/03/01 07:26:08 phajdan.jr Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -37,7 +37,7 @@ RDEPEND="app-arch/bzip2
 	sys-libs/zlib
 	x11-apps/xmessage
 	x11-libs/cairo
-	>=x11-libs/gtk+-2.14.7
+	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	x11-libs/pango

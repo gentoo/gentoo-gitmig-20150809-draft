@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.87 2011/02/04 14:47:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.88 2011/03/01 07:26:08 phajdan.jr Exp $
+
+  01 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-bin-9.0.597.84.ebuild:
+  Prepare for gtk+-3.x (slotted dependencies).
 
 *chromium-bin-9.0.597.84 (04 Feb 2011)
 
