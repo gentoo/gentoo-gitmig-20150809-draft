@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.65 2011/02/23 16:35:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.66 2011/03/01 13:59:51 mgorny Exp $
+
+  01 Mar 2011; Michał Górny <mgorny@gentoo.org> libpciaccess-0.12.0.ebuild:
+  Fix installation with new xorg-2.eclass.
 
   23 Feb 2011; Jeroen Roovers <jer@gentoo.org> libpciaccess-0.12.1.ebuild:
   Stable for HPPA (bug #354237).
