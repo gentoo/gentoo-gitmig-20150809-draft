@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.155 2011/02/22 18:27:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.156 2011/03/01 00:33:08 ranger Exp $
+
+  01 Mar 2011; Brent Baude <ranger@gentoo.org> whois-5.0.8.ebuild:
+  stable ppc64, bug 353737
 
   22 Feb 2011; nixnut <nixnut@gentoo.org> whois-5.0.8.ebuild:
   ppc stable #353737
