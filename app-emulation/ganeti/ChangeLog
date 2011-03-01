@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.42 2011/02/22 17:12:09 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.43 2011/03/01 17:27:02 ramereth Exp $
+
+*ganeti-2.4.0_rc3 (01 Mar 2011)
+
+  01 Mar 2011; Lance Albertson <ramereth@gentoo.org>
+  -ganeti-2.4.0_rc2.ebuild, +ganeti-2.4.0_rc3.ebuild:
+  Version bump for a critical bug
 
 *ganeti-2.4.0_rc2 (22 Feb 2011)
 
