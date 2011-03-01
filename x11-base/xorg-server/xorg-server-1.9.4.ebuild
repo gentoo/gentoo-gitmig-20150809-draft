@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.4.ebuild,v 1.5 2011/02/23 16:31:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.4.ebuild,v 1.6 2011/03/01 10:07:11 chithanh Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -195,7 +195,7 @@ src_install() {
 
 	if ! use minimal &&	use xorg; then
 		# Install xorg.conf.example into docs
-		dodoc hw/xfree86/xorg.conf.example \
+		dodoc "${WORKDIR}"/${P}_build/hw/xfree86/xorg.conf.example \
 			|| die "couldn't install xorg.conf.example"
 	fi
 
