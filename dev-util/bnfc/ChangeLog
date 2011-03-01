@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bnfc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.14 2011/03/01 20:01:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.15 2011/03/01 20:02:18 slyfox Exp $
+
+  01 Mar 2011; Sergei Trofimovich <slyfox@gentoo.org> -bnfc-2.1.2.ebuild,
+  -bnfc-2.2.ebuild, -files/bnfc-2.2-ghc66-utf8.patch, -bnfc-2.4_beta.ebuild:
+  Removed old
 
 *bnfc-2.4.2.0 (01 Mar 2011)
 
