@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.60 2011/02/02 08:52:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.61 2011/03/01 01:14:59 ranger Exp $
+
+  01 Mar 2011; Brent Baude <ranger@gentoo.org> dos2unix-5.1.1.ebuild:
+  stable ppc64, bug 350646
 
   02 Feb 2011; Lars Wendler <polynomial-c@gentoo.org> dos2unix-5.2.ebuild,
   +files/dos2unix-5.2-makefile.patch:
