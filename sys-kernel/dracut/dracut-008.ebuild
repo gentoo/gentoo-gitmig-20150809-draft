@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-008.ebuild,v 1.2 2011/03/01 05:48:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-008.ebuild,v 1.3 2011/03/01 09:48:12 aidecoe Exp $
 
 EAPI=2
 
@@ -187,7 +187,7 @@ pkg_postinst() {
 	elog '    # mount /boot (if necessary)'
 	elog '    # dracut "" <kernel-version>'
 	elog ''
-	elog 'For command line documentation see man 7 dracut.kernel.'
+	elog 'For command line documentation see dracut.kernel(7).'
 	elog ''
 	elog 'Simple example to select root and resume partition:'
 	elog '    root=/dev/sda1 resume=/dev/sda2'
@@ -200,4 +200,8 @@ pkg_postinst() {
 	echo
 	ewarn 'dhcp-3 is known to not work with QEMU. You will need dhcp-4 or'
 	ewarn 'later for it.'
+	echo
+	elog 'Options (documented in dracut.kernel(7)) have new format since this'
+	elog 'version. Old format is preserved, but will be removed in future.'
+	elog 'Please migrate to the new one.'
 }
