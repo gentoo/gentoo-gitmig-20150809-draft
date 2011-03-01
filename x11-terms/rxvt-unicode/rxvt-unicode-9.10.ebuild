@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.10.ebuild,v 1.3 2010/12/22 19:18:33 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.10.ebuild,v 1.4 2011/03/01 15:56:19 jer Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/libX11
 	>=sys-libs/ncurses-5.7-r6
 	afterimage? ( || ( media-libs/libafterimage x11-wm/afterstep ) )
 	perl? ( dev-lang/perl )
-	pixbuf? ( || ( >=x11-libs/gdk-pixbuf-2.21 <=x11-libs/gtk+-2.21 ) )"
+	pixbuf? ( x11-libs/gdk-pixbuf x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xproto"
