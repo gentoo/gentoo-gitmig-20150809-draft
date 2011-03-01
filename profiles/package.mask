@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12503 2011/02/28 00:17:51 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12504 2011/03/01 05:54:24 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (01 Mar 2011)
+# Christian Faulhammer <fauli@gentoo.org>
+# Emacs live ebuilds. Use at your own risk.
+~app-editors/emacs-vcs-23.3.9999
+~app-editors/emacs-vcs-24.0.9999
 
 # Gilles Dartiguelongue <eva@gentoo.org> (27 Feb 2011)
 # Mask for empathy-2.33 and related
@@ -910,12 +916,6 @@ net-fs/samba-client
 # Torsten Veller <tove@gentoo.org> (14 Mar 2010)
 # Mask "End Of Life" versions
 <www-apps/bugzilla-3.2
-
-# Ulrich Mueller <ulm@gentoo.org> (10 Mar 2010)
-# Christian Faulhammer <fauli@gentoo.org>
-# Emacs live ebuilds. Use at your own risk.
-~app-editors/emacs-vcs-23.2.9999
-~app-editors/emacs-vcs-24.0.9999
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from
