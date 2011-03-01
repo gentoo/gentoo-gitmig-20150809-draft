@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.39 2011/02/21 15:09:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.40 2011/03/01 01:17:53 ranger Exp $
+
+  01 Mar 2011; Brent Baude <ranger@gentoo.org> libssh-0.4.8.ebuild:
+  stable ppc64, bug 355857
 
   21 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libssh-0.3.4.ebuild,
   -libssh-0.4.4.ebuild, -libssh-0.4.6.ebuild, libssh-0.4.8.ebuild,
