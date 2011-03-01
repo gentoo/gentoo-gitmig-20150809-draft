@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/firebird
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.104 2010/11/18 20:01:23 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.105 2011/03/01 20:15:08 idl0r Exp $
+
+  01 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
+  -files/firebird-2.0.4.13130.1-deps-flags-libs.patch,
+  -files/firebird-2.1.1.17910.0-deps-flags-libs.patch,
+  -files/firebird-2.1.1.17910.0-gcc-icu-declare.patch:
+  Remove unused patches
 
 *firebird-2.5.0.26074.0 (18 Nov 2010)
 
