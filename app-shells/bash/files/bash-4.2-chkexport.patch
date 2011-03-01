@@ -1,0 +1,15 @@
+*** ../bash-4.2-patched/variables.c	2011-02-25 12:07:41.000000000 -0500
+--- variables.c	2011-03-01 10:13:04.000000000 -0500
+***************
+*** 3661,3665 ****
+  
+    v = find_variable (name);
+!   if (exported_p (v))
+      {
+        array_needs_making = 1;
+--- 3661,3665 ----
+  
+    v = find_variable (name);
+!   if (v && exported_p (v))
+      {
+        array_needs_making = 1;
