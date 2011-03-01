@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/log4j
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.83 2011/01/29 10:21:53 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.84 2011/03/01 11:25:34 hwoarang Exp $
+
+  01 Mar 2011; Markos Chandras <hwoarang@gentoo.org> log4j-1.2.16.ebuild:
+  Stable on amd64 wrt bug #356935
 
 *log4j-1.2.16 (29 Jan 2011)
 
