@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/gwp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/ChangeLog,v 1.6 2009/11/21 19:35:00 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/ChangeLog,v 1.7 2011/03/01 07:29:03 mr_bones_ Exp $
+
+  01 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> gwp-0.4.0-r2.ebuild:
+  EAPI=2; slot gtk+ dep
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> gwp-0.4.0-r2.ebuild:
   x86 stable, bug #289162

@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.4 2009/11/21 19:35:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r2.ebuild,v 1.5 2011/03/01 07:29:03 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils gnome2
 
 DESCRIPTION="GNOME client for the classic PBEM strategy game VGA Planets 3"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="nls opengl python"
 
-RDEPEND="=x11-libs/gtk+-2*
+RDEPEND="x11-libs/gtk+:2
 	=gnome-base/libgnomeui-2*
 	=gnome-base/libglade-2*
 	app-text/scrollkeeper
@@ -25,8 +26,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-exec-stack.patch
