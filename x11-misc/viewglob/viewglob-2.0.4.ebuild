@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.6 2011/01/15 14:54:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.7 2011/03/01 06:34:46 radhermit Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -15,7 +17,7 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/glib
-	x11-libs/gtk+
+	x11-libs/gtk+:2
 	|| ( app-shells/bash app-shells/zsh )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
