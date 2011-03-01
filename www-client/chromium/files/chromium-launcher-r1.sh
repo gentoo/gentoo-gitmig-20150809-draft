@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Copyright (c) 2009 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
@@ -22,4 +22,4 @@ esac
 # Set the .desktop file name
 export CHROME_DESKTOP="chromium-browser-chromium.desktop"
 
-exec "$PROGDIR/chrome" --extra-plugin-dir=/usr/lib/nsbrowser/plugins "$@"
+exec -a "chromium-browser" "$PROGDIR/chrome" --extra-plugin-dir=/usr/lib/nsbrowser/plugins "$@"
