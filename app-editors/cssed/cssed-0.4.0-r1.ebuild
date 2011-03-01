@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.4.0-r1.ebuild,v 1.6 2009/08/05 22:59:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.4.0-r1.ebuild,v 1.7 2011/03/01 06:48:08 radhermit Exp $
+
+EAPI=1
 
 inherit autotools eutils toolchain-funcs
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="plugins"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	>=dev-libs/atk-1.4.0
 	>=dev-libs/glib-2.2.3
 	>=media-libs/fontconfig-2.2.0-r2
