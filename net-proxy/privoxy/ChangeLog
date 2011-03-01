@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.64 2011/02/22 19:26:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.65 2011/03/01 15:18:05 ranger Exp $
+
+  01 Mar 2011; Brent Baude <ranger@gentoo.org> privoxy-3.0.17.ebuild:
+  stable ppc64, bug 353284
 
   22 Feb 2011; nixnut <nixnut@gentoo.org> privoxy-3.0.17.ebuild:
   ppc stable #353284
