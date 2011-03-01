@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.4 2011/01/24 14:04:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.5 2011/03/01 23:02:08 abcd Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -9,6 +9,7 @@
 # @CODE
 # Original Author: Gilles Dartiguelongue <eva@gentoo.org>
 # Various improvements based on cmake-utils.eclass: Tomáš Chvátal <scarabeus@gentoo.org>
+# Proper prefix support: Jonathan Callen <abcd@gentoo.org>
 # @CODE
 # @BLURB: common ebuild functions for waf-based packages
 # @DESCRIPTION:
@@ -34,12 +35,12 @@ waf-utils_src_configure() {
 	# Eclass can use different waf executable. Usually it is located in "${S}/waf".
 	: ${WAF_BINARY:="${S}/waf"}
 
-	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=/usr --libdir=/usr/$(get_libdir) $@ configure"
+	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=${EPREFIX}/usr --libdir=${EPREFIX}/usr/$(get_libdir) $@ configure"
 
 	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" "${WAF_BINARY}" \
-		--prefix=/usr \
-		--libdir=/usr/$(get_libdir) \
-		$@ \
+		"--prefix=${EPREFIX}/usr" \
+		"--libdir=${EPREFIX}/usr/$(get_libdir)" \
+		"$@" \
 		configure || die "configure failed"
 }
 
@@ -60,8 +61,8 @@ waf-utils_src_compile() {
 waf-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	echo "\"${WAF_BINARY}\" --destdir=\"${ED}\" install"
-	"${WAF_BINARY}" --destdir="${ED}" install  || die "Make install failed"
+	echo "\"${WAF_BINARY}\" --destdir=\"${D}\" install"
+	"${WAF_BINARY}" --destdir="${D}" install  || die "Make install failed"
 
 	# Manual document installation
 	base_src_install_docs
