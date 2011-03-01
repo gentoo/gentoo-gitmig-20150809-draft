@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.20 2011/01/13 18:45:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.21 2011/03/01 23:03:58 abcd Exp $
+
+  01 Mar 2011; Jonathan Callen <abcd@gentoo.org> talloc-2.0.5.ebuild:
+  Add ~amd64-linux/~x86-linux keywords
 
 *talloc-2.0.5 (13 Jan 2011)
 
