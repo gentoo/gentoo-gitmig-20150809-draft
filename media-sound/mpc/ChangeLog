@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.78 2011/02/27 22:09:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.79 2011/03/01 15:01:17 jer Exp $
+
+  01 Mar 2011; Jeroen Roovers <jer@gentoo.org> mpc-0.20.ebuild:
+  Stable for HPPA (bug #356527).
 
   27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> mpc-0.20.ebuild:
   Stable on amd64 wrt bug #356527
