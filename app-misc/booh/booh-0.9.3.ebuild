@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.9.3.ebuild,v 1.1 2010/07/13 06:33:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.9.3.ebuild,v 1.2 2011/03/01 18:40:59 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk encode exif"
 
 CDEPEND="media-gfx/exiv2
-	gtk? ( >=x11-libs/gtk+-2.8 )"
+	gtk? ( >=x11-libs/gtk+-2.8:2 )"
 
 DEPEND="${DEPEND} ${CDEPEND}"
 RDEPEND="${RDEPEND} ${CDEPEND}
