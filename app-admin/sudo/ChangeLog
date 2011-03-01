@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.257 2011/01/19 14:56:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.258 2011/03/01 17:59:34 flameeyes Exp $
+
+*sudo-1.8.0 (01 Mar 2011)
+*sudo-1.7.5 (01 Mar 2011)
+
+  01 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> +sudo-1.7.5.ebuild,
+  +sudo-1.8.0.ebuild:
+  Version bump; 1.8.0 is a big rewrite and thus is currently masked. S/Key
+  support in 1.8 is gone, and it doesn't respect ldflags right now; tests seem
+  also to be broken.
 
 *sudo-1.7.4_p6 (19 Jan 2011)
 
