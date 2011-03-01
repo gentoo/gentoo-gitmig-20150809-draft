@@ -1,6 +1,31 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.8 2011/01/09 03:27:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.9 2011/03/01 01:59:53 aidecoe Exp $
+
+*dracut-008 (01 Mar 2011)
+
+  01 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-008.ebuild,
+  +files/dracut-008-dm-udev-rules.patch,
+  +files/dracut-008-i18n-config-file-parsing-in-hostonly.patch,
+  +files/dracut-008-multipath-udev-rules.patch:
+  Version bump, resolves bug #353577
+
+  Changes:
+  - modules controlled by DRACUT_MODULES USE_EXPAND instead of regular IUSE
+    (except of 'debug' and 'selinux')
+  - removed mount-boot and mkdir of /boot/dracut (user can create it
+    him/herself if really needed)
+  - added dependency on baselayout-1.12.14-r1 or above
+  - few minor fixes in the ebuild like missing 'die' and so
+
+  Other notes:
+  - removing biosdevname module (there's no package yet)
+  - removing broken modules: bootchart and busybox
+
+  Thanks to
+    Lucian Muresan <lucianm@users.sourceforge.net>
+    and Xake <xake@rymdraket.net>
+  for report and comments.
 
   09 Jan 2011; Mike Frysinger <vapier@gentoo.org> dracut-007.ebuild:
   Use new mount-boot_pkg_postinst helper.
