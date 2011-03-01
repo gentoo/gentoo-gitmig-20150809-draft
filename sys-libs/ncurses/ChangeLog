@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.179 2011/03/01 07:51:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.180 2011/03/01 07:52:56 vapier Exp $
+
+*ncurses-5.8 (01 Mar 2011)
+
+  01 Mar 2011; Mike Frysinger <vapier@gentoo.org> +ncurses-5.8.ebuild,
+  +files/ncurses-5.8-gfbsd.patch, +files/ncurses-5.8-rxvt-unicode.patch:
+  Version bump.
 
 *ncurses-5.7-r7 (01 Mar 2011)
 
