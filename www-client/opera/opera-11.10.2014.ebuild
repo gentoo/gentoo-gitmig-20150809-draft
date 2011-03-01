@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.10.2014.ebuild,v 1.2 2011/02/26 17:16:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.10.2014.ebuild,v 1.3 2011/03/01 15:46:22 jer Exp $
 
 EAPI="3"
 
@@ -49,11 +49,11 @@ DEPEND="
 	app-arch/xz-utils
 "
 GTKRDEPEND="
-	=x11-libs/gtk+-2*
 	dev-libs/atk
-	dev-libs/glib
+	dev-libs/glib:2
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
+	x11-libs/gtk+:2
 	x11-libs/pango
 	x11-libs/pixman
 "

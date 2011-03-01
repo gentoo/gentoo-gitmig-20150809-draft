@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.599 2011/02/28 14:04:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.600 2011/03/01 15:46:22 jer Exp $
+
+  01 Mar 2011; Jeroen Roovers <jer@gentoo.org> opera-11.01.1190.ebuild,
+  opera-11.10.2014.ebuild:
+  Use SLOT deps for gtk+ and glib.
 
   28 Feb 2011; Jeroen Roovers <jer@gentoo.org> opera-11.01.1190.ebuild:
   Update dependencies.
