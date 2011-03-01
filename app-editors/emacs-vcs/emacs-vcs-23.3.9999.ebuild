@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.2.9999-r1.ebuild,v 1.4 2011/02/28 16:31:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.1 2011/03/01 06:10:57 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -94,7 +94,7 @@ src_prepare() {
 		echo
 		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Emacs version number: ${FULL_VERSION}"
-		[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
+		[ "${FULL_VERSION}" = ${PV%.*} ] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 		echo
 	#else
