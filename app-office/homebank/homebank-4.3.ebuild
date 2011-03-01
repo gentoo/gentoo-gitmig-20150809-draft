@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.3.ebuild,v 1.1 2010/11/05 20:51:04 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.3.ebuild,v 1.2 2011/03/01 00:58:37 calchan Exp $
 
 EAPI="2"
 
@@ -28,6 +28,7 @@ S="${WORKDIR}/${P/_/}"
 
 src_prepare() {
 	sed -i -e 's/true/TRUE/' src/import.c || die "sed failed"
+	echo -e "src/da_encoding.c\nsrc/hb_transaction.c" >> po/POTFILES.in || die "echo failed"
 }
 
 src_configure() {
