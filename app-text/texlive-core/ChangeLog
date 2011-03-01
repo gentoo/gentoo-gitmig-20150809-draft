@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.131 2011/02/17 15:06:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.132 2011/03/01 11:01:24 aballier Exp $
+
+  01 Mar 2011; Alexis Ballier <aballier@gentoo.org> texlive-core-2010.ebuild:
+  Add a patch to fix xetex math mode in 64 bits, reported by Faustus
+  <orlovm@cs.bgu.ac.il>, bug #356701
 
   17 Feb 2011; Alexis Ballier <aballier@gentoo.org> texlive-core-2010.ebuild:
   Add a patch from debian to fix a2ping invocation wrt its shebang, part of bug
