@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.1.ebuild,v 1.7 2011/02/23 16:37:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.1.ebuild,v 1.8 2011/03/01 10:47:14 chithanh Exp $
 
 EAPI=3
 
@@ -33,6 +33,6 @@ CONFIGURE_OPTIONS="
 src_compile() {
 	# cleanup to make sure .dir files are regenerated
 	# bug #328455 c#26
-	emake clean || die
+	xorg-2_src_compile clean
 	xorg-2_src_compile
 }
