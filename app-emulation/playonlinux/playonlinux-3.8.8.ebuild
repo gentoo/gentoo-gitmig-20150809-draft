@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.8.8.ebuild,v 1.1 2010/12/26 16:00:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.8.8.ebuild,v 1.2 2011/03/01 03:22:01 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils python games
 
 MY_PN="PlayOnLinux"
 
-DESCRIPTION="Set of scripts to easily install and use Windows(tm) games and softwares"
+DESCRIPTION="set of scripts to easily install and use Windows games and software"
 HOMEPAGE="http://playonlinux.com/"
 SRC_URI="http://www.playonlinux.com/script_files/${MY_PN}/${PV}/${MY_PN}_${PV}.tar.gz"
 
