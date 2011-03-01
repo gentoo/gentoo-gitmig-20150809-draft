@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.3.6.ebuild,v 1.1 2011/02/13 22:10:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.3.6.ebuild,v 1.2 2011/03/01 06:05:17 radhermit Exp $
 
 EAPI=4
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls examples"
 
-DEPEND=">=x11-libs/gtk+-2.12
-	x11-libs/gtksourceview:2.0
-	nls? ( >=sys-devel/gettext-0.10.40 )"
-RDEPEND="${DEPEND}"
+RDEPEND=">=x11-libs/gtk+-2.12:2
+	x11-libs/gtksourceview:2.0"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
