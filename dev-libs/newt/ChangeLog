@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.73 2011/03/01 01:19:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.74 2011/03/01 14:06:45 arfrever Exp $
+
+  01 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -newt-0.52.10-r1.ebuild, -files/newt-CVE-2009-2905.patch:
+  Delete.
 
   01 Mar 2011; Brent Baude <ranger@gentoo.org> newt-0.52.12.ebuild:
   stable ppc64, bug 349905
