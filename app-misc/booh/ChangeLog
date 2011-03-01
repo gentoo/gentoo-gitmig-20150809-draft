@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/booh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.28 2010/11/03 00:20:56 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.29 2011/03/01 18:40:17 graaff Exp $
+
+  01 Mar 2011; Hans de Graaff <graaff@gentoo.org> -booh-0.9.2.2.ebuild:
+  Add slot to gtk+ dependency.
 
   03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
