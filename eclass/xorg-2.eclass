@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.24 2011/02/28 18:16:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.25 2011/03/01 18:56:58 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -186,7 +186,7 @@ if has dri ${IUSE//+}; then
 		x11-proto/dri2proto
 	)"
 fi
-if [[ -n "${DRIVER}" ]]; then
+if [[ -n "${DRIVER}" && ${PN} == xf86-video-* ]]; then
 	COMMON_DEPEND+="
 		x11-base/xorg-server[xorg]
 		x11-libs/libpciaccess
