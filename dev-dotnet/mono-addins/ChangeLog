@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono-addins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.22 2010/10/07 19:47:02 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.23 2011/03/01 08:06:42 ali_bush Exp $
+
+*mono-addins-0.6 (01 Mar 2011)
+
+  01 Mar 2011; Alistair Bush <ali_bush@gentoo.org> +mono-addins-0.6.ebuild:
+  Version Bump.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org>
   -files/mono-addins-0.2-disable-gui.patch, -mono-addins-0.3.ebuild,
