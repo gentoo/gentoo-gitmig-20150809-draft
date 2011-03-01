@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.1.ebuild,v 1.1 2011/01/31 21:06:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.1.ebuild,v 1.2 2011/03/01 13:42:31 hwoarang Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://apvlv.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug djvu"
 
 RDEPEND=">=x11-libs/gtk+-2.10.4:2
