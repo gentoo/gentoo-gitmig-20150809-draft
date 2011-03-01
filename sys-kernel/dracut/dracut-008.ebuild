@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-008.ebuild,v 1.1 2011/03/01 01:59:53 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-008.ebuild,v 1.2 2011/03/01 05:48:22 mr_bones_ Exp $
 
 EAPI=2
 
@@ -164,7 +164,7 @@ src_install() {
 	done
 
 	# Those flags are specific, and even are corresponding to modules, they need
-	# to be declared as regular USE flags. 
+	# to be declared as regular USE flags.
 	use debug || rm_module 95debug
 	use selinux || rm_module 98selinux
 
