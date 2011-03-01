@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.450 2011/02/13 12:10:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.451 2011/03/01 00:13:01 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1251,6 +1251,11 @@ gcc-compiler-configure() {
 		# Enable sjlj exceptions for backward compatibility on hppa
 		hppa)
 			[[ ${GCCMAJOR} == "3" ]] && confgcc="${confgcc} --enable-sjlj-exceptions"
+			;;
+		# Set up defaults based on current CFLAGS
+		ppc)
+			is-flagq -mfloat-gprs=double && confgcc+=" --enable-e500-double"
+			[[ ${CTARGET//_/-} == *-e500v2-* ]] && confgcc+=" --enable-e500-double"
 			;;
 	esac
 
