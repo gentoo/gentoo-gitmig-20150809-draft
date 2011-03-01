@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.0.2.ebuild,v 1.1 2011/02/28 17:29:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.0.3.ebuild,v 1.1 2011/03/01 16:50:57 scarabeus Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit autotools-utils autotools
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://pgpool.projects.postgresql.org/"
-SRC_URI="http://pgfoundry.org/frs/download.php/2946/${MY_P}.tar.gz"
+SRC_URI="http://pgfoundry.org/frs/download.php/2958/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
