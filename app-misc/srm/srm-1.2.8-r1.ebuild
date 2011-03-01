@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.8-r1.ebuild,v 1.4 2010/02/08 19:42:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.8-r1.ebuild,v 1.5 2011/03/01 10:15:02 xmw Exp $
 
 inherit eutils
 
@@ -27,9 +27,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	local docsuffix=$(ecompress --suffix)
-
 	ewarn "Please notice that srm will not work as expected with any"
 	ewarn "journaled file system (e.g. reiserfs, ext3)."
-	ewarn "Please read /usr/share/doc/${PF}/README${docsuffix}"
+	ewarn "Take a look at the compressed README inside /usr/share/doc/${PF}"
 }
