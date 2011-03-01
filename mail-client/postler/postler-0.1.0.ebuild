@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.0.ebuild,v 1.2 2011/02/28 21:05:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.0.ebuild,v 1.3 2011/03/01 04:50:14 angelos Exp $
 
 EAPI=3
-inherit gnome2-utils waf-utils
+
+inherit gnome2-utils python waf-utils
 
 DESCRIPTION="A super sexy, ultra simple desktop mail client built in vala"
 HOMEPAGE="https://launchpad.net/postler"
@@ -24,9 +25,14 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	x11-libs/libnotify
 	ayatana? ( dev-libs/libindicate )"
 DEPEND="${RDEPEND}
+	|| ( dev-lang/python:2.6 dev-lang/python:2.7 )
 	dev-lang/vala:0.10
 	dev-util/intltool
 	sys-devel/gettext"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_configure() {
 	VALAC="$(type -p valac-0.10)" \
