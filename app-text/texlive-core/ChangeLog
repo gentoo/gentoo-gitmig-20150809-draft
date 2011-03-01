@@ -1,6 +1,12 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.132 2011/03/01 11:01:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.133 2011/03/01 11:03:13 aballier Exp $
+
+*texlive-core-2010-r1 (01 Mar 2011)
+
+  01 Mar 2011; Alexis Ballier <aballier@gentoo.org> -texlive-core-2010.ebuild,
+  +texlive-core-2010-r1.ebuild:
+  revbump it to force a rebuild
 
   01 Mar 2011; Alexis Ballier <aballier@gentoo.org> texlive-core-2010.ebuild:
   Add a patch to fix xetex math mode in 64 bits, reported by Faustus
