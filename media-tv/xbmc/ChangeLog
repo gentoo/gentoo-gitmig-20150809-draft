@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.84 2011/02/26 19:16:48 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.85 2011/03/01 02:46:05 vapier Exp $
+
+  01 Mar 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Dont force a52/dts disabling since the pkg no longer offers the options at
+  all #356157 by BT.
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> xbmc-9.11-r5.ebuild,
   xbmc-10.0.ebuild, xbmc-9999.ebuild:

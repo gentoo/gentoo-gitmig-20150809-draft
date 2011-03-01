@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.77 2011/02/26 19:16:48 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.78 2011/03/01 02:46:05 vapier Exp $
 
 EAPI="2"
 
@@ -162,8 +162,6 @@ src_configure() {
 		--enable-external-libraries \
 		--enable-goom \
 		--enable-gl \
-		--disable-liba52 \
-		--disable-libdts \
 		$(use_enable avahi) \
 		$(use_enable bluray libbluray) \
 		$(use_enable css dvdcss) \
