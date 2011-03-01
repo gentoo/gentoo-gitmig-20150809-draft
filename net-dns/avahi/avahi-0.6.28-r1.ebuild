@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.28-r1.ebuild,v 1.2 2011/02/28 18:45:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.28-r1.ebuild,v 1.3 2011/03/01 17:19:57 arfrever Exp $
 
 EAPI="3"
 
@@ -181,11 +181,11 @@ src_install() {
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup avahi avahi_discover
+	use python && python_mod_cleanup avahi $(use dbus && use gtk && echo avahi_discover)
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize avahi avahi_discover
+	use python && python_mod_optimize avahi $(use dbus && use gtk && echo avahi_discover)
 
 	if use autoipd; then
 		echo
