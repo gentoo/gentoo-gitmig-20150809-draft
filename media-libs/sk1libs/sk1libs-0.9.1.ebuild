@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1.ebuild,v 1.4 2010/11/09 15:21:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1.ebuild,v 1.5 2011/03/01 15:36:12 jer Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://sk1project.org/index.php"
 SRC_URI="http://uniconvertor.googlecode.com/files/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 LICENSE="GPL-2 LGPL-2"
 IUSE=""
 
