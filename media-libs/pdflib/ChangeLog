@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/pdflib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.104 2010/05/28 18:05:21 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.105 2011/03/01 20:20:45 idl0r Exp $
+
+  01 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
+  -files/fix-java-compile.patch:
+  Remove unused patch
 
   28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pdflib-7.0.2_p8.ebuild:
