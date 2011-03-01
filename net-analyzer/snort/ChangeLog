@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.175 2011/02/28 20:54:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.176 2011/03/01 07:52:53 kumba Exp $
+
+*snort-2.9.0.4-r1 (01 Mar 2011)
+
+  01 Mar 2011; Joshua Kinard <kumba@gentoo.org>  +snort-2.9.0.4-r1.ebuild:
+  Fix #356905, upstream released a patch to address a bug with partial HTTP URI
+  decoding and incremented the internal build number, but did not bump the
+  version number on the available tarball. Build is now 111 from 110.
 
   28 Feb 2011; Jeroen Roovers <jer@gentoo.org> snort-2.9.0.4.ebuild:
   Do not install temporary log files (bug #356547).
