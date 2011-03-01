@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.1 2010/09/08 05:37:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.2 2011/03/01 15:49:39 jer Exp $
 
 EAPI="2"
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="gtk"
 
-RDEPEND="gtk? ( =x11-libs/gtk+-2* )"
+RDEPEND="gtk? ( x11-libs/gtk+:2 )"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	# Bug #240846:
