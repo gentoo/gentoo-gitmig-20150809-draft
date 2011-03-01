@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.83 2011/02/27 13:57:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.84 2011/03/01 12:40:32 xmw Exp $
+
+  01 Mar 2011; Michael Weber <xmw@gentoo.org> netcdf-4.1.1-r4.ebuild:
+  ppc/sparc stable (bug 325069)
 
   27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> netcdf-4.1.1-r4.ebuild:
   Stable on amd64 wrt bug #325069
