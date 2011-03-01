@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jpeg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.2 2010/11/07 20:38:31 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.3 2011/03/01 17:36:08 ssuominen Exp $
+
+  01 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> jpeg-0.ebuild:
+  Default to media-libs/libjpeg-turbo instead of media-libs/jpeg.
 
   07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> jpeg-0.ebuild:
   Set empty DEPEND wrt #344581 by Ulrich Müller.
