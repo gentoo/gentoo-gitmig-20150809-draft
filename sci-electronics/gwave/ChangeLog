@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gwave
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.27 2010/07/07 14:25:35 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.28 2011/03/02 21:41:19 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gwave-20031224.ebuild,
+  gwave-20051222.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gwave-20090213-r1.ebuild:
