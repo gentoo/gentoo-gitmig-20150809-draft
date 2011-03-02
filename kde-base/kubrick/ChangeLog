@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.61 2011/01/26 20:29:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.62 2011/03/02 18:32:35 tampakrap Exp $
+
+  02 Mar 2011; Theo Chatzimichos <tampakrap@gentoo.org> kubrick-4.4.5.ebuild,
+  kubrick-4.5.5.ebuild, kubrick-4.6.0.ebuild:
+  Fix description, bug 356875
 
 *kubrick-4.6.0 (26 Jan 2011)
 
