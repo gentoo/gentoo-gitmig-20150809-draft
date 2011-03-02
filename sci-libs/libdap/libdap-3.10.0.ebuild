@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.10.0.ebuild,v 1.2 2010/04/27 15:19:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.10.0.ebuild,v 1.3 2011/03/02 20:55:44 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="doc static-libs"
 
 RDEPEND="
 	dev-util/cppunit
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	net-misc/curl
 	sys-libs/zlib
 "

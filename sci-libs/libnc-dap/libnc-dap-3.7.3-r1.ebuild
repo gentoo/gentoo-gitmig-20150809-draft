@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3-r1.ebuild,v 1.3 2010/12/01 17:02:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3-r1.ebuild,v 1.4 2011/03/02 20:57:33 jlec Exp $
+
+EAPI="1"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -18,7 +20,7 @@ RDEPEND="dev-util/cppunit
 
 DEPEND="${RDEPEND}
 	sys-libs/zlib
-	>=dev-libs/libxml2-2.5.7
+	dev-libs/libxml2:2
 	>=net-misc/curl-7.10.6
 	<=sci-libs/libdap-3.8.2"
 

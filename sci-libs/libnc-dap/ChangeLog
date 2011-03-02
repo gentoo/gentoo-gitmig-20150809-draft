@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libnc-dap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/ChangeLog,v 1.5 2010/12/01 17:02:07 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/ChangeLog,v 1.6 2011/03/02 20:57:33 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> libnc-dap-3.7.3-r1.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org>
   libnc-dap-3.7.3-r1.ebuild:

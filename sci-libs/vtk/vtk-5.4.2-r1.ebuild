@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.14 2010/11/09 07:57:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2-r1.ebuild,v 1.15 2011/03/02 21:00:54 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -34,7 +34,7 @@ RDEPEND="mpi? ( || (
 	examples? ( x11-libs/qt-core:4[qt3support]
 			x11-libs/qt-gui:4[qt3support] )
 	dev-libs/expat
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	media-libs/freetype
 	virtual/jpeg
 	media-libs/libpng
