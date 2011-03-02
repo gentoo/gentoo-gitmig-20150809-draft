@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/pidgin-festival-2.4.ebuild,v 1.1 2009/12/21 21:02:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/pidgin-festival-2.4.ebuild,v 1.2 2011/03/02 19:50:48 signals Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="app-accessibility/festival
 	net-im/pidgin[gtk]
-	>=x11-libs/gtk+-2"
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

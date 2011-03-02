@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/pidgin-festival
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.9 2010/11/16 08:45:40 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.10 2011/03/02 19:50:48 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> pidgin-festival-2.4.ebuild:
+  Slotted gtk+ depend.
 
   16 Nov 2010; Peter Volkov <pva@gentoo.org> -pidgin-festival-2.2-r1.ebuild:
   Drop old.
