@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpxviewer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.4 2010/10/04 18:46:41 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.5 2011/03/02 18:03:00 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gpxviewer-0.2.0.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   04 Oct 2010; Justin Lecher <jlec@gentoo.org>
   files/0.2.0-configure.ac.patch:
