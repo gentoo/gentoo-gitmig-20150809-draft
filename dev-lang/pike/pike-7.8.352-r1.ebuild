@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r1.ebuild,v 1.3 2011/02/25 19:25:58 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r1.ebuild,v 1.4 2011/03/02 16:26:58 darkside Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="bzip2 debug doc fftw gdbm glut gnome gtk hardened java jpeg kerberos mysql odbc opengl pcre pdf scanner sdl sqlite svg test tiff truetype zlib"
+IUSE="bzip2 debug doc fftw gdbm glut gnome gtk hardened java jpeg kerberos mysql odbc opengl pcre scanner sdl sqlite svg test tiff truetype zlib"
 
 DEPEND="<=dev-libs/nettle-2.0
 	dev-libs/gmp
@@ -31,7 +31,6 @@ DEPEND="<=dev-libs/nettle-2.0
 	odbc? ( dev-db/libiodbc )
 	opengl? ( virtual/opengl glut? ( media-libs/freeglut ) )
 	pcre? ( dev-libs/libpcre )
-	pdf? ( media-libs/pdflib )
 	!x86-fbsd? ( scanner? ( media-gfx/sane-backends ) )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer )
 	sqlite? ( dev-db/sqlite )
@@ -61,6 +60,7 @@ src_compile() {
 			--without-cdebug \
 			--without-bundles \
 			--without-copt \
+			--without-libpdf \
 			--without-ssleay \
 			--with-crypt \
 			--with-gif \
@@ -80,7 +80,6 @@ src_compile() {
 			$(use opengl && use_with glut GLUT) \
 			$(use opengl || use_with opengl GLUT) \
 			$(use_with pcre _Regexp_PCRE) \
-			$(use_with pdf libpdf) \
 			$(use_with scanner sane) \
 			$(use_with sdl SDL) \
 			$(use_with sdl SDL_mixer) \
