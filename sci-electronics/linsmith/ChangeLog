@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/linsmith
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.1 2010/09/08 17:50:27 tomjbe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.2 2011/03/02 20:19:29 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> linsmith-0.99.12.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   08 Sep 2010; Thomas Beierlein <tomjbe@gentoo.org>
   +files/0.99.12-configure.in.patch, +linsmith-0.99.12.ebuild,

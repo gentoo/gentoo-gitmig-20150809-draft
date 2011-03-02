@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gspeakers
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.10 2010/06/01 05:04:01 tomjbe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.11 2011/03/02 20:17:35 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gspeakers-0.11.ebuild,
+  gspeakers-0.11-r1.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *gspeakers-0.11-r1 (01 Jun 2010)
 
