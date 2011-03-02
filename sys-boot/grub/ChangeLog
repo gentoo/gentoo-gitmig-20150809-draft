@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.149 2011/02/13 07:41:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.150 2011/03/02 00:39:09 vapier Exp $
+
+*grub-1.99_rc1 (02 Mar 2011)
+
+  02 Mar 2011; Mike Frysinger <vapier@gentoo.org> +grub-1.99_rc1.ebuild:
+  Version bump #357023 by Boian Berberov.
 
   13 Feb 2011; Mike Frysinger <vapier@gentoo.org> grub-0.97-r8.ebuild,
   grub-0.97-r9.ebuild, grub-0.97-r10.ebuild, grub-1.98.ebuild,
