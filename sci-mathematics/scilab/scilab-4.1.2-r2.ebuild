@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.6 2010/12/17 08:17:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.7 2011/03/02 21:32:39 jlec Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -21,9 +23,9 @@ RDEPEND="virtual/blas
 		virtual/jpeg
 		media-libs/libpng
 		sys-libs/zlib
-		>=x11-libs/gtk+-2
+		x11-libs/gtk+:2
 		x11-libs/vte
-		=gnome-extra/gtkhtml-2*
+		gnome-extra/gtkhtml:2
 	)
 	>=dev-lang/tk-8.4
 	>=dev-lang/tcl-8.4
