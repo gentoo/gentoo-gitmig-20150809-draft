@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3.ebuild,v 1.6 2010/09/29 18:45:06 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3.ebuild,v 1.7 2011/03/02 13:24:08 jlec Exp $
+
+EAPI="1"
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="Satellite tracking and orbital prediction."
+DESCRIPTION="Satellite tracking and orbital prediction"
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
 SRC_URI="http://www.amsat.org/amsat/ftp/software/Linux/${P}.tar.gz"
 
@@ -13,8 +15,9 @@ SLOT="0"
 IUSE="doc gtk nls xforms xplanet"
 KEYWORDS="amd64 ~ppc x86"
 
-DEPEND="sys-libs/ncurses
-	gtk? ( =x11-libs/gtk+-1.2* )
+DEPEND="
+	sys-libs/ncurses
+	gtk? ( x11-libs/gtk+:1 )
 	xforms? ( x11-libs/xforms )
 	xplanet? ( || ( x11-misc/xplanet x11-misc/xearth ) )"
 
