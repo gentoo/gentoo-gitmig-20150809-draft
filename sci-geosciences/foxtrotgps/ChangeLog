@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/foxtrotgps
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/ChangeLog,v 1.1 2010/11/08 13:16:23 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/ChangeLog,v 1.2 2011/03/02 20:28:48 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> foxtrotgps-1.0.0.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *foxtrotgps-1.0.0 (08 Nov 2010)
 

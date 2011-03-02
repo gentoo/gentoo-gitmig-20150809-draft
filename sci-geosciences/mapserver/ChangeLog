@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.26 2011/02/22 16:28:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.27 2011/03/02 20:36:03 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> mapserver-5.4.2.ebuild,
+  mapserver-5.4.2-r1.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   22 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> mapserver-5.4.2.ebuild,
   mapserver-5.4.2-r1.ebuild:

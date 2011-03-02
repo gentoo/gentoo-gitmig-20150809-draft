@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.6.ebuild,v 1.5 2009/07/10 13:54:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.3.6.ebuild,v 1.6 2011/03/02 20:30:51 jlec Exp $
 
 EAPI=2
 
@@ -12,13 +12,14 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="doc usb"
 
-RDEPEND="dev-libs/expat
+RDEPEND="
+	dev-libs/expat
 	usb? ( dev-libs/libusb )"
 DEPEND="${RDEPEND}
 	doc? ( dev-java/fop
 	virtual/latex-base
 	dev-libs/libxslt
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	dev-lang/perl
 	app-text/docbook-xml-dtd:4.1.2 )"
 

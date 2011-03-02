@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.5 2011/02/22 16:28:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2.ebuild,v 1.6 2011/03/02 20:36:03 jlec Exp $
+
+EAPI="1"
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -39,7 +41,7 @@ RDEPEND="media-libs/libpng
 	tcl? ( dev-lang/tcl )
 	tiff? ( media-libs/tiff sci-libs/libgeotiff )
 	unicode? ( virtual/libiconv )
-	xml? ( dev-libs/libxml2 )
+	xml? ( dev-libs/libxml2:2 )
 	xpm? ( x11-libs/libXpm )"
 
 DEPEND="${RDEPEND}

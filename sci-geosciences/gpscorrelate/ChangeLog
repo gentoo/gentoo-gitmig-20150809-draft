@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpscorrelate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.7 2009/12/17 18:21:17 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.8 2011/03/02 20:33:35 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gpscorrelate-1.5.6.ebuild,
+  gpscorrelate-1.5.8.ebuild, gpscorrelate-1.6.0.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   17 Dec 2009; Jeroen Roovers <jer@gentoo.org> gpscorrelate-1.5.6.ebuild,
   gpscorrelate-1.5.8.ebuild, gpscorrelate-1.6.0.ebuild:
