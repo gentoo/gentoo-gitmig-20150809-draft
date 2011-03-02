@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.52 2011/03/02 08:02:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.53 2011/03/02 08:18:39 xarthisius Exp $
+
+  02 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> nbd-2.9.20.ebuild:
+  ppc/ppc64 stable wrt #353097
 
   02 Mar 2011; Thomas Kahle <tomka@gentoo.org> nbd-2.9.20.ebuild:
   x86 stable per bug 353097
