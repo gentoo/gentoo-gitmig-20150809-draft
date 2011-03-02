@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.38.0.ebuild,v 1.4 2011/03/02 09:14:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.38.0.ebuild,v 1.5 2011/03/02 15:49:44 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -9,7 +9,10 @@ EAPI="2"
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Toolbox of 217 utilities for testing Ethernet/IP networks"
-HOMEPAGE="http://ntwox.sourceforge.net/"
+HOMEPAGE="
+	http://ntwox.sourceforge.net/
+	http://www.laurentconstantin.com/en/netw/netwox/
+"
 SRC_URI="mirror://sourceforge/ntwox/${P}-src.tgz
 	doc? ( mirror://sourceforge/ntwox/${P}-doc_html.tgz )"
 
