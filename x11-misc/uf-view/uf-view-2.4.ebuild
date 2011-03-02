@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/uf-view-2.4.ebuild,v 1.7 2010/11/02 02:54:16 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/uf-view-2.4.ebuild,v 1.8 2011/03/02 19:04:13 signals Exp $
 
 EAPI=1
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 x86 ppc"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.0
-	>=x11-libs/gtk+-2
+RDEPEND="dev-libs/glib:2
+	x11-libs/gtk+:2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-desktop-2:2"
