@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/stunnel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.114 2010/07/07 05:41:40 ramereth Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.115 2011/03/02 06:16:12 ramereth Exp $
+
+*stunnel-4.35 (02 Mar 2011)
+
+  02 Mar 2011; Lance Albertson <ramereth@gentoo.org>
+  +files/stunnel-4.34-listen-queue.diff, +stunnel-4.35.ebuild,
+  +files/stunnel-4.35-libwrap.patch,
+  +files/stunnel-4.35-xforwarded-for.diff, metadata.xml:
+  Version bump, resolves #344117
+
+  Thanks to Stefan Behte for contributing new patches/ebuild.
 
   07 Jul 2010; Lance Albertson <ramereth@gentoo.org> stunnel-4.33.ebuild:
   Fix missing xforward patch, resolves bug #324997
