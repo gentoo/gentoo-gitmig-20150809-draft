@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.7 2010/07/10 15:00:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.8 2011/03/02 13:55:01 jlec Exp $
 
 EAPI="2"
 
@@ -20,9 +20,10 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2
-	>=gnome-base/libglade-2
-	>=dev-libs/libxml2-2
+RDEPEND="
+	x11-libs/gtk+:2
+	gnome-base/libglade:2.0
+	dev-libs/libxml2:2
 	|| (
 		>=dev-scheme/guile-1.8[deprecated]
 		=dev-scheme/guile-1.6*
