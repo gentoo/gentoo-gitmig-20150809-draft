@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/ggobi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.6 2010/11/07 19:34:33 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.7 2011/03/02 13:38:10 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> ggobi-2.1.8.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   07 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> ggobi-2.1.8.ebuild:
   Fix automake called by maintainer-mode wrt bug 342747. Thanks to Diego

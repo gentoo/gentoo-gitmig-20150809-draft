@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20100407.ebuild,v 1.1 2010/05/21 14:06:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/gfsview-20100407.ebuild,v 1.2 2011/03/02 13:37:23 jlec Exp $
 
 EAPI=2
 inherit eutils
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="
 	>=x11-libs/gtkglext-1.0.6
-	>=x11-libs/gtk+-2.4.0
+	x11-libs/gtk+:2
 	x11-libs/startup-notification
 	>=sci-libs/gerris-${PV}"
 DEPEND="${RDEPEND}

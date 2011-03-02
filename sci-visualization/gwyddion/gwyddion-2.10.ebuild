@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.10.ebuild,v 1.5 2010/08/07 13:50:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.10.ebuild,v 1.6 2011/03/02 13:42:52 jlec Exp $
+
+EAPI="1"
 
 DESCRIPTION="A software framework for SPM data analysis"
 HOMEPAGE="http://gwyddion.net/"
@@ -11,13 +13,14 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="python perl ruby nls tiff fftw"
 
-RDEPEND="virtual/opengl
+RDEPEND="
+	virtual/opengl
 	python? ( virtual/python )
 	perl? ( dev-lang/perl )
 	ruby? ( =dev-lang/ruby-1.8* )
 	tiff? ( media-libs/tiff )
 	fftw? ( >=sci-libs/fftw-3 )
-	>=x11-libs/gtk+-2.8
+	x11-libs/gtk+:2
 	x11-libs/pango
 	x11-libs/cairo
 	x11-libs/gtkglext"

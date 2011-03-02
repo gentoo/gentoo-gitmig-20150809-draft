@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.18.ebuild,v 1.2 2010/05/21 09:29:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.18.ebuild,v 1.3 2011/03/02 13:42:52 jlec Exp $
 
 EAPI=2
 
@@ -17,19 +17,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc fftw gnome kde nls opengl perl python ruby sourceview xml X"
 
-RDEPEND=">=x11-libs/gtk+-2.8
+RDEPEND="
+	x11-libs/gtk+:2
 	x11-libs/cairo
 	x11-libs/pango
 	x11-libs/libXmu
 	fftw? ( >=sci-libs/fftw-3 )
-	gnome? ( gnome-base/gconf )
+	gnome? ( gnome-base/gconf:2 )
 	kde? ( >=kde-base/kdelibs-4 )
 	opengl? ( virtual/opengl x11-libs/gtkglext )
 	perl? ( dev-lang/perl )
-	python? ( dev-python/pygtk )
+	python? ( dev-python/pygtk:2 )
 	ruby? ( dev-ruby/narray )
-	sourceview? ( >=x11-libs/gtksourceview-2 )
-	xml? ( dev-libs/libxml2 )"
+	sourceview? ( x11-libs/gtksourceview:2.0 )
+	xml? ( dev-libs/libxml2:2 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

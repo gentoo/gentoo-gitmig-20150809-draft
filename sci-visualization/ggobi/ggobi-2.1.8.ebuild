@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.8.ebuild,v 1.6 2010/11/07 19:34:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ggobi-2.1.8.ebuild,v 1.7 2011/03/02 13:38:10 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -14,9 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="minimal nls"
 
-RDEPEND=">=media-gfx/graphviz-2.6
-	>=x11-libs/gtk+-2.6
-	dev-libs/libxml2"
+RDEPEND="
+	>=media-gfx/graphviz-2.6
+	x11-libs/gtk+:2
+	dev-libs/libxml2:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

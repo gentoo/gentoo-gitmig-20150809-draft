@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/g3data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.8 2010/04/16 18:35:44 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.9 2011/03/02 13:34:52 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> g3data-1.5.1.ebuild,
+  g3data-1.5.3.ebuild:
+  Correct Slots for gtk 3 introduction to tree
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> g3data-1.5.1.ebuild,
+  g3data-1.5.3.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   16 Apr 2010; Markos Chandras <hwoarang@gentoo.org> g3data-1.5.3.ebuild:
   Stable on amd64 wrt bug #299847
