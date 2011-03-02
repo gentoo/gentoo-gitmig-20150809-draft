@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-1.4.ebuild,v 1.2 2010/09/27 15:43:40 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-1.4.ebuild,v 1.3 2011/03/02 19:45:51 jlec Exp $
 
 EAPI="2"
 
@@ -17,7 +17,8 @@ IUSE="examples"
 
 S="${WORKDIR}/${PN}"
 
-RDEPEND="dev-libs/glib
+RDEPEND="
+	dev-libs/glib:2
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"

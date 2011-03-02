@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.16.ebuild,v 1.1 2010/11/28 16:10:55 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.16.ebuild,v 1.2 2011/03/02 19:44:11 jlec Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/gtk+-2
+RDEPEND="dev-libs/glib:2
+	x11-libs/gtk+:2
 	x11-libs/pango
 	judy? ( dev-libs/judy )
 	tcl? ( dev-lang/tcl dev-lang/tk )
