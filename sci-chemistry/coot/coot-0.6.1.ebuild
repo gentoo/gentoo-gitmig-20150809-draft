@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.10 2011/01/25 12:52:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.11 2011/03/02 09:46:22 jlec Exp $
 
 EAPI="3"
 
@@ -37,10 +37,10 @@ SCIDEPS="
 
 XDEPS="
 	gnome-base/libgnomecanvas
-	gnome-base/librsvg
+	gnome-base/librsvg:2
 	media-libs/libpng
 	media-libs/freeglut
-	>=x11-libs/gtk+-2.2
+	x11-libs/gtk+:2
 	x11-libs/gtkglext"
 
 SCHEMEDEPS="

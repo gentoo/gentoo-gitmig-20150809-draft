@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.34 2011/01/31 15:54:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.35 2011/03/02 09:46:22 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> coot-0.6.1.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   31 Jan 2011; Justin Lecher <jlec@gentoo.org> -coot-0.6.ebuild:
   Cleaned old
