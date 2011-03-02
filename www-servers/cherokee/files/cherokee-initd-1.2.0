@@ -2,7 +2,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-opts="gracefull reload"
+opts="graceful reload"
 
 depend() {
 	need net
@@ -22,7 +22,7 @@ stop() {
 	eend $?
 }
 
-gracefull() {
+graceful() {
 	ebegin "Gracefully restarting Cherokee Web Server"
 	start-stop-daemon \
 		--exec /usr/sbin/cherokee \
