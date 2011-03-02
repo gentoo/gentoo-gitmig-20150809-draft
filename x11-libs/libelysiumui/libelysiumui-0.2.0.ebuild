@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/libelysiumui-0.2.0.ebuild,v 1.8 2008/04/26 07:44:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/libelysiumui-0.2.0.ebuild,v 1.9 2011/03/02 16:14:29 signals Exp $
+
+EAPI=2
 
 DESCRIPTION="User Interface enhancements for Elysium GNU/Linux"
 HOMEPAGE="http://elysium-project.sourceforge.net"
@@ -11,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}

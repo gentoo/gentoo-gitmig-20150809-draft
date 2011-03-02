@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libelysiumui
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/ChangeLog,v 1.8 2008/04/26 07:44:20 drac Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/ChangeLog,v 1.9 2011/03/02 16:14:29 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> libelysiumui-0.2.0.ebuild:
+  Slotted gtk+ 2 dep and EAPI=2 bump.
 
   26 Apr 2008; Samuli Suominen <drac@gentoo.org> libelysiumui-0.2.0.ebuild:
   Use DESTDIR for installing. Move pkgconfig from RDEPEND to DEPEND wrt
