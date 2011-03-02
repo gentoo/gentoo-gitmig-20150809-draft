@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwag
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.21 2010/12/17 19:52:29 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.22 2011/03/02 09:10:54 radhermit Exp $
+
+  02 Mar 2011; Tim Harder <radhermit@gentoo.org> netwag-5.38.0.ebuild:
+  Update HOMEPAGE and SRC_URI (bug #357019).
 
   17 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> netwag-5.38.0.ebuild:
   x86 stable wrt bug #348338
