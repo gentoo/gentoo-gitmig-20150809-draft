@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.3.0-r1.ebuild,v 1.1 2010/03/07 20:56:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.3.0-r1.ebuild,v 1.2 2011/03/02 17:41:09 jlec Exp $
 
 EAPI="3"
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 IUSE="mpi"
 
-DEPEND="dev-libs/libxml2
+DEPEND="
+	dev-libs/libxml2:2
 	dev-libs/libxslt
 	app-shells/tcsh
 	mpi? ( virtual/mpi )"

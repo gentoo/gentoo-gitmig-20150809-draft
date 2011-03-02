@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/meme
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.16 2010/06/17 03:24:50 jsbronder Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.17 2011/03/02 17:41:09 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> meme-4.3.0.ebuild,
+  meme-4.3.0-r1.ebuild, meme-4.4.0.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   17 Jun 2010; Justin Bronder <jsbronder@gentoo.org> -meme-3.5.4-r1.ebuild,
   -meme-3.5.7.ebuild:
