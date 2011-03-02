@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.36 2011/02/12 18:03:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.37 2011/03/02 13:44:10 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> xaos-3.4-r1.ebuild,
+  xaos-3.5-r1.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> xaos-3.5-r1.ebuild:
   sparc stable wrt #342295
