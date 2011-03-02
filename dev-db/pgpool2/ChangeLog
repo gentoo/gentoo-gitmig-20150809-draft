@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgpool2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.4 2011/03/01 16:50:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.5 2011/03/02 08:52:52 scarabeus Exp $
+
+  02 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> files/pgpool2.initd:
+  Update the initscript to use pgpool rather than start-stop-daemon, but it
+  still does not do what i want. TBD.
 
 *pgpool2-3.0.3 (01 Mar 2011)
 

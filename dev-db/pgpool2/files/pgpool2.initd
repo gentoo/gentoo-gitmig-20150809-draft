@@ -1,36 +1,29 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/files/pgpool2.initd,v 1.1 2011/01/26 16:49:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/files/pgpool2.initd,v 1.2 2011/03/02 08:52:52 scarabeus Exp $
 
 depend() {
 	need net
 }
 
-ARGS="-f /etc/pgpool2/pgpool.conf -a /etc/pgpool2/pool_hba.conf -F /etc/pgpool2/pcp.conf -n"
+ARGS="-f /etc/pgpool2/pgpool.conf -a /etc/pgpool2/pool_hba.conf -F /etc/pgpool2/pcp.conf -D"
 LOGFILE="/var/log/pgpool2.log"
 
 start() {
 	ebegin "Starting pgpool2"
-
-	if [ -n "${RC_UNAME}" ]; then
-		PARAMS="--background --stdout '${LOGFILE}' --stderr '${LOGFILE}' -- ${ARGS}"
-	else
-		PARAMS="-- ${ARGS} >> '${LOGFILE}' 2>&1"
-	fi
-
-	start-stop-daemon --start --quiet --background --exec /usr/bin/pgpool ${PARAMS}
+	/usr/bin/pgpool ${ARGS} >> "${LOGFILE}" 2>&1
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping pgpool2"
-	start-stop-daemon --stop --quiet --exec /usr/bin/pgpool
+	/usr/bin/pgpool -m fast stop >> "${LOGFILE}" 2>&1
 	eend $?
 }
 
 restart() {
-	stop
+	svc_stop
 	sleep 3
-	start
+	svc_start
 }
