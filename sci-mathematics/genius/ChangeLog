@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/genius
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.3 2010/09/14 15:17:54 grozin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/ChangeLog,v 1.4 2011/03/02 20:11:42 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> genius-1.0.9.ebuild,
+  genius-1.0.11.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *genius-1.0.11 (14 Sep 2010)
 

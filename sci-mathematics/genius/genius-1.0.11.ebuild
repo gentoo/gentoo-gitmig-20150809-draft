@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.11.ebuild,v 1.1 2010/09/14 15:17:54 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.11.ebuild,v 1.2 2011/03/02 20:11:42 jlec Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -14,17 +14,19 @@ IUSE="doc gnome nls"
 SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/${PN}/1.0/${P}.tar.bz2
 	doc? ( http://www.jirka.org/${PN}-reference.pdf )"
 
-RDEPEND="dev-libs/glib:2
+RDEPEND="
+	dev-libs/glib:2
 	dev-libs/gmp
 	dev-libs/mpfr
 	dev-libs/popt
 	sys-libs/ncurses
 	sys-libs/readline
-	gnome? ( x11-libs/gtk+:2
+	gnome? (
+		x11-libs/gtk+:2
 		gnome-base/libgnome
 		gnome-base/libgnomeui
-		gnome-base/libglade
-		x11-libs/gtksourceview
+		gnome-base/libglade:2.0
+		x11-libs/gtksourceview:2.0
 		x11-libs/vte )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
