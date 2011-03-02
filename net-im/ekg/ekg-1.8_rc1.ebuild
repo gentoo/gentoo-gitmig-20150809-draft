@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.8_rc1.ebuild,v 1.4 2011/02/26 19:43:22 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.8_rc1.ebuild,v 1.5 2011/03/02 19:54:53 signals Exp $
 
+EAPI=2
 inherit autotools eutils
 
 IUSE="gif gtk jpeg ncurses python readline spell ssl threads zlib"
@@ -25,22 +26,20 @@ RDEPEND="net-libs/libgadu
 	spell? ( >=app-text/aspell-0.50.3 )
 	gif? ( media-libs/giflib )
 	jpeg? ( virtual/jpeg )
-	gtk? ( >=x11-libs/gtk+-2.0 )"
+	gtk? ( x11-libs/gtk+:2 )"
 
 DEPEND=">=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.50
 	${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gtkutil-button-decl.patch"
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	epatch "${FILESDIR}/${P}-gtk.patch"
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--enable-ioctld --disable-static --enable-dynamic"
 	if use ncurses; then
 		myconf="$myconf --enable-force-ncurses"
@@ -60,6 +59,9 @@ src_compile() {
 		`use_enable ssl openssl` \
 		`use_enable gtk ui-gtk` \
 	|| die
+}
+
+src_compile() {
 	emake || die
 }
 
