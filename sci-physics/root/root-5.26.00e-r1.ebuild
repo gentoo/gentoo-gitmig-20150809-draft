@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.3 2011/02/13 12:42:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.4 2011/03/02 21:12:42 jlec Exp $
 
 EAPI=3
 
@@ -65,7 +65,7 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	ruby? ( dev-lang/ruby
 			dev-ruby/rubygems )
 	ssl? ( dev-libs/openssl )
-	xml? ( dev-libs/libxml2 )"
+	xml? ( dev-libs/libxml2:2 )"
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
