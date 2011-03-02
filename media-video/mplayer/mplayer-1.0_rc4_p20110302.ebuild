@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.93 2011/03/02 16:54:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20110302.ebuild,v 1.1 2011/03/02 16:54:36 scarabeus Exp $
 
 EAPI=4
 
@@ -39,7 +39,8 @@ FONT_URI="
 if [[ ${PV} == *9999* ]]; then
 	RELEASE_URI=""
 else
-	RELEASE_URI="mirror://gentoo/${P}.tar.xz"
+	RELEASE_URI="http://dev.gentoo.org/~scarabeus/${P}.tar.xz
+		mirror://gentoo/${P}.tar.xz"
 fi
 SRC_URI="${RELEASE_URI}
 	!truetype? ( ${FONT_URI} )"
@@ -633,7 +634,7 @@ src_install() {
 	docinto tech/
 	dodoc DOCS/tech/{*.txt,MAINTAINERS,mpsub.sub,playtree,TODO,wishlist}
 	docinto TOOLS/
-	dodoc -r TOOLS/
+	dodoc -r TOOLS
 	if use real; then
 		docinto tech/realcodecs/
 		dodoc DOCS/tech/realcodecs/*
