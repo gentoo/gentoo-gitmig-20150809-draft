@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sisctrl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.15 2007/05/15 13:23:21 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sisctrl/ChangeLog,v 1.16 2011/03/02 18:02:18 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> sisctrl-0.0.20051202.ebuild:
+  Slotted gtk+ and glib depends and EAPI=2 bump to support it.
 
   15 May 2007; Raúl Porcel <armin76@gentoo.org>
   sisctrl-0.0.20051202.ebuild:
