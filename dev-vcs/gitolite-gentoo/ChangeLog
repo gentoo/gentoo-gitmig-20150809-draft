@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.10 2011/02/16 17:10:37 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.11 2011/03/02 18:38:32 idl0r Exp $
+
+*gitolite-gentoo-1.5.9.1-r1 (02 Mar 2011)
+
+  02 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
+  -gitolite-gentoo-1.5.9.1.ebuild, +gitolite-gentoo-1.5.9.1-r1.ebuild,
+  +files/gitolite-gentoo-1.5.9.1-umask.patch:
+  Revision bump, per repository umask was ignored when initialising a new repo
 
 *gitolite-gentoo-1.5.9.1 (16 Feb 2011)
 
