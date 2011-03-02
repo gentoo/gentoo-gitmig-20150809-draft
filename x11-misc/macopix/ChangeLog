@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/macopix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.19 2010/06/26 13:15:49 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.20 2011/03/02 17:44:48 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> macopix-1.7.4.ebuild:
+  Slotted gtk+ and glib depends and EAPI=2 bump to support it.
 
   26 Jun 2010; <nixnut@gentoo.org> macopix-1.7.4.ebuild:
   ppc stable #322851
