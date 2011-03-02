@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.672.2-r3.ebuild,v 1.1 2011/03/01 13:52:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.686.1.ebuild,v 1.1 2011/03/02 09:03:32 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.1.4"
+V8_DEPEND="3.1.6.1"
 
 inherit eutils fdo-mime flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
@@ -16,7 +16,7 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups +gecko-mediaplayer gnome gnome-keyring"
+IUSE="cups gnome gnome-keyring"
 
 RDEPEND="app-arch/bzip2
 	>=dev-lang/v8-${V8_DEPEND}
@@ -53,8 +53,7 @@ RDEPEND+="
 		x11-themes/xfce4-icon-theme
 	)
 	x11-misc/xdg-utils
-	virtual/ttf-fonts
-	gecko-mediaplayer? ( !www-plugins/gecko-mediaplayer[gnome] )"
+	virtual/ttf-fonts"
 
 egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
@@ -96,14 +95,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Enable optional support for gecko-mediaplayer.
-	epatch "${FILESDIR}"/${PN}-gecko-mediaplayer-r1.patch
-
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
 
-	# Make sure we don't use bundled FLAC.
-	epatch "${FILESDIR}"/${PN}-system-flac-r0.patch
+	# Make sure we don't use bundled ICU headers.
+	epatch "${FILESDIR}"/${PN}-system-icu-r0.patch
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -135,10 +131,6 @@ src_prepare() {
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
-
-	# Provide our own gyp file to use system flac.
-	# TODO: move this upstream.
-	cp "${FILESDIR}/flac.gyp" "third_party/flac" || die
 
 	# Check for the maintainer to ensure that the dependencies
 	# are up-to-date.
@@ -181,6 +173,7 @@ src_configure() {
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
 		-Duse_system_bzip2=1
+		-Duse_system_flac=1
 		-Duse_system_ffmpeg=1
 		-Duse_system_icu=1
 		-Duse_system_libevent=1
@@ -219,14 +212,6 @@ src_configure() {
 	myconf+="
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
-
-	if use gecko-mediaplayer; then
-		# Disable hardcoded blacklist for gecko-mediaplayer.
-		# When www-plugins/gecko-mediaplayer is compiled with USE=gnome, it causes
-		# the browser to hang. We can handle the situation via dependencies,
-		# thus making it possible to use gecko-mediaplayer.
-		append-flags -DGENTOO_CHROMIUM_ENABLE_GECKO_MEDIAPLAYER
-	fi
 
 	# Our system ffmpeg should support more codecs than the bundled one
 	# for Chromium.
