@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icewmcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.13 2011/03/02 17:19:33 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.14 2011/03/02 18:22:55 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> icewmcp-3.2-r2.ebuild:
+  Slot all gnome-related deps.
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> icewmcp-3.2-r2.ebuild:
   Slotted gtk+ depends and EAPI=2 bump to support it.

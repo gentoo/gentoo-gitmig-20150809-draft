@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.3.ebuild,v 1.3 2011/03/02 16:23:38 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.3.ebuild,v 1.4 2011/03/02 18:19:36 signals Exp $
 
 EAPI=2
 
@@ -14,8 +14,8 @@ KEYWORDS="amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
-	>=gnome-base/libglade-2.6
-	>=gnome-base/librsvg-2.14
+	gnome-base/libglade:2.0
+	gnome-base/librsvg:2
 	>=x11-libs/cairo-1.2
 	x11-libs/gtk+:2
 	>=x11-libs/pango-1.10"
