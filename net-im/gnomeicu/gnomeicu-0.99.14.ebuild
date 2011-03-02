@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.14.ebuild,v 1.3 2010/03/04 00:30:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.14.ebuild,v 1.4 2011/03/02 20:09:18 signals Exp $
 
+EAPI=2
 inherit gnome2
 
 DESCRIPTION="Gnome ICQ Client"
@@ -14,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="spell"
 
 # panel applet is unmaintained, do not enable it
-RDEPEND=">=x11-libs/gtk+-2.10
+RDEPEND="x11-libs/gtk+:2
 	>=dev-libs/libxml2-2.4.23
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2

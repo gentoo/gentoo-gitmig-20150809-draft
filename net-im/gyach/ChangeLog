@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gyach
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/ChangeLog,v 1.13 2008/12/27 23:18:44 coldwind Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gyach/ChangeLog,v 1.14 2011/03/02 20:13:13 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> gyach-0.9.8.ebuild:
+  Slotted gtk+ depend and EAPI=2 bump to support it.
 
   27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org>
   -files/gyach-0.9.7-yahoo-auth-2004-06-24.diff,
