@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.37.ebuild,v 1.2 2010/07/06 14:56:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/pythoncad-1.37.ebuild,v 1.3 2011/03/02 21:23:21 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/pygtk-1.99.16"
+RDEPEND="dev-python/pygtk:2"
 DEPEND=""
 
 PYTHON_MODNAME=${MY_PN}
