@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/qgtkstyle-4.7.1-r1.ebuild,v 1.2 2010/11/13 20:53:07 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/qgtkstyle-4.7.2.ebuild,v 1.1 2011/03/02 01:00:27 wired Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -12,7 +12,7 @@ IUSE=""
 
 COMMON_DEPEND="
 	x11-libs/gtk+:2
-	>=x11-libs/qt-gui-${PV}-r1
+	~x11-libs/qt-gui-${PV}
 "
 DEPEND="${COMMON_DEPEND}
 	|| ( >=x11-libs/cairo-1.10.0[-qt4] <x11-libs/cairo-1.10.0 )
@@ -63,4 +63,12 @@ src_configure() {
 src_install() {
 	insinto /usr/$(get_libdir)/qt4/plugins/styles/ || die
 	doins lib/libgtkstyle.so || die
+}
+
+pkg_postinst() {
+	ewarn
+	ewarn "The style provided by this package has been renamed to GTK+ (from GTK)"
+	ewarn "to match upstream naming. You may have to re-select it using"
+	ewarn "qtconfig or systemsettings (in KDE)."
+	ewarn
 }

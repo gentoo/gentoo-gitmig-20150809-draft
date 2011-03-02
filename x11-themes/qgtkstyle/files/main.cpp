@@ -37,12 +37,12 @@ QGtkStylePlugin::QGtkStylePlugin()
 
 QStyle *QGtkStylePlugin::create(const QString &key)
 {
-    return (key.toLower() == "gtk") ? new QGtkStyle : 0;
+    return (key.toLower() == "gtk+") ? new QGtkStyle : 0;
 }
 
 QStringList QGtkStylePlugin::keys() const
 {
-    return QStringList() << "GTK";
+    return QStringList() << "GTK+";
 }
 
 Q_EXPORT_PLUGIN2(qgtkstyle, QGtkStylePlugin)

@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/qgtkstyle-4.6.3-r1.ebuild,v 1.2 2010/11/13 20:53:07 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/qgtkstyle-4.7.1-r2.ebuild,v 1.1 2011/03/02 01:00:27 wired Exp $
 
 EAPI="3"
 inherit confutils qt4-build
 
 DESCRIPTION="Qt style that uses the active GTK theme."
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 COMMON_DEPEND="
@@ -53,7 +53,7 @@ src_configure() {
 	myconf="${myconf} -qt-gif -system-libpng -system-libjpeg
 		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2
 		-no-sql-odbc -no-xrender -no-xrandr -no-xkb -no-xshape -no-sm -no-svg -no-webkit
-		-no-cups -no-glib -no-libmng -no-nis -no-libtiff -no-dbus -no-qdbus
+		-no-cups -no-glib -no-libmng -no-nis -no-libtiff -no-dbus -no-qdbus -no-egl
 		-no-qt3support -no-xinerama -no-phonon -no-opengl -no-accessibility
 		-gtkstyle"
 
@@ -63,4 +63,12 @@ src_configure() {
 src_install() {
 	insinto /usr/$(get_libdir)/qt4/plugins/styles/ || die
 	doins lib/libgtkstyle.so || die
+}
+
+pkg_postinst() {
+	ewarn
+	ewarn "The style provided by this package has been renamed to GTK+ (from GTK)"
+	ewarn "to match upstream naming. You may have to re-select it using"
+	ewarn "qtconfig or systemsettings (in KDE)."
+	ewarn
 }

@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/qgtkstyle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/ChangeLog,v 1.5 2010/11/13 20:53:07 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qgtkstyle/ChangeLog,v 1.6 2011/03/02 01:00:27 wired Exp $
+
+*qgtkstyle-4.7.2 (02 Mar 2011)
+*qgtkstyle-4.7.1-r2 (02 Mar 2011)
+
+  02 Mar 2011; Alex Alexander <wired@gentoo.org> -qgtkstyle-4.6.3.ebuild,
+  -qgtkstyle-4.6.3-r1.ebuild, -qgtkstyle-4.7.1.ebuild,
+  -qgtkstyle-4.7.1-r1.ebuild, +qgtkstyle-4.7.1-r2.ebuild,
+  +qgtkstyle-4.7.2.ebuild, files/main.cpp:
+  version bump, renamed style to GTK+, removed old
 
   13 Nov 2010; Alex Alexander <wired@gentoo.org> qgtkstyle-4.6.3-r1.ebuild,
   qgtkstyle-4.7.1-r1.ebuild:
