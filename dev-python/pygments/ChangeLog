@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.74 2011/03/02 01:26:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.75 2011/03/02 17:20:33 arfrever Exp $
+
+  02 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pygments-1.3.1.ebuild:
+  Delete.
 
   02 Mar 2011; Brent Baude <ranger@gentoo.org> pygments-1.4.ebuild:
   stable ppc64, bug 353715
