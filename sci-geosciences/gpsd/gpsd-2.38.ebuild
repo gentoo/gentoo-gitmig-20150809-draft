@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.8 2011/01/25 20:14:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.9 2011/03/02 19:51:41 jlec Exp $
+
+EAPI="1"
 
 inherit autotools eutils distutils flag-o-matic
 
@@ -27,8 +29,9 @@ RDEPEND="X? (
 	)
 	python? ( dev-lang/python )
 
-	dbus? ( >=sys-apps/dbus-0.94
-		>=dev-libs/glib-2.6
+	dbus? (
+		>=sys-apps/dbus-0.94
+		dev-libs/glib:2
 		dev-libs/dbus-glib )
 	ntp? ( net-misc/ntp )
 	usb? ( virtual/dev-manager )"
