@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.4.ebuild,v 1.1 2011/03/02 02:03:10 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.4.ebuild,v 1.2 2011/03/02 08:46:14 eva Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -21,13 +21,13 @@ RDEPEND="dev-lang/vala:0.12
 	x11-libs/gtk+:2
 	dev-libs/glib:2
 	x11-libs/libnotify
-	dev-libs/libunique
+	dev-libs/libunique:1
 	gnome-extra/zeitgeist[fts]
 	dev-libs/libzeitgeist
 	dev-libs/dbus-glib
 	sys-apps/dbus
 	x11-libs/cairo
-	x11-libs/gdk-pixbuf
+	x11-libs/gdk-pixbuf:2
 	x11-libs/gtkhotkey
 	x11-libs/pango"
 DEPEND="${RDEPEND}
