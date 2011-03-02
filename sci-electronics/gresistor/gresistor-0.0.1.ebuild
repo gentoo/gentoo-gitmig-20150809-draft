@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gresistor/gresistor-0.0.1.ebuild,v 1.5 2010/06/29 09:09:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gresistor/gresistor-0.0.1.ebuild,v 1.6 2011/03/02 21:28:28 jlec Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.5"
@@ -16,9 +16,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-python/pygtk:2
+DEPEND="
+	dev-python/pygtk:2
 	x11-libs/gtk+:2
-	gnome-base/libglade"
+	gnome-base/libglade:2.0"
 RDEPEND="${DEPEND}"
 
 DOCS=(
