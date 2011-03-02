@@ -1,16 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.10.ebuild,v 1.7 2010/11/14 12:49:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.12.ebuild,v 1.1 2011/03/02 18:35:36 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension java-pkg-opt-2
 
-PATCH="${PN}-2.0.7-patches-01"
+PATCH="${PN}-2.0.11-patches-01"
 EMVER="1.0.1"
 
-LANGS="be ca cs de en-GB en-US es-AR es-ES fr gl hu it ja ka lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN"
+LANGS="be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it ja ka lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN"
 NOSHORTLANGS="en-GB es-AR es-ES nb-NO pt-PT sv-SE zh-CN"
 
 MY_PV="${PV/_pre*}"
@@ -32,7 +32,7 @@ else
 	# This is where arch teams should change the KEYWORDS.
 
 	REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${MY_PV}"
-	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 	[[ ${PV} == *alpha* ]] && HAS_LANGS="false"
 fi
 
@@ -142,12 +142,10 @@ src_prepare() {
 	java-pkg-opt-2_src_prepare
 
 	# Apply our patches
+	EPATCH_EXCLUDE="1008-seamonkey-cups-1.4.4-fixup.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/patch"
-
-	epatch "${FILESDIR}"/bug-606109.patch
-	epatch "${FILESDIR}"/${PN}-2.0-gtk+-2.21.patch
 
 	if use crypt && use mailclient ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
@@ -261,6 +259,7 @@ src_install() {
 	declare emid
 
 	emake DESTDIR="${D}" install || die "emake install failed"
+	cp -f "${FILESDIR}"/icon/seamonkey.desktop "${T}" || die
 
 	if use crypt && use mailclient ; then
 		cd "${T}" || die
@@ -270,6 +269,11 @@ src_install() {
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		unzip "${S}"/mozilla/dist/bin/enigmail*.xpi || die
+
+		sed 's|^\(MimeType=.*\)$|\1MimeType=text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;|' \
+			-i "${T}"/${PN}.desktop || die
+		sed 's|^\(Categories=.*\)$|\1Email;|' -i "${T}"/${PN}.desktop \
+			|| die
 	fi
 
 	if ${HAS_LANGS} ; then
@@ -281,7 +285,7 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	newicon "${S}"/suite/branding/content/icon64.png seamonkey.png || die
-	domenu "${FILESDIR}"/icon/seamonkey.desktop || die
+	domenu "${T}"/${PN}.desktop || die
 
 	# Add StartupNotify=true bug 290401
 	if use startup-notification ; then
