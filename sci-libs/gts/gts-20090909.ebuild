@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20090909.ebuild,v 1.1 2010/01/15 07:14:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20090909.ebuild,v 1.2 2011/03/02 20:04:16 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-libs/glib-2.4.0"
+RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	test? ( media-libs/netpbm )"

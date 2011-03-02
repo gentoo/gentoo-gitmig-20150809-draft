@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gerris
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.11 2010/05/21 14:12:22 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.12 2011/03/02 19:59:23 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gerris-0.8.0.ebuild,
+  gerris-0.9.2.ebuild, gerris-20080929.ebuild, gerris-20100114.ebuild,
+  gerris-20100519.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   21 May 2010; Justin Lecher <jlec@gentoo.org> gerris-20080929.ebuild:
   RESTRICT=test for version 20080929, #278430, broken test design by upstream

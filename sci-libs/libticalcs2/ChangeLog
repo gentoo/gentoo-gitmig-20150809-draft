@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libticalcs2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.3 2009/03/24 23:10:06 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticalcs2/ChangeLog,v 1.4 2011/03/02 20:06:37 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> libticalcs2-1.1.0.ebuild,
+  libticalcs2-1.1.3.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   24 Mar 2009; Joseph Jezak <josejx@gentoo.org> libticalcs2-1.1.3.ebuild:
   Marked ~ppc for bug #263593.

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r1.ebuild,v 1.1 2010/05/25 19:20:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r1.ebuild,v 1.2 2011/03/02 20:04:16 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples test"
 
 RDEPEND="
-	>=dev-libs/glib-2.4.0
+	dev-libs/glib:2
 	!dev-vcs/rcs
 	!<=sci-chemistry/ccp4-apps-6.1.3-r2"
 DEPEND="${RDEPEND}

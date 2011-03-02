@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.0.ebuild,v 1.1 2009/02/03 14:52:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libtifiles2/libtifiles2-1.1.0.ebuild,v 1.2 2011/03/02 20:08:54 jlec Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc nls threads"
 
-RDEPEND=">=dev-libs/glib-2.6.0
+RDEPEND="dev-libs/glib:2
 	sci-libs/libticables2
 	sci-libs/libticonv
 	nls? ( virtual/libintl )"
