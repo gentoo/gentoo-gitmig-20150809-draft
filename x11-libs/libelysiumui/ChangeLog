@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libelysiumui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/ChangeLog,v 1.10 2011/03/02 18:16:21 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/ChangeLog,v 1.11 2011/03/02 18:38:45 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> libelysiumui-0.2.0.ebuild:
+  Reverting previous unnecessary commit
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> libelysiumui-0.2.0.ebuild:
   Slot all gnome-related deps.

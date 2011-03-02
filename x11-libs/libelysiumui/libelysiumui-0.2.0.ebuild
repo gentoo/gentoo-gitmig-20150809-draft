@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/libelysiumui-0.2.0.ebuild,v 1.10 2011/03/02 18:16:21 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libelysiumui/libelysiumui-0.2.0.ebuild,v 1.11 2011/03/02 18:38:45 signals Exp $
 
 EAPI=2
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
-	gnome-base/gnome-vfs:2
-	gnome-base/gconf:2"
+	gnome-base/gnome-vfs
+	gnome-base/gconf"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
