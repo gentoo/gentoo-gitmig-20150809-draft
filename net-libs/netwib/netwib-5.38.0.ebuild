@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.38.0.ebuild,v 1.4 2010/12/17 19:50:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.38.0.ebuild,v 1.5 2011/03/02 08:58:03 radhermit Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -9,13 +9,9 @@ EAPI="2"
 inherit toolchain-funcs multilib
 
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
-HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwib/"
-
-BASEURI="http://www.laurentconstantin.com/common/netw/${PN}/download/"
-SRC_URI="
-	${BASEURI}v${PV/.*}/${P}-src.tgz
-	doc? ( ${BASEURI}v${PV/.*}/${P}-doc_html.tgz )
-"
+HOMEPAGE="http://ntwib.sourceforge.net/"
+SRC_URI="mirror://sourceforge/ntwib/${P}-src.tgz
+	doc? ( mirror://sourceforge/ntwib/${P}-doc_html.tgz )"
 
 LICENSE="GPL-3"
 SLOT="0"

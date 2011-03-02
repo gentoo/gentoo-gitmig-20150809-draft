@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/netwib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.38 2010/12/17 19:50:12 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.39 2011/03/02 08:58:03 radhermit Exp $
+
+  02 Mar 2011; Tim Harder <radhermit@gentoo.org> netwib-5.38.0.ebuild:
+  Update HOMEPAGE and SRC_URI (bug #357019).
 
   17 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> netwib-5.38.0.ebuild:
   x86 stable wrt bug #348338
