@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.11 2011/03/02 09:46:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.1.ebuild,v 1.12 2011/03/02 09:57:12 jlec Exp $
 
 EAPI="3"
 
@@ -54,7 +54,7 @@ RDEPEND="
 	${SCIDEPS}
 	${XDEPS}
 	${SCHEMEDEPS}
-	dev-python/pygtk
+	dev-python/pygtk:2
 	>=dev-libs/gmp-4.2.2-r2
 	>=net-misc/curl-7.19.6
 	net-dns/libidn"
