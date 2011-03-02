@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.01.ebuild,v 1.6 2010/09/16 17:54:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.01.ebuild,v 1.7 2011/03/02 13:16:31 jlec Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -14,12 +16,12 @@ IUSE="threads openbabel toolbar"
 RDEPEND="media-libs/freeglut
 	virtual/glu
 	virtual/opengl
-	>=x11-libs/gtk+-2.6
+	x11-libs/gtk+:2
 	>=x11-libs/gtkglext-1.0.5
-	>=gnome-base/libglade-2.4
+	gnome-base/libglade:2.0
 	>=sci-libs/libghemical-2
 	openbabel? ( >=sci-chemistry/openbabel-2 )
-	threads? ( >=dev-libs/glib-2.4 )
+	threads? ( dev-libs/glib:2 )
 	x11-libs/libXmu"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15"

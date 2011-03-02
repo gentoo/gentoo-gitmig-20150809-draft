@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.99.2-r2.ebuild,v 1.4 2010/10/10 11:16:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.99.2-r2.ebuild,v 1.5 2011/03/02 13:16:31 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="openbabel seamonkey threads"
 
 RDEPEND="
 	dev-libs/glib:2
-	gnome-base/libglade
+	gnome-base/libglade:2.0
 	sci-chemistry/mpqc
 	>=sci-libs/libghemical-2.99
 	>=x11-libs/liboglappth-0.98

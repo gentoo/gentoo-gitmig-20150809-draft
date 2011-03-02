@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.5 2009/10/07 20:40:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.6 2011/03/02 13:17:20 jlec Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 IUSE="nls"
 
 RDEPEND=">=sys-libs/ncurses-5.2
-	=x11-libs/gtk+-2*
+	x11-libs/gtk+:2
 	x11-libs/cairo[X]
 	nls? ( sys-devel/gettext )"
 

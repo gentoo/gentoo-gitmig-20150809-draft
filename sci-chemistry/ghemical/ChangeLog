@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ghemical
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.36 2010/10/10 11:16:32 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.37 2011/03/02 13:16:31 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> ghemical-2.01.ebuild,
+  ghemical-2.99.2-r2.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   ghemical-2.99.2-r2.ebuild:

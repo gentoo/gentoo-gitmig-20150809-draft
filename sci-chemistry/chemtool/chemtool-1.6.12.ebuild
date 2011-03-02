@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.4 2009/11/21 18:25:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.5 2011/03/02 13:12:45 jlec Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,8 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="gnome nls"
 
-RDEPEND="media-gfx/transfig
-	=x11-libs/gtk+-2*
+RDEPEND="
+	media-gfx/transfig
+	x11-libs/gtk+:2
 	x86? ( media-libs/libemf )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

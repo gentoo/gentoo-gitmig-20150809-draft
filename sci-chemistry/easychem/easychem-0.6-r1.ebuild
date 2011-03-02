@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6-r1.ebuild,v 1.2 2010/10/03 08:30:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/easychem-0.6-r1.ebuild,v 1.3 2011/03/02 13:12:00 jlec Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	>=x11-libs/gtk+-2.4.1
+	x11-libs/gtk+:2
 	app-text/ghostscript-gpl
 	media-gfx/pstoedit"
 DEPEND="${RDEPEND}
