@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.13-r1.ebuild,v 1.4 2008/08/30 14:21:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.8.13-r1.ebuild,v 1.5 2011/03/02 19:35:12 jlec Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,9 +15,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 
-RDEPEND=">=dev-cpp/gtkmm-2.4.5
+RDEPEND="
+	dev-cpp/gtkmm:2.4
 	sndfile? ( media-libs/libsndfile )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
