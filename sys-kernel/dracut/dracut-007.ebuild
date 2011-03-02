@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.4 2011/03/01 09:55:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.5 2011/03/02 18:36:45 aidecoe Exp $
 
 EAPI=2
 
-inherit eutils mount-boot
+inherit eutils
 
 DESCRIPTION="Generic initramfs generation tool"
 HOMEPAGE="http://sourceforge.net/projects/dracut/"
@@ -111,18 +111,18 @@ src_prepare() {
 }
 
 src_compile() {
-	emake WITH_SWITCH_ROOT=0 prefix=/usr sysconfdir=/etc || die "emake failed"
+	emake WITH_SWITCH_ROOT=0 || die "emake failed"
 }
 
 src_install() {
 	emake WITH_SWITCH_ROOT=0 \
-		prefix=/usr sysconfdir=/etc \
-		DESTDIR="${D}" install || die "emake install failed"
+		prefix=/usr sysconfdir=/etc DESTDIR="${D}" \
+		install || die "emake install failed"
 
 	local gen2conf
 
-	dodir /boot/dracut /var/lib/dracut/overlay /etc/dracut.conf.d
-	dodoc HACKING TODO AUTHORS NEWS README*
+	dodir /var/lib/dracut/overlay
+	dodoc HACKING TODO AUTHORS NEWS README* || die 'dodoc failed'
 
 	case "$(base_sys_maj_ver)" in
 		1) gen2conf=gentoo.conf ;;
@@ -131,7 +131,8 @@ src_install() {
 	esac
 
 	insinto /etc/dracut.conf.d
-	newins dracut.conf.d/${gen2conf}.example ${gen2conf}
+	newins dracut.conf.d/${gen2conf}.example ${gen2conf} \
+		|| die 'gen2conf ins failed'
 
 	#
 	# Modules
@@ -139,9 +140,10 @@ src_install() {
 	local module
 	modules_dir="${D}/usr/share/dracut/modules.d"
 
-	echo "${PF}" > "${modules_dir}"/10rpmversion/dracut-version
+	echo "${PF}" > "${modules_dir}"/10rpmversion/dracut-version \
+		|| die 'dracut-version failed'
 
-	# Disable modules not enabled by USE flags
+	# Remove modules not enabled by USE flags
 	for module in ${IUSE} ; do
 		! use ${module} && rm_module ${module}
 	done
@@ -149,10 +151,10 @@ src_install() {
 	! any_module ${DM_IUSE} && rm_module 90dm
 	! any_module ${NETWORK_IUSE} && rm_module 45ifcfg 40network
 
-	# Disable S/390 modules which are not tested at all
+	# Remove S/390 modules which are not tested at all
 	rm_module 95dasd 95dasd_mod 95zfcp 95znet
 
-	# Disable modules which won't work for sure
+	# Remove modules which won't work for sure
 	rm_module 95fcoe # no tools
 
 	# fips module depends on masked app-crypt/hmaccalc
@@ -160,13 +162,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	mount-boot_pkg_postinst
-
 	elog 'To generate the initramfs:'
 	elog '    # mount /boot (if necessary)'
 	elog '    # dracut "" <kernel-version>'
 	elog ''
-	elog 'For command line documentation see man 7 dracut.kernel.'
+	elog 'For command line documentation see dracut.kernel(7).'
 	elog ''
 	elog 'Simple example to select root and resume partition:'
 	elog '    root=/dev/sda1 resume=/dev/sda2'

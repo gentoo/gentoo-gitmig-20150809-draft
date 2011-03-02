@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.11 2011/03/01 09:55:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.12 2011/03/02 18:36:45 aidecoe Exp $
+
+  02 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-007.ebuild:
+  Propagated few improvements from dracut-008.ebuild. Resolves bug #348085.
+
+  Changes include:
+  - removed mount-boot and mkdir of /boot/dracut (user can create it
+    him/herself if really needed)
 
   01 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-007.ebuild:
   Added dependency on baselayout-1.12.14-r1 or above.
