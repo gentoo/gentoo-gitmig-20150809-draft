@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.61 2011/01/15 20:10:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.62 2011/03/02 20:00:16 angelos Exp $
+
+  02 Mar 2011; <angelos@gentoo.org> -ncmpc-0.14.ebuild:
+  Removed old
 
   15 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> ncmpc-0.18.ebuild:
   ppc64 stable wrt #348746
