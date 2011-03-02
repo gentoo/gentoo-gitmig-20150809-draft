@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r1.ebuild,v 1.5 2011/01/13 17:54:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.11-r1.ebuild,v 1.6 2011/03/02 10:16:16 jlec Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -16,9 +18,9 @@ IUSE="svg"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXpm
-	svg? ( >=dev-libs/glib-2
-		>=x11-libs/gtk+-2
-		gnome-base/librsvg )"
+	svg? ( dev-libs/glib:2
+		x11-libs/gtk+:2
+		gnome-base/librsvg:2 )"
 DEPEND="${RDEPEND}
 	app-text/rman
 	x11-misc/imake
