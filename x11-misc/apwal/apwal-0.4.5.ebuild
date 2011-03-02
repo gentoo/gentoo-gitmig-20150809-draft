@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/apwal-0.4.5.ebuild,v 1.5 2008/03/23 00:16:35 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/apwal/apwal-0.4.5.ebuild,v 1.6 2011/03/02 16:20:13 signals Exp $
+
+EAPI=2
 
 DESCRIPTION="A simple application launcher and combined editor"
 HOMEPAGE="http://apwal.free.fr/"
@@ -11,17 +13,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.0
+RDEPEND="x11-libs/gtk+:2
 	dev-libs/libxml2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# ugly hardcoded cflags
 	# and prevent strip
 	sed -i \

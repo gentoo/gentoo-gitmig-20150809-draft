@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-3.2.2.ebuild,v 1.1 2010/05/27 23:35:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/efax-gtk-3.2.2.ebuild,v 1.2 2011/03/02 16:27:46 signals Exp $
+
+EAPI=2
 
 DESCRIPTION="GTK+2 frontend for the efax program."
 HOMEPAGE="http://efax-gtk.sourceforge.net/"
@@ -11,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
-RDEPEND=">=dev-libs/glib-2
-	>=x11-libs/gtk+-2"
+RDEPEND="dev-libs/glib:2
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
