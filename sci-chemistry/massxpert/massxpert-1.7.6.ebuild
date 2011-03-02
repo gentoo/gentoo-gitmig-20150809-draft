@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.4 2009/09/18 20:59:44 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.5 2011/03/02 17:56:14 jlec Exp $
 
 EAPI=2
 
@@ -36,7 +36,7 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/nas
 	media-libs/libpng
-	dev-libs/libxml2"
+	dev-libs/libxml2:2"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/"${P}"

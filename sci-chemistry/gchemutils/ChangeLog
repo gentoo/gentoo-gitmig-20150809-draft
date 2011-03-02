@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gchemutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.13 2010/11/25 13:05:07 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.14 2011/03/02 17:46:54 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gchemutils-0.10.12.ebuild,
+  gchemutils-0.13.1.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *gchemutils-0.13.1 (25 Nov 2010)
 

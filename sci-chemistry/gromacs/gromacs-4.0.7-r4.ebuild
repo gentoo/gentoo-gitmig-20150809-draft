@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.10 2010/12/16 15:35:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.7-r4.ebuild,v 1.11 2011/03/02 17:55:01 jlec Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ DEPEND="app-shells/tcsh
 	gsl? ( sci-libs/gsl )
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )
-	xml? ( dev-libs/libxml2 )"
+	xml? ( dev-libs/libxml2:2 )"
 
 RDEPEND="${DEPEND}"
 

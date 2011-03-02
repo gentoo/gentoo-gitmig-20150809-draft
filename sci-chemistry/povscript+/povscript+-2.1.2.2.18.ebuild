@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/povscript+/povscript+-2.1.2.2.18.ebuild,v 1.1 2006/09/16 21:40:55 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/povscript+/povscript+-2.1.2.2.18.ebuild,v 1.2 2011/03/02 17:51:59 jlec Exp $
+
+EAPI="1"
 
 inherit versionator
 
@@ -18,7 +20,8 @@ LICENSE="glut molscript"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
-RDEPEND="dev-libs/glib
+RDEPEND="
+	dev-libs/glib:2
 	sci-libs/gts"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
