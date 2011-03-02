@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/tangogps-0.99.4.ebuild,v 1.1 2010/11/08 12:46:48 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/tangogps-0.99.4.ebuild,v 1.2 2011/03/02 20:54:10 jlec Exp $
 
 EAPI="3"
 
@@ -16,12 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gps"
 
-RDEPEND="x11-libs/gtk+
+RDEPEND="x11-libs/gtk+:2
 		sys-apps/dbus
-		gnome-base/gconf
+		gnome-base/gconf:2
 		net-misc/curl
 		media-libs/libexif
-		dev-libs/libxml2
+		dev-libs/libxml2:2
 		gps? ( >=sci-geosciences/gpsd-2.34 )
 		net-wireless/bluez
 		net-libs/libsoup:2.4"

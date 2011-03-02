@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/tangogps
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/ChangeLog,v 1.9 2010/11/08 12:46:48 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/ChangeLog,v 1.10 2011/03/02 20:54:10 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> tangogps-0.99.1.ebuild,
+  tangogps-0.99.2.ebuild, tangogps-0.99.3.ebuild, tangogps-0.99.4.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *tangogps-0.99.4 (08 Nov 2010)
 
