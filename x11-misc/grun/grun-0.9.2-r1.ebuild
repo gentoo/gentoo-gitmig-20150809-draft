@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.7 2011/03/02 17:07:49 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.8 2011/03/02 17:32:59 signals Exp $
 
 EAPI=2
 
@@ -30,12 +30,14 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	[[ -z ${TERM} ]] && TERM=xterm
 
 	econf $(use_enable nls) --disable-gtktest --enable-testfile \
 		--enable-associations --with-default-xterm=${TERM}
+}
 
+src_compile() {
 	emake || die "emake failed."
 }
 
