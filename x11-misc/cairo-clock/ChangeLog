@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/cairo-clock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.8 2011/03/02 18:19:36 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/ChangeLog,v 1.9 2011/03/02 18:41:04 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> cairo-clock-0.3.3.ebuild:
+  Reverting previous unnecessary commit
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> cairo-clock-0.3.3.ebuild:
   Slot all gnome-related deps.
