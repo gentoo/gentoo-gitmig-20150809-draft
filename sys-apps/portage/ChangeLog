@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.805 2011/03/01 23:04:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.806 2011/03/02 05:33:15 zmedico Exp $
+
+*portage-2.2.0_alpha26 (02 Mar 2011)
+
+  02 Mar 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha26.ebuild:
+  2.2.0_alpha26 version bump. This includes all of the fixes in
+  portage-2.1.9.42. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.42 (02 Mar 2011)
+
+  02 Mar 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.42.ebuild:
+  2.1.9.42 version bump. This fixes bug #262365 (repoman portage.internal
+  warning for ecompress, ecompressdir, prepall, prepalldocs, and preplib),
+  bug #356375 (fix emerge --sync to handle properly handle hardcoded IPv6
+  address in SYNC), bug #356461 (dodoc -r collapses directory structure),
+  and bug #356555 (make unmatched argument package name search case-
+  insensitive). There's also a fix for the repoman variable.usedwithhelpers
+  check, to prevent false matches inside quoted strings. Bug #349307 tracks
+  all bugs fixed since 2.1.9.25.
 
   01 Mar 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.40.ebuild,
   -portage-2.2.0_alpha24.ebuild:
