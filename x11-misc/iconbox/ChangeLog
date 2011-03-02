@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/iconbox
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbox/ChangeLog,v 1.6 2006/04/10 19:50:12 smithj Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/iconbox/ChangeLog,v 1.7 2011/03/02 17:22:22 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> iconbox-0.2.ebuild:
+  Slotted gtk+ depends and EAPI=2 bump to support it.
 
   10 Apr 2006; <smithj@gentoo.org> iconbox-0.2.ebuild:
   x86 stable
