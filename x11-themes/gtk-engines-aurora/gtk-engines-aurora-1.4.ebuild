@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-aurora/gtk-engines-aurora-1.4.ebuild,v 1.3 2008/07/18 07:58:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-aurora/gtk-engines-aurora-1.4.ebuild,v 1.4 2011/03/02 19:25:58 signals Exp $
+
+EAPI=2
 
 DESCRIPTION="Aurora GTK+ Theme Engine"
 HOMEPAGE="http://www.gnome-look.org/content/show.php?content=56438"
@@ -11,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.10"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -24,8 +26,10 @@ src_unpack() {
 	tar -xjf gtkrc_themes.tar.bz2 || die "unpacking failed."
 }
 
-src_compile() {
+src_configure() {
 	econf --disable-dependency-tracking --enable-animation
+}
+src_compile() {
 	emake || die "emake failed."
 }
 

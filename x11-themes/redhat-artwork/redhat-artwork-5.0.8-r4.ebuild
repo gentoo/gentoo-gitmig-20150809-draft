@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.10 2010/12/01 23:37:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.11 2011/03/02 19:32:14 signals Exp $
 
+EAPI=2
 inherit eutils rpm autotools
 
 MY_R=${PR/r/}
@@ -17,7 +18,7 @@ IUSE="audacious"
 # See end of src_install():
 IUSE="${IUSE} gdm kdm cursors icons nautilus"
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
@@ -27,8 +28,9 @@ RESTRICT="test"
 
 src_unpack() {
 	rpm_src_unpack
-	cd "${S}"
+}
 
+src_prepare() {
 	epatch "${WORKDIR}/redhat-artwork-5.0.5-add-dirs-to-bluecurve-theme-index.patch"
 	epatch "${WORKDIR}/redhat-artwork-5.0.8-echo.patch"
 
@@ -85,7 +87,6 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
 	emake QTDIR="${QTDIR}" styledir="${QTDIR}/plugins/styles" || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-aurora
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-aurora/ChangeLog,v 1.8 2010/01/06 19:39:50 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-aurora/ChangeLog,v 1.9 2011/03/02 19:25:58 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org>
+  gtk-engines-aurora-1.4.ebuild:
+  Slotted gtk+ depend and EAPI=2 bump to support it.
 
   06 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   gtk-engines-aurora-1.5.1.ebuild:
