@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.4.ebuild,v 1.1 2011/01/03 13:16:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.4.ebuild,v 1.2 2011/03/02 10:10:04 jlec Exp $
 
 EAPI=2
 
@@ -19,7 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="openmp"
 
-RDEPEND=">=x11-libs/gtk+-2.4
+RDEPEND="
+	x11-libs/gtk+:2
 	x11-libs/gtkglext
 	x11-libs/gl2ps
 	virtual/opengl

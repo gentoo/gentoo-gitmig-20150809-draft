@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gabedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.4 2011/01/30 16:28:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.5 2011/03/02 10:10:04 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gabedit-2.3.2.ebuild,
+  gabedit-2.3.3.ebuild, gabedit-2.3.4.ebuild, gabedit-2.3.5.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *gabedit-2.3.5 (30 Jan 2011)
 
