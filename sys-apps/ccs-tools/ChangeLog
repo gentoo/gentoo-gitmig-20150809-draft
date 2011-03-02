@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ccs-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ChangeLog,v 1.7 2010/04/04 15:56:43 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ChangeLog,v 1.8 2011/03/02 00:36:22 matsuu Exp $
+
+*ccs-tools-1.8.0_p20110214 (02 Mar 2011)
+
+  02 Mar 2011; MATSUU Takuto <matsuu@gentoo.org>
+  +ccs-tools-1.8.0_p20110214.ebuild,
+  +files/ccs-tools-1.8.0_p20110214-parallel.patch:
+  Version bumped, bug #355799. respect LDFLAGS, bug #332603.
 
 *ccs-tools-1.7.2_p20100401 (04 Apr 2010)
 
