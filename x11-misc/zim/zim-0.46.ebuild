@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.46.ebuild,v 1.2 2010/06/15 15:27:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.46.ebuild,v 1.3 2011/03/02 19:22:25 signals Exp $
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
@@ -21,7 +21,7 @@ IUSE="graphviz latex screenshot spell test"
 RDEPEND="|| ( >=dev-lang/python-2.6 dev-python/simplejson )
 	dev-python/pygobject
 	dev-python/pygtk
-	>=x11-libs/gtk+-2.10
+	x11-libs/gtk+:2
 	x11-misc/xdg-utils
 	graphviz? ( media-gfx/graphviz )
 	latex? ( virtual/latex-base app-text/dvipng )

@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.28.ebuild,v 1.2 2009/08/10 17:54:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.28.ebuild,v 1.3 2011/03/02 19:22:25 signals Exp $
 
+EAPI=2
 inherit eutils fdo-mime perl-module
 
 MY_P=${P/z/Z}
@@ -16,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="latex screenshot spell test"
 
 COMMON_DEPEND=">=dev-lang/perl-5.8
-	>=x11-libs/gtk+-2.10
+	x11-libs/gtk+:2
 	virtual/perl-Storable
 	virtual/perl-IO
 	virtual/perl-File-Spec
