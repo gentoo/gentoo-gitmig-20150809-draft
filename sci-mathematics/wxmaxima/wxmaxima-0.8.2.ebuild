@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.2.ebuild,v 1.5 2009/10/07 16:24:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.2.ebuild,v 1.6 2011/03/02 21:10:45 jlec Exp $
 
 WX_GTK_VER="2.8"
 EAPI="2"
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="unicode"
 
-DEPEND=">=dev-libs/libxml2-2.5.0
+DEPEND="
+	dev-libs/libxml2:2
 	x11-libs/wxGTK:2.8"
 RDEPEND="${DEPEND}
 	sci-visualization/gnuplot[wxwidgets]

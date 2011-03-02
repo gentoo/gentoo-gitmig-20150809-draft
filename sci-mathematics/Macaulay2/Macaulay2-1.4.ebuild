@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.4.ebuild,v 1.2 2010/11/15 18:13:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.4.ebuild,v 1.3 2011/03/02 21:08:14 jlec Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ DEPEND="sys-libs/gdbm
 	>=dev-libs/ntl-5.5.2
 	>=sci-mathematics/pari-2.3.4[gmp]
 	>=sys-libs/readline-6.1
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	sci-mathematics/frobby
 	sci-mathematics/4ti2
 	sci-mathematics/nauty

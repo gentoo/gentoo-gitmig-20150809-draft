@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.0-r1.ebuild,v 1.1 2010/08/22 08:34:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.0-r1.ebuild,v 1.2 2011/03/02 21:06:38 jlec Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="accessibility emacs gmp gnome gtk nls odbc openmp readline R sourceview"
 
-RDEPEND="dev-libs/libxml2
+RDEPEND="
+	dev-libs/libxml2:2
 	dev-libs/glib:2
 	>=sci-visualization/gnuplot-4.2
 	virtual/lapack
@@ -36,7 +37,7 @@ RDEPEND="dev-libs/libxml2
 			 gnome-base/libgnomeprintui:2.2
 			 gnome-base/gconf:2 )
 	R? ( dev-lang/R )
-	sourceview? ( x11-libs/gtksourceview )
+	sourceview? ( x11-libs/gtksourceview:2.0 )
 	odbc? ( dev-db/unixODBC )
 	emacs? ( virtual/emacs )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.9.9.ebuild,v 1.2 2010/11/17 08:10:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.9.9.ebuild,v 1.3 2011/03/02 21:08:21 jlec Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 # TODO: Drop java.
 DEPEND="dev-libs/gmp
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	dev-perl/XML-LibXML
 	dev-libs/libxslt
 	dev-perl/XML-LibXSLT
