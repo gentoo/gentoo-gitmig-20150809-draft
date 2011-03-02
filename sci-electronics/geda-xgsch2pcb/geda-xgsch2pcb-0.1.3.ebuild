@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-xgsch2pcb/geda-xgsch2pcb-0.1.3.ebuild,v 1.1 2009/11/23 06:00:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-xgsch2pcb/geda-xgsch2pcb-0.1.3.ebuild,v 1.2 2011/03/02 21:16:07 jlec Exp $
 
 EAPI="2"
 
@@ -19,8 +19,8 @@ IUSE="gnome nls"
 
 CDEPEND="
 	<dev-lang/python-3
-	>=dev-python/pygtk-2.10
-	>=dev-python/pygobject-2.10
+	dev-python/pygtk:2
+	dev-python/pygobject:2
 	dev-python/dbus-python
 	sci-electronics/pcb[dbus]
 	sci-electronics/geda
