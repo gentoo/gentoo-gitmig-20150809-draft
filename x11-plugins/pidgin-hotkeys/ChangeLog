@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-hotkeys
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.17 2010/11/16 08:46:38 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/ChangeLog,v 1.18 2011/03/02 21:09:08 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> pidgin-hotkeys-0.2.4.ebuild:
+  Slotted gtk+ depend.
 
   16 Nov 2010; Peter Volkov <pva@gentoo.org> -pidgin-hotkeys-0.2.3.ebuild:
   Drop old.

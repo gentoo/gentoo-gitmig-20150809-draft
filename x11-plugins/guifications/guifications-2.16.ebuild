@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.16.ebuild,v 1.9 2009/08/16 09:09:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.16.ebuild,v 1.10 2011/03/02 21:05:47 signals Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="debug nls"
 
 RDEPEND="net-im/pidgin[gtk]
-	>=x11-libs/gtk+-2"
+	x11-libs/gtk+:2"
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"

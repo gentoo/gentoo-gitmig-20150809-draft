@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/pidgin-hotkeys-0.2.4.ebuild,v 1.5 2010/10/26 14:31:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-hotkeys/pidgin-hotkeys-0.2.4.ebuild,v 1.6 2011/03/02 21:09:08 signals Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 hppa ppc x86"
 IUSE=""
 
 RDEPEND="net-im/pidgin[gtk]
-	>=x11-libs/gtk+-2"
+	x11-libs/gtk+:2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
