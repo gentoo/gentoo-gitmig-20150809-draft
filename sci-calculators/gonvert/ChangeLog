@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/gonvert
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.9 2010/05/02 15:02:40 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.10 2011/03/02 21:19:45 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gonvert-0.2.15-r1.ebuild,
+  gonvert-0.2.19.ebuild, gonvert-0.2.23.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *gonvert-0.2.23 (02 May 2010)
 

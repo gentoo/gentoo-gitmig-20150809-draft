@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.7.ebuild,v 1.6 2010/04/18 14:15:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.7.ebuild,v 1.7 2011/03/02 21:25:34 jlec Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -15,11 +15,13 @@ SLOT="0"
 KEYWORDS="amd64 ~hppa ppc sparc x86"
 IUSE="gnome"
 
-RDEPEND=">=sci-libs/libqalculate-0.9.7
+RDEPEND="
+	>=sci-libs/libqalculate-0.9.7
 	>=sci-libs/cln-1.2
-	>=x11-libs/gtk+-2.4:2
-	>=gnome-base/libglade-2
-	gnome? ( >=gnome-base/libgnome-2
+	x11-libs/gtk+:2
+	gnome-base/libglade:2.0
+	gnome? (
+		>=gnome-base/libgnome-2
 		gnome-extra/yelp )"
 DEPEND="${RDEPEND}
 	app-text/rarian

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.4 2010/12/19 19:35:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.5 2011/03/02 21:27:01 jlec Exp $
 
 EAPI=2
 inherit eutils
@@ -14,12 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dbus nls sdl threads xinerama"
 
-RDEPEND="sci-libs/libticables2
+RDEPEND="
+	sci-libs/libticables2
 	sci-libs/libticalcs2
 	sci-libs/libtifiles2
 	sci-libs/libticonv
-	>=gnome-base/libglade-2.4.0:2.0
-	>=x11-libs/gtk+-2.6.0:2
+	gnome-base/libglade:2.0
+	x11-libs/gtk+:2
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
 	nls? ( virtual/libintl )
 	sdl? ( media-libs/libsdl )

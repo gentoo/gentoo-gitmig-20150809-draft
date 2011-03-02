@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/tiemu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.5 2010/12/19 19:35:47 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.6 2011/03/02 21:27:01 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> tiemu-3.03.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   19 Dec 2010; Pacho Ramos <pacho@gentoo.org> tiemu-3.03.ebuild:
   Remove -DGTK_DISABLE_DEPRECATED cflag, bug #339660 (by Diego Elio Pettenò
