@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.2.ebuild,v 1.7 2011/02/25 23:31:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.2.ebuild,v 1.8 2011/03/02 20:00:15 signals Exp $
 
 EAPI="2"
 
@@ -16,8 +16,8 @@ KEYWORDS="alpha amd64 ~ia64 ppc ~sparc x86"
 IUSE="nautilus networkmanager spell test webkit" # map
 
 # FIXME: libnotify & libcanberra hard deps
-RDEPEND=">=dev-libs/glib-2.22.0
-	>=x11-libs/gtk+-2.18.0
+RDEPEND="dev-libs/glib:2
+	x11-libs/gtk+:2
 	>=gnome-base/gconf-2
 	>=dev-libs/dbus-glib-0.51
 	>=gnome-extra/evolution-data-server-1.2
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.22.0
 	>=x11-libs/libnotify-0.4.4
 	>=gnome-base/gnome-keyring-2.22
 
-	>=dev-libs/libunique-1.1.6
+	>=dev-libs/libunique-1.1.6:1
 	net-libs/farsight2
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
