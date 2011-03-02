@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-currency
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.14 2010/02/01 22:45:08 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/ChangeLog,v 1.15 2011/03/02 13:30:09 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org>
+  qalculate-currency-0.9.4-r2.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   01 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
   qalculate-currency-0.9.4-r2.ebuild:

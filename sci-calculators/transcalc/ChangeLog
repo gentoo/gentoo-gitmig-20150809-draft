@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/transcalc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/transcalc/ChangeLog,v 1.5 2010/01/05 22:53:40 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/transcalc/ChangeLog,v 1.6 2011/03/02 13:33:12 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> transcalc-0.14-r1.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *transcalc-0.14-r1 (05 Jan 2010)
 

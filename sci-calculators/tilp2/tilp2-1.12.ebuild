@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.12.ebuild,v 1.3 2009/11/11 19:33:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.12.ebuild,v 1.4 2011/03/02 13:32:26 jlec Exp $
 
 EAPI="2"
 inherit eutils
@@ -14,14 +14,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls threads xinerama"
 
-RDEPEND="sci-libs/libticalcs2
+RDEPEND="
+	sci-libs/libticalcs2
 	sci-libs/libticables2
 	sci-libs/libtifiles2
 	sci-libs/libticonv
 	!sci-calculators/tilp
-	>=x11-libs/gtk+-2.6.0
-	>=dev-libs/glib-2.6.0
-	>=gnome-base/libglade-2
+	x11-libs/gtk+:2
+	dev-libs/glib:2
+	gnome-base/libglade:2.0
 	nls? ( virtual/libintl )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}

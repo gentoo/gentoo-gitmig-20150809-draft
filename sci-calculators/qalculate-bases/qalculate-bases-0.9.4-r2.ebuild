@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4-r2.ebuild,v 1.3 2010/02/01 22:44:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-bases/qalculate-bases-0.9.4-r2.ebuild,v 1.4 2011/03/02 13:28:37 jlec Exp $
+
+EAPI="1"
 
 inherit autotools
 
@@ -13,8 +15,9 @@ SLOT="0"
 IUSE="nls"
 KEYWORDS="~amd64 x86"
 
-RDEPEND=">=sci-libs/libqalculate-0.9.6-r1
-	>=x11-libs/gtk+-2.4
+RDEPEND="
+	>=sci-libs/libqalculate-0.9.6-r1
+	x11-libs/gtk+:2
 	nls? ( sys-devel/gettext )"
 
 DEPEND="${RDEPEND}

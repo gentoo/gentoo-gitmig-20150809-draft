@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/tilp2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.4 2009/11/11 19:33:16 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.5 2011/03/02 13:32:26 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> tilp2-1.12.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   11 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> tilp2-1.12.ebuild:
   Remove kde-base/kdelibs:3.5 support.
