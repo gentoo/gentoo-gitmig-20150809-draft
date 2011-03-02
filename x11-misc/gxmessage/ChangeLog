@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gxmessage
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.28 2010/02/10 11:22:15 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.29 2011/03/02 17:09:35 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> gxmessage-2.6.2.ebuild:
+  Slotted gtk+ depends and EAPI=2 bump to support it.
 
 *gxmessage-2.12.4 (10 Feb 2010)
 

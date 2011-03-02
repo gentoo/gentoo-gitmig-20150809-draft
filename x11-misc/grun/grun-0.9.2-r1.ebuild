@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.6 2008/12/01 20:36:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.7 2011/03/02 17:07:49 signals Exp $
+
+EAPI=2
 
 WANT_AUTOMAKE="1.9"
 
@@ -18,14 +20,12 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}"/${PN}_${PV}-${PATCH_LEVEL}.diff
 	eautoreconf
 }
