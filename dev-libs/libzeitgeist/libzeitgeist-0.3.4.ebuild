@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/libzeitgeist-0.3.4.ebuild,v 1.1 2011/03/02 01:59:07 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/libzeitgeist-0.3.4.ebuild,v 1.2 2011/03/02 13:24:41 signals Exp $
 
 EAPI=4
 inherit autotools eutils versionator
@@ -21,7 +21,7 @@ RDEPEND="gnome-extra/zeitgeist
 DEPEND="${CDEPEND}"
 
 src_prepare() {
-	sed -i -e "s:doc/libzeitgeist:doc/${P}:" \
+	sed -i -e "s:doc/libzeitgeist:doc/${PF}:" \
 		Makefile.am || die
 	eautoreconf
 }
