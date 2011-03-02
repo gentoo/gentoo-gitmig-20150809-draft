@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/suxpanel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.11 2010/08/27 15:48:45 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/ChangeLog,v 1.12 2011/03/02 18:06:48 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> suxpanel-0.4b-r1.ebuild:
+  Slotted gtk+ depend and EAPI=2 bump to support it.
 
 *suxpanel-0.4b-r3 (27 Aug 2010)
 
