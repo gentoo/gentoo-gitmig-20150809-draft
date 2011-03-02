@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/supercat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/ChangeLog,v 1.21 2011/02/12 18:33:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/supercat/ChangeLog,v 1.22 2011/03/02 01:47:36 ranger Exp $
+
+  02 Mar 2011; Brent Baude <ranger@gentoo.org> supercat-0.5.5-r1.ebuild:
+  stable ppc64, bug 350697
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> supercat-0.5.5-r1.ebuild:
   sparc stable wrt #350697
