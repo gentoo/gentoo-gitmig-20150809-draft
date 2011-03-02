@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-2.0.0.ebuild,v 1.3 2010/06/17 20:59:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-2.0.0.ebuild,v 1.4 2011/03/02 18:42:26 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa debug doc gsm h323 ilbc mysql oss postgres qt4 sctp spandsp
-speex ssl zaptel"
+speex ssl"
 
 RDEPEND="
 	sys-libs/glibc
@@ -30,8 +30,7 @@ RDEPEND="
 		x11-libs/qt-gui:4 )
 	spandsp? ( >=media-libs/spandsp-0.0.3 )
 	speex? ( media-libs/speex )
-	ssl? ( dev-libs/openssl )
-	zaptel? ( net-misc/zaptel )"
+	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -87,7 +86,7 @@ src_configure() {
 		$(use_with spandsp) \
 		$(use_with speex libspeex) \
 		$(use_with ssl openssl) \
-		$(use_enable zaptel)
+		--disable-zaptel
 }
 
 src_compile() {

@@ -13,6 +13,5 @@
 			Support for Stream Control Transmission Protocol
 		</flag>
 		<flag name='spandsp'>Enable support for the spandsp codec</flag>
-		<flag name='zaptel'>Build zaptel Channel plugin</flag>
 	</use>
 </pkgmetadata>
