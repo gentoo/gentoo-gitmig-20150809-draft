@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.22 2011/01/26 22:49:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.23 2011/03/02 21:14:23 jlec Exp $
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> pyxplot-0.8.3.ebuild,
+  pyxplot-0.8.4.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *pyxplot-0.8.4 (26 Jan 2011)
 
