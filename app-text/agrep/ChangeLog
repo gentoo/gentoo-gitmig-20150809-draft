@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.29 2011/02/06 05:32:25 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.30 2011/03/02 01:37:14 ranger Exp $
+
+  02 Mar 2011; Brent Baude <ranger@gentoo.org> agrep-2.04-r1.ebuild:
+  stable ppc64, bug 350714
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> agrep-2.04.ebuild:
   Drop to ~mips
