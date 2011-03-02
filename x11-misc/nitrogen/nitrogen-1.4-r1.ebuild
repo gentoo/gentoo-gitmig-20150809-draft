@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4-r1.ebuild,v 1.2 2009/11/03 18:59:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4-r1.ebuild,v 1.3 2011/03/02 17:49:52 signals Exp $
 
+EAPI=2
 inherit eutils autotools
 
 DESCRIPTION="GTK+ background browser and setter for X."
@@ -13,24 +14,25 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="xinerama"
 
-RDEPEND=">=dev-cpp/gtkmm-2.10
+RDEPEND="dev-cpp/gtkmm:2.4
 	>=gnome-base/librsvg-2.20
-	>=x11-libs/gtk+-2.10
+	x11-libs/gtk+:2
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	xinerama? ( x11-proto/xineramaproto )"
 
-src_unpack () {
-	unpack ${A}
-	cd "${S}"
+src_prepare () {
 	epatch "${FILESDIR}"/${P}-png.patch \
 		"${FILESDIR}"/Makefile-as-needed.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable xinerama) || die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 

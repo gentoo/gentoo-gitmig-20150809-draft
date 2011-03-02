@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/nitrogen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.16 2010/07/12 12:35:22 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.17 2011/03/02 17:49:52 signals Exp $
+
+  02 Mar 2011; Kevin McCarthy <signals@gentoo.org> nitrogen-1.4-r1.ebuild:
+  Slotted gtk+ and gtkmm depends and EAPI=2 bump to support it.
 
   12 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> -nitrogen-1.5.ebuild:
   Remove old
