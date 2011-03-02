@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/gtk-gamess-2.00.ebuild,v 1.7 2011/03/02 13:20:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/gtk-gamess-2.00.ebuild,v 1.8 2011/03/02 13:21:08 jlec Exp $
 
 EAPI="1"
 
-DESCRIPTION="GTK-GAMESS is a graphical frontend for GAMESS, a General Atomic and Molecular Electronic Structure System"
+DESCRIPTION="GUI for GAMESS, a General Atomic and Molecular Electronic Structure System"
 HOMEPAGE="http://sourceforge.net/projects/gtk-gamess/"
 
 SRC_URI="mirror://sourceforge/gtk-gamess/${P}.tar.gz"
