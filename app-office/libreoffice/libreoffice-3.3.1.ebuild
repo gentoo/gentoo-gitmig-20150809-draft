@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.2 2011/02/24 15:09:45 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.3 2011/03/02 10:38:22 suka Exp $
 
 EAPI="3"
 
@@ -277,6 +277,7 @@ src_prepare() {
 	use java && cp -f "${FILESDIR}/sdext-presenter.diff" "${S}/patches/hotfixes"
 	cp -f "${FILESDIR}/libreoffice-3.3.0_libxmlsec_fix_extern_c.diff" "${S}/patches/hotfixes"
 	cp -f "${FILESDIR}/libreoffice-3.3-libpng-1.5.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/libreoffice-3.3.1-neon_remove_SSPI_support.diff" "${S}/patches/hotfixes"
 
 	#Use flag checks
 	if use java ; then
