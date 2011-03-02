@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.289.0.ebuild,v 1.1 2010/11/15 18:16:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-9.0.289.0.ebuild,v 1.2 2011/03/02 15:59:55 signals Exp $
 
+EAPI=2
 inherit nsplugins
 
 DESCRIPTION="Adobe Flash Player"
@@ -25,7 +26,7 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
 	x86? ( x11-libs/libXext
 		x11-libs/libX11
 		x11-libs/libXt
-		=x11-libs/gtk+-2*
+		x11-libs/gtk+:2
 		media-libs/freetype
 		media-libs/fontconfig )
 	|| ( media-fonts/liberation-fonts media-fonts/corefonts )"
