@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.60 2011/02/13 20:00:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.61 2011/03/03 23:03:21 abcd Exp $
+
+  03 Mar 2011; Jonathan Callen <abcd@gentoo.org> File-MimeInfo-0.15-r1.ebuild:
+  Add ~amd64-linux/~x86-linux keywords
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> File-MimeInfo-0.15-r1.ebuild:
   Add ~alpha/~arm/~s390/~sh
