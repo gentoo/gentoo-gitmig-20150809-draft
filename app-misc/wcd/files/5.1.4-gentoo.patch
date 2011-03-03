@@ -1,8 +1,8 @@
 diff --git a/src/Makefile b/src/Makefile
-index 15a889a..9a699b7 100644
+index 15a889a..ecd68cf 100644
 --- a/src/Makefile
 +++ b/src/Makefile
-@@ -46,14 +46,14 @@ endif
+@@ -46,18 +46,18 @@ endif
  
  include version.mk
  
@@ -20,6 +20,11 @@ index 15a889a..9a699b7 100644
  PROGRAM         = $(PACKAGE)$(EXT)
  BIN		= $(PROGRAM)
  
+-PREFIX		= /usr/local
++PREFIX		= /usr/
+ prefix		= $(PREFIX)
+ exec_prefix	= $(prefix)
+ bindir		= $(exec_prefix)/bin
 @@ -283,7 +283,7 @@ endif
  # dynamically) comment the LDFLAGS line and add the 'libncurses.a' file
  # (often found as /usr/lib/libncurses.a) to the OBJS1 list.

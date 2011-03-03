@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/ChangeLog,v 1.1 2011/03/03 14:22:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/ChangeLog,v 1.2 2011/03/03 14:43:47 jlec Exp $
+
+  03 Mar 2011; Justin Lecher <jlec@gentoo.org> files/5.1.4-gentoo.patch:
+  Install in correct location not in /usr/local
 
 *wcd-5.1.4 (03 Mar 2011)
 
