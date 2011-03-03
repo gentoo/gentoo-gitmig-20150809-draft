@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12508 2011/03/03 13:45:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12509 2011/03/03 17:36:22 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -165,8 +165,9 @@ net-mail/imapsync
 >=dev-lang/v8-3.1
 
 # Ole Markus With <olemarkus@gentoo.org> (17 Feb 2011)
-# Only a release candidate, so masked for now
+# Release candidates, masked for testing
 =dev-lang/php-5.3.6_rc1
+=dev-lang/php-5.3.6_rc2
 
 # Jeroen Roovers <jer@gentoo.org> (17 Feb 2011)
 # Snapshots of www-client/opera are not supported
