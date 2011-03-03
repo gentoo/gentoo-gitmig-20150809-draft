@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r6.ebuild,v 1.2 2011/02/22 21:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r6.ebuild,v 1.3 2011/03/03 15:38:09 josejx Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -32,6 +32,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-swf-output.patch \
 		"${FILESDIR}"/${P}-GetOnePixel.patch \
 		"${FILESDIR}"/${P}-libpng-1.5.patch
+	# Fix building on PowerPC with Altivec
+	epatch "${FILESDIR}"/${P}-bool.patch
 
 	eautoreconf
 }

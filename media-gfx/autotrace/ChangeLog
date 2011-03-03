@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.45 2011/02/22 21:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.46 2011/03/03 15:38:09 josejx Exp $
+
+  03 Mar 2011; Joseph Jezak <josejx@gentoo.org> autotrace-0.31.1-r5.ebuild,
+  autotrace-0.31.1-r6.ebuild, +files/autotrace-0.31.1-bool.patch:
+  Added patch to allow building on PowerPC machines if altivec is enabled.
 
   22 Feb 2011; Mike Frysinger <vapier@gentoo.org> autotrace-0.31.1-r6.ebuild,
   +files/autotrace-0.31.1-libpng-1.5.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r5.ebuild,v 1.8 2010/07/10 17:19:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r5.ebuild,v 1.9 2011/03/03 15:38:09 josejx Exp $
 
 EAPI=1
 inherit autotools eutils
@@ -30,6 +30,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-swf-output.patch
 	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${FILESDIR}"/${P}-pkgconfig.patch	# bug 283534
+	# Fix building on PowerPC with Altivec
+	epatch "${FILESDIR}"/${P}-bool.patch
 
 	# Fix broken Debian patchset wrt bug 321525
 	sed -i \
