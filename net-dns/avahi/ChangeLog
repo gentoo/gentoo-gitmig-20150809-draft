@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.197 2011/03/02 08:46:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.198 2011/03/03 15:58:40 jer Exp $
+
+  03 Mar 2011; Jeroen Roovers <jer@gentoo.org> avahi-0.6.28-r1.ebuild:
+  Stable for HPPA (bug #355583).
 
   02 Mar 2011; Thomas Kahle <tomka@gentoo.org> avahi-0.6.28-r1.ebuild:
   x86 stable per bug 355583
