@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-1.5.9.1.ebuild,v 1.1 2011/02/16 17:15:27 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-1.5.9.1.ebuild,v 1.2 2011/03/03 18:04:33 idl0r Exp $
 
 EAPI=3
 
@@ -32,7 +32,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	rm Makefile doc/COPYING contrib/{autotoc,gitweb,vim}
+	rm Makefile doc/COPYING contrib/autotoc
+	rm -rf contrib/{gitweb,vim}
 }
 
 src_install() {

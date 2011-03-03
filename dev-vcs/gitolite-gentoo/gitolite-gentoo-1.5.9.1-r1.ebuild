@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.9.1-r1.ebuild,v 1.1 2011/03/02 18:38:32 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-1.5.9.1-r1.ebuild,v 1.2 2011/03/03 18:05:52 idl0r Exp $
 
 EAPI=3
 
@@ -30,7 +30,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-umask.patch"
 
-	rm -rf Makefile doc/COPYING contrib/{autotoc,gitweb,vim} || die
+	rm Makefile doc/COPYING contrib/autotoc || die
+	rm -rf contrib/{gitweb,vim} || die
 
 	echo "${PF}-gentoo" > conf/VERSION
 }
