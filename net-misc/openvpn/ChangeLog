@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.207 2011/02/21 08:17:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.208 2011/03/03 16:59:47 tomka Exp $
+
+  03 Mar 2011; Thomas Kahle <tomka@gentoo.org> openvpn-2.1.4.ebuild:
+  x86 stable per bug 354661
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> openvpn-2.1.4.ebuild:
   Stable for HPPA (bug #354661).
