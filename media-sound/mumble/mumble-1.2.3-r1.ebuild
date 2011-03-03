@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.3.ebuild,v 1.2 2011/02/21 19:46:12 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.3-r1.ebuild,v 1.1 2011/03/03 23:30:41 tgurr Exp $
 
 EAPI="2"
 
@@ -97,6 +97,7 @@ src_install() {
 	insopts -o root -g root -m 0755
 	insinto "/usr/$(get_libdir)/mumble"
 	doins "${dir}"/libmumble.so.${PV} || die "Installing mumble lib failed."
+	dosym libmumble.so.${PV} /usr/$(get_libdir)/mumble/libmumble.so.1 || die "Installing libmumble symlink failed."
 	doins "${dir}"/libcelt0.so.0.{7,11}.0 || die "Installing celt libs failed."
 	doins "${dir}"/plugins/lib*.so* || die "Installing plugins failed."
 }
