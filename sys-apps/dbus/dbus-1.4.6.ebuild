@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.6.ebuild,v 1.1 2011/02/26 11:52:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.6.ebuild,v 1.2 2011/03/03 00:31:42 arfrever Exp $
 
 EAPI=2
-inherit autotools eutils multilib flag-o-matic virtualx
+inherit autotools eutils multilib flag-o-matic python virtualx
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -34,6 +34,7 @@ DEPEND="${CDEPEND}
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/xmlto
 	)
+	test? ( =dev-lang/python-2* )
 "
 
 # out of sources build directory
@@ -44,6 +45,11 @@ TBD=${WORKDIR}/${P}-tests-build
 pkg_setup() {
 	enewgroup messagebus
 	enewuser messagebus -1 "-1" -1 messagebus
+
+	if use test; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
