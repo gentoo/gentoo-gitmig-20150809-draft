@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/ristretto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.30 2010/11/08 13:00:02 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.31 2011/03/03 12:52:49 angelos Exp $
+
+*ristretto-0.0.93 (03 Mar 2011)
+
+  03 Mar 2011; <angelos@gentoo.org> +ristretto-0.0.93.ebuild:
+  Version bump
 
   08 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   ristretto-0.0.91.ebuild:
