@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.9-r1.ebuild,v 1.1 2010/06/22 21:26:59 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.9-r1.ebuild,v 1.2 2011/03/03 18:29:58 olemarkus Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ IUSE=""
 RESTRICT="mirror fetch strip"
 
 DEPEND=""
-RDEPEND="!dev-php5/xdebug
+RDEPEND="!dev-php/xdebug
 		 !dev-php5/pecl-apc
 		 <dev-lang/php-5.3[-debug,-threads]"
 

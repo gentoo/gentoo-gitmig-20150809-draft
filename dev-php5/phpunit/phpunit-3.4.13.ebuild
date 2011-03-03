@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.4.13.ebuild,v 1.4 2010/11/05 04:31:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.4.13.ebuild,v 1.5 2011/03/03 18:28:30 olemarkus Exp $
 
 EAPI="2"
 inherit php-pear-lib-r1
@@ -19,7 +19,7 @@ DEPEND="!dev-php4/phpunit
 RDEPEND="${DEPEND}
 	>=dev-lang/php-5.2[simplexml,xml,tokenizer]
 	|| ( <dev-lang/php-5.3[pcre,reflection,spl] >=dev-lang/php-5.3 )
-	!minimal? ( >=dev-php5/xdebug-2.0.5
+	!minimal? ( >=dev-php/xdebug-2.0.5
 		>=dev-php/PEAR-Image_GraphViz-1.2.1
 		>=dev-php/PEAR-Log-1.8.7-r1
 		>=dev-php/PEAR-Testing_Selenium-0.2.0 )"
