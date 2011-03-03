@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.0.ebuild,v 1.2 2011/03/01 17:33:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.0.ebuild,v 1.3 2011/03/03 22:05:21 abcd Exp $
 
-EAPI=2
+EAPI=3
 inherit libtool toolchain-funcs
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accellerated JPEG library"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="as-is LGPL-2.1 wxWinLL-3.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND="!media-libs/jpeg:0"
@@ -47,5 +47,7 @@ src_install() {
 	find "${D}" -name '*.la' -exec rm -f {} +
 
 	cd ../debian/extra || die
-	emake DESTDIR="${D}" prefix=/usr install || die
+	emake DESTDIR="${D}" prefix="${EPREFIX}/usr" \
+		INSTALL="install -m755" INSTALLDIR="install -d -m755" \
+		install || die
 }
