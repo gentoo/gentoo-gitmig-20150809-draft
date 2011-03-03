@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.0.ebuild,v 1.5 2011/01/30 18:46:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.0.ebuild,v 1.6 2011/03/03 19:33:45 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -18,8 +18,8 @@ IUSE="gnome"
 RDEPEND=">=dev-libs/glib-2.14:2
 	net-libs/xulrunner:1.9
 	dev-libs/nspr
-	>=dev-libs/dbus-glib-0.70
-	>=media-video/gnome-mplayer-${PV}
+	>=dev-libs/dbus-glib-0.88
+	|| ( media-video/gnome-mplayer[dbus] <media-video/gnome-mplayer-1.0.2 )
 	gnome? ( gnome-base/gconf:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
