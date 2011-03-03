@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/native-mpi
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/native-mpi/ChangeLog,v 1.1 2011/03/03 20:44:59 alexxy Exp $
+
+*native-mpi-0 (03 Mar 2011)
+
+  03 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +native-mpi-0.ebuild,
+  +metadata.xml:
+  Add native mpi stub for prefix
+
