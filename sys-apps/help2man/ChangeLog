@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.58 2011/02/28 23:42:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.59 2011/03/03 01:31:21 vapier Exp $
+
+*help2man-1.39.1 (03 Mar 2011)
+
+  03 Mar 2011; Mike Frysinger <vapier@gentoo.org> +help2man-1.39.1.ebuild:
+  Version bump #357143 by Arfrever Frehtes Taifersar Arahesis.
 
   28 Feb 2011; Brent Baude <ranger@gentoo.org> help2man-1.38.2.ebuild:
   stable ppc64, bug 350091
