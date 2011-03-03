@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12509 2011/03/03 17:36:22 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12510 2011/03/03 18:25:31 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -75,11 +75,6 @@ dev-php5/pecl-pdflib
 # Nothing in the tree still depends on it.
 # Masked for removal in 30 days.
 dev-ruby/bones-extras
-
-# Christian Ruppert <idl0r@gentoo.org> (26 Feb 2011)
-# Early rc, links against the old/system libdns instead of the one taken from $WORKDIR and
-# fails to start in some cases, bug 356519
-=net-dns/bind-9.8*
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Feb 2011)
 # Masked for removal due to libgnome ABI breakage
