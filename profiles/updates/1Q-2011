@@ -1,3 +1,4 @@
+move dev-php5/ZendFramework dev-php/ZendFramework
 move dev-php5/xdebug dev-php/xdebug
 move app-arch/upx app-arch/upx-bin
 move app-emulation/virtualbox-ose-additions app-emulation/virtualbox-additions
