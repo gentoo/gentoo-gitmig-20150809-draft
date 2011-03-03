@@ -1,0 +1,13 @@
+*** ../bash-4.2-patched/subst.c	2011-02-25 12:03:58.000000000 -0500
+--- subst.c	2011-03-03 14:08:23.000000000 -0500
+***************
+*** 4609,4614 ****
+--- 4611,4617 ----
+    if (ifs_firstc == 0)
+  #endif
+      word->flags |= W_NOSPLIT;
++   word->flags |= W_NOSPLIT2;
+    result = call_expand_word_internal (word, quoted, 0, (int *)NULL, (int *)NULL);
+    expand_no_split_dollar_star = 0;
+  
+

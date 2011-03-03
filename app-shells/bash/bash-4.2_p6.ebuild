@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p6.ebuild,v 1.1 2011/03/02 02:28:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p6.ebuild,v 1.2 2011/03/03 21:18:30 vapier Exp $
 
 EAPI="1"
 
@@ -69,6 +69,8 @@ src_unpack() {
 	cd lib/readline
 	[[ ${READLINE_PLEVEL} -gt 0 ]] && epatch $(patches -s ${READLINE_PLEVEL} readline ${READLINE_VER})
 	cd ../..
+
+	epatch "${FILESDIR}"/${PN}-4.2-expand-string-unsplit.patch
 }
 
 src_compile() {
