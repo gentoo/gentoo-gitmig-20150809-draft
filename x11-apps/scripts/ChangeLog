@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.17 2011/01/14 21:35:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.18 2011/03/03 22:01:40 abcd Exp $
+
+*scripts-1.0.1-r1 (03 Mar 2011)
+
+  03 Mar 2011; Jonathan Callen <abcd@gentoo.org> +scripts-1.0.1-r1.ebuild:
+  Revbump to remove xauth_switch_to_sun-des-1 script (does not work on Gentoo)
+  and add ~x86-linux/~amd64-keywords
 
   14 Jan 2011; Brent Baude <ranger@gentoo.org> scripts-1.0.1.ebuild:
   stable ppc, bug 342337
