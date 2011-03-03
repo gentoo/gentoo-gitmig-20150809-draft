@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12510 2011/03/03 18:25:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12511 2011/03/03 20:34:26 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -254,6 +254,9 @@ sys-apps/halevt
 ~dev-vcs/bzr-2.3.0
 ~dev-vcs/bzrtools-2.3.0
 ~dev-vcs/qbzr-0.20.0
+~dev-vcs/bzr-gtk-0.100.0
+~dev-vcs/bzr-rewrite-0.6.2
+~dev-vcs/bzr-svn-1.1.0
 
 # Pacho Ramos <pacho@gentoo.org> (11 Feb 2011)
 # Upstream dead for a long time, replaced by app-text/evince
