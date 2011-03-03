@@ -1,0 +1,13 @@
+# ChangeLog for sci-libs/opencascade
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/ChangeLog,v 1.1 2011/03/03 01:08:20 dilfridge Exp $
+
+*opencascade-6.3-r3 (03 Mar 2011)
+
+  03 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +opencascade-6.3-r3.ebuild, +files/opencascade-6.3-fixed-DESTDIR.patch,
+  +files/opencascade-6.3-missing-mode.patch, +files/env.ksh.template,
+  +metadata.xml:
+  New library, bug 118656. Imported with cleanups from the sci overlay.
+  Thanks to all contributors from the bugzilla report.
+
