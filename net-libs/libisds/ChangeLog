@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libisds
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.6 2010/12/20 13:53:30 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.7 2011/03/03 15:20:02 scarabeus Exp $
+
+*libisds-0.5 (03 Mar 2011)
+
+  03 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libisds-0.4.ebuild,
+  +libisds-0.5.ebuild, libisds-9999.ebuild:
+  Version bump. Drop older. Remove not needed hack.
 
   20 Dec 2010; Tomáš Chvátal <scarabeus@gentoo.org> -libisds-0.3.1.ebuild,
   libisds-0.4.ebuild, libisds-9999.ebuild:

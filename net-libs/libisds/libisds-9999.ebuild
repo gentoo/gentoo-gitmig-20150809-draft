@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.6 2010/12/20 13:53:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.7 2011/03/03 15:20:02 scarabeus Exp $
 
 EAPI=3
 
@@ -54,11 +54,4 @@ src_configure() {
 	)
 
 	autotools-utils_src_configure
-}
-
-src_test() {
-	# hack for failing gnupg testing
-	export HOME="${T}"
-	mkdir "${HOME}/.gnupg"
-	autotools-utils_src_test
 }
