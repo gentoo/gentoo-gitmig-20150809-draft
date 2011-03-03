@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pivy
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.1 2011/03/03 23:05:53 dilfridge Exp $
+
+*pivy-0.5_alpha20110303 (03 Mar 2011)
+
+  03 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +pivy-0.5_alpha20110303.ebuild, +metadata.xml:
+  New package, bug 291979. Imported with cleanups from sci overlay.
+
