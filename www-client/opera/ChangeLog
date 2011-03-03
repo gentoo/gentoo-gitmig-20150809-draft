@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.600 2011/03/01 15:46:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.601 2011/03/03 21:06:44 jer Exp $
+
+*opera-11.10.2018 (03 Mar 2011)
+
+  03 Mar 2011; Jeroen Roovers <jer@gentoo.org> +opera-11.10.2018.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/03/03/speed-dial-zooming-multi-colu
+  mn-and-mail-fixes
 
   01 Mar 2011; Jeroen Roovers <jer@gentoo.org> opera-11.01.1190.ebuild,
   opera-11.10.2014.ebuild:
