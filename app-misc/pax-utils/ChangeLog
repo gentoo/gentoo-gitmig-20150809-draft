@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.121 2010/12/08 03:57:02 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.122 2011/03/03 21:12:57 vapier Exp $
+
+  03 Mar 2011; Mike Frysinger <vapier@gentoo.org> pax-utils-0.2.2.ebuild:
+  Stabilize for all.
 
 *pax-utils-0.2.2 (08 Dec 2010)
 
