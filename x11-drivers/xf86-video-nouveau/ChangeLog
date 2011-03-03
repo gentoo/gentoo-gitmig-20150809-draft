@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.24 2011/02/20 23:52:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.25 2011/03/03 00:00:26 chithanh Exp $
+
+  02 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-nouveau-0.0.16_pre20101130.ebuild:
+  Not compatible with libdrm-2.4.24
 
   20 Feb 2011; Joseph Jezak <josejx@gentoo.org>
   xf86-video-nouveau-0.0.16_pre20101130.ebuild:
