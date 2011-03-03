@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.107 2011/02/26 22:19:38 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.108 2011/03/03 07:21:12 nerdboy Exp $
+
+*gdal-1.8.0-r1 (03 Mar 2011)
+
+  03 Mar 2011; Steve Arnold <nerdboy@gentoo.org> +files/gdal-png-1.5.patch,
+  +gdal-1.8.0-r1.ebuild:
+  Updated with pdf use flag and png-1.5 support, closes bug 355817 (thanks
+  to Jean-Claude Repetto for submitting the patch).
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> gdal-1.7.3.ebuild,
   gdal-1.8.0.ebuild:
