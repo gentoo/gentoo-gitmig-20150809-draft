@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10-r1.ebuild,v 1.2 2011/02/12 23:23:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10-r1.ebuild,v 1.3 2011/03/03 00:04:47 chithanh Exp $
 
 EAPI=3
 
@@ -75,6 +75,7 @@ RDEPEND="
 		)
 	)
 	${LIBDRM_DEPSTRING}[video_cards_nouveau?,video_cards_vmware?]
+	video_cards_nouveau? ( <x11-libs/libdrm-2.4.24 )
 "
 for card in ${INTEL_CARDS}; do
 	RDEPEND="${RDEPEND}

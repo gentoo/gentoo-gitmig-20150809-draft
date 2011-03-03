@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.315 2011/02/23 16:22:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.316 2011/03/03 00:04:47 chithanh Exp $
+
+  03 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-7.9.1.ebuild, mesa-7.10-r1.ebuild:
+  Nouveau: not compatible with libdrm-2.4.24
 
   23 Feb 2011; Jeroen Roovers <jer@gentoo.org> mesa-7.9.1.ebuild:
   Stable for HPPA (bug #354237).
