@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-view-open-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.7 2011/02/19 17:53:48 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.8 2011/03/03 22:08:34 tgurr Exp $
+
+  03 Mar 2011; Timo Gurr <tgurr@gentoo.org>
+  vmware-view-open-client-4.5.0.297975.ebuild:
+  Slot gtk+ dependency.
 
 *vmware-view-open-client-4.5.0.297975 (19 Feb 2011)
 
