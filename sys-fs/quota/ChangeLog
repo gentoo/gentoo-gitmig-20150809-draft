@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.49 2011/02/26 16:49:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.50 2011/03/03 07:26:27 jlec Exp $
+
+*quota-3.17-r1 (03 Mar 2011)
+
+  03 Mar 2011; Justin Lecher <jlec@gentoo.org> +quota-3.17-r1.ebuild,
+  +files/quota.rc7:
+  Add check() to initscript, #357089
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> quota-3.17.ebuild:
   Marked ~ppc64 wrt #340455
