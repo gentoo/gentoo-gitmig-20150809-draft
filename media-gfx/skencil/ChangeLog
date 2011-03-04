@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/skencil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.42 2011/03/04 23:32:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.43 2011/03/04 23:35:24 arfrever Exp $
+
+  04 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  skencil-1.0_alpha784.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #313515).
 
   04 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   skencil-0.6.18_pre20080519.ebuild:
