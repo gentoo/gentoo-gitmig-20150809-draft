@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.0.95_beta.ebuild,v 1.2 2010/07/14 00:12:02 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.0.95_beta.ebuild,v 1.3 2011/03/04 20:12:51 williamh Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs
@@ -27,7 +27,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa"
 
-SP_DEPEND=">=app-accessibility/speech-tools-2.0.95_beta"
+SP_DEPEND="~app-accessibility/speech-tools-2.0.95_beta"
 
 DEPEND="${SP_DEPEND}
 	alsa? ( media-sound/alsa-utils )"
