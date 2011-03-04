@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.9 2011/01/31 19:06:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.10 2011/03/04 21:54:49 radhermit Exp $
+
+*libmediainfo-0.7.42 (04 Mar 2011)
+
+  04 Mar 2011; Tim Harder <radhermit@gentoo.org> +libmediainfo-0.7.42.ebuild:
+  Version bump. Update to EAPI 4, use autotools-utils eclass, bump libzen
+  dependency, and don't force -O2 by default.
 
   31 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   libmediainfo-0.7.36-r1.ebuild:
