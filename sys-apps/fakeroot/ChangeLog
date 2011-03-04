@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakeroot
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.55 2010/10/07 06:43:42 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.56 2011/03/04 04:52:55 radhermit Exp $
+
+*fakeroot-1.14.5 (04 Mar 2011)
+
+  04 Mar 2011; Tim Harder <radhermit@gentoo.org> +fakeroot-1.14.5.ebuild:
+  Version bump. Update to EAPI 4 and don't install empty documentation files.
 
 *fakeroot-1.14.4 (07 Oct 2010)
 
