@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-7.1.ebuild,v 1.7 2010/09/26 22:13:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-7.2_alpha4-r1.ebuild,v 1.1 2011/03/04 14:59:14 jlec Exp $
 
 inherit eutils
 
@@ -13,24 +13,15 @@ SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nocxx threads"
 
-RDEPEND=""
-
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e '/^SUBDIRS/s/doc//' Makefile.in || die
-	epatch "${FILESDIR}"/${PN}-6.5-gentoo.patch
-	epatch "${FILESDIR}"/gc6.6-builtin-backtrace-uclibc.patch
-}
+DEPEND="dev-libs/libatomic_ops"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-	local myconf=""
+	sed '/Cflags/s:$:/gc:g' -i bdw-gc.pc.in || die
+	local myconf="--with-libatomic-ops=yes"
 
 	if use nocxx ; then
 		myconf="${myconf} --disable-cplusplus"
@@ -40,7 +31,7 @@ src_compile() {
 
 	use threads || myconf="${myconf} --disable-threads"
 
-	econf ${myconf} || die "Configure failed..."
+	econf ${myconf}
 	emake || die
 }
 
