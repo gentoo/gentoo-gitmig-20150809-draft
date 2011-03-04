@@ -1,6 +1,10 @@
 # ChangeLog for media-video/coherence
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.13 2011/03/04 20:48:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/coherence/ChangeLog,v 1.14 2011/03/04 21:03:26 xarthisius Exp $
+
+  04 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  coherence-0.6.6.2.ebuild:
+  ppc64 stable wrt #354797
 
   04 Mar 2011; Michael Weber <xmw@gentoo.org> coherence-0.6.6.2.ebuild:
   ppc/sparc stable (bug 354797)
