@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.38 2011/01/17 15:53:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.39 2011/03/04 20:55:03 grozin Exp $
+
+*ecls-11.1.1-r1 (04 Mar 2011)
+
+  04 Mar 2011; Andrey Grozin <grozin@gentoo.org> +files/11.1.1-cmploc.patch,
+  -ecls-11.1.1.ebuild, +ecls-11.1.1-r1.ebuild:
+  Fixed #357315, thanks to Francois Bissey <fbissey@slingshot.co.nz> for
+  cherry-pick the patches
 
 *ecls-11.1.1 (17 Jan 2011)
 

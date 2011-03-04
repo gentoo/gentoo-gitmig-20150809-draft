@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-11.1.1.ebuild,v 1.1 2011/01/17 15:53:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-11.1.1-r1.ebuild,v 1.1 2011/03/04 20:55:03 grozin Exp $
 
 EAPI=3
 inherit eutils multilib
@@ -34,6 +34,9 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-headers-gentoo.patch
+
+	# bug #357315
+	epatch "${FILESDIR}"/${PV}-cmploc.patch
 }
 
 src_configure() {
