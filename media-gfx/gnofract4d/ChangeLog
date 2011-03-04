@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnofract4d
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.12 2010/12/14 15:56:12 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.13 2011/03/04 22:28:52 arfrever Exp $
+
+  04 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gnofract4d-3.12.ebuild:
+  Delete.
 
   14 Dec 2010; Markos Chandras <hwoarang@gentoo.org> gnofract4d-3.13.ebuild:
   Stable on amd64 wrt bug #348153
