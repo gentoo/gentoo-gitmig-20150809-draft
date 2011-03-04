@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.129 2011/02/24 13:59:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.130 2011/03/04 12:03:34 aballier Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="a52 aac aalib alsa altivec android atmo +audioqueue avahi +avcodec
+IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bda bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
 	directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
 	fbcon fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
@@ -212,7 +212,6 @@ src_configure() {
 		$(use_enable aac faad) \
 		$(use_enable alsa) \
 		$(use_enable altivec) \
-		$(use_enable android) \
 		$(use_enable atmo) \
 		$(use_enable audioqueue) \
 		$(use_enable avahi bonjour) \
