@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.37-r4.ebuild,v 1.1 2011/03/01 00:35:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.37-r4.ebuild,v 1.2 2011/03/04 02:28:07 blueness Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -28,8 +28,8 @@ pkg_postinst() {
 	local GRADM_COMPAT="sys-apps/gradm-2.2.1*"
 
 	ewarn
-	ewarn "Hardened Gentoo provides four different predefined grsecurity level:"
-	ewarn "[server], [server no rbac] [workstation] [workstation no rbac]"
+	ewarn "Hardened Gentoo provides three different predefined grsecurity level:"
+	ewarn "[server], [workstation], and [virtualization]."
 	ewarn
 	ewarn "Those who intend to use one of these predefined grsecurity levels"
 	ewarn "should read the help associated with the level.  Users importing a"

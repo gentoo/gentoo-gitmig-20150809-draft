@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.393 2011/03/01 00:35:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.394 2011/03/04 02:28:07 blueness Exp $
+
+  04 Mar 2011; Anthony G. Basile <blueness@gentoo.org>
+  hardened-sources-2.6.32-r39.ebuild, hardened-sources-2.6.37-r4.ebuild:
+  Fixed minor error to pkg_postinst() message.
 
 *hardened-sources-2.6.37-r4 (01 Mar 2011)
 
