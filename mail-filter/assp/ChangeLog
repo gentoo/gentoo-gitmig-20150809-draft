@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/assp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.33 2010/08/26 15:48:21 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.34 2011/03/04 15:37:49 patrick Exp $
+
+*assp-1.7.5.7-r1 (04 Mar 2011)
+
+  04 Mar 2011; Patrick Lauer <patrick@gentoo.org> +assp-1.7.5.7-r1.ebuild:
+  Minor changes to useflags and deps #357293 thanks to wltjr
 
   26 Aug 2010; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Taking over from Mr. Maintainer-Needed, who hasn't shown much activity.
