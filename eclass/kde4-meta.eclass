@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.48 2011/01/12 21:24:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.49 2011/03/04 23:19:12 dilfridge Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -216,9 +216,15 @@ kde4-meta_src_extract() {
 			kdebase-apps)
 				# kdebase/apps -> kdebase-apps
 				tarball="kdebase-${PV}.tar.${postfix}"
-				# Go one level deeper for kdebase-apps in tarballs
-				moduleprefix=apps/
-				KMTARPARAMS+=" --transform=s|apps/||"
+				case ${PV} in
+					4.6.1)
+						;;
+					*)
+						# Go one level deeper for kdebase-apps in tarballs
+						moduleprefix=apps/
+						KMTARPARAMS+=" --transform=s|apps/||"
+						;;
+				esac
 				;;
 			kdepim)
 				if [[ ${PV} == 4.5.93 ]] ; then
@@ -312,9 +318,18 @@ kde4-meta_create_extractlists() {
 	# In those cases you should care to add the relevant files to KMEXTRACTONLY
 	case ${KMNAME} in
 		kdebase)
-			KMEXTRACTONLY+="
-				apps/config-apps.h.cmake
-				apps/ConfigureChecks.cmake"
+			case ${PV} in
+				4.6.1)
+					KMEXTRACTONLY+="
+						config-apps.h.cmake
+						ConfigureChecks.cmake"
+						;;
+					*)
+					KMEXTRACTONLY+="
+						apps/config-apps.h.cmake
+						apps/ConfigureChecks.cmake"
+						;;
+				esac
 			;;
 		kdebase-apps)
 			KMEXTRACTONLY+="
