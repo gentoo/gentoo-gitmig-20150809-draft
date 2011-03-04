@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/louie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/ChangeLog,v 1.8 2011/01/16 14:43:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/ChangeLog,v 1.9 2011/03/04 20:46:41 xmw Exp $
+
+  04 Mar 2011; Michael Weber <xmw@gentoo.org> louie-1.1.ebuild:
+  ppc stable (bug 354797)
 
   16 Jan 2011; Raúl Porcel <armin76@gentoo.org> louie-1.1.ebuild:
   sparc stable and add ~ia64
