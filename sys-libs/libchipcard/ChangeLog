@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.92 2011/03/01 15:20:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.93 2011/03/04 16:29:55 tomka Exp $
+
+  04 Mar 2011; Thomas Kahle <tomka@gentoo.org> libchipcard-5.0.0.ebuild:
+  x86 stable per bug 355077
 
   01 Mar 2011; Jeroen Roovers <jer@gentoo.org> libchipcard-5.0.0.ebuild:
   Stable for HPPA (bug #355077).
