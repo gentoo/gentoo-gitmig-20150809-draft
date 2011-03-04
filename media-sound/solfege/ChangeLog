@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.61 2011/03/04 04:40:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.62 2011/03/04 22:40:08 radhermit Exp $
+
+  04 Mar 2011; Tim Harder <radhermit@gentoo.org> solfege-3.19.4.ebuild,
+  +files/solfege-3.19.4-skipmanual.patch:
+  Apply patch to properly skip help manual generation.
 
 *solfege-3.19.4 (04 Mar 2011)
 

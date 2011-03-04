@@ -1,0 +1,14 @@
+--- solfege-3.19.4/help/Makefile.orig
++++ solfege-3.19.4/help/Makefile
+@@ -32,9 +32,11 @@
+ 	)
+ installfiles+=help/style.css
+ 
++ifneq "$(skipmanual)" "yes"
+ ifdef LILYPOND
+ all: $(shell python tools/generate_theory_ly.py --png-targets)
+ endif
++endif
+ 
+ 
+ # I have removed any code that will merge help/C/solfege.pot and

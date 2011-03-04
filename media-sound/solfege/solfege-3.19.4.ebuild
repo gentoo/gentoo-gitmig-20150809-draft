@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.19.4.ebuild,v 1.1 2011/03/04 04:40:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.19.4.ebuild,v 1.2 2011/03/04 22:40:08 radhermit Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="sqlite"
 
-inherit python
+inherit eutils python
 
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
 HOMEPAGE="http://www.solfege.org"
@@ -36,6 +36,8 @@ src_prepare() {
 	sed -i \
 		-e '/^CFLAGS/s:-I/usr/src/linux/include::' \
 		solfege/soundcard/Makefile || die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-skipmanual.patch
 }
 
 src_configure() {
@@ -46,9 +48,11 @@ src_configure() {
 		$(use_enable oss oss-sound)
 }
 
-src_compile() { :; }
+src_compile() {
+	emake skipmanual=yes || die "emake failed"
+}
 
 src_install() {
-	emake DESTDIR="${D}" nopycompile=YES install || die "emake install failed"
+	emake DESTDIR="${D}" nopycompile=YES skipmanual=yes install || die "emake install failed"
 	dodoc AUTHORS *hange*og FAQ README
 }
