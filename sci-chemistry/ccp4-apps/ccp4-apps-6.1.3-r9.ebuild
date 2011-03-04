@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r8.ebuild,v 1.4 2011/03/04 17:02:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r9.ebuild,v 1.1 2011/03/04 17:02:15 jlec Exp $
 
 EAPI="3"
 
