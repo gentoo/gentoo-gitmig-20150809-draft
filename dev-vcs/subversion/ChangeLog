@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.35 2011/03/03 21:45:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.36 2011/03/04 05:15:32 josejx Exp $
+
+  04 Mar 2011; Joseph Jezak <josejx@gentoo.org> subversion-1.6.16.ebuild:
+  Marked ppc stable for bug #356741.
 
 *subversion-1.6.16 (03 Mar 2011)
 
