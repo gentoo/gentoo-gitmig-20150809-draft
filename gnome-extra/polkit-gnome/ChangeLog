@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/polkit-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.26 2011/02/23 23:27:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.27 2011/03/04 12:37:51 tomka Exp $
+
+  04 Mar 2011; Thomas Kahle <tomka@gentoo.org> polkit-gnome-0.99.ebuild:
+  x86 stable per bug 354509
 
   23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> polkit-gnome-0.99.ebuild:
   Stable on amd64 wrt bug #354509
