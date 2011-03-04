@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/redis-py
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.1 2011/03/04 17:39:49 djc Exp $
+
+*redis-py-2.2.2 (04 Mar 2011)
+
+  04 Mar 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.2.2.ebuild,
+  +metadata.xml:
+  Initial version of redis-py.
+
