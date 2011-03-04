@@ -1,8 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-0.64.3-r1.ebuild,v 1.2 2010/02/06 02:54:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-0.64.3-r1.ebuild,v 1.3 2011/03/04 22:21:40 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit eutils distutils
 
@@ -16,19 +19,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE="X python ruby"
 
 RDEPEND="X? ( >=x11-libs/gtk+-2 )
-	 python? ( dev-lang/python )
 	 ruby? ( dev-lang/ruby )
 	 app-shells/tcsh"
 
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	ruby? ( dev-lang/swig )
-	python? ( >=dev-python/setuptools-0.6_rc6 )
+	python? ( dev-python/setuptools )
 	>=dev-util/scons-0.97"
 
 pkg_setup() {
 	enewgroup drqueue
 	enewuser drqueue -1 /bin/bash /dev/null daemon,drqueue
+
+	use python && python_pkg_setup
 }
 
 src_prepare() {
@@ -119,6 +123,7 @@ src_install() {
 		# Install DRKeewee web service and example python scripts
 		insinto /var/lib/${PN}/python
 		doins -r DrKeewee examples || die "doins failed"
+		python_convert_shebangs -r 2 "${ED}var/lib/${PN}/python"
 	fi
 
 	if use ruby; then
@@ -132,13 +137,13 @@ pkg_postinst() {
 	einfo "and /etc/conf.d/drqmd DRQUEUE_MASTER=\"hostname\""
 	einfo "to reflect your master's hostname."
 	if use python ; then
-		einfo ""
+		einfo
 		einfo "DrKeewee can be found in /var/lib/drqueue/python"
 
-		python_mod_optimize "$(python_get_sitedir)"/drqueue
+		distutils_pkg_postinst
 	fi
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup "$(python_get_sitedir)"/drqueue
+	use python && distutils_pkg_postrm
 }
