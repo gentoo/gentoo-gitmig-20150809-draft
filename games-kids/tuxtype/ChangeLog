@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/tuxtype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.17 2011/02/13 18:41:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.18 2011/03/04 12:56:55 ranger Exp $
+
+  04 Mar 2011; Brent Baude <ranger@gentoo.org> tuxtype-1.8.1.ebuild:
+  stable ppc, bug 353819
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> tuxtype-1.5.16.ebuild,
   tuxtype-1.8.1.ebuild:
