@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/telepathy-qt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt4/ChangeLog,v 1.4 2011/02/13 11:38:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt4/ChangeLog,v 1.5 2011/03/04 12:56:42 tampakrap Exp $
+
+*telepathy-qt4-0.5.8 (04 Mar 2011)
+
+  04 Mar 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +telepathy-qt4-0.5.8.ebuild:
+  Version bump, cleanup: glib/gnome depedencies are now optional
 
 *telepathy-qt4-0.5.6 (13 Feb 2011)
 
