@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.4.1_pre20110301.ebuild,v 1.1 2011/03/02 10:46:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.4.1_pre20110304.ebuild,v 1.1 2011/03/04 11:55:11 eras Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"

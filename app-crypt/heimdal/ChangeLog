@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.171 2011/03/02 10:46:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.172 2011/03/04 11:55:11 eras Exp $
+
+*heimdal-1.4.1_pre20110304 (04 Mar 2011)
+
+  04 Mar 2011; Eray Aslan <eras@gentoo.org>
+  -heimdal-1.4.1_pre20110216-r1.ebuild, -heimdal-1.4.1_pre20110301.ebuild,
+  +heimdal-1.4.1_pre20110304.ebuild:
+  Version bump for #357235. Remove old
 
 *heimdal-1.4.1_pre20110301 (02 Mar 2011)
 
