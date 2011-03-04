@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.60 2011/01/02 21:13:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.61 2011/03/04 05:36:22 polynomial-c Exp $
+
+  04 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> thunderbird-3.1.3.ebuild,
+  thunderbird-3.1.5.ebuild, thunderbird-3.1.6.ebuild, thunderbird-3.1.7.ebuild,
+  thunderbird-3.1.7-r2.ebuild:
+  Forced usage of python-2 for building (bug #355585 by Adrian Bassett).
 
 *thunderbird-3.1.7-r2 (02 Jan 2011)
 

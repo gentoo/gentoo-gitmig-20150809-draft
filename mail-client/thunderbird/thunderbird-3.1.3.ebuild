@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.3.ebuild,v 1.6 2010/09/14 19:38:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.3.ebuild,v 1.7 2011/03/04 05:36:22 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools python
 
 # This list can be updated using get_langs.sh from the mozilla overlay
 LANGS="af ar be bg bn-BD ca cs da de el en en-GB en-US es-AR es-ES et eu fi fr \
@@ -58,6 +58,9 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	cups? ( net-print/cups[gnutls] )
 	!x11-plugins/lightning"
 
+DEPEND="${RDEPEND}
+	=dev-lang/python-2*[threads]"
+
 PDEPEND="crypt? ( >=x11-plugins/enigmail-1.1 )"
 
 S="${WORKDIR}"/comm-1.9.2
@@ -94,6 +97,8 @@ pkg_setup() {
 		elog "a legal problem with Mozilla Foundation"
 		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
 	fi
+
+	python_set_active_version 2
 }
 
 src_unpack() {
