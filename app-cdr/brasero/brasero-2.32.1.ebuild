@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.7 2011/02/27 15:09:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.8 2011/03/04 16:15:38 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,13 +16,13 @@ KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="+cdr +css doc +introspection +libburn nautilus playlist test"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.25.10
+	>=dev-libs/glib-2.25.10:2
 	media-libs/libcanberra[gtk]
 	>=x11-libs/gtk+-2.21.9:2[introspection?]
-	>=gnome-base/gconf-2.31.1
-	>=media-libs/gstreamer-0.10.15
-	>=media-libs/gst-plugins-base-0.10
-	>=dev-libs/libxml2-2.6
+	>=gnome-base/gconf-2.31.1:2
+	>=media-libs/gstreamer-0.10.15:0.10
+	>=media-libs/gst-plugins-base-0.10:0.10
+	>=dev-libs/libxml2-2.6:2
 	>=dev-libs/libunique-1:1
 	x11-libs/libSM
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
@@ -34,9 +34,9 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	app-cdr/cdrdao
 	app-cdr/dvd+rw-tools
-	media-plugins/gst-plugins-meta
+	media-plugins/gst-plugins-meta:0.10
 	x11-themes/hicolor-icon-theme
-	css? ( media-libs/libdvdcss )
+	css? ( media-libs/libdvdcss:1.2 )
 	cdr? ( virtual/cdrtools )
 	!libburn? ( virtual/cdrtools )"
 DEPEND="${COMMON_DEPEND}
@@ -44,7 +44,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool
-	gnome-base/gnome-common
+	gnome-base/gnome-common:3
 	>=dev-util/gtk-doc-am-1.12
 	doc? ( >=dev-util/gtk-doc-1.12 )
 	test? ( app-text/docbook-xml-dtd:4.3 )"
