@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0.ebuild,v 1.11 2011/01/16 16:54:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.10.0.ebuild,v 1.12 2011/03/04 20:57:28 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-linux"
 IUSE="doc"
 
 DEPEND=">=dev-python/twisted-2.5

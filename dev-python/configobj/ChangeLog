@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.27 2011/01/16 14:47:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.28 2011/03/04 20:55:40 xarthisius Exp $
+
+  04 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  configobj-4.7.2.ebuild:
+  ppc64 stable wrt #354797
 
   16 Jan 2011; Raúl Porcel <armin76@gentoo.org> configobj-4.7.2.ebuild:
   sparc stable and add ~ia64
