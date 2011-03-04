@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/fontypython-0.4.2.3.ebuild,v 1.7 2010/05/22 13:46:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/fontypython-0.4.2.3.ebuild,v 1.8 2011/03/04 22:26:57 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 
 inherit distutils multilib python
 
@@ -24,7 +24,6 @@ DEPEND="dev-python/imaging
 	x11-libs/wxGTK:2.8[-debug]"
 RDEPEND="${DEPEND}"
 
-RESTRICT_PYTHON_ABIS="2.4 3*"
 PYTHON_MODNAME="fontypythonmodules"
 
 src_install() {
