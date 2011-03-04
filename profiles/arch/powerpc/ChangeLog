@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.110 2011/02/03 13:53:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.111 2011/03/04 17:40:29 alexxy Exp $
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  mask kde use for bug #357403
 
   03 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   unmask kde-base/kdebindings-meta-4.6.0[java,ruby]

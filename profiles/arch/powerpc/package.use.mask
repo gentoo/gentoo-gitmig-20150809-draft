@@ -1,6 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.73 2011/02/22 21:23:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.74 2011/03/04 17:40:29 alexxy Exp $
+
+# Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
+# Mask unsatisfied kde-deps bug #357403
+=kde-base/kdelibs-4.6* policykit
+=kde-base/solid-4.6* bluetooth
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.112 2011/02/20 17:36:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.113 2011/03/04 17:41:49 alexxy Exp $
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  mask kde use for bug #357403
 
   20 Feb 2011; Markus Meier <maekke@gentoo.org> use.mask:
   use.mask pdfannotextractor (needs java)
