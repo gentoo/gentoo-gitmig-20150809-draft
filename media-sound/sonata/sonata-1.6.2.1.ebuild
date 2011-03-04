@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1.ebuild,v 1.5 2011/02/16 19:27:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1.ebuild,v 1.6 2011/03/04 19:42:50 arfrever Exp $
 
-EAPI=2
-PYTHON_DEPEND="2:2.5"
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
 inherit distutils
 
@@ -27,10 +29,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="CHANGELOG README TODO TRANSLATORS"
-
-pkg_setup() {
-	python_set_active_version 2
-}
 
 src_install() {
 	distutils_src_install
