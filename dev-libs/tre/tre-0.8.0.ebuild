@@ -1,17 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.10 2011/01/29 17:38:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.11 2011/03/04 17:37:54 jlec Exp $
 
 EAPI=2
 
-DESCRIPTION="Lightweight, robust, and efficient POSIX compliant regexp matching library."
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit distutils eutils
+
+DESCRIPTION="Lightweight, robust, and efficient POSIX compliant regexp matching library"
 HOMEPAGE="http://laurikari.net/tre/"
 SRC_URI="http://laurikari.net/tre/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="nls static-libs"
+IUSE="nls python static-libs"
 
 RDEPEND="
 	!app-misc/glimpse
@@ -20,6 +26,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
+DISTUTILS_SETUP_FILES=("python/setup.py")
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-python.patch
+	python_copy_sources python
+}
+
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
@@ -27,6 +40,11 @@ src_configure() {
 		--enable-system-abi \
 		$(use_enable nls) \
 		$(use_enable static-libs static)
+}
+
+src_compile() {
+	emake || die
+	use python && distutils_src_compile
 }
 
 src_test() {
@@ -44,6 +62,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
 	dohtml doc/*.{css,html} || die
+	use python && distutils_src_install
 }
 
 pkg_postinst() {
