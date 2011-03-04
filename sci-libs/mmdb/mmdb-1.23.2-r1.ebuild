@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.23.2.ebuild,v 1.1 2011/03/03 20:30:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.23.2-r1.ebuild,v 1.1 2011/03/04 10:20:35 jlec Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ src_install() {
 	prefix=${EPREFIX}/usr
 	exec_prefix=${EPREFIX}/usr
 	libdir=${EPREFIX}/usr/$(get_libdir)
-	includedir=${EPREFIX}/usr/include
+	includedir=${EPREFIX}/usr/include/mmdb
 
 	Name: ${PN}
 	Description: Macromolecular coordinate library
@@ -39,7 +39,7 @@ src_install() {
 	Requires:
 	Conflicts:
 	Libs: -L${EPREFIX}/usr/$(get_libdir) -lmmdb
-	Cflags: -I${EPREFIX}/usr/include
+	Cflags: -I${EPREFIX}/usr/include/mmdb
 
 	EOF
 

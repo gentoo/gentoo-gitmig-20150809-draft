@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/mmdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.13 2011/03/03 20:30:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.14 2011/03/04 10:20:35 jlec Exp $
+
+*mmdb-1.23.2-r1 (04 Mar 2011)
+*mmdb-1.21-r4 (04 Mar 2011)
+
+  04 Mar 2011; Justin Lecher <jlec@gentoo.org> -mmdb-1.21-r3.ebuild,
+  +mmdb-1.21-r4.ebuild, -mmdb-1.23.2.ebuild, +mmdb-1.23.2-r1.ebuild:
+  Needed fixes in mmdb.pc to export includes correctly
 
 *mmdb-1.23.2 (03 Mar 2011)
 
