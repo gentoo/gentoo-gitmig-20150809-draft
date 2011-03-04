@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12512 2011/03/03 21:22:21 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12513 2011/03/04 09:34:31 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (04 Mar 2011)
+# Masked for removal in 90 days.
+# Multiple hard to fix and time consuming maintenance problems:
+#  - history of bugs (bug #304527, bug #335101, bug #347175,
+#    bug #349249, bug #356609)
+#  - upstream's binary builds cannot be used on Gentoo
+#    as easily as other -bin packages (ubuntu-specific
+#    library names that require compatibility symlinks,
+#    bundling libraries, mirror/redistribution policy, and so on)
+#  - dependencies for the -bin package are harder to manage;
+#    often we have source compatibility, but not binary compatibility
+www-client/chromium-bin
 
 # Ole Markus With <olemarkus@gentoo.org> (03 Mar 2011)
 # Masked 30 days for removal.
