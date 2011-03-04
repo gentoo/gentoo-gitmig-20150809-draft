@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.13 2011/03/04 18:13:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.14 2011/03/04 18:29:00 arfrever Exp $
 
 EAPI=2
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DISTUTILS_SETUP_FILES=("python/setup.py")
+
+pkg_setup() {
+	use python && python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-python.patch
@@ -71,4 +75,10 @@ pkg_postinst() {
 	ewarn "If this causes any unforeseen incompatibilities please file a bug"
 	ewarn "on http://bugs.gentoo.org."
 	echo
+
+	use python && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
