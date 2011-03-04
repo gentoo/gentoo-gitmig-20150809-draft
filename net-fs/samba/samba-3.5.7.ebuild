@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.7.ebuild,v 1.1 2011/03/02 10:56:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.7.ebuild,v 1.2 2011/03/04 15:41:09 jer Exp $
 
 EAPI="2"
 
@@ -121,7 +121,7 @@ src_configure() {
 	local myconf
 
 	# Filter out -fPIE
-	[[ ${CHOST} == *-*bsd* ]] || use hppa && myconf="${myconf} --disable-pie"
+	[[ ${CHOST} == *-*bsd* ]] && myconf="${myconf} --disable-pie"
 
 	# Upstream refuses to make this configurable
 	use caps && export ac_cv_header_sys_capability_h=yes || export ac_cv_header_sys_capability_h=no
