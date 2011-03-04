@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.211 2011/03/02 13:23:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.212 2011/03/04 12:04:01 aballier Exp $
+
+  04 Mar 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  android useflag for vlc is gone
 
   02 Mar 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> packages:
   Added xz-utils to the system set per discussion in the dev ml[1].
