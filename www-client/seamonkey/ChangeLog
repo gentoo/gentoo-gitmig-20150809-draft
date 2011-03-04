@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.287 2011/03/02 18:35:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.288 2011/03/04 05:17:30 polynomial-c Exp $
+
+  04 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.0.11.ebuild,
+  seamonkey-2.0.11-r2.ebuild, seamonkey-2.0.12.ebuild:
+  Forced usage of python-2 for building (bug #357239 by Pacho Ramos).
 
 *seamonkey-2.0.12 (02 Mar 2011)
 
