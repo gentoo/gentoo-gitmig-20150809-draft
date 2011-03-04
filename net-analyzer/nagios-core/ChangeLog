@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.170 2010/10/15 17:16:41 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.171 2011/03/04 16:38:44 gmsoft Exp $
+
+  04 Mar 2011; Guy Martin <gmsoft@gentoo.org> nagios-core-3.2.3.ebuild:
+  Added ~hppa to KEYWORDS.
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> nagios-core-3.2.1.ebuild:
   Marking nagios-core-3.2.1 ppc for bug 312843
