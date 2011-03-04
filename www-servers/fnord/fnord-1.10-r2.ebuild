@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.4 2011/02/13 18:44:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.5 2011/03/04 01:11:00 ranger Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fefe.de/fnord/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ~ppc sparc x86"
+KEYWORDS="hppa ppc sparc x86"
 IUSE="auth"
 
 DEPEND=""
