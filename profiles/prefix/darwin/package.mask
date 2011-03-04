@@ -1,7 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.21 2011/01/24 17:59:09 grobian Exp $
-# $Id: package.mask,v 1.21 2011/01/24 17:59:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.22 2011/03/04 04:23:50 abcd Exp $
+
+
+# Jonathan Callen <abcd@gentoo.org> (04 Mar 2011)
+# Moved mask from prefix/ into sub-profiles
+# Alex Alexander <wired@gentoo.org> (06 Nov 2010)
+# Masked Qt-4.7 as requested by prefix team, bug #338289
+=x11-libs/qt-assistant-4.7*
+=x11-libs/qt-core-4.7*
+=x11-libs/qt-dbus-4.7*
+=x11-libs/qt-declarative-4.7*
+=x11-libs/qt-demo-4.7*
+=x11-libs/qt-gui-4.7*
+=x11-libs/qt-multimedia-4.7*
+=x11-libs/qt-opengl-4.7*
+=x11-libs/qt-phonon-4.7*
+=x11-libs/qt-qt3support-4.7*
+=x11-libs/qt-script-4.7*
+=x11-libs/qt-sql-4.7*
+=x11-libs/qt-svg-4.7*
+=x11-libs/qt-test-4.7*
+=x11-libs/qt-webkit-4.7*
+=x11-libs/qt-xmlpatterns-4.7*
 
 # Fabian Groffen <grobian@gentoo.org> (21 Apr 2010)
 # Requires thread-local storage (__thread), Darwin has pthread_getspecific

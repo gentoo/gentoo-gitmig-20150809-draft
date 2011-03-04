@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.249 2011/03/04 04:18:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.250 2011/03/04 04:23:50 abcd Exp $
+
+  04 Mar 2011; Jonathan Callen <abcd@gentoo.org> bsd/package.mask,
+  darwin/package.mask, package.mask, sunos/solaris/package.mask:
+  Move Qt mask into bsd/ darwin/ and sunos/ to unmask on linux
 
   04 Mar 2011; Jonathan Callen <abcd@gentoo.org> aix/package.mask,
   bsd/freebsd/7.1/package.mask, bsd/freebsd/7.2/package.mask,
