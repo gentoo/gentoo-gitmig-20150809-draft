@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.51 2011/03/04 17:55:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.52 2011/03/04 18:13:40 jlec Exp $
+
+  04 Mar 2011; Justin Lecher <jlec@gentoo.org> tre-0.8.0.ebuild:
+  Remove collision with app-misc/glimpse, agrep -> agrep-tre renamed
 
   04 Mar 2011; Justin Lecher <jlec@gentoo.org> tre-0.8.0.ebuild:
   Removed unneccessary python_copy_sources

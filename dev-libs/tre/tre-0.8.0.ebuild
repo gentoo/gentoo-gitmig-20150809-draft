@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.12 2011/03/04 17:55:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.13 2011/03/04 18:13:40 jlec Exp $
 
 EAPI=2
 
@@ -59,6 +59,7 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	mv ${ED}/usr/bin/agrep{,-tre} || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
 	dohtml doc/*.{css,html} || die
 	use python && distutils_src_install
