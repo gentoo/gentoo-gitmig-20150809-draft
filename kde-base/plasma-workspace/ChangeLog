@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.91 2011/02/05 13:28:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.92 2011/03/04 18:00:00 alexxy Exp $
+
+*plasma-workspace-4.6.1 (04 Mar 2011)
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  files/plasma-workspace-4.6.0-optional_akonadi-server.patch,
+  +plasma-workspace-4.6.1.ebuild:
+  Version bump KDE SC 4.6.1
 
   05 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   files/plasma-workspace-4.6.0-optional_akonadi-server.patch:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.66 2011/01/26 20:28:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.67 2011/03/04 18:00:15 alexxy Exp $
+
+*okteta-4.6.1 (04 Mar 2011)
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +okteta-4.6.1.ebuild:
+  Version bump KDE SC 4.6.1
 
 *okteta-4.6.0 (26 Jan 2011)
 

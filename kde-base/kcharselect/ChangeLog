@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.152 2011/01/26 20:29:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.153 2011/03/04 18:00:20 alexxy Exp $
+
+*kcharselect-4.6.1 (04 Mar 2011)
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +kcharselect-4.6.1.ebuild:
+  Version bump KDE SC 4.6.1
 
 *kcharselect-4.6.0 (26 Jan 2011)
 

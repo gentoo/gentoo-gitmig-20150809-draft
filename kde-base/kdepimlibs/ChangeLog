@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.90 2011/02/28 17:21:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.91 2011/03/04 18:00:01 alexxy Exp $
+
+*kdepimlibs-4.6.1 (04 Mar 2011)
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +kdepimlibs-4.6.1.ebuild:
+  Version bump KDE SC 4.6.1
 
   28 Feb 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdepimlibs-4.6.0.ebuild:

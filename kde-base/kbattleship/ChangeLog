@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbattleship
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.168 2011/01/26 20:29:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.169 2011/03/04 17:59:56 alexxy Exp $
+
+*kbattleship-4.6.1 (04 Mar 2011)
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +kbattleship-4.6.1.ebuild:
+  Version bump KDE SC 4.6.1
 
 *kbattleship-4.6.0 (26 Jan 2011)
 

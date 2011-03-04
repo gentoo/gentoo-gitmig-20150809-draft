@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.71 2011/01/26 20:28:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.72 2011/03/04 18:00:21 alexxy Exp $
+
+*libkdcraw-4.6.1 (04 Mar 2011)
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +libkdcraw-4.6.1.ebuild:
+  Version bump KDE SC 4.6.1
 
 *libkdcraw-4.6.0 (26 Jan 2011)
 

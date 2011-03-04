@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.178 2011/01/26 20:29:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.179 2011/03/04 18:00:16 alexxy Exp $
+
+*kdebase-data-4.6.1 (04 Mar 2011)
+
+  04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +kdebase-data-4.6.1.ebuild:
+  Version bump KDE SC 4.6.1
 
 *kdebase-data-4.6.0 (26 Jan 2011)
 
