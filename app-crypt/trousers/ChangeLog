@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/trousers
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.26 2010/08/06 01:22:57 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.27 2011/03/04 19:33:00 hwoarang Exp $
+
+  04 Mar 2011; Markos Chandras <hwoarang@gentoo.org> trousers-0.3.6.ebuild:
+  Stable on amd64 wrt bug #357181
 
 *trousers-0.3.6 (06 Aug 2010)
 
