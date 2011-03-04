@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdas
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/ChangeLog,v 1.8 2010/12/14 22:00:04 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/ChangeLog,v 1.9 2011/03/04 19:31:42 hwoarang Exp $
+
+  04 Mar 2011; Markos Chandras <hwoarang@gentoo.org> mpdas-0.3.0.ebuild:
+  Stable on amd64 wrt bug #357139
 
 *mpdas-0.3.0 (14 Dec 2010)
 
