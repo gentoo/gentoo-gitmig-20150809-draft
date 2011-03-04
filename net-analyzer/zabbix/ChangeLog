@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.42 2011/02/11 18:28:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.43 2011/03/04 15:49:56 patrick Exp $
+
+*zabbix-1.6.9 (04 Mar 2011)
+
+  04 Mar 2011; Patrick Lauer <patrick@gentoo.org> +zabbix-1.6.9.ebuild:
+  Restoring 1.6 branch for #356589
 
   11 Feb 2011; Diego E. Pettenò <flameeyes@gentoo.org> zabbix-1.8.3.ebuild,
   zabbix-1.8.4.ebuild:
