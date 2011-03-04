@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.6 2011/01/31 19:06:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.7 2011/03/04 20:10:29 radhermit Exp $
+
+*libzen-0.4.18 (04 Mar 2011)
+
+  04 Mar 2011; Tim Harder <radhermit@gentoo.org> +libzen-0.4.18.ebuild:
+  Version bump. Use EAPI 4 and autotools-utils eclass.
 
   31 Jan 2011; Christian Faulhammer <fauli@gentoo.org> libzen-0.4.16.ebuild:
   stable x86, bug 347037
