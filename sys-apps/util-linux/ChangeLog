@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.325 2011/03/01 13:40:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.326 2011/03/04 01:26:02 ranger Exp $
+
+  04 Mar 2011; Brent Baude <ranger@gentoo.org> util-linux-2.18-r1.ebuild:
+  stable ppc, bug 356941
 
   01 Mar 2011; Markos Chandras <hwoarang@gentoo.org> util-linux-2.18-r1.ebuild:
   Stable on amd64 wrt bug #356941
