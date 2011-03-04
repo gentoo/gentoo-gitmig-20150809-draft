@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.5.ebuild,v 1.1 2010/11/30 13:21:06 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.5.ebuild,v 1.2 2011/03/04 19:34:31 hwoarang Exp $
 
 EAPI="2"
 inherit autotools
@@ -10,7 +10,7 @@ HOMEPAGE="http://trousers.sf.net"
 SRC_URI="mirror://sourceforge/trousers/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="nls"
 
 COMMON_DEPEND=">=app-crypt/trousers-0.3.0"
