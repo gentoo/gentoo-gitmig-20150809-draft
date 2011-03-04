@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-7.4.ebuild,v 1.3 2011/02/08 20:54:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-7.4.ebuild,v 1.4 2011/03/04 12:58:07 ranger Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 CDEPEND="dev-python/wxpython"
