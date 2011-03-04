@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/mirage-0.9.5.1.ebuild,v 1.1 2010/08/06 15:48:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/mirage-0.9.5.1.ebuild,v 1.2 2011/03/04 22:33:07 arfrever Exp $
 
 EAPI=3
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
 inherit distutils eutils
 

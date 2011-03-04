@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.13.ebuild,v 1.3 2010/12/14 15:56:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.13.ebuild,v 1.4 2011/03/04 22:30:04 arfrever Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
 inherit distutils eutils fdo-mime
 
