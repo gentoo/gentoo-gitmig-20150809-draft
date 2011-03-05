@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.1-r1.ebuild,v 1.1 2011/03/05 12:37:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.1-r1.ebuild,v 1.2 2011/03/05 17:55:24 dilfridge Exp $
 
 EAPI=3
 
@@ -94,6 +94,7 @@ RDEPEND="${COMMONDEPEND}
 	>=app-crypt/gnupg-2.0.11
 	app-misc/ca-certificates
 	$(add_kdebase_dep kde-env)
+	|| ( ( $(add_kdebase_dep kfmclient) ) x11-misc/xdg-utils )
 	!aqua? (
 		sys-fs/udisks
 		sys-power/upower
