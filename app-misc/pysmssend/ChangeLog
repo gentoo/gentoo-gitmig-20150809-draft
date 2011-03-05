@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pysmssend
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.18 2010/10/18 08:09:01 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.19 2011/03/05 22:49:52 arfrever Exp $
+
+  05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pysmssend-1.45.ebuild, pysmssend-9999.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #311535).
 
 *pysmssend-9999 (18 Oct 2010)
 
