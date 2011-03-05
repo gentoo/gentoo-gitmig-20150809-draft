@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/ipkg-utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.14 2009/10/12 16:42:48 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.15 2011/03/05 23:31:58 arfrever Exp $
+
+  05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ipkg-utils-1.7-r1.ebuild:
+  Delete.
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ipkg-utils-1.7-r1.ebuild,
   ipkg-utils-1.7.050831-r1.ebuild:
