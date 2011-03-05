@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.1.ebuild,v 1.5 2011/03/05 11:34:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0_rc5.ebuild,v 1.1 2011/03/05 11:34:43 jlec Exp $
 
 EAPI="3"
 inherit eutils qt4
 
+MY_P="${PN}-${PV/_/-}"
+
 DESCRIPTION="2D plotting library for Qt4"
 HOMEPAGE="http://qwt.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/project/${PN}/${PN}-beta/${PV/_/-}/${MY_P}.tar.bz2"
 
 LICENSE="qwt"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-macos"
@@ -20,15 +22,24 @@ DEPEND="
 	svg? ( x11-libs/qt-svg:4 )"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}"/${MY_P}
+
 src_prepare() {
 	cat > qwtconfig.pri <<-EOF
-		target.path = "${EPREFIX}/usr/$(get_libdir)"
-		headers.path = "${EPREFIX}/usr/include/qwt5"
-		doc.path = "${EPREFIX}/usr/share/doc/${PF}"
-		CONFIG += qt warn_on thread release
-		CONFIG += QwtDll QwtPlot QwtWidgets QwtDesigner
+		QWT_INSTALL_LIBS = "${EPREFIX}/usr/$(get_libdir)"
+		QWT_INSTALL_HEADERS = "${EPREFIX}/usr/include/qwt5"
+		QWT_INSTALL_DOCS = "${EPREFIX}/usr/share/doc/${PF}"
+		QWT_CONFIG += QwtDll QwtPlot QwtWidgets QwtDesigner
 		VERSION = ${PV}
+		QWT_INSTALL_PLUGINS   = "${EPREFIX}/usr/$(get_libdir)/qt4/plugins/designer"
+		QWT_INSTALL_FEATURES  = "${EPREFIX}/usr/$(get_libdir)/qt4/features"
 	EOF
+
+	cat > qwtbuild.pri <<-EOF
+		QWT_CONFIG += qt warn_on thread release no_keywords
+	EOF
+
+
 	# don't build examples - fix the qt files to build once installed
 	cat > examples/examples.pri <<-EOF
 		include( qwtconfig.pri )
@@ -39,13 +50,13 @@ src_prepare() {
 		LIBS        += -lqwt
 	EOF
 	sed -i -e 's:../qwtconfig:qwtconfig:' examples/examples.pro || die
-	sed -i -e 's/headers doc/headers/' src/src.pro || die
+	sed -i -e 's/target doc/target/' src/src.pro || die
 	qt4_src_prepare
 }
 
 src_configure() {
-	use svg && echo >> qwtconfig.pri "CONFIG += QwtSVGItem"
-	cp qwtconfig.pri examples/qwtconfig.pri
+	use svg && echo >> qwtconfig.pri "CONFIG += QwtSvg"
+	cp *.pri examples/ || die
 	eqmake4
 }
 src_compile() {
