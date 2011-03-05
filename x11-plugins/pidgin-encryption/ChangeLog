@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-encryption
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.19 2011/03/02 21:07:32 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/ChangeLog,v 1.20 2011/03/05 17:19:13 xmw Exp $
+
+  05 Mar 2011; Michael Weber <xmw@gentoo.org> pidgin-encryption-3.1.ebuild:
+  ppc/sparc stable (bug 354559)
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org>
   pidgin-encryption-3.0-r1.ebuild, pidgin-encryption-3.1.ebuild:
