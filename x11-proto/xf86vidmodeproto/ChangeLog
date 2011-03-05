@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86vidmodeproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.48 2011/03/05 16:00:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.49 2011/03/05 17:49:59 xarthisius Exp $
+
+  05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xf86vidmodeproto-2.3.1.ebuild:
+  ppc64 stable wrt #354237
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> xf86vidmodeproto-2.3.1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #354237
