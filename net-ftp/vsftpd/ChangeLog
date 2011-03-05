@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.140 2011/03/03 10:41:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.141 2011/03/05 12:30:53 ranger Exp $
+
+  05 Mar 2011; Brent Baude <ranger@gentoo.org> vsftpd-2.3.4.ebuild:
+  Marking vsftpd-2.3.4 ppc for bug 357001
 
   03 Mar 2011; Thomas Kahle <tomka@gentoo.org> vsftpd-2.3.4.ebuild:
   x86 stable per bug 357001
