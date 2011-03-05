@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpepimc/libgpepimc-0.9.ebuild,v 1.4 2009/08/26 16:04:16 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpepimc/libgpepimc-0.9.ebuild,v 1.5 2011/03/05 18:11:44 miknix Exp $
+
+EAPI="1"
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit gpe autotools
@@ -15,7 +17,7 @@ GPE_DOCS="ChangeLog"
 GPECONF="${GPECONF} $(use_enable doc gtk-doc)"
 
 RDEPEND="${RDEPEND}
-	>=x11-libs/gtk+-2.2
+	x11-libs/gtk+:2
 	>=dev-libs/glib-2.2
 	gpe-base/libgpewidget
 	dev-db/sqlite"

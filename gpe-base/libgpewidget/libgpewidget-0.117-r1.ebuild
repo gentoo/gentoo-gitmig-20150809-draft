@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.5 2009/07/13 23:34:50 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.6 2011/03/05 18:16:25 miknix Exp $
 
 EAPI=2
 GPE_TARBALL_SUFFIX="bz2"
@@ -14,7 +14,7 @@ KEYWORDS="amd64 arm x86"
 IUSE="+cairo"
 
 RDEPEND="${RDEPEND}
-	>=x11-libs/gtk+-2.6.3
+	x11-libs/gtk+:2
 	media-libs/libpng
 	cairo? (
 		x11-libs/cairo[X]
