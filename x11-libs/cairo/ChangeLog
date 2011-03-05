@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.273 2011/02/23 16:32:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.274 2011/03/05 15:41:54 armin76 Exp $
+
+  05 Mar 2011; Raúl Porcel <armin76@gentoo.org> cairo-1.10.2-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #354237
 
   23 Feb 2011; Jeroen Roovers <jer@gentoo.org> cairo-1.10.2-r1.ebuild:
   Stable for HPPA (bug #354237).
