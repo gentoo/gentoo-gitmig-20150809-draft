@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xdelta
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.52 2010/09/15 14:54:39 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.53 2011/03/05 01:33:46 xmw Exp $
+
+*xdelta-3.0.0 (05 Mar 2011)
+
+  05 Mar 2011; Michael Weber <xmw@gentoo.org> +xdelta-3.0.0.ebuild:
+  version bump (bug 357233), thanks Anton Romanov <theli@ukr.net> for the hint.
 
   15 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   xdelta-3.0z.ebuild:
