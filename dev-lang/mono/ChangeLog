@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.212 2011/02/27 14:52:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.213 2011/03/05 16:35:18 pacho Exp $
+
+  05 Mar 2011; Pacho Ramos <pacho@gentoo.org> mono-2.8.2-r1.ebuild,
+  mono-2.10.1-r1.ebuild:
+  Fix building on hardened (bug #347365 by onox). Thanks a lot to Anders
+  Hellgren and Magnus Granberg for their help.
 
 *mono-2.10.1-r1 (27 Feb 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1-r1.ebuild,v 1.1 2011/02/27 14:52:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1-r1.ebuild,v 1.2 2011/03/05 16:35:18 pacho Exp $
 
 EAPI="2"
 
@@ -68,11 +68,12 @@ src_prepare() {
 		die "Sedding patch file failed"
 	go-mono_src_prepare
 
-	# we need to sed in the paxctl -m in the runtime/mono-wrapper.in so it don't
+	# we need to sed in the paxctl -mr in the runtime/mono-wrapper.in so it don't
 	# get killed in the build proces when MPROTEC is enable. #286280
+	# RANDMMAP kill the build proces to #347365
 	if use hardened ; then
 		ewarn "We are disabling MPROTECT on the mono binary."
-		sed '/exec/ i\paxctl -m "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in
+		sed '/exec/ i\paxctl -mr "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in
 	fi
 }
 
