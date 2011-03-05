@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.351 2011/02/18 21:31:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.352 2011/03/05 22:42:05 vapier Exp $
+
+  05 Mar 2011; Mike Frysinger <vapier@gentoo.org> wine-1.3.14.ebuild,
+  +files/wine-1.3.14-mouse-warp.patch, wine-9999.ebuild, metadata.xml:
+  Add USE=mousewarp patch to auto apply the mouse-warp patch.
 
 *wine-1.3.14 (18 Feb 2011)
 
