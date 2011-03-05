@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.2.ebuild,v 1.2 2009/06/10 20:26:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.2.ebuild,v 1.3 2011/03/05 17:14:21 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit flag-o-matic toolchain-funcs distutils
 
@@ -14,6 +19,11 @@ KEYWORDS="amd64 ~arm x86"
 IUSE="python"
 
 DEPEND="!<sys-apps/lm_sensors-3"
+RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	use python && python_pkg_setup
+}
 
 src_compile() {
 	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" || die
@@ -40,4 +50,12 @@ src_install() {
 		dodoc README*
 		distutils_src_install
 	fi
+}
+
+pkg_postinst() {
+	use python && distutils_pkg_postinst
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
