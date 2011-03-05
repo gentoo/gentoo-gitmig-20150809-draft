@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xhtml1
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.22 2010/10/14 23:05:06 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xhtml1/ChangeLog,v 1.23 2011/03/05 20:38:22 josejx Exp $
+
+  05 Mar 2011; Joseph Jezak <josejx@gentoo.org> -xhtml1-20020801-r3.ebuild,
+  xhtml1-20020801-r4.ebuild:
+  Marked ppc stable for bug #276400. Removed old version.
 
   14 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   xhtml1-20020801-r4.ebuild:
