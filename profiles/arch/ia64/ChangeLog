@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.101 2011/02/27 16:42:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.102 2011/03/05 17:06:00 armin76 Exp $
+
+  05 Mar 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask upnp
 
   27 Feb 2011; Raúl Porcel <armin76@gentoo.org> -package.mask:
   Punt package.mask

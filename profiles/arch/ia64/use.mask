@@ -48,6 +48,7 @@ capi
 lensfun
 kde
 quvi
+upnp
 
 # Stuff we don't want
 antlr
