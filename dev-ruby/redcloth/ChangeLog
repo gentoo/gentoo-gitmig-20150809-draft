@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.54 2011/01/23 09:39:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.55 2011/03/05 07:41:15 graaff Exp $
+
+  05 Mar 2011; Hans de Graaff <graaff@gentoo.org> redcloth-4.2.3-r1.ebuild:
+  Add proper slot for rspec.
 
 *redcloth-4.2.3-r2 (23 Jan 2011)
 

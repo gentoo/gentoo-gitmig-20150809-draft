@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3-r1.ebuild,v 1.5 2011/01/23 09:39:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.3-r1.ebuild,v 1.6 2011/03/05 07:41:15 graaff Exp $
 
 EAPI=2
 
@@ -42,7 +42,7 @@ ruby_add_bdepend "
 	dev-ruby/rake
 	>=dev-ruby/echoe-3.0.1
 	test? (
-		dev-ruby/rspec
+		dev-ruby/rspec:0
 		dev-ruby/diff-lcs
 	)"
 
