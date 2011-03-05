@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.65 2011/03/01 00:44:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.66 2011/03/05 12:48:12 xmw Exp $
+
+  05 Mar 2011; Michael Weber <xmw@gentoo.org> ethtool-2.6.36.ebuild:
+  sparc stable (bug 355713)
 
   01 Mar 2011; Brent Baude <ranger@gentoo.org> ethtool-2.6.36.ebuild:
   stable ppc64, bug 355713
