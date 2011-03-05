@@ -1,6 +1,11 @@
 # ChangeLog for net-im/openfire
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.36 2010/06/27 21:46:33 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.37 2011/03/05 10:46:10 jokey Exp $
+
+*openfire-3.7.0 (05 Mar 2011)
+
+  05 Mar 2011; Markus Ullmann <jokey@gentoo.org> +openfire-3.7.0.ebuild:
+  Version bump, fixing bugs #345613 and #266129
 
   27 Jun 2010; Vlastimil Babka <caster@gentoo.org> openfire-3.6.4.ebuild,
   +files/buildxml-ant.patch:
