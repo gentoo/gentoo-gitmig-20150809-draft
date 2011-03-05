@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/filelight-4.6.1.ebuild,v 1.1 2011/03/04 18:00:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/filelight-4.6.1.ebuild,v 1.2 2011/03/05 19:50:53 abcd Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 DESCRIPTION="Filelight creates an interactive map of concentric, segmented rings that help visualise disk usage."
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="
