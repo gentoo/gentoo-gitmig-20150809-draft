@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.7.ebuild,v 1.1 2011/03/02 01:52:53 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.7.ebuild,v 1.2 2011/03/05 01:52:25 signals Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -19,7 +19,9 @@ IUSE="fts"
 
 RDEPEND="media-libs/raptor:2
 	dev-python/rdflib
-	dev-python/dbus-python"
+	dev-python/dbus-python
+	dev-python/pyxdg
+	fts? ( dev-libs/xapian-bindings[python] )"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
@@ -34,8 +36,8 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	insinto /usr/share/zeitgeist/_zeitgeist/engine/extensions
 	if use fts; then
-			insinto /usr/share/zeitgeist/_zeitgeist/engine/extensions
-			doins "${WORKDIR}"/zeitgeist-extensions-0.0.6/fts/fts.py
+		doins "${WORKDIR}"/zeitgeist-extensions-${EXT_VER}/fts/fts.py
 	fi
 }
