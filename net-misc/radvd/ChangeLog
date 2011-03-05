@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.62 2010/08/14 11:17:55 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.63 2011/03/05 10:43:29 vapier Exp $
+
+  05 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/radvd.init:
+  Make sure the pidfile dir exists with right perms.
 
   14 Aug 2010; Markus Meier <maekke@gentoo.org> radvd-1.6.ebuild:
   arm stable, bug #327163
