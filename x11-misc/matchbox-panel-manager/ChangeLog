@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/matchbox-panel-manager
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/ChangeLog,v 1.8 2009/12/28 03:30:21 miknix Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/ChangeLog,v 1.9 2011/03/05 18:21:46 miknix Exp $
+
+  05 Mar 2011; Angelo Arrifano <miknix@gentoo.org>
+  matchbox-panel-manager-0.1.ebuild:
+  Added DEPEND on slotted gtk+-2, to work with upcoming gtk-3.
 
   28 Dec 2009; Angelo Arrifano <miknix@gentoo.org>
   matchbox-panel-manager-0.1.ebuild:
