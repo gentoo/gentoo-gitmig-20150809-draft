@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/libbluedevil-1.8.ebuild,v 1.1 2011/01/02 17:28:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/libbluedevil-1.8.ebuild,v 1.2 2011/03/05 12:24:18 tampakrap Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit kde4-base
 
 MY_P=${PN}-v${PV}-1
 DESCRIPTION="Qt wrapper for bluez used in the KDE bluetooth stack"
-HOMEPAGE="http://gitorious.org/libbluedevil"
+HOMEPAGE="http://projects.kde.org/projects/playground/libs/libbluedevil"
 SRC_URI="http://media.ereslibre.es/2010/11/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
