@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/gtg-0.2.4-r1.ebuild,v 1.1 2011/03/05 09:52:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/gtg-0.2.4-r1.ebuild,v 1.2 2011/03/05 10:21:28 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit fdo-mime gnome2-utils distutils
+inherit eutils fdo-mime gnome2-utils distutils
 
 DESCRIPTION="Personal organizer for the GNOME desktop environment"
 HOMEPAGE="http://gtg.fritalk.com/"
@@ -28,6 +28,11 @@ RDEPEND="
 	dev-python/pyxdg
 	dev-python/simplejson"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-hamster.patch
+	distutils_src_prepare
+}
 
 pkg_preinst() {
 	gnome2_icon_savelist
