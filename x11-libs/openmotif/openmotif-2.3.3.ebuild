@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.15 2011/01/29 10:58:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.3.ebuild,v 1.16 2011/03/05 21:08:37 ulm Exp $
 
-EAPI="3"
+EAPI=3
 
 inherit autotools eutils flag-o-matic multilib
 
@@ -142,6 +142,9 @@ src_install() {
 		mv "${ED}"/usr/share/Xm/* "${ED}"/usr/share/doc/${PF}/demos
 	fi
 	rm -rf "${ED}"/usr/share/Xm
+
+	# don't install libtool archives
+	rm -f "${ED}"/usr/$(get_libdir)/*.la
 
 	dodoc BUGREPORT ChangeLog README RELEASE RELNOTES TODO
 }

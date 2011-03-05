@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.16 2010/12/08 20:11:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.17 2011/03/05 21:08:37 ulm Exp $
 
 EAPI=3
 
@@ -27,7 +27,7 @@ RDEPEND="x11-libs/libXmu
 	unicode? ( virtual/libiconv )
 	xft? ( x11-libs/libXft )
 	jpeg? ( virtual/jpeg )
-	png? ( media-libs/libpng )"
+	png? ( >=media-libs/libpng-1.4 )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	x11-misc/xbitmaps"
