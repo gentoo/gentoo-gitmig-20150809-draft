@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0_rc5.ebuild,v 1.1 2011/03/05 11:34:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0_rc5.ebuild,v 1.2 2011/03/05 11:42:42 jlec Exp $
 
 EAPI="3"
-inherit eutils qt4
+
+inherit eutils qt4-r2
 
 MY_P="${PN}-${PV/_/-}"
 
@@ -24,6 +25,8 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 
+DOCS="CHANGES README"
+
 src_prepare() {
 	cat > qwtconfig.pri <<-EOF
 		QWT_INSTALL_LIBS = "${EPREFIX}/usr/$(get_libdir)"
@@ -39,7 +42,6 @@ src_prepare() {
 		QWT_CONFIG += qt warn_on thread release no_keywords
 	EOF
 
-
 	# don't build examples - fix the qt files to build once installed
 	cat > examples/examples.pri <<-EOF
 		include( qwtconfig.pri )
@@ -51,14 +53,10 @@ src_prepare() {
 	EOF
 	sed -i -e 's:../qwtconfig:qwtconfig:' examples/examples.pro || die
 	sed -i -e 's/target doc/target/' src/src.pro || die
-	qt4_src_prepare
-}
-
-src_configure() {
 	use svg && echo >> qwtconfig.pri "CONFIG += QwtSvg"
 	cp *.pri examples/ || die
-	eqmake4
 }
+
 src_compile() {
 	# split compilation to allow parallel building
 	emake sub-src || die "emake library failed"
@@ -66,8 +64,7 @@ src_compile() {
 }
 
 src_install () {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc CHANGES README
+	qt4-r2_src_install
 	insinto /usr/share/doc/${PF}
 	if use doc; then
 		doman doc/man/*/* || die

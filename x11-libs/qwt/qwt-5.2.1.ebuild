@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.1.ebuild,v 1.5 2011/03/05 11:34:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.1.ebuild,v 1.6 2011/03/05 11:42:42 jlec Exp $
 
 EAPI="3"
-inherit eutils qt4
+
+inherit eutils qt4-r2
 
 DESCRIPTION="2D plotting library for Qt4"
 HOMEPAGE="http://qwt.sourceforge.net/"
@@ -19,6 +20,8 @@ DEPEND="
 	doc? ( !<media-libs/coin-3.1.3[doc] )
 	svg? ( x11-libs/qt-svg:4 )"
 RDEPEND="${DEPEND}"
+
+DOCS="CHANGES README"
 
 src_prepare() {
 	cat > qwtconfig.pri <<-EOF
@@ -40,14 +43,10 @@ src_prepare() {
 	EOF
 	sed -i -e 's:../qwtconfig:qwtconfig:' examples/examples.pro || die
 	sed -i -e 's/headers doc/headers/' src/src.pro || die
-	qt4_src_prepare
-}
-
-src_configure() {
 	use svg && echo >> qwtconfig.pri "CONFIG += QwtSVGItem"
 	cp qwtconfig.pri examples/qwtconfig.pri
-	eqmake4
 }
+
 src_compile() {
 	# split compilation to allow parallel building
 	emake sub-src || die "emake library failed"
@@ -55,8 +54,7 @@ src_compile() {
 }
 
 src_install () {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc CHANGES README
+	qt4-r2_src_install
 	insinto /usr/share/doc/${PF}
 	if use doc; then
 		doman doc/man/*/* || die
