@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.14 2011/02/25 15:35:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.15 2011/03/05 14:29:02 wired Exp $
 
 EAPI=3
 
-IUSE="vim-syntax"
+IUSE="luajit vim-syntax"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git
@@ -27,8 +27,9 @@ LICENSE="GPL-3"
 SLOT="0"
 
 COMMON_DEPEND="
+	luajit? ( dev-lang/luajit:2 )
+	!luajit? ( >=dev-lang/lua-5.1 )
 	dev-db/sqlite:3
-	>=dev-lang/lua-5.1
 	dev-libs/glib:2
 	net-libs/libsoup
 	net-libs/webkit-gtk
@@ -58,11 +59,14 @@ src_prepare() {
 }
 
 src_compile() {
-	if [[ ${PV} == *9999* ]]; then
-		emake PREFIX="/usr" DEVELOPMENT_PATHS=0
-	else
-		emake PREFIX="/usr" VERSION="${PV}" DEVELOPMENT_PATHS=0
+	myconf="PREFIX=/usr DEVELOPMENT_PATHS=0"
+	use luajit && myconf+=" USE_LUAJIT=1"
+
+	if [[ ${PV} != *9999* ]]; then
+		myconf+=" VERSION=${PV}"
 	fi
+
+	emake ${myconf} || die "emake failed"
 }
 
 src_install() {
