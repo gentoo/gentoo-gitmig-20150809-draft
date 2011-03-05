@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/radare
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.17 2011/03/01 20:17:09 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.18 2011/03/05 02:35:34 xmw Exp $
+
+*radare-1.5.2 (05 Mar 2011)
+
+  05 Mar 2011; Michael Weber <xmw@gentoo.org> +radare-1.5.2.ebuild:
+  version bump. Bugs 297040, 326113 and 337478 are still valid
 
   01 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
   -files/radare-1.2.1-as-needed.patch:
