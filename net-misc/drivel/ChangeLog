@@ -1,9 +1,16 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.39 2011/03/05 00:51:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.40 2011/03/05 06:12:50 graaff Exp $
+
+  05 Mar 2011; Hans de Graaff <graaff@gentoo.org> -drivel-2.0.3.ebuild:
+  Remove old version.
 
   05 Mar 2011; Brent Baude <ranger@gentoo.org> drivel-3.0.0.ebuild:
   stable ppc, bug 354755
+
+  01 Mar 2011; Hans de Graaff <graaff@gentoo.org> drivel-2.0.3.ebuild,
+  drivel-3.0.0.ebuild:
+  Add slot to gtk+ dependency.
 
   16 Feb 2011; Markos Chandras <hwoarang@gentoo.org> drivel-3.0.0.ebuild:
   Stable on amd64 wrt bug #354755
