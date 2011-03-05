@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.167 2011/03/04 17:59:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.168 2011/03/05 19:05:00 dilfridge Exp $
+
+  05 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkdeedu-4.6.1.ebuild:
+  Tests are fundamentally broken, see bug 258857 for details
 
 *libkdeedu-4.6.1 (04 Mar 2011)
 
