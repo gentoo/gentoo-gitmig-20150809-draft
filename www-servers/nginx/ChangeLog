@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.273 2011/01/02 14:59:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.274 2011/03/05 00:59:49 ranger Exp $
+
+  05 Mar 2011; Brent Baude <ranger@gentoo.org> nginx-0.8.53.ebuild:
+  stable ppc, bug 349223
 
   02 Jan 2011; Markos Chandras <hwoarang@gentoo.org> nginx-0.8.53.ebuild:
   Stable on amd64 wrt bug #349223
