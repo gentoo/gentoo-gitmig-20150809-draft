@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.18 2011/03/04 12:17:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.19 2011/03/05 00:13:16 scarabeus Exp $
+
+*libzip-0.10_rc1-r1 (05 Mar 2011)
+
+  05 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libzip-0.10_rc1.ebuild,
+  +libzip-0.10_rc1-r1.ebuild, +files/libzip-0.10_rc1-fix_headers.patch:
+  Fix headers placement. Per bug #357359.
 
 *libzip-0.10_rc1 (04 Mar 2011)
 
