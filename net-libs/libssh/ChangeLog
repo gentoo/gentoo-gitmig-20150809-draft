@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.41 2011/03/05 01:03:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.42 2011/03/05 17:00:08 scarabeus Exp $
+
+  05 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/libssh-0.3.0-automagic-crypt.patch, -libssh-0.4.1.ebuild,
+  -files/libssh-0.4.1-debug-build.patch:
+  remove old
 
   05 Mar 2011; Brent Baude <ranger@gentoo.org> libssh-0.4.8.ebuild:
   stable ppc, bug 355857
