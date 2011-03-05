@@ -1,6 +1,10 @@
 # ChangeLog for gpe-base/libdisplaymigration
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libdisplaymigration/ChangeLog,v 1.1 2009/03/06 17:53:43 solar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libdisplaymigration/ChangeLog,v 1.2 2011/03/05 17:50:06 miknix Exp $
+
+  05 Mar 2011; Angelo Arrifano <miknix@gentoo.org>
+  libdisplaymigration-0.99.ebuild:
+  Added DEPEND on slotted gtk+-2, to work with upcoming gtk-3.
 
 *libdisplaymigration-0.99 (06 Mar 2009)
 

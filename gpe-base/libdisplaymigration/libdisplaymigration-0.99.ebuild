@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libdisplaymigration/libdisplaymigration-0.99.ebuild,v 1.1 2009/03/06 17:53:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libdisplaymigration/libdisplaymigration-0.99.ebuild,v 1.2 2011/03/05 17:50:06 miknix Exp $
+
+EAPI="1"
 
 inherit gpe
 
@@ -18,7 +20,7 @@ src_install() {
 }
 
 RDEPEND="${RDEPEND}
-	>=x11-libs/gtk+-2.6.3
+	x11-libs/gtk+:2
 	>=dev-libs/libgcrypt-1.2.1"
 
 DEPEND="${DEPEND}
