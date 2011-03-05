@@ -1,6 +1,10 @@
 # ChangeLog for gpe-base/libdisplaymigration
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libdisplaymigration/ChangeLog,v 1.2 2011/03/05 17:50:06 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libdisplaymigration/ChangeLog,v 1.3 2011/03/05 18:05:31 miknix Exp $
+
+  05 Mar 2011; Angelo Arrifano <miknix@gentoo.org>
+  libdisplaymigration-0.99.ebuild:
+  Fixed hardcoded libdir in Makefile, use EAPI2
 
   05 Mar 2011; Angelo Arrifano <miknix@gentoo.org>
   libdisplaymigration-0.99.ebuild:
