@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/ipkg-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.15 2011/03/05 23:31:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.16 2011/03/05 23:42:42 arfrever Exp $
+
+  05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ipkg-utils-1.7.050831-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #308299).
 
   05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -ipkg-utils-1.7-r1.ebuild:
