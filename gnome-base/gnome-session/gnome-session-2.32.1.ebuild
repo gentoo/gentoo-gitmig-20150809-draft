@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1.ebuild,v 1.6 2011/02/24 19:00:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1.ebuild,v 1.7 2011/03/05 19:52:32 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -34,10 +34,12 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.10.40
 	>=dev-util/pkgconfig-0.17
 	>=dev-util/intltool-0.40
+	gnome-base/gnome-common
 	!<gnome-base/gdm-2.20.4
 	doc? (
 		app-text/xmlto
 		dev-libs/libxslt )"
+# gnome-common needed for eautoreconf
 # gnome-base/gdm does not provide gnome.desktop anymore
 
 pkg_setup() {
