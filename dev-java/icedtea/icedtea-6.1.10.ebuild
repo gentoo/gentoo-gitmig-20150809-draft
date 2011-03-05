@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.9.6.ebuild,v 1.1 2011/02/09 22:34:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.10.ebuild,v 1.1 2011/03/05 22:58:46 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,7 +9,7 @@
 
 EAPI="2"
 
-inherit autotools pax-utils java-pkg-2 java-vm-2 versionator
+inherit pax-utils java-pkg-2 java-vm-2 versionator
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="6"
@@ -18,27 +18,29 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 DESCRIPTION="A harness to build the OpenJDK using Free Software build tools and dependencies"
 ICEDTEA_VER="$(get_version_component_range 2-4)"
 ICEDTEA_PKG=icedtea${SLOT}-${ICEDTEA_VER}
-OPENJDK_BUILD="20"
-OPENJDK_DATE="21_jun_2010"
+OPENJDK_BUILD="22"
+OPENJDK_DATE="28_feb_2011"
 OPENJDK_TARBALL="openjdk-6-src-b${OPENJDK_BUILD}-${OPENJDK_DATE}.tar.gz"
-JAXP_TARBALL="jdk6-jaxp-b20.zip"
+JAXP_TARBALL="jaxp144_01.zip"
 JAXWS_TARBALL="jdk6-jaxws-b20.zip"
 JAF_TARBALL="jdk6-jaf-b20.zip"
-HOTSPOT_TARBALL="13edc857b967.tar.gz"
-CACAO_TARBALL="e321b101a9ee.tar.bz2"
+HOTSPOT_TARBALL="f46354849fb3.tar.gz"
+CACAO_TARBALL="6a5eda011e49.tar.gz"
+JAMVM_TARBALL="jamvm-30c4a6b93ffa385833360921bfc613829fb081c9.tar.gz"
 SRC_URI="http://icedtea.classpath.org/download/source/${ICEDTEA_PKG}.tar.gz
 		 http://download.java.net/openjdk/jdk6/promoted/b${OPENJDK_BUILD}/${OPENJDK_TARBALL}
 		 http://icedtea.classpath.org/download/drops/${JAXWS_TARBALL}
 		 http://icedtea.classpath.org/download/drops/${JAF_TARBALL}
 		 http://icedtea.classpath.org/download/drops/${JAXP_TARBALL}
-		 http://hg.openjdk.java.net/hsx/hsx19/master/archive/${HOTSPOT_TARBALL}
-		 cacao? ( http://mips.complang.tuwien.ac.at/hg/cacao/archive/${CACAO_TARBALL} )"
+		 hs20? ( http://hg.openjdk.java.net/hsx/hsx20/master/archive/${HOTSPOT_TARBALL} )
+		 cacao? ( http://icedtea.classpath.org/download/drops/cacao/${CACAO_TARBALL} )
+		 jamvm? ( http://icedtea.classpath.org/download/drops/jamvm/${JAMVM_TARBALL} )"
 HOMEPAGE="http://icedtea.classpath.org"
 S=${WORKDIR}/${ICEDTEA_PKG}
 
 # Missing options:
 # shark - needs adding
-IUSE="cacao debug doc examples +hs19 javascript nio2 +nsplugin +nss pulseaudio systemtap +webstart +xrender zero"
+IUSE="cacao debug doc examples +hs20 jamvm javascript nio2 +nsplugin +nss pulseaudio systemtap +webstart +xrender zero"
 
 # JTReg doesn't pass at present
 RESTRICT="test"
@@ -60,7 +62,6 @@ RDEPEND=">=net-print/cups-1.2.12
 	 >=sys-libs/zlib-1.2.3
 	 x11-proto/inputproto
 	 x11-proto/xineramaproto
-	 nsplugin? ( >=net-libs/xulrunner-1.9.1 )
 	 pulseaudio?  ( >=media-sound/pulseaudio-0.9.11 )
 	 javascript? ( dev-java/rhino:1.6 )
 	 zero? ( virtual/libffi )
@@ -103,6 +104,9 @@ DEPEND="${RDEPEND}
 	)
 	sys-apps/lsb-release"
 
+PDEPEND="webstart? ( dev-java/icedtea-web:6 )
+	nsplugin? ( dev-java/icedtea-web:6[nsplugin] )"
+
 # a bit of hack so the VM switching is triggered without causing dependency troubles
 JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.5"
 JAVA_PKG_WANT_SOURCE="1.5"
@@ -123,8 +127,7 @@ pkg_setup() {
 #	fi
 
 	if use nsplugin && ! use webstart ; then
-		eerror "WebStart is required if building the plugin."
-		die 'Re-try with USE="webstart"'
+		elog "Note that the nsplugin flag implies the webstart flag. Enable it to remove this message."
 	fi
 
 	# quite a hack since java-config does not provide a way for a package
@@ -169,11 +172,6 @@ unset_vars() {
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/${PV}-sparc.patch"
-	eautoreconf
-}
-
 src_configure() {
 	local config procs rhino_jar
 	local vm=$(java-pkg_get-current-vm)
@@ -182,11 +180,11 @@ src_configure() {
 	# IcedTea6 can't be built using IcedTea7; its class files are too new
 	if [[ "${vm}" == "icedtea6" ]] || [[ "${vm}" == "icedtea6-bin" ]] ; then
 		# If we are upgrading icedtea, then we don't need to bootstrap.
-		config="${config} --with-openjdk=$(java-config -O)"
+		config="${config} --with-jdk-home=$(java-config -O) --disable-bootstrap"
 	elif [[ "${vm}" == "gcj-jdk" || "${vm}" == "cacao" ]] ; then
 		# For other 1.5 JDKs e.g. GCJ, CACAO.
 		config="${config} --with-ecj-jar=/usr/share/eclipse-ecj/ecj.jar" \
-		config="${config} --with-gcj-home=${vmhome}"
+		config="${config} --with-jdk-home=${vmhome}"
 	else
 		eerror "IcedTea${SLOT} must be built with either a JDK based on GNU Classpath or an existing build of IcedTea${SLOT}."
 		die "Install a GNU Classpath JDK (gcj-jdk, cacao)"
@@ -209,34 +207,36 @@ src_configure() {
 		rhino_jar=$(java-pkg_getjar rhino:1.6 js.jar);
 	fi
 
-	if use hs19 ; then
-		config="${config} --with-hotspot-build=hs19"
+	if use hs20 ; then
+		config="${config} --with-hotspot-build=hs20 --with-hotspot-src-zip=${DISTDIR}/${HOTSPOT_TARBALL}"
+	fi
+
+	if use cacao ; then
+		config="${config} --with-cacao-src-zip=${DISTDIR}/${CACAO_TARBALL}"
+	fi
+
+	if use jamvm ; then
+		config="${config} --with-jamvm-src-zip=${DISTDIR}/${JAMVM_TARBALL}"
 	fi
 
 	unset_vars
 
 	econf ${config} \
 		--with-openjdk-src-zip="${DISTDIR}/${OPENJDK_TARBALL}" \
-		--with-hotspot-src-zip="${DISTDIR}/${HOTSPOT_TARBALL}" \
 		--with-jaxp-drop-zip="${DISTDIR}/${JAXP_TARBALL}" \
 		--with-jaxws-drop-zip="${DISTDIR}/${JAXWS_TARBALL}" \
 		--with-jaf-drop-zip="${DISTDIR}/${JAF_TARBALL}" \
-		--with-cacao-src-zip="${DISTDIR}/${CACAO_TARBALL}" \
-		--with-java="${vmhome}/bin/java" \
-		--with-javac="${vmhome}/bin/javac" \
-		--with-javah="${vmhome}/bin/javah" \
 		--with-abs-install-dir=/usr/$(get_libdir)/icedtea${SLOT} \
 		$(use_enable !debug optimizations) \
 		$(use_enable doc docs) \
-		$(use_enable nsplugin plugin) \
 		$(use_with javascript rhino ${rhino_jar}) \
 		$(use_enable cacao) \
+		$(use_enable jamvm) \
 		$(use_enable pulseaudio pulse-java) \
 		$(use_enable xrender) \
 		$(use_enable systemtap) \
 		$(use_enable nio2) \
 		$(use_enable nss) \
-		$(use_enable webstart) \
 		|| die "configure failed"
 }
 
@@ -250,7 +250,7 @@ src_compile() {
 
 	# Paludis does not respect unset from src_configure
 	unset_vars
-	emake -j 1  || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
@@ -287,12 +287,6 @@ src_install() {
 	# Fix the permissions.
 	find "${ddest}" \! -type l \( -perm /111 -exec chmod 755 {} \; -o -exec chmod 644 {} \; \) || die
 
-	if use nsplugin; then
-		local arch=${ARCH};
-		use x86 && arch=i386;
-		install_mozilla_plugin "${dest}/jre/lib/${arch}/IcedTeaPlugin.so";
-	fi
-
 	# We need to generate keystore - bug #273306
 	einfo "Generating cacerts file from certificates in /usr/share/ca-certificates/"
 	mkdir "${T}/certgen" && cd "${T}/certgen" || die
@@ -318,10 +312,4 @@ use_zero() {
 pkg_postinst() {
 	# Set as default VM if none exists
 	java-vm-2_pkg_postinst
-
-	if use nsplugin; then
-		elog "The icedtea${SLOT} browser plugin (NPPlugin) can be enabled using eselect java-nsplugin"
-		elog "Note that the plugin works only in browsers based on xulrunner-1.9.1 or later"
-		elog "such as Firefox 3.5+, Chromium and perhaps some others too."
-	fi
 }
