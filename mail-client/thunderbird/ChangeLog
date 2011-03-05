@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.61 2011/03/04 05:36:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.62 2011/03/05 16:59:06 arfrever Exp $
+
+  05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  thunderbird-3.1.7.ebuild:
+  Call python_set_active_version() in pkg_setup() (bug #357525).
 
   04 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> thunderbird-3.1.3.ebuild,
   thunderbird-3.1.5.ebuild, thunderbird-3.1.6.ebuild, thunderbird-3.1.7.ebuild,

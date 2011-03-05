@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.7.ebuild,v 1.7 2011/03/04 05:36:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.7.ebuild,v 1.8 2011/03/05 16:59:06 arfrever Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -84,8 +84,6 @@ linguas() {
 		fi
 		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
-
-	python_set_active_version 2
 }
 
 pkg_setup() {
@@ -98,6 +96,8 @@ pkg_setup() {
 		elog "a legal problem with Mozilla Foundation"
 		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
 	fi
+
+	python_set_active_version 2
 }
 
 src_unpack() {
