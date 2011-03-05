@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gnuplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.10 2011/01/30 09:26:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.11 2011/03/05 07:01:29 graaff Exp $
+
+*gnuplot-2.3.6 (05 Mar 2011)
+
+  05 Mar 2011; Hans de Graaff <graaff@gentoo.org> +gnuplot-2.3.6.ebuild:
+  Version bump.
 
 *gnuplot-2.3.5 (30 Jan 2011)
 
