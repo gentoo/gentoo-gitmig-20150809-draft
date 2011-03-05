@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1-r1.ebuild,v 1.2 2011/03/05 16:35:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1-r1.ebuild,v 1.3 2011/03/05 17:31:59 pacho Exp $
 
 EAPI="2"
 
@@ -19,8 +19,7 @@ IUSE="hardened minimal xen"
 COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
 	!dev-util/monodoc
 	!minimal? ( =dev-dotnet/libgdiplus-${GO_MONO_REL_PV}* )
-	ia64? (	sys-libs/libunwind )
-	dev-libs/boehm-gc"
+	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
 	|| ( www-client/links www-client/lynx )"
 
