@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.115 2011/02/23 16:26:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.116 2011/03/05 18:01:50 xarthisius Exp $
+
+  05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> xdm-1.1.10-r1.ebuild:
+  ppc64 stable wrt #354237
 
   23 Feb 2011; Jeroen Roovers <jer@gentoo.org> xdm-1.1.10-r1.ebuild:
   Stable for HPPA (bug #354237).
