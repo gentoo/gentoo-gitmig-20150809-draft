@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.6 2010/06/02 15:47:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.7 2011/03/05 18:14:09 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit flag-o-matic python
@@ -24,15 +25,12 @@ RDEPEND=">=x11-libs/qwt-5.1[svg?]
 	dev-python/numpy"
 DEPEND="${DEPEND}
 	dev-python/sip"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}/configure"
 
-pkg_setup() {
-	append-flags -fPIC
-}
-
 src_configure() {
+	append-flags -fPIC
+
 	configuration() {
 		# '-j' option can be buggy.
 		"$(PYTHON)" configure.py \
@@ -64,9 +62,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize PyQt4
+	python_mod_optimize PyQt4/Qwt5 PyQt4/uic/widget-plugins/qwt.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup PyQt4
+	python_mod_cleanup PyQt4/Qwt5 PyQt4/uic/widget-plugins/qwt.py
 }
