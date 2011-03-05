@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.7.0.ebuild,v 1.1 2011/03/02 02:00:54 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/zeitgeist-datahub-0.7.0.ebuild,v 1.2 2011/03/05 01:54:44 signals Exp $
 
 EAPI=4
 inherit versionator
@@ -17,8 +17,13 @@ IUSE=""
 
 CDEPEND="dev-libs/libzeitgeist
 	dev-libs/glib:2
-	x11-libs/gtk+:2"
+	x11-libs/gtk+:2
+	dev-lang/vala:0.12"
 RDEPEND="${CDEPEND}
 	gnome-extra/zeitgeist"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
+
+src_configure() {
+	econf VALAC=$(type -P valac-0.12)
+}

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/zeitgeist-datahub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/ChangeLog,v 1.1 2011/03/02 02:00:54 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datahub/ChangeLog,v 1.2 2011/03/05 01:54:44 signals Exp $
+
+  05 Mar 2011; Kevin McCarthy <signals@gentoo.org>
+  zeitgeist-datahub-0.7.0.ebuild:
+  Fix missing dep on dev-lang/vala:0.12.
 
 *zeitgeist-datahub-0.7.0 (02 Mar 2011)
 
