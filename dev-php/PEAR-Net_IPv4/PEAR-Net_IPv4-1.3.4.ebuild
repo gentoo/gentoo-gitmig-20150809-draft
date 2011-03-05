@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IPv4/PEAR-Net_IPv4-1.3.0.ebuild,v 1.2 2007/12/06 00:40:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IPv4/PEAR-Net_IPv4-1.3.4.ebuild,v 1.1 2011/03/05 21:23:33 olemarkus Exp $
 
 inherit php-pear-r1
 
