@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.6.1.ebuild,v 1.1 2011/03/04 18:00:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.6.1.ebuild,v 1.2 2011/03/05 15:30:43 dilfridge Exp $
 
 EAPI=3
 
@@ -52,7 +52,7 @@ PLUGINS="+addbookmarks +autoreplace +contactnotes +highlight +history latex
 #   telepathy: net-libs/decibel
 #   testbed: NO DEPS
 #	winpopup: NO DEPS (we're adding samba as RDEPEND so it works)
-#	yahoo: NO DEPS
+#	yahoo: media-libs/jasper
 #	zeroconf (bonjour): NO DEPS
 PROTOCOLS="gadu groupwise +jabber jingle meanwhile msn oscar qq skype
 sms testbed winpopup yahoo zeroconf"
@@ -89,6 +89,7 @@ COMMONDEPEND="
 		dev-libs/libxslt
 	)
 	v4l2? ( media-libs/libv4l )
+	yahoo? ( media-libs/jasper )
 "
 RDEPEND="${COMMONDEPEND}
 	latex? (
