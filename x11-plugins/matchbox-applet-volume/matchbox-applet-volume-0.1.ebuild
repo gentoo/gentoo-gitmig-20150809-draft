@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/matchbox-applet-volume-0.1.ebuild,v 1.7 2009/12/14 15:10:50 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/matchbox-applet-volume-0.1.ebuild,v 1.8 2011/03/05 18:28:58 miknix Exp $
+
+EAPI=1
 
 inherit versionator
 
@@ -17,7 +19,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/libmatchbox-1.5
-	>=x11-libs/gtk+-2.0.3"
+	x11-libs/gtk+:2"
 
 RDEPEND="${DEPEND}
 	x11-wm/matchbox-panel"
