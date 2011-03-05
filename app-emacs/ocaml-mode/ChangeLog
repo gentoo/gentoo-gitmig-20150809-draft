@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.45 2011/01/29 22:59:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.46 2011/03/05 20:16:37 josejx Exp $
+
+  05 Mar 2011; Joseph Jezak <josejx@gentoo.org> ocaml-mode-3.11.2.ebuild:
+  Marked ppc stable for bug #272454.
 
   29 Jan 2011; Mark Loeser <halcy0n@gentoo.org> ocaml-mode-3.11.2.ebuild:
   Stable for ppc64; bug #272454
