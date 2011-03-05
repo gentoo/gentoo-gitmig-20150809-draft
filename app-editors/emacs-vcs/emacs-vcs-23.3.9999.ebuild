@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.2 2011/03/01 13:22:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.3 2011/03/05 11:23:10 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -11,6 +11,8 @@ if [ "${PV##*.}" = "9999" ]; then
 	EBZR_PROJECT="emacs"
 	EBZR_BRANCH="emacs-23"
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
+	# "Nosmart" is much faster for initial branching.
+	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
 	inherit bzr
 	SRC_URI=""
 else
@@ -98,8 +100,6 @@ src_prepare() {
 		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 		echo
-	#else
-	#	EPATCH_SUFFIX=patch epatch
 	fi
 
 	sed -i \
@@ -195,10 +195,6 @@ src_configure() {
 		myconf="${myconf} --without-x"
 	fi
 
-	myconf="${myconf} $(use_with hesiod)"
-	myconf="${myconf} $(use_with kerberos) $(use_with kerberos kerberos5)"
-	myconf="${myconf} $(use_with gpm) $(use_with dbus)"
-
 	# According to configure, this option is only used for GNU/Linux
 	# (x86_64 and s390). For Gentoo Prefix we have to explicitly spell
 	# out the location because $(get_libdir) does not necessarily return
@@ -210,6 +206,10 @@ src_configure() {
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
 		--with-crt-dir="${crtdir}" \
+		$(use_with hesiod) \
+		$(use_with kerberos) $(use_with kerberos kerberos5) \
+		$(use_with gpm) \
+		$(use_with dbus) \
 		${myconf}
 }
 

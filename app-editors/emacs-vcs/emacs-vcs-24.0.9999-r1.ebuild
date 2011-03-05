@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.7 2011/02/28 16:31:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.8 2011/03/05 11:23:10 ulm Exp $
 
 EAPI=4
 
@@ -10,8 +10,8 @@ if [ "${PV##*.}" = "9999" ]; then
 	EBZR_PROJECT="emacs"
 	EBZR_BRANCH="trunk"
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
-	# The mirror at launchpad has much better performance.
-	EBZR_INITIAL_URI="lp:emacs"
+	# "Nosmart" is much faster for initial branching.
+	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
 	inherit bzr
 	SRC_URI=""
 else
@@ -99,11 +99,9 @@ src_prepare() {
 		echo
 		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Emacs version number: ${FULL_VERSION}"
-		[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
+		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 		echo
-	#else
-	#	EPATCH_SUFFIX=patch epatch
 	fi
 
 	if ! use alsa; then
@@ -194,11 +192,6 @@ src_configure() {
 		myconf="${myconf} --without-x"
 	fi
 
-	myconf="${myconf} $(use_with hesiod)"
-	myconf="${myconf} $(use_with kerberos) $(use_with kerberos kerberos5)"
-	myconf="${myconf} $(use_with gpm) $(use_with dbus)"
-	myconf="${myconf} $(use_with gnutls) $(use_with selinux)"
-
 	# According to configure, this option is only used for GNU/Linux
 	# (x86_64 and s390). For Gentoo Prefix we have to explicitly spell
 	# out the location because $(get_libdir) does not necessarily return
@@ -212,6 +205,12 @@ src_configure() {
 		--with-crt-dir="${crtdir}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
 		--without-compress-info \
+		$(use_with hesiod) \
+		$(use_with kerberos) $(use_with kerberos kerberos5) \
+		$(use_with gpm) \
+		$(use_with dbus) \
+		$(use_with gnutls) \
+		$(use_with selinux) \
 		${myconf}
 }
 
