@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.19 2011/02/25 22:46:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.20 2011/03/05 17:04:33 dilfridge Exp $
+
+  05 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdevelop-php-1.2.0.ebuild, +files/kdevelop-php-1.2.0-dbustests.patch:
+  Fix tests, bug 330051
 
   25 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kdevelop-php-1.0.2.ebuild, kdevelop-php-1.1.2.ebuild,
