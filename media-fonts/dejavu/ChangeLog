@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/dejavu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.151 2010/08/23 11:55:43 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.152 2011/03/05 08:25:32 dirtyepic Exp $
+
+*dejavu-2.33 (05 Mar 2011)
+
+  05 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> -files/59-dejavu.conf,
+  -dejavu-2.31.ebuild, +dejavu-2.33.ebuild:
+  Version bump (bug #356703 by Christopher Culver).
 
 *dejavu-2.32 (23 Aug 2010)
 
