@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.92 2011/03/05 15:44:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.93 2011/03/05 17:53:52 xarthisius Exp $
+
+  05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libXaw-1.0.9.ebuild:
+  ppc64 stable wrt #354237
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> libXaw-1.0.9.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #354237
