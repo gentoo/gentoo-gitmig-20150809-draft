@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.25 2011/03/04 20:58:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.26 2011/03/05 17:25:30 armin76 Exp $
+
+  05 Mar 2011; Raúl Porcel <armin76@gentoo.org> epsilon-0.6.0.ebuild:
+  Drop ia64 keywords
 
   04 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> epsilon-0.6.0.ebuild:
   ppc64 stable wrt #354797

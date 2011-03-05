@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.37 2011/03/04 20:59:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.38 2011/03/05 17:22:24 armin76 Exp $
+
+  05 Mar 2011; Raúl Porcel <armin76@gentoo.org> axiom-0.6.0.ebuild:
+  Drop ia64 keywords
 
   04 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> axiom-0.6.0.ebuild:
   ppc64 stable wrt #354797
