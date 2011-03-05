@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.60 2011/02/20 18:31:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.61 2011/03/05 19:06:53 arfrever Exp $
+
+  05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xf86-video-virtualbox-3.2.12.ebuild, xf86-video-virtualbox-4.0.2.ebuild,
+  xf86-video-virtualbox-4.0.4.ebuild:
+  Use Python 2 (bug #351576).
 
   20 Feb 2011; Lars Wendler <polynomial-c@gentoo.org>
   -files/xf86-video-virtualbox-3.0.0-mesa-check.patch,
