@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.12 2011/02/11 18:14:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.13 2011/03/05 22:55:27 vapier Exp $
+
+*lzip-1.11 (05 Mar 2011)
+
+  05 Mar 2011; Mike Frysinger <vapier@gentoo.org> +lzip-1.11.ebuild:
+  Version bump #357481 by Tim Harder.
 
   11 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> lzip-1.10.ebuild:
   Marked ~ppc wrt #300562
