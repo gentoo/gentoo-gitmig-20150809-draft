@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gtg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.7 2011/01/08 18:37:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.8 2011/03/05 09:52:40 jlec Exp $
+
+*gtg-0.2.4-r1 (05 Mar 2011)
+
+  05 Mar 2011; Justin Lecher <jlec@gentoo.org> gtg-0.2.4.ebuild,
+  +gtg-0.2.4-r1.ebuild:
+  Fixes for New Python ABI Stuff, 311675; added missing Dep on
+  dev-python/simplejson
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gtg-0.1.2.ebuild:
