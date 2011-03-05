@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gtg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.9 2011/03/05 10:21:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.10 2011/03/05 15:45:52 arfrever Exp $
+
+  05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gtg-0.2.4.ebuild:
+  Delete.
 
   05 Mar 2011; Justin Lecher <jlec@gentoo.org> gtg-0.2.4-r1.ebuild,
   +files/gtg-0.2.4-hamster.patch:
