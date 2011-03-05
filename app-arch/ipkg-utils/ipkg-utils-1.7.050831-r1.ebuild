@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.050831-r1.ebuild,v 1.3 2011/03/05 23:42:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.050831-r1.ebuild,v 1.4 2011/03/05 23:46:44 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -32,6 +32,7 @@ PYTHON_MODNAME="ipkg.py"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-tar_call_fixes.patch"
+	epatch "${FILESDIR}/${P}-hashlib.patch"
 
 	sed '/python setup.py build/d' -i Makefile
 
