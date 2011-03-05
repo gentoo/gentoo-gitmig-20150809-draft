@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/colibri
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/colibri/ChangeLog,v 1.1 2011/03/05 15:48:24 dilfridge Exp $
+
+*colibri-0.2.1 (05 Mar 2011)
+
+  05 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +colibri-0.2.1.ebuild, +metadata.xml:
+  New package, fixes bug 316913. Thanks to Jean-Francis Roy for the initial
+  ebuild.
+
