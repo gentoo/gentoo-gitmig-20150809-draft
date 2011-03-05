@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/scotch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.2 2010/01/15 22:43:52 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.3 2011/03/05 00:27:49 bicatali Exp $
+
+*scotch-5.1.11 (05 Mar 2011)
+
+  05 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> -scotch-5.1.6.ebuild,
+  +scotch-5.1.11.ebuild, +files/Makefile.inc.in, +files/respect-ldflags.patch,
+  -files/Makefile.inc, -files/mmkt-typo.patch, metadata.xml:
+  Version bump. Rewrote from scratch. Closing bug #324561 and bug #335468.
 
 *scotch-5.1.7 (15 Jan 2010)
 
