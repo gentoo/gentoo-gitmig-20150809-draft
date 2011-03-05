@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.17 2011/03/01 19:07:07 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.18 2011/03/05 07:36:37 abcd Exp $
+
+  05 Mar 2011; Jonathan Callen <abcd@gentoo.org>
+  qt-declarative-4.7.1-r2.ebuild, qt-declarative-4.7.2.ebuild:
+  Add ~x86-linux/~amd64-linux keywords
 
 *qt-declarative-4.7.2 (01 Mar 2011)
 
