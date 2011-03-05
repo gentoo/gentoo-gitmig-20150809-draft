@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pivy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.1 2011/03/03 23:05:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.2 2011/03/05 15:05:03 dilfridge Exp $
+
+  05 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  pivy-0.5_alpha20110303.ebuild:
+  Needs swig-1.3, bug 357483
 
 *pivy-0.5_alpha20110303 (03 Mar 2011)
 
