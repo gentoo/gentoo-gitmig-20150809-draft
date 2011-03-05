@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.54 2011/01/28 18:41:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.55 2011/03/05 01:05:04 ranger Exp $
+
+  05 Mar 2011; Brent Baude <ranger@gentoo.org> xapian-1.2.4.ebuild:
+  stable ppc, bug 352734
 
   28 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xapian-1.2.4.ebuild:
   x86 stable wrt bug #352734
