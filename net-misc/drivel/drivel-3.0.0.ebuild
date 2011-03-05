@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.6 2011/03/05 00:51:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.7 2011/03/05 06:13:35 graaff Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 
 RDEPEND=">=dev-libs/glib-2.16.6
-	>=x11-libs/gtk+-2.16.5
+	>=x11-libs/gtk+-2.16.5:2
 	>=gnome-base/gconf-2
 	>=gnome-base/gnome-vfs-2.6
 	>=x11-libs/gtksourceview-2.2.2
