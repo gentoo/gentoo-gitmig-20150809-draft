@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.6 2010/12/20 15:55:10 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20091103.ebuild,v 1.7 2011/03/06 09:27:50 jlec Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="dbus doc gif gtk jpeg m4lib-png motif nelma nls png xrender test tk toporo
 # debug USE flag removed for pcb-20091103 (many crashes, should be fixed for next release)
 
 CDEPEND="gif? ( >=media-libs/gd-2.0.23 )
-	gtk? ( >=x11-libs/gtk+-2.4 x11-libs/pango
+	gtk? ( x11-libs/gtk+:2 x11-libs/pango
 		dbus? ( sys-apps/dbus ) )
 	jpeg? ( >=media-libs/gd-2.0.23[jpeg] )
 	motif? ( !gtk? (
