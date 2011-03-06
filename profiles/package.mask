@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12518 2011/03/05 18:55:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12519 2011/03/06 08:13:58 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (06 Mar 2011)
+# Mask for testing
+=virtual/perl-Module-Build-0.380.0
+=perl-core/Module-Build-0.380.0
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (05 Mar 2011)
 # No new releases since 2007, no visible development, hard 
