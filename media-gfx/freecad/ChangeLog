@@ -1,0 +1,13 @@
+# ChangeLog for media-gfx/freecad
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.1 2011/03/06 15:24:20 dilfridge Exp $
+
+*freecad-0.11.3729 (06 Mar 2011)
+
+  06 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +freecad-0.11.3729.ebuild, +files/freecad-0.11.3729-asneeded.patch,
+  +metadata.xml:
+  New application, fixes bug 291161; imported from the sci overlay with
+  cleanups. Thanks to Roelof Wobben, Derk W. te Bokkel, cornicx, and all the
+  other contributors from the bug report and the overlay.
+
