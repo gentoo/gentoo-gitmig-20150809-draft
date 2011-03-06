@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.6 2011/02/26 15:19:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.1.ebuild,v 1.7 2011/03/06 23:40:19 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -29,10 +29,10 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.6:2
 
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyxdg
-	dev-libs/libxml2[python]
-	>=gnome-base/gconf-2.8.1
-	>=dev-python/libbonobo-python-2.6
-	>=dev-python/gconf-python-2.6
+	dev-libs/libxml2:2[python]
+	>=gnome-base/gconf-2.8.1:2
+	>=dev-python/libbonobo-python-2.6:2
+	>=dev-python/gconf-python-2.6:2
 	x11-libs/gksu"
 
 DEPEND="${COMMON_DEPEND}

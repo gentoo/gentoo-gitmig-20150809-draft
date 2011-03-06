@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.0.ebuild,v 1.10 2010/10/17 15:42:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.30.0.ebuild,v 1.11 2011/03/06 23:40:19 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -18,10 +18,10 @@ IUSE=""
 # Unfortunately the configure.ac is wildly insufficient, so dependencies have
 # to be got from the RPM .spec file...
 # But the .spec file got removed :/
-COMMON_DEPEND=">=dev-lang/python-2.4
-	>=x11-libs/gtk+-2.6.0
-	>=dev-python/pygtk-2.16
-	>=dev-python/pygobject-2.15
+COMMON_DEPEND="=dev-lang/python-2*
+	>=x11-libs/gtk+-2.6.0:2
+	>=dev-python/pygtk-2.16:2
+	>=dev-python/pygobject-2.15:2
 	app-admin/pessulus
 	x11-libs/pango
 	dev-python/python-ldap
@@ -29,10 +29,10 @@ COMMON_DEPEND=">=dev-lang/python-2.4
 
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyxdg
-	dev-libs/libxml2[python]
-	>=gnome-base/gconf-2.8.1
-	>=dev-python/libbonobo-python-2.6
-	>=dev-python/gconf-python-2.6
+	dev-libs/libxml2:2[python]
+	>=gnome-base/gconf-2.8.1:2
+	>=dev-python/libbonobo-python-2.6:2
+	>=dev-python/gconf-python-2.6:2
 	x11-libs/gksu"
 
 DEPEND="${COMMON_DEPEND}
