@@ -1,18 +1,18 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.124 2011/03/05 13:56:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.125 2011/03/06 06:49:56 tove Exp $
 
   05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   qtcurve-qt4-1.6.4-r1.ebuild:
   ppc stable wrt #339424
 
-  14 Feb 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   qtcurve-qt4-1.8.4.ebuild:
   Remove useless inherit.
 
 *qtcurve-qt4-1.8.4 (29 Jan 2011)
 
-  29 Jan 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  29 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -qtcurve-qt4-0.65.2.ebuild, qtcurve-qt4-0.69.2.ebuild,
   -files/qtcurve-qt4-1.1.0-no-kde-fail.patch,
   -files/qtcurve-qt4-1.1.1-no-kde-fail.patch, qtcurve-qt4-1.6.4-r1.ebuild,
@@ -20,7 +20,7 @@
   +qtcurve-qt4-1.8.4.ebuild:
   Version bump. Drop older.
 
-  29 Jan 2011; RaÃºl Porcel <armin76@gentoo.org> qtcurve-qt4-1.6.4-r1.ebuild:
+  29 Jan 2011; Raúl Porcel <armin76@gentoo.org> qtcurve-qt4-1.6.4-r1.ebuild:
   alpha stable wrt #339424
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> qtcurve-qt4-1.6.4-r1.ebuild:
@@ -77,7 +77,7 @@
   12 Sep 2010; Alex Alexander <wired@gentoo.org> +qtcurve-qt4-1.6.0.ebuild:
   version bump
 
-  09 Aug 2010; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   qtcurve-qt4-0.69.2.ebuild, qtcurve-qt4-1.4.3.ebuild,
   qtcurve-qt4-1.5.0.ebuild, qtcurve-qt4-1.5.1.ebuild,
   qtcurve-qt4-1.5.2.ebuild:
@@ -185,7 +185,7 @@
   12 Jan 2010; Ben de Groot <yngwin@gentoo.org>
   +qtcurve-qt4-1.0.1-r1.ebuild:
   Add windeco useflag for more finegrained control over dependencies. Fixes
-  bug 297426. Thanks to JesÃºs Guerrero.
+  bug 297426. Thanks to Jesús Guerrero.
 
 *qtcurve-qt4-1.0.1 (11 Jan 2010)
 
@@ -193,7 +193,7 @@
   -qtcurve-qt4-0.68.1.ebuild, +qtcurve-qt4-1.0.1.ebuild:
   Version bump. Remove obsolete.
 
-  26 Dec 2009; RaÃºl Porcel <armin76@gentoo.org> qtcurve-qt4-0.69.2.ebuild:
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> qtcurve-qt4-0.69.2.ebuild:
   sparc stable wrt #290212
 
   30 Nov 2009; Joseph Jezak <josejx@gentoo.org> qtcurve-qt4-0.69.2.ebuild:
@@ -517,7 +517,7 @@
   qtcurve-qt4-0.58.0.ebuild:
   Keyworded on alpha, bug #218436
 
-  26 Apr 2008; Dawid WÄgliÅski <cla@gentoo.org> qtcurve-qt4-0.57.1.ebuild:
+  26 Apr 2008; Dawid Węgliński <cla@gentoo.org> qtcurve-qt4-0.57.1.ebuild:
   Stable on x86 (bug #218435)
 
 *qtcurve-qt4-0.59.0 (25 Apr 2008)
