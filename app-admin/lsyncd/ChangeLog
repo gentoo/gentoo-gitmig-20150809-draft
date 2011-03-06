@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.10 2011/03/01 19:43:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.11 2011/03/06 09:44:42 jlec Exp $
+
+*lsyncd-2.0.3 (06 Mar 2011)
+
+  06 Mar 2011; Justin Lecher <jlec@gentoo.org> +lsyncd-2.0.3.ebuild:
+  Version Bump, 348976
 
   01 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
   -files/lsyncd-1.33-libxml2.patch:
