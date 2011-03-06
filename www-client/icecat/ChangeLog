@@ -1,6 +1,11 @@
 # ChangeLog for www-client/icecat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.66 2010/12/27 14:31:53 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.67 2011/03/06 01:24:27 anarchy Exp $
+
+*icecat-3.6.15 (06 Mar 2011)
+
+  06 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> +icecat-3.6.15.ebuild:
+  Security bump, bug #357057
 
   27 Dec 2010; Brent Baude <ranger@gentoo.org> icecat-3.6.13-r1.ebuild:
   Marking icecat-3.6.13-r1 ppc64 for bug 348316
