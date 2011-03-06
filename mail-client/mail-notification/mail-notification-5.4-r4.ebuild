@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r4.ebuild,v 1.7 2011/02/27 09:25:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r4.ebuild,v 1.8 2011/03/06 07:37:29 graaff Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ IUSE="evo gmail imap ipv6 maildir mbox mh mozilla pop sasl ssl sylpheed"
 # it's pointless making it optional. gnome-keyring is required for
 # several specific access methods, and thus linked to those USE flags
 # instead of adding a keyring USE flag.
-RDEPEND=">=x11-libs/gtk+-2.12
+RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=dev-libs/glib-2.14
 	>=gnome-base/gconf-2.4.0
 	>=gnome-base/gconf-2.6
