@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/golly
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.5 2010/11/25 21:02:07 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.6 2011/03/06 11:57:29 hwoarang Exp $
+
+  06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> golly-2.2.ebuild:
+  Stable on amd64 wrt bug #357447
 
 *golly-2.2 (25 Nov 2010)
 
