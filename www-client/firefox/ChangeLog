@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.41 2011/03/06 00:33:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.42 2011/03/06 18:58:03 hwoarang Exp $
+
+  06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.15.ebuild:
+  Stable on amd64 wrt bug #357057
 
 *firefox-3.6.15 (06 Mar 2011)
 
