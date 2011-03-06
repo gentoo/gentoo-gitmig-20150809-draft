@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.2.1.ebuild,v 1.7 2010/12/08 20:13:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.2.1.ebuild,v 1.8 2011/03/06 23:33:12 nirbheek Exp $
 
 EAPI=2
 
@@ -15,17 +15,17 @@ KEYWORDS="amd64 ppc x86"
 IUSE="eds galago"
 
 RDEPEND=">=dev-lang/mono-2
-	>=dev-dotnet/gtk-sharp-2.12.6-r1
-	>=dev-dotnet/gconf-sharp-2.24.0
-	>=dev-dotnet/gnome-sharp-2.24.0
-	>=dev-dotnet/gnome-panel-sharp-2.24.0
-	>=dev-dotnet/gnome-desktop-sharp-2.24.0
+	>=dev-dotnet/gtk-sharp-2.12.6-r1:2
+	>=dev-dotnet/gconf-sharp-2.24.0:2
+	>=dev-dotnet/gnome-sharp-2.24.0:2
+	>=dev-dotnet/gnome-panel-sharp-2.24.0:2
+	>=dev-dotnet/gnome-desktop-sharp-2.24.0:2
 	>=dev-dotnet/dbus-sharp-0.4
 	>=dev-dotnet/dbus-glib-sharp-0.3
 	>=dev-dotnet/mono-addins-0.3
-	>=x11-libs/gtk+-2.12.0
+	>=x11-libs/gtk+-2.12.0:2
 	>=dev-libs/atk-1.2.4
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=app-text/gtkspell-2.0.9
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	eds? ( dev-libs/gmime:2.4[mono] )
@@ -33,7 +33,7 @@ RDEPEND=">=dev-lang/mono-2
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	app-text/rarian
-	dev-libs/libxml2[python]
+	dev-libs/libxml2:2[python]
 	sys-devel/gettext
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35"
