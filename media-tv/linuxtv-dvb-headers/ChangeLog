@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/linuxtv-dvb-headers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/ChangeLog,v 1.18 2011/01/04 18:59:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/ChangeLog,v 1.19 2011/03/06 11:22:09 xarthisius Exp $
+
+  06 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  linuxtv-dvb-headers-5.ebuild:
+  ppc64 stable wrt #343977
 
   04 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   linuxtv-dvb-headers-5.ebuild:
