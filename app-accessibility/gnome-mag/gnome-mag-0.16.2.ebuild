@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.16.2.ebuild,v 1.1 2010/09/29 22:16:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.16.2.ebuild,v 1.2 2011/03/06 22:55:26 nirbheek Exp $
 
 EAPI="3"
 
@@ -14,8 +14,8 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.11.1
-	>=x11-libs/gtk+-2.14"
+RDEPEND=">=dev-libs/glib-2.11.1:2
+	>=x11-libs/gtk+-2.14:2"
 
 # FIXME: need libcolorblind (debian package)
 # python deps are for applets

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.11.ebuild,v 1.10 2010/11/01 14:31:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.11.ebuild,v 1.11 2011/03/06 22:53:06 nirbheek Exp $
 
 EAPI="2"
 
@@ -18,10 +18,10 @@ IUSE="accessibility cairo gnome nls"
 # The package claims to support 'qte', but it hasn't been tested.
 # Any patches from someone who can test it are welcome.
 # <leonardop@gentoo.org>
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 	dev-libs/expat
-	>=x11-libs/gtk+-2.6
-	>=gnome-base/gconf-2
+	>=x11-libs/gtk+-2.6:2
+	>=gnome-base/gconf-2:2
 	x11-libs/libX11
 	x11-libs/libXtst
 	accessibility? (
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2.16
 		>=gnome-base/libgnomeui-2
 		>=gnome-extra/at-spi-1
 		dev-libs/atk )
-	cairo? ( >=x11-libs/gtk+-2.8 )
+	cairo? ( >=x11-libs/gtk+-2.8:2 )
 	gnome? (
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2 )"

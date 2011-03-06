@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.148 2011/01/30 17:14:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.149 2011/03/06 22:59:17 nirbheek Exp $
+
+  06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gok-2.30.0.ebuild,
+  gok-2.30.1.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gok-2.30.1.ebuild:
   alpha/ia64/sparc stable wrt #348987

@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.181 2011/01/30 17:13:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.182 2011/03/06 22:55:26 nirbheek Exp $
+
+  06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-mag-0.16.1.ebuild, gnome-mag-0.16.2.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gnome-mag-0.16.3.ebuild:
   alpha/ia64/sparc stable wrt #348987

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.30.0.ebuild,v 1.8 2010/11/01 14:25:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.30.0.ebuild,v 1.9 2011/03/06 22:59:17 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -16,18 +16,18 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="accessibility doc usb"
 
 # accessibility will disappear with new xorg-server (1.6)
-RDEPEND=">=dev-libs/glib-2.17.4
+RDEPEND=">=dev-libs/glib-2.17.4:2
 	>=gnome-extra/at-spi-1.5.2
 	>=gnome-base/libbonobo-2.5.1
 	>=dev-libs/atk-1.3
-	>=x11-libs/gtk+-2.18
-	>=x11-libs/libwnck-2.13.5
+	>=x11-libs/gtk+-2.18:2
+	>=x11-libs/libwnck-2.13.5:1
 	app-accessibility/gnome-speech
 	>=dev-libs/dbus-glib-0.7
 	>=media-libs/libcanberra-0.3[gtk]
-	dev-libs/libxml2
-	>=gnome-base/gconf-2.16
-	>=gnome-base/orbit-2
+	dev-libs/libxml2:2
+	>=gnome-base/gconf-2.16:2
+	>=gnome-base/orbit-2:2
 	usb? ( =virtual/libusb-0* )
 	x11-libs/libXi
 	x11-libs/libX11
