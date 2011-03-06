@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/resid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.23 2010/10/10 19:54:10 klausman Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.24 2011/03/06 12:10:47 klausman Exp $
+
+  06 Mar 2011; Tobias Klausmann <klausman@gentoo.org> resid-0.16_p2.ebuild:
+  Stable on alpha, bug #354061
 
   10 Oct 2010; Tobias Klausmann <klausman@gentoo.org> resid-0.16_p2.ebuild:
   Keyworded on alpha, bug #326767
