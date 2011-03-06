@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-murrine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.45 2010/09/22 15:23:20 nirbheek Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/ChangeLog,v 1.46 2011/03/06 23:08:33 nirbheek Exp $
+
+  06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gtk-engines-murrine-0.53.1.ebuild, -gtk-engines-murrine-0.53.1-r1.ebuild,
+  gtk-engines-murrine-0.90.3-r1.ebuild, gtk-engines-murrine-0.98.0.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
 *gtk-engines-murrine-0.98.0 (22 Sep 2010)
 
