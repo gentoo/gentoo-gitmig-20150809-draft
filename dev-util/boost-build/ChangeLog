@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.65 2011/02/21 21:33:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.66 2011/03/06 09:40:07 xarthisius Exp $
+
+  06 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  boost-build-1.42.0.ebuild:
+  ppc64 stable wrt #344677
 
   21 Feb 2011; Michael Weber <xmw@gentoo.org> boost-build-1.42.0.ebuild:
   sparc stable, bug 344677
