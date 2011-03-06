@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dstat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.33 2010/06/24 20:46:14 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.34 2011/03/06 10:42:45 jlec Exp $
+
+  06 Mar 2011; Justin Lecher <jlec@gentoo.org> -dstat-0.6.6.ebuild,
+  -dstat-0.6.7.ebuild, -dstat-0.6.9.ebuild, dstat-0.6.9-r1.ebuild,
+  dstat-0.7.2.ebuild:
+  Move to new python stuff, removed old
 
 *dstat-0.7.2 (24 Jun 2010)
 

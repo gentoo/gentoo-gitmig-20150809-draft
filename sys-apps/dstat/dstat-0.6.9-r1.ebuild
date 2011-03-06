@@ -1,27 +1,35 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.6.9-r1.ebuild,v 1.1 2009/11/25 13:43:09 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.6.9-r1.ebuild,v 1.2 2011/03/06 10:42:45 jlec Exp $
 
 EAPI=2
+
+PYTHON_DEPEND="2"
+
 inherit python eutils
 
 DESCRIPTION="Dstat is a versatile replacement for vmstat, iostat and ifstat"
 HOMEPAGE="http://dag.wieers.com/home-made/dstat/"
 SRC_URI="http://dag.wieers.com/home-made/${PN}/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="virtual/python"
+RDEPEND=""
 DEPEND=""
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-CVE-2009-3894.patch # 293497
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	emake install DESTDIR="${D}" || die "make install failed"
 
 	dodoc \
 		AUTHORS ChangeLog README TODO \
