@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.10 2010/12/02 20:09:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.11 2011/03/06 09:34:28 jlec Exp $
 
 EAPI=2
 
@@ -24,12 +24,13 @@ for i in ${LANGS}; do
 	IUSE="${IUSE} linguas_${i}"
 done
 
-RDEPEND="virtual/opengl
-	x11-libs/gtkglext
-	x11-libs/gtkglarea
-	>=x11-libs/gtk+-2
+RDEPEND="
 	media-libs/libpng
 	media-libs/tiff
+	virtual/opengl
+	x11-libs/gtkglext
+	x11-libs/gtkglarea:2
+	x11-libs/gtk+:2
 	truetype? ( media-libs/ftgl )"
 
 DEPEND="${RDEPEND}
