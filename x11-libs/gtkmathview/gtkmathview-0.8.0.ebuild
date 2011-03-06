@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.12 2011/02/04 11:20:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.13 2011/03/06 13:13:51 pacho Exp $
 
 EAPI="3"
 
@@ -18,13 +18,13 @@ IUSE="gtk mathml svg t1lib"
 
 RDEPEND=">=dev-libs/glib-2.2.1:2
 	>=dev-libs/popt-1.7
-	>=dev-libs/libxml2-2.6.7
+	>=dev-libs/libxml2-2.6.7:2
 	gtk? ( >=x11-libs/gtk+-2.2.1:2
-		>=media-libs/t1lib-5
+		>=media-libs/t1lib-5:5
 		>=dev-libs/gmetadom-0.1.8
 		x11-libs/pango )
 	mathml? ( media-fonts/texcm-ttf )
-	t1lib?	( >=media-libs/t1lib-5 )"
+	t1lib?	( >=media-libs/t1lib-5:5 )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
@@ -32,6 +32,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-gcc44.patch \
 		"${FILESDIR}"/${P}-cond-t1.patch
+
+	# Fix building against libxml2[icu], bug #356095
+	epatch "${FILESDIR}"/${P}-fix-template.patch
 }
 
 src_configure() {
