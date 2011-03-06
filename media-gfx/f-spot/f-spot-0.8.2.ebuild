@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.2 2011/02/12 17:51:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.3 2011/03/06 23:24:58 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,14 +17,14 @@ RDEPEND=">=dev-lang/mono-2.2
 	>=gnome-base/libgnome-2.2
 	>=gnome-base/libgnomeui-2.2
 	dev-dotnet/gnome-keyring-sharp
-	>=dev-dotnet/gtk-sharp-2.12.2
-	>=dev-dotnet/glib-sharp-2.12.2
-	>=x11-libs/gtk+-2.16
-	>=dev-libs/glib-2.22
-	>=dev-libs/libunique-1.0
-	>=dev-dotnet/gnome-sharp-2.8
-	>=dev-dotnet/glib-sharp-2.12
-	>=dev-dotnet/gconf-sharp-2.20.2
+	>=dev-dotnet/gtk-sharp-2.12.2:2
+	>=dev-dotnet/glib-sharp-2.12.2:2
+	>=x11-libs/gtk+-2.16:2
+	>=dev-libs/glib-2.22:2
+	>=dev-libs/libunique-1.0:1
+	>=dev-dotnet/gnome-sharp-2.8:2
+	>=dev-dotnet/glib-sharp-2.12:2
+	>=dev-dotnet/gconf-sharp-2.20.2:2
 	>=dev-dotnet/mono-addins-0.3
 	>=dev-libs/dbus-glib-0.71
 	>=dev-dotnet/dbus-sharp-0.4.2

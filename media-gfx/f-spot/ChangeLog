@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.50 2011/02/12 17:54:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.51 2011/03/06 23:24:58 nirbheek Exp $
+
+  06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> f-spot-0.8.2.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   12 Feb 2011; Pacho Ramos <pacho@gentoo.org> -f-spot-0.6.1.1-r3.ebuild,
   -f-spot-0.8.0.ebuild, -files/f-spot-0.8.0-empty-crash.patch:
