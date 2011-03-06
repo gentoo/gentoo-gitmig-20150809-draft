@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-CPAN-Meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.1 2011/03/06 07:32:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.2 2011/03/06 10:01:53 grobian Exp $
+
+  06 Mar 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-CPAN-Meta-2.110.440.ebuild:
+  Added Prefix keywords, bug #357599
 
 *perl-CPAN-Meta-2.110.440 (06 Mar 2011)
 
