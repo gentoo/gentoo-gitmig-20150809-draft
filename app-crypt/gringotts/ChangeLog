@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.36 2011/02/24 18:34:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.37 2011/03/06 23:48:37 nirbheek Exp $
+
+  06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gringotts-1.2.9.ebuild, gringotts-1.2.10.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> gringotts-1.2.10.ebuild:
   x86 stable per bug 353436
