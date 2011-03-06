@@ -1,27 +1,35 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pyrpub/pyrpub-2.1.1.ebuild,v 1.10 2005/01/01 16:32:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pyrpub/pyrpub-2.1.1.ebuild,v 1.11 2011/03/06 00:52:35 arfrever Exp $
 
-NP="pyrite-publisher-${PV}"
-S=${WORKDIR}/${NP}
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
+
+inherit distutils
+
+MY_P="pyrite-publisher-${PV}"
+
 DESCRIPTION="content conversion tool for Palm"
-SRC_URI="http://www.pyrite.org/dist/${NP}.tar.gz"
 HOMEPAGE="http://www.pyrite.org/publisher/"
+SRC_URI="http://www.pyrite.org/dist/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+SLOT="0"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND=""
+RDEPEND=""
 
-src_compile() {
-	python setup.py build || die "build failed"
-}
+S="${WORKDIR}/${MY_P}"
+
+DOCS="ChangeLog NEWS README* doc/*.pdb"
+PYTHON_MODNAME="PyritePublisher"
 
 src_install () {
-	python setup.py install --root="${D}" || die "install failed"
-	dodoc ChangeLog NEWS README* doc/*.pdb
+	distutils_src_install
 	doman doc/*.1
 	dohtml -r doc/pyrite-publisher
 }
