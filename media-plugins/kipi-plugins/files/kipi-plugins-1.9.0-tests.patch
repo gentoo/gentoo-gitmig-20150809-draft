@@ -1,0 +1,21 @@
+diff -ruN kipi-plugins-1.9.0.orig/gpssync/tests/test_gpxparsing.cpp kipi-plugins-1.9.0/gpssync/tests/test_gpxparsing.cpp
+--- kipi-plugins-1.9.0.orig/gpssync/tests/test_gpxparsing.cpp	2011-02-28 00:53:44.000000000 +0100
++++ kipi-plugins-1.9.0/gpssync/tests/test_gpxparsing.cpp	2011-03-06 21:37:23.127817959 +0100
+@@ -48,11 +48,12 @@
+     }
+ 
+     {
+-        // eCoach in N900: 2010-01-14T09:26:02.287+02:00
+-        QDateTime time1 = QDateTime::fromString("2010-01-14T09:26:02.287+02:00", Qt::ISODate);
+-        // the date is parsed fine, but the time fails:
+-        QCOMPARE(time1.date(), QDate(2010, 01, 14));
+-        QCOMPARE(time1.time(), QTime(0, 0, 0));
++        // // eCoach in N900: 2010-01-14T09:26:02.287+02:00
++        // QDateTime time1 = QDateTime::fromString("2010-01-14T09:26:02.287+02:00", Qt::ISODate);
++        // // the date is parsed fine, but the time fails:
++        // QCOMPARE(time1.date(), QDate(2010, 01, 14));
++        // QCOMPARE(time1.time(), QTime(0, 0, 0));
++	// seems that the QT classes behave different now
+ 
+         // when we omit the time zone data, parsing succeeds
+         // time is interpreted as local time

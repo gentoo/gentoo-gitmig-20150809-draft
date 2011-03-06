@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.9.0.ebuild,v 1.1 2011/03/01 20:25:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.9.0.ebuild,v 1.2 2011/03/06 20:48:44 dilfridge Exp $
 
 EAPI=3
 
@@ -52,7 +52,8 @@ RDEPEND="${DEPEND}
 	mjpeg? 		( media-video/mjpegtools )
 "
 
-PATCHES=( "${FILESDIR}/${PN}-1.7.0-expoblending.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.7.0-expoblending.patch"
+	"${FILESDIR}/${PN}-1.9.0-tests.patch" )
 
 src_prepare() {
 	if use handbook; then

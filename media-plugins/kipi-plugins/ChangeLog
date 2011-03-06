@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.90 2011/03/01 20:25:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.91 2011/03/06 20:48:44 dilfridge Exp $
+
+  06 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kipi-plugins-1.9.0.ebuild, +files/kipi-plugins-1.9.0-tests.patch:
+  Fix a sub-test where QT has become more tolerant in date/time parsing
 
 *kipi-plugins-1.9.0 (01 Mar 2011)
 
