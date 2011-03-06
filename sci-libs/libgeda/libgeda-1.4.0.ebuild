@@ -1,13 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.0.ebuild,v 1.6 2010/08/25 11:33:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.0.ebuild,v 1.7 2011/03/06 09:32:31 jlec Exp $
+
+EAPI="1"
 
 inherit eutils fdo-mime versionator
 
 SUBDIR="v$(get_version_component_range 1-2)"
 
 HOMEPAGE="http://www.geda.seul.org"
-DESCRIPTION="libgeda - this library provides functions needed for the gEDA core suite"
+DESCRIPTION="Library for functions needed by the gEDA core suite"
 SRC_URI="http://www.geda.seul.org/release/${SUBDIR}/${PV}/libgeda-${PV}.tar.gz"
 
 IUSE="gd threads"
@@ -15,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="ppc"
 SLOT="0"
 
-DEPEND=">=x11-libs/gtk+-2.4
+DEPEND="x11-libs/gtk+:2
 	>=dev-scheme/guile-1.6.3
 	>=dev-libs/libstroke-0.5.1
 	gd? ( >=media-libs/gd-2 )"
