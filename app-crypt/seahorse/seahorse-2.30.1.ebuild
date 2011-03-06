@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.30.1.ebuild,v 1.10 2011/02/06 12:51:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.30.1.ebuild,v 1.11 2011/03/06 23:54:05 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,9 +16,9 @@ IUSE="avahi debug doc ldap libnotify test"
 
 # FIXME: add introspection support
 RDEPEND="
-	>=gnome-base/gconf-2.0
-	>=dev-libs/glib-2.10
-	>=x11-libs/gtk+-2.18
+	>=gnome-base/gconf-2.0:2
+	>=dev-libs/glib-2.10:2
+	>=x11-libs/gtk+-2.18:2
 	>=dev-libs/dbus-glib-0.72
 	>=gnome-base/gnome-keyring-2.29.4
 	net-libs/libsoup:2.4
