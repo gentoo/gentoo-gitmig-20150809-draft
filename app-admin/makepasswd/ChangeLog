@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/makepasswd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.22 2010/10/24 01:58:26 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/makepasswd/ChangeLog,v 1.23 2011/03/06 12:30:18 xmw Exp $
+
+  06 Mar 2011; Michael Weber <xmw@gentoo.org> makepasswd-1.10.ebuild:
+  added ~arm keyword
 
   24 Oct 2010; Michael Weber <xmw@gentoo.org> metadata.xml:
   Taking maintainership
