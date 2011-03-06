@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.79 2011/01/21 15:40:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.80 2011/03/06 09:07:21 xmw Exp $
+
+  06 Mar 2011; Michael Weber <xmw@gentoo.org> ccache-2.4-r9.ebuild:
+  ppc stable (bug 320687)
 
   21 Jan 2011; Jeroen Roovers <jer@gentoo.org> ccache-2.4-r9.ebuild:
   Stable for HPPA (bug #320687).
