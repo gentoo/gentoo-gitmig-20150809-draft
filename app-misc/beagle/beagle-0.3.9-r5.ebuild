@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r5.ebuild,v 1.4 2011/02/27 18:34:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r5.ebuild,v 1.5 2011/03/06 23:21:23 nirbheek Exp $
 
 EAPI="3"
 
@@ -24,21 +24,21 @@ RDEPEND="!!sci-libs/beagle
 	>=dev-dotnet/taglib-sharp-2.0
 	gtk? (
 		x11-libs/libX11
-		>=gnome-base/librsvg-2.22.0
+		>=gnome-base/librsvg-2.22.0:2
 		sys-devel/gettext
-		>=dev-dotnet/gtk-sharp-2.12.6
-		>=dev-dotnet/gconf-sharp-2.24.0
-		>=dev-dotnet/glade-sharp-2.12.6
-		>=dev-dotnet/gnome-sharp-2.24.0
-		>=dev-dotnet/gnomevfs-sharp-2.24.0
+		>=dev-dotnet/gtk-sharp-2.12.6:2
+		>=dev-dotnet/gconf-sharp-2.24.0:2
+		>=dev-dotnet/glade-sharp-2.12.6:2
+		>=dev-dotnet/gnome-sharp-2.24.0:2
+		>=dev-dotnet/gnomevfs-sharp-2.24.0:2
 		x11-misc/xdg-utils
-		>=x11-libs/gtk+-2.14.0
+		>=x11-libs/gtk+-2.14.0:2
 		>=dev-libs/atk-1.22.0
 	)
 	eds? (
 		>=dev-dotnet/evolution-sharp-0.18.1
-		>=dev-dotnet/gconf-sharp-2.24.0
-		>=dev-dotnet/glib-sharp-2.12.6
+		>=dev-dotnet/gconf-sharp-2.24.0:2
+		>=dev-dotnet/glib-sharp-2.12.6:2
 	)
 	ole? (
 		>=app-text/wv-1.2.3
@@ -47,7 +47,7 @@ RDEPEND="!!sci-libs/beagle
 	)
 
 	x11-misc/shared-mime-info
-	>=dev-dotnet/glib-sharp-2.12.6
+	>=dev-dotnet/glib-sharp-2.12.6:2
 	dev-libs/gmime:2.4[mono]
 	chm? ( dev-libs/chmlib )
 	pdf? ( >=app-text/poppler-0.12.3-r3[utils] )
