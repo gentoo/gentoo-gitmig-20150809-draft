@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.9 2011/03/01 16:46:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.10 2011/03/06 10:03:08 xmw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ DESCRIPTION="Extension to Tk, adding new widgets, geometry managers, and misc co
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~arm ~hppa ppc ppc64 sparc x86"
 
 DEPEND="
 	dev-lang/tk
