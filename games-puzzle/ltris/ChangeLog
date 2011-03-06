@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/ltris
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.39 2011/03/04 01:28:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.40 2011/03/06 09:02:33 mr_bones_ Exp $
+
+*ltris-1.0.16 (06 Mar 2011)
+
+  06 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> +ltris-1.0.16.ebuild,
+  +files/ltris-1.0.16-gentoo.patch:
+  version bump
 
   04 Mar 2011; Brent Baude <ranger@gentoo.org> ltris-1.0.15.ebuild:
   stable ppc, bug 342083
