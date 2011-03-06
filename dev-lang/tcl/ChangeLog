@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.136 2011/02/26 15:51:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.137 2011/03/06 17:38:51 armin76 Exp $
+
+  06 Mar 2011; Raúl Porcel <armin76@gentoo.org> tcl-8.5.9.ebuild:
+  alpha/ia64/s390/sh stable wrt #353854
 
   26 Feb 2011; Michael Weber <xmw@gentoo.org> tcl-8.5.9.ebuild:
   ppc/sparc stable (bug 353854)
