@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.192 2011/01/04 13:55:57 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.193 2011/03/06 10:19:22 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -133,7 +133,7 @@ else
 			x11-libs/libXext
 			!aqua? (
 				gtk? (
-					>=x11-libs/gtk+-2.6
+					>=x11-libs/gtk+-2.6:2
 					x11-libs/libXft
 					gnome? ( >=gnome-base/libgnomeui-2.6 )
 				)
