@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/stix-fonts/stix-fonts-1.0.0-r1.ebuild,v 1.4 2011/02/24 04:48:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/stix-fonts/stix-fonts-1.0.0-r1.ebuild,v 1.5 2011/03/06 19:11:56 grobian Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/STIXv${PV}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc"
 
 DEPEND="app-arch/unzip"
