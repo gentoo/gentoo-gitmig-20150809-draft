@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.6 2010/10/19 19:13:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.7 2011/03/06 23:08:10 nirbheek Exp $
 
 EAPI="2"
 
@@ -19,14 +19,14 @@ IUSE="bluetooth"
 
 # FIXME: bluetooth is automagic
 # XXX: depend on dbus-1.2.6 when it goes stable
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.74
 	>=sys-apps/dbus-1.2
-	>=x11-libs/gtk+-2.14
-	>=gnome-base/gconf-2.20
+	>=x11-libs/gtk+-2.14:2
+	>=gnome-base/gconf-2.20:2
 	>=gnome-extra/polkit-gnome-0.92
 	>=x11-libs/libnotify-0.4.3
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2:2.0
 	>=gnome-base/gnome-keyring-2.20
 
 	>=dev-libs/libnl-1.1

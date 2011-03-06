@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.2.ebuild,v 1.4 2011/02/05 12:20:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.2.ebuild,v 1.5 2011/03/06 23:08:10 nirbheek Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -17,13 +17,13 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bluetooth"
 
 # FIXME: bluetooth is automagic
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.88
 	>=sys-apps/dbus-1.4.1
-	>=x11-libs/gtk+-2.18
-	>=gnome-base/gconf-2.20
+	>=x11-libs/gtk+-2.18:2
+	>=gnome-base/gconf-2.20:2
 	>=x11-libs/libnotify-0.4.3
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2:2.0
 	>=gnome-base/gnome-keyring-2.20
 
 	>=dev-libs/libnl-1.1
