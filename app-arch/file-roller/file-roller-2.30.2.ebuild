@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.30.2.ebuild,v 1.8 2010/10/17 15:24:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.30.2.ebuild,v 1.9 2011/03/06 23:40:34 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="nautilus"
 
-RDEPEND=">=dev-libs/glib-2.16.0
-	>=x11-libs/gtk+-2.16
-	gnome-base/gconf
+RDEPEND=">=dev-libs/glib-2.16.0:2
+	>=x11-libs/gtk+-2.16:2
+	gnome-base/gconf:2
 	nautilus? ( gnome-base/nautilus )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
