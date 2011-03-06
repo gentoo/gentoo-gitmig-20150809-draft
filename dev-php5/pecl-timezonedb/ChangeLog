@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-timezonedb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.24 2011/02/15 18:54:15 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.25 2011/03/06 19:57:34 olemarkus Exp $
+
+  06 Mar 2011; <olemarkus@gentoo.org> -pecl-timezonedb-2010.15.ebuild,
+  -pecl-timezonedb-2011.1.ebuild:
+  Removed older versions
 
 *pecl-timezonedb-2011.2 (15 Feb 2011)
 
