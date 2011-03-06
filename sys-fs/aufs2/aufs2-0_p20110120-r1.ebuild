@@ -1,26 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110120.ebuild,v 1.4 2011/03/06 08:33:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110120-r1.ebuild,v 1.1 2011/03/06 08:33:14 jlec Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit linux-mod multilib toolchain-funcs
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net"
-SRC_URI="
-	http://dev.gentoo.org/~jlec/distfiles/${P}.tar.bz2
-	mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug fuse inotify hardened hfs kernel-patch nfs ramfs"
+IUSE="debug fuse hardened hfs inotify kernel-patch nfs ramfs"
 
 DEPEND="dev-vcs/git"
 RDEPEND="!sys-fs/aufs"
 
-S=${WORKDIR}/${PN}-standalone
+S="${WORKDIR}"/${PN}-standalone
 
 MODULE_NAMES="aufs(misc:${S})"
 
@@ -60,32 +58,29 @@ pkg_setup() {
 	export PKG_SETUP_HAS_BEEN_RAN=1
 }
 
+set_config() {
+	for option in $*; do
+		grep -q "^CONFIG_AUFS_${option} =" config.mk || die "${option} is not a valid config option"
+		sed "/^CONFIG_AUFS_${option}/s:=:= y:g" -i config.mk || die
+	done
+}
+
 src_prepare() {
 	local branch=origin/aufs2.1-${KV_PATCH}
 	git checkout -q $branch || die
-	if ! use debug; then
-		sed -i "s:DEBUG = y:DEBUG =:g" config.mk || die
-	fi
-	if use inotify; then
-		sed -i  -e "s:AUFS_HNOTIFY =:AUFS_HNOTIFY = y:g" \
-			-e "s:AUFS_HFSNOTIFY =:AUFS_HFSNOTIFY = y:g"  config.mk || die
-	fi
-	if use ramfs; then
-		sed -i  "s:RAMFS =:RAMFS = y:g" config.mk || die
-	fi
 
-	sed -i "s:AUFS_RDU =:AUFS_RDU = y:g" config.mk || die
+	# All config options to off
+	sed "s:= y:=:g" -i config.mk || die
 
-	if use fuse; then
-		sed \
-			-e "s:AUFS_BR_FUSE =:AUFS_BR_FUSE = y:g" \
-			-e "s:AUFS_POLL =:AUFS_POLL = y:g" \
-			-i config.mk || die
-	fi
+	set_config RDU BRANCH_MAX_127 SBILIST
 
-	if use hfs; then
-		sed -i "s:AUFS_BR_HFSPLUS =:AUFS_BR_HFSPLUS = y:g" config.mk || die
-	fi
+	use debug && set_config DEBUG
+	use fuse && set_config BR_FUSE POLL
+	use hfs && set_config BR_HFSPLUS
+	use inotify && set_config HNOTIFY HFSNOTIFY
+	use nfs && set_config EXPORT
+	use nfs && use amd64 && set_config INO_T_64
+	use ramfs && set_config BR_RAMFS
 
 	if use hardened ; then
 		epatch "${FILESDIR}"/pax.patch
@@ -93,6 +88,7 @@ src_prepare() {
 
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
 	sed -i "s:__user::g" include/linux/aufs_type.h || die
+
 	cd "${WORKDIR}"/${PN}-util
 	git checkout -q origin/aufs2.1
 	sed -i "/LDFLAGS += -static -s/d" Makefile || die
@@ -100,10 +96,10 @@ src_prepare() {
 }
 
 src_compile() {
-	local myargs="" ARCH=x86
-	use nfs && myargs="CONFIG_EXPORTFS=y CONFIG_AUFS_EXPORT=y "
-	use nfs && use amd64 && myargs+="CONFIG_AUFS_INO_T_64=y"
-	emake CC=$(tc-getCC) CONFIG_AUFS_FS=m ${myargs} KDIR=${KV_DIR} || die
+	local ARCH=x86
+
+	emake CC=$(tc-getCC) CONFIG_AUFS_FS=m KDIR=${KV_DIR} || die
+
 	cd "${WORKDIR}"/${PN}-util
 	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_DIR} C_INCLUDE_PATH="${S}"/include || die
 }
