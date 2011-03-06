@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.8 2011/03/01 01:03:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.9 2011/03/06 11:58:17 hwoarang Exp $
 
 EAPI=3
 inherit gnome2-utils eutils qt4 pax-utils
@@ -15,7 +15,7 @@ SRC_URI="!qt-static? ( http://download.skype.com/linux/${DFILENAME} )
 
 LICENSE="skype-eula"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="qt-static"
 
 RESTRICT="mirror strip" # Bug 299368
