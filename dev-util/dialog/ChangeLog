@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.124 2011/03/05 12:51:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.125 2011/03/06 00:37:35 xmw Exp $
+
+  06 Mar 2011; Michael Weber <xmw@gentoo.org> dialog-1.1.20100428.ebuild:
+  arm stable (bug 355649)
 
   05 Mar 2011; Michael Weber <xmw@gentoo.org> dialog-1.1.20100428.ebuild:
   ppc/sparc stable (bug 355649)
