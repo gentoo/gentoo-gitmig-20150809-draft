@@ -7,7 +7,7 @@ index 1a1c549..4d74dd0 100644
  	@echo include Makefile.package        >> Makefile.incl
  	@echo                                 >> Makefile.incl
 -	@echo qinp.o: qinp.f                  >> Makefile.incl
-+	@echo qinp.o: qinp.f normal3d.o       >> Makefile.incl
++	@echo qinp.o: qinp.f normal3d.o render.o >> Makefile.incl
  	@echo "	\$$(FC) -g -O0 -Wall -Wtabs -c -o qinp.o qinp.f" >> Makefile.incl
  	@echo                                 >> Makefile.incl
  
