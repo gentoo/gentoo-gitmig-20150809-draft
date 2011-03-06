@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.62 2011/03/05 16:59:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.63 2011/03/06 01:07:48 anarchy Exp $
+
+*thunderbird-3.1.9 (06 Mar 2011)
+
+  06 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> +files/libnotify-0.7.patch,
+  +thunderbird-3.1.9.ebuild:
+  Security bump, bug #357057
 
   05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   thunderbird-3.1.7.ebuild:
