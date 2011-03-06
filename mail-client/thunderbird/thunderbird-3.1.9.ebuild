@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.9.ebuild,v 1.1 2011/03/06 01:07:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.9.ebuild,v 1.2 2011/03/06 02:45:37 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -89,6 +89,7 @@ linguas() {
 pkg_setup() {
 	export BUILD_OFFICIAL=1
 	export MOZILLA_OFFICIAL=1
+	export ALDFLAGS=${LDFLAGS}
 
 	if ! use bindist; then
 		elog "You are enabling official branding. You may not redistribute this build"
@@ -122,8 +123,6 @@ src_prepare() {
 
 	epatch "${FILESDIR}/bug-606109.patch"
 	epatch "${FILESDIR}/libnotify-0.7.patch"
-	# Respect users ldflags when building ldap support, will need to be reworked.
-	# epatch "${FILESDIR}/${PN}-respect-ldflags.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
