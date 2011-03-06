@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.4.ebuild,v 1.3 2011/03/06 08:42:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.4.ebuild,v 1.4 2011/03/06 09:10:57 jlec Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ for l in ${LANGS}; do
 done
 
 CDEPEND="sys-libs/zlib
-	=x11-libs/qwt-5*[svg]
+	x11-libs/qwt:5[svg]
 	>=x11-libs/qwtplot3d-0.2.7
 	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
 	x11-libs/qt-qt3support:4
