@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/vcscommand-1.99.42.ebuild,v 1.6 2011/02/27 21:49:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/vcscommand-1.99.42.ebuild,v 1.7 2011/03/06 18:01:36 armin76 Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=90"
 SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=13751 -> ${P}.zip"
 
 LICENSE="public-domain"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 RDEPEND="!app-vim/cvscommand"
