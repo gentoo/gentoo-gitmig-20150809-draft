@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Scalar-List-Utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.40 2010/10/22 18:08:10 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Scalar-List-Utils/ChangeLog,v 1.41 2011/03/06 09:31:35 grobian Exp $
+
+  06 Mar 2011; Fabian Groffen <grobian@gentoo.org>
+  Scalar-List-Utils-1.23.ebuild:
+  Marked ~ppc-aix, bug #357599
 
   22 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   Scalar-List-Utils-1.23.ebuild:
