@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.88 2011/03/04 01:22:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.89 2011/03/06 11:04:30 xmw Exp $
+
+  06 Mar 2011; Michael Weber <xmw@gentoo.org> lshw-02.15b.ebuild:
+  arm/sparc stable (bug 356927)
 
   04 Mar 2011; Brent Baude <ranger@gentoo.org> lshw-02.15b.ebuild:
   stable ppc, bug 356927
