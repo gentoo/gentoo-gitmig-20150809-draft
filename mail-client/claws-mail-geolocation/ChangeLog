@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-geolocation
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/ChangeLog,v 1.7 2011/03/06 13:14:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/ChangeLog,v 1.8 2011/03/06 13:18:12 fauli Exp $
+
+  06 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-geolocation-0.0.4.ebuild:
+  Slot media-libs/clutter-gtk to 0.10
 
   06 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-geolocation-0.0.3.ebuild:

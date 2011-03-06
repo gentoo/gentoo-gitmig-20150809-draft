@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/claws-mail-geolocation-0.0.4.ebuild,v 1.3 2010/11/23 08:52:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/claws-mail-geolocation-0.0.4.ebuild,v 1.4 2011/03/06 13:18:12 fauli Exp $
 
-EAPI=2
+EAPI=3
 
 inherit autotools
 
@@ -19,7 +19,7 @@ IUSE=""
 
 # Check if other versions of libchamplain ship the same pc file
 RDEPEND=">=mail-client/claws-mail-3.7.6
-	media-libs/clutter-gtk
+	media-libs/clutter-gtk:0.10
 	=media-libs/libchamplain-0.6*[gtk]
 	sys-devel/gettext"
 
