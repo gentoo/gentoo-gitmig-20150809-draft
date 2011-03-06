@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.0.10.1.ebuild,v 1.2 2011/03/06 22:10:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.0.10.1.ebuild,v 1.3 2011/03/06 23:05:54 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="PyZMQ is a lightweight and super-fast messaging library built on top of the ZeroMQ library"
 HOMEPAGE="http://www.zeromq.org/bindings:python http://pypi.python.org/pypi/pyzmq"
@@ -26,6 +26,12 @@ DEPEND="${RDEPEND}
 
 DOCS="README.rst"
 PYTHON_MODNAME="zmq"
+
+src_prepare() {
+	distutils_src_prepare
+
+	epatch "${FILESDIR}/${P}-python-2.7.patch"
+}
 
 src_compile() {
 	distutils_src_compile

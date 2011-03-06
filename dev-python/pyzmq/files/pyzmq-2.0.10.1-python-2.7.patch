@@ -1,0 +1,144 @@
+https://github.com/zeromq/pyzmq/commit/cf38679a8c7c34fcc22c3225767cf6faf2192ffd
+https://github.com/zeromq/pyzmq/commit/deab5827ef218cfccead6af1ba910e0622993e23
+
+--- zmq/tests/__init__.py
++++ zmq/tests/__init__.py
+@@ -28,10 +28,13 @@
+ import zmq
+ 
+ try:
+-    from nose import SkipTest
++    from unittest import SkipTest
+ except ImportError:
+-    class SkipTest(Exception):
+-        pass
++    try:
++        from nose import SkipTest
++    except ImportError:
++        class SkipTest(Exception):
++            pass
+ 
+ #-----------------------------------------------------------------------------
+ # Utilities
+--- zmq/tests/test_message.py
++++ zmq/tests/test_message.py
+@@ -38,8 +38,19 @@
+ # Tests
+ #-----------------------------------------------------------------------------
+ 
++# some useful constants:
++
+ x = 'x'.encode()
+ 
++try:
++    view = memoryview
++except NameError:
++    view = buffer
++
++rc0 = grc(x)
++v = view(x)
++view_rc = grc(x) - rc0
++
+ class TestMessage(BaseZMQTestCase):
+ 
+     def test_above_30(self):
+@@ -93,10 +104,6 @@
+ 
+     def test_lifecycle1(self):
+         """Run through a ref counting cycle with a copy."""
+-        try:
+-            view = memoryview
+-        except NameError:
+-            view = type(None)
+         for i in range(5, 16):  # 32, 64,..., 65536
+             s = (2**i)*x
+             rc = 2
+@@ -108,10 +115,8 @@
+             rc += 1
+             self.assertEquals(grc(s), rc)
+             b = m2.buffer
+-            extra = int(isinstance(b,view))
+-            # memoryview incs by 2
+-            # buffer by 1
+-            rc += 1+extra
++
++            rc += view_rc
+             self.assertEquals(grc(s), rc)
+ 
+             self.assertEquals(s, str(m).encode())
+@@ -122,7 +127,7 @@
+             del m2
+             rc -= 1
+             self.assertEquals(grc(s), rc)
+-            rc -= 1+extra
++            rc -= view_rc
+             del b
+             self.assertEquals(grc(s), rc)
+             del m
+@@ -133,10 +138,6 @@
+ 
+     def test_lifecycle2(self):
+         """Run through a different ref counting cycle with a copy."""
+-        try:
+-            view = memoryview
+-        except NameError:
+-            view = type(None)
+         for i in range(5, 16):  # 32, 64,..., 65536
+             s = (2**i)*x
+             rc = 2
+@@ -148,8 +149,7 @@
+             rc += 1
+             self.assertEquals(grc(s), rc)
+             b = m.buffer
+-            extra = int(isinstance(b,view))
+-            rc += 1+extra
++            rc += view_rc
+             self.assertEquals(grc(s), rc)
+             self.assertEquals(s, str(m).encode())
+             self.assertEquals(s, str(m2).encode())
+@@ -161,7 +161,7 @@
+             self.assertEquals(grc(s), rc)
+             del m
+             # m.buffer is kept until m is del'd
+-            rc -= 1+extra
++            rc -= view_rc
+             rc -= 1
+             self.assertEquals(grc(s), rc)
+             del m2
+@@ -203,10 +203,6 @@
+     
+     def test_buffer_in(self):
+         """test using a buffer as input"""
+-        try:
+-            view = memoryview
+-        except NameError:
+-            view = buffer
+         if unicode is str:
+             ins = "§§¶•ªº˜µ¬˚…∆˙åß∂©œ∑´†≈ç√".encode('utf8')
+         else:
+@@ -220,10 +216,6 @@
+         
+     def test_buffer_out(self):
+         """receiving buffered output"""
+-        try:
+-            view = memoryview
+-        except NameError:
+-            view = buffer
+         if unicode is str:
+             ins = "§§¶•ªº˜µ¬˚…∆˙åß∂©œ∑´†≈ç√".encode('utf8')
+         else:
+@@ -269,8 +261,12 @@
+             shape = shapes[:i]
+             A = numpy.random.random(shape)
+             m = zmq.Message(A)
+-            self.assertEquals(A.data, m.buffer)
+-            B = numpy.frombuffer(m.buffer,dtype=A.dtype).reshape(A.shape)
++            if view.__name__ == 'buffer':
++                self.assertEquals(A.data, m.buffer)
++                B = numpy.frombuffer(m.buffer,dtype=A.dtype).reshape(A.shape)
++            else:
++                self.assertEquals(memoryview(A), m.buffer)
++                B = numpy.array(m.buffer,dtype=A.dtype).reshape(A.shape)
+             self.assertEquals((A==B).all(), True)
+     
+     def test_memoryview(self):
