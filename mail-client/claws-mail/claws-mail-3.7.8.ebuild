@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.8.ebuild,v 1.7 2011/03/05 14:24:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.8.ebuild,v 1.8 2011/03/06 13:04:33 fauli Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="bogofilter crypt dbus dillo doc +gnutls +imap ipv6 ldap nntp pda session smime spamassassin spell ssl startup-notification xface"
 
-COMMONDEPEND=">=x11-libs/gtk+-2.6
+COMMONDEPEND=">=x11-libs/gtk+-2.6:2
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=net-libs/gnutls-2.0.3 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
