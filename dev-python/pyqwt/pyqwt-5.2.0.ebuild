@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.8 2011/03/06 08:48:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0.ebuild,v 1.9 2011/03/06 09:15:25 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="doc examples svg"
 
 RDEPEND="
-	=x11-libs/qwt-5*[svg?]
+	x11-libs/qwt:5[svg?]
 	>=dev-python/PyQt4-4.6.1
 	dev-python/numpy"
 DEPEND="${DEPEND}
