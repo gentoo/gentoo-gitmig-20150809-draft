@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12520 2011/03/06 12:04:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12521 2011/03/06 12:40:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -243,12 +243,6 @@ x11-drivers/nouveau-firmware
 =x11-base/nouveau-drm-20100316
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Feb 2011)
-# Upstream discontinued qbankmanager. Use kmymoney or gnucash
-# for hbci support.  Masked for removal in 30 days per bug 314077.
-# Missing aqbanking-5 support.
-app-office/qbankmanager
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Feb 2011)
 # Too unstable to use wrt bugs 351546 and 354953. No upstream for
 # this plug-in either. Masked for removal in 30 days.
 xfce-extra/xfce4-xkb-plugin
@@ -355,12 +349,6 @@ dev-php5/mongo
 # dev-libs/Ice[ruby].
 dev-ruby/IceRuby
 
-# Samuli Suominen <ssuominen@gentoo.org> (01 Feb 2011)
-# Masked for QA because the package has not been installable for an year now.
-# See http://bugs.gentoo.org/show_bug.cgi?id=302456
-# Removal in 30 days
-net-dialup/slmodem
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (31 Jan 2011)
 # New package, masked for an initial testing period. Needs exotic
 # hardware. Please post feedback on bug 165399.
@@ -393,13 +381,6 @@ net-dialup/slmodem
 >=dev-libs/libmowgli-0.9.50
 =media-plugins/audacious-plugins-2.5*
 =media-sound/audacious-2.5*
-
-# Samuli Suominen <ssuominen@gentoo.org> (30 Jan 2011)
-# Forces downgrade of rb_libtorrent that pulls in old slot
-# of python. Fails to build with rb_libtorrent-0.15 series.
-# And most likely will fail to build with libnotify-0.7.
-# Bug 353238. Removal in 30 days.
-net-p2p/lince
 
 # MATSUU Takuto <matsuu@gentoo.org> (30 Jan 2011)
 # mask for security bug #352569
@@ -457,30 +438,10 @@ media-tv/vdrplugin-rebuild
 # Masked due to unsatisfied requirements in tree
 >=net-misc/rygel-0.9.6
 
-# Samuli Suominen <ssuominen@gentoo.org> (22 Jan 2011)
-# Replaced by xfce-extra/tumbler
-# Removal in 30 days
-xfce-extra/thunar-thumbnailers
-
 # Markos Chandras <hwoarang@gentoo.org> (22 Jan 2011)
 # Mask for testing. Bug #329377
 =net-misc/remmina-0.9.3
 =net-misc/remmina-plugins-0.9.2
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Jan 2011)
-# Included in gnome-themes-extras package wrt bug 351020.
-# Removal in 30 days.
-x11-themes/gion-icon-theme
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Jan 2011)
-# Printing is broken because of xfprint requirement.
-# Package is using deprecated libxfcegui4 instead of libxfce4ui.
-# No development in about year at upstream git.
-#
-# Use app-editors/leafpad instead.
-#
-# Masked for removal in 30 days.
-app-editors/mousepad
 
 # Ryan Hill <dirtyepic@gentoo.org> (22 Jan 2011)
 # Mask development versions due to unstable API
