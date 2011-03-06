@@ -1,6 +1,6 @@
 # Copyrieht 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/gpxviewer-0.2.0.ebuild,v 1.4 2011/03/02 20:13:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/gpxviewer-0.2.0.ebuild,v 1.5 2011/03/06 09:37:00 jlec Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ IUSE="nls"
 
 RDEPEND="
 	dev-lang/vala:0.12
-	dev-libs/gdl
+	dev-libs/gdl:1
 	dev-libs/glib:2
 	dev-libs/libunique:1
 	dev-libs/libxml2:2
