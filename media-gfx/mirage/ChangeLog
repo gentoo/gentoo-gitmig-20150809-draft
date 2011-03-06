@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mirage
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.34 2010/08/06 15:48:32 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.35 2011/03/06 11:57:45 hwoarang Exp $
+
+  06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> mirage-0.9.5.1.ebuild:
+  Stable on amd64 wrt bug #357455
 
 *mirage-0.9.5.1 (06 Aug 2010)
 
