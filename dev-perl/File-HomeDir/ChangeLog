@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-HomeDir
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.73 2011/02/21 07:21:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.74 2011/03/06 09:25:00 grobian Exp $
+
+  06 Mar 2011; Fabian Groffen <grobian@gentoo.org> File-HomeDir-0.970.ebuild:
+  Marked ~ppc-macos and ~x64-macos, seems to work fine without
+  Mac::SystemDirectories, bug #357091
 
 *File-HomeDir-0.970 (21 Feb 2011)
 
