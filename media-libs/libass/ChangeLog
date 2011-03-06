@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.37 2011/02/15 18:45:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.38 2011/03/06 11:16:28 xarthisius Exp $
+
+  06 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libass-0.9.11.ebuild:
+  ppc64 stable wrt #343977
 
   15 Feb 2011; Alexis Ballier <aballier@gentoo.org> libass-0.9.11.ebuild:
   drop png useflag: it is only needed for the test program that we do not
