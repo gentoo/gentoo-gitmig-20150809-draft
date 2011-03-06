@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.30.3.ebuild,v 1.4 2011/01/30 19:33:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.30.3.ebuild,v 1.5 2011/03/06 23:47:33 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -16,13 +16,13 @@ KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86"
 IUSE="beagle +cdr +css doc +libburn nautilus playlist test"
 
 # FIXME: introspection/tracker support
-COMMON_DEPEND=">=dev-libs/glib-2.22
-	>=x11-libs/gtk+-2.19.7
-	>=gnome-base/gconf-2
-	>=media-libs/gstreamer-0.10.15
-	>=media-libs/gst-plugins-base-0.10
-	>=dev-libs/libxml2-2.6
-	>=dev-libs/libunique-1
+COMMON_DEPEND=">=dev-libs/glib-2.22:2
+	>=x11-libs/gtk+-2.19.7:2
+	>=gnome-base/gconf-2:2
+	>=media-libs/gstreamer-0.10.15:0.10
+	>=media-libs/gst-plugins-base-0.10:0.10
+	>=dev-libs/libxml2-2.6:2
+	>=dev-libs/libunique-1:1
 	>=dev-libs/dbus-glib-0.7.2
 	media-libs/libcanberra[gtk]
 	beagle? ( >=dev-libs/libbeagle-0.3 )
@@ -34,7 +34,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.22
 RDEPEND="${COMMON_DEPEND}
 	app-cdr/cdrdao
 	app-cdr/dvd+rw-tools
-	media-plugins/gst-plugins-meta
+	media-plugins/gst-plugins-meta:0.10
 	css? ( media-libs/libdvdcss )
 	cdr? ( virtual/cdrtools )
 	!libburn? ( virtual/cdrtools )"
