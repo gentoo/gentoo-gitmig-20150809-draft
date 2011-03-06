@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.61.0.ebuild,v 1.8 2010/11/19 18:33:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/euler-1.61.0.ebuild,v 1.9 2011/03/06 09:34:01 jlec Exp $
+
+EAPI="1"
 
 inherit autotools eutils
 
@@ -12,10 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc -sparc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2
+DEPEND="x11-libs/gtk+:2
 	dev-util/pkgconfig"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-misc/xdg-utils"
 
 src_unpack() {

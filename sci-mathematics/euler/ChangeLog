@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/euler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.17 2010/11/19 18:33:25 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/euler/ChangeLog,v 1.18 2011/03/06 09:34:01 jlec Exp $
+
+  06 Mar 2011; Justin Lecher <jlec@gentoo.org> euler-1.61.0.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   19 Nov 2010; Sébastien Fabbro <bicatali@gentoo.org> euler-1.61.0.ebuild,
   +files/euler-fortify.patch:
