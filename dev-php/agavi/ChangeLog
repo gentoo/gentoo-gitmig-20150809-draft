@@ -1,6 +1,11 @@
-# ChangeLog for dev-php5/agavi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/ChangeLog,v 1.4 2011/03/06 11:04:39 olemarkus Exp $
+# ChangeLog for dev-php/agavi
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/ChangeLog,v 1.5 2011/03/06 11:17:22 olemarkus Exp $
+
+*agavi-1.0.4 (06 Mar 2011)
+
+  06 Mar 2011; <olemarkus@gentoo.org> -agavi-1.0.3.ebuild, +agavi-1.0.4.ebuild:
+  Version bump
 
   04 Jul 2010; Matti Bickel <mabi@gentoo.org> agavi-1.0.3.ebuild:
   agavi uses phpdoc tasks from phing and needs PhpDocumentor for this (bug

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/phing-2.4.1.ebuild,v 1.1 2011/03/06 10:35:18 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/phing-2.4.5.ebuild,v 1.1 2011/03/06 11:20:33 olemarkus Exp $
 
 EAPI="2"
 inherit php-pear-lib-r1 eutils

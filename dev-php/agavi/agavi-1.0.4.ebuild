@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/agavi-1.0.3.ebuild,v 1.1 2011/03/06 11:04:39 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/agavi/agavi-1.0.4.ebuild,v 1.1 2011/03/06 11:17:22 olemarkus Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="PHP5 MVC Application Framework."
 HOMEPAGE="http://www.agavi.org/"
-SRC_URI="http://d10xg45o6p6dbl.cloudfront.net/projects/a/agavi/${PV}.tgz"
+SRC_URI="http://www.agavi.org/download/${PV}.tgz"
 LICENSE="LGPL-2.1 as-is public-domain CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
 IUSE=""

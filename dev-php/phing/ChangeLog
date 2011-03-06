@@ -1,6 +1,11 @@
-# ChangeLog for dev-php5/phing
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/ChangeLog,v 1.7 2011/03/06 10:35:18 olemarkus Exp $
+# ChangeLog for dev-php/phing
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phing/ChangeLog,v 1.8 2011/03/06 11:20:33 olemarkus Exp $
+
+*phing-2.4.5 (06 Mar 2011)
+
+  06 Mar 2011; <olemarkus@gentoo.org> -phing-2.4.1.ebuild, +phing-2.4.5.ebuild:
+  Version bump
 
   14 Jun 2010; <mabi@gentoo.org> -phing-2.2.0.ebuild, -phing-2.3.0.ebuild,
   -phing-2.3.3.ebuild, phing-2.4.1.ebuild:
