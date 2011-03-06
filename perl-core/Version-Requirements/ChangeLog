@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.1 2011/03/06 07:26:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.2 2011/03/06 09:34:50 grobian Exp $
+
+  06 Mar 2011; Fabian Groffen <grobian@gentoo.org>
+  Version-Requirements-0.101.20.ebuild:
+  Added Prefix keywords, bug #357599
 
 *Version-Requirements-0.101.20 (06 Mar 2011)
 
