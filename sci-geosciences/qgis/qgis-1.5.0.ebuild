@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.5.0.ebuild,v 1.3 2011/01/23 17:15:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.5.0.ebuild,v 1.4 2011/03/06 09:17:46 jlec Exp $
 
 EAPI=3
 
@@ -28,7 +28,7 @@ RDEPEND=">=sci-libs/gdal-1.6.1[geos,postgres?,python?,sqlite?]
 	gps? (
 		dev-libs/expat
 		sci-geosciences/gpsbabel
-		x11-libs/qwt
+		x11-libs/qwt:5
 	)
 	grass? ( >=sci-geosciences/grass-6.4.0_rc6[postgres?,python?,sqlite?] )
 	gsl? ( sci-libs/gsl )
