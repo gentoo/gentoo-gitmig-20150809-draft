@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.168 2011/03/06 13:04:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.169 2011/03/06 13:10:11 fauli Exp $
+
+  06 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
+  -claws-mail-3.7.5.ebuild, -claws-mail-3.7.5-r1.ebuild,
+  -files/claws-mail-3.7.5-fix-libetpan-check.patch:
+  clean up
 
   06 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-3.7.5-r1.ebuild, claws-mail-3.7.6.ebuild,
