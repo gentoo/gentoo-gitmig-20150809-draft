@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.8 2011/02/26 13:03:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.9 2011/03/07 21:41:27 klausman Exp $
+
+  07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> daq-0.5.ebuild:
+  Keyworded on alpha, bug #351551
 
   26 Feb 2011; Thomas Kahle <tomka@gentoo.org> daq-0.5.ebuild:
   x86 stable per bug 351549

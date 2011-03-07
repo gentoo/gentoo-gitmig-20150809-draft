@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-0.5.ebuild,v 1.3 2011/02/26 13:03:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-0.5.ebuild,v 1.4 2011/03/07 21:41:27 klausman Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/downloads/630 -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~alpha amd64 x86"
 IUSE="ipv6 +afpacket +dump +pcap"
 
 DEPEND="pcap? ( >=net-libs/libpcap-1.0.0 )
