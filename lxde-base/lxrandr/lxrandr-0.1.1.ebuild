@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/lxrandr-0.1.1.ebuild,v 1.10 2010/02/23 18:40:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/lxrandr-0.1.1.ebuild,v 1.11 2011/03/07 20:33:05 klausman Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 arm ppc x86"
+KEYWORDS="~alpha amd64 arm ppc x86"
 SLOT="0"
 IUSE=""
 

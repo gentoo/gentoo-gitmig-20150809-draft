@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxterminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.17 2011/01/08 12:42:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.18 2011/03/07 20:32:25 klausman Exp $
+
+  07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> lxterminal-0.1.9.ebuild:
+  Keyworded on alpha, bug #330911
 
   08 Jan 2011; Markus Meier <maekke@gentoo.org> lxterminal-0.1.9.ebuild:
   arm stable, bug #349762
