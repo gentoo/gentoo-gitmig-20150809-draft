@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.5 2011/03/02 21:10:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.6.2.ebuild,v 1.6 2011/03/07 12:53:38 jlec Exp $
 
 EAPI=2
 inherit eutils elisp-common autotools
@@ -13,18 +13,18 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc emacs gtk ncurses nls plotutils postgres"
 
-RDEPEND="sci-libs/gsl
+RDEPEND="
+	sci-libs/gsl
 	sys-libs/readline
 	sys-devel/gettext
 	virtual/libiconv
 	sys-libs/zlib
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	emacs? ( virtual/emacs )
 	gtk? ( x11-libs/gtk+:2 gnome-base/libglade:2.0 )
 	ncurses? ( sys-libs/ncurses )
 	plotutils? ( media-libs/plotutils )
 	postgres? ( dev-db/postgresql-server )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( virtual/latex-base )"
