@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.140 2011/02/24 18:40:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.141 2011/03/07 20:28:19 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> gmime-2.4.22.ebuild:
+  Stable for HPPA (bug #353436).
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> gmime-2.4.22.ebuild:
   x86 stable per bug 353436
