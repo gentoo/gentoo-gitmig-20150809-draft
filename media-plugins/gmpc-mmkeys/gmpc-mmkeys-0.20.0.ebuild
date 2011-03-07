@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-0.20.0.ebuild,v 1.1 2011/02/19 21:25:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-0.20.0.ebuild,v 1.2 2011/03/07 21:36:23 angelos Exp $
 
 EAPI=4
 
@@ -16,5 +16,10 @@ IUSE=""
 RDEPEND="dev-libs/dbus-glib
 	>=media-sound/gmpc-${PV}"
 DEPEND="${RDEPEND}
-	dev-lang/vala:0
+	dev-lang/vala:0.10
 	dev-util/pkgconfig"
+
+src_configure() {
+	VALAC=$(type -p valac-0.10) \
+		econf
+}
