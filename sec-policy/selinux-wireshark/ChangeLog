@@ -1,6 +1,14 @@
 # ChangeLog for sec-policy/selinux-wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.9 2011/02/05 12:07:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.10 2011/03/07 03:00:43 blueness Exp $
+
+*selinux-wireshark-2.20101213-r1 (07 Mar 2011)
+
+  07 Mar 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-apps-wireshark-r1.patch,
+  +selinux-wireshark-2.20101213-r1.ebuild:
+  Allow wireshark to execute files in the users' home directory (needed for
+  libffi/python)
 
 *selinux-wireshark-2.20101213 (05 Feb 2011)
 
