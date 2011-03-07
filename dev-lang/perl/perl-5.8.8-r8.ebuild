@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r8.ebuild,v 1.12 2011/03/07 11:35:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r8.ebuild,v 1.13 2011/03/07 18:27:41 mr_bones_ Exp $
 
 inherit eutils alternatives flag-o-matic toolchain-funcs multilib
 
@@ -271,7 +271,6 @@ src_configure() {
 		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
 		myconf -Ui_db -Ui_ndbm
 	fi
-
 
 	[[ ${ELIBC} == "FreeBSD" ]] && myconf "-Dlibc=/usr/$(get_libdir)/libc.a"
 
