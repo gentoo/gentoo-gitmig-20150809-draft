@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.12 2011/03/02 18:36:45 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.13 2011/03/07 22:44:21 aidecoe Exp $
+
+*dracut-008-r1 (07 Mar 2011)
+
+  07 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-008-r1.ebuild:
+  Revision bump. Added plymouth module. Related to bug #353577.
 
   02 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-007.ebuild:
   Propagated few improvements from dracut-008.ebuild. Resolves bug #348085.
