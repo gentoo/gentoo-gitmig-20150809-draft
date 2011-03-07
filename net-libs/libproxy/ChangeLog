@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.53 2011/02/20 12:30:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.54 2011/03/07 11:56:14 pacho Exp $
+
+  07 Mar 2011; Pacho Ramos <pacho@gentoo.org> libproxy-0.4.6-r1.ebuild:
+  Looks to work with vala:0.10 as-is. Pin deps to appropriate slots.
 
   20 Feb 2011; Raúl Porcel <armin76@gentoo.org> libproxy-0.4.6.ebuild:
   ia64/sh stable wrt #343069
