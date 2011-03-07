@@ -1,0 +1,147 @@
+https://github.com/zeromq/pyzmq/commit/c963d9a5aeb26d60026bf3472e98a6337f12330f
+https://github.com/zeromq/pyzmq/commit/7acb75644de0b94fbc4b5fff103395b0a7871d17
+
+--- setup.py
++++ setup.py
+@@ -197,18 +197,17 @@
+     return os.path.abspath(pjoin('zmq', subdir, name+'.c'))
+ 
+ czmq = pxd('core', 'czmq')
+-allocate = pxd('utils', 'allocate')
+ buffers = pxd('utils', 'buffers')
+ 
+ submodules = dict(
+     core = {'constants': [czmq],
+             'error':[czmq],
+-            'poll':[czmq, allocate], 
++            'poll':[czmq], 
+             'stopwatch':[czmq],
+             'context':[pxd('core', 'socket'), czmq],
+             'message':[czmq, buffers],
+             'socket':[pxd('core', 'context'), pxd('core', 'message'), 
+-                      czmq, allocate, buffers],
++                      czmq, buffers],
+             'device':[czmq],
+             'version':[czmq],
+     },
+--- zmq/core/czmq.pxd
++++ zmq/core/czmq.pxd
+@@ -27,6 +27,9 @@
+ # Import the C header files
+ #-----------------------------------------------------------------------------
+ 
++cdef extern from "allocate.h":
++    object allocate(size_t n, void **pp)
++
+ cdef extern from "errno.h" nogil:
+     enum: ZMQ_EINVAL "EINVAL"
+     enum: ZMQ_EAGAIN "EAGAIN"
+--- zmq/core/poll.pyx
++++ zmq/core/poll.pyx
+@@ -23,9 +23,8 @@
+ # Imports
+ #-----------------------------------------------------------------------------
+ 
+-from czmq cimport zmq_poll, zmq_pollitem_t
++from czmq cimport zmq_poll, zmq_pollitem_t, allocate
+ from socket cimport Socket
+-from allocate cimport allocate
+ 
+ import sys
+ from zmq.core.error import ZMQError
+--- zmq/core/socket.pyx
++++ zmq/core/socket.pyx
+@@ -32,7 +32,6 @@
+ from cpython cimport PyBytes_AsString, PyBytes_Size
+ from cpython cimport Py_DECREF, Py_INCREF
+ 
+-from allocate cimport allocate
+ from buffers cimport asbuffer_r, frombuffer_r, viewfromobject_r
+ 
+ from czmq cimport *
+--- zmq/utils/allocate.h
++++ zmq/utils/allocate.h
+@@ -0,0 +1,39 @@
++/*
++A utility to allocate a C array.
++
++This is excerpted from mpi4py's "atimport.h" and is licensed under the BSD license.
++*/
++
++#include "Python.h"
++
++static PyObject * allocate(Py_ssize_t n, void **pp){
++  PyObject *ob;
++  if (n > PY_SSIZE_T_MAX)
++    return PyErr_NoMemory();
++  else if (n < 0) {
++    PyErr_SetString(PyExc_RuntimeError,
++                    "memory allocation with negative size");
++    return NULL;
++  }
++#if PY_VERSION_HEX >= 0x02060000
++  ob = PyByteArray_FromStringAndSize(NULL, (n==0) ? 1 : n);
++  if (ob && n==0 && (PyByteArray_Resize(ob, 0) < 0)) {
++    Py_DECREF(ob);
++    return NULL;
++  }
++  if (ob && pp)
++    *pp = (void *)PyByteArray_AS_STRING(ob);
++#else
++  {
++    void *p = PyMem_Malloc(n);
++    if (!p)
++      return PyErr_NoMemory();
++    ob = PyCObject_FromVoidPtr(p, PyMem_Free);
++    if (!ob)
++      PyMem_Free(p);
++    else if (pp)
++      *pp = p;
++  }
++#endif
++  return ob;
++}
+\ No newline at end of file
+--- zmq/utils/allocate.pxd
++++ zmq/utils/allocate.pxd
+@@ -1,40 +0,0 @@
+-"""A utility to allocate a C array.
+-
+-This was copied from mpi4py and is licensed under the BSD license.
+-"""
+-
+-from libc.stdlib cimport free, malloc
+-
+-#-----------------------------------------------------------------------------
+-# Python includes.
+-#-----------------------------------------------------------------------------
+-
+-cdef extern from "Python.h":
+-    object PyCObject_FromVoidPtr(void *, void (*)(void*))
+-
+-#-----------------------------------------------------------------------------
+-# Main functions.
+-#-----------------------------------------------------------------------------
+-
+-cdef inline void *memnew(size_t n):
+-    """malloc a new memory chunk of a given size."""
+-    if n == 0: n = 1
+-    return malloc(n)
+-
+-cdef inline void memdel(void *p):
+-    """free a chunk of memory allocated with memnew."""
+-    if p != NULL: free(p)
+-
+-cdef inline object allocate(size_t n, void **pp):
+-    """A wrapper that allocates a C array, but with Python ref-counting."""
+-    cdef object cob
+-    cdef void *p = memnew(n)
+-    if p == NULL:
+-        raise MemoryError()
+-    try:
+-        cob = PyCObject_FromVoidPtr(p, memdel)
+-    except:
+-        memdel(p)
+-        raise
+-    pp[0] = p
+-    return cob

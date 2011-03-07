@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.0.10.1.ebuild,v 1.5 2011/03/07 18:17:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.0.10.1.ebuild,v 1.6 2011/03/07 22:21:10 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -21,7 +21,9 @@ IUSE=""
 # IUSE="doc"
 
 RDEPEND="net-libs/zeromq"
-DEPEND="${RDEPEND}"
+# dev-python/cython required only as long as pyzmq-2.0.10.1-python-3.2.patch is applied.
+DEPEND="${RDEPEND}
+	dev-python/cython"
 #	doc? (
 #		dev-python/setuptools
 #		>=dev-python/sphinx-0.6
@@ -35,6 +37,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-python-2.7.patch"
 	epatch "${FILESDIR}/${P}-python-3.1.patch"
+	epatch "${FILESDIR}/${P}-python-3.2.patch"
 }
 
 src_compile() {
