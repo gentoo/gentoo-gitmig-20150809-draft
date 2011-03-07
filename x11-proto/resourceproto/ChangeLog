@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/resourceproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.43 2011/03/05 17:49:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.44 2011/03/07 20:59:55 scarabeus Exp $
+
+  07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -resourceproto-1.1.0.ebuild:
+  old
 
   05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   resourceproto-1.1.1.ebuild:
