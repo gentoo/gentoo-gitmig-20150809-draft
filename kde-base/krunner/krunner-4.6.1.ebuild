@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.6.1.ebuild,v 1.1 2011/03/04 18:00:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.6.1.ebuild,v 1.2 2011/03/07 23:16:12 scarabeus Exp $
 
 EAPI=3
 
@@ -20,7 +20,6 @@ COMMONDEPEND="
 	$(add_kdebase_dep libkworkspace)
 	$(add_kdebase_dep libplasmagenericshell)
 	!aqua? (
-		x11-libs/libXxf86misc
 		x11-libs/libXcursor
 		x11-libs/libXScrnSaver
 	)
