@@ -1,19 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.27 2011/03/07 13:37:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.2-r1.ebuild,v 1.1 2011/03/07 13:37:05 pacho Exp $
 
 EAPI=3
-inherit eutils multilib python xfconf git
+inherit eutils multilib python xfconf waf-utils
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
-EGIT_REPO_URI="git://git.xfce.org/apps/midori"
-EGIT_PROJECT="midori"
-SRC_URI=""
+SRC_URI="mirror://xfce/src/apps/${PN}/0.3/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
 IUSE="doc gnome +html idn libnotify nls +unique vala"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
@@ -36,6 +34,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	DOCS="AUTHORS ChangeLog INSTALL TODO"
 }
 
 src_prepare() {
@@ -46,9 +45,7 @@ src_prepare() {
 src_configure() {
 	strip-linguas -i po
 
-	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" ./waf \
-		--prefix="/usr/" \
-		--libdir="/usr/$(get_libdir)" \
+	waf-utils_src_configure \
 		--docdir="/usr/share/doc/${PF}/html" \
 		--disable-docs \
 		--enable-addons \
@@ -58,24 +55,5 @@ src_configure() {
 		$(use_enable libnotify) \
 		$(use_enable nls) \
 		$(use_enable unique) \
-		$(use_enable vala) \
-		configure || die
-}
-
-src_compile() {
-	# This is from dev-libs/boost, keep it synced
-	jobs=$( echo " ${MAKEOPTS} " | \
-		sed -e 's/ --jobs[= ]/ -j /g' \
-		-e 's/ -j \([1-9][0-9]*\)/ -j\1/g' \
-		-e 's/ -j\>/ -j1/g' | \
-		( while read -d ' ' j ; do if [[ "${j#-j}" = "$j" ]]; then continue; fi;
-		jobs="${j#-j}"; done; echo ${jobs} ) )
-	if [[ "${jobs}" != "" ]]; then NUMJOBS="-j"${jobs}; fi;
-
-	./waf build ${NUMJOBS} || die
-}
-
-src_install() {
-	DESTDIR=${D} ./waf install || die
-	dodoc AUTHORS ChangeLog INSTALL TODO || die
+		$(use_enable vala)
 }
