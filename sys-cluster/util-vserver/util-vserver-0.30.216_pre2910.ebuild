@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2910.ebuild,v 1.2 2011/02/18 20:34:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2910.ebuild,v 1.3 2011/03/07 21:18:19 jer Exp $
 
 inherit eutils bash-completion
 
@@ -13,7 +13,7 @@ SRC_URI="http://people.linux-vserver.org/~dhozac/t/uv-testing/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ppc ~sparc x86"
 
 IUSE=""
 
