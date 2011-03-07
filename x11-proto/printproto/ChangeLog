@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/printproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.48 2011/03/05 17:48:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/printproto/ChangeLog,v 1.49 2011/03/07 21:00:32 scarabeus Exp $
+
+  07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -printproto-1.0.4.ebuild:
+  old
 
   05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> printproto-1.0.5.ebuild:
   ppc64 stable wrt #354237
