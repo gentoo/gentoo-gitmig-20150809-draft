@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.5 2011/01/16 17:11:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.3.0.ebuild,v 1.6 2011/03/07 11:59:27 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.7

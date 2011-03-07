@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vertex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.13 2011/01/16 17:11:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.14 2011/03/07 11:59:27 armin76 Exp $
+
+  07 Mar 2011; Raúl Porcel <armin76@gentoo.org> vertex-0.3.0.ebuild:
+  Drop ia64 keywords
 
   16 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   vertex-0.3.0.ebuild:
