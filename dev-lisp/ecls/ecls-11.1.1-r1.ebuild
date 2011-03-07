@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-11.1.1-r1.ebuild,v 1.1 2011/03/04 20:55:03 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-11.1.1-r1.ebuild,v 1.2 2011/03/07 23:00:23 ulm Exp $
 
 EAPI=3
 inherit eutils multilib
@@ -14,13 +14,14 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug gengc precisegc threads +unicode X"
+IUSE="debug emacs gengc precisegc threads +unicode X"
 
 RDEPEND="dev-libs/gmp
 		virtual/libffi
 		>=dev-libs/boehm-gc-7.1[threads?]"
 DEPEND="${RDEPEND}
-		app-text/texi2html"
+		app-text/texi2html
+		emacs? ( virtual/emacs >=app-admin/eselect-emacs-1.12 )"
 PDEPEND="dev-lisp/gentoo-init"
 
 S="${WORKDIR}"/${MY_P}
@@ -55,6 +56,16 @@ src_configure() {
 }
 
 src_compile() {
+	if use emacs; then
+		local ETAGS=$(eselect --brief etags list | sed -ne '/emacs/{p;q}')
+		[[ -n ${ETAGS} ]] || die "No etags implementation found"
+		pushd build || die
+		emake ETAGS=${ETAGS} TAGS || die
+		popd
+	else
+		touch build/TAGS
+	fi
+
 	#parallel fails
 	emake -j1 || die "Compilation failed"
 }

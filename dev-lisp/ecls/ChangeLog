@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.39 2011/03/04 20:55:03 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.40 2011/03/07 23:00:23 ulm Exp $
+
+  07 Mar 2011; Ulrich Mueller <ulm@gentoo.org> ecls-11.1.1-r1.ebuild:
+  Avoid autodetection of the etags program. Make sure that with USE=emacs,
+  etags from Emacs is used, fixes bug 357319. Thanks to François Bissey and
+  Steven Trogdon.
 
 *ecls-11.1.1-r1 (04 Mar 2011)
 
