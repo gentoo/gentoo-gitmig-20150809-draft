@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4.ebuild,v 1.4 2011/02/23 14:01:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4.ebuild,v 1.5 2011/03/07 22:43:04 scarabeus Exp $
 
-EAPI=4
+EAPI=3
 
 inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils
 
@@ -138,13 +138,13 @@ src_install() {
 	fi
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
-		doins Docs/cmake-syntax.vim
+		doins Docs/cmake-syntax.vim || die
 
 		insinto /usr/share/vim/vimfiles/indent
-		doins Docs/cmake-indent.vim
+		doins Docs/cmake-indent.vim || die
 
 		insinto /usr/share/vim/vimfiles/ftdetect
-		doins "${FILESDIR}/${VIMFILE}"
+		doins "${FILESDIR}/${VIMFILE}" || die
 	fi
 }
 
