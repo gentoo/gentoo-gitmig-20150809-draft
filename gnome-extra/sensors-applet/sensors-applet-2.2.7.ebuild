@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7.ebuild,v 1.3 2010/12/08 17:54:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7.ebuild,v 1.4 2011/03/07 08:37:43 jlec Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND="
 			>=dev-libs/dbus-glib-0.80
 			>=dev-libs/libatasmart-0.16 )
 		!dbus? ( >=app-admin/hddtemp-0.3_beta13 ) )
-	libnotify? ( >=x11-libs/libnotify-0.4.0 )
+	libnotify? ( <x11-libs/libnotify-0.7.1 )
 	lm_sensors? ( sys-apps/lm_sensors )
 	video_cards_fglrx? ( x11-drivers/ati-drivers )
 	video_cards_nvidia? ( || (

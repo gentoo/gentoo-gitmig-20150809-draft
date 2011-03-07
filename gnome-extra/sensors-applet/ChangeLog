@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/sensors-applet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.48 2010/12/08 17:54:46 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.49 2011/03/07 08:37:43 jlec Exp $
+
+  07 Mar 2011; Justin Lecher <jlec@gentoo.org> sensors-applet-2.2.7.ebuild:
+  Fails to build with x11-libs/libnotify-0.7.1, number of arguments for
+  notify_notification_new() changed
 
   08 Dec 2010; Pacho Ramos <pacho@gentoo.org> sensors-applet-2.2.4.ebuild,
   sensors-applet-2.2.7.ebuild:
