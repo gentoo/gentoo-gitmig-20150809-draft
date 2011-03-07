@@ -13,17 +13,11 @@
 <use>
 	<flag name='cleartype'>Add ClearType-style behavior for sub-pixel hinting.
 		Patch taken from Arch Linux</flag>
-	<flag name='glitz'>Build with glitz support, which replaces some software
-		render operations with Mesa OpenGL operations</flag>
 	<flag name='lcdfilter'>Add FreeType LCD filtering, ClearType-style behavior
 		for sub-pixel-hinting. Overrides cleartype USE flag. Patch taken from
 		Ubuntu</flag>
 	<flag name='opengl' restrict="&gt;=x11-libs/cairo-1.10.0">
 		Use Mesa backend for acceleration
-	</flag>
-	<flag name='opengl' restrict="&lt;=x11-libs/cairo-1.10.0">
-		When used along with USE=glitz, enables glitz-glx usage.
-		Requires hardware OpenGL support
 	</flag>
 	<flag name='drm'>Use Linux DRM for backend acceleration</flag>
 	<flag name='gallium'>Use Mesa's Gallium backend for acceleration</flag>

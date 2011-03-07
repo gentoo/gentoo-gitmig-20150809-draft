@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.275 2011/03/05 17:52:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.276 2011/03/07 17:22:33 ssuominen Exp $
+
+  07 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> cairo-1.8.10.ebuild,
+  metadata.xml:
+  Remove USE="glitz" wrt #330397.
 
   05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> cairo-1.10.2-r1.ebuild:
   ppc64 stable wrt #354237
