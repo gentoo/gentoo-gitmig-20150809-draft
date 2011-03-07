@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/screem
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.16 2009/03/22 02:20:28 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.17 2011/03/07 00:18:11 nirbheek Exp $
+
+  07 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> screem-0.16.1.ebuild,
+  screem-0.16.1-r1.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
 *screem-0.16.1-r1 (22 Mar 2009)
 

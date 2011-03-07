@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1-r1.ebuild,v 1.1 2009/03/22 02:20:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/screem-0.16.1-r1.ebuild,v 1.2 2011/03/07 00:18:11 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,19 +16,19 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="dbus spell nls"
 
 # glib raised to 2.10 for goption
-RDEPEND=">=dev-libs/glib-2.10.0
-	>=x11-libs/gtk+-2.6
-	>=dev-libs/libxml2-2.4.3
-	>=gnome-base/libglade-2.3
-	>=gnome-base/gconf-2.2
-	>=gnome-base/gnome-vfs-2.8.3
+RDEPEND=">=dev-libs/glib-2.10.0:2
+	>=x11-libs/gtk+-2.6:2
+	>=dev-libs/libxml2-2.4.3:2
+	>=gnome-base/libglade-2.3:2.0
+	>=gnome-base/gconf-2.2:2
+	>=gnome-base/gnome-vfs-2.8.3:2
 	>=gnome-base/libgnome-2.2
 	>=gnome-base/libgnomeui-2.6
-	=gnome-extra/gtkhtml-2*
-	>=gnome-base/libgnomeprint-2.2
-	>=gnome-base/libgnomeprintui-2.2
-	=x11-libs/gtksourceview-1*
-	>=dev-libs/libcroco-0.6.0
+	gnome-extra/gtkhtml:2
+	>=gnome-base/libgnomeprint-2.2:2.2
+	>=gnome-base/libgnomeprintui-2.2:2.2
+	x11-libs/gtksourceview:1.0
+	>=dev-libs/libcroco-0.6.0:0.6
 	>=gnome-base/gnome-menus-2.9.2
 	dbus? ( >=sys-apps/dbus-1.0.2 )
 	spell? ( >=app-text/enchant-1.1.6 )"
