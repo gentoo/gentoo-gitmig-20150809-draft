@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.17 2011/03/05 21:08:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.2-r2.ebuild,v 1.18 2011/03/07 11:04:25 ulm Exp $
 
 EAPI=3
 
@@ -102,9 +102,6 @@ src_configure() {
 
 	# bug #80421
 	filter-flags -ftracer
-
-	# multilib includes don't work right in this package...
-	has_multilib_profile && append-flags "-I$(get_ml_incdir)"
 
 	# feel free to fix properly if you care
 	append-flags -fno-strict-aliasing

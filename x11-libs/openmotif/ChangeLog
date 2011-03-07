@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.260 2011/03/05 21:08:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.261 2011/03/07 11:04:25 ulm Exp $
+
+  07 Mar 2011; Ulrich Mueller <ulm@gentoo.org> openmotif-2.2.3-r11.ebuild,
+  openmotif-2.3.2-r2.ebuild, openmotif-2.3.3.ebuild:
+  Remove calls to get_ml_incdir, bug 357739.
 
   05 Mar 2011; Ulrich Mueller <ulm@gentoo.org> openmotif-2.3.3.ebuild:
   Don't install libtool archives.
