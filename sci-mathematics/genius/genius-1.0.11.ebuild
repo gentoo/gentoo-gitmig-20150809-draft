@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.11.ebuild,v 1.2 2011/03/02 20:11:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/genius/genius-1.0.11.ebuild,v 1.3 2011/03/07 10:41:50 jlec Exp $
 
 EAPI=2
 inherit eutils gnome2
@@ -27,7 +27,7 @@ RDEPEND="
 		gnome-base/libgnomeui
 		gnome-base/libglade:2.0
 		x11-libs/gtksourceview:2.0
-		x11-libs/vte )"
+		x11-libs/vte:0 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	|| ( sys-devel/bison

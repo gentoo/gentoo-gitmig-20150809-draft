@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r1.ebuild,v 1.9 2011/03/02 21:32:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r1.ebuild,v 1.10 2011/03/07 10:42:36 jlec Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/blas
 		media-libs/libpng
 		sys-libs/zlib
 		x11-libs/gtk+:2
-		x11-libs/vte
+		x11-libs/vte:0
 		gnome-extra/gtkhtml:2
 	)
 	>=dev-lang/tk-8.4
