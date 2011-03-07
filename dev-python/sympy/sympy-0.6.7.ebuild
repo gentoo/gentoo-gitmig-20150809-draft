@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.7.ebuild,v 1.3 2010/12/13 16:27:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.7.ebuild,v 1.4 2011/03/07 13:20:25 jlec Exp $
 
 EAPI="3"
+
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils eutils
@@ -18,10 +20,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png test texmacs"
 
-RDEPEND="mathml? ( dev-libs/libxml2[python]
+RDEPEND="
+	mathml? (
+		dev-libs/libxml2:2[python]
 		dev-libs/libxslt[python]
 		gtk? ( x11-libs/gtkmathview[gtk] ) )
-	latex? ( virtual/latex-base
+	latex? (
+		virtual/latex-base
 		png? ( app-text/dvipng )
 		pdf? ( app-text/ghostscript-gpl ) )
 	texmacs? ( app-office/texmacs )
@@ -31,8 +36,6 @@ RDEPEND="mathml? ( dev-libs/libxml2[python]
 	>=dev-python/pexpect-2.0"
 DEPEND="doc? ( dev-python/sphinx )
 	test? ( dev-python/pytest )"
-# 2.4 restricted due to usage of ctypes module.
-RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 src_prepare() {
 	distutils_src_prepare

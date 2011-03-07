@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sympy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.12 2010/12/13 16:27:38 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.13 2011/03/07 13:20:25 jlec Exp $
+
+  07 Mar 2011; Justin Lecher <jlec@gentoo.org> sympy-0.6.7.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   sympy-0.6.7.ebuild:
