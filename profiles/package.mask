@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12524 2011/03/07 17:24:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12525 2011/03/07 20:16:02 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -172,12 +172,6 @@ x11-misc/talika
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Feb 2011)
 # Python 3.2 masked until sufficient number of reverse dependencies is fixed.
 =dev-lang/python-3.2*
-
-# Torsten Veller <tove@gentoo.org> (20 Feb 2011)
-# Mask net-mail/imapsync because it "is no longer gratis on the homepage"
-# and we don't have access to the latest
-# fixes/improvements/releases (#354831)
-net-mail/imapsync
 
 # Vadim Kuznetsov <vadimk@gentoo.org> (18 Feb 2011)
 # Upstream EOS Reached. Masked for removal 
