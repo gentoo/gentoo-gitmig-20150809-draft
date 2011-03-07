@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.182 2011/02/28 18:06:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.183 2011/03/07 20:32:53 radhermit Exp $
+
+  07 Mar 2011; Tim Harder <radhermit@gentoo.org> gallery-2.3.1.ebuild:
+  Fix install with the mysqli USE flag (bug #357503 thanks to Stef Simoens).
 
   28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> gallery-1.5.10.ebuild:
   Use virtual/jpeg.
