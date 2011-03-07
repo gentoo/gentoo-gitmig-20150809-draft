@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtommath
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.32 2010/04/24 19:44:35 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.33 2011/03/07 21:07:49 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> libtommath-0.41.ebuild:
+  Stable for HPPA (bug #355133).
 
   24 Apr 2010; Raúl Porcel <armin76@gentoo.org> libtommath-0.41.ebuild:
   Add ~alpha/~ia64 wrt #314875
