@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pymemphis/pymemphis-0.2.1.ebuild,v 1.2 2010/06/18 21:36:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pymemphis/pymemphis-0.2.1.ebuild,v 1.3 2011/03/07 12:59:54 jlec Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ IUSE=""
 
 RDEPEND="
 	dev-python/pycairo
-	dev-python/pygobject
+	dev-python/pygobject:2
 	media-libs/memphis"
 DEPEND="${RDEPEND}"
 
