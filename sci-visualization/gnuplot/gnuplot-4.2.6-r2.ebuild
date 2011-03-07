@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.1 2011/03/06 12:40:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.2 2011/03/07 12:42:13 jlec Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ RDEPEND="
 	wxwidgets? ( x11-libs/wxGTK:2.8[X]
 		>=x11-libs/cairo-0.9
 		>=x11-libs/pango-1.10.3
-		>=x11-libs/gtk+-2.8:2 )"
+		x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( virtual/latex-base
