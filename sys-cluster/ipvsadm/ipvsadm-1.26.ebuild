@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.25-r1.ebuild,v 1.1 2010/09/09 09:40:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26.ebuild,v 1.1 2011/03/07 19:44:12 ultrabug Exp $
 
-EAPI=2
+EAPI=3
 inherit linux-info toolchain-funcs eutils
 
 DESCRIPTION="utility to administer the IP virtual server services offered by the Linux kernel"
@@ -11,7 +11,7 @@ SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.6/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -26,8 +26,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PF}-build-fixup.diff \
-		"${FILESDIR}"/${P}-netlink-conns.diff
+	epatch "${FILESDIR}"/${PN}-1.25-r1-build-fixup.diff
 }
 
 src_compile() {
