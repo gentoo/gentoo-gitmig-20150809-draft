@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vserver-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.158 2011/02/18 20:41:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.159 2011/03/07 21:17:49 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org>
+  vserver-sources-2.3.0.36.32.ebuild:
+  Stable for HPPA (bug #355485).
 
   18 Feb 2011; Benedikt Böhm <hollow@gentoo.org>
   vserver-sources-2.3.0.36.32.ebuild:
