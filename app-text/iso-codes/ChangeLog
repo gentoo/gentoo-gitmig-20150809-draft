@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.100 2011/02/24 18:38:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.101 2011/03/07 20:26:38 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> iso-codes-3.24.ebuild:
+  Stable for HPPA (bug #353436).
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> iso-codes-3.24.ebuild:
   x86 stable per bug 353436
