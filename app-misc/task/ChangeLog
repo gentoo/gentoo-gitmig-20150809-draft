@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.11 2011/02/11 10:27:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.12 2011/03/07 07:56:17 radhermit Exp $
+
+*task-1.9.4 (07 Mar 2011)
+
+  07 Mar 2011; Tim Harder <radhermit@gentoo.org> +task-1.9.4.ebuild,
+  +files/task-1.9.4-lua-automagic.patch, +files/task-1.9.4-rcdir.patch,
+  +files/task-1.9.4-remove-ncurses.patch:
+  Version bump. Use new cmake-based build system.
 
   11 Feb 2011; Tim Harder <radhermit@gentoo.org> -task-1.9.2-r1.ebuild:
   Remove old

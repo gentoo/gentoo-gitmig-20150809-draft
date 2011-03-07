@@ -1,0 +1,30 @@
+--- task-1.9.4.orig/src/ui/Element.h
++++ task-1.9.4/src/ui/Element.h
+@@ -28,7 +28,6 @@
+ #define INCLUDED_ELEMENT
+ 
+ #include <string>
+-#include <ncurses.h>
+ class Layout;
+ 
+ class Element
+--- task-1.9.4.orig/src/ui/Layout.cpp
++++ task-1.9.4/src/ui/Layout.cpp
+@@ -25,7 +25,6 @@
+ //
+ ////////////////////////////////////////////////////////////////////////////////
+ 
+-#include <ncurses.h>
+ #include <stdlib.h>
+ #include <ctype.h>
+ #include <pthread.h>
+--- task-1.9.4.orig/src/ui/UI.cpp
++++ task-1.9.4/src/ui/UI.cpp
+@@ -25,7 +25,6 @@
+ //
+ ////////////////////////////////////////////////////////////////////////////////
+ 
+-#include <ncurses.h>
+ #include <ctype.h>
+ #include <pthread.h>
+ #include "log.h"

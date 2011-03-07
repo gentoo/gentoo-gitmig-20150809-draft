@@ -1,0 +1,26 @@
+--- task-1.9.4.orig/CMakeLists.txt
++++ task-1.9.4/CMakeLists.txt
+@@ -9,6 +9,7 @@
+ SET (TASK_MAN1DIR share/man/man1 CACHE STRING "Installation directory for man pages, section 1")
+ SET (TASK_MAN5DIR share/man/man5 CACHE STRING "Installation directory for man pages, section 5")
+ SET (TASK_DOCDIR  share/doc/task CACHE STRING "Installation directory for doc files")
++SET (TASK_RCDIR  share/task CACHE STRING "Installation directory for rc files")
+ SET (TASK_BINDIR  bin            CACHE STRING "Installation directory for the binary")
+ 
+ message ("-- Looking for SHA1 references")
+--- task-1.9.4.orig/doc/CMakeLists.txt
++++ task-1.9.4/doc/CMakeLists.txt
+@@ -10,4 +10,4 @@
+                                                     FILES_MATCHING PATTERN "*.1")
+ install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/man/ DESTINATION ${TASK_MAN5DIR}
+                                                     FILES_MATCHING PATTERN "*.5")
+-install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/rc   DESTINATION ${TASK_DOCDIR})
++install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/rc   DESTINATION ${TASK_RCDIR})
+--- task-1.9.4.orig/i18n/CMakeLists.txt
++++ task-1.9.4/i18n/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ DESTINATION ${TASK_DOCDIR}/i18n
++install (DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ DESTINATION ${TASK_RCDIR}/i18n
+                                                 FILES_MATCHING REGEX "strings.*"
+                                                                REGEX "tips.*"
+                                                                PATTERN "CMakeFiles" EXCLUDE)
