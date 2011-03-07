@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.183 2011/03/07 20:32:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.184 2011/03/07 21:15:32 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> gallery-2.3.1.ebuild:
+  Stable for HPPA (bug #354541).
 
   07 Mar 2011; Tim Harder <radhermit@gentoo.org> gallery-2.3.1.ebuild:
   Fix install with the mysqli USE flag (bug #357503 thanks to Stef Simoens).
