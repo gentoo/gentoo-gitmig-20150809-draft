@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfits
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.22 2011/01/22 04:47:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.23 2011/03/07 09:19:41 hwoarang Exp $
+
+  07 Mar 2011; Markos Chandras <hwoarang@gentoo.org> pyfits-2.4.0.ebuild:
+  Stable on amd64 wrt bug #357285
 
 *pyfits-2.4.0 (22 Jan 2011)
 
