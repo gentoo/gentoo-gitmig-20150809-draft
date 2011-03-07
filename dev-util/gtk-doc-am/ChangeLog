@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.55 2011/03/03 22:14:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.56 2011/03/07 11:49:41 nirbheek Exp $
+
+  07 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gtk-doc-am-1.17.ebuild:
+  Remove the need for a few build-time deps, fixes bug 318475
 
 *gtk-doc-am-1.17 (03 Mar 2011)
 

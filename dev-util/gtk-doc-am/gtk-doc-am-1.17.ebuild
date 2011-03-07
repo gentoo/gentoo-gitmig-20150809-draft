@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.17.ebuild,v 1.1 2011/03/03 22:14:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.17.ebuild,v 1.2 2011/03/07 11:49:41 nirbheek Exp $
 
 EAPI="3"
 
@@ -19,14 +19,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
-RDEPEND=">=dev-lang/perl-5.6"
-
-DEPEND="${RDEPEND}
-	!<dev-util/gtk-doc-${MAJ_PV}
-	app-text/docbook-xml-dtd:4.3
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
-	>=dev-util/pkgconfig-0.19"
+# pkg-config is used by gtkdoc-rebase at runtime
+RDEPEND=">=dev-lang/perl-5.6
+	dev-util/pkgconfig"
+DEPEND="${RDEPEND} 
+	!<dev-util/gtk-doc-${MAJ_PV}"
 
 # This ebuild doesn't even compile anything, causing tests to fail when updating (bug #316071)
 RESTRICT="test"
@@ -36,7 +33,15 @@ S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README TODO"
 
 src_configure() {
-	econf --with-xml-catalog="${EPREFIX}"/etc/xml/catalog
+	# Duplicate autoconf checks so we don't have to call configure
+	local PERL=$(type -P perl)
+
+	test -n "${PERL}" || die "Perl not found!"
+	"${PERL}" -e "require v5.6.0" || die "perl >= 5.6.0 is required for gtk-doc"
+
+	# Replicate AC_SUBST
+	sed -e "s:@PERL@:${PERL}:g" -e "s:@VERSION@:${PV}:g" \
+		"${S}/gtkdoc-rebase.in" > "${S}/gtkdoc-rebase" || die "sed failed!"
 }
 
 src_compile() {
@@ -44,6 +49,7 @@ src_compile() {
 }
 
 src_install() {
+	fperms +x gtkdoc-rebase
 	exeinto /usr/bin/
 	doexe gtkdoc-rebase || die "doexe failed"
 
