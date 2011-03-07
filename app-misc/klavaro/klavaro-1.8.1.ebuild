@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.8.1.ebuild,v 1.1 2011/02/23 15:14:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.8.1.ebuild,v 1.2 2011/03/07 12:12:47 nirbheek Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-misc/curl
-	>=x11-libs/gtk+-2.16.6
+	>=x11-libs/gtk+-2.16.6:2
 	x11-libs/gtkdatabox"
 
 DEPEND="${RDEPEND}
