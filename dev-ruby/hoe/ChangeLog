@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.109 2011/03/01 20:51:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.110 2011/03/07 11:58:42 armin76 Exp $
+
+  07 Mar 2011; Raúl Porcel <armin76@gentoo.org> hoe-2.5.0.ebuild,
+  hoe-2.6.0-r1.ebuild, hoe-2.8.0.ebuild, hoe-2.9.0.ebuild, hoe-2.9.1.ebuild:
+  Add ~s390/~sh
 
   01 Mar 2011; Jeroen Roovers <jer@gentoo.org> hoe-2.8.0.ebuild:
   Stable for HPPA (bug #354481).
