@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-mutt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.1 2011/02/05 20:41:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.2 2011/03/07 02:46:52 blueness Exp $
+
+*selinux-mutt-2.20101213-r2 (07 Mar 2011)
+
+  07 Mar 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/add-apps-mutt-r2.patch, +selinux-mutt-2.20101213-r2.ebuild:
+  Allow mutt / gpg interaction
 
   05 Feb 2011; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Initial commit to portage.
