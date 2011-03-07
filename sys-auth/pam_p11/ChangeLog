@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_p11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.31 2011/02/27 20:46:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.32 2011/03/07 20:55:19 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> pam_p11-0.1.5-r1.ebuild:
+  Stable for HPPA (bug #356229).
 
   27 Feb 2011; Markos Chandras <hwoarang@gentoo.org> pam_p11-0.1.5-r1.ebuild:
   Stable on amd64 wrt bug #356229
