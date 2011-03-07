@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.46 2011/02/24 18:39:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.47 2011/03/07 20:33:08 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> vala-0.10.3.ebuild:
+  Stable for HPPA (bug #353436).
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> vala-0.10.3.ebuild:
   x86 stable per bug 353436
