@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.29 2011/03/07 05:02:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.30 2011/03/07 12:40:49 jlec Exp $
+
+  07 Mar 2011; Justin Lecher <jlec@gentoo.org> gretl-1.9.4.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *gretl-1.9.4 (07 Mar 2011)
 
