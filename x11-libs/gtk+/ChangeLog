@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.490 2011/02/27 09:35:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.491 2011/03/07 20:23:07 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> gtk+-2.22.1-r1.ebuild:
+  Stable for HPPA (bug #353436).
 
   27 Feb 2011; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.1.ebuild:
   Inherit autotools (bug #356631 by Diego Elio Pettenò).
