@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ganeti-htools-0.2.8.ebuild,v 1.2 2011/02/16 21:41:39 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ganeti-htools-0.2.8.ebuild,v 1.3 2011/03/07 19:00:05 ramereth Exp $
 
 EAPI="2"
 
@@ -20,7 +20,8 @@ DEPEND="dev-lang/ghc
 	dev-haskell/json
 	dev-haskell/curl
 	dev-haskell/network"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!>=app-emulation/ganeti-2.4"
 
 src_prepare() {
 	# htools does not currently compile cleanly with ghc-6.12+, so remove this
