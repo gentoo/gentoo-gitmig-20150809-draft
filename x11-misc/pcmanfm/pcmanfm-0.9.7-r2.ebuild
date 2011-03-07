@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r2.ebuild,v 1.8 2011/01/22 13:35:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.7-r2.ebuild,v 1.9 2011/03/07 20:31:04 klausman Exp $
 
 EAPI="2"
 inherit eutils fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc x86"
+KEYWORDS="~alpha amd64 arm ppc x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.18:2
