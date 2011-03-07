@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.27.02.ebuild,v 1.4 2010/11/14 16:26:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/minuit-5.28.00.ebuild,v 1.1 2011/03/07 05:28:28 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils toolchain-funcs
 
 MY_PN=Minuit2
@@ -17,55 +17,44 @@ SRC_URI="http://seal.web.cern.ch/seal/MathLibs/${MY_PN}/${MY_PN}-${PV}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc openmp"
+IUSE="doc openmp static-libs"
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
-pkg_setup() {
-	if use openmp && ! tc-has-openmp; then
-		ewarn "You are using gcc built without openmp"
-		ewarn "Switch CXX to an OpenMP capable compiler"
-		die "Need openmp"
-	fi
-}
-
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${PN}-5.27.02-asneeded.patch
 	rm config/m4/ac_openmp.m4
 	AT_M4DIR="config/m4" eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable openmp)
+	econf \
+		$(use_enable static-libs static) \
+		$(use_enable openmp)
 }
 
 src_compile() {
-	emake || die "emake failed"
-	if use doc; then
-		emake docs || die "emake docs failed"
-	fi
+	emake
+	use doc && emake docs
 }
 
 src_test() {
-	emake check || die "emake check failed"
-	# make check only compiles the tests. run them
-	for d in test/Mn*; do
-		cd "${S}"/${d}
-		for t in test_*; do
+	emake check
+	cd test/MnTutorial
+	local t
+	for t in test_*; do
 			./${t} || die "${t} failed"
-		done
 	done
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	insinto /usr/share/doc/${PF}/MnTutorial
 	doins test/MnTutorial/*.{h,cxx}
 	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins "${DISTDIR}"/mn*.pdf || die "doins failed"
-		dohtml -r doc/html/* || die "dohtml failed"
+		dodoc "${DISTDIR}"/mn*.pdf
+		dohtml -r doc/html/*
 	fi
 }

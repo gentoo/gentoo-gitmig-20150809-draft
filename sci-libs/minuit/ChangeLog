@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/minuit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/ChangeLog,v 1.15 2010/11/14 16:26:19 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minuit/ChangeLog,v 1.16 2011/03/07 05:28:28 bicatali Exp $
+
+*minuit-5.28.00 (07 Mar 2011)
+
+  07 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> -minuit-5.27.02.ebuild,
+  +minuit-5.28.00.ebuild:
+  Version bump. Added static-libs flag.
 
   14 Nov 2010; Justin Lecher <jlec@gentoo.org> minuit-5.27.02.ebuild:
   Keyworded for ~-linux prefix
