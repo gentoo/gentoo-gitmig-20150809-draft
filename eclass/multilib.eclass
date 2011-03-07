@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.79 2010/08/14 21:31:29 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.80 2011/03/07 02:46:28 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -581,7 +581,7 @@ multilib_env() {
 			export CHOST_x86=${CTARGET/x86_64/i686}
 			export CTARGET_x86=${CHOST_x86}
 			export CDEFINE_x86="__i386__"
-			export LIBDIR_x86="lib"
+			export LIBDIR_x86="lib32"
 
 			export CFLAGS_amd64=${CFLAGS_amd64--m64}
 			export CHOST_amd64=${CTARGET}
