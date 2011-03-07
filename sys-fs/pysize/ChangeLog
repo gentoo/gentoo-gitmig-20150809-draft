@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/pysize
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.1 2010/07/11 15:16:05 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.2 2011/03/07 13:12:11 jlec Exp $
+
+  07 Mar 2011; Justin Lecher <jlec@gentoo.org> pysize-0.2.ebuild:
+  Correct Slots for gtk 3 introduction to tree, keyworded for prefix linux
 
 *pysize-0.2 (11 Jul 2010)
 

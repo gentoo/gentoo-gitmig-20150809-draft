@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/pysize-0.2.ebuild,v 1.1 2010/07/11 15:16:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/pysize-0.2.ebuild,v 1.2 2011/03/07 13:12:11 jlec Exp $
 
 EAPI="3"
 
@@ -16,11 +16,11 @@ SRC_URI="http://guichaz.free.fr/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="gtk ncurses psyco"
 
 DEPEND="
-	gtk? ( dev-python/pygtk )
+	gtk? ( dev-python/pygtk:2 )
 	ncurses? ( sys-libs/ncurses )
 	psyco? ( dev-python/psyco )"
 RDEPEND="${DEPEND}"
