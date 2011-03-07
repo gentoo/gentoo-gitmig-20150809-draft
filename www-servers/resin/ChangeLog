@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/resin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.104 2011/03/03 09:09:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.105 2011/03/07 09:31:09 hwoarang Exp $
+
+  07 Mar 2011; Markos Chandras <hwoarang@gentoo.org> resin-4.0.13-r1.ebuild:
+  Stable on amd64 wrt bug #353881
 
   03 Mar 2011; Thomas Kahle <tomka@gentoo.org> resin-4.0.13-r1.ebuild:
   x86 stable per bug 353881
