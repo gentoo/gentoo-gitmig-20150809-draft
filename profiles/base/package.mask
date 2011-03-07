@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.14 2011/03/07 02:31:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.15 2011/03/07 03:10:16 blueness Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -180,6 +180,7 @@ sec-policy/selinux-rpcbind
 sec-policy/selinux-rssh
 sec-policy/selinux-rtkit
 sec-policy/selinux-samba
+sec-policy/selinux-sasl
 sec-policy/selinux-screen
 sec-policy/selinux-sendmail
 sec-policy/selinux-shorewall
