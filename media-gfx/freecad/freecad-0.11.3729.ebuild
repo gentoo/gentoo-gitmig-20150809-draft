@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.11.3729.ebuild,v 1.1 2011/03/06 15:24:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.11.3729.ebuild,v 1.2 2011/03/07 02:23:21 mr_bones_ Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
@@ -72,7 +72,7 @@ src_configure() {
 
 src_compile() {
 	# the build system is generating extremely odd errors on parallel build
-	# seem like moc is trying to process non-existing files, resulting in 
+	# seem like moc is trying to process non-existing files, resulting in
 	# double namespace declarations Bla::Bla::Method in the moc_ files
 	MAKEOPTS="-j1" base_src_compile
 }
