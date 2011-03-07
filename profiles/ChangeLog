@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5110 2011/03/06 08:13:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5111 2011/03/07 02:31:24 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Mar 2011; Anthony G. Basile <blueness@gentoo.org> base/package.mask,
+  selinux/package.mask, selinux/v2refpolicy/package.mask:
+  Added maskings and unmaskings for sec-policy/selinux-courier.
 
   06 Mar 2011; Torsten Veller <tove@gentoo.org> package.mask:
   Mask perl-core/Module-Build for testing

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.13 2011/02/08 14:47:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.14 2011/03/07 02:31:24 blueness Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -58,6 +58,7 @@ sec-policy/selinux-clamav
 sec-policy/selinux-clockspeed
 sec-policy/selinux-consolekit
 sec-policy/selinux-corosync
+sec-policy/selinux-courier
 sec-policy/selinux-courier-imap
 sec-policy/selinux-cpucontrol
 sec-policy/selinux-cpufreqselector
