@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.29 2011/02/05 12:07:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.30 2011/03/07 02:43:30 blueness Exp $
+
+*selinux-gnupg-2.20101213-r1 (07 Mar 2011)
+
+  07 Mar 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-apps-gpg-r1.patch, +selinux-gnupg-2.20101213-r1.ebuild:
+  Allow gnupg / mutt interaction
 
 *selinux-gnupg-2.20101213 (05 Feb 2011)
 
