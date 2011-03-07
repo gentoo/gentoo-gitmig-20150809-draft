@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.51 2011/02/12 08:47:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.52 2011/03/07 12:14:11 armin76 Exp $
+
+  07 Mar 2011; Raúl Porcel <armin76@gentoo.org> rdoc-2.5.11.ebuild,
+  rdoc-3.4.ebuild, rdoc-3.5.ebuild, rdoc-3.5.1.ebuild, rdoc-3.5.3.ebuild:
+  Add ~arm/~s390/~sh
 
 *rdoc-3.5.3 (12 Feb 2011)
 
