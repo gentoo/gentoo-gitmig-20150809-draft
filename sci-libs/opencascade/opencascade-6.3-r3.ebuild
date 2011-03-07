@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.3-r3.ebuild,v 1.1 2011/03/03 01:08:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.3-r3.ebuild,v 1.2 2011/03/07 22:51:38 dilfridge Exp $
 
-EAPI=4
+EAPI=3
 
 inherit autotools eutils check-reqs multilib java-pkg-opt-2
 
