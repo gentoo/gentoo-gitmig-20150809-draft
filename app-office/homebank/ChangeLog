@@ -1,6 +1,9 @@
 # ChangeLog for app-office/homebank
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.19 2011/03/01 00:58:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.20 2011/03/07 09:26:49 tomka Exp $
+
+  07 Mar 2011; Thomas Kahle <tomka@gentoo.org> homebank-4.3.ebuild:
+  x86 stable per bug 354853
 
   01 Mar 2011; Denis Dupeyron <calchan@gentoo.org> homebank-4.3.ebuild:
   Fixed tests, bug #295716. Thanks to Diego Elio Pettenò.
