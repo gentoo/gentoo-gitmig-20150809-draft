@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.88 2010/12/21 07:48:15 grozin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.89 2011/03/07 12:57:33 jlec Exp $
+
+  07 Mar 2011; Justin Lecher <jlec@gentoo.org> texmacs-1.0.7.2.ebuild,
+  texmacs-1.0.7.8.ebuild, texmacs-1.0.7.9.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
 *texmacs-1.0.7.9 (21 Dec 2010)
 

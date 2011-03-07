@@ -1,21 +1,23 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.2.ebuild,v 1.8 2010/10/31 05:15:44 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.2.ebuild,v 1.9 2011/03/07 12:57:33 jlec Exp $
 EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
-DESCRIPTION="Wysiwyg text processor with high-quality maths"
 
-SRC_URI="ftp://ftp.texmacs.org/pub/TeXmacs/targz/${MY_P}.tar.gz
+DESCRIPTION="Wysiwyg text processor with high-quality maths"
+HOMEPAGE="http://www.texmacs.org/"
+SRC_URI="
+	ftp://ftp.texmacs.org/pub/TeXmacs/targz/${MY_P}.tar.gz
 	ftp://ftp.texmacs.org/pub/TeXmacs/targz/TeXmacs-600dpi-fonts.tar.gz"
 
-HOMEPAGE="http://www.texmacs.org/"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="imlib jpeg netpbm svg spell"
 KEYWORDS="alpha amd64 ppc sparc x86"
 
-RDEPEND="dev-scheme/guile[deprecated]
+RDEPEND="
+	dev-scheme/guile[deprecated]
 	virtual/latex-base
 	app-text/ghostscript-gpl
 	media-libs/freetype
@@ -23,10 +25,9 @@ RDEPEND="dev-scheme/guile[deprecated]
 	x11-apps/xmodmap
 	imlib? ( media-libs/imlib2 )
 	jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) )
-	svg? ( || ( media-gfx/inkscape gnome-base/librsvg ) )
+	svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
 	netpbm? ( media-libs/netpbm )
 	spell? ( || ( >=app-text/ispell-3.2 >=app-text/aspell-0.5 ) )"
-
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
