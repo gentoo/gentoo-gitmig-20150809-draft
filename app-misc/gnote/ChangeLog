@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gnote
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.9 2010/11/11 19:21:56 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.10 2011/03/07 00:18:50 nirbheek Exp $
+
+  07 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gnote-0.7.2.ebuild,
+  gnote-0.7.3.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
 *gnote-0.7.3 (11 Nov 2010)
 
