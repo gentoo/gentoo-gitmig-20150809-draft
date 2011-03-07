@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.7 2011/01/30 17:30:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.8 2011/03/07 00:07:04 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,9 +16,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ~ppc ~ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc python spell"
 
-RDEPEND=">=gnome-base/gconf-2
+RDEPEND=">=gnome-base/gconf-2:2
 	>=x11-libs/libSM-1.0
-	>=dev-libs/libxml2-2.5.0
+	>=dev-libs/libxml2-2.5.0:2
 	>=dev-libs/glib-2.23.1:2
 	>=x11-libs/gtk+-2.19.0:2
 	>=x11-libs/gtksourceview-2.9.7:2.0

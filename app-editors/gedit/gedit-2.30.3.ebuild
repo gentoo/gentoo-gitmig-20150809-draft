@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.3.ebuild,v 1.10 2010/10/17 15:27:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.3.ebuild,v 1.11 2011/03/07 00:07:04 nirbheek Exp $
 
+EAPI="1"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="python? 2:2.5"
 
@@ -15,20 +16,20 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc python spell"
 
-RDEPEND=">=gnome-base/gconf-2
+RDEPEND=">=gnome-base/gconf-2:2
 	>=x11-libs/libSM-1.0
-	>=dev-libs/libxml2-2.5.0
-	>=dev-libs/glib-2.23.1
-	>=x11-libs/gtk+-2.19.0
-	>=x11-libs/gtksourceview-2.9.7
+	>=dev-libs/libxml2-2.5.0:2
+	>=dev-libs/glib-2.23.1:2
+	>=x11-libs/gtk+-2.19.0:2
+	>=x11-libs/gtksourceview-2.9.7:2.0
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35
 	)
 	python? (
-		>=dev-python/pygobject-2.15.4
-		>=dev-python/pygtk-2.12
-		>=dev-python/pygtksourceview-2.9.2
+		>=dev-python/pygobject-2.15.4:2
+		>=dev-python/pygtk-2.12:2
+		>=dev-python/pygtksourceview-2.9.2:2
 	)"
 
 DEPEND="${RDEPEND}
