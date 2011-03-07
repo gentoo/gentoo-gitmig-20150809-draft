@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.185 2011/02/24 20:35:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.186 2011/03/07 20:39:34 jer Exp $
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> libgphoto2-2.4.10.ebuild:
+  Stable for HPPA (bug #353436).
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org> libgphoto2-2.4.10.ebuild:
   x86 stable per bug 353436
