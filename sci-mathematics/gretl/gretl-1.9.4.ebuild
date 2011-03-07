@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.0-r1.ebuild,v 1.2 2011/03/02 21:06:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.4.ebuild,v 1.1 2011/03/07 05:02:52 bicatali Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -14,18 +14,17 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="accessibility emacs gmp gnome gtk nls odbc openmp readline R sourceview"
+IUSE="accessibility emacs gnome gtk nls odbc openmp readline R sourceview static-libs"
 
-RDEPEND="
-	dev-libs/libxml2:2
+RDEPEND="dev-libs/libxml2
 	dev-libs/glib:2
 	>=sci-visualization/gnuplot-4.2
 	virtual/lapack
 	virtual/latex-base
 	sci-libs/fftw:3.0
+	dev-libs/gmp
 	dev-libs/mpfr
 	readline? ( sys-libs/readline )
-	gmp? ( dev-libs/gmp )
 	accessibility? ( app-accessibility/flite )
 	gtk?  ( sci-visualization/gnuplot[gd]
 			media-libs/gd[png]
@@ -37,7 +36,7 @@ RDEPEND="
 			 gnome-base/libgnomeprintui:2.2
 			 gnome-base/gconf:2 )
 	R? ( dev-lang/R )
-	sourceview? ( x11-libs/gtksourceview:2.0 )
+	sourceview? ( x11-libs/gtksourceview )
 	odbc? ( dev-db/unixODBC )
 	emacs? ( virtual/emacs )"
 
@@ -57,15 +56,6 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.7.5-locale.patch \
-		"${FILESDIR}"/${P}-ldflags.patch
-	# fix parallel make reported upstream
-	sed -i \
-		-e 's/make -C/$(MAKE) -C/g' \
-		$(find . -name Makefile.in) || die
-}
-
 src_configure() {
 	local myconf
 	if use gtk; then
@@ -77,11 +67,13 @@ src_configure() {
 	fi
 
 	econf \
+		--disable-rpath \
+		--enable-shared \
 		--with-mpfr \
 		$(use_enable nls) \
 		$(use_enable openmp) \
+		$(use_enable static-libs static) \
 		$(use_with readline) \
-		$(use_with gmp) \
 		$(use_with odbc) \
 		$(use_with accessibility audio) \
 		$(use_with R libR) \
