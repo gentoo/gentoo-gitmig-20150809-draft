@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.14 2011/01/29 18:31:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.15 2011/03/07 13:00:40 jlec Exp $
+
+  07 Mar 2011; Justin Lecher <jlec@gentoo.org> terminator-0.95.ebuild:
+  Correct Slots for gtk 3 introduction to tree
 
   29 Jan 2011; Justin Lecher <jlec@gentoo.org> terminator-0.95.ebuild:
   Moved dependencies from dev-python/gnome-python to splitted ones
