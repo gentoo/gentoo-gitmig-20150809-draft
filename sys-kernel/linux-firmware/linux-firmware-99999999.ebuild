@@ -1,11 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.5 2011/02/19 20:30:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.6 2011/03/07 18:35:07 chithanh Exp $
 
 EAPI=3
-
-DESCRIPTION="Linux firmware files"
-HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/dwmw2/firmware"
 
 if [[ ${PV} == 99999999* ]]; then
 	inherit git
@@ -14,6 +11,9 @@ if [[ ${PV} == 99999999* ]]; then
 else
 	SRC_URI="mirror://kernel/linux/kernel/people/dwmw2/firmware/${P}.tar.bz2"
 fi
+
+DESCRIPTION="Linux firmware files"
+HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/dwmw2/firmware"
 
 LICENSE="GPL-1 GPL-2 GPL-3 BSD freedist"
 KEYWORDS=""

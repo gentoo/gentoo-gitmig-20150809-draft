@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.7 2011/02/19 20:30:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.8 2011/03/07 18:35:07 chithanh Exp $
+
+  07 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  linux-firmware-20110128.ebuild, linux-firmware-99999999.ebuild:
+  Set DESCRIPTION later so that the eclass will not override it.
 
 *linux-firmware-20110128 (19 Feb 2011)
 
