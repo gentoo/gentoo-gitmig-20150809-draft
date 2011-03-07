@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/u-boot-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.15 2011/03/06 00:26:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.16 2011/03/07 11:33:22 armin76 Exp $
+
+  07 Mar 2011; Raúl Porcel <armin76@gentoo.org> u-boot-tools-2010.06.ebuild:
+  x86stable wrt #355671
 
   06 Mar 2011; Michael Weber <xmw@gentoo.org> u-boot-tools-2010.06.ebuild:
   arm stable (bug 355671)
