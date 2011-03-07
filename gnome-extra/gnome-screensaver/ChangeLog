@@ -1,6 +1,22 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.133 2011/03/07 09:27:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.134 2011/03/07 14:31:25 pacho Exp $
+
+*gnome-screensaver-2.30.2-r1 (07 Mar 2011)
+
+  07 Mar 2011; Pacho Ramos <pacho@gentoo.org>
+  +gnome-screensaver-2.30.2-r1.ebuild,
+  +files/gnome-screensaver-2.30.2-libxklavier-configure.patch,
+  +files/gnome-screensaver-2.30.2-name-manager.patch,
+  +files/gnome-screensaver-2.30.2-nvidia-fade.patch,
+  +files/gnome-screensaver-2.30.2-nvidia-fade2.patch,
+  +files/gnome-screensaver-2.30.2-popsquares-header.patch,
+  +files/gnome-screensaver-2.30.2-prevent-twice.patch:
+  Revision bump with some fixes: The dialog uses libxklavier directly, so link
+  against it (upstream bug #634949); fix QA warning (upstream bug #637676 by
+  David J Cozatt); fix fading on nvidia setups (upstream bugs #610294 and
+  #618932); don't run twice (upstream bug #642462), don't user name owner
+  proxies for SessionManager (upstream bug #611207).
 
   07 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-screensaver-2.30.2.ebuild,
