@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/identica-mode-1.1.ebuild,v 1.1 2010/11/27 15:26:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/identica-mode-1.1-r1.ebuild,v 1.1 2011/03/07 17:23:42 ulm Exp $
 
 EAPI=3
 NEED_EMACS=23
@@ -17,7 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ELISP_PATCHES="${P}-info-dir.patch"
 ELISP_TEXINFO="doc/${PN}.texi"
 SITEFILE="50${PN}-gentoo.el"
 
