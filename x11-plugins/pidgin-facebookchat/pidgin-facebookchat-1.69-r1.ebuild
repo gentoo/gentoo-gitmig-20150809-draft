@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.69-r1.ebuild,v 1.1 2010/12/20 23:20:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.69-r1.ebuild,v 1.2 2011/03/07 10:24:47 voyageur Exp $
 
 inherit toolchain-funcs multilib
 
@@ -26,6 +26,7 @@ pkg_setup() {
 	ewarn "This plugin is not mandatory anymore for Facebook chat"
 	ewarn "as it is now available via XMPP, see:"
 	ewarn "http://blog.facebook.com/blog.php?post=297991732130"
+	ewarn "http://code.google.com/p/pidgin-facebookchat/wiki/XMPPDifferences"
 	ewarn "You can still use this plugin for extra features if you want"
 	ewarn "Future versions will use XMPP and provide these features at the same time"
 }
