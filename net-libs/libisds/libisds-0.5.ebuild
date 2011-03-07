@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-0.5.ebuild,v 1.1 2011/03/03 15:20:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-0.5.ebuild,v 1.2 2011/03/07 15:23:18 scarabeus Exp $
 
 EAPI=3
 
@@ -20,14 +20,14 @@ fi
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="debug nls static-libs test"
+IUSE="+curl debug nls static-libs test"
 
 COMMON_DEPEND="
 	app-crypt/gpgme
 	dev-libs/expat
 	dev-libs/libgcrypt
 	dev-libs/libxml2
-	net-misc/curl[ssl]
+	curl? ( net-misc/curl[ssl] )
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
@@ -47,6 +47,7 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		"--disable-fatalwarnings"
+		$(use_with curl libcurl)
 		$(use_enable debug)
 		$(use_enable nls)
 		$(use_enable static-libs static)

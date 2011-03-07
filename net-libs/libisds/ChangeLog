@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libisds
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.7 2011/03/03 15:20:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.8 2011/03/07 15:23:18 scarabeus Exp $
+
+  07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> libisds-0.5.ebuild,
+  libisds-9999.ebuild:
+  Add curl useflag, since it is optional.
 
 *libisds-0.5 (03 Mar 2011)
 
