@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2.ebuild,v 1.4 2011/02/26 14:34:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2.ebuild,v 1.5 2011/03/07 11:38:35 armin76 Exp $
 
 EAPI=2
 
@@ -91,6 +91,8 @@ src_configure() {
 	# In many places aliasing rules are broken; play it safe
 	# as it's risky with newer compilers to leave it as it is.
 	append-flags -fno-strict-aliasing
+	# SuperH needs this
+	use sh && append-flags -mieee
 
 	# Socks support via dante
 	if use socks5 ; then
