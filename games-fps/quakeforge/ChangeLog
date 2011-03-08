@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quakeforge
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.24 2009/11/21 07:30:59 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.25 2011/03/08 17:05:10 scarabeus Exp $
+
+  08 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> quakeforge-0.5.5.ebuild,
+  quakeforge-0.5.5-r2.ebuild:
+  Drop 3dfx/video-cards-tdfx stuff as the glide-v3 is masked.
 
   20 Nov 2009; Alfredo Tupone <tupone@gentoo.org> quakeforge-0.5.5.ebuild,
   quakeforge-0.5.5-r2.ebuild, +files/quakeforge-0.5.5-noWerror.patch:

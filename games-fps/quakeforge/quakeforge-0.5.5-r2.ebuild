@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.6 2009/11/20 16:57:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.7 2011/03/08 17:05:10 scarabeus Exp $
 
 EAPI=2
 inherit base eutils autotools games
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/quake/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="cdinstall debug fbcon opengl sdl svga X ncurses vorbis zlib ipv6 xv dga alsa oss video_cards_tdfx"
+IUSE="cdinstall debug fbcon opengl sdl svga X ncurses vorbis zlib ipv6 xv dga alsa oss"
 RESTRICT="userpriv"
 
-RDEPEND="video_cards_tdfx? ( media-libs/glide-v3 )
+RDEPEND="
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
@@ -68,7 +68,6 @@ src_configure() {
 		|| debugopts="--disable-debug --disable-profile"
 
 	local clients=${QF_CLIENTS}
-	use video_cards_voodoo && clients="${clients},3dfx"
 	use fbcon && clients="${clients},fbdev"
 	use opengl && clients="${clients},glx"
 	use sdl && clients="${clients},sdl,sdl32"
