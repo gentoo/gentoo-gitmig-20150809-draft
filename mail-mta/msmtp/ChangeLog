@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.93 2011/03/05 12:33:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.94 2011/03/08 12:06:01 tomka Exp $
+
+  08 Mar 2011; Thomas Kahle <tomka@gentoo.org> msmtp-1.4.23.ebuild:
+  x86 stable per bug 356937
 
   05 Mar 2011; Brent Baude <ranger@gentoo.org> msmtp-1.4.23.ebuild:
   Marking msmtp-1.4.23 ppc for bug 356937
