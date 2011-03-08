@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.126 2011/03/07 18:50:00 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.127 2011/03/08 10:28:48 hwoarang Exp $
+
+  08 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  dialog-1.1.20100428.ebuild:
+  Stable on amd64 wrt bug #352092
 
   07 Mar 2011; Thomas Kahle <tomka@gentoo.org> dialog-1.1.20100428.ebuild:
   x86 stable per bug 352092
