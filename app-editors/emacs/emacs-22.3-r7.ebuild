@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r7.ebuild,v 1.2 2011/02/02 17:37:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r7.ebuild,v 1.3 2011/03/08 08:30:00 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -137,14 +137,13 @@ src_configure() {
 		myconf="${myconf} --without-x"
 	fi
 
-	myconf="${myconf} $(use_with hesiod)"
-	myconf="${myconf} $(use_with kerberos) $(use_with kerberos kerberos5)"
-
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		--without-carbon \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
+		$(use_with hesiod) \
+		$(use_with kerberos) $(use_with kerberos kerberos5) \
 		${myconf}
 }
 
