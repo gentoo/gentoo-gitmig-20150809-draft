@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.94 2011/01/14 22:07:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.95 2011/03/08 19:13:41 mr_bones_ Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -33,6 +33,7 @@ app-emulation/emul-linux-x86-cpplibs
 app-emulation/emul-linux-x86-gtklibs
 app-emulation/emul-linux-x86-gtkmmlibs
 app-emulation/emul-linux-x86-medialibs
+app-emulation/emul-linux-x86-motif
 app-emulation/emul-linux-x86-opengl
 app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
@@ -124,6 +125,7 @@ games-fps/ut2003-demo
 games-fps/ut2004-demo
 games-puzzle/hoh-bin
 games-roguelike/adom
+games-rpg/eschalon-book-1-demo
 games-rpg/nwmouse
 games-rpg/nwmovies
 games-rpg/nwn
@@ -190,7 +192,9 @@ www-client/firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
 =www-plugins/adobe-flash-10.1*
+=www-plugins/adobe-flash-10.2*
 www-plugins/nspluginwrapper
+www-plugins/google-talkplugin
 
 # AMD64 Team; <amd64@gentoo.org>
 # grub is not available on no-multilib-profiles; use sys-boot/grub-static
