@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.1.2.ebuild,v 1.4 2011/02/12 16:30:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.1.2.ebuild,v 1.5 2011/03/08 18:00:45 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
