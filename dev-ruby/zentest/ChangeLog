@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.89 2011/02/19 08:28:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.90 2011/03/08 07:42:20 tomka Exp $
+
+  08 Mar 2011; Thomas Kahle <tomka@gentoo.org> zentest-4.4.2.ebuild:
+  x86 stable per bug 354609
 
 *zentest-4.5.0 (19 Feb 2011)
 
