@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/rotix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.13 2010/07/16 23:20:29 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rotix/ChangeLog,v 1.14 2011/03/08 03:00:38 abcd Exp $
+
+  08 Mar 2011; Jonathan Callen <abcd@gentoo.org> rotix-0.83.ebuild,
+  +files/rotix-0.83-interix.patch:
+  Merge prefix support from prefix overlay
 
   16 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   files/0.83-respect-CFLAGS-and-dont-strip.patch, rotix-0.83.ebuild,
