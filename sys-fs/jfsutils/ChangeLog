@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.58 2011/02/06 10:55:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.59 2011/03/08 05:54:58 radhermit Exp $
+
+*jfsutils-1.1.15 (08 Mar 2011)
+
+  08 Mar 2011; Tim Harder <radhermit@gentoo.org>
+  -files/jfsutils-1.1.11-double-close.patch,
+  -files/jfsutils-1.1.11-fsck-n.patch, +jfsutils-1.1.15.ebuild:
+  Version bump (bug #357807 by Matt McAdoo and Lars Wendler). Update to EAPI 2
+  and other minor cleanups.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> jfsutils-1.1.8.ebuild:
   Drop to ~mips
