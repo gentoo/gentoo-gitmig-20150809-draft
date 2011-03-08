@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.21 2011/01/24 21:04:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.22 2011/03/08 21:30:58 arfrever Exp $
 
 EAPI=2
 inherit eutils autotools toolchain-funcs
@@ -20,7 +20,7 @@ IUSE="doc examples mpi static-libs"
 
 RDEPEND="virtual/blas
 	virtual/lapack
-	mpi? ( virtual/mpi )"
+	mpi? ( virtual/mpi[fortran] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
