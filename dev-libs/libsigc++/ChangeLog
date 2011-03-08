@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.155 2011/01/30 18:02:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.156 2011/03/08 13:47:54 pacho Exp $
+
+*libsigc++-2.2.9 (08 Mar 2011)
+
+  08 Mar 2011; Pacho Ramos <pacho@gentoo.org> libsigc++-1.0.4-r3.ebuild,
+  libsigc++-1.2.7.ebuild, +files/libsigc++-1.2.7-fix-install.patch,
+  +libsigc++-2.2.9.ebuild:
+  Version bump fixing gcc-4.6 build (bug #354277 by Ryan Hill) and allowing
+  building of static libs (bug #289274 by Slava Gorbunov), also simplify
+  src_configure phase. Some fixes for libsigc++-1.2.7: don't try to install
+  duplicated files and use proper automake version (bug #346949 by Sirko
+  Schroeder), bump to eapi3, handle debug USE flag in a better way, fix
+  pkg_config phase (it wasn't being executed at all). Set RDEPEND and DEPEND on
+  all ebuilds to make repoman happy.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> libsigc++-2.2.7.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #348987
