@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgnomedb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.67 2010/07/20 15:35:47 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.68 2011/03/08 05:28:00 nirbheek Exp $
+
+  08 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  libgnomedb-1.2.2.ebuild, libgnomedb-3.0.0.ebuild, libgnomedb-3.1.2.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> libgnomedb-1.2.2.ebuild,
   libgnomedb-3.0.0.ebuild:

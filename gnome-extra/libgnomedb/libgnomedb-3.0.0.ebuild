@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.0.0.ebuild,v 1.12 2010/07/20 15:35:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.0.0.ebuild,v 1.13 2011/03/08 05:28:00 nirbheek Exp $
+
+EAPI="2"
 
 inherit gnome2
 
@@ -18,12 +20,12 @@ IUSE="doc"
 # etc.).
 #
 # There is no evolution-data-server support yet, only a check in configure.
-RDEPEND=">=x11-libs/gtk+-2.10
-	>=gnome-base/gconf-2
-	=gnome-extra/libgda-3*
+RDEPEND=">=x11-libs/gtk+-2.10:2
+	>=gnome-base/gconf-2:2
+	gnome-extra/libgda:3
 	>=gnome-base/libgnomecanvas-2
-	>=gnome-base/libglade-2
-	=x11-libs/gtksourceview-1*"
+	>=gnome-base/libglade-2:2.0
+	x11-libs/gtksourceview:1.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9

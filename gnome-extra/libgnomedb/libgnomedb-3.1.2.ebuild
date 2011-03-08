@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.1.2.ebuild,v 1.2 2010/01/20 22:16:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-3.1.2.ebuild,v 1.3 2011/03/08 05:28:00 nirbheek Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit gnome2
 
@@ -22,16 +22,16 @@ IUSE="doc"
 #
 # There is no evolution-data-server support yet, only a check in configure.
 # FIXME: automagic: goocanvas, graphviz, glade-3
-RDEPEND=">=x11-libs/gtk+-2.10
-	>=gnome-base/gconf-2
+RDEPEND=">=x11-libs/gtk+-2.10:2
+	>=gnome-base/gconf-2:2
 	gnome-extra/libgda:3
 	>=gnome-base/libgnomecanvas-2
-	>=gnome-base/libglade-2
-	x11-libs/gtksourceview:1
+	>=gnome-base/libglade-2:2.0
+	x11-libs/gtksourceview:1.0
 	>=dev-libs/libgcrypt-1.1.14
-	>=x11-libs/goocanvas-0.9
+	>=x11-libs/goocanvas-0.9:0
 	media-gfx/graphviz
-	>=dev-util/glade-3.1
+	>=dev-util/glade-3.1:3
 	app-text/iso-codes"
 
 DEPEND="${RDEPEND}
