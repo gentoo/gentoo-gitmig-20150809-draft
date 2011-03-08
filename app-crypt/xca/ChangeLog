@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.32 2011/01/07 17:07:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.33 2011/03/08 20:15:19 abcd Exp $
+
+  08 Mar 2011; Jonathan Callen <abcd@gentoo.org> xca-0.9.0.ebuild:
+  Add prefix keywords, inject $EPREFIX as needed
 
   07 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -xca-0.8.1.ebuild, -files/xca-0.8.1-qt_detection.patch:

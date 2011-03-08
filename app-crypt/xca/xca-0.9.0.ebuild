@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.9.0.ebuild,v 1.5 2011/01/07 16:39:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.9.0.ebuild,v 1.6 2011/03/08 20:15:19 abcd Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xca/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/openssl-0.9.8[-bindist]
@@ -29,15 +29,15 @@ src_configure() {
 	local LINUXDOC
 	use doc || LINUXDOC='touch $@ && true'
 
-	QTDIR=/usr \
+	QTDIR="${EPREFIX}/usr" \
 		STRIP="true" \
 		LINUXDOC="${LINUXDOC}" \
-		CC="$(tc-getCC)" \
+		CC="$(tc-getCXX)" \
 		LD="$(tc-getLD)" \
 		CFLAGS="${CXXFLAGS}" \
 		LDFLAGS="$(raw-ldflags)" \
-		prefix=/usr \
-		docdir=/usr/share/doc/${PF} \
+		prefix="${EPREFIX}/usr" \
+		docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		./configure || die	"configure failed"
 }
 
