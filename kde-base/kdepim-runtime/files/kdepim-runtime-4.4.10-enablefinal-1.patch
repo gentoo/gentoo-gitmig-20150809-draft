@@ -1,0 +1,18 @@
+--- libkdepim-copy/calendardiffalgo.cpp.orig	2011-01-01 19:19:25.798000269 +0100
++++ libkdepim-copy/calendardiffalgo.cpp	2011-01-01 19:14:15.918000268 +0100
+@@ -26,7 +26,6 @@
+ 
+ using namespace KPIM;
+ 
+-#ifndef KDE_USE_FINAL
+ static bool compareString( const QString &left, const QString &right )
+ {
+   if ( left.isEmpty() && right.isEmpty() )
+@@ -34,7 +33,6 @@
+   else
+     return left == right;
+ }
+-#endif
+ 
+ static QString toString( KCal::Attendee *attendee )
+ {

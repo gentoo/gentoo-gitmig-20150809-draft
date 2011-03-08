@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.29 2011/02/13 19:55:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.30 2011/03/08 22:03:40 dilfridge Exp $
+
+  08 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-runtime-4.4.10.ebuild,
+  +files/kdepim-runtime-4.4.10-enablefinal-1.patch,
+  +files/kdepim-runtime-4.4.10-enablefinal-2.patch:
+  Added fixes for kdeenablefinal problems, bug 350303. Not completely solved
+  yet.
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdepim-runtime-4.4.6.ebuild, -kdepim-runtime-4.4.7.ebuild,
