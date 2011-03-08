@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.11.ebuild,v 1.1 2011/02/16 10:30:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/tidy-ext-0.1.11.ebuild,v 1.2 2011/03/08 11:03:35 tomka Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -16,7 +16,7 @@ HOMEPAGE="http://github.com/carld/tidy"
 
 LICENSE="HTML-Tidy"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
