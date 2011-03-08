@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.15 2011/02/27 13:46:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.16 2011/03/08 12:28:13 scarabeus Exp $
+
+*libva-1.0.10 (08 Mar 2011)
+
+  08 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libva-1.0.10.ebuild,
+  +files/libva-dont-install-tests.patch:
+  Update to libva shipped by freedesktop. So we do the same as debian or
+  archlinux. Fixes bug #336854.
 
 *libva-0.32.0_p2 (27 Feb 2011)
 
