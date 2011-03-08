@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/spek
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.1 2010/10/04 23:26:39 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.2 2011/03/08 00:31:46 xmw Exp $
+
+  08 Mar 2011; Michael Weber <xmw@gentoo.org> spek-0.6.ebuild:
+  Change vala dependency to vala:0.10 (bug 338067)
 
 *spek-0.6 (04 Oct 2010)
 
