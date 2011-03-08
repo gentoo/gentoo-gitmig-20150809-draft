@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.807 2011/03/05 11:44:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.808 2011/03/08 03:05:44 dirtyepic Exp $
+
+  08 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-3.3.6-r1.ebuild,
+  gcc-3.4.6-r2.ebuild, gcc-4.0.4.ebuild, gcc-4.1.2.ebuild, gcc-4.2.4-r1.ebuild,
+  gcc-4.3.3-r2.ebuild, gcc-4.3.4.ebuild, gcc-4.3.5.ebuild, gcc-4.4.2.ebuild,
+  gcc-4.4.3-r3.ebuild, gcc-4.4.4-r2.ebuild, gcc-4.4.5.ebuild,
+  gcc-4.5.1-r1.ebuild, gcc-4.5.2.ebuild:
+  Lock down gtk+ dependencies.
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> gcc-4.4.5.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #354881
