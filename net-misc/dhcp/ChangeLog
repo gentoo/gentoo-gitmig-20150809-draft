@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.168 2011/03/05 23:59:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.169 2011/03/08 20:13:26 vapier Exp $
+
+  08 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/dhcrelay.init2:
+  Fix typo in dhcrelay init script #357935 by Milan Dadok.
 
 *dhcp-4.2.1 (05 Mar 2011)
 
