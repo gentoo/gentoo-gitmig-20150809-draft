@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.2.ebuild,v 1.4 2011/02/24 20:16:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.2.ebuild,v 1.5 2011/03/08 05:21:17 nirbheek Exp $
 
 EAPI="3"
 
@@ -20,16 +20,16 @@ KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 RDEPEND="
 	app-text/iso-codes
 	>=dev-libs/glib-2.16:2
-	>=dev-libs/libxml2-2
+	>=dev-libs/libxml2-2:2
 	dev-libs/libxslt
-	dev-libs/libunique
+	dev-libs/libunique:1
 	sys-libs/readline
 	sys-libs/ncurses
 	berkdb?   ( sys-libs/db )
 	!bindist? ( firebird? ( dev-db/firebird ) )
 	gtk? (
 		>=x11-libs/gtk+-2.12:2
-		canvas? ( x11-libs/goocanvas )
+		canvas? ( x11-libs/goocanvas:0 )
 		sourceview? ( x11-libs/gtksourceview:2.0 )
 		graphviz? ( media-gfx/graphviz )
 	)

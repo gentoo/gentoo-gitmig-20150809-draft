@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.4-r1.ebuild,v 1.8 2010/10/28 16:49:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.1.4-r1.ebuild,v 1.9 2011/03/08 05:21:17 nirbheek Exp $
 
 EAPI="2"
 
@@ -20,10 +20,10 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 # FIXME: autoconf is a hell of inconsistencies
 RDEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.16
-	>=dev-libs/libxml2-2
+	>=dev-libs/glib-2.16:2
+	>=dev-libs/libxml2-2:2
 	dev-libs/libxslt
-	dev-libs/libunique
+	dev-libs/libunique:1
 	sys-libs/readline
 	sys-libs/ncurses
 	>=net-libs/libsoup-2.24:2.4
@@ -31,8 +31,8 @@ RDEPEND="
 	freetds?  ( >=dev-db/freetds-0.62 )
 	!bindist? ( firebird? ( dev-db/firebird ) )
 	gtk? (
-		>=x11-libs/gtk+-2.12
-		canvas? ( x11-libs/goocanvas )
+		>=x11-libs/gtk+-2.12:2
+		canvas? ( x11-libs/goocanvas:0 )
 		sourceview? ( x11-libs/gtksourceview:2.0 )
 		graphviz? ( media-gfx/graphviz )
 	)
