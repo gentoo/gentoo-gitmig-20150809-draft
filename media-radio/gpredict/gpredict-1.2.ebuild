@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/gpredict-1.2.ebuild,v 1.3 2011/02/10 11:31:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gpredict/gpredict-1.2.ebuild,v 1.4 2011/03/08 05:28:15 nirbheek Exp $
 
 EAPI=2
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.22.0
-	>=x11-libs/gtk+-2.18.0
-	>=x11-libs/goocanvas-0.14
+RDEPEND=">=dev-libs/glib-2.22.0:2
+	>=x11-libs/gtk+-2.18.0:2
+	>=x11-libs/goocanvas-0.14:0
 	net-misc/curl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
