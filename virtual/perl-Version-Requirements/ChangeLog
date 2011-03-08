@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.2 2011/03/06 09:36:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.3 2011/03/08 14:34:30 jer Exp $
+
+  08 Mar 2011; Jeroen Roovers <jer@gentoo.org>
+  perl-Version-Requirements-0.101.20.ebuild:
+  Marked ~hppa (bug #357599).
 
   06 Mar 2011; Fabian Groffen <grobian@gentoo.org>
   perl-Version-Requirements-0.101.20.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-JSON-PP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.4 2011/03/08 08:12:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.5 2011/03/08 14:35:42 jer Exp $
+
+  08 Mar 2011; Jeroen Roovers <jer@gentoo.org> perl-JSON-PP-2.271.40.ebuild,
+  perl-JSON-PP-2.271.50.ebuild:
+  Marked ~hppa (bug #357599).
 
 *perl-JSON-PP-2.271.50 (08 Mar 2011)
 
