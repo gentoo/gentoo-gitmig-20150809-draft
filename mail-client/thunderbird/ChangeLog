@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.65 2011/03/06 18:56:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.66 2011/03/08 08:27:59 xarthisius Exp $
+
+  08 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> thunderbird-3.1.9.ebuild:
+  ppc/ppc64 stable wrt #357057
 
   06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> thunderbird-3.1.9.ebuild:
   Stable on amd64 wrt bug #357057
