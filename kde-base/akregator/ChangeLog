@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.179 2011/02/13 19:58:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.180 2011/03/08 22:27:36 dilfridge Exp $
+
+  08 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  akregator-4.4.10.ebuild, +files/akregator-4.4.10-enablefinal.patch:
+  Fix kdeenablefinal build, bug 350355
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -akregator-4.4.6.ebuild,
   -akregator-4.4.7.ebuild, -akregator-4.4.8.ebuild:
