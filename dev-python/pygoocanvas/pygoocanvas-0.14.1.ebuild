@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1.ebuild,v 1.6 2011/02/25 23:13:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1.ebuild,v 1.7 2011/03/08 05:13:15 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,10 +19,10 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="doc examples"
 
-RDEPEND=">=dev-python/pygobject-2.11.3
-	>=dev-python/pygtk-2.10.4
+RDEPEND=">=dev-python/pygobject-2.11.3:2
+	>=dev-python/pygtk-2.10.4:2
 	>=dev-python/pycairo-1.8.4
-	>=x11-libs/goocanvas-0.14"
+	>=x11-libs/goocanvas-0.14:0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (

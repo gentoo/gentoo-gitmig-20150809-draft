@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygoocanvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.18 2011/02/25 23:13:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.19 2011/03/08 05:13:15 nirbheek Exp $
+
+  08 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  pygoocanvas-0.14.1.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   25 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pygoocanvas-0.14.1.ebuild:
