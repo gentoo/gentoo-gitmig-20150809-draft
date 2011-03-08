@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0_rc5-r1.ebuild,v 1.1 2011/03/06 09:10:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0_rc5-r2.ebuild,v 1.1 2011/03/08 06:04:44 jlec Exp $
 
 EAPI="3"
 
@@ -54,8 +54,19 @@ src_prepare() {
 	sed -i -e 's:../qwtconfig:qwtconfig:' examples/examples.pro || die
 	sed \
 		-e 's/target doc/target/' \
+		-i src/src.pro || die
+
+	# Renaming lib to libqwt6.so to enable slotting
+	sed \
 		-e "/^TARGET/s:qwt:qwt6:g" \
 		-i src/src.pro || die
+	sed \
+		-e '/qtAddLibrary/s:qwt:qwt6:g' \
+		-i qwt.prf designer/designer.pro || die
+	sed \
+		-e 's:libqwt:libqwt6:g' \
+		-i qwtbuild.pri || die
+
 	use svg && echo >> qwtconfig.pri "CONFIG += QwtSvg"
 	cp *.pri examples/ || die
 }
@@ -68,12 +79,11 @@ src_compile() {
 
 src_install () {
 	qt4-r2_src_install
-	insinto /usr/share/doc/${PF}
 	if use doc; then
-		doman doc/man/*/* || die
-		doins -r doc/html || die
+		dohtml -r doc/html/* || die
 	fi
 	if use examples; then
+		insinto /usr/share/doc/${PF}
 		doins -r examples || die
 	fi
 }

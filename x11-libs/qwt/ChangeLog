@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.83 2011/03/06 09:10:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.84 2011/03/08 06:04:44 jlec Exp $
+
+*qwt-6.0.0_rc5-r2 (08 Mar 2011)
+
+  08 Mar 2011; Justin Lecher <jlec@gentoo.org> -qwt-6.0.0_rc5-r1.ebuild,
+  +qwt-6.0.0_rc5-r2.ebuild:
+  Link against lqwt6 instead of lqwt, do not try to install the man pages,
+  which aren't available, #357603
 
 *qwt-6.0.0_rc5-r1 (06 Mar 2011)
 
