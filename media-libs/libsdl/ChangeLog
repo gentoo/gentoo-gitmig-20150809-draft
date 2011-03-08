@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.171 2011/01/26 02:03:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.172 2011/03/08 22:09:48 mr_bones_ Exp $
+
+*libsdl-1.2.14-r6 (08 Mar 2011)
+
+  08 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +libsdl-1.2.14-r6.ebuild, +files/libsdl-1.2.14-glibc213.patch:
+  add upstream patch to fix a memcpy that should have been a memmove (bugs
+  #357687 and #354175)
 
 *libsdl-1.2.14-r5 (26 Jan 2011)
 
