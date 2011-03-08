@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/udunits
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.13 2010/12/01 16:48:33 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.14 2011/03/08 06:39:01 bicatali Exp $
+
+*udunits-2.1.21 (08 Mar 2011)
+
+  08 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> +udunits-2.1.21.ebuild:
+  Version bump
 
   01 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> -udunits-1.12.1.ebuild,
   -udunits-1.12.11.ebuild, -files/udunits-1.12.11-fixingtests.patch,
