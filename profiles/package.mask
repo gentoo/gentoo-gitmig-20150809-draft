@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12526 2011/03/08 11:57:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12527 2011/03/08 14:13:20 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -565,11 +565,6 @@ dev-haskell/hsshellscript
 # Tiziano Müller <dev-zero@gentoo.org> (13 Dec 2010)
 # Mask for testing the passenger-3.0.1 module
 =www-servers/nginx-0.8.53-r1
-
-# Justin Lecher <jlec@gentoo.org> (07 Dec 2010)
-# Obsolete and superseeded by dev-tcltk/tclxml-3*
-# bug 348024
-dev-tcltk/tclxml-expat
 
 # Gilles Dartiguelongue <eva@gentoo.org> (07 Dec 2010)
 # Part of GNOME 2.32 release set by breaks my machine as hell
