@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.7 2010/12/07 12:06:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.0-r1.ebuild,v 1.8 2011/03/08 14:12:08 jlec Exp $
 
 inherit eutils
 
@@ -16,8 +16,7 @@ KEYWORDS="alpha amd64 ~ppc sparc x86"
 DEPEND=">=dev-lang/tcl-8.2
 	>=dev-tcltk/tcllib-1.2
 	xml? ( >=dev-libs/libxml2-2.6.9 )
-	expat? ( dev-libs/expat )
-	!dev-tcltk/tclxml-expat"
+	expat? ( dev-libs/expat )"
 RDEPEND="${DEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"

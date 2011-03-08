@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.6 2011/01/05 20:36:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.1-r2.ebuild,v 1.7 2011/03/08 14:12:08 jlec Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -18,8 +18,7 @@ DEPEND=">=dev-lang/tcl-8.2
 	xml? ( >=dev-libs/libxml2-2.6.9 )
 	expat? (
 		dev-libs/expat
-		virtual/libiconv )
-	!dev-tcltk/tclxml-expat"
+		virtual/libiconv )"
 #	test? ( dev-tcltk/tclparser )
 RDEPEND="${DEPEND}"
 

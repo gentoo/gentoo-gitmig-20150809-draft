@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.2-r1.ebuild,v 1.8 2011/01/23 15:04:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/tclxml-3.2-r1.ebuild,v 1.9 2011/03/08 14:12:08 jlec Exp $
 
 EAPI="3"
 
@@ -21,7 +21,6 @@ DEPEND="
 	>=dev-tcltk/tcllib-1.2
 	>=dev-libs/libxml2-2.6.9
 	dev-libs/expat
-	!dev-tcltk/tclxml-expat
 	!dev-tcltk/tcldom"
 #	test? ( dev-tcltk/tclparser )
 RDEPEND="${DEPEND}"
