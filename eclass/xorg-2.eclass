@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.26 2011/03/02 15:40:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.27 2011/03/08 11:31:42 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -214,6 +214,7 @@ if has doc ${IUSE//+}; then
 		doc? (
 			app-text/xmlto
 			app-doc/doxygen
+			app-text/docbook-xml-dtd:4.1
 			app-text/docbook-xml-dtd:4.2
 			app-text/docbook-xml-dtd:4.3
 		)
