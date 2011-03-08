@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.0.ebuild,v 1.1 2011/02/08 20:57:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.2.ebuild,v 1.1 2011/03/08 12:35:12 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -68,13 +68,16 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.26.0-disable-locale-sensitive-test.patch"
 	epatch "${FILESDIR}/${PN}-2.26.0-disable-volumemonitor-broken-test.patch"
 
+	# Disable timeout test, it fails randomly, upstream knows about it
+	sed -e 's/\(.*timeout.*\)/#\1/g' -i glib/tests/Makefile.am || die
+
 	if ! use test; then
 		# don't waste time building tests
 		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
 			|| die "sed failed"
 	fi
 
-	# Needed for the punt-python-check patch.
+	# Needed for the punt-python-check patch, disabling timeout test
 	# Also needed to prevent croscompile failures, see bug #267603
 	eautoreconf
 
@@ -134,8 +137,8 @@ src_test() {
 	unset GSETTINGS_BACKEND # bug 352451
 
 	# Related test is a bit nitpicking
-	mkdir "$G_DBUS_COOKIE_SHA1_KEYRING_DIR/temp"
-	chmod 0700  "$G_DBUS_COOKIE_SHA1_KEYRING_DIR/temp"
+	mkdir "$G_DBUS_COOKIE_SHA1_KEYRING_DIR"
+	chmod 0700  "$G_DBUS_COOKIE_SHA1_KEYRING_DIR"
 
 	# Hardened: gdb needs this, bug #338891
 	if host-is-pax ; then
