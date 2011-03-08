@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/gtetrinet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.17 2009/01/29 02:36:31 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.18 2011/03/08 01:10:38 mr_bones_ Exp $
+
+*gtetrinet-0.7.11-r1 (08 Mar 2011)
+
+  08 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +gtetrinet-0.7.11-r1.ebuild, +files/gtetrinet-0.7.11-noesd.patch:
+  port from using esd to canberra - patch submitted by David Leverton via
+  bug #357675
 
   29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   gtetrinet-0.7.11.ebuild:
