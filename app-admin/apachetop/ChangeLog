@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.45 2011/03/04 01:09:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.46 2011/03/08 10:22:53 hwoarang Exp $
+
+  08 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  apachetop-0.12.6-r1.ebuild:
+  Stable on amd64 wrt bug #316875
 
   04 Mar 2011; Brent Baude <ranger@gentoo.org> apachetop-0.12.6-r1.ebuild:
   stable ppc, bug 316875
