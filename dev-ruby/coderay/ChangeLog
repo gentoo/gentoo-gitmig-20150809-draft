@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.30 2011/03/08 10:45:20 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.31 2011/03/08 18:08:05 hwoarang Exp $
+
+  08 Mar 2011; Markos Chandras <hwoarang@gentoo.org> coderay-0.9.6.ebuild:
+  Stable on amd64 wrt bug #353032
 
   08 Mar 2011; Thomas Kahle <tomka@gentoo.org> coderay-0.9.6.ebuild:
   x86 stable per bug 353032
