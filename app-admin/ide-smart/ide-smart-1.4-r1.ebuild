@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4-r1.ebuild,v 1.1 2010/09/20 20:33:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ide-smart-1.4-r1.ebuild,v 1.2 2011/03/08 17:08:17 jer Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="A tool to read SMART information from harddiscs"
-HOMEPAGE="http://www.linalco.com/comunidad.html"
+HOMEPAGE="http://www.linalco.com/comunidad.html http://www.linux-ide.org/smart.html"
 SRC_URI="http://www.linalco.com/ragnar/${P}.tar.gz"
 
 LICENSE="GPL-2"
