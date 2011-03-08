@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.11 2011/02/09 18:44:09 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.12 2011/03/08 18:27:02 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
@@ -37,20 +37,16 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 get_target() {
-	if use x86; then
-		if use sse2; then
-			echo "linux-x86-sse2"
-		elif use mmx; then
-			echo "linux-x86-mmx"
-		else
-			echo "linux-x86-any"
-		fi
-	elif use alpha; then
+	if use alpha; then
 		echo "linux-alpha"
-	elif use sparc; then
-		echo "linux-sparc"
 	elif use amd64; then
 		echo "linux-x86-64"
+	elif use ppc; then
+		#if use altivec; then
+		#	echo "linux-ppc32-altivec"
+		#else
+			echo "linux-ppc32"
+		#fi
 	elif use ppc64; then
 		#if use altivec; then
 		#	echo "linux-ppc32-altivec"
@@ -59,12 +55,16 @@ get_target() {
 		#fi
 		# linux-ppc64-altivec is slightly slower than linux-ppc32-altivec for most hash types.
 		# as per the Makefile comments
-	elif use ppc; then
-		#if use altivec; then
-		#	echo "linux-ppc32-altivec"
-		#else
-			echo "linux-ppc32"
-		#fi
+	elif use sparc; then
+		echo "linux-sparc"
+	elif use x86; then
+		if use sse2; then
+			echo "linux-x86-sse2"
+		elif use mmx; then
+			echo "linux-x86-mmx"
+		else
+			echo "linux-x86-any"
+		fi
 	else
 		echo "generic"
 	fi
@@ -77,7 +77,7 @@ src_prepare() {
 	if ! use minimal; then
 		epatch "${WORKDIR}/${MY_P}-${JUMBO}.diff"
 	fi
-	local PATCHLIST="${PATCHLIST} 1.7.6-cflags 1.7.3.1-mkdir-sandbox"
+	local PATCHLIST="1.7.6-cflags 1.7.3.1-mkdir-sandbox"
 
 	cd src
 	for p in ${PATCHLIST}; do
@@ -92,12 +92,12 @@ src_prepare() {
 }
 
 src_compile() {
-	local OMP=''
+	local OMP
 
 	use custom-cflags || strip-flags
-	echo '#define JOHN_SYSTEMWIDE 1' >> config.gentoo
-	echo '#define JOHN_SYSTEMWIDE_HOME "/etc/john"' >> config.gentoo
-	echo '#define JOHN_SYSTEMWIDE_EXEC "/usr/libexec/john"' >> config.gentoo
+	echo "#define JOHN_SYSTEMWIDE 1" >> config.gentoo
+	echo "#define JOHN_SYSTEMWIDE_HOME \"${EPREFIX}/etc/john\"" >> config.gentoo
+	echo "#define JOHN_SYSTEMWIDE_EXEC \"${EPREFIX}/usr/libexec/john\"" >> config.gentoo
 	append-flags -fPIC -fPIE -include "${S}"/config.gentoo
 	gcc-specs-pie && append-ldflags -nopie
 	use openmp && OMP="-fopenmp"
@@ -115,7 +115,7 @@ src_compile() {
 
 src_test() {
 	cd run
-	if [[ -f "/etc/john/john.conf" || -f "/etc/john/john.ini" ]]; then
+	if [[ -f "${EPREFIX}/etc/john/john.conf" || -f "${EPREFIX}/etc/john/john.ini" ]]; then
 		# This requires that MPI is actually 100% online on your system, which might not
 		# be the case, depending on which MPI implementation you are using.
 		#if use mpi; then
@@ -124,7 +124,7 @@ src_test() {
 
 		./john --test || die 'self test failed'
 	else
-		ewarn "selftest requires /etc/john/john.conf or /etc/john/john.ini"
+		ewarn "Tests require '${EPREFIX}/etc/john/john.conf' or '${EPREFIX}/etc/john/john.ini'"
 	fi
 }
 
@@ -133,7 +133,7 @@ src_install() {
 	dosbin run/john || die
 	newsbin run/mailer john-mailer || die
 
-	pax-mark -m "${D}"/usr/sbin/john || die
+	pax-mark -m "${ED}usr/sbin/john" || die
 
 	dosym john /usr/sbin/unafs || die
 	dosym john /usr/sbin/unique || die
