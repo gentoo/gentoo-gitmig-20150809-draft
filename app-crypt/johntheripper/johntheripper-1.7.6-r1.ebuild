@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.12 2011/03/08 18:27:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.13 2011/03/08 19:33:41 abcd Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 # This package can't be marked stable for ppc or ppc64 before bug 327211 is closed.
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="custom-cflags -minimal mmx openmp sse2"
 #Remove AltiVec USE flag. Appears to be an upstream issue.
 #IUSE="altivec custom-cflags -minimal mmx openmp sse2"
@@ -65,6 +65,22 @@ get_target() {
 		else
 			echo "linux-x86-any"
 		fi
+	elif use ppc-macos; then
+	# force AltiVec, the non-altivec profile contains ancient compiler cruft
+	#	if use altivec; then
+			echo "macosx-ppc32-altivec"
+	#	else
+	#		echo "macosx-ppc32"
+	#	fi
+		# for Tiger this can be macosx-ppc64
+	elif use x86-macos; then
+		if use sse2; then
+			echo "macosx-x86-sse2"
+		else
+			echo "macosx-x86"
+		fi
+	elif use x86-solaris; then
+		echo "solaris-x86-any"
 	else
 		echo "generic"
 	fi
