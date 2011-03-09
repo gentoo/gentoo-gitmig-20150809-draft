@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.22 2011/01/19 13:02:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.23 2011/03/09 14:03:13 pva Exp $
+
+*eiskaltdcpp-2.2.1 (09 Mar 2011)
+
+  09 Mar 2011; Peter Volkov <pva@gentoo.org> +eiskaltdcpp-2.2.1.ebuild:
+  Version bump: lua fixed, qt4-r2 eclass dropped; thank Nikoli for this job.
+  Fixed Unified sounds and sound USE flag, bug #357661, thank Ulrich Müller
+  for report.
 
   19 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   eiskaltdcpp-2.1.1.ebuild, eiskaltdcpp-2.2.0.ebuild, eiskaltdcpp-9999.ebuild:
