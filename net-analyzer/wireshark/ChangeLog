@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.274 2011/01/29 13:33:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.275 2011/03/09 14:29:54 pva Exp $
+
+*wireshark-1.4.4 (09 Mar 2011)
+
+  09 Mar 2011; Peter Volkov <pva@gentoo.org> -wireshark-1.2.13.ebuild,
+  +wireshark-1.4.4.ebuild:
+  Version bump, fixes security issue #354197, thank Paweł Hajdan, Jr. for
+  report. Don't depend on elinks, bug #352601, thank Nick Bowler for
+  investigation. Fixes security issue with dumpcap, bug #357237, thank
+  Sebastian Thorarensen for findings and report!
 
   29 Jan 2011; Raúl Porcel <armin76@gentoo.org> wireshark-1.4.3.ebuild:
   alpha/ia64/sparc stable wrt #350551
