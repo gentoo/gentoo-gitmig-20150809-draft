@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.752 2011/03/09 08:02:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.753 2011/03/09 08:10:37 vapier Exp $
+
+  09 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Always get multilib info via multilib_env and move the CFLAGS_abi value from
+  that explicitly into CFLAGS (rather than letting gcc-config do it magically
+  in the backend via the env).  This avoids ugly issues like distcc in a cross
+  or multilib setup freaking out (#330423) as well as ccache pollution of wrong
+  ELF types (such as #79519).  Further, it fixes multilib building for glibc
+  targets where the configure script detects the desired multilib based purely
+  on the compiler flags since the target is the same (e.g. mips64-xxx and n32
+  vs n64, and probably others).
 
   09 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/pkg_setup.eblit:
   Do not bail out of sanity compile tests when building from a binary package

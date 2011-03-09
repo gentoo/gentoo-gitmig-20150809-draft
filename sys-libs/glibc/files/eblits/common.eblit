@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.12 2010/09/30 06:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.13 2011/03/09 08:10:38 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -262,13 +262,14 @@ use_multiarch() {
 	version_is_at_least ${nver} ${bver}
 }
 
-# Setup toolchain variables that would be defined in the profiles for these archs.
+# Setup toolchain variables that had historically
+# been defined in the profiles for these archs.
 setup_env() {
 	# silly users
 	unset LD_RUN_PATH
 
+	multilib_env ${CTARGET_OPT:-${CTARGET}}
 	if is_crosscompile || tc-is-cross-compiler ; then
-		multilib_env ${CTARGET}
 		if ! use multilib ; then
 			MULTILIB_ABIS=${DEFAULT_ABI}
 		else
@@ -285,12 +286,10 @@ setup_env() {
 
 	export ABI=${ABI:-${DEFAULT_ABI:-default}}
 
-	if is_crosscompile || tc-is-cross-compiler ; then
-		local VAR=CFLAGS_${ABI}
-		# We need to export CFLAGS with abi information in them because
-		# glibc's configure script checks CFLAGS for some targets (like mips)
-		export CFLAGS="${!VAR} ${CFLAGS}"
-	fi
+	local VAR=CFLAGS_${ABI}
+	# We need to export CFLAGS with abi information in them because
+	# glibc's configure script checks CFLAGS for some targets (like mips)
+	export CFLAGS="${!VAR} ${CFLAGS}"
 }
 
 just_headers() {
