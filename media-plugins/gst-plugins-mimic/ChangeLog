@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-mimic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.24 2011/01/18 21:25:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.25 2011/03/09 14:16:04 xmw Exp $
+
+  09 Mar 2011; Michael Weber <xmw@gentoo.org> gst-plugins-mimic-0.10.19.ebuild:
+  ppc stable (bug 355719)
 
   18 Jan 2011; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-mimic-0.10.19.ebuild:
