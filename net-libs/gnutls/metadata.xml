@@ -5,7 +5,4 @@
 	<use>
 		<flag name="nettle">Use <pkg>dev-libs/nettle</pkg> as crypto backend</flag>
 	</use>
-	<use>
-		<flag name="valgrind">Enable testing using <pkg>dev-util/valgrind</pkg>.</flag>
-	</use>
 </pkgmetadata>
