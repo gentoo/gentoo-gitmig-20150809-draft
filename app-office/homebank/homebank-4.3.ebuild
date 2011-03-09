@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.3.ebuild,v 1.3 2011/03/07 09:26:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.3.ebuild,v 1.4 2011/03/09 13:15:33 hwoarang Exp $
 
 EAPI="2"
 
-inherit fdo-mime
+inherit eutils fdo-mime
 
 DESCRIPTION="Free, easy, personal accounting for everyone"
 HOMEPAGE="http://homebank.free.fr/index.php"
@@ -12,7 +12,7 @@ SRC_URI="http://homebank.free.fr/public/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="ofx"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=x11-libs/gtk+-2.14
 	>=dev-libs/glib-2.17
@@ -29,6 +29,7 @@ S="${WORKDIR}/${P/_/}"
 src_prepare() {
 	sed -i -e 's/true/TRUE/' src/import.c || die "sed failed"
 	echo -e "src/da_encoding.c\nsrc/hb_transaction.c" >> po/POTFILES.in || die "echo failed"
+	epatch "${FILESDIR}"/${P}-implicit-pointer.patch
 }
 
 src_configure() {
