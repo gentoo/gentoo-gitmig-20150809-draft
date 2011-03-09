@@ -1,10 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.75 2011/03/09 07:58:13 qiaomuf Exp $
-
-# Mu Qiao <qiaomuf@gentoo.org> (09 Mar 2011)
-# net-wireless/wimax is not available for ppc
-net-misc/networkmanager wimax
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.76 2011/03/09 11:20:28 qiaomuf Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
 # Mask unsatisfied kde-deps bug #357403
