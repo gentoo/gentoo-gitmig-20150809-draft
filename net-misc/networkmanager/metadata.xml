@@ -25,5 +25,6 @@
 		<flag name="nss">Use <pkg>dev-libs/nss</pkg> for cryptography.</flag>
 		<flag name="resolvconf">Use <pkg>net-dns/openresolv</pkg> for managing DNS information</flag>
 		<flag name="connection-sharing">Use <pkg>net-dns/dnsmasq</pkg> and <pkg>net-firewall/iptables</pkg> for connection sharing </flag>
+		<flag name="wimax">Use <pkg>net-wireless/wimax</pkg> to enable WiMAX support </flag>
 	</use>
 </pkgmetadata>

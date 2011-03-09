@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.100 2011/02/26 08:13:31 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.101 2011/03/09 07:56:21 qiaomuf Exp $
+
+*networkmanager-0.8.995 (09 Mar 2011)
+
+  09 Mar 2011; Mu Qiao <qiaomuf@gentoo.org> +networkmanager-0.8.995.ebuild,
+  +files/networkmanager-0.8.995-confchanges.patch,
+  +files/networkmanager-0.8.995-fix-tests.patch, metadata.xml:
+  Version bump for networkmanager-0.8.995.
 
 *networkmanager-0.8.2-r9 (26 Feb 2011)
 
