@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.18 2010/05/12 15:54:18 rajiv Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.19 2011/03/09 17:16:11 tove Exp $
+
+*ack-1.94 (09 Mar 2011)
+
+  09 Mar 2011; Torsten Veller <tove@gentoo.org> +ack-1.94.ebuild, metadata.xml:
+  Version bump (#357947). Add perl to metadata
 
   12 May 2010; Rajiv Aaron Manglani <rajiv@gentoo.org> -ack-1.90.ebuild:
   cleanup.
