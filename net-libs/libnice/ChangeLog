@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.24 2011/03/07 20:13:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.25 2011/03/09 12:21:34 xmw Exp $
+
+  09 Mar 2011; Michael Weber <xmw@gentoo.org> libnice-0.0.13.ebuild:
+  ppc stable (bug 355719)
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> libnice-0.0.13.ebuild:
   Stable for HPPA (bug #355719).
