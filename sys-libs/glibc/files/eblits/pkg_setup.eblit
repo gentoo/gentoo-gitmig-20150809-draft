@@ -1,6 +1,32 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_setup.eblit,v 1.4 2009/08/21 05:46:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/pkg_setup.eblit,v 1.5 2011/03/09 08:02:57 vapier Exp $
+
+glibc_run_test() {
+	local ret
+
+	pushd "${T}" >/dev/null
+
+	printf '%b' "$*" > glibc-test.c
+
+	if [[ ${EMERGE_FROM} == "binary" ]] ; then
+		# ignore build failures when installing a binary package #324685
+		emake -s glibc-test 2>/dev/null || return 0
+	else
+		if ! emake glibc-test ; then
+			ewarn "Simple build failed ... assuming this is desired #324685"
+			return 0
+		fi
+	fi
+
+	./glibc-test
+	ret=$?
+	rm -f glibc-test*
+
+	popd >/dev/null
+
+	return $ret
+}
 
 eblit-glibc-pkg_setup() {
 	# prevent native builds from downgrading ... maybe update to allow people
@@ -12,22 +38,17 @@ eblit-glibc-pkg_setup() {
 			die "aborting to save your system"
 		fi
 
-		# Check for broken kernels #262698
-		cd "${T}"
-		printf '#include <pwd.h>\nint main(){return getpwuid(0)==0;}\n' > kern-clo-test.c
-		emake kern-clo-test || die
-		if ! ./kern-clo-test ; then
+		if ! glibc_run_test '#include <pwd.h>\nint main(){return getpwuid(0)==0;}\n'
+		then
 			eerror "Your patched vendor kernel is broken.  You need to get an"
 			eerror "update from whoever is providing the kernel to you."
 			eerror "http://sourceware.org/bugzilla/show_bug.cgi?id=5227"
+			eerror "http://bugs.gentoo.org/262698"
 			die "keeping your system alive, say thank you"
 		fi
 
-		# Check for broken kernels #279260
-		cd "${T}"
-		printf '#include <unistd.h>\n#include <sys/syscall.h>\nint main(){return syscall(1000)!=-1;}\n' > kern-enosys-test.c
-		emake kern-enosys-test || die
-		if ! ./kern-enosys-test ; then
+		if ! glibc_run_test '#include <unistd.h>\n#include <sys/syscall.h>\nint main(){return syscall(1000)!=-1;}\n'
+		then
 			eerror "Your old kernel is broken.  You need to update it to"
 			eerror "a newer version as syscall(<bignum>) will break."
 			eerror "http://bugs.gentoo.org/279260"
