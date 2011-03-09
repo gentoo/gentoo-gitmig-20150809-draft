@@ -1,0 +1,19 @@
+--- setup.py
++++ setup.py
+@@ -3,10 +3,12 @@
+ from distutils.command.install import install
+ from distutils.core import setup
+ 
+-headers = (glob( os.path.join( "CXX","*.hxx" ) )
+-          +glob( os.path.join( "CXX","*.h" ) ))
+-sources = (glob( os.path.join( "Src", "*.cxx" ) )
+-          +glob( os.path.join( "Src", "*.c" ) ))
++headers = (glob( os.path.join( "CXX", "Python%s" % sys.version_info[0], "*.hxx" ) )
++          +glob( os.path.join( "CXX", "Python%s" % sys.version_info[0], "*.h" ) )
++          +[os.path.join( "CXX", "Version.hxx" )]
++          +[os.path.join( "CXX", "WrapPython.h" )])
++sources = (glob( os.path.join( "Src", "Python%s" % sys.version_info[0], "*.cxx" ) )
++          +glob( os.path.join( "Src", "Python%s" % sys.version_info[0], "*.c" ) ))
+ 
+ 
+ class my_install (install):

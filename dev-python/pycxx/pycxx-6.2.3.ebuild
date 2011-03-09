@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/pycxx-6.2.3.ebuild,v 1.1 2011/03/07 23:00:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/pycxx-6.2.3.ebuild,v 1.2 2011/03/09 13:11:43 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,8 +20,8 @@ IUSE="doc examples"
 PYTHON_MODNAME="CXX"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-6.1.0-setup.py.patch"
-	epatch "${FILESDIR}/${PN}-6.1.0-python-3.patch"
+	epatch "${FILESDIR}/${P}-python-3.patch"
+	epatch "${FILESDIR}/${P}-installation.patch"
 	epatch "${FILESDIR}/${PN}-6.1.0-C_compatible_headers.patch"
 
 	sed -e "/^#include/s:/Python[23]/:/:" -i CXX/*/*.hxx || die "sed failed"
