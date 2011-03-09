@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcsc-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.9 2010/12/26 16:04:33 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.10 2011/03/09 16:29:32 flameeyes Exp $
+
+*pcsc-tools-1.4.17-r1 (09 Mar 2011)
+
+  09 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pcsc-tools-1.4.17-r1.ebuild, +files/smartcard.cron, metadata.xml:
+  Add a new version that (optionally) installs an updater script rather than
+  installing a more recent smartcard_list.txt file.
 
   26 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -pcsc-tools-1.4.16.ebuild, -files/smartcard.svg, metadata.xml:
