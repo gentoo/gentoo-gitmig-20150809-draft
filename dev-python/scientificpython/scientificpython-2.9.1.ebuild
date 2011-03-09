@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.1.ebuild,v 1.4 2011/03/05 17:26:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.1.ebuild,v 1.5 2011/03/09 12:58:46 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -23,6 +23,7 @@ KEYWORDS="alpha ~amd64 ~ia64 ppc sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc mpi test"
 
 RDEPEND="dev-python/numpy
+	!alpha? ( !ppc? ( !sparc? ( dev-python/pyro:3 ) ) )
 	sci-libs/netcdf
 	mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}
