@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.67 2011/01/01 11:21:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.68 2011/03/09 03:52:01 vapier Exp $
+
+*rar-4.0.7 (09 Mar 2011)
+
+  09 Mar 2011; Mike Frysinger <vapier@gentoo.org> +rar-4.0.7.ebuild:
+  Version bump #357803 by tman.
 
   01 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> rar-3.9.3.ebuild:
   x86 stable wrt bug #349832
