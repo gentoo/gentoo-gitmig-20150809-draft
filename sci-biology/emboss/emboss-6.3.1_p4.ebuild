@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1_p4.ebuild,v 1.1 2011/03/09 13:09:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1_p4.ebuild,v 1.2 2011/03/09 16:29:05 jlec Exp $
 
 EAPI="4"
 
@@ -58,32 +58,20 @@ src_prepare() {
 	eautoreconf
 }
 
-conf-with() {
-	# USE with-option Option
-	if use ${1}; then
-		echo "--with-${2}=${3}"
-	else
-		echo "--without-${2}"
-	fi
-}
-
 src_configure() {
-	local myconf
-	myconf="--includedir=${ED}/usr/include/emboss --enable-systemlibs"
-
-	myconf="${myconf} $(conf-with png pngdriver ${EPREFIX}/usr)"
-	myconf="${myconf} $(conf-with doc docroot ${EPREFIX}/usr)"
-	myconf="${myconf} $(conf-with pdf hpdf ${EPREFIX}/usr)"
-	myconf="${myconf} $(conf-with mysql mysql ${EPREFIX}/usr/bin/mysql_config)"
-	myconf="${myconf} $(conf-with postgresql postgresql ${EPREFIX}/usr/bin/pg_config)"
-
 	econf \
 		$(use_with X x) \
+		$(use_with png pngdriver "${EPREFIX}/usr") \
+		$(use_with doc docroot "${EPREFIX}/usr") \
+		$(use_with pdf hpdf "${EPREFIX}/usr") \
+		$(use_with mysql mysql "${EPREFIX}/usr/bin/mysql_config") \
+		$(use_with postgres postgresql "${EPREFIX}/usr/bin/pg_config") \
 		$(use_enable amd64 64) \
 		$(use_enable largefile large) \
 		$(use_enable static-libs static) \
 		--without-java \
-		${myconf}
+		--enable-systemlibs \
+		--includedir="${ED}/usr/include/emboss"
 }
 
 src_install() {
