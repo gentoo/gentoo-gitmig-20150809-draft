@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/manuel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.4 2011/01/29 00:14:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.5 2011/03/09 21:51:31 arfrever Exp $
+
+  09 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -manuel-1.4.1.ebuild, +manuel-1.5.0.ebuild:
+  Version bump.
 
 *manuel-1.4.1 (29 Jan 2011)
 
