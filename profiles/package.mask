@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12533 2011/03/09 11:20:27 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12534 2011/03/09 11:33:00 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -131,8 +131,6 @@ dev-php5/pecl-pdflib
 # Gilles Dartiguelongue <eva@gentoo.org> (27 Feb 2011)
 # Mask for empathy-2.33 and related
 =net-im/empathy-2.33*
->=net-libs/telepathy-glib-0.13
->=net-libs/telepathy-farsight-0.0.16
 
 # Hans de Graaff <graaff@gentoo.org> (27 Feb 2011)
 # Deprecated by upstream. Latest version already installs stubs only.
