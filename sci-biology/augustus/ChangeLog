@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/augustus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/ChangeLog,v 1.13 2011/03/09 16:23:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/ChangeLog,v 1.14 2011/03/09 22:54:02 hwoarang Exp $
+
+  09 Mar 2011; Markos Chandras <hwoarang@gentoo.org> augustus-2.4.ebuild:
+  Stable on amd64 wrt bug #353573
 
   09 Mar 2011; Thomas Kahle <tomka@gentoo.org> augustus-2.4.ebuild:
   x86 stable per bug 353573
