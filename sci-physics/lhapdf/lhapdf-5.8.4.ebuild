@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.4.ebuild,v 1.4 2011/01/31 19:10:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.4.ebuild,v 1.5 2011/03/09 20:03:41 bicatali Exp $
 
 EAPI=2
 
@@ -83,7 +83,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "To install data files, you have to run as root:"
-	elog "${ROOT}usr/bin/lhapdf-getdata --dest=${ROOT}usr/share/lhapdf --all"
+	elog "${ROOT}usr/bin/lhapdf-getdata --dest=${ROOT}usr/share/lhapdf/PDFsets --all"
 }
 
 pkg_postrm() {

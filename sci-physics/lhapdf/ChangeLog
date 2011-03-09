@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/lhapdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.16 2011/01/31 19:10:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.17 2011/03/09 20:03:41 bicatali Exp $
+
+*lhapdf-5.8.5 (09 Mar 2011)
+
+  09 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  -lhapdf-5.8.3_p01.ebuild, lhapdf-5.8.4.ebuild, lhapdf-5.8.4-r1.ebuild,
+  +lhapdf-5.8.5.ebuild:
+  Version bump, simplified the EAPI4 and a small change in the elog to install
+  data, bug #358109.
 
   31 Jan 2011; Christian Faulhammer <fauli@gentoo.org> lhapdf-5.8.4.ebuild:
   stable x86, bug 352055

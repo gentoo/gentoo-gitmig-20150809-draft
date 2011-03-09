@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.4-r1.ebuild,v 1.1 2011/01/30 21:00:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.4-r1.ebuild,v 1.2 2011/03/09 20:03:41 bicatali Exp $
 
 EAPI=4
 
@@ -55,27 +55,23 @@ src_test() {
 	ln -s "${DISTDIR}" PDFsets
 	LHAPATH="${PWD}/PDFsets" \
 		LD_LIBRARY_PATH="${PWD}/lib/.libs:${LD_LIBRARY_PATH}" \
-		emake check || die "emake check failed"
+		emake check
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dodoc README TODO AUTHORS ChangeLog
 
 	# leftover
-	rm -rf "${D}"/usr/share/${PN}/doc || die
-	if use doc && use cxx; then
-		# default doc install buggy
-		insinto /usr/share/doc/${PF}
-		doins -r ccwrap/doxy/html || die
-	fi
+	rm -rf "${ED}"/usr/share/${PN}/doc || die
+	use doc && use cxx && dohtml -r ccwrap/doxy/html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins examples/*.{f,cc} || die
+		doins examples/*.{f,cc}
 	fi
 }
 
 pkg_postinst() {
 	elog "To install data files, you have to run as root:"
-	elog "lhapdf-getdata --dest=${EROOT}usr/share/lhapdf --all"
+	elog "lhapdf-getdata --dest=${EROOT}usr/share/lhapdf/PDFsets --all"
 }
