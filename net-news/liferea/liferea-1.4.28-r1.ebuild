@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28-r1.ebuild,v 1.7 2010/03/22 21:08:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28-r1.ebuild,v 1.8 2011/03/09 18:14:00 ssuominen Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=1.9
@@ -17,7 +17,7 @@ IUSE="dbus gtkhtml +gnutls libnotify lua networkmanager webkit +xulrunner"
 
 # sqlite dep needed for sparc; bug #252292
 RDEPEND="
-	libnotify? ( >=x11-libs/libnotify-0.3.2 )
+	libnotify? ( <x11-libs/libnotify-0.7 )
 	lua? ( >=dev-lang/lua-5.1 )
 	xulrunner? ( net-libs/xulrunner:1.9 )
 	!xulrunner? ( webkit? ( net-libs/webkit-gtk ) )

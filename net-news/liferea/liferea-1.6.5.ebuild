@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.6.5.ebuild,v 1.3 2011/02/26 10:26:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.6.5.ebuild,v 1.4 2011/03/09 18:14:00 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.16.0:2
 	>=gnome-base/libglade-2
 	>=net-libs/libsoup-2.26.1:2.4
 	>=net-libs/webkit-gtk-1.1.15
-	libnotify? ( >=x11-libs/libnotify-0.3.2 )
+	libnotify? ( <x11-libs/libnotify-0.7 )
 	lua? ( >=dev-lang/lua-5.1 )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	networkmanager? ( net-misc/networkmanager dev-libs/dbus-glib )"
