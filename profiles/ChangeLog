@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5121 2011/03/09 11:33:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5122 2011/03/09 14:56:19 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  default/linux/package.use.mask:
+  Mask usb USE flag for pcsc-lite-1.7.0 and later on Linux.
 
   09 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Unmask telepathy-glib and telepathy-farsight

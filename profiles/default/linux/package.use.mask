@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.18 2010/08/23 21:54:42 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.19 2011/03/09 14:56:20 flameeyes Exp $
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
@@ -14,3 +14,9 @@ sys-libs/glibc hardened
 # Older versions also had an OSS compatibility wrapper on that USE so
 # they are excluded.
 >=media-sound/pulseaudio-0.9.16_rc5 oss
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (9 Mar 2011)
+#
+# Mask usb USE flag for newest PCSC-Lite, since on Linux we want to
+# use libudev instead.
+>=sys-apps/pcsc-lite-1.7.0 usb
