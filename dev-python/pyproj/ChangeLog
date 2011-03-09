@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyproj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyproj/ChangeLog,v 1.5 2010/09/19 21:16:21 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyproj/ChangeLog,v 1.6 2011/03/09 18:16:22 arfrever Exp $
+
+*pyproj-1.8.9 (09 Mar 2011)
+
+  09 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pyproj-1.8.7.ebuild, +pyproj-1.8.9.ebuild:
+  Version bump.
 
 *pyproj-1.8.8 (19 Sep 2010)
 
