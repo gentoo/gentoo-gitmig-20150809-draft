@@ -1,6 +1,10 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.44 2011/02/10 22:35:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.45 2011/03/09 21:01:51 hwoarang Exp $
+
+  09 Mar 2011; Markos Chandras <hwoarang@gentoo.org> minitube-1.4.ebuild:
+  Allow minitube to build against qt-phonon despite the gstreamer use flag
+  status. Bug #357111. Thanks to Jorge Manuel B. S. Vicetto for the patch
 
 *minitube-1.4 (10 Feb 2011)
 

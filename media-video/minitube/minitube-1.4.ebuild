@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.4.ebuild,v 1.1 2011/02/10 22:35:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.4.ebuild,v 1.2 2011/03/09 21:01:51 hwoarang Exp $
 
 EAPI="2"
 LANGS="ar es pt_BR pt_PT uk"
@@ -20,14 +20,15 @@ IUSE="debug kde gstreamer"
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
 	x11-libs/qt-dbus:4
+	kde? ( || ( media-sound/phonon[gstreamer?]  x11-libs/qt-phonon:4 ) )
+	!kde? ( || ( x11-libs/qt-phonon media-sound/phonon[gstreamer?] ) )
 	gstreamer? (
-		kde? ( || ( media-sound/phonon[gstreamer]  x11-libs/qt-phonon:4 ) )
-		!kde? ( || ( x11-libs/qt-phonon media-sound/phonon[gstreamer] ) )
 		media-plugins/gst-plugins-soup
 		media-plugins/gst-plugins-ffmpeg
 		media-plugins/gst-plugins-faac
-		media-plugins/gst-plugins-faad )
-	!gstreamer? ( media-sound/phonon[-gstreamer] )"
+		media-plugins/gst-plugins-faad
+	)
+"
 
 RDEPEND="${DEPEND}"
 
