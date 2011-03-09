@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.11 2011/02/22 03:23:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.12 2011/03/09 08:11:54 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -72,13 +72,6 @@ toolchain-glibc_src_install() {
 
 	# We'll take care of the cache ourselves
 	rm -f "${D}"/etc/ld.so.cache
-
-	# Handle includes for different ABIs if glibc itself doesn't do it
-	# XXX: curr glibc should finally handle all of them correctly
-	#case $(tc-arch) in
-	#	amd64|mips|ppc|s390) ;;
-	#	*) prep_ml_includes $(alt_headers) ;;
-	#esac
 
 	# When cross-compiling for a non-multilib setup, make sure we have
 	# lib and a proper symlink setup
