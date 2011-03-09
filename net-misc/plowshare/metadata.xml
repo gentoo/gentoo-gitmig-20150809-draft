@@ -7,6 +7,7 @@
 		<name>Mounir Lamouri</name>
 	</maintainer>
 	<use>
+		<flag name="scripts">Install some additional helper scripts</flag>
 		<flag name="view-captcha">View captcha with aview</flag>
 	</use>
 </pkgmetadata>
