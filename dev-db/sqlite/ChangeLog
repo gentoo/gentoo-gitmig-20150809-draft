@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.362 2011/02/27 18:21:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.363 2011/03/09 00:33:15 hwoarang Exp $
+
+  09 Mar 2011; Markos Chandras <hwoarang@gentoo.org> sqlite-3.7.5.ebuild:
+  Stable on amd64 wrt bug #357849
 
   27 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   sqlite-3.7.5.ebuild, +files/sqlite-3.7.5-SQLITE_OMIT_WAL.patch:
