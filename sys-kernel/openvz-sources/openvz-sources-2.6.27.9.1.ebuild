@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.9.1.ebuild,v 1.1 2011/02/02 10:28:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.9.1.ebuild,v 1.2 2011/03/09 13:38:59 pva Exp $
 
 inherit versionator
 
@@ -41,7 +41,7 @@ if [[ ${PR} != r0 ]]; then
 	SLOT+=-${PR}
 fi
 
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc64 ~sparc x86"
 IUSE=""
 
 DESCRIPTION="Kernel sources with OpenVZ patchset"
