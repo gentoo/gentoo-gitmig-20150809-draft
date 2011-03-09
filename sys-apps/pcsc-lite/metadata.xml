@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>crypto</herd>
-<longdescription>
-PC/SC Architecture smartcard middleware library
-</longdescription>
+  <herd>crypto</herd>
+  <longdescription>
+    PC/SC Architecture smartcard middleware library
+  </longdescription>
+
+  <use>
+    <flag name='usb' restrict="&lt;pcsc-lite-1.7.0">
+      Use <pkg>dev-libs/libusb</pkg> detection to hotplug new
+      smartcard readers.
+    </flag>
+
+    <flag name='usb' restrict="&gt;=pcsc-lite-1.7.0">
+      Use <pkg>dev-libs/libusb</pkg> detection to hotplug new
+      smartcard readers. This flag only makes sense on non-Linux
+      systems, as on Linux, <pkg>sys-fs/udev</pkg> is used instead.
+    </flag>
+  </use>
 </pkgmetadata>
