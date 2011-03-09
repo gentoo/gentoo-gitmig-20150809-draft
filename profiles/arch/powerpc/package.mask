@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.36 2011/02/20 10:02:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.37 2011/03/09 11:30:07 jlec Exp $
+
+# Justin Lecher <jlec@gentoo.org> (9 Mar 2011)
+# sci-libs/plplot needs keywords #
+~sci-biology/emboss-6.3.1*
 
 # Joseph Jezak <josejx@gentoo.org> (12 Feb 2010)
 # Masking MOL due to breakage, but leaving it in the tree in case anyone 

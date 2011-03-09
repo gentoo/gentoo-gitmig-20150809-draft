@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.111 2011/03/04 17:40:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.112 2011/03/09 11:30:07 jlec Exp $
+
+  09 Mar 2011; Justin Lecher <jlec@gentoo.org> package.mask:
+  Mask sci-biology/emboss-6.3.1 due to missing keyworded dep (sci-libs/plplot)
 
   04 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
   mask kde use for bug #357403
