@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/WWW-RobotRules
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-RobotRules/ChangeLog,v 1.1 2011/03/09 12:59:30 tove Exp $
+
+*WWW-RobotRules-6.0.0 (09 Mar 2011)
+
+  09 Mar 2011; Torsten Veller <tove@gentoo.org> +WWW-RobotRules-6.0.0.ebuild,
+  +metadata.xml:
+  Initial commit - unbundled from libwww-perl
+
