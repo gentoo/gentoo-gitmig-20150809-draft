@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/python-wifi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.1 2011/03/06 10:31:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.2 2011/03/09 16:08:57 jlec Exp $
+
+*python-wifi-0.5.0-r1 (09 Mar 2011)
+*python-wifi-0.3.1-r1 (09 Mar 2011)
+
+  09 Mar 2011; Justin Lecher <jlec@gentoo.org> -python-wifi-0.3.1.ebuild,
+  +python-wifi-0.3.1-r1.ebuild, -python-wifi-0.5.0.ebuild,
+  +python-wifi-0.5.0-r1.ebuild:
+  Install files in appropriate location, thanks Arfrever pointing this out
 
 *python-wifi-0.5.0 (06 Mar 2011)
 *python-wifi-0.3.1 (06 Mar 2011)
