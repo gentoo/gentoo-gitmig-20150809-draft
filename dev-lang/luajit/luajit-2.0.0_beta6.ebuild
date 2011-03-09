@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.0_beta5-r1.ebuild,v 1.1 2010/11/07 02:51:01 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.0_beta6.ebuild,v 1.1 2011/03/09 15:42:10 rafaelmartins Exp $
 
 EAPI="2"
 
@@ -32,9 +32,6 @@ src_prepare(){
 	# removing strip
 	sed -i -e '/$(Q)$(TARGET_STRIP)/d' src/Makefile \
 		|| die "failed to remove forced strip"
-
-	# hotfix from upstream, just for this version (2.0.0_beta5)
-	epatch "${FILESDIR}/${PV}_hotfix1.patch"
 }
 
 src_install(){
