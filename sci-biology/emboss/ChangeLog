@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.59 2011/03/09 12:00:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.60 2011/03/09 13:09:22 jlec Exp $
+
+*emboss-6.3.1_p4 (09 Mar 2011)
+
+  09 Mar 2011; Justin Lecher <jlec@gentoo.org>
+  +files/6.3.1_p4-unbundle-libs.patch, -files/6.3.1-unbundle-libs.patch,
+  -emboss-6.3.1.ebuild, +emboss-6.3.1_p4.ebuild:
+  Bump to latest upstream patches
 
 *emboss-6.3.1 (09 Mar 2011)
 

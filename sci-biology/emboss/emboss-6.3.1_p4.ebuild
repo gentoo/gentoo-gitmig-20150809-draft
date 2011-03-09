@@ -1,16 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1.ebuild,v 1.1 2011/03/09 12:00:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1_p4.ebuild,v 1.1 2011/03/09 13:09:22 jlec Exp $
 
 EAPI="4"
 
 inherit autotools eutils
 
+MY_PATCH="4"
+
 DESCRIPTION="The European Molecular Biology Open Software Suite - A sequence analysis package"
 HOMEPAGE="http://emboss.sourceforge.net/"
-SRC_URI="ftp://${PN}.open-bio.org/pub/EMBOSS/EMBOSS-${PV}.tar.gz"
-LICENSE="GPL-2 LGPL-2"
+SRC_URI="
+	ftp://${PN}.open-bio.org/pub/EMBOSS/EMBOSS-${PV/_p${MY_PATCH}}.tar.gz
+	ftp://${PN}.open-bio.org/pub/EMBOSS/fixes/patches/patch-1-${MY_PATCH}.gz -> ${P}.patch.gz"
 
+LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc +largefile minimal mysql pdf png postgres static-libs X"
@@ -45,9 +49,10 @@ PDEPEND="
 		sci-biology/transfac
 		)"
 
-S="${WORKDIR}/EMBOSS-${PV}"
+S="${WORKDIR}/EMBOSS-${PV/_p${MY_PATCH}}"
 
 src_prepare() {
+	epatch "${WORKDIR}"/${P}.patch
 	epatch \
 		"${FILESDIR}"/${PV}-unbundle-libs.patch
 	eautoreconf
