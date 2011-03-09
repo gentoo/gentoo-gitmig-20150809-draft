@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.2-r9.ebuild,v 1.1 2011/02/26 08:13:31 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.2-r10.ebuild,v 1.1 2011/03/09 14:14:23 dagger Exp $
 
 EAPI="2"
 
@@ -101,6 +101,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-tempfiles.patch"
 	# won't write when nothing changed (bug #356339)
 	epatch "${FILESDIR}/${P}-ifnet-smarter-write.patch"
+	# don't pass trash arguments to dnsmasq. Fixes bug #357671
+	epatch "${FILESDIR}/${P}-fix-dnsmasq-config.patch"
+	# fix some crashes at shutdown
+	epatch "${FILESDIR}/${P}-fix-shutdown.patch"
 	eautoreconf
 }
 
