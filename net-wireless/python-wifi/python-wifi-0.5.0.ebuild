@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/python-wifi-0.5.0.ebuild,v 1.1 2011/03/06 10:31:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/python-wifi-0.5.0.ebuild,v 1.2 2011/03/09 15:08:10 arfrever Exp $
 
-EAPI="2"
-
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
@@ -23,6 +22,7 @@ RDEPEND=""
 DEPEND="dev-python/setuptools"
 
 DOCS="docs/AUTHORS docs/BUGS docs/DEVEL.txt docs/TODO"
+PYTHON_MODNAME="pythonwifi"
 
 src_install() {
 	distutils_src_install
