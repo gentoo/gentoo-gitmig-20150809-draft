@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0-r1.ebuild,v 1.3 2011/03/09 12:00:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1.ebuild,v 1.1 2011/03/09 12:00:38 jlec Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="The European Molecular Biology Open Software Suite - A sequence analysis package"
 HOMEPAGE="http://emboss.sourceforge.net/"
@@ -13,23 +13,28 @@ LICENSE="GPL-2 LGPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="X png minimal"
+IUSE="doc +largefile minimal mysql pdf png postgres static-libs X"
 
 DEPEND="
-	X? ( x11-libs/libXt )
+	dev-libs/expat
+	dev-libs/libpcre:3
+	sci-libs/plplot
+	sys-libs/zlib
+	mysql? ( dev-db/mysql )
+	pdf? ( media-libs/libharu )
 	png? (
 		sys-libs/zlib
 		media-libs/libpng
 		media-libs/gd
 		)
+	postgres? ( dev-db/postgresql-base )
 	!minimal? (
 		sci-biology/primer3
 		sci-biology/clustalw
-		)"
-
+		)
+	X? ( x11-libs/libXt )"
 RDEPEND="${DEPEND}
 	!sys-devel/cons"
-
 PDEPEND="
 	!minimal? (
 		sci-biology/aaindex
@@ -38,41 +43,50 @@ PDEPEND="
 		sci-biology/prosite
 		sci-biology/rebase
 		sci-biology/transfac
-	)"
+		)"
 
 S="${WORKDIR}/EMBOSS-${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-5.0.0-as-needed.patch
+	epatch \
+		"${FILESDIR}"/${PV}-unbundle-libs.patch
+	eautoreconf
+}
 
-	local link_string="$(pkg-config --libs x11)"
-	if use png; then
-		link_string="${link_string} -lgd $(pkg-config --libs libpng)"
+conf-with() {
+	# USE with-option Option
+	if use ${1}; then
+		echo "--with-${2}=${3}"
+	else
+		echo "--without-${2}"
 	fi
-	sed -e "s:PATCH_PLPLOT:${link_string}:" -i plplot/Makefile.in \
-		|| die "Failed to patch ajax Makefile"
 }
 
 src_configure() {
 	local myconf
-	myconf="--includedir=${ED}/usr/include/emboss"
-	use X || myconf="${EXTRA_CONF} --without-x"
-	use png || myconf="${EXTRA_CONF} --without-pngdriver"
+	myconf="--includedir=${ED}/usr/include/emboss --enable-systemlibs"
 
-	econf ${myconf}
-	# Do not install the JEMBOSS component (the --without-java configure option
-	# does not work). JEMBOSS will eventually be available as a separate package.
-	sed -i -e "s/SUBDIRS = plplot ajax nucleus emboss test doc jemboss/SUBDIRS = plplot ajax nucleus emboss test doc/" \
-			Makefile || die
+	myconf="${myconf} $(conf-with png pngdriver ${EPREFIX}/usr)"
+	myconf="${myconf} $(conf-with doc docroot ${EPREFIX}/usr)"
+	myconf="${myconf} $(conf-with pdf hpdf ${EPREFIX}/usr)"
+	myconf="${myconf} $(conf-with mysql mysql ${EPREFIX}/usr/bin/mysql_config)"
+	myconf="${myconf} $(conf-with postgresql postgresql ${EPREFIX}/usr/bin/pg_config)"
+
+	econf \
+		$(use_with X x) \
+		$(use_enable amd64 64) \
+		$(use_enable largefile large) \
+		$(use_enable static-libs static) \
+		--without-java \
+		${myconf}
 }
 
 src_install() {
 	einstall || die "Failed to install program files."
 
-	dodoc AUTHORS ChangeLog FAQ NEWS README THANKS \
-			|| die "Failed to install documentation."
-	newdoc "${FILESDIR}"/${PN}-README.Gentoo-1 README.Gentoo \
-			|| die "Failed to install Gentoo readme file."
+	dodoc AUTHORS ChangeLog FAQ NEWS README THANKS
+	sed "s:EPREFIX:${EPREFIX}:g" "${FILESDIR}"/${PN}-README.Gentoo-2 > README.Gentoo && \
+	dodoc README.Gentoo
 
 	# Install env file for setting libplplot and acd files path.
 	cat <<- EOF > 22emboss
@@ -81,18 +95,13 @@ src_install() {
 		# ACD files location
 		EMBOSS_ACDROOT="${EPREFIX}/usr/share/EMBOSS/acd"
 	EOF
-	doenvd 22emboss || die "Failed to install environment file."
+	doenvd 22emboss
 
 	# Symlink preinstalled docs to "/usr/share/doc".
-	dosym /usr/share/EMBOSS/doc/manuals /usr/share/doc/${PF}/manuals || die
-	dosym /usr/share/EMBOSS/doc/programs /usr/share/doc/${PF}/programs || die
-	dosym /usr/share/EMBOSS/doc/tutorials /usr/share/doc/${PF}/tutorials || die
-	dosym /usr/share/EMBOSS/doc/html /usr/share/doc/${PF}/html || die
-
-	# Remove frestdist documentation conflicting with the EMBASSY philypnew
-	# package.
-	rm "${ED}"/usr/share/EMBOSS/doc/programs/text/frestdist.txt || \
-			die "Failed to remove duplicated documentation."
+	dosym /usr/share/EMBOSS/doc/manuals /usr/share/doc/${PF}/manuals
+	dosym /usr/share/EMBOSS/doc/programs /usr/share/doc/${PF}/programs
+	dosym /usr/share/EMBOSS/doc/tutorials /usr/share/doc/${PF}/tutorials
+	dosym /usr/share/EMBOSS/doc/html /usr/share/doc/${PF}/html
 
 	# Clashes #330507
 	mv "${ED}"/usr/bin/{digest,pepdigest} || die
