@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyudev
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.1 2010/07/25 00:52:59 sbriesen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.2 2011/03/09 21:25:55 arfrever Exp $
+
+*pyudev-0.9 (09 Mar 2011)
+
+  09 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyudev-0.9.ebuild:
+  Version bump (bug #347297).
 
 *pyudev-0.2 (25 Jul 2010)
 
