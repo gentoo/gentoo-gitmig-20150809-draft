@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/python-wifi-0.3.1-r1.ebuild,v 1.1 2011/03/09 16:08:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/python-wifi-0.3.1-r1.ebuild,v 1.2 2011/03/09 16:12:03 jlec Exp $
 
 EAPI="3"
 
@@ -33,6 +33,4 @@ src_install() {
 		insinto /usr/share/${P}/
 		doins -r examples || die "no examples"
 	fi
-	rm -rvf "${ED}"/usr/{docs,examples,INSTALL,README} || die
-	mv -v "${ED}"/usr{,/share}/man || die
 }
