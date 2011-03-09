@@ -1,0 +1,56 @@
+commit 76f935197599a335a5fe09b78751ddb455248cf7
+Author: David Faure <faure@kde.org>
+Date:   Mon Jan 31 14:51:52 2011 +0100
+
+    Harden SSL verification against poisoned DNS attacks
+    
+    ... in the case of certificates that are issued against an IP address rather than a hostname.
+    Patch by Tomas Hoger / Red Hat Security Response Team, reviewed by Jeff Mitchell and Richard Moore.
+
+diff --git a/kio/kio/tcpslavebase.cpp b/kio/kio/tcpslavebase.cpp
+index 9cddd41..3e6cdf6 100644
+--- a/kio/kio/tcpslavebase.cpp
++++ b/kio/kio/tcpslavebase.cpp
+@@ -550,23 +550,34 @@ TCPSlaveBase::SslResult TCPSlaveBase::startTLSInternal(uint v_)
+     // domain<->certificate matching here.
+     d->sslErrors = d->socket.sslErrors();
+     QSslCertificate peerCert = d->socket.peerCertificateChain().first();
+-    QStringList domainPatterns(peerCert.subjectInfo(QSslCertificate::CommonName));
+-    domainPatterns += peerCert.alternateSubjectNames().values(QSsl::DnsEntry);
+     QMutableListIterator<KSslError> it(d->sslErrors);
+     while (it.hasNext()) {
+         // As of 4.4.0 Qt does not assign a certificate to the QSslError it emits
+         // *in the case of HostNameMismatch*. A HostNameMismatch, however, will always
+         // be an error of the peer certificate so we just don't check the error's
+         // certificate().
+-        if (it.next().error() != KSslError::HostNameMismatch) {
+-            continue;
++
++        // Remove all HostNameMismatch, we have to redo name checking later.
++        if (it.next().error() == KSslError::HostNameMismatch) {
++            it.remove();
+         }
+-        Q_FOREACH (const QString &dp, domainPatterns) {
+-            if (isMatchingHostname(dp, d->host)) {
+-                it.remove();
+-            }
++    }
++    // Redo name checking here and (re-)insert HostNameMismatch to sslErrors if
++    // host name does not match any of the names in server certificate.
++    // QSslSocket may not report HostNameMismatch error, when server
++    // certificate was issued for the IP we are connecting to.
++    QStringList domainPatterns(peerCert.subjectInfo(QSslCertificate::CommonName));
++    domainPatterns += peerCert.alternateSubjectNames().values(QSsl::DnsEntry);
++    bool names_match = false;
++    foreach (const QString &dp, domainPatterns) {
++        if (isMatchingHostname(dp, d->host)) {
++            names_match = true;
++            break;
+         }
+     }
++    if (!names_match) {
++        d->sslErrors.insert(0, KSslError(KSslError::HostNameMismatch, peerCert));
++    }
+ 
+     // TODO: review / rewrite / remove the comment
+     // The app side needs the metadata now for the SSL error dialog (if any) but
