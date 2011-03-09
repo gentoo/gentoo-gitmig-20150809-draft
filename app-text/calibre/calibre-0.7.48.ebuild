@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.48.ebuild,v 1.2 2011/03/09 21:36:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.48.ebuild,v 1.3 2011/03/09 22:15:03 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -162,8 +162,12 @@ src_install() {
 
 	# Bug #358065 - Remove inappropriate mime types from *.desktop.
 	sed -e "s:application/octet-stream;::g" \
+		-e "s:application/pdf;::g" \
+		-e "s:application/vnd.oasis.opendocument.text;::g" \
+		-e "s:application/xhtml+xml;::g" \
 		-e "s:text/html;::g" \
 		-e "s:text/plain;::g" \
+		-e "s:text/rtf;::g" \
 		-i "$HOME"/.local/share/applications/*.desktop \
 		|| die "sed failed"
 

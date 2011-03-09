@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.136 2011/03/09 21:36:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.137 2011/03/09 22:15:03 zmedico Exp $
+
+  09 Mar 2011; Zac Medico <zmedico@gentoo.org> calibre-0.7.48.ebuild:
+  Bug #358065 - Remove more inappropriate mime types from *.desktop.
 
   09 Mar 2011; Zac Medico <zmedico@gentoo.org> calibre-0.7.48.ebuild:
   Bug #358065 - Remove inappropriate mime types from *.desktop.
