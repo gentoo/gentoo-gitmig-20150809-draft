@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110216.ebuild,v 1.3 2011/02/25 18:46:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110216-r1.ebuild,v 1.1 2011/03/09 21:12:07 hwoarang Exp $
 
 EAPI=2
 
@@ -36,6 +36,13 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	intltoolize --force --copy --automake || die
+	# Fix tests. Bug #357125
+	for x in about autorun desktop-pref pref; do
+		echo  data/ui/${x}.ui >> po/POTFILES.in
+	done
+	# Fix desktop icons
+	sed -i -e "/MimeType/s:=.*normal;:=:" data/${PN}.desktop.in \
+		|| die "failed to fix desktop icon"
 	eautoreconf
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.50 2011/03/07 20:31:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.51 2011/03/09 21:12:07 hwoarang Exp $
+
+*pcmanfm-0.9.9_pre20110216-r1 (09 Mar 2011)
+
+  09 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  -pcmanfm-0.9.9_pre20110216.ebuild, +pcmanfm-0.9.9_pre20110216-r1.ebuild:
+  Fix tests. Bug 357125. Thanks to Diego Elio Pettenò. Remove deprecated
+  x-directory entry from desktop file
 
   07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> pcmanfm-0.9.7-r2.ebuild:
   Keyworded on alpha, bug #330911
