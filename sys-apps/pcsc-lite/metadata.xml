@@ -7,10 +7,11 @@
   </longdescription>
 
   <use>
-    <flag name='usb' restrict="&lt;pcsc-lite-1.7.0">
+<!--    <flag name='usb' restrict="&lt;pcsc-lite-1.7.0">
       Use <pkg>dev-libs/libusb</pkg> detection to hotplug new
       smartcard readers.
     </flag>
+-->
 
     <flag name='usb' restrict="&gt;=pcsc-lite-1.7.0">
       Use <pkg>dev-libs/libusb</pkg> detection to hotplug new
