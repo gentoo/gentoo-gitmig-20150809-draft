@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12529 2011/03/09 00:19:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12530 2011/03/09 03:25:34 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -42,6 +42,7 @@ media-libs/glide-v3
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2011)
 # No longer needed package wrt #330397. Removal in 30 days.
+# Note: Make sure to revdep-rebuild after unmerging.
 media-libs/glitz
 
 # Torsten Veller <tove@gentoo.org> (06 Mar 2011)
