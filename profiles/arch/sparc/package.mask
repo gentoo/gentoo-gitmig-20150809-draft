@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.27 2011/03/09 11:33:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.28 2011/03/09 11:34:07 jlec Exp $
 
 # Justin Lecher <jlec@gentoo.org> (9 Mar 2011)
 # sci-libs/plplot needs keywords #358035
