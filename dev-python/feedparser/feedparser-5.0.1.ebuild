@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-5.0.1.ebuild,v 1.1 2011/02/22 05:43:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-5.0.1.ebuild,v 1.2 2011/03/09 22:18:24 arfrever Exp $
 
-EAPI="2"
-
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"  # See README-PYTHON3 in tarball if you want to work on this
@@ -11,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.*"  # See README-PYTHON3 in tarball if you want to work 
 inherit distutils
 
 DESCRIPTION="Parse RSS and Atom feeds in Python"
-HOMEPAGE="http://www.feedparser.org/"
+HOMEPAGE="http://www.feedparser.org/ http://code.google.com/p/feedparser/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD-2"
@@ -22,8 +21,8 @@ IUSE="test"
 DEPEND=""
 RDEPEND=""
 
+DOCS="LICENSE NEWS"
 PYTHON_MODNAME="feedparser.py"
-DOCS=( LICENSE NEWS )
 
 src_test() {
 	testing() {
