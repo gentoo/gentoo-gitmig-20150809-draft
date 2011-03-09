@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.196 2011/01/28 05:33:35 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.197 2011/03/09 15:58:44 ssuominen Exp $
+
+  09 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  rhythmbox-0.12.8-r1.ebuild, +files/rhythmbox-0.12.8-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7 wrt #357823 by Javier Pérez.
 
   28 Jan 2011; Steve Arnold <nerdboy@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
   Built and tested on ibook G4, closes bug 308763.
