@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.70 2011/02/12 18:50:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.71 2011/03/09 17:42:57 arfrever Exp $
+
+*viewvc-1.1.9 (09 Mar 2011)
+
+  09 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +viewvc-1.1.9.ebuild:
+  Version bump. Install standalone.py as viewvc-standalone-server (bug #349881).
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> viewvc-1.1.8.ebuild:
   sparc stable wrt #350857
