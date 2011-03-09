@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.107 2011/03/09 15:16:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.108 2011/03/09 15:21:12 flameeyes Exp $
+
+  09 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Fix metadata.xml (was missing category; thanks tove).
 
   09 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Comment out minor restriction (egencache bug?)
