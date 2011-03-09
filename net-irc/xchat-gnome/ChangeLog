@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.61 2011/02/15 08:19:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.62 2011/03/09 16:18:31 ssuominen Exp $
+
+  09 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xchat-gnome-0.26.1-r1.ebuild, +files/xchat-gnome-0.26.1-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7 wrt #358039 by Juergen Rose.
+  Remove now deprecated check for sys-devel/gcc >= 4.1 since minimum supported
+  version is 4.4.
 
   15 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   xchat-gnome-0.26.1-r1.ebuild, metadata.xml:
