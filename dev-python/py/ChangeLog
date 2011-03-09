@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.77 2011/02/09 02:08:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.78 2011/03/09 20:19:10 arfrever Exp $
+
+*py-1.4.2 (09 Mar 2011)
+
+  09 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +py-1.4.2.ebuild:
+  Version bump.
 
 *py-1.4.1 (09 Feb 2011)
 
