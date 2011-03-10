@@ -10,7 +10,6 @@
 		exonerate is a generic tool for pairwise sequence comparison
 	</longdescription>
 	<use>
-		<flag name='largefile'>Enable largefile support on 32 bit systems</flag>
 		<flag name='utils'>Install all utilities</flag>
 	</use>
 </pkgmetadata>

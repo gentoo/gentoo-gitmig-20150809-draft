@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/exonerate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/ChangeLog,v 1.2 2010/06/20 14:41:56 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/ChangeLog,v 1.3 2011/03/10 19:08:18 jlec Exp $
+
+  10 Mar 2011; Justin Lecher <jlec@gentoo.org> exonerate-2.2.0.ebuild,
+  exonerate-2.2.0-r1.ebuild, metadata.xml:
+  Remove largefile USE support and default to it
 
 *exonerate-2.2.0-r1 (20 Jun 2010)
 
