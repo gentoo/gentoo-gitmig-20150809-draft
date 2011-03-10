@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.40 2011/01/07 23:18:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.41 2011/03/10 06:18:43 radhermit Exp $
+
+*gtk-syntax-20110214 (10 Mar 2011)
+
+  10 Mar 2011; Tim Harder <radhermit@gentoo.org> +gtk-syntax-20110214.ebuild:
+  Version bump (bug #358055 by David King).
 
   07 Jan 2011; Tim Harder <radhermit@gentoo.org> -gtk-syntax-20060423.ebuild,
   -gtk-syntax-20070925.ebuild, -gtk-syntax-20090402.ebuild:
