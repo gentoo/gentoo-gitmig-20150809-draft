@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.41 2011/03/10 06:18:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.42 2011/03/10 22:40:08 radhermit Exp $
+
+*gtk-syntax-20110214-r1 (10 Mar 2011)
+
+  10 Mar 2011; Tim Harder <radhermit@gentoo.org> -gtk-syntax-20110214.ebuild,
+  +gtk-syntax-20110214-r1.ebuild:
+  Revbump to use a new tarball that removes hyphens (fixes bug #358201).
 
 *gtk-syntax-20110214 (10 Mar 2011)
 
