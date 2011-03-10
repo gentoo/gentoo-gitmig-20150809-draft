@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.22 2011/01/25 02:22:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.23 2011/03/10 17:16:23 jer Exp $
+
+  10 Mar 2011; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.2.ebuild:
+  Use the correct patch file by Myckel Habets (bug #358117).
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.2.ebuild:
   Add src_test() to ensure the tests are run - make check does not do that.
