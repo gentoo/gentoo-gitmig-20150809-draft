@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/gnat-gcc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.38 2010/04/12 08:25:44 george Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.39 2011/03/10 19:59:39 george Exp $
+
+*gnat-gcc-4.4.3 (10 Mar 2011)
+
+  10 Mar 2011; <portage-cvs@gentoo.org> +gnat-gcc-4.3.5.ebuild,
+  +gnat-gcc-4.4.3.ebuild:
+  an overdue major bump. Finally got 4.4 working. Homefully more to follow
+  soon..
+
+*gnat-gcc-4.3.5 (04 Jan 2011)
+
+  04 Jan 2011; George Shapovalov <george-cvs@gentoo.org> +gnat-gcc-4.3.5.ebuild:
+  a quick bump, finally coming through buiild failure in new (yet uncommitted)
+  versions
 
   12 Apr 2010; George Shapovalov <george@gentoo.org> gnat-gcc-4.3.4.ebuild:
   updated the bootstrap
