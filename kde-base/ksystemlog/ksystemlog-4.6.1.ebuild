@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ksystemlog-4.6.1.ebuild,v 1.2 2011/03/10 08:02:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ksystemlog-4.6.1.ebuild,v 1.3 2011/03/10 12:57:43 angelos Exp $
 
 EAPI=3
 
 KDE_HANDBOOK="optional"
 KMNAME="kdeadmin"
+VIRTUALX_REQUIRED=test
 
 inherit kde4-meta
 
