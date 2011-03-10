@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.108 2011/03/09 15:21:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.109 2011/03/10 15:13:16 flameeyes Exp $
+
+  10 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> pcsc-lite-1.7.0.ebuild:
+  Avoid warning by not passing --disable-libhal.
 
   09 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fix metadata.xml (was missing category; thanks tove).
