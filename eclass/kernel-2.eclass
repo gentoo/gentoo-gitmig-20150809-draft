@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.244 2011/02/18 20:07:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.245 2011/03/10 01:04:03 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -585,62 +585,15 @@ install_headers() {
 
 	# Do not use "linux/*" as that can cause problems with very long
 	# $S values where the cmdline to cp is too long
-	cd "${S}"
+	pushd "${S}" >/dev/null
 	dodir ${ddir}/linux
 	cp -pPR "${S}"/include/linux "${D}"/${ddir}/ || die
 	rm -rf "${D}"/${ddir}/linux/modules
 
-	# Handle multilib headers and crap
-	local multi_dirs="" multi_defs=""
-	case $(tc-arch-kernel) in
-		sparc64)
-			multi_dirs="sparc sparc64"
-			multi_defs="!__arch64__ __arch64__"
-			;;
-		x86_64)
-			multi_dirs="i386 x86_64"
-			multi_defs="__i386__ __x86_64__"
-			;;
-		ppc64)
-			multi_dirs="ppc ppc64"
-			multi_defs="!__powerpc64__ __powerpc64__"
-			;;
-		s390x)
-			multi_dirs="s390 s390x"
-			multi_defs="!__s390x__ __s390x__"
-			;;
-		arm)
-			dodir ${ddir}/asm
-			cp -pPR "${S}"/include/asm/* "${D}"/${ddir}/asm
-			[[ ! -e ${D}/${ddir}/asm/arch ]] && ln -sf arch-ebsa285 "${D}"/${ddir}/asm/arch
-			[[ ! -e ${D}/${ddir}/asm/proc ]] && ln -sf proc-armv "${D}"/${ddir}/asm/proc
-			;;
-		powerpc)
-			dodir ${ddir}/asm
-			cp -pPR "${S}"/include/asm/* "${D}"/${ddir}/asm
-			if [[ -e "${S}"/include/asm-ppc ]] ; then
-				dodir ${ddir}/asm-ppc
-				cp -pPR "${S}"/include/asm-ppc/* "${D}"/${ddir}/asm-ppc
-			fi
-			;;
-		*)
-			dodir ${ddir}/asm
-			cp -pPR "${S}"/include/asm/* "${D}"/${ddir}/asm
-			;;
-	esac
-	if [[ -n ${multi_dirs} ]] ; then
-		local d ml_inc=""
-		for d in ${multi_dirs} ; do
-			dodir ${ddir}/asm-${d}
-			cp -pPR "${S}"/include/asm-${d}/* "${D}"/${ddir}/asm-${d}/ || die "cp asm-${d} failed"
+	dodir ${ddir}/asm
+	cp -pPR "${S}"/include/asm/* "${D}"/${ddir}/asm
 
-			ml_inc="${ml_inc} ${multi_defs%% *}:${ddir}/asm-${d}"
-			multi_defs=${multi_defs#* }
-		done
-		create_ml_includes ${ddir}/asm ${ml_inc}
-	fi
-
-	if kernel_is 2 6; then
+	if kernel_is 2 6 ; then
 		dodir ${ddir}/asm-generic
 		cp -pPR "${S}"/include/asm-generic/* "${D}"/${ddir}/asm-generic
 	fi
@@ -648,7 +601,7 @@ install_headers() {
 	# clean up
 	find "${D}" -name '*.orig' -exec rm -f {} \;
 
-	cd ${OLDPWD}
+	popd >/dev/null
 }
 
 install_sources() {
