@@ -1,6 +1,12 @@
 # ChangeLog for games-action/supertuxkart
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.21 2010/11/03 08:56:15 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.22 2011/03/10 07:46:00 mr_bones_ Exp $
+
+*supertuxkart-0.7 (10 Mar 2011)
+
+  10 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +supertuxkart-0.7.ebuild, +files/supertuxkart-0.7-build.patch:
+  version bump (bug #349899)
 
   03 Nov 2010; Alfredo Tupone <tupone@gentoo.org> supertuxkart-0.6.2.ebuild,
   +files/supertuxkart-0.6.2-ovflfix.patch:
