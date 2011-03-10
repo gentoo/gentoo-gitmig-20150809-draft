@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/dbext
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.21 2010/11/14 17:09:00 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.22 2011/03/10 04:43:51 radhermit Exp $
+
+  10 Mar 2011; Tim Harder <radhermit@gentoo.org> -dbext-2.20.ebuild,
+  -dbext-6.20.ebuild:
+  Remove old.
 
   14 Nov 2010; Raúl Porcel <armin76@gentoo.org> dbext-12.00.ebuild:
   alpha/ia64/sparc stable
