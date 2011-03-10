@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.14 2011/03/10 06:50:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.15 2011/03/10 07:35:38 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -107,8 +107,9 @@ setup_flags() {
 			# - UltraSPARC T2 (niagara2) support requires >= glibc 2.7
 
 			if is_crosscompile || [[ ${PROFILE_ARCH} == "sparc64" ]] || { has_multilib_profile && ! tc-is-cross-compiler; } ; then
-				case ${ABI} in
-					sparc64)
+				case ${ABI}:${CTARGET} in
+					sparc64:*|\
+					default:sparc64*)
 						filter-flags -Wa,-xarch -Wa,-A
 
 						if is-flagq "-mcpu=niagara2" && [[ ${GLIBCMAJOR}.${GLIBCMINOR} > 2.7 ]] ; then
