@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.15 2011/03/10 07:35:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.16 2011/03/10 08:04:16 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -39,34 +39,10 @@ alt_usrlibdir() {
 	fi
 }
 
-setup_flags() {
-	# Make sure host make.conf doesn't pollute us
-	if is_crosscompile || tc-is-cross-compiler ; then
-		CHOST=${CTARGET} strip-unsupported-flags
-	fi
-
-	# Store our CFLAGS because it's changed depending on which CTARGET
-	# we are building when pulling glibc on a multilib profile
-	CFLAGS_BASE=${CFLAGS_BASE-${CFLAGS}}
-	CFLAGS=${CFLAGS_BASE}
-	CXXFLAGS_BASE=${CXXFLAGS_BASE-${CXXFLAGS}}
-	CXXFLAGS=${CXXFLAGS_BASE}
-	ASFLAGS_BASE=${ASFLAGS_BASE-${ASFLAGS}}
-	ASFLAGS=${ASFLAGS_BASE}
-
-	# Over-zealous CFLAGS can often cause problems.  What may work for one
-	# person may not work for another.  To avoid a large influx of bugs
-	# relating to failed builds, we strip most CFLAGS out to ensure as few
-	# problems as possible.
-	strip-flags
-	strip-unsupported-flags
-	filter-flags -m32 -m64 -mabi=*
-
-	unset CBUILD_OPT CTARGET_OPT
-	if has_multilib_profile ; then
-		CTARGET_OPT=$(get_abi_CTARGET)
-		[[ -z ${CTARGET_OPT} ]] && CTARGET_OPT=$(get_abi_CHOST)
-	fi
+setup_target_flags() {
+	# This largely mucks with compiler flags.  None of which should matter
+	# when building up just the headers.
+	just_headers && return 0
 
 	case $(tc-arch) in
 		x86)
@@ -155,6 +131,38 @@ setup_flags() {
 			fi
 		;;
 	esac
+}
+
+setup_flags() {
+	# Make sure host make.conf doesn't pollute us
+	if is_crosscompile || tc-is-cross-compiler ; then
+		CHOST=${CTARGET} strip-unsupported-flags
+	fi
+
+	# Store our CFLAGS because it's changed depending on which CTARGET
+	# we are building when pulling glibc on a multilib profile
+	CFLAGS_BASE=${CFLAGS_BASE-${CFLAGS}}
+	CFLAGS=${CFLAGS_BASE}
+	CXXFLAGS_BASE=${CXXFLAGS_BASE-${CXXFLAGS}}
+	CXXFLAGS=${CXXFLAGS_BASE}
+	ASFLAGS_BASE=${ASFLAGS_BASE-${ASFLAGS}}
+	ASFLAGS=${ASFLAGS_BASE}
+
+	# Over-zealous CFLAGS can often cause problems.  What may work for one
+	# person may not work for another.  To avoid a large influx of bugs
+	# relating to failed builds, we strip most CFLAGS out to ensure as few
+	# problems as possible.
+	strip-flags
+	strip-unsupported-flags
+	filter-flags -m32 -m64 -mabi=*
+
+	unset CBUILD_OPT CTARGET_OPT
+	if has_multilib_profile ; then
+		CTARGET_OPT=$(get_abi_CTARGET)
+		[[ -z ${CTARGET_OPT} ]] && CTARGET_OPT=$(get_abi_CHOST)
+	fi
+
+	setup_target_flags
 
 	if [[ -n ${CTARGET_OPT} && ${CBUILD} == ${CHOST} ]] && ! is_crosscompile; then
 		CBUILD_OPT=${CTARGET_OPT}

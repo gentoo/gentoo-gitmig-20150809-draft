@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.756 2011/03/10 07:35:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.757 2011/03/10 08:04:16 vapier Exp $
+
+  10 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Split out the target-specific flag munging into its own func to make the
+  common logic easier to understand, and skip it altogether for headers targets
+  since we wont have a compiler which can accept the flags in the first place.
 
   10 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
   Handle "default" ABI for sparc64 targets without falling back to a sparc32
