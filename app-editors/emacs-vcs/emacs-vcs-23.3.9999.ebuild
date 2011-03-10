@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.3 2011/03/05 11:23:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.4 2011/03/10 09:03:11 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -127,7 +127,8 @@ src_prepare() {
 src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
-	filter-flags -fstack-protector -fstack-protector-all	#285778
+	filter-flags -fstack-protector -fstack-protector-all -fstrict-aliasing
+	append-flags $(test-flags -fno-strict-aliasing)
 
 	if use sh; then
 		replace-flags -O[1-9] -O0		#262359
