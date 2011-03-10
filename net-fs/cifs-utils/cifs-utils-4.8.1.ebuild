@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-4.8.1.ebuild,v 1.3 2011/02/22 19:50:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-4.8.1.ebuild,v 1.4 2011/03/10 16:53:50 vostorga Exp $
 
 EAPI=2
 
@@ -19,7 +19,8 @@ DEPEND="!net-fs/mount-cifs
 	!<net-fs/samba-3.6
 	ads? ( sys-libs/talloc virtual/krb5 sys-apps/keyutils )
 	caps? ( sys-libs/libcap )
-	caps-ng? ( sys-libs/libcap-ng )"
+	caps-ng? ( sys-libs/libcap-ng )
+	creds? ( sys-apps/keyutils )"
 RDEPEND="${DEPEND}"
 
 cifs_check() {
