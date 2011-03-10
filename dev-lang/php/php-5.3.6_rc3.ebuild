@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.6_rc2.ebuild,v 1.1 2011/03/03 15:44:11 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.6_rc3.ebuild,v 1.1 2011/03/10 18:58:47 olemarkus Exp $
 
 EAPI=2
 
@@ -111,7 +111,7 @@ IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 
 DEPEND="!dev-lang/php:5
 	>=app-admin/eselect-php-0.6.2
-	>=dev-libs/libpcre-7.9[unicode]
+	>=dev-libs/libpcre-8.11[unicode]
 	adabas? ( >=dev-db/unixODBC-1.8.13 )
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
@@ -169,8 +169,8 @@ DEPEND="!dev-lang/php:5
 	soap? ( >=dev-libs/libxml2-2.6.8 )
 	solid? ( >=dev-db/unixODBC-1.8.13 )
 	spell? ( >=app-text/aspell-0.50 )
-	sqlite? ( =dev-db/sqlite-2* pdo? ( =dev-db/sqlite-3* ) )
-	sqlite3? ( =dev-db/sqlite-3* )
+	sqlite? ( =dev-db/sqlite-2* pdo? ( >=dev-db/sqlite-3.7.4 ) )
+	sqlite3? ( =dev-db/sqlite-3.7.4 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase-ct? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
