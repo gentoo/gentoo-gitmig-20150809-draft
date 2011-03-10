@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.150 2011/03/05 15:47:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.151 2011/03/10 12:58:29 scarabeus Exp $
+
+*libdrm-2.4.24 (10 Mar 2011)
+
+  10 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libdrm-2.4.24.ebuild:
+  Version bump to latest.
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> libdrm-2.4.23.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #354237
