@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.5 2011/02/26 21:03:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.6 2011/03/10 19:14:03 jlec Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="6"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-IUSE="X cairo cxx ffmpeg fftw gmath jpeg largefile motif mysql nls odbc opengl png postgres python readline sqlite tiff truetype wxwidgets"
+IUSE="X cairo cxx ffmpeg fftw gmath jpeg motif mysql nls odbc opengl png postgres python readline sqlite tiff truetype wxwidgets"
 
 TCL_DEPS="
 	>=dev-lang/tcl-8.5
@@ -51,9 +51,7 @@ RDEPEND="
 	)
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite:3 )
-	tiff? ( media-libs/tiff
-		largefile? ( >=media-libs/tiff-4 )
-	)
+	tiff? ( >=media-libs/tiff-4 )
 	truetype? ( media-libs/freetype:2 )
 	X? (
 		x11-libs/libICE
@@ -210,7 +208,6 @@ src_configure() {
 		$(use_with gmath blas) \
 		$(use_with gmath lapack) \
 		$(use_with jpeg) \
-		$(use_enable largefile) \
 		$(use_with mysql) \
 		--with-mysql-includes=/usr/include/mysql \
 		--with-mysql-libs=/usr/$(get_libdir)/mysql \
@@ -224,6 +221,7 @@ src_configure() {
 		$(use_with tiff) \
 		$(use_with truetype freetype) \
 		--with-freetype-includes="/usr/include/freetype2/" \
+		--enable-largefile \
 		${myconf}
 }
 

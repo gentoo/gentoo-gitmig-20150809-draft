@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.20 2011/02/26 21:03:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.21 2011/03/10 19:14:03 jlec Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 SLOT="6"
 KEYWORDS="amd64 ppc ~ppc64 x86"
 
-IUSE="ffmpeg fftw gmath jpeg largefile motif mysql nls odbc opengl png \
+IUSE="ffmpeg fftw gmath jpeg motif mysql nls odbc opengl png \
 postgres python readline sqlite tiff truetype wxwidgets X"
 
 RESTRICT="strip"
@@ -214,14 +214,14 @@ src_compile() {
 		$(use_with gmath blas) \
 		$(use_with gmath lapack) \
 		$(use_with jpeg) \
-		$(use_enable largefile) \
 		$(use_with motif) \
 		$(use_with nls) \
 		$(use_with odbc) \
 		$(use_with png) \
 		$(use_with postgres) \
 		$(use_with readline) \
-		$(use_with tiff) || die "configure failed!"
+		$(use_with tiff) \
+		--enable-largefile \
 
 	if use wxwidgets; then
 	    # can't use die here since we need to hack the vdigit build
