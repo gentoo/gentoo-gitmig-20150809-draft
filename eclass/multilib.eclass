@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.82 2011/03/10 04:26:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.83 2011/03/10 04:29:58 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -255,9 +255,9 @@ get_all_libdirs() {
 # if we're in the last (or only) run through src_{unpack,compile,install}
 is_final_abi() {
 	has_multilib_profile || return 0
-	local ALL_ABIS=$(get_install_abis)
-	local LAST_ABI=${ALL_ABIS/* /}
-	[[ ${LAST_ABI} == ${ABI} ]]
+	set -- $(get_install_abis)
+	local LAST_ABI=$#
+	[[ ${!LAST_ABI} == ${ABI} ]]
 }
 
 # @FUNCTION: number_abis
