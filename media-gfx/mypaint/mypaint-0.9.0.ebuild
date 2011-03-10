@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-0.9.0.ebuild,v 1.3 2010/12/31 17:23:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-0.9.0.ebuild,v 1.4 2011/03/10 10:46:38 hwoarang Exp $
 
 EAPI=2
 
@@ -33,6 +33,8 @@ src_prepare() {
 }
 
 src_compile() {
+	#workaround scons bug with locales. Bug #352700
+	export LANG="en_US.UTF-8"
 	tc-export CXX
 	escons || die "scons failed"
 }
