@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.302 2011/03/08 23:30:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.303 2011/03/10 18:45:04 phajdan.jr Exp $
+
+*chromium-11.0.696.1 (10 Mar 2011)
+
+  10 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-vpx-r3.patch, -chromium-11.0.686.1.ebuild,
+  +chromium-11.0.696.1.ebuild, chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Fixed bug #357451 by Alphat-PC
+  <AlphatPC@gmail.com> fully for dev channel ebuild and partially for live
+  ebuild (will land fixes upstream). Remove old.
 
   08 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
   chromium-10.0.648.127.ebuild:

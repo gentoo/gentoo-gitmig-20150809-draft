@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.686.1.ebuild,v 1.1 2011/03/02 09:03:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.1.ebuild,v 1.1 2011/03/10 18:45:04 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.1.6.1"
+V8_DEPEND="3.1.8"
 
 inherit eutils fdo-mime flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
@@ -36,6 +36,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/speex
 	>=media-video/ffmpeg-0.6_p25767[threads]
 	cups? ( >=net-print/cups-1.3.11 )
+	sys-libs/pam
 	sys-libs/zlib
 	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
@@ -96,10 +97,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
-	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
-
-	# Make sure we don't use bundled ICU headers.
-	epatch "${FILESDIR}"/${PN}-system-icu-r0.patch
+	epatch "${FILESDIR}/${PN}-system-vpx-r3.patch"
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -117,6 +115,7 @@ src_prepare() {
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libsrtp/*' \
+		\! -path 'third_party/libvpx/libvpx.h' \
 		\! -path 'third_party/libwebp/*' \
 		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
