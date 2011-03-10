@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.20 2011/03/10 08:06:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.21 2011/03/10 13:05:20 angelos Exp $
+
+  10 Mar 2011; <angelos@gentoo.org> rekonq-0.6.1.ebuild:
+  QA: Fixed VIRTUALX_REQUIRED
 
   10 Mar 2011; <angelos@gentoo.org> rekonq-0.6.1.ebuild:
   QA: Removed unneeded VIRTUALX_REQUIRED
