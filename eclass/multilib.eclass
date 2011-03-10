@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.83 2011/03/10 04:29:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.84 2011/03/10 05:01:47 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -674,7 +674,7 @@ multilib_env() {
 		;;
 	esac
 
-	export MULTILIB_ABIS MULTILIB_ABI
+	export MULTILIB_ABIS DEFAULT_ABI
 }
 
 # @FUNCTION: multilib_toolchain_setup
