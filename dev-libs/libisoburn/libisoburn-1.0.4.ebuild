@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.0.2.ebuild,v 1.1 2011/03/06 17:00:22 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.0.4.ebuild,v 1.1 2011/03/10 19:49:16 billie Exp $
 
 EAPI=2
 
@@ -19,8 +19,8 @@ IUSE="acl debug external-filters external-filters-setuid readline xattr zlib"
 #IUSE="acl cdio debug external-filters external-filters-setuid readline xattr zlib"
 #Supports libcdio but needs version >=0.83 which is not yet released.
 
-RDEPEND=">=dev-libs/libburn-1.0.2
-	>=dev-libs/libisofs-1.0.2
+RDEPEND=">=dev-libs/libburn-1.0.4
+	>=dev-libs/libisofs-1.0.4
 	acl? ( virtual/acl )
 	readline? ( sys-libs/readline )
 	xattr? ( sys-apps/attr )

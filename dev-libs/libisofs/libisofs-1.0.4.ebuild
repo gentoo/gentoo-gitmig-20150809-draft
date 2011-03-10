@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-1.0.2.ebuild,v 1.1 2011/03/06 16:58:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-1.0.4.ebuild,v 1.1 2011/03/10 19:46:44 billie Exp $
 
 EAPI=2
 
