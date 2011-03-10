@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12534 2011/03/09 11:33:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12535 2011/03/10 17:26:50 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -219,6 +219,7 @@ x11-misc/talika
 # Release candidates, masked for testing
 =dev-lang/php-5.3.6_rc1
 =dev-lang/php-5.3.6_rc2
+=dev-lang/php-5.3.6_rc3
 
 # Jeroen Roovers <jer@gentoo.org> (17 Feb 2011)
 # Snapshots of www-client/opera are not supported
