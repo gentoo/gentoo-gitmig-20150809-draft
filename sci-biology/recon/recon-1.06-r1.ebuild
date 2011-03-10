@@ -1,37 +1,36 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/recon/recon-1.06.ebuild,v 1.1 2011/02/03 01:58:47 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/recon/recon-1.06-r1.ebuild,v 1.1 2011/03/10 11:12:46 jlec Exp $
 
-EAPI="3"
+EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="Automated de novo identification of repeat families from genomic sequences"
-HOMEPAGE="http://selab.janelia.org/recon.html
-	http://www.repeatmasker.org/RepeatModeler.html"
+HOMEPAGE="http://selab.janelia.org/recon.html http://www.repeatmasker.org/RepeatModeler.html"
 SRC_URI="http://www.repeatmasker.org/RECON${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="examples"
 KEYWORDS="~amd64 ~x86"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/RECON${PV}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PV}-buffer-overflow.patch
 	sed -i 's|$path = "";|$path = "/usr/libexec/'${PN}'";|' scripts/recon.pl || die
 }
 
 src_compile() {
-	emake -C src || die
+	emake -C src
 }
 
 src_install() {
-	dobin scripts/* || die
+	dobin scripts/*
 	exeinto /usr/libexec/${PN}
-	doexe src/{edgeredef,eledef,eleredef,famdef,imagespread} || die
+	doexe src/{edgeredef,eledef,eleredef,famdef,imagespread}
 	dodoc 00README
 	insinto /usr/share/${PN}
-	doins -r Demos
+	use examples && doins -r Demos
 }
