@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.185 2011/03/10 17:11:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.186 2011/03/10 18:11:54 ranger Exp $
+
+  10 Mar 2011; Brent Baude <ranger@gentoo.org>
+  bind-tools-9.6.2_p2-r2.ebuild, bind-tools-9.7.2_p2-r2.ebuild:
+  net-dns/bind-tools-9.6.2_p2-r2 and 9.7.2_p2-r2 ppc64 for bug 337638
 
   10 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
   -bind-tools-9.7.1-r2.ebuild:
