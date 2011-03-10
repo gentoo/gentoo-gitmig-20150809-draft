@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.21 2011/03/10 08:00:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.22 2011/03/10 12:57:04 angelos Exp $
+
+  10 Mar 2011; <angelos@gentoo.org> kdevelop-php-1.2.0.ebuild:
+  QA: Fixed VIRTUALX_REQUIRED
 
   10 Mar 2011; <angelos@gentoo.org> kdevelop-php-1.2.0.ebuild:
   QA: Removed unneeded VIRTUALX_REQUIRED
