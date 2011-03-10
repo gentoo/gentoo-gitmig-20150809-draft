@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3_rc1.ebuild,v 1.2 2011/03/08 08:30:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3.ebuild,v 1.1 2011/03/10 08:58:39 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -9,7 +9,7 @@ inherit autotools elisp-common eutils flag-o-matic multilib
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="ftp://alpha.gnu.org/gnu/emacs/pretest/${P/_/-}.tar.gz
+SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
 	mirror://gentoo/${P}-patches-1.tar.bz2"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode"
@@ -59,6 +59,7 @@ DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
+	!<app-editors/emacs-vcs-${PV}
 	>=app-emacs/emacs-common-gentoo-1[X?]"
 
 EMACS_SUFFIX="emacs-${SLOT}"
@@ -97,7 +98,8 @@ src_prepare() {
 src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
-	filter-flags -fstack-protector -fstack-protector-all	#285778
+	filter-flags -fstack-protector -fstack-protector-all -fstrict-aliasing
+	append-flags $(test-flags -fno-strict-aliasing)
 
 	if use sh; then
 		replace-flags -O[1-9] -O0		#262359
