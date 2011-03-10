@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/libXt-1.1.0.ebuild,v 1.1 2011/03/05 00:45:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/libXt-1.1.1.ebuild,v 1.1 2011/03/10 12:31:08 scarabeus Exp $
 
 EAPI=4
 inherit xorg-2 toolchain-funcs
