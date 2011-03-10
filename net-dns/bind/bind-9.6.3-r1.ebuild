@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.3-r1.ebuild,v 1.2 2011/02/27 22:27:49 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.3-r1.ebuild,v 1.3 2011/03/10 17:38:23 idl0r Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit eutils autotools toolchain-funcs flag-o-matic
 MY_PV="${PV/_p/-P}"
 MY_P="${PN}-${MY_PV}"
 
-SDB_LDAP_VER="1.1.0-fc14"
+SDB_LDAP_VER="1.1.0-fc11"
 
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
@@ -24,14 +24,14 @@ HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
 	geoip? ( ${GEOIP_SRC_URI_BASE}/files/${GEOIP_DOC_A}
-			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_PATCH_A} )"
-#	sdb-ldap? ( http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2 )"
+			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_PATCH_A} )
+	sdb-ldap? ( http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
-	resolvconf urandom xml geoip gssapi" # sdb-ldap
+	resolvconf urandom xml geoip gssapi sdb-ldap"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -42,8 +42,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	threads? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
-	gssapi? ( virtual/krb5 )"
-#	sdb-ldap? ( net-nds/openldap )
+	gssapi? ( virtual/krb5 )
+	sdb-ldap? ( net-nds/openldap )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -94,12 +94,12 @@ src_prepare() {
 	# sdb-ldap patch as per  bug #160567
 	# Upstream URL: http://bind9-ldap.bayour.com/
 	# New patch take from bug 302735
-#	if use sdb-ldap; then
-#		epatch "${WORKDIR}"/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
-#		cp -fp contrib/sdb/ldap/ldapdb.[ch] bin/named
-#		cp -fp contrib/sdb/ldap/{ldap2zone.1,ldap2zone.c} bin/tools
-#		cp -fp contrib/sdb/ldap/{zone2ldap.1,zone2ldap.c} bin/tools
-#	fi
+	if use sdb-ldap; then
+		epatch "${WORKDIR}"/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
+		cp -fp contrib/sdb/ldap/ldapdb.[ch] bin/named
+		cp -fp contrib/sdb/ldap/{ldap2zone.1,ldap2zone.c} bin/tools
+		cp -fp contrib/sdb/ldap/{zone2ldap.1,zone2ldap.c} bin/tools
+	fi
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
