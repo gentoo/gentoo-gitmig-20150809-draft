@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.6.ebuild,v 1.2 2011/02/28 18:07:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.6.ebuild,v 1.3 2011/03/10 09:21:10 radhermit Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-fltk-fixes.patch
 	sed -i -e "s:/lib:/$(get_libdir):g" Makefile || die "sed failed"
 }
 
