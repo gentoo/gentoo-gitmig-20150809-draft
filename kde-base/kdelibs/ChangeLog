@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.724 2011/03/09 10:22:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.725 2011/03/10 08:33:38 polynomial-c Exp $
+
+  10 Mar 2011; Lars Wendler <polynomial-c@gentoo.org>
+  files/kdelibs-4.4.5-hostname.patch:
+  Added fixed 4.4.5-hostname.patch (with kind permission from tampakrap).
 
 *kdelibs-4.4.5-r3 (09 Mar 2011)
 

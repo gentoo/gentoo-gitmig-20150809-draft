@@ -10,7 +10,7 @@ diff -ruN kdelibs-4.4.5.orig/kio/kio/tcpslavebase.cpp kdelibs-4.4.5/kio/kio/tcps
      QRegExp domainMatcher(QString(), Qt::CaseInsensitive, QRegExp::Wildcard);
      QMutableListIterator<KSslError> it(d->sslErrors);
      while (it.hasNext()) {
-@@ -499,16 +497,28 @@
+@@ -499,16 +498,29 @@
          // *in the case of HostNameMismatch*. A HostNameMismatch, however, will always
          // be an error of the peer certificate so we just don't check the error's
          // certificate().
@@ -36,7 +36,8 @@ diff -ruN kdelibs-4.4.5.orig/kio/kio/tcpslavebase.cpp kdelibs-4.4.5/kio/kio/tcps
 +    domainPatterns += peerCert.alternateSubjectNames().values(QSsl::DnsEntry);
 +    bool names_match = false;
 +    foreach (const QString &dp, domainPatterns) {
-+        if (isMatchingHostname(dp, d->host)) {
++        domainMatcher.setPattern(dp);
++        if (domainMatcher.exactMatch(d->host)) {
 +            names_match = true;
 +            break;
 +       }
