@@ -1,0 +1,108 @@
+--- pythonmagick_src/_DrawableViewbox.cpp
++++ pythonmagick_src/_DrawableViewbox.cpp
+@@ -16,7 +16,7 @@
+ 
+ struct Magick_DrawableViewbox_Wrapper: Magick::DrawableViewbox
+ {
+-    Magick_DrawableViewbox_Wrapper(PyObject* py_self_, ssize_t p0, ssize_t p1, ssize_t p2, ssize_t p3):
++    Magick_DrawableViewbox_Wrapper(PyObject* py_self_, ::ssize_t p0, ::ssize_t p1, ::ssize_t p2, ::ssize_t p3):
+         Magick::DrawableViewbox(p0, p1, p2, p3), py_self(py_self_) {}
+ 
+ 
+@@ -30,15 +30,15 @@
+ // Module ======================================================================
+ void Export_pyste_src_DrawableViewbox()
+ {
+-    class_< Magick::DrawableViewbox, boost::noncopyable, Magick_DrawableViewbox_Wrapper >("DrawableViewbox", init< ssize_t, ssize_t, ssize_t, ssize_t >())
+-        .def("x1", (void (Magick::DrawableViewbox::*)(ssize_t) )&Magick::DrawableViewbox::x1)
+-        .def("x1", (ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::x1)
+-        .def("y1", (void (Magick::DrawableViewbox::*)(ssize_t) )&Magick::DrawableViewbox::y1)
+-        .def("y1", (ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::y1)
+-        .def("x2", (void (Magick::DrawableViewbox::*)(ssize_t) )&Magick::DrawableViewbox::x2)
+-        .def("x2", (ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::x2)
+-        .def("y2", (void (Magick::DrawableViewbox::*)(ssize_t) )&Magick::DrawableViewbox::y2)
+-        .def("y2", (ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::y2)
++    class_< Magick::DrawableViewbox, boost::noncopyable, Magick_DrawableViewbox_Wrapper >("DrawableViewbox", init< ::ssize_t, ::ssize_t, ::ssize_t, ::ssize_t >())
++        .def("x1", (void (Magick::DrawableViewbox::*)(::ssize_t) )&Magick::DrawableViewbox::x1)
++        .def("x1", (::ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::x1)
++        .def("y1", (void (Magick::DrawableViewbox::*)(::ssize_t) )&Magick::DrawableViewbox::y1)
++        .def("y1", (::ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::y1)
++        .def("x2", (void (Magick::DrawableViewbox::*)(::ssize_t) )&Magick::DrawableViewbox::x2)
++        .def("x2", (::ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::x2)
++        .def("y2", (void (Magick::DrawableViewbox::*)(::ssize_t) )&Magick::DrawableViewbox::y2)
++        .def("y2", (::ssize_t (Magick::DrawableViewbox::*)() const)&Magick::DrawableViewbox::y2)
+     ;
+ 
+ }
+--- pythonmagick_src/_Geometry.cpp
++++ pythonmagick_src/_Geometry.cpp
+@@ -22,10 +22,10 @@
+         .def("width", (size_t (Magick::Geometry::*)() const)&Magick::Geometry::width)
+         .def("height", (void (Magick::Geometry::*)(size_t) )&Magick::Geometry::height)
+         .def("height", (size_t (Magick::Geometry::*)() const)&Magick::Geometry::height)
+-        .def("xOff", (void (Magick::Geometry::*)(ssize_t) )&Magick::Geometry::xOff)
+-        .def("xOff", (ssize_t (Magick::Geometry::*)() const)&Magick::Geometry::xOff)
+-        .def("yOff", (void (Magick::Geometry::*)(ssize_t) )&Magick::Geometry::yOff)
+-        .def("yOff", (ssize_t (Magick::Geometry::*)() const)&Magick::Geometry::yOff)
++        .def("xOff", (void (Magick::Geometry::*)(::ssize_t) )&Magick::Geometry::xOff)
++        .def("xOff", (::ssize_t (Magick::Geometry::*)() const)&Magick::Geometry::xOff)
++        .def("yOff", (void (Magick::Geometry::*)(::ssize_t) )&Magick::Geometry::yOff)
++        .def("yOff", (::ssize_t (Magick::Geometry::*)() const)&Magick::Geometry::yOff)
+         .def("xNegative", (void (Magick::Geometry::*)(bool) )&Magick::Geometry::xNegative)
+         .def("xNegative", (bool (Magick::Geometry::*)() const)&Magick::Geometry::xNegative)
+         .def("yNegative", (void (Magick::Geometry::*)(bool) )&Magick::Geometry::yNegative)
+--- pythonmagick_src/_Image.cpp
++++ pythonmagick_src/_Image.cpp
+@@ -94,7 +94,7 @@
+         .def("colorize", (void (Magick::Image::*)(const unsigned int, const Magick::Color&) )&Magick::Image::colorize)
+         .def("comment", (void (Magick::Image::*)(const std::string&) )&Magick::Image::comment)
+         .def("compare", &Magick::Image::compare)
+-        .def("composite", (void (Magick::Image::*)(const Magick::Image&, const ssize_t, const ssize_t, const MagickCore::CompositeOperator) )&Magick::Image::composite, Magick_Image_composite_overloads_3_4())
++        .def("composite", (void (Magick::Image::*)(const Magick::Image&, const ::ssize_t, const ::ssize_t, const MagickCore::CompositeOperator) )&Magick::Image::composite, Magick_Image_composite_overloads_3_4())
+         .def("composite", (void (Magick::Image::*)(const Magick::Image&, const Magick::Geometry&, const MagickCore::CompositeOperator) )&Magick::Image::composite, Magick_Image_composite_overloads_2_3())
+         .def("composite", (void (Magick::Image::*)(const Magick::Image&, const MagickCore::GravityType, const MagickCore::CompositeOperator) )&Magick::Image::composite, Magick_Image_composite_overloads_2_3())
+         .def("contrast", &Magick::Image::contrast)
+@@ -111,18 +111,18 @@
+         .def("equalize", &Magick::Image::equalize)
+         .def("erase", &Magick::Image::erase)
+         .def("flip", &Magick::Image::flip)
+-        .def("floodFillColor", (void (Magick::Image::*)(const ssize_t, const ssize_t, const Magick::Color&) )&Magick::Image::floodFillColor)
++        .def("floodFillColor", (void (Magick::Image::*)(const ::ssize_t, const ::ssize_t, const Magick::Color&) )&Magick::Image::floodFillColor)
+         .def("floodFillColor", (void (Magick::Image::*)(const Magick::Geometry&, const Magick::Color&) )&Magick::Image::floodFillColor)
+-        .def("floodFillColor", (void (Magick::Image::*)(const ssize_t, const ssize_t, const Magick::Color&, const Magick::Color&) )&Magick::Image::floodFillColor)
++        .def("floodFillColor", (void (Magick::Image::*)(const ::ssize_t, const ::ssize_t, const Magick::Color&, const Magick::Color&) )&Magick::Image::floodFillColor)
+         .def("floodFillColor", (void (Magick::Image::*)(const Magick::Geometry&, const Magick::Color&, const Magick::Color&) )&Magick::Image::floodFillColor)
+         .def("floodFillOpacity", &Magick::Image::floodFillOpacity)
+-        .def("floodFillTexture", (void (Magick::Image::*)(const ssize_t, const ssize_t, const Magick::Image&) )&Magick::Image::floodFillTexture)
++        .def("floodFillTexture", (void (Magick::Image::*)(const ::ssize_t, const ::ssize_t, const Magick::Image&) )&Magick::Image::floodFillTexture)
+         .def("floodFillTexture", (void (Magick::Image::*)(const Magick::Geometry&, const Magick::Image&) )&Magick::Image::floodFillTexture)
+-        .def("floodFillTexture", (void (Magick::Image::*)(const ssize_t, const ssize_t, const Magick::Image&, const Magick::Color&) )&Magick::Image::floodFillTexture)
++        .def("floodFillTexture", (void (Magick::Image::*)(const ::ssize_t, const ::ssize_t, const Magick::Image&, const Magick::Color&) )&Magick::Image::floodFillTexture)
+         .def("floodFillTexture", (void (Magick::Image::*)(const Magick::Geometry&, const Magick::Image&, const Magick::Color&) )&Magick::Image::floodFillTexture)
+         .def("flop", &Magick::Image::flop)
+         .def("frame", (void (Magick::Image::*)(const Magick::Geometry&) )&Magick::Image::frame, Magick_Image_frame_overloads_0_1())
+-        .def("frame", (void (Magick::Image::*)(const size_t, const size_t, const ssize_t, const ssize_t) )&Magick::Image::frame, Magick_Image_frame_overloads_2_4())
++        .def("frame", (void (Magick::Image::*)(const size_t, const size_t, const ::ssize_t, const ::ssize_t) )&Magick::Image::frame, Magick_Image_frame_overloads_2_4())
+         .def("gamma", (void (Magick::Image::*)(const double) )&Magick::Image::gamma)
+         .def("gamma", (void (Magick::Image::*)(const double, const double, const double) )&Magick::Image::gamma)
+         .def("gaussianBlur", &Magick::Image::gaussianBlur)
+@@ -183,7 +183,7 @@
+         .def("write", (void (Magick::Image::*)(Magick::Blob*) )&Magick::Image::write)
+         .def("write", (void (Magick::Image::*)(Magick::Blob*, const std::string&) )&Magick::Image::write)
+         .def("write", (void (Magick::Image::*)(Magick::Blob*, const std::string&, const size_t) )&Magick::Image::write)
+-        .def("write", (void (Magick::Image::*)(const ssize_t, const ssize_t, const size_t, const size_t, const std::string&, const MagickCore::StorageType, void*) )&Magick::Image::write)
++        .def("write", (void (Magick::Image::*)(const ::ssize_t, const ::ssize_t, const size_t, const size_t, const std::string&, const MagickCore::StorageType, void*) )&Magick::Image::write)
+         .def("zoom", &Magick::Image::zoom)
+         .def("adjoin", (void (Magick::Image::*)(const bool) )&Magick::Image::adjoin)
+         .def("adjoin", (bool (Magick::Image::*)() const)&Magick::Image::adjoin)
+@@ -299,8 +299,8 @@
+         .def("penColor", (Magick::Color (Magick::Image::*)() const)&Magick::Image::penColor)
+         .def("penTexture", (void (Magick::Image::*)(const Magick::Image&) )&Magick::Image::penTexture)
+         .def("penTexture", (Magick::Image (Magick::Image::*)() const)&Magick::Image::penTexture)
+-        .def("pixelColor", (void (Magick::Image::*)(const ssize_t, const ssize_t, const Magick::Color&) )&Magick::Image::pixelColor)
+-        .def("pixelColor", (Magick::Color (Magick::Image::*)(const ssize_t, const ssize_t) const)&Magick::Image::pixelColor)
++        .def("pixelColor", (void (Magick::Image::*)(const ::ssize_t, const ::ssize_t, const Magick::Color&) )&Magick::Image::pixelColor)
++        .def("pixelColor", (Magick::Color (Magick::Image::*)(const ::ssize_t, const ::ssize_t) const)&Magick::Image::pixelColor)
+         .def("profile", (void (Magick::Image::*)(const std::string, const Magick::Blob&) )&Magick::Image::profile)
+         .def("profile", (Magick::Blob (Magick::Image::*)(const std::string) const)&Magick::Image::profile)
+         .def("quality", (void (Magick::Image::*)(const size_t) )&Magick::Image::quality)
