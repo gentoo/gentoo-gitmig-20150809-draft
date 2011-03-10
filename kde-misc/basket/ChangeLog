@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/basket
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.9 2011/01/30 13:55:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.10 2011/03/10 08:05:14 angelos Exp $
+
+  10 Mar 2011; <angelos@gentoo.org> basket-1.81.ebuild:
+  QA: Removed unneeded VIRTUALX_REQUIRED
 
   30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -basket-1.80.ebuild:
   Remove old
