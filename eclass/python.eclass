@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.109 2011/02/14 20:46:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.110 2011/03/10 17:49:49 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@ if ! has "${EAPI:-0}" 0 1 2 3; then
 fi
 
 _CPYTHON2_GLOBALLY_SUPPORTED_ABIS=(2.4 2.5 2.6 2.7)
-_CPYTHON3_GLOBALLY_SUPPORTED_ABIS=(3.0 3.1 3.2)
+_CPYTHON3_GLOBALLY_SUPPORTED_ABIS=(3.0 3.1 3.2 3.3)
 _JYTHON_GLOBALLY_SUPPORTED_ABIS=(2.5-jython)
 _PYTHON_GLOBALLY_SUPPORTED_ABIS=(${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]} ${_CPYTHON3_GLOBALLY_SUPPORTED_ABIS[@]} ${_JYTHON_GLOBALLY_SUPPORTED_ABIS[@]})
 
@@ -620,7 +620,7 @@ if ! has "${EAPI:-0}" 0 1; then
 	fi
 fi
 
-if has "${EAPI:-0}" 0 1 2 3; then
+if has "${EAPI:-0}" 0 1 2 3 4; then
 	unset PYTHON_ABIS
 fi
 
@@ -631,7 +631,7 @@ _python_calculate_PYTHON_ABIS() {
 
 	_python_initial_sanity_checks
 
-	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3; then
+	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3 4; then
 		local PYTHON_ABI restricted_ABI restricted_ABIs support_ABI supported_PYTHON_ABIS
 
 		restricted_ABIs="${RESTRICT_PYTHON_ABIS// /$'\n'}"
