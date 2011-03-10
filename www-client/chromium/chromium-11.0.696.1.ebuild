@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.1.ebuild,v 1.1 2011/03/10 18:45:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.1.ebuild,v 1.2 2011/03/10 19:45:12 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -49,10 +49,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2"
 RDEPEND+="
-	|| (
-		x11-themes/gnome-icon-theme
-		x11-themes/xfce4-icon-theme
-	)
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -316,4 +312,14 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	# For more info see bugs #292201 and bug #352263.
+	elog "Depending on your desktop environment, you may need"
+	elog "to install additional packages to get icons on the Downloads page."
+	elog
+	elog "For KDE, the required package is kde-base/oxygen-icons."
+	elog
+	elog "For other desktop environments, try one of the following:"
+	elog " - x11-themes/gnome-icon-theme"
+	elog " - x11-themes/xfce4-icon-theme"
 }
