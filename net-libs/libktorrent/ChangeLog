@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libktorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.13 2011/02/18 20:29:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.14 2011/03/10 08:05:52 angelos Exp $
+
+  10 Mar 2011; <angelos@gentoo.org> libktorrent-1.0.5.3.ebuild:
+  QA: Removed unneeded VIRTUALX_REQUIRED
 
   18 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   libktorrent-1.0.5.3.ebuild:
