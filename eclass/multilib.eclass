@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.80 2011/03/07 02:46:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.81 2011/03/10 01:52:22 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -678,15 +678,24 @@ multilib_toolchain_setup() {
 
 	export ABI=$1
 
+	# First restore any saved state we have laying around.
+	if [[ ${__DEFAULT_ABI_SAVED} == "true" ]] ; then
+		for v in CHOST CBUILD AS CC CXX LD ; do
+			vv="__abi_saved_${v}"
+			export ${v}="${!vv}"
+			unset ${vv}
+		done
+		unset __DEFAULT_ABI_SAVED
+	fi
+
 	# We want to avoid the behind-the-back magic of gcc-config as it
 	# screws up ccache and distcc.  See #196243 for more info.
 	if [[ ${ABI} != ${DEFAULT_ABI} ]] ; then
-		if [[ ${DEFAULT_ABI_SAVED} != "true" ]] ; then
-			for v in CHOST CBUILD AS CC CXX LD ; do
-				export __abi_saved_${v}="${!v}"
-			done
-			export DEFAULT_ABI_SAVED="true"
-		fi
+		# Back that multilib-ass up so we can restore it later
+		for v in CHOST CBUILD AS CC CXX LD ; do
+			export __abi_saved_${v}="${!v}"
+		done
+		export __DEFAULT_ABI_SAVED="true"
 
 		# Set the CHOST native first so that we pick up the native
 		# toolchain and not a cross-compiler by accident #202811.
@@ -697,11 +706,5 @@ multilib_toolchain_setup() {
 		export LD="$(tc-getLD) $(get_abi_LDFLAGS)"
 		export CHOST=$(get_abi_CHOST $1)
 		export CBUILD=$(get_abi_CHOST $1)
-
-	elif [[ ${DEFAULT_ABI_SAVED} == "true" ]] ; then
-		for v in CHOST CBUILD AS CC CXX LD ; do
-			vv="__abi_saved_${v}"
-			export ${v}="${!vv}"
-		done
 	fi
 }
