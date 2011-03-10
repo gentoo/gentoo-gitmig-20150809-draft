@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.325 2011/03/03 20:18:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.326 2011/03/10 17:06:01 idl0r Exp $
+
+  10 Mar 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.0.ebuild,
+  files/named.init-r10:
+  Improve OpenSSL/libgost stuff, bug 357569, thanks to Duncan
+  <1i5t5.duncan@cox.net>.
 
   03 Mar 2011; Christian Ruppert <idl0r@gentoo.org> files/named.init-r10:
   Check chroot on restart.

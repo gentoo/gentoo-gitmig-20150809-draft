@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0.ebuild,v 1.1 2011/03/01 17:53:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0.ebuild,v 1.2 2011/03/10 17:06:01 idl0r Exp $
 
 EAPI="3"
 
@@ -232,10 +232,10 @@ src_install() {
 	newinitd "${FILESDIR}"/named.init-r10 named || die
 	newconfd "${FILESDIR}"/named.confd-r6 named || die
 
-	if use ssl -a -e /usr/lib/engines/libgost.so; then
-		sed -i -e 's:^OPENSSL_LIBGOST=0$:OPENSSL_LIBGOST=1:' "${D}/etc/init.d/named" || die
+	if use ssl && [ -e /usr/lib/engines/libgost.so ]; then
+		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}/' "${D}/etc/init.d/named" || die
 	else
-		sed -i -e 's:^OPENSSL_LIBGOST=1$:OPENSSL_LIBGOST=0:' "${D}/etc/init.d/named" || die
+		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}/' "${D}/etc/init.d/named" || die
 	fi
 
 	newenvd "${FILESDIR}"/10bind.env 10bind || die
