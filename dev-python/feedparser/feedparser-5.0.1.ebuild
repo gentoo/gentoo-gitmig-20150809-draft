@@ -1,33 +1,60 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-5.0.1.ebuild,v 1.2 2011/03/09 22:18:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/feedparser-5.0.1.ebuild,v 1.3 2011/03/10 01:23:16 arfrever Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"  # See README-PYTHON3 in tarball if you want to work on this
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Parse RSS and Atom feeds in Python"
-HOMEPAGE="http://www.feedparser.org/ http://code.google.com/p/feedparser/"
+HOMEPAGE="http://www.feedparser.org/ http://code.google.com/p/feedparser/ http://pypi.python.org/pypi/feedparser"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
-LICENSE="BSD-2"
+LICENSE="BSD-2 PSF-2.2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="test"
+IUSE=""
 
 DEPEND=""
 RDEPEND=""
 
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 DOCS="LICENSE NEWS"
-PYTHON_MODNAME="feedparser.py"
+PYTHON_MODNAME="feedparser.py _feedparser_sgmllib.py"
+
+src_prepare() {
+	mv feedparser/sgmllib3.py feedparser/_feedparser_sgmllib.py || die "Renaming sgmllib3.py failed"
+	epatch "${FILESDIR}/${P}-sgmllib.patch"
+
+	distutils_src_prepare
+
+	preparation() {
+		if [[ "${PYTHON_ABI}" == 3.* ]]; then
+			2to3-${PYTHON_ABI} -nw --no-diffs feedparser/{feedparser.py,feedparsertest.py} || return 1
+		else
+			# Avoid SyntaxErrors with Python 2.
+			echo "raise ImportError" > feedparser/_feedparser_sgmllib.py || return 1
+		fi
+	}
+	python_execute_function -s preparation
+}
+
+src_compile() {
+	PYTHONPATH="feedparser" distutils_src_compile
+}
 
 src_test() {
 	testing() {
-		cd feedparser || die
-		"$(PYTHON)" ${PN}test.py || die
+		# 877 errors with Python 3.
+		[[ "${PYTHON_ABI}" == 3.* ]] && return
+
+		cd feedparser || return 1
+		PYTHONPATH="." "$(PYTHON)" feedparsertest.py
 	}
-	python_execute_function testing
+	python_execute_function -s testing
+}
+
+src_install() {
+	PYTHONPATH="feedparser" distutils_src_install
 }

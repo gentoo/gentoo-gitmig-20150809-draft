@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.23 2011/02/22 05:43:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.24 2011/03/10 01:23:16 arfrever Exp $
+
+  10 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  feedparser-5.0.1.ebuild, +files/feedparser-5.0.1-sgmllib.patch:
+  Support Python 3 (bug #352863).
 
 *feedparser-5.0.1 (22 Feb 2011)
 
