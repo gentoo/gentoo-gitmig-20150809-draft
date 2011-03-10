@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.392 2011/01/29 20:03:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.393 2011/03/10 03:50:26 radhermit Exp $
+
+  10 Mar 2011; Tim Harder <radhermit@gentoo.org> ffmpeg-0.6_p25423.ebuild,
+  ffmpeg-0.6_p25767.ebuild, ffmpeg-9999.ebuild:
+  Fix static-libs usage (bug #336431 by Nikoli).
 
   29 Jan 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   fix git URI
