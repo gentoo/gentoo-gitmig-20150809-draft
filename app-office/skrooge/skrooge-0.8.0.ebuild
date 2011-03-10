@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.8.0.ebuild,v 1.2 2011/01/29 14:57:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-0.8.0.ebuild,v 1.3 2011/03/10 07:59:56 angelos Exp $
 
 EAPI=3
 KDE_LINGUAS="bg ca ca@valencia cs da de el en_GB eo es et fr ga gl hu it ja ko lt ms nb
 nds nl pl pt pt_BR ro ru sk sv tr uk zh_TW"
 KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
-VIRTUALX_REQUIRED=optional
 inherit kde4-base
 
 DESCRIPTION="personal finances manager for KDE4, aiming at being simple and intuitive"
