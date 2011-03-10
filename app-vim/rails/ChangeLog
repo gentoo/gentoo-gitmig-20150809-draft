@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/rails
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/rails/ChangeLog,v 1.1 2011/03/10 10:08:38 radhermit Exp $
+
+*rails-4.3 (10 Mar 2011)
+
+  10 Mar 2011; Tim Harder <radhermit@gentoo.org> +rails-4.3.ebuild,
+  +metadata.xml:
+  Initial import.
+
