@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-neon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.50 2011/01/06 16:55:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.51 2011/03/11 18:21:33 xarthisius Exp $
+
+  11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-neon-0.10.19.ebuild:
+  ppc/ppc64 stable wrt #346981
 
   06 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-neon-0.10.19.ebuild:
