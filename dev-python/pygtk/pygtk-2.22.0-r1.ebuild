@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.22.0-r1.ebuild,v 1.5 2011/03/07 20:36:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.22.0-r1.ebuild,v 1.6 2011/03/11 20:43:57 arfrever Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2:2.5"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 # dev-python/pycairo does not support Python 2.4 / 2.5.
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
