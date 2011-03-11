@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.49 2011/03/04 23:19:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.50 2011/03/11 19:50:52 dilfridge Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -12,9 +12,17 @@
 # You must define KMNAME to use this eclass, and do so before inheriting it. All other variables are optional.
 # Do not include the same item in more than one of KMMODULE, KMMEXTRA, KMCOMPILEONLY, KMEXTRACTONLY.
 
-inherit kde4-base versionator
+inherit kde4-base toolchain-funcs versionator
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_postinst pkg_postrm
+case ${EAPI:-0} in
+	3)
+		KDEMETA_EXPF="pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_postinst pkg_postrm"
+		;;
+	*)
+		KDEMETA_EXPF="pkg_pretend pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_postinst pkg_postrm"
+		;;
+esac
+EXPORT_FUNCTIONS ${KDEMETA_EXPF}
 
 [[ -z ${KMNAME} ]] && die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
 
@@ -127,12 +135,25 @@ fi
 # Specify extra parameters to pass to tar, in kde4-meta_src_extract.
 # '-xpf -j' are passed to tar by default.
 
+# @FUNCTION: kde4-meta_pkg_pretend
+# @DESCRIPTION:
+# Currently only checks the gcc version.
+kde4-meta_pkg_pretend() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	slot_is_at_least 4.6 ${SLOT} && ( [[ $(gcc-major-version) -lt 4 ]] || \
+		( [[ $(gcc-major-version) -eq 4 ]] && [[ $(gcc-minor-version) -le 3 ]] ) ) \
+		&& die "Sorry, but gcc-4.3 and earlier wont work for KDE SC 4.6 (see bug 354837)."
+}
+
 # @FUNCTION: kde4-meta_pkg_setup
 # @DESCRIPTION:
-# Currently just calls its equivalent in kde4-base.eclass(5). Use this one in
-# split ebuilds.
+# Currently calls its equivalent in kde4-base.eclass(5) and checks the gcc version.
+# Use this one in split ebuilds.
 kde4-meta_pkg_setup() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	has pkg_pretend ${KDEMETA_EXPF} || kde4-meta_pkg_pretend
 
 	kde4-base_pkg_setup
 }
