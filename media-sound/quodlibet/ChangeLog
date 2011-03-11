@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.77 2010/06/13 16:06:23 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.78 2011/03/11 19:40:58 arfrever Exp $
+
+  11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  quodlibet-2.2.1.ebuild:
+  Fix deprecation warning.
 
   13 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   quodlibet-2.2.1.ebuild:

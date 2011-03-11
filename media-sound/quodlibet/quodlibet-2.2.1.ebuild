@@ -1,12 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.2.1.ebuild,v 1.4 2010/06/13 16:06:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.2.1.ebuild,v 1.5 2011/03/11 19:40:58 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
-inherit distutils eutils python
+inherit distutils eutils
 
 DESCRIPTION="Quod Libet is a GTK+-based audio player written in Python."
 HOMEPAGE="http://code.google.com/p/quodlibet/"
@@ -45,9 +44,12 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
+	distutils_src_prepare
+
 	if ! use gstreamer; then
 		sed -i \
 			-e '/backend/s:gstbe:xinebe:' \
