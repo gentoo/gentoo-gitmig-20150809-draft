@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpfr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.124 2010/08/30 17:32:52 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.125 2011/03/11 18:09:40 hwoarang Exp $
+
+  11 Mar 2011; Markos Chandras <hwoarang@gentoo.org> mpfr-3.0.0_p3.ebuild:
+  Stable on amd64 wrt bug #348634
 
 *mpfr-3.0.0_p3 (30 Aug 2010)
 
