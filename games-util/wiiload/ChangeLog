@@ -1,6 +1,11 @@
 # ChangeLog for games-util/wiiload
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/wiiload/ChangeLog,v 1.4 2009/10/25 15:18:22 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/wiiload/ChangeLog,v 1.5 2011/03/11 10:24:24 radhermit Exp $
+
+*wiiload-0.5 (11 Mar 2011)
+
+  11 Mar 2011; Tim Harder <radhermit@gentoo.org> +wiiload-0.5.ebuild:
+  Version bump.
 
   25 Oct 2009; Markus Meier <maekke@gentoo.org> wiiload-0.4.ebuild:
   amd64/x86 stable, bug #288822
