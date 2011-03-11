@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/proxychains
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.14 2008/04/21 18:04:05 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/ChangeLog,v 1.15 2011/03/11 09:18:45 radhermit Exp $
+
+*proxychains-3.1_p20110225 (11 Mar 2011)
+
+  11 Mar 2011; Tim Harder <radhermit@gentoo.org>
+  +proxychains-3.1_p20110225.ebuild, metadata.xml:
+  Version bump to new snapshot that includes localnet support (fixes bug
+  #286177). Update to EAPI 4 and take over maintainership.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
