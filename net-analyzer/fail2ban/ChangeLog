@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.63 2011/02/10 23:35:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.64 2011/03/11 20:56:27 arfrever Exp $
+
+  11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  fail2ban-0.8.4.ebuild, fail2ban-0.8.4-r1.ebuild, fail2ban-0.8.4-r2.ebuild:
+  Use Python 2 (bug #315073).
 
   10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> fail2ban-0.8.4-r2.ebuild:
   Stable on amd64 wrt bug #351803

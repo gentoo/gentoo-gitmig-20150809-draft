@@ -1,9 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.4-r1.ebuild,v 1.1 2010/11/05 15:05:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.4-r1.ebuild,v 1.2 2011/03/11 20:56:27 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit distutils eutils
@@ -20,6 +19,11 @@ IUSE=""
 RDEPEND="net-misc/whois
 	virtual/mta
 	net-firewall/iptables"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-hashlib.patch \
@@ -51,6 +55,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	if [[ $previous_less_than_0_7 = 0 ]] ; then
 		elog
 		elog "Configuration files are now in /etc/fail2ban/"
