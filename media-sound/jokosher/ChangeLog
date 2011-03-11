@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jokosher
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/ChangeLog,v 1.10 2010/07/06 15:12:04 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/ChangeLog,v 1.11 2011/03/11 18:51:48 arfrever Exp $
+
+  11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  jokosher-0.11.1.ebuild:
+  Use Python 2 (bug #313953).
 
   06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   jokosher-0.11.1.ebuild:

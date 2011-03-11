@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.1.ebuild,v 1.4 2010/07/06 15:12:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.1.ebuild,v 1.5 2011/03/11 18:51:48 arfrever Exp $
 
+EAPI="3"
 PYTHON_DEPEND="2"
+
 inherit eutils gnome2 distutils
 
 DESCRIPTION="A simple yet powerful multi-track studio"
@@ -39,9 +41,19 @@ DEPEND="${RDEPEND}
 
 PYTHON_MODNAME="Jokosher"
 
-src_unpack() {
-	gnome2_src_unpack
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	gnome2_src_prepare
 	epatch "${FILESDIR}"/${P}-update-database.patch
+}
+
+src_configure() {
+	# Don't run gnome2_src_configure().
+	:
 }
 
 pkg_postinst() {
