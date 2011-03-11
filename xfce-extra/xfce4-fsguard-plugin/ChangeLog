@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-fsguard-plugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard-plugin/ChangeLog,v 1.3 2010/12/15 13:58:11 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-fsguard-plugin/ChangeLog,v 1.4 2011/03/11 17:02:09 ssuominen Exp $
+
+  11 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-fsguard-plugin-1.0.0.ebuild:
+  Remove USE="debug" to avoid -DXFCE_DISABLE_DEPRECATED because
+  xfce4-fsguard-plugin is still using libxfcegui4.
 
 *xfce4-fsguard-plugin-1.0.0 (15 Dec 2010)
 
