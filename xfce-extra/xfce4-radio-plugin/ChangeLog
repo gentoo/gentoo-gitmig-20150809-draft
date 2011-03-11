@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-radio-plugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio-plugin/ChangeLog,v 1.9 2010/11/05 13:56:46 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio-plugin/ChangeLog,v 1.10 2011/03/11 17:44:43 ssuominen Exp $
+
+  11 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-radio-plugin-0.4.4.ebuild:
+  Remove "ug" from LINGUAS wrt #358421 by Agostino Sarubbo.
 
   05 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
   xfce4-radio-plugin-0.4.3.ebuild:
