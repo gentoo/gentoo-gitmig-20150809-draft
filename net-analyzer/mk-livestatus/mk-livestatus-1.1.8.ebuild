@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.1.8.ebuild,v 1.1 2011/01/30 23:47:09 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.1.8.ebuild,v 1.2 2011/03/11 08:49:47 tove Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ IUSE="examples perl python test"
 RDEPEND="perl? (
 		dev-lang/perl
 		virtual/perl-Digest-MD5
-		dev-perl/Thread-Queue
+		virtual/perl-Thread-Queue
 	)"
 DEPEND="${RDEPEND}
 	perl? (
