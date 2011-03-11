@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-verve-plugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/ChangeLog,v 1.6 2010/12/23 16:34:03 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/ChangeLog,v 1.7 2011/03/11 19:36:13 ssuominen Exp $
+
+  11 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-verve-plugin-1.0.0.ebuild:
+  Remove USE="debug" to avoid -DXFCE_DISABLE_DEPRECATED because
+  xfce4-verve-plugin is still using libxfcegui4.
 
 *xfce4-verve-plugin-1.0.0 (23 Dec 2010)
 
