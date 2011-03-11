@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12541 2011/03/11 19:07:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12542 2011/03/11 19:12:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -393,6 +393,7 @@ net-misc/pino
 >=dev-libs/glib-2.27
 >=x11-libs/gtk+-2.24.0
 >=sys-auth/polkit-0.101
+>=gnome-extra/polkit-gnome-0.101
 
 # Hans de Graaff <graaff@gentoo.org> (02 Feb 2011)
 # Masked for removal in 30 days. Superseded by
