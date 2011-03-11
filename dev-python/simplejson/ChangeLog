@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.36 2011/02/27 18:19:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.37 2011/03/11 10:21:24 tomka Exp $
+
+  11 Mar 2011; Thomas Kahle <tomka@gentoo.org> simplejson-2.1.3.ebuild:
+  x86 stable per bug 355271
 
   27 Feb 2011; Brent Baude <ranger@gentoo.org> simplejson-2.1.3.ebuild:
   stable ppc, bug 355271
