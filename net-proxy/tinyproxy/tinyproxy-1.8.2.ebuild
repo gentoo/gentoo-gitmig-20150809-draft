@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.2.ebuild,v 1.4 2011/03/10 17:27:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.2.ebuild,v 1.5 2011/03/11 16:25:07 jer Exp $
 
 EAPI="2"
 
@@ -31,11 +31,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.1-ldflags.patch
 	use minimal && epatch "${FILESDIR}/${PN}-1.8.1-minimal.patch"
 	sed -i etc/${PN}.conf.in -e "s|nobody|${PN}|g" || die "sed failed"
-	sed \
-		-e "/CONFFILE/s:${PN}/::g" \
-		"${FILESDIR}/${PN}.initd" \
-		> "${WORKDIR}"/${PN}.initd \
-		|| die "sed failed"
 	eautoreconf
 }
 
@@ -72,7 +67,7 @@ src_install() {
 	keepdir /var/log/${PN}
 	keepdir /var/run/${PN}
 
-	newinitd "${WORKDIR}"/tinyproxy.initd tinyproxy
+	newinitd "${FILESDIR}"/${P}.initd tinyproxy
 }
 
 pkg_postinst() {

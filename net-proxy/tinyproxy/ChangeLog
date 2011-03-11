@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.24 2011/03/10 17:27:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.25 2011/03/11 16:25:07 jer Exp $
+
+  11 Mar 2011; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.2.ebuild,
+  +files/tinyproxy-1.8.2.initd:
+  Use a static initd script instead of a dynamically changed one (bug #358123).
 
   10 Mar 2011; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.2.ebuild:
   The test suite needs fortune to be installed, by Myckel Habets (bug #358113).
