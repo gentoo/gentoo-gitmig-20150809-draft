@@ -49,3 +49,5 @@ move app-emulation/qemu-softmmu app-emulation/qemu
 slotmove sci-mathematics/rkward 0 4
 move app-pda/synce-libsynce dev-libs/libsynce
 slotmove dev-libs/gdl 0 1
+move dev-perl/Thread-Queue perl-core/Thread-Queue
+move dev-perl/Thread-Semaphore perl-core/Thread-Semaphore
