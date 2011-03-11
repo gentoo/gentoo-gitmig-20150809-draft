@@ -1,8 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3.ebuild,v 1.8 2011/01/30 18:09:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.25.3.ebuild,v 1.9 2011/03/11 19:21:11 arfrever Exp $
 
-inherit versionator eutils gnome2
+EAPI="3"
+PYTHON_DEPEND="2"
+
+inherit versionator eutils gnome2 python
 
 # This ebuild does nothing -- we just want to get the pkgconfig file installed
 MY_PN="gnome-python-extras"
@@ -17,9 +20,9 @@ SLOT="0"
 RESTRICT="test"
 
 # From the gnome-python-extras eclass
-RDEPEND=">=x11-libs/gtk+-2.4
-	>=dev-libs/glib-2.6
-	>=dev-python/pygtk-2.10.3
+RDEPEND=">=x11-libs/gtk+-2.4:2
+	>=dev-libs/glib-2.6:2
+	>=dev-python/pygtk-2.10.3:2
 	!<=dev-python/gnome-python-extras-2.19.1-r2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -32,4 +35,6 @@ DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-allbindings"
+	python_set_active_version 2
+	python_pkg_setup
 }

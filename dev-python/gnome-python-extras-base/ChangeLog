@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.21 2011/02/26 19:04:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.22 2011/03/11 19:21:11 arfrever Exp $
+
+  11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnome-python-extras-base-2.25.3.ebuild:
+  Use Python 2.
 
   26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-python-extras-base-2.19.1.ebuild:
