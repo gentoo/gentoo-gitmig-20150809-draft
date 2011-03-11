@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ximagesrc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.39 2010/12/20 17:28:23 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.40 2011/03/11 19:00:45 xarthisius Exp $
+
+  11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-ximagesrc-0.10.23.ebuild:
+  ppc/ppc64 stable wrt #346981
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-ximagesrc-0.10.23.ebuild:
