@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.5 2009/03/08 14:16:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.6.1.ebuild,v 1.6 2011/03/11 19:57:50 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils
 
@@ -52,6 +53,14 @@ pkg_setup() {
 		ewarn "support (X11, fbcon, directfb, etc) you plan on using."
 		echo
 	fi
+
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
@@ -107,10 +116,12 @@ src_install() {
 		myconf="${myconf} --geometry=800x600 --display=fbdev"
 	fi
 	sed -i "s:/etc/freevo/freevo.conf:${D}/etc/freevo/freevo.conf:g" setup_freevo.py || die "Could not fix setup_freevo.py"
-	python setup_freevo.py ${myconf} || die "Could not create new freevo.conf"
+	"$(PYTHON)" setup_freevo.py ${myconf} || die "Could not create new freevo.conf"
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	echo
 	einfo "Please check /etc/freevo/freevo.conf and"
 	einfo "/etc/freevo/local_conf.py before starting Freevo."
