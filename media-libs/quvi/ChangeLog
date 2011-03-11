@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.17 2011/03/05 01:06:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.18 2011/03/11 04:26:45 radhermit Exp $
+
+*quvi-0.2.14 (11 Mar 2011)
+
+  11 Mar 2011; Tim Harder <radhermit@gentoo.org> +quvi-0.2.14.ebuild:
+  Version bump. Update to EAPI 3 and use xz tarball.
 
   05 Mar 2011; Brent Baude <ranger@gentoo.org> quvi-0.2.13.ebuild:
   stable ppc, bug 354739
