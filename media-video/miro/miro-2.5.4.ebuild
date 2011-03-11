@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.4.ebuild,v 1.2 2010/06/26 07:49:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/miro-2.5.4.ebuild,v 1.3 2011/03/11 20:47:12 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
 
-inherit eutils fdo-mime gnome2-utils python distutils
+inherit eutils fdo-mime gnome2-utils distutils
 
 DESCRIPTION="Open source video player and podcast client"
 HOMEPAGE="http://www.getmiro.com/"
@@ -28,7 +29,7 @@ CDEPEND="
 RDEPEND="${CDEPEND}
 	gstreamer? ( dev-python/gst-python:0.10 )
 	libnotify? ( dev-python/notify-python )
-	|| ( dev-lang/python[sqlite] dev-python/pysqlite:2 )
+	|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-python/pysqlite:2 )
 	dev-python/dbus-python
 	dev-python/gconf-python
 	dev-python/gtkmozembed-python
@@ -47,6 +48,11 @@ S="${WORKDIR}/${P}/platform/gtk-x11"
 # TODO:
 # create a real test suite, upstream bug 12369
 # try to have a real xine/gstreamer choice, upstream bug 12371
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	# fix debug mode
