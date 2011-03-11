@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash-XS/Package-Stash-XS-0.210.ebuild,v 1.1 2011/01/26 13:06:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash-XS/Package-Stash-XS-0.210.ebuild,v 1.2 2011/03/11 18:48:59 hwoarang Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Faster and more correct implementation of the Package::Stash API"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="test"
 
 RDEPEND=""

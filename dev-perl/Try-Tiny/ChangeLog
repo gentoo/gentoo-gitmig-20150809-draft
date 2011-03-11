@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.17 2011/02/19 21:27:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.18 2011/03/11 18:47:45 hwoarang Exp $
+
+  11 Mar 2011; Markos Chandras <hwoarang@gentoo.org> Try-Tiny-0.90.ebuild:
+  Stable on amd64 wrt bug #350853
 
   19 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> Try-Tiny-0.90.ebuild:
   Marked ~ppc64 wrt #346449
