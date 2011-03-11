@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/jeweler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.4 2010/12/27 20:41:57 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.5 2011/03/11 13:15:19 graaff Exp $
+
+*jeweler-1.5.2 (11 Mar 2011)
+
+  11 Mar 2011; Hans de Graaff <graaff@gentoo.org> +jeweler-1.5.2.ebuild:
+  Version bump.
 
   27 Dec 2010; Fabian Groffen <grobian@gentoo.org> jeweler-1.4.0.ebuild:
   Added Prefix keywords
