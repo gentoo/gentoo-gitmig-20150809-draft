@@ -6,4 +6,8 @@
 		<email>pva@gentoo.org</email>
 		<name>Peter Volkov</name>
 	</maintainer>
+	<use>
+		<flag name='fits'>Enable support for the FITS image format through <pkg>sci-libs/cfitsio</pkg></flag>
+		<flag name="orc">Use <pkg>dev-lang/orc</pkg> for runtime optimisations</flag>
+	</use>
 </pkgmetadata>
