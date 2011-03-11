@@ -1,31 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-1.0.1.ebuild,v 1.10 2008/03/19 14:47:46 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-1.0.1.ebuild,v 1.11 2011/03/11 20:15:23 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
-IUSE=""
 DESCRIPTION="Python wrapper for the local database Sqlite"
-SRC_URI="mirror://sourceforge/pysqlite/pysqlite-${PV}.tar.gz"
 HOMEPAGE="http://pysqlite.org/"
+SRC_URI="mirror://sourceforge/pysqlite/pysqlite-${PV}.tar.gz"
 
-KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 LICENSE="pysqlite"
 SLOT="0"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
+IUSE=""
 
-DEPEND=">=dev-lang/python-2.2
-	=dev-db/sqlite-2*"
+DEPEND="dev-db/sqlite:0"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	# distutils expects to find setup.py in ${S}
-	mv "${WORKDIR}"/pysqlite "${S}"
-}
+S="${WORKDIR}/${PN}"
+
+PYTHON_MODNAME="sqlite"
 
 src_install() {
 	distutils_src_install
-	# Need to do the examples explicitly since dodoc
-	# doesn't do directories properly
-	dodir /usr/share/doc/${PF}/examples || die
-	cp -r "${S}"/examples/* "${D}"/usr/share/doc/${PF}/examples || die
+
+	insinto /usr/share/doc/${PF}/examples || die
+	doins -r examples/* || die
 }
