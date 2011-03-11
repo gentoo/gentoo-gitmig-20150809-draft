@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/App-Nopaste
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.20 2011/02/14 09:15:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.21 2011/03/11 07:20:06 tove Exp $
+
+*App-Nopaste-0.270.0 (11 Mar 2011)
+
+  11 Mar 2011; Torsten Veller <tove@gentoo.org> +App-Nopaste-0.270.0.ebuild:
+  Version bump
 
   14 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> App-Nopaste-0.250.ebuild:
   Trim the default dependencies so we do not bring X in on servers.
