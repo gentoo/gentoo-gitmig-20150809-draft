@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/Email-Sender-0.102.370.ebuild,v 1.1 2011/02/26 09:06:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/Email-Sender-0.102.370.ebuild,v 1.2 2011/03/11 08:15:28 tove Exp $
 
 EAPI=3
 
@@ -26,8 +26,8 @@ RDEPEND="virtual/perl-Scalar-List-Utils
 	dev-perl/Email-Address"
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-MakeMaker-6.31
-	test? ( >=dev-perl/Capture-Tiny-0.08
-			dev-perl/Test-MockObject )"
+	test? ( >=dev-perl/Capture-Tiny-0.08 )"
+#			dev-perl/Test-MockObject )"
 
 SRC_TEST=do
 
