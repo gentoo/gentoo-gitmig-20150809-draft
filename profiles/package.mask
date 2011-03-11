@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12536 2011/03/11 00:36:06 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12537 2011/03/11 08:15:42 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (11 Mar 2011)
+# Part of app-editors/emacs since version 22.1 or 23.1.
+# Masked for removal in 60 days, bug 358351.
+app-emacs/calc
+app-emacs/easypg
+app-emacs/ibuffer
+app-emacs/table
+app-emacs/tramp
 
 # Alex Alexander <wired@gentoo.org> (11 Mar 2011)
 # not needed anymore. the cairo[qt4] blocker issue was fixed and
