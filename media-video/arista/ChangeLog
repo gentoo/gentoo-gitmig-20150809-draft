@@ -1,6 +1,10 @@
 # ChangeLog for media-video/arista
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.8 2011/02/01 05:48:04 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.9 2011/03/11 20:21:19 arfrever Exp $
+
+  11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  arista-0.9.3-r1.ebuild, arista-0.9.5.ebuild:
+  Use Python 2 (bug #313983).
 
   01 Feb 2011; Arun Raghavan <ford_prefect@gentoo.org> arista-0.9.3-r1.ebuild,
   arista-0.9.5.ebuild:

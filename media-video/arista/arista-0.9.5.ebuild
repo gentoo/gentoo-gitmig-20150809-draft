@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.2 2011/02/01 05:48:04 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.3 2011/03/11 20:21:19 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 
 inherit distutils
 
@@ -20,9 +22,7 @@ IUSE="+faac kde nautilus +x264 +xvid"
 
 DEPEND="dev-python/setuptools"
 RDEPEND=">=x11-libs/gtk+-2.16
-	|| ( >=dev-lang/python-2.6[xml]
-		( dev-lang/python:2.5[xml] dev-python/simplejson )
-		( dev-lang/python:2.4[xml] dev-python/simplejson ) )
+	|| ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson )
 	>=dev-python/pygtk-2.16
 	dev-python/pygobject
 	dev-python/pycairo
@@ -42,7 +42,14 @@ RDEPEND=">=x11-libs/gtk+-2.16
 	x264? ( media-plugins/gst-plugins-x264:0.10 )
 	xvid? ( media-plugins/gst-plugins-xvid:0.10 )"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	einfo "If you find that a format you want is not supported in Arista,"
 	einfo "please make sure that you have the corresponding USE-flag enabled"
 	einfo "media-plugins/gst-plugins-meta"
