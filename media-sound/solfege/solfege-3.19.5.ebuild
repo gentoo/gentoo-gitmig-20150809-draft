@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.19.4.ebuild,v 1.2 2011/03/04 22:40:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.19.5.ebuild,v 1.1 2011/03/11 21:18:35 radhermit Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="sqlite"
 
-inherit eutils python
+inherit python
 
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
 HOMEPAGE="http://www.solfege.org"
@@ -33,11 +33,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i \
-		-e '/^CFLAGS/s:-I/usr/src/linux/include::' \
+	sed -i -e '/^CFLAGS/s:-I/usr/src/linux/include::' \
 		solfege/soundcard/Makefile || die "sed failed"
-
-	epatch "${FILESDIR}"/${P}-skipmanual.patch
 }
 
 src_configure() {
