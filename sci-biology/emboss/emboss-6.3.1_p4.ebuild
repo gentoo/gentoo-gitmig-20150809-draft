@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1_p4.ebuild,v 1.3 2011/03/09 19:50:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.3.1_p4.ebuild,v 1.4 2011/03/11 07:05:50 jlec Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="doc +largefile minimal mysql pdf png postgres static-libs X"
+IUSE="doc minimal mysql pdf png postgres static-libs X"
 
 DEPEND="
 	dev-libs/expat
@@ -67,9 +67,9 @@ src_configure() {
 		$(use_with mysql mysql "${EPREFIX}/usr/bin/mysql_config") \
 		$(use_with postgres postgresql "${EPREFIX}/usr/bin/pg_config") \
 		$(use_enable amd64 64) \
-		$(use_enable largefile large) \
 		$(use_enable static-libs static) \
 		--without-java \
+		--enable-large \
 		--enable-systemlibs \
 		--includedir="${ED}/usr/include/emboss"
 }
