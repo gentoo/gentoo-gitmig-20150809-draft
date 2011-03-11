@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.8 2011/02/24 18:56:15 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.9 2011/03/11 08:20:07 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.4"
 
-inherit eutils gnome2 python
+inherit eutils gnome2 python autotools
 
 DESCRIPTION="Applets for the GNOME Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
@@ -21,15 +21,15 @@ IUSE="battstat gnome gstreamer hal ipv6 networkmanager policykit"
 HALDEPEND=" hal? ( >=sys-apps/hal-0.5.3 ) "
 RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/glib-2.22:2
-	>=gnome-base/gconf-2.8
+	>=gnome-base/gconf-2.8:2
 	>=gnome-base/gnome-panel-2.31.2[bonobo]
 	>=x11-libs/libxklavier-4.0
-	>=x11-libs/libwnck-2.9.3
+	>=x11-libs/libwnck-2.9.3:1
 	>=gnome-base/gnome-desktop-2.11.1:2
 	>=x11-libs/libnotify-0.3.2
 	>=sys-apps/dbus-1.1.2
 	>=dev-libs/dbus-glib-0.74
-	>=dev-libs/libxml2-2.5.0
+	>=dev-libs/libxml2-2.5.0:2
 	>=x11-themes/gnome-icon-theme-2.15.91
 	>=dev-libs/libgweather-2.22.1:2
 	x11-libs/libX11
@@ -40,18 +40,18 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 		gnome-base/libgnome
 
 		>=gnome-extra/gucharmap-2.23
-		>=gnome-base/libgtop-2.11.92
+		>=gnome-base/libgtop-2.11.92:2
 
-		>=dev-python/pygobject-2.6
-		>=dev-python/pygtk-2.6
-		>=dev-python/gconf-python-2.10
+		>=dev-python/pygobject-2.6:2
+		>=dev-python/pygtk-2.6:2
+		>=dev-python/gconf-python-2.10:2
 		>=dev-python/gnome-applets-python-2.10 )
 	gstreamer?	(
-		>=media-libs/gstreamer-0.10.2
-		>=media-libs/gst-plugins-base-0.10.14
+		>=media-libs/gstreamer-0.10.2:0.10
+		>=media-libs/gst-plugins-base-0.10.14:0.10
 		|| (
-			>=media-plugins/gst-plugins-alsa-0.10.14
-			>=media-plugins/gst-plugins-oss-0.10.14 ) )
+			>=media-plugins/gst-plugins-alsa-0.10.14:0.10
+			>=media-plugins/gst-plugins-oss-0.10.14:0.10 ) )
 	networkmanager? ( >=net-misc/networkmanager-0.7.0 )
 	policykit? ( >=sys-auth/polkit-0.92 )"
 
@@ -83,9 +83,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	gnome2_src_prepare
+
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 
-	gnome2_src_prepare
+	# gweather: fix NetworkManager support to compile, see upstream bug 636217 and bug 358043
+	epatch "${FILESDIR}"/${P}-dbus-fix.patch
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
@@ -96,6 +99,9 @@ src_prepare() {
 		invest-applet/invest/Makefile.in || die "disabling invest tests failed"
 
 	python_convert_shebangs -r 2 .
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }
 
 src_test() {
