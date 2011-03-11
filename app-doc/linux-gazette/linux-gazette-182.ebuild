@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/linux-gazette-182.ebuild,v 1.1 2011/03/09 07:15:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/linux-gazette-182.ebuild,v 1.2 2011/03/11 01:57:56 vapier Exp $
 
 DESCRIPTION="Sharing ideas and discoveries and Making Linux just a little more fun"
 HOMEPAGE="http://linuxgazette.net/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND=">=app-doc/linux-gazette-base-${PV}"
 
-S=${WORKDIR}/lg
+S=${WORKDIR}/${PV}
 
 src_install() {
 	dodir /usr/share/doc
