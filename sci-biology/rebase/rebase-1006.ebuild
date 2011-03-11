@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-1006.ebuild,v 1.8 2011/03/09 19:01:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-1006.ebuild,v 1.9 2011/03/11 07:04:21 jlec Exp $
 
 EAPI="3"
 
 MY_PV=${PV#1}
 
 DESCRIPTION="A restriction enzyme database"
-LICENSE="public-domain"
 HOMEPAGE="http://rebase.neb.com"
 SRC_URI="mirror://gentoo/${P}.tar.xz"
 
@@ -16,10 +15,10 @@ SLOT="0"
 # documentation. The non-indexed database is not installed.
 IUSE="emboss minimal"
 KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
+LICENSE="public-domain"
 
 RDEPEND="emboss? ( >=sci-biology/emboss-5.0.0 )"
-DEPEND="${RDEPEND}
-	app-arch/xz-utils"
+DEPEND="${RDEPEND}"
 
 RESTRICT="binchecks strip"
 
