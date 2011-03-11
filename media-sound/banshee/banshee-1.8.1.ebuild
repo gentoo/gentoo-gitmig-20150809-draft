@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.1.ebuild,v 1.1 2011/02/27 14:54:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.1.ebuild,v 1.2 2011/03/11 16:21:06 ssuominen Exp $
 
 EAPI=2
 
@@ -19,14 +19,13 @@ SRC_URI="http://download.banshee-project.org/${PN}/stable/${PV}/${PN}-1-${PV}.ta
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test +web youtube"
+IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test udev +web youtube"
 
 # Hal is required until upstream bug 612616 is solved
 RDEPEND=">=dev-lang/mono-2.4.3
 	gnome-base/gnome-settings-daemon
 	x11-themes/gnome-icon-theme
 	sys-apps/dbus
-	sys-apps/hal
 	>=dev-dotnet/gtk-sharp-2.12:2
 	>=dev-dotnet/gconf-sharp-2.24.0:2
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1
@@ -79,7 +78,13 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	)
 	youtube? (
 		>=dev-dotnet/google-gdata-sharp-1.4
-	)"
+	)
+	udev? (
+		dev-dotnet/gudev-sharp
+		dev-dotnet/gkeyfile-sharp
+		dev-dotnet/gtk-sharp-beans
+		dev-dotnet/gio-sharp
+		)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -100,17 +105,15 @@ src_prepare () {
 }
 
 src_configure() {
-	# Disable gio till gtk-sharp-beans and gio-sharp are in-tree
-	# Disable gio-hardware till gudev-sharp and gkeyfile-sharp are around
-	# for a bit longer (when these are in, we can drop HAL)
-	# Ditto gst-sharp
-	local myconf="--disable-dependency-tracking --disable-static
-		--enable-gnome --enable-schemas-install
+	local myconf="--disable-dependency-tracking
+		--disable-static
+		--enable-gnome
+		--enable-schemas-install
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--enable-gapless-playback
-		--disable-gio --disable-gst-sharp
-		--disable-gio_hardware --enable-hal
+		--disable-gst-sharp
+		--disable-hal
 		--disable-torrent
 		--disable-shave"
 
@@ -125,6 +128,8 @@ src_configure() {
 		$(use_enable karma) \
 		$(use_enable web webkit) \
 		$(use_enable youtube) \
+		$(use_enable udev gio) \
+		$(use_enable udev gio_hardware) \
 		${myconf}
 }
 

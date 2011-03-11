@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.128 2011/02/27 14:54:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.129 2011/03/11 16:21:06 ssuominen Exp $
+
+  11 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> banshee-1.8.1.ebuild:
+  Replace sys-apps/hal with USE="udev" wrt #344193 by Laurento Frittella.
 
 *banshee-1.8.1 (27 Feb 2011)
 
