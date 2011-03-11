@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/geneweb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.12 2010/11/11 08:37:26 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.13 2011/03/11 12:55:01 tupone Exp $
+
+*geneweb-5.02 (11 Mar 2011)
+
+  11 Mar 2011; Alfredo Tupone <tupone@gentoo.org> +geneweb-5.02.ebuild,
+  +files/geneweb-5.02-gentoo.patch,
+  +files/geneweb-5.02-parallellbuild.patch:
+  Version bump to 5.02
 
   11 Nov 2010; Alfredo Tupone <tupone@gentoo.org>
   files/geneweb-5.01-gentoo.patch:
