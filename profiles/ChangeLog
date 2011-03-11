@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5127 2011/03/11 16:35:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5128 2011/03/11 18:13:50 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Masked dev-tex/memoir and dev-tex/listings for removal
 
   11 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite ipod-sharp, podsleuth and libipoddevice.
