@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.757 2011/03/10 08:04:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.758 2011/03/11 02:40:28 vapier Exp $
+
+  11 Mar 2011; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit, files/eblits/src_install.eblit,
+  files/eblits/src_unpack.eblit:
+  Get header-only install working for mips systems #235551 by Joshua Kinard.
 
   10 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
   Split out the target-specific flag munging into its own func to make the

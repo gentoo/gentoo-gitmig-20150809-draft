@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.11 2010/06/08 04:59:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.12 2011/03/11 02:40:28 vapier Exp $
 
 int_to_KV() {
 	local version=$1 major minor micro
@@ -132,6 +132,16 @@ toolchain-glibc_src_unpack() {
 		ARCH=$(tc-arch) \
 		epatch "${WORKDIR}"/patches
 		echo "Gentoo patchset ${PATCH_VER}" >> csu/Banner
+	fi
+
+	if just_headers ; then
+		if [[ -e ports/sysdeps/mips/preconfigure ]] ; then
+			# mips peeps like to screw with us.  if building headers,
+			# we don't have a real compiler, so we can't let them
+			# insert -mabi on us.
+			sed -i '/CPPFLAGS=.*-mabi/s|.*|:|' ports/sysdeps/mips/preconfigure || die
+			find ports/sysdeps/mips/ -name Makefile -exec sed -i '/^CC.*-mabi=/s:-mabi=.*:-D_MIPS_SZPTR=32:' {} +
+		fi
 	fi
 
 	epatch_user

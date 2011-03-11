@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.16 2010/11/10 21:51:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.17 2011/03/11 02:40:28 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -167,9 +167,10 @@ toolchain-glibc_headers_compile() {
 	# Nothing is compiled here which would affect the headers for the target.
 	# so forcing CC/CFLAGS is sane.  unless you dont have `gcc`.  then i
 	# dont care :p.
-	einfo "Configuring GLIBC headers with: ${myconf// /\n\t\t}"
+	echo "${S}"/configure ${myconf}
 	CC=gcc \
 	CFLAGS="-O1 -pipe" \
+	CPPFLAGS="-U_FORTIFY_SOURCE" \
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
 }
 
@@ -181,6 +182,7 @@ eblit-glibc-src_compile() {
 	fi
 
 	if just_headers ; then
+		export ABI=default
 		toolchain-glibc_headers_compile
 		return
 	fi
