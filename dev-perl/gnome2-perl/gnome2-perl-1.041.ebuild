@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.041.ebuild,v 1.9 2010/07/20 15:17:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.041.ebuild,v 1.10 2011/03/11 19:29:21 tove Exp $
 
 inherit perl-module
 
@@ -14,7 +14,6 @@ KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
-	>=gnome-base/libgnomeprint-2
 	>=dev-perl/gtk2-perl-1.0
 	gnome-base/libgnomeui
 	gnome-base/libbonoboui
