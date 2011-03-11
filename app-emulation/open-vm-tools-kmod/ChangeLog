@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.13 2011/03/11 16:11:53 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.14 2011/03/11 16:14:18 vadimk Exp $
+
+*open-vm-tools-kmod-0.0.20110223.368700-r1 (11 Mar 2011)
+
+  11 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +open-vm-tools-kmod-0.0.20110223.368700-r1.ebuild:
+  version bump. added udev rules
 
   11 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -open-vm-tools-kmod-0.0.20100223.236320.ebuild,
