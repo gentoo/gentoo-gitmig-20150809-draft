@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.727 2011/03/10 20:00:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.728 2011/03/11 11:44:46 tomka Exp $
+
+  11 Mar 2011; Thomas Kahle <tomka@gentoo.org> kdelibs-4.4.5-r3.ebuild:
+  x86 stable per bug 358025
 
   10 Mar 2011; Markos Chandras <hwoarang@gentoo.org> kdelibs-4.4.5-r3.ebuild:
   Stable on amd64 wrt bug #358025
