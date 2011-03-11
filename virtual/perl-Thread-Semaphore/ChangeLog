@@ -1,0 +1,10 @@
+# ChangeLog for virtual/perl-Thread-Semaphore
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Semaphore/ChangeLog,v 1.1 2011/03/11 08:31:53 tove Exp $
+
+*perl-Thread-Semaphore-2.120 (11 Mar 2011)
+
+  11 Mar 2011; Torsten Veller <tove@gentoo.org>
+  +perl-Thread-Semaphore-2.120.ebuild, +metadata.xml:
+  Initial commit
+
