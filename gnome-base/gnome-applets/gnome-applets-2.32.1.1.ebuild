@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.9 2011/03/11 08:20:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.10 2011/03/11 08:30:40 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -61,7 +61,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
 	>=dev-util/intltool-0.35
 	dev-libs/libxslt
-	~app-text/docbook-xml-dtd-4.3"
+	~app-text/docbook-xml-dtd-4.3
+	gnome-base/gnome-common"
+# gnome-base/gnome-common for eautoreconf
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
