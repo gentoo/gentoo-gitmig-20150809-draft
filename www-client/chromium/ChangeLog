@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.304 2011/03/10 19:45:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.305 2011/03/11 20:02:29 phajdan.jr Exp $
+
+  11 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-10.0.648.127.ebuild, chromium-11.0.696.1.ebuild,
+  chromium-9999-r1.ebuild:
+  Update dependencies to require a recent enough libvpx version, bug #358361
+  by Joel Rebello <joelmadzu@gmail.com>.
 
   10 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-10.0.648.127.ebuild, chromium-11.0.696.1.ebuild,
