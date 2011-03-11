@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12537 2011/03/11 08:15:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12538 2011/03/11 16:35:05 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2011)
+# No longer required by anything in tree. Has depends on
+# sys-apps/hal which is going away. Use USE=mono in libgpod
+# instead.
+# Removal in 30 days.
+dev-dotnet/ipod-sharp
+media-libs/libipoddevice
+dev-dotnet/podsleuth
 
 # Ulrich Mueller <ulm@gentoo.org> (11 Mar 2011)
 # Part of app-editors/emacs since version 22.1 or 23.1.

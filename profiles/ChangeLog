@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5126 2011/03/11 08:52:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5127 2011/03/11 16:35:05 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite ipod-sharp, podsleuth and libipoddevice.
 
   11 Mar 2011; Torsten Veller <tove@gentoo.org> updates/1Q-2011:
   Move Thread-Queue and Thread-Semaphore from dev-perl to perl-core
