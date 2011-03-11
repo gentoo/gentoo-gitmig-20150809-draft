@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/p3d
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/p3d/ChangeLog,v 1.1 2011/03/09 10:34:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/p3d/ChangeLog,v 1.2 2011/03/11 06:48:29 jlec Exp $
+
+  11 Mar 2011; Justin Lecher <jlec@gentoo.org> p3d-0.4.3.0.ebuild:
+  MIrrored tarball, #358289
 
 *p3d-9999 (09 Mar 2011)
 *p3d-0.4.3.0 (09 Mar 2011)
