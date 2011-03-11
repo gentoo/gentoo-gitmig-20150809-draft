@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.451 2011/03/01 00:13:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.452 2011/03/11 15:32:25 grobian Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1317,7 +1317,7 @@ gcc_do_configure() {
 	# for things like libobjc-gnu, libgcj and libfortran.  If we enable it on
 	# non-Darwin we screw up the behaviour this eclass relies on.  We in
 	# particular need this over --libdir for bug #255315.
-	[[ ${CHOST} == *-darwin* ]] && \
+	[[ ${CTARGET} == *-darwin* ]] && \
 		confgcc="${confgcc} --enable-version-specific-runtime-libs"
 
 	# All our cross-compile logic goes here !  woo !
