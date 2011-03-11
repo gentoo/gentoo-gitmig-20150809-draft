@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12535 2011/03/10 17:26:50 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12536 2011/03/11 00:36:06 wired Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alex Alexander <wired@gentoo.org> (11 Mar 2011)
+# not needed anymore. the cairo[qt4] blocker issue was fixed and
+# the style is once again provided by qt-gui[gtk]
+x11-themes/qgtkstyle
 
 # Torsten Veller <tove@gentoo.org> (09 Mar 2011)
 # Masked for testing: upgrade path, SSL options, cert-checking
