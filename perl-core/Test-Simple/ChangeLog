@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/ChangeLog,v 1.79 2011/02/27 11:50:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/ChangeLog,v 1.80 2011/03/11 18:47:18 hwoarang Exp $
+
+  11 Mar 2011; Markos Chandras <hwoarang@gentoo.org> Test-Simple-0.980.ebuild:
+  Stable on amd64 wrt bug #350853
 
   27 Feb 2011; Fabian Groffen <grobian@gentoo.org> Test-Simple-0.980.ebuild:
   Add Prefix keywords, bug #353115
