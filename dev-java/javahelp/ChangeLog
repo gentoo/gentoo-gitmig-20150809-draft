@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.18 2011/02/28 18:49:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.19 2011/03/11 18:50:00 tomka Exp $
+
+  11 Mar 2011; Thomas Kahle <tomka@gentoo.org> javahelp-2.0.05_p63.ebuild:
+  x86 stable per bug 356183
 
   28 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   javahelp-2.0.05_p63.ebuild:
