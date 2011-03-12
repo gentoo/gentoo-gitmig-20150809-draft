@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.60 2011/03/07 20:23:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.61 2011/03/12 15:41:34 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> wv-1.2.9-r1.ebuild:
+  alpha/ia64/sparc stable wrt #353436
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> wv-1.2.9-r1.ebuild:
   Stable for HPPA (bug #353436).
