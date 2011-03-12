@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.3 2011/02/24 20:48:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.4 2011/03/12 19:34:14 armin76 Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="collab cups gnome grammar latex math ots openxml plugins readline spell wordperfect wmf thesaurus" # svg
 
 # libgsf raised to make sure it provides gio backend (ebuild)
