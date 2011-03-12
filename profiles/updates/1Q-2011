@@ -1,3 +1,4 @@
+move dev-php5/doctrine dev-php/doctrine
 move dev-php5/agavi dev-php/agavi
 move dev-php5/phing dev-php/phing
 move dev-php5/phptal dev-php/phptal
