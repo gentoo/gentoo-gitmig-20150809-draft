@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.ebuild,v 1.2 2011/02/22 16:36:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.ebuild,v 1.3 2011/03/12 12:10:57 hwoarang Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.11"
@@ -17,7 +17,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cups debug gnutls iconv ipv6 largefile libsamplerate nss polarssl \
+IUSE="alsa cups debug gnutls iconv ipv6 libsamplerate nss polarssl \
 ssl X"
 
 DEPEND="
@@ -75,6 +75,7 @@ src_configure() {
 	# chipcard and directfb are configurable according to ./configure
 	# but they are currently not usable...
 	econf \
+		--enable-largefile \
 		--with-crypto="${MY_CRYPTOBACKEND}" \
 		$(use_enable ssl tls) \
 		$(use_with debug) \
@@ -87,7 +88,6 @@ src_configure() {
 		$(use_with cups printer cups) \
 		$(use_enable iconv) \
 		$(use_enable ipv6) \
-		$(use_enable largefile) \
 		$(use_with libsamplerate) \
 		$(use_with X x)
 }
