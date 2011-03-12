@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/extace-1.9.8.ebuild,v 1.4 2008/04/08 18:51:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/extace-1.9.8.ebuild,v 1.5 2011/03/12 09:00:30 radhermit Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	sci-libs/fftw:3.0
 	media-sound/esound"
 DEPEND="${RDEPEND}

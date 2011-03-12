@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/extace
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.20 2008/04/08 18:51:21 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.21 2011/03/12 09:00:30 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> extace-1.9.8.ebuild:
+  Use slot dep for gtk+.
 
   08 Apr 2008; Raúl Porcel <armin76@gentoo.org> extace-1.9.8.ebuild:
   sparc stable wrt #214795
