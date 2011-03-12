@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/namebench
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/ChangeLog,v 1.2 2010/03/26 11:54:22 spatz Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/ChangeLog,v 1.3 2011/03/12 13:23:02 arfrever Exp $
+
+  12 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  namebench-1.2.ebuild:
+  Fix deprecation warning.
 
   26 Mar 2010; Dror Levin <spatz@gentoo.org> namebench-1.2.ebuild:
   Depend on at least dnspython-1.8.0 to fix endless loop, bug 311395.

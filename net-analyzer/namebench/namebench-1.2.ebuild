@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.2.ebuild,v 1.3 2010/05/21 20:57:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.2.ebuild,v 1.4 2011/03/12 13:23:02 arfrever Exp $
 
-EAPI=2
-
+EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH_OPT="X"
 PYTHON_USE_WITH="tk"
+
 inherit distutils
 
 DESCRIPTION="DNS Benchmark Utility"
