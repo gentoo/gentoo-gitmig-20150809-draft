@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/db4o
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.8 2010/10/07 18:49:53 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/db4o/ChangeLog,v 1.9 2011/03/12 11:46:19 pacho Exp $
+
+  12 Mar 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainership as none of us is willing to maintain it neither use or
+  bump.
 
   07 Oct 2010; Pacho Ramos <pacho@gentoo.org> -db4o-4.6.ebuild,
   -db4o-5.0.ebuild, db4o-6.1.ebuild:
