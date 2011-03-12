@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.150 2011/03/07 20:26:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.151 2011/03/12 16:03:16 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> gtk-doc-1.16.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #353436
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> gtk-doc-1.16.ebuild:
   Stable for HPPA (bug #353436).
