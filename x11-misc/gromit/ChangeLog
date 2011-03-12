@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gromit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/ChangeLog,v 1.13 2010/08/11 01:48:38 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/ChangeLog,v 1.14 2011/03/12 21:41:24 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> gromit-20041213-r1.ebuild:
+  Use slot dep for gtk+.
 
 *gromit-20041213-r1 (11 Aug 2010)
 
