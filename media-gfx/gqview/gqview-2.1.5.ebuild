@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.12 2010/06/21 10:14:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.13 2011/03/12 10:21:54 radhermit Exp $
 
 EAPI=2
 inherit eutils
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="lcms"
 
-RDEPEND=">=x11-libs/gtk+-2.4
-	lcms? ( =media-libs/lcms-1* )
+RDEPEND=">=x11-libs/gtk+-2.4:2
+	lcms? ( media-libs/lcms:0 )
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
