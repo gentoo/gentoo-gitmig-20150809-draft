@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.8.0.ebuild,v 1.4 2011/02/24 18:41:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.8.0.ebuild,v 1.5 2011/03/12 15:47:22 armin76 Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/libgdata"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86"
 IUSE="doc gnome +introspection"
 
 # gtk+ is needed for gdk

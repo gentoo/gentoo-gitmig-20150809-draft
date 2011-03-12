@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.142 2011/03/08 14:19:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.143 2011/03/12 15:45:49 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> gmime-2.4.22.ebuild:
+  alpha/arm/ia64/sparc stable wrt #353436
 
 *gmime-2.4.23 (08 Mar 2011)
 *gmime-2.2.27 (08 Mar 2011)
