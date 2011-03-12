@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/gnome-rdp-0.3.0.5.ebuild,v 1.1 2011/01/25 20:39:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/gnome-rdp-0.3.0.5.ebuild,v 1.2 2011/03/12 12:02:23 angelos Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+rdesktop +vnc"
 
 RDEPEND="dev-db/sqlite:3
-		dev-dotnet/dbus-glib-sharp
+		dev-dotnet/ndesk-dbus-glib
 		dev-dotnet/gconf-sharp:2
 		dev-dotnet/glade-sharp:2
 		dev-dotnet/glib-sharp:2
