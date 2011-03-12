@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.3.1.ebuild,v 1.5 2010/12/12 10:24:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.8.3.1.ebuild,v 1.6 2011/03/12 11:57:29 angelos Exp $
 
 # TODO: GNOME Do defaults to a debug build; to disable, --enable-release must
 # be passed. However, when doing this the build fails; figure out why.
@@ -24,8 +24,8 @@ RDEPEND=">=dev-lang/mono-2.0
 	>=dev-dotnet/gconf-sharp-2.24.0
 	>=dev-dotnet/gtk-sharp-2.12.6
 	>=dev-dotnet/glade-sharp-2.12.6
-	dev-dotnet/dbus-sharp
-	dev-dotnet/dbus-glib-sharp
+	dev-dotnet/ndesk-dbus
+	dev-dotnet/ndesk-dbus-glib
 	>=dev-dotnet/gnome-desktop-sharp-2.26.0
 	>=dev-dotnet/gnome-keyring-sharp-1.0.0
 	>=dev-dotnet/gnome-sharp-2.24.0

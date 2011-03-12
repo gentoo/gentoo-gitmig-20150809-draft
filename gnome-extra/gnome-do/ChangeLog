@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-do
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.25 2011/01/22 14:18:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.26 2011/03/12 11:57:30 angelos Exp $
+
+  12 Mar 2011; <angelos@gentoo.org> gnome-do-0.8.3.1.ebuild,
+  gnome-do-0.8.4.ebuild:
+  Updated ndesk-dbus dependencies (bug 356391)
 
 *gnome-do-0.8.4 (22 Jan 2011)
 
