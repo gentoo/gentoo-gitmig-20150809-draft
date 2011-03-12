@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.99.20101118.ebuild,v 1.4 2011/02/13 19:15:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.99.20110228.ebuild,v 1.1 2011/03/12 05:24:23 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
 inherit confutils eutils gnome2-utils multilib python
 
@@ -51,12 +51,13 @@ RDEPEND="${RDEPEND}
 RESTRICT="test"
 
 update_gtk_immodules() {
-	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
-		GTK2_CONFDIR="/etc/gtk-2.0"
-		# An arch specific config directory is used on multilib systems
-		has_multilib_profile && GTK2_CONFDIR="${GTK2_CONFDIR}/${CHOST}"
-		mkdir -p "${ROOT}${GTK2_CONFDIR}"
-		gtk-query-immodules-2.0 > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
+	local GTK2_CONFDIR="/etc/gtk-2.0"
+	# An arch specific config directory is used on multilib systems
+	has_multilib_profile && GTK2_CONFDIR="${GTK2_CONFDIR}/${CHOST}"
+	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
+
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
 	fi
 }
 
@@ -91,13 +92,25 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 
+	insinto /etc/X11/xinit/xinput.d
+	newins xinput-ibus ibus.conf || die
+
 	# bug 289547
 	keepdir /usr/share/ibus/{engine,icons} || die
 
 	dodoc AUTHORS ChangeLog NEWS README || die
 }
 
+pkg_preinst() {
+	use gconf && gnome2_gconf_savelist
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
+	use gconf && gnome2_gconf_install
+	use gtk && update_gtk_immodules
+	use python && python_mod_optimize /usr/share/${PN}
+	gnome2_icon_cache_update
 
 	elog "To use ibus, you should:"
 	elog "1. Get input engines from sunrise overlay."
@@ -115,16 +128,10 @@ pkg_postinst() {
 	elog "   export GTK_IM_MODULE=\"ibus\""
 	elog "   export QT_IM_MODULE=\"xim\""
 	elog "   ibus-daemon -d -x"
-
-	use gtk && update_gtk_immodules
-
-	use python && python_mod_optimize /usr/share/${PN}
-	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
 	use gtk && update_gtk_immodules
-
 	use python && python_mod_cleanup /usr/share/${PN}
 	gnome2_icon_cache_update
 }
