@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.61 2011/03/07 20:41:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.62 2011/03/12 20:04:47 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> libcanberra-0.26.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #353436
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> libcanberra-0.26.ebuild:
   Stable for HPPA (bug #353436).
