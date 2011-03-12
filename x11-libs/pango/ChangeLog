@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.303 2011/01/30 19:17:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.304 2011/03/12 18:32:04 pacho Exp $
+
+*pango-1.28.3-r1 (12 Mar 2011)
+
+  12 Mar 2011; Pacho Ramos <pacho@gentoo.org> -files/pango-1.2.5-lib64.patch,
+  -pango-1.24.5-r1.ebuild, -files/pango-1.26.0-introspection-automagic.patch,
+  -pango-1.26.2.ebuild, +pango-1.28.3-r1.ebuild,
+  +files/pango-1.28.3-heap-corruption.patch,
+  +files/pango-1.28.3-malloc-failure.patch:
+  Fix security issues: CVE-2011-0020 and CVE-2011-0064. Remove old.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> pango-1.28.3.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #348987
