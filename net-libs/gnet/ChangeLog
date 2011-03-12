@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.73 2011/03/07 20:41:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.74 2011/03/12 20:25:53 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> gnet-2.0.8-r1.ebuild:
+  alpha/ia64/sparc stable wrt #353436
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> gnet-2.0.8-r1.ebuild:
   Stable for HPPA (bug #353436).
