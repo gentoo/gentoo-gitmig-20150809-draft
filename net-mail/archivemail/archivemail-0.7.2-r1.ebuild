@@ -1,6 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.7.2-r1.ebuild,v 1.2 2008/07/09 08:28:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.7.2-r1.ebuild,v 1.3 2011/03/12 13:47:11 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
@@ -12,12 +15,19 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
-DEPEND=">=dev-lang/python-2.3"
+
+DEPEND=""
+RDEPEND=""
 
 DOCS="examples/* FAQ"
 
-src_unpack() {
-	distutils_src_unpack
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/0.7.2-empty_maildir-r266.patch"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/archivemail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.16 2010/08/31 06:18:39 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.17 2011/03/12 13:47:11 arfrever Exp $
+
+  12 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  archivemail-0.7.2-r1.ebuild, archivemail-0.8.0.ebuild:
+  Use Python 2 (bug #315327).
 
 *archivemail-0.8.0 (31 Aug 2010)
 
