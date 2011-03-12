@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5129 2011/03/11 18:53:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5130 2011/03/12 06:23:07 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Mask net-p2p/bittorrent for removal 20110412 (#336166).
 
   11 Mar 2011; Torsten Veller <tove@gentoo.org> package.mask:
   Mask deprecated dev-perl/gnome2-print for removal (#358423)

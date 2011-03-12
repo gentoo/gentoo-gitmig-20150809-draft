@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12542 2011/03/11 19:12:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12543 2011/03/12 06:23:07 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ryan Hill <dirtyepic@gentoo.org> (12 Mar 2011)
+# Mask net-p2p/bittorrent for removal 20110412 (#336166)
+# Dead upstream. Requires wxpython-2.6 which is being removed.
+# Doesn't build with python-2.6.  Doesn't start.
+net-p2p/bittorrent
 
 # Torsten Veller <tove@gentoo.org> (11 Mar 2011)
 # Mask deprecated dev-perl/gnome2-print for removal (#358423)
