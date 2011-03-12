@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9-r1.ebuild,v 1.1 2011/02/08 22:45:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9-r1.ebuild,v 1.2 2011/03/12 15:46:14 eras Exp $
 
 EAPI=2
 
 inherit eutils flag-o-matic versionator
 
 MY_P="${P/mit-}"
-MY_P="${MY_P/_/-}"
 P_DIR=$(get_version_component_range 1-2)
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
@@ -16,12 +15,12 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc ldap +pkinit +threads test xinetd"
+IUSE="doc openldap +pkinit +threads test xinetd"
 
 RDEPEND="!!app-crypt/heimdal
 	>=sys-libs/e2fsprogs-libs-1.41.0
 	sys-apps/keyutils
-	ldap? ( net-nds/openldap )
+	openldap? ( net-nds/openldap )
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )
@@ -46,7 +45,7 @@ src_prepare() {
 src_configure() {
 	append-flags "-I/usr/include/et"
 	econf \
-		$(use_with ldap) \
+		$(use_with openldap ldap) \
 		$(use_with test tcl /usr) \
 		$(use_enable pkinit) \
 		$(use_enable threads thread-support) \
@@ -99,7 +98,7 @@ src_install() {
 	insinto /var/lib/krb5kdc
 	newins "${D}/usr/share/doc/${PF}/examples/kdc.conf" kdc.conf.example
 
-	if use ldap ; then
+	if use openldap ; then
 		insinto /etc/openldap/schema
 		doins "${S}/plugins/kdb/ldap/libkdb_ldap/kerberos.schema" || die
 	fi

@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.260 2011/02/14 14:22:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.261 2011/03/12 15:46:14 eras Exp $
+
+  12 Mar 2011; Eray Aslan <eras@gentoo.org> mit-krb5-1.9-r1.ebuild,
+  metadata.xml:
+  Remove circular dependency with global kerberos and ldap USE flags. ldap
+  -> openldap renamed
 
   14 Feb 2011; Eray Aslan <eras@gentoo.org> -mit-krb5-1.8.3-r2.ebuild:
   Remove vulnerable version.

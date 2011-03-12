@@ -10,5 +10,6 @@
     which depends on kerberos.
   </flag>
   <flag name="pkinit">Enable pkinit support for the initial ticket.</flag>
+  <flag name="openldap">Enable support for ldap as a database backend.</flag>
 </use>
 </pkgmetadata>
