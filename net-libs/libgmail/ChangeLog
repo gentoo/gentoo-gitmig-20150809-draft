@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgmail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.20 2010/01/10 16:38:11 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.21 2011/03/12 13:33:01 arfrever Exp $
+
+  12 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libgmail-0.1.11.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #315315).
 
   10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libgmail-0.1.11.ebuild:
