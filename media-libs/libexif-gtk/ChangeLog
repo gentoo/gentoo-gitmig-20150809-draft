@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif-gtk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.35 2010/01/15 09:36:39 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif-gtk/ChangeLog,v 1.36 2011/03/12 21:37:58 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> libexif-gtk-0.3.5-r2.ebuild:
+  Update to EAPI 2 and use slot dep for gtk+.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libexif-gtk-0.3.5-r2.ebuild:
