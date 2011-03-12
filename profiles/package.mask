@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12549 2011/03/12 20:26:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12550 2011/03/12 20:50:15 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -486,16 +486,6 @@ dev-util/plan9port
 # Doug Goldstein <cardoe@gentoo.org> (24 Jan 2011)
 # Masked beta versions
 >=x11-drivers/nvidia-drivers-270
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (24 Jan 2011)
-# Masked for removal, not needed by any other packages
-# bug #352558
-media-tv/vdr-dvd-scripts
-
-# Joerg Bornkessel <hd_brummy@gentoo.org (24 Jan 2011)
-# Masked for removal, not needed by any other packages
-# bug #352552
-media-tv/vdrplugin-rebuild
 
 # Gilles Dartiguelongue <eva@gentoo.org> (24 Jan 2011)
 # Masked due to unsatisfied requirements in tree
