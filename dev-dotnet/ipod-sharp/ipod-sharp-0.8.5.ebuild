@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.8.5.ebuild,v 1.4 2010/06/27 12:14:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.8.5.ebuild,v 1.5 2011/03/12 11:55:40 angelos Exp $
 
 EAPI=2
 inherit eutils mono
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-2
-	dev-dotnet/dbus-glib-sharp
+	dev-dotnet/ndesk-dbus-glib
 	>=dev-dotnet/podsleuth-0.6.4
 	>=dev-dotnet/gtk-sharp-2.12"
 DEPEND="${RDEPEND}

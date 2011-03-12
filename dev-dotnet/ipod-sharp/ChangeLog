@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/ipod-sharp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.30 2010/06/27 12:14:35 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.31 2011/03/12 11:55:40 angelos Exp $
+
+  12 Mar 2011; <angelos@gentoo.org> ipod-sharp-0.8.2.ebuild,
+  ipod-sharp-0.8.2-r1.ebuild, ipod-sharp-0.8.5.ebuild:
+  Updated ndesk-dbus dependencies (bug 356391)
 
   27 Jun 2010; <nixnut@gentoo.org> ipod-sharp-0.8.5.ebuild:
   ppc stable #319657

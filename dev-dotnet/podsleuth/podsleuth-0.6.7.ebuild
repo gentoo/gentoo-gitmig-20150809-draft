@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.7.ebuild,v 1.4 2010/09/23 22:14:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.7.ebuild,v 1.5 2011/03/12 11:56:50 angelos Exp $
 
 EAPI=2
 inherit mono
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="dev-dotnet/dbus-glib-sharp
+RDEPEND="dev-dotnet/ndesk-dbus-glib
 	>=dev-lang/mono-2
 	sys-apps/hal
 	>=sys-apps/sg3_utils-1.27"

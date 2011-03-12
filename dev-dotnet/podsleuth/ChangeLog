@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/podsleuth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.17 2010/09/23 22:14:05 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.18 2011/03/12 11:56:50 angelos Exp $
+
+  12 Mar 2011; <angelos@gentoo.org> podsleuth-0.6.7.ebuild:
+  Updated ndesk-dbus dependencies (bug 356391)
 
   23 Sep 2010; Markos Chandras <hwoarang@gentoo.org> podsleuth-0.6.7.ebuild:
   Stable on amd64 wrt bug #336851
