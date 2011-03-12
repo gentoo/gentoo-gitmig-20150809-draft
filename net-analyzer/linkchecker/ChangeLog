@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/linkchecker
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.45 2010/09/22 19:40:17 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.46 2011/03/12 13:32:26 xarthisius Exp $
+
+  12 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> linkchecker-5.2.ebuild:
+  ppc stable wrt #334735
 
   22 Sep 2010; Markos Chandras <hwoarang@gentoo.org> linkchecker-5.2.ebuild:
   Stable on amd64 wrt bug #334735
