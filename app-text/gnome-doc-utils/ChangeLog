@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-doc-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.180 2011/03/07 20:27:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/ChangeLog,v 1.181 2011/03/12 15:39:25 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> gnome-doc-utils-0.20.4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #353436
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> gnome-doc-utils-0.20.4.ebuild:
   Stable for HPPA (bug #353436).
