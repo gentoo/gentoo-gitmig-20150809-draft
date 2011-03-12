@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.17.0.ebuild,v 1.1 2010/05/06 19:07:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.17.0.ebuild,v 1.2 2011/03/12 14:03:50 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://pyropus.ca/software/getmail/old-versions/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~ppc-macos ~x86-macos ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86 ~ppc-macos ~x86-macos ~x64-solaris"
 IUSE=""
 
 DEPEND=""
