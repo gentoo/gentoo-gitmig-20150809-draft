@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.4.2.ebuild,v 1.5 2011/03/06 23:33:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.4.2.ebuild,v 1.6 2011/03/12 11:54:46 angelos Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,8 +21,8 @@ RDEPEND=">=dev-lang/mono-2
 	>=dev-dotnet/gnome-sharp-2.24.0:2
 	>=dev-dotnet/gnome-panel-sharp-2.24.0:2
 	>=dev-dotnet/gnome-desktop-sharp-2.24.0:2
-	>=dev-dotnet/dbus-sharp-0.4
-	>=dev-dotnet/dbus-glib-sharp-0.3
+	>=dev-dotnet/ndesk-dbus-0.4
+	>=dev-dotnet/ndesk-dbus-glib-0.3
 	>=dev-dotnet/mono-addins-0.3[gtk]
 	>=x11-libs/gtk+-2.12.0:2
 	>=dev-libs/atk-1.2.4

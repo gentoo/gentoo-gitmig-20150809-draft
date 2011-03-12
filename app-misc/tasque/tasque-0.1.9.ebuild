@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tasque/tasque-0.1.9.ebuild,v 1.1 2010/02/21 13:02:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tasque/tasque-0.1.9.ebuild,v 1.2 2011/03/12 11:53:20 angelos Exp $
 
 EAPI=2
 
@@ -17,8 +17,8 @@ IUSE="+rememberthemilk eds +sqlite hiveminder debug"
 RDEPEND=">=dev-dotnet/gtk-sharp-2.12.7-r5
 	>=dev-dotnet/gnome-sharp-2.24.0
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912
-	>=dev-dotnet/dbus-sharp-0.6
-	>=dev-dotnet/dbus-glib-sharp-0.4
+	>=dev-dotnet/ndesk-dbus-0.6
+	>=dev-dotnet/ndesk-dbus-glib-0.4
 	eds? ( >=dev-dotnet/evolution-sharp-0.18.1 )
 	sqlite? ( dev-db/sqlite:3 )
 	"

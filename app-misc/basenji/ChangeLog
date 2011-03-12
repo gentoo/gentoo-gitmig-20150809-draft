@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/basenji
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/ChangeLog,v 1.5 2010/12/21 17:25:12 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/ChangeLog,v 1.6 2011/03/12 11:50:12 angelos Exp $
+
+  12 Mar 2011; <angelos@gentoo.org> basenji-0.7.1-r2.ebuild:
+  Updated ndesk-dbus dependencies (bug 356391)
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> basenji-0.7.1-r2.ebuild:
   Stable on amd64 wrt bug #348258

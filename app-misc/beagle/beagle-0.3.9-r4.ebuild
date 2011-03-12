@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r4.ebuild,v 1.4 2011/03/06 23:21:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r4.ebuild,v 1.5 2011/03/12 11:51:42 angelos Exp $
 
 EAPI="3"
 
@@ -19,8 +19,8 @@ RDEPEND="!!sci-libs/beagle
 	>=app-shells/bash-3.2
 	app-arch/zip
 	>=dev-db/sqlite-3.3.1
-	>=dev-dotnet/dbus-sharp-0.6.0
-	>=dev-dotnet/dbus-glib-sharp-0.4.1
+	>=dev-dotnet/ndesk-dbus-0.6.0
+	>=dev-dotnet/ndesk-dbus-glib-0.4.1
 	>=dev-dotnet/taglib-sharp-2.0
 	gtk? (
 		x11-libs/libX11

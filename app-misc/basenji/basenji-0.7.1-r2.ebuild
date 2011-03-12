@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.7.1-r2.ebuild,v 1.2 2010/12/21 17:25:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/basenji-0.7.1-r2.ebuild,v 1.3 2011/03/12 11:50:12 angelos Exp $
 
 EAPI="3"
 
@@ -16,8 +16,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 CDEPEND="dev-dotnet/gtk-sharp
-	dev-dotnet/glib-sharp
-	dev-dotnet/dbus-glib-sharp
+	dev-dotnet/ndesk-dbus
+	dev-dotnet/ndesk-dbus-glib
 	dev-dotnet/gnome-sharp
 	media-libs/libextractor"
 
