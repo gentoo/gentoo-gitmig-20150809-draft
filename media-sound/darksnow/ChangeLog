@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darksnow
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.14 2008/12/19 18:33:52 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.15 2011/03/12 08:47:30 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> darksnow-0.6.1.ebuild:
+  Update to EAPI 2 and add slot dep for gtk+.
 
   19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   +files/darksnow-0.6.1-ldflags.patch, darksnow-0.6.1.ebuild:

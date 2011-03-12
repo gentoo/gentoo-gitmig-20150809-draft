@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.6.1.ebuild,v 1.6 2008/12/19 18:33:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.6.1.ebuild,v 1.7 2011/03/12 08:47:30 radhermit Exp $
+
+EAPI=2
 
 inherit eutils gnome2-utils
 
@@ -14,13 +16,11 @@ KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 PDEPEND=">=media-sound/darkice-0.14"
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
