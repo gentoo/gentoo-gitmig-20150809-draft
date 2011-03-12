@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.0-r1.ebuild,v 1.3 2010/11/17 20:56:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.0-r1.ebuild,v 1.4 2011/03/12 11:58:57 angelos Exp $
 
 EAPI=2
 
@@ -45,8 +45,8 @@ RDEPEND=">=dev-lang/mono-2.4.3
 		)
 	)
 	media-libs/musicbrainz:1
-	>=dev-dotnet/dbus-glib-sharp-0.4.1
-	>=dev-dotnet/dbus-sharp-0.6.1a
+	>=dev-dotnet/ndesk-dbus-glib-0.4.1
+	>=dev-dotnet/ndesk-dbus-0.6.1a
 	>=dev-dotnet/mono-addins-0.4[gtk]
 	>=dev-dotnet/taglib-sharp-2.0.3.7
 	>=dev-db/sqlite-3.4
