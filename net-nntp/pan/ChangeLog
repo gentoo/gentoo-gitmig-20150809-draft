@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.83 2011/03/07 20:45:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.84 2011/03/12 20:40:48 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> pan-0.133-r1.ebuild:
+  alpha/sparc stable wrt #353436
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> pan-0.133-r1.ebuild:
   Stable for HPPA (bug #355719).
