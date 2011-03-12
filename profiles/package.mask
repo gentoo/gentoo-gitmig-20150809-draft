@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12547 2011/03/12 14:59:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12548 2011/03/12 15:18:35 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (12 Mar 2011)
+# Old, unused, no longer developed (bug #355825).
+# Removal in 30 days.
+=dev-cpp/gtkmm-1.2.9-r2
 
 # Ulrich Mueller <ulm@gentoo.org> (12 Mar 2011)
 # Part of app-editors/emacs since version 23.2.
