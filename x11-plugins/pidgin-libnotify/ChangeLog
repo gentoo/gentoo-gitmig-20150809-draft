@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/pidgin-libnotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.23 2011/01/30 09:04:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.24 2011/03/12 19:09:01 ssuominen Exp $
+
+*pidgin-libnotify-0.14-r1 (12 Mar 2011)
+
+  12 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +pidgin-libnotify-0.14-r1.ebuild:
+  Import Debian patchset solving notify-osd support wrt #338927.
 
   30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
   pidgin-libnotify-0.14.ebuild,
