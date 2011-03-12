@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/glmix
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.10 2009/06/25 17:46:57 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.11 2011/03/12 08:41:28 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> -glmix-0.1.ebuild,
+  glmix-0.3.ebuild:
+  Remove old. Update to EAPI 2 and add slot dep for gtk+.
 
   25 Jun 2009; Raúl Porcel <armin76@gentoo.org> glmix-0.3.ebuild:
   sparc stable wrt #272806
