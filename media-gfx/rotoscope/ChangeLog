@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/rotoscope
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/ChangeLog,v 1.4 2008/11/22 17:34:59 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/ChangeLog,v 1.5 2011/03/12 22:00:37 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> rotoscope-0.2.ebuild:
+  Update to EAPI 2 and use slot dep for gtk+.
 
   22 Nov 2008; Markus Meier <maekke@gentoo.org> rotoscope-0.2.ebuild:
   amd64 stable, bug #247557
