@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.58 2011/03/08 17:19:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.59 2011/03/12 15:05:47 klausman Exp $
+
+  12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> fakeroot-1.14.4.ebuild:
+  Stable on alpha, bug #357301
 
   08 Mar 2011; Jeroen Roovers <jer@gentoo.org> fakeroot-1.14.4.ebuild:
   Stable for HPPA (bug #357301).
