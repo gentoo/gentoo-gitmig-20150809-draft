@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.11.2.ebuild,v 1.1 2011/02/09 22:28:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.11.2.ebuild,v 1.2 2011/03/12 11:41:58 hwoarang Exp $
 
 EAPI=2
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A fast, lightweight imageviewer using imlib2"
 HOMEPAGE="https://derf.homelinux.org/~derf/projects/feh/"
@@ -39,6 +39,8 @@ src_prepare() {
 	if ! use xinerama; then
 		sed -i -e '/^xinerama/d' config.mk || die
 	fi
+	#bug 354667
+	epatch "${FILESDIR}/${P}-libpng15.patch"
 }
 
 src_compile() {
