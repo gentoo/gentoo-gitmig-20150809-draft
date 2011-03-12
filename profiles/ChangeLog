@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5132 2011/03/12 12:01:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5133 2011/03/12 12:07:03 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Mar 2011; <angelos@gentoo.org> updates/1Q-2011:
+  Moved dev-dotnet/dbus{,-glib}-sharp to dev-dotnet/ndesk-dbus{,-glib}
 
   12 Mar 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
   Update package.mask entries after removals.
