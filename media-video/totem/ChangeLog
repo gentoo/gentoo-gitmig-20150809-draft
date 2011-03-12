@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.313 2011/02/27 15:11:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.314 2011/03/12 20:12:02 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> totem-2.32.0.ebuild:
+  alpha/arm/ia64/sparc stable wrt #353436
 
   27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> totem-2.32.0.ebuild:
   Pin libunique dependency to slot 1.
