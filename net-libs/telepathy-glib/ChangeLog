@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.66 2011/03/09 05:40:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.67 2011/03/12 21:15:12 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> telepathy-glib-0.12.7.ebuild:
+  alpha/arm/ia64/sparc stable wrt #353436
 
 *telepathy-glib-0.13.16 (09 Mar 2011)
 
