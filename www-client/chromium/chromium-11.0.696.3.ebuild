@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.686.3.ebuild,v 1.1 2011/03/04 12:48:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.3.ebuild,v 1.1 2011/03/12 14:40:33 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.1.6.1"
+V8_DEPEND="3.1.8"
 
 inherit eutils fdo-mime flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
@@ -32,7 +32,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/flac
 	virtual/jpeg
 	media-libs/libpng
-	media-libs/libvpx
+	>=media-libs/libvpx-0.9.5
 	media-libs/speex
 	>=media-video/ffmpeg-0.6_p25767[threads]
 	cups? ( >=net-print/cups-1.3.11 )
@@ -49,10 +49,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2"
 RDEPEND+="
-	|| (
-		x11-themes/gnome-icon-theme
-		x11-themes/xfce4-icon-theme
-	)
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -97,10 +93,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
-	epatch "${FILESDIR}"/${PN}-system-vpx-r2.patch
-
-	# Make sure we don't use bundled ICU headers.
-	epatch "${FILESDIR}"/${PN}-system-icu-r0.patch
+	epatch "${FILESDIR}/${PN}-system-vpx-r3.patch"
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -118,6 +111,7 @@ src_prepare() {
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libsrtp/*' \
+		\! -path 'third_party/libvpx/libvpx.h' \
 		\! -path 'third_party/libwebp/*' \
 		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
@@ -318,4 +312,14 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	# For more info see bugs #292201 and bug #352263.
+	elog "Depending on your desktop environment, you may need"
+	elog "to install additional packages to get icons on the Downloads page."
+	elog
+	elog "For KDE, the required package is kde-base/oxygen-icons."
+	elog
+	elog "For other desktop environments, try one of the following:"
+	elog " - x11-themes/gnome-icon-theme"
+	elog " - x11-themes/xfce4-icon-theme"
 }
