@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.27 2011/03/10 16:25:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.28 2011/03/12 12:51:26 arfrever Exp $
+
+*pythonmagick-0.9.5 (12 Mar 2011)
+
+  12 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pythonmagick-0.9.4.ebuild, -files/pythonmagick-0.9.4-ssize_t.patch,
+  +pythonmagick-0.9.5.ebuild:
+  Version bump.
 
 *pythonmagick-0.9.4 (10 Mar 2011)
 
