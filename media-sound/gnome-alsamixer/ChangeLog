@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnome-alsamixer
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.17 2007/03/24 16:27:58 drac Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.18 2011/03/12 09:36:12 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> gnome-alsamixer-0.9.6.ebuild:
+  Use slot dep for gtk+.
 
   24 Mar 2007; Samuli Suominen <drac@gentoo.org>
   gnome-alsamixer-0.9.6.ebuild:
