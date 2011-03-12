@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.1.ebuild,v 1.1 2011/03/12 08:33:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.1.ebuild,v 1.2 2011/03/12 09:22:01 vapier Exp $
 
 EAPI="2"
 
@@ -24,9 +24,9 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="alsa altivec avahi css debug hal joystick midi profile pulseaudio rtmp sse sse2 vaapi vdpau webserver +xrandr"
+IUSE="alsa altivec avahi css debug joystick midi profile pulseaudio rtmp sse sse2 udev vaapi vdpau webserver +xrandr"
 
-RDEPEND="virtual/opengl
+COMMON_DEPEND="virtual/opengl
 	app-arch/bzip2
 	app-arch/unzip
 	app-arch/zip
@@ -71,7 +71,6 @@ RDEPEND="virtual/opengl
 	net-misc/curl
 	|| ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.3 )
 	sys-apps/dbus
-	hal? ( sys-apps/hal )
 	sys-libs/zlib
 	virtual/mysql
 	x11-apps/xdpyinfo
@@ -85,7 +84,9 @@ RDEPEND="virtual/opengl
 	xrandr? ( x11-libs/libXrandr )
 	x11-libs/libXrender"
 # The cpluff bundled addon uses gettext which needs CVS ...
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	udev? (	sys-fs/udisks sys-power/upower )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
 	dev-vcs/cvs
 	x11-proto/xineramaproto
@@ -171,7 +172,7 @@ src_configure() {
 		$(use_enable avahi) \
 		$(use_enable css dvdcss) \
 		$(use_enable debug) \
-		$(use_enable hal) \
+		--disable-hal \
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
 		$(use_enable profile profiling) \
