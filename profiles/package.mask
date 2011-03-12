@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12543 2011/03/12 06:23:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12544 2011/03/12 10:38:45 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (12 Mar 2011)
+# Mask for removal on 20110412 (#358431)
+# Needs libgnomeprint that is deprecated and unsupported for 
+# a long time. Nothing in the tree needs this.
+dev-ruby/ruby-gnomeprint
+dev-ruby/ruby-gnomeprintui
 
 # Ryan Hill <dirtyepic@gentoo.org> (12 Mar 2011)
 # Mask net-p2p/bittorrent for removal 20110412 (#336166)
