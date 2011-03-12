@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.78 2011/03/07 21:22:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.79 2011/03/12 12:46:26 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> unzip-6.0-r2.ebuild:
+  Add ~ia64/~m68k/~s390/~sh/~sparc wrt #349393
 
   07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> unzip-6.0-r2.ebuild:
   Keyworded on alpha, bug #349393
