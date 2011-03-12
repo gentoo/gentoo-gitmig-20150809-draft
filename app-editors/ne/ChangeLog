@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ne
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.42 2010/07/03 22:57:20 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.43 2011/03/12 13:37:40 swegener Exp $
+
+  12 Mar 2011; Sven Wegener <swegener@gentoo.org> -ne-1.42.ebuild,
+  -ne-1.43.ebuild:
+  Cleanup.
 
   03 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> ne-2.0.3.ebuild:
   ppc64 stable wrt #320911
