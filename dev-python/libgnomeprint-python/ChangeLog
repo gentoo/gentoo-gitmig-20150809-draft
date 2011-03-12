@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgnomeprint-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.46 2011/02/26 13:06:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.47 2011/03/12 21:00:36 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
+  libgnomeprint-python-2.32.0.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #353436
 
   26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   libgnomeprint-python-2.32.0.ebuild:

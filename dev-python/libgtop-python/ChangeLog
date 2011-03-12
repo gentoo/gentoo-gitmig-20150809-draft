@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libgtop-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.45 2011/02/26 13:05:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.46 2011/03/12 21:01:44 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> libgtop-python-2.32.0.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #353436
 
   26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   libgtop-python-2.32.0.ebuild:

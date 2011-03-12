@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtksourceview-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.47 2011/02/26 13:07:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.48 2011/03/12 20:59:31 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
+  gtksourceview-python-2.32.0.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #353436
 
   26 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   gtksourceview-python-2.32.0.ebuild:
