@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.51 2011/03/06 23:24:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.52 2011/03/12 11:58:17 angelos Exp $
+
+  12 Mar 2011; <angelos@gentoo.org> f-spot-0.8.2.ebuild:
+  Updated ndesk-dbus dependencies (bug 356391)
 
   06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> f-spot-0.8.2.ebuild:
   Fix slot-deps on gtk+ and other libs

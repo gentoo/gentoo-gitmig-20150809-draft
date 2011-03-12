@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.3 2011/03/06 23:24:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.4 2011/03/12 11:58:17 angelos Exp $
 
 EAPI="2"
 
@@ -27,8 +27,8 @@ RDEPEND=">=dev-lang/mono-2.2
 	>=dev-dotnet/gconf-sharp-2.20.2:2
 	>=dev-dotnet/mono-addins-0.3
 	>=dev-libs/dbus-glib-0.71
-	>=dev-dotnet/dbus-sharp-0.4.2
-	>=dev-dotnet/dbus-glib-sharp-0.3.0
+	>=dev-dotnet/ndesk-dbus-0.4.2
+	>=dev-dotnet/ndesk-dbus-glib-0.3.0
 	>=media-libs/lcms-1.12:0
 	>=x11-libs/cairo-1.4
 	doc? (	virtual/monodoc
