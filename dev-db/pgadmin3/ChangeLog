@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.55 2011/02/28 18:57:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.56 2011/03/12 13:56:57 klausman Exp $
+
+  12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> pgadmin3-1.12.2.ebuild:
+  Stable on alpha, bug #355321
 
   28 Feb 2011; Markos Chandras <hwoarang@gentoo.org> pgadmin3-1.12.2.ebuild:
   Stable on amd64 wrt bug #355321
