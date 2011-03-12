@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.90 2011/03/05 17:31:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.91 2011/03/12 14:14:20 klausman Exp $
+
+  12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> cdrkit-1.1.11.ebuild:
+  Stable on alpha, bug #356509
 
   05 Mar 2011; Michael Weber <xmw@gentoo.org> cdrkit-1.1.11.ebuild:
   ppc/sparc stable (bug 356509)
