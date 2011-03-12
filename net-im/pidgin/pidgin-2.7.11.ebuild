@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.5.ebuild,v 1.7 2010/12/28 01:39:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.11.ebuild,v 1.1 2011/03/12 15:54:44 pva Exp $
 
 EAPI=2
 
@@ -13,15 +13,17 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus debug doc eds gadu gnutls +gstreamer +gtk idn meanwhile"
-IUSE+=" networkmanager nls perl silc tcl tk spell qq sasl +startup-notification"
-IUSE+=" ncurses groupwise prediction python +xscreensaver zephyr zeroconf" # mono"
+IUSE+=" networkmanager nls perl silc tcl tk spell qq sasl ncurses"
+IUSE+=" groupwise prediction python +xscreensaver zephyr zeroconf" # mono"
 
 # dbus requires python to generate C code for dbus bindings (thus DEPEND only).
 # finch uses libgnt that links with libpython - {R,}DEPEND. But still there is
 # no way to build dbus and avoid libgnt linkage with python. If you want this
 # send patch upstream.
+# purple-url-handler and purple-remote require dbus-python thus in reality we
+# rdepend on python if dbus enabled. But it is possible to separate this dep.
 RDEPEND="
 	>=dev-libs/glib-2.12
 	>=dev-libs/libxml2-2.6.18
@@ -32,7 +34,6 @@ RDEPEND="
 		>=x11-libs/gtk+-2.10:2
 		x11-libs/libSM
 		xscreensaver? ( x11-libs/libXScrnSaver )
-		startup-notification? ( >=x11-libs/startup-notification-0.5 )
 		spell? ( >=app-text/gtkspell-2.0.2 )
 		eds? ( gnome-extra/evolution-data-server )
 		prediction? ( >=dev-db/sqlite-3.3:3 ) )
@@ -43,7 +44,8 @@ RDEPEND="
 		media-plugins/gst-plugins-gconf )
 	zeroconf? ( net-dns/avahi )
 	dbus? ( >=dev-libs/dbus-glib-0.71
-		>=sys-apps/dbus-0.90 )
+		>=sys-apps/dbus-0.90
+		dev-python/dbus-python )
 	perl? ( >=dev-lang/perl-5.8.2-r1[-build] )
 	gadu?  ( >=net-libs/libgadu-1.9.0[-ssl] )
 	gnutls? ( net-libs/gnutls )
@@ -54,7 +56,8 @@ RDEPEND="
 	tk? ( dev-lang/tk )
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	networkmanager? ( net-misc/networkmanager )
-	idn? ( net-dns/libidn )"
+	idn? ( net-dns/libidn )
+	!<x11-plugins/pidgin-facebookchat-1.69-r1"
 	# Mono support crashes pidgin
 	#mono? ( dev-lang/mono )"
 
@@ -87,6 +90,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 #   x11-plugins/pidgin-latex
 #   x11-plugins/pidgintex
 #   x11-plugins/pidgin-libnotify
+#	x11-plugins/pidgin-bot-sentry
 #   x11-plugins/pidgin-otr
 #   x11-plugins/pidgin-rhythmbox
 #   x11-plugins/purple-plugin_pack
@@ -95,7 +99,6 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 # Plugins in Sunrise:
 #	x11-plugins/pidgimpd
 #	x11-plugins/pidgin-birthday
-#	x11-plugins/pidgin-botsentry
 #	x11-plugins/pidgin-convreverse
 #	x11-plugins/pidgin-extended-blist-sort
 #	x11-plugins/pidgin-lastfm
@@ -107,7 +110,7 @@ pkg_setup() {
 		elog "will be built."
 	fi
 	if use gtk && ! use nls; then
-		ewarn "gtk build => nls is enalbed!"
+		ewarn "gtk build => nls is enabled!"
 	fi
 	if use dbus && ! use python; then
 		elog "dbus is enabled, no way to disable linkage with python => python is enabled"
@@ -116,12 +119,6 @@ pkg_setup() {
 		python_set_active_version 2
 		python_pkg_setup
 	fi
-}
-
-src_prepare() {
-	gnome2_src_prepare
-	epatch "${FILESDIR}"/${PN}-2.7.3-ldflags.patch
-	eautoreconf
 }
 
 src_configure() {
@@ -167,7 +164,6 @@ src_configure() {
 		$(use_enable gtk sm) \
 		$(use gtk || use_enable nls) \
 		$(use gtk && echo "--enable-nls") \
-		$(use gtk && use_enable startup-notification) \
 		$(use gtk && use_enable xscreensaver screensaver) \
 		$(use gtk && use_enable prediction cap) \
 		$(use gtk && use_enable eds gevolution) \
