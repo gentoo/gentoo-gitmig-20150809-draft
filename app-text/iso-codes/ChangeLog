@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.101 2011/03/07 20:26:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.102 2011/03/12 15:40:29 armin76 Exp $
+
+  12 Mar 2011; Raúl Porcel <armin76@gentoo.org> iso-codes-3.24.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #353436
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> iso-codes-3.24.ebuild:
   Stable for HPPA (bug #353436).
