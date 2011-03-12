@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.17.ebuild,v 1.1 2010/05/14 05:47:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.17.ebuild,v 1.2 2011/03/12 21:52:29 radhermit Exp $
 
 EAPI="2"
 inherit autotools eutils gnome2
@@ -16,7 +16,7 @@ IUSE="gimp gnome nls"
 
 # FIXME: why is exif not optional ?
 
-RDEPEND=">=x11-libs/gtk+-2.0
+RDEPEND="x11-libs/gtk+:2
 	>media-libs/libgphoto2-2.4
 	>=media-libs/libexif-0.3.2
 	media-libs/libexif-gtk
