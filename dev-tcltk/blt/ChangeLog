@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.39 2011/03/06 10:03:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.40 2011/03/12 13:40:24 klausman Exp $
+
+  12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> blt-2.4z-r8.ebuild:
+  Keyworded on alpha, bug #355373
 
   06 Mar 2011; Michael Weber <xmw@gentoo.org> blt-2.4z-r5.ebuild,
   blt-2.4z-r8.ebuild:
