@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/monotone
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.12 2010/11/09 14:18:39 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.13 2011/03/12 16:32:03 pva Exp $
+
+*monotone-0.99.1 (12 Mar 2011)
+
+  12 Mar 2011; Peter Volkov <pva@gentoo.org> -monotone-0.45.ebuild,
+  -monotone-0.47.ebuild, -monotone-0.48.ebuild, +monotone-0.99.1.ebuild:
+  Version bump, bug #356145, thank Dean Matzkov for report. Drop old.
 
   09 Nov 2010; Brent Baude <ranger@gentoo.org> monotone-0.48.1.ebuild:
   Marking monotone-0.48.1 ppc for bug 342705

@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.45.ebuild,v 1.2 2010/04/27 17:30:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.99.1.ebuild,v 1.1 2011/03/12 16:32:03 pva Exp $
 
-EAPI=2
-inherit bash-completion elisp-common eutils
+EAPI="4"
+inherit bash-completion elisp-common eutils toolchain-funcs
 
 DESCRIPTION="Monotone Distributed Version Control System"
 HOMEPAGE="http://monotone.ca"
@@ -11,7 +11,7 @@ SRC_URI="http://monotone.ca/downloads/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="amd64 ~ia64 ppc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc emacs ipv6 nls"
 
 RDEPEND="sys-libs/zlib
@@ -29,37 +29,36 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	enewgroup monotone
 	enewuser monotone -1 -1 /var/lib/monotone monotone
-	if [[ "$(gcc-version)" == "3.3" ]]; then
-		die 'requires >=gcc-3.4'
-	fi
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc45.patch
+	if [[ $(gcc-major-version) -lt "3"  ||
+		( $(gcc-major-version) -eq "3" && $(gcc-minor-version) -le 3 ) ]]; then
+		die 'requires >=gcc-3.4'
+	fi
 }
 
 src_configure() {
 	econf \
 		$(use_enable nls) \
-		$(use_enable ipv6) \
-		--with-system-pcre
+		$(use_enable ipv6)
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake || die
 
 	if use doc; then
-		emake html || die "emake html failed"
+		emake html || die
 	fi
 
 	if use emacs; then
 		cd contrib
-		elisp-compile *.el || die "elisp-compile failed"
+		elisp-compile *.el || die
 	fi
 }
 
 src_test() {
-	if [ $UID != 0 ]; then
+	if [ ${UID} != 0 ]; then
 		emake check || die "emake check failed"
 	else
 		ewarn "Tests will fail if ran as root, skipping."
@@ -67,9 +66,9 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 
-	mv "${D}"/usr/share/doc/${PN} "${D}"/usr/share/doc/${PF}
+	mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${PF} || die
 
 	dobashcompletion contrib/monotone.bash_completion
 
@@ -81,23 +80,23 @@ src_install() {
 	if use emacs; then
 		elisp-install ${PN} contrib/*.{el,elc} || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el \
-			|| die "elisp-site-file-install failed"
+			|| die
 	fi
 
-	dodoc AUTHORS ChangeLog NEWS README* UPGRADE
+	dodoc AUTHORS NEWS README* UPGRADE
 	docinto contrib
-	dodoc contrib/*
+	docompress -x /usr/share/doc/${PF}/contrib
+	dodoc -r contrib
 	newconfd "${FILESDIR}"/monotone.confd monotone
 	newinitd "${FILESDIR}"/${PN}-0.36.initd monotone
 
-	insinto /etc/monotone ;
+	insinto /etc/monotone
 	newins "${FILESDIR}"/hooks.lua hooks.lua
 	newins "${FILESDIR}"/read-permissions read-permissions
 	newins "${FILESDIR}"/write-permissions write-permissions
 
-	keepdir /var/lib/monotone/keys/ /var/log/monotone /var/run/monotone
-	fowners monotone:monotone /var/lib/monotone /var/lib/monotone/keys/ \
-		/var/log/monotone /var/run/monotone
+	keepdir /var/lib/monotone/keys/ /var/{log,run}/monotone
+	fowners monotone:monotone /var/lib/monotone{,/keys} /var/{log,run}/monotone
 }
 
 pkg_postinst() {
