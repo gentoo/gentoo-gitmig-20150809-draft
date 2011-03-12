@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.4 2011/03/10 09:03:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.5 2011/03/12 12:56:11 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -74,7 +74,6 @@ DEPEND="${RDEPEND}
 	gzip-el? ( app-arch/gzip )"
 
 RDEPEND="${RDEPEND}
-	!=app-editors/emacs-23.3*
 	>=app-emacs/emacs-common-gentoo-1[X?]"
 
 EMACS_SUFFIX="emacs-${SLOT}-vcs"
