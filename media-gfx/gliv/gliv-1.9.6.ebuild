@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.6.ebuild,v 1.8 2010/01/09 17:44:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.6.ebuild,v 1.9 2011/03/12 10:11:06 radhermit Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.6
+RDEPEND=">=x11-libs/gtk+-2.6:2
 		virtual/opengl
 		>x11-libs/gtkglext-1.0.6
 		nls? ( sys-devel/gettext )"
@@ -31,7 +31,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		$(use_enable nls) || die
+		$(use_enable nls)
 }
 
 src_install() {
