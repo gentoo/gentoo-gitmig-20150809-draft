@@ -3,8 +3,6 @@
 <pkgmetadata>
 <herd>ruby</herd>
 <use>
-  <flag name='gnome-print'>Gnome-Print support
-    (<pkg>gnome-base/libgnomeprint</pkg>)</flag>
   <flag name='gs'>Ghostscript support (<pkg>app-text/ghostscript-gpl</pkg>)</flag>
   <flag name='tgif'>tgif support (<pkg>media-gfx/tgif</pkg>)</flag>
 </use>
