@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.0.ebuild,v 1.4 2011/02/24 18:55:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.0.ebuild,v 1.5 2011/03/12 16:04:20 armin76 Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://meld.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="doc gnome"
 
 RDEPEND="
