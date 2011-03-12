@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gamix
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.29 2008/04/14 12:50:40 drac Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.30 2011/03/12 09:31:33 radhermit Exp $
+
+  12 Mar 2011; Tim Harder <radhermit@gentoo.org> gamix-1.99_p14-r2.ebuild:
+  Update to EAPI 2 and use slot dep for gtk+.
 
   14 Apr 2008; Samuli Suominen <drac@gentoo.org> gamix-1.99_p14-r2.ebuild:
   Use emake instead of make and fix reversed depends for bug 217278.
