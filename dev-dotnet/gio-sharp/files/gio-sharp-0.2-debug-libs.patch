@@ -1,0 +1,24 @@
+commit 99cdb9c4bad171b6f987a3969112dbcd986bd0bd
+Author: Iain Lane <laney@ubuntu.com>
+Date:   Sat Sep 4 22:34:39 2010 +0100
+
+    Remove the .mdb file from Libraries in the .pc file
+    
+    Debugging libraries need not be built. We should not assume they are
+    present.
+    
+    Signed-off-by: Bertrand Lorentz <bertrand.lorentz@gmail.com>
+
+diff --git a/gio/gio-sharp-2.0.pc.in b/gio/gio-sharp-2.0.pc.in
+index 35b1696..e1099eb 100644
+--- a/gio/gio-sharp-2.0.pc.in
++++ b/gio/gio-sharp-2.0.pc.in
+@@ -3,7 +3,7 @@ exec_prefix=${prefix}
+ libdir=${exec_prefix}/lib
+ assemblies_dir=${libdir}/gio-sharp
+ gapidir=${prefix}/share/gapi-2.0
+-Libraries=${assemblies_dir}/gio-sharp.dll ${assemblies_dir}/gio-sharp.dll.mdb
++Libraries=${assemblies_dir}/gio-sharp.dll
+ 
+ Name: GIO#
+ Description: GIO# - GIO .NET Binding
