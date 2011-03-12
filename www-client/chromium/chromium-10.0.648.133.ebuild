@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.126.ebuild,v 1.1 2011/03/03 11:20:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.133.ebuild,v 1.1 2011/03/12 10:40:39 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.0.12.29"
+V8_DEPEND="3.0.12.30"
 
 inherit eutils flag-o-matic multilib pax-utils portability python \
 	toolchain-funcs versionator virtualx
@@ -32,7 +32,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/flac
 	virtual/jpeg
 	media-libs/libpng
-	media-libs/libvpx
+	>=media-libs/libvpx-0.9.5
 	media-libs/speex
 	>=media-video/ffmpeg-0.6_p25767[threads]
 	cups? ( >=net-print/cups-1.3.11 )
@@ -48,10 +48,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2"
 RDEPEND+="
-	|| (
-		x11-themes/gnome-icon-theme
-		x11-themes/xfce4-icon-theme
-	)
 	x11-misc/xdg-utils
 	virtual/ttf-fonts
 	gecko-mediaplayer? ( !www-plugins/gecko-mediaplayer[gnome] )"
@@ -318,4 +314,16 @@ src_install() {
 		insinto /usr/share/gnome-control-center/default-apps
 		doins "${FILESDIR}"/chromium.xml || die
 	fi
+}
+
+pkg_postinst() {
+	# For more info see bugs #292201 and bug #352263.
+	elog "Depending on your desktop environment, you may need"
+	elog "to install additional packages to get icons on the Downloads page."
+	elog
+	elog "For KDE, the required package is kde-base/oxygen-icons."
+	elog
+	elog "For other desktop environments, try one of the following:"
+	elog " - x11-themes/gnome-icon-theme"
+	elog " - x11-themes/xfce4-icon-theme"
 }
