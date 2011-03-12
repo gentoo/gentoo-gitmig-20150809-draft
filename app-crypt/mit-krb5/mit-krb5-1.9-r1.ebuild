@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9-r1.ebuild,v 1.2 2011/03/12 15:46:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9-r1.ebuild,v 1.3 2011/03/12 18:45:00 abcd Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils flag-o-matic versionator
 
@@ -14,12 +14,12 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc openldap +pkinit +threads test xinetd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="doc +keyutils openldap +pkinit +threads test xinetd"
 
 RDEPEND="!!app-crypt/heimdal
 	>=sys-libs/e2fsprogs-libs-1.41.0
-	sys-apps/keyutils
+	keyutils? ( sys-apps/keyutils )
 	openldap? ( net-nds/openldap )
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
@@ -43,10 +43,11 @@ src_prepare() {
 }
 
 src_configure() {
-	append-flags "-I/usr/include/et"
+	append-flags "-I${EPREFIX}/usr/include/et"
+	use keyutils || export ac_cv_header_keyutils_h=no
 	econf \
 		$(use_with openldap ldap) \
-		$(use_with test tcl /usr) \
+		"$(use_with test tcl "${EPREFIX}/usr")" \
 		$(use_enable pkinit) \
 		$(use_enable threads thread-support) \
 		--without-krb4 \
@@ -73,7 +74,7 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		EXAMPLEDIR="/usr/share/doc/${PF}/examples" \
+		EXAMPLEDIR="${EPREFIX}/usr/share/doc/${PF}/examples" \
 		install || die "install failed"
 
 	# default database dir
@@ -94,9 +95,9 @@ src_install() {
 	newinitd "${FILESDIR}"/mit-krb5kdc.initd mit-krb5kdc || die
 
 	insinto /etc
-	newins "${D}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
+	newins "${ED}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
 	insinto /var/lib/krb5kdc
-	newins "${D}/usr/share/doc/${PF}/examples/kdc.conf" kdc.conf.example
+	newins "${ED}/usr/share/doc/${PF}/examples/kdc.conf" kdc.conf.example
 
 	if use openldap ; then
 		insinto /etc/openldap/schema

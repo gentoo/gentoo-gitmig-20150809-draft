@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.261 2011/03/12 15:46:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.262 2011/03/12 18:45:00 abcd Exp $
+
+  12 Mar 2011; Jonathan Callen <abcd@gentoo.org> mit-krb5-1.9-r1.ebuild,
+  metadata.xml:
+  Add prefix support from prefix overlay. Bump to EAPI 3. Add prefix keywords.
 
   12 Mar 2011; Eray Aslan <eras@gentoo.org> mit-krb5-1.9-r1.ebuild,
   metadata.xml:
