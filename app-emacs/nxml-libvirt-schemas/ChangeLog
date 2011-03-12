@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-libvirt-schemas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/ChangeLog,v 1.5 2011/02/17 15:23:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/ChangeLog,v 1.6 2011/03/12 14:42:29 ulm Exp $
+
+  12 Mar 2011; Ulrich Mueller <ulm@gentoo.org>
+  nxml-libvirt-schemas-0.8.8.ebuild:
+  Drop dependency on app-emacs/nxml-mode.
 
 *nxml-libvirt-schemas-0.8.8 (17 Feb 2011)
 
