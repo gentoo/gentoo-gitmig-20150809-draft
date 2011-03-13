@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.160 2011/02/27 21:57:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.161 2011/03/13 08:29:23 dilfridge Exp $
+
+  13 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org> kword-2.2.2.ebuild:
+  koffice version 2.2.2 does not build with kde-4.6
 
   27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kword-2.3.1.ebuild:

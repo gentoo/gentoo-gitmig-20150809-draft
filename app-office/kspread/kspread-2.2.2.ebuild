@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-2.2.2.ebuild,v 1.5 2011/01/28 09:47:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-2.2.2.ebuild,v 1.6 2011/03/13 08:29:23 dilfridge Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="KOffice spreadsheet application."
 KEYWORDS="amd64 x86"
 IUSE="+solver"
 
-DEPEND="
+DEPEND="<kde-base/kdelibs-4.6
 	dev-cpp/eigen:2
 	solver? ( sci-libs/gsl )
 "

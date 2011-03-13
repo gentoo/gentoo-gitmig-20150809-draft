@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.2.2.ebuild,v 1.5 2011/01/28 09:48:04 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-2.2.2.ebuild,v 1.6 2011/03/13 08:29:23 dilfridge Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ DESCRIPTION="KOffice integrated environment for database management."
 KEYWORDS="amd64 x86"
 IUSE="freetds mysql postgres reports xbase"
 
-DEPEND="
+DEPEND="<kde-base/kdelibs-4.6
 	sys-libs/readline
 	app-arch/bzip2
 	~app-office/kspread-${PV}:${SLOT}

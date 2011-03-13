@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.2.2.ebuild,v 1.6 2011/01/28 09:39:27 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.2.2.ebuild,v 1.7 2011/03/13 08:29:22 dilfridge Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ IUSE="crypt openexr reports"
 
 # the contents of kchart have been moved into koffice-libs in 2.2.0
 
-RDEPEND="
+RDEPEND="<kde-base/kdelibs-4.6
 	>=app-office/koffice-data-${PV}:${SLOT}
 	dev-libs/libxml2
 	dev-libs/libxslt

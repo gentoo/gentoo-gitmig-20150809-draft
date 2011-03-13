@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.2.2.ebuild,v 1.5 2011/01/28 10:01:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.2.2.ebuild,v 1.6 2011/03/13 08:29:23 dilfridge Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="KOffice word processor."
 KEYWORDS="amd64 x86"
 IUSE="wpd"
 
-DEPEND="
+DEPEND="<kde-base/kdelibs-4.6
 	wpd? ( app-text/libwpd )
 "
 RDEPEND="${DEPEND}

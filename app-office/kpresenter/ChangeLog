@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kpresenter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.111 2011/02/27 21:57:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.112 2011/03/13 08:29:22 dilfridge Exp $
+
+  13 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kpresenter-2.2.2.ebuild:
+  koffice version 2.2.2 does not build with kde-4.6
 
   27 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kpresenter-2.3.1.ebuild:

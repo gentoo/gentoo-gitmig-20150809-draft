@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.2.2.ebuild,v 1.4 2011/01/12 20:08:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-meta/koffice-meta-2.2.2.ebuild,v 1.5 2011/03/13 08:29:23 dilfridge Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SLOT="2"
 KEYWORDS="amd64 x86"
 IUSE="nls reports"
 
-RDEPEND="
+RDEPEND="<kde-base/kdelibs-4.6
 	>=app-office/karbon-${PV}:${SLOT}
 	>=app-office/kexi-${PV}:${SLOT}
 	>=app-office/koffice-data-${PV}:${SLOT}
