@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/multipart-post
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/ChangeLog,v 1.1 2011/03/13 07:35:24 graaff Exp $
+
+*multipart-post-1.1.0 (13 Mar 2011)
+
+  13 Mar 2011; Hans de Graaff <graaff@gentoo.org>
+  +multipart-post-1.1.0.ebuild, +metadata.xml:
+  Initial import. New dependency for dev-ruby/faraday.
+
