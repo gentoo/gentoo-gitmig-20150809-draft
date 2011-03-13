@@ -9,7 +9,6 @@
   <use>
 	<flag name="gconf">Enable GConf as configuration backend</flag>
 	<flag name="glade">Install the Glade catalog for the desktop-agnotstic GTK widgets.</flag>
-	<flag name="gnome-vfs">Enable gnome-vfs as VFS backend</flag>
 	<flag name="introspection">Use dev-libs/gobject-introspection for introspection</flag>
   </use>
 </pkgmetadata>
