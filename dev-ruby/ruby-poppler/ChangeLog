@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-poppler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.21 2010/10/22 14:03:22 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.22 2011/03/13 15:40:40 graaff Exp $
+
+  13 Mar 2011; Hans de Graaff <graaff@gentoo.org>
+  ruby-poppler-0.19.4.ebuild:
+  Restrict poppler dependency to 0.14* since newer versions no longer work.
+  Bug 356027.
 
   22 Oct 2010; Hans de Graaff <graaff@gentoo.org>
   -ruby-poppler-0.19.1.ebuild, -ruby-poppler-0.19.3.ebuild:
