@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.49 2011/03/12 13:15:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.50 2011/03/13 10:56:47 fauli Exp $
+
+  13 Mar 2011; Christian Faulhammer <fauli@gentoo.org> joomla-1.6.1.ebuild:
+  Add missing KEYWORDS
 
 *joomla-1.6.1 (12 Mar 2011)
 
