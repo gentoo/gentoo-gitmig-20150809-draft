@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.286 2011/03/12 09:11:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.287 2011/03/13 09:24:30 xarthisius Exp $
+
+  13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gstreamer-0.10.31.ebuild:
+  ppc64 stable wrt #353434
 
 *gstreamer-0.10.32-r1 (12 Mar 2011)
 
