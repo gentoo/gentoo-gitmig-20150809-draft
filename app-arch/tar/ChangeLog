@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.161 2010/12/26 23:46:28 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.162 2011/03/13 20:46:42 vapier Exp $
+
+*tar-1.26 (13 Mar 2011)
+
+  13 Mar 2011; Mike Frysinger <vapier@gentoo.org> +tar-1.26.ebuild:
+  Version bump.
 
 *tar-1.25-r1 (26 Dec 2010)
 
