@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.45 2011/03/04 17:41:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.46 2011/03/13 20:19:46 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (13 Mar 2011)
+# needs stable kde stuff
+sys-auth/polkit kde
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
 # Mask unsatisfied kde-deps bug #357403
