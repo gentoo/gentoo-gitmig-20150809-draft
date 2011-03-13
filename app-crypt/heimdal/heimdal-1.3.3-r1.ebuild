@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.3.3-r1.ebuild,v 1.8 2010/09/05 15:57:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.3.3-r1.ebuild,v 1.9 2011/03/13 03:45:13 eras Exp $
 
 EAPI=2
 VIRTUALX_REQUIRED="manual"
@@ -31,8 +31,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/autoconf-2.62
 	test? ( X? ( ${VIRTUALX_DEPEND} ) )"
-
-PROVIDE="virtual/krb5"
 
 src_prepare() {
 	epatch "${FILESDIR}/heimdal_db5.patch"

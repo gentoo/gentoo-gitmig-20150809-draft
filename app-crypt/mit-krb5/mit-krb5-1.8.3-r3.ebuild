@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.3-r3.ebuild,v 1.6 2011/02/12 18:06:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.8.3-r3.ebuild,v 1.7 2011/03/13 03:42:16 eras Exp $
 
 EAPI=2
 
@@ -29,8 +29,6 @@ DEPEND="${RDEPEND}
 			dev-util/dejagnu )"
 
 S=${WORKDIR}/${MY_P}/src
-
-PROVIDE="virtual/krb5"
 
 src_unpack() {
 	unpack ${A}
