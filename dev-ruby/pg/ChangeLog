@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.26 2011/02/26 07:49:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.27 2011/03/13 16:06:24 graaff Exp $
+
+  13 Mar 2011; Hans de Graaff <graaff@gentoo.org> pg-0.9.0-r1.ebuild:
+  Drop ruby19 to create a stable candidate.
 
   26 Feb 2011; Hans de Graaff <graaff@gentoo.org> -pg-0.10.0.ebuild:
   Remove old version.
