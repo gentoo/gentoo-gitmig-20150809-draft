@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.473 2011/03/10 18:58:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.474 2011/03/13 09:48:06 olemarkus Exp $
+
+  13 Mar 2011; <olemarkus@gentoo.org> +files/eblits/src_prepare-v3.eblit,
+  php-5.3.6_rc3.ebuild:
+  Added epatch_user. #357637
 
 *php-5.3.6_rc3 (10 Mar 2011)
 
