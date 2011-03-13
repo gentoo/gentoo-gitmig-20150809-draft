@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/xfmpc-0.2.1.ebuild,v 1.1 2011/02/03 22:36:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/xfmpc-0.2.1.ebuild,v 1.2 2011/03/13 12:50:51 armin76 Exp $
 
 EAPI=3
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.18:2

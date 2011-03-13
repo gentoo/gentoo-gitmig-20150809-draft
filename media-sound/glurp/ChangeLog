@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glurp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.27 2009/06/03 18:23:46 tcunha Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.28 2011/03/13 12:54:14 armin76 Exp $
+
+  13 Mar 2011; Raúl Porcel <armin76@gentoo.org> glurp-0.11.6-r2.ebuild:
+  Drop sparc keywords
 
   03 Jun 2009; Tiago Cunha <tcunha@gentoo.org> glurp-0.11.6-r2.ebuild:
   stable sparc, bug 255771
