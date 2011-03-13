@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1-r1.ebuild,v 1.5 2010/05/31 16:57:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/scapy-1.1.1-r1.ebuild,v 1.6 2011/03/13 15:47:16 ikelos Exp $
+
+EAPI="2"
 
 inherit eutils python multilib
 
@@ -19,14 +21,12 @@ RDEPEND="net-analyzer/tcpdump
 	pyx? ( dev-python/pyx )
 	crypt? ( dev-python/pycrypto )
 	graphviz? ( media-gfx/graphviz )
-	imagemagick? ( media-gfx/imagemagick )
+	imagemagick? ( || ( media-gfx/imagemagick
+						media-gfx/graphicsmagick[imagemagick] ) )
 	visual? ( dev-python/visual )
 	tcpreplay? ( net-analyzer/tcpreplay )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-config-file.patch
 }
 
