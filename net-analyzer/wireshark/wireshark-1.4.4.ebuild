@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.4.ebuild,v 1.5 2011/03/12 11:46:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.4.ebuild,v 1.6 2011/03/13 08:36:33 pva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -122,6 +122,7 @@ src_configure() {
 	# profile and pie are incompatible #215806, #292991
 	if use profile; then
 		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
+		ewarn "Also ignore \"unrecognized option '-nopie'\" gcc warning #358101."
 		append-flags $(test-flags-CC -nopie)
 	fi
 
