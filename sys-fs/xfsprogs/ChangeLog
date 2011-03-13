@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.128 2011/03/13 09:41:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.129 2011/03/13 13:17:30 xarthisius Exp $
+
+  13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> xfsprogs-3.1.4.ebuild:
+  ppc/ppc64 stable wrt #358499
 
   13 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xfsprogs-3.1.4.ebuild:
