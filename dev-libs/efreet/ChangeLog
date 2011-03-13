@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/efreet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efreet/ChangeLog,v 1.4 2011/01/30 19:34:33 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efreet/ChangeLog,v 1.5 2011/03/13 10:24:43 tommy Exp $
+
+  13 Mar 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> efreet-1.0.0.ebuild:
+  Add missing dependency: dev-libs/eet
 
   30 Jan 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> efreet-1.0.0.ebuild,
   metadata.xml:
