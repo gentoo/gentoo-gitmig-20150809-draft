@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.177 2011/03/07 21:41:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.178 2011/03/13 01:06:03 maekke Exp $
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org> snort-2.9.0.4-r1.ebuild:
+  add ~arm, bug #351551
 
   07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> snort-2.9.0.3.ebuild:
   Keyworded on alpha, bug #351551

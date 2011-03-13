@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.4-r1.ebuild,v 1.1 2011/03/01 07:52:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.0.4-r1.ebuild,v 1.2 2011/03/13 01:06:03 maekke Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/downloads/808 -> ${P}-r1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="static +dynamicplugin +ipv6 +zlib gre mpls targetbased +decoder-preprocessor-rules
 ppm perfprofiling linux-smp-stats inline-init-failopen prelude +threads debug
 active-response normalizer reload-error-restart react flexresp3
