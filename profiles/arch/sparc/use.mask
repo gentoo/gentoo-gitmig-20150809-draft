@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.68 2011/03/13 19:45:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.69 2011/03/13 19:52:13 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -105,6 +105,7 @@ gme
 quvi
 
 # No hardware to test
+chipcard
 hbci
 ivtv
 laptop
