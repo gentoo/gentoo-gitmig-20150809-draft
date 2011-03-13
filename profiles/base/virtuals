@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.125 2011/01/06 18:47:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.126 2011/03/13 03:52:31 eras Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -20,7 +20,6 @@ virtual/imap-c-client			net-libs/c-client
 virtual/imapd				net-mail/courier-imap
 virtual/inetd				sys-apps/xinetd
 virtual/jabber-server			net-im/jabberd
-virtual/krb5				app-crypt/mit-krb5
 virtual/libc				sys-libs/glibc
 virtual/libpcap				net-libs/libpcap
 virtual/linux-sources			sys-kernel/gentoo-sources
