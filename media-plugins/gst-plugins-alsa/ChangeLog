@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.178 2011/03/05 17:31:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.179 2011/03/13 09:26:38 xarthisius Exp $
+
+  13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-alsa-0.10.31.ebuild:
+  ppc64 stable wrt #353434
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-alsa-0.10.31.ebuild:
