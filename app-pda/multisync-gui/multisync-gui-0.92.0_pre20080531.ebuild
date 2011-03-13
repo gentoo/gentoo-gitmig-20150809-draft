@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/multisync-gui-0.92.0_pre20080531.ebuild,v 1.2 2008/05/31 14:14:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/multisync-gui-0.92.0_pre20080531.ebuild,v 1.3 2011/03/13 15:37:59 dirtyepic Exp $
 
-inherit toolchain-funcs cmake-utils
+EAPI="3"
+
+inherit cmake-utils
 
 DESCRIPTION="OpenSync multisync-gui"
 HOMEPAGE="http://www.opensync.org/"
@@ -13,16 +15,14 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-RDEPEND=">=app-pda/libopensync-0.36
+RDEPEND="~app-pda/libopensync-0.36
 	>=dev-libs/libxml2-2.6.30
-	>=gnome-base/libglade-2.6.2
-	>=x11-libs/gtk+-2.6
-	dev-libs/atk"
+	>=gnome-base/libglade-2.6.2:2.0
+	>=x11-libs/gtk+-2.21:2"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.22"
 
-pkg_postinst() {
-	elog "${CATEGORY}/${PF} contains support for syncing with"
-	elog "the Evolution mail client. To take advantage of this, do:"
-	elog "# emerge mail-client/evolution"
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.92.0-cmake.patch
+	epatch "${FILESDIR}"/${PN}-0.92.0-pixbuf-include.patch
 }

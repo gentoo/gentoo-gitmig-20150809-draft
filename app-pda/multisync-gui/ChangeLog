@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/multisync-gui
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/ChangeLog,v 1.9 2008/05/31 14:12:49 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync-gui/ChangeLog,v 1.10 2011/03/13 15:37:59 dirtyepic Exp $
+
+  13 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> -multisync-gui-0.90.19.ebuild,
+  multisync-gui-0.92.0_pre20080531.ebuild,
+  +files/multisync-gui-0.92.0-cmake.patch,
+  +files/multisync-gui-0.92.0-pixbuf-include.patch, metadata.xml:
+  Fix install paths and desktop file (bug #237366), lock libopensync dependency
+  to 0.36 (bug #298109), add gdk-pixbuf include dir. EAPI 3. Remove old.
 
 *multisync-gui-0.92.0_pre20080531 (31 May 2008)
 
