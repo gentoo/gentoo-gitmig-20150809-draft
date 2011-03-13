@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.9.1.ebuild,v 1.2 2011/03/13 09:57:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.9.1.ebuild,v 1.3 2011/03/13 16:05:30 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://screengrab-qt.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
