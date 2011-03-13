@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.1.1.ebuild,v 1.1 2011/02/24 17:52:50 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.1.1.ebuild,v 1.2 2011/03/13 15:12:35 signals Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -31,7 +31,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-warnings.patch\
-		"${FILESDIR}"/${P}-opt-config.patch
+		"${FILESDIR}"/${P}-opt-config.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 	sed -i \
 		-e 's^truetype/dustin/PenguinAttack^corefonts/arial^' \
 		-e 's^openoffice.png^ooffice.png^' \

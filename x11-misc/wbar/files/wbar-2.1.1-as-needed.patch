@@ -1,0 +1,17 @@
+Put LIBS in LDADD instead of LDFLAGS so --as-needed works.
+
+Patch by Kevin McCarthy <signals@gentoo.org>
+
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -41,8 +41,8 @@
+ $(top_srcdir)/src/utils/i18n.h
+ 
+ wbar_CPPFLAGS = @modules_CFLAGS@ -I$(top_srcdir)/src/utils
+-wbar_LDFLAGS = @modules_LIBS@
++wbar_LDADD = @modules_LIBS@
+ 
+ wbar_config_CPPFLAGS = @gui_modules_CFLAGS@ -I$(top_srcdir)/src/utils
+-wbar_config_LDFLAGS = @gui_modules_LIBS@
++wbar_config_LDADD = @gui_modules_LIBS@
+ 
