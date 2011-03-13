@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.36 2011/03/09 13:31:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.37 2011/03/13 08:25:36 scarabeus Exp $
 
 # Original author: Martin Schlemmer <azarah@gentoo.org>
 
@@ -158,7 +158,7 @@ virtualmake() {
 	fi
 
 	# die if our command failed
-	[[ $? -ne 0 ]] && die "${FUNCNAME}: the ${VIRTALX_COMMAND} failed."
+	[[ ${retval} -ne 0 ]] && die "${FUNCNAME}: the ${VIRTUALX_COMMAND} failed."
 }
 
 # @FUNCTION: Xmake
