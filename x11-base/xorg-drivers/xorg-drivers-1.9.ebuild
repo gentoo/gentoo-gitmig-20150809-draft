@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.9.ebuild,v 1.10 2011/02/14 23:58:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.9.ebuild,v 1.11 2011/03/13 19:46:31 chithanh Exp $
 
 DESCRIPTION="Meta package containing deps on all xorg drivers"
 HOMEPAGE="http://www.gentoo.org/"
@@ -126,8 +126,12 @@ PDEPEND="
 	video_cards_siliconmotion? ( x11-drivers/xf86-video-siliconmotion )
 	video_cards_sis?           ( x11-drivers/xf86-video-sis )
 	video_cards_sisusb?        ( x11-drivers/xf86-video-sisusb )
+	video_cards_suncg14?       ( x11-drivers/xf86-video-suncg14 )
+	video_cards_suncg3?        ( x11-drivers/xf86-video-suncg3 )
+	video_cards_suncg6?        ( !x11-drivers/xf86-video-suncg6 )
 	video_cards_sunffb?        ( x11-drivers/xf86-video-sunffb )
 	video_cards_sunleo?        ( x11-drivers/xf86-video-sunleo )
+	video_cards_suntcx?        ( x11-drivers/xf86-video-suntcx )
 	video_cards_tdfx?          ( x11-drivers/xf86-video-tdfx )
 	video_cards_tga?           ( x11-drivers/xf86-video-tga )
 	video_cards_trident?       ( x11-drivers/xf86-video-trident )
@@ -146,8 +150,4 @@ PDEPEND="
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-nsc
 	!x11-drivers/xf86-video-sunbw2
-	!x11-drivers/xf86-video-suncg14
-	!x11-drivers/xf86-video-suncg3
-	!x11-drivers/xf86-video-suncg6
-	!x11-drivers/xf86-video-suntcx
 "

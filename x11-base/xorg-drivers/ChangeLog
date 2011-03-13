@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.41 2011/02/14 23:58:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.42 2011/03/13 19:46:31 chithanh Exp $
+
+  13 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-drivers-1.9.ebuild:
+  Unblock suncg and suntcx as requested by armin76.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xorg-drivers-1.9.ebuild:
