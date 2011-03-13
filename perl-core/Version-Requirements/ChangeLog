@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.3 2011/03/08 14:34:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.4 2011/03/13 21:31:20 maekke Exp $
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org>
+  Version-Requirements-0.101.20.ebuild:
+  add ~arm, bug #357599
 
   08 Mar 2011; Jeroen Roovers <jer@gentoo.org>
   Version-Requirements-0.101.20.ebuild:

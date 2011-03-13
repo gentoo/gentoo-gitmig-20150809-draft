@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.21 2011/03/08 14:30:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.22 2011/03/13 21:29:11 maekke Exp $
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org> IO-1.25.ebuild:
+  add ~arm, bug #357599
 
   08 Mar 2011; Jeroen Roovers <jer@gentoo.org> IO-1.25.ebuild:
   Marked ~hppa (bug #357599).
