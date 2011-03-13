@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.568 2011/01/10 12:20:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.569 2011/03/13 15:09:15 grobian Exp $
+
+  13 Mar 2011; Fabian Groffen <grobian@gentoo.org> mysql-5.1.53.ebuild:
+  Marked ~ppc-macos
 
   10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> mysql-5.0.91.ebuild:
   ppc64 stable wrt #319489
