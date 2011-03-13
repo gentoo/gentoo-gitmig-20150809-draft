@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.42 2011/02/24 18:38:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.43 2011/03/13 08:45:03 xarthisius Exp $
+
+  13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  source-highlight-3.1.ebuild:
+  ppc/ppc64 stable wrt #354779
 
   24 Feb 2011; Jeroen Roovers <jer@gentoo.org> source-highlight-3.1.ebuild:
   Stable for HPPA (bug #354779).
