@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.175 2010/11/14 00:49:39 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.176 2011/03/13 13:00:03 xarthisius Exp $
+
+  13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  nfs-utils-1.2.3-r1.ebuild:
+  ppc/ppc64 stable wrt #358509
 
 *nfs-utils-1.2.3-r1 (14 Nov 2010)
 
