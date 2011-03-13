@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.37 2011/03/13 08:25:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.38 2011/03/13 19:37:28 scarabeus Exp $
 
 # Original author: Martin Schlemmer <azarah@gentoo.org>
 
@@ -159,6 +159,8 @@ virtualmake() {
 
 	# die if our command failed
 	[[ ${retval} -ne 0 ]] && die "${FUNCNAME}: the ${VIRTUALX_COMMAND} failed."
+
+	return 0 # always return 0, it can be altered by failed kill for Xvfb
 }
 
 # @FUNCTION: Xmake
