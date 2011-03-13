@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.37 2011/03/04 21:59:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.38 2011/03/13 20:25:06 maekke Exp $
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org> libnfnetlink-1.0.0.ebuild:
+  add ~arm, bug #354309
 
   04 Mar 2011; Matt Turner <mattst88@gentoo.org> libnfnetlink-1.0.0.ebuild:
   Add ~mips, bug 354309
