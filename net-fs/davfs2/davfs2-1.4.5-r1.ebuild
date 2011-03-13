@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.5.ebuild,v 1.3 2010/08/17 19:20:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.5-r1.ebuild,v 1.1 2011/03/13 21:01:06 slyfox Exp $
 
 EAPI="2"
 
 inherit autotools eutils linux-mod
 
-DESCRIPTION="a Linux file system driver that allows you to mount a WebDAV server as a local disk drive. Davfs2 uses fuse (or coda) for kernel driver and neon for WebDAV interface"
+DESCRIPTION="Linux FUSE (or coda) driver that allows you to mount a WebDAV resource."
 HOMEPAGE="http://savannah.nongnu.org/projects/davfs2"
 SRC_URI="http://mirror.lihnidos.org/GNU/savannah/davfs2/${P}.tar.gz"
 
@@ -20,6 +20,10 @@ DEPEND="dev-libs/libxml2
 		net-libs/neon
 		sys-libs/zlib"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	enewgroup davfs2
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc212.patch
@@ -45,7 +49,7 @@ src_install() {
 
 	dodir /var/run/mount.davfs
 	keepdir /var/run/mount.davfs
-	fowners root:users /var/run/mount.davfs
+	fowners root:davfs2 /var/run/mount.davfs
 	fperms 1774 /var/run/mount.davfs
 
 	# Ignore nobody's home
@@ -54,4 +58,16 @@ src_install() {
 # nobody is a system account in Gentoo
 ignore_home nobody
 EOF
+}
+
+pkg_postinst() {
+	elog
+	elog "Quick setup:"
+	elog "   (as root)"
+	elog "   # gpasswd -a \${your_user} davfs2"
+	elog "   # echo 'http://path/to/dav /home/\${your_user}/dav davfs rw,user,noauto  0  0' >> /etc/fstab"
+	elog "   (as user)"
+	elog "   # mkdir -p ~/dav"
+	elog "   \$ mount ~/dav"
+	elog
 }
