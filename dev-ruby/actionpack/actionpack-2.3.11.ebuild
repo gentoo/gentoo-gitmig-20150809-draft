@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.11.ebuild,v 1.1 2011/02/21 20:09:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.11.ebuild,v 1.2 2011/03/13 09:59:44 graaff Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ IUSE=""
 RUBY_PATCHES=( "${P}-rails3.patch" "${PN}-2.3.10-i18n-0.4.2.patch" )
 
 ruby_add_rdepend "~dev-ruby/activesupport-${PV}
-	>=dev-ruby/rack-1.1.0"
+	>=dev-ruby/rack-1.1.0:0"
 
 ruby_add_bdepend "
 	test? (
