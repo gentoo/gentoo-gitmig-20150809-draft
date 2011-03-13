@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-x264
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.10 2010/12/28 10:42:27 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.11 2011/03/13 16:03:14 hwoarang Exp $
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-x264-0.10.16.ebuild:
+  Stable on amd64 wrt bug #358457
 
 *gst-plugins-x264-0.10.16 (28 Dec 2010)
 
