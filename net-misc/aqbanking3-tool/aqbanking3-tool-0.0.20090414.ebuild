@@ -1,25 +1,29 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aqbanking3-tool/aqbanking3-tool-0.0.20090414.ebuild,v 1.1 2009/04/14 19:03:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aqbanking3-tool/aqbanking3-tool-0.0.20090414.ebuild,v 1.2 2011/03/13 20:00:11 ssuominen Exp $
 
-inherit eutils
+EAPI=3
 
-DESCRIPTION="Free commandline tool for aqbanking."
+DESCRIPTION="A commandline tool for the AqBanking interface"
 HOMEPAGE="http://peter.schlaile.de/aqbanking/"
 SRC_URI="mirror://gentoo/${P}.tar.lzma"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND=">=net-libs/aqbanking-3.0"
-RDEPEND="${DEPEND}"
-S="${WORKDIR}/${PN}"
+
+RDEPEND="net-libs/aqbanking"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils"
+
+S=${WORKDIR}/${PN}
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed"
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
-	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" PREFIX=/usr install || die
 	dodoc xslt/*
 }
