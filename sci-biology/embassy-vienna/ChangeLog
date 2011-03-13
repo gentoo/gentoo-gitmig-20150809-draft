@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-vienna
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-vienna/ChangeLog,v 1.8 2010/01/15 22:47:16 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-vienna/ChangeLog,v 1.9 2011/03/13 13:00:33 armin76 Exp $
+
+  13 Mar 2011; Raúl Porcel <armin76@gentoo.org> embassy-vienna-1.7.2.ebuild,
+  embassy-vienna-1.7.2-r1.ebuild:
+  Drop sparc keywords
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   embassy-vienna-1.7.2-r1.ebuild:

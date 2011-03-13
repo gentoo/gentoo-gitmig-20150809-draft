@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-emnu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.29 2010/01/01 21:55:20 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.30 2011/03/13 12:55:32 armin76 Exp $
+
+  13 Mar 2011; Raúl Porcel <armin76@gentoo.org> embassy-emnu-1.05-r3.ebuild,
+  embassy-emnu-1.05-r5.ebuild, embassy-emnu-1.05-r6.ebuild:
+  Drop sparc keywords
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   embassy-emnu-1.05-r6.ebuild:

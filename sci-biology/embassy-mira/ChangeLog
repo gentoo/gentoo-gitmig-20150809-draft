@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-mira
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-mira/ChangeLog,v 1.5 2010/01/15 22:46:25 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-mira/ChangeLog,v 1.6 2011/03/13 12:57:48 armin76 Exp $
+
+  13 Mar 2011; Raúl Porcel <armin76@gentoo.org> embassy-mira-2.8.2.ebuild,
+  embassy-mira-2.8.2-r1.ebuild:
+  Drop sparc keywords
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   embassy-mira-2.8.2-r1.ebuild:

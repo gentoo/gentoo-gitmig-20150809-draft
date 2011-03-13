@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-cbstools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-cbstools/ChangeLog,v 1.5 2010/01/15 22:44:35 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-cbstools/ChangeLog,v 1.6 2011/03/13 12:53:41 armin76 Exp $
+
+  13 Mar 2011; Raúl Porcel <armin76@gentoo.org> embassy-cbstools-1.0.0.ebuild,
+  embassy-cbstools-1.0.0-r1.ebuild:
+  Drop sparc keywords
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   embassy-cbstools-1.0.0-r1.ebuild:

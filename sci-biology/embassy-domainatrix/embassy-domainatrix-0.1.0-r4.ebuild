@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/embassy-domainatrix-0.1.0-r4.ebuild,v 1.2 2010/01/01 21:48:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/embassy-domainatrix-0.1.0-r4.ebuild,v 1.3 2011/03/13 12:54:09 armin76 Exp $
 
 EBOV="6.1.0"
 
@@ -10,4 +10,4 @@ DESCRIPTION="Protein domain analysis add-on package for EMBOSS"
 SRC_URI="ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-${EBOV}.tar.gz
 	mirror://gentoo/embassy-${EBOV}-${PN:8}-${PV}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos"

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/prints-38.0.ebuild,v 1.9 2009/09/01 19:01:08 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/prints-38.0.ebuild,v 1.10 2011/03/13 12:54:40 armin76 Exp $
 
 MY_PV="${PV/./_}"
 
@@ -13,7 +13,7 @@ SLOT="0"
 IUSE="emboss minimal"
 # Minimal build keeps only the indexed files (if applicable) and the
 # documentation. The non-indexed database is not installed.
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 
 DEPEND="emboss? ( sci-biology/emboss )"
 
