@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.76 2011/03/13 15:58:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.77 2011/03/13 16:02:56 hwoarang Exp $
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> STLport-5.2.1.ebuild:
+  Stable on amd64 wrt bug #358493
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> STLport-5.2.1.ebuild:
   ppc/ppc64 stable wrt #358493
