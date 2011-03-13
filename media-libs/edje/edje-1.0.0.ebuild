@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.0.0.ebuild,v 1.1 2011/01/30 14:48:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.0.0.ebuild,v 1.2 2011/03/13 10:19:32 tommy Exp $
 
 inherit enlightenment
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug cache static-libs vim-syntax"
 
 DEPEND="dev-lang/lua
-	>=dev-libs/eet-1.0.0_beta
+	>=dev-libs/eet-1.4.0_beta
 	>=dev-libs/eina-1.0.0_beta
 	>=dev-libs/embryo-1.0.0_beta
 	>=media-libs/evas-1.0.0_beta
