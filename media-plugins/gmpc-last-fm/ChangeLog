@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-last-fm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-last-fm/ChangeLog,v 1.16 2011/02/26 12:14:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-last-fm/ChangeLog,v 1.17 2011/03/13 16:34:46 angelos Exp $
+
+  13 Mar 2011; <angelos@gentoo.org> -gmpc-last-fm-0.18.0.ebuild,
+  -gmpc-last-fm-0.19.0.ebuild:
+  Removed old
 
   26 Feb 2011; Michael Weber <xmw@gentoo.org> gmpc-last-fm-0.20.0.ebuild:
   sparc dropping keywords (bug 325621)
