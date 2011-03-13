@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.2.1.ebuild,v 1.1 2010/08/21 10:27:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.2.1.ebuild,v 1.2 2011/03/13 15:58:08 xarthisius Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/stlport/${P}.tar.bz2
 	mirror://gentoo/distfiles/${PN}-patches-${PV}-${PATCH_V}.tbz2"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ppc ppc64 ~sparc ~x86"
 IUSE="boost debug static static-libs threads"
 
 DEPEND="boost? ( >=dev-libs/boost-1.35.0-r5 )"
