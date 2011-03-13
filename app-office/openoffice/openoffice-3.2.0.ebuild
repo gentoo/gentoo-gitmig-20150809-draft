@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.31 2011/03/13 19:37:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.0.ebuild,v 1.32 2011/03/13 19:42:04 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="3"
@@ -143,6 +143,26 @@ PROVIDE="virtual/ooo"
 
 pkg_setup() {
 
+	java-pkg-opt-2_pkg_setup
+
+	# sys-libs/db version used
+	local db_ver=$(db_findver '>=sys-libs/db-4.3')
+
+	kde4-base_pkg_setup
+
+	python_set_active_version 2
+	python_pkg_setup
+
+}
+
+src_unpack() {
+
+	unpack ooo-build-${MY_PV}.tar.gz
+
+}
+
+src_prepare() {
+
 	ewarn
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
@@ -193,26 +213,6 @@ pkg_setup() {
 		eerror " the openoffice build will break. "
 		die
 	fi
-
-	java-pkg-opt-2_pkg_setup
-
-	# sys-libs/db version used
-	local db_ver=$(db_findver '>=sys-libs/db-4.3')
-
-	kde4-base_pkg_setup
-
-	python_set_active_version 2
-	python_pkg_setup
-
-}
-
-src_unpack() {
-
-	unpack ooo-build-${MY_PV}.tar.gz
-
-}
-
-src_prepare() {
 
 	# Hackish workaround for overlong path problem, see bug #130837
 	mv "${S_OLD}" "${S}" || die
