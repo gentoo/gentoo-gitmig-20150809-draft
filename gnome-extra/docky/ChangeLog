@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/docky
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/ChangeLog,v 1.1 2011/03/13 17:28:56 angelos Exp $
+
+*docky-2.1.1 (13 Mar 2011)
+
+  13 Mar 2011; <angelos@gentoo.org> +docky-2.1.1.ebuild,
+  +files/docky-2.1.1-mono-2.10.patch:
+  Initial import
+
