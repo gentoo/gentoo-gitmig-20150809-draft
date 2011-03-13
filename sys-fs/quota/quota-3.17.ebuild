@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.17.ebuild,v 1.9 2011/02/26 16:49:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.17.ebuild,v 1.10 2011/03/13 11:35:24 xarthisius Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linuxquota/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="nls tcpd ldap rpc"
 
 RDEPEND="ldap? ( >=net-nds/openldap-2.3.35 )
