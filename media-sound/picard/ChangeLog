@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/picard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.26 2010/05/29 19:18:41 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.27 2011/03/13 16:02:17 hwoarang Exp $
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> picard-0.12.1-r1.ebuild:
+  Stable on amd64 wrt bug #358449
 
   29 May 2010; Justin Lecher <jlec@gentoo.org> picard-0.12.1-r1.ebuild:
   Run configure just ones
