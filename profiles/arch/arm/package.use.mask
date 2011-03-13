@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.46 2011/03/13 20:19:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.47 2011/03/13 20:25:55 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (13 Mar 2011)
 # needs stable kde stuff
@@ -14,10 +14,6 @@ sys-auth/polkit kde
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)
 app-text/asciidoc test
-
-# Mike Frysinger <vapier@gentoo.org> (10 Feb 2011)
-# Waiting for keywording #354309
-net-firewall/iptables netlink
 
 # Michael Weber <xmw@gentoo.org> (10 Feb 2011)
 # kde-base/kdelibs is not stable for arm
