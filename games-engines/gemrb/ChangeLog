@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/gemrb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.9 2010/11/03 21:48:42 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.10 2011/03/13 14:10:04 mr_bones_ Exp $
+
+*gemrb-0.6.3 (13 Mar 2011)
+
+  13 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> +gemrb-0.6.3.ebuild:
+  version bump (bug #358669)
 
   03 Nov 2010; Markus Meier <maekke@gentoo.org> gemrb-0.6.2.ebuild:
   x86 stable, bug #343109
