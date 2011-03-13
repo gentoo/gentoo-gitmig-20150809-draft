@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.3.ebuild,v 1.1 2011/03/12 14:40:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.3.ebuild,v 1.2 2011/03/13 19:39:25 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -51,6 +51,14 @@ DEPEND="${RDEPEND}
 RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
+
+gyp_use() {
+	if [[ $# -lt 2 ]]; then
+		echo "!!! usage: gyp_use <USEFLAG> <GYPFLAG>" >&2
+		return 1
+	fi
+	if use "$1"; then echo "-D$2=1"; else echo "-D$2=0"; fi
+}
 
 egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
@@ -181,27 +189,12 @@ src_configure() {
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
 
-	# The dependency on cups is optional, see bug #324105.
-	if use cups; then
-		myconf+=" -Duse_cups=1"
-	else
-		myconf+=" -Duse_cups=0"
-	fi
-
-	# Make GConf dependency optional, http://crbug.com/13322.
-	if use gnome; then
-		myconf+=" -Duse_gconf=1"
-	else
-		myconf+=" -Duse_gconf=0"
-	fi
-
-	if use "gnome-keyring"; then
-		myconf+=" -Duse_gnome_keyring=1 -Dlinux_link_gnome_keyring=1"
-	else
-		# TODO: we should also disable code trying to dlopen
-		# gnome-keyring in that case.
-		myconf+=" -Duse_gnome_keyring=0 -Dlinux_link_gnome_keyring=0"
-	fi
+	# Optional dependencies.
+	myconf+="
+		$(gyp_use cups use_cups)
+		$(gyp_use gnome use_gconf)
+		$(gyp_use gnome-keyring use_gnome_keyring)
+		$(gyp_use gnome-keyring linux_link_gnome_keyring)"
 
 	# Enable sandbox.
 	myconf+="
@@ -262,8 +255,8 @@ src_test() {
 	fi
 
 	# For more info see bug #350347.
-	LC_ALL="${mylocale}" maketype=out/Release/base_unittests virtualmake \
-		'--gtest_filter=-ICUStringConversionsTest.*' || die
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
+		'--gtest_filter=-ICUStringConversionsTest.*'
 }
 
 src_install() {
