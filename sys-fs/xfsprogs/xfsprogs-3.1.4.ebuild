@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.4.ebuild,v 1.1 2010/12/13 13:57:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-3.1.4.ebuild,v 1.2 2011/03/13 09:41:07 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/cmd_tars/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86"
 IUSE="libedit nls readline static static-libs"
 
 RDEPEND=">=sys-apps/util-linux-2.17.2

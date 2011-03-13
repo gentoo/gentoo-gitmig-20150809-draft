@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.127 2010/12/13 13:57:34 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.128 2011/03/13 09:41:07 phajdan.jr Exp $
+
+  13 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xfsprogs-3.1.4.ebuild:
+  x86 stable wrt bug #358499
 
 *xfsprogs-3.1.4 (13 Dec 2010)
 
