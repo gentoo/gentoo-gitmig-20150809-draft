@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mypaint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.4 2011/03/10 10:46:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.5 2011/03/13 10:00:37 phajdan.jr Exp $
+
+  13 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mypaint-0.9.0.ebuild:
+  x86 stable wrt bug #358579
 
   10 Mar 2011; Markos Chandras <hwoarang@gentoo.org> mypaint-0.9.0.ebuild:
   Export LANG on src_compile to fix problem with some locales. Bug #352700
