@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.22 2011/02/12 00:33:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.23 2011/03/13 11:39:01 grobian Exp $
+
+  13 Mar 2011; Fabian Groffen <grobian@gentoo.org> dulwich-0.7.0.ebuild:
+  Marked ~x86-macos
 
 *dulwich-0.7.0 (12 Feb 2011)
 
