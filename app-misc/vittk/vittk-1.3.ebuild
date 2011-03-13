@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vittk/vittk-1.1.1.ebuild,v 1.2 2011/02/01 11:23:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vittk/vittk-1.3.ebuild,v 1.1 2011/03/13 04:55:51 radhermit Exp $
 
 EAPI=4
 
@@ -21,9 +21,9 @@ RDEPEND="${DEPEND}
 	app-misc/task"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-configure.patch
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	epatch "${FILESDIR}"/${P}-dirs.patch
+	epatch "${FILESDIR}"/${P}-configure.patch \
+		"${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${PN}-1.1.1-dirs.patch
 	eautoreconf
 }
 
