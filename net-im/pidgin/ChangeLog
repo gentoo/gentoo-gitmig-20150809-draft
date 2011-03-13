@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.229 2011/03/13 16:02:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.230 2011/03/13 18:53:26 klausman Exp $
+
+  13 Mar 2011; Tobias Klausmann <klausman@gentoo.org> pidgin-2.7.11.ebuild:
+  Stable on alpha, bug #358403
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> pidgin-2.7.11.ebuild:
   Stable on amd64 wrt bug #358403
