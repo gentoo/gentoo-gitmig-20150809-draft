@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.307 2011/03/13 14:27:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.308 2011/03/13 17:48:39 klausman Exp $
+
+  13 Mar 2011; Tobias Klausmann <klausman@gentoo.org> pango-1.28.3-r1.ebuild:
+  Stable on alpha, bug #352087
 
   13 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
   pango-1.28.3-r1.ebuild:
