@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.134 2011/02/15 01:00:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.135 2011/03/13 16:27:18 hwoarang Exp $
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  xfce4-session-4.8.1.ebuild:
+  Stable on amd64 wrt bug #358407
 
 *xfce4-session-4.8.1 (15 Feb 2011)
 
