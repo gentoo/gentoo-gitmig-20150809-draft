@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/jupidator-0.6.0.ebuild,v 1.1 2011/02/13 13:12:40 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/jupidator-0.6.0.ebuild,v 1.2 2011/03/13 16:07:37 hwoarang Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.sourceforge.net/projects/jupidator"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5
