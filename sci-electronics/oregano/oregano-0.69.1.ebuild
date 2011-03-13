@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1.ebuild,v 1.2 2011/03/02 20:26:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1.ebuild,v 1.3 2011/03/13 06:39:20 tomjbe Exp $
 
 EAPI="4"
 
@@ -21,7 +21,6 @@ CDEPEND="
 	gnome-base/libgnome
 	>=gnome-base/libgnomeui-2.12
 	>=gnome-base/libgnomecanvas-2.12
-	gnome-base/libgnomeprint:2.2
 	>=x11-libs/cairo-1.2
 	x11-libs/gtksourceview:2.0"
 DEPEND="${CDEPEND}
