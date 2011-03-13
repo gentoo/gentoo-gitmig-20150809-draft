@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.305 2011/03/12 13:09:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.306 2011/03/13 20:32:56 maekke Exp $
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org> dhcpcd-5.2.10-r2.ebuild:
+  arm stable, bug #355279
 
   12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> dhcpcd-5.2.10-r2.ebuild:
   Stable on alpha, bug #355279
