@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.69 2010/10/18 20:58:53 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.70 2011/03/13 16:05:19 hwoarang Exp $
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> obconf-2.0.3-r1.ebuild:
+  Stable on amd64 wrt bug #38543
 
   18 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   obconf-2.0.3-r1.ebuild:
