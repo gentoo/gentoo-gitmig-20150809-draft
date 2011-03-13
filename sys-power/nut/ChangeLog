@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.84 2011/02/25 08:44:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.85 2011/03/13 21:09:30 ssuominen Exp $
+
+*nut-2.6.0 (13 Mar 2011)
+
+  13 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +nut-2.6.0.ebuild:
+  Version bump wrt #353090. Fix multilib install wrt #338096.
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> nut-2.4.3-r2.ebuild:
   ppc/ppc64 stable wrt #321493
