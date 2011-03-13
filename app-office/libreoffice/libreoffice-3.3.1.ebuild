@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.3 2011/03/02 10:38:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.4 2011/03/13 19:29:49 suka Exp $
 
 EAPI="3"
 
@@ -130,10 +130,10 @@ COMMON_DEPEND="!app-office/libreoffice-bin
 	>=dev-lang/perl-5.0
 	>=dev-libs/glib-2.18
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	gnome? ( >=x11-libs/gtk+-2.10
-		>=gnome-base/gconf-2.0
+	gnome? ( >=x11-libs/gtk+-2.10:2
+		gnome-base/gconf:2
 		>=x11-libs/cairo-1.0.2 )
-	gtk? ( >=x11-libs/gtk+-2.10
+	gtk? ( >=x11-libs/gtk+-2.10:2
 		>=x11-libs/cairo-1.0.2 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	gstreamer? ( >=media-libs/gstreamer-0.10
@@ -195,6 +195,26 @@ PROVIDE="virtual/ooo"
 
 pkg_setup() {
 
+	java-pkg-opt-2_pkg_setup
+
+	# sys-libs/db version used
+	local db_ver=$(db_findver '>=sys-libs/db-4.3')
+
+	kde4-base_pkg_setup
+
+	python_set_active_version 2
+	python_pkg_setup
+
+}
+
+src_unpack() {
+
+	unpack ${MY_P}.tar.gz
+
+}
+
+src_prepare() {
+
 	ewarn
 	ewarn " It is important to note that LibreOffice is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
@@ -245,26 +265,6 @@ pkg_setup() {
 		eerror " the LibreOffice build will break. "
 		die
 	fi
-
-	java-pkg-opt-2_pkg_setup
-
-	# sys-libs/db version used
-	local db_ver=$(db_findver '>=sys-libs/db-4.3')
-
-	kde4-base_pkg_setup
-
-	python_set_active_version 2
-	python_pkg_setup
-
-}
-
-src_unpack() {
-
-	unpack ${MY_P}.tar.gz
-
-}
-
-src_prepare() {
 
 	#Some fixes for our patchset
 	cd "${S}"
