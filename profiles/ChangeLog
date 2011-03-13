@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5138 2011/03/12 20:50:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5139 2011/03/13 05:08:06 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Revert bittorrent mask temporarily for bug #358485.
 
   12 Mar 2011; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   cleanup for removal bug 352558, 358552
