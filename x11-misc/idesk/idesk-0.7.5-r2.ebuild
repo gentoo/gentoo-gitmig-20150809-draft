@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5-r2.ebuild,v 1.1 2010/08/20 07:30:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5-r2.ebuild,v 1.2 2011/03/13 14:06:06 xarthisius Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/imlib2-1.4[X]
