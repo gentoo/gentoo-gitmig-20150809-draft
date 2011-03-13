@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/parcellite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.10 2011/03/02 17:59:01 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.11 2011/03/13 20:52:42 hwoarang Exp $
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> +parcellite-1.0.1.ebuild:
+  PVersion bump
+
+*parcellite-1.0.1 (13 Mar 2011)
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> +parcellite-1.0.1.ebuild:
+  PVersion bump
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> parcellite-0.9.1.ebuild:
   Slotted gtk+ and glib depends and EAPI=2 bump to support it.
