@@ -1,8 +1,10 @@
 # Bazaar merge directive format 2 (Bazaar 0.90)
-# revision_id: serkan@gentoo.org-20110214222729-jwivvvz10xjzzyoz
+# revision_id: serkan@gentoo.org-20110313222348-t01i70f8rcedd8by
 # target_branch: ../mainline
-# testament_sha1: cfb299b802fe3bd72f4a7af3687b5991304ac5eb
-# timestamp: 2011-02-15 00:43:14 +0200
+# testament_sha1: 131e1368d563e766440b56049743d2dc2f9ea6e1
+# timestamp: 2011-03-14 00:28:45 +0200
+# source_branch: /usr/portage/dev-java/java-gnome/files/java-gnome-\
+#   4.0.19-libnotify-0.7.patch
 # base_revision_id: andrew@operationaldynamics.com-20110214064042-\
 #   fv6tgq41rru7wjng
 # 
@@ -67,21 +69,31 @@
 
 === modified file 'src/bindings/org/gnome/notify/Notification.java'
 --- src/bindings/org/gnome/notify/Notification.java	2011-02-14 03:34:07 +0000
-+++ src/bindings/org/gnome/notify/Notification.java	2011-02-14 22:27:29 +0000
-@@ -89,8 +89,7 @@
-      * <p>
-      * The summary appears on the titlebar of notification and body appears as
-      * its text. Icon may be a string defining a theme icon or the filename
--     * identifying the icon that appears next to text. Attach identifies the
--     * widget that the notification relates to.
-+     * identifying the icon that appears next to text.
-      * 
-      * <p>
-      * Note that all but summary can be <code>null</code>.
-@@ -100,21 +99,8 @@
-      * See http://live.gnome.org/GnomeShell/Design/Guidelines/MessageTray/Compatibility
++++ src/bindings/org/gnome/notify/Notification.java	2011-03-13 22:23:48 +0000
+@@ -80,41 +80,7 @@
       */
  
+     public Notification(String summary, String body, String icon) {
+-        super(NotifyNotification.createNotification(summary, body, icon, null));
+-    }
+-
+-    /**
+-     * Create a new notification.
+-     * 
+-     * <p>
+-     * The summary appears on the titlebar of notification and body appears as
+-     * its text. Icon may be a string defining a theme icon or the filename
+-     * identifying the icon that appears next to text. Attach identifies the
+-     * widget that the notification relates to.
+-     * 
+-     * <p>
+-     * Note that all but summary can be <code>null</code>.
+-     * 
+-     * @since 4.0.12
+-     * @deprecated In GNOME 3, notifications will be independent of widgets and status icons.
+-     * See http://live.gnome.org/GnomeShell/Design/Guidelines/MessageTray/Compatibility
+-     */
+-
 -    public Notification(String summary, String body, String icon, Widget attach) {
 -        super(NotifyNotification.createNotification(summary, body, icon, attach));
 -    }
@@ -97,12 +109,11 @@
 -     */
 -    public Notification(String summary, String body, String icon, StatusIcon statusIcon) {
 -        super(NotifyNotification.createNotificationWithStatusIcon(summary, body, icon, statusIcon));
-+    public Notification(String summary, String body, String icon) {
 +        super(NotifyNotification.createNotification(summary, body, icon));
      }
  
      /**
-@@ -131,39 +117,6 @@
+@@ -131,39 +97,6 @@
      }
  
      /**
@@ -204,47 +215,54 @@
    (c-name "notify_notification_show")
 
 # Begin bundle
-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
+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
+IcSuRTOEwzjBE3RfsVvq8P/i7kinChIMp0h4QA==
