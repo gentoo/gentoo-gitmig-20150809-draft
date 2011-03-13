@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-0.9.0.ebuild,v 1.5 2011/03/13 10:00:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/mypaint-0.9.0.ebuild,v 1.6 2011/03/13 16:06:33 hwoarang Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.gna.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/pygtk
