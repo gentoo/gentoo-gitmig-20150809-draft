@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-0.19.0.ebuild,v 1.2 2010/01/15 09:41:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-0.19.0.ebuild,v 1.3 2011/03/13 12:55:12 armin76 Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.16:2"
