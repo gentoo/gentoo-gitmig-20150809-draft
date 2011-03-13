@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1.ebuild,v 1.3 2010/11/02 02:55:05 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1.ebuild,v 1.4 2011/03/13 08:19:39 ssuominen Exp $
 
 EAPI=2
 
@@ -23,7 +23,8 @@ RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade:2.0
 	gnome-base/libgnome
 	gnome-base/libgnomeui
-	gnome-base/gnome-desktop:2"
+	gnome-base/gnome-desktop:2
+	x11-libs/libnotify"
 
 DEPEND="${RDEPEND}
 	gnome-base/gconf
@@ -34,7 +35,8 @@ RDEPEND="${RDEPEND}
 	>=net-misc/rdesktop-1.3.0"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-no-networkmanager.patch
+	epatch "${FILESDIR}"/${P}-no-networkmanager.patch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch
 
 	# For recent libgnomeui
 	sed -i -e 's:libgnome-2\.0:\0 libgnomeui-2\.0:' \
