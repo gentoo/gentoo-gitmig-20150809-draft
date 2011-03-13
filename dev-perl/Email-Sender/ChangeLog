@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Sender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/ChangeLog,v 1.18 2011/03/11 08:15:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/ChangeLog,v 1.19 2011/03/13 16:01:41 hwoarang Exp $
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  Email-Sender-0.102.370.ebuild:
+  Stable on amd64 wrt bug #358353
 
   11 Mar 2011; Torsten Veller <tove@gentoo.org> Email-Sender-0.102.370.ebuild:
   Test-MockObject not needed because we disabled this test

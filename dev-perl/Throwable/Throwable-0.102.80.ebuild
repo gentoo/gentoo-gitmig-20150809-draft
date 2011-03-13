@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Throwable/Throwable-0.102.80.ebuild,v 1.1 2011/02/26 10:18:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Throwable/Throwable-0.102.80.ebuild,v 1.2 2011/03/13 16:01:31 hwoarang Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="a role for classes that can be thrown"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/Devel-StackTrace-1.21
