@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/enigmail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.205 2010/09/30 14:53:58 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.206 2011/03/14 17:09:51 nirbheek Exp $
+
+  14 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  enigmail-1.1.2-r2.ebuild, enigmail-1.1.2-r3.ebuild:
+  Duplicate gnome-use-flag related stuff to allow eclass changes from
+  overlay to be merged into tree
 
   30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   enigmail-1.1.2-r2.ebuild, enigmail-1.1.2-r3.ebuild:
