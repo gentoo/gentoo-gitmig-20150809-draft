@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.15.ebuild,v 1.4 2011/03/08 14:35:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.15.ebuild,v 1.5 2011/03/14 16:36:58 nirbheek Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 KEYWORDS="amd64 ppc ppc64 x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa +ipc java libnotify system-sqlite wifi"
+IUSE="+alsa +ipc gnome java libnotify system-sqlite wifi"
 
 SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
@@ -60,6 +60,10 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]
+	gnome? ( >=gnome-base/gnome-vfs-2.16.3
+		>=gnome-base/libgnomeui-2.16.1
+		>=gnome-base/gconf-2.16.0
+		>=gnome-base/libgnome-2.16.0 )
 	wifi? ( net-wireless/wireless-tools )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	~net-libs/xulrunner-${XUL_PV}[ipc=,java=,wifi=,libnotify=,system-sqlite=]"
@@ -168,6 +172,7 @@ src_configure() {
 	mozconfig_annotate '' --disable-official-branding
 	mozconfig_annotate '' --with-user-appdir=.icecat
 
+	mozconfig_annotate '' --enable-crypto
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --enable-application=browser
 	mozconfig_annotate '' --disable-mailnews
@@ -199,6 +204,8 @@ src_configure() {
 	mozconfig_annotate '' --with-system-libxul
 	mozconfig_annotate '' --with-libxul-sdk="${EPREFIX}"/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
 
+	mozconfig_use_enable gnome gnomevfs
+	mozconfig_use_enable gnome gnomeui
 	mozconfig_use_enable ipc # +ipc, upstream default
 	mozconfig_use_enable libnotify
 	mozconfig_use_enable java javaxpcom

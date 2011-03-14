@@ -1,6 +1,11 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.70 2011/03/08 14:35:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.71 2011/03/14 16:36:58 nirbheek Exp $
+
+  14 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -icecat-3.6.12.ebuild,
+  -icecat-3.6.13-r1.ebuild, icecat-3.6.15.ebuild:
+  Remove old ebuilds and duplicate gnome-use-flag related stuff to allow
+  eclass changes from overlay to be merged into tree
 
   08 Mar 2011; Thomas Kahle <tomka@gentoo.org> icecat-3.6.15.ebuild:
   x86 stable per bug 357057
