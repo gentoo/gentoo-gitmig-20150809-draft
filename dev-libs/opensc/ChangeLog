@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.109 2011/01/01 15:41:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.110 2011/03/14 00:33:33 kingtaco Exp $
+
+*opensc-0.12.0 (14 Mar 2011)
+
+  14 Mar 2011; Mike Doty <kingtaco@gentoo.org> +opensc-0.12.0.ebuild:
+  Version bump
 
   01 Jan 2011; Raúl Porcel <armin76@gentoo.org> opensc-0.11.13-r2.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #349567
