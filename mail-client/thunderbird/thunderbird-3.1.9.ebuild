@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.9.ebuild,v 1.6 2011/03/14 06:54:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.9.ebuild,v 1.7 2011/03/14 19:41:35 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools python
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib mozextension autotools python pax-utils
 
 # This list can be updated using get_langs.sh from the mozilla overlay
 LANGS="af ar be bg bn-BD ca cs da de el en en-GB en-US es-AR es-ES et eu fi fr \
@@ -262,4 +262,6 @@ src_install() {
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs-1.js \
 		"${ED}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
 		die "failed to cp thunderbird-gentoo-default-prefs.js"
+
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/thunderbird-bin
 }
