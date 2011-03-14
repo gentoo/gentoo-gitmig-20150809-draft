@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3-r1.ebuild,v 1.3 2011/03/13 16:05:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3-r1.ebuild,v 1.4 2011/03/14 16:53:44 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,9 +18,9 @@ IUSE="nls"
 RDEPEND=">=gnome-base/libglade-2
 	>=x11-libs/gtk+-2
 	x11-libs/startup-notification
-	>=x11-wm/openbox-3.4.2
-	nls? ( sys-devel/gettext )"
+	>=x11-wm/openbox-3.4.2"
 DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
 src_prepare() {
@@ -29,13 +29,12 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		$(use_enable nls) \
-		|| die "econf failed"
+	econf $(use_enable nls)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS CHANGELOG README || die "dodoc failed"
 }
 
 pkg_postinst() {

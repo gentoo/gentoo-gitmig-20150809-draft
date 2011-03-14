@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20110314.ebuild,v 1.3 2011/03/14 16:03:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20110314.ebuild,v 1.4 2011/03/14 16:53:44 hwoarang Exp $
 
 EAPI=2
 inherit autotools fdo-mime
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=gnome-base/libglade-2
-	x11-libs/gtk+:2
+	>=x11-libs/gtk+-2
 	x11-libs/startup-notification
 	>=x11-wm/openbox-3.5.0_pre20110313"
 DEPEND="${RDEPEND}
@@ -36,6 +36,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS CHANGELOG README || die "dodoc failed"
 }
 
 pkg_postinst() {
