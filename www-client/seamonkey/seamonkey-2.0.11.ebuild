@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.11.ebuild,v 1.9 2011/03/04 05:17:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.11.ebuild,v 1.10 2011/03/14 06:54:45 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -41,7 +41,7 @@ HOMEPAGE="http://www.seamonkey-project.org"
 
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa +chatzilla +composer +crypt java ldap +mailclient +roaming system-sqlite"
+IUSE="+alsa +chatzilla +composer +crypt gnome java ldap +mailclient +roaming system-sqlite"
 
 SRC_URI="${REL_URI}/source/${MY_P}.source.tar.bz2
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.bz2
@@ -74,7 +74,11 @@ RDEPEND="java? ( virtual/jre )
 	>=app-text/hunspell-1.2
 	>=x11-libs/gtk+-2.10.0
 	>=x11-libs/pango-1.14.0[X]
-	crypt? ( mailclient? ( >=app-crypt/gnupg-1.4 ) )"
+	crypt? ( mailclient? ( >=app-crypt/gnupg-1.4 ) )
+	gnome? ( >=gnome-base/gnome-vfs-2.16.3
+		>=gnome-base/libgnomeui-2.16.1
+		>=gnome-base/gconf-2.16.0
+		>=gnome-base/libgnome-2.16.0 )"
 
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*[threads]
@@ -202,6 +206,7 @@ src_configure() {
 		fi
 	fi
 
+	mozconfig_annotate '' --enable-crypto
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --enable-application=suite
 	mozconfig_annotate 'broken' --disable-mochitest
@@ -222,6 +227,8 @@ src_configure() {
 	# Enable/Disable based on USE flags
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
+	mozconfig_use_enable gnome gnomevfs
+	mozconfig_use_enable gnome gnomeui
 	mozconfig_use_enable java javaxpcom
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental

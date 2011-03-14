@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.293 2011/03/13 20:42:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.294 2011/03/14 06:54:45 nirbheek Exp $
+
+  14 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  seamonkey-2.0.11.ebuild, seamonkey-2.0.11-r2.ebuild,
+  seamonkey-2.0.12.ebuild:
+  Remove old ebuilds and duplicate gnome-use-flag related stuff to allow
+  eclass changes from overlay to be merged into tree
 
   13 Mar 2011; Markus Meier <maekke@gentoo.org> seamonkey-2.0.12.ebuild:
   arm stable, bug #357057
