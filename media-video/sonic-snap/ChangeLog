@@ -1,6 +1,13 @@
 # ChangeLog for media-video/sonic-snap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.8 2009/08/31 22:29:46 ikelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.9 2011/03/14 01:16:31 nerdboy Exp $
+
+*sonic-snap-1.7 (14 Mar 2011)
+
+  14 Mar 2011; Steve Arnold <nerdboy@gentoo.org> -sonic-snap-1.5.ebuild,
+  +sonic-snap-1.7.ebuild:
+  Updated to latest upstream, new homepage, fixed make variables. Closes
+  bug #337190.
 
   31 Aug 2009; Mike Auty <ikelos@gentoo.org> sonic-snap-1.5.ebuild:
   Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.
