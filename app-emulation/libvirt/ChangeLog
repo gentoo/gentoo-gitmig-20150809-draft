@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.95 2011/02/17 14:14:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.96 2011/03/14 14:30:54 flameeyes Exp $
+
+*libvirt-0.8.8-r1 (14 Mar 2011)
+
+  14 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libvirt-0.8.6-r1.ebuild, -libvirt-0.8.7-r1.ebuild, -libvirt-0.8.8.ebuild,
+  +libvirt-0.8.8-r1.ebuild:
+  Backport fix for CVE-2011-1146 (bug #358877).
 
 *libvirt-0.8.8 (17 Feb 2011)
 
