@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.28 2011/03/14 16:41:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.29 2011/03/14 16:42:41 angelos Exp $
 
 EAPI=3
 inherit git python xfconf waf-utils
@@ -12,7 +12,7 @@ EGIT_REPO_URI="git://git.xfce.org/apps/${PN}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="doc gnome idn libnotify nls +unique vala"
 
 RDEPEND="dev-libs/libxml2
