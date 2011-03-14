@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.193 2011/03/06 10:19:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.194 2011/03/14 08:22:38 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -19,8 +19,8 @@
 # -aqua gtk gnome               GNOME2
 # -aqua gtk -gnome              GTK2
 # -aqua -gtk  motif             MOTIF
-# -aqua -gtk -motif nextaw      NEXTAW
-# -aqua -gtk -motif -nextaw     ATHENA
+# -aqua -gtk -motif neXt        NEXTAW
+# -aqua -gtk -motif -neXt       ATHENA
 
 # Support -cvs ebuilds, even though they're not in the official tree.
 MY_PN=${PN%-cvs}
@@ -119,7 +119,7 @@ else
 				dev-util/ctags )
 			!<app-editors/nvi-1.81.5-r4"
 	elif [[ ${MY_PN} == gvim ]] ; then
-		IUSE="${IUSE} aqua gnome gtk motif nextaw netbeans"
+		IUSE="${IUSE} aqua gnome gtk motif neXt netbeans"
 		DEPEND="${DEPEND}
 			dev-util/ctags
 			!aqua? (
@@ -142,10 +142,10 @@ else
 						>=x11-libs/openmotif-2.3:0
 					)
 					!motif? (
-						nextaw? (
+						neXt? (
 							x11-libs/neXtaw
 						)
-						!nextaw? ( x11-libs/libXaw )
+						!neXt? ( x11-libs/libXaw )
 					)
 				)
 			)"
@@ -448,7 +448,7 @@ vim_src_configure() {
 			elif use motif ; then
 				einfo "Building gvim with the MOTIF GUI"
 				myconf="${myconf} --enable-gui=motif"
-			elif use nextaw ; then
+			elif use neXt ; then
 				einfo "Building gvim with the neXtaw GUI"
 				myconf="${myconf} --enable-gui=nextaw"
 			else
