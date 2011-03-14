@@ -1,6 +1,11 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.52 2011/03/07 13:37:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.53 2011/03/14 16:41:43 angelos Exp $
+
+*midori-0.3.3 (14 Mar 2011)
+
+  14 Mar 2011; <angelos@gentoo.org> +midori-0.3.3.ebuild, midori-9999.ebuild:
+  Version bump and synced live ebuild
 
 *midori-0.3.2-r1 (07 Mar 2011)
 
