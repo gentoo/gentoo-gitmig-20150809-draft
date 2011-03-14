@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.7.ebuild,v 1.2 2011/03/02 21:10:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.7.ebuild,v 1.3 2011/03/14 16:32:48 bicatali Exp $
 
 WX_GTK_VER="2.8"
 EAPI="2"
@@ -32,7 +32,8 @@ src_prepare() {
 		-i Makefile.in data/Makefile.in || die "sed failed"
 
 	sed -e 's:share/wxMaxima:share/wxmaxima:g' \
-		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp || die "sed failed"
+		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp src/Config.cpp \
+		|| die "sed failed"
 }
 
 src_configure() {
