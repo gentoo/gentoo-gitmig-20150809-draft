@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/u-boot-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.16 2011/03/07 11:33:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.17 2011/03/14 23:00:56 radhermit Exp $
+
+*u-boot-tools-2010.12 (14 Mar 2011)
+
+  14 Mar 2011; Tim Harder <radhermit@gentoo.org> -u-boot-tools-2009.03.ebuild,
+  -u-boot-tools-2009.11.1.ebuild, +u-boot-tools-2010.12.ebuild:
+  Version bump (bug #355669 by Jacob Galbreath) and remove old. Update to EAPI
+  4 and remove unnecessary compile setup and die usage.
 
   07 Mar 2011; Raúl Porcel <armin76@gentoo.org> u-boot-tools-2010.06.ebuild:
   x86stable wrt #355671
