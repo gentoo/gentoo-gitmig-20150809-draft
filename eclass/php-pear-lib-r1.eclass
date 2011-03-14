@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.20 2011/03/05 11:04:11 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.21 2011/03/14 08:00:10 olemarkus Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 
@@ -29,7 +29,7 @@ if [[ -n $PHP_PEAR_CHANNEL ]] ; then
 
 	S=${WORKDIR}/${PHP_PEAR_P}
 
-	SRC_URI="${PHP_PEAR_CHANNEL}/get/${PHP_PEAR_P}.tgz"
+	SRC_URI="http://${PHP_PEAR_CHANNEL}/get/${PHP_PEAR_P}.tgz"
 fi
 
 
