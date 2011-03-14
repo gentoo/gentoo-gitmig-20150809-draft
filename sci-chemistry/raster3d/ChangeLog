@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.24 2011/03/06 14:33:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.25 2011/03/14 08:17:31 jlec Exp $
+
+  14 Mar 2011; Justin Lecher <jlec@gentoo.org> raster3d-3.0.2.ebuild:
+  Fix for parallel build, #358555
 
   06 Mar 2011; Justin Lecher <jlec@gentoo.org> files/3.0.2-as-needed.patch:
   Prll compilation fix

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.1 2011/02/27 10:40:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.2 2011/03/14 08:17:31 jlec Exp $
 
 EAPI="4"
 
@@ -71,7 +71,7 @@ src_compile() {
 		target="linux-$(tc-getFC)"
 	fi
 
-	for i in ${target} all; do
+	for i in render.o ${target} all; do
 		emake \
 			CFLAGS="${CFLAGS}" \
 			LDFLAGS="${LDFLAGS}" \
