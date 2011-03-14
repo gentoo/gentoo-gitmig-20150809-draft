@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20110314.ebuild,v 1.2 2011/03/14 15:57:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3_p20110314.ebuild,v 1.3 2011/03/14 16:03:39 ssuominen Exp $
 
-EAPI="2"
-
-inherit autotools eutils fdo-mime
+EAPI=2
+inherit autotools fdo-mime
 
 DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
 HOMEPAGE="http://icculus.org/openbox/index.php/ObConf:About"
@@ -16,14 +15,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND=">=gnome-base/libglade-2
-	>=x11-libs/gtk+-2
+	x11-libs/gtk+:2
 	x11-libs/startup-notification
-	>=x11-wm/openbox-3.5.0_pre20110313
-	nls? ( sys-devel/gettext )"
+	>=x11-wm/openbox-3.5.0_pre20110313"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}"
+S=${WORKDIR}
+
 src_prepare() {
 	eautopoint
 	eautoreconf
@@ -31,12 +31,11 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable nls) \
-		|| die "econf failed"
+		$(use_enable nls)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 }
 
 pkg_postinst() {
