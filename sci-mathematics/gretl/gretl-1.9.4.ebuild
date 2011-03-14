@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.4.ebuild,v 1.2 2011/03/07 12:40:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.4.ebuild,v 1.3 2011/03/14 21:19:15 bicatali Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -33,8 +33,6 @@ RDEPEND="
 	gnome? ( sci-visualization/gnuplot[gd]
 			 media-libs/gd[png]
 			 gnome-base/libgnomeui
-			 gnome-base/libgnomeprint:2.2
-			 gnome-base/libgnomeprintui:2.2
 			 gnome-base/gconf:2 )
 	R? ( dev-lang/R )
 	sourceview? ( x11-libs/gtksourceview:2.0 )
