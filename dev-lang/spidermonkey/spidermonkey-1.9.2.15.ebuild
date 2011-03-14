@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.9.2.13.ebuild,v 1.3 2011/01/02 12:43:15 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.9.2.15.ebuild,v 1.1 2011/03/14 19:35:52 anarchy Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs multilib python
