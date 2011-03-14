@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/dbunit-1.0.0.ebuild,v 1.1 2011/03/14 12:49:21 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/dbunit-1.0.0.ebuild,v 1.2 2011/03/14 15:40:32 mr_bones_ Exp $
 
 PHP_PEAR_CHANNEL="pear.phpunit.de"
 PHP_PEAR_PN="DbUnit"
 inherit php-pear-lib-r1
-
 
 DESCRIPTION="DbUnit port for PHP/PHPUnit"
 LICENSE="BSD"
