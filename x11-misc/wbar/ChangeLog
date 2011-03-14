@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.7 2011/03/13 15:12:35 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.8 2011/03/14 21:18:10 signals Exp $
+
+  14 Mar 2011; Kevin McCarthy <signals@gentoo.org> wbar-2.1.1.ebuild,
+  files/wbar-2.1.1-as-needed.patch:
+  Fix issue with 2 Main.cc files and respect for CXXFLAGS. Thanks to
+  xarthisius.
 
   13 Mar 2011; Kevin McCarthy <signals@gentoo.org> wbar-2.1.1.ebuild,
   +files/wbar-2.1.1-as-needed.patch:
