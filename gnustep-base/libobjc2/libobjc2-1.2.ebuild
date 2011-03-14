@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.0.ebuild,v 1.1 2010/10/13 15:16:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.2.ebuild,v 1.1 2011/03/14 10:52:29 voyageur Exp $
 
 EAPI=3
 inherit multilib
@@ -22,7 +22,6 @@ DEPEND=">=sys-devel/gcc-3.3[objc]
 	>=sys-devel/make-3.75"
 RDEPEND=""
 
-S=${WORKDIR}/${PN}
 GSMAKE_S=${WORKDIR}/${GSMAKE}
 
 src_prepare() {
