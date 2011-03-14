@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.42 2011/03/14 20:58:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.43 2011/03/14 21:53:45 jer Exp $
+
+  14 Mar 2011; Jeroen Roovers <jer@gentoo.org> powertop-1.97-r1.ebuild:
+  Add more build time and run time dependencies (bug #358869).
 
 *powertop-1.97-r1 (14 Mar 2011)
 

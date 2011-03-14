@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.97-r1.ebuild,v 1.1 2011/03/14 20:58:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.97-r1.ebuild,v 1.2 2011/03/14 21:53:45 jer Exp $
 
 EAPI=4
 
@@ -15,10 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="unicode"
 
-DEPEND="sys-libs/ncurses[unicode?]
+DEPEND="
 	dev-libs/libnl
-	sys-devel/gettext"
-RDEPEND="${DEPEND}"
+	sys-apps/pciutils
+	sys-devel/gettext
+	sys-libs/ncurses[unicode?]
+	sys-libs/zlib
+"
+RDEPEND="
+	${DEPEND}
+	net-wireless/bluez
+	x11-apps/xset
+"
 
 src_prepare() {
 	use unicode || sed -i 's:-lncursesw:-lncurses:' Makefile
