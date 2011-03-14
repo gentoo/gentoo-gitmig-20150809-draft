@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.27 2011/03/08 11:31:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.28 2011/03/14 17:09:41 flameeyes Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -24,7 +24,6 @@ GIT_ECLASS=""
 if [[ ${PV} == *9999* ]]; then
 	GIT_ECLASS="git"
 	XORG_EAUTORECONF="yes"
-	SRC_URI=""
 fi
 
 # If we're a font package, but not the font.alias one
@@ -59,8 +58,12 @@ HOMEPAGE="http://xorg.freedesktop.org/"
 # before inheriting this eclass.
 : ${XORG_EAUTORECONF:="no"}
 
-# Set up SRC_URI for individual modular releases
-BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/releases/individual"
+# @ECLASS-VARIABLE: BASE_INDIVIDUAL_URI
+# @DESCRIPTION:
+# Set up SRC_URI for individual modular releases. If set to an empty
+# string, no SRC_URI will be provided by the eclass.
+: ${BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/releases/individual"}
+
 # @ECLASS-VARIABLE: MODULE
 # @DESCRIPTION:
 # The subdirectory to download source from. Possible settings are app,
@@ -88,8 +91,8 @@ fi
 
 if [[ -n ${GIT_ECLASS} ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/${MODULE}${PACKAGE_NAME}"
-else
-	SRC_URI+=" ${BASE_INDIVIDUAL_URI}/${MODULE}${P}.tar.bz2"
+elif [[ -n ${BASE_INDIVIDUAL_URI} ]]; then
+	SRC_URI="${BASE_INDIVIDUAL_URI}/${MODULE}${P}.tar.bz2"
 fi
 
 : ${SLOT:=0}
