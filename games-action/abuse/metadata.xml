@@ -5,6 +5,6 @@
   <use>
     <flag name="demo">Use the demo data instead of the full game</flag>
     <flag name="levels">Install user-created levels (fRaBs)</flag>
-    <flag name="sounds">Install optional sound data</flag>
+    <flag name="sound">Install optional sound data</flag>
   </use>
 </pkgmetadata>

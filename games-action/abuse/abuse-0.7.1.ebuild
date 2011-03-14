@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.12 2010/11/06 09:01:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.13 2011/03/14 11:10:27 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -12,13 +12,13 @@ HOMEPAGE="http://abuse.zoy.org/"
 SRC_URI="${ZOY}/${P}.tar.gz
 	!demo? ( ${ZOY}/abuse-data-2.00.tar.gz )
 	demo? ( ${ZOY}/abuse-lib-2.00.tar.gz )
-	sounds? ( ${ZOY}/abuse-sfx-2.00.tar.gz )
+	sound? ( ${ZOY}/abuse-sfx-2.00.tar.gz )
 	levels? ( ${ZOY}/abuse-frabs-2.11.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="demo levels sounds"
+IUSE="demo levels sound"
 
 RDEPEND=">=media-libs/libsdl-1.1.6[audio,opengl,video]
 	virtual/opengl"
@@ -29,7 +29,7 @@ src_prepare() {
 	# fix placing additional patches
 	use levels && cp -rf "${WORKDIR}"/abuse-frabs-2.11/{addon,art,levels,lisp,music,netlevel,register} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-frabs-2.11/
 	use demo && cp -rf "${WORKDIR}"/abuse-lib-2.00.orig/unpacked/{addon,art,levels,lisp,abuse.lsp} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-lib-2.00.orig/
-	use sounds && cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-sfx-2.00.orig/
+	use sound && cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-sfx-2.00.orig/
 	# fix bug #231822
 	sed -i \
 		-e "s:/var/games/abuse:${GAMES_DATADIR}/${PN}:" \
