@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.86.2.ebuild,v 1.3 2010/07/14 12:51:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/shutter-0.87.1.ebuild,v 1.1 2011/03/14 00:10:01 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://shutter-project.org/wp-content/uploads/releases/tars/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="drawing webphoto"
 
 RDEPEND="dev-lang/perl
@@ -24,6 +24,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/gnome2-wnck
 	dev-perl/gnome2-canvas
 	dev-perl/gnome2-perl
+	dev-perl/Gtk2-Unique
 	dev-perl/Gtk2-ImageView
 	dev-perl/File-DesktopEntry
 	dev-perl/File-HomeDir
@@ -41,8 +42,12 @@ RDEPEND="dev-lang/perl
 	dev-perl/libwww-perl"
 
 src_prepare() {
-	use webphoto || epatch "${FILESDIR}"/disable_webphoto.patch
-	use drawing || epatch "${FILESDIR}"/disable_goocanvas.patch
+	use webphoto || epatch "${FILESDIR}"/disable_webphoto-${PV}.patch
+	use drawing || epatch "${FILESDIR}"/disable-goocanvas-${PV}.patch
+	#Fix tray icon because it doesn't pick the right icon using various themes
+	sed -i -e "/\$tray->set_from_icon_name/s:set_from_icon_name:set_from_file:" \
+	-e "s:shutter-panel:/usr/share/icons/hicolor/scalable/apps/&.svg:" \
+	bin/shutter || die "failed to fix trayicon"
 }
 
 src_install() {
@@ -54,6 +59,8 @@ src_install() {
 	doman share/man/man1/${PN}.1.gz || die "doman failed"
 	doicon share/pixmaps/${PN}.png
 	doins -r share/locale || die "doins failed"
+	insinto /usr/share/icons/hicolor
+	doins -r share/icons/hicolor/* || die "doins failed"
 	find "${D}"/usr/share/shutter/resources/system/plugins/ -type f ! -name '*.*' -exec chmod 755 {} \; \
 		|| die "failed to make plugins executables"
 }
