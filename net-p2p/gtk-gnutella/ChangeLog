@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.108 2011/03/01 18:35:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.109 2011/03/14 07:02:57 graaff Exp $
+
+*gtk-gnutella-0.96.9 (14 Mar 2011)
+
+  14 Mar 2011; Hans de Graaff <graaff@gentoo.org>
+  +gtk-gnutella-0.96.9.ebuild:
+  Version bump. Switch gnutls USE flag to more generic ssl (but still
+  provided by gnutls).
 
   01 Mar 2011; Hans de Graaff <graaff@gentoo.org>
   gtk-gnutella-0.96.8.ebuild:
