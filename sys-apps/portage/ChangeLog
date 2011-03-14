@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.810 2011/03/11 04:12:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.811 2011/03/14 19:03:12 zmedico Exp $
+
+*portage-2.2.0_alpha27 (14 Mar 2011)
+
+  14 Mar 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha27.ebuild:
+  2.2.0_alpha27 version bump. This includes all of the fixes in
+  portage-2.1.9.43. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.43 (14 Mar 2011)
+
+  14 Mar 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.43.ebuild:
+  2.1.9.43 version bump. This fixes bug #346899 (allow noexec /var/tmp mount
+  with default config), bug #357009 (disallow uninstall of default python
+  interpreter), bug #357093 (don't output \b to non-tty), bug #357297 (fix
+  whitespace handling for PORTDIR_OVERLAY), and bug #357581 (fix confusing
+  message aux_get error when eclass directory is missing). Bug #358927 tracks
+  all bugs fixed since 2.1.9.42.
 
   11 Mar 2011; Jeroen Roovers <jer@gentoo.org> portage-2.1.9.42.ebuild:
   Stable for HPPA (bug #358009).
