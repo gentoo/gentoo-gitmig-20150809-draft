@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.2-r1.ebuild,v 1.3 2011/03/14 22:19:24 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.2-r1.ebuild,v 1.4 2011/03/14 22:24:54 olemarkus Exp $
 
 EAPI="3"
 
@@ -43,7 +43,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/symlink-attack-fix2.patch"
+	epatch "${FILESDIR}/symlink-attack-fix.patch"
 
 }
 
