@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.60 2011/02/20 18:30:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.61 2011/03/14 19:20:21 ssuominen Exp $
+
+  14 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-input-virtualbox-3.2.12.ebuild:
+  Backport USE="hal" change because stable xorg-server doesn't support it
+  anymore.
 
   20 Feb 2011; Lars Wendler <polynomial-c@gentoo.org>
   -xf86-input-virtualbox-3.1.8-r1.ebuild:

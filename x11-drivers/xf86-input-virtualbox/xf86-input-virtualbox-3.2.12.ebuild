@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.2.12.ebuild,v 1.5 2011/02/03 07:53:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-3.2.12.ebuild,v 1.6 2011/03/14 19:20:21 ssuominen Exp $
 
 EAPI=2
 
@@ -14,12 +14,11 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="hal"
+IUSE=""
 
 RDEPEND="x11-base/xorg-server
 	|| ( x11-drivers/xf86-input-mouse
-	    x11-drivers/xf86-input-evdev )
-	hal? ( sys-apps/hal )"
+	    x11-drivers/xf86-input-evdev )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.5-r1
 	>=dev-lang/yasm-0.6.2
@@ -78,13 +77,6 @@ src_install() {
 		else
 				newins vboxmouse_drv_17.so vboxmouse_drv.so
 		fi
-
-		# install hal information file about the mouse driver
-		if use hal; then
-			cd "${S}/src/VBox/Additions/linux/installer"
-			insinto /etc/hal/fdi/policy
-			doins 90-vboxguest.fdi
-		fi
 }
 
 pkg_postinst() {
@@ -93,8 +85,4 @@ pkg_postinst() {
 		elog "	Driver  \"vboxmouse\""
 		elog ""
 		elog "in the Core Pointer's InputDevice section (Section \"InputDevice\")"
-		elog ""
-		elog "Starting with 1.5 version, X.Org Server can do mouse auto-detection."
-		elog "This ebuild provides a working default which has been installed into:"
-		elog "    /etc/hal/fdi/policy/90-vboxguest.fdi"
 }
