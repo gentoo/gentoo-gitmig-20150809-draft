@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.3-r1.ebuild,v 1.10 2011/02/25 19:00:15 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.3-r1.ebuild,v 1.11 2011/03/14 22:31:20 olemarkus Exp $
 
 EAPI=2
 
@@ -251,11 +251,6 @@ DEPEND="${DEPEND}
 # They are in PDEPEND because we need PHP installed first!
 PDEPEND="doc? ( app-doc/php-docs )
 	suhosin? ( dev-php${PHP_MV}/suhosin )"
-
-# Portage doesn't support setting PROVIDE based on the USE flags that
-# have been enabled, so we have to PROVIDE everything for now and hope
-# for the best
-PROVIDE="virtual/php"
 
 SLOT="${PHP_MV}"
 S="${WORKDIR}/${PHP_P}"

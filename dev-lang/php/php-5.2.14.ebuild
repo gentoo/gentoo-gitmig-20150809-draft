@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.12 2011/02/25 19:00:15 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.13 2011/03/14 22:31:20 olemarkus Exp $
 
 EAPI=2
 
@@ -231,11 +231,6 @@ PDEPEND="doc? ( app-doc/php-docs )
 	suhosin? ( dev-php${PHP_MV}/suhosin )
 	mcve? ( dev-php${PHP_MV}/pecl-mcve )
 	yaz? ( dev-php${PHP_MV}/pecl-yaz )"
-
-# Portage doesn't support setting PROVIDE based on the USE flags that
-# have been enabled, so we have to PROVIDE everything for now and hope
-# for the best
-PROVIDE="virtual/php"
 
 SLOT="${PHP_MV}"
 S="${WORKDIR}/${PHP_P}"
