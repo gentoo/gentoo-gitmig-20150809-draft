@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.8.ebuild,v 1.1 2010/01/17 23:35:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.8-r1.ebuild,v 1.1 2011/03/14 20:37:15 flameeyes Exp $
 
-WEBAPP_MANUAL_SLOT="yes"
-WEBAPP_OPTIONAL="yes"
-inherit eutils webapp linux-info
+EAPI=3
+
+inherit eutils linux-info flag-o-matic
 
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 HOMEPAGE="http://www.apcupsd.org/"
@@ -16,38 +16,35 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="snmp usb cgi nls gnome kernel_linux"
 
 DEPEND="
-	cgi? ( >=media-libs/gd-1.8.4
-		${WEBAPP_DEPEND} )
+	cgi? ( >=media-libs/gd-1.8.4 )
 	nls? ( sys-devel/gettext )
 	snmp? ( net-analyzer/net-snmp )
-	gnome? ( >=x11-libs/gtk+-2.4.0
-		>=dev-libs/glib-2.0
+	gnome? ( >=x11-libs/gtk+-2.4.0:2
+		dev-libs/glib:2
 		>=gnome-base/gconf-2.0 )"
 RDEPEND="${DEPEND}
 	virtual/mailx"
 
-pkg_setup() {
-	use cgi && webapp_pkg_setup
+CONFIG_CHECK="~USB_HIDDEV ~HIDRAW"
+ERROR_USB_HIDDEV="CONFIG_USB_HIDDEV:	needed to access USB-attached UPSes"
+ERROR_HIDRAW="CONFIG_HIDRAW:		needed to access USB-attached UPSes"
 
-	if use kernel_linux &&
-		use usb &&
-		linux_config_exists &&
-		!linux_chkconfig_present USB_HIDDEV; then
-		ewarn "Note: to be able to use the USB support for ${PN} you're going to need"
-		ewarn "the CONFIG_USB_HIDDEV option enabled in your kernel."
-		ewarn "The option hasn't been found enabled, do so before trying to use"
-		ewarn "${PN} with USB UPSes."
+pkg_setup() {
+	if use kernel_linux && use usb && linux_config_exists; then
+		check_extra_config
 	fi
 }
 
-src_compile() {
+src_configure() {
 	local myconf
-	use cgi && myconf="${myconf} --enable-cgi --with-cgi-bin=${MY_CGIBINDIR}"
+	use cgi && myconf="${myconf} --enable-cgi --with-cgi-bin=/usr/libexec/${PN}/cgi-bin"
 	if use usb; then
 		myconf="${myconf} --with-upstype=usb --with-upscable=usb --enable-usb --with-dev= "
 	else
 		myconf="${myconf} --with-upstype=apcsmart --with-upscable=smart --disable-usb"
 	fi
+
+	append-flags -fno-strict-aliasing
 
 	# We force the DISTNAME to gentoo so it will use gentoo's layout also
 	# when installed on non-linux systems.
@@ -66,7 +63,9 @@ src_compile() {
 		${myconf} \
 		APCUPSD_MAIL=/bin/mail \
 		|| die "econf failed"
+}
 
+src_compile() {
 	# Workaround for bug #280674; upstream should really just provide
 	# the text files in the distribution, but I wouldn't count on them
 	# doing that anytime soon.
@@ -75,8 +74,6 @@ src_compile() {
 }
 
 src_install() {
-	use cgi && webapp_src_preinst
-
 	emake DESTDIR="${D}" install || die "installed failed"
 	rm -f "${D}"/etc/init.d/halt
 
@@ -88,14 +85,15 @@ src_install() {
 
 	dohtml -r doc/manual/* || die "dodoc failed"
 
-	use cgi && webapp_src_install
-
 	rm "${D}"/etc/init.d/apcupsd
 	newinitd "${FILESDIR}/${PN}.init.2" "${PN}" || die "newinitd failed"
 
 	if has_version sys-apps/openrc; then
 		newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail || die "newinitd failed"
 	fi
+
+	# remove hal settings, we don't really want to have it around still.
+	rm -r "${D}"/usr/share/hal
 
 	# Without this it'll crash at startup. When merging in ROOT= this
 	# won't be created by default, so we want to make sure we got it!
@@ -106,10 +104,8 @@ src_install() {
 
 pkg_postinst() {
 	if use cgi; then
-		elog "If you are upgrading from a previous version, please note"
-		elog "that the CGI interface is now installed using webapp-config."
-		elog "/var/www/apcupsd is no longer present."
-		webapp_pkg_postinst
+		elog "The cgi-bin directory for ${PN} is /usr/libexec/${PN}/cgi-bin."
+		elog "Set up your ScriptAlias or symbolic links accordingly."
 	fi
 
 	elog ""
@@ -129,8 +125,4 @@ pkg_postinst() {
 		elog ' \e[01m rc-update add apcupsd.powerfail shutdown \e[0m'
 		elog ''
 	fi
-}
-
-pkg_prerm() {
-	use cgi && webapp_pkg_prerm
 }

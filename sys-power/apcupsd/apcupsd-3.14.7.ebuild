@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.7 2010/03/06 19:59:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.8 2011/03/14 20:37:14 flameeyes Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 WEBAPP_OPTIONAL="yes"
@@ -20,8 +20,8 @@ DEPEND="
 		${WEBAPP_DEPEND} )
 	nls? ( sys-devel/gettext )
 	snmp? ( net-analyzer/net-snmp )
-	gnome? ( >=x11-libs/gtk+-2.4.0
-		>=dev-libs/glib-2.0
+	gnome? ( =x11-libs/gtk+-2*
+		=dev-libs/glib-2*
 		>=gnome-base/gconf-2.0 )"
 RDEPEND="${DEPEND}
 	virtual/mailx"
