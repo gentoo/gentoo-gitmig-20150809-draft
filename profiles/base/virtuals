@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.126 2011/03/13 03:52:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.127 2011/03/14 22:34:26 olemarkus Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -36,7 +36,6 @@ virtual/ooo				app-office/openoffice-bin
 # directive to phase out pam_stack.
 virtual/pam				>=sys-libs/pam-0.78
 virtual/pbs				sys-cluster/torque
-virtual/php				dev-lang/php
 virtual/portage				sys-apps/portage
 virtual/python				dev-lang/python
 virtual/quicktime			media-libs/libquicktime
