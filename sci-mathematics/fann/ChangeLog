@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/fann
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.15 2010/12/23 08:26:55 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/ChangeLog,v 1.16 2011/03/14 19:48:21 bicatali Exp $
+
+*fann-2.1.0_beta-r1 (14 Mar 2011)
+
+  14 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +fann-2.1.0_beta-r1.ebuild, +files/fann-2.1.0_beta-pythonlink.patch,
+  +files/fann-2.1.0_beta-sizecheck.patch, +files/fann-2.1.0_beta-valist.patch:
+  Added a couple patches from Debian/Upstream
 
   23 Dec 2010; Justin Lecher <jlec@gentoo.org> -files/fann-1.2.0-r1.patch,
   -files/fann-1.2.0-setup.py, fann-2.0.0.ebuild, fann-2.1.0_beta.ebuild:
