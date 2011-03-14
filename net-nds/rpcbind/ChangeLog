@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.8 2011/03/13 12:38:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.9 2011/03/14 19:07:47 hwoarang Exp $
+
+  14 Mar 2011; Markos Chandras <hwoarang@gentoo.org> rpcbind-0.2.0.ebuild:
+  Stable on amd64 wrt bug #317517
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> rpcbind-0.2.0.ebuild:
   ppc/ppc64 stable wrt #317517
