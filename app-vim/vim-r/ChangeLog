@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/vim-r
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/ChangeLog,v 1.1 2011/03/14 07:21:34 radhermit Exp $
+
+*vim-r-110222 (14 Mar 2011)
+
+  14 Mar 2011; Tim Harder <radhermit@gentoo.org> +vim-r-110222.ebuild,
+  +metadata.xml:
+  Initial import (bug #335113 by Jose).
+
