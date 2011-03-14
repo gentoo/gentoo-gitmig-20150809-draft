@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.32 2011/03/14 15:51:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.33 2011/03/14 17:05:42 jlec Exp $
+
+  14 Mar 2011; Justin Lecher <jlec@gentoo.org> +files/6.1.3-lapack.patch,
+  ccp4-libs-6.1.3-r9.ebuild:
+  Use pkg-config to detect BLAS/LAPAACK libs
 
   14 Mar 2011; Justin Lecher <jlec@gentoo.org> ccp4-libs-6.1.3-r9.ebuild:
   Check for mmdb through pkg-config

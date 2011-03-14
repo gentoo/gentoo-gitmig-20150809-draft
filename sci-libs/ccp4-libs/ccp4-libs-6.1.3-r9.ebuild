@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r9.ebuild,v 1.2 2011/03/14 15:51:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r9.ebuild,v 1.3 2011/03/14 17:05:42 jlec Exp $
 
 EAPI="3"
 
@@ -109,6 +109,9 @@ src_prepare() {
 
 	# Fix upstreams code
 	ccp_patch "${FILESDIR}"/${PV}-impl-dec.patch
+
+	# use pkg-config to detect BLAS/LAPACK
+	ccp_patch "${FILESDIR}"/${PV}-lapack.patch
 
 	einfo "Done." # done applying Gentoo patches
 	echo
