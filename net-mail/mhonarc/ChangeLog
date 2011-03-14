@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mhonarc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.22 2011/03/05 16:47:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.23 2011/03/14 08:31:12 iluxa Exp $
+
+*mhonarc-2.6.18-r1 (14 Mar 2011)
+
+  14 Mar 2011; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  +mhonarc-2.6.18-r1.ebuild:
+  Install perl modules into vendor_dir rather then site_dir
+  bug #295780
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> mhonarc-2.6.18.ebuild:
   sparc stable wrt #349563
