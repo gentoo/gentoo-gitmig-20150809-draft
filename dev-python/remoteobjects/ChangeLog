@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/remoteobjects
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/ChangeLog,v 1.1 2011/03/14 01:50:04 vapier Exp $
+
+*remoteobjects-99999999 (14 Mar 2011)
+
+  14 Mar 2011; Mike Frysinger <vapier@gentoo.org>   +metadata.xml,
+  +remoteobjects-99999999.ebuild:
+  Initial ebuild.
