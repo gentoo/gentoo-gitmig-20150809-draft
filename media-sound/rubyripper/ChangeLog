@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rubyripper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.31 2010/07/09 19:06:56 billie Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.32 2011/03/14 19:39:40 billie Exp $
+
+  14 Mar 2011; Daniel Pielmeier <billie@gentoo.org> rubyripper-0.6.0.ebuild:
+  Use VIRTUALX_COMMAND.
 
 *rubyripper-0.6.0 (09 Jul 2010)
 

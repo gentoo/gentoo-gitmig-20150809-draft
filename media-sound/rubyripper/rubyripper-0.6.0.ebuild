@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.6.0.ebuild,v 1.1 2010/07/09 19:06:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.6.0.ebuild,v 1.2 2011/03/14 19:39:40 billie Exp $
 
 EAPI=2
 
 VIRTUALX_REQUIRED=always
+VIRTUALX_COMMAND=./configure
 USE_RUBY=ruby18
 
 inherit ruby-ng virtualx
@@ -57,8 +58,6 @@ each_ruby_configure() {
 	use gtk && myconf="${myconf} --enable-gtk2"
 	use cli && myconf="${myconf} --enable-cli"
 
-	# Force virtualmake to use configure instead of econf
-	maketype=./configure
 	virtualmake ${myconf}
 }
 
