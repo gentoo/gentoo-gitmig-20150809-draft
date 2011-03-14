@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/dbunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/ChangeLog,v 1.1 2011/03/14 12:49:21 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/ChangeLog,v 1.2 2011/03/14 17:04:10 olemarkus Exp $
+
+*dbunit-1.0.1 (14 Mar 2011)
+
+  14 Mar 2011; <olemarkus@gentoo.org> +dbunit-1.0.1.ebuild:
+  Version bump. Bug #358741. Thanks to Denny
 
 *dbunit-1.0.0 (14 Mar 2011)
 
