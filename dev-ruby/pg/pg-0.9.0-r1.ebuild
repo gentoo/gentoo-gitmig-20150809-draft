@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.10 2011/03/13 16:06:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.11 2011/03/14 21:41:51 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -51,8 +51,14 @@ each_ruby_compile() {
 }
 
 each_ruby_test() {
-	# Make the rspec call explicit, this way we don't have to depend
-	# on rake-compiler (nor rubygems) _and_ we don't have to rebuild
-	# the whole extension from scratch.
-	${RUBY} -Ilib -S spec -Du -fs spec/*_spec.rb || die "spec failed"
+	if [[ "${EUID}" -ne "0" ]]; then
+		# Make the rspec call explicit, this way we don't have to depend
+		# on rake-compiler (nor rubygems) _and_ we don't have to rebuild
+		# the whole extension from scratch.
+		${RUBY} -Ilib -S spec -Du -fs spec/*_spec.rb || die "spec failed"
+	else
+		ewarn "The userpriv feature must be enabled to run tests."
+		eerror "Testsuite will not be run."
+	fi
 }
+
