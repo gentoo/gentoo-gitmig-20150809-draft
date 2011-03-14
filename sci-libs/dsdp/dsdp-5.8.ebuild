@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8.ebuild,v 1.1 2011/03/07 05:33:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8.ebuild,v 1.2 2011/03/14 17:22:50 bicatali Exp $
 
 EAPI="4"
 inherit eutils toolchain-funcs versionator
@@ -31,6 +31,7 @@ make_shared_lib() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-readsdpa.patch
 	# to do proper parallel compilation
 	find . -name Makefile -exec \
 		sed -i -e 's:make :$(MAKE) :g' '{}' \;

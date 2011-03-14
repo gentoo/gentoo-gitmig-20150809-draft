@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/dsdp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/ChangeLog,v 1.1 2011/03/07 05:33:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/ChangeLog,v 1.2 2011/03/14 17:22:50 bicatali Exp $
+
+  14 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> dsdp-5.8.ebuild,
+  +files/dsdp-5.8-readsdpa.patch:
+  Fixed leak in one of the examples
 
 *dsdp-5.8 (07 Mar 2011)
 
