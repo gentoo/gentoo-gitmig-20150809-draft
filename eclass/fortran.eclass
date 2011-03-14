@@ -1,9 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.21 2009/03/07 10:02:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.22 2011/03/14 17:16:30 jlec Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
+
+# @DEPRECATED
+# This eclass has been superseded by functions in toolchain-funcs.eclass:
+# Please use tc-getFC to set the fortran compiler!
+# https://bugs.gentoo.org/348851
+
+ewarn "The fortran.eclass is deprecated! Please use the toolchains-funcs.eclass"
+ewarn "https://bugs.gentoo.org/348851"
 
 inherit eutils autotools
 
