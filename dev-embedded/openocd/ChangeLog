@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.11 2011/02/22 17:09:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.12 2011/03/14 19:36:54 slyfox Exp $
+
+  14 Mar 2011; Sergei Trofimovich <slyfox@gentoo.org> openocd-9999.ebuild:
+  Fixed build failure (now upstream uses submodules)
 
 *openocd-0.4.0 (22 Feb 2011)
 *openocd-0.3.1-r1 (22 Feb 2011)

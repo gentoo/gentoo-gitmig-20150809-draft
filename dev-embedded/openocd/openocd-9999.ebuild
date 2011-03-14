@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.10 2010/03/07 04:44:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.11 2011/03/14 19:36:54 slyfox Exp $
 
 EGIT_REPO_URI="git://openocd.git.sourceforge.net/gitroot/openocd/openocd"
+EGIT_HAS_SUBMODULES=YES
 inherit eutils
 if [[ ${PV} == "9999" ]] ; then
 	inherit git autotools
