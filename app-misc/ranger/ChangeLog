@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ranger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.2 2011/02/09 07:20:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.3 2011/03/14 21:14:46 radhermit Exp $
+
+*ranger-1.4.2 (14 Mar 2011)
+
+  14 Mar 2011; Tim Harder <radhermit@gentoo.org> +ranger-1.4.2.ebuild:
+  Version bump.
 
   09 Feb 2011; Tim Harder <radhermit@gentoo.org> ranger-1.4.1.ebuild:
   Add less to RDEPEND and include a post-install message about optional
