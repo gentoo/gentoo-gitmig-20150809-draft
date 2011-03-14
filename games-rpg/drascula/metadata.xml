@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>games</herd>
   <use>
-    <flag name="audio">Install optional audio files</flag>
+    <flag name="sound">Install optional audio files</flag>
   </use>
 </pkgmetadata>

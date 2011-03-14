@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/drascula
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.5 2009/12/17 20:49:59 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.6 2011/03/14 11:21:01 tupone Exp $
+
+  14 Mar 2011; Alfredo Tupone <tupone@gentoo.org> drascula-1.0-r1.ebuild,
+  metadata.xml:
+  Rename audio USE flag to sound. Bug #357661 by ulm@gentoo.org
 
   17 Dec 2009; Pacho Ramos <pacho@gentoo.org> drascula-1.0-r1.ebuild:
   stable amd64, bug 288888
