@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.1.ebuild,v 1.1 2011/02/19 14:20:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.3.ebuild,v 1.1 2011/03/14 17:33:25 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -74,7 +74,7 @@ src_prepare() {
 			|| die "sed failed"
 	fi
 
-	# Needed for the punt-python-check patch.
+	# Needed for the punt-python-check patch, disabling timeout test
 	# Also needed to prevent croscompile failures, see bug #267603
 	eautoreconf
 
@@ -134,8 +134,8 @@ src_test() {
 	unset GSETTINGS_BACKEND # bug 352451
 
 	# Related test is a bit nitpicking
-	mkdir "$G_DBUS_COOKIE_SHA1_KEYRING_DIR/temp"
-	chmod 0700  "$G_DBUS_COOKIE_SHA1_KEYRING_DIR/temp"
+	mkdir "$G_DBUS_COOKIE_SHA1_KEYRING_DIR"
+	chmod 0700  "$G_DBUS_COOKIE_SHA1_KEYRING_DIR"
 
 	# Hardened: gdb needs this, bug #338891
 	if host-is-pax ; then
