@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.11.ebuild,v 1.2 2010/11/18 16:53:18 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.12.ebuild,v 1.1 2011/03/14 20:30:21 jsbronder Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info autotools
@@ -69,7 +69,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/0002-fix-implicit-declaration-warnings.patch
-	epatch "${FILESDIR}"/0003-disable-automagic-doc-building.patch
+	epatch "${FILESDIR}"/0003-disable-automagic-doc-building-2.4.12.patch
 
 	sed -i \
 		-e 's,\(COMPACT_LATEX *=\).*,\1 NO,' \
@@ -152,7 +152,7 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc CHANGELOG DEVELOPMENT README.* Release_Notes || die "dodoc failed"
+	dodoc CHANGELOG README.* Release_Notes || die "dodoc failed"
 	if use doc; then
 		dodoc doc/admin_guide.ps doc/*.pdf || die "dodoc failed"
 		if use drmaa; then
