@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.465 2011/03/14 22:11:13 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.466 2011/03/15 16:01:17 scarabeus Exp $
+
+  15 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> samba-3.5.8.ebuild:
+  Enable aio by default + tiny whitespace for readability. Acked by Patrick.
 
 *samba-3.5.8 (14 Mar 2011)
 

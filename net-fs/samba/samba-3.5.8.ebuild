@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8.ebuild,v 1.1 2011/03/14 22:11:13 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8.ebuild,v 1.2 2011/03/15 16:01:17 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://samba/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="acl addns ads aio avahi caps +client cluster cups debug doc examples fam
+IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
 	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes swat
 	syslog winbind "
 
@@ -39,7 +39,8 @@ DEPEND="dev-libs/popt
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam
-		winbind? ( dev-libs/iniparser ) )
+		winbind? ( dev-libs/iniparser )
+	)
 	readline? ( >=sys-libs/readline-5.2 )
 	syslog? ( virtual/logger )"
 
