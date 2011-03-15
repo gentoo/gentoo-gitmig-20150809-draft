@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.81 2011/02/21 19:41:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.82 2011/03/15 21:50:01 xarthisius Exp $
+
+  15 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> pylint-0.23.0.ebuild:
+  ppc stable wrt #355273
 
   21 Feb 2011; Markos Chandras <hwoarang@gentoo.org> pylint-0.23.0.ebuild:
   Stable on amd64 wrt bug #355273
