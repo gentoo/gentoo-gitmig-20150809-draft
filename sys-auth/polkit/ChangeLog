@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.39 2011/03/13 20:22:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.40 2011/03/15 18:02:39 nirbheek Exp $
+
+  15 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> polkit-0.101.ebuild:
+  PDEPEND on 0.101 version of polkit-gnome
 
   13 Mar 2011; Markus Meier <maekke@gentoo.org> polkit-0.99-r1.ebuild:
   arm stable, bug #354509
