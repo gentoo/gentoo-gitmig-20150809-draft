@@ -1,6 +1,6 @@
---- a/Makefile.in	2010-08-28 08:30:07.000000000 +0200
-+++ b/Makefile.in	2010-09-14 07:20:50.000000000 +0200
-@@ -270,60 +270,14 @@
+--- a/Makefile.in	2011-03-06 16:46:23.000000000 +0100
++++ b/Makefile.in	2011-03-15 17:19:36.000000000 +0100
+@@ -290,62 +290,14 @@
  
  install_nls: locales
  ifdef REQUIRE_NLS
@@ -28,6 +28,7 @@
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/ru/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/sk/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/sv/LC_MESSAGES
+-	mkdir -p $(DESTDIR)$(NLS_DIR)/uk/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/vi/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/zh_CN/LC_MESSAGES
 -	mkdir -p $(DESTDIR)$(NLS_DIR)/zh_TW/LC_MESSAGES
@@ -55,6 +56,7 @@
 -	$(INSTALL_DATA) nls/ru.gmo $(DESTDIR)$(NLS_DIR)/ru/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/sk.gmo $(DESTDIR)$(NLS_DIR)/sk/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/sv.gmo $(DESTDIR)$(NLS_DIR)/sv/LC_MESSAGES/$(PACKAGE).mo
+-	$(INSTALL_DATA) nls/uk.gmo $(DESTDIR)$(NLS_DIR)/uk/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/vi.gmo $(DESTDIR)$(NLS_DIR)/vi/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/zh_CN.gmo $(DESTDIR)$(NLS_DIR)/zh_CN/LC_MESSAGES/$(PACKAGE).mo
 -	$(INSTALL_DATA) nls/zh_TW.gmo $(DESTDIR)$(NLS_DIR)/zh_TW/LC_MESSAGES/$(PACKAGE).mo
