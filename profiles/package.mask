@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12561 2011/03/15 15:57:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12562 2011/03/15 16:56:26 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1033,10 +1033,6 @@ sys-libs/com_err
 sys-libs/ss
 <sys-libs/e2fsprogs-libs-1.41.8
 <sys-fs/e2fsprogs-1.41.9
-
-# Jeroen Roovers <jer@gentoo.org> (28 Feb 2010)
-# Development release
-=app-admin/sysstat-9.1*
 
 # Robert Piasek <dagger@gentoo.org> (23 Feb 2010)
 # Masking libmapi as it depends on masked samba4
