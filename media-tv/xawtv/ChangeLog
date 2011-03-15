@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.66 2011/02/26 19:04:11 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.67 2011/03/15 22:29:14 ulm Exp $
+
+  15 Mar 2011; Ulrich Mueller <ulm@gentoo.org> xawtv-3.95-r2.ebuild:
+  Replace dependency on virtual/quicktime by libquicktime, bug 358857.
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> xawtv-3.95-r2.ebuild:
   Updated depends from media-libs/jpeg to virtual/jpeg
