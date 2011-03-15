@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.107 2011/03/07 14:00:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.108 2011/03/15 05:54:49 wormo Exp $
+
+  15 Mar 2011; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  lynx-2.8.8_pre5.ebuild:
+  Enable support for opening URLs in external programs, thanks to Anssi
+  (bug #358685)
 
 *lynx-2.8.7_p2 (07 Mar 2011)
 

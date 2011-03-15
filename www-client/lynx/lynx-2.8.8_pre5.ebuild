@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre5.ebuild,v 1.3 2011/01/31 16:56:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre5.ebuild,v 1.4 2011/03/15 05:54:49 wormo Exp $
 
 EAPI=3
 
@@ -12,19 +12,11 @@ inherit eutils versionator
 # pre.		:	_rc
 # dev.		:	_pre
 
-if [[ "${PV/_p[0-9]}" != "${PV}" ]]
-then
-	MY_P="${PN}${PV/_p/rel.}"
-
-elif [[ "${PV/_rc[0-9]}" != "${PV}" ]]
-then
-	MY_P="${PN}${PV/_rc/pre.}"
-
-elif [[ "${PV/_pre[0-9]}" != "${PV}" ]]
-then
-	MY_P="${PN}${PV/_pre/dev.}"
-
-fi
+case ${PV} in
+	*_pre*) MY_P="${PN}${PV/_pre/dev.}" ;;
+	*_rc*)  MY_P="${PN}${PV/_rc/pre.}" ;;
+	*_p*|*) MY_P="${PN}${PV/_p/rel.}" ;;
+esac
 
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.isc.org/"
@@ -103,6 +95,7 @@ src_configure() {
 		--enable-color-style \
 		--enable-scrollbar \
 		--enable-included-msgs \
+		--enable-externs \
 		--with-zlib \
 		$(use_enable nls) \
 		$(use_enable idn idna) \
@@ -114,7 +107,7 @@ src_configure() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 
 	sed -i -e "s|^HELPFILE.*$|HELPFILE:file://localhost/usr/share/doc/${PF}/lynx_help/lynx_help_main.html|" \
 			"${ED}"/etc/lynx.cfg || die "lynx.cfg not found"
