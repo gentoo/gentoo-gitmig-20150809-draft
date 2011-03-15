@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qtractor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.30 2010/11/11 21:56:01 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.31 2011/03/15 19:23:42 aballier Exp $
+
+*qtractor-0.4.8 (15 Mar 2011)
+
+  15 Mar 2011; Alexis Ballier <aballier@gentoo.org> +qtractor-0.4.8.ebuild:
+  version bump
 
   11 Nov 2010; Alexis Ballier <aballier@gentoo.org> qtractor-0.4.7.ebuild:
   We need the gtk useflag enabled on qt-gui, by Jouni Rinne
