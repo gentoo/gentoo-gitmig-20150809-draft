@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.136 2011/03/15 19:53:05 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.137 2011/03/15 19:54:12 serkan Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -1818,8 +1818,8 @@ ejunit() {
 # dev-java/junit:4 in DEPEND. Launches the tests using junit.textui.TestRunner.
 #
 # Examples:
-# ejunit -cp build/classes org.blinkenlights.jid3.test.AllTests
-# ejunit org.blinkenlights.jid3.test.AllTests
+# ejunit4 -cp build/classes org.blinkenlights.jid3.test.AllTests
+# ejunit4 org.blinkenlights.jid3.test.AllTests
 #
 # @param $1 - -cp or -classpath
 # @param $2 - classpath; junit and recorded dependencies get appended
