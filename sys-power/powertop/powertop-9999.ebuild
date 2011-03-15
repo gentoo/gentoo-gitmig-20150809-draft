@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.4 2011/03/15 09:42:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.5 2011/03/15 11:08:34 angelos Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="git://git.kernel.org/pub/scm/status/powertop/powertop.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS=""
 IUSE="unicode"
 
 DEPEND="
