@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.0.ebuild,v 1.2 2011/01/30 22:47:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.1 2011/03/15 10:02:16 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
@@ -16,25 +16,26 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+doc ofx hbci chipcard debug mysql python quotes sqlite postgres webkit"
+IUSE="chipcard cxx debug +doc hbci mysql ofx postgres python quotes sqlite webkit"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.in)
 
 RDEPEND=">=dev-libs/glib-2.13:2
 	>=dev-libs/popt-1.5
-	>=dev-libs/libxml2-2.5.10
-	>=dev-scheme/guile-1.8.3[deprecated,regex]
+	>=dev-libs/libxml2-2.5.10:2
+	>=dev-scheme/guile-1.8.3:12[deprecated,regex]
 	dev-scheme/guile-www
 	>=dev-scheme/slib-3.1.4
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=gnome-base/libgnomeui-2.4
-	>=gnome-base/libglade-2.4
+	>=gnome-base/libglade-2.4:2.0
 	|| ( <gnome-base/gnome-keyring-2.29 gnome-base/libgnome-keyring )
 	media-libs/libart_lgpl
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/goffice:0.8[gnome]
 	x11-libs/pango
+	cxx? ( dev-cpp/gtkmm:2.4 )
 	ofx? ( >=dev-libs/libofx-0.9.1 )
 	hbci? (
 		|| (
@@ -46,7 +47,7 @@ RDEPEND=">=dev-libs/glib-2.13:2
 	quotes? ( dev-perl/DateManip
 		>=dev-perl/Finance-Quote-1.11
 		dev-perl/HTML-TableExtract )
-	webkit? ( net-libs/webkit-gtk )
+	webkit? ( net-libs/webkit-gtk:2 )
 	!webkit? ( >=gnome-extra/gtkhtml-3.16:3.14 )
 	sqlite? ( dev-db/libdbi dev-db/libdbi-drivers[sqlite3] )
 	postgres? ( dev-db/libdbi dev-db/libdbi-drivers[postgres] )
@@ -62,13 +63,14 @@ DEPEND="${RDEPEND}
 
 PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
 #ELTCONF="--patch-only"
-DOCS="doc/README.OFX doc/README.HBCI"
 
 # FIXME: no the best thing to do but it'd be even better to fix autofoo
 # XXX: does not break here
 #MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
+	DOCS="doc/README.OFX doc/README.HBCI"
+
 	if use webkit ; then
 		G2CONF+=" --with-html-engine=webkit"
 	else
@@ -80,7 +82,9 @@ pkg_setup() {
 	else
 		G2CONF+=" --disable-dbi"
 	fi
+
 	G2CONF+="
+		$(use_enable cxx gtkmm)
 		$(use_enable debug)
 		$(use_enable ofx)
 		$(use_enable hbci aqbanking)
@@ -112,11 +116,10 @@ src_prepare() {
 	gnome2_src_prepare
 	: > "${S}"/py-compile
 
+	use python && python_convert_shebangs -r 2 .
+
 	# Disable test broken by libtool magic ???
 	epatch "${FILESDIR}/${PN}-2.4.0-disable-dynload-test.patch"
-
-	# Fix test linking issues
-	epatch "${FILESDIR}/${PN}-2.4.0-fix-tests-linking.patch"
 
 	# Disable python binding tests because of missing file
 	sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' \
@@ -137,9 +140,9 @@ src_test() {
 src_install() {
 	gnome2_src_install GNC_DOC_INSTALL_DIR=/usr/share/doc/${PF}
 
-	rm -rf "${D}"/usr/share/doc/${PF}/{examples/,COPYING,INSTALL,*win32-bin.txt,projects.html}
+	rm -rf "${ED}"/usr/share/doc/${PF}/{examples/,COPYING,INSTALL,*win32-bin.txt,projects.html}
 #	prepalldocs
-	mv "${D}"/usr/share/doc/${PF} "${T}"/cantuseprepalldocs || die
+	mv "${ED}"/usr/share/doc/${PF} "${T}"/cantuseprepalldocs || die
 	dodoc "${T}"/cantuseprepalldocs/* || die
-	find "${D}" -name '*.la' -delete || die
+	find "${ED}" -name '*.la' -delete || die
 }
