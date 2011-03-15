@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r3.ebuild,v 1.5 2009/04/29 12:32:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r3.ebuild,v 1.6 2011/03/15 19:31:33 nelchael Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,19 +31,10 @@ src_unpack() {
 	for i in "${WORKDIR}/${PV}/"*; do
 		epatch "${i}"
 	done
-
-	# Only install specific po files if LINGUAS is set
-	if [[ -n ${LINGUAS} ]]; then
-		cd po
-		local p
-		for l in $(ls *.po) ; do
-			[[ " ${LINGUAS} " != *" ${l%%.po} "* ]] && rm -f "${l}"
-		done
-	fi
 }
 
 src_compile() {
-	make CC="$(tc-getCC)" DEB_CFLAGS="-fPIC ${CFLAGS}" pump || die
+	emake CC="$(tc-getCC)" DEB_CFLAGS="-fPIC ${CFLAGS}" pump || die
 }
 
 src_install() {
@@ -57,6 +48,4 @@ src_install() {
 	dolib.a libpump.a || die
 	insinto /usr/include
 	doins pump.h || die
-
-	make -C po install datadir="${D}/usr/share/"
 }
