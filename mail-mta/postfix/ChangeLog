@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.240 2011/03/13 11:28:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.241 2011/03/15 03:39:30 radhermit Exp $
+
+  15 Mar 2011; Tim Harder <radhermit@gentoo.org> postfix-2.7.3.ebuild,
+  postfix-2.8.1.ebuild:
+  Revert change for bug #349944 until a better solution is found.
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> postfix-2.7.3.ebuild:
   ppc/ppc64 stable wrt #358085

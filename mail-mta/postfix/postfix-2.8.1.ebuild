@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.1.ebuild,v 1.1 2011/02/28 00:00:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.1.ebuild,v 1.2 2011/03/15 03:39:30 radhermit Exp $
 
 EAPI=3
 
@@ -218,11 +218,6 @@ src_install () {
 
 	# Remove unnecessary files
 	rm -f "${D}"/usr/$(get_libdir)/postfix/*.cf
-
-	# Don't install a new config file if one already exists (bug #349944)
-	if [[ -e "${ROOT}"/etc/postfix/main.cf ]] ; then
-		rm -f "${D}"/etc/postfix/main.cf
-	fi
 }
 
 pkg_postinst() {
