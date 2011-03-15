@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.149 2010/11/07 19:15:03 anarchy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.150 2011/03/15 22:32:44 ulm Exp $
+
+  15 Mar 2011; Ulrich Mueller <ulm@gentoo.org> mjpegtools-1.8.0-r2.ebuild,
+  mjpegtools-1.9.0.ebuild, mjpegtools-1.9.0-r1.ebuild:
+  Replace dependency on virtual/quicktime by libquicktime, bug 358857.
 
   07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org>
   mjpegtools-1.8.0-r2.ebuild, mjpegtools-1.9.0.ebuild,
