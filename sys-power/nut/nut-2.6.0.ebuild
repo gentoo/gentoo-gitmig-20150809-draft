@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.0.ebuild,v 1.1 2011/03/13 21:09:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.0.ebuild,v 1.2 2011/03/15 15:55:40 ssuominen Exp $
 
 EAPI=2
 inherit autotools bash-completion eutils fixheadtails multilib
@@ -135,8 +135,8 @@ src_install() {
 	newinitd "${FILESDIR}"/nut.powerfail.initd nut.powerfail || die
 
 	# This sets up permissions for nut to access a UPS
-	insinto /etc/udev/rules.d/
-	newins scripts/udev/nut-usbups.rules 70-nut-usbups.rules
+	# insinto /etc/udev/rules.d/
+	# newins scripts/udev/nut-usbups.rules 70-nut-usbups.rules
 
 	keepdir /var/lib/nut
 

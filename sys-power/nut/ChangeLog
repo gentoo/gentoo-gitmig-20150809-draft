@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.85 2011/03/13 21:09:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.86 2011/03/15 15:55:40 ssuominen Exp $
+
+  15 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> nut-2.6.0.ebuild:
+  Stop installing 70-nut-usbups.rules to /etc/udev/rules.d because it's
+  installed by upstream Makefile to correct location at /lib/udev/rules.d.
 
 *nut-2.6.0 (13 Mar 2011)
 
