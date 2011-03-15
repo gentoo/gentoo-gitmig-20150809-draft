@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.36 2011/01/09 17:32:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.37 2011/03/15 19:25:00 jer Exp $
+
+  15 Mar 2011; Jeroen Roovers <jer@gentoo.org> gsasl-1.6.0.ebuild,
+  metadata.xml:
+  Optionally depend on dev-libs/libgcrypt by Marcin Mirosław (bug #358693).
 
 *gsasl-1.6.0 (09 Jan 2011)
 
