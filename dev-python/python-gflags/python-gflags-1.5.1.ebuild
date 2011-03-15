@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-1.5.ebuild,v 1.1 2011/02/12 21:54:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-1.5.1.ebuild,v 1.1 2011/03/15 20:24:00 nelchael Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
