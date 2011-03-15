@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.27 2011/02/10 23:59:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.28 2011/03/15 19:36:17 ssuominen Exp $
+
+  15 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> clementine-0.6-r2.ebuild:
+  Fix build failure with USE="-dbus wiimote" wrt #355259 by Nikoli.
 
   10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> clementine-0.6-r2.ebuild:
   Stable on amd64 wrt bug #353297
