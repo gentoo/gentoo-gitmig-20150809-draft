@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.285 2011/03/06 20:43:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.286 2011/03/15 19:41:24 vapier Exp $
+
+*bash-4.2_p8 (15 Mar 2011)
+
+  15 Mar 2011; Mike Frysinger <vapier@gentoo.org> +bash-4.2_p8.ebuild:
+  Version bump.
 
 *bash-4.2_p7 (06 Mar 2011)
 
