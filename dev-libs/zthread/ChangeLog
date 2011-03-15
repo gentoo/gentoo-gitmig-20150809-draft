@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zthread
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.29 2010/05/26 18:28:10 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.30 2011/03/15 16:30:30 flameeyes Exp $
+
+  15 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  zthread-2.3.2-r1.ebuild:
+  Rebuild autotools so that it won't fail to build with grep-2.7 (bug #356639).
 
   26 May 2010; Pacho Ramos <pacho@gentoo.org> zthread-2.3.2-r1.ebuild:
   stable amd64, bug 315639

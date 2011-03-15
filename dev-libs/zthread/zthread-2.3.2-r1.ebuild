@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r1.ebuild,v 1.7 2010/05/26 18:28:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/zthread-2.3.2-r1.ebuild,v 1.8 2011/03/15 16:30:30 flameeyes Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils autotools
 
 MY_P=ZThread-${PV}
 
@@ -24,6 +24,8 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	rm -f include/zthread/{.Barrier.h.swp,Barrier.h.orig} || die
 	epatch "${FILESDIR}"/${P}-no-fpermissive.diff
+
+	AT_M4DIR="share" eautoreconf
 }
 
 src_configure() {
