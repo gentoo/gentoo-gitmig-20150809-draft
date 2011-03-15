@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.80 2011/03/05 17:47:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.81 2011/03/15 16:37:19 scarabeus Exp $
+
+  15 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -eselect-opengl-1.1.1-r2.ebuild, eselect-opengl-1.2.1.ebuild:
+  Drop older. Drop m68k keyword.
 
   05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   eselect-opengl-1.2.1.ebuild:
