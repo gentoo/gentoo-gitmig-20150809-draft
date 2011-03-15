@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.1.0.ebuild,v 1.1 2011/02/23 18:48:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-1.1.0.ebuild,v 1.2 2011/03/15 19:26:11 aballier Exp $
 
 EAPI=3
 inherit libtool
@@ -38,7 +38,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die
+	emake DESTDIR="${D}" docdir="${EPREFIX}/usr/share/doc/${PF}/html" install || die
 	dodoc AUTHORS CHANGES README TODO
 	find "${ED}" -name '*.la' -exec rm -f {} +
 }
