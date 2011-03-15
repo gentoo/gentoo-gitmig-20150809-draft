@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/tilp2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.5 2011/03/02 13:32:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.6 2011/03/15 21:23:34 bicatali Exp $
+
+*tilp2-1.14 (15 Mar 2011)
+
+  15 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> +tilp2-1.14.ebuild:
+  Version bump
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> tilp2-1.12.ebuild:
   Correct Slots for gtk 3 introduction to tree
