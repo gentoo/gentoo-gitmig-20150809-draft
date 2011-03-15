@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.67 2011/03/08 16:46:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.68 2011/03/15 21:14:51 xarthisius Exp $
+
+  15 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libXfixes-5.0.ebuild:
+  ppc/ppc64 stable wrt #359059
 
 *libXfixes-5.0 (08 Mar 2011)
 
