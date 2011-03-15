@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rej
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rej/ChangeLog,v 1.13 2009/01/12 04:03:24 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rej/ChangeLog,v 1.14 2011/03/15 19:23:57 abcd Exp $
+
+  15 Mar 2011; Jonathan Callen <abcd@gentoo.org> rej-0.16.ebuild:
+  Transfer prefix keywords from overlay
 
   12 Jan 2009; Jeroen Roovers <jer@gentoo.org> rej-0.16.ebuild:
   Do not block app-editors/mp any longer, thanks to Guenther Brunthaler (bug
