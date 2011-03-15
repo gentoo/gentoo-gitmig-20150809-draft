@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.43 2008/06/22 15:18:48 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.44 2011/03/15 16:06:57 ssuominen Exp $
+
+  15 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> libnjb-2.2.6.ebuild:
+  Install 80-libnjb.rules to /lib/udev/rules.d instead of /etc/udev/rules.d.
 
   22 Jun 2008; Markus Meier <maekke@gentoo.org> libnjb-2.2.6.ebuild:
   amd64/x86 stable, bug #227433
