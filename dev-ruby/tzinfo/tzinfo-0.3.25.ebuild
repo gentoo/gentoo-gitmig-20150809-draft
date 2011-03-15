@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.23.ebuild,v 1.2 2010/12/04 16:48:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.25.ebuild,v 1.1 2011/03/15 21:08:55 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -25,10 +25,6 @@ DEPEND=""
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 all_ruby_prepare() {
-	# The package has all the files executable, probably coming from
-	# Windows.
-	find "${S}" -type f -perm +111 -exec chmod -x {} +
-
 	# With rubygems 1.3.1 we get the following warning
 	# warning: Insecure world writable dir /var/tmp in LOAD_PATH, mode 041777
 	# when running the test_get_tainted_not_loaded test.
