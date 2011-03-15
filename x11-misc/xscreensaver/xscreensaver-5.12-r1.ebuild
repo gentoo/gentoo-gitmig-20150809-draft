@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.12-r1.ebuild,v 1.1 2011/01/13 11:34:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.12-r1.ebuild,v 1.2 2011/03/15 23:22:25 abcd Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools eutils flag-o-matic multilib pam
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.jwz.org/xscreensaver"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
 IUSE="jpeg new-login opengl pam suid xinerama"
 
 RDEPEND="x11-libs/libXmu
@@ -49,7 +49,8 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.10-gentoo.patch \
-		"${FILESDIR}"/${P}-*.patch
+		"${FILESDIR}"/${P}-*.patch \
+		"${FILESDIR}"/${PN}-5.05-interix.patch
 	eautoconf
 }
 
@@ -64,12 +65,12 @@ src_configure() {
 	unset BC_ENV_ARGS #24568
 
 	econf \
-		--x-includes=/usr/include \
-		--x-libraries=/usr/$(get_libdir) \
+		--x-includes="${EPREFIX}"/usr/include \
+		--x-libraries="${EPREFIX}"/usr/$(get_libdir) \
 		--enable-locking \
-		--with-hackdir=/usr/$(get_libdir)/misc/${PN} \
-		--with-configdir=/usr/share/${PN}/config \
-		--with-x-app-defaults=/usr/share/X11/app-defaults \
+		--with-hackdir="${EPREFIX}"/usr/$(get_libdir)/misc/${PN} \
+		--with-configdir="${EPREFIX}"/usr/share/${PN}/config \
+		--with-x-app-defaults="${EPREFIX}"/usr/share/X11/app-defaults \
 		--with-dpms-ext \
 		$(use_with xinerama xinerama-ext) \
 		--with-xinput-ext \
@@ -87,7 +88,7 @@ src_configure() {
 		$(use_with jpeg) \
 		--with-xshm-ext \
 		--with-xdbe-ext \
-		--with-text-file=/etc/gentoo-release \
+		--with-text-file="${EPREFIX}"/etc/gentoo-release \
 		$(use_with suid setuid-hacks)
 }
 
@@ -98,5 +99,5 @@ src_install() {
 	use pam && fperms 755 /usr/bin/${PN}
 	pamd_mimic_system ${PN} auth
 
-	rm -f "${D}"/usr/share/${PN}/config/{electricsheep,fireflies}.xml
+	rm -f "${ED}"/usr/share/${PN}/config/{electricsheep,fireflies}.xml
 }
