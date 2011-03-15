@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/jaxodraw
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.10 2010/04/02 18:13:40 nelchael Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/ChangeLog,v 1.11 2011/03/15 20:31:32 nelchael Exp $
+
+  15 Mar 2011; Krzysztof Pawlik <nelchael@gentoo.org> -jaxodraw-2.0.0.ebuild:
+  Remove old version.
 
 *jaxodraw-2.0.1 (02 Apr 2010)
 
