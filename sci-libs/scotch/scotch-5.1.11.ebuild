@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.11.ebuild,v 1.1 2011/03/05 00:27:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.11.ebuild,v 1.2 2011/03/15 16:58:35 bicatali Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ make_shared_lib() {
 	${2:-$(tc-getCC)} ${LDFLAGS}  \
 		-shared -Wl,-soname="${soname}" \
 		-Wl,--whole-archive "${1}" -Wl,--no-whole-archive \
-		-o $(dirname "${1}")/"${soname}" || return 1
+		-lz -lm -lrt -o $(dirname "${1}")/"${soname}" || return 1
 }
 
 src_prepare() {
