@@ -1,0 +1,78 @@
+diff --git a/Makefile.PL b/Makefile.PL
+index ca80816..4196f8e 100644
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -24,7 +24,7 @@ BEGIN {
+ 
+ }
+ 
+-use lib qw(lib Apache-Test/lib);
++use lib qw(lib);
+ 
+ use Config;
+ use File::Spec::Functions;
+@@ -116,16 +116,6 @@ sub get_DEFINE {
+ }
+ 
+ sub configure {
+-
+-    # mod_perl test suite relies on having Apache-Test bundled with
+-    # the mod_perl source, since any pre-installed version may not do
+-    # the right thing
+-    unless (-d "Apache-Test") {
+-        error "Can't find a sub-directory Apache-Test. " .
+-            "Make sure that you are using a complete source distribution";
+-        exit 1;
+-    }
+-
+     set_modperl_version();
+ 
+     if ($old_modperl_version) {
+@@ -794,47 +784,11 @@ run_tests : test_clean
+ run_subtests ::
+ 	$(MAKE) -C ModPerl-Registry test
+ 
+-run_subtests ::
+-	$(MAKE) -C Apache-Reload test
+-
+-run_subtests ::
+-	$(MAKE) -C Apache-SizeLimit test
+-
+ test :: pure_all run_tests test_clean
+ EOF
+ 
+ }
+ 
+-sub MY::postamble {
+-    my $self = shift;
+-
+-    my $string = $self->ModPerl::BuildMM::MY::postamble;
+-
+-    $string .= <<'EOF';
+-mydist : Apache-Test/META.yml mod_perl.spec manifest tardist
+-
+-rpm: dist
+-	@[ -d $(PWD)/rpm ] || mkdir $(PWD)/rpm
+-	rpmbuild -ta --define "_rpmdir $(PWD)/rpm" \
+-                 --define "_srcrpmdir $(PWD)/rpm" \
+-                 $(DISTVNAME).tar.gz
+-	@mv $(PWD)/rpm/*/*.rpm $(PWD)/rpm/
+-	@rm -rf $(PWD)/rpm/*/
+-    
+-mod_perl.spec: build/make_rpm_spec
+-	$(PERL) build/make_rpm_spec
+-
+-Apache-Test/META.yml:
+-	cd Apache-Test && make metafile
+-
+-tag :
+-	svn copy  https://svn.apache.org/repos/asf/perl/modperl/branches/release/$(VERSION_SYM)  https://svn.apache.org/repos/asf/perl/modperl/tags/$(VERSION_SYM)
+-	svn copy  https://svn.apache.org/repos/asf/perl/modperl/docs/trunk https://svn.apache.org/repos/asf/perl/modperl/docs/tags/$(VERSION_SYM)
+-EOF
+-
+-    return $string;
+-}
+-
+ # this is a workaround so that ModPerl::MM will move MY::constants
+ # away, and Apache-Test/Makefile.PL which has its own MY::constants
+ # won't get complaints on MY::constants redefined
