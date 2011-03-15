@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.53 2011/01/20 18:09:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.54 2011/03/15 19:05:30 jer Exp $
+
+  15 Mar 2011; Jeroen Roovers <jer@gentoo.org> libgsasl-1.6.0.ebuild,
+  metadata.xml:
+  Optionally depend on dev-libs/libgcrypt by Marcin Mirosław (bug #358693).
 
   20 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> libgsasl-1.4.1.ebuild:
   ppc64 stable wrt #339505
