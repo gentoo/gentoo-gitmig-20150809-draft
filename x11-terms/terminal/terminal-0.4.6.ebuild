@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.6.ebuild,v 1.2 2011/03/13 16:32:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.6.ebuild,v 1.3 2011/03/15 18:21:08 ssuominen Exp $
 
 EAPI=3
 MY_P=${P/t/T}
@@ -18,7 +18,7 @@ IUSE="dbus debug"
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/libX11
-	>=x11-libs/vte-0.22.5
+	>=x11-libs/vte-0.22.5:0
 	>=xfce-base/exo-0.3.4
 	dbus? ( >=dev-libs/dbus-glib-0.88 )"
 DEPEND="${RDEPEND}
