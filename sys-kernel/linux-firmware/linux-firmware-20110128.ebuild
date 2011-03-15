@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110128.ebuild,v 1.2 2011/03/07 18:35:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110128.ebuild,v 1.3 2011/03/15 01:11:22 flameeyes Exp $
 
 EAPI=3
 
@@ -25,6 +25,7 @@ RDEPEND="!media-sound/alsa-firmware[alsa_cards_korg1212]
 	!media-sound/alsa-firmware[alsa_cards_maestro3]
 	!media-sound/alsa-firmware[alsa_cards_sb16]
 	!media-sound/alsa-firmware[alsa_cards_ymfpci]
+	!media-tv/cx18-firmware
 	!media-tv/ivtv-firmware
 	!media-tv/linuxtv-dvb-firmware[dvb_cards_cx231xx]
 	!media-tv/linuxtv-dvb-firmware[dvb_cards_cx23885]

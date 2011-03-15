@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.8 2011/03/07 18:35:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.9 2011/03/15 01:11:22 flameeyes Exp $
+
+  15 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  linux-firmware-20110128.ebuild, linux-firmware-99999999.ebuild:
+  Another blocker.
 
   07 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   linux-firmware-20110128.ebuild, linux-firmware-99999999.ebuild:
