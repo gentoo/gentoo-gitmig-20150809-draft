@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.ebuild,v 1.3 2011/03/12 12:10:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.ebuild,v 1.4 2011/03/15 11:16:19 hwoarang Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.11"
@@ -8,7 +8,7 @@ EGIT_BOOTSTRAP="eautoreconf"
 
 inherit autotools base git
 
-EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
+EGIT_REPO_URI="git://github.com/FreeRDP/FreeRDP.git"
 
 DESCRIPTION="A Remote Desktop Protocol Client, forked from rdesktop"
 HOMEPAGE="http://www.freerdp.com/"
