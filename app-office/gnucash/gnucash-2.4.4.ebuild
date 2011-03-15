@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.1 2011/03/15 10:02:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.2 2011/03/15 11:18:14 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
 
-inherit autotools eutils gnome2 python
+inherit eutils gnome2 python
 
 DOC_VER="2.2.0"
 
@@ -118,16 +118,10 @@ src_prepare() {
 
 	use python && python_convert_shebangs -r 2 .
 
-	# Disable test broken by libtool magic ???
-	epatch "${FILESDIR}/${PN}-2.4.0-disable-dynload-test.patch"
-
 	# Disable python binding tests because of missing file
 	sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' \
 		-i src/optional/python-bindings/Makefile.{am,in} \
 		|| die "python tests sed failed"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
 }
 
 src_test() {
