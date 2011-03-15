@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/ocaml-fileutils
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ChangeLog,v 1.1 2011/03/15 20:04:27 aballier Exp $
+
+*ocaml-fileutils-0.4.2 (15 Mar 2011)
+
+  15 Mar 2011; Alexis Ballier <aballier@gentoo.org>
+  +ocaml-fileutils-0.4.2.ebuild, +metadata.xml:
+  Initial import, ebuild by Vladimir Ivanov, bug #355755, with modifications
+  and simplifications by me
+
