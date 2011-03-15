@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99_rc1.ebuild,v 1.1 2011/03/02 00:39:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99_rc1.ebuild,v 1.2 2011/03/15 19:40:05 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
-	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub"
+	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub/"
 	inherit autotools bzr
 	SRC_URI=""
 else
