@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/stringtemplate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/ChangeLog,v 1.9 2010/01/15 20:38:50 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/ChangeLog,v 1.10 2011/03/15 20:00:07 serkan Exp $
+
+*stringtemplate-3.2.1 (15 Mar 2011)
+
+  15 Mar 2011; Serkan Kaba <serkan@gentoo.org> +stringtemplate-3.2.1.ebuild:
+  Version bump to fix bug #358943. Thanks to Oliver Nautsch
+  <oliver.nautsch@gmail.com> for the ebuild.
 
   15 Jan 2010; Jonathan Callen <abcd@gentoo.org> stringtemplate-3.2.ebuild:
   Add prefix keywords
