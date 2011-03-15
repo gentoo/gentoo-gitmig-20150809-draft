@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.116 2011/03/12 11:54:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.117 2011/03/15 08:51:50 pacho Exp $
+
+  15 Mar 2011; Pacho Ramos <pacho@gentoo.org> -tomboy-1.2.1.ebuild,
+  -files/tomboy-1.2.1-xmllint-validation.patch, tomboy-1.4.2-r1.ebuild:
+  dev-dotnet/gnome-panel-sharp is only needed with USE 'applet' and
+  dev-dotnet/gnome-desktop-sharp is not needed at all (bug #358673 by Christoph
+  Mende). Remove old.
 
   12 Mar 2011; <angelos@gentoo.org> tomboy-1.2.1.ebuild, tomboy-1.4.2.ebuild,
   tomboy-1.4.2-r1.ebuild:
