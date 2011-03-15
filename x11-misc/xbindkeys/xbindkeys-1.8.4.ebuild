@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.8.4.ebuild,v 1.7 2011/01/02 17:29:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.8.4.ebuild,v 1.8 2011/03/15 23:34:48 abcd Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.nongnu.org/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.nongnu.org/xbindkeys/xbindkeys.html"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 SLOT="0"
 
 RDEPEND="x11-libs/libX11
@@ -23,17 +23,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_configure() {
-	local myconf
-	use tk || myconf="${myconf} --disable-tk"
-	use guile || myconf="${myconf} --disable-guile"
-
-	econf ${myconf} || die "configure failed"
-}
-
-src_compile() {
-	emake DESTDIR="${D}" || die "make failed"
+	econf \
+		$(use_enable tk) \
+		$(use_enable guile)
 }
 
 src_install() {
-	emake DESTDIR="${D}" BINDIR=/usr/bin install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.59 2011/01/02 17:29:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.60 2011/03/15 23:34:48 abcd Exp $
+
+  15 Mar 2011; Jonathan Callen <abcd@gentoo.org> xbindkeys-1.8.4.ebuild:
+  Add prefix keywords, clean up ebuild a bit (upstream switched to autotools --
+  no need for BINDIR, etc.)
 
   02 Jan 2011; Michael Weber <xmw@gentoo.org> xbindkeys-1.8.4.ebuild:
   sparc stable (bug 348251)
