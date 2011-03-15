@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xorg-cf-files
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.44 2011/03/07 21:03:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.45 2011/03/15 23:04:55 abcd Exp $
+
+  15 Mar 2011; Jonathan Callen <abcd@gentoo.org>
+  +files/xorg-cf-files-1.0.2-solaris-prefix.patch, xorg-cf-files-1.0.4.ebuild:
+  Add prefix support and keywords
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -xorg-cf-files-1.0.3.ebuild:
