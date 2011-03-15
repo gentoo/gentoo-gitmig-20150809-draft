@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.214 2011/03/14 22:40:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.215 2011/03/15 22:41:56 ulm Exp $
+
+  15 Mar 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Kill old-style virtual/quicktime, bug 358857.
 
   14 Mar 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove spurious old-style virtuals.

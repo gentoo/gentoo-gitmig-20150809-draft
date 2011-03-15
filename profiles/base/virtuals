@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.128 2011/03/14 22:40:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.129 2011/03/15 22:41:56 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -37,7 +37,6 @@ virtual/ooo				app-office/openoffice-bin
 virtual/pam				>=sys-libs/pam-0.78
 virtual/portage				sys-apps/portage
 virtual/python				dev-lang/python
-virtual/quicktime			media-libs/libquicktime
 virtual/skkserv				app-i18n/skkserv
 virtual/squeak-image			dev-lang/squeak-basicimage
 virtual/ssh				net-misc/openssh

@@ -17,7 +17,6 @@ virtual/modutils		sys-apps/busybox
 virtual/mta			mail-mta/ssmtp
 virtual/os-headers		sys-kernel/linux-headers
 virtual/python			dev-lang/python
-virtual/quicktime		media-libs/libquicktime
 virtual/skkserv			app-i18n/skkserv
 virtual/ssh			net-misc/dropbear
 virtual/tftp			sys-apps/busybox
