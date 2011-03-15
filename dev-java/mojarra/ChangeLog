@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mojarra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.9 2011/02/10 19:33:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mojarra/ChangeLog,v 1.10 2011/03/15 20:20:57 nelchael Exp $
+
+  15 Mar 2011; Krzysztof Pawlik <nelchael@gentoo.org> -mojarra-1.2.15.ebuild,
+  -mojarra-1.2.15-r1.ebuild:
+  Remove old versions.
 
   10 Feb 2011; Thomas Kahle <tomka@gentoo.org> mojarra-1.2.15-r2.ebuild:
   x86 stable per bug 351421
