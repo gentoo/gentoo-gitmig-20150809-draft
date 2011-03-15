@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12559 2011/03/14 09:45:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12560 2011/03/15 10:04:11 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1162,12 +1162,6 @@ dev-lisp/gcl
 # * No support for auth backends other than PAM
 # * Many more...
 >=gnome-base/gdm-2.26
-
-# Torsten Veller <tove@gentoo.org> (10 Jun 2009)
-# Mask unstable releases. Mask stable release for testing:
-# upgrading and tests fail and configure of python bindings sucks.
-=app-office/gnucash-2.3*
-~app-office/gnucash-2.4.0
 
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing
