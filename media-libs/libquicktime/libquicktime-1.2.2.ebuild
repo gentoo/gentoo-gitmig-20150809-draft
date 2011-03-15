@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.2.ebuild,v 1.5 2011/03/05 01:08:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.2.ebuild,v 1.6 2011/03/15 22:37:11 ulm Exp $
 
 inherit libtool eutils
 
@@ -35,8 +35,7 @@ RDEPEND="dv? ( media-libs/libdv )
 		x11-libs/libX11
 		opengl? ( media-libs/mesa )
 	)
-	virtual/libintl
-	!virtual/quicktime"
+	virtual/libintl"
 DEPEND="${RDEPEND}
 	X? (
 		x11-proto/videoproto
@@ -45,8 +44,6 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	dev-util/pkgconfig
 	sys-devel/gettext"
-
-PROVIDE="virtual/quicktime"
 
 S=${WORKDIR}/${MY_P}
 

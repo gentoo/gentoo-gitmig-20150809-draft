@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.163 2011/03/05 01:08:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.164 2011/03/15 22:37:11 ulm Exp $
+
+  15 Mar 2011; Ulrich Mueller <ulm@gentoo.org> libquicktime-1.1.5.ebuild,
+  libquicktime-1.2.2.ebuild:
+  Don't PROVIDE virtual/quicktime, bug 358857.
 
   05 Mar 2011; Brent Baude <ranger@gentoo.org> libquicktime-1.2.2.ebuild:
   stable ppc, bug 355449
