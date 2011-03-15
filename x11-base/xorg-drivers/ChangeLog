@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.42 2011/03/13 19:46:31 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.43 2011/03/15 17:56:59 chithanh Exp $
+
+  15 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-drivers-1.9.ebuild:
+  Add omapfb to VIDEO_CARDS
 
   13 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-drivers-1.9.ebuild:
