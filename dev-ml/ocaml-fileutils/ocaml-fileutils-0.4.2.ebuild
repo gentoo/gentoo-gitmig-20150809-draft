@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ocaml-fileutils-0.4.2.ebuild,v 1.1 2011/03/15 20:04:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ocaml-fileutils-0.4.2.ebuild,v 1.2 2011/03/15 20:05:37 aballier Exp $
 
 EAPI=3
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test +ocamlopt"
 
-RDEPEND=">=dev-lang/ocaml-3.11[ocamlopt?]
-	dev-ml/findlib"
+RDEPEND=">=dev-lang/ocaml-3.11[ocamlopt?]"
 DEPEND="${RDEPEND}
 	test? ( dev-ml/ounit )"
 

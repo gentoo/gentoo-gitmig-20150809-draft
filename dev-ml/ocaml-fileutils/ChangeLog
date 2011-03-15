@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-fileutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ChangeLog,v 1.1 2011/03/15 20:04:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ChangeLog,v 1.2 2011/03/15 20:05:37 aballier Exp $
+
+  15 Mar 2011; Alexis Ballier <aballier@gentoo.org>
+  ocaml-fileutils-0.4.2.ebuild:
+  findlib dep is added by the eclass
 
 *ocaml-fileutils-0.4.2 (15 Mar 2011)
 
