@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12560 2011/03/15 10:04:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12561 2011/03/15 15:57:13 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (15 Mar 2011)
+# Upstream no longer exists. Superseded by dev-lib/libpqxx.
+# Removal 15 Apr 2011 (bug #348359)
+dev-cpp/libpqpp
 
 # Pacho Ramos <pacho@gentoo.org> (14 Mar 2011)
 # Still relies on deprecated libgnomeprint, there are many other
