@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/aqualung
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.13 2010/07/12 20:42:40 billie Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.14 2011/03/15 22:03:05 billie Exp $
+
+*aqualung-0.9_beta11-r1 (15 Mar 2011)
+
+  15 Mar 2011; Daniel Pielmeier <billie@gentoo.org> aqualung-0.9_beta11.ebuild,
+  +aqualung-0.9_beta11-r1.ebuild:
+  Depend on media-libs/alsa-lib instead of old style virtual/alsa bug #359007.
+  Add a new revision to fix doc installation.
 
   12 Jul 2010; Daniel Pielmeier <billie@gentoo.org>
   -files/aqualung-0.9_beta10-libmpcdecsv7.patch:
