@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.21 2011/03/01 23:03:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.22 2011/03/15 20:46:10 vostorga Exp $
+
+  15 Mar 2011; Víctor Ostorga <vostorga@gentoo.org> talloc-2.0.5.ebuild:
+  Fixing collision with /usr/lib/libtalloc.so.2 bug #351608 setting python
+  2.6 as runtime python bug #354587 #357269
 
   01 Mar 2011; Jonathan Callen <abcd@gentoo.org> talloc-2.0.5.ebuild:
   Add ~amd64-linux/~x86-linux keywords

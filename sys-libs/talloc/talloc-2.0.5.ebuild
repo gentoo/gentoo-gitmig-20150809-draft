@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.5.ebuild,v 1.2 2011/03/01 23:03:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.5.ebuild,v 1.3 2011/03/15 20:46:10 vostorga Exp $
 
 EAPI=3
-
-inherit waf-utils
+PYTHON_DEPEND="2::2.6"
+inherit waf-utils python
 
 DESCRIPTION="Samba talloc library"
 HOMEPAGE="http://talloc.samba.org/"
@@ -15,11 +15,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="compat python"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-	dev-libs/libxslt"
+RDEPEND="!!<sys-libs/talloc-2.0.5"
+DEPEND="dev-libs/libxslt"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
+
+pkg_setup() {
+	# Make sure the build system will use the right python
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_configure() {
 	local extra_opts=""
