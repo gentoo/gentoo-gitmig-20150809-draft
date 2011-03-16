@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1.ebuild,v 1.5 2011/03/12 21:29:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1.ebuild,v 1.6 2011/03/16 10:41:44 nirbheek Exp $
 
 EAPI="3"
 
@@ -34,9 +34,9 @@ RDEPEND="!gnome-base/gnome
 	>=dev-libs/atk-1.32.0
 	>=x11-libs/pango-1.28.3
 
-	>=gnome-base/orbit-2.14.19
+	>=gnome-base/orbit-2.14.19:2
 
-	>=x11-libs/libwnck-2.30.6
+	>=x11-libs/libwnck-2.30.6:1
 	>=x11-wm/metacity-2.30.3
 
 	>=gnome-base/gconf-2.32.0-r1:2
@@ -45,7 +45,7 @@ RDEPEND="!gnome-base/gnome
 	>=gnome-base/libbonoboui-2.24.4
 	>=gnome-base/libgnome-2.32.0
 	>=gnome-base/libgnomecanvas-2.30.2
-	>=gnome-base/libglade-2.6.4
+	>=gnome-base/libglade-2.6.4:2.0
 
 	>=gnome-base/gnome-settings-daemon-2.32.1
 	>=gnome-base/gnome-control-center-2.32.0
@@ -61,7 +61,7 @@ RDEPEND="!gnome-base/gnome
 
 	>=x11-terms/gnome-terminal-2.32.1
 
-	>=gnome-base/librsvg-2.32.1
+	>=gnome-base/librsvg-2.32.1:2
 
 	>=gnome-extra/yelp-2.30.2"
 DEPEND=""

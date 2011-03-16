@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.4 2011/02/04 11:03:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.5 2011/03/16 10:45:17 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,11 +21,11 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	>=dev-libs/glib-2.25.12:2
 	>=x11-libs/gtk+-2.22:2[introspection?]
 	>=dev-libs/libgweather-2.27.90:2
-	dev-libs/libxml2
-	>=gnome-base/gconf-2.6.1[introspection?]
+	dev-libs/libxml2:2
+	>=gnome-base/gconf-2.6.1:2[introspection?]
 	>=media-libs/libcanberra-0.23[gtk]
 	>=gnome-base/gnome-menus-2.27.92
-	gnome-base/librsvg
+	gnome-base/librsvg:2
 	>=dev-libs/dbus-glib-0.80
 	>=sys-apps/dbus-1.1.2
 	>=x11-libs/cairo-1
@@ -34,8 +34,8 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	bonobo? (
 		>=gnome-base/libbonobo-2.20.4
 		>=gnome-base/libbonoboui-2.1.1
-		>=gnome-base/orbit-2.4
-		>=x11-libs/libwnck-2.19.5 )
+		>=gnome-base/orbit-2.4:2
+		>=x11-libs/libwnck-2.19.5:1 )
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
 	networkmanager? ( >=net-misc/networkmanager-0.6.7 )"

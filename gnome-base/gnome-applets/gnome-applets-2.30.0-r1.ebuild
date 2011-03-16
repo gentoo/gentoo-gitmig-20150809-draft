@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0-r1.ebuild,v 1.9 2011/01/15 19:57:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.30.0-r1.ebuild,v 1.10 2011/03/16 10:34:27 nirbheek Exp $
 
 EAPI="1"
 
@@ -18,20 +18,20 @@ IUSE="battstat gnome gstreamer hal ipv6 networkmanager policykit"
 # my secret script says cpufrequtils might be needed in RDEPEND
 
 HALDEPEND=" hal? ( >=sys-apps/hal-0.5.3 ) "
-RDEPEND=">=x11-libs/gtk+-2.13
-	>=dev-libs/glib-2.22.0
-	>=gnome-base/gconf-2.8
+RDEPEND=">=x11-libs/gtk+-2.13:2
+	>=dev-libs/glib-2.22.0:2
+	>=gnome-base/gconf-2.8:2
 	>=gnome-base/gnome-panel-2.13.4
 	>=x11-libs/libxklavier-4.0
-	>=x11-libs/libwnck-2.9.3
-	>=gnome-base/gnome-desktop-2.11.1
+	>=x11-libs/libwnck-2.9.3:1
+	>=gnome-base/gnome-desktop-2.11.1:2
 	>=x11-libs/libnotify-0.3.2
 	>=sys-apps/dbus-1.1.2
 	>=dev-libs/dbus-glib-0.74
-	>=dev-libs/libxml2-2.5.0
+	>=dev-libs/libxml2-2.5.0:2
 	>=x11-themes/gnome-icon-theme-2.15.91
 	>=dev-libs/libgweather-2.22.1:2
-	>=virtual/python-2.4
+	=virtual/python-2*
 	x11-libs/libX11
 
 	battstat? ( $HALDEPEND )
@@ -39,19 +39,19 @@ RDEPEND=">=x11-libs/gtk+-2.13
 		gnome-base/gnome-settings-daemon
 
 		>=gnome-extra/gucharmap-2.23
-		>=gnome-base/libgtop-2.11.92
+		>=gnome-base/libgtop-2.11.92:2
 
-		>=dev-python/pygobject-2.6
-		>=dev-python/pygtk-2.6
-		>=dev-python/libgnome-python-2.10
-		>=dev-python/gconf-python-2.10
+		>=dev-python/pygobject-2.6:2
+		>=dev-python/pygtk-2.6:2
+		>=dev-python/libgnome-python-2.10:2
+		>=dev-python/gconf-python-2.10:2
 		>=dev-python/gnome-applets-python-2.10 )
 	gstreamer?	(
-		>=media-libs/gstreamer-0.10.2
-		>=media-libs/gst-plugins-base-0.10.14
+		>=media-libs/gstreamer-0.10.2:0.10
+		>=media-libs/gst-plugins-base-0.10.14:0.10
 		|| (
-			>=media-plugins/gst-plugins-alsa-0.10.14
-			>=media-plugins/gst-plugins-oss-0.10.14 ) )
+			>=media-plugins/gst-plugins-alsa-0.10.14:0.10
+			>=media-plugins/gst-plugins-oss-0.10.14:0.10 ) )
 	networkmanager? ( >=net-misc/networkmanager-0.7.0 )
 	policykit? ( >=sys-auth/polkit-0.92 )"
 

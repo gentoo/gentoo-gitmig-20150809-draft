@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.32.0.ebuild,v 1.5 2011/03/12 16:20:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/libgnomekbd-2.32.0.ebuild,v 1.6 2011/03/16 10:48:40 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ IUSE="test"
 
 # gtk+-2.20 needed for tests
 RDEPEND=">=dev-libs/glib-2.18:2
-	>=gnome-base/gconf-2.14
+	>=gnome-base/gconf-2.14:2
 	>=x11-libs/gtk+-2.20:2
 	>=x11-libs/libxklavier-5.0"
 DEPEND="${RDEPEND}

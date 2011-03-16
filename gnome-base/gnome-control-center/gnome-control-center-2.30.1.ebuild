@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.30.1.ebuild,v 1.8 2010/10/17 15:29:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.30.1.ebuild,v 1.9 2011/03/16 10:38:58 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,28 +17,28 @@ IUSE="eds policykit"
 # Newer gconf[policykit] needed for CanSetSystem attribute for default bg patch
 RDEPEND="x11-libs/libXft
 	>=x11-libs/libXi-1.2
-	>=x11-libs/gtk+-2.18.0
-	>=dev-libs/glib-2.17.4
-	>=gnome-base/gconf-2.0
-	>=gnome-base/librsvg-2.0
+	>=x11-libs/gtk+-2.18.0:2
+	>=dev-libs/glib-2.17.4:2
+	>=gnome-base/gconf-2.0:2
+	>=gnome-base/librsvg-2.0:2
 	>=gnome-base/nautilus-2.6
 	>=media-libs/fontconfig-1
 	>=dev-libs/dbus-glib-0.73
 	>=x11-libs/libxklavier-4.0
 	>=x11-wm/metacity-2.23.1
 	>=gnome-base/libgnomekbd-2.27.4
-	>=gnome-base/gnome-desktop-2.29.4
+	>=gnome-base/gnome-desktop-2.29.4:2
 	>=gnome-base/gnome-menus-2.11.1
 	gnome-base/gnome-settings-daemon
 
-	dev-libs/libunique
+	dev-libs/libunique:1
 	x11-libs/pango
 	dev-libs/libxml2
 	media-libs/freetype
 	>=media-libs/libcanberra-0.4[gtk]
 
 	eds? ( >=gnome-extra/evolution-data-server-1.7.90 )
-	policykit? ( >=gnome-base/gconf-2.28[policykit] )
+	policykit? ( >=gnome-base/gconf-2.28:2[policykit] )
 
 	x11-apps/xmodmap
 	x11-libs/libXScrnSaver

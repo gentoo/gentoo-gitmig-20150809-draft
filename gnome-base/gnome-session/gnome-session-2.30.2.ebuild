@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.30.2.ebuild,v 1.13 2011/01/27 07:18:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.30.2.ebuild,v 1.14 2011/03/16 10:45:49 nirbheek Exp $
 
 EAPI="3"
 
@@ -18,10 +18,10 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64
 
 IUSE="branding doc ipv6 +splash elibc_FreeBSD"
 
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.14.0
+RDEPEND=">=dev-libs/glib-2.16:2
+	>=x11-libs/gtk+-2.14.0:2
 	>=dev-libs/dbus-glib-0.76
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=x11-libs/startup-notification-0.10
 	<sys-power/upower-0.9.6
 	elibc_FreeBSD? ( dev-libs/libexecinfo )

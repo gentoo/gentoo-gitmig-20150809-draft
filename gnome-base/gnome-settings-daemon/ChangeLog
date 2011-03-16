@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.73 2011/03/12 18:52:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.74 2011/03/16 10:46:56 nirbheek Exp $
+
+  16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-settings-daemon-2.30.2-r1.ebuild,
+  gnome-settings-daemon-2.32.1.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   gnome-settings-daemon-2.32.1.ebuild:

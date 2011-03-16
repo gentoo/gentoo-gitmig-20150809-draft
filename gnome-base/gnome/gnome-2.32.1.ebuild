@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1.ebuild,v 1.8 2011/03/12 21:32:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1.ebuild,v 1.9 2011/03/16 10:32:12 nirbheek Exp $
 
 EAPI="3"
 
@@ -98,7 +98,7 @@ RDEPEND="
 	>=x11-themes/gtk-engines-2.20.2:2
 	>=x11-themes/gnome-backgrounds-2.32.0
 
-	>=x11-libs/vte-0.26.2
+	>=x11-libs/vte-0.26.2:0
 	>=x11-terms/gnome-terminal-2.32.1
 
 	>=gnome-extra/gucharmap-2.32.1

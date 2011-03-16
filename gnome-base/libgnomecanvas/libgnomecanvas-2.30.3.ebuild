@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.3.ebuild,v 1.5 2011/03/12 16:19:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.3.ebuild,v 1.6 2011/03/16 10:48:17 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	>=x11-libs/gtk+-2.13:2
 	>=media-libs/libart_lgpl-2.3.8
 	>=x11-libs/pango-1.0.1
-	glade? ( >=gnome-base/libglade-2 )"
+	glade? ( >=gnome-base/libglade-2:2.0 )"
 
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5

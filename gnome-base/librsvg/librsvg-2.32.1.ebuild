@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.32.1.ebuild,v 1.6 2011/03/12 16:23:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.32.1.ebuild,v 1.7 2011/03/16 10:52:40 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -20,9 +20,9 @@ RDEPEND=">=media-libs/fontconfig-1.0.1
 	>=dev-libs/glib-2.24:2
 	>=x11-libs/cairo-1.2
 	>=x11-libs/pango-1.10
-	>=dev-libs/libxml2-2.4.7
+	>=dev-libs/libxml2-2.4.7:2
 	>=dev-libs/libcroco-0.6.1
-	|| ( x11-libs/gdk-pixbuf
+	|| ( x11-libs/gdk-pixbuf:2
 		x11-libs/gtk+:2 )
 	gtk? ( >=x11-libs/gtk+-2.16:2 )"
 DEPEND="${RDEPEND}

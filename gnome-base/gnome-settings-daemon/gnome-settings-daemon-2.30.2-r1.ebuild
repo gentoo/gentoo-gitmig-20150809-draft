@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.30.2-r1.ebuild,v 1.9 2011/01/30 18:42:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.30.2-r1.ebuild,v 1.10 2011/03/16 10:46:56 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,11 +17,11 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~am
 IUSE="debug libnotify pulseaudio"
 
 RDEPEND=">=dev-libs/dbus-glib-0.74
-	>=dev-libs/glib-2.18.0
-	>=x11-libs/gtk+-2.16
-	>=gnome-base/gconf-2.6.1
+	>=dev-libs/glib-2.18.0:2
+	>=x11-libs/gtk+-2.16:2
+	>=gnome-base/gconf-2.6.1:2
 	>=gnome-base/libgnomekbd-2.29.5
-	>=gnome-base/gnome-desktop-2.29.92
+	>=gnome-base/gnome-desktop-2.29.92:2
 
 	x11-libs/libX11
 	x11-libs/libXi
@@ -35,8 +35,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 		>=media-sound/pulseaudio-0.9.15
 		media-libs/libcanberra[gtk] )
 	!pulseaudio? (
-		>=media-libs/gstreamer-0.10.1.2
-		>=media-libs/gst-plugins-base-0.10.1.2 )"
+		>=media-libs/gstreamer-0.10.1.2:0.10
+		>=media-libs/gst-plugins-base-0.10.1.2:0.10 )"
 DEPEND="${RDEPEND}
 	!<gnome-base/gnome-control-center-2.22
 	sys-devel/gettext
