@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.6 2011/03/16 21:54:22 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.7 2011/03/16 22:23:12 suka Exp $
 
 EAPI="3"
 
@@ -190,8 +190,6 @@ DEPEND="${COMMON_DEPEND}
 	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
 		>=dev-java/ant-core-1.7 )
 	ldap? ( net-nds/openldap )"
-
-PROVIDE="virtual/ooo"
 
 pkg_setup() {
 

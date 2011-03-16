@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.2 2011/03/14 20:48:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.3 2011/03/16 22:24:08 suka Exp $
 
 EAPI="3"
 
@@ -66,7 +66,6 @@ DEPEND="${RDEPEND}
 
 PDEPEND="java? ( >=virtual/jre-1.5 )"
 
-PROVIDE="virtual/ooo"
 RESTRICT="strip binchecks"
 
 QA_EXECSTACK="usr/$(get_libdir)/libreoffice/basis3.3/program/*

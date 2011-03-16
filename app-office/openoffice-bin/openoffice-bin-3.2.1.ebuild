@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1.ebuild,v 1.4 2011/02/05 11:24:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1.ebuild,v 1.5 2011/03/16 22:26:39 suka Exp $
 
 EAPI="3"
 
@@ -65,7 +65,6 @@ RDEPEND="!app-office/openoffice
 DEPEND="${RDEPEND}
 	sys-apps/findutils"
 
-PROVIDE="virtual/ooo"
 RESTRICT="strip"
 
 QA_EXECSTACK="usr/$(get_libdir)/openoffice/basis3.2/program/*

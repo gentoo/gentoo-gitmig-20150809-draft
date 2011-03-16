@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1-r1.ebuild,v 1.8 2011/03/16 19:18:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.2.1-r1.ebuild,v 1.9 2011/03/16 22:25:27 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="3"
@@ -137,8 +137,6 @@ DEPEND="${COMMON_DEPEND}
 	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
 		>=dev-java/ant-core-1.7 )
 	ldap? ( net-nds/openldap )"
-
-PROVIDE="virtual/ooo"
 
 pkg_setup() {
 
