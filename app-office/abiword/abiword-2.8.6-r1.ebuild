@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.4 2011/03/12 19:34:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.5 2011/03/16 07:45:18 nirbheek Exp $
 
 EAPI="3"
 
@@ -23,13 +23,13 @@ IUSE="collab cups gnome grammar latex math ots openxml plugins readline spell wo
 RDEPEND="
 	>=app-text/wv-1.2
 	>=dev-libs/fribidi-0.10.4
-	>=dev-libs/glib-2.16
-	>=gnome-base/librsvg-2.16
+	>=dev-libs/glib-2.16:2
+	>=gnome-base/librsvg-2.16:2
 	>=gnome-extra/libgsf-1.14.15
 	>=media-libs/libpng-1.2
 	virtual/jpeg:0
 	>=x11-libs/cairo-1.8[X]
-	>=x11-libs/gtk+-2.14[cups?]
+	>=x11-libs/gtk+-2.14:2[cups?]
 	gnome? (
 		>=gnome-extra/gucharmap-2
 		>=x11-libs/goffice-0.8:0.8 )

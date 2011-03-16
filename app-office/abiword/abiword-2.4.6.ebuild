@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.19 2011/02/13 14:39:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.4.6.ebuild,v 1.20 2011/03/16 07:45:18 nirbheek Exp $
+
+EAPI="1"
 
 inherit alternatives eutils fdo-mime
 
@@ -15,14 +17,14 @@ IUSE="debug gnome spell xml"
 
 RDEPEND="dev-libs/popt
 		 sys-libs/zlib
-		 >=dev-libs/glib-2
-		 >=x11-libs/gtk+-2.4
+		 >=dev-libs/glib-2:2
+		 >=x11-libs/gtk+-2.4:2
 		 >=x11-libs/pango-1.2
 		 x11-libs/libXft
-		 >=gnome-base/libglade-2
-		 >=gnome-base/libgnomeprint-2.2
-		 >=gnome-base/libgnomeprintui-2.2
-		 >=media-libs/libpng-1.2
+		 >=gnome-base/libglade-2:2.0
+		 >=gnome-base/libgnomeprint-2.2:2.2
+		 >=gnome-base/libgnomeprintui-2.2:2.2
+		 >=media-libs/libpng-1.2:1.2
 		 >=media-libs/fontconfig-2.1
 		 >=app-text/wv-1
 		 >=dev-libs/fribidi-0.10.4
