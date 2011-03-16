@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.68 2011/02/11 21:29:49 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.69 2011/03/16 13:22:52 vadimk Exp $
+
+  16 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -files/general/001_all_no-desktop-icon.patch,
+  -files/general/002_all_allow-write-access-to-config.patch,
+  -files/general/004_all_do-not-build-modules.patch,
+  -files/general/005_all_do-not-overwrite-authd-file.patch,
+  -files/general/006_all_xinetd-sendsig-if-possible.patch,
+  -files/general/007_all_use-modprobe-over-insmod.patch,
+  -files/general/008_all_dhcpd-conf-location.patch,
+  -files/general/009_all_init.d-modules-warning.patch,
+  -vmware-server-1.0.10.203137.ebuild:
+  Bug 354383
 
   11 Feb 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -vmware-server-1.0.9.156507.ebuild:
