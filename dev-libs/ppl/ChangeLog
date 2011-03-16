@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.34 2011/03/05 07:10:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.35 2011/03/16 01:02:49 dirtyepic Exp $
+
+  16 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> -ppl-0.11.1.ebuild:
+  Remove broken version.
 
 *ppl-0.11.2 (05 Mar 2011)
 
