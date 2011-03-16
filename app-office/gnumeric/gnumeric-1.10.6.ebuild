@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.6.ebuild,v 1.7 2010/09/13 13:01:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.6.ebuild,v 1.8 2011/03/16 09:05:05 nirbheek Exp $
 
 EAPI="2"
 
@@ -22,25 +22,25 @@ RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
 	app-arch/bzip2
-	>=dev-libs/glib-2.12
+	>=dev-libs/glib-2.12:2
 	>=gnome-extra/libgsf-1.14.15[gnome?]
 	>=x11-libs/goffice-0.8.6:0.8
-	>=dev-libs/libxml2-2.4.12
+	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.12
 
-	>=x11-libs/gtk+-2.18
+	>=x11-libs/gtk+-2.18:2
 	x11-libs/cairo[svg]
-	>=gnome-base/libglade-2.3.6
+	>=gnome-base/libglade-2.3.6:2.0
 
 	gnome? (
-		>=gnome-base/gconf-2
+		>=gnome-base/gconf-2:2
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2
 		>=gnome-base/libbonobo-2.2
 		>=gnome-base/libbonoboui-2.2 )
 	perl? ( dev-lang/perl )
 	python? (
-		>=dev-lang/python-2
+		=dev-lang/python-2*
 		>=dev-python/pygtk-2 )
 "
 #	libgda? (

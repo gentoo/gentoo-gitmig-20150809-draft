@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.5 2011/03/12 19:42:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.6 2011/03/16 09:05:05 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -27,14 +27,14 @@ RDEPEND="sys-libs/zlib
 	>=dev-libs/glib-2.12:2
 	>=gnome-extra/libgsf-1.14.19[gnome?]
 	>=x11-libs/goffice-0.8.10:0.8
-	>=dev-libs/libxml2-2.4.12
+	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.12
 
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/cairo[svg]
 
 	gnome? (
-		>=gnome-base/gconf-2
+		>=gnome-base/gconf-2:2
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2
 		>=gnome-base/libbonobo-2.2
