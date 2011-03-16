@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.187 2011/02/27 18:03:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.188 2011/03/16 21:05:56 xarthisius Exp $
+
+  16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> sip-4.11.2.ebuild:
+  ppc64 stable wrt #349607
 
   27 Feb 2011; Raúl Porcel <armin76@gentoo.org> sip-4.11.2.ebuild:
   ia64/sparc stable wrt #349607
