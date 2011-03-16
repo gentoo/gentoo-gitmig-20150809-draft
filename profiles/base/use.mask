@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.109 2011/02/02 13:25:14 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.110 2011/03/16 21:33:28 nirbheek Exp $
 
 # Its deps are not mature enough yet
 ayatana
@@ -258,16 +258,12 @@ ruby_targets_ruby19
 ruby_targets_jruby
 ruby_targets_ree18
 
-# Nirbheek Chauhan <nirbheek@gentoo.org> (30 Dec 2009)
-# gobject-introspection USE-flag
-# introspection is not mature yet. 
-# gir-repository especially is a big pile of junk
-introspection
-
-# Jonathan Callen <abcd@gentoo.org> (23 Jun 2010)
-# x11-libs/gtk+:3 is not yet in the tree
-gtk3
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (19 oct 2010)
 # masking flags that only apply to FreeBSD
 kqueue
+
+# Nirbheek Chauahn <nirbheek@gentoo.org> (17 Mar 2011)
+# Nirbheek Chauhan <nirbheek@gentoo.org> (30 Dec 2009)
+# gobject-introspection USE-flag
+# introspection still has some kinks to iron out
+introspection
