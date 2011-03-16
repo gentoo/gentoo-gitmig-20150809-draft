@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.31 2011/03/16 16:10:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.32 2011/03/16 16:12:32 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -256,10 +256,10 @@ case ${XORG_DOC} in
 	no)
 		;;
 	always)
-		DEPEND+="${DOC_DEPEND}"
+		DEPEND+=" ${DOC_DEPEND}"
 		;;
 	*)
-		DEPEND+="${XORG_DOC}? ( ${DOC_DEPEND} )"
+		DEPEND+=" ${XORG_DOC}? ( ${DOC_DEPEND} )"
 		IUSE="${XORG_DOC}"
 		;;
 esac
