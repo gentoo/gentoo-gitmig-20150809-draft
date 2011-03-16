@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-daemon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.43 2010/12/18 21:02:32 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.44 2011/03/16 18:31:51 xarthisius Exp $
+
+  16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  commons-daemon-1.0.4.ebuild:
+  ppc/ppc64 stable wrt #348595
 
   18 Dec 2010; Kenneth Prugh <ken69267@gentoo.org>
   commons-daemon-1.0.4.ebuild:
