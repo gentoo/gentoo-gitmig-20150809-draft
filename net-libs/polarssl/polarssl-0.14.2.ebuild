@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.12.0.ebuild,v 1.5 2010/07/11 15:13:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-0.14.2.ebuild,v 1.1 2011/03/16 21:10:54 tommy Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -10,29 +12,35 @@ SRC_URI="http://polarssl.org/code/download/${P}-gpl.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples sse2"
 
-src_compile() {
-	cd "${S}/library"
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.14.0-{makefile,ldflags}.patch
+	cd library
 	if use sse2 ; then
 		sed -i '15iCFLAGS += -DHAVE_SSE2 -fPIC' Makefile
 	else
 		sed -i '15iCFLAGS += -fPIC' Makefile
 	fi
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	emake libpolarssl.so || die "emake failed"
+}
+
+src_compile() {
+	#cd library
+	emake -C library libpolarssl.so || die "emake failed"
 
 	if use examples ; then
-		cd "${S}"/programs
-		emake all || die "emake failed"
+		#cd programs
+		emake -C programs all || die "emake failed"
 	fi
 }
 
 src_test() {
-	cd "${S}"/programs
+	cd programs
 	emake test/selftest || die "emake selftest failed"
 	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:../library" ./test/selftest || die "selftest failed"
+	cd "${S}"
+	emake check || die
 }
 
 src_install() {
