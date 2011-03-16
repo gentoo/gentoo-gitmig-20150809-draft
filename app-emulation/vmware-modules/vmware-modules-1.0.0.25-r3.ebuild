@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.25-r3.ebuild,v 1.3 2011/02/17 21:04:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.25-r3.ebuild,v 1.4 2011/03/16 17:36:57 vadimk Exp $
 
 EAPI="2"
 
@@ -63,7 +63,7 @@ src_prepare() {
 	epatch "${FILESDIR}/apic.patch"
 	kernel_is ge 2 6 35 && epatch "${FILESDIR}/${PV}-sk_sleep.patch"
 	kernel_is ge 2 6 36 && epatch "${FILESDIR}/${PV}-unlocked_ioctl.patch"
-	kernel_is 2 6 37 && epatch "${FILESDIR}/${PV}-sema.patch"
+	kernel_is ge 2 6 37 && epatch "${FILESDIR}/${PV}-sema.patch"
 
 	sed -i -e 's/make/$(MAKE)/g' {vmmon,vsock,vmblock,vmnet,vmci}-only/Makefile\
 		|| die "Sed failed."
