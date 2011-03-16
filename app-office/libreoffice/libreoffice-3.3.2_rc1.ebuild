@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2_rc1.ebuild,v 1.1 2011/03/13 19:31:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2_rc1.ebuild,v 1.2 2011/03/16 21:54:22 suka Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ CMAKE_REQUIRED="never"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 
-inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base multilib pax-utils python toolchain-funcs
+inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic gnome2-utils java-pkg-opt-2 kde4-base multilib pax-utils python toolchain-funcs
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl templates"
 
@@ -266,8 +266,7 @@ src_prepare() {
 		die
 	fi
 
-	#Some fixes for our patchset
-	cd "${S}"
+	# Some fixes for our patchset
 	epatch "${FILESDIR}/gentoo-${PV}.diff"
 	epatch "${FILESDIR}/gentoo-pythonpath.diff"
 	epatch "${FILESDIR}/env_log.diff"
@@ -360,9 +359,6 @@ src_configure() {
 		replace-flags "-fomit-frame-pointer" "-momit-leaf-frame-pointer"
 	fi
 
-	# Build with NVidia cards breaks otherwise
-	use opengl && append-flags "-DGL_GLEXT_PROTOTYPES"
-
 	# Now for our optimization flags ...
 	export ARCH_FLAGS="${CXXFLAGS}"
 	use debug || export LINKFLAGSOPTIMIZE="${LDFLAGS}"
@@ -432,10 +428,19 @@ src_install() {
 
 }
 
+pkg_preinst() {
+
+	{ use gtk || use gnome; } && gnome2_icon_savelist
+
+}
+
 pkg_postinst() {
 
+	# Cache updates
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	{ use gtk || use gnome; } && gnome2_icon_cache_update
+
 	BASHCOMPLETION_NAME=libreoffice && bash-completion_pkg_postinst
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
@@ -444,5 +449,12 @@ pkg_postinst() {
 	use java && "${EPREFIX}"/usr/$(get_libdir)/${PN}/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null
 
 	kde4-base_pkg_postinst
+
+}
+
+pkg_postrm() {
+
+	fdo-mime_desktop_database_update
+	{ use gtk || use gnome; } && gnome2_icon_cache_update
 
 }
