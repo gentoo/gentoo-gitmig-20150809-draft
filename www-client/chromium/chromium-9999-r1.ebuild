@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.8 2011/03/13 19:39:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.9 2011/03/16 16:25:03 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils fdo-mime flag-o-matic multilib pax-utils portability python \
-	subversion toolchain-funcs versionator virtualx
+inherit eutils fdo-mime flag-o-matic gnome2-utils multilib pax-utils \
+	portability python subversion toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -330,9 +330,12 @@ src_install() {
 	dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
 	dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
 
-	# Install icon and desktop entry.
-	newicon chrome/app/theme/chromium/product_logo_48.png \
-		chromium-browser${SUFFIX}.png || die
+	# Install icons and desktop entry.
+	for SIZE in 16 22 24 32 48 64 128 256 ; do
+		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
+		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
+			chromium-browser${SUFFIX}.png || die
+	done
 	make_desktop_entry chromium-browser${SUFFIX} "Chromium ${SLOT}" chromium-browser${SUFFIX} \
 		"Network;WebBrowser" "MimeType=text/html;text/xml;application/xhtml+xml;"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop || die
@@ -347,8 +350,13 @@ src_install() {
 	fi
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 
 	# For more info see bugs #292201 and bug #352263.
 	elog "Depending on your desktop environment, you may need"
@@ -370,4 +378,8 @@ pkg_postinst() {
 	elog "	mv \${HOME}/.config/chromium \${HOME}/.config/chromium-live"
 	elog "To run, execute chromium-live or chromium-browser-live."
 	elog
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
