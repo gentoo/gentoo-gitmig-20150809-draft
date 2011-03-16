@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.1 2011/01/23 22:32:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.2 2011/03/16 10:50:05 eras Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,6 @@ IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite mailwrapper \
 	fam web webmail"
 
 PROVIDE="virtual/mta
-	 virtual/mda
 	 virtual/imapd"
 
 DEPEND="

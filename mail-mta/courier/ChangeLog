@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.135 2011/01/23 22:32:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.136 2011/03/16 10:50:05 eras Exp $
+
+  16 Mar 2011; Eray Aslan <eras@gentoo.org> courier-0.59.0.ebuild,
+  courier-0.62.2.ebuild, courier-0.64.1.ebuild, courier-0.65.2.ebuild,
+  courier-0.65.2-r1.ebuild, metadata.xml:
+  change to new style virtual/mda. add net-mail to metadata.xml
 
 *courier-0.65.2-r1 (23 Jan 2011)
 
