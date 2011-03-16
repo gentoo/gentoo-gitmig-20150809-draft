@@ -1,0 +1,10 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/files/munin-node_conf.d_1.4.5-r2,v 1.1 2011/03/16 06:29:51 robbat2 Exp $
+
+# Set to the nice level for daemon
+NICE_LEVEL=1
+PIDFILE=$(/usr/bin/awk '/^pid_file/{s=$2}END{print s}' /etc/munin/munin-node.conf)
+echo munin pid $PIDFILE
+
+# vim: filetype=gentoo-conf-d:

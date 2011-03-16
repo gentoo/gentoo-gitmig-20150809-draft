@@ -18,5 +18,6 @@
 	</longdescription>
 	<use>
 		<flag name='irc'>installs deps for monitoring IRC</flag>
+		<flag name='memcached'>installs deps for monitoring memcached</flag>
 	</use>
 </pkgmetadata>
