@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.31 2011/02/14 19:49:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.32 2011/03/16 18:43:51 tomka Exp $
+
+  16 Mar 2011; Thomas Kahle <tomka@gentoo.org> anki-1.2.6.ebuild:
+  x86 stable per bug 359199
 
   14 Feb 2011; Thomas Kahle <tomka@gentoo.org> metadata.xml:
   Adding myself as a maintainer.
