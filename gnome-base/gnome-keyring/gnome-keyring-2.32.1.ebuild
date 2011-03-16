@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.32.1.ebuild,v 1.7 2011/03/12 16:26:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.32.1.ebuild,v 1.8 2011/03/16 10:38:58 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ IUSE="debug doc pam test"
 
 RDEPEND=">=dev-libs/glib-2.25:2
 	>=x11-libs/gtk+-2.20:2
-	gnome-base/gconf
+	gnome-base/gconf:2
 	>=sys-apps/dbus-1.0
 	pam? ( virtual/pam )
 	>=dev-libs/libgcrypt-1.2.2
