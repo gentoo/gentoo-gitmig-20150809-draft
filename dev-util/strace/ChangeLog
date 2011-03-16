@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.158 2010/11/21 23:56:01 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.159 2011/03/16 01:11:53 vapier Exp $
+
+*strace-4.6 (16 Mar 2011)
+
+  16 Mar 2011; Mike Frysinger <vapier@gentoo.org> +strace-4.6.ebuild:
+  Version bump.
 
   21 Nov 2010; Mike Frysinger <vapier@gentoo.org> strace-4.5.20.ebuild:
   Mark alpha/ia64/s390/sparc/sh stable #343255.
