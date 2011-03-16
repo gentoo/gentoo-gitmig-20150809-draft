@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.9 2011/02/08 16:53:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-99999.ebuild,v 1.10 2011/03/16 14:13:01 sping Exp $
 
-# genkernel-9999        -> latest Git master
-# genkernel-99999       -> latest Git experimental
+# genkernel-9999        -> latest Git branch "stable"
+# genkernel-99999       -> latest Git branch "master" (upcoming 4.x using sys-kernel/dracut)
 # genkernel-VERSION     -> normal genkernel release
 
 VERSION_BUSYBOX='1.18.1'
@@ -30,7 +30,7 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 		${RH_HOME}/dm/device-mapper.${VERSION_DMAP}.tgz
 		${RH_HOME}/dm/old/device-mapper.${VERSION_DMAP}.tgz
 		${BB_HOME}/busybox-${VERSION_BUSYBOX}.tar.bz2
-		http://www.open-iscsi.org/bits/open-iscsi-${VERSION_ISCSI}.tar.gz
+		mirror://kernel/linux/kernel/people/mnc/open-iscsi/releases/open-iscsi-${VERSION_ISCSI}.tar.gz
 		mirror://sourceforge/e2fsprogs/e2fsprogs-${VERSION_E2FSPROGS}.tar.gz
 		mirror://sourceforge/fuse/fuse-${VERSION_FUSE}.tar.gz
 		http://podgorny.cz/unionfs-fuse/releases/unionfs-fuse-${VERSION_UNIONFS_FUSE}.tar.bz2
@@ -39,7 +39,7 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 if [[ ${PV} == 9999* ]]
 then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/genkernel.git"
-	[[ ${PV} == 99999* ]] && EGIT_BRANCH=experimental
+	[[ ${PV} == 99999* ]] && EGIT_BRANCH=master || EGIT_BRANCH=stable
 	inherit git bash-completion eutils
 	S="${WORKDIR}/${PN}"
 	SRC_URI="${COMMON_URI}"
