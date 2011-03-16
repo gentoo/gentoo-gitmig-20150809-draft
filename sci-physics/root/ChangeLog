@@ -1,6 +1,17 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.80 2011/03/02 21:12:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.81 2011/03/16 21:07:15 bicatali Exp $
+
+*root-5.28.00b (16 Mar 2011)
+
+  16 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> +root-5.28.00b.ebuild,
+  +files/root-5.28.00b-asneeded.patch, +files/root-5.28.00b-glibc212.patch,
+  +files/root-5.28.00b-nobyte-compile.patch,
+  +files/root-5.28.00b-prop-ldflags.patch, +files/root-5.28.00b-unuran.patch,
+  metadata.xml:
+  Version bump. Now builds with unbundled libafterimage (bug #252918), gl2ps.
+  Added a few flags (fits for cfitsio, llvm for cling support). More ebuild
+  cleaning.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> root-5.26.00-r2.ebuild,
   root-5.26.00e-r1.ebuild:
