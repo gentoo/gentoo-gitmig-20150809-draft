@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.2 2011/03/15 11:18:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.3 2011/03/16 09:43:31 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
@@ -132,7 +132,8 @@ src_test() {
 }
 
 src_install() {
-	gnome2_src_install GNC_DOC_INSTALL_DIR=/usr/share/doc/${PF}
+	# Parallel installation fails from time to time, bug #359123
+	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_install GNC_DOC_INSTALL_DIR=/usr/share/doc/${PF}
 
 	rm -rf "${ED}"/usr/share/doc/${PF}/{examples/,COPYING,INSTALL,*win32-bin.txt,projects.html}
 #	prepalldocs
