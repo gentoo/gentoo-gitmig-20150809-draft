@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.57 2010/10/06 20:35:22 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.58 2011/03/16 08:55:24 nirbheek Exp $
+
+  16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> planner-0.14.4.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   06 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> planner-0.14.4.ebuild:
   Do not install *.la files, they are not needed by planner itself and
