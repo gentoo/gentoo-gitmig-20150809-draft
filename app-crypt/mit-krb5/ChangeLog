@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.264 2011/03/16 09:38:52 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.265 2011/03/16 17:47:50 xarthisius Exp $
+
+  16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> mit-krb5-1.8.3-r4.ebuild:
+  ppc/ppc64 stable wrt #359129
 
 *mit-krb5-1.9-r2 (16 Mar 2011)
 *mit-krb5-1.8.3-r4 (16 Mar 2011)
