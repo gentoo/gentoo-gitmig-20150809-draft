@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.30.2.1.ebuild,v 1.9 2011/02/26 19:17:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.30.2.1.ebuild,v 1.10 2011/03/16 10:18:55 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,15 +16,15 @@ IUSE="debug devhelp doc glade +sourceview subversion +symbol-db test"
 
 # FIXME: Anjuta has some CRITICAL and WARNINGS messages, that would be nice to fix them and/or report on upstream
 # FIXME: vala support is automagic
-RDEPEND=">=dev-libs/glib-2.18
-	>=x11-libs/gtk+-2.17.10
+RDEPEND=">=dev-libs/glib-2.18:2
+	>=x11-libs/gtk+-2.17.10:2
 	>=dev-libs/dbus-glib-0.70
-	>=gnome-base/orbit-2.6
-	>=gnome-base/gconf-2.12
-	>=x11-libs/vte-0.13.1
-	>=dev-libs/libxml2-2.4.23
-	>=dev-libs/gdl-2.27.1
-	>=dev-libs/libunique-1
+	>=gnome-base/orbit-2.6:2
+	>=gnome-base/gconf-2.12:2
+	>=x11-libs/vte-0.13.1:0
+	>=dev-libs/libxml2-2.4.23:2
+	>=dev-libs/gdl-2.27.1:1
+	>=dev-libs/libunique-1:1
 
 	dev-libs/libxslt
 	>=dev-lang/perl-5
@@ -33,14 +33,14 @@ RDEPEND=">=dev-libs/glib-2.18
 
 	devhelp? (
 		>=dev-util/devhelp-0.22
-		>=net-libs/webkit-gtk-1 )
-	glade? ( >=dev-util/glade-3.6.0 )
+		net-libs/webkit-gtk:2 )
+	glade? ( >=dev-util/glade-3.6.0:3 )
 	subversion? (
 		>=dev-vcs/subversion-1.5.0
 		>=net-libs/neon-0.28.2
 		>=dev-libs/apr-1
 		>=dev-libs/apr-util-1 )
-	sourceview? ( >=x11-libs/gtksourceview-2.9.7 )
+	sourceview? ( >=x11-libs/gtksourceview-2.9.7:2.0 )
 	symbol-db? (
 		gnome-extra/libgda:4
 		dev-util/ctags )"

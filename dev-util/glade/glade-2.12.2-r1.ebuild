@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.2-r1.ebuild,v 1.7 2009/06/09 13:22:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.2-r1.ebuild,v 1.8 2011/03/16 10:23:48 nirbheek Exp $
+
+EAPI="2"
 
 inherit gnome2
 
@@ -12,8 +14,8 @@ SLOT="2"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="accessibility gnome"
 
-RDEPEND=">=dev-libs/libxml2-2.4.1
-		 >=x11-libs/gtk+-2.8
+RDEPEND=">=dev-libs/libxml2-2.4.1:2
+		 >=x11-libs/gtk+-2.8:2
 		 gnome? (
 					>=gnome-base/libgnomeui-2.9
 					>=gnome-base/libgnomecanvas-2
