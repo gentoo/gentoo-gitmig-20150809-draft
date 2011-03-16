@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/net-ssh-gateway-1.0.1-r1.ebuild,v 1.5 2010/12/21 19:19:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/net-ssh-gateway-1.0.1-r1.ebuild,v 1.6 2011/03/16 17:49:39 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 
