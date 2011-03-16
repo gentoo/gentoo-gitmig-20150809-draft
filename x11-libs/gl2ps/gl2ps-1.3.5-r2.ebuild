@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.5-r1.ebuild,v 1.5 2011/02/12 17:29:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.5-r2.ebuild,v 1.1 2011/03/16 20:31:08 bicatali Exp $
 
 EAPI="3"
 inherit cmake-utils multilib
@@ -17,30 +17,24 @@ IUSE="doc png zlib"
 DEPEND="media-libs/freeglut
 	png? ( media-libs/libpng )
 	zlib? ( sys-libs/zlib )
-	doc? (
-		dev-tex/tth
-		dev-texlive/texlive-latex
-		)"
+	doc? ( dev-tex/tth dev-texlive/texlive-latex )"
 
-S=${WORKDIR}/${P}-source
+S="${WORKDIR}/${P}-source"
 
-PATCHES=( "${FILESDIR}/${P}-CMakeLists.patch" )
+PATCHES=( "${FILESDIR}"/${P}-CMakeLists.patch "${FILESDIR}"/${P}-soversion.patch )
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_has png PNG)
-		$(cmake-utils_use_has zlib ZLIB)
-		$(cmake-utils_use_has doc DOC)"
+	local mycmakeargs=(
+		$(cmake-utils_use_enable png PNG)
+		$(cmake-utils_use_enable zlib ZLIB)
+		$(cmake-utils_use_enable doc DOC)
+	)
 	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
-	prepalldocs
-
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		# CMake produces an invalid dylib here, but I have no clue how to fix it
-		# hmm, it's also unversioned :(
 		install_name_tool \
 			-id "${EPREFIX}"/usr/$(get_libdir)/libgl2ps.dylib \
 			"${D%/}${EPREFIX}"/usr/$(get_libdir)/libgl2ps.dylib || die
