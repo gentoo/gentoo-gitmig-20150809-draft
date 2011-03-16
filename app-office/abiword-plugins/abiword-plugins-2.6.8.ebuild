@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.8.ebuild,v 1.18 2011/03/16 07:55:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.8.ebuild,v 1.19 2011/03/16 08:56:59 nirbheek Exp $
 
 EAPI=2
 
@@ -22,16 +22,16 @@ IUSE="cxx debug gnome grammar jabber jpeg libgda math ots pdf readline svg thesa
 RDEPEND="=app-office/abiword-${PV}*
 	>=media-libs/fontconfig-1
 	>=dev-libs/fribidi-0.10.4
-	>=dev-libs/glib-2
-	>=x11-libs/gtk+-2
+	>=dev-libs/glib-2:2
+	>=x11-libs/gtk+-2:2
 	x11-libs/libXft
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2:2.0
 	>=gnome-extra/libgsf-1.14.4
 	cxx? ( >=dev-libs/boost-1.33.1 )
 	gnome? ( >=x11-libs/goffice-0.4:0.4[gnome] )
 	grammar? ( >=dev-libs/link-grammar-4.2.2 )
 	!alpha? ( !ia64? ( jabber? (
-		>=dev-libs/libxml2-2.4
+		>=dev-libs/libxml2-2.4:2
 		>=net-libs/loudmouth-1.0.1 ) ) )
 	jpeg?  ( virtual/jpeg:0 )
 	libgda? (
