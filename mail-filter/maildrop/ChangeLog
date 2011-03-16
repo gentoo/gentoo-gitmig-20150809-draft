@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.103 2010/10/05 08:41:06 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.104 2011/03/16 10:37:53 eras Exp $
+
+  16 Mar 2011; Eray Aslan <eras@gentoo.org> maildrop-2.4.2.ebuild,
+  maildrop-2.5.1.ebuild:
+  change to new style virtual/mda
 
 *maildrop-2.5.1 (05 Oct 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.4.2.ebuild,v 1.7 2010/03/11 19:16:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.4.2.ebuild,v 1.8 2011/03/16 10:37:53 eras Exp $
 
 EAPI=2
 
@@ -34,7 +34,6 @@ DEPEND="!mail-mta/courier
 	)"
 RDEPEND="${DEPEND}
 	dev-lang/perl"
-PROVIDE="virtual/mda"
 
 S=${WORKDIR}/${P%%_pre}
 
