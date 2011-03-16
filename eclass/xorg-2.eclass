@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.29 2011/03/15 12:32:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.30 2011/03/16 09:29:42 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -215,6 +215,7 @@ fi
 if has doc ${IUSE//+}; then
 	DEPEND+="
 		doc? (
+			app-text/asciidoc
 			app-text/xmlto
 			app-doc/doxygen
 			app-text/docbook-xml-dtd:4.1
