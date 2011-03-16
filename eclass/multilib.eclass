@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.84 2011/03/10 05:01:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.85 2011/03/16 20:09:10 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -237,13 +237,14 @@ get_all_abis() {
 # those that might not be touched by the current ebuild and always includes
 # "lib".
 get_all_libdirs() {
-	local libdirs="lib"
+	local libdirs
 	local abi
 	local dir
 
 	for abi in ${MULTILIB_ABIS}; do
-		[ "$(get_abi_LIBDIR ${abi})" != "lib" ] && libdirs="${libdirs} $(get_abi_LIBDIR ${abi})"
+		libdirs+=" $(get_abi_LIBDIR ${abi})"
 	done
+	[[ " ${libdirs} " != *" lib "* ]] && libdirs+=" lib"
 
 	echo "${libdirs}"
 }
