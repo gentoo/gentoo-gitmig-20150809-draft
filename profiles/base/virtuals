@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.130 2011/03/16 11:10:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.131 2011/03/16 12:49:21 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -9,7 +9,6 @@
 # KEEP THIS FILE SORTED ALPHABETICALLY OR RISK WRATH
 
 virtual/alsa				sys-kernel/gentoo-sources
-virtual/antivirus			app-antivirus/clamav
 virtual/aspell-dict			app-dicts/aspell-en
 virtual/blackbox			x11-wm/blackbox
 virtual/cron				sys-process/vixie-cron
