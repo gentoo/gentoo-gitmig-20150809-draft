@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.30.3.ebuild,v 1.10 2010/10/17 15:28:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.30.3.ebuild,v 1.11 2011/03/16 10:10:53 nirbheek Exp $
 
 EAPI="2"
 
@@ -21,15 +21,15 @@ IUSE="dbus debug djvu doc dvi gnome gnome-keyring nautilus t1lib tiff"
 #	introspection? ( >=dev-libs/gobject-introspection-0.6 )
 RDEPEND="
 	>=app-text/libspectre-0.2.0
-	>=dev-libs/glib-2.18.0
-	>=dev-libs/libxml2-2.5
-	>=x11-libs/gtk+-2.14
+	>=dev-libs/glib-2.18.0:2
+	>=dev-libs/libxml2-2.5:2
+	>=x11-libs/gtk+-2.14:2
 	>=x11-libs/libSM-1
 	|| (
 		>=x11-themes/gnome-icon-theme-2.17.1
 		>=x11-themes/hicolor-icon-theme-0.10 )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	gnome? ( >=gnome-base/gconf-2 )
+	gnome? ( >=gnome-base/gconf-2:2 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.22.0 )
 	nautilus? ( >=gnome-base/nautilus-2.10 )
 	>=app-text/poppler-0.12.3-r3[cairo]

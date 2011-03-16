@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r1.ebuild,v 1.4 2011/03/12 19:57:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r1.ebuild,v 1.5 2011/03/16 10:10:53 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -21,7 +21,7 @@ IUSE="dbus debug djvu doc dvi gnome gnome-keyring +introspection nautilus t1lib 
 RDEPEND="
 	>=app-text/libspectre-0.2.0
 	>=dev-libs/glib-2.25.11:2
-	>=dev-libs/libxml2-2.5
+	>=dev-libs/libxml2-2.5:2
 	>=x11-libs/gtk+-2.21.5:2[introspection?]
 	>=x11-libs/libSM-1
 	|| (
@@ -33,7 +33,7 @@ RDEPEND="
 	dvi? (
 		virtual/tex-base
 		t1lib? ( >=media-libs/t1lib-5.0.0 ) )
-	gnome? ( >=gnome-base/gconf-2[introspection?] )
+	gnome? ( >=gnome-base/gconf-2:2[introspection?] )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.22.0 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6 )
 	nautilus? ( >=gnome-base/nautilus-2.10[introspection?] )
