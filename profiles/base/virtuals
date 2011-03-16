@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.132 2011/03/16 13:54:55 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.133 2011/03/16 22:09:36 suka Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -28,7 +28,6 @@ virtual/mailx				mail-client/mailx
 virtual/man				sys-apps/man
 virtual/modutils			sys-apps/module-init-tools
 virtual/mta				mail-mta/ssmtp
-virtual/ooo				app-office/openoffice-bin
 # Only have this for >=pam-0.78, as we want to make use of the 'include'
 # directive to phase out pam_stack.
 virtual/pam				>=sys-libs/pam-0.78
