@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8-r2.ebuild,v 1.6 2011/01/30 18:35:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8-r2.ebuild,v 1.7 2011/03/16 18:33:46 xarthisius Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.x.org/contrib/utilities/${P}.tar.Z"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="alpha amd64 hppa ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
