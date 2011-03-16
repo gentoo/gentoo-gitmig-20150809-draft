@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.124 2011/01/30 12:15:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.125 2011/03/16 15:30:35 ulm Exp $
+
+*org-mode-7.5 (16 Mar 2011)
+
+  16 Mar 2011; Ulrich Mueller <ulm@gentoo.org> +org-mode-7.5.ebuild:
+  Version bump. Replace D by ED in order to prepare for prefix, bug 357733.
 
 *org-mode-7.4-r1 (30 Jan 2011)
 
