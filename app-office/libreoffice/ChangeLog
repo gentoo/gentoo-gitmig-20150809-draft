@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.18 2011/03/13 19:31:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.19 2011/03/16 11:09:31 hwoarang Exp $
+
+  16 Mar 2011; Markos Chandras <hwoarang@gentoo.org> libreoffice-3.3.1.ebuild:
+  Stable on amd64 wrt bug #358907
 
 *libreoffice-3.3.2_rc1 (13 Mar 2011)
 
