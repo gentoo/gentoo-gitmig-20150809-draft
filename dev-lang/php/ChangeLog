@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.474 2011/03/13 09:48:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.475 2011/03/16 16:50:42 olemarkus Exp $
+
+  16 Mar 2011; <olemarkus@gentoo.org> php-5.3.6_rc3.ebuild:
+  Reordered the SAPIs so that embed is always the first sapi to be built if
+  selected. Fixes #358687
 
   13 Mar 2011; <olemarkus@gentoo.org> +files/eblits/src_prepare-v3.eblit,
   php-5.3.6_rc3.ebuild:
