@@ -8,4 +8,7 @@
   <maintainer>
     <email>rafaelmartins@gentoo.org</email>
   </maintainer>
+  <use>
+    <flag name="libevent">Use libevent for event handling</flag>
+  </use>
 </pkgmetadata>
