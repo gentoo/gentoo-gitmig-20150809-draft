@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05-r1.ebuild,v 1.4 2010/10/19 05:30:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05-r1.ebuild,v 1.5 2011/03/16 10:53:40 eras Exp $
 
 inherit eutils toolchain-funcs fixheadtails
 
@@ -17,8 +17,7 @@ IUSE=""
 
 DEPEND="sys-apps/groff"
 RDEPEND="!virtual/mta"
-PROVIDE="virtual/mta
-	 virtual/mda"
+PROVIDE="virtual/mta"
 
 S=${WORKDIR}/mini-qmail-kit-${MINI_VER}
 

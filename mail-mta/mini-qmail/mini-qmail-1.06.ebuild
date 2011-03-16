@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.1 2008/04/06 18:19:23 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.2 2011/03/16 10:53:40 eras Exp $
 
 GENQMAIL_PV=20080406
 
@@ -26,10 +26,7 @@ RDEPEND="
 	!mailwrapper? ( !virtual/mta )
 	${DEPEND}
 "
-PROVIDE="
-	virtual/mta
-	virtual/mda
-"
+PROVIDE="virtual/mta"
 
 S="${WORKDIR}"/netqmail-${PV}
 
