@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6.ebuild,v 1.14 2011/02/09 21:06:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6.ebuild,v 1.15 2011/03/16 10:12:25 nirbheek Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="dbus doc +introspection"
 
-RDEPEND=">=dev-libs/glib-2.12
-	>=x11-libs/gtk+-2.11[introspection?]
+RDEPEND=">=dev-libs/glib-2.12:2
+	>=x11-libs/gtk+-2.11:2[introspection?]
 	x11-libs/libX11
 	dbus? ( >=dev-libs/dbus-glib-0.70 )"
 DEPEND="${RDEPEND}

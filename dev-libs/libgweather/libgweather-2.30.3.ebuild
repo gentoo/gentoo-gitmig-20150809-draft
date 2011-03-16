@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.3.ebuild,v 1.7 2011/01/30 18:01:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.3.ebuild,v 1.8 2011/03/16 10:12:05 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -19,10 +19,10 @@ IUSE="python doc"
 # libsoup-gnome is to be used because libsoup[gnome] might not
 # get libsoup-gnome installed by the time ${P} is built
 RDEPEND=">=x11-libs/gtk+-2.11:2
-	>=dev-libs/glib-2.13
-	>=gnome-base/gconf-2.8
+	>=dev-libs/glib-2.13:2
+	>=gnome-base/gconf-2.8:2
 	>=net-libs/libsoup-gnome-2.25.1:2.4
-	>=dev-libs/libxml2-2.6.0
+	>=dev-libs/libxml2-2.6.0:2
 	>=sys-libs/timezone-data-2010k
 	python? (
 		>=dev-python/pygobject-2

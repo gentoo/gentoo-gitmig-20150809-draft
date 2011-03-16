@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.25 2011/03/12 15:47:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.26 2011/03/16 10:11:45 nirbheek Exp $
+
+  16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> libgdata-0.6.4.ebuild,
+  libgdata-0.6.5.ebuild, libgdata-0.6.6.ebuild, libgdata-0.8.0.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> libgdata-0.8.0.ebuild:
   alpha/arm/ia64/sparc stable wrt #353436
