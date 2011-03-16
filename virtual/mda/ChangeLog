@@ -1,0 +1,9 @@
+# ChangeLog for virtual/mda
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mda/ChangeLog,v 1.1 2011/03/16 10:28:57 eras Exp $
+
+*mda-0 (16 Mar 2011)
+
+  16 Mar 2011; Eray Aslan <eras@gentoo.org> +mda-0.ebuild, +metadata.xml:
+  initial commit
+
