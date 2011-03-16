@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007e.ebuild,v 1.8 2009/09/23 19:14:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007e.ebuild,v 1.9 2011/03/16 13:52:02 eras Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,9 +17,8 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="ipv6 ssl kerberos clearpasswd"
 
 PROVIDE="virtual/imapd"
-PROVIDE="${PROVIDE} virtual/imap-c-client"
 DEPEND="!net-mail/vimap
-	!virtual/imap-c-client
+	!net-libs/c-client
 	>=sys-libs/pam-0.72
 	>=net-mail/mailbase-0.00-r8
 	ssl? ( dev-libs/openssl )
