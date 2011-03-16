@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.0-r1.ebuild,v 1.4 2011/03/12 16:05:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.0-r1.ebuild,v 1.5 2011/03/16 10:24:45 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -24,8 +24,8 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	>=x11-libs/gtk+-2.14:2
 	>=dev-libs/dbus-glib-0.74
 	>=sys-apps/dbus-1
-	>=gnome-base/orbit-2.4
-	>=dev-libs/libxml2-2
+	>=gnome-base/orbit-2.4:2
+	>=dev-libs/libxml2-2:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	ldap? ( net-nds/openldap )
 	policykit? ( sys-auth/polkit )"
