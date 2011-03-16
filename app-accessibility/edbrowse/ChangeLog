@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/edbrowse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/ChangeLog,v 1.1 2011/02/23 23:20:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/ChangeLog,v 1.2 2011/03/16 04:11:22 williamh Exp $
+
+  16 Mar 2011; William Hubbs <williamh@gentoo.org> edbrowse-3.4.6.ebuild:
+  fix dependency on dev-lang/spidermonkey for #359035.
+  Thanks to Chris Brannon.
 
 *edbrowse-3.4.6 (23 Feb 2011)
 
