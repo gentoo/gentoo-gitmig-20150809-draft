@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.3.1.ebuild,v 1.5 2011/01/28 15:52:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.3.1.ebuild,v 1.6 2011/03/16 09:55:38 scarabeus Exp $
 
 EAPI=3
 KDE_LINGUAS="bg ca cs da de el en_GB es et fi fr gl hu it ja nb nds nl pa pl pt
@@ -23,7 +23,8 @@ IUSE="+crypt debug"
 DEPEND="x11-libs/libXScrnSaver
 	$(add_kdebase_dep kdepimlibs)
 	crypt? ( app-crypt/qca:2 )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	crypt? ( app-crypt/qca-ossl )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
