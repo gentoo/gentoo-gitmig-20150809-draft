@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12562 2011/03/15 16:56:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12563 2011/03/16 01:21:56 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -111,13 +111,6 @@ app-emacs/htmlfontify
 # a long time. Nothing in the tree needs this.
 dev-ruby/ruby-gnomeprint
 dev-ruby/ruby-gnomeprintui
-
-# Ryan Hill <dirtyepic@gentoo.org> (12 Mar 2011)
-# Mask net-p2p/bittorrent for removal 20110412 (#336166)
-# Dead upstream. Requires wxpython-2.6 which is being removed.
-# Doesn't build with python-2.6.  Doesn't start.
-# (temp unmasked for bug #358485)
-#net-p2p/bittorrent
 
 # Torsten Veller <tove@gentoo.org> (11 Mar 2011)
 # Mask deprecated dev-perl/gnome2-print for removal (#358423)
