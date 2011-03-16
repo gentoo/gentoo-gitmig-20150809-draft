@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1.ebuild,v 1.9 2011/03/16 10:32:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1.ebuild,v 1.10 2011/03/16 19:23:41 nirbheek Exp $
 
 EAPI="3"
 
@@ -21,7 +21,6 @@ S=${WORKDIR}
 # FIXME: bump gstreamer to 0.10.26
 # XXX: lower gdm to 2.20 since we still keep 2.28 masked
 # Lower epiphany to 2.26 since 2.28 is not ready to go stable
-# ppc64 and epiphany, bug 323857
 RDEPEND="
 	>=dev-libs/glib-2.26.1:2
 	>=x11-libs/gtk+-2.22.1-r1:2
@@ -73,7 +72,7 @@ RDEPEND="
 
 	>=media-gfx/eog-2.32.1:1
 
-	!ppc64? ( >=www-client/epiphany-2.30.6 )
+	>=www-client/epiphany-2.30.6
 	>=app-arch/file-roller-2.32.1
 	>=gnome-extra/gcalctool-5.32.1
 

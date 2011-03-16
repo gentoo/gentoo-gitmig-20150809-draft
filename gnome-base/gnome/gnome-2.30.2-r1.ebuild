@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2-r1.ebuild,v 1.9 2011/03/16 10:32:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2-r1.ebuild,v 1.10 2011/03/16 19:23:41 nirbheek Exp $
 
 EAPI="2"
 
@@ -22,7 +22,6 @@ S=${WORKDIR}
 # XXX: lower gdm to 2.20 since we still keep 2.28 masked
 # Lower epiphany to 2.26 since 2.28 is not ready to go stable
 # Lower ekiga since 3.x cannot be stabilized yet as talked with voip herd
-# ppc64 and epiphany, bug 323857
 RDEPEND="
 	>=dev-libs/glib-2.24.2:2
 	>=x11-libs/gtk+-2.20.1:2
@@ -74,7 +73,7 @@ RDEPEND="
 
 	>=media-gfx/eog-2.30.2
 
-	!ppc64? ( >=www-client/epiphany-2.30.6 )
+	>=www-client/epiphany-2.30.6
 	>=app-arch/file-roller-2.30.2
 	>=gnome-extra/gcalctool-5.28.2
 
