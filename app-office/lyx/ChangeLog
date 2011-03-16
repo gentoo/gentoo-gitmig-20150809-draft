@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.221 2011/02/14 13:45:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.222 2011/03/16 20:41:12 xarthisius Exp $
+
+  16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> lyx-1.6.8.ebuild:
+  ppc/ppc64 stable wrt #349516
 
 *lyx-1.6.9 (14 Feb 2011)
 
