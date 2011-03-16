@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.14 2011/03/02 20:04:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.15 2011/03/16 10:10:11 jlec Exp $
+
+*gts-20100321-r2 (16 Mar 2011)
+
+  16 Mar 2011; Justin Lecher <jlec@gentoo.org> +gts-20100321-r2.ebuild:
+  Rename /usr/bin/merge -> /usr/bin/gts-merge, #358963
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gts-20081607.ebuild,
   gts-20090909.ebuild, gts-20100321-r1.ebuild:
