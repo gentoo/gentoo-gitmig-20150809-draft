@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.241 2011/03/15 03:39:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.242 2011/03/16 10:44:27 eras Exp $
+
+  16 Mar 2011; Eray Aslan <eras@gentoo.org> -postfix-2.7.1.ebuild,
+  postfix-2.7.2.ebuild, postfix-2.7.3.ebuild, -postfix-2.8.0-r1.ebuild,
+  postfix-2.8.1.ebuild:
+  change to new style virtual/mda. remove old.
 
   15 Mar 2011; Tim Harder <radhermit@gentoo.org> postfix-2.7.3.ebuild,
   postfix-2.8.1.ebuild:
