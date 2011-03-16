@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.549 2011/03/16 19:18:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.550 2011/03/16 21:07:29 suka Exp $
+
+  16 Mar 2011; Andreas Proschofsky <suka@gentoo.org> -openoffice-3.2.0.ebuild,
+  -files/gentoo-3.2.0.diff, -files/boost-undefined-references.diff,
+  -files/gcc45-buildfix.diff, -files/npwrap-fix-nogtk.diff:
+  Remove outdated release.
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   openoffice-3.2.1-r1.ebuild:
