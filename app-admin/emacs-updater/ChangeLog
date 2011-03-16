@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/emacs-updater
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.42 2011/01/08 00:53:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/emacs-updater/ChangeLog,v 1.43 2011/03/16 17:07:11 xarthisius Exp $
+
+  16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> emacs-updater-1.7.ebuild:
+  ppc64 stable wrt #348505
 
   08 Jan 2011; Brent Baude <ranger@gentoo.org> emacs-updater-1.7.ebuild:
   Marking emacs-updater-1.7 ppc for bug 348505
