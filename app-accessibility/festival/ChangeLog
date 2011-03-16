@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.92 2011/03/04 20:12:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.93 2011/03/16 22:43:05 neurogeek Exp $
+
+*festival-2.1 (16 Mar 2011)
+
+  16 Mar 2011; Jesus Rivero <neurogeek@gentoo.org> +festival-2.1.ebuild,
+  +files/festival-2.1-gentoo-system.patch,
+  +files/festival-2.1-init-scm.patch, +files/festival-2.1-ldflags.patch:
+  Version bump. Closes bug #340317 and #357381.
 
   04 Mar 2011; William Hubbs <williamh@gentoo.org> festival-1.96_beta.ebuild,
   festival-1.96_beta-r1.ebuild, festival-2.0.95_beta.ebuild:
