@@ -1,10 +1,10 @@
 # ChangeLog for sys-process/wait_on_pid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/wait_on_pid/ChangeLog,v 1.5 2011/02/20 15:41:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/wait_on_pid/ChangeLog,v 1.6 2011/03/16 20:48:35 hd_brummy Exp $
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   wait_on_pid-0.0.1.ebuild:
-  Mark ~ppc for media-plugins/vdr-setup
+  Mark ~ppc for sys-process/wait_on_pid, wrt bug #359201
 
   18 Dec 2010; Matthias Schwarzott <zzam@gentoo.org> wait_on_pid-0.0.1.ebuild:
   Marked stable on x86.
