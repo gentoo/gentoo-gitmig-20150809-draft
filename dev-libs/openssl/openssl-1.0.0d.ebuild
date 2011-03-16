@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.8 2011/03/05 15:10:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.9 2011/03/16 03:39:10 vapier Exp $
 
 EAPI="2"
 
@@ -115,8 +115,8 @@ src_configure() {
 		-e 's:-m[a-z0-9]* ::g' \
 	)
 	sed -i \
-		-e "/^CFLAG/s:=.*:=${CFLAG} ${CFLAGS}:" \
-		-e "/^SHARED_LDFLAGS=/s:$: ${LDFLAGS}:" \
+		-e "/^CFLAG/s|=.*|=${CFLAG} ${CFLAGS}|" \
+		-e "/^SHARED_LDFLAGS=/s|$| ${LDFLAGS}|" \
 		Makefile || die
 }
 
