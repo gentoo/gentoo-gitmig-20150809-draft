@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnotime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.50 2011/01/05 16:38:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.51 2011/03/16 08:04:30 nirbheek Exp $
+
+  16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnotime-2.3.0-r3.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   05 Jan 2011; Pacho Ramos <pacho@gentoo.org> gnotime-2.3.0-r3.ebuild:
   dev-scheme/guile[deprecated] is required (bug #346691 by Cyprien Nicolas),

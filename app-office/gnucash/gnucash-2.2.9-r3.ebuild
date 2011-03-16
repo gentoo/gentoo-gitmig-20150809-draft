@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r3.ebuild,v 1.5 2011/03/13 19:47:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r3.ebuild,v 1.6 2011/03/16 08:04:19 nirbheek Exp $
 
 EAPI=2
 
@@ -22,18 +22,18 @@ IUSE="+doc ofx debug quotes"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.in)
 
-RDEPEND=">=dev-libs/glib-2.6.3
+RDEPEND=">=dev-libs/glib-2.6.3:2
 	>=dev-scheme/guile-1.8.3[deprecated,regex]
 	dev-scheme/guile-www
 	>=dev-scheme/slib-3.1.4
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.5
-	>=x11-libs/gtk+-2.10
+	>=x11-libs/gtk+-2.10:2
 	>=gnome-base/libgnomeui-2.4
 	>=gnome-base/libglade-2.4
-	>=gnome-extra/gtkhtml-3.14
-	>=dev-libs/libxml2-2.5.10
-	>=gnome-base/gconf-2
+	>=gnome-extra/gtkhtml-3.14:3.14
+	>=dev-libs/libxml2-2.5.10:2
+	>=gnome-base/gconf-2:2
 	>=x11-libs/goffice-0.6[gnome]
 	ofx? ( >=dev-libs/libofx-0.8.3 )
 	quotes? ( dev-perl/DateManip

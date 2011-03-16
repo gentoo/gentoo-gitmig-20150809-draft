@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0-r3.ebuild,v 1.5 2011/01/05 16:38:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0-r3.ebuild,v 1.6 2011/03/16 08:04:30 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -16,15 +16,15 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 IUSE="doc"
 
-RDEPEND=">=x11-libs/gtk+-2.10
-	>=dev-libs/glib-2.14
+RDEPEND=">=x11-libs/gtk+-2.10:2
+	>=dev-libs/glib-2.14:2
 	>=gnome-base/libgnome-2.0
 	>=gnome-base/libgnomeui-2.0.3
-	>=gnome-base/gnome-vfs-2
-	>=gnome-base/libglade-2.0
+	>=gnome-base/gnome-vfs-2:2
+	>=gnome-base/libglade-2.0:2.0
 	>=gnome-extra/gtkhtml-3.14.3:3.14
-	>=gnome-base/gconf-2.0
-	dev-libs/libxml2
+	>=gnome-base/gconf-2.0:2
+	dev-libs/libxml2:2
 	>=dev-libs/dbus-glib-0.74
 	dev-scheme/guile[deprecated]
 	dev-libs/qof:0

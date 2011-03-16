@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.20 2010/11/08 22:54:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.21 2011/03/16 07:55:44 nirbheek Exp $
 
 EAPI=2
 
@@ -19,18 +19,18 @@ IUSE="bzip2 debug gnome grammar jpeg libgda math ots pdf readline svg thesaurus 
 RDEPEND="=app-office/abiword-${PV}*
 	>=media-libs/fontconfig-1
 	>=dev-libs/fribidi-0.10.4
-	>=dev-libs/glib-2
-	>=x11-libs/gtk+-2
+	>=dev-libs/glib-2:2
+	>=x11-libs/gtk+-2:2
 	x11-libs/libXft
-	>=gnome-base/libglade-2
+	>=gnome-base/libglade-2:2.0
 	>=gnome-extra/libgsf-1.12.1
 	bzip2? ( app-arch/bzip2 )
 	gnome? ( >=x11-libs/goffice-0.1 )
 	grammar? ( >=dev-libs/link-grammar-4.2.2 )
 	jpeg?  ( virtual/jpeg:0 )
 	libgda? (
-		=gnome-extra/libgda-1*
-		=gnome-extra/libgnomedb-1* )
+		gnome-extra/libgda:1
+		gnome-extra/libgnomedb:1 )
 	math? ( >=x11-libs/gtkmathview-0.7.5 )
 	!ia64? ( !ppc64? ( !sparc? ( ots? ( =app-text/ots-0.4* ) ) ) )
 	pdf? ( >=app-text/poppler-0.12.3-r3[abiword,utils] )
@@ -38,7 +38,7 @@ RDEPEND="=app-office/abiword-${PV}*
 	thesaurus? ( >=app-text/aiksaurus-1.2 )
 	wordperfect? ( >=app-text/libwpd-0.8 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )
-	svg? ( >=gnome-base/librsvg-2 )"
+	svg? ( >=gnome-base/librsvg-2:2 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
