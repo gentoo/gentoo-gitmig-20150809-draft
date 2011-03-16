@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.59 2011/02/27 12:19:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.60 2011/03/16 17:33:39 xarthisius Exp $
+
+  16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  musepack-tools-465.ebuild:
+  ppc/ppc64 stable wrt #348512
 
   27 Feb 2011; Tobias Klausmann <klausman@gentoo.org>
   musepack-tools-465.ebuild:
