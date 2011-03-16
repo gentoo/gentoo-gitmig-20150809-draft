@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.ebuild,v 1.9 2011/03/06 17:56:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.ebuild,v 1.10 2011/03/16 11:47:47 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,6 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-clamav )"
 
-PROVIDE="virtual/antivirus"
 RESTRICT="test"
 
 pkg_setup() {
@@ -38,8 +37,6 @@ src_prepare() {
 }
 
 src_configure() {
-	has_version =sys-libs/glibc-2.2* && filter-lfs-flags
-
 	econf \
 		--disable-experimental \
 		--enable-id-check \

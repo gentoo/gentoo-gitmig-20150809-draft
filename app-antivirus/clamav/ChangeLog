@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.385 2011/03/07 09:08:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.386 2011/03/16 11:47:47 scarabeus Exp $
+
+  16 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> clamav-0.97.ebuild:
+  Drop virtual definition per bug #358817. Drop glibc check as minimal user can
+  have is 2.6.
 
   07 Mar 2011; Tim Harder <radhermit@gentoo.org>
   -files/clamav-0.95.1-nls.patch, -files/clamav-0.95-nls.patch,
