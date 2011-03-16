@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.218 2011/02/26 15:47:39 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.219 2011/03/16 13:15:16 vadimk Exp $
+
+  16 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -files/5.5.9.126128/000_all_initd-location.patch,
+  -files/5.5.9.126128/001_all_fix-permissions.patch,
+  -files/5.5.9.126128/002_all_pagebreak-detection-fix.patch,
+  -files/5.5.9.126128/004_all_do-not-build-modules.patch,
+  -files/5.5.9.126128/007_all_use-modprobe-over-insmod.patch,
+  -files/5.5.9.126128/009_all_init.d-modules-warning.patch,
+  -vmware-workstation-5.5.9.126128.ebuild:
+  Bug 354383.
 
   26 Feb 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -vmware-workstation-6.5.3.185404.ebuild,
