@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.84 2011/01/28 05:05:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.85 2011/03/16 22:45:30 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -15,15 +15,9 @@
 
 # @ECLASS-VARIABLE: VIRTUALX_REQUIRED
 # @DESCRIPTION:
-#  Do we need an X server? Valid values are "always", "optional", and "manual".
-#  "tests" is a synonym for "optional". While virtualx.eclass supports in principle
-#  also the use of an X server during other ebuild phases, we only use it in
-#  src_test here. Most likely you'll want to set "optional", which introduces the
-#  use-flag "test" (if not already present), adds dependencies conditional on that
-#  use-flag, and automatically runs (only) the ebuild test phase with a virtual X server
-#  present. This makes things a lot more comfortable than the bare virtualx eclass.
-
-# In case the variable is not set in the ebuild, let virtualx eclass not do anything
+# For proper description see virtualx.eclass manpage.
+# Here we redefine default value to be manual, if your package needs virtualx
+# for tests you should proceed with setting VIRTUALX_REQUIRED=test.
 : ${VIRTUALX_REQUIRED:=manual}
 
 inherit kde4-functions base virtualx eutils
@@ -840,17 +834,23 @@ kde4-base_src_test() {
 	cmake-utils_src_configure
 	kde4-base_src_compile
 
-	if [[ ${VIRTUALX_REQUIRED} == always ]] ||
-		( [[ ${VIRTUALX_REQUIRED} != manual ]] && use test ); then
+	# When run as normal user during ebuild development with the ebuild command, the
+	# kde tests tend to access the session DBUS. This however is not possible in a real
+	# emerge or on the tinderbox.
+	# > make sure it does not happen, so bad tests can be recognized and disabled
+	unset DBUS_SESSION_BUS_ADDRESS
 
-		if [[ ${maketype} ]]; then
+	if [[ ${VIRTUALX_REQUIRED} == always || ${VIRTUALX_REQUIRED} == test ]]; then
+		# check for sanity if anyone already redefined VIRTUALX_COMMAND from the default
+		if [[ ${VIRTUALX_COMMAND} != "emake" ]]; then
 			# surprise- we are already INSIDE virtualmake!!!
-			ewarn "QA Notice: This version of kde4-base.eclass includes the virtualx functionality."
-			ewarn "           You may NOT set maketype or call virtualmake from the ebuild. Applying workaround."
+			debug-print "QA Notice: This version of kde4-base.eclass includes the virtualx functionality."
+			debug-print "           You may NOT set VIRTUALX_COMMAND or call virtualmake from the ebuild."
+			debug-print "           Setting VIRTUALX_REQUIRED is completely sufficient. See the"
+			debug-print "           kde4-base.eclass docs for details... Applying workaround."
 			cmake-utils_src_test
 		else
-			export maketype="cmake-utils_src_test"
-			virtualmake
+			VIRTUALX_COMMAND="cmake-utils_src_test" virtualmake
 		fi
 	else
 		cmake-utils_src_test
