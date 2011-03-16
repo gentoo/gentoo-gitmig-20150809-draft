@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.218 2011/03/16 12:49:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.219 2011/03/16 13:54:55 eras Exp $
+
+  16 Mar 2011; Eray Aslan <eras@gentoo.org> virtuals:
+  virtual/imap-c-client changed to new style - bug 358993
 
   16 Mar 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/antivirus, bug 358817.
