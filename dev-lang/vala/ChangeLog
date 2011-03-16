@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.49 2011/03/12 21:01:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.50 2011/03/16 21:33:44 nirbheek Exp $
+
+*vala-0.11.7 (16 Mar 2011)
+
+  16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -vala-0.11.5.ebuild,
+  +vala-0.11.7.ebuild:
+  Bump to 0.11.7, remove old
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> vala-0.10.3.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #353436
