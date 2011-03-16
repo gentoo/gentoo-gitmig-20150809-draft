@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.66.ebuild,v 1.1 2011/02/21 18:49:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.66.ebuild,v 1.2 2011/03/16 10:03:17 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ IUSE="gnome"
 RDEPEND=">=dev-libs/glib-2.25.0:2
 	>=x11-libs/gtk+-2.18:2
 	>=gnome-base/orbit-2
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=gnome-extra/evolution-data-server-1.2.3
 	media-libs/libcanberra[gtk]
 	>=app-mobilephone/gnokii-0.6.28[bluetooth]

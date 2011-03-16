@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.65.ebuild,v 1.5 2010/06/30 15:37:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.65.ebuild,v 1.6 2011/03/16 10:03:17 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,10 +16,10 @@ IUSE=""
 # telepathy support is considered experimental
 
 RDEPEND="dev-libs/glib:2
-	>=x11-libs/gtk+-2.10
+	>=x11-libs/gtk+-2.10:2
 	>=gnome-base/orbit-2
-	>=gnome-base/gconf-2
-	>=gnome-base/libglade-2
+	>=gnome-base/gconf-2:2
+	>=gnome-base/libglade-2:2.0
 	>=gnome-extra/evolution-data-server-1.2.3
 	media-libs/libcanberra[gtk]
 	>=app-mobilephone/gnokii-0.6.27[bluetooth]
