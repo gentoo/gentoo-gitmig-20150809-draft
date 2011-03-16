@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.5 2011/03/02 18:36:45 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.6 2011/03/16 21:36:49 aidecoe Exp $
 
 EAPI=2
 
 inherit eutils
 
 DESCRIPTION="Generic initramfs generation tool"
-HOMEPAGE="http://sourceforge.net/projects/dracut/"
+HOMEPAGE="http://dracut.wiki.kernel.org"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
