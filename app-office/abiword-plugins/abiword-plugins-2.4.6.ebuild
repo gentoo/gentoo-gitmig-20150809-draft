@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.21 2011/03/16 07:55:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.22 2011/03/16 08:00:56 nirbheek Exp $
 
 EAPI=2
 
@@ -30,7 +30,7 @@ RDEPEND="=app-office/abiword-${PV}*
 	jpeg?  ( virtual/jpeg:0 )
 	libgda? (
 		gnome-extra/libgda:1
-		gnome-extra/libgnomedb:1 )
+		gnome-extra/libgnomedb:0 )
 	math? ( >=x11-libs/gtkmathview-0.7.5 )
 	!ia64? ( !ppc64? ( !sparc? ( ots? ( =app-text/ots-0.4* ) ) ) )
 	pdf? ( >=app-text/poppler-0.12.3-r3[abiword,utils] )
