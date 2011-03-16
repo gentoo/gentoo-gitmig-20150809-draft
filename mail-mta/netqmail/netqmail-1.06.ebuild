@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.06.ebuild,v 1.10 2011/02/07 11:07:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.06.ebuild,v 1.11 2011/03/16 11:03:37 eras Exp $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42
@@ -50,10 +50,7 @@ RDEPEND="
 	authcram? ( >=net-mail/cmd5checkpw-0.30 )
 	${DEPEND}
 "
-PROVIDE="
-	virtual/mta
-	virtual/mda
-"
+PROVIDE="virtual/mta"
 
 pkg_setup() {
 	if [[ -n "${QMAIL_PATCH_DIR}" ]]; then

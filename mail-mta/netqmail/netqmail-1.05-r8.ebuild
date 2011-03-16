@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r8.ebuild,v 1.10 2011/02/07 11:07:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r8.ebuild,v 1.11 2011/03/16 11:03:37 eras Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -46,10 +46,7 @@ RDEPEND="
 	)
 	${DEPEND}
 "
-PROVIDE="
-	virtual/mta
-	virtual/mda
-"
+PROVIDE="virtual/mta"
 
 # Important: QMAIL_CONF_SPLIT should always be a prime number!
 MY_CONF_SPLIT="${QMAIL_CONF_SPLIT:-23}"

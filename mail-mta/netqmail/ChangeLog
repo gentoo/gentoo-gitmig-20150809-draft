@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.57 2011/02/07 11:07:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.58 2011/03/16 11:03:37 eras Exp $
+
+  16 Mar 2011; Eray Aslan <eras@gentoo.org> netqmail-1.05-r4.ebuild,
+  netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:
+  change to new style virtual/mda
 
   07 Feb 2011; Thilo Bangert <bangert@gentoo.org> netqmail-1.05-r4.ebuild,
   netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:

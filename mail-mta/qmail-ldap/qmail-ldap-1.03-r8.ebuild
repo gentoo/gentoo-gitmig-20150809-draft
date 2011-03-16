@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.3 2011/02/07 11:04:46 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.4 2011/03/16 11:07:58 eras Exp $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42
@@ -55,10 +55,7 @@ RDEPEND="
 	>=net-mail/dot-forward-0.71-r3
 	${DEPEND}
 "
-PROVIDE="
-	virtual/mta
-	virtual/mda
-"
+PROVIDE="virtual/mta"
 
 S="${WORKDIR}"/qmail-${PV}
 
