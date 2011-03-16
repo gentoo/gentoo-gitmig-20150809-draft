@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/espeak
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.91 2010/10/30 06:56:26 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.92 2011/03/16 03:29:19 williamh Exp $
+
+*espeak-1.45.01 (16 Mar 2011)
+
+  16 Mar 2011; William Hubbs <williamh@gentoo.org> +espeak-1.45.01.ebuild,
+  +files/espeak-1.45.01-fix-libname.patch:
+  version bump for #358965, thanks to Chris Brannon
 
   29 Oct 2010; William Hubbs <williamh@gentoo.org> espeak-1.44.05.ebuild:
   fix file name of ChangeLog.  It should have been ChangeLog.txt.
