@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.3.ebuild,v 1.1 2011/03/14 16:41:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.3.ebuild,v 1.2 2011/03/16 16:09:49 ssuominen Exp $
 
 EAPI=3
-inherit python waf-utils
+inherit eutils fdo-mime gnome2-utils python waf-utils
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
@@ -32,6 +32,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
+
 	DOCS=( AUTHORS ChangeLog INSTALL TODO )
 	HTML_DOCS=( data/faq.html data/faq.css )
 }
@@ -55,6 +57,18 @@ src_configure() {
 		$(use_enable vala)
 }
 
-pkg_preinst() { xfconf_pkg_preinst; }
-pkg_postinst() { xfconf_pkg_postinst; }
-pkg_postrm() { xfconf_pkg_postrm; }
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+	gnome2_icon_cache_update
+}
