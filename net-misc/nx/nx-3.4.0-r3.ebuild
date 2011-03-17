@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0-r3.ebuild,v 1.4 2010/11/08 09:56:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0-r3.ebuild,v 1.5 2011/03/17 06:16:03 wormo Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -73,6 +73,9 @@ src_prepare() {
 	echo "#define CcCmd $(tc-getCC)" >> ${HOSTCONF}
 	echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> ${HOSTCONF}
+	# Respect LDFLAGS
+	echo "#define ExtraLoadFlags ${LDFLAGS}" >> ${HOSTCONF}
+	echo "#define SharedLibraryLoadFlags -shared ${LDFLAGS}" >> ${HOSTCONF}
 }
 
 src_configure() {
