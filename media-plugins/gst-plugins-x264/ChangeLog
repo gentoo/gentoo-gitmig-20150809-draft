@@ -1,6 +1,21 @@
 # ChangeLog for media-plugins/gst-plugins-x264
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.11 2011/03/13 16:03:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.12 2011/03/17 21:34:10 nirbheek Exp $
+
+*gst-plugins-x264-0.10.17 (17 Mar 2011)
+
+  17 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gst-plugins-x264-0.10.13.ebuild, +gst-plugins-x264-0.10.17.ebuild:
+  Bump to 0.10.17, remove old:
+  * Work around a rate control issue in libx264
+
+  https://bugzilla.gnome.org/show_bug.cgi?id=632861
+  * Add a note to the docs about encoder latency and queues
+  * also accept YV12 input
+  * Handle codec/encoder tags
+  * Work around a rate control issue in libx264
+  * Use pkg-config to locate libx264
+  * Various misc fixes
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-x264-0.10.16.ebuild:
