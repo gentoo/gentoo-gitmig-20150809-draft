@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.1 2011/03/16 23:31:55 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.2 2011/03/17 11:47:50 suka Exp $
 
 EAPI="3"
 
-inherit eutils fdo-mime pax-utils prefix rpm multilib
+inherit eutils fdo-mime gnome2-utils pax-utils prefix rpm multilib
 
 IUSE="gnome java kde"
 
@@ -138,17 +138,17 @@ src_install () {
 
 	#Menu entries, icons and mime-types
 	cd "${ED}${INSTDIR}/share/xdg/"
-
-	for desk in base calc draw impress math printeradmin qstart writer; do
+	for desk in base calc draw impress javafilter math printeradmin qstart startcenter writer; do
+		if [ "${desk}" = "javafilter" ] ; then
+			use java || { rm javafilter.desktop; continue; }
+		fi
 		mv ${desk}.desktop openoffice.org-${desk}.desktop
 		sed -i -e s/openoffice.org3/ooffice/g openoffice.org-${desk}.desktop || die
-		sed -i -e s/openofficeorg3-${desk}/ooo-${desk}/g openoffice.org-${desk}.desktop || die
 		domenu openoffice.org-${desk}.desktop
-		insinto /usr/share/pixmaps
-		if [ "${desk}" != "qstart" ] ; then
-			newins "${WORKDIR}/usr/share/icons/gnome/48x48/apps/openofficeorg3-${desk}.png" ooo-${desk}.png
-		fi
 	done
+	insinto /usr/share
+	doins -r "${WORKDIR}"/usr/share/icons
+	doins -r "${WORKDIR}"/usr/share/mime
 
 	# Make sure the permissions are right
 	use prefix || fowners -R root:0 /
@@ -179,10 +179,17 @@ src_install () {
 
 }
 
+pkg_preinst() {
+
+	use gnome && gnome2_icon_savelist
+
+}
+
 pkg_postinst() {
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	use gnome && gnome2_icon_cache_update
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/openoffice/program/soffice.bin
 
@@ -195,5 +202,12 @@ pkg_postinst() {
 	elog " ${EPREFIX}/usr/$(get_libdir)/openoffice/share/extension/install "
 	elog " Other dictionaries can be found at Suns extension site. "
 	elog
+
+}
+
+pkg_postrm() {
+
+	fdo-mime_desktop_database_update
+	use gnome && gnome2_icon_cache_update
 
 }
