@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5151 2011/03/16 11:32:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5152 2011/03/17 08:05:32 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Mar 2011; Torsten Veller <tove@gentoo.org> package.mask:
+  Unmask >=dev-perl/libwww-perl-6 and dependencies
 
   16 Mar 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Unmask openocd-0.4.0

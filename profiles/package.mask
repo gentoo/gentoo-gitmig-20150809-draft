@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12564 2011/03/16 11:32:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12565 2011/03/17 08:05:31 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -144,24 +144,6 @@ app-emacs/tramp
 # not needed anymore. the cairo[qt4] blocker issue was fixed and
 # the style is once again provided by qt-gui[gtk]
 x11-themes/qgtkstyle
-
-# Torsten Veller <tove@gentoo.org> (09 Mar 2011)
-# Masked for testing: upgrade path, SSL options, cert-checking
-# Unbundled all modules not in the LWP:: namespace from the libwww-perl
-# distribution.  The new broken out CPAN distribtions are File-Listing,
-# HTML-Form, HTTP-Cookies, HTTP-Daemon, HTTP-Date, HTTP-Message, HTTP-Negotiate,
-# Net-HTTP, and WWW-RobotRules.
->=dev-perl/libwww-perl-6
-dev-perl/File-Listing
-dev-perl/HTML-Form
-dev-perl/HTTP-Cookies
-dev-perl/HTTP-Daemon
-dev-perl/HTTP-Date
-dev-perl/HTTP-Message
-dev-perl/HTTP-Negotiate
-dev-perl/LWP-MediaTypes
-dev-perl/Net-HTTP
-dev-perl/WWW-RobotRules
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (01 Mar 2011)
 # Messed up build system, automagic dependencies.
