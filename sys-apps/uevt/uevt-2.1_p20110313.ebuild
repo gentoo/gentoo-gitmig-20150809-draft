@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.1_p20110313.ebuild,v 1.1 2011/03/13 13:36:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.1_p20110313.ebuild,v 1.2 2011/03/17 15:27:16 ssuominen Exp $
 
 EAPI=3
 inherit autotools
@@ -8,7 +8,7 @@ inherit autotools
 DESCRIPTION="A lightweight, desktop-independant daemon for disks mounting and power managing"
 HOMEPAGE="http://elentir.sleipnir.fr/ http://git.sleipnir.fr/uevt/"
 #SRC_URI="http://ftp.sleipnir.fr/${PN}/${P}.tar.bz2"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
