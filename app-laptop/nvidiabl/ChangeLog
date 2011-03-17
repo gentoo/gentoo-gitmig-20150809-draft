@@ -1,0 +1,10 @@
+# ChangeLog for app-laptop/nvidiabl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.1 2011/03/17 20:09:00 angelos Exp $
+
+*nvidiabl-0.67 (17 Mar 2011)
+
+  17 Mar 2011; Christoph Mende <angelos@gentoo.org> +nvidiabl-0.67.ebuild,
+  +metadata.xml:
+  Initial import
+
