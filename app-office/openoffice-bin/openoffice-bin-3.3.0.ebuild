@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.2 2011/03/17 11:47:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.3 2011/03/17 11:56:52 suka Exp $
 
 EAPI="3"
 
 inherit eutils fdo-mime gnome2-utils pax-utils prefix rpm multilib
 
-IUSE="gnome java kde"
+IUSE="gnome java"
 
 BUILDID="9567"
 BUILDID2="9556"
@@ -96,7 +96,6 @@ src_unpack() {
 	rpm_unpack "./${UP}/desktop-integration/openoffice.org3.3-freedesktop-menus-3.3-${BUILDID2}.noarch.rpm"
 
 	use gnome && rpm_unpack "./${UP}/${BASIS}-gnome-integration-${MY_PV3}.${OOARCH}.rpm"
-	use kde && rpm_unpack "./${UP}/${BASIS}-kde-integration-${MY_PV3}.${OOARCH}.rpm"
 	use java && rpm_unpack "./${UP}/${BASIS}-javafilter-${MY_PV3}.${OOARCH}.rpm"
 
 	# Unpack provided dictionaries, unless there is a better solution...
