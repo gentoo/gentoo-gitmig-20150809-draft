@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.3 2011/03/16 22:24:08 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.4 2011/03/17 12:29:36 suka Exp $
 
 EAPI="3"
 
@@ -76,8 +76,6 @@ QA_PRESTRIPPED="usr/$(get_libdir)/libreoffice/basis3.3/program/*
 	usr/$(get_libdir)/libreoffice/program/*
 	usr/$(get_libdir)/libreoffice/ure/bin/*
 	usr/$(get_libdir)/libreoffice/ure/lib/*"
-
-RESTRICT="mirror"
 
 src_unpack() {
 
