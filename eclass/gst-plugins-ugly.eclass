@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.21 2010/12/27 03:49:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.22 2011/03/17 21:12:40 nirbheek Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -68,7 +68,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-ugly/${MY_P}.tar.bz2"
 S=${WORKDIR}/${MY_P}
 
 if [[ ${GST_ORC} == "yes" ]]; then
-	RDEPEND="orc? ( >=dev-lang/orc-0.4.5 )"
+	RDEPEND="orc? ( >=dev-lang/orc-0.4.6 )"
 	DEPEND="${RDEPEND}"
 fi
 
