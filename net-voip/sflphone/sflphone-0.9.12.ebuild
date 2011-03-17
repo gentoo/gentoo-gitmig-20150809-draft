@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.12.ebuild,v 1.2 2011/02/22 14:14:30 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.12.ebuild,v 1.3 2011/03/17 16:45:24 elvanor Exp $
 
 EAPI="2"
 
@@ -92,15 +92,12 @@ src_prepare() {
 
 src_configure() {
 	cd sflphone-common
-	econf --disable-dependency-tracking \
-		$(use_with debug) \
-		$(use_with gsm) \
-		$(use_with speex) \
-		$(use_with networkmanager) || die "econf failed."
+	econf --disable-dependency-tracking $(use_with debug) \
+		$(use_with gsm) $(use_with speex) $(use_with networkmanager)
 
 	if use gnome; then
 		cd ../sflphone-client-gnome
-		econf || die "econf failed."
+		econf
 	fi
 }
 
@@ -121,7 +118,6 @@ src_install() {
 
 	if use gnome; then
 		cd ../sflphone-client-gnome
-		emake DESTDIR="${D}" install || die "emake install failed"
 		gnome2_src_install
 	fi
 }
@@ -144,6 +140,7 @@ pkg_postinst() {
 	elog "https://projects.savoirfairelinux.com/repositories/browse/sflphone/tools"
 	elog
 	if use gnome; then
+		gnome2_pkg_postinst
 		elog
 		elog "sflphone-client-gnome: To manage your contacts you need"
 		elog "mail-client/evolution or access to an evolution-data-server"
