@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.01.1190.ebuild,v 1.7 2011/03/01 15:46:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.01.1190.ebuild,v 1.8 2011/03/17 17:29:14 jer Exp $
 
 EAPI="3"
 
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
 
-DESCRIPTION="A standards-compliant graphical Web browser"
+DESCRIPTION="A fast and secure web browser and Internet suite"
 HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
