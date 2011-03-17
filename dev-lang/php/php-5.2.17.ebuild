@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.11 2011/03/15 19:09:16 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.12 2011/03/17 16:34:47 olemarkus Exp $
 
 EAPI=2
 
@@ -133,7 +133,7 @@ DEPEND=">=app-admin/eselect-php-0.6.2
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( >=dev-libs/gmp-4.1.2 )
 	iconv? ( virtual/libiconv )
-	imap? ( virtual/imap-c-client )
+	imap? ( virtual/imap-c-client[ssl=] )
 	iodbc? ( dev-db/libiodbc )
 	kerberos? ( virtual/krb5 )
 	kolab? ( >=net-libs/c-client-2004g-r1 )

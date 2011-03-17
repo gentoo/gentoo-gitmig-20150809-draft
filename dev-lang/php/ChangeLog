@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.476 2011/03/17 10:14:58 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.477 2011/03/17 16:34:47 olemarkus Exp $
+
+  17 Mar 2011; Ole Markus With <olemarkus@gentoo.org>
+  files/eblits/pkg_setup-v1.eblit, php-5.2.17.ebuild, php-5.3.3-r1.ebuild,
+  php-5.3.5.ebuild, php-5.3.5-r1.ebuild, files/eblits/pkg_setup-v2.eblit,
+  php-5.3.6_rc3.ebuild:
+  Removed use of php_check_imap. #359221
 
   17 Mar 2011; Ole Markus With <olemarkus@gentoo.org> -php-5.2.14.ebuild,
   -php-5.2.16.ebuild, -php-5.3.4.ebuild:
