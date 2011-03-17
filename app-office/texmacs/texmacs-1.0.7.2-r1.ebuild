@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.9.ebuild,v 1.2 2011/03/07 12:57:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.2-r1.ebuild,v 1.4 2011/03/17 20:21:24 grozin Exp $
 EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
@@ -13,8 +13,8 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="imlib jpeg netpbm -qt4 svg spell"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+IUSE="imlib jpeg netpbm svg spell"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="
 	dev-scheme/guile[deprecated]
@@ -23,7 +23,6 @@ RDEPEND="
 	media-libs/freetype
 	x11-libs/libXext
 	x11-apps/xmodmap
-	qt4? ( x11-libs/qt-gui:4 )
 	imlib? ( media-libs/imlib2 )
 	jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) )
 	svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
@@ -34,27 +33,19 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	if use qt4; then
-		ewarn "Qt port is highly experimental"
-		ewarn "If you want a stable TeXmacs, emerge with USE=-qt4"
-	fi
-}
-
 src_prepare() {
 	# don't strip
 	epatch "${FILESDIR}"/${PN}-strip.patch
 
-	# respect LDFLAGS, bug #338459
-	epatch "${FILESDIR}"/${PN}-ldflags.patch
+	# fix LD_LIBRARY_PATH in tm_mupad_help, bug #337532
+	epatch "${FILESDIR}"/${PN}-mupad.patch
 
 	eautoreconf
 }
 
 src_configure() {
 	econf $(use_with imlib imlib2) \
-		--enable-optimize="${CXXFLAGS}" \
-		$(use_enable qt4 qt)
+		--enable-optimize="${CXXFLAGS}"
 }
 
 src_install() {

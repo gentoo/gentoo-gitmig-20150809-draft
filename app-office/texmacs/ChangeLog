@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.90 2011/03/07 17:32:48 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.91 2011/03/17 20:21:24 grozin Exp $
+
+*texmacs-1.0.7.10-r1 (17 Mar 2011)
+
+  17 Mar 2011; Andrey Grozin <grozin@gentoo.org> +texmacs-1.0.7.2-r1.ebuild,
+  -texmacs-1.0.7.9.ebuild, -texmacs-1.0.7.10.ebuild,
+  +texmacs-1.0.7.10-r1.ebuild, +files/texmacs-mupad.patch:
+  Fix LD_LIBRARY_PATH in tm_mupad_help, bug #337532
 
 *texmacs-1.0.7.10 (07 Mar 2011)
 

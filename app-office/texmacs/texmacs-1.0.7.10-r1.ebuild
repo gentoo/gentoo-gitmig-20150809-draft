@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.10.ebuild,v 1.1 2011/03/07 17:32:48 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.10-r1.ebuild,v 1.1 2011/03/17 20:21:24 grozin Exp $
 EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
@@ -46,6 +46,9 @@ src_prepare() {
 
 	# respect LDFLAGS, bug #338459
 	epatch "${FILESDIR}"/${PN}-ldflags.patch
+
+	# fix LD_LIBRARY_PATH in tm_mupad_help, bug #337532
+	epatch "${FILESDIR}"/${PN}-mupad.patch
 
 	eautoreconf
 }
