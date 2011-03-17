@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.9.ebuild,v 1.4 2010/08/12 08:27:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.9.ebuild,v 1.5 2011/03/17 08:17:00 xarthisius Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -11,7 +11,7 @@ HOMEPAGE="http://nco.sourceforge.net/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE="doc mpi ncap2 udunits"
 
