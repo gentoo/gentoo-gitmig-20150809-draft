@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0_pre20110317.ebuild,v 1.1 2011/03/17 12:47:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0_pre20110317.ebuild,v 1.2 2011/03/17 12:50:00 hwoarang Exp $
 
 EAPI="2"
 
@@ -64,7 +64,7 @@ src_configure() {
 		$(use_enable parport) \
 		$(use_enable presto presto_ftd2xx) \
 		$(use_enable segger jlink) \
-		$(use_enable versal0on vsllink) \
+		$(use_enable versaloon vsllink) \
 		${myconf}
 }
 
