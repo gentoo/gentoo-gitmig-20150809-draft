@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.5 2011/03/17 13:27:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.6 2011/03/17 13:51:00 suka Exp $
 
 EAPI="3"
 
@@ -66,7 +66,7 @@ DEPEND="${RDEPEND}
 
 PDEPEND="java? ( >=virtual/jre-1.5 )"
 
-RESTRICT="strip binchecks"
+RESTRICT="strip"
 
 QA_EXECSTACK="usr/$(get_libdir)/openoffice/basis3.3/program/*
 	usr/$(get_libdir)/openoffice/ure/lib/*"

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.15 2011/03/17 13:06:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.16 2011/03/17 13:49:58 suka Exp $
+
+  17 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
+  libreoffice-bin-3.3.1.ebuild:
+  Remove usage of RESTRICT="bincheck"
 
   17 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
   libreoffice-bin-3.3.1.ebuild:
