@@ -7,9 +7,13 @@
 <name>Markos Chandras</name>
 </maintainer>
 <use>
+  <flag name='blaster'>Enable support for Altera USE-Blaster</flag>
+  <flag name='versaloon'></flag>
   <flag name='ftd2xx'>Enable support for USB FTDI chips via <pkg>dev-embedded/libftd2xx</pkg></flag>
   <flag name='ftdi'>Enable support for USB FTDI chips via <pkg>dev-embedded/libftdi</pkg></flag>
   <flag name='parport'>Enable support for parport JTAG devices</flag>
   <flag name='presto'>Enable support for AXIS PRESTO devices</flag>
+  <flag name='segger'>Enable support for the Segger J-Link JTAG</flag>
+  <flag name='versaloon'>Enable building support for the Versallon-lInk JTAG</flag>
 </use>
 </pkgmetadata>
