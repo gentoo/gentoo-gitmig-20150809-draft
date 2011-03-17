@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-1.8.0.0.ebuild,v 1.2 2011/02/19 18:41:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-1.8.0.0.ebuild,v 1.3 2011/03/17 13:57:30 ottxor Exp $
 
 EAPI=3
 
@@ -25,7 +25,8 @@ IUSE="+system-libCg"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
-LICENSE="google-talkplugin"
+#GoogleTalkPlugin binary contains openssl
+LICENSE="google-talkplugin openssl"
 RESTRICT="strip mirror"
 
 #to get these run:
