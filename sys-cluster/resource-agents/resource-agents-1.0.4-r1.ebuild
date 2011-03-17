@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.4-r1.ebuild,v 1.3 2011/03/15 15:59:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/resource-agents-1.0.4-r1.ebuild,v 1.4 2011/03/17 22:40:08 tomka Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://hg.linux-ha.org/agents/archive/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~x86"
+KEYWORDS="amd64 hppa x86"
 IUSE="doc libnet"
 
 DEPEND="sys-apps/iproute2
