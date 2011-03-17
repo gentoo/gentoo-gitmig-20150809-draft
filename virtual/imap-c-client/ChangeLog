@@ -1,6 +1,11 @@
 # ChangeLog for virtual/imap-c-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/imap-c-client/ChangeLog,v 1.1 2011/03/16 13:38:57 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/imap-c-client/ChangeLog,v 1.2 2011/03/17 11:02:24 eras Exp $
+
+*imap-c-client-1 (17 Mar 2011)
+
+  17 Mar 2011; Eray Aslan <eras@gentoo.org> +imap-c-client-1.ebuild:
+  add ssl USE flag - bugs 359221 358993
 
 *imap-c-client-0 (16 Mar 2011)
 
