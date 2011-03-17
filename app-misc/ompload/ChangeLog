@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ompload
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.18 2011/02/25 17:19:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ompload/ChangeLog,v 1.19 2011/03/17 11:09:59 xmw Exp $
+
+  17 Mar 2011; Michael Weber <xmw@gentoo.org> ompload-20101220.ebuild:
+  ppc/sparc stable (bug 359269)
 
   25 Feb 2011; Michael Weber <xmw@gentoo.org> ompload-20101220.ebuild:
   Added ~ppc per request on bug 354169
