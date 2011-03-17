@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.51 2011/01/14 23:00:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.52 2011/03/17 10:05:24 xarthisius Exp $
+
+  17 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> daemons-1.1.0.ebuild:
+  ppc/ppc64 stable wrt #349877
 
   14 Jan 2011; Markos Chandras <hwoarang@gentoo.org> daemons-1.1.0.ebuild:
   Stable on amd64 wrt bug #349877
