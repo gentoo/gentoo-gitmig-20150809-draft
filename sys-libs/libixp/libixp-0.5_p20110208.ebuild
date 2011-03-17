@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.5_p20110208.ebuild,v 1.2 2011/02/08 18:27:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libixp/libixp-0.5_p20110208.ebuild,v 1.3 2011/03/17 15:29:17 ssuominen Exp $
 
 # hg clone http://hg.suckless.org/libixp
 
@@ -9,7 +9,7 @@ inherit multilib toolchain-funcs
 
 DESCRIPTION="A stand-alone client/server 9P library including ixpc client"
 HOMEPAGE="http://libs.suckless.org/libixp"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
