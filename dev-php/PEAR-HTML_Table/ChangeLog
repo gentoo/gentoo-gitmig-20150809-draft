@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Table
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.41 2011/01/24 04:26:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Table/ChangeLog,v 1.42 2011/03/17 10:24:57 xarthisius Exp $
+
+  17 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  PEAR-HTML_Table-1.8.3.ebuild:
+  ppc/ppc64 stable wrt #350417
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> PEAR-HTML_Table-1.8.3.ebuild:
   Stable for HPPA (bug #350417).
