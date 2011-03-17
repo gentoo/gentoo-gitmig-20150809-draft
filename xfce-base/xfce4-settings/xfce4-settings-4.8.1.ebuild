@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.1.ebuild,v 1.4 2011/03/13 16:25:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.1.ebuild,v 1.5 2011/03/17 15:04:06 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -47,4 +47,9 @@ pkg_setup() {
 		)
 
 	DOCS="AUTHORS ChangeLog NEWS TODO"
+}
+
+src_prepare() {
+	sed -i -e '/IconThemeName/s:Rodent:Tango:' xfsettingsd/xsettings.xml || die
+	xfconf_src_prepare
 }
