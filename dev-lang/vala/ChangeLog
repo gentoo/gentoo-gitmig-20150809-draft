@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.50 2011/03/16 21:33:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.51 2011/03/17 23:06:57 eva Exp $
+
+*vala-0.10.4-r1 (17 Mar 2011)
+
+  17 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> +vala-0.10.4-r1.ebuild,
+  vala-0.11.7.ebuild:
+  Use alternatives so vala.m4 always exists and is the latest slot available.
 
 *vala-0.11.7 (16 Mar 2011)
 

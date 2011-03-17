@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.11.7.ebuild,v 1.2 2011/03/17 23:06:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.10.4-r1.ebuild,v 1.1 2011/03/17 23:06:57 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -11,19 +11,19 @@ DESCRIPTION="Vala - Compiler for the GObject type system"
 HOMEPAGE="http://live.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
-SLOT="0.12"
+SLOT="0.10"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="test +vapigen"
 
-RDEPEND=">=dev-libs/glib-2.16:2"
+RDEPEND=">=dev-libs/glib-2.14:2"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	|| ( sys-devel/bison dev-util/byacc dev-util/yacc )
 	dev-util/pkgconfig
 	dev-libs/libxslt
 	test? (
-		dev-libs/dbus-glib
-		>=dev-libs/glib-2.26:2 )"
+		>=dev-libs/glib-2.26:2
+		dev-libs/dbus-glib )"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
