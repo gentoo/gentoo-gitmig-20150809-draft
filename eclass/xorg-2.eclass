@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.34 2011/03/16 20:57:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.35 2011/03/17 22:40:20 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -114,7 +114,7 @@ EAUTORECONF_DEPEND+="
 if [[ ${PN} != util-macros ]] ; then
 	EAUTORECONF_DEPEND+=" >=x11-misc/util-macros-1.12.0"
 	# Required even by xorg-server
-	[[ ${PN} == "font-util" ]] || EAUTORECONF_DEPEND+=" >=media-fonts/font-util-1.1.1-r1"
+	[[ ${PN} == "font-util" ]] || EAUTORECONF_DEPEND+=" >=media-fonts/font-util-1.2.0"
 fi
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -131,7 +131,7 @@ if [[ ${FONT} == yes ]]; then
 		x11-apps/mkfontscale
 		x11-apps/mkfontdir"
 	PDEPEND+=" media-fonts/font-alias"
-	DEPEND+=" >=media-fonts/font-util-1.1.1-r1"
+	DEPEND+=" >=media-fonts/font-util-1.2.0"
 
 	# @ECLASS-VARIABLE: FONT_DIR
 	# @DESCRIPTION:
