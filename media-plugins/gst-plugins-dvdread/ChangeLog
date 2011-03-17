@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-dvdread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.98 2011/02/13 12:44:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.99 2011/03/17 21:34:41 nirbheek Exp $
+
+*gst-plugins-dvdread-0.10.17 (17 Mar 2011)
+
+  17 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gst-plugins-dvdread-0.10.17.ebuild:
+  Bump to 0.10.17:
+  * Improve error messages on read errors
+  * Fix handling of multi-angle streams
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-dvdread-0.10.16.ebuild:
