@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.3-r4.ebuild,v 1.3 2011/03/09 10:02:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.3-r4.ebuild,v 1.4 2011/03/17 22:26:20 alexxy Exp $
 
 EAPI="3"
 
@@ -35,7 +35,6 @@ mpi +single-precision sse sse2 static-libs test +threads +xml zsh-completion"
 
 DEPEND="
 	app-shells/tcsh
-	dev-util/pkgconfig
 	X? ( x11-libs/libX11
 		x11-libs/libSM
 		x11-libs/libICE )
@@ -129,7 +128,7 @@ src_configure() {
 	fi
 
 	# if we need external blas or lapack
-	use blas && export LIBS+=" $(pkg-config blas cblas --libs)"
+	use blas && export LIBS+=" $(pkg-config blas --libs)"
 	use lapack && export LIBS+=" $(pkg-config lapack --libs)"
 	local sseflag="x86-64-sse"
 	use x86 && sseflag="ia32-sse"
