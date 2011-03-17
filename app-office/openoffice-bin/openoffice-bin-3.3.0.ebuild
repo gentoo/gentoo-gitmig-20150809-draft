@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.3 2011/03/17 11:56:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.4 2011/03/17 13:04:03 suka Exp $
 
 EAPI="3"
 
@@ -50,37 +50,37 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND="!app-office/openoffice
+RDEPEND="!app-office/libreoffice
+	!app-office/openoffice
+	!app-office/libreoffice-bin
 	x11-libs/libXaw
 	!prefix? ( sys-libs/glibc )
 	>=dev-lang/perl-5.0
 	app-arch/zip
 	app-arch/unzip
-	>=media-libs/freetype-2.1.10-r2
-	java? ( >=virtual/jre-1.5 )
-	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
-	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
-	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
+	x11-libs/libXinerama
+	>=media-libs/freetype-2.1.10-r2"
 
 DEPEND="${RDEPEND}
 	sys-apps/findutils"
 
-RESTRICT="strip"
+PDEPEND="java? ( >=virtual/jre-1.5 )"
 
-QA_EXECSTACK="usr/$(get_libdir)/openoffice/basis3.2/program/*
+RESTRICT="strip binchecks"
+
+QA_EXECSTACK="usr/$(get_libdir)/openoffice/basis3.3/program/*
 	usr/$(get_libdir)/openoffice/ure/lib/*"
-QA_TEXTRELS="usr/$(get_libdir)/openoffice/basis3.2/program/libvclplug_genli.so \
-	usr/$(get_libdir)/openoffice/basis3.2/program/python-core-2.3.4/lib/lib-dynload/_curses_panel.so \
-	usr/$(get_libdir)/openoffice/basis3.2/program/python-core-2.3.4/lib/lib-dynload/_curses.so \
+QA_TEXTRELS="usr/$(get_libdir)/openoffice/basis3.3/program/libvclplug_genli.so \
+	usr/$(get_libdir)/openoffice/basis3.3/program/python-core-2.6.1/lib/lib-dynload/_curses_panel.so \
+	usr/$(get_libdir)/openoffice/basis3.3/program/python-core-2.6.1/lib/lib-dynload/_curses.so \
 	usr/$(get_libdir)/openoffice/ure/lib/*"
 
 src_unpack() {
 
 	unpack ${A}
+
 	cp "${FILESDIR}"/{50-openoffice-bin,wrapper.in} "${T}"
 	eprefixify "${T}"/{50-openoffice-bin,wrapper.in}
-
-	cd "${S}"
 
 	for i in base binfilter calc core01 core02 core03 core04 core05 core06 core07 draw graphicfilter images impress math ooofonts oooimprovement ooolinguistic pyuno testtool writer xsltfilter ; do
 		rpm_unpack "./${UP}/${BASIS}-${i}-${MY_PV3}.${OOARCH}.rpm"
@@ -103,8 +103,8 @@ src_unpack() {
 	rpm_unpack "./${UP}/openoffice.org3-dict-es-${MY_PV3}.${OOARCH}.rpm"
 	rpm_unpack "./${UP}/openoffice.org3-dict-fr-${MY_PV3}.${OOARCH}.rpm"
 
+	# Localization
 	strip-linguas ${LANGS}
-
 	if [[ -z "${LINGUAS}" ]]; then
 		export LINGUAS="en"
 	fi
