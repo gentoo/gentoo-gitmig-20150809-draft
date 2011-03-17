@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gummi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.17 2011/03/17 17:47:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.18 2011/03/17 18:16:22 hwoarang Exp $
+
+  17 Mar 2011; Markos Chandras <hwoarang@gentoo.org> gummi-0.5.8.ebuild:
+  Fix SRC_URI
 
 *gummi-0.5.8 (17 Mar 2011)
 
