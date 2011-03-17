@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-client/openerp-client-5.0.15-r1.ebuild,v 1.1 2011/01/08 06:45:29 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-client/openerp-client-5.0.15-r1.ebuild,v 1.2 2011/03/17 15:14:06 elvanor Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-CDEPEND="dev-python/matplotlib
+CDEPEND="dev-python/matplotlib[gtk]
 	dev-python/egenix-mx-base
 	x11-libs/hippo-canvas[python]"
 
