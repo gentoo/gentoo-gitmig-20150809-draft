@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.551 2011/03/16 22:25:27 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.552 2011/03/17 13:26:35 suka Exp $
+
+  17 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.2.1-r1.ebuild:
+  Fix license entry, OOo uses LGPLv3 since some time
 
   16 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.2.1-r1.ebuild:

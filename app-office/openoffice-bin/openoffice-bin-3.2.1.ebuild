@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1.ebuild,v 1.5 2011/03/16 22:26:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.2.1.ebuild,v 1.6 2011/03/17 13:27:18 suka Exp $
 
 EAPI="3"
 
@@ -46,7 +46,7 @@ done
 
 HOMEPAGE="http://www.openoffice.org/"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
