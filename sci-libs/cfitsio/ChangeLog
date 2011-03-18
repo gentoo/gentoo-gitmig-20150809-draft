@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.46 2011/03/16 12:33:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.47 2011/03/18 23:42:34 bicatali Exp $
+
+*cfitsio-3.270 (18 Mar 2011)
+
+  18 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> -cfitsio-3.240.ebuild,
+  -files/cfitsio-3.240-autotools.patch, -cfitsio-3.250.ebuild,
+  -files/cfitsio-3.250-autotools.patch, +cfitsio-3.270.ebuild:
+  Version bump
 
   16 Mar 2011; Fabian Groffen <grobian@gentoo.org> cfitsio-3.250-r1.ebuild:
   EAPI=3 for Prefix, added Prefix keywords
