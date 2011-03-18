@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.7 2011/03/18 22:58:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.8 2011/03/18 23:42:47 suka Exp $
 
 EAPI="3"
 
@@ -104,30 +104,35 @@ src_unpack() {
 	use gnome && rpm_unpack "./${UP}/${BASIS}-gnome-integration-${BVER}.${XARCH}.rpm"
 	use java && rpm_unpack "./${UP}/${BASIS}-javafilter-${BVER}.${XARCH}.rpm"
 
-	# Unpack provided dictionaries, unless there is a better solution...
+	# English support installed by default
+	rpm_unpack "./${UP}/${BASIS}-en-US-${BVER}.${XARCH}.rpm"
+	rpm_unpack "./${UP}/${NM2}-en-US-${BVER}.${XARCH}.rpm"
 	rpm_unpack "./${UP}/${NM2}-dict-en-${BVER}.${XARCH}.rpm"
-	rpm_unpack "./${UP}/${NM2}-dict-es-${BVER}.${XARCH}.rpm"
-	rpm_unpack "./${UP}/${NM2}-dict-fr-${BVER}.${XARCH}.rpm"
+	for s in base binfilter calc draw help impress math res writer ; do
+		rpm_unpack "./${UP}/${BASIS}-en-US-${s}-${BVER}.${XARCH}.rpm"
+	done
 
 	# Localization
 	strip-linguas ${LANGS}
-	if [[ -z "${LINGUAS}" ]]; then
-		export LINGUAS="en"
-	fi
+	for l in ${LINGUAS}; do
+		m="${l/_/-}"
+		if [[ ${m} != "en" ]] ; then
+			LANGDIR="${PACKED2}_${m}.${BUILDID}/RPMS/"
+			rpm_unpack "./${LANGDIR}/${BASIS}-${m}-${BVER}.${XARCH}.rpm"
+			rpm_unpack "./${LANGDIR}/${NM2}-${m}-${BVER}.${XARCH}.rpm"
+			for n in base binfilter calc draw help impress math res writer; do
+				rpm_unpack "./${LANGDIR}/${BASIS}-${m}-${n}-${BVER}.${XARCH}.rpm"
+			done
 
-	for k in ${LINGUAS}; do
-		i="${k/_/-}"
-		if [[ ${i} = "en" ]] ; then
-			i="en-US"
-			LANGDIR="${PACKED}_${i}.${BUILDID}/RPMS/"
-		else
-			LANGDIR="${PACKED2}_${i}.${BUILDID}/RPMS/"
+			for DICT_FILE in `find "./${LANGDIR}" -name "${NM2}-dict-*-${BVER}.${XARCH}.rpm"`; do
+				DICT_REGEX="s/${NM2}-dict-(.*?)-${BVER}.${XARCH}.rpm/\1/"
+				DICT_LOCALE=`basename "$DICT_FILE" | sed -E "${DICT_REGEX}"`
+				if [[ -n "${DICT_LOCALE}" && ! -d "${WORKDIR}/opt/${NM1}/share/extensions/dict-${DICT_LOCALE}" ]] ; then
+					rpm_unpack "${DICT_FILE}"
+				fi
+			done
+
 		fi
-		rpm_unpack "./${LANGDIR}/${BASIS}-${i}-${BVER}.${XARCH}.rpm"
-		rpm_unpack "./${LANGDIR}/${NM2}-${i}-${BVER}.${XARCH}.rpm"
-		for j in base binfilter calc draw help impress math res writer; do
-			rpm_unpack "./${LANGDIR}/${BASIS}-${i}-${j}-${BVER}.${XARCH}.rpm"
-		done
 	done
 
 }
@@ -195,16 +200,6 @@ pkg_postinst() {
 	use gnome && gnome2_icon_cache_update
 
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/${NM}/program/soffice.bin
-
-	elog " openoffice-bin does not provide integration with system spell "
-	elog " dictionaries. Please install them manually through the Extensions "
-	elog " Manager (Tools > Extensions Manager) or use the source based "
-	elog " package instead. "
-	elog
-	elog " Dictionaries for English, French and Spanish are provided in "
-	elog " ${EPREFIX}/usr/$(get_libdir)/openoffice/share/extension/install "
-	elog " Other dictionaries can be found at Suns extension site. "
-	elog
 
 }
 

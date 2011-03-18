@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.243 2011/03/18 22:58:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.244 2011/03/18 23:42:47 suka Exp $
+
+  18 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-3.3.0.ebuild:
+  Install all the available dictionaries by default
 
   18 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-3.3.0.ebuild:
