@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2_rc2.ebuild,v 1.1 2011/03/18 19:41:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2_rc2.ebuild,v 1.2 2011/03/18 22:39:38 suka Exp $
 
 EAPI="3"
 
@@ -335,18 +335,11 @@ src_configure() {
 	# Use multiprocessing by default now, it gets tested by upstream
 	export JOBS=$(echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/")
 
-	# set allowed flags for libreoffice
-	# we really should allow '-g' others to build with debugging flags
-	# still need a better check for disk size for that though
-	ALLOWED_FLAGS="-pipe -mcpu -march -mtune"
-	ALLOWED_FLAGS+=" -fstack-protector -fstack-protector-all"
-	ALLOWED_FLAGS+=" -fbounds-checking -fomit-frame-pointer"
-	ALLOWED_FLAGS+=" -W* -w"
-
 	# compiler flags
 	use custom-cflags || strip-flags
+	use debug || filter-flags "-g*"
+	# silent miscompiles; LO/OOo adds -O2/1/0 where appropriate
 	filter-flags "-O*"
-	append-flags "-w"
 
 	if [[ $(gcc-major-version) -lt 4 ]]; then
 		filter-flags "-fstack-protector"
