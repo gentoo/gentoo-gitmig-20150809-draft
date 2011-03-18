@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.177 2011/03/14 20:08:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.178 2011/03/18 08:47:47 vapier Exp $
+
+  18 Mar 2011; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.3-r1.ebuild:
+  Mark alpha/arm/hppa/ia64/s390/sh stable #358509.
 
   14 Mar 2011; Markos Chandras <hwoarang@gentoo.org> nfs-utils-1.2.3-r1.ebuild:
   Stable on amd64 wrt bug #358509
