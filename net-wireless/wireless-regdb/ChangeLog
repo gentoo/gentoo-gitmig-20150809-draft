@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wireless-regdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.18 2009/11/26 11:46:13 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.19 2011/03/18 16:18:28 chainsaw Exp $
+
+*wireless-regdb-20101124 (18 Mar 2011)
+
+  18 Mar 2011; Tony Vroon <chainsaw@gentoo.org>
+  +wireless-regdb-20101124.ebuild:
+  Bump to newest available version as suggested by Ed Wildgoose, closes bug
+  #357701.
 
 *wireless-regdb-20091125 (26 Nov 2009)
 
