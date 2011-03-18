@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.6 2011/03/17 13:51:00 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.7 2011/03/18 22:58:10 suka Exp $
 
 EAPI="3"
 
@@ -10,20 +10,26 @@ IUSE="gnome java"
 
 BUILDID="9567"
 BUILDID2="9556"
-UREVER="1.7.0"
+MST="OOO330_m20"
 MY_PV="${PV}rc10"
 MY_PV2="${MY_PV}_20110118"
-MY_PV3="${PV}-${BUILDID}"
+BVER="${PV}-${BUILDID}"
+BVER2="3.3-${BUILDID2}"
+UREVER="1.7.0"
 BASIS="ooobasis3.3"
-MST="OOO330_m20"
+BASIS2="basis3.3"
+NM="openoffice"
+NM1="${NM}.org"
+NM2="${NM1}3"
+NM3="${NM2}.3"
 FILEPATH="http://download.services.openoffice.org/files/extended/${MY_PV}"
 
 if [ "${ARCH}" = "amd64" ] ; then
-	OOARCH="x86_64"
+	XARCH="x86_64"
 	PACKED="${MST}_native_packed-1"
 	PACKED2="${MST}_native_packed-1"
 else
-	OOARCH="i586"
+	XARCH="i586"
 	PACKED="${MST}_native_packed-1"
 	PACKED2="${MST}_native_packed-1"
 fi
@@ -68,40 +74,40 @@ PDEPEND="java? ( >=virtual/jre-1.5 )"
 
 RESTRICT="strip"
 
-QA_EXECSTACK="usr/$(get_libdir)/openoffice/basis3.3/program/*
-	usr/$(get_libdir)/openoffice/ure/lib/*"
-QA_TEXTRELS="usr/$(get_libdir)/openoffice/basis3.3/program/libvclplug_genli.so \
-	usr/$(get_libdir)/openoffice/basis3.3/program/python-core-2.6.1/lib/lib-dynload/_curses_panel.so \
-	usr/$(get_libdir)/openoffice/basis3.3/program/python-core-2.6.1/lib/lib-dynload/_curses.so \
-	usr/$(get_libdir)/openoffice/ure/lib/*"
+QA_EXECSTACK="usr/$(get_libdir)/${NM}/${BASIS2}/program/*
+	usr/$(get_libdir)/${NM}/ure/lib/*"
+QA_TEXTRELS="usr/$(get_libdir)/${NM}/${BASIS2}/program/libvclplug_genli.so \
+	usr/$(get_libdir)/${NM}/${BASIS2}/program/python-core-2.6.1/lib/lib-dynload/_curses_panel.so \
+	usr/$(get_libdir)/${NM}/${BASIS2}/program/python-core-2.6.1/lib/lib-dynload/_curses.so \
+	usr/$(get_libdir)/${NM}/ure/lib/*"
 
 src_unpack() {
 
 	unpack ${A}
 
-	cp "${FILESDIR}"/{50-openoffice-bin,wrapper.in} "${T}"
-	eprefixify "${T}"/{50-openoffice-bin,wrapper.in}
+	cp "${FILESDIR}"/{50-${PN},wrapper.in} "${T}"
+	eprefixify "${T}"/{50-${PN},wrapper.in}
 
 	for i in base binfilter calc core01 core02 core03 core04 core05 core06 core07 draw graphicfilter images impress math ooofonts oooimprovement ooolinguistic pyuno testtool writer xsltfilter ; do
-		rpm_unpack "./${UP}/${BASIS}-${i}-${MY_PV3}.${OOARCH}.rpm"
+		rpm_unpack "./${UP}/${BASIS}-${i}-${BVER}.${XARCH}.rpm"
 	done
+
+	rpm_unpack "./${UP}/${NM2}-${BVER}.${XARCH}.rpm"
+	rpm_unpack "./${UP}/${NM1}-ure-${UREVER}-${BUILDID}.${XARCH}.rpm"
 
 	for j in base calc draw impress math writer; do
-		rpm_unpack "./${UP}/openoffice.org3-${j}-${MY_PV3}.${OOARCH}.rpm"
+		rpm_unpack "./${UP}/${NM2}-${j}-${BVER}.${XARCH}.rpm"
 	done
 
-	rpm_unpack "./${UP}/openoffice.org3-${MY_PV3}.${OOARCH}.rpm"
-	rpm_unpack "./${UP}/openoffice.org-ure-${UREVER}-${BUILDID}.${OOARCH}.rpm"
+	rpm_unpack "./${UP}/desktop-integration/${NM3}-freedesktop-menus-${BVER2}.noarch.rpm"
 
-	rpm_unpack "./${UP}/desktop-integration/openoffice.org3.3-freedesktop-menus-3.3-${BUILDID2}.noarch.rpm"
-
-	use gnome && rpm_unpack "./${UP}/${BASIS}-gnome-integration-${MY_PV3}.${OOARCH}.rpm"
-	use java && rpm_unpack "./${UP}/${BASIS}-javafilter-${MY_PV3}.${OOARCH}.rpm"
+	use gnome && rpm_unpack "./${UP}/${BASIS}-gnome-integration-${BVER}.${XARCH}.rpm"
+	use java && rpm_unpack "./${UP}/${BASIS}-javafilter-${BVER}.${XARCH}.rpm"
 
 	# Unpack provided dictionaries, unless there is a better solution...
-	rpm_unpack "./${UP}/openoffice.org3-dict-en-${MY_PV3}.${OOARCH}.rpm"
-	rpm_unpack "./${UP}/openoffice.org3-dict-es-${MY_PV3}.${OOARCH}.rpm"
-	rpm_unpack "./${UP}/openoffice.org3-dict-fr-${MY_PV3}.${OOARCH}.rpm"
+	rpm_unpack "./${UP}/${NM2}-dict-en-${BVER}.${XARCH}.rpm"
+	rpm_unpack "./${UP}/${NM2}-dict-es-${BVER}.${XARCH}.rpm"
+	rpm_unpack "./${UP}/${NM2}-dict-fr-${BVER}.${XARCH}.rpm"
 
 	# Localization
 	strip-linguas ${LANGS}
@@ -117,10 +123,10 @@ src_unpack() {
 		else
 			LANGDIR="${PACKED2}_${i}.${BUILDID}/RPMS/"
 		fi
-		rpm_unpack "./${LANGDIR}/${BASIS}-${i}-${MY_PV3}.${OOARCH}.rpm"
-		rpm_unpack "./${LANGDIR}/openoffice.org3-${i}-${MY_PV3}.${OOARCH}.rpm"
+		rpm_unpack "./${LANGDIR}/${BASIS}-${i}-${BVER}.${XARCH}.rpm"
+		rpm_unpack "./${LANGDIR}/${NM2}-${i}-${BVER}.${XARCH}.rpm"
 		for j in base binfilter calc draw help impress math res writer; do
-			rpm_unpack "./${LANGDIR}/${BASIS}-${i}-${j}-${MY_PV3}.${OOARCH}.rpm"
+			rpm_unpack "./${LANGDIR}/${BASIS}-${i}-${j}-${BVER}.${XARCH}.rpm"
 		done
 	done
 
@@ -128,12 +134,10 @@ src_unpack() {
 
 src_install () {
 
-	INSTDIR="/usr/$(get_libdir)/openoffice"
-
-	einfo "Installing OpenOffice.org into build root..."
+	INSTDIR="/usr/$(get_libdir)/${NM}"
 	dodir ${INSTDIR}
-	mv "${WORKDIR}"/opt/openoffice.org/* "${ED}${INSTDIR}" || die
-	mv "${WORKDIR}"/opt/openoffice.org3/* "${ED}${INSTDIR}" || die
+	mv "${WORKDIR}"/opt/${NM1}/* "${ED}${INSTDIR}" || die
+	mv "${WORKDIR}"/opt/${NM2}/* "${ED}${INSTDIR}" || die
 
 	#Menu entries, icons and mime-types
 	cd "${ED}${INSTDIR}/share/xdg/"
@@ -141,9 +145,9 @@ src_install () {
 		if [ "${desk}" = "javafilter" ] ; then
 			use java || { rm javafilter.desktop; continue; }
 		fi
-		mv ${desk}.desktop openoffice.org-${desk}.desktop
-		sed -i -e s/openoffice.org3/ooffice/g openoffice.org-${desk}.desktop || die
-		domenu openoffice.org-${desk}.desktop
+		mv ${desk}.desktop ${NM1}-${desk}.desktop
+		sed -i -e s/${NM2}/ooffice/g ${NM1}-${desk}.desktop || die
+		domenu ${NM1}-${desk}.desktop
 	done
 	insinto /usr/share
 	doins -r "${WORKDIR}"/usr/share/icons
@@ -165,16 +169,16 @@ src_install () {
 	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
 	rm -f "${ED}${INSTDIR}/basis-link" || die
-	dosym ${INSTDIR}/basis3.3 ${INSTDIR}/basis-link
+	dosym ${INSTDIR}/${BASIS2} ${INSTDIR}/basis-link
 
 	# Change user install dir
-	sed -i -e "s/.openoffice.org\/3/.ooo3/g" "${ED}${INSTDIR}/program/bootstraprc" || die
+	sed -i -e "s/.${NM1}\/3/.ooo3/g" "${ED}${INSTDIR}/program/bootstraprc" || die
 
 	# Non-java weirdness see bug #99366
 	use !java && rm -f "${ED}${INSTDIR}/ure/bin/javaldx"
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
-	insinto /etc/revdep-rebuild && doins "${T}/50-openoffice-bin"
+	insinto /etc/revdep-rebuild && doins "${T}/50-${PN}"
 
 }
 
@@ -190,7 +194,7 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	use gnome && gnome2_icon_cache_update
 
-	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/openoffice/program/soffice.bin
+	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/${NM}/program/soffice.bin
 
 	elog " openoffice-bin does not provide integration with system spell "
 	elog " dictionaries. Please install them manually through the Extensions "
