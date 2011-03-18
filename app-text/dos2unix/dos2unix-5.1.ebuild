@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.1.ebuild,v 1.8 2011/01/05 09:14:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.1.ebuild,v 1.9 2011/03/18 07:12:59 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="nls"
 
-DEPEND="virtual/libintl"
+DEPEND="
+	dev-lang/perl
+	virtual/libintl
+	virtual/perl-PodParser"
 RDEPEND="
 	${DEPEND}
 	!app-text/hd2u
@@ -39,13 +42,13 @@ lintl() {
 }
 
 src_compile() {
-	emake prefix="${EPREFIX}"/usr \
+	emake prefix="${EPREFIX}/usr" \
 		$(use nls && echo "LDFLAGS_EXTRA=$(lintl)" || echo "ENABLE_NLS=") \
 		|| die
 }
 
 src_install() {
-	emake DESTDIR="${D}" prefix="${EPREFIX}"/usr \
+	emake DESTDIR="${D}" prefix="${EPREFIX}/usr" \
 		$(use nls || echo "ENABLE_NLS=") install \
 		|| die "emake install failed"
 }
