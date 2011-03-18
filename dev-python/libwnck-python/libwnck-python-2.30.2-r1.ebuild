@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/libwnck-python-2.30.2-r1.ebuild,v 1.6 2010/10/14 22:34:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/libwnck-python-2.30.2-r1.ebuild,v 1.7 2011/03/18 09:14:27 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="examples"
 
-RDEPEND=">=x11-libs/libwnck-2.19.3
+RDEPEND=">=x11-libs/libwnck-2.19.3:1
 	!<dev-python/gnome-python-desktop-2.22.0-r10"
 DEPEND="${RDEPEND}"
 

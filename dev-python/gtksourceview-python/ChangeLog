@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gtksourceview-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.48 2011/03/12 20:59:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtksourceview-python/ChangeLog,v 1.49 2011/03/18 09:14:31 nirbheek Exp $
+
+  18 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gtksourceview-python-2.28.0.ebuild, gtksourceview-python-2.30.2.ebuild,
+  gtksourceview-python-2.32.0.ebuild:
+  Fix slot-deps on gtk+ and other libs, remove old
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   gtksourceview-python-2.32.0.ebuild:

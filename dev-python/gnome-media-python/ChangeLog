@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-media-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.46 2011/03/12 20:58:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.47 2011/03/18 09:17:14 nirbheek Exp $
+
+  18 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gnome-media-python-2.28.0.ebuild, gnome-media-python-2.30.2.ebuild,
+  gnome-media-python-2.32.0.ebuild:
+  Fix slot-deps on gtk+ and other libs, remove old
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   gnome-media-python-2.32.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/bug-buddy-python-2.32.0.ebuild,v 1.5 2011/03/12 15:58:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/bug-buddy-python-2.32.0.ebuild,v 1.6 2011/03/18 09:18:36 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,6 +18,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=gnome-extra/bug-buddy-2.16
+RDEPEND=">=gnome-extra/bug-buddy-2.16:2
 	!<dev-python/gnome-python-desktop-2.22.0-r10"
 DEPEND="${RDEPEND}"

@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.30.2.ebuild,v 1.6 2010/10/14 22:21:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.30.2.ebuild,v 1.7 2011/03/18 09:20:20 nirbheek Exp $
 
+EAPI="2"
 GCONF_DEBUG="no"
 
 inherit eutils gnome2 versionator
@@ -22,9 +23,9 @@ SLOT="0"
 
 # From the gnome-python-desktop eclass
 RDEPEND="virtual/python
-	>=dev-python/pygtk-2.10.3
-	>=dev-libs/glib-2.6.0
-	>=x11-libs/gtk+-2.4.0
+	>=dev-python/pygtk-2.10.3:2
+	>=dev-libs/glib-2.6.0:2
+	>=x11-libs/gtk+-2.4.0:2
 	!<dev-python/gnome-python-extras-2.13
 	!<dev-python/gnome-python-desktop-2.22.0-r10"
 DEPEND="${RDEPEND}
