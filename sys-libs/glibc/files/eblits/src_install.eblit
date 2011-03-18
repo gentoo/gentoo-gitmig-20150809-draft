@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.13 2011/03/11 02:40:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.14 2011/03/18 20:25:03 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -98,7 +98,7 @@ toolchain-glibc_src_install() {
 	is_final_abi || return 0
 
 	# Make sure the non-native interp can be found on multilib systems
-	if has_multilib_profile ; then
+	if [[ ${SYMLINK_LIB} == "yes" ]] && has_multilib_profile ; then
 		case $(tc-arch) in
 			amd64)
 				[[ ! -e ${D}/lib ]] && dosym $(get_abi_LIBDIR amd64) /lib
