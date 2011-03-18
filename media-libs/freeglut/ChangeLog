@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.76 2011/01/26 18:09:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.77 2011/03/18 18:28:21 scarabeus Exp $
+
+  18 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/2.4.0-cursor.patch, -files/freeglut-2.4.0-macos.patch,
+  -files/freeglut-gcc42.patch:
+  Drop unused patches.
 
   26 Jan 2011; Fabian Groffen <grobian@gentoo.org> -freeglut-2.4.0-r1.ebuild,
   freeglut-2.6.0.ebuild:
