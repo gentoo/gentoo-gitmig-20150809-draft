@@ -1,6 +1,20 @@
 # ChangeLog for net-p2p/bittorrent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.135 2010/11/15 16:12:35 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.136 2011/03/18 00:32:05 dirtyepic Exp $
+
+*bittorrent-4.4.0-r2 (18 Mar 2011)
+
+  18 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> +bittorrent-4.4.0-r2.ebuild,
+  +files/bittorrent-4.4.0-bencode-float.patch,
+  +files/bittorrent-4.4.0-fastresume.patch,
+  +files/bittorrent-4.4.0-hashlib.patch,
+  +files/bittorrent-4.4.0-keyerror.patch,
+  +files/bittorrent-4.4.0-no-version-check.patch,
+  +files/bittorrent-4.4.0-pkidir.patch,
+  +files/bittorrent-4.4.0-pygtk-thread-warnings.patch,
+  +files/bittorrent-4.4.0-python26-syntax.patch, +files/bittorrent.desktop,
+  metadata.xml:
+  Revision bump, new ebuild. Apply Fedora patchset.
 
   15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bittorrent-4.4.0-r1.ebuild, bittorrent-5.0.9-r1.ebuild,
