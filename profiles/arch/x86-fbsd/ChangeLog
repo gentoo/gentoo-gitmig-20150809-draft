@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.22 2010/11/13 16:56:03 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.23 2011/03/18 16:45:30 pacho Exp $
+
+  18 Mar 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
+  Mask media-plugins/gst-plugins-meta USE flags due missing keywords on deps.
 
   13 Nov 2010; Alexis Ballier <aballier@gentoo.org> package.mask:
   Move TeX Live 2010 package.mask to per-arch package.mask, bug #342513
