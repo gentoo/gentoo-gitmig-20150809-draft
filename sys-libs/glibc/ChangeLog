@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.759 2011/03/11 07:43:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.760 2011/03/18 20:24:03 vapier Exp $
+
+  18 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Stick the ABI flags into CC so that they are used at all steps -- compiler,
+  assemble, and link.
 
 *glibc-2.13-r2 (11 Mar 2011)
 
