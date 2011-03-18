@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.3.ebuild,v 1.1 2011/03/16 11:52:03 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.3.ebuild,v 1.2 2011/03/18 15:53:42 ultrabug Exp $
 
 EAPI="3"
 
@@ -26,6 +26,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.1.0-parallel-build.patch" \
 		"${FILESDIR}/${PN}-docdir.patch" \
 		"${FILESDIR}/glusterd-workdir.patch"
+	sed -i -e "s/ -ggdb3//g" argp-standalone/configure.ac || die
 	eautoreconf
 }
 
