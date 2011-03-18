@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12570 2011/03/18 16:47:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12571 2011/03/18 22:02:56 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -284,11 +284,6 @@ net-ftp/atftp
 # Masked for removal in 60 days by treecleaners
 # Doesn't build, gentoo maintainer is not interested. bug 316501 & bug 247043
 dev-lang/gwydion-dylan
-
-# Gilles Dartiguelongue <eva@gentoo.org> (21 Feb 2011)
-# Depends on gstreamer-0.10.32 which is not in tree yet.
-=media-libs/gupnp-dlna-0.5.1
-=net-libs/gupnp-vala-0.7.5
 
 # Markos Chandras <hwoarang@gentoo.org> (21 Feb 2011)
 # Does not work with gnome-panel-2.32.1. Bug #355901

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5160 2011/03/18 17:00:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5161 2011/03/18 22:02:55 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Drop gupnp-av and gupnp-vala mask since gstreamer-0.10.32 has been added to
+  the tree.
 
   18 Mar 2011; Pacho Ramos <pacho@gentoo.org> arch/x86-fbsd/package.use.mask:
   Mask dev-libs/totem-pl-parser USE flags due missing keywords on deps.
