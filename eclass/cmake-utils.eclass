@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.66 2011/01/26 20:51:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.67 2011/03/18 19:45:49 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -348,6 +348,7 @@ enable_cmake-utils_src_configure() {
 	# NOTE CMAKE_BUILD_TYPE can be only overriden via CMAKE_BUILD_TYPE eclass variable
 	# No -DCMAKE_BUILD_TYPE=xxx definitions will be in effect.
 	local cmakeargs=(
+		--no-warn-unused-cli
 		-C "${common_config}"
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}${PREFIX:-/usr}"
 		"${mycmakeargs_local[@]}"
