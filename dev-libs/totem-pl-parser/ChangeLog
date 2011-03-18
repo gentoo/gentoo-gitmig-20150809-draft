@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.86 2011/03/12 15:49:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.87 2011/03/18 17:01:08 pacho Exp $
+
+  18 Mar 2011; Pacho Ramos <pacho@gentoo.org> totem-pl-parser-2.32.3.ebuild,
+  totem-pl-parser-2.32.3-r1.ebuild:
+  Readd x86-fbsd keywords as they don't need to be dropped (yet) if we use.mask
+  quvi for them.
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> totem-pl-parser-2.32.3.ebuild:
   alpha/arm/ia64/sparc stable wrt #353436

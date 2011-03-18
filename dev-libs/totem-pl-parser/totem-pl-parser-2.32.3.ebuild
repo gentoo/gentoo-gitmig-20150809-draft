@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3.ebuild,v 1.7 2011/03/12 15:49:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3.ebuild,v 1.8 2011/03/18 17:01:08 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc +introspection"
 
 RDEPEND=">=dev-libs/glib-2.24:2
