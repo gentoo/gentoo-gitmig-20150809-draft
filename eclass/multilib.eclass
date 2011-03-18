@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.87 2011/03/18 19:13:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.88 2011/03/18 21:56:35 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -265,7 +265,8 @@ is_final_abi() {
 # @DESCRIPTION:
 # echo the number of ABIs we will be installing for
 number_abis() {
-	get_install_abis | wc -w
+	set -- `get_install_abis`
+	echo $#
 }
 
 # @FUNCTION: get_ml_incdir
