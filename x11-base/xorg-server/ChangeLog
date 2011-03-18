@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.574 2011/03/17 22:31:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.575 2011/03/18 18:42:47 scarabeus Exp $
+
+  18 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0002-Fix-linking-with-tslib-with-Wl-as-needed.patch,
+  -files/xorg-server-1.9-xinerama-crash-fix.patch,
+  -files/1.9.0-fix-VbeModeInfoBlock-memcpy.patch,
+  -files/1.7.3.901-0001-dix-if-owner-events-is-true-for-passive-grabs-add-th.pa
+  tch:
+  Drop unused patches.
 
 *xorg-server-1.9.5 (17 Mar 2011)
 
