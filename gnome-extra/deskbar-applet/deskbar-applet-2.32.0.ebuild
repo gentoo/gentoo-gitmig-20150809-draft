@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.7 2011/03/12 19:01:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.32.0.ebuild,v 1.8 2011/03/18 10:09:22 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,14 +19,14 @@ IUSE="eds spell"
 RDEPEND="
 	>=x11-libs/gtk+-2.20:2
 	>=gnome-base/gnome-desktop-2.10:2
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 
-	>=dev-python/pygtk-2.12
-	>=dev-python/pygobject-2.15.3
+	>=dev-python/pygtk-2.12:2
+	>=dev-python/pygobject-2.15.3:2
 	>=dev-python/dbus-python-0.80.2
 
-	>=dev-python/gconf-python-2.22.1
+	>=dev-python/gconf-python-2.22.1:2
 	>=dev-python/gnome-applets-python-2.22
 	>=dev-python/gnome-desktop-python-2.22
 	>=dev-python/gnome-keyring-python-2.22

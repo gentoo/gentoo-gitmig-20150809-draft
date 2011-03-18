@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.30.1.ebuild,v 1.8 2010/10/17 15:42:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.30.1.ebuild,v 1.9 2011/03/18 10:09:22 nirbheek Exp $
 
+EAPI="1"
 GCONF_DEBUG="no"
 
 inherit eutils gnome2 python
@@ -14,16 +15,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="eds spell"
 
-RDEPEND=">=dev-lang/python-2.4
-	>=x11-libs/gtk+-2.20
-	>=gnome-base/gnome-desktop-2.10
-	>=gnome-base/gconf-2
+RDEPEND="=dev-lang/python-2*
+	>=x11-libs/gtk+-2.20:2
+	>=gnome-base/gnome-desktop-2.10:2
+	>=gnome-base/gconf-2:2
 
-	>=dev-python/pygtk-2.12
-	>=dev-python/pygobject-2.15.3
+	>=dev-python/pygtk-2.12:2
+	>=dev-python/pygobject-2.15.3:2
 	>=dev-python/dbus-python-0.80.2
 
-	>=dev-python/gconf-python-2.22.1
+	>=dev-python/gconf-python-2.22.1:2
 	>=dev-python/gnome-applets-python-2.22.0
 	>=dev-python/gnome-desktop-python-2.22.0
 	>=dev-python/gnome-keyring-python-2.22.0
