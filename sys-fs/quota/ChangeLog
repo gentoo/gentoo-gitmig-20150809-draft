@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.51 2011/03/13 11:35:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.52 2011/03/18 17:37:00 armin76 Exp $
+
+  18 Mar 2011; Raúl Porcel <armin76@gentoo.org> quota-3.17.ebuild:
+  arm stable
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> quota-3.17.ebuild:
   ppc64 stable wrt #358375
