@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r4.ebuild,v 1.2 2011/03/15 18:11:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r4.ebuild,v 1.3 2011/03/18 21:55:11 vapier Exp $
 
 inherit versionator eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.kermit-project.org/"
 
 LICENSE="Kermit"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )"

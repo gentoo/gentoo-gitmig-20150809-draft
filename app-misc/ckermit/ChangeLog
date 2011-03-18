@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ckermit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.32 2011/03/15 18:11:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.33 2011/03/18 21:55:11 vapier Exp $
+
+  18 Mar 2011; Mike Frysinger <vapier@gentoo.org> ckermit-8.0.211-r4.ebuild:
+  Mark ppc/ppc64/x86 stable #357735.
 
   15 Mar 2011; Markos Chandras <hwoarang@gentoo.org> ckermit-8.0.211-r4.ebuild:
   Stable on amd64 wrt bug #357735
