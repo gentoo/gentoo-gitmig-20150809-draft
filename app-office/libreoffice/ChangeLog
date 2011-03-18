@@ -1,6 +1,17 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.22 2011/03/17 13:15:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.23 2011/03/18 19:41:58 suka Exp $
+
+*libreoffice-3.3.2_rc2 (18 Mar 2011)
+
+  18 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
+  -libreoffice-3.3.2_rc1.ebuild, +libreoffice-3.3.2_rc2.ebuild,
+  -files/gentoo-3.3.2_rc1.diff, +files/gentoo-3.3.2_rc2.diff:
+  New release candidate, also brings some further improvements to the ebuild
+  *) Add custom-optimization flag, thanks mostly to geki <h.mth@web.de>
+   bug #355981
+  *) Fixed dependency on cairo, we really want that not to be optional
+  *) Bunch of cleanups
 
   17 Mar 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.3.1.ebuild,
   libreoffice-3.3.2_rc1.ebuild:
