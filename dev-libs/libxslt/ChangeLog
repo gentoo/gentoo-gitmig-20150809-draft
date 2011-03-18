@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.213 2011/03/15 15:40:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.214 2011/03/18 17:30:53 armin76 Exp $
+
+  18 Mar 2011; Raúl Porcel <armin76@gentoo.org> libxslt-1.1.26-r1.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #358615
 
   15 Mar 2011; Jeroen Roovers <jer@gentoo.org> libxslt-1.1.26-r1.ebuild:
   Stable for HPPA (bug #358615).
