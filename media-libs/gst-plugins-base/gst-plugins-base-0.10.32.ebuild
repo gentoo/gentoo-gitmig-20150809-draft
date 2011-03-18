@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.32.ebuild,v 1.2 2011/03/18 07:48:11 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.32.ebuild,v 1.3 2011/03/18 21:58:37 eva Exp $
 
 EAPI=1
 
@@ -41,6 +41,9 @@ src_compile() {
 	# gst doesnt handle opts well, last tested with 0.10.15
 	strip-flags
 	replace-flags "-O3" "-O2"
+
+	# Avoid sandbox violation with USE="introspection", bug #356283
+	export GST_REGISTRY=${T}/registry.cache.xml
 
 	gst-plugins-base_src_configure \
 		$(use_enable introspection) \
