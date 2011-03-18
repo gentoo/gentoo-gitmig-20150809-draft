@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use,v 1.1 2011/03/06 00:49:58 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use,v 1.2 2011/03/18 00:28:54 zorry Exp $
 
 # Magnus Granberg <zorry@gentoo.org> (06 Mar 2011)
 # We will have pic enable on older package but not
@@ -10,3 +10,8 @@
 <media-libs/mesa-7.10.1 pic
 <media-libs/xvid-1.3.0 pic
 <dev-lang/php-5.3.5-r1 pic
+
+# Magnus Grenberg <zorry@gentoo.org> (17 Mar 2011)
+# Bug 358929 the pic flag need to be on don't know way.
+app-emulation/open-vmtools pic
+
