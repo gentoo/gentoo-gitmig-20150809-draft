@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/bti
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.16 2011/01/12 23:29:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.17 2011/03/18 00:21:24 flameeyes Exp $
+
+*bti-030 (18 Mar 2011)
+
+  18 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> -bti-028.ebuild,
+  +bti-030.ebuild:
+  Version bump.
 
 *bti-029 (12 Jan 2011)
 

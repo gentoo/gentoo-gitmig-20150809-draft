@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/bti-028.ebuild,v 1.1 2010/09/02 01:46:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/bti-030.ebuild,v 1.1 2011/03/18 00:21:24 flameeyes Exp $
 
 EAPI=2
 
