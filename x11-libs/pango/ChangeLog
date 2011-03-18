@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.311 2011/03/18 08:31:46 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.312 2011/03/18 17:33:13 armin76 Exp $
+
+  18 Mar 2011; Raúl Porcel <armin76@gentoo.org> pango-1.28.3-r1.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #352087
 
   18 Mar 2011; Jonathan Callen <abcd@gentoo.org> pango-1.28.3-r1.ebuild:
   Merge prefix changes from overlay, add prefix keywords
