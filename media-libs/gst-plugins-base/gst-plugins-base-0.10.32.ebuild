@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.32.ebuild,v 1.1 2011/02/24 06:32:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.32.ebuild,v 1.2 2011/03/18 07:48:11 leio Exp $
 
 EAPI=1
 
@@ -34,6 +34,7 @@ DOCS="AUTHORS NEWS README RELEASE"
 src_unpack() {
 	gnome2_src_unpack
 	epatch "$FILESDIR/${PN}-0.10.31-fix-tag-test-linking.patch"
+	epatch "$FILESDIR/${P}-fix-tests-encodebin.patch"
 }
 
 src_compile() {
