@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.110 2011/03/16 21:33:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.111 2011/03/18 15:58:48 ultrabug Exp $
 
 # Its deps are not mature enough yet
 ayatana
@@ -219,7 +219,6 @@ ada
 # lvm2 clustered use flags (moved from default-linux)
 clvm
 gulm
-cman
 
 # tcc is x86 only
 tcc
@@ -236,11 +235,6 @@ prefix
 # Alexey Shvetsov <alexxy@gentoo.org>
 # Mask kdeprefix since its broken by now
 kdeprefix
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
-#  on behalf of QA Team
-# Removal of cman is scheduled for 2009-10-06
-cman
 
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2009)
 # RealMagic Hollywood+/Creative DXR3 support
