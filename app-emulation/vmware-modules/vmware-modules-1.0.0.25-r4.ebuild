@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.25-r4.ebuild,v 1.1 2011/03/18 14:52:53 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.25-r4.ebuild,v 1.2 2011/03/18 15:53:13 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -79,7 +79,7 @@ src_install() {
 	local udevrules="${T}/60-vmware.rules"
 	cat > "${udevrules}" <<-EOF
 		KERNEL=="vmci",  GROUP="vmware", MODE=660
-		KERNEL=="vmmon", GROUP="vmware", MODE=660 
+		KERNEL=="vmmon", GROUP="vmware", MODE=660
 		KERNEL=="vsock", GROUP="vmware", MODE=660
 	EOF
 	insinto /etc/udev/rules.d/
