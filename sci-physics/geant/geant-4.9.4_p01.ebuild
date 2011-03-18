@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4.ebuild,v 1.3 2011/02/13 12:44:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p01.ebuild,v 1.1 2011/03/18 16:43:55 bicatali Exp $
 
 EAPI=3
 
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYP}"
 
-PATCHES=( "${FILESDIR}"/${P}-{no-benchmarks,zlib,libdir,datadir,no-examples}.patch )
+PATCHES=( "${FILESDIR}"/${PN}-4.9.4-{no-benchmarks,zlib,libdir,datadir,no-examples}.patch )
 
 src_configure() {
 	mycmakeargs=(
@@ -83,5 +83,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Users need to define the G4WORKDIR (\$HOME/geant4 is normally used)."
+	elog "Users need to define the G4WORKDIR variable (\$HOME/geant4 is normally used)."
 }
