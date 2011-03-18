@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ganyremote-5.11.5.ebuild,v 1.1 2010/07/18 06:49:22 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ganyremote-5.12.ebuild,v 1.1 2011/03/18 22:20:02 serkan Exp $
 
 EAPI="2"
 
