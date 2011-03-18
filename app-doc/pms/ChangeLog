@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.28 2011/02/20 16:19:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.29 2011/03/18 19:38:42 ulm Exp $
+
+  18 Mar 2011; Ulrich Mueller <ulm@gentoo.org> pms-4_p20110118.ebuild:
+  Mark as stable, bug 359359.
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> pms-2.ebuild:
   No stable keywords for prefix
