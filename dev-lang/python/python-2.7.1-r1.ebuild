@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.1-r1.ebuild,v 1.1 2011/02/21 22:16:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.1-r1.ebuild,v 1.2 2011/03/18 21:52:31 vapier Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -306,8 +306,6 @@ src_install() {
 	fi
 
 	use threads || rm -fr "${ED}$(python_get_libdir)/multiprocessing"
-
-	prep_ml_includes $(python_get_includedir)
 
 	dodoc Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
 

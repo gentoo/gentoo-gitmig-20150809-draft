@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.44 2010/12/16 16:14:40 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.45 2011/03/18 21:52:31 vapier Exp $
 
 EAPI="1"
 
@@ -249,8 +249,6 @@ src_install() {
 		use berkdb || rm -fr "${ED}"usr/lib*/python${SLOT}/{bsddb,test/test_bsddb*}
 		use tk || rm -fr "${ED}usr/bin/idle${SLOT}" "${ED}"usr/lib*/python${SLOT}/{idlelib,lib-tk}
 	fi
-
-	prep_ml_includes $(python_get_includedir)
 
 	dodoc Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
 
