@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.169 2011/03/05 17:53:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.170 2011/03/18 18:29:08 scarabeus Exp $
+
+*libX11-1.4.2 (18 Mar 2011)
+
+  18 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libX11-1.4.0.ebuild,
+  +libX11-1.4.2.ebuild:
+  Version bump. Drop older.
 
   05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libX11-1.4.1.ebuild:
   ppc64 stable wrt #354237
