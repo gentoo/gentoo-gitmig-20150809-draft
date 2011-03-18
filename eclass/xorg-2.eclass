@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.36 2011/03/17 22:43:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.37 2011/03/18 18:31:23 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -84,7 +84,7 @@ if [[ -z ${XORG_MODULE} ]]; then
 fi
 
 # backcompat, remove when everything in main tree fixed
-[[ -n ${MODULE} ]] && XORG_MODULE=${MODULE} && ewarn "Your ebuild is using MODULE variable, please migrate to XORG_MODULE to preserve namespace."
+[[ -n ${MODULE} ]] && XORG_MODULE=${MODULE} && ewarn "$CATEGORY/$P is using MODULE variable, please migrate to XORG_MODULE to preserve namespace."
 
 # @ECLASS-VARIABLE: XORG_PACKAGE_NAME
 # @DESCRIPTION:
