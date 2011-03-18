@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.6.ebuild,v 1.1 2011/03/17 16:36:51 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.6.ebuild,v 1.2 2011/03/18 07:03:36 olemarkus Exp $
 
 EAPI=2
 
@@ -170,7 +170,7 @@ DEPEND="!dev-lang/php:5
 	solid? ( >=dev-db/unixODBC-1.8.13 )
 	spell? ( >=app-text/aspell-0.50 )
 	sqlite? ( =dev-db/sqlite-2* pdo? ( >=dev-db/sqlite-3.7.4 ) )
-	sqlite3? ( =dev-db/sqlite-3.7.4 )
+	sqlite3? ( >=dev-db/sqlite-3.7.4 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase-ct? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
