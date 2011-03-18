@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/make.defaults,v 1.20 2009/12/13 21:45:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/make.defaults,v 1.21 2011/03/18 22:09:09 vapier Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -17,7 +17,6 @@ CXXFLAGS="${CFLAGS}"
 CFLAGS_amd64=""
 LDFLAGS_amd64="-m elf_x86_64"
 CHOST_amd64="x86_64-pc-linux-gnu"
-CDEFINE_amd64="__x86_64__"
 LIBDIR_amd64="lib64"
 
 SYMLINK_LIB="yes"

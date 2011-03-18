@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5161 2011/03/18 22:02:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5162 2011/03/18 22:09:10 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Mar 2011: Mike Frysinger <vapier@gentoo.org> **/make.defaults:
+  Drop CDEFINE_<abi> variables now that nothing uses them.
 
   18 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Drop gupnp-av and gupnp-vala mask since gstreamer-0.10.32 has been added to

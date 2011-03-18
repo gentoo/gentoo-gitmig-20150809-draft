@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.46 2011/03/04 22:00:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.47 2011/03/18 22:09:09 vapier Exp $
+
+  18 Mar 2011: Mike Frysinger <vapier@gentoo.org> mips64/multilib/make.defaults,
+  mipsel/mips64el/multilib/make.defaults:
+  Drop CDEFINE_<abi> variables now that nothing uses them.
 
   04 Mar 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Drop net-firewall/iptables[netlink], per bug 354309
