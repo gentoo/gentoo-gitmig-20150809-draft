@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2010-r2.ebuild,v 1.5 2011/02/27 16:42:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2010-r2.ebuild,v 1.6 2011/03/18 19:59:37 tomka Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="cjk context detex doc dvi2tty dvipdfm extra games graphics
 	humanities jadetex latex3 luatex music omega pdfannotextractor png pstricks publishers science tex4ht
 	truetype xetex xindy xml X"
