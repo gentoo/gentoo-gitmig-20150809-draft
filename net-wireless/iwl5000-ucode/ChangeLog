@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/iwl5000-ucode
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.8 2010/01/09 11:18:39 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.9 2011/03/18 08:39:51 bangert Exp $
+
+*iwl5000-ucode-8.83.5.1 (18 Mar 2011)
+
+  18 Mar 2011; Thilo Bangert <bangert@gentoo.org>
+  +iwl5000-ucode-8.83.5.1.ebuild:
+  version bump (#357705)
 
   09 Jan 2010; Hanno Boeck <hanno@gentoo.org> iwl5000-ucode-5.4.0.11.ebuild,
   iwl5000-ucode-8.24.2.12.ebuild:
