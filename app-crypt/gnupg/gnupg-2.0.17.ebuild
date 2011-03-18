@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.7 2011/03/12 13:28:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.17.ebuild,v 1.8 2011/03/18 18:30:37 c1pher Exp $
 
 EAPI="3"
 
@@ -104,21 +104,24 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog NEWS README THANKS TODO VERSION || die "dodoc failed"
+	emake DESTDIR="${D}" -f doc/Makefile uninstall-nobase_dist_docDATA || die
+	rm -r "${ED}usr/share/gnupg/help"* || die
 
-	mv "${ED}usr/share/gnupg/help"* "${ED}usr/share/doc/${PF}"
-	ecompressdir "/usr/share/doc/${PF}"
+	dodoc ChangeLog NEWS README THANKS TODO VERSION doc/FAQ doc/DETAILS \
+	doc/HACKING doc/TRANSLATE doc/OpenPGP doc/KEYSERVER doc/help* || die "dodoc failed"
 
-	dosym gpg2 /usr/bin/gpg
-	dosym gpgv2 /usr/bin/gpgv
-	dosym gpg2keys_hkp /usr/libexec/gpgkeys_hkp
-	dosym gpg2keys_finger /usr/libexec/gpgkeys_finger
-	dosym gpg2keys_curl /usr/libexec/gpgkeys_curl
-	use ldap && dosym gpg2keys_ldap /usr/libexec/gpgkeys_ldap
+	dosym gpg2 /usr/bin/gpg || die
+	dosym gpgv2 /usr/bin/gpgv || die
+	dosym gpg2keys_hkp /usr/libexec/gpgkeys_hkp || die
+	dosym gpg2keys_finger /usr/libexec/gpgkeys_finger || die
+	dosym gpg2keys_curl /usr/libexec/gpgkeys_curl || die
+	if use ldap; then
+		dosym gpg2keys_ldap /usr/libexec/gpgkeys_ldap || die
+	fi
 	echo ".so man1/gpg2.1" > "${ED}usr/share/man/man1/gpg.1"
 	echo ".so man1/gpgv2.1" > "${ED}usr/share/man/man1/gpgv.1"
 
-	dodir /etc/env.d
+	dodir /etc/env.d || die
 	echo "CONFIG_PROTECT=/usr/share/gnupg/qualified.txt" >>"${ED}etc/env.d/30gnupg"
 
 	if use doc; then

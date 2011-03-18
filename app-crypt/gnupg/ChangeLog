@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.409 2011/03/12 13:28:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.410 2011/03/18 18:30:37 c1pher Exp $
+
+  18 Mar 2011; Dane Smith <c1pher@gentoo.org> gnupg-2.0.17.ebuild:
+  Remove the use of ecompressdir wrt bug 356501. Other small QA fixes. No
+  revbump as installed files don't change (Save for the removal of a couple
+  examples files that were once doc.)
 
   12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> gnupg-2.0.17.ebuild:
   Stable on alpha, bug #355265
