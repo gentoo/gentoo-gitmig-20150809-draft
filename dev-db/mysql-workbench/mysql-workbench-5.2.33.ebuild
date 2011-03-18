@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.33.ebuild,v 1.1 2011/03/14 18:22:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.33.ebuild,v 1.2 2011/03/18 13:34:49 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -59,8 +59,11 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-cpp.patch"
 	eautoreconf
 
-	# Remove bundled ctemplate version to make sure we use the system version.
+	# Remove bundled ctemplate version to make sure we use the system
+	# version, but leave a directory to avoid confusing configure, bug
+	# 357539.
 	rm -rf ext/ctemplate || die
+	mkdir -p ext/ctemplate/ctemplate-src || die
 }
 
 src_configure() {
