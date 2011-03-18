@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.364 2011/03/11 15:07:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.365 2011/03/18 20:01:32 maekke Exp $
+
+  18 Mar 2011; Markus Meier <maekke@gentoo.org> sqlite-3.7.5.ebuild:
+  arm stable, bug #357849
 
   11 Mar 2011; Jeroen Roovers <jer@gentoo.org> sqlite-3.7.5.ebuild:
   Stable for HPPA (bug #357849).
