@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/mobile-broadband-provider-info
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.8 2011/02/19 14:20:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.9 2011/03/18 15:46:48 mr_bones_ Exp $
+
+  18 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  mobile-broadband-provider-info-20100122.ebuild,
+  mobile-broadband-provider-info-20100510.ebuild,
+  mobile-broadband-provider-info-20110218.ebuild:
+  Remove SRC_URI fixup now that gnome.org.eclass is fixed
 
 *mobile-broadband-provider-info-20110218 (19 Feb 2011)
 
