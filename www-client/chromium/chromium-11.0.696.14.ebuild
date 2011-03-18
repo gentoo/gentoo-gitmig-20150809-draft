@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.3.ebuild,v 1.3 2011/03/14 22:32:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.14.ebuild,v 1.1 2011/03/18 14:33:05 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-V8_DEPEND="3.1.8"
+V8_DEPEND="3.1.8.2"
 
-inherit eutils fdo-mime flag-o-matic multilib pax-utils portability python \
-	toolchain-funcs versionator virtualx
+inherit eutils fdo-mime flag-o-matic gnome2-utils multilib pax-utils \
+	portability python toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -288,9 +288,12 @@ src_install() {
 	dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
 	dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
 
-	# Install icon and desktop entry.
-	newicon chrome/app/theme/chromium/product_logo_48.png \
-		chromium-browser.png || die
+	# Install icons and desktop entry.
+	for SIZE in 16 22 24 32 48 64 128 256 ; do
+		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
+		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
+			chromium-browser.png || die
+	done
 	make_desktop_entry chromium-browser "Chromium" chromium-browser \
 		"Network;WebBrowser" "MimeType=text/html;text/xml;application/xhtml+xml;"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop || die
@@ -303,8 +306,13 @@ src_install() {
 	fi
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 
 	# For more info see bugs #292201 and bug #352263.
 	elog "Depending on your desktop environment, you may need"
@@ -315,4 +323,8 @@ pkg_postinst() {
 	elog "For other desktop environments, try one of the following:"
 	elog " - x11-themes/gnome-icon-theme"
 	elog " - x11-themes/xfce4-icon-theme"
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
