@@ -1,19 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.0-r1.ebuild,v 1.5 2011/03/16 10:24:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.0-r1.ebuild,v 1.6 2011/03/18 08:11:39 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
+GNOME_ORG_MODULE="GConf"
 
 inherit eutils gnome2
 
-MY_PN=GConf
-MY_P=${MY_PN}-${PV}
-PVP=(${PV//[-\._]/ })
-
 DESCRIPTION="Gnome Configuration System and Daemon"
 HOMEPAGE="http://www.gnome.org/"
-SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -33,8 +29,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1 )"
-
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
