@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.196 2011/02/01 04:12:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.197 2011/03/19 19:56:26 tomka Exp $
+
+  19 Mar 2011; Thomas Kahle <tomka@gentoo.org> doxygen-1.7.3.ebuild:
+  x86 stable per bug 356813
 
 *doxygen-1.7.3 (01 Feb 2011)
 
