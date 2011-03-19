@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.29.1.ebuild,v 1.4 2010/02/13 19:07:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.29.1.ebuild,v 1.5 2011/03/19 18:13:04 ssuominen Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -40,7 +40,6 @@ F_KV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 # Portage Vars
 HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
-PROVIDE="virtual/linux-sources virtual/alsa"
 KEYWORDS="-* ~mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k impactdebug"
 DEPEND=">=sys-devel/gcc-4.1.1"
