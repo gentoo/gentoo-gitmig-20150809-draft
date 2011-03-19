@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.95 2011/03/13 16:01:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.96 2011/03/19 12:28:20 armin76 Exp $
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org> pytz-2011b.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #358313
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> pytz-2011b.ebuild:
   Stable on amd64 wrt bug #358313
