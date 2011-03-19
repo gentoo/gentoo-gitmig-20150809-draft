@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14-r3.ebuild,v 1.9 2009/12/27 09:36:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14-r3.ebuild,v 1.10 2011/03/19 17:00:38 eras Exp $
 
 EAPI=1
 
@@ -18,7 +18,6 @@ SLOT="0"
 KEYWORDS="amd64 hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="idled kerberos kolab nntp pam replication +sieve snmp ssl tcpd"
 
-PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.13
 	pam? (
@@ -37,8 +36,14 @@ DEPEND="$RDEPEND
 	>=sys-devel/autoconf-2.58
 	sys-devel/automake"
 
-RDEPEND="$RDEPEND
-	!virtual/imapd"
+# get rid of old style virtual - bug 350792
+# all blockers really needed?
+RDEPEND="${RDEPEND}
+	!net-mail/dovecot
+	!mail-mta/courier
+	!net-mail/bincimap
+	!net-mail/courier-imap
+	!net-mail/uw-imap"
 
 new_net-snmp_check() {
 	# tcpd USE flag check. Bug #68254.
