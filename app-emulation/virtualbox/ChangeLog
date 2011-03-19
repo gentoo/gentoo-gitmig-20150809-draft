@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.62 2011/02/20 18:32:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.63 2011/03/19 16:35:02 serkan Exp $
+
+*virtualbox-4.0.4-r1 (19 Mar 2011)
+
+  19 Mar 2011; Serkan Kaba <serkan@gentoo.org> +virtualbox-4.0.4-r1.ebuild:
+  Revbump to fix Java issues. Fixes bug #355787.
 
   20 Feb 2011; Lars Wendler <polynomial-c@gentoo.org>
   -files/virtualbox-ose-3.0.0-mesa-check.patch, -virtualbox-3.1.8.ebuild,
