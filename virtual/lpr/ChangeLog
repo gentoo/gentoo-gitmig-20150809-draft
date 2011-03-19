@@ -1,0 +1,9 @@
+# ChangeLog for virtual/lpr
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/lpr/ChangeLog,v 1.1 2011/03/19 17:52:51 ssuominen Exp $
+
+*lpr-0 (19 Mar 2011)
+
+  19 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +lpr-0.ebuild:
+  Initial commit.
+
