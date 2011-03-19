@@ -6,5 +6,5 @@
 		<email>voyageur@gentoo.org</email>
 	</maintainer>
 	<longdescription>Shake is a defragmenter that runs in userspace, without
-the	need of patching the kernel and while the system is used </longdescription>
+then need of patching the kernel and while the system is used </longdescription>
 </pkgmetadata>
