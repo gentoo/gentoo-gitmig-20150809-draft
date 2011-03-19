@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gmpc-awn
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/ChangeLog,v 1.1 2011/03/19 10:41:35 angelos Exp $
+
+*gmpc-awn-0.20.0 (19 Mar 2011)
+
+  19 Mar 2011; Christoph Mende <angelos@gentoo.org> +gmpc-awn-0.20.0.ebuild,
+  +files/gmpc-awn-0.20.0-multilib.patch, +metadata.xml:
+  Initial import
+
