@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.4 2011/03/13 21:31:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.5 2011/03/19 12:29:44 armin76 Exp $
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org>
+  Version-Requirements-0.101.20.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #357599
 
   13 Mar 2011; Markus Meier <maekke@gentoo.org>
   Version-Requirements-0.101.20.ebuild:
