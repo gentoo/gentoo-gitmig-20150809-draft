@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javassist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.27 2011/03/01 11:23:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/ChangeLog,v 1.28 2011/03/19 20:55:40 tomka Exp $
+
+  19 Mar 2011; Thomas Kahle <tomka@gentoo.org> javassist-3.14.0.ebuild:
+  x86 stable per bug 356931
 
   01 Mar 2011; Markos Chandras <hwoarang@gentoo.org> javassist-3.14.0.ebuild:
   Stable on amd64 wrt bug #356931
