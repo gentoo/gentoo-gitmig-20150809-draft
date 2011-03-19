@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.7 2011/03/18 22:54:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.8 2011/03/19 00:14:02 suka Exp $
 
 EAPI="3"
 
@@ -15,21 +15,22 @@ BVER2="3.3-8"
 UREVER="1.7.0-8"
 BASIS="libobasis3.3"
 BASIS2="basis3.3"
-NM1="libreoffice"
+NM="libreoffice"
+NM1="${NM}"
 NM2="${NM1}3"
 NM3="${NM2}.3"
-FILEPATH="http://download.documentfoundation.org/${NM1}/stable/${PV}/rpm/"
+FILEPATH="http://download.documentfoundation.org/${NM}/stable/${PV}/rpm/"
 
 if [ "${ARCH}" = "amd64" ] ; then
 	XARCH="x86_64"
-	XARCH2="x86-64"
+	PACKED="LibO_${MY_PV2}_Linux_x86-64"
 else
 	XARCH="i586"
-	XARCH2="x86"
+	PACKED="LibO_${MY_PV2}_Linux_x86"
 fi
 
 S="${WORKDIR}/en-US/RPMS"
-UP="LibO_${MY_PV2}_Linux_${XARCH2}_install-rpm_en-US/RPMS"
+UP="${PACKED}_install-rpm_en-US/RPMS"
 DESCRIPTION="LibreOffice productivity suite."
 
 SRC_URI="amd64? ( ${FILEPATH}/x86_64/LibO_${PV}_Linux_x86-64_install-rpm_en-US.tar.gz
@@ -72,14 +73,14 @@ PDEPEND="java? ( >=virtual/jre-1.5 )"
 
 RESTRICT="strip"
 
-QA_EXECSTACK="usr/$(get_libdir)/${NM1}/${BASIS2}/program/*
-	usr/$(get_libdir)/${NM1}/ure/lib/*"
-QA_TEXTRELS="usr/$(get_libdir)/${NM1}/ure/lib/*"
-QA_PRESTRIPPED="usr/$(get_libdir)/${NM1}/${BASIS2}/program/*
-	usr/$(get_libdir)/${NM1}/${BASIS2}/program/python-core-2.6.1/lib/lib-dynload/*
-	usr/$(get_libdir)/${NM1}/program/*
-	usr/$(get_libdir)/${NM1}/ure/bin/*
-	usr/$(get_libdir)/${NM1}/ure/lib/*"
+QA_EXECSTACK="usr/$(get_libdir)/${NM}/${BASIS2}/program/*
+	usr/$(get_libdir)/${NM}/ure/lib/*"
+QA_TEXTRELS="usr/$(get_libdir)/${NM}/ure/lib/*"
+QA_PRESTRIPPED="usr/$(get_libdir)/${NM}/${BASIS2}/program/*
+	usr/$(get_libdir)/${NM}/${BASIS2}/program/python-core-2.6.1/lib/lib-dynload/*
+	usr/$(get_libdir)/${NM}/program/*
+	usr/$(get_libdir)/${NM}/ure/bin/*
+	usr/$(get_libdir)/${NM}/ure/lib/*"
 
 src_unpack() {
 
@@ -125,7 +126,7 @@ src_unpack() {
 	for l in ${LINGUAS}; do
 		m="${l/_/-}"
 		if [[ ${m} != "en" ]] ; then
-			LANGDIR="LibO_${MY_PV2}_Linux_${XARCH2}_langpack-rpm_${m}/RPMS/"
+			LANGDIR="${PACKED}_langpack-rpm_${m}/RPMS/"
 			rpm_unpack "./${LANGDIR}/${BASIS}-${m}-${BVER}.${XARCH}.rpm"
 			rpm_unpack "./${LANGDIR}/${NM2}-${m}-${BVER}.${XARCH}.rpm"
 			for n in base binfilter calc math res writer; do
@@ -152,7 +153,7 @@ src_unpack() {
 
 src_install () {
 
-	INSTDIR="/usr/$(get_libdir)/${NM1}"
+	INSTDIR="/usr/$(get_libdir)/${NM}"
 	dodir ${INSTDIR}
 	mv "${WORKDIR}"/opt/${NM1}/* "${ED}${INSTDIR}" || die
 
@@ -204,7 +205,7 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	use gnome && gnome2_icon_cache_update
 
-	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/${NM1}/program/soffice.bin
+	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/${NM}/program/soffice.bin
 
 }
 
