@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.5.0-r1.ebuild,v 1.2 2011/03/14 12:53:14 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit/phpunit-3.5.0-r1.ebuild,v 1.3 2011/03/19 16:14:08 olemarkus Exp $
 
 EAPI="2"
 inherit php-pear-lib-r1
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 	>=dev-php/PEAR-Image_GraphViz-1.2.1
 	>=dev-php/PEAR-Log-1.8.7-r1
 	dev-php/dbunit
-	dev-php5/PEAR-PHP_CodeCoverage
+	dev-php/php-codecoverage
 	dev-php5/PEAR-PHP_Timer
 	dev-php5/phpunit-mockobject
 	dev-php5/phpunit-selenium"
