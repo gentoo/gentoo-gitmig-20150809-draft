@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.2.0.ebuild,v 1.1 2011/02/18 14:00:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.2.0.ebuild,v 1.2 2011/03/19 11:34:38 angelos Exp $
 
 EAPI=3
 inherit qt4-r2
@@ -23,10 +23,10 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -i -e "/FLAGS/d" ${PN}.pro
+	sed -i -e "/FLAGS/d" ${PN}.pro || die
 }
 
 src_install() {
-	dobin ${PN}
-	dodoc changelog FAQ.txt README
+	dobin ${PN} || die "dobin failed"
+	dodoc changelog FAQ.txt README || die "dodoc failed"
 }
