@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.8 2011/03/18 23:42:47 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.9 2011/03/19 00:06:58 suka Exp $
 
 EAPI="3"
 
@@ -27,11 +27,9 @@ FILEPATH="http://download.services.openoffice.org/files/extended/${MY_PV}"
 if [ "${ARCH}" = "amd64" ] ; then
 	XARCH="x86_64"
 	PACKED="${MST}_native_packed-1"
-	PACKED2="${MST}_native_packed-1"
 else
 	XARCH="i586"
 	PACKED="${MST}_native_packed-1"
-	PACKED2="${MST}_native_packed-1"
 fi
 
 S="${WORKDIR}"
@@ -117,7 +115,7 @@ src_unpack() {
 	for l in ${LINGUAS}; do
 		m="${l/_/-}"
 		if [[ ${m} != "en" ]] ; then
-			LANGDIR="${PACKED2}_${m}.${BUILDID}/RPMS/"
+			LANGDIR="${PACKED}_${m}.${BUILDID}/RPMS/"
 			rpm_unpack "./${LANGDIR}/${BASIS}-${m}-${BVER}.${XARCH}.rpm"
 			rpm_unpack "./${LANGDIR}/${NM2}-${m}-${BVER}.${XARCH}.rpm"
 			for n in base binfilter calc draw help impress math res writer; do
