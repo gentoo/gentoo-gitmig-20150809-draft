@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.1.ebuild,v 1.1 2011/02/17 20:39:03 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.2.ebuild,v 1.1 2011/03/19 00:16:58 reavertm Exp $
 
 EAPI="3"
 
@@ -50,7 +50,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.3.0-split.patch"
+	epatch "${FILESDIR}/${PN}-1.3.2-split.patch"
 
 	eautoreconf
 }
