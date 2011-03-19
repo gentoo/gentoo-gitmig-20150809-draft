@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.10.9.ebuild,v 1.1 2011/03/19 20:24:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.10.9.ebuild,v 1.2 2011/03/19 20:25:58 scarabeus Exp $
 
 EAPI=4
 
@@ -15,12 +15,13 @@ IUSE="test"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="
+RDEPEND="
 	dev-libs/expat
 	virtual/libiconv
+"
+DEPEND="${DEPEND}
 	test? ( dev-libs/check )
 "
-RDEPEND="${DEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
