@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.12 2011/02/25 00:30:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.13 2011/03/19 20:00:31 scarabeus Exp $
+
+  19 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> sakura-2.3.8.ebuild,
+  sakura-2.4.0.ebuild:
+  QA: cleanup the cmake-utils usage and bump eapi in the process.
+  Non-maintainer commit.
 
   25 Feb 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   sakura-2.4.0.ebuild:

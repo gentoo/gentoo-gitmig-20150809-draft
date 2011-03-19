@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.0.ebuild,v 1.2 2011/02/25 00:30:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.0.ebuild,v 1.3 2011/03/19 20:00:30 scarabeus Exp $
+
+EAPI=4
 
 inherit cmake-utils
 
@@ -20,8 +22,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.10.1
-	>=dev-util/cmake-2.4.7
 "
 
-# cmake-utils variables
-DOCS="AUTHORS INSTALL"
+DOCS=( AUTHORS INSTALL )
