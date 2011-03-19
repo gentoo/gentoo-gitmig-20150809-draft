@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5164 2011/03/19 13:23:55 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5165 2011/03/19 21:23:40 titanofold Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Mar 2011; Mr. Aaron W. Swenson (TitanOfOld) <titan@gentoo.org>
+  Masking >app-admin/eselect-postgresql-1 module(s) as experimental
 
   19 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org> package.mask:
   cleaned mask vmware-server-1
