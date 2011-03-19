@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.11 2011/02/07 10:57:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.12 2011/03/19 17:11:35 eras Exp $
 
 inherit eutils
 
@@ -17,10 +17,16 @@ DEPEND="ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
 	virtual/daemontools
 	sys-apps/ucspi-tcp
-	net-mail/checkpassword
-	!virtual/imapd"
+	net-mail/checkpassword"
 
-PROVIDE="virtual/imapd"
+# get rid of old style virtual - bug 350792
+# all blockers really needed?
+RDEPEND="${RDEPEND}
+	!net-mail/dovecot
+	!mail-mta/courier
+	!net-mail/courier-imap
+	!net-mail/cyrus-imapd
+	!net-mail/uw-imap"
 
 S="${WORKDIR}/${P}final"
 

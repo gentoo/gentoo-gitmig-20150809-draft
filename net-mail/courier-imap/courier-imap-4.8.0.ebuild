@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0.ebuild,v 1.2 2010/07/01 11:51:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.8.0.ebuild,v 1.3 2011/03/19 17:08:45 eras Exp $
 
 EAPI=2
 inherit autotools eutils multilib libtool
@@ -26,10 +26,15 @@ DEPEND="${RDEPEND}
 		dev-lang/perl
 		!mail-mta/courier
 		userland_GNU? ( sys-process/procps )"
-RDEPEND="${RDEPEND}
-		!virtual/imapd"
 
-PROVIDE="virtual/imapd"
+# get rid of old style virtual - bug 350792
+# all blockers really needed?
+RDEPEND="${RDEPEND}
+	!net-mail/dovecot
+	!mail-mta/courier
+	!net-mail/bincimap
+	!net-mail/cyrus-imapd
+	!net-mail/uw-imap"
 
 RC_VER="4.0.6-r1"
 INITD_VER="4.0.6-r1"
