@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4-r1.ebuild,v 1.1 2011/03/19 16:35:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4-r1.ebuild,v 1.2 2011/03/19 20:22:24 mr_bones_ Exp $
 
 EAPI=2
 
@@ -308,7 +308,7 @@ src_install() {
 	# set an env-variable for 3rd party tools
 	echo -n "VBOX_APP_HOME=/usr/$(get_libdir)/${PN}" > "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
-	
+
 	if use java ; then
 		java-pkg_regjar "${D}/usr/$(get_libdir)/${PN}/sdk/bindings/xpcom/java/vboxjxpcom.jar"
 		java-pkg_regso "${D}/usr/$(get_libdir)/${PN}/libvboxjxpcom.so"
