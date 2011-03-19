@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-albumview/gmpc-albumview-0.20.0.ebuild,v 1.1 2011/03/19 10:36:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-albumview/gmpc-albumview-0.20.0.ebuild,v 1.2 2011/03/19 16:00:39 angelos Exp $
 
 EAPI=4
 
@@ -21,4 +21,9 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf $(use_enable nls)
+}
+
+src_install() {
+	default
+	find "${ED}" -name "*.la" -delete || die
 }
