@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.108 2011/03/07 21:23:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.109 2011/03/19 10:41:39 scarabeus Exp $
+
+*libXi-1.4.2 (19 Mar 2011)
+
+  19 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libXi-1.4.2.ebuild:
+  Version bump
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libXi-1.4.0.ebuild:
   old
