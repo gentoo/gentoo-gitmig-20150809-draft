@@ -1,10 +1,10 @@
 # ChangeLog for perl-core/CPAN-Meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.5 2011/03/19 12:53:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.6 2011/03/19 12:59:10 armin76 Exp $
 
   19 Mar 2011; Raúl Porcel <armin76@gentoo.org> CPAN-Meta-2.110.440.ebuild,
   CPAN-Meta-2.110.580.ebuild:
-  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #357599
+  Add ~alpha/~arm/~ia64/~s390/~sh/~sparc wrt #357599
 
   08 Mar 2011; Jeroen Roovers <jer@gentoo.org> CPAN-Meta-2.110.440.ebuild,
   CPAN-Meta-2.110.580.ebuild:
