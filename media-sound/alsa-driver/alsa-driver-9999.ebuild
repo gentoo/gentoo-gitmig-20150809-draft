@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.16 2010/06/06 01:01:52 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.17 2011/03/19 18:11:38 ssuominen Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools git
 
@@ -44,7 +44,6 @@ DEPEND="${RDEPEND}
 	virtual/linux-sources
 	sys-apps/debianutils"
 
-PROVIDE="virtual/alsa"
 
 S="${WORKDIR}/alsa-driver"
 
