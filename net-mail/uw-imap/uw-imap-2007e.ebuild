@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007e.ebuild,v 1.10 2011/03/19 16:53:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007e.ebuild,v 1.11 2011/03/19 17:03:13 eras Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,8 +34,7 @@ RDEPEND="${RDEPEND}
 	!mail-mta/courier
 	!net-mail/bincimap
 	!net-mail/courier-imap
-	!net-mail/cyrus-imapd
-	!net-mail/uw-imap"
+	!net-mail/cyrus-imapd"
 
 pkg_setup() {
 	echo

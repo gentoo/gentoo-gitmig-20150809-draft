@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.115 2011/03/16 13:52:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.116 2011/03/19 17:03:13 eras Exp $
+
+  19 Mar 2011; Eray Aslan <eras@gentoo.org> uw-imap-2007e.ebuild:
+  remove old style virtual/imapd
 
   16 Mar 2011; Eray Aslan <eras@gentoo.org> uw-imap-2007e.ebuild:
   change to new style virtual/imap-c-client bug 358993
