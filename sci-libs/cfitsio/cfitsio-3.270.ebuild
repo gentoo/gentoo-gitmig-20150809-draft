@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.270.ebuild,v 1.1 2011/03/18 23:42:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.270.ebuild,v 1.2 2011/03/19 17:36:46 grobian Exp $
 
 EAPI=3
 inherit autotools-utils
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~bicatali/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="doc fortran static-libs threads"
 
 RDEPEND="sys-libs/zlib"

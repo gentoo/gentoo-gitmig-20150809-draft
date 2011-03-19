@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.47 2011/03/18 23:42:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.48 2011/03/19 17:36:46 grobian Exp $
+
+  19 Mar 2011; Fabian Groffen <grobian@gentoo.org> cfitsio-3.270.ebuild:
+  Don't just drop Prefix keywords
 
 *cfitsio-3.270 (18 Mar 2011)
 
