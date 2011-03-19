@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.31 2010/03/27 23:30:35 mabi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.32 2011/03/19 16:35:57 olemarkus Exp $
+
+*PEAR-VersionControl_SVN-0.3.4 (19 Mar 2011)
+
+  19 Mar 2011; <olemarkus@gentoo.org> +PEAR-VersionControl_SVN-0.3.4.ebuild:
+  Version bump. Bug #359499. Thanks to Denny
 
   27 Mar 2010; <mabi@gentoo.org> PEAR-VersionControl_SVN-0.3.1.ebuild,
   PEAR-VersionControl_SVN-0.3.3-r1.ebuild:
