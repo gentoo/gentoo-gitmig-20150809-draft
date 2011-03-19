@@ -3,10 +3,10 @@
 <pkgmetadata>
 <herd>pda</herd>
 <maintainer>
-  <email>peper@gentoo.org</email>
-  <name>Piotr Jaroszyński</name>
+  <email>dirtyepic@gentoo.org</email>
+  <name>Ryan Hill</name>
 </maintainer>
 <use>
-  <flag name='irda'>Enable IrDA support</flag>
+  <flag name='irda'>Enable infrared support</flag>
 </use>
 </pkgmetadata>
