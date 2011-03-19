@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.154 2011/01/23 20:14:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.155 2011/03/19 14:36:43 swegener Exp $
+
+  19 Mar 2011; Sven Wegener <swegener@gentoo.org> screen-4.0.3-r1.ebuild,
+  screen-4.0.3-r3.ebuild, screen-4.0.3-r4.ebuild:
+  Touchup postinst logic to be easier to read.
 
   23 Jan 2011; Sven Wegener <swegener@gentoo.org> files/screenrc:
   Change suggested key binding for emacs users, bug #352063.

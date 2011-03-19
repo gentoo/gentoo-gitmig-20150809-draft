@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r1.ebuild,v 1.1 2010/06/15 11:47:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3-r1.ebuild,v 1.2 2011/03/19 14:36:43 swegener Exp $
 
 EAPI="3"
 
@@ -146,14 +146,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use multiuser || use prefix
-	then
-		use prefix || chown root:0 "${EROOT}"/var/run/screen
-		if use prefix; then
-			chmod 0777 "${EROOT}"/var/run/screen
-		else
-			chmod 0755 "${EROOT}"/var/run/screen
-		fi
+	if use prefix; then
+		chmod 0777 "${EROOT}"/var/run/screen
+	elif use multiuser; then
+		chown root:0 "${EROOT}"/var/run/screen
+		chmod 0755 "${EROOT}"/var/run/screen
 	else
 		chown root:utmp "${EROOT}"/var/run/screen
 		chmod 0775 "${EROOT}"/var/run/screen
