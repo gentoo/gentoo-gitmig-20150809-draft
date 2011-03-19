@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.27 2011/03/13 21:30:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.28 2011/03/19 12:51:51 armin76 Exp $
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org> perl-IO-1.25.ebuild:
+  Add ~alpha/~s390/~sh wrt #357599
 
   13 Mar 2011; Markus Meier <maekke@gentoo.org> perl-IO-1.25.ebuild:
   add ~arm, bug #357599
