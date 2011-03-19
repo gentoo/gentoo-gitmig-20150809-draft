@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.8 2011/03/19 00:14:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.9 2011/03/19 00:33:12 suka Exp $
 
 EAPI="3"
 
@@ -29,7 +29,6 @@ else
 	PACKED="LibO_${MY_PV2}_Linux_x86"
 fi
 
-S="${WORKDIR}/en-US/RPMS"
 UP="${PACKED}_install-rpm_en-US/RPMS"
 DESCRIPTION="LibreOffice productivity suite."
 
