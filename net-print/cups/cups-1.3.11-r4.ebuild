@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r4.ebuild,v 1.2 2011/02/28 17:58:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r4.ebuild,v 1.3 2011/03/19 17:54:11 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
@@ -73,8 +73,6 @@ PDEPEND="
 	)
 	samba? ( >=net-fs/samba-3.0.8 )
 "
-
-PROVIDE="virtual/lpr"
 
 # upstream includes an interactive test which is a nono for gentoo.
 # therefore, since the printing herd has bigger fish to fry, for now,

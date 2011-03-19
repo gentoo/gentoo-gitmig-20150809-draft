@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.18 2008/11/03 22:14:42 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.19 2011/03/19 17:54:50 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,6 @@ RDEPEND="sys-process/procps
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	kerberos? ( app-crypt/mit-krb5 )"
-PROVIDE="virtual/lpr"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
