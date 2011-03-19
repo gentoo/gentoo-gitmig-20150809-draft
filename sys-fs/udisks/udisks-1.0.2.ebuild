@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2.ebuild,v 1.5 2011/03/13 20:30:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2.ebuild,v 1.6 2011/03/19 10:51:50 armin76 Exp $
 
 EAPI=3
 inherit eutils bash-completion linux-info
@@ -11,7 +11,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sh sparc x86"
 IUSE="debug doc nls remote-access"
 
 COMMON_DEPEND=">=sys-fs/udev-147[extras]

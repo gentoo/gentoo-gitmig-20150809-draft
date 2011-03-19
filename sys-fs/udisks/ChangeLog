@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.28 2011/03/13 20:30:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.29 2011/03/19 10:51:50 armin76 Exp $
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org> udisks-1.0.1-r1.ebuild,
+  udisks-1.0.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #354505
 
   13 Mar 2011; Markus Meier <maekke@gentoo.org> udisks-1.0.2.ebuild:
   arm stable, bug #354505
