@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.9 2011/03/19 00:06:58 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.10 2011/03/19 00:38:59 suka Exp $
 
 EAPI="3"
 
@@ -32,9 +32,8 @@ else
 	PACKED="${MST}_native_packed-1"
 fi
 
-S="${WORKDIR}"
 UP="${PACKED}_en-US.${BUILDID}/RPMS"
-DESCRIPTION="OpenOffice productivity suite"
+DESCRIPTION="OpenOffice productivity suite."
 
 SRC_URI="x86? ( http://download.services.openoffice.org/files/stable/${PV}/OOo_${PV}_Linux_x86_install-rpm_en-US.tar.gz )
 	amd64? ( http://download.services.openoffice.org/files/stable/${PV}/OOo_${PV}_Linux_x86-64_install-rpm-wJRE_en-US.tar.gz  )"
