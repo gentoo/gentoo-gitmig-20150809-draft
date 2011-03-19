@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.411 2011/03/10 08:58:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.412 2011/03/19 09:31:56 ulm Exp $
+
+  19 Mar 2011; Ulrich Mueller <ulm@gentoo.org> emacs-23.3.ebuild:
+  Don't filter stack-protector compiler flags, bug 359443.
 
 *emacs-23.3 (10 Mar 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.8 2011/03/05 11:23:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.9 2011/03/19 09:34:59 ulm Exp $
 
 EAPI=4
 
@@ -124,7 +124,6 @@ src_prepare() {
 src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
-	filter-flags -fstack-protector -fstack-protector-all	#285778
 
 	if use sh; then
 		replace-flags -O[1-9] -O0		#262359
