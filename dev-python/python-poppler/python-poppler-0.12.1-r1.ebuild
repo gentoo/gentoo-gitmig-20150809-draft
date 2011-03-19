@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1-r1.ebuild,v 1.1 2011/03/19 11:24:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.12.1-r1.ebuild,v 1.2 2011/03/19 12:38:52 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,7 @@ IUSE="examples"
 
 S=${WORKDIR}/pypoppler-${PV}
 
-RDEPEND="( >=app-text/poppler-0.15.0[cairo] )
+RDEPEND=">=app-text/poppler-0.15.0[cairo]
 	>=dev-python/pycairo-1.8.4
 	dev-python/pygobject:2
 	dev-python/pygtk:2"
