@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.4.ebuild,v 1.9 2011/02/19 19:43:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.4.ebuild,v 1.10 2011/03/19 19:26:15 vapier Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng-1.5.patch #354989
 }
 
-src_compile() {
+src_configure() {
 	# imlib2 has diff configure options for x86/amd64 mmx
 	local myconf=""
 	if [[ $(tc-arch) == "amd64" ]] ; then
@@ -49,5 +49,5 @@ src_compile() {
 		$(use_with mp3 id3) \
 		${myconf} \
 	"
-	enlightenment_src_compile
+	enlightenment_src_configure
 }
