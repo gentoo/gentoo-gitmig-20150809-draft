@@ -8,7 +8,6 @@ virtual/gzip			sys-apps/busybox
 virtual/inetd			sys-apps/busybox
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/logger			sys-apps/busybox
-virtual/lpr			net-print/cups
 virtual/modutils		sys-apps/busybox
 virtual/mta			mail-mta/ssmtp
 virtual/os-headers		sys-kernel/linux-headers
