@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.91 2011/03/13 09:44:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.92 2011/03/19 12:27:18 armin76 Exp $
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org> lshw-02.15b.ebuild:
+  ia64 stable wrt #356927
 
   13 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lshw-02.15b.ebuild:
   x86 stable wrt bug #356927
