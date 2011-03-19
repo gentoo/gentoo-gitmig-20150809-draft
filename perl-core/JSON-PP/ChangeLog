@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/JSON-PP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.6 2011/03/13 21:41:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.7 2011/03/19 12:35:08 armin76 Exp $
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org> JSON-PP-2.271.40.ebuild,
+  JSON-PP-2.271.50.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #357599
 
   13 Mar 2011; Markus Meier <maekke@gentoo.org> JSON-PP-2.271.50.ebuild:
   add ~arm, bug #357599
