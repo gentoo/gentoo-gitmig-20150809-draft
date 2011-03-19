@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.19 2011/03/19 17:54:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.20 2011/03/19 17:56:05 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,8 +16,7 @@ IUSE="foomaticdb kerberos nls ssl"
 
 RDEPEND="sys-process/procps
 	ssl? ( dev-libs/openssl )
-	foomaticdb? ( net-print/foomatic-filters net-print/foomatic-db )
-	!virtual/lpr"
+	foomaticdb? ( net-print/foomatic-filters net-print/foomatic-db )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	kerberos? ( app-crypt/mit-krb5 )"
