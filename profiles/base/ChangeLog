@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.223 2011/03/18 15:58:48 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.224 2011/03/19 17:30:26 eras Exp $
+
+  19 Mar 2011; Eray Aslan <eras@gentoo.org> virtuals:
+  remove old style virtual/imapd
 
   18 Mar 2011; Ultrabug <ultrabug@gentoo.org> use.mask:
   remove cman from use.mask with ack from flameeyes and robbat2

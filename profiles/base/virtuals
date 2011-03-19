@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.133 2011/03/16 22:09:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.134 2011/03/19 17:30:26 eras Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -15,7 +15,6 @@ virtual/cron				sys-process/vixie-cron
 virtual/dev-manager			sys-fs/udev
 virtual/dhcpc				net-misc/dhcpcd
 virtual/gzip				app-arch/gzip
-virtual/imapd				net-mail/courier-imap
 virtual/inetd				sys-apps/xinetd
 virtual/jabber-server			net-im/jabberd
 virtual/libc				sys-libs/glibc
