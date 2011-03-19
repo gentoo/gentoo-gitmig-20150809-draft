@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12571 2011/03/18 22:02:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12572 2011/03/19 10:15:48 stefaan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Stefaan De Roeck <stefaan@gentoo.org> (19 Mar 2011)
+# New major upstream release.
+# Needs testing before going to ~arch.
+>=net-fs/openafs-1.6
+>=net-fs/openafs-kernel-1.6
 
 # Jeroen Roovers <jer@gentoo.org> (18 Mar 2011)
 # Snapshots are not supported
