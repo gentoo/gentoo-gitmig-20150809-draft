@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-XML_Serializer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Serializer/ChangeLog,v 1.29 2009/08/22 18:28:48 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Serializer/ChangeLog,v 1.30 2011/03/19 16:30:38 olemarkus Exp $
+
+*PEAR-XML_Serializer-0.20.2 (19 Mar 2011)
+
+  19 Mar 2011; <olemarkus@gentoo.org> +PEAR-XML_Serializer-0.20.2.ebuild:
+  Version bump. Bug #359495. Thanks to Denny
 
 *PEAR-XML_Serializer-0.20.0 (22 Aug 2009)
 
