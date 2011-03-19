@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.51 2011/02/02 19:26:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.52 2011/03/19 15:06:02 scarabeus Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -25,7 +25,7 @@ EXPORTED_FUNCTIONS="src_unpack"
 case "${EAPI:-0}" in
 	4|3|2) EXPORTED_FUNCTIONS="${EXPORTED_FUNCTIONS} src_prepare" ;;
 	1|0) ;;
-	*) DEPEND="EAPI-UNSUPPORTED" ;;
+	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 
