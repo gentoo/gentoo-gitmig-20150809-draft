@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.10.3.ebuild,v 1.1 2011/03/17 20:48:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.10.3-r1.ebuild,v 1.1 2011/03/19 17:57:03 dilfridge Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
@@ -33,6 +33,13 @@ S=${WORKDIR}/${MY_PN}-${PV}
 src_install() {
 	python_convert_shebangs 2 impressive.py
 	dobin impressive.py || die
+
+	# compatibility symlinks
+	insinto /usr/bin
+	dosym impressive.py /usr/bin/impressive || die
+	dosym impressive.py /usr/bin/keyjnote || die
+
+	# docs
 	doman impressive.1 || die
 	dohtml impressive.html || die
 	dodoc changelog.txt demo.pdf || die
