@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.2 2011/03/16 10:50:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.3 2011/03/19 17:19:31 eras Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,8 +14,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite mailwrapper \
 	fam web webmail"
 
-PROVIDE="virtual/mta
-	 virtual/imapd"
+PROVIDE="virtual/mta"
 
 DEPEND="
 	>=net-libs/courier-authlib-0.61.0
@@ -31,12 +30,20 @@ DEPEND="
 	spell? ( virtual/aspell-dict )
 	fam? ( virtual/fam )
 	!mailwrapper? ( !virtual/mta )
-	!virtual/imapd
 	!mail-filter/maildrop"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
 	sys-process/procps"
+
+# get rid of old style virtual - bug 350792
+# all blockers really needed?
+RDEPEND="${RDEPEND}
+	!net-mail/dovecot
+	!net-mail/bincimap
+	!net-mail/courier-imap
+	!net-mail/cyrus-imapd
+	!net-mail/uw-imap"
 
 PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	pam? ( net-mail/mailbase )
