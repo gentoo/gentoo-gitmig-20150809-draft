@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/gmpc-qosd-0.15.5.0.ebuild,v 1.8 2011/02/13 18:06:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-qosd/gmpc-qosd-0.15.5.0.ebuild,v 1.9 2011/03/19 16:47:53 angelos Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools multilib
 
 DESCRIPTION="This plugin provides an on-screen-display written to look nicer than xosd"
@@ -27,4 +27,5 @@ src_prepare() {
 
 src_install () {
 	emake DESTDIR="${D}" install || die
+	find "${ED}" -name "*.la" -delete || die
 }

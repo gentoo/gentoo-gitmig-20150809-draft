@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-tagedit/gmpc-tagedit-0.20.0.ebuild,v 1.3 2011/02/20 17:43:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-tagedit/gmpc-tagedit-0.20.0.ebuild,v 1.4 2011/03/19 16:48:47 angelos Exp $
 
-EAPI=2
+EAPI=3
 
 DESCRIPTION="This plugin allows you to edit tags in your library"
 HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_TAGEDIT"
@@ -30,4 +30,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	find "${ED}" -name "*.la" -delete || die
 }

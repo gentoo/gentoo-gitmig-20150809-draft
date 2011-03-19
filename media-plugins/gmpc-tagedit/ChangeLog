@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-tagedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-tagedit/ChangeLog,v 1.6 2011/02/20 17:43:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-tagedit/ChangeLog,v 1.7 2011/03/19 16:48:47 angelos Exp $
+
+  19 Mar 2011; Christoph Mende <angelos@gentoo.org> gmpc-tagedit-0.20.0.ebuild:
+  Remove .la file
 
   20 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gmpc-tagedit-0.20.0.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-last-fm/gmpc-last-fm-0.20.0.ebuild,v 1.8 2011/02/26 12:14:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-last-fm/gmpc-last-fm-0.20.0.ebuild,v 1.9 2011/03/19 16:40:49 angelos Exp $
 
-EAPI=2
+EAPI=3
 
 DESCRIPTION="This plugin fetches artist art from last.fm"
 HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_LASTFM"
@@ -21,4 +21,5 @@ DEPEND="${RDEPEND}
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${ED}" -name "*.la" -delete || die
 }

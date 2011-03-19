@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-0.20.0.ebuild,v 1.2 2011/03/07 21:36:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/gmpc-mmkeys-0.20.0.ebuild,v 1.3 2011/03/19 16:45:40 angelos Exp $
 
 EAPI=4
 
@@ -21,5 +21,10 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	VALAC=$(type -p valac-0.10) \
-		econf
+		econf --disable-static
+}
+
+src_install() {
+	default
+	find "${ED}" -name "*.la" -delete || die
 }

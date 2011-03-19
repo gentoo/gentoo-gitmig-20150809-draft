@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/gmpc-mdcover-0.20.0.ebuild,v 1.8 2011/02/26 12:10:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/gmpc-mdcover-0.20.0.ebuild,v 1.9 2011/03/19 16:45:01 angelos Exp $
 
-EAPI=2
+EAPI=3
 
 DESCRIPTION="This plugin fetches cover art, artist art, album and artist information from the file system"
 HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_MDCOVER"
@@ -29,4 +29,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	find "${ED}" -name "*.la" -delete || die
 }

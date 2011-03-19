@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-playlistsort/gmpc-playlistsort-0.20.0.ebuild,v 1.3 2011/02/20 17:42:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-playlistsort/gmpc-playlistsort-0.20.0.ebuild,v 1.4 2011/03/19 16:47:22 angelos Exp $
 
-EAPI=2
+EAPI=3
 
 DESCRIPTION="This plugin adds a dialog to sort the current playlist"
 HOMEPAGE="http://gmpc.wikia.com/"
@@ -26,4 +26,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	find "${ED}" -name "*.la" -delete || die
 }

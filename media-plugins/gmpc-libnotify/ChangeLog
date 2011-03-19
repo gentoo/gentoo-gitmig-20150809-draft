@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-libnotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/ChangeLog,v 1.18 2011/03/13 16:35:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/ChangeLog,v 1.19 2011/03/19 16:41:35 angelos Exp $
+
+  19 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  gmpc-libnotify-0.20.0.ebuild:
+  Remove .la file
 
   13 Mar 2011; <angelos@gentoo.org> -gmpc-libnotify-0.18.0.ebuild,
   -gmpc-libnotify-0.19.0.ebuild:
