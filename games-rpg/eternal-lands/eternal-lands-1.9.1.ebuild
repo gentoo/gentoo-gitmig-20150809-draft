@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.1.ebuild,v 1.1 2010/12/30 22:56:18 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.1.ebuild,v 1.2 2011/03/19 19:33:05 rich0 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -101,6 +101,7 @@ src_prepare() {
 	cp Makefile.linux Makefile
 
 	epatch "${FILESDIR}/${PN}-1.9.0-glext.patch"
+	epatch "${FILESDIR}/${PN}-1.9.1-libpng.patch"
 }
 
 src_compile() {
