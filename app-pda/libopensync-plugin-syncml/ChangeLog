@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libopensync-plugin-syncml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.15 2010/05/19 19:14:50 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-syncml/ChangeLog,v 1.16 2011/03/19 06:45:16 dirtyepic Exp $
+
+  19 Mar 2011; Ryan Hill <dirtyepic@gentoo.org>
+  libopensync-plugin-syncml-0.39.ebuild, libopensync-plugin-syncml-9999.ebuild,
+  metadata.xml:
+  Use EAPI 4 for REQUIRED_USE.
 
   19 May 2010; Thilo Bangert <bangert@gentoo.org>
   libopensync-plugin-syncml-9999.ebuild:
