@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/msynctool/msynctool-0.22.ebuild,v 1.3 2011/02/26 05:32:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/msynctool/msynctool-0.22.ebuild,v 1.4 2011/03/19 05:46:23 dirtyepic Exp $
 
 EAPI="3"
 
@@ -15,7 +15,8 @@ IUSE=""
 
 RDEPEND="~app-pda/libopensync-${PV}
 	dev-libs/glib:2
-	dev-libs/libxml2"
+	dev-libs/libxml2
+	!app-pda/osynctool"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 
