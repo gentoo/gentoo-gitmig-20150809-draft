@@ -1,3 +1,4 @@
+move dev-php5/PEAR-PHP_CodeCoverage dev-php/php-codecoverage
 move dev-php5/PEAR-DbUnit dev-php/dbunit
 move dev-php5/eaccelerator dev-php/eaccelerator
 move dev-php5/doctrine dev-php/doctrine
