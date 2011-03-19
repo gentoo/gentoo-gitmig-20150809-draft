@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.37 2011/03/18 18:31:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.38 2011/03/19 10:30:23 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -207,7 +207,7 @@ case ${XORG_DRI} in
 	*)
 		COMMON_DEPEND+=" ${XORG_DRI}? ( ${DRI_COMMON_DEPEND} )"
 		DEPEND+=" ${XORG_DRI}? ( ${DRI_DEPEND} )"
-		IUSE="${XORG_DRI}"
+		IUSE+=" ${XORG_DRI}"
 		;;
 esac
 unset DRI_DEPEND
@@ -260,7 +260,7 @@ case ${XORG_DOC} in
 		;;
 	*)
 		DEPEND+=" ${XORG_DOC}? ( ${DOC_DEPEND} )"
-		IUSE="${XORG_DOC}"
+		IUSE+=" ${XORG_DOC}"
 		;;
 esac
 unset DOC_DEPEND
