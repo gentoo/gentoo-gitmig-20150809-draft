@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.34 2011/03/18 20:27:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.35 2011/03/19 20:22:42 mr_bones_ Exp $
 
 EAPI=3
 inherit autotools toolchain-funcs
@@ -25,4 +25,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die "dodoc failed"
 }
-
