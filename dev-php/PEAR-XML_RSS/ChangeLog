@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-XML_RSS
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.38 2010/02/15 01:40:18 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.39 2011/03/19 16:33:28 olemarkus Exp $
+
+*PEAR-XML_RSS-1.0.1 (19 Mar 2011)
+
+  19 Mar 2011; <olemarkus@gentoo.org> +PEAR-XML_RSS-1.0.1.ebuild:
+  Version bump. Bug #359497. Thanks to Denny
 
 *PEAR-XML_RSS-1.0.0 (15 Feb 2010)
 
