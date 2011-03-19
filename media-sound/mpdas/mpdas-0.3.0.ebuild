@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/mpdas-0.3.0.ebuild,v 1.2 2011/03/04 19:31:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/mpdas-0.3.0.ebuild,v 1.3 2011/03/19 21:55:27 tomka Exp $
 
 inherit base toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://50hz.ws/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="media-libs/libmpd
