@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.63 2011/02/13 19:21:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.64 2011/03/19 18:25:57 ranger Exp $
+
+  19 Mar 2011; Brent Baude <ranger@gentoo.org> im-ja-1.5-r2.ebuild:
+  Marking im-ja-1.5-r2 ppc for bug 353442
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> im-ja-1.5.ebuild,
   im-ja-1.5-r1.ebuild, im-ja-1.5-r2.ebuild:
