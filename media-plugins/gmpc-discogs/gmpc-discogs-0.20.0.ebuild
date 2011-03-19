@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-discogs/gmpc-discogs-0.20.0.ebuild,v 1.5 2011/02/20 17:38:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-discogs/gmpc-discogs-0.20.0.ebuild,v 1.6 2011/03/19 16:14:37 angelos Exp $
 
-EAPI=2
+EAPI=3
 
 DESCRIPTION="This plugin fetches artist and album images from discogs"
 HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_DISCOGS"
@@ -21,4 +21,5 @@ DEPEND="${RDEPEND}
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${ED}" -name "*.la" -delete || die
 }
