@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.2.0.ebuild,v 1.2 2011/03/19 11:34:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.2.0.ebuild,v 1.3 2011/03/19 21:11:05 angelos Exp $
 
 EAPI=3
-inherit qt4-r2
+inherit eutils qt4-r2
 
 MY_P=${PN}_${PV}
 
@@ -29,4 +29,9 @@ src_prepare() {
 src_install() {
 	dobin ${PN} || die "dobin failed"
 	dodoc changelog FAQ.txt README || die "dodoc failed"
+
+	insinto /usr/share/pixmaps/
+	newins Icons/${PN}64.png ${PN}.png || die "newins failed"
+
+	make_desktop_entry ${PN} Quimup
 }
