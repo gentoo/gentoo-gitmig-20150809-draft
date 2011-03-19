@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.17 2011/02/18 19:44:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.18 2011/03/19 18:18:21 ssuominen Exp $
+
+  19 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> virtuals:
+  Remove virtual/alsa.
 
   18 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +package.use.force, package.use.mask:

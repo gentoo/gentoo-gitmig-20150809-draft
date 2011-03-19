@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.47 2011/03/18 22:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.48 2011/03/19 18:15:59 ssuominen Exp $
+
+  19 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> virtuals:
+  Remove virtual/alsa.
 
   18 Mar 2011: Mike Frysinger <vapier@gentoo.org> mips64/multilib/make.defaults,
   mipsel/mips64el/multilib/make.defaults:
