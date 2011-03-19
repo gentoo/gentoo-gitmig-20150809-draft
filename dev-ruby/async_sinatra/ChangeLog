@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/async_sinatra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/ChangeLog,v 1.4 2011/02/20 14:15:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/ChangeLog,v 1.5 2011/03/19 06:31:31 graaff Exp $
+
+  19 Mar 2011; Hans de Graaff <graaff@gentoo.org>
+  -async_sinatra-0.1.5.ebuild, -async_sinatra-0.3.0.ebuild:
+  Remove old versions.
 
 *async_sinatra-0.4.0 (20 Feb 2011)
 
