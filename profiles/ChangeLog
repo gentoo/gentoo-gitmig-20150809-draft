@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5167 2011/03/20 10:56:33 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5168 2011/03/20 11:51:07 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite www-misc/zoneminder.
 
   20 Mar 2011; <olemarkus@gentoo.org> package.mask:
   Masking dev-php/PEAR-File_XSPF and dev-php/PEAR-XML_Tree for removal
