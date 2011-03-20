@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libptp2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.22 2009/11/25 09:53:23 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.23 2011/03/20 18:15:50 ssuominen Exp $
+
+  20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> libptp2-1.1.10.ebuild:
+  Fix libusb depend to correct SLOT.
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org> libptp2-1.1.10.ebuild:
   amd64 stable, bug #284445

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.1.0-r1.ebuild,v 1.4 2010/09/12 12:37:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.1.0-r1.ebuild,v 1.5 2011/03/20 18:13:56 ssuominen Exp $
 
 EAPI=2
 inherit eutils mono toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="virtual/libiconv
 	media-libs/taglib
 	dev-lang/mono
-	dev-libs/libusb"
+	virtual/libusb:0"
 DEPEND="${RDEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -31,11 +31,11 @@ src_prepare() {
 
 src_compile() {
 	tc-export AR CC RANLIB
-	emake all || die "emake failed"
+	emake all || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc THANKS TODO
 	mono_multilib_comply
 }

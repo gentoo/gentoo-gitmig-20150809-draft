@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdjconsole
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.8 2008/12/04 22:31:59 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.9 2011/03/20 18:13:05 ssuominen Exp $
+
+  20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  libdjconsole-0.1.2.ebuild:
+  Fix libusb depend to correct SLOT.
 
   04 Dec 2008; Markus Meier <maekke@gentoo.org> libdjconsole-0.1.2.ebuild:
   x86 stable, bug #249420
