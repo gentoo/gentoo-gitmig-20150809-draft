@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.49 2011/03/19 21:34:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.50 2011/03/20 06:04:05 radhermit Exp $
+
+  20 Mar 2011; Tim Harder <radhermit@gentoo.org> -when-1.1.16.ebuild,
+  -when-1.1.22.ebuild, -files/when-prefix.patch:
+  Remove old.
 
   19 Mar 2011; Thomas Kahle <tomka@gentoo.org> when-1.1.23.ebuild:
   x86 stable per bug 357069
