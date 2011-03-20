@@ -1,6 +1,6 @@
 # ChangeLog for net-print/apsfilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.15 2011/03/20 13:23:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.16 2011/03/20 13:25:58 ssuominen Exp $
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> apsfilter-7.2.5.ebuild,
   apsfilter-7.2.6.ebuild:
@@ -39,7 +39,7 @@
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apsfilter-7.2.2.ebuild:
   Added KEYWORDS, SLOT.
 
-*apsfilter-7.2.2-r1 (16 Jun 2002)
+*apsfilter-7.2.2 (16 Jun 2002)
 
   16 Jun 2002; Carl Perry <edolnx@gentoo.org> +apsfilter-7.2.2.ebuild:
   Added apsfilter to portage
