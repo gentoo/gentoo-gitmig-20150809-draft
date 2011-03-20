@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.2.ebuild,v 1.10 2011/02/14 23:05:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.30.2.ebuild,v 1.11 2011/03/20 22:17:05 nirbheek Exp $
 
 EAPI=2
 
@@ -16,9 +16,9 @@ IUSE="dbus doc exif jpeg lcms python tiff xmp"
 
 RDEPEND=">=x11-libs/gtk+-2.17.5:2
 	>=dev-libs/glib-2.15.3:2
-	>=dev-libs/libxml2-2
-	>=gnome-base/gconf-2.5.90
-	>=gnome-base/gnome-desktop-2.25.1
+	>=dev-libs/libxml2-2:2
+	>=gnome-base/gconf-2.5.90:2
+	>=gnome-base/gnome-desktop-2.25.1:2
 	>=x11-themes/gnome-icon-theme-2.19.1
 	>=x11-misc/shared-mime-info-0.20
 
@@ -30,11 +30,11 @@ RDEPEND=">=x11-libs/gtk+-2.17.5:2
 		|| ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2[jpeg] ) )
 	lcms? ( =media-libs/lcms-1* )
 	python? (
-		>=dev-lang/python-2.3
-		>=dev-python/pygobject-2.15.1
-		>=dev-python/pygtk-2.13 )
+		=dev-lang/python-2*
+		>=dev-python/pygobject-2.15.1:2
+		>=dev-python/pygtk-2.13:2 )
 	tiff? ( || ( x11-libs/gdk-pixbuf:2[tiff] >=x11-libs/gtk+-2.15.1:2[tiff] ) )
-	xmp? ( >=media-libs/exempi-2 )"
+	xmp? ( media-libs/exempi:2 )"
 
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
