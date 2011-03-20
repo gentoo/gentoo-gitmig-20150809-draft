@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/cupsddk-1.2.3.ebuild,v 1.7 2010/03/11 21:12:31 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cupsddk/cupsddk-1.2.3.ebuild,v 1.8 2011/03/20 20:04:48 jlec Exp $
+
+EAPI=1
 
 inherit autotools eutils
 
-DESCRIPTION="A suite of standard drivers, a PPD file compiler, and other utilities to develop printer drivers for CUPS 1.2.x and 1.3.x and other printing environments."
+DESCRIPTION="Drivers, PPD file compiler, and utilities to develop printer drivers for CUPS and other printing envs"
 HOMEPAGE="http://www.cups.org/software.php#USING_DDK"
 SRC_URI="ftp://ftp.easysw.com/pub/${PN}/${PV}/${P}-source.tar.bz2"
 
@@ -13,8 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="fltk"
 
-DEPEND=">=net-print/cups-1.2
-	fltk? ( =x11-libs/fltk-1.1* )"
+DEPEND="
+	>=net-print/cups-1.2
+	fltk? ( x11-libs/fltk:1 )"
 RDEPEND="${DEPEND}"
 
 WANT_AUTOCONF="latest"
