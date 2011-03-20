@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sonic-snap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.9 2011/03/14 01:16:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.10 2011/03/20 20:05:07 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> sonic-snap-1.7.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
 *sonic-snap-1.7 (14 Mar 2011)
 

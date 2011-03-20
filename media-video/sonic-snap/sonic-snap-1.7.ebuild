@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.7.ebuild,v 1.1 2011/03/14 01:16:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.7.ebuild,v 1.2 2011/03/20 20:05:07 jlec Exp $
 
 EAPI="3"
 inherit eutils linux-info toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="mpeg"
 
-DEPEND="x11-libs/fltk:1.1
+DEPEND="x11-libs/fltk:1
 	mpeg? ( >=media-libs/libfame-0.9.1 )
 	sys-libs/zlib
 	x11-libs/libXdmcp
