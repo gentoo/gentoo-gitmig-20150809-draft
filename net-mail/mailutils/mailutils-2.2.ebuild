@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.2.ebuild,v 1.1 2010/09/10 00:06:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.2.ebuild,v 1.2 2011/03/20 13:12:20 eras Exp $
 
 EAPI="2"
 
@@ -14,11 +14,11 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="bidi gdbm guile ldap mysql nls pam postgres python test tokyocabinet"
-PROVIDE="virtual/mailx"
 
-RDEPEND="!virtual/mailx
-	!mail-client/nmh
+RDEPEND="!mail-client/nmh
 	!mail-filter/libsieve
+	!mail-client/mailx
+	!mail-client/nail
 	bidi? ( dev-libs/fribidi )
 	guile? ( dev-scheme/guile )
 	gdbm? ( sys-libs/gdbm )

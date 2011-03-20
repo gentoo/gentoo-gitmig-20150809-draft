@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.6-r3.ebuild,v 1.12 2010/06/17 20:54:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.6-r3.ebuild,v 1.13 2011/03/20 13:12:20 eras Exp $
 
 inherit eutils
 
@@ -12,11 +12,11 @@ SLOT="0"
 
 KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
 IUSE="mailwrapper nls pam mysql postgres gdbm test"
-PROVIDE="virtual/mailx"
 
-RDEPEND="!virtual/mailx
-	!mail-client/nmh
+RDEPEND="!mail-client/nmh
 	!mail-filter/libsieve
+	!mail-client/mailx
+	!mail-client/nail
 	dev-scheme/guile
 	gdbm? ( sys-libs/gdbm )
 	mysql? ( virtual/mysql )

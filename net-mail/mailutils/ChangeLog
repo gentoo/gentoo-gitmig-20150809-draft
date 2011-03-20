@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.45 2011/03/20 13:06:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.46 2011/03/20 13:12:21 eras Exp $
+
+  20 Mar 2011; Eray Aslan <eras@gentoo.org> mailutils-0.6-r3.ebuild,
+  mailutils-2.2.ebuild:
+  move to new style virtual/mailx - bug 350792
 
   20 Mar 2011; Eray Aslan <eras@gentoo.org> -mailutils-1.2.ebuild,
   -mailutils-2.1.ebuild:
