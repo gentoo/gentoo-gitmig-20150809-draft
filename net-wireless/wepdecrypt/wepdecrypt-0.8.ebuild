@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.8 2009/11/20 18:06:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.9 2011/03/20 20:02:37 jlec Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
-RDEPEND="X? ( x11-libs/fltk:1.1 )
+RDEPEND="X? ( x11-libs/fltk:1 )
 	sys-libs/zlib
 	net-libs/libpcap
 	dev-libs/openssl"

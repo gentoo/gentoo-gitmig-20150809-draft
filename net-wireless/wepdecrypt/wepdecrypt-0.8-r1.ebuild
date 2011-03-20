@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8-r1.ebuild,v 1.1 2010/12/10 18:47:31 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8-r1.ebuild,v 1.2 2011/03/20 20:02:37 jlec Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="X"
 RDEPEND="dev-libs/openssl
 	net-libs/libpcap
 	sys-libs/zlib
-	X? ( x11-libs/fltk:1.1 )"
+	X? ( x11-libs/fltk:1 )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

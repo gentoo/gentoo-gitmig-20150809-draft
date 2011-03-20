@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wepdecrypt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.14 2010/12/10 18:47:31 c1pher Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.15 2011/03/20 20:02:37 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> wepdecrypt-0.8.ebuild,
+  wepdecrypt-0.8-r1.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
 *wepdecrypt-0.8-r1 (10 Dec 2010)
 
