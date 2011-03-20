@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.91 2011/03/20 03:33:56 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.92 2011/03/20 13:55:41 titanofold Exp $
+
+*postgresql-docs-9.1_alpha4 (20 Mar 2011)
+
+  20 Mar 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-docs-9.1_alpha4.ebuild:
+  Adding 9.1 pre-release
 
   20 Mar 2011; Mr. Aaron W. Swenson (TitanOfOld) <titanofold@gentoo.org>
   -postgresql-docs-8.1.22.ebuild, -postgresql-docs-8.1.23.ebuild,
