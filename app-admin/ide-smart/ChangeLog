@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ide-smart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ChangeLog,v 1.17 2011/03/09 10:50:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ide-smart/ChangeLog,v 1.18 2011/03/20 18:23:14 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> ide-smart-1.4-r1.ebuild:
+  sparc/x86 stable wrt #357949
 
   09 Mar 2011; Markos Chandras <hwoarang@gentoo.org> ide-smart-1.4-r1.ebuild:
   Stable on amd64 wrt bug #357949
