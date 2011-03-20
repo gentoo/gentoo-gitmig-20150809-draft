@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.207 2011/03/18 00:08:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.208 2011/03/20 06:22:30 leio Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -239,10 +239,12 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Arun Raghavan <ford_prefect@gentoo.org> (19 Nov 2010)
 # Mart Raudsepp <leio@gentoo.org> (27 Dec 2010)
 # Arun Raghavan <ford_prefect@gentoo.org> (30 Jan 2011)
+# Mart Raudsepp <leio@gentoo.org> (20 Mar 2010)
 # Orc isn't yet ready to be used on anything other than x86/amd64/arm
 >=media-libs/gst-plugins-base-0.10.30 orc
 >=media-plugins/gst-plugins-a52dec-0.10.16 orc
 >=media-plugins/gst-plugins-ffmpeg-0.10.11 orc
+>=media-libs/gst-plugins-good-0.10.28 orc
 
 # Alexis Ballier <aballier@gentoo.org> <16 Feb 2011>
 # Win32 specific useflags for vlc. Can be used for cross-compiling.
