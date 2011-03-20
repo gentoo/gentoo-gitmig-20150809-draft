@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4-r1.ebuild,v 1.2 2011/03/19 20:22:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4-r1.ebuild,v 1.3 2011/03/20 13:53:29 serkan Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils fdo-mime flag-o-matic linux-info pax-utils qt4-r2 toolchain-funcs java-pkg-opt-2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 sdk vboxwebsrv vnc"
+IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -110,6 +110,8 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox/VBoxOGLhostcrutil.so
 	usr/lib/virtualbox/VBoxNetDHCP.so"
 
+REQUIRED_USE="java? ( sdk ) python? ( sdk )"
+
 pkg_setup() {
 	if ! use headless && ! use qt4 ; then
 		einfo "No USE=\"qt4\" selected, this build will not include"
@@ -122,9 +124,6 @@ pkg_setup() {
 	if ! use opengl ; then
 		einfo "No USE=\"opengl\" selected, this build will lack"
 		einfo "the OpenGL feature."
-	fi
-	if ( use java || use python ) && ! use sdk; then
-		die "Python and Java bindings depend on \"sdk\" USE flag to be enabled."
 	fi
 	java-pkg-opt-2_pkg_setup
 }
@@ -312,7 +311,7 @@ src_install() {
 	if use java ; then
 		java-pkg_regjar "${D}/usr/$(get_libdir)/${PN}/sdk/bindings/xpcom/java/vboxjxpcom.jar"
 		java-pkg_regso "${D}/usr/$(get_libdir)/${PN}/libvboxjxpcom.so"
-        fi
+	fi
 
 }
 
