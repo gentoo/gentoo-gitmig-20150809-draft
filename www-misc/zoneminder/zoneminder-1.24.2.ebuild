@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.24.2.ebuild,v 1.4 2011/02/27 20:09:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.24.2.ebuild,v 1.5 2011/03/20 11:41:48 ssuominen Exp $
 
 inherit eutils autotools depend.php depend.apache multilib
 
@@ -121,7 +121,7 @@ src_install() {
 	doins "${FILESDIR}"/10_zoneminder.conf
 
 	for DIR in events images sound; do
-		dodir "${ROOT}"/var/www/zoneminder/htdocs/${DIR}
+		dodir /var/www/zoneminder/htdocs/${DIR}
 	done
 }
 
