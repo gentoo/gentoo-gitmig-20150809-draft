@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20050715-r3.ebuild,v 1.6 2011/01/22 20:58:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20050715-r3.ebuild,v 1.7 2011/03/20 13:26:20 eras Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,10 +22,11 @@ IUSE=""
 
 DEPEND=">=net-libs/liblockfile-1.03
 	virtual/mta
-	!mail-client/mailutils
-	mail-client/mailx-support
-	!virtual/mailx"
-PROVIDE="virtual/mailx"
+	mail-client/mailx-support"
+
+RDEPEND="${DEPEND}
+	!mail-client/nail
+	!net-mail/mailutils"
 
 src_unpack() {
 	unpack ${A}
