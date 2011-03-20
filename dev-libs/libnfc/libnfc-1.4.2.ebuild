@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/libnfc-1.4.2.ebuild,v 1.1 2011/02/23 12:08:14 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/libnfc-1.4.2.ebuild,v 1.2 2011/03/20 18:11:44 ssuominen Exp $
 
 EAPI="4"
 
@@ -16,9 +16,9 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
 RDEPEND="sys-apps/pcsc-lite
-		 dev-libs/libusb"
+	virtual/libusb:0"
 DEPEND="${RDEPEND}
-		doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )"
 
 src_compile() {
 	emake || die "Failed to compile."
