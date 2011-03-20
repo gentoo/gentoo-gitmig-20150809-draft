@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.136 2011/03/18 00:32:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.137 2011/03/20 15:25:21 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> bittorrent-4.4.0-r2.ebuild:
+  Add ~ia64 wrt #359313
 
 *bittorrent-4.4.0-r2 (18 Mar 2011)
 
