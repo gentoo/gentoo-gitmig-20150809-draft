@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.180 2011/03/13 11:46:35 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.181 2011/03/20 18:12:25 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> shorewall-4.4.15.1.ebuild:
+  sparc stable wrt #352532
 
 *shorewall-4.4.18 (13 Mar 2011)
 
