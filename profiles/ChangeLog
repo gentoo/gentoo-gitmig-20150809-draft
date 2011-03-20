@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5170 2011/03/20 13:47:45 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5171 2011/03/20 15:10:29 titanofold Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Mar 2011; Aaron W. Swenson <titanofold@gentoo.org> package.mask:
+  dev-db/postgresql-{docs,base,server}-8.1* removed from tree. Removed mask.
 
   20 Mar 2011; Aaron W. Swenson <titanofold@gentoo.org> package.mask:
   Masking 9.1 pre-release versions

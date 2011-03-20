@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12580 2011/03/20 13:47:45 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12581 2011/03/20 15:10:30 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -447,12 +447,6 @@ dev-ruby/IceRuby
 # New package, masked for an initial testing period. Needs exotic
 # hardware. Please post feedback on bug 165399.
 >=sci-libs/linux-gpib-3.2.15
-
-# Patrick Lauer <patrick@gentoo.org> (31 Jan 2011)
-# EOL by upstream, getting removed soon
-=dev-db/postgresql-base-8.1*
-=dev-db/postgresql-server-8.1*
-=dev-db/postgresql-docs-8.1*
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (31 Jan 2011)
 # ... also mask clutter-gst-1.3
