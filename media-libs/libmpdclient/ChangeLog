@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.29 2011/03/01 14:52:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.30 2011/03/20 19:33:12 angelos Exp $
+
+  20 Mar 2011; Christoph Mende <angelos@gentoo.org> libmpdclient-2.4.ebuild:
+  Made building of static libraries optional and removed .la files
 
   01 Mar 2011; Jeroen Roovers <jer@gentoo.org> libmpdclient-2.4.ebuild:
   Stable for HPPA (bug #356527).
