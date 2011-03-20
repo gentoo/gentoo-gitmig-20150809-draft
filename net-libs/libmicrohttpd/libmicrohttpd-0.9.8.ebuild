@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.4.ebuild,v 1.1 2010/12/28 18:01:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.8.ebuild,v 1.1 2011/03/20 21:42:39 chithanh Exp $
 
 EAPI=2
 
@@ -38,8 +38,6 @@ src_configure() {
 		$(use_enable ssl https) \
 		$(use_with ssl gnutls)
 }
-# SSL is disabled when --enable-https is passed
-# messages are disabled when --enable-messages is passed
 
 src_compile() {
 	emake || die "emake failed"
