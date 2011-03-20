@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.25 2011/03/08 23:26:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.26 2011/03/20 05:59:15 radhermit Exp $
+
+*cclive-0.7.3.1 (20 Mar 2011)
+
+  20 Mar 2011; Tim Harder <radhermit@gentoo.org> +cclive-0.7.3.1.ebuild:
+  Version bump. Update to EAPI 4, remove versionator eclass usage, and use
+  array notation for DOCS.
 
   08 Mar 2011; Markos Chandras <hwoarang@gentoo.org> cclive-0.7.2.ebuild:
   Stable on amd64 wrt bug #357773
