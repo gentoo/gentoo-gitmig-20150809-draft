@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ifp-line
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ChangeLog,v 1.22 2009/12/27 08:23:08 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ChangeLog,v 1.23 2011/03/20 18:21:53 ssuominen Exp $
+
+  20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> ifp-line-0.3.ebuild:
+  Fix libusb depend to correct SLOT and remove any reference to libifp-module.
 
   27 Dec 2009; Joseph Jezak <josejx@gentoo.org> ifp-line-0.3.ebuild:
   Marked ppc stable for bug #269277.
