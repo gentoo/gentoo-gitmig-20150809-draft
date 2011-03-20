@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.48 2011/03/20 06:26:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.49 2011/03/20 06:41:48 leio Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -32,7 +32,7 @@ media-libs/mesa -llvm
 >=media-libs/gst-plugins-base-0.10.30 -orc
 >=media-plugins/gst-plugins-a52dec-0.10.16 -orc
 >=media-plugins/gst-plugins-ffmpeg-0.10.11 -orc
->=media-plugins/gst-plugins-good-0.10.28 -orc
+>=media-libs/gst-plugins-good-0.10.28 -orc
 
 # Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
 # Valgrind is only available on amd64/x86/ppc/ppc64.
