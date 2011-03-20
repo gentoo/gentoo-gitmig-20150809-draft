@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-libpng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.145 2011/03/11 18:37:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.146 2011/03/20 08:56:07 leio Exp $
+
+*gst-plugins-libpng-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-libpng-0.10.16.ebuild, -gst-plugins-libpng-0.10.17.ebuild,
+  -gst-plugins-libpng-0.10.21.ebuild, -gst-plugins-libpng-0.10.22.ebuild,
+  +gst-plugins-libpng-0.10.28.ebuild:
+  Version bump. Adds 8bit greyscale support; bug fixes and code cleanup
 
   11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-libpng-0.10.23.ebuild:
