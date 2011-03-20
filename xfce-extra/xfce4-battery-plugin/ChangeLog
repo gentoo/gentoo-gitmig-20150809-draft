@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-battery-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/ChangeLog,v 1.3 2011/03/13 16:28:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/ChangeLog,v 1.4 2011/03/20 15:36:36 ssuominen Exp $
+
+*xfce4-battery-plugin-1.0.0-r1 (20 Mar 2011)
+
+  20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-battery-plugin-1.0.0-r1.ebuild,
+  +files/xfce4-battery-plugin-1.0.0-sysfs.patch:
+  Upstream patch for getting temperature from sysfs wrt #356385 by Pavel Goran.
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
   xfce4-battery-plugin-1.0.0.ebuild:
