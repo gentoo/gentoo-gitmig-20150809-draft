@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.22 2011/03/18 09:34:48 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.23 2011/03/20 09:44:45 leio Exp $
 
 # Author : foser <foser@gentoo.org>, zaheerm <zaheerm@gentoo.org>
 
@@ -43,6 +43,10 @@ if version_is_at_least "0.10.23"; then
 	my_gst_plugins_good+=" oss4"
 fi
 
+# ext/jack moved here since 0.10.27
+if version_is_at_least "0.10.27"; then
+	my_gst_plugins_good+=" jack"
+fi
 
 #SRC_URI="mirror://gnome/sources/gst-plugins/${PV_MAJ_MIN}/${MY_P}.tar.bz2"
 SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-good/${MY_P}.tar.bz2"
