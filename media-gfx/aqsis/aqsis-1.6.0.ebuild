@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.6.0.ebuild,v 1.1 2009/10/18 15:30:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.6.0.ebuild,v 1.2 2011/03/20 20:15:37 jlec Exp $
 
 EAPI="1"
 
@@ -8,11 +8,6 @@ inherit versionator multilib eutils cmake-utils
 
 DESCRIPTION="Open source RenderMan-compliant 3D rendering solution"
 HOMEPAGE="http://www.aqsis.org"
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="+fltk openexr"
-
 if [[ "${P}" == *_p* ]] ; then
 	# snapshot
 	_PV=($(get_version_components ${PV}))
@@ -25,11 +20,16 @@ else
 	SRC_URI="mirror://sourceforge/aqsis/${P}.tar.gz"
 fi
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="+fltk openexr"
+
 RDEPEND="
 	>=dev-libs/boost-1.34.0
 	>=media-libs/tiff-3.7.1
 	>=sys-libs/zlib-1.1.4
-	fltk? ( >=x11-libs/fltk-1.1.0:1.1 )
+	fltk? ( x11-libs/fltk:1 )
 	openexr? ( media-libs/openexr )"
 
 DEPEND="
@@ -43,11 +43,11 @@ src_compile() {
 	if use fltk ; then
 		# hack to get fltk library/include paths
 		# (upstream doesn't autodetect the gentoo install path for fltk)
-		fltk_version="$(get_version_component_range 1-2 \
+		fltk_version="$(get_version_component_range 1 \
 			$(best_version x11-libs/fltk | sed -e 's/^x11-libs\/fltk//'))"
 		mycmakeargs="${mycmakeargs}
 			-DAQSIS_USE_FLTK:BOOL=ON
-			-DAQSIS_FLTK_INCLUDE_DIR:PATH=/usr/include/fltk-${fltk_version}
+			-DAQSIS_FLTK_INCLUDE_DIR:PATH=$(fltk-config --includedir)
 			-DAQSIS_FLTK_LIBRARIES_DIR:PATH=/usr/$(get_libdir)/fltk-${fltk_version}"
 	else
 		mycmakeargs="${mycmakeargs} -DAQSIS_USE_FLTK:BOOL=OFF"

@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/monica-3.7.ebuild,v 1.5 2009/11/09 12:50:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/monica-3.7.ebuild,v 1.6 2011/03/20 20:14:46 jlec Exp $
 
-inherit eutils
+EAPI="1"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Monica is a Monitor Calibration Tool"
 HOMEPAGE="http://www.pcbypaul.com/software/monica.html"
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="<x11-libs/fltk-2"
+DEPEND="x11-libs/fltk:1"
 RDEPEND="${DEPEND}
 	x11-apps/xgamma"
 
@@ -26,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake CXX=$(tc-getCXX) LINK=$(tc-getCXX) CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {

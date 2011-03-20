@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/monica
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.6 2009/11/09 12:50:48 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.7 2011/03/20 20:14:46 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> monica-3.6.ebuild,
+  monica-3.7.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> monica-3.7.ebuild:
   amd64/x86 stable, bug #286511

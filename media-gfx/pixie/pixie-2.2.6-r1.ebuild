@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.7 2011/02/26 18:19:19 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.6-r1.ebuild,v 1.8 2011/03/20 20:13:49 jlec Exp $
 
 EAPI="2"
 
@@ -11,8 +11,8 @@ inherit eutils multilib autotools
 MY_PN="Pixie"
 S="${WORKDIR}/${MY_PN}"
 
-DESCRIPTION="RenderMan like photorealistic renderer."
-HOMEPAGE="http://pixie.sourceforge.net"
+DESCRIPTION="RenderMan like photorealistic renderer"
+HOMEPAGE="http://pixie.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-src-${PV}.tgz"
 
 LICENSE="GPL-2"
@@ -23,7 +23,7 @@ KEYWORDS="amd64 ~ppc sparc x86"
 RDEPEND="virtual/jpeg
 	media-libs/tiff
 	media-libs/libpng
-	x11-libs/fltk:1.1[opengl]
+	x11-libs/fltk:1[opengl]
 	media-libs/openexr
 	virtual/opengl
 	sys-libs/zlib
