@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/crashtest
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/ChangeLog,v 1.8 2010/09/16 17:51:34 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/ChangeLog,v 1.9 2011/03/20 20:17:03 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> crashtest-1.1.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> crashtest-1.1.ebuild:
   virtual/glut -> media-libs/glut

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.5.2.ebuild,v 1.3 2010/10/14 03:04:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/fgrun-1.5.2.ebuild,v 1.4 2011/03/20 20:16:57 jlec Exp $
 
 EAPI=2
 inherit autotools eutils multilib games
@@ -14,8 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-games/simgear-2
-		>=x11-libs/fltk-1.1.9:1.1[opengl,threads]"
+DEPEND="
+	>=dev-games/simgear-2
+	x11-libs/fltk:1[opengl,threads]"
 RDEPEND="${DEPEND}
 	>=games-simulation/flightgear-2"
 

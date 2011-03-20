@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.3 2010/09/16 17:51:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.4 2011/03/20 20:17:03 jlec Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="x11-libs/fltk:1.1[opengl]
+RDEPEND="
+	x11-libs/fltk:1[opengl]
 	dev-games/ode
 	media-libs/alsa-lib
 	virtual/opengl
