@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.2.1-r1.ebuild,v 1.6 2010/11/08 17:44:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.10.2.1-r1.ebuild,v 1.7 2011/03/20 19:59:40 jlec Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ RDEPEND="media-libs/libpng
 	virtual/opengl
 	python? ( dev-python/numpy )
 	glut? ( media-libs/freeglut )
-	fltk? ( x11-libs/fltk:1.1 )
+	fltk? ( x11-libs/fltk:1 )
 	gif? ( media-libs/giflib )
 	jpeg? ( virtual/jpeg )
 	hdf5? ( >=sci-libs/hdf5-1.8 )
