@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-latex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/ChangeLog,v 1.4 2011/03/12 14:54:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/ChangeLog,v 1.5 2011/03/20 11:55:29 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org>
+  vim-latex-1.8.23.20101027.ebuild:
+  ia64/sparc/x86 stable wrt #357299
 
   12 Mar 2011; Tobias Klausmann <klausman@gentoo.org>
   vim-latex-1.8.23.20101027.ebuild:
