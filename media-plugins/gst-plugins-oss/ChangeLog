@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-oss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.172 2011/03/11 18:38:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.173 2011/03/20 08:57:15 leio Exp $
+
+*gst-plugins-oss-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-oss-0.10.16.ebuild, -gst-plugins-oss-0.10.17.ebuild,
+  -gst-plugins-oss-0.10.21.ebuild, -gst-plugins-oss-0.10.22.ebuild,
+  +gst-plugins-oss-0.10.28.ebuild:
+  Version bump. No noteworthy changes.
 
   11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-oss-0.10.23.ebuild:
