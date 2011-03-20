@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.02.ebuild,v 1.1 2007/12/15 21:15:38 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.02.ebuild,v 1.2 2011/03/20 19:54:42 jlec Exp $
 
 EAPI=1
 
-inherit savedconfig eutils flag-o-matic multilib
+inherit savedconfig eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="A lightweight window manager based on fltk"
-HOMEPAGE="http://flwm.sourceforge.net"
+HOMEPAGE="http://flwm.sourceforge.net/"
 SRC_URI="http://flwm.sourceforge.net/${P}.tgz"
 
 SLOT="0"
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="opengl"
 
-DEPEND=">=x11-libs/fltk-1.1.7-r3:1.1
+DEPEND="
+	x11-libs/fltk:1
 	opengl? ( virtual/opengl )"
 RDEPEND="${DEPEND}"
 
@@ -25,12 +26,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-strip.patch"
 
 	restore_config config.h
+	tc-export CXX
 }
 
 src_compile() {
 	use opengl && export X_EXTRA_LIBS=-lGL
-	append-flags -I/usr/include/fltk-1.1
-	append-ldflags -L/usr/$(get_libdir)/fltk-1.1
+	append-flags -I$(fltk-config --includedir)
+	append-ldflags -L$(dirname $(fltk-config --libs))
 
 	econf || die "econf failed"
 	emake || die "emake failed"
