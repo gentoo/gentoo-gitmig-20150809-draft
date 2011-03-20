@@ -50,6 +50,7 @@ java-internal
 java-external
 
 # No hardware to test by the team
+dvb
 iphone
 ipod
 
