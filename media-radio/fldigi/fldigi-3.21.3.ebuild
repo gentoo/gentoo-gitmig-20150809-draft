@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.21.3.ebuild,v 1.1 2011/02/25 17:10:31 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fldigi/fldigi-3.21.3.ebuild,v 1.2 2011/03/20 20:12:57 jlec Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="hamlib nls portaudio pulseaudio sndfile xmlrpc"
 
-RDEPEND=">=x11-libs/fltk-1.1.9:1.1[threads,xft]
+RDEPEND="x11-libs/fltk:1[threads,xft]
 	media-libs/libsamplerate
 	media-libs/libpng
 	x11-misc/xdg-utils
