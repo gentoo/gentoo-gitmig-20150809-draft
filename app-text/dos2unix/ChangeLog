@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.64 2011/03/18 07:12:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.65 2011/03/20 08:19:15 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> dos2unix-5.1.ebuild,
+  dos2unix-5.1.1.ebuild, dos2unix-5.2.ebuild, dos2unix-5.2.1.ebuild:
+  Removed virtual/PodParser from dep again and correct perl to be only a build
+  dep
 
   18 Mar 2011; Justin Lecher <jlec@gentoo.org> dos2unix-5.1.ebuild,
   dos2unix-5.1.1.ebuild, dos2unix-5.2.ebuild, dos2unix-5.2.1.ebuild:
