@@ -1,6 +1,9 @@
 # ChangeLog for app-text/flpsed
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.22 2010/06/12 16:52:40 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.23 2011/03/20 20:20:39 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> flpsed-0.5.1.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
   12 Jun 2010; Alexis Ballier <aballier@gentoo.org> flpsed-0.6.1.ebuild:
   require ghostscript-gpl to be built with X; bug #294392 by Nick White

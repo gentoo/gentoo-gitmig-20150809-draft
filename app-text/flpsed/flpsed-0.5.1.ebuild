@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.5.1.ebuild,v 1.4 2009/12/26 17:30:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.5.1.ebuild,v 1.5 2011/03/20 20:20:39 jlec Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXft
-	>=x11-libs/fltk-1.1:1.1
+	x11-libs/fltk:1
 	app-text/ghostscript-gpl"
 
 DEPEND="${RDEPEND}"
