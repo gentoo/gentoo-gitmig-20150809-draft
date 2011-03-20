@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.60 2010/11/29 14:40:06 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.61 2011/03/20 16:37:13 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> jed-0.99.19.ebuild:
+  Add ~alpha
 
   29 Nov 2010; Christian Faulhammer <fauli@gentoo.org> -jed-0.99.18.ebuild:
   clean up
