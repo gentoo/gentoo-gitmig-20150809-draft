@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/wgs-assembler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/ChangeLog,v 1.7 2010/07/16 09:26:54 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/ChangeLog,v 1.8 2011/03/20 20:19:27 weaver Exp $
+
+  20 Mar 2011; Andrey Kislyuk <weaver@gentoo.org> wgs-assembler-5.4.ebuild,
+  wgs-assembler-6.1.ebuild:
+  Block x11-terms/terminator per bug 359363
+
+  20 Mar 2011; Andrey Kislyuk <weaver@gentoo.org> wgs-assembler-6.1.ebuild:
+  Block x11-terms/terminator per bug 359363
 
   16 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   wgs-assembler-6.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-5.4.ebuild,v 1.5 2010/03/29 09:42:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-5.4.ebuild,v 1.6 2011/03/20 20:19:27 weaver Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 x86"
 
-DEPEND="x11-libs/libXt"
+DEPEND="x11-libs/libXt
+	!x11-terms/terminator"
 RDEPEND="${DEPEND}
 	app-shells/tcsh
 	dev-perl/Log-Log4perl"
