@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.20 2011/03/19 15:55:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.21 2011/03/20 13:05:37 suka Exp $
+
+  20 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
+  libreoffice-bin-3.3.1.ebuild:
+  Minor ebuild cleanups
 
   19 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libreoffice-bin-3.3.1.ebuild:
