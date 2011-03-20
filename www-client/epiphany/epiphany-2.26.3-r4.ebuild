@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r4.ebuild,v 1.9 2011/02/05 16:13:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r4.ebuild,v 1.10 2011/03/20 22:21:20 nirbheek Exp $
 
 EAPI="2"
 
@@ -11,31 +11,31 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="ppc64"
 IUSE="avahi doc networkmanager python spell"
 
-RDEPEND=">=dev-libs/glib-2.18.0
-	>=x11-libs/gtk+-2.16.0
-	>=dev-libs/libxml2-2.6.12
+RDEPEND=">=dev-libs/glib-2.18.0:2
+	>=x11-libs/gtk+-2.16.0:2
+	>=dev-libs/libxml2-2.6.12:2
 	>=dev-libs/libxslt-1.1.7
-	>=gnome-base/libglade-2.3.1
+	>=gnome-base/libglade-2.3.1:2.0
 	>=gnome-base/libgnome-2.14
 	>=gnome-base/libgnomeui-2.14
-	>=gnome-base/gnome-desktop-2.9.91
+	>=gnome-base/gnome-desktop-2.9.91:2
 	>=x11-libs/startup-notification-0.5
 	>=x11-libs/libnotify-0.4
 	<x11-libs/libnotify-0.7
 	>=media-libs/libcanberra-0.3[gtk]
 	>=dev-libs/dbus-glib-0.71
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=app-text/iso-codes-0.35
 	avahi? ( >=net-dns/avahi-0.6.22 )
 	networkmanager? ( net-misc/networkmanager )
 	=net-libs/xulrunner-1.9.2*
 	python? (
-		>=dev-lang/python-2.3
-		>=dev-python/pygtk-2.7.1
-		>=dev-python/gnome-python-2.6 )
+		=dev-lang/python-2*
+		>=dev-python/pygtk-2.7.1:2
+		>=dev-python/gnome-python-2.6:2 )
 	spell? ( app-text/enchant )
 	x11-themes/gnome-icon-theme"
 DEPEND="${RDEPEND}

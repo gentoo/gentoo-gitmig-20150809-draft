@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.263 2011/03/11 08:41:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.264 2011/03/20 22:21:20 nirbheek Exp $
+
+  20 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  epiphany-2.26.3-r4.ebuild, epiphany-2.30.2-r1.ebuild:
+  Fix slot-deps on gtk+ and other libs, drop keywords on old ebuild
 
   11 Mar 2011; Pacho Ramos <pacho@gentoo.org> epiphany-2.30.6.ebuild,
   +files/epiphany-2.30.6-dbus-fix.patch,

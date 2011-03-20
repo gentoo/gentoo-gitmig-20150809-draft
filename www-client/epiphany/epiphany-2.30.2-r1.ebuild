@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.9 2011/02/05 16:13:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.2-r1.ebuild,v 1.10 2011/03/20 22:21:20 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,18 +17,18 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="avahi doc networkmanager +nss test"
 
 # TODO: add seed support
-RDEPEND=">=dev-libs/glib-2.19.7
-	>=x11-libs/gtk+-2.19.5
-	>=dev-libs/libxml2-2.6.12
+RDEPEND=">=dev-libs/glib-2.19.7:2
+	>=x11-libs/gtk+-2.19.5:2
+	>=dev-libs/libxml2-2.6.12:2
 	>=dev-libs/libxslt-1.1.7
 	>=x11-libs/startup-notification-0.5
 	>=x11-libs/libnotify-0.4
 	<x11-libs/libnotify-0.7
 	>=dev-libs/dbus-glib-0.71
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=app-text/iso-codes-0.35
-	>=net-libs/webkit-gtk-1.1.22
-	>=net-libs/libsoup-gnome-2.29.91
+	>=net-libs/webkit-gtk-1.1.22:2
+	>=net-libs/libsoup-gnome-2.29.91:2.4
 	>=gnome-base/gnome-keyring-2.26.0
 
 	x11-libs/libICE
