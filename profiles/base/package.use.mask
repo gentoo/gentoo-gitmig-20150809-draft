@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.208 2011/03/20 06:22:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.209 2011/03/20 17:10:00 flameeyes Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -251,6 +251,3 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 media-video/vlc bda direct2d directx dshow dxva2 waveout wingdi
 # Mac OSX / iPhone OS specific useflags
 media-video/vlc audioqueue ios-vout macosx macosx-audio macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtcapture macosx-vout
-# arm specific useflag, someone from the arm team should unmask this on their
-# profiles
-media-video/vlc neon

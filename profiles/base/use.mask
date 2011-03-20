@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.111 2011/03/18 15:58:48 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.112 2011/03/20 17:10:00 flameeyes Exp $
 
 # Its deps are not mature enough yet
 ayatana
@@ -65,6 +65,9 @@ ps3
 # sparc arch specific USE flags
 vis
 ultra1
+
+# arm arch specific USE flags
+neon
 
 # nVidia XvMC requires nvidia-drivers/nvidia-legacy-drivers
 nvidia
