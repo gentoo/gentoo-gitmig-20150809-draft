@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/linuxtv-dvb-headers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/ChangeLog,v 1.19 2011/03/06 11:22:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-headers/ChangeLog,v 1.20 2011/03/20 11:24:31 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org>
+  linuxtv-dvb-headers-3.1.ebuild, linuxtv-dvb-headers-5.ebuild:
+  Drop alpha/arm/ia64 keywords
 
   06 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   linuxtv-dvb-headers-5.ebuild:
