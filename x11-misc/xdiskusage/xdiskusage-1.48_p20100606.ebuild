@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48_p20100606.ebuild,v 1.2 2010/06/06 20:06:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48_p20100606.ebuild,v 1.3 2011/03/20 19:55:32 jlec Exp $
 
 EAPI=3
 inherit autotools flag-o-matic
@@ -20,11 +20,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	eautoreconf
-}
-
-src_configure() {
 	append-flags -I/usr/include/fltk/compat
-	econf
 }
 
 src_compile() {
