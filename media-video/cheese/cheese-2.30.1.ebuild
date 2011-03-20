@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.30.1.ebuild,v 1.10 2010/10/17 16:19:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.30.1.ebuild,v 1.11 2011/03/20 22:18:37 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -16,30 +16,30 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="doc v4l"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.7
-	>=dev-libs/glib-2.16.0
-	>=x11-libs/gtk+-2.19.1
+	>=dev-libs/glib-2.16.0:2
+	>=x11-libs/gtk+-2.19.1:2
 	>=x11-libs/cairo-1.4.0
 	>=x11-libs/pango-1.18.0
 	>=sys-apps/dbus-1[X]
 	>=sys-fs/udev-145-r1[extras]
-	>=gnome-base/gconf-2.16.0
-	>=gnome-base/gnome-desktop-2.26
-	>=gnome-base/librsvg-2.18.0
+	>=gnome-base/gconf-2.16.0:2
+	>=gnome-base/gnome-desktop-2.26:2
+	>=gnome-base/librsvg-2.18.0:2
 	>=media-libs/libcanberra-0.11[gtk]
 
-	>=media-libs/gstreamer-0.10.23
-	>=media-libs/gst-plugins-base-0.10.23"
+	>=media-libs/gstreamer-0.10.23:0.10
+	>=media-libs/gst-plugins-base-0.10.23:0.10"
 RDEPEND="${COMMON_DEPEND}
-	>=media-plugins/gst-plugins-gconf-0.10
-	>=media-plugins/gst-plugins-ogg-0.10.20
-	>=media-plugins/gst-plugins-pango-0.10.20
-	>=media-plugins/gst-plugins-theora-0.10.20
-	>=media-plugins/gst-plugins-v4l2-0.10
-	>=media-libs/gst-plugins-good-0.10.16
-	>=media-plugins/gst-plugins-vorbis-0.10.20
-	v4l? ( >=media-plugins/gst-plugins-v4l-0.10 )
-	|| ( >=media-plugins/gst-plugins-x-0.10
-		>=media-plugins/gst-plugins-xvideo-0.10 )"
+	>=media-plugins/gst-plugins-gconf-0.10:0.10
+	>=media-plugins/gst-plugins-ogg-0.10.20:0.10
+	>=media-plugins/gst-plugins-pango-0.10.20:0.10
+	>=media-plugins/gst-plugins-theora-0.10.20:0.10
+	>=media-plugins/gst-plugins-v4l2-0.10:0.10
+	>=media-libs/gst-plugins-good-0.10.16:0.10
+	>=media-plugins/gst-plugins-vorbis-0.10.20:0.10
+	v4l? ( >=media-plugins/gst-plugins-v4l-0.10:0.10 )
+	|| ( >=media-plugins/gst-plugins-x-0.10:0.10
+		>=media-plugins/gst-plugins-xvideo-0.10:0.10 )"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
