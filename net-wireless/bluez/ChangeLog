@@ -1,6 +1,17 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.79 2011/03/12 13:14:51 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.80 2011/03/20 16:57:35 pacho Exp $
+
+*bluez-4.90 (20 Mar 2011)
+
+  20 Mar 2011; Pacho Ramos <pacho@gentoo.org> +files/bluetooth-conf.d,
+  +files/conf.d-hidd, -files/4.31-as_needed.patch, -bluez-4.39-r2.ebuild,
+  -files/4.34-conditional_libsbc.patch,
+  -files/bluez-4.62-makefile_ipctest.patch, +bluez-4.90.ebuild,
+  -files/bluez-alsa_location.patch, files/bluetooth-init.d:
+  Version bump, remove old, bump to eapi4, don't install .c and .o files (bug
+  #356529 by Alec M.), init script needs hostname (bug #356739 by Johan
+  Myreen), libnl dep is no longer needed (bug #359105 by Yaroslav Isakov).
 
   12 Mar 2011; Thomas Kahle <tomka@gentoo.org> bluez-4.87.ebuild:
   x86 stable per bug 356255
