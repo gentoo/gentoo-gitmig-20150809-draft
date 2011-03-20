@@ -1,12 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.02.ebuild,v 1.3 2010/07/11 06:35:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-4.02.ebuild,v 1.4 2011/03/20 20:19:29 jlec Exp $
 
 EAPI=1
 
 inherit cmake-utils eutils
-
-IUSE="fltk odbc doc sqlite excel postgres aspell mysql gnutls"
 
 DESCRIPTION="C++ user interface toolkit for X with database and Excel support"
 SRC_URI="http://www.sptk.net/sptk-${PV}.tbz2"
@@ -15,14 +13,16 @@ HOMEPAGE="http://www.sptk.net"
 SLOT="4"
 LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+IUSE="fltk odbc doc sqlite excel postgres aspell mysql gnutls"
 
-RDEPEND="fltk?    ( >=x11-libs/fltk-1.1.6:1.1 )
-	odbc?     ( >=dev-db/unixODBC-2.2.6 )
-	sqlite?   ( >=dev-db/sqlite-3 )
+RDEPEND="
+	aspell? ( >=app-text/aspell-0.50 )
+	fltk? ( x11-libs/fltk:1 )
+	gnutls? ( net-libs/gnutls )
+	mysql? ( virtual/mysql )
+	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	postgres? ( >=dev-db/postgresql-base-8.0 )
-	mysql?    ( virtual/mysql )
-	aspell?   ( >=app-text/aspell-0.50 )
-	gnutls?   ( net-libs/gnutls )"
+	sqlite? ( >=dev-db/sqlite-3 )"
 
 DEPEND="${RDEPEND}
 	doc?      ( app-doc/doxygen )"
@@ -57,11 +57,9 @@ src_compile() {
 		einfo "Building docs"
 		doxygen sptk3.doxygen
 	fi
-
 }
 
 src_install () {
-
 	DOCS="README AUTHORS"
 	cmake-utils_src_install
 
