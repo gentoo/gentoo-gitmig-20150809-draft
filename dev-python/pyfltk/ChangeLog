@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfltk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.24 2010/07/19 17:23:05 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.25 2011/03/20 20:17:53 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> pyfltk-1.1.5.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
   19 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Removing myself as maintainer
