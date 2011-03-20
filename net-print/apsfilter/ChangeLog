@@ -1,6 +1,6 @@
 # ChangeLog for net-print/apsfilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.14 2009/12/26 17:42:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.15 2011/03/20 13:23:45 ssuominen Exp $
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> apsfilter-7.2.5.ebuild,
   apsfilter-7.2.6.ebuild:
@@ -27,21 +27,20 @@
   stable bump
 
 *apsfilter-7.2.5 (07 Mar 2003)
-  07 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> apsfilter-7.2.5.ebuild:
-  new version (should fix bug #10848) ~arch masked
-	
-*apsfilter-7.2.2-r1 (16 JUN 2002)
 
-  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  07 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org> +apsfilter-7.2.5.ebuild:
+  new version (should fix bug #10848) ~arch masked
+
+*apsfilter-7.2.2-r1 (14 Aug 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> +apsfilter-7.2.2-r1.ebuild:
   Added ppc keyword
 
-*apsfilter-7.2.2 (28 Feb 2003)
- 
-  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
-  Added missing changelog entry.
-
-  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apsfilter-7.2.2.ebuild :
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apsfilter-7.2.2.ebuild:
   Added KEYWORDS, SLOT.
 
-  16 JUN 2002; Carl Perry <edolnx@gentoo.org>:
-	Added apsfilter to portage
+*apsfilter-7.2.2-r1 (16 Jun 2002)
+
+  16 Jun 2002; Carl Perry <edolnx@gentoo.org> +apsfilter-7.2.2.ebuild:
+  Added apsfilter to portage
+
