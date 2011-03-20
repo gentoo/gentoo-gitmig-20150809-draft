@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.87 2011/03/09 10:04:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.88 2011/03/20 11:29:41 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> netcdf-4.1.1-r4.ebuild:
+  ia64 stable wrt #325069
 
   09 Mar 2011; Thomas Kahle <tomka@gentoo.org> netcdf-4.1.1-r4.ebuild:
   x86 stable per bug 325069
