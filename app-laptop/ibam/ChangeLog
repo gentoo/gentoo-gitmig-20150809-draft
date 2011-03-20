@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/ibam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.7 2010/10/19 21:16:33 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibam/ChangeLog,v 1.8 2011/03/20 15:34:24 aidecoe Exp $
+
+*ibam-0.5.2-r2 (20 Mar 2011)
+
+  20 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +ibam-0.5.2-r2.ebuild,
+  +files/ibam-0.5.2-acpi.patch:
+  Make ibam working with newer kernels. Fixes bug #346811. Thanks to Simeon
+  Maryasin <marsoft@ya.ru> for providing the patch.
 
 *ibam-0.5.2-r1 (19 Oct 2010)
 
