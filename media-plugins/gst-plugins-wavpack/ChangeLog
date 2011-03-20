@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-wavpack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-wavpack/ChangeLog,v 1.38 2011/01/30 18:07:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-wavpack/ChangeLog,v 1.39 2011/03/20 09:33:03 leio Exp $
+
+*gst-plugins-wavpack-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-wavpack-0.10.16.ebuild, -gst-plugins-wavpack-0.10.17.ebuild,
+  -gst-plugins-wavpack-0.10.21.ebuild, -gst-plugins-wavpack-0.10.22.ebuild,
+  +gst-plugins-wavpack-0.10.28.ebuild:
+  Version bump. No noteworthy changes.
 
   30 Jan 2011; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-wavpack-0.10.23.ebuild:
