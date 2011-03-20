@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.47 2011/03/14 22:39:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.48 2011/03/20 12:35:02 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> serf-0.7.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #357277
 
   14 Mar 2011; Markus Meier <maekke@gentoo.org> serf-0.7.1.ebuild:
   arm stable, bug #357277
