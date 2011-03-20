@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.2 2011/03/07 12:17:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.3 2011/03/20 09:46:49 jlec Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ WANT_AUTOMAKE=1.11
 inherit autotools base
 
 DESCRIPTION="A map-rendering application and a library for OpenStreetMap"
-HOMEPAGE="http://trac.openstreetmap.ch/trac/memphis"
+HOMEPAGE="http://trac.openstreetmap.ch/trac/memphis/"
 SRC_URI="http://wenner.ch/files/public/mirror/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -29,8 +29,10 @@ DEPEND="${RDEPEND}
 DOCS=(AUTHORS ChangeLog NEWS README)
 
 src_configure() {
+	unset VALAC
+	use vala && export VALAC=$(type -p valac-0.12)
+
 	CFLAGS="${CFLAGS}" \
-	VALAC=$(type -p valac-0.12) \
 	econf \
 		$(use_enable debug) \
 		$(use_enable doc gtk-doc) \
