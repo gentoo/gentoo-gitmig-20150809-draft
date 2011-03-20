@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.18.ebuild,v 1.2 2011/03/04 20:21:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.18.ebuild,v 1.3 2011/03/20 02:22:37 radhermit Exp $
 
 EAPI="4"
 
@@ -19,6 +19,8 @@ IUSE="debug doc static-libs"
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 S="${WORKDIR}/${MY_PN}/Project/GNU/Library"
 
