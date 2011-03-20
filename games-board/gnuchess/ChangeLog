@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnuchess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.22 2011/03/12 14:08:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.23 2011/03/20 18:34:15 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> gnuchess-5.07.ebuild,
+  gnuchess-5.08.ebuild:
+  Drop sparc keywords
 
   12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> gnuchess-5.08.ebuild:
   Stable on alpha, bug #356481
