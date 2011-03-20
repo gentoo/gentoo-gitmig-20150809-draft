@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2.ebuild,v 1.6 2011/03/07 09:27:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2.ebuild,v 1.7 2011/03/20 04:08:00 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,11 +17,11 @@ KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 KERNEL_IUSE="kernel_linux"
 IUSE="branding debug doc libnotify opengl pam $KERNEL_IUSE"
 
-RDEPEND=">=gnome-base/gconf-2.6.1
-	>=x11-libs/gtk+-2.14.0
+RDEPEND=">=gnome-base/gconf-2.6.1:2
+	>=x11-libs/gtk+-2.14.0:2
 	>=gnome-base/gnome-desktop-2.29.0:2
 	>=gnome-base/gnome-menus-2.12
-	>=dev-libs/glib-2.15
+	>=dev-libs/glib-2.15:2
 	>=gnome-base/libgnomekbd-0.1
 	>=dev-libs/dbus-glib-0.71
 	libnotify? ( x11-libs/libnotify )
