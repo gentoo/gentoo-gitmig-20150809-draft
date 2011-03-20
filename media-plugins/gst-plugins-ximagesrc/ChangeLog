@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/gst-plugins-ximagesrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.40 2011/03/11 19:00:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.41 2011/03/20 09:36:03 leio Exp $
+
+*gst-plugins-ximagesrc-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-ximagesrc-0.10.16.ebuild,
+  -gst-plugins-ximagesrc-0.10.17.ebuild,
+  -gst-plugins-ximagesrc-0.10.21.ebuild,
+  -gst-plugins-ximagesrc-0.10.22.ebuild,
+  +gst-plugins-ximagesrc-0.10.28.ebuild:
+  Version bump. Improvements to remote X11 use cases behind a remote
+  property, off-by-one fixes for width/height
 
   11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-ximagesrc-0.10.23.ebuild:
