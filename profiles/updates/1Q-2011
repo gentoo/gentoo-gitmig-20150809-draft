@@ -59,3 +59,4 @@ move dev-dotnet/dbus-sharp dev-dotnet/ndesk-dbus
 move dev-dotnet/dbus-glib-sharp dev-dotnet/ndesk-dbus-glib
 move dev-ruby/ruby-serialport dev-ruby/serialport
 move sci-chemistry/caver sci-chemistry/pymol-plugins-caver
+slotmove =x11-libs/fltk-1* 1.1 1
