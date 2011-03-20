@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.228 2011/03/20 13:30:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.229 2011/03/20 18:45:06 ssuominen Exp $
+
+  20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> make.defaults:
+  Remove XZ_OPT="--memory=max" for app-arch/xz-utils wrt #342961 by Ben Kohler.
 
   20 Mar 2011; Eray Aslan <eras@gentoo.org> virtuals:
   remove old style virtual/mailx

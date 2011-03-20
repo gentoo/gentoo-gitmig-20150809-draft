@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.63 2011/03/01 01:14:59 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.64 2011/03/20 18:45:06 ssuominen Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -91,6 +91,3 @@ USE="${USE} cxx"
 # We usually don't want python to (re)write .py[co] files during phase runs
 # since it could cause sandbox violations
 PYTHONDONTWRITEBYTECODE="1"
-
-# Let XZ use all memory when unpacking to avoid failure with low-mem #303975
-XZ_OPT="--memory=max"
