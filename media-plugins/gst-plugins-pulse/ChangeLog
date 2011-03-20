@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.55 2011/01/30 19:04:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.56 2011/03/20 09:09:41 leio Exp $
+
+*gst-plugins-pulse-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-pulse-0.10.16.ebuild, -gst-plugins-pulse-0.10.17.ebuild,
+  -gst-plugins-pulse-0.10.21.ebuild, -gst-plugins-pulse-0.10.22.ebuild,
+  +gst-plugins-pulse-0.10.28.ebuild:
+  Version bump. Optimizations; bug fixes; allow setting of pulse stream
+  properties and PA client name, and much more
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-pulse-0.10.23.ebuild:
