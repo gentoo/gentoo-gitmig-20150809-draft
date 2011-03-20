@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.14.1.ebuild,v 1.3 2011/03/09 09:58:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.14.1.ebuild,v 1.4 2011/03/20 18:51:51 phajdan.jr Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SRC_URI="http://www.cython.org/release/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="doc examples"
 
 DEPEND=""
