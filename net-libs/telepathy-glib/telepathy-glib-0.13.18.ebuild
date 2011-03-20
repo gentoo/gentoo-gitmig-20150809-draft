@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.13.16.ebuild,v 1.1 2011/03/09 05:40:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.13.18.ebuild,v 1.1 2011/03/20 21:44:40 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
