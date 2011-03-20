@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/rioutil
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.27 2009/06/28 18:01:02 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.28 2011/03/20 18:23:42 ssuominen Exp $
+
+  20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> rioutil-1.5.0-r1.ebuild:
+  Fix libusb depend to correct SLOT and install udev rules to /lib/udev instead
+  of /etc/udev.
 
   28 Jun 2009; Patrick Lauer <patrick@gentoo.org> rioutil-1.5.0-r1.ebuild:
   EAPI2ification, nailing libusb dep to slot 0, fixes #270158

@@ -1,9 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r1.ebuild,v 1.4 2009/06/28 18:01:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r1.ebuild,v 1.5 2011/03/20 18:23:42 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit multilib
 
 DESCRIPTION="Command line tool for transfering mp3s to and from a Rio 600, 800, Rio Riot, and Nike PSA/Play"
@@ -15,13 +14,13 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="dev-libs/libusb:0"
+RDEPEND="virtual/libusb:0"
+DEPEND="${RDEPEND}"
 
 src_install() {
-	emake DESTDIR="${D}" libdir="/usr/$(get_libdir)" \
-		install || die "emake install failed."
-
+	emake DESTDIR="${D}" libdir="/usr/$(get_libdir)" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
-	insinto /etc/udev/rules.d
+
+	insinto /$(get_libdir)/udev/rules.d
 	doins "${FILESDIR}"/75-rio.rules
 }
