@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.10 2011/03/19 00:38:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.3.0.ebuild,v 1.11 2011/03/20 13:01:11 suka Exp $
 
 EAPI="3"
 
@@ -23,7 +23,6 @@ NM1="${NM}.org"
 NM2="${NM1}3"
 NM3="${NM2}.3"
 FILEPATH="http://download.services.openoffice.org/files/extended/${MY_PV}"
-
 if [ "${ARCH}" = "amd64" ] ; then
 	XARCH="x86_64"
 	PACKED="${MST}_native_packed-1"
@@ -31,14 +30,14 @@ else
 	XARCH="i586"
 	PACKED="${MST}_native_packed-1"
 fi
-
 UP="${PACKED}_en-US.${BUILDID}/RPMS"
-DESCRIPTION="OpenOffice productivity suite."
 
+DESCRIPTION="OpenOffice productivity suite."
+HOMEPAGE="http://www.openoffice.org/"
 SRC_URI="x86? ( http://download.services.openoffice.org/files/stable/${PV}/OOo_${PV}_Linux_x86_install-rpm_en-US.tar.gz )
 	amd64? ( http://download.services.openoffice.org/files/stable/${PV}/OOo_${PV}_Linux_x86-64_install-rpm-wJRE_en-US.tar.gz  )"
 
-LANGS="ar as ast bg bn ca cs da de dz el en en_GB eo es et eu fi fr ga gl gu hi hu id is it ja ka km kn ko ku lt lv mk ml mr my nb nl nn oc om or pa_IN pl pt pt_BR ro ru sh si sk sl sr sv ta te th tr ug uk uz vi zh_CN zh_TW"
+LANGS="ar as ast be_BY bg bn ca ca_XV cs da de dz el en en_GB eo es et eu fi fr ga gl gu he hi hu id is it ja ka km kn ko ku lt lv mk ml mr my nb nl nn oc om or pa_IN pl pt pt_BR ro ru sh si sk sl sr sv ta te th tr ug uk uz vi zh_CN zh_TW"
 
 for X in ${LANGS} ; do
 	[[ ${X} != "en" ]] && SRC_URI="${SRC_URI} linguas_${X}? (
@@ -47,8 +46,6 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-HOMEPAGE="http://www.openoffice.org/"
-
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
@@ -56,13 +53,13 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 RDEPEND="!app-office/libreoffice
 	!app-office/openoffice
 	!app-office/libreoffice-bin
-	x11-libs/libXaw
 	!prefix? ( sys-libs/glibc )
-	>=dev-lang/perl-5.0
-	app-arch/zip
 	app-arch/unzip
-	x11-libs/libXinerama
-	>=media-libs/freetype-2.1.10-r2"
+	app-arch/zip
+	>=dev-lang/perl-5.0
+	>=media-libs/freetype-2.1.10-r2
+	x11-libs/libXaw
+	x11-libs/libXinerama"
 
 DEPEND="${RDEPEND}
 	sys-apps/findutils"
