@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.1-r4.ebuild,v 1.6 2011/01/13 17:12:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.1-r4.ebuild,v 1.7 2011/03/20 08:03:42 tove Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ MY_P=Mail-SpamAssassin-${PV//_/-}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="SpamAssassin is an extensible email filter which is used to identify spam."
 HOMEPAGE="http://spamassassin.apache.org/"
-SRC_URI="http://apache.osuosl.org/spamassassin/source/${MY_P}.tar.bz2"
+SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
