@@ -1,9 +1,8 @@
 # ChangeLog for x11-misc/xdiskusage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.18 2011/03/20 19:55:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/ChangeLog,v 1.19 2011/03/20 20:03:13 ssuominen Exp $
 
-  20 Mar 2011; Justin Lecher <jlec@gentoo.org> xdiskusage-1.48.ebuild,
-  xdiskusage-1.48_p20100606.ebuild:
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> xdiskusage-1.48.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
 *xdiskusage-1.48_p20100606 (06 Jun 2010)
