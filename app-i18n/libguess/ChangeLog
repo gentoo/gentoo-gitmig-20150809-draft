@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libguess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.5 2011/03/07 21:05:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.6 2011/03/20 18:24:06 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> libguess-1.0.ebuild:
+  Add ~sparc wrt #348192
 
   07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> libguess-1.0.ebuild:
   Keyworded on alpha, bug #348192
