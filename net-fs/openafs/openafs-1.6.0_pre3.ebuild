@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.0_pre2.ebuild,v 1.2 2011/03/20 09:58:35 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.0_pre3.ebuild,v 1.1 2011/03/20 09:58:35 stefaan Exp $
 
 EAPI="2"
 
@@ -23,7 +23,8 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="doc kerberos pam"
 
 RDEPEND="~net-fs/openafs-kernel-${PV}
-pam? ( sys-libs/pam )
+	sys-libs/ncurses
+	pam? ( sys-libs/pam )
 	kerberos? ( virtual/krb5 )"
 
 src_prepare() {
