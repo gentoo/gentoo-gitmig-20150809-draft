@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.761 2011/03/18 20:25:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.762 2011/03/20 22:23:47 vapier Exp $
+
+  20 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
+  files/eblits/pkg_setup.eblit:
+  Check for the __sync_fetch_and_add symbol directly rather than trying to mess
+  with the defines in the CPP output #199334 by Xavier Neys.
 
   18 Mar 2011; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_install.eblit:
