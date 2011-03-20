@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.4.0.ebuild,v 1.4 2010/10/17 20:18:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.1.ebuild,v 1.1 2011/03/20 12:02:44 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2:2.4"
+PYTHON_DEPEND="2:2.5"
 
 inherit python gnome2 eutils multilib
 
@@ -17,22 +17,17 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-lin
 IUSE="doc gnome"
 
 RDEPEND="
-	>=gnome-base/libglade-2
-	>=dev-python/pygtk-2.8
-	>=dev-python/pygobject-2.8
-	gnome? (
-		>=gnome-base/libgnome-2
-		>=dev-python/libgnome-python-2.22
-		>=dev-python/gconf-python-2.22
-		>=dev-python/gnome-vfs-python-2.22 )
+	>=gnome-base/libglade-2:2.0
+	>=dev-python/pygtk-2.14:2
+	>=dev-python/pygobject-2.8:2
+	gnome? ( >=dev-python/gconf-python-2.22:2 )
 "
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	app-text/scrollkeeper"
 
-DOCS="AUTHORS NEWS help/ChangeLog"
-
 pkg_setup() {
+	DOCS="AUTHORS NEWS help/ChangeLog"
 	# Needed for optimizing python modules against proper interpreter
 	python_set_active_version 2
 }

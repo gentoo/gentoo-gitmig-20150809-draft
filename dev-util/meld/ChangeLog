@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.120 2011/03/12 16:04:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.121 2011/03/20 12:02:44 pacho Exp $
+
+*meld-1.5.1 (20 Mar 2011)
+
+  20 Mar 2011; Pacho Ramos <pacho@gentoo.org> -meld-1.4.0.ebuild,
+  +meld-1.5.1.ebuild:
+  Version bump, remove old.
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> meld-1.5.0.ebuild:
   alpha/arm/ia64/sparc stable wrt #353436
