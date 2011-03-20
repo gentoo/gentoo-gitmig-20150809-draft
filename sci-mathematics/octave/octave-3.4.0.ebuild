@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0.ebuild,v 1.2 2011/02/15 20:20:29 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0.ebuild,v 1.3 2011/03/20 20:01:35 jlec Exp $
 
 EAPI="2"
 inherit multilib
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/libpcre
 	virtual/lapack
 	virtual/opengl
 	x11-libs/libX11
-	>=x11-libs/fltk-1.3[opengl]
+	>=x11-libs/fltk-1.3:1[opengl]
 	curl? ( net-misc/curl )
 	fftw? ( sci-libs/fftw:3.0 )
 	sparse? (

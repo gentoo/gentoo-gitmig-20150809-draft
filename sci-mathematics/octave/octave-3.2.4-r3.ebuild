@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.3 2011/01/19 17:19:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.4 2011/03/20 20:01:35 jlec Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -26,7 +26,7 @@ RDEPEND="dev-libs/libpcre
 	virtual/opengl
 	x11-libs/libX11
 	curl? ( net-misc/curl )
-	fltk? ( x11-libs/fltk:1.1[opengl] )
+	fltk? ( x11-libs/fltk:1[opengl] )
 	fftw? ( sci-libs/fftw:3.0 )
 	sparse? ( sci-libs/arpack
 		sci-libs/camd

@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.101 2011/02/15 20:20:29 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.102 2011/03/20 20:01:35 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> octave-3.2.4-r1.ebuild,
+  octave-3.2.4-r2.ebuild, octave-3.2.4-r3.ebuild, octave-3.4.0.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
   15 Feb 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
   octave-3.4.0.ebuild:

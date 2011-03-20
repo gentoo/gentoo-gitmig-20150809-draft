@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.3 2010/09/23 04:11:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.4 2011/03/20 19:58:08 jlec Exp $
 
 EAPI=2
 inherit elisp-common eutils flag-o-matic toolchain-funcs
@@ -22,7 +22,7 @@ IUSE="doc data emacs fltk gmp static-libs X"
 
 RDEPEND="sys-libs/readline
 	emacs? ( virtual/emacs )
-	fltk? ( x11-libs/fltk )
+	fltk? ( x11-libs/fltk:1 )
 	gmp? ( dev-libs/gmp )
 	X? ( x11-libs/libX11 )
 	doc? ( X? ( x11-misc/xdg-utils ) )"
