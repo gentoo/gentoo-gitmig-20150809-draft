@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.136 2011/03/19 18:15:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.137 2011/03/20 13:30:18 eras Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -21,7 +21,6 @@ virtual/libpcap				net-libs/libpcap
 virtual/linux-sources			sys-kernel/gentoo-sources
 virtual/logger				app-admin/metalog
 virtual/m3				dev-lang/cm3-bin
-virtual/mailx				mail-client/mailx
 virtual/man				sys-apps/man
 virtual/modutils			sys-apps/module-init-tools
 virtual/mta				mail-mta/ssmtp
