@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.250 2011/03/04 04:23:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.251 2011/03/20 10:13:32 grobian Exp $
+
+  20 Mar 2011; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Mask dev-libs/zziplib-0.13.60-r1 on Darwin, broken due to GCC 4.6 patch, bug
+  #357899
 
   04 Mar 2011; Jonathan Callen <abcd@gentoo.org> bsd/package.mask,
   darwin/package.mask, package.mask, sunos/solaris/package.mask:

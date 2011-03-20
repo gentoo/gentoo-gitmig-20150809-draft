@@ -1,7 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.22 2011/03/04 04:23:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.23 2011/03/20 10:13:32 grobian Exp $
 
+# Fabian Groffen <grobian@gentoo.org> (20 Mar 2011)
+# illegal linker argument, bug #357899
+=dev-libs/zziplib-0.13.60-r1
 
 # Jonathan Callen <abcd@gentoo.org> (04 Mar 2011)
 # Moved mask from prefix/ into sub-profiles
