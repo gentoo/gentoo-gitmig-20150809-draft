@@ -8,7 +8,7 @@ https://bugs.gentoo.org/354051
  AC_MSG_CHECKING([link options])
  ZZIPLIB_LDFLAGS=""
 -test ".$can_build_shared" != ".no" && ZZIPLIB_LDFLAGS="--export-dynamic"
-+test ".$can_build_shared" != ".no" && ZZIPLIB_LDFLAGS="-Wl,--export-dynamic"
++test ".$can_build_shared" != ".no" && ZZIPLIB_LDFLAGS="-export-dynamic"
  RESOLVES=" # "
  case "$host_os" in mingw*)
      ZZIPLIB_LDFLAGS="-no-undefined -export-all-symbols -mconsole"
