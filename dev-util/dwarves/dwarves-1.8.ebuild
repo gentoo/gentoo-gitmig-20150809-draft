@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.8.ebuild,v 1.3 2011/02/06 15:42:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.8.ebuild,v 1.4 2011/03/20 21:58:45 scarabeus Exp $
 
-inherit toolchain-funcs multilib cmake-utils flag-o-matic
+EAPI=4
+
+inherit multilib cmake-utils
 
 DESCRIPTION="pahole (Poke-a-Hole) and other DWARF2 utilities"
 HOMEPAGE="http://git.kernel.org/?p=linux/kernel/git/acme/pahole.git;a=summary"
@@ -25,19 +27,11 @@ fi
 
 PATCHES=( "${FILESDIR}"/${P}-glibc-212.patch )
 
-src_compile() {
-	tc-export CC CXX LD
+DOCS=( README README.ctracer )
 
-	use debug || append-flags -DNDEBUG
-
-	mycmakeargs="-D__LIB=$(get_libdir)"
-	cmake-utils_src_compile
+src_configure() {
+	local mycmakeargs=( "-D__LIB=$(get_libdir)" )
+	cmake-utils_src_configure
 }
 
 src_test() { :; }
-
-src_install() {
-	cmake-utils_src_install
-
-	dodoc README README.ctracer || die
-}
