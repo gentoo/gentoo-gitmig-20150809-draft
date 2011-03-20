@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.4.2.ebuild,v 1.4 2011/03/20 20:05:31 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.0.0.ebuild,v 1.1 2011/03/20 20:05:31 chiiph Exp $
 
 EAPI="2"
 
@@ -47,7 +47,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-find-kde-phonon.patch"
-	epatch "${FILESDIR}/${PN}-cmake-namespace.patch"
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyside
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.15 2010/12/29 10:29:20 ayoy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.16 2011/03/20 20:05:31 chiiph Exp $
+
+*pyside-1.0.0 (20 Mar 2011)
+
+  20 Mar 2011; Tomas Touceda <chiiph@gentoo.org> +pyside-1.0.0.ebuild:
+  Version bump
 
   29 Dec 2010; Dominik Kapusta <ayoy@gentoo.org> pyside-0.4.2.ebuild:
   Specifying correct dependency on Python (bug #345531).
