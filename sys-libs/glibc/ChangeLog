@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.762 2011/03/20 22:23:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.763 2011/03/20 22:39:11 vapier Exp $
+
+  20 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Make sure the forced CC comes from the target and not the host so
+  cross-compiling picks up the right value.
 
   20 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
   files/eblits/pkg_setup.eblit:
