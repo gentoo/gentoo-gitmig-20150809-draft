@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.209 2011/03/20 17:10:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.210 2011/03/20 18:54:29 ultrabug Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Ultrabug <ultrabug@gentoo.org> (20 Mar 2011)
+# Mask clustering support until new sys-cluster/cman is pushed.
+sys-fs/lvm2 clvm cman
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Feb 2011)
 # libgnome[esd] ABI broken, bug #348644 and bug #352260.

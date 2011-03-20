@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.112 2011/03/20 17:10:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.113 2011/03/20 18:54:29 ultrabug Exp $
 
 # Its deps are not mature enough yet
 ayatana
@@ -220,7 +220,6 @@ macbook
 ada
 
 # lvm2 clustered use flags (moved from default-linux)
-clvm
 gulm
 
 # tcc is x86 only
