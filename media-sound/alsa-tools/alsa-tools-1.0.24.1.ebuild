@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.24.1.ebuild,v 1.1 2011/02/06 00:32:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.24.1.ebuild,v 1.2 2011/03/20 20:13:16 jlec Exp $
 
 EAPI=3
 inherit base flag-o-matic autotools
@@ -8,7 +8,7 @@ inherit base flag-o-matic autotools
 MY_P="${P/_rc/rc}"
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
-HOMEPAGE="http://www.alsa-project.org"
+HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/tools/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -28,8 +28,8 @@ ${ECHOAUDIO_CARDS}"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
 	>=dev-python/pyalsa-1.0.24
-	fltk? ( =x11-libs/fltk-1.1* )
-	gtk? ( =x11-libs/gtk+-2* )"
+	fltk? ( x11-libs/fltk:1 )
+	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -100,8 +100,8 @@ src_prepare() {
 src_configure() {
 	if use fltk; then
 		# hdspmixer requires fltk
-		append-ldflags "-L/usr/$(get_libdir)/fltk-1.1"
-		append-flags "-I/usr/include/fltk-1.1"
+		append-ldflags "-L$(dirname $(fltk-config --libs))"
+		append-flags "-I$(fltk-config --includedir)"
 	fi
 
 	local f

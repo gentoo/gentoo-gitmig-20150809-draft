@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.9-r1.ebuild,v 1.1 2011/02/26 14:46:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.9-r1.ebuild,v 1.2 2011/03/20 20:10:10 jlec Exp $
 
 EAPI="2"
 
 inherit eutils cmake-utils
 
-DESCRIPTION="free alternative to popular programs such as Fruityloops, Cubase and Logic"
-HOMEPAGE="http://lmms.sourceforge.net"
+DESCRIPTION="Free alternative to popular programs such as Fruityloops, Cubase and Logic"
+HOMEPAGE="http://lmms.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/qt-core:4
 	>=media-libs/libsamplerate-0.1.7
 	x11-libs/libXinerama
 	alsa? ( media-libs/alsa-lib )
-	fftw? ( =sci-libs/fftw-3* >=x11-libs/fltk-1.3.0_rc:1.1 )
+	fftw? ( sci-libs/fftw:3.0 >=x11-libs/fltk-1.3.0_rc3:1 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.99.0 )
 	ogg? ( media-libs/libvorbis
 			media-libs/libogg )

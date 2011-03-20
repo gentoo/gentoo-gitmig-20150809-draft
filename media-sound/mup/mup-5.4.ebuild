@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.8 2011/02/28 18:07:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.9 2011/03/20 20:07:56 jlec Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
-	x11-libs/fltk:1.1
+	x11-libs/fltk:1
 	x11-libs/libXpm
 	virtual/jpeg
 	media-libs/libpng"

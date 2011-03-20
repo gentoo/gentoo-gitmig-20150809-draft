@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.2.ebuild,v 1.8 2009/06/03 20:10:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.2.ebuild,v 1.9 2011/03/20 20:06:58 jlec Exp $
 
 EAPI=2
 inherit eutils
@@ -14,9 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
-RDEPEND="media-sound/jack-audio-connection-kit
+RDEPEND="
+	media-sound/jack-audio-connection-kit
 	media-libs/alsa-lib
-	x11-libs/fltk:1.1"
+	x11-libs/fltk:1"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

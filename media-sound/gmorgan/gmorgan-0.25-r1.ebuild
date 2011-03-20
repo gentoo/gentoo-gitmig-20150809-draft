@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25-r1.ebuild,v 1.8 2009/08/01 06:28:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25-r1.ebuild,v 1.9 2011/03/20 20:10:40 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
 
-DESCRIPTION="gmorgan is an opensource software rhythm station."
+DESCRIPTION="Opensource software rhythm station"
 HOMEPAGE="http://gmorgan.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gmorgan/${P}.tar.gz"
 
@@ -14,8 +14,9 @@ SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/fltk-1.1.2:1.1
-	media-libs/alsa-lib"
+RDEPEND="
+	media-libs/alsa-lib
+	x11-libs/fltk:1"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmorgan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.26 2009/08/01 06:28:47 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.27 2011/03/20 20:10:40 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> gmorgan-0.25-r1.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
   01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   gmorgan-0.25-r1.ebuild:

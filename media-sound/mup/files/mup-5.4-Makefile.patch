@@ -360,8 +360,8 @@ diff -urN mup-5.4.orig/Makefile mup-5.4/Makefile
 +
 +mupmate/mupmate: $(MUPMATE_SRC) $(MUPMATE_HDRS) $(MUPMATE_OTHER_FILES)
 +	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(MUPMATE_SRC) \
-+	-I/usr/include/fltk-1.1 -Imup -L$(X_LOCATION)/lib \
-+	-L/usr/lib/fltk-1.1 -lfltk -lfltk_images -lXext -lX11 -lXpm \
++	-I/usr/include/fltk-1 -Imup -L$(X_LOCATION)/lib \
++	-L/usr/lib/fltk-1 -lfltk -lfltk_images -lXext -lX11 -lXpm \
 +	-l$(JPEGLIB) -l$(PNGLIB) -l$(ZLIB) -lm
 +
 +install: all

@@ -10,9 +10,9 @@ diff -urN mup-5.6.orig/Makefile mup-5.6/Makefile
 +CFLAGS = -O2 -pipe
 +CXXFLAGS = -O2 -pipe
 +X_LOCATION = /usr
-+FLTK_LIB_LOCATION = -L/usr/lib/fltk-1.1
++FLTK_LIB_LOCATION = -L/usr/lib/fltk-1
 +X_LIBS = -lXext -lX11 -lXpm
-+FLTK_INCLUDE = $(X_LOCATION)/include/fltk-1.1
++FLTK_INCLUDE = $(X_LOCATION)/include/fltk-1
 +JPEGLIB = jpeg
 +PNGLIB = png
 +ZLIB = z

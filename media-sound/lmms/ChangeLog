@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lmms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.18 2011/02/27 10:43:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.19 2011/03/20 20:10:10 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> lmms-0.4.9.ebuild,
+  lmms-0.4.9-r1.ebuild, lmms-0.4.9-r2.ebuild, lmms-0.4.9-r3.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
 *lmms-0.4.9-r3 (27 Feb 2011)
 

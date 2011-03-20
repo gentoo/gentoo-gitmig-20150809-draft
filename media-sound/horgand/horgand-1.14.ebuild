@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.14.ebuild,v 1.5 2008/12/15 01:42:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.14.ebuild,v 1.6 2011/03/20 20:09:59 jlec Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Horgand is an opensource software organ."
+DESCRIPTION="Opensource software organ"
 HOMEPAGE="http://horgand.berlios.de"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
-RDEPEND="x11-libs/fltk:1.1
+RDEPEND="x11-libs/fltk:1
 	x11-libs/libXpm
 	media-libs/libsndfile
 	media-libs/alsa-lib

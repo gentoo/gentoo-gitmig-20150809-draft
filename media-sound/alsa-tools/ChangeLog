@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.199 2011/02/06 00:32:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.200 2011/03/20 20:13:16 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> alsa-tools-1.0.20-r1.ebuild,
+  alsa-tools-1.0.20-r2.ebuild, alsa-tools-1.0.21.ebuild,
+  alsa-tools-1.0.21-r1.ebuild, alsa-tools-1.0.22.ebuild,
+  alsa-tools-1.0.23.ebuild, alsa-tools-1.0.24.1.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
 *alsa-tools-1.0.24.1 (06 Feb 2011)
 

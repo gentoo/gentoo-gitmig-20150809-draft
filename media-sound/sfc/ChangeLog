@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sfc
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.15 2008/12/15 01:47:28 yngwin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.16 2011/03/20 20:07:34 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> sfc-0.016.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
   15 Dec 2008; Ben de Groot <yngwin@gentoo.org> sfc-0.016.ebuild:
   Pinning fltk dep on slot 1.1, bug 246445

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.1.ebuild,v 1.1 2011/02/26 20:46:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.1.ebuild,v 1.2 2011/03/20 20:06:18 jlec Exp $
 
 EAPI=4
 inherit eutils cmake-utils
@@ -19,12 +19,11 @@ IUSE="alsa +fltk jack lash"
 
 RDEPEND="
 	sci-libs/fftw:3.0
-	sys-libs/zlib
-	>=dev-libs/mini-xml-2.2.1
-	alsa? ( media-libs/alsa-lib )
+	fltk? ( x11-libs/fltk:1 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	fltk? ( >=x11-libs/fltk-1.1.2:1.1 )
-	lash? ( media-sound/lash )"
+	alsa? ( media-libs/alsa-lib )
+	lash? ( media-sound/lash )
+	>=dev-libs/mini-xml-2.2.1"
 #	portaudio? ( media-libs/portaudio )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
