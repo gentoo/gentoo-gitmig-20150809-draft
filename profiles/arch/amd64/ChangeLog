@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.118 2011/03/18 22:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.119 2011/03/20 06:26:57 leio Exp $
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org> package.use.mask:
+  Unmask orc USE flag on gst-plugins-good
 
   18 Mar 2011: Mike Frysinger <vapier@gentoo.org> make.defaults:
   Drop CDEFINE_<abi> variables now that nothing uses them.
