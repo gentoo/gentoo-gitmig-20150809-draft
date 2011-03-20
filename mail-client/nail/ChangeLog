@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/nail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.76 2010/10/04 19:55:54 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.77 2011/03/20 13:18:38 eras Exp $
+
+  20 Mar 2011; Eray Aslan <eras@gentoo.org> nail-12.4.ebuild,
+  -nail-12.4-r1.ebuild, nail-12.4-r2.ebuild:
+  remove old and change to new style virtual/mailx - bug 350792
 
   04 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> nail-12.4-r2.ebuild:
   Use -j1 when building config or it'll produce bad files.
