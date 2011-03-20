@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.17 2011/03/18 20:24:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.18 2011/03/20 21:25:49 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -242,14 +242,6 @@ want__thread() {
 	WANT__THREAD=$?
 
 	return ${WANT__THREAD}
-}
-
-use_multilib() {
-	case ${CTARGET} in
-		sparc*|mips64*|x86_64*|powerpc64*|s390x*)
-			has_multilib_profile || use multilib ;;
-		*)  false ;;
-	esac
 }
 
 use_multiarch() {

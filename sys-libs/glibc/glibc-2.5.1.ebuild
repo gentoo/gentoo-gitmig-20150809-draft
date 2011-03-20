@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.1.ebuild,v 1.9 2011/03/09 08:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.1.ebuild,v 1.10 2011/03/20 21:25:49 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -975,14 +975,6 @@ fix_lib64_symlinks() {
 		ln -s lib64 ${ROOT}/usr/X11R6/lib
 		einfo "fixed broken lib64/lib symlink in ${ROOT}/usr/X11R6"
 	fi
-}
-
-use_multilib() {
-	case ${CTARGET} in
-		sparc64*|mips64*|x86_64*|powerpc64*|s390x*)
-			has_multilib_profile || use multilib ;;
-		*)  false ;;
-	esac
 }
 
 # Setup toolchain variables that would be defined in the profiles for these archs.
