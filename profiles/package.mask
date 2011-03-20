@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12582 2011/03/20 17:57:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12583 2011/03/20 22:06:19 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (20 Mar 2011)
+# Depends on p.masked libxmlpp
+>=www-plugins/lightspark-0.4.6.1
 
 # Aaron W. Swenson <titanofold@gentoo.org> (20 Mar 2011)
 # Masking 9.1 pre-release versions
