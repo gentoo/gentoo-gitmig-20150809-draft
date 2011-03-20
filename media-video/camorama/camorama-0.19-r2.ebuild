@@ -1,39 +1,40 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.19-r2.ebuild,v 1.1 2010/04/08 16:29:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/camorama-0.19-r2.ebuild,v 1.2 2011/03/20 10:25:16 ssuominen Exp $
 
 EAPI=2
 inherit eutils gnome2
 
-DESCRIPTION="a webcam application featuring various image filters."
-HOMEPAGE="http://camorama.fixedgear.org"
+DESCRIPTION="A webcam application featuring various image filters"
+HOMEPAGE="http://git.gnome.org/browse/camorama/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.10:2
-	>=gnome-base/libgnomeui-2
-	>=gnome-base/libgnome-2
-	>=gnome-base/gconf-2
+RDEPEND=">=gnome-base/gconf-2
 	>=gnome-base/libglade-2
-	media-libs/libv4l"
+	>=gnome-base/libgnome-2
+	>=gnome-base/libgnomeui-2
+	media-libs/libv4l
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	sys-devel/gettext
+	dev-util/intltool
 	dev-util/pkgconfig
-	dev-util/intltool"
-
-SCROLLKEEPER_UPDATE="0"
+	sys-devel/gettext"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-schemas-install"
+	SCROLLKEEPER_UPDATE="0"
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gconf.patch \
+	epatch \
+		"${FILESDIR}"/${P}-gconf.patch \
 		"${FILESDIR}"/${P}-fixes.patch \
-		"${FILESDIR}"/${P}-libv4l.patch
+		"${FILESDIR}"/${P}-libv4l.patch \
+		"${FILESDIR}"/${P}-no-more-videodev_h.patch
 
 	gnome2_src_prepare
 }
