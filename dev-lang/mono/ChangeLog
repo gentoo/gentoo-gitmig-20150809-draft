@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.214 2011/03/05 17:31:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.215 2011/03/20 19:01:41 pacho Exp $
+
+  20 Mar 2011; Pacho Ramos <pacho@gentoo.org> mono-2.10.1-r1.ebuild:
+  Fix building on ppc (bug #359515 by Brent Baude).
 
   05 Mar 2011; Pacho Ramos <pacho@gentoo.org> mono-2.10.1-r1.ebuild:
   Drop again unneeded depend.

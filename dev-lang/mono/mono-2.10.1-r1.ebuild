@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1-r1.ebuild,v 1.3 2011/03/05 17:31:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.1-r1.ebuild,v 1.4 2011/03/20 19:01:41 pacho Exp $
 
 EAPI="2"
 
@@ -91,7 +91,11 @@ src_configure() {
 	#
 	# --with-profile4 needs to be always enabled since it's used by default
 	# and, otherwise, problems like bug #340641 appear.
+	#
+	# sgen fails on ppc, bug #359515
 
+	local myconf=""
+	use ppc && myconf="${myconf} --with-sgen=no"
 	go-mono_src_configure \
 		--enable-static \
 		--disable-quiet-build \
@@ -101,7 +105,8 @@ src_configure() {
 		--without-ikvm-native \
 		--with-jit \
 		--disable-dtrace \
-		--with-profile4
+		--with-profile4 \
+		${myconf}
 }
 
 src_test() {
