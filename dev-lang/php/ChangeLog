@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.479 2011/03/18 19:28:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.480 2011/03/20 10:36:12 olemarkus Exp $
+
+  20 Mar 2011; <olemarkus@gentoo.org> -php-5.3.6_rc3.ebuild:
+  Removed RC as PHP 5.3.6 is now released
 
   18 Mar 2011; <olemarkus@gentoo.org> +php-5.2.14.ebuild:
   Readded 5.2.14 to unbreak a few neglected packages
