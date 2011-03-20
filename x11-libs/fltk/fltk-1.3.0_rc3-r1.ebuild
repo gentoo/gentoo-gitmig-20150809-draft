@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3-r1.ebuild,v 1.3 2011/01/18 20:38:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc3-r1.ebuild,v 1.4 2011/03/20 19:52:10 jlec Exp $
 
 EAPI=3
 
@@ -9,13 +9,13 @@ inherit eutils autotools versionator fdo-mime
 MY_P=${P/_}
 
 DESCRIPTION="C++ user interface toolkit for X and OpenGL"
-HOMEPAGE="http://www.fltk.org"
+HOMEPAGE="http://www.fltk.org/"
 SRC_URI="mirror://easysw/${PN}/${PV/_}/${P/_}-source.tar.gz"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="FLTK LGPL-2"
 
-SLOT="1.1" # because 1.3 is API compatible with 1.1
+SLOT="1"
 
 IUSE="cairo debug doc examples games opengl pdf threads xft xinerama"
 
