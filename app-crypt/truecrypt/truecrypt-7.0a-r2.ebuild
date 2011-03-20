@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r2.ebuild,v 1.1 2010/12/15 20:59:11 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r2.ebuild,v 1.2 2011/03/20 15:46:52 c1pher Exp $
 
 EAPI="2"
 
@@ -105,7 +105,7 @@ pkg_postinst() {
 	elog "If you are a baselayout-2 user and you would like the TrueCrypt"
 	elog "mappings removed on shutdown in order to prevent other file systems"
 	elog "from unmounting then run:"
-	elog "rc-update truecrypt boot"
+	elog "rc-update add truecrypt boot"
 	elog ""
 
 	ewarn "If you're getting errors about DISPLAY while using the terminal"
