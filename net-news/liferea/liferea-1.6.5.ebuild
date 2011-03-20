@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.6.5.ebuild,v 1.4 2011/03/09 18:14:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.6.5.ebuild,v 1.5 2011/03/20 18:18:05 armin76 Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://liferea.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dbus libnotify lua networkmanager"
 
 RDEPEND=">=x11-libs/gtk+-2.16.0:2

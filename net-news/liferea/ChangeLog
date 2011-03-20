@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.201 2011/03/09 18:11:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.202 2011/03/20 18:18:05 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> liferea-1.6.4.ebuild,
+  liferea-1.6.5.ebuild, liferea-1.7.4.ebuild:
+  Drop sparc keywords
 
   09 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> liferea-1.7.4.ebuild,
   +files/liferea-1.7.4-libnotify-0.7.patch:
