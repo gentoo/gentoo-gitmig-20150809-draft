@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.4-r2.ebuild,v 1.2 2011/03/20 12:15:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.4-r2.ebuild,v 1.3 2011/03/20 20:32:09 jlec Exp $
 
 EAPI="2"
 
@@ -37,6 +37,7 @@ src_prepare() {
 	base_src_prepare
 	sed -i 's/ getline/ v_getline/' Readseq/ureadseq.c || die
 	sed -i '1 i #include <cstdio>' RNAforester/src/rnafuncs.cpp || die
+	sed -i 's/@PerlCmd@ Makefile.PL/& INSTALLDIRS=vendor/' Perl/Makefile.am || die
 
 	eautoreconf
 	cd RNAforester && eautoreconf
