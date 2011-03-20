@@ -1,10 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.56 2011/02/22 21:23:17 sping Exp $
-
-# Mike Frysinger <vapier@gentoo.org> (10 Feb 2011)
-# Waiting for keywording #354309
-net-firewall/iptables netlink
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.57 2011/03/20 17:02:43 armin76 Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (17 Dec 2010)
 # needs sys-libs/libcap-ng that is masked right now

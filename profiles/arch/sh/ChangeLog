@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.60 2011/02/27 16:44:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.61 2011/03/20 17:03:17 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Unmask iptables netlink
 
   27 Feb 2011; Raúl Porcel <armin76@gentoo.org> -package.mask:
   Punt package.mask
