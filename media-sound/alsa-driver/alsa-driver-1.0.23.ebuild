@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.23.ebuild,v 1.3 2011/03/19 18:11:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.23.ebuild,v 1.4 2011/03/20 13:45:35 mr_bones_ Exp $
 
 inherit autotools linux-mod flag-o-matic eutils multilib
 
@@ -51,7 +51,6 @@ DEPEND="${RDEPEND}
 	>=media-sound/alsa-headers-1.0.21
 	virtual/linux-sources
 	sys-apps/debianutils"
-
 
 pkg_setup() {
 	# By default, drivers for all supported cards will be compiled.
