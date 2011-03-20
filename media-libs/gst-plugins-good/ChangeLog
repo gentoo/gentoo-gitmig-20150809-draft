@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.111 2011/03/11 18:31:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.112 2011/03/20 08:20:45 leio Exp $
+
+*gst-plugins-good-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  +gst-plugins-good-0.10.28.ebuild:
+  Version bump. Uses orc instead of liboil for CPU detection and new
+  optimizations (in deinterlace, videobox and videomixer). Disable examples
+  building (we do not install them anyway) to avoid bug #348623. Huge amount
+  of new upstream features, bug fixes and improvements that are too numerous
+  to summarize here - check upstream release notes from 0.10.24 through
+  0.10.28 if interested.
 
   11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-good-0.10.23.ebuild:
