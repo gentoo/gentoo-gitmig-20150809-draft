@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.38 2011/03/06 11:16:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.39 2011/03/20 10:59:33 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> libass-0.9.11.ebuild:
+  arm/ia64/sparc stable wrt #343977
 
   06 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libass-0.9.11.ebuild:
   ppc64 stable wrt #343977
