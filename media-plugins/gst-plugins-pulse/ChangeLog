@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pulse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.56 2011/03/20 09:09:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/ChangeLog,v 1.57 2011/03/20 09:11:55 nirbheek Exp $
+
+  20 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gst-plugins-pulse-0.10.23.ebuild:
+  Add ppc and ppc64 keywords that were accidentally missed
 
 *gst-plugins-pulse-0.10.28 (20 Mar 2011)
 
