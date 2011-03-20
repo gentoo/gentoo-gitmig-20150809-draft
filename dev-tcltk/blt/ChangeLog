@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.40 2011/03/12 13:40:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.41 2011/03/20 11:45:54 armin76 Exp $
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> blt-2.4z-r8.ebuild:
+  Add ~ia64/~s390/~sh wrt #355373
 
   12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> blt-2.4z-r8.ebuild:
   Keyworded on alpha, bug #355373
