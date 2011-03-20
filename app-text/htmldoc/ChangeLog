@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmldoc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.57 2010/11/14 09:56:48 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.58 2011/03/20 20:19:53 jlec Exp $
+
+  20 Mar 2011; Justin Lecher <jlec@gentoo.org> htmldoc-1.8.27-r1.ebuild,
+  htmldoc-1.8.27-r2.ebuild:
+  x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
 
 *htmldoc-1.8.27-r2 (14 Nov 2010)
 

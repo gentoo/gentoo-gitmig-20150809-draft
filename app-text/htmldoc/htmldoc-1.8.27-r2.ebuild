@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r2.ebuild,v 1.1 2010/11/14 09:56:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r2.ebuild,v 1.2 2011/03/20 20:19:53 jlec Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -9,14 +11,14 @@ SRC_URI="mirror://easysw/htmldoc/${PV}/${P}-source.tar.bz2"
 HOMEPAGE="http://www.easysw.com/htmldoc/"
 
 IUSE="fltk ssl"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND="virtual/jpeg
+DEPEND="
 	>=media-libs/libpng-1.4
-	fltk? ( >=x11-libs/fltk-1.0.11 )
+	virtual/jpeg
+	fltk? ( x11-libs/fltk:1 )
 	ssl? ( >=dev-libs/openssl-0.9.6e )"
 RDEPEND="${DEPEND}"
 
