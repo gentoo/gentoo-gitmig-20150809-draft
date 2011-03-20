@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/compiz
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.60 2010/12/06 22:15:27 ikelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.61 2011/03/20 21:27:05 nirbheek Exp $
+
+  20 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -compiz-0.8.4.ebuild,
+  -compiz-0.8.4-r1.ebuild, -compiz-0.8.4-r2.ebuild, -compiz-0.8.4-r3.ebuild,
+  -compiz-0.8.6.ebuild, -compiz-0.8.6-r1.ebuild, -compiz-0.8.6-r2.ebuild,
+  compiz-0.8.6-r3.ebuild:
+  Fix slot-deps on gtk+ and other libs, remove old
 
   06 Dec 2010; Mike Auty <ikelos@gentoo.org>
   files/compiz-0.8.6-gdk-display-deprecated.patch:

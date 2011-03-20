@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.6-r3.ebuild,v 1.1 2010/12/04 19:09:18 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.6-r3.ebuild,v 1.2 2011/03/20 21:27:05 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="+cairo dbus fuse gnome gconf gtk kde +svg"
 
 COMMONDEPEND="
 	dev-libs/glib:2
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	dev-libs/libxslt
 	media-libs/libpng
 	>=media-libs/mesa-6.5.1-r1
@@ -44,7 +44,7 @@ COMMONDEPEND="
 	)
 	gtk? (
 		>=x11-libs/gtk+-2.8.0:2
-		>=x11-libs/libwnck-2.18.3
+		>=x11-libs/libwnck-2.18.3:1
 		x11-libs/pango
 	)
 	kde? (
