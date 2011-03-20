@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.156 2011/01/18 21:24:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.157 2011/03/20 08:49:00 leio Exp $
+
+*gst-plugins-flac-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-flac-0.10.16.ebuild, -gst-plugins-flac-0.10.17.ebuild,
+  -gst-plugins-flac-0.10.21.ebuild, -gst-plugins-flac-0.10.22.ebuild,
+  +gst-plugins-flac-0.10.28.ebuild:
+  Version bump. Leak fix and code cleanups
 
   18 Jan 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-flac-0.10.23.ebuild:
   Stable for HPPA (bug #346981).
