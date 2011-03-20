@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.4 2010/12/11 11:26:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.5 2011/03/20 20:01:21 jlec Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ DEPEND="
 	sci-biology/stride
 	sci-libs/netcdf
 	virtual/opengl
-	x11-libs/fltk:1.1
+	x11-libs/fltk:1
 	x11-libs/libXft"
 
 RDEPEND="${DEPEND}
@@ -97,8 +97,8 @@ src_prepare() {
 	sed -e "s:gentoo-plugindir:${WORKDIR}/plugins:" \
 		-i configure || die "Failed to set up linking to plugin files"
 
-	sed -e "s:gentoo-fltk-include:${EPREFIX}/usr/include/fltk-1.1:" \
-		-e "s:gentoo-fltk-libs:${EPREFIX}/usr/$(get_libdir)/fltk-1.1 -Wl,-rpath,${EPREFIX}/usr/$(get_libdir)/fltk-1.1:" \
+	sed -e "s:gentoo-fltk-include:$(fltk-config --includedir):" \
+		-e "s:gentoo-fltk-libs:$(dirname $(fltk-config --libs)) -Wl,-rpath,$(dirname $(fltk-config --libs)):" \
 		-i configure || die "failed setting up fltk"
 
 	sed -e "s:gentoo-netcdf-include:${EPREFIX}/usr/include:" \
