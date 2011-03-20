@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.8 2008/12/15 02:01:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.9 2011/03/20 20:04:10 jlec Exp $
 
 EAPI="1"
 inherit flag-o-matic eutils
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="fltk"
-DEPEND="fltk? ( x11-libs/fltk:1.1 )"
+DEPEND="fltk? ( x11-libs/fltk:1 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
