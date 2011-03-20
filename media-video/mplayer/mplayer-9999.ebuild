@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.93 2011/03/02 16:54:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.94 2011/03/20 22:12:45 scarabeus Exp $
 
 EAPI=4
 
-EGIT_REPO_URI="git://git.ffmpeg.org/ffmpeg.git"
+EGIT_REPO_URI="git://git.libav.org/libav.git"
 EGIT_PROJECT="ffmpeg"
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 [[ ${PV} = *9999* ]] && SVN_ECLASS="subversion git" || SVN_ECLASS=""

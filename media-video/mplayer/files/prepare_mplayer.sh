@@ -7,7 +7,7 @@ svn checkout svn://svn.mplayerhq.hu/mplayer/trunk ${PACKAGE}
 pushd ${PACKAGE} > /dev/null
 	# ffmpeg is in git now so no svn external anymore
 	rm -rf ffmpeg
-	git clone git://git.ffmpeg.org/ffmpeg.git
+	git clone git://git.libav.org/libav.git
 	STORE_VERSION=$(svn log -r HEAD -q |grep ^r |cut -d' ' -f1)
 	echo "*** Remember to adjust mplayer ebuild with revision: \"SVN-${STORE_VERSION}\" ***"
 popd > /dev/null
