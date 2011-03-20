@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/fhist-1.19.ebuild,v 1.2 2011/02/27 09:38:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/fhist-1.19.ebuild,v 1.3 2011/03/20 19:36:56 jlec Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils
 
@@ -27,9 +27,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PV}-ldflags.patch
 }
 
-src_install () {
-	emake -j1 DESTDIR="${D}" \
-		install || die "make install failed"
+src_compile() {
+	emake -j1
+}
 
-	dodoc README || die
+src_install () {
+	emake -j1 DESTDIR="${D}" install
+	dodoc README
 }

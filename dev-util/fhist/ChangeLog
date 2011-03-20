@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fhist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.22 2011/02/27 09:38:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.23 2011/03/20 19:36:56 jlec Exp $
+
+  27 Feb 2011; Justin Lecher <jlec@gentoo.org> fhist-1.19.ebuild:
+  Restrict to sequential build, #356671
 
   27 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> fhist-1.19.ebuild:
   Marked ~ppc/~ppc64 wrt #350891
