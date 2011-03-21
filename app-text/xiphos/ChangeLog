@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xiphos
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.8 2010/05/16 00:29:08 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.9 2011/03/21 21:46:36 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> xiphos-3.1.2.ebuild,
+  xiphos-3.1.3-r1.ebuild:
+  Fix slot-deps on gnome libs
 
 *xiphos-3.1.3-r1 (16 May 2010)
 
