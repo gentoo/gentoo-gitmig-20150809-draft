@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.10 2011/01/31 05:23:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.11 2011/03/21 23:26:14 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> surf-0.4.1.ebuild:
+  Fix slot-deps on gnome libs
 
   31 Jan 2011; Jeroen Roovers <jer@gentoo.org> surf-0.4.1.ebuild:
   RDEPEND on x11-misc/dmenu thanks to bobby (bug #353105).

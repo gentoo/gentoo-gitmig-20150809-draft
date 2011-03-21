@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.11.25.ebuild,v 1.1 2010/12/05 22:26:37 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.11.25.ebuild,v 1.2 2011/03/21 23:27:16 nirbheek Exp $
 
 EAPI="2"
 
@@ -31,9 +31,9 @@ IUSE+=" +browser helpers +tabbed vim-syntax"
 COMMON_DEPEND="
 	dev-libs/glib:2
 	>=dev-libs/icu-4.0.1
-	>=net-libs/libsoup-2.24
-	>=net-libs/webkit-gtk-1.1.15
-	>=x11-libs/gtk+-2.14
+	>=net-libs/libsoup-2.24:2.4
+	>=net-libs/webkit-gtk-1.1.15:2
+	>=x11-libs/gtk+-2.14:2
 "
 
 DEPEND="

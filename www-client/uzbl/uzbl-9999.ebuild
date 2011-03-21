@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.19 2011/02/15 21:29:09 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.20 2011/03/21 23:27:16 nirbheek Exp $
 
 EAPI="4"
 
@@ -33,9 +33,9 @@ REQUIRED_USE="tabbed? ( browser )"
 COMMON_DEPEND="
 	dev-libs/glib:2
 	>=dev-libs/icu-4.0.1
-	>=net-libs/libsoup-2.24
-	>=net-libs/webkit-gtk-1.1.15
-	>=x11-libs/gtk+-2.14
+	>=net-libs/libsoup-2.24:2.4
+	>=net-libs/webkit-gtk-1.1.15:2
+	>=x11-libs/gtk+-2.14:2
 "
 
 DEPEND="
