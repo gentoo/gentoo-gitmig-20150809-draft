@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/glusterfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.21 2011/03/18 15:53:42 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.22 2011/03/21 11:40:06 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> glusterfs-3.1.2.ebuild:
+  Stable on amd64 wrt bug #359143
 
   18 Mar 2011; Ultrabug <ultrabug@gentoo.org> glusterfs-3.1.3.ebuild:
   respect user CFLAGS, thanks to Agostino Sarubbo for noticing

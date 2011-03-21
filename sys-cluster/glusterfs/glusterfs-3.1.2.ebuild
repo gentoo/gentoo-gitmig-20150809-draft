@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.2.ebuild,v 1.2 2011/03/17 17:53:03 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.2.ebuild,v 1.3 2011/03/21 11:40:06 hwoarang Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gluster.com/pub/gluster/${PN}/$(get_version_component_range 
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="emacs extras +fuse infiniband static-libs vim-syntax"
 
 DEPEND="emacs? ( virtual/emacs )
