@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/sflphone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.8 2011/03/17 16:45:24 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.9 2011/03/21 23:20:39 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  sflphone-0.9.8.4.ebuild, sflphone-0.9.12.ebuild:
+  Fix slot-deps on gnome libs
 
   17 Mar 2011; <elvanor@gentoo.org> sflphone-0.9.12.ebuild:
   Bug #356755. Minor changes.

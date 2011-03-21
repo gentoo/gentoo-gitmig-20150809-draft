@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.6 2011/01/30 14:07:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/sflphone-0.9.8.4.ebuild,v 1.7 2011/03/21 23:20:39 nirbheek Exp $
 
 EAPI="2"
 
@@ -35,12 +35,12 @@ CDEPEND="media-sound/pulseaudio
 		dev-libs/check
 		dev-libs/log4c
 		gnome-base/libgnomeui
-		gnome-base/orbit
+		gnome-base/orbit:2
 		gnome-extra/evolution-data-server
 		media-libs/libart_lgpl
 		media-libs/freetype
 		media-libs/fontconfig
-		net-libs/libsoup
+		net-libs/libsoup:2.4
 		x11-libs/cairo
 		x11-libs/libnotify
 		x11-libs/libICE
