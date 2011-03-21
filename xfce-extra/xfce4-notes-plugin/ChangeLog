@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-notes-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/ChangeLog,v 1.30 2011/03/13 16:30:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/ChangeLog,v 1.31 2011/03/21 23:31:48 maekke Exp $
+
+  21 Mar 2011; Markus Meier <maekke@gentoo.org>
+  xfce4-notes-plugin-1.7.7.ebuild:
+  arm stable, bug #358407
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
   xfce4-notes-plugin-1.7.7.ebuild:
