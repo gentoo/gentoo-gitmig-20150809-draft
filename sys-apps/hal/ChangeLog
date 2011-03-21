@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.332 2011/01/25 14:40:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.333 2011/03/21 19:51:48 ssuominen Exp $
+
+  21 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> hal-0.5.14-r4.ebuild:
+  Commit 0011-hal-0.5.14-no-more-videodev_h.patch to patchset (fixing build
+  with linux-headers-2.6.38) wrt #359513 by Juergen Rose.
 
   25 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> hal-0.5.14-r4.ebuild:
   Stabilize for everybody now that amd64 and x86 has tested it wrt #352179.
