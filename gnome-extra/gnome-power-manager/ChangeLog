@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.151 2011/03/12 19:09:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.152 2011/03/21 21:35:08 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gnome-power-manager-2.32.0.ebuild:
+  ppc64 stable wrt #353436
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   gnome-power-manager-2.32.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.32.1.ebuild,v 1.4 2011/03/12 19:14:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.32.1.ebuild,v 1.5 2011/03/21 21:40:47 xarthisius Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://projecthamster.wordpress.com/"
 # license on homepage is out-of-date, was changed to GPL-2 on 2008-04-16
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc x86"
 IUSE="eds libnotify"
 
 RDEPEND=">=dev-lang/python-2.5[sqlite]

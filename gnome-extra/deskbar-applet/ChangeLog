@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.150 2011/03/18 10:09:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.151 2011/03/21 21:40:11 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  deskbar-applet-2.32.0.ebuild:
+  ppc64 stable wrt #353436
 
   18 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   deskbar-applet-2.30.1.ebuild, deskbar-applet-2.32.0.ebuild:
