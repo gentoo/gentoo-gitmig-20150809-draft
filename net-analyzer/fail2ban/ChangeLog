@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.64 2011/03/11 20:56:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.65 2011/03/21 11:31:15 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> fail2ban-0.8.4-r2.ebuild:
+  ppc/ppc64 stable wrt #351803
 
   11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   fail2ban-0.8.4.ebuild, fail2ban-0.8.4-r1.ebuild, fail2ban-0.8.4-r2.ebuild:
