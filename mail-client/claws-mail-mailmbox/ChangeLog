@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-mailmbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.58 2011/03/05 14:22:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.59 2011/03/21 10:40:20 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  claws-mail-mailmbox-1.14.5.ebuild:
+  ppc64 stable wrt #350513
 
   05 Mar 2011; Brent Baude <ranger@gentoo.org>
   claws-mail-mailmbox-1.14.5.ebuild:
