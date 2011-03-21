@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.20 2011/02/27 09:09:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.21 2011/03/21 21:14:33 dirtyepic Exp $
+
+*editra-0.6.26 (21 Mar 2011)
+
+  21 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> +editra-0.6.26.ebuild:
+  Version bump. "This is a quick bug fix for a critical issue that could cause
+  Editra to not be able to properly start again after part of the profile
+  settings became corrupted."
 
 *editra-0.6.20 (27 Feb 2011)
 
