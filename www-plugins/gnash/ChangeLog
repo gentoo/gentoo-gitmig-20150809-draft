@@ -1,6 +1,16 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.55 2011/03/04 09:22:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.56 2011/03/21 01:30:13 chithanh Exp $
+
+*gnash-0.8.9 (21 Mar 2011)
+
+  21 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +gnash-0.8.9.ebuild, +files/gnash-0.8.9-documentation-paths.patch,
+  +files/gnash-0.8.9-external-dejagnu.patch,
+  +files/gnash-0.8.9-find-openvg.patch, +files/gnash-0.8.9-klash.patch,
+  metadata.xml:
+  Version bump, bug #359533. Fixes bug #332755, bug #332757, bug #339610,
+  bug #344069 and bug #356859.
 
   04 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.8.ebuild:

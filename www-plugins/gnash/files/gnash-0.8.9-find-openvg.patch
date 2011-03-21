@@ -1,0 +1,12 @@
+diff -ur a/configure.ac b/configure.ac
+--- a/configure.ac	2011-03-18 14:49:55.000000000 +0100
++++ b/configure.ac	2011-03-21 01:54:41.058996609 +0100
+@@ -2393,7 +2393,7 @@
+ 
+ if test x"${build_ogv}" = xyes; then
+   GNASH_PKG_FIND(EGL, [EGL/egl.h], [EGL library], eglGetDisplay)
+-  GNASH_PKG_FIND(OpenVG, [vg/openvg.h], [OpenVG library], vgDrawImage)
++  GNASH_PKG_FIND(OpenVG, [VG/openvg.h], [OpenVG library], vgDrawImage)
+ fi
+ 
+ if test x"${build_gtk}" = xyes; then
