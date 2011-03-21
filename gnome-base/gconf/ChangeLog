@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.244 2011/03/18 08:11:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.245 2011/03/21 20:28:52 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gconf-2.32.0-r1.ebuild:
+  ppc64 stable wrt #353436
 
   18 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> gconf-2.32.0-r1.ebuild:
   Adapt to new gnome.org features.
