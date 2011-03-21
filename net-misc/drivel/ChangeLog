@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.41 2011/03/05 06:13:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.42 2011/03/21 22:58:15 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> drivel-3.0.0.ebuild:
+  Fix slot-deps on libs, remove old
 
   05 Mar 2011; Hans de Graaff <graaff@gentoo.org> drivel-3.0.0.ebuild:
   Add slot to gtk+ dependency.
