@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/qca
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.82 2010/03/26 23:32:41 yngwin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.83 2011/03/21 13:43:05 c1pher Exp $
+
+*qca-2.0.3 (21 Mar 2011)
+
+  21 Mar 2011; Dane Smith <c1pher@gentoo.org> +qca-2.0.3.ebuild:
+  Version bump wrt bug 359717. Moved to EAPI 3. Added a missing die.
 
   26 Mar 2010; Ben de Groot <yngwin@gentoo.org> qca-2.0.2-r2.ebuild:
   Use qt4-r2.eclass (bug #311481). Removed unneeded die messages.
