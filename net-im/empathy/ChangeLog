@@ -1,6 +1,10 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.79 2011/03/12 21:27:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.80 2011/03/21 23:13:18 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> empathy-2.30.2.ebuild,
+  -empathy-2.30.3.ebuild, empathy-2.32.2.ebuild, empathy-2.33.2.ebuild:
+  Fix slot-deps on gnome libs
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> empathy-2.32.2.ebuild:
   alpha stable wrt #353436

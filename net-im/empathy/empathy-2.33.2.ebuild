@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.33.2.ebuild,v 1.1 2011/02/27 17:28:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.33.2.ebuild,v 1.2 2011/03/21 23:13:18 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -51,7 +51,7 @@ RDEPEND=">=dev-libs/glib-2.27.2:2
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35 )
-	webkit? ( >=net-libs/webkit-gtk-1.1.15 )
+	webkit? ( >=net-libs/webkit-gtk-1.1.15:2 )
 "
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper

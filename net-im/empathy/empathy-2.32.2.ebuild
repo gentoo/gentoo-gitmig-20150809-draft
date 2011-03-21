@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.12 2011/03/12 21:27:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.13 2011/03/21 23:13:18 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -36,9 +36,9 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
 	media-libs/gst-plugins-bad
-	media-plugins/gst-plugins-gconf
+	media-plugins/gst-plugins-gconf:0.10
 	>=net-libs/telepathy-farsight-0.0.14
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	x11-libs/libX11
 	net-voip/telepathy-connection-managers
 	>=net-im/telepathy-logger-0.1.5
@@ -50,7 +50,7 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35 )
-	webkit? ( >=net-libs/webkit-gtk-1.1.15 )"
+	webkit? ( >=net-libs/webkit-gtk-1.1.15:2 )"
 #	map? (
 #		>=media-libs/libchamplain-0.7.1[gtk]
 #		>=media-libs/clutter-gtk-0.10:0.10 )
