@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.95.ebuild,v 1.1 2011/03/21 08:23:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.95.ebuild,v 1.2 2011/03/21 08:25:11 scarabeus Exp $
 
 EAPI=3
 
@@ -12,6 +12,7 @@ KDE_SCM="git"
 #KDE_LINGUAS="ca cs da de el en_GB es et fr hu it ja ko lt nb nds nl pt_BR pt ru sl sr sv uk zh_CN"
 KDE_DOC_DIRS="docs"
 KDE_HANDBOOK="optional"
+VIRTUALX_REQUIRED=test
 inherit kde4-base
 
 DESCRIPTION="A browser based on qt-webkit"
