@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.244 2011/03/12 20:36:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.245 2011/03/21 20:03:40 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libsoup-2.32.2.ebuild:
+  ppc64 stable wrt #353436
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> libsoup-2.32.2.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #353436
