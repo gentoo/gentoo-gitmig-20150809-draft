@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/libcompizconfig-0.8.4-r2.ebuild,v 1.1 2010/09/04 22:16:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/libcompizconfig-0.8.4-r2.ebuild,v 1.2 2011/03/21 19:52:57 nirbheek Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	dev-libs/protobuf
 	>=x11-wm/compiz-${PV}
 "

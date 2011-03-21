@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libcompizconfig
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.26 2010/09/04 22:16:56 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.27 2011/03/21 19:52:57 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -libcompizconfig-0.8.4.ebuild, -libcompizconfig-0.8.4-r1.ebuild,
+  libcompizconfig-0.8.4-r2.ebuild:
+  Fix slot-deps on libs, remove old
 
 *libcompizconfig-0.8.4-r2 (04 Sep 2010)
 
