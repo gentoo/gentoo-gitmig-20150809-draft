@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.207 2011/03/16 17:08:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.208 2011/03/21 21:15:53 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libgnomeui-2.24.5.ebuild:
+  ppc64 stable wrt #353436
 
   16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   libgnomeui-2.24.3.ebuild, -libgnomeui-2.24.4.ebuild,
