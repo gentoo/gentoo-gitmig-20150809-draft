@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.6-r1.ebuild,v 1.4 2011/02/28 17:45:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.6-r1.ebuild,v 1.5 2011/03/21 19:47:45 nirbheek Exp $
 
 EAPI="2"
 
@@ -18,8 +18,8 @@ IUSE="gconf libnotify"
 MY_PV="0.8.4"
 
 RDEPEND="
-	>=gnome-base/librsvg-2.14.0
-	virtual/jpeg
+	>=gnome-base/librsvg-2.14.0:2
+	virtual/jpeg:0
 	>=x11-libs/compiz-bcop-${MY_PV}
 	>=x11-plugins/compiz-plugins-main-${PV}
 	>=x11-wm/compiz-${PV}[gconf?]
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19
 	>=sys-devel/gettext-0.15
 	x11-libs/cairo
-	gconf? ( gnome-base/gconf )
+	gconf? ( gnome-base/gconf:2 )
 "
 
 src_prepare() {
