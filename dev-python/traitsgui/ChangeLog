@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traitsgui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/ChangeLog,v 1.15 2011/03/06 12:44:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/ChangeLog,v 1.16 2011/03/21 14:08:31 tomka Exp $
+
+  21 Mar 2011; Thomas Kahle <tomka@gentoo.org> traitsgui-3.6.0.ebuild:
+  x86 stable per bug 357283
 
   06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> traitsgui-3.6.0.ebuild:
   Stable on amd64 wrt bug #357283
