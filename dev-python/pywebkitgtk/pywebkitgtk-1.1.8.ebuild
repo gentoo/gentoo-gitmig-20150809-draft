@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8.ebuild,v 1.5 2011/02/12 18:21:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.8.ebuild,v 1.6 2011/03/21 23:03:17 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -22,7 +22,7 @@ IUSE=""
 RDEPEND="dev-python/pygobject:2
 	dev-python/pygtk:2
 	dev-libs/libxslt
-	>=net-libs/webkit-gtk-1.1.15"
+	>=net-libs/webkit-gtk-1.1.15:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
