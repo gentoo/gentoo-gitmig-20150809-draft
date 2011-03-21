@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wmdock-plugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.4 2010/08/08 12:29:33 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.5 2011/03/21 22:41:47 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  xfce4-wmdock-plugin-0.3.2.ebuild:
+  Fix slot-deps on gnome libs
 
   08 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-wmdock-plugin-0.3.2.ebuild,

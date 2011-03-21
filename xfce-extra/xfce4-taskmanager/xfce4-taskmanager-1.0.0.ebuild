@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/xfce4-taskmanager-1.0.0.ebuild,v 1.8 2010/11/27 18:07:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/xfce4-taskmanager-1.0.0.ebuild,v 1.9 2011/03/21 22:41:15 nirbheek Exp $
 
 EAPI=3
 inherit xfconf
@@ -16,7 +16,7 @@ IUSE="debug"
 
 RDEPEND=">=x11-libs/cairo-1.5
 	>=x11-libs/gtk+-2.12:2
-	x11-libs/libwnck"
+	x11-libs/libwnck:1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
