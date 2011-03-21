@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.241 2011/03/21 16:48:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.242 2011/03/21 20:05:56 angelos Exp $
+
+  21 Mar 2011; Christoph Mende <angelos@gentoo.org> tor-0.2.1.30.ebuild:
+  Stable on amd64 wrt bug #359789
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> tor-0.2.1.30.ebuild:
   ppc/ppc64 stable wrt #359789
