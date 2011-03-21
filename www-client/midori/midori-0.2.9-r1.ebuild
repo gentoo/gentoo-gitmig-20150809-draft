@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.9-r1.ebuild,v 1.5 2011/02/05 12:46:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.2.9-r1.ebuild,v 1.6 2011/03/21 22:22:44 nirbheek Exp $
 
 EAPI=3
 inherit eutils multilib python xfconf
@@ -15,14 +15,14 @@ KEYWORDS="amd64 ~arm ~ppc x86 ~x86-fbsd"
 IUSE="doc gnome +html idn libnotify nls +unique"
 
 RDEPEND="libnotify? ( x11-libs/libnotify )
-	>=net-libs/libsoup-2.25.2
-	>=net-libs/webkit-gtk-1.1.1
+	>=net-libs/libsoup-2.25.2:2.4
+	>=net-libs/webkit-gtk-1.1.1:2
 	>=dev-db/sqlite-3.0
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	>=x11-libs/gtk+-2.10:2
-	gnome? ( net-libs/libsoup-gnome )
+	gnome? ( net-libs/libsoup-gnome:2.4 )
 	idn? ( net-dns/libidn )
-	unique? ( dev-libs/libunique )"
+	unique? ( dev-libs/libunique:1 )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
 	dev-util/intltool

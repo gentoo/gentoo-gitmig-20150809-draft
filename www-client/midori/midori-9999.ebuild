@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.30 2011/03/16 16:09:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.31 2011/03/21 22:22:44 nirbheek Exp $
 
 EAPI=3
 inherit git eutils fdo-mime gnome2-utils python waf-utils
@@ -15,15 +15,15 @@ SLOT="0"
 KEYWORDS=""
 IUSE="doc gnome idn libnotify nls +unique vala"
 
-RDEPEND="dev-libs/libxml2
+RDEPEND="dev-libs/libxml2:2
 	>=dev-db/sqlite-3.0
-	>=net-libs/libsoup-2.25.2
-	net-libs/webkit-gtk
+	>=net-libs/libsoup-2.25.2:2.4
+	net-libs/webkit-gtk:2
 	x11-libs/gtk+:2
-	gnome? ( net-libs/libsoup-gnome )
+	gnome? ( net-libs/libsoup-gnome:2.4 )
 	idn? ( net-dns/libidn )
 	libnotify? ( x11-libs/libnotify )
-	unique? ( dev-libs/libunique )
+	unique? ( dev-libs/libunique:1 )
 	vala? ( dev-lang/vala:0.10 )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
