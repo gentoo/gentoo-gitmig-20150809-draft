@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.236 2011/03/19 18:02:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.237 2011/03/21 20:52:05 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gnome-media-2.32.0.ebuild:
+  ppc64 stable wrt #353436
 
 *gnome-media-2.32.0-r1 (19 Mar 2011)
 

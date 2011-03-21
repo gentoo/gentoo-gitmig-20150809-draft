@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.32.0-r2.ebuild,v 1.4 2011/03/12 19:00:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.32.0-r2.ebuild,v 1.5 2011/03/21 20:41:47 xarthisius Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="Ximian-logos GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="eds"
 
 RDEPEND=">=gnome-base/libbonobo-2
