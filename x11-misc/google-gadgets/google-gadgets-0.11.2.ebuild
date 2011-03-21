@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.5 2011/01/19 12:09:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.6 2011/03/21 23:27:50 nirbheek Exp $
 
 EAPI=2
 
@@ -23,21 +23,21 @@ IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification 
 # luck, they'll be stable when we get to stabling this package.
 
 RDEPEND="
-	>=dev-libs/libxml2-2.6.32
+	>=dev-libs/libxml2-2.6.32:2
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXext
 	dbus? ( sys-apps/dbus )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10.19
-		>=media-libs/gst-plugins-base-0.10.19
+		>=media-libs/gstreamer-0.10.19:0.10
+		>=media-libs/gst-plugins-base-0.10.19:0.10
 	)
 	gtk? (
 		>=dev-libs/atk-1.22.0
-		gnome-base/librsvg
+		gnome-base/librsvg:2
 		>=net-misc/curl-7.18.2
 		>=x11-libs/cairo-1.6.4
-		>=x11-libs/gtk+-2.12.10
+		>=x11-libs/gtk+-2.12.10:2
 		>=x11-libs/pango-1.20.3
 		dbus? ( >=dev-libs/dbus-glib-0.74 )
 	)
@@ -50,9 +50,9 @@ RDEPEND="
 		>=x11-libs/qt-xmlpatterns-4.4.0
 		dbus? ( >=x11-libs/qt-dbus-4.4.0 )
 	)
-	soup? ( >=net-libs/libsoup-2.26 )
+	soup? ( >=net-libs/libsoup-2.26:2.4 )
 	startup-notification? ( x11-libs/startup-notification )
-	webkit? ( >=net-libs/webkit-gtk-1.0.3 )
+	webkit? ( >=net-libs/webkit-gtk-1.0.3:2 )
 	xulrunner? ( =net-libs/xulrunner-1.9*:1.9 )
 "
 DEPEND="${RDEPEND}
