@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.191 2011/03/18 19:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.192 2011/03/21 13:49:02 vapier Exp $
+
+  21 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.5:
+  Default to /etc/portage/make.conf #338032 by Dennis Schridde.
 
 *gcc-config-1.5-r1 (18 Mar 2011)
 
