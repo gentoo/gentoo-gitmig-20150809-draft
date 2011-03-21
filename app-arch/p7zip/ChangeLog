@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.136 2010/11/14 12:10:32 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.137 2011/03/21 07:46:07 jlec Exp $
+
+  21 Mar 2011; Justin Lecher <jlec@gentoo.org> p7zip-9.13.ebuild,
+  p7zip-9.13-r2.ebuild, p7zip-9.13-r3.ebuild, metadata.xml:
+  Correcting DEPs from kde-base/konqueror to kde-base/kdelibs
 
 *p7zip-9.13-r3 (14 Nov 2010)
 
