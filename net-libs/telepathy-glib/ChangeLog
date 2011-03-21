@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.69 2011/03/20 21:44:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.70 2011/03/21 20:25:44 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  telepathy-glib-0.12.7.ebuild:
+  ppc64 stable wrt #353436
 
 *telepathy-glib-0.13.18 (20 Mar 2011)
 
