@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.16.ebuild,v 1.1 2011/01/31 22:33:44 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.16.ebuild,v 1.2 2011/03/21 21:45:52 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=dev-libs/libgeier-0.12
-	>=gnome-extra/gtkhtml-3.8
+	>=gnome-extra/gtkhtml-3.8:3.14
 	gnome-base/libgnomeui
 	sys-devel/gettext
 	>=dev-scheme/guile-1.8.0[regex,deprecated]"

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/osmo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.13 2011/01/30 08:36:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.14 2011/03/21 21:45:09 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> osmo-0.2.10.ebuild:
+  Fix slot-deps on gnome libs
 
   30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> osmo-0.2.10.ebuild,
   +files/osmo-0.2.10-libnotify-0.7.patch:
