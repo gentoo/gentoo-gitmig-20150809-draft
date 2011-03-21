@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.4.7-r1.ebuild,v 1.1 2011/03/21 02:51:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.4.7-r1.ebuild,v 1.2 2011/03/21 23:01:01 titanofold Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 DESCRIPTION="PostgreSQL libraries and clients"
 HOMEPAGE="http://www.postgresql.org/"
 SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
-		 http://dev.gentoo.org/~titanofold/postgresql-${SLOT}-patches.tbz2"
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}.tbz2"
 LICENSE="POSTGRESQL"
 
 S=${WORKDIR}/postgresql-${PV}
@@ -59,10 +59,10 @@ DEPEND="${RDEPEND}
 PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 src_prepare() {
-	epatch "${WORKDIR}/postgresql-${SLOT}-autoconf.patch" \
-		"${WORKDIR}/postgresql-${SLOT}-base.patch" \
-		"${WORKDIR}/postgresql-${SLOT}-darwin.patch" \
-		"${WORKDIR}/postgresql-${SLOT}-SuperH.patch"
+	epatch "${WORKDIR}/autoconf.patch" \
+		"${WORKDIR}/base.patch" \
+		"${WORKDIR}/darwin.patch" \
+		"${WORKDIR}/SuperH.patch"
 
 	eprefixify src/include/pg_config_manual.h
 
