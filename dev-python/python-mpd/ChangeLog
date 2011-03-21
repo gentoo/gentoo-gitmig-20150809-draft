@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mpd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.16 2010/12/15 16:35:34 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.17 2011/03/21 11:38:56 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> python-mpd-0.3.0.ebuild:
+  Stable on amd64 wrt bug #359471
 
   15 Dec 2010; Christoph Mende <angelos@gentoo.org> python-mpd-0.2.1.ebuild,
   python-mpd-0.3.0.ebuild:
