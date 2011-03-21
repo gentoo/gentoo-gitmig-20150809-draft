@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-wikipedia/gmpc-wikipedia-0.20.0.ebuild,v 1.4 2011/03/19 16:49:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-wikipedia/gmpc-wikipedia-0.20.0.ebuild,v 1.5 2011/03/21 23:07:17 nirbheek Exp $
 
 EAPI=3
 
@@ -14,8 +14,8 @@ KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND=">=media-sound/gmpc-${PV}
-	dev-libs/libxml2
-	net-libs/webkit-gtk"
+	dev-libs/libxml2:2
+	net-libs/webkit-gtk:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-wikipedia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-wikipedia/ChangeLog,v 1.7 2011/03/19 16:49:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-wikipedia/ChangeLog,v 1.8 2011/03/21 23:07:17 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gmpc-wikipedia-0.20.0.ebuild:
+  Fix slot-deps on libs, remove old
 
   19 Mar 2011; Christoph Mende <angelos@gentoo.org>
   gmpc-wikipedia-0.20.0.ebuild:
