@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-2.30.0.ebuild,v 1.1 2010/06/29 08:27:36 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/seed/seed-2.30.0.ebuild,v 1.2 2011/03/21 23:03:02 nirbheek Exp $
 
 EAPI="2"
 
@@ -22,12 +22,12 @@ IUSE="+dbus debug doc mpfr profile +sqlite test +xml"
 RDEPEND="
 	>=dev-libs/gobject-introspection-0.6.3
 
-	dev-libs/glib
+	dev-libs/glib:2
 	virtual/libffi
 	dev-libs/dbus-glib
 	x11-libs/cairo
 	x11-libs/gtk+:2
-	net-libs/webkit-gtk
+	net-libs/webkit-gtk:2
 
 	dbus? (
 		sys-apps/dbus
@@ -44,8 +44,8 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-libs/gobject-introspection
 		x11-libs/pango[introspection]
-		x11-libs/gtk+:2.0[introspection]
-		gnome-base/gconf[introspection] )"
+		x11-libs/gtk+:2[introspection]
+		gnome-base/gconf:2[introspection] )"
 DOCS="AUTHORS ChangeLog NEWS README"
 # FIXME: tests need gconf introspection support, which is in 2.28 branch
 #        upstream (no releases), and in 2.31 releases
