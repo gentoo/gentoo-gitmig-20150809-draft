@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mlview
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.30 2010/06/28 10:28:10 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mlview/ChangeLog,v 1.31 2011/03/21 22:49:04 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> mlview-0.9.0.ebuild:
+  Fix slot-deps on gnome libs
 
   28 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> mlview-0.9.0.ebuild:
   x86 stable wrt bug #324081

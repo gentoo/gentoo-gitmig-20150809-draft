@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.5-r1.ebuild,v 1.2 2011/03/21 20:07:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.5-r1.ebuild,v 1.3 2011/03/21 22:48:06 nirbheek Exp $
 
 EAPI=2
 inherit base eutils
@@ -25,7 +25,7 @@ RDEPEND="app-text/gtkspell
 	dev-texlive/texlive-latex
 	dev-texlive/texlive-latexextra
 	>=x11-libs/gtk+-2.16:2
-	x11-libs/gtksourceview"
+	x11-libs/gtksourceview:2.0"
 DEPEND="${RDEPEND}
 	app-text/poppler[cairo]
 	x11-libs/gtksourceview:2.0
