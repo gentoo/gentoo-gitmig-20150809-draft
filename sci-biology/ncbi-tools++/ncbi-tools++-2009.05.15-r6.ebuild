@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r6.ebuild,v 1.1 2010/06/26 11:04:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r6.ebuild,v 1.2 2011/03/21 18:36:29 ssuominen Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 #	opengl? ( media-libs/glut
 #		media-libs/mesa )
 #	gnutls? ( net-libs/gnutls )
-#	X? ( x11-libs/fltk:1.1
+#	X? ( x11-libs/fltk:1
 #		x11-libs/wxGTK )
 
 DEPEND="sqlite? ( dev-db/sqlite:3 )"
