@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.43 2011/02/21 04:16:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.44 2011/03/21 21:04:05 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gpsdrive-2.10_pre7-r1.ebuild, gpsdrive-2.11-r1.ebuild:
+  Fix slot-deps on gnome libs
 
   21 Feb 2011; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.11-r1.ebuild:
   Updated with patch for bug 339751 (adds gdk-pixbuf2 detection).

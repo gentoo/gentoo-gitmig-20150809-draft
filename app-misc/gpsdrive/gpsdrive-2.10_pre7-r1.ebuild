@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.4 2010/04/09 12:14:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7-r1.ebuild,v 1.5 2011/03/21 21:04:05 nirbheek Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ IUSE="dbus -debug -kismet libgda gdal mapnik scripts -speech"
 
 COMMON_DEP="sci-geosciences/gpsd
 	net-misc/curl
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	dev-db/sqlite:3
 	x11-libs/gtk+:2
 	dbus? ( dev-libs/dbus-glib )
@@ -31,7 +31,7 @@ COMMON_DEP="sci-geosciences/gpsd
 	mapnik? ( >=sci-geosciences/mapnik-0.6.1
 		=dev-libs/boost-1.39*
 		>=app-admin/eselect-boost-0.3 )
-	libgda? ( =gnome-extra/libgda-3.0*[postgres] )
+	libgda? ( =gnome-extra/libgda-3.0*:3[postgres] )
 	speech? ( >=app-accessibility/speech-dispatcher-0.6.7 )"
 
 DEPEND="${COMMON_DEP}
