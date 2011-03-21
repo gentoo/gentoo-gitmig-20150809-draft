@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.44 2011/03/20 22:18:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.45 2011/03/21 21:02:24 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> cheese-2.32.0.ebuild:
+  ppc64 stable wrt #353436
 
   20 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> cheese-2.30.1.ebuild,
   cheese-2.32.0.ebuild:
