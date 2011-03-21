@@ -3,6 +3,7 @@
 # Tom Gall <tgall@gentoo.org> manages this list
 mplayer
 ruby
+mono
 
 # should be ok
 jikes
