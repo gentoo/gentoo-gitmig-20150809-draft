@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alltray
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.36 2010/07/29 19:04:11 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.37 2011/03/21 22:35:43 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> alltray-0.69.ebuild,
+  alltray-0.69-r1.ebuild, alltray-0.74.ebuild:
+  Fix slot-deps on gnome libs
 
   29 Jul 2010; Markos Chandras <hwoarang@gentoo.org> alltray-0.74.ebuild:
   Stable on amd64 wrt bug #329417

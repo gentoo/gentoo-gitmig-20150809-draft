@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.74.ebuild,v 1.3 2010/07/29 19:04:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.74.ebuild,v 1.4 2011/03/21 22:35:43 nirbheek Exp $
 
 # remove this kludge once old releases have been removed from the tree
 MY_PV="${PV:0:1}.${PV:2:1}.${PV:3:1}"
@@ -24,7 +24,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2
 	dev-libs/glib:2
 	gnome-base/libgtop:2
-	x11-libs/libwnck
+	x11-libs/libwnck:1
 	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.4 2011/03/16 11:07:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.5 2011/03/21 22:36:57 nirbheek Exp $
 
 EAPI=3
 GCONF_DEBUG=no
@@ -16,12 +16,12 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.4:2
 	>=x11-libs/gtk+-2.18:2
-	>=gnome-base/gconf-2.4
+	>=gnome-base/gconf-2.4:2
 	>=dev-libs/dbus-glib-0.78
 	>=sys-apps/dbus-1
 	>=media-libs/libcanberra-0.4[gtk]
 	x11-libs/libnotify
-	x11-libs/libwnck
+	x11-libs/libwnck:1
 	x11-libs/libX11
 "
 DEPEND="${RDEPEND}

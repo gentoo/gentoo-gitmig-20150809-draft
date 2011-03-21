@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/superswitcher
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.7 2010/09/27 10:33:38 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.8 2011/03/21 22:37:46 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  superswitcher-0.6.ebuild:
+  Fix slot-deps on gnome libs
 
   27 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   superswitcher-0.6.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notify-osd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/ChangeLog,v 1.1 2011/03/13 11:48:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/ChangeLog,v 1.2 2011/03/21 22:37:03 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  notify-osd-0.9.30.ebuild:
+  Fix slot-deps on gnome libs
 
 *notify-osd-0.9.30 (13 Mar 2011)
 

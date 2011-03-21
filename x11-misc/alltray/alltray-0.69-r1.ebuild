@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.69-r1.ebuild,v 1.1 2008/06/07 19:42:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.69-r1.ebuild,v 1.2 2011/03/21 22:35:43 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnome"
 
-RDEPEND=">=x11-libs/gtk+-2.4
-	gnome? ( >=gnome-base/gconf-2 )"
+RDEPEND=">=x11-libs/gtk+-2.4:2
+	gnome? ( >=gnome-base/gconf-2:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

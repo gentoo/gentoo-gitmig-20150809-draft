@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/talika-0.50.ebuild,v 1.3 2011/01/25 14:06:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/talika/talika-0.50.ebuild,v 1.4 2011/03/21 22:38:28 nirbheek Exp $
 
 EAPI=3
 
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/libwnck
-	dev-cpp/libpanelappletmm"
+DEPEND="x11-libs/libwnck:1
+	dev-cpp/libpanelappletmm:2.6"
 RDEPEND="${DEPEND}"
 
 PATCHES=(

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.22.ebuild,v 1.9 2010/10/05 10:20:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.22.ebuild,v 1.10 2011/03/21 22:35:23 nirbheek Exp $
 
 EAPI=2
 inherit autotools
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.10
 	x11-libs/gtk+:2
-	>=x11-libs/libwnck-2.10"
+	>=x11-libs/libwnck-2.10:1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool

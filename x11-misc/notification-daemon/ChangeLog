@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.74 2011/03/16 11:07:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.75 2011/03/21 22:36:57 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  notification-daemon-0.4.0-r1.ebuild, notification-daemon-0.5.0.ebuild:
+  Fix slot-deps on gnome libs
 
   16 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
   notification-daemon-0.5.0.ebuild:
