@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/eatmonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/ChangeLog,v 1.4 2011/02/09 21:16:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/eatmonkey/ChangeLog,v 1.5 2011/03/21 22:23:59 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  eatmonkey-0.1.4.ebuild:
+  Fix slot-deps on gnome libs
 
   09 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> eatmonkey-0.1.4.ebuild:
   Pin dev-libs/libunique to 1.x.
