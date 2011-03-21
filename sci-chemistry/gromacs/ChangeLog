@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.70 2011/03/17 22:26:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.71 2011/03/21 16:24:52 alexxy Exp $
+
+*gromacs-4.5.4 (21 Mar 2011)
+
+  21 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> +gromacs-4.5.4.ebuild:
+  Version bump
 
   17 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> gromacs-4.5.3-r4.ebuild:
   Clean up ebuild a bit
