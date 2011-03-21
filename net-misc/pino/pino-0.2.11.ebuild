@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.4 2010/10/02 14:47:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/pino-0.2.11.ebuild,v 1.5 2011/03/21 22:12:29 nirbheek Exp $
 
 EAPI="3"
 
@@ -21,8 +21,8 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	x11-libs/libnotify
 	net-libs/libsoup:2.4
 	dev-libs/libxml2:2
-	>=net-libs/webkit-gtk-1.1
-	dev-libs/libunique
+	>=net-libs/webkit-gtk-1.1:2
+	dev-libs/libunique:1
 	app-text/gtkspell
 	indicate? ( dev-libs/libindicate )"
 # vala-0.9 required due to bug 328703

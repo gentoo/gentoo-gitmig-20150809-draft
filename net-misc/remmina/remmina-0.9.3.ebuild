@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-0.9.3.ebuild,v 1.1 2011/01/22 16:05:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-0.9.3.ebuild,v 1.2 2011/03/21 22:15:12 nirbheek Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
@@ -19,8 +19,8 @@ RDEPEND="x11-libs/gtk+:2
 	crypt? ( dev-libs/libgcrypt )
 	nls? ( virtual/libintl )
 	ssh? ( net-libs/libssh[sftp] )
-	unique? ( dev-libs/libunique )
-	vte? ( x11-libs/vte )"
+	unique? ( dev-libs/libunique:1 )
+	vte? ( x11-libs/vte:0 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig

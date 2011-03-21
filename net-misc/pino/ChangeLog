@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pino
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.7 2010/10/02 14:47:30 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pino/ChangeLog,v 1.8 2011/03/21 22:12:29 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> pino-0.2.11.ebuild:
+  Fix slot-deps on gnome libs
 
   02 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> -pino-0.2.9.ebuild,
   -pino-0.2.10.ebuild, pino-0.2.11.ebuild:
