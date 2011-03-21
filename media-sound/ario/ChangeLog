@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ario
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.19 2011/03/21 11:38:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.20 2011/03/21 22:08:53 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> ario-1.4.4.ebuild,
+  ario-1.5.ebuild:
+  Fix slot-deps on gnome libs
 
   21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> ario-1.5.ebuild:
   Stable on amd64 wrt bug #359475
