@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.330 2011/03/12 20:13:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.331 2011/03/21 00:38:47 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  evolution-2.30.2-r1.ebuild, -evolution-2.30.3.ebuild,
+  -evolution-2.32.1-r1.ebuild, evolution-2.32.2.ebuild,
+  evolution-2.32.2-r1.ebuild:
+  Fix slot-deps on gtk+ and other libs, remove old
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> evolution-2.32.2.ebuild:
   alpha/ia64/sparc stable wrt #353436

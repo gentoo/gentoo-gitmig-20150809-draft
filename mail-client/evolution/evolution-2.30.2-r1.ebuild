@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.30.2-r1.ebuild,v 1.12 2011/02/05 16:15:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.30.2-r1.ebuild,v 1.13 2011/03/21 00:38:47 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -22,19 +22,19 @@ IUSE="crypt doc gstreamer kerberos ldap networkmanager nntp pda profile python s
 # Pango dependency required to avoid font rendering problems
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
-RDEPEND=">=dev-libs/glib-2.22
-	>=x11-libs/gtk+-2.18
+RDEPEND=">=dev-libs/glib-2.22:2
+	>=x11-libs/gtk+-2.18:2
 	>=gnome-extra/evolution-data-server-$(get_version_component_range 1-2)
-	>=gnome-base/gnome-desktop-2.26.0
-	>=gnome-extra/gtkhtml-3.29.6
-	>=gnome-base/gconf-2
+	>=gnome-base/gnome-desktop-2.26.0:2
+	>=gnome-extra/gtkhtml-3.29.6:3.14
+	>=gnome-base/gconf-2:2
 	>=gnome-base/libgnomecanvas-2
 	dev-libs/atk
 	>=dev-libs/dbus-glib-0.74
-	>=dev-libs/libunique-1.1.2
-	>=dev-libs/libxml2-2.7.3
+	>=dev-libs/libunique-1.1.2:1
+	>=dev-libs/libxml2-2.7.3:2
 	>=dev-libs/libgweather-2.25.3:2
-	>=net-libs/libsoup-2.4
+	>=net-libs/libsoup-2.4:2.4
 	>=media-gfx/gtkimageview-1.6
 	media-libs/libcanberra[gtk]
 	<x11-libs/libnotify-0.7
@@ -46,15 +46,15 @@ RDEPEND=">=dev-libs/glib-2.22
 					|| ( app-crypt/pinentry[gtk] app-crypt/pinentry[qt3] ) )
 				  =app-crypt/gnupg-1.4* ) )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10 )
+		>=media-libs/gstreamer-0.10:0.10
+		>=media-libs/gst-plugins-base-0.10:0.10 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-2 )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	pda? (
 		>=app-pda/gnome-pilot-2.0.16
 		>=app-pda/gnome-pilot-conduits-2 )
-	python? ( >=dev-lang/python-2.4 )
+	python? ( =dev-lang/python-2* )
 	ssl? (
 		>=dev-libs/nspr-4.6.1
 		>=dev-libs/nss-3.11 )

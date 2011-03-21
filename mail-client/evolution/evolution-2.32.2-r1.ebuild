@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r1.ebuild,v 1.3 2011/02/27 15:12:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r1.ebuild,v 1.4 2011/03/21 00:38:47 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -35,9 +35,9 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=x11-libs/libnotify-0.3
 	>=gnome-extra/evolution-data-server-${PV}[weather]
 	>=gnome-extra/gtkhtml-3.31.90:3.14
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	dev-libs/atk
-	>=dev-libs/libxml2-2.7.3
+	>=dev-libs/libxml2-2.7.3:2
 	>=net-libs/libsoup-2.4:2.4
 	>=media-gfx/gtkimageview-1.6
 	>=x11-misc/shared-mime-info-0.22
@@ -51,8 +51,8 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 					${PINENTRY_DEPEND} )
 				  =app-crypt/gnupg-1.4* ) )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10 )
+		>=media-libs/gstreamer-0.10:0.10
+		>=media-libs/gst-plugins-base-0.10:0.10 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-2 )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
