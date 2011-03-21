@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.78 2011/03/19 20:56:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.79 2011/03/21 11:38:33 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> qmpdclient-1.2.1.ebuild:
+  Stable on amd64 wrt bug #359477
 
   19 Mar 2011; Christoph Mende <angelos@gentoo.org> qmpdclient-1.2.1.ebuild:
   Changed category from Network to AudioVideo in the desktop file (bug #359559)
