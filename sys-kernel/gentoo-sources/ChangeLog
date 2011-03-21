@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.825 2011/03/15 18:33:47 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.826 2011/03/21 00:44:29 mpagano Exp $
+
+*gentoo-sources-2.6.37-r3 (21 Mar 2011)
+
+  21 Mar 2011; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.37-r3.ebuild:
+  Linux patch 2.6.37.4 and fscache patch to fix operation handling
 
 *gentoo-sources-2.6.38 (15 Mar 2011)
 
