@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.32.0.ebuild,v 1.8 2011/03/21 20:52:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.32.0.ebuild,v 1.9 2011/03/21 22:12:09 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,18 +18,18 @@ IUSE="pulseaudio"
 # FIXME: automagic dev-util/glade:3 support
 RDEPEND=">=dev-libs/glib-2.18.2:2
 	>=x11-libs/gtk+-2.18.0:2
-	>=gnome-base/gconf-2.6.1
-	>=media-libs/gstreamer-0.10.23
-	>=media-libs/gst-plugins-base-0.10.23
-	>=media-libs/gst-plugins-good-0.10
-	>=dev-libs/libunique-1:1
+	>=gnome-base/gconf-2.6.1:2
+	>=media-libs/gstreamer-0.10.23:0.10
+	>=media-libs/gst-plugins-base-0.10.23:0.10
+	>=media-libs/gst-plugins-good-0.10:0.10
+	dev-libs/libunique:1
 
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.16[glib] )
 	>=media-libs/libcanberra-0.13[gtk]
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	>=media-libs/gst-plugins-base-0.10.23:0.10
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
-	>=media-plugins/gst-plugins-gconf-0.10.1"
+	>=media-plugins/gst-plugins-gconf-0.10.1:0.10"
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=dev-util/pkgconfig-0.9
