@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xset
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.72 2011/03/15 21:19:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.73 2011/03/21 13:38:43 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> xset-1.2.1-r1.ebuild:
+  Stable on amd64 wrt bug #359059
 
   15 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> xset-1.2.1-r1.ebuild:
   ppc/ppc64 stable wrt #359059

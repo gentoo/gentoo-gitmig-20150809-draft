@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbcomp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.85 2011/03/15 21:18:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.86 2011/03/21 13:38:28 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> xkbcomp-1.2.1.ebuild:
+  Stable on amd64 wrt bug #359059
 
   15 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> xkbcomp-1.2.1.ebuild:
   ppc/ppc64 stable wrt #359059
