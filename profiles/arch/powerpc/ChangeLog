@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.115 2011/03/18 22:09:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.116 2011/03/21 10:38:37 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Mask mail-client/claws-mail[pda] since app-pda/jpilot is not keyworded
 
   18 Mar 2011: Mike Frysinger <vapier@gentoo.org> ppc64/make.defaults:
   Drop CDEFINE_<abi> variables now that nothing uses them.
