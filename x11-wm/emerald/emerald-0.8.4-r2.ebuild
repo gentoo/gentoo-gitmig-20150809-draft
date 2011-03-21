@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.4-r2.ebuild,v 1.2 2010/10/15 18:13:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.4-r2.ebuild,v 1.3 2011/03/21 22:38:51 nirbheek Exp $
 
 EAPI="2"
 
@@ -20,8 +20,8 @@ IUSE=""
 PDEPEND="~x11-themes/emerald-themes-${THEMES_RELEASE}"
 
 RDEPEND="
-	>=x11-libs/gtk+-2.8.0
-	>=x11-libs/libwnck-2.14.2
+	>=x11-libs/gtk+-2.8.0:2
+	>=x11-libs/libwnck-2.14.2:1
 	>=x11-wm/compiz-${PV}
 "
 

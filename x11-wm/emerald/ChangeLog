@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/emerald
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.34 2010/10/15 18:13:38 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.35 2011/03/21 22:38:51 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  emerald-0.8.4-r2.ebuild:
+  Fix slot-deps on gnome libs
 
   15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -emerald-0.8.4.ebuild, -emerald-0.8.4-r1.ebuild, emerald-0.8.4-r2.ebuild:
