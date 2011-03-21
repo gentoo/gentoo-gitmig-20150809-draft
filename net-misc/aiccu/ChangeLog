@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.25 2011/03/08 14:46:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.26 2011/03/21 10:02:49 tomka Exp $
+
+  21 Mar 2011; Thomas Kahle <tomka@gentoo.org> aiccu-2007.01.15-r1.ebuild:
+  x86 stable per bug 357265
 
   08 Mar 2011; Jeroen Roovers <jer@gentoo.org> aiccu-2007.01.15-r1.ebuild:
   Stable for HPPA (bug #357265).
