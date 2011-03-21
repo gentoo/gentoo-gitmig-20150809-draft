@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.2.0.ebuild,v 1.5 2011/02/13 12:28:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.2.0.ebuild,v 1.6 2011/03/21 19:42:25 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="http://www.crummy.com/software/${MY_PN}/download/3.x/${MY_P}.tar.gz"
 
 LICENSE="PSF-2.3"
 SLOT="python-2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""
