@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.251 2011/03/20 10:13:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.252 2011/03/21 10:35:43 grobian Exp $
+
+  21 Mar 2011; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  SpanKY applied zziplib fix for us, so drop mask
 
   20 Mar 2011; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask dev-libs/zziplib-0.13.60-r1 on Darwin, broken due to GCC 4.6 patch, bug
