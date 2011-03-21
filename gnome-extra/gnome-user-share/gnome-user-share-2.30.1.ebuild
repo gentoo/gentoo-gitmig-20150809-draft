@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.30.1.ebuild,v 1.4 2011/02/27 10:33:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-2.30.1.ebuild,v 1.5 2011/03/21 22:27:10 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 	>=app-mobilephone/obex-data-server-0.4
 	>=dev-libs/dbus-glib-0.70
 	dev-libs/libunique:1
-	>=gnome-base/gconf-2.10
+	>=gnome-base/gconf-2.10:2
 	>=gnome-base/nautilus-2
 	media-libs/libcanberra[gtk]
 	>=net-wireless/gnome-bluetooth-2.27.7.2:2

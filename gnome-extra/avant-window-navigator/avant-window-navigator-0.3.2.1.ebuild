@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.7 2011/02/23 19:56:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.8 2011/03/21 22:31:51 nirbheek Exp $
 
 EAPI=1
 
@@ -18,21 +18,21 @@ IUSE="doc gnome thunar vala"
 
 RDEPEND="
 	|| (
-		>=dev-lang/python-2.5
+		=dev-lang/python-2*
 		dev-python/elementtree
 	)
 	dev-libs/dbus-glib
 	>=dev-libs/glib-2.16.0
 	dev-python/pycairo
-	>=dev-python/pygtk-2
+	>=dev-python/pygtk-2:2
 	dev-python/pyxdg
-	>=gnome-base/gconf-2
-	>=gnome-base/libglade-2
+	>=gnome-base/gconf-2:2
+	>=gnome-base/libglade-2:2.0
 	>=x11-libs/gtk+-2:2
-	>=x11-libs/libwnck-2.20
+	>=x11-libs/libwnck-2.20:1
 	gnome? (
 		>=gnome-base/gnome-desktop-2:2
-		>=gnome-base/gnome-vfs-2
+		>=gnome-base/gnome-vfs-2:2
 		>=gnome-base/libgnome-2
 	)
 	thunar? ( xfce-extra/thunar-vfs )
