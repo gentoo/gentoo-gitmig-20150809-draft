@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.3.ebuild,v 1.9 2011/03/18 17:35:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.3.ebuild,v 1.10 2011/03/21 01:37:31 radhermit Exp $
 
 EAPI=3
 
@@ -165,6 +165,9 @@ src_install () {
 
 	# Install rmail for UUCP, closes bug #19127
 	dobin auxiliary/rmail/rmail
+
+	# Provide another link for legacy FSH
+	dosym /usr/sbin/sendmail /usr/$(get_libdir)/sendmail
 
 	# Install qshape tool
 	dobin auxiliary/qshape/qshape.pl
