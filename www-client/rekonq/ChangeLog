@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.23 2011/03/21 08:25:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.24 2011/03/21 08:32:22 scarabeus Exp $
+
+  21 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> rekonq-0.6.95.ebuild:
+  Bump eapi.
 
   21 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> rekonq-0.6.95.ebuild:
   Require virtualx for tests.
