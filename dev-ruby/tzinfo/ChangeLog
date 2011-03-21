@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.74 2011/03/16 06:01:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.75 2011/03/21 11:40:57 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> tzinfo-0.3.24.ebuild:
+  Stable on amd64 wrt bug #359091
 
   16 Mar 2011; Hans de Graaff <graaff@gentoo.org> tzinfo-0.3.24.ebuild:
   Add back jruby since it breaks the dependency chain for Rails otherwise.
