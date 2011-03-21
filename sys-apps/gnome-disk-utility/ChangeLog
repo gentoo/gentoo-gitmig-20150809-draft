@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.39 2011/03/21 21:10:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.40 2011/03/21 22:29:12 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-disk-utility-2.30.1.ebuild:
+  Fix slot-deps on gnome libs
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-disk-utility-2.32.0-r1.ebuild:
