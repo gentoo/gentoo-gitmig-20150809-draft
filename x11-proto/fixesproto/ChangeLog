@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/fixesproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.47 2011/03/15 21:10:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.48 2011/03/21 13:42:09 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> fixesproto-5.0.ebuild:
+  Stable on amd64 wrt bug #359059
 
   15 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> fixesproto-5.0.ebuild:
   ppc/ppc64 stable wrt #359059
