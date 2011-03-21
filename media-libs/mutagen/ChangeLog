@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.88 2011/03/13 19:04:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.89 2011/03/21 16:07:24 tomka Exp $
+
+  21 Mar 2011; Thomas Kahle <tomka@gentoo.org> mutagen-1.20.ebuild:
+  x86 stable per bug 357427
 
   13 Mar 2011; Tobias Klausmann <klausman@gentoo.org> mutagen-1.20.ebuild:
   Stable on alpha, bug #357427
