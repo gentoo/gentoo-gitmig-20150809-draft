@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.130 2011/03/04 12:03:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.131 2011/03/21 11:50:00 aballier Exp $
 
 EAPI="4"
 
@@ -47,8 +47,8 @@ else
 fi
 IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bda bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
-	directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
-	fbcon fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
+	directfb directx dshow dts dvb dvd dxva2 elibc_glibc egl +encode
+	fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libproxy libtiger libv4l2 linsys libtar lirc live lua +macosx +macosx-audio
 	+macosx-dialog-provider +macosx-eyetv +macosx-quartztext +macosx-qtcapture
@@ -76,7 +76,7 @@ RDEPEND="
 		dirac? ( >=media-video/dirac-0.10.0 )
 		directfb? ( dev-libs/DirectFB sys-libs/zlib )
 		dts? ( media-libs/libdca )
-		dvbpsi? ( >=media-libs/libdvbpsi-0.1.6 )
+		dvb? ( >=media-libs/libdvbpsi-0.1.6 )
 		dvd? (	media-libs/libdvdread >=media-libs/libdvdnav-0.1.9 )
 		egl? ( virtual/opengl )
 		elibc_glibc? ( >=sys-libs/glibc-2.8 )
@@ -161,7 +161,6 @@ REQUIRED_USE="
 	aalib? ( X )
 	bidi? ( truetype )
 	cddb? ( cdda )
-	dvb? ( dvbpsi )
 	dxva2? ( avcodec )
 	egl? ( X )
 	ffmpeg? ( avcodec avformat postproc swscale )
@@ -232,12 +231,10 @@ src_configure() {
 		$(use_enable dshow) \
 		$(use_enable dts dca) \
 		$(use_enable dvb) \
-		$(use_enable dvbpsi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
 		$(use_enable dxva2) \
 		$(use_enable egl) \
 		$(use_enable encode sout) \
-		$(use_enable fbcon fb) \
 		$(use_enable fbosd) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \

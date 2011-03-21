@@ -17,7 +17,6 @@
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
 	<flag name="direct2d">Enable Win7/VistaPU Direct2D support.</flag>
 	<flag name="directx">Enable Win32 DirectX support.</flag>
-	<flag name="dvbpsi">Enable ts mux and demux module via libdvbpsi.</flag>
 	<flag name="dshow">Enables Win32 DirectShow support.</flag>
 	<flag name="dxva2">Enables Win32 DxVA2 support.</flag>
 	<flag name="egl">Enables EGL video output module.</flag>
