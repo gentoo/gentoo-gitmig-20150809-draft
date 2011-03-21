@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.3.ebuild,v 1.2 2011/03/18 15:53:42 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.3-r1.ebuild,v 1.1 2011/03/21 14:43:05 ultrabug Exp $
 
 EAPI="3"
 
@@ -61,9 +61,10 @@ src_install() {
 	fi
 
 	if use extras ; then
-		newbin extras/volgen/glusterfs-volgen glusterfs-volgen || die
 		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || die
+		newbin extras/backend-cleanup.sh glusterfs-backend-cleanup || die
 		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die
+		newbin extras/disk_usage_sync.sh glusterfs-disk-usage-sync || die
 	fi
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS || die
