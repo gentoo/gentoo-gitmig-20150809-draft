@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.165 2011/03/13 16:26:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.166 2011/03/21 22:40:35 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> xfwm4-4.8.0.ebuild,
+  xfwm4-4.8.1.ebuild:
+  Fix slot-deps on gnome libs
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> xfwm4-4.8.1.ebuild:
   Stable on amd64 wrt bug #358407

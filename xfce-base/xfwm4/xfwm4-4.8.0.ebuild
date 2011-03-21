@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.8.0.ebuild,v 1.6 2011/02/14 19:37:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.8.0.ebuild,v 1.7 2011/03/21 22:40:35 nirbheek Exp $
 
 EAPI=3
 inherit xfconf
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	x11-libs/libXrender
 	x11-libs/libXpm
 	x11-libs/pango
-	>=x11-libs/libwnck-2.22
+	>=x11-libs/libwnck-2.22:1
 	>=xfce-base/libxfce4util-4.8
 	>=xfce-base/libxfce4ui-4.8
 	>=xfce-base/xfconf-4.8

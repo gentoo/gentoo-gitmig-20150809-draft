@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.8.2.ebuild,v 1.2 2011/03/13 16:25:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.8.2.ebuild,v 1.3 2011/03/21 22:39:33 nirbheek Exp $
 
 EAPI=4
 inherit xfconf
@@ -24,7 +24,7 @@ RDEPEND="x11-libs/libX11
 	>=dev-libs/glib-2.18:2
 	>=dev-libs/dbus-glib-0.88
 	>=x11-libs/cairo-1
-	>=x11-libs/libwnck-2.22"
+	>=x11-libs/libwnck-2.22:1"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/intltool
