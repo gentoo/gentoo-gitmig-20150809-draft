@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.6 2011/03/16 21:36:49 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-007.ebuild,v 1.7 2011/03/21 12:39:05 aidecoe Exp $
 
 EAPI=2
 
@@ -19,6 +19,7 @@ uswsusp xen"
 NETWORK_IUSE="iscsi nbd nfs"
 DM_IUSE="crypt dmraid dmsquash-live lvm"
 IUSE="${COMMON_IUSE} ${DM_IUSE} ${NETWORK_IUSE}"
+RESTRICT="test"
 
 NETWORK_DEPS="net-misc/bridge-utils >=net-misc/dhcp-3.1.2_p1 sys-apps/iproute2"
 DM_DEPS="|| ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 )"

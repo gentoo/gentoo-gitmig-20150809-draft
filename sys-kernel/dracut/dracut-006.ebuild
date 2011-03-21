@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-006.ebuild,v 1.2 2011/03/16 21:36:49 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-006.ebuild,v 1.3 2011/03/21 12:39:04 aidecoe Exp $
 
 EAPI=2
 
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="btrfs crypt dmraid iscsi lvm multipath nbd nfs md selinux uswsusp xen"
+RESTRICT="test"
 
 # common networking deps
 NETWORK_DEPS="sys-apps/iproute2 net-misc/dhcp net-misc/bridge-utils"

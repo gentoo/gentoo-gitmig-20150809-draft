@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-006-r1.ebuild,v 1.3 2011/03/16 21:36:49 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-006-r1.ebuild,v 1.4 2011/03/21 12:39:04 aidecoe Exp $
 
 EAPI=2
 
@@ -18,6 +18,7 @@ COMMON_IUSE="btrfs debug mdraid multipath selinux syslog uswsusp xen"
 NETWORK_IUSE="iscsi nbd nfs"
 DM_IUSE="crypt dmraid dmsquash-live lvm"
 IUSE="${COMMON_IUSE} ${DM_IUSE} ${NETWORK_IUSE}"
+RESTRICT="test"
 
 # common networking deps
 NETWORK_DEPS="net-misc/bridge-utils >=net-misc/dhcp-3.1.2_p1 sys-apps/iproute2"
