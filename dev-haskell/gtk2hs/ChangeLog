@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/gtk2hs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.56 2010/07/13 11:00:26 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.57 2011/03/21 22:53:32 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gtk2hs-0.9.12.1.ebuild, gtk2hs-0.10.1.ebuild:
+  Fix slot-deps on gnome libs
 
   13 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> gtk2hs-0.10.1.ebuild:
   Fixed build failure against ghc-6.12.2+ (bug #327903). Thanks to Renato

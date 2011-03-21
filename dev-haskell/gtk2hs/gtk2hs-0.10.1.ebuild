@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.10.1.ebuild,v 1.4 2010/07/13 11:00:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.10.1.ebuild,v 1.5 2011/03/21 22:53:32 nirbheek Exp $
 
 EAPI="2"
 
@@ -21,11 +21,11 @@ IUSE="doc profile glade gnome opengl svg"
 RDEPEND=">=dev-lang/ghc-6.6
 		dev-haskell/mtl[doc?]
 		x11-libs/gtk+:2
-		glade? ( gnome-base/libglade )
-		gnome? ( gnome-base/libglade
-				>=x11-libs/gtksourceview-2.2
-				gnome-base/gconf )
-		svg?   ( gnome-base/librsvg )
+		glade? ( gnome-base/libglade:2.0 )
+		gnome? ( gnome-base/libglade:2.0
+				>=x11-libs/gtksourceview-2.2:2.0
+				gnome-base/gconf:2 )
+		svg?   ( gnome-base/librsvg:2 )
 		opengl? ( x11-libs/gtkglext )"
 
 DEPEND="${RDEPEND}
