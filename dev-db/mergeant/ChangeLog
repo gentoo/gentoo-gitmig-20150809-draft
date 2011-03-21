@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mergeant
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.14 2008/11/04 00:20:16 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.15 2011/03/21 21:07:03 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> mergeant-0.66.ebuild:
+  Fix slot-deps on gtk+ and other libs
 
   04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
