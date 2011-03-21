@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6.ebuild,v 1.8 2011/03/11 08:41:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6.ebuild,v 1.9 2011/03/21 21:25:09 xarthisius Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://projects.gnome.org/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc x86"
 
 # We are not ready for introspection yet
 IUSE="avahi doc +introspection networkmanager +nss test"
