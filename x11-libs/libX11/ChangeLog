@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.170 2011/03/18 18:29:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.171 2011/03/21 14:05:45 flameeyes Exp $
+
+  21 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> libX11-1.4.2.ebuild:
+  Fix cross-compile hack to work with current xorg-2 and autotools-utils
+  eclasses' out-of-tree builds. Also apply it only when actually
+  cross-compiling.
 
 *libX11-1.4.2 (18 Mar 2011)
 

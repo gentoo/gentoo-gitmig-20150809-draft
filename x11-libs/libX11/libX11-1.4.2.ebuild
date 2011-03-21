@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.4.2.ebuild,v 1.1 2011/03/18 18:29:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.4.2.ebuild,v 1.2 2011/03/21 14:05:45 flameeyes Exp $
 
 EAPI=4
 
@@ -45,6 +45,11 @@ src_configure() {
 
 src_compile() {
 	# [Cross-Compile Love] Disable {C,LD}FLAGS and redefine CC= for 'makekeys'
-	( filter-flags -m* ; cd src/util && make CC=$(tc-getBUILD_CC) CFLAGS="${CFLAGS}" LDFLAGS="" clean all)
+	if tc-is-cross-compiler; then
+		(
+			filter-flags -m*
+			emake -C "${AUTOTOOLS_BUILD_DIR}"/src/util CC=$(tc-getBUILD_CC) CFLAGS="${CFLAGS}" LDFLAGS="" clean all || die
+		)
+	fi
 	xorg-2_src_compile
 }
