@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.3.ebuild,v 1.3 2008/02/29 17:52:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/gnusim8085-1.3.ebuild,v 1.4 2011/03/21 22:52:31 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,9 +15,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.0
+DEPEND=">=x11-libs/gtk+-2.0:2
 	>=gnome-base/libgnomeui-2.0
-	=x11-libs/gtksourceview-1*
+	x11-libs/gtksourceview:1.0
 	nls? ( >=sys-devel/gettext-0.10.40 )"
 
 src_unpack() {
