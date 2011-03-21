@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ippl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.17 2010/09/15 00:29:43 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.18 2011/03/21 14:49:51 flameeyes Exp $
+
+  21 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> ippl-1.4.14-r2.ebuild:
+  QA: workaround parallel make failure until bug #351287 is properly fixed.
 
 *ippl-1.4.14-r2 (15 Sep 2010)
 

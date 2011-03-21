@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r2.ebuild,v 1.1 2010/09/15 00:29:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r2.ebuild,v 1.2 2011/03/21 14:49:51 flameeyes Exp $
 
 EAPI="2"
 
@@ -36,6 +36,11 @@ src_prepare() {
 		-e 's|make |$(MAKE) |g' \
 		|| die "sed Makefile.in"
 	tc-export CC
+}
+
+src_compile() {
+	# parallel make failure, bug #351287
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
