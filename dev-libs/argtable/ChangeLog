@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/argtable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.34 2011/03/20 19:14:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.35 2011/03/21 11:39:08 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> argtable-2.13.ebuild:
+  Stable on amd64 wrt bug #359469
 
   20 Mar 2011; Christoph Mende <angelos@gentoo.org> argtable-2.13.ebuild:
   Make building of static libraries optional
