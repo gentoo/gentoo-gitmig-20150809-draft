@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncevolution/syncevolution-1.0.ebuild,v 1.2 2010/12/13 15:12:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncevolution/syncevolution-1.0.ebuild,v 1.3 2011/03/21 21:56:01 nirbheek Exp $
 
 EAPI=2
 
@@ -16,14 +16,14 @@ IUSE="sqlite +gtk +eds bluetooth +gnome"
 
 SRC_URI="http://downloads.syncevolution.org/syncevolution/sources/${P}.tar.gz"
 
-RDEPEND=">=gnome-base/gconf-2
-	>=dev-libs/glib-2.16
-	>=net-libs/libsoup-2.4
+RDEPEND=">=gnome-base/gconf-2:2
+	>=dev-libs/glib-2.16:2
+	>=net-libs/libsoup-2.4:2.4
 	>=sys-apps/dbus-1.2
 	x11-libs/libnotify
 	>=gnome-base/gnome-keyring-2.20
 	gtk? ( >=x11-libs/gtk+-2.18:2
-		dev-libs/libunique )
+		dev-libs/libunique:1 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2
 		>=dev-libs/libical-0.43 )
 	bluetooth? (
