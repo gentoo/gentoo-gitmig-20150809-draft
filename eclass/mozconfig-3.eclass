@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.11 2011/03/21 00:25:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.12 2011/03/21 08:07:55 nirbheek Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
 inherit multilib flag-o-matic mozcoreconf-2
 
 # use-flags common among all mozilla ebuilds
-IUSE="+alsa +dbus debug libnotify startup-notification system-sqlite +webm wifi"
+IUSE="+alsa +dbus debug libnotify startup-notification system-sqlite wifi"
 
 RDEPEND="app-arch/zip
 	app-arch/unzip
@@ -26,10 +26,7 @@ RDEPEND="app-arch/zip
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
-	webm? ( media-libs/libvpx 
-		media-libs/alsa-lib )
 	wifi? ( net-wireless/wireless-tools )"
-
 DEPEND="${RDEPEND}"
 
 mozconfig_config() {
@@ -64,14 +61,16 @@ mozconfig_config() {
 	fi
 
 	if [[ ${PN} != thunderbird ]]; then
-		if use webm && ! use alsa; then
-			echo "Enabling alsa support due to webm request"
-			mozconfig_annotate '+webm -alsa' --enable-ogg
-			mozconfig_annotate '+webm -alsa' --enable-wave
-			mozconfig_annotate '+webm' --enable-webm
-		else
-			mozconfig_use_enable webm
-			mozconfig_use_with webm system-libvpx
+		if has +webm ${IUSE} && use webm; then
+			if ! use alsa; then
+				echo "Enabling alsa support due to webm request"
+				mozconfig_annotate '+webm -alsa' --enable-ogg
+				mozconfig_annotate '+webm -alsa' --enable-wave
+				mozconfig_annotate '+webm' --enable-webm
+			else
+				mozconfig_use_enable webm
+				mozconfig_use_with webm system-libvpx
+			fi
 		fi
 
 		if use amd64 || use x86 || use arm || use sparc; then
