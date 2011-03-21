@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.365 2011/03/15 16:55:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.366 2011/03/21 14:48:50 darkside Exp $
+
+  21 Mar 2011; Jeremy Olexa <darkside@gentoo.org> eix-0.22.8.ebuild:
+  Add prefix bit, bug 353562
 
   15 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -eix-0.17.0.ebuild,
   -eix-0.19.2.ebuild, -eix-0.20.5.ebuild, -eix-0.22.4.ebuild,

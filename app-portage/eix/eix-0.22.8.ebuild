@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.22.8.ebuild,v 1.1 2011/03/12 04:35:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.22.8.ebuild,v 1.2 2011/03/21 14:48:50 darkside Exp $
 
 EAPI="4"
 
@@ -29,6 +29,7 @@ src_configure() {
 		$(use_enable nls) $(use_enable tools separate-tools) \
 		$(use_enable hardened security) $(use_enable optimization) \
 		$(use_enable strong-optimization) $(use_enable debug debugging) \
+		$(use_with prefix always-accept-keywords) \
 		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
 		--with-portage-rootpath="${ROOTPATH}" \
 		--with-eprefix-default="${EPREFIX}" \
