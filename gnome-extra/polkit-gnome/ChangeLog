@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/polkit-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.31 2011/03/19 12:13:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/ChangeLog,v 1.32 2011/03/21 11:21:33 nirbheek Exp $
+
+*polkit-gnome-0.101-r1 (21 Mar 2011)
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -polkit-gnome-0.101.ebuild, +polkit-gnome-0.101-r1.ebuild,
+  files/polkit-gnome-authentication-agent-1.desktop:
+  Add AutostartCondition to not autostart with authentication agent GNOME
+  Shell
 
   19 Mar 2011; Raúl Porcel <armin76@gentoo.org> polkit-gnome-0.96-r1.ebuild,
   polkit-gnome-0.99.ebuild, polkit-gnome-0.100.ebuild,

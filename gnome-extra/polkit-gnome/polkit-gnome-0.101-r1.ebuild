@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.101.ebuild,v 1.2 2011/03/19 12:13:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.101-r1.ebuild,v 1.1 2011/03/21 11:21:33 nirbheek Exp $
 
 EAPI=3
 inherit autotools eutils
