@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.7.ebuild,v 1.1 2011/01/09 08:33:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.7.ebuild,v 1.2 2011/03/21 11:40:20 hwoarang Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://wftp.tu-chemnitz.de/pub/Local/urz/ding/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/tk-8.3"
