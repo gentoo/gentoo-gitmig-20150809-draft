@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.30.2.ebuild,v 1.3 2011/03/21 21:39:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.30.2.ebuild,v 1.4 2011/03/21 23:24:54 nirbheek Exp $
 
 EAPI="2"
 
@@ -18,11 +18,11 @@ IUSE="dbus examples pcre"
 
 RDEPEND=">=www-client/epiphany-${MY_MAJORV}
 	app-text/opensp
-	>=dev-libs/glib-2.15.5
-	>=gnome-base/gconf-2.0
-	>=dev-libs/libxml2-2.6
-	>=x11-libs/gtk+-2.19.5
-	>=net-libs/webkit-gtk-1.1
+	>=dev-libs/glib-2.15.5:2
+	>=gnome-base/gconf-2.0:2
+	>=dev-libs/libxml2-2.6:2
+	>=x11-libs/gtk+-2.19.5:2
+	>=net-libs/webkit-gtk-1.1:2
 
 	dbus? ( >=dev-libs/dbus-glib-0.34 )
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )"
