@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.42 2011/01/30 19:13:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.43 2011/03/21 20:34:18 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gtkglarea-2.0.1.ebuild:
+  ppc64 stable wrt #353436
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gtkglarea-2.0.1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #348987
