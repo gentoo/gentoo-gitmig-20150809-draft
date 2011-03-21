@@ -19,13 +19,6 @@
 			Enables the DBUS connector for liferea, so feeds can be managed from
 			external programs
 		</flag>
-		<flag name='gtkhtml'>
-			Uses the gtkhtml rendering engine for item rendering.  Deprecated,
-			and broken on amd64.
-		</flag>
-		<flag name='gnutls'>
-			Enable https feeds using gnutls
-		</flag>
 		<flag name='libnotify'>
 			Enable popup notifications
 		</flag>
@@ -35,12 +28,6 @@
 		<flag name='networkmanager'>
 			Enable NetworkManager integration to automatically detect
 			online/offline status
-		</flag>
-		<flag name='webkit'>
-			Enable the webkit rendering engine for item rendering
-		</flag>
-		<flag name='xulrunner'>
-			Enable the xulrunner 1.9 rendering engine for item rendering
 		</flag>
 	</use>
 </pkgmetadata>
