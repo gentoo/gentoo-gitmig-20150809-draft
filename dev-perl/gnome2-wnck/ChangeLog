@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-wnck
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.49 2008/09/22 16:10:05 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/ChangeLog,v 1.50 2011/03/21 22:32:08 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome2-wnck-0.16.ebuild:
+  Fix slot-deps on gnome libs
 
   22 Sep 2008; Torsten Veller <tove@gentoo.org> -files/window_close_patch,
   -gnome2-wnck-0.14.ebuild, gnome2-wnck-0.16.ebuild:
