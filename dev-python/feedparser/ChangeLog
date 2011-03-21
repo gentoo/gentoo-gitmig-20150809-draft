@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/feedparser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.25 2011/03/21 11:21:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedparser/ChangeLog,v 1.26 2011/03/21 11:48:28 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> feedparser-5.0.1.ebuild:
+  Stable on amd64 wrt bug #358971
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> feedparser-5.0.1.ebuild:
   ppc/ppc64 stable wrt #358973
