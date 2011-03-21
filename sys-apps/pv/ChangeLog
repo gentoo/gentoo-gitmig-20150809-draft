@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.21 2011/03/11 17:22:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.22 2011/03/21 00:41:42 jer Exp $
+
+  21 Mar 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Maintain.
 
   11 Mar 2011; Thomas Kahle <tomka@gentoo.org> pv-1.2.0.ebuild:
   x86 stable per bug 355911
