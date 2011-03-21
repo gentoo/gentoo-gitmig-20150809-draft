@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1-r1.ebuild,v 1.8 2010/10/29 21:17:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1-r1.ebuild,v 1.9 2011/03/21 19:48:09 nirbheek Exp $
 
 EAPI="2"
 
@@ -14,20 +14,20 @@ SRC_URI="${SRC_URI} mirror://gentoo/${PN}-2.21.92-sessionsaver-v4.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="ppc64"
 IUSE="dbus examples pcre python"
 
 RDEPEND="=www-client/epiphany-${MY_MAJORV}*
 	app-text/opensp
-	>=dev-libs/glib-2.15.5
-	>=gnome-base/gconf-2.0
-	>=dev-libs/libxml2-2.6
-	>=x11-libs/gtk+-2.11.6
-	>=gnome-base/libglade-2
+	>=dev-libs/glib-2.15.5:2
+	>=gnome-base/gconf-2.0:2
+	>=dev-libs/libxml2-2.6:2
+	>=x11-libs/gtk+-2.11.6:2
+	>=gnome-base/libglade-2:2.0
 	=net-libs/xulrunner-1.9*
 	dbus? ( >=dev-libs/dbus-glib-0.34 )
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
-	python? ( >=dev-python/pygtk-2.11 )"
+	python? ( >=dev-python/pygtk-2.11:2 )"
 DEPEND="${RDEPEND}
 	  gnome-base/gnome-common
 	>=dev-util/intltool-0.40
