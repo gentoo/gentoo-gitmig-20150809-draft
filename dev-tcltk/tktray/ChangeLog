@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tktray
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.5 2010/10/10 18:45:29 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.6 2011/03/21 16:52:30 signals Exp $
+
+  21 Mar 2011; Kevin McCarthy <signals@gentoo.org> tktray-1.1.ebuild,
+  tktray-1.1-r1.ebuild:
+  RESTRICT=test WRT bug #284919
 
 *tktray-1.1-r1 (10 Oct 2010)
 
