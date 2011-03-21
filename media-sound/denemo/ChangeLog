@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/denemo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.30 2010/04/23 14:28:43 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.31 2011/03/21 22:57:05 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> denemo-0.8.2.ebuild,
+  denemo-0.8.16.ebuild:
+  Fix slot-deps on gnome libs
 
 *denemo-0.8.16 (23 Apr 2010)
 

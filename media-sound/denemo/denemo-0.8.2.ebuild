@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.2.ebuild,v 1.4 2010/04/23 14:28:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.2.ebuild,v 1.5 2011/03/21 22:57:05 nirbheek Exp $
 
 EAPI=2
 inherit autotools
@@ -16,8 +16,8 @@ IUSE="jack nls"
 
 RDEPEND="media-sound/lilypond
 	>=x11-libs/gtk+-2:2
-	>=dev-libs/libxml2-2.3.10
-	gnome-base/librsvg
+	>=dev-libs/libxml2-2.3.10:2
+	gnome-base/librsvg:2
 	>=media-libs/aubio-0.3.2
 	>=media-libs/portaudio-19_pre
 	>=dev-scheme/guile-1.8
