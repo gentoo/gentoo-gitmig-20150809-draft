@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.1.ebuild,v 1.4 2011/03/12 11:58:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.1.ebuild,v 1.5 2011/03/21 17:05:30 ssuominen Exp $
 
 EAPI=2
 
@@ -21,7 +21,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test udev +web youtube"
 
-# Hal is required until upstream bug 612616 is solved
 RDEPEND=">=dev-lang/mono-2.4.3
 	gnome-base/gnome-settings-daemon
 	x11-themes/gnome-icon-theme
@@ -94,11 +93,6 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 S=${WORKDIR}/${PN}-1-${PV}
 
 src_prepare () {
-	# Fix intltool b0rkage similar to
-	# https://bugzilla.gnome.org/show_bug.cgi?id=577133
-#	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-#		|| die "sed failed"
-
 	epatch "${FILESDIR}/${PN}-1.7.4-make-webkit-optional.patch"
 	AT_M4DIR="-I build/m4/banshee -I build/m4/shamrock -I build/m4/shave" \
 		eautoreconf
@@ -138,8 +132,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install efailed"
-	find "${D}" -name '*.la' -delete
+	emake DESTDIR="${D}" install || die
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_preinst() {
