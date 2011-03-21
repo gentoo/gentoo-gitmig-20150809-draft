@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.204 2011/03/21 06:48:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.205 2011/03/21 22:19:52 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> liferea-1.6.5.ebuild,
+  liferea-1.7.4.ebuild:
+  Fix slot-deps on gnome libs
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> liferea-1.7.4.ebuild:
   Marked ~ppc64
