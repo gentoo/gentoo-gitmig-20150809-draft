@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/mm-common
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.4 2011/03/21 01:22:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.5 2011/03/21 16:52:24 pacho Exp $
+
+*mm-common-0.9.4 (21 Mar 2011)
+
+  21 Mar 2011; Pacho Ramos <pacho@gentoo.org> -mm-common-0.9.3.ebuild,
+  +mm-common-0.9.4.ebuild:
+  Version bump fixing .pc installation, remove old.
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   mm-common-0.9.3.ebuild:
