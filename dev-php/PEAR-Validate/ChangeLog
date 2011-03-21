@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-Validate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.44 2010/01/05 06:00:40 yngwin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.45 2011/03/21 08:37:40 olemarkus Exp $
+
+*PEAR-Validate-0.8.4 (21 Mar 2011)
+
+  21 Mar 2011; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-Validate-0.8.4.ebuild:
+  Version bump. Thanks to Denny. Bug #359639. Note: Removed hard dependency on
+  PEAR-Date
 
 *PEAR-Validate-0.8.3 (05 Jan 2010)
 
