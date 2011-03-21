@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.295 2011/03/18 17:18:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.296 2011/03/21 01:49:29 polynomial-c Exp $
+
+  21 Mar 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -files/seamonkey-2.0-gtk+-2.21.patch, -seamonkey-2.0.11.ebuild,
+  -seamonkey-2.0.11-r2.ebuild, -files/bug-606109.patch,
+  -files/seamonkey-respect-ldflags.patch:
+  Removed old.
 
   18 Mar 2011; Raúl Porcel <armin76@gentoo.org> seamonkey-2.0.12.ebuild:
   alpha/ia64/sparc stable wrt #357057
