@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.814 2011/03/18 23:02:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.815 2011/03/21 12:41:11 zmedico Exp $
+
+  21 Mar 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.6.7.ebuild,
+  portage-2.1.6.13.ebuild, portage-2.1.8.3.ebuild, portage-2.1.9.25.ebuild,
+  portage-2.1.9.42.ebuild, portage-2.1.9.43.ebuild, portage-2.1.9.44.ebuild,
+  portage-2.2.0_alpha26.ebuild, portage-2.2.0_alpha27.ebuild,
+  portage-2.2.0_alpha28.ebuild, portage-9999.ebuild:
+  Bug #359731 - Die early if get_libdir fails.
 
 *portage-2.2.0_alpha28 (18 Mar 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.18 2010/10/13 01:30:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.19 2011/03/21 12:41:11 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -66,6 +66,12 @@ fi
 
 S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
+
+pkg_setup() {
+	# Bug #359731 - Die early if get_libdir fails.
+	[[ -z $(get_libdir) ]] && \
+		die "get_libdir returned an empty string"
+}
 
 src_unpack() {
 	unpack ${A}

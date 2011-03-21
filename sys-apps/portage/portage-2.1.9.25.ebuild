@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.25.ebuild,v 1.8 2011/02/06 19:36:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.25.ebuild,v 1.9 2011/03/21 12:41:11 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -79,6 +79,10 @@ compatible_python_is_selected() {
 }
 
 pkg_setup() {
+	# Bug #359731 - Die early if get_libdir fails.
+	[[ -z $(get_libdir) ]] && \
+		die "get_libdir returned an empty string"
+
 	if ! use python3 && ! compatible_python_is_selected ; then
 		ewarn "Attempting to select a compatible default python interpreter"
 		local x success=0
