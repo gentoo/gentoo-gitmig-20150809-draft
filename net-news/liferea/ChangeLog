@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.203 2011/03/21 06:45:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.204 2011/03/21 06:48:52 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> liferea-1.7.4.ebuild:
+  Marked ~ppc64
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> liferea-1.6.5.ebuild:
   ppc/ppc64 stable wrt #355345
