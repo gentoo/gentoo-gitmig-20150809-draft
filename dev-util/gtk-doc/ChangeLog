@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.152 2011/03/13 08:48:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.153 2011/03/21 21:50:49 ranger Exp $
+
+  21 Mar 2011; Brent Baude <ranger@gentoo.org> gtk-doc-1.17.ebuild:
+  Marking gtk-doc-1.17 ~ppc64 for bug 345419
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gtk-doc-1.16.ebuild:
   ppc/ppc64 stable wrt #353436
