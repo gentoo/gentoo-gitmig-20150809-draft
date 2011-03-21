@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-chtheme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/ChangeLog,v 1.25 2011/03/12 21:25:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/ChangeLog,v 1.26 2011/03/21 20:35:03 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gtk-chtheme-0.3.1-r2.ebuild:
+  ppc64 stable wrt #353436
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> gtk-chtheme-0.3.1-r2.ebuild:
   sparc stable wrt #353436

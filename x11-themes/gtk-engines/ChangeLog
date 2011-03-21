@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.180 2011/01/30 19:20:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.181 2011/03/21 20:31:26 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gtk-engines-2.20.2.ebuild:
+  ppc64 stable wrt #353436
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gtk-engines-2.20.2.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #348987
