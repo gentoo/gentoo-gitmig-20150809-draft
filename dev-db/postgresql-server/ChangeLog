@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.114 2011/03/20 15:03:31 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.115 2011/03/21 03:50:18 titanofold Exp $
+
+*postgresql-server-9.0.3-r1 (21 Mar 2011)
+*postgresql-server-8.4.7-r1 (21 Mar 2011)
+*postgresql-server-8.3.14-r1 (21 Mar 2011)
+*postgresql-server-8.2.20-r1 (21 Mar 2011)
+
+  21 Mar 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-server-8.2.20-r1.ebuild, +postgresql-server-8.3.14-r1.ebuild,
+  +postgresql-server-8.4.7-r1.ebuild, +postgresql-server-9.0.3-r1.ebuild:
+  Fixes bugs 274836, 302384, 323683, 325709, 347005, 347223, 353687 and
+  353750.
 
 *postgresql-server-9.1_alpha4 (20 Mar 2011)
 
