@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.75 2011/03/16 10:12:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.76 2011/03/21 21:22:32 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  libgweather-2.30.3.ebuild:
+  ppc64 stable wrt #353436
 
   16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   libgweather-2.30.2.ebuild, libgweather-2.30.3.ebuild:
