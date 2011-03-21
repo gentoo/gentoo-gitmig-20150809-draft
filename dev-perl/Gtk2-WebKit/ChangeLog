@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-WebKit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/ChangeLog,v 1.10 2010/08/15 17:54:18 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/ChangeLog,v 1.11 2011/03/21 23:30:53 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  Gtk2-WebKit-0.08.ebuild:
+  Fix slot-deps on gnome libs
 
   15 Aug 2010; Torsten Veller <tove@gentoo.org> -Gtk2-WebKit-0.07.ebuild:
   Cleanup
