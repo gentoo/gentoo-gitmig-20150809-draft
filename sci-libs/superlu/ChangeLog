@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/superlu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.4 2010/12/28 20:30:18 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.5 2011/03/21 23:49:54 bicatali Exp $
+
+  21 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  files/superlu-4.1-autotools.patch:
+  New upstream tar ball, adjusting the autotools patch
 
 *superlu-4.1-r1 (28 Dec 2010)
 
