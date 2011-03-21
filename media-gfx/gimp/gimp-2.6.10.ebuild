@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.10.ebuild,v 1.3 2011/01/28 18:02:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.10.ebuild,v 1.4 2011/03/21 23:07:11 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -17,14 +17,14 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec curl dbus debug doc exif gnome hal jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
 
-RDEPEND=">=dev-libs/glib-2.18.1
-	>=x11-libs/gtk+-2.12.5
+RDEPEND=">=dev-libs/glib-2.18.1:2
+	>=x11-libs/gtk+-2.12.5:2
 	>=x11-libs/pango-1.18.0
 	x11-libs/libXpm
 	>=media-libs/freetype-2.1.7
 	>=media-libs/fontconfig-2.2.0
 	sys-libs/zlib
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	dev-libs/libxslt
 	x11-misc/xdg-utils
 	x11-themes/hicolor-icon-theme
@@ -35,16 +35,16 @@ RDEPEND=">=dev-libs/glib-2.18.1
 	dbus? ( dev-libs/dbus-glib )
 	hal? ( sys-apps/hal )
 	gnome? ( gnome-base/gvfs )
-	webkit? ( net-libs/webkit-gtk )
-	jpeg? ( virtual/jpeg )
+	webkit? ( net-libs/webkit-gtk:2 )
+	jpeg? ( virtual/jpeg:0 )
 	exif? ( >=media-libs/libexif-0.6.15 )
 	lcms? ( =media-libs/lcms-1* )
 	mng? ( media-libs/libmng )
 	pdf? ( >=app-text/poppler-0.12.3-r3[cairo] )
 	png? ( >=media-libs/libpng-1.2.2 )
-	python?	( >=dev-python/pygtk-2.10.4 )
+	python?	( >=dev-python/pygtk-2.10.4:2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
-	svg? ( >=gnome-base/librsvg-2.8.0 )
+	svg? ( >=gnome-base/librsvg-2.8.0:2 )
 	wmf? ( >=media-libs/libwmf-0.2.8 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
