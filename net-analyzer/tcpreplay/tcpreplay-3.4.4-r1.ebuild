@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4-r1.ebuild,v 1.2 2011/03/14 19:18:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4-r1.ebuild,v 1.3 2011/03/21 08:12:16 tomka Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="debug pcapnav +tcpdump"
 
 DEPEND="

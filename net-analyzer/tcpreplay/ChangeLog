@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.42 2011/03/14 19:18:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.43 2011/03/21 08:12:16 tomka Exp $
+
+  21 Mar 2011; Thomas Kahle <tomka@gentoo.org> tcpreplay-3.4.4-r1.ebuild:
+  x86 stable per bug 358665
 
   14 Mar 2011; Markos Chandras <hwoarang@gentoo.org> tcpreplay-3.4.4-r1.ebuild:
   Stable on amd64 wrt bug #358665
