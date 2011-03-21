@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12583 2011/03/20 22:06:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12584 2011/03/21 20:39:05 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -534,10 +534,6 @@ games-misc/jugglemaster
 app-cdr/pxlinux
 app-cdr/cdrdetect
 app-emulation/basiliskII-jit
-
-# Michael Sterrett <mr_bones_@gentoo.org> (18 Jan 2011)
-# testing mask for new 3.2 series
->=app-admin/syslog-ng-3.2
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (18 Jan 2011)
 # Masked for removel on 18 Feb 2011
