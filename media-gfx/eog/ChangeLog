@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.279 2011/03/20 22:17:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.280 2011/03/21 21:01:37 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> eog-2.32.1.ebuild:
+  ppc64 stable wrt #353436
 
   20 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> eog-2.30.2.ebuild:
   Fix slot-deps on gtk+ and other libs
