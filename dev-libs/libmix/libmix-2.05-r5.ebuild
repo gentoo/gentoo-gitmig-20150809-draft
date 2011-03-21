@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05-r5.ebuild,v 1.2 2011/03/21 12:55:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/libmix-2.05-r5.ebuild,v 1.3 2011/03/21 19:46:50 angelos Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://mixter.void.ru/${P/.}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="static-libs"
 #IUSE="net2 static-libs"
 
