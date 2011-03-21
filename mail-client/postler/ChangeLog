@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/postler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.4 2011/03/21 07:59:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.5 2011/03/21 21:58:55 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> postler-0.1.0.ebuild,
+  postler-0.1.1.ebuild:
+  Fix slot-deps on gnome libs
 
 *postler-0.1.1 (21 Mar 2011)
 

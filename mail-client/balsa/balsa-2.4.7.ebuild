@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.9 2011/02/05 10:08:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.7.ebuild,v 1.10 2011/03/21 21:53:57 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -18,24 +18,24 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="crypt doc gnome gtkhtml +gtkspell kerberos ldap libnotify networkmanager rubrica sqlite ssl webkit xface"
 
 # TODO: esmtp can be optional, webkit/canberra support
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.18
+RDEPEND=">=dev-libs/glib-2.16:2
+	>=x11-libs/gtk+-2.18:2
 	dev-libs/gmime:2.4
 	>=net-libs/libesmtp-1.0.3
 	x11-themes/hicolor-icon-theme
 	x11-themes/gnome-icon-theme
 	net-mail/mailbase
-	dev-libs/libunique
+	dev-libs/libunique:1
 	crypt? ( >=app-crypt/gpgme-1.0 )
 	gnome? (
 		>=gnome-base/orbit-2
 		>=gnome-base/libbonobo-2.0
 		>=gnome-base/libgnome-2.0
 		>=gnome-base/libgnomeui-2.0
-		>=gnome-base/gconf-2.0
+		>=gnome-base/gconf-2.0:2
 		>=gnome-base/gnome-keyring-2.20
-		>=x11-libs/gtksourceview-2 )
-	gtkhtml? ( >=gnome-extra/gtkhtml-3.14 )
+		>=x11-libs/gtksourceview-2:2.0 )
+	gtkhtml? ( >=gnome-extra/gtkhtml-3.14:3.14 )
 	sqlite? ( >=dev-db/sqlite-2.8 )
 	libnotify? ( <x11-libs/libnotify-0.7 )
 	gtkspell? (
@@ -45,9 +45,9 @@ RDEPEND=">=dev-libs/glib-2.16
 	kerberos? ( app-crypt/mit-krb5 )
 	ldap? ( net-nds/openldap )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
-	rubrica? ( dev-libs/libxml2 )
+	rubrica? ( dev-libs/libxml2:2 )
 	ssl? ( dev-libs/openssl )
-	webkit? ( >=net-libs/webkit-gtk-1.1.14 )
+	webkit? ( >=net-libs/webkit-gtk-1.1.14:2 )
 	xface? ( >=media-libs/compface-1.5.1 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool

@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.108 2011/03/12 20:01:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.109 2011/03/21 21:53:57 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> balsa-2.4.7.ebuild,
+  balsa-2.4.8.ebuild:
+  Fix slot-deps on gnome libs
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> balsa-2.4.8.ebuild:
   alpha/sparc stable wrt #353436

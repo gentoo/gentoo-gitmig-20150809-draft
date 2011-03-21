@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.0.ebuild,v 1.3 2011/03/01 04:50:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/postler-0.1.0.ebuild,v 1.4 2011/03/21 21:58:55 nirbheek Exp $
 
 EAPI=3
 
@@ -16,11 +16,11 @@ KEYWORDS="~amd64"
 IUSE="ayatana"
 
 RDEPEND=">=dev-libs/glib-2.26:2
-	dev-libs/libunique
+	dev-libs/libunique:1
 	dev-libs/openssl
 	mail-mta/msmtp
 	media-libs/libcanberra
-	net-libs/webkit-gtk
+	net-libs/webkit-gtk:2
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/libnotify
 	ayatana? ( dev-libs/libindicate )"
