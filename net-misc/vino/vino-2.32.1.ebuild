@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.1.ebuild,v 1.6 2011/03/21 21:18:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.32.1.ebuild,v 1.7 2011/03/21 22:21:46 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -17,10 +17,10 @@ IUSE="avahi crypt ipv6 jpeg gnome-keyring libnotify networkmanager ssl +telepath
 
 RDEPEND=">=dev-libs/glib-2.17:2
 	>=x11-libs/gtk+-2.20:2
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=sys-apps/dbus-1.2.3
 	>=net-libs/libsoup-2.24:2.4
-	>=dev-libs/libunique-1:1
+	dev-libs/libunique:1
 	dev-libs/dbus-glib
 	x11-libs/libXext
 	x11-libs/libXtst

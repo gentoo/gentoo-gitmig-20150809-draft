@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.28.2.ebuild,v 1.12 2010/11/08 22:59:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.28.2.ebuild,v 1.13 2011/03/21 22:21:46 nirbheek Exp $
 
 EAPI="2"
 
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="avahi crypt ipv6 jpeg gnome-keyring libnotify networkmanager ssl +telepathy zlib"
 
-RDEPEND=">=dev-libs/glib-2.17
-	>=x11-libs/gtk+-2.16
-	>=gnome-base/gconf-2
+RDEPEND=">=dev-libs/glib-2.17:2
+	>=x11-libs/gtk+-2.16:2
+	>=gnome-base/gconf-2:2
 	>=sys-apps/dbus-1.2.3
 	>=net-libs/libsoup-2.24:2.4
-	>=dev-libs/libunique-1
+	dev-libs/libunique:1
 	dev-libs/dbus-glib
 	x11-libs/libXext
 	x11-libs/libXtst
