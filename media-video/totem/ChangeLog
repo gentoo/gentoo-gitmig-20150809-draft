@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.315 2011/03/21 21:29:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.316 2011/03/21 22:14:04 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> totem-2.30.2.ebuild,
+  totem-2.32.0.ebuild:
+  Fix slot-deps on gnome libs
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> totem-2.32.0.ebuild:
   ppc64 stable wrt #353436

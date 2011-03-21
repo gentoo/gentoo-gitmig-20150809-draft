@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0.ebuild,v 1.13 2011/03/21 21:29:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0.ebuild,v 1.14 2011/03/21 22:14:04 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -27,22 +27,22 @@ IUSE="bluetooth debug doc galago iplayer lirc nautilus nsplugin +python tracker 
 # vala ( dev-lang/vala ) requires 0.7.5
 RDEPEND=">=dev-libs/glib-2.25.11:2
 	>=x11-libs/gtk+-2.21.8:2
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=dev-libs/totem-pl-parser-2.30.2
 	>=x11-themes/gnome-icon-theme-2.16
 	x11-libs/cairo
-	>=dev-libs/libxml2-2.6
+	>=dev-libs/libxml2-2.6:2
 	>=dev-libs/dbus-glib-0.82
-	>=media-libs/gstreamer-0.10.30
-	>=media-libs/gst-plugins-good-0.10
-	>=media-libs/gst-plugins-base-0.10.30
-	>=media-plugins/gst-plugins-gconf-0.10
+	>=media-libs/gstreamer-0.10.30:0.10
+	>=media-libs/gst-plugins-good-0.10:0.10
+	>=media-libs/gst-plugins-base-0.10.30:0.10
+	>=media-plugins/gst-plugins-gconf-0.10:0.10
 
-	>=media-plugins/gst-plugins-taglib-0.10
-	>=media-plugins/gst-plugins-gio-0.10
-	>=media-plugins/gst-plugins-pango-0.10
-	>=media-plugins/gst-plugins-x-0.10
-	>=media-plugins/gst-plugins-meta-0.10-r2
+	>=media-plugins/gst-plugins-taglib-0.10:0.10
+	>=media-plugins/gst-plugins-gio-0.10:0.10
+	>=media-plugins/gst-plugins-pango-0.10:0.10
+	>=media-plugins/gst-plugins-x-0.10:0.10
+	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 
 	dev-libs/libunique:1
 	x11-libs/libICE
@@ -62,19 +62,19 @@ RDEPEND=">=dev-libs/glib-2.25.11:2
 		dev-python/beautifulsoup )
 	lirc? ( app-misc/lirc )
 	nautilus? ( >=gnome-base/nautilus-2.10 )
-	nsplugin? ( media-plugins/gst-plugins-soup )
+	nsplugin? ( media-plugins/gst-plugins-soup:0.10 )
 	python? (
 		>=dev-python/pygtk-2.12:2
 		dev-python/pyxdg
-		dev-python/gst-python
+		dev-python/gst-python:0.10
 		dev-python/dbus-python
-		dev-python/gconf-python )
+		dev-python/gconf-python:2 )
 	tracker? ( >=app-misc/tracker-0.8.1 )
 	upnp? ( media-video/coherence )
 	youtube? (
 		>=dev-libs/libgdata-0.4
 		net-libs/libsoup:2.4
-		media-plugins/gst-plugins-soup )"
+		media-plugins/gst-plugins-soup:0.10 )"
 # FIXME: freezes totem
 #	zeroconf? ( >=net-libs/libepc-0.3 )
 DEPEND="${RDEPEND}
