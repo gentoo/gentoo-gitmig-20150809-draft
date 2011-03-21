@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/flickrnet-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/ChangeLog,v 1.5 2010/09/21 12:24:31 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/ChangeLog,v 1.6 2011/03/21 20:21:34 ranger Exp $
+
+  21 Mar 2011; Brent Baude <ranger@gentoo.org> flickrnet-bin-2.2-r1.ebuild:
+  Marking flickrnet-bin-2.2-r1 ppc stable for bug 359651
 
   21 Sep 2010; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Add dotnet as backup herd.
