@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.70 2011/01/30 19:10:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.71 2011/03/21 21:18:18 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> vinagre-2.30.3.ebuild:
+  ppc64 stable wrt #353436
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> vinagre-2.30.3.ebuild:
   alpha/ia64/sparc stable wrt #348987
