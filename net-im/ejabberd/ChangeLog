@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ejabberd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.89 2010/12/20 13:52:23 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.90 2011/03/21 17:34:16 signals Exp $
+
+  21 Mar 2011; Kevin McCarthy <signals@gentoo.org> ejabberd-2.1.5.ebuild,
+  ejabberd-2.1.5-r3.ebuild, ejabberd-2.1.6.ebuild:
+  RDEPEND virtual/pam if pam use flag set. WRT #351932
 
 *ejabberd-2.1.6 (20 Dec 2010)
 
