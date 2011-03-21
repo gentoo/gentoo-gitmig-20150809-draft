@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/libgda-python-2.25.3.ebuild,v 1.8 2011/02/26 13:21:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgda-python/libgda-python-2.25.3.ebuild,v 1.9 2011/03/21 21:06:36 nirbheek Exp $
 
 EAPI="2"
 G_PY_PN="gnome-python-extras"
@@ -21,6 +21,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=">=gnome-extra/libgda-4
-	>=dev-python/libbonobo-python-2.22.1"
+RDEPEND=">=gnome-extra/libgda-4:4
+	>=dev-python/libbonobo-python-2.22.1:2"
 DEPEND="${RDEPEND}"
