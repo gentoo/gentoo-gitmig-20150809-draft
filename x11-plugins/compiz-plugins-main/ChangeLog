@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.14 2011/02/26 22:51:00 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.15 2011/03/21 19:50:33 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -compiz-plugins-main-0.8.4.ebuild, -compiz-plugins-main-0.8.4-r1.ebuild,
+  -compiz-plugins-main-0.8.6.ebuild, compiz-plugins-main-0.8.6-r1.ebuild:
+  Fix slot-deps on gtk+ and other libs, remove old
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org>
   compiz-plugins-main-0.8.4.ebuild, compiz-plugins-main-0.8.4-r1.ebuild,
