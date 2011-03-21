@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/giggle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.7 2010/07/12 21:01:41 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.8 2011/03/21 23:16:29 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -giggle-0.4.ebuild,
+  -giggle-0.4.95.ebuild, -giggle-0.4.96.ebuild, giggle-0.5.ebuild:
+  Fix slot-deps on gnome libs
 
   12 Jul 2010; Markos Chandras <hwoarang@gentoo.org> giggle-0.5.ebuild:
   Stable on amd64 wrt bug #327341

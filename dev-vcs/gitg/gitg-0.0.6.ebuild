@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.6.ebuild,v 1.4 2010/07/17 11:21:22 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.0.6.ebuild,v 1.5 2011/03/21 23:15:13 nirbheek Exp $
 
 EAPI="2"
 
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.16
-	>=x11-libs/gtksourceview-2.8
-	>=gnome-base/gconf-2.10
+RDEPEND=">=dev-libs/glib-2.16:2
+	>=x11-libs/gtk+-2.16:2
+	>=x11-libs/gtksourceview-2.8:2.0
+	>=gnome-base/gconf-2.10:2
 	dev-vcs/git"
 
 DEPEND="${RDEPEND}

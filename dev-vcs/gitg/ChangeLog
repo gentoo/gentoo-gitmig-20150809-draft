@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.8 2011/02/25 11:06:59 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.9 2011/03/21 23:15:13 nirbheek Exp $
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -gitg-0.0.5.ebuild,
+  gitg-0.0.6.ebuild, -gitg-0.0.8.ebuild, gitg-0.1.0.ebuild:
+  Fix slot-deps on gnome libs
 
 *gitg-0.1.0 (25 Feb 2011)
 

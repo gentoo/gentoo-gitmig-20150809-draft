@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.1.0.ebuild,v 1.1 2011/02/25 11:07:00 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.1.0.ebuild,v 1.2 2011/03/21 23:15:13 nirbheek Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.26:2
 	>=x11-libs/gtk+-2.18:2
 	>=x11-libs/gtksourceview-2.8:2.0
-	>=gnome-base/gconf-2.10
+	>=gnome-base/gconf-2.10:2
 	>=gnome-base/gsettings-desktop-schemas-0.1.1
 	dev-vcs/git"
 
