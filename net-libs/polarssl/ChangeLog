@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/polarssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.18 2011/03/20 18:45:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.19 2011/03/21 11:41:12 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> polarssl-0.14.2.ebuild:
+  Stable on amd64 wrt bug #358783
 
   20 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> polarssl-0.14.2.ebuild:
   ppc64 stable wrt #358783
