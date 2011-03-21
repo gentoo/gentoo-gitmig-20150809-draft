@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.2.2.ebuild,v 1.8 2010/06/10 03:04:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.2.2.ebuild,v 1.9 2011/03/21 14:23:54 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,18 +11,16 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
-IUSE="X"
+IUSE=""
 
 RDEPEND="sys-libs/libraw1394
-		X? ( x11-libs/libSM x11-libs/libXv )"
+	x11-libs/libSM
+	x11-libs/libXv"
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 src_unpack() {
 	unpack ${A}; cd "${S}"
-	if ! use X; then
-		epatch "${FILESDIR}"/${PN}-1.2.1-nox11.patch
-	fi
 	epatch "${FILESDIR}"/${PN}-disable-raw-capture.patch
 }
 

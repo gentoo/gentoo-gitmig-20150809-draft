@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libdc1394
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.53 2010/06/10 03:04:43 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.54 2011/03/21 14:23:54 flameeyes Exp $
+
+  21 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/libdc1394-1.2.1-nox11.patch, libdc1394-1.2.2.ebuild:
+  QA: the nox11 patch failed to apply and was totally bogus (patched
+  Makefile.in only); drop the X USE flag, forcing it enabled, which is the only
+  working configuration for SLOT=1 ebuild.
 
   10 Jun 2010; Jeroen Roovers <jer@gentoo.org> libdc1394-1.2.2.ebuild,
   libdc1394-2.1.2.ebuild:
