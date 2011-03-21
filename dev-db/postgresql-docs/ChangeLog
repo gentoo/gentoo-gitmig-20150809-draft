@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.92 2011/03/20 13:55:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.93 2011/03/21 01:54:42 titanofold Exp $
+
+*postgresql-docs-9.0.3-r1 (21 Mar 2011)
+*postgresql-docs-8.4.7-r1 (21 Mar 2011)
+*postgresql-docs-8.3.14-r1 (21 Mar 2011)
+*postgresql-docs-8.2.20-r1 (21 Mar 2011)
+
+  21 Mar 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-docs-8.2.20-r1.ebuild, +postgresql-docs-8.3.14-r1.ebuild,
+  +postgresql-docs-8.4.7-r1.ebuild, +postgresql-docs-9.0.3-r1.ebuild:
+  Move to EAPI4. Fixes bug 331033.
 
 *postgresql-docs-9.1_alpha4 (20 Mar 2011)
 
