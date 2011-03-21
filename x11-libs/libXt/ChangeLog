@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.93 2011/03/15 21:13:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.94 2011/03/21 13:41:29 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> libXt-1.1.1.ebuild:
+  Stable on amd64 wrt bug #359059
 
   15 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libXt-1.1.1.ebuild:
   ppc/ppc64 stable wrt #359059

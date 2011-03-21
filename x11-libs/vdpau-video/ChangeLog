@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vdpau-video
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.12 2011/02/27 13:48:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.13 2011/03/21 13:41:41 hwoarang Exp $
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> vdpau-video-0.7.3.ebuild:
+  Stable on amd64 wrt bug #359059
 
   27 Feb 2011; Alexis Ballier <aballier@gentoo.org>
   -vdpau-video-0.7.3_pre6.ebuild:
