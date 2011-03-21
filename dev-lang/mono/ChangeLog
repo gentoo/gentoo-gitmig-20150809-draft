@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.215 2011/03/20 19:01:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.216 2011/03/21 19:34:33 pacho Exp $
+
+*mono-2.10.1-r2 (21 Mar 2011)
+
+  21 Mar 2011; Pacho Ramos <pacho@gentoo.org> +mono-2.10.1-r2.ebuild,
+  +files/mono-2.10.1-ppc-len.patch:
+  Remove old patches as recommended by upstream, they also look unneeded.
+  Include upstream fix to allow mono-basic compilation on ppc.
 
   20 Mar 2011; Pacho Ramos <pacho@gentoo.org> mono-2.10.1-r1.ebuild:
   Fix building on ppc (bug #359515 by Brent Baude).
