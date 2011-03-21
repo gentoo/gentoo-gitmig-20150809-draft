@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.266 2011/01/30 19:21:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.267 2011/03/21 21:11:28 xarthisius Exp $
+
+  21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> metacity-2.30.3.ebuild:
+  ppc64 stable wrt #353436
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> metacity-2.30.3.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #348987
