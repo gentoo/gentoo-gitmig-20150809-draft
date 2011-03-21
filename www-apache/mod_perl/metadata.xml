@@ -4,7 +4,7 @@
 	<herd>apache</herd>
 	<herd>perl</herd>
 	<maintainer>
-		<email>perl@gentoo.org</email>
-		<description>Primary Maintainer</description>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
 	</maintainer>
 </pkgmetadata>

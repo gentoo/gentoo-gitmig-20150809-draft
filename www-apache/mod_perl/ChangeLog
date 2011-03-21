@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.87 2011/03/15 16:56:16 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.88 2011/03/21 21:07:16 idl0r Exp $
+
+  21 Mar 2011; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Add myself as primary maintainer
 
 *mod_perl-2.0.5 (14 Mar 2011)
 
