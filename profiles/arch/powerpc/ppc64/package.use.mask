@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.37 2011/02/19 13:53:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.38 2011/03/22 21:11:51 xarthisius Exp $
 
-# Alexey Shvetsov <alexxy#gentoo.org> (26 Jan 2011)
+# Kacper Kowalik <xarthisius@gentoo.org> (22 Mar 2011)
+# Mask polkit[kde] wrt #354509
+sys-auth/polkit kde
+
+# Alexey Shvetsov <alexxy@gentoo.org> (26 Jan 2011)
 # Mask gps for marble
 kde-base/marble	gps
 
