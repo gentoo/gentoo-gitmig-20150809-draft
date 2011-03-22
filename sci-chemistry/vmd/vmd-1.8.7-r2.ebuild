@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.6 2011/03/22 09:46:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.7 2011/03/22 13:53:26 jlec Exp $
 
 EAPI="3"
 
@@ -28,13 +28,13 @@ DEPEND="
 	)
 	dev-lang/perl
 	dev-python/numpy
-	sci-biology/stride
 	sci-libs/netcdf
 	virtual/opengl
 	>=x11-libs/fltk-1.1.10-r2:1
 	x11-libs/libXft"
 
 RDEPEND="${DEPEND}
+	sci-biology/stride
 	x11-terms/xterm
 	msms? ( sci-chemistry/msms-bin )
 	povray? ( media-gfx/povray )
