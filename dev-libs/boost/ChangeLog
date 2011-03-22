@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.216 2011/03/22 09:51:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.217 2011/03/22 16:25:54 hwoarang Exp $
+
+  22 Mar 2011; Markos Chandras <hwoarang@gentoo.org> boost-1.46.1.ebuild:
+  Add lambda patch back
 
 *boost-1.46.1 (22 Mar 2011)
 

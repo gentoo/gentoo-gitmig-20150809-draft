@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1.ebuild,v 1.1 2011/03/22 09:51:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1.ebuild,v 1.2 2011/03/22 16:25:54 hwoarang Exp $
 
 EAPI="2"
 
@@ -85,6 +85,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/remove-toolset-${PV}.patch"
+	epatch "${FILESDIR}/${PN}-1.45.0-lambda_bind.patch"
 
 	# This enables building the boost.random library with /dev/urandom support
 	if [[ -e /dev/urandom ]] ; then
