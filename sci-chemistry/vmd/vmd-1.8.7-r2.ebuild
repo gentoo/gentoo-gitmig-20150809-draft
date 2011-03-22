@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.5 2011/03/20 20:01:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.6 2011/03/22 09:46:20 jlec Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ DEPEND="
 	sci-biology/stride
 	sci-libs/netcdf
 	virtual/opengl
-	x11-libs/fltk:1
+	>=x11-libs/fltk-1.1.10-r2:1
 	x11-libs/libXft"
 
 RDEPEND="${DEPEND}
