@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.295 2011/03/09 23:26:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.296 2011/03/22 14:39:59 arfrever Exp $
+
+  22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnutls-2.10.5.ebuild, gnutls-2.11.7.ebuild:
+  Update dependencies (bug #358625).
 
 *gnutls-2.11.7 (09 Mar 2011)
 

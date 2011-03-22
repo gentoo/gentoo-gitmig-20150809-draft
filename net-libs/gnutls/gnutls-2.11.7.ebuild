@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.11.7.ebuild,v 1.1 2011/03/09 23:26:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.11.7.ebuild,v 1.2 2011/03/22 14:39:59 arfrever Exp $
 
 EAPI="3"
 
@@ -35,7 +35,7 @@ RDEPEND=">=dev-libs/libtasn1-0.3.4
 	guile? ( >=dev-scheme/guile-1.8[networking] )
 	nettle? ( >=dev-libs/nettle-2.1[gmp] )
 	!nettle? ( >=dev-libs/libgcrypt-1.4.0 )
-	zlib? ( >=sys-libs/zlib-1.1 )
+	zlib? ( >=sys-libs/zlib-1.2.3.1 )
 	!bindist? ( lzo? ( >=dev-libs/lzo-2 ) )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
