@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.43 2011/01/30 18:46:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.44 2011/03/22 19:40:32 ssuominen Exp $
+
+  22 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gecko-mediaplayer-1.0.0.ebuild:
+  Fix compability with net-libs/xulrunner >= 2.
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gecko-mediaplayer-1.0.0.ebuild:
