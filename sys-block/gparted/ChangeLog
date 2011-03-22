@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.89 2011/01/29 16:34:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.90 2011/03/22 22:57:49 eva Exp $
+
+*gparted-0.8.0 (22 Mar 2011)
+
+  22 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> +gparted-0.8.0.ebuild:
+  Version bump. Add missing dependencies for hfs support, bug #348274.
 
   29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> gparted-0.7.0.ebuild:
   Replace USE="gnome xfce" with USE="gtk" wrt #353121.
