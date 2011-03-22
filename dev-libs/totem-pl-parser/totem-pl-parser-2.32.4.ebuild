@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3-r1.ebuild,v 1.3 2011/03/18 17:01:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.4.ebuild,v 1.1 2011/03/22 00:28:39 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -54,12 +54,6 @@ src_prepare() {
 	sed -e 's:\(g_test_add_func.*/parser/resolution.*\):/*\1*/:' \
 		-e 's:\(g_test_add_func.*/parser/parsing/itms_link.*\):/*\1*/:' \
 		-i plparse/tests/parser.c || die "sed failed"
-
-	# Fix --enable-quvi option
-	epatch "${FILESDIR}/${P}-fix-quvi.patch"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	AT_M4DIR=${WORKDIR} eautoreconf
 }
 
 src_test() {

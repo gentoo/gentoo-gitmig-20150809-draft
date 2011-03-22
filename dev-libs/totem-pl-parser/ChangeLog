@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.88 2011/03/21 21:24:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.89 2011/03/22 00:28:39 nirbheek Exp $
+
+*totem-pl-parser-2.32.4 (22 Mar 2011)
+
+  22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -totem-pl-parser-2.32.3-r1.ebuild,
+  -files/totem-pl-parser-2.32.3-fix-quvi.patch,
+  +totem-pl-parser-2.32.4.ebuild:
+  Bump to 2.32.4, remove old
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   totem-pl-parser-2.32.3.ebuild:
