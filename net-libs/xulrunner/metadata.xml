@@ -8,7 +8,7 @@
 		Allows for greater stability in case of plugin crashes</flag>
     <flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
         installation with secure-delete enabled</flag>
-    <flag name="webm">Use system libvpx<pkg>media-libs/libvpx</pkg></flag>
+    <flag name="webm">Use system libvpx <pkg>media-libs/libvpx</pkg></flag>
     <flag name="crashreporter">Enable crash reporter for bugs</flag>
   </use>
 </pkgmetadata>
