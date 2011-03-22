@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/msms-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/ChangeLog,v 1.4 2010/10/30 15:01:28 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/msms-bin/ChangeLog,v 1.5 2011/03/22 08:10:55 jlec Exp $
+
+  22 Mar 2011; Justin Lecher <jlec@gentoo.org> msms-bin-2.6.1-r1.ebuild:
+  Corrected Download page
 
   30 Oct 2010; Justin Lecher <jlec@gentoo.org> msms-bin-2.6.1-r1.ebuild:
   Keyworded for ~-linux prefix
