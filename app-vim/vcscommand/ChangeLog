@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vcscommand
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.18 2011/03/17 19:15:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.19 2011/03/22 20:52:02 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> vcscommand-1.99.42.ebuild:
+  stable ppc, bug 356665
 
   17 Mar 2011; Thomas Kahle <tomka@gentoo.org> vcscommand-1.99.42.ebuild:
   x86 stable per bug 356665
