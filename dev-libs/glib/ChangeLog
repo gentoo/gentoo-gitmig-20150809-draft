@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.451 2011/03/21 19:58:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.452 2011/03/22 00:50:05 nirbheek Exp $
+
+*glib-2.28.4 (22 Mar 2011)
+
+  22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -glib-2.24.2.ebuild,
+  -glib-2.26.1.ebuild, -glib-2.28.2.ebuild, +glib-2.28.4.ebuild:
+  Bump to 2.28.4: doc fixes, translation updates
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> glib-2.26.1-r1.ebuild:
   ppc64 stable wrt #353436
