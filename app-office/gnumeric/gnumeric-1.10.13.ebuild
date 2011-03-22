@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.7 2011/03/21 21:19:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.13.ebuild,v 1.8 2011/03/22 19:56:44 ranger Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.gnome.org/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="gnome perl python"
 # Missing gnome-extra/libgnomedb required version in tree
