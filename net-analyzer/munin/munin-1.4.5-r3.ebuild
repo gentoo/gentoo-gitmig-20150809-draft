@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.5-r3.ebuild,v 1.1 2011/03/22 08:37:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.5-r3.ebuild,v 1.2 2011/03/22 20:58:57 darkside Exp $
 
 EAPI=2
 
@@ -114,8 +114,8 @@ src_install() {
 	# make sure we've got everything in the correct directory
 	insinto /var/lib/munin
 	newins "${FILESDIR}"/${PN}-1.3.3-crontab crontab || die
-	newinitd "${FILESDIR}"/munin-node_init.d_1.4.5-r2 munin-node || die
-	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.5-r2 munin-node || die
+	newinitd "${FILESDIR}"/munin-node_init.d_1.4.5-r3 munin-node || die
+	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.5-r3 munin-node || die
 	dodoc README ChangeLog INSTALL logo.eps logo.svg build/resources/apache* \
 		|| die
 

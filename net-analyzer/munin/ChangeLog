@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.49 2011/03/22 08:37:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.50 2011/03/22 20:58:57 darkside Exp $
+
+  22 Mar 2011; Jeremy Olexa <darkside@gentoo.org> munin-1.4.5-r3.ebuild:
+  fix init/conf filename, bug 359997
 
 *munin-1.4.5-r3 (22 Mar 2011)
 
