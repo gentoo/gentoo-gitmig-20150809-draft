@@ -1,0 +1,45 @@
+ fltk-config.in |   17 +++++++++++++++++
+ 1 files changed, 17 insertions(+), 0 deletions(-)
+
+diff --git a/fltk-config.in b/fltk-config.in
+index b716d35..2251734 100755
+--- a/fltk-config.in
++++ b/fltk-config.in
+@@ -118,6 +118,8 @@ Options telling what information we request:
+ 	[--ldstaticflags] return flags to link against static FLTK library
+                                           even if there are DSOs installed
+ 	[--libs]          return FLTK libraries full path for dependencies
++	[--prefix]        return FLTK install time --prefix directory
++	[--includedir]    return FLTK install time include directory
+ 
+ Option to compile and link an application:
+ 	[-g]              compile the program with debugging information
+@@ -189,6 +191,12 @@ do
+ 	--libs)
+ 	    echo_libs=yes
+ 	    ;;
++	--prefix)
++	    echo_prefix=yes
++	    ;;
++	--includedir)
++	    echo_includedir=yes
++	    ;;
+ 	-g)
+ 	    debug=-g
+ 	    ;;
+@@ -337,6 +345,15 @@ if test "$echo_libs" = "yes"; then
+             fi
+ 	done
+     fi
++    echo $USELIBS
++fi
++
++if test "$echo_prefix" = "yes"; then
++    echo $prefix
++fi
++
++if test "$echo_includedir" = "yes"; then
++    echo $includedir
+ fi
+ 
+ #
