@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.82 2011/03/21 20:10:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.83 2011/03/22 19:06:17 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gob-2.0.18.ebuild:
+  Marking gob-2.0.18 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gob-2.0.18.ebuild:
   ppc64 stable wrt #353436
