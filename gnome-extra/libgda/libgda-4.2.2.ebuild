@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.2.ebuild,v 1.7 2011/03/21 20:47:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.2.ebuild,v 1.8 2011/03/22 19:30:35 ranger Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2 LGPL-2"
 # MDB support currently works with CVS only, so disable it in the meantime
 IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json mysql oci8 postgres sourceview ssl"
 SLOT="4"
-KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 # FIXME: sqlite is automagic, but maybe it is a hard-dep
 # FIXME: autoconf is a hell of inconsistencies
