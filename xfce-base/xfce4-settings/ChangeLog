@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.74 2011/03/22 10:33:20 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.75 2011/03/22 20:47:11 xarthisius Exp $
+
+  22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xfce4-settings-4.8.1.ebuild:
+  ppc/ppc64 stable wrt #358407
 
   22 Mar 2011; Thomas Kahle <tomka@gentoo.org> xfce4-settings-4.8.1.ebuild:
   x86 stable per bug 358407

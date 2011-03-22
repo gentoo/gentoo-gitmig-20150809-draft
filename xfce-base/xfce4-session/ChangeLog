@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.138 2011/03/22 10:38:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.139 2011/03/22 20:45:54 xarthisius Exp $
+
+  22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xfce4-session-4.8.1.ebuild:
+  ppc/ppc64 stable wrt #358407
 
   22 Mar 2011; Thomas Kahle <tomka@gentoo.org> xfce4-session-4.8.1.ebuild:
   x86 stable per bug 358407
