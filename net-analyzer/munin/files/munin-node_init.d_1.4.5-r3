@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/files/munin-node_init.d_1.4.5-r2,v 1.1 2011/03/16 06:29:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/files/munin-node_init.d_1.4.5-r3,v 1.1 2011/03/22 08:37:04 robbat2 Exp $
 
 [ -z "${NAME}" ] && NAME="munin-node"
 [ -z "${PIDFILE}" ] && PIDFILE=/var/run/munin/$NAME.pid
