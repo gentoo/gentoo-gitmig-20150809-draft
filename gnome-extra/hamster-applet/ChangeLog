@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/hamster-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.41 2011/03/21 21:40:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.42 2011/03/22 19:30:00 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> hamster-applet-2.32.1.ebuild:
+  Marking hamster-applet-2.32.1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   hamster-applet-2.32.1.ebuild:
