@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-verve-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/ChangeLog,v 1.9 2011/03/21 23:36:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/ChangeLog,v 1.10 2011/03/22 10:50:55 tomka Exp $
+
+  22 Mar 2011; Thomas Kahle <tomka@gentoo.org> xfce4-verve-plugin-1.0.0.ebuild:
+  x86 stable per bug 358407
 
   21 Mar 2011; Markus Meier <maekke@gentoo.org>
   xfce4-verve-plugin-1.0.0.ebuild:

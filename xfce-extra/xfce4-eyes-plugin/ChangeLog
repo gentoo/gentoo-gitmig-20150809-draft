@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-eyes-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes-plugin/ChangeLog,v 1.5 2011/03/21 23:26:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-eyes-plugin/ChangeLog,v 1.6 2011/03/22 10:43:21 tomka Exp $
+
+  22 Mar 2011; Thomas Kahle <tomka@gentoo.org> xfce4-eyes-plugin-4.4.1.ebuild:
+  x86 stable per bug 358407
 
   21 Mar 2011; Markus Meier <maekke@gentoo.org> xfce4-eyes-plugin-4.4.1.ebuild:
   arm stable, bug #358407
