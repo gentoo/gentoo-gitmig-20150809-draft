@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.91 2011/03/22 15:05:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.92 2011/03/22 19:03:10 angelos Exp $
+
+  22 Mar 2011; Christoph Mende <angelos@gentoo.org> ejabberd-2.1.6.ebuild:
+  Stable on amd64 wrt bug #359961
 
   22 Mar 2011; Peter Volkov <pva@gentoo.org> ejabberd-2.1.5.ebuild,
   -ejabberd-2.1.5-r3.ebuild, ejabberd-2.1.6.ebuild:
