@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r1.ebuild,v 1.9 2008/11/26 22:11:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r1.ebuild,v 1.10 2011/03/22 20:56:27 ulm Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,13 +17,13 @@ SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 sparc x86 ~s390"
 IUSE="selinux tcpd readline pcre"
 
-RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
+DEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	selinux? ( sec-policy/selinux-tftpd )
 	readline? ( sys-libs/readline )
 	pcre? ( dev-libs/libpcre )"
-DEPEND="${RDEPEND}
-	!virtual/tftp"
-PROVIDE="virtual/tftp"
+RDEPEND="${DEPEND}
+	!net-ftp/netkit-tftp
+	!net-ftp/tftp-hpa"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -36,7 +36,7 @@ src_unpack() {
 	# remove upstream's broken CFLAGS
 	sed -i.orig -e \
 	  '/^CFLAGS="-g -Wall -D_REENTRANT"/s,".*","",g' \
-	  ${S}/configure
+	  "${S}"/configure
 }
 
 src_compile() {
@@ -56,9 +56,9 @@ src_install() {
 	newconfd "${FILESDIR}"/atftp.confd atftp
 
 	dodoc README* BUGS FAQ Changelog INSTALL TODO
-	dodoc ${S}/docs/*
+	dodoc "${S}"/docs/*
 
 	docinto test
-	cd ${S}/test
+	cd "${S}"/test
 	dodoc load.sh mtftp.conf pcre_pattern.txt test.sh test_suite.txt
 }
