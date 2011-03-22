@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.8.ebuild,v 1.7 2011/03/21 21:53:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.8.ebuild,v 1.8 2011/03/22 19:34:11 ranger Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="http://pawsa.fedorapeople.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 # Doesn't currently build with -gnome
 IUSE="crypt gnome gtkhtml +gtkspell kerberos ldap libnotify networkmanager rubrica sqlite ssl webkit xface"
 
