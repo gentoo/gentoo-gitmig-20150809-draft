@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xmonad-contrib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.9 2010/02/24 17:34:57 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/ChangeLog,v 1.10 2011/03/22 19:22:48 angelos Exp $
+
+  22 Mar 2011; Christoph Mende <angelos@gentoo.org> xmonad-contrib-0.9.ebuild:
+  Stable on amd64 wrt bug #359843
 
   24 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
   xmonad-contrib-0.8.1.ebuild:

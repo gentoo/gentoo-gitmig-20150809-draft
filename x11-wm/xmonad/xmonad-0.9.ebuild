@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.9.ebuild,v 1.2 2010/07/01 19:10:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.9.ebuild,v 1.3 2011/03/22 19:21:55 angelos Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
+EAPI=3
 inherit haskell-cabal eutils
 
 DESCRIPTION="A tiling window manager"
@@ -11,13 +12,13 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.6.1
 		>=dev-haskell/cabal-1.2
-		dev-haskell/mtl
-		>=dev-haskell/x11-1.4.6.1"
+		dev-haskell/mtl[profile?]
+		>=dev-haskell/x11-1.4.6.1[profile?]"
 RDEPEND="${DEPEND}"
 
 SAMPLE_CONFIG="xmonad.hs"
