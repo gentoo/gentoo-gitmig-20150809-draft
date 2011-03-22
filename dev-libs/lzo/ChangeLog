@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.55 2011/02/21 08:15:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.56 2011/03/22 20:41:40 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> lzo-2.04.ebuild:
+  Marking lzo-2.04 ppc for bug 353842
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> lzo-2.04.ebuild:
   Stable for HPPA (bug #353842).

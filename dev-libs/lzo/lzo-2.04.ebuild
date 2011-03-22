@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.04.ebuild,v 1.5 2011/02/21 08:15:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.04.ebuild,v 1.6 2011/03/22 20:41:40 ranger Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.oberhumer.com/opensource/lzo/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="examples static-libs"
 
 src_configure() {
