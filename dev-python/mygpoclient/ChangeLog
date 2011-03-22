@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mygpoclient
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/ChangeLog,v 1.1 2010/10/31 17:32:33 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/ChangeLog,v 1.2 2011/03/22 15:11:30 arfrever Exp $
+
+  22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mygpoclient-1.5.ebuild:
+  Require dev-python/simplejson. Disable tests requiring network connection
+  (bug #359775). Don't install tests.
 
 *mygpoclient-1.5 (31 Oct 2010)
 
