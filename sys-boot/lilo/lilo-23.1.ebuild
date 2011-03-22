@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.1.ebuild,v 1.1 2010/11/05 05:48:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.1.ebuild,v 1.2 2011/03/22 16:10:58 jer Exp $
 
 EAPI="2"
 
@@ -26,8 +26,6 @@ DEPEND=">=sys-devel/bin86-0.15.5"
 RDEPEND="device-mapper? ( || (
 	>=sys-fs/lvm2-2.02.45
 	>=sys-fs/device-mapper-1.02.12 ) )"
-
-PROVIDE="virtual/bootloader"
 
 S="${WORKDIR}/${PN}-23.0"
 
