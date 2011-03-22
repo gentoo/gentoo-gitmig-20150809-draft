@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>proaudio</herd>
-	<longdescription lang="en">
-		Libdjconsole is a driver for the DJ Console, built on top of libusb
-	</longdescription>
-</pkgmetadata>
-
