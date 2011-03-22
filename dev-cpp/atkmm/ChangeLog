@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/atkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.12 2011/03/22 04:52:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.13 2011/03/22 19:58:18 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> atkmm-2.22.2.ebuild:
+  Marking atkmm-2.22.2 ppc stable for bug 353436
 
   22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   atkmm-2.22.2-r1.ebuild:
