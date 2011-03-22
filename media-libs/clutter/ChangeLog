@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.27 2011/03/22 00:29:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.28 2011/03/22 20:12:28 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> clutter-1.2.14.ebuild:
+  Marking clutter-1.2.14 ppc stable for bug 353436
 
 *clutter-1.6.10 (22 Mar 2011)
 

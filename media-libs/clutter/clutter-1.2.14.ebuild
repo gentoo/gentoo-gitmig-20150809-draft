@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.14.ebuild,v 1.8 2011/03/21 20:27:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.14.ebuild,v 1.9 2011/03/22 20:12:28 ranger Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit clutter
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 SLOT="1.0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="debug doc +gtk +introspection"
 
 RDEPEND=">=dev-libs/glib-2.16
