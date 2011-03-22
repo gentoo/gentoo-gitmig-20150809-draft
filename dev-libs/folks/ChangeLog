@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.7 2011/03/12 21:32:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.8 2011/03/22 18:49:57 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> folks-0.2.1.ebuild:
+  Marking folks-0.2.1 ppc stable for bug 353436
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> folks-0.2.1.ebuild:
   alpha/ia64/sparc stable wrt #353436
