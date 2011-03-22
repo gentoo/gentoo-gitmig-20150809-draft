@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.20 2011/03/05 19:45:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.21 2011/03/22 14:13:58 scarabeus Exp $
+
+*libzip-0.10 (22 Mar 2011)
+
+  22 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libzip-0.9.3.ebuild,
+  -libzip-0.10_rc1-r2.ebuild, +libzip-0.10.ebuild:
+  Version bump to latest. Drop older.
 
 *libzip-0.10_rc1-r2 (05 Mar 2011)
 

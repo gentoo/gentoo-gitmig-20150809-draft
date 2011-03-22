@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.9.3.ebuild,v 1.5 2011/03/04 12:17:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.ebuild,v 1.1 2011/03/22 14:13:58 scarabeus Exp $
 
 EAPI=3
-inherit autotools-utils libtool
+
+MY_P=${P/_}
+inherit autotools-utils autotools
 
 DESCRIPTION="Library for manipulating zip archives"
 HOMEPAGE="http://www.nih.at/libzip/"
-SRC_URI="http://www.nih.at/libzip/${P}.tar.gz"
+SRC_URI="http://www.nih.at/libzip/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,11 +18,18 @@ IUSE="static-libs"
 
 DOCS=( NEWS README THANKS AUTHORS )
 
+S=${WORKDIR}/${MY_P}
+
+PATCHES=(
+	"${FILESDIR}/${PN}-0.10_rc1-fix_headers.patch"
+)
+
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	autotools-utils_src_prepare
-	elibtoolize # FreeBSD .so version
+	eautoreconf # run due to fix_headers patch
+	#elibtoolize # FreeBSD .so version
 }
 
 src_install() {
