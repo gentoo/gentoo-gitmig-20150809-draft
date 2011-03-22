@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.245 2011/03/21 20:43:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.246 2011/03/22 07:20:57 nirbheek Exp $
+
+  22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-themes-2.30.2.ebuild:
+  Fix slot-deps on gnome libs
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-themes-2.32.1.ebuild:
