@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgnomeprint-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.49 2011/03/21 21:03:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgnomeprint-python/ChangeLog,v 1.50 2011/03/22 19:00:20 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  libgnomeprint-python-2.32.0.ebuild:
+  Marking libgnomeprint-python-2.32.0 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libgnomeprint-python-2.32.0.ebuild:
