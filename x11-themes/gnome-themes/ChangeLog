@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.246 2011/03/22 07:20:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.247 2011/03/22 19:53:43 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gnome-themes-2.32.1.ebuild:
+  Marking gnome-themes-2.32.1 ppc stable for bug 353436
 
   22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-themes-2.30.2.ebuild:
