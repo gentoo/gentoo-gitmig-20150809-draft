@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.2-r1.ebuild,v 1.1 2011/03/21 02:01:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.2-r1.ebuild,v 1.2 2011/03/22 04:52:08 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit autotools gnome2
 
 DESCRIPTION="C++ interface for the ATK library"
 HOMEPAGE="http://www.gtkmm.org"
