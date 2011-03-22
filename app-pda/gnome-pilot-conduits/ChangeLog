@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot-conduits
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.40 2011/02/24 18:36:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.41 2011/03/22 18:46:38 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  gnome-pilot-conduits-2.32.1.ebuild:
+  Marking gnome-pilot-conduits-2.32.1 ppc stable for bug 353436
 
   24 Feb 2011; Thomas Kahle <tomka@gentoo.org>
   gnome-pilot-conduits-2.32.1.ebuild:
