@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.92 2011/03/21 21:14:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.93 2011/03/22 18:41:52 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> pessulus-2.30.4.ebuild:
+  Marking pessulus-2.30.4 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> pessulus-2.30.4.ebuild:
   ppc64 stable wrt #353436
