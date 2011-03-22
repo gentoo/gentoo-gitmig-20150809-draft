@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.234 2011/03/21 21:14:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.235 2011/03/22 19:52:10 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gnome-terminal-2.32.1.ebuild:
+  Marking gnome-terminal-2.32.1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-terminal-2.32.1.ebuild:
