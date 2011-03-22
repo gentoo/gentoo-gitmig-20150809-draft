@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/netkit-tftp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.21 2008/09/24 05:13:27 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.22 2011/03/22 14:52:50 pva Exp $
+
+  22 Mar 2011; Peter Volkov <pva@gentoo.org> -netkit-tftp-0.17-r6.ebuild,
+  netkit-tftp-0.17-r7.ebuild:
+  Drop PROVIDE=virtual/tftp, bug #359125, thank Ulrich Müller for report.
+  Drop old.
 
   24 Sep 2008; Jeroen Roovers <jer@gentoo.org> netkit-tftp-0.17-r7.ebuild:
   Stable for HPPA (bug #237821).

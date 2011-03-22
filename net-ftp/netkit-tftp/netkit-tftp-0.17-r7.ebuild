@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r7.ebuild,v 1.7 2008/09/24 05:13:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r7.ebuild,v 1.8 2011/03/22 14:52:50 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="!virtual/tftp
 	virtual/inetd"
-PROVIDE="virtual/tftp"
 
 src_unpack() {
 	unpack ${A}
