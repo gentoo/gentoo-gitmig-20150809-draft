@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/swfdec-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/ChangeLog,v 1.52 2011/03/21 20:46:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/swfdec-gnome/ChangeLog,v 1.53 2011/03/22 19:32:40 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> swfdec-gnome-2.30.1.ebuild:
+  Marking swfdec-gnome-2.30.1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   swfdec-gnome-2.30.1.ebuild:
