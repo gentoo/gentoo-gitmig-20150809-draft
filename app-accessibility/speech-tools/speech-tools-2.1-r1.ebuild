@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1.ebuild,v 1.2 2011/03/17 19:29:12 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r1.ebuild,v 1.1 2011/03/22 03:48:43 jer Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ src_configure() {
 	if use nas; then
 		sed -i -e "s/#.*\(INCLUDE_MODULES += NAS_AUDIO\)/\1/" ${CONFIG}
 	fi
-	if [ ! use X ]; then
+	if ! use X; then
 		sed -i -e "s/-lX11 -lXt//" config/modules/esd_audio.mak
 	fi
 	econf || die

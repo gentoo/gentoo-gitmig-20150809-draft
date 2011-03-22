@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.72 2011/03/17 19:29:12 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.73 2011/03/22 03:48:43 jer Exp $
+
+*speech-tools-2.1-r1 (22 Mar 2011)
+
+  22 Mar 2011; Jeroen Roovers <jer@gentoo.org> -speech-tools-2.1.ebuild,
+  +speech-tools-2.1-r1.ebuild:
+  Fix "[: use: unary operator expected". Bump revision because this can affect
+  installed files.
 
   17 Mar 2011; Jesus Rivero <neurogeek@gentoo.org> speech-tools-2.1.ebuild:
   Changed patchset URI from devspace to mirror://gentoo.
