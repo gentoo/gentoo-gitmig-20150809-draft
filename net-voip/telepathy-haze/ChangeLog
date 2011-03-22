@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.22 2011/03/12 21:26:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.23 2011/03/22 20:10:33 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  telepathy-haze-0.4.0-r1.ebuild:
+  Marking telepathy-haze-0.4.0-r1 ppc stable for bug 353436
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   telepathy-haze-0.4.0-r1.ebuild:
