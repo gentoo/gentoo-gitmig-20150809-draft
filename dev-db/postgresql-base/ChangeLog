@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.110 2011/03/21 23:01:01 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.111 2011/03/22 11:08:41 titanofold Exp $
+
+  22 Mar 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  postgresql-base-9.0.3-r1.ebuild:
+  Fixed typo in LDPATH. Fixes bug 359867.
 
   21 Mar 2011; Aaron W. Swenson <titanofold@gentoo.org>
   postgresql-base-8.4.7-r1.ebuild:

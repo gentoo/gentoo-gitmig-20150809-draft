@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.3-r1.ebuild,v 1.1 2011/03/21 02:51:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.3-r1.ebuild,v 1.2 2011/03/22 11:08:41 titanofold Exp $
 
 EAPI="3"
 
@@ -138,7 +138,7 @@ postgres_symlinks=(
 __EOF__
 
 	cat >"${T}/50postgresql-94-${SLOT}" <<-__EOF__
-LDPATH=${EROOT%/}/usr/$(get_libdir)/postgresql-${SLOT}/lib
+LDPATH=${EROOT%/}/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
 MANPATH=${EROOT%/}/usr/share/postgresql-${SLOT}/man
 __EOF__
 	doenvd "${T}/50postgresql-94-${SLOT}" || die
