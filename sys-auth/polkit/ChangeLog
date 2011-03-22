@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.41 2011/03/19 10:47:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.42 2011/03/22 21:12:38 xarthisius Exp $
+
+  22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> polkit-0.99-r1.ebuild:
+  ppc/ppc64 stable wrt #354509
 
   19 Mar 2011; Raúl Porcel <armin76@gentoo.org> polkit-0.99-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #354509
