@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.1 2011/03/22 13:53:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.2 2011/03/22 13:54:37 jlec Exp $
 
 EAPI="3"
 
@@ -21,13 +21,12 @@ RESTRICT="fetch"
 
 # currently, tk-8.5* with USE=truetype breaks some
 # tk apps such as Sequence Viewer or Timeline.
-DEPEND="
+CDEPEND="
 	|| (
 		>=dev-lang/tk-8.5[-truetype]
 		=dev-lang/tk-8.4*
 	)
 	dev-lang/perl
-	dev-lang/swig
 	dev-python/numpy
 	sci-libs/netcdf
 	virtual/opengl
@@ -36,8 +35,9 @@ DEPEND="
 	x11-libs/libXi
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	xinerama? ( x11-libs/libXinerama )"
-
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	dev-lang/swig"
+RDEPEND="${CDEPEND}
 	sci-biology/stride
 	sci-chemistry/surf
 	x11-terms/xterm
