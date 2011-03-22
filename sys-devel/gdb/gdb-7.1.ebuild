@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.1.ebuild,v 1.1 2010/03/19 02:21:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.1.ebuild,v 1.2 2011/03/22 16:14:19 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -57,7 +57,7 @@ src_compile() {
 		--with-pkgversion="$(gdb_branding)" \
 		--with-bugurl='http://bugs.gentoo.org/' \
 		--disable-werror \
-		$(has_version '=sys-libs/readline-5*:0' && echo --with-system-readline) \
+		--with-system-readline \
 		$(is_cross && echo --with-sysroot=/usr/${CTARGET}) \
 		$(use_with expat) \
 		$(use_enable nls) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.10 2011/03/16 15:18:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.11 2011/03/22 16:14:19 vapier Exp $
 
 EAPI="3"
 
@@ -76,7 +76,7 @@ src_configure() {
 		--with-bugurl='http://bugs.gentoo.org/' \
 		--disable-werror \
 		--enable-64-bit-bfd \
-		$(has_version '=sys-libs/readline-5*:0' && echo --with-system-readline) \
+		--with-system-readline \
 		$(is_cross && echo --with-sysroot=/usr/${CTARGET}) \
 		$(use_with expat) \
 		$(use_enable nls) \
