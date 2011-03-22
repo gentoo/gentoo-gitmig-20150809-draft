@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.265 2011/03/21 21:25:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.266 2011/03/22 15:05:27 eva Exp $
+
+  22 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> epiphany-2.30.6.ebuild:
+  Add missing introspection USE-dependencies.
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> epiphany-2.30.6.ebuild:
   ppc64 stable wrt #353436
