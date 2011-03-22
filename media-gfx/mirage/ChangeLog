@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.37 2011/03/22 12:54:20 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.38 2011/03/22 13:06:55 arfrever Exp $
+
+  22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mirage-0.9.3.ebuild:
+  Delete.
 
   22 Mar 2011; Thomas Kahle <tomka@gentoo.org> mirage-0.9.5.1.ebuild:
   x86 stable per bug 357455
