@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.49 2011/03/20 18:22:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.50 2011/03/22 10:29:29 arfrever Exp $
+
+  22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -apachetop-0.12.6.ebuild:
+  Delete.
 
   20 Mar 2011; Raúl Porcel <armin76@gentoo.org> apachetop-0.12.6-r1.ebuild:
   sparc stable wrt #316875
