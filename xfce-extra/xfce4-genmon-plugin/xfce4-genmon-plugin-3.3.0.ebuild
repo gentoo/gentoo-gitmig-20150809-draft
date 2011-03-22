@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon-plugin/xfce4-genmon-plugin-3.3.0.ebuild,v 1.1 2011/03/22 15:16:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-genmon-plugin/xfce4-genmon-plugin-3.3.0.ebuild,v 1.2 2011/03/22 15:21:02 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
 
 DESCRIPTION="Cyclically spawns the executable, captures its output and displays the result into the panel."
-HOMEPAGE="http://www.xfce.org/"
+HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/3.3/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
