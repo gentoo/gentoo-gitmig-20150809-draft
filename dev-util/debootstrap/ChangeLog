@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.142 2011/03/22 20:24:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.143 2011/03/22 20:30:32 jer Exp $
+
+  22 Mar 2011; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.27.ebuild,
+  debootstrap-1.0.28.ebuild:
+  Same for the older ebuilds.
 
   22 Mar 2011; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.29.ebuild:
   Remove comment about directory name is this seems to have become standard.
