@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.48 2011/03/21 18:03:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.49 2011/03/22 10:59:09 arfrever Exp $
+
+  22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -websvn-2.3.0.ebuild, -websvn-2.3.1.ebuild:
+  Delete.
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> websvn-2.3.2.ebuild:
   ppc/ppc64 stable wrt #352732
