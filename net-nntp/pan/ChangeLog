@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.85 2011/03/21 20:48:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.86 2011/03/22 19:44:57 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> pan-0.133-r1.ebuild:
+  Marking pan-0.133-r1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> pan-0.133-r1.ebuild:
   ppc64 stable wrt #353436
