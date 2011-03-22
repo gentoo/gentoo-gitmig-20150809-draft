@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.104 2011/03/05 22:13:29 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.105 2011/03/22 06:16:40 ferringb Exp $
+
+  22 Mar 2011; Brian Harring <ferringb@gentoo.org> pkgcore-0.5.11.6.ebuild,
+  pkgcore-0.5.11.7.ebuild, pkgcore-0.5.11.8.ebuild, pkgcore-0.5.11.8-r1.ebuild:
+  remove a potential sandbox violation via disabling snakeoil 2to3 caching
 
 *pkgcore-0.5.11.8-r1 (05 Mar 2011)
 

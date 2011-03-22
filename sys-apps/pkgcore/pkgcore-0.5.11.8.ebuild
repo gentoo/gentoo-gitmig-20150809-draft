@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.8.ebuild,v 1.1 2010/07/18 06:28:21 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.8.ebuild,v 1.2 2011/03/22 06:16:40 ferringb Exp $
 
 DISTUTILS_SRC_TEST="setup.py"
 
@@ -24,6 +24,12 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS NEWS"
 
+pkg_setup() {
+	# disable snakeoil 2to3 caching...
+	unset PY2TO3_CACHEDIR
+	python_pkg_setup
+}
+            
 src_compile() {
 	distutils_src_compile
 
