@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/surf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/surf/ChangeLog,v 1.1 2011/03/22 11:10:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/surf/ChangeLog,v 1.2 2011/03/22 14:00:54 jlec Exp $
+
+  22 Mar 2011; Justin Lecher <jlec@gentoo.org> surf-1.0.ebuild:
+  Added missing DEPEND=x11-misc/makedepend, thanks xarthisius
 
 *surf-1.0 (22 Mar 2011)
 
