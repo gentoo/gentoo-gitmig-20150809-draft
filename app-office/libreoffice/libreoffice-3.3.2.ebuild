@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2_rc2.ebuild,v 1.2 2011/03/18 22:39:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2.ebuild,v 1.1 2011/03/22 21:01:09 suka Exp $
 
 EAPI="3"
 
@@ -20,12 +20,13 @@ MY_PV=3.3.2.2
 MY_P="${PN}-build-${MY_PV}"
 PATCHLEVEL=OOO320
 SRC=OOo_${PV}_src
-DEVPATH="http://download.documentfoundation.org/libreoffice/src"
 S="${WORKDIR}/${MY_P}"
+DEVPATH="http://download.documentfoundation.org/libreoffice/src"
 CONFFILE=${S}/distro-configs/Gentoo.conf.in
 BASIS=basis3.3
-DESCRIPTION="LibreOffice, a full office productivity suite."
 
+DESCRIPTION="LibreOffice, a full office productivity suite."
+HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="${DEVPATH}/${PN}-build-${MY_PV}.tar.gz
 	templates? (
 		http://extensions.services.openoffice.org/files/273/0/Sun_ODF_Template_Pack_en-US.oxt
@@ -114,8 +115,6 @@ SPELL_DIRS_DEPEND=""
 for X in ${SPELL_DIRS} ; do
 	SPELL_DIRS_DEPEND+=" linguas_${X}? ( app-dicts/myspell-${X} )"
 done
-
-HOMEPAGE="http://www.libreoffice.org"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -265,9 +264,10 @@ src_prepare() {
 	epatch "${FILESDIR}/scrap-pixmap-links.diff"
 	epatch "${FILESDIR}/enable-startup-notification.diff"
 	use java && cp -f "${FILESDIR}/sdext-presenter.diff" "${S}/patches/hotfixes"
-	cp -f "${FILESDIR}/libreoffice-3.3.0_libxmlsec_fix_extern_c.diff" "${S}/patches/hotfixes"
-	cp -f "${FILESDIR}/libreoffice-3.3-libpng-1.5.diff" "${S}/patches/hotfixes"
-	cp -f "${FILESDIR}/libreoffice-3.3.1-neon_remove_SSPI_support.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-3.3.0_libxmlsec_fix_extern_c.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-3.3-libpng-1.5.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-libdb5-fix-check.diff" "${S}/patches/hotfixes"
 
 	#Use flag checks
 	if use java ; then
