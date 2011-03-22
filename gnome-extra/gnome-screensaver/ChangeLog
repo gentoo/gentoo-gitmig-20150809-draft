@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.136 2011/03/21 21:09:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.137 2011/03/22 19:26:53 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  gnome-screensaver-2.30.2.ebuild:
+  Marking gnome-screensaver-2.30.2 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-screensaver-2.30.2.ebuild:
