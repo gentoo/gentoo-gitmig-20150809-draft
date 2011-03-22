@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.4 2011/01/13 18:16:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.12.ebuild,v 1.5 2011/03/22 19:31:10 abcd Exp $
 
-EAPI=2
+EAPI=3
 
 DESCRIPTION="X based config tool for the windowmaker X windowmanager."
 HOMEPAGE="http://wmakerconf.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="imlib nls perl"
 
 RDEPEND="x11-libs/gtk+:2
@@ -36,9 +36,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" gnulocaledir="${D}/usr/share/locale" install || die
+	emake DESTDIR="${D}" gnulocaledir="${ED}/usr/share/locale" install || die
 	dodoc AUTHORS ChangeLog MANUAL NEWS README TODO
 	doman man/*.1
 
-	rm -f "${D}"/usr/share/${PN}/{AUTHORS,README,COPYING,NEWS,MANUAL,ABOUT-NLS,NLS-TEAM1,ChangeLog}
+	rm -f "${ED}"/usr/share/${PN}/{AUTHORS,README,COPYING,NEWS,MANUAL,ABOUT-NLS,NLS-TEAM1,ChangeLog}
 }
