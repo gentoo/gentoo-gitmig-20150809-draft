@@ -1,0 +1,38 @@
+--- ati.orig/common/lib/modules/fglrx/build_mod/firegl_public.c	2011-03-15 14:40:22.000000000 -0600
++++ ati/common/lib/modules/fglrx/build_mod/firegl_public.c	2011-03-15 14:38:09.000000000 -0600
+@@ -848,7 +848,7 @@
+      * happen much less frequent then without this workaround.
+      */
+     if (state == PM_EVENT_SUSPEND)
+-        acquire_console_sem();
++        console_lock();
+ 
+     if (firegl_cail_powerdown(privdev, state))
+         ret = -EIO;
+@@ -870,7 +870,7 @@
+     }
+ 
+     if (state == PM_EVENT_SUSPEND)
+-        release_console_sem();
++        console_unlock();
+ 
+     KCL_DEBUG_TRACEOUT(FN_FIREGL_ACPI, ret, NULL);  
+     
+@@ -894,7 +894,7 @@
+     if (PMSG_EVENT(pdev->dev.power.power_state) == 0) return 0;
+ 
+     if (PMSG_EVENT(pdev->dev.power.power_state) == PM_EVENT_SUSPEND)
+-        acquire_console_sem();
++        console_lock();
+ 
+ #ifdef FIREGL_USWC_SUPPORT
+     // Restore the PAT after resuming from S3 or S4.
+@@ -919,7 +919,7 @@
+     firegl_cail_powerup(privdev);
+ 
+     if (PMSG_EVENT(pdev->dev.power.power_state) == PM_EVENT_SUSPEND)
+-        release_console_sem();
++        console_unlock();
+ 
+     PMSG_EVENT(pdev->dev.power.power_state) = 0;
+     KCL_DEBUG_TRACEOUT(FN_FIREGL_ACPI, 0, NULL);  
