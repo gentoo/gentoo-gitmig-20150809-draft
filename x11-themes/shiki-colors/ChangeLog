@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/shiki-colors
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/shiki-colors/ChangeLog,v 1.1 2010/03/14 13:46:29 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/shiki-colors/ChangeLog,v 1.2 2011/03/22 07:38:43 nirbheek Exp $
+
+  22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  shiki-colors-4.6.ebuild:
+  Fix slot-deps on gnome libs
 
 *shiki-colors-4.6 (14 Mar 2010)
 
