@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0.ebuild,v 1.5 2011/03/12 15:21:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0.ebuild,v 1.6 2011/03/22 18:41:21 ranger Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/gst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="nfs policykit samba"
 
 RDEPEND="
