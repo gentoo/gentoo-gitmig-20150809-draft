@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.7.ebuild,v 1.4 2011/03/12 21:21:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.7.ebuild,v 1.5 2011/03/22 20:08:32 ranger Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ~ppc64 sparc x86"
 IUSE="test"
 
 RDEPEND="dev-libs/dbus-glib
