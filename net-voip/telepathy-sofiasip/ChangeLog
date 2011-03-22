@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-sofiasip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/ChangeLog,v 1.22 2011/03/12 21:30:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/ChangeLog,v 1.23 2011/03/22 20:11:31 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  telepathy-sofiasip-0.6.6.ebuild:
+  Marking telepathy-sofiasip-0.6.6 ppc stable for bug 353436
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   telepathy-sofiasip-0.6.6.ebuild:
