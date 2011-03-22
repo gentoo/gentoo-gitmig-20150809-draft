@@ -1,18 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4.ebuild,v 1.1 2011/03/21 16:24:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4.ebuild,v 1.2 2011/03/22 18:10:25 ottxor Exp $
 
 EAPI="3"
 
 LIBTOOLIZE="true"
 TEST_PV="4.0.4"
-MANUAL_PV="4.5.3"
+MANUAL_PV="4.5.4"
 
 inherit autotools-utils bash-completion flag-o-matic multilib toolchain-funcs
 
 SRC_URI="test? ( ftp://ftp.gromacs.org/pub/tests/gmxtest-${TEST_PV}.tgz )
-		doc? (
-		http://www.gromacs.org/@api/deki/files/133/=manual-${MANUAL_PV}.pdf -> gromacs-manual-${MANUAL_PV}.pdf )"
+		doc? ( ftp://ftp.gromacs.org/pub/manual/manual-${MANUAL_PV}.pdf -> gromacs-manual-${MANUAL_PV}.pdf )"
 
 if [ "${PV%9999}" != "${PV}" ]; then
 	EGIT_REPO_URI="git://git.gromacs.org/gromacs"
@@ -31,8 +30,7 @@ KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="X altivec blas dmalloc doc -double-precision +fftw fkernels +gsl lapack
 mpi +single-precision sse sse2 static-libs test +threads +xml zsh-completion"
 
-DEPEND="
-	app-shells/tcsh
+CDEPEND="
 	X? ( x11-libs/libX11
 		x11-libs/libSM
 		x11-libs/libICE )
@@ -43,8 +41,10 @@ DEPEND="
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )
 	xml? ( dev-libs/libxml2:2 )"
-
-RDEPEND="${DEPEND}"
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${CDEPEND}
+	app-shells/tcsh"
 
 RESTRICT="test"
 
@@ -128,7 +128,7 @@ src_configure() {
 	local sseflag="x86-64-sse"
 	use x86 && sseflag="ia32-sse"
 
-	#a bug in gromacs autotools
+	#missing flag in autotools (bug #339837)
 	use sse && append-flags -msse
 	use sse2 && append-flags -msse2
 
