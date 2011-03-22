@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.230 2011/03/20 18:54:29 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.231 2011/03/22 21:07:02 ulm Exp $
+
+  22 Mar 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove old-style virtual/jabber-server and virtual/tftp, bugs 358833 and
+  359125.
 
   20 Mar 2011; Ultrabug <ultrabug@gentoo.org> package.use.mask, use.mask:
   Mask clustering support until new sys-cluster/cman is pushed.

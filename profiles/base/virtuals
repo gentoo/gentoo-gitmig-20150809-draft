@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.137 2011/03/20 13:30:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.138 2011/03/22 21:07:02 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -15,7 +15,6 @@ virtual/dev-manager			sys-fs/udev
 virtual/dhcpc				net-misc/dhcpcd
 virtual/gzip				app-arch/gzip
 virtual/inetd				sys-apps/xinetd
-virtual/jabber-server			net-im/jabberd
 virtual/libc				sys-libs/glibc
 virtual/libpcap				net-libs/libpcap
 virtual/linux-sources			sys-kernel/gentoo-sources
@@ -32,6 +31,5 @@ virtual/python				dev-lang/python
 virtual/skkserv				app-i18n/skkserv
 virtual/squeak-image			dev-lang/squeak-basicimage
 virtual/ssh				net-misc/openssh
-virtual/tftp				net-ftp/tftp-hpa
 virtual/utempter			sys-libs/libutempter
 virtual/w3m				www-client/w3m
