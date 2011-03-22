@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20110302.ebuild,v 1.1 2011/03/02 16:54:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20110322.ebuild,v 1.1 2011/03/22 15:32:58 scarabeus Exp $
 
 EAPI=4
 
-EGIT_REPO_URI="git://git.ffmpeg.org/ffmpeg.git"
+EGIT_REPO_URI="git://git.libav.org/libav.git"
 EGIT_PROJECT="ffmpeg"
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 [[ ${PV} = *9999* ]] && SVN_ECLASS="subversion git" || SVN_ECLASS=""
@@ -12,7 +12,7 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
 # BUMP ME PLZ, NO COOKIES OTHERWISE
-[[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r32999
+[[ ${PV} != *9999* ]] && MPLAYER_REVISION=SVN-r33094
 
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts debug dga +dirac
