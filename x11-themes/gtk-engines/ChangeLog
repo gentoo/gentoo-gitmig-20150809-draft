@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.181 2011/03/21 20:31:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.182 2011/03/22 19:54:41 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gtk-engines-2.20.2.ebuild:
+  Marking gtk-engines-2.20.2 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gtk-engines-2.20.2.ebuild:
