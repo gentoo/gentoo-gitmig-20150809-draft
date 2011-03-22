@@ -1,6 +1,10 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.8 2011/03/16 09:14:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.9 2011/03/22 20:59:44 ulm Exp $
+
+  22 Mar 2011; Ulrich Mueller <ulm@gentoo.org> prosody-0.6.2.ebuild,
+  prosody-0.7.0.ebuild:
+  Drop PROVIDE=virtual/jabber-server, bug 358833.
 
 *prosody-0.7.0 (16 Mar 2011)
 

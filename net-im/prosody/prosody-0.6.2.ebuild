@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.6.2.ebuild,v 1.6 2010/11/05 23:15:54 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.6.2.ebuild,v 1.7 2011/03/22 20:59:44 ulm Exp $
 
 EAPI="2"
 
@@ -25,8 +25,6 @@ DEPEND="net-im/jabber-base
 		>=net-dns/libidn-1.1
 		>=dev-libs/openssl-0.9.8"
 RDEPEND="${DEPEND}"
-
-PROVIDE="virtual/jabber-server"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
