@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.51 2011/01/23 14:39:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.52 2011/03/22 01:57:24 anarchy Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
 # Keep it sorted.
 
 af - Afrikaans locale
+ak - Akan locale
 am - Amharic locale
 ar - Arabic locale
 as - Assamese locale
@@ -74,6 +75,7 @@ hr - Croatian locale
 hsb - Upper Sorbian locale
 hu - Hungarian locale
 hy - Armenian locale
+hy_AM - Armenian locale
 ia - Interlingua locale
 id - Indonesian locale
 is - Icelandic locale
@@ -92,6 +94,7 @@ ku - Kurdish (latin) locale
 ky - Kyrgyz (Kirghiz) locale
 la - Latin2 locale
 lb - Luxembourgish locale
+lg - Ganda locale
 lo - Lao locale
 lt - Lithuanian locale
 lv - Latvian locale
@@ -139,6 +142,7 @@ sd - Sindhi locale
 se - Northern Saami locale
 sh - Serbo-Croatian locale
 sh_YU - Serbo-Croatian locale
+son - Songhai locale
 si - Sinhala locale
 sk - Slovak locale
 sl - Slovenian locale
