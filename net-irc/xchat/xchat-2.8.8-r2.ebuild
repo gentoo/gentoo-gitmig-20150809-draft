@@ -1,27 +1,29 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.2 2011/01/30 17:34:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.3 2011/03/22 09:54:15 nirbheek Exp $
 
 EAPI=2
 
 inherit eutils versionator gnome2 autotools
 
 DESCRIPTION="Graphical IRC client"
+# Icons are from http://half-left.deviantart.com/art/XChat-IRC-Icon-200804640
 SRC_URI="http://www.xchat.org/files/source/$(get_version_component_range 1-2)/${P}.tar.bz2
 	mirror://sourceforge/${PN}/${P}.tar.bz2
+	hires-icons? ( http://dev.gentoo.org/~nirbheek/dist/xchat_irc_icon_by_half_left-d3bjxuo.zip )
 	xchatdccserver? ( mirror://gentoo/${PN}-dccserver-0.6.patch.bz2 )"
 HOMEPAGE="http://www.xchat.org/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 hires-icons? ( GPL-3 )"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="dbus fastscroll +gtk ipv6 libnotify mmx nls ntlm perl python spell ssl tcl xchatdccserver"
+IUSE="dbus fastscroll +gtk hires-icons ipv6 libnotify mmx nls ntlm perl python spell ssl tcl xchatdccserver"
 
-RDEPEND=">=dev-libs/glib-2.6.0
-	gtk? ( >=x11-libs/gtk+-2.10.0 )
+RDEPEND=">=dev-libs/glib-2.6.0:2
+	gtk? ( >=x11-libs/gtk+-2.10.0:2 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.8.0 )
-	python? ( >=dev-lang/python-2.2 )
+	python? ( =dev-lang/python-2* )
 	tcl? ( dev-lang/tcl )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	spell? ( app-text/gtkspell )
@@ -90,6 +92,16 @@ src_install() {
 	doins src/common/xchat-plugin.h || die "doins failed"
 
 	dodoc ChangeLog README* || die "dodoc failed"
+
+	if use hires-icons; then
+		cd "${WORKDIR}/XChat-Icon/apps"
+		for i in *; do
+			insinto "/usr/share/icons/hicolor/${i}/apps"
+			doins "${i}/xchat.png"
+		done
+		# Replace default pixmap icon
+		cp "48x48/xchat.png" "${D}/usr/share/pixmaps" || die
+	fi
 }
 
 pkg_postinst() {
@@ -102,4 +114,5 @@ pkg_postinst() {
 		elog "XChat now includes it's own systray icon, you may want to remove net-irc/xchat-systray."
 		elog
 	fi
+	gnome2_icon_cache_update
 }

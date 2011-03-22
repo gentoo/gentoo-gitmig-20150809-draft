@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r1.ebuild,v 1.6 2011/01/30 17:34:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r1.ebuild,v 1.7 2011/03/22 09:54:15 nirbheek Exp $
 
 EAPI=2
 
@@ -17,11 +17,11 @@ SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="dbus fastscroll +gtk ipv6 libnotify mmx nls ntlm perl python spell ssl tcl xchatdccserver"
 
-RDEPEND=">=dev-libs/glib-2.6.0
-	gtk? ( >=x11-libs/gtk+-2.10.0 )
+RDEPEND=">=dev-libs/glib-2.6.0:2
+	gtk? ( >=x11-libs/gtk+-2.10.0:2 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.8.0 )
-	python? ( >=dev-lang/python-2.2 )
+	python? ( =dev-lang/python-2* )
 	tcl? ( dev-lang/tcl )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	spell? ( app-text/gtkspell )

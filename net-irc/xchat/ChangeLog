@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.295 2011/01/30 17:34:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.296 2011/03/22 09:54:15 nirbheek Exp $
+
+  22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> xchat-2.8.8-r1.ebuild,
+  xchat-2.8.8-r2.ebuild, metadata.xml:
+  Add optional hires icons, and fix slot-deps on gnome libs
 
   30 Jan 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
   xchat-2.8.8-r2.ebuild:
