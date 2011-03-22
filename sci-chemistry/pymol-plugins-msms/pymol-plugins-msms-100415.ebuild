@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-msms/pymol-plugins-msms-100415.ebuild,v 1.1 2011/03/22 08:33:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-msms/pymol-plugins-msms-100415.ebuild,v 1.2 2011/03/22 21:09:25 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils python
 
@@ -43,4 +44,12 @@ src_install() {
 		doins ${P}.py || die
 	}
 	python_execute_function -s installation
+}
+
+pkg_postinst() {
+	python_mod_optimize pmg_tk/startup/${P}.py
+}
+
+pkg_postrm() {
+	python_mod_cleanup pmg_tk/startup/${P}.py
 }
