@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.0.ebuild,v 1.7 2011/03/22 19:40:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.0.ebuild,v 1.8 2011/03/22 19:42:19 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -38,7 +38,7 @@ pkg_setup() {
 src_prepare() {
 	if has_version ">=net-libs/xulrunner-2"; then
 		sed -i -e '/PKG_CONFIG/s:libxul >= 2.0:libxul >= 2:' configure || die
-		sed -i -e '/NPP_Initialize/d'  src/np_entry.cpp || die
+		sed -i -e '/NPP_Initialize/d' src/np_entry.cpp || die
 	fi
 
 	gnome2_src_prepare
