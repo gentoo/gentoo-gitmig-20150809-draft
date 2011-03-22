@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12584 2011/03/21 20:39:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12585 2011/03/22 08:41:45 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -840,12 +840,6 @@ dev-libs/seed
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (22 Jun 2010)
 # Masked for testing. It's quite "challenging" to package.
 >=sci-mathematics/nusmv-2.5.0
-
-# Kacper Kowalik <xarthisius@gentoo.org> (21 Jun 2010)
-# New version modular version of heartbeat
-# Waiting for migration guide and extensive set of tests
-#
->=sys-cluster/heartbeat-3.0.3
 
 # Alexis Ballier <aballier@gentoo.org> (17 Jun 2010)
 # New major release, some packages fail to build
