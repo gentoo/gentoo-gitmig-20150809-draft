@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.34 2011/03/21 20:33:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.35 2011/03/22 19:48:28 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gtk+extra-2.1.2-r1.ebuild:
+  Marking gtk+extra-2.1.2-r1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gtk+extra-2.1.2-r1.ebuild:
