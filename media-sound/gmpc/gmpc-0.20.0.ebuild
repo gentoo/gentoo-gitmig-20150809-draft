@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.20.0.ebuild,v 1.9 2011/02/26 12:17:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.20.0.ebuild,v 1.10 2011/03/22 18:57:38 angelos Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -23,13 +23,14 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	dev-db/sqlite:3
 	xspf? ( >=media-libs/libxspf-1.2 )"
 DEPEND="${RDEPEND}
-	>=dev-lang/vala-0.7.10:0
+	dev-lang/vala:0.10
 	dev-util/gob
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
 
 src_configure() {
+	VALAC=$(type -p valac-0.10) \
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable nls) \
