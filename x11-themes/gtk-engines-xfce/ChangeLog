@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.118 2011/03/21 23:40:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.119 2011/03/22 10:56:08 tomka Exp $
+
+  22 Mar 2011; Thomas Kahle <tomka@gentoo.org> gtk-engines-xfce-2.8.1.ebuild:
+  x86 stable per bug 358407
 
   21 Mar 2011; Markus Meier <maekke@gentoo.org> gtk-engines-xfce-2.8.1.ebuild:
   arm stable, bug #358407
