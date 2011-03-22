@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12586 2011/03/22 17:51:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12587 2011/03/22 20:05:47 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -388,8 +388,8 @@ sys-apps/halevt
 # Christian Faulhammer <fauli@gentoo.org> (12 Feb 2011)
 # dev-vcs/bzr-gtk, dev-vcs/bzr-rewrite and dev-vcs/bzr-svn are not
 # compatible with new version, upstream is notified.
-~dev-vcs/bzr-2.3.0
-~dev-vcs/bzrtools-2.3.0
+>=dev-vcs/bzr-2.3.0
+>=dev-vcs/bzrtools-2.3.0
 ~dev-vcs/qbzr-0.20.0
 ~dev-vcs/bzr-gtk-0.100.0
 ~dev-vcs/bzr-rewrite-0.6.2
