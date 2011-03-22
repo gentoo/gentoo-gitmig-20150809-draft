@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.2.ebuild,v 1.5 2011/03/21 20:22:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.2.ebuild,v 1.6 2011/03/22 18:52:05 ranger Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="doc test"
 
 RDEPEND=">=dev-libs/glib-2.24:2

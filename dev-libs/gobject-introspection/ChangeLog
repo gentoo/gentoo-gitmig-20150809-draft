@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.22 2011/03/21 20:22:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.23 2011/03/22 18:52:05 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  gobject-introspection-0.10.2.ebuild:
+  Marking gobject-introspection-0.10.2 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gobject-introspection-0.10.2.ebuild:
