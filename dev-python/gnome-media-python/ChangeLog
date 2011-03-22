@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-media-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.48 2011/03/21 21:04:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.49 2011/03/22 18:58:16 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  gnome-media-python-2.32.0.ebuild:
+  Marking gnome-media-python-2.32.0 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-media-python-2.32.0.ebuild:
