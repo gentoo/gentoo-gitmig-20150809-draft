@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.12 2011/03/21 08:07:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.13 2011/03/22 01:33:31 nirbheek Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -13,7 +13,6 @@ RDEPEND="app-arch/zip
 	app-arch/unzip
 	>=app-text/hunspell-1.2
 	dev-libs/expat
-	>=dev-libs/glib-2.26
 	>=dev-libs/libIDL-0.8.0
 	>=dev-libs/libevent-1.4.7
 	!<x11-base/xorg-x11-6.7.0-r2
@@ -25,7 +24,6 @@ RDEPEND="app-arch/zip
 	dbus? ( >=dev-libs/dbus-glib-0.72 )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
-	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	wifi? ( net-wireless/wireless-tools )"
 DEPEND="${RDEPEND}"
 
