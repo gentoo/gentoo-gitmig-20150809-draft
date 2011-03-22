@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.105 2011/03/21 21:36:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.106 2011/03/22 19:39:28 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  gnome-netstatus-2.28.2.ebuild:
+  Marking gnome-netstatus-2.28.2 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-netstatus-2.28.2.ebuild:
