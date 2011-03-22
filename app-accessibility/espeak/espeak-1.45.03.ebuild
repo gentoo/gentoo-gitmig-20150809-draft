@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.45.02.ebuild,v 1.1 2011/03/16 17:40:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.45.03.ebuild,v 1.1 2011/03/22 17:10:56 williamh Exp $
 
 EAPI="4"
 
@@ -37,7 +37,6 @@ src_prepare() {
 	cd src
 	# gentoo uses portaudio 19.
 	mv -f portaudio19.h portaudio.h
-	epatch "${FILESDIR}"/${P}-fix-libname.patch
 }
 
 src_compile() {
