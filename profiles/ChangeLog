@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5175 2011/03/22 08:41:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5176 2011/03/22 17:51:25 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite media-sound/mixxx.
 
   22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Unmask sys-cluster/heartbeat-3.x
