@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.313 2011/03/19 18:18:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.314 2011/03/22 19:50:35 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> pango-1.28.3.ebuild:
+  Marking pango-1.28.3 ppc stable for bug 353436
 
   19 Mar 2011; Pacho Ramos <pacho@gentoo.org> pango-1.28.3-r1.ebuild:
   Needs >=dev-libs/glib-2.24 due g_malloc0_n usage (bug #359425 by Daniel
