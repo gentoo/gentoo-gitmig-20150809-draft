@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p01.ebuild,v 1.1 2011/03/18 16:43:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p01.ebuild,v 1.2 2011/03/22 03:45:37 bicatali Exp $
 
 EAPI=3
 
@@ -49,13 +49,13 @@ PATCHES=( "${FILESDIR}"/${PN}-4.9.4-{no-benchmarks,zlib,libdir,datadir,no-exampl
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use_enable dawn GEANT4_USE_NETWORKDAWN)
-		$(cmake-utils_use_enable gdml GEANT4_USE_GDML)
-		$(cmake-utils_use_enable geant3 GEANT4_USE_GEANT3TOGEANT4)
-		$(cmake-utils_use_enable granular GEANT4_BUILD_GRANULAR_BUILD)
-		$(cmake-utils_use_enable vrml GEANT4_USE_NETWORKVRML)
-		$(cmake-utils_use_enable qt4 GEANT4_USE_QT)
-		$(cmake-utils_use_enable zlib GEANT4_USE_SYSTEM_ZLIB)
+		$(cmake-utils_use dawn GEANT4_USE_NETWORKDAWN)
+		$(cmake-utils_use gdml GEANT4_USE_GDML)
+		$(cmake-utils_use geant3 GEANT4_USE_GEANT3TOGEANT4)
+		$(cmake-utils_use granular GEANT4_BUILD_GRANULAR_BUILD)
+		$(cmake-utils_use vrml GEANT4_USE_NETWORKVRML)
+		$(cmake-utils_use qt4 GEANT4_USE_QT)
+		$(cmake-utils_use zlib GEANT4_USE_SYSTEM_ZLIB)
 		$(cmake-utils_use_build static-libs STATIC_LIBS)
 	)
 	cmake-utils_src_configure
