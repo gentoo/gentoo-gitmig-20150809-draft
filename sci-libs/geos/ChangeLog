@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.55 2011/03/12 13:49:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.56 2011/03/22 10:20:42 arfrever Exp $
+
+  22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -geos-3.1.1.ebuild, -files/geos-3.1.1-missing-includes.patch,
+  -geos-3.2.0.ebuild, -geos-3.2.0-r1.ebuild:
+  Delete.
 
   12 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> geos-3.2.2.ebuild:
   ppc64 stable wrt 354389
