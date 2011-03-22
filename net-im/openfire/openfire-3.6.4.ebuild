@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.4.ebuild,v 1.4 2010/06/27 21:46:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.4.ebuild,v 1.5 2011/03/22 15:11:38 pva Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -22,9 +22,6 @@ DEPEND="net-im/jabber-base
 S=${WORKDIR}/${PN}_src
 
 RESTRICT=""
-
-# For transports
-PROVIDE="virtual/jabber-server"
 
 pkg_setup() {
 	if [ -f /etc/env.d/98openfire ]; then
