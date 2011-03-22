@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.11.ebuild,v 1.1 2011/03/22 10:02:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.11.ebuild,v 1.2 2011/03/22 21:51:22 polynomial-c Exp $
 
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="DMI (Desktop Management Interface) table related utilities"
 HOMEPAGE="http://www.nongnu.org/dmidecode/"
-SRC_URI="http://savannah.nongnu.org/releases/${PN}/${P}.tar.bz2"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
