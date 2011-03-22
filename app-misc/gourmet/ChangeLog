@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.24 2011/03/21 13:21:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.25 2011/03/22 10:41:25 arfrever Exp $
+
+  22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gourmet-0.15.6.ebuild:
+  Delete.
 
   21 Mar 2011; Thomas Kahle <tomka@gentoo.org> gourmet-0.15.7-r1.ebuild:
   x86 stable per bug 357281
