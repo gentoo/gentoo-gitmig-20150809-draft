@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.2.ebuild,v 1.1 2011/01/18 17:44:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.2.2.ebuild,v 1.2 2011/03/22 21:52:39 mr_bones_ Exp $
 
 EAPI=2
-inherit autotools fixheadtails eutils
+inherit autotools fixheadtails eutils multilib
 
 MY_PV=${PV/_/}
 DESCRIPTION="syslog replacement with advanced filtering features"
@@ -58,6 +58,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		--sysconfdir=/etc/syslog-ng \
 		--with-pidfile-dir=/var/run \
+		--with-module-dir=/usr/$(get_libdir)/syslog-ng \
 		$(use_enable caps linux-caps) \
 		$(use_enable ipv6) \
 		$(use_enable pcre) \
