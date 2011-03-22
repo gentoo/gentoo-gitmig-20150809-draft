@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.7-r1.ebuild,v 1.2 2011/01/04 20:48:26 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.3.7-r1.ebuild,v 1.3 2011/03/22 06:07:56 ferringb Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,6 +27,8 @@ src_prepare() {
 }
 
 pkg_setup() {
+	# disable snakeoil 2to3 caching
+	unset PY2TO3_CACHEDIR
 	python_pkg_setup
 
 	# A hack to install for all versions of Python in the system.

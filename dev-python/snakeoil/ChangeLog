@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.37 2011/01/04 20:48:26 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.38 2011/03/22 06:07:56 ferringb Exp $
+
+  22 Mar 2011; Brian Harring <ferringb@gentoo.org> snakeoil-0.3.6.4.ebuild,
+  snakeoil-0.3.6.5.ebuild, snakeoil-0.3.7-r1.ebuild:
+  remove potential sandbox violation via suppressing snakeoil 2to3 caching
+  functionality
 
   04 Jan 2011; Brian Harring <ferringb@gentoo.org> snakeoil-0.3.7-r1.ebuild,
   files/snakeoil-issue-7567-term-invocation.patch:
