@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.193 2011/03/21 20:32:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.194 2011/03/22 19:59:22 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gtkmm-2.22.0.ebuild:
+  Marking gtkmm-2.22.0 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gtkmm-2.22.0.ebuild:
   ppc64 stable wrt #353436
