@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygoocanvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.19 2011/03/08 05:13:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.20 2011/03/22 19:03:24 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> pygoocanvas-0.14.1.ebuild:
+  Marking pygoocanvas-0.14.1 ppc stable for bug 353436
 
   08 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   pygoocanvas-0.14.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1.ebuild,v 1.7 2011/03/08 05:13:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.14.1.ebuild,v 1.8 2011/03/22 19:03:24 ranger Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://live.gnome.org/PyGoocanvas"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples"
 
 RDEPEND=">=dev-python/pygobject-2.11.3:2
