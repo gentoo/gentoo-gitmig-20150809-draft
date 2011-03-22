@@ -1,0 +1,16 @@
+# ChangeLog for media-video/libav
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.1 2011/03/22 21:01:29 scarabeus Exp $
+
+*libav-9999 (22 Mar 2011)
+*libav-0.6.9999 (22 Mar 2011)
+*libav-0.6.2 (22 Mar 2011)
+
+  22 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.6.2-fix_enable_hardcoded_tables.patch, +libav-9999.ebuild,
+  +files/0.6.2-float_arrays.patch, +libav-0.6.2.ebuild, +libav-0.6.9999.ebuild,
+  +metadata.xml:
+  Initial commit for ffmpeg fork/alternative. Ebuild adjusted from ffmpeg ones.
+  Thanks for lu_zero for help with testing it. Virtual pkg and dependency
+  testing on current ffmpeg deps still needs to be done.
+
