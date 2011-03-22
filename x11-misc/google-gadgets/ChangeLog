@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.36 2011/03/21 23:27:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.37 2011/03/22 10:08:13 voyageur Exp $
+
+  22 Mar 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  google-gadgets-0.11.2.ebuild:
+  Also force disable smjs-script with USE=-xulrunner
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   google-gadgets-0.11.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.6 2011/03/21 23:27:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.7 2011/03/22 10:08:13 voyageur Exp $
 
 EAPI=2
 
@@ -125,7 +125,8 @@ src_configure() {
 			--with-smjs-libdir=/usr/$(get_libdir)/xulrunner-1.9 \
 			--with-smjs-incdir=/usr/include/xulrunner-1.9/unstable"
 	else
-		myconf="${myconf} --disable-gtkmoz-browser-element"
+		myconf="${myconf} --disable-gtkmoz-browser-element \
+			--disable-smjs-script-runtime"
 	fi
 
 	econf ${myconf}
