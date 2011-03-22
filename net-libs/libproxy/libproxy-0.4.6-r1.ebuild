@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6-r1.ebuild,v 1.3 2011/03/07 11:56:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6-r1.ebuild,v 1.4 2011/03/22 21:48:30 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
@@ -31,7 +31,10 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS NEWS README ChangeLog"
 
-PATCHES=( "${FILESDIR}"/${P}-mozjs-link_directory.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-mozjs-link_directory.patch
+	"${FILESDIR}"/${P}-xulrunner-2.patch
+	)
 
 pkg_setup() {
 	if use python; then

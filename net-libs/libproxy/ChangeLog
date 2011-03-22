@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.55 2011/03/21 23:18:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.56 2011/03/22 21:48:30 ssuominen Exp $
+
+  22 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> libproxy-0.4.6-r1.ebuild,
+  +files/libproxy-0.4.6-xulrunner-2.patch:
+  Fix compability with net-libs/xulrunner >= 2 wrt #359879 by Justin Lecher.
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> libproxy-0.4.6.ebuild:
   Fix slot-deps on gnome libs
