@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/ldl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.3 2011/02/23 20:05:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.4 2011/03/22 18:10:40 bicatali Exp $
+
+*ldl-2.0.3-r1 (22 Mar 2011)
+
+  22 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> -ldl-2.0.1.ebuild,
+  -ldl-2.0.3.ebuild, +ldl-2.0.3-r1.ebuild, +files/ldl-2.0.3-autotools.patch:
+  Now install a working library, bug #359975
 
 *ldl-2.0.3 (23 Feb 2011)
 

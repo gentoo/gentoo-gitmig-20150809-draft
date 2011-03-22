@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ldl-2.0.3.ebuild,v 1.1 2011/02/23 20:05:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ldl-2.0.3-r1.ebuild,v 1.1 2011/03/22 18:10:40 bicatali Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -19,7 +19,7 @@ DEPEND="sci-libs/ufconfig"
 S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.0.1-autotools.patch
+	epatch "${FILESDIR}"/${P}-autotools.patch
 	eautoreconf
 }
 
