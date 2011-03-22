@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.68 2011/03/21 10:07:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.69 2011/03/22 18:47:04 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gnome-pilot-2.32.0.ebuild:
+  Marking gnome-pilot-2.32.0 ppc stable for bug 353436
 
 *gnome-pilot-2.32.1 (21 Mar 2011)
 
