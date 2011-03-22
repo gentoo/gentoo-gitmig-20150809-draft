@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libwnck-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/ChangeLog,v 1.49 2011/03/21 20:56:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/ChangeLog,v 1.50 2011/03/22 19:01:54 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> libwnck-python-2.32.0.ebuild:
+  Marking libwnck-python-2.32.0 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libwnck-python-2.32.0.ebuild:
