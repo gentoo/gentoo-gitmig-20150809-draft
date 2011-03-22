@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/vzctl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.73 2010/09/10 07:46:45 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.74 2011/03/22 16:28:14 pva Exp $
+
+*vzctl-3.0.26.2 (22 Mar 2011)
+
+  22 Mar 2011; Peter Volkov <pva@gentoo.org> -vzctl-3.0.24.ebuild,
+  -vzctl-3.0.24.1-r1.ebuild, +vzctl-3.0.26.2.ebuild, vzctl-9999.ebuild:
+  Version bump, bug 350806 thank Fabian Fingerle for report and Dennis Schridde
+  for initial work. Sync 9999 ebuild. Drop unused.
 
 *vzctl-3.0.24.2 (10 Sep 2010)
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.24.1-r1.ebuild,v 1.1 2010/08/30 11:55:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.26.2.ebuild,v 1.1 2011/03/22 16:28:14 pva Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit bash-completion eutils
 
@@ -27,24 +27,22 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	# Set default OSTEMPLATE on gentoo
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
-	epatch "${FILESDIR}/${P}-vzpostup.patch"
 }
 
 src_configure() {
 	econf \
 		--localstatedir=/var \
-		--enable-cron \
 		--enable-udev \
 		$(use_enable bash-completion bashcomp) \
 		--enable-logrotate
 }
 
 src_install() {
-	make DESTDIR="${D}" install install-gentoo || die "make install failed"
+	emake DESTDIR="${D}" install install-gentoo
 
 	# install the bash-completion script into the right location
-	rm -rf "${D}"/etc/bash_completion.d
-	dobashcompletion "${S}"/etc/bash_completion.d/vzctl.sh vzctl
+	rm -rf "${ED}"/etc/bash_completion.d
+	dobashcompletion etc/bash_completion.d/vzctl.sh vzctl
 
 	# We need to keep some dirs
 	keepdir /vz/{dump,lock,root,private,template/cache}
@@ -55,7 +53,7 @@ pkg_postinst() {
 	bash-completion_pkg_postinst
 	local conf_without_OSTEMPLATE
 	for file in \
-		$(find "${ROOT}/etc/vz/conf/" \( -name *.conf -a \! -name 0.conf \)); do
+		$(find "${EROOT}/etc/vz/conf/" \( -name *.conf -a \! -name 0.conf \)); do
 		if ! grep '^OSTEMPLATE' $file > /dev/null; then
 			conf_without_OSTEMPLATE+=" $file"
 		fi
