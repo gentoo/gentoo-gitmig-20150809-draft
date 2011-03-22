@@ -22,7 +22,7 @@ index bb15f54..c96fcba 100644
      AC_DEFINE(HAVE_LIBSMBCLIENT, [], ["Do we have libsmbclient"])
      SMBLIBS=-lsmbclient
 -])
-+], [AC_MSG_ERROR([libsmclient not found])])
++], [AC_MSG_ERROR([libsmbclient not found])])
 +fi
  AC_SUBST(SMBLIBS)
  AC_SUBST(LIBGNOME_REQUIRED)
