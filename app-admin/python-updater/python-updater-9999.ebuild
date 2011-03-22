@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-9999.ebuild,v 1.3 2011/01/01 00:16:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-9999.ebuild,v 1.4 2011/03/22 21:34:29 arfrever Exp $
 
 inherit subversion
 
@@ -15,9 +15,8 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="sys-apps/help2man"
-RDEPEND="!<dev-lang/python-2.3.6-r2
-	dev-lang/python
-	|| ( >=sys-apps/portage-2.1.2 sys-apps/pkgcore sys-apps/paludis )"
+RDEPEND="dev-lang/python
+	|| ( >=sys-apps/portage-2.1.6 >=sys-apps/paludis-0.56.0 )"
 
 src_compile() {
 	emake ${PN}.1 || die "Generation of man page failed"
