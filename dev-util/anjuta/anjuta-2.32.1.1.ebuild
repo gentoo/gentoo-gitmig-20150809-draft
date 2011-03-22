@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.6 2011/03/16 10:18:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.7 2011/03/22 19:04:54 ranger Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="debug devhelp doc glade graphviz +introspection +sourceview subversion test vala"
 
 RDEPEND=">=dev-libs/glib-2.25.15:2
