@@ -9,5 +9,6 @@
 </longdescription>
 <use>
   <flag name='extras'>Build additional libraries</flag>
+  <flag name='double-precision'>Build libraries in double precision</flag>
 </use>
 </pkgmetadata>
