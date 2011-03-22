@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.295 2011/03/21 21:26:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.296 2011/03/22 19:22:40 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  evolution-data-server-2.32.2.ebuild:
+  Marking evolution-data-server-2.32.2 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   evolution-data-server-2.32.2.ebuild:
