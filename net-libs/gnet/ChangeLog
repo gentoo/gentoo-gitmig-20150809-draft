@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.75 2011/03/21 20:14:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.76 2011/03/22 19:41:26 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gnet-2.0.8-r1.ebuild:
+  Marking gnet-2.0.8-r1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gnet-2.0.8-r1.ebuild:
   ppc64 stable wrt #353436
