@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/swfdec-mozilla-0.8.2-r1.ebuild,v 1.3 2011/02/24 20:43:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/swfdec-mozilla/swfdec-mozilla-0.8.2-r1.ebuild,v 1.4 2011/03/22 19:46:50 ranger Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://swfdec.freedesktop.org/download/${PN}/${MY_PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
