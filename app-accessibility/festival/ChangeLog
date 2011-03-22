@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.95 2011/03/22 13:36:25 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.96 2011/03/22 16:37:23 neurogeek Exp $
+
+  22 Mar 2011; Jesus Rivero <neurogeek@gentoo.org>
+  festival-1.96_beta.ebuild, festival-1.96_beta-r1.ebuild:
+  Minor change in mbrola dep.
 
   22 Mar 2011; Jesus Rivero <neurogeek@gentoo.org> festival-2.1.ebuild:
   Quoted LDFLAGS per bugs #340317 and #359723

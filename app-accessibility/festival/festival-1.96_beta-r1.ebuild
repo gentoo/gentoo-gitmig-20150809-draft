@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta-r1.ebuild,v 1.7 2011/03/04 20:12:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta-r1.ebuild,v 1.8 2011/03/22 16:37:23 neurogeek Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,7 +33,7 @@ SP_DEPEND="~app-accessibility/speech-tools-1.2.96_beta"
 DEPEND="${SP_DEPEND}
 	alsa? ( media-sound/alsa-utils )"
 RDEPEND="${SP_DEPEND}
-	mbrola? ( >=app-accessibility/mbrola-3.0.1h-r2 )"
+	mbrola? ( <=app-accessibility/mbrola-3.0.1h-r5 )"
 
 S=${WORKDIR}/festival
 
