@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.21 2011/03/20 13:05:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.22 2011/03/22 16:50:55 suka Exp $
+
+  22 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
+  libreoffice-bin-3.3.1.ebuild:
+  Fix offlinehelp install, bug #359799
 
   20 Mar 2011; Andreas Proschofsky <suka@gentoo.org>
   libreoffice-bin-3.3.1.ebuild:

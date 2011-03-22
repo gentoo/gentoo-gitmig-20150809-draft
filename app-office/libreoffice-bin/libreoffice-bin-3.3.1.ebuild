@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.11 2011/03/20 13:05:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.1.ebuild,v 1.12 2011/03/22 16:50:55 suka Exp $
 
 EAPI="3"
 
@@ -112,7 +112,7 @@ src_unpack() {
 	rpm_unpack "./${UP}/${BASIS}-en-US-${BVER}.${XARCH}.rpm"
 	rpm_unpack "./${UP}/${NM2}-en-US-${BVER}.${XARCH}.rpm"
 	rpm_unpack "./${UP}/${NM2}-dict-en-${BVER}.${XARCH}.rpm"
-	use offlinehelp && rpm_unpack "./LibO_${MY_PV2}_Linux_${XARCH2}_helppack-rpm_en-US/RPMS//${BASIS}-en-US-help-${BVER}.${XARCH}.rpm"
+	use offlinehelp && rpm_unpack "./${PACKED}_helppack-rpm_en-US/RPMS//${BASIS}-en-US-help-${BVER}.${XARCH}.rpm"
 	for s in base binfilter calc math res writer ; do
 		rpm_unpack "./${UP}/${BASIS}-en-US-${s}-${BVER}.${XARCH}.rpm"
 	done
@@ -139,7 +139,7 @@ src_unpack() {
 
 			# Help files
 			if use offlinehelp; then
-				LANGDIR2="LibO_${MY_PV2}_Linux_${XARCH2}_helppack-rpm_${m}/RPMS/"
+				LANGDIR2="${PACKED}_helppack-rpm_${m}/RPMS/"
 				rpm_unpack "./${LANGDIR2}/${BASIS}-${m}-help-${BVER}.${XARCH}.rpm"
 			fi
 		fi
