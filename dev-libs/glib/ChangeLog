@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.452 2011/03/22 00:50:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.453 2011/03/22 18:51:01 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> glib-2.26.1-r1.ebuild:
+  Marking glib-2.26.1-r1 ppc stable for bug 353436
 
 *glib-2.28.4 (22 Mar 2011)
 
