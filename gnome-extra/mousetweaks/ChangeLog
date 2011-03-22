@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/mousetweaks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.59 2011/03/21 21:37:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.60 2011/03/22 19:31:38 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> mousetweaks-2.32.1.ebuild:
+  Marking mousetweaks-2.32.1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   mousetweaks-2.32.1.ebuild:
