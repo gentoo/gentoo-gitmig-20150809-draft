@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.21.ebuild,v 1.7 2011/03/20 20:13:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.21.ebuild,v 1.8 2011/03/22 09:59:02 jlec Exp $
 
 EAPI=1
 
@@ -101,14 +101,14 @@ src_compile() {
 	if use fltk; then
 		# hdspmixer requires fltk
 		append-ldflags "-L$(dirname $(fltk-config --libs))"
-		append-flags "-I$(fltk-config --includedir)"
+		append-flags "-I/usr/include/fltk-1"
 	fi
 
 	local f
 	for f in ${ALSA_TOOLS}
 	do
 		cd "${S}/${f}"
-		econf --with-gtk2 || die "econf ${f} failed"
+		econf --with-gtk2
 		emake || die "emake ${f} failed"
 	done
 }

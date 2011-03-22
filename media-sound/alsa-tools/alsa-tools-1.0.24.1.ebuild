@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.24.1.ebuild,v 1.2 2011/03/20 20:13:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.24.1.ebuild,v 1.3 2011/03/22 09:59:02 jlec Exp $
 
 EAPI=3
 inherit base flag-o-matic autotools
@@ -28,7 +28,7 @@ ${ECHOAUDIO_CARDS}"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
 	>=dev-python/pyalsa-1.0.24
-	fltk? ( x11-libs/fltk:1 )
+	fltk? ( >=x11-libs/fltk-1.1.10-r2:1 )
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}"
 
@@ -110,10 +110,10 @@ src_configure() {
 		cd "${S}/${f}"
 		case "${f}" in
 			echomixer,envy24control,rmedigicontrol )
-				econf --with-gtk2 || die "econf ${f} failed"
+				econf --with-gtk2
 				;;
 			* )
-				econf || die "econf ${f} failed"
+				econf
 				;;
 		esac
 	done

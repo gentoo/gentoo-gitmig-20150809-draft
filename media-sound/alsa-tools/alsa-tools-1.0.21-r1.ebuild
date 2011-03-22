@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.21-r1.ebuild,v 1.2 2011/03/20 20:13:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.21-r1.ebuild,v 1.3 2011/03/22 09:59:02 jlec Exp $
 
 EAPI="1"
 
@@ -28,7 +28,7 @@ alsa_cards_rme32 alsa_cards_rme96 alsa_cards_sscape alsa_cards_pcxhr
 ${ECHOAUDIO_CARDS}"
 
 RDEPEND=">=media-libs/alsa-lib-1.0.20-r1
-	fltk? ( x11-libs/fltk:1 )
+	fltk? ( >=x11-libs/fltk-1.1.10-r2:1 )
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}"
 
@@ -110,7 +110,7 @@ src_compile() {
 	for f in ${ALSA_TOOLS}
 	do
 		cd "${S}/${f}"
-		econf --with-gtk2 || die "econf ${f} failed"
+		econf --with-gtk2
 		emake || die "emake ${f} failed"
 	done
 }
