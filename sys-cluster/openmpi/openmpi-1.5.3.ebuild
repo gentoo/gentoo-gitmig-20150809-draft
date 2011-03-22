@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.3.ebuild,v 1.1 2011/03/22 01:21:41 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.3.ebuild,v 1.2 2011/03/22 19:28:29 jsbronder Exp $
 
 EAPI=3
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -90,6 +90,8 @@ src_configure() {
 
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
+	# From USE=vt see #359917
+	rm "${D}"/usr/share/libtool &> /dev/null
 	dodoc README AUTHORS NEWS VERSION || die
 }
 
