@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.2.ebuild,v 1.2 2011/03/21 13:39:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.2.ebuild,v 1.3 2011/03/22 23:15:43 lu_zero Exp $
 
 EAPI="2"
 
@@ -303,6 +303,12 @@ src_prepare() {
 
 	# Fix a known compilation error
 	epatch "${FILESDIR}"/ati-drivers-fix_compilation-bug-297322.patch
+
+	if kernel_is ge 2 6 38 ; then
+		epatch "${FILESDIR}"/ati-drivers-2.6.38.patch || \
+			die "epatch ati-drivers-2.6.38.patch failed"
+	fi
+
 
 	# These are the userspace utilities that we also have source for.
 	# We rebuild these later.
