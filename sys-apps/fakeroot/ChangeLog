@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.60 2011/03/21 14:53:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.61 2011/03/22 20:50:42 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> fakeroot-1.14.4.ebuild:
+  stable ppc, bug 357301
 
   21 Mar 2011; Thomas Kahle <tomka@gentoo.org> fakeroot-1.14.4.ebuild:
   x86 stable per bug 357301
