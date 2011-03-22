@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/netkit-tftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.22 2011/03/22 14:52:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.23 2011/03/22 20:49:46 ulm Exp $
+
+  22 Mar 2011; Ulrich Mueller <ulm@gentoo.org> netkit-tftp-0.17-r7.ebuild:
+  Update blocker against old-style virtual, bug 359125.
 
   22 Mar 2011; Peter Volkov <pva@gentoo.org> -netkit-tftp-0.17-r6.ebuild,
   netkit-tftp-0.17-r7.ebuild:
