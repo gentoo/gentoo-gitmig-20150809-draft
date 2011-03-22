@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia2code
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.18 2011/03/12 19:35:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.19 2011/03/22 19:56:11 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> dia2code-0.8.3.ebuild:
+  Marking dia2code-0.8.3 ppc stable for bug 353436
 
   12 Mar 2011; Raúl Porcel <armin76@gentoo.org> dia2code-0.8.3.ebuild:
   ia64/sparc stable wrt #353436
