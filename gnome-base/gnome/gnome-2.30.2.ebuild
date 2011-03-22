@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.14 2011/03/16 10:32:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.30.2.ebuild,v 1.15 2011/03/22 06:24:14 nirbheek Exp $
 
 EAPI="2"
 
@@ -95,7 +95,7 @@ RDEPEND="
 	>=gnome-extra/deskbar-applet-2.30.1
 	>=gnome-extra/hamster-applet-2.30.2
 
-	>=x11-themes/gtk-engines-2.20.1
+	>=x11-themes/gtk-engines-2.20.1:2
 	>=x11-themes/gnome-backgrounds-2.30.0
 
 	>=x11-libs/vte-0.24.2:0
