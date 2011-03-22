@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.242 2011/03/19 08:59:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.243 2011/03/22 18:12:53 angelos Exp $
+
+  22 Mar 2011; Christoph Mende <angelos@gentoo.org> mpd-0.16.2.ebuild:
+  lastfmradio's dependency on curl is already enforced by REQUIRED_USE, so
+  removed the block
 
 *mpd-0.16.2 (19 Mar 2011)
 

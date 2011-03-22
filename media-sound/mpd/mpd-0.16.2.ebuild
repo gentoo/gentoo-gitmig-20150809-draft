@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.1 2011/03/19 08:59:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.2 2011/03/22 18:12:53 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib
@@ -104,12 +104,6 @@ src_configure() {
 		mpdconf+=" --disable-oggflac"
 	fi
 
-	if use lastfmradio && use curl; then
-		mpdconf+=" --enable-lastfm"
-	else
-		mpdconf+=" --disable-lastfm"
-	fi
-
 	append-lfs-flags
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
@@ -120,7 +114,6 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable ao) \
 		$(use_enable audiofile) \
-		$(use_with zeroconf zeroconf avahi) \
 		$(use_enable bzip2) \
 		$(use_enable cdio iso9660) \
 		$(use_enable cue) \
@@ -130,10 +123,11 @@ src_configure() {
 		$(use_enable fifo) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
-		$(use_enable jack) \
 		$(use_enable id3) \
 		$(use_enable inotify) \
 		$(use_enable ipv6) \
+		$(use_enable jack) \
+		$(use_enable lastfmradio lastfm) \
 		$(use_enable libmms mms) \
 		$(use_enable libsamplerate lsr) \
 		$(use_enable mad) \
@@ -154,6 +148,7 @@ src_configure() {
 		$(use_enable wavpack) \
 		$(use_enable wildmidi) \
 		$(use_enable zip zzip) \
+		$(use_with zeroconf zeroconf avahi) \
 		${mpdconf}
 }
 
