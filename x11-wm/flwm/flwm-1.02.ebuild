@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.02.ebuild,v 1.2 2011/03/20 19:54:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.02.ebuild,v 1.3 2011/03/22 10:01:31 jlec Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="opengl"
 
 DEPEND="
-	x11-libs/fltk:1
+	>=x11-libs/fltk-1.1.10-r2:1
 	opengl? ( virtual/opengl )"
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/flwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/ChangeLog,v 1.16 2011/03/20 19:54:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/ChangeLog,v 1.17 2011/03/22 10:01:31 jlec Exp $
+
+  22 Mar 2011; Justin Lecher <jlec@gentoo.org> flwm-1.02.ebuild:
+  Restrict fltk version being able to return includedir
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> flwm-1.02.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
