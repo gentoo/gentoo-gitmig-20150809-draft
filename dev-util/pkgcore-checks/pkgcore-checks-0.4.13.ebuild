@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.13.ebuild,v 1.2 2010/06/19 15:18:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.13.ebuild,v 1.3 2011/03/22 06:30:30 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -22,6 +22,12 @@ DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS NEWS"
 PYTHON_MODNAME="pkgcore_checks"
+
+pkg_setup() {
+	# disable snakeoil 2to3 caching...
+	unset PY2TO3_CACHEDIR
+	python_pkg_setup
+}
 
 pkg_postinst() {
 	einfo "updating pkgcore plugin cache"
