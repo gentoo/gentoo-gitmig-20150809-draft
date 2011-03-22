@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.122 2011/03/16 10:20:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.123 2011/03/22 19:05:23 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> devhelp-2.32.0.ebuild:
+  Marking devhelp-2.32.0 ppc stable for bug 353436
 
   16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> devhelp-2.30.1.ebuild,
   devhelp-2.32.0.ebuild:
