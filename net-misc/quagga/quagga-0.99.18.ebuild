@@ -1,26 +1,26 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.18.ebuild,v 1.1 2011/03/21 16:27:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.18.ebuild,v 1.2 2011/03/22 17:06:23 flameeyes Exp $
 
 EAPI="2"
 
 CLASSLESS_BGP_PATCH=ht-20040304-classless-bgp.patch
-#REALMS_PATCH=quagga-0.99.14-realms-test2.diff
-REALMS_PATCH=quagga-0.99.14-realms-test2-gentoo.patch.bz2
+
+BACKPORTS=1
 
 inherit eutils multilib autotools pam
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	bgpclassless? ( http://hasso.linux.ee/stuff/patches/quagga/${CLASSLESS_BGP_PATCH} )
-	realms? ( http://dev.gentoo.org/~flameeyes/patches/${PN}/${REALMS_PATCH} )"
-#	realms? ( http://linux.mantech.ro/download/quagga/${REALMS_PATCH} )
+	${BACKPORTS:+
+		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2}
+	bgpclassless? ( http://hasso.linux.ee/stuff/patches/quagga/${CLASSLESS_BGP_PATCH} )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
-IUSE="caps doc ipv6 snmp pam bgpclassless ospfapi realms multipath tcp-zebra elibc_glibc +readline"
+IUSE="caps doc ipv6 snmp pam bgpclassless ospfapi multipath tcp-zebra elibc_glibc +readline"
 
 COMMON_DEPEND="
 	caps? ( sys-libs/libcap )
@@ -41,16 +41,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.99.17-gentoo.patch"
+	[[ -n ${BACKPORTS} ]] && \
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
 
 	# Classless prefixes for BGP
 	# http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${DISTDIR}/${CLASSLESS_BGP_PATCH}"
-
-	# Realms support (Calin Velea)
-	# http://vcalinus.gemenii.ro/quaggarealms.html
-	# http://linux.mantech.ro/quagga+realm_en.php
-	use realms && epatch "${DISTDIR}/${REALMS_PATCH}"
 
 	eautoreconf
 }
@@ -61,7 +58,6 @@ src_configure() {
 	use ospfapi \
 			&& myconf="${myconf} --enable-opaque-lsa --enable-ospf-te --enable-ospfclient"
 
-	use realms && myconf="${myconf} --enable-realms"
 	use multipath && myconf="${myconf} --enable-multipath=0"
 
 	econf \
@@ -120,4 +116,8 @@ pkg_postinst() {
 	elog ""
 	elog "You can pass additional options to the daemon by setting the EXTRA_OPTS"
 	elog "variable in their respective file in /etc/conf.d"
+	elog ""
+	elog "Starting from version 0.99.18, quagga no longer supports the realms patch."
+	elog "The patch was abandoned upstream and once again didn't apply; it needs a"
+	elog "dedicated maintainer, if it is still necessary."
 }
