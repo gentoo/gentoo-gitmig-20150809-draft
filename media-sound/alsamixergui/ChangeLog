@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsamixergui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.31 2011/03/20 20:11:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.32 2011/03/22 10:01:35 jlec Exp $
+
+  22 Mar 2011; Justin Lecher <jlec@gentoo.org>
+  alsamixergui-0.9.0.1.2-r4.ebuild:
+  Hardcoded fltk includedir
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org>
   alsamixergui-0.9.0.1.2-r4.ebuild:
