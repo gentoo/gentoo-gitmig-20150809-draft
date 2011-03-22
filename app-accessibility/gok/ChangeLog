@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.150 2011/03/21 20:55:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.151 2011/03/22 20:02:56 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org> gok-2.30.1.ebuild:
+  Marking gok-2.30.1 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gok-2.30.1.ebuild:
   ppc64 stable wrt #353436
