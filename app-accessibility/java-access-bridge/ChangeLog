@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.48 2011/03/21 20:56:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.49 2011/03/22 20:03:21 ranger Exp $
+
+  22 Mar 2011; Brent Baude <ranger@gentoo.org>
+  java-access-bridge-1.26.0.ebuild:
+  Marking java-access-bridge-1.26.0 ppc stable for bug 353436
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   java-access-bridge-1.26.0.ebuild:
