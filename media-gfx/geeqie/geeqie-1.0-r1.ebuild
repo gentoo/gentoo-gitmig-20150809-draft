@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.6 2010/10/05 20:43:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0-r1.ebuild,v 1.7 2011/03/23 16:57:40 ssuominen Exp $
 
 EAPI=2
 
@@ -13,14 +13,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc exif lcms lirc xmp"
 
-RDEPEND=">=x11-libs/gtk+-2.4.0
+RDEPEND="x11-libs/gtk+:2
 	virtual/libintl
 	doc? ( app-text/gnome-doc-utils )
 	lcms? ( =media-libs/lcms-1* )
 	lirc? ( app-misc/lirc )
 	xmp? ( >=media-gfx/exiv2-0.17[xmp] )
 	!xmp? ( exif? ( >=media-gfx/exiv2-0.17 ) )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
