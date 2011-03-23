@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.302 2011/03/23 16:28:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.303 2011/03/23 16:35:15 chainsaw Exp $
+
+  23 Mar 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.16.2-r2.ebuild:
+  Remove vulnerable ebuild for CVE-2011-1174 & CVE-2011-1175 now that a secure
+  ebuild has been stabled.
 
   23 Mar 2011; Thomas Kahle <tomka@gentoo.org> asterisk-1.6.2.17.2.ebuild:
   x86 stable per bug 359767
