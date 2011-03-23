@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.3.ebuild,v 1.8 2011/03/22 19:43:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.3.ebuild,v 1.9 2011/03/23 07:37:41 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.17:2
 		>=net-dns/avahi-0.6.22[dbus,gtk] )
 	ssh? (
 		>=dev-libs/libxml2-2.6.31
-		>=x11-libs/vte-0.20 )
+		>=x11-libs/vte-0.20:0 )
 	telepathy? ( >=net-libs/telepathy-glib-0.10 )"
 
 DEPEND="${RDEPEND}
