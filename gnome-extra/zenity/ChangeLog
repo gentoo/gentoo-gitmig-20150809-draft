@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.202 2011/03/22 19:33:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.203 2011/03/23 08:33:01 nirbheek Exp $
+
+  23 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -zenity-2.30.0.ebuild:
+  Remove old
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> zenity-2.32.1.ebuild:
   Marking zenity-2.32.1 ppc stable for bug 353436
