@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/gnome-rdp-0.2.3-r1.ebuild,v 1.1 2010/11/22 13:41:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/gnome-rdp-0.2.3-r1.ebuild,v 1.2 2011/03/23 16:59:36 ssuominen Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-db/sqlite-2.8
 		>=dev-dotnet/gnome-keyring-sharp-1.0.0
 		>=dev-dotnet/gnome-sharp-2.16
 		>=dev-dotnet/vte-sharp-2.16
-		>=x11-libs/gtk+-2.4
+		>=x11-libs/gtk+-2.4:2
 		>=net-misc/openssh-3
 		>=x11-terms/gnome-terminal-2
 		rdesktop? ( >=net-misc/rdesktop-1.3 )
