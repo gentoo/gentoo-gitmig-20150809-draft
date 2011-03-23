@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.3 2011/02/16 19:22:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.4 2011/03/23 16:44:53 eva Exp $
 
 EAPI="2"
 
@@ -17,9 +17,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-li
 IUSE="cairo debug doc ffmpeg jpeg mmx openexr png raw sdl sse svg v4l"
 
 DEPEND=">=media-libs/babl-0.1.4
-	>=dev-libs/glib-2.22.0
+	>=dev-libs/glib-2.22.0:2
 	media-libs/libpng
-	>=x11-libs/gtk+-2.18.0
+	>=x11-libs/gtk+-2.18.0:2
 	x11-libs/pango
 	cairo? ( x11-libs/cairo )
 	doc? ( app-text/asciidoc
@@ -33,7 +33,7 @@ DEPEND=">=media-libs/babl-0.1.4
 	openexr? ( media-libs/openexr )
 	raw? ( >=media-libs/libopenraw-0.0.5 )
 	sdl? ( media-libs/libsdl )
-	svg? ( >=gnome-base/librsvg-2.14.0 )"
+	svg? ( >=gnome-base/librsvg-2.14.0:2 )"
 RDEPEND="${DEPEND}"
 
 # broken upstream, see:
