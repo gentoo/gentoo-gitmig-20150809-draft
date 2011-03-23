@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/gbuffy
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/ChangeLog,v 1.5 2008/10/06 19:47:50 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/gbuffy/ChangeLog,v 1.6 2011/03/23 20:52:08 radhermit Exp $
+
+  23 Mar 2011; Tim Harder <radhermit@gentoo.org> -gbuffy-0.2.6.ebuild,
+  gbuffy-0.2.6-r1.ebuild:
+  Remove old, use slot dep for gtk+, and other cleanups.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing agriffis from metadata due to his retirement (see #182294 for
