@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.14 2011/03/23 00:35:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.15 2011/03/23 00:40:34 nirbheek Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -21,7 +21,6 @@ RDEPEND="app-arch/zip
 	>=x11-libs/cairo-1.10.2[X]
 	>=x11-libs/gtk+-2.8.6:2
 	>=x11-libs/pango-1.10.1
-	>=gnome-base/gconf-1.2.1:2
 	virtual/jpeg
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( >=dev-libs/dbus-glib-0.72 )
