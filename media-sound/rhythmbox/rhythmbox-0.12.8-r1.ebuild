@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.11 2011/03/14 19:42:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.12 2011/03/23 08:36:39 nirbheek Exp $
 
 EAPI="2"
 
@@ -16,20 +16,20 @@ IUSE="cdr daap doc gnome-keyring hal ipod libnotify lirc musicbrainz mtp nsplugi
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
-COMMON_DEPEND=">=dev-libs/glib-2.18
-	dev-libs/libxml2
-	>=x11-libs/gtk+-2.18
+COMMON_DEPEND=">=dev-libs/glib-2.18:2
+	dev-libs/libxml2:2
+	>=x11-libs/gtk+-2.18:2
 	>=dev-libs/dbus-glib-0.71
 	>=dev-libs/totem-pl-parser-2.26
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=gnome-extra/gnome-media-2.14
 	<gnome-extra/gnome-media-2.90
 	>=net-libs/libsoup-2.26:2.4
 	>=net-libs/libsoup-gnome-2.26:2.4
 
-	>=media-libs/gst-plugins-base-0.10.20
+	>=media-libs/gst-plugins-base-0.10.20:0.10
 	|| (
-		>=media-libs/gst-plugins-base-0.10.24
+		>=media-libs/gst-plugins-base-0.10.24:0.10
 		>=media-libs/gst-plugins-bad-0.10.6 )
 
 	cdr? ( >=app-cdr/brasero-0.9.1 )
@@ -51,8 +51,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.18
 		|| (
 			>=dev-lang/python-2.5
 			dev-python/celementtree )
-		>=dev-python/pygtk-2.8
-		>=dev-python/pygobject-2.15.4
+		>=dev-python/pygtk-2.8:2
+		>=dev-python/pygobject-2.15.4:2
 		>=dev-python/gconf-python-2.22
 		>=dev-python/libgnome-python-2.22
 		>=dev-python/gnome-keyring-python-2.22
@@ -64,13 +64,13 @@ COMMON_DEPEND=">=dev-libs/glib-2.18
 	)"
 
 RDEPEND="${COMMON_DEPEND}
-	>=media-plugins/gst-plugins-soup-0.10
-	>=media-plugins/gst-plugins-libmms-0.10
+	>=media-plugins/gst-plugins-soup-0.10:0.10
+	>=media-plugins/gst-plugins-libmms-0.10:0.10
 	|| (
-		>=media-plugins/gst-plugins-cdparanoia-0.10
-		>=media-plugins/gst-plugins-cdio-0.10 )
+		>=media-plugins/gst-plugins-cdparanoia-0.10:0.10
+		>=media-plugins/gst-plugins-cdio-0.10:0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
-	>=media-plugins/gst-plugins-taglib-0.10.6
+	>=media-plugins/gst-plugins-taglib-0.10.6:0.10
 	nsplugin? ( net-libs/xulrunner )"
 
 # gtk-doc-am needed for eautoreconf
