@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.12-r1.ebuild,v 1.3 2010/10/24 17:45:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.13-r2.ebuild,v 1.1 2011/03/23 23:05:00 flameeyes Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="lua"
 
 DEPEND="dev-libs/libxml2
@@ -27,7 +27,7 @@ PDEPEND="www-apache/modsecurity-crs"
 S="${WORKDIR}/${MY_P}"
 
 APACHE2_MOD_FILE="apache2/.libs/${PN}2.so"
-APACHE2_MOD_CONF="2.5.10/99_mod_security"
+APACHE2_MOD_CONF="2.5.13-r2/79_modsecurity"
 APACHE2_MOD_DEFINE="SECURITY"
 
 need_apache2
@@ -80,7 +80,21 @@ src_install() {
 	dodoc CHANGES || die
 	dohtml -r doc/* || die
 
-	keepdir /var/cache/mod_security || die
-	fowners apache:apache /var/cache/mod_security || die
-	fperms 0770 /var/cache/mod_security || die
+	keepdir /var/cache/modsecurity || die
+	fowners apache:apache /var/cache/modsecurity || die
+	fperms 0770 /var/cache/modsecurity || die
+}
+
+pkg_postinst() {
+	if [[ -f "${ROOT}"/etc/apache/modules.d/99_mod_security.conf ]]; then
+		ewarn "You still have the configuration file 99_mod_security.conf."
+		ewarn "Please make sure to remove that and keep only 79_mod_security.conf."
+		ewarn ""
+	fi
+	elog "The base configuration file has been renamed 79_modsecurity.conf"
+	elog "so that you can put your own configuration as 90_modsecurity_local.conf or"
+	elog "equivalent."
+	elog ""
+	elog "That would be the correct place for site-global security rules."
+	elog "Note: 80_modsecurity_crs.conf is used by www-apache/modsecurity-crs"
 }

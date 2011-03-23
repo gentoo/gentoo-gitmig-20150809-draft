@@ -1,6 +1,15 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.49 2011/02/26 14:44:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.50 2011/03/23 23:05:00 flameeyes Exp $
+
+*mod_security-2.5.13-r2 (23 Mar 2011)
+
+  23 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/2.5.13-r2/79_modsecurity.conf, -mod_security-2.5.12-r1.ebuild,
+  +mod_security-2.5.13-r2.ebuild:
+  Version bump; don't force usage of CRS in the configuration file for the
+  module; rename mod_security to modsecurity in it for consistency with
+  upstream and future Debian.
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   mod_security-2.5.13-r1.ebuild:
