@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/openpgm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.1 2011/03/23 12:39:05 djc Exp $
+
+*openpgm-5.1.114 (23 Mar 2011)
+
+  23 Mar 2011; Dirkjan Ochtman <djc@gentoo.org> +openpgm-5.1.114.ebuild,
+  +metadata.xml:
+  Initial version of openpgm, for zeromq-2.1 (bug 355523).
+
