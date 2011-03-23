@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.2.ebuild,v 1.3 2010/10/14 23:17:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.4.2.ebuild,v 1.4 2011/03/23 06:22:50 ssuominen Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2
 	dev-python/pygtk
-	x11-libs/vte[python]
+	x11-libs/vte:0[python]
 	dev-python/notify-python
 	dev-python/gconf-python
 	dev-python/dbus-python

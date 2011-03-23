@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/evilvte
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.16 2010/06/20 10:13:04 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.17 2011/03/23 06:23:18 ssuominen Exp $
+
+  23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> evilvte-0.4.6.ebuild:
+  Use SLOT dependencies for x11-libs/vte.
 
   20 Jun 2010; Markos Chandras <hwoarang@gentoo.org> evilvte-0.4.6.ebuild:
   Stable on amd64 wrt bug #322949
