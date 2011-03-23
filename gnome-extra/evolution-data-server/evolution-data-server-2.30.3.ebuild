@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.30.3.ebuild,v 1.8 2011/01/30 19:36:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.30.3.ebuild,v 1.9 2011/03/23 10:22:24 nirbheek Exp $
 
 EAPI="2"
 
@@ -15,11 +15,11 @@ KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd
 
 IUSE="doc ipv6 kerberos gnome-keyring ldap ssl +weather"
 
-RDEPEND=">=dev-libs/glib-2.16.1
-	>=x11-libs/gtk+-2.18
-	>=gnome-base/gconf-2
+RDEPEND=">=dev-libs/glib-2.16.1:2
+	>=x11-libs/gtk+-2.18:2
+	>=gnome-base/gconf-2:2
 	>=dev-db/sqlite-3.5
-	>=dev-libs/libxml2-2
+	>=dev-libs/libxml2-2:2
 	>=net-libs/libsoup-2.4:2.4
 	>=dev-libs/libical-0.43
 	>=dev-libs/dbus-glib-0.6
