@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gnome-avrdude
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/ChangeLog,v 1.2 2007/12/10 17:44:44 calchan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnome-avrdude/ChangeLog,v 1.3 2011/03/23 20:59:15 radhermit Exp $
+
+  23 Mar 2011; Tim Harder <radhermit@gentoo.org> gnome-avrdude-0.1.ebuild:
+  Use slot dependency for gtk+ and add explicit empty IUSE.
 
   10 Dec 2007; Denis Dupeyron <calchan@gentoo.org> gnome-avrdude-0.1.ebuild:
   Took dev-embedded/avrdude out of build dependencies.
