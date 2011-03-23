@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20090801.ebuild,v 1.2 2010/01/08 15:05:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20090801.ebuild,v 1.3 2011/03/23 16:50:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ffmpeg gtk readline"
 
 DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.5 )
-	gtk? ( x11-libs/gtk+ x11-libs/gtkglext )
+	gtk? ( x11-libs/gtk+:2 x11-libs/gtkglext )
 	readline? ( sys-libs/readline )
 	virtual/opengl
 	media-libs/glew
