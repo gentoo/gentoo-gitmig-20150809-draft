@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/librsvg-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.47 2011/03/22 19:01:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.48 2011/03/23 20:24:05 eva Exp $
+
+  23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -librsvg-python-2.30.2.ebuild:
+  Clean up old revision.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> librsvg-python-2.32.0.ebuild:
   Marking librsvg-python-2.32.0 ppc stable for bug 353436
