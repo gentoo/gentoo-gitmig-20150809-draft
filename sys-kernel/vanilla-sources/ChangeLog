@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.855 2011/03/17 11:22:06 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.856 2011/03/23 00:40:09 mpagano Exp $
+
+  23 Mar 2011; Mike Pagano <mpagano@gentoo.org>
+  vanilla-sources-2.6.36.4.ebuild:
+  Stablizing on archs which have previously stabled kernel version as per bug
+  #338739. If arch teams have issues revert change and bring discussion to bug
+  #338739
 
 *vanilla-sources-2.6.37.4 (17 Mar 2011)
 *vanilla-sources-2.6.37.3 (17 Mar 2011)

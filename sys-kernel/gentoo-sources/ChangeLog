@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.827 2011/03/22 16:17:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.828 2011/03/23 00:37:46 mpagano Exp $
+
+  23 Mar 2011; Mike Pagano <mpagano@gentoo.org>
+  gentoo-sources-2.6.36-r8.ebuild:
+  Stablizing on archs which have previously stabled kernel version as per bug
+  #338739. If arch teams have issues revert change and bring discussion to bug
+  #338739
 
   22 Mar 2011; Mike Pagano <mpagano@gentoo.org> gentoo-sources-2.6.38.ebuild:
   Update manifest for 2.6.38 deblob
