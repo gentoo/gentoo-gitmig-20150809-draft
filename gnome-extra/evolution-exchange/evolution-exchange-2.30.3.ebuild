@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.3.ebuild,v 1.1 2010/09/13 17:46:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.30.3.ebuild,v 1.2 2011/03/23 08:01:35 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,10 +17,10 @@ IUSE="debug doc static"
 RDEPEND="
 	>=mail-client/evolution-${PV}
 	>=gnome-extra/evolution-data-server-${PV}[ldap,kerberos]
-	>=dev-libs/glib-2.16.0
-	>=x11-libs/gtk+-2.10
-	>=gnome-base/gconf-2.0
-	dev-libs/libxml2
+	>=dev-libs/glib-2.16.0:2
+	>=x11-libs/gtk+-2.10:2
+	>=gnome-base/gconf-2.0:2
+	dev-libs/libxml2:2
 	net-libs/libsoup:2.4
 	>=net-nds/openldap-2.1.30-r2
 	virtual/krb5"
