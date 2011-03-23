@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/fast-user-switch-applet-2.24.0.ebuild,v 1.12 2010/12/08 17:06:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/fast-user-switch-applet-2.24.0.ebuild,v 1.13 2011/03/23 08:02:52 nirbheek Exp $
 
 EAPI="2"
 
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.8
+RDEPEND=">=dev-libs/glib-2.16:2
+	>=x11-libs/gtk+-2.8:2
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
-	>=gnome-base/libglade-2.0
+	>=gnome-base/libglade-2.0:2.0
 	gnome-base/libgnomeui
-	gnome-base/gconf
+	gnome-base/gconf:2
 	gnome-base/gdm
 	x11-libs/libXmu
 	x11-libs/libXau

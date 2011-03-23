@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.30.0.ebuild,v 1.8 2010/10/17 15:21:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.30.0.ebuild,v 1.9 2011/03/23 07:57:04 nirbheek Exp $
 
+EAPI="2"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -16,13 +17,13 @@ IUSE="eds"
 
 # Articifially raise gtk+ dep to support loading through XSettings
 RDEPEND=">=gnome-base/libbonobo-2
-	>=dev-libs/glib-2.16.0
-	>=dev-libs/libxml2-2.4.6
-	>=x11-libs/gtk+-2.14.0
-	>=net-libs/libsoup-2.4
-	>=gnome-base/libgtop-2.13.3
+	>=dev-libs/glib-2.16.0:2
+	>=dev-libs/libxml2-2.4.6:2
+	>=x11-libs/gtk+-2.14.0:2
+	>=net-libs/libsoup-2.4:2.4
+	>=gnome-base/libgtop-2.13.3:2
 	eds? ( >=gnome-extra/evolution-data-server-1.3 )
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	|| ( dev-libs/elfutils dev-libs/libelf )
 	>=sys-devel/gdb-5.1"
 
