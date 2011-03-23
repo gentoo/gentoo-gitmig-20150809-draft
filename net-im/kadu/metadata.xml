@@ -10,6 +10,6 @@
 		<flag name="gadu">Enables Gadu communication protocol</flag>
 		<flag name="phonon">Enables phonon audio plugin</flag>
 		<flag name="speech">Enables speech module</flag>
-		<flag name="tlen">Enables Tlen.pl communication protocol</flag>
+		<!-- <flag name="tlen">Enables Tlen.pl communication protocol</flag> -->
 	</use>
 </pkgmetadata>

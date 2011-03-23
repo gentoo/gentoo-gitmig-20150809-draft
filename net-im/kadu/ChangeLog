@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.96 2011/03/23 23:19:22 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.97 2011/03/23 23:30:31 reavertm Exp $
+
+  23 Mar 2011; Maciej Mrozowski <reavertm@gentoo.org> kadu-0.9.0.ebuild,
+  metadata.xml:
+  Tlen protocol is blaclisted, remove
 
 *kadu-0.9.0 (23 Mar 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.0.ebuild,v 1.1 2011/03/23 23:19:21 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.0.ebuild,v 1.2 2011/03/23 23:30:31 reavertm Exp $
 
 EAPI="4"
 
@@ -15,15 +15,17 @@ SRC_URI="http://www.kadu.net/download/stable/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE="alsa ao dbus +gadu jabber kde oss phonon speech spell sqlite +ssl tlen"
+#tlen
+IUSE="alsa ao dbus +gadu jabber kde oss phonon speech spell sqlite +ssl"
+#tlen
 REQUIRED_USE="
 	|| (
 		gadu
 		jabber
-		tlen
 	)
 "
 
+#tlen tlen? ( net-dns/libidn )
 COMMON_DEPEND="
 	>=app-crypt/qca-2.0.0-r2
 	>=media-libs/libsndfile-1.0
@@ -47,7 +49,6 @@ COMMON_DEPEND="
 	)
 	spell? ( app-text/enchant )
 	sqlite? ( >=x11-libs/qt-sql-4.4:4[sqlite] )
-	tlen? ( net-dns/libidn )
 "
 DEPEND="${COMMON_DEPEND}
 	jabber? ( dev-util/automoc )
@@ -125,7 +126,7 @@ src_prepare() {
 		use sqlite && config_enable module_profiles_import m
 	fi
 	use jabber && config_enable module_jabber_protocol m
-	use tlen && config_enable module_tlen_protocol m
+	# BLACKLISTED use tlen && config_enable module_tlen_protocol m
 
 	# Audio outputs
 	use alsa && config_enable module_alsa_sound m
