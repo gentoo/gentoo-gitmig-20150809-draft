@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.18.ebuild,v 1.3 2011/03/22 18:33:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.18.ebuild,v 1.4 2011/03/23 10:58:01 flameeyes Exp $
 
 EAPI="2"
 
 CLASSLESS_BGP_PATCH=ht-20040304-classless-bgp.patch
 
-BACKPORTS=1
+BACKPORTS=2
 
 inherit eutils multilib autotools pam
 

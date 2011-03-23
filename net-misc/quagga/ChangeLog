@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.105 2011/03/22 18:33:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.106 2011/03/23 10:58:01 flameeyes Exp $
+
+  23 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> quagga-0.99.18.ebuild:
+  Add upstream patch to fix building with USE=-ipv6; thanks to Andreas Schürch
+  for reporting in bug #360091.
 
   22 Mar 2011; Christoph Mende <angelos@gentoo.org> quagga-0.99.18.ebuild:
   Stable on amd64 wrt bug #359903
