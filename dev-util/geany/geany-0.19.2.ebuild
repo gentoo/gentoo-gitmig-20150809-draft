@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.19.2.ebuild,v 1.4 2011/01/22 17:19:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.19.2.ebuild,v 1.5 2011/03/23 06:16:16 ssuominen Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
@@ -19,7 +19,7 @@ IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=dev-libs/glib-2.16:2
-	vte? ( x11-libs/vte )"
+	vte? ( x11-libs/vte:0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool

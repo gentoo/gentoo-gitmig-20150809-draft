@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.8.1.ebuild,v 1.1 2011/01/12 23:25:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.8.1.ebuild,v 1.2 2011/03/23 06:14:31 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	dev-cpp/gtksourceviewmm:2.0
 	>=x11-libs/gtksourceview-2.10:2.0
 	>=gnome-base/libgtop-2.19
-	>=x11-libs/vte-0.12
+	>=x11-libs/vte-0.12:0
 	>=gnome-base/gconf-2.14
 	>=dev-db/sqlite-3:3
 	sys-devel/gdb

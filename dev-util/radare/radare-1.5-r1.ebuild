@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/radare-1.5-r1.ebuild,v 1.2 2010/09/25 15:18:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/radare-1.5-r1.ebuild,v 1.3 2011/03/23 06:20:21 ssuominen Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	dev-lang/perl
 	gui? (
 		x11-libs/gtk+:2
-		x11-libs/vte )
+		x11-libs/vte:0 )
 	lua? ( dev-lang/lua )
 	readline? ( sys-libs/readline )
 "

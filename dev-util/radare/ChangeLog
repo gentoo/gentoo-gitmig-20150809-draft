@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/radare
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.19 2011/03/07 11:23:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.20 2011/03/23 06:20:21 ssuominen Exp $
+
+  23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> radare-1.5-r1.ebuild,
+  radare-1.5-r2.ebuild, radare-1.5.2.ebuild, radare-1.5.2-r1.ebuild:
+  Use SLOT dependencies for x11-libs/vte.
 
 *radare-1.5.2-r1 (07 Mar 2011)
 
