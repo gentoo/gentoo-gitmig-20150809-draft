@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/apel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.45 2011/03/01 15:24:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.46 2011/03/23 19:41:38 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> apel-10.8.ebuild:
+  ppc64 stable wrt #354623
 
   01 Mar 2011; Jeroen Roovers <jer@gentoo.org> apel-10.8.ebuild:
   Stable for HPPA (bug #354623).
