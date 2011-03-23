@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.19.ebuild,v 1.9 2011/03/22 19:31:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.19.ebuild,v 1.10 2011/03/23 08:21:45 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,16 +21,16 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-
 IUSE="bzip2 doc gnome gtk python thumbnail"
 
 RDEPEND="
-	>=dev-libs/glib-2.16
-	>=dev-libs/libxml2-2.4.16
+	>=dev-libs/glib-2.16:2
+	>=dev-libs/libxml2-2.4.16:2
 	sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
 	gnome? ( >=gnome-base/libbonobo-2 )
-	gtk? ( >=x11-libs/gtk+-2 )
+	gtk? ( x11-libs/gtk+:2 )
 	python? (
-		>=dev-python/pygobject-2.10
-		>=dev-python/pygtk-2.10 )
-	thumbnail? ( >=gnome-base/gconf-2 )"
+		>=dev-python/pygobject-2.10:2
+		>=dev-python/pygtk-2.10:2 )
+	thumbnail? ( >=gnome-base/gconf-2:2 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.32.0-r1.ebuild,v 1.7 2011/03/22 19:28:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.32.0-r1.ebuild,v 1.8 2011/03/23 08:14:44 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ IUSE="bonobo doc ipv6 test"
 RDEPEND=">=dev-libs/glib-2.20:2
 	>=x11-libs/gtk+-2.20:2
 	>=gnome-base/libgtop-2.12
-	>=gnome-base/gconf-2
+	>=gnome-base/gconf-2:2
 	>=media-libs/libcanberra-0.4[gtk]
 	x11-libs/libXext
 	x11-libs/libX11
