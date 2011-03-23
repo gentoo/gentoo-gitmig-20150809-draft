@@ -1,6 +1,14 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.49 2011/03/22 01:58:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.50 2011/03/23 00:45:30 nirbheek Exp $
+
+*firefox-4.0-r1 (23 Mar 2011)
+
+  23 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -firefox-4.0.ebuild,
+  +firefox-4.0-r1.ebuild, +files/icon/firefox.desktop:
+  Install multiple hicolor icons, use one .desktop file for both branded and
+  unbranded, change codename to latest, add new .desktop mimetypes from
+  overlay
 
 *firefox-4.0 (22 Mar 2011)
 
