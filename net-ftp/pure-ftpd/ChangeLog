@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.108 2011/03/18 17:38:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.109 2011/03/23 07:09:46 polynomial-c Exp $
+
+  23 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> -pure-ftpd-1.0.28.ebuild,
+  pure-ftpd-1.0.29-r1.ebuild, -pure-ftpd-1.0.29-r2.ebuild,
+  -files/pure-ftpd.conf_d, -files/pure-ftpd.rc7, -files/pure-ftpd.rc8,
+  -files/pure-ftpd.rc9:
+  Removed old versions. Removed all keywords but ~x86-fbsd for 1.0.29-r1.
 
   18 Mar 2011; Raúl Porcel <armin76@gentoo.org> pure-ftpd-1.0.30.ebuild:
   arm/ia64/sparc stable wrt #358375
