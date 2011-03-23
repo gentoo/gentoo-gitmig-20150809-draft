@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxdg-basedir
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.25 2011/02/11 19:36:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.26 2011/03/23 18:01:20 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  libxdg-basedir-1.1.1.ebuild:
+  ppc/ppc64 stable wrt #353850
 
   11 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   libxdg-basedir-1.1.1.ebuild:
