@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.0.2.ebuild,v 1.2 2010/07/31 07:41:08 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.0.2.ebuild,v 1.3 2011/03/23 20:44:48 radhermit Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 
-COMMON_DEPEND=">=x11-libs/gtk+-2.4
+COMMON_DEPEND=">=x11-libs/gtk+-2.4:2
 	nls? ( >=sys-devel/gettext-0.12.1 )
 	crypt? ( >=app-crypt/gpgme-1 )
 	ldap? ( net-nds/openldap )
