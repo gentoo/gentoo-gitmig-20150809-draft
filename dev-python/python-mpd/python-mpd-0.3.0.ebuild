@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/python-mpd-0.3.0.ebuild,v 1.4 2011/03/21 11:38:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/python-mpd-0.3.0.ebuild,v 1.5 2011/03/23 18:54:29 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -21,4 +21,5 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
+PYTHON_MODNAME="mpd.py"
 DOCS="CHANGES.txt README.txt doc/commands.txt"
