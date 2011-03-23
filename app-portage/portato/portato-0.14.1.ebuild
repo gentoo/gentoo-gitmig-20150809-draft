@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.14.1.ebuild,v 1.2 2011/01/08 18:14:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.14.1.ebuild,v 1.3 2011/03/23 06:15:24 ssuominen Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ COMMON_DEPEND="|| (
 
 RDEPEND="$COMMON_DEPEND
 	app-portage/portage-utils
-	x11-libs/vte[python]
+	x11-libs/vte:0[python]
 	>=dev-python/pygtk-2.14.0
 	dev-python/pygtksourceview:2
 	>=sys-apps/portage-2.1.7.17
