@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.1 2011/03/07 09:22:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.2 2011/03/23 08:30:12 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -17,8 +17,8 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="+dbus hddtemp libnotify lm_sensors video_cards_fglrx video_cards_nvidia"
 
 RDEPEND="
-	>=dev-libs/glib-2.14
-	>=x11-libs/gtk+-2.14
+	>=dev-libs/glib-2.14:2
+	>=x11-libs/gtk+-2.14:2
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=gnome-base/libgnome-2.8
 	>=gnome-base/libgnomeui-2.8

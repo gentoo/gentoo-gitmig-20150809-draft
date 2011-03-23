@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r1.ebuild,v 1.6 2011/03/22 19:33:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r1.ebuild,v 1.7 2011/03/23 08:32:01 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -16,11 +16,11 @@ KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~x86-freebsd ~amd64-lin
 # FIXME: lzma/xz support will be fixed in yelp3, bug #314923
 IUSE=""
 
-RDEPEND=">=gnome-base/gconf-2
+RDEPEND=">=gnome-base/gconf-2:2
 	>=app-text/gnome-doc-utils-0.19.1
 	>=x11-libs/gtk+-2.18:2
 	>=dev-libs/glib-2.16:2
-	>=dev-libs/libxml2-2.6.5
+	>=dev-libs/libxml2-2.6.5:2
 	>=dev-libs/libxslt-1.1.4
 	>=x11-libs/startup-notification-0.8
 	>=dev-libs/dbus-glib-0.71
