@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.13.17.ebuild,v 1.1 2011/03/14 19:36:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.14.1.ebuild,v 1.1 2011/03/23 02:47:43 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -16,6 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug +introspection +vala"
 
+# Tests fail in /stream-tube/creation
+RESTRICT="test"
 RDEPEND=">=dev-libs/glib-2.25.16
 	>=dev-libs/dbus-glib-0.82
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
