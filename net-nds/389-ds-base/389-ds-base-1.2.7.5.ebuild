@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.7.5.ebuild,v 1.2 2011/01/11 22:10:11 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.7.5.ebuild,v 1.3 2011/03/23 06:25:58 eras Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ ALL_DEPEND="!>=sys-libs/db-5.0
 	dev-perl/perl-mozldap
 	dev-libs/libpcre:3
 	kerberos? ( net-nds/openldap
-		>=app-crypt/mit-krb5-1.7-r100[ldap] )
+		>=app-crypt/mit-krb5-1.7-r100[openldap] )
 	selinux? ( >=sys-apps/policycoreutils-1.30.30
 		sec-policy/selinux-base-policy )"
 
