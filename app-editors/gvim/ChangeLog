@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.335 2011/03/14 08:24:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.336 2011/03/23 20:44:22 lack Exp $
+
+*gvim-7.3.135 (23 Mar 2011)
+
+  23 Mar 2011; Jim Ramsay <lack@gentoo.org> +gvim-7.3.135.ebuild:
+  Version bump: 7.3.135 is released
 
   14 Mar 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Use the global neXt USE flag instead of nextaw.
