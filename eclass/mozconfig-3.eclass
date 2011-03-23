@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.13 2011/03/22 01:33:31 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.14 2011/03/23 00:35:32 nirbheek Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -9,6 +9,8 @@ inherit multilib flag-o-matic mozcoreconf-2
 # use-flags common among all mozilla ebuilds
 IUSE="+alsa +dbus debug libnotify startup-notification system-sqlite wifi"
 
+# XXX: GConf is used for setting the default browser
+#      revisit to make it optional with GNOME 3
 RDEPEND="app-arch/zip
 	app-arch/unzip
 	>=app-text/hunspell-1.2
@@ -17,8 +19,9 @@ RDEPEND="app-arch/zip
 	>=dev-libs/libevent-1.4.7
 	!<x11-base/xorg-x11-6.7.0-r2
 	>=x11-libs/cairo-1.10.2[X]
-	>=x11-libs/gtk+-2.8.6
+	>=x11-libs/gtk+-2.8.6:2
 	>=x11-libs/pango-1.10.1
+	>=gnome-base/gconf-1.2.1:2
 	virtual/jpeg
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( >=dev-libs/dbus-glib-0.72 )
@@ -83,6 +86,7 @@ mozconfig_config() {
 	mozconfig_annotate '' --with-system-libevent="${EPREFIX}"/usr
 	mozconfig_annotate '' --enable-system-hunspell
 	mozconfig_annotate '' --disable-gnomevfs
+	mozconfig_annotate '' --disable-gnomeui
 	mozconfig_annotate '' --enable-gio
 	if [[ ${PN} != thunderbird ]] ; then
 		mozconfig_annotate 'places' --enable-storage --enable-places --enable-places_bookmarks
