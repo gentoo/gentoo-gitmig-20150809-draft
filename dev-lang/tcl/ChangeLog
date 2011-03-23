@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.137 2011/03/06 17:38:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.138 2011/03/23 19:05:10 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> tcl-8.5.9.ebuild:
+  ppc64 stable wrt #353854
 
   06 Mar 2011; Raúl Porcel <armin76@gentoo.org> tcl-8.5.9.ebuild:
   alpha/ia64/s390/sh stable wrt #353854
