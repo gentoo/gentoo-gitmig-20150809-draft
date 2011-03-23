@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/razertool
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/ChangeLog,v 1.7 2010/04/07 21:27:33 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/ChangeLog,v 1.8 2011/03/23 16:56:28 ssuominen Exp $
+
+  23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  razertool-0.0.7-r3.ebuild:
+  Use SLOT dependencies for x11-libs/gtk+.
 
 *razertool-0.0.7-r3 (07 Apr 2010)
 
