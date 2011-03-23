@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.44 2011/03/22 19:48:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.45 2011/03/23 17:09:15 eva Exp $
+
+  23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> -gtkglarea-1.99.0.ebuild,
+  -gtkglarea-2.0.0.ebuild:
+  Clean up old revisions.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gtkglarea-2.0.1.ebuild:
   Marking gtkglarea-2.0.1 ppc stable for bug 353436
