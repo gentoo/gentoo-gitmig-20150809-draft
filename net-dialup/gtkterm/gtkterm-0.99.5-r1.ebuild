@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.5-r1.ebuild,v 1.2 2007/05/02 07:56:36 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.5-r1.ebuild,v 1.3 2011/03/23 07:36:43 ssuominen Exp $
+
+EAPI=2
 
 DESCRIPTION="A serial port terminal written in GTK+, similar to Windows' HyperTerminal."
 HOMEPAGE="http://www.jls-info.com/julien/linux/"
@@ -11,8 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.0
-	x11-libs/vte"
+RDEPEND="x11-libs/gtk+:2
+	x11-libs/vte:0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
@@ -22,17 +24,10 @@ DEPEND="${RDEPEND}
 MY_AVAILABLE_LINGUAS=" fr hu ru"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	if use nls ; then
 		cp "${FILESDIR}"/ru.po "${S}"/po/ || die "adding Russian language support failed"
 	fi
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
