@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.6.ebuild,v 1.1 2011/03/05 15:07:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.6.ebuild,v 1.2 2011/03/23 10:21:27 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2" # Just a build-time dependency
 CLUTTER_LA_PUNT="yes"
 
 # inherit clutter after gnome2 so that defaults aren't overriden
-inherit python gnome2 clutter
+inherit python gnome2 clutter virtualx
 
 DESCRIPTION="GStreamer Integration library for Clutter"
 
@@ -34,4 +34,12 @@ src_prepare() {
 
 	gnome2_src_prepare
 	python_convert_shebangs 2 "${S}"/scripts/pso2h.py
+}
+
+src_compile() {
+	# Avoid sandbox violation with USE="introspection", bug #356283
+	export GST_REGISTRY=${T}/registry.cache.xml
+	# Clutter tries to access dri without userpriv
+	addpredict /dev/dri/card0
+	emake || die "emake failed"
 }
