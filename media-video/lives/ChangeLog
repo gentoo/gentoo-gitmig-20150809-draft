@@ -1,6 +1,10 @@
 # ChangeLog for media-video/lives
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.29 2011/02/26 19:28:25 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.30 2011/03/23 08:41:07 radhermit Exp $
+
+  23 Mar 2011; Tim Harder <radhermit@gentoo.org> -lives-0.9.8.6.ebuild,
+  -lives-0.9.8.12.ebuild, lives-1.0.0.ebuild:
+  Remove old and use slot dep for gtk+.
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> lives-0.9.8.6.ebuild,
   lives-0.9.8.12.ebuild, lives-1.0.0.ebuild:

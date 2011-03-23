@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.3.ebuild,v 1.6 2010/01/20 21:15:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.3.ebuild,v 1.7 2011/03/23 08:36:47 radhermit Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -24,7 +26,7 @@ IUSE="alsa dvdr gpac lame gstreamer quicktime sox vorbis"
 # Optional dependency on cinelerra-cvs (as a replacement for libquicktime)
 # dropped because kino may run with it but won't build anymore.
 
-DEPEND=">=x11-libs/gtk+-2.6.0
+DEPEND=">=x11-libs/gtk+-2.6.0:2
 	>=gnome-base/libglade-2.5.0
 	>=dev-libs/glib-2
 	x11-libs/libXv

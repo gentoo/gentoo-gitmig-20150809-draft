@@ -1,6 +1,10 @@
 # ChangeLog for media-video/frameworks
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/ChangeLog,v 1.7 2008/01/13 11:55:15 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/frameworks/ChangeLog,v 1.8 2011/03/23 08:32:23 radhermit Exp $
+
+  23 Mar 2011; Tim Harder <radhermit@gentoo.org> -frameworks-0.3.6.ebuild,
+  frameworks-0.3.7.ebuild:
+  Remove old and use slot dep for gtk+.
 
 *frameworks-0.3.7 (13 Jan 2008)
 
