@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/gnubiff
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.31 2010/12/08 20:44:10 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.32 2011/03/23 20:40:58 radhermit Exp $
+
+  23 Mar 2011; Tim Harder <radhermit@gentoo.org> gnubiff-2.2.13-r1.ebuild:
+  Use slot dependency for gtk+.
 
   08 Dec 2010; Pacho Ramos <pacho@gentoo.org> gnubiff-2.2.13-r1.ebuild:
   Needs gnome-panel with bonobo support (with Tim Harder permission, bug
