@@ -1,6 +1,19 @@
 # ChangeLog for app-accessibility/mbrola
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.50 2009/01/08 00:52:15 williamh Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.51 2011/03/23 17:22:30 cbrannon Exp $
+
+*mbrola-3.0.1h-r6 (23 Mar 2011)
+
+  23 Mar 2011; Christopher Brannon <cbrannon@gentoo.org>
+  +mbrola-3.0.1h-r6.ebuild, metadata.xml:
+  Change the location in which mbrola is installed.
+  We used to install in /opt/mbrola. We now install under
+  /usr/share/mbrola. Fixes bug #346869
+
+  Add the mbrola binary to QA_PREBUILT. This is the correct fix,
+  because the binary is closed-source. Fixes bug #340319
+
+  Add myself as maintainer to metadata.xml.
 
   08 Jan 2009; William Hubbs <williamh@gentoo.org> -mbrola-3.0.1h-r4.ebuild:
   Removed old version.
