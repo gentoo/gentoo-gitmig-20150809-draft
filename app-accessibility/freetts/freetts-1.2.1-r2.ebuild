@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2.1-r1.ebuild,v 1.6 2011/03/23 17:15:06 cbrannon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2.1-r2.ebuild,v 1.1 2011/03/23 17:15:06 cbrannon Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 HOMEPAGE="http://freetts.sourceforge.net/"
 
 RDEPEND=">=virtual/jre-1.4
-	mbrola? ( <=app-accessibility/mbrola-3.0.1h-r5 ) "
+	mbrola? ( >=app-accessibility/mbrola-3.0.1h-r6 ) "
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	jsapi? ( app-arch/sharutils )
@@ -17,7 +17,7 @@ DEPEND=">=virtual/jdk-1.4
 
 LICENSE="jsapi? ( sun-bcla-jsapi ) freetts"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc jsapi mbrola"
 
 src_unpack() {
@@ -27,7 +27,7 @@ src_unpack() {
 	chmod 0755 jsapi.sh
 	epatch "${FILESDIR}/jsapi-gentoo.diff"
 
-	use mbrola && echo "mbrola.base=/opt/mbrola/" >> "${S}/speech.properties"
+	use mbrola && echo "mbrola.base=/usr/share/mbrola/" >> "${S}/speech.properties"
 }
 
 src_compile() {
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar lib/*.jar mbrola/*.jar
 
-	use mbrola && local jflags="--java_args -Dmbrola.base=/opt/mbrola"
+	use mbrola && local jflags="--java_args -Dmbrola.base=/usr/share/mbrola"
 	java-pkg_dolauncher ${PN} --main com.sun.speech.freetts.FreeTTS ${jflags}
 
 	insinto /usr/share/${PN}

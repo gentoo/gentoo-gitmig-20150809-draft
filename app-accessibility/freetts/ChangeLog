@@ -1,6 +1,17 @@
 # ChangeLog for app-accessibility/freetts
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.31 2008/07/17 20:43:15 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.32 2011/03/23 17:15:06 cbrannon Exp $
+
+*freetts-1.2.1-r2 (23 Mar 2011)
+
+  23 Mar 2011; Christopher Brannon <cbrannon@gentoo.org>
+  freetts-1.2.1-r1.ebuild, +freetts-1.2.1-r2.ebuild:
+  Change the directory in which we look for mbrola.
+  This requires a revbump. The new revision depends on
+  app-accessibility/mbrola-3.01h-r6.
+  app-accessibility/freetts-1.2.1-r1's dependencies 
+were adjusted, since it will not work with
+app-accessibility/mbrola-3.01h-r6.
 
   17 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
