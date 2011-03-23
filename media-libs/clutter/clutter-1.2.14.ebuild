@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.14.ebuild,v 1.9 2011/03/22 20:12:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.2.14.ebuild,v 1.10 2011/03/23 08:33:38 nirbheek Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SLOT="1.0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="debug doc +gtk +introspection"
 
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/cairo-1.4
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/json-glib-0.8[introspection?]
@@ -27,8 +27,8 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/libXcomposite-0.4
 
 	gtk? ( || (
-		x11-libs/gdk-pixbuf
-		>=x11-libs/gtk+-2.0 ) )
+		x11-libs/gdk-pixbuf:2
+		>=x11-libs/gtk+-2.0:2 ) )
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.8.4.ebuild,v 1.11 2010/01/15 09:50:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.8.4.ebuild,v 1.12 2011/03/23 08:35:39 nirbheek Exp $
 
 EAPI=1
 
@@ -17,18 +17,18 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd6
 
 IUSE="alsa doc ffmpeg gstreamer +gtk pulseaudio"
 
-RDEPEND=">=dev-libs/glib-2.16
+RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/liboil-0.3.1
 	>=x11-libs/pango-1.16.4
 	gtk? (
-		>=x11-libs/gtk+-2.8.0
+		>=x11-libs/gtk+-2.8.0:2
 		net-libs/libsoup:2.4
 		)
 	>=x11-libs/cairo-1.6
 	gstreamer? (
-		>=media-libs/gstreamer-0.10.11
-		>=media-libs/gst-plugins-base-0.10.15
-		ffmpeg? ( media-plugins/gst-plugins-ffmpeg )
+		>=media-libs/gstreamer-0.10.11:0.10
+		>=media-libs/gst-plugins-base-0.10.15:0.10
+		ffmpeg? ( media-plugins/gst-plugins-ffmpeg:0.10 )
 		)
 	alsa? ( >=media-libs/alsa-lib-1.0.12 )
 	pulseaudio? ( media-sound/pulseaudio )"
