@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glassfish-deployment-api
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/ChangeLog,v 1.4 2010/10/14 20:25:40 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/ChangeLog,v 1.5 2011/03/23 20:04:02 betelgeuse Exp $
+
+  23 Mar 2011; Petteri Räty <betelgeuse@gentoo.org>
+  glassfish-deployment-api-1.2.ebuild:
+  Fix license reported in bug #360159.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org>
   glassfish-deployment-api-1.2.ebuild:
