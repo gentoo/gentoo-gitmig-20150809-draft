@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5179 2011/03/23 04:37:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5180 2011/03/23 05:10:33 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> updates/1Q-2011:
+  slotmove libgweather from 3 to 2, no need for slotting anymore
 
   23 Mar 2011; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop dhcp-4 mask now that it seems to be feature complete/stablish.
