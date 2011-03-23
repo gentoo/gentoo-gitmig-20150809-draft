@@ -5,6 +5,7 @@
   <herd>gstreamer</herd>
   <use>
   	<flag name="daap">Enable support for local network music sharing via daap</flag>
+  	<flag name="lastfm">Enable support for Last.fm scrobbling</flag>
 	<flag name="upnp">Enable support for local network music sharing via upnp</flag>
 	<flag name="webkit">Enable context panel plugin.</flag>
   </use>
