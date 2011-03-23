@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/guile-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.39 2011/02/18 12:19:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.40 2011/03/23 17:48:39 eva Exp $
+
+  23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> guile-gtk-2.1.ebuild,
+  guile-gtk-2.1-r1.ebuild:
+  Fix slot-deps on gnome libs.
 
   18 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -guile-gtk-2.0.ebuild,
   guile-gtk-2.1-r1.ebuild:

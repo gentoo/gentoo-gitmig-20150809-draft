@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1.ebuild,v 1.6 2010/07/16 09:56:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1.ebuild,v 1.7 2011/03/23 17:48:39 eva Exp $
 
 EAPI="2"
 
@@ -15,9 +15,9 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-scheme/guile
-	=x11-libs/gtk+-2*
-	=gnome-base/libglade-2*
-	>=x11-libs/gtkglarea-1.90"
+	x11-libs/gtk+:2
+	gnome-base/libglade:2.0
+	>=x11-libs/gtkglarea-1.90:2"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {

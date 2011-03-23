@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1-r1.ebuild,v 1.2 2011/02/18 12:19:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1-r1.ebuild,v 1.3 2011/03/23 17:48:39 eva Exp $
 
 EAPI=4
 
@@ -17,9 +17,9 @@ IUSE=""
 
 RDEPEND="
 	dev-scheme/guile[deprecated(+)]
-	=x11-libs/gtk+-2*
-	=gnome-base/libglade-2*
-	>=x11-libs/gtkglarea-1.90"
+	x11-libs/gtk+:2
+	gnome-base/libglade:2.0
+	>=x11-libs/gtkglarea-1.90:2"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
