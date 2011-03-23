@@ -1,0 +1,22 @@
+Index: python-updater
+===================================================================
+--- python-updater	(revision 358)
++++ python-updater	(working copy)
+@@ -554,7 +554,7 @@
+     fi
+ 
+     if [[ CHECK_STATIC_LINKING -ne 0 ]]; then
+-        binaries="$(scanelf -qs +Py_Initialize < <(grep -E "^obj" "${content}" | cut -d" " -f2) | sed "s/.* //")"
++        binaries="$(scanelf -qs +Py_Initialize < <(grep -E "^obj" "${content}" | cut -d" " -f2 | grep -Ev "^/usr/lib(32|64)?/debug/") | sed "s/.* //")"
+         if [[ -n "${binaries}" ]]; then
+             PKGS_TO_REMERGE+=" ${CATPKGVER}"
+             eindent
+@@ -613,7 +613,7 @@
+     fi
+ 
+     if [[ CHECK_SHARED_LINKING -ne 0 ]]; then
+-        binaries="$(scanelf -qF "%F %n" < <(grep -E "^obj" "${content}" | cut -d" " -f2) | grep -E "( |,)$(get_OLD_PYTHON_SHARED_LIBRARIES_REGEX)(,|$)")"
++        binaries="$(scanelf -qF "%F %n" < <(grep -E "^obj" "${content}" | cut -d" " -f2 | grep -Ev "^/usr/lib(32|64)?/debug/") | grep -E "( |,)$(get_OLD_PYTHON_SHARED_LIBRARIES_REGEX)(,|$)")"
+         if [[ -n "${binaries}" ]]; then
+             PKGS_TO_REMERGE+=" ${CATPKGVER}"
+             eindent

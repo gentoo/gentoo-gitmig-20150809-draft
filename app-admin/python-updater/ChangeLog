@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/python-updater
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.53 2010/07/30 16:58:01 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.54 2011/03/23 16:06:42 jer Exp $
+
+*python-updater-0.8-r1 (23 Mar 2011)
+
+  23 Mar 2011; Jeroen Roovers <jer@gentoo.org> -python-updater-0.8.ebuild,
+  +python-updater-0.8-r1.ebuild, +files/python-updater-0.8-splitdebug.patch:
+  Ignore splitdebug directories thanks to patch by Arfrever Frehtes Taifersar
+  Arahesis (bug #308579).
 
   30 Jul 2010; Jeroen Roovers <jer@gentoo.org> python-updater-0.8.ebuild:
   Stable for HPPA (bug #320043).
