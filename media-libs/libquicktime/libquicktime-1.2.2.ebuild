@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.2.ebuild,v 1.6 2011/03/15 22:37:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.2.ebuild,v 1.7 2011/03/23 08:19:35 radhermit Exp $
+
+EAPI=1
 
 inherit libtool eutils
 
@@ -16,7 +18,7 @@ KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="mmx X opengl dv gtk alsa aac encode png jpeg vorbis lame x264 ffmpeg doc schroedinger"
 
 RDEPEND="dv? ( media-libs/libdv )
-	gtk? ( >=x11-libs/gtk+-2.4.0 )
+	gtk? ( >=x11-libs/gtk+-2.4.0:2 )
 	aac? (
 		media-libs/faad2
 		encode? ( media-libs/faac )
