@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zope-lifecycleevent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-lifecycleevent/ChangeLog,v 1.7 2010/09/25 18:27:00 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-lifecycleevent/ChangeLog,v 1.8 2011/03/23 23:36:29 arfrever Exp $
+
+*zope-lifecycleevent-3.7.0 (23 Mar 2011)
+
+  23 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-lifecycleevent-3.7.0.ebuild:
+  Version bump.
 
 *zope-lifecycleevent-3.6.2 (25 Sep 2010)
 
