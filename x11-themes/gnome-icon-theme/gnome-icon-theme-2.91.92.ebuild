@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-2.91.6.ebuild,v 1.2 2011/02/21 21:14:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-2.91.92.ebuild,v 1.1 2011/03/23 05:08:19 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 eutils autotools
 
-DESCRIPTION="GNOME 2 default icon themes"
+DESCRIPTION="GNOME default icon themes"
 HOMEPAGE="http://www.gnome.org/ http://people.freedesktop.org/~jimmac/icons/#git"
 
 SRC_URI="${SRC_URI}
@@ -36,6 +36,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	gnome2_src_prepare
+
 	if use branding; then
 		for i in 16 22 24 32 48; do
 			cp "${WORKDIR}"/tango-gentoo-v1.1/${i}x${i}/gentoo.png \
@@ -43,11 +45,9 @@ src_prepare() {
 			|| die "Copying gentoo logos failed"
 		done
 	fi
-}
 
-src_install() {
-	gnome2_src_install
-	# FIXME: 2.91.0 tries to install icon-theme.cache, recheck if still needed
-	# in future versions
-	rm -f "${ED}/usr/share/icons/gnome/icon-theme.cache" || die
+	# Revert upstream commit that is wrongly updating icon cache, upstream bug #642449
+	EPATCH_OPTS="-R" epatch "${FILESDIR}/${PN}-2.91.7-update-cache.patch"
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }
