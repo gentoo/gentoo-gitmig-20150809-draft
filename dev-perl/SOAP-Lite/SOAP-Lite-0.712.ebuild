@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.712.ebuild,v 1.2 2010/10/27 20:13:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.712.ebuild,v 1.3 2011/03/23 17:15:51 idl0r Exp $
+
+EAPI="3"
 
 MODULE_AUTHOR="MKUTTER"
 inherit perl-module eutils
@@ -34,15 +36,15 @@ DEPEND="dev-perl/Class-Inspector
 	>=dev-perl/MIME-tools-5.413
 	virtual/perl-version
 	dev-lang/perl"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# The author of this module put a dep for MIME::Parser 6.X - but the6.X
 	# release of MIME::Parser was a mistake during a change in maintainers on
 	# cpan. This patch alters the dependancy to the "real" stable version of
 	# MIME::Parser.
 	epatch "${FILESDIR}"/SOAP-Lite-0.710.08.patch
+	epatch "${FILESDIR}"/${P}_sysread.patch
 }
 
 src_test() {
