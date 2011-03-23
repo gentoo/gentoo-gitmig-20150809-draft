@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.10.ebuild,v 1.7 2011/03/22 10:02:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.10.ebuild,v 1.8 2011/03/23 17:28:30 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -36,4 +36,5 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	prepalldocs
 }
