@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.3.8.ebuild,v 1.5 2011/03/19 20:00:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.3.8.ebuild,v 1.6 2011/03/23 06:18:50 ssuominen Exp $
 
 EAPI=3
 
@@ -17,8 +17,8 @@ IUSE=""
 
 RDEPEND="
 	>=dev-libs/glib-2.20
-	>=x11-libs/gtk+-2.16
-	>=x11-libs/vte-0.26
+	>=x11-libs/gtk+-2.16:2
+	>=x11-libs/vte-0.26:0
 "
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5.10.1
