@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.1 2011/03/23 08:00:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.2 2011/03/23 08:02:56 grobian Exp $
 
 EAPI=3
 
@@ -160,8 +160,8 @@ pkg_postinst() {
 	# This is also written in src_install (so it's in CONTENTS), but
 	# write it here so that the new version is immediately in the file
 	# (without waiting for the user to do etc-update)
-	rm -f ${EROOT}/etc/._cfg????_gentoo-release
-	echo "Gentoo Prefix Base System version ${PV}" > ${EROOT}/etc/gentoo-release
+	rm -f "${EROOT}"/etc/._cfg????_gentoo-release
+	echo "Gentoo Prefix Base System version ${PV}" > "${EROOT}"/etc/gentoo-release
 
 	echo
 	einfo "Please be sure to update all pending '._cfg*' files in /etc,"
