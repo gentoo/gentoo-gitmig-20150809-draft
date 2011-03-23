@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.308 2011/03/23 21:08:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.309 2011/03/23 23:02:39 williamh Exp $
+
+  23 Mar 2011; William Hubbs <williamh@gentoo.org> -dhcpcd-5.2.6.ebuild,
+  -dhcpcd-5.2.7.ebuild, -dhcpcd-5.2.8.ebuild, -dhcpcd-5.2.9.ebuild,
+  -dhcpcd-5.2.10.ebuild, -dhcpcd-5.2.10-r1.ebuild:
+  remove old versions
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> dhcpcd-5.2.10-r2.ebuild:
   ppc64 stable wrt #355279
