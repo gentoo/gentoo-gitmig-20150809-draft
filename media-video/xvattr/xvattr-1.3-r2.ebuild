@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r2.ebuild,v 1.5 2007/09/04 11:12:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r2.ebuild,v 1.6 2011/03/23 08:52:07 radhermit Exp $
+
+EAPI=1
 
 inherit eutils autotools
 
@@ -16,7 +18,7 @@ IUSE="gtk"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXv
 	x11-libs/libXext
-	gtk? ( >=x11-libs/gtk+-2 )"
+	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	x11-libs/libXt
 	dev-util/pkgconfig"
