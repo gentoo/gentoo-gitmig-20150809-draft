@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/konq-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.16 2011/03/22 14:04:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.17 2011/03/23 07:46:30 scarabeus Exp $
+
+  23 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  konq-plugins-4.6.1.ebuild:
+  Add KDE_MINIMAL=PV. It is in cmakelists.txt.
 
   22 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   konq-plugins-4.6.1.ebuild:
