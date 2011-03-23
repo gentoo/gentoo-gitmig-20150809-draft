@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kadu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.95 2010/09/12 19:05:42 reavertm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.96 2011/03/23 23:19:22 reavertm Exp $
+
+*kadu-0.9.0 (23 Mar 2011)
+
+  23 Mar 2011; Maciej Mrozowski <reavertm@gentoo.org> +kadu-0.9.0.ebuild,
+  metadata.xml:
+  Version bump, bug 359709
 
   12 Sep 2010; Maciej Mrozowski <reavertm@gentoo.org> kadu-0.6.5.4.ebuild,
   +files/kadu-0.6.5.4-glibc211.patch:

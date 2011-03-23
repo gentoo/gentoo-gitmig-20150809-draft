@@ -7,7 +7,9 @@
 		<name>Maciej Mrozowski</name>
 	</maintainer>
 	<use>
-		<flag name="phonon">Enable phonon audio plugin</flag>
+		<flag name="gadu">Enables Gadu communication protocol</flag>
+		<flag name="phonon">Enables phonon audio plugin</flag>
 		<flag name="speech">Enables speech module</flag>
+		<flag name="tlen">Enables Tlen.pl communication protocol</flag>
 	</use>
 </pkgmetadata>
