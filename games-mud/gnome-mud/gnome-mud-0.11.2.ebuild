@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.11.2.ebuild,v 1.3 2009/11/21 18:07:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.11.2.ebuild,v 1.4 2011/03/23 07:34:12 ssuominen Exp $
 
 EAPI=2
 inherit gnome2 games
@@ -15,7 +15,7 @@ IUSE="gstreamer"
 
 RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libglade-2.0.1:2.0
-	>=x11-libs/vte-0.11
+	>=x11-libs/vte-0.11:0
 	gstreamer? ( media-libs/gstreamer )
 	dev-perl/XML-Parser
 	dev-libs/libpcre
