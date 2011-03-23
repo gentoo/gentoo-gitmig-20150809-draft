@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.3 2011/03/12 09:24:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.4 2011/03/23 17:31:15 eva Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="vorbis alsa opengl esd jack"
 RDEPEND="x11-libs/gtk+:2
 	vorbis? ( >=media-sound/vorbis-tools-1.0 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
-	opengl? ( >=x11-libs/gtkglarea-1.99.0 )
+	opengl? ( >=x11-libs/gtkglarea-1.99.0:2 )
 	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.80.0 )
 	media-libs/liblrdf
