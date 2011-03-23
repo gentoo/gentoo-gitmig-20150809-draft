@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camorama
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.21 2011/03/20 10:25:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.22 2011/03/23 08:24:23 radhermit Exp $
+
+  23 Mar 2011; Tim Harder <radhermit@gentoo.org> camorama-0.19-r1.ebuild:
+  Use slot dependency for gtk+.
 
   20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> camorama-0.19-r2.ebuild,
   +files/camorama-0.19-no-more-videodev_h.patch:
