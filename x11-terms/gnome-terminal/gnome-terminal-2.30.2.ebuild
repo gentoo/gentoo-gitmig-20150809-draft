@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.30.2.ebuild,v 1.8 2010/10/17 15:40:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.30.2.ebuild,v 1.9 2011/03/23 07:38:51 ssuominen Exp $
+
+EAPI=1
 
 GCONF_DEBUG="no"
 
@@ -16,9 +18,9 @@ IUSE=""
 
 # libgnome needed for some monospace font schema, bug #274638
 RDEPEND=">=dev-libs/glib-2.16.0
-	>=x11-libs/gtk+-2.14.0
+	>=x11-libs/gtk+-2.14.0:2
 	>=gnome-base/gconf-2.14
-	>=x11-libs/vte-0.24.0
+	>=x11-libs/vte-0.24.0:0
 	>=dev-libs/dbus-glib-0.6
 	x11-libs/libSM
 	gnome-base/libgnome"
