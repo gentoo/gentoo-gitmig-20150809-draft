@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.32 2011/02/26 16:35:39 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.33 2011/03/23 16:48:32 eva Exp $
+
+  23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> ufo-ai-2.3.ebuild,
+  ufo-ai-2.3.1-r1.ebuild:
+  Fix slot-deps on gnome libs.
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> ufo-ai-2.3.ebuild,
   ufo-ai-2.3.1-r1.ebuild:
