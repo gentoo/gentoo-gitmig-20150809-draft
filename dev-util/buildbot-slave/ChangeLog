@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.16 2011/02/17 20:51:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.17 2011/03/23 21:31:08 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  buildbot-slave-0.8.3.ebuild:
+  ppc/ppc64 stable wrt #352741
 
   17 Feb 2011; Jeremy Olexa <darkside@gentoo.org>
   buildbot-slave-0.8.3.ebuild:

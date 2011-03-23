@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.90 2011/02/13 17:29:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.91 2011/03/23 21:30:05 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> buildbot-0.8.3_p1.ebuild:
+  ppc/ppc64 stable wrt #352741
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> buildbot-0.8.3_p1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #352741
