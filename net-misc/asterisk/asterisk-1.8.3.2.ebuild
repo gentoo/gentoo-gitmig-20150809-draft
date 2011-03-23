@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.2.4.ebuild,v 1.1 2011/02/22 16:24:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.3.2.ebuild,v 1.1 2011/03/23 11:07:47 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-0.2.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-0.3.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -323,7 +323,7 @@ src_compile() {
 
 src_install() {
 	mkdir -p "${D}"usr/$(get_libdir)/pkgconfig
-	emake DESTDIR="${D}" -j1 installdirs || die "emake installdirs failed"
+	emake DESTDIR="${D}" installdirs || die "emake installdirs failed"
 	emake DESTDIR="${D}" install || die "emake installdirs failed"
 
 	if use samples; then
