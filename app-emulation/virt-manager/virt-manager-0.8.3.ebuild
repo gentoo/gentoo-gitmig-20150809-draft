@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.3.ebuild,v 1.2 2010/02/12 00:03:32 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.3.ebuild,v 1.3 2011/03/23 06:32:27 ssuominen Exp $
 
 EAPI=2
 
@@ -22,14 +22,14 @@ RDEPEND=">=dev-lang/python-2.4.0
 	>=dev-libs/libxml2-2.6.23[python]
 	>=app-emulation/virtinst-0.500.2
 	>=gnome-base/librsvg-2
-	>=x11-libs/vte-0.12.2[python]
+	>=x11-libs/vte-0.12.2:0[python]
 	>=net-libs/gtk-vnc-0.3.4[python]
 	>=dev-python/dbus-python-0.61
 	>=dev-python/gconf-python-1.99.11
 	dev-python/libgnome-python
 	dev-python/urlgrabber
 	gnome-keyring? ( dev-python/gnome-keyring-python )
-	policykit? ( gnome-extra/polkit-gnome )"
+	policykit? ( sys-auth/polkit )"
 DEPEND="${RDEPEND}
 	app-text/rarian"
 
