@@ -1,0 +1,14 @@
+# ChangeLog for virtual/ffmpeg
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.1 2011/03/23 13:41:40 scarabeus Exp $
+
+*ffmpeg-9999 (23 Mar 2011)
+*ffmpeg-0.6 (23 Mar 2011)
+
+  23 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> +ffmpeg-0.6.ebuild,
+  +ffmpeg-9999.ebuild, +metadata.xml:
+  Add initial ffmpeg virtuals as per discussion with lu_zero. They implement
+  all useflags that are in use over main tree now. Also they are separated by
+  version so each package can depend on =virtual-version if there is some api
+  incompatibility.
+
