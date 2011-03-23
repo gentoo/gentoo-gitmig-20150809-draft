@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14.ebuild,v 1.6 2010/12/26 17:15:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14.ebuild,v 1.7 2011/03/23 17:59:31 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -39,6 +39,8 @@ DEPEND=">=dev-games/ode-0.5
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 src_prepare() {
 	distutils_src_prepare
