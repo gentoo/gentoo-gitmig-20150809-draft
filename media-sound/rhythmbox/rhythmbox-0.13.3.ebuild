@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.1 2011/03/23 23:01:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.2 2011/03/23 23:30:59 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
@@ -53,7 +53,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	musicbrainz? ( media-libs/musicbrainz:3 )
 	python? (
 		|| (
-			>=dev-lang/python-2.5
+			dev-lang/python:2.7
+			dev-lang/python:2.6
+			dev-lang/python:2.5
 			dev-python/celementtree )
 		>=dev-python/pygtk-2.8:2
 		>=dev-python/pygobject-2.15.4:2
@@ -92,8 +94,11 @@ DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \
 	  MAINTAINERS MAINTAINERS.old NEWS README THANKS"
 
 pkg_setup() {
-	python_set_active_version 2
-	G2CONF="${G2CONF} PYTHON=$(PYTHON -2)"
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+		G2CONF="${G2CONF} PYTHON=$(PYTHON -2)"
+	fi
 
 	if ! use hal && ! use udev; then
 		if use ipod; then
@@ -191,5 +196,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
+	use python && python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
 }
