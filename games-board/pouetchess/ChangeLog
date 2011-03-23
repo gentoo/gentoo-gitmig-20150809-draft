@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pouetchess
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.14 2010/11/20 01:35:35 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/ChangeLog,v 1.15 2011/03/23 07:42:14 tupone Exp $
+
+  23 Mar 2011; Alfredo Tupone <tupone@gentoo.org>
+  pouetchess-0.2.0-r1.ebuild, files/pouetchess-0.2.0-segfaults.patch:
+  Fix sprintf buffer overflow. Bug #358341 by Joshua Landry
 
   20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   pouetchess-0.2.0-r1.ebuild:

@@ -42,3 +42,16 @@
  		{
  			// if a piece was already selected, this means the player want to move this piece
  			if (SquareXSelected>-1 && SquareZSelected>-1)
+--- src/graphic_chessboard.cpp.old	2011-03-23 08:08:40.000000000 +0100
++++ src/graphic_chessboard.cpp	2011-03-23 08:33:04.000000000 +0100
+@@ -122,8 +122,8 @@
+ 	
+ 	for(int i=0;i<6;i++)
+ 	{
+-		char texture_filename[50];
+-		sprintf(texture_filename,PC_DATA_TEXTURE_SKYBOX,i),
++		char texture_filename[256];
++		snprintf(texture_filename,sizeof(texture_filename),PC_DATA_TEXTURE_SKYBOX,i),
+ 		texture_skybox[i] = new CBasicTexture;
+ 		if (false==texture_skybox[i]->load(texture_filename,false))
+ 		{
