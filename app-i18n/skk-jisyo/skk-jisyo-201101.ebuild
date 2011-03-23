@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-201101.ebuild,v 1.5 2011/02/13 19:13:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-201101.ebuild,v 1.6 2011/03/23 17:51:18 xarthisius Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain freedist"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="amd64 hppa ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="cdb"
 
 COMMON_DEPEND="cdb? ( dev-db/cdb )"

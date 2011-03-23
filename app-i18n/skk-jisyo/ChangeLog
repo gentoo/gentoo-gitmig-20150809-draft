@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.63 2011/02/13 19:13:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.64 2011/03/23 17:51:18 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> skk-jisyo-201101.ebuild:
+  ppc/ppc64 stable wrt #353411
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> skk-jisyo-9999.ebuild,
   skk-jisyo-200705.ebuild, skk-jisyo-200812.ebuild, skk-jisyo-201101.ebuild:
