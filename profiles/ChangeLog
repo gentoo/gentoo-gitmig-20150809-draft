@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5178 2011/03/22 21:03:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5179 2011/03/23 04:37:41 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2011; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Drop dhcp-4 mask now that it seems to be feature complete/stablish.
 
   22 Mar 2011; Andreas Proschofsky <suka@gentoo.org> package.mask:
   Remove mask for LibreOffice 3.3.2, officially released now.

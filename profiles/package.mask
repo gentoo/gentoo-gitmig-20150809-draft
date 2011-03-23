@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12588 2011/03/22 21:03:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12589 2011/03/23 04:37:41 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1124,13 +1124,6 @@ net-libs/libinfinity
 # Due to popular demand and no suitable replacement, it will stay in the tree
 # in a masked status until it completely breaks or is replaced.
 app-portage/udept
-
-# Tony Vroon <chainsaw@gentoo.org> (30 Mar 2009)
-# The v4 branch of DHCP has a new build system and a "minimal" dhclient-only
-# build is not yet supported. The IPv6 support seems a bit rough at the edges
-# as well. As such, this is for the adventurous only.
-# Bug reports are welcome if they carry patches.
->=net-misc/dhcp-4.0.0
 
 # Alex Legler <a3li@gentoo.org> (20 Mar 2009)
 # Ruby 1.9 for preliminary testing of libraries depending on it, bug 203706.
