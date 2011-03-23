@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.14.2.ebuild,v 1.6 2011/01/22 23:03:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.14.2.ebuild,v 1.7 2011/03/23 17:06:33 eva Exp $
 
 EAPI="2"
 
@@ -13,9 +13,9 @@ HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 LICENSE="LGPL-2.1 as-is"
 
-RDEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=dev-lang/ocaml-3.10[ocamlopt?]
-	svg? ( >=gnome-base/librsvg-2.2 )
+	svg? ( >=gnome-base/librsvg-2.2:2 )
 	glade? ( >=gnome-base/libglade-2.0.1 )
 	gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 )
 	gnome? (
@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 		>=gnome-base/libgnomeui-2.4.0
 		)
 	opengl? ( >=dev-ml/lablgl-0.98
-		>=x11-libs/gtkglarea-1.9 )
+		>=x11-libs/gtkglarea-1.9:2 )
 	spell? ( app-text/gtkspell )
 	sourceview? ( x11-libs/gtksourceview:2.0 )
 	"
