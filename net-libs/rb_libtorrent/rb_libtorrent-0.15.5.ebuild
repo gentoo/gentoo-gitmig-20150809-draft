@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.5.ebuild,v 1.4 2011/03/05 10:38:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.5.ebuild,v 1.5 2011/03/23 19:29:54 xarthisius Exp $
 
 EAPI="2"
 inherit eutils versionator
@@ -15,7 +15,7 @@ SRC_URI="http://libtorrent.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl"
 RESTRICT="test"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.105 2011/03/05 10:38:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.106 2011/03/23 19:29:54 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  rb_libtorrent-0.15.5.ebuild:
+  ppc64 stable wrt #354519
 
   05 Mar 2011; Michael Weber <xmw@gentoo.org> rb_libtorrent-0.15.5.ebuild:
   ppc/sparc stable (bug 354519)
