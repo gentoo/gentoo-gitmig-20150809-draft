@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.34 2011/03/22 20:42:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.35 2011/03/23 17:59:31 xarthisius Exp $
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> lzop-1.03.ebuild:
+  ppc64 stable wrt #353842
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> lzop-1.03.ebuild:
   Marking lzop-1.03 ppc for bug 353842
