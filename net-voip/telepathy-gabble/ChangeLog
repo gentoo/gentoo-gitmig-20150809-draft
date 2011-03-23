@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.73 2011/03/22 20:10:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.74 2011/03/23 16:03:03 eva Exp $
+
+  23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -telepathy-gabble-0.8.14.ebuild:
+  Remove security vulnerable version, bug #355219.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org>
   telepathy-gabble-0.10.5.ebuild:
