@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.39 2010/08/13 17:26:31 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.40 2011/03/23 06:35:20 ssuominen Exp $
+
+  23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> roxterm-1.16.3.ebuild,
+  roxterm-1.18.5.ebuild:
+  Use SLOT dependencies for x11-libs/gtk+ and x11-libs/vte.
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> roxterm-1.16.3.ebuild:
   Marked ppc stable for bug #330075.

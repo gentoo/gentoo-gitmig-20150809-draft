@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.18.5.ebuild,v 1.1 2010/07/27 14:03:26 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.18.5.ebuild,v 1.2 2011/03/23 06:35:20 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -15,12 +15,12 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.6
-		 >=x11-libs/gtk+-2.6
-		 >=dev-libs/dbus-glib-0.71
-		 >=x11-libs/vte-0.11.11
-		 >=gnome-base/libglade-2"
+	 >=x11-libs/gtk+-2.6:2
+	 >=dev-libs/dbus-glib-0.88
+	 >=x11-libs/vte-0.11.11:0
+	 >=gnome-base/libglade-2"
 DEPEND="${RDEPEND}
-		>=dev-util/pkgconfig-0.20"
+	>=dev-util/pkgconfig-0.20"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-docdir.patch"
