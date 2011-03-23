@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12589 2011/03/23 04:37:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12590 2011/03/23 08:52:12 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -324,16 +324,6 @@ x11-misc/talika
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Feb 2011)
 # Python 3.2 masked until sufficient number of reverse dependencies is fixed.
 =dev-lang/python-3.2*
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (18 Feb 2011)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-11
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (18 Feb 2011)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-3.1 versions are used for chromium-11.x versions.
->=dev-lang/v8-3.1
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (15 Feb 2011)
 # Dropping support for 1.7 xorg-server series.
