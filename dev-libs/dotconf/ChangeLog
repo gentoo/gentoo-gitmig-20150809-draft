@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dotconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.27 2011/01/24 04:10:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.28 2011/03/24 18:32:57 xarthisius Exp $
+
+  24 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> dotconf-1.3.ebuild:
+  ppc stable wrt #349304
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> dotconf-1.3.ebuild:
   Stable for HPPA (bug #349304).
