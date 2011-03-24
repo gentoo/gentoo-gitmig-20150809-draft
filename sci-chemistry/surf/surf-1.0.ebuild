@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/surf/surf-1.0.ebuild,v 1.3 2011/03/22 14:06:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/surf/surf-1.0.ebuild,v 1.4 2011/03/24 20:07:09 jlec Exp $
 
 EAPI="4"
 
@@ -15,7 +15,9 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="as-is"
 IUSE=""
 
-DEPEND="x11-misc/makedepend"
+DEPEND="
+	sys-apps/ed
+	x11-misc/makedepend"
 RDEPEND=""
 
 S=${WORKDIR}
