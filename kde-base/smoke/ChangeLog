@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.123 2011/03/04 17:59:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.124 2011/03/24 22:29:28 dilfridge Exp $
+
+*smoke-4.4.5-r1 (24 Mar 2011)
+
+  24 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +smoke-4.4.5-r1.ebuild, +files/smoke-4.4.5-typecompiler.patch:
+  Added upstream patch to fix generator segfault, bug 354569
 
 *smoke-4.6.1 (04 Mar 2011)
 
