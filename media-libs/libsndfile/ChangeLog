@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.121 2011/03/23 21:13:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.122 2011/03/24 08:09:37 radhermit Exp $
+
+*libsndfile-1.0.24 (24 Mar 2011)
+
+  24 Mar 2011; Tim Harder <radhermit@gentoo.org> -libsndfile-1.0.21.ebuild,
+  -libsndfile-1.0.21-r1.ebuild, -libsndfile-1.0.22.ebuild,
+  +libsndfile-1.0.24.ebuild:
+  Version bump and remove old. Update to EAPI 4, add static-libs USE flag, and
+  remove unneeded m4 script removal line.
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libsndfile-1.0.23.ebuild:
   ppc/ppc64 stable wrt #355361
