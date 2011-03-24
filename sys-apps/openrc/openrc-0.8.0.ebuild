@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.8.0.ebuild,v 1.1 2011/03/22 06:13:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.8.0.ebuild,v 1.2 2011/03/24 18:49:34 williamh Exp $
 
 EAPI="1"
 
@@ -406,11 +406,6 @@ pkg_postinst() {
 	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
 		ewarn "your files to /etc/conf.d/modules and delete the directory."
-	fi
-
-	if path_exists -o "${ROOT}"/etc/conf.d/local.{start,stop} ; then
-		ewarn "/etc/conf.d/local.{start,stop} are deprecated.  Please convert"
-		ewarn "your files to /etc/conf.d/local and delete the files."
 	fi
 
 	# update the dependency tree after touching all files #224171
