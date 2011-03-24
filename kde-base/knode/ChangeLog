@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.171 2011/03/08 22:12:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.172 2011/03/24 19:33:44 ranger Exp $
+
+  24 Mar 2011; Brent Baude <ranger@gentoo.org> knode-4.4.9.ebuild:
+  Marking knode-4.4.9 ppc stable for bug 351345
 
   08 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   knode-4.4.10.ebuild, +files/knode-4.4.10-enablefinal.patch:
