@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cman-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.8 2011/01/20 11:00:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-lib/ChangeLog,v 1.9 2011/03/24 13:34:23 angelos Exp $
+
+  24 Mar 2011; Christoph Mende <angelos@gentoo.org> cman-lib-2.03.09-r1.ebuild:
+  Stable on amd64
 
 *cman-lib-2.03.09-r1 (20 Jan 2011)
 
