@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.6.ebuild,v 1.3 2011/03/23 11:12:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.6.ebuild,v 1.4 2011/03/24 03:11:41 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2" # Just a build-time dependency
 CLUTTER_LA_PUNT="yes"
 
 # inherit clutter after gnome2 so that defaults aren't overriden
-inherit python gnome2 clutter virtualx
+inherit python gnome2 clutter
 
 DESCRIPTION="GStreamer Integration library for Clutter"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples +introspection"
 
 RDEPEND="
-	>=dev-libs/glib-2.20
+	>=dev-libs/glib-2.20:2
 	>=media-libs/clutter-1.4.0:1.0[introspection?]
 	media-libs/gstreamer:0.10[introspection?]
 	media-libs/gst-plugins-base:0.10[introspection?]
@@ -39,7 +39,13 @@ src_prepare() {
 src_compile() {
 	# Avoid sandbox violation with USE="introspection", bug #356283
 	export GST_REGISTRY=${T}/registry.cache.xml
+
 	# Clutter tries to access dri without userpriv
-	addpredict $(echo /dev/dri/card? | sed 's/ /:/g')
+	# Massive failure of a hack, see bug 360219 and bug 360073
+	shopt -s nullglob
+	local cards=$(echo -n /dev/dri/card* /dev/nvidiactl* | sed 's/ /:/g')
+	shopt -u nullglob
+	test -n "${cards}" && addpredict "${cards}"
+
 	emake || die "emake failed"
 }
