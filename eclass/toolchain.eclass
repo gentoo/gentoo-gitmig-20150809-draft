@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.454 2011/03/24 08:30:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.455 2011/03/24 08:34:17 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1053,11 +1053,14 @@ gcc_src_unpack() {
 		fi
 	fi
 
-	fix_files=""
-	for x in contrib/test_summary libstdc++-v3/scripts/check_survey.in ; do
-		[[ -e ${x} ]] && fix_files="${fix_files} ${x}"
-	done
-	ht_fix_file ${fix_files} */configure *.sh */Makefile.in
+	# No idea when this first started being fixed, but let's go with 4.3.x for now
+	if ! tc_version_is_at_least 4.3 ; then
+		fix_files=""
+		for x in contrib/test_summary libstdc++-v3/scripts/check_survey.in ; do
+			[[ -e ${x} ]] && fix_files="${fix_files} ${x}"
+		done
+		ht_fix_file ${fix_files} */configure *.sh */Makefile.in
+	fi
 
 	if ! is_crosscompile && is_multilib && [[ ${SYMLINK_LIB} == "yes" ]] && \
 	   [[ ( $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ) && -z ${SKIP_MULTILIB_HACK} ]] ; then
