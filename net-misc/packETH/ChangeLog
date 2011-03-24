@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/packETH
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.13 2011/03/24 17:24:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.14 2011/03/24 17:44:58 jer Exp $
+
+  24 Mar 2011; Jeroen Roovers <jer@gentoo.org> packETH-1.7.1.ebuild,
+  +files/packETH-1.7.1-gdk-pixbuf.patch:
+  DEPEND on x11-libs/gdk-pixbuf too.
 
 *packETH-1.7.1 (24 Mar 2011)
 
