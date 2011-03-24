@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.02.ebuild,v 1.3 2010/08/23 19:30:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-plucker/jpilot-plucker-0.02.ebuild,v 1.4 2011/03/24 07:23:00 ssuominen Exp $
 
 EAPI=2
 inherit multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.18.9
+RDEPEND=">=x11-libs/gtk+-2.18.9:2
 	>=app-pda/pilot-link-0.12.3
 	>=app-pda/jpilot-0.99.7-r1"
 DEPEND="${RDEPEND}

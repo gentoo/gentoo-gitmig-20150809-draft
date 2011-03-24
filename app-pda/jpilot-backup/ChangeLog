@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-backup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.20 2011/01/12 16:01:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/ChangeLog,v 1.21 2011/03/24 07:23:33 ssuominen Exp $
+
+  24 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  jpilot-backup-0.60.ebuild:
+  Use SLOT dependencies for x11-libs/gtk+.
 
   12 Jan 2011; Brent Baude <ranger@gentoo.org> jpilot-backup-0.60.ebuild:
   Marking jpilot-backup-0.60 ppc for bug 333717

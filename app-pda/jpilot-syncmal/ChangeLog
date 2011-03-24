@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-syncmal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.9 2010/07/13 14:05:40 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.10 2011/03/24 07:22:25 ssuominen Exp $
+
+  24 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  jpilot-syncmal-0.81.ebuild:
+  Use SLOT dependencies for x11-libs/gtk+.
 
 *jpilot-syncmal-0.81 (13 Jul 2010)
 
