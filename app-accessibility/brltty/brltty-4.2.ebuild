@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.2 2010/10/05 17:19:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.3 2011/03/24 14:13:17 williamh Exp $
 
 EAPI="2"
 FINDLIB_USE="ocaml"
@@ -34,6 +34,7 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc-212.patch
+	epatch "${FILESDIR}"/${P}-fix-ocaml-install.patch
 
 	java-pkg-opt-2_src_prepare
 }
@@ -90,7 +91,7 @@ src_install() {
 		findlib_src_preinst
 	fi
 
-	emake install || die
+	emake OCAML_LDCONF= install || die
 
 	if use java; then
 		# make install puts the _java.so there, and no it's not $(get_libdir)
