@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gpixpod/gpixpod-0.6.2.ebuild,v 1.8 2011/01/12 15:18:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gpixpod/gpixpod-0.6.2.ebuild,v 1.9 2011/03/24 09:00:54 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygtk-2.8.4
-		>=x11-libs/gtk+-2.0.0"
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
