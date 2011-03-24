@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.194 2011/03/14 08:22:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.195 2011/03/24 17:43:29 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -347,6 +347,10 @@ END
 		sed -i -e \
 			'/-S check.vim/s,..VIM.,ln -s $(VIM) testvim \; ./testvim -X,' \
 			"${S}"/src/po/Makefile
+	fi
+
+	if version_is_at_least 7.3.122; then
+		cp "${S}"/src/config.mk.dist "${S}"/src/auto/config.mk
 	fi
 }
 
