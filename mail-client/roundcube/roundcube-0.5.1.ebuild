@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5.1.ebuild,v 1.1 2011/02/10 11:13:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5.1.ebuild,v 1.2 2011/03/24 06:59:00 radhermit Exp $
 
 EAPI="2"
 
@@ -19,8 +19,8 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ldap mysql postgres ssl spell +sqlite"
 
 DEPEND=""
-RDEPEND="|| ( <dev-lang/php-5.3[crypt,iconv,ldap?,pcre,postgres?,session,spl,sqlite?,ssl?,unicode]
-		>=dev-lang/php-5.3[crypt,iconv,ldap?,postgres?,session,sqlite?,ssl?,unicode] )
+RDEPEND="|| ( <dev-lang/php-5.3[crypt,iconv,json,ldap?,pcre,postgres?,session,spl,sqlite?,ssl?,unicode]
+		>=dev-lang/php-5.3[crypt,iconv,json,ldap?,postgres?,session,sqlite?,ssl?,unicode] )
 	spell? ( dev-lang/php[curl,spell] )
 	dev-php/PEAR-PEAR"
 

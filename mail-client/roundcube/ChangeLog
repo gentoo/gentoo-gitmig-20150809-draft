@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.41 2011/03/06 11:14:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.42 2011/03/24 06:59:00 radhermit Exp $
+
+  24 Mar 2011; Tim Harder <radhermit@gentoo.org> -roundcube-0.4.ebuild,
+  roundcube-0.4.2.ebuild, -roundcube-0.5.ebuild, roundcube-0.5.1.ebuild:
+  Remove old. Add json USE flag dependency for php (bug #360035 by Jaak
+  Ristioja).
 
   06 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> roundcube-0.4.2.ebuild:
   ppc/ppc64 stable wrt #345931
