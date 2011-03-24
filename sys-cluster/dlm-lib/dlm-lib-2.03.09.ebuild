@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/dlm-lib-2.03.09.ebuild,v 1.5 2009/09/06 21:17:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/dlm-lib-2.03.09.ebuild,v 1.6 2011/03/24 13:31:18 angelos Exp $
 
-inherit eutils linux-mod versionator
+inherit eutils linux-mod multilib versionator
 
 CLUSTER_RELEASE="${PV}"
 MY_P="cluster-${CLUSTER_RELEASE}"
@@ -33,11 +33,12 @@ src_compile() {
 		./configure \
 			--cc=$(tc-getCC) \
 			--cflags="-Wall" \
+			--libdir="/usr/$(get_libdir)" \
 			--disable_kernel_check \
 			--kernel_src=${KERNEL_DIR} \
 			--somajor="$MAJ_PV" \
 			--sominor="$MIN_PV" \
-			--cmanlibdir=/usr/lib \
+			--cmanlibdir="/usr/$(get_libdir)" \
 			--cmanincdir=/usr/include \
 	) || die "configure problem"
 

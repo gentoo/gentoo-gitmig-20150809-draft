@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/dlm-lib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/ChangeLog,v 1.10 2010/09/11 14:21:31 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/ChangeLog,v 1.11 2011/03/24 13:31:18 angelos Exp $
+
+  24 Mar 2011; Christoph Mende <angelos@gentoo.org> dlm-lib-2.03.09.ebuild,
+  dlm-lib-2.03.11.ebuild:
+  Fixed multilib installation
 
   11 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop useles maintainer line
