@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.6.7.ebuild,v 1.1 2011/01/30 22:35:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.7.1.ebuild,v 1.1 2011/03/24 01:33:49 hwoarang Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 
-inherit multilib python bash-completion
+inherit eutils multilib python bash-completion
 
 DESCRIPTION="Framework which enables integration with the Security Content Automation Protocol (SCAP)"
 HOMEPAGE="http://www.open-scap.org/"
@@ -30,6 +30,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-sql-fix.patch
 }
 
 src_configure() {
