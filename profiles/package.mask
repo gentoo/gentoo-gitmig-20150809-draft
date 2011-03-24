@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12595 2011/03/24 17:45:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12596 2011/03/24 18:13:39 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -916,11 +916,9 @@ games-emulation/psemu-peopssoftgpu
 games-emulation/psemu-peopsspu
 games-fps/wmquake
 games-kids/gtans
-games-kids/stickers
 games-mud/gMOO
 games-puzzle/codebreaker
 games-puzzle/glickomania
-games-puzzle/xphotohunter
 games-puzzle/xpuyopuyo
 games-simulation/corewars
 games-strategy/xscorch
