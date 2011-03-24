@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.23 2011/03/13 11:39:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.24 2011/03/24 22:27:45 angelos Exp $
+
+  24 Mar 2011; Christoph Mende <angelos@gentoo.org> dulwich-0.7.0.ebuild:
+  Stable on amd64 wrt bug #360343
 
   13 Mar 2011; Fabian Groffen <grobian@gentoo.org> dulwich-0.7.0.ebuild:
   Marked ~x86-macos
