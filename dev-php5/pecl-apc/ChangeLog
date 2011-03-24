@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.79 2011/03/18 09:13:20 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.80 2011/03/24 17:49:38 xarthisius Exp $
+
+  24 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> pecl-apc-3.1.7.ebuild:
+  ppc/ppc64 stable wrt #355611
 
   18 Mar 2011; Thomas Kahle <tomka@gentoo.org> pecl-apc-3.1.7.ebuild:
   x86 stable per bug 355611
