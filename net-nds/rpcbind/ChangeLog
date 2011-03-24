@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.10 2011/03/18 08:47:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.11 2011/03/24 10:05:57 tomka Exp $
+
+  24 Mar 2011; Thomas Kahle <tomka@gentoo.org> rpcbind-0.2.0.ebuild:
+  x86 stable per bug 317517
 
   18 Mar 2011; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0.ebuild:
   Mark alpha/arm/hppa/ia64/s390/sh stable #317517.
