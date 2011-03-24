@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5185 2011/03/24 15:14:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5186 2011/03/24 17:45:03 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Mar 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Remove lessfs masking
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org> package.mask:
   Removed sys-apps/inotail mask
