@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.2 2011/03/23 08:02:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.3 2011/03/24 19:09:03 grobian Exp $
 
 EAPI=3
 
@@ -18,8 +18,8 @@ DEPEND=">=sys-apps/portage-2.2.01"
 RDEPEND=">=sys-libs/readline-5.0-r1
 	>=app-shells/bash-3.1_p7
 	>=sys-apps/coreutils-5.2.1
-	userland_Darwin? ( sys-process/pidof-bsd )
-	userland_FreeBSD? ( sys-process/pidof-bsd )"
+	kernel_Darwin? ( sys-process/pidof-bsd )
+	kernel_FreeBSD? ( sys-process/pidof-bsd )"
 
 S=${WORKDIR}/${P/-prefix}
 
