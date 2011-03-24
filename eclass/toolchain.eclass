@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.453 2011/03/18 20:28:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.454 2011/03/24 08:30:19 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1170,8 +1170,12 @@ gcc-compiler-configure() {
 				   $(tc-getCPP ${CTARGET}) -E - <<<"#include <pthread.h>" >& /dev/null
 				then
 					confgcc="${confgcc} $(use_enable openmp libgomp)"
+				else
+					# Force disable as the configure script can be dumb #359855
+					confgcc="${confgcc} --disable-libgomp"
 				fi
 			else
+				# For gcc variants where we don't want openmp (e.g. kgcc)
 				confgcc="${confgcc} --disable-libgomp"
 			fi
 		fi
