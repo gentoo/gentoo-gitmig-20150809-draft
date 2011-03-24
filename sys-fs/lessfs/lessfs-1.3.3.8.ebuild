@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.3.1.ebuild,v 1.2 2011/01/31 20:21:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.3.3.8.ebuild,v 1.1 2011/03/24 17:45:08 hwoarang Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
 DESCRIPTION="A high performance inline data deduplicating filesystem"
 HOMEPAGE="http://www.lessfs.com"
-SRC_URI="mirror://sourceforge/${P/_beta*/-beta}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${PN}/${P/_beta*/-beta}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -37,8 +37,6 @@ src_install () {
 	insinto /etc
 	newins examples/lessfs.cfg-master ${PN}.cfg || die "newins failed"
 	dodoc examples/lessfs.* etc/lessfs.* || die "dodoc failed"
-	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die "newconfd failed"
-	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die "newinitd failed"
 
 }
 
@@ -48,6 +46,4 @@ pkg_postinst() {
 	elog "If your host is a client consult the following configuration"
 	elog "file: /usr/share/doc/${PF}/${PN}.cfg-slave.bz2"
 	elog
-	elog "${PN} new installs an init script. Adjust /etc/conf.d/${PN}"
-	elog "to fit your needs"
 }
