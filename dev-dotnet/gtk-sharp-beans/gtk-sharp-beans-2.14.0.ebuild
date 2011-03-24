@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-beans/gtk-sharp-beans-2.14.0.ebuild,v 1.2 2011/02/27 19:32:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-beans/gtk-sharp-beans-2.14.0.ebuild,v 1.3 2011/03/24 11:41:00 hwoarang Exp $
 
 EAPI=2
 inherit autotools mono
@@ -11,7 +11,7 @@ SRC_URI="http://github.com/mono/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-dotnet/gio-sharp
