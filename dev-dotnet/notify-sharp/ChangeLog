@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/notify-sharp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.11 2011/03/12 11:56:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.12 2011/03/24 12:59:39 angelos Exp $
+
+*notify-sharp-0.4.0_pre20090305 (24 Mar 2011)
+
+  24 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  +notify-sharp-0.4.0_pre20090305.ebuild,
+  +files/notify-sharp-0.4.0_pre20090305-dbus-sharp.patch:
+  Bump snapshot and port to dbus-sharp
 
   12 Mar 2011; <angelos@gentoo.org> notify-sharp-0.4.0_pre20080912-r1.ebuild:
   Updated ndesk-dbus dependencies (bug 356391)
