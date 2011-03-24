@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/alleyoop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.17 2010/07/18 10:06:07 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.18 2011/03/24 06:56:36 ssuominen Exp $
+
+  24 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> alleyoop-0.8.2.ebuild,
+  alleyoop-0.9.5.ebuild, alleyoop-0.9.7.ebuild:
+  Use SLOT dependencies for x11-libs/gtk+.
 
   18 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   alleyoop-0.9.5.ebuild:
