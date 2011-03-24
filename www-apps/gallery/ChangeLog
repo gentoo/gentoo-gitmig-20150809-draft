@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.185 2011/03/23 20:01:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.186 2011/03/24 07:05:05 radhermit Exp $
+
+  24 Mar 2011; Tim Harder <radhermit@gentoo.org> -gallery-1.5.10.ebuild,
+  -gallery-2.3.ebuild, -gallery-2.3-r1.ebuild, -gallery-2.3-r2.ebuild,
+  -files/postinstall-en.txt:
+  Remove old.
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gallery-2.3.1.ebuild:
   ppc/ppc64 stable wrt #354541
