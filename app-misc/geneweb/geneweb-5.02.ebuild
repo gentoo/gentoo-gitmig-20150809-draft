@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.02.ebuild,v 1.1 2011/03/11 12:55:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.02.ebuild,v 1.2 2011/03/24 13:08:04 tupone Exp $
 
 EAPI=2
 inherit eutils
@@ -66,7 +66,7 @@ src_install() {
 	# Install doc
 	dodoc ICHANGES
 	insinto /usr/share/doc/${PF}/contrib
-	doins -r contrib/{gwdiff,misc,templ} \
+	doins -r contrib/{gwdiff,misc} \
 		|| die "Failed installing contributions"
 
 	newinitd "${FILESDIR}/geneweb.initd" geneweb
