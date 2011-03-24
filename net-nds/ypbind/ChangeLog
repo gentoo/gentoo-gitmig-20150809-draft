@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.60 2011/03/23 20:27:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.61 2011/03/24 19:29:17 jer Exp $
+
+*ypbind-1.32-r1 (24 Mar 2011)
+
+  24 Mar 2011; Jeroen Roovers <jer@gentoo.org> +ypbind-1.32-r1.ebuild:
+  Add new dependencies/USE flags.
 
   23 Mar 2011; Christoph Mende <angelos@gentoo.org> ypbind-1.32.ebuild:
   Stable on amd64 wrt bug #360165
