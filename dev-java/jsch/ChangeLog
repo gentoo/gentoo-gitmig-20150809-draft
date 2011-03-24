@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.80 2011/03/21 09:44:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.81 2011/03/24 19:27:29 xarthisius Exp $
+
+  24 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> jsch-0.1.44.ebuild:
+  ppc/ppc64 stable wrt #356805
 
   21 Mar 2011; Thomas Kahle <tomka@gentoo.org> jsch-0.1.44.ebuild:
   x86 stable per bug 356805
