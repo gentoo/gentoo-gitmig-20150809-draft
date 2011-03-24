@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.6.2.0.ebuild,v 1.1 2010/02/19 15:48:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.6.2.3.ebuild,v 1.1 2011/03/24 10:26:54 chainsaw Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
@@ -14,15 +14,17 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="bluetooth elibc_uclibc h323 mysql"
 
-RDEPEND=">=net-misc/asterisk-1.6.2.0"
+DEPEND="bluetooth? ( net-wireless/bluez )
+	mysql? ( dev-db/mysql )"
+RDEPEND="${DEPEND}
+	 >=net-misc/asterisk-1.6.2.0"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-parallel-make.diff"
-	epatch "${FILESDIR}/${P}-respect-destdir.diff"
+	epatch "${FILESDIR}/${PN}-1.6.2.0-parallel-make.diff"
 
 	# forward-ported patch from jaervosz for uclibc
 	if use elibc_uclibc; then
-		epatch "${FILESDIR}/${P}-uclibc.diff"
+		epatch "${FILESDIR}/${PN}-1.6.2.0-uclibc.diff"
 	fi
 
 	if ! use bluetooth; then
@@ -47,6 +49,10 @@ src_configure() {
 		--localstatedir="/var" \
 		$(use_with mysql mysqlclient) \
 		|| die "Failed to configure"
+}
+
+src_compile() {
+	ASTLDFLAGS="${LDFLAGS}" emake || die "emake failed"
 }
 
 src_install() {
