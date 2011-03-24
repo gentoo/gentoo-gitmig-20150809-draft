@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.240 2011/03/10 13:01:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.241 2011/03/24 19:33:16 ranger Exp $
+
+  24 Mar 2011; Brent Baude <ranger@gentoo.org> kmail-4.4.9.ebuild:
+  Marking kmail-4.4.9 ppc stable for bug 351345
 
   10 Mar 2011; <angelos@gentoo.org> kmail-4.4.9.ebuild, kmail-4.4.10.ebuild:
   QA: Fixed VIRTUALX_REQUIRED
