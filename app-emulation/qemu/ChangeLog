@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.84 2011/03/17 22:47:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.85 2011/03/24 19:50:14 angelos Exp $
+
+  24 Mar 2011; Christoph Mende <angelos@gentoo.org> qemu-0.11.1.ebuild:
+  Stable on amd64 wrt bug #356685
 
   17 Mar 2011; Thomas Kahle <tomka@gentoo.org> qemu-0.11.1.ebuild:
   x86 stable per bug 356685
