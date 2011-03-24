@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/osptoolkit-3.5.0.ebuild,v 1.1 2009/04/20 16:54:30 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/osptoolkit-3.5.0.ebuild,v 1.2 2011/03/24 14:34:40 angelos Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/osp-toolkit/OSPToolkit-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"
