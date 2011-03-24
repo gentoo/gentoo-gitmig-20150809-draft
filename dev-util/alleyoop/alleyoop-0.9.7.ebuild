@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.7.ebuild,v 1.3 2011/03/24 06:56:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.7.ebuild,v 1.4 2011/03/24 13:15:26 angelos Exp $
 
 EAPI=2
 inherit gnome2
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/alleyoop/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~ppc -sparc ~x86"
+KEYWORDS="-alpha amd64 ~ppc -sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.2
