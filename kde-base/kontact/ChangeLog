@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.175 2011/02/13 19:57:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.176 2011/03/24 19:35:05 ranger Exp $
+
+  24 Mar 2011; Brent Baude <ranger@gentoo.org> kontact-4.4.9.ebuild:
+  Marking kontact-4.4.9 ppc stable for bug 351345
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kontact-4.4.6.ebuild,
   -kontact-4.4.7.ebuild, -kontact-4.4.8.ebuild:
