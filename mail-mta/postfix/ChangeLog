@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.246 2011/03/23 17:18:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.247 2011/03/24 08:17:21 radhermit Exp $
+
+*postfix-2.8.2 (24 Mar 2011)
+
+  24 Mar 2011; Tim Harder <radhermit@gentoo.org> +postfix-2.8.2.ebuild:
+  Version bump. Update to EAPI 4 and bump vda patch.
 
 *postfix-2.8.1-r1 (23 Mar 2011)
 *postfix-2.7.3-r1 (23 Mar 2011)
