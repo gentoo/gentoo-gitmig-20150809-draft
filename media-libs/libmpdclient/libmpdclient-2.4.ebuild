@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.4.ebuild,v 1.7 2011/03/20 22:58:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.4.ebuild,v 1.8 2011/03/24 18:17:51 xarthisius Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86"
 IUSE="examples static-libs"
 
 src_configure() {
