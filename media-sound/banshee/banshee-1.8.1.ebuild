@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.1.ebuild,v 1.6 2011/03/21 23:13:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.1.ebuild,v 1.7 2011/03/24 11:41:21 hwoarang Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="http://download.banshee-project.org/${PN}/stable/${PV}/${PN}-1-${PV}.ta
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test udev +web youtube"
 
 RDEPEND=">=dev-lang/mono-2.4.3
