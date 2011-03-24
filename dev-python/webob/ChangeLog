@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.27 2011/02/27 18:13:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.28 2011/03/24 22:44:20 arfrever Exp $
+
+*webob-1.0.5 (24 Mar 2011)
+
+  24 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +webob-1.0.5.ebuild:
+  Version bump. Add "doc" USE flag (bug #351778).
 
   27 Feb 2011; Brent Baude <ranger@gentoo.org> webob-1.0.1.ebuild:
   stable ppc, bug 354165
