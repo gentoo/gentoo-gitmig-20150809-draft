@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Unique/Gtk2-Unique-0.50.0.ebuild,v 1.2 2011/03/21 21:56:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Unique/Gtk2-Unique-0.05.ebuild,v 1.3 2011/03/24 10:29:49 hwoarang Exp $
 
 EAPI=3
 
 MODULE_AUTHOR="POTYL"
 MODULE_VERSION=0.05
-inherit perl-module
+inherit eutils perl-module
 
 DESCRIPTION="Perl binding for C libunique library"
 
@@ -23,3 +23,7 @@ DEPEND="${RDEPEND}
 	dev-perl/extutils-depends
 	dev-perl/extutils-pkgconfig
 "
+
+src_prepare(){
+	epatch "${FILESDIR}"/${P}-implicit-pointer.patch
+}
