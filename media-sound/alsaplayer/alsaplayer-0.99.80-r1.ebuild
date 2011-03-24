@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.6 2010/05/23 18:17:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.7 2011/03/24 07:21:32 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -18,7 +18,7 @@ IUSE="alsa audiofile doc esd flac gtk id3tag jack mad nas nls ogg opengl oss vor
 RDEPEND="media-libs/libsndfile
 	mad? ( media-libs/libmad )
 	id3tag? ( media-libs/libid3tag )
-	gtk? ( >=x11-libs/gtk+-2.8 )
+	gtk? ( >=x11-libs/gtk+-2.8:2 )
 	alsa? ( media-libs/alsa-lib )
 	audiofile? ( media-libs/audiofile )
 	esd? ( media-sound/esound )
