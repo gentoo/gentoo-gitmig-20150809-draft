@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.95 2011/03/10 19:14:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.96 2011/03/24 20:54:40 dirtyepic Exp $
+
+  24 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> grass-6.4.0.ebuild:
+  eselect wxwidgets affects build behaviour, not runtime, and only outside of
+  portage so it has no use here. Use 'unicode' wx libs since 'base' means non-X
+  only. Don't use \ inside of quotes.
 
   10 Mar 2011; Justin Lecher <jlec@gentoo.org> grass-6.3.0.ebuild,
   grass-6.4.0.ebuild, metadata.xml:

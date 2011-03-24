@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.6 2011/03/10 19:14:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.7 2011/03/24 20:54:40 dirtyepic Exp $
 
 EAPI="3"
 
@@ -124,18 +124,6 @@ pkg_setup() {
 		# only py2 is supported
 		python_set_active_version 2
 	fi
-
-	if use wxwidgets; then
-		# only 2.8 is supported or the wx-gui barfs at runtime...
-		local success=0
-		ewarn "Attempting to select a compatible wxwidgets"
-		eselect wxwidgets set gtk2-unicode-release-2.8
-		success=1
-	fi
-	if [ $success != 1 ]; then
-		 eerror "Unable to select a compatible wxwidgets!"
-		 die "Please set wxwidgets to at least 2.8 (see \`eselect wxwidgets --help\`)."
-	fi
 }
 
 src_prepare() {
@@ -161,7 +149,7 @@ src_configure() {
 		if use python && use wxwidgets; then
 			WX_BUILD=yes
 			WX_GTK_VER=2.8
-			need-wxwidgets base
+			need-wxwidgets unicode
 			myconf+="
 				--without-tcltk
 				--with-wxwidgets=${WX_CONFIG}
@@ -201,10 +189,7 @@ src_configure() {
 		$(use_with cxx) \
 		$(use_with fftw) \
 		$(use_with ffmpeg) \
-		--with-ffmpeg-includes="/usr/include/libavcodec \
-			/usr/include/libavdevice /usr/include/libavfilter \
-			/usr/include/libavformat /usr/include/libavutil \
-			/usr/include/libpostproc /usr/include/libswscale" \
+		--with-ffmpeg-includes="/usr/include/libavcodec /usr/include/libavdevice /usr/include/libavfilter /usr/include/libavformat /usr/include/libavutil /usr/include/libpostproc /usr/include/libswscale" \
 		$(use_with gmath blas) \
 		$(use_with gmath lapack) \
 		$(use_with jpeg) \
