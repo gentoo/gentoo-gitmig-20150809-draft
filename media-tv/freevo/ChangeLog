@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/freevo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.70 2011/03/13 16:02:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.71 2011/03/24 09:42:10 tomka Exp $
+
+  24 Mar 2011; Thomas Kahle <tomka@gentoo.org> freevo-1.9.0.ebuild:
+  x86 stable per bug 358455
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> freevo-1.9.0.ebuild:
   Stable on amd64 wrt bug #358455
