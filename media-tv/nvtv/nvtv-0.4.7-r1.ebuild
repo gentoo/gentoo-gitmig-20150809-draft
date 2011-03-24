@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.7-r1.ebuild,v 1.2 2011/03/24 06:53:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.7-r1.ebuild,v 1.3 2011/03/24 06:54:00 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 
 IUSE="X gtk"
 
@@ -23,7 +23,7 @@ RDEPEND="sys-apps/pciutils[-zlib]
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xf86vidmodeproto )"
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use gtk
@@ -38,7 +38,9 @@ src_compile() {
 		|| myconf="${myconf} --without-x"
 
 	econf ${myconf}
+}
 
+src_compile() {
 	# The CFLAGS don't seem to make it into the Makefile.
 	cd src
 	emake CXFLAGS="${CFLAGS}" || die
