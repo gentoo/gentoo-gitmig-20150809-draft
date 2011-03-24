@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.25.3.ebuild,v 1.8 2011/02/26 13:22:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.25.3.ebuild,v 1.9 2011/03/24 11:08:09 ssuominen Exp $
 
 EAPI="2"
 G_PY_PN="gnome-python-extras"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
-RDEPEND="=net-libs/xulrunner-1.9*"
+RDEPEND=">=net-libs/xulrunner-1.9:1.9"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
