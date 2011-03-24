@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.92 2011/03/20 22:36:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.93 2011/03/24 18:15:40 xarthisius Exp $
+
+  24 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> cdrkit-1.1.11.ebuild:
+  ppc64 stable wrt #356509
 
   20 Mar 2011; Thomas Kahle <tomka@gentoo.org> cdrkit-1.1.11.ebuild:
   x86 stable per bug 356509
