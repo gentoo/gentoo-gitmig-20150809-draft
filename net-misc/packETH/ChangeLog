@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/packETH
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.11 2010/10/18 12:50:45 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.12 2011/03/24 17:15:33 jer Exp $
+
+  24 Mar 2011; Jeroen Roovers <jer@gentoo.org> packETH-1.6.5.ebuild,
+  packETH-1.7.ebuild:
+  DEPEND on dev-util/pkgconfig thanks to dE (bug #360125).
 
 *packETH-1.7 (18 Oct 2010)
 

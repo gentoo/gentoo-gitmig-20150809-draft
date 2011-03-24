@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/packETH-1.7.ebuild,v 1.1 2010/10/18 12:50:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/packETH-1.7.ebuild,v 1.2 2011/03/24 17:15:33 jer Exp $
 
 EAPI="2"
 
@@ -15,8 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+:2"
-RDEPEND="${DEPEND}"
+RDEPEND="x11-libs/gtk+:2"
+DEPEND="
+	dev-util/pkgconfig
+	${RDEPEND}
+"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.6.5-forced-as-needed.patch"
