@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.49 2011/03/20 06:41:48 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.50 2011/03/24 13:11:41 lack Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -63,10 +63,9 @@ sys-power/pm-utils -video_cards_intel -video_cards_radeon
 >=dev-java/ibm-jdk-bin-1.5 -nsplugin 
 >=dev-java/ibm-jre-bin-1.5 -nsplugin
 
-# Jim Ramsay <lack@gentoo.org> (12 August 2010)
+# Jim Ramsay <lack@gentoo.org> (24 March 2011)
 # '64bit' '32bit' 'nspluginwrapper' are for amd64 only
-=www-plugins/adobe-flash-10.0* 64bit 32bit
-=www-plugins/adobe-flash-10.1* nspluginwrapper
+www-plugins/adobe-flash nspluginwrapper 32bit 64bit
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka clozurecl) is only available on x86 and amd64

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.59 2011/03/20 06:26:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.60 2011/03/24 13:11:41 lack Exp $
+
+  24 Mar 2011; Jim Ramsay <lack@gentoo.org> package.use.mask:
+  Bug 360235: Clean up USE mask for www-plugins/adobe-flash
 
   20 Mar 2011; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   Unmask orc USE flag on gst-plugins-good
