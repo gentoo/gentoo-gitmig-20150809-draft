@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-gconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.92 2011/03/20 08:51:31 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/ChangeLog,v 1.93 2011/03/24 05:43:26 ford_prefect Exp $
+
+  24 Mar 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  gst-plugins-gconf-0.10.28.ebuild:
+  Drop incorrect liboil dep (bug #360205). Also make RDEPEND explicit (fixes
+  repoman warning).
 
 *gst-plugins-gconf-0.10.28 (20 Mar 2011)
 
