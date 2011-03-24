@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.1.2.ebuild,v 1.1 2011/03/23 23:26:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.1.2.ebuild,v 1.2 2011/03/24 14:58:40 mr_bones_ Exp $
 
 EAPI=2
 
@@ -40,7 +40,6 @@ EOF
 		cat modsecurity_crs_10_config.conf.example
 
 		cat - <<EOF
-
 
 Include /etc/modsecurity/base_rules/*.conf
 
