@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12593 2011/03/24 12:05:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12594 2011/03/24 15:14:34 angelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -307,10 +307,6 @@ games-puzzle/gtetrinet
 # Masked for removal in 30 days. EOL for 9.4.x, replaced by 9.6.x and 9.7.x
 =net-dns/bind-9.4*
 =net-dns/bind-tools-9.4*
-
-# Christoph Mende <angelos@gentoo.org> (22 Feb 2011)
-# Masked for removal, inotify support has been in tail -f since coreutils-7.5
-sys-apps/inotail
 
 # Jeremy Olexa <darkside@gentoo.org> (22 Feb 2011)
 # Masked for removal in 60 days by treecleaners
