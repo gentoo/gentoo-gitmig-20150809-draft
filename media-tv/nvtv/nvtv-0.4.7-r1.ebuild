@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.7-r1.ebuild,v 1.1 2009/01/10 12:32:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.7-r1.ebuild,v 1.2 2011/03/24 06:53:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
 RDEPEND="sys-apps/pciutils[-zlib]
-	gtk? ( x11-libs/gtk+ )
+	gtk? ( x11-libs/gtk+:2 )
 	X? ( x11-libs/libXi
 		x11-libs/libXmu
 		x11-libs/libXxf86vm )"
@@ -37,7 +37,7 @@ src_compile() {
 		&& myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
 
-	econf ${myconf} || die
+	econf ${myconf}
 
 	# The CFLAGS don't seem to make it into the Makefile.
 	cd src
@@ -45,8 +45,8 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/nvtv
-	dosbin src/nvtvd
+	dobin src/nvtv || die
+	dosbin src/nvtvd || die
 
 	dodoc ANNOUNCE BUGS FAQ INSTALL README \
 		doc/USAGE doc/chips.txt doc/overview.txt \
