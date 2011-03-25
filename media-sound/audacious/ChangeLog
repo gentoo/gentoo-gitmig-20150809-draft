@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.223 2011/03/24 07:20:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.224 2011/03/25 20:04:56 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> audacious-2.4.0.ebuild:
+  ppc stable wrt #297894
 
   24 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> audacious-2.2.ebuild,
   audacious-2.4.0.ebuild, audacious-2.4.1.ebuild, audacious-2.4.2.ebuild,
