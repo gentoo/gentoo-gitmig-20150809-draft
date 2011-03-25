@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.7.ebuild,v 1.5 2009/09/06 21:15:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.7.ebuild,v 1.6 2011/03/25 20:19:06 xarthisius Exp $
 
 inherit eutils versionator toolchain-funcs linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ipset.netfilter.org/"
 SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND=">=net-firewall/iptables-1.4.1"
 DEPEND="${RDEPEND}"
