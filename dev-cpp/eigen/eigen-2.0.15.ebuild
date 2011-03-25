@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.15.ebuild,v 1.1 2010/10/03 16:29:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.15.ebuild,v 1.2 2011/03/25 16:01:28 jlec Exp $
 
 EAPI="2"
 
@@ -28,7 +28,10 @@ RDEPEND="${COMMON_DEPEND}
 	!dev-cpp/eigen:0
 "
 
-S="${WORKDIR}/${PN}"
+src_unpack() {
+	unpack ${A}
+	mv ${PN}* ${P}
+}
 
 src_configure() {
 	# benchmarks (BTL) brings up damn load of external deps including fortran

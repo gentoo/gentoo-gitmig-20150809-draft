@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.13.ebuild,v 1.9 2011/03/25 16:01:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-3.0.0.ebuild,v 1.1 2011/03/25 16:01:28 jlec Exp $
 
 EAPI="2"
 
@@ -10,34 +10,25 @@ DESCRIPTION="C++ template library for linear algebra: vectors, matrices, and rel
 HOMEPAGE="http://eigen.tuxfamily.org/"
 SRC_URI="http://bitbucket.org/eigen/eigen/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
 
-LICENSE="GPL-3"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
-SLOT="2"
-IUSE="debug doc examples"
+LICENSE="LGPL-2 GPL-3"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+SLOT="3"
+IUSE="debug doc"
 
-COMMON_DEPEND="
-	examples? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4
-	)
-"
-DEPEND="${COMMON_DEPEND}
-	doc? ( app-doc/doxygen )
-"
-RDEPEND="${COMMON_DEPEND}
-	!dev-cpp/eigen:0
-"
+DEPEND="doc? ( app-doc/doxygen )"
+RDEPEND="!dev-cpp/eigen:0"
 
-S="${WORKDIR}/${PN}"
+src_unpack() {
+	unpack ${A}
+	mv ${PN}* ${P}
+}
 
 src_configure() {
 	# benchmarks (BTL) brings up damn load of external deps including fortran
 	# compiler
-	# library hangs up complete compilation proccess, test later
+	CMAKE_BUILD_TYPE="release"
 	mycmakeargs=(
-		-DEIGEN_BUILD_LIB=OFF
 		-DEIGEN_BUILD_BTL=OFF
-		$(cmake-utils_use examples EIGEN_BUILD_DEMOS)
 	)
 	cmake-utils_src_configure
 }
@@ -55,10 +46,6 @@ src_install() {
 	if use doc; then
 		cd "${CMAKE_BUILD_DIR}"/doc
 		dohtml -r html/* || die "dohtml failed"
-	fi
-	if use examples; then
-		cd "${CMAKE_BUILD_DIR}"/demos
-		dobin mandelbrot/mandelbrot opengl/quaternion_demo || die "dobin failed"
 	fi
 }
 
