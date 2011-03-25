@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.69 2011/02/02 16:13:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.70 2011/03/25 20:08:37 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> cdk-5.0.20090215.ebuild:
+  ppc stable wrt #299479
 
   02 Feb 2011; Mark Loeser <halcy0n@gentoo.org> cdk-5.0.20090215.ebuild:
   Stable on ppc64; bug #299479
