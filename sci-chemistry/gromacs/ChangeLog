@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.72 2011/03/22 18:10:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.73 2011/03/25 10:52:14 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gromacs-4.5.4.ebuild:
+  ppc64 stable wrt #357017
 
   22 Mar 2011; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.4.ebuild:
   New manual, added back pkg-config to DEPEND
