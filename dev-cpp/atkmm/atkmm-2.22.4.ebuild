@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.2-r1.ebuild,v 1.2 2011/03/22 04:52:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.4.ebuild,v 1.1 2011/03/25 23:33:19 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -20,19 +20,11 @@ RDEPEND=">=dev-cpp/glibmm-2.24[doc?]
 	dev-libs/libsigc++:2
 	!<dev-cpp/gtkmm-2.22.0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	doc? ( >=dev-cpp/mm-common-0.9.3 )"
+	dev-util/pkgconfig"
 
 src_prepare() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF}
 		--disable-maintainer-mode
 		$(use_enable doc documentation)"
-
-	# doc-install.pl was removed from glibmm, and is provided by mm-common now
-	# This should not be needed if the tarball is generated with mm-common-0.9.3
-	if use doc && has_version '>=dev-cpp/glibmm-2.27.97'; then
-		mm-common-prepare --copy --force
-		eautoreconf
-	fi
 }

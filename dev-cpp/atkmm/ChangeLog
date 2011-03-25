@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/atkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.13 2011/03/22 19:58:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.14 2011/03/25 23:33:19 nirbheek Exp $
+
+*atkmm-2.22.4 (25 Mar 2011)
+
+  25 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -atkmm-2.22.2-r1.ebuild, +atkmm-2.22.4.ebuild:
+  Add 2.22.4, removes build-time dep on mm-common, remove old
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> atkmm-2.22.2.ebuild:
   Marking atkmm-2.22.2 ppc stable for bug 353436
