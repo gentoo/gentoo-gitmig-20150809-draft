@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.37 2011/01/03 12:33:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.38 2011/03/25 19:57:27 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  hardware-monitor-1.4.3.ebuild:
+  ppc stable wrt #291711
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> hardware-monitor-1.4.3.ebuild:
   sparc stable (bug 291711)
