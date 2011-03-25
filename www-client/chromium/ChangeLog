@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.316 2011/03/22 11:46:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.317 2011/03/25 07:54:46 phajdan.jr Exp $
+
+*chromium-10.0.648.204 (25 Mar 2011)
+
+  25 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-10.0.648.204.ebuild:
+  Version bump for stable channel release. Switch back to bundled V8, bug
+  #357809 by Jon Wagoner <jon.wagoner@redcheetah.com> and additional
+  comments by redneb <redneb@gmx.com>.
 
 *chromium-11.0.696.16 (22 Mar 2011)
 
