@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.11.25.ebuild,v 1.2 2011/03/21 23:27:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.11.25.ebuild,v 1.3 2011/03/25 13:36:58 wired Exp $
 
 EAPI="2"
 
@@ -55,6 +55,9 @@ RDEPEND="
 		x11-libs/pango
 		x11-misc/dmenu
 		x11-misc/xclip
+	)
+	tabbed? (
+		dev-python/pygtk
 	)
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "

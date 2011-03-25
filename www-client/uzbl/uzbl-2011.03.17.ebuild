@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2011.02.15.ebuild,v 1.4 2011/03/25 13:36:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2011.03.17.ebuild,v 1.1 2011/03/25 13:36:58 wired Exp $
 
 EAPI="4"
 
@@ -86,7 +86,7 @@ pkg_setup() {
 	fi
 	ewarn
 	ewarn "This version introduces some backwards-incompatible changes."
-	ewarn "Please read http://www.uzbl.org/news.php?id=32 for more details."
+	ewarn "Please read http://www.uzbl.org/news.php?id=33 for more details."
 	ewarn
 }
 
