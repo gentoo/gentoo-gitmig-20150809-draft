@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.134 2011/02/27 14:18:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.135 2011/03/25 04:45:06 bicatali Exp $
+
+  25 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> numpy-1.5.1.ebuild:
+  Allows cross-compiling, bug #356381 thanks Dylan Smith
 
   27 Feb 2011; Tobias Klausmann <klausman@gentoo.org> numpy-1.5.1.ebuild:
   Stable on alpha, bug #351487
