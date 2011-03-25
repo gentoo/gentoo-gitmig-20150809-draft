@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.66 2011/03/02 18:06:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.67 2011/03/25 19:36:28 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> geda-1.6.1.ebuild:
+  ppc stable wrt #285470
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> geda-1.4.0-r1.ebuild,
   geda-1.6.1.ebuild, geda-1.6.2.ebuild:
