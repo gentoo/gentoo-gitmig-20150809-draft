@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Apache-SizeLimit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.1 2011/03/15 16:59:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.2 2011/03/25 16:52:49 idl0r Exp $
+
+  25 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
+  Apache-SizeLimit-0.95.ebuild,
+  +files/Apache-SizeLimit-0.95-Fix_Linux-Smaps_detection.patch:
+  Remove Linux-Smaps dependency since it's totally optional, also fix
+  Linux-Smaps detection to not die if Linux-Smaps has been installed but
+  /proc/self/smaps doesn't exist.
 
 *Apache-SizeLimit-0.95 (15 Mar 2011)
 
