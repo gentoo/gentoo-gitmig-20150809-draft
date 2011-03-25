@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.237 2011/01/25 12:36:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.238 2011/03/25 15:10:05 caster Exp $
+
+*ibm-jdk-bin-1.6.0.9_p1 (25 Mar 2011)
+
+  25 Mar 2011; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jdk-bin-1.6.0.8_p1-r1.ebuild, +ibm-jdk-bin-1.6.0.9_p1.ebuild:
+  Version bump, security bug #360431.
 
   25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   ibm-jdk-bin-1.5.0.12_p3.ebuild:
