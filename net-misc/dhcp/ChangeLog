@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.171 2011/03/23 12:36:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.172 2011/03/25 15:55:00 ranger Exp $
+
+  25 Mar 2011; Brent Baude <ranger@gentoo.org> dhcp-3.1.3_p1.ebuild:
+  Marking dhcp-3.1.3_p1 ppc for bug 360047
 
   23 Mar 2011; Christoph Mende <angelos@gentoo.org> dhcp-3.1.3_p1.ebuild:
   Stable on amd64 wrt bug #360047
