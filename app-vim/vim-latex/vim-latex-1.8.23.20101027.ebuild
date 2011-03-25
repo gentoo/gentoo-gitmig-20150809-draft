@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/vim-latex-1.8.23.20101027.ebuild,v 1.5 2011/03/22 20:53:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-latex/vim-latex-1.8.23.20101027.ebuild,v 1.6 2011/03/25 10:19:51 xarthisius Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://vim-latex.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="vim"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="html"
 
 RDEPEND="virtual/latex-base"
