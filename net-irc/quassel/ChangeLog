@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.124 2011/03/24 15:04:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.125 2011/03/25 04:40:20 patrick Exp $
+
+  25 Mar 2011; Patrick Lauer <patrick@gentoo.org> quassel-0.7.2.ebuild:
+  Adding missing keywords
 
 *quassel-0.7.2 (24 Mar 2011)
 
