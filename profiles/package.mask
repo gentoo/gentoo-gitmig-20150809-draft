@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12601 2011/03/25 20:35:08 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12602 2011/03/25 22:59:45 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -451,14 +451,6 @@ app-pda/osynctool
 # Doesn't work with latest twitter API.
 # Either this will be removed, or unmasked when new 0.3 version is out.
 net-misc/pino
-
-# Gilles Dartiguelongue <eva@gentoo.org> (04 Feb 2011)
-# New glib/gtk+ mask, for testing purpose
-# Needs a new gvfs as well
->=dev-libs/glib-2.27
->=x11-libs/gtk+-2.24.0
->=sys-auth/polkit-0.101
->=gnome-extra/polkit-gnome-0.101
 
 # Hans de Graaff <graaff@gentoo.org> (02 Feb 2011)
 # Masked for removal in 30 days. Superseded by
