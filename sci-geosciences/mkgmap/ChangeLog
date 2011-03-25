@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mkgmap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/ChangeLog,v 1.11 2009/09/19 18:06:26 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/ChangeLog,v 1.12 2011/03/25 23:09:16 hanno Exp $
+
+*mkgmap-1903 (25 Mar 2011)
+
+  25 Mar 2011; Hanno Boeck <hanno@gentoo.org> +mkgmap-1903.ebuild:
+  Version bump.
 
 *mkgmap-1200 (19 Sep 2009)
 
