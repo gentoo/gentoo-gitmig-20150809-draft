@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xrmap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.20 2010/06/23 12:24:47 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.21 2011/03/25 17:10:45 signals Exp $
+
+*xrmap-2.33-r1 (25 Mar 2011)
+
+  25 Mar 2011; Kevin McCarthy <signals@gentoo.org> +xrmap-2.33-r1.ebuild,
+  +files/xrmap-2.33-parallel-make.patch:
+  Respect LDFLAGS, CFLAGS, CC #342211. Fix all QA warnings. Remove unneeded
+  imake DEP. RDEPEND timidity++. Clean up (R)DEPENDS. Change default browser
+  from dillo to xdg-open. Install current data files. Install required
+  earthview bin/data. General ebuild cleanup.
 
   23 Jun 2010; Markos Chandras <hwoarang@gentoo.org> xrmap-2.33.ebuild:
   Fix makefile to allow parallel compilation. Fixes bug #323065
