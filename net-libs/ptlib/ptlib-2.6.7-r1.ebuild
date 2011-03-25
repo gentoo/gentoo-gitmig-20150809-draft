@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.3 2011/01/18 16:19:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.4 2011/03/25 09:47:39 pva Exp $
 
 EAPI="2"
 
@@ -33,7 +33,8 @@ CDEPEND="
 				sys-libs/libavc1394
 				sys-libs/libraw1394 )
 		v4l2? ( media-libs/libv4l ) )
-	xml? ( dev-libs/expat )"
+	xml? ( dev-libs/expat )
+	!!dev-libs/pwlib"
 RDEPEND="${CDEPEND}
 	ffmpeg? ( media-video/ffmpeg )"
 DEPEND="${CDEPEND}
@@ -41,8 +42,7 @@ DEPEND="${CDEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	video? ( v4l? ( sys-kernel/linux-headers )
-		v4l2? ( sys-kernel/linux-headers ) )
-	!!dev-libs/pwlib"
+		v4l2? ( sys-kernel/linux-headers ) )"
 
 # NOTES:
 # media-libs/libdc1394:2 should be supported but headers location have changed
