@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.7 2009/04/24 02:11:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.8 2011/03/25 19:29:05 xarthisius Exp $
 
 EAPI=2
 inherit eutils java-pkg-2 java-ant-2
@@ -11,7 +11,7 @@ SRC_URI="http://zemberek.googlecode.com/files/${PN}-nolibs-${PV}.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 S="${WORKDIR}"
 IUSE=""
 
