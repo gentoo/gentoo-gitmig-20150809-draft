@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.111 2011/03/22 16:18:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.112 2011/03/25 17:51:51 jer Exp $
+
+  25 Mar 2011; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=webm.
 
   22 Mar 2011; Jeroen Roovers <jer@gentoo.org> -virtuals, packages:
   Add palo to the system set, remove bootloader virtual (bug #359971). Remove
