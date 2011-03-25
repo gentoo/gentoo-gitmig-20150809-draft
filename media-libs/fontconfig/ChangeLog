@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fontconfig
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.149 2010/05/24 16:09:04 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.150 2011/03/25 12:06:37 hwoarang Exp $
+
+  25 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  fontconfig-2.8.0-r1.ebuild:
+  Stable on amd64 wrt bug #360221
 
   24 May 2010; Raúl Porcel <armin76@gentoo.org> fontconfig-2.8.0.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #309693
