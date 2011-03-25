@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.37 2011/03/21 22:35:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.38 2011/03/25 18:45:04 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> alltray-0.74.ebuild:
+  ppc stable wrt #329417
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> alltray-0.69.ebuild,
   alltray-0.69-r1.ebuild, alltray-0.74.ebuild:
