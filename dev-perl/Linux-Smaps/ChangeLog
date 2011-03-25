@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Linux-Smaps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Smaps/ChangeLog,v 1.5 2011/03/23 16:19:04 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Smaps/ChangeLog,v 1.6 2011/03/25 17:00:51 idl0r Exp $
+
+  25 Mar 2011; Christian Ruppert <idl0r@gentoo.org> Linux-Smaps-0.06.ebuild:
+  Improve kernel config check.
 
   23 Mar 2011; Christian Ruppert <idl0r@gentoo.org> Linux-Smaps-0.06.ebuild:
   Add check for CONFIG_MMU.
