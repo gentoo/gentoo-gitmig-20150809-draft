@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5189 2011/03/25 12:27:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5190 2011/03/25 15:49:52 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Mar 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking new qmmp release
 
   25 Mar 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking qt-creator beta release
