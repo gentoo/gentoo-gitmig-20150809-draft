@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.1 2011/03/22 21:01:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.2 2011/03/25 13:17:02 lu_zero Exp $
 
 EAPI=4
 
@@ -148,7 +148,7 @@ src_configure() {
 	done
 	use mmxext || myconf+=" --disable-mmx2"
 	use 3dnow || myconf+=" --disable-amd3dnow"
-	use 3dnowext || myconf=+" --disable-amd3dnowext"
+	use 3dnowext || myconf+=" --disable-amd3dnowext"
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
 	if use pic && use x86 ; then
