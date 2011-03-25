@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.399 2011/03/23 01:05:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.400 2011/03/25 06:33:12 polynomial-c Exp $
+
+*xulrunner-1.9.2.16 (25 Mar 2011)
+
+  25 Mar 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -files/1009-armv4t-nanojit-v2.patch, -files/cups-1.4.4-fixup.patch,
+  -xulrunner-1.9.2.13.ebuild, +xulrunner-1.9.2.16.ebuild,
+  -files/xulrunner-1.9.2-noalsa-fixup.patch,
+  -files/xulrunner-1.9_beta5-prefix.patch,
+  -files/xulrunner-1.9.2-solaris-madvise.patch,
+  -files/fix_crash_in_windowwatcher.patch:
+  Security bump of 1.9 version for icecat. Cleaned up FILESDIR.
 
   23 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> xulrunner-2.0.ebuild:
   Fix automagic GConf dependency
