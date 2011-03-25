@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.91 2011/03/21 22:14:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.92 2011/03/25 13:26:30 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  libarchive-2.8.4-r1.ebuild:
+  ppc/ppc64 stable wrt #357771
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> libarchive-2.8.4.ebuild:
   Marking libarchive-2.8.4 ppc for bug 357771
