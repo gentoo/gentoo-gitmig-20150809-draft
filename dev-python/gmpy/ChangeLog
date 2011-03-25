@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.27 2011/01/11 18:12:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.28 2011/03/25 19:52:10 arfrever Exp $
+
+  25 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gmpy-1.14.ebuild:
+  Disable pysymbolicext extension (bug #298244).
 
   11 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gmpy-1.13.ebuild:

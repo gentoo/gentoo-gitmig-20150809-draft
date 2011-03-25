@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.14.ebuild,v 1.3 2011/01/11 15:30:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-1.14.ebuild,v 1.4 2011/03/25 19:52:10 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
-DISTUTILS_SETUP_FILES=("setup.py" "setes.py")
 DOCS="doc/gmpydoc.txt"
 
 src_test() {
