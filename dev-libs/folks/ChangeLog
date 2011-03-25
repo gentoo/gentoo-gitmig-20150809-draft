@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.8 2011/03/22 18:49:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.9 2011/03/25 22:48:53 eva Exp $
+
+*folks-0.4.2 (25 Mar 2011)
+
+  25 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> +folks-0.4.2.ebuild:
+  Version bump, API break, required by new empathy release.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> folks-0.2.1.ebuild:
   Marking folks-0.2.1 ppc stable for bug 353436
