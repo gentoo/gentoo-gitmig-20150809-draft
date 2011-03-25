@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/carl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.10 2010/10/15 21:03:59 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.11 2011/03/25 13:30:41 klausman Exp $
+
+  25 Mar 2011; Tobias Klausmann <klausman@gentoo.org> carl-0.9.ebuild:
+  Make carl stable on alpha
 
   15 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -carl-0.7.ebuild, -carl-0.8.ebuild:
