@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.160 2011/03/21 22:18:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.161 2011/03/25 13:40:24 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> cmake-2.8.4.ebuild:
+  ppc64 stable wrt #357771
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> cmake-2.8.4.ebuild:
   Marking cmake-2.8.4 ppc for bug 357771
