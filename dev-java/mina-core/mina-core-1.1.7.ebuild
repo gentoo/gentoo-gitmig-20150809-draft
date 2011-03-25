@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mina-core/mina-core-1.1.7.ebuild,v 1.5 2009/01/23 17:53:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mina-core/mina-core-1.1.7.ebuild,v 1.6 2011/03/25 19:28:22 xarthisius Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mina.apache.org/"
 SRC_URI="mirror://gentoo/${P}-sources.jar"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5
