@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12600 2011/03/25 15:49:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12601 2011/03/25 20:35:08 tomjbe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Thomas Beierlein <tomjbe@gentoo.org> (25 Mar 2011)
+# Masked for removal.
+# No longer required by sci-electronics/geda.
+# Removal in 30 days.
+sci-libs/libgeda
 
 # Markos Chandras <hwoarang@gentoo.org> (25 Mar 2011)
 # Masking new release. Too many features got in so
