@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.45 2011/03/15 16:09:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.46 2011/03/25 15:46:25 ssuominen Exp $
+
+  25 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> libnjb-2.2.6.ebuild:
+  Stop installing HAL .fdi file.
 
   15 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> libnjb-2.2.6.ebuild:
   USE="static-libs" and remove useless libtool archive.

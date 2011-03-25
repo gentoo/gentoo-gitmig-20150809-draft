@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.0.6.ebuild,v 1.1 2011/02/11 19:04:12 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.0.6.ebuild,v 1.2 2011/03/25 15:49:30 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -36,12 +36,9 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	find "${D}" -name '*.la' -exec rm -f {} +
 
 	dodoc AUTHORS ChangeLog README TODO || die
-
-	insinto /usr/share/hal/fdi/information/20thirdparty
-	newins libmtp.fdi 10-libmtp.fdi
 
 	if use examples; then
 		docinto examples
