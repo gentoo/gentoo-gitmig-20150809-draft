@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.528 2011/03/24 18:27:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.529 2011/03/25 10:47:04 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> python-2.7.1-r1.ebuild:
+  ppc64 stable wrt #358717
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org> python-2.7.1-r1.ebuild:
   Stable on amd64 wrt bug #358717
