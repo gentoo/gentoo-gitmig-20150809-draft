@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.244 2011/03/25 00:57:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.245 2011/03/25 01:35:22 blueness Exp $
+
+  25 Mar 2011; Anthony G. Basile <blueness@gentoo.org>
+  tor-0.2.2.23_alpha.ebuild:
+  Removed superfluous USE flag
 
   25 Mar 2011; Anthony G. Basile <blueness@gentoo.org>
   -tor-0.2.2.22_alpha-r1.ebuild:

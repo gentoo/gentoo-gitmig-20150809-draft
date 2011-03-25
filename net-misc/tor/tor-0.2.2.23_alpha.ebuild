@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.23_alpha.ebuild,v 1.1 2011/03/11 04:11:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.23_alpha.ebuild,v 1.2 2011/03/25 01:35:22 blueness Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug"
+IUSE=""
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/libevent-2.0"
@@ -35,7 +35,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable debug) --docdir=/usr/share/doc/${PF}
+	econf --docdir=/usr/share/doc/${PF}
 }
 
 src_install() {
