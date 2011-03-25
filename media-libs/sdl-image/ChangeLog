@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-image
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.75 2010/07/27 02:34:57 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.76 2011/03/25 11:24:15 tupone Exp $
+
+  25 Mar 2011; Alfredo Tupone <tupone@gentoo.org>
+  sdl-image-1.2.10-r1.ebuild, +files/sdl-image-1.2.10-libpng15.patch:
+  Build with media-libs/libpng-1.5 Bug #354675 by Rafał Mużyło
 
   27 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-image-1.2.10-r1.ebuild:
