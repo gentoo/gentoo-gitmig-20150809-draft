@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0.ebuild,v 1.13 2010/09/05 16:07:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0.ebuild,v 1.14 2011/03/25 23:22:52 swegener Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="gtk ncurses qt4 caps static"
 
-DEPEND="static? ( sys-libs/ncurses )
+RDEPEND="static? ( sys-libs/ncurses )
 	!static? (
 		gtk? ( x11-libs/gtk+:2 )
 		ncurses? ( sys-libs/ncurses )
@@ -23,7 +23,11 @@ DEPEND="static? ( sys-libs/ncurses )
 		!gtk? ( !qt4? ( !ncurses? ( sys-libs/ncurses ) ) )
 	)
 	caps? ( sys-libs/libcap )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	!static? (
+		gtk? ( dev-util/pkgconfig )
+		qt4? ( dev-util/pkgconfig )
+	)"
 
 pkg_setup() {
 	use static && append-ldflags -static
