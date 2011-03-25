@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/log4j
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.85 2011/03/02 11:33:31 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.86 2011/03/25 10:02:10 xarthisius Exp $
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> log4j-1.2.16.ebuild:
+  ppc/ppc64 stable wrt #356935
 
   02 Mar 2011; Thomas Kahle <tomka@gentoo.org> log4j-1.2.16.ebuild:
   x86 stable per bug 356935
