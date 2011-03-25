@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.232 2011/03/18 17:31:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.233 2011/03/25 14:25:56 pva Exp $
+
+  25 Mar 2011; Peter Volkov <pva@gentoo.org> pidgin-2.7.10.ebuild,
+  pidgin-2.7.11.ebuild:
+  Update libgadu dependency, bug #359329 thank tman for report.
 
   18 Mar 2011; Raúl Porcel <armin76@gentoo.org> pidgin-2.7.11.ebuild:
   ia64/sparc stable wrt #358403
