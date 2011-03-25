@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.51 2011/03/25 15:01:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.52 2011/03/25 18:08:17 angelos Exp $
+
+  25 Mar 2011; Christoph Mende <angelos@gentoo.org> firefox-3.6.16.ebuild:
+  Stable on amd64 wrt bug #360055
 
 *firefox-3.6.16 (25 Mar 2011)
 
