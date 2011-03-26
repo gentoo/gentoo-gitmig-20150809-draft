@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.210 2011/03/20 18:54:29 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.211 2011/03/26 20:23:45 eva Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Gilles Dartiguelongue <eva@gentoo.org> (26 Mar 2011)
+# Mask due to unsatisfied dependencies
+# applet is required for the search panel applet
+>=app-misc/tracker-0.10 applet
 
 # Ultrabug <ultrabug@gentoo.org> (20 Mar 2011)
 # Mask clustering support until new sys-cluster/cman is pushed.
