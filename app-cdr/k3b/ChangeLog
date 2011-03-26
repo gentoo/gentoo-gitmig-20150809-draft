@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.261 2011/02/11 13:18:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.262 2011/03/26 14:40:09 scarabeus Exp $
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> k3b-2.0.2-r1.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
   11 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> k3b-2.0.2-r1.ebuild:
   amd64 stable wrt #354367

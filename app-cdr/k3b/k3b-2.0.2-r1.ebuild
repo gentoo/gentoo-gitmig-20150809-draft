@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.3 2011/02/11 13:18:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.4 2011/03/26 14:40:09 scarabeus Exp $
 
 EAPI=3
 
@@ -37,7 +37,7 @@ DEPEND="
 	$(add_kdebase_dep libkcddb)
 	media-libs/libsamplerate
 	dvd? ( media-libs/libdvdread )
-	ffmpeg? ( >=media-video/ffmpeg-0.5 )
+	ffmpeg? ( virtual/ffmpeg )
 	flac? ( >=media-libs/flac-1.2[cxx] )
 	encode? ( lame? ( media-sound/lame ) )
 	mad? ( media-libs/libmad )
