@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.1 2011/01/10 12:37:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.2 2011/03/26 22:26:30 jlec Exp $
 
 EAPI=3
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="sci-chemistry/openbabel
+DEPEND="
+	=sci-chemistry/openbabel-2.2*
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-test:4
