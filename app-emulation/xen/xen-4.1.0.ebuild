@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.4.2.ebuild,v 1.1 2009/12/01 13:38:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.0.ebuild,v 1.1 2011/03/26 00:34:06 alexxy Exp $
+
+EAPI="3"
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -14,8 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug custom-cflags pae acm flask xsm"
 
 RDEPEND="|| ( sys-boot/grub
-		sys-boot/grub-static )
-		>=sys-kernel/xen-sources-2.6.18"
+		sys-boot/grub-static )"
 PDEPEND="~app-emulation/xen-tools-${PV}"
 
 RESTRICT="test"
@@ -48,13 +49,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Fix unexport $target in xen-setup
-	epatch "${FILESDIR}/"${PN}-3.3.0-unexported-target-fix.patch
-
+src_prepare() {
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -69,8 +64,7 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
-	local myopt
+src_configure() {
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
 
@@ -80,7 +74,9 @@ src_compile() {
 	else
 		unset CFLAGS
 	fi
+}
 
+src_compile() {
 	# Send raw LDFLAGS so that --as-needed works
 	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" -C xen ${myopt} || die "compile failed"
 }
