@@ -1,3 +1,4 @@
+move dev-php5/PEAR-PHP_TokenStream dev-php/php-tokenstream
 move net-im/silc-plugin net-im/silc-client
 move dev-php5/PEAR-PHP_CodeCoverage dev-php/php-codecoverage
 move dev-php5/PEAR-DbUnit dev-php/dbunit
