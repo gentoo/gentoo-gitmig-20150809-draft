@@ -1,6 +1,11 @@
-# ChangeLog for dev-php5/PEAR-PHP_TokenStream
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.1 2011/03/26 10:22:44 olemarkus Exp $
+# ChangeLog for dev-php/php-tokenstream
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.2 2011/03/26 10:40:58 olemarkus Exp $
+
+*php-tokenstream-1.0.1 (26 Mar 2011)
+
+  26 Mar 2011; <olemarkus@gentoo.org> +php-tokenstream-1.0.1.ebuild:
+  Version bump. Bug #359969. Thanks to Denny
 
 *PEAR-PHP_TokenStream-1.0.0 (04 Oct 2010)
 
