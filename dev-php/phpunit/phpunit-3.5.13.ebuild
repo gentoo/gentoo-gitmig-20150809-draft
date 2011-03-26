@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.1 2011/03/26 11:43:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.2 2011/03/26 12:05:19 olemarkus Exp $
 
 EAPI="2"
 PHP_PEAR_CHANNEL="pear.phpunit.de"
-PHP_PEAR_PN="PHP_TokenStream"
+PHP_PEAR_PN="PHPUnit"
 
 inherit php-pear-lib-r1
 
@@ -12,7 +12,6 @@ KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Unit testing framework for PHP5"
 HOMEPAGE="http://www.phpunit.de/"
-SRC_URI="http://pear.phpunit.de/get/PHPUnit-${PV}.tgz"
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
@@ -23,11 +22,14 @@ RDEPEND="${DEPEND}
 	|| ( <dev-lang/php-5.3[pcre,reflection,spl] >=dev-lang/php-5.3 )
 	>=dev-php/PEAR-Image_GraphViz-1.2.1
 	>=dev-php/PEAR-Log-1.8.7-r1
-	dev-php/dbunit
-	dev-php/php-codecoverage
-	dev-php5/PEAR-PHP_Timer
-	dev-php5/phpunit-mockobject
-	dev-php5/phpunit-selenium"
+	>=dev-php/dbunit-1.0.0
+	>=dev-php5/PEAR-Text_Template-1.0.0
+	>=dev-php/php-codecoverage-1.0.2
+	>=dev-php5/PEAR-PHP_Timer-1.0.0
+	>=dev-php5/phpunit-mockobject-1.0.3
+	>=dev-php5/phpunit-selenium-1.0.1
+	>=dev-php/file-iterator-1.2.3
+	>=dev-php/yaml-1.0.2"
 
 pkg_postinst() {
 	elog "${PN} can optionally use json, pdo-sqlite and pdo-mysql features."
