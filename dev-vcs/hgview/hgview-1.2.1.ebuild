@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.2.1.ebuild,v 1.1 2011/03/03 21:39:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.2.1.ebuild,v 1.2 2011/03/26 21:11:12 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 inherit distutils
 
 DESCRIPTION="PyQt4-based Mercurial log navigator"
-HOMEPAGE="http://www.logilab.org/project/name/hgview http://pypi.python.org/pypi/hgview"
+HOMEPAGE="http://www.logilab.org/project/hgview http://pypi.python.org/pypi/hgview"
 SRC_URI="http://ftp.logilab.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
