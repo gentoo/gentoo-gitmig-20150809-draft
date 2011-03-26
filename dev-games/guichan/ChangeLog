@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/guichan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.24 2011/01/16 04:06:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.25 2011/03/26 17:22:47 ssuominen Exp $
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> guichan-0.8.2.ebuild:
+  Pin media-libs/allegro to old version.
 
   16 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> guichan-0.8.2.ebuild:
   add static-libs support
