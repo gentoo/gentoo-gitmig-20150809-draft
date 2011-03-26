@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kradio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.26 2011/02/02 04:47:02 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.27 2011/03/26 15:16:33 scarabeus Exp $
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> kradio-4.0.2.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kradio-4.0.2.ebuild:
   EAPI3
