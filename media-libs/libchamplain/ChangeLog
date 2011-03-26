@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.9 2011/03/02 09:55:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.10 2011/03/26 19:24:00 eva Exp $
+
+*libchamplain-0.8.2 (26 Mar 2011)
+
+  26 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  libchamplain-0.8.1.ebuild, +libchamplain-0.8.2.ebuild:
+  Version bump. Fix painting problems with clutter-1.6. Drop html use flag,
+  leave gtk-doc handling to the eclass. Move variables to pkg_setup to avoid
+  global scope useless work. Do install vala bindings since it adds no extra
+  cost.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> libchamplain-0.6.0.ebuild,
   libchamplain-0.8.0.ebuild, libchamplain-0.8.1.ebuild:
