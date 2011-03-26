@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fakenes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.18 2010/06/22 13:18:15 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.19 2011/03/26 17:27:07 ssuominen Exp $
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> fakenes-0.5.8-r1.ebuild:
+  Pin media-libs/allegro to old version.
 
   22 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   fakenes-0.5.8-r1.ebuild:
