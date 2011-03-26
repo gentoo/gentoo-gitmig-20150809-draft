@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.12.ebuild,v 1.3 2011/01/13 19:59:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.14.ebuild,v 1.1 2011/03/26 21:02:52 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,13 +19,13 @@ IUSE="doc gnome"
 # FIXME: add lasem to tree
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=gnome-extra/libgsf-1.14.9
-	>=dev-libs/libxml2-2.4.12
+	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.8.1
 	>=x11-libs/cairo-1.2[svg]
 	x11-libs/libXext
 	x11-libs/libXrender
 	>=x11-libs/gtk+-2.16:2
-	gnome? ( >=gnome-base/gconf-2 )
+	gnome? ( >=gnome-base/gconf-2:2 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
@@ -34,10 +34,18 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
+
+	# Gsettings is still experimental
+	if use gnome; then
+		G2CONF="${G2CONF} --with-config-backend=gconf"
+	else
+		G2CONF="${G2CONF} --with-config-backend=keyfile"
+	fi
+
 	G2CONF="${G2CONF}
 		--without-lasem
-		--with-gtk
-		$(use_with gnome gconf)"
+		--with-gtk"
+
 	filter-flags -ffast-math
 }
 
