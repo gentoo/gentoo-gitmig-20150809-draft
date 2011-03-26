@@ -1,0 +1,11 @@
+# ChangeLog for sci-chemistry/openbabel-python
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.1 2011/03/26 15:34:19 jlec Exp $
+
+*openbabel-python-2.3.0 (26 Mar 2011)
+
+  26 Mar 2011; Justin Lecher <jlec@gentoo.org> +openbabel-python-2.3.0.ebuild,
+  +files/openbabel-python-2.3.0-py3_iterator.patch,
+  +files/openbabel-python-2.3.0-wrap_OBInternalCoord.patch, +metadata.xml:
+  Python Bindings for openbabel, writing by rei4dan
+
