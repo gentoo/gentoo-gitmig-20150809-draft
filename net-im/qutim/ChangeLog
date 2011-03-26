@@ -1,6 +1,10 @@
 # ChangeLog for net-im/qutim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.9 2010/07/06 22:22:26 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.10 2011/03/26 16:11:54 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  qutim-0.2.0-r3.ebuild:
+  Adapt phonon dependency for package move
 
   06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> -qutim-0.2.0.ebuild:
   Remove old ebuilds

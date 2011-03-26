@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.4.ebuild,v 1.5 2010/09/12 19:05:42 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.4.ebuild,v 1.6 2011/03/26 16:13:44 dilfridge Exp $
 
 EAPI="2"
 
@@ -32,10 +32,10 @@ COMMON_DEPEND="
 		!kde? (
 			|| (
 				>=x11-libs/qt-phonon-4.4:4
-				media-sound/phonon
+				media-libs/phonon
 			)
 		)
-		kde? ( media-sound/phonon )
+		kde? ( media-libs/phonon )
 	)
 	spell? ( app-text/enchant )
 "
