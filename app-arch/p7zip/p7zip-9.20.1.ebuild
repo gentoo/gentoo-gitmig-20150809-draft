@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.13-r2.ebuild,v 1.3 2011/03/21 07:46:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1.ebuild,v 1.1 2011/03/26 19:48:13 jlec Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc kde rar +pch static wxwidgets"
 
-RDEPEND="kde? ( x11-libs/wxGTK:2.8[X,-odbc] kde-base/kdelibs )
+RDEPEND="
+	kde? ( x11-libs/wxGTK:2.8[X,-odbc] kde-base/kdelibs )
 	wxwidgets? ( x11-libs/wxGTK:2.8[X,-odbc] )"
 DEPEND="${RDEPEND}"
 
@@ -32,9 +33,12 @@ src_prepare() {
 	fi
 
 	sed \
+		-e 's:-m32 ::g' \
+		-e 's:-m64 ::g' \
 		-e "/^CC/s:\$(ALLFLAGS):${CFLAGS} \$(ALLFLAGS):g" \
 		-e "/^CXX/s:\$(ALLFLAGS):${CXXFLAGS} \$(ALLFLAGS):g" \
 		-i makefile* || die
+
 	if use kde && ! use wxwidgets ; then
 		einfo "USE-flag kde needs wxwidgets flag"
 		einfo "silently enabling wxwidgets flag"
@@ -56,7 +60,9 @@ src_prepare() {
 		makefile* || die "changing makefiles"
 
 	if use amd64; then
-		cp -f makefile.linux_amd64 makefile.machine
+		cp -f makefile.linux_amd64_asm makefile.machine
+	elif use x86; then
+		cp -f makefile.linux_x86_asm_gcc_4.X makefile.machine
 	elif [[ ${CHOST} == *-darwin* ]] ; then
 		# Mac OS X needs this special makefile, because it has a non-GNU linker
 		[[ ${CHOST} == *64-* ]] \
@@ -73,12 +79,8 @@ src_prepare() {
 		# FreeBSD needs this special makefile, because it hasn't -ldl
 		sed -e 's/-lc_r/-pthread/' makefile.freebsd > makefile.machine
 	fi
+
 	use static && sed -i -e '/^LOCAL_LIBS=/s/LOCAL_LIBS=/&-static /' makefile.machine
-
-	# We can be more parallel
-	cp -f makefile.parallel_jobs makefile
-
-	epatch "${FILESDIR}"/9.04-kde4.patch
 
 	if use kde || use wxwidgets; then
 		einfo "Preparing dependency list"
@@ -94,7 +96,7 @@ src_compile() {
 }
 
 src_test() {
-	emake test_7z test_7zr || die "test failed"
+	emake test test_7z test_7zr || die "test failed"
 }
 
 src_install() {
@@ -118,7 +120,7 @@ src_install() {
 			newins GUI/p7zip_16_ok.png p7zip.png
 
 			insinto  /usr/share/kde4/services/ServiceMenus
-			doins GUI/kde/*.desktop
+			doins GUI/kde4/*.desktop
 		fi
 	fi
 
@@ -136,7 +138,7 @@ src_install() {
 	doman man1/7z.1 man1/7za.1 man1/7zr.1 || die
 	dodoc ChangeLog README TODO || die
 
-	if use doc ; then
+	if use doc; then
 		dodoc DOCS/*.txt
 		dohtml -r DOCS/MANUAL/*
 	fi
