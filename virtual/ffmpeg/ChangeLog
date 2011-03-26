@@ -1,6 +1,13 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.1 2011/03/23 13:41:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.2 2011/03/26 14:26:58 scarabeus Exp $
+
+*ffmpeg-0.1 (26 Mar 2011)
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> +ffmpeg-0.1.ebuild,
+  -ffmpeg-0.6.ebuild, -ffmpeg-9999.ebuild:
+  Refactor to not include version in the virtual as per what Samuli told on
+  -dev. Drop versioned virtuals.
 
 *ffmpeg-9999 (23 Mar 2011)
 *ffmpeg-0.6 (23 Mar 2011)
