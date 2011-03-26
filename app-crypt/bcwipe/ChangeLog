@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bcwipe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.50 2011/02/23 00:20:30 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/ChangeLog,v 1.51 2011/03/26 20:10:03 angelos Exp $
+
+  26 Mar 2011; Christoph Mende <angelos@gentoo.org> bcwipe-1.9.8.ebuild:
+  Stable on amd64 wrt bug #360629
 
 *bcwipe-1.9.8 (23 Feb 2011)
 
