@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/superlu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.5 2011/03/21 23:49:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.6 2011/03/26 19:06:18 xarthisius Exp $
+
+  26 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> superlu-4.1-r1.ebuild:
+  Marked ~ppc/~ppc64 per Arfrever's request
 
   21 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org>
   files/superlu-4.1-autotools.patch:
