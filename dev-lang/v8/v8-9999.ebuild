@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.6 2011/01/28 09:55:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.7 2011/03/26 20:39:22 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -53,9 +53,18 @@ src_configure() {
 src_compile() {
 	local myconf=""
 
-	# Use target arch detection logic from bug #296917.
-	local myarch="$ABI"
-	[[ $myarch = "" ]] && myarch="$ARCH"
+	# Use target arch detection logic from bug #354601.
+	case ${CHOST} in
+		i?86-*) myarch=x86 ;;
+		x86_64-*)
+			if [[ $ABI = "" ]] ; then
+				myarch=amd64
+			else
+				myarch="$ABI"
+			fi ;;
+		arm*-*) myarch=arm ;;
+		*) die "Unrecognized CHOST: ${CHOST}"
+	esac
 
 	if [[ $myarch = amd64 ]] ; then
 		myconf+=" arch=x64"
