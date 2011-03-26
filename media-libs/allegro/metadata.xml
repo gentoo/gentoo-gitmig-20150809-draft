@@ -12,6 +12,8 @@ functions, 3d functions, file management functions, compressed datafile
 and a GUI.
 </longdescription>
   <use>
+    <flag name="dumb">Enable <pkg>media-libs/dumb</pkg> module library support</flag>
+    <flag name="physfs">Enable physfs support</flag>
     <flag name="vga">Enables the VGA graphics driver</flag>
   </use>
 </pkgmetadata>
