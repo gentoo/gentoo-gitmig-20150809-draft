@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bangarang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.3 2011/02/27 13:21:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.4 2011/03/26 16:31:52 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  bangarang-2.0.ebuild:
+  Adapt phonon dependency for package move
 
 *bangarang-2.0 (27 Feb 2011)
 

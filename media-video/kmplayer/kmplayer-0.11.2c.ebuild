@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2c.ebuild,v 1.2 2011/01/30 18:40:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.2c.ebuild,v 1.3 2011/03/26 16:31:06 dilfridge Exp $
 
 EAPI=3
 KDE_LINGUAS="cs da de el en_GB es et fr ga gl it ja km ku lt lv mai nb nds nl
@@ -16,7 +16,7 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="cairo debug expat handbook npp"
 
-DEPEND="media-sound/phonon
+DEPEND="media-libs/phonon
 	expat? ( >=dev-libs/expat-2.0.1 )
 	cairo? (
 		x11-libs/cairo

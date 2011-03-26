@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.142 2011/01/30 18:40:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.143 2011/03/26 16:31:06 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kmplayer-0.11.2c.ebuild:
+  Adapt phonon dependency for package move
 
   30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -kmplayer-0.11.2b.ebuild, kmplayer-0.11.2c.ebuild:
