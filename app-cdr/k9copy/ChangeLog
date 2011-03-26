@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.62 2011/02/26 23:11:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.63 2011/03/26 15:15:26 scarabeus Exp $
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> k9copy-2.3.6.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
   26 Feb 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/k9copy-2.3.5-gcc45.patch, k9copy-2.3.6.ebuild,
