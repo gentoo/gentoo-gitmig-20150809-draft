@@ -1,0 +1,41 @@
+commit ea6d2b724ae5b868e08b8ba3593ff79666912b81
+Author: Vincent Untz <vuntz@gnome.org>
+Date:   Sun Feb 20 15:55:13 2011 +0100
+
+    Fix crash and infinite loop when printing HTML document
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=642811
+
+diff --git a/src/yelp-window.c b/src/yelp-window.c
+index 1221ba3..abad787 100644
+--- a/src/yelp-window.c
++++ b/src/yelp-window.c
+@@ -1181,6 +1181,8 @@ yelp_window_load (YelpWindow *window, const gchar *uri)
+                                                         (void *) window);
+         g_free (faux_frag_id);
+ 	priv->current_document = doc;
++    } else {
++	window->priv->current_document = NULL;
+     }
+ 
+  Exit:
+@@ -2190,6 +2192,8 @@ window_print_page_cb (GtkAction *action, YelpWindow *window)
+ 	 * There are more sinister forces at work...
+ 	 */
+ 
++	yelp_html_set_base_uri (html, priv->uri);
++
+ 	switch (priv->current_type) {
+ 	case YELP_RRN_TYPE_HTML:
+ 	    yelp_html_open_stream (html, "text/html");
+@@ -2204,8 +2208,8 @@ window_print_page_cb (GtkAction *action, YelpWindow *window)
+ 	    g_assert_not_reached ();
+ 	}
+ 
+-	while ((g_input_stream_read_all
+-	    ((GInputStream *)stream, buffer, BUFFER_SIZE, &n, NULL, NULL))) {
++	while ((n = g_input_stream_read
++	    ((GInputStream *)stream, buffer, BUFFER_SIZE, NULL, NULL))) {
+ 	    yelp_html_write (html, buffer, n);
+ 	}
+ 

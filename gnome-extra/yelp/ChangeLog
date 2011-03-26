@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.258 2011/03/23 14:38:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.259 2011/03/26 20:04:29 pacho Exp $
+
+*yelp-2.30.2-r3 (26 Mar 2011)
+
+  26 Mar 2011; Pacho Ramos <pacho@gentoo.org> +yelp-2.30.2-r3.ebuild,
+  +files/yelp-2.30.2-freeze-move.patch, +files/yelp-2.30.2-html-print.patch,
+  +files/yelp-2.30.2-missing-slash.patch, +files/yelp-2.30.2-print-crash.patch,
+  +files/yelp-2.30.2-uri-handler.patch:
+  Include upstream patches and opensuse fixes for crashes when printing and
+  freezing problems.
 
 *yelp-2.30.2-r2 (23 Mar 2011)
 
