@@ -1,6 +1,9 @@
 # ChangeLog for games-action/garden
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.5 2010/05/31 09:25:39 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.6 2011/03/26 17:28:13 ssuominen Exp $
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> garden-1.0.8.ebuild:
+  Pin media-libs/allegro to old version.
 
   31 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> garden-1.0.8.ebuild:
   x86 stable wrt bug #318911

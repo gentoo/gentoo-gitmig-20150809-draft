@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.15 2009/07/24 14:02:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.16 2011/03/26 17:29:17 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 
-DEPEND="media-libs/allegro"
+DEPEND="<media-libs/allegro-5"
 
 S=${WORKDIR}/${PN}
 

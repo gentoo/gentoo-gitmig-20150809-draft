@@ -1,6 +1,9 @@
 # ChangeLog for games-action/cylindrix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/ChangeLog,v 1.7 2010/10/18 09:11:25 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/ChangeLog,v 1.8 2011/03/26 17:28:48 ssuominen Exp $
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> cylindrix-1.0.ebuild:
+  Pin media-libs/allegro to old version.
 
   18 Oct 2010; Tupone Alfredo <tupone@gentoo.org> cylindrix-1.0.ebuild,
   +files/cylindrix-1.0-ldflags.patch:

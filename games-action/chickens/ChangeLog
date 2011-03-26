@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chickens
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.15 2009/07/24 14:02:38 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.16 2011/03/26 17:29:17 ssuominen Exp $
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> chickens-0.2.4.ebuild:
+  Pin media-libs/allegro to old version.
 
   24 Jul 2009; Tristan Heaven <nyhm@gentoo.org> chickens-0.2.4.ebuild:
   Fix build error when bashdb is installed, bug #276794
