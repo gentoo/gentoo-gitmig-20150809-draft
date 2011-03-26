@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.2 2011/03/26 14:26:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.3 2011/03/26 14:29:54 scarabeus Exp $
+
+*ffmpeg-0 (26 Mar 2011)
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> +ffmpeg-0.ebuild,
+  -ffmpeg-0.1.ebuild:
+  Use 0 as version to be 100% clear it is not versioned at all.
 
 *ffmpeg-0.1 (26 Mar 2011)
 
