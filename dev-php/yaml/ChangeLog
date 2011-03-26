@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/yaml
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/yaml/ChangeLog,v 1.1 2011/03/26 12:04:20 olemarkus Exp $
+
+*yaml-1.0.5 (26 Mar 2011)
+
+  26 Mar 2011; Ole Markus With <olemarkus@gentoo.org> +yaml-1.0.5.ebuild,
+  +metadata.xml:
+  Initial version
+
