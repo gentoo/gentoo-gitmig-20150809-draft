@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/backlite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.16 2010/11/10 19:01:34 billie Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.17 2011/03/26 16:44:24 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  backlite-1.0.1.ebuild:
+  Adapt phonon dependency for package move
 
   10 Nov 2010; Daniel Pielmeier <billie@gentoo.org> -backlite-1.0.0.ebuild:
   Remove old.
