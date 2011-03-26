@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.0.ebuild,v 1.1 2011/03/26 00:34:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.0.ebuild,v 1.2 2011/03/26 19:18:35 alexxy Exp $
 
 EAPI="3"
 
@@ -50,6 +50,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Drop .config
+	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't	drop"
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
