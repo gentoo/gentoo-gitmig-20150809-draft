@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Text_Figlet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Figlet/ChangeLog,v 1.5 2010/08/12 08:47:59 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Figlet/ChangeLog,v 1.6 2011/03/26 10:49:48 olemarkus Exp $
+
+*PEAR-Text_Figlet-1.0.2 (26 Mar 2011)
+
+  26 Mar 2011; <olemarkus@gentoo.org> +PEAR-Text_Figlet-1.0.2.ebuild:
+  Version bump. Bug #360007. Thanks to Denny
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org>
   PEAR-Text_Figlet-1.0.1.ebuild:
