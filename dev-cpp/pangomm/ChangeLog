@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.35 2011/03/22 20:00:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.36 2011/03/26 19:48:55 eva Exp $
+
+*pangomm-2.28.1 (26 Mar 2011)
+
+  26 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> -pangomm-2.26.2.ebuild,
+  pangomm-2.26.3.ebuild, +pangomm-2.28.1.ebuild:
+  Version bump. Move slot to 1.4. Remove old revisions.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> pangomm-2.26.3.ebuild:
   Marking pangomm-2.26.3 ppc stable for bug 353436

@@ -1,34 +1,36 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.26.3.ebuild,v 1.8 2011/03/26 19:48:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.28.1.ebuild,v 1.1 2011/03/26 19:48:55 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit autotools gnome2
 
 DESCRIPTION="C++ interface for pango"
 HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="1.4"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="doc"
 
-RDEPEND=">=x11-libs/pango-1.23.0
-	>=dev-cpp/glibmm-2.14.1
+COMMON_DEPEND=">=x11-libs/pango-1.23.0
+	>=dev-cpp/glibmm-2.14.1:2
 	>=dev-cpp/cairomm-1.2.2
 	dev-libs/libsigc++:2
-	!<dev-cpp/gtkmm-2.13:2.4"
-
-DEPEND="${RDEPEND}
+"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	doc? (
 		media-gfx/graphviz
 		dev-libs/libxslt
-		app-doc/doxygen )"
+		app-doc/doxygen )
+"
+RDEPEND="${COMMON_DEPEND}
+	!<dev-cpp/gtkmm-2.13:2.4"
 
-pkg_setup() {
+src_prepare() {
 	G2CONF="${G2CONF}
 		--disable-maintainer-mode
 		$(use_enable doc documentation)"
