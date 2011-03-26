@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.763 2011/03/20 22:39:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.764 2011/03/26 16:55:39 klausman Exp $
+
+  26 Mar 2011; Tobias Klausmann <klausman@gentoo.org> glibc-2.13-r2.ebuild:
+  Looks like 2.13 might be terminally broken on alpha, removing keyword for now
 
   20 Mar 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
   Make sure the forced CC comes from the target and not the host so
