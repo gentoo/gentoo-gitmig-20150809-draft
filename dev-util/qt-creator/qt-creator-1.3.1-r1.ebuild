@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r1.ebuild,v 1.8 2010/08/20 20:47:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r1.ebuild,v 1.9 2011/03/26 16:17:39 dilfridge Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -26,8 +26,8 @@ RDEPEND="${DEPEND}
 	>=x11-libs/qt-svg-4.6.1:4
 	>=x11-libs/qt-test-4.6.1:4
 	>=x11-libs/qt-webkit-4.6.1:4
-	!kde? ( || ( >=x11-libs/qt-phonon-4.6.1:4 media-sound/phonon ) )
-	kde? ( media-sound/phonon )
+	!kde? ( || ( >=x11-libs/qt-phonon-4.6.1:4 media-libs/phonon ) )
+	kde? ( media-libs/phonon )
 	cmake? ( dev-util/cmake )
 	cvs? ( dev-vcs/cvs )
 	sys-devel/gdb
