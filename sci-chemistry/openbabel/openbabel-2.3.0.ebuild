@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.1 2011/03/26 15:31:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.2 2011/03/26 15:54:29 jlec Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="doc wxwidgets"
+IUSE="doc perl python wxwidgets"
 
 RDEPEND="
 	dev-cpp/eigen:2
@@ -23,6 +23,8 @@ RDEPEND="
 	!sci-chemistry/babel
 	sci-libs/inchi
 	sys-libs/zlib
+	perl? ( sci-chemistry/openbabel-perl )
+	python? ( sci-chemistry/openbabel-python )
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.8"
