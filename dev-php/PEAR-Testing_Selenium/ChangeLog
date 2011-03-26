@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Testing_Selenium
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.12 2010/11/05 04:31:07 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Testing_Selenium/ChangeLog,v 1.13 2011/03/26 10:57:04 olemarkus Exp $
+
+*PEAR-Testing_Selenium-0.4.4 (26 Mar 2011)
+
+  26 Mar 2011; <olemarkus@gentoo.org> PEAR-Testing_Selenium-0.4.2.ebuild,
+  PEAR-Testing_Selenium-0.4.3.ebuild, +PEAR-Testing_Selenium-0.4.4.ebuild:
+  Version bump. Fixed license issue. Bug #360015. Thanks to Denny
 
   05 Nov 2010; Jeroen Roovers <jer@gentoo.org>
   PEAR-Testing_Selenium-0.4.2.ebuild:
