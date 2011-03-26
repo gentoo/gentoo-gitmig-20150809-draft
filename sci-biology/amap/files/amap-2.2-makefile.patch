@@ -1,6 +1,9 @@
-diff -Naur amap-align.old/align/Makefile amap-align/align/Makefile
---- amap-align.old/align/Makefile	2008-02-13 19:36:31.000000000 -0500
-+++ amap-align/align/Makefile	2008-04-17 13:22:17.000000000 -0400
+Respect {CXX,LD}FLAGS
+
+http://bugs.gentoo.org/332009
+
+--- amap-align/align/Makefile
++++ amap-align/align/Makefile
 @@ -15,6 +15,8 @@
  #    c) RELEASE mode
  ################################################################################
@@ -20,3 +23,13 @@ diff -Naur amap-align.old/align/Makefile amap-align/align/Makefile
  ################################################################################
  # 3) Dependencies
  ################################################################################
+ 
+@@ -38,7 +37,7 @@
+ all : $(TARGETS)
+ 
+ amap : MultiSequenceDag.h MultiSequence.h ProbabilisticModel.h ScoreType.h Sequence.h FileBuffer.h SparseMatrix.h EvolutionaryTree.h Defaults.h SafeVector.h Amap.cc
+-	$(CXX) $(CXXFLAGS) -lm -o amap Amap.cc 
++	$(CXX) $(LDFLAGS) $(CXXFLAGS) -o amap Amap.cc -lm
+ 
+ .PHONY : clean
+ clean:

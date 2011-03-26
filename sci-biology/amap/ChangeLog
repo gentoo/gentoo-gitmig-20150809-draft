@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/amap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.6 2010/08/10 15:26:30 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.7 2011/03/26 10:56:00 xarthisius Exp $
+
+*amap-2.2-r2 (26 Mar 2011)
+
+  26 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> -amap-2.2-r1.ebuild,
+  +amap-2.2-r2.ebuild, -files/amap-2.2-cxxflags.patch,
+  -files/amap-2.2-gcc4.3.patch, +files/amap-2.2-includes.patch,
+  +files/amap-2.2-makefile.patch:
+  Clean java bits thanks to sera. General cleanup, fix linking order, fix
+  building with gcc 4.6 wrt #360517. Drop old.
 
   10 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   -files/2.0-fix-cxxflags.patch, -amap-2.0.ebuild, -amap-2.2.ebuild,
