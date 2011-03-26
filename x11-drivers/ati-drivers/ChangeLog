@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.242 2011/03/22 23:15:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.243 2011/03/26 10:31:56 fauli Exp $
+
+  26 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
+  ati-drivers-11.2.ebuild:
+  x86 stable, bug 359059
 
   22 Mar 2011; Luca Barbato <lu_zero@gentoo.org> ati-drivers-11.2.ebuild:
   Add patch to build on 2.6.38 also to the 11.2 as reported in bug #359095,
