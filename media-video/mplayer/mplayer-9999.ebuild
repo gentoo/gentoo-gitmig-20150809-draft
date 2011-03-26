@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.96 2011/03/22 23:58:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.97 2011/03/26 14:38:15 scarabeus Exp $
 
 EAPI=4
 
@@ -57,7 +57,7 @@ X_RDEPS="
 	x11-libs/libXext
 	x11-libs/libXxf86vm
 "
-[[ ${PV} == *9999* ]] && RDEPEND+=" external-ffmpeg? ( media-video/ffmpeg )"
+[[ ${PV} == *9999* ]] && RDEPEND+=" external-ffmpeg? ( virtual/ffmpeg )"
 # Rar: althrought -gpl version is nice, it cant do most functions normal rars can
 #	nemesi? ( net-libs/libnemesi )
 RDEPEND+="
