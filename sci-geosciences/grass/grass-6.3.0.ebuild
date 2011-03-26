@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.21 2011/03/10 19:14:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.22 2011/03/26 15:27:44 scarabeus Exp $
 
 EAPI=1
 
@@ -31,7 +31,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	    sys-apps/man-db )
 	sci-libs/gdal
 	>=sci-libs/proj-4.4.7
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	fftw? ( sci-libs/fftw )
 	gmath? ( virtual/blas
 	    virtual/lapack )
@@ -178,13 +178,7 @@ src_compile() {
 	if use ffmpeg; then
 	    myconf="${myconf} --with-ffmpeg \
 	        --with-ffmpeg-libs=/usr/$(get_libdir)"
-	    if has_version ">=media-video/ffmpeg-0.4.9_p20080326" ; then
-		# must pass multiple include dirs now; if you have a better
-		# way to do this, please speak up and file a bug :)
-	        myconf="${myconf} --with-ffmpeg-includes=/usr/include/libav*"
-	    else
-		myconf="${myconf} --with-ffmpeg-includes=/usr/include/ffmpeg"
-	    fi
+	    myconf="${myconf} --with-ffmpeg-includes=/usr/include/libav*"
 	else
 		myconf="${myconf} --without-ffmpeg"
 	fi
