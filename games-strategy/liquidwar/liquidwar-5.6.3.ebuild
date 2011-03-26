@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.9 2007/05/04 13:53:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.10 2011/03/26 17:25:41 ssuominen Exp $
 
 inherit eutils games
 
@@ -14,7 +14,8 @@ KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="nls"
 RESTRICT="test"
 
-DEPEND=">=media-libs/allegro-4.2"
+DEPEND=">=media-libs/allegro-4.2
+	<media-libs/allegro-5"
 
 src_unpack() {
 	unpack ${A}
