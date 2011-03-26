@@ -1,12 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0.ebuild,v 1.2 2011/03/26 18:43:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0.ebuild,v 1.3 2011/03/26 19:16:00 alexxy Exp $
 
 EAPI="3"
 
 inherit flag-o-matic eutils multilib python
-
-# TPMEMUFILE=tpm_emulator-0.4.tar.gz
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://xen.org/"
@@ -110,7 +108,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e 's/-Wall//' Config.mk || die "Couldn't sanitize CFLAGS"
+	sed -e 's/-Wall//' -i Config.mk || die "Couldn't sanitize CFLAGS"
+	# Drop .config
+	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't drop"
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -127,18 +127,18 @@ src_prepare() {
 	# Disable hvm support on systems that don't support x86_32 binaries.
 	if ! use hvm; then
 		chmod 644 tools/check/check_x11_devel
-		sed -i -e '/^CONFIG_IOEMU := y$/d' "${S}"/config/*.mk
-		sed -i -e '/SUBDIRS-$(CONFIG_X86) += firmware/d' "${S}"/tools/Makefile
+		sed -e '/^CONFIG_IOEMU := y$/d' -i config/*.mk
+		sed -e '/SUBDIRS-$(CONFIG_X86) += firmware/d' -i tools/Makefile
 	fi
 
 	if ! use pygrub; then
-		sed -i -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' "${S}"/tools/Makefile
+		sed -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' -i tools/Makefile
 	fi
 	# Don't bother with ioemu, only needed for fully virtualised guests
 	if ! use ioemu; then
-		sed -i -e "/^CONFIG_IOEMU := y$/d" "${S}"/config/*.mk
-		sed -i -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" \
-			"${S}/Makefile"
+		sed -e "/^CONFIG_IOEMU := y$/d" -i config/*.mk
+		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" \
+			-i Makefile
 	fi
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
