@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.4 2011/03/23 16:44:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.5 2011/03/26 14:58:11 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit eutils autotools
 
@@ -28,7 +28,7 @@ DEPEND=">=media-libs/babl-0.1.4
 		app-text/enscript
 		media-gfx/graphviz
 		|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagic[png] ) )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
+	ffmpeg? ( virtual/ffmpeg )
 	jpeg? ( virtual/jpeg )
 	openexr? ( media-libs/openexr )
 	raw? ( >=media-libs/libopenraw-0.0.5 )
