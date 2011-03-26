@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/phpunit-selenium
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit-selenium/ChangeLog,v 1.1 2010/10/04 22:49:10 jokey Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit-selenium/ChangeLog,v 1.2 2011/03/26 12:03:20 olemarkus Exp $
+
+*phpunit-selenium-1.0.1 (26 Mar 2011)
+
+  26 Mar 2011; Ole Markus With <olemarkus@gentoo.org>
+  +phpunit-selenium-1.0.1.ebuild:
+  Version bump
 
 *phpunit-selenium-1.0.0 (04 Oct 2010)
 
