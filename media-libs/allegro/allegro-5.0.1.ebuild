@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.1.ebuild,v 1.1 2011/03/26 16:57:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.1.ebuild,v 1.2 2011/03/26 17:16:59 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -10,9 +10,8 @@ HOMEPAGE="http://alleg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
 LICENSE="BSD ZLIB"
-SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS=""
+SLOT="5"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="alsa dumb flac gtk jpeg openal opengl oss physfs png pulseaudio test truetype vorbis X xinerama"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
@@ -36,10 +35,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		gtk? ( x11-libs/gtk+:2 )
 		opengl? ( virtual/opengl )
 		xinerama? ( x11-libs/libXinerama )
-	)
-	!media-libs/aldumb
-	!media-libs/allegrogl
-	!media-libs/jpgalleg"
+	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	X? (
