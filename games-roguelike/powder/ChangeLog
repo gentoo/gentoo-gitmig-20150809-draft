@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/powder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.5 2010/07/17 09:19:06 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.6 2011/03/26 07:56:03 mr_bones_ Exp $
+
+*powder-115 (26 Mar 2011)
+
+  26 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> +powder-115.ebuild:
+  version bump
 
   17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> powder-114.ebuild:
   stable x86, bug 327345
