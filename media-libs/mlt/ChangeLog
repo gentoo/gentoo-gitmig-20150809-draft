@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.68 2011/02/16 22:28:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.69 2011/03/26 15:44:45 scarabeus Exp $
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -mlt-0.4.6.ebuild,
+  -mlt-0.5.4.ebuild, -mlt-0.5.4-r2.ebuild, -files/mlt-0.5.4-asneeded.patch,
+  mlt-0.5.10.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg. Drop older.
 
   16 Feb 2011; Markos Chandras <hwoarang@gentoo.org> mlt-0.5.10.ebuild:
   Stable on amd64 wrt bug #353477

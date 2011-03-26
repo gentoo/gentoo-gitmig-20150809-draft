@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.10.ebuild,v 1.3 2011/02/16 22:28:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.5.10.ebuild,v 1.4 2011/03/26 15:44:45 scarabeus Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde libsamplerate melt
 mmx qt4 quicktime sdl sse sse2 vorbis xine xml lua python ruby vdpau" # java perl php tcl
 
-RDEPEND="ffmpeg? ( >=media-video/ffmpeg-0.5[vdpau?] )
+RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 	dv? ( >=media-libs/libdv-0.104 )
 	xml? ( >=dev-libs/libxml2-2.5 )
 	vorbis? ( >=media-libs/libvorbis-1.1.2 )
