@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.1 2011/01/25 08:18:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.2 2011/03/26 16:15:41 dilfridge Exp $
 
 EAPI=3
 LANGSLONG="ar_SA bg_BG cs_CZ de_DE el_GR it_IT lt_LT ru_RU uk_UA vi_VN zh_CN"
@@ -27,9 +27,9 @@ RDEPEND="
 	>=x11-libs/qt-webkit-4.5:4[exceptions]
 	!kde? ( || (
 		>=x11-libs/qt-phonon-4.5:4[exceptions]
-		media-sound/phonon
+		media-libs/phonon
 	) )
-	kde? ( media-sound/phonon )
+	kde? ( media-libs/phonon )
 "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
