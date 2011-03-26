@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.8.0.ebuild,v 1.7 2011/03/26 17:10:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.1 2011/03/26 17:10:43 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="*-jython"
 
 inherit eutils distutils flag-o-matic toolchain-funcs versionator
 
@@ -16,31 +16,32 @@ DESCRIPTION="Scientific algorithms library for Python"
 HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? (
-		http://docs.scipy.org/doc/${SP}.x/${PN}-html.zip -> ${SP}-html.zip
-		http://docs.scipy.org/doc/${SP}.x/${PN}-ref.pdf -> ${SP}-ref.pdf
+		http://docs.scipy.org/doc/${P}/${PN}-html.zip -> ${SP}-html.zip
+		http://docs.scipy.org/doc/${P}/${PN}-ref.pdf -> ${SP}-ref.pdf
 	)"
 
 LICENSE="BSD"
 SLOT="0"
 IUSE="doc umfpack"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND="
-	>=dev-python/numpy-1.4.1
+	>=dev-python/numpy-1.5
+	media-libs/qhull
+	sci-libs/arpack
 	virtual/cblas
 	virtual/lapack
 	umfpack? ( sci-libs/umfpack )"
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
-	umfpack? ( dev-lang/swig )
-	doc? ( app-arch/unzip )"
-#	test? ( dev-python/nose )
+	doc? ( app-arch/unzip )
+	umfpack? ( dev-lang/swig )"
 
 RDEPEND="${CDEPEND}
 	dev-python/imaging"
 
-# buggy tests
+# buggy test suite - still true for 0.9.0
 RESTRICT="test"
 
 DOCS="THANKS.txt LATEST.txt TOCHANGE.txt"
@@ -71,8 +72,9 @@ src_unpack() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-0.6.0-stsci.patch \
-		"${FILESDIR}"/${P}-python2.7.patch
+		"${FILESDIR}"/${P}-superlu.patch \
+		"${FILESDIR}"/${P}-qhull.patch
+	rm -rf ./scipy/sparse/linalg/dsolve/SuperLU ./scipy/spatial/qhull
 	local libdir="${EPREFIX}"/usr/$(get_libdir)
 	cat > site.cfg <<-EOF
 		[atlas]

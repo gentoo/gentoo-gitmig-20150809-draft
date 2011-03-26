@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.64 2011/03/07 20:12:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.65 2011/03/26 17:10:43 jlec Exp $
+
+*scipy-0.9.0-r1 (26 Mar 2011)
+
+  26 Mar 2011; Justin Lecher <jlec@gentoo.org> scipy-0.8.0.ebuild,
+  scipy-0.9.0.ebuild, +scipy-0.9.0-r1.ebuild, +files/scipy-0.9.0-qhull.patch,
+  +files/scipy-0.9.0-superlu.patch:
+  Unbundled Superlu and Qhull, #357879
 
 *scipy-0.9.0 (07 Mar 2011)
 

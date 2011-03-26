@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0.ebuild,v 1.2 2011/03/08 21:08:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0.ebuild,v 1.3 2011/03/26 17:10:43 jlec Exp $
 
 EAPI="3"
+
+PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
 
@@ -11,7 +13,7 @@ inherit eutils distutils flag-o-matic toolchain-funcs versionator
 SP="${PN}-$(get_version_component_range 1-2)"
 
 DESCRIPTION="Scientific algorithms library for Python"
-HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy"
+HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? (
 		http://docs.scipy.org/doc/${P}/${PN}-html.zip -> ${SP}-html.zip
@@ -23,11 +25,12 @@ SLOT="0"
 IUSE="doc umfpack"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
-CDEPEND=">=dev-python/numpy-1.5
-	virtual/cblas
-	virtual/lapack
+CDEPEND="
+	>=dev-python/numpy-1.5
 	media-libs/qhull
 	sci-libs/arpack
+	virtual/cblas
+	virtual/lapack
 	umfpack? ( sci-libs/umfpack )"
 
 DEPEND="${CDEPEND}
