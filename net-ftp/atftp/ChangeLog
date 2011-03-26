@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/atftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.24 2011/03/22 20:56:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.25 2011/03/26 09:05:43 klausman Exp $
+
+*atftp-0.7-r2 (26 Mar 2011)
+
+  26 Mar 2011; Tobias Klausmann <klausman@gentoo.org> +atftp-0.7-r2.ebuild,
+  +files/atftp-0.7-blockno.patch, +files/atftp-0.7-illreply.patch,
+  +files/atftp-0.7-spaced_filename.patch:
+  Integrate patches from bugs 321705, 322601 and 323883
 
   22 Mar 2011; Ulrich Mueller <ulm@gentoo.org> atftp-0.7-r1.ebuild:
   Drop PROVIDE=virtual/tftp and update blocker, bug 359125.
