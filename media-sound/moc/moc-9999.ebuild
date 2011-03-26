@@ -1,17 +1,21 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4.ebuild,v 1.9 2011/03/26 15:10:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-9999.ebuild,v 1.1 2011/03/26 15:10:25 scarabeus Exp $
 
-EAPI=2
+EAPI=4
+
 MY_P=${P/_/-}
+
+ESVN_REPO_URI="svn://daper.net/moc/trunk"
+inherit subversion autotools
 
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 HOMEPAGE="http://moc.daper.net"
-SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/unstable/${MY_P}.tar.bz2"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS=""
 IUSE="oss alsa aac jack mad vorbis flac wavpack sndfile modplug musepack
 timidity sid ffmpeg speex libsamplerate curl debug"
 
@@ -38,6 +42,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+src_prepare() {
+	eautoreconf
+}
+
 src_configure() {
 	econf \
 		--without-rcc \
@@ -62,7 +70,7 @@ src_configure() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO *.example
 	rm -rf "${D}"/usr/share/doc/${PN}
 }

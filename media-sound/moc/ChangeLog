@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/moc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.82 2010/07/18 12:28:48 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.83 2011/03/26 15:10:25 scarabeus Exp $
+
+*moc-9999 (26 Mar 2011)
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> moc-2.5.0_alpha4.ebuild,
+  +moc-9999.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg. Add live version i
+  have around for a long time.
 
   18 Jul 2010; <nixnut@gentoo.org> moc-2.5.0_alpha4.ebuild:
   ppc stable #316643
