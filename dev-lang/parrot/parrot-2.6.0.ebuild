@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-2.6.0.ebuild,v 1.4 2011/03/26 09:33:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-2.6.0.ebuild,v 1.5 2011/03/26 09:39:08 grobian Exp $
 
 EAPI=3
 
@@ -40,11 +40,11 @@ src_configure() {
 	perl Configure.pl \
 		--ccflags="${CFLAGS}" \
 		--linkflags="${LDFLAGS}" \
-		--prefix="${EROOT}"/usr \
-		--libdir="${EROOT}"/usr/$(get_libdir) \
-		--mandir="${EROOT}"/usr/share/man \
-		--sysconfdir="${EROOT}"/etc \
-		--sharedstatedir="${EROOT}"/var/lib/parrot \
+		--prefix="${EPREFIX}"/usr \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--mandir="${EPREFIX}"/usr/share/man \
+		--sysconfdir="${EPREFIX}"/etc \
+		--sharedstatedir="${EPREFIX}"/var/lib/parrot \
 		--pkgconfigdir=pkgconfig \
 		$myconf || die
 }
