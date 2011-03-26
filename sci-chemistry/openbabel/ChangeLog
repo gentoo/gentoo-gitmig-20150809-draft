@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.46 2011/03/02 17:48:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.47 2011/03/26 15:31:01 jlec Exp $
+
+*openbabel-2.3.0 (26 Mar 2011)
+
+  26 Mar 2011; Justin Lecher <jlec@gentoo.org> +openbabel-2.3.0.ebuild,
+  +files/openbabel-2.3.0-test_lib_path.patch:
+  Version Bump, mainly prepared by rei4dan, #345093
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> openbabel-2.2.3.ebuild:
   Correct Slots for gtk 3 introduction to tree
