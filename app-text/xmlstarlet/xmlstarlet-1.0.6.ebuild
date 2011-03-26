@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.6.ebuild,v 1.1 2011/03/15 17:31:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.0.6.ebuild,v 1.2 2011/03/26 12:48:13 grobian Exp $
 
 EAPI="2"
+
+inherit eutils autotools
 
 DESCRIPTION="A set of tools to transform, query, validate, and edit XML documents"
 HOMEPAGE="http://xmlstar.sourceforge.net/"
@@ -21,6 +23,11 @@ RDEPEND=">=dev-libs/libxml2-2.6.23
 DEPEND="${RDEPEND}
 	sys-apps/sed
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-setmode.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf --disable-static-libs
