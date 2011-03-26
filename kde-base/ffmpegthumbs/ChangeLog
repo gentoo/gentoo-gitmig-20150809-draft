@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.9 2011/03/04 18:00:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.10 2011/03/26 15:18:05 scarabeus Exp $
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  ffmpegthumbs-4.5.5.ebuild, ffmpegthumbs-4.6.0.ebuild,
+  ffmpegthumbs-4.6.1.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
 *ffmpegthumbs-4.6.1 (04 Mar 2011)
 
