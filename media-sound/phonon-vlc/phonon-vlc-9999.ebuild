@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/phonon-vlc-9999.ebuild,v 1.1 2011/01/23 05:18:30 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-vlc/phonon-vlc-9999.ebuild,v 1.2 2011/03/26 16:30:12 dilfridge Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="debug v4l2"
 
 RDEPEND="
-	>=media-sound/phonon-4.4.4
+	>=media-libs/phonon-4.4.4
 	>=media-video/vlc-1.1.1[dbus]
 	>=x11-libs/qt-dbus-4.6.0:4
 	>=x11-libs/qt-gui-4.6.0:4
