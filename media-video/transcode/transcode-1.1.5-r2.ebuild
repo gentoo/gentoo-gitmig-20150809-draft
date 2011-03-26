@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r2.ebuild,v 1.7 2010/11/07 19:06:05 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r2.ebuild,v 1.8 2011/03/26 15:55:17 scarabeus Exp $
 
-EAPI="2"
+EAPI=2
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.10"
@@ -35,7 +35,7 @@ RDEPEND="aac? ( media-libs/faac )
 	theora? ( media-libs/libtheora )
 	jpeg? ( virtual/jpeg )
 	truetype? ( >=media-libs/freetype-2 )
-	>=media-video/ffmpeg-0.4.9_p20081014
+	virtual/ffmpeg
 	|| ( sys-libs/glibc dev-libs/libiconv )
 	mpeg? ( media-libs/libmpeg2 )
 	x264? ( media-libs/x264 )
