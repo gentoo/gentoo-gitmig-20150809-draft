@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.6.2.ebuild,v 1.6 2010/09/26 18:11:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.6.2.ebuild,v 1.7 2011/03/26 17:08:50 dilfridge Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -17,8 +17,8 @@ DEPEND="~x11-libs/qt-assistant-${PV}:${SLOT}[aqua=]
 	~x11-libs/qt-multimedia-${PV}:${SLOT}[aqua=]
 	~x11-libs/qt-opengl-${PV}:${SLOT}[aqua=]
 	!kde? ( || ( ~x11-libs/qt-phonon-${PV}:${SLOT}[aqua=]
-		media-sound/phonon[aqua=] ) )
-	kde? ( media-sound/phonon[aqua=] )
+		media-libs/phonon[aqua=] ) )
+	kde? ( media-libs/phonon[aqua=] )
 	~x11-libs/qt-script-${PV}:${SLOT}[aqua=]
 	~x11-libs/qt-sql-${PV}:${SLOT}[aqua=]
 	~x11-libs/qt-svg-${PV}:${SLOT}[aqua=]

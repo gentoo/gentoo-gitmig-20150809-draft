@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.7.1-r1.ebuild,v 1.1 2010/11/19 02:58:09 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.7.1-r1.ebuild,v 1.2 2011/03/26 17:06:02 dilfridge Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -17,8 +17,8 @@ DEPEND="
 	~x11-libs/qt-xmlpatterns-${PV}[aqua=,debug=]
 	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )
 	!kde? ( || ( ~x11-libs/qt-phonon-${PV}:${SLOT}[aqua=,dbus=,debug=]
-		media-sound/phonon[aqua=] ) )
-	kde? ( || ( media-sound/phonon[aqua=] ~x11-libs/qt-phonon-${PV}:${SLOT}[aqua=,dbus=,debug] ) )"
+		media-libs/phonon[aqua=] ) )
+	kde? ( || ( media-libs/phonon[aqua=] ~x11-libs/qt-phonon-${PV}:${SLOT}[aqua=,dbus=,debug] ) )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
