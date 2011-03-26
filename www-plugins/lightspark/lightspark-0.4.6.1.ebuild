@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.6.1.ebuild,v 1.1 2011/03/20 22:08:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.6.1.ebuild,v 1.2 2011/03/26 15:47:14 scarabeus Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib versionator
@@ -18,7 +18,7 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	>=dev-libs/boost-1.42
 	dev-libs/libpcre[cxx]
 	media-fonts/liberation-fonts
-	media-video/ffmpeg
+	virtual/ffmpeg
 	media-libs/fontconfig
 	media-libs/ftgl
 	>=media-libs/glew-1.5.3
