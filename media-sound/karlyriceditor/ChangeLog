@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/karlyriceditor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/karlyriceditor/ChangeLog,v 1.1 2009/12/15 08:56:22 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/karlyriceditor/ChangeLog,v 1.2 2011/03/26 16:21:35 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  karlyriceditor-0.7.ebuild:
+  Adapt phonon dependency for package move
 
 *karlyriceditor-0.7 (15 Dec 2009)
 

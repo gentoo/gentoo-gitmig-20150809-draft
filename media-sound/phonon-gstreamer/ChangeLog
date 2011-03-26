@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/phonon-gstreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-gstreamer/ChangeLog,v 1.1 2011/01/23 05:45:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon-gstreamer/ChangeLog,v 1.2 2011/03/26 16:20:42 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  phonon-gstreamer-4.4.4.ebuild, phonon-gstreamer-9999.ebuild:
+  Adapt phonon dependency for package move
 
 *phonon-gstreamer-9999 (23 Jan 2011)
 *phonon-gstreamer-4.4.4 (23 Jan 2011)
