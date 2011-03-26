@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libbinio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.28 2011/02/06 07:44:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.29 2011/03/26 13:03:29 spock Exp $
+
+  26 Mar 2011; Michał Januszewski <spock@gentoo.org> libbinio-1.4.ebuild,
+  +files/libbinio-1.4-texi.patch:
+  Fix bug #351882.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> libbinio-1.4.ebuild:
   Drop to ~mips
