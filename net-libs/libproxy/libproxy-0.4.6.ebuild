@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6.ebuild,v 1.15 2011/03/21 23:18:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6.ebuild,v 1.16 2011/03/26 14:26:11 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.5"
@@ -23,7 +23,7 @@ RDEPEND="
 	networkmanager? ( net-misc/networkmanager )
 	perl? (	dev-lang/perl )
 	webkit? ( net-libs/webkit-gtk:2 )
-	xulrunner? ( >=net-libs/xulrunner-1.9.1:1.9 )"
+	xulrunner? ( =net-libs/xulrunner-1.9*:1.9 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19"
