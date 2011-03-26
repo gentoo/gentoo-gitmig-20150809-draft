@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5199 2011/03/26 20:23:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5200 2011/03/26 20:25:51 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> base/package.use.mask:
+  Drop deprecated mask entry about abiword-plugins.
 
   26 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> base/package.use.mask,
   package.mask:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.211 2011/03/26 20:23:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.212 2011/03/26 20:25:51 eva Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -187,11 +187,6 @@ games-fps/quakeforge video_cards_tdfx
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka clozurecl) is only available on x86 and amd64
 sci-mathematics/maxima gcl openmcl clozurecl
-
-# Jeremy Olexa <darkside@gentoo.org> (31 Jul 2009)
-# Mask the gnome USE flag globally for app-office/abiword-plugins-2.4.6 because
-# it depends on a GLSA affected atom. bug 271708
-=app-office/abiword-plugins-2.4.6 gnome
 
 # Tomas Chvatal <scarabeus@gentoo.org> (31 Jan 2009)
 # mask cuda for boinc. Works only on amd64 and x86
