@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7.1.ebuild,v 1.8 2011/01/31 20:27:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7.1.ebuild,v 1.9 2011/03/26 17:26:05 dilfridge Exp $
 
 EAPI=3
 
@@ -44,7 +44,7 @@ GUI_RDEPEND="
 		>=kde-base/oxygen-icons-${KDE_MINIMAL}
 		ayatana? ( kde-misc/plasma-widget-message-indicator )
 	)
-	phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-${QT_MINIMAL} ) )
+	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-${QT_MINIMAL} ) )
 	webkit? ( >=x11-libs/qt-webkit-${QT_MINIMAL}:4 )
 "
 
