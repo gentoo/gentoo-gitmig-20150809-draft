@@ -65,3 +65,4 @@ move dev-ruby/ruby-serialport dev-ruby/serialport
 move sci-chemistry/caver sci-chemistry/pymol-plugins-caver
 slotmove =x11-libs/fltk-1* 1.1 1
 slotmove dev-libs/libgweather 3 2
+move media-sound/phonon media-libs/phonon
