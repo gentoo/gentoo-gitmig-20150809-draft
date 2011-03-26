@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.68 2011/03/26 00:27:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.69 2011/03/26 11:34:14 alexxy Exp $
+
+  26 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-tools-3.4.3.ebuild,
+  -files/xen-tools-4.0.0-asneeded.patch, -xen-tools-4.0.1.ebuild:
+  Clean up
 
   26 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org>
   -files/xen-tools-3.0.4_p1--as-needed.patch,
