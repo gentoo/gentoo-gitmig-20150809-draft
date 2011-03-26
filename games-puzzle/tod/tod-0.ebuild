@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.3 2005/09/15 20:32:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.4 2011/03/26 17:27:31 ssuominen Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-RDEPEND="media-libs/allegro"
+RDEPEND="<media-libs/allegro-5"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
