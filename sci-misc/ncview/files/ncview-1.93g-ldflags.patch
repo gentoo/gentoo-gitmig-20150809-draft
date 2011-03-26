@@ -1,0 +1,16 @@
+ ncview-1.93g/Makefile.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/ncview-1.93g/Makefile.in b/ncview-1.93g/Makefile.in
+index 2171c1b..2737b14 100644
+--- a/ncview-1.93g/Makefile.in
++++ b/ncview-1.93g/Makefile.in
+@@ -115,7 +115,7 @@ clean::
+ 	-rm ncview ncview.exe $(OBJS) Makefile config.cache config.log config.status
+ 
+ ncview: $(OBJS)
+-	@CC@ $(MYCFLAGS) -o ncview $(OBJS) $(LDOPTIONS) $(OTHERLIBDIRS)	\
++	@CC@ $(LDFLAGS) $(MYCFLAGS) -o ncview $(OBJS) $(LDOPTIONS) $(OTHERLIBDIRS)	\
+ 		@X_LIBS@ $(NETCDFLIB) $(UDUNITSLIB) $(XAWLIB) $(XMULIB) \
+ 		$(PPMLIB) \
+ 		@X_PRE_LIBS@ $(XTOOLLIB) $(XEXTLIB) $(XLIB) @X_EXTRA_LIBS@ -lm

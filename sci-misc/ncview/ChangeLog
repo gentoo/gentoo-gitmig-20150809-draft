@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/ncview
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.16 2009/12/14 19:12:55 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ChangeLog,v 1.17 2011/03/26 17:25:45 jlec Exp $
+
+  26 Mar 2011; Justin Lecher <jlec@gentoo.org> -ncview-1.93c.ebuild,
+  ncview-1.93g.ebuild, +files/ncview-1.93g-ldflags.patch:
+  Link with LDFLAGS, 335387; removed old
 
   14 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> ncview-1.93g.ebuild:
   Fixed ppm support and share/lib issues. Thanks Zak Kipling, bug #272266
