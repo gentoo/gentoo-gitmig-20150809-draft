@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/wp_tray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/ChangeLog,v 1.5 2011/01/11 20:19:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/ChangeLog,v 1.6 2011/03/26 20:05:41 ssuominen Exp $
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> wp_tray-0.5.5.ebuild,
+  +files/wp_tray-0.5.5-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7 wrt #360627 by Joost Ruis.
 
   11 Jan 2011; Pacho Ramos <pacho@gentoo.org> wp_tray-0.5.5.ebuild:
   Needs gnome-panel with bonobo support (bug #348173).

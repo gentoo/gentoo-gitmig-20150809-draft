@@ -1,0 +1,28 @@
+--- src/LibNotify.cc
++++ src/LibNotify.cc
+@@ -11,6 +11,10 @@
+ #include "LibNotify.hh"
+ #include "Applet.hh"
+ 
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
++
+ //------------------------------------------------------------------------
+ /**
+ <fn_NotifyCallbackReject>
+@@ -111,9 +115,12 @@
+ 	NotifyNotification * p_Notification = notify_notification_new	(
+ 			_("Wallpaper Tray is about to change your wallpaper"),
+ 			sz_MsgText.c_str(),
+-			NULL,
+-			NULL//GTK_WIDGET(m_pApplet->gobj())
++			NULL
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
+ 		);
++#else
++		, NULL);
++#endif
+ 
+ 	m_SigcConnection = Glib::signal_timeout().connect	(
+ 			sigc::mem_fun(this, &LibNotify::OnNotificationChangeAccept), 1000 * 7
