@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5197 2011/03/26 19:51:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5198 2011/03/26 19:52:55 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Mar 2011; Justin Lecher <jlec@gentoo.org> hardened/package.use.mask:
+  USE mask app-arch/p7zip pch
 
   26 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Drop old net-im/empathy mask.
