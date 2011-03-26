@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.16 2011/03/20 20:05:31 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.17 2011/03/26 16:39:18 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  pyside-0.4.2.ebuild, pyside-1.0.0.ebuild:
+  Adapt phonon dependency for package move
 
 *pyside-1.0.0 (20 Mar 2011)
 

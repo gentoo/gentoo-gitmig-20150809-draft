@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.4.2.ebuild,v 1.4 2011/03/20 20:05:31 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-0.4.2.ebuild,v 1.5 2011/03/26 16:39:19 dilfridge Exp $
 
 EAPI="2"
 
@@ -29,9 +29,9 @@ DEPEND=">=dev-libs/boost-1.41.0[python]
 	>=x11-libs/qt-gui-${QT_PV}
 	>=x11-libs/qt-multimedia-${QT_PV}
 	>=x11-libs/qt-opengl-${QT_PV}
-	kde? ( media-sound/phonon )
+	kde? ( media-libs/phonon )
 	!kde? (	|| ( >=x11-libs/qt-phonon-${QT_PV}
-		media-sound/phonon ) )
+		media-libs/phonon ) )
 	>=x11-libs/qt-script-${QT_PV}
 	>=x11-libs/qt-sql-${QT_PV}
 	>=x11-libs/qt-svg-${QT_PV}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.149 2011/03/16 21:08:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.150 2011/03/26 16:38:02 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org> PyQt4-4.7.3.ebuild,
+  PyQt4-4.7.7-r1.ebuild, PyQt4-4.8.1.ebuild, PyQt4-4.8.1-r1.ebuild,
+  PyQt4-4.8.2.ebuild, PyQt4-4.8.3.ebuild:
+  Adapt phonon dependency for package move
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> PyQt4-4.8.1.ebuild:
   ppc64 stable wrt #349607
