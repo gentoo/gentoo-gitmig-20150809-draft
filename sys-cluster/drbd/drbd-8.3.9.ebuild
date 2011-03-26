@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.9.ebuild,v 1.1 2011/02/19 09:32:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.9.ebuild,v 1.2 2011/03/26 08:43:16 xarthisius Exp $
 
 EAPI="2"
 
@@ -25,6 +25,8 @@ src_prepare() {
 	# correct install paths
 	sed -i -e "s:\$(sysconfdir)/bash_completion.d:/usr/share/bash-completion:" \
 		scripts/Makefile.in || die
+	# don't participate in user survey bug 360483
+	sed -i -e '/usage-count/ s/yes/no/' scripts/drbd.conf.example || die
 	epatch "${FILESDIR}"/${PN}-8.3.8.1-implicits.patch
 }
 
@@ -60,8 +62,8 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "Please copy and gunzip the configuration file"
-	einfo "from /usr/share/doc/${PF}/drbd.conf.bz2 to /etc"
+	einfo "Please copy and gunzip the configuration file:"
+	einfo "from /usr/share/doc/${PF}/${PN}.conf.example.bz2 to /etc/${PN}.conf"
 	einfo "and edit it to your needs. Helpful commands:"
 	einfo "man 5 drbd.conf"
 	einfo "man 8 drbdsetup"
