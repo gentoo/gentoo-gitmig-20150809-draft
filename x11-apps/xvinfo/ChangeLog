@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.47 2011/03/21 13:38:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.48 2011/03/26 10:30:33 fauli Exp $
+
+  26 Mar 2011; Christian Faulhammer <fauli@gentoo.org> xvinfo-1.1.1.ebuild:
+  x86 stable, bug 359059
 
   21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> xvinfo-1.1.1.ebuild:
   Stable on amd64 wrt bug #359059
