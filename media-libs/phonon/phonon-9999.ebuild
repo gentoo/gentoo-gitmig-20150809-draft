@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.1 2011/03/26 16:07:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.2 2011/03/26 20:56:40 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit cmake-utils git
 
@@ -44,11 +44,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 "
 
-pkg_setup() {
-	if use !gstreamer && use !vlc && use !xine; then
-		ewarn "You must at least select one backend for phonon to be usuable"
-	fi
-}
+REQURIED_USE="|| ( gstreamer vlc xine )"
 
 src_configure() {
 	local mycmakeargs=(

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.1 2011/03/26 16:07:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.2 2011/03/26 20:56:40 scarabeus Exp $
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> phonon-9999.ebuild:
+  Use eapi4 for phonon live version. With REQUIRED_USE it drops need for the
+  pkg_setup die.
 
   26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +files/phonon-4.4-qt7.patch, +phonon-4.4.2.ebuild, +phonon-4.4.3.ebuild,
