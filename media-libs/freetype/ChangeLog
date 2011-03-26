@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.287 2011/03/24 11:52:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.288 2011/03/26 10:58:30 fauli Exp $
+
+  26 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
+  freetype-2.4.4.ebuild:
+  stable x86, bug 360223
 
   24 Mar 2011; Markos Chandras <hwoarang@gentoo.org> freetype-2.4.4.ebuild:
   Stable on amd64 wrt bug #360223
