@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-4.6.0.ebuild,v 1.1 2011/01/26 20:28:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-4.6.0.ebuild,v 1.2 2011/03/26 17:12:10 dilfridge Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 IUSE="debug"
 
 RDEPEND="
-	>=media-sound/phonon-4.4.3
+	>=media-libs/phonon-4.4.3
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext

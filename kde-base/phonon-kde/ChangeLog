@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.76 2011/03/04 18:00:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.77 2011/03/26 17:22:37 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  phonon-kde-4.4.5.ebuild, phonon-kde-4.5.5.ebuild, phonon-kde-4.6.0.ebuild,
+  phonon-kde-4.6.1.ebuild:
+  Adapt phonon dependency for package move
 
 *phonon-kde-4.6.1 (04 Mar 2011)
 

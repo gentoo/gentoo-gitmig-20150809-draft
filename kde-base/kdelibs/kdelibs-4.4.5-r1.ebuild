@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.5-r1.ebuild,v 1.2 2011/01/24 19:04:16 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.4.5-r1.ebuild,v 1.3 2011/03/26 17:19:25 dilfridge Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ COMMONDEPEND="
 	media-libs/freetype:2
 	media-libs/giflib
 	>=media-libs/libpng-1.4
-	>=media-sound/phonon-4.3.80
+	>=media-libs/phonon-4.3.80
 	sys-libs/zlib
 	virtual/jpeg
 	>=x11-misc/shared-mime-info-0.60

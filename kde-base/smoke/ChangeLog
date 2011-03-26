@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.124 2011/03/24 22:29:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.125 2011/03/26 17:14:15 dilfridge Exp $
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org> smoke-4.4.5.ebuild,
+  smoke-4.4.5-r1.ebuild, smoke-4.5.5.ebuild, smoke-4.6.0.ebuild,
+  smoke-4.6.1.ebuild:
+  Adapt phonon dependency for package move
 
 *smoke-4.4.5-r1 (24 Mar 2011)
 

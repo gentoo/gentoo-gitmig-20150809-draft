@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.5.5.ebuild,v 1.1 2011/01/10 11:53:29 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.5.5.ebuild,v 1.2 2011/03/26 17:15:48 dilfridge Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ DEPEND="
 	semantic-desktop? (
 		>=app-office/akonadi-server-1.3.60
 		$(add_kdebase_dep kdelibs 'semantic-desktop')
-		media-sound/phonon
+		media-libs/phonon
 		x11-misc/shared-mime-info
 	)
 	ldap? ( net-nds/openldap )

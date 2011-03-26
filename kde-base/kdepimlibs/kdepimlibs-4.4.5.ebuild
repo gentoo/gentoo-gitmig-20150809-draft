@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.4.5.ebuild,v 1.5 2010/08/09 17:34:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.4.5.ebuild,v 1.6 2011/03/26 17:15:48 dilfridge Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ DEPEND="
 	dev-libs/cyrus-sasl
 	semantic-desktop? (
 		>=app-office/akonadi-server-1.3.1
-		media-sound/phonon
+		media-libs/phonon
 		x11-misc/shared-mime-info
 	)
 	ldap? ( net-nds/openldap )
