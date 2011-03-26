@@ -1,6 +1,9 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.284 2011/03/26 15:55:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.285 2011/03/26 15:56:02 scarabeus Exp $
+
+  26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused useflags from metadata.xml
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -transcode-1.0.7.ebuild,
   -transcode-1.1.4.ebuild, -transcode-1.1.5.ebuild, -transcode-1.1.5-r1.ebuild,

@@ -6,10 +6,7 @@
     <email>media-video@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="extrafilters">Install some filters only if we ask for them</flag>
-    <flag name="fame">Enables libfame support</flag>
     <flag name="mjpeg">Enables mjpegtools support</flag>
-    <flag name="network">Enables network streaming support</flag>
     <flag name="nuv">NuppelVideo container format demuxing</flag>
     <flag name="postproc">Build with ffmpeg libpostproc support</flag>
   </use>
