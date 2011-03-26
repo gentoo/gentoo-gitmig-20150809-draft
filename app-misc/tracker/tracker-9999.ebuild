@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.36 2011/03/18 07:50:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.37 2011/03/26 20:32:12 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,9 +17,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 # USE="doc" is managed by eclass.
-IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk hal iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist rss strigi test +tiff upnp +vorbis xine +xml xmp"
+IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk hal iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist qt4 rss strigi test +tiff upnp +vorbis xine +xml xmp"
 
-# TODO: rest -> flickr, qt vs. gdk
+# TODO: rest -> flickr
 # vala is built with debug by default (see VALAFLAGS)
 RDEPEND="
 	>=app-i18n/enca-1.9
@@ -37,8 +37,8 @@ RDEPEND="
 		>=gnome-base/gnome-panel-2.91
 		>=x11-libs/gtk+-3:3 )
 	eds? (
-		>=mail-client/evolution-2.91.90
-		>=gnome-extra/evolution-data-server-2.91.90 )
+		>=mail-client/evolution-2.32
+		>=gnome-extra/evolution-data-server-2.32 )
 	exif? ( >=media-libs/libexif-0.6 )
 	flac? ( >=media-libs/flac-1.2.1 )
 	gif? ( media-libs/giflib )
@@ -59,7 +59,10 @@ RDEPEND="
 	laptop? (
 		hal? ( >=sys-apps/hal-0.5 )
 		!hal? ( >=sys-power/upower-0.9 ) )
-	mp3? ( >=media-libs/taglib-1.6 )
+	mp3? (
+		>=media-libs/taglib-1.6
+		gtk? ( x11-libs/gdk-pixbuf:2 )
+		qt4? ( >=x11-libs/qt-gui-4.7.1:4 ) )
 	nautilus? (
 		gnome-base/nautilus
 		>=x11-libs/gtk+-2.18:2 )
@@ -136,6 +139,10 @@ pkg_setup() {
 		G2CONF="${G2CONF} VALAC=$(type -P valac-0.12)"
 	fi
 
+	if use mp3; then
+		G2CONF="${G2CONF} $(use_enable gtk gdkpixbuf) $(use_enable qt4 qt)"
+	fi
+
 	# unicode-support: libunistring, libicu or glib ?
 	G2CONF="${G2CONF}
 		--enable-tracker-fts
@@ -160,14 +167,12 @@ pkg_setup() {
 		$(use_enable playlist)
 		$(use_enable rss miner-rss)
 		$(use_enable strigi libstreamanalyzer)
-		$(use_enable test unit-tests)
 		$(use_enable test functional-tests)
+		$(use_enable test unit-tests)
 		$(use_enable tiff libtiff)
 		$(use_enable vorbis libvorbis)
 		$(use_enable xml libxml2)
 		$(use_enable xmp exempi)"
-		# FIXME: handle gdk vs qt for mp3 thumbnail extract
-		# $(use_enable gtk gdkpixbuf)
 
 	DOCS="AUTHORS ChangeLog NEWS README"
 
