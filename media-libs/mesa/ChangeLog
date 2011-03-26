@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.322 2011/03/25 16:20:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.323 2011/03/26 10:28:28 fauli Exp $
+
+  26 Mar 2011; Christian Faulhammer <fauli@gentoo.org> mesa-7.9.2.ebuild,
+  mesa-7.10.1.ebuild:
+  stable x86, bug 359059
 
   25 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -mesa-7.9.ebuild:
   remove old
