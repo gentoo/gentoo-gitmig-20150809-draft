@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.3.ebuild,v 1.6 2010/01/14 06:47:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.3.ebuild,v 1.7 2011/03/26 17:24:27 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 ia64 ppc x86"
 IUSE="debug"
 
 DEPEND=">=media-libs/dumb-0.9.3
-	media-libs/allegro"
+	<media-libs/allegro-5"
 
 RDEPEND="${DEPEND}"
 

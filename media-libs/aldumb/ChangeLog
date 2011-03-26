@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aldumb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.23 2010/01/14 06:47:41 joker Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.24 2011/03/26 17:24:27 ssuominen Exp $
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> aldumb-0.9.3.ebuild:
+  Pin media-libs/allegro to old version.
 
   14 Jan 2010; Christian Birchinger <joker@gentoo.org>
   files/aldumb-0.9.2-PIC.patch, aldumb-0.9.3.ebuild,
