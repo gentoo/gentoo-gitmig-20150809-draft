@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.12 2011/03/02 17:48:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.3.ebuild,v 1.13 2011/03/26 16:23:04 jlec Exp $
 
 EAPI="3"
 
@@ -22,6 +22,8 @@ IUSE="doc python swig"
 RDEPEND="
 	dev-libs/libxml2:2
 	!sci-chemistry/babel
+	!sci-chemistry/openbabel-perl
+	!sci-chemistry/openbabel-python
 	sys-libs/zlib"
 
 DEPEND="${RDEPEND}
