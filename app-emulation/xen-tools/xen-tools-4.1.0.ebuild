@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0.ebuild,v 1.1 2011/03/26 00:26:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0.ebuild,v 1.2 2011/03/26 18:43:04 alexxy Exp $
 
 EAPI="3"
 
@@ -29,6 +29,7 @@ DEPEND="${CDEPEND}
 	sys-devel/gcc
 	dev-lang/perl
 	app-misc/pax-utils
+	dev-ml/findlib
 	doc? (
 		app-doc/doxygen
 		dev-tex/latex2html
