@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/PyZilla
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyZilla/ChangeLog,v 1.1 2011/03/26 05:52:10 vapier Exp $
+
+*PyZilla-0.1.0 (26 Mar 2011)
+
+  26 Mar 2011; Mike Frysinger <vapier@gentoo.org> +PyZilla-0.1.0.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+
