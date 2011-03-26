@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.1.ebuild,v 1.3 2010/10/16 14:50:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0.ebuild,v 1.1 2011/03/26 00:26:15 alexxy Exp $
 
 EAPI="3"
 
@@ -11,30 +11,27 @@ inherit flag-o-matic eutils multilib python
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://xen.org/"
 SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
-#	vtpm? ( mirror://berlios/tpm-emulator/${TPMEMUFILE} )"
 S="${WORKDIR}/xen-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug screen custom-cflags pygrub hvm api acm flask"
+IUSE="doc debug screen custom-cflags pygrub hvm api acm flask ioemu"
 
-CDEPEND="dev-lang/python[ncurses,threads]
+CDEPEND="dev-lang/python
 	sys-libs/zlib
-	hvm? ( media-libs/libsdl )
+	hvm? ( media-libs/libsdl
+		sys-power/iasl )
 	acm? ( dev-libs/libxml2 )
 	api? ( dev-libs/libxml2 net-misc/curl )"
-#	vtpm? ( dev-libs/gmp dev-libs/openssl )
 
 DEPEND="${CDEPEND}
 	sys-devel/gcc
 	dev-lang/perl
-	dev-lang/python[ssl]
 	app-misc/pax-utils
 	doc? (
 		app-doc/doxygen
-		dev-tex/latex2html[png,gif]
-		dev-texlive/texlive-latexextra
+		dev-tex/latex2html
 		media-gfx/transfig
 		media-gfx/graphviz
 	)
@@ -62,6 +59,12 @@ QA_EXECSTACK="usr/share/xen/qemu/openbios-sparc32
 pkg_setup() {
 	export "CONFIG_LOMOUNT=y"
 
+	if use ioemu; then
+		export "CONFIG_IOEMU=y"
+	else
+		export "CONFIG_IOEMU=n"
+	fi
+
 	if ! use x86 && ! has x86 $(get_all_abis) && use hvm; then
 		eerror "HVM (VT-x and AMD-v) cannot be built on this system. An x86 or"
 		eerror "an amd64 multilib profile is required. Remove the hvm use flag"
@@ -81,15 +84,32 @@ pkg_setup() {
 		fi
 	fi
 
-#	use vtpm    && export "VTPM_TOOLS=y"
+	if use doc && ! has_version "dev-tex/latex2html[png,gif]"; then
+		# die early instead of later
+		eerror "USE=doc requires latex2html with image support. Please add"
+		eerror "'png' and/or 'gif' to your use flags and re-emerge latex2html"
+		die "latex2html missing both png and gif flags"
+	fi
+
+	if use pygrub && ! has_version "dev-lang/python[ncurses]"; then
+		eerror "USE=pygrub requires python to be built with ncurses support. Please add"
+		eerror "'ncurses' to your use flags and re-emerge python"
+		die "python is missing ncurses flags"
+	fi
+
+	if ! has_version "dev-lang/python[threads]"; then
+		eerror "Python is required to be built with threading support. Please add"
+		eerror "'threads' to your use flags and re-emerge python"
+		die "python is missing threads flags"
+	fi
+
 	use api     && export "LIBXENAPI_BINDINGS=y"
 	use acm     && export "ACM_SECURITY=y"
 	use flask   && export "FLASK_ENABLE=y"
 }
 
 src_prepare() {
-#	use vtpm && cp "${DISTDIR}"/${TPMEMUFILE}  tools/vtpm
-
+	sed -i -e 's/-Wall//' Config.mk || die "Couldn't sanitize CFLAGS"
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -113,18 +133,17 @@ src_prepare() {
 	if ! use pygrub; then
 		sed -i -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' "${S}"/tools/Makefile
 	fi
-
+	# Don't bother with ioemu, only needed for fully virtualised guests
+	if ! use ioemu; then
+		sed -i -e "/^CONFIG_IOEMU := y$/d" "${S}"/config/*.mk
+		sed -i -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" \
+			"${S}/Makefile"
+	fi
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
 
 	# Do not strip binaries
 	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
-
-	# fix variable declaration to avoid sandbox issue, #253134
-	epatch "${FILESDIR}/${PN}-3.3.1-sandbox-fix.patch"
-
-	# fix gcc 4.4 failure
-	epatch "${FILESDIR}/${P}-xc_core-memset.patch"
 }
 
 src_compile() {
@@ -137,6 +156,7 @@ src_compile() {
 		append-flags -fno-strict-overflow
 	fi
 
+	unset LDFLAGS
 	emake -C tools ${myopt} || die "compile failed"
 
 	if use doc; then
@@ -193,7 +213,7 @@ src_install() {
 pkg_postinst() {
 	elog "Official Xen Guide and the unoffical wiki page:"
 	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
-	elog " http://en.gentoo-wiki.com/wiki/Xen/"
+	elog " http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
 
 	if [[ "$(scanelf -s __guard -q $(type -P python))" ]] ; then
 		echo
@@ -202,13 +222,13 @@ pkg_postinst() {
 		ewarn "This probablem may be resolved as of Xen 3.0.4, if not post in the bug."
 	fi
 
-	if ! built_with_use dev-lang/python ncurses; then
+	if ! has_version "dev-lang/python[ncurses]"; then
 		echo
 		ewarn "NB: Your dev-lang/python is built without USE=ncurses."
 		ewarn "Please rebuild python with USE=ncurses to make use of xenmon.py."
 	fi
 
-	if built_with_use sys-apps/iproute2 minimal; then
+	if has_version "sys-apps/iproute2[minimal]"; then
 		echo
 		ewarn "Your sys-apps/iproute2 is built with USE=minimal. Networking"
 		ewarn "will not work until you rebuild iproute2 without USE=minimal."

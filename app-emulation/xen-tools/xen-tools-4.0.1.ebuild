@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.1.ebuild,v 1.2 2010/12/04 15:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.0.1.ebuild,v 1.3 2011/03/26 00:26:15 alexxy Exp $
 
 EAPI="3"
 
@@ -154,9 +154,6 @@ src_prepare() {
 
 	# fix --as-needed, #320339
 	epatch "${FILESDIR}/${PN}-4.0.0-asneeded.patch"
-
-	# fix gcc 4.4 failure
-	#epatch "${FILESDIR}/${PN}-3.4.1-xc_core-memset.patch"
 }
 
 src_compile() {

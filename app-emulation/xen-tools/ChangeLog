@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/xen-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.66 2010/12/03 19:09:53 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.67 2011/03/26 00:26:15 alexxy Exp $
+
+*xen-tools-4.1.0 (26 Mar 2011)
+
+  26 Mar 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-tools-3.1.3.ebuild,
+  -xen-tools-3.1.3-r1.ebuild, -xen-tools-3.2.1.ebuild,
+  -files/xen-tools-3.2.1-qemu-nodocs.patch,
+  -files/xen-tools-3.3.0--as-needed.patch,
+  -files/xen-tools-3.3.0-warning-fix.patch,
+  -files/xen-tools-3.3.0-xen-detect-nopie-fix.patch, -xen-tools-3.4.0.ebuild,
+  -xen-tools-3.4.0-r1.ebuild, -files/xen-tools-3.4.0-udevinfo.patch,
+  -xen-tools-3.4.1.ebuild, -xen-tools-3.4.1-r1.ebuild,
+  -files/xen-tools-3.4.1-xc_core-memset.patch, xen-tools-3.4.2.ebuild,
+  xen-tools-3.4.3.ebuild, -xen-tools-4.0.0.ebuild, xen-tools-4.0.1.ebuild,
+  +xen-tools-4.1.0.ebuild:
+  Version bump & clean up
 
 *xen-tools-4.0.1 (03 Dec 2010)
 

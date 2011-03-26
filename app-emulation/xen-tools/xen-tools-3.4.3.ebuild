@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.3.ebuild,v 1.2 2010/10/16 14:50:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.3.ebuild,v 1.3 2011/03/26 00:26:15 alexxy Exp $
 
 EAPI="3"
 
@@ -123,9 +123,6 @@ src_prepare() {
 
 	# fix variable declaration to avoid sandbox issue, #253134
 	epatch "${FILESDIR}/${PN}-3.3.1-sandbox-fix.patch"
-
-	# fix gcc 4.4 failure
-	#epatch "${FILESDIR}/${PN}-3.4.1-xc_core-memset.patch"
 
 	# Fix --as-needed issues, bug 296631
 	epatch "${FILESDIR}/${PN}-3.4.2-as-needed.patch"
