@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.73 2011/03/27 15:20:08 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.74 2011/03/27 15:40:08 vadimk Exp $
+
+*vmware-modules-208.2 (27 Mar 2011)
+
+  27 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org> +files/208-sema.patch,
+  +files/208-sk_sleep.patch, +files/208-unlocked_ioctl.patch,
+  +vmware-modules-208.2.ebuild:
+  vmware kernel modules for vmware server 2 host
 
 *vmware-modules-238.3-r8 (27 Mar 2011)
 
