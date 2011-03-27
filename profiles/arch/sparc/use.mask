@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.69 2011/03/13 19:52:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.70 2011/03/27 15:51:34 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -116,6 +116,7 @@ openct
 bluetooth
 dmraid
 ipod
+ios
 mtp
 
 # Stuff we don't want
