@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.69 2011/03/26 15:44:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.70 2011/03/27 09:42:58 scarabeus Exp $
+
+  27 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/mlt-0.5.4-asneeded.patch:
+  Add back as-needed patch. It is still required in 0.5.10 so i should've not
+  remove it.
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -mlt-0.4.6.ebuild,
   -mlt-0.5.4.ebuild, -mlt-0.5.4-r2.ebuild, -files/mlt-0.5.4-asneeded.patch,
