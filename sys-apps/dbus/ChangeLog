@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.277 2011/03/03 00:31:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.278 2011/03/27 14:33:08 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> dbus-1.4.6.ebuild:
+  Marking dbus-1.4.6 ppc for bug 360769
 
   03 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   dbus-1.4.1.ebuild, dbus-1.4.6.ebuild:
