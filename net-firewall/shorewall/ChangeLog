@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.182 2011/03/21 17:04:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.183 2011/03/27 11:00:00 constanze Exp $
+
+*shorewall-4.4.18.1 (27 Mar 2011)
+
+  27 Mar 2011; Constanze Hausner <constanze@gentoo.org>
+  -files/4.4.10-underscore-not-dash.patch, -shorewall-3.4.8.ebuild,
+  -shorewall-4.4.15.3.ebuild, -shorewall-4.4.16.1.ebuild,
+  -shorewall-4.4.17.ebuild, +shorewall-4.4.18.1.ebuild, -files/shorewall-r1,
+  -files/shorewall-r2:
+  Cleaning up old versions; version bump
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   shorewall-4.4.15.1.ebuild:
