@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/kstart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/ChangeLog,v 1.8 2011/03/13 04:15:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/ChangeLog,v 1.9 2011/03/27 18:43:59 eras Exp $
+
+  27 Mar 2011; Eray Aslan <eras@gentoo.org> kstart-3.16.ebuild:
+  do not pass aklog to configure script - bug 360589
 
 *kstart-3.16 (13 Mar 2011)
 

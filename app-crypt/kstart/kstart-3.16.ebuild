@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-3.16.ebuild,v 1.1 2011/03/13 04:15:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kstart/kstart-3.16.ebuild,v 1.2 2011/03/27 18:43:59 eras Exp $
 
 EAPI="2"
 
 inherit eutils
 
-DESCRIPTION="Modified versions of kinit for automatic ticket refresh"
+DESCRIPTION="Modified versions of kinit for refreshing kerberos tickets
+automatically"
 HOMEPAGE="http://www.eyrie.org/~eagle/software/kstart"
 SRC_URI="http://archives.eyrie.org/software/kerberos/${P}.tar.gz"
 
@@ -15,16 +16,15 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="afs"
 
-DEPEND="virtual/krb5"
-RDEPEND="$DEPEND
-	afs? ( net-fs/openafs )"
+DEPEND="virtual/krb5
+		afs? ( net-fs/openafs )"
+RDEPEND="$DEPEND"
 
 src_configure() {
 	econf \
 		--disable-k4start \
 		--enable-reduced-depends \
 		"$(use_with afs)" \
-		"$(use_with afs aklog)" \
 		"$(use_enable afs setpag)"
 }
 
