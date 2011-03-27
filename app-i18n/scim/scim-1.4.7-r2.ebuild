@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r2.ebuild,v 1.10 2011/02/13 19:09:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r2.ebuild,v 1.11 2011/03/27 10:56:27 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils flag-o-matic autotools
 
@@ -14,7 +16,7 @@ KEYWORDS="amd64 hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/libX11
-	>=x11-libs/gtk+-2
+	x11-libs/gtk+:2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
 	>=dev-libs/glib-2

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.143 2011/02/13 19:09:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.144 2011/03/27 10:56:27 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> scim-1.4.7-r2.ebuild,
+  scim-1.4.9-r1.ebuild:
+  Fix slot-deps on gnome libs
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> scim-1.4.7-r2.ebuild,
   scim-1.4.9-r1.ebuild:

@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/kanjipad-1.2.3.ebuild,v 1.8 2005/01/01 14:32:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/kanjipad-1.2.3.ebuild,v 1.9 2011/03/27 10:53:08 nirbheek Exp $
+
+EAPI="1"
 
 DESCRIPTION="Japanese handwriting recognition tool"
 HOMEPAGE="http://www.gtk.org/~otaylor/kanjipad/"
@@ -11,8 +13,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r8
-	>=dev-libs/glib-1.2.10-r4"
+DEPEND=">=x11-libs/gtk+-1.2.10-r8:1
+	>=dev-libs/glib-1.2.10-r4:1"
 
 src_compile() {
 	mv Makefile Makefile.orig
