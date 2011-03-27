@@ -68,3 +68,4 @@ slotmove dev-libs/libgweather 3 2
 move media-sound/phonon media-libs/phonon
 slotmove dev-cpp/pangomm 2.4 1.4
 move media-sound/phonon-gstreamer media-libs/phonon-gstreamer
+move sci-misc/brlcad media-gfx/brlcad
