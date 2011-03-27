@@ -11,7 +11,7 @@
 		library is based on code used in the gtkpod project.
 	</longdescription>
 	<use>
-		<flag name="gtk">Enables ArtWorkDB support (including Photos and album covers)</flag>
-		<flag name="iphone">Enables support for the iPhone and iPod touch</flag>
+		<flag name="gtk">Enable ArtworkDB support</flag>
+		<flag name="ios">Enable iOS support</flag>
 	</use>
 </pkgmetadata>

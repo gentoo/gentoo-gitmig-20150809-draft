@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.0.ebuild,v 1.5 2010/11/05 08:55:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.0.ebuild,v 1.6 2011/03/27 15:37:41 ssuominen Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="+gtk python +udev iphone mono static-libs"
+IUSE="+gtk python +udev ios mono static-libs"
 
 RDEPEND=">=app-pda/libplist-1.0
 	>=dev-db/sqlite-3
@@ -23,7 +23,7 @@ RDEPEND=">=app-pda/libplist-1.0
 	dev-libs/libxml2
 	sys-apps/sg3_utils
 	gtk? ( || ( x11-libs/gdk-pixbuf:2 <x11-libs/gtk+-2.22:2 ) )
-	iphone? ( app-pda/libimobiledevice )
+	ios? ( app-pda/libimobiledevice )
 	python? ( >=media-libs/mutagen-1.8
 		>=dev-python/pygobject-2.8 )
 	udev? ( sys-fs/udev )
@@ -55,7 +55,7 @@ src_configure() {
 		$(use_enable gtk gdk-pixbuf) \
 		$(use_enable python pygobject) \
 		--without-hal \
-		$(use_with iphone libimobiledevice) \
+		$(use_with ios libimobiledevice) \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		$(use_with python) \
 		$(use_with mono)
@@ -65,7 +65,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README* TROUBLESHOOTING
 
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
