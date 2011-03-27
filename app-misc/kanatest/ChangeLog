@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kanatest
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.31 2010/10/17 01:33:33 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.32 2011/03/27 12:04:10 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> kanatest-0.4.8.ebuild:
+  Fix slot-dep on gtk+
 
   17 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -kanatest-0.4.2.ebuild, -kanatest-0.4.3.ebuild, -kanatest-0.4.4.ebuild,

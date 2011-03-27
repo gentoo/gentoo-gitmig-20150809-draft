@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.12 2010/07/20 17:40:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.13 2011/03/27 11:59:11 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -21,7 +23,7 @@ RDEPEND="dev-lang/perl
 	virtual/perl-File-Temp
 	dev-perl/TimeDate
 	dev-perl/glib-perl
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.6:2
 	x11-misc/shared-mime-info
 	dev-perl/Stat-lsMode"
 DEPEND="${RDEPEND}
