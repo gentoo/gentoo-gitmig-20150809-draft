@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.140 2010/11/09 19:17:44 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.141 2011/03/27 03:35:08 vapier Exp $
+
+  27 Mar 2011; Mike Frysinger <vapier@gentoo.org> mdadm-3.1.4.ebuild,
+  +files/mdadm-3.1.4-cflags.patch:
+  Respect toolchain env vars with patches by Nathan Phillip Brink #336175 by
+  Marcin Mirosław.
 
   09 Nov 2010; Raúl Porcel <armin76@gentoo.org> mdadm-3.1.4.ebuild:
   ia64/sparc stable wrt #302116

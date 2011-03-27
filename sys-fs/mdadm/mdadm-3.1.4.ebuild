@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.1.4.ebuild,v 1.8 2010/11/09 19:17:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.1.4.ebuild,v 1.9 2011/03/27 03:35:08 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A useful tool for running RAID systems - it can be used as a replacement for the raidtools"
 HOMEPAGE="http://neil.brown.name/blog/mdadm"
@@ -16,24 +16,39 @@ IUSE="static"
 DEPEND=""
 RDEPEND=">=sys-apps/util-linux-2.16"
 
+# The tests edit values in /proc and run tests on software raid devices.
+# Thus, they shouldn't be run on systems with active software RAID devices.
+RESTRICT="test"
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.0-dont-make-man.patch
 	epatch "${FILESDIR}"/${PN}-2.6-syslog-updates.patch
 	epatch "${FILESDIR}"/${PN}-2.6.4-mdassemble.patch #211426
+	epatch "${FILESDIR}"/${PN}-3.1.4-cflags.patch #336175
 	use static && append-ldflags -static
 
 	sed -i -e 's:-z now::' Makefile || die #331653
 }
 
-src_compile() {
+mdadm_emake() {
 	emake \
-		CROSS_COMPILE=${CHOST}- \
+		CC="$(tc-getCC)" \
 		CWFLAGS="-Wall" \
 		CXFLAGS="${CFLAGS}" \
-		all mdassemble \
-		|| die "emake failed"
+		"$@" \
+		|| die
+}
+
+src_compile() {
+	mdadm_emake all mdassemble
+}
+
+src_test() {
+	mdadm_emake test
+
+	sh ./test || die
 }
 
 src_install() {
@@ -55,7 +70,7 @@ src_install() {
 
 	# do not rely on /lib -> /libXX link
 	sed -i \
-		-e "s-/lib/rcscripts/-/$(get_libdir)/rcscripts/-" \
+		-e "s:/lib/rcscripts/:/$(get_libdir)/rcscripts/:" \
 		"${D}"/etc/init.d/*
 }
 
