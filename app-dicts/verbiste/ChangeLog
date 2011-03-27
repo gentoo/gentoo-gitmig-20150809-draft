@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.31 2011/01/11 20:55:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.32 2011/03/27 10:11:57 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  verbiste-0.1.23.ebuild:
+  Fix slot-deps on gnome libs
 
   11 Jan 2011; Pacho Ramos <pacho@gentoo.org> -verbiste-0.1.16.ebuild,
   -verbiste-0.1.21.ebuild, verbiste-0.1.23.ebuild:

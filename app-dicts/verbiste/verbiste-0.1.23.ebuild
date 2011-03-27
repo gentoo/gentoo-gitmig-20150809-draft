@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.23.ebuild,v 1.4 2011/01/11 20:55:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.23.ebuild,v 1.5 2011/03/27 10:11:57 nirbheek Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ KEYWORDS="amd64 ppc x86"
 
 IUSE="gnome gtk"
 
-RDEPEND=">=dev-libs/libxml2-2.4.0
-	gtk? ( >=x11-libs/gtk+-2.6 )
+RDEPEND=">=dev-libs/libxml2-2.4.0:2
+	gtk? ( >=x11-libs/gtk+-2.6:2 )
 	gnome? ( || ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 		>=gnome-base/libgnomeui-2.0 )"
 
