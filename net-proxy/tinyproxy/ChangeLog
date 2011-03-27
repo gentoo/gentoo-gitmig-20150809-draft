@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.26 2011/03/11 19:18:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.27 2011/03/27 14:06:42 klausman Exp $
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> tinyproxy-1.8.2.ebuild:
+  Stable on alpha, bug #358091
 
   11 Mar 2011; Markos Chandras <hwoarang@gentoo.org> tinyproxy-1.8.2.ebuild:
   Stable on amd64 wrt bug #358091
