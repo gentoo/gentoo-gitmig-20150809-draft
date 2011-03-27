@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5.ebuild,v 1.4 2010/02/10 14:26:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.5.ebuild,v 1.5 2011/03/27 12:25:04 nirbheek Exp $
 
 EAPI=2
 inherit gnome2
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pdf doc"
 
-DEPEND=">=x11-libs/gtk+-2.10
+DEPEND=">=x11-libs/gtk+-2.10:2
 	>=gnome-base/libgnomecanvas-2.4
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2

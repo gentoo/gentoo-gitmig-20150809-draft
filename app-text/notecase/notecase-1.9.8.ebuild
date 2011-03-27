@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.9.8.ebuild,v 1.2 2009/07/27 19:21:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.9.8.ebuild,v 1.3 2011/03/27 12:21:59 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils fdo-mime
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnome nls"
 
-RDEPEND=">=x11-libs/gtk+-2.6"
+RDEPEND=">=x11-libs/gtk+-2.6:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

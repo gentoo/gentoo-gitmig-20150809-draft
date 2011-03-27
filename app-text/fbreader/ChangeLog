@@ -1,6 +1,10 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.18 2011/02/13 19:32:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.19 2011/03/27 12:17:32 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  fbreader-0.12.10.ebuild:
+  Fix slot-dep on gtk+
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -fbreader-0.12.7.ebuild,
   fbreader-0.12.10.ebuild:

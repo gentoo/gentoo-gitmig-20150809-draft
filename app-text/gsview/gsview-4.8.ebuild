@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.15 2010/10/03 12:46:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.16 2011/03/27 12:20:51 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -14,12 +16,12 @@ SLOT="0"
 LICENSE="Aladdin"
 KEYWORDS="amd64 hppa ppc x86"
 
-RDEPEND="=x11-libs/gtk+-1.2*
+RDEPEND="x11-libs/gtk+:1
 	app-text/epstool
 	app-text/pstotext
 	app-text/ghostscript-gpl"
 DEPEND="app-arch/unzip
-	=x11-libs/gtk+-1.2*"
+	x11-libs/gtk+:1"
 
 src_unpack() {
 	unpack ${A}

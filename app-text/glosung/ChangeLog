@@ -1,6 +1,10 @@
 # ChangeLog for app-text/glosung
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.10 2010/05/16 00:32:59 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.11 2011/03/27 12:20:05 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> glosung-2.1.3.ebuild,
+  glosung-3.2.2.ebuild, glosung-3.4.2.ebuild, glosung-3.5.2.ebuild:
+  Fix slot-dep on gtk+
 
 *glosung-3.5.2 (16 May 2010)
 

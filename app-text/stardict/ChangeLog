@@ -1,6 +1,11 @@
 # ChangeLog for app-text/stardict
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.8 2010/09/18 16:10:49 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.9 2011/03/27 12:23:55 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -stardict-2.4.8-r1.ebuild, -stardict-3.0.1-r1.ebuild,
+  stardict-3.0.1-r2.ebuild, stardict-3.0.1-r3.ebuild:
+  Fix slot-dep on gtk+
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> stardict-3.0.1-r3.ebuild:
   sparc stable wrt #288555

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.164 2011/02/26 11:44:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.165 2011/03/27 12:16:34 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> acroread-9.4.1.ebuild,
+  acroread-9.4.2.ebuild:
+  Fix slot-dep on gtk+
 
   26 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   acroread-9.4.2.ebuild:
