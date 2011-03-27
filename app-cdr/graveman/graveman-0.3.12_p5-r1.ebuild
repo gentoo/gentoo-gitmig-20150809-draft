@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5-r1.ebuild,v 1.7 2008/05/10 03:42:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5-r1.ebuild,v 1.8 2011/03/27 10:02:24 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils gnome2
 
@@ -13,9 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="debug dvdr flac mp3 nls vorbis"
 
-RDEPEND=">=x11-libs/gtk+-2.4
-	>=dev-libs/glib-2.4
-	>=gnome-base/libglade-2.4
+RDEPEND=">=x11-libs/gtk+-2.4:2
+	>=dev-libs/glib-2.4:2
+	>=gnome-base/libglade-2.4:2.0
 	flac? ( media-libs/flac )
 	mp3? ( media-libs/libid3tag
 		media-libs/libmad

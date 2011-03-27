@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/graveman
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.48 2008/11/17 19:55:33 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.49 2011/03/27 10:02:24 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  graveman-0.3.12_p5-r1.ebuild:
+  Fix slot-deps on gnome libs
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> files/sox.patch:
   Fix patch to apply.
