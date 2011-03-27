@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.66 2011/03/20 18:51:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.67 2011/03/27 20:14:59 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> cython-0.14.1.ebuild:
+  Marking cython-0.14.1 ppc for bug 357847
 
   20 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cython-0.14.1.ebuild:
   x86 stable wrt bug #357847
