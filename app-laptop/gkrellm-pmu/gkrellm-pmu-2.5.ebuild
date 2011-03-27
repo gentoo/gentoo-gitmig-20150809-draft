@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/gkrellm-pmu-2.5.ebuild,v 1.3 2010/01/01 20:55:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/gkrellm-pmu/gkrellm-pmu-2.5.ebuild,v 1.4 2011/03/27 11:41:29 nirbheek Exp $
+
+EAPI="1"
 
 DESCRIPTION="GKrellM2 plugin for battery display on Apple machines"
 HOMEPAGE="http://pbbuttons.sourceforge.net/projects/gkrellm-pmu/index.html"
@@ -11,7 +13,7 @@ SLOT="2"
 KEYWORDS="-* ppc"
 IUSE=""
 
-DEPEND=" >=x11-libs/gtk+-2.0
+DEPEND="x11-libs/gtk+:2
 	=app-admin/gkrellm-2*
 	app-laptop/pbbuttonsd"
 

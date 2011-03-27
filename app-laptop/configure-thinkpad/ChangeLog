@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/configure-thinkpad
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/ChangeLog,v 1.9 2008/04/21 16:46:04 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/ChangeLog,v 1.10 2011/03/27 11:40:50 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  configure-thinkpad-0.1-r3.ebuild, configure-thinkpad-0.7.ebuild:
+  Fix slot-dep on gtk+
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

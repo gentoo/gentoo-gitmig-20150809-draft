@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/configure-thinkpad-0.1-r3.ebuild,v 1.5 2005/01/01 14:45:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-thinkpad/configure-thinkpad-0.1-r3.ebuild,v 1.6 2011/03/27 11:40:50 nirbheek Exp $
+
+EAPI="1"
 
 inherit gnome2
 DESCRIPTION="Thinkpad gnome configuration utility for tpctl"
@@ -10,7 +12,7 @@ KEYWORDS="-* ~x86"
 IUSE=""
 
 RDEPEND=">=app-laptop/tpctl-4.8
-	>=x11-libs/gtk+-2.2
+	>=x11-libs/gtk+-2.2:2
 	>=gnome-base/libgnomeui-2.4
 	>=sys-devel/gettext-0.11"
 

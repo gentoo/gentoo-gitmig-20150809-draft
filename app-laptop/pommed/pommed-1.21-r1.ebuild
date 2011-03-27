@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.21-r1.ebuild,v 1.4 2009/04/15 22:07:24 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.21-r1.ebuild,v 1.5 2011/03/27 11:45:20 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs
 
@@ -22,8 +24,8 @@ COMMON_DEPEND="media-libs/alsa-lib
 	dev-libs/dbus-glib
 	sys-libs/zlib
 	media-libs/audiofile
-	gtk? ( >=x11-libs/gtk+-2
-		>=gnome-base/libglade-2 )
+	gtk? ( x11-libs/gtk+:2
+		gnome-base/libglade:2.0 )
 	X? ( x11-libs/libX11
 		x11-libs/libXpm )"
 DEPEND="${COMMON_DEPEND}
