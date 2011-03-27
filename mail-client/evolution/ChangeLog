@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.333 2011/03/22 19:34:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.334 2011/03/27 20:36:45 pacho Exp $
+
+*evolution-2.32.2-r2 (27 Mar 2011)
+
+  27 Mar 2011; Pacho Ramos <pacho@gentoo.org> +evolution-2.32.2-r2.ebuild,
+  +files/evolution-2.32.2-mime-handler.patch,
+  +files/evolution-2.32.2-smime-fix.patch:
+  Revision bump fixing compilation with --disable-smime (bug #356471 by
+  mymybib), work with new mime handler from glib-2.28, apply multiple patches
+  from master fixing many bugs.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> evolution-2.32.2.ebuild:
   Marking evolution-2.32.2 ppc stable for bug 353436
