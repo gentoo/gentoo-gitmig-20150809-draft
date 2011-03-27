@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/uae
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.38 2010/02/15 00:20:38 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.39 2011/03/27 10:31:29 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> uae-0.8.26-r1.ebuild,
+  uae-0.8.29.ebuild, uae-0.8.29-r1.ebuild:
+  Fix slot-dep on gtk+
 
 *uae-0.8.29-r1 (15 Feb 2010)
 

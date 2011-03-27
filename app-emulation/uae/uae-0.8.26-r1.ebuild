@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26-r1.ebuild,v 1.2 2009/03/09 20:21:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26-r1.ebuild,v 1.3 2011/03/27 10:31:29 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -15,20 +17,20 @@ IUSE="sdl X dga svga aalib oss alsa sdl-sound scsi ui"
 
 DEPEND="sdl? ( media-libs/libsdl
 			   media-libs/sdl-gfx
-			   ui? ( x11-libs/gtk+ )
+			   ui? ( x11-libs/gtk+:2 )
 			   alsa? ( media-libs/alsa-lib )
 			 )
 	!sdl? ( X? ( x11-libs/libXext
 				 dga? ( x11-libs/libXxf86dga
 						x11-libs/libXxf86vm )
-				 ui? ( x11-libs/gtk+ )
+				 ui? ( x11-libs/gtk+:2 )
 			   )
 			!X? ( svga? ( media-libs/svgalib
 						  ui? ( sys-libs/ncurses ) )
 				  !svga? ( aalib? ( media-libs/aalib
 									ui? ( sys-libs/ncurses ) ) )
 						   !aalib? ( media-libs/libsdl
-									 ui? ( x11-libs/gtk+ ) ) )
+									 ui? ( x11-libs/gtk+:2 ) ) )
 			alsa? ( media-libs/alsa-lib )
 		  )
 	scsi? ( app-cdr/cdrtools )"
