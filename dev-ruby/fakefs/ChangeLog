@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.14 2011/03/08 09:57:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.15 2011/03/27 19:27:07 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> fakefs-0.2.1.ebuild:
+  Marking fakefs-0.2.1 ppc stable for bug 356269
 
   08 Mar 2011; Thomas Kahle <tomka@gentoo.org> fakefs-0.2.1.ebuild:
   x86 stable per bug 356269
