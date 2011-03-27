@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/libindicate-qt-0.2.5-r1.ebuild,v 1.1 2011/02/07 10:11:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/libindicate-qt-0.2.5-r1.ebuild,v 1.2 2011/03/27 22:57:56 arfrever Exp $
 
 EAPI=2
 
@@ -30,6 +30,5 @@ src_test() {
 
 	cd "${CMAKE_BUILD_DIR}/tests"
 
-	export maketype="ctest ${ctestargs}"
-	virtualmake || die "Tests failed."
+	VIRTUALX_COMMAND="ctest ${ctestargs}" virtualmake || die "Tests failed."
 }
