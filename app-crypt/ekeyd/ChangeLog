@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.19 2011/03/27 21:56:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.20 2011/03/27 22:13:47 flameeyes Exp $
+
+  27 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> ekeyd-1.1.3-r2.ebuild:
+  Fix think in log output.
 
 *ekeyd-1.1.3-r2 (27 Mar 2011)
 
