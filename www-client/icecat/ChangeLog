@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.74 2011/03/26 13:54:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.75 2011/03/27 19:08:32 polynomial-c Exp $
+
+  27 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> icecat-3.6.16.ebuild:
+  Switched from 3.6.15 to 3.6.16 lang packs.
 
   26 Mar 2011; Brent Baude <ranger@gentoo.org> icecat-3.6.16.ebuild:
   Marking icecat-3.6.16 ppc64 and ppc for bug 360055
