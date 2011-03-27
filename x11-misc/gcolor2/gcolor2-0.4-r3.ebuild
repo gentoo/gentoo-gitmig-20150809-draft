@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/gcolor2-0.4-r3.ebuild,v 1.9 2009/02/28 11:53:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/gcolor2-0.4-r3.ebuild,v 1.10 2011/03/27 13:01:58 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils autotools
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.4"
+RDEPEND=">=x11-libs/gtk+-2.4:2"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27
 	dev-util/pkgconfig"
