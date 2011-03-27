@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.72 2011/03/18 14:52:53 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.73 2011/03/27 15:20:08 vadimk Exp $
+
+*vmware-modules-238.3-r8 (27 Mar 2011)
+
+  27 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org> +files/238-jobserver.patch,
+  +files/238-makefile-include.patch, +files/238-makefile-kernel-dir.patch,
+  +files/238-sema.patch, +files/238-unlocked_ioctl.patch,
+  +vmware-modules-238.3-r8.ebuild:
+  vmware kernel modules of the vmware player 3.1.3 or workstation 7.1.3 host
 
 *vmware-modules-1.0.0.25-r4 (18 Mar 2011)
 
