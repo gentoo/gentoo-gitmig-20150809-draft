@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.53 2011/03/26 13:50:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.54 2011/03/27 14:25:27 anarchy Exp $
+
+*firefox-4.0-r2 (27 Mar 2011)
+
+  27 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-4.0-r1.ebuild,
+  +firefox-4.0-r2.ebuild, +files/fix-preferences-gentoo.patch:
+  Fix default gentoo preferences
 
   26 Mar 2011; Brent Baude <ranger@gentoo.org> firefox-3.6.16.ebuild:
   Marking firefox-3.6.16 ppc64 and ppc for bug 360055

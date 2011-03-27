@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0-r1.ebuild,v 1.1 2011/03/23 00:45:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0-r2.ebuild,v 1.1 2011/03/27 14:25:27 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -135,6 +135,9 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
+
+	# Ensure are preferences are added to omnijar
+	epatch "${FILESDIR}/fix-preferences-gentoo.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
