@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.169 2011/02/08 01:54:43 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.170 2011/03/27 19:04:35 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> sbcl-1.0.45.ebuild:
+  stable ppc, bug 326217
 
 *sbcl-1.0.45 (08 Feb 2011)
 
