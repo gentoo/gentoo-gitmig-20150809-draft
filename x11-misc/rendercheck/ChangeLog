@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rendercheck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.21 2011/03/19 16:39:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rendercheck/ChangeLog,v 1.22 2011/03/27 16:13:03 klausman Exp $
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> rendercheck-1.4.ebuild:
+  Keyworded on alpha, bug #360685
 
   19 Mar 2011; Christoph Mende <angelos@gentoo.org> rendercheck-1.4.ebuild:
   QA: Renamed MODULE to XORG_MODULE
