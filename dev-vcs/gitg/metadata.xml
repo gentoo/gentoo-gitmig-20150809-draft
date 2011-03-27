@@ -13,5 +13,7 @@
 	<longdescription lang="en">
 		GTK+ based frontend for GIT
 	</longdescription>
+	<use>
+		<flag name="glade">Install a glade catalog file</flag>
+	</use>
 </pkgmetadata>
-
