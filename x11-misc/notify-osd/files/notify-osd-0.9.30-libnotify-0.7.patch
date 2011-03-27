@@ -1,0 +1,257 @@
+--- examples/append-hint-example.c
++++ examples/append-hint-example.c
+@@ -41,7 +41,7 @@
+ 	GError*             error = NULL;
+ 
+ 	/* initial notification */
+-	notification = notify_notification_new (title, body, icon, NULL);
++	notification = notify_notification_new (title, body, icon);
+ 	notify_notification_set_hint_string (notification,
+ 					     "x-canonical-append",
+ 					     "");
+--- examples/icon-only.c
++++ examples/icon-only.c
+@@ -54,8 +54,7 @@
+ 		notification = notify_notification_new (
+ 					"Eject", /* for a11y-reasons put something meaningfull here */
+ 					NULL,
+-					"notification-device-eject",
+-					NULL);
++					"notification-device-eject");
+ 		notify_notification_set_hint_string (notification,
+ 						     "x-canonical-private-icon-only",
+ 						     "");
+--- examples/icon-summary-body.c
++++ examples/icon-summary-body.c
+@@ -54,8 +54,7 @@
+ 				"Hey pal, what's up with the party "
+ 				"next weekend? Will you join me "
+ 				"and Anna?",
+-				"notification-message-im",
+-				NULL);
++				"notification-message-im");
+ 	error = NULL;
+ 	success = notify_notification_show (notification, &error);
+ 	if (!success)
+--- examples/icon-summary.c
++++ examples/icon-summary.c
+@@ -52,8 +52,7 @@
+ 	notification = notify_notification_new (
+ 				"WiFi connection lost",
+ 				NULL,
+-				"notification-network-wireless-disconnected",
+-				NULL);
++				"notification-network-wireless-disconnected");
+ 	error = NULL;
+ 	success = notify_notification_show (notification, &error);
+ 	if (!success)
+--- examples/icon-updating.c
++++ examples/icon-updating.c
+@@ -53,7 +53,6 @@
+ 	notification = notify_notification_new (
+ 		"Test 1/3",
+ 		"Set icon via hint \"image_path\" to logo-icon.",
+-		NULL,
+ 		NULL);
+ 	notify_notification_set_hint_string (
+ 		notification,
+--- examples/icon-value.c
++++ examples/icon-value.c
+@@ -42,8 +42,7 @@
+ 	notification = notify_notification_new (
+ 				"Brightness",  /* for a11y-reasons put something meaningfull here */
+ 				NULL,
+-				icon,
+-				NULL);
++				icon);
+ 	notify_notification_set_hint_int32 (notification,
+ 					    "value",
+ 					    value);
+--- examples/summary-body.c
++++ examples/summary-body.c
+@@ -52,7 +52,6 @@
+ 	notification = notify_notification_new (
+ 				"Totem",
+ 				"This is a superfluous notification",
+-				NULL,
+ 				NULL);
+ 	error = NULL;
+ 	success = notify_notification_show (notification, &error);
+--- examples/summary-only.c
++++ examples/summary-only.c
+@@ -52,7 +52,6 @@
+ 	notification = notify_notification_new (
+ 				"Summary-only",
+ 				NULL,
+-				NULL,
+ 				NULL);
+ 	error = NULL;
+ 	success = notify_notification_show (notification, &error);
+--- examples/sync-icon-only.c
++++ examples/sync-icon-only.c
+@@ -55,8 +55,7 @@
+ 		notification = notify_notification_new (
+ 					"Eject", /* for a11y-reasons put something meaningfull here */
+ 					NULL,
+-					"notification-device-eject",
+-					NULL);
++					"notification-device-eject");
+ 		notify_notification_set_hint_string (notification,
+ 						     "x-canonical-private-icon-only",
+ 						     "");
+--- examples/update-notifications.c
++++ examples/update-notifications.c
+@@ -53,8 +53,7 @@
+ 				"Inital notification",
+ 				"This is the original content of "
+ 				"this notification-bubble.",
+-				"notification-message-im",
+-				NULL);
++				"notification-message-im");
+ 	error = NULL;
+ 	success = notify_notification_show (notification, &error);
+ 	if (!success)
+@@ -97,8 +96,7 @@
+ 				"Initial layout",
+ 				"This bubble uses the icon-title-body "
+ 				"layout.",
+-				"notification-message-im",
+-				NULL);
++				"notification-message-im");
+ 	error = NULL;
+ 	success = notify_notification_show (notification, &error);
+ 	if (!success)
+--- tests/test-synchronous.c
++++ tests/test-synchronous.c
+@@ -38,7 +38,7 @@
+         NotifyNotification *n;
+ 	n = notify_notification_new ("Test notification",
+ 				     g_strdup (message),
+-				     "", NULL);
++				     "");
+ 	notify_notification_show (n, NULL);
+ 	g_object_unref(G_OBJECT(n));
+ }
+@@ -53,8 +53,7 @@
+ 	if (n == NULL)
+ 		n = notify_notification_new (" ",
+ 					     "",
+-					     g_strdup (icon),
+-					     NULL);
++					     g_strdup (icon));
+ 	else
+ 		notify_notification_update (n,
+ 					    " ",
+--- tests/test-withlib.c
++++ tests/test-withlib.c
+@@ -94,7 +94,7 @@
+ 
+ 	n = notify_notification_new ("Test",
+ 				     "You should see a normal notification",
+-				     "", NULL);
++				     "");
+ 	notify_notification_show (n, NULL);
+ 	sleep (3);
+ 
+@@ -109,7 +109,7 @@
+ 
+ 	n = notify_notification_new ("Test",
+ 				     "New notification",
+-				     "", NULL);
++				     "");
+ 	res = notify_notification_show (n, NULL);
+ 	g_assert (res);
+ 	sleep (1);
+@@ -135,7 +135,7 @@
+ 
+ 	n = notify_notification_new ("Image Test",
+ 				     "You should see an image",
+-				     "", NULL);
++				     "");
+ 	g_print ("iconpath: %s\n", SRCDIR"/icons/avatar.png");
+ 	pixbuf = gdk_pixbuf_new_from_file_at_scale (SRCDIR"/icons/avatar.png",
+ 						    64, 64, TRUE, NULL);
+@@ -157,22 +157,22 @@
+ 
+ 	n1 = notify_notification_new ("Dummy Notification",
+ 				      "This is a test notification",
+-				      "", NULL);
++				      "");
+ 	notify_notification_show (n1, NULL);
+ 	n2 = notify_notification_new ("Normal Notification",
+ 				      "You should see this *after* the urgent notification.",
+-				      "", NULL);
++				      "");
+ 	notify_notification_set_urgency (n2, NOTIFY_URGENCY_LOW);
+ 	notify_notification_show (n2, NULL);
+ 	n3 = notify_notification_new ("Synchronous Notification",
+ 				      "You should immediately see this notification.",
+-				      "", NULL);
++				      "");
+ 	notify_notification_set_hint_string (n3, "synchronous", "test");
+ 	notify_notification_set_urgency (n3, NOTIFY_URGENCY_NORMAL);
+ 	notify_notification_show (n3, NULL);
+ 	n4 = notify_notification_new ("Urgent Notification",
+ 				      "You should see a dialog box, and after, a normal notification.",
+-				      "", NULL);
++				      "");
+ 	notify_notification_set_urgency (n4, NOTIFY_URGENCY_CRITICAL);
+ 	notify_notification_show (n4, NULL);
+ 	
+@@ -207,7 +207,7 @@
+ 
+ 	n1 = notify_notification_new ("Notification with an action",
+ 				      "You should see that in a dialog box. Click the 'Action' button for the test to succeed.",
+-				      "", NULL);
++				      "");
+ 	notify_notification_add_action (n1,
+ 					"action",
+ 					"Action",
+@@ -231,7 +231,7 @@
+ 
+ 	n = notify_notification_new ("Test Title",
+ 				     "This notification will be closed prematurely...",
+-				     "", NULL);
++				     "");
+ 	notify_notification_show (n, NULL);
+ 	
+ 	loop = g_main_loop_new(NULL, FALSE);
+@@ -256,8 +256,7 @@
+ 	/* init notification, supply first line of body-text */
+ 	n = notify_notification_new ("Test (append-hint)",
+ 				     "The quick brown fox jumps over the lazy dog.",
+-				     SRCDIR"/icons/avatar.png",
+-				     NULL);
++				     SRCDIR"/icons/avatar.png");
+ 	res = notify_notification_show (n, NULL);
+ 	g_assert (res);
+ 	sleep (1);
+@@ -296,8 +295,7 @@
+ 	/* init notification, supply first line of body-text */
+ 	n = notify_notification_new (" ", /* needs this to be non-NULL */
+ 				     NULL,
+-				     "notification-audio-play",
+-				     NULL);
++				     "notification-audio-play");
+ 	notify_notification_set_hint_string (n, "icon-only", "allowed");
+ 	res = notify_notification_show (n, NULL);
+ 	g_assert (res);
+@@ -314,8 +312,7 @@
+ 
+ 	n = notify_notification_new ("Swallow markup test",
+ 				     "This text is hopefully neither <b>bold</b>, <i>italic</i> nor <u>underlined</u>.\n\nA little math-notation:\n\n\ta &gt; b &lt; c = 0",
+-				     SRCDIR"/icons/avatar.png",
+-				     NULL);
++				     SRCDIR"/icons/avatar.png");
+ 	res = notify_notification_show (n, NULL);
+ 	g_assert (res);
+ 	sleep (2);
+@@ -341,7 +338,7 @@
+ 
+ 		// create dummy notification
+ 		snprintf (buf, 19, "Test #%.2d", i);
+-		n = notify_notification_new (buf, buf, "", NULL);
++		n = notify_notification_new (buf, buf, "");
+ 
+ 		// inject it into the queue
+ 		res = notify_notification_show (n, &error);
