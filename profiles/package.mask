@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12614 2011/03/27 17:56:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12615 2011/03/27 19:20:27 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -423,12 +423,9 @@ x11-drivers/xf86-video-xgi
 ~dev-vcs/bzr-svn-1.1.0
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2011)
-# Masked for QA. Talk to QA before touching this mask.
-# Unmaintained and completely broken wrt bugs
-# 185475, 211262, 247268, 276220, 287751, 293501, 298109,
-# 301729, 308801, 311763, 311765, 328691, 340605, 348483,
-# 352506, 237366, 250054
-# Removal in 30 days
+# Temporarily masked until the new maintainer is ready
+# for unmasking.
+# http://bugs.gentoo.org/show_bug.cgi?id=354423
 app-pda/libopensync
 app-pda/libopensync-plugin-evolution2
 app-pda/libopensync-plugin-file
