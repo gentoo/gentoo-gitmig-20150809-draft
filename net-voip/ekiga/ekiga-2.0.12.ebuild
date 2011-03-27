@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.2 2010/07/20 18:41:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-2.0.12.ebuild,v 1.3 2011/03/27 13:20:56 nirbheek Exp $
 
 EAPI="2"
 inherit gnome2 eutils flag-o-matic
@@ -15,8 +15,8 @@ IUSE="avahi dbus doc gnome sdl"
 
 RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-2][ldap]
 	~net-libs/opal-2.2.$[${PV##*.}-1]
-	>=x11-libs/gtk+-2.4.0
-	>=dev-libs/glib-2.0.0
+	>=x11-libs/gtk+-2.4.0:2
+	>=dev-libs/glib-2.0.0:2
 	sdl? ( >=media-libs/libsdl-1.2.4 )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	avahi? ( net-dns/avahi[dbus] )
