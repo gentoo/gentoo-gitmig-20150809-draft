@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.8.ebuild,v 1.8 2011/03/22 21:21:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.8.ebuild,v 1.9 2011/03/27 08:21:49 ssuominen Exp $
 
 EAPI=3
 inherit linux-info
@@ -23,7 +23,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.76
 		virtual/libusb:1
 		ipod? ( >=app-pda/libimobiledevice-0.9.7
 			>=app-pda/libplist-0.12 ) )
-	!sys-apps/devicekit-power"
+	!sys-apps/devicekit-power
+	!sys-apps/hal"
 RDEPEND="${COMMON_DEPEND}
 	kernel_linux? ( >=sys-power/pm-utils-1.4.1 )"
 DEPEND="${COMMON_DEPEND}
