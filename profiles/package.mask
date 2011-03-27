@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12606 2011/03/26 20:23:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12607 2011/03/27 04:22:12 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -546,20 +546,6 @@ dev-util/plan9port
 # wxgtk:2.6 is going away so mask these for removal on 20110219
 games-misc/jugglemaster
 =games-util/taxidraw-0.3.2
-
-# Dane Smith <c1pher@gentoo.org> (19 Jan 2011)
-# On behalf of the QA team
-#
-# Packages below fail to build with
-# >=sys-kernel/linux-headers-2.6.35 and block its
-# stabilization. Bugs untouched in over 3 months.
-# Masking for removal on 21 Mar 2011.
-# app-cdr/pxlinux (bug 337430)
-# app-cdr/cdrdetect (bug 337628)
-# app-emulation/basiliskII-jit (bug 339586)
-app-cdr/pxlinux
-app-cdr/cdrdetect
-app-emulation/basiliskII-jit
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (18 Jan 2011)
 # Masked for removel on 18 Feb 2011
