@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.3.ebuild,v 1.1 2011/02/13 23:57:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.3.ebuild,v 1.2 2011/03/27 04:48:38 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -98,7 +98,6 @@ src_prepare() {
 		-e "/^CROSS_COMPILE/s:=.*:= ${CHOST}-:" \
 		-e "/^AR\>/s:=.*:= $(tc-getAR):" \
 		-e "/^CC\>/s:=.*:= $(tc-getCC):" \
-		-e "/^LD\>/s:=.*:= $(tc-getLD):" \
 		-e "/^HOSTCC/s:=.*:= $(tc-getBUILD_CC):" \
 		Makefile || die
 }
