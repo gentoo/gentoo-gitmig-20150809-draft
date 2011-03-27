@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.30 2011/03/26 14:07:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.31 2011/03/27 15:41:48 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> clementine-0.6-r2.ebuild,
+  clementine-0.7_rc1.ebuild, metadata.xml:
+  Rename USE="iphone" to USE="ios" wrt #344763.
 
 *clementine-0.7_rc1 (26 Mar 2011)
 
