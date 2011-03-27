@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bsdsfv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.30 2010/01/01 19:29:20 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.31 2011/03/27 20:27:51 angelos Exp $
+
+  27 Mar 2011; Christoph Mende <angelos@gentoo.org> bsdsfv-1.18-r1.ebuild,
+  metadata.xml:
+  Updated ebuild to EAPI3 and added myself to metadata.xml
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   bsdsfv-1.18-r1.ebuild:
