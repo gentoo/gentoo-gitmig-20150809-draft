@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r3.ebuild,v 1.9 2007/07/22 06:28:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r3.ebuild,v 1.10 2011/03/27 10:22:51 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils flag-o-matic pax-utils
 
@@ -25,7 +27,7 @@ RDEPEND="X? ( x11-libs/libXt
 			  !sdl? ( sys-libs/ncurses ) )
 		alsa? ( media-libs/alsa-lib )
 		!alsa? ( sdl-sound? ( media-libs/sdl-sound ) )
-		gtk? ( >=x11-libs/gtk+-2.0 )
+		gtk? ( x11-libs/gtk+:2 )
 		capslib? ( games-emulation/caps )
 		sys-libs/zlib
 		virtual/cdrtools"
