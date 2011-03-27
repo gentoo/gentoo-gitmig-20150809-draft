@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.6-r1.ebuild,v 1.5 2011/03/21 20:22:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.6-r1.ebuild,v 1.6 2011/03/27 17:00:10 pacho Exp $
 
 EAPI=2
 
@@ -21,6 +21,6 @@ RDEPEND="net-libs/xulrunner:1.9
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix-xulrunner-detection.patch" || die "Failed to patch"
+	epatch "${FILESDIR}/${P}-xulrunner2.patch"
 	eautoreconf
 }

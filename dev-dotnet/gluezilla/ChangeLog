@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/gluezilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.23 2011/03/21 20:22:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.24 2011/03/27 17:00:10 pacho Exp $
+
+  27 Mar 2011; Pacho Ramos <pacho@gentoo.org> -gluezilla-2.6.ebuild,
+  gluezilla-2.6-r1.ebuild, -files/gluezilla-2.6-fix-xulrunner-detection.patch,
+  +files/gluezilla-2.6-xulrunner2.patch, -gluezilla-9999.ebuild:
+  Fix compilation against xulrunner-2.0 (bug #360791 by Rafał Mużyło),
+  remove old.
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> gluezilla-2.6-r1.ebuild:
   Marking gluezilla-2.6-r1 ppc stable for bug 359651
