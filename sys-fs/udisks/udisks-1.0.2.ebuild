@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2.ebuild,v 1.8 2011/03/27 08:20:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2.ebuild,v 1.9 2011/03/27 21:58:40 ssuominen Exp $
 
 EAPI=3
 inherit eutils bash-completion linux-info
@@ -23,8 +23,7 @@ COMMON_DEPEND=">=sys-fs/udev-147[extras]
 	>=sys-fs/lvm2-2.02.66
 	>=dev-libs/libatasmart-0.14
 	>=sys-apps/sg3_utils-1.27.20090411
-	!sys-apps/devicekit-disks
-	!sys-apps/hal"
+	!sys-apps/devicekit-disks"
 RDEPEND="${COMMON_DEPEND}
 	virtual/eject
 	remote-access? ( net-dns/avahi )"
