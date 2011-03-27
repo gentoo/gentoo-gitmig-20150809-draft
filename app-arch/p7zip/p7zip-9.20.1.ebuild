@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1.ebuild,v 1.1 2011/03/26 19:48:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1.ebuild,v 1.2 2011/03/27 11:00:45 jlec Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -19,7 +19,9 @@ IUSE="doc kde rar +pch static wxwidgets"
 RDEPEND="
 	kde? ( x11-libs/wxGTK:2.8[X,-odbc] kde-base/kdelibs )
 	wxwidgets? ( x11-libs/wxGTK:2.8[X,-odbc] )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	amd64? ( dev-lang/yasm )
+	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/${PN}_${PV}
 
