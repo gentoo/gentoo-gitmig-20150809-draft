@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.5 2009/09/23 16:28:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/gps-bin-2.1.0.ebuild,v 1.6 2011/03/27 12:25:17 nirbheek Exp $
 
-IUSE=""
+EAPI="1"
 
 S="${WORKDIR}/gps-${PV}-academic-x86-linux"
 DESCRIPTION="GNAT Programming System"
@@ -12,10 +12,11 @@ HOMEPAGE="http://libre.act-europe.fr/gps"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 DEPEND=""
 RDEPEND="virtual/gnat
-	>=x11-libs/gtk+-2.2.0
+	>=x11-libs/gtk+-2.2.0:2
 	>=dev-ada/gtkada-2.4.0
 	>=media-libs/libpng-1.2.4"
 

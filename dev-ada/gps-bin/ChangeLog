@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/gps-bin
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.15 2007/04/28 18:04:00 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.16 2011/03/27 12:25:17 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gps-bin-2.1.0.ebuild:
+  Fix slot-dep on gtk+
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> gps-bin-2.1.0.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
