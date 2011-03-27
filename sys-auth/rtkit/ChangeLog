@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/rtkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.13 2011/03/23 15:25:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/ChangeLog,v 1.14 2011/03/27 16:30:39 klausman Exp $
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> rtkit-0.9-r1.ebuild:
+  Stable on alpha, bug #360131
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> rtkit-0.9-r1.ebuild:
   ppc/pp64 stable wrt #360131
