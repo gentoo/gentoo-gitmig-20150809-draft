@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/imapfilter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.33 2010/11/19 13:27:03 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.34 2011/03/27 19:25:45 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> imapfilter-2.2.2.ebuild:
+  stable ppc, bug 345341
 
   19 Nov 2010; Thomas Kahle <tomka@gentoo.org> imapfilter-2.2.2.ebuild:
   x86 stable per bug 345341
