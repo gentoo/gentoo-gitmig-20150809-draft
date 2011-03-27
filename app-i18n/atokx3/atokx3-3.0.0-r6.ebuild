@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r6.ebuild,v 1.1 2010/10/26 17:22:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r6.ebuild,v 1.2 2011/03/27 10:43:48 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils multilib
 
@@ -31,14 +33,14 @@ RDEPEND="!app-i18n/atokx2
 	!app-i18n/iiimsf
 	!app-i18n/iiimxcf
 	dev-libs/atk
-	dev-libs/glib
-	dev-libs/libxml2
+	dev-libs/glib:2
+	dev-libs/libxml2:2
 	media-libs/fontconfig
 	media-libs/libpng
 	sys-apps/tcp-wrappers
 	sys-libs/pam
 	x11-libs/cairo
-	>=x11-libs/gtk+-2.4.13
+	>=x11-libs/gtk+-2.4.13:2
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libXcomposite

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r2.ebuild,v 1.5 2011/03/19 18:25:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r2.ebuild,v 1.6 2011/03/27 10:46:55 nirbheek Exp $
 
 EAPI="3"
 inherit autotools gnome2 eutils multilib
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.4:2
 	>=x11-libs/gtk+-2.4:2
 	>=x11-libs/pango-1.2.1
 	>=gnome-base/gconf-2.4:2
-	>=gnome-base/libglade-2.4
+	>=gnome-base/libglade-2.4:2.0
 	>=gnome-base/libgnomeui-2.4
 	gnome? (
 		|| (
