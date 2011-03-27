@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.05.ebuild,v 1.2 2011/03/14 20:06:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.05.ebuild,v 1.3 2011/03/27 15:25:01 klausman Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.cybercom.net/~dcoffin/dcraw/archive/${P}.tar.gz
 
 LICENSE="freedist GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="nls gimp jpeg lcms"
 
 COMMON_DEPEND="jpeg? ( virtual/jpeg )
