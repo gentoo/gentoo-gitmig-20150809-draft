@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.14-r4.ebuild,v 1.6 2011/03/27 08:44:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.14-r4.ebuild,v 1.7 2011/03/27 21:59:14 ssuominen Exp $
 
 EAPI="2"
 
@@ -42,9 +42,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.61
 						)
 		 kernel_FreeBSD? ( >=dev-libs/libvolume_id-0.77 )
 		 x86? ( >=sys-apps/dmidecode-2.7 )
-		 selinux? ( sys-libs/libselinux sec-policy/selinux-hal )
-		 !sys-fs/udisks
-		 !sys-power/upower"
+		 selinux? ( sys-libs/libselinux sec-policy/selinux-hal )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		 >=dev-util/gperf-3.0.3

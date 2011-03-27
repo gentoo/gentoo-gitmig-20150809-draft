@@ -1,9 +1,6 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.334 2011/03/27 08:44:23 ssuominen Exp $
-
-  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> hal-0.5.14-r4.ebuild:
-  Block both sys-fs/udisks and sys-power/upower to prevent overlapping.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.335 2011/03/27 21:59:14 ssuominen Exp $
 
   21 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> hal-0.5.14-r4.ebuild:
   Commit 0011-hal-0.5.14-no-more-videodev_h.patch to patchset (fixing build
