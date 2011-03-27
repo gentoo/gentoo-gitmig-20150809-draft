@@ -2,5 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>selinux</herd>
+	<use>
+		<flag name='hal'>Enable obsolete <pkg>sys-apps/hal</pkg> support</flag>
+	</use>
 	<longdescription>Gentoo SELinux policy for desktop</longdescription>
 </pkgmetadata>
