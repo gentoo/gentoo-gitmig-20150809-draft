@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/qconf-1.5_pre717-r1.ebuild,v 1.1 2010/12/20 11:48:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/qconf-1.5_pre717-r1.ebuild,v 1.2 2011/03/27 19:44:13 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://delta.affinix.com/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-libs/qt-core"
