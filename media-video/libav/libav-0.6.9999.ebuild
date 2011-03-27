@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.9999.ebuild,v 1.2 2011/03/25 13:17:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.9999.ebuild,v 1.3 2011/03/27 14:11:07 lu_zero Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://libav.org/"
 if [[ ${PV} == *9999 ]] ; then
 	SRC_URI=""
 elif [[ "${PV%_p*}" != "${PV}" ]] ; then # Gentoo snapshot
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P}.tar.xz"
 else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.bz2"
 fi
