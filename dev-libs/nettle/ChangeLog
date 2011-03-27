@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.35 2011/03/26 20:58:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.36 2011/03/27 19:06:39 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> nettle-2.1.ebuild:
+  stable ppc, bug 337160
 
   26 Mar 2011; Tobias Klausmann <klausman@gentoo.org> nettle-2.1.ebuild:
   Stable on alpha, bug #337160
