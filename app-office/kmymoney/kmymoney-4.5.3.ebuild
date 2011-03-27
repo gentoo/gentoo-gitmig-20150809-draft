@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5.3.ebuild,v 1.3 2011/03/13 16:04:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5.3.ebuild,v 1.4 2011/03/27 22:45:50 arfrever Exp $
 
 EAPI=3
 
@@ -68,6 +68,5 @@ src_install() {
 }
 
 src_test() {
-	export maketype="kde4-base_src_test"
-	virtualmake
+	VIRTUALX_COMMAND="kde4-base_src_test" virtualmake
 }
