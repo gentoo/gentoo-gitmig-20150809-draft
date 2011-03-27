@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnomad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.41 2011/03/24 19:43:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomad/ChangeLog,v 1.42 2011/03/27 13:17:18 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> gnomad-2.9.4-r2.ebuild:
+  x86 stable wrt #356705
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org> gnomad-2.9.4-r2.ebuild:
   Stable on amd64 wrt bug #356705
