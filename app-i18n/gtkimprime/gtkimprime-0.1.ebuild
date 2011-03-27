@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.4 2009/12/31 21:07:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/gtkimprime/gtkimprime-0.1.ebuild,v 1.5 2011/03/27 10:44:38 nirbheek Exp $
+
+EAPI="1"
 
 DESCRIPTION="Yet another PRIME client for GTK+2"
 HOMEPAGE="http://gtkimprime.sourceforge.jp/"
@@ -11,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.4
+DEPEND=">=x11-libs/gtk+-2.4:2
 	>=app-i18n/prime-0.9.2-r1"
 
 get_gtk_confdir() {

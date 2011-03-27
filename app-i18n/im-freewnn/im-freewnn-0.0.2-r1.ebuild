@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2-r1.ebuild,v 1.1 2009/12/31 14:56:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-freewnn/im-freewnn-0.0.2-r1.ebuild,v 1.2 2011/03/27 10:45:44 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools eutils multilib
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4:2
 	>=app-i18n/freewnn-1.1.1_alpha21-r1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
