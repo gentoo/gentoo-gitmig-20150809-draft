@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.2 2011/03/23 23:30:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.3 2011/03/27 15:29:09 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cdr daap doc gnome-keyring hal ipod +lastfm libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
+IUSE="cdr daap doc gnome-keyring ipod +lastfm libnotify lirc musicbrainz mtp nsplugin python test udev upnp webkit"
 
 # FIXME: double check what to do with fm-radio plugin
 # TODO: watchout for udev use flag changes
@@ -43,10 +43,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 		ipod? ( >=media-libs/libgpod-0.7.92 )
 		mtp? ( >=media-libs/libmtp-0.3 )
 		>=sys-fs/udev-145[extras] )
-	hal? (
-		ipod? ( >=media-libs/libgpod-0.6 )
-		mtp? ( >=media-libs/libmtp-0.3 )
-		>=sys-apps/hal-0.5 )
 	lastfm? ( dev-libs/json-glib )
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	lirc? ( app-misc/lirc )
@@ -100,25 +96,20 @@ pkg_setup() {
 		G2CONF="${G2CONF} PYTHON=$(PYTHON -2)"
 	fi
 
-	if ! use hal && ! use udev; then
+	if ! use udev; then
 		if use ipod; then
-			ewarn "ipod support requires hal or udev support.  Please"
+			ewarn "ipod support requires udev support.  Please"
 			ewarn "re-emerge with USE=udev to enable ipod support"
 			G2CONF="${G2CONF} --without-ipod"
 		fi
 
 		if use mtp; then
-			ewarn "MTP support requires hal or udev support.  Please"
+			ewarn "MTP support requires udev support.  Please"
 			ewarn "re-emerge with USE=udev to enable MTP support"
 			G2CONF="${G2CONF} --without-mtp"
 		fi
 	else
 		G2CONF="${G2CONF} $(use_with ipod) $(use_with mtp)"
-	fi
-
-	if use hal && use udev; then
-		einfo "udev support replaces hal support completely. You can disable"
-		einfo "hal on this package via /etc/portage/package.use."
 	fi
 
 	if ! use cdr ; then
@@ -139,7 +130,7 @@ pkg_setup() {
 		GST_INSPECT=$(type -P true)
 		$(use_with gnome-keyring)
 		$(use_with udev gudev)
-		$(use_with hal)
+		--without-hal
 		$(use_enable lastfm)
 		$(use_enable libnotify)
 		$(use_enable lirc)
