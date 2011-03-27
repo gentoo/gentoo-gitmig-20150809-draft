@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
-<use>
-	<flag name="battstat">Enable deprecated battery applet for people
-	unable to use <pkg>gnome-extra/gnome-power-manager</pkg>
-	instead.</flag>
-</use>
 </pkgmetadata>
