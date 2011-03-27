@@ -1,9 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.214 2011/03/27 16:03:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.215 2011/03/27 17:34:53 flameeyes Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
+#
+# Mask pdnsd's Linux-specific USE flags.
+net-dns/pdnsd isdn urandom
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Mar 2011)
 # Remove this when KDE 4.6 is stable.

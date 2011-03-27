@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.19 2011/03/09 14:56:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.20 2011/03/27 17:34:53 flameeyes Exp $
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
@@ -20,3 +20,8 @@ sys-libs/glibc hardened
 # Mask usb USE flag for newest PCSC-Lite, since on Linux we want to
 # use libudev instead.
 >=sys-apps/pcsc-lite-1.7.0 usb
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
+#
+# Unmask pdnsd's Linux-specific USE flags.
+net-dns/pdnsd -isdn -urandom
