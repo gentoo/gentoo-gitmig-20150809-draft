@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/blueman
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.9 2010/10/31 22:36:01 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.10 2011/03/27 17:25:33 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> blueman-1.21-r1.ebuild:
+  Remove sys-apps/hal support wrt #313389.
 
   31 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   blueman-1.21-r1.ebuild:

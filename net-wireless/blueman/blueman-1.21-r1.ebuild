@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.5 2010/10/31 22:47:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.21-r1.ebuild,v 1.6 2011/03/27 17:25:33 ssuominen Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gnome hal network nls policykit pulseaudio"
+IUSE="gnome network nls policykit pulseaudio"
 
 CDEPEND="dev-libs/glib:2
 	>=x11-libs/gtk+-2.12:2
@@ -56,7 +56,7 @@ src_configure() {
 	econf \
 		--disable-static \
 		$(use_enable policykit polkit) \
-		$(use_enable hal) \
+		--disable-hal \
 		$(use_enable nls)
 }
 
