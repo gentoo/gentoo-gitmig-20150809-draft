@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.110 2011/03/03 14:51:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.111 2011/03/27 10:20:54 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> scite-2.22.ebuild,
+  scite-2.24.ebuild:
+  Fix slot-dep on gtk+
 
 *scite-2.24 (03 Mar 2011)
 

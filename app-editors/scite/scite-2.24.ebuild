@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.24.ebuild,v 1.1 2011/03/03 14:51:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.24.ebuild,v 1.2 2011/03/27 10:20:54 nirbheek Exp $
+
+EAPI="1"
 
 inherit toolchain-funcs eutils
 
@@ -14,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="lua"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	lua? ( >=dev-lang/lua-5 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.77 2010/08/10 10:17:18 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.78 2011/03/27 10:20:03 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> mp-3.3.18b.ebuild,
+  mp-5.1.1.ebuild, mp-5.1.3.ebuild:
+  Fix slot-dep on gtk+
 
   10 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> mp-5.1.3.ebuild:
   Re-introduce -j1 for build/install. Still bug #326987.

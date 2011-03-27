@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.10 2010/05/22 09:02:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.11 2011/03/27 10:20:03 nirbheek Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="gtk ncurses nls pcre"
 
 RDEPEND="!dev-util/rej
 	ncurses? ( sys-libs/ncurses )
-	gtk? ( >=x11-libs/gtk+-2 >=x11-libs/pango-1.8.0 )
+	gtk? ( x11-libs/gtk+:2 >=x11-libs/pango-1.8.0 )
 	!gtk? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	pcre? ( dev-libs/libpcre )
