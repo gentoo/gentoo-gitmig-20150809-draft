@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.1.ebuild,v 1.2 2011/03/26 17:16:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.1.ebuild,v 1.3 2011/03/27 10:42:10 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -84,6 +84,7 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
+	dodoc CHANGES-5.0.txt || die
 	dohtml -r docs/html/refman/* || die
 	doman docs/man/*.3 || die
 }
