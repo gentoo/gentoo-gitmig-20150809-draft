@@ -21,7 +21,7 @@ ffmpeg
 # No hardware to test
 bluetooth
 dvd
-iphone
+ios
 
 # Stuff we don't want
 chicken

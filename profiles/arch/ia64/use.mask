@@ -11,7 +11,7 @@ dvd
 gnokii
 gphoto2
 gps
-iphone
+ios
 ipod
 ivtv
 lirc

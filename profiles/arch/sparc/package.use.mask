@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.68 2011/02/22 21:23:18 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.69 2011/03/27 15:47:31 ssuominen Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (27 Jan 2011)
 # missing keywords on needed plugins
@@ -34,7 +34,7 @@ media-gfx/povray mkl
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs libimobiledevice keyworded (bug 325839)
-gnome-base/gvfs iphone
+gnome-base/gvfs ios
 
 # Steve Arnold <nerdboy@gentoo.org> (12 Jun 2010)
 # masking for gdal (see bug 315659)
