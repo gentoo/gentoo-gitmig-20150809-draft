@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-0.5.8.ebuild,v 1.1 2011/01/02 14:18:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-0.5.8.ebuild,v 1.2 2011/03/27 16:55:55 a3li Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -11,7 +11,7 @@ RUBY_FAKEGEM_TASK_TEST="spec"
 inherit ruby-fakegem
 
 DESCRIPTION="Ohai profiles your system and emits JSON"
-HOMEPAGE="http://wiki.opscode.com/display/ohai"
+HOMEPAGE="http://wiki.opscode.com/display/chef/Ohai"
 
 LICENSE="Apache-2.0"
 SLOT="0"
