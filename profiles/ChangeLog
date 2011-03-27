@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5210 2011/03/27 20:14:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5211 2011/03/27 23:51:48 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Temporarily mask =sys-apps/pciutils-3.1.7-r1.
 
   27 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask app-text/xxddiff app-text/mxml2man sys-block/unieject for removal.
