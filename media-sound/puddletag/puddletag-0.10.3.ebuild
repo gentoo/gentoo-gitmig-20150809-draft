@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-0.10.0.ebuild,v 1.2 2011/03/11 19:37:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-0.10.3.ebuild,v 1.1 2011/03/27 17:38:03 billie Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
+EAPI=2
+
+PYTHON_DEPEND=2
+PYTHON_MODNAME=puddlestuff
 
 inherit distutils fdo-mime python
 
@@ -26,8 +28,6 @@ RDEPEND=">=dev-python/PyQt4-4.5
 	quodlibet? ( >=media-sound/quodlibet-2.2.1 )
 	>=dev-python/sip-4.11.2
 	>=dev-python/lxml-2.2.8"
-
-PYTHON_MODNAME="puddlestuff"
 
 pkg_setup() {
 	python_set_active_version 2
