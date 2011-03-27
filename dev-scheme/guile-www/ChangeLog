@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/guile-www
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.21 2011/01/24 13:59:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.22 2011/03/27 10:27:22 jlec Exp $
+
+*guile-www-2.30 (27 Mar 2011)
+
+  27 Mar 2011; Justin Lecher <jlec@gentoo.org> +guile-www-2.30.ebuild:
+  Version Bump, #360751
 
   24 Jan 2011; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   This is another dep of sci-chemistry/coot, assign to sci-chemistry like
