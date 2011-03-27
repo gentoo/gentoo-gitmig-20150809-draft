@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.87 2011/03/27 16:01:49 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.88 2011/03/27 17:28:14 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Move USE="hal" description here from use.desc.
 
   27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> nut-2.6.0.ebuild:
   Stable on alpha, bug #360739
