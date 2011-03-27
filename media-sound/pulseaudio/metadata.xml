@@ -7,6 +7,7 @@
     <name>Arun Raghavan</name>
   </maintainer>
   <use>
+    <flag name='hal'>Enable obsolete <pkg>sys-apps/hal</pkg> support</flag>
     <flag name="X">
       Build the X11 publish module to export PulseAudio information
       through X11 protocol for clients to make use. Don't enable this
