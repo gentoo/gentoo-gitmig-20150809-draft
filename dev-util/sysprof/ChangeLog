@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/sysprof
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/ChangeLog,v 1.15 2009/05/27 11:02:05 remi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/ChangeLog,v 1.16 2011/03/27 13:09:22 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> sysprof-1.0.12.ebuild,
+  sysprof-1.0.12-r1.ebuild:
+  Fix slot-dep on gtk+
 
 *sysprof-1.0.12-r1 (27 May 2009)
 
