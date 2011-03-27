@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.128 2011/03/22 19:36:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.129 2011/03/27 05:27:41 nirbheek Exp $
+
+*gthumb-2.13.1 (27 Mar 2011)
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/gthumb-no-brasero3.patch, +gthumb-2.13.1.ebuild:
+  Bump to 2.13.1, fix building with gtk+-2.24 and brasero-3
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gthumb-2.12.2.ebuild:
   Marking gthumb-2.12.2 ppc stable for bug 353436
