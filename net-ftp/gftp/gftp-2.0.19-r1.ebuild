@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.19-r1.ebuild,v 1.6 2009/08/09 12:45:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.19-r1.ebuild,v 1.7 2011/03/27 12:34:48 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,11 +15,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="gtk ssl"
 
-RDEPEND=">=dev-libs/glib-2
+RDEPEND="dev-libs/glib:2
 		 sys-devel/gettext
 		 sys-libs/ncurses
 		 sys-libs/readline
-		 gtk? ( >=x11-libs/gtk+-2 )
+		 gtk? ( x11-libs/gtk+:2 )
 		 ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9"

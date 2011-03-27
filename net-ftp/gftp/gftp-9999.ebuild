@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-9999.ebuild,v 1.1 2008/07/27 21:02:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-9999.ebuild,v 1.2 2011/03/27 12:34:48 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools eutils subversion
 
@@ -14,10 +16,10 @@ SLOT="0"
 KEYWORDS=""
 IUSE="gtk ssl"
 
-RDEPEND=">=dev-libs/glib-2
+RDEPEND="dev-libs/glib:2
 		 sys-libs/ncurses
 		 sys-libs/readline
-		 gtk? ( >=x11-libs/gtk+-2 )
+		 gtk? ( x11-libs/gtk+:2 )
 		 ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 		  sys-devel/gettext
