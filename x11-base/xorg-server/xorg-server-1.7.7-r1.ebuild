@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7-r1.ebuild,v 1.11 2010/10/21 13:03:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.7-r1.ebuild,v 1.12 2011/03/27 17:23:01 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,9 +20,8 @@ DESCRIPTION="X.Org X servers"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 
 IUSE_SERVERS="dmx kdrive xorg"
-IUSE="${IUSE_SERVERS} tslib hal ipv6 minimal nptl sdl"
-RDEPEND="hal? ( sys-apps/hal )
-	tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
+IUSE="${IUSE_SERVERS} tslib ipv6 minimal nptl sdl"
+RDEPEND="tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
 	dev-libs/openssl
 	>=x11-libs/libXfont-1.3.3
 	>=x11-libs/xtrans-1.2.2
@@ -167,7 +166,7 @@ pkg_setup() {
 		$(use_enable !minimal glx)
 		$(use_enable xorg)
 		$(use_enable nptl glx-tls)
-		$(use_enable hal config-hal)
+		--disable-config-hal
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
 		--enable-install-setuid

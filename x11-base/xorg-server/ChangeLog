@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.575 2011/03/18 18:42:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.576 2011/03/27 17:23:01 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xorg-server-1.7.7-r1.ebuild:
+  Remove sys-apps/hal support wrt #313389.
 
   18 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/0002-Fix-linking-with-tslib-with-Wl-as-needed.patch,
