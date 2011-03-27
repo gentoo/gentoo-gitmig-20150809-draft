@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.13 2011/03/22 19:08:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.14 2011/03/27 10:15:15 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,11 +14,10 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
-IUSE="battstat gnome gstreamer hal ipv6 networkmanager policykit"
+IUSE="gnome gstreamer ipv6 networkmanager policykit"
 
 # TODO: configure says python stuff is optional
 # null applet still needs bonobo support for gnome-panel
-HALDEPEND=" hal? ( >=sys-apps/hal-0.5.3 ) "
 RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/glib-2.22:2
 	>=gnome-base/gconf-2.8:2
@@ -34,7 +33,6 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/libgweather-2.22.1:2
 	x11-libs/libX11
 
-	battstat? ( $HALDEPEND )
 	gnome?	(
 		gnome-base/gnome-settings-daemon
 		gnome-base/libgnome
@@ -68,18 +66,14 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF}
+		--without-hal
+		--disable-battstat
 		--disable-scrollkeeper
 		--disable-schemas-install
 		$(use_enable gstreamer mixer-applet)
 		$(use_enable ipv6)
 		$(use_enable networkmanager)
 		$(use_enable policykit polkit)"
-
-	if use battstat; then
-		G2CONF="${G2CONF} $(use_with hal)"
-	else
-		G2CONF="${G2CONF} --without-hal --disable-battstat"
-	fi
 
 	python_set_active_version 2
 }
@@ -114,7 +108,7 @@ src_test() {
 src_install() {
 	gnome2_src_install
 
-	local APPLETS="accessx-status battstat charpick cpufreq drivemount geyes
+	local APPLETS="accessx-status charpick cpufreq drivemount geyes
 			 gkb-new gswitchit gweather invest-applet mini-commander
 			 mixer modemlights multiload null_applet stickynotes trashapplet"
 
@@ -131,12 +125,6 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-
-	if use battstat && ! use hal ; then
-		elog "It is highly recommended that you install acpid if you use the"
-		elog "battstat applet to prevent any issues with other applications"
-		elog "trying to read acpi information."
-	fi
 
 	# check for new python modules on bumps
 	python_mod_optimize invest
