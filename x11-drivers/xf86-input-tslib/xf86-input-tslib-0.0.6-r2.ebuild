@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r2.ebuild,v 1.9 2010/10/21 01:10:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r2.ebuild,v 1.10 2011/03/27 17:09:14 ssuominen Exp $
 
 EAPI=2
 
@@ -31,8 +31,6 @@ S=${WORKDIR}/${PN}-trunk
 src_install() {
 	DOCS="COPYING ChangeLog"
 	x-modular_src_install
-	insinto /usr/share/hal/fdi/policy/20thirdparty/
-	doins "${S}/debian/10-x11-input-tslib.fdi"
 }
 
 src_prepare() {

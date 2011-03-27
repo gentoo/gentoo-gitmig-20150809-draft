@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-tslib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/ChangeLog,v 1.38 2010/10/21 15:22:16 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/ChangeLog,v 1.39 2011/03/27 17:09:14 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-input-tslib-0.0.6-r2.ebuild:
+  Stop installing 10-x11-input-tslib.fdi file for sys-apps/hal.
 
   21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86-input-tslib-0.0.6-r1.ebuild:
