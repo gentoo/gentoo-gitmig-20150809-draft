@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.7.ebuild,v 1.1 2011/03/22 00:38:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.7.ebuild,v 1.2 2011/03/27 15:48:03 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="archive avahi bluetooth cdda doc fuse gdu gnome gnome-keyring gphoto2 hal
-+http iphone samba +udev"
++http ios samba +udev"
 
 RDEPEND=">=dev-libs/glib-2.23.4
 	>=sys-apps/dbus-1.0
@@ -33,7 +33,7 @@ RDEPEND=">=dev-libs/glib-2.23.4
 	gnome? ( >=gnome-base/gconf-2.0 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-1.0 )
 	gphoto2? ( >=media-libs/libgphoto2-2.4.7 )
-	iphone? ( app-pda/libimobiledevice )
+	ios? ( app-pda/libimobiledevice )
 	udev? (
 		cdda? ( >=dev-libs/libcdio-0.78.2[-minimal] )
 		>=sys-fs/udev-145[extras] )
@@ -68,7 +68,7 @@ pkg_setup() {
 		$(use_enable gdu)
 		$(use_enable gnome gconf)
 		$(use_enable gphoto2)
-		$(use_enable iphone afc)
+		$(use_enable ios afc)
 		$(use_enable udev gudev)
 		$(use_enable http)
 		$(use_enable gnome-keyring keyring)
