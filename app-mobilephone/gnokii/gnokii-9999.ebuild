@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.7 2010/06/17 20:07:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.8 2011/03/27 12:11:23 nirbheek Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
 RDEPEND="!app-mobilephone/smstools
 	sys-apps/pcsc-lite
-	X? ( >=x11-libs/gtk+-2 )
+	X? ( x11-libs/gtk+:2 )
 	bluetooth? ( net-wireless/bluez )
 	sms? (
 		!app-mobilephone/smstools
