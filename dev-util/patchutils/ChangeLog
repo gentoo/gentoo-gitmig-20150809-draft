@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.63 2011/03/02 01:51:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.64 2011/03/27 21:58:58 darkside Exp $
+
+  27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -patchutils-0.3.0.ebuild:
+  remove old ebuilds
 
   02 Mar 2011; Brent Baude <ranger@gentoo.org> patchutils-0.3.1.ebuild:
   stable ppc64, bug 350896
