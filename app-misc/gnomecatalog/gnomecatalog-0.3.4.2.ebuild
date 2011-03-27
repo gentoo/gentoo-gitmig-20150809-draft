@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/gnomecatalog-0.3.4.2.ebuild,v 1.2 2011/01/12 15:06:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/gnomecatalog-0.3.4.2.ebuild,v 1.3 2011/03/27 11:59:53 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -19,16 +19,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/gconf-python
-	dev-python/gnome-vfs-python
+RDEPEND="dev-python/gconf-python:2
+	dev-python/gnome-vfs-python:2
 	dev-python/kaa-metadata
-	dev-python/libgnome-python
-	dev-python/pygobject
-	>=dev-python/pygtk-2.4
+	dev-python/libgnome-python:2
+	dev-python/pygobject:2
+	>=dev-python/pygtk-2.4:2
 	dev-python/pysqlite:2
 	dev-python/pyvorbis
-	>=gnome-base/libglade-2
-	>=x11-libs/gtk+-2.4"
+	>=gnome-base/libglade-2:2.0
+	>=x11-libs/gtk+-2.4:2"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
