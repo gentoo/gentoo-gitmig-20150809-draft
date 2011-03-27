@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.6.4.ebuild,v 1.2 2011/01/14 22:13:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.6.4.ebuild,v 1.3 2011/03/27 22:48:44 arfrever Exp $
 
 EAPI="3"
 
@@ -44,8 +44,7 @@ src_test() {
 	local ctestargs
 	[[ -n ${TEST_VERBOSE} ]] && ctestargs="--extra-verbose --output-on-failure"
 
-	export maketype="ctest ${ctestargs}"
-	virtualmake || die "Tests failed."
+	VIRTUALX_COMMAND="ctest ${ctestargs}" virtualmake || die "Tests failed."
 
 	popd > /dev/null
 }
