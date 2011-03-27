@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12615 2011/03/27 19:20:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12616 2011/03/27 20:14:09 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,22 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
+# Last release in 2006, nobody looking after it.
+# Pending removal on 2011-04-27
+app-text/ssddiff
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
+# Abandoned project of mine. Nothing really use it.
+# Pending removal on 2011-04-27
+app-text/mxml2man
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
+# Abandoned project of mine; doesn't work as intended on Linux
+# nowadays.
+# Pending removal on 2011-04-27
+sys-block/unieject
 
 # Jeroen Roovers <jer@gentoo.org> (27 Mar 2011)
 # Unmaintained, does not work with IPv6 (bug #257353), forked to iptraf-ng (bug
