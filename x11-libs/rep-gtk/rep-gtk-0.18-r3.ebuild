@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.10 2008/05/17 14:11:56 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.11 2011/03/27 13:00:49 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs multilib
 
@@ -14,8 +16,8 @@ KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="gnome"
 
 RDEPEND=">=dev-libs/librep-0.13
-	>=gnome-base/libglade-2.0.0
-	>=x11-libs/gtk+-2.0.3
+	>=gnome-base/libglade-2.0.0:2.0
+	>=x11-libs/gtk+-2.0.3:2
 	gnome? ( >=gnome-base/libbonobo-2.0.0
 		>=gnome-base/libbonoboui-2.0.0
 		>=gnome-base/libgnome-2.0.0

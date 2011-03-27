@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.3.ebuild,v 1.1 2010/06/05 21:00:32 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.3.ebuild,v 1.2 2011/03/27 13:00:49 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils multilib
 
@@ -14,8 +16,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/librep-0.90.5
-	>=dev-libs/glib-2.6
-	>=x11-libs/gtk+-2.12"
+	>=dev-libs/glib-2.6:2
+	>=x11-libs/gtk+-2.12:2"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
