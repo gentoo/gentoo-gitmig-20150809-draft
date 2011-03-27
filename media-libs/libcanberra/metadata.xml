@@ -14,6 +14,6 @@
 	This is the preferred choice for best sound events experience and picked by default if compiled in and
 	possible to use at runtime.</flag>
   <flag name='sound'>Install x11-themes/sound-theme-freedesktop to get sounds on Gnome and Xfce.</flag>
-  <flag name='tdb'>Enables Trivial Database support</flag>
+  <flag name='tdb'>Enables Trivial Database support for caching purposes.</flag>
 </use>
 </pkgmetadata>
