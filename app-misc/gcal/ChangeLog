@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.36 2011/01/30 18:36:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.37 2011/03/27 21:52:03 darkside Exp $
+
+  27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -gcal-3.01-r3.ebuild:
+  remove old ebuilds
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org> gcal-3.6.ebuild:
   alpha/sparc stable wrt #350683

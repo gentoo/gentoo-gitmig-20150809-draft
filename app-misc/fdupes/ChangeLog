@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.42 2011/03/21 10:47:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.43 2011/03/27 21:51:37 darkside Exp $
+
+  27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -fdupes-1.40-r3.ebuild,
+  -fdupes-1.40-r4.ebuild:
+  remove old ebuilds
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> fdupes-1.50_pre2.ebuild:
   ppc64 stable wrt #350570

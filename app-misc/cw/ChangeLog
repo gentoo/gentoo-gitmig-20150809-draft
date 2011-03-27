@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.29 2011/03/19 20:32:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/ChangeLog,v 1.30 2011/03/27 21:51:11 darkside Exp $
+
+  27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -cw-1.0.15.ebuild:
+  remove old ebuilds
 
   19 Mar 2011; Thomas Kahle <tomka@gentoo.org> cw-1.0.16-r2.ebuild:
   x86 stable per bug 356881

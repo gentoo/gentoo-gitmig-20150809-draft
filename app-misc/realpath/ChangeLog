@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.14 2011/01/01 08:44:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.15 2011/03/27 21:52:55 darkside Exp $
+
+  27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -realpath-1.15.ebuild,
+  -realpath-1.15-r2.ebuild:
+  remove old ebuilds
 
   01 Jan 2011; Justin Lecher <jlec@gentoo.org> realpath-1.15.ebuild,
   realpath-1.15-r1.ebuild, realpath-1.15-r2.ebuild, realpath-1.15-r3.ebuild:
