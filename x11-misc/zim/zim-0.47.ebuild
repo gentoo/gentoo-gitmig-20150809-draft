@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.47.ebuild,v 1.1 2010/06/15 17:06:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.47.ebuild,v 1.2 2011/03/27 22:56:04 arfrever Exp $
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
@@ -37,8 +37,7 @@ src_prepare() {
 }
 
 src_test() {
-	export maketype="$(PYTHON)"
-	virtualmake test.py || die
+	VIRTUALX_COMMAND="$(PYTHON)" virtualmake test.py || die
 }
 
 src_install () {
