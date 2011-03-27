@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/muine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.68 2011/03/21 20:27:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.69 2011/03/27 11:53:36 pacho Exp $
+
+  27 Mar 2011; Pacho Ramos <pacho@gentoo.org> -muine-0.8.11-r1.ebuild,
+  muine-0.8.11-r2.ebuild:
+  Remove old and pin deps to proper slots.
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> muine-0.8.11-r2.ebuild:
   Marking muine-0.8.11-r2 ppc stable for bug 359651
