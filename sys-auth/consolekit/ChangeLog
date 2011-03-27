@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.95 2011/02/26 11:05:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.96 2011/03/27 14:34:35 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> consolekit-0.4.4.ebuild:
+  Marking consolekit-0.4.4 ppc for bug 360769
 
 *consolekit-0.4.4 (26 Feb 2011)
 
