@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6-r2.ebuild,v 1.1 2011/03/27 18:05:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6-r2.ebuild,v 1.2 2011/03/27 18:06:47 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit cmake-utils multilib mono python
+inherit cmake-utils mono python
 
 DESCRIPTION="Library for automatic proxy configuration management"
 HOMEPAGE="http://code.google.com/p/libproxy/"
