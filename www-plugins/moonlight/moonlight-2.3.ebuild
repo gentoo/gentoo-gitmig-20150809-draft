@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.4 2010/11/27 15:03:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.5 2011/03/27 11:55:13 pacho Exp $
 
 EAPI=2
 
@@ -23,8 +23,8 @@ RESTRICT="mirror"
 
 RDEPEND="
 	curl? ( net-misc/curl )
-	>=x11-libs/gtk+-2.14
-	>=dev-libs/glib-2.18
+	>=x11-libs/gtk+-2.14:2
+	>=dev-libs/glib-2.18:2
 	>=x11-libs/cairo-1.8.4
 	>=media-video/ffmpeg-0.4.9_p20090121
 	>=net-libs/xulrunner-1.9.1:1.9
@@ -33,10 +33,10 @@ RDEPEND="
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.14 )
 	>=media-libs/freetype-2.3.7
 	>=media-libs/fontconfig-2.6.0
-	>=dev-lang/mono-2.6.1
-	>=dev-dotnet/gtk-sharp-2.12.9
-	dev-dotnet/wnck-sharp
-	dev-dotnet/rsvg-sharp"
+	=dev-lang/mono-2.6*
+	>=dev-dotnet/gtk-sharp-2.12.9:2
+	dev-dotnet/wnck-sharp:2
+	dev-dotnet/rsvg-sharp:2"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.23
 	dev-libs/expat"
