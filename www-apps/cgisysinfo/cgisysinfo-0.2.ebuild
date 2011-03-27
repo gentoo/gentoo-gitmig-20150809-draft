@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgisysinfo/cgisysinfo-0.1.ebuild,v 1.1 2011/03/02 02:04:25 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgisysinfo/cgisysinfo-0.2.ebuild,v 1.1 2011/03/27 04:31:18 rafaelmartins Exp $
 
 EAPI="4"
 
@@ -16,16 +16,23 @@ else
 fi
 
 DESCRIPTION="A small cgi utility to show basic system information."
-HOMEPAGE="http://labs.rafaelmartins.org/wiki/cgisysinfo"
+HOMEPAGE="http://labs.rafaelmartins.eng.br/wiki/cgisysinfo"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="fastcgi"
+
+DEPEND="fastcgi? ( dev-libs/fcgi )"
+RDEPEND="${DEPEND}"
 
 DOCS="README AUTHORS NEWS"
 
 src_prepare() {
 	[[ ${PV} = *9999* ]] && eautoreconf
+}
+
+src_configure() {
+	econf $(use_enable fastcgi)
 }
 
 pkg_postinst() {
