@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.21.ebuild,v 1.6 2011/02/17 19:47:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.24.ebuild,v 1.1 2011/03/27 14:24:07 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -12,22 +12,25 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="2.4"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc mono"
 
-RDEPEND=">=dev-libs/glib-2.12
+RDEPEND=">=dev-libs/glib-2.12:2
 	sys-libs/zlib
 	mono? (
 		dev-lang/mono
-		>=dev-dotnet/gtk-sharp-2.4.0 )"
+		>=dev-dotnet/glib-sharp-2.4.0:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
 		>=dev-util/gtk-doc-1.8
 		app-text/docbook-sgml-utils )
-	mono? ( dev-dotnet/gtk-sharp-gapi )"
+	mono? ( dev-dotnet/gtk-sharp-gapi:2 )"
 
-DOCS="AUTHORS ChangeLog NEWS PORTING README TODO"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS PORTING README TODO"
+	G2CONF="${G2CONF} $(use_enable mono) --enable-cryptography"
+}
 
 src_prepare() {
 	gnome2_src_prepare
@@ -53,10 +56,6 @@ src_prepare() {
 	elibtoolize
 }
 
-src_configure() {
-	econf $(use_enable mono) $(use_enable doc gtk-doc) --enable-cryptography
-}
-
 src_compile() {
 	MONO_PATH="${S}" emake || die "emake failed"
 	if use doc; then
@@ -65,7 +64,7 @@ src_compile() {
 }
 
 src_install() {
-	emake GACUTIL_FLAGS="/root '${ED}/usr/$(get_libdir)' /gacdir ${EPREFIX}/usr/$(get_libdir) /package ${PN}" \
+	emake GACUTIL_FLAGS="/root '${ED}/usr/$(get_libdir)' /gacdir '${EPREFIX}/usr/$(get_libdir)' /package ${PN}" \
 		DESTDIR="${D}" install || die "installation failed"
 
 	if use doc ; then
