@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/byobu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.10 2010/11/05 23:36:38 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.11 2011/03/27 21:36:05 darkside Exp $
+
+  27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -byobu-2.65.ebuild:
+  remove old ebuilds
 
 *byobu-3.5 (05 Nov 2010)
 
