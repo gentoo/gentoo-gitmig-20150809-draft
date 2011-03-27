@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.37 2011/03/22 13:53:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.38 2011/03/27 11:02:31 jlec Exp $
+
+  27 Mar 2011; Justin Lecher <jlec@gentoo.org> vmd-1.9.ebuild:
+  Correct version of cuda dep, #360401
 
 *vmd-1.9 (22 Mar 2011)
 
