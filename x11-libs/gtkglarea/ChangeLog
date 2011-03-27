@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkglarea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.45 2011/03/23 17:09:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/ChangeLog,v 1.46 2011/03/27 12:56:30 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gtkglarea-2.0.1.ebuild:
+  Fix slot-dep on gtk+
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> -gtkglarea-1.99.0.ebuild,
   -gtkglarea-2.0.0.ebuild:
