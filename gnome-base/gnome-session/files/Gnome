@@ -9,13 +9,6 @@ if [ -f /etc/xdg/menus/gnome-applications.menu ] ; then
 	export XDG_MENU_PREFIX=gnome-
 fi
 
-if [ -z "$XDG_DATA_DIRS" ]; then
-	XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/
-else
-	XDG_DATA_DIRS=/usr/share/gnome:"$XDG_DATA_DIRS"
-fi
-export XDG_DATA_DIRS
-
 for errfile in "$HOME/.gnomerc-errors" "${TMPDIR-/tmp}/gnomerc-$USER" "/tmp/gnomerc-$USER"
 do
 	if ( cp /dev/null "$errfile" 2> /dev/null )
