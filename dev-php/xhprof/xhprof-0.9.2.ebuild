@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xhprof/xhprof-0.9.2.ebuild,v 1.1 2011/03/26 18:02:29 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xhprof/xhprof-0.9.2.ebuild,v 1.2 2011/03/27 04:50:11 mr_bones_ Exp $
 
 EAPI="2"
 
 PHP_EXT_S="${WORKDIR}/${P}/extension"
-inherit php-ext-pecl-r2 
+inherit php-ext-pecl-r2
 
 KEYWORDS="~amd64 ~x86"
 
@@ -19,6 +19,3 @@ DEPEND=""
 RDEPEND="${DEPEND}
 		dev-lang/php
 		"
-
-
-
