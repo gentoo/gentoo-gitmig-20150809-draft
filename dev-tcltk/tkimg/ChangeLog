@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.22 2011/02/25 20:50:20 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.23 2011/03/27 17:20:26 jlec Exp $
+
+  27 Mar 2011; Justin Lecher <jlec@gentoo.org> tkimg-1.4.20100510.ebuild,
+  +files/tkimg-1.4.20100510-boolean.patch:
+  Fix double declaration of BOOLEAN, #359241; thanks Dennis Yxun
 
   25 Feb 2011; Kevin McCarthy <signals@gentoo.org> tkimg-1.4.ebuild,
   tkimg-1.4.20100510.ebuild:
