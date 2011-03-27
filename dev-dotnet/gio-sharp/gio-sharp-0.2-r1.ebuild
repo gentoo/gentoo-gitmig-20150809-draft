@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gio-sharp/gio-sharp-0.2-r1.ebuild,v 1.2 2011/03/24 11:41:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gio-sharp/gio-sharp-0.2-r1.ebuild,v 1.3 2011/03/27 14:35:39 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils mono
@@ -11,7 +11,7 @@ SRC_URI="http://github.com/mono/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-dotnet/glib-sharp-2.12
