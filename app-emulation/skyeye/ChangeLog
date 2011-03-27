@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/skyeye
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/skyeye/ChangeLog,v 1.2 2007/02/08 21:50:48 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/skyeye/ChangeLog,v 1.3 2011/03/27 10:27:46 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> skyeye-1.0.0.ebuild:
+  Fix slot-dep on gtk+/glib
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

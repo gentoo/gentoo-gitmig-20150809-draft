@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.10 2008/05/30 01:37:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.11 2011/03/27 10:25:00 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -21,7 +23,7 @@ RDEPEND="dev-lang/perl
 	png? ( media-libs/libpng )
 	~app-emulation/libspectrum-0.2.2
 	|| (
-		gtk? ( >=x11-libs/gtk+-2 )
+		gtk? ( x11-libs/gtk+:2 )
 		sdl? ( media-libs/libsdl )
 		svga? ( media-libs/svgalib )
 		fbcon? ( virtual/linux-sources )
@@ -29,7 +31,7 @@ RDEPEND="dev-lang/perl
 			x11-libs/libX11
 			x11-libs/libXext ) ) )
 	)
-	>=dev-libs/glib-2
+	dev-libs/glib:2
 	libdsk? ( >=app-emulation/libdsk-1.1.5
 		app-emulation/lib765 )"
 

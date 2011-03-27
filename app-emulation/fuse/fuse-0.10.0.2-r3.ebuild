@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.10.0.2-r3.ebuild,v 1.1 2009/12/22 04:38:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.10.0.2-r3.ebuild,v 1.2 2011/03/27 10:25:00 nirbheek Exp $
+
+EAPI="1"
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://fuse-emulator.sourceforge.net"
@@ -15,7 +17,7 @@ IUSE="alsa ao fbcon gpm gtk joystick libsamplerate memlimit sdl svga X xml"
 # order of precedence: gtk, sdl, X, svga and fbcon. X version of fuse will
 # be built if no valid user interface flag is chosen.
 RDEPEND=">=app-emulation/libspectrum-0.5
-	gtk? ( >=x11-libs/gtk+-2
+	gtk? ( x11-libs/gtk+:2
 		alsa? ( media-libs/alsa-lib )
 		!alsa? ( ao? ( media-libs/libao ) )
 		joystick? ( media-libs/libjsw ) )
@@ -42,7 +44,7 @@ RDEPEND=">=app-emulation/libspectrum-0.5
 						alsa? ( media-libs/alsa-lib )
 						!alsa? ( ao? ( media-libs/libao ) )
 						joystick? ( media-libs/libjsw ) ) ) ) ) )
-	>=dev-libs/glib-2
+	dev-libs/glib:2
 	media-libs/libpng
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.0 )
 	xml? ( dev-libs/libxml2 )"

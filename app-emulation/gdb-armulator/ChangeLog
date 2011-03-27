@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/gdb-armulator
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gdb-armulator/ChangeLog,v 1.3 2008/04/20 01:59:17 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gdb-armulator/ChangeLog,v 1.4 2011/03/27 10:25:17 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gdb-armulator-5.0.ebuild:
+  Fix slot-dep on gtk+/glib
 
   20 Apr 2008; Mike Frysinger <vapier@gentoo.org>
   +files/gdb-armulator-5.0-objstack.patch, +files/gtk-config,
