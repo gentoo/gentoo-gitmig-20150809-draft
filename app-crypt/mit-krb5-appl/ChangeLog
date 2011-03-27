@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5-appl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.6 2011/03/18 04:29:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.7 2011/03/27 15:27:55 klausman Exp $
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org>
+  mit-krb5-appl-1.0.1.ebuild:
+  Stable on alpha, bug #358597
 
   18 Mar 2011; Jeroen Roovers <jer@gentoo.org> mit-krb5-appl-1.0.1.ebuild:
   Stable for HPPA (bug #358597).
