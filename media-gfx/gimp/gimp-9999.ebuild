@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.33 2011/03/21 23:07:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.34 2011/03/27 09:45:59 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -17,7 +17,7 @@ LICENSE="GPL-3"
 SLOT="2"
 KEYWORDS=""
 
-IUSE="alsa aalib altivec curl dbus debug doc exif gnome hal jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
+IUSE="alsa aalib altivec curl dbus debug doc exif gnome jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
 
 RDEPEND=">=dev-libs/glib-2.18.1:2
 	>=x11-libs/gtk+-2.12.5:2
@@ -35,7 +35,6 @@ RDEPEND=">=dev-libs/glib-2.18.1:2
 	alsa? ( media-libs/alsa-lib )
 	curl? ( net-misc/curl )
 	dbus? ( dev-libs/dbus-glib )
-	hal? ( sys-apps/hal )
 	gnome? ( gnome-base/gvfs )
 	webkit? ( net-libs/webkit-gtk:2 )
 	jpeg? ( virtual/jpeg:0 )
@@ -64,7 +63,7 @@ pkg_setup() {
 		$(use_enable altivec) \
 		$(use_with curl libcurl) \
 		$(use_with dbus) \
-		$(use_with hal) \
+		--without-hal \
 		$(use_with gnome gvfs) \
 		--without-gnomevfs \
 		$(use_with webkit) \
