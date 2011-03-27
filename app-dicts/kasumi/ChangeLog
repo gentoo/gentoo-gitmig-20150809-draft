@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kasumi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.43 2010/02/07 19:45:47 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.44 2011/03/27 10:10:43 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> kasumi-2.3-r1.ebuild,
+  kasumi-2.4.ebuild, kasumi-2.5.ebuild:
+  Fix slot-dep on gtk+
 
   07 Feb 2010; Markus Meier <maekke@gentoo.org> kasumi-2.5.ebuild:
   amd64/x86 stable, bug #301886

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/gwaei
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.21 2009/10/11 04:16:35 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.22 2011/03/27 10:10:42 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gwaei-1.0.ebuild,
+  gwaei-1.1.ebuild:
+  Fix slot-dep on gtk+
 
 *gwaei-1.1 (11 Nov 2009)
 

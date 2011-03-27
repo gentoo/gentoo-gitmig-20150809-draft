@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.0.ebuild,v 1.1 2009/06/14 15:35:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.0.ebuild,v 1.2 2011/03/27 10:10:42 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils gnome2-utils
 
@@ -14,10 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk gnome nls"
 
 RDEPEND=">=net-misc/curl-7.18
-	>=dev-libs/glib-2.8
+	>=dev-libs/glib-2.8:2
 	gtk? (
-		>=gnome-base/gconf-2
-		>=x11-libs/gtk+-2.14
+		>=gnome-base/gconf-2:2
+		>=x11-libs/gtk+-2.14:2
 		>=x11-libs/libsexy-0.1.11
 	)
 	nls? ( virtual/libintl )"
