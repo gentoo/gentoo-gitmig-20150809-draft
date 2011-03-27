@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.262 2011/03/26 14:40:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.263 2011/03/27 17:04:14 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> k3b-2.0.2-r1.ebuild:
+  Remove sys-apps/hal support wrt #313389.
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> k3b-2.0.2-r1.ebuild:
   Depend on virtual/ffmpeg instead of media-video/ffmpeg.
