@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.204.ebuild,v 1.3 2011/03/26 09:31:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.204.ebuild,v 1.4 2011/03/27 22:54:13 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -252,7 +252,7 @@ src_test() {
 	fi
 
 	# For more info see bug #350347.
-	LC_ALL="${mylocale}" maketype=out/Release/base_unittests virtualmake \
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
 		'--gtest_filter=-ICUStringConversionsTest.*'
 }
 
