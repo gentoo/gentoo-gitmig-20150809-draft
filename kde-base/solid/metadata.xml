@@ -4,5 +4,6 @@
 <herd>kde</herd>
 <use>
 	<flag name="wicd">Enable Wicd wired and wireless network manager.</flag>
+	<flag name="hal">Enable obsolete <pkg>sys-apps/hal</pkg> support.</flag>
 </use>
 </pkgmetadata>
