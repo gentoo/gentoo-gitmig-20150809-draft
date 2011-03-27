@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.4.ebuild,v 1.4 2008/03/02 19:34:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.4.ebuild,v 1.5 2011/03/27 09:58:05 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils gnome2
 
@@ -14,10 +16,10 @@ SLOT="0"
 IUSE_LINGUAS="linguas_cs linguas_de linguas_it linguas_sv"
 IUSE="${IUSE_LINGUAS} gnome nls"
 
-DEPEND=">=x11-libs/gtk+-2.2
+DEPEND=">=x11-libs/gtk+-2.2:2
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
-RDEPEND=">=x11-libs/gtk+-2.2
+RDEPEND=">=x11-libs/gtk+-2.2:2
 	nls? ( virtual/libintl )"
 
 S=${WORKDIR}/${P/.1/}

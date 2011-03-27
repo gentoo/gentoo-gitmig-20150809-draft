@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvdisaster
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.13 2009/09/03 14:15:11 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.14 2011/03/27 09:58:05 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  dvdisaster-0.70.4.ebuild:
+  Fix slot-dep on gtk+
 
 *dvdisaster-0.72.1 (03 Sep 2009)
 
