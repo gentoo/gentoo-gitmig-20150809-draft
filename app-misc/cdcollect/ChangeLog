@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdcollect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.8 2011/01/26 08:58:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.9 2011/03/27 11:54:29 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  cdcollect-0.6.0.ebuild, cdcollect-0.6.0-r1.ebuild:
+  Fix slot-deps on gnome libs
 
 *cdcollect-0.6.0-r1 (26 Jan 2011)
 

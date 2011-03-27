@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/cdcollect-0.6.0.ebuild,v 1.4 2008/11/22 22:09:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/cdcollect-0.6.0.ebuild,v 1.5 2011/03/27 11:54:29 nirbheek Exp $
 
 EAPI=2
 
@@ -16,15 +16,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.1.17
-	>=dev-dotnet/gtk-sharp-2.8.0
-	>=x11-libs/gtk+-2.8.0
-	>=dev-db/sqlite-3.3.5
-	>=gnome-base/gconf-2.8.0
+	>=dev-dotnet/gtk-sharp-2.8.0:2
+	>=x11-libs/gtk+-2.8.0:2
+	>=dev-db/sqlite-3.3.5:3
+	>=gnome-base/gconf-2.8.0:2
 	dev-perl/XML-Parser
-	>=dev-dotnet/gconf-sharp-2.8.0
-	|| ( dev-dotnet/gtk-sharp[glade] >=dev-dotnet/glade-sharp-2.8.0 )
-	>=dev-dotnet/gnome-sharp-2.8.0
-	>=dev-dotnet/gnomevfs-sharp-2.8.0"
+	>=dev-dotnet/gconf-sharp-2.8.0:2
+	|| ( dev-dotnet/gtk-sharp:2[glade] >=dev-dotnet/glade-sharp-2.8.0:2 )
+	>=dev-dotnet/gnome-sharp-2.8.0:2
+	>=dev-dotnet/gnomevfs-sharp-2.8.0:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
