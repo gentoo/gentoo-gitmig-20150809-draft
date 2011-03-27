@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100809.ebuild,v 1.3 2011/02/27 13:09:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20100809.ebuild,v 1.4 2011/03/27 13:09:40 jlec Exp $
 
 EAPI="2"
 
 inherit linux-mod multilib toolchain-funcs
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
-HOMEPAGE="http://aufs.sourceforge.net"
+HOMEPAGE="http://aufs.sourceforge.net/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
