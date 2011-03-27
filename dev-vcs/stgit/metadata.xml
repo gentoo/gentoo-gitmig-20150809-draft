@@ -3,6 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+  <email>gentoo@necoro.eu</email>
+  <name>René 'Necoro' Neumann</name>
+  <description>Proxy maintainer, assign bugs</description>
+</maintainer>
+<maintainer>
+  <email>darkside@gentoo.org</email>
+  <description>Proxy committer, CC bugs</description>
 </maintainer>
 </pkgmetadata>

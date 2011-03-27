@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/stgit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.2 2010/03/17 16:32:55 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.3 2011/03/27 19:04:21 darkside Exp $
+
+  27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  update metadata.xml
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> stgit-0.14.3.ebuild,
   stgit-0.15.ebuild, stgit-0.15-r1.ebuild:
