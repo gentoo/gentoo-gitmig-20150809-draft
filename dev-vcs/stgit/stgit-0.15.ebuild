@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15.ebuild,v 1.2 2010/03/17 16:32:55 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15.ebuild,v 1.3 2011/03/27 23:23:25 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils bash-completion
 
@@ -34,6 +35,9 @@ pkg_setup () {
 		ewarn "Enable the 'doc' useflag, if you want them."
 		echo
 	fi
+
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
