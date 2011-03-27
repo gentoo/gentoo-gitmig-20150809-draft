@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.4 2011/03/26 17:27:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tod/tod-0.ebuild,v 1.5 2011/03/27 07:27:01 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Tetanus On Drugs simulates playing a Tetris clone under the influence of hallucinogenic drugs"
@@ -19,9 +20,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	sed -i \
 		-e "s:idltd\.dat:${GAMES_DATADIR}/${PN}/idltd.dat:" \
@@ -29,9 +28,9 @@ src_unpack() {
 }
 
 src_install() {
-	newgamesbin tod-debug.exe tod || die "newgamesbin failed"
+	newgamesbin tod-debug.exe tod || die
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins idltd.dat || die "doins failed"
+	doins idltd.dat || die
 	dodoc readme.txt
 	prepgamesdirs
 }
