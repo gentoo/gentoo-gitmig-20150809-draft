@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>vmware</herd>
 	<maintainer>
+	    <email>matt@whitlock.name</email>
+		<name>Matt Whitlock</name>
+	</maintainer>
+	<maintainer>
 	    <email>vadimk@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
@@ -11,4 +15,8 @@
 		VMware Server or VMware ESX, as well as Microsoft Virtual Server virtual
 		machines or Microsoft Virtual PC virtual machines.
 	</longdescription>
+    <use>
+		<flag name="vmware-tools">Install VMware Tools images</flag>
+	</use>
+
 </pkgmetadata>

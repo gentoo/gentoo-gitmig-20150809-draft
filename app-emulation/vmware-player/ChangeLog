@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.90 2011/03/16 13:28:23 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.91 2011/03/27 15:23:48 vadimk Exp $
+
+*vmware-player-3.1.3.324285 (27 Mar 2011)
+
+  27 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org> +files/config-3.0,
+  +files/vmware-3.0.rc, +vmware-player-3.1.3.324285.ebuild,
+  +files/list-bundle-components.xsl, +files/list-component-files.xsl:
+  Bug 290831. Version bump. Thanks Matt Whitlock and all, all, et al.
 
   16 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -files/1.0.9.126128/000_all_initd-location.patch,
