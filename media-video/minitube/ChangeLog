@@ -1,6 +1,11 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.47 2011/03/26 16:34:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.48 2011/03/27 21:14:17 hwoarang Exp $
+
+*minitube-1.4.1 (27 Mar 2011)
+
+  27 Mar 2011; Markos Chandras <hwoarang@gentoo.org> +minitube-1.4.1.ebuild:
+  Version bump
 
   26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   minitube-1.3.ebuild, minitube-1.4.ebuild:
