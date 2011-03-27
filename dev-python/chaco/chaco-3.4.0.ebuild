@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.4.0.ebuild,v 1.1 2011/01/30 21:46:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.4.0.ebuild,v 1.2 2011/03/27 22:35:58 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -70,13 +70,13 @@ src_compile() {
 		doc_generation() {
 			emake html || die "Generation of documentation failed"
 		}
-		maketype="doc_generation" virtualmake
+		VIRTUALX_COMMAND="doc_generation" virtualmake
 		popd > /dev/null
 	fi
 }
 
 src_test() {
-	maketype="distutils_src_test" virtualmake
+	VIRTUALX_COMMAND="distutils_src_test" virtualmake
 }
 
 src_install() {

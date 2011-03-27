@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.1.0.ebuild,v 1.5 2011/03/27 19:47:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.1.0.ebuild,v 1.6 2011/03/27 22:38:00 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -60,7 +60,7 @@ src_compile() {
 }
 
 src_test() {
-	maketype="distutils_src_test" virtualmake
+	VIRTUALX_COMMAND="distutils_src_test" virtualmake
 }
 
 src_install() {
