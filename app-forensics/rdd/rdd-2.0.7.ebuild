@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-2.0.7.ebuild,v 1.2 2009/09/11 11:22:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-2.0.7.ebuild,v 1.3 2011/03/27 10:35:16 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools
 
@@ -13,8 +15,8 @@ IUSE="debug rawio gtk"
 LICENSE="BSD"
 SLOT="0"
 
-DEPEND="gtk? (	>=x11-libs/gtk+-2
-		>=gnome-base/libglade-2 )"
+DEPEND="gtk? (	x11-libs/gtk+:2
+		gnome-base/libglade:2.0 )"
 
 RDEPEND="${DEPEND}"
 
