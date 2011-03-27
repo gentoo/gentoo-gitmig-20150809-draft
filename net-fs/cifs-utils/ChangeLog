@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.3 2011/03/10 16:53:50 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.4 2011/03/27 15:10:38 klausman Exp $
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> cifs-utils-4.8.1.ebuild:
+  Keyworded on alpha, bug #358401
 
   10 Mar 2011; Víctor Ostorga <vostorga@gentoo.org>
   cifs-utils-4.8.1.ebuild:
