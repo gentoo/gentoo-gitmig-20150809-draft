@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0.ebuild,v 1.7 2010/02/11 16:19:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0.ebuild,v 1.8 2011/03/27 10:36:00 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -17,7 +19,7 @@ IUSE=""
 PROPERTIES="interactive"
 RESTRICT="strip"
 
-DEPEND=">=x11-libs/gtk+-2.2
+DEPEND=">=x11-libs/gtk+-2.2:2
 	!dev-libs/libiiimcf
 	!dev-libs/csconv
 	!app-i18n/iiimgcf
