@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.32 2011/03/09 10:46:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.33 2011/03/27 19:58:19 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> pyro-3.12.ebuild:
+  Marking pyro-3.12 ppc for bug 357989
 
   09 Mar 2011; Markos Chandras <hwoarang@gentoo.org> pyro-3.12.ebuild:
   Stable on amd64 wrt bug #357989
