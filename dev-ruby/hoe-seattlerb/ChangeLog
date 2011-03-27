@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.25 2011/03/08 07:41:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.26 2011/03/27 19:15:20 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> hoe-seattlerb-1.2.4.ebuild:
+  Marking hoe-seattlerb-1.2.4 ppc for bug 354609
 
   08 Mar 2011; Thomas Kahle <tomka@gentoo.org> hoe-seattlerb-1.2.4.ebuild:
   x86 stable per bug 354609
