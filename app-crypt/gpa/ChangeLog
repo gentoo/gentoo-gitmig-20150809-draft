@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.77 2010/12/10 17:07:48 c1pher Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.78 2011/03/27 10:03:38 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gpa-0.9.1_pre20100416.ebuild, gpa-0.9.1_pre20100416-r1.ebuild:
+  Fix slot-dep on gtk+
 
 *gpa-0.9.1_pre20100416-r1 (10 Dec 2010)
 

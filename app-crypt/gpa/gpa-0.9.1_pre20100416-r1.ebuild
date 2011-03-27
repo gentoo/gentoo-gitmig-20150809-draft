@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.1_pre20100416-r1.ebuild,v 1.1 2010/12/10 17:07:48 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.1_pre20100416-r1.ebuild,v 1.2 2011/03/27 10:03:38 nirbheek Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.10.0
+RDEPEND=">=x11-libs/gtk+-2.10.0:2
 	>=dev-libs/libgpg-error-1.4
 	>=dev-libs/libassuan-1.1.0
 	>=app-crypt/gnupg-2
