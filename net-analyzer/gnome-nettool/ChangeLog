@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.113 2011/03/22 19:39:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.114 2011/03/27 12:33:53 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gnome-nettool-2.30.0.ebuild, gnome-nettool-2.32.0.ebuild:
+  Fix slot-deps on gnome libs, remove old
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gnome-nettool-2.32.0.ebuild:
   Marking gnome-nettool-2.32.0 ppc stable for bug 353436
