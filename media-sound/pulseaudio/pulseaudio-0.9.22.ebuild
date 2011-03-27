@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.22.ebuild,v 1.11 2011/03/27 14:16:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.22.ebuild,v 1.12 2011/03/27 16:58:49 ssuominen Exp $
 
 EAPI=3
 
@@ -151,7 +151,7 @@ src_install() {
 			$(use_define alsa) \
 			$(use_define bluetooth) \
 			$(use_define udev) \
-			"${FILESDIR}/pulseaudio.init.d-4" \
+			"${FILESDIR}/pulseaudio.init.d-5" \
 			> "${T}/pulseaudio"
 
 		doinitd "${T}/pulseaudio"

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.209 2011/03/27 14:16:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.210 2011/03/27 16:58:49 ssuominen Exp $
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> pulseaudio-0.9.22.ebuild,
+  +files/pulseaudio.init.d-5:
+  Remove last trace of sys-apps/hal from init.d script wrt #351722. No revision
+  bump because USE="system-wide" is masked.
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> pulseaudio-0.9.22.ebuild:
   Marking pulseaudio-0.9.22 ppc for bug 360123
