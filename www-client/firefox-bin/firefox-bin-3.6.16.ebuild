@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.16.ebuild,v 1.2 2011/03/25 18:08:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.16.ebuild,v 1.3 2011/03/27 13:07:33 nirbheek Exp $
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -50,7 +50,7 @@ RDEPEND="dev-libs/dbus-glib
 	x11-libs/libXt
 	x11-libs/libXmu
 	x86? (
-		>=x11-libs/gtk+-2.2
+		>=x11-libs/gtk+-2.2:2
 		 >=media-libs/alsa-lib-1.0.16
 	)
 	amd64? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.12.ebuild,v 1.9 2011/03/18 17:18:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.12.ebuild,v 1.10 2011/03/27 13:08:06 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -72,7 +72,7 @@ RDEPEND="java? ( virtual/jre )
 	alsa? ( media-libs/alsa-lib )
 	system-sqlite? ( >=dev-db/sqlite-3.6.22-r2[fts3,secure-delete] )
 	>=app-text/hunspell-1.2
-	>=x11-libs/gtk+-2.10.0
+	>=x11-libs/gtk+-2.10.0:2
 	>=x11-libs/pango-1.14.0[X]
 	crypt? ( mailclient? ( >=app-crypt/gnupg-1.4 ) )
 	gnome? ( >=gnome-base/gnome-vfs-2.16.3

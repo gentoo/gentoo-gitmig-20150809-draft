@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.49 2011/03/25 18:08:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.50 2011/03/27 13:07:33 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  firefox-bin-3.6.15.ebuild, firefox-bin-3.6.16.ebuild:
+  Fix slot-dep on gtk+
 
   25 Mar 2011; Christoph Mende <angelos@gentoo.org> firefox-bin-3.6.16.ebuild:
   Stable on amd64 wrt bug #360055
