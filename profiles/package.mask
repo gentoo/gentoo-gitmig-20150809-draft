@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12609 2011/03/27 07:36:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12610 2011/03/27 07:45:59 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -254,11 +254,6 @@ media-libs/glitz
 # Mask for testing
 =virtual/perl-Module-Build-0.380.0
 =perl-core/Module-Build-0.380.0
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (05 Mar 2011)
-# No new releases since 2007, no visible development, hard 
-# dependency on sys-apps/hal, bug 352856. Masked for removal.
-sys-power/guidance-power-manager
 
 # Justin Lecher <jlec@gentoo.org> (04 Mar 2011)
 # Probably API change, packages fail to compile
