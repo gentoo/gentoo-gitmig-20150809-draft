@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-input-pad
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.6 2009/07/01 23:09:48 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/ChangeLog,v 1.7 2011/03/27 11:35:14 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  scim-input-pad-0.1.1.ebuild:
+  Fix slot-dep on gtk+
 
   01 Jul 2009; MATSUU Takuto <matsuu@gentoo.org>
   scim-input-pad-0.1.1.ebuild:

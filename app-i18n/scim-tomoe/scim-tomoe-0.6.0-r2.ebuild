@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/scim-tomoe-0.6.0-r2.ebuild,v 1.1 2009/02/22 21:19:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/scim-tomoe-0.6.0-r2.ebuild,v 1.2 2011/03/27 11:36:05 nirbheek Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="+gucharmap"
 RDEPEND=">=app-i18n/scim-1.2.0
 	>=app-i18n/libtomoe-gtk-0.6.0[gucharmap=]
 	gucharmap? ( >=gnome-extra/gucharmap-1.4 )
-	>=x11-libs/gtk+-2.4"
+	>=x11-libs/gtk+-2.4:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.0"

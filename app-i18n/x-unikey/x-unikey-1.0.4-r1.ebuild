@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r1.ebuild,v 1.3 2010/02/17 21:12:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r1.ebuild,v 1.4 2011/03/27 11:39:42 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools eutils multilib
 
@@ -16,7 +18,7 @@ IUSE="nls gtk"
 RDEPEND="x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
-	gtk? ( >=x11-libs/gtk+-2.2 )
+	gtk? ( >=x11-libs/gtk+-2.2:2 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.2.ebuild,v 1.16 2011/02/13 19:11:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.4.2.ebuild,v 1.17 2011/03/27 11:38:50 nirbheek Exp $
 
 EAPI=1
 inherit eutils multilib elisp-common flag-o-matic
@@ -26,7 +26,7 @@ RDEPEND="X? ( x11-libs/libX11
 	eb? ( dev-libs/eb )
 	emacs? ( virtual/emacs )
 	gnome? ( >=gnome-base/gnome-panel-2.14 )
-	gtk? ( >=x11-libs/gtk+-2.4 )
+	gtk? ( >=x11-libs/gtk+-2.4:2 )
 	libedit? ( dev-libs/libedit )
 	m17n-lib? ( >=dev-libs/m17n-lib-1.3.1 )
 	ncurses? ( sys-libs/ncurses )

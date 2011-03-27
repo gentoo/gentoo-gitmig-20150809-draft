@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-0.9.2.ebuild,v 1.9 2009/08/10 11:51:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-0.9.2.ebuild,v 1.10 2011/03/27 11:39:42 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -17,7 +19,7 @@ DEPEND="x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
 	nls? ( sys-devel/gettext )
-	gtk? ( >=x11-libs/gtk+-2.2 )"
+	gtk? ( >=x11-libs/gtk+-2.2:2 )"
 RDEPEND="${DEPEND}"
 
 src_compile() {
