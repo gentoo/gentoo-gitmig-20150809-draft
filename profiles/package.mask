@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12608 2011/03/27 05:34:01 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12609 2011/03/27 07:36:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -222,15 +222,6 @@ dev-perl/gnome2-print
 dev-tex/memoir
 dev-tex/listings
 
-# Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2011)
-# No longer required by anything in tree. Has depends on
-# sys-apps/hal which is going away. Use USE=mono in libgpod
-# instead.
-# Removal in 30 days.
-dev-dotnet/ipod-sharp
-media-libs/libipoddevice
-dev-dotnet/podsleuth
-
 # Ulrich Mueller <ulm@gentoo.org> (11 Mar 2011)
 # Part of app-editors/emacs since version 22.1 or 23.1.
 # Masked for removal in 60 days, bug 358351.
@@ -403,13 +394,6 @@ x11-drivers/nouveau-firmware
 # 30 days. Use x11-drivers/xf86-video-sis (if supported) or
 # x11-drivers/xf86-video-vesa instead.
 x11-drivers/xf86-video-xgi
-
-# Samuli Suominen <ssuominen@gentoo.org> (12 Feb 2011)
-# Masked for removal.
-# Replaced by udisks-glue, udiskie, uam or traydevice.
-# You have 60 days left to migrate your configuration.
-dev-libs/boolstuff
-sys-apps/halevt
 
 # Christian Faulhammer <fauli@gentoo.org> (12 Feb 2011)
 # dev-vcs/bzr-gtk, dev-vcs/bzr-rewrite and dev-vcs/bzr-svn are not
