@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/wxmud
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/ChangeLog,v 1.4 2009/11/15 13:58:08 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/ChangeLog,v 1.5 2011/03/27 13:19:58 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> wxmud-9999.ebuild:
+  Fix slot-dep on gtk+
 
   15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> wxmud-9999.ebuild:
   QA: drop keywords from live package.
