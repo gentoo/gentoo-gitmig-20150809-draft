@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.37 2011/03/26 20:32:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.38 2011/03/27 08:11:39 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 # USE="doc" is managed by eclass.
-IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk hal iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist qt4 rss strigi test +tiff upnp +vorbis xine +xml xmp"
+IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist qt4 rss strigi test +tiff upnp +vorbis xine +xml xmp"
 
 # TODO: rest -> flickr
 # vala is built with debug by default (see VALAFLAGS)
@@ -56,9 +56,7 @@ RDEPEND="
 		>=x11-libs/gtk+-2.18:2 )
 	iptc? ( media-libs/libiptcdata )
 	jpeg? ( virtual/jpeg:0 )
-	laptop? (
-		hal? ( >=sys-apps/hal-0.5 )
-		!hal? ( >=sys-power/upower-0.9 ) )
+	laptop? ( >=sys-power/upower-0.9 )
 	mp3? (
 		>=media-libs/taglib-1.6
 		gtk? ( x11-libs/gdk-pixbuf:2 )
@@ -128,9 +126,9 @@ pkg_setup() {
 		G2CONF="${G2CONF} --enable-video-extractor=external"
 	fi
 
-	# hal and upower are used for AC power detection
+	# upower is used for AC power detection
 	if use laptop; then
-		G2CONF="${G2CONF} $(use_enable hal) $(use_enable !hal upower)"
+		G2CONF="${G2CONF} --disable-hal --enable-upower"
 	else
 		G2CONF="${G2CONF} --disable-hal --disable-upower"
 	fi
