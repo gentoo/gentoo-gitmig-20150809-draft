@@ -1,0 +1,26 @@
+Index: ekeyd-1.1.3/doc/60-UDEKEY01.rules
+===================================================================
+--- ekeyd-1.1.3.orig/doc/60-UDEKEY01.rules
++++ ekeyd-1.1.3/doc/60-UDEKEY01.rules
+@@ -2,7 +2,7 @@
+ 
+ # Detect an Entropy Key being inserted
+ ACTION=="add|change", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="usb_id --export %p"
+-ACTION=="add|change", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/echo ENTROPY_KEY_SERIAL=$env{ID_SERIAL_SHORT}"
++ACTION=="add|change", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/sh -c '/bin/echo ENTROPY_KEY_SERIAL=$env{ID_SERIAL_SHORT} | /bin/sed -e s:/:_:g'"
+ 
+ # Add the /dev/entropykey/FOO symbolic link
+ ACTION=="add|change", ENV{ENTROPY_KEY_SERIAL}!="", SYMLINK+="entropykey/$env{ENTROPY_KEY_SERIAL}"
+Index: ekeyd-1.1.3/doc/60-UDEKEY01-UDS.rules
+===================================================================
+--- ekeyd-1.1.3.orig/doc/60-UDEKEY01-UDS.rules
++++ ekeyd-1.1.3/doc/60-UDEKEY01-UDS.rules
+@@ -3,7 +3,7 @@
+ 
+ # Detect an Entropy Key being inserted
+ # ACTION=="add", SUBSYSTEM=="usb", DEVTYPE=="usb_device", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="usb_id --export %p"
+-ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/echo ENTROPY_KEY_SERIAL=$attr{serial}"
++ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/sh -c '/bin/echo ENTROPY_KEY_SERIAL=$env{ID_SERIAL_SHORT} | /bin/sed -e s:/:_:g'"
+ 
+ # And tell the ekeyd about the new device.
+ ACTION=="add|change", ENV{ENTROPY_KEY_SERIAL}!="", RUN+="/lib/udev/ekeyd-udev"

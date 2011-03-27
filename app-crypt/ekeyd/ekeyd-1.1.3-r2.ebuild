@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r1.ebuild,v 1.3 2010/11/06 01:34:36 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r2.ebuild,v 1.1 2011/03/27 21:56:08 flameeyes Exp $
 
 EAPI=2
 
@@ -45,6 +45,14 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-1.1.1-earlyboot.patch
 	epatch "${FILESDIR}"/${P}-libusb_compat.patch
+	epatch "${FILESDIR}"/${P}-slashes.patch
+
+	# Stupid multilib hack; remove it once Gentoo has sane paths for
+	# udev directories.
+	if [[ $(get_libdir) != lib ]]; then
+		sed -i -e "s:/lib/udev/:/$(get_libdir)/udev/:" \
+			doc/*.rules || die
+	fi
 
 	# We moved the binaries around
 	sed -i -e 's:$BINPATH/ekey-ulusbd:/usr/libexec/ekey-ulusbd:' \
@@ -109,12 +117,11 @@ src_install() {
 	dodoc daemon/README* AUTHORS WARNING ChangeLog || die
 
 	if use kernel_linux; then
-		insinto /etc/udev/rules.d
-		if use usb; then
-			newins doc/60-UDEKEY01-UDS.rules 70-ekey-ulusbd.rules || die
-		else
-			newins doc/60-UDEKEY01.rules 70-${PN}.rules || die
-		fi
+		local rules=doc/60-UDEKEY01.rules
+		use usb && rules=doc/60-UDEKEY01-UDS.rules
+
+		insinto /$(get_libdir)/udev/rules.d
+		newins ${rules} 70-${PN}.rules || die
 
 		exeinto /$(get_libdir)/udev
 		doexe doc/ekeyd-udev || die
