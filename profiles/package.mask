@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12611 2011/03/27 08:26:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12612 2011/03/27 08:26:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,6 +35,7 @@
 # Last packages with hardcoded sys-apps/hal depend.
 # Upstream has either stopped development, or it's too slow.
 # Bugs 313425, 358935 and finally 313389.
+# Removal in 30 days.
 app-crypt/luks-tools
 media-video/thoggen
 sys-auth/pam_usb
