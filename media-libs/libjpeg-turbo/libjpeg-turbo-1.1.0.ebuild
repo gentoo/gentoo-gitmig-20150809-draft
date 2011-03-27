@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.0.ebuild,v 1.3 2011/03/03 22:05:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.0.ebuild,v 1.4 2011/03/27 07:10:01 fauli Exp $
 
 EAPI=3
 inherit libtool toolchain-funcs
 
-DESCRIPTION="MMX, SSE, and SSE2 SIMD accellerated JPEG library"
+DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
 HOMEPAGE="http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8c-1.debian.tar.gz"
