@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/ChangeLog,v 1.80 2011/03/11 18:47:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Simple/ChangeLog,v 1.81 2011/03/27 08:32:23 tove Exp $
+
+  27 Mar 2011; Torsten Veller <tove@gentoo.org> Test-Simple-0.980.ebuild:
+  Stable on x86 (#350853)
 
   11 Mar 2011; Markos Chandras <hwoarang@gentoo.org> Test-Simple-0.980.ebuild:
   Stable on amd64 wrt bug #350853
