@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.268 2011/03/22 19:55:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.269 2011/03/27 13:04:59 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -metacity-2.30.1.ebuild, metacity-2.30.3.ebuild:
+  Fix slot-deps on gnome libs, remove old
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> metacity-2.30.3.ebuild:
   Marking metacity-2.30.3 ppc stable for bug 353436

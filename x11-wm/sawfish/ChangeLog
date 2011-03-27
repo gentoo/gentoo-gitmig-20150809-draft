@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/sawfish
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.94 2010/05/31 20:05:17 truedfx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.95 2011/03/27 13:06:12 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -sawfish-1.3.5.2.ebuild, -sawfish-1.5.3.ebuild, -sawfish-1.6.2.ebuild,
+  sawfish-1.6.3.ebuild:
+  Fix slot-deps on gnome libs, remove old
 
 *sawfish-1.6.3 (31 May 2010)
 

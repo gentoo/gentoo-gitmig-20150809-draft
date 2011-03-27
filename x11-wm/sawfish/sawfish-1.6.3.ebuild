@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.6.3.ebuild,v 1.1 2010/05/31 20:05:17 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.6.3.ebuild,v 1.2 2011/03/27 13:06:12 nirbheek Exp $
+
+EAPI="1"
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -28,7 +30,7 @@ IUSE="nls xinerama"
 RDEPEND=">=dev-libs/librep-0.90.5
 	>=x11-libs/rep-gtk-0.90.2
 	>=x11-libs/pango-1.8.0
-	>=x11-libs/gtk+-2.12.0
+	>=x11-libs/gtk+-2.12.0:2
 	nls? ( sys-devel/gettext )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
