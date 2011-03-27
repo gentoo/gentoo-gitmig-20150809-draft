@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.9 2008/07/05 10:44:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.10 2011/03/27 13:04:24 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools eutils
 
@@ -16,7 +18,7 @@ SLOT="0"
 
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
