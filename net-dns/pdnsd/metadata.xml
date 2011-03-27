@@ -12,14 +12,9 @@
     networking).
   </longdescription>
   <use>
-    <flag name='isdn'>Enable ISDN features</flag>
-    <flag name='underscores'>
-      Enable support for domain names containing underscores
-    </flag>
-    <flag name="nptl">
-      Linux-only: override auto-detection of the system threading
-      implementation and force usage of the Native Posix Thread
-      Library.
+    <flag name='isdn'>
+      Linux-only: check status of ippp interfaces with ISDN-specific
+      system calls.
     </flag>
     <flag name='urandom'>
       Linux-only: use /dev/urandom (pseudo-random number generation)

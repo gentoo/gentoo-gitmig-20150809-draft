@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/pdnsd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.99 2010/10/14 16:59:24 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.100 2011/03/27 17:31:42 flameeyes Exp $
+
+*pdnsd-1.2.8-r1 (27 Mar 2011)
+
+  27 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> -pdnsd-1.2.7-r1.ebuild,
+  +pdnsd-1.2.8-r1.ebuild, +files/pdnsd.online.1, -files/pdnsd.rc6,
+  metadata.xml:
+  Remove old version; update metadata (remove obsolete USE flags, and improve
+  description for 'isdn'); revision bump with new pdnsd.online init script: add
+  support for dash (bug #349335, thanks to René 'Necoro' Neumann), no longer
+  use IFACE variable (use rc_need instead) and avoid depending on a
+  non-existing init script by default.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> pdnsd-1.2.8.ebuild:
   stable ppc, bug 336282
