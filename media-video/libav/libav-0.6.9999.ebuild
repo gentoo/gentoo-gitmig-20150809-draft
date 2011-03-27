@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.9999.ebuild,v 1.3 2011/03/27 14:11:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.9999.ebuild,v 1.4 2011/03/27 14:42:22 scarabeus Exp $
 
 EAPI=4
 
 if [[ ${PV} == *9999 ]] ; then
 	SCM="git"
 	EGIT_REPO_URI="git://git.libav.org/libav.git"
-	EGIT_BRANCH="release/0.6"
+	[[ ${PV%9999} != "" ]] && EGIT_BRANCH="release/${PV%.9999}"
 fi
 
 inherit eutils flag-o-matic multilib toolchain-funcs ${SCM}
@@ -16,7 +16,7 @@ DESCRIPTION="Complete solution to record, convert and stream audio and video."
 HOMEPAGE="http://libav.org/"
 if [[ ${PV} == *9999 ]] ; then
 	SRC_URI=""
-elif [[ "${PV%_p*}" != "${PV}" ]] ; then # Gentoo snapshot
+elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
 else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.bz2"
@@ -79,8 +79,8 @@ REQUIRED_USE="bindist? ( !faac )"
 
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version
-	if [[ "${PV%_p*}" != "${PV}" ]]; then
-		sed -i -e "s/UNKNOWN/GIT-r${PV#*_p}/" "${S}/version.sh" || die
+	if [[ ${PV%_p*} != ${PV} ]]; then
+		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
 	fi
 }
 
