@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.2 2011/02/10 02:21:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.60-r1.ebuild,v 1.3 2011/03/27 15:26:00 arfrever Exp $
 
 EAPI="2"
+# PYTHON_BDEPEND="2"
 
-inherit libtool eutils flag-o-matic
+inherit libtool eutils flag-o-matic python
 
 DESCRIPTION="Lightweight library used to easily extract data from files archived in a single zip file"
 HOMEPAGE="http://zziplib.sourceforge.net/"
@@ -18,9 +19,14 @@ IUSE="doc sdl static-libs test"
 RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.6 )"
 DEPEND="${RDEPEND}
-	>=dev-lang/python-2.4
+	=dev-lang/python-2*
 	dev-util/pkgconfig
 	test? ( app-arch/zip )"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.13.49-SDL-test.patch
