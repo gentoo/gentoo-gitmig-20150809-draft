@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.212 2011/03/26 20:25:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.213 2011/03/27 08:19:38 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Samuli Suominen <ssuominen@gentoo.org> (27 Mar 2011)
+# Remove this when KDE 4.6 is stable.
+kde-base/solid -hal
+app-cdr/k3b -hal
 
 # Gilles Dartiguelongue <eva@gentoo.org> (26 Mar 2011)
 # Mask due to unsatisfied dependencies

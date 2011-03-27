@@ -1,6 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.113 2011/03/20 18:54:29 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.114 2011/03/27 08:19:38 ssuominen Exp $
+
+# deprecated and replaced by USE="udev"
+hal
 
 # Its deps are not mature enough yet
 ayatana
