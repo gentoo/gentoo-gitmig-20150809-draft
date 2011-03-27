@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.69 2011/03/16 13:22:52 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.70 2011/03/27 15:49:17 vadimk Exp $
+
+*vmware-server-2.0.2.203138-r4 (27 Mar 2011)
+
+  27 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +files/2.0.2.203138/014_all_uninstall.patch,
+  +vmware-server-2.0.2.203138-r4.ebuild, -files/vmware-authd,
+  -files/vmware-server.rc:
+  removed hald dependency, changed the way to handle locations file.
 
   16 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -files/general/001_all_no-desktop-icon.patch,
