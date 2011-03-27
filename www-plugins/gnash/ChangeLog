@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.56 2011/03/21 01:30:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.57 2011/03/27 12:03:45 chithanh Exp $
+
+  27 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.8.ebuild, gnash-0.8.9.ebuild:
+  Tweak ffmpeg dependency and default USE flags
 
 *gnash-0.8.9 (21 Mar 2011)
 

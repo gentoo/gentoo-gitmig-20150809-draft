@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.1 2011/03/21 01:30:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.2 2011/03/27 12:03:45 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -23,7 +23,7 @@ fi
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+agg cairo cygnal dbus doc fbcon +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openvg python +sdl sdl-sound ssh ssl test vaapi video_cards_intel"
+IUSE="+agg cairo cygnal dbus doc fbcon +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl openvg python sdl +sdl-sound ssh ssl test vaapi video_cards_intel"
 
 # gnash fails if obsolete boost is installed, bug #334259
 RDEPEND=">=dev-libs/boost-1.41.0
@@ -46,7 +46,7 @@ RDEPEND=">=dev-libs/boost-1.41.0
 		app-text/docbook-sgml-utils
 	)
 	ffmpeg? (
-		media-video/ffmpeg[vaapi?]
+		virtual/ffmpeg[vaapi?]
 	)
 	gstreamer? (
 		media-plugins/gst-plugins-ffmpeg
