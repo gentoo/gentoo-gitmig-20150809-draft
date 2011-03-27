@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.63 2011/03/22 19:41:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.64 2011/03/27 12:35:38 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gtk-vnc-0.3.10.ebuild:
+  Remove old
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gtk-vnc-0.4.2-r2.ebuild:
   Marking gtk-vnc-0.4.2-r2 ppc stable for bug 353436
