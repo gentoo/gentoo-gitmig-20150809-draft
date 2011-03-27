@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git-sh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-sh/ChangeLog,v 1.2 2010/03/17 16:36:41 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-sh/ChangeLog,v 1.3 2011/03/27 15:06:22 ayoy Exp $
+
+*git-sh-1.1 (27 Mar 2011)
+
+  27 Mar 2011; Dominik Kapusta <ayoy@gentoo.org> +git-sh-1.1.ebuild:
+  Version bump (bug #347553).
 
   17 Mar 2010; Sebastian Pipping <sping@gentoo.org> git-sh-1.0-r1.ebuild:
   Propagate move of dev-util/git to dev-vcs/git
