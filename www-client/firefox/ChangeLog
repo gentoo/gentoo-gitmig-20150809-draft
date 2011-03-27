@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.54 2011/03/27 14:25:27 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.55 2011/03/27 20:22:33 anarchy Exp $
+
+  27 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-4.0-r2.ebuild:
+  ensure cairo dep correct for FF-4
 
 *firefox-4.0-r2 (27 Mar 2011)
 

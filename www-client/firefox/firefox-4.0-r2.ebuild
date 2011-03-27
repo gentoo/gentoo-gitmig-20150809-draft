@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0-r2.ebuild,v 1.1 2011/03/27 14:25:27 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0-r2.ebuild,v 1.2 2011/03/27 20:22:33 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -35,6 +35,7 @@ RDEPEND="
 	>=dev-libs/nss-3.12.9
 	>=dev-libs/nspr-4.8.7
 	>=dev-libs/glib-2.26
+	>=x11-libs/cairo-1.10.2[X]
 	>=gnome-base/gconf-1.2.1:2
 	x11-libs/pango[X]
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
