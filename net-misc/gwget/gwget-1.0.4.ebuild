@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.5 2011/02/05 16:41:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.6 2011/03/27 12:37:00 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -18,9 +18,9 @@ IUSE="epiphany libnotify"
 # FIXME: dbus should be optional
 #        needs patching for linguas/intltool
 RDEPEND="net-misc/wget
-	>=x11-libs/gtk+-2.6
-	>=dev-libs/glib-2.16.0
-	>=gnome-base/gconf-2
+	>=x11-libs/gtk+-2.6:2
+	>=dev-libs/glib-2.16.0:2
+	>=gnome-base/gconf-2:2
 	>=gnome-base/libgnomeui-2
 	>=dev-libs/dbus-glib-0.70
 	epiphany? ( >=www-client/epiphany-1.4 )
