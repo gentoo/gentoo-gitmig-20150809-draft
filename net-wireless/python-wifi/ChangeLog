@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/python-wifi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.2 2011/03/09 16:08:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.3 2011/03/27 12:56:23 klausman Exp $
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org>
+  python-wifi-0.5.0-r1.ebuild:
+  Keyworded on alpha, bug #357619
 
 *python-wifi-0.5.0-r1 (09 Mar 2011)
 *python-wifi-0.3.1-r1 (09 Mar 2011)
