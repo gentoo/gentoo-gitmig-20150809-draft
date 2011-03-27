@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1-r4.ebuild,v 1.2 2011/03/05 21:07:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1-r4.ebuild,v 1.3 2011/03/27 22:50:26 arfrever Exp $
 
 EAPI="2"
 
@@ -103,8 +103,7 @@ src_configure() {
 
 src_compile() {
 	# call virtualmake to setup an virtual x environment
-	export maketype="php-ext-source-r2_src_compile"
-	virtualmake
+	VIRTUALX_COMMAND="php-ext-source-r2_src_compile" virtualmake
 }
 
 src_install() {
