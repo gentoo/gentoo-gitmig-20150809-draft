@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traitsbackendqt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/ChangeLog,v 1.14 2011/03/21 14:07:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/ChangeLog,v 1.15 2011/03/27 19:48:36 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> traitsbackendqt-3.6.0.ebuild:
+  Marking traitsbackendqt-3.6.0 ppc stable for bug 357283
 
   21 Mar 2011; Thomas Kahle <tomka@gentoo.org> traitsbackendqt-3.6.0.ebuild:
   x86 stable per bug 357283
