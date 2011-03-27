@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.22 2011/03/21 14:07:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.23 2011/03/27 19:48:13 ranger Exp $
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> traits-3.6.0.ebuild:
+  Marking traits-3.6.0 ppc stable for bug 357283
 
   21 Mar 2011; Thomas Kahle <tomka@gentoo.org> traits-3.6.0.ebuild:
   x86 stable per bug 357283
