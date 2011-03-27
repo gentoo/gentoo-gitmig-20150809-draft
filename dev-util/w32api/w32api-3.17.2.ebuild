@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.17.2.ebuild,v 1.1 2011/03/26 05:48:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.17.2.ebuild,v 1.2 2011/03/27 03:14:55 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -12,7 +12,7 @@ fi
 
 inherit eutils flag-o-matic
 
-MY_P="${P:0:-2}-${PV:0-1}-mingw32"
+MY_P="${P:0:${#P}-2}-${PV:0-1}-mingw32"
 DESCRIPTION="Free Win32 runtime and import library definitions"
 HOMEPAGE="http://www.mingw.org/"
 SRC_URI="mirror://sourceforge/mingw/${MY_P}-src.tar.lzma"
