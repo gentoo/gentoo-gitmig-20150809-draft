@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.152 2011/03/27 14:23:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.153 2011/03/27 16:25:47 klausman Exp $
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org>
+  fontconfig-2.8.0-r1.ebuild:
+  Stable on alpha, bug #360221
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> fontconfig-2.8.0-r1.ebuild:
   Marking fontconfig-2.8.0-r1 ppc for bug 360221
