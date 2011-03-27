@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.17-r1.ebuild,v 1.6 2009/10/10 14:42:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.17-r1.ebuild,v 1.7 2011/03/27 10:11:11 ssuominen Exp $
 
 inherit gnome2 eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/GnomePilot"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="hal"
+IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomeui-2.0.0
@@ -19,11 +19,7 @@ RDEPEND=">=gnome-base/libgnome-2.0.0
 	>=gnome-base/gnome-panel-2.0
 	>=gnome-base/gconf-2.0
 	dev-libs/libxml2
-	>=app-pda/pilot-link-0.11.7
-	hal? (
-		dev-libs/dbus-glib
-		>=sys-apps/hal-0.5.4
-	)"
+	>=app-pda/pilot-link-0.11.7"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -40,7 +36,7 @@ pkg_setup() {
 		--enable-usb
 		--enable-network
 		--enable-pilotlinktest
-		$(use_with hal)"
+		--without-hal"
 }
 
 src_unpack() {

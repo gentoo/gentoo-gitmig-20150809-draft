@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.32.1.ebuild,v 1.1 2011/03/21 10:07:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.32.1.ebuild,v 1.2 2011/03/27 10:11:11 ssuominen Exp $
 
 EAPI="3"
 G2CONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/GnomePilot"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="eds hal"
+IUSE="eds"
 
 RDEPEND="
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
@@ -21,8 +21,7 @@ RDEPEND="
 	>=app-pda/pilot-link-0.11.7
 	>=x11-libs/gtk+-2.13:2
 	>=dev-libs/dbus-glib-0.74
-	eds? ( >=gnome-extra/evolution-data-server-2 )
-	hal? ( >=sys-apps/hal-0.5.4 )"
+	eds? ( >=gnome-extra/evolution-data-server-2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
@@ -36,7 +35,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
 		$(use_enable eds eds-conduits)
-		$(use_with hal)"
+		--without-hal"
 }
 
 src_install() {
