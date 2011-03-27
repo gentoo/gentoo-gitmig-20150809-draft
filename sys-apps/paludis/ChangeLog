@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.196 2011/03/27 21:55:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.197 2011/03/27 21:59:18 peper Exp $
+
+  27 Mar 2011; Piotr Jaroszyński <peper@gentoo.org> -paludis-0.44.2.ebuild,
+  -paludis-0.46.0.ebuild, -paludis-0.48.6.ebuild, -paludis-0.50.3.ebuild,
+  -paludis-0.52.3.ebuild, -paludis-0.54.11.ebuild, -paludis-0.56.3.ebuild,
+  -paludis-0.56.4.ebuild, -paludis-0.58.4.ebuild:
+  Nuke old versions
 
 *paludis-0.60.1 (27 Mar 2011)
 
