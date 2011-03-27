@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.284 2011/03/22 19:11:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.285 2011/03/27 11:25:51 pacho Exp $
+
+  27 Mar 2011; Pacho Ramos <pacho@gentoo.org> files/Gnome:
+  Append /usr/share/gnome to XDG_DATA_DIRS for being able to use defaults.list
+  without affecting to any other desktop.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gnome-session-2.32.1.ebuild:
   Marking gnome-session-2.32.1 ppc stable for bug 353436
