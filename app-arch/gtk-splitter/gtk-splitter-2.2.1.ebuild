@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.1.ebuild,v 1.4 2008/07/15 13:31:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/gtk-splitter-2.2.1.ebuild,v 1.5 2011/03/27 09:54:56 nirbheek Exp $
+
+EAPI="1"
 
 DESCRIPTION="split/combine files !"
 HOMEPAGE="http://gtk-splitter.sourceforge.net"
@@ -11,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="crypt"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	crypt? ( >=app-crypt/mhash-0.8 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
