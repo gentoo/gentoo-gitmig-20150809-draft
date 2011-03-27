@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.11 2009/01/31 17:40:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.12 2011/03/27 12:36:23 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils gnome2
 
@@ -14,10 +16,10 @@ KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libgnomeui-2
 	net-misc/rdesktop
-	>=gnome-base/gconf-2"
+	gnome-base/gconf:2"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper

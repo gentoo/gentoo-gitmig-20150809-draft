@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grdesktop
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.26 2009/01/31 17:40:05 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.27 2011/03/27 12:36:23 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> grdesktop-0.23.ebuild:
+  Fix slot-dep on gtk+
 
   31 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> grdesktop-0.23.ebuild:
   Fix locale installation, bug #253463.
