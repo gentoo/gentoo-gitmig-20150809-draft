@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.0.ebuild,v 1.1 2011/03/26 19:57:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.0.ebuild,v 1.2 2011/03/28 14:18:09 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -24,19 +24,18 @@ RDEPEND=">=dev-cpp/glibmm-2.24:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
+		>=dev-cpp/mm-common-0.9.3
 		media-gfx/graphviz
 		dev-libs/libxslt
 		app-doc/doxygen )"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="AUTHORS ChangeLog PORTING NEWS README"
 	G2CONF="${G2CONF}
 		--enable-api-atkmm
 		--disable-maintainer-mode
 		$(use_enable doc documentation)"
-}
 
-src_prepare() {
 	gnome2_src_prepare
 
 	if ! use test; then
@@ -49,5 +48,12 @@ src_prepare() {
 		# don't waste time building tests
 		sed 's/^\(SUBDIRS =.*\)demos\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
 			|| die "sed 2 failed"
+	fi
+
+	if use doc; then
+		# Needed till upstream re-generates the tarball with mm-common-0.9.3
+		# glibmm no longer ships doc-install.pl, and the macro changed
+		mm-common-prepare --copy --force
+		eautoreconf
 	fi
 }

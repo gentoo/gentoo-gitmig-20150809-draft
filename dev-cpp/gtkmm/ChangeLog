@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.195 2011/03/26 19:57:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.196 2011/03/28 14:18:09 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtkmm-2.24.0.ebuild:
+  Fix build with USE=doc due to mm-common/glibmm changes
 
 *gtkmm-2.24.0 (26 Mar 2011)
 
