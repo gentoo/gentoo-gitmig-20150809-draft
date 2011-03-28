@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nbsmtp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.45 2010/07/08 16:42:16 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.46 2011/03/28 09:10:33 eras Exp $
+
+  28 Mar 2011; Eray Aslan <eras@gentoo.org> -nbsmtp-1.00.ebuild:
+  remove old version
 
   08 Jul 2010; Markos Chandras <hwoarang@gentoo.org> +nbsmtp-1.00-r3.ebuild:
   Respect CC/LDFLAGS. Thanks to Kevin Pyle. Fixes bug #244152
