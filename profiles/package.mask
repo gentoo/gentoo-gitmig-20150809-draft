@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12619 2011/03/28 03:37:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12620 2011/03/28 04:09:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -455,7 +455,7 @@ app-pda/libopensync-plugin-google-calendar
 app-pda/libopensync-plugin-gpe
 app-pda/libopensync-plugin-irmc
 app-pda/libopensync-plugin-palm
-app-pda/libopensync-plugin-python
+>=app-pda/libopensync-plugin-python-0.30
 app-pda/libopensync-plugin-sunbird
 app-pda/libopensync-plugin-syncml
 app-pda/libopensync-plugin-vformat
