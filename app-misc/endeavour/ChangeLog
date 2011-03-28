@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/endeavour
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.31 2010/08/22 11:21:13 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.32 2011/03/28 16:19:21 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> endeavour-2.7.3.ebuild,
+  endeavour-2.7.3-r1.ebuild:
+  Fixed gtk+ dep
 
 *endeavour-2.7.3-r1 (22 Aug 2010)
 

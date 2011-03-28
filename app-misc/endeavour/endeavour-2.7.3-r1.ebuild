@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3-r1.ebuild,v 1.1 2010/08/22 11:21:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3-r1.ebuild,v 1.2 2011/03/28 16:19:21 angelos Exp $
 
+EAPI=1
 inherit eutils
 
 M=endeavour2-mimetypes
@@ -16,11 +17,12 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="joystick"
 
 DEPEND="app-arch/bzip2
-	=x11-libs/gtk+-1.2*
+	x11-libs/gtk+:1
 	>=media-libs/imlib-1.9.14
 	x11-libs/libX11
 	virtual/opengl
 	joystick? ( media-libs/libjsw )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
