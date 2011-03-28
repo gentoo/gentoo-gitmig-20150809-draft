@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-1.00-r2.ebuild,v 1.9 2009/09/23 18:06:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-1.00-r2.ebuild,v 1.10 2011/03/28 09:15:27 eras Exp $
 
 inherit eutils
 
@@ -13,10 +13,20 @@ KEYWORDS="alpha amd64 hppa ppc sparc x86"
 LICENSE="GPL-2"
 IUSE="ssl ipv6 debug"
 
-DEPEND="ssl? ( dev-libs/openssl )
-	!virtual/mta"
+DEPEND="ssl? ( dev-libs/openssl )"
 
-PROVIDE="virtual/mta"
+RDEPEND="${DEPEND}
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/netqmail
+	!mail-mta/nullmailer
+	!mail-mta/postfix
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail
+	!mail-mta/ssmtp"
 
 src_unpack() {
 	unpack ${A}
