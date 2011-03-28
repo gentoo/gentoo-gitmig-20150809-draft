@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.5 2010/09/06 10:56:40 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.12.5-r1.ebuild,v 1.6 2011/03/28 03:31:46 flameeyes Exp $
 
 BACKPORTS=1
 
@@ -11,7 +11,7 @@ if [[ ${PV} = *9999* ]]; then
 	GIT_ECLASS="git"
 fi
 
-inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs
+inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs multilib
 
 if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
@@ -204,7 +204,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	insinto /etc/udev/rules.d/
+	insinto /$(get_libdir)/udev/rules.d/
 	doins kvm/scripts/65-kvm.rules || die
 
 	if use qemu-ifup; then

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.50 2011/01/21 13:49:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.51 2011/03/28 03:31:46 flameeyes Exp $
+
+  28 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  qemu-kvm-0.12.5-r1.ebuild, qemu-kvm-0.13.0-r1.ebuild,
+  qemu-kvm-0.13.0-r2.ebuild, qemu-kvm-9999.ebuild:
+  Install udev files in /lib/udev (and multilib equivalents). No revision
+  bumps, as it's a minor change.
 
   21 Jan 2011; Tiziano Müller <dev-zero@gentoo.org> qemu-kvm-9999.ebuild,
   metadata.xml:
