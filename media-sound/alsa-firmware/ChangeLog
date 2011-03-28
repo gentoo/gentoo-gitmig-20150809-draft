@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.101 2011/02/05 23:59:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.102 2011/03/28 00:46:11 ssuominen Exp $
+
+  28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  alsa-firmware-1.0.23.ebuild, alsa-firmware-1.0.24.1.ebuild:
+  Install 52-usx2yaudio.rules to /lib/udev instead of /etc/udev.
 
 *alsa-firmware-1.0.24.1 (06 Feb 2011)
 

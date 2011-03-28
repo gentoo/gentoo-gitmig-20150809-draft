@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.24.1.ebuild,v 1.1 2011/02/05 23:59:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.24.1.ebuild,v 1.2 2011/03/28 00:46:11 ssuominen Exp $
 
 MY_P="${P/_rc/rc}"
 
@@ -75,7 +75,7 @@ src_install () {
 	[[ ${ea} == "no" ]] && rm -rf "${D}/lib/firmware/ea"
 	[[ ${emu} == "no" ]] && rm -rf "${D}/lib/firmware/emu"
 
-	insinto /etc/udev/rules.d
+	insinto /lib/udev/rules.d
 	use alsa_cards_usb-usx2y && doins "${FILESDIR}/52-usx2yaudio.rules"
 
 	dodoc README || die
