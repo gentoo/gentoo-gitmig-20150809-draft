@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/regexxer
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.20 2009/04/29 20:59:57 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.21 2011/03/28 18:43:16 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> regexxer-0.9.ebuild:
+  Fixed slot deps
 
   29 Apr 2009; Samuli Suominen <ssuominen@gentoo.org> regexxer-0.9.ebuild:
   amd64 stable wrt #263782
