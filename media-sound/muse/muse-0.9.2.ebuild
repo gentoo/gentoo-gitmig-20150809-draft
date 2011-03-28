@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.2.ebuild,v 1.6 2008/04/22 19:09:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.9.2.ebuild,v 1.7 2011/03/28 22:48:24 radhermit Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -19,21 +21,24 @@ RDEPEND="media-sound/lame
 	media-libs/libvorbis
 	media-libs/libsndfile
 	media-libs/libogg
-	gtk? ( >=x11-libs/gtk+-2 )"
+	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
 }
 
+src_configure() {
+	econf \
+		$(use_enable debug) \
+		$(use_enable gtk gtk2)
+}
+
 src_compile() {
-	econf $(use_enable debug) $(use_enable gtk gtk2)
 	emake CXXFLAGS="${CXXFLAGS} -fpermissive" CFLAGS="${CFLAGS}" \
 		|| die "emake failed."
 }

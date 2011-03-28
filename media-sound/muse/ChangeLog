@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muse
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.24 2008/04/22 19:09:42 drac Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.25 2011/03/28 22:48:24 radhermit Exp $
+
+  28 Mar 2011; Tim Harder <radhermit@gentoo.org> muse-0.9.2.ebuild:
+  Update to EAPI 2 and use slot dep for gtk+.
 
   22 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/muse-0.9.2-gcc43.patch, muse-0.9.2.ebuild:
