@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.39 2011/02/25 19:53:46 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.40 2011/03/28 16:49:16 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  pornview-0.2.0_pre1-r1.ebuild, pornview-0.2.0_pre1-r2.ebuild:
+  Fixed gtk+ dep
 
 *pornview-0.2.0_pre1-r2 (25 Feb 2011)
 
