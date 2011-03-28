@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.3 2011/03/24 14:13:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.4 2011/03/28 21:24:31 williamh Exp $
 
 EAPI="2"
 FINDLIB_USE="ocaml"
 
-inherit findlib eutils multilib toolchain-funcs java-pkg-opt-2 flag-o-matic
+inherit findlib eutils multilib toolchain-funcs java-pkg-opt-2 flag-o-matic \
+	autotools
 
 DESCRIPTION="Daemon that provides access to the Linux/Unix console for a blind person"
 HOMEPAGE="http://mielke.cc/brltty/"
@@ -33,10 +34,12 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 	${COMMON_DEP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-glibc-212.patch
+	epatch "${FILESDIR}"/${P}-fix-ldflags.patch
 	epatch "${FILESDIR}"/${P}-fix-ocaml-install.patch
+	epatch "${FILESDIR}"/${P}-glibc-212.patch
 
 	java-pkg-opt-2_src_prepare
+	eautoreconf
 }
 
 src_configure() {
