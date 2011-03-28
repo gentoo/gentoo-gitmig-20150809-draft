@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/archive-2.2.ebuild,v 1.7 2009/09/10 16:07:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/archive-2.2.ebuild,v 1.8 2011/03/28 12:30:56 scarabeus Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox-0install
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc x86"
 
 IUSE="bzip2 compress rar uuencode zip ace rpm cpio"
 
-RDEPEND="virtual/gzip
+RDEPEND="app-arch/gzip
 	app-arch/tar
 	|| ( app-arch/xz-utils app-arch/lzma-utils )
 	bzip2? ( app-arch/bzip2 )
