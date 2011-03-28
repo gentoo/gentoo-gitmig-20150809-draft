@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.2.ebuild,v 1.2 2011/03/28 09:39:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.2.ebuild,v 1.3 2011/03/28 17:07:23 eras Exp $
 
 EAPI=4
 
@@ -36,7 +36,6 @@ DEPEND=">=sys-libs/db-3.2
 
 RDEPEND="${DEPEND}
 	net-mail/mailbase
-	!virtual/mta
 	!net-mail/mailwrapper
 	selinux? ( sec-policy/selinux-postfix )
 	!mail-mta/courier

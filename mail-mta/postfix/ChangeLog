@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.248 2011/03/28 09:39:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.249 2011/03/28 17:07:23 eras Exp $
+
+  28 Mar 2011; Eray Aslan <eras@gentoo.org> postfix-2.8.2.ebuild:
+  correct blocking against virtual/mta
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> postfix-2.7.3-r1.ebuild,
   postfix-2.8.1-r1.ebuild, postfix-2.8.2.ebuild:
