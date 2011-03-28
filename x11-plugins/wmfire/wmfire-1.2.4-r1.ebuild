@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4-r1.ebuild,v 1.1 2010/06/28 22:00:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.4-r1.ebuild,v 1.2 2011/03/28 14:43:30 nirbheek Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="session"
 
 RDEPEND="x11-libs/gtk+:2
-	>=gnome-base/libgtop-2
+	gnome-base/libgtop:2
 	x11-libs/libX11
 	x11-libs/libXext
 	session? ( x11-libs/libSM
