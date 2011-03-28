@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.90 2010/04/24 23:32:04 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.91 2011/03/28 18:34:32 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> ardour-2.8.7.ebuild:
+  Fixed slot deps
 
 *ardour-2.8.7 (24 Apr 2010)
 

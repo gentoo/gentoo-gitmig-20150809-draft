@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.9.0.ebuild,v 1.5 2009/08/01 06:37:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/seq24-0.9.0.ebuild,v 1.6 2011/03/28 18:38:37 angelos Exp $
 
 EAPI=2
 inherit eutils
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND="media-libs/alsa-lib
-	>=dev-cpp/gtkmm-2.4
+	>=dev-cpp/gtkmm-2.4:2.4
 	>=dev-libs/libsigc++-2.2:2
 	jack? ( >=media-sound/jack-audio-connection-kit-0.90 )
 	lash? ( >=media-sound/lash-0.5 )"

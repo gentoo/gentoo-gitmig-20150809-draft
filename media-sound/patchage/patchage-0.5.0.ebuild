@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.5.0.ebuild,v 1.1 2011/01/13 09:00:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.5.0.ebuild,v 1.2 2011/03/28 18:37:25 angelos Exp $
 
 EAPI=2
 
@@ -17,10 +17,10 @@ IUSE="alsa debug lash"
 
 RDEPEND=">=media-libs/raul-0.5.1
 	>=x11-libs/flowcanvas-0.7.1
-	>=dev-cpp/gtkmm-2.11.12
-	>=dev-cpp/glibmm-2.14
-	>=dev-cpp/libglademm-2.6.0
-	dev-cpp/libgnomecanvasmm
+	>=dev-cpp/gtkmm-2.11.12:2.4
+	>=dev-cpp/glibmm-2.14:2
+	>=dev-cpp/libglademm-2.6.0:2.4
+	dev-cpp/libgnomecanvasmm:2.6
 	dev-libs/boost
 	>=media-sound/jack-audio-connection-kit-0.107
 	alsa? ( media-libs/alsa-lib )

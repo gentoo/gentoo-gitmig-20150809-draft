@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.7.ebuild,v 1.3 2010/10/15 18:50:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.7.ebuild,v 1.4 2011/03/28 18:34:32 angelos Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -22,21 +22,20 @@ RDEPEND="media-libs/aubio
 	media-libs/freetype:2
 	>=dev-libs/glib-2.10.1:2
 	>=x11-libs/gtk+-2.8.1:2
-	>=dev-libs/libxml2-2.6
+	>=dev-libs/libxml2-2.6:2
 	>=media-libs/libsndfile-1.0.18
 	>=media-libs/libsamplerate-0.1
 	media-libs/libsoundtouch
 	media-libs/flac
-	>=media-libs/raptor-1.4.2
-	<media-libs/raptor-1.9.0
+	>=media-libs/raptor-1.4.2:0
 	>=media-libs/liblrdf-0.4
 	>=media-sound/jack-audio-connection-kit-0.109
 	>=gnome-base/libgnomecanvas-2
 	media-libs/vamp-plugin-sdk
 	dev-libs/libxslt
 	dev-libs/libsigc++:2
-	>=dev-cpp/gtkmm-2.16
-	>=dev-cpp/libgnomecanvasmm-2.26
+	>=dev-cpp/gtkmm-2.16:2.4
+	>=dev-cpp/libgnomecanvasmm-2.26:2.6
 	media-libs/alsa-lib
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}

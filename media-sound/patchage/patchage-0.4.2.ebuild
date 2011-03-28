@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.4.2.ebuild,v 1.4 2009/08/02 21:12:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/patchage-0.4.2.ebuild,v 1.5 2011/03/28 18:37:25 angelos Exp $
 
 EAPI=1
 
@@ -15,10 +15,10 @@ IUSE="alsa dbus debug jack"
 
 RDEPEND=">=media-libs/raul-0.5.1
 	>=x11-libs/flowcanvas-0.5.1
-	>=dev-cpp/gtkmm-2.11.12
-	dev-cpp/glibmm
-	dev-cpp/libglademm
-	dev-cpp/libgnomecanvasmm
+	>=dev-cpp/gtkmm-2.11.12:2.4
+	dev-cpp/glibmm:2
+	dev-cpp/libglademm:2.4
+	dev-cpp/libgnomecanvasmm:2.6
 	dev-libs/boost
 	jack? ( >=media-sound/jack-audio-connection-kit-0.107 )
 	alsa? ( media-libs/alsa-lib )
