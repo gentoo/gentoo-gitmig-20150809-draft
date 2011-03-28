@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b.ebuild,v 1.4 2010/11/08 22:00:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b.ebuild,v 1.5 2011/03/28 02:08:35 lu_zero Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="|| ( GPL-2 BL BSD )"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="ffmpeg? ( >=media-video/ffmpeg-0.5[encode,theora] )
+RDEPEND="ffmpeg? ( virtual/ffmpeg[encode,theora] )
 	media-libs/openjpeg
 	media-libs/tiff
 	>=dev-lang/python-2.5
