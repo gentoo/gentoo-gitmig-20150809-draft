@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/scw
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.8 2008/05/30 07:24:17 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/scw/ChangeLog,v 1.9 2011/03/28 17:12:35 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> scw-0.4.7.ebuild:
+  Bump to EAPI3 and fixed gtk+ dep
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986). Assigning
