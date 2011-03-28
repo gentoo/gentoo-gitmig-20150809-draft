@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/biosdevname-0.3.8.ebuild,v 1.1 2011/03/26 12:15:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/biosdevname-0.3.8.ebuild,v 1.2 2011/03/28 20:23:54 aidecoe Exp $
 
 EAPI="4"
 DESCRIPTION="Sets BIOS-given device names instead of kernel eth* names"
@@ -8,7 +8,7 @@ HOMEPAGE="http://linux.dell.com/biosdevname/"
 SRC_URI="http://linux.dell.com/biosdevname/${P}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND="sys-apps/pciutils"
 RDEPEND="${DEPEND}"

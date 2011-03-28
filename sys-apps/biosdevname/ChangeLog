@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/biosdevname
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/ChangeLog,v 1.1 2011/03/26 12:15:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/ChangeLog,v 1.2 2011/03/28 20:23:54 aidecoe Exp $
+
+  28 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  biosdevname-0.3.8.ebuild:
+  Added ~x86 keyword.
 
 *biosdevname-0.3.8 (26 Mar 2011)
 
