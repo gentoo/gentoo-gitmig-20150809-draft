@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.6-r3.ebuild,v 1.13 2011/03/20 13:12:20 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-0.6-r3.ebuild,v 1.14 2011/03/28 11:44:33 eras Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
 KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
-IUSE="mailwrapper nls pam mysql postgres gdbm test"
+IUSE="nls pam mysql postgres gdbm test"
 
 RDEPEND="!mail-client/nmh
 	!mail-filter/libsieve
@@ -75,22 +75,7 @@ src_compile() {
 		myconf="${myconf} --with-postgres"
 	fi
 
-	# do not disable-sendmail for postfix user w/o mailwrapper, bug #44249.
-	has_postfix=$(best_version mail-mta/postfix)
-	has_postfix=${has_postfix%-[0-9]*}
-	has_postfix=${has_postfix##*\/}
-
-	if [ "$has_postfix" == "postfix" ]; then
-		einfo "postfix detected"
-		einfo "enable-sendmail"
-	else
-		if ! use mailwrapper; then
-			myconf="${myconf} --enable-sendmail"
-		else
-			myconf="${myconf} --disable-sendmail"
-			einfo "disable-sendmail"
-		fi
-	fi
+	myconf="${myconf} --enable-sendmail"
 
 	myconf="${myconf} $(use_enable nls) $(use_enable pam) $(use_enable gdbm)"
 	econf ${myconf} || die "configure failed"
