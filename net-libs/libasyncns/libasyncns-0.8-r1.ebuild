@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/libasyncns-0.8.ebuild,v 1.2 2011/03/28 04:37:12 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/libasyncns-0.8-r1.ebuild,v 1.1 2011/03/28 04:37:13 ford_prefect Exp $
 
 EAPI=3
 inherit eutils libtool flag-o-matic
@@ -20,6 +20,8 @@ RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
 src_prepare() {
+	# fix libdir in pkgconfig file
+	epatch "${FILESDIR}/${P}-libdir.patch"
 	elibtoolize
 }
 

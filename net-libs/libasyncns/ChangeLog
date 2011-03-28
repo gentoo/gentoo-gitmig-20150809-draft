@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libasyncns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.21 2010/08/10 00:25:05 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.22 2011/03/28 04:37:12 ford_prefect Exp $
+
+*libasyncns-0.8-r1 (28 Mar 2011)
+
+  28 Mar 2011; Arun Raghavan <ford_prefect@gentoo.org> libasyncns-0.8.ebuild,
+  +libasyncns-0.8-r1.ebuild, +files/libasyncns-0.8-libdir.patch:
+  Fix libdir in pkg-config file. Prevents bogus libtool warnings while building
+  clients of this library.
 
   10 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -libasyncns-0.3.ebuild, -libasyncns-0.4.ebuild:
