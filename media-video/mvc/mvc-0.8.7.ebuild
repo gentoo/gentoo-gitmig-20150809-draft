@@ -1,17 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mvc/mvc-0.8.7.ebuild,v 1.5 2011/01/19 20:39:41 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mvc/mvc-0.8.7.ebuild,v 1.6 2011/03/28 21:30:17 ssuominen Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Motion Video Capture, text mode v4l video capture program with motion detection feature"
 HOMEPAGE="http://modesto.sourceforge.net/piave/index.html"
-SRC_URI="http://www.turbolinux.com.cn/~merlin/mvc/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~ppc ~x86"
+IUSE=""
 
 RDEPEND="virtual/jpeg
 	media-libs/libpng"
@@ -32,7 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin mvc
+	dobin mvc || die
 	doman mvc.1
 	dodoc ChangeLog README TODO NEWS
 }
