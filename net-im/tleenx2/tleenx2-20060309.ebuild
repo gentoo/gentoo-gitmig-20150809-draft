@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20060309.ebuild,v 1.6 2009/09/26 12:15:48 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20060309.ebuild,v 1.7 2011/03/28 14:55:50 tester Exp $
+
+EAPI=1
 
 inherit autotools eutils
 
@@ -17,7 +19,7 @@ KEYWORDS="amd64 x86"
 S="${WORKDIR}/${MY_P}"
 
 RDEPEND="net-libs/libtlen
-	>=x11-libs/gtk+-2.0
+	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver"
 
 DEPEND="dev-util/pkgconfig
