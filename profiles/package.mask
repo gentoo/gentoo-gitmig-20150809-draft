@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12628 2011/03/28 19:56:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12629 2011/03/28 20:59:44 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -138,12 +138,6 @@ media-plugins/gmpc-qosd
 # No longer required by sci-electronics/geda.
 # Removal in 30 days.
 sci-libs/libgeda
-
-# Markos Chandras <hwoarang@gentoo.org> (25 Mar 2011)
-# Masking new release. Too many features got in so
-# it needs more testing. It will be unmasked on 
-# 2011/03/28
-=media-sound/qmmp-0.5.0
 
 # Markos Chandras <hwoarang@gentoo.org> (25 Mar 2011)
 # Masking qt-creator beta releases

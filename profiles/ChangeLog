@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5220 2011/03/28 19:56:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5221 2011/03/28 20:59:44 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Mar 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Unmasking qmmp-0.5.0
 
   28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Re-mask clutter-gtk-0.91*, gtk+3 still can't be added to the tree
