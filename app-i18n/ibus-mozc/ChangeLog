@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-mozc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.12 2011/03/28 16:25:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.13 2011/03/28 18:11:41 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  ibus-mozc-1.0.558.102.ebuild:
+  Stable on amd64 wrt bug #360951
 
 *ibus-mozc-1.1.626.102 (28 Mar 2011)
 
