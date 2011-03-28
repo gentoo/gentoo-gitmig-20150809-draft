@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.91 2011/03/26 23:09:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.92 2011/03/28 20:45:29 arfrever Exp $
+
+  28 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gdata-2.0.14.ebuild:
+  Improve dependencies (bug #360901).
 
 *gdata-2.0.14 (26 Mar 2011)
 

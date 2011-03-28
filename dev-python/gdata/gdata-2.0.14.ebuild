@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.14.ebuild,v 1.1 2011/03/26 23:09:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.14.ebuild,v 1.2 2011/03/28 20:45:29 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="ssl"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
