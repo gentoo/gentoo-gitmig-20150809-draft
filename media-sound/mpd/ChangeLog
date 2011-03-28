@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.243 2011/03/22 18:12:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.244 2011/03/28 08:13:33 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> mpd-0.16.2.ebuild:
+  Changed ffmpeg to virtual/ffmpeg and some minor cleanup
 
   22 Mar 2011; Christoph Mende <angelos@gentoo.org> mpd-0.16.2.ebuild:
   lastfmradio's dependency on curl is already enforced by REQUIRED_USE, so

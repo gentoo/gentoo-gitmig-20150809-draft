@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.2 2011/03/22 18:12:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.3 2011/03/28 08:13:33 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib
@@ -33,7 +33,7 @@ RDEPEND="!sys-cluster/mpich2
 	cdio? ( dev-libs/libcdio )
 	cue? ( media-libs/libcue )
 	curl? ( net-misc/curl )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
 	network? ( >=media-libs/libshout-2
@@ -107,8 +107,6 @@ src_configure() {
 	append-lfs-flags
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
-	cd "${S}"
-
 	econf \
 		$(use_enable aac) \
 		$(use_enable alsa) \
@@ -153,7 +151,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	insinto /etc
 	newins doc/mpdconf.example mpd.conf
