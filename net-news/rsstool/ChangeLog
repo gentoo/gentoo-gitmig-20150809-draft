@@ -1,6 +1,10 @@
 # ChangeLog for net-news/rsstool
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.14 2010/10/16 13:59:52 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/ChangeLog,v 1.15 2011/03/28 13:30:37 scarabeus Exp $
+
+  28 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  rsstool-1.0.1_rc2.ebuild:
+  Obey CC, depend on curl, eapi -> 4.
 
   16 Oct 2010; Brent Baude <ranger@gentoo.org> rsstool-1.0.0_rc4.ebuild:
   stable ppc, bug 337839
