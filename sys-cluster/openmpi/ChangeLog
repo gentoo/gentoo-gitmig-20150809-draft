@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.81 2011/03/22 19:28:29 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.82 2011/03/28 18:14:43 jsbronder Exp $
+
+  28 Mar 2011; Justin Bronder <jsbronder@gentoo.org>
+  +files/openmpi-r24328.patch, openmpi-1.5.3.ebuild:
+  Fix hardened test failure (#360185).
 
   22 Mar 2011; Justin Bronder <jsbronder@gentoo.org> openmpi-1.5.3.ebuild:
   Remove libtool if it was installed by USE=vt, bug #359917.
