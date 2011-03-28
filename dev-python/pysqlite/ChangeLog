@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.136 2011/03/27 20:12:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.137 2011/03/28 12:18:58 phajdan.jr Exp $
+
+  28 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pysqlite-2.6.3.ebuild:
+  x86 stable wrt bug #360347
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> pysqlite-2.6.3.ebuild:
   Marking pysqlite-2.6.3 ppc for bug 360347
