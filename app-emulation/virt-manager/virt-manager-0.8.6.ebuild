@@ -1,15 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.6.ebuild,v 1.3 2011/03/23 06:32:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.6.ebuild,v 1.4 2011/03/28 08:40:20 flameeyes Exp $
 
 BACKPORTS=1
 
 EAPI=2
-
-if [[ ${PV} = *9999* ]]; then
-	EHG_REPO_URI="http://hg.fedorahosted.org/hg/virt-manager"
-	HG_ECLASS="mercurial autotools"
-fi
 
 PYTHON_DEPEND="2:2.4"
 
@@ -18,16 +13,10 @@ GCONF_DEBUG="no"
 
 inherit eutils gnome2 python ${HG_ECLASS}
 
-if [[ ${PV} = *9999* ]]; then
-	SRC_URI=""
-	KEYWORDS=""
-	VIRTINSTDEP=">=app-emulation/virtinst-9999"
-else
-	SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
-		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="~amd64 ~x86"
-	VIRTINSTDEP=">=app-emulation/virtinst-0.500.5"
-fi
+SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
+	${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
+KEYWORDS="~amd64 ~x86"
+VIRTINSTDEP=">=app-emulation/virtinst-0.500.5"
 
 DESCRIPTION="A graphical tool for administering virtual machines (KVM/Xen)"
 HOMEPAGE="http://virt-manager.org/"
@@ -57,19 +46,6 @@ src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
-
-	if [[ ${PV} = *9999* ]]; then
-		# virt-manager's autogen.sh touches this and eautoreconf fails
-		# unless we do this
-		touch config.rpath
-
-		rm -f config.status
-		intltoolize --automake --copy --force
-		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in
-		perl -i -p -e 's,^GETTEXT_PACKAGE.*$,GETTEXT_PACKAGE = virt-manager,' \
-			po/Makefile.in.i
-		eautoreconf
-	fi
 
 	gnome2_src_prepare
 }

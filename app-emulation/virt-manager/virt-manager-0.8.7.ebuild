@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.4-r1.ebuild,v 1.3 2011/03/23 06:32:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.7.ebuild,v 1.1 2011/03/28 08:40:20 flameeyes Exp $
+
+#BACKPORTS=
 
 EAPI=2
 
@@ -9,35 +11,41 @@ PYTHON_DEPEND="2:2.4"
 # Stop gnome2.eclass from doing stuff on USE=debug
 GCONF_DEBUG="no"
 
-inherit eutils gnome2 python
+inherit eutils gnome2 python ${HG_ECLASS}
+
+SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
+	${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
+KEYWORDS="~amd64 ~x86"
+VIRTINSTDEP=">=app-emulation/virtinst-0.500.6"
 
 DESCRIPTION="A graphical tool for administering virtual machines (KVM/Xen)"
 HOMEPAGE="http://virt-manager.org/"
-SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="gnome-keyring policykit"
+IUSE="gnome-keyring policykit sasl"
 RDEPEND=">=dev-python/pygtk-1.99.12
-	>=app-emulation/libvirt-0.7.0[python]
+	>=app-emulation/libvirt-0.7.0[python,sasl?]
 	>=dev-libs/libxml2-2.6.23[python]
-	>=app-emulation/virtinst-0.500.3
+	${VIRTINSTDEP}
 	>=gnome-base/librsvg-2
 	>=x11-libs/vte-0.12.2:0[python]
-	>=net-libs/gtk-vnc-0.3.8[python]
+	>=net-libs/gtk-vnc-0.3.8[python,sasl?]
 	>=dev-python/dbus-python-0.61
 	>=dev-python/gconf-python-1.99.11
 	dev-python/urlgrabber
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 	policykit? ( sys-auth/polkit )"
 DEPEND="${RDEPEND}
-	app-text/rarian"
+	app-text/rarian
+	dev-util/intltool"
 
 src_prepare() {
 	sed -e "s/python/python2/" -i src/virt-manager.in || \
 		die "python2 update failed"
 
-	epatch "${FILESDIR}"/${P}-customize-dialog-xmlparsedoc.patch
+	[[ -n ${BACKPORTS} ]] && \
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
 
 	gnome2_src_prepare
 }
