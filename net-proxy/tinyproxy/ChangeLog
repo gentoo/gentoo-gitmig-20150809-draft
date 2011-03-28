@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.27 2011/03/27 14:06:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.28 2011/03/28 12:05:08 jer Exp $
+
+  28 Mar 2011; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.2.ebuild:
+  Remove unneeded fortune dep. Explain why emake test is used. Add
+  USE=xtinyproxy-header requirement in src_test() thanks to andreas schürch
+  (bug #358113 again).
 
   27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> tinyproxy-1.8.2.ebuild:
   Stable on alpha, bug #358091
