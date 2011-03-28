@@ -1,0 +1,45 @@
+# ChangeLog for media-libs/phonon-vlc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.1 2011/03/28 22:57:42 dilfridge Exp $
+
+  28 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +phonon-vlc-0.3.2.ebuild, +phonon-vlc-9999.ebuild, +metadata.xml:
+  Moved to media-libs
+
+  26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  phonon-vlc-0.3.2.ebuild, phonon-vlc-9999.ebuild:
+  Adapt phonon dependency for package move
+
+  28 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -phonon-vlc-0.3.1.ebuild:
+  old
+
+*phonon-vlc-9999 (23 Jan 2011)
+*phonon-vlc-0.3.2 (23 Jan 2011)
+
+  23 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  -phonon-vlc-0.2.0.ebuild, +phonon-vlc-0.3.2.ebuild,
+  +phonon-vlc-9999.ebuild:
+  Version bump 0.3.2, remove old, add live ebuild from kde overlay
+
+  04 Dec 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  phonon-vlc-0.2.0.ebuild, phonon-vlc-0.3.1.ebuild:
+  Added dep on vlc[dbus] - fixes bug 347714.
+
+  04 Dec 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  phonon-vlc-0.2.0.ebuild, phonon-vlc-0.3.1.ebuild:
+  Added ~x86 keywords to phonon-vlc ebuilds. Thanks to Agostino Sarubbo (ago)
+  for testing.
+
+*phonon-vlc-0.3.1 (04 Dec 2010)
+
+  04 Dec 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phonon-vlc-0.3.1.ebuild:
+  Bumped phonon-vlc to the 0.3.1 release.
+
+*phonon-vlc-0.2.0 (24 Jul 2010)
+
+  24 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phonon-vlc-0.2.0.ebuild, +metadata.xml:
+  Initial import of the first phonon vlc backend release (0.2.0).
+
