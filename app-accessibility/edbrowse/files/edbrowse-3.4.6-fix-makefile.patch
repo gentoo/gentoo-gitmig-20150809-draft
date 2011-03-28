@@ -1,6 +1,6 @@
 diff -Naur edbrowse-3.4.6/src/makefile edbrowse-3.4.6-new/src/makefile
 --- edbrowse-3.4.6/src/makefile	2011-01-20 10:38:24.000000000 +0000
-+++ edbrowse-3.4.6-new/src/makefile	2011-01-26 13:50:10.000000000 +0000
++++ edbrowse-3.4.6-new/src/makefile	2011-03-28 14:02:25.000000000 +0000
 @@ -23,12 +23,15 @@
  STRIP=-s
  endif
@@ -19,7 +19,17 @@ diff -Naur edbrowse-3.4.6/src/makefile edbrowse-3.4.6-new/src/makefile
  
  #  Normal load flags
  LFLAGS = $(STRIP)
-@@ -59,11 +62,11 @@
+@@ -45,7 +48,8 @@
+ #  Or you can use the target jslink below.
+ #  Some folks need to add -lcrypto to this list.
+ 
+-LIBS = -lpcre -lm -lssl -ljs -lcurl -lreadline
++JSLIB = -ljs
++LIBS = -lpcre -lm -lssl $(JSLIB) -lcurl -lreadline
+ 
+ #  Make the dynamically linked executable program by default.
+ #  Edbrowse executable.
+@@ -59,11 +63,11 @@
  $(EBOBJS) : eb.h eb.p messages.h tcp.h
  
  edbrowse: $(EBOBJS) tcp.o dbstubs.o
@@ -33,7 +43,7 @@ diff -Naur edbrowse-3.4.6/src/makefile edbrowse-3.4.6-new/src/makefile
  
  #  If you had to build the javascript library yourself,
  #  link it into /usr/lib.
-@@ -87,7 +90,7 @@
+@@ -87,7 +91,7 @@
  
  #  odbc access
  edbrowseodbc: $(EBOBJS) tcp.o dbops.o dbodbc.o

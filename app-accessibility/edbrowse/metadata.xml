@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>accessibility</herd>
 <maintainer>
-  <email>williamh@gentoo.org</email>
+  <email>cbrannon@gentoo.org</email>
 </maintainer>
 <longdescription>
 	edbrowse is a line editor, web browser and email client using the /bin/ed
