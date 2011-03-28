@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-9999.ebuild,v 1.5 2011/03/28 08:39:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-9999.ebuild,v 1.6 2011/03/28 15:18:47 mr_bones_ Exp $
 
 #BACKPORTS=1
 
 EAPI=3
-
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="http://git.fedorahosted.org/git/python-virtinst.git"
