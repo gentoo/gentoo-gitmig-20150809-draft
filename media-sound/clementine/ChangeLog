@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.34 2011/03/28 09:21:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.35 2011/03/28 10:14:45 ssuominen Exp $
+
+  28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> clementine-0.7.ebuild:
+  Disable only failing test and revert RESTRICT for test by Nikoli.
 
   28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> clementine-0.7.ebuild:
   RESTRICT="test" until upstream

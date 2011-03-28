@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.ebuild,v 1.2 2011/03/28 09:21:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.ebuild,v 1.3 2011/03/28 10:14:45 ssuominen Exp $
 
 EAPI=4
 
@@ -67,13 +67,12 @@ DEPEND="${COMMON_DEPEND}
 "
 DOCS="Changelog TODO"
 
-RESTRICT="test" # http://code.google.com/p/clementine-player/issues/detail?id=1634
-
 src_prepare() {
-	sed -i -e 's:-Werror::' src/CMakeLists.txt || die
+	sed -i -e 's:-Werror::' src/CMakeLists.txt || die #360703
 
 	# some tests fail or hang
 	sed -i \
+		-e '/add_test_file(mpris1_test.cpp/d' \
 		-e '/add_test_file(translations_test.cpp/d' \
 		tests/CMakeLists.txt || die
 }
