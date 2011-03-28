@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.24.ebuild,v 1.2 2011/03/15 21:14:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.24.ebuild,v 1.3 2011/03/28 22:08:38 flameeyes Exp $
 
 EAPI=4
 inherit xorg-2
@@ -28,8 +28,7 @@ RDEPEND="dev-libs/libpthread-stubs"
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-2.4.16-solaris.patch
-	"${FILESDIR}"/${PN}-2.4.15-solaris.patch
+	"${FILESDIR}"/${PN}-2.4.23-solaris.patch
 )
 
 pkg_setup() {

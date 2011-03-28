@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.152 2011/03/15 21:14:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.153 2011/03/28 22:08:38 flameeyes Exp $
+
+  28 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/libdrm-2.4.15-solaris.patch, -files/libdrm-2.4.16-solaris.patch,
+  libdrm-2.4.23.ebuild, +files/libdrm-2.4.23-solaris.patch,
+  libdrm-2.4.24.ebuild:
+  Collapse the two solaris patches in one, and remove solaris patching for
+  nouveau (meaningless). Acked by scarabeus.
 
   15 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libdrm-2.4.24.ebuild:
   ppc/ppc64 stable wrt #359059
