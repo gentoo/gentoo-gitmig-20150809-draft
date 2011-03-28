@@ -1,6 +1,13 @@
 # ChangeLog for media-video/hasciicam
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/hasciicam/ChangeLog,v 1.4 2008/11/24 16:15:36 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/hasciicam/ChangeLog,v 1.5 2011/03/28 18:07:23 flameeyes Exp $
+
+*hasciicam-1.1.1 (28 Mar 2011)
+
+  28 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +hasciicam-1.1.1.ebuild:
+  Version bump; new version supports V4L2 (bug #360967), and no longer
+  overflows buffers (bug #301879).
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml, hasciicam-1.0.ebuild:
   Re-assign to media-video and stabilize for x86.
