@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/archway
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/archway/ChangeLog,v 1.1 2010/03/05 05:49:57 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/archway/ChangeLog,v 1.2 2011/03/28 16:42:42 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> archway-0.2.1.ebuild:
+  Fixed gtk+ dep
 
   05 Mar 2010; Jonathan Callen <abcd@gentoo.org> archway-0.2.1.ebuild:
   Move from dev-util to dev-vcs for bug #56967
