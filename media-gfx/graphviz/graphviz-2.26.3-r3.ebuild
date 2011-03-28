@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r3.ebuild,v 1.2 2010/11/24 20:08:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r3.ebuild,v 1.3 2011/03/28 20:44:59 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -34,7 +34,7 @@ RDEPEND="
 		>=x11-libs/cairo-1.1.10[svg]
 	)
 	gtk?	(
-		>=x11-libs/gtk+-2
+		x11-libs/gtk+:2
 		x11-libs/libXaw
 		>=x11-libs/pango-1.12
 		>=x11-libs/cairo-1.1.10
@@ -50,8 +50,7 @@ DEPEND="${RDEPEND}
 	perl?	( dev-lang/swig )
 	python?	( dev-lang/swig )
 	ruby?	( dev-lang/swig )
-	tcl?	( || ( <dev-lang/swig-1.3.38[tcl]
-		>=dev-lang/swig-1.3.38 ) )"
+	tcl?	( dev-lang/swig )"
 
 # Dependency description / Maintainer-Info:
 
