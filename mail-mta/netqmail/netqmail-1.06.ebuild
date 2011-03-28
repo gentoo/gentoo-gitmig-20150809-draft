@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.06.ebuild,v 1.11 2011/03/16 11:03:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.06.ebuild,v 1.12 2011/03/28 09:32:33 eras Exp $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42
@@ -31,7 +31,7 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="authcram gencertdaily highvolume mailwrapper qmail-spp ssl vanilla"
+IUSE="authcram gencertdaily highvolume qmail-spp ssl vanilla"
 RESTRICT="test"
 
 DEPEND="
@@ -40,8 +40,17 @@ DEPEND="
 	ssl? ( dev-libs/openssl )
 "
 RDEPEND="
-	mailwrapper? ( net-mail/mailwrapper )
-	!mailwrapper? ( !virtual/mta )
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/nullmailer
+	!mail-mta/postfix
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail
+	!mail-mta/ssmtp
 	>=sys-apps/ucspi-tcp-0.88-r17
 	ssl? ( >=sys-apps/ucspi-ssl-0.70-r1 )
 	virtual/daemontools
@@ -50,7 +59,6 @@ RDEPEND="
 	authcram? ( >=net-mail/cmd5checkpw-0.30 )
 	${DEPEND}
 "
-PROVIDE="virtual/mta"
 
 pkg_setup() {
 	if [[ -n "${QMAIL_PATCH_DIR}" ]]; then
