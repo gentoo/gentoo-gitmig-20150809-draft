@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.10 2008/07/12 22:31:40 chtekk Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.11 2011/03/28 08:41:56 ssuominen Exp $
 
 inherit autotools eutils
 
