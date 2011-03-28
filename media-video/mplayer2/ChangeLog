@@ -1,0 +1,113 @@
+# ChangeLog for media-video/mplayer2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.1 2011/03/28 22:59:02 lu_zero Exp $
+
+  28 Mar 2011; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +mplayer2-2.0.ebuild, +mplayer2-9999.ebuild:
+  Import to the main portage from the multimedia overlay
+
+*mplayer2-2.0 (28 Mar 2011)
+
+  28 Mar 2011; Nikoli <nikoli@lavabit.com> +mplayer2-2.0.ebuild,
+  mplayer2-9999.ebuild:
+  version bump, license is GPL-3
+
+*mplayer2-2.0_rc2-r2 (24 Mar 2011)
+
+  24 Mar 2011; Nikoli <nikoli@lavabit.com> +mplayer2-2.0_rc2-r2.ebuild,
+  mplayer2-9999.ebuild:
+  migrate to EAPI4, sync with portage
+
+*mplayer2-9999 (16 Mar 2011)
+*mplayer2-2.0_rc2-r1 (16 Mar 2011)
+
+  16 Mar 2011; Nikoli <nikoli@lavabit.com> +mplayer2-2.0_rc2-r1.ebuild,
+  +mplayer2-9999.ebuild, +metadata.xml:
+  mplayer-uau -> mplayer2 rename
+
+*mplayer-uau-2.0_rc2 (09 Mar 2011)
+
+  09 Mar 2011; Nikoli <nikoli@lavabit.com> +mplayer-uau-2.0_rc2.ebuild,
+  mplayer-uau-9999.ebuild:
+  internal libdvdcss was removed, version bump
+
+*mplayer-uau-2.0_rc1 (27 Feb 2011)
+
+  27 Feb 2011; Nikoli <nikoli@lavabit.com> +mplayer-uau-2.0_rc1.ebuild:
+  version bump
+
+  16 Feb 2011; Nikoli <nikoli@lavabit.com> mplayer-uau-2.0_beta1.ebuild,
+  mplayer-uau-9999.ebuild:
+  fix libass dep, cosmetics
+
+*mplayer-uau-2.0_beta1 (15 Feb 2011)
+
+  15 Feb 2011; Nikoli <nikoli@lavabit.com> +mplayer-uau-2.0_beta1.ebuild,
+  mplayer-uau-9999.ebuild, metadata.xml:
+  add beta1, update live
+
+  01 Feb 2011; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  upstream removed bz2 and lzo deps
+
+  01 Feb 2011; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  upstream removed internal tremor and libmpeg2
+
+  01 Feb 2011; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  upstream removed vidix, zoran, some docs and internal libfaad2
+
+  30 Jan 2011; Nikoli <nikoli@lavabit.com>
+  mplayer-uau-1.0_rc4_p20110126.ebuild, mplayer-uau-9999.ebuild:
+  sync with portage
+
+*mplayer-uau-1.0_rc4_p20110126 (30 Jan 2011)
+
+  30 Jan 2011; Nikoli <nikoli@lavabit.com>
+  +mplayer-uau-1.0_rc4_p20110126.ebuild:
+  new snapshot
+
+  25 Jan 2011; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  fix build, sync with portage
+
+*mplayer-uau-1.0_rc4_p20101220 (25 Dec 2010)
+
+  25 Dec 2010; Nikoli <nikoli@lavabit.com>
+  +mplayer-uau-1.0_rc4_p20101220.ebuild:
+  new snapshot
+
+  25 Dec 2010; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  set version in archive
+
+*mplayer-uau-1.0_rc4_p20101126 (06 Dec 2010)
+
+  06 Dec 2010; Nikoli <nikoli@lavabit.com>
+  +mplayer-uau-1.0_rc4_p20101126.ebuild:
+  add snapshot
+
+  15 Nov 2010; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild,
+  metadata.xml:
+  update, sync with mplayer from portage
+
+*mplayer-uau-1.0_rc4_p20100822 (26 Aug 2010)
+
+  26 Aug 2010; Nikoli <nikoli@lavabit.com>
+  +mplayer-uau-1.0_rc4_p20100822.ebuild:
+  add snapshot
+
+  22 Aug 2010; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  fix src_unpack, remove USE svga, sync with mplayer-9999
+
+  17 Jun 2010; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  fixed src_unpack, configure; added USE threads, cosmetics
+
+  16 Jun 2010; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  USE="external-ffmpeg" now builds with >=ffmpeg-0.6
+
+  13 Jun 2010; Nikoli <nikoli@lavabit.com> mplayer-uau-9999.ebuild:
+  fix use symlink && use !encode
+
+*mplayer-uau-9999 (10 Jun 2010)
+
+  10 Jun 2010; Nikoli <nikoli@lavabit.com> +mplayer-uau-9999.ebuild,
+  +metadata.xml:
+  Initial ebuild
+
