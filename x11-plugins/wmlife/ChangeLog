@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmlife
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.2 2008/01/12 13:30:43 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/ChangeLog,v 1.3 2011/03/28 15:04:30 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> wmlife-1.0.0.ebuild:
+  Fix slot-dep on gtk+
 
   12 Jan 2008; Markus Meier <maekke@gentoo.org> wmlife-1.0.0.ebuild:
   add ~x86

@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.1.ebuild,v 1.5 2008/01/15 12:51:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclockmon/wmclockmon-0.8.1.ebuild,v 1.6 2011/03/28 15:04:52 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXpm

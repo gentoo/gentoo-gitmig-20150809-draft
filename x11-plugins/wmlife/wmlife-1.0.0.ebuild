@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/wmlife-1.0.0.ebuild,v 1.2 2008/01/12 13:30:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlife/wmlife-1.0.0.ebuild,v 1.3 2011/03/28 15:04:30 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/gnome-panel-2
 	>=gnome-base/libgnomeui-2
 	x11-libs/libX11
