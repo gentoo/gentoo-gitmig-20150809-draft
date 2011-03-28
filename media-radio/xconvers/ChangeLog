@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xconvers
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.12 2010/12/19 17:18:17 tomjbe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.13 2011/03/28 16:52:45 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> xconvers-0.8.3.ebuild:
+  Fixed gtk+ dep
 
   19 Dec 2010; Thomas Beierlein <tomjbe@gentoo.org> xconvers-0.8.3.ebuild:
   keyworded amd64
