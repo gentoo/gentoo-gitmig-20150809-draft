@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/openbabel-perl-2.3.0.ebuild,v 1.1 2011/03/26 15:52:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/openbabel-perl-2.3.0.ebuild,v 1.2 2011/03/28 19:28:37 jlec Exp $
 
 EAPI="3"
 
@@ -19,13 +19,15 @@ RDEPEND="
 	dev-lang/perl
 	~sci-chemistry/openbabel-${PV}"
 DEPEND="${RDEPEND}
-	=dev-lang/swig-2.0.1
+	dev-lang/swig
 	dev-util/cmake"
 
 S="${WORKDIR}/openbabel-${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch \
+		"${FILESDIR}/${P}-makefile.patch" \
+		"${FILESDIR}"/${P}-swig.patch
 }
 
 src_configure() {

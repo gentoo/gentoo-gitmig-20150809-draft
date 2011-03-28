@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.49 2011/03/26 16:23:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.50 2011/03/28 19:30:52 jlec Exp $
+
+  28 Mar 2011; Justin Lecher <jlec@gentoo.org> openbabel-2.3.0.ebuild,
+  +files/openbabel-2.3.0-swig.patch:
+  Sane check for swig version,
+  https://sourceforge.net/tracker/?func=detail&aid=3253693&group_id=40728&atid=
+  428740
 
   26 Mar 2011; Justin Lecher <jlec@gentoo.org> openbabel-2.2.3.ebuild:
   Block sci-chemistry/openbabel-{python,perl}

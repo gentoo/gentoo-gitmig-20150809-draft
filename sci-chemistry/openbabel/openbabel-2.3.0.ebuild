@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.2 2011/03/26 15:54:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.3 2011/03/28 19:30:52 jlec Exp $
 
 EAPI="3"
 
@@ -32,7 +32,9 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README THANKS doc/*.inc doc/README* doc/*.mol2"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-test_lib_path.patch
+	epatch \
+		"${FILESDIR}"/${P}-test_lib_path.patch \
+		"${FILESDIR}"/${P}-swig.patch
 }
 
 src_configure() {
