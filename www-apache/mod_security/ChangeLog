@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.50 2011/03/23 23:05:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.51 2011/03/28 21:58:58 flameeyes Exp $
+
+  28 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/modsecurity.conf, -files/2.5.13-r2/79_modsecurity.conf,
+  -files/2.5.13/79_mod_security.conf, -mod_security-2.5.13-r1.ebuild,
+  mod_security-2.5.13-r2.ebuild, metadata.xml:
+  Cleanup ebuild, port to EAPI=3; add geoip USE flag to bring in dev-libs/geoip
+  and set it up.
 
 *mod_security-2.5.13-r2 (23 Mar 2011)
 

@@ -20,5 +20,12 @@
       applications, including Rails-based web applications and
       Bugzilla.
     </flag>
+
+    <flag name='geoip'>
+      Configure ModSecurity to query the GeoIP database from MaxMind,
+      provided by <pkg>dev-libs/geoip</pkg>. This flag only controls
+      the default configuration, as the GeoIP query code is part of
+      ModSecurity's source code.
+    </flag>
   </use>
 </pkgmetadata>

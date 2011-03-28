@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.13-r2.ebuild,v 1.1 2011/03/23 23:05:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.13-r2.ebuild,v 1.2 2011/03/28 21:58:58 flameeyes Exp $
 
-EAPI=2
+EAPI=3
 
 inherit apache-module autotools
 
-MY_P=${P/mod_security-/modsecurity-apache_}
-MY_P=${MY_P/_rc/-rc}
+MY_P=modsecurity-apache_${PV/_rc/-rc}
 
 DESCRIPTION="Web application firewall and Intrusion Detection System for Apache."
 HOMEPAGE="http://www.modsecurity.org/"
@@ -16,23 +15,25 @@ SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="lua"
+IUSE="lua geoip"
 
 DEPEND="dev-libs/libxml2
 	lua? ( >=dev-lang/lua-5.1 )
 	www-servers/apache[apache2_modules_unique_id]"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	geoip? ( dev-libs/geoip )"
 PDEPEND="www-apache/modsecurity-crs"
 
 S="${WORKDIR}/${MY_P}"
 
 APACHE2_MOD_FILE="apache2/.libs/${PN}2.so"
-APACHE2_MOD_CONF="2.5.13-r2/79_modsecurity"
 APACHE2_MOD_DEFINE="SECURITY"
 
 need_apache2
 
 src_prepare() {
+	cp "${FILESDIR}"/modsecurity.conf "${T}"/79_modsecurity.conf || die
+
 	epatch "${FILESDIR}"/${PN}-2.5.10-as-needed.patch
 
 	cd apache2
@@ -49,7 +50,10 @@ src_configure() {
 }
 
 src_compile() {
-	cd apache2
+	if ! use geoip; then
+		sed -i -e '/SecGeoLookupDb/s:^:#:' \
+			"${T}"/79_modsecurity.conf || die
+	fi
 
 	APXS_FLAGS=
 	for flag in ${CFLAGS}; do
@@ -61,7 +65,7 @@ src_compile() {
 		APXS_FLAGS="${APXS_FLAGS} -Wl,${flag}"
 	done
 
-	emake \
+	emake -C apache2 \
 		APXS_CFLAGS="${CFLAGS}" \
 		APXS_LDFLAGS="${LDFLAGS}" \
 		APXS_EXTRA_CFLAGS="${APXS_FLAGS}" \
@@ -69,16 +73,21 @@ src_compile() {
 }
 
 src_test() {
-	cd apache2
-	emake test || die
+	emake -C apache2 test || die
 }
 
 src_install() {
 	apache-module_src_install
 
-	# install documentation
-	dodoc CHANGES || die
-	dohtml -r doc/* || die
+	# install manually rather than by using the APACHE2_MOD_CONF
+	# variable since we have to edit it to set things up properly.
+	insinto "${APACHE_MODULES_CONFDIR}"
+	doins "${T}"/79_modsecurity.conf
+
+	# install documentation; don't install index.html as it references
+	# the PDF and split-pages versions of the same documentation.
+	dodoc CHANGES
+	dohtml "${S}"/doc/*.{css,gif,jpg} "${S}"/doc/modsecurity2*.html
 
 	keepdir /var/cache/modsecurity || die
 	fowners apache:apache /var/cache/modsecurity || die
@@ -88,7 +97,7 @@ src_install() {
 pkg_postinst() {
 	if [[ -f "${ROOT}"/etc/apache/modules.d/99_mod_security.conf ]]; then
 		ewarn "You still have the configuration file 99_mod_security.conf."
-		ewarn "Please make sure to remove that and keep only 79_mod_security.conf."
+		ewarn "Please make sure to remove that and keep only 79_modsecurity.conf."
 		ewarn ""
 	fi
 	elog "The base configuration file has been renamed 79_modsecurity.conf"
