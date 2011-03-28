@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r8.ebuild,v 1.9 2011/01/07 13:32:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.62-r8.ebuild,v 1.10 2011/03/28 09:21:44 eras Exp $
 
 EAPI="3"
 
@@ -19,8 +19,17 @@ DEPEND="ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
 	net-mail/mailbase
 	!net-mail/mailwrapper
-	!virtual/mta"
-PROVIDE="virtual/mta"
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/netqmail
+	!mail-mta/nullmailer
+	!mail-mta/postfix
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail"
 
 S="${WORKDIR}/${PN}"
 
