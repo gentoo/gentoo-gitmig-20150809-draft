@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.13 2011/03/28 15:23:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.14 2011/03/28 15:24:42 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 MY_P=GStreamripperX-${PV}
@@ -32,9 +32,7 @@ src_install() {
 		gstreamripperxdocdir=${docdir} \
 		install || die
 
-	rm -f "${D}"/${docdir}/COPYING
+	rm -f "${D}"/${docdir}/{COPYING,NEWS,TODO}
 
 	make_desktop_entry gstreamripperx GStreamripperX
-
-	prepalldocs
 }
