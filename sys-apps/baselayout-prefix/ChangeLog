@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.4 2011/03/28 15:09:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.5 2011/03/28 15:38:17 grobian Exp $
+
+  28 Mar 2011; Fabian Groffen <grobian@gentoo.org>
+  baselayout-prefix-1.12.5-r9.ebuild, +files/baselayout-1.12.5-solaris.patch:
+  Add patch to fix compilation on Solaris, bug #360917
 
   28 Mar 2011; Fabian Groffen <grobian@gentoo.org>
   baselayout-prefix-1.12.5-r9.ebuild,
