@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_beta2-r2.ebuild,v 1.3 2011/03/19 08:21:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_beta2-r3.ebuild,v 1.1 2011/03/28 14:02:03 c1pher Exp $
 
 EAPI=3
 
@@ -61,6 +61,7 @@ RDEPEND="
 DOCS="CHANGES NEWS AUTHORS README"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-init.patch
 	python_copy_sources
 }
 
