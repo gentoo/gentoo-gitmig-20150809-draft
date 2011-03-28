@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.2 2011/03/16 10:53:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.3 2011/03/28 08:46:35 eras Exp $
 
 GENQMAIL_PV=20080406
 
@@ -18,15 +18,23 @@ SRC_URI="mirror://qmail/netqmail-${PV}.tar.gz
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="mailwrapper"
+IUSE=""
 
 DEPEND=""
 RDEPEND="
-	mailwrapper? ( net-mail/mailwrapper )
-	!mailwrapper? ( !virtual/mta )
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/netqmail
+	!mail-mta/nullmailer
+	!mail-mta/postfix
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail
+	!mail-mta/ssmtp
 	${DEPEND}
-"
-PROVIDE="virtual/mta"
+	"
 
 S="${WORKDIR}"/netqmail-${PV}
 
