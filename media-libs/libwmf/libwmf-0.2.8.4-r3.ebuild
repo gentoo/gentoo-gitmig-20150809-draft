@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.11 2010/11/11 10:26:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.12 2011/03/28 16:51:26 angelos Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ RDEPEND="app-text/ghostscript-gpl
 		x11-libs/libSM
 		x11-libs/libX11
 	)
-	gtk? ( >=x11-libs/gtk+-2.1.2 ) "
+	gtk? ( x11-libs/gtk+:2 ) "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	X? (
@@ -47,9 +47,9 @@ src_prepare() {
 	if ! use gtk ; then
 		sed -e 's:@LIBWMF_GDK_PIXBUF_TRUE@:#:' -i src/Makefile.in
 	fi
-	epatch "${FILESDIR}"/${P}-intoverflow.patch
-	epatch "${FILESDIR}"/${P}-build.patch
-	epatch "${FILESDIR}"/${P}-pngfix.patch
+	epatch "${FILESDIR}"/${P}-intoverflow.patch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-pngfix.patch
 
 	eautoreconf
 }
