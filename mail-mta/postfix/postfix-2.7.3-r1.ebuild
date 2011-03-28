@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.3-r1.ebuild,v 1.1 2011/03/23 17:18:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.3-r1.ebuild,v 1.2 2011/03/28 09:39:19 eras Exp $
 
 EAPI=3
 
@@ -23,8 +23,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="cdb doc dovecot-sasl examples hardened ipv6 ldap mbox mysql nis pam postgres sasl selinux ssl vda"
 
-PROVIDE="virtual/mta"
-
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	cdb? ( || ( >=dev-db/cdb-0.75-r1 >=dev-db/tinycdb-0.76 ) )
@@ -37,9 +35,19 @@ DEPEND=">=sys-libs/db-3.2
 
 RDEPEND="${DEPEND}
 	net-mail/mailbase
-	!virtual/mta
 	!net-mail/mailwrapper
-	selinux? ( sec-policy/selinux-postfix )"
+	selinux? ( sec-policy/selinux-postfix )
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/netqmail
+	!mail-mta/nullmailer
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail
+	!mail-mta/ssmtp"
 
 S="${WORKDIR}/${MY_SRC}"
 

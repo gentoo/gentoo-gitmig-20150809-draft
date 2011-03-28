@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.04.ebuild,v 1.8 2010/01/14 15:00:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.04.ebuild,v 1.9 2011/03/28 09:34:54 eras Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -22,8 +22,17 @@ IUSE=""
 DEPEND="sys-apps/groff"
 RDEPEND="sys-apps/shadow
 	virtual/logger
-	!virtual/mta"
-PROVIDE="virtual/mta"
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/netqmail
+	!mail-mta/postfix
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail
+	!mail-mta/ssmtp"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
