@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.232 2011/03/27 08:19:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.233 2011/03/28 10:36:23 eras Exp $
+
+  28 Mar 2011; Eray Aslan <eras@gentoo.org> virtuals:
+  remove old style virtual/mta - bug 360305
 
   27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask,
   use.mask:
