@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.71 2011/01/19 19:33:51 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.72 2011/03/28 14:24:51 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnunet-0.7.3-r1.ebuild, gnunet-0.8.0.ebuild, gnunet-0.8.1.ebuild,
+  gnunet-0.8.1-r2.ebuild:
+  Fix slot-deps on gnome libs
 
   19 Jan 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
   gnunet-0.8.1-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1-r2.ebuild,v 1.2 2011/01/19 19:33:51 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1-r2.ebuild,v 1.3 2011/03/28 14:24:51 nirbheek Exp $
 
 EAPI=2
 
@@ -23,13 +23,13 @@ RDEPEND=">=dev-libs/libgcrypt-1.2.0
 	>=dev-libs/gmp-4.0.0
 	net-misc/curl
 	sys-libs/zlib
-	sqlite? ( >=dev-db/sqlite-3.0.8 )
+	sqlite? ( >=dev-db/sqlite-3.0.8:3 )
 	mysql? ( >=virtual/mysql-4.0 )
-	!sqlite? ( !mysql? ( >=dev-db/sqlite-3.0.8 ) )
+	!sqlite? ( !mysql? ( >=dev-db/sqlite-3.0.8:3 ) )
 	setup? ( >=dev-scheme/guile-1.8.0
 	  ncurses? ( >=dev-util/dialog-1.1.20080819-r1[-minimal] )
-	  gtk? ( >=x11-libs/gtk+-2.6.10
-			 gnome-base/libglade )
+	  gtk? ( >=x11-libs/gtk+-2.6.10:2
+			 gnome-base/libglade:2.0 )
 	  qt4? ( x11-libs/qt-gui )
 	)
 	adns? ( net-libs/adns )

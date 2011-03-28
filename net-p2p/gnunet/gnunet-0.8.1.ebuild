@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1.ebuild,v 1.2 2010/06/20 13:56:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.8.1.ebuild,v 1.3 2011/03/28 14:24:51 nirbheek Exp $
 
 EAPI=2
 
@@ -21,15 +21,15 @@ SLOT="0"
 DEPEND=">=dev-libs/libgcrypt-1.2.0
 	>=media-libs/libextractor-0.5.18a
 	>=dev-libs/gmp-4.0.0
-	gnome-base/libglade
+	gnome-base/libglade:2.0
 	sys-libs/zlib
 	net-misc/curl
-	gtk? ( >=x11-libs/gtk+-2.6.10 )
+	gtk? ( >=x11-libs/gtk+-2.6.10:2 )
 	sys-apps/sed
 	>=dev-scheme/guile-1.8.0
 	sys-libs/ncurses
 	mysql? ( >=virtual/mysql-4.0 )
-	sqlite? ( >=dev-db/sqlite-3.0.8 )
+	sqlite? ( >=dev-db/sqlite-3.0.8:3 )
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
