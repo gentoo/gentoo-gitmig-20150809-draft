@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rlwrap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.22 2009/11/24 19:27:05 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.23 2011/03/28 05:38:05 ssuominen Exp $
+
+*rlwrap-0.37 (28 Mar 2011)
+
+  28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +rlwrap-0.37.ebuild:
+  Version bump wrt #318767.
 
   24 Nov 2009; Jeremy Olexa <darkside@gentoo.org> rlwrap-0.32.ebuild:
   Add prefix keywords, as tested in prefix overlay
