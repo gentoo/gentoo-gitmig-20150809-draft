@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.29 2008/05/19 14:14:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/guitar-0.1.4.ebuild,v 1.30 2011/03/28 14:51:37 angelos Exp $
 
+EAPI=3
 inherit eutils toolchain-funcs
 
 MY_P=guiTAR-${PV}
@@ -16,7 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1.2*
+DEPEND="x11-libs/gtk+:1"
+RDEPEND="${DEPEND}
 	app-arch/tar
 	app-arch/bzip2
 	app-arch/gzip
@@ -25,11 +27,12 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
-	tc-export CC
-	# Disable GNOME 1.x library support.
+src_configure() {
 	econf --disable-gnome
-	emake || die "emake failed."
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/guitar
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.19 2008/05/19 14:14:39 drac Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/guitar/ChangeLog,v 1.20 2011/03/28 14:51:37 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> guitar-0.1.4.ebuild:
+  Bump to EAPI3, cleanup and fixed gtk+ dep
 
   19 May 2008; Samuli Suominen <drac@gentoo.org> -files/install.gnome,
   guitar-0.1.4.ebuild:
