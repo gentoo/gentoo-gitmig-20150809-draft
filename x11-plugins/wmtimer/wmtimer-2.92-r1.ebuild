@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.92-r1.ebuild,v 1.2 2010/08/31 14:27:34 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.92-r1.ebuild,v 1.3 2011/03/28 15:24:47 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils multilib toolchain-funcs
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXpm
 	x11-libs/libXext
 	x11-libs/libX11"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmtimer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.24 2010/08/31 14:27:34 s4t4n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.25 2011/03/28 15:24:47 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> wmtimer-2.92.ebuild,
+  wmtimer-2.92-r1.ebuild:
+  Fix slot-dep on gtk+
 
   28 Oct 2008; Michele Noberasco <s4t4n@gentoo.org> wmtimer-2.9.2-r1.ebuild,
   wmtimer-2.9.2.ebuild:
