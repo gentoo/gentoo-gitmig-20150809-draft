@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.3.ebuild,v 1.9 2008/02/04 21:39:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.3.ebuild,v 1.10 2011/03/28 15:30:17 ssuominen Exp $
+
+EAPI=2
 
 DESCRIPTION="Audio Tag Tool Ogg/Mp3 Tagger"
 HOMEPAGE="http://pwp.netcabo.pt/paol/tagtool"
@@ -11,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="vorbis mp3"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libglade-2.6
 	mp3? ( >=media-libs/id3lib-3.8.3-r6 )
 	vorbis? ( >=media-libs/libvorbis-1 )
@@ -19,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	use mp3 || myconf="${myconf} --disable-mp3"
@@ -31,12 +33,14 @@ src_compile() {
 	fi
 
 	econf ${myconf}
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" GNOME_SYSCONFDIR="${D}/etc" \
+	emake \
+		DESTDIR="${D}" \
+		GNOME_SYSCONFDIR="${D}/etc" \
 		sysdir="${D}/usr/share/applets/Multimedia" \
-		install || die "emake install failed."
+		install || die
+
 	dodoc ChangeLog NEWS README TODO THANKS
 }
