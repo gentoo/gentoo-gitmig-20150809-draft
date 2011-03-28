@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-090426.ebuild,v 1.5 2010/02/19 16:14:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-090426.ebuild,v 1.6 2011/03/28 08:55:17 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -31,6 +31,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-noqt.patch
 
 	sed -i -e "s:/lib:/$(get_libdir):g" makefile.cfg || die
+	sed -i -e "s:/etc/udev:/lib/udev:" svxlink/scripts/Makefile.default || die
 }
 
 src_install() {
