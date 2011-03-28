@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-0.64.3-r1.ebuild,v 1.3 2011/03/04 22:21:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-0.64.3-r1.ebuild,v 1.4 2011/03/28 19:29:17 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X python ruby"
 
-RDEPEND="X? ( >=x11-libs/gtk+-2 )
+RDEPEND="X? ( x11-libs/gtk+:2 )
 	 ruby? ( dev-lang/ruby )
 	 app-shells/tcsh"
 
