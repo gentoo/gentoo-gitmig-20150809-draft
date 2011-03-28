@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12622 2011/03/28 05:53:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12623 2011/03/28 05:59:58 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,7 @@
 # Samuli Suominen <ssuominen@gentoo.org> (28 Mar 2011)
 # Masked for QA.
 # Not installable for almost an year now wrt bugs #326613,
-# #284921, #316515. Other minor bugs, #336126.
+# #284921, #316515, #315411.    Other minor bugs, #336126.
 # Removal in 30 days.
 sci-libs/openfoam-kernel
 sci-libs/openfoam-meta
@@ -42,6 +42,8 @@ sci-libs/openfoam-solvers
 sci-libs/openfoam-utilities
 sci-libs/openfoam-src
 sci-libs/openfoam-wmake
+sci-libs/openfoam
+dev-python/PyFoam
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Mar 2011)
 # Masked temporarily until bug 360849 is solved so people
