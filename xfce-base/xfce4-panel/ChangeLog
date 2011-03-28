@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.190 2011/03/22 20:39:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.191 2011/03/28 07:46:25 ssuominen Exp $
+
+*xfce4-panel-4.8.2-r1 (28 Mar 2011)
+
+  28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-panel-4.8.2-r1.ebuild, +files/xfce4-panel-4.8.2-tasklist.patch:
+  Backport upstream commit "Tasklist: add button release event to proxy item"
+  wrt #360153 by Daniel Gulotta.
 
   22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> xfce4-panel-4.8.2.ebuild:
   ppc/ppc64 stable wrt #358407
