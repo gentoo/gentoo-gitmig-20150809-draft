@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.328 2011/03/10 17:38:23 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.329 2011/03/28 17:43:31 idl0r Exp $
+
+  28 Mar 2011; Christian Ruppert <idl0r@gentoo.org> -bind-9.4.3_p5.ebuild,
+  -bind-9.4.3_p5-r3.ebuild, -files/named.conf-r3, -files/named.confd-r2,
+  -files/named.init-r5:
+  Remove 9.4.x.
 
   10 Mar 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.6.3-r1.ebuild:
   Add sdb-ldap back to 9.6.x, bug 302735, thanks to Mario Fetka (geos_one)
