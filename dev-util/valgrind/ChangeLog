@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.121 2011/03/27 19:31:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.122 2011/03/28 12:33:48 phajdan.jr Exp $
+
+  28 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  valgrind-3.6.1.ebuild:
+  x86 stable wrt bug #360781
 
   27 Mar 2011; Christoph Mende <angelos@gentoo.org> valgrind-3.6.1.ebuild:
   Stable on amd64 wrt bug #360781
