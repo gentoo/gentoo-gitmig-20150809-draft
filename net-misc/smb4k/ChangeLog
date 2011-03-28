@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.95 2011/03/12 10:27:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.96 2011/03/28 11:41:01 scarabeus Exp $
+
+  28 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> smb4k-0.10.68.ebuild:
+  Set QT_MINIMAL=4.7 per bug #360373.
 
 *smb4k-0.10.68 (12 Mar 2011)
 *smb4k-0.10.10 (12 Mar 2011)
