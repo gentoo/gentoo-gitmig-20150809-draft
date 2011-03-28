@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.44 2011/03/26 14:47:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.45 2011/03/28 20:12:12 fauli Exp $
+
+  28 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
+  roundcube-0.5.1.ebuild:
+  stable x86, security bug 360241
 
   26 Mar 2011; Brent Baude <ranger@gentoo.org> roundcube-0.5.1.ebuild:
   Marking roundcube-0.5.1 ppc for bug 360241
