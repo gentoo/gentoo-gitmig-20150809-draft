@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.4 2011/03/28 14:05:51 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.5 2011/03/28 15:09:22 grobian Exp $
 
 EAPI=3
 
@@ -49,6 +49,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P/-prefix/}-termios_h.patch # required by aix.patch
 	epatch "${FILESDIR}"/${P/-prefix/}-aix.patch
+	epatch "${FILESDIR}"/${P/-prefix/}-darwin-kvm.patch
 
 	# The consoletype application in this form will only work on Linux
 	[[ ${CHOST} == *-linux-* ]] || epatch "${FILESDIR}"/${P/-prefix/}-prefix-no-consoletype.patch
