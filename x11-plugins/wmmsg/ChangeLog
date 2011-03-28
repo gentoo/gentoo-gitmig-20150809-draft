@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmsg
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.18 2009/01/16 14:55:19 s4t4n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.19 2011/03/28 15:10:34 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> wmmsg-1.0.1.ebuild,
+  wmmsg-1.0.1-r1.ebuild:
+  Fix slot-dep on gtk+
 
   16 Jan 2009; Michele Noberasco <s4t4n@gentoo.org>
   files/wmmsg-1.0.1-use_gtk2.patch:
