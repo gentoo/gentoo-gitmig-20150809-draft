@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.3-r1.ebuild,v 1.7 2011/03/11 20:21:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.3-r1.ebuild,v 1.8 2011/03/28 22:00:54 eva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,14 +21,14 @@ KEYWORDS="amd64 x86"
 IUSE="+faac +xvid"
 
 DEPEND="dev-python/setuptools"
-RDEPEND=">=x11-libs/gtk+-2.16
-	>=dev-python/pygtk-2.14
-	dev-python/pygobject
+RDEPEND=">=x11-libs/gtk+-2.16:2
+	>=dev-python/pygtk-2.14:2
+	dev-python/pygobject:2
 	dev-python/pycairo
-	dev-python/gconf-python
+	dev-python/gconf-python:2
 	dev-python/dbus-python
-	>=media-libs/gstreamer-0.10.22
-	dev-python/gst-python
+	>=media-libs/gstreamer-0.10.22:0.10
+	dev-python/gst-python:0.10
 	media-libs/gst-plugins-base:0.10
 	media-libs/gst-plugins-good:0.10
 	media-libs/gst-plugins-bad

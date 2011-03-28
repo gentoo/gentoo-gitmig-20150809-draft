@@ -1,6 +1,10 @@
 # ChangeLog for media-video/arista
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.10 2011/03/13 16:03:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.11 2011/03/28 22:00:54 eva Exp $
+
+  28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> arista-0.9.3-r1.ebuild,
+  arista-0.9.5.ebuild:
+  Pin dependencies to appropriate slots.
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> arista-0.9.5.ebuild:
   Stable on amd64 wrt bug #358457
