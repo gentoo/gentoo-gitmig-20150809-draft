@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.9 2009/08/01 06:21:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.10 2011/03/28 18:17:43 angelos Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="alsa debug jack oss sndfile"
 
-RDEPEND=">=dev-cpp/gtkmm-2.4
+RDEPEND="dev-cpp/gtkmm:2.4
 	sndfile? ( >=media-libs/libsndfile-1.0 )
 	alsa? ( >=media-libs/alsa-lib-0.9 media-sound/alsa-utils )
 	jack? ( media-sound/jack-audio-connection-kit )"

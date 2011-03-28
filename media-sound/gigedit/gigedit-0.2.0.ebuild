@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gigedit/gigedit-0.2.0.ebuild,v 1.1 2009/08/27 09:53:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gigedit/gigedit-0.2.0.ebuild,v 1.2 2011/03/28 18:23:18 angelos Exp $
 
-inherit eutils
+EAPI=3
 
 DESCRIPTION="An instrument editor for gig files"
 HOMEPAGE="http://www.linuxsampler.org/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=dev-cpp/gtkmm-2.4.10
+RDEPEND="dev-cpp/gtkmm:2.4
 	>=media-libs/libgig-3.3.0
 	>=media-libs/libsndfile-1.0.2
 	>=media-sound/linuxsampler-0.5.1"
@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 src_compile() {
-	econf
 	# fails with parallel jobs
 	emake -j1 || die
 }

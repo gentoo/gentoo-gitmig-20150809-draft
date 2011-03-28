@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.4 2011/02/05 11:59:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.5 2011/03/28 18:20:39 angelos Exp $
 
 EAPI=3
 inherit eutils multilib
@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="+alsa audioscrobbler debug dbus +ffmpeg flac libnotify mad openal pulseaudio syslog"
 
-RDEPEND=">=dev-cpp/gtkmm-2.16
-	>=dev-cpp/pangomm-2.24
+RDEPEND="dev-cpp/gtkmm:2.4
+	dev-cpp/pangomm:1.4
 	dev-cpp/libsexymm
 	media-libs/taglib
-	dev-db/sqlite
+	dev-db/sqlite:3
 	|| ( media-gfx/imagemagick[cxx]
 	media-gfx/graphicsmagick[imagemagick] )
 	mad? ( media-libs/libmad )

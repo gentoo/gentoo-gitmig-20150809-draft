@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/paprefs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.21 2010/03/08 20:26:52 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.22 2011/03/28 18:25:34 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> paprefs-0.9.9.ebuild:
+  Fixed slot deps
 
   08 Mar 2010; Markus Meier <maekke@gentoo.org> paprefs-0.9.9.ebuild:
   x86 stable, bug #305921

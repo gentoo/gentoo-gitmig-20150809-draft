@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pavumeter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/ChangeLog,v 1.14 2010/03/08 20:25:48 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavumeter/ChangeLog,v 1.15 2011/03/28 18:28:59 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> pavumeter-0.9.3-r1.ebuild:
+  Fixed slot deps
 
   08 Mar 2010; Markus Meier <maekke@gentoo.org> pavumeter-0.9.3-r1.ebuild:
   x86 stable, bug #305919
