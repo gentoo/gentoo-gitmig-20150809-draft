@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/trayer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.17 2010/06/24 11:21:17 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.18 2011/03/28 14:34:48 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> trayer-1.0.ebuild,
+  trayer-1.0-r1.ebuild:
+  Fix slot-dep on gtk+
 
 *trayer-1.0-r1 (24 Jun 2010)
 
