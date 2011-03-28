@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.153.1_p201011173.ebuild,v 1.2 2011/03/23 19:17:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.153.1_p201011173.ebuild,v 1.3 2011/03/28 12:51:55 lack Exp $
 
 EAPI=3
 inherit rpm nsplugins multilib toolchain-funcs versionator
@@ -28,7 +28,7 @@ amd64? (
 )"
 #HOMEPAGE="http://www.adobe.com/"
 HOMEPAGE="http://labs.adobe.com/technologies/flashplayer10/"
-IUSE="multilib +nspluginwrapper +32bit +64bit vdpau bindist"
+IUSE="multilib +32bit +64bit vdpau bindist"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
@@ -48,8 +48,7 @@ EMUL_DEPS="vdpau? ( >=app-emulation/emul-linux-x86-xlibs-20110129 )
 	>=app-emulation/emul-linux-x86-gtklibs-20100409-r1
 	app-emulation/emul-linux-x86-soundlibs"
 
-DEPEND="amd64? ( multilib? ( 32bit? ( nspluginwrapper? (
-	www-plugins/nspluginwrapper ) ) ) )"
+DEPEND="amd64? ( multilib? ( !64bit? ( www-plugins/nspluginwrapper ) ) )"
 RDEPEND="x86? ( $NATIVE_DEPS )
 	amd64? (
 		multilib? (

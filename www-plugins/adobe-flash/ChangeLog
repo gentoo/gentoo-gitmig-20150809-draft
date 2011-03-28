@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.71 2011/03/24 14:20:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.72 2011/03/28 12:51:55 lack Exp $
+
+  28 Mar 2011; Jim Ramsay <lack@gentoo.org> adobe-flash-10.2.153.1.ebuild,
+  adobe-flash-10.2.153.1_p201011173.ebuild:
+  Removing nspluginwrapper USE flag, bug #360235
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org>
   adobe-flash-10.2.153.1.ebuild:
