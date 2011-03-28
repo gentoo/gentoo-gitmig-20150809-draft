@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.28 2011/03/28 12:05:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.29 2011/03/28 12:16:08 phajdan.jr Exp $
+
+  28 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  tinyproxy-1.8.2.ebuild:
+  x86 stable wrt bug #358091
 
   28 Mar 2011; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.2.ebuild:
   Remove unneeded fortune dep. Explain why emake test is used. Add
