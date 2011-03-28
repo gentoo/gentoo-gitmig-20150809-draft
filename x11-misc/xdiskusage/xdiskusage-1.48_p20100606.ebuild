@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48_p20100606.ebuild,v 1.6 2011/03/21 11:38:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48_p20100606.ebuild,v 1.7 2011/03/28 13:31:25 phajdan.jr Exp $
 
 EAPI=3
 inherit autotools flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/fltk:2"
