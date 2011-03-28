@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.336 2011/03/16 10:25:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.337 2011/03/28 21:41:26 eva Exp $
+
+*gdm-2.32.1 (28 Mar 2011)
+
+  28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> -gdm-2.28.2-r1.ebuild,
+  -files/gdm-2.28.2-remove-hal.patch, +gdm-2.32.1.ebuild:
+  Version bump. Fix CVE-2011-0727. XDMCP IPv6 fixes and other fixes. Clean up
+  old revision.
 
   16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gdm-2.20.11.ebuild:
   Fix slot-deps on gtk+ and other libs

@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.28.2-r1.ebuild,v 1.8 2010/11/11 11:48:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.32.1.ebuild,v 1.1 2011/03/28 21:41:26 eva Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="yes"
 
-inherit eutils pam gnome2 autotools
+inherit autotools eutils gnome2 pam
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/projects/gdm/"
@@ -14,29 +15,26 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~sh ~sparc ~x86"
 
 IUSE_LIBC="elibc_glibc"
-IUSE="accessibility +consolekit debug ipv6 gnome-keyring selinux tcpd test xinerama +xklavier $IUSE_LIBC"
+IUSE="accessibility +consolekit ipv6 gnome-keyring selinux tcpd test xinerama +xklavier $IUSE_LIBC"
 
 # Name of the tarball with gentoo specific files
 GDM_EXTRA="${PN}-2.20.9-gentoo-files-r1"
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-2.26-gentoo-patches.tar.bz2
 	mirror://gentoo/${GDM_EXTRA}.tar.bz2"
 
-# FIXME: gdm has a strange behaviour on reboot (from runlevel), especially when xdm tries to stop it (its blocks).
-# NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug 295686
+# NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
 RDEPEND="
 	>=dev-libs/dbus-glib-0.74
-	>=dev-libs/glib-2.15.4
-	>=x11-libs/gtk+-2.10.0:2
+	>=dev-libs/glib-2.22:2
+	>=x11-libs/gtk+-2.20.2:2
 	>=x11-libs/pango-1.3
 	>=media-libs/libcanberra-0.4[gtk]
-	>=gnome-base/libglade-2
-	>=gnome-base/gconf-2.6.1
+	>=gnome-base/gconf-2.31.3
 	>=gnome-base/gnome-panel-2
 	>=gnome-base/gnome-session-2.28
 	>=x11-misc/xdg-utils-1.0.2-r3
-	sys-power/upower
+	>=sys-power/upower-0.9
 	app-text/iso-codes
 
 	x11-base/xorg-server
@@ -70,9 +68,9 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.1.4
 	>=app-text/gnome-doc-utils-0.3.2"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
+
 	# PAM is the only auth scheme supported
 	# even though configure lists shadow and crypt
 	# they don't have any corresponding code
@@ -84,7 +82,6 @@ pkg_setup() {
 		--with-pam-prefix=/etc
 		SOUND_PROGRAM=/usr/bin/gdmplay
 		$(use_with accessibility xevie)
-		$(use_enable debug)
 		$(use_enable ipv6)
 		$(use_enable xklavier libxklavier)
 		$(use_with consolekit console-kit)
@@ -99,28 +96,25 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# remove unneeded linker directive for selinux (#41022)
-	epatch "${WORKDIR}/${PN}-2.26.1-selinux-remove-attr.patch"
+	# remove unneeded linker directive for selinux, bug #41022
+	epatch "${FILESDIR}/${PN}-2.32.0-selinux-remove-attr.patch"
 
-	# Make it daemonize so that the boot process can continue (#236701)
-	epatch "${WORKDIR}/${PN}-2.26.1-fix-daemonize-regression.patch"
+	# daemonize so that the boot process can continue, bug #236701
+	epatch "${FILESDIR}/${PN}-2.32.0-fix-daemonize-regression.patch"
 
-	# Fix VT grab problem causing GDM to grab VT2 instead of 7 (#261339)
-	epatch "${WORKDIR}/${PN}-2.26.1-broken-VT-detection.patch"
+	# fix VT grab problem causing GDM to grab VT2 instead of 7, bug #261339
+	epatch "${FILESDIR}/${PN}-2.32.0-broken-VT-detection.patch"
 
-	# Make custom session work, bug #.
-	epatch "${WORKDIR}/${PN}-2.26.1-custom-session.patch"
+	# make custom session work, bug #216984
+	epatch "${FILESDIR}/${PN}-2.32.0-custom-session.patch"
 
-	# ssh-agent handling must be done at xinitrc.d
-	epatch "${WORKDIR}/${PN}-2.26.1-xinitrc-ssh-agent.patch"
+	# ssh-agent handling must be done at xinitrc.d, bug #220603
+	epatch "${FILESDIR}/${PN}-2.32.0-xinitrc-ssh-agent.patch"
 
-	# Fix libxklavier automagic support
-	epatch "${WORKDIR}/${PN}-2.26.1-automagic-libxklavier-support.patch"
+	# fix libxklavier automagic support
+	epatch "${FILESDIR}/${PN}-2.32.0-automagic-libxklavier-support.patch"
 
-	# Remove all traces of HAL
-	epatch "${FILESDIR}/${P}-remove-hal.patch"
-	rm -vf "${S}/daemon/test-hal-seats.c"
-
+	mkdir "${S}"/m4
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
@@ -199,7 +193,7 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_pkg_postrm
 
-	if [[ "$(rc-config list default | grep xdm)" != "" ]] ; then
+	if rc-config list default | grep -q xdm; then
 		elog "To remove GDM from startup please execute"
 		elog "'rc-update del xdm default'"
 	fi
