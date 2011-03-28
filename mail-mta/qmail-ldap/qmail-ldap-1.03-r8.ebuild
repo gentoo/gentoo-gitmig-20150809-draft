@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.4 2011/03/16 11:07:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.5 2011/03/28 09:43:31 eras Exp $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42
@@ -37,7 +37,7 @@ SRC_URI="mirror://qmail/qmail-${PV}.tar.gz
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="cluster debug gencertdaily highvolume mailwrapper qmail-spp rfc2307 rfc822 ssl vanilla zlib"
+IUSE="cluster debug gencertdaily highvolume qmail-spp rfc2307 rfc822 ssl vanilla zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -47,15 +47,23 @@ DEPEND="
 	ssl? ( dev-libs/openssl )
 "
 RDEPEND="
-	mailwrapper? ( net-mail/mailwrapper )
-	!mailwrapper? ( !virtual/mta )
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/netqmail
+	!mail-mta/nullmailer
+	!mail-mta/postfix
+	!mail-mta/sendmail
+	!mail-mta/ssmtp
 	>=sys-apps/ucspi-tcp-0.88-r17
 	ssl? ( >=sys-apps/ucspi-ssl-0.70-r1 )
 	virtual/daemontools
 	>=net-mail/dot-forward-0.71-r3
 	${DEPEND}
 "
-PROVIDE="virtual/mta"
 
 S="${WORKDIR}"/qmail-${PV}
 
