@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/flac
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.149 2010/09/16 11:24:19 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.150 2011/03/28 04:38:44 ford_prefect Exp $
+
+*flac-1.2.1-r4 (28 Mar 2011)
+
+  28 Mar 2011; Arun Raghavan <ford_prefect@gentoo.org> +flac-1.2.1-r4.ebuild,
+  +files/flac-1.2.1-ogg-m4.patch:
+  Update the shipped version of ogg.m4 so that users of libflac don't get a ton
+  of libtool warnings while linking.
 
   16 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> flac-1.2.1-r3.ebuild:
   USE="static-libs" and punt .la files. Fix LICENSE. Remove USE="doc" as it
