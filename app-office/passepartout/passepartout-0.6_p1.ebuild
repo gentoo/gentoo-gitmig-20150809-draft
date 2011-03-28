@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.6_p1.ebuild,v 1.5 2009/12/26 19:20:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.6_p1.ebuild,v 1.6 2011/03/28 18:48:29 angelos Exp $
 
+EAPI=1
 inherit eutils gnome2
 
 DESCRIPTION="A DTP application for the X Window System"
@@ -20,13 +21,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-COMMON_DEPS="=dev-cpp/libxmlpp-1*
-	>=dev-libs/libxml2-2
-	>=dev-cpp/gtkmm-2.4
-	>=dev-cpp/libgnomecanvasmm-2.6
-	>=dev-libs/glib-2
-	>=dev-libs/libsigc++-2
-	>=media-libs/freetype-2
+COMMON_DEPS="dev-cpp/libxmlpp:0
+	>=dev-libs/libxml2-2:2
+	>=dev-cpp/gtkmm-2.4:2.4
+	>=dev-cpp/libgnomecanvasmm-2.6:2.6
+	>=dev-libs/glib-2:2
+	>=dev-libs/libsigc++-2:2
+	>=media-libs/freetype-2:2
 	virtual/fam"
 
 RDEPEND="${COMMON_DEPS}
