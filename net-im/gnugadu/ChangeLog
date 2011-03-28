@@ -1,6 +1,10 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.59 2011/02/09 12:55:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.60 2011/03/28 14:50:00 tester Exp $
+
+  28 Mar 2011; Olivier Crête <tester@gentoo.org> gnugadu-2.2.6-r1.ebuild,
+  gnugadu-2.3.0.ebuild:
+  Add Gtk+ 2 slot dep
 
   09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnugadu-2.3.0.ebuild:
   x86 stable wrt bug #353061

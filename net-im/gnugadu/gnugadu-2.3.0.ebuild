@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.11 2011/02/09 12:55:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.12 2011/03/28 14:50:00 tester Exp $
+
+EAPI="1"
 
 IUSE="debug dbus tlen esd oss xosd jabber perl spell gnutls"
 
@@ -17,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 RDEPEND="net-libs/libgadu
-	>=x11-libs/gtk+-2.4.0
+	>=x11-libs/gtk+-2.4.0:2
 	jabber? ( >=net-libs/loudmouth-0.17 )
 	xosd? ( x11-libs/xosd )
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
