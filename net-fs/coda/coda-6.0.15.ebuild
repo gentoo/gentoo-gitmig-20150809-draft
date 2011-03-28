@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.11 2011/03/28 08:41:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.15.ebuild,v 1.12 2011/03/28 08:42:54 ssuominen Exp $
 
-inherit autotools eutils
+inherit eutils
 
 KEYWORDS="~ppc x86"
 
