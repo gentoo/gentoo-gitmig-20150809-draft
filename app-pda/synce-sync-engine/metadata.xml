@@ -6,4 +6,7 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
+  <use>
+    <flag name='opensync'>Enable OpenSync (<pkg>app-pda/libopensync</pkg>) python plug-in</flag>
+  </use>
 </pkgmetadata>
