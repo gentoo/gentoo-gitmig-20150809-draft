@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.316 2011/03/07 20:51:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.317 2011/03/28 11:39:09 ssuominen Exp $
+
+*xterm-269 (28 Mar 2011)
+
+  28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +xterm-269.ebuild:
+  Version bump.
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -xterm-266.ebuild:
   old
