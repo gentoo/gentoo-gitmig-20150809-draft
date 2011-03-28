@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12623 2011/03/28 05:59:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12624 2011/03/28 06:38:59 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,22 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (28 Mar 2011)
+#  on behalf of QA team
+#
+# Doesn't respect LDFLAGS (bug #336954). Build log can easily
+# show a number of other issues: doesn't respect cc, doesn't
+# respect _FORTIFY_SOURCE (since headers are not properly
+# included), and trying to fix it shows that the "as-is"
+# license is not properly applied. The software was first
+# published in 1997, then released in 2001 as a package,
+# but has seen no development since.
+#
+# As a replacement, rather use zsh's zmv module.
+#
+# Removal on 2011-05-27
+sys-apps/ren
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Mar 2011)
 # Masked for QA.
