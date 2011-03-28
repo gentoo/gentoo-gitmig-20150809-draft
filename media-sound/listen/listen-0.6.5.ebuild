@@ -1,48 +1,45 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.5 2010/11/03 11:43:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.6 2011/03/28 14:02:24 ssuominen Exp $
 
-EAPI=2
-
+EAPI=3
 PYTHON_DEPEND="2:2.6"
-
 inherit eutils multilib python
 
-DESCRIPTION="A Music player and management for GNOME"
+DESCRIPTION="A music management and playback for GTK+ based desktops"
 HOMEPAGE="http://www.listen-project.org/"
 SRC_URI="http://download.listen-project.org/0.6/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome +libsexy musicbrainz webkit"
+IUSE="cdda gnome +libsexy webkit"
 
 RDEPEND="dev-python/dbus-python
-	>=dev-python/pygtk-2.8:2
-	dev-python/pyxdg
-	|| ( dev-python/python-xlib dev-python/egg-python )
-	gnome? ( dev-python/gnome-vfs-python )
-	x11-libs/libnotify
-	media-libs/mutagen
 	dev-python/gst-python:0.10
-	media-plugins/gst-plugins-meta:0.10
-	webkit? ( dev-python/pywebkitgtk )
-	!webkit? ( dev-python/gtkmozembed-python )
+	>=dev-python/pygtk-2.8:2
 	dev-python/pyinotify
-	libsexy? ( dev-python/sexy-python )
+	|| ( dev-python/python-xlib dev-python/egg-python )
+	dev-python/pyxdg
 	media-libs/libgpod[python]
-	musicbrainz? ( <dev-python/python-musicbrainz-2005
-		>=media-libs/tunepimp-0.5.3-r2[python] )"
+	media-libs/mutagen
+	media-plugins/gst-plugins-meta:0.10
+	x11-libs/libnotify
+	cdda? ( dev-python/python-musicbrainz )
+	gnome? ( dev-python/gnome-vfs-python )
+	libsexy? ( dev-python/sexy-python )
+    webkit? ( dev-python/pywebkitgtk )
+    !webkit? ( dev-python/gtkmozembed-python )"
 DEPEND="${RDEPEND}
 	app-text/docbook2X
-	dev-util/pkgconfig
 	dev-util/intltool
+	dev-util/pkgconfig
 	sys-devel/gettext
-	!media-radio/ax25-apps
-	!dev-tinyos/listen"
+	!media-radio/ax25-apps"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -51,9 +48,9 @@ src_prepare() {
 
 src_compile() {
 	if use webkit; then
-		CHECK_DEPENDS="0" emake PYTHON="$(PYTHON)" || die
+		CHECK_DEPENDS=0 emake PYTHON="$(PYTHON)" || die
 	else
-		USE_GTKMOZEMBED="1" CHECK_DEPENDS="0" emake PYTHON="$(PYTHON)" || die
+		USE_GTKMOZEMBED=1 CHECK_DEPENDS=0 emake PYTHON="$(PYTHON)" || die
 	fi
 }
 
