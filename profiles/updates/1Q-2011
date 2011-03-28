@@ -70,3 +70,4 @@ slotmove dev-cpp/pangomm 2.4 1.4
 move media-sound/phonon-gstreamer media-libs/phonon-gstreamer
 move sci-misc/brlcad media-gfx/brlcad
 move media-sound/phonon-vlc media-libs/phonon-vlc
+move media-sound/phonon-xine media-libs/phonon-xine
