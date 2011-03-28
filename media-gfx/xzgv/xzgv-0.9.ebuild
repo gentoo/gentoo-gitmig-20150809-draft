@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.9.ebuild,v 1.4 2009/10/02 22:51:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.9.ebuild,v 1.5 2011/03/28 19:10:29 ssuominen Exp $
 
+EAPI=1
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Fast and simple GTK+ image viewer"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc64 x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
