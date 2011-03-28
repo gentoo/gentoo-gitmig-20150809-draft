@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.5 2011/03/20 12:15:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.6 2011/03/28 18:46:27 angelos Exp $
 
 EAPI=2
 inherit eutils
@@ -22,8 +22,8 @@ IUSE="gcdmaster encode pccts mad vorbis"
 RDEPEND="virtual/cdrtools
 	encode? ( >=media-sound/lame-3.90 )
 	gcdmaster? ( dev-libs/libsigc++:2
-		>=dev-cpp/gtkmm-2.4
-		>=dev-cpp/libgnomeuimm-2.6
+		>=dev-cpp/gtkmm-2.4:2.4
+		>=dev-cpp/libgnomeuimm-2.6:2.6
 		media-libs/libao )
 	mad? ( media-libs/libmad
 		media-libs/libao )

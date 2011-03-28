@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.157 2011/03/20 12:15:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.158 2011/03/28 18:46:27 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> cdrdao-1.2.3.ebuild,
+  cdrdao-1.2.3-r1.ebuild:
+  Fixed slot deps
 
   20 Mar 2011; Raúl Porcel <armin76@gentoo.org> cdrdao-1.2.3-r1.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #358495
