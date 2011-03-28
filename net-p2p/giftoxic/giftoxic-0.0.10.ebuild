@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/giftoxic-0.0.10.ebuild,v 1.9 2008/04/13 14:56:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/giftoxic-0.0.10.ebuild,v 1.10 2011/03/28 14:21:28 nirbheek Exp $
 
+EAPI="1"
 IUSE=""
 
 MY_P="giFToxic-${PV}"
@@ -14,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
 
-RDEPEND=">=x11-libs/gtk+-2.0.3
+RDEPEND=">=x11-libs/gtk+-2.0.3:2
 	net-p2p/gift"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

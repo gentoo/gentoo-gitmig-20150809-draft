@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtorrentviewer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.11 2008/10/25 21:40:05 pvdabeel Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.12 2011/03/28 14:25:03 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gtorrentviewer-0.2b.ebuild:
+  Fix slot-dep on gtk+
 
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> gtorrentviewer-0.2b.ebuild:
   Keyworded ~ppc. Closes bug #229793

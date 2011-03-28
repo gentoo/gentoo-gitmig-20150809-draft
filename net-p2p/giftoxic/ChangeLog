@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/giftoxic
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.16 2008/04/13 14:56:34 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftoxic/ChangeLog,v 1.17 2011/03/28 14:21:28 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  giftoxic-0.0.10.ebuild:
+  Fix slot-dep on gtk+
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> giftoxic-0.0.10.ebuild:
   Remove RDEPEND on pkgconfig and use emake.
