@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-9999.ebuild,v 1.4 2011/03/28 11:14:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.4.91.ebuild,v 1.1 2011/03/28 11:14:42 scarabeus Exp $
 
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
 EAPI=4
 
-inherit eutils cmake-utils git
+inherit eutils cmake-utils
 
 DESCRIPTION="Access a working SSH implementation by means of a library"
 HOMEPAGE="http://www.libssh.org/"
-EGIT_REPO_URI="git://git.libssh.org/projects/libssh.git"
+SRC_URI="http://www.${PN}.org/files/rc/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="debug examples gcrypt pcap +sftp ssh1 server static-libs zlib"
 
