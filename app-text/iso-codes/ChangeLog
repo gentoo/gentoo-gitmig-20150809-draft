@@ -1,6 +1,12 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.104 2011/03/22 18:48:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.105 2011/03/28 21:42:04 eva Exp $
+
+*iso-codes-3.24.2 (28 Mar 2011)
+
+  28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> -iso-codes-3.19.ebuild,
+  -iso-codes-3.21.ebuild, -iso-codes-3.23.ebuild, +iso-codes-3.24.2.ebuild:
+  Version bump with translation updates. Clean up old revisions.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> iso-codes-3.24.ebuild:
   Marking iso-codes-3.24 ppc stable for bug 353436
