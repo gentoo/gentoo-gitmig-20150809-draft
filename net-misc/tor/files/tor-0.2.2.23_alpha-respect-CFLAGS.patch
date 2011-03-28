@@ -1,17 +1,33 @@
 diff -Naur tor-0.2.2.23-alpha.orig/configure.in tor-0.2.2.23-alpha/configure.in
 --- tor-0.2.2.23-alpha.orig/configure.in	2011-03-08 18:38:16.000000000 -0500
-+++ tor-0.2.2.23-alpha/configure.in	2011-03-24 19:09:33.000000000 -0400
-@@ -9,6 +9,9 @@
++++ tor-0.2.2.23-alpha/configure.in	2011-03-27 19:53:55.000000000 -0400
+@@ -9,6 +9,11 @@
  
  AC_CANONICAL_HOST
  
 +GENTOO_CFLAGS="$CFLAGS"
 +GENTOO_LDFLAGS="$LDFLAGS"
++CFLAGS=
++LDFLAGS=
 +
  if test -f /etc/redhat-release ; then
    if test -f /usr/kerberos/include ; then
      CPPFLAGS="$CPPFLAGS -I/usr/kerberos/include"
-@@ -945,6 +948,8 @@
+@@ -865,12 +870,11 @@
+ # Set CFLAGS _after_ all the above checks, since our warnings are stricter
+ # than autoconf's macros like.
+ if test "$GCC" = yes; then
+-  CFLAGS="$CFLAGS -Wall -g -O2"
++  CFLAGS="$CFLAGS -Wall"
+   # Disable GCC's strict aliasing checks.  They are an hours-to-debug
+   # accident waiting to happen.
+   CFLAGS="$CFLAGS -fno-strict-aliasing"
+ else
+-  CFLAGS="$CFLAGS -g -O"
+   enable_gcc_warnings=no
+   enable_gcc_warnings_advisory=no
+ fi
+@@ -945,6 +949,8 @@
  
  
  CPPFLAGS="$CPPFLAGS $TOR_CPPFLAGS_libevent $TOR_CPPFLAGS_openssl $TOR_CPPFLAGS_zlib"
