@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.22.0.ebuild,v 1.3 2011/03/16 10:14:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.23.2.ebuild,v 1.1 2011/03/28 22:16:32 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="2:2.5"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
+# dev-python/pycairo does not support Python 2.4 / 2.5.
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit alternatives autotools eutils flag-o-matic gnome.org python virtualx
@@ -22,12 +23,12 @@ IUSE="doc examples"
 RDEPEND=">=dev-libs/glib-2.8:2
 	>=x11-libs/pango-1.16
 	>=dev-libs/atk-1.12
-	>=x11-libs/gtk+-2.22:2
+	>=x11-libs/gtk+-2.24:2
 	>=gnome-base/libglade-2.5:2.0
 	>=dev-python/pycairo-1.0.2
 	>=dev-python/pygobject-2.21.3:2
-	dev-python/numpy"
-
+	dev-python/numpy
+"
 DEPEND="${RDEPEND}
 	doc? (
 		dev-libs/libxslt
@@ -37,9 +38,6 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Fix declaration of codegen in .pc
 	epatch "${FILESDIR}/${PN}-2.13.0-fix-codegen-location.patch"
-
-	# Broken test, upstream bug #636589
-	epatch "${FILESDIR}/${PN}-2.22.0-disable-broken-tests.patch"
 
 	# Disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig

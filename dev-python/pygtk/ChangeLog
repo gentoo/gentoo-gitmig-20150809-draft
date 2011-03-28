@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.253 2011/03/22 19:03:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.254 2011/03/28 22:16:32 eva Exp $
+
+*pygtk-2.23.2 (28 Mar 2011)
+
+  28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> -pygtk-2.17.0.ebuild,
+  -pygtk-2.22.0.ebuild, +pygtk-2.23.2.ebuild:
+  Version bump. Add gtk-2.24 support, document updates.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> pygtk-2.22.0-r1.ebuild:
   Marking pygtk-2.22.0-r1 ppc stable for bug 353436
