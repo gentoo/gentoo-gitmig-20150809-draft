@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/regionset
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regionset/ChangeLog,v 1.8 2008/11/26 17:50:56 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regionset/ChangeLog,v 1.9 2011/03/28 06:09:36 xarthisius Exp $
+
+*regionset-0.1-r1 (28 Mar 2011)
+
+  28 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> +regionset-0.1-r1.ebuild:
+  Respect {LD,C}FLAGS, add missing die, sort keywords. 
+  Fixes bug 335965 by Diego Elio Pettenò
 
   26 Nov 2008; Steve Dibb <beandog@gentoo.org> regionset-0.1.ebuild:
   Respect CC variable, bug 243666
