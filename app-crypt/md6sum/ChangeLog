@@ -1,0 +1,11 @@
+# ChangeLog for app-crypt/md6sum
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/ChangeLog,v 1.1 2011/03/28 11:02:22 hwoarang Exp $
+
+*md6sum-1.0 (28 Mar 2011)
+
+  28 Mar 2011; Markos Chandras <hwoarang@gentoo.org> +md6sum-1.0.ebuild,
+  +files/md6sum-1.0-ldflags.patch, +metadata.xml:
+  Initial commit of md6sum package. Thanks to AlphatPC@gmail.com for the
+  original ebuild. Bug #353379
+
