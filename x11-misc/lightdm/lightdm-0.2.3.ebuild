@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-0.2.3.ebuild,v 1.1 2011/03/28 18:48:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-0.2.3.ebuild,v 1.2 2011/03/28 22:08:28 ssuominen Exp $
 
 EAPI=4
 inherit pam
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+introspection qt4"
 
 RDEPEND=">=dev-libs/dbus-glib-0.88
-	net-libs/webkit-gtk
+	net-libs/webkit-gtk:2
 	virtual/pam
 	x11-libs/gtk+:2
 	x11-libs/libX11
