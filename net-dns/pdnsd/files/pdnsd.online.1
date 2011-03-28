@@ -1,25 +1,21 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.online.1,v 1.1 2011/03/27 17:31:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.online.1,v 1.2 2011/03/28 14:00:21 polynomial-c Exp $
 
 depend() {
 	need pdnsd
 }
 
 wait_for_socket() {
-	local i pdnsd_socket="/var/cache/pdnsd/pdnsd.status"
-	while [ ! -S "${pdnsd_socket}" -a $i -lt 10 ]; do
+	local i=0 pdnsd_socket="/var/cache/pdnsd/pdnsd.status"
+	while [ $i -lt 10 ]; do
+		[ -S "${pdnsd_socket}" ] && return 0
+		i=$(($i+1))
 		sleep 1s
-		: $((i++))
 	done
 
-	if [ ! -S "${pdnsd_socket}" ]; then
-    	eerror "${pdnsd_socket} socket is missing."
     	return 1
-	fi
-
-	return 0
 }
 
 start() {

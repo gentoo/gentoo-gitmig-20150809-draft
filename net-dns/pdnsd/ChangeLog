@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.100 2011/03/27 17:31:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.101 2011/03/28 14:00:21 polynomial-c Exp $
+
+*pdnsd-1.2.8-r2 (28 Mar 2011)
+
+  28 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> -pdnsd-1.2.8-r1.ebuild,
+  +pdnsd-1.2.8-r2.ebuild, files/pdnsd.online.1:
+  non-maintainer commit: Fixed broken pdnsd-online init script (result of bug
+  #349335). Committed with kind permission from flameeyes.
 
 *pdnsd-1.2.8-r1 (27 Mar 2011)
 
