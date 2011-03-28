@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.6.4.ebuild,v 1.1 2010/10/09 13:28:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.6.4.ebuild,v 1.2 2011/03/28 18:40:10 angelos Exp $
 
 EAPI=2
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug doc"
 
 RDEPEND="dev-libs/boost
-	>=dev-cpp/gtkmm-2.4
-	>=dev-cpp/libgnomecanvasmm-2.6
+	>=dev-cpp/gtkmm-2.4:2.4
+	>=dev-cpp/libgnomecanvasmm-2.6:2.6
 	media-gfx/graphviz"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
