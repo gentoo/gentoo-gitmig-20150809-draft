@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/taginfo-1.2-r1.ebuild,v 1.4 2011/03/28 22:53:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/taginfo-1.2-r1.ebuild,v 1.5 2011/03/28 22:59:11 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -18,7 +18,7 @@ RDEPEND="media-libs/taglib"
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	emake CC="$(tc-getCXX) ${LDFLAGS} ${CFLAGS}" || die
+	emake CC="$(tc-getCXX) ${LDFLAGS} ${CXXFLAGS}" || die
 }
 
 src_install() {
