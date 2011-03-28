@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/nxml-libvirt-schemas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/ChangeLog,v 1.6 2011/03/12 14:42:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/ChangeLog,v 1.7 2011/03/28 07:58:56 flameeyes Exp $
+
+*nxml-libvirt-schemas-0.9.0_rc1 (28 Mar 2011)
+
+  28 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  nxml-libvirt-schemas-0.8.8.ebuild, +nxml-libvirt-schemas-0.9.0_rc1.ebuild:
+  Version bump to 0.9.0_rc1; update 0.8.8 to use identical content.
 
   12 Mar 2011; Ulrich Mueller <ulm@gentoo.org>
   nxml-libvirt-schemas-0.8.8.ebuild:
