@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-260.19.36.ebuild,v 1.1 2011/02/02 17:18:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-260.19.36.ebuild,v 1.2 2011/03/28 22:41:35 eva Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ IUSE=""
 # This also allows us to optimize out a lot of the other dependancies, as
 # between gtk and xorg-server, almost all libraries and headers are accounted
 # for.
-DEPEND=">=x11-libs/gtk+-2
+DEPEND="x11-libs/gtk+:2
 	dev-util/pkgconfig
 	x11-base/xorg-server
 	x11-libs/libXt
@@ -28,7 +28,7 @@ DEPEND=">=x11-libs/gtk+-2
 	x11-proto/xf86driproto
 	x11-proto/xf86vidmodeproto"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-base/xorg-server
 	x11-libs/libXt
 	x11-drivers/nvidia-drivers"
