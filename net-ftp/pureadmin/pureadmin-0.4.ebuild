@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.4.ebuild,v 1.2 2011/03/28 17:01:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.4.ebuild,v 1.3 2011/03/28 18:58:29 angelos Exp $
 
 EAPI=3
 inherit eutils
@@ -20,6 +20,12 @@ RDEPEND="gnome-base/libglade:2.0
 		x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
+
+src_prepare() {
+	echo src/eggstatusicon.c >> po/POTFILES.skip
+	echo src/eggtrayicon.c >> po/POTFILES.skip
+	echo src/prereq_usrmanager.c >> po/POTFILES.skip
+}
 
 src_configure() {
 	local myconf=""
