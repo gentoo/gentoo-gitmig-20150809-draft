@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.6.5_p100425.ebuild,v 1.1 2010/04/30 23:46:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.6.5_p100425.ebuild,v 1.2 2011/03/28 18:31:50 angelos Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa gnome gnutls migemo"
 
-RDEPEND=">=dev-cpp/gtkmm-2.8
-	>=dev-libs/glib-2
+RDEPEND="dev-cpp/gtkmm:2.4
+	dev-libs/glib:2
 	x11-misc/xdg-utils
 	alsa? ( >=media-libs/alsa-lib-1 )
 	gnome? ( >=gnome-base/libgnomeui-2 )
@@ -54,7 +54,7 @@ src_configure() {
 		$(use_with !gnutls openssl) \
 		$(use_with migemo) \
 		$(use_with migemo migemodict /usr/share/migemo/migemo-dict) \
-		${myconf} || die "econf failed"
+		${myconf}
 }
 
 src_install() {

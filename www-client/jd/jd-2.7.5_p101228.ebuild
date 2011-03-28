@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.7.5_p101228.ebuild,v 1.1 2010/12/30 05:43:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/jd-2.7.5_p101228.ebuild,v 1.2 2011/03/28 18:31:50 angelos Exp $
 
+EAPI=3
 inherit eutils autotools
 
 MY_P="${P/_p/-}"
@@ -16,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa gnome gnutls migemo"
 
-RDEPEND=">=dev-cpp/gtkmm-2.8
-	>=dev-libs/glib-2
+RDEPEND="dev-cpp/gtkmm:2.4
+	dev-libs/glib:2
 	x11-misc/xdg-utils
 	alsa? ( >=media-libs/alsa-lib-1 )
 	gnome? ( >=gnome-base/libgnomeui-2 )
@@ -34,13 +35,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--with-xdgopen"
 
 	# use gnomeui sm instead of Xorg SM/ICE
@@ -55,8 +54,7 @@ src_compile() {
 		$(use_with !gnutls openssl) \
 		$(use_with migemo) \
 		$(use_with migemo migemodict /usr/share/migemo/migemo-dict) \
-		${myconf} || die "econf failed"
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
