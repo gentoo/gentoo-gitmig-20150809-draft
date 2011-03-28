@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12617 2011/03/27 23:51:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12618 2011/03/28 01:12:04 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -447,7 +447,9 @@ x11-drivers/xf86-video-xgi
 # Temporarily masked until the new maintainer is ready
 # for unmasking.
 # http://bugs.gentoo.org/show_bug.cgi?id=354423
-app-pda/libopensync
+=app-pda/libopensync-0.22
+~app-pda/libopensync-9999
+~app-pda/libopensync-0.36
 app-pda/libopensync-plugin-evolution2
 app-pda/libopensync-plugin-file
 app-pda/libopensync-plugin-gnokii
