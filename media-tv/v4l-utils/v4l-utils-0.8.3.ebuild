@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.3.ebuild,v 1.2 2011/02/26 18:11:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.3.ebuild,v 1.3 2011/03/28 01:00:36 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs qt4-r2
@@ -25,6 +25,8 @@ S=${WORKDIR}/${P}/utils
 
 src_prepare() {
 	use qt4 || sed -i -e 's:which $$QMAKE:which dISaBlEd:' Makefile
+
+	sed -i -e 's:/etc/udev:/lib/udev:' keytable/Makefile || die
 }
 
 src_configure() {
