@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.1 2011/02/28 17:47:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.2 2011/03/28 18:07:53 bicatali Exp $
 
 EAPI=3
-inherit eutils
+inherit eutils autotools
 
 MY_PN=libAfterImage
 
@@ -37,11 +37,14 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-makefile.in.patch
 	# fix lib paths in afterimage-config
 	epatch "${FILESDIR}"/${PN}-config.patch
+	# fix gif unbundle
+	epatch "${FILESDIR}"/${PN}-gif.patch
 	# remove forced flags
 	sed -i \
 		-e 's/CFLAGS="-O3"//' \
 		-e 's/ -rdynamic//' \
-		configure || die "sed failed"
+		configure.in || die "sed failed"
+	eautoreconf
 }
 
 src_configure() {
@@ -60,7 +63,8 @@ src_configure() {
 		--with-x \
 		--with-xpm \
 		--without-builtin-gif \
-		--without-builtin-ungif \
+		--without-builtin-jpeg \
+		--without-builtin-png \
 		--without-builtin-zlib \
 		--without-afterbase
 }
