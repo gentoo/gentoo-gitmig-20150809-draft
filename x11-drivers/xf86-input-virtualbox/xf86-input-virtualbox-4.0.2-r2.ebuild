@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.2-r2.ebuild,v 1.1 2011/02/13 12:19:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.2-r2.ebuild,v 1.2 2011/03/28 08:46:36 ssuominen Exp $
 
 EAPI=2
 
@@ -82,7 +82,7 @@ src_install() {
 
 		if has_version ">=x11-base/xorg-server-1.8" ; then
 			# install udev information file about the mouse driver
-			insinto /etc/udev/rules.d
+			insinto /lib/udev/rules.d
 			doins 70-xorg-vboxmouse.rules
 
 			# install X11 information file about the mouse driver
