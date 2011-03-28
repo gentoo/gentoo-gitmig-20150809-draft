@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.108 2011/03/14 20:46:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.109 2011/03/28 16:15:51 serkan Exp $
+
+  28 Mar 2011; Serkan Kaba <serkan@gentoo.org>
+  files/java-gnome-4.0.19-libnotify-0.7.patch:
+  Fix javadoc failure with libnotify-0.7 reported in bug #360837.
 
   14 Mar 2011; Markos Chandras <hwoarang@gentoo.org> java-gnome-4.0.19.ebuild:
   Stable on amd64 wrt bug #358733
