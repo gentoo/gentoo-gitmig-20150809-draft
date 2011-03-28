@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/coda
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.35 2010/05/10 22:07:06 george Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/ChangeLog,v 1.36 2011/03/28 08:40:22 ssuominen Exp $
+
+  28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> coda-6.9.4.ebuild,
+  coda-6.9.5.ebuild, -files/scripts.tar.bz2:
+  Rename scripts.tar.bz2 to coda_scripts.tar.bz2 and upload it to mirrors wrt
+  #328651. This is because binary files are not preferred in gentoo-x86.
 
 *coda-6.9.5 (10 May 2010)
 
