@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-0.5.0-r1.ebuild,v 1.13 2011/03/28 08:13:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-0.5.0-r1.ebuild,v 1.14 2011/03/28 10:42:05 eras Exp $
 
 DESCRIPTION="esmtp is a user configurable relay-only Mail Transfer Agent (MTA) with a sendmail compatible syntax"
 HOMEPAGE="http://esmtp.sourceforge.net/"
@@ -27,12 +27,4 @@ RDEPEND="${DEPEND}
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
-
-	if use mailwrapper
-	then
-		# We install sendmail binary to be compatible with mailwrapper
-		mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.esmtp"
-		dosym /usr/sbin/sendmail /usr/lib/sendmail
-		rm "${D}/usr/bin/mailq" "${D}/usr/bin/newaliases"
-	fi
 }
