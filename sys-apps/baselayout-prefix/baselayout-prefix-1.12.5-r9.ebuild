@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.3 2011/03/24 19:09:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.4 2011/03/28 14:05:51 haubi Exp $
 
 EAPI=3
 
-inherit eutils toolchain-funcs multilib prefix
+inherit eutils toolchain-funcs multilib prefix flag-o-matic
 
 DESCRIPTION="Minimal baselayout for Gentoo Prefix installs"
 HOMEPAGE="http://www.gentoo.org/"
@@ -18,6 +18,7 @@ DEPEND=">=sys-apps/portage-2.2.01"
 RDEPEND=">=sys-libs/readline-5.0-r1
 	>=app-shells/bash-3.1_p7
 	>=sys-apps/coreutils-5.2.1
+	ppc-aix? ( dev-libs/gnulib )
 	kernel_Darwin? ( sys-process/pidof-bsd )
 	kernel_FreeBSD? ( sys-process/pidof-bsd )"
 
@@ -45,6 +46,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P/-prefix/}-prefix-sh.patch
 	# Next patch is to be applied on systems that don't have a pidof.
 	epatch "${FILESDIR}"/${P/-prefix/}-prefix-pidof.patch
+
+	epatch "${FILESDIR}"/${P/-prefix/}-termios_h.patch # required by aix.patch
+	epatch "${FILESDIR}"/${P/-prefix/}-aix.patch
+
 	# The consoletype application in this form will only work on Linux
 	[[ ${CHOST} == *-linux-* ]] || epatch "${FILESDIR}"/${P/-prefix/}-prefix-no-consoletype.patch
 
@@ -68,6 +73,11 @@ src_compile() {
 
 	[[ ${SYMLINK_LIB} == "yes" ]] && libdir=$(get_abi_LIBDIR "${DEFAULT_ABI}")
 
+	if [[ ${CHOST} == *-aix* ]]; then
+		append-flags -I"${EPREFIX}"/usr/$(get_libdir)/gnulib/include
+		append-ldflags -L"${EPREFIX}"/usr/$(get_libdir)/gnulib/lib
+		append-ldflags -lgnu # no LIBS makefile variable
+	fi
 	make -C "${S}"/src \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC) ${LDFLAGS}" \
