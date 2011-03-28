@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.119 2011/03/20 06:26:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.120 2011/03/28 22:10:03 lu_zero Exp $
+
+  28 Mar 2011; Luca Barbato <lu_zero@gentoo.org> package.use.mask:
+  Unmask bluray and vdpau for mplayer2
 
   20 Mar 2011; Mart Raudsepp <leio@gentoo.org> package.use.mask:
   Unmask orc USE flag on gst-plugins-good

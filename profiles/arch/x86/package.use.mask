@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.50 2011/03/24 13:11:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.51 2011/03/28 22:10:04 lu_zero Exp $
 
 # This file requires >=portage-2.1.1
+
+# Luca Barbato <lu_zero@gentoo.org> (28 Feb 2011)
+# # Masked in base, unmask for amd64/x86
+media-video/mplayer2 -bluray -vdpau
 
 # Thomas Kahle <tomka@gentoo.org> package.use.mask (26 Feb 2011)
 # libprelude can't go stable at this point, snort can.
@@ -60,7 +64,7 @@ sys-power/pm-utils -video_cards_intel -video_cards_radeon
 # Vlastimil Babka <caster@gentoo.org> (31 Mar 2010)
 >=dev-java/sun-jdk-1.6 -nsplugin
 >=dev-java/sun-jre-bin-1.6 -nsplugin
->=dev-java/ibm-jdk-bin-1.5 -nsplugin 
+>=dev-java/ibm-jdk-bin-1.5 -nsplugin
 >=dev-java/ibm-jre-bin-1.5 -nsplugin
 
 # Jim Ramsay <lack@gentoo.org> (24 March 2011)

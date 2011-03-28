@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5223 2011/03/28 22:06:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5224 2011/03/28 22:10:03 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Mar 2011; Luca Barbato <lu_zero@gentoo.org>
+  arch/amd64/package.use.mask, arch/x86/package.use.mask,
+  base/package.use.mask:
+  Mask mplayer2 arch specific flags
 
   28 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> base/use.mask,
   default/linux/use.mask, prefix/linux/use.mask:
@@ -1593,7 +1598,7 @@
   +hardened/linux/powerpc/ppc64/server/parent, hardened/ppc/deprecated,
   hardened/ppc64/deprecated, profiles.desc:
   Update profiles, bug #344861
-  hardened/linux/powerpc/ppc32 
+  hardened/linux/powerpc/ppc32
   hardened/linux/powerpc/ppc64/32bit-userland
   hardened/linux/powerpc/ppc64/64bit-userland
 
@@ -1991,7 +1996,7 @@
   20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add x11-terms/gnome-terminal to gnome 2.32 mask.
 
-  19 Oct 2010; Ole Markus With <olemarkus@gentoo.org> 
+  19 Oct 2010; Ole Markus With <olemarkus@gentoo.org>
   default/bsd/fbsd/make.defaults, default/linux/make.defaults:
   PHP ebuilds now make use of default USE flags. No longer any point in enabling
   them by default in make.defaults.
@@ -2091,7 +2096,7 @@
   09 Oct 2010; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask app-text/gnome-spell for removal.
 
-  08 Oct 2010; Ole Markus With <olemarkus@gentoo.org> 
+  08 Oct 2010; Ole Markus With <olemarkus@gentoo.org>
 	base/make.defaults,desc/php_targets.desc:
   Added PHP_TARGETS to USE_EXPAND
 
@@ -2160,7 +2165,7 @@
   Mask dev-python/IcePy.
 
   02 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
-  Masking sci-chemistry/validation for removal in 30 days. Does not 
+  Masking sci-chemistry/validation for removal in 30 days. Does not
   build, upstream is dead.
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org> package.mask:

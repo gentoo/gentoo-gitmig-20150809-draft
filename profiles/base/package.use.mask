@@ -1,10 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.215 2011/03/27 17:34:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.216 2011/03/28 22:10:04 lu_zero Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
+
+# Luca Barbato <lu_zero@gentoo.org> (28 Mar 2011)
+# Mask mplayer2 arch specific flags
+media-video/mplayer2 vdpau bluray
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
 #
@@ -31,7 +35,7 @@ app-text/stardict pronounce
 
 # Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
 # Masked until devs know how to use repoman
-<media-video/mplayer-9999 bluray 
+<media-video/mplayer-9999 bluray
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Feb 2011)
 # Mask until x11-libs/gtk+:3 is in tree.
@@ -214,7 +218,7 @@ app-text/enchant zemberek
 # Php module fails to build due to newer autotools.
 >=media-libs/ming-0.4.0_beta5 php
 
-# Christian Faulhammer <opfer@gentoo.org> (03 Mar 2008) 
+# Christian Faulhammer <opfer@gentoo.org> (03 Mar 2008)
 # This feature is experimental and should be used by people willing to
 # test it
 app-portage/gatt libpaludis
@@ -225,7 +229,7 @@ dev-lang/php java-external
 
 dev-java/sun-jdk nsplugin
 dev-java/sun-jre-bin nsplugin
-dev-java/ibm-jdk-bin nsplugin 
+dev-java/ibm-jdk-bin nsplugin
 dev-java/ibm-jre-bin nsplugin
 
 # These are for BSD only
