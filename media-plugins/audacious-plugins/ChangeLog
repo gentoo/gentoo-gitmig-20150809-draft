@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.198 2011/03/25 20:05:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.199 2011/03/28 22:22:16 eva Exp $
+
+  28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  audacious-plugins-2.4.4-r1.ebuild, audacious-plugins-2.5_alpha1.ebuild:
+  Pin gtk and libxml to slot 2.
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   audacious-plugins-2.4.0.ebuild:

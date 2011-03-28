@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.4.4-r1.ebuild,v 1.2 2011/03/21 01:45:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.4.4-r1.ebuild,v 1.3 2011/03/28 22:22:16 eva Exp $
+
+EAPI="3"
 
 inherit eutils flag-o-matic
 
@@ -18,10 +20,10 @@ lame libnotify libsamplerate lirc midi mms mp3 mtp nls oss pulseaudio scrobbler 
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	>=media-sound/audacious-2.4.4
 	>=net-libs/neon-0.26.4
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.14:2
 	aac? ( >=media-libs/faad2-2.7 )
 	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )
@@ -61,7 +63,7 @@ mp3_warning() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	mp3_warning
 
 	econf \
@@ -107,7 +109,9 @@ src_compile() {
 		$(use_enable vorbis) \
 		$(use_enable vorbis filewriter_vorbis) \
 		$(use_enable wavpack)
+}
 
+src_compile() {
 	emake || die "make failed"
 }
 
