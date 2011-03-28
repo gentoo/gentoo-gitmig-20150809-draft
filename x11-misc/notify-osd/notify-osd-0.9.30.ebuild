@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/notify-osd-0.9.30.ebuild,v 1.3 2011/03/27 21:56:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/notify-osd-0.9.30.ebuild,v 1.4 2011/03/28 03:43:54 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils gnome2-utils savedconfig
@@ -28,6 +28,7 @@ RDEPEND="${COMMON_DEPEND}
 	!minimal? ( x11-themes/notify-osd-icons )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
+	gnome-base/gnome-common
 	x11-proto/xproto"
 
 RESTRICT="test" # virtualx.eclass: 1 of 1: FAIL: test-modules
