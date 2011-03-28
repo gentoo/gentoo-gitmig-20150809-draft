@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.1 2011/02/13 15:19:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.2 2011/03/28 13:46:44 chithanh Exp $
 
 EAPI="3"
 
@@ -23,12 +23,12 @@ RDEPEND="dev-libs/boost
 	media-libs/libsndfile
 	portaudio? ( media-libs/portaudio )
 	media-libs/speex
-	media-video/ffmpeg
 	net-im/pidgin[gnutls]
 	net-libs/gnutls
 	>=net-libs/libosip-3
 	>=net-libs/libeXosip-3
 	net-misc/curl
+	virtual/ffmpeg
 	x11-libs/libX11
 	x11-libs/qt-gui
 	x11-libs/qt-svg
