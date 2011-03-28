@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.7 2010/08/21 02:19:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.5.ebuild,v 1.8 2011/03/28 23:08:55 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -34,9 +34,8 @@ src_install() {
 	dobin ${PN} || die
 	use gtk && { dobin x${PN} || die; }
 
-	local mansuffix=$(ecompress --suffix)
 	doman ${PN}.1
-	use gtk && dosym aylet.1${mansuffix} /usr/share/man/man1/xaylet.1${mansuffix}
+	use gtk && echo '.so aylet.1' > "${D}"/usr/share/man/man1/xaylet.1
 
 	dodoc ChangeLog NEWS README TODO
 }

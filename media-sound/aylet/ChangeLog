@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aylet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.15 2010/08/21 02:19:36 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/ChangeLog,v 1.16 2011/03/28 23:08:55 ssuominen Exp $
+
+  28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> aylet-0.5.ebuild:
+  Convert ecompress usage to manpage .so link wrt #356515 by Ulrich Müller.
 
   21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> aylet-0.5.ebuild,
   files/aylet-0.5-gtk.patch:
