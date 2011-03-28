@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r2.ebuild,v 1.1 2011/02/13 20:31:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r2.ebuild,v 1.2 2011/03/28 08:22:33 eras Exp $
 
 EAPI="3"
 
@@ -20,8 +20,6 @@ HOMEPAGE="http://www.exim.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-
-PROVIDE="virtual/mta"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
@@ -50,7 +48,17 @@ DEPEND=">=sys-apps/sed-4.0.5
 	"
 	# added X check for #57206
 RDEPEND="${DEPEND}
-	!virtual/mta
+	!mail-mta/courier
+	!mail-mta/esmtp
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/netqmail
+	!mail-mta/nullmailer
+	!mail-mta/postfix
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail
+	!mail-mta/ssmtp
 	!net-mail/mailwrapper
 	>=net-mail/mailbase-0.00-r5
 	virtual/logger
