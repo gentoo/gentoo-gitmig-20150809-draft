@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.6 2011/03/28 14:02:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.6.5.ebuild,v 1.7 2011/03/28 14:05:05 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
@@ -28,8 +28,8 @@ RDEPEND="dev-python/dbus-python
 	cdda? ( dev-python/python-musicbrainz )
 	gnome? ( dev-python/gnome-vfs-python )
 	libsexy? ( dev-python/sexy-python )
-    webkit? ( dev-python/pywebkitgtk )
-    !webkit? ( dev-python/gtkmozembed-python )"
+	webkit? ( dev-python/pywebkitgtk )
+	!webkit? ( dev-python/gtkmozembed-python )"
 DEPEND="${RDEPEND}
 	app-text/docbook2X
 	dev-util/intltool
