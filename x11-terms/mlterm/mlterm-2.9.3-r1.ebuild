@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.13 2011/02/13 18:01:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.14 2011/03/28 14:32:57 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils flag-o-matic
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 x86"
 LICENSE="BSD"
 
-RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
+RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	!gtk? ( imlib? ( >=media-libs/imlib-1.9.14 ) )
 	truetype? ( =media-libs/freetype-2* )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
