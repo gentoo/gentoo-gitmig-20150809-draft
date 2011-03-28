@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7_rc1.ebuild,v 1.2 2011/03/27 15:41:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.ebuild,v 1.1 2011/03/28 00:19:06 ssuominen Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit cmake-utils gnome2-utils virtualx
 
 DESCRIPTION="A modern music player and library organizer based on Amarok 1.4 and Qt4"
 HOMEPAGE="http://www.clementine-player.org/ http://code.google.com/p/clementine-player/"
-SRC_URI="http://clementine-player.googlecode.com/files/${P/_r/r}.tar.gz"
+SRC_URI="http://clementine-player.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -67,41 +67,38 @@ DEPEND="${COMMON_DEPEND}
 "
 DOCS="Changelog TODO"
 
-S=${WORKDIR}/${P/_r/r}
-
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-tests-liblastfm.patch
+	sed -i -e 's:-Werror::' src/CMakeLists.txt || die
 
 	# some tests fail or hang
-	sed \
+	sed -i \
 		-e '/add_test_file(translations_test.cpp/d' \
-		-i tests/CMakeLists.txt || die
+		tests/CMakeLists.txt || die
 }
 
 src_configure() {
-	# linguas
 	local langs x
 	for x in ${LANGS}; do
 		use linguas_${x} && langs+=" ${x}"
 	done
 
-	# scripting and remote are unstable, disable
-	mycmakeargs=(
+	# REMOTE and SCRIPTING unstable or unusable
+	local mycmakeargs=(
 		-DLINGUAS="${langs}"
 		-DBUNDLE_PROJECTM_PRESETS=OFF
 		$(cmake-utils_use dbus ENABLE_DBUS)
 		$(cmake-utils_use udev ENABLE_DEVICEKIT)
-		$(cmake-utils_use ipod ENABLE_LIBGPOD)
+		-DENABLE_GIO=ON
 		$(cmake-utils_use ios ENABLE_IMOBILEDEVICE)
+		$(cmake-utils_use ipod ENABLE_LIBGPOD)
 		$(cmake-utils_use lastfm ENABLE_LIBLASTFM)
 		$(cmake-utils_use mtp ENABLE_LIBMTP)
-		-DENABLE_GIO=ON
-		$(cmake-utils_use wiimote ENABLE_WIIMOTEDEV)
-		$(cmake-utils_use projectm ENABLE_VISUALISATIONS)
-		$(cmake-utils_use ayatana ENABLE_SOUNDMENU)
-		-DENABLE_SCRIPTING_PYTHON=OFF
-		-DENABLE_SCRIPTING_ARCHIVES=OFF
 		-DENABLE_REMOTE=OFF
+		-DENABLE_SCRIPTING_ARCHIVES=OFF
+		-DENABLE_SCRIPTING_PYTHON=OFF
+		$(cmake-utils_use ayatana ENABLE_SOUNDMENU)
+		$(cmake-utils_use projectm ENABLE_VISUALISATIONS)
+		$(cmake-utils_use wiimote ENABLE_WIIMOTEDEV)
 		-DSTATIC_SQLITE=OFF
 		)
 
@@ -113,14 +110,6 @@ src_test() {
 	Xemake test
 }
 
-pkg_preinst() {
-	gnome2_icon_savelist
-}
-
-pkg_postinst() {
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-}
+pkg_preinst() { gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }
