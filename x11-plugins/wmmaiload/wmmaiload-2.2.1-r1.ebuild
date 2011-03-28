@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-2.2.1-r1.ebuild,v 1.7 2010/08/31 13:52:38 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/wmmaiload-2.2.1-r1.ebuild,v 1.8 2011/03/28 14:45:09 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

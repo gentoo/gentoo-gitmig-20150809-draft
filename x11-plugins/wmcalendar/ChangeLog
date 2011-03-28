@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcalendar
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.19 2009/06/04 00:09:00 tcunha Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.20 2011/03/28 14:36:20 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  wmcalendar-0.5.2.ebuild:
+  Fix slot-dep on gtk+
 
   04 Jun 2009; Tiago Cunha <tcunha@gentoo.org> wmcalendar-0.5.2.ebuild:
   stable sparc, bug 215651

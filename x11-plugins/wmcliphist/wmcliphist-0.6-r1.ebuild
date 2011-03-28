@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/wmcliphist-0.6-r1.ebuild,v 1.5 2008/11/15 19:36:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/wmcliphist-0.6-r1.ebuild,v 1.6 2011/03/28 14:36:36 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

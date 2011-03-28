@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.3.ebuild,v 1.6 2008/11/25 23:40:19 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.3.ebuild,v 1.7 2011/03/28 14:35:40 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools multilib
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXext"

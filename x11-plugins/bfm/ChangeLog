@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/bfm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.14 2010/09/06 12:50:01 s4t4n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.15 2011/03/28 14:35:09 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> bfm-0.6.4-r1.ebuild:
+  Fix slot-dep on gtk+
 
   06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> bfm-0.6.4-r1.ebuild:
   Honour Gentoo LDFLAGS. Closes bug #333987.

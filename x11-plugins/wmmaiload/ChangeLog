@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmaiload
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.33 2010/08/31 13:52:38 s4t4n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.34 2011/03/28 14:45:09 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  wmmaiload-2.2.1-r1.ebuild:
+  Fix slot-dep on gtk+
 
   31 Aug 2010; Michele Noberasco <s4t4n@gentoo.org> wmmaiload-2.2.1-r1.ebuild,
   files/wmmaiload-2.2.1-checkthread.patch:
