@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.5 2008/01/29 16:26:44 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/sancho-bin-0.9.4.58-r1.ebuild,v 1.6 2011/03/28 14:30:52 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils
 
@@ -28,7 +30,7 @@ IUSE="java"
 DEPEND="x11-libs/libXxf86vm
 	x11-libs/libXext
 	x11-libs/libX11
-	>=x11-libs/gtk+-2
+	x11-libs/gtk+:2
 	amd64? ( !java? ( >=app-emulation/emul-linux-x86-baselibs-1.0
 			>=app-emulation/emul-linux-x86-gtklibs-1.0 ) )
 	java? ( >=virtual/jre-1.5 )"

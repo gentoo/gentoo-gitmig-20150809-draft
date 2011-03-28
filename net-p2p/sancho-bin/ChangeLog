@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/sancho-bin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.46 2008/01/29 16:26:44 rich0 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/sancho-bin/ChangeLog,v 1.47 2011/03/28 14:30:52 nirbheek Exp $
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  sancho-bin-0.9.4.58.ebuild, sancho-bin-0.9.4.58-r1.ebuild:
+  Fix slot-dep on gtk+
 
   29 Jan 2008; Richard Freeman <rich0@gentoo.org>
   sancho-bin-0.9.4.58-r1.ebuild:

@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tvrss/tvrss-1.8_beta.ebuild,v 1.1 2006/06/14 00:02:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tvrss/tvrss-1.8_beta.ebuild,v 1.2 2011/03/28 14:31:15 nirbheek Exp $
+
+EAPI="2"
 
 inherit versionator
 
@@ -14,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-DEPEND="x11-libs/gtk+
+DEPEND="x11-libs/gtk+:2
 	>=dev-lang/perl-5.8.6
 	dev-perl/XML-RAI
 	dev-perl/glib-perl

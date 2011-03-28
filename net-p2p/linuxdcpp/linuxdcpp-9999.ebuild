@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.14 2010/07/18 18:04:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.15 2011/03/28 14:30:10 nirbheek Exp $
+
+EAPI="1"
 
 inherit bzr eutils
 
@@ -16,8 +18,8 @@ EBZR_REPO_URI="lp:linuxdcpp"
 
 S=${WORKDIR}/${P}
 
-RDEPEND=">=gnome-base/libglade-2.4
-	>=x11-libs/gtk+-2.6
+RDEPEND=">=gnome-base/libglade-2.4:2.0
+	>=x11-libs/gtk+-2.6:2
 	app-arch/bzip2
 	dev-libs/openssl"
 DEPEND="${RDEPEND}
