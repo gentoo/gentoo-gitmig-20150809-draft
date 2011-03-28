@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.38 2011/03/25 19:57:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.39 2011/03/28 18:10:24 angelos Exp $
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  hardware-monitor-1.3.ebuild, hardware-monitor-1.4.3.ebuild:
+  Fixed slot deps
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   hardware-monitor-1.4.3.ebuild:
