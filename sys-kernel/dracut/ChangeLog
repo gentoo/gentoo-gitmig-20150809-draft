@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.15 2011/03/21 12:39:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.16 2011/03/28 23:38:14 aidecoe Exp $
+
+*dracut-009 (28 Mar 2011)
+
+  28 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-009.ebuild,
+  +files/dracut-009-don-t-skip-zero-length-string-outfile.patch,
+  +files/dracut-009-multipath-udev-rules.patch:
+  Version bump.
+
+  This version provides new modules:
+  - biosdevname
+  - caps
+
+  sys-block/open-iscsi is restricted to 2.0.871.3 and above because of required
+  iBFT support which starts with this version.
+
+  net-misc/dhcp restricted to 4.2.1-r1 and above because dhcp-3 doesn't work
+  with Qemu and dhcp-4 is already ~arch keyworded.
 
   21 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-002-r1.ebuild,
   dracut-003.ebuild, dracut-004.ebuild, dracut-006.ebuild,

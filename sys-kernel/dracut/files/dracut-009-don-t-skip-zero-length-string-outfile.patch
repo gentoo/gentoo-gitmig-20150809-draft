@@ -1,0 +1,32 @@
+From fcc34c5611c2a5298380c9d47e5d7883a7a6f422 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Amadeusz=20=C5=BBo=C5=82nowski?= <aidecoe@aidecoe.name>
+Date: Tue, 29 Mar 2011 00:46:31 +0200
+Subject: [PATCHv2] dracut: don't skip zero-length string outfile argument
+
+When '' was passed as outfile, dracut generated name with following
+pattern:
+
+  /boot/initramfs-$kernel
+
+With commit 486a1b9324d6fc7bc534d8147d64b8b259692c46 dracut skips ''
+argument.
+---
+ dracut |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/dracut b/dracut
+index 6b67dc0..c16b222 100755
+--- a/dracut
++++ b/dracut
+@@ -237,7 +237,7 @@ while (($# > 0)); do
+                        ;;
+         -*) printf "\nUnknown option: %s\n\n" "$1" >&2; usage; exit 1;;
+         *) 
+-            if ! [[ $outfile ]]; then
++            if ! [[ ${outfile+x} ]]; then
+                 outfile=$1
+             elif [[ $kernel = "unset" ]]; then
+                 kernel=$1
+-- 
+1.7.4.1
+
