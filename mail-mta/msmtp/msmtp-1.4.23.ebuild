@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.23.ebuild,v 1.7 2011/03/25 10:06:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.23.ebuild,v 1.8 2011/03/28 09:07:38 eras Exp $
 
 EAPI=3
 
@@ -22,14 +22,22 @@ CDEPEND="idn? ( net-dns/libidn )
 	sasl? ( >=virtual/gsasl-0.2.4 )"
 
 RDEPEND="${CDEPEND}
-	mta? ( !virtual/mta )
-	!net-mail/mailwrapper"
+	!net-mail/mailwrapper
+	mta? (	!mail-mta/courier
+			!mail-mta/esmtp
+			!mail-mta/exim
+			!mail-mta/mini-qmail
+			!mail-mta/nbsmtp
+			!mail-mta/netqmail
+			!mail-mta/nullmailer
+			!mail-mta/postfix
+			!mail-mta/qmail-ldap
+			!mail-mta/sendmail
+			!mail-mta/ssmtp )"
 
 DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
-
-PROVIDE="mta? ( virtual/mta )"
 
 src_prepare() {
 	# Use default Gentoo location for mail aliases
