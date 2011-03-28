@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnome-scan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.3 2009/11/01 17:31:26 mrpouet Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.4 2011/03/28 22:03:24 eva Exp $
+
+  28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> gnome-scan-0.6.2.ebuild:
+  Pin dependencies to appropriate slots, bump to EAPI 3.
 
   01 Nov 2009; Romain Perier <mrpouet@gentoo.org>
   gnome-scan-0.6.2.ebuild:
