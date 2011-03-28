@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/taginfo-1.2-r1.ebuild,v 1.3 2007/03/22 16:46:27 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/taginfo/taginfo-1.2-r1.ebuild,v 1.4 2011/03/28 22:53:50 ssuominen Exp $
 
+EAPI=2
 inherit toolchain-funcs
 
 DESCRIPTION="a simple ID3 tag reader for use in shell scripts"
@@ -17,10 +18,10 @@ RDEPEND="media-libs/taglib"
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	emake CC=$(tc-getCXX) || die "emake failed."
+	emake CC="$(tc-getCXX) ${LDFLAGS} ${CFLAGS}" || die
 }
 
 src_install() {
-	dobin taginfo
-	dodoc contrib/mp3-resample.sh README ChangeLog
+	dobin taginfo || die
+	dodoc ChangeLog contrib/mp3-resample.sh README
 }
