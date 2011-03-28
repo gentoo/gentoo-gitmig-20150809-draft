@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2.ebuild,v 1.3 2011/03/19 17:19:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2.ebuild,v 1.4 2011/03/28 07:46:40 eras Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,10 +11,8 @@ SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite mailwrapper \
+IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite \
 	fam web webmail"
-
-PROVIDE="virtual/mta"
 
 DEPEND="
 	>=net-libs/courier-authlib-0.61.0
@@ -29,14 +27,25 @@ DEPEND="
 	postgres? ( dev-db/postgresql-base )
 	spell? ( virtual/aspell-dict )
 	fam? ( virtual/fam )
-	!mailwrapper? ( !virtual/mta )
-	!mail-filter/maildrop"
+	!mail-filter/maildrop
+	!mail-mta/esmtp
+	!mail-mta/exim
+	!mail-mta/mini-qmail
+	!mail-mta/msmtp
+	!mail-mta/nbsmtp
+	!mail-mta/netqmail
+	!mail-mta/nullmailer
+	!mail-mta/postfix
+	!mail-mta/qmail-ldap
+	!mail-mta/sendmail
+	!mail-mta/ssmtp
+	"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
 	sys-process/procps"
 
-# get rid of old style virtual - bug 350792
+# get rid of old style virtual/imapd - bug 350792
 # all blockers really needed?
 RDEPEND="${RDEPEND}
 	!net-mail/dovecot
@@ -45,8 +54,7 @@ RDEPEND="${RDEPEND}
 	!net-mail/cyrus-imapd
 	!net-mail/uw-imap"
 
-PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
-	pam? ( net-mail/mailbase )
+PDEPEND="pam? ( net-mail/mailbase )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )"
 
 src_unpack() {
@@ -212,24 +220,7 @@ src_install() {
 	# users should be able to send mail. Could be restricted with suictl.
 	chmod u+s "${D}/usr/bin/sendmail"
 
-	if use mailwrapper ; then
-		mv "${D}/usr/bin/sendmail" "${D}/usr/bin/sendmail.courier"
-		mv "${D}/usr/bin/rmail" "${D}/usr/bin/rmail.courier"
-		mv "${D}/usr/bin/mailq" "${D}/usr/bin/mailq.courier"
-
-		mv "${D}/usr/share/man/man1/sendmail.1" \
-			"${D}/usr/share/man/man1/sendmail-courier.1"
-		mv "${D}/usr/share/man/man1/mailq.1" \
-			"${D}/usr/share/man/man1/mailq-courier.1"
-		mv "${D}/usr/share/man/man1/rmail.1" \
-			"${D}/usr/share/man/man1/rmail-courier.1"
-
-		insopts -m 444 -o mail -g mail
-		insinto /etc/mail
-		doins "${FILESDIR}/mailer.conf"
-	else
-		dosym /usr/bin/sendmail /usr/sbin/sendmail
-	fi
+	dosym /usr/bin/sendmail /usr/sbin/sendmail
 }
 
 src_test() {

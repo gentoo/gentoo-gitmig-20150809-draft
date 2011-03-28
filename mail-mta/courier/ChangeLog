@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.141 2011/03/27 15:11:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.142 2011/03/28 07:46:40 eras Exp $
+
+  28 Mar 2011; Eray Aslan <eras@gentoo.org> courier-0.59.0.ebuild,
+  courier-0.62.2.ebuild, courier-0.64.1.ebuild, courier-0.65.2.ebuild,
+  courier-0.65.2-r1.ebuild:
+  Change to new style virtual/mta - bug 360305. Remove mailwrapper support -
+  bug 158003
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> courier-0.65.2-r1.ebuild:
   Marking courier-0.65.2-r1 ppc for bug 359303
