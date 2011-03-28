@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.136 2011/03/27 17:37:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.137 2011/03/28 06:38:36 jlec Exp $
+
+  28 Mar 2011; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Make ios USE description understandable without using google
 
   27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Move USE="hal" description here from use.desc.
