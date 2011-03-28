@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.195 2011/03/24 17:43:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.196 2011/03/28 06:47:45 flameeyes Exp $
 
 # Authors:
 # 	Jim Ramsay <i.am@gentoo.org>
@@ -382,7 +382,7 @@ vim_src_configure() {
 	# autoconf-2.13 needed for this package -- bug 35319
 	# except it seems we actually need 2.5 now -- bug 53777
 	WANT_AUTOCONF=2.5 \
-		make -j1 -C src autoconf || die "make autoconf failed"
+		emake -j1 -C src autoconf || die "make autoconf failed"
 	eend $?
 
 	# This should fix a sandbox violation (see bug 24447). The hvc
@@ -501,7 +501,7 @@ vim_src_compile() {
 	has src_configure ${TO_EXPORT} || vim_src_configure
 
 	# The following allows emake to be used
-	make -j1 -C src auto/osdef.h objects || die "make failed"
+	emake -j1 -C src auto/osdef.h objects || die "make failed"
 
 	if [[ ${MY_PN} == "vim-core" ]] ; then
 		emake tools || die "emake tools failed"
