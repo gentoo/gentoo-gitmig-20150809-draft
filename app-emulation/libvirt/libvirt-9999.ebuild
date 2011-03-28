@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.1 2011/02/12 04:57:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.2 2011/03/28 07:57:02 flameeyes Exp $
 
 #BACKPORTS=1
 
@@ -57,7 +57,10 @@ RDEPEND="sys-libs/readline
 	nfs? ( net-fs/nfs-utils )
 	numa? ( sys-process/numactl )
 	openvz? ( sys-kernel/openvz-sources )
-	parted? ( >=sys-block/parted-1.8[device-mapper] )
+	parted? (
+		>=sys-block/parted-1.8[device-mapper]
+		sys-fs/lvm2
+	)
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
@@ -111,6 +114,9 @@ src_configure() {
 
 	## hypervisors on the local host
 	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
+	 # leave it automagic as it depends on the version of xen used.
+	use xen || myconf+=" --without-libxl"
+
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then

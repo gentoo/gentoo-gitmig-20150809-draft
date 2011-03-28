@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.7.ebuild,v 1.7 2011/02/12 18:31:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.0_rc1.ebuild,v 1.1 2011/03/28 07:57:02 flameeyes Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
 
 EAPI="2"
+
+MY_P="${P/_rc/-rc}"
 
 PYTHON_DEPEND="python? 2:2.4"
 #RESTRICT_PYTHON_ABIS="3.*"
@@ -15,18 +17,23 @@ inherit eutils python ${AUTOTOOLIZE+autotools}
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
-SRC_URI="http://libvirt.org/sources/${P}.tar.gz
+SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
+	ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 	${BACKPORTS:+
-		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
-		http://dev.gentoo.org/~cardoe/${PN}/${P}-backports-${BACKPORTS}.tar.bz2}"
+		http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-backports-${BACKPORTS}.tar.bz2
+		http://dev.gentoo.org/~cardoe/${PN}/${MY_P}-backports-${BACKPORTS}.tar.bz2}"
+S="${WORKDIR}/${P%_rc*}"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap +network nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
 	uml virtualbox virt-network xen"
 # IUSE=one : bug #293416 & bug #299011
 
+# gettext.sh command is used by the libvirt command wrappers, and it's
+# non-optional, so put it into RDEPEND.
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
@@ -35,6 +42,7 @@ RDEPEND="sys-libs/readline
 	>=net-libs/gnutls-1.0.25
 	sys-fs/sysfsutils
 	sys-apps/util-linux
+	sys-devel/gettext
 	>=net-analyzer/netcat6-1.0-r2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
@@ -46,7 +54,10 @@ RDEPEND="sys-libs/readline
 	nfs? ( net-fs/nfs-utils )
 	numa? ( sys-process/numactl )
 	openvz? ( sys-kernel/openvz-sources )
-	parted? ( >=sys-block/parted-1.8[device-mapper] )
+	parted? (
+		>=sys-block/parted-1.8[device-mapper]
+		sys-fs/lvm2
+	)
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
@@ -62,8 +73,7 @@ RDEPEND="sys-libs/readline
 		sys-apps/iproute2 )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -73,16 +83,6 @@ src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
-
-	# This is required to be able to run the tests when using the sandbox
-	if [[ ${LD_PRELOAD} == libsandbox.so ]]; then
-		sed -i -e '/LOGNAME/iENV:LD_PRELOAD=libsandbox.so' \
-			"${S}"/tests/commanddata/*.log || die
-		sed -i -e '/DISPLAY/aENV:LD_PRELOAD=libsandbox.so' \
-			"${S}"/tests/commanddata/test6.log || die
-		sed -i -e '/LANG/aENV:LD_PRELOAD=libsandbox.so' \
-			"${S}"/tests/commanddata/test8.log || die
-	fi
 
 	[[ -n ${AUTOTOOLIZE} ]] && eautoreconf
 }
@@ -100,6 +100,9 @@ src_configure() {
 
 	## hypervisors on the local host
 	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
+	 # leave it automagic as it depends on the version of xen used.
+	use xen || myconf+=" --without-libxl"
+
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then
@@ -192,8 +195,8 @@ src_install() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	newinitd "${FILESDIR}/libvirtd.init-r1" libvirtd || die
-	newconfd "${FILESDIR}/libvirtd.confd-r1" libvirtd || die
+	newinitd "${FILESDIR}/libvirtd.init-r2" libvirtd || die
+	newconfd "${FILESDIR}/libvirtd.confd-r2" libvirtd || die
 
 	keepdir /var/lib/libvirt/images
 }
