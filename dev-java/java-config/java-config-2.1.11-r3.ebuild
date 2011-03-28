@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11-r3.ebuild,v 1.5 2011/01/25 04:58:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11-r3.ebuild,v 1.6 2011/03/28 08:57:45 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="*:2.6"
@@ -42,6 +42,7 @@ src_test() {
 
 src_install() {
 	distutils_src_install
+	rm -rf "${D}"/usr/share/mimelnk #350459
 
 	insinto /usr/share/java-config-2/config/
 	newins config/jdk-defaults-${ARCH}.conf jdk-defaults.conf || die "arch config not found"
