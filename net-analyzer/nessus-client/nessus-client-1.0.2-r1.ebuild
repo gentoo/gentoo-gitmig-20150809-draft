@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2-r1.ebuild,v 1.4 2010/11/04 08:28:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/nessus-client-1.0.2-r1.ebuild,v 1.5 2011/03/28 21:19:11 radhermit Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -20,7 +20,7 @@ IUSE="doc"
 
 RDEPEND="!net-analyzer/nessus-core
 	dev-libs/openssl
-	>=x11-libs/gtk+-2.8.8"
+	>=x11-libs/gtk+-2.8.8:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-text/htmldoc )"

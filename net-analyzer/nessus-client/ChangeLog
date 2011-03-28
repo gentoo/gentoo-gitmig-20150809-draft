@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-client
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.13 2010/11/04 08:28:32 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-client/ChangeLog,v 1.14 2011/03/28 21:19:11 radhermit Exp $
+
+  28 Mar 2011; Tim Harder <radhermit@gentoo.org> -nessus-client-1.0.2.ebuild,
+  nessus-client-1.0.2-r1.ebuild:
+  Remove old and use slot dep for gtk+.
 
   04 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   nessus-client-1.0.2-r1.ebuild:
