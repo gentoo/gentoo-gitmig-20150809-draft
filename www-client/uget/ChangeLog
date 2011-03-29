@@ -1,6 +1,9 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.19 2011/03/29 12:57:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.20 2011/03/29 23:59:56 wired Exp $
+
+  30 Mar 2011; Alex Alexander <wired@gentoo.org> uget-1.7.3.ebuild:
+  removed aria2 from deps, added elog message if aria2 use is enabled
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> uget-1.5.0.1-r1.ebuild,
   uget-1.5.0.3.ebuild, uget-1.6.1.ebuild, uget-1.7.0.ebuild, uget-1.7.3.ebuild,

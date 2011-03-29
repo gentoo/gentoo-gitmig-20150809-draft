@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.7.3.ebuild,v 1.2 2011/03/29 12:57:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.7.3.ebuild,v 1.3 2011/03/29 23:59:56 wired Exp $
 
 EAPI="4"
 
@@ -21,7 +21,6 @@ RDEPEND="
 	dev-libs/libpcre
 	>=dev-libs/glib-2:2
 	>=x11-libs/gtk+-2.18:2
-	aria2? ( net-misc/aria2[xmlrpc] )
 	curl? ( >=net-misc/curl-7.10 )
 	gstreamer? ( media-libs/gstreamer )
 	libnotify? ( x11-libs/libnotify )
@@ -60,4 +59,15 @@ src_install() {
 	dobin uget-cmd/uget-cmd || die "uget-cmd install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
+}
+
+pkg_postinst() {
+	if use aria2; then
+		echo
+		elog "You've enabled the aria2 USE flag, so the aria2 plug-in has been"
+		elog "built. This allows you to control a local or remote instance of aria2"
+		elog "through xmlrpc. To use aria2 locally you have to emerge"
+		elog "net-misc/aria2 with the xmlrpc USE enabled manually."
+		echo
+	fi
 }
