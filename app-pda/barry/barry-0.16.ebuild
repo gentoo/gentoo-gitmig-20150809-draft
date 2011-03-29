@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.10 2011/02/10 20:11:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.16.ebuild,v 1.11 2011/03/29 06:13:02 nirbheek Exp $
 
 EAPI="3"
 
@@ -19,9 +19,9 @@ RDEPEND="dev-libs/libusb:0
 	dev-libs/openssl
 	sys-libs/zlib
 	boost?	( >=dev-libs/boost-1.33 )
-	gui?	( >=dev-cpp/gtkmm-2.4
-			  >=dev-cpp/libglademm-2.4
-			  >=dev-cpp/glibmm-2.4
+	gui?	( >=dev-cpp/gtkmm-2.4:2.4
+			  >=dev-cpp/libglademm-2.4:2.4
+			  >=dev-cpp/glibmm-2.4:2
 			  >=dev-libs/libtar-1.2.11-r2 )"
 
 DEPEND="${RDEPEND}
