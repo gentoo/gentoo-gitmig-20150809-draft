@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.2 2011/03/29 12:44:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.3 2011/03/29 14:03:34 scarabeus Exp $
 
 EAPI=4
 
@@ -578,7 +578,6 @@ src_compile() {
 	base_src_compile
 	# Build only user-requested docs if they're available.
 	if use doc ; then
-		pushd mplayer
 		# select available languages from $LINGUAS
 		LINGUAS=${LINGUAS/zh/zh_CN}
 		local ALLOWED_LINGUAS="cs de en es fr hu it pl ru zh_CN"

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.2 2011/03/29 12:44:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.3 2011/03/29 14:03:34 scarabeus Exp $
+
+  29 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-2.0.ebuild,
+  mplayer2-9999.ebuild:
+  Drop wrong pushd in doc compilation.
 
   29 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-2.0.ebuild,
   mplayer2-9999.ebuild, metadata.xml:
