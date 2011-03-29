@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.43.ebuild,v 1.2 2011/03/29 19:40:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.44.ebuild,v 1.1 2011/03/29 19:40:22 radhermit Exp $
 
 EAPI=4
 
