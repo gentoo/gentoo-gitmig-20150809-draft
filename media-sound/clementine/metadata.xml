@@ -12,7 +12,6 @@
   </maintainer> 
   <use>
     <flag name="ayatana">Build in support for Ayatana notification using the libindicate-qt plugin.</flag>
-    <flag name="ios">Enable support for Apples iOS</flag>
 	<flag name="lastfm">Enable Last.fm streaming services support through <pkg>media-libs/liblastfm</pkg></flag>
     <flag name='projectm'>Build with ProjectM visualization</flag>
     <flag name="wiimote">Enable support for Wii remote</flag>
