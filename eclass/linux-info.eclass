@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.87 2011/01/04 17:53:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.88 2011/03/29 19:57:51 flameeyes Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -598,10 +598,9 @@ get_running_version() {
 	else
 		KV_MAJOR=$(get_version_component_range 1 ${KV_FULL})
 		KV_MINOR=$(get_version_component_range 2 ${KV_FULL})
-		KV_PATCH=$(get_version_component_range 3- ${KV_FULL})
+		KV_PATCH=$(get_version_component_range 3 ${KV_FULL})
 		KV_PATCH=${KV_PATCH//-*}
-		[[ -n ${KV_FULL#*-} ]] && [[ -n ${KV_FULL//${KV_FULL#*-}} ]] \
-			&& KV_EXTRA="-${KV_FULL#*-}"
+		KV_EXTRA="${KV_FULL#${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}}"
 	fi
 	return 0
 }
