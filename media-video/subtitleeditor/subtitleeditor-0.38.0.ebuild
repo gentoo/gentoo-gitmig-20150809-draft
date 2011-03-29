@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.38.0.ebuild,v 1.1 2011/02/27 17:58:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.38.0.ebuild,v 1.2 2011/03/29 06:04:16 nirbheek Exp $
 
 EAPI="2"
 
@@ -17,15 +17,15 @@ IUSE="debug nls opengl"
 
 RDEPEND="
 	app-text/iso-codes
-	>=dev-cpp/gtkmm-2.14
-	>=dev-cpp/glibmm-2.16.3
-	>=dev-cpp/libxmlpp-2.20
+	>=dev-cpp/gtkmm-2.14:2.4
+	>=dev-cpp/glibmm-2.16.3:2
+	>=dev-cpp/libxmlpp-2.20:2.6
 	>=app-text/enchant-1.4
 	>=dev-cpp/gstreamermm-0.10.4
-	>=media-libs/gst-plugins-good-0.10
+	>=media-libs/gst-plugins-good-0.10:0.10
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
-	>=media-plugins/gst-plugins-pango-0.10
-	>=media-plugins/gst-plugins-xvideo-0.10
+	>=media-plugins/gst-plugins-pango-0.10:0.10
+	>=media-plugins/gst-plugins-xvideo-0.10:0.10
 	opengl? ( >=dev-cpp/gtkglextmm-1.2 )
 "
 # gst-plugins-pango needed for text overlay
