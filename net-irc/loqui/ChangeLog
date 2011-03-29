@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/loqui
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.39 2008/03/25 18:45:15 coldwind Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.40 2011/03/29 12:49:51 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> loqui-0.4.4.ebuild:
+  Fix gtk+ slot deps
 
   25 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> loqui-0.4.4.ebuild:
   amd64 stable and clean up.

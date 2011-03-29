@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.20.ebuild,v 1.4 2009/08/11 19:50:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.20.ebuild,v 1.5 2011/03/29 12:49:20 angelos Exp $
 
+EAPI=1
 inherit eutils
 
 MY_P="${P/_/-}"
@@ -16,8 +17,8 @@ IUSE="python gnutls ipv6 nls mmx socks5 dbus"
 DEPEND="nls? ( dev-util/intltool )
 	dev-util/pkgconfig"
 RDEPEND=">=dev-libs/libmowgli-0.6.0
-	>=x11-libs/gtk+-2.10
-	>=dev-libs/glib-2.14
+	>=x11-libs/gtk+-2.10:2
+	>=dev-libs/glib-2.14:2
 	x11-libs/libnotify
 	x11-libs/libsexy
 	dbus? ( >=dev-libs/dbus-glib-0.60 )

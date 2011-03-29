@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.4 2011/03/28 20:23:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.5 2011/03/29 12:49:20 angelos Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE="dbus ipv6 mmx nls python socks5"
 
-RDEPEND=">=dev-libs/glib-2.14
+RDEPEND=">=dev-libs/glib-2.14:2
 	>=dev-libs/libmowgli-0.6.0
 	net-libs/gnutls
 	>=x11-libs/gtk+-2.10:2

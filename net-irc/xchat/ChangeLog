@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.296 2011/03/22 09:54:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.297 2011/03/29 12:50:37 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> xchat-2.8.6-r2.ebuild:
+  Fix gtk+ slot deps
 
   22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> xchat-2.8.8-r1.ebuild,
   xchat-2.8.8-r2.ebuild, metadata.xml:
