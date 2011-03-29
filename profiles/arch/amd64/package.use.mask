@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.86 2011/03/28 22:10:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.87 2011/03/29 01:58:47 flameeyes Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -67,10 +67,6 @@ sys-cluster/pacemaker heartbeat
 net-libs/xulrunner -ipc
 www-client/firefox -ipc
 www-client/icecat -ipc
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Apr 2010)
-# xf86-video-nouveau is supported on amd64.
-x11-base/xorg-drivers -video_cards_nouveau
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)$
 # x86 platforms works$

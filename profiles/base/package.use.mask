@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.216 2011/03/28 22:10:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.217 2011/03/29 01:58:48 flameeyes Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -112,10 +112,6 @@ www-client/icecat ipc
 # Tomas Touceda <chiiph@gentoo.org> (13 Apr 2010)
 # Masked because libsvm module is broken with this release on every arch.
 dev-lisp/clisp svm
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Apr 2010)
-# Masked because xf86-video-nouveau is not supported on most archs.
-x11-base/xorg-drivers video_cards_nouveau
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)
 # Masked because tools pulled in are not supported on most archs.

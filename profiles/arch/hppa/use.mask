@@ -1,5 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.35 2011/03/25 17:51:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.36 2011/03/29 01:58:47 flameeyes Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (25 Mar 2011)
@@ -55,7 +55,6 @@ kde
 # Jeroen Roovers <jer@gentoo.org> (5 Apr 2010)
 # More video_cards_ drivers that HPPA does not support
 video_cards_svga
-video_cards_nouveau
 
 # Jeroen Roovers <jer@gentoo.org> (28 Feb 2010)
 # app-accessibility/flite does not work (bug #307241)

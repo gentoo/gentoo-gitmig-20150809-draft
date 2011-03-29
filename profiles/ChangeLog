@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5227 2011/03/28 23:15:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5228 2011/03/29 01:58:47 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  arch/amd64/package.use.mask, arch/amd64/use.mask, arch/hppa/use.mask,
+  arch/x86/package.use.mask, arch/x86/use.mask, base/package.use.mask,
+  default/linux/use.mask, prefix/linux/use.mask:
+  Only unmask nouveau for x86 and amd64; follow the x11-base/xorg-drivers
+  masking this time, but cover _all_ packages.
 
   28 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/1Q-2011:
   Add package move media-sound/phonon-xine > media-libs/phonon-xine, bug
