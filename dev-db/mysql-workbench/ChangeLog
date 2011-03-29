@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.35 2011/03/18 13:34:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.36 2011/03/29 06:07:20 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  mysql-workbench-5.2.31.ebuild, mysql-workbench-5.2.33.ebuild:
+  Fix slot-dep on gnome-mm libs
 
   18 Mar 2011; Hans de Graaff <graaff@gentoo.org>
   mysql-workbench-5.2.33.ebuild:
