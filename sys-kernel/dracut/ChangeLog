@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.18 2011/03/29 16:36:10 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.19 2011/03/29 16:40:11 aidecoe Exp $
+
+  29 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -files/dracut-002-add-missing-functions.patch,
+  -files/dracut-002-custom-paths.patch, -files/dracut-002-dir-symlinks.patch,
+  -files/dracut-002-gencmdline-check-for-keyboard-i18n-files.patch,
+  -files/dracut-002-makefile-add-with_switch_root.patch,
+  -files/dracut-002-unmount.patch,
+  -files/dracut-006-console_init-not-necessary.patch,
+  -files/dracut-006-dhcp6.patch, -files/dracut-006-dm-udev-rules.patch,
+  -files/dracut-006-lc-all-c.patch:
+  Removed patches of not existing ebuilds.
 
   29 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-002-r1.ebuild,
   -dracut-003.ebuild, -dracut-004.ebuild, -dracut-006.ebuild,
