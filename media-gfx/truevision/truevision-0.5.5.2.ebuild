@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.10 2008/12/21 16:04:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.11 2011/03/29 05:44:26 radhermit Exp $
+
+EAPI=2
 
 inherit eutils gnome2 versionator
 
@@ -17,25 +19,23 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="doc"
 
-DEPEND=">=x11-libs/gtk+-2.8.8
+DEPEND=">=x11-libs/gtk+-2.8.8:2
 	>=x11-libs/gtkglext-1.0.6-r3
 	gnome-base/libgnome
 	>=media-gfx/povray-3.6.1
 	sys-libs/zlib
 	virtual/opengl
 	>=gnome-base/libgnomeui-2.12.0"
+RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS README ChangeLog TODO"
 USE_DESTDIR="1"
 
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	# Patch for editing gnome-vfs-mime-magic and do update-mime below
 	# bug 84530
-	cd "${S}"
 	epatch "${FILESDIR}"/${P}-makefile-mime-magic.patch
 	# bug 148763 - won't compile with gcc4
 	epatch "${DISTDIR}"/${P}-gcc4.diff.bz2
