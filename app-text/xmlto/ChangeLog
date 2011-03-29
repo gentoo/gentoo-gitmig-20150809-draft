@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.62 2010/02/20 18:39:04 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.63 2011/03/29 15:27:18 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> xmlto-0.0.23.ebuild:
+  Stable on amd64 wrt bug #361033
 
   20 Feb 2010; Jonathan Callen <abcd@gentoo.org> xmlto-0.0.23.ebuild:
   Transfer prefix keywords, bump EAPI
