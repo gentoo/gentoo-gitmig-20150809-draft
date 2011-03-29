@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.9 2010/08/12 08:19:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.10 2011/03/29 06:18:33 nirbheek Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="debug"
 
 RDEPEND="dev-cpp/cairomm
-	>=dev-cpp/gtkmm-2.6.2
+	>=dev-cpp/gtkmm-2.6.2:2.4
 	net-misc/curl
 	sys-apps/file"
 DEPEND="${RDEPEND}

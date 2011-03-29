@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.7 2010/11/08 22:49:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.8 2011/03/29 06:20:52 nirbheek Exp $
 
 EAPI="2"
 
@@ -19,10 +19,10 @@ IUSE="3ds cuda gnome graphviz gts imagemagick jpeg nls openexr png python tiff t
 
 RDEPEND="
 	dev-libs/boost
-	>=dev-cpp/glibmm-2.6
-	>=dev-cpp/gtkmm-2.6
+	>=dev-cpp/glibmm-2.6:2
+	>=dev-cpp/gtkmm-2.6:2.4
 	dev-libs/expat
-	>=dev-libs/libsigc++-2.2
+	>=dev-libs/libsigc++-2.2:2
 	media-libs/mesa
 	virtual/glu
 	virtual/opengl
