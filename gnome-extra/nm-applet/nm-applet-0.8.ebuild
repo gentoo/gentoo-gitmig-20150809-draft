@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.7 2011/03/06 23:08:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.8 2011/03/29 14:15:18 ssuominen Exp $
 
 EAPI="2"
 
@@ -49,4 +49,9 @@ pkg_setup () {
 	G2CONF="${G2CONF}
 		--disable-more-warnings
 		--localstatedir=/var"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.8.2-libnotify-0.7.patch
+	gnome2_src_prepare
 }
