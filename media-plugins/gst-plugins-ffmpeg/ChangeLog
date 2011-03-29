@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.122 2011/03/17 23:34:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.123 2011/03/29 19:57:08 leio Exp $
+
+  29 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  gst-plugins-ffmpeg-0.10.11-r1.ebuild:
+  Add ~mips keyword
 
   17 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -gst-plugins-ffmpeg-0.10.5.ebuild, -gst-plugins-ffmpeg-0.10.6.ebuild,

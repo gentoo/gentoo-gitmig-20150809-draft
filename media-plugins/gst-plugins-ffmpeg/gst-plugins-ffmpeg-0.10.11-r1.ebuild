@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.11-r1.ebuild,v 1.1 2011/01/30 08:40:58 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.11-r1.ebuild,v 1.2 2011/03/29 19:57:08 leio Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://gstreamer.freedesktop.org/modules/gst-ffmpeg.html"
 SRC_URI="http://gstreamer.freedesktop.org/src/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+orc"
 
 S=${WORKDIR}/${MY_P}
