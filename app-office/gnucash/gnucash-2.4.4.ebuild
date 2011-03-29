@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.3 2011/03/16 09:43:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.4 2011/03/29 19:31:00 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
@@ -37,11 +37,8 @@ RDEPEND=">=dev-libs/glib-2.13:2
 	x11-libs/pango
 	cxx? ( dev-cpp/gtkmm:2.4 )
 	ofx? ( >=dev-libs/libofx-0.9.1 )
-	hbci? (
-		|| (
-			>=net-libs/aqbanking-5
-			<net-libs/aqbanking-5[qt4]
-		)
+	hbci? ( >=net-libs/aqbanking-5[gtk]
+		sys-libs/gwenhywfar[gtk]
 		chipcard? ( sys-libs/libchipcard )
 	)
 	quotes? ( dev-perl/DateManip

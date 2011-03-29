@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.231 2011/03/16 09:43:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.232 2011/03/29 19:31:00 pacho Exp $
+
+  29 Mar 2011; Pacho Ramos <pacho@gentoo.org> gnucash-2.4.4.ebuild:
+  Fix RDEPEND, bug #360533 by Sebastian Lipp).
 
   16 Mar 2011; Pacho Ramos <pacho@gentoo.org> gnucash-2.4.4.ebuild:
   Parallel installation fails from time to time, bug #359123 by water.
