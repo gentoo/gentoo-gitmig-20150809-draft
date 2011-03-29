@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sweep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.42 2011/03/29 07:33:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.43 2011/03/29 07:41:46 radhermit Exp $
+
+*sweep-0.9.3-r1 (29 Mar 2011)
+
+  29 Mar 2011; Tim Harder <radhermit@gentoo.org> +sweep-0.9.3-r1.ebuild,
+  +files/sweep-0.9.3-configure.patch:
+  Revision bump to fix configure script library enabling. Update to EAPI 4.
 
   29 Mar 2011; Tim Harder <radhermit@gentoo.org> sweep-0.9.3.ebuild:
   Update to EAPI 2, remove unused eutils eclass, and use slot deps for gtk+ and
