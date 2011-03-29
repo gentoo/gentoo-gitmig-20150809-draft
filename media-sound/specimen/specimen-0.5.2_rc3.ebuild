@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.5 2008/12/19 14:28:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.6 2011/03/29 12:43:13 angelos Exp $
 
+EAPI=1
 inherit eutils
 
 MY_P=${P/_/-}
@@ -20,8 +21,8 @@ RDEPEND=">=media-sound/jack-audio-connection-kit-0.109.2
 	media-libs/libsamplerate
 	media-libs/libsndfile
 	>=media-libs/phat-0.4
-	dev-libs/libxml2
-	>=x11-libs/gtk+-2
+	dev-libs/libxml2:2
+	x11-libs/gtk+:2
 	gnome-base/libgnomecanvas
 	lash? ( media-sound/lash )"
 DEPEND="${RDEPEND}

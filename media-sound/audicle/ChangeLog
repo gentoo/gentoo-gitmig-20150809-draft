@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audicle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.6 2010/09/16 17:17:00 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.7 2011/03/29 12:38:01 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> audicle-1.0.0.6-r1.ebuild:
+  Fix gtk+ slot deps
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   audicle-1.0.0.6-r1.ebuild:

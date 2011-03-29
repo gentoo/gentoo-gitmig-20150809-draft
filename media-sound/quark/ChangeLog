@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quark
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.14 2008/08/06 22:50:26 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/ChangeLog,v 1.15 2011/03/29 12:40:00 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> quark-3.21.ebuild:
+  Fix gtk+ slot deps
 
   06 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   files/quark-3.21-nogtkdisabledeprecated.patch, quark-3.21.ebuild:

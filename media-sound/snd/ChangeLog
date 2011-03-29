@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.49 2010/10/10 19:09:30 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.50 2011/03/29 12:42:02 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> snd-9.11.ebuild:
+  Fix gtk+ slot deps
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> snd-9.11.ebuild:
   Fix openmotif dependency. Change EAPI to 1.

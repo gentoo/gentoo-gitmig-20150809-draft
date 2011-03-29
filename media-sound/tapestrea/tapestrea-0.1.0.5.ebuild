@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/tapestrea-0.1.0.5.ebuild,v 1.3 2010/09/16 17:18:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/tapestrea-0.1.0.5.ebuild,v 1.4 2011/03/29 12:44:01 angelos Exp $
 
 EAPI="1"
 
@@ -21,7 +21,7 @@ RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	media-libs/freeglut
 	virtual/opengl
 	virtual/glu
-	>=x11-libs/gtk+-2"
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"

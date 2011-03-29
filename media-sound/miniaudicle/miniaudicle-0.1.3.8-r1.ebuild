@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8-r1.ebuild,v 1.4 2010/07/15 12:12:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8-r1.ebuild,v 1.5 2011/03/29 12:38:47 angelos Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -20,7 +20,7 @@ IUSE="+alsa jack oss"
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	media-libs/libsndfile
-	>=x11-libs/gtk+-2.10
+	>=x11-libs/gtk+-2.10:2
 	x11-libs/wxGTK:2.8[X]
 	app-admin/eselect-miniaudicle"
 DEPEND="${RDEPEND}

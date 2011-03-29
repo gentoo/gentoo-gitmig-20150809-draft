@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-9.11.ebuild,v 1.6 2010/10/10 19:09:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-9.11.ebuild,v 1.7 2011/03/29 12:42:02 angelos Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ RDEPEND="media-libs/audiofile
 	fam? ( virtual/fam )
 	fftw? ( sci-libs/fftw )
 	gsl? ( >=sci-libs/gsl-0.8 )
-	gtk? ( >=x11-libs/gtk+-2
+	gtk? ( x11-libs/gtk+:2
 		opengl? ( x11-libs/gtkglext )
 		cairo? ( x11-libs/cairo ) )
 	guile? ( >=dev-scheme/guile-1.3.4 )

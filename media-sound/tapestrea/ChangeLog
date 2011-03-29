@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tapestrea
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/ChangeLog,v 1.4 2010/09/16 17:18:45 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/ChangeLog,v 1.5 2011/03/29 12:44:01 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> tapestrea-0.1.0.5.ebuild:
+  Fix gtk+ slot deps
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   tapestrea-0.1.0.5.ebuild:
