@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.8.ebuild,v 1.8 2010/07/20 15:09:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.8.ebuild,v 1.9 2011/03/29 06:05:14 nirbheek Exp $
 
 EAPI=2
 
@@ -14,14 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="avahi gnome"
 
-RDEPEND=">=dev-cpp/glibmm-2.6
-	>=dev-cpp/gtkmm-2.6
+RDEPEND=">=dev-cpp/glibmm-2.6:2
+	>=dev-cpp/gtkmm-2.6:2.4
 	>=dev-libs/libsigc++-2.0
 	>=net-libs/obby-0.4.6
-	>=dev-cpp/libxmlpp-2.6
+	>=dev-cpp/libxmlpp-2.6:2.6
 	x11-libs/gtksourceview:2.0
 	avahi? ( >=net-libs/obby-0.4.6 )
-	gnome? ( gnome-base/gnome-vfs )"
+	gnome? ( gnome-base/gnome-vfs:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

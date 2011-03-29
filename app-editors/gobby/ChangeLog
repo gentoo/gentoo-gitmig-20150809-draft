@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gobby
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.43 2010/07/20 15:09:44 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.44 2011/03/29 06:05:14 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gobby-0.4.8.ebuild:
+  Fix slot-dep on gnome-mm libs
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gobby-0.4.8.ebuild,
   gobby-0.4.11.ebuild:
