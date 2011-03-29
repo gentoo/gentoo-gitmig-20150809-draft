@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.7-r1.ebuild,v 1.4 2010/10/24 16:41:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.7-r1.ebuild,v 1.5 2011/03/29 05:53:01 radhermit Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.9"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa gnome lash nls xml"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	>=media-libs/ladspa-sdk-1.12
 	media-sound/jack-audio-connection-kit
 	alsa? ( media-libs/alsa-lib )

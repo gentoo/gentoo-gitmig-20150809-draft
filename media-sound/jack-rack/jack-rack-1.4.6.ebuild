@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.6.ebuild,v 1.8 2010/10/24 16:41:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.6.ebuild,v 1.9 2011/03/29 05:53:01 radhermit Exp $
 
+EAPI=2
 WANT_AUTOMAKE="1.9"
 
 inherit autotools eutils
@@ -15,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa gnome lash nls xml"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	>=media-libs/ladspa-sdk-1.12
 	media-sound/jack-audio-connection-kit
 	alsa? ( media-libs/alsa-lib )
@@ -28,18 +29,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.5-asneeded.patch
 	epatch "${FILESDIR}"/${P}-no-disable-deprecated.patch
 	epatch "${FILESDIR}"/${P}-noalsa.patch
 	eautomake
 }
 
-src_compile() {
-	local myconf
-	myconf="--disable-ladcca --enable-desktop-inst"
+src_configure() {
+	local myconf="--disable-ladcca --enable-desktop-inst"
 
 	econf \
 		$(use_enable alsa aseq) \
@@ -50,7 +48,6 @@ src_compile() {
 		$(use_enable xml lrdf ) \
 		--disable-dependency-tracking \
 		${myconf}
-	emake || die "emake failed"
 }
 
 src_install() {
