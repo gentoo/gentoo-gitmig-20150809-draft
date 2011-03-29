@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.13 2011/03/29 01:44:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.14 2011/03/29 02:03:31 ssuominen Exp $
+
+*libimobiledevice-1.1.0 (29 Mar 2011)
+
+  29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +libimobiledevice-1.1.0.ebuild:
+  Version bump to development release without KEYWORDS. This ebuild is for
+  Python and SWIG testing wrt #361029.
 
   29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   libimobiledevice-1.0.6.ebuild:
