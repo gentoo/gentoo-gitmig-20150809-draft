@@ -1,0 +1,41 @@
+--- src/notification/libnotify.c
++++ src/notification/libnotify.c
+@@ -28,6 +28,10 @@
+ 
+ #include <libnotify/notify.h>
+ 
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
++
+ #include "common.h"
+ #include "conf.h"
+ #include "debug.h"
+@@ -150,7 +154,12 @@
+ //		notify_notification_update ( n, node_get_title(node_p), labelText_now_p, NULL);
+ //		notify_notification_clear_actions(n);
+ 
+-		n = notify_notification_new (node_get_title(node_p), labelText_now_p, NULL, NULL);
++		n = notify_notification_new (node_get_title(node_p), labelText_now_p, NULL
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++		);
++#else
++		, NULL);
++#endif
+ 
+ 		notify_notification_set_icon_from_pixbuf (n,node_get_icon(node_p));
+ 
+@@ -244,7 +253,12 @@
+ 
+ 	labelSummary_p = g_strdup_printf (ngettext ("%s has %d new / updated headline\n", "%s has %d new / updated headlines\n", item_count), 
+ 	                                  node_get_title (node), item_count);
+-	n = notify_notification_new ( _("Feed Update"), labelSummary_p, NULL, NULL);
++	n = notify_notification_new ( _("Feed Update"), labelSummary_p, NULL
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++	);
++#else
++	, NULL);
++#endif
+ 	g_free(labelSummary_p);
+ 
+ 	notify_notification_set_icon_from_pixbuf (n, node_get_icon (node));
