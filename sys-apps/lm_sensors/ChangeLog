@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.114 2011/03/25 19:09:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.115 2011/03/29 06:09:44 ssuominen Exp $
+
+*lm_sensors-3.3.0 (29 Mar 2011)
+
+  29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +lm_sensors-3.3.0.ebuild:
+  Version bump.
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> lm_sensors-3.2.0.ebuild:
   ppc stable wrt #347435
