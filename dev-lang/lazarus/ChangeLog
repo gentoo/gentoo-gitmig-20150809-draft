@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lazarus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.32 2010/08/21 18:29:39 truedfx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.33 2011/03/29 07:58:55 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> lazarus-0.9.26-r4.ebuild,
+  lazarus-0.9.28.2-r1.ebuild:
+  Fixed slot deps
 
   21 Aug 2010; Harald van Dĳk <truedfx@gentoo.org>
   -lazarus-0.9.28.2.ebuild, +lazarus-0.9.28.2-r1.ebuild,

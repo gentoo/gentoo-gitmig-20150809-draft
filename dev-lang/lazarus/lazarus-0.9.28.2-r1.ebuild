@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.28.2-r1.ebuild,v 1.1 2010/08/21 18:29:39 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.28.2-r1.ebuild,v 1.2 2011/03/29 07:58:55 angelos Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/lazarus/${P}-src.tar.bz2"
 
 DEPEND="~dev-lang/fpc-${FPCVER}[source]
 	net-misc/rsync
-	>=x11-libs/gtk+-2.0"
+	x11-libs/gtk+:2"
 RDEPEND="${DEPEND}
 	!=gnome-base/librsvg-2.16.1"
 DEPEND="${DEPEND}
