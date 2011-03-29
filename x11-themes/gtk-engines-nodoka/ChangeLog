@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-nodoka
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nodoka/ChangeLog,v 1.1 2009/08/16 11:45:49 a3li Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nodoka/ChangeLog,v 1.2 2011/03/29 13:07:04 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  gtk-engines-nodoka-0.7.2.ebuild:
+  Fix gtk+ slot deps
 
 *gtk-engines-nodoka-0.7.2 (16 Aug 2009)
 

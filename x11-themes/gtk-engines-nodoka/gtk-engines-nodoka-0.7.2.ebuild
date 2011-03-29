@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nodoka/gtk-engines-nodoka-0.7.2.ebuild,v 1.1 2009/08/16 11:45:49 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nodoka/gtk-engines-nodoka-0.7.2.ebuild,v 1.2 2011/03/29 13:07:04 angelos Exp $
 
+EAPI=1
 MY_P="gtk-nodoka-engine-${PV}"
 
 DESCRIPTION="GTK+ engine and themes developed by the Fedora Project"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="animation-rtl"
 
-RDEPEND=">=x11-libs/gtk+-2.8.0"
+RDEPEND=">=x11-libs/gtk+-2.8.0:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
