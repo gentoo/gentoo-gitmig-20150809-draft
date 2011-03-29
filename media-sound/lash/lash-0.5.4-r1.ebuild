@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.11 2010/03/01 19:03:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.12 2011/03/29 06:56:34 radhermit Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="alsa debug gtk python"
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	media-sound/jack-audio-connection-kit
 	dev-libs/libxml2
-	gtk? ( >=x11-libs/gtk+-2.0 )
+	gtk? ( x11-libs/gtk+:2 )
 	python? ( dev-lang/python )
 	|| ( sys-libs/readline dev-libs/libedit )"
 DEPEND="${RDEPEND}
@@ -41,8 +41,7 @@ src_configure() {
 		$(use_enable gtk gtk2) \
 		$(use_enable debug) \
 		${myconf} \
-		--disable-dependency-tracking \
-		|| die "econf failed"
+		--disable-dependency-tracking
 }
 
 src_install() {
