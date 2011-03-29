@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.254 2011/03/26 22:18:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.255 2011/03/29 20:19:15 haubi Exp $
+
+  29 Mar 2011; Michael Haubenwallner <haubi@gentoo.org>
+  +linux/x86/profile.bashrc:
+  set SYMLINK_LIB=yes for sys-devel/binutils when needed (#360197)
 
   26 Mar 2011; Jeremy Olexa <darkside@gentoo.org> package.mask:
   remove baselayout-prefix mask because there is only one version in the
