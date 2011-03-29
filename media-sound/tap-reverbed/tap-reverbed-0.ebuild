@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.7 2008/12/31 03:38:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.8 2011/03/29 07:49:43 radhermit Exp $
+
+EAPI=2
 
 inherit autotools eutils
 
@@ -8,7 +10,6 @@ MY_P="${PN}-r0"
 DESCRIPTION="Standalone JACK counterpart of LADSPA plugin TAP Reverberator."
 HOMEPAGE="http://tap-plugins.sourceforge.net/reverbed.html"
 SRC_URI="mirror://sourceforge/tap-plugins/${MY_P}.tar.gz"
-S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,14 +18,14 @@ IUSE=""
 
 RDEPEND="media-libs/ladspa-sdk
 	media-plugins/tap-plugins
-	>=x11-libs/gtk+-2
+	x11-libs/gtk+:2
 	media-sound/jack-audio-connection-kit"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+S=${WORKDIR}/${MY_P}
+
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-flags.patch"
 	eautoreconf
 }
