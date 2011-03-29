@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.79 2010/02/13 19:12:39 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.80 2011/03/29 10:29:47 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> rox-2.9.ebuild,
+  rox-2.10.ebuild:
+  Fixed slot deps
 
   13 Feb 2010; Raúl Porcel <armin76@gentoo.org> rox-2.10.ebuild:
   alpha/sparc stable wrt #300732

@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox-clib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.33 2009/05/21 17:50:27 lack Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.34 2011/03/29 10:32:58 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> rox-clib-2.1.10.ebuild:
+  Fixed slot deps
 
   21 May 2009; Jim Ramsay <lack@gentoo.org> -rox-clib-2.1.9-r1.ebuild:
   Version cleanup

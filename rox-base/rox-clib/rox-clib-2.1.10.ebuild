@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.8 2008/09/01 09:36:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.10.ebuild,v 1.9 2011/03/29 10:32:58 angelos Exp $
 
+EAPI=1
 inherit multilib
 
 MY_PN="ROX-CLib"
@@ -14,8 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.0.1
-	>=dev-libs/libxml2-2.4.0"
+RDEPEND="x11-libs/gtk+:2
+	dev-libs/libxml2:2"
 
 DEPEND="$RDEPEND
 	>=dev-util/pkgconfig-0.20
