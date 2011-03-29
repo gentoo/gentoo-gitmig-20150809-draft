@@ -1,6 +1,13 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.10 2011/02/20 10:26:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.11 2011/03/29 14:03:25 xmw Exp $
+
+*mupdf-0.8.15 (29 Mar 2011)
+
+  29 Mar 2011; Michael Weber <xmw@gentoo.org> +mupdf-0.8.15.ebuild,
+  +files/mupdf-0.8.15-buildsystem.patch, +files/mupdf-0.8.15-zoom.patch:
+  Version bum, thanks to shark@bitchx.it for the hint on bug 360455, added
+  vanilla useflag to disable zoom-patch
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   mupdf-0.7_p20110212.ebuild:
