@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monster-masher
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.22 2010/01/01 16:10:49 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.23 2011/03/29 07:49:10 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  monster-masher-1.8.1.ebuild:
+  Fixed slot deps
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   monster-masher-1.8.1.ebuild:
