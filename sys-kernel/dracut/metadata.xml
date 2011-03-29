@@ -20,7 +20,6 @@
         <flag name="gensplash">Add support for framebuffer splash at boot-time</flag>
         <flag name="iscsi">Add support for iSCSI</flag>
         <flag name="lvm">Add support for the Logical Volume Manager (sys-apps/lvm2)</flag>
-        <flag name="md">Add support for MD devices, also known as software RAID devices</flag>
         <flag name="mdraid">Add support for MD devices, also known as software RAID devices</flag>
         <flag name="multipath">Add support for Device Mapper multipathing</flag>
         <flag name="nbd">Add support for network block devices</flag>
