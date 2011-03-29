@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/x2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/ChangeLog,v 1.4 2008/02/29 19:40:07 carlo Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/ChangeLog,v 1.5 2011/03/29 11:55:39 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> x2-1.4.05.ebuild:
+  Fixed slot deps
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> x2-1.4.05.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

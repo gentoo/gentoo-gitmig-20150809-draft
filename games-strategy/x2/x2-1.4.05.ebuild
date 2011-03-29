@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/x2-1.4.05.ebuild,v 1.2 2008/02/29 19:40:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/x2/x2-1.4.05.ebuild,v 1.3 2011/03/29 11:55:39 angelos Exp $
 
+EAPI=1
 inherit eutils games
 
 MY_PV="1.4.04-${PV}"
@@ -28,7 +29,7 @@ RDEPEND="media-libs/alsa-lib
 		media-libs/libsdl
 		media-libs/openal
 		sys-libs/zlib
-		x11-libs/gtk+
+		x11-libs/gtk+:2
 		x11-libs/libX11
 		x11-libs/libXau
 		x11-libs/libXdmcp
