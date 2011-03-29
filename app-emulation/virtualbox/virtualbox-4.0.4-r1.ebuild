@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4-r1.ebuild,v 1.3 2011/03/20 13:53:29 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4-r1.ebuild,v 1.4 2011/03/29 18:13:43 blueness Exp $
 
 EAPI=4
 
@@ -113,6 +113,15 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 REQUIRED_USE="java? ( sdk ) python? ( sdk )"
 
 pkg_setup() {
+	if built_with_use sys-devel/gcc hardened && gcc-config -c | grep -qv -E "hardenednopie|vanilla"; then
+		eerror "The PIE feature provided by the \"hardened\" compiler is incompatible with ${PF}."
+		eerror "You must use gcc-config to select a profile without this feature.  You may"
+		eerror "choose either \"hardenednopie\", \"hardenednopiessp\" or \"vanilla\" profile;"
+		eerror "however, \"hardenednopie\" is preferred because it gives the most hardening."
+		eerror "Remember to run \"source /etc/profile\" before continuing.  See bug #339914."
+		die
+	fi
+
 	if ! use headless && ! use qt4 ; then
 		einfo "No USE=\"qt4\" selected, this build will not include"
 		einfo "any Qt frontend."
