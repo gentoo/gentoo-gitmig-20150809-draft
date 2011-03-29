@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.73 2011/01/10 20:53:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.74 2011/03/29 22:34:12 arfrever Exp $
+
+  29 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libprelude-1.0.0-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #361177).
 
   10 Jan 2011; Thomas Kahle <tomka@gentoo.org> libprelude-0.9.15.2.ebuild,
   libprelude-0.9.22.ebuild:
