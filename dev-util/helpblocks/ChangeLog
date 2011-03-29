@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/helpblocks
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.9 2009/03/07 13:57:03 mrness Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.10 2011/03/29 13:13:32 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> helpblocks-1.21-r1.ebuild:
+  Fixed slot deps
 
 *helpblocks-1.21-r1 (07 Mar 2009)
 
