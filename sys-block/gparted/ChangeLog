@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.90 2011/03/22 22:57:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.91 2011/03/29 06:01:29 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gparted-0.5.2.ebuild,
+  gparted-0.6.2.ebuild:
+  Fix slot-dep on gtk+
 
 *gparted-0.8.0 (22 Mar 2011)
 
