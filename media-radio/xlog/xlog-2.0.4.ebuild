@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.4.ebuild,v 1.3 2010/12/09 22:39:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/xlog-2.0.4.ebuild,v 1.4 2011/03/29 12:35:27 angelos Exp $
 
 EAPI=2
 
@@ -16,8 +16,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="media-libs/hamlib
-	=dev-libs/glib-2*
-	>=x11-libs/gtk+-2.12"
+	dev-libs/glib:2
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
