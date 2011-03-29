@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/volwheel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/ChangeLog,v 1.2 2010/08/01 12:55:36 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/ChangeLog,v 1.3 2011/03/29 16:06:10 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> volwheel-0.2.8.ebuild:
+  Stable on amd64 wrt bug #361111
 
 *volwheel-0.2.8 (01 Aug 2010)
 
