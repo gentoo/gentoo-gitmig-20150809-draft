@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.9-r1.ebuild,v 1.3 2011/01/31 20:16:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.9-r1.ebuild,v 1.4 2011/03/29 15:30:29 angelos Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://inotify.aiken.cz/download/incron/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
