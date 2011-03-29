@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.1-r1,v 1.1 2011/03/05 07:37:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.1-r1.ebuild,v 1.1 2011/03/29 01:01:39 flameeyes Exp $
 
 EAPI=2
 

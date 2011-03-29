@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.47 2011/03/27 19:37:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.48 2011/03/29 01:01:39 flameeyes Exp $
+
+*highline-1.6.1-r1 (29 Mar 2011)
+
+  29 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> -highline-1.6.1-r1,
+  +highline-1.6.1-r1.ebuild:
+  Fix name of ebuild.
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> highline-1.6.1.ebuild:
   Marking highline-1.6.1 ppc for bug 357491
