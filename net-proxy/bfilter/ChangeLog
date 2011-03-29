@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/bfilter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.27 2009/10/19 22:29:22 mrness Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.28 2011/03/29 06:17:49 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> bfilter-1.1.4.ebuild,
+  bfilter-1.1.4-r1.ebuild:
+  Fix slot-dep on gnome-mm libs
 
 *bfilter-1.1.4-r1 (19 Oct 2009)
 

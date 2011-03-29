@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.1 2009/10/19 22:29:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.2 2011/03/29 06:17:49 nirbheek Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="X debug"
 RDEPEND="sys-libs/zlib
 	dev-libs/ace
 	dev-libs/libsigc++:2
-	X? ( >=dev-cpp/gtkmm-2.4 )
+	X? ( dev-cpp/gtkmm:2.4 )
 	dev-libs/boost"
 DEPEND="${RDEPEND}
 	dev-util/scons
