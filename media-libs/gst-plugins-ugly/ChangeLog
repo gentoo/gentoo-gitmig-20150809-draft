@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.80 2011/03/23 17:40:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.81 2011/03/29 19:29:37 leio Exp $
+
+  29 Mar 2011; Mart Raudsepp <leio@gentoo.org> gst-plugins-ugly-0.10.17.ebuild:
+  Add ~mips keyword
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-ugly-0.10.16.ebuild:
