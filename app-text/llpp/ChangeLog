@@ -1,6 +1,14 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.5 2011/02/17 14:08:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.6 2011/03/29 22:07:14 xmw Exp $
+
+  29 Mar 2011; Michael Weber <xmw@gentoo.org> -llpp-0_p20110202.ebuild,
+  +llpp-0_p20110328.ebuild:
+  New tarball to fix printf problem
+  (http://repo.or.cz/w/llpp.git/commit/c63b0e73feecab3af2f41753290e3f026668cc4a
+  ) and force upgrade to security fixed mupdf-0.8.15 (bug 358029)
+
+*llpp-0_p20110328 (29 Mar 2011)
 
   17 Feb 2011; Michael Weber <xmw@gentoo.org> llpp-0_p20110202.ebuild:
   Forgot SRC_URI/S
