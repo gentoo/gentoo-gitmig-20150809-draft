@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.233 2011/03/28 10:36:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.234 2011/03/29 08:44:25 ssuominen Exp $
+
+  29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE="test" for x11-libs/libnotify because x11-libs/gtk+:3 is now in
+  ~ərch.
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> virtuals:
   remove old style virtual/mta - bug 360305
