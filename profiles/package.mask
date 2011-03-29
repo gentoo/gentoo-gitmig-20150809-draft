@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12629 2011/03/28 20:59:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12630 2011/03/29 07:18:26 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (29 Mar 2011)
-# gtk+:3 still can't be added to the tree
-=media-libs/clutter-gtk-0.91*
 
 # Sebastien Fabbro <bicatali@gentoo.org> (28 Mar 2011)
 # Still beta 
@@ -562,10 +558,6 @@ dev-util/plan9port
 # Doug Goldstein <cardoe@gentoo.org> (24 Jan 2011)
 # Masked beta versions
 >=x11-drivers/nvidia-drivers-270
-
-# Gilles Dartiguelongue <eva@gentoo.org> (24 Jan 2011)
-# Masked due to unsatisfied requirements in tree
->=net-misc/rygel-0.9.6
 
 # Markos Chandras <hwoarang@gentoo.org> (22 Jan 2011)
 # Mask for testing. Bug #329377
