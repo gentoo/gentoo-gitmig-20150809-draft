@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.3.0.ebuild,v 1.1 2010/10/27 09:38:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.3.0.ebuild,v 1.2 2011/03/29 12:54:04 angelos Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ IUSE="X debug +examples static-libs"
 RDEPEND="dev-libs/glib:2
 	dev-libs/libusb:1
 	dev-libs/nss
-	x11-libs/gtk+
+	x11-libs/gtk+:2
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	X? ( examples? (
 		x11-libs/libXext
