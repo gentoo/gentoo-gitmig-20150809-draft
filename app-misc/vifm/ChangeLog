@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/vifm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.19 2010/06/12 12:14:54 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.20 2011/03/29 20:41:03 wired Exp $
+
+*vifm-0.5-r1 (29 Mar 2011)
+
+  29 Mar 2011; Alex Alexander <wired@gentoo.org> +vifm-0.5-r1.ebuild,
+  +files/vifm-0.5-ncurses-5.8.patch:
+  fixed segfault with ncurses-5.8. bug #359179
 
   12 Jun 2010; Alex Alexander <wired@gentoo.org> metadata.xml:
   added myself as maintainer
