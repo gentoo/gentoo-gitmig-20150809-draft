@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.8.2.ebuild,v 1.1 2010/11/10 13:22:08 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.8.2.ebuild,v 1.2 2011/03/29 12:52:53 angelos Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/dbus-glib-0.74
 	>=net-misc/vpnc-0.5
 	gnome? (
-		>=x11-libs/gtk+-2.6
+		>=x11-libs/gtk+-2.6:2
 		gnome-base/gconf:2
 		gnome-base/gnome-keyring
 		gnome-base/libglade:2.0

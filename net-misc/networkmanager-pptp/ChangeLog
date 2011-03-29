@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager-pptp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.14 2010/11/10 13:16:11 dagger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.15 2011/03/29 12:52:08 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  networkmanager-pptp-0.8.ebuild, networkmanager-pptp-0.8.1.ebuild,
+  networkmanager-pptp-0.8.2.ebuild:
+  Fix gtk+ slot deps
 
 *networkmanager-pptp-0.8.2 (10 Nov 2010)
 

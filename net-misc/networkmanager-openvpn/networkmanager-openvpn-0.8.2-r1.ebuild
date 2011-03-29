@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.8.2-r1.ebuild,v 1.1 2011/02/21 13:04:17 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.8.2-r1.ebuild,v 1.2 2011/03/29 12:51:37 angelos Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=net-misc/openvpn-2.1_rc9
 	>=dev-libs/dbus-glib-0.74
 	gnome? (
-		>=x11-libs/gtk+-2.6
+		>=x11-libs/gtk+-2.6:2
 		gnome-base/gconf:2
 		gnome-base/gnome-keyring
 		gnome-base/libglade:2.0

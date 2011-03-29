@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/streamtuner
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.39 2009/07/17 18:51:21 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.40 2011/03/29 12:53:35 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  streamtuner-0.99.99-r5.ebuild:
+  Fix gtk+ slot deps
 
   17 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   streamtuner-0.99.99-r5.ebuild:
