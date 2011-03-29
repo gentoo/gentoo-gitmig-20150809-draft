@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.2 2011/02/17 02:15:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.3 2011/03/29 14:13:56 xmw Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="X"
+IUSE="X vanilla"
 
 RDEPEND="media-libs/freetype:2
 	media-libs/jbig2dec
@@ -27,22 +27,20 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.7_p20110212-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-0.8.15-buildsystem.patch
 
-	epatch "${FILESDIR}"/${PN}-0.7_p20110212-zoom.patch
-
-	sed -i -e '/CFLAGS/s: -DNDEBUG : :' Makerules || die
+	use vanilla || epatch "${FILESDIR}"/${PN}-0.8.15-zoom.patch
 }
 
 src_compile() {
-	my_pdfexe=
+	local my_pdfexe=
 	use X || my_pdfexe="PDFVIEW_EXE="
 
-	emake build=release ${my_pdfexe} CC="$(tc-getCC)" verbose=true -j1 || die
+	emake build=debug ${my_pdfexe} CC="$(tc-getCC)" verbose=true -j1 || die
 }
 
 src_install() {
-	emake build=release ${my_pdfexe} prefix="${D}usr" \
+	emake build=debug ${my_pdfexe} prefix="${D}usr" \
 		LIBDIR="${D}usr/$(get_libdir)" verbose=true install || die
 
 	insinto /usr/$(get_libdir)/pkgconfig
@@ -51,9 +49,9 @@ src_install() {
 	if use X ; then
 		domenu debian/mupdf.desktop || die
 		doicon debian/mupdf.xpm || die
-		doman debian/mupdf.1 || die
+		doman apps/man/mupdf.1 || die
 	fi
-	doman debian/pdf{clean,draw,show}.1 || die
+	doman apps/man/pdf{clean,draw,show}.1 || die
 	dodoc README || die
 
 	# avoid collision with app-text/poppler-utils
