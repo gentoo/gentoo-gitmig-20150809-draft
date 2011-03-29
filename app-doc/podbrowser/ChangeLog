@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/podbrowser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/ChangeLog,v 1.9 2011/03/23 08:51:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/ChangeLog,v 1.10 2011/03/29 10:16:12 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> podbrowser-0.12.ebuild:
+  Fixed slot deps
 
 *podbrowser-0.12-r1 (23 Mar 2011)
 
