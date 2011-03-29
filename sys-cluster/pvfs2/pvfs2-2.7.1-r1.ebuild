@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1-r1.ebuild,v 1.1 2009/09/27 14:22:21 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/pvfs2-2.7.1-r1.ebuild,v 1.2 2011/03/29 12:55:34 angelos Exp $
 
+EAPI=1
 inherit linux-mod toolchain-funcs autotools
 
 MY_PN="${PN%[0-9]*}"
@@ -12,7 +13,7 @@ DESCRIPTION="Parallel Virtual File System version 2"
 HOMEPAGE="http://www.pvfs.org/"
 SRC_URI="ftp://ftp.parl.clemson.edu/pub/pvfs2/${MY_P}.tar.gz"
 IUSE="apidocs doc examples gtk server ssl static"
-RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
+RDEPEND="gtk? ( x11-libs/gtk+:2 )
 		ssl? ( dev-libs/openssl )
 		sys-libs/db"
 DEPEND="${RDEPEND}
