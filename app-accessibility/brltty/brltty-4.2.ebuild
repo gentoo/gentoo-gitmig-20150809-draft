@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.5 2011/03/29 19:49:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.6 2011/03/29 22:37:28 williamh Exp $
 
 EAPI="2"
 FINDLIB_USE="ocaml"
@@ -90,7 +90,8 @@ src_compile() {
 		JAVAC_CONF="${JAVAC} -encoding UTF-8 $(java-pkg_javac-args)"
 	fi
 
-	emake JAVAC="${JAVAC_CONF}" || die
+	# workaround for parallel build failure, bug #340903.
+	emake -j1 JAVAC="${JAVAC_CONF}" || die
 }
 
 src_install() {
