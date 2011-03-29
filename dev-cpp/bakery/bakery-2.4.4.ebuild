@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/bakery-2.4.4.ebuild,v 1.1 2008/06/30 21:19:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/bakery-2.4.4.ebuild,v 1.2 2011/03/29 06:08:38 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools gnome2
 
@@ -12,11 +14,11 @@ SLOT="2.4"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples"
 
-RDEPEND=">=dev-cpp/gtkmm-2.10
+RDEPEND=">=dev-cpp/gtkmm-2.10:2.4
 		 >=dev-cpp/gconfmm-2.6
-		 >=dev-cpp/libglademm-2.4
-		 >=dev-cpp/libxmlpp-2.8
-		 >=dev-cpp/gnome-vfsmm-2.6"
+		 >=dev-cpp/libglademm-2.4:2.4
+		 >=dev-cpp/libxmlpp-2.8:2.5
+		 >=dev-cpp/gnome-vfsmm-2.6:1.1"
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.25
 		>=dev-util/pkgconfig-0.12"

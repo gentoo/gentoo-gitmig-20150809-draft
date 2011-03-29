@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7.ebuild,v 1.9 2011/03/22 19:59:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7.ebuild,v 1.10 2011/03/29 06:10:54 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -15,9 +15,9 @@ SLOT="2.4"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
-RDEPEND=">=gnome-base/libglade-2.6.1
-	>=dev-cpp/gtkmm-2.6
-	>=dev-cpp/glibmm-2.4"
+RDEPEND=">=gnome-base/libglade-2.6.1:2.0
+	>=dev-cpp/gtkmm-2.6:2.4
+	>=dev-cpp/glibmm-2.4:2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12"

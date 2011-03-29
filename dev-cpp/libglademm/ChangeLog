@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.85 2011/03/22 19:59:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.86 2011/03/29 06:10:54 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  libglademm-2.6.4.ebuild, libglademm-2.6.6.ebuild, libglademm-2.6.7.ebuild:
+  Fix slot-dep on gnome-mm libs
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> libglademm-2.6.7.ebuild:
   Marking libglademm-2.6.7 ppc stable for bug 353436

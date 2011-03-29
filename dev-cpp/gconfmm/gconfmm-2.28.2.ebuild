@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.28.2.ebuild,v 1.8 2011/01/04 18:15:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.28.2.ebuild,v 1.9 2011/03/29 06:09:12 nirbheek Exp $
+
+EAPI="1"
 
 inherit gnome2 eutils
 
@@ -12,9 +14,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
-RDEPEND=">=gnome-base/gconf-2.4
-	>=dev-cpp/glibmm-2.12
-	>=dev-cpp/gtkmm-2.4"
+RDEPEND=">=gnome-base/gconf-2.4:2
+	>=dev-cpp/glibmm-2.12:2
+	>=dev-cpp/gtkmm-2.4:2.4"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
