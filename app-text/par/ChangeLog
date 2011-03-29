@@ -1,6 +1,9 @@
 # ChangeLog for app-text/par
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.14 2010/10/02 12:45:34 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.15 2011/03/29 19:25:18 radhermit Exp $
+
+  29 Mar 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org> par-1.52.ebuild:
   Marked ~x64-macos, bug #333981
