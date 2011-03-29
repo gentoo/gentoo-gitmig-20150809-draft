@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.5 2009/12/31 10:19:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.3.2.ebuild,v 1.6 2011/03/29 12:48:34 angelos Exp $
+
+EAPI=1
 
 DESCRIPTION="GTK frontend to proftpd"
 HOMEPAGE="http://mange.dynup.net/linux.html"
@@ -12,8 +14,8 @@ SLOT="0"
 IUSE="gnome ssl"
 
 # Requiring ProFTPD 1.2.9 due to security fixes
-RDEPEND=">=x11-libs/gtk+-2.0
-	>=dev-libs/glib-2.0
+RDEPEND="x11-libs/gtk+:2
+	dev-libs/glib:2
 	>=x11-libs/pango-1.0
 	>=dev-libs/atk-1.0
 	>=media-libs/freetype-2.0
