@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/reduce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/ChangeLog,v 1.1 2011/01/05 11:40:19 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/ChangeLog,v 1.2 2011/03/29 21:02:40 grozin Exp $
+
+*reduce-20101007-r1 (29 Mar 2011)
+
+  29 Mar 2011; Andrey Grozin <grozin@gentoo.org> -reduce-20101007.ebuild,
+  +reduce-20101007-r1.ebuild, +files/csl, +files/redcsl, -files/reduce:
+  QA issues fixed (bug #358383), csl now installed, pdf now installed with
+  USE=doc (not tex files)
 
 *reduce-20101007 (05 Jan 2011)
 

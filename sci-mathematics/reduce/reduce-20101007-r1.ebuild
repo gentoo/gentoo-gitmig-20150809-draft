@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/reduce-20101007.ebuild,v 1.1 2011/01/05 11:40:19 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/reduce-20101007-r1.ebuild,v 1.1 2011/03/29 21:02:40 grozin Exp $
 EAPI="2"
 inherit elisp-common
 MY_PN=${PN}-algebra
@@ -37,7 +37,7 @@ src_configure() {
 }
 
 src_compile() {
-	default_src_compile
+	emake STRIP=true || die "emake failed"
 
 	pushd cslbuild/*/csl/reduce.doc > /dev/null
 	rm -f *.txt *.tex
@@ -56,22 +56,22 @@ src_test() {
 src_install() {
 	pushd cslbuild/*/csl > /dev/null
 	exeinto /usr/lib/${PN}
-	doexe reduce
+	doexe reduce csl
 	insinto /usr/lib/${PN}
-	doins reduce.img
+	doins reduce.img csl.img
 	doins -r reduce.doc
 	if use X; then
 		doins -r reduce.fonts
 	fi
 	popd > /dev/null
 	exeinto /usr/bin
-	doexe "${FILESDIR}/reduce"
+	doexe "${FILESDIR}/redcsl" "${FILESDIR}/csl"
 	dodoc README BUILDING DEPENDENCY_TRACKING
 	dosym /usr/lib/${PN}/${PN}.doc /usr/share/doc/${PF}/html
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins -r doc/*
+		doins -r doc/util/r38.pdf
 	fi
 
 	if use emacs; then
