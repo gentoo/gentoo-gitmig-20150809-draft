@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmium
-# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.21 2010/09/06 10:00:45 s4t4n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/ChangeLog,v 1.22 2011/03/29 13:06:30 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> wmium-1.0.9b-r1.ebuild:
+  Fix gtk+ slot deps
 
   06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> wmium-1.0.9b-r1.ebuild:
   Honour Gentoo LDFLAGS, bug #334003.
