@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/xdx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.21 2010/08/23 15:31:40 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.22 2011/03/29 12:31:59 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> xdx-2.4.ebuild,
+  xdx-2.4.2.ebuild:
+  Fixed gtk+ slot deps
 
   23 Aug 2010; Markos Chandras <hwoarang@gentoo.org> xdx-2.4.2.ebuild:
   Stable on amd64 wrt bug #333609

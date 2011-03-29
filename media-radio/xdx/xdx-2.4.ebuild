@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.6 2010/07/05 22:01:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.7 2011/03/29 12:31:59 angelos Exp $
 
+EAPI=1
 inherit eutils
 
 DESCRIPTION="a GTK+ TCP/IP DX-cluster and ON4KST chat client."
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.12"
+RDEPEND=">=x11-libs/gtk+-2.12:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
