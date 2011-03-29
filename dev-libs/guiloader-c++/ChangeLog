@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/guiloader-c++
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.21 2010/11/15 15:57:05 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.22 2011/03/29 07:22:49 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  guiloader-c++-2.15.0.ebuild, guiloader-c++-2.17.1.ebuild,
+  guiloader-c++-2.19.0.ebuild, guiloader-c++-2.21.0.ebuild:
+  Fix slot-dep on gnome-mm libs
 
 *guiloader-c++-2.21.0 (15 Nov 2010)
 

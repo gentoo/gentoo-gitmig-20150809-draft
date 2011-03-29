@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/guiloader-c++-2.21.0.ebuild,v 1.1 2010/11/15 15:57:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/guiloader-c++-2.21.0.ebuild,v 1.2 2011/03/29 07:22:49 nirbheek Exp $
 
 EAPI="3"
 
@@ -16,8 +16,8 @@ IUSE="nls"
 LANGS="ru"
 
 RDEPEND=">=dev-libs/guiloader-2.21
-	>=dev-cpp/gtkmm-2.22
-	>=dev-cpp/glibmm-2.24"
+	>=dev-cpp/gtkmm-2.22:2.4
+	>=dev-cpp/glibmm-2.24:2"
 DEPEND="${RDEPEND}
 		dev-libs/boost
 		dev-util/pkgconfig
