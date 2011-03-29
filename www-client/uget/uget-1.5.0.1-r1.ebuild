@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.1-r1.ebuild,v 1.6 2010/02/28 18:58:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.1-r1.ebuild,v 1.7 2011/03/29 12:57:57 angelos Exp $
 
 EAPI="2"
 
@@ -17,9 +17,9 @@ IUSE="gstreamer libnotify nls"
 
 RDEPEND="
 	dev-libs/libpcre
-	>=dev-libs/glib-2
+	>=dev-libs/glib-2:2
 	>=net-misc/curl-7.10
-	>=x11-libs/gtk+-2.4
+	>=x11-libs/gtk+-2.4:2
 	gstreamer? ( media-libs/gstreamer )
 	libnotify? ( x11-libs/libnotify )
 	"

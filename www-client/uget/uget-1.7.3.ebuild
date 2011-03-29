@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.7.3.ebuild,v 1.1 2011/03/22 16:08:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.7.3.ebuild,v 1.2 2011/03/29 12:57:57 angelos Exp $
 
 EAPI="4"
 
@@ -19,8 +19,8 @@ REQUIRED_USE="|| ( aria2 curl )"
 
 RDEPEND="
 	dev-libs/libpcre
-	>=dev-libs/glib-2
-	>=x11-libs/gtk+-2.18
+	>=dev-libs/glib-2:2
+	>=x11-libs/gtk+-2.18:2
 	aria2? ( net-misc/aria2[xmlrpc] )
 	curl? ( >=net-misc/curl-7.10 )
 	gstreamer? ( media-libs/gstreamer )

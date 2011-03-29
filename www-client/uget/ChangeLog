@@ -1,6 +1,11 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.18 2011/03/22 16:08:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.19 2011/03/29 12:57:57 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> uget-1.5.0.1-r1.ebuild,
+  uget-1.5.0.3.ebuild, uget-1.6.1.ebuild, uget-1.7.0.ebuild, uget-1.7.3.ebuild,
+  uget-9999.ebuild:
+  Fix gtk+ slot deps
 
 *uget-1.7.3 (22 Mar 2011)
 
