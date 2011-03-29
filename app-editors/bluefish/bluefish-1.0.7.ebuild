@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.7.ebuild,v 1.6 2008/04/04 12:48:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.0.7.ebuild,v 1.7 2011/03/29 12:10:55 angelos Exp $
 
+EAPI=1
 inherit eutils fdo-mime
 
 IUSE="nls spell gnome"
@@ -14,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 SLOT="0"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	dev-libs/libpcre
 	spell? ( app-text/aspell )"
 

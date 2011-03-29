@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.75 2010/11/30 03:38:12 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.76 2011/03/29 12:10:55 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> bluefish-1.0.7.ebuild:
+  Fixed slot deps
 
 *bluefish-2.0.2 (29 Nov 2010)
 
