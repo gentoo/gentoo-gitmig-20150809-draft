@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/davl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/davl/ChangeLog,v 1.4 2009/12/21 14:47:00 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/davl/ChangeLog,v 1.5 2011/03/29 12:56:03 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> davl-1.2.1.ebuild:
+  Fix gtk+ slot deps
 
   21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> davl-1.2.1.ebuild,
   +files/davl-1.2.1-asneeded.patch:
