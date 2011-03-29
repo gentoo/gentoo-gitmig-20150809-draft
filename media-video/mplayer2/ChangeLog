@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.1 2011/03/28 22:59:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.2 2011/03/29 12:44:12 scarabeus Exp $
+
+  29 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-2.0.ebuild,
+  mplayer2-9999.ebuild, metadata.xml:
+  Drop support for internal only mp3lib, always link to external ffmpeg so all
+  features need to be in it instead of relying on some internal cloning.
+  Separate namespace for /etc/ config to be by default mplayer2. Make symlink
+  useflag enabled by default.
 
   28 Mar 2011; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
   +mplayer2-2.0.ebuild, +mplayer2-9999.ebuild:
