@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gtklp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.40 2010/06/26 17:19:23 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.41 2011/03/29 08:05:09 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> gtklp-1.2.7.ebuild,
+  gtklp-1.2.8.ebuild:
+  Fixed slot deps
 
   26 Jun 2010; <nixnut@gentoo.org> gtklp-1.2.8.ebuild:
   ppc stable #317249
