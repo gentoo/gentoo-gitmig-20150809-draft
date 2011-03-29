@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.17 2011/03/29 07:55:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.18 2011/03/29 08:02:38 radhermit Exp $
 
 EAPI=2
 
@@ -38,12 +38,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86dgaproto"
 
 S=${WORKDIR}/${MY_P}
-
-src_prepare() {
-	# we need the omf fix, or else we get access violation
-	# errors related to sandbox
-	gnome2_omf_fix "${S}/doc/terminatorX-manual/C/Makefile.in"
-}
 
 src_configure() {
 	econf \

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.31 2011/03/29 07:55:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.32 2011/03/29 08:02:38 radhermit Exp $
+
+  29 Mar 2011; Tim Harder <radhermit@gentoo.org> terminatorx-3.82.ebuild:
+  Remove unnecessary explicit gnome2_omf_fix call.
 
   29 Mar 2011; Tim Harder <radhermit@gentoo.org> terminatorx-3.82.ebuild:
   Update to EAPI 2 and use slot deps for gtk+ and glib.
