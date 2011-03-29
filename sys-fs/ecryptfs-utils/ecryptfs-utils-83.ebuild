@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-83.ebuild,v 1.2 2010/07/07 16:43:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-83.ebuild,v 1.3 2011/03/29 07:57:50 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -22,7 +22,7 @@ RDEPEND=">=sys-apps/keyutils-1.0
 	>=dev-libs/libgcrypt-1.2.0
 	dev-libs/nss
 	gpg? ( app-crypt/gpgme )
-	gtk? ( x11-libs/gtk+ )
+	gtk? ( x11-libs/gtk+:2 )
 	openssl? ( >=dev-libs/openssl-0.9.7 )
 	pam? ( sys-libs/pam )
 	pkcs11? (

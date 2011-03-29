@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.31 2011/02/06 21:59:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.32 2011/03/29 07:57:50 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> ecryptfs-utils-83.ebuild,
+  ecryptfs-utils-85.ebuild:
+  Fixed slot deps
 
 *ecryptfs-utils-85 (06 Feb 2011)
 
