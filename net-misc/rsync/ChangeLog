@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.210 2011/03/28 20:02:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.211 2011/03/29 03:55:49 xarthisius Exp $
+
+  29 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> rsync-3.0.8.ebuild:
+  ppc/ppc64 stable wrt #360891
 
   28 Mar 2011; Christian Faulhammer <fauli@gentoo.org> rsync-3.0.8.ebuild:
   stable x86, security bug 360891
