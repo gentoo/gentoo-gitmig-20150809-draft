@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.220 2011/03/29 15:27:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.221 2011/03/29 20:05:35 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -139,7 +139,6 @@ sci-mathematics/fricas gcl cmucl
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (6 Jan 2010)
 # Still not really functional, upstream requires not building it.
-<media-libs/mesa-7.9_rc gallium
 x11-libs/cairo gallium
 
 # Alexey Shvetsov <alexxy@gentoo.org> (3 Dec 2009)
