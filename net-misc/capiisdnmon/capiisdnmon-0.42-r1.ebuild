@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/capiisdnmon-0.42-r1.ebuild,v 1.5 2010/03/09 12:37:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/capiisdnmon-0.42-r1.ebuild,v 1.6 2011/03/29 11:59:19 angelos Exp $
 
+EAPI=1
 inherit eutils flag-o-matic
 
 DESCRIPTION="a CAPI 2.0 ISDN call monitor with LDAP name resolution"
@@ -16,7 +17,7 @@ IUSE=""
 RDEPEND="net-dialup/capi4k-utils
 	net-nds/openldap
 	x11-libs/xosd
-	>=x11-libs/gtk+-2"
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

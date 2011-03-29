@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/capiisdnmon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/ChangeLog,v 1.9 2010/03/09 12:37:35 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/ChangeLog,v 1.10 2011/03/29 11:59:19 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> capiisdnmon-0.42-r1.ebuild:
+  Fixed slot deps
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> capiisdnmon-0.42-r1.ebuild:
   QA: When not using an absolute path, you MUST NOT use a file extension
