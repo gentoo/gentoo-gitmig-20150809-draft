@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.10 2011/03/25 10:44:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.11 2011/03/29 14:22:43 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -222,6 +222,12 @@ src_configure() {
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
+	if host-is-pax; then
+		# Prevent the build from failing (bug #301880). The performance
+		# difference is very small.
+		myconf+=" -Dv8_use_snapshot=0"
+	fi
+
 	# Our system ffmpeg should support more codecs than the bundled one
 	# for Chromium.
 	myconf+=" -Dproprietary_codecs=1"
@@ -330,8 +336,10 @@ src_install() {
 		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
 			chromium-browser${SUFFIX}.png || die
 	done
-	make_desktop_entry chromium-browser${SUFFIX} "Chromium ${SLOT}" chromium-browser${SUFFIX} \
-		"Network;WebBrowser" "MimeType=text/html;text/xml;application/xhtml+xml;"
+	local mime_types="text/html;text/xml;application/xhtml+xml;"
+	mime_types+="x-scheme-handler/http;x-scheme-handler/https;" # bug #360797
+	make_desktop_entry chromium-browser "Chromium" chromium-browser \
+		"Network;WebBrowser" "MimeType=${mime_types}"
 	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop || die
 
 	# Install GNOME default application entry (bug #303100).
