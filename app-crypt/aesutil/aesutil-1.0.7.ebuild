@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/aesutil-1.0.7.ebuild,v 1.7 2010/01/01 19:58:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aesutil/aesutil-1.0.7.ebuild,v 1.8 2011/03/29 17:29:52 c1pher Exp $
 
 inherit toolchain-funcs
 
@@ -15,14 +15,16 @@ KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-l
 IUSE=""
 
 DEPEND=""
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -e "/^CFLAGS/s:-g -Wall:${CFLAGS}:" Makefile.linux > Makefile
-	sed -i -e "/^LDFLAGS/s:-g:${LDFLAGS}:" Makefile
+	sed -e "/^CFLAGS/s:-g -Wall:${CFLAGS}:" Makefile.linux > Makefile \
+		|| die "Sed failed"
+	sed -i -e "/^LDFLAGS/s:-g:${LDFLAGS}:" Makefile || die "Sed failed"
 }
 
 src_compile() {
@@ -31,5 +33,5 @@ src_compile() {
 
 src_install() {
 	dobin aes || die
-	dodoc CHANGES INSTALL README TODO
+	dodoc CHANGES INSTALL README TODO || die
 }
