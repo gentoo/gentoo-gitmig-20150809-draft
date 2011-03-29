@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.0.0.ebuild,v 1.2 2011/03/29 07:22:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.0.0.ebuild,v 1.3 2011/03/29 07:32:07 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -70,6 +70,6 @@ src_install() {
 	rm -f "${D}"/usr/share/gtkpod/data/{AUTHORS,COPYING}
 }
 
-pkg_preinst() {	gnome2_icon_savelist; }
+pkg_preinst() { gnome2_icon_savelist; }
 pkg_postinst() { gnome2_icon_cache_update; }
 pkg_postrm() { gnome2_icon_cache_update; }
