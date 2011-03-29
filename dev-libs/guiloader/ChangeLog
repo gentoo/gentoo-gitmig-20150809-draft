@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/guiloader
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.21 2010/11/15 15:56:46 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.22 2011/03/29 12:15:49 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> guiloader-2.15.0.ebuild:
+  Fixed slot deps
 
 *guiloader-2.21.0 (15 Nov 2010)
 

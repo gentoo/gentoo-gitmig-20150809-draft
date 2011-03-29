@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.15.0.ebuild,v 1.4 2010/05/20 03:17:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/guiloader-2.15.0.ebuild,v 1.5 2011/03/29 12:15:49 angelos Exp $
+
+EAPI=1
 
 DESCRIPTION="library to create GTK+ interfaces from GuiXml at runtime"
 HOMEPAGE="http://www.crowdesigner.org"
@@ -11,8 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.14.0
-	>=dev-libs/glib-2.18.0"
+RDEPEND=">=x11-libs/gtk+-2.14.0:2
+	>=dev-libs/glib-2.18.0:2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
