@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.158 2011/03/28 18:46:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.159 2011/03/29 20:05:35 jer Exp $
+
+  29 Mar 2011; Jeroen Roovers <jer@gentoo.org> cdrdao-1.2.3-r1.ebuild:
+  Stable for HPPA (bug #358495).
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> cdrdao-1.2.3.ebuild,
   cdrdao-1.2.3-r1.ebuild:

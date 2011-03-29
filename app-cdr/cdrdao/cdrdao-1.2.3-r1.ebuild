@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.6 2011/03/28 18:46:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.7 2011/03/29 20:05:35 jer Exp $
 
 EAPI=2
 inherit eutils
@@ -16,7 +16,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc ~x86 ~x86-fbsd"
 IUSE="gcdmaster encode pccts mad vorbis"
 
 RDEPEND="virtual/cdrtools
