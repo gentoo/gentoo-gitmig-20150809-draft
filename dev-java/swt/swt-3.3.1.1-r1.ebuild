@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.13 2011/01/03 20:39:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1-r1.ebuild,v 1.14 2011/03/29 09:17:56 caster Exp $
 
 EAPI="1"
 
@@ -31,7 +31,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 IUSE="cairo firefox gnome opengl xulrunner"
 COMMON=">=dev-libs/glib-2.6
-		>=x11-libs/gtk+-2.6.8
+		>=x11-libs/gtk+-2.6.8:2
 		>=dev-libs/atk-1.10.2
 		cairo? ( >=x11-libs/cairo-1.0.2 )
 		gnome?	(

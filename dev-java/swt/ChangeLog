@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.135 2011/03/23 19:16:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.136 2011/03/29 09:17:56 caster Exp $
+
+  29 Mar 2011; Vlastimil Babka <caster@gentoo.org> swt-3.3.1.1-r1.ebuild,
+  swt-3.4-r4.ebuild, swt-3.5.2.ebuild, swt-3.6.ebuild, swt-3.6.1.ebuild:
+  Slot GTK+ deps.
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> swt-3.6.1.ebuild:
   ppc/ppc64 stable wrt #349740

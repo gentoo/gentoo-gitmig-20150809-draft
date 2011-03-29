@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.6.1.ebuild,v 1.6 2011/03/23 19:16:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.6.1.ebuild,v 1.7 2011/03/29 09:17:56 caster Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ KEYWORDS="amd64 ppc ppc64 x86"
 
 IUSE="cairo gnome opengl xulrunner"
 COMMON=">=dev-libs/glib-2.6
-		>=x11-libs/gtk+-2.6.8
+		>=x11-libs/gtk+-2.6.8:2
 		>=dev-libs/atk-1.10.2
 		cairo? ( >=x11-libs/cairo-1.4.14 )
 		gnome?	(
