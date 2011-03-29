@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.5.2.ebuild,v 1.3 2011/03/16 11:04:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.5.2.ebuild,v 1.4 2011/03/29 08:47:17 ssuominen Exp $
 
-EAPI="3"
-
+EAPI=3
 inherit gnome.org
 
 DESCRIPTION="Notifications library"
@@ -34,6 +33,6 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS || die "dodoc failed"
+	emake install DESTDIR="${D}" || die
+	dodoc AUTHORS ChangeLog NEWS || die
 }

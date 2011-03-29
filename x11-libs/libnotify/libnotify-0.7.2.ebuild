@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.2.ebuild,v 1.1 2011/03/23 02:18:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.2.ebuild,v 1.2 2011/03/29 08:47:17 ssuominen Exp $
 
 EAPI=3
 inherit autotools eutils gnome.org
@@ -60,7 +60,7 @@ src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS || die
 
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_preinst() {
