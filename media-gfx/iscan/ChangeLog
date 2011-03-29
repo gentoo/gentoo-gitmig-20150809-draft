@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.39 2011/02/26 17:26:24 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.40 2011/03/29 12:22:06 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> iscan-2.11.0.ebuild,
+  iscan-2.21.0.ebuild, iscan-2.25.0.ebuild:
+  Fixed slot deps
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> iscan-2.11.0.ebuild,
   iscan-2.21.0.ebuild, iscan-2.25.0.ebuild:

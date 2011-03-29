@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.5 2010/07/25 19:09:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-3.0.0.57.4402.0_beta.ebuild,v 1.6 2011/03/29 12:24:56 angelos Exp $
 
 # needs SRC_URI arrows
 EAPI=2
@@ -20,10 +20,10 @@ IUSE="nsplugin"
 
 RDEPEND="x86? (
 		dev-libs/atk
-		dev-libs/glib
-		dev-libs/libxml2
+		dev-libs/glib:2
+		dev-libs/libxml2:2
 		sys-libs/zlib
-		x11-libs/gtk+
+		x11-libs/gtk+:2
 		x11-libs/libICE
 		x11-libs/libSM
 		x11-libs/libX11
@@ -35,7 +35,7 @@ RDEPEND="x86? (
 		app-emulation/emul-linux-x86-gtklibs
 	)
 	nsplugin? ( || (
-		>=net-libs/xulrunner-1.9
+		>=net-libs/xulrunner-1.9:1.9
 		>=www-client/firefox-3.0.0
 	) )
 	"

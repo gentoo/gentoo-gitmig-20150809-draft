@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.8 2011/02/26 17:26:24 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.9 2011/03/29 12:22:06 angelos Exp $
 
+EAPI=1
 inherit eutils toolchain-funcs flag-o-matic autotools rpm
 
 SRC_REV="1"  # revision used by upstream
@@ -94,7 +95,7 @@ RDEPEND="media-gfx/sane-backends
 	x86? (
 		X? (
 			sys-devel/gettext
-			>=x11-libs/gtk+-2.0
+			x11-libs/gtk+:2
 			gimp? ( media-gfx/gimp )
 		)
 	)"
