@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/hippo-canvas-0.3.0-r1.ebuild,v 1.6 2010/05/24 17:16:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/hippo-canvas-0.3.0-r1.ebuild,v 1.7 2011/03/29 13:00:14 angelos Exp $
 
 EAPI="2"
 
@@ -18,13 +18,13 @@ KEYWORDS="amd64 x86"
 
 IUSE="doc python"
 
-RDEPEND=">=dev-libs/glib-2.6
+RDEPEND=">=dev-libs/glib-2.6:2
 	dev-libs/libcroco
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.6:2
 	x11-libs/pango
-	gnome-base/librsvg
+	gnome-base/librsvg:2
 	python? ( dev-python/pycairo
-		dev-python/pygtk )"
+		dev-python/pygtk:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"

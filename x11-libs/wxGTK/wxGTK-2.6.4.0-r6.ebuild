@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.10 2011/02/26 22:38:24 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.11 2011/03/29 13:01:08 angelos Exp $
 
+EAPI=1
 inherit eutils versionator flag-o-matic
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
@@ -23,8 +24,8 @@ RDEPEND="
 	odbc?	( dev-db/unixODBC )
 	sdl?	( media-libs/libsdl )
 	X?	(
-		>=x11-libs/gtk+-2.0
-		>=dev-libs/glib-2.0
+		x11-libs/gtk+:2
+		dev-libs/glib:2
 		virtual/jpeg
 		media-libs/tiff
 		x11-libs/libSM

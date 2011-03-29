@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.21 2011/02/22 22:33:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.22 2011/03/29 12:58:33 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> goocanvas-0.14.ebuild:
+  Fix gtk+ slot deps
 
 *goocanvas-1.0.0 (22 Feb 2011)
 

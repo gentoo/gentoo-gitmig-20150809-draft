@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.8.5-r1.ebuild,v 1.13 2011/02/06 01:45:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-1.8.5-r1.ebuild,v 1.14 2011/03/29 12:59:21 angelos Exp $
 
+EAPI=1
 inherit gnome2 flag-o-matic autotools
 
 DESCRIPTION="A text widget implementing syntax highlighting and other features"
@@ -12,10 +13,10 @@ SLOT="1.0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="doc"
 
-RDEPEND=">=x11-libs/gtk+-2.8
-	>=dev-libs/libxml2-2.5
+RDEPEND=">=x11-libs/gtk+-2.8:2
+	>=dev-libs/libxml2-2.5:2
 	>=gnome-base/libgnomeprint-2.8
-	>=dev-libs/glib-2
+	dev-libs/glib:2
 	!<dev-util/portatosourceview-2.16.1-r1"
 
 DEPEND="${RDEPEND}
