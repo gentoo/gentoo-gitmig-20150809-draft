@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2.ebuild,v 1.1 2011/02/28 10:48:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2.ebuild,v 1.2 2011/03/29 12:43:51 ssuominen Exp $
 
 EAPI=2
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -33,6 +33,10 @@ RDEPEND="sys-devel/libtool
 	wavpack? ( media-sound/wavpack )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-uclibc.patch
+}
 
 src_configure() {
 	# Fixes wav segfaults. See Bug #35745.
