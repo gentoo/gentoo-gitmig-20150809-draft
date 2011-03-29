@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.6.ebuild,v 1.2 2011/03/29 08:28:01 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.6.ebuild,v 1.3 2011/03/29 08:37:24 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -103,16 +103,12 @@ src_prepare() {
 	if ! use test; then
 		# don't waste time building tests
 		strip_builddir SRC_SUBDIRS tests Makefile.am
-		[[ ${PV} != 9999 ]] && strip_builddir SRC_SUBDIRS tests Makefile.in
 	fi
 
 	if ! use examples; then
 		# don't waste time building demos
 		strip_builddir SRC_SUBDIRS demos Makefile.am
-		[[ ${PV} != 9999 ]] && strip_builddir SRC_SUBDIRS demos Makefile.in
 	fi
-
-	[[ ${PV} = 9999 ]] && gnome2-live_src_prepare
 }
 
 src_configure() {
