@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.452 2011/03/27 17:36:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.453 2011/03/29 12:34:09 ssuominen Exp $
 
 # Keep them sorted
 
@@ -160,6 +160,7 @@ inifile - Adds dbm support for .ini files
 innodb - Adds innodb support for mySQL (transaction support)
 interbase - Adds support for Interbase database
 iodbc - Adds support for iODBC library
+ios - Enable support for Apple's iPad, iPhone and iPod with iOS operating system
 ipod - Enable support for iPod device access
 ipv6 - Adds support for IP version 6
 jabber - Enable jabber IM protocol support
