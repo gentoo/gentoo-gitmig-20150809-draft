@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.196 2011/03/28 14:18:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.197 2011/03/29 02:47:13 tester Exp $
+
+  29 Mar 2011; Olivier Crête <tester@gentoo.org> gtkmm-2.24.0.ebuild:
+  Add missing inherit autools for eautoreconf
 
   28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtkmm-2.24.0.ebuild:
   Fix build with USE=doc due to mm-common/glibmm changes
