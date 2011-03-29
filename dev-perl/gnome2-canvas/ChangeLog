@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-canvas
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.31 2010/08/03 03:54:00 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.32 2011/03/29 10:19:27 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> gnome2-canvas-1.002.ebuild:
+  Fixed slot deps
 
   03 Aug 2010; Jeroen Roovers <jer@gentoo.org> gnome2-canvas-1.002.ebuild:
   Remove HPPA keywording (bug 324511).

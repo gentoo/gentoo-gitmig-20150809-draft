@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-Ex-Simple-List
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-Simple-List/ChangeLog,v 1.11 2010/01/12 07:26:42 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Ex-Simple-List/ChangeLog,v 1.12 2011/03/29 10:18:12 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  Gtk2-Ex-Simple-List-0.50.ebuild:
+  Fixed slot deps
 
   12 Jan 2010; Torsten Veller <tove@gentoo.org>
   Gtk2-Ex-Simple-List-0.50.ebuild:

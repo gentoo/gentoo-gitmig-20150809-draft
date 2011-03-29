@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.006.ebuild,v 1.12 2010/07/20 16:37:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.006.ebuild,v 1.13 2011/03/29 10:28:12 angelos Exp $
 
+EAPI=1
 inherit perl-module
 
 MY_P=Gtk2-GladeXML-${PV}
@@ -16,8 +17,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
-	>=gnome-base/libglade-2
+RDEPEND="x11-libs/gtk+:2
+	gnome-base/libglade:2.0
 	>=dev-util/glade-2.0.0-r1
 	>=dev-perl/glib-perl-1.012
 	>=dev-perl/gtk2-perl-1.012"

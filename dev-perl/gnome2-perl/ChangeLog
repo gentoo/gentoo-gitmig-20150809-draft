@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.46 2011/03/11 19:29:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.47 2011/03/29 10:22:53 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> gnome2-perl-1.041.ebuild,
+  gnome2-perl-1.042.ebuild:
+  Fixed slot deps
 
   11 Mar 2011; Torsten Veller <tove@gentoo.org> gnome2-perl-1.041.ebuild,
   gnome2-perl-1.042.ebuild:

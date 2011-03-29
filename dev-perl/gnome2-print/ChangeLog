@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-print
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/ChangeLog,v 1.27 2007/07/09 11:38:27 mcummings Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/ChangeLog,v 1.28 2011/03/29 10:25:32 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> gnome2-print-0.94.ebuild,
+  gnome2-print-1.000.ebuild:
+  Fixed slot deps
 
   09 Jul 2007; Michael Cummings <mcummings@gentoo.org> gnome2-print-1.000.ebuild:
   Marking sparc stable (finally)

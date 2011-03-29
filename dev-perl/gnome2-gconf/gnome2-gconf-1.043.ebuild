@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.043.ebuild,v 1.11 2010/07/20 16:36:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.043.ebuild,v 1.12 2011/03/29 10:21:43 angelos Exp $
 
+EAPI=1
 inherit perl-module
 
 MY_P=Gnome2-GConf-${PV}
@@ -17,8 +18,8 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=x11-libs/gtk+-2
-	>=gnome-base/gconf-2
+RDEPEND="x11-libs/gtk+:2
+	gnome-base/gconf:2
 	>=dev-perl/glib-perl-1.120
 	>=dev-perl/gtk2-perl-1.120"
 DEPEND="${RDEPEND}
