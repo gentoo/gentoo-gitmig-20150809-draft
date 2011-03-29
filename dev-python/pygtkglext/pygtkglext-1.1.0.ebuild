@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.23 2010/05/17 18:26:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.24 2011/03/29 12:18:20 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="examples"
 
-RDEPEND=">=dev-python/pygtk-2.8
-	>=dev-libs/glib-2.0
-	>=x11-libs/gtk+-2.0
+RDEPEND=">=dev-python/pygtk-2.8:2
+	>=dev-libs/glib-2.0:2
+	>=x11-libs/gtk+-2.0:2
 	>=x11-libs/gtkglext-1.0.0
 	dev-python/pyopengl
 	virtual/opengl
