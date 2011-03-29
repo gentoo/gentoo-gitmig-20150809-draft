@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/bakery-2.4.4.ebuild,v 1.2 2011/03/29 06:08:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/bakery-2.4.4.ebuild,v 1.3 2011/03/29 06:09:56 nirbheek Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ IUSE="doc examples"
 RDEPEND=">=dev-cpp/gtkmm-2.10:2.4
 		 >=dev-cpp/gconfmm-2.6
 		 >=dev-cpp/libglademm-2.4:2.4
-		 >=dev-cpp/libxmlpp-2.8:2.5
+		 >=dev-cpp/libxmlpp-2.8:2.6
 		 >=dev-cpp/gnome-vfsmm-2.6:1.1"
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.25
