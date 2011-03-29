@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/cddb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cddb/ChangeLog,v 1.1 2008/11/03 12:08:43 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/cddb/ChangeLog,v 1.2 2011/03/29 09:21:34 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> cddb-0.2.ebuild:
+  Stable on amd64 wrt bug #356967
 
 *cddb-0.2 (03 Nov 2008)
 
