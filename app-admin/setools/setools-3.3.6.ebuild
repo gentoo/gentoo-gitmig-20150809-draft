@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.6.ebuild,v 1.2 2009/09/20 22:35:02 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.6.ebuild,v 1.3 2011/03/29 12:10:03 angelos Exp $
 
+EAPI=1
 inherit java-pkg-opt-2 autotools
 
 DESCRIPTION="SELinux policy tools"
@@ -17,8 +18,8 @@ DEPEND=">=sys-libs/libsepol-2.0.37
 	sys-libs/libselinux
 	sys-devel/bison
 	sys-devel/flex
-	>=dev-db/sqlite-3.2
-	dev-libs/libxml2
+	>=dev-db/sqlite-3.2:3
+	dev-libs/libxml2:2
 	dev-util/pkgconfig
 	java? (
 		>=dev-lang/swig-1.3.28
@@ -31,20 +32,20 @@ DEPEND=">=sys-libs/libsepol-2.0.37
 	X? (
 		>=dev-lang/tk-8.4.9
 		>=gnome-base/libglade-2.0
-		>=x11-libs/gtk+-2.8
+		>=x11-libs/gtk+-2.8:2
 	)"
 
 RDEPEND=">=sys-libs/libsepol-2.0.37
 	sys-libs/libselinux
-	>=dev-db/sqlite-3.2
-	dev-libs/libxml2
+	>=dev-db/sqlite-3.2:3
+	dev-libs/libxml2:2
 	java? ( >=virtual/jre-1.4 )
 	python? ( >=dev-lang/python-2.4 )
 	X? (
 		>=dev-lang/tk-8.4.9
 		>=dev-tcltk/bwidget-1.8
 		>=gnome-base/libglade-2.0
-		>=x11-libs/gtk+-2.8
+		>=x11-libs/gtk+-2.8:2
 	)"
 
 src_unpack() {

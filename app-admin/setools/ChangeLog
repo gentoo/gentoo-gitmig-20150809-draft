@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.64 2011/02/13 19:42:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.65 2011/03/29 12:10:03 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> setools-3.3.4.ebuild,
+  setools-3.3.5.ebuild, setools-3.3.6.ebuild, setools-3.3.7.ebuild:
+  Fixed slot deps
 
   13 Feb 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Updated metadata.xml to reflect new selinux herd.
