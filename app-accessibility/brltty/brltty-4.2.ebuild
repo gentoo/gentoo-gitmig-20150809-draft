@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.4 2011/03/28 21:24:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.5 2011/03/29 19:49:21 williamh Exp $
 
 EAPI="2"
 FINDLIB_USE="ocaml"
@@ -39,7 +39,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc-212.patch
 
 	java-pkg-opt-2_src_prepare
-	eautoreconf
+
+	# We run eautoconf instead of using eautoreconf because brltty uses
+	# a custom build system that uses autoconf without the rest of the
+	# autotools.
+	eautoconf
 }
 
 src_configure() {

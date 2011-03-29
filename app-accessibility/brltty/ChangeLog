@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.109 2011/03/28 21:24:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.110 2011/03/29 19:49:21 williamh Exp $
+
+  29 Mar 2011; William Hubbs <williamh@gentoo.org> brltty-4.2.ebuild:
+  run eautoconf instead of eautoreconf in src_prepare.
 
   28 Mar 2011; William Hubbs <williamh@gentoo.org> brltty-4.2.ebuild,
   +files/brltty-4.2-fix-ldflags.patch:
