@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.116 2011/03/27 16:17:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.117 2011/03/29 13:38:26 jer Exp $
+
+  29 Mar 2011; Jeroen Roovers <jer@gentoo.org> libffi-3.0.9-r2.ebuild:
+  Stable for HPPA (bug #360465).
 
   27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> libffi-3.0.9-r2.ebuild:
   Stable on alpha, bug #360465
