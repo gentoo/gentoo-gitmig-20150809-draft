@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.129 2011/03/26 17:27:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.130 2011/03/29 18:08:04 arfrever Exp $
+
+*kvirc-4.2_pre5727 (29 Mar 2011)
+
+  29 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +kvirc-4.2_pre5727.ebuild:
+  Version bump.
 
   26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kvirc-4.2_pre5206.ebuild, kvirc-4.2_pre5484.ebuild,
