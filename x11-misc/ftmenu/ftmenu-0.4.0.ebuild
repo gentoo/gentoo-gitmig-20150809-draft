@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.4.0.ebuild,v 1.1 2010/05/30 10:04:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ftmenu-0.4.0.ebuild,v 1.2 2011/03/29 13:01:39 angelos Exp $
 
 EAPI="2"
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-COMMON_DEPEND=">=x11-libs/gtk+-2.6
-	>=dev-libs/glib-2.6"
+COMMON_DEPEND=">=x11-libs/gtk+-2.6:2
+	>=dev-libs/glib-2.6:2"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${COMMON_DEPEND}

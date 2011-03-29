@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3.ebuild,v 1.10 2010/02/23 21:58:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.3.ebuild,v 1.11 2011/03/29 13:05:12 angelos Exp $
 
+EAPI=1
 inherit fdo-mime
 
 DESCRIPTION="ObConf is a tool for configuring the Openbox window manager."
@@ -13,8 +14,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND=">=gnome-base/libglade-2
-	>=x11-libs/gtk+-2
+RDEPEND="gnome-base/libglade:2.0
+	x11-libs/gtk+:2
 	x11-libs/startup-notification
 	>=x11-wm/openbox-3.4.2
 	nls? ( sys-devel/gettext )"

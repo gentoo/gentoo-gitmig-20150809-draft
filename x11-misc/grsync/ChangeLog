@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/grsync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.23 2011/03/16 18:42:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.24 2011/03/29 13:02:19 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> grsync-0.9.2.ebuild,
+  grsync-1.1.1.ebuild:
+  Fix gtk+ slot deps
 
 *grsync-1.1.1 (16 Mar 2011)
 

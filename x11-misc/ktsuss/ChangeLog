@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ktsuss
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.9 2010/12/20 23:46:39 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.10 2011/03/29 13:03:59 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> ktsuss-1.4.ebuild:
+  Fix gtk+ slot deps
 
   20 Dec 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   remove myself as maintainer

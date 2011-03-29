@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ftmenu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ChangeLog,v 1.6 2010/05/30 10:04:12 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ftmenu/ChangeLog,v 1.7 2011/03/29 13:01:39 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> ftmenu-0.4.0.ebuild:
+  Fix gtk+ slot deps
 
 *ftmenu-0.4.0 (30 May 2010)
 

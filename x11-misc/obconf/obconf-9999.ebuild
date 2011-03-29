@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-9999.ebuild,v 1.6 2011/03/14 17:04:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-9999.ebuild,v 1.7 2011/03/29 13:05:12 angelos Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="nls"
 
-RDEPEND=">=gnome-base/libglade-2
+RDEPEND="gnome-base/libglade:2.0
 	x11-libs/gtk+:2
 	x11-libs/startup-notification
 	>=x11-wm/openbox-3.4.2"
