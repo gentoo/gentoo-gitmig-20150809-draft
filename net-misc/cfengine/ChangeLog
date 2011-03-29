@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.131 2011/02/23 21:10:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.132 2011/03/29 15:06:18 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> cfengine-3.1.4.ebuild:
+  Stable on amd64 wrt bug #352280
 
   23 Feb 2011; Christian Ruppert <idl0r@gentoo.org> -files/cfportage.README:
   Remove unused files/cfportage.README
