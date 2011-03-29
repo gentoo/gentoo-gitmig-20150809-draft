@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.18 2011/02/27 14:40:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.19 2011/03/29 08:04:23 angelos Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -26,7 +26,7 @@ IUSE="cairo doc examples opengl"
 RDEPEND="
 	dev-python/setuptools
 	>=x11-libs/wxGTK-${PV}:2.8[X,opengl?]
-	>=x11-libs/gtk+-2.4:2
+	x11-libs/gtk+:2
 	>=x11-libs/pango-1.2
 	dev-libs/glib:2
 	media-libs/libpng
