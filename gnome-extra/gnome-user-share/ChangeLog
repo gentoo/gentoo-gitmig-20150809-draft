@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-user-share
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.14 2011/03/21 22:27:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.15 2011/03/29 07:50:09 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  gnome-user-share-2.30.1.ebuild:
+  Stable on amd64 wrt bug #361001
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-user-share-2.30.0.ebuild, gnome-user-share-2.30.1.ebuild:
