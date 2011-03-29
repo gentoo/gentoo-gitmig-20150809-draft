@@ -12,6 +12,5 @@
 	</longdescription>
 	<use>
 		<flag name="gtk">Enable ArtworkDB support</flag>
-		<flag name="ios">Enable support for Apples iOS</flag>
 	</use>
 </pkgmetadata>
