@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxsadmin/nxsadmin-0.2.1.ebuild,v 1.1 2009/01/07 15:35:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxsadmin/nxsadmin-0.2.1.ebuild,v 1.2 2011/03/29 06:18:17 nirbheek Exp $
+
+EAPI="1"
 
 inherit autotools
 
@@ -13,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-cpp/gtkmm-2.4
+DEPEND="dev-cpp/gtkmm:2.4
 	dev-util/intltool"
-RDEPEND=">=dev-cpp/gtkmm-2.4
+RDEPEND="dev-cpp/gtkmm:2.4
 	net-misc/nxserver-freenx"
 
 src_unpack() {
