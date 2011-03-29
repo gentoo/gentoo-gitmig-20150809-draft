@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.40 2011/03/26 14:58:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.41 2011/03/29 12:27:21 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> gegl-0.0.22.ebuild:
+  Fixed slot deps
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/gegl-0.0.18-newffmpeg.diff, -gegl-0.0.20.ebuild, -gegl-0.1.0.ebuild,

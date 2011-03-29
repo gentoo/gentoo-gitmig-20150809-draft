@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.22.ebuild,v 1.14 2010/11/07 19:44:30 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.22.ebuild,v 1.15 2011/03/29 12:27:21 angelos Exp $
 
+EAPI=1
 inherit eutils
 
 DESCRIPTION="A graph based image processing framework"
@@ -15,9 +16,9 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="cairo debug doc ffmpeg jpeg mmx openexr png raw sdl sse svg v4l"
 
 DEPEND=">=media-libs/babl-0.0.20
-	>=dev-libs/glib-2.18.0
+	>=dev-libs/glib-2.18.0:2
 	media-libs/libpng
-	>=x11-libs/gtk+-2.14.0
+	>=x11-libs/gtk+-2.14.0:2
 	x11-libs/pango
 	cairo? ( x11-libs/cairo )
 	doc? ( app-text/asciidoc
