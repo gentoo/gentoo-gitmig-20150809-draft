@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.10.ebuild,v 1.2 2010/10/28 19:33:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.10.ebuild,v 1.3 2011/03/29 15:07:32 angelos Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.diracvideo.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2 MIT MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=dev-lang/orc-0.4.10"
