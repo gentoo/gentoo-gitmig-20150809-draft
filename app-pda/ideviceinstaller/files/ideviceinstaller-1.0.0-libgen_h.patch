@@ -1,0 +1,20 @@
+From ecb942b024de4038ff98cbaa3ca2e209b1da290c Mon Sep 17 00:00:00 2001
+From: Martin Szulecki
+Date: Sat, 26 Mar 2011 10:19:04 +0000
+Subject: Add missing libgen.h include to make compilers happy
+
+---
+diff --git a/src/ideviceinstaller.c b/src/ideviceinstaller.c
+index d8c68ba..365da0b 100644
+--- a/src/ideviceinstaller.c
++++ b/src/ideviceinstaller.c
+@@ -31,6 +31,7 @@
+ #include <getopt.h>
+ #include <errno.h>
+ #include <time.h>
++#include <libgen.h>
+ 
+ #include <libimobiledevice/libimobiledevice.h>
+ #include <libimobiledevice/lockdown.h>
+--
+cgit v0.8.3.1-34-gbf3d

@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/ideviceinstaller
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ideviceinstaller/ChangeLog,v 1.1 2011/03/29 08:11:21 ssuominen Exp $
+
+*ideviceinstaller-1.0.0 (29 Mar 2011)
+
+  29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +ideviceinstaller-1.0.0.ebuild, +files/ideviceinstaller-1.0.0-libgen_h.patch:
+  Initial commit wrt #348529 by "nando.sm".
+
