@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vdk
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.29 2008/12/20 23:46:12 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.30 2011/03/29 08:02:44 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> vdk-2.4.0.ebuild,
+  vdk-2.4.1.ebuild:
+  Fixed slot deps
 
   20 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/vdk-2.4.1-gcc43.patch, vdk-2.4.1.ebuild:

@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.1.ebuild,v 1.10 2008/12/31 03:19:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.1.ebuild,v 1.11 2011/03/29 08:02:44 angelos Exp $
 
+EAPI=1
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A Visual Development Kit for RAD"
@@ -13,7 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="alpha ~hppa ppc sparc x86"
 IUSE="doc debug"
 
-DEPEND=">x11-libs/gtk+-2.4
+RDEPEND="x11-libs/gtk+:2"
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {

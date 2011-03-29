@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.11 2006/08/18 18:26:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.12 2011/03/29 08:02:44 angelos Exp $
 
+EAPI=1
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A Visual Development Kit for RAD"
@@ -13,18 +14,16 @@ LICENSE="GPL-2"
 KEYWORDS="alpha ~hppa ppc sparc x86"
 IUSE="doc debug"
 
-DEPEND=">x11-libs/gtk+-2.4
+RDEPEND="x11-libs/gtk+:2"
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_compile() {
-
-	cd ${S}
-
 	local myconf=""
 
 	if [ "$(gcc-major-version)" -ge "4" ] || [ "$(gcc-major-version)" -ge "3" -a "$(gcc-minor-version)" -ge "4" ]
 	then
-		epatch ${FILESDIR}/vdk-2.4-gcc3.4.patch
+		epatch "${FILESDIR}"/vdk-2.4-gcc3.4.patch
 	fi
 
 	# gnome and sigc USE flags need to be added later
@@ -57,6 +56,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README TODO
 }
