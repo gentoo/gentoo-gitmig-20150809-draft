@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.266 2010/11/27 10:06:57 mrness Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.267 2011/03/29 11:58:37 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> ppp-2.4.4-r25.ebuild:
+  Fixed slot deps
 
 *ppp-2.4.5-r1 (27 Nov 2010)
 

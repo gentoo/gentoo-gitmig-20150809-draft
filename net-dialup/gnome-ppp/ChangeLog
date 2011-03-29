@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnome-ppp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.28 2009/03/18 07:33:07 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.29 2011/03/29 11:57:10 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> gnome-ppp-0.3.23-r1.ebuild:
+  Fixed slot deps
 
   18 Mar 2009; Joseph Jezak <josejx@gentoo.org> gnome-ppp-0.3.23-r1.ebuild:
   Marked ppc stable for bug #251479.
