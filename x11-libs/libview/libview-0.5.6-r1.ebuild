@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/libview-0.5.6-r1.ebuild,v 1.3 2007/07/21 06:51:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/libview-0.5.6-r1.ebuild,v 1.4 2011/03/29 07:20:54 nirbheek Exp $
+
+EAPI="1"
 
 inherit gnome2 eutils
 
@@ -13,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.4.0
-	>=dev-cpp/gtkmm-2.4"
+RDEPEND=">=x11-libs/gtk+-2.4.0:2
+	dev-cpp/gtkmm:2.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
