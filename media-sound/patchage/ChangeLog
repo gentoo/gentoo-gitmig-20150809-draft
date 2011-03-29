@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/patchage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.12 2011/03/28 18:37:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.13 2011/03/29 02:33:09 aballier Exp $
+
+  29 Mar 2011; Alexis Ballier <aballier@gentoo.org> patchage-0.5.0.ebuild:
+  bump raul dep, by Jyrki Launonen, bug #359983
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> patchage-0.4.2.ebuild,
   patchage-0.4.4.ebuild, patchage-0.4.5.ebuild, patchage-0.5.0.ebuild:
