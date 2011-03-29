@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/bcrypt-1.1.ebuild,v 1.13 2010/01/01 19:58:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/bcrypt-1.1.ebuild,v 1.14 2011/03/29 19:51:17 c1pher Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin bcrypt
-	dodoc README
-	doman bcrypt.1
+	dobin bcrypt || die
+	dodoc README || die
+	doman bcrypt.1 || die
 }
