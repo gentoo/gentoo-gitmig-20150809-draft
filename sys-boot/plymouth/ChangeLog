@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.4 2011/03/07 22:16:59 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.5 2011/03/29 12:54:46 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> plymouth-0.8.3.ebuild,
+  plymouth-0.8.3-r1.ebuild:
+  Fix gtk+ slot deps
 
 *plymouth-0.8.3-r1 (07 Mar 2011)
 

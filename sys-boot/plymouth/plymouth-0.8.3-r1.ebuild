@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r1.ebuild,v 1.1 2011/03/07 22:16:59 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r1.ebuild,v 1.2 2011/03/29 12:54:46 angelos Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ IUSE_VIDEO_CARDS="video_cards_intel video_cards_nouveau video_cards_radeon"
 IUSE="${IUSE_VIDEO_CARDS} +branding gdm +pango static-libs"
 
 DEPEND=">=media-libs/libpng-1.2.16
-	>=x11-libs/gtk+-2.12
+	>=x11-libs/gtk+-2.12:2
 	pango? ( >=x11-libs/pango-1.21 )
 	video_cards_intel? ( x11-libs/libdrm[video_cards_intel] )
 	video_cards_nouveau? ( x11-libs/libdrm[video_cards_nouveau] )
