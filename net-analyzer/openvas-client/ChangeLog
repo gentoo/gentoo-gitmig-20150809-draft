@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/openvas-client
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/ChangeLog,v 1.13 2010/03/09 13:02:03 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/ChangeLog,v 1.14 2011/03/29 12:47:23 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  openvas-client-2.0.4.ebuild, openvas-client-2.0.5.ebuild:
+  Fix gtk+ slot deps
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org>
   openvas-client-2.0.4.ebuild, openvas-client-2.0.5.ebuild:

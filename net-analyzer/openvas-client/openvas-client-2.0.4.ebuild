@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/openvas-client-2.0.4.ebuild,v 1.2 2010/03/09 13:02:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/openvas-client-2.0.4.ebuild,v 1.3 2011/03/29 12:47:23 angelos Exp $
 
+EAPI=1
 inherit eutils
 
 DESCRIPTION="A client for the openvas vulnerability scanner"
@@ -13,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
 DEPEND="net-libs/gnutls
-	gtk? ( >=x11-libs/gtk+-2.8.8 )"
+	gtk? ( >=x11-libs/gtk+-2.8.8:2 )"
 RDEPEND="${DEPEND}"
 
 # Upstream bug:
