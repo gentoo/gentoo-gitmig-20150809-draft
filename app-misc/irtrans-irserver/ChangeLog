@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/irtrans-irserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/ChangeLog,v 1.8 2011/02/07 17:26:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irserver/ChangeLog,v 1.9 2011/03/29 20:08:16 hd_brummy Exp $
+
+*irtrans-irserver-6.03.09 (29 Mar 2011)
+
+  29 Mar 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +irtrans-irserver-6.03.09.ebuild,
+  +files/irtrans-irserver-6.03.09-arm-1.patch:
+  version bump, bug 360945
 
   07 Feb 2011; Joerg Bornkessel <hd_brummy@gentoo.org> metadata.xml:
   mail address fixed
