@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.1.ebuild,v 1.4 2011/01/11 22:08:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.1.ebuild,v 1.5 2011/03/29 07:54:02 angelos Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=dev-cpp/glibmm-2.4
-	>=dev-cpp/gtkmm-2.4
+RDEPEND=">=dev-cpp/glibmm-2.4:2
+	>=dev-cpp/gtkmm-2.4:2.4
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

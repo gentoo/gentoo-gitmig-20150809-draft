@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.29 2011/01/11 22:08:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.30 2011/03/29 07:54:02 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> hexxagon-1.0.1.ebuild:
+  Fixed slot deps
 
   11 Jan 2011; Brent Baude <ranger@gentoo.org> hexxagon-1.0.1.ebuild:
   Marking hexxagon-1.0.1 ppc for bug 347065
