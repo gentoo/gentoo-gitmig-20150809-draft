@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3.ebuild,v 1.1 2005/12/12 04:09:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3.ebuild,v 1.2 2011/03/29 12:14:22 angelos Exp $
+
+EAPI=1
 
 DESCRIPTION="DDCControl allows control of monitor parameters via DDC"
 HOMEPAGE="http://ddccontrol.sourceforge.net/"
@@ -11,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk gnome doc nls"
 
-RDEPEND="dev-libs/libxml2
-	gtk? ( >=x11-libs/gtk+-2.4 )
+RDEPEND="dev-libs/libxml2:2
+	gtk? ( >=x11-libs/gtk+-2.4:2 )
 	gnome? ( >=gnome-base/gnome-panel-2.10 )
 	sys-apps/pciutils
 	nls? ( sys-devel/gettext )

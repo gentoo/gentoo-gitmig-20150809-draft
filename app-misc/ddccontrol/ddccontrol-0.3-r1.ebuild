@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3-r1.ebuild,v 1.2 2010/01/01 18:08:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.3-r1.ebuild,v 1.3 2011/03/29 12:14:22 angelos Exp $
 
+EAPI=1
 inherit eutils autotools
 
 DESCRIPTION="DDCControl allows control of monitor parameters via DDC"
@@ -13,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk gnome doc nls"
 
-RDEPEND="dev-libs/libxml2
-	gtk? ( >=x11-libs/gtk+-2.4 )
+RDEPEND="dev-libs/libxml2:2
+	gtk? ( >=x11-libs/gtk+-2.4:2 )
 	gnome? ( >=gnome-base/gnome-panel-2.10 )
 	sys-apps/pciutils
 	nls? ( sys-devel/gettext )
