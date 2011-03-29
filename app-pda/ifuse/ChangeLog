@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/ifuse
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.5 2010/06/06 16:49:41 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/ifuse/ChangeLog,v 1.6 2011/03/29 02:45:54 ssuominen Exp $
+
+*ifuse-1.1.1 (29 Mar 2011)
+
+  29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +ifuse-1.1.1.ebuild:
+  Version bump.
 
   06 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> ifuse-1.0.0.ebuild,
   +files/ifuse-1.0.0-asneeded.patch:
