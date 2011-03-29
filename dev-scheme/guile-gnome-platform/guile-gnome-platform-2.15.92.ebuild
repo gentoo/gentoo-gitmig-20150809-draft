@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.15.92.ebuild,v 1.2 2007/10/08 15:48:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.15.92.ebuild,v 1.3 2011/03/29 12:02:20 angelos Exp $
 
+EAPI=1
 inherit eutils autotools multilib
 
 DESCRIPTION="Guile Scheme code that wraps the GNOME developer platform"
@@ -16,12 +17,12 @@ RDEPEND=">=dev-scheme/guile-1.6.4
 	dev-scheme/guile-cairo
 	dev-libs/atk
 	gnome-base/libbonobo
-	gnome-base/orbit
-	gnome-base/gconf
-	>=dev-libs/glib-2.4
+	gnome-base/orbit:2
+	gnome-base/gconf:2
+	>=dev-libs/glib-2.4:2
 	>=gnome-base/gnome-vfs-2.8
-	>=x11-libs/gtk+-2.4
-	>=gnome-base/libglade-2
+	>=x11-libs/gtk+-2.4:2
+	>=gnome-base/libglade-2:2.0
 	gnome-base/libgnomecanvas
 	>=gnome-base/libgnomeui-2.8
 	x11-libs/pango"

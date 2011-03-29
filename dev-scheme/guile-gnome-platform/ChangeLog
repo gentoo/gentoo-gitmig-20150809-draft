@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-gnome-platform
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.13 2010/07/01 16:27:53 chiiph Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.14 2011/03/29 12:02:20 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  guile-gnome-platform-2.15.92.ebuild, guile-gnome-platform-2.16.1.ebuild:
+  Fixed slot deps
 
   01 Jul 2010; Tomas Touceda <chiiph@gentoo.org> +files/2.16.1-gcc45.patch,
   guile-gnome-platform-2.16.1.ebuild:

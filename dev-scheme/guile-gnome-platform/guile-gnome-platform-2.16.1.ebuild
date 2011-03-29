@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.9 2010/07/01 16:27:53 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.10 2011/03/29 12:02:20 angelos Exp $
 
 EAPI="3"
 
@@ -20,12 +20,12 @@ RDEPEND=">=dev-scheme/guile-1.6.4
 	dev-scheme/guile-cairo
 	dev-libs/atk
 	gnome-base/libbonobo
-	gnome-base/orbit
-	>=gnome-base/gconf-2.18
-	>=dev-libs/glib-2.10
-	>=gnome-base/gnome-vfs-2.16
-	>=x11-libs/gtk+-2.10
-	>=gnome-base/libglade-2.6
+	gnome-base/orbit:2
+	>=gnome-base/gconf-2.18:2
+	>=dev-libs/glib-2.10:2
+	>=gnome-base/gnome-vfs-2.16:2
+	>=x11-libs/gtk+-2.10:2
+	>=gnome-base/libglade-2.6:2.0
 	>=gnome-base/libgnomecanvas-2.14
 	>=gnome-base/libgnomeui-2.16
 	>=x11-libs/pango-1.14
