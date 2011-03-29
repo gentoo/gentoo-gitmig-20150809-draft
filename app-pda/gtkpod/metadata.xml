@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>pda</herd>
-<maintainer><email>tester@gentoo.org</email></maintainer>
+  <herd>pda</herd>
+  <maintainer>
+    <email>tester@gentoo.org</email>
+    <name>Olivier Crête</name>
+  </maintainer>
+  <use>
+    <flag name='webkit'>Enable webkit support for browsing and downloading album covers</flag>
+  </use>
 </pkgmetadata>
