@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.45 2011/03/11 16:15:55 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.46 2011/03/29 06:17:16 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  open-vm-tools-0.0.20110223.368700.ebuild:
+  Fix slot-deps on gnome libs
 
 *open-vm-tools-0.0.20110223.368700 (11 Mar 2011)
 

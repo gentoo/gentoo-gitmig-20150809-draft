@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-7.1.3.324285.ebuild,v 1.1 2011/03/27 15:25:47 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-7.1.3.324285.ebuild,v 1.2 2011/03/29 06:16:23 nirbheek Exp $
 
 EAPI="2"
 
@@ -26,21 +26,21 @@ RESTRICT="binchecks fetch mirror strip"
 # vmware-workstation should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
 RDEPEND="dev-cpp/cairomm
-	dev-cpp/glibmm
-	dev-cpp/gtkmm
+	dev-cpp/glibmm:2
+	dev-cpp/gtkmm:2.4
 	dev-cpp/libgnomecanvasmm
 	dev-cpp/libsexymm
 	dev-cpp/pangomm
 	dev-libs/atk
-	dev-libs/glib
+	dev-libs/glib:2
 	dev-libs/libaio
 	dev-libs/libsigc++
 	dev-libs/libxml2
 	=dev-libs/openssl-0.9.8*
 	dev-libs/xmlrpc-c
 	gnome-base/libgnomecanvas
-	gnome-base/libgtop
-	gnome-base/librsvg
+	gnome-base/libgtop:2
+	gnome-base/librsvg:2
 	gnome-base/orbit
 	media-libs/fontconfig
 	media-libs/freetype
@@ -52,7 +52,7 @@ RDEPEND="dev-cpp/cairomm
 	sys-libs/glibc
 	sys-libs/zlib
 	x11-libs/cairo
-	x11-libs/gtk+
+	x11-libs/gtk+:2
 	x11-libs/libgksu
 	x11-libs/libICE
 	x11-libs/libsexy
