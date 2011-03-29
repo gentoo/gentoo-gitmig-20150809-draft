@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20101006.ebuild,v 1.7 2011/03/29 04:05:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20101006.ebuild,v 1.8 2011/03/29 04:06:18 ssuominen Exp $
 
 EAPI=3
 EAUTORECONF=yes
@@ -27,6 +27,7 @@ pkg_setup() {
 		--disable-dependency-tracking
 		$(xfconf_use_debug)
 		)
+
 	DOCS="AUTHORS README TODO"
 }
 
