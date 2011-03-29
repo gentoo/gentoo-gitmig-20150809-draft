@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.11 2010/06/01 17:00:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/selectwm-0.4.1.ebuild,v 1.12 2011/03/29 13:09:18 angelos Exp $
 
+EAPI=1
 inherit autotools eutils
 
 DESCRIPTION="window manager selector tool"
@@ -13,8 +14,8 @@ SLOT="2"
 KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.0.0
-	>=dev-libs/glib-2.0.0"
+RDEPEND="x11-libs/gtk+:2
+	dev-libs/glib:2"
 DEPEND="$RDEPEND
 	dev-util/pkgconfig"
 

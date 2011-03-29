@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.7 2008/10/06 17:13:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.8 2011/03/29 13:08:25 angelos Exp $
+
+EAPI=1
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -27,7 +29,7 @@ IUSE="gnome esd nls audiofile pango"
 
 RDEPEND=">=x11-libs/rep-gtk-0.17
 	>=dev-libs/librep-0.16
-	>=x11-libs/gtk+-2.0.8
+	>=x11-libs/gtk+-2.0.8:2
 	audiofile? ( >=media-libs/audiofile-0.2.3 )
 	esd? ( >=media-sound/esound-0.2.23 )
 	nls? ( sys-devel/gettext )"

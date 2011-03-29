@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.95 2011/03/27 13:06:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.96 2011/03/29 13:08:25 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> sawfish-1.3.3.ebuild:
+  Fix gtk+ slot deps
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -sawfish-1.3.5.2.ebuild, -sawfish-1.5.3.ebuild, -sawfish-1.6.2.ebuild,

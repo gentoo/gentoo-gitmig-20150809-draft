@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.10 2010/05/27 16:51:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/aewm-1.2.7.ebuild,v 1.11 2011/03/29 13:07:41 angelos Exp $
 
+EAPI=1
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A minimalistic X11 window manager."
@@ -14,7 +15,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
-	>=x11-libs/gtk+-2
+	x11-libs/gtk+:2
 	x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXaw
