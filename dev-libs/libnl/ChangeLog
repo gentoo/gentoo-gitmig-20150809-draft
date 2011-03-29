@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.48 2011/02/24 22:08:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.49 2011/03/29 14:20:51 jer Exp $
+
+*libnl-3.0 (29 Mar 2011)
+
+  29 Mar 2011; Jeroen Roovers <jer@gentoo.org> libnl-1.1-r2.ebuild,
+  libnl-2.0.ebuild, +libnl-3.0.ebuild:
+  Version bump by Karl Hiramoto (bug #342461). Disable implicit RDEPEND.
 
   24 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> libnl-1.1-r2.ebuild:
   ppc/ppc64 stable wrt #350460
