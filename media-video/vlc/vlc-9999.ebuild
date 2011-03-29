@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.131 2011/03/21 11:50:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.132 2011/03/29 02:20:18 aballier Exp $
 
 EAPI="4"
 
@@ -118,7 +118,7 @@ RDEPEND="
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
 		samba? ( || ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.4 ) )
-		schroedinger? ( >=media-libs/schroedinger-1.0.6 )
+		schroedinger? ( >=media-libs/schroedinger-1.0.10 )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
 		shout? ( media-libs/libshout )
