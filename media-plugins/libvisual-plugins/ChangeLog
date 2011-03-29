@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.48 2010/08/29 14:41:05 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.49 2011/03/29 12:30:27 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  libvisual-plugins-0.4.0-r2.ebuild:
+  Fixed slot deps
 
   29 Aug 2010; Raúl Porcel <armin76@gentoo.org>
   libvisual-plugins-0.4.0-r2.ebuild:

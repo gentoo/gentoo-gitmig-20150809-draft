@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.199 2011/03/28 22:22:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.200 2011/03/29 12:29:32 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  audacious-plugins-2.2-r2.ebuild, audacious-plugins-2.4.0.ebuild,
+  audacious-plugins-2.4.1.ebuild, audacious-plugins-2.4.2.ebuild,
+  audacious-plugins-2.4.3.ebuild, audacious-plugins-2.4.3-r1.ebuild:
+  Fixed slot deps
 
   28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   audacious-plugins-2.4.4-r1.ebuild, audacious-plugins-2.5_alpha1.ebuild:

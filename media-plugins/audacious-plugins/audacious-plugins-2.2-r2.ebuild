@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2-r2.ebuild,v 1.16 2011/01/04 00:31:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2-r2.ebuild,v 1.17 2011/03/29 12:29:32 angelos Exp $
 
+EAPI=1
 inherit eutils flag-o-matic
 
 MY_P="${P/_/-}"
@@ -18,10 +19,10 @@ lirc midi mp3 mtp nls oss pulseaudio projectm scrobbler sdl sid sndfile sse2 vor
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	>=media-sound/audacious-2.2
 	>=net-libs/neon-0.26.4
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.14:2
 	aac? ( >=media-libs/faad2-2.7 )
 	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )

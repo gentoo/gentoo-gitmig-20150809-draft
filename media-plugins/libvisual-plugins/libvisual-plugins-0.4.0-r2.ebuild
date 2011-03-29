@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.9 2010/08/29 14:41:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.10 2011/03/29 12:30:27 angelos Exp $
 
+EAPI=1
 inherit eutils autotools
 
 PATCHLEVEL="4"
@@ -21,7 +22,7 @@ RDEPEND="~media-libs/libvisual-${PV}
 	opengl? ( virtual/opengl )
 	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
-	gtk? ( >=x11-libs/gtk+-2 )
+	gtk? ( x11-libs/gtk+:2 )
 	alsa? ( media-libs/alsa-lib )
 	media-libs/fontconfig
 	x11-libs/libX11
