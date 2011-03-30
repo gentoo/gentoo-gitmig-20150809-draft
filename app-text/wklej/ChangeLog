@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.26 2011/02/20 16:16:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.27 2011/03/30 21:29:02 aidecoe Exp $
+
+  30 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  aidecoe has taken over the maintenance.
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> wklej-0.2.0.ebuild:
   No stable keywords for prefix
