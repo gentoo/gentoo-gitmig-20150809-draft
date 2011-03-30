@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.565 2011/03/19 11:06:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.566 2011/03/30 19:03:22 zzam Exp $
+
+  30 Mar 2011; Matthias Schwarzott <zzam@gentoo.org> udev-164-r2.ebuild,
+  -files/udev-164-remove-noopenvz.patch:
+  Use updated scripts instead of patching them.
 
 *udev-164-r2 (19 Mar 2011)
 

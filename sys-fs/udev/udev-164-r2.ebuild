@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.1 2011/03/19 11:06:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.2 2011/03/30 19:03:22 zzam Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs linux-info
 
 #PATCHSET=${P}-gentoo-patchset-v1
-scriptversion=164
+scriptversion=164-v2
 scriptname=${PN}-gentoo-scripts-${scriptversion}
 
 if [[ ${PV} == "9999" ]]; then
@@ -147,7 +147,6 @@ src_unpack() {
 	fi
 
 	cd "${WORKDIR}/${scriptname}"
-	epatch "${FILESDIR}/udev-164-remove-noopenvz.patch"
 
 	cd "${S}"
 
