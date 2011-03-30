@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.9 2011/02/18 15:37:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.10 2011/03/30 13:24:56 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> cwm-20110213.ebuild:
+  arm/sparc stable (bug 361293)
 
 *cwm-99999999 (18 Feb 2011)
 *cwm-20110213 (18 Feb 2011)
