@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.14.ebuild,v 1.12 2011/03/30 14:58:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.14.ebuild,v 1.13 2011/03/30 15:01:55 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -47,7 +47,7 @@ src_test() {
 	distutils_src_test
 
 	python_disable_pyc
-	find -name "*.pyc" -print0 | xargs -0 rm -f
+	find "(" -name "*.pyc" -o -name "*\$py.class" ")" -print0 | xargs -0 rm -f
 	find build-* -name "__pycache__" -print0 | xargs -0 rmdir
 }
 
