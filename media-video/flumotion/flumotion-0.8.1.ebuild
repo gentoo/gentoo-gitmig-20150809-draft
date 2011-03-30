@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.3 2011/03/30 20:11:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.4 2011/03/30 20:27:36 ssuominen Exp $
 
 EAPI=3
 
@@ -17,7 +17,27 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND="" # Where is this documented?
+# TODO:
+
+# These would be from 0.6.2's ebuild
+# media-plugins/gst-plugins-libpng:0.10
+# dev-python/twisted-web
+# dev-python/twisted-names
+# dev-python/imaging
+
+# These are from README
+RDEPEND="media-libs/gstreamer:0.10
+	media-libs/gst-plugins-base:0.10
+	media-libs/gst-plugins-good:0.10
+	dev-python/gst-python:0.10
+	dev-python/pycairo
+	=dev-python/pygtk-2*
+	dev-python/kiwi
+	dev-python/twisted
+	media-plugins/gst-plugins-ogg
+	media-plugins/gst-plugins-theora
+	media-plugins/gst-plugins-vorbis"
+# These are from README and error and trial FEATURES="test" Import's
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	doc? ( dev-python/epydoc )
