@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.255 2011/03/29 20:19:15 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.256 2011/03/30 08:33:21 grobian Exp $
+
+  30 Mar 2011; Fabian Groffen <grobian@gentoo.org>
+  +sunos/solaris/5.11/package.use.mask:
+  Mask USE=git for gettext, due to some weird git brokeness
 
   29 Mar 2011; Michael Haubenwallner <haubi@gentoo.org>
   +linux/x86/profile.bashrc:
