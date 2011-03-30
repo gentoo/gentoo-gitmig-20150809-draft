@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.8.5.ebuild,v 1.9 2010/12/10 19:37:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.8.5.ebuild,v 1.10 2011/03/30 20:42:33 ssuominen Exp $
 
 EAPI=2
 inherit eutils libtool linux-info
@@ -35,6 +35,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		UDEV_RULES_PATH=/lib/udev/rules.d \
 		--disable-example
 }
 
