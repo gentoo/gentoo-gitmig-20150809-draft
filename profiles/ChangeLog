@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5233 2011/03/29 18:59:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5234 2011/03/30 22:28:55 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Update libopensync mask.
 
   29 Mar 2011; Eray Aslan <eras@gentoo.org> package.mask:
   lastrite net-mail/mailwrapper net-mail/mailer-config

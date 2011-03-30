@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12636 2011/03/30 20:06:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12637 2011/03/30 22:28:55 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -496,26 +496,27 @@ x11-drivers/xf86-video-xgi
 ~dev-vcs/bzr-rewrite-0.6.2
 ~dev-vcs/bzr-svn-1.1.0
 
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2011)
-# Temporarily masked until the new maintainer is ready
-# for unmasking.
-# http://bugs.gentoo.org/show_bug.cgi?id=354423
+# Ryan Hill <dirtyepic@gentoo.org> (30 Mar 2011)
+# Masked indefinitely (until 0.40 is released).
+# http://bugs.gentoo.org/354423
 >=app-pda/libopensync-0.30
-app-pda/libopensync-plugin-evolution2
-app-pda/libopensync-plugin-file
-app-pda/libopensync-plugin-gnokii
-app-pda/libopensync-plugin-google-calendar
-app-pda/libopensync-plugin-gpe
-app-pda/libopensync-plugin-irmc
-app-pda/libopensync-plugin-palm
+>=app-pda/libopensync-plugin-file-0.30
+>=app-pda/libopensync-plugin-google-calendar-0.30
+>=app-pda/libopensync-plugin-irmc-0.30
+>=app-pda/libopensync-plugin-palm-0.30
 >=app-pda/libopensync-plugin-python-0.30
-app-pda/libopensync-plugin-sunbird
+>=app-pda/libopensync-plugin-sunbird-0.30
 app-pda/libopensync-plugin-syncml
 app-pda/libopensync-plugin-vformat
-app-pda/libopensync-plugin-moto
-app-pda/msynctool
-app-pda/multisync-gui
 app-pda/osynctool
+
+# Ryan Hill <dirtyepic@gentoo.org> (30 Mar 2011)
+# Work in progress
+# http://bugs.gentoo.org/show_bug.cgi?id=354423
+app-pda/libopensync-plugin-evolution2
+app-pda/libopensync-plugin-gnokii
+app-pda/libopensync-plugin-gpe
+app-pda/multisync-gui
 
 # Hans de Graaff <graaff@gentoo.org> (09 Feb 2011)
 # No longer supported by upstream, and has open security bug.
