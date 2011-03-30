@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r5.ebuild,v 1.3 2011/03/21 19:59:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r5.ebuild,v 1.4 2011/03/30 13:38:17 c1pher Exp $
 
 EAPI="2"
 
@@ -28,9 +28,12 @@ src_prepare() {
 }
 
 src_compile() {
-	sed -i 's,^#\(APG_CS_CLIBS += -lnsl\)$,\1,' Makefile
-	[[ ${CHOST} == *-darwin* ]] && \
-		sed -i 's,^APG_CLIBS += -lcrypt,APG_CLIBS += ,' Makefile
+	sed -i 's,^#\(APG_CS_CLIBS += -lnsl\)$,\1,' Makefile \
+		|| die "Sed failed"
+	if [[ ${CHOST} == *-darwin* ]]; then
+		sed -i 's,^APG_CLIBS += -lcrypt,APG_CLIBS += ,' Makefile \
+		|| die "Sed failed"
+	fi
 
 	emake \
 		FLAGS="${CFLAGS} ${LDFLAGS}" CFLAGS="${CFLAGS} ${LDFLAGS}" \
@@ -42,8 +45,8 @@ src_compile() {
 
 src_install() {
 	dobin apg apgbfm bfconvert/bfconvert || die
-	dodoc CHANGES INSTALL README THANKS TODO
+	dodoc CHANGES INSTALL README THANKS TODO || die
 	cd doc
-	doman man/apg.1 man/apgbfm.1
-	dodoc APG_TIPS pronun.txt rfc0972.txt rfc1750.txt
+	doman man/apg.1 man/apgbfm.1 || die
+	dodoc APG_TIPS pronun.txt rfc0972.txt rfc1750.txt || die
 }
