@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-195.36.31.ebuild,v 1.1 2010/08/30 21:08:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-195.36.31.ebuild,v 1.2 2011/03/30 08:10:09 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -20,7 +22,7 @@ IUSE=""
 # This also allows us to optimize out a lot of the other dependancies, as
 # between gtk and xorg-server, almost all libraries and headers are accounted
 # for.
-DEPEND=">=x11-libs/gtk+-2
+DEPEND="x11-libs/gtk+:2
 	dev-util/pkgconfig
 	x11-base/xorg-server
 	x11-libs/libXt
@@ -28,7 +30,7 @@ DEPEND=">=x11-libs/gtk+-2
 	x11-proto/xf86driproto
 	x11-proto/xf86vidmodeproto"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	x11-base/xorg-server
 	x11-libs/libXt
 	x11-drivers/nvidia-drivers"

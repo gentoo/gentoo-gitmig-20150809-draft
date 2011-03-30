@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.98 2011/03/28 22:41:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.99 2011/03/30 08:10:09 nirbheek Exp $
+
+  30 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  nvidia-settings-173.14.25.ebuild, nvidia-settings-173.14.27.ebuild,
+  nvidia-settings-185.18.36.ebuild, nvidia-settings-195.36.24.ebuild,
+  nvidia-settings-195.36.31.ebuild, nvidia-settings-256.44.ebuild,
+  nvidia-settings-256.52.ebuild:
+  Fix slot-dep on gtk+
 
   28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   nvidia-settings-260.19.29.ebuild, nvidia-settings-260.19.36.ebuild:
