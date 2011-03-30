@@ -1,6 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.14.ebuild,v 1.1 2009/04/30 18:06:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.14.ebuild,v 1.2 2011/03/30 23:03:34 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2:2.6"
+
+inherit python
 
 DESCRIPTION="a GUI frontend to cdlabelgen which is a program that can generate a variety of CD tray covers."
 HOMEPAGE="http://gtkcdlabel.sourceforge.net"
@@ -11,13 +16,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.5
-	>=app-cdr/cdlabelgen-4
+DEPEND=">=app-cdr/cdlabelgen-4
 	dev-python/pygtk"
-DEPEND=""
+RDEPEND="${DEPEND}"
+
+src_prepare() {
+	python_convert_shebangs -r 2 .
+}
 
 src_install() {
-	dobin usr/bin/${PN}.py || die "dobin failed"
+	newbin usr/bin/${PN}.py ${PN} || die "dobin failed"
 	insinto /usr/share
 	doins -r usr/share/{applications,${PN},pixmaps} || die "doins failed"
 	dodoc usr/share/doc/${PN}/{AUTHORS,README}

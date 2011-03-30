@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gtkcdlabel
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.37 2009/04/30 18:06:18 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.38 2011/03/30 23:03:34 arfrever Exp $
+
+  30 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gtkcdlabel-1.12.ebuild, gtkcdlabel-1.14.ebuild:
+  Use Python 2 (bug #308325).
 
 *gtkcdlabel-1.14 (30 Apr 2009)
 
