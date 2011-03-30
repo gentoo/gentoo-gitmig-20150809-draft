@@ -14,7 +14,6 @@
 </maintainer>
 <use>
 	<flag name='relp'>Add support for the Reliable Event Logging Protocol using <pkg>dev-libs/librelp</pkg></flag>
-	<flag name='logrotate'>Add a configuration snippet for logrotate</flag>
 	<flag name='extras'>Add support for the UDP spoofing module (omudpspoof) using <pkg>net-libs/libnet</pkg></flag>
 </use>
 </pkgmetadata>
