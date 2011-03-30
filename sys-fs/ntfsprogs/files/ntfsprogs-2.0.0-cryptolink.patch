@@ -1,0 +1,37 @@
+Index: ntfsprogs-2.0.0/ntfsprogs/Makefile.am
+===================================================================
+--- ntfsprogs-2.0.0.orig/ntfsprogs/Makefile.am
++++ ntfsprogs-2.0.0/ntfsprogs/Makefile.am
+@@ -124,9 +124,9 @@ ntfsdump_logfile_LDFLAGS= $(AM_LFLAGS)
+ 
+ if ENABLE_CRYPTO
+ ntfsdecrypt_SOURCES	= ntfsdecrypt.c utils.c utils.h
+-ntfsdecrypt_LDADD	= $(AM_LIBS)
+-ntfsdecrypt_LDFLAGS	= $(AM_LFLAGS) `libgnutls-config --libs`
+-ntfsdecrypt_CFLAGS	= `libgnutls-config --cflags`
++ntfsdecrypt_LDADD	= $(AM_LIBS) $(GNUTLS_LIBS) $(LIBGCRYPT_LIBS)
++ntfsdecrypt_LDFLAGS	= $(AM_LFLAGS)
++ntfsdecrypt_CFLAGS	= $(GNUTLS_CFLAGS) $(LIBGCRYPT_CFLAGS)
+ endif
+ 
+ # Extra targets
+Index: ntfsprogs-2.0.0/libntfs/Makefile.am
+===================================================================
+--- ntfsprogs-2.0.0.orig/libntfs/Makefile.am
++++ ntfsprogs-2.0.0/libntfs/Makefile.am
+@@ -34,12 +34,13 @@ linux_ntfsincludedir = -I$(top_srcdir)/i
+ lib_LTLIBRARIES = libntfs.la
+ 
+ libntfs_la_LDFLAGS = -version-info $(LTVERSION_LIBNTFS) -no-undefined
++libntfs_la_LIBADD =
+ libntfs_la_CFLAGS = $(LIBNTFS_CFLAGS) \
+ 	-DLTVERSION_LIBNTFS=\"$(LTVERSION_LIBNTFS)\"
+ 
+ if ENABLE_CRYPTO
+-libntfs_la_LDFLAGS += `libgnutls-config --libs` `pkg-config --libs libconfig`
+-libntfs_la_CFLAGS += `libgnutls-config --cflags` `pkg-config --cflags libconfig`
++libntfs_la_LIBADD += $(GNUTLS_LIBS)   $(LIBGCRYPT_LIBS)   $(libconfig_LIBS)
++libntfs_la_CFLAGS += $(GNUTLS_CFLAGS) $(LIBGCRYPT_CFLAGS) $(libconfig_CFLAGS)
+ endif
+ 
+ libntfs_la_SOURCES =	\
