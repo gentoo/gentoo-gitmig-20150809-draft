@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.44 2011/03/21 21:04:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.45 2011/03/30 11:08:48 angelos Exp $
+
+  30 Mar 2011; Christoph Mende <angelos@gentoo.org> gpsdrive-2.09-r1.ebuild:
+  Fix gtk+ slot deps
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gpsdrive-2.10_pre7-r1.ebuild, gpsdrive-2.11-r1.ebuild:

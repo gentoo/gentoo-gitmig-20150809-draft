@@ -1,10 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09-r1.ebuild,v 1.3 2008/05/18 16:24:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.09-r1.ebuild,v 1.4 2011/03/30 11:08:48 angelos Exp $
 
 WANT_AUTOMAKE=1.7
 WANT_AUTOCONF=2.5
 
+EAPI=1
 inherit autotools
 
 DESCRIPTION="GPS navigation system with NMEA and Garmin support, zoomable map display, waypoints, etc."
@@ -16,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="garmin mysql"
 
-RDEPEND=">=x11-libs/gtk+-2.8.12
+RDEPEND=">=x11-libs/gtk+-2.8.12:2
 	>=dev-libs/libpcre-4.2
 	mysql? ( dev-db/mysql )"
 DEPEND="${RDEPEND}
