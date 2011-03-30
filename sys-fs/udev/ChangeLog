@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.566 2011/03/30 19:03:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.567 2011/03/30 19:06:57 zzam Exp $
+
+*udev-167 (30 Mar 2011)
+
+  30 Mar 2011; Matthias Schwarzott <zzam@gentoo.org> +udev-167.ebuild:
+  Version bumped. udev-167 defaults to using subdir udev in /run if it exists,
+  but as this does not exist on gentoo, it normally falls back to using
+  /dev/.udev, so this is fine.
 
   30 Mar 2011; Matthias Schwarzott <zzam@gentoo.org> udev-164-r2.ebuild,
   -files/udev-164-remove-noopenvz.patch:
