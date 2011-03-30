@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.1 2011/02/18 12:38:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.2 2011/03/30 14:40:05 caster Exp $
+
+  30 Mar 2011; Vlastimil Babka <caster@gentoo.org> icedtea-web-1.0.1.ebuild:
+  Add src_compile() phase to override the one from java-pkg-2.
 
 *icedtea-web-1.0.1 (18 Feb 2011)
 

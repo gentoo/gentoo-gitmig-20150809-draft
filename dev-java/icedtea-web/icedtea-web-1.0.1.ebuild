@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.0.1.ebuild,v 1.1 2011/02/18 12:38:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.0.1.ebuild,v 1.2 2011/03/30 14:40:05 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="2"
@@ -50,6 +50,11 @@ pkg_setup() {
 
 unset_vars() {
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
+}
+
+src_compile() {
+	# we need this to override the src_compile from java-pkg-2
+	default
 }
 
 src_unpack() {
