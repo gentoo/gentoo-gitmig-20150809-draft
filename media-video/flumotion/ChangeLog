@@ -1,6 +1,11 @@
 # ChangeLog for media-video/flumotion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.21 2011/03/28 22:32:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.22 2011/03/30 08:26:50 nirbheek Exp $
+
+  30 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  flumotion-0.4.1.ebuild, flumotion-0.5.2.ebuild, flumotion-0.5.3.ebuild,
+  flumotion-0.6.1.ebuild:
+  Fix slot-deps on gnome libs for all ebuilds
 
   28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> flumotion-0.6.2.ebuild:
   Pin dependencies to appropriate slots and use EAPI 3.

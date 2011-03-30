@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.5.3.ebuild,v 1.1 2009/02/13 11:48:58 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.5.3.ebuild,v 1.2 2011/03/30 08:26:50 nirbheek Exp $
+
+EAPI="1"
 
 inherit eutils gnome2 autotools
 
@@ -13,23 +15,23 @@ KEYWORDS="~x86 ~amd64"
 IUSE="v4l speex jpeg dv"
 SLOT="0"
 
-RDEPEND=">=x11-libs/gtk+-2.4
-	>=dev-libs/glib-2.4
-	>=gnome-base/libglade-2
-	>=media-libs/gstreamer-0.10.11
-	>=media-libs/gst-plugins-base-0.10.11
-	=media-libs/gst-plugins-good-0.10*
-	=media-plugins/gst-plugins-gnomevfs-0.10*
-	=media-plugins/gst-plugins-ogg-0.10*
-	=media-plugins/gst-plugins-theora-0.10*
-	=media-plugins/gst-plugins-vorbis-0.10*
-	=media-plugins/gst-plugins-libpng-0.10*
-	=dev-python/gst-python-0.10*
-	v4l? ( =media-plugins/gst-plugins-v4l-0.10* )
-	speex? ( =media-plugins/gst-plugins-speex-0.10* )
-	dv? ( =media-plugins/gst-plugins-dv-0.10*
-	      =media-plugins/gst-plugins-raw1394-0.10* )
-	>=dev-python/pygtk-2.8.6
+RDEPEND=">=x11-libs/gtk+-2.4:2
+	>=dev-libs/glib-2.4:2
+	>=gnome-base/libglade-2:2.0
+	>=media-libs/gstreamer-0.10.11:0.10
+	>=media-libs/gst-plugins-base-0.10.11:0.10
+	media-libs/gst-plugins-good:0.10
+	media-plugins/gst-plugins-gnomevfs:0.10
+	media-plugins/gst-plugins-ogg:0.10
+	media-plugins/gst-plugins-theora:0.10
+	media-plugins/gst-plugins-vorbis:0.10
+	media-plugins/gst-plugins-libpng:0.10
+	dev-python/gst-python:0.10
+	v4l? ( media-plugins/gst-plugins-v4l:0.10 )
+	speex? ( media-plugins/gst-plugins-speex:0.10 )
+	dv? ( media-plugins/gst-plugins-dv:0.10
+	      media-plugins/gst-plugins-raw1394:0.10 )
+	>=dev-python/pygtk-2.8.6:2
 	>=dev-python/twisted-2.0
 	>=dev-python/twisted-web-0.5.0-r1
 	>=dev-python/twisted-names-0.2.0
