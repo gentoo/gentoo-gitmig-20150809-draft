@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.5 2011/03/28 19:36:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.6 2011/03/30 09:25:55 lu_zero Exp $
 
 EAPI=4
 
@@ -179,7 +179,6 @@ src_configure() {
 		--enable-version3
 		--enable-postproc
 		--enable-avfilter
-		--disable-stripping
 		${myconf}"
 
 	# cross compile support
