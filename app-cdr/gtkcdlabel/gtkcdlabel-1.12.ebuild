@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.12.ebuild,v 1.6 2011/03/30 23:03:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.12.ebuild,v 1.7 2011/03/30 23:07:31 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -25,7 +25,7 @@ src_prepare() {
 }
 
 src_install() {
-	newbin usr/bin/${PN}.py ${PN} || die "dobin failed"
+	dobin usr/bin/${PN}.py || die "dobin failed"
 	insinto /usr/share
 	doins -r usr/share/{applications,${PN},pixmaps} || die "doins failed"
 	dodoc usr/share/doc/${PN}/{AUTHORS,README}
