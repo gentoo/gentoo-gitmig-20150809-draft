@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/libopensync-plugin-moto
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-moto/ChangeLog,v 1.1 2011/03/30 18:17:05 ssuominen Exp $
+
+*libopensync-plugin-moto-0.22 (30 Mar 2011)
+
+  30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +libopensync-plugin-moto-0.22.ebuild:
+  Initial commit wrt #211262 by Matija Šuklje.
+
