@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.133 2011/03/30 12:58:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.134 2011/03/30 13:06:58 aballier Exp $
 
 EAPI="4"
 
@@ -148,7 +148,6 @@ RDEPEND="
 		"
 
 DEPEND="${RDEPEND}
-	!!<=media-video/vlc-1.1.99999
 	alsa? ( >=media-sound/alsa-headers-1.0.23 )
 	dvb? ( sys-kernel/linux-headers )
 	fbosd? ( sys-kernel/linux-headers )

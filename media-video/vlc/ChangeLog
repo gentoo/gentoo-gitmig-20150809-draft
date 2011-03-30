@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.696 2011/03/30 12:58:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.697 2011/03/30 13:06:58 aballier Exp $
+
+  30 Mar 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  remove the blocker on old versions, this seems fine with recent libtools
 
   30 Mar 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   fix the freetype default font patch, by Artem Karimov, bug #360841
