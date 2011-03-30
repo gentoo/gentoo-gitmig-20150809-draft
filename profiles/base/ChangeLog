@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.237 2011/03/29 20:05:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.238 2011/03/30 13:10:39 aballier Exp $
+
+  30 Mar 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  bda useflag on vlc is gone, no need to mask it
 
   29 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
   Drop mesa gallium mask that is obsolete.
