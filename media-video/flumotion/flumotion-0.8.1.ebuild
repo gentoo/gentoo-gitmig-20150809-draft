@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.1 2011/03/30 19:51:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.2 2011/03/30 20:02:28 ssuominen Exp $
 
 EAPI=3
 
@@ -21,7 +21,9 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	doc? ( dev-python/epydoc )
-	test? ( dev-python/pychecker )"
+	test? ( dev-python/icalendar
+		dev-python/pychecker
+		dev-python/twisted-conch )"
 
 src_prepare() {
 	rm -f py-compile
@@ -38,6 +40,10 @@ src_configure() {
 
 src_compile() {
 	emake -j1 fdpass_so_LINK="$(tc-getCC) ${LDFLAGS} -shared -o fdpass.so" || die
+}
+
+src_test() {
+	Xemake -j1 check || die
 }
 
 src_install() {
