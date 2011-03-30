@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/leafpad-0.8.17.ebuild,v 1.4 2010/05/23 17:45:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leafpad/leafpad-0.8.17.ebuild,v 1.5 2011/03/30 11:06:08 angelos Exp $
 
 EAPI=2
 inherit fdo-mime gnome2-utils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="emacs"
 
-RDEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.10:2
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
