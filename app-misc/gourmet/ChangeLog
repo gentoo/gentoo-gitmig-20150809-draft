@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.25 2011/03/22 10:41:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.26 2011/03/30 00:57:52 nixphoeni Exp $
+
+*gourmet-0.15.8 (30 Mar 2011)
+
+  30 Mar 2011; Joe Sapp <nixphoeni@gentoo.org> +gourmet-0.15.8.ebuild:
+  Version bump; removed libgnomeprint-python dep per upstream (also see bug
+  #358429)
 
   22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gourmet-0.15.6.ebuild:
