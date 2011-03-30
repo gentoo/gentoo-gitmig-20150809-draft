@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
-    <name>Default assignee for orphaned packages</name>
+    <email>dilfridge@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="bind">Use bind's name resolving library</flag>
