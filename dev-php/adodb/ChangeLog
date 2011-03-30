@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.110 2010/08/11 22:41:16 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.111 2011/03/30 19:18:54 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> adodb-5.11.ebuild:
+  added ~arm (bug 302981)
 
   11 Aug 2010; Joseph Jezak <josejx@gentoo.org> adodb-5.11.ebuild:
   Marked ppc stable for bug #330481.
