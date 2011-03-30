@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.58 2010/01/15 21:51:29 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.59 2011/03/30 09:05:55 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> re2c-0.13.5.ebuild:
+  added ~arm (bug 302981)
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> re2c-0.13.5.ebuild:
   Transfer Prefix keywords
