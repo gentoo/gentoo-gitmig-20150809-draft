@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/netbeans-ide
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/ChangeLog,v 1.1 2011/03/30 09:56:18 fordfrog Exp $
+
+*netbeans-ide-7.0_rc1 (30 Mar 2011)
+
+  30 Mar 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +netbeans-ide-7.0_rc1.ebuild, +metadata.xml:
+  Added new ebuild
+
