@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.32 2011/03/21 11:37:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.33 2011/03/30 11:57:35 aballier Exp $
 
 EAPI="2"
 
@@ -179,7 +179,6 @@ src_configure() {
 		--enable-version3
 		--enable-postproc
 		--enable-avfilter
-		--disable-stripping
 		${myconf}"
 
 	# cross compile support
