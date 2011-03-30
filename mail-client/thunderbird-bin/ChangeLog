@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.30 2011/03/27 13:07:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.31 2011/03/30 13:33:10 ssuominen Exp $
+
+  30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  thunderbird-bin-3.1.9.ebuild:
+  Install libnotify.so.1 from emul-linux-x86-gtklibs-20110129 to
+  /opt/thunderbird wrt #360443.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -thunderbird-bin-3.1.7.ebuild, thunderbird-bin-3.1.9.ebuild:

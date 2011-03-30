@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.9.ebuild,v 1.4 2011/03/27 13:07:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.9.ebuild,v 1.5 2011/03/30 13:33:10 ssuominen Exp $
 
 EAPI="2"
 
@@ -19,7 +19,8 @@ MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Thunderbird Mail Client"
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
-SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2"
+SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~ssuominen/libnotify.so.1.bz2"
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip"
 
@@ -132,6 +133,11 @@ EOF
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs.js \
 		"${D}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
 		die "failed to cp thunderbird-gentoo-default-prefs.js"
+
+	# This is a copy of 32bit libnotify.so.1 from app-emulation/emul-linux-x86-gtklibs-20110129.
+	# http://bugs.gentoo.org/show_bug.cgi?id=360443.
+	exeinto /opt/thunderbird
+	doexe "${WORKDIR}"/libnotify.so.1 || die
 }
 
 pkg_postinst() {
