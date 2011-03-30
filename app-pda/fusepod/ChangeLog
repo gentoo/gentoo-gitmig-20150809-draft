@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/fusepod
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/fusepod/ChangeLog,v 1.1 2011/03/30 15:42:33 ssuominen Exp $
+
+*fusepod-0.5.2 (30 Mar 2011)
+
+  30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +fusepod-0.5.2.ebuild,
+  +files/fusepod-0.5.2-missing_include.patch:
+  Initial commit wrt #136624 by Keegan Carruthers-Smith and Dirk Vanden Boer.
+

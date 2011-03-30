@@ -1,0 +1,13 @@
+diff -ur fusepod-0.5.2.orig/src/fusepod_util.h fusepod-0.5.2/src/fusepod_util.h
+--- fusepod-0.5.2.orig/src/fusepod_util.h	2006-06-27 01:06:32.000000000 +0300
++++ fusepod-0.5.2/src/fusepod_util.h	2011-03-30 18:39:06.000000000 +0300
+@@ -15,6 +15,9 @@
+ #ifndef _FUSEPOD_UTIL_H_
+ #define _FUSEPOD_UTIL_H_
+ 
++#include <stdio.h> /* sprintf */
++#include <string.h> /* strcasecmp */
++
+ #include <vector>
+ #include <string>
+ 
