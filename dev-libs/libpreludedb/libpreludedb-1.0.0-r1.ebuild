@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.3 2011/03/30 23:32:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.4 2011/03/30 23:46:14 arfrever Exp $
 
 EAPI="3"
+GENTOO_DEPEND_ON_PERL="no"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
@@ -16,10 +17,11 @@ SRC_URI="${HOMEPAGE}/download/releases/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="doc mysql postgres perl python sqlite swig"
+IUSE="doc mysql postgres perl python sqlite"
 
 RDEPEND=">=dev-libs/libprelude-0.9.9
 	mysql? ( virtual/mysql )
+	perl? ( dev-lang/perl )
 	postgres? ( dev-db/postgresql-server )
 	sqlite? ( =dev-db/sqlite-3* )"
 DEPEND="${RDEPEND}
@@ -54,7 +56,6 @@ src_configure() {
 		$(use_with postgres postgresql) \
 		$(use_with sqlite sqlite3) \
 		$(use_with perl) \
-		$(use_with swig) \
 		$(use_with python)
 }
 
