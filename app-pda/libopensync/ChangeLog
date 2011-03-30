@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.41 2011/02/20 03:31:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.42 2011/03/30 15:04:17 ssuominen Exp $
+
+  30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> libopensync-0.22.ebuild,
+  libopensync-0.22-r1.ebuild:
+  Remove ~mips because this is a orphaned library for them and latest is not
+  even keyworded.
 
   20 Feb 2011; Ryan Hill <dirtyepic@gentoo.org> libopensync-9999.ebuild:
   Update live ebuild.
