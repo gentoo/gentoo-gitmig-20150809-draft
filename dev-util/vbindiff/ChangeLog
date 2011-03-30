@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/vbindiff
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/ChangeLog,v 1.9 2009/09/12 10:08:59 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/ChangeLog,v 1.10 2011/03/30 11:21:47 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> vbindiff-3.0_beta4.ebuild:
+  added ~arm (bug 302981)
 
   12 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -vbindiff-3.0_beta2.ebuild, -vbindiff-3.0_beta3.ebuild,
