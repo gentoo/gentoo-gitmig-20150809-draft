@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.6 2011/03/29 15:34:22 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.7 2011/03/30 11:34:45 haubi Exp $
+
+*baselayout-prefix-1.12.5-r10 (30 Mar 2011)
+
+  30 Mar 2011; Salomon tbox <tbox@gentoo.org>
+  baselayout-prefix-1.12.5-r9.ebuild, +baselayout-prefix-1.12.5-r10.ebuild,
+  +files/baselayout-1.12.5-libsvar.patch,
+  files/baselayout-1.12.5-solaris.patch, +files/baselayout-1.12.5-strsep.patch:
+  Split strsep out of solaris patch and use it in r9 only.
+  In r10, use private gnulib instance, as it might be missing during bootstrap.
+  Also need to include config.h to redefine 'restrict'.
 
   29 Mar 2011; Michael Haubenwallner <haubi@gentoo.org>
   files/baselayout-1.12.5-aix.patch:

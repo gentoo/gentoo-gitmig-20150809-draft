@@ -1,14 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r9.ebuild,v 1.7 2011/03/30 11:34:45 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r10.ebuild,v 1.1 2011/03/30 11:34:45 haubi Exp $
 
 EAPI=3
 
-inherit eutils toolchain-funcs multilib prefix flag-o-matic
+inherit eutils toolchain-funcs multilib prefix flag-o-matic autotools
+
+# Needed gnulib modules:
+#   getopt: for AIX
+#   strsep: for Solaris
+# Avoid depending on dev-libs/gnulib, might be missing during bootstrap.
+# The gnulib tarball has been created using these commands (basically):
+# $ gnulib-tool --create-testdir --dir=gnulib getopt strsep
+# $ eautoreconf
+# $ econf
+# $ make maintainer-clean
+GNULIBV=1
 
 DESCRIPTION="Minimal baselayout for Gentoo Prefix installs"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="http://dev.gentoo.org/~grobian/distfiles/${P/-prefix/}.tar.bz2"
+SRC_URI="
+	http://dev.gentoo.org/~grobian/distfiles/${P/-prefix/}.tar.bz2
+	http://dev.gentoo.org/~haubi/distfiles/${P/-prefix/}-gnulib-${GNULIBV}.tar.bz2
+"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +32,6 @@ DEPEND=">=sys-apps/portage-2.2.01"
 RDEPEND=">=sys-libs/readline-5.0-r1
 	>=app-shells/bash-3.1_p7
 	>=sys-apps/coreutils-5.2.1
-	ppc-aix? ( dev-libs/gnulib )
 	kernel_Darwin? ( sys-process/pidof-bsd )
 	kernel_FreeBSD? ( sys-process/pidof-bsd )"
 
@@ -51,7 +64,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P/-prefix/}-aix.patch
 	epatch "${FILESDIR}"/${P/-prefix/}-darwin-kvm.patch
 	epatch "${FILESDIR}"/${P/-prefix/}-solaris.patch
-	epatch "${FILESDIR}"/${P/-prefix/}-strsep.patch # for solaris
+	epatch "${FILESDIR}"/${P/-prefix/}-libsvar.patch
 
 	# The consoletype application in this form will only work on Linux
 	[[ ${CHOST} == *-linux-* ]] || epatch "${FILESDIR}"/${P/-prefix/}-prefix-no-consoletype.patch
@@ -69,18 +82,35 @@ src_prepare() {
 		sbin/rc-services.sh
 	# add the host OS MANPATH
 	echo 'MANPATH="/usr/share/man"' > etc/env.d/99basic || die "can't make file"
+
+	# need to include gnulib's <config.h> first
+	sed -i -e '1i#include <config.h>' $(find . -name '*.c') || die "Cannot utilize gnulib"
+
+	# prepare gnulib
+	cd "${WORKDIR}"/gnulib || die
+	eautoreconf
+}
+
+src_configure() {
+	cd "${WORKDIR}"/gnulib || die
+	default
 }
 
 src_compile() {
+	# build gnulib first
+	cd "${WORKDIR}"/gnulib || die
+	emake || die "Cannot build gnulib"
+	cd "${S}"
+
+	# use gnulib
+	append-flags -I"${WORKDIR}"/gnulib -I"${WORKDIR}"/gnulib/gllib
+	append-ldflags -L"${WORKDIR}"/gnulib/gllib
+	append-libs gnu
+
 	local libdir="lib"
 
 	[[ ${SYMLINK_LIB} == "yes" ]] && libdir=$(get_abi_LIBDIR "${DEFAULT_ABI}")
 
-	if [[ ${CHOST} == *-aix* ]]; then
-		append-flags -I"${EPREFIX}"/usr/$(get_libdir)/gnulib/include
-		append-ldflags -L"${EPREFIX}"/usr/$(get_libdir)/gnulib/lib
-		append-ldflags -lgnu # no LIBS makefile variable
-	fi
 	make -C "${S}"/src \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC) ${LDFLAGS}" \
