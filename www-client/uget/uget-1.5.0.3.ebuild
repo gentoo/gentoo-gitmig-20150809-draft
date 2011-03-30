@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.3.ebuild,v 1.2 2011/03/29 12:57:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.5.0.3.ebuild,v 1.3 2011/03/30 11:04:19 ssuominen Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND="
 	>=net-misc/curl-7.10
 	>=x11-libs/gtk+-2.4:2
 	gstreamer? ( media-libs/gstreamer )
-	libnotify? ( x11-libs/libnotify )
+	libnotify? ( <x11-libs/libnotify-0.7 )
 	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
