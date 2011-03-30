@@ -6,6 +6,10 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
+	<maintainer>
+		<email>ultrabug@gentoo.org</email>
+		<name>Alexys Jacob</name>
+	</maintainer>
 	<longdescription lang="en">
 	MongoDB (from "humongous") is a scalable, high-performance, open source,
 	schema-free, document-oriented database. Written in C++, MongoDB features:
