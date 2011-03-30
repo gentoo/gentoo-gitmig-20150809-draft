@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.5.5.ebuild,v 1.2 2011/03/02 07:40:40 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.5.5.ebuild,v 1.3 2011/03/30 17:25:19 ultrabug Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ DESCRIPTION="A high-performance, open source, schema-free document-oriented data
 HOMEPAGE="http://www.mongodb.org"
 SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz"
 
-LICENSE="AGPL-3"
+LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

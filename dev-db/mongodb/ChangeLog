@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.12 2011/03/30 17:15:54 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.13 2011/03/30 17:25:19 ultrabug Exp $
+
+  30 Mar 2011; Ultrabug <ultrabug@gentoo.org> mongodb-1.2.4.ebuild,
+  mongodb-1.4.4.ebuild, mongodb-1.5.5.ebuild, mongodb-1.6.0.ebuild:
+  correct LICENSE, thanks to Johan Bergström. fix #340108
 
   30 Mar 2011; Ultrabug <ultrabug@gentoo.org> metadata.xml:
   add ultrabug as maintainer
