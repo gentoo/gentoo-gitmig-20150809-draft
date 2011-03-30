@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sselp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/ChangeLog,v 1.7 2011/01/22 14:40:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sselp/ChangeLog,v 1.8 2011/03/30 15:26:12 jer Exp $
+
+  30 Mar 2011; Jeroen Roovers <jer@gentoo.org> sselp-0.2.ebuild:
+  Stable for HPPA too.
 
   22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sselp-0.2.ebuild:
   x86 stable wrt bug #349630
