@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.4-r1.ebuild,v 1.7 2011/03/08 18:30:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.4-r1.ebuild,v 1.8 2011/03/30 08:40:24 xmw Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://oss.oetiker.ch/mrtg/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
