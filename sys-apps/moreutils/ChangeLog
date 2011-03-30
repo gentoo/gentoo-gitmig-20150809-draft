@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.22 2011/03/29 19:40:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.23 2011/03/30 16:44:24 jer Exp $
+
+  30 Mar 2011; Jeroen Roovers <jer@gentoo.org> moreutils-0.43.ebuild,
+  moreutils-0.44.ebuild:
+  Marked ~hppa (bug #361155).
 
 *moreutils-0.44 (29 Mar 2011)
 
