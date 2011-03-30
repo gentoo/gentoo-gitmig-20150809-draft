@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/netbeans-ide-7.0_rc1.ebuild,v 1.1 2011/03/30 09:56:18 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/netbeans-ide-7.0_rc1.ebuild,v 1.2 2011/03/30 19:22:49 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -230,7 +230,7 @@ src_prepare() {
 	java-pkg_jar-from --into libs.svnClientAdapter.javahl/external subversion svn-javahl.jar svnjavahl-1.6.0.jar
 	# java-pkg_jar-from --into libs.svnClientAdapter.svnkit/external trilead-ssh2 trilead-ssh2.jar trilead.jar
 	java-pkg_jar-from --into libs.xerces/external xerces-2 xercesImpl.jar xerces-2.8.0.jar
-	java-pkg_jar-from --virtual --into servletapi/external servlet-api-2.2 servlet.jar servlet-2.2.jar
+	java-pkg_jar-from --into servletapi/external tomcat-servlet-api-2.2 servlet.jar servlet-2.2.jar
 	java-pkg_jar-from --into xml.jaxb.api/external sun-jaf activation.jar activation.jar
 	# java-pkg_jar-from --into xml.jaxb.api/external jaxb-2 jaxb-api.jar jaxb-api.jar
 	java-pkg_jar-from --into xml.jaxb.api/external jsr173 jsr173.jar jsr173_api.jar
