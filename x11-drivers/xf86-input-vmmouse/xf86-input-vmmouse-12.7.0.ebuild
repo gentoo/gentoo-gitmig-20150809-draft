@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/xf86-input-vmmouse-12.7.0.ebuild,v 1.4 2011/03/30 20:51:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/xf86-input-vmmouse-12.7.0.ebuild,v 1.5 2011/03/30 20:58:57 ssuominen Exp $
 
 EAPI=3
 
@@ -22,6 +22,8 @@ pkg_setup() {
 		--with-hal-callouts-dir=/punt
 		--with-hal-fdi-dir=/punt
 		"
+
+	xorg-2_pkg_setup
 }
 
 src_install() {
