@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.48 2010/11/22 16:54:19 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.49 2011/03/30 09:32:04 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> Mail-DKIM-0.39.ebuild:
+  added ~arm (bug 302981)
 
 *Mail-DKIM-0.39 (22 Nov 2010)
 
