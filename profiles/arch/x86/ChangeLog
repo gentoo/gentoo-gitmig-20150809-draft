@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.60 2011/03/24 13:11:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.61 2011/03/30 20:06:32 chithanh Exp $
+
+  30 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  use.mask:
+  Unmask video_cards_qxl
 
   24 Mar 2011; Jim Ramsay <lack@gentoo.org> package.use.mask:
   Bug 360235: Clean up USE mask for www-plugins/adobe-flash

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.120 2011/03/28 22:10:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.121 2011/03/30 20:06:32 chithanh Exp $
+
+  30 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  use.mask:
+  Unmask video_cards_qxl
 
   28 Mar 2011; Luca Barbato <lu_zero@gentoo.org> package.use.mask:
   Unmask bluray and vdpau for mplayer2

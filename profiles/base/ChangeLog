@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.238 2011/03/30 13:10:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.239 2011/03/30 20:06:32 chithanh Exp $
+
+  30 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  use.mask:
+  Mask video_cards_qxl
 
   30 Mar 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   bda useflag on vlc is gone, no need to mask it
