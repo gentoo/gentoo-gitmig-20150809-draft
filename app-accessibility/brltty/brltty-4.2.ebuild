@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.6 2011/03/29 22:37:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.7 2011/03/30 18:05:22 williamh Exp $
 
-EAPI="2"
+EAPI="4"
 FINDLIB_USE="ocaml"
 
 inherit findlib eutils multilib toolchain-funcs java-pkg-opt-2 flag-o-matic \
@@ -17,7 +17,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="+api +beeper bluetooth +contracted-braille doc +fm gpm iconv icu
 		java +learn-mode +midi nls ocaml +pcm python usb +speech
-		static tcl X"
+		tcl X"
+REQUIRED_USE="doc? ( api )
+	java? ( api )
+	ocaml? ( api )
+	python? ( api )
+	tcl? ( api )"
 
 COMMON_DEP="bluetooth? ( net-wireless/bluez )
 	gpm? ( >=sys-libs/gpm-1.20 )
@@ -75,7 +80,6 @@ src_configure() {
 		$(use_enable pcm pcm-support) \
 		$(use_enable python python-bindings) \
 		$(use_enable speech speech-support) \
-		$(use_enable static standalone-programs) \
 		$(use_enable tcl tcl-bindings) \
 		$(use_enable X x) \
 		$(use_with bluetooth bluetooth-package) \
@@ -126,7 +130,7 @@ src_install() {
 	dodoc CONTRIBUTORS ChangeLog HISTORY README* TODO BRLTTY-*.txt
 	dohtml -r Manual-BRLTTY
 	if use doc; then
-		dohtml -r Manual-BRLAPI
+		dohtml -r Manual-BrlAPI
 		dodoc BrlAPI-*.txt
 	fi
 }
