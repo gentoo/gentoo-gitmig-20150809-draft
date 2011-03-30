@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.30 2011/03/26 20:54:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.31 2011/03/30 10:50:00 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> libmemcache-1.4.0_rc2-r1.ebuild:
+  arm stable (bug 327725)
 
   26 Mar 2011; Tobias Klausmann <klausman@gentoo.org>
   libmemcache-1.4.0_rc2-r1.ebuild:
