@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110129.ebuild,v 1.2 2011/02/12 20:19:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110129.ebuild,v 1.3 2011/03/30 09:05:21 pacho Exp $
 
 inherit emul-linux-x86
 
@@ -9,7 +9,9 @@ KEYWORDS="-* amd64"
 
 DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
-	~app-emulation/emul-linux-x86-xlibs-${PV}"
+	~app-emulation/emul-linux-x86-xlibs-${PV}
+	~app-emulation/emul-linux-x86-opengl-${PV}"
+# RDEPEND on opengl stuff shouldn't be needed, but add it anyway until bug #354943 is properly solved
 
 src_unpack() {
 	query_tools="${S}/usr/bin/gtk-query-immodules-2.0|${S}/usr/bin/gdk-pixbuf-query-loaders|${S}/usr/bin/pango-querymodules"

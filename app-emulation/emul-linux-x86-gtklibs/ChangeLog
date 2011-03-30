@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.85 2011/02/12 20:19:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.86 2011/03/30 09:05:21 pacho Exp $
+
+  30 Mar 2011; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-gtklibs-20110129.ebuild:
+  RDEPEND on opengl stuff shouldn't be needed, but add it anyway until bug
+  #354943 is properly solved.
 
   12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-gtklibs-20110129.ebuild:
