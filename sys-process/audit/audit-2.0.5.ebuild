@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.4 2011/03/30 17:20:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.5 2011/03/30 17:23:04 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -60,10 +60,10 @@ src_prepare() {
 	if ! use ldap; then
 		sed -i \
 			-e '/^AC_OUTPUT/s,audisp/plugins/zos-remote/Makefile,,g' \
-			"${S}"/configure.ac
+			"${S}"/configure.ac || die
 		sed -i \
 			-e '/^SUBDIRS/s,zos-remote,,g' \
-			"${S}"/audisp/plugins/Makefile.am
+			"${S}"/audisp/plugins/Makefile.am || die
 	fi
 
 	# Don't build static version of Python module.
