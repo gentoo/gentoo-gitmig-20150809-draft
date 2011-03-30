@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.200 2011/03/29 12:29:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.201 2011/03/30 15:29:31 chainsaw Exp $
+
+  30 Mar 2011; Tony Vroon <chainsaw@gentoo.org>
+  audacious-plugins-2.4.4-r1.ebuild, audacious-plugins-2.5_alpha1.ebuild:
+  Replace explicit ffmpeg depend with the ffmpeg virtual for libav
+  compatibility. As suggested by "tbartdev" in bug #361285.
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org>
   audacious-plugins-2.2-r2.ebuild, audacious-plugins-2.4.0.ebuild,

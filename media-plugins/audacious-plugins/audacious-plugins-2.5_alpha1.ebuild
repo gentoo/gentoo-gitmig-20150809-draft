@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5_alpha1.ebuild,v 1.5 2011/03/28 22:22:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5_alpha1.ebuild,v 1.6 2011/03/30 15:29:31 chainsaw Exp $
 
 EAPI=3
 
@@ -31,7 +31,7 @@ RDEPEND="app-arch/unzip
 	cdda? ( >=media-libs/libcddb-1.2.1
 		>=dev-libs/libcdio-0.79-r1 )
 	cue? ( media-libs/libcue )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	flac? ( >=media-libs/libvorbis-1.0
 		>=media-libs/flac-1.2.1-r1 )
 	fluidsynth? ( media-sound/fluidsynth )
