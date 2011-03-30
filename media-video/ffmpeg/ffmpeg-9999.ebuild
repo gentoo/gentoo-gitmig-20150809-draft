@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.33 2011/03/30 11:57:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.34 2011/03/30 12:07:28 aballier Exp $
 
 EAPI="2"
 
@@ -28,7 +28,13 @@ SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
-IUSE="+3dnow +3dnowext alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
+IUSE="
+	+3dnow +3dnowext alsa altivec amr avx bindist +bzip2 cpudetection
+	custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables
+	ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp
+	schroedinger sdl speex +ssse3 static-libs test theora threads truetype v4l
+	v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	"
 
 VIDEO_CARDS="nvidia"
 
@@ -58,6 +64,7 @@ RDEPEND="
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
+	truetype? ( media-libs/freetype:2 )
 	vaapi? ( x11-libs/libva )
 	video_cards_nvidia? ( vdpau? ( x11-libs/libvdpau ) )
 	vpx? ( media-libs/libvpx )
@@ -134,6 +141,7 @@ src_configure() {
 	done
 	# libavfilter options
 	use frei0r && myconf="${myconf} --enable-frei0r"
+	use truetype && myconf="${myconf} --enable-libfreetype"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf="${myconf} --enable-pthreads"
@@ -146,7 +154,7 @@ src_configure() {
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
 
 	# CPU features
-	for i in mmx ssse3 altivec ; do
+	for i in mmx ssse3 altivec avx ; do
 		use ${i} || myconf="${myconf} --disable-${i}"
 	done
 	use mmxext || myconf="${myconf} --disable-mmx2"

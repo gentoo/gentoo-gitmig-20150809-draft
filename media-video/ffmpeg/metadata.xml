@@ -12,6 +12,7 @@
       3dnowext in /proc/cpuinfo to know whether your CPU supports it).
     </flag>
     <flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
+    <flag name="avx">Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)</flag>
     <flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)</flag>
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
 	<flag name="faac">Use external faac library for AAC encoding</flag>
