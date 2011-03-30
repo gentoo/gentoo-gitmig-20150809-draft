@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unace
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.37 2010/09/19 18:01:31 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.38 2011/03/30 08:55:01 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> unace-2.5-r2.ebuild:
+  added ~arm (bug 302981)
 
   19 Sep 2010; Raúl Porcel <armin76@gentoo.org> unace-2.5-r2.ebuild:
   Add ~s390 wrt #215366
