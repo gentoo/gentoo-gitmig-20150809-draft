@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12634 2011/03/30 18:23:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12635 2011/03/30 18:39:59 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -120,10 +120,13 @@ sys-block/unieject
 net-analyzer/iptraf
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Mar 2011)
-# Orphaned library with bad habit of spreading around the system from libtool's
-# files. Not used by anything in tree. If you have problems after removal,
-# look into using lafilefixer or revdep-rebuild.
-# Removal in 30 days.
+# Orphaned libraries. No longer required.
+# emerge -C eggdbus glitz
+# If you have problems, use revdep-rebuild and lafilefixer
+# to correct your system. Don't symlink anything and don't
+# try to restore these.
+# Remove this mask message in 60 days.
+media-libs/glitz
 dev-libs/eggdbus
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Mar 2011)
@@ -342,11 +345,6 @@ dev-util/perf
 # Broken ldflags, should not work
 # Masked for removal in 30 days per bug #335586
 media-libs/glide-v3
-
-# Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2011)
-# No longer needed package wrt #330397. Removal in 30 days.
-# Note: Make sure to revdep-rebuild after unmerging.
-media-libs/glitz
 
 # Torsten Veller <tove@gentoo.org> (06 Mar 2011)
 # Mask for testing
