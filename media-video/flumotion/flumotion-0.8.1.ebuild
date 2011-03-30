@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.4 2011/03/30 20:27:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.5 2011/03/30 20:30:11 ssuominen Exp $
 
 EAPI=3
 
@@ -26,17 +26,17 @@ IUSE="doc test"
 # dev-python/imaging
 
 # These are from README
-RDEPEND="media-libs/gstreamer:0.10
-	media-libs/gst-plugins-base:0.10
-	media-libs/gst-plugins-good:0.10
-	dev-python/gst-python:0.10
+RDEPEND="dev-python/gst-python:0.10
+	dev-python/kiwi
 	dev-python/pycairo
 	=dev-python/pygtk-2*
-	dev-python/kiwi
 	dev-python/twisted
-	media-plugins/gst-plugins-ogg
-	media-plugins/gst-plugins-theora
-	media-plugins/gst-plugins-vorbis"
+	media-libs/gstreamer:0.10
+	media-libs/gst-plugins-base:0.10
+	media-libs/gst-plugins-good:0.10
+	media-plugins/gst-plugins-ogg:0.10
+	media-plugins/gst-plugins-theora:0.10
+	media-plugins/gst-plugins-vorbis:0.10"
 # These are from README and error and trial FEATURES="test" Import's
 DEPEND="${RDEPEND}
 	sys-devel/gettext
