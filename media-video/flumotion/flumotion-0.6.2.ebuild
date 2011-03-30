@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.6.2.ebuild,v 1.2 2011/03/28 22:32:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.6.2.ebuild,v 1.3 2011/03/30 18:58:04 ssuominen Exp $
 
 EAPI="3"
 
@@ -94,6 +94,9 @@ src_install() {
 
 	keepdir /var/run/flumotion
 	keepdir /var/log/flumotion
+
+	# punt /usr/share/hal/fdi/policy/20thirdparty/91-flumotion-device-policy.fdi
+	rm -rf "${D}"/usr/share/hal
 }
 
 pkg_postinst() {
