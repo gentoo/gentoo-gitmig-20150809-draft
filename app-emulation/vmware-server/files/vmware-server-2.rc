@@ -1,10 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/files/vmware-server-2.rc,v 1.1 2009/05/09 21:55:17 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/files/vmware-server-2.rc,v 1.2 2011/03/30 16:54:24 vadimk Exp $
 
 depend() {
-	need localmount hald
+	need localmount
 	use logger net
 	after samba
 }
