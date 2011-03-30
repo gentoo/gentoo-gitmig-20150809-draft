@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.1_p20110313.ebuild,v 1.2 2011/03/17 15:27:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.1_p20110313.ebuild,v 1.3 2011/03/30 16:24:19 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit autotools
 
 DESCRIPTION="A lightweight, desktop-independant daemon for disks mounting and power managing"
@@ -28,16 +28,9 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-src_prepare() {
-	eautoreconf
-}
-
-src_configure() {
+pkg_setup() {
 	export VALAC="$(type -P valac-0.12)"
-	econf
+	DOCS="AUTHORS ChangeLog README"
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README
-}
+src_prepare() { eautoreconf; }
