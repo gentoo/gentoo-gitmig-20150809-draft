@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.134 2011/03/30 13:06:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.135 2011/03/30 13:10:27 aballier Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ else
 	KEYWORDS=""
 fi
 IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
-	+avformat bda bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
+	+avformat bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
 	directfb directx dshow dts dvb dvd dxva2 elibc_glibc egl +encode
 	fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
@@ -55,7 +55,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+macosx-vout matroska media-library mmx modplug mp3 mpeg mtp musepack
 	ncurses neon ogg omxil opengl optimisememory oss png portaudio +postproc
 	projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger sdl
-	sdl-image shine shout sid skins snapshot speex sqlite sse svg +swscale
+	sdl-image shine shout sid skins speex sqlite sse svg +swscale
 	switcher taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm vorbis
 	waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
@@ -215,7 +215,6 @@ src_configure() {
 		$(use_enable avahi bonjour) \
 		$(use_enable avcodec) \
 		$(use_enable avformat) \
-		$(use_enable bda) \
 		$(use_enable bidi fribidi) \
 		$(use_enable bluray) \
 		$(use_enable cdda vcd) \
@@ -298,7 +297,6 @@ src_configure() {
 		$(use_enable sid) \
 		$(use_enable shout) \
 		$(use_enable skins skins2) \
-		$(use_enable snapshot) \
 		$(use_enable speex) \
 		$(use_enable sqlite) \
 		$(use_enable sse) \

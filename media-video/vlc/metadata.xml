@@ -11,7 +11,6 @@
 	<flag name="audioqueue">Enables AudioQueue audio module for Mac OS X.</flag>
 	<flag name="avcodec">Enables libavcodec support for video/audio	encoding/decoding. libavcodec is part of FFmpeg.</flag>
 	<flag name="avformat">Enables libformat support for reading and writing various media containers. libavformat is part of FFmpeg.</flag>
-	<flag name="bda">Enables Win32 DirectShow BDA support.</flag>
 	<flag name="bluray">Enables libbluray for Blu-ray disc support.</flag>
     <flag name="dc1394">Enables IIDC cameras support.</flag>
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
@@ -65,7 +64,6 @@
     <flag name="shine">Enables shine fixed point mp3 encoder.</flag>
     <flag name="shout">Enables libshout output.</flag>
     <flag name="skins">Enables support for the skins2 interface.</flag>
-	<flag name="snapshot">Enables the snapshot vout plugin (*NOT* mandatory in order to be able to take snapshots).</flag>
     <flag name="stream">Enables sout module for audio/video data streaming/transcoding/etc..</flag>
 	<flag name="switcher">Enables MPEG2 video switcher stream output module.</flag>
 	<flag name="swscale">Enables image scaling and conversion via libswscale (part of FFmpeg).</flag>
