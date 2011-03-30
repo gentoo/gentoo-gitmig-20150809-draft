@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.3.6.ebuild,v 1.5 2011/01/07 17:02:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.3.6.ebuild,v 1.6 2011/03/30 18:38:28 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -33,7 +33,7 @@ src_prepare() {
 
 	2to3_conversion() {
 		[[ "${PYTHON_ABI}" == 2.* ]] && return
-		2to3-${PYTHON_ABI} -n -w --no-diffs mako
+		2to3-${PYTHON_ABI} -nw --no-diffs mako
 	}
 	python_execute_function -s 2to3_conversion
 }
