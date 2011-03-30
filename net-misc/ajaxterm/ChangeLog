@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ajaxterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ChangeLog,v 1.10 2011/01/02 14:50:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ChangeLog,v 1.11 2011/03/30 23:19:19 arfrever Exp $
+
+  30 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ajaxterm-0.10.ebuild:
+  Use Python 2 (bug #315819).
 
   02 Jan 2011; Michael Weber <xmw@gentoo.org> ajaxterm-0.10.ebuild:
   add ~arm keyword (bug 347563)
