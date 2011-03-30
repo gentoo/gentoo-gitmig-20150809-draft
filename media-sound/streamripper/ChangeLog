@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/streamripper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.67 2010/03/12 09:37:30 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.68 2011/03/30 11:26:18 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> streamripper-1.64.6.ebuild:
+  added ~arm (bug 302981)
 
 *streamripper-1.64.6 (12 Mar 2010)
 
