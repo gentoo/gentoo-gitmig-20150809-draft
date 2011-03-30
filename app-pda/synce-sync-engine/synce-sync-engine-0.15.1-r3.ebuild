@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1-r2.ebuild,v 1.2 2011/03/28 04:11:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1-r3.ebuild,v 1.1 2011/03/30 18:20:35 ssuominen Exp $
 
 EAPI=3
 
@@ -59,7 +59,9 @@ src_install() {
 			insinto /usr/$(get_libdir)/libopensync1/python-plugins
 			newins ${plug}3x.py synce-plugin.py || die
 		else
-			insinto /usr/$(get_libdir)/opensync/plugins
+			# See OPENSYNC_PYTHONPLG_DIR variable in libopensync-python-plugin-0.22
+			# to verify path for python plugins.
+			insinto /usr/$(get_libdir)/opensync/python-plugins
 			newins ${plug}2x.py synce-plugin.py || die
 		fi
 
