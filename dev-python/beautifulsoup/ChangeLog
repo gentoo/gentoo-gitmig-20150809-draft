@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.52 2011/03/22 10:52:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.53 2011/03/30 04:01:48 darkside Exp $
+
+  30 Mar 2011; Jeremy Olexa <darkside@gentoo.org>
+  beautifulsoup-3.2.0.ebuild:
+  align prefix keywords
 
   22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -beautifulsoup-3.0.8.1.ebuild:
