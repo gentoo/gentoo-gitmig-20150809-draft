@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.16 2011/03/30 20:09:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.17 2011/03/30 20:30:37 dilfridge Exp $
+
+  30 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  collectd-4.10.3.ebuild, metadata.xml:
+  Added support for sys-power/nut
 
 *collectd-4.10.3 (30 Mar 2011)
 

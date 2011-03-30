@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.3.ebuild,v 1.1 2011/03/30 20:09:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.3.ebuild,v 1.2 2011/03/30 20:30:37 dilfridge Exp $
 
 EAPI=3
 
@@ -21,13 +21,13 @@ IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin"
 COLLECTD_IMPOSSIBLE_PLUGINS="netapp pinba xmms"
 
 # Plugins that still need some work
-COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc nut modbus"
+COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc modbus"
 
 # Plugins that have been (compile) tested and can be enabled via COLLECTD_PLUGINS
 COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswitch
 	cpu cpufreq curl curl_json curl_xml dbi df disk dns email entropy exec filecount fscache gmond
 	hddtemp interface ipmi iptables irq java libvirt load madwifi mbmon memcachec
-	memcached memory multimeter mysql netlink network nfs nginx ntpd olsrd
+	memcached memory multimeter mysql netlink network nfs nginx ntpd nut olsrd
 	onewire openvpn perl ping postgresql powerdns processes protocols python
 	rrdcached sensors serial snmp swap table tail tcpconns teamspeak2 ted thermal
 	tokyotyrant uptime users vmem vserver wireless csv exec logfile network
@@ -67,6 +67,7 @@ COMMON_DEPEND="
 	collectd_plugins_nginx?			( net-misc/curl )
 	collectd_plugins_notify_desktop?	( x11-libs/libnotify )
 	collectd_plugins_notify_email?		( >=net-libs/libesmtp-1.0.4 dev-libs/openssl )
+	collectd_plugins_nut?			( sys-power/nut )
 	collectd_plugins_onewire?		( sys-fs/owfs )
 	collectd_plugins_oracle?		( >=dev-db/oracle-instantclient-basic-11.2.0.1.0 )
 	collectd_plugins_perl?			( dev-lang/perl[ithreads] ( || ( sys-devel/libperl[ithreads] >=sys-devel/libperl-5.10 ) ) )
