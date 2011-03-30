@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.6.4.ebuild,v 1.1 2011/03/04 09:01:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.6.4.ebuild,v 1.2 2011/03/30 14:12:55 scarabeus Exp $
 
 EAPI=3
 
@@ -11,13 +11,12 @@ SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz"
 LICENSE="GPL-3 LGPL-3"
 KEYWORDS="~amd64 ~arm ~hppa ~sparc ~x86"
 SLOT="0"
-IUSE="dbi debug doc extras gnutls kerberos logrotate mysql oracle postgres relp snmp static-libs zlib"
+IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp static-libs zlib"
 
 DEPEND="dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
 	gnutls? ( net-libs/gnutls )
 	kerberos? ( virtual/krb5 )
-	logrotate? ( app-admin/logrotate )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	oracle? ( dev-db/oracle-instantclient-basic )
@@ -98,10 +97,8 @@ src_install() {
 		doins plugins/ompgsql/createDB.sql || die
 	fi
 
-	if use logrotate; then
-		insinto /etc/logrotate.d/
-		newins "${FILESDIR}/${BRANCH}/rsyslog.logrotate" rsyslog || die
-	fi
+	insinto /etc/logrotate.d/
+	newins "${FILESDIR}/${BRANCH}/rsyslog.logrotate" rsyslog || die
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.38 2011/03/25 09:27:20 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.39 2011/03/30 14:12:55 scarabeus Exp $
+
+  30 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> rsyslog-5.6.4.ebuild,
+  rsyslog-5.6.5.ebuild:
+  Drop logrotate useflag. Fixes bug #344175.
 
   25 Mar 2011; Ultrabug <ultrabug@gentoo.org> rsyslog-5.6.5.ebuild:
   add back virtual/logger provider waiting for migration (#358881)
