@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.2 2011/03/30 20:02:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.8.1.ebuild,v 1.3 2011/03/30 20:11:58 ssuominen Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND=""
+RDEPEND="" # Where is this documented?
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	doc? ( dev-python/epydoc )
@@ -50,6 +50,14 @@ src_install() {
 	emake -j1 DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README RELEASE TODO
 
+	keepdir /var/log/flumotion
+	keepdir /var/run/flumotion
+
+	newinitd "${FILESDIR}"/flumotion-init-0.2.0 flumotion
+
+	# /usr/share/hal/fdi/policy/20thirdparty/91-flumotion-device-policy.fdi
+	rm -rf "${D}"/usr/share/hal
+
 	dodir /etc/flumotion
 	dodir /etc/flumotion/managers
 	dodir /etc/flumotion/managers/default
@@ -64,18 +72,10 @@ src_install() {
 	insinto /etc/flumotion
 	doins default.pem || die
 	popd
-
-	keepdir /var/log/flumotion
-	keepdir /var/run/flumotion
-
-	newinitd "${FILESDIR}"/flumotion-init-0.2.0 flumotion
-
-	# /usr/share/hal/fdi/policy/20thirdparty/91-flumotion-device-policy.fdi
-	rm -rf "${D}"/usr/share/hal
 }
 
 pkg_postinst() {
-	if ! enewgroup flumotion || ! enewuser flumotion -1 -1 /usr/share/flumotion	flumotion,audio,video,sys; then
+	if ! enewgroup flumotion || ! enewuser flumotion -1 -1 /usr/share/flumotion flumotion,audio,video,sys; then
 		die "Unable to add flumotion user and flumotion group."
 	fi
 
