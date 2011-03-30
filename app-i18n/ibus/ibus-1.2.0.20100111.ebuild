@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.8 2011/02/13 19:15:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.9 2011/03/30 11:08:00 angelos Exp $
 
 EAPI="1"
 inherit confutils eutils gnome2-utils multilib python
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="doc nls"
 
-RDEPEND=">=dev-libs/glib-2.18
-	>=x11-libs/gtk+-2
-	>=gnome-base/gconf-2.12
-	>=gnome-base/librsvg-2
+RDEPEND=">=dev-libs/glib-2.18:2
+	x11-libs/gtk+:2
+	>=gnome-base/gconf-2.12:2
+	gnome-base/librsvg:2
 	sys-apps/dbus
 	app-text/iso-codes
 	x11-libs/libX11

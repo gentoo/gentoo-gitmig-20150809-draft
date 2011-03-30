@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r1.ebuild,v 1.3 2011/02/13 19:15:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r1.ebuild,v 1.4 2011/03/30 11:08:00 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc +gconf gtk introspection nls +python vala X"
 
-RDEPEND=">=dev-libs/glib-2.18
-	gconf? ( >=gnome-base/gconf-2.12 )
-	>=gnome-base/librsvg-2
+RDEPEND=">=dev-libs/glib-2.18:2
+	gconf? ( >=gnome-base/gconf-2.12:2 )
+	gnome-base/librsvg:2
 	sys-apps/dbus
 	app-text/iso-codes
 	gtk? (
