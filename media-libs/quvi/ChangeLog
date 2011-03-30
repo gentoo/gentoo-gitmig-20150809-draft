@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.20 2011/03/13 21:00:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.21 2011/03/30 04:45:14 radhermit Exp $
+
+*quvi-0.2.14-r1 (30 Mar 2011)
+
+  30 Mar 2011; Tim Harder <radhermit@gentoo.org> +quvi-0.2.14-r1.ebuild,
+  +files/quvi-0.2.14-docs.patch, +files/quvi-0.2.14-youtube-video-ids.patch:
+  Revision bump. Update to EAPI 4, apply upstream patch to fix totem-pl-parser
+  and youtube videos (bug #360643 by Pacho Ramos), use bash syntax instead of
+  versionator eclass for SRC_URI, and remove empty doc directory.
 
   13 Mar 2011; Tim Harder <radhermit@gentoo.org> -quvi-0.2.11.ebuild,
   -quvi-0.2.12.ebuild:
