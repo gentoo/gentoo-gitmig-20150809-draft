@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.31 2011/01/19 20:41:45 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.32 2011/03/30 11:38:39 xmw Exp $
+
+  30 Mar 2011; Michael Weber <xmw@gentoo.org> motion-3.2.11.1.ebuild:
+  added ~arm (bug 302981)
 
   19 Jan 2011; Dror Levin <spatz@gentoo.org> motion-3.2.11.1.ebuild:
   Change dep to virtual/jpeg, bug 347977.
