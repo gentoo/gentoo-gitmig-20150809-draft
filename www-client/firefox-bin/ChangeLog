@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.50 2011/03/27 13:07:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.51 2011/03/30 23:16:13 ssuominen Exp $
+
+  30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  firefox-bin-3.6.16.ebuild:
+  Install libnotify.so.1 from emul-linux-x86-gtklibs-20110129 to /opt/firefox
+  wrt #360443.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   firefox-bin-3.6.15.ebuild, firefox-bin-3.6.16.ebuild:

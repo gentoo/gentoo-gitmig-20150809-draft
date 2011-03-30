@@ -1,6 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.16.ebuild,v 1.3 2011/03/27 13:07:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-3.6.16.ebuild,v 1.4 2011/03/30 23:16:13 ssuominen Exp $
+
 EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
@@ -19,7 +20,8 @@ MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
-SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2"
+SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2
+	mirror://gentoo/libnotify.so.1.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
@@ -92,6 +94,7 @@ linguas() {
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
+	unpack libnotify.so.1.bz2
 
 	linguas
 	for X in ${linguas}; do
@@ -160,6 +163,11 @@ fi
 
 	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins
 	dosym /usr/"$(get_libdir)"/nsbrowser/plugins ${MOZILLA_FIVE_HOME}/plugins || die
+
+	# This is a copy of 32bit libnotify.so.1 from app-emulation/emul-linux-x86-gtklibs-20110129.
+	# http://bugs.gentoo.org/show_bug.cgi?id=360443.
+	exeinto /opt/firefox
+	doexe "${WORKDIR}"/libnotify.so.1 || die
 }
 
 pkg_postinst() {
