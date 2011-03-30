@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.6.ebuild,v 1.4 2011/03/29 20:00:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.6.ebuild,v 1.5 2011/03/30 07:56:06 nirbheek Exp $
 
 EAPI="3"
 
@@ -102,11 +102,13 @@ src_prepare() {
 	if ! use test; then
 		# don't waste time building tests
 		strip_builddir SRC_SUBDIRS tests Makefile.am
+		strip_builddir SRC_SUBDIRS tests Makefile.in
 	fi
 
 	if ! use examples; then
 		# don't waste time building demos
 		strip_builddir SRC_SUBDIRS demos Makefile.am
+		strip_builddir SRC_SUBDIRS demos Makefile.in
 	fi
 }
 
