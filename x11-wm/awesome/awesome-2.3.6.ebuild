@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.6.ebuild,v 1.1 2009/04/19 16:08:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.6.ebuild,v 1.2 2011/03/30 11:13:11 angelos Exp $
 
 EAPI="2"
 inherit toolchain-funcs eutils
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/confuse-2.6
 	x11-libs/libX11
 	x11-libs/libXrandr
 	x11-libs/libXinerama
-	gtk? ( x11-libs/gtk+ )
+	gtk? ( x11-libs/gtk+:2 )
 	!gtk? ( media-libs/imlib2 )"
 
 DEPEND="${RDEPEND}

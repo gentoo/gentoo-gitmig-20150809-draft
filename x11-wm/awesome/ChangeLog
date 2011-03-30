@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.118 2011/03/21 16:38:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.119 2011/03/30 11:13:11 angelos Exp $
+
+  30 Mar 2011; Christoph Mende <angelos@gentoo.org> awesome-2.3.6.ebuild:
+  Fix gtk+ slot deps
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> awesome-3.4.8.ebuild:
   ppc/ppc64 stable wrt #352249
