@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r4.ebuild,v 1.8 2009/10/19 21:09:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r4.ebuild,v 1.9 2011/03/30 11:12:30 angelos Exp $
 
 EAPI="2"
 inherit eutils fdo-mime flag-o-matic multilib toolchain-funcs
@@ -22,11 +22,11 @@ RDEPEND=">=dev-lang/python-2.4
 	gnome? (
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2
-		>=x11-libs/gtk+-2
+		x11-libs/gtk+:2
 		x11-libs/pango
 	)
 	gtk? (
-		>=x11-libs/gtk+-2
+		x11-libs/gtk+:2
 	)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
