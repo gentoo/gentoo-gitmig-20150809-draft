@@ -1,20 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.82.ebuild,v 1.5 2011/02/20 17:39:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.91.ebuild,v 1.1 2011/03/30 09:49:26 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit multilib eutils
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
 
-OUIDATE="20101219" # Needed because of bug #345263
+# Because of oui.txt changing from time to time without noticement, we need to supply it
+# ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
+# See bugs #345263 and #349473 for reference.
+OUIDATE="20110330" # Needed because of bug #345263
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
-	http://standards.ieee.org/regauth/oui/oui.txt -> oui-${OUIDATE}.txt"
+	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
 IUSE="alsa attrib caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmcia pnat test-programs usb"
 
@@ -23,25 +26,24 @@ CDEPEND="alsa? (
 	)
 	caps? ( >=sys-libs/libcap-ng-0.6.2 )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10 )
-	usb? ( dev-libs/libusb )
+		>=media-libs/gstreamer-0.10:0.10
+		>=media-libs/gst-plugins-base-0.10:0.10 )
+	usb? ( dev-libs/libusb:1 )
 	cups? ( net-print/cups )
 	>=sys-fs/udev-146[extras]
-	>=dev-libs/glib-2.14
+	>=dev-libs/glib-2.14:2
 	sys-apps/dbus
 	media-libs/libsndfile
-	>=dev-libs/libnl-1.1
 	!net-wireless/bluez-libs
 	!net-wireless/bluez-utils"
 DEPEND="sys-devel/flex
 	>=dev-util/pkgconfig-0.20
 	${CDEPEND}"
 RDEPEND="${CDEPEND}
-	consolekit? ( sys-auth/pambase[consolekit] )
+	consolekit? ( sys-auth/consolekit )
 	test-programs? (
 		dev-python/dbus-python
-		dev-python/pygobject )"
+		dev-python/pygobject:2 )"
 
 pkg_setup() {
 	if ! use consolekit; then
@@ -93,28 +95,28 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "make install failed"
-
-	dodoc AUTHORS ChangeLog README || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README
 
 	if use test-programs ; then
 		cd "${S}/test"
-		dobin simple-agent simple-service monitor-bluetooth || die
-		newbin list-devices list-bluetooth-devices || die
+		dobin simple-agent simple-service monitor-bluetooth
+		newbin list-devices list-bluetooth-devices
+		rm test-textfile.{c,o} || die # bug #356529
 		for b in apitest hsmicro hsplay test-* ; do
-			newbin "${b}" "bluez-${b}" || die
+			newbin "${b}" "bluez-${b}"
 		done
 		insinto /usr/share/doc/${PF}/test-services
-		doins service-* || die
+		doins service-*
 
 		cd "${S}"
 	fi
 
 	if use old-daemons; then
-		newconfd "${FILESDIR}/4.18/conf.d-hidd" hidd || die
-		newinitd "${FILESDIR}/init.d-hidd" hidd || die
-		newconfd "${FILESDIR}/conf.d-dund" dund || die
-		newinitd "${FILESDIR}/init.d-dund" dund || die
+		newconfd "${FILESDIR}/conf.d-hidd" hidd
+		newinitd "${FILESDIR}/init.d-hidd" hidd
+		newconfd "${FILESDIR}/conf.d-dund" dund
+		newinitd "${FILESDIR}/init.d-dund" dund
 	fi
 
 	insinto /etc/bluetooth
@@ -122,20 +124,19 @@ src_install() {
 		input/input.conf \
 		audio/audio.conf \
 		network/network.conf \
-		serial/serial.conf \
-		|| die
+		serial/serial.conf
 
 	insinto /$(get_libdir)/udev/rules.d/
-	newins "${FILESDIR}/${PN}-4.18-udev.rules" 70-bluetooth.rules || die
+	newins "${FILESDIR}/${PN}-4.18-udev.rules" 70-bluetooth.rules
 	exeinto /$(get_libdir)/udev/
-	newexe "${FILESDIR}/${PN}-4.18-udev.script" bluetooth.sh || die
+	newexe "${FILESDIR}/${PN}-4.18-udev.script" bluetooth.sh
 
-	newinitd "${FILESDIR}/bluetooth-init.d" bluetooth || die
-	newconfd "${FILESDIR}/4.60/bluetooth-conf.d" bluetooth || die
+	newinitd "${FILESDIR}/bluetooth-init.d" bluetooth
+	newconfd "${FILESDIR}/bluetooth-conf.d" bluetooth
 
 	# Install oui.txt as requested in bug #283791 and approved by upstream
 	insinto /var/lib/misc
-	newins "${DISTDIR}/oui-${OUIDATE}.txt" oui.txt || die
+	newins "${DISTDIR}/oui-${OUIDATE}.txt" oui.txt
 
 	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
 }
