@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.99.8.ebuild,v 1.1 2010/05/23 20:05:30 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.99.8.ebuild,v 1.2 2011/03/30 15:00:00 ssuominen Exp $
 
 inherit perl-module
 
@@ -10,10 +10,10 @@ SRC_URI="http://blinkenlights.ch/gnupod-dist/stable/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="aac ffmpeg flac mp3 ogg"
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	dev-perl/TimeDate
 	dev-perl/XML-Parser
 	>=dev-perl/MP3-Info-1.01
@@ -31,6 +31,7 @@ DEPEND="dev-lang/perl
 			  aac?  ( >=media-libs/faac-1.24 )
 			  mp3?  ( media-sound/lame )
 			  !aac? ( media-sound/lame ) )"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	econf
