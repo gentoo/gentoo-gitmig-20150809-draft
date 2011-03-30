@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-moto/libopensync-plugin-moto-0.22.ebuild,v 1.1 2011/03/30 18:17:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-moto/libopensync-plugin-moto-0.22.ebuild,v 1.2 2011/03/30 18:26:57 ssuominen Exp $
 
 EAPI=3
 
@@ -28,7 +28,7 @@ src_install() {
 	# configure.in at libopensync-plugin-python-0.22 package.
 	insinto /usr/$(get_libdir)/opensync/python-plugins
 	doins motosync.py || die
-	insinto /usr/share/opensync/defaults
-	doins moto-sync || die
+	exeinto /usr/share/opensync/defaults
+	doexe moto-sync || die
 	dodoc AUTHORS README
 }
