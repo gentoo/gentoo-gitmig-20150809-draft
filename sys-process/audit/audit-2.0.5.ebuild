@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.3 2011/02/07 21:38:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.4 2011/03/30 17:20:29 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -47,11 +47,11 @@ src_prepare() {
 	# Do not build GUI tools
 	sed -i \
 		-e '/AC_CONFIG_SUBDIRS.*system-config-audit/d' \
-		"${S}"/configure.ac
+		"${S}"/configure.ac || die
 	sed -i \
 		-e 's,system-config-audit,,g' \
 		-e '/^SUBDIRS/s,\\$,,g' \
-		"${S}"/Makefile.am
+		"${S}"/Makefile.am || die
 	rm -rf "${S}"/system-config-audit
 
 	# Probably goes away in 1.6.9
@@ -97,7 +97,7 @@ src_compile() {
 	building() {
 		emake \
 			PYTHON_VERSION="$(python_get_version)" \
-			pyexecdir="$(python_get_sitedir)"
+			pyexecdir="$(python_get_sitedir)" || die
 	}
 	local dir
 	for dir in ${PYTHON_DIRS}; do
@@ -106,14 +106,14 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 
 	installation() {
 		emake \
 			DESTDIR="${D}" \
 			PYTHON_VERSION="$(python_get_version)" \
 			pyexecdir="$(python_get_sitedir)" \
-			install
+			install || die
 	}
 	local dir
 	for dir in ${PYTHON_DIRS}; do
