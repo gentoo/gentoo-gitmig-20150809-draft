@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.2.14-r1.ebuild,v 1.1 2011/03/30 04:45:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.2.14-r1.ebuild,v 1.2 2011/03/30 20:48:31 radhermit Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE="doc examples test offensive static-libs"
 RDEPEND=">=net-misc/curl-7.18.0
 	dev-lang/lua[deprecated]"
 DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.68
 	dev-util/pkgconfig"
 
 # tests fetch data from live websites, so it's rather normal that they
