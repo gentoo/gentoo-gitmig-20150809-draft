@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.0.1.ebuild,v 1.2 2011/03/30 14:40:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.0.1.ebuild,v 1.3 2011/03/30 19:54:38 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="2"
@@ -92,7 +92,7 @@ src_configure() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS README NEWS || die
 
 	if use nsplugin; then
