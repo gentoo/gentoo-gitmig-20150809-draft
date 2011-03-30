@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.7.2.1.ebuild,v 1.4 2011/03/30 21:03:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.7.2.1.ebuild,v 1.5 2011/03/30 21:16:26 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -44,6 +44,6 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	dodoc doc/_sources/* || die
+	dodoc doc/_sources/* || die "dodoc failed"
 	dohtml -r doc/* || die
 }
