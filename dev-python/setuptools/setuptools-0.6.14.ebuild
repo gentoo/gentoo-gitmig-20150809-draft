@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.14.ebuild,v 1.14 2011/03/30 16:58:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.14.ebuild,v 1.15 2011/03/30 18:16:39 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,12 +32,11 @@ src_prepare() {
 	distutils_src_prepare
 
 	epatch "${FILESDIR}/${PN}-0.6_rc7-noexe.patch"
-
-	# Remove tests that access the network (bugs #198312, #191117)
-	rm setuptools/tests/test_packageindex.py
-
 	epatch "${FILESDIR}/distribute-0.6.12-disable_versioned_easy_install.patch"
 	epatch "${FILESDIR}/distribute-0.6.12-fix_deprecation_warnings.patch"
+
+	# Disable tests requiring network connection.
+	rm -f setuptools/tests/test_packageindex.py
 }
 
 src_test() {
