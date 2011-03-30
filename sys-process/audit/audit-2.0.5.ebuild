@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.5 2011/03/30 17:23:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.0.5.ebuild,v 1.6 2011/03/30 17:29:56 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -97,7 +97,7 @@ src_compile() {
 	building() {
 		emake \
 			PYTHON_VERSION="$(python_get_version)" \
-			pyexecdir="$(python_get_sitedir)" || die
+			pyexecdir="$(python_get_sitedir)"
 	}
 	local dir
 	for dir in ${PYTHON_DIRS}; do
@@ -113,7 +113,7 @@ src_install() {
 			DESTDIR="${D}" \
 			PYTHON_VERSION="$(python_get_version)" \
 			pyexecdir="$(python_get_sitedir)" \
-			install || die
+			install
 	}
 	local dir
 	for dir in ${PYTHON_DIRS}; do
