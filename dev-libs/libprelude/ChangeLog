@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.74 2011/03/29 22:34:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.75 2011/03/31 01:24:09 arfrever Exp $
+
+  31 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libprelude-1.0.0-r1.ebuild, +files/libprelude-1.0.0-ruby.patch:
+  Fix handling of bindings (bug #361195). Avoid warning about null runpaths in
+  Perl bindings (bug #350396).
 
   29 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libprelude-1.0.0-r1.ebuild:
