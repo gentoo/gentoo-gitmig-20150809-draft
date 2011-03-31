@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.6.6.ebuild,v 1.3 2011/02/11 19:11:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.6.6.ebuild,v 1.4 2011/03/31 20:07:00 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -39,6 +39,8 @@ S="${WORKDIR}/${MY_P}"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
+# In EAPI="4":
+# DISTUTILS_GLOBAL_OPTIONS=("2.*-cpython --with-cextensions")
 PYTHON_MODNAME="sqlalchemy sqlalchemy_nose"
 
 src_prepare() {
