@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.23 2011/03/18 16:45:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.24 2011/03/31 08:31:25 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Drop obslolete KDE entries
 
   18 Mar 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Mask media-plugins/gst-plugins-meta USE flags due missing keywords on deps.

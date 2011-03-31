@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.121 2011/03/30 20:06:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.122 2011/03/31 08:31:24 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  xmame is no longer in portage
 
   30 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   use.mask:

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.10 2010/05/30 18:49:40 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.11 2011/03/31 08:31:24 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  Drop mask on non-existant portage version.
 
   30 May 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask latex

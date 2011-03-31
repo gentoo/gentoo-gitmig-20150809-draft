@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.57 2011/03/20 17:02:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.58 2011/03/31 08:31:24 scarabeus Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (17 Dec 2010)
 # needs sys-libs/libcap-ng that is masked right now
@@ -28,7 +28,6 @@ media-gfx/povray mkl
 # Mask python3 for stable portage until python-3.x is marked stable.
 =sys-apps/portage-2.1.9* python3
 =sys-apps/portage-2.1.8* python3
-=sys-apps/portage-2.1.7* python3
 
 # Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
 # custom-optimization doesn't work on alpha

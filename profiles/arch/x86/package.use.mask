@@ -1,16 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.52 2011/03/29 01:58:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.53 2011/03/31 08:31:25 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 
 # Luca Barbato <lu_zero@gentoo.org> (28 Feb 2011)
 # # Masked in base, unmask for amd64/x86
 media-video/mplayer2 -bluray -vdpau
-
-# Thomas Kahle <tomka@gentoo.org> package.use.mask (26 Feb 2011)
-# libprelude can't go stable at this point, snort can.
-=net-analyzer/snort-2.9.0.4 prelude
 
 # Kacper Kowalik <xarthisius@gentoo.org> (22 Feb 2011)
 # >=heartbeat-3.0 is pmasked

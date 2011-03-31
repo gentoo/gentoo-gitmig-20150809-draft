@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.61 2011/03/30 20:06:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.62 2011/03/31 08:31:25 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  snort with prelude useflag is stable
 
   30 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   use.mask:

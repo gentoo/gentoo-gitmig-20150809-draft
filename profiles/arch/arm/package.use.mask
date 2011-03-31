@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.47 2011/03/13 20:25:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.48 2011/03/31 08:31:24 scarabeus Exp $
 
 # Markus Meier <maekke@gentoo.org> (13 Mar 2011)
 # needs stable kde stuff
@@ -27,7 +27,6 @@ app-misc/nut X
 # Mask python3 for stable portage until python-3.x is marked stable.
 =sys-apps/portage-2.1.9* python3
 =sys-apps/portage-2.1.8* python3
-=sys-apps/portage-2.1.7* python3
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
