@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.184 2011/03/28 08:22:33 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.185 2011/03/31 15:21:24 grobian Exp $
+
+*exim-4.75 (31 Mar 2011)
+
+  31 Mar 2011; Fabian Groffen <grobian@gentoo.org> +exim-4.75.ebuild:
+  Version bump to 4.75, bug #361245
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> exim-4.71.ebuild,
   exim-4.72.ebuild, exim-4.72-r1.ebuild, exim-4.74-r1.ebuild,
