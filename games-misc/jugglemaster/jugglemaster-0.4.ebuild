@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.10 2010/09/03 17:10:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.11 2011/03/31 15:48:41 scarabeus Exp $
 
 EAPI=2
 WX_GTK_VER="2.6"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="ffmpeg"
 
 DEPEND="x11-libs/wxGTK:2.6[X]
-	ffmpeg? ( media-video/ffmpeg )"
+	ffmpeg? ( virtual/ffmpeg )"
 
 src_prepare() {
 	if use ffmpeg ; then
