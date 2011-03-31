@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.116 2011/03/21 10:38:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.117 2011/03/31 14:44:38 chithanh Exp $
+
+  31 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Unmask libdrm video_cards_nouveau for x11-drivers/xf86-video-nouveau
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Mask mail-client/claws-mail[pda] since app-pda/jpilot is not keyworded

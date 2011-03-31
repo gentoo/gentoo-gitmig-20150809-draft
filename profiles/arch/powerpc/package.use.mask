@@ -1,12 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.77 2011/03/21 10:38:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.78 2011/03/31 14:44:38 chithanh Exp $
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (31 Mar 2011)
+# Unmask libdrm video_cards_nouveau for x11-drivers/xf86-video-nouveau
+x11-libs/libdrm -video_cards_nouveau
 
 # Kacper Kowalik <xarthisius@gentoo.org> (16 Jan 2011)
 # bug 350513, app-pda/jpilot is not keyworded
 mail-client/claws-mail pda
-
-# Brent Baude <ranger@gentoo.org> (13 Jan 2011)
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
 # Mask unsatisfied kde-deps bug #357403
