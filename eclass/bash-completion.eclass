@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.24 2010/04/07 04:20:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.25 2011/03/31 04:13:51 dirtyepic Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
@@ -17,6 +17,11 @@
 # @DESCRIPTION:
 # Install the completion script with this name (see also dobashcompletion)
 
+# @ECLASS-VARIABLE: BASHCOMPFILES
+# @DESCRIPTION:
+# Space delimited list of files to install if dobashcompletion is called without
+# arguments.
+
 EXPORT_FUNCTIONS pkg_postinst
 
 IUSE="bash-completion"
@@ -28,22 +33,33 @@ fi
 PDEPEND="bash-completion? ( app-shells/bash-completion )"
 
 # @FUNCTION: dobashcompletion
-# @USAGE: < file > [ new_file ]
+# @USAGE: [file] [new_file]
 # @DESCRIPTION:
-# First arg, <file>, is required and is the location of the bash-completion
-# script to install.  If the variable BASHCOMPLETION_NAME is set in the
-# ebuild, dobashcompletion will install <file> as
-# /usr/share/bash-completion/$BASHCOMPLETION_NAME. If it is not set,
-# dobashcompletion will check if a second arg [new_file] was passed, installing as
-# the specified name.  Failing both these checks, dobashcompletion will
-# install the file as /usr/share/bash-completion/${PN}.
+# The first argument is the location of the bash-completion script to install,
+# and is required if BASHCOMPFILES is not set. The second argument is the name
+# the script will be installed as. If BASHCOMPLETION_NAME is set, it overrides
+# the second argument. If no second argument is given and BASHCOMPLETION_NAME
+# is not set, it will default to ${PN}.
 dobashcompletion() {
-	[[ -z "$1" ]] && die "usage: dobashcompletion <file> <new file>"
-	[[ -z "${BASHCOMPLETION_NAME}" ]] && BASHCOMPLETION_NAME="${2:-${PN}}"
+	local f
 
-	if use bash-completion ; then
+	if [[ -z ${1} && -z ${BASHCOMPFILES} ]]; then
+		die "Usage: dobashcompletion [file] [new file]"
+	fi
+
+	if use bash-completion; then
 		insinto /usr/share/bash-completion
-		newins "$1" "${BASHCOMPLETION_NAME}" || die "Failed to install $1"
+		if [[ -n ${1} ]]; then
+			[[ -z ${BASHCOMPLETION_NAME} ]] && BASHCOMPLETION_NAME="${2:-${PN}}"
+			newins "${1}" "${BASHCOMPLETION_NAME}" || die "Failed to install ${1}"
+		else
+			set -- ${BASHCOMPFILES}
+			for f in "$@"; do
+				if [[ -e ${f} ]]; then
+					doins "${f}" || die "Failed to install ${f}"
+				fi
+			done
+		fi
 	fi
 }
 
@@ -51,16 +67,24 @@ dobashcompletion() {
 # @DESCRIPTION:
 # The bash-completion pkg_postinst function, which is exported
 bash-completion_pkg_postinst() {
+	local f
+
 	if use bash-completion ; then
-		elog "In the case that you haven't yet enabled command-line completion"
-		elog "for ${PN}, you can run:"
+		elog "The following bash-completion scripts have been installed:"
 		elog
-		elog "  eselect bashcomp enable ${BASHCOMPLETION_NAME:-${PN}}"
+		if [[ -n ${BASHCOMPLETION_NAME} ]]; then
+			elog "	${BASHCOMPLETION_NAME}"
+		else
+			set -- ${BASHCOMPFILES}
+			for f in "$@"; do
+				elog "	$(basename ${f})"
+			done
+		fi
 		elog
-		elog "to install locally, or"
+		elog "To enable command-line completion on a per-user basis run:"
+		elog "	eselect bashcomp enable <script>"
 		elog
-		elog "  eselect bashcomp enable --global ${BASHCOMPLETION_NAME:-${PN}}"
-		elog
-		elog "to install system-wide."
+		elog "To enable command-line completion system-wide run:"
+		elog "	eselect bashcomp enable --global <script>"
 	fi
 }
