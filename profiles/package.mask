@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12637 2011/03/30 22:28:55 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12638 2011/03/31 07:56:35 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (31 Mar 2011)
+# Deprecated and doesn't build since linux-headers-2.6.38. Use gst-plugins-v4l2
+# instead. Masked for removal in 30 days. See bug 359647.
+media-plugins/gst-plugins-v4l
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (30 Mar 2011)
 # Mask prerelease of xorg-server-1.10.1
