@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.4 2011/03/31 04:38:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.5 2011/03/31 06:11:33 ssuominen Exp $
 
 EAPI=2
 
@@ -12,7 +12,9 @@ SRC_URI="http://www.coldsync.org/download/coldsync-${MY_PV}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+# Let people install working 2.2.5-r1 instead of this prerelease, also 243694 and 297204.
+#KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS=""
 IUSE="nls perl usb caps"
 
 RDEPEND="usb? ( virtual/libusb:0 )
