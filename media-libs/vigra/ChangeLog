@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/vigra
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.27 2010/11/07 19:33:53 anarchy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.28 2011/03/31 18:25:59 scarabeus Exp $
+
+*vigra-1.7.1 (31 Mar 2011)
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.7.1-automagicness.patch, +files/1.7.1-hdf5.patch,
+  +vigra-1.7.1.ebuild:
+  Version bump. This version uses cmake to built itself. Per bug #316549.
 
   07 Nov 2010; Jory A. Pratt <anarchy@gentoo.org> vigra-1.6.0.ebuild,
   vigra-1.6.0-r1.ebuild:
