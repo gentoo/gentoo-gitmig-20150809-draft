@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.11 2011/03/31 17:05:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.12 2011/03/31 18:29:44 ssuominen Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="http://www.pygame.org/ftp/pygame-${PV}release.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc sparc x86 ~x86-fbsd"
-IUSE="doc examples kernel_linux X"
+IUSE="doc examples X"
 
 RDEPEND=">=media-libs/libsdl-1.2.5[X?]
 	>=media-libs/sdl-ttf-2.0.6
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/libsdl-1.2.5[X?]
 	dev-python/numpy
 	>=media-libs/smpeg-0.4.4-r1"
 DEPEND="${RDEPEND}
-	kernel_linux? ( <sys-kernel/linux-headers-2.6.38 )"
+	!>=sys-kernel/linux-headers-2.6.38"
 
 S=${WORKDIR}/${P}release
 
