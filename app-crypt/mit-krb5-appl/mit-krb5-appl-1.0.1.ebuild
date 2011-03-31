@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.1.ebuild,v 1.4 2011/03/27 15:27:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.1.ebuild,v 1.5 2011/03/31 20:44:19 xarthisius Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5-appl/${MAJOR_MINOR}/${MY_P}-signe
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=app-crypt/mit-krb5-1.8.0"
@@ -46,9 +46,9 @@ src_install() {
 	done
 
 	for i in {rcp,rlogin,rsh,telnet,ftp} ; do
-	   	mv "${D}"/usr/share/man/man1/${i}.1 "${D}"/usr/share/man/man1/k${i}.1 \
+		mv "${D}"/usr/share/man/man1/${i}.1 "${D}"/usr/share/man/man1/k${i}.1 \
 		|| die "mv failed (man)"
-	    mv "${D}"/usr/bin/${i} "${D}"/usr/bin/k${i} || die "mv failed"
+		mv "${D}"/usr/bin/${i} "${D}"/usr/bin/k${i} || die "mv failed"
 	done
 
 	rm "${D}"/usr/share/man/man1/tmac.doc
