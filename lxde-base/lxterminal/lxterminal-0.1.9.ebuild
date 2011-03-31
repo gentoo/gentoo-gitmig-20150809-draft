@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/lxterminal-0.1.9.ebuild,v 1.7 2011/03/09 21:39:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/lxterminal-0.1.9.ebuild,v 1.8 2011/03/31 18:23:43 leio Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 arm ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ~mips ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE=""
 
