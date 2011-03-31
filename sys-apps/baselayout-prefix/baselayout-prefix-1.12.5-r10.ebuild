@@ -1,21 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r10.ebuild,v 1.1 2011/03/30 11:34:45 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.5-r10.ebuild,v 1.2 2011/03/31 16:21:27 haubi Exp $
 
 EAPI=3
 
 inherit eutils toolchain-funcs multilib prefix flag-o-matic autotools
 
 # Needed gnulib modules:
-#   getopt: for AIX
-#   strsep: for Solaris
+#   getopt strndup strsep
 # Avoid depending on dev-libs/gnulib, might be missing during bootstrap.
-# The gnulib tarball has been created using these commands (basically):
-# $ gnulib-tool --create-testdir --dir=gnulib getopt strsep
-# $ eautoreconf
-# $ econf
+# The gnulib tarball has been created using these commands (basically),
+# from dev-libs/gnulib-2009.03.03.14.07.45-r1:
+# $ gnulib-tool --create-testdir --dir=gnulib getopt strndup strsep
+# $ ./configure
 # $ make maintainer-clean
-GNULIBV=1
+GNULIBV=2
 
 DESCRIPTION="Minimal baselayout for Gentoo Prefix installs"
 HOMEPAGE="http://www.gentoo.org/"
@@ -64,7 +63,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P/-prefix/}-aix.patch
 	epatch "${FILESDIR}"/${P/-prefix/}-darwin-kvm.patch
 	epatch "${FILESDIR}"/${P/-prefix/}-solaris.patch
-	epatch "${FILESDIR}"/${P/-prefix/}-libsvar.patch
+	epatch "${FILESDIR}"/${P/-prefix/}-gnulib.patch
 
 	# The consoletype application in this form will only work on Linux
 	[[ ${CHOST} == *-linux-* ]] || epatch "${FILESDIR}"/${P/-prefix/}-prefix-no-consoletype.patch
