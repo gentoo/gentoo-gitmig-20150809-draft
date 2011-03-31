@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.4 2011/03/29 16:22:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.5 2011/03/31 07:05:48 scarabeus Exp $
 
 EAPI=4
 
@@ -649,6 +649,11 @@ _EOF_
 fontconfig=1
 subfont-osd-scale=4
 subfont-text-scale=3
+ass-hinting=3
+ass-use-margins=1
+ass-font-scale=2
+ass-border-color=00000000
+ass-color=ffff0000
 _EOF_
 	fi
 
