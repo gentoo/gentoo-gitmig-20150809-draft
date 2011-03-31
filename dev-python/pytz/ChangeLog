@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.98 2011/03/27 20:07:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.99 2011/03/31 19:13:02 xarthisius Exp $
+
+  31 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> pytz-2011b.ebuild:
+  ppc64 stable wrt #358313
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> pytz-2011b.ebuild:
   Marking pytz-2011b ppc for bug 358313.
