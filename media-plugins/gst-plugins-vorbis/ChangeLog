@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.193 2011/03/13 10:16:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.194 2011/03/31 01:01:01 leio Exp $
+
+  28 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  gst-plugins-vorbis-0.10.32.ebuild:
+  Add ~mips keyword
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-vorbis-0.10.31.ebuild:
