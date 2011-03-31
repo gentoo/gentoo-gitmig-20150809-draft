@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.16.ebuild,v 1.4 2011/03/22 19:40:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.16.ebuild,v 1.5 2011/03/31 04:14:07 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/netspeed/trunk/${PV}/+download/${P}.tar.gz"
 SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 #FIXME: wireless-tools >= 28pre9 is automagic
 RDEPEND="|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
