@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.0.ebuild,v 1.2 2011/03/29 02:05:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.0.ebuild,v 1.3 2011/03/31 21:30:15 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -27,7 +27,7 @@ RDEPEND=">=app-pda/libplist-0.15
 	virtual/libusb:1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	python? ( dev-lang/swig )"
+	python? ( >=dev-lang/swig-2.0.0 )"
 
 pkg_setup() {
 	if use python; then
@@ -36,8 +36,15 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	sed -i -e 's:1.3.21:2.0.0:g' configure || die
+
+	rm -f py-compile
+	ln -s $(type -P true) py-compile
+}
+
 src_configure() {
-	# --with-swig is same as --without-swig wrt #361029.
+	# --with-swig is same as --without-swig wrt #361029
 
 	local myconf
 	use python || myconf="--without-swig"
@@ -53,4 +60,12 @@ src_install() {
 	dodoc AUTHORS NEWS README
 
 	find "${D}" -name '*.la' -exec rm -f {} +
+}
+
+pkg_postinst() {
+	use python && python_mod_optimize imobiledevice
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup imobiledevice
 }
