@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.4 2011/03/30 23:46:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.5 2011/03/31 01:44:16 arfrever Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -38,6 +38,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 
+	# Avoid null runpaths in Perl bindings.
+	sed -e 's/ LD_RUN_PATH=""//' -i bindings/Makefile.am || die "sed failed"
+
 	# Python bindings are built/installed manually.
 	sed \
 		-e "s/^python: python-build/python:/" \
@@ -70,7 +73,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" INSTALLDIRS=vendor install || die "make install failed"
+	emake -j1 DESTDIR="${D}" INSTALLDIRS=vendor install || die "make install failed"
 
 	if use perl; then
 		perl_delete_localpod
