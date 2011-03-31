@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.6 2011/03/31 14:39:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.7 2011/03/31 15:25:25 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ffmpeg-0.5.ebuild:
+  Just drop 0.5 ffmpeg, things are easier without it now. Only thing so far
+  requiring it is xine-lib which can be solved by ia64 stabling 0.6 ffmpeg.
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> ffmpeg-0.5.ebuild,
   ffmpeg-0.6.ebuild:
