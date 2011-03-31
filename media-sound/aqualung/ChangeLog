@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aqualung
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.14 2011/03/15 22:03:05 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.15 2011/03/31 20:55:24 billie Exp $
+
+  31 Mar 2011; Daniel Pielmeier <billie@gentoo.org> aqualung-0.9_beta11.ebuild,
+  aqualung-0.9_beta11-r1.ebuild:
+  aqualung works with ffmpeg and libav, so switching to virtual/ffmpeg.
 
 *aqualung-0.9_beta11-r1 (15 Mar 2011)
 

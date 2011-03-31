@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.1 2011/03/15 22:03:05 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.2 2011/03/31 20:55:24 billie Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	cdda? ( dev-libs/libcdio )
 	cddb? ( media-libs/libcddb )
 	flac? ( media-libs/flac )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	ifp? ( media-libs/libifp )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( media-sound/lame )
