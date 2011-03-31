@@ -72,3 +72,4 @@ move sci-misc/brlcad media-gfx/brlcad
 move media-sound/phonon-vlc media-libs/phonon-vlc
 move media-sound/phonon-xine media-libs/phonon-xine
 move app-pda/jpilot-Mail app-pda/jpilot-mail
+move sys-apps/eject sys-block/eject
