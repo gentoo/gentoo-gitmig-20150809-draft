@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-2.1.3.ebuild,v 1.1 2011/03/30 17:18:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-2.1.3.ebuild,v 1.2 2011/03/31 06:30:31 patrick Exp $
 
 # NOTES:
 # 1- use flag 'pgm' (OpenPGM support) must be masked by profiles for ARM archs;
@@ -13,7 +13,7 @@ PGM_VERSION=5.1.114
 
 DESCRIPTION="ZeroMQ is a brokerless messaging kernel with extremely high performance."
 HOMEPAGE="http://www.zeromq.org"
-SRC_URI="http://download.zeromq.org/${P}.tar.gz"
+SRC_URI="http://download.zeromq.org/historic/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
