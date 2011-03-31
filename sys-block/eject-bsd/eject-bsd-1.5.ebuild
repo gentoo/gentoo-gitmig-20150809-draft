@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/eject-bsd-1.5.ebuild,v 1.4 2009/08/12 19:22:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/eject-bsd/eject-bsd-1.5.ebuild,v 1.5 2011/03/31 08:55:28 ssuominen Exp $
 
 inherit eutils portability toolchain-funcs
 
@@ -24,16 +24,16 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-manpage.patch"
-	epatch "${FILESDIR}/${P}-devname.patch"
+	epatch "${FILESDIR}"/${P}-manpage.patch
+	epatch "${FILESDIR}"/${P}-devname.patch
 }
 
 src_compile() {
-	$(get_bmake) CC="$(tc-getCC)" PREFIX="/usr" eject || die "$(get_bmake) failed"
+	$(get_bmake) CC="$(tc-getCC)" PREFIX=/usr eject || die
 }
 
 src_install() {
-	dobin "${S}/eject"
-	doman "${S}/eject.1"
-	dodoc "${S}/README"
+	dobin "${S}"/eject || die
+	doman "${S}"/eject.1
+	dodoc "${S}"/README
 }
