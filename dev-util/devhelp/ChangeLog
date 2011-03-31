@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.123 2011/03/22 19:05:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.124 2011/03/31 04:13:01 ssuominen Exp $
+
+  31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> devhelp-2.32.0.ebuild:
+  sparc stable wrt #353436, Comment #29. Thanks to Alex Buell for testing.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> devhelp-2.32.0.ebuild:
   Marking devhelp-2.32.0 ppc stable for bug 353436
