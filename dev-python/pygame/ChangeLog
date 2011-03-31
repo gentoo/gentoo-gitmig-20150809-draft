@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygame
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.71 2010/08/10 02:36:10 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.72 2011/03/31 17:05:45 ssuominen Exp $
+
+*pygame-1.9.1-r1 (31 Mar 2011)
+
+  31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +pygame-1.9.1-r1.ebuild,
+  +files/pygame-1.9.1-linux-headers-2.6.38.patch:
+  Fix building with linux-headers-2.6.38 by removing support for V4L v1 wrt #359745
+  by Billy DeVincentis and Martijn Schmidt.
 
   10 Aug 2010; Jeroen Roovers <jer@gentoo.org> pygame-1.9.1.ebuild:
   Remove HPPA workaround (bug #289326).
