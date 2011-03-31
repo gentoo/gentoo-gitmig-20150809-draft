@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.73 2011/02/25 17:41:56 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.74 2011/03/31 15:35:13 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> vice-2.2.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
   25 Feb 2011; Kevin McCarthy <signals@gentoo.org> vice-2.2.ebuild:
   Depend on virtual/jpeg instead of media-libs/jpeg

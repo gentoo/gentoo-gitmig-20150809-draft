@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.2.ebuild,v 1.5 2011/02/25 17:41:56 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.2.ebuild,v 1.6 2011/03/31 15:35:13 scarabeus Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -32,7 +32,7 @@ RDEPEND="
 		x11-libs/pango
 	)
 	lame? ( media-sound/lame )
-	ffmpeg? ( >=media-video/ffmpeg-0.5_p20373 )
+	ffmpeg? ( virtual/ffmpeg )
 	ethernet? (
 	    >=net-libs/libpcap-0.9.8
 	    >=net-libs/libnet-1.1.2.1
