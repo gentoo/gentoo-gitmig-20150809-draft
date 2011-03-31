@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.10 2011/03/22 19:38:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.11 2011/03/31 07:51:18 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/cheese/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="doc v4l"
+IUSE="doc"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.7
 	>=dev-libs/glib-2.16:2
@@ -40,7 +40,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-v4l2-0.10:0.10
 	>=media-libs/gst-plugins-good-0.10.16:0.10
 	>=media-plugins/gst-plugins-vorbis-0.10.20:0.10
-	v4l? ( >=media-plugins/gst-plugins-v4l-0.10:0.10 )
 	|| ( >=media-plugins/gst-plugins-x-0.10:0.10
 		>=media-plugins/gst-plugins-xvideo-0.10:0.10 )"
 DEPEND="${COMMON_DEPEND}
