@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.31 2011/03/04 22:00:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.32 2011/03/31 18:20:47 leio Exp $
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
@@ -83,6 +83,7 @@ net-fs/samba ads cluster debug
 # Mart Raudsepp <leio@gentoo.org> (03 Oct 2010)
 # dev-util/glade not tested and keyworded yet
 x11-libs/gtksourceview glade
+x11-libs/vte glade
 
 # Matt Turner <mattst88@gentoo.org> (06 Dec 2010)
 # dev-db/tokyocabinet not keyworded
