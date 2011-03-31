@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1.ebuild,v 1.1 2011/03/31 18:25:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1.ebuild,v 1.2 2011/03/31 18:50:42 ssuominen Exp $
 
 EAPI=4
 
 MY_P=${P}-src
-inherit base cmake-utils
+inherit base cmake-utils multilib
 
 DESCRIPTION="C++ computer vision library with emphasize on customizable algorithms and data structures"
 HOMEPAGE="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/"
@@ -64,5 +64,5 @@ src_install() {
 	cmake-utils_src_install
 
 	# drop useless cmake files from libdir
-	rm -rf ${ED}/usr/$(get_libdir)/${PN}/
+	rm -rf "${ED}"/usr/$(get_libdir)/${PN}/
 }
