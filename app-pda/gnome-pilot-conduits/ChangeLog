@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot-conduits
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.41 2011/03/22 18:46:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.42 2011/03/31 03:59:45 ssuominen Exp $
+
+  31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-pilot-conduits-2.32.1.ebuild:
+  Remove sparc keywording wrt #353436, Comment #28.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org>
   gnome-pilot-conduits-2.32.1.ebuild:
