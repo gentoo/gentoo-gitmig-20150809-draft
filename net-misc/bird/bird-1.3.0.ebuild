@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.2.3-r1.ebuild,v 1.1 2010/08/23 11:29:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.3.0.ebuild,v 1.1 2011/03/31 09:48:53 chainsaw Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://bird.network.cz/pub/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug ipv6"
 
 RDEPEND="sys-libs/ncurses
@@ -36,6 +36,7 @@ src_compile() {
 		--enable-client \
 		--enable-ipv4 \
 		--disable-ipv6 \
+		--localstatedir=/var \
 		$(use_enable debug) \
 		|| die "V4 configuration stage failed"
 	emake || die "V4 compilation stage failed"
@@ -45,6 +46,7 @@ src_compile() {
 			--enable-client \
 			--enable-ipv6 \
 			--disable-ipv4 \
+			--localstatedir=/var \
 			$(use_enable debug) \
 			|| die "V6 configuration stage failed"
 		emake || die "V6 compilation stage failed"
