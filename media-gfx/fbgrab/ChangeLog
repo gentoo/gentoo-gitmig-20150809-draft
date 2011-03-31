@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbgrab
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.13 2008/05/18 19:23:25 solar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.14 2011/03/31 20:20:13 ssuominen Exp $
+
+  31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> fbgrab-1.0.ebuild,
+  +files/fbgrab-1.0-zlib_h.patch:
+  Fix missing zlib.h include for Z_BEST_COMPRESSION wrt #361323 by "Alphat-PC".
 
   18 May 2008; <solar@gentoo.org> fbgrab-1.0.ebuild:
   - Keyworded ~arm and made cross compile aware
