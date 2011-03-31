@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r1.ebuild,v 1.2 2011/02/04 21:23:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r1.ebuild,v 1.3 2011/03/31 07:46:45 ssuominen Exp $
 
 EAPI="2"
 
@@ -29,7 +29,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-theora-0.10.22
 	>=media-plugins/gst-plugins-alsa-0.10.22
 	>=media-plugins/gst-plugins-ogg-0.10.22
-	>=media-plugins/gst-plugins-v4l-0.10.22
 	media-plugins/gst-plugins-v4l2
 	media-plugins/gst-plugins-jpeg
 	!<net-im/psi-0.13_rc1
@@ -42,6 +41,8 @@ src_prepare() {
 	sed -e '/^TEMPLATE/a CONFIG += ordered' -i psimedia.pro || die
 	# Don't build demo if we don't need that.
 	use demo || { sed -e '/^SUBDIRS[[:space:]]*+=[[:space:]]*demo[[:space:]]*$/d;' -i psimedia.pro || die; }
+	# Remove support for V4L v1 because linux-headers-2.6.38 stopped shipping linux/videodev.h.
+	epatch "${FILESDIR}"/${P}-linux-headers-2.6.38.patch
 }
 
 src_configure() {
