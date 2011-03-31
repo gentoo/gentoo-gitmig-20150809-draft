@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.41 2011/01/15 21:55:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.42 2011/03/31 02:00:09 arfrever Exp $
+
+  31 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  prewikka-0.9.14-r2.ebuild, prewikka-0.9.15.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #315083).
 
   15 Jan 2011; Thomas Kahle <tomka@gentoo.org> prewikka-0.9.14-r2.ebuild:
   Dropping to ~x86 as per bug 318839

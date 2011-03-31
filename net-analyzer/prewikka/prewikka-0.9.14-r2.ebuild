@@ -1,8 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.14-r2.ebuild,v 1.5 2011/01/15 21:55:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.14-r2.ebuild,v 1.6 2011/03/31 02:00:09 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -15,11 +18,12 @@ SLOT="0"
 KEYWORDS="~amd64 ppc sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.3
-	>=dev-python/cheetah-0.9.18
+DEPEND=">=dev-python/cheetah-0.9.18
 	>=dev-libs/libprelude-0.9.0[python]
-	>=dev-libs/libpreludedb-0.9.0"
+	>=dev-libs/libpreludedb-0.9.0[python]"
 RDEPEND="${DEPEND}"
+
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
 src_install() {
 	distutils_src_install
@@ -29,6 +33,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	elog
 	elog "For additional installation instructions go to"
 	elog "https://trac.prelude-ids.org/wiki/InstallingPrewikka"
