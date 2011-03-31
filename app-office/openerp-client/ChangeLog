@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openerp-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-client/ChangeLog,v 1.7 2011/03/17 15:14:06 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-client/ChangeLog,v 1.8 2011/03/31 17:14:34 arfrever Exp $
+
+  31 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  openerp-client-5.0.6.ebuild, openerp-client-5.0.15.ebuild,
+  openerp-client-5.0.15-r1.ebuild:
+  Fix deprecation warnings.
 
   17 Mar 2011; <elvanor@gentoo.org> openerp-client-5.0.15-r1.ebuild:
   Added gtk USE flag to matplotlib (bug #351929).
