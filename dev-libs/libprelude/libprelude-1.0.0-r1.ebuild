@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.4 2011/03/31 01:24:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.5 2011/03/31 01:26:51 arfrever Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -21,12 +21,12 @@ IUSE="doc lua perl python ruby"
 
 RDEPEND=">=net-libs/gnutls-1.0.17
 	lua? ( dev-lang/lua )
-	perl? ( dev-lang/perl dev-lang/swig )
+	perl? ( dev-lang/perl )
 	ruby? ( dev-lang/ruby )
 	!net-analyzer/prelude-nids"
-
 DEPEND="${RDEPEND}
-	sys-devel/flex"
+	sys-devel/flex
+	perl? ( dev-lang/swig )"
 
 pkg_setup() {
 	if use python; then
