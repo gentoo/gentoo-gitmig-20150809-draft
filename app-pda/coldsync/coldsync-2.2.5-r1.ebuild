@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.12 2011/03/31 05:49:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.13 2011/03/31 05:50:44 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic perl-module toolchain-funcs
@@ -20,6 +20,12 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-toolchain.patch
+
+	if use perl; then
+		pushd perl/ColdSync
+		perl-module_src_prepare
+		popd
+	fi
 }
 
 src_configure() {
