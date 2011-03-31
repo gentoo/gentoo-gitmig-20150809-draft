@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.6 2011/03/31 07:11:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.7 2011/03/31 07:15:00 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Describe symlink useflag for mplayer.
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Update description of mp3 useflag.
