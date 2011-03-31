@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20110317.ebuild,v 1.1 2011/03/29 05:38:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-19_pre20110317.ebuild,v 1.2 2011/03/31 21:03:04 ssuominen Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_prepare() {
+	sed -i -e '/pa_unix_oss.h/d' configure || die #361369
 	elibtoolize
 }
 
