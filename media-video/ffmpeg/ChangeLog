@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.397 2011/03/30 12:44:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.398 2011/03/31 12:19:05 aballier Exp $
+
+  31 Mar 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.6_p28715.ebuild,
+  ffmpeg-9999.ebuild:
+  libva 0.32 is required now, bug #361373
 
 *ffmpeg-0.6_p28715 (30 Mar 2011)
 
