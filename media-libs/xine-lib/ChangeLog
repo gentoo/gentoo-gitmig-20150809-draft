@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.640 2011/03/26 16:04:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.641 2011/03/31 15:24:18 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> xine-lib-1.1.19.ebuild:
+  Move back to media-video/ffmpeg as this is only package that actualy requires
+  ffmpeg-0.5. Effectively allowing us to drop 0.5 virtual.
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> xine-lib-1.1.19.ebuild:
   Depend on virtual/ffmpeg instead of media-video/ffmpeg.
