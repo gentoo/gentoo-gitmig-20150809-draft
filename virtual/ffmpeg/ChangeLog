@@ -1,6 +1,13 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.4 2011/03/27 09:49:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.5 2011/03/31 07:35:20 scarabeus Exp $
+
+*ffmpeg-0.5 (31 Mar 2011)
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ffmpeg-0.ebuild,
+  +ffmpeg-0.5.ebuild, +ffmpeg-0.6.ebuild:
+  Move back to versioned virtuals as discussed on dev ml. So chop chop with
+  migration now :)
 
   27 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> ffmpeg-0.ebuild:
   Do not set DEPEND. Per bug #360711.
