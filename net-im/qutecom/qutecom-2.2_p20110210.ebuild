@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.2 2011/03/28 13:46:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.3 2011/03/31 22:18:40 chithanh Exp $
 
 EAPI="3"
 
@@ -35,7 +35,8 @@ RDEPEND="dev-libs/boost
 	x11-libs/qt-webkit
 	xv? ( x11-libs/libXv )"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils"
+	app-arch/xz-utils
+	<sys-kernel/linux-headers-2.6.38"
 
 pkg_setup() {
 	if has_version "<dev-libs/boost-1.41" && has_version ">=dev-libs/boost-1.41"; then

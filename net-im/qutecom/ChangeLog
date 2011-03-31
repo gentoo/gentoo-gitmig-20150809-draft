@@ -1,6 +1,10 @@
 # ChangeLog for net-im/qutecom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/ChangeLog,v 1.6 2011/03/28 13:46:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/ChangeLog,v 1.7 2011/03/31 22:18:40 chithanh Exp $
+
+  31 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  qutecom-2.2_p20110210.ebuild:
+  Require old kernel headers, bug #361181.
 
   28 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -qutecom-2.2_p20100309.ebuild, -qutecom-2.2_p20100620.ebuild,
