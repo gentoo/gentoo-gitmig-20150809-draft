@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.72 2011/03/30 15:39:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.73 2011/03/31 20:53:45 xarthisius Exp $
+
+  31 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> dcraw-9.05.ebuild:
+  ppc64 stable wrt #358679
 
   30 Mar 2011; Jeroen Roovers <jer@gentoo.org> dcraw-9.05.ebuild:
   Stable for HPPA (bug #358679).
