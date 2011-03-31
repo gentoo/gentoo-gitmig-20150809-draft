@@ -1,7 +1,7 @@
---- coldsync-2.2.5/src/symboltable.cc-orig  Mon Aug 12 12:32:56 2002
-+++ coldsync-2.2.5/src/symboltable.cc   Mon Aug 12 12:32:25 2002
+--- src/symboltable.cc
++++ src/symboltable.cc
 @@ -7,6 +7,7 @@
-  * $Id: coldsync-2.2.5-gcc3.diff,v 1.1 2003/08/30 09:04:05 liquidx Exp $
+  * $Id: coldsync-2.2.5-gcc3.diff,v 1.2 2011/03/31 05:22:11 ssuominen Exp $
   */
 
 +using namespace std;
