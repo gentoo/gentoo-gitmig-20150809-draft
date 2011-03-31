@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.241 2011/03/22 19:55:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.242 2011/03/31 08:11:58 pacho Exp $
+
+  31 Mar 2011; Pacho Ramos <pacho@gentoo.org> -abiword-2.8.6.ebuild:
+  Remove old.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> abiword-2.8.6-r1.ebuild:
   Marking abiword-2.8.6-r1 ppc stable for bug 353436
