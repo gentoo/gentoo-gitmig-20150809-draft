@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.9.ebuild,v 1.5 2011/03/30 13:33:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-3.1.9.ebuild,v 1.6 2011/03/31 07:09:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="Thunderbird Mail Client"
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
 SRC_URI="${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~ssuominen/libnotify.so.1.bz2"
+	mirror://gentoo/libnotify.so.1.bz2"
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip"
 
