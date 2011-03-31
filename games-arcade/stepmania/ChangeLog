@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.35 2011/02/25 21:55:08 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.36 2011/03/31 15:47:18 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> stepmania-3.9-r2.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
   25 Feb 2011; Kevin McCarthy <signals@gentoo.org> stepmania-3.9-r2.ebuild:
   Update depends from media-libs/jpeg to virtual/jpeg
