@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.62.2.ebuild,v 1.10 2011/03/28 07:46:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.62.2.ebuild,v 1.11 2011/03/31 20:40:01 eras Exp $
 
 inherit eutils flag-o-matic
 
@@ -48,7 +48,6 @@ RDEPEND="${DEPEND}
 # get rid of old style virtual/imapd - bug 350792
 # all blockers really needed?
 RDEPEND="${RDEPEND}
-	!net-mail/dovecot
 	!net-mail/bincimap
 	!net-mail/courier-imap
 	!net-mail/cyrus-imapd
