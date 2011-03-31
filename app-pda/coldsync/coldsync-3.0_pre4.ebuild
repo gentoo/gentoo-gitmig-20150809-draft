@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.3 2011/02/10 15:06:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.4 2011/03/31 04:38:40 ssuominen Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.coldsync.org/download/coldsync-${MY_PV}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE="nls perl usb caps"
 
 RDEPEND="usb? ( virtual/libusb:0 )
@@ -24,8 +24,6 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_configure() {
 	local myconf
-	#use nls || myconf="${myconf} --without-i18n"
-	#use perl || myconf="${myconf} --without-perl"
 
 	myconf="${myconf} `use_with perl`"
 	myconf="${myconf} `use_with nls i18n`"

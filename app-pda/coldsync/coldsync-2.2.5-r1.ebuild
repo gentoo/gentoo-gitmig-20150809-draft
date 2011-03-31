@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.10 2011/02/10 15:06:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.11 2011/03/31 04:38:40 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -15,7 +15,8 @@ KEYWORDS="~ppc sparc x86"
 IUSE="nls perl"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.2.5-gcc3.diff \
+	epatch \
+		"${FILESDIR}"/${PN}-2.2.5-gcc3.diff \
 		"${FILESDIR}"/${PN}-2.2.5-broken-c++.diff
 }
 
