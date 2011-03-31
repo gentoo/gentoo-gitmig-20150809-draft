@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ffmpeg-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ChangeLog,v 1.9 2011/01/11 22:00:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ChangeLog,v 1.10 2011/03/31 15:42:49 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -ffmpeg-php-0.6.0.ebuild, ffmpeg-php-0.6.0-r1.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg. Drop older
+  overshadowed ebuild.
 
   11 Jan 2011; Markus Meier <maekke@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild:
   x86 stable, bug #345891
