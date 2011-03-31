@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.12 2011/03/02 21:14:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.13 2011/03/31 15:51:22 scarabeus Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ RDEPEND="sci-libs/hdf5[mpi=]
 	media-libs/libpng
 	virtual/jpeg
 	media-libs/tiff
-	media-video/ffmpeg
+	virtual/ffmpeg
 	dev-libs/expat
 	sys-libs/zlib
 	media-libs/freetype

@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.54 2011/03/02 21:14:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.55 2011/03/31 15:51:22 scarabeus Exp $
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> paraview-3.6.2.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> paraview-3.6.2.ebuild:
   Correct Slots for gtk 3 introduction to tree
