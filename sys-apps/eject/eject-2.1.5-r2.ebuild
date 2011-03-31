@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.1.5-r2.ebuild,v 1.11 2010/09/12 21:15:31 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.1.5-r2.ebuild,v 1.12 2011/03/31 08:58:04 ssuominen Exp $
 
 EAPI="3"
 
@@ -21,11 +21,11 @@ RDEPEND=""
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}"-2.0.13-xmalloc.patch
-	epatch "${FILESDIR}/${PN}"-2.1.4-scsi-rdwr.patch
-	epatch "${FILESDIR}/${PN}"-2.1.5-handle-spaces.patch #151257
-	epatch "${FILESDIR}/${PN}"-2.1.5-man-typo.patch #165248
-	epatch "${FILESDIR}/${PN}"-2.1.5-toggle.patch #261880
+	epatch "${FILESDIR}"/${PN}-2.0.13-xmalloc.patch
+	epatch "${FILESDIR}"/${PN}-2.1.4-scsi-rdwr.patch
+	epatch "${FILESDIR}"/${PN}-2.1.5-handle-spaces.patch #151257
+	epatch "${FILESDIR}"/${PN}-2.1.5-man-typo.patch #165248
+	epatch "${FILESDIR}"/${PN}-2.1.5-toggle.patch #261880
 }
 
 src_configure() {
