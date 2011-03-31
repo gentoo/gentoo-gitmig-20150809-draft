@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.19 2011/03/29 16:40:11 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.20 2011/03/31 15:26:33 ssuominen Exp $
+
+  31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> dracut-007.ebuild,
+  dracut-008.ebuild, dracut-008-r1.ebuild, dracut-009-r1.ebuild:
+  Use virtual/eject instead of sys-apps/eject.
 
   29 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -files/dracut-002-add-missing-functions.patch,
