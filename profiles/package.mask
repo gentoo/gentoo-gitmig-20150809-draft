@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12639 2011/03/31 08:14:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12640 2011/03/31 08:18:08 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (31 Mar 2011)
+# Upstream dead for a long time, packages still needing it
+# will be dropped also. Removal in 30 days (bug #355309)
+=gnome-extra/libgda-1.2.4
 
 # Pacho Ramos <pacho@gentoo.org> (31 Mar 2011)
 # Upstream dead for a long time, many unresolved bugs.
