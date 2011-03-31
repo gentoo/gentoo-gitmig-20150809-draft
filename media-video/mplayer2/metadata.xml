@@ -36,7 +36,7 @@
 	<flag name="md5sum">Enables md5sum video output</flag>
 	<flag name="mmxext">Enables mmx2 support</flag>
 	<flag name="mng">MNG input support</flag>
-	<flag name="mpg123">Enable support for mp3 decoding over media-sound/mpg123.</flag>
+	<flag name="mp3">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support.</flag>
 	<flag name="network">Enables network streaming support</flag>
 	<flag name="nut">Enables support for the NUT container format</flag>
 	<flag name="osdmenu">Enables support for on-screen display (OSD) menus</flag>
