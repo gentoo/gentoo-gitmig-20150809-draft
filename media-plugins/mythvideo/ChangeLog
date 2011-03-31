@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythvideo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.94 2010/10/01 03:36:36 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.95 2011/03/31 15:24:13 ssuominen Exp $
+
+  31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  mythvideo-0.22_p22991.ebuild, mythvideo-0.22_p23469.ebuild,
+  mythvideo-0.23_p25065.ebuild, mythvideo-0.23.1_p25396-r1.ebuild,
+  mythvideo-0.23.1_p25496.ebuild, mythvideo-0.23.1_p26407.ebuild:
+  Use virtual/eject instead of sys-apps/eject.
 
 *mythvideo-0.23.1_p26407 (01 Oct 2010)
 

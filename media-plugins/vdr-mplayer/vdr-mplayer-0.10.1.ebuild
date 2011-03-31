@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.1.ebuild,v 1.5 2009/11/11 18:55:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.1.ebuild,v 1.6 2011/03/31 15:25:50 ssuominen Exp $
 
 inherit vdr-plugin eutils
 
@@ -16,8 +16,8 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.4.2"
 
 RDEPEND="${DEPEND}
-		|| ( media-video/mplay-sh >=media-video/mplayer-sh-0.8.6-r1 )
-		|| ( sys-apps/eject sys-block/unieject )"
+	|| ( media-video/mplay-sh >=media-video/mplayer-sh-0.8.6-r1 )
+	virtual/eject"
 
 S=${WORKDIR}/mp3-${PV}
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p23469.ebuild,v 1.4 2010/08/01 11:26:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.22_p23469.ebuild,v 1.5 2011/03/31 15:24:13 ssuominen Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ RDEPEND="dev-perl/libwww-perl
 	dev-perl/HTML-Parser
 	dev-perl/URI
 	dev-perl/XML-Simple
-	sys-apps/eject
+	virtual/eject
 	jamu? ( >=dev-python/imdbpy-3.8
 			dev-python/imaging
 			>=dev-python/mysql-python-1.2.2
