@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/qconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.13 2011/03/27 19:44:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/qconf/ChangeLog,v 1.14 2011/04/01 13:03:50 xarthisius Exp $
+
+  01 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  qconf-1.5_pre717-r1.ebuild:
+  ppc64 stable wrt #358681
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> qconf-1.5_pre717-r1.ebuild:
   stable ppc, bug 358681
