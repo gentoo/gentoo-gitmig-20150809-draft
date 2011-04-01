@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.25.2.ebuild,v 1.3 2011/03/28 21:19:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.25.2.ebuild,v 1.4 2011/04/01 12:11:38 ultrabug Exp $
 
 EAPI="3"
 
@@ -41,6 +41,8 @@ src_prepare() {
 	sed -i "/^docdir =/d" src/Makefile.am || die #fix doc path
 	# disable testsnaps
 	sed -e '/testsnaps/d' -i src/Makefile.am || die
+	# fix Spinlock.h include path, wrt #361203
+	sed -i -e 's|#include "Spinlock.h"|#include "include/Spinlock.h"|g' src/include/rados/atomic.h || die
 	epatch "${FILESDIR}/${PN}-0.24.1-autotools.patch"
 	eautoreconf
 }

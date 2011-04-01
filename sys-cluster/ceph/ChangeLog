@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.4 2011/03/28 16:21:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.5 2011/04/01 12:11:38 ultrabug Exp $
+
+  01 Apr 2011; Ultrabug <ultrabug@gentoo.org> ceph-0.25.2.ebuild:
+  fix Spinlock.h include path, wrt #361203, thanks to Ivan Chavero.
 
 *ceph-0.25.2 (28 Mar 2011)
 
