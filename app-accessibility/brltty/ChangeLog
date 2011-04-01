@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.115 2011/03/31 23:31:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.116 2011/04/01 18:35:57 williamh Exp $
+
+  01 Apr 2011; William Hubbs <williamh@gentoo.org> brltty-4.2.ebuild,
+  +files/brltty-4.2-fix-svnversion.patch:
+  apply patch from upstream to fix the "svnversion: command not found"
+  error. This closes bug #361327.
 
   31 Mar 2011; William Hubbs <williamh@gentoo.org> brltty-4.2.ebuild:
   x86 stable wrt #358503.
