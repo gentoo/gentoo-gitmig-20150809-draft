@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.36 2011/03/16 21:30:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.37 2011/04/01 22:54:30 aballier Exp $
+
+  01 Apr 2011; Alexis Ballier <aballier@gentoo.org> -glossaries-1.16.ebuild,
+  -glossaries-2.01.ebuild, -glossaries-2.02.ebuild, -glossaries-2.05.ebuild:
+  remove old
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> glossaries-2.07.ebuild:
   ppc/ppc64 stables wrt #349709
