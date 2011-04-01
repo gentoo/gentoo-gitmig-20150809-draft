@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.91 2011/03/27 19:16:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.92 2011/04/01 06:51:26 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> zentest-4.4.2.ebuild:
+  sparc stable (bug 354609)
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> zentest-4.4.2.ebuild:
   Marking zentest-4.4.2 ppc for bug 354609
