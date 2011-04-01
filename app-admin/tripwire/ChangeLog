@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tripwire
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.34 2010/09/02 00:24:24 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.35 2011/04/01 12:21:54 c1pher Exp $
+
+  01 Apr 2011; Dane Smith <c1pher@gentoo.org> tripwire-2.4.2-r1.ebuild,
+  metadata.xml:
+  Added José María Alonso as a proxy maintainer with me as the proxy.
+  Cleaned up the ebuild. (Missing || die mostly)
 
 *tripwire-2.4.2-r1 (02 Sep 2010)
 

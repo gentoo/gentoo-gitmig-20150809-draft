@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2-r1.ebuild,v 1.1 2010/09/02 00:24:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2-r1.ebuild,v 1.2 2011/04/01 12:21:54 c1pher Exp $
 
 EAPI="2"
 
@@ -46,24 +46,24 @@ src_configure() {
 }
 
 src_install() {
-	dosbin "${S}"/bin/{siggen,tripwire,twadmin,twprint}
-	doman "${S}"/man/man{4/*.4,5/*.5,8/*.8}
-	dodir /etc/tripwire /var/lib/tripwire{,/report}
+	dosbin "${S}"/bin/{siggen,tripwire,twadmin,twprint} || die
+	doman "${S}"/man/man{4/*.4,5/*.5,8/*.8} || die
+	dodir /etc/tripwire /var/lib/tripwire{,/report} || die
 	keepdir /var/lib/tripwire{,/report}
 
 	exeinto /etc/cron.daily
-	doexe "${FILESDIR}"/tripwire.cron
+	doexe "${FILESDIR}"/tripwire.cron || die
 
 	dodoc ChangeLog policy/policyguide.txt TRADEMARK \
-		"${FILESDIR}"/tripwire.txt
+		"${FILESDIR}"/tripwire.txt || die
 
 	insinto /etc/tripwire
-	doins "${WORKDIR}"/twpol.txt "${FILESDIR}"/twcfg.txt
+	doins "${WORKDIR}"/twpol.txt "${FILESDIR}"/twcfg.txt || die
 
 	exeinto /etc/tripwire
-	doexe "${FILESDIR}"/twinstall.sh
+	doexe "${FILESDIR}"/twinstall.sh || die
 
-	fperms 755 /etc/tripwire/twinstall.sh /etc/cron.daily/tripwire.cron
+	fperms 755 /etc/tripwire/twinstall.sh /etc/cron.daily/tripwire.cron || die
 }
 
 pkg_postinst() {

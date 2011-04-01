@@ -3,7 +3,14 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>c1pher@gentoo.org</email>
+		<name>Dane Smith</name>
+	</maintainer>
+	<maintainer>
+		<email>nimiux@gentoo.org</email>
+		<name>José María Alonso</name>
+		<description>Proxy-Maintainer. Assign bugs to him and CC
+			me.</description>
 	</maintainer>
 	<longdescription lang="en">
 		Tripwire is a tool that aids system administrators and users in
