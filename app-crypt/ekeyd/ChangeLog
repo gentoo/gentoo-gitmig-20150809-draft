@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.20 2011/03/27 22:13:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.21 2011/04/01 12:34:42 flameeyes Exp $
+
+*ekeyd-1.1.3-r3 (01 Apr 2011)
+
+  01 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> +ekeyd-1.1.3-r3.ebuild,
+  metadata.xml:
+  Add a munin USE flag to install the munin plugin to graph the ekeyd
+  statistical data.
 
   27 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> ekeyd-1.1.3-r2.ebuild:
   Fix think in log output.
