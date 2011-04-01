@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/mikutter
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.1 2011/04/01 16:50:10 naota Exp $
+
+*mikutter-0.0.2.12 (01 Apr 2011)
+
+  01 Apr 2011; Naohiro Aota <naota@elisp.net> +mikutter-0.0.2.12.ebuild,
+  +files/mikutter, +metadata.xml:
+  New ebuild for mikutter. Ebuild written by Furui Shota <mkamotsu@gmail.com>.
+
