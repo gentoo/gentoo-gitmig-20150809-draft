@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gnome-scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.4 2011/03/28 22:03:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.5 2011/04/01 10:39:56 nirbheek Exp $
+
+*gnome-scan-0.7.2 (01 Apr 2011)
+
+  01 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-scan-0.7.2.ebuild, metadata.xml:
+  Bump to 0.7.2, add gnome as herd -- this package will be an optional part
+  of GNOME 3
 
   28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> gnome-scan-0.6.2.ebuild:
   Pin dependencies to appropriate slots, bump to EAPI 3.
