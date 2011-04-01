@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.89 2011/03/27 19:28:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.90 2011/04/01 08:03:12 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> rspec-1.3.1.ebuild:
+  sparc stable (bug 356269)
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> rspec-1.3.1.ebuild:
   Marking rspec-1.3.1 ppc stable for bug 356269
