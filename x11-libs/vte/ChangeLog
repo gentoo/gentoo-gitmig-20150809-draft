@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.272 2011/03/31 18:22:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.273 2011/04/01 10:57:22 jlec Exp $
+
+  01 Apr 2011; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Fixed Typo in USE description
 
   31 Mar 2011; Mart Raudsepp <leio@gentoo.org> vte-0.26.2.ebuild:
   Add ~mips keyword
