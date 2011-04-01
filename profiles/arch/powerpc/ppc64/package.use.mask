@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.38 2011/03/22 21:11:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.39 2011/04/01 21:29:58 xarthisius Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (22 Mar 2011)
 # Mask polkit[kde] wrt #354509
@@ -13,10 +13,6 @@ kde-base/marble	gps
 # Mark Loeser <halcy0n@gentoo.org> (01 Nov 2010)
 # net-libs/webkit-gtk is not stable
 =net-news/liferea-1.4* webkit
-
-# Samuli Suominen <ssuominen@gentoo.org> (23 Oct 2010)
-# This will need dev-python/matplotlib keyworded, which isn't tested yet.
-sys-fs/btrfs-progs debug-utils
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs app-mobilephone/obex-data-server keyworded, bug 305913
