@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.35 2011/03/13 20:38:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.36 2011/04/01 15:57:16 pva Exp $
+
+*smokeping-2.4.2-r4 (01 Apr 2011)
+
+  01 Apr 2011; Peter Volkov <pva@gentoo.org> -files/78_smokeping.conf,
+  -smokeping-2.2.4.ebuild, -smokeping-2.3.5.ebuild,
+  smokeping-2.4.2-r3.ebuild, +smokeping-2.4.2-r4.ebuild,
+  -files/smokeping.init, -files/smokeping.init.1:
+  Finally fix blockers with JSON and use in-tree Config-Grammar, bug
+  #358389, thank Torsten Veller for this job. Drop old.
 
   13 Mar 2011; Peter Volkov <pva@gentoo.org> -smokeping-2.4.2-r1.ebuild,
   -smokeping-2.4.2-r2.ebuild, smokeping-2.4.2-r3.ebuild:

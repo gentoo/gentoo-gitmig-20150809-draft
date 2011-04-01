@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.4.2-r3.ebuild,v 1.6 2011/04/01 15:57:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.4.2-r4.ebuild,v 1.1 2011/04/01 15:57:16 pva Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://oss.oetiker.ch/smokeping/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa sparc x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="apache2 speedy"
 
 # dev-perl/JSON-1.x is bundled and is incompatible with version 2.x wich is in
@@ -21,6 +21,7 @@ DEPEND="dev-lang/perl
 		virtual/perl-libnet
 		>=net-analyzer/rrdtool-1.2[perl]
 		>=net-analyzer/fping-2.4_beta2-r2
+		dev-perl/Config-Grammar
 		dev-perl/Digest-HMAC
 		dev-perl/libwww-perl
 		dev-perl/CGI-Session
@@ -29,10 +30,7 @@ DEPEND="dev-lang/perl
 		dev-perl/Net-DNS
 		speedy? ( dev-perl/SpeedyCGI )
 		!apache2? ( virtual/httpd-cgi )
-		apache2? ( >=www-apache/mod_perl-2.0.1 )
-		!dev-perl/Config-Grammar
-		!dev-perl/JSON
-		!perl-core/JSON-PP"
+		apache2? ( >=www-apache/mod_perl-2.0.1 )"
 
 RDEPEND="${DEPEND}"
 
@@ -44,8 +42,13 @@ pkg_setup() {
 src_prepare() {
 	rm -rf lib/Digest # provided by dev-perl/Digest-HMAC
 	rm -rf lib/CGI # provided by dev-perl/CGI-Session
+	rm -rf lib/Config # provided by dev-perl/Config-Grammar
 	rm -r lib/{BER.pm,SNMP_Session.pm,SNMP_util.pm} # dev-perl/SNMP_Session
 	rm qooxdoo/qooxdoolink
+
+	PERL5SMOKEPING="/usr/share/${PN}/perl5"
+	sed -i "/^use strict;/a\use lib '${PERL5SMOKEPING}';" \
+		"${S}"/lib/Qooxdoo/JSONRPC.pm || die
 }
 
 src_compile() {
@@ -54,7 +57,13 @@ src_compile() {
 }
 
 src_install() {
-	# First move all the perl modules into the vendor lib area of Perl
+	# Install JSON-1 outside of perl's @INC path
+	insinto ${PERL5SMOKEPING}
+	doins lib/JSON.pm
+	insinto ${PERL5SMOKEPING}/JSON
+	doins -r lib/JSON/*
+	rm -r lib/JSON lib/JSON.pm
+	# Install the remaining perl modules into the vendor lib area of Perl
 	perlinfo
 	insinto ${VENDOR_LIB}/
 	doins -r lib/*
