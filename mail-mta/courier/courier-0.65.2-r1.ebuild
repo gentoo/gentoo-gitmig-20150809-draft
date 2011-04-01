@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.9 2011/03/31 20:40:01 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.10 2011/04/01 23:25:41 hanno Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -126,13 +126,19 @@ src_install() {
 
 	# Get rid of files we dont want
 	if ! use webmail ; then
-		cd "${D}"
-		cat "${FILESDIR}/webmail_files" | xargs rm -rf
+		rm -rf "${D}/usr/$(get_libdir)/courier/courier/webmail" \
+			"${D}/usr/$(get_libdir)/courier/courier/sqwebmaild" \
+			"${D}/usr/share/courier/sqwebmail/" \
+			"${D}/usr/sbin/webmaild" \
+			"${D}/usr/sbin/webgpg" \
+			"${D}/etc/courier/webmail.authpam" \
+			"${D}/var/lib/courier/webmail-logincache" \
+			"${D}"/etc/courier/sqwebmaild*
 	fi
 
 	if ! use web ; then
-		cd "${D}"
-		cat "${FILESDIR}/webadmin_files" | xargs rm -rf
+		rm -rf "${D}/usr/share/courier/courierwebadmin/" \
+			"${D}/etc/courier/webadmin"
 	fi
 
 	for dir2keep in $(cd "${D}" && find ./var/lib/courier -type d) ; do
@@ -177,7 +183,6 @@ src_install() {
 
 	# Fix for a sandbox violation on subsequential merges
 	# - ticho@gentoo.org, 2005-07-10
-	rm "${D}"/usr/sbin/{pop3d,imapd}{,-ssl}
 	dosym /usr/share/courier/pop3d /usr/sbin/courier-pop3d
 	dosym /usr/share/courier/pop3d-ssl /usr/sbin/courier-pop3d-ssl
 	dosym /usr/share/courier/imapd /usr/sbin/courier-imapd
@@ -188,7 +193,7 @@ src_install() {
 	use nls && cp unicode/README README.unicode
 	dodoc AUTHORS BENCHMARKS COPYING* ChangeLog* INSTALL NEWS README* TODO courier/doc/*.txt
 	dodoc tcpd/README.couriertls
-	mv "${D}/usr/share/courier/htmldoc" "${D}/usr/share/doc/${P}/html"
+	mv "${D}/usr/share/courier/htmldoc" "${D}/usr/share/doc/${PF}/html"
 
 	if use webmail ; then
 		insinto /usr/$(get_libdir)/courier/courier
