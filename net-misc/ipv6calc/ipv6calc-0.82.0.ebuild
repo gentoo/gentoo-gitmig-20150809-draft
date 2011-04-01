@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.73.0.ebuild,v 1.6 2009/11/14 18:24:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.82.0.ebuild,v 1.1 2011/04/01 17:03:44 pva Exp $
 
+EAPI="4"
 inherit fixheadtails
 
 DESCRIPTION="IPv6 address calculator"
@@ -10,23 +11,20 @@ SRC_URI="ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="geoip"
 
 DEPEND="geoip? ( >=dev-libs/geoip-1.4.1 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	ht_fix_file configure
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable geoip)
-	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc ChangeLog CREDITS README TODO USAGE || die
+	emake DESTDIR="${D}" install
+	dodoc ChangeLog CREDITS README TODO USAGE
 }
