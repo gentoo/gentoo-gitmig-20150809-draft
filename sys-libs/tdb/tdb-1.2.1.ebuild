@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1.ebuild,v 1.9 2011/04/01 15:04:52 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1.ebuild,v 1.10 2011/04/01 20:33:03 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.6"
@@ -15,8 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="python static-libs tools tdbtest"
 
 RDEPEND="!!<sys-libs/tdb-1.2.1"
-DEPEND="python? ( dev-lang/python )
-	!<net-fs/samba-libs-3.4
+DEPEND="!<net-fs/samba-libs-3.4
 	!<net-fs/samba-3.3
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt"
