@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.58 2011/03/27 19:29:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.59 2011/04/01 08:27:08 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> redcloth-4.2.3-r1.ebuild:
+  sparc stable (bug 352483)
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> redcloth-4.2.3-r1.ebuild:
   Marking redcloth-4.2.3-r1 ppc for bug 352483
