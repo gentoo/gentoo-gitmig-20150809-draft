@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.37 2011/03/31 10:02:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.38 2011/04/01 01:55:01 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> wavemon-0.7.1.ebuild:
+  ppc stable (bug 352805)
 
   31 Mar 2011; Michael Weber <xmw@gentoo.org> wavemon-0.7.1.ebuild:
   sparc stable (bug 352805)
