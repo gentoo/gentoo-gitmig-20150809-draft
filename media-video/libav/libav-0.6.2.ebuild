@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.2.ebuild,v 1.3 2011/03/28 19:36:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.6.2.ebuild,v 1.4 2011/04/01 09:45:01 scarabeus Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
-IUSE="+3dnow +3dnowext alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
+IUSE="+3dnow +3dnowext alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 VIDEO_CARDS="nvidia"
 for x in ${VIDEO_CARDS}; do
@@ -47,7 +47,6 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20101029 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
-	frei0r? ( media-plugins/frei0r-plugins )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -133,8 +132,6 @@ src_configure() {
 	for i in alsa oss ; do
 		use ${i} || myconf+=" --disable-outdev=${i}"
 	done
-	# libavfilter options
-	use frei0r && myconf+=" --enable-frei0r"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf+=" --enable-pthreads"
