@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.19 2011/02/16 18:48:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.20 2011/04/01 10:48:24 nirbheek Exp $
+
+  01 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -babl-0.1.0.ebuild,
+  -babl-0.1.2.ebuild, babl-0.1.4.ebuild, metadata.xml:
+  Add introspection support to the latest ebuild, remove old
 
   16 Feb 2011; Jeremy Olexa <darkside@gentoo.org> babl-0.1.4.ebuild:
   Add Gentoo Prefix keywords as tested in the prefix overlay, bug 355157
