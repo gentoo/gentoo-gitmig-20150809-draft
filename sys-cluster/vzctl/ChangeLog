@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.74 2011/03/22 16:28:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.75 2011/04/01 11:34:55 pva Exp $
+
+*vzctl-3.0.26.2-r1 (01 Apr 2011)
+
+  01 Apr 2011; Peter Volkov <pva@gentoo.org> +vzctl-3.0.26.2-r1.ebuild,
+  +files/vzctl-3.0.26.2-vzeventd.patch, vzctl-9999.ebuild:
+  Added note about vzeventd. Added support for solid kernel, #361457. Enable
+  reboot notification, fixes #361453. Thank Andreis_Vinogradovs (slepnoga) for
+  finding all of this.
 
 *vzctl-3.0.26.2 (22 Mar 2011)
 

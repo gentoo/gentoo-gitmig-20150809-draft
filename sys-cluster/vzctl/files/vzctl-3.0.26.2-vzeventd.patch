@@ -1,0 +1,85 @@
+From f24b1603090c6d4af163d42eff620fcfaa7c6297 Mon Sep 17 00:00:00 2001
+From: Peter Volkov <pva@gentoo.org>
+Date: Fri, 1 Apr 2011 14:25:45 +0400
+Subject: [PATCH] vzeventd-gentoo: set reboot_event, solid kernel
+
+Allow it to work when modules are built in (MODULES_DISABLED=yes).
+Set /sys/module/vzevent/parameters/reboot_event=1 on service startup.
+Small clenups.
+
+Fixes Gentoo bugs:
+http://bugs.gentoo.org/show_bug.cgi?id=361453
+http://bugs.gentoo.org/show_bug.cgi?id=361457
+---
+ etc/init.d/vzeventd-gentoo.in |   40 ++++++++++++++++++++++++++++------------
+ 1 files changed, 28 insertions(+), 12 deletions(-)
+
+diff --git a/etc/init.d/vzeventd-gentoo.in b/etc/init.d/vzeventd-gentoo.in
+index e8fe64e..2c0da26 100644
+--- a/etc/init.d/vzeventd-gentoo.in
++++ b/etc/init.d/vzeventd-gentoo.in
+@@ -6,25 +6,41 @@ depend() {
+ }
+ 
+ check_config() {
+-# if we don't want openvz running, say so
++	source /etc/conf.d/vz
++	# if we don't want openvz running, say so
+ 	[ "${VIRTUOZZO}" = "yes" ] || return 1
+ 	: ${VZEVENTD:=@SBINDIR@/vzeventd}
+ }
+ 
++load_module() {
++	if [ "${MODULES_DISABLED}" != "yes" ]; then
++		local rv=0
++		ebegin "Loading vzevent module"
++		modprobe -r vzevent >/dev/null 2>&1
++		modprobe vzevent reboot_event=1 >/dev/null 2>&1
++		rv=$?
++		if [ ${rv} -ne 0 ]; then
++			eend ${rv}
++			return ${rv}
++		fi
++	fi
++
++	local param=/sys/module/vzevent/parameters/reboot_event
++	if ! grep -Fqw 1 "${param}"; then
++		ewarn "vzevent module should be loaded with reboot_event=1 parameter"
++		ewarn "setting reboot_event to 1..."
++		ewarn "echo 1 > ${param}"
++		echo 1 > "${param}"
++	fi
++	return 0
++}
++
+ start() {
+ 	check_config || return
+-	ebegin "Loading vzevent module"
+-	modprobe -r vzevent >/dev/null 2>&1
+-	modprobe vzevent reboot_event=1 >/dev/null 2>&1
+-	rc=$?
+-	if [ ${rc} -ne 0 ]; then
+-		eend ${rc} "failed"
+-		return ${rc}
+-	fi
+-	eend ${rc}
++	load_module || return
+ 
+ 	ebegin "Starting vzeventd"
+-	start-stop-daemon --start --exec $VZEVENTD \
++	start-stop-daemon --start --exec ${VZEVENTD} \
+ 		--pidfile /var/run/vzeventd.pid \
+ 		-- ${VZEVENTD_OPTS}
+ 	eend $?
+@@ -33,7 +49,7 @@ start() {
+ stop() {
+ 	check_config || return
+ 	ebegin "Stopping vzeventd"
+-		start-stop-daemon --stop --exec $VZEVENTD \
++	start-stop-daemon --stop --exec ${VZEVENTD} \
+ 		--pidfile /var/run/vzeventd.pid
+ 	eend $?
+ }
+-- 
+1.7.3.4
+

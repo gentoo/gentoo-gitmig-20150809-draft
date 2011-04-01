@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.7 2011/04/01 11:34:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.26.2-r1.ebuild,v 1.1 2011/04/01 11:34:55 pva Exp $
 
 EAPI="4"
 
-inherit bash-completion autotools git
+inherit bash-completion eutils
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
-EGIT_REPO_URI="git://git.openvz.org/pub/vzctl"
+SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="bash-completion"
 
 RDEPEND="
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	# Set default OSTEMPLATE on gentoo
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
-	eautoreconf
+	epatch "${FILESDIR}/vzctl-3.0.26.2-vzeventd.patch"
 }
 
 src_configure() {
