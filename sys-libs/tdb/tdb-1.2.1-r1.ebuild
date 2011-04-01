@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1-r1.ebuild,v 1.4 2010/12/29 21:36:14 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.1-r1.ebuild,v 1.5 2011/04/01 15:04:52 vostorga Exp $
 
 EAPI="2"
-PYTHON_DEPEND="python? 2"
+PYTHON_DEPEND="python? 2:2.6"
 
 inherit autotools python
 
@@ -22,6 +22,7 @@ DEPEND="!<net-fs/samba-3.3
 
 pkg_setup() {
 	if use python; then
+		# Make sure the build system will use the right python bug #360033
 		python_set_active_version 2
 		python_pkg_setup
 	fi
