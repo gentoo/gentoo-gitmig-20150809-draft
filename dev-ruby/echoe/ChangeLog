@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/echoe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.28 2011/03/17 10:03:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.29 2011/04/01 08:26:02 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> echoe-4.3.1-r1.ebuild:
+  sparc stable (bug 357491)
 
   17 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> echoe-4.3.1-r1.ebuild:
   ppc/ppc64 stable wrt #349877

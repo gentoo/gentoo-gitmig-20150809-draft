@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.48 2011/03/29 01:01:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.49 2011/04/01 08:21:24 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> highline-1.6.1.ebuild:
+  sparc stable (bug 357491)
 
 *highline-1.6.1-r1 (29 Mar 2011)
 
