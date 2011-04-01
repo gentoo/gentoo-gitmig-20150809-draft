@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.1 2011/02/12 08:58:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.2 2011/04/01 17:10:02 patrick Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A library of routines for managing a database"
 HOMEPAGE="http://fallabs.com/tokyocabinet/"
@@ -24,10 +24,14 @@ src_prepare() {
 	sed -i \
 		-e "/ldconfig/d" \
 		-e "/DATADIR/d" Makefile.in || die
+	# cflags fix - remove -O2 at end of line
+	sed -i -e 's/-O3"$/"/' configure.in || die
+	eautoreconf || die
 }
 
 src_configure() {
-	econf $(use_enable debug) --enable-off64
+	# we use the "fastest" target without the -O3
+	econf $(use_enable debug) --enable-off64 --enable-fastest
 }
 
 src_install() {

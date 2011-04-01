@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.33 2011/02/26 08:22:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.34 2011/04/01 17:10:02 patrick Exp $
+
+  01 Apr 2011; Patrick Lauer <patrick@gentoo.org> -tokyocabinet-1.4.41.ebuild,
+  -tokyocabinet-1.4.42.ebuild, -tokyocabinet-1.4.45.ebuild,
+  tokyocabinet-1.4.47.ebuild:
+  Fixing cflags and autotools handling for #361129
+
+  01 Apr 2011; Patrick Lauer <patrick@gentoo.org> -tokyocabinet-1.4.41.ebuild,
+  -tokyocabinet-1.4.42.ebuild, -tokyocabinet-1.4.45.ebuild:
+  Remove old
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   tokyocabinet-1.4.46.ebuild:
