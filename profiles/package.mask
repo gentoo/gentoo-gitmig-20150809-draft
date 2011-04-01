@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12645 2011/03/31 21:47:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12646 2011/04/01 15:56:01 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -284,10 +284,6 @@ dev-cpp/libpqpp
 # apps to manage photos, no update since 2007.
 # Removal in 30 days (bug #358437)
 media-gfx/gpp
-
-# Torsten Veller <tove@gentoo.org> (14 Mar 2011)
-# Mask until smokeping is fixed (#358389)
-dev-perl/Config-Grammar
 
 # Markos Chandras <hwoarang@gentoo.org> (13 Mar 2011)
 # Masked for testing
