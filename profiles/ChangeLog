@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5242 2011/03/31 21:47:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5243 2011/04/01 08:48:32 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  targets/desktop/kde/make.defaults, +targets/desktop/kde/use.force:
+  Force useflags consolekit and policykit on in the desktop/kde profile, as
+  decided in the kde team meeting
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Unmask xorg-server-1.10. Should work decently.
