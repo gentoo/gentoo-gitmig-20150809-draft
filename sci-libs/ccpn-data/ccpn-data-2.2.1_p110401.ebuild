@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.1_p110401.ebuild,v 1.1 2011/04/01 10:29:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.1_p110401.ebuild,v 1.2 2011/04/01 10:30:22 jlec Exp $
 
 EAPI="3"
 
@@ -27,7 +27,6 @@ DEPEND=""
 RESTRICT="binchecks strip"
 
 S="${WORKDIR}"/ccpnmr/ccpnmr2.2
-
 
 src_prepare() {
 	[[ -n ${PATCHSET} ]] && \
