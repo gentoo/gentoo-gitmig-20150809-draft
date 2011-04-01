@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.41 2011/03/29 12:27:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.42 2011/04/01 10:31:33 scarabeus Exp $
+
+  01 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gegl-0.1.6.ebuild:
+  Use ED since we use eapi3.
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> gegl-0.0.22.ebuild:
   Fixed slot deps
