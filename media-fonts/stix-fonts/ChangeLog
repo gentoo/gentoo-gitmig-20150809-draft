@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/stix-fonts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/stix-fonts/ChangeLog,v 1.8 2011/03/06 19:11:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/stix-fonts/ChangeLog,v 1.9 2011/04/01 15:40:56 xarthisius Exp $
+
+  01 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  stix-fonts-1.0.0-r1.ebuild:
+  Marked ~ppc64 wrt #342297
 
   06 Mar 2011; Fabian Groffen <grobian@gentoo.org> stix-fonts-1.0.0-r1.ebuild:
   Added Prefix keywords
