@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.173 2011/03/27 16:41:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.174 2011/04/01 16:56:52 jer Exp $
+
+  01 Apr 2011; Jeroen Roovers <jer@gentoo.org> dhcp-3.1.3_p1.ebuild:
+  Stable for HPPA (bug #360047).
 
   27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> dhcp-3.1.3_p1.ebuild:
   Stable on alpha, bug #360047
