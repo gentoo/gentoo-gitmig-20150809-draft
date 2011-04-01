@@ -1,0 +1,27 @@
+From 9aa83aa66ab6d31f30ed4d25a39b1ece067e0453 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Amadeusz=20=C5=BBo=C5=82nowski?= <aidecoe@aidecoe.name>
+Date: Sat, 2 Apr 2011 00:39:38 +0200
+Subject: [PATCH] dracut: don't fail on empty /etc/ld.so.conf.d/
+
+---
+ dracut |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+diff --git a/dracut b/dracut
+index c6605bb..15a5ee5 100755
+--- a/dracut
++++ b/dracut
+@@ -524,7 +524,9 @@ done
+ unset item
+ 
+ # make sure that library links are correct and up to date
+-dracut_install /etc/ld.so.conf /etc/ld.so.conf.d/*
++for f in /etc/ld.so.conf /etc/ld.so.conf.d/*; do
++    [[ -e $f ]] && dracut_install "$f"
++done
+ if ! ldconfig -r "$initdir"; then
+     if [[ $UID = 0 ]]; then
+         derror "ldconfig exited ungracefully"
+-- 
+1.7.4.1
+
