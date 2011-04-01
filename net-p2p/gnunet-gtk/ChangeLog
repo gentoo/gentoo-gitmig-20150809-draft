@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gnunet-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/ChangeLog,v 1.14 2011/03/28 22:19:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/ChangeLog,v 1.15 2011/04/01 06:41:31 angelos Exp $
+
+  01 Apr 2011; Christoph Mende <angelos@gentoo.org> gnunet-gtk-0.7.3.ebuild,
+  gnunet-gtk-0.8.0.ebuild:
+  Fix gtk+ slot deps
 
   28 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> gnunet-gtk-0.8.1.ebuild:
   Use appropriate slots for gtk libs and use EAPI 3.

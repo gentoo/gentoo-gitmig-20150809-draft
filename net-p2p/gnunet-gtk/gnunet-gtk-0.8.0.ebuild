@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.8.0.ebuild,v 1.1 2008/07/11 10:20:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet-gtk/gnunet-gtk-0.8.0.ebuild,v 1.2 2011/04/01 06:41:31 angelos Exp $
+
+EAPI=1
 
 DESCRIPTION="Graphical front end for GNUnet."
 HOMEPAGE="http://gnunet.org/"
@@ -11,9 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.6.0
+DEPEND="x11-libs/gtk+:2
 	>=net-p2p/gnunet-${PV}
-	>=gnome-base/libglade-2.0"
+	gnome-base/libglade:2.0"
 
 src_compile() {
 	econf --with-gnunet=/usr || die "econf failed"
