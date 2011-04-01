@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.43.ebuild,v 1.3 2011/03/30 16:44:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.43.ebuild,v 1.4 2011/04/01 05:07:36 radhermit Exp $
 
 EAPI=4
 
@@ -16,13 +16,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="+doc +perl"
 
-RDEPEND="perl? (
+RDEPEND="
+	perl? (
 		dev-lang/perl
 		dev-perl/IPC-Run
 		dev-perl/Time-Duration
 		dev-perl/TimeDate
 	)"
-DEPEND="${RDEPEND}
+DEPEND="
 	doc? (
 		dev-lang/perl
 		>=app-text/docbook2X-0.8.8-r2

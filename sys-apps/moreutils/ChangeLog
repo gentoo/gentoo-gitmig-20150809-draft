@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.23 2011/03/30 16:44:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.24 2011/04/01 05:07:36 radhermit Exp $
+
+  01 Apr 2011; Tim Harder <radhermit@gentoo.org> moreutils-0.43.ebuild,
+  moreutils-0.44.ebuild:
+  Remove unnecessary perl dependencies from DEPEND (bug #361329 by Jeroen
+  Roovers).
 
   30 Mar 2011; Jeroen Roovers <jer@gentoo.org> moreutils-0.43.ebuild,
   moreutils-0.44.ebuild:
