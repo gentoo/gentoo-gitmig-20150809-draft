@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.151 2011/03/23 08:46:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.152 2011/04/01 09:48:15 ssuominen Exp $
+
+  01 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  mjpegtools-1.9.0-r1.ebuild:
+  Remove USE="X" and always pass --with-x wrt #259461.
 
   23 Mar 2011; Tim Harder <radhermit@gentoo.org> -mjpegtools-1.8.0-r2.ebuild,
   -files/mjpegtools-1.8.0-as-needed.patch,
