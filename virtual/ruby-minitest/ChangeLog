@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.21 2011/03/08 07:43:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.22 2011/04/01 06:53:48 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> ruby-minitest-0-r1.ebuild:
+  sparc stable (bug 354609)
 
   08 Mar 2011; Thomas Kahle <tomka@gentoo.org> ruby-minitest-0-r1.ebuild:
   x86 stable per bug 354609
