@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sexp-processor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.29 2011/03/27 19:20:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.30 2011/04/01 07:13:41 xmw Exp $
+
+  01 Apr 2011; Michael Weber <xmw@gentoo.org> sexp-processor-3.0.5.ebuild:
+  sparc stable (bug 355299)
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> sexp-processor-3.0.5.ebuild:
   Marking sexp-processor-3.0.5 ppc stable for bug 355299
