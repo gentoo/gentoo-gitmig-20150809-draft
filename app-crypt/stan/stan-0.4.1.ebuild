@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/stan-0.4.1.ebuild,v 1.3 2009/02/23 04:09:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/stan-0.4.1.ebuild,v 1.4 2011/04/01 12:54:58 c1pher Exp $
 
+EAPI="2"
 inherit autotools eutils
 
 DESCRIPTION="Stan is a console application that analyzes binary streams and calculates statistical information."
@@ -13,16 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-errno.patch"
 	sed -i -e "s/-O3/${CFLAGS}/" configure.in || die "sed failed"
 	eautoreconf
 }
 
 src_install() {
-	einstall || die "einstall failed"
-	dodoc README
+	emake install DESTDIR="${D}" || die "install failed"
+	dodoc README || die
 }
