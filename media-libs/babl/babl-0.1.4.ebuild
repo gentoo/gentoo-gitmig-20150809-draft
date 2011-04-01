@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4.ebuild,v 1.3 2011/04/01 10:48:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4.ebuild,v 1.4 2011/04/01 10:52:22 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 DESCRIPTION="A dynamic, any to any, pixel format conversion library"
 HOMEPAGE="http://www.gegl.org/babl/"
@@ -27,7 +27,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	find "${D}" -name '*.la' -delete
+	emake install DESTDIR="${ED}" || die "emake install failed"
+	find "${ED}" -name '*.la' -delete
 	dodoc AUTHORS ChangeLog README NEWS || die "dodoc failed"
 }
