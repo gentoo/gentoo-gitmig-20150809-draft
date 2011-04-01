@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.34 2011/04/01 17:10:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.35 2011/04/01 22:25:45 patrick Exp $
+
+  01 Apr 2011; Patrick Lauer <patrick@gentoo.org> tokyocabinet-1.4.47.ebuild:
+  Stripping -fomit-frame-pointer from Makefile too
 
   01 Apr 2011; Patrick Lauer <patrick@gentoo.org> -tokyocabinet-1.4.41.ebuild,
   -tokyocabinet-1.4.42.ebuild, -tokyocabinet-1.4.45.ebuild,

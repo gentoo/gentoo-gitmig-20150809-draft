@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.2 2011/04/01 17:10:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.3 2011/04/01 22:25:45 patrick Exp $
 
 EAPI="2"
 
@@ -24,8 +24,9 @@ src_prepare() {
 	sed -i \
 		-e "/ldconfig/d" \
 		-e "/DATADIR/d" Makefile.in || die
-	# cflags fix - remove -O2 at end of line
+	# cflags fix - remove -O2 at end of line and -fomit-frame-pointer
 	sed -i -e 's/-O3"$/"/' configure.in || die
+	sed -i -e 's/-fomit-frame-pointer//' configure.in || die
 	eautoreconf || die
 }
 
