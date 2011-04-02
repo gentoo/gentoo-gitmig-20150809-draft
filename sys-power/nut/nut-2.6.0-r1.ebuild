@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.0.ebuild,v 1.5 2011/03/27 19:28:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.0-r1.ebuild,v 1.1 2011/04/02 15:07:00 ssuominen Exp $
 
 EAPI=2
 inherit autotools bash-completion eutils fixheadtails multilib
@@ -62,6 +62,10 @@ src_prepare() {
 		-i scripts/udev/Makefile.am || die
 
 	rm -f ltmain.sh m4/lt* m4/libtool.m4
+
+	sed -i \
+		-e 's:@LIBSSL_LDFLAGS@:@LIBSSL_LIBS@:' \
+		lib/libupsclient{.pc,-config}.in || die #361685
 
 	eautoreconf
 }
