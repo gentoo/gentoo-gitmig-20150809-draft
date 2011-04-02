@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.239 2011/03/30 20:06:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.240 2011/04/02 12:57:58 ssuominen Exp $
+
+  02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> virtuals:
+  Remove virtual/libpcap wrt #358835.
 
   30 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   use.mask:
