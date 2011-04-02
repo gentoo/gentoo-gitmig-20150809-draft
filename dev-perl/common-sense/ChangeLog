@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/common-sense
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.16 2011/01/15 08:44:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.17 2011/04/02 07:11:46 tove Exp $
+
+  02 Apr 2011; Torsten Veller <tove@gentoo.org> -common-sense-3.3.ebuild:
+  Cleanup
 
 *common-sense-3.400 (15 Jan 2011)
 
