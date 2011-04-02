@@ -1,6 +1,16 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.317 2011/03/22 19:38:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.318 2011/04/02 12:03:50 pacho Exp $
+
+*totem-2.32.0-r1 (02 Apr 2011)
+
+  02 Apr 2011; Pacho Ramos <pacho@gentoo.org>
+  -files/totem-2.26.1-smclient-target-detection.patch, -totem-2.30.2.ebuild,
+  -files/totem-2.30.2-init-gtype.patch, -files/totem-2.30.2-webm-support.patch,
+  +totem-2.32.0-r1.ebuild:
+  Revision bump including patches from master and 2.32 upstream branches fixing
+  some bugs, this also unset DBUS_SESSION_BUS_ADDRESS to prevent bug #332139
+  problems and xml validation fix (bug #357893 by Dustin Polke). Remove old.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> totem-2.32.0.ebuild:
   Marking totem-2.32.0 ppc stable for bug 353436
