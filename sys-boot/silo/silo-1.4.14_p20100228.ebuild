@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.4 2011/01/22 12:25:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20100228.ebuild,v 1.5 2011/04/02 12:02:49 armin76 Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -19,8 +19,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-* sparc"
 IUSE="hardened"
-
-PROVIDE="virtual/bootloader"
 
 DEPEND="sys-fs/e2fsprogs
 	sys-apps/sparc-utils"

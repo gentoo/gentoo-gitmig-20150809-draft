@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/silo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.46 2011/01/22 12:25:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.47 2011/04/02 12:02:49 armin76 Exp $
+
+  02 Apr 2011; Raúl Porcel <armin76@gentoo.org> silo-1.4.14_p20100228.ebuild:
+  Remove PROVIDE line for bug #359971
 
   22 Jan 2011; Raúl Porcel <armin76@gentoo.org> -silo-1.4.14.ebuild,
   silo-1.4.14_p20100228.ebuild, +files/silo-e2fsprogs-1.4.14.patch,

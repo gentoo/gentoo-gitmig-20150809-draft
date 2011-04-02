@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.12.ebuild,v 1.2 2010/07/24 15:39:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.12.ebuild,v 1.3 2011/04/02 12:00:12 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,7 +20,6 @@ DEPEND=">=sys-boot/gnu-efi-3.0g
 	dev-util/patchutils"
 RDEPEND="sys-boot/efibootmgr
 	sys-fs/dosfstools"
-PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}

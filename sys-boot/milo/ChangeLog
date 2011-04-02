@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/milo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/ChangeLog,v 1.8 2010/01/11 18:00:31 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/ChangeLog,v 1.9 2011/04/02 12:00:59 armin76 Exp $
+
+  02 Apr 2011; Raúl Porcel <armin76@gentoo.org> milo-2.4.18.ebuild:
+  Remove PROVIDE line for bug #359971
 
   11 Jan 2010; Raúl Porcel <armin76@gentoo.org> milo-2.4.18.ebuild:
   Remove functions from ccc.eclass as its going to be removed
