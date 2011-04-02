@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Header: $
 
@@ -20,14 +20,14 @@ start() {
 	device=$(grep "Hardware[[:space:]]*:" /proc/cpuinfo 2>/dev/null | \
 		 head -n1 | sed "s/^[^:]*: //")
 	case $device in
-	    "QNAP TS-109/TS-209")
+	    "QNAP TS-109/TS-209" | "QNAP TS-119/TS-219")
 			qcontrol statusled greenon || true
 			qcontrol powerled on || true
 			if [ "$SOUND_BUZZER" != no ]; then
 				qcontrol buzzer short || true
 			fi
 		;;
-	    "QNAP TS-409")
+	    "QNAP TS-409" | "QNAP TS-41x")
 			qcontrol statusled greenon || true
 			if [ "$SOUND_BUZZER" != no ]; then
 				qcontrol buzzer short || true
@@ -52,14 +52,14 @@ stop() {
 	device=$(grep "Hardware[[:space:]]*:" /proc/cpuinfo 2>/dev/null | \
 		 head -n1 | sed "s/^[^:]*: //")
 	case $device in
-	    "QNAP TS-109/TS-209")
+	    "QNAP TS-109/TS-209" | "QNAP TS-119/TS-219")
 			qcontrol statusled rednon || true
 			qcontrol powerled 1hz || true
 			if [ "$SOUND_BUZZER" != no ]; then
 				qcontrol buzzer short || true
 			fi
 		;;
-	    "QNAP TS-409")
+	    "QNAP TS-409" | "QNAP TS-41x")
 			qcontrol statusled redon || true
 			if [ "$SOUND_BUZZER" != no ]; then
 				qcontrol buzzer short || true
