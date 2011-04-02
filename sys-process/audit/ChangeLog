@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.64 2011/02/07 21:38:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.65 2011/04/02 07:04:53 angelos Exp $
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> audit-1.7.4.ebuild:
+  Stable on amd64 wrt bug #341167
 
   07 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   audit-2.0.5.ebuild:
