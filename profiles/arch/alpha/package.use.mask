@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.58 2011/03/31 08:31:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.59 2011/04/02 12:01:25 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
+# quvi support is needed to play youtube files now
+media-video/totem youtube
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (17 Dec 2010)
 # needs sys-libs/libcap-ng that is masked right now

@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5244 2011/04/01 15:56:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5245 2011/04/02 12:01:25 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Apr 2011; Pacho Ramos <pacho@gentoo.org> arch/alpha/ChangeLog,
+  arch/alpha/package.use.mask, arch/arm/ChangeLog, arch/arm/package.use.mask,
+  arch/ia64/ChangeLog, arch/ia64/package.use.mask, arch/sparc/ChangeLog,
+  arch/sparc/package.use.mask:
+  Mask media-video/totem youtube USE flag as quvi support is needed to play
+  youtube files now.
 
   01 Apr 2011; Peter Volkov <pva@gentoo.org> package.mask:
   Smokeping #358389 fixed, unmask dev-perl/Config-Grammar.
