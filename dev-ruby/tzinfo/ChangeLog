@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.76 2011/03/28 13:40:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.77 2011/04/02 23:18:57 flameeyes Exp $
+
+*tzinfo-0.3.26 (02 Apr 2011)
+
+  02 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> +tzinfo-0.3.26.ebuild:
+  Version bump.
 
   28 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tzinfo-0.3.24.ebuild:
   x86 stable wrt bug #359091
