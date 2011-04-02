@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/rodent
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.1 2011/04/02 21:11:42 angelos Exp $
+
+*rodent-4.6.2 (02 Apr 2011)
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> +rodent-4.6.2.ebuild,
+  +files/rodent-4.6.2-libs.patch, +metadata.xml:
+  Initial import
+
