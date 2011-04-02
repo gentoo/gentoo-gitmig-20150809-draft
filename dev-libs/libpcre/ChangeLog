@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.177 2011/04/02 20:15:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.178 2011/04/02 21:07:28 angelos Exp $
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> libpcre-8.12.ebuild:
+  Stable on amd64 wrt bug #358791
 
   02 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libpcre-8.12.ebuild:
   x86 stable wrt security bug #358791
