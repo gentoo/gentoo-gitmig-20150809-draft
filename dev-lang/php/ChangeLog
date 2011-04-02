@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.482 2011/04/02 16:31:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.483 2011/04/02 20:18:58 phajdan.jr Exp $
+
+  02 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> php-5.3.6.ebuild:
+  x86 stable wrt security bug #358791
 
   02 Apr 2011; Jeroen Roovers <jer@gentoo.org> php-5.3.6.ebuild:
   Stable for HPPA (bug #358791).
