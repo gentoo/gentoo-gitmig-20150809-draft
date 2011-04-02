@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.40-r1.ebuild,v 1.1 2010/11/29 01:14:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.40-r1.ebuild,v 1.2 2011/04/02 15:18:31 alexxy Exp $
 
 EAPI="3"
 
@@ -55,7 +55,6 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-2.6.37.patch"
 	epatch "${FILESDIR}"/fix_header_check.patch
-	linux-mod_src_prepare
 }
 
 src_install() {
