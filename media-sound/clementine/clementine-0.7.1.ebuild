@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.1.ebuild,v 1.1 2011/04/02 06:30:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.1.ebuild,v 1.2 2011/04/02 17:47:47 ssuominen Exp $
 
 EAPI=4
 
@@ -70,7 +70,6 @@ DOCS="Changelog TODO"
 src_prepare() {
 	# some tests fail or hang
 	sed -i \
-		-e '/add_test_file(mpris1_test.cpp/d' \
 		-e '/add_test_file(translations_test.cpp/d' \
 		tests/CMakeLists.txt || die
 }
