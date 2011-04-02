@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hearnet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.13 2009/06/11 13:43:13 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/ChangeLog,v 1.14 2011/04/02 12:48:24 ssuominen Exp $
+
+  02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> hearnet-0.0.2.ebuild,
+  hearnet-0.0.9.ebuild:
+  Use net-libs/libpcap instead of virtual/libpcap wrt #358835.
 
   11 Jun 2009; Christian Faulhammer <fauli@gentoo.org> hearnet-0.0.9.ebuild:
   stable x86, bug 272753
