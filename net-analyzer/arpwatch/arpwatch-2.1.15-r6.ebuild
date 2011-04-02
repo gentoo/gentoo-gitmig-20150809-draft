@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r6.ebuild,v 1.6 2011/03/27 19:37:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/arpwatch-2.1.15-r6.ebuild,v 1.7 2011/04/02 12:54:43 ssuominen Exp $
 
 EAPI="2"
 inherit eutils versionator
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE="selinux"
 
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	sys-libs/ncurses"
 
 RDEPEND="${DEPEND}

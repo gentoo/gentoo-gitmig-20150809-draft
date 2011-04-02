@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.1.ebuild,v 1.9 2011/01/13 13:43:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.5.1.ebuild,v 1.10 2011/04/02 12:52:27 ssuominen Exp $
 
 inherit eutils autotools multilib
 
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 ppc ppc64 ~sparc ~x86"
 IUSE="static dynamicplugin ipv6 gre mpls targetbased decoder-preprocessor-rules ppm timestats perfprofiling linux-smp-stats inline inline-init-failopen prelude threads debug reload reload-error-restart flexresp flexresp2 react aruba mysql odbc postgres selinux"
 
 #flexresp, react, and inline _ONLY_ work with net-libs/libnet-1.0.2a
-DEPEND="virtual/libpcap
+DEPEND="net-libs/libpcap
 	>=dev-libs/libpcre-6.0
 	flexresp2? ( dev-libs/libdnet )
 	flexresp? ( ~net-libs/libnet-1.0.2a )
