@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.120 2011/03/31 10:11:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.121 2011/04/02 08:43:22 angelos Exp $
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> qt-core-4.6.3-r1.ebuild:
+  Stable on amd64 wrt bug #361401
 
   31 Mar 2011; Michael Weber <xmw@gentoo.org> files/blacklist_ssl.patch:
   Fix line breaks, thanks to all reporters on bug 361415 and tampakrap for
