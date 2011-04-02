@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.13.18.ebuild,v 1.1 2011/03/20 21:44:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.14.3.ebuild,v 1.1 2011/04/02 16:56:00 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -16,7 +16,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug +introspection +vala"
 
-RDEPEND=">=dev-libs/glib-2.25.16
+# Tests fail in /stream-tube/creation
+RESTRICT="test"
+RDEPEND=">=dev-libs/glib-2.25.16:2
 	>=dev-libs/dbus-glib-0.82
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	vala? (
@@ -59,5 +61,5 @@ src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 
-	find "${D}" -name '*.la' -exec rm -f '{}' + || die
+	find "${ED}" -name '*.la' -exec rm -f '{}' + || die
 }
