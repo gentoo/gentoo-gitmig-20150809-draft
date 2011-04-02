@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-2.0.ebuild,v 1.9 2010/11/08 18:36:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/igal/igal-2.0.ebuild,v 1.10 2011/04/02 09:07:01 ssuominen Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	virtual/jpeg
-	media-gfx/imagemagick"
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )"
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
