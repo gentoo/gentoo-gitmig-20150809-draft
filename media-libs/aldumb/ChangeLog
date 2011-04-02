@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aldumb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.24 2011/03/26 17:24:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.25 2011/04/02 11:50:38 armin76 Exp $
+
+  02 Apr 2011; Raúl Porcel <armin76@gentoo.org> aldumb-0.9.3.ebuild:
+  Drop ia64 keywords
 
   26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> aldumb-0.9.3.ebuild:
   Pin media-libs/allegro to old version.

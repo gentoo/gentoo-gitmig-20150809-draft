@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.3.ebuild,v 1.7 2011/03/26 17:24:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/aldumb-0.9.3.ebuild,v 1.8 2011/04/02 11:50:38 armin76 Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dumb/dumb-${PV}.tar.gz"
 
 LICENSE="DUMB-0.9.2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE="debug"
 
 DEPEND=">=media-libs/dumb-0.9.3

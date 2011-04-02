@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.101 2011/04/02 11:37:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.102 2011/04/02 11:52:01 armin76 Exp $
+
+  02 Apr 2011; Raúl Porcel <armin76@gentoo.org> allegro-4.4.1.1-r1.ebuild:
+  Drop ia64 keywords
 
   02 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> allegro-5.0.1.ebuild:
   Marked ~ppc64 wrt #360587
