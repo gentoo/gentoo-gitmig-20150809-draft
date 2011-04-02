@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.699 2011/03/31 18:20:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.700 2011/04/02 07:59:18 xarthisius Exp $
+
+  02 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> vlc-1.1.8.ebuild:
+  ppc64 stable wrt #360189
 
   31 Mar 2011; Brent Baude <ranger@gentoo.org> vlc-1.1.8.ebuild:
   Marking vlc-1.1.8 ppc for bug 360189
