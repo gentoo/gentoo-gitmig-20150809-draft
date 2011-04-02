@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.31 2011/04/01 14:23:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.32 2011/04/02 14:29:43 ssuominen Exp $
+
+*freewrl-1.22.10-r1 (02 Apr 2011)
+
+  02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> freewrl-1.22.10.ebuild,
+  +freewrl-1.22.10-r1.ebuild:
+  Rename USE="static" to USE="static-libs" wrt #361659. Force spidermonkey as
+  javascript engine until xulrunner-2 support is available wrt #361663.
 
   01 Apr 2011; Patrick Lauer <patrick@gentoo.org> freewrl-1.22.9.ebuild,
   freewrl-1.22.10.ebuild:
