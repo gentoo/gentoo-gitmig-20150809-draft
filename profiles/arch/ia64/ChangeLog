@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.103 2011/04/02 12:01:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.104 2011/04/02 12:50:28 ulm Exp $
+
+  02 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -virtuals:
+  Remove old-style virtual/bootloader, bug 359971.
 
   02 Apr 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Mask media-video/totem youtube USE flag as quvi support is needed to play

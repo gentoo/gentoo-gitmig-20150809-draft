@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.90 2011/04/02 12:01:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.91 2011/04/02 12:50:28 ulm Exp $
+
+  02 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -virtuals:
+  Remove old-style virtual/bootloader, bug 359971.
 
   02 Apr 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Mask media-video/totem youtube USE flag as quvi support is needed to play
