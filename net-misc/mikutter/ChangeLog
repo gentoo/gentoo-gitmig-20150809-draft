@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mikutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.1 2011/04/01 16:50:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.2 2011/04/02 05:34:08 naota Exp $
+
+  02 Apr 2011; Naohiro Aota <naota@elisp.net> ChangeLog:
+  Fix Manifest: gpg-signing
 
 *mikutter-0.0.2.12 (01 Apr 2011)
 
