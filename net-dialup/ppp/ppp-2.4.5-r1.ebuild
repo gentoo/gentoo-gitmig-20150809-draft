@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r1.ebuild,v 1.1 2010/11/27 10:06:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r1.ebuild,v 1.2 2011/04/02 12:51:08 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="activefilter atm dhcp eap-tls gtk ipv6 pam radius"
 
-DEPEND="activefilter? ( virtual/libpcap )
+DEPEND="activefilter? ( net-libs/libpcap )
 	atm? ( net-dialup/linux-atm )
 	pam? ( virtual/pam )
 	gtk? ( x11-libs/gtk+:2 )
