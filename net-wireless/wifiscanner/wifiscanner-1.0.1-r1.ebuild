@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/wifiscanner-1.0.1-r1.ebuild,v 1.2 2006/10/22 13:56:43 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/wifiscanner-1.0.1-r1.ebuild,v 1.3 2011/04/02 12:49:04 ssuominen Exp $
 
 MY_P=WifiScanner-${PV}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ IUSE="wireshark ncurses"
 KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="wireshark? ( net-analyzer/wireshark )
 	ncurses? ( sys-libs/ncurses )
-	virtual/libpcap
+	net-libs/libpcap
 	dev-libs/glib"
 DEPEND="${RDEPEND}"
 

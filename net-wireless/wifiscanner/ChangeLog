@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wifiscanner
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/ChangeLog,v 1.9 2008/08/23 05:29:06 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/ChangeLog,v 1.10 2011/04/02 12:49:04 ssuominen Exp $
+
+  02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  wifiscanner-1.0.1-r1.ebuild, wifiscanner-1.0.1-r2.ebuild:
+  Use net-libs/libpcap instead of virtual/libpcap wrt #358835.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
