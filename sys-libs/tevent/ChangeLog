@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/tevent
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.3 2009/11/04 11:47:20 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.4 2011/04/02 13:53:40 patrick Exp $
+
+*tevent-0.9.11 (02 Apr 2011)
+
+  02 Apr 2011; Patrick Lauer <patrick@gentoo.org> +tevent-0.9.11.ebuild:
+  Bump
 
   04 Nov 2009; Patrick Lauer <patrick@gentoo.org> tevent-0.9.8.ebuild:
   Cleanup
