@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5.1.ebuild,v 1.6 2011/03/29 03:51:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5.1.ebuild,v 1.7 2011/04/02 15:44:15 armin76 Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 # roundcube is GPL-licensed, the rest of the licenses here are
 # for bundled PEAR components, googiespell and utf8.class.php
 LICENSE="GPL-2 BSD PHP-2.02 PHP-3 MIT public-domain"
-KEYWORDS="amd64 ~arm ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 arm ppc ppc64 ~sparc x86"
 IUSE="ldap mysql postgres ssl spell +sqlite"
 
 DEPEND=""
