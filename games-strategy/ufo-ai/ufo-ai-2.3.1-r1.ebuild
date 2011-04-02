@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.1-r1.ebuild,v 1.4 2011/03/23 16:48:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.1-r1.ebuild,v 1.5 2011/04/02 17:45:50 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -54,6 +54,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}-source
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 	cp "${DISTDIR}"/1maps.pk3 "${WORKDIR}"/base/ || die
 	mv "${WORKDIR}"/base/ "${S}"/ || die "Moving data failed"
 }
