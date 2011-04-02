@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12646 2011/04/01 15:56:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12647 2011/04/02 12:07:02 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -255,10 +255,6 @@ media-plugins/mythzoneminder
 dev-php/PEAR-XML_Tree
 # Will be removed with dev-php/PEAR-XML_Tree
 dev-php/PEAR-File_XSPF
-
-# Aaron W. Swenson <titanofold@gentoo.org> (19 Mar 2011)
-# Experimental eselect module for PostgreSQL
->app-admin/eselect-postgresql-1
 
 # Stefaan De Roeck <stefaan@gentoo.org> (19 Mar 2011)
 # New major upstream release.
