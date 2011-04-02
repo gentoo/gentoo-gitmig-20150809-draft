@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r2.ebuild,v 1.1 2011/04/01 14:24:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r2.ebuild,v 1.2 2011/04/02 07:15:13 angelos Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://delta.affinix.com/download/psimedia/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="demo"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18
@@ -46,7 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# qconf generaged configure script...
+	# qconf generated configure script...
 	./configure --no-separate-debug-info || die
 
 	eqmake4
