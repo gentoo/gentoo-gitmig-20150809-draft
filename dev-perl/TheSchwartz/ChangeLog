@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TheSchwartz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.10 2011/01/27 19:06:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TheSchwartz/ChangeLog,v 1.11 2011/04/02 10:37:00 tove Exp $
+
+  02 Apr 2011; Torsten Veller <tove@gentoo.org> -TheSchwartz-1.07.ebuild:
+  Cleanup
 
   27 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   TheSchwartz-1.10.ebuild:

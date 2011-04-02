@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.30 2011/03/30 09:41:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.31 2011/04/02 11:06:17 tove Exp $
+
+  02 Apr 2011; Torsten Veller <tove@gentoo.org> -NetAddr-IP-4.037.ebuild,
+  -NetAddr-IP-4.38.ebuild, -NetAddr-IP-4.39.ebuild, -NetAddr-IP-4.40.ebuild,
+  -NetAddr-IP-4.41.0.ebuild:
+  Cleanup
 
   30 Mar 2011; Michael Weber <xmw@gentoo.org> NetAddr-IP-4.42.0.ebuild:
   added ~arm (bug 302981)
