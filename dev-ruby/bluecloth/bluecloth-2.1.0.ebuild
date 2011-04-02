@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.1.0.ebuild,v 1.1 2011/03/13 07:17:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/bluecloth-2.1.0.ebuild,v 1.2 2011/04/02 16:07:59 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.deveiate.org/projects/BlueCloth"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="test"
 
 ruby_add_bdepend "
