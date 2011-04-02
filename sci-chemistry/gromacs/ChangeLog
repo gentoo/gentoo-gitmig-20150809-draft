@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.76 2011/04/02 16:08:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.77 2011/04/02 16:11:59 armin76 Exp $
+
+  02 Apr 2011; Raúl Porcel <armin76@gentoo.org> gromacs-4.5.3-r4.ebuild:
+  alpha/sparc stable wrt #357017
 
   02 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> gromacs-4.5.4.ebuild:
   Bump to EAPI=4 for REQUIRED_USE on fkernels and threads wrt #361687. Mark
