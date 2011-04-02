@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1356.ebuild,v 1.1 2011/03/11 15:26:49 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1363.ebuild,v 1.1 2011/04/02 14:57:37 tommy Exp $
 
 EAPI="2"
-DATE=20110227
+DATE=20110402
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib
@@ -31,7 +31,8 @@ CDEPEND="dev-db/db-je:3.3
 DEPEND="app-arch/unzip
 	>=virtual/jdk-1.5
 	${CDEPEND}
-	test? ( dev-java/junit )
+	test? ( dev-java/junit
+		dev-java/ant-junit )
 	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.5
 	net-libs/nativebiginteger
@@ -40,11 +41,11 @@ PDEPEND="net-libs/NativeThread
 	freemail? ( dev-java/bcprov )"
 
 EANT_BUILD_TARGET="package"
+EANT_TEST_TARGET="unit"
 EANT_BUILD_XML="build-clean.xml"
 EANT_GENTOO_CLASSPATH="db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
 EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.junit.present=true"
-use test || export EANT_EXTRA_ARGS+=" -Dtest.skip=true"
-use test && EANT_GENTOO_CLASSPATH+=" junit"
+export EANT_EXTRA_ARGS+=" -Dtest.skip=true"
 
 pkg_setup() {
 	has_version dev-java/icedtea[cacao] && {
@@ -60,11 +61,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.zip seednodes-${DATE}.fref.bz2
+	mv "${WORKDIR}"/freenet-fred-* "${S}"
 }
 
 src_prepare() {
-	mv "${WORKDIR}"/freenet-fred-* "${S}"
-	cd "${S}"
 	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
 	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch
@@ -76,6 +76,20 @@ src_prepare() {
 	java-ant_rewrite-classpath "${EANT_BUILD_XML}"
 	cp "${DISTDIR}"/freenet-ant-1.7.1.jar lib/ant.jar || die
 	java-pkg-2_src_prepare
+}
+
+src_test() {
+#	java-pkg_jar-from --into lib junit
+#	java-pkg_jar-from --into lib ant-junit
+	java-pkg_jar-from --into lib fec
+	java-pkg_jar-from --into lib java-service-wrapper
+	java-pkg_jar-from --into lib mersennetwister
+	java-pkg_jar-from --into lib lzma
+	java-pkg_jar-from --into lib db4o-jdk5
+	java-pkg_jar-from --into lib db4o-jdk12
+	java-pkg_jar-from --into lib db4o-jdk11
+	export EANT_EXTRA_ARGS+=" -Dtest.skip=false"
+	java-pkg-2_src_test
 }
 
 src_install() {
