@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.121 2011/04/02 08:43:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.122 2011/04/02 20:31:36 phajdan.jr Exp $
+
+  02 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qt-core-4.6.3-r1.ebuild:
+  x86 stable wrt security bug #361401
 
   02 Apr 2011; Christoph Mende <angelos@gentoo.org> qt-core-4.6.3-r1.ebuild:
   Stable on amd64 wrt bug #361401
