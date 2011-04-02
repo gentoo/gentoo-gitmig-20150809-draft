@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/powerman
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/ChangeLog,v 1.10 2009/07/13 02:21:46 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/ChangeLog,v 1.11 2011/04/02 18:07:37 weaver Exp $
+
+*powerman-2.3.9 (02 Apr 2011)
+
+  02 Apr 2011; Andrey Kislyuk <weaver@gentoo.org> +powerman-2.3.9.ebuild:
+  Version bump
 
 *powerman-2.3.5 (12 Jul 2009)
 
