@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <herd>python</herd>
+<use>
+	<flag name='glade'>Enable <pkg>gnome-base/libglade</pkg> bindings
+	compilation</flag>
+</use>
 <longdescription>
 PyGTK provides a convenient wrapper for the GTK+ library for use in
 Python programs, taking care of many of the boring details such as
