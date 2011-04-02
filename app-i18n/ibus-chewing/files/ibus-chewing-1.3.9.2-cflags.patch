@@ -1,0 +1,12 @@
+diff -Naur ibus-chewing-1.3.9.2-Source.orig/CMakeLists.txt ibus-chewing-1.3.9.2-Source/CMakeLists.txt
+--- ibus-chewing-1.3.9.2-Source.orig/CMakeLists.txt	2010-11-19 11:41:24.000000000 +0900
++++ ibus-chewing-1.3.9.2-Source/CMakeLists.txt	2011-04-01 17:33:37.571426377 +0900
+@@ -4,7 +4,7 @@
+ #
+ PROJECT(ibus-chewing)
+ SET(PRJ_SUMMARY "The Chewing engine for IBus input platform")
+-SET(CMAKE_C_FLAGS "-Wall")
++SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
+ 
+ SET(AUTHORS "Peng Huang, Ding-Yi Chen")
+ SET(MAINTAINER "Ding-Yi Chen <dchen at redhat.com>")

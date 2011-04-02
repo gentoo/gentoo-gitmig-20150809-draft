@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.3.5.20100706.ebuild,v 1.1 2010/07/13 23:33:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ibus-chewing-1.3.9.2.ebuild,v 1.1 2011/04/02 02:05:44 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
 inherit cmake-utils
 
 MY_P="${P}-Source"
@@ -21,11 +21,12 @@ RDEPEND="x11-libs/libXtst
 	x11-libs/gtk+:2
 	dev-util/gob:2"
 DEPEND="${RDEPEND}
-	dev-util/cmake
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
 CMAKE_IN_SOURCE_BUILD=1
 
-DOCS="AUTHORS ChangeLog ChangeLog.prev NEWS README RELEASE-NOTES.txt"
+PATCHES=( "${FILESDIR}/${P}-cflags.patch" )
+
+DOCS="AUTHORS ChangeLog ChangeLog.prev README RELEASE-NOTES.txt USER-GUIDE"
