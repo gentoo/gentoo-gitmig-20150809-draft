@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/eselect-postgresql-1.0.3.ebuild,v 1.1 2011/03/19 21:58:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/eselect-postgresql-1.0.6.ebuild,v 1.1 2011/04/02 11:52:32 titanofold Exp $
 
 EAPI="4"
 
@@ -15,6 +15,8 @@ IUSE=""
 RDEPEND="app-admin/eselect
 		!!dev-db/libpq"
 
+S="${WORKDIR}"
+
 src_install() {
 	keepdir /etc/eselect/postgresql
 
@@ -25,6 +27,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You need to set your default slot:"
+	ewarn "If you are updating from app-admin/eselect-postgresql-0.4 or older, run:"
+	ewarn "    eselect postgresql update"
+	ewarn "To get your system in a proper state."
+	elog "You should set your desired PostgreSQL slot:"
+	elog "    eselect postgresql list"
 	elog "    eselect postgresql set <slot>"
 }
