@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.29 2011/04/01 15:04:52 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.30 2011/04/02 13:30:32 angelos Exp $
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> tdb-1.2.7-r1.ebuild:
+  Removed dolib.so (bug #361621) and stable on amd64 (bug #361055)
 
   01 Apr 2011; Víctor Ostorga <vostorga@gentoo.org> tdb-1.2.1.ebuild,
   tdb-1.2.1-r1.ebuild:
