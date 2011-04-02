@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.0_beta.ebuild,v 1.1 2011/03/25 13:49:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.0_beta.ebuild,v 1.2 2011/04/02 14:07:53 hwoarang Exp $
 
-EAPI="2"
+EAPI="4"
 LANGS="de es fr it ja pl ru sl"
 
 inherit qt4-r2 multilib
@@ -17,7 +17,7 @@ SRC_URI="http://get.qt.nokia.com/${MY_PN}/${MY_P}-src.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="bineditor bookmarks +cmake cvs debug +designer doc examples fakevim git
+IUSE="bazaar bineditor bookmarks +cmake cvs debug doc examples fakevim git
 	mercurial perforce +qml qtscript rss subversion"
 QTVER="4.7.1:4"
 DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
@@ -33,6 +33,7 @@ DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
 	qtscript? ( >=x11-libs/qt-script-${QTVER} )"
 
 RDEPEND="${DEPEND}
+	bazaar? ( dev-vcs/bzr )
 	cmake? ( dev-util/cmake )
 	cvs? ( dev-vcs/cvs )
 	sys-devel/gdb
@@ -41,7 +42,8 @@ RDEPEND="${DEPEND}
 	mercurial? ( dev-vcs/mercurial )
 	subversion? ( dev-vcs/subversion )"
 
-PLUGINS="bookmarks bineditor cmake cvs designer fakevim git mercurial perforce qml qtscript subversion"
+PLUGINS="bookmarks bineditor cmake cvs fakevim git mercurial
+perforce qml qtscript subversion"
 
 S="${WORKDIR}"/"${MY_P}"-src
 
@@ -60,30 +62,15 @@ src_prepare() {
 				plugin="cmakeprojectmanager"
 			elif [[ ${plugin} == "qtscript" ]]; then
 				plugin="qtscripteditor"
-			# Make sure that qt4project manager does NOT depend
-			# on designer
-			elif [[ ${plugin} == "designer" ]];then
-				plugin="designer"
-				sed -i -e "/designer/d" \
-					src/plugins/qt4projectmanager/qt4projectmanager_dependencies.pri \
-					|| die "failed to disable qml plugin"
-			fi
-			# Now disable the plugins
-			sed -i "/plugin_${plugin}/s:^:#:" src/plugins/plugins.pro \
-				|| die "Failed to disable ${plugin} plugin"
-			# qml needs special treatment
-			if [[ ${plugin} == "qml" ]]; then
-				# remove qml support from debugger and qt4project manager
-				sed -i -e "/^include(qml\/qml.pri)/d" \
-						src/plugins/debugger/debugger.pro \
-					-e "/qmljseditor/d" \
-						src/plugins/qt4projectmanager/qt4projectmanager_dependencies.pri
-					# drop all the qml plugins
-					for x in qmlprojectmanager qmljsinspector qmljseditor qmldesigner; do
-						sed -i "/plugin_${x}/s:^:#:" src/plugins/plugins.pro \
-							|| die "Failed to disable ${x} plugin"
+			elif [[ ${plugin} ==  "qml" ]]; then
+				for x in qmlprojectmanager qmljsinspector qmljseditor qmljstools qmldesigner; do
+					einfo "Disabling ${x} support"
+					sed -i "/plugin_${x}/s:^:#:" src/plugins/plugins.pro \
+						|| die "Failed to disable ${x} plugin"
 					done
 			fi
+			# Now disable the plugins
+			sed -i "/plugin_${plugin}/s:^:#:" src/plugins/plugins.pro
 		fi
 	done
 
@@ -91,7 +78,7 @@ src_prepare() {
 		ewarn
 		ewarn "You have enabled perforce plugin."
 		ewarn "In order to use it, you need to manually"
-		ewarn "download perforce client from http://www.perforce.com/perforce/downloads/index.html"
+		ewarn "download the perforce client from http://www.perforce.com/perforce/downloads/index.html"
 		ewarn
 	fi
 	# disable rss news on startup ( bug #302978 )
