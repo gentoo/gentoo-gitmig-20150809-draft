@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4.ebuild,v 1.4 2011/04/02 15:43:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4.ebuild,v 1.5 2011/04/02 15:45:21 ssuominen Exp $
 
 EAPI="3"
 
@@ -49,8 +49,12 @@ RDEPEND="${CDEPEND}
 RESTRICT="test"
 
 #gromacs has gnu exec stacks for speedup
-QA_EXECSTACK="usr/lib/libgmx.so.*
-	usr/lib/libgmx_d.so.*"
+# - ebuild author
+#it's not legal to hide execstacks in source based packages by QA_ vars,
+#and if this were a binary-only package these libs would be in /opt instead
+# - ssuominen, for the QA team
+#QA_EXECSTACK="usr/lib/libgmx.so.*
+#	usr/lib/libgmx_d.so.*"
 
 src_prepare() {
 	if use mpi && use threads; then
