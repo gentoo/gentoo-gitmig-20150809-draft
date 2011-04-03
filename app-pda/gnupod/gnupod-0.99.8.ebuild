@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.99.8.ebuild,v 1.2 2011/03/30 15:00:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.99.8.ebuild,v 1.3 2011/04/03 21:28:20 scarabeus Exp $
 
 inherit perl-module
 
@@ -20,7 +20,7 @@ RDEPEND="dev-lang/perl
 	dev-perl/Unicode-String
 	dev-perl/Digest-SHA1
 	dev-perl/libwww-perl
-	ffmpeg?	( media-video/ffmpeg )
+	ffmpeg?	( virtual/ffmpeg )
 	flac?	( dev-perl/Audio-FLAC-Header
 			  media-libs/flac
 			  aac?  ( >=media-libs/faac-1.24 )

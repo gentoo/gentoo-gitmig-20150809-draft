@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gnupod
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.21 2011/03/30 15:00:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.22 2011/04/03 21:28:20 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gnupod-0.99.8.ebuild:
+  Use virtual/ffmpeg instead of media-video/ffmpeg.
 
   30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> gnupod-0.98.3.ebuild:
   amd64/x86 stable
