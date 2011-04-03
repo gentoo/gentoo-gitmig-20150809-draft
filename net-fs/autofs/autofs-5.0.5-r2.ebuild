@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.5-r1.ebuild,v 1.1 2011/04/03 09:49:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.5-r2.ebuild,v 1.1 2011/04/03 17:55:17 pva Exp $
 
 EAPI="4"
 inherit eutils multilib autotools linux-info
