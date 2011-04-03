@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.6.0.ebuild,v 1.7 2011/04/01 16:32:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.6.0-r1.ebuild,v 1.1 2011/04/03 12:31:12 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="TraitsGUI"
 MY_P="${MY_PN}-${PV}"
@@ -34,13 +34,18 @@ S="${WORKDIR}/${MY_P}"
 DOCS="docs/*.txt"
 PYTHON_MODNAME="enthought"
 
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-namespaces.patch"
+}
+
 src_compile() {
 	distutils_src_compile
 
 	if use doc; then
 		einfo "Generation of documentation"
 		pushd docs > /dev/null
-		emake html || die "Generation of documentation failed"
+		PYTHONPATH=".." emake html || die "Generation of documentation failed"
 		popd > /dev/null
 	fi
 }
