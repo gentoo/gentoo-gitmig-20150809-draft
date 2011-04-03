@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.567 2011/03/30 19:06:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.568 2011/04/03 12:17:00 zzam Exp $
+
+*udev-167-r1 (03 Apr 2011)
+
+  03 Apr 2011; Matthias Schwarzott <zzam@gentoo.org> +udev-167-r1.ebuild,
+  +files/udev-167-revert-disable-all-extras.patch:
+  Let USE=-extras still build important utils like ata_id and usb_id.
+  Backported from udev-168.
 
 *udev-167 (30 Mar 2011)
 
