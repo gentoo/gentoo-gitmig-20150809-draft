@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/scrapy
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.1 2011/04/03 19:19:59 maksbotan Exp $
+
+*scrapy-0.12.0.2539 (03 Apr 2011)
+
+  03 Apr 2011; Maxim (maksbotan) <kolmax94@gmail.com>
+  +scrapy-0.12.0.2539.ebuild, +metadata.xml:
+  New ebuild for dev-python/scrapy. Ebuild is based on g-pypi generated one.
+  Fixes bug #361771.
