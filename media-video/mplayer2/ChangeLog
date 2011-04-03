@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.9 2011/04/03 12:55:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.10 2011/04/03 20:03:02 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-2.0.ebuild,
+  mplayer2-9999.ebuild:
+  Drop symlink functionality so this can be unmasked again.
 
   03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   Internal mp3lib was dropped.
