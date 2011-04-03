@@ -1,6 +1,13 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.7 2011/03/31 15:25:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.8 2011/04/03 10:37:23 scarabeus Exp $
+
+*ffmpeg-0.6-r1 (03 Apr 2011)
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ffmpeg-0.6.ebuild,
+  +ffmpeg-0.6-r1.ebuild:
+  Preffer ffmpeg over libav so user dont get confusing msg during unsattisfied
+  useflags. (they will when we switch to libav anyway but it does not matter.
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ffmpeg-0.5.ebuild:
   Just drop 0.5 ffmpeg, things are easier without it now. Only thing so far
