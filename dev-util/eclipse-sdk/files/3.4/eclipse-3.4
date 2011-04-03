@@ -27,8 +27,11 @@ if [ $(id -u) -eq 0 ] ; then
 	exit -1
 fi
 
-[[ "$(java-config -f)" =~ "gcj" ]] \
-	&& export JAVA_PKG_CLASSMAP="${ECLIPSE_HOME}/eclipse.gcjdb"
+case "$(java-config -f)" in
+	*gcj*)
+		export JAVA_PKG_CLASSMAP="${ECLIPSE_HOME}/eclipse.gcjdb"
+		;;
+esac
 
 eval $(gjl --package "swt-${SLOT}" --get-args)
 

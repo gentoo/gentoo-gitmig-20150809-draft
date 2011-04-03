@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.158 2010/04/13 12:01:54 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.159 2011/04/03 07:58:50 ali_bush Exp $
+
+  03 Apr 2011; Alistair Bush <ali_bush@gentoo.org> files/3.4/eclipse-3.4:
+  Fix for #274545. Thanks to Christoph Brill
 
   13 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
   eclipse-sdk-3.5.1-r1.ebuild:
