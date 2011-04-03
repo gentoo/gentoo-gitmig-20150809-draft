@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.14.2.ebuild,v 1.7 2011/03/23 17:06:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.14.2.ebuild,v 1.8 2011/04/03 15:18:22 aballier Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit multilib
 IUSE="debug examples glade gnome gnomecanvas sourceview +ocamlopt opengl spell svg"
 
 DESCRIPTION="Objective CAML interface for Gtk+2"
-HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html"
+HOMEPAGE="http://lablgtk.forge.ocamlcore.org/"
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 LICENSE="LGPL-2.1 as-is"
 
