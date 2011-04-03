@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.25 2011/03/29 02:20:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.26 2011/04/03 11:17:09 scarabeus Exp $
 
 EAPI="3"
 
@@ -76,7 +76,7 @@ RDEPEND="
 		dts? ( media-libs/libdca )
 		dvd? (	media-libs/libdvdread >=media-libs/libdvdnav-0.1.9 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8 )
-		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20090201 )
+		ffmpeg? ( virtual/ffmpeg )
 		flac? ( media-libs/libogg >=media-libs/flac-1.1.2 )
 		fluidsynth? ( media-sound/fluidsynth )
 		fontconfig? ( media-libs/fontconfig )
@@ -135,7 +135,7 @@ RDEPEND="
 		upnp? ( net-libs/libupnp )
 		v4l2? ( libv4l2? ( media-libs/libv4l ) )
 		v4l? ( libv4l? ( media-libs/libv4l ) )
-		vaapi? ( x11-libs/libva >=media-video/ffmpeg-0.5_p22846 )
+		vaapi? ( x11-libs/libva virtual/ffmpeg )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
 		win32codecs? ( media-libs/win32codecs )

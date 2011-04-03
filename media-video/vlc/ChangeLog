@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.700 2011/04/02 07:59:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.701 2011/04/03 11:17:09 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> vlc-1.1.7.ebuild,
+  vlc-1.1.8.ebuild, vlc-1.1.9999.ebuild, vlc-9999.ebuild:
+  Compilation passes with libav and it plays movies. Moving from
+  media-video/ffmpeg to virtual/ffmpeg (unversioned because oldest sattisfy the
+  dependency requirements). Fixes bug #361123.
 
   02 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> vlc-1.1.8.ebuild:
   ppc64 stable wrt #360189
