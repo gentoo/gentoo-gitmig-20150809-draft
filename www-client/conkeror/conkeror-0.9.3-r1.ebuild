@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.3.ebuild,v 1.1 2010/10/11 16:58:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.3-r1.ebuild,v 1.1 2011/04/03 15:41:21 ulm Exp $
 
 EAPI=3
 
@@ -36,7 +36,7 @@ src_install() {
 	insinto /usr/lib/${PN}
 	doins -r branding chrome components content defaults help locale modules \
 		search-engines style tests || die
-	doins application.ini Info.plist || die
+	doins application.ini chrome.manifest Info.plist || die
 
 	exeinto /usr/lib/${PN}
 	doexe conkeror-spawn-helper || die
