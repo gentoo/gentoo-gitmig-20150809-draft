@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.55 2011/03/27 20:22:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.56 2011/04/03 17:02:37 jer Exp $
+
+  03 Apr 2011; Jeroen Roovers <jer@gentoo.org> firefox-3.6.16.ebuild:
+  Stable for HPPA (bug #360055).
 
   27 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-4.0-r2.ebuild:
   ensure cairo dep correct for FF-4
