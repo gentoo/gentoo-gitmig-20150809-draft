@@ -1,15 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1.ebuild,v 1.5 2011/03/16 10:45:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r2.ebuild,v 1.1 2011/04/03 15:44:39 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.4"
 
-inherit gnome2 python
+inherit gnome2 python eutils autotools
 
 DESCRIPTION="The GNOME panel"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="${SRC_URI} mirror://gentoo/introspection-20110205.m4.tar.bz2
+	http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
@@ -34,7 +36,7 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	bonobo? (
 		>=gnome-base/libbonobo-2.20.4
 		>=gnome-base/libbonoboui-2.1.1
-		>=gnome-base/orbit-2.4:2
+		>=gnome-base/orbit-2.4
 		>=x11-libs/libwnck-2.19.5:1 )
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
@@ -45,7 +47,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.40
 	~app-text/docbook-xml-dtd-4.1.2
-	doc? ( >=dev-util/gtk-doc-1 )"
+	doc? ( >=dev-util/gtk-doc-1 )
+	gnome-base/gnome-common
+	dev-util/gtk-doc-am"
 # eautoreconf needs
 #	gnome-base/gnome-common
 #	dev-util/gtk-doc-am
@@ -56,13 +60,48 @@ pkg_setup() {
 		--disable-static
 		--disable-scrollkeeper
 		--disable-schemas-install
-		--with-in-process-applets=clock,notification-area,wncklet
 		$(use_enable bonobo)
 		$(use_enable networkmanager network-manager)
 		$(use_enable introspection)
 		$(use_enable eds)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 	python_set_active_version 2
+}
+
+src_unpack() {
+	# If gobject-introspection is installed, we don't need the extra .m4
+	if has_version "dev-libs/gobject-introspection"; then
+		unpack ${P}.tar.bz2 ${P}-patches.tar.bz2
+	else
+		unpack ${A}
+	fi
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# List the objects before the libraries to fix build with --as-needed
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+
+	# Try to improve panel behavior on multiscreen systems, bug #348253, upstream #632369
+	epatch "${FILESDIR}/${PN}-2.32.1-fix-multiscreen.patch"
+	epatch "${FILESDIR}/${PN}-2.32.1-fix-multiscreen2.patch"
+
+	# Apply multiple bugfixes from 2.32 and master branches
+	# Also use gnome-applications.menu instead of applications.menu as it's the default value for us.
+	epatch "${WORKDIR}/${P}-patches"/*.patch
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	AT_M4DIR=${WORKDIR} eautoreconf
+}
+
+src_install() {
+	gnome2_src_install
+
+	# gnome-panel does not need la files for applets
+	find "${ED}"/usr/$(get_libdir)/${PN} -name "*.la" -delete
+	# no package could ever need this, remove it before anyone tries to
+	rm "${ED}"/usr/$(get_libdir)/libpanel-applet-3.la
 }
 
 pkg_postinst() {

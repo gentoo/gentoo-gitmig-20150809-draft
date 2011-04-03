@@ -1,6 +1,19 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.331 2011/03/22 19:11:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.332 2011/04/03 15:44:39 pacho Exp $
+
+*gnome-panel-2.32.1-r2 (03 Apr 2011)
+
+  03 Apr 2011; Pacho Ramos <pacho@gentoo.org> -gnome-panel-2.30.2.ebuild,
+  -gnome-panel-2.32.1.ebuild, +gnome-panel-2.32.1-r2.ebuild:
+  Revision bump including multiple fixes from 2.32 and master upstream branches
+  (including upstream fix for bug #357197 by Alessandro Surace and using
+  gnome-applications.menu instead of applications.menu as it's our default
+  value until upstream resolve their bug #623221 in a better way). Also drops
+  --with-in-process-applets configure option to prevent annoying error messages
+  about applets disappearing 'unexpectedly' when removing wncklet, clock or
+  notification-area applets (upstream default value for this is 'none'). Remove
+  old.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gnome-panel-2.32.1-r1.ebuild:
   Marking gnome-panel-2.32.1-r1 ppc stable for bug 353436
