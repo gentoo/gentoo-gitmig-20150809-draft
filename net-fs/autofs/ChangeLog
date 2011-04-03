@@ -1,6 +1,22 @@
 # ChangeLog for net-fs/autofs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.98 2010/09/29 16:54:27 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.99 2011/04/03 09:49:15 pva Exp $
+
+*autofs-5.0.5-r1 (03 Apr 2011)
+
+  03 Apr 2011; Peter Volkov <pva@gentoo.org> +autofs-5.0.5-r1.ebuild,
+  +files/autofs5.initd, +files/autofs-5.0.5-fix-building-without-ldap.patch,
+  +files/autofs-5.0.5-fix-install-deadlink.patch,
+  +files/autofs-5.0.5-respect-user-flags-and-fix-asneeded-v1.patch:
+  Rev bump, bug #346537. Mention nfs-utils in elog for NFS mounts, bug 163210
+  reported by Kai Krakow. Fixed ldap module linkage with krb5, bug 285216
+  reported by Jonas Jonsson and bug 302377 reported by Duncan Exon Smith.
+  Finally respect LDFLAGS, bug 333971 wrt Cyprien Nicolas (fulax). Incoporate
+  upstream fix to fix ghost entries upon SIGHUP, bug 340761 reported by
+  Faustus. Avoid /etc/mtab access violation, bug 355975 thank Sean McGovern for
+  report. Install /etc/conf.d/autofs on systems with /etc/sysconfig dir, bug
+  361481 thank Juergen Rose for report. And of course thank Dustin Polke -
+  autofs maintainer!
 
   29 Sep 2010; Jeroen Roovers <jer@gentoo.org> autofs-5.0.4-r5.ebuild:
   Stable for HPPA (bug #292147).

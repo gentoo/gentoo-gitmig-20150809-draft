@@ -1,0 +1,58 @@
+--- lib/defaults.c.orig
++++ lib/defaults.c
+@@ -19,7 +19,9 @@
+ 
+ #include "list.h"
+ #include "defaults.h"
++#ifdef HAVE_LDAP
+ #include "lookup_ldap.h"
++#endif
+ #include "log.h"
+ #include "automount.h"
+ 
+@@ -197,6 +199,7 @@ static int parse_line(char *line, char *
+ 	return 1;
+ }
+ 
++#ifdef HAVE_LDAP
+ void defaults_free_uris(struct list_head *list)
+ {
+ 	struct list_head *next;
+@@ -252,9 +255,11 @@ static unsigned int add_uris(char *value
+ 
+ 	return 1;
+ }
++#endif
+ 
+ struct list_head *defaults_get_uris(void)
+ {
++#ifdef HAVE_LDAP
+ 	FILE *f;
+ 	char buf[MAX_LINE_LEN];
+ 	char *res;
+@@ -288,6 +292,9 @@ struct list_head *defaults_get_uris(void
+ 
+ 	fclose(f);
+ 	return list;
++#else
++	return NULL;
++#endif
+ }
+ 
+ /*
+@@ -450,6 +457,7 @@ unsigned int defaults_get_ldap_network_t
+ 	return res;
+ }
+ 
++#ifdef HAVE_LDAP
+ struct ldap_schema *defaults_get_default_schema(void)
+ {
+ 	struct ldap_schema *schema;
+@@ -645,6 +653,7 @@ struct ldap_schema *defaults_get_schema(
+ 
+ 	return schema;
+ }
++#endif
+ 
+ unsigned int defaults_get_mount_nfs_default_proto(void)
+ {
