@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20110223.ebuild,v 1.1 2011/02/24 13:26:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20110223.ebuild,v 1.2 2011/04/03 18:18:48 scarabeus Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs versionator
@@ -18,7 +18,7 @@ IUSE="debug ffmpeg +mp4 +threads"
 
 RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
 	~media-libs/x264-${PV}
-	ffmpeg? ( media-video/ffmpeg )"
+	ffmpeg? ( virtual/ffmpeg )"
 DEPEND="${RDEPEND}
 	amd64? ( >=dev-lang/yasm-0.6.2 )
 	x86? ( || ( >=dev-lang/yasm-0.6.2 dev-lang/nasm )
