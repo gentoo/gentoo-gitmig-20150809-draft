@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.12 2011/03/22 19:03:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.13 2011/04/03 14:00:49 arfrever Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc cairo examples +introspection libffi test +threads"
 
-RDEPEND=">=dev-libs/glib-2.22.4:2
+RDEPEND=">=dev-libs/glib-2.24:2
 	!<dev-python/pygtk-2.13
 	introspection? (
 		>=dev-libs/gobject-introspection-0.9.5
