@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-010-r1.ebuild,v 1.1 2011/04/01 22:54:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-010-r1.ebuild,v 1.2 2011/04/03 20:29:37 ssuominen Exp $
 
 EAPI=2
 
@@ -58,7 +58,7 @@ RDEPEND="
 	dracut_modules_caps? ( sys-libs/libcap )
 	dracut_modules_crypt? ( sys-fs/cryptsetup ${DM_DEPS} )
 	dracut_modules_dmraid? ( sys-fs/dmraid sys-fs/multipath-tools ${DM_DEPS} )
-	dracut_modules_dmsquash-live? ( sys-apps/eject ${DM_DEPS} )
+	dracut_modules_dmsquash-live? ( virtual/eject ${DM_DEPS} )
 	dracut_modules_gensplash? ( media-gfx/splashutils )
 	dracut_modules_iscsi? ( >=sys-block/open-iscsi-2.0.871.3 ${NETWORK_DEPS} )
 	dracut_modules_lvm? ( >=sys-fs/lvm2-2.02.33 )
