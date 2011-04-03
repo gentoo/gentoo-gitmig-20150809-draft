@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.403 2011/03/27 20:20:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.404 2011/04/03 17:02:21 jer Exp $
+
+  03 Apr 2011; Jeroen Roovers <jer@gentoo.org> xulrunner-1.9.2.16.ebuild:
+  Stable for HPPA (bug #360055).
 
   27 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> xulrunner-2.0.ebuild:
   ensure cairo dep correct for xul-2.0
