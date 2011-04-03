@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.50 2011/03/22 20:58:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.51 2011/04/03 22:15:50 flameeyes Exp $
+
+  03 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/munin-node_init.d_1.4.5-r3:
+  Create /var/run/munin if it's missing, otherwise munin-node will not start
+  (and will do that silently).
 
   22 Mar 2011; Jeremy Olexa <darkside@gentoo.org> munin-1.4.5-r3.ebuild:
   fix init/conf filename, bug 359997
