@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.9 2011/04/02 12:00:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.10 2011/04/03 19:40:48 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -50,7 +50,6 @@ IUSE=""
 DEPEND="sys-apps/kbd
 	>=sys-apps/sed-4"
 RDEPEND="sys-fs/mtools"
-
 
 S=${WORKDIR}/milo-${milo_version}
 
