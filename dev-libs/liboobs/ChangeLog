@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/liboobs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.17 2011/03/22 18:40:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.18 2011/04/03 10:37:18 pacho Exp $
+
+*liboobs-3.0.0 (03 Apr 2011)
+
+  03 Apr 2011; Pacho Ramos <pacho@gentoo.org> -liboobs-2.30.1.ebuild,
+  +liboobs-3.0.0.ebuild:
+  Version bump: link against OOBS_LIBS so strict linking works, store
+  OobsUser's main group as GID rather than OobsGroup, remove idle tasks when
+  destroying objects. Remove old.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> liboobs-2.32.0.ebuild:
   Marking liboobs-2.32.0 ppc stable for bug 353436
