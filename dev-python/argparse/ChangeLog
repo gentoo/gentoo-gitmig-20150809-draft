@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.15 2011/02/13 20:42:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.16 2011/04/03 12:02:36 arfrever Exp $
+
+*argparse-1.2.1 (03 Apr 2011)
+
+  03 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +argparse-1.2.1.ebuild:
+  Version bump.
 
   13 Feb 2011; Fabian Groffen <grobian@gentoo.org> argparse-1.1.ebuild:
   Marked ~sparc64-solaris
