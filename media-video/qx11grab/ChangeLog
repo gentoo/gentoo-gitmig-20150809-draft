@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qx11grab
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.6 2010/11/17 17:35:14 chiiph Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.7 2011/04/03 19:04:43 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  qx11grab-0.2.1_rc4.ebuild, qx11grab-0.2.2.ebuild:
+  Move to virtual/ffmpeg. Drop prepalldoc call.
 
   17 Nov 2010; Tomas Touceda <chiiph@gentoo.org> qx11grab-0.2.2.ebuild:
   Replace SRC_URI for an ftp one to maintain digest, wrt bug 340025

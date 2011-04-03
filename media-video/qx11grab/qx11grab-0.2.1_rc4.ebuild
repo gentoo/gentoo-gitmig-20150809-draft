@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.2.1_rc4.ebuild,v 1.3 2010/08/31 12:39:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.2.1_rc4.ebuild,v 1.4 2011/04/03 19:04:43 scarabeus Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4[dbus]
-	media-video/ffmpeg[X]"
+	virtual/ffmpeg[X]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -35,10 +35,4 @@ src_prepare() {
 		-e "s:share/qx11grab:share/doc/${PF}:" \
 		-e '/COPYING/d' \
 		CMakeLists.txt
-}
-
-src_install() {
-	cmake-utils_src_install
-
-	prepalldocs
 }
