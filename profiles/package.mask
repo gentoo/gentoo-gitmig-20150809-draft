@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12652 2011/04/03 17:54:50 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12653 2011/04/03 18:49:25 klausman Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -467,13 +467,6 @@ games-puzzle/gtetrinet
 # - Last release in 2005
 # - Multiple alternatives
 net-ftp/yafc
-
-# Jeremy Olexa <darkside@gentoo.org> (22 Feb 2011)
-# Masked for removal in 60 days by treecleaners
-# - Open bugs: tracked in bug 323883
-# - Dead upstream
-# - No maintainer
-net-ftp/atftp
 
 # Jeremy Olexa <darkside@gentoo.org> (22 Feb 2011)
 # Masked for removal in 60 days by treecleaners
