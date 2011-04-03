@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-W3CDTF
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.16 2011/02/07 18:28:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-W3CDTF/ChangeLog,v 1.17 2011/04/03 06:40:43 tove Exp $
+
+  03 Apr 2011; Torsten Veller <tove@gentoo.org>
+  -DateTime-Format-W3CDTF-0.05.ebuild:
+  Cleanup
 
 *DateTime-Format-W3CDTF-0.06 (07 Feb 2011)
 

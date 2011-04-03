@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.29 2011/02/24 07:17:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.30 2011/04/03 06:23:28 tove Exp $
+
+  03 Apr 2011; Torsten Veller <tove@gentoo.org> -IO-Multiplex-1.10.ebuild,
+  -IO-Multiplex-1.110.ebuild:
+  Cleanup
 
 *IO-Multiplex-1.120 (24 Feb 2011)
 

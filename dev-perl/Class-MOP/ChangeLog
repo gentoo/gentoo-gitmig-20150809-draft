@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-MOP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.57 2011/03/27 08:43:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.58 2011/04/03 06:48:34 tove Exp $
+
+  03 Apr 2011; Torsten Veller <tove@gentoo.org> -Class-MOP-1.08.ebuild:
+  Cleanup
 
   27 Mar 2011; Torsten Veller <tove@gentoo.org> Class-MOP-1.120.ebuild:
   Stable on x86 (#350853)
