@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-audiorecorder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.13 2010/12/28 18:44:25 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/ChangeLog,v 1.14 2011/04/03 19:13:12 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -vdr-audiorecorder-0.1.0_pre14.ebuild,
+  vdr-audiorecorder-0.1.0_pre14-r1.ebuild:
+  Use virtual/ffmpeg instead of media-video/ffmpeg. Fix usedep.
 
 *vdr-audiorecorder-0.1.0_pre14-r1 (28 Dec 2010)
 
