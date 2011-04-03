@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.83 2011/03/21 13:43:05 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.84 2011/04/03 15:15:33 dilfridge Exp $
+
+  03 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org> qca-2.0.3.ebuild:
+  Unset ABI for configure, to make the multilib guys happy (bug 305907)
 
 *qca-2.0.3 (21 Mar 2011)
 

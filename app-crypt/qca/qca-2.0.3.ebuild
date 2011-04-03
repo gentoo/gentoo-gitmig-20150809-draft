@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3.ebuild,v 1.1 2011/03/21 13:43:05 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3.ebuild,v 1.2 2011/04/03 15:15:33 dilfridge Exp $
 
 EAPI="3"
 inherit eutils multilib qt4-r2
@@ -35,7 +35,7 @@ src_configure() {
 	# Ensure proper rpath
 	export EXTRA_QMAKE_RPATH="${EPREFIX}/usr/${_libdir}/qca2"
 
-	./configure \
+	ABI= ./configure \
 		--prefix="${EPREFIX}"/usr \
 		--qtdir="${EPREFIX}"/usr \
 		--includedir="${EPREFIX}"/usr/include/qca2 \
