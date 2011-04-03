@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/iscan-data-1.8.0.ebuild,v 1.1 2011/04/03 00:15:56 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/iscan-data-1.8.0.ebuild,v 1.2 2011/04/03 07:06:44 ssuominen Exp $
 
 inherit eutils
 
@@ -22,11 +22,11 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# create udev rules
-	dodir /etc/udev/rules.d
+	dodir /lib/udev/rules.d
 	"${D}usr/lib64/iscan-data/make-policy-file" \
 		--force --quiet --mode udev \
 		-d "${D}usr/share/iscan-data/epkowa.desc" \
-		-o "${D}etc/udev/rules.d/99-iscan.rules"
+		-o "${D}lib/udev/rules.d/99-iscan.rules"
 
 	# install docs
 	dodoc NEWS SUPPORTED-DEVICES KNOWN-PROBLEMS
