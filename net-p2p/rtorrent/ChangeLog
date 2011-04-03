@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.157 2011/03/28 10:52:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.158 2011/04/03 16:13:58 patrick Exp $
+
+*rtorrent-0.8.7 (03 Apr 2011)
+
+  03 Apr 2011; Patrick Lauer <patrick@gentoo.org> +rtorrent-0.8.7.ebuild:
+  Bump to match libtorrent
 
 *rtorrent-0.8.6-r2 (28 Mar 2011)
 
