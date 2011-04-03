@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.202 2011/03/30 16:31:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.203 2011/04/03 18:18:54 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  audacious-plugins-2.2-r2.ebuild, audacious-plugins-2.4.0.ebuild,
+  audacious-plugins-2.4.1.ebuild, audacious-plugins-2.4.2.ebuild,
+  audacious-plugins-2.4.3.ebuild, audacious-plugins-2.4.3-r1.ebuild:
+  Migrate to virtual/ffmpeg in all versions
 
   30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   audacious-plugins-2.4.4-r1.ebuild:

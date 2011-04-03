@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2-r2.ebuild,v 1.17 2011/03/29 12:29:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2-r2.ebuild,v 1.18 2011/04/03 18:18:54 scarabeus Exp $
 
 EAPI=1
 inherit eutils flag-o-matic
@@ -31,7 +31,7 @@ RDEPEND="app-arch/unzip
 		>=dev-libs/libcdio-0.79-r1 )
 	cue? ( media-libs/libcue )
 	esd? ( >=media-sound/esound-0.2.38-r1 )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	flac? ( >=media-libs/libvorbis-1.0
 		>=media-libs/flac-1.2.1-r1 )
 	fluidsynth? ( media-sound/fluidsynth )
