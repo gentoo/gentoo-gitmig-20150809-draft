@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dietlibc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.81 2010/06/26 06:06:55 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.82 2011/04/03 11:14:17 hollow Exp $
+
+*dietlibc-0.33_pre20110403 (03 Apr 2011)
+
+  03 Apr 2011; Benedikt Böhm <hollow@gentoo.org>
+  -dietlibc-0.33_pre20090721.ebuild, +dietlibc-0.33_pre20110403.ebuild:
+  new snapshot with many fixes and clean cross compile support for previous
+  rename-patches
 
 *dietlibc-0.33_pre20100626 (26 Jun 2010)
 
