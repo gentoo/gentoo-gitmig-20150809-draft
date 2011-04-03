@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.67 2011/03/22 18:42:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.68 2011/04/03 10:30:47 pacho Exp $
+
+*system-tools-backends-2.10.2 (03 Apr 2011)
+
+  03 Apr 2011; Pacho Ramos <pacho@gentoo.org>
+  -system-tools-backends-2.10.0.ebuild, +system-tools-backends-2.10.2.ebuild:
+  Version bump: Don't create empty /etc/ntp.conf; allow any sessions, not only
+  active ones, to authenticate via PolicyKit; support creating groups with
+  default GID instead of fixed one. Remove old.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org>
   system-tools-backends-2.10.1.ebuild:
