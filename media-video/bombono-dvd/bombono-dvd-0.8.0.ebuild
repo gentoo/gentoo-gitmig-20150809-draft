@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-0.8.0.ebuild,v 1.5 2011/03/29 07:21:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-0.8.0.ebuild,v 1.6 2011/04/03 21:16:45 scarabeus Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/gtk+:2
 	>=media-video/mjpegtools-1.8.0
 	media-libs/libdvdread
 	media-video/dvdauthor
-	media-video/ffmpeg
+	virtual/ffmpeg
 	app-cdr/dvd+rw-tools
 	media-sound/twolame
 	dev-cpp/libxmlpp:2.6"

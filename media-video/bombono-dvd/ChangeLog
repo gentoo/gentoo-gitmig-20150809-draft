@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.9 2011/03/29 07:21:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.10 2011/04/03 21:16:45 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  bombono-dvd-0.8.0.ebuild, bombono-dvd-1.0.0.ebuild:
+  Use virtual/ffmpeg instead of media-video/ffmpeg.
 
   29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   bombono-dvd-0.6.0.ebuild, bombono-dvd-0.8.0.ebuild:
