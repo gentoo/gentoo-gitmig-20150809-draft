@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.23 2011/04/03 03:02:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.24 2011/04/03 21:37:27 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> wxsvg-1.0.ebuild,
+  wxsvg-1.0.5.ebuild:
+  Move also older versions to virtual/ffmpeg.
 
   03 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> -wxsvg-1.0.7.ebuild,
   wxsvg-1.0.8.ebuild:
