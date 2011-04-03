@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-4.02.ebuild,v 1.8 2009/09/23 15:10:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/album-4.02.ebuild,v 1.9 2011/04/03 21:36:24 scarabeus Exp $
 
 DESCRIPTION="HTML photo album generator"
 HOMEPAGE="http://MarginalHacks.com/Hacks/album/"
@@ -15,7 +15,7 @@ DEPEND=""
 RDEPEND="dev-lang/perl
 	media-gfx/imagemagick
 	media-gfx/jhead
-	ffmpeg? ( media-video/ffmpeg )"
+	ffmpeg? ( virtual/ffmpeg )"
 
 src_install() {
 	dobin album

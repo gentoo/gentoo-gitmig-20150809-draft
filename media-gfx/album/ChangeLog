@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/album
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.35 2009/12/29 15:13:13 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/album/ChangeLog,v 1.36 2011/04/03 21:36:24 scarabeus Exp $
+
+*album-4.07 (03 Apr 2011)
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> album-4.02.ebuild,
+  album-4.06.ebuild, +album-4.07.ebuild:
+  Move from media-video/ffmpeg to virtual/ffmpeg. Bump to latest.
 
   29 Dec 2009; Markus Meier <maekke@gentoo.org> album-4.06.ebuild:
   make sure that all installed files are in ${S}, reported by flameeyes in
