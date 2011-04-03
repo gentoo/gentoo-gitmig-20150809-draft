@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gejengel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.18 2011/03/28 18:20:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.19 2011/04/03 19:16:01 scarabeus Exp $
+
+  03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gejengel-0.1.4.ebuild:
+  Use virtual/ffmpeg instead of media-video/ffmpeg.
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> gejengel-0.1.4.ebuild:
   Fixed slot deps
