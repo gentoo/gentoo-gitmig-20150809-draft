@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.10-r1.ebuild,v 1.1 2011/04/02 14:29:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.10-r1.ebuild,v 1.2 2011/04/03 19:39:54 mr_bones_ Exp $
 
 EAPI="2"
 
