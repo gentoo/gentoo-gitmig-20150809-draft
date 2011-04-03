@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.41 2011/02/02 05:18:26 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.42 2011/04/03 16:32:01 dilfridge Exp $
+
+  03 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org> kplayer-0.7.ebuild,
+  +files/kplayer-0.7-enablefinal.patch:
+  Added a first kdeenablefinal patch, bug 349620
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kplayer-0.7.ebuild:
   EAPI3, slotmove to 4

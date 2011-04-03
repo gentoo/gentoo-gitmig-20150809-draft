@@ -1,0 +1,11 @@
+--- kplayer/x11.cpp.orig	2010-12-26 02:34:38.374000171 +0100
++++ kplayer/x11.cpp	2010-12-26 02:35:28.989000170 +0100
+@@ -14,7 +14,7 @@ 
+  ***************************************************************************/
+ 
+ #include <X11/Xlib.h>
+-#undef CursorShape
++#include <fixx11h.h>
+ #include <qbytearray.h>
+ #include <qnamespace.h>
+ #include <qx11info_x11.h>

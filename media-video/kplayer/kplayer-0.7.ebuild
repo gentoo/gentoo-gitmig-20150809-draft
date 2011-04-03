@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.ebuild,v 1.7 2011/02/02 05:18:26 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.ebuild,v 1.8 2011/04/03 16:32:01 dilfridge Exp $
 
 EAPI=3
 
@@ -20,6 +20,8 @@ IUSE="debug"
 RDEPEND="${DEPEND}
 	>=media-video/mplayer-1.0_rc1
 "
+
+PATCHES=( "${FILESDIR}/${P}"-enablefinal.patch )
 
 CMAKE_IN_SOURCE_BUILD="1"
 
