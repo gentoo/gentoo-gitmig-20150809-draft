@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.29 2011/03/15 19:40:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.30 2011/04/03 17:43:44 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -42,7 +42,6 @@ src_unpack() {
 		unpack ${A}
 	fi
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.99-genkernel.patch #256335
 	epatch_user
 
 	# autogen.sh does more than just run autotools
