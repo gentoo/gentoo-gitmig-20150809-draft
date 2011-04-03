@@ -1,9 +1,0 @@
-# Config file for /etc/init.d/autofs
-
-FLAGS="defaults 21"
-
-#
-# e.g. localoptions='rsize=8192,wsize=8192'
-# 
-localoptions='--timeout=60'
-

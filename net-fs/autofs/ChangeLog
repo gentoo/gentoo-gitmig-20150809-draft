@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.99 2011/04/03 09:49:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.100 2011/04/03 11:16:05 pva Exp $
+
+  03 Apr 2011; Peter Volkov <pva@gentoo.org> -autofs-3.1.7-r5.ebuild,
+  -autofs-3.1.7-r6.ebuild, -autofs-5.0.4.ebuild, -autofs-5.0.4-r2.ebuild,
+  -autofs-5.0.4-r3.ebuild, -autofs-5.0.4-r4.ebuild, -files/autofs.confd,
+  -files/autofs.rc10, -files/autofs.rc6, -files/autofs.rc7, -files/autofs.rc8,
+  -files/autofs.rc9, -files/autofs1.confd, -files/automount.diff,
+  -files/ldap_config.patch, -files/nisyp.patch:
+  Drop old, #361773, thank Dustin Polke for this job.
 
 *autofs-5.0.5-r1 (03 Apr 2011)
 
