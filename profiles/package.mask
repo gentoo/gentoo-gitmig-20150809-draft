@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12654 2011/04/03 20:04:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12655 2011/04/03 20:47:42 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,13 +32,9 @@
 #--- END OF EXAMPLES ---
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Apr 2011)
-# Masked for QA
-# Unresolvable dependencies and unnecessary blockers
-# caused by ill researched migration to ~arch. Masked until
-# everything is fixed.
-# Bugs 358919, 360889, 360921, 361123, 361269, 361613, 361665,
-# 361731.
-# This shouldn't have any results before unmasking:
+# Masked for testing. Bugs 358919, 361731.
+# These shouldn't have any results before unmasking:
+# http://tinderbox.dev.gentoo.org/misc/dindex/media-video/ffmpeg
 # http://tinderbox.dev.gentoo.org/misc/rindex/media-video/ffmpeg
 media-video/libav
 
