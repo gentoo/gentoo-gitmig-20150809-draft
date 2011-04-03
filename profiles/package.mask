@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12651 2011/04/03 14:17:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12652 2011/04/03 17:54:50 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -414,11 +414,6 @@ media-libs/glide-v3
 #  - dependencies for the -bin package are harder to manage;
 #    often we have source compatibility, but not binary compatibility
 www-client/chromium-bin
-
-# Ole Markus With <olemarkus@gentoo.org> (03 Mar 2011)
-# Masked 30 days for removal.
-# Fetch restrictions. Does not work with >=dev-lang/php-5.3
-dev-php5/ZendOptimizer
 
 # Markos Chandras <hwoarang@gentoo.org> (03 Mar 2011)
 # Masking zen-kernel snapshot release
