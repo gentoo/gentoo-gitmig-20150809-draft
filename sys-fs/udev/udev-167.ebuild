@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-167.ebuild,v 1.1 2011/03/30 19:06:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-167.ebuild,v 1.2 2011/04/03 19:33:14 zzam Exp $
 
 EAPI="1"
 
@@ -93,7 +93,7 @@ pkg_setup() {
 	# new signalfd syscall introduced in kernel 2.6.27 without falling back
 	# to the old one. So we just depend on 2.6.27 here, see Bug #281312.
 	KV_PATCH_min=25
-	KV_PATCH_reliable=27
+	KV_PATCH_reliable=31
 	KV_min=2.6.${KV_PATCH_min}
 	KV_reliable=2.6.${KV_PATCH_reliable}
 

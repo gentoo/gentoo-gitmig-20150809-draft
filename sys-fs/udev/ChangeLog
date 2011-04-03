@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.569 2011/04/03 16:03:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.570 2011/04/03 19:33:14 zzam Exp $
+
+  03 Apr 2011; Matthias Schwarzott <zzam@gentoo.org> udev-167.ebuild,
+  udev-167-r1.ebuild, udev-9999.ebuild:
+  Update needed reliable kernel version. Sync live version to latest normal
+  version.
 
   03 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> udev-167-r1.ebuild:
   Avoid maintainer-mode triggered automake.

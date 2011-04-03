@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-167-r1.ebuild,v 1.2 2011/04/03 16:03:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-167-r1.ebuild,v 1.3 2011/04/03 19:33:14 zzam Exp $
 
 EAPI="1"
 
@@ -11,6 +11,7 @@ scriptversion=164-v2
 scriptname=${PN}-gentoo-scripts-${scriptversion}
 
 if [[ ${PV} == "9999" ]]; then
+	SRC_URI="mirror://gentoo/${scriptname}.tar.bz2"
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 	EGIT_BRANCH="master"
 	inherit git autotools
@@ -93,7 +94,7 @@ pkg_setup() {
 	# new signalfd syscall introduced in kernel 2.6.27 without falling back
 	# to the old one. So we just depend on 2.6.27 here, see Bug #281312.
 	KV_PATCH_min=25
-	KV_PATCH_reliable=27
+	KV_PATCH_reliable=31
 	KV_min=2.6.${KV_PATCH_min}
 	KV_reliable=2.6.${KV_PATCH_reliable}
 
@@ -136,11 +137,10 @@ sed_libexec_dir() {
 }
 
 src_unpack() {
+	unpack ${A}
 	if [[ ${PV} == "9999" ]] ; then
 		git_src_unpack
 	else
-		unpack ${A}
-
 		if use test; then
 			mv "${WORKDIR}"/test/sys "${S}"/test/
 		fi
@@ -185,7 +185,7 @@ src_unpack() {
 		|| die "sed failed"
 
 	if [[ ${PV} == 9999 ]]; then
-		gtkdocize --copy
+		gtkdocize --copy || die "gtkdocize failed"
 	fi
 	eautoreconf
 

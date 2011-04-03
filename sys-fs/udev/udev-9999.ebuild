@@ -1,21 +1,25 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.32 2010/08/24 18:28:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.33 2011/04/03 19:33:14 zzam Exp $
 
 EAPI="1"
 
-inherit eutils flag-o-matic multilib toolchain-funcs linux-info
+inherit eutils flag-o-matic multilib toolchain-funcs linux-info autotools
 
 #PATCHSET=${P}-gentoo-patchset-v1
+scriptversion=164-v2
+scriptname=${PN}-gentoo-scripts-${scriptversion}
 
 if [[ ${PV} == "9999" ]]; then
+	SRC_URI="mirror://gentoo/${scriptname}.tar.bz2"
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 	EGIT_BRANCH="master"
 	inherit git autotools
 else
 	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
-			 test? ( mirror://gentoo/${PN}-151-testsys.tar.bz2 )"
+			 test? ( mirror://gentoo/${PN}-151-testsys.tar.bz2 )
+			 mirror://gentoo/${scriptname}.tar.bz2"
 	[[ -n "${PATCHSET}" ]] && SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
 fi
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
@@ -90,7 +94,7 @@ pkg_setup() {
 	# new signalfd syscall introduced in kernel 2.6.27 without falling back
 	# to the old one. So we just depend on 2.6.27 here, see Bug #281312.
 	KV_PATCH_min=25
-	KV_PATCH_reliable=27
+	KV_PATCH_reliable=31
 	KV_min=2.6.${KV_PATCH_min}
 	KV_reliable=2.6.${KV_PATCH_reliable}
 
@@ -133,15 +137,16 @@ sed_libexec_dir() {
 }
 
 src_unpack() {
+	unpack ${A}
 	if [[ ${PV} == "9999" ]] ; then
 		git_src_unpack
 	else
-		unpack ${A}
-
 		if use test; then
 			mv "${WORKDIR}"/test/sys "${S}"/test/
 		fi
 	fi
+
+	#cd "${WORKDIR}/${scriptname}"
 
 	cd "${S}"
 
@@ -150,7 +155,7 @@ src_unpack() {
 	# backport some patches
 	if [[ -n "${PATCHSET}" ]]; then
 		EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
-	  	      EPATCH_FORCE="yes" epatch
+			  EPATCH_FORCE="yes" epatch
 	fi
 
 	# change rules back to group uucp instead of dialout for now
@@ -163,7 +168,7 @@ src_unpack() {
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != 31f446c8ec2538b281d798afcdcc3f68 ]]
+		if [[ ${MD5} != a9954d57e97aa0ad2e0ed53899d9559a ]]
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
@@ -179,9 +184,14 @@ src_unpack() {
 		|| die "sed failed"
 
 	if [[ ${PV} == 9999 ]]; then
-		gtkdocize --copy
-		eautoreconf
+		gtkdocize --copy || die "gtkdocize failed"
 	fi
+	eautoreconf
+
+	cd "${WORKDIR}/${scriptname}"
+	sed_libexec_dir \
+		helpers/* \
+		rc/*/*
 }
 
 src_compile() {
@@ -205,23 +215,15 @@ src_compile() {
 }
 
 src_install() {
-	local scriptdir="${FILESDIR}/156"
+	emake -C "${WORKDIR}/${scriptname}" \
+		DESTDIR="${D}" LIBDIR="$(get_libdir)" \
+		KV_min="${KV_min}" KV_reliable="${KV_reliable}" \
+		install || die "make install failed"
 
 	into /
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	exeinto "${udev_libexec_dir}"
-	newexe "${FILESDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
-	newexe "${FILESDIR}"/move_tmp_persistent_rules-112-r1.sh move_tmp_persistent_rules.sh \
-		|| die "move_tmp_persistent_rules.sh not installed properly"
-	newexe "${FILESDIR}"/write_root_link_rule-125 write_root_link_rule \
-		|| die "write_root_link_rule not installed properly"
-
-	doexe "${scriptdir}"/shell-compat-KV.sh \
-		|| die "shell-compat.sh not installed properly"
-	doexe "${scriptdir}"/shell-compat-addon.sh \
-		|| die "shell-compat.sh not installed properly"
-
 	keepdir "${udev_libexec_dir}"/state
 	keepdir "${udev_libexec_dir}"/devices
 
@@ -240,9 +242,6 @@ src_install() {
 	cd "${S}"/rules
 	insinto "${udev_libexec_dir}"/rules.d/
 
-	# Our rules files
-	doins "${scriptdir}"/??-*.rules
-
 	# support older kernels
 	doins misc/30-kernel-compat.rules
 
@@ -253,40 +252,9 @@ src_install() {
 	fi
 	cd "${S}"
 
-	# our udev hooks into the rc system
-	insinto /$(get_libdir)/rcscripts/addons
-	doins "${scriptdir}"/udev-start.sh \
-		|| die "udev-start.sh not installed properly"
-	doins "${scriptdir}"/udev-stop.sh \
-		|| die "udev-stop.sh not installed properly"
-
-	local init
-	# udev-postmount and init-scripts for >=openrc-0.3.1, Bug #240984
-	for init in udev udev-mount udev-dev-tarball udev-postmount; do
-		newinitd "${scriptdir}/${init}.initd" "${init}" \
-			|| die "initscript ${init} not installed properly"
-	done
-
-	# insert minimum kernel versions
-	sed -e "s/%KV_MIN%/${KV_min}/" \
-		-e "s/%KV_MIN_RELIABLE%/${KV_reliable}/" \
-		-i "${D}"/etc/init.d/udev-mount
-
-	# config file for init-script and start-addon
-	newconfd "${scriptdir}/udev.confd" udev \
-		|| die "config file not installed properly"
-
 	insinto /etc/modprobe.d
 	newins "${FILESDIR}"/blacklist-146 blacklist.conf
 	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
-
-	# convert /lib/udev to real used dir
-	sed_libexec_dir \
-		"${D}/$(get_libdir)"/rcscripts/addons/*.sh \
-		"${D}/${udev_libexec_dir}"/write_root_link_rule \
-		"${D}"/etc/conf.d/udev \
-		"${D}"/etc/init.d/udev* \
-		"${D}"/etc/modprobe.d/*
 
 	# documentation
 	dodoc ChangeLog README TODO || die "failed installing docs"
@@ -316,7 +284,7 @@ pkg_preinst() {
 	fi
 
 	if [[ -f ${ROOT}/etc/udev/udev.config &&
-	     ! -f ${ROOT}/etc/udev/udev.rules ]]
+		 ! -f ${ROOT}/etc/udev/udev.rules ]]
 	then
 		mv -f "${ROOT}"/etc/udev/udev.config "${ROOT}"/etc/udev/udev.rules
 	fi
@@ -457,6 +425,14 @@ postinst_init_scripts() {
 
 pkg_postinst() {
 	fix_old_persistent_net_rules
+
+	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
+	# So try to remove it here (will only work if empty).
+	rmdir "${ROOT}"/dev/loop 2>/dev/null
+	if [[ -d "${ROOT}"/dev/loop ]]; then
+		ewarn "Please make sure your remove /dev/loop,"
+		ewarn "else losetup may be confused when looking for unused devices."
+	fi
 
 	restart_udevd
 
