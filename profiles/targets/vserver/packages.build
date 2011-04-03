@@ -1,6 +1,6 @@
-# Copyright 2006 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/vserver/packages.build,v 1.1 2008/04/06 15:40:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/vserver/packages.build,v 1.2 2011/04/03 11:29:59 ulm Exp $
 
 # This file describes the packages needed to build a stage 1 based on this
 # profile.  Packages in this file are built in order.
@@ -16,6 +16,7 @@
 # symlinks due to baselayout-vserver getting injected in the end
 
 -app-arch/bzip2
+-app-arch/gzip
 -app-arch/tar
 -app-shells/bash
 -net-misc/rsync
@@ -43,12 +44,12 @@
 -dev-lang/perl
 -dev-lang/python
 -virtual/editor
--virtual/gzip
 -virtual/libc
 -virtual/os-headers
 -virtual/portage
 
 app-arch/bzip2
+app-arch/gzip
 app-arch/tar
 app-shells/bash
 net-misc/rsync
@@ -73,7 +74,6 @@ sys-devel/gnuconfig
 sys-devel/make
 sys-devel/patch
 virtual/editor
-virtual/gzip
 virtual/libc
 virtual/os-headers
 virtual/portage

@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/packages,v 1.2 2009/09/29 09:04:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/packages,v 1.3 2011/04/03 11:29:59 ulm Exp $
 
 # those are packages not available/required on winnt, since
 # winnt can be a child EPREFIX only, which tears it's DEPENDS
 # from a parent (e.g. x86-interix) prefix.
 
 -*sys-apps/grep
--*virtual/gzip
+-*app-arch/gzip
 -*sys-devel/libtool
 -*virtual/man
 -*sys-devel/patch

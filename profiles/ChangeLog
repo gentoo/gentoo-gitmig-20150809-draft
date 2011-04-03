@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5251 2011/04/03 10:07:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5252 2011/04/03 11:29:58 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Apr 2011; Ulrich Mueller <ulm@gentoo.org> default/linux/packages.build,
+  hardened/packages.build, targets/vserver/packages.build:
+  Remove old-style virtual/gzip, bug 358829.
 
   03 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask media-video/libav and media-video/mplayer2.

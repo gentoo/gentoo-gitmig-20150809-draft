@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.43 2011/03/31 08:31:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.44 2011/04/03 11:29:58 ulm Exp $
+
+  03 Apr 2011; Ulrich Mueller <ulm@gentoo.org> fbsd/packages.build:
+  Remove old-style virtual/gzip, bug 358829.
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> fbsd/package.use.mask:
   Drop obsolete pgsql masks on threads useflag

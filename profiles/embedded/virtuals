@@ -3,7 +3,6 @@ virtual/blackbox		x11-wm/blackbox
 virtual/bootloader		sys-boot/grub
 virtual/cron			sys-apps/busybox
 virtual/libc			sys-libs/glibc
-virtual/gzip			sys-apps/busybox
 virtual/inetd			sys-apps/busybox
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/logger			sys-apps/busybox

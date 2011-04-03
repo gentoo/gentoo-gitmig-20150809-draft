@@ -1,8 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/packages.build,v 1.4 2007/02/11 17:08:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/packages.build,v 1.5 2011/04/03 11:29:59 ulm Exp $
 
 app-arch/bzip2
+app-arch/gzip
 app-arch/tar
 app-shells/bash
 net-misc/rsync
@@ -34,6 +35,5 @@ sys-devel/patch
 dev-lang/perl
 dev-lang/python
 virtual/editor
-virtual/gzip
 virtual/libc
 virtual/os-headers

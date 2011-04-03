@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.256 2011/03/30 08:33:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.257 2011/04/03 11:29:59 ulm Exp $
+
+  03 Apr 2011; Ulrich Mueller <ulm@gentoo.org> windows/winnt/packages:
+  Remove old-style virtual/gzip, bug 358829.
 
   30 Mar 2011; Fabian Groffen <grobian@gentoo.org>
   +sunos/solaris/5.11/package.use.mask:

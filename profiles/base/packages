@@ -1,6 +1,6 @@
-# Copyright 2004-2011 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.46 2011/03/02 13:23:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.47 2011/04/03 11:29:58 ulm Exp $
 
 # Gentoo Base Profile
 
@@ -27,6 +27,7 @@
 *sys-apps/baselayout
 *app-arch/bzip2
 *app-arch/cpio
+*app-arch/gzip
 *app-arch/tar
 *app-arch/xz-utils
 *app-shells/bash
@@ -68,7 +69,6 @@
 *sys-libs/zlib
 *virtual/dev-manager
 *virtual/editor
-*virtual/gzip
 *virtual/libc
 *virtual/man
 *virtual/modutils
