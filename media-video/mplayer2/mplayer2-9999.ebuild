@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.9 2011/04/03 20:46:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.10 2011/04/03 22:16:37 scarabeus Exp $
 
 EAPI=4
 
@@ -223,13 +223,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	if [[ ${PV} = *9999* ]]; then
-		git_src_prepare
-		# Set GIT version manually
-		echo "GIT-r$(git rev-list HEAD|wc -l)-$(git describe --always)" \
-			> VERSION || die
-	fi
-
 	# fix path to bash executable in configure scripts
 	local bash_scripts="configure version.sh"
 	sed -i \
