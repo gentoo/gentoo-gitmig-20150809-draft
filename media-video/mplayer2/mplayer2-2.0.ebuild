@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0.ebuild,v 1.7 2011/04/03 20:03:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0.ebuild,v 1.8 2011/04/03 20:46:39 scarabeus Exp $
 
 EAPI=4
 
@@ -641,20 +641,7 @@ _EOF_
 	doins "${S}/etc/input.conf"
 	use osdmenu && doins "${S}/etc/menu.conf"
 
-	if use ass || use truetype; then
-		cat >> "${ED}/etc/${PN}/mplayer.conf" << _EOF_
-fontconfig=1
-subfont-osd-scale=4
-subfont-text-scale=3
-ass-hinting=3
-ass-use-margins=1
-ass-font-scale=2
-ass-border-color=00000000
-ass-color=ffff0000
-_EOF_
-	fi
-
-	# bug 256203
+	# set unrar path when required
 	if use rar; then
 		cat >> "${ED}/etc/${PN}/mplayer.conf" << _EOF_
 unrarexec=${EPREFIX}/usr/bin/unrar
