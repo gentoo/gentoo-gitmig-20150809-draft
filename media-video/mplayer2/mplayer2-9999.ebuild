@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.6 2011/03/31 18:47:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.7 2011/04/03 12:55:15 scarabeus Exp $
 
 EAPI=4
 
@@ -380,7 +380,6 @@ src_configure() {
 	# Codecs #
 	##########
 	myconf+=" --disable-musepack" # deprecated, libavcodec Musepack decoder is preferred
-	myconf+=" --disable-mp3lib" # internal so disable
 	use dts || myconf+=" --disable-libdca"
 	use mp3 || myconf+=" --disable-mpg123"
 	uses="a52 bs2b dv vorbis"
