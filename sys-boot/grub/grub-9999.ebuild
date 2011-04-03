@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.30 2011/04/03 17:43:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.31 2011/04/03 18:10:01 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -73,9 +73,13 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+
+	insinto /etc/defaults
+	doins "${FILESDIR}"/defaults || die
 	cat <<-EOF >> "${D}"/lib*/grub/grub-mkconfig_lib
 	GRUB_DISTRIBUTOR="Gentoo"
 	EOF
+
 	if use multislot ; then
 		sed -i "s:grub-install:grub2-install:" "${D}"/sbin/grub-install || die
 		mv "${D}"/sbin/grub{,2}-install || die

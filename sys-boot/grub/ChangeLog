@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.151 2011/04/03 17:43:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.152 2011/04/03 18:10:01 vapier Exp $
+
+  03 Apr 2011; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild,
+  +files/defaults:
+  Start an example /etc/defaults/grub #359365 by john.
 
   03 Apr 2011; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild:
   Drop genkernel patch now that upstream has integrated it.
