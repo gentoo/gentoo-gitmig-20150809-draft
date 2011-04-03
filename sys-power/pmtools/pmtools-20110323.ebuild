@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20101124.ebuild,v 1.1 2010/12/07 04:19:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20110323.ebuild,v 1.1 2011/04/03 03:58:56 nerdboy Exp $
 
 EAPI=2
 
@@ -25,6 +25,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-20100123-madt.patch
 	epatch "${FILESDIR}"/${PN}-20071116-64bit.patch
 	epatch "${FILESDIR}"/${PN}-20101124-cflags-ldflags.patch
+
+	# update version info
+	sed -i -e "s|20060324|20110323|" acpixtract/acpixtract.c
 
 	strip-unsupported-flags
 }

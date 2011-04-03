@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20071116-r1.ebuild,v 1.2 2009/09/23 20:57:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20101221.ebuild,v 1.1 2011/04/03 03:58:56 nerdboy Exp $
 
 EAPI=2
 
@@ -12,16 +12,19 @@ SRC_URI="http://ftp.kernel.org/pub/linux/kernel/people/lenb/acpi/utils/${P}.tar.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 DEPEND=""
 RDEPEND="${DEPEND}
 		dev-lang/perl
-		>=sys-power/iasl-20060512"
+		>=sys-power/iasl-20090521"
+
+S="${WORKDIR}/pmtools"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-acpixtract-pmtools.patch
-	epatch "${FILESDIR}"/${P}-cflags-ldflags.patch
-	epatch "${FILESDIR}"/${P}-64bit.patch
+	epatch "${FILESDIR}"/${PN}-20100123-acpixtract-pmtools.patch
+	epatch "${FILESDIR}"/${PN}-20100123-madt.patch
+	epatch "${FILESDIR}"/${PN}-20071116-64bit.patch
+	epatch "${FILESDIR}"/${PN}-20101124-cflags-ldflags.patch
 
 	strip-unsupported-flags
 }
@@ -37,10 +40,13 @@ src_install() {
 	# the other tools only process data
 	newbin acpixtract/acpixtract acpixtract-pmtools
 	dobin madt/madt
+	dosbin turbostat/turbostat
+	doman turbostat/turbostat.8
 
 	dodoc README
 	docinto madt
-	dodoc madt/README madt/example.APIC*
+	dodoc madt/README
+	use doc && dodoc madt/APIC*
 }
 
 pkg_postinst() {
