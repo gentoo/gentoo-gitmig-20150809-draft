@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-167-r1.ebuild,v 1.1 2011/04/03 12:17:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-167-r1.ebuild,v 1.2 2011/04/03 16:03:59 flameeyes Exp $
 
 EAPI="1"
 
-inherit eutils flag-o-matic multilib toolchain-funcs linux-info
+inherit eutils flag-o-matic multilib toolchain-funcs linux-info autotools
 
 #PATCHSET=${P}-gentoo-patchset-v1
 scriptversion=164-v2
@@ -156,7 +156,7 @@ src_unpack() {
 	# backport some patches
 	if [[ -n "${PATCHSET}" ]]; then
 		EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
-	  	      EPATCH_FORCE="yes" epatch
+			  EPATCH_FORCE="yes" epatch
 	fi
 
 	# change rules back to group uucp instead of dialout for now
@@ -186,8 +186,8 @@ src_unpack() {
 
 	if [[ ${PV} == 9999 ]]; then
 		gtkdocize --copy
-		eautoreconf
 	fi
+	eautoreconf
 
 	cd "${WORKDIR}/${scriptname}"
 	sed_libexec_dir \
@@ -285,7 +285,7 @@ pkg_preinst() {
 	fi
 
 	if [[ -f ${ROOT}/etc/udev/udev.config &&
-	     ! -f ${ROOT}/etc/udev/udev.rules ]]
+		 ! -f ${ROOT}/etc/udev/udev.rules ]]
 	then
 		mv -f "${ROOT}"/etc/udev/udev.config "${ROOT}"/etc/udev/udev.rules
 	fi
