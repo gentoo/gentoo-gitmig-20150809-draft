@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/blogilo-4.4.10.ebuild,v 1.2 2011/01/28 05:20:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/blogilo-4.4.10.ebuild,v 1.3 2011/04/03 16:14:53 dilfridge Exp $
 
 EAPI="3"
 
@@ -18,3 +18,5 @@ RDEPEND="${DEPEND}
 	!kde-misc/bilbo
 	!kde-misc/blogilo
 "
+
+PATCHES=( "${FILESDIR}/${P}"-nosoprano.patch )
