@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r3.ebuild,v 1.1 2011/03/21 22:23:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.7-r3.ebuild,v 1.2 2011/04/03 21:12:49 scarabeus Exp $
 
 EAPI=3
 
@@ -33,7 +33,7 @@ RDEPEND="server? (
 			>=media-libs/libdiscid-0.1.1
 			>=media-sound/cdparanoia-3.9.8 )
 		curl? ( >=net-misc/curl-7.15.1 )
-		ffmpeg? ( media-video/ffmpeg )
+		ffmpeg? ( virtual/ffmpeg )
 		flac? ( media-libs/flac )
 		gvfs? ( gnome-base/gnome-vfs )
 		ices? ( media-libs/libogg
@@ -41,7 +41,7 @@ RDEPEND="server? (
 			media-libs/libvorbis )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.101.1 )
 		mac? ( media-sound/mac )
-		mms? ( media-video/ffmpeg
+		mms? ( virtual/ffmpeg
 			>=media-libs/libmms-0.3 )
 		modplug? ( media-libs/libmodplug )
 		mad? ( media-sound/madplay )
