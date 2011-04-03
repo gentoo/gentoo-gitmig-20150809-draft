@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.02.ebuild,v 1.8 2011/02/27 12:09:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.02.ebuild,v 1.9 2011/04/03 15:18:05 armin76 Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ else
 fi
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bzip2 +cxx unicode zlib static-libs"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )
