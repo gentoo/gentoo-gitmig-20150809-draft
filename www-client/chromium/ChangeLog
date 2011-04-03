@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.324 2011/04/02 13:28:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.325 2011/04/03 16:51:10 phajdan.jr Exp $
+
+*chromium-12.0.712.0-r1 (03 Apr 2011)
+
+  03 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-ffmpeg-build-r1.patch, +chromium-12.0.712.0-r1.ebuild:
+  Update the ffmpeg patch to be more compatible, see bug #361665 comment #3
+  by Mike Gilbert <floppymaster@gmail.com>.
 
   02 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   +files/chromium-ffmpeg-build-r0.patch, chromium-11.0.696.28.ebuild,
