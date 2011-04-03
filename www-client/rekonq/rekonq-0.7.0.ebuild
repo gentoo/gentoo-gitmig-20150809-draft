@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.6.95.ebuild,v 1.3 2011/03/21 08:32:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.7.0.ebuild,v 1.1 2011/04/03 16:09:10 scarabeus Exp $
 
 EAPI=4
 
@@ -8,6 +8,7 @@ WEBKIT_REQUIRED="always"
 QT_MINIMAL="4.7"
 KDE_MINIMAL="4.6"
 KDE_SCM="git"
+# Yay for non-compatible linguas handling
 #KDE_LINGUAS_DIR="i18n"
 #KDE_LINGUAS="ca cs da de el en_GB es et fr hu it ja ko lt nb nds nl pt_BR pt ru sl sr sv uk zh_CN"
 KDE_DOC_DIRS="docs"
@@ -29,4 +30,5 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+# All test fails
 RESTRICT="test"
