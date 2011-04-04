@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.45 2011/04/04 19:24:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.46 2011/04/04 19:51:09 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gegl-0.1.6.ebuild:
+  Punt one too much ED.
 
   04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gegl-0.1.6.ebuild:
   Unmask tests as they all seem to pass on my computer. Lets see what users

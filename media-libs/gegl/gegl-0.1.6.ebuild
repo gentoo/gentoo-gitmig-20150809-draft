@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.9 2011/04/04 19:24:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.10 2011/04/04 19:51:09 scarabeus Exp $
 
 EAPI=4
 
@@ -88,7 +88,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install
+	emake DESTDIR="${D}" install
 	find "${ED}" -name '*.la' -delete
 	dodoc ChangeLog INSTALL README NEWS
 }
