@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Encode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.13 2011/01/13 10:32:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.14 2011/04/04 23:12:55 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> Encode-2.420.ebuild:
+  Marked ~hppa (bug #358079).
 
 *Encode-2.420 (13 Jan 2011)
 
