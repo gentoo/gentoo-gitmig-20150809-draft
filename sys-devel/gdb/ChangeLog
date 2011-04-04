@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.183 2011/03/22 16:14:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.184 2011/04/04 22:45:20 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> gdb-7.2.ebuild:
+  Stable for HPPA (bug #350259).
 
   22 Mar 2011; Mike Frysinger <vapier@gentoo.org> gdb-7.1.ebuild,
   gdb-7.2.ebuild:
