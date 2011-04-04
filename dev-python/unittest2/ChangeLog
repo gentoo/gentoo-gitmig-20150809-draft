@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.18 2011/03/26 21:08:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.19 2011/04/04 22:50:12 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> unittest2-0.5.1.ebuild:
+  Stable for HPPA (bug #361985).
 
   26 Mar 2011; Tobias Klausmann <klausman@gentoo.org> unittest2-0.5.1.ebuild:
   Keyworded on alpha, bug #357577
