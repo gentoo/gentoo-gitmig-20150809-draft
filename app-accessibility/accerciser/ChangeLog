@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/accerciser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.20 2011/03/22 20:01:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.21 2011/04/04 09:57:57 pacho Exp $
+
+  04 Apr 2011; Pacho Ramos <pacho@gentoo.org> -accerciser-1.10.1.ebuild,
+  -files/accerciser-1.10.1-fix-es_ES.patch:
+  Remove old.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> accerciser-1.12.1.ebuild:
   Marking accerciser-1.12.1 ppc stable for bug 353436
