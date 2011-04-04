@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/clipgrab
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.7 2011/04/01 20:28:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.8 2011/04/04 12:22:00 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -clipgrab-2.0_beta2.ebuild, clipgrab-3.1.0.1.ebuild:
+  Add sparc keyword to latest (i missed it previously). Drop the stable since
+  it does not work at all so it is better to have no stable than broken stable.
 
 *clipgrab-3.1.0.1 (01 Apr 2011)
 
