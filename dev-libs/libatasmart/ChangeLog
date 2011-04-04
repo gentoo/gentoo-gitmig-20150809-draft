@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.18 2011/01/04 00:16:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.19 2011/04/04 15:25:36 ssuominen Exp $
+
+  04 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> libatasmart-0.17.ebuild:
+  USE="static-libs" and punt useless libtool archive.
 
   04 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> libatasmart-0.17.ebuild,
   +files/libatasmart-0.17-strpool-uninit.patch:
