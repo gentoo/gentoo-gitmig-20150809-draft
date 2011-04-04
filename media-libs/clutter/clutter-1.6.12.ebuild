@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.8.ebuild,v 1.1 2011/03/08 12:41:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.12.ebuild,v 1.1 2011/04/04 14:47:25 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.11"
