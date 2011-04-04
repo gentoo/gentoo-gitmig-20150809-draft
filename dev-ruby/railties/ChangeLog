@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.5 2011/04/04 18:51:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.6 2011/04/04 18:54:02 graaff Exp $
+
+  04 Apr 2011; Hans de Graaff <graaff@gentoo.org> -railties-3.0.3.ebuild:
+  Remove old version.
 
   04 Apr 2011; Hans de Graaff <graaff@gentoo.org> railties-3.0.3-r1.ebuild:
   Add dependency on rake since the gemspec requires this. Fixes bug 361595.
