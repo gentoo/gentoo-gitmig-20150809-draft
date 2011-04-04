@@ -1,6 +1,22 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.266 2011/04/04 20:39:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.267 2011/04/04 20:56:08 voyageur Exp $
+
+*proftpd-1.3.4_rc2 (04 Apr 2011)
+
+  04 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -proftpd-1.3.4_rc1-r1.ebuild, +proftpd-1.3.4_rc2.ebuild:
+  Proxy commit, version bump:
+  * Replace mod_wrap with mod_wrap2. You have to adjust your configuration
+  before restarting ProFTPD! Suggested in Gentoo Bug #235940.
+  * Compatible with Gentoo FreeBSD (g/fbsd). Thanks to Dmitri Bogomolov. Fixes
+  Gentoo Bug #235940 and the half of Gentoo Bug #354295.
+  * Add ~amd64-fbsd keyword.
+  * Add memcache support with USE=memcache.
+  * Add pcre support with USE=+pcre.
+  * Fix QA warnings which were reported in Gentoo Bug #354080 c5.
+  * mod_ban requires ctrls support. Fixes Gentoo Bug #355013.
+  * Some stylistic changes.
 
 *proftpd-1.3.3e (04 Apr 2011)
 

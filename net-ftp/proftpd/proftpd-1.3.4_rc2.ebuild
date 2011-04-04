@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4_rc1-r1.ebuild,v 1.1 2011/02/14 15:00:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4_rc2.ebuild,v 1.1 2011/04/04 20:56:08 voyageur Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -25,24 +25,26 @@ SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl authfile ban +caps case clamav copy +ctrls deflate diskuse doc exec hardened ifsession ifversion
-	ident ipv6 kerberos ldap mysql ncurses nls pam postgres qos radius ratio readme rewrite selinux sftp
-	shaper sitemisc softquota sqlite ssl tcpd trace vroot xinetd"
+KEYWORDS="~alpha ~amd64 ~amd64-fbsd ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="acl authfile ban +caps case clamav copy ctrls deflate diskuse doc exec ifsession ifversion ident
+	ipv6 kerberos ldap memcache mysql ncurses nls pam +pcre postgres qos radius ratio readme rewrite
+	selinux sftp shaper sitemisc softquota sqlite ssl tcpd trace vroot xinetd"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	caps? ( sys-libs/libcap )
 	clamav? ( app-antivirus/clamav )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
+	memcache? ( >=dev-libs/libmemcached-0.37 )
 	mysql? ( virtual/mysql )
+	nls? ( virtual/libiconv )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( virtual/pam )
+	pcre? ( dev-libs/libpcre )
 	postgres? ( dev-db/postgresql-base )
 	sftp? ( dev-libs/openssl )
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( dev-libs/openssl )
-	tcpd? ( sys-apps/tcp-wrappers )
 	xinetd? ( virtual/inetd )"
 RDEPEND="${DEPEND}
 	net-ftp/ftpbase
@@ -65,10 +67,6 @@ src_prepare() {
 	fi
 	use vroot && __prepare_module mod_vroot
 
-	# Fix ProFTPD Bug #3586
-	epatch "${FILESDIR}"/proftpd-bug3586.patch
-
-	# Manipulate build system
 	sed -i -e "s/utils install-conf install/utils install/g" Makefile.in
 	sed -i -e "s/ @INSTALL_STRIP@//g" Make.rules.in
 
@@ -89,7 +87,7 @@ src_configure() {
 	use case && mym="${mym}:mod_case"
 	use clamav && mym="${mym}:mod_clamav"
 	use copy && mym="${mym}:mod_copy"
-	if use ctrls || use shaper ; then
+	if use ctrls || use ban || use shaper ; then
 		myc="${myc} --enable-ctrls"
 		mym="${mym}:mod_ctrls_admin"
 	fi
@@ -104,6 +102,7 @@ src_configure() {
 		mym="${mym}:mod_diskuse"
 	fi
 	use exec && mym="${mym}:mod_exec"
+	use ifsession && mym="${mym}:mod_ifsession"
 	use ifversion && mym="${mym}:mod_ifversion"
 	if use kerberos ; then
 		cd "${WORKDIR}"/mod_gss-${MOD_GSS}
@@ -122,7 +121,7 @@ src_configure() {
 		mym="${mym}:mod_gss:mod_auth_gss"
 	fi
 	if use ldap ; then
-		myl="${myl} -lresolv"
+		use elibc_glibc && myl="${myl} -lresolv"
 		mym="${mym}:mod_ldap"
 	fi
 	if use mysql || use postgres || use sqlite ; then
@@ -136,17 +135,11 @@ src_configure() {
 	use ratio && mym="${mym}:mod_ratio"
 	use readme && mym="${mym}:mod_readme"
 	use rewrite && mym="${mym}:mod_rewrite"
-	if use sftp || use ssl ; then
-		CFLAGS="${CFLAGS} -DHAVE_OPENSSL"
-		myc="${myc} --enable-openssl --with-includes=/usr/include/openssl"
-		myl="${myl} -lcrypto"
-	fi
+	use sftp || use ssl && myc="${myc} --enable-openssl"
 	if use sftp ; then
 		mym="${mym}:mod_sftp"
 		use pam && mym="${mym}:mod_sftp_pam"
-		if use mysql || use postgres || use sqlite ; then
-			mym="${mym}:mod_sftp_sql"
-		fi
+		use mysql || use postgres || use sqlite && mym="${mym}:mod_sftp_sql"
 	fi
 	use shaper && mym="${mym}:mod_shaper"
 	use sitemisc && mym="${mym}:mod_site_misc"
@@ -154,28 +147,34 @@ src_configure() {
 		mym="${mym}:mod_quotatab:mod_quotatab_file"
 		use ldap && mym="${mym}:mod_quotatab_ldap"
 		use radius && mym="${mym}:mod_quotatab_radius"
-		if use mysql || use postgres ; then
-			mym="${mym}:mod_quotatab_sql"
-		fi
+		use mysql || use postgres || use sqlite && mym="${mym}:mod_quotatab_sql"
 	fi
-	use ssl && mym="${mym}:mod_tls:mod_tls_shmcache"
-	use tcpd && mym="${mym}:mod_wrap"
+	if use ssl ; then
+		mym="${mym}:mod_tls:mod_tls_shmcache"
+		use memcache && mym="${mym}:mod_tls_memcache"
+	fi
+	if use tcpd ; then
+		mym="${mym}:mod_wrap2:mod_wrap2_file"
+		use mysql || use postgres || use sqlite && mym="${mym}:mod_wrap2_sql"
+	fi
 	use vroot && mym="${mym}:mod_vroot"
-	# mod_ifsession needs to be the last module in the mym list.
-	use ifsession && mym="${mym}:mod_ifsession"
 
 	[ -z ${mym} ] || myc="${myc} --with-modules=${mym:1}"
-	LIBS="${myl:1}" econf --sbindir=/usr/sbin --localstatedir=/var/run/proftpd \
-		--sysconfdir=/etc/proftpd --enable-shadow --enable-autoshadow ${myc:1} \
+	LIBS="${myl:1}" econf --localstatedir=/var/run/proftpd --sysconfdir=/etc/proftpd \
 		$(use_enable acl facl) \
 		$(use_enable authfile auth-file) \
 		$(use_enable caps cap) \
 		$(use_enable ident) \
 		$(use_enable ipv6) \
+		$(use_enable memcache) \
 		$(use_enable ncurses) \
 		$(use_enable nls) \
+		$(use_enable pam auth-pam) \
+		$(use_enable pcre) \
 		$(use_enable trace) \
-		$(use_enable pam auth-pam)
+		$(use_enable userland_GNU shadow) \
+		$(use_enable userland_GNU autoshadow) \
+		${myc:1}
 }
 
 src_install() {
@@ -205,6 +204,15 @@ pkg_postinst() {
 		ewarn "programs. Vulnerables in these external programs may disclose"
 		ewarn "information or even compromise your server."
 		ewarn "You have been warned! Use this module at your own risk!"
+		ewarn
+	fi
+	if use tcpd ; then
+		ewarn
+		ewarn "Important: Since ProFTPD 1.3.4rc2 the module mod_wrap for TCP Wrapper"
+		ewarn "support has been replaced by mod_wrap2 which is more configurable and"
+		ewarn "portable.  But you have to adjust your configuration before restaring"
+		ewarn "ProFTPD. On the following website you can find more information:"
+		ewarn "  http://proftpd.org/docs/contrib/mod_wrap2.html"
 		ewarn
 	fi
 }
