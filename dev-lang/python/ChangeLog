@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.530 2011/04/04 18:59:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.531 2011/04/04 22:47:43 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> python-2.7.1-r1.ebuild:
+  Stable for HPPA (bug #358717).
 
   04 Apr 2011; Michael Weber <xmw@gentoo.org> python-2.7.1-r1.ebuild:
   arm/sparc stable (bug 358717)
