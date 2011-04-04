@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.12.1-r1.ebuild,v 1.3 2011/03/13 16:02:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.12.1-r1.ebuild,v 1.4 2011/04/04 10:02:00 scarabeus Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ DEPEND="
 	media-libs/mutagen
 	cdda? ( >=media-libs/libdiscid-0.1.1 )
 	ffmpeg? (
-		media-video/ffmpeg
+		virtual/ffmpeg
 		>=media-libs/libofa-0.9.2 )"
 RDEPEND="${DEPEND}"
 
