@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.3 2011/03/09 22:12:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.4 2011/04/04 20:05:31 ottxor Exp $
+
+*votca-csg-1.1.2 (04 Apr 2011)
+
+  04 Apr 2011; Christoph Junghans <ottxor@gentoo.org> +votca-csg-1.1.2.ebuild:
+  Version bump
 
   09 Mar 2011; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.1.1.ebuild:
   added ~amd64 (bug #357983)
