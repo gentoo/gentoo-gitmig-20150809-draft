@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.9.ebuild,v 1.2 2011/03/29 13:03:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.9.ebuild,v 1.3 2011/04/04 10:16:41 tomka Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="LGPL-2.1"
 
 IUSE="+ocamlopt"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-lang/ocaml-3.11.2[ocamlopt?]
 	>=dev-ml/camlimages-3.0.1[truetype,tiff,jpeg,gs]

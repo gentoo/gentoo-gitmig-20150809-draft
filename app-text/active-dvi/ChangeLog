@@ -1,6 +1,9 @@
 # ChangeLog for app-text/active-dvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.38 2011/03/29 13:03:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.39 2011/04/04 10:16:41 tomka Exp $
+
+  04 Apr 2011; Thomas Kahle <tomka@gentoo.org> active-dvi-1.9.ebuild:
+  keyworded ~x86 per bug 316131
 
   29 Mar 2011; Alexis Ballier <aballier@gentoo.org> active-dvi-1.9.ebuild:
   depend on tl-latexextra for fullpage.sty, bug #316131
