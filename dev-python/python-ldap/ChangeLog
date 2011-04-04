@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-ldap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.98 2011/04/02 14:21:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.99 2011/04/04 22:55:13 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> python-ldap-2.3.13.ebuild:
+  Stable for HPPA (bug #360355).
 
   02 Apr 2011; Raúl Porcel <armin76@gentoo.org> python-ldap-2.3.13.ebuild:
   ia64/sparc stable wrt #360355
