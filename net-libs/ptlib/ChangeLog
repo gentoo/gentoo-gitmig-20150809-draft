@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.23 2011/04/04 12:23:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.24 2011/04/04 20:44:52 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> ptlib-2.6.7.ebuild:
+  Use virtual/ffmpeg in all versions.
 
   04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> ptlib-2.6.7-r1.ebuild:
   Move to virtual/ffmpeg from media-video/ffmpeg.
