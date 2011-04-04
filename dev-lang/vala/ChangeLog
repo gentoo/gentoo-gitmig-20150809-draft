@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.54 2011/03/23 15:54:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.55 2011/04/04 13:38:32 eva Exp $
+
+*vala-0.12.0 (04 Apr 2011)
+
+  04 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> +vala-0.12.0.ebuild:
+  Version bump. Many bug fixes and binding updates. Add get_next_char to string
+  class.
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> -vala-0.9.3.ebuild,
   -vala-0.10.4.ebuild, -vala-0.11.6.ebuild:
