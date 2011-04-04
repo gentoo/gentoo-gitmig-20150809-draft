@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.10 2011/03/22 19:47:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.11 2011/04/04 17:42:49 nirbheek Exp $
+
+  04 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gdk-pixbuf-2.22.1.ebuild, +files/gdk-pixbuf-2.22.1-fix-libpng15.patch:
+  Fix building with libpng-1.5, bug 354557
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gdk-pixbuf-2.22.1.ebuild:
   Marking gdk-pixbuf-2.22.1 ppc stable for bug 353436

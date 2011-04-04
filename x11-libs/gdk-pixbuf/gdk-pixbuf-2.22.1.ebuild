@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1.ebuild,v 1.7 2011/03/22 19:47:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1.ebuild,v 1.8 2011/04/04 17:42:49 nirbheek Exp $
 
 EAPI="3"
 
@@ -38,6 +38,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Only build against libX11 if the user wants to do so
 	epatch "${FILESDIR}"/${PN}-2.21.4-fix-automagic-x11.patch
+
+	# Fix libpng-1.5 compatibility, bug 354557 — taken from upstream
+	epatch "${FILESDIR}/${P}-fix-libpng15.patch"
 
 	elibtoolize
 	eautoreconf
