@@ -1,6 +1,13 @@
 # ChangeLog for media-video/lives
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.30 2011/03/23 08:41:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.31 2011/04/04 13:05:26 lu_zero Exp $
+
+*lives-1.4.2 (04 Apr 2011)
+
+  04 Apr 2011; Luca Barbato <lu_zero@gentoo.org> lives-1.0.0.ebuild,
+  +lives-1.4.2.ebuild:
+  Version bump, move to virtual/ffmpeg, it cannot use mplayer2 yet since it
+  uses mencoder
 
   23 Mar 2011; Tim Harder <radhermit@gentoo.org> -lives-0.9.8.6.ebuild,
   -lives-0.9.8.12.ebuild, lives-1.0.0.ebuild:

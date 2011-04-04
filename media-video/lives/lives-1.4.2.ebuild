@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-1.0.0.ebuild,v 1.4 2011/04/04 13:05:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-1.4.2.ebuild,v 1.1 2011/04/04 13:05:26 lu_zero Exp $
 
-EAPI=1
+EAPI=2
 
 inherit flag-o-matic
 
@@ -37,19 +37,17 @@ DEPEND=">=media-video/mplayer-0.90-r2
 		sys-libs/libavc1394"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	# hardcoding -03 is wrong!
 	sed -i -e "s:-O3::g" \
-	"${S}"/{,src,lives-plugins,lives-plugins/plugins/playback/video,lives-plugins/weed-plugins}/Makefile*
+		"${S}"/{libweed,lives-plugins/{plugins/{decoders,playback/video},weed-plugins{,/gdk}},src}/Makefile.* || die
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable libvisual) \
 		$(use_enable nls) \
 		|| die "configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
