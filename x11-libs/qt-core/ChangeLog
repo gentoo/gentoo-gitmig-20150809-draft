@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.122 2011/04/02 20:31:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.123 2011/04/04 15:43:13 ranger Exp $
+
+  04 Apr 2011; Brent Baude <ranger@gentoo.org> qt-core-4.6.3-r1.ebuild:
+  Marking qt-core-4.6.3-r1 ppc for bug 361401
 
   02 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   qt-core-4.6.3-r1.ebuild:
