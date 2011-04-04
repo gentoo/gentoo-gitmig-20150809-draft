@@ -1,6 +1,16 @@
 # ChangeLog for net-ftp/yafc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.37 2010/08/05 17:11:33 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/yafc/ChangeLog,v 1.38 2011/04/04 18:07:18 c1pher Exp $
+
+*yafc-1.1.2 (04 Apr 2011)
+
+  04 Apr 2011; Dane Smith <c1pher@gentoo.org> +yafc-1.1.2.ebuild,
+  metadata.xml:
+  Version bump. Add proxy maintainer Carles Pagès, who is now
+  maintaining the new upstream since the old one has had no development
+  since
+  2005. Upsteam fixes to bug 350277 and bug 352401. Local fix for
+  kerebos support wrt bug 275795. 
 
   05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> yafc-1.1.1-r1.ebuild:
   Remove built_with_use check for app-crypt/mit-krb5 because krb4 support
