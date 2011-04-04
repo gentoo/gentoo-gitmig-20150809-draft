@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.141 2011/01/25 17:03:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.142 2011/04/04 20:23:05 arfrever Exp $
+
+*twisted-11.0.0 (04 Apr 2011)
+
+  04 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +twisted-11.0.0.ebuild:
+  Version bump.
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> twisted-10.2.0.ebuild:
   Stable for HPPA (bug #350894).
