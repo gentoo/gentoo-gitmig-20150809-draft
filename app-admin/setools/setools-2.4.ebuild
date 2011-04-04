@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.4 2008/12/02 20:11:13 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.5 2011/04/04 21:44:07 blueness Exp $
 
 inherit eutils
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux/selinux_policy_tools.shtml"
-SRC_URI="http://www.tresys.com/files/setools/${P}.tar.bz2"
+SRC_URI="http://oss.tresys.com/projects/setools/chrome/site/dists/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
