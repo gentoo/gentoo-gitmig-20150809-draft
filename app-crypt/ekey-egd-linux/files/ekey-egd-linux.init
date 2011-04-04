@@ -1,10 +1,16 @@
 #!/sbin/runscript
-# Copyright 2009-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekey-egd-linux/files/ekey-egd-linux.init,v 1.1 2010/10/23 17:19:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekey-egd-linux/files/ekey-egd-linux.init,v 1.2 2011/04/04 12:20:55 flameeyes Exp $
+
+: ${HOST:=localhost}
+: ${PORT:=8888}
+: ${RECONNECTINTERVAL:=10}
+: ${BLOCKS:=2}
 
 depend() {
 	 use net
+	 after ekeyd
 }
 
 start() {
@@ -16,7 +22,10 @@ start() {
 		-r ${RECONNECTINTERVAL} \
 		-b ${BLOCKS} \
 		-D "/var/run/${SVCNAME}.pid"
-	sysctl kernel.random.write_wakeup_threshold=$WATERMARK >/dev/null 2>&1
+
+	[ -n "${WATERMARK}" ] && \
+		sysctl "kernel.random.write_wakeup_threshold=$WATERMARK" >/dev/null 2>&1
+
 	eend $?
 }
 
@@ -27,4 +36,3 @@ stop() {
 		--exec /usr/libexec/ekey-egd-linux
 	eend $?
 }
-

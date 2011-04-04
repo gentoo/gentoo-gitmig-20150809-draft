@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/ekey-egd-linux
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekey-egd-linux/ChangeLog,v 1.1 2010/10/23 17:19:32 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekey-egd-linux/ChangeLog,v 1.2 2011/04/04 12:20:55 flameeyes Exp $
+
+*ekey-egd-linux-1.1.3-r1 (04 Apr 2011)
+
+  04 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ekey-egd-linux-1.1.3.ebuild, +ekey-egd-linux-1.1.3-r1.ebuild,
+  files/ekey-egd-linux.conf, files/ekey-egd-linux.init:
+  Improve init script and defaults: default to 8888 for port (used by other EGD
+  services); set variables by default if they are not set by the configuration
+  file; only set watermark if it is configured; start after ekeyd.
 
 *ekey-egd-linux-1.1.3 (23 Oct 2010)
 
