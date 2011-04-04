@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.404 2011/04/03 17:02:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.405 2011/04/04 02:12:32 anarchy Exp $
+
+*xulrunner-2.0-r1 (04 Apr 2011)
+
+  04 Apr 2011; Jory A. Pratt <anarchy@gentoo.org> -xulrunner-2.0.ebuild,
+  +xulrunner-2.0-r1.ebuild, +files/mozilla-2.0-gconf-config-update.patch:
+  Fix gconf dep bug #360307
 
   03 Apr 2011; Jeroen Roovers <jer@gentoo.org> xulrunner-1.9.2.16.ebuild:
   Stable for HPPA (bug #360055).

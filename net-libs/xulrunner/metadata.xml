@@ -10,5 +10,6 @@
         installation with secure-delete enabled</flag>
     <flag name="webm">Use system libvpx <pkg>media-libs/libvpx</pkg></flag>
     <flag name="crashreporter">Enable crash reporter for bugs</flag>
+    <flag name="gconf">Enable gnome2 gconf support</flag>
   </use>
 </pkgmetadata>
