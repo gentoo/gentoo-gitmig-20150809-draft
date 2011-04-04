@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.122 2011/03/18 15:34:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.123 2011/04/04 09:48:39 scarabeus Exp $
+
+*xkeyboard-config-2.2 (04 Apr 2011)
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xkeyboard-config-1.9.ebuild, -xkeyboard-config-2.0-r1.ebuild,
+  +xkeyboard-config-2.2.ebuild:
+  Version bump. Drop older.
 
   18 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   xkeyboard-config-1.9.ebuild, xkeyboard-config-2.0-r1.ebuild:
