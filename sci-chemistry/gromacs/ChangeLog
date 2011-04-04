@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.77 2011/04/02 16:11:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.78 2011/04/04 18:46:56 ottxor Exp $
+
+  04 Apr 2011; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.4.ebuild:
+  Removed sse use flag (fixed bug #361933)
 
   02 Apr 2011; Raúl Porcel <armin76@gentoo.org> gromacs-4.5.3-r4.ebuild:
   alpha/sparc stable wrt #357017

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4.ebuild,v 1.6 2011/04/02 16:08:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4.ebuild,v 1.7 2011/04/04 18:46:56 ottxor Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="X altivec blas dmalloc doc -double-precision +fftw fkernels +gsl lapack
-mpi +single-precision sse sse2 static-libs test +threads +xml zsh-completion"
+mpi +single-precision sse2 static-libs test +threads +xml zsh-completion"
 REQUIRED_USE="fkernels? ( !threads )"
 
 CDEPEND="
@@ -101,7 +101,6 @@ src_configure() {
 	#fortran will gone in gromacs 5.0 anyway
 	#note for gentoo-PREFIX on aix, fortran (xlf) is still much faster
 	if use fkernels; then
-		use threads && eerror "You cannot compile fortran kernel with threads"
 		ewarn "Fortran kernels are usually not faster than C kernels and assembly"
 		ewarn "I hope, you know what are you doing..."
 	fi
@@ -134,16 +133,12 @@ src_configure() {
 	use x86 && sseflag="ia32-sse"
 
 	#missing flag in autotools (bug #339837)
-	use sse && append-flags -msse
 	use sse2 && append-flags -msse2
 
 	for x in ${GMX_DIRS}; do
-		local suffix="" sse="sse"
 		#if we build single and double - double is suffixed
 		use double-precision && use single-precision && \
 			[ "${x}" = "double" ] && suffix="_d"
-		#double uses sse2, single sse
-		[ "${x}" = "double" ] && sse="sse2"
 		myeconfargs=(
 			--bindir="${EPREFIX}"/usr/bin
 			--docdir="${EPREFIX}"/usr/share/doc/"${PF}"
@@ -164,7 +159,7 @@ src_configure() {
 			--disable-power6
 			--disable-ia32-sse
 			--disable-x86-64-sse
-			$(use_enable $sse $sseflag)
+			$(use_enable sse2 $sseflag)
 		)
 		#disable ia32-sse and x86-64-sse and enable what we really need in last line
 
