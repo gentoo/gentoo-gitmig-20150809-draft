@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.159 2011/04/03 07:58:50 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.160 2011/04/04 08:56:07 ali_bush Exp $
+
+  04 Apr 2011; Alistair Bush <ali_bush@gentoo.org>
+  -files/3.3/ant-osgi-manifest.mf, -files/3.3/eclipse-3.3-r1,
+  -files/3.3/disable-jdt-tool.diff, -files/3.3/eclipse-3.3,
+  -eclipse-sdk-3.5.1.ebuild, -files/3.3/disable-jdk6.diff,
+  -files/3.3/disable-swt.diff, -files/3.3/eclipse-jsch-api-update.patch,
+  -files/3.3/eclipse-workbench-miscompile-workaround.diff,
+  -files/3.3/eclipserc, -files/3.3/fedora/eclipse-fileinitializer.patch,
+  -files/3.3/fedora/eclipse-libupdatebuild2.patch,
+  -files/3.3/fedora/eclipse-pde.build-add-package-build.patch,
+  -files/3.3/launcher_double-free.diff, -files/3.3/set-java-home.diff:
+  Cleanup eclipse-sdk.
 
   03 Apr 2011; Alistair Bush <ali_bush@gentoo.org> files/3.4/eclipse-3.4:
   Fix for #274545. Thanks to Christoph Brill
