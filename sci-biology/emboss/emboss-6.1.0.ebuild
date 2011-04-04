@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0.ebuild,v 1.4 2011/03/09 19:50:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0.ebuild,v 1.5 2011/04/04 16:01:13 jlec Exp $
 
 inherit eutils
 
@@ -93,20 +93,17 @@ src_install() {
 			die "Failed to remove duplicated documentation."
 
 	# Remove useless dummy files from the image.
-	rm "${D}"/usr/share/EMBOSS/data/{AAINDEX,PRINTS,PROSITE,REBASE}/dummyfile \
-			|| die "Failed to remove dummy files."
+	find emboss/data -name dummyfile -delete || die "Failed to remove dummy files."
 
 	# Move the provided codon files to a different directory. This will avoid
 	# user confusion and file collisions on case-insensitive file systems (see
 	# bug #115446). This change is documented in "README.Gentoo".
-	mv "${D}"/usr/share/EMBOSS/data/CODONS \
-			"${D}"/usr/share/EMBOSS/data/CODONS.orig || \
+	mv "${D}"/usr/share/EMBOSS/data/CODONS{,.orig} || \
 			die "Failed to move CODON directory."
 
 	# Move the provided restriction enzyme prototypes file to a different name.
 	# This avoids file collisions with versions of rebase that install their
 	# own enzyme prototypes file (see bug #118832).
-	mv "${D}"/usr/share/EMBOSS/data/embossre.equ \
-			"${D}"/usr/share/EMBOSS/data/embossre.equ.orig || \
+	mv "${D}"/usr/share/EMBOSS/data/embossre.equ{,.orig} || \
 			die "Failed to move enzyme equivalence file."
 }
