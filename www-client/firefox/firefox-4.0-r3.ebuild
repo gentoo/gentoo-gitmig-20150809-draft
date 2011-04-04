@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0-r2.ebuild,v 1.2 2011/03/27 20:22:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0-r3.ebuild,v 1.1 2011/04/04 02:13:09 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -28,15 +28,11 @@ REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 # More URIs appended below...
 SRC_URI="http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
-# XXX: GConf is used for setting the default browser
-#      revisit to make it optional with GNOME 3
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.9
 	>=dev-libs/nspr-4.8.7
 	>=dev-libs/glib-2.26
-	>=x11-libs/cairo-1.10.2[X]
-	>=gnome-base/gconf-1.2.1:2
 	x11-libs/pango[X]
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	~net-libs/xulrunner-${XUL_PV}[wifi=,libnotify=,system-sqlite=,webm=]
@@ -137,8 +133,7 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	# Ensure are preferences are added to omnijar
-	epatch "${FILESDIR}/fix-preferences-gentoo.patch"
+	epatch "${FILESDIR}"/fix-preferences-gentoo.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
@@ -173,7 +168,6 @@ src_configure() {
 	mozconfig_annotate '' --disable-mailnews
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --enable-safe-browsing
-
 	mozconfig_annotate '' --with-system-libxul
 	mozconfig_annotate '' --with-libxul-sdk="${EPREFIX}"/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
 
@@ -181,6 +175,7 @@ src_configure() {
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
 	mozconfig_use_enable system-sqlite
+	mozconfig_use_enable gconf
 
 	# Finalize and report settings
 	mozconfig_final
