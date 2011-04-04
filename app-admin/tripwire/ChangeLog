@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.35 2011/04/01 12:21:54 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.36 2011/04/04 12:22:42 c1pher Exp $
+
+  04 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
+  Fix name in metadata.
 
   01 Apr 2011; Dane Smith <c1pher@gentoo.org> tripwire-2.4.2-r1.ebuild,
   metadata.xml:
