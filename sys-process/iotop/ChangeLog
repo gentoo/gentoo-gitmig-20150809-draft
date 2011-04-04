@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.44 2011/04/02 07:22:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.45 2011/04/04 19:12:09 xmw Exp $
+
+  04 Apr 2011; Michael Weber <xmw@gentoo.org> iotop-0.4.2.ebuild:
+  arm/ppc/sparc stable (bug 361567)
 
   02 Apr 2011; Christoph Mende <angelos@gentoo.org> iotop-0.4.2.ebuild:
   Stable on amd64 wrt bug #361567
