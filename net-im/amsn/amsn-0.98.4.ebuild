@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4.ebuild,v 1.2 2011/02/26 19:38:07 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4.ebuild,v 1.3 2011/04/04 14:46:21 scarabeus Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ DEPEND=">=dev-lang/tcl-8.4
 
 RDEPEND="${DEPEND}
 	>=dev-tcltk/tls-1.5
-	media-video/ffmpeg[encode]"
+	virtual/ffmpeg[encode]"
 #	>=media-libs/gst-plugins-good-0.10.15
 #	>=media-libs/gst-plugins-bad-0.10.13
 #	>=media-plugins/gst-plugins-ffmpeg-0.10.7
