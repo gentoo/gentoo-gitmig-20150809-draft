@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.87 2011/02/12 23:26:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.88 2011/04/04 08:58:41 pacho Exp $
+
+  04 Apr 2011; Pacho Ramos <pacho@gentoo.org> git-1.6.4.5.ebuild,
+  git-1.7.2.5.ebuild, git-1.7.3.4-r1.ebuild, git-1.7.3.5.ebuild,
+  git-1.7.3.5-r1.ebuild, git-1.7.3.5-r2.ebuild, git-1.7.4_rc1.ebuild,
+  git-1.7.4_rc1-r1.ebuild, git-1.7.4_rc1-r2.ebuild, git-1.7.4_rc2.ebuild,
+  git-1.7.4_rc3.ebuild, git-1.7.4.ebuild, git-1.7.4.1.ebuild, git-9999.ebuild:
+  RDEPEND only in dev-python/pygtksourceview:2 as
+  dev-python/gtksourceview-python will be dropped soon (bug #355049 with Robin
+  Johnson authorization).
 
   12 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> -git-1.6.4.4.ebuild,
   -git-1.6.4.4-r1.ebuild, -files/git-1.6.4.5-gitweb-cve-2010-3906.patch,

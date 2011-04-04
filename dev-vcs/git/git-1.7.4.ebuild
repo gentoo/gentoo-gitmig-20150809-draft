@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4.ebuild,v 1.1 2011/02/01 01:24:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4.ebuild,v 1.2 2011/04/04 08:58:41 pacho Exp $
 
 EAPI=3
 
@@ -59,7 +59,7 @@ RDEPEND="${CDEPEND}
 	python? ( gtk?
 	(
 		>=dev-python/pygtk-2.8
-		|| ( dev-python/pygtksourceview:2  dev-python/gtksourceview-python )
+		dev-python/pygtksourceview:2
 	) )"
 
 # This is how info docs are created with Git:
