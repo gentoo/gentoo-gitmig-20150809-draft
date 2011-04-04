@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.0_rc2.ebuild,v 1.1 2011/04/04 13:26:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.0.ebuild,v 1.1 2011/04/04 14:51:36 flameeyes Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
