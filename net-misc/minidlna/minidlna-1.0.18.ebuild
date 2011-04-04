@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.18.ebuild,v 1.3 2010/12/31 01:04:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.18.ebuild,v 1.4 2011/04/04 12:18:01 scarabeus Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND="dev-db/sqlite
 	media-libs/libid3tag
 	media-libs/libogg
 	media-libs/libvorbis
-	media-video/ffmpeg
+	virtual/ffmpeg
 	virtual/jpeg"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

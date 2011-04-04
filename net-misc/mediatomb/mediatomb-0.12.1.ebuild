@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.5 2011/02/26 17:06:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.6 2011/04/04 12:19:35 scarabeus Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -25,7 +25,7 @@ DEPEND="
 	exif? ( media-libs/libexif )
 	libextractor? ( media-libs/libextractor )
 	mp4? ( media-libs/libmp4v2 )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	thumbnail? ( media-video/ffmpegthumbnailer[jpeg] )
 	net-misc/curl
 	sys-apps/file
