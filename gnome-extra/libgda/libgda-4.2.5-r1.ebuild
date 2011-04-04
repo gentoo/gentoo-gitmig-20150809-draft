@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.5.ebuild,v 1.2 2011/03/08 05:21:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.5-r1.ebuild,v 1.1 2011/04/04 15:40:19 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -122,4 +122,10 @@ src_prepare() {
 
 src_test() {
 	emake check XDG_DATA_HOME="${T}/.local" || die "tests failed"
+}
+
+src_install() {
+	gnome2_src_install
+	# Nothing uses these in the tree
+	find "${D}" -name '*.la' -exec rm -f '{}' + || die
 }
