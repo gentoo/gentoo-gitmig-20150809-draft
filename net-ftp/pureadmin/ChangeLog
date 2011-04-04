@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/pureadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.17 2011/03/28 18:58:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.18 2011/04/04 08:01:33 xmw Exp $
+
+*pureadmin-0.4-r1 (04 Apr 2011)
+
+  04 Apr 2011; Michael Weber <xmw@gentoo.org> -pureadmin-0.4.ebuild,
+  +pureadmin-0.4-r1.ebuild:
+  Revision bump to fix doc file installation. Thanks to ago@autistici.org for
+  the report on bug 361135
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> pureadmin-0.4.ebuild:
   Fixed test suite

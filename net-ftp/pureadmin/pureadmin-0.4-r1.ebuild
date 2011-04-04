@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.4.ebuild,v 1.3 2011/03/28 18:58:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.4-r1.ebuild,v 1.1 2011/04/04 08:01:33 xmw Exp $
 
 EAPI=3
 inherit eutils
@@ -40,9 +40,9 @@ src_install() {
 
 	# Move the docs to the correct location, if we want the docs
 	if use doc ; then
-		dodoc "${D}/usr/share/doc/pureadmin/*.txt"
+		dodoc "${D}"usr/share/pureadmin/docs/* || die
 	fi
-	rm -Rf "${D}/usr/share/doc/pureadmin"
+	rm -Rfv "${D}"usr/share/pureadmin/docs || die
 
 	make_desktop_entry pureadmin "Pure-FTPd menu config" pureadmin
 }
