@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.21 2011/04/01 10:52:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.22 2011/04/04 19:52:01 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> babl-0.1.4.ebuild:
+  Update useflags to match reality. Update deps to avoid automagicness.
 
   01 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> babl-0.1.4.ebuild:
   Use eapi3 since we have prefix keywords.
