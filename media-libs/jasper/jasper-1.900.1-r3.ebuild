@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r3.ebuild,v 1.14 2011/04/04 18:57:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r3.ebuild,v 1.15 2011/04/04 19:11:12 scarabeus Exp $
 
 EAPI=3
 
@@ -36,7 +36,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc NEWS README doc/*
 	find "${ED}" -name '*.la' -delete
 }
