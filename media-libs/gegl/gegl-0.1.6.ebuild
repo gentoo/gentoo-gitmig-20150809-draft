@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.6 2011/04/01 10:31:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.7 2011/04/04 18:38:53 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils autotools
 
@@ -14,26 +14,28 @@ LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
-IUSE="cairo debug doc ffmpeg jpeg mmx openexr png raw sdl sse svg v4l"
+IUSE="cairo debug exif ffmpeg graphviz jpeg jpeg2k lua mmx openexr png raw sdl sse svg umfpack v4l"
 
 DEPEND=">=media-libs/babl-0.1.4
-	>=dev-libs/glib-2.22.0:2
-	media-libs/libpng
-	>=x11-libs/gtk+-2.18.0:2
+	dev-libs/glib:2
+	x11-libs/gtk+:2
+	x11-libs/gdk-pixbuf:2
 	x11-libs/pango
+	sys-libs/zlib
 	cairo? ( x11-libs/cairo )
-	doc? ( app-text/asciidoc
-		dev-lang/ruby
-		>=dev-lang/lua-5.1.0
-		app-text/enscript
-		media-gfx/graphviz
-		|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagic[png] ) )
+	exif? ( media-gfx/exiv2 )
 	ffmpeg? ( virtual/ffmpeg )
+	graphviz? ( media-gfx/graphviz )
 	jpeg? ( virtual/jpeg )
+	jpeg2k? ( media-libs/jasper )
+	lua? ( dev-lang/lua )
 	openexr? ( media-libs/openexr )
-	raw? ( >=media-libs/libopenraw-0.0.5 )
+	png? ( media-libs/libpng )
+	raw? ( media-libs/libopenraw )
 	sdl? ( media-libs/libsdl )
-	svg? ( >=gnome-base/librsvg-2.14.0:2 )"
+	svg? ( gnome-base/librsvg:2 )
+	umfpack? ( sci-libs/umfpack )
+	v4l? ( media-libs/libv4l )"
 RDEPEND="${DEPEND}"
 
 # broken upstream, see:
@@ -51,28 +53,40 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --with-gtk --with-pango --with-gdk-pixbuf \
+	# never enable altering of CFLAGS via profile option
+	# libspiro: not in portage main tree
+	# disable documentation as the generating is bit automagic
+	#    if anyone wants to work on it just create bug with patch
+	# gtk and friends: always enable
+	econf \
+		--disable-profile \
+		--without-libspiro \
+		--disable-doc --disable-workshop \
+		--with-gtk --with-pango --with-gdk-pixbuf --with-gio \
+		$(use_enable mmx) \
+		$(use_enable sse) \
+		$(use_enable doc docs) \
+		$(use_enable doc workshop) \
 		$(use_enable debug) \
 		$(use_with cairo) \
 		$(use_with cairo pangocairo) \
-		$(use_with v4l libv4l) \
-		$(use_enable doc docs) \
-		$(use_with doc graphviz) \
-		$(use_with doc lua) \
-		$(use_enable doc workshop) \
+		$(use_with exif exiv2) \
 		$(use_with ffmpeg libavformat) \
+		$(use_with graphviz) \
 		$(use_with jpeg libjpeg) \
-		$(use_enable mmx) \
+		$(use_with jpeg2k jasper) \
+		$(use_with lua) \
 		$(use_with openexr) \
 		$(use_with png libpng) \
 		$(use_with raw libopenraw) \
 		$(use_with sdl) \
 		$(use_with svg librsvg) \
-		$(use_enable sse)
+		$(use_with umfpack) \
+		$(use_with v4l libv4l)
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "emake install failed"
+	emake DESTDIR="${ED}" install
 	find "${ED}" -name '*.la' -delete
-	dodoc ChangeLog INSTALL README NEWS || die "dodoc failed"
+	dodoc ChangeLog INSTALL README NEWS
 }

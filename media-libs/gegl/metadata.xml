@@ -5,4 +5,7 @@
 <maintainer>
 	<email>hanno@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name="umfpack">Enable sparse solving via <pkg>sci-libs/umfpack</pkg>.</flag>
+</use>
 </pkgmetadata>
