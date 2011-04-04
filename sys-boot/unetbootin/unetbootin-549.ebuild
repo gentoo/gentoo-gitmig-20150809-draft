@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-527-r1.ebuild,v 1.2 2011/04/04 16:37:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-549.ebuild,v 1.1 2011/04/04 16:37:47 jer Exp $
 
 EAPI="3"
 
