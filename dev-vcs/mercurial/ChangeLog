@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.41 2011/03/29 12:48:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.42 2011/04/04 06:54:39 djc Exp $
+
+*mercurial-1.8.2 (04 Apr 2011)
+
+  04 Apr 2011; Dirkjan Ochtman <djc@gentoo.org> +mercurial-1.8.2.ebuild:
+  Version bump to 1.8.2.
 
   29 Mar 2011; Jeroen Roovers <jer@gentoo.org> mercurial-1.7.ebuild:
   Stable for HPPA (bug #348499).
