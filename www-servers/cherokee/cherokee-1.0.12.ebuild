@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.12.ebuild,v 1.1 2010/12/02 13:55:12 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.0.12.ebuild,v 1.2 2011/04/04 12:06:58 scarabeus Exp $
 
 EAPI=2
 PYTHON_DEPEND="admin? 2"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="ipv6 nls ssl static pam coverpage threads kernel_linux admin debug geoip
 ldap mysql ffmpeg fastcgi rrdtool"
 
@@ -27,7 +27,7 @@ RDEPEND="
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	fastcgi? ( www-servers/spawn-fcgi )
-	ffmpeg? ( media-video/ffmpeg )"
+	ffmpeg? ( virtual/ffmpeg )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
