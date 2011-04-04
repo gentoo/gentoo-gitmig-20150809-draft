@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/moonlight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/ChangeLog,v 1.11 2011/03/27 11:55:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/ChangeLog,v 1.12 2011/04/04 12:09:25 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> moonlight-2.3.ebuild:
+  Move to virtual/ffmpeg from media-video/ffmpeg.
 
   27 Mar 2011; Pacho Ramos <pacho@gentoo.org> moonlight-2.3.ebuild:
   Fix deps.

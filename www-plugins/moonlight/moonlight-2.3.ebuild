@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.5 2011/03/27 11:55:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.6 2011/04/04 12:09:25 scarabeus Exp $
 
 EAPI=2
 
@@ -97,8 +97,7 @@ src_configure() {
 		$(use_with debug) \
 		$(use_with test testing) \
 		$(use_with test performance) \
-		--without-examples \
-		|| die "econf moonlight failed"
+		--without-examples
 }
 
 src_compile() {
