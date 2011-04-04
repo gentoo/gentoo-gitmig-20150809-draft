@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.8 2011/04/04 18:44:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.9 2011/04/04 19:24:18 scarabeus Exp $
 
 EAPI=4
 
@@ -37,10 +37,6 @@ DEPEND=">=media-libs/babl-0.1.4
 	umfpack? ( sci-libs/umfpack )
 	v4l? ( media-libs/libv4l )"
 RDEPEND="${DEPEND}"
-
-# broken upstream, see:
-# https://bugzilla.gnome.org/show_bug.cgi?id=642390
-RESTRICT="test"
 
 src_prepare() {
 	# upstream bug report:
@@ -81,6 +77,14 @@ src_configure() {
 		$(use_with svg librsvg) \
 		$(use_with umfpack) \
 		$(use_with v4l libv4l)
+}
+
+src_test() {
+	# set xdg dirs to not violate sandbox constrains
+	export XDG_CONFIG_HOME="${T}"
+	export XDG_CACHE_HOME="${T}"
+
+	default
 }
 
 src_install() {
