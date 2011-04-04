@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.24.2.ebuild,v 1.5 2011/03/20 11:41:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.24.2.ebuild,v 1.6 2011/04/04 12:11:35 scarabeus Exp $
 
 inherit eutils autotools depend.php depend.apache multilib
 
@@ -41,7 +41,7 @@ DEPEND="app-admin/sudo
 	virtual/perl-Time-HiRes"
 
 RDEPEND="dev-perl/DBD-mysql
-	ffmpeg? ( >=media-video/ffmpeg-0.5-r1 )
+	ffmpeg? ( virtual/ffmpeg )
 	media-libs/netpbm"
 
 # we cannot use need_httpd_cgi here, since we need to setup permissions for the
