@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/rbldnsd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.17 2010/01/14 06:51:29 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.18 2011/04/04 14:13:29 c1pher Exp $
+
+  04 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
+  Update metadata to reflect Michael Orlitzky as maintainer w/ me as his
+  proxy
+  committer.
 
   14 Jan 2010; Jeroen Roovers <jer@gentoo.org> rbldnsd-0.996b.ebuild:
   Stable for HPPA (bug #282366).

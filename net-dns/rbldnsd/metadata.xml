@@ -3,7 +3,13 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>c1pher@gentoo.org</email>
+		<name>Dane Smith</name>
+	</maintainer>
+	<maintainer>
+		<email>michael@orlitzky.com</email>
+		<name>Michael Orlitzky</name>
+		<description>Proxy Maintainer. CC on bugs.</description>
 	</maintainer>
 	<longdescription lang="en">
 		rbldnsd is a small and fast DNS daemon which is especially made to serve DNSBL
