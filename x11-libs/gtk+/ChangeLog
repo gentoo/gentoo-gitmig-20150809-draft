@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.500 2011/04/01 22:32:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.501 2011/04/04 14:03:57 nirbheek Exp $
+
+*gtk+-3.0.8 (04 Apr 2011)
+
+  04 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -gtk+-3.0.7.ebuild,
+  +gtk+-3.0.8.ebuild:
+  Bump to 3.0.8, remove buggy 3.0.7
 
 *gtk+-3.0.7 (01 Apr 2011)
 
