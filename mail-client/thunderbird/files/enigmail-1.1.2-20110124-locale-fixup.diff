@@ -1,0 +1,8 @@
+--- enigmail/lang/current-languages.txt
++++ enigmail/lang/current-languages.txt
+@@ -1,5 +1,4 @@
+ ar
+-bg-BG
+ ca
+ cs-CZ
+ de-AT
