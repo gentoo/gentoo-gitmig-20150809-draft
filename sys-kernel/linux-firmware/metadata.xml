@@ -6,4 +6,8 @@
 	<email>gregkh@gentoo.org</email>
 	<name>Greg Kroah-Hartman</name>
 </maintainer>
+<maintainer>
+	<email>chithanh@gentoo.org</email>
+	<name>Chí-Thanh Christopher Nguyễn</name>
+</maintainer>
 </pkgmetadata>
