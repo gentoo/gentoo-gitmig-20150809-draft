@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.1.ebuild,v 1.8 2011/03/23 20:01:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.1.ebuild,v 1.9 2011/04/04 12:14:40 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 hppa ppc ppc64 x86"
 IUSE="ffmpeg +gd imagemagick +mysql netpbm postgres raw sqlite unzip zip"
 
 RDEPEND="raw? ( media-gfx/dcraw )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
 	netpbm? ( media-libs/netpbm media-gfx/jhead )
 	unzip? ( app-arch/unzip )
