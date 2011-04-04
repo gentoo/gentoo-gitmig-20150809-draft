@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlsec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.26 2011/04/03 22:30:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.27 2011/04/04 12:42:35 tomka Exp $
+
+  04 Apr 2011; Thomas Kahle <tomka@gentoo.org> xmlsec-1.2.17.ebuild:
+  x86 stable per bug 361397
 
 *xmlsec-1.2.17 (03 Apr 2011)
 
