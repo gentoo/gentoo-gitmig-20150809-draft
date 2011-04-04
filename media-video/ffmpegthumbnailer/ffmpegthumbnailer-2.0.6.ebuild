@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.6.ebuild,v 1.7 2011/04/02 14:25:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.6.ebuild,v 1.8 2011/04/04 18:36:30 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -23,7 +23,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{asneeded,flags,gcc46}.patch
+	epatch "${FILESDIR}"/${P}-{asneeded,flags,gcc46,libpng15}.patch
 	eautoreconf
 }
 
@@ -39,5 +39,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
-	find "${D}" -name '*.la' -delete
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
