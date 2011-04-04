@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.35 2011/03/09 10:37:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.36 2011/04/04 19:32:03 graaff Exp $
+
+*test-unit-2.1.2-r1 (04 Apr 2011)
+
+  04 Apr 2011; Hans de Graaff <graaff@gentoo.org>
+  +test-unit-2.1.2-r1.ebuild:
+  Add new stable candidate revision with proper dependency on dev-ruby/rdoc,
+  as reported in bug 357939.
 
   09 Mar 2011; Markos Chandras <hwoarang@gentoo.org> test-unit-2.1.2.ebuild:
   Stable on amd64 wrt bug #357939
