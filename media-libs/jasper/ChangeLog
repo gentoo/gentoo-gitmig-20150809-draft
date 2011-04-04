@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jasper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.57 2010/09/16 17:15:07 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.58 2011/04/04 18:57:24 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  jasper-1.900.1-r3.ebuild:
+  Make static libs optional. Punt .la file. Update to eapi3 since it is full of
+  prefix keywords.
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   jasper-1.900.1-r3.ebuild:
