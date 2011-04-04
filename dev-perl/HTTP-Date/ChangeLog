@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Date
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Date/ChangeLog,v 1.1 2011/03/09 12:25:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Date/ChangeLog,v 1.2 2011/04/04 23:10:09 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> HTTP-Date-6.0.0.ebuild:
+  Marked ~hppa (bug #358079).
 
 *HTTP-Date-6.0.0 (09 Mar 2011)
 

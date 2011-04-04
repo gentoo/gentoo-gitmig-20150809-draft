@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.1 2011/03/09 13:44:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.2 2011/04/04 23:16:14 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> HTTP-Daemon-6.0.0.ebuild:
+  Marked ~hppa (bug #358079).
 
 *HTTP-Daemon-6.0.0 (09 Mar 2011)
 
