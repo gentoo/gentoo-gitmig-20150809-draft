@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.244 2011/03/28 08:13:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.245 2011/04/04 12:31:27 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> mpd-0.15.8.ebuild,
+  mpd-0.15.15.ebuild, mpd-0.15.16.ebuild, mpd-0.16.1-r1.ebuild,
+  mpd-0.16.1-r2.ebuild:
+  Migrate to virtual/ffmpeg in all versions.
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> mpd-0.16.2.ebuild:
   Changed ffmpeg to virtual/ffmpeg and some minor cleanup
