@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/m17n-db
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.44 2010/01/31 11:47:53 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.45 2011/04/04 00:59:04 flameeyes Exp $
+
+*m17n-db-1.6.2 (04 Apr 2011)
+
+  04 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> +m17n-db-1.6.2.ebuild,
+  +files/do-not-commit-extra-space.patch:
+  Version bump; apply a patch from ChromiumOS by Peng Huang to fix issues with
+  traditional Chinese input.
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org> m17n-db-1.5.2.ebuild:
   arm stable wrt #296159
