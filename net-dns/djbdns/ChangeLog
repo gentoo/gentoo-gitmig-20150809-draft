@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.120 2011/03/01 20:24:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.121 2011/04/04 14:05:00 c1pher Exp $
+
+*djbdns-1.05-r24 (04 Apr 2011)
+
+  04 Apr 2011; Dane Smith <c1pher@gentoo.org>
+  +files/string_length_255.patch, +djbdns-1.05-r24.ebuild, metadata.xml:
+  Add Michael Orlitzky as proxy maintainer with me as proxy.
+  Revbump to -24 wrt bug 241158.
+  Ebuild cleanup.
 
   01 Mar 2011; Christian Ruppert <idl0r@gentoo.org> -files/fwdzone-fix.patch:
   Remove unused patch
