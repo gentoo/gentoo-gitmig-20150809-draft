@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.244 2011/03/31 20:39:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.245 2011/04/04 14:03:24 chithanh Exp $
+
+*ati-drivers-8.840 (04 Apr 2011)
+
+  04 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-8.840.ebuild:
+  Add xorg-server-1.10 compatible beta release, import of Enrico
+  Tagliavini's ebuild from the x11 overlay.
 
 *ati-drivers-11.3 (31 Mar 2011)
 
