@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.160 2011/04/04 08:56:07 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.161 2011/04/04 19:45:08 ali_bush Exp $
+
+  04 Apr 2011; Alistair Bush <ali_bush@gentoo.org> eclipse-sdk-3.4-r2.ebuild:
+  Updated SRC_URI after package moved. see #324683. Thanks to Christoph Brill
+  (egore).
 
   04 Apr 2011; Alistair Bush <ali_bush@gentoo.org>
   -files/3.3/ant-osgi-manifest.mf, -files/3.3/eclipse-3.3-r1,
