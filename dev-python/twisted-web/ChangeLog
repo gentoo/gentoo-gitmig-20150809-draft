@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.67 2011/01/25 17:06:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.68 2011/04/04 20:39:04 arfrever Exp $
+
+*twisted-web-11.0.0 (04 Apr 2011)
+
+  04 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +twisted-web-11.0.0.ebuild:
+  Version bump.
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> twisted-web-10.2.0.ebuild:
   Stable for HPPA (bug #350894).
