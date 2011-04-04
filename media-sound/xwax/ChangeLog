@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.29 2011/03/23 19:09:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.30 2011/04/04 12:33:26 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> xwax-0.7.ebuild,
+  xwax-0.8.ebuild, xwax-0.9_beta3.ebuild:
+  Migrate to virtual/ffmpeg from media-video/ffmpeg.
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> xwax-0.8.ebuild:
   ppc/ppc64 stable wrt #353951

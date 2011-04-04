@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.9_beta3.ebuild,v 1.1 2011/02/16 21:11:49 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.9_beta3.ebuild,v 1.2 2011/04/04 12:33:26 scarabeus Exp $
 
 EAPI=3
 inherit toolchain-funcs
@@ -31,7 +31,7 @@ RDEPEND="media-libs/libsdl
 	xwax_decoders_flac? ( media-libs/flac )
 	xwax_decoders_mp3? ( || ( media-sound/mpg123 media-sound/mpg321 ) )
 	xwax_decoders_ogg? ( media-sound/vorbis-tools )
-	xwax_decoders_misc? ( media-video/ffmpeg )"
+	xwax_decoders_misc? ( virtual/ffmpeg )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
