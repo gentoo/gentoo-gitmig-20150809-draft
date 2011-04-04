@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.44 2011/03/30 20:07:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.45 2011/04/04 14:06:09 chithanh Exp $
+
+  04 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-drivers-1.10.ebuild:
+  Block xf86-input-joystick until there is a 1.10 compatible release.
 
 *xorg-drivers-1.10 (30 Mar 2011)
 
