@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.7 2011/04/04 18:38:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.8 2011/04/04 18:44:04 scarabeus Exp $
 
 EAPI=4
 
@@ -61,12 +61,10 @@ src_configure() {
 	econf \
 		--disable-profile \
 		--without-libspiro \
-		--disable-doc --disable-workshop \
+		--disable-docs --disable-workshop \
 		--with-gtk --with-pango --with-gdk-pixbuf --with-gio \
 		$(use_enable mmx) \
 		$(use_enable sse) \
-		$(use_enable doc docs) \
-		$(use_enable doc workshop) \
 		$(use_enable debug) \
 		$(use_with cairo) \
 		$(use_with cairo pangocairo) \
