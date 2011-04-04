@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmodbus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/ChangeLog,v 1.1 2009/05/05 20:49:16 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmodbus/ChangeLog,v 1.2 2011/04/04 03:21:12 vapier Exp $
+
+*libmodbus-2.9.3 (04 Apr 2011)
+
+  04 Apr 2011; Mike Frysinger <vapier@gentoo.org> +libmodbus-2.9.3.ebuild:
+  Version bump #361797 by Niels Ole Salscheider.
 
 *libmodbus-2.0.3 (05 May 2009)
 
