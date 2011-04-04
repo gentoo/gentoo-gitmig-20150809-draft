@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/m17n-lib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.50 2010/01/31 11:49:02 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.51 2011/04/04 01:04:40 flameeyes Exp $
+
+*m17n-lib-1.6.2 (04 Apr 2011)
+
+  04 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> +m17n-lib-1.6.2.ebuild,
+  +files/m17n-lib-1.6.2-candidates-list.patch, +files/m17n-lib-1.6.2-gui.patch,
+  +files/m17n-lib-1.6.2-parallel-make.patch, metadata.xml:
+  Version bump; fix up --disable-gui and add USE=X to disable the GUI
+  functionalities; fix parallel-make failures; apply a patch from ChromiumOS by
+  Peng Huang to fix issues with traditional Chinese input.
 
   31 Jan 2010; Raúl Porcel <armin76@gentoo.org> m17n-lib-1.5.2.ebuild:
   arm stable wrt #296159

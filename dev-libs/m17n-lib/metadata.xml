@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>cjk</herd>
+  <herd>cjk</herd>
+  <use>
+    <flag name='X'>
+      Builds the Graphical User Interface API and utilities for the
+      package.
+    </flag>
+    <flag name='gd'>
+      Build API and utilities based on <pkg>media-libs/gd</pkg>. This
+      flag is only meaningful if the X USE flag is also enabled.
+    </flag>
+  </use>
 </pkgmetadata>
