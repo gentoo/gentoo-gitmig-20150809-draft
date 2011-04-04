@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r24.ebuild,v 1.2 2011/04/04 16:57:45 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r24.ebuild,v 1.3 2011/04/04 18:58:49 c1pher Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs
@@ -83,7 +83,8 @@ src_compile() {
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "/usr" > conf-home
-	emake -j1 || die "emake failed"
+	#emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	# If djbdns is compiled with IPv6 support, it breaks dnstrace.
 	# Therefore we must compile dnstrace separately without IPv6
@@ -94,7 +95,8 @@ src_compile() {
 		echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 		echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 		echo "/usr" > conf-home
-		emake -j1 dnstrace || die "emake failed"
+		#emake -j1 dnstrace || die "emake failed"
+		emake dnstrace || die "emake failed"
 	fi
 }
 
