@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.314 2011/03/22 19:50:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.315 2011/04/04 21:24:23 nirbheek Exp $
+
+*pango-1.28.4 (04 Apr 2011)
+
+  04 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +pango-1.28.4.ebuild:
+  Bump to 1.28.4, lots of bugfixes
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> pango-1.28.3.ebuild:
   Marking pango-1.28.3 ppc stable for bug 353436
