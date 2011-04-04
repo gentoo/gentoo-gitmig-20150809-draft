@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.10 2011/04/03 22:16:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.11 2011/04/04 12:44:34 scarabeus Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ libcaca lirc +live mad md5sum +mmx mmxext mng +mp3 nas
 +network nut +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3
 tga +theora +truetype +unicode v4l v4l2 vdpau
-+vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvmc"
++vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid xvmc"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
 for x in ${VIDEO_CARDS}; do
@@ -125,6 +125,7 @@ RDEPEND+="
 	truetype? ( ${FONT_RDEPS} )
 	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
+	xvid? ( media-libs/xvid )
 "
 
 X_DEPS="
@@ -378,15 +379,9 @@ src_configure() {
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-lib${i}"
 	done
-	uses="faad gif jpeg live mad mng png pnm speex tga theora xanim"
+	uses="faad gif jpeg live mad mng png pnm speex tga theora xanim xvid"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
-	done
-
-	# Encoding
-	uses="xvid"
-	for i in ${uses}; do
-		myconf+=" --disable-${i}"
 	done
 
 	#################
