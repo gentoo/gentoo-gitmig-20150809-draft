@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r24.ebuild,v 1.1 2011/04/04 14:05:00 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r24.ebuild,v 1.2 2011/04/04 16:57:45 c1pher Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs
@@ -118,7 +118,7 @@ src_install() {
 	newbin "${FILESDIR}/djbdns-setup-r17" djbdns-setup || die
 }
 
-pkg_setup() {
+pkg_preinst() {
 	# The nofiles group is provided by baselayout
 	enewuser dnscache -1 -1 -1 nofiles
 	enewuser dnslog -1 -1 -1 nofiles
