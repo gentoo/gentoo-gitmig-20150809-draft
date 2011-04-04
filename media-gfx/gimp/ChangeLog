@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.326 2011/03/27 09:45:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.327 2011/04/04 19:57:55 scarabeus Exp $
+
+  04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gimp-9999.ebuild:
+  Update gegl/babl deps per bug #326439.
 
   27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> gimp-2.6.11-r1.ebuild,
   gimp-9999.ebuild:
