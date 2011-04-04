@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-506.ebuild,v 1.1 2011/03/23 16:47:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-527-r1.ebuild,v 1.1 2011/04/04 04:27:07 jer Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit qt4-r2
 DESCRIPTION="Universal Netboot Installer creates Live USB systems for various OS
 distributions."
 HOMEPAGE="http://unetbootin.sourceforge.net/"
-SRC_URI="mirror://sourceforge/unetbootin/${PN}-source-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -25,13 +25,20 @@ RDEPEND="${DEPEND}
 		 app-arch/p7zip"
 
 src_configure() {
-	lupdate unetbootin.pro || die "lupdate failed"
-	lrelease unetbootin.pro || die "lrelease failed"
-	eqmake4 unetbootin.pro || die "eqmake4 failed"
+	lupdate ${PN}.pro || die
+	lrelease ${PN}.pro || die
+	eqmake4 ${PN}.pro || die
 }
 
 src_install() {
-	dobin unetbootin || die "dobin failed"
+	dobin ${PN} || die
 	insinto /usr/share/applications
-	doins unetbootin.desktop || die "doins failed"
+	doins ${PN}.desktop || die
+	for file in ${PN}*.png; do
+		size="${file/unetbootin_}"
+		size="${size/.png}x${size/.png}"
+		echo $file $size
+		insinto /usr/share/icons/hicolor/${size}
+		newins ${file} ${PN}.png
+	done
 }
