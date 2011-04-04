@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/evieext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.44 2011/03/26 10:52:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.45 2011/04/04 22:41:06 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> evieext-1.1.1.ebuild:
+  Stable for HPPA (bug #359059).
 
   26 Mar 2011; Christian Faulhammer <fauli@gentoo.org> evieext-1.1.1.ebuild:
   x86 stable, bug 359059
