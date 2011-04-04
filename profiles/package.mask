@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12656 2011/04/04 02:21:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12657 2011/04/04 13:11:50 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -931,10 +931,6 @@ app-crypt/hmaccalc
 # development release
 =dev-db/mongodb-1.5*
 
-# Alex Alexander <wired@gentoo.org> (20 May 2010)
-# development releases
-=www-client/uget-1.5.9*
-
 # Justin Lecher <jlec@gentoo.org> (16 May 2010)
 # Upstreams testing version
 # Added on request
@@ -1008,10 +1004,6 @@ games-strategy/xscorch
 # packages, this is an exception to current policy because some people
 # from X11 team needed 3D support even with bleeding edge Xorg.
 =app-emulation/emul-linux-x86-opengl-20110129-r99
-
-# Robert Piasek <dagger@gentoo.org> (09 Apr 2010)
-# Mask as it does have some regressions comparing to version 3
-=net-misc/modemmanager-0.3_p20100401
 
 # Patrick Lauer <patrick@gentoo.org> (07 Apr 2010)
 # Migrating back to unsplit samba ebuilds. Keeping samba-4 masked until release.
