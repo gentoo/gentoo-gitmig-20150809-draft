@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdpyinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.64 2011/03/26 10:26:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/ChangeLog,v 1.65 2011/04/04 19:04:45 jer Exp $
+
+  04 Apr 2011; Jeroen Roovers <jer@gentoo.org> xdpyinfo-1.2.0.ebuild:
+  Stable for HPPA (bug #359059).
 
   26 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
   xdpyinfo-1.2.0.ebuild:
