@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.241 2011/04/03 11:29:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.242 2011/04/04 15:29:20 ulm Exp $
+
+  04 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove old-style virtual/m3, bug 358837.
 
   03 Apr 2011; Ulrich Mueller <ulm@gentoo.org> packages, virtuals:
   Remove old-style virtual/gzip, bug 358829.
