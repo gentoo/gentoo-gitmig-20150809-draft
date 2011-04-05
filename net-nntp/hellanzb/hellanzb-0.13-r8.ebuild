@@ -1,6 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r8.ebuild,v 1.1 2010/04/23 13:48:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/hellanzb/hellanzb-0.13-r8.ebuild,v 1.2 2011/04/05 21:00:58 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
@@ -24,10 +27,15 @@ RDEPEND=">=dev-python/twisted-2.0
 DEPEND=""
 
 DOCS="CHANGELOG CREDITS PKG-INFO README"
+PYTHON_MODNAME="Hellanzb"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
 
 	epatch "${FILESDIR}/${P}-datafiles.patch"
 	epatch "${FILESDIR}/${P}-Fix_conf_file_search_path.patch"
@@ -49,6 +57,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	elog "You can start hellanzb in the background automatically by using"
 	elog "the init-script. To do this, add it to your default runlevel:"
 	elog ""
