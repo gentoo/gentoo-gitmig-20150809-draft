@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.1 2011/04/05 19:23:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.2 2011/04/05 21:25:03 alexxy Exp $
 
 depend() {
 	need net
-	before xendomains sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp
+	before xendomains xend sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp 
 }
 
 start() {
@@ -14,9 +14,10 @@ start() {
 		--pidfile /var/run/xenstored.pid \
 		-- --pid-file=/var/run/xenstored.pid \
 		$XENSTORED_OPTS
-	eend $?
+	sleep 15
 	einfo "Setting domain0 name record"
 	/usr/bin/xenstore-write "/local/domain/0/name" "Domain-0"
+	eend $*
 }
 
 stop() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0-r1.ebuild,v 1.1 2011/04/05 19:23:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0-r1.ebuild,v 1.2 2011/04/05 21:25:03 alexxy Exp $
 
 EAPI="3"
 
@@ -140,6 +140,9 @@ src_prepare() {
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" \
 			-i Makefile
 	fi
+
+	# Fix build for gcc-4.6
+	sed -e "s:-Werror::g" -i  tools/xenstat/xentop/Makefile
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
 
@@ -174,7 +177,7 @@ src_install() {
 		|| die "install failed"
 
 	# Remove RedHat-specific stuff
-	rm -r "${D}"/etc/sysconfig "${D}"/etc/init.d/xen* || die
+	rm -r "${D}"/etc/default "${D}"/etc/init.d/xen* || die
 
 	dodoc README docs/README.xen-bugtool docs/ChangeLog
 	if use doc; then
@@ -191,11 +194,11 @@ src_install() {
 
 	doman docs/man?/*
 
-	newinitd "${FILESDIR}"/xend.initd xend \
+	newinitd "${FILESDIR}"/xend.initd-r2 xend \
 		|| die "Couldn't install xen.initd"
 	newconfd "${FILESDIR}"/xendomains.confd xendomains \
 		|| die "Couldn't install xendomains.confd"
-	newinitd "${FILESDIR}"/xendomains.initd-xl xendomains \
+	newinitd "${FILESDIR}"/xendomains.initd-r2 xendomains \
 		|| die "Couldn't install xendomains.initd"
 	newinitd "${FILESDIR}"/xenstored.initd xenstored \
 		|| die "Couldn't install xenstored.initd"
