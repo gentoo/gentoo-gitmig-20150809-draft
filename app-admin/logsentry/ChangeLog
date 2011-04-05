@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/logsentry
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.26 2010/08/13 12:49:06 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.27 2011/04/05 16:47:19 signals Exp $
+
+*logsentry-1.1.1-r1 (05 Apr 2011)
+
+  05 Apr 2011; Kevin McCarthy <signals@gentoo.org> +logsentry-1.1.1-r1.ebuild:
+  Move temp dir from /etc to /var/tmp. #352486
 
   13 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   logsentry-1.1.1.ebuild:
