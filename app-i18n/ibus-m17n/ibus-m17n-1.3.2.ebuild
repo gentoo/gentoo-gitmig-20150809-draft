@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.3.2.ebuild,v 1.1 2011/03/07 14:01:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-1.3.2.ebuild,v 1.2 2011/04/05 19:52:57 flameeyes Exp $
 
 EAPI="3"
 
@@ -19,9 +19,10 @@ RDEPEND=">=app-i18n/ibus-1.3
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-db/m17n-db
-	dev-db/m17n-contrib
 	>=sys-devel/gettext-0.16.1"
+RDEPEND="${RDEPEND}
+	dev-db/m17n-db
+	dev-db/m17n-contrib"
 #	gtk? (
 #		|| (
 #			>=x11-libs/gtk+-2.90.5:3
@@ -32,14 +33,8 @@ DEPEND="${RDEPEND}
 src_configure() {
 	local myconf
 
-	if use gtk ; then
-		myconf="${myconf} --with-gtk=2.0"
-		#myconf="${myconf} --with-gtk=3.0"
-	else
-		myconf="${myconf} --with-gtk=no"
-	fi
-
 	econf \
+		$(use_with gtk gtk 2.0) \
 		$(use_enable nls) \
 		${myconf} || die
 }
