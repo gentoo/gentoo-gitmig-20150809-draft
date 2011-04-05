@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18.ebuild,v 1.2 2011/01/03 11:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18.ebuild,v 1.3 2011/04/05 15:52:56 jer Exp $
 
 EAPI="2"
 
@@ -14,8 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* hppa"
 IUSE=""
-
-PROVIDE="virtual/bootloader"
 
 src_prepare() {
 	epatch \

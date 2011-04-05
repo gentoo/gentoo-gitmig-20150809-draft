@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/palo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.29 2011/01/22 17:30:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.30 2011/04/05 15:52:56 jer Exp $
+
+  05 Apr 2011; Jeroen Roovers <jer@gentoo.org> palo-1.18.ebuild:
+  Remove virtual/bootloader (bug #359971).
 
   22 Jan 2011; Jeroen Roovers <jer@gentoo.org> files/palo-1.16_p1-build.patch,
   files/palo-remove-HOME-TERM.patch:
