@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.143 2011/04/04 15:29:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.144 2011/04/05 06:08:36 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -23,7 +23,6 @@ virtual/modutils			sys-apps/module-init-tools
 # directive to phase out pam_stack.
 virtual/pam				>=sys-libs/pam-0.78
 virtual/portage				sys-apps/portage
-virtual/python				dev-lang/python
 virtual/skkserv				app-i18n/skkserv
 virtual/ssh				net-misc/openssh
 virtual/utempter			sys-libs/libutempter
