@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r2.ebuild,v 1.1 2011/03/14 05:20:27 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r2.ebuild,v 1.2 2011/04/05 18:22:45 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2"
 inherit eutils autotools distutils
@@ -35,6 +35,7 @@ pkg_setup () {
 	# configure script looks for latest python2 only,
 	# no multiple versions support
 	python_set_active_version 2
+	python_pkg_setup
 
 	if [ -z "${NX_HOME_DIR}" ];
 	then

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/neatx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.12 2011/03/14 05:20:27 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.13 2011/04/05 18:22:45 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  neatx-0.3.1_p59-r1.ebuild, neatx-0.3.1_p59-r2.ebuild:
+  Fix deprecation warnings.
 
 *neatx-0.3.1_p59-r2 (14 Mar 2011)
 
