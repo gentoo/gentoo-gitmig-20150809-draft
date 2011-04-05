@@ -7,12 +7,12 @@
     <name>Thomas Anderson</name>
   </maintainer>
   <use>
-    <flag name="inquisitio">Enable inquisitio, the search client</flag>
     <flag name="pbins">Enable binary package support. Adds dependency upon
           <pkg>app-arch/libarchive</pkg></flag>
     <flag name="pink">Use a less boring colourscheme than the default</flag>
     <flag name="portage">Enable experimental support for Portage
           configuration formats</flag>
+    <flag name="prebuilt-documentation">Use pre-built documentation</flag>
     <flag name="python-bindings">Enable Python bindings. Requires a lot of RAM
           to build (~700Mbytes per job) and adds a dependency upon
           <pkg>dev-libs/boost</pkg></flag>
