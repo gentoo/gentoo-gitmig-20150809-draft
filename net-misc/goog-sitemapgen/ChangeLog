@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/goog-sitemapgen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.8 2010/02/08 08:52:31 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.9 2011/04/05 18:15:43 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  goog-sitemapgen-1.4.ebuild:
+  Use Python 2 (bug #315827).
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> goog-sitemapgen-1.4.ebuild:
   Add inherit eutils for epatch.

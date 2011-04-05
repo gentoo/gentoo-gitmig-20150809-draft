@@ -1,6 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/goog-sitemapgen-1.4.ebuild,v 1.5 2010/02/08 08:52:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/goog-sitemapgen-1.4.ebuild,v 1.6 2011/04/05 18:15:43 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils distutils
 
@@ -18,23 +21,20 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.3"
+DEPEND=""
+RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS="AUTHORS example_*"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
 
 	epatch "${FILESDIR}"/${P}.patch
 
 	mv sitemap_gen.py sitemap_gen
-}
-
-src_compile() {
-	distutils_src_compile
-}
-
-src_install() {
-	distutils_src_install
-
-	dodoc AUTHORS example_*
 }
