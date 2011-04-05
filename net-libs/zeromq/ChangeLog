@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.6 2011/03/31 06:30:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.7 2011/04/05 11:04:09 angelos Exp $
+
+  05 Apr 2011; Christoph Mende <angelos@gentoo.org> zeromq-2.0.9.ebuild:
+  Stable on amd64 wrt bug #361871
 
   31 Mar 2011; Patrick Lauer <patrick@gentoo.org> zeromq-2.1.3.ebuild:
   Fixing SRC_URI
