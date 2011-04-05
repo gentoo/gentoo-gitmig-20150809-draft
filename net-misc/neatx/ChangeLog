@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/neatx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.13 2011/04/05 18:22:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.14 2011/04/05 18:40:03 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  neatx-0.3.1_p59-r1.ebuild, neatx-0.3.1_p59-r2.ebuild:
+  Don't use distutils.eclass. Don't install .pyc / .pyo files in Python
+  site-packages directories.
 
   05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   neatx-0.3.1_p59-r1.ebuild, neatx-0.3.1_p59-r2.ebuild:

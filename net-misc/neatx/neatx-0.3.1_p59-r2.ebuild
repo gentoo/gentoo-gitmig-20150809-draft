@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r2.ebuild,v 1.2 2011/04/05 18:22:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r2.ebuild,v 1.3 2011/04/05 18:40:04 arfrever Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
-inherit eutils autotools distutils
+inherit eutils autotools python
 
 DESCRIPTION="Google implementation of NX server"
 HOMEPAGE="http://code.google.com/p/neatx/"
@@ -55,6 +55,8 @@ src_prepare() {
 		-i lib/constants.py || die "constants.py sed failed"
 
 	eautoreconf
+
+	echo "#!/bin/sh" > autotools/py-compile
 }
 
 src_compile() {
@@ -114,7 +116,7 @@ pkg_preinst () {
 }
 
 pkg_postinst () {
-	distutils_pkg_postinst
+	python_mod_optimize neatx
 
 	# Other NX servers ebuilds may have already created the nx account
 	# However they use different login shell/home directory paths
@@ -137,4 +139,8 @@ pkg_postinst () {
 	elog "If you want to use the default su authentication (rather than ssh)"
 	elog "you must ensure that the nx user is a member of the wheel group."
 	elog "You can add it via \"usermod -a -G wheel nx\""
+}
+
+pkg_postrm() {
+	python_mod_cleanup neatx
 }
