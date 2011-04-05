@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/spek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.2 2011/03/08 00:31:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.3 2011/04/05 21:26:41 xmw Exp $
+
+  05 Apr 2011; Michael Weber <xmw@gentoo.org> spek-0.6.ebuild:
+  Updated dependency to virtual/ffmpeg (bug 362115)
 
   08 Mar 2011; Michael Weber <xmw@gentoo.org> spek-0.6.ebuild:
   Change vala dependency to vala:0.10 (bug 338067)
