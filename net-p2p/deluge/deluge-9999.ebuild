@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.25 2011/04/05 05:44:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.26 2011/04/05 21:16:57 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2:2.5"
 
-inherit eutils distutils git flag-o-matic
+inherit distutils flag-o-matic git
 
 EGIT_REPO_URI="git://deluge-torrent.org/deluge.git"
 
@@ -17,14 +18,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE="gtk libnotify webinterface"
 
-DEPEND=">=dev-lang/python-2.5
-	>=net-libs/rb_libtorrent-0.14.9[python]
+DEPEND=">=net-libs/rb_libtorrent-0.14.9[python]
 	dev-python/setuptools"
 RDEPEND="${DEPEND}
 	dev-python/chardet
 	dev-python/pyopenssl
 	dev-python/pyxdg
-	|| ( >=dev-lang/python-2.6 dev-python/simplejson )
+	|| ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson )
 	>=dev-python/twisted-8.1
 	>=dev-python/twisted-web-8.1
 	gtk? (
@@ -38,6 +38,13 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	append-ldflags $(no-as-needed)
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {
@@ -47,6 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	elog
 	elog "If after upgrading it doesn't work, please remove the"
 	elog "'~/.config/deluge' directory and try again, but make a backup"

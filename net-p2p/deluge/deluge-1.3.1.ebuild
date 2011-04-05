@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.1.ebuild,v 1.5 2010/12/20 12:29:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.1.ebuild,v 1.6 2011/04/05 21:16:57 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
-inherit eutils distutils flag-o-matic python
+inherit distutils flag-o-matic
 
 DESCRIPTION="BitTorrent client with a client/server model."
 HOMEPAGE="http://deluge-torrent.org/"
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ~ppc ~sparc x86"
 IUSE="gtk libnotify webinterface"
 
-DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )
-	>=net-libs/rb_libtorrent-0.14.9[python]
+DEPEND=">=net-libs/rb_libtorrent-0.14.9[python]
 	dev-python/setuptools"
 RDEPEND="${DEPEND}
 	dev-python/chardet
@@ -38,6 +37,7 @@ RDEPEND="${DEPEND}
 pkg_setup() {
 	append-ldflags $(no-as-needed)
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -52,6 +52,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	elog
 	elog "If after upgrading it doesn't work, please remove the"
 	elog "'~/.config/deluge' directory and try again, but make a backup"
