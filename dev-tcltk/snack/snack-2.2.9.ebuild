@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.8 2007/06/25 10:40:53 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.9 2011/04/05 05:29:01 ulm Exp $
 
 inherit eutils multilib
 
@@ -17,7 +17,7 @@ DEPEND=">dev-lang/tcl-8.4.3
 	>dev-lang/tk-8.4.3
 	alsa? ( media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )
-	python? ( virtual/python )"
+	python? ( dev-lang/python )"
 
 S="${WORKDIR}/${PN}${PV}"
 
