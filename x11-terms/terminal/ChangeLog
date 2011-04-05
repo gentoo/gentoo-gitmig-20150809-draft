@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.62 2011/03/29 13:07:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.63 2011/04/05 18:05:30 angelos Exp $
+
+*terminal-0.4.7 (05 Apr 2011)
+
+  05 Apr 2011; Christoph Mende <angelos@gentoo.org> +terminal-0.4.7.ebuild:
+  Version bump
 
   29 Mar 2011; Jeroen Roovers <jer@gentoo.org> terminal-0.4.6.ebuild:
   Stable for HPPA (bug #358407).
