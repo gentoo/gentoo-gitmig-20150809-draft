@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.0.ebuild,v 1.2 2010/12/11 01:23:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.0.ebuild,v 1.3 2011/04/05 05:44:25 ulm Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="gtk libnotify webinterface"
 
-DEPEND=">=virtual/python-2.5
+DEPEND=">=dev-lang/python-2.5
 	|| ( app-arch/xz-utils app-arch/lzma-utils )
 	>=net-libs/rb_libtorrent-0.14.9[python]
 	dev-python/setuptools"
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}
 	dev-python/chardet
 	dev-python/pyopenssl
 	dev-python/pyxdg
-	|| ( >=virtual/python-2.6 dev-python/simplejson )
+	|| ( >=dev-lang/python-2.6 dev-python/simplejson )
 	>=dev-python/twisted-8.1
 	>=dev-python/twisted-web-8.1
 	gtk? (

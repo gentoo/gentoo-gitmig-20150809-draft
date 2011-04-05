@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/deluge
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.158 2010/12/20 12:29:53 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.159 2011/04/05 05:44:25 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> deluge-1.2.0.ebuild,
+  deluge-1.2.3.ebuild, deluge-1.3.0.ebuild, deluge-9999.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> deluge-1.3.1.ebuild:
   Stable on amd64 wrt bug #349016
