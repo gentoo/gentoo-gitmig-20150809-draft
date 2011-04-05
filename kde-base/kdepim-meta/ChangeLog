@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.174 2011/03/24 23:59:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.175 2011/04/05 22:22:57 dilfridge Exp $
+
+  05 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org> 
+  kdepim-meta-4.4.10.ebuild:
+  Add localization support
 
   24 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdepim-meta-4.4.5.ebuild:
