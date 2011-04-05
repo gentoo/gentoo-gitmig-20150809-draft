@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.10.ebuild,v 1.6 2011/03/02 13:42:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.10.ebuild,v 1.7 2011/04/05 05:36:05 ulm Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ IUSE="python perl ruby nls tiff fftw"
 
 RDEPEND="
 	virtual/opengl
-	python? ( virtual/python )
+	python? ( dev-lang/python )
 	perl? ( dev-lang/perl )
 	ruby? ( =dev-lang/ruby-1.8* )
 	tiff? ( media-libs/tiff )
