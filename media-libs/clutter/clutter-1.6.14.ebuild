@@ -1,29 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.12.ebuild,v 1.1 2011/04/04 14:47:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.14.ebuild,v 1.1 2011/04/05 18:18:09 nirbheek Exp $
 
-EAPI="2"
+EAPI="3"
 WANT_AUTOMAKE="1.11"
-[[ ${PV} = 9999 ]] && GIT_ECLASS="autotools git"
 
-inherit clutter ${GIT_ECLASS}
+inherit clutter
 
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 SLOT="1.0"
 IUSE="debug doc +introspection"
-if [[ ${PV} = 9999 ]]; then
-	EGIT_BOOTSTRAP="echo > build/config.rpath
-		gtkdocize
-		cp "${ROOT}/usr/share/gettext/po/Makefile.in.in" po/
-		eautoreconf"
-	EGIT_REPO_URI="git://git.clutter-project.org/${PN}.git"
-	SRC_URI=""
-	KEYWORDS=""
-	DEPEND=">=dev-util/gtk-doc-1.13"
-else
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-fi
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
 # We always use the gdk-pixbuf backend now since it's been split out
@@ -51,6 +39,7 @@ RDEPEND="${RDEPEND}
 "
 DEPEND="${RDEPEND}
 	${DEPEND}
+	sys-apps/sed
 	sys-devel/gettext
 	dev-util/pkgconfig
 	>=dev-util/gtk-doc-am-1.13
