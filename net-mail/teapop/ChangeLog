@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/teapop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.26 2010/06/17 21:55:22 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.27 2011/04/05 15:37:50 vostorga Exp $
+
+  05 Apr 2011; Víctor Ostorga <vostorga@gentoo.org> teapop-0.3.8-r1.ebuild:
+  Fixing pre-stripped files bug 255911 thanks to Kevin Pyle, fixing minor QA issues
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> teapop-0.3.8.ebuild,
   teapop-0.3.8-r1.ebuild:

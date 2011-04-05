@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.8-r1.ebuild,v 1.6 2010/06/17 21:55:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.8-r1.ebuild,v 1.7 2011/04/05 15:37:50 vostorga Exp $
 
 DESCRIPTION="Tiny POP3 server"
 SRC_URI="ftp://ftp.toontown.org/pub/teapop/${P}.tar.gz"
@@ -35,10 +35,10 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" STRIP=nostrip install || die
 
 	dodir /usr/sbin
-	mv ${D}/usr/libexec/teapop ${D}/usr/sbin/
+	mv "${D}"/usr/libexec/teapop "${D}"/usr/sbin/
 
 	dodoc doc/{CREDITS,ChangeLog,INSTALL,TODO}
 
@@ -49,6 +49,6 @@ src_install () {
 	docinto rfc
 	dodoc rfc/rfc*.txt
 
-	newinitd ${FILESDIR}/teapop-init teapop
-	newconfd ${FILESDIR}/teapop-confd teapop
+	newinitd "${FILESDIR}"/teapop-init teapop
+	newconfd "${FILESDIR}"/teapop-confd teapop
 }
