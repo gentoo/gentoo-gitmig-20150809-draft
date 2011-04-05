@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/utempter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.45 2010/10/08 02:25:40 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.46 2011/04/05 11:46:54 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> utempter-0.5.5.6.ebuild:
+  Don't PROVIDE virtual/utempter and update blocker, bug 361117.
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> utempter-0.5.5.6.ebuild:
   Drop to ~mips
