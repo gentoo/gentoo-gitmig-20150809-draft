@@ -1,24 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.8 2011/03/26 15:27:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.0.ebuild,v 1.9 2011/04/05 06:38:52 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
+
 inherit eutils gnome2 multilib python versionator wxwidgets base
 
 MY_PM=${PN}$(get_version_component_range 1-2 ${PV})
 MY_PM=${MY_PM/.}
 MY_P=${P/_rc/RC}
 
-DESCRIPTION="A free GIS with raster and vector functionality, as well as 3D vizualization."
-HOMEPAGE="http://grass.osgeo.org//"
+DESCRIPTION="A free GIS with raster and vector functionality, as well as 3D vizualization"
+HOMEPAGE="http://grass.osgeo.org/"
 SRC_URI="http://grass.osgeo.org/${MY_PM}/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="6"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-
 IUSE="X cairo cxx ffmpeg fftw gmath jpeg motif mysql nls odbc opengl png postgres python readline sqlite tiff truetype wxwidgets"
 
 TCL_DEPS="
