@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.399 2011/04/01 23:16:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.400 2011/04/05 04:49:22 aballier Exp $
+
+*ffmpeg-0.6.90_rc0 (05 Apr 2011)
+
+  05 Apr 2011; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.6.90_rc0.ebuild,
+  ffmpeg-9999.ebuild:
+  version bump and adjust variables to fit with the rc style releases
 
   01 Apr 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   disable-stripping option is back, we need to pass it
