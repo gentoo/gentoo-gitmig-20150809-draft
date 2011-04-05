@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.1 2011/04/05 22:17:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.2 2011/04/05 23:32:48 dilfridge Exp $
+
+  05 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.4.10.ebuild:
+  Fix case where subdirs dont exist, bug 362245
 
 *kdepim-l10n-4.4.10 (05 Apr 2011)
 

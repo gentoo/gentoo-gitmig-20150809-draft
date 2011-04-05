@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.10.ebuild,v 1.1 2011/04/05 22:17:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.10.ebuild,v 1.2 2011/04/05 23:32:48 dilfridge Exp $
 
 EAPI=3
 
@@ -63,8 +63,10 @@ src_unpack() {
 
 			# remove everything except kdepim
 			for SUBDIR in data docs messages scripts ; do
-				echo > "${S}/${DIR}/${SUBDIR}/CMakeLists.txt"
-				[[ -d "${S}/${DIR}/${SUBDIR}/kdepim" ]] && ( echo "add_subdirectory(kdepim)" >> "${S}/${DIR}/${SUBDIR}/CMakeLists.txt" )
+				if [[ -d "${S}/${DIR}/${SUBDIR}" ]] ; then
+					echo > "${S}/${DIR}/${SUBDIR}/CMakeLists.txt"
+					[[ -d "${S}/${DIR}/${SUBDIR}/kdepim" ]] && ( echo "add_subdirectory(kdepim)" >> "${S}/${DIR}/${SUBDIR}/CMakeLists.txt" )
+				fi
 			done
 		done
 	fi
