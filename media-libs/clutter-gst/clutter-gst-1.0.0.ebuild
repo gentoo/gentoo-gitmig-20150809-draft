@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.0.0.ebuild,v 1.3 2011/01/31 06:33:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.0.0.ebuild,v 1.4 2011/04/05 05:39:19 ulm Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	media-libs/gst-plugins-base:0.10[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
 DEPEND="${RDEPEND}
-	virtual/python"
+	dev-lang/python"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 EXAMPLES="examples/{*.c,*.png,README}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3.ebuild,v 1.8 2010/07/02 00:51:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3.ebuild,v 1.9 2011/04/05 05:40:33 ulm Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="+perl +python php"
 RDEPEND="perl? ( dev-lang/perl )
-	python? ( virtual/python )
+	python? ( dev-lang/python )
 	media-libs/freetype
 	media-libs/libpng
 	media-libs/giflib

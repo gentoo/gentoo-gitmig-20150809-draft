@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.77 2011/02/21 17:30:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.78 2011/04/05 05:40:33 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> ming-0.4.3.ebuild,
+  ming-0.4.3-r1.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
   21 Feb 2011; Mike Frysinger <vapier@gentoo.org> ming-0.4.3-r1.ebuild,
   +files/ming-0.4.3-libpng-1.5.patch:

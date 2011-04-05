@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.3 2011/02/21 17:30:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.4 2011/04/05 05:40:33 ulm Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="+perl +python php"
 
 RDEPEND="perl? ( dev-lang/perl )
-	python? ( virtual/python )
+	python? ( dev-lang/python )
 	media-libs/freetype
 	media-libs/libpng
 	media-libs/giflib
