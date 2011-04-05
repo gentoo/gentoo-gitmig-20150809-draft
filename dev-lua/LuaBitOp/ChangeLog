@@ -1,0 +1,10 @@
+# ChangeLog for dev-lua/LuaBitOp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/ChangeLog,v 1.1 2011/04/05 23:23:41 williamh Exp $
+
+*LuaBitOp-1.0.1 (05 Apr 2011)
+
+  05 Apr 2011; William Hubbs <williamh@gentoo.org> +LuaBitOp-1.0.1.ebuild,
+  +metadata.xml:
+  initial commit
+
