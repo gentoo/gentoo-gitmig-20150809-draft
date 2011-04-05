@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.4.0-r1.ebuild,v 1.4 2011/03/23 16:47:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.4.0-r1.ebuild,v 1.5 2011/04/05 21:08:34 arfrever Exp $
 
-EAPI=1
+EAPI=3
 
 PYTHON_DEPEND="2"
 
@@ -34,9 +34,7 @@ DEPEND="${RDEPEND}
 DOCS="TRACKERLESS.txt public.key credits.txt"
 PYTHON_MODNAME="BitTorrent"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# path for documentation is in lowercase #109743
 	sed -i -r "s:(dp.*appdir):\1.lower():" BitTorrent/platform.py
 }
