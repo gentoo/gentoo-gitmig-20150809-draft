@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.44 2011/03/30 13:24:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.45 2011/04/05 17:41:38 scarabeus Exp $
+
+  05 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> openjpeg-1.4-r1.ebuild,
+  +files/openjpeg-1.4-libpng15.patch:
+  Fix building with libpng-1.5. Fixes bug #361319.
 
 *openjpeg-1.4-r1 (30 Mar 2011)
 
