@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+1;2602;0c# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r5.ebuild,v 1.1 2011/03/27 19:38:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r6.ebuild,v 1.1 2011/04/05 11:28:04 flameeyes Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ src_compile() {
 	emake || die "make failed"
 	awk -f udev/toudev.awk < src/lomoco.c > udev/40-lomoco.rules \
 		|| die "failed to create udev rules"
-	sed -i -e 's:RUN="lomoco":RUN+="lomoco-helper":' \
+	sed -i -e 's:RUN="lomoco":RUN+="/usr/libexec/lomoco-helper":' \
 		udev/40-lomoco.rules || die
 }
 
