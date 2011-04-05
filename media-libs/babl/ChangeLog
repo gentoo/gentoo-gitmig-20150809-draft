@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.23 2011/04/05 09:20:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.24 2011/04/05 14:10:11 tester Exp $
+
+  05 Apr 2011; Olivier Crête <tester@gentoo.org> babl-0.1.4.ebuild:
+  Stable on amd64, bug #360595
 
   05 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> babl-0.1.4.ebuild:
   After a bit more investigation drop rsvg dep.
