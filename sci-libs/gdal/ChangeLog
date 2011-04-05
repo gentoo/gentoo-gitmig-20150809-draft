@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.108 2011/03/03 07:21:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.109 2011/04/05 05:35:00 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> gdal-1.6.3-r1.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
 *gdal-1.8.0-r1 (03 Mar 2011)
 
