@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.156 2011/03/27 21:53:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.157 2011/04/05 07:40:57 angelos Exp $
+
+  05 Apr 2011; Christoph Mende <angelos@gentoo.org> screen-4.0.3-r4.ebuild:
+  Stable on amd64 wrt bug #361823
 
   27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -screen-4.0.3-r1.ebuild,
   -screen-4.0.3-r3.ebuild:
