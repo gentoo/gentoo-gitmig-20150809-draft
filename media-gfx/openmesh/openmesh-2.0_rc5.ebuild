@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-2.0_rc5.ebuild,v 1.2 2010/09/16 17:10:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-2.0_rc5.ebuild,v 1.3 2011/04/05 14:18:20 jsbronder Exp $
 
 EAPI="3"
 inherit eutils cmake-utils
@@ -17,7 +17,7 @@ SRC_URI="http://openmesh.org/fileadmin/${PN}-files/${MY_PV/-RC/RC}/${MY_PN}-${MY
 LICENSE="LGPL-3 as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="qt4 debug static"
+IUSE="qt4 debug static-libs"
 
 RDEPEND="qt4? ( x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
@@ -50,7 +50,7 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	if ! use static; then
+	if ! use static-libs; then
 		# No way to set this in the build system as of 2.0_rc5
 		rm -f "${D}"/usr/$(get_libdir)/*.a \
 			|| die "Failed to remove static libraries."
