@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pureadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.18 2011/04/04 08:01:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.19 2011/04/05 07:37:04 angelos Exp $
+
+  05 Apr 2011; Christoph Mende <angelos@gentoo.org> pureadmin-0.4-r1.ebuild:
+  Stable on amd64 wrt bug #360691
 
 *pureadmin-0.4-r1 (04 Apr 2011)
 

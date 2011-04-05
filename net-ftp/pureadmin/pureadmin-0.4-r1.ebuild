@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.4-r1.ebuild,v 1.1 2011/04/04 08:01:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.4-r1.ebuild,v 1.2 2011/04/05 07:37:04 angelos Exp $
 
 EAPI=3
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/purify/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug doc"
 
 RDEPEND="gnome-base/libglade:2.0
