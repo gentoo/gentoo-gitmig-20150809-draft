@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.4.3.ebuild,v 1.1 2009/03/01 16:12:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.4.3.ebuild,v 1.2 2011/04/05 05:38:06 ulm Exp $
 
 inherit eutils distutils webapp
 
@@ -17,7 +17,7 @@ WEBAPP_MANUAL_SLOT=yes
 
 IUSE=""
 
-DEPEND="virtual/python"
+DEPEND="dev-lang/python"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
