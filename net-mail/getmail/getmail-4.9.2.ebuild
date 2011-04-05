@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.9.2.ebuild,v 1.3 2009/10/24 10:40:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.9.2.ebuild,v 1.4 2011/04/05 17:51:32 arfrever Exp $
+
+EAPI="3"
 
 inherit distutils
 
@@ -19,7 +21,6 @@ RDEPEND="${DEPEND}"
 PYTHON_MODNAME=getmailcore
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 
 	# handle docs the gentoo way
