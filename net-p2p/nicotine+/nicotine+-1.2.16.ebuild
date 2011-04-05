@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.16.ebuild,v 1.4 2011/03/27 19:15:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.16.ebuild,v 1.5 2011/04/05 21:33:00 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -33,6 +33,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	echo
 	elog "You may want to install these packages to add additional features"
 	elog "to Nicotine+:"
