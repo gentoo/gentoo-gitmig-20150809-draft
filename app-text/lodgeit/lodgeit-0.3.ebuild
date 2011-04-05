@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3.ebuild,v 1.2 2009/11/19 16:48:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/lodgeit-0.3.ebuild,v 1.3 2011/04/05 05:08:05 ulm Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="vim"
 RESTRICT="test"
 
 DEPEND=""
-RDEPEND="virtual/python
+RDEPEND="dev-lang/python
 	vim? ( || ( app-editors/vim[python] app-editors/gvim[python] ) )"
 
 src_unpack() {

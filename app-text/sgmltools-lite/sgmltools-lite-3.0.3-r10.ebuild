@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.13 2008/09/02 22:42:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.14 2011/04/05 05:06:50 ulm Exp $
 
 inherit python sgml-catalog
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="jadetex"
 
-DEPEND=">=virtual/python-1.5
+DEPEND=">=dev-lang/python-1.5
 	app-text/sgml-common
 	~app-text/docbook-sgml-dtd-3.1
 	app-text/docbook-dsssl-stylesheets

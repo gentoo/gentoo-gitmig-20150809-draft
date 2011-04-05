@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.3-r1.ebuild,v 1.6 2007/09/28 14:37:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.3-r1.ebuild,v 1.7 2011/04/05 05:09:22 ulm Exp $
 
 inherit elisp-common
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="emacs tk"
 
-DEPEND="virtual/python
+DEPEND="dev-lang/python
 	tk? ( dev-lang/tk )
 	emacs? ( virtual/emacs )"
 

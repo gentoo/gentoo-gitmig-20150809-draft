@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.6.ebuild,v 1.1 2010/11/12 20:02:23 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.6.ebuild,v 1.2 2011/04/05 05:09:22 ulm Exp $
 
 EAPI="2"
 PYTHON_USE_WITH="tk"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="emacs tk vim-syntax"
 
-DEPEND="virtual/python
+DEPEND="dev-lang/python
 	tk? ( dev-lang/tk )
 	vim-syntax? (
 		|| (
