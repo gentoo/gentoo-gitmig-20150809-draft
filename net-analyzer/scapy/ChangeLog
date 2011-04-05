@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.28 2011/03/22 11:11:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.29 2011/04/05 05:42:25 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> scapy-1.1.1-r1.ebuild,
+  scapy-2.0.1.ebuild, scapy-2.1.0.ebuild, scapy-2.2.0.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
   22 Mar 2011; Christoph Mende <angelos@gentoo.org> scapy-2.1.0.ebuild:
   Stable on amd64 wrt bug #359829
