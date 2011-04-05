@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pssh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.2 2011/01/19 08:00:13 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.3 2011/04/05 18:49:16 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pssh-2.1.1.ebuild:
+  Fix deprecation warning.
 
   12 Jun 2010; Justin Bronder <jsbronder@gentoo.org> -pssh-1.4.3.ebuild:
   Remove older versions
