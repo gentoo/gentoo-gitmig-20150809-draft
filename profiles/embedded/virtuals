@@ -10,5 +10,4 @@ virtual/modutils		sys-apps/busybox
 virtual/os-headers		sys-kernel/linux-headers
 virtual/skkserv			app-i18n/skkserv
 virtual/ssh			net-misc/dropbear
-virtual/utempter 		sys-apps/utempter
 virtual/dev-manager		sys-apps/busybox

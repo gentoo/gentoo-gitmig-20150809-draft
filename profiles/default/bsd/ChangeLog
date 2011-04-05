@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.44 2011/04/03 11:29:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.45 2011/04/05 11:56:46 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove old-style virtual/utempter, bug 361117.
 
   03 Apr 2011; Ulrich Mueller <ulm@gentoo.org> fbsd/packages.build:
   Remove old-style virtual/gzip, bug 358829.

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.144 2011/04/05 06:08:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.145 2011/04/05 11:56:46 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -25,5 +25,4 @@ virtual/pam				>=sys-libs/pam-0.78
 virtual/portage				sys-apps/portage
 virtual/skkserv				app-i18n/skkserv
 virtual/ssh				net-misc/openssh
-virtual/utempter			sys-libs/libutempter
 virtual/w3m				www-client/w3m
