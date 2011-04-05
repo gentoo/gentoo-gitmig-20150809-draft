@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/imediff2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.4 2007/10/31 17:03:30 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/imediff2/ChangeLog,v 1.5 2011/04/05 05:29:51 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> imediff2-1.1.2-r1.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
 *imediff2-1.1.2-r1 (31 Oct 2007)
 
