@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/smolt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.5 2010/02/17 00:53:03 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.6 2011/04/05 05:11:11 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> smolt-1.2.ebuild,
+  smolt-1.4.ebuild, smolt-1.4.2.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
 *smolt-1.4.2 (17 Feb 2010)
 

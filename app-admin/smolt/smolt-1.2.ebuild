@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.2.ebuild,v 1.4 2010/06/08 19:11:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.2.ebuild,v 1.5 2011/04/05 05:11:11 ulm Exp $
 
 inherit python eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
-DEPEND="virtual/python
+DEPEND="dev-lang/python
 	sys-devel/gettext
 	gtk? ( >=dev-python/pygtk-2.10.3 )"
 
@@ -71,7 +71,7 @@ pkg_postinst() {
 	elog "   smoltDeleteProfile any time later on."
 	echo
 
-	if use gtk && has_version "<virtual/python-2.5"; then
+	if use gtk && has_version "<dev-lang/python-2.5"; then
 		elog "If you want to view your profile on the web from within smoltGui,"
 		elog "you should have a link mozilla-firefox -> firefox in your path."
 		echo
