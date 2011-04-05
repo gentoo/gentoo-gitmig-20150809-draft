@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ssh-installkeys
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-installkeys/ChangeLog,v 1.8 2008/03/12 10:33:26 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-installkeys/ChangeLog,v 1.9 2011/04/05 05:52:25 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> ssh-installkeys-1.4.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Josh Glover (jmglov, #206782) from metadata.xml.

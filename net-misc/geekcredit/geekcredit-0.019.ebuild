@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.019.ebuild,v 1.5 2010/05/31 16:25:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/geekcredit-0.019.ebuild,v 1.6 2011/04/05 05:51:35 ulm Exp $
 
 inherit python
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://home.gna.org/geekcredit/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
-DEPEND="virtual/python
+DEPEND="dev-lang/python
 		app-crypt/gnupg"
 
 S=${WORKDIR}/${MY_P}
