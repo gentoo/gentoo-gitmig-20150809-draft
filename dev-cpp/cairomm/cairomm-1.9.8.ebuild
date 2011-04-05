@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.9.8.ebuild,v 1.1 2011/01/22 07:31:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.9.8.ebuild,v 1.2 2011/04/05 10:56:56 eva Exp $
 
-EAPI="2"
-
-WANT_AUTOMAKE="1.10"
+EAPI="3"
 
 inherit eutils
 
@@ -44,5 +42,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README ChangeLog || die "dodoc failed"
+	dodoc NEWS README ChangeLog || die "dodoc failed"
 }
