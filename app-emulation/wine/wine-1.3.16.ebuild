@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.16.ebuild,v 1.1 2011/04/04 04:35:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.16.ebuild,v 1.2 2011/04/05 00:46:55 vapier Exp $
 
 EAPI="2"
 
@@ -21,13 +21,13 @@ else
 fi
 
 pulse_patches() { echo "$1"/winepulse-{0.39,configure.ac-1.3.10,winecfg-1.3.11}.patch ; }
-GV="1.1.0"
+GV="1.2.0"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
 	gecko? (
-		mirror://sourceforge/wine/wine_gecko-${GV}-x86.cab
-		win64? ( mirror://sourceforge/wine/wine_gecko-${GV}-x86_64.cab )
+		mirror://sourceforge/wine/wine_gecko-${GV}-x86.msi
+		win64? ( mirror://sourceforge/wine/wine_gecko-${GV}-x86_64.msi )
 	)
 	pulseaudio? ( `pulse_patches http://art.ified.ca/downloads/winepulse` )"
 
@@ -202,8 +202,8 @@ src_install() {
 	dodoc ANNOUNCE AUTHORS README
 	if use gecko ; then
 		insinto /usr/share/wine/gecko
-		doins "${DISTDIR}"/wine_gecko-${GV}-x86.cab || die
-		use win64 && { doins "${DISTDIR}"/wine_gecko-${GV}-x86_64.cab || die ; }
+		doins "${DISTDIR}"/wine_gecko-${GV}-x86.msi || die
+		use win64 && { doins "${DISTDIR}"/wine_gecko-${GV}-x86_64.msi || die ; }
 	fi
 	if ! use perl ; then
 		rm "${D}"/usr/bin/{wine{dump,maker},function_grep.pl} "${D}"/usr/share/man/man1/wine{dump,maker}.1 || die
