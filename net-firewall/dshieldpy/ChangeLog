@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/dshieldpy
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.6 2007/05/15 13:59:32 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.7 2011/04/05 05:46:48 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> dshieldpy-3.2.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
