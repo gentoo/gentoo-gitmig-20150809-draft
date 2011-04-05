@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/rss2email
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.9 2011/03/16 14:44:22 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.10 2011/04/05 05:50:28 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> rss2email-2.65.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
   16 Mar 2011; Sebastian Pipping <sping@gentoo.org> metadata.xml:
   Remove rbu as a maintainer so he is not bothered by bugs opened against
