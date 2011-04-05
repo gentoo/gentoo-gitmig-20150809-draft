@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.249 2011/03/13 00:08:31 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.250 2011/04/05 17:36:16 elvanor Exp $
+
+  05 Apr 2011; <elvanor@gentoo.org> files/6/tomcat.init.2:
+  Modified init script for bug #361235 / #191611. Removed the --startas
+  /bin/bash which was apparently causing the problems.
 
   13 Mar 2011; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-7.0.8.ebuild,
   -tomcat-7.0.10.ebuild:

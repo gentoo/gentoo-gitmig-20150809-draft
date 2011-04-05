@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init.2,v 1.1 2010/06/06 12:32:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/6/tomcat.init.2,v 1.2 2011/04/05 17:36:16 elvanor Exp $
 
 opts="${opts} forcestop"
 
@@ -59,9 +59,8 @@ ssd() {
 			 --stderr ${CATALINA_BASE}/logs/catalina.out"
 		start-stop-daemon ${args} --exec ${exec} -- ${OPTS_CP} "$@" ${CATALINA_ARGS} ${TOMCAT_START}
 	else
-		start-stop-daemon ${args} --startas /bin/bash -- -c \
-			"exec ${exec} ${OPTS_CP} $@ ${CATALINA_ARGS} ${TOMCAT_START} >> \
-			\"$CATALINA_BASE/logs/catalina.out\" 2>&1"
+		start-stop-daemon ${args} --exec ${exec} -- ${OPTS_CP} "$@" ${CATALINA_ARGS} ${TOMCAT_START} >> \
+			"${CATALINA_BASE}/logs/catalina.out" 2>&1
 	fi
 	return $?
 }
