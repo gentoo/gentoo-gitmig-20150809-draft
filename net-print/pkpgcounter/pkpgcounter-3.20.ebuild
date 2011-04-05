@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-3.20.ebuild,v 1.1 2007/11/18 20:30:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-3.20.ebuild,v 1.2 2011/04/05 05:53:33 ulm Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="psyco"
 
 DEPEND="
-	virtual/python
+	dev-lang/python
 	dev-python/imaging
 	psyco? ( dev-python/psyco )"
 
