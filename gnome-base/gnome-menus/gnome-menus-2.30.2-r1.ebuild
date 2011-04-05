@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.2-r1.ebuild,v 1.9 2010/10/17 15:16:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.2-r1.ebuild,v 1.10 2011/04/05 05:33:01 ulm Exp $
 
 EAPI="2"
 inherit eutils gnome2 python
@@ -15,7 +15,7 @@ IUSE="debug python"
 
 RDEPEND=">=dev-libs/glib-2.18.0
 	python? (
-		>=virtual/python-2.4.4-r5
+		>=dev-lang/python-2.4.4-r5
 		dev-python/pygtk )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
