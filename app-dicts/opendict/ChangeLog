@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/opendict
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.21 2010/05/31 16:13:33 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.22 2011/04/05 05:12:47 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> opendict-0.6.1.ebuild:
+  Depend on dev-lang/python because virtual/python will go away, bug 358849.
 
   31 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   opendict-0.6.1.ebuild:

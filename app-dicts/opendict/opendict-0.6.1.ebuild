@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.8 2010/05/31 16:13:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.9 2011/04/05 05:12:47 ulm Exp $
 
 inherit eutils python gnome2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 # DEPEND=">=sys-devel/gettext-0.14" # currently no xgettext run
-RDEPEND=">=virtual/python-2.3
+RDEPEND=">=dev-lang/python-2.3
 	=dev-python/wxpython-2.6*
 	dev-python/pyxml"
 S="${WORKDIR}/OpenDict-${PV}"
