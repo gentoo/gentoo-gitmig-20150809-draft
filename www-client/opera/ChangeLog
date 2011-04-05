@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.616 2011/04/05 15:01:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.617 2011/04/05 19:58:26 jer Exp $
+
+*opera-11.10.2079 (05 Apr 2011)
+
+  05 Apr 2011; Jeroen Roovers <jer@gentoo.org> +opera-11.10.2079.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/04/05/stability-gmail-socks
 
 *opera-11.10.2077 (05 Apr 2011)
 
