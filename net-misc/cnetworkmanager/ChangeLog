@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cnetworkmanager
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.4 2010/02/08 08:52:25 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.5 2011/04/05 18:08:43 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cnetworkmanager-0.21.1.ebuild:
+  Use Python 2 (bug #315821).
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> cnetworkmanager-0.21-r1.ebuild:
   Add inherit eutils for epatch.
