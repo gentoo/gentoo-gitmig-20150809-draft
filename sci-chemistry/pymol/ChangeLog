@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.76 2011/04/04 10:13:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.77 2011/04/05 06:39:25 jlec Exp $
+
+  05 Apr 2011; Justin Lecher <jlec@gentoo.org> pymol-1.4_beta1.ebuild:
+  Cleaned unneeded SRC_URI entries
 
 *pymol-1.4_beta1 (04 Apr 2011)
 

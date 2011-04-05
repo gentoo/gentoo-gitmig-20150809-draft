@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4_beta1.ebuild,v 1.1 2011/04/04 10:13:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4_beta1.ebuild,v 1.2 2011/04/05 06:39:25 jlec Exp $
 
 EAPI="3"
 
@@ -16,8 +16,6 @@ inherit eutils distutils prefix versionator
 DESCRIPTION="A Python-extensible molecular graphics system."
 HOMEPAGE="http://pymol.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${PN}/${PN}/$(get_version_component_range 1-2)/${PN}-v${PV/_beta/b}.tar.bz2"
-#SRC_URI="http://pymol.svn.sourceforge.net/viewvc/pymol/trunk/pymol.tar.gz?view=tar&pathrev=${REV} -> ${P}.tar.gz"
-#SRC_URI="mirror://gentoo/${PF}.tar.gz"
 
 LICENSE="PSF-2.2"
 SLOT="0"
