@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pytvshows
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.9 2010/03/28 04:01:29 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/ChangeLog,v 1.10 2011/04/05 18:57:21 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pytvshows-0.2-r1.ebuild:
+  Use Python 2 (bug #315839).
 
   28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   Drop myself from metadata, add maintainer-needed

@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/pytvshows-0.2-r1.ebuild,v 1.3 2009/10/11 18:04:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pytvshows/pytvshows-0.2-r1.ebuild,v 1.4 2011/04/05 18:57:21 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
@@ -16,7 +19,12 @@ IUSE=""
 DEPEND=""
 RDEPEND="dev-python/feedparser"
 
-src_unpack() {
-	distutils_src_unpack
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-ezrss.it.patch"
 }
