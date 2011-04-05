@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5259 2011/04/05 16:37:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5260 2011/04/05 17:44:06 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Drop old filezilla p.mask, tinxyml has enough keywords now
 
   05 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

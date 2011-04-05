@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12658 2011/04/05 16:37:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12659 2011/04/05 17:44:06 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -985,11 +985,6 @@ games-puzzle/glickomania
 games-puzzle/xpuyopuyo
 games-simulation/corewars
 games-strategy/xscorch
-
-# Bernard Cafarelli <voyageur@gentoo.org> (12 Apr 2010)
-# Mask until bug #314833 is fixed
-=net-ftp/filezilla-3.3.2.1-r1
-=net-ftp/filezilla-3.3.3-r1
 
 # Pacho Ramos <pacho@gentoo.org> (10 Apr 2010)
 # This version provides packages from testing to let people using
