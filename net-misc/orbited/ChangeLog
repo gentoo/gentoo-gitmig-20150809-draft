@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/orbited
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.7 2010/09/13 19:06:57 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.8 2011/04/05 18:45:55 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  orbited-0.7.10-r1.ebuild:
+  Copy keywords from 0.7.10. 0.7.10-r1 only fixes dependencies.
 
 *orbited-0.7.10-r1 (13 Sep 2010)
 
