@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-domainatrix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.30 2011/03/13 12:54:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.31 2011/04/05 06:05:10 jlec Exp $
+
+  05 Apr 2011; Justin Lecher <jlec@gentoo.org>
+  -embassy-domainatrix-0.1.0-r1.ebuild:
+  Dropped old, due to unsatisfied deps
 
   13 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   embassy-domainatrix-0.1.0-r1.ebuild, embassy-domainatrix-0.1.0-r3.ebuild,

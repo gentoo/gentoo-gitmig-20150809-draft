@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-structure
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-structure/ChangeLog,v 1.20 2011/03/13 12:59:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-structure/ChangeLog,v 1.21 2011/04/05 06:07:51 jlec Exp $
+
+  05 Apr 2011; Justin Lecher <jlec@gentoo.org>
+  -embassy-structure-0.1.0-r1.ebuild:
+  Dropped old, due to unsatisfied deps
 
   13 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   embassy-structure-0.1.0-r1.ebuild, embassy-structure-0.1.0-r3.ebuild,
