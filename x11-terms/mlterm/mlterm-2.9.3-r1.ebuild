@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.14 2011/03/28 14:32:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.15 2011/04/05 11:31:59 ulm Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	nls? ( sys-devel/gettext )
 	uim? ( >=app-i18n/uim-0.3.4.2 )
 	scim? ( || ( >=app-i18n/scim-1.4 app-i18n/scim-cvs ) )
-	virtual/utempter
+	|| ( sys-libs/libutempter sys-apps/utempter )
 	x11-libs/libX11
 	x11-libs/libICE
 	x11-libs/libSM"

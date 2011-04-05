@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.75 2011/03/28 14:32:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.76 2011/04/05 11:31:59 ulm Exp $
+
+  05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> mlterm-2.9.3-r1.ebuild,
+  mlterm-2.9.4-r4.ebuild, mlterm-3.0.1.ebuild:
+  Replace dependency on virtual/utempter, bug 361117.
 
   28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   mlterm-2.9.3-r1.ebuild, mlterm-2.9.4-r4.ebuild:

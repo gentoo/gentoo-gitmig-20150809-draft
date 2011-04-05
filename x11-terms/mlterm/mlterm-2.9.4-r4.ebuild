@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.4-r4.ebuild,v 1.9 2011/03/28 14:32:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.4-r4.ebuild,v 1.10 2011/04/05 11:31:59 ulm Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 x86"
 LICENSE="BSD"
 
-RDEPEND="virtual/utempter
+RDEPEND="|| ( sys-libs/libutempter sys-apps/utempter )
 	x11-libs/libX11
 	x11-libs/libICE
 	x11-libs/libSM
