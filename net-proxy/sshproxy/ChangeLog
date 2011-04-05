@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/sshproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.14 2011/01/19 07:58:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.15 2011/04/05 21:46:43 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sshproxy-0.6.0_beta2-r1.ebuild:
+  Use Python 2 (bug #315879).
 
   19 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   sshproxy-0.6.0_beta2-r1.ebuild:

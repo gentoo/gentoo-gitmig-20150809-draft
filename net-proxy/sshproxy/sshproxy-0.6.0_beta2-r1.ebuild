@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.3 2011/01/19 07:58:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.4 2011/04/05 21:46:43 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
@@ -27,6 +28,9 @@ RDEPEND="${DEPEND}
 		net-misc/openssh"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+
 	enewgroup sshproxy
 	enewuser sshproxy -1 -1 /var/lib/sshproxy sshproxy
 }
