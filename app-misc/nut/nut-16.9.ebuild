@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-16.5.ebuild,v 1.4 2011/04/05 15:50:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-16.9.ebuild,v 1.1 2011/04/05 15:50:39 jer Exp $
 
 EAPI=2
 
@@ -19,10 +19,10 @@ RDEPEND="X? ( >=x11-libs/fltk-1.3:1 )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-build-fixes.patch \
-		"${FILESDIR}"/${P}-int.patch
+	epatch "${FILESDIR}"/${PN}-16.5-build-fixes.patch
+
 	tc-export CC CXX
+
 	sed \
 		-e "s:/usr/local/lib:/usr/share:g" \
 		-i Makefile fltk/Makefile || die
