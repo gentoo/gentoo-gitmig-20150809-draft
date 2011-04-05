@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.32 2011/03/03 22:44:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.33 2011/04/05 21:23:33 mr_bones_ Exp $
+
+  05 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.7.5.ebuild:
+  EAPI=4 for REQUIRED_USE to take care of xml/tinyxml use dep (bug #362223)
 
 *cegui-0.7.5 (03 Mar 2011)
 
