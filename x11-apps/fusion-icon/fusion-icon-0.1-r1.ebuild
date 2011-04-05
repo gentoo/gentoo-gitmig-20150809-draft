@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r1.ebuild,v 1.2 2010/05/28 22:06:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r1.ebuild,v 1.3 2011/04/05 05:31:23 ulm Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="gtk qt4"
 
 RDEPEND="
 	>=dev-python/compizconfig-python-${MINIMUM_COMPIZ_RELEASE}
-	virtual/python
+	dev-lang/python
 	>=x11-wm/compiz-${MINIMUM_COMPIZ_RELEASE}
 	gtk? ( >=dev-python/pygtk-2.10 )
 	qt4? ( dev-python/PyQt4[X] )"
