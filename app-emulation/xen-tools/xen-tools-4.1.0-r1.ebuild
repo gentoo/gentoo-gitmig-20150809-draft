@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0.ebuild,v 1.3 2011/03/26 19:16:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0-r1.ebuild,v 1.1 2011/04/05 19:23:05 alexxy Exp $
 
 EAPI="3"
 
@@ -174,7 +174,7 @@ src_install() {
 		|| die "install failed"
 
 	# Remove RedHat-specific stuff
-	rm -rf "${D}"/etc/sysconfig
+	rm -r "${D}"/etc/sysconfig "${D}"/etc/init.d/xen* || die
 
 	dodoc README docs/README.xen-bugtool docs/ChangeLog
 	if use doc; then
@@ -195,8 +195,16 @@ src_install() {
 		|| die "Couldn't install xen.initd"
 	newconfd "${FILESDIR}"/xendomains.confd xendomains \
 		|| die "Couldn't install xendomains.confd"
-	newinitd "${FILESDIR}"/xendomains.initd xendomains \
+	newinitd "${FILESDIR}"/xendomains.initd-xl xendomains \
 		|| die "Couldn't install xendomains.initd"
+	newinitd "${FILESDIR}"/xenstored.initd xenstored \
+		|| die "Couldn't install xenstored.initd"
+	newconfd "${FILESDIR}"/xenstored.confd xenstored \
+		|| die "Couldn't install xenstored.confd"
+	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled \
+		|| die "Couldn't install xenconsoled.initd"
+	newconfd "${FILESDIR}"/xenconsoled.confd xenconsoled \
+		|| die "Couldn't install xenconsoled.confd"
 
 	if use screen; then
 		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains
