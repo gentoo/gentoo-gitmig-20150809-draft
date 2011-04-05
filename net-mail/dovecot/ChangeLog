@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.290 2011/03/19 17:21:55 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.291 2011/04/05 09:43:00 eras Exp $
+
+  05 Apr 2011; Eray Aslan <eras@gentoo.org> dovecot-2.0.11.ebuild:
+  add virtual/libiconv to DEPEND - bug #354295
 
   19 Mar 2011; Eray Aslan <eras@gentoo.org> -dovecot-2.0.9.ebuild,
   -dovecot-2.0.10.ebuild:
