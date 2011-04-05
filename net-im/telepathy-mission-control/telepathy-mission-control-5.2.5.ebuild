@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.2.5.ebuild,v 1.11 2010/09/11 09:05:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.2.5.ebuild,v 1.12 2011/04/05 05:49:22 ulm Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND=">=net-libs/telepathy-glib-0.7.32
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
-	test? ( virtual/python
+	test? ( dev-lang/python
 		dev-python/twisted-words )"
 
 src_prepare() {

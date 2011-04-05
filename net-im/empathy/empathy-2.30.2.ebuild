@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.2.ebuild,v 1.9 2011/03/21 23:13:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.30.2.ebuild,v 1.10 2011/04/05 05:47:59 ulm Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 		sys-apps/grep
 		>=dev-libs/check-0.9.4 )
 	dev-libs/libxslt
-	virtual/python
+	dev-lang/python
 "
 PDEPEND=">=net-im/telepathy-mission-control-5"
 
