@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/rtpbreak-1.3a.ebuild,v 1.2 2009/12/23 16:16:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/rtpbreak-1.3a.ebuild,v 1.3 2011/04/05 17:04:16 signals Exp $
 
 EAPI=1
 
@@ -23,7 +23,8 @@ RDEPEND=$DEPEND
 src_unpack() {
 	unpack ${A}
 	# Use limits.h PATH_MAX
-	epatch "${FILESDIR}"/${P}-limits.patch
+	epatch "${FILESDIR}"/${P}-limits.patch \
+		"${FILESDIR}"/${P}-missing-headers.patch
 }
 
 src_compile() {

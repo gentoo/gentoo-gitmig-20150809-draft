@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rtpbreak
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/ChangeLog,v 1.7 2011/03/01 20:22:30 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtpbreak/ChangeLog,v 1.8 2011/04/05 17:04:16 signals Exp $
+
+  05 Apr 2011; Kevin McCarthy <signals@gentoo.org> rtpbreak-1.3a.ebuild,
+  +files/rtpbreak-1.3a-missing-headers.patch:
+  Add missing udp.h include. #351602
 
   01 Mar 2011; Christian Ruppert <idl0r@gentoo.org>
   -files/rtpbreak-1.0-ldflags.patch, -files/rtpbreak-1.2-build.patch,
