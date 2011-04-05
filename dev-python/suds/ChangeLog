@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/suds
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.5 2011/04/04 11:08:03 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.6 2011/04/05 07:43:18 angelos Exp $
+
+  05 Apr 2011; Christoph Mende <angelos@gentoo.org> suds-0.4.ebuild:
+  Stable on amd64 wrt bug #361883
 
   04 Apr 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Set herd to python.
