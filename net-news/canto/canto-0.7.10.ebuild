@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/canto/canto-0.7.10.ebuild,v 1.1 2010/08/11 14:06:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/canto/canto-0.7.10.ebuild,v 1.2 2011/04/05 20:53:36 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2:2.5"
 
@@ -20,3 +20,8 @@ IUSE=""
 DEPEND="sys-libs/ncurses[unicode]
 	dev-python/chardet"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
