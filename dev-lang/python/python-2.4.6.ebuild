@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.45 2011/03/18 21:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.46 2011/04/05 06:01:55 ulm Exp $
 
 EAPI="1"
 
@@ -42,8 +42,6 @@ RDEPEND=">=app-admin/eselect-python-20091230
 DEPEND="${RDEPEND}"
 RDEPEND+=" !build? ( app-misc/mime-types )"
 PDEPEND="app-admin/python-updater"
-
-PROVIDE="virtual/python"
 
 S="${WORKDIR}/${MY_P}"
 

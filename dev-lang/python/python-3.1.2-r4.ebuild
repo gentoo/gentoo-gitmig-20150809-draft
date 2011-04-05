@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r4.ebuild,v 1.14 2011/03/18 21:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.2-r4.ebuild,v 1.15 2011/04/05 06:01:55 ulm Exp $
 
 EAPI="3"
 
@@ -46,8 +46,6 @@ PDEPEND=">=app-admin/python-updater-0.8
 			dev-lang/python:2.7[gdbm?,ipv6?,ncurses?,readline?,sqlite?,ssl?,threads?,tk?,xml?]
 			dev-lang/python:2.6[gdbm?,ipv6?,ncurses?,readline?,sqlite?,ssl?,threads?,tk?,xml?]
 		)"
-
-PROVIDE="virtual/python"
 
 S="${WORKDIR}/${MY_P}"
 
