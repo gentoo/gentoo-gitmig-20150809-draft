@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.3-r1.ebuild,v 1.1 2011/04/03 15:41:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-0.9.3-r1.ebuild,v 1.2 2011/04/05 07:38:47 angelos Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""
