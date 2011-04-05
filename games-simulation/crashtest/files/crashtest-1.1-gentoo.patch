@@ -1,7 +1,7 @@
 diff -ru crashtest-1.1.orig/src-crashtest/Makefile crashtest-1.1/src-crashtest/Makefile
 --- crashtest-1.1.orig/src-crashtest/Makefile	2009-02-15 17:11:31.000000000 -0500
 +++ crashtest-1.1/src-crashtest/Makefile	2009-10-14 01:00:13.900627555 -0400
-@@ -1,34 +1,11 @@
+@@ -1,34 +1,12 @@
 -# EDIT THESE SETTINGS
 -
 -PLIBPREFIX=/usr
@@ -25,6 +25,7 @@ diff -ru crashtest-1.1.orig/src-crashtest/Makefile crashtest-1.1/src-crashtest/M
 -  -L/usr/X11R6/lib
 -
  OBJS=staticworldobject.o crashtest.o dynamicobject.o cartobject.o
++CXXFLAGS+=-I `fltk-config --includedir`
  
 -LIBS= $(ODEPREFIX)/lib/libode.a -lplibssgaux -lplibssg -lplibsg -lplibpu -lplibfnt -lplibul -lGLU -lGL `fltk-config --use-gl --use-images --ldflags`
 -
@@ -71,29 +72,6 @@ diff -ru crashtest-1.1.orig/src-crashtest/Makefile crashtest-1.1/src-crashtest/M
 diff -ru crashtest-1.1.orig/src-crashtest/crashtest.cxx crashtest-1.1/src-crashtest/crashtest.cxx
 --- crashtest-1.1.orig/src-crashtest/crashtest.cxx	2009-02-15 17:08:24.000000000 -0500
 +++ crashtest-1.1/src-crashtest/crashtest.cxx	2009-10-14 01:01:25.822753522 -0400
-@@ -15,14 +15,14 @@
- #include <GL/glu.h>
- #endif
- 
--#include <FL/Fl.H>
--#include <FL/Fl_Box.H>
--#include <FL/Fl_Button.H>
--#include <FL/Fl_Check_Button.H>
--#include <FL/Fl_Chart.H>
--#include <FL/Fl_Value_Slider.H>
--#include <FL/Fl_Gl_Window.H>
--#include <FL/fl_draw.H>
-+#include <fltk-1.1/FL/Fl.H>
-+#include <fltk-1.1/FL/Fl_Box.H>
-+#include <fltk-1.1/FL/Fl_Button.H>
-+#include <fltk-1.1/FL/Fl_Check_Button.H>
-+#include <fltk-1.1/FL/Fl_Chart.H>
-+#include <fltk-1.1/FL/Fl_Value_Slider.H>
-+#include <fltk-1.1/FL/Fl_Gl_Window.H>
-+#include <fltk-1.1/FL/fl_draw.H>
- 
- #include <plib/ssg.h>
- #include <plib/ul.h>
 @@ -615,13 +615,7 @@
  
  int main(int argc, char *argv[]) 
