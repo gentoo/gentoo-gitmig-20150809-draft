@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/timer_entropyd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.3 2010/10/14 15:05:04 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.4 2011/04/05 15:05:38 darkside Exp $
+
+*timer_entropyd-0.1-r2 (05 Apr 2011)
+
+  05 Apr 2011; Jeremy Olexa <darkside@gentoo.org>
+  +timer_entropyd-0.1-r2.ebuild, +files/timer_entropyd-0.1-syslog.patch,
+  metadata.xml:
+  Revision bump that adds patch to create less logspam, signed off by
+  maintainer
 
   14 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   timer_entropyd-0.1-r1.ebuild:

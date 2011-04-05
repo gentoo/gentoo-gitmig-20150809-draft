@@ -9,4 +9,7 @@
     <email>pavel.stratil-jun@fenix.cz</email>
     <description>Proxied co-maintainer, CC on all bugs</description>
   </maintainer>
+  <use>
+    <flag name='debug'>Enable printf debugging and logging to the syslog at DEBUG level</flag>
+  </use>
 </pkgmetadata>
