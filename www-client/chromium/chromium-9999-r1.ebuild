@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.12 2011/03/30 11:36:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.13 2011/04/05 08:38:50 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -17,7 +17,7 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="cups gnome gnome-keyring"
+IUSE="cups gnome gnome-keyring kerberos"
 
 RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
@@ -46,9 +46,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex
-	>=sys-devel/make-3.81-r2"
+	>=sys-devel/make-3.81-r2
+	test? ( dev-python/simplejson dev-python/tlslite virtual/krb5 )"
 RDEPEND+="
 	!=www-client/chromium-9999
+	kerberos? ( virtual/krb5 )
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -147,6 +149,9 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}/${PN}-system-vpx-r4.patch"
 
+	# Make Chromium recognize Gentoo's Heimdal, to be upstreamed.
+	epatch "${FILESDIR}/${PN}-gssapi-heimdal-r0.patch"
+
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
@@ -172,6 +177,7 @@ src_prepare() {
 		\! -path 'third_party/openmax/*' \
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
+		\! -path 'third_party/pyftpdlib/*' \
 		\! -path 'third_party/skia/*' \
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
@@ -274,8 +280,8 @@ src_compile() {
 	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
-		emake base_unittests BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/base_unittests
+		emake {base,net}_unittests BUILDTYPE=Release V=1 || die
+		pax-mark m out/Release/{base,net}_unittests
 	fi
 }
 
@@ -293,6 +299,13 @@ src_test() {
 	# For more info see bug #350347.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
 		'--gtest_filter=-ICUStringConversionsTest.*'
+
+	# DiskCache: we need net/data/cache_tests in the tarball (export_tarball.py)
+	# NetUtilTest: bug #361885.
+	# HTTPS/SSL: bug #361939.
+	# UDP: unstable, active development. We should revisit this later.
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
+		'--gtest_filter=-*DiskCache*:NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*HTTPS*:*SSL*:*UDP*'
 }
 
 src_install() {
