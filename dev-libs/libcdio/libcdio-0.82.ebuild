@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.82.ebuild,v 1.2 2010/02/03 16:08:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.82.ebuild,v 1.3 2011/04/05 17:40:01 scarabeus Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="cddb minimal +cxx"
+IUSE="cddb +cxx minimal static-libs"
 
 RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
 	virtual/libintl"
@@ -35,6 +35,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable cddb) \
+		$(use_enable static-libs static) \
 		$(use_with !minimal cd-drive) \
 		$(use_with !minimal cd-info) \
 		$(use_with !minimal cd-paranoia) \
@@ -48,6 +49,11 @@ src_configure() {
 		--disable-vcd-info \
 		--disable-dependency-tracking \
 		--disable-maintainer-mode
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+	find "${D}" -name '*.la' -delete
 }
 
 pkg_postinst() {
