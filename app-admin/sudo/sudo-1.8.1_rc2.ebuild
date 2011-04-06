@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc2.ebuild,v 1.1 2011/04/06 14:18:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc2.ebuild,v 1.2 2011/04/06 15:50:27 flameeyes Exp $
 
 EAPI=4
 
@@ -56,8 +56,6 @@ MAKEOPTS="${MAKEOPTS} SAMPLES="
 
 src_prepare() {
 	epatch\
-		"${FILESDIR}"/${PN}-1.8.1_rc1-recursion.patch \
-		"${FILESDIR}"/${PN}-1.8.1_rc1-skey.patch \
 		"${FILESDIR}"/${PN}-1.8.1_rc2-plugindir.patch
 
 	export AT_M4DIR="m4"

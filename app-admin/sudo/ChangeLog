@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.263 2011/04/06 14:41:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.264 2011/04/06 15:50:27 flameeyes Exp $
+
+  06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> sudo-1.8.1_rc2.ebuild,
+  -files/sudo-1.8.1_rc1-recursion.patch, -files/sudo-1.8.1_rc1-skey.patch:
+  Re-digest the re-rolled rc2, drop patches merged (or replaced).
 
   06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/sudo-CVE-2010-2956.patch:
