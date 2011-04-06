@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.80 2011/04/06 22:28:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.81 2011/04/06 22:30:37 vapier Exp $
 
 EAPI="2"
 
@@ -34,13 +34,13 @@ COMMON_DEPEND="virtual/opengl
 	dev-libs/fribidi
 	dev-libs/libcdio[-minimal]
 	dev-libs/libpcre[cxx]
-	dev-libs/lzo
+	>=dev-libs/lzo-2.04
 	>=dev-python/pysqlite-2
 	media-libs/alsa-lib
 	media-libs/flac
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/glew
+	>=media-libs/glew-1.5.6
 	media-libs/jasper
 	media-libs/jbigkit
 	virtual/jpeg
@@ -56,7 +56,7 @@ COMMON_DEPEND="virtual/opengl
 	alsa? ( media-libs/libsdl[alsa] )
 	media-libs/libvorbis
 	media-libs/sdl-gfx
-	media-libs/sdl-image[gif,jpeg,png]
+	>=media-libs/sdl-image-1.2.10[gif,jpeg,png]
 	media-libs/sdl-mixer
 	media-libs/sdl-sound
 	media-libs/tiff
