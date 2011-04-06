@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/yum
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.13 2010/08/08 15:14:46 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.14 2011/04/06 23:13:06 xmw Exp $
+
+*yum-3.2.29 (06 Apr 2011)
+
+  06 Apr 2011; Michael Weber <xmw@gentoo.org> +yum-3.2.29.ebuild:
+  Version bump (thanks to spamslepnoga@inbox.ru on bug 352181)
 
   08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
