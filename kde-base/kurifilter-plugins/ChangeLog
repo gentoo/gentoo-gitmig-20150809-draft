@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kurifilter-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.74 2011/03/04 18:00:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.75 2011/04/06 14:19:29 scarabeus Exp $
+
+*kurifilter-plugins-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kurifilter-plugins-4.5.5.ebuild, -kurifilter-plugins-4.6.0.ebuild,
+  -kurifilter-plugins-4.6.1.ebuild, +kurifilter-plugins-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kurifilter-plugins-4.6.1 (04 Mar 2011)
 

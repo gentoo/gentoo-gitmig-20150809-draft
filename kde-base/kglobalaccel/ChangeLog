@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kglobalaccel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.53 2011/03/04 18:00:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.54 2011/04/06 14:18:57 scarabeus Exp $
+
+*kglobalaccel-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kglobalaccel-4.5.5.ebuild, -kglobalaccel-4.6.0.ebuild,
+  -kglobalaccel-4.6.1.ebuild, +kglobalaccel-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kglobalaccel-4.6.1 (04 Mar 2011)
 

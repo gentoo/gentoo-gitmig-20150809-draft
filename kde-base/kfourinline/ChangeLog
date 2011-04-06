@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kfourinline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.73 2011/03/04 17:59:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.74 2011/04/06 14:18:49 scarabeus Exp $
+
+*kfourinline-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kfourinline-4.5.5.ebuild, -kfourinline-4.6.0.ebuild,
+  -kfourinline-4.6.1.ebuild, +kfourinline-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kfourinline-4.6.1 (04 Mar 2011)
 

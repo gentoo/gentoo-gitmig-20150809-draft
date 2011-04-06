@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.77 2011/03/04 18:00:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.78 2011/04/06 14:19:19 scarabeus Exp $
+
+*kwrite-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kwrite-4.5.5.ebuild,
+  -kwrite-4.6.0.ebuild, -kwrite-4.6.1.ebuild, +kwrite-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kwrite-4.6.1 (04 Mar 2011)
 

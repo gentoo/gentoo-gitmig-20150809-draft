@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/ktimezoned
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimezoned/ChangeLog,v 1.77 2011/03/04 18:00:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimezoned/ChangeLog,v 1.78 2011/04/06 14:19:01 scarabeus Exp $
+
+*ktimezoned-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -ktimezoned-4.5.5.ebuild, -ktimezoned-4.6.0.ebuild, -ktimezoned-4.6.1.ebuild,
+  +ktimezoned-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *ktimezoned-4.6.1 (04 Mar 2011)
 

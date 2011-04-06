@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.198 2011/03/04 17:59:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.199 2011/04/06 14:18:53 scarabeus Exp $
+
+*konqueror-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -konqueror-4.5.5.ebuild,
+  -konqueror-4.6.0.ebuild, -konqueror-4.6.1.ebuild, +konqueror-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *konqueror-4.6.1 (04 Mar 2011)
 

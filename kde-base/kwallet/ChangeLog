@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwallet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.73 2011/03/04 18:00:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.74 2011/04/06 14:19:04 scarabeus Exp $
+
+*kwallet-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kwallet-4.5.5.ebuild,
+  -kwallet-4.6.0.ebuild, -kwallet-4.6.1.ebuild, +kwallet-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kwallet-4.6.1 (04 Mar 2011)
 

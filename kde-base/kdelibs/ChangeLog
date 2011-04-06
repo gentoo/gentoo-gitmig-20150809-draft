@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.735 2011/04/04 19:49:02 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.736 2011/04/06 14:19:08 scarabeus Exp $
+
+*kdelibs-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kdelibs-4.5.5.ebuild,
+  -kdelibs-4.6.0-r1.ebuild, -kdelibs-4.6.1.ebuild, -kdelibs-4.6.1-r1.ebuild,
+  -kdelibs-4.6.1-r2.ebuild, +kdelibs-4.6.2.ebuild,
+  +files/kdelibs-4.6.2-safestrigi.patch:
+  Version bump KDE SC 4.6.2
 
   04 Apr 2011; Thomas Kahle <tomka@gentoo.org> kdelibs-4.4.5-r4.ebuild:
   x86 stable per bug 361015

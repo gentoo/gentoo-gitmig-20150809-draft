@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.171 2011/03/04 18:00:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.172 2011/04/06 14:19:10 scarabeus Exp $
+
+*kdeedu-meta-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdeedu-meta-4.5.5.ebuild, -kdeedu-meta-4.6.0.ebuild,
+  -kdeedu-meta-4.6.1.ebuild, +kdeedu-meta-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kdeedu-meta-4.6.1 (04 Mar 2011)
 

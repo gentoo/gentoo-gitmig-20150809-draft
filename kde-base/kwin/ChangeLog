@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.216 2011/03/04 18:00:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.217 2011/04/06 14:19:00 scarabeus Exp $
+
+*kwin-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kwin-4.5.5.ebuild,
+  -kwin-4.6.0.ebuild, -kwin-4.6.1.ebuild, +kwin-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kwin-4.6.1 (04 Mar 2011)
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ksirk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.64 2011/03/04 18:00:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.65 2011/04/06 14:19:12 scarabeus Exp $
+
+*ksirk-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ksirk-4.5.5.ebuild,
+  -ksirk-4.6.0.ebuild, -ksirk-4.6.1.ebuild, +ksirk-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *ksirk-4.6.1 (04 Mar 2011)
 

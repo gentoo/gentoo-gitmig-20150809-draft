@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcmshell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.78 2011/03/04 18:00:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.79 2011/04/06 14:19:18 scarabeus Exp $
+
+*kcmshell-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kcmshell-4.5.5.ebuild,
+  -kcmshell-4.6.0.ebuild, -kcmshell-4.6.1.ebuild, +kcmshell-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kcmshell-4.6.1 (04 Mar 2011)
 

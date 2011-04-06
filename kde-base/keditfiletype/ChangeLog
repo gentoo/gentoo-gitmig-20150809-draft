@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/keditfiletype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.52 2011/03/04 17:59:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.53 2011/04/06 14:18:48 scarabeus Exp $
+
+*keditfiletype-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -keditfiletype-4.5.5.ebuild, -keditfiletype-4.6.0.ebuild,
+  -keditfiletype-4.6.1.ebuild, +keditfiletype-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *keditfiletype-4.6.1 (04 Mar 2011)
 

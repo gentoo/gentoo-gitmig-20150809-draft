@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ktron
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.140 2011/03/04 18:00:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.141 2011/04/06 14:19:29 scarabeus Exp $
+
+*ktron-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ktron-4.5.5.ebuild,
+  -ktron-4.6.0.ebuild, -ktron-4.6.1.ebuild, +ktron-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *ktron-4.6.1 (04 Mar 2011)
 

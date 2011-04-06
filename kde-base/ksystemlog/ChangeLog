@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.67 2011/03/10 12:57:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.68 2011/04/06 14:19:05 scarabeus Exp $
+
+*ksystemlog-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -ksystemlog-4.5.5.ebuild, -ksystemlog-4.6.0.ebuild, -ksystemlog-4.6.1.ebuild,
+  +ksystemlog-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
   10 Mar 2011; <angelos@gentoo.org> ksystemlog-4.6.1.ebuild:
   QA: Fixed VIRTUALX_REQUIRED

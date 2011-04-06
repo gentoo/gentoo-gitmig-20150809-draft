@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kmousetool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.163 2011/03/04 18:00:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmousetool/ChangeLog,v 1.164 2011/04/06 14:19:20 scarabeus Exp $
+
+*kmousetool-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kmousetool-4.5.5.ebuild, -kmousetool-4.6.0.ebuild, -kmousetool-4.6.1.ebuild,
+  +kmousetool-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kmousetool-4.6.1 (04 Mar 2011)
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.157 2011/03/04 18:00:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.158 2011/04/06 14:19:12 scarabeus Exp $
+
+*kcminit-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kcminit-4.5.5.ebuild,
+  -kcminit-4.6.0.ebuild, -kcminit-4.6.1.ebuild, +kcminit-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
 *kcminit-4.6.1 (04 Mar 2011)
 

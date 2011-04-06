@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.85 2011/03/07 23:16:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.86 2011/04/06 14:19:09 scarabeus Exp $
+
+*krunner-4.6.2 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -krunner-4.5.5.ebuild,
+  -krunner-4.6.0.ebuild, -krunner-4.6.1.ebuild, +krunner-4.6.2.ebuild:
+  Version bump KDE SC 4.6.2
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> krunner-4.6.1.ebuild:
   No dependency or linking to libxf86misc found.
