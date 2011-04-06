@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.261 2011/04/06 08:33:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.262 2011/04/06 14:18:41 flameeyes Exp $
+
+*sudo-1.8.1_rc2 (06 Apr 2011)
+*sudo-1.7.6_rc2 (06 Apr 2011)
+
+  06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> -sudo-1.7.6_rc1.ebuild,
+  +sudo-1.7.6_rc2.ebuild, -sudo-1.8.1_rc1.ebuild, +sudo-1.8.1_rc2.ebuild,
+  -files/sudo-1.8.1_rc1-ldflags.patch, +files/sudo-1.8.1_rc2-plugindir.patch:
+  Version bump to rc2 for both 1.8.1 and 1.7.6; move plugins for 1.8 to
+  /usr/lib/sudo; don't install sample plugins; filter gnat-gcc paths from
+  secure_path as it's done for gcc already.
 
   06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> sudo-1.7.6_rc1.ebuild:
   Use EAPI=4 properly.

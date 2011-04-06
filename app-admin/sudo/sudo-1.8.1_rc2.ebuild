@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc1.ebuild,v 1.2 2011/04/06 08:30:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc2.ebuild,v 1.1 2011/04/06 14:18:41 flameeyes Exp $
 
 EAPI=4
 
 WANT_AUTOMAKE=none
 
-inherit eutils pam libtool autotools
+inherit eutils pam multilib libtool autotools
 
 MY_P=${P/_/}
 MY_P=${MY_P/beta/b}
@@ -52,10 +52,13 @@ S=${WORKDIR}/${MY_P}
 
 REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 
+MAKEOPTS="${MAKEOPTS} SAMPLES="
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${P}-recursion.patch \
-		"${FILESDIR}"/${P}-skey.patch
+	epatch\
+		"${FILESDIR}"/${PN}-1.8.1_rc1-recursion.patch \
+		"${FILESDIR}"/${PN}-1.8.1_rc1-skey.patch \
+		"${FILESDIR}"/${PN}-1.8.1_rc2-plugindir.patch
 
 	export AT_M4DIR="m4"
 	eautoheader
@@ -111,6 +114,8 @@ src_configure() {
 		}
 
 		rmpath ROOTPATH '*/gcc-bin/*'
+		rmpath ROOTPATH '*/gnat-gcc-bin/*'
+		rmpath ROOTPATH '*/gnat-gcc/*'
 
 	einfo "...done."
 
@@ -128,8 +133,8 @@ src_configure() {
 		--without-opie \
 		--without-linux-audit \
 		--with-timedir=/var/db/sudo \
-		--docdir=/usr/share/doc/${PF} \
-		${myconf}
+		--with-plugindir=/usr/$(get_libdir)/sudo \
+		--docdir=/usr/share/doc/${PF}
 }
 
 src_install() {
