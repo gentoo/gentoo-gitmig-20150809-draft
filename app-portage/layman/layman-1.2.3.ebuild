@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.3.ebuild,v 1.14 2010/07/06 18:12:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.3.ebuild,v 1.15 2011/04/06 17:28:22 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
 inherit eutils distutils
@@ -59,7 +59,7 @@ src_install() {
 src_test() {
 	einfo "Running layman doctests..."
 	echo
-	if ! PYTHONPATH="." ${python} layman/tests/dtest.py; then
+	if ! PYTHONPATH="." $(PYTHON) layman/tests/dtest.py; then
 		eerror "DocTests failed - please submit a bug report"
 		die "DocTesting failed!"
 	fi
