@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.101 2011/04/03 17:55:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.102 2011/04/06 14:10:32 pva Exp $
+
+*autofs-4.1.4 (06 Apr 2011)
+
+  06 Apr 2011; Peter Volkov <pva@gentoo.org> +autofs-4.1.4.ebuild,
+  +files/autofs-4.1.4-clean-up-maps.patch,
+  +files/autofs-4.1.4-fix-install-ldap-samples-and-maps.patch,
+  +files/autofs-4.1.4-fix-man-pages.patch, +files/autofs-4.1.4-init.patch,
+  +files/autofs-4.1.4-respect-user-flags-and-fix-asneeded.patch:
+  Version bump, bug #324961 thank Dustin Polke for this job.
 
 *autofs-5.0.5-r2 (03 Apr 2011)
 

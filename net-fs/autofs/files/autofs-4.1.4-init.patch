@@ -1,0 +1,13 @@
+--- gentoo/net-fs/autofs/files/autofs.init.orig
++++ gentoo/net-fs/autofs/files/autofs.init
+@@ -11,8 +11,8 @@ DAEMON=/usr/sbin/automount
+ SYSCONFDIR=/etc/autofs
+ 
+ depend() {
+-	need localmount	portmap
+-	use ypbind nfs slapd portmap
++	need localmount
++	use ypbind nfs slapd portmap net
+ }
+ 
+ opts="start stop status stats reload restart"
