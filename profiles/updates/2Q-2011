@@ -1,1 +1,2 @@
 move sys-apps/gdisk sys-apps/gptfdisk
+move x11-libs/qt x11-libs/qt-meta

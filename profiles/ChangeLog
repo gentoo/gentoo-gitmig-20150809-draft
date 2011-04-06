@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5261 2011/04/06 15:12:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5262 2011/04/06 21:14:24 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Apr 2011; Alex Alexander <wired@gentoo.org> updates/2Q-2011:
+  moved x11-libs/qt to x11-libs/qt-meta.
 
   06 Apr 2011; Peter Volkov <pva@gentoo.org> package.mask:
   mask beta version of net-p2p/transmission-2.30.
