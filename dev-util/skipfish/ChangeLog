@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/skipfish
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/ChangeLog,v 1.6 2010/07/29 11:16:07 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/ChangeLog,v 1.7 2011/04/06 22:45:44 xmw Exp $
+
+*skipfish-1.85_beta (06 Apr 2011)
+
+  06 Apr 2011; Michael Weber <xmw@gentoo.org> +skipfish-1.85_beta.ebuild:
+  Version bump (thanks to anton.bugs@gmail.com on bug 360045)
 
 *skipfish-1.52_beta (29 Jul 2010)
 
