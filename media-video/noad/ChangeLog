@@ -1,6 +1,11 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.48 2011/02/08 14:21:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.49 2011/04/06 17:33:09 idl0r Exp $
+
+  06 Apr 2011; Christian Ruppert <idl0r@gentoo.org> noad-0.6.0-r9.ebuild,
+  noad-0.7.2-r2.ebuild:
+  Use the new ffmpeg virtual, bug 362147. QA Fix: Remove
+  WANT_AUTOMAKE/WANT_AUTOCONF.
 
   08 Feb 2011; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.6.0-r9.ebuild:
   fixed homepage, src_uri; stable amd64
