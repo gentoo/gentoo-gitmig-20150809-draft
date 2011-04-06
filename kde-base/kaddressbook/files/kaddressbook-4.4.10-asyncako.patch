@@ -1,0 +1,27 @@
+commit cfa404b7188e4c26bddbc9579728f6d25f8cd214
+Author: Stephen Kelly <steveire@gmail.com>
+Date:   Tue Apr 5 11:09:43 2011 +0200
+
+    Start kdepim 4.4 asynchronously if built against 4.6.
+    
+    The synchronous mechanism doesn't have enough time to start
+    before it reports failure.
+
+diff --git a/kaddressbook/main.cpp b/kaddressbook/main.cpp
+index 4c8ca42..200f8ec 100644
+--- a/kaddressbook/main.cpp
++++ b/kaddressbook/main.cpp
+@@ -49,11 +49,13 @@ int main( int argc, char **argv )
+   MainWindow *window = new MainWindow;
+   window->show();
+ 
++#if !KDE_IS_VERSION(4,6,0)
+   if ( !Akonadi::Control::start( window ) ) {
+     //TODO: add message box after string freeze
+     kWarning() << "Unable to start Akonadi server, exit application";
+     return 1;
+   }
++#endif
+ 
+   return app.exec();
+ }
