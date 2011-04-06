@@ -1,6 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0-r1.ebuild,v 1.2 2007/01/09 20:50:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/kedpm-0.4.0-r1.ebuild,v 1.3 2011/04/06 17:59:12 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
@@ -13,14 +16,18 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 IUSE="gtk"
 
-DEPEND=">=sys-apps/sed-4"
-RDEPEND="dev-python/pycrypto
+DEPEND="dev-python/pycrypto
 	gtk? ( >=dev-python/pygtk-2 )"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS="AUTHORS CHANGES NEWS"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
 	# We want documentation to install in /usr/share/doc/kedpm
 	# not in /usr/share/kedpm as in original setup.py.
 	epatch "${FILESDIR}/setup-doc.patch"
@@ -30,13 +37,13 @@ src_unpack() {
 	use gtk || sed -i -e 's/"gtk"  # default/"cli"  # default/' scripts/kedpm
 }
 
-src_install() {
-	DOCS="AUTHORS CHANGES NEWS"
-	distutils_src_install
-	# menu item
-	domenu "${FILESDIR}/${PN}.desktop"
+src_test() {
+	PYTHONPATH="build/lib" "$(PYTHON)" run_tests || die "Tests failed"
 }
 
-src_test() {
-	./run_tests || die "tests failed"
+src_install() {
+	distutils_src_install
+
+	# menu item
+	domenu "${FILESDIR}/${PN}.desktop"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/kedpm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.15 2007/01/09 20:50:55 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.16 2011/04/06 17:59:12 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kedpm-0.4.0-r1.ebuild:
+  Use Python 2 (bug #308271).
 
   09 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> -kedpm-0.4.0.ebuild,
   kedpm-0.4.0-r1.ebuild:
