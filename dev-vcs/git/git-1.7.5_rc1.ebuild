@@ -1,11 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.4_rc1-r1.ebuild,v 1.4 2011/04/04 08:58:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.5_rc1.ebuild,v 1.1 2011/04/06 23:07:49 robbat2 Exp $
 
 EAPI=3
 
 GENTOO_DEPEND_ON_PERL=no
-inherit toolchain-funcs eutils elisp-common perl-module bash-completion
+
+# bug #329479: git-remote-testgit is not multiple-version aware
+PYTHON_DEPEND="python? 2"
+
+inherit toolchain-funcs eutils elisp-common perl-module bash-completion python
 [ "$PV" == "9999" ] && inherit git
 
 MY_PV="${PV/_rc/.rc}"
@@ -37,7 +41,6 @@ CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
 	perl?   ( dev-lang/perl[-build] )
-	python? ( dev-lang/python )
 	tk?     ( dev-lang/tk )
 	curl?   (
 		net-misc/curl
@@ -94,6 +97,10 @@ pkg_setup() {
 		ewarn "Per Gentoo bugs #223747, #238586, when subversion is built"
 		ewarn "with USE=dso, there may be weird crashes in git-svn. You"
 		ewarn "have been warned."
+	fi
+	if use python ; then
+		python_set_active_version 2
+		python_pkg_setup
 	fi
 }
 
@@ -155,6 +162,9 @@ exportmakeopts() {
 #	fi
 	if [[ ${CHOST} == ia64-*-hpux* ]]; then
 		myopts="${myopts} NO_NSEC=YesPlease"
+	fi
+	if [[ ${CHOST} == *-*-aix* ]]; then
+		myopts="${myopts} NO_FNMATCH_CASEFOLD=YesPlease"
 	fi
 
 	has_version '>=app-text/asciidoc-8.0' \
@@ -240,7 +250,7 @@ git_emake() {
 	# bug #326625: PERL_PATH, PERL_MM_OPT
 	# bug #320647: PYTHON_PATH
 	PYTHON_PATH=""
-	use python && PYTHON_PATH="${EPREFIX}/usr/bin/python"
+	use python && PYTHON_PATH="$(PYTHON -a)"
 	emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
 		OPTCFLAGS="${CFLAGS}" \
@@ -326,6 +336,7 @@ src_install() {
 
 	if use python && use gtk ; then
 		dobin "${S}"/contrib/gitview/gitview
+		python_convert_shebangs ${PYTHON_ABI} "${ED}"/usr/bin/gitview
 		dodoc "${S}"/contrib/gitview/gitview.txt
 	fi
 
@@ -485,6 +496,7 @@ showpkgdeps() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
+	use python && python_mod_optimize git_remote_helpers
 	if use subversion && has_version dev-vcs/subversion && ! built_with_use --missing false dev-vcs/subversion perl ; then
 		ewarn "You must build dev-vcs/subversion with USE=perl"
 		ewarn "to get the full functionality of git-svn!"
@@ -499,4 +511,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
+	use python && python_mod_cleanup git_remote_helpers
 }
