@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12660 2011/04/06 15:12:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12661 2011/04/06 17:33:22 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -884,17 +884,6 @@ net-dialup/fritzcapi
 net-dialup/fxusb
 net-dialup/fxusb_CZ
 net-wireless/fwlanusb
-
-# Daniel Black <dragonheart@gentoo.org> (18 Jul 2010)
-# Abandoned upstream.
-# Difficulties transitioning to python3 as per bug 308271
-# Performs same functionality as kwallet
-app-admin/kedpm
-
-# Daniel Black <dragonheart@gentoo.org> (18 Jul 2010)
-# Abandoned upstream.
-# Difficulties transitioning to python3 as per bug 308331
-app-cdr/sync2cd
 
 # Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
 # The ebuild still needs work, but if you can help testing
