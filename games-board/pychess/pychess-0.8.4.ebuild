@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.8.4.ebuild,v 1.3 2010/04/29 08:11:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.8.4.ebuild,v 1.4 2011/04/06 19:57:59 arfrever Exp $
 PYTHON_DEPEND="2"
-EAPI="2"
+EAPI="3"
 
 inherit python games distutils
 
@@ -29,6 +29,7 @@ src_prepare() {
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 	games_pkg_setup
 }
 

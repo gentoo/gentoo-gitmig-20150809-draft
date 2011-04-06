@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pychess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.9 2011/04/02 07:25:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.10 2011/04/06 19:57:59 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pychess-0.8.4.ebuild, pychess-0.10.ebuild:
+  Fix deprecation warnings.
 
   02 Apr 2011; Christoph Mende <angelos@gentoo.org> pychess-0.10.ebuild:
   Stable on amd64 wrt bug #361623
