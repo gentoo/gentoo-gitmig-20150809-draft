@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-dxr3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.21 2011/02/12 13:39:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.22 2011/04/06 17:35:19 idl0r Exp $
+
+  06 Apr 2011; Christian Ruppert <idl0r@gentoo.org> vdr-dxr3-0.2.8.ebuild,
+  vdr-dxr3-0.2.10.ebuild, vdr-dxr3-0.2.12.ebuild:
+  Use the new ffmpeg virtual, bug 362093.
 
   12 Feb 2011; Matthias Schwarzott <zzam@gentoo.org> vdr-dxr3-0.2.8.ebuild:
   Make repoman happy and set RDEPEND explicitly.
