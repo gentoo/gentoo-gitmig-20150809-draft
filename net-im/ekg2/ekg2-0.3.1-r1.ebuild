@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1.ebuild,v 1.1 2011/04/01 20:10:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.1 2011/04/06 15:42:45 mgorny Exp $
 
 EAPI=3
 inherit autotools-utils versionator
@@ -45,6 +45,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
+PATCHES=(
+	"${FILESDIR}"/0001-Gentoo-use-vendor-dirs-for-perl-modules.patch
+)
 DOCS=(
 	AUTHORS docs/README docs/TODO
 	docs/events.txt docs/mouse.txt docs/sim.txt docs/voip.txt
