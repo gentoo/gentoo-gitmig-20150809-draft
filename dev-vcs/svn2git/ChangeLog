@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/svn2git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.9 2011/01/11 08:43:47 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.10 2011/04/06 17:07:13 sping Exp $
+
+*svn2git-1.0.3_p1 (06 Apr 2011)
+
+  06 Apr 2011; Sebastian Pipping <sping@gentoo.org> +svn2git-1.0.3_p1.ebuild,
+  +files/svn2git-1.0.3-backup-refs.patch,
+  +files/svn2git-1.0.3_p1-version.patch, svn2git-9999.ebuild:
+  Bump to 1.0.3 plus commit 584005f2e26149282aa12c4a0367d250caaf3918 by
+  upstream (creating backup refs for deleted branches), sync live ebuild
 
 *svn2git-1.0.2.1 (11 Jan 2011)
 
