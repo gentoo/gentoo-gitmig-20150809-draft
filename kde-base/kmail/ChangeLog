@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.242 2011/03/24 23:59:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.243 2011/04/06 07:40:14 dilfridge Exp $
+
+*kmail-4.4.10-r1 (06 Apr 2011)
+
+  06 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kmail-4.4.10-r1.ebuild, +files/kmail-4.4.10-asyncako.patch:
+  Start akonadi asynchronously on kde-4.6, bug 362199
 
   24 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kmail-4.4.5.ebuild:
