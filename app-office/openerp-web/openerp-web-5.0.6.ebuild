@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-web/openerp-web-5.0.6.ebuild,v 1.2 2010/12/13 15:41:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-web/openerp-web-5.0.6.ebuild,v 1.3 2011/04/06 17:06:48 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils distutils
 
@@ -26,6 +27,13 @@ RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
 
 S="${WORKDIR}/openerp-client-web-${PV}"
+
+PYTHON_MODNAME="openerp"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_install() {
 	distutils_src_install

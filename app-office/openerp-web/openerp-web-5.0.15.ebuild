@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-web/openerp-web-5.0.15.ebuild,v 1.1 2011/01/06 08:14:03 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-web/openerp-web-5.0.15.ebuild,v 1.2 2011/04/06 17:06:48 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils distutils
 
@@ -24,6 +25,13 @@ CDEPEND="=dev-python/cherrypy-3.1*
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
+
+PYTHON_MODNAME="openerp"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/gentoo.patch"
