@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>cbrannon@gentoo.org</email>
+  <name>Christopher Brannon</name>
   </maintainer>
   <use>
     <flag name="minimal">Disable bundled drivers and extra libraries (most users don't need these)</flag>

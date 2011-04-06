@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.91 2010/07/26 11:03:24 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.92 2011/04/06 12:58:18 cbrannon Exp $
+
+  06 Apr 2011; Christopher Brannon <cbrannon@gentoo.org> metadata.xml:
+  Added myself as maintainer (this was maintainer-needed).
 
   26 Jul 2010; Jeroen Roovers <jer@gentoo.org> unixODBC-2.3.0.ebuild:
   Stable for HPPA (bug #320711).
