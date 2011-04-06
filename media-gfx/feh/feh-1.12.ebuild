@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.12.ebuild,v 1.2 2011/04/05 07:31:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.12.ebuild,v 1.3 2011/04/06 14:33:23 hwoarang Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -38,6 +38,7 @@ pkg_setup() {
 src_prepare() {
 	if ! use xinerama; then
 		sed -i -e '/^xinerama/d' config.mk || die
+		sed -i -e 's/curl\ xinerama/curl/' test/feh.t || die
 	fi
 }
 
