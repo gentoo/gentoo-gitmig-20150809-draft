@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gofish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.17 2011/04/06 21:43:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.18 2011/04/06 22:10:38 xmw Exp $
+
+*gofish-1.2 (06 Apr 2011)
+
+  06 Apr 2011; Michael Weber <xmw@gentoo.org> +gofish-1.2.ebuild:
+  Version bump
 
 *gofish-1.1-r1 (06 Apr 2011)
 
