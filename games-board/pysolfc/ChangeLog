@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pysolfc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.3 2010/05/31 18:12:51 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.4 2011/04/06 20:01:31 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pysolfc-2.0.ebuild:
+  Fix deprecation warning. Use distutils_pkg_postinst() and distutils_pkg_postrm().
 
   31 May 2010; Markus Meier <maekke@gentoo.org> pysolfc-2.0.ebuild:
   amd64/x86 stable, bug #315295

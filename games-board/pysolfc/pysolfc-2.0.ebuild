@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0.ebuild,v 1.6 2010/05/31 18:12:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0.ebuild,v 1.7 2011/04/06 20:01:31 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_USE_WITH="tk"
 PYTHON_DEPEND="2:2.6"
@@ -27,6 +27,8 @@ S=${WORKDIR}/${MY_PN}-${PV}
 RDEPEND="sound? ( dev-python/pygame )
 	!minimal? ( dev-python/imaging[tk]
 		dev-tcltk/tktable )"
+
+PYTHON_MODNAME="pysollib"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -73,9 +75,5 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/pysollib
-}
-
-pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/pysollib
+	distutils_pkg_postinst
 }
