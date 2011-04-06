@@ -1,0 +1,8 @@
+
+
+*spew-1.0.8 (06 Apr 2011)
+
+  06 Apr 2011; Anthony G. Basile <blueness@gentoo.org> +spew-1.0.8.ebuild,
+  +files/remove-symlinks-makefile.patch, +metadata.xml:
+  Initial commit.
+
