@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/wine-doors-0.1.3.ebuild,v 1.2 2009/07/13 09:16:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/wine-doors-0.1.3.ebuild,v 1.3 2011/04/06 18:30:55 arfrever Exp $
 
-EAPI=2
+EAPI=3
+PYTHON_DEPEND="2"
 
 inherit distutils
 
@@ -26,11 +27,24 @@ DEPEND="dev-python/pycairo
 RDEPEND="${DEPEND}
 	dev-python/gconf-python"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_compile() {
 	einfo "nothing to compile"
 }
 
 src_install() {
-	distutils_src_install --temp="${D}"
+	USER="root" distutils_src_install --temp="${D}"
 	keepdir /etc/wine-doors
+}
+
+pkg_postinst() {
+	python_mod_optimize /usr/share/wine-doors
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/wine-doors
 }
