@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/i18ndude/i18ndude-2.0.ebuild,v 1.2 2006/01/27 02:35:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/i18ndude/i18ndude-2.0.ebuild,v 1.3 2011/04/06 13:29:14 arfrever Exp $
+
+EAPI="3"
 
 inherit distutils
 
