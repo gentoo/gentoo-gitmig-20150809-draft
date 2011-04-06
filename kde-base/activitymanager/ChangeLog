@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/activitymanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/activitymanager/ChangeLog,v 1.14 2011/04/06 14:18:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/activitymanager/ChangeLog,v 1.15 2011/04/06 22:21:16 tampakrap Exp $
+
+  06 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  activitymanager-4.6.2.ebuild:
+  Restore keywords
 
 *activitymanager-4.6.2 (06 Apr 2011)
 
