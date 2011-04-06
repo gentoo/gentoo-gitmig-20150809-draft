@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis-gentoo/gitosis-gentoo-0.2_p20100721.ebuild,v 1.1 2010/07/21 15:47:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis-gentoo/gitosis-gentoo-0.2_p20100721.ebuild,v 1.2 2011/04/06 19:39:15 arfrever Exp $
 
 EAPI=3
+PYTHON_DEPEND="2"
+
 inherit eutils distutils
 
 DESCRIPTION="gitosis -- software for hosting git repositories, Gentoo fork"
@@ -25,15 +27,14 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DOCS="example.conf gitweb.conf lighttpd-gitweb.conf TODO.rst"
+PYTHON_MODNAME="gitosis"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+
 	enewgroup git
 	enewuser git -1 /bin/sh /var/spool/gitosis git
-}
-
-src_compile() {
-	pwd
-	distutils_src_compile
 }
 
 src_install() {
@@ -48,5 +49,6 @@ src_install() {
 #}
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	einfo "If you need to actually use gitosis, you must unlock the git user."
 }
