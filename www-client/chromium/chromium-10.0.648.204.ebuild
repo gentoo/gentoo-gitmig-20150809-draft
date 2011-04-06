@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.204.ebuild,v 1.4 2011/03/27 22:54:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-10.0.648.204.ebuild,v 1.5 2011/04/06 19:57:12 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -189,6 +189,12 @@ src_configure() {
 	myconf+="
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
+
+	if host-is-pax; then
+		# Prevent the build from failing (bug #301880). The performance
+		# difference is very small.
+		myconf+=" -Dv8_use_snapshot=0"
+	fi
 
 	if use gecko-mediaplayer; then
 		# Disable hardcoded blacklist for gecko-mediaplayer.
