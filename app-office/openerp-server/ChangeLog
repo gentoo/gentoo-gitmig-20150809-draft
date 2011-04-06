@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openerp-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.2 2011/01/14 10:32:36 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.3 2011/04/06 16:59:15 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  openerp-server-5.0.6.ebuild, openerp-server-5.0.15.ebuild:
+  Use Python 2 (bug #361497).
 
 *openerp-server-5.0.15 (14 Jan 2011)
 

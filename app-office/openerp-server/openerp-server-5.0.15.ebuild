@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/openerp-server-5.0.15.ebuild,v 1.1 2011/01/14 10:32:36 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/openerp-server-5.0.15.ebuild,v 1.2 2011/04/06 16:59:15 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils distutils
 
@@ -32,6 +33,11 @@ DEPEND="${CDEPEND}"
 
 OPENERP_USER="openerp"
 OPENERP_GROUP="openerp"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_install() {
 	distutils_src_install
