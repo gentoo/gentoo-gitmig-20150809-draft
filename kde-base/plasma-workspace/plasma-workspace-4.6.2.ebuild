@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.2.ebuild,v 1.1 2011/04/06 14:19:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.2.ebuild,v 1.2 2011/04/06 22:22:06 tampakrap Exp $
 
 EAPI=3
 
@@ -12,15 +12,13 @@ inherit python kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug google-gadgets gps python qalculate semantic-desktop xinerama"
+IUSE="debug google-gadgets gps python qalculate rss semantic-desktop xinerama"
 
 COMMONDEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
-	$(add_kdebase_dep kdepimlibs 'semantic-desktop?')
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep ksysguard)
 	$(add_kdebase_dep libkworkspace)
-	$(add_kdebase_dep libplasmaclock)
 	$(add_kdebase_dep libplasmagenericshell)
 	$(add_kdebase_dep libtaskmanager)
 	$(add_kdebase_dep solid)
@@ -36,6 +34,11 @@ COMMONDEPEND="
 		$(add_kdebase_dep pykde4)
 	)
 	qalculate? ( sci-libs/libqalculate )
+	rss? (
+		$(add_kdebase_dep kdepimlibs 'semantic-desktop?')
+		$(add_kdebase_dep libplasmaclock 'holidays')
+	)
+	!rss? ( $(add_kdebase_dep libplasmaclock '-holidays') )
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${COMMONDEPEND}
@@ -99,6 +102,7 @@ src_configure() {
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PyKDE4)
 		$(cmake-utils_use_with qalculate)
+		$(cmake-utils_use_with rss KdepimLibs)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with xinerama X11_Xinerama)
