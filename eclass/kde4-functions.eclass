@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.44 2011/01/29 18:05:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.45 2011/04/06 14:22:14 scarabeus Exp $
 
 inherit versionator
 
@@ -14,12 +14,20 @@ inherit versionator
 
 # @ECLASS-VARIABLE: EAPI
 # @DESCRIPTION:
-# By default kde4 eclasses want EAPI 2 which might be redefinable to newer
-# versions.
+# Currently kde4 eclasses support EAPI 3 and 4.
 case ${EAPI:-0} in
-	2|3|4) : ;;
+	4|3) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
+
+# @ECLASS-VARIABLE: KDE_OVERRIDE_MINIMAL
+# @DESCRIPTION:
+# For use only in very few well-defined cases; normally it should be unset.
+# If this variable is set, all calls to add_kdebase_dep return a dependency on
+# at least this version, independent of the version of the package itself.
+# If you know exactly that one specific NEW KDE component builds and runs fine
+# with all the rest of KDE at an OLDER version, you can set this old version here.
+# Warning- may lead to general instability and kill your pet targh.
 
 # @ECLASS-VARIABLE: KDEBASE
 # @DESCRIPTION:
@@ -28,12 +36,12 @@ esac
 if [[ ${CATEGORY} = kde-base ]]; then
 	debug-print "${ECLASS}: KDEBASE ebuild recognized"
 	KDEBASE=kde-base
-elif [[ ${KMNAME} = koffice || ${PN} = koffice ]]; then
+elif [[ ${KMNAME-${PN}} = koffice ]]; then
 	debug-print "${ECLASS}: KOFFICE ebuild recognized"
 	KDEBASE=koffice
-elif [[ ${KMNAME} = kdevelop ]]; then
+elif [[ ${KMNAME-${PN}} = kdevelop ]]; then
 	debug-print "${ECLASS}: KDEVELOP ebuild recognized"
-	KDEBASE="kdevelop"
+	KDEBASE=kdevelop
 fi
 
 # @ECLASS-VARIABLE: KDE_SLOTS
@@ -46,6 +54,58 @@ KDE_SLOTS=( "4.1" "4.2" "4.3" "4.4" "4.5" "4.6" )
 # @DESCRIPTION:
 # The slots used by KDE live versions. Values should be ordered.
 KDE_LIVE_SLOTS=( "live" )
+
+# determine the build type
+if [[ ${SLOT} = live || ${PV} = *9999* ]]; then
+	BUILD_TYPE="live"
+else
+	BUILD_TYPE="release"
+fi
+export BUILD_TYPE
+
+# Set reponame and SCM for moduleses that have fully migrated to git
+# (hack - it's here because it needs to be before SCM inherits from kde4-base)
+if [[ ${BUILD_TYPE} == live ]]; then
+	case "${KMNAME}" in
+		kdebase-workspace)
+			KDE_SCM="git"
+			EGIT_REPONAME=${EGIT_REPONAME:=kde-workspace}
+		;;
+		kdebase-runtime)
+			KDE_SCM="git"
+			EGIT_REPONAME=${EGIT_REPONAME:=kde-runtime}
+		;;
+		kdebase-apps)
+			KDE_SCM="git"
+			EGIT_REPONAME=${EGIT_REPONAME:=kde-baseapps}
+		;;
+	esac
+fi
+
+# @ECLASS-VARIABLE: KDE_SCM
+# @DESCRIPTION:
+# If this is a live package which scm does it use
+# Everything else uses svn by default
+KDE_SCM="${KDE_SCM:-svn}"
+case ${KDE_SCM} in
+	svn|git) ;;
+	*) die "KDE_SCM: ${KDE_SCM} is not supported" ;;
+esac
+
+# @ECLASS-VARIABLE: KDE_LINGUAS
+# @DESCRIPTION:
+# This is a whitespace-separated list of translations this ebuild supports.
+# These translations are automatically added to IUSE. Therefore ebuilds must set
+# this variable before inheriting any eclasses. To enable only selected
+# translations, ebuilds must call enable_selected_linguas(). kde4-{base,meta}.eclass does
+# this for you.
+#
+# Example: KDE_LINGUAS="en_GB de nl"
+if [[ ${BUILD_TYPE} != live || -n ${KDE_LINGUAS_LIVE_OVERRIDE} ]]; then
+	for _lingua in ${KDE_LINGUAS}; do
+		IUSE="${IUSE} linguas_${_lingua}"
+	done
+fi
 
 # @FUNCTION: slot_is_at_least
 # @USAGE: <want> <have>
@@ -63,24 +123,6 @@ slot_is_at_least() {
 # All KDE ebuilds should run this in pkg_postinst and pkg_postrm.
 buildsycoca() {
 	debug-print-function ${FUNCNAME} "$@"
-
-	if [[ ${EAPI} == 2 ]] && ! use prefix; then
-		EROOT=${ROOT}
-	fi
-
-	local KDE3DIR="${EROOT}usr/kde/3.5"
-	if [[ -z ${EROOT%%/} && -x "${KDE3DIR}"/bin/kbuildsycoca ]]; then
-		# Since KDE3 is aware of shortcuts in /usr, rebuild database
-		# for KDE3 as well.
-		touch "${KDE3DIR}"/share/services/ksycoca
-		chmod 644 "${KDE3DIR}"/share/services/ksycoca
-
-		ebegin "Running kbuildsycoca to build global database"
-		XDG_DATA_DIRS="${EROOT}usr/local/share:${KDE3DIR}/share:${EROOT}usr/share" \
-			DISPLAY="" \
-			"${KDE3DIR}"/bin/kbuildsycoca --global --noincremental &> /dev/null
-		eend $?
-	fi
 
 	# We no longer need to run kbuildsycoca4, as kded does that automatically, as needed
 
@@ -115,19 +157,6 @@ comment_all_add_subdirectory() {
 			|| die "${LINENO}: Initial sed died"
 }
 
-# @ECLASS-VARIABLE: KDE_LINGUAS
-# @DESCRIPTION:
-# This is a whitespace-separated list of translations this ebuild supports.
-# These translations are automatically added to IUSE. Therefore ebuilds must set
-# this variable before inheriting any eclasses. To enable only selected
-# translations, ebuilds must call enable_selected_linguas(). kde4-{base,meta}.eclass does
-# this for you.
-#
-# Example: KDE_LINGUAS="en_GB de nl"
-for _lingua in ${KDE_LINGUAS}; do
-	IUSE="${IUSE} linguas_${_lingua}"
-done
-
 # @FUNCTION: enable_selected_linguas
 # @DESCRIPTION:
 # Enable translations based on LINGUAS settings and translations supported by
@@ -151,7 +180,7 @@ enable_selected_linguas() {
 	# Default value is set to "po".
 	if [[ "$(declare -p KDE_LINGUAS_DIR 2>/dev/null 2>&1)" == "declare -a"* ]]; then
 		debug-print "$FUNCNAME: we have these subfolders defined: ${KDE_LINGUAS_DIR}"
-		for x in "${KDE_LINGUAS_DIR[@]}"; do
+		for x in ${KDE_LINGUAS_DIR[@]}; do
 			_enable_selected_linguas_dir ${x}
 		done
 	else
@@ -182,8 +211,8 @@ enable_selected_doc_linguas() {
 		local handbookdir=`dirname ${pattern}`
 		local translationdir=`basename ${pattern}`
 		# Do filename pattern supplied, treat as directory
-		[[ "${handbookdir}" = '.' ]] && handbookdir=${translationdir} && translationdir=
-		[[ -d "${handbookdir}" ]] || die 'wrong doc dir specified'
+		[[ ${handbookdir} = '.' ]] && handbookdir=${translationdir} && translationdir=
+		[[ -d ${handbookdir} ]] || die 'wrong doc dir specified'
 
 		if ! use handbook; then
 			# Disable whole directory
@@ -196,8 +225,8 @@ enable_selected_doc_linguas() {
 			# Add requested translations
 			local lingua
 			for lingua in en ${KDE_LINGUAS}; do
-				if [[ ${lingua} = 'en' ]] || use linguas_${lingua}; then
-					if [[ -d "${handbookdir}/${translationdir//%lingua/${lingua}}" ]]; then
+				if [[ ${lingua} = en ]] || use linguas_${lingua}; then
+					if [[ -d ${handbookdir}/${translationdir//%lingua/${lingua}} ]]; then
 						sed -e "/add_subdirectory[[:space:]]*([[:space:]]*${translationdir//%lingua/${lingua}}/s/^#DONOTCOMPILE //" \
 							-e "/ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*${translationdir//%lingua/${lingua}}/s/^#DONOTCOMPILE //" \
 							-i "${handbookdir}"/CMakeLists.txt && ! has ${lingua} ${linguas} && linguas="${linguas} ${lingua}"
@@ -210,26 +239,19 @@ enable_selected_doc_linguas() {
 	[[ -n "${linguas}" ]] && einfo "Enabling handbook translations:${linguas}"
 }
 
-# @FUNCTION: get_build_type
-# @DESCRIPTION:
-# Determine whether we are using live ebuild or tbzs.
-get_build_type() {
-	if [[ ${SLOT} = live || ${PV} = *9999* ]]; then
-		BUILD_TYPE="live"
-	else
-		BUILD_TYPE="release"
-	fi
-	export BUILD_TYPE
-}
-
 # @FUNCTION: migrate_store_dir
 # @DESCRIPTION:
 # Universal store dir migration
 # * performs split of kdebase to kdebase-apps when needed
 # * moves playground/extragear kde4-base-style to toplevel dir
 migrate_store_dir() {
+	if [[ ${KDE_SCM} != svn ]]; then
+		die "migrate_store_dir() only makes sense for subversion"
+	fi
+
 	local cleandir="${ESVN_STORE_DIR}/KDE"
-	if [[ -d "${cleandir}" ]]; then
+
+	if [[ -d ${cleandir} ]]; then
 		ewarn "'${cleandir}' has been found. Moving contents to new location."
 		addwrite "${ESVN_STORE_DIR}"
 		# Split kdebase
@@ -249,22 +271,22 @@ migrate_store_dir() {
 		for pkg in "${cleandir}"/*; do
 			mv -f "${pkg}" "${ESVN_STORE_DIR}"/ || eerror "Failed to move '${pkg}'"
 		done
-		rmdir "${cleandir}" || die "Could not move obsolete KDE store dir. Please move '${cleandir}' contents to appropriate location (possibly ${ESVN_STORE_DIR}) and manually remove '${cleandir}' in order to continue."
+		rmdir "${cleandir}" || die "Could not move obsolete KDE store dir.  Please move '${cleandir}' contents to appropriate location (possibly ${ESVN_STORE_DIR}) and manually remove '${cleandir}' in order to continue."
 	fi
 
 	if ! hasq kde4-meta ${INHERITED}; then
 		case ${KMNAME} in
 			extragear*|playground*)
-				local svnlocalpath="${ESVN_STORE_DIR}"/"${KMNAME}"/"${PN}"
-				if [[ -d "${svnlocalpath}" ]]; then
+				local scmlocalpath="${ESVN_STORE_DIR}"/"${KMNAME}"/"${PN}"
+				if [[ -d "${scmlocalpath}" ]]; then
 					local destdir="${ESVN_STORE_DIR}"/"${ESVN_PROJECT}"/"`basename "${ESVN_REPO_URI}"`"
-					ewarn "'${svnlocalpath}' has been found."
+					ewarn "'${scmlocalpath}' has been found."
 					ewarn "Moving contents to new location: ${destdir}"
 					addwrite "${ESVN_STORE_DIR}"
-					mkdir -p "${ESVN_STORE_DIR}"/"${ESVN_PROJECT}" && mv -f "${svnlocalpath}" "${destdir}" \
-						|| die "Failed to move to '${svnlocalpath}'"
+					mkdir -p "${ESVN_STORE_DIR}"/"${ESVN_PROJECT}" && mv -f "${scmlocalpath}" "${destdir}" \
+						|| die "Failed to move to '${scmlocalpath}'"
 					# Try cleaning empty directories
-					rmdir "`dirname "${svnlocalpath}"`" 2> /dev/null
+					rmdir "`dirname "${scmlocalpath}"`" 2> /dev/null
 				fi
 				;;
 		esac
@@ -308,7 +330,7 @@ load_library_dependencies() {
 	for pn in ${KMLOADLIBS} ; do
 		((i++))
 		depsfile="${EPREFIX}/var/lib/kde/${pn}:${SLOT}"
-		[[ -r "${depsfile}" ]] || die "Depsfile '${depsfile}' not accessible. You probably need to reinstall ${pn}."
+		[[ -r ${depsfile} ]] || die "Depsfile '${depsfile}' not accessible. You probably need to reinstall ${pn}."
 		sed -i -e "${i}iINCLUDE(\"${depsfile}\")" "${S}/CMakeLists.txt" || \
 			die "Failed to include library dependencies for ${pn}"
 	done
@@ -359,50 +381,50 @@ add_blocker() {
 
 # @FUNCTION: add_kdebase_dep
 # @DESCRIPTION:
-# Create proper dependency for kde-base/ dependencies,
-# adding SLOT when needed (and *only* when needed).
-# This takes 1 or 2 arguments.  The first being the package
-# name, the optional second, is additional USE flags to append.
-# The output of this should be added directly to DEPEND/RDEPEND, and
-# may be wrapped in a USE conditional (but not an || conditional
-# without an extra set of parentheses).
+# Create proper dependency for kde-base/ dependencies, adding SLOT when needed
+# (and *only* when needed).
+# This takes 1 to 3 arguments. The first being the package name, the optional
+# second is additional USE flags to append, and the optional third is the
+# version to use instead of the automatic version (use sparingly).
+# The output of this should be added directly to DEPEND/RDEPEND, and may be
+# wrapped in a USE conditional (but not an || conditional without an extra set
+# of parentheses).
 add_kdebase_dep() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	local ver
+
+	if [[ -n ${3} ]]; then
+		ver=${3}
+	elif [[ -n ${KDE_OVERRIDE_MINIMAL} ]]; then
+		ver=${KDE_OVERRIDE_MINIMAL}
+	elif [[ ${KDEBASE} != kde-base ]]; then
+		ver=${KDE_MINIMAL}
+	# FIXME remove hack when kdepim-4.4.* is gone
+	elif [[ ( ${KMNAME} == kdepim || ${PN} == kdepim-runtime ) && ${SLOT} == 4.4 && ${1} =~ ^(kde(pim)?libs|oxygen-icons)$ ]]; then
+		ver=4.4.5
+	# FIXME remove hack when kdepim-4.6beta is gone
+	elif [[ ( ${KMNAME} == kdepim || ${PN} == kdepim-runtime ) && ${PV} == 4.5.98 && ${1} =~ ^(kde(pim)?libs|oxygen-icons)$ ]]; then
+		ver=4.5.90
+	# if building stable-live version depend just on slot
+	# to allow merging packages against more stable basic stuff
+	elif [[ ${PV} == *.9999 ]]; then
+		ver=${SLOT}
+	else
+		ver=${PV}
+	fi
 
 	[[ -z ${1} ]] && die "Missing parameter"
 
 	local use=${2:+,${2}}
 
 	if [[ ${KDEBASE} = kde-base ]]; then
-		# FIXME remove hack when >kdepim-4.4.5 is gone
-		local FIXME_PV
-		if [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.4.6* || ${PV} = 4.4.7*  || ${PV} = 4.4.8* || ${PV} = 4.4.9* || ${PV} = 4.4.10* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs || ${1} = oxygen-icons ]]; then
-			FIXME_PV=4.4.5
-		# FIXME remove hack when kdepim-4.6beta is gone
-		elif [[ ${KMNAME} = kdepim || ${PN} = kdepim-runtime ]] && [[ ${PV} = 4.5.93* ]] && [[ ${1} = kdelibs || ${1} = kdepimlibs || ${1} = oxygen-icons ]]; then
-			FIXME_PV=4.5.90
-		else
-			FIXME_PV=${PV}
-		fi
-
-		# if building stable-live version depend just on slot
-		# to allow merging packages against more stable basic stuff
-		case ${PV} in
-			*.9999*)
-				echo " !kdeprefix? ( >=kde-base/${1}-${SLOT}[aqua=,-kdeprefix${use}] )"
-				echo " kdeprefix? ( >=kde-base/${1}-${SLOT}:${SLOT}[aqua=,kdeprefix${use}] )"
-				;;
-			*)
-				echo " !kdeprefix? ( >=kde-base/${1}-${FIXME_PV}[aqua=,-kdeprefix${use}] )"
-				echo " kdeprefix? ( >=kde-base/${1}-${FIXME_PV}:${SLOT}[aqua=,kdeprefix${use}] )"
-				;;
-		esac
+		echo " !kdeprefix? ( >=kde-base/${1}-${ver}[aqua=,-kdeprefix${use}] )"
+		echo " kdeprefix? ( >=kde-base/${1}-${ver}:${SLOT}[aqua=,kdeprefix${use}] )"
+	elif [[ ${ver} == live ]]; then
+		echo " kde-base/${1}:live[aqua=${use}]"
 	else
-		if [[ ${KDE_MINIMAL} = live ]]; then
-			echo " kde-base/${1}:${KDE_MINIMAL}[aqua=${use}]"
-		else
-			echo " >=kde-base/${1}-${KDE_MINIMAL}[aqua=${use}]"
-		fi
+		echo " >=kde-base/${1}-${ver}[aqua=${use}]"
 	fi
 }
 
@@ -444,8 +466,14 @@ _do_blocker() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	[[ -z ${1} ]] && die "Missing parameter"
-	local pkg=kde-base/$1
+	local pkg=kde-base/$1 use
 	shift
+	if [[ $pkg == *\[*\] ]]; then
+		use=${pkg#*\[}
+		use=${use%\]}
+		pkg=${pkg%\[*\]}
+	fi
+
 	local param slot def="unset" var atom
 	# The following variables will hold parameters that contain ":"
 	#  - block_3_5
@@ -496,10 +524,10 @@ _do_blocker() {
 		fi
 		# we always block our own slot, ignoring kdeprefix
 		if [[ ${SLOT} == ${slot} ]]; then
-			echo " !${atom}:${slot}"
+			echo " !${atom}:${slot}${use:+[${use}]}"
 		else
 			# we only block other slots on -kdeprefix
-			echo " !kdeprefix? ( !${atom}:${slot}[-kdeprefix] )"
+			echo " !kdeprefix? ( !${atom}:${slot}[-kdeprefix${use:+,${use}}] )"
 		fi
 	done
 
@@ -515,7 +543,7 @@ _do_blocker() {
 		else
 			atom="<=${pkg}-${block_3_5}"
 		fi
-		echo " !${atom}:3.5"
+		echo " !${atom}:3.5${use:+[${use}]}"
 	fi
 }
 
@@ -525,7 +553,7 @@ _enable_selected_linguas_dir() {
 	local lingua linguas sr_mess wp
 	local dir=${1}
 
-	[[ -d  "${dir}" ]] || die "linguas dir \"${dir}\" does not exist"
+	[[ -d  ${dir} ]] || die "linguas dir \"${dir}\" does not exist"
 	comment_all_add_subdirectory "${dir}"
 	pushd "${dir}" > /dev/null
 
@@ -534,37 +562,49 @@ _enable_selected_linguas_dir() {
 	# fail at any point
 	sr_mess="sr@latn sr@latin sr@Latin"
 	for wp in ${sr_mess}; do
-		[[ -e "${wp}.po" ]] && mv "${wp}.po" "sr@Latn.po"
-		if [[ -d "${wp}" ]]; then
+		[[ -e ${wp}.po ]] && mv "${wp}.po" "sr@Latn.po"
+		if [[ -d ${wp} ]]; then
 			# move dir and fix cmakelists
 			mv "${wp}" "sr@Latn"
 			sed -i \
-				-e "s:${wp}:sr@Latin:g" \
+				-e "s:${wp}:sr@Latn:g" \
 				CMakeLists.txt
 		fi
 	done
 
 	for lingua in ${KDE_LINGUAS}; do
-		if [[ -e "${lingua}.po" ]]; then
+		if [[ -e ${lingua}.po ]]; then
 			mv "${lingua}.po" "${lingua}.po.old"
 		fi
 	done
 
 	for lingua in ${KDE_LINGUAS}; do
 		if use linguas_${lingua} ; then
-			if [[ -d "${lingua}" ]]; then
+			if [[ -d ${lingua} ]]; then
 				linguas="${linguas} ${lingua}"
 				sed -e "/add_subdirectory([[:space:]]*${lingua}[[:space:]]*)[[:space:]]*$/ s/^#DONOTCOMPILE //" \
 					-e "/ADD_SUBDIRECTORY([[:space:]]*${lingua}[[:space:]]*)[[:space:]]*$/ s/^#DONOTCOMPILE //" \
 					-i CMakeLists.txt || die "Sed to uncomment linguas_${lingua} failed."
 			fi
-			if [[ -e "${lingua}.po.old" ]]; then
+			if [[ -e ${lingua}.po.old ]]; then
 				linguas="${linguas} ${lingua}"
 				mv "${lingua}.po.old" "${lingua}.po"
 			fi
 		fi
 	done
-	[[ -n "${linguas}" ]] && echo ">>> Enabling languages: ${linguas}"
+	[[ -n ${linguas} ]] && echo ">>> Enabling languages: ${linguas}"
 
 	popd > /dev/null
+}
+
+_calculate_kde_slot() {
+	local ver=${1:-${PV}}
+	local major=$(get_major_version ${ver})
+	local minor=$(get_version_component_range 2 ${ver})
+	local micro=$(get_version_component_range 3 ${ver})
+	[[ ${ver} == 9999 ]] && echo live
+	(( major == 4 && micro == 9999 )) && echo ${major}.${minor}
+	if (( major == 4 && micro != 9999 )); then
+		(( micro < 50 )) && echo ${major}.${minor} || echo ${major}.$((minor + 1))
+	fi
 }

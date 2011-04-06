@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.50 2011/03/11 19:50:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.51 2011/04/06 14:22:14 scarabeus Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -12,19 +12,19 @@
 # You must define KMNAME to use this eclass, and do so before inheriting it. All other variables are optional.
 # Do not include the same item in more than one of KMMODULE, KMMEXTRA, KMCOMPILEONLY, KMEXTRACTONLY.
 
+[[ -z ${KMNAME} ]] && die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
+
 inherit kde4-base toolchain-funcs versionator
 
 case ${EAPI:-0} in
 	3)
-		KDEMETA_EXPF="pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_postinst pkg_postrm"
+		KDEMETA_EXPF="pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_preinst pkg_postinst pkg_postrm"
 		;;
 	*)
-		KDEMETA_EXPF="pkg_pretend pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_postinst pkg_postrm"
+		KDEMETA_EXPF="pkg_pretend pkg_setup src_unpack src_prepare src_configure src_compile src_test src_install pkg_preinst pkg_postinst pkg_postrm"
 		;;
 esac
 EXPORT_FUNCTIONS ${KDEMETA_EXPF}
-
-[[ -z ${KMNAME} ]] && die "kde4-meta.eclass inherited but KMNAME not defined - broken ebuild"
 
 # Add dependencies that all packages in a certain module share.
 case ${KMNAME} in
@@ -78,12 +78,14 @@ debug-print "line ${LINENO} ${ECLASS}: RDEPEND ${RDEPEND} - after metapackage-sp
 # Useful to build kde4-meta style stuff from extragear/playground (plasmoids etc)
 case ${BUILD_TYPE} in
 	live)
-		case ${KMNAME} in
-			extragear*|playground*)
-				ESVN_REPO_URI="${ESVN_MIRROR}/trunk/${KMNAME}"
-				ESVN_PROJECT="${KMNAME}${ESVN_PROJECT_SUFFIX}"
-				;;
-		esac
+		if [[ ${KDE_SCM} == svn ]]; then
+			case ${KMNAME} in
+				extragear*|playground*)
+					ESVN_REPO_URI="${ESVN_MIRROR}/trunk/${KMNAME}"
+					ESVN_PROJECT="${KMNAME}${ESVN_PROJECT_SUFFIX}"
+					;;
+			esac
+		fi
 		;;
 esac
 
@@ -142,7 +144,7 @@ kde4-meta_pkg_pretend() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	slot_is_at_least 4.6 ${SLOT} && ( [[ $(gcc-major-version) -lt 4 ]] || \
-		( [[ $(gcc-major-version) -eq 4 ]] && [[ $(gcc-minor-version) -le 3 ]] ) ) \
+		( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) ) \
 		&& die "Sorry, but gcc-4.3 and earlier wont work for KDE SC 4.6 (see bug 354837)."
 }
 
@@ -160,98 +162,84 @@ kde4-meta_pkg_setup() {
 
 # @FUNCTION: kde4-meta_src_unpack
 # @DESCRIPTION:
-# This function unpacks the source for split ebuilds. See also
-# kde4-meta-src_extract.
+# This function unpacks the source for split ebuilds.
+# Further more is processed in kde4-meta_src_extract
 kde4-meta_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	if [[ ${BUILD_TYPE} = live ]]; then
-		migrate_store_dir
-		S="${WORKDIR}/${P}"
-		mkdir -p "${S}"
-		ESVN_RESTRICT="export" subversion_src_unpack
-		subversion_wc_info
-		subversion_bootstrap
-		kde4-meta_src_extract
-	else
-		kde4-meta_src_extract
+		case "${KDE_SCM}" in
+			svn)
+				migrate_store_dir
+				S="${WORKDIR}/${P}"
+				mkdir -p "${S}"
+				ESVN_RESTRICT="export" subversion_src_unpack
+				subversion_wc_info
+				subversion_bootstrap
+				;;
+			git)
+				git_src_unpack
+				;;
+		esac
 	fi
+	kde4-meta_src_extract
 }
-
-# FIXME: the difference between kde4-meta_src_extract and kde4-meta_src_unpack?
 
 # @FUNCTION: kde4-meta_src_extract
 # @DESCRIPTION:
-# A function to unpack the source for a split KDE ebuild.
+# A function to extract the source for a split KDE ebuild.
 # Also see KMMODULE, KMNOMODULE, KMEXTRA, KMCOMPILEONLY, KMEXTRACTONLY and
 # KMTARPARAMS.
 kde4-meta_src_extract() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	if [[ ${BUILD_TYPE} = live ]]; then
-		local rsync_options subdir kmnamedir targetdir
 		# Export working copy to ${S}
 		einfo "Exporting parts of working copy to ${S}"
 		kde4-meta_create_extractlists
 
-		rsync_options="--group --links --owner --perms --quiet --exclude=.svn/"
+		case ${KDE_SCM} in
+			svn)
+				local rsync_options subdir kmnamedir targetdir wc_path escm
 
-		# Copy ${KMNAME} non-recursively (toplevel files)
-		rsync ${rsync_options} "${ESVN_WC_PATH}"/${kmnamedir}* "${S}" \
-			|| die "${ESVN}: can't export toplevel files to '${S}'."
-		# Copy cmake directory
-		if [[ -d "${ESVN_WC_PATH}/${kmnamedir}cmake" ]]; then
-			rsync --recursive ${rsync_options} "${ESVN_WC_PATH}/${kmnamedir}cmake" "${S}" \
-				|| die "${ESVN}: can't export cmake files to '${S}'."
-		fi
-		# Copy all subdirectories
-		for subdir in $(__list_needed_subdirectories); do
-			targetdir=""
-			if [[ $subdir = doc/* && ! -e "$ESVN_WC_PATH/$kmnamedir$subdir" ]]; then
-				continue
-			fi
+				rsync_options="--group --links --owner --perms --quiet --exclude=.svn/ --exclude=.git/"
+				wc_path="${ESVN_WC_PATH}"
+				escm="{ESVN}"
 
-			[[ ${subdir%/} = */* ]] && targetdir=${subdir%/} && targetdir=${targetdir%/*} && mkdir -p "${S}/${targetdir}"
-			rsync --recursive ${rsync_options} "${ESVN_WC_PATH}/${kmnamedir}${subdir%/}" "${S}/${targetdir}" \
-				|| die "${ESVN}: can't export subdirectory '${subdir}' to '${S}/${targetdir}'."
-		done
+				# Copy ${KMNAME} non-recursively (toplevel files)
+				rsync ${rsync_options} "${wc_path}"/${kmnamedir}* "${S}" \
+					|| die "${escm}: can't export toplevel files to '${S}'."
+				# Copy cmake directory
+				if [[ -d "${wc_path}/${kmnamedir}cmake" ]]; then
+					rsync --recursive ${rsync_options} "${wc_path}/${kmnamedir}cmake" "${S}" \
+						|| die "${escm}: can't export cmake files to '${S}'."
+				fi
+				# Copy all subdirectories
+				for subdir in $(__list_needed_subdirectories); do
+					targetdir=""
+					if [[ $subdir = doc/* && ! -e "$wc_path/$kmnamedir$subdir" ]]; then
+						continue
+					fi
 
-		if [[ ${KMNAME} = kdebase-runtime && ${PN} != kdebase-data ]]; then
-			sed -i -e '/^install(PROGRAMS[[:space:]]*[^[:space:]]*\/kde4[[:space:]]/s/^/#DONOTINSTALL /' \
-				"${S}"/CMakeLists.txt || die "Sed to exclude bin/kde4 failed"
-		fi
-	else
-		local abort tarball tarfile f extractlist moduleprefix postfix
-		case ${PV} in
-			4.[45].8[05] | 4.[45].9[023568])
-				# Block for normally packed upstream unstable snapshots
-				KMTARPARAMS+=" --bzip2" # bz2
-				postfix="bz2"
-				;;
-			*)
-				KMTARPARAMS+=" --bzip2" # bz2
-				postfix="bz2"
+					[[ ${subdir%/} = */* ]] && targetdir=${subdir%/} && targetdir=${targetdir%/*} && mkdir -p "${S}/${targetdir}"
+					rsync --recursive ${rsync_options} "${wc_path}/${kmnamedir}${subdir%/}" "${S}/${targetdir}" \
+						|| die "${escm}: can't export subdirectory '${subdir}' to '${S}/${targetdir}'."
+				done
 				;;
 		esac
+	else
+		local abort tarball tarfile f extractlist moduleprefix postfix
+
+		KMTARPARAMS+=" --bzip2"
+		postfix="bz2"
+
 		case ${KMNAME} in
 			kdebase-apps)
 				# kdebase/apps -> kdebase-apps
 				tarball="kdebase-${PV}.tar.${postfix}"
-				case ${PV} in
-					4.6.1)
-						;;
-					*)
-						# Go one level deeper for kdebase-apps in tarballs
-						moduleprefix=apps/
-						KMTARPARAMS+=" --transform=s|apps/||"
-						;;
-				esac
-				;;
-			kdepim)
-				if [[ ${PV} == 4.5.93 ]] ; then
-					tarball="kdepim-4.6beta3.tar.${postfix}"
-				else
-					tarball="${KMNAME}-${PV}.tar.${postfix}"
+				if ! slot_is_at_least 4.6 ${SLOT} || [[ ${PV} == "4.6.0" ]]; then
+					moduleprefix=apps/
+					KMTARPARAMS+=" --transform=s|apps/||"
 				fi
 				;;
 			*)
@@ -279,7 +267,12 @@ kde4-meta_src_extract() {
 		extractlist+=" $(__list_needed_subdirectories)"
 
 		pushd "${WORKDIR}" > /dev/null
-		[[ -n ${KDE4_STRICTER} ]] && echo tar -xpf "${tarfile}" ${KMTARPARAMS} ${extractlist}
+
+		# @ECLASS-VARIABLE: KDE4_STRICTER
+		# @DESCRIPTION:
+		# Print out all issues found executing tar / kmextract files
+		# Set on if you want to find issues in kde-base ebuild unpack sequences
+		[[ -n ${KDE4_STRICTER} ]] && echo 'tar -xpf "${tarfile}" ${KMTARPARAMS} ${extractlist}'
 		if [[ ${I_KNOW_WHAT_I_AM_DOING} ]]; then
 			# to make the devs happy - bug 338397
 			tar -xpf "${tarfile}" ${KMTARPARAMS} ${extractlist} || ewarn "tar extract command failed at least partially - continuing anyway"
@@ -299,7 +292,7 @@ kde4-meta_src_extract() {
 
 		if [[ -n ${KDE4_STRICTER} ]]; then
 			for f in $(__list_needed_subdirectories fatal); do
-				if [[ ! -e "${S}/${f#*/}" ]]; then
+				if [[ ! -e ${S}/${f#*/} ]]; then
 					eerror "'${f#*/}' is missing"
 					abort=true
 				fi
@@ -330,7 +323,7 @@ kde4-meta_create_extractlists() {
 	fi
 
 	# Add default handbook locations
-	if [[ -z ${KMNOMODULE} ]] && { [[ ${KDE_HANDBOOK} = always ]] || { [[ ${KDE_HANDBOOK} = optional ]] && use handbook; }; }; then
+	if [[ -z ${KMNOMODULE} ]] && ( [[ ${KDE_HANDBOOK} == always ]] || ( [[ ${KDE_HANDBOOK} == optional ]] && use handbook ) ); then
 		KMEXTRA_NONFATAL+=" doc/${KMMODULE##*/}"
 	fi
 
@@ -339,18 +332,15 @@ kde4-meta_create_extractlists() {
 	# In those cases you should care to add the relevant files to KMEXTRACTONLY
 	case ${KMNAME} in
 		kdebase)
-			case ${PV} in
-				4.6.1)
-					KMEXTRACTONLY+="
-						config-apps.h.cmake
-						ConfigureChecks.cmake"
-						;;
-					*)
-					KMEXTRACTONLY+="
-						apps/config-apps.h.cmake
-						apps/ConfigureChecks.cmake"
-						;;
-				esac
+			if ! slot_is_at_least 4.6 ${SLOT} || [[ ${PV} == "4.6.0" ]]; then
+				KMEXTRACTONLY+="
+					apps/config-apps.h.cmake
+					apps/ConfigureChecks.cmake"
+			else
+				KMEXTRACTONLY+="
+					config-apps.h.cmake
+					ConfigureChecks.cmake"
+			fi
 			;;
 		kdebase-apps)
 			KMEXTRACTONLY+="
@@ -407,14 +397,6 @@ kde4-meta_create_extractlists() {
 				filters/config-filters.h.cmake
 			"
 			case ${PV} in
-				2.0.*)
-					KMEXTRACTONLY+="
-						config-openctl.h.cmake
-						config-endian.h.cmake
-						config-openexr.h.cmake
-						config-opengl.h.cmake
-						config-prefix.h.cmake"
-				;;
 				2.[12].*)
 					KMEXTRACTONLY+="
 						config-endian.h.cmake
@@ -426,20 +408,24 @@ kde4-meta_create_extractlists() {
 			;;
 	esac
 	# Don't install cmake modules for split ebuilds, to avoid collisions.
-	case ${KMNAME} in
-		kdebase-runtime|kdebase-workspace|kdeedu|kdegames|kdegraphics)
-			case ${PN} in
-				libkdegames|libkdeedu|libkworkspace)
-					KMEXTRA+="
-						cmake/modules/"
-					;;
-				*)
-					KMCOMPILEONLY+="
-						cmake/modules/"
-					;;
-			esac
-		;;
-	esac
+	# note: kdegraphics >= 4.6.2 does not even have code to do that, so we
+	#   should not try in that case
+	if [[ ${KMNAME} != kdegraphics ]] || { [[ ${SLOT} != 4.6 || ${PV} < 4.6.2 ]] && ! slot_is_at_least 4.7 ${SLOT}; }; then
+		case ${KMNAME} in
+			kdebase-runtime|kdebase-workspace|kdeedu|kdegames|kdegraphics)
+				case ${PN} in
+					libkdegames|libkdeedu|libkworkspace)
+						KMEXTRA+="
+							cmake/modules/"
+						;;
+					*)
+						KMCOMPILEONLY+="
+							cmake/modules/"
+						;;
+				esac
+			;;
+		esac
+	fi
 
 	debug-print "line ${LINENO} ${ECLASS} ${FUNCNAME}: KMEXTRACTONLY ${KMEXTRACTONLY}"
 }
@@ -504,13 +490,16 @@ kde4-meta_src_prepare() {
 	kde4-base_src_prepare
 }
 
-# FIXME: no comment here?
+# @FUNCTION: _change_cmakelists_parent_dirs
+# @DESCRIPTION:
+# Adjust CMakeLists.txt to shadow subdirectories
+# that are not required for the build.
 _change_cmakelists_parent_dirs() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local _olddir _dir
 	_dir="${S}"/${1}
-	until [[ ${_dir} == "${S}" ]]; do
+	until [[ ${_dir} == ${S} ]]; do
 		_olddir=$(basename "${_dir}")
 		_dir=$(dirname "${_dir}")
 		debug-print "${LINENO}: processing ${_dir} CMakeLists.txt searching for ${_olddir}"
@@ -660,31 +649,6 @@ kde4-meta_change_cmakelists() {
 				sed -e '/install(.\+config-openexr\.h.\+)/d' \
 					-i CMakeLists.txt || die "${LINENO}: sed died in collision prevention section"
 			fi
-			# koffice 2.0
-			case ${PV} in
-				2.0.[1-9])
-					sed -i -n -e '1h;1!H;${g;s/install(.\+config-openexr.h.\+)//;p}' \
-						"${S}"/CMakeLists.txt || \
-						die "${LINENO}: sed died in collision prevention section"
-					;;
-				*) ;;
-			esac
-			# koffice 2.1.[8-9][0-9] and 9999
-			case ${PV} in
-				2.1.8[0-9]|2.1.9[0-9]|9999)
-					sed -e '/^option(BUILD/s/ON/OFF/' \
-						-e '/^if(NOT BUILD_kchart/,/^endif(NOT BUILD_kchart/d' \
-						-e '/^if(BUILD_koreport/,/^endif(BUILD_koreport/d' \
-						-e 's/set(SHOULD_BUILD_F_OFFICE TRUE)/set(SHOULD_BUILD_F_OFFICE FALSE)/' \
-						-i "${S}"/CMakeLists.txt || die "sed died while fixing cmakelists"
-					if [[ ${PN} != koffice-data ]] && [[ ${PV} == 9999 ]]; then
-						sed -e '/config-opengl.h/d' \
-						-i "${S}"/CMakeLists.txt || die "sed died while fixing cmakelists"
-
-					fi
-				;;
-				*) ;;
-			esac
 	esac
 
 	popd > /dev/null
@@ -713,18 +677,6 @@ kde4-meta_src_configure() {
 				-DWITH_LibTidy=OFF
 				"${mycmakeargs[@]}"
 			)
-			;;
-		koffice)
-			case ${PV} in
-				2.1.8[0-9]|2.1.9[0-9]|9999)
-					if [[ ${PN} != "kchart" ]]; then
-						mycmakeargs=(
-							-DBUILD_koreport=OFF
-							"${mycmakeargs[@]}"
-						)
-					fi
-				;;
-			esac
 			;;
 	esac
 
@@ -768,6 +720,15 @@ kde4-meta_src_install() {
 	done
 
 	kde4-base_src_install
+}
+
+# @FUNCTION: kde4-meta_pkg_preinst
+# @DESCRIPTION:
+# Invoke its equivalent in kde4-base.eclass.
+kde4-meta_pkg_preinst() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	kde4-base_pkg_preinst
 }
 
 # @FUNCTION: kde4-meta_pkg_postinst
