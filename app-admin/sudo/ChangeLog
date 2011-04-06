@@ -1,6 +1,20 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.258 2011/03/01 17:59:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.259 2011/04/06 04:14:40 flameeyes Exp $
+
+*sudo-1.8.1_rc1 (06 Apr 2011)
+*sudo-1.7.6_rc1 (06 Apr 2011)
+
+  06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> -sudo-1.7.4_p6.ebuild,
+  +sudo-1.7.6_rc1.ebuild, -sudo-1.8.0.ebuild, +sudo-1.8.1_rc1.ebuild,
+  +files/sudo-1.8.1_rc1-ldflags.patch, +files/sudo-1.8.1_rc1-recursion.patch,
+  +files/sudo-1.8.1_rc1-skey.patch, metadata.xml:
+  Bump to newest release candidates as EAPI=4; add a bunch of patches to 1.8.1
+  to respect ldflags and add back support for skey (with an upstreamable
+  patch); use REQUIRED_USE to avoid conflicts between pam and skey; disable
+  opie forcefully for 1.8.1 to avoid automagic dependencies in the future; add
+  a patch to avoid ignoring failures in recursive make; document offensive USE
+  flag in metadata.
 
 *sudo-1.8.0 (01 Mar 2011)
 *sudo-1.7.5 (01 Mar 2011)

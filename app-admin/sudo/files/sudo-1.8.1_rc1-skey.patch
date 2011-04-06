@@ -1,0 +1,55 @@
+Index: sudo-1.8.1rc1/configure.in
+===================================================================
+--- sudo-1.8.1rc1.orig/configure.in
++++ sudo-1.8.1rc1/configure.in
+@@ -2590,13 +2590,15 @@ if test "$with_skey" = "yes"; then
+ 	CPPFLAGS="${CPPFLAGS} -I${with_skey}/include"
+ 	SUDO_APPEND_LIBPATH(LDFLAGS, [${with_skey}/lib])
+ 	SUDO_APPEND_LIBPATH(SUDOERS_LDFLAGS, [${with_skey}/lib])
+-	AC_PREPROC_IFELSE([#include <skey.h>], [found=yes], [found=no])
++        AC_CHECK_HEADER([skey.h], [found=yes], [found=no],
++          [#include <stdio.h>]) 
+     else
+ 	found=no
+ 	O_CPPFLAGS="$CPPFLAGS"
+ 	for dir in "" "/usr/local" "/usr/contrib"; do
+ 	    test -n "$dir" && CPPFLAGS="$O_CPPFLAGS -I${dir}/include"
+-	    AC_PREPROC_IFELSE([#include <skey.h>], [found=yes; break])
++            AC_CHECK_HEADER([skey.h], [found=yes; break], ,
++              [#include <stdio.h>]) 
+ 	done
+ 	if test "$found" = "no" -o -z "$dir"; then
+ 	    CPPFLAGS="$O_CPPFLAGS"
+@@ -2610,6 +2612,19 @@ if test "$with_skey" = "yes"; then
+     fi
+     AC_CHECK_LIB(skey, main, [found=yes], [AC_MSG_WARN([Unable to locate libskey.a, you will have to edit the Makefile and add -L/path/to/skey/lib to SUDOERS_LDFLAGS])])
+     AC_CHECK_LIB(skey, skeyaccess, AC_DEFINE(HAVE_SKEYACCESS))
++
++    AC_MSG_CHECKING([for RFC1938-compliant skeychallenge()])
++    AC_COMPILE_IFELSE(
++      [AC_LANG_PROGRAM(
++         [#include <stdio.h>
++          #include <skey.h>],
++         [int main() { skeychallenge(NULL, NULL, NULL, 0); }]
++       )],
++      [AC_DEFINE([HAVE_RFC1938_SKEYCHALLENGE], [1], [Have 4-arguments RFC1938-compliant skeychallenge() function])
++       AC_MSG_RESULT([yes])],
++      [AC_MSG_RESULT([no])]
++    )
++
+     LDFLAGS="$O_LDFLAGS"
+     SUDOERS_LIBS="${SUDOERS_LIBS} -lskey"
+     AUTH_OBJS="$AUTH_OBJS rfc1938.lo"
+Index: sudo-1.8.1rc1/plugins/sudoers/auth/rfc1938.c
+===================================================================
+--- sudo-1.8.1rc1.orig/plugins/sudoers/auth/rfc1938.c
++++ sudo-1.8.1rc1/plugins/sudoers/auth/rfc1938.c
+@@ -46,7 +46,7 @@
+ #if defined(HAVE_SKEY)
+ # include <skey.h>
+ # define RFC1938				skey
+-#  ifdef __NetBSD__
++#  ifdef HAVE_RFC1938_SKEYCHALLENGE
+ #   define rfc1938challenge(a,b,c,d)	skeychallenge((a),(b),(c),(d))
+ #  else
+ #   define rfc1938challenge(a,b,c,d)	skeychallenge((a),(b),(c))

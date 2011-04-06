@@ -1,0 +1,15 @@
+Index: sudo-1.8.1rc1/plugins/sudoers/Makefile.in
+===================================================================
+--- sudo-1.8.1rc1.orig/plugins/sudoers/Makefile.in
++++ sudo-1.8.1rc1/plugins/sudoers/Makefile.in
+@@ -55,8 +55,8 @@ CPPFLAGS = -I$(incdir) -I$(top_builddir)
+ CFLAGS = @CFLAGS@
+ 
+ # Flags to pass to the link stage
+-LDFLAGS =
+-SUDOERS_LDFLAGS = @SUDOERS_LDFLAGS@
++LDFLAGS = @LDFLAGS@
++SUDOERS_LDFLAGS = $(LDFLAGS) @SUDOERS_LDFLAGS@
+ 
+ # Where to install things...
+ prefix = @prefix@

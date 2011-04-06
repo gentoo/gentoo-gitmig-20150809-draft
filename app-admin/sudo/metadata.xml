@@ -8,4 +8,9 @@
     commands as root or another user while logging the commands and
     arguments.
   </longdescription>
+  <use>
+    <flag name='offensive'>
+      Let sudo print insults when the user types the wrong password.
+    </flag>
+  </use>
 </pkgmetadata>
