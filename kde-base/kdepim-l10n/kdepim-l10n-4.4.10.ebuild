@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.10.ebuild,v 1.2 2011/04/05 23:32:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.10.ebuild,v 1.3 2011/04/06 07:18:57 dilfridge Exp $
 
 EAPI=3
 
@@ -70,6 +70,10 @@ src_unpack() {
 			done
 		done
 	fi
+}
+
+src_prepare() {
+	[[ -n ${A} ]] && kde4-base_src_prepare
 }
 
 src_configure() {
