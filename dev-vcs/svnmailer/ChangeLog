@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/svnmailer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/ChangeLog,v 1.2 2010/06/22 18:51:58 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/ChangeLog,v 1.3 2011/04/06 19:50:25 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  svnmailer-1.0.8-r2.ebuild:
+  Use Python 2 (bug #329493).
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   svnmailer-1.0.8-r2.ebuild:
