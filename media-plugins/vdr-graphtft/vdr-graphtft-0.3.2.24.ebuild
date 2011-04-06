@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.7 2011/01/26 16:39:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.2.24.ebuild,v 1.8 2011/04/06 17:08:37 idl0r Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ IUSE="${IUSE_THEMES} directfb graphtft-fe imagemagick touchscreen"
 DEPEND=">=media-video/vdr-1.6.0_p2-r1[graphtft]
 		media-libs/imlib2[png,jpeg]
 		gnome-base/libgtop
-		>=media-video/ffmpeg-0.4.8_p20090201
+		>=virtual/ffmpeg-0.4.8_p20090201
 		imagemagick? ( media-gfx/imagemagick[png,jpeg,cxx] )
 		directfb? ( dev-libs/DirectFB )
 		graphtft-fe? ( media-libs/imlib2[png,jpeg,X] )"

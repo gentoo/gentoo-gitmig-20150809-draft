@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-graphtft
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.26 2011/01/26 16:39:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.27 2011/04/06 17:08:37 idl0r Exp $
+
+  06 Apr 2011; Christian Ruppert <idl0r@gentoo.org>
+  vdr-graphtft-0.2.2-r1.ebuild, vdr-graphtft-0.3.2.24.ebuild:
+  Use the new ffmpeg virtual, bug 362095.
 
   26 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-graphtft-0.3.2.24.ebuild:
