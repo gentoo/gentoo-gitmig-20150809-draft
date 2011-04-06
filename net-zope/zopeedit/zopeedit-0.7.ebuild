@@ -1,6 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.7.ebuild,v 1.6 2008/05/27 06:37:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeedit/zopeedit-0.7.ebuild,v 1.7 2011/04/06 13:51:34 arfrever Exp $
+
+# TODO: Add net-zope/collective-zopeedit and delete net-zope/zopeedit.
+# http://pypi.python.org/pypi/collective.zopeedit
+
+EAPI="3"
 
 inherit distutils
 
