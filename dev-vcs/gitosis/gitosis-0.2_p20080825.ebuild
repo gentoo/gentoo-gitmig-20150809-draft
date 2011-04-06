@@ -1,6 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis/gitosis-0.2_p20080825.ebuild,v 1.2 2010/06/19 16:23:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitosis/gitosis-0.2_p20080825.ebuild,v 1.3 2011/04/06 19:27:19 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils distutils
 
@@ -26,6 +29,9 @@ S=${WORKDIR}/gitosis
 DOCS="example.conf gitweb.conf lighttpd-gitweb.conf TODO.rst"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+
 	enewgroup git
 	enewuser git -1 /bin/sh /var/spool/gitosis git
 }
