@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/vdr-softplay-0.0.2.20080421.ebuild,v 1.2 2009/08/09 20:15:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softplay/vdr-softplay-0.0.2.20080421.ebuild,v 1.3 2011/04/06 17:30:38 idl0r Exp $
 
 inherit vdr-plugin versionator
 
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.20
 	>=media-plugins/vdr-softdevice-0.2.3.20060814-r1
-	>=media-video/ffmpeg-0.4.9_p20080326"
+	>=virtual/ffmpeg-0.4.9_p20080326"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P#vdr-}
