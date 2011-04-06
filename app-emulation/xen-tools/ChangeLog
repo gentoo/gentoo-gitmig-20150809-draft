@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.73 2011/04/05 21:25:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.74 2011/04/06 22:14:51 alexxy Exp $
+
+*xen-tools-9999 (06 Apr 2011)
+
+  06 Apr 2011; Alexey Shvetsov <alexxy@gentoo.org> +xen-tools-9999.ebuild:
+  Add live version
 
   05 Apr 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-tools-4.1.0-r1.ebuild,
   +files/xend.initd-r2, +files/xendomains.initd-r2, -files/xend.initd,
