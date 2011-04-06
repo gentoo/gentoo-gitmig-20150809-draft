@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.1.4.ebuild,v 1.1 2011/03/27 15:23:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.1.4.ebuild,v 1.2 2011/04/06 20:19:22 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2"
 inherit python eutils distutils
@@ -23,6 +23,7 @@ RDEPEND="dev-python/pyyaml[libyaml?]
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

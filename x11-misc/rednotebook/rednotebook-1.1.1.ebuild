@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.1.1.ebuild,v 1.3 2010/09/26 10:44:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.1.1.ebuild,v 1.4 2011/04/06 20:19:22 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2"
-inherit python eutils distutils
+inherit eutils distutils
 
 DESCRIPTION="A graphical journal with calendar, templates, tags, keyword searching, and export functionality"
 HOMEPAGE="http://rednotebook.sourceforge.net"
@@ -23,6 +23,7 @@ RDEPEND="dev-python/pyyaml[libyaml?]
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

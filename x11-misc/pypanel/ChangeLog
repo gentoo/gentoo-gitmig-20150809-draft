@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pypanel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.39 2010/05/28 20:54:49 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.40 2011/04/06 20:21:52 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pypanel-2.4.ebuild, pypanel-2.4-r1.ebuild:
+  Fix deprecation warnings.
 
 *pypanel-2.4-r1 (28 May 2010)
 

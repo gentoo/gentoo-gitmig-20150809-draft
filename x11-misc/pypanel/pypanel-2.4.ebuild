@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4.ebuild,v 1.10 2009/12/27 13:37:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/pypanel-2.4.ebuild,v 1.11 2011/04/06 20:21:52 arfrever Exp $
 
-EAPI="2"
-inherit distutils eutils
+EAPI="3"
+inherit distutils
 
 MY_PN=${PN/pyp/PyP}
 MY_P=${MY_PN}-${PV}
