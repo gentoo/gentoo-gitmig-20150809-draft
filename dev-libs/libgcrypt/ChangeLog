@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.146 2011/02/23 16:09:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.147 2011/04/06 18:37:54 c1pher Exp $
+
+*libgcrypt-1.5.0_beta1-r1 (06 Apr 2011)
+*libgcrypt-1.4.6-r1 (06 Apr 2011)
+
+  06 Apr 2011; Dane Smith <c1pher@gentoo.org> +libgcrypt-1.4.6-r1.ebuild,
+  -libgcrypt-1.5.0_beta1.ebuild, +libgcrypt-1.5.0_beta1-r1.ebuild:
+  Revbump for both 1.4.6 and 1.5.0_ beta1. Disable flag munging wrt 
+  bug 360503. Remove old 1.5.0_beta1.
 
 *libgcrypt-1.5.0_beta1 (23 Feb 2011)
 
