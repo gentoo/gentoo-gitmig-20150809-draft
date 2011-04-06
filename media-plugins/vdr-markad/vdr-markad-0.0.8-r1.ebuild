@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.0.8-r1.ebuild,v 1.1 2011/02/02 21:50:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.0.8-r1.ebuild,v 1.2 2011/04/06 17:13:37 idl0r Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.6
-		media-video/ffmpeg[mp3,x264]
+		virtual/ffmpeg[mp3,x264]
 		!media-video/noad"
 RDEPEND="${DEPEND}"
 
