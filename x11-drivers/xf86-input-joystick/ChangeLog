@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-joystick
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.85 2010/02/24 16:52:39 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.86 2011/04/06 12:10:00 scarabeus Exp $
+
+*xf86-input-joystick-1.5.99.901 (06 Apr 2011)
+
+  06 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xf86-input-joystick-1.5.99.901.ebuild:
+  Version bump. This driver supports 1.10 xorg-server, but crashes it when
+  unplugging the device (You have been warned so do not open bugs).
 
   24 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xf86-input-joystick-1.4.0.ebuild, -xf86-input-joystick-1.4.1.ebuild:
