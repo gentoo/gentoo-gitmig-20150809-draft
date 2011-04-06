@@ -1,12 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc2.ebuild,v 1.2 2011/04/06 15:50:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc2.ebuild,v 1.3 2011/04/06 18:30:00 flameeyes Exp $
 
 EAPI=4
 
-WANT_AUTOMAKE=none
-
-inherit eutils pam multilib libtool autotools
+inherit eutils pam multilib libtool
 
 MY_P=${P/_/}
 MY_P=${MY_P/beta/b}
@@ -55,12 +53,6 @@ REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 MAKEOPTS="${MAKEOPTS} SAMPLES="
 
 src_prepare() {
-	epatch\
-		"${FILESDIR}"/${PN}-1.8.1_rc2-plugindir.patch
-
-	export AT_M4DIR="m4"
-	eautoheader
-	eautoconf
 	elibtoolize
 }
 
