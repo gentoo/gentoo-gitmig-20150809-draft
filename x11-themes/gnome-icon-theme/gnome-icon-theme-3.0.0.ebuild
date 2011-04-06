@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-2.91.92.ebuild,v 1.1 2011/03/23 05:08:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.0.0.ebuild,v 1.1 2011/04/06 12:49:38 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
