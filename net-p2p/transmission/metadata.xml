@@ -8,5 +8,6 @@
   </maintainer>	
   <use>
 	<flag name="libcanberra">Enable sound event support with <pkg>media-libs/libcanberra</pkg></flag>
+	<flag name="utp">Adds support for µTP (Micro Transport Protocol)</flag>
   </use>
 </pkgmetadata>

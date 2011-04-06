@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.143 2011/03/30 16:30:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.144 2011/04/06 16:29:15 pva Exp $
+
+*transmission-2.30_beta1 (06 Apr 2011)
+
+  06 Apr 2011; Peter Volkov <pva@gentoo.org> +transmission-2.30_beta1.ebuild,
+  +files/transmission-daemon.initd.7:
+  Version bump, bug #362009 by Alphat-PC. Dropped --background option for s-s-d
+  in init script, bug #358635 wrt to Leho Kraav
 
   30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> transmission-2.13.ebuild:
   amd64 stable wrt #361305
