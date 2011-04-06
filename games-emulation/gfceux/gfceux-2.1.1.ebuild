@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1.ebuild,v 1.4 2011/04/06 20:02:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1.ebuild,v 1.5 2011/04/06 20:03:49 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.5"
@@ -23,6 +23,7 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 	games_pkg_setup
 }
 
