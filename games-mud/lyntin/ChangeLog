@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/lyntin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/ChangeLog,v 1.15 2010/07/07 19:59:08 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/ChangeLog,v 1.16 2011/04/06 20:10:23 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  lyntin-4.2.ebuild:
+  Fix deprecation warning. Fix dependencies. Call distutils_pkg_postinst().
 
   07 Jul 2010; Tupone Alfredo <tupone@gentoo.org> lyntin-4.2.ebuild:
   Adding dependency on dev-python/setuptools Bug #327021 by

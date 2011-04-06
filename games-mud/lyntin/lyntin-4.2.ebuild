@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2.ebuild,v 1.8 2010/07/07 19:59:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2.ebuild,v 1.9 2011/04/06 20:10:23 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH_OPT="tk"
@@ -20,6 +20,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="tk"
 
 DEPEND="dev-python/setuptools"
+RDEPEND=""
 
 DOCS="COMMANDS PKG-INFO HACKING README"
 
@@ -37,6 +38,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	games_pkg_postinst
 	if use tk ; then
 		elog "To start lyntin in GUI mode, create a config file"
