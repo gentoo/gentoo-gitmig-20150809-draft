@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/gofish
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.16 2007/05/14 19:45:45 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.17 2011/04/06 21:43:06 xmw Exp $
+
+*gofish-1.1-r1 (06 Apr 2011)
+
+  06 Apr 2011; Michael Weber <xmw@gentoo.org> +gofish-1.1-r1.ebuild,
+  metadata.xml:
+  Taking maint. Removed explicit uid/gid in ebuild/config (thanks to
+  oliver@schinagl.nl on bug 268678). Some cleanups and added docs (thanks to
+  matimatik@lavabit.com on bug 290917)
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
