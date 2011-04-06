@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1.ebuild,v 1.3 2010/04/28 08:28:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1.ebuild,v 1.4 2011/04/06 20:02:40 arfrever Exp $
 
-EAPI=2
+EAPI=3
 PYTHON_DEPEND="2:2.5"
 inherit eutils python distutils games
 
