@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.2.ebuild,v 1.1 2011/04/04 09:48:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.2.1.ebuild,v 1.1 2011/04/06 12:09:13 scarabeus Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ LICENSE="MIT"
 SLOT="0"
 
 RDEPEND="x11-apps/xkbcomp
-	>=x11-libs/libX11-1.4.2"
+	>=x11-libs/libX11-1.4.3"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	>=dev-util/intltool-0.30
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 CONFIGURE_OPTIONS="
 	--with-xkb-base=\"${EPREFIX}/usr/share/X11/xkb\"
 	--enable-compat-rules
-	--disable-runtime-deps
 	--with-xkb-rules-symlink=xorg"
 
 src_prepare() {
