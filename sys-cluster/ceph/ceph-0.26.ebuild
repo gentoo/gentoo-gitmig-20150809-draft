@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.25.2.ebuild,v 1.4 2011/04/01 12:11:38 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.26.ebuild,v 1.1 2011/04/06 11:10:05 alexxy Exp $
 
 EAPI="3"
 
@@ -34,6 +34,8 @@ DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${CDEPEND}
 	sys-fs/btrfs-progs"
+
+STRIP_MASK="/usr/lib*/rados-classes/*"
 
 src_prepare() {
 	sed -e 's:invoke-rc\.d.*:/etc/init.d/ceph reload >/dev/null:' \
