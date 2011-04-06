@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.75 2010/01/10 01:12:10 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.76 2011/04/06 01:01:46 flameeyes Exp $
+
+  06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  ipsec-tools-0.7.3-r1.ebuild:
+  Fix build with gcc-4.6.0, -R is a flag of the linker, not the compiler.
 
 *ipsec-tools-0.7.3-r1 (10 Jan 2010)
 
