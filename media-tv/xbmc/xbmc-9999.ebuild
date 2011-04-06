@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.78 2011/03/01 02:46:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.79 2011/04/06 22:27:32 vapier Exp $
 
 EAPI="2"
 
@@ -109,7 +109,7 @@ src_unpack() {
 src_prepare() {
 	# some dirs ship generated autotools, some dont
 	local d
-	for d in . lib/{libdts,libdvd/lib*/,cpluff} ; do
+	for d in . lib/{libdvd/lib*/,cpluff} ; do
 		[[ -e ${d}/configure ]] && continue
 		pushd ${d} >/dev/null
 		einfo "Generating autotools in ${d}"

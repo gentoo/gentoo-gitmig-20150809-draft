@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.87 2011/03/12 09:22:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.88 2011/04/06 22:27:32 vapier Exp $
+
+  06 Apr 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Drop libdts autoconf since the dir no longer exists #359103 by BT.
 
   12 Mar 2011; Mike Frysinger <vapier@gentoo.org> xbmc-10.1.ebuild:
   Drop hal support in release too #349523 by Samuli Suominen.
