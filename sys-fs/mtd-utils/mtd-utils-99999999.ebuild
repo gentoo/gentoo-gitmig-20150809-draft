@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.5 2010/09/12 08:39:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.6 2011/04/06 19:58:29 vapier Exp $
 
 EAPI="3"
 
@@ -11,8 +11,13 @@ if [[ ${PV} == "99999999" ]] ; then
 	SRC_URI=""
 	#KEYWORDS=""
 else
-	MY_PV="${PV}-02ae0aac87576d07202a62d11294ea55b56f450b"
-	SRC_URI="mirror://gentoo/${PN}-snapshot-${MY_PV}.tar.xz"
+	if [[ ${PV} == *.*.* ]] ; then
+		MY_PV="${PV}-*"
+		SRC_URI="http://git.infradead.org/mtd-utils.git/snapshot/v${PV}.tar.gz -> ${P}.tar.gz"
+	else
+		MY_PV="${PV}-02ae0aac87576d07202a62d11294ea55b56f450b"
+		SRC_URI="mirror://gentoo/${PN}-snapshot-${MY_PV}.tar.xz"
+	fi
 	KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
 fi
 
@@ -33,6 +38,7 @@ RDEPEND="!sys-fs/mtd
 DEPEND="${RDEPEND}
 	xattr? ( sys-apps/acl )"
 
+# Diff snapshots have diff versions encoded into their dirnames
 S=${WORKDIR}/${PN}
 
 makeopts() {
@@ -41,10 +47,12 @@ makeopts() {
 }
 
 src_compile() {
+	cd "${S}"*
 	emake $(makeopts) || die
 }
 
 src_install() {
+	cd "${S}"*
 	emake $(makeopts) install DESTDIR="${D}" || die
 	dodoc *.txt
 	newdoc mkfs.ubifs/README README.mkfs.ubifs
