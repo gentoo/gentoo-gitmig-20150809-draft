@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.3 2011/04/06 07:18:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.4 2011/04/06 20:35:43 dilfridge Exp $
+
+  06 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.4.10.ebuild:
+  Add code to fix docbook variant, disable french temporarily since it uses
+  old DTD features
 
   06 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kdepim-l10n-4.4.10.ebuild:
