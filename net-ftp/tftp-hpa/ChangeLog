@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.47 2011/03/22 20:53:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.48 2011/04/06 05:29:17 ulm Exp $
+
+  06 Apr 2011; Ulrich Mueller <ulm@gentoo.org> tftp-hpa-0.49-r1.ebuild,
+  tftp-hpa-5.0.ebuild:
+  Add blocker against atftp too.
 
   22 Mar 2011; Ulrich Mueller <ulm@gentoo.org> tftp-hpa-0.49-r1.ebuild,
   tftp-hpa-5.0.ebuild:

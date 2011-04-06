@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.0.ebuild,v 1.4 2011/03/22 20:53:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/tftp-hpa-5.0.ebuild,v 1.5 2011/04/06 05:29:17 ulm Exp $
 
 DESCRIPTION="port of the OpenBSD TFTP server"
 HOMEPAGE="http://www.kernel.org/pub/software/network/tftp/"
@@ -12,6 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="ipv6 readline selinux tcpd"
 
 RDEPEND="selinux? ( sec-policy/selinux-tftpd )
+	!net-ftp/atftp
 	!net-ftp/netkit-tftp"
 DEPEND="${RDEPEND}
 	readline? ( sys-libs/readline )

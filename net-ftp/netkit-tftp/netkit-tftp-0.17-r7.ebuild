@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r7.ebuild,v 1.9 2011/03/22 20:49:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r7.ebuild,v 1.10 2011/04/06 05:25:34 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,8 @@ KEYWORDS="amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/inetd"
-RDEPEND="!net-ftp/tftp-hpa
+RDEPEND="!net-ftp/atftp
+	!net-ftp/tftp-hpa
 	${DEPEND}"
 
 src_unpack() {
