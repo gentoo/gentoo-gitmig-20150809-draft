@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.262 2011/04/06 14:18:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.263 2011/04/06 14:41:24 flameeyes Exp $
+
+  06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/sudo-CVE-2010-2956.patch:
+  Remove stray file.
 
 *sudo-1.8.1_rc2 (06 Apr 2011)
 *sudo-1.7.6_rc2 (06 Apr 2011)
