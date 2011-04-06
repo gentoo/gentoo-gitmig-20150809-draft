@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pcd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/ChangeLog,v 1.3 2010/06/16 12:25:44 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/ChangeLog,v 1.4 2011/04/06 17:20:39 idl0r Exp $
+
+  06 Apr 2011; Christian Ruppert <idl0r@gentoo.org> vdr-pcd-0.9.ebuild:
+  Use the new ffmpeg virtual, bug 362103. QA Fix: Assign RDEPEND. Switch to
+  EAPI 3 and use src_prepare instead of src_unpack.
 
   16 Jun 2010; Alexis Ballier <aballier@gentoo.org> vdr-pcd-0.9.ebuild:
   fix build with ffmpeg >= 0.6
