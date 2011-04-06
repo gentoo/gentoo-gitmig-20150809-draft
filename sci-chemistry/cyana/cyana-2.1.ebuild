@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.6 2010/12/20 08:19:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.7 2011/04/06 13:46:51 jlec Exp $
 
 EAPI="3"
 
@@ -32,18 +32,21 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-typo.patch \
 		"${FILESDIR}"/${PV}-exec.patch \
-		"${FILESDIR}"/${PV}-expire.patch
+		"${FILESDIR}"/${PV}-expire.patch \
+		"${FILESDIR}"/${PV}-xiar.patch
 
 	cat >> etc/config <<- EOF
 	VERSION=${PV}
 	SHELL=${EPREFIX}/bin/sh
 	FC=ifort
-	FFLAGS=${FFLAGS}
-	FFLAGS2=${FFLAGS}
+	FFLAGS=${FFLAGS} -openmp -threads
+	FFLAGS2=${FFLAGS} -openmp -threads
 	CC=$(tc-getCC)
+	AR=xiar
+	RANLIB=ranlib
 	FORK=g77fork.o
-	LDFLAGS=${LDFLAGS}
-	LIBS=-pthread -lpthread -liomp5
+	LDFLAGS=${LDFLAGS} -reentrancy threaded -openmp
+	LIBS=
 	EOF
 
 	if [[ $(tc-getFC) =~ gfortran ]]; then
