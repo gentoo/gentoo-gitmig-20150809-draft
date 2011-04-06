@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20080922.ebuild,v 1.4 2009/01/13 20:41:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20080922.ebuild,v 1.5 2011/04/06 17:29:09 idl0r Exp $
 
 EAPI=1
 
@@ -25,7 +25,7 @@ KEYWORDS="~amd64 x86"
 IUSE="+xv fbcon directfb mmx mmxext xinerama"
 
 RDEPEND=">=media-video/vdr-1.3.36
-	>=media-video/ffmpeg-0.4.9_pre1
+	>=virtual/ffmpeg-0.4.9_pre1
 	directfb? (
 		dev-libs/DirectFB
 		dev-libs/DFB++
@@ -78,7 +78,7 @@ pkg_setup() {
 
 	# Check for ffmpeg relying on libtheora without pkg-config-file
 	# Bug #142250
-	if built_with_use media-video/ffmpeg theora	&& \
+	if has_version virtual/ffmpeg[theora] && \
 		has_version "<media-libs/libtheora-1.0_alpha4"; then
 
 			eerror "This package will not work when using ffmpeg with"
