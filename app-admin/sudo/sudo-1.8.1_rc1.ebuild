@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc1.ebuild,v 1.1 2011/04/06 04:14:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_rc1.ebuild,v 1.2 2011/04/06 08:30:54 flameeyes Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ DEPEND="${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-REQUIRED_USE="^^ ( pam skey )"
+REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch \

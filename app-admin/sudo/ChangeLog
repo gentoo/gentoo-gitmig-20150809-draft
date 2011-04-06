@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.259 2011/04/06 04:14:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.260 2011/04/06 08:30:54 flameeyes Exp $
+
+  06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> sudo-1.7.6_rc1.ebuild,
+  sudo-1.8.1_rc1.ebuild:
+  Fix USE constrain to work when both are disabled. Thanks Zeev Tarantov for
+  reporting.
 
 *sudo-1.8.1_rc1 (06 Apr 2011)
 *sudo-1.7.6_rc1 (06 Apr 2011)
