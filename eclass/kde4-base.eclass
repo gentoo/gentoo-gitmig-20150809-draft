@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.85 2011/03/16 22:45:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.86 2011/04/06 08:53:48 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -691,7 +691,7 @@ kde4-base_src_prepare() {
 	# kde-l10n inherits kde4-base but is metpackage, so no check for doc
 	# kdelibs inherits kde4-base but handle installing the handbook itself
 	if ! has kde4-meta ${INHERITED}; then
-		has handbook ${IUSE//+} && [[ ${PN} != kde-l10n ]] && [[ ${PN} != kdelibs ]] && enable_selected_doc_linguas
+		has handbook ${IUSE//+} && [[ ${PN} != kde-l10n ]] && [[ ${PN} != kdepim-l10n ]] && [[ ${PN} != kdelibs ]] && enable_selected_doc_linguas
 	fi
 
 	# SCM bootstrap
