@@ -1,6 +1,10 @@
 # ChangeLog for games-util/mattricks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/ChangeLog,v 1.10 2010/05/05 05:27:23 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/mattricks/ChangeLog,v 1.11 2011/04/06 20:12:11 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mattricks-0.7.ebuild:
+  Fix deprecation warning.
 
   05 May 2010; Tupone Alfredo <tupone@gentoo.org> mattricks-0.7.ebuild:
   Force python2 fixing bug #312289 by arfrever@gentoo.org
