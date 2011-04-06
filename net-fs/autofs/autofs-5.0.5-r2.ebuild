@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.5-r2.ebuild,v 1.1 2011/04/03 17:55:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.5-r2.ebuild,v 1.2 2011/04/06 15:03:01 pva Exp $
 
 EAPI="4"
 inherit eutils multilib autotools linux-info
@@ -56,6 +56,9 @@ src_prepare() {
 	# Upstream reference: http://thread.gmane.org/gmane.linux.kernel.autofs/6039
 	# Disable LDAP specific code if USE="-ldap", let's see what upstream says...
 	epatch "${FILESDIR}"/${P}-fix-building-without-ldap.patch
+
+	# https://bugs.gentoo.org/show_bug.cgi?id=361899
+	epatch "${FILESDIR}"/${P}-add-missing-endif-HAVE_SASL-in-modules-lookup_ldap.c.patch
 
 	eautoreconf
 }
