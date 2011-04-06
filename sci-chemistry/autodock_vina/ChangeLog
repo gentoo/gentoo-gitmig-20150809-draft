@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/autodock_vina
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/ChangeLog,v 1.2 2010/08/11 16:46:14 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/ChangeLog,v 1.3 2011/04/06 16:42:37 jlec Exp $
+
+  06 Apr 2011; Justin Lecher <jlec@gentoo.org> autodock_vina-1.1.1-r1.ebuild:
+  Fix compilation problem with =dev-libs/boost-1.46, #362243; thanks few and
+  xarthisius
 
 *autodock_vina-1.1.1-r1 (11 Aug 2010)
 
