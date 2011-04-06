@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.27 2011/01/26 16:40:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.28 2011/04/06 18:44:08 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bitbake-1.8.18-r1.ebuild:
+  Fix deprecation warning.
 
   26 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bitbake-1.10.2.ebuild, bitbake-9999.ebuild:

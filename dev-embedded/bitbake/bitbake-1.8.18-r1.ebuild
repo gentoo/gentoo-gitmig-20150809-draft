@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.8.18-r1.ebuild,v 1.2 2010/08/15 02:12:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.8.18-r1.ebuild,v 1.3 2011/04/06 18:44:08 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 inherit distutils
 
 if [[ ${PV} == "9999" ]] ; then
