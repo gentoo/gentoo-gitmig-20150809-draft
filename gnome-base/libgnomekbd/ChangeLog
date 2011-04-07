@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomekbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.90 2011/03/22 19:17:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.91 2011/04/07 14:20:57 eva Exp $
+
+  07 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgnomekbd-2.30.2.ebuild:
+  Clean up old revision.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> libgnomekbd-2.32.0.ebuild:
   Marking libgnomekbd-2.32.0 ppc stable for bug 353436
