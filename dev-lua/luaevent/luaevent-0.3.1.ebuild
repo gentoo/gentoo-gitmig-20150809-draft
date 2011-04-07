@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/luaevent-0.3.1.ebuild,v 1.2 2011/01/20 21:52:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/luaevent-0.3.1.ebuild,v 1.3 2011/04/07 00:56:33 blueness Exp $
 
 EAPI=2
 
 inherit toolchain-funcs
 
 DESCRIPTION="libevent bindings for Lua"
-HOMEPAGE="http://luaforge.net/projects/luaevent"
+HOMEPAGE="http://luaforge.net/projects/luaevent http://repo.or.cz/w/luaevent.git"
 SRC_URI="http://dev.gentoo.org/~blueness/luaevent/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
