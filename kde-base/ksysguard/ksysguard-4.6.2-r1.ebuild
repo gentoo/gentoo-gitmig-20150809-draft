@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-4.6.2.ebuild,v 1.1 2011/04/06 14:18:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-4.6.2-r1.ebuild,v 1.1 2011/04/07 15:19:30 scarabeus Exp $
 
 EAPI=3
 
@@ -27,6 +27,10 @@ RDEPEND="${COMMONDEPEND}"
 KMEXTRA="
 	libs/ksysguard/
 "
+
+PATCHES=(
+	"${FILESDIR}/${PV}-fix_lmsensors.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
