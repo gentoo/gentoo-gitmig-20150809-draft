@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.275 2011/04/06 14:19:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.276 2011/04/07 08:59:59 scarabeus Exp $
+
+  07 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kopete-4.4.5-r1.ebuild,
+  kopete-4.6.2.ebuild:
+  Rename jabber useflag to xmpp. Drop older ebuild.
 
 *kopete-4.6.2 (06 Apr 2011)
 
