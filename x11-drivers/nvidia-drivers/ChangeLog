@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.271 2011/04/04 17:08:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.272 2011/04/07 06:33:38 jlec Exp $
+
+*nvidia-drivers-260.19.44 (07 Apr 2011)
+
+  07 Apr 2011; Justin Lecher <jlec@gentoo.org>
+  +nvidia-drivers-260.19.44.ebuild:
+  Non-Maintainer Version Bump
 
   04 Apr 2011; Justin Lecher <jlec@gentoo.org> nvidia-drivers-270.18.ebuild:
   Depend on correct Xorg Server ABI, #359841
