@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qmtest
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.10 2009/07/31 08:06:01 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.11 2011/04/07 19:34:23 arfrever Exp $
+
+  07 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  qmtest-2.4.1.ebuild:
+  Use Python 2 (bug #326111).
 
   31 Jul 2009; Christian Faulhammer <fauli@gentoo.org> qmtest-2.4.1.ebuild:
   stable x86, bug 279073
