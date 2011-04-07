@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dissy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dissy/ChangeLog,v 1.3 2010/10/13 14:13:37 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dissy/ChangeLog,v 1.4 2011/04/07 19:07:01 arfrever Exp $
+
+  07 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dissy-9.ebuild:
+  Use Python 2 (bug #324391).
 
   13 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
