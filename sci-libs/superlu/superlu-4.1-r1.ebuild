@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.1-r1.ebuild,v 1.3 2011/03/26 19:06:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.1-r1.ebuild,v 1.4 2011/04/07 17:43:27 grobian Exp $
 
 EAPI="2"
 
-inherit autotools eutils toolchain-funcs
+inherit autotools eutils toolchain-funcs multilib
 
 MY_PN=SuperLU
 
@@ -45,8 +45,9 @@ src_test() {
 		FFLAGS="${FFLAGS}" \
 		LOADOPTS="${LDFLAGS}" \
 		BLASLIB="$(pkg-config --libs blas)" \
-		SUPERLULIB="${S}/SRC/.libs/libsuperlu.so" \
+		SUPERLULIB="${S}/SRC/.libs/libsuperlu$(get_libname)" \
 		LD_LIBRARY_PATH="${S}/SRC/.libs" \
+		DYLD_LIBRARY_PATH="${S}/SRC/.libs" \
 		|| die "emake matrix generation failed"
 }
 
