@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/lightspeed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.16 2011/03/06 09:34:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.17 2011/04/07 18:37:15 bicatali Exp $
+
+  07 Apr 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  lightspeed-1.2a-r1.ebuild, +files/lightspeed-1.2a-autoconf.patch:
+  Fix for the GTK M4 macro checking gtk:1, thanks Alex Belykh, bug #353785
 
   06 Mar 2011; Justin Lecher <jlec@gentoo.org> lightspeed-1.2a-r1.ebuild:
   Correct Slots for gtk 3 introduction to tree
