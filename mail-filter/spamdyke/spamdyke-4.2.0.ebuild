@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-4.2.0.ebuild,v 1.1 2011/02/25 08:08:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-4.2.0.ebuild,v 1.2 2011/04/07 11:41:00 tupone Exp $
 
 EAPI="2"
+inherit eutils autotools
 
 DESCRIPTION="A drop-in connection-time spam filter for qmail"
 HOMEPAGE="http://www.spamdyke.org/"
@@ -20,6 +21,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${P}/${PN}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc46.patch
 	echo "# Configuration option for ${PN}" > ${PN}.conf
 	if use tls; then
 		echo "tls-certificate-file=/var/qmail/control/clientcert.pem" \
@@ -34,6 +36,7 @@ src_prepare() {
 	sed -i \
 		-e "/STRIP_CMD/d" \
 		Makefile.in || die "sed on Makefile.in failed"
+	eautoreconf
 }
 
 src_configure() {

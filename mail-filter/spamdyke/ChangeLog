@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamdyke
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.18 2011/02/25 08:08:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.19 2011/04/07 11:41:00 tupone Exp $
+
+  07 Apr 2011; Alfredo Tupone <tupone@gentoo.org> spamdyke-4.2.0.ebuild,
+  +files/spamdyke-4.2.0-gcc46.patch:
+  Fix build with gcc-4.6.0. Bug #362047 by Diego Elio Pettenò
 
 *spamdyke-4.2.0 (25 Feb 2011)
 
