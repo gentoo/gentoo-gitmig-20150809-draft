@@ -1,6 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mpatch/mpatch-0.8.ebuild,v 1.1 2007/08/18 22:19:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mpatch/mpatch-0.8.ebuild,v 1.2 2011/04/07 19:25:10 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit distutils
 
@@ -13,10 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND=""
 RDEPEND=""
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_install() {
 	distutils_src_install
-	dobin cmd/qp cmd/mp
+	dobin cmd/qp cmd/mp || die "dobin failed"
 }
