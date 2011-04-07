@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.36 2011/04/01 15:57:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.37 2011/04/07 18:53:02 jer Exp $
+
+  07 Apr 2011; Jeroen Roovers <jer@gentoo.org> smokeping-2.4.2-r4.ebuild:
+  Marked ~hppa (bug #361615).
 
 *smokeping-2.4.2-r4 (01 Apr 2011)
 
