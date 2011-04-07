@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.736 2011/04/06 14:19:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.737 2011/04/07 07:55:13 dilfridge Exp $
+
+  07 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.6.2.ebuild, +files/kdelibs-4.6.2-nonepomuk.patch:
+  Fix build without semantik-desktop, bug 361637
 
 *kdelibs-4.6.2 (06 Apr 2011)
 
