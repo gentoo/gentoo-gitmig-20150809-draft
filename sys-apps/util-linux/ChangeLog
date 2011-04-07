@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.333 2011/04/02 14:23:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.334 2011/04/07 01:09:08 vapier Exp $
+
+  07 Apr 2011; Mike Frysinger <vapier@gentoo.org> util-linux-2.19.ebuild,
+  +files/util-linux-2.19-old-libc.patch:
+  Add fallback code for older versions of glibc #361271 by Viktor Robev.
 
   02 Apr 2011; Raúl Porcel <armin76@gentoo.org> util-linux-2.18-r1.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #356941

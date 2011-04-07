@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.ebuild,v 1.2 2011/03/12 06:33:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.ebuild,v 1.3 2011/04/07 01:09:08 vapier Exp $
 
 EAPI="2"
 
@@ -45,6 +45,7 @@ src_prepare() {
 		eautoreconf
 	fi
 	use uclibc && sed -i -e s/versionsort/alphasort/g -e s/strverscmp.h/dirent.h/g mount/lomount.c
+	epatch "${FILESDIR}"/${P}-old-libc.patch #361271
 	elibtoolize
 }
 
