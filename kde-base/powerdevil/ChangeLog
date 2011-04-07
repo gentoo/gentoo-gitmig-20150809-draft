@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.67 2011/04/06 14:18:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.68 2011/04/07 21:41:15 scarabeus Exp $
+
+  07 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> powerdevil-4.6.2.ebuild:
+  Dylink scanner does not point linking to XScrnSaver.
 
 *powerdevil-4.6.2 (06 Apr 2011)
 
