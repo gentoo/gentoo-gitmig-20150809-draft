@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6.ebuild,v 1.2 2011/03/19 17:54:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6.ebuild,v 1.3 2011/04/07 22:26:22 flameeyes Exp $
 
 EAPI=3
 
@@ -74,8 +74,10 @@ pkg_setup() {
 	enewgroup lpadmin 106
 
 	# python 3 is no-go
-	python_set_active_version 2
-	python_pkg_setup
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
