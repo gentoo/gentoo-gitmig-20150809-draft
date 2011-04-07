@@ -1,0 +1,9 @@
+# ChangeLog for virtual/logger
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/logger/ChangeLog,v 1.1 2011/04/07 07:49:54 ultrabug Exp $
+
+*logger-0 (07 Apr 2011)
+
+  07 Apr 2011; Ultrabug <ultrabug@gentoo.org> +logger-0.ebuild, +metadata.xml:
+  new-style virtual, wrt #358881
+
