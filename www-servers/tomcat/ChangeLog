@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.250 2011/04/05 17:36:16 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.251 2011/04/07 14:13:49 fordfrog Exp $
+
+*tomcat-7.0.12 (07 Apr 2011)
+
+  07 Apr 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/7/7.0.12-build-xml.patch, -files/7/7.0.8-build-xml.patch,
+  -files/7/7.0.10-build-xml.patch, -files/7/7.0.11-build-xml.patch,
+  -tomcat-7.0.11.ebuild, +tomcat-7.0.12.ebuild:
+  Bumped to latest version. Removed older version as it contains security
+  issue. Also removed orphaned files.
 
   05 Apr 2011; <elvanor@gentoo.org> files/6/tomcat.init.2:
   Modified init script for bug #361235 / #191611. Removed the --startas
