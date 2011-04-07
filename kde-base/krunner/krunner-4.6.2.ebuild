@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.6.2.ebuild,v 1.1 2011/04/06 14:19:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.6.2.ebuild,v 1.2 2011/04/07 22:11:32 dilfridge Exp $
 
 EAPI=3
 
@@ -31,6 +31,8 @@ DEPEND="${COMMONDEPEND}
 	)
 "
 RDEPEND="${COMMONDEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}"-4.6.2-noxf86misc.patch )
 
 KMEXTRACTONLY="
 	libs/kdm/

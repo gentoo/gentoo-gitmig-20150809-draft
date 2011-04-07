@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.86 2011/04/06 14:19:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.87 2011/04/07 22:11:32 dilfridge Exp $
+
+  07 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  krunner-4.6.2.ebuild, +files/krunner-4.6.2-noxf86misc.patch:
+  Disable automagic linking to x11-libs/libXxf86misc on request from
+  scarabeus
 
 *krunner-4.6.2 (06 Apr 2011)
 
