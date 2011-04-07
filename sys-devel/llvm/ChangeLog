@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.35 2011/03/28 17:31:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.36 2011/04/07 09:29:31 voyageur Exp $
+
+*llvm-2.9 (07 Apr 2011)
+
+  07 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org> +llvm-2.9.ebuild:
+  Version bump
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> llvm-2.8-r2.ebuild:
   Stable on amd64 wrt bug #360553
