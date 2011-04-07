@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/openpam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.16 2010/05/02 11:20:56 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.17 2011/04/07 05:53:06 ulm Exp $
+
+  07 Apr 2011; Ulrich Mueller <ulm@gentoo.org> openpam-20071221.ebuild:
+  Don't PROVIDE virtual/pam. Update blocker. Bug 358903.
 
   02 May 2010; Alexis Ballier <aballier@gentoo.org> openpam-20071221.ebuild:
   Various improvements to the ebuild by Toffanin [Gentoo/FreeBSD AT]

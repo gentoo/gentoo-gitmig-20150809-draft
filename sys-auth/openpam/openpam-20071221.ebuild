@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.6 2010/05/02 11:20:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.7 2011/04/07 05:53:06 ulm Exp $
 
 EAPI="2"
 inherit multilib autotools
@@ -14,13 +14,11 @@ SLOT="0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
 IUSE="debug vim-syntax"
 
-RDEPEND="!virtual/pam"
+RDEPEND="!sys-libs/pam"
 DEPEND="sys-devel/make
 	dev-lang/perl"
 PDEPEND="sys-auth/pambase
 	vim-syntax? ( app-vim/pam-syntax )"
-
-PROVIDE="virtual/pam"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
