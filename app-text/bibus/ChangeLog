@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.27 2011/04/07 04:48:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.28 2011/04/07 18:43:47 bicatali Exp $
+
+  07 Apr 2011; Sébastien Fabbro <bicatali@gentoo.org> bibus-1.5.1.ebuild:
+  Changed from virtual/ooo back to use source openoffice or libreoffice because
+  of bug #288232
 
   07 Apr 2011; Sébastien Fabbro <bicatali@gentoo.org> bibus-1.5.1.ebuild:
   Now depends on virtual/ooo
