@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Config-Grammar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Grammar/ChangeLog,v 1.1 2011/03/14 09:16:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Grammar/ChangeLog,v 1.2 2011/04/07 18:52:08 jer Exp $
+
+  07 Apr 2011; Jeroen Roovers <jer@gentoo.org> Config-Grammar-1.100.0.ebuild:
+  Marked ~hppa (bug #361615).
 
 *Config-Grammar-1.100.0 (14 Mar 2011)
 
