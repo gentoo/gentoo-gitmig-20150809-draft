@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.3.ebuild,v 1.14 2011/04/07 05:47:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.3.ebuild,v 1.15 2011/04/07 05:50:56 ulm Exp $
 
 EAPI="3"
 
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 PDEPEND="sys-auth/pambase
 	vim-syntax? ( app-vim/pam-syntax )"
 RDEPEND="${RDEPEND}
+	!sys-auth/openpam
 	!sys-auth/pam_userdb"
 
 S="${WORKDIR}/${MY_P}"
