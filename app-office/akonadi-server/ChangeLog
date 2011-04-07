@@ -1,6 +1,11 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.50 2011/04/05 23:51:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.51 2011/04/07 13:09:32 scarabeus Exp $
+
+  07 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/akonadi-server-1.4.0-remove-sqlite-version-assert.patch,
+  -akonadi-server-1.4.1.ebuild, -akonadi-server-1.5.0.ebuild:
+  Drop old.
 
 *akonadi-server-1.5.2 (05 Apr 2011)
 
