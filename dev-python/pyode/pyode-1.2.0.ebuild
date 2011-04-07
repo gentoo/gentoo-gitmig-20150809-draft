@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.2.0.ebuild,v 1.5 2009/11/21 18:02:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.2.0.ebuild,v 1.6 2011/04/07 16:40:18 arfrever Exp $
+
+EAPI="3"
 
 inherit distutils
 
