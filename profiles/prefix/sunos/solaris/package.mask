@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.26 2011/03/04 04:23:51 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.27 2011/04/07 18:47:44 darkside Exp $
 
 
 # Jonathan Callen <abcd@gentoo.org> (04 Mar 2011)
@@ -34,13 +34,8 @@
 
 # Fabian Groffen <grobian@gentoo.org> (29 Nov 2009)
 # segfaults during compilation, bug #294479
-~app-editors/emacs-23.1
 ~app-editors/emacs-23.2
 =virtual/emacs-23
-
-# Fabian Groffen <grobian@gentoo.org> (28 Jun 2009)
-# undefined reference to `Rule::Cache::PR_PNGAuto'
-=media-gfx/sam2p-0.46
 
 # Fabian Groffen <grobian@gentoo.org> (02 Feb 2009)
 # Fails to compile, complaining about a missing target for gmon.o, maybe

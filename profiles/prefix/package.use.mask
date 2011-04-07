@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.15 2010/10/23 15:40:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.16 2011/04/07 18:47:43 darkside Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (23 Oct 2010)
 # IPC relies on pipes, selects, polls, and more stuff that Python is
@@ -41,7 +41,6 @@ dev-lang/python berkdb
 # Jeremy Olexa <darkside@gentoo.org> (02 Sep 2009)
 # these don't work, because they rely on the host having sufficient xorg-server
 # version.
-xfce-base/xfce4-settings keyboard
 xfce-base/xfce4-meta session
 
 # Jeremy Olexa <darkside@gentoo.org> (13 Feb 2009)

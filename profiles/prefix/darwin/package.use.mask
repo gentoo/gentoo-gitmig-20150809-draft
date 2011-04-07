@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.use.mask,v 1.5 2011/02/16 21:03:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.use.mask,v 1.6 2011/04/07 18:47:44 darkside Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (16 Feb 2011)
 # De-mask of OSX-specific USE-flags that are useful for VLC
@@ -21,7 +21,3 @@ media-video/mplayer dvb esd lirc svga jack joystick matrox real win32codecs
 # Elias Pipping <pipping@gentoo.org> (16 Nov 2007)
 # make fails
 sys-devel/gcc objc-gc
-
-# media-gfx/graphviz fails to install on systems with dynamic library
-# extensions other than .so, see also bug #188120
-~media-gfx/graphviz-2.12 perl python ruby tcl

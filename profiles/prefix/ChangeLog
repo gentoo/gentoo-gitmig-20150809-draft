@@ -1,6 +1,15 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.258 2011/04/06 17:34:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.259 2011/04/07 18:47:43 darkside Exp $
+
+  07 Apr 2011; Jeremy Olexa <darkside@gentoo.org>
+  -darwin/macos/10.3/package.mask, darwin/macos/10.5/ppc/package.use.mask,
+  darwin/macos/10.5/x86/package.use.mask,
+  darwin/macos/10.6/x64/package.use.mask,
+  darwin/macos/10.6/x86/package.use.mask, darwin/package.mask,
+  darwin/package.use.mask, package.mask, package.use.mask,
+  -sunos/solaris/5.11/x64/package.mask, sunos/solaris/package.mask:
+  Cleanup invalid/obsolete package.mask entries
 
   06 Apr 2011; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/5.10/sparc/package.mask:
