@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dolphin-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.11 2011/04/06 14:18:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.12 2011/04/07 16:03:40 xarthisius Exp $
+
+  07 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  dolphin-plugins-4.6.2.ebuild:
+  Marked ~ppc/~ppc64 wrt #362305
 
 *dolphin-plugins-4.6.2 (06 Apr 2011)
 
