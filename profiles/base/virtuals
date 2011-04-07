@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.146 2011/04/06 06:00:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.147 2011/04/07 05:56:41 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -23,9 +23,6 @@ virtual/linux-sources			sys-kernel/gentoo-sources
 virtual/logger				app-admin/metalog
 virtual/man				sys-apps/man
 virtual/modutils			sys-apps/module-init-tools
-# Only have this for >=pam-0.78, as we want to make use of the 'include'
-# directive to phase out pam_stack.
-virtual/pam				>=sys-libs/pam-0.78
 virtual/portage				sys-apps/portage
 virtual/skkserv				app-i18n/skkserv
 virtual/ssh				net-misc/openssh
