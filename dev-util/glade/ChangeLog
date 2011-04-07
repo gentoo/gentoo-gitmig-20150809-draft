@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.130 2011/03/16 10:23:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.131 2011/04/07 14:19:28 eva Exp $
+
+*glade-3.8.0 (07 Apr 2011)
+
+  07 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> +glade-3.8.0.ebuild:
+  Version bump, bug #338369.
 
   16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   glade-2.12.2-r1.ebuild, glade-3.6.7.ebuild:
