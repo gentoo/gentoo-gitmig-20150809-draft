@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.180 2011/04/06 14:19:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.181 2011/04/07 21:00:15 dilfridge Exp $
+
+  07 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdeartwork-kscreensaver-4.6.2.ebuild, metadata.xml:
+  Fix automagic dependency on libkexiv2, bug 362521
 
 *kdeartwork-kscreensaver-4.6.2 (06 Apr 2011)
 

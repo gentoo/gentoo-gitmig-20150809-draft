@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.6.2.ebuild,v 1.1 2011/04/06 14:19:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.6.2.ebuild,v 1.2 2011/04/07 21:00:15 dilfridge Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 
 DESCRIPTION="Extra screensavers for kde"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug +eigen opengl xscreensaver"
+IUSE="debug +eigen +kexiv2 opengl xscreensaver"
 
 # libkworkspace - only as a stub to provide KDE4Workspace config
 RDEPEND="
@@ -23,6 +23,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	eigen? ( dev-cpp/eigen:2 )
+	kexiv2? ( $(add_kdebase_dep libkexiv2) )
 "
 
 PATCHES=( "${FILESDIR}/${PN}-xscreensaver.patch"
@@ -40,6 +41,7 @@ src_configure() {
 	mycmakeargs=(
 		-DKSCREENSAVER_SOUND_SUPPORT=ON
 		$(cmake-utils_use_with eigen Eigen2)
+		$(cmake-utils_use_with kexiv2 Kexiv2)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with xscreensaver)
 	)
