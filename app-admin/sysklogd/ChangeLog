@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysklogd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.72 2010/11/20 17:39:33 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.73 2011/04/07 07:51:22 ultrabug Exp $
+
+  07 Apr 2011; Ultrabug <ultrabug@gentoo.org>
+  sysklogd-1.4.2_pre20061230-r2.ebuild, sysklogd-1.5.ebuild,
+  sysklogd-1.5-r1.ebuild:
+  migrate ebuilds to new-style virtual, wrt #358881
 
 *sysklogd-1.5-r1 (20 Nov 2010)
 

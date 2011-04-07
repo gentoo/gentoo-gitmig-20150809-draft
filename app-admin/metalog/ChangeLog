@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.92 2010/05/08 00:12:19 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.93 2011/04/07 07:50:42 ultrabug Exp $
+
+  07 Apr 2011; Ultrabug <ultrabug@gentoo.org> metalog-1.ebuild:
+  migrate ebuilds to new-style virtual, wrt #358881
 
   08 May 2010; Mike Frysinger <vapier@gentoo.org> metalog-1.ebuild:
   Stable for amd64 #308769.

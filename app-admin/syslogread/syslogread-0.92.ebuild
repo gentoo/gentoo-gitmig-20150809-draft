@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.9 2011/01/29 23:06:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.10 2011/04/07 07:51:57 ultrabug Exp $
 
 EAPI="2"
 
@@ -17,7 +17,6 @@ IUSE=""
 
 DEPEND=">=dev-libs/bglibs-1.106"
 RDEPEND="virtual/daemontools"
-PROVIDE="virtual/logger"
 
 pkg_setup() {
 	enewgroup syslog

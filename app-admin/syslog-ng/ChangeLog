@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.286 2011/03/31 20:38:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.287 2011/04/07 07:51:42 ultrabug Exp $
+
+  07 Apr 2011; Ultrabug <ultrabug@gentoo.org> syslog-ng-3.0.10.ebuild,
+  syslog-ng-3.1.4.ebuild, syslog-ng-3.2.2.ebuild:
+  migrate ebuilds to new-style virtual, wrt #358881
 
   31 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org>
   -syslog-ng-3.0.8.ebuild, -syslog-ng-3.0.9.ebuild, -syslog-ng-3.1.2.ebuild,

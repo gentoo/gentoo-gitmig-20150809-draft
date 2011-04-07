@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.22.1.ebuild,v 1.4 2010/06/17 20:00:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.22.1.ebuild,v 1.5 2011/04/07 07:50:20 ultrabug Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ DEPEND="kerberos? ( virtual/krb5 )
 	snmp? ( net-analyzer/net-snmp )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/logger"
 
 BRANCH="3-stable"
 

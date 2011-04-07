@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/socklog-2.0.2.ebuild,v 1.2 2009/10/11 23:53:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/socklog-2.0.2.ebuild,v 1.3 2011/04/07 07:51:02 ultrabug Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -16,7 +16,6 @@ IUSE="static"
 DEPEND=""
 RDEPEND="${DEPEND}
 	>=sys-process/runit-0.13.1"
-PROVIDE="virtual/logger"
 
 S="${WORKDIR}"/admin/${P}
 

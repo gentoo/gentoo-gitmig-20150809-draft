@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.1.4.ebuild,v 1.7 2011/03/01 15:07:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.1.4.ebuild,v 1.8 2011/04/07 07:51:42 ultrabug Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils
@@ -34,7 +34,6 @@ DEPEND="${RDEPEND}
 	static? ( >=dev-libs/eventlog-0.2[static-libs] )
 	dev-util/pkgconfig
 	sys-devel/flex"
-PROVIDE="virtual/logger"
 
 src_prepare() {
 	sed -i \

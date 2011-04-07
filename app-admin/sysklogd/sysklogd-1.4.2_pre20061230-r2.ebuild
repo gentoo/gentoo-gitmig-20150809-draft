@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230-r2.ebuild,v 1.5 2008/05/11 03:41:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2_pre20061230-r2.ebuild,v 1.6 2011/04/07 07:51:22 ultrabug Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -21,7 +21,6 @@ RESTRICT="test"
 DEPEND=""
 RDEPEND="dev-lang/perl
 	sys-apps/debianutils"
-PROVIDE="virtual/logger"
 
 S=${WORKDIR}/${MY_P}
 

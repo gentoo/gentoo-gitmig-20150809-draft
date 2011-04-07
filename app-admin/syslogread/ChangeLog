@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslogread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.8 2011/01/29 23:06:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.9 2011/04/07 07:51:57 ultrabug Exp $
+
+  07 Apr 2011; Ultrabug <ultrabug@gentoo.org> syslogread-0.92.ebuild:
+  migrate ebuilds to new-style virtual, wrt #358881
 
   29 Jan 2011; Thilo Bangert <bangert@gentoo.org> syslogread-0.92.ebuild:
   dep on virtual/daemontools
