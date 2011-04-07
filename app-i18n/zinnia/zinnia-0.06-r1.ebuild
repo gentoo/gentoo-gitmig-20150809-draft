@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r1.ebuild,v 1.1 2011/04/07 23:02:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r1.ebuild,v 1.2 2011/04/07 23:02:45 flameeyes Exp $
 
 EAPI="3"
 
@@ -63,6 +63,7 @@ src_test() { :; }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	find "${D}" -name '*.la' -delete
 
 	if use perl ; then
 		(
