@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.737 2011/04/07 07:55:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.738 2011/04/07 20:19:14 dilfridge Exp $
+
+*kdelibs-4.6.2-r1 (07 Apr 2011)
+
+  07 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdelibs-4.6.2.ebuild, +kdelibs-4.6.2-r1.ebuild,
+  -files/kdelibs-4.6.2-safestrigi.patch:
+  Remove safestrigi patch, since it breaks tags in dolphin, bug 362513
 
   07 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kdelibs-4.6.2.ebuild, +files/kdelibs-4.6.2-nonepomuk.patch:

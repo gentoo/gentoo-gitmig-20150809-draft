@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2.ebuild,v 1.2 2011/04/07 07:55:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r1.ebuild,v 1.1 2011/04/07 20:19:14 dilfridge Exp $
 
 EAPI=3
 
@@ -136,7 +136,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.5.90-mimetypes.patch"
 	"${FILESDIR}/${PN}-4.4.90-xslt.patch"
 	"${FILESDIR}/${PN}-4.6.0-kateacc.patch"
-	"${FILESDIR}/${PN}-4.6.2-safestrigi.patch"
 	"${FILESDIR}/${PN}-4.6.2-nonepomuk.patch"
 )
 
