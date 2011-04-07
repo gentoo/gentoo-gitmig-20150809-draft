@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/tktable-2.9.ebuild,v 1.5 2006/06/03 19:47:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/tktable-2.9.ebuild,v 1.6 2011/04/07 15:01:37 jlec Exp $
 
 MY_P="Tktable${PV}"
 DESCRIPTION="full-featured 2D table widget"
 HOMEPAGE="http://tktable.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tktable/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 KEYWORDS="~amd64 ppc x86"
 SLOT="0"
 IUSE=""
