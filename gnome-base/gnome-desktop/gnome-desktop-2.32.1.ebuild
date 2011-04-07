@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1.ebuild,v 1.8 2011/03/22 19:09:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1.ebuild,v 1.9 2011/04/07 14:13:50 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
+PYTHON_DEPEND="2"
 
-inherit gnome2
+inherit gnome2 python
 
 DESCRIPTION="Libraries for the gnome desktop that are not part of the UI"
 HOMEPAGE="http://www.gnome.org/"
@@ -36,7 +37,10 @@ PDEPEND=">=dev-python/pygtk-2.8:2
 # eventually libXrandr shouldn't RDEPEND on randrproto)
 
 pkg_setup() {
+	python_set_active_version 2
+
 	G2CONF="${G2CONF}
+		PYTHON=$(PYTHON -a)
 		--with-gnome-distributor=Gentoo
 		--disable-scrollkeeper
 		--disable-static
