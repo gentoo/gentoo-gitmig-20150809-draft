@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.5 2010/09/13 21:13:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.6 2011/04/07 04:48:37 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ IUSE="mysql"
 # Most of this mess is designed to give the choice of sqlite or mysql
 # but prefer sqlite. We also need to default to sqlite if neither is requested.
 # bibus fails to start with app-office/openoffice-bin (bug #288232).
-RDEPEND="app-office/openoffice
+RDEPEND="virtual/ooo
 	=dev-python/wxpython-2.8*
 	dev-python/pysqlite
 	dev-db/sqliteodbc
