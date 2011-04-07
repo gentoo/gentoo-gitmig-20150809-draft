@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.04.ebuild,v 1.9 2010/11/28 17:19:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.04.ebuild,v 1.10 2011/04/07 20:41:09 arfrever Exp $
 
+EAPI="2"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
@@ -18,10 +19,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="python"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.15-libtool.patch #99593
 
 	elibtoolize
@@ -33,11 +31,14 @@ src_unpack() {
 	mv python/README{,.python}
 }
 
-src_compile() {
+src_configure() {
 	# file uses things like strndup() and wcwidth()
 	append-flags -D_GNU_SOURCE
 
-	econf || die
+	econf
+}
+
+src_compile() {
 	emake || die
 
 	use python && cd python && distutils_src_compile
