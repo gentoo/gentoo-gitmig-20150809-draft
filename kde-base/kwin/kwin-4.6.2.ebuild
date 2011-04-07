@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.6.2.ebuild,v 1.1 2011/04/06 14:19:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.6.2.ebuild,v 1.2 2011/04/07 17:57:54 scarabeus Exp $
 
 EAPI=3
 
@@ -45,6 +45,7 @@ KMEXTRACTONLY="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch"
+	"${FILESDIR}/${PN}-fix-opengl.patch"
 )
 
 src_prepare() {
