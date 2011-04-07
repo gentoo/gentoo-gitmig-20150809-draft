@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.147 2011/04/07 05:56:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.148 2011/04/07 08:15:27 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -20,7 +20,6 @@ virtual/dhcpc				net-misc/dhcpcd
 virtual/inetd				sys-apps/xinetd
 virtual/libc				sys-libs/glibc
 virtual/linux-sources			sys-kernel/gentoo-sources
-virtual/logger				app-admin/metalog
 virtual/man				sys-apps/man
 virtual/modutils			sys-apps/module-init-tools
 virtual/portage				sys-apps/portage
