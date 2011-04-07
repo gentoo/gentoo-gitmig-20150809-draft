@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.6 2011/04/07 04:25:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.7 2011/04/07 04:27:06 vapier Exp $
 
 EAPI="2"
 
@@ -23,7 +23,14 @@ fi
 
 LICENSE="OSL-1.1"
 SLOT="0"
-IUSE=""
+IUSE="gtk xml"
+
+RDEPEND="gtk? ( x11-libs/gtk+ )
+	xml? ( dev-libs/libxml2 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+
+usex() { use $1 && echo ${2:-yes} || echo ${3:-no} ; }
 
 src_prepare() {
 	sed -i \
@@ -31,7 +38,7 @@ src_prepare() {
 		-e "/^LIBDIR=/s:/lib:/$(get_libdir):" \
 		-e '/^CFLAGS =/{s:=:+=:;s:-O2 -finline-functions::}' \
 		Makefile || die
-	export MAKEOPTS+=" V=1 CC=$(tc-getCC)"
+	export MAKEOPTS+=" V=1 CC=$(tc-getCC) HAVE_GTK2=$(usex gtk) HAVE_LIBXML=$(usex xml)"
 }
 
 src_install() {
