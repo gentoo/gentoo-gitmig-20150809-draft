@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.118 2011/04/02 14:27:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.119 2011/04/07 19:02:38 jer Exp $
+
+  07 Apr 2011; Jeroen Roovers <jer@gentoo.org> DirectFB-1.4.9.ebuild:
+  Stable for HPPA (bug #360709).
 
   02 Apr 2011; Raúl Porcel <armin76@gentoo.org> DirectFB-1.4.9.ebuild:
   arm/ia64/sh/x86 stable wrt #360709
