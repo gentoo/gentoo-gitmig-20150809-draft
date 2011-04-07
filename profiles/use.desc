@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.454 2011/03/29 12:35:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.455 2011/04/07 08:40:54 scarabeus Exp $
 
 # Keep them sorted
 
@@ -392,6 +392,7 @@ xinetd - Add support for the xinetd super-server
 xml - Add support for XML files
 xmlrpc - Support for xml-rpc library
 xmp - Enable support for Extensible Metadata Platform (Adobe XMP)
+xmpp - Enable support for Extensible Messaging and Presence Protocol (XMPP) formerly known as Jabber
 xosd - Sends display using the X On Screen Display library
 xpm - Adds support for XPM graphics format
 xscreensaver - Adds support for XScreenSaver extension
