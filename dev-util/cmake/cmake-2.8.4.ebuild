@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4.ebuild,v 1.11 2011/03/27 14:34:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4.ebuild,v 1.12 2011/04/07 18:15:09 scarabeus Exp $
 
 EAPI=3
 
-inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils
+inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils virtualx
 
 MY_P="${PN}-$(replace_version_separator 3 - ${MY_PV})"
 
@@ -115,7 +115,7 @@ src_compile() {
 	use emacs && elisp-compile Docs/cmake-mode.el
 }
 
-src_test() {
+_run_test() {
 	# fix OutDir test
 	# this is altered thanks to our eclass
 	sed -i -e 's:#IGNORE ::g' "${S}"/Tests/OutDir/CMakeLists.txt || die
@@ -128,6 +128,10 @@ src_test() {
 		-E BootstrapTest SimpleCOnly_sdcc \
 		|| die "Tests failed"
 	popd > /dev/null
+}
+
+src_test() {
+	VIRTUALX_COMMAND="_run_test" virtualmake
 }
 
 src_install() {
