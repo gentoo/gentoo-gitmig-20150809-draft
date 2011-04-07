@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/remoteobjects
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/ChangeLog,v 1.1 2011/03/14 01:50:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/ChangeLog,v 1.2 2011/04/07 17:58:01 arfrever Exp $
+
+  07 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  remoteobjects-99999999.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *remoteobjects-99999999 (14 Mar 2011)
 
