@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/sparse
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.39 2010/12/09 16:34:54 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.40 2011/04/07 04:25:57 vapier Exp $
+
+  07 Apr 2011; Mike Frysinger <vapier@gentoo.org> sparse-0.4.3.ebuild,
+  sparse-9999.ebuild:
+  Respect user CFLAGS #361853 by Nathan Phillip Brink.
 
 *sparse-0.4.3 (09 Dec 2010)
 

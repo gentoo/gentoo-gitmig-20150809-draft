@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.1 2010/12/09 16:34:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.2 2011/04/07 04:25:57 vapier Exp $
 
 EAPI="2"
 
-inherit eutils multilib flag-o-matic toolchain-funcs
+inherit multilib toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/devel/sparse/sparse.git"
 	inherit git
@@ -29,8 +29,8 @@ src_prepare() {
 	sed -i \
 		-e '/^PREFIX=/s:=.*:=/usr:' \
 		-e "/^LIBDIR=/s:/lib:/$(get_libdir):" \
+		-e '/^CFLAGS =/{s:=:+=:;s:-O2 -finline-functions::}' \
 		Makefile || die
-	append-flags -fno-strict-aliasing
 	export MAKEOPTS+=" V=1 CC=$(tc-getCC)"
 }
 
