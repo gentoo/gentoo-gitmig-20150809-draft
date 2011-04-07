@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.64 2010/04/13 11:50:36 the_paya Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.65 2011/04/07 07:52:12 ultrabug Exp $
+
+  07 Apr 2011; Ultrabug <ultrabug@gentoo.org> freebsd-usbin-7.2.ebuild,
+  freebsd-usbin-8.0.ebuild:
+  migrate ebuilds to new-style virtual, wrt #358881
 
   13 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
   files/freebsd-usbin-7.0-nowrap.patch, freebsd-usbin-7.2.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.0.ebuild,v 1.3 2010/04/13 11:50:36 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.0.ebuild,v 1.4 2011/04/07 07:52:12 ultrabug Exp $
 
 EAPI=2
 
@@ -36,8 +36,6 @@ DEPEND="${RDEPEND}
 	!build? ( =sys-freebsd/freebsd-sources-${RV}* )
 	sys-apps/texinfo
 	sys-devel/flex"
-
-PROVIDE="virtual/logger"
 
 S="${WORKDIR}/usr.sbin"
 
