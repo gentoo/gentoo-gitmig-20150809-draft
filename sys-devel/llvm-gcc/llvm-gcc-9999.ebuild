@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-9999.ebuild,v 1.2 2010/08/26 07:04:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-9999.ebuild,v 1.3 2011/04/07 09:56:13 voyageur Exp $
 
 EAPI=3
 inherit subversion libtool flag-o-matic gnuconfig multilib
@@ -16,15 +16,14 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/llvm-gcc-4.2/trunk"
 LICENSE="GPL-2"
 SLOT=0
 KEYWORDS=""
-IUSE="bootstrap fortran multilib nls objc objc++ test"
+IUSE="bootstrap fortran multilib nls objc objc++"
+RESTRICT="test"
 
 RDEPEND=">=sys-devel/llvm-$PV"
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	>=sys-devel/bison-1.875
-	test? ( dev-util/dejagnu
-		sys-devel/autogen )"
+	>=sys-devel/bison-1.875"
 
 src_prepare() {
 	#we keep the directory structure suggested by README.LLVM,
@@ -80,11 +79,6 @@ src_compile() {
 	emake ${BUILDOPTIONS} || die "emake failed"
 }
 
-src_test() {
-	cd "${S}"/obj
-	emake -j1 -k check || ewarn "check failed and that sucks :("
-}
-
 src_install() {
 	cd "${S}"/obj
 
@@ -97,7 +91,8 @@ src_install() {
 			&& rm -f "${x}"
 	done
 
-	emake DESTDIR="${D}" install || die "installation failed"
+	# Parallel install broken, package dropped in next version => -j1
+	emake -j1 DESTDIR="${D}" install || die "installation failed"
 	rm -rf "${ED}"/usr/share/man/man7
 	if ! use nls; then
 		einfo "nls USE flag disabled, not installing locale files"

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.8.ebuild,v 1.1 2010/10/06 09:17:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm-gcc/llvm-gcc-2.9.ebuild,v 1.1 2011/04/07 09:56:13 voyageur Exp $
 
 EAPI=3
 inherit libtool flag-o-matic gnuconfig multilib
@@ -98,7 +98,8 @@ src_install() {
 			&& rm -f "${x}"
 	done
 
-	emake DESTDIR="${D}" install || die "installation failed"
+	# Parallel install broken, package dropped in next version => -j1
+	emake -j1 DESTDIR="${D}" install || die "installation failed"
 	rm -rf "${ED}"/usr/share/man/man7
 	if ! use nls; then
 		einfo "nls USE flag disabled, not installing locale files"
