@@ -1,6 +1,11 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.114 2011/03/06 11:58:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.115 2011/04/07 09:24:46 scarabeus Exp $
+
+*skype-2.2.0.25 (07 Apr 2011)
+
+  07 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> +skype-2.2.0.25.ebuild:
+  Version bump. Fixes bug #362353.
 
   06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> skype-2.1.0.81.ebuild:
   Stable on amd64 wrt bug #357475
