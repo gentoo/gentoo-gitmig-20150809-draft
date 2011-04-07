@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r1.ebuild,v 1.2 2011/03/29 12:54:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r1.ebuild,v 1.3 2011/04/07 23:31:10 aidecoe Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ DEPEND=">=media-libs/libpng-1.2.16
 	video_cards_radeon? ( x11-libs/libdrm[video_cards_radeon] )
 	"
 RDEPEND="${DEPEND}
-	>=sys-kernel/dracut-007
+	>=sys-kernel/dracut-008-r1[dracut_modules_plymouth]
 	"
 
 DOCS=(AUTHORS ChangeLog NEWS README TODO)
@@ -77,8 +77,11 @@ pkg_postinst() {
 	elog "Plymouth initramfs utilities scripts are located in"
 	elog "/usr/libexec/plymouth"
 	elog ""
-	elog "Follow instructions on <http://en.gentoo-wiki.com/wiki/Plymouth> to"
-	elog "setup Plymouth."
+	elog "Follow instructions on"
+	elog ""
+	elog "  http://dev.gentoo.org/~aidecoe/doc/en/plymouth.xml"
+	elog ""
+	elog "to setup Plymouth."
 	echo
 	ewarn "You need to disable 'interactive' feature either in /etc/conf.d/rc"
 	ewarn "(baselayout-1) or /etc/rc.conf (OpenRC) to make Plymouth work"
