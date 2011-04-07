@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.334 2011/04/07 01:09:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.335 2011/04/07 05:18:20 vapier Exp $
+
+  07 Apr 2011; Mike Frysinger <vapier@gentoo.org> util-linux-2.19.ebuild,
+  util-linux-9999.ebuild:
+  Add USE=ncurses to control the lib usage #221941 by Jim Kukunas and Mart
+  Raudsepp.
 
   07 Apr 2011; Mike Frysinger <vapier@gentoo.org> util-linux-2.19.ebuild,
   +files/util-linux-2.19-old-libc.patch:
