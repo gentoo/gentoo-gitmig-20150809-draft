@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.101-r1.ebuild,v 1.1 2011/03/21 11:21:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.101-r1.ebuild,v 1.2 2011/04/07 08:36:04 abcd Exp $
 
 EAPI=3
 inherit autotools eutils
@@ -16,7 +16,7 @@ IUSE="doc examples +introspection"
 
 # XXX: Change to gtk3 when it gets added to ~arch
 # Strict dep on the same polkit shouldn't be needed, but we can't be sure
-RDEPEND=">=x11-libs/gtk+-2.17.1:2
+RDEPEND=">=x11-libs/gtk+-2.17.1:2[introspection?]
 	>=sys-auth/polkit-${PV}
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	!lxde-base/lxpolkit"
