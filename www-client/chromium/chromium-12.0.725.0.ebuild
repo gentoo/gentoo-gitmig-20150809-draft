@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.725.0.ebuild,v 1.1 2011/04/06 10:19:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.725.0.ebuild,v 1.2 2011/04/07 06:39:17 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -318,7 +318,8 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 
-	# For more info see bugs #292201 and bug #352263.
+	# For more info see bug #292201, bug #352263, bug #361859.
+	elog
 	elog "Depending on your desktop environment, you may need"
 	elog "to install additional packages to get icons on the Downloads page."
 	elog
@@ -326,7 +327,21 @@ pkg_postinst() {
 	elog
 	elog "For other desktop environments, try one of the following:"
 	elog " - x11-themes/gnome-icon-theme"
-	elog " - x11-themes/xfce4-icon-theme"
+	elog " - x11-themes/tango-icon-theme"
+
+	# For more info see bug #359153.
+	elog
+	elog "Some web pages may require additional fonts to display properly."
+	elog "Try installing some of the following packages if some characters"
+	elog "are not displayed properly:"
+	elog " - media-fonts/arphicfonts"
+	elog " - media-fonts/bitstream-cyberbit"
+	elog " - media-fonts/droid"
+	elog " - media-fonts/ipamonafont"
+	elog " - media-fonts/ja-ipafonts"
+	elog " - media-fonts/takao-fonts"
+	elog " - media-fonts/wqy-microhei"
+	elog " - media-fonts/wqy-zenhei"
 }
 
 pkg_postrm() {
