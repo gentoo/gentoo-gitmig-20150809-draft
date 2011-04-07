@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.0.0.ebuild,v 1.2 2011/03/26 16:39:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.0.0.ebuild,v 1.3 2011/04/07 18:15:51 ayoy Exp $
 
 EAPI="2"
 
@@ -22,8 +22,7 @@ IUSE="debug kde"
 
 QT_PV="4.6.0"
 
-DEPEND=">=dev-libs/boost-1.41.0[python]
-	>=dev-python/shiboken-${PV}
+DEPEND=">=dev-python/shiboken-${PV}
 	>=x11-libs/qt-core-${QT_PV}
 	>=x11-libs/qt-assistant-${QT_PV}
 	>=x11-libs/qt-gui-${QT_PV}
