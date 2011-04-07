@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.24 2011/04/05 14:10:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.25 2011/04/07 19:06:24 jer Exp $
+
+  07 Apr 2011; Jeroen Roovers <jer@gentoo.org> babl-0.1.4.ebuild:
+  Stable for HPPA (bug #360595).
 
   05 Apr 2011; Olivier Crête <tester@gentoo.org> babl-0.1.4.ebuild:
   Stable on amd64, bug #360595

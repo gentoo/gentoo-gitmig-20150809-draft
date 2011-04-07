@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4.ebuild,v 1.7 2011/04/05 14:10:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4.ebuild,v 1.8 2011/04/07 19:06:24 jer Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="altivec +introspection sse mmx"
 
 RDEPEND="introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
