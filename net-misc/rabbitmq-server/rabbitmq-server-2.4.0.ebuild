@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.0.0.ebuild,v 1.2 2010/08/29 17:36:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.4.0.ebuild,v 1.1 2011/04/07 15:23:19 hollow Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ src_compile() {
 
 src_install() {
 	# erlang module
-	local targetdir="/usr/$(get_libdir)/erlang/lib/${P}"
+	local targetdir="/usr/$(get_libdir)/erlang/lib/rabbitmq_server-${PV}"
 
 	einfo "Setting correct RABBITMQ_HOME in scripts"
 	sed -e "s:^RABBITMQ_HOME=.*:RABBITMQ_HOME=\"${targetdir}\":g" \
@@ -61,7 +61,7 @@ src_install() {
 	dodir /var/lib/rabbitmq{,/mnesia}
 
 	# install the init script
-	newinitd "${FILESDIR}"/rabbitmq-server.init-r1 rabbitmq
+	newinitd "${FILESDIR}"/rabbitmq-server.init-r2 rabbitmq
 
 	# install documentation
 	doman docs/*.[15]
