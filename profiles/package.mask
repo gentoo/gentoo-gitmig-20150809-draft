@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12661 2011/04/06 17:33:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12662 2011/04/07 13:42:10 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,13 +38,6 @@
 # Jory A. Pratt <anarchy@gentoo.org> (04 Apr 2011)
 # Masked for testing. 
 >=mail-client/thunderbird-3.3_alpha3
-
-# Samuli Suominen <ssuominen@gentoo.org> (03 Apr 2011)
-# Masked for testing. Bugs 358919, 361731.
-# These shouldn't have any results before unmasking:
-# http://tinderbox.dev.gentoo.org/misc/dindex/media-video/ffmpeg
-# http://tinderbox.dev.gentoo.org/misc/rindex/media-video/ffmpeg
-media-video/libav
 
 # Ryan Hill <dirtyepic@gentoo.org> (02 Apr 2011)
 # Masked for testing
