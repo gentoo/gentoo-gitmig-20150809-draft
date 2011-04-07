@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.1.ebuild,v 1.8 2011/03/22 19:09:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.1.ebuild,v 1.9 2011/04/07 15:43:19 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -16,6 +16,7 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~am
 IUSE="eds"
 
 # TODO: appindicator
+# libgnomekbd-2.91 breaks API/ABI
 RDEPEND="x11-libs/libXft
 	>=x11-libs/libXi-1.2
 	>=x11-libs/gtk+-2.20:2
@@ -28,6 +29,7 @@ RDEPEND="x11-libs/libXft
 	>=x11-libs/libxklavier-4.0
 	>=x11-wm/metacity-2.23.1
 	>=gnome-base/libgnomekbd-2.31.2
+	<gnome-base/libgnomekbd-2.91.0
 	>=gnome-base/gnome-desktop-2.29.4:2
 	>=gnome-base/gnome-menus-2.11.1
 	gnome-base/gnome-settings-daemon

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r1.ebuild,v 1.1 2011/03/17 21:30:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r1.ebuild,v 1.2 2011/04/07 15:40:02 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -20,11 +20,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug libnotify policykit pulseaudio smartcard"
 
+# libgnomekbd-2.91 breaks API/ABI
 RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.21.2:2
 	>=gnome-base/gconf-2.6.1:2
 	>=gnome-base/libgnomekbd-2.31.2
+	<gnome-base/libgnomekbd-2.91.0
 	>=gnome-base/gnome-desktop-2.29.92:2
 
 	x11-libs/libX11
