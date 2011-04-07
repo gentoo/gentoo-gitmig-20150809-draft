@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/tktable-2.9.ebuild,v 1.6 2011/04/07 15:01:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktable/tktable-2.9.ebuild,v 1.7 2011/04/07 15:04:39 jlec Exp $
 
 MY_P="Tktable${PV}"
+
 DESCRIPTION="full-featured 2D table widget"
 HOMEPAGE="http://tktable.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tktable/${MY_P}.tar.gz"
@@ -13,6 +14,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=dev-lang/tk-8.0"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -24,10 +26,10 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+	econf
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
