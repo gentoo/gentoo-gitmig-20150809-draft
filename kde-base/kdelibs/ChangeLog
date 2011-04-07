@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.738 2011/04/07 20:19:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.739 2011/04/07 21:15:03 dilfridge Exp $
+
+  07 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.6.2-r1.ebuild:
+  Added missing dependency on x11-libs/libXScrnSaver, bug 362521
 
 *kdelibs-4.6.2-r1 (07 Apr 2011)
 
