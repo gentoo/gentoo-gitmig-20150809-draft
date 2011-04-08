@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/tree
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.7 2010/07/21 20:15:22 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/ChangeLog,v 1.8 2011/04/08 13:43:01 jlec Exp $
+
+*tree-2.65-r1 (08 Apr 2011)
+
+  08 Apr 2011; Justin Lecher <jlec@gentoo.org> +tree-2.65-r1.ebuild,
+  +files/tree-2.65-gcc46.patch:
+  Fix include problem with gcc4.6, #362599
 
   21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> tree-2.65.ebuild:
   ppc64 stable wrt #315687
