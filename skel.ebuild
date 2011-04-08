@@ -63,7 +63,7 @@ SLOT="0"
 # instead of relying on an external package.mask file.  Right now, you should
 # set the KEYWORDS variable for every ebuild so that it contains the names of
 # all the architectures with which the ebuild works.  All of the official
-# architectures can be found in the keywords.desc file which is in
+# architectures can be found in the arch.list file which is in
 # /usr/portage/profiles/.  Usually you should just set this to "~x86".  The ~
 # in front of the architecture indicates that the package is new and should be
 # considered unstable until testing proves its stability.  So, if you've
