@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12667 2011/04/08 12:22:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12668 2011/04/08 22:49:41 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -460,7 +460,7 @@ dev-ruby/bones-extras
 # Masked for removal due to libgnome ABI breakage
 # See bug #348644.
 games-arcade/monster-masher
-games-puzzle/gtetrinet
+=games-puzzle/gtetrinet-0.7.11
 
 # Jeremy Olexa <darkside@gentoo.org> (22 Feb 2011)
 # Masked for removal in 60 days by treecleaners
