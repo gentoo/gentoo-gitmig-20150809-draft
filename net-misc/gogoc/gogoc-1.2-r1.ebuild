@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.6 2011/01/04 21:28:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r1.ebuild,v 1.7 2011/04/08 00:10:41 flameeyes Exp $
 
 EAPI=2
 
@@ -30,6 +30,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-overflow.patch
+	epatch "${FILESDIR}"/${P}+gcc-4.6.patch
 
 	# Make the makefile handle linking correctly
 	find . -name Makefile -exec sed -i \

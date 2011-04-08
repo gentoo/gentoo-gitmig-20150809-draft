@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gogoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.9 2011/01/04 21:28:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.10 2011/04/08 00:10:41 flameeyes Exp $
+
+  08 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> gogoc-1.2-r1.ebuild,
+  +files/gogoc-1.2+gcc-4.6.patch:
+  Add patch to fix building with GCC 4.6 (bug #362501).
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> gogoc-1.2-r1.ebuild:
   added ~sparc keyword (bug 340685)
