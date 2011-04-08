@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.1 2011/01/05 03:30:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.2 2011/04/08 01:50:53 flameeyes Exp $
+
+  08 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> files/haveged-init.d:
+  Make the init script provide the entropy service.
 
 *haveged-1.01 (05 Jan 2011)
 
