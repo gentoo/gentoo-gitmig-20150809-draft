@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.4.0.ebuild,v 1.1 2011/04/07 15:23:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.4.1.ebuild,v 1.1 2011/04/08 07:00:32 hollow Exp $
 
 EAPI="2"
 
