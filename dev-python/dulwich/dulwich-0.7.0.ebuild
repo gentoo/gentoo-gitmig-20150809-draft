@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.7.0.ebuild,v 1.6 2011/03/28 21:08:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.7.0.ebuild,v 1.7 2011/04/08 22:43:16 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="http://samba.org/~jelmer/dulwich/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 x86 ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND="dev-python/setuptools
