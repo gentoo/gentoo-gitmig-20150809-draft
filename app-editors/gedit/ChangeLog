@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.327 2011/03/22 18:45:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.328 2011/04/08 12:12:35 eva Exp $
+
+  08 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -gedit-2.30.3.ebuild:
+  Clean up old revision.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gedit-2.30.4.ebuild:
   Marking gedit-2.30.4 ppc stable for bug 353436
