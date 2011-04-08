@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.3 2011/04/07 04:27:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.4 2011/04/08 01:31:23 flameeyes Exp $
 
 EAPI="2"
 
-inherit multilib toolchain-funcs
+inherit eutils multilib flag-o-matic toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/devel/sparse/sparse.git"
 	inherit git
@@ -23,25 +23,42 @@ fi
 
 LICENSE="OSL-1.1"
 SLOT="0"
-IUSE="gtk xml"
+IUSE="gtk xml test"
 
-RDEPEND="gtk? ( x11-libs/gtk+ )
+RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
-
-usex() { use $1 && echo ${2:-yes} || echo ${3:-no} ; }
+	gtk? ( dev-util/pkgconfig )
+	xml? ( dev-util/pkgconfig )"
 
 src_prepare() {
-	sed -i \
-		-e '/^PREFIX=/s:=.*:=/usr:' \
-		-e "/^LIBDIR=/s:/lib:/$(get_libdir):" \
-		-e '/^CFLAGS =/{s:=:+=:;s:-O2 -finline-functions::}' \
-		Makefile || die
-	export MAKEOPTS+=" V=1 CC=$(tc-getCC) HAVE_GTK2=$(usex gtk) HAVE_LIBXML=$(usex xml)"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
+
+mymake() {
+	usex() { use $1 && echo ${2:-yes} || echo ${3:-no} ; }
+
+	emake \
+		V=1 \
+		CC="$(tc-getCC)" \
+		GCC_BASE="$(gcc-config -L | cut -d : -f1)" \
+		HAVE_LIBXML=$(usex xml) \
+		HAVE_GTK2=$(usex gtk) \
+		PREFIX=/usr \
+		LIBDIR="/usr/$(get_libdir)" \
+		DESTDIR="${D}" \
+		"$@" \
+		|| die
+}
+
+src_compile() {
+	append-flags -fno-strict-aliasing
+
+	mymake \
+		$(use test && echo all) all-installable
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	mymake install
 	dodoc FAQ README
 }
