@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.114 2011/04/04 20:02:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.115 2011/04/08 22:23:12 tomka Exp $
+
+  08 Apr 2011; Thomas Kahle <tomka@gentoo.org> djvu-3.5.23.ebuild:
+  x86 stable per bug 358193
 
   04 Apr 2011; Michael Weber <xmw@gentoo.org> djvu-3.5.23.ebuild:
   arm/sparc stable (bug 358193)
