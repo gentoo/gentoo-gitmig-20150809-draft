@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/netbeans-websvccommon-7.0_rc1.ebuild,v 1.1 2011/03/30 09:57:20 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/netbeans-websvccommon-7.0_rc2.ebuild,v 1.1 2011/04/08 22:48:09 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -9,7 +9,7 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Netbeans Web Services Common Cluster"
 HOMEPAGE="http://netbeans.org/"
 SLOT="7.0"
-SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.0/rc1/zip/netbeans-7.0rc1-201103280000-src.zip"
+SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.0/rc2/zip/netbeans-7.0rc2-201104070802-src.zip"
 SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-${SLOT}-build.xml-r1.patch.bz2"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
