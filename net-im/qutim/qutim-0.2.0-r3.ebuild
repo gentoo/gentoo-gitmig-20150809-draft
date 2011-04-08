@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0-r3.ebuild,v 1.6 2011/03/26 16:11:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.2.0-r3.ebuild,v 1.7 2011/04/08 18:26:23 hwoarang Exp $
 
 EAPI="2"
 LANGSLONG="bg_BG cs_CZ de_DE uk_UA"
@@ -16,12 +16,12 @@ SRC_URI="http://qutim.org/uploads/src/${P}.tar.bz2"
 
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="debug histman icq irc jabber gnutls mrim ssl vkontakte yandexnarod"
+IUSE="debug histman icq irc xmpp gnutls mrim ssl vkontakte yandexnarod"
 
 DEPEND="x11-libs/qt-gui:4[debug?]
 	x11-libs/qt-webkit:4
 	|| ( media-libs/phonon x11-libs/qt-phonon )
-	jabber? ( ssl? ( dev-libs/openssl )
+	xmpp? ( ssl? ( dev-libs/openssl )
 		gnutls? ( net-libs/gnutls ) )"
 RDEPEND="${DEPEND}"
 
@@ -41,7 +41,7 @@ src_compile() {
 	cmake-utils_src_compile
 	found=0
 	# build protocol support
-	if use jabber; then
+	if use xmpp; then
 		found=1
 		cd  "${S}"/plugins/jabber || die
 		mkdir build
