@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/evieext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.45 2011/04/04 22:41:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.46 2011/04/08 16:35:55 maekke Exp $
+
+  08 Apr 2011; Markus Meier <maekke@gentoo.org> evieext-1.1.1.ebuild:
+  arm stable, bug #359059
 
   04 Apr 2011; Jeroen Roovers <jer@gentoo.org> evieext-1.1.1.ebuild:
   Stable for HPPA (bug #359059).
