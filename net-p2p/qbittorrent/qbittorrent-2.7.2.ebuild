@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.7.2.ebuild,v 1.1 2011/04/06 08:21:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.7.2.ebuild,v 1.2 2011/04/08 07:52:10 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 
-inherit python confutils qt4-r2 versionator
+inherit python qt4-r2 versionator
 
 MY_P="${P/_/}"
 DESCRIPTION="BitTorrent client in C++ and Qt"
@@ -15,28 +15,25 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+X geoip libnotify"
+IUSE="dbus +X geoip"
 
 QT_MIN="4.7.1"
 # boost version so that we always have thread support
 CDEPEND="net-libs/rb_libtorrent
 	>=x11-libs/qt-core-${QT_MIN}:4
-	>=x11-libs/qt-dbus-${QT_MIN}:4
-	X? ( >=x11-libs/qt-gui-${QT_MIN}:4
-		libnotify? ( >=x11-libs/qt-gui-${QT_MIN}:4[glib] ) )
+	X? ( >=x11-libs/qt-gui-${QT_MIN}:4 )
+	dbus? ( >=x11-libs/qt-dbus-${QT_MIN}:4 )
 	dev-libs/boost"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${CDEPEND}
-	geoip? ( dev-libs/geoip )
-	libnotify? ( x11-libs/libnotify )"
+	geoip? ( dev-libs/geoip )"
 
 DOCS="AUTHORS Changelog NEWS README TODO"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	confutils_use_depend_all libnotify X
 	python_set_active_version 2
 	python_pkg_setup
 }
@@ -51,7 +48,7 @@ src_configure() {
 	local myconf
 	use X         || myconf+=" --disable-gui"
 	use geoip     || myconf+=" --disable-geoip-database"
-	use libnotify || myconf+=" --disable-libnotify"
+	use dbus 	  || myconf+=" --disable-qt-dbus"
 
 	# slotted boost detection, bug #309415
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.34.1")"
