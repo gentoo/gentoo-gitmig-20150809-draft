@@ -1,0 +1,11 @@
+--- ./source/Irrlicht/Makefile.orig
++++ ./source/Irrlicht/Makefile
+@@ -75,7 +75,7 @@
+ LIB_PATH = ../../lib/$(SYSTEM)
+ INSTALL_DIR = /usr/local/lib
+ sharedlib install: SHARED_LIB = libIrrlicht.so
+-staticlib sharedlib: LDFLAGS += --no-export-all-symbols --add-stdcall-alias
++staticlib sharedlib: LDFLAGS += --Wl,--add-stdcall-alias
+ sharedlib: LDFLAGS += -L/usr/X11R6/lib$(LIBSELECT) -lGL -lXxf86vm
+ staticlib sharedlib: CXXINCS += -I/usr/X11R6/include
+ 

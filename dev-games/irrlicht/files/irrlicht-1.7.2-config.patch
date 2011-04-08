@@ -1,5 +1,5 @@
---- include/IrrCompileConfig.h.old	2010-03-14 17:36:10.000000000 +0100
-+++ include/IrrCompileConfig.h	2010-03-14 18:25:01.000000000 +0100
+--- include/IrrCompileConfig.h.old
++++ include/IrrCompileConfig.h
 @@ -176,7 +176,7 @@
  //! Define _IRR_USE_NON_SYSTEM_JPEG_LIB_ to let irrlicht use the jpeglib which comes with irrlicht.
  /** If this is commented out, Irrlicht will try to compile using the jpeg lib installed in the system.
