@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.0.0.ebuild,v 1.1 2011/04/06 12:49:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.0.0.ebuild,v 1.2 2011/04/08 11:40:01 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -32,7 +32,9 @@ RESTRICT="binchecks strip"
 # FIXME: double check potential LINGUAS problem
 pkg_setup() {
 	DOCS="AUTHORS NEWS TODO"
-	G2CONF="${G2CONF} --enable-icon-mapping"
+	G2CONF="${G2CONF}
+		--enable-icon-mapping
+		GTK_UPDATE_ICON_CACHE=$(type -p true)"
 }
 
 src_prepare() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.198 2011/04/06 12:49:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.199 2011/04/08 11:40:01 eva Exp $
+
+  08 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-icon-theme-3.0.0.ebuild:
+  Do not let the package regen gtk icon cache by itself.
 
 *gnome-icon-theme-3.0.0 (06 Apr 2011)
 
