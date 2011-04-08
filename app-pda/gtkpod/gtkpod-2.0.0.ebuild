@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.0.0.ebuild,v 1.3 2011/03/29 07:32:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-2.0.0.ebuild,v 1.4 2011/04/08 21:09:56 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -16,6 +16,7 @@ IUSE="aac curl flac gstreamer mp3 ogg webkit"
 
 COMMON_DEPEND=">=dev-libs/glib-2.15.0:2
 	>=dev-util/anjuta-2.30
+	=dev-util/anjuta-2*
 	>=gnome-base/libglade-2.4.0
 	>=media-libs/libgpod-0.7.0
 	>=media-libs/libid3tag-0.15
