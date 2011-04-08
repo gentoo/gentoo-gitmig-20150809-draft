@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.3 2011/03/30 19:54:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.4 2011/04/08 13:15:30 caster Exp $
+
+*icedtea-web-1.0.2 (08 Apr 2011)
+
+  08 Apr 2011; Vlastimil Babka <caster@gentoo.org> +icedtea-web-1.0.2.ebuild:
+  Version bump, bug #361921.
 
   30 Mar 2011; Vlastimil Babka <caster@gentoo.org> icedtea-web-1.0.1.ebuild:
   Remove -j1 from src_install as there should be no problem now that
