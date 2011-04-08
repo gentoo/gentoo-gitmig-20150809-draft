@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.142 2011/04/04 23:20:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.143 2011/04/08 16:51:06 maekke Exp $
+
+  08 Apr 2011; Markus Meier <maekke@gentoo.org> libwww-perl-6.20.0.ebuild:
+  add ~arm, bug #358079
 
   04 Apr 2011; Jeroen Roovers <jer@gentoo.org> libwww-perl-6.20.0.ebuild:
   Marked ~hppa (bug #358079).
