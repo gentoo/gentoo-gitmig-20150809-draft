@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.8 2011/04/08 15:32:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.2.8.2.ebuild,v 1.1 2011/04/08 15:32:02 phajdan.jr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib scons-utils subversion toolchain-funcs
+inherit eutils flag-o-matic multilib scons-utils toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-ESVN_REPO_URI="http://v8.googlecode.com/svn/trunk"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}"
 # To make tests work, we compile with sample=shell and visibility=default.
 # For more info see http://groups.google.com/group/v8-users/browse_thread/thread/61ca70420e4476bc
 # and http://groups.google.com/group/v8-users/browse_thread/thread/165f89728ed6f97d
-EXTRA_ESCONS="library=shared sample=shell visibility=default importenv=\"LINKFLAGS\""
+EXTRA_ESCONS="library=shared soname=on sample=shell visibility=default importenv=\"LINKFLAGS\""
 
 pkg_setup() {
 	tc-export AR CC CXX RANLIB
@@ -85,7 +85,9 @@ src_install() {
 	doins -r include || die
 
 	dobin d8 || die
-	dolib libv8.so || die
+
+	dolib libv8-${PV}.so || die
+	dosym libv8-${PV}.so /usr/$(get_libdir)/libv8.so || die
 
 	dodoc AUTHORS ChangeLog || die
 }
@@ -95,10 +97,4 @@ src_test() {
 	# and not the /usr/lib one (it may be missing if we are
 	# installing for the first time or upgrading), see bug #352374.
 	LD_LIBRARY_PATH="${S}" tools/test.py --no-build -p dots || die
-}
-
-pkg_postinst() {
-	einfo "The live ebuild does not use SONAME."
-	einfo "You must rebuild all packages depending on ${PN}"
-	einfo "to avoid ABI breakages."
 }

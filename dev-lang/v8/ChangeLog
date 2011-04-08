@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.50 2011/03/26 20:39:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.51 2011/04/08 15:32:02 phajdan.jr Exp $
+
+*v8-3.2.8.2 (08 Apr 2011)
+
+  08 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> +v8-3.2.8.2.ebuild,
+  v8-9999.ebuild:
+  Version bump. Fails tests. Fixes compile issues reported by fkhp
+  <fkhp101@tom.com>: bug #360487, bug #361447.
 
 *v8-3.2.3.1 (26 Mar 2011)
 
