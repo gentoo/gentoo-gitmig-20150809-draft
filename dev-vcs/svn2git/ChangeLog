@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/svn2git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.11 2011/04/08 17:12:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.12 2011/04/08 17:18:06 sping Exp $
+
+  08 Apr 2011; Sebastian Pipping <sping@gentoo.org> svn2git-1.0.3_p1.ebuild:
+  Fix filename of 1.0.3 for mirrors
 
 *svn2git-1.0.4 (08 Apr 2011)
 
