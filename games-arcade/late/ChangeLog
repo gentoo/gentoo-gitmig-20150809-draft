@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/late
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/ChangeLog,v 1.10 2008/05/04 22:45:31 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/ChangeLog,v 1.11 2011/04/08 01:38:05 mr_bones_ Exp $
+
+  08 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org> late-0.1.0.ebuild,
+  +files/late-0.1.0-gcc46.patch:
+  EAPI=2; add patch to try to fix bug #362367
 
   04 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/late-0.1.0-gcc43.patch, late-0.1.0.ebuild:
