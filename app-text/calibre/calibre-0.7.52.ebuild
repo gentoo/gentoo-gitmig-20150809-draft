@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.52.ebuild,v 1.1 2011/03/26 18:47:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.52.ebuild,v 1.2 2011/04/08 01:35:06 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -50,7 +50,9 @@ DEPEND="$SHARED_DEPEND
 S=$WORKDIR/$PN
 
 pkg_setup() {
-	python_set_active_version 2
+	[[ -z $(get_libdir) ]] && \
+		die "get_libdir returned an empty string"
+	python_set_active_version 2.7
 }
 
 src_prepare() {
@@ -178,12 +180,16 @@ src_install() {
 	rm -r "${D}"etc/bash_completion.d
 	find "${D}"etc -type d -empty -delete
 
-	python_convert_shebangs -r 2 "$D"
+	python_convert_shebangs -r $(python_get_version) "$D"
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	distutils_pkg_postinst
+	python_mod_optimize "$ROOT"usr/$(get_libdir)/$PN
 	bash-completion_pkg_postinst
+}
+
+pkg_postrm() {
+	python_mod_cleanup "$ROOT"usr/$(get_libdir)/$PN
 }
