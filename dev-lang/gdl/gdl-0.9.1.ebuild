@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9-r1.ebuild,v 1.2 2011/04/08 21:37:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.1.ebuild,v 1.1 2011/04/08 21:37:21 bicatali Exp $
 
 EAPI=3
 
@@ -36,7 +36,7 @@ RDEPEND="sys-libs/readline
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )"
 
 DEPEND="${RDEPEND}
-	dev-java/antlr:0"
+	>=dev-java/antlr-2.7.7-r2:0[cxx]"
 
 pkg_setup() {
 	use wxwidgets && wxwidgets_pkg_setup
@@ -48,9 +48,9 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.9_rc2-gcc4.4.patch \
 		"${FILESDIR}"/${PN}-0.9_rc4-gcc4.3.patch \
-		"${FILESDIR}"/${PN}-0.9-numpy.patch \
-		"${FILESDIR}"/${PN}-0.9-configure.patch
+		"${FILESDIR}"/${PN}-0.9.1-antlr.patch
 
+	rm -rf src/antlr
 	# adjust the *.pro file install path
 	sed -i \
 		-e "s:datasubdir=.*$:datasubdir=\"${PN}\":" \
@@ -75,16 +75,13 @@ src_configure() {
 			$@
 	}
 	configuration --disable-python_module
-	if use python; then
+	use python && \
 		python_execute_function -s configuration --enable-python_module
-	fi
 }
 
 src_compile() {
 	default
-	if use python; then
-		python_src_compile
-	fi
+	use python && python_src_compile
 }
 
 src_test() {
@@ -97,9 +94,10 @@ src_install() {
 	if use python; then
 		installation() {
 			exeinto $(python_get_sitedir)
-			newexe src/.libs/libgdl.so.0.0.0 GDL.so || die
+			newexe src/.libs/libgdl.so.0.0.0 GDL.so
 		}
 		python_execute_function -s installation
+		dodoc PYTHON.txt
 	fi
-	dodoc README PYTHON.txt AUTHORS ChangeLog NEWS TODO HACKING
+	dodoc README AUTHORS ChangeLog NEWS TODO HACKING
 }
