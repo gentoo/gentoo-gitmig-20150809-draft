@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12665 2011/04/08 02:44:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12666 2011/04/08 12:15:54 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -403,11 +403,6 @@ dev-util/perf
 # Broken ldflags, should not work
 # Masked for removal in 30 days per bug #335586
 media-libs/glide-v3
-
-# Torsten Veller <tove@gentoo.org> (06 Mar 2011)
-# Mask for testing
-=virtual/perl-Module-Build-0.380.0
-=perl-core/Module-Build-0.380.0
 
 # Justin Lecher <jlec@gentoo.org> (04 Mar 2011)
 # Probably API change, packages fail to compile
