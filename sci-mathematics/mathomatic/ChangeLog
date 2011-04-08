@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.54 2011/02/23 20:37:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.55 2011/04/08 03:47:54 bicatali Exp $
+
+*mathomatic-15.5.2 (08 Apr 2011)
+
+  08 Apr 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  -mathomatic-15.3.4.ebuild, -mathomatic-15.3.6.ebuild,
+  -mathomatic-15.4.4.ebuild, +mathomatic-15.5.2.ebuild:
+  Version bump. Removed time in test (bug #362041)
 
 *mathomatic-15.4.4 (23 Feb 2011)
 
