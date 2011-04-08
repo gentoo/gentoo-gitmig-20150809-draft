@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/svn2git-9999.ebuild,v 1.6 2011/04/08 17:12:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/svn2git-1.0.4.ebuild,v 1.1 2011/04/08 17:12:44 sping Exp $
 
 EAPI="2"
 
