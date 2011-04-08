@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.65 2011/01/01 20:36:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.66 2011/04/08 09:12:40 pva Exp $
+
+*ortp-0.16.5 (08 Apr 2011)
+
+  08 Apr 2011; Peter Volkov <pva@gentoo.org> -ortp-0.13.1-r1.ebuild,
+  -ortp-0.15.0_p1.ebuild, +ortp-0.16.5.ebuild:
+  Version bump, bug #356989 wrt to Andrew Savchenko.
 
   01 Jan 2011; Markos Chandras <hwoarang@gentoo.org> ortp-0.16.3.ebuild:
   Stable on amd64 wrt bug #349258

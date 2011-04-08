@@ -1,21 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.15.0_p1.ebuild,v 1.8 2010/07/20 19:01:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.16.5.ebuild,v 1.1 2011/04/08 09:12:40 pva Exp $
 
-EAPI="2"
-
-inherit eutils
-
-MY_P=${P/_p1/}
+EAPI="4"
 
 DESCRIPTION="Open Real-time Transport Protocol (RTP, RFC3550) stack"
-HOMEPAGE="http://www.linphone.org/index.php/eng/code_review/ortp/"
-SRC_URI="http://download.savannah.nongnu.org/releases/linphone/${PN}/sources/${MY_P}.tar.gz
-	mirror://gentoo/${P}-linphone-3.1.0.patch.tgz"
+HOMEPAGE="http://www.linphone.org/"
+SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/linphone/${PN}/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="debug doc examples ipv6 minimal srtp ssl"
 
 RDEPEND="srtp? ( net-libs/libsrtp )
@@ -23,12 +18,7 @@ RDEPEND="srtp? ( net-libs/libsrtp )
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_P}
-
 src_prepare() {
-	# diff patch from linphone-3.1.0 bundled ortp
-	epatch "${WORKDIR}"/${P}-linphone-3.1.0.patch
-
 	# to be sure doc is not builded nor installed w/ -doc and doxygen installed
 	if ! use doc; then
 		sed -i -e 's/test $DOXYGEN != //' configure \
@@ -65,11 +55,10 @@ src_configure() {
 	# mode64bit adds +DA2.0W +DS2.0 CFLAGS wich are needed for HP-UX
 	# strict adds -Werror, don't want it
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-memcheck \
 		--disable-mode64bit \
 		--disable-strict \
-		--disable-dependency-tracking \
 		--enable-fast-install \
 		--enable-libtool-lock \
 		$(use_enable debug) \
@@ -78,12 +67,12 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
-	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins src/tests/*.c || die "doins failed"
+		doins src/tests/*.c
 	fi
 }
