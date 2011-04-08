@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.16 2011/04/08 06:18:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.17 2011/04/08 06:23:47 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -17,7 +17,7 @@ EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="cups gnome gnome-keyring kerberos"
+IUSE="cups gnome gnome-keyring kerberos xinerama"
 
 RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
@@ -47,10 +47,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
+	x11-libs/libXinerama
 	test? ( dev-python/simplejson dev-python/tlslite virtual/krb5 )"
 RDEPEND+="
 	!=www-client/chromium-9999
 	kerberos? ( virtual/krb5 )
+	xinerama? ( x11-libs/libXinerama )
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
