@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.16 2011/03/27 20:17:47 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.17 2011/04/08 19:10:44 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -67,10 +67,14 @@ mozconfig_config() {
 				mozconfig_annotate '+webm -alsa' --enable-ogg
 				mozconfig_annotate '+webm -alsa' --enable-wave
 				mozconfig_annotate '+webm' --enable-webm
+				mozconfig_annotate '+webm' --enable-system-libvpx
 			else
 				mozconfig_use_enable webm
 				mozconfig_use_with webm system-libvpx
 			fi
+		else
+			mozconfig_annotate '' --disable-webm
+			mozconfig_annotate '' --disable-system-libvpx
 		fi
 
 		if use amd64 || use x86 || use arm || use sparc; then
