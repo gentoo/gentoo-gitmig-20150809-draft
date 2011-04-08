@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.455 2011/04/07 08:40:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.456 2011/04/08 17:47:35 scarabeus Exp $
 
 # Keep them sorted
 
@@ -387,7 +387,7 @@ xemacs - Add support for XEmacs
 xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'
 xft - Build with support for XFT font renderer (x11-libs/libXft)
 xine - Add support for the XINE movie libraries
-xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
+xinerama - Add support for the xinerama X11 extension, which is mandatory if you work in multiple monitors setup
 xinetd - Add support for the xinetd super-server
 xml - Add support for XML files
 xmlrpc - Support for xml-rpc library
