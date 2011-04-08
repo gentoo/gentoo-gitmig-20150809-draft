@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.10.ebuild,v 1.3 2011/04/08 13:14:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.10.1.ebuild,v 1.1 2011/04/08 13:14:26 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -24,9 +24,9 @@ OPENJDK_TARBALL="openjdk-6-src-b${OPENJDK_BUILD}-${OPENJDK_DATE}.tar.gz"
 JAXP_TARBALL="jaxp144_01.zip"
 JAXWS_TARBALL="jdk6-jaxws-b20.zip"
 JAF_TARBALL="jdk6-jaf-b20.zip"
-HOTSPOT_TARBALL="f46354849fb3.tar.gz"
-CACAO_TARBALL="6a5eda011e49.tar.gz"
-JAMVM_TARBALL="jamvm-30c4a6b93ffa385833360921bfc613829fb081c9.tar.gz"
+HOTSPOT_TARBALL="f0f676c5a2c6.tar.gz"
+CACAO_TARBALL="c7bf150bfa46.tar.gz"
+JAMVM_TARBALL="jamvm-a95ca049d3bb257d730535a5d5ec3f73a943d0aa.tar.gz"
 SRC_URI="http://icedtea.classpath.org/download/source/${ICEDTEA_PKG}.tar.gz
 		 http://download.java.net/openjdk/jdk6/promoted/b${OPENJDK_BUILD}/${OPENJDK_TARBALL}
 		 http://icedtea.classpath.org/download/drops/${JAXWS_TARBALL}
@@ -57,7 +57,7 @@ RDEPEND=">=net-print/cups-1.2.12
 	 >=x11-libs/libXdmcp-1.0.2
 	 >=x11-libs/libXtst-1.0.3
 	 virtual/jpeg
-	 =media-libs/libpng-1.4*:0
+	 >=media-libs/libpng-1.2
 	 >=media-libs/giflib-4.1.6
 	 >=sys-libs/zlib-1.2.3
 	 x11-proto/inputproto
