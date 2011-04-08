@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r2.ebuild,v 1.1 2011/04/07 19:05:12 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r2.ebuild,v 1.2 2011/04/08 19:40:29 betelgeuse Exp $
 
 EAPI="2"
 
@@ -109,7 +109,7 @@ pkg_preinst() {
 	# could die (things like sed link against it :/)
 	preserve_old_lib /{,usr/}$(get_libdir)/libintl$(get_libname 7)
 
-	java-pkg-opt_pkg_preinst
+	java-pkg-opt-2_pkg_preinst
 }
 
 pkg_postinst() {
