@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.274 2011/03/05 00:59:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.275 2011/04/08 08:32:19 hollow Exp $
+
+*nginx-0.9.7 (08 Apr 2011)
+
+  08 Apr 2011; Benedikt Böhm <hollow@gentoo.org> -nginx-0.7.65.ebuild,
+  -nginx-0.7.65-r1.ebuild, -nginx-0.8.52.ebuild, +nginx-0.9.7.ebuild,
+  files/nginx.logrotate, metadata.xml:
+  remove old 0.7 series, version bump to 0.9.7: drops passenger support,
+  adds http_upload module, fixes logrotate when not running
 
   05 Mar 2011; Brent Baude <ranger@gentoo.org> nginx-0.8.53.ebuild:
   stable ppc, bug 349223
