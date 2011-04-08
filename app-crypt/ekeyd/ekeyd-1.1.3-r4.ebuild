@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r4.ebuild,v 1.1 2011/04/08 02:39:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r4.ebuild,v 1.2 2011/04/08 11:14:49 flameeyes Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ EKEYD_RDEPEND="${EKEYD_RDEPEND}
 
 RDEPEND="!minimal? ( ${EKEYD_RDEPEND} )
 	!app-crypt/ekey-egd-linux"
-DEPEND="${EKEYD_DEPEND}"
+DEPEND="!minimal? ( ${EKEYD_DEPEND} )"
 
 CONFIG_CHECK="~USB_ACM"
 
