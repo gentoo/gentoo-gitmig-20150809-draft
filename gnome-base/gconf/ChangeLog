@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.246 2011/03/22 19:08:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.247 2011/04/08 00:42:56 leio Exp $
+
+  08 Apr 2011; Mart Raudsepp <leio@gentoo.org> -gconf-2.26.2-r1.ebuild,
+  gconf-2.32.0-r1.ebuild:
+  Re-add ~mips keyword for newest version, bug 296548. Remove old ~mips version
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> gconf-2.32.0-r1.ebuild:
   Marking gconf-2.32.0-r1 ppc stable for bug 353436
