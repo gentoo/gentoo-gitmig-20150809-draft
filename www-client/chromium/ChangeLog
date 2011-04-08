@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.331 2011/04/07 06:42:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.332 2011/04/08 06:18:12 phajdan.jr Exp $
+
+  08 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-12.0.725.0.ebuild, chromium-9999-r1.ebuild:
+  Use virtual/ffmpeg, bug #361665 by Zeev Tarantov
+  <zeev.tarantov@gmail.com>.
 
   07 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-9999-r1.ebuild:
