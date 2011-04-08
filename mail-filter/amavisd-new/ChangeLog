@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.162 2011/02/06 14:24:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.163 2011/04/08 18:20:44 eras Exp $
+
+*amavisd-new-2.6.5 (08 Apr 2011)
+
+  08 Apr 2011; Eray Aslan <eras@gentoo.org> +amavisd-new-2.6.5.ebuild:
+  version bump
 
 *amavisd-new-2.7.0_pre14 (06 Feb 2011)
 
