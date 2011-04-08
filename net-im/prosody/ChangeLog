@@ -1,6 +1,10 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.10 2011/04/08 17:41:27 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.11 2011/04/08 17:43:04 djc Exp $
+
+  08 Apr 2011; Dirkjan Ochtman <djc@gentoo.org> -prosody-0.6.2.ebuild,
+  -files/prosody-0.6.2-cfg.lua.patch:
+  Remove old version.
 
 *prosody-0.8.0 (08 Apr 2011)
 
