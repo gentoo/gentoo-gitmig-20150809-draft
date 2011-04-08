@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.11 2011/04/07 06:43:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.12 2011/04/08 07:04:18 hollow Exp $
+
+  08 Apr 2011; Benedikt Böhm <hollow@gentoo.org> shotwell-0.9.1.ebuild:
+  add missing DEPEND on gnome-vfs
 
 *shotwell-0.9.1 (07 Apr 2011)
 
