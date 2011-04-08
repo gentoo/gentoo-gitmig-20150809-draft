@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.4.1.ebuild,v 1.2 2011/02/09 07:20:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.4.3.ebuild,v 1.1 2011/04/08 17:38:52 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6 3:3.1"
@@ -10,7 +10,7 @@ inherit distutils
 
 DESCRIPTION="A vim-inspired file manager for the console"
 HOMEPAGE="http://ranger.nongnu.org/"
-SRC_URI="http://download.savannah.gnu.org/releases/${PN}/releases/${P}.tar.gz"
+SRC_URI="http://nongnu.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
