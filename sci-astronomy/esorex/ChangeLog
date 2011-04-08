@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/esorex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/ChangeLog,v 1.2 2010/10/03 08:24:56 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/ChangeLog,v 1.3 2011/04/08 04:48:13 bicatali Exp $
+
+*esorex-3.9.0 (08 Apr 2011)
+
+  08 Apr 2011; Sébastien Fabbro <bicatali@gentoo.org> +esorex-3.9.0.ebuild:
+  Version bump
 
 *esorex-3.8.3-r1 (03 Oct 2010)
 
