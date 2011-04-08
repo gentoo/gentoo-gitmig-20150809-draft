@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/LWP-Protocol-https-6.20.0.ebuild,v 1.2 2011/04/04 23:19:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/LWP-Protocol-https-6.20.0.ebuild,v 1.3 2011/04/08 16:02:02 maekke Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI+=" http://dev.gentoo.org/~tove/distfiles/${CATEGORY}/${PN}/${PN}_ca-cert
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 
 RDEPEND="
 	app-misc/ca-certificates

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/LWP-MediaTypes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.2 2011/04/04 23:14:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.3 2011/04/08 16:06:27 maekke Exp $
+
+  08 Apr 2011; Markus Meier <maekke@gentoo.org> LWP-MediaTypes-6.10.0.ebuild:
+  add ~arm, bug #358079
 
   04 Apr 2011; Jeroen Roovers <jer@gentoo.org> LWP-MediaTypes-6.10.0.ebuild:
   Marked ~hppa (bug #358079).
