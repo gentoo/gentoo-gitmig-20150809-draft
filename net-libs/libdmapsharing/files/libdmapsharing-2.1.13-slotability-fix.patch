@@ -1,17 +1,17 @@
-From 6b9b056cdf128c7d40b26ee6615b56510d71c341 Mon Sep 17 00:00:00 2001
+From d7cab09c8c6afe6c8da35932ba99579542764934 Mon Sep 17 00:00:00 2001
 From: Gilles Dartiguelongue <eva@gentoo.org>
 Date: Wed, 23 Mar 2011 23:31:07 +0100
-Subject: [PATCH] gentoo: fix slotability
+Subject: [PATCH 1/2] gentoo: fix slotability
 
 ---
- docs/Makefile.am           |    2 +-
+ docs/Makefile.am           |    4 ++--
  libdmapsharing.pc.in       |    2 +-
  libdmapsharing/Makefile.am |   16 ++++++++--------
  tests/Makefile.am          |    4 ++--
- 4 files changed, 12 insertions(+), 12 deletions(-)
+ 4 files changed, 13 insertions(+), 13 deletions(-)
 
 diff --git a/docs/Makefile.am b/docs/Makefile.am
-index bd6f455..d88a349 100644
+index bd6f455..205aa5c 100644
 --- a/docs/Makefile.am
 +++ b/docs/Makefile.am
 @@ -9,7 +9,7 @@ AUTOMAKE_OPTIONS = 1.6
@@ -23,6 +23,15 @@ index bd6f455..d88a349 100644
  
  # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
  #DOC_MODULE_VERSION=2
+@@ -95,7 +95,7 @@ GTKDOC_CFLAGS= \
+ 	$(MDNS_CFLAGS)
+ 
+ GTKDOC_LIBS= \
+-	$(top_builddir)/libdmapsharing/libdmapsharing.la \
++	$(top_builddir)/libdmapsharing/libdmapsharing-@API_VERSION@.la \
+ 	$(GLIB_LIBS) \
+ 	$(GTHREAD_LIBS) \
+ 	$(GOBJECT_LIBS) \
 diff --git a/libdmapsharing.pc.in b/libdmapsharing.pc.in
 index c95a5cf..c46f912 100644
 --- a/libdmapsharing.pc.in

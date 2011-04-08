@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/libdmapsharing-2.1.13.ebuild,v 1.1 2011/03/23 22:51:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/libdmapsharing-2.1.13.ebuild,v 1.2 2011/04/08 21:51:49 eva Exp $
 
 EAPI="3"
 
@@ -36,6 +36,17 @@ src_prepare() {
 
 	# Fix slot support
 	epatch "${FILESDIR}/${P}-slotability-fix.patch"
+	sed "s/name=\"${PN}\"/name=\"${PN}-${SLOT}\"/" \
+		-i ${S}/docs/html/${PN}.devhelp* || die "sed 1 failed"
+	mv ${S}/docs/html/${PN}{,-${SLOT}}.devhelp
+	mv ${S}/docs/html/${PN}{,-${SLOT}}.devhelp2
+	mv ${S}/docs/${PN}{,-${SLOT}}-docs.sgml
+	mv ${S}/docs/${PN}{,-${SLOT}}-overrides.txt
+	mv ${S}/docs/${PN}{,-${SLOT}}-sections.txt
+	mv ${S}/docs/${PN}{,-${SLOT}}.types
+
+	# Fix build order, bug #361067
+	epatch "${FILESDIR}/${P}-build-order.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libdmapsharing
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.1 2011/03/23 22:51:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.2 2011/04/08 21:51:49 eva Exp $
+
+  08 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  libdmapsharing-2.1.13.ebuild, +files/libdmapsharing-2.1.13-build-order.patch,
+  files/libdmapsharing-2.1.13-slotability-fix.patch:
+  Fix build with USE=doc, bug #361067.
 
 *libdmapsharing-2.1.13 (23 Mar 2011)
 
