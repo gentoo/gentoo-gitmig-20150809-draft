@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.3.ebuild,v 1.15 2011/04/06 17:28:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.2.3.ebuild,v 1.16 2011/04/08 17:18:28 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -89,5 +89,4 @@ pkg_postinst() {
 	einfo
 	ewarn "Please add the 'source' statement to make.conf only AFTER "
 	ewarn "you added your first overlay. Otherwise portage will fail."
-	epause 5
 }
