@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.101 2011/03/27 19:57:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.102 2011/04/08 15:18:45 jer Exp $
+
+  08 Apr 2011; Jeroen Roovers <jer@gentoo.org> zziplib-0.13.60-r1.ebuild:
+  Stable for HPPA (bug #360721).
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> zziplib-0.13.60-r1.ebuild:
   stable ppc, bug 360721
