@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.406 2011/04/05 05:24:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.407 2011/04/08 21:31:03 tomka Exp $
+
+  08 Apr 2011; Thomas Kahle <tomka@gentoo.org> xulrunner-1.9.2.16.ebuild:
+  x86 stable per bug 360055
 
   05 Apr 2011; Markus Meier <maekke@gentoo.org> xulrunner-1.9.2.16.ebuild:
   arm stable, bug #360055
