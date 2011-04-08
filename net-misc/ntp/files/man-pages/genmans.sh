@@ -66,6 +66,13 @@ done
 echo
 
 cp -vi /usr/local/src/freebsd/src/usr.sbin/ntp/doc/*.5 ${MANDIR}
+(
+d=${PWD}
+cd ${MANDIR}
+for p in $d/*.5.patch ; do
+	patch -F0 -p0 < $p || exit 1
+done
+) || exit 1
 cp -vi ${SRCDIR}/*.patch ${SRCDIR}/genmans.sh ${SRCDIR}/ntp.xsl ${MANDIR}
 
 tar -jcf ${VERSION}-manpages.tar.bz2 -C ${MANDIR}/.. man
