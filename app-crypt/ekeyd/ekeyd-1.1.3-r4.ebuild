@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r3.ebuild,v 1.1 2011/04/01 12:34:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.3-r4.ebuild,v 1.1 2011/04/08 02:39:28 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 inherit multilib linux-info toolchain-funcs
 
@@ -16,37 +16,41 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
 
-IUSE="usb kernel_linux munin"
+IUSE="usb kernel_linux munin minimal"
 
-RDEPEND="dev-lang/lua
-	usb? ( virtual/libusb:0 )"
-DEPEND="${RDEPEND}"
-RDEPEND="${RDEPEND}
+EKEYD_RDEPEND="dev-lang/lua
+		usb? ( virtual/libusb:0 )"
+EKEYD_DEPEND="${EKEYD_RDEPEND}"
+EKEYD_RDEPEND="${EKEYD_RDEPEND}
 	dev-lua/luasocket
 	kernel_linux? ( sys-fs/udev )
 	usb? ( !kernel_linux? ( sys-apps/usbutils ) )
 	munin? ( net-analyzer/munin )"
 
+RDEPEND="!minimal? ( ${EKEYD_RDEPEND} )
+	!app-crypt/ekey-egd-linux"
+DEPEND="${EKEYD_DEPEND}"
+
 CONFIG_CHECK="~USB_ACM"
 
+REQUIRED_USE="minimal? ( !munin !usb )"
+
 pkg_setup() {
-	if use kernel_linux && ! use usb && linux_config_exists; then
+	if ! use minimal && use kernel_linux && ! use usb && linux_config_exists; then
 		check_extra_config
 	fi
 }
 
 src_prepare() {
 	# - avoid using -Werror;
-	# - don't gzip the man pages, this will also stop it from
-	#   installing them, so we'll do it by hand.
 	sed -i \
 		-e 's:-Werror::' \
-		-e '/gzip/d' \
 		daemon/Makefile || die
 
 	epatch "${FILESDIR}"/${PN}-1.1.1-earlyboot.patch
 	epatch "${FILESDIR}"/${P}-libusb_compat.patch
 	epatch "${FILESDIR}"/${P}-slashes.patch
+	epatch "${FILESDIR}"/${P}-format.patch
 
 	# Stupid multilib hack; remove it once Gentoo has sane paths for
 	# udev directories.
@@ -87,23 +91,32 @@ src_compile() {
 		OSNAME=${osname} \
 		OPT="${CFLAGS}" \
 		BUILD_ULUSBD=$(use usb && echo yes || echo no) \
+		$(use minimal && echo egd-linux) \
 		|| die "emake failed"
 }
 
 src_install() {
+	exeinto /usr/libexec
+	newexe "${S}"/daemon/egd-linux ekey-egd-linux || die
+	doman daemon/ekey-egd-linux.8 || die
+
+	newconfd "${FILESDIR}"/ekey-egd-linux.conf ekey-egd-linux || die
+	newinitd "${FILESDIR}"/ekey-egd-linux.init ekey-egd-linux || die
+
+	use minimal && return
+	# from here on, install everything that is not part of the minimal
+	# support.
+
 	emake -C daemon \
 		DESTDIR="${D}" \
 		BUILD_ULUSBD=$(use usb && echo yes || echo no) \
+		MANZCMD=cat MANZEXT= \
 		install || die "emake install failed"
 
 	# We move the daemons around to avoid polluting the available
 	# commands.
 	dodir /usr/libexec
 	mv "${D}"/usr/sbin/ekey*d "${D}"/usr/libexec
-
-	# Install them manually because we don't want them gzipped
-	doman daemon/{ekeyd,ekey-setkey,ekey-rekey,ekeydctl}.8 \
-		daemon/ekeyd.conf.5 || die
 
 	newinitd "${FILESDIR}"/${PN}.init ${PN} || die
 
@@ -138,17 +151,37 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To make use of your entropykey, make sure to execute ekey-rekey"
+	elog "${CATEGORY}/${PN} now install also the EGD client service ekey-egd-linux."
+	elog "To use this service, you need enable EGDTCPSocket for the ekeyd service"
+	elog "managing the key(s)."
+	elog ""
+	elog "The daemon will send more entropy to the kernel once the available pool"
+	elog "falls below the value set in the kernel.random.write_wakeup_threshold"
+	elog "sysctl entry."
+	elog ""
+	elog "You can change the watermark in /etc/conf.d/ekey-egd-linux; if you do"
+	elog "it will require write access to the kernel's sysctl."
+
+	use minimal && return
+	# from here on, document everything that is not part of the minimal
+	# support.
+
+	elog ""
+	elog "To make use of your EntropyKey, make sure to execute ekey-rekey"
 	elog "the first time, and then start the ekeyd service."
+	elog ""
+	elog "By default ekeyd will feed the entropy directly to the kernel's pool;"
+	elog "if your system has jumps in load average, you might prefer using the"
+	elog "EGD compatibility mode, by enabling EGDTCPSocket for ekeyd and then"
+	elog "starting the ekey-egd-linux service."
+	elog ""
+	elog "The same applies if you intend to provide entropy for multiple hosts"
+	elog "over the network. If you want to have the ekey-egd-linux service on"
+	elog "other hosts, you can enable the 'minimal' USE flag."
 	elog ""
 	elog "The service supports multiplexing if you wish to use multiple"
 	elog "keys, just symlink /etc/init.d/ekeyd → /etc/init.d/ekeyd.identifier"
 	elog "and it'll be looking for /etc/entropykey/identifier.conf"
-	elog ""
-	elog "If you intend on providing entropy for more than your running host"
-	elog "you'll have to set the ekeyd daemon into EGD-server mode, and install"
-	elog "on both the ekey host and the clients the app-crypt/ekey-egd-linux"
-	elog "package that connects to the egd socket to receive entropy."
 	elog ""
 
 	if use usb; then
@@ -161,6 +194,10 @@ pkg_postinst() {
 			elog "does not support udev, you should start the ekey-ulusbd"
 			elog "service before ekeyd."
 		fi
+
+		ewarn "The userland USB daemon has multiple known issues. If you can,"
+		ewarn "please consider disabling the 'usb' USE flag and instead use the"
+		ewarn "CDC-ACM access method."
 	else
 		if use kernel_linux; then
 			elog "Some versions of Linux have a faulty CDC ACM driver that stops"

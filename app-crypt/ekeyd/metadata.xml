@@ -18,5 +18,10 @@
       Install a plugin for <pkg>net-analyzer/munin</pkg> to graph
       statistical data from ekeyd.
     </flag>
+
+    <flag name='minimal'>
+      Only install the ekey-egd-linux service rather than the full
+      ekeyd package.
+    </flag>
   </use>
 </pkgmetadata>

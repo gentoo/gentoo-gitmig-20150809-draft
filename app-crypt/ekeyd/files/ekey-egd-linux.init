@@ -1,0 +1,40 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/files/ekey-egd-linux.init,v 1.1 2011/04/08 02:39:27 flameeyes Exp $
+
+: ${HOST:=localhost}
+: ${PORT:=8888}
+: ${RECONNECTINTERVAL:=10}
+: ${BLOCKS:=2}
+
+depend() {
+	 use net
+	 after ekeyd
+
+	 provide entropy
+}
+
+start() {
+	ebegin "Starting EntropyKey EGD client"
+	start-stop-daemon \
+		--start --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/libexec/ekey-egd-linux -- \
+		-H ${HOST} -p ${PORT} \
+		-r ${RECONNECTINTERVAL} \
+		-b ${BLOCKS} \
+		-D "/var/run/${SVCNAME}.pid"
+
+	[ -n "${WATERMARK}" ] && \
+		sysctl "kernel.random.write_wakeup_threshold=$WATERMARK" >/dev/null 2>&1
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping EntropyKey EGD client"
+	start-stop-daemon \
+		--stop --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/libexec/ekey-egd-linux
+	eend $?
+}
