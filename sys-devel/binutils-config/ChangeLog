@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.39 2011/04/05 07:41:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.40 2011/04/08 15:16:34 jer Exp $
+
+  08 Apr 2011; Jeroen Roovers <jer@gentoo.org> binutils-config-2-r1.ebuild:
+  Stable for HPPA (bug #361849).
 
   05 Apr 2011; Christoph Mende <angelos@gentoo.org>
   binutils-config-2-r1.ebuild:
