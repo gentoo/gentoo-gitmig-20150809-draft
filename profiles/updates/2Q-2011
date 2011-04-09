@@ -1,3 +1,4 @@
 move sys-apps/gdisk sys-apps/gptfdisk
 move x11-libs/qt x11-libs/qt-meta
 move dev-php5/libchart dev-php/libchart
+move dev-php5/jpgraph dev-php/jpgraph
