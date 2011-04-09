@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.197 2011/03/29 02:47:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.198 2011/04/09 06:58:55 nirbheek Exp $
+
+*gtkmm-3.0.0 (09 Apr 2011)
+
+  09 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +gtkmm-3.0.0.ebuild:
+  Add 3.0.0, new slot, gtk+3 support
 
   29 Mar 2011; Olivier Crête <tester@gentoo.org> gtkmm-2.24.0.ebuild:
   Add missing inherit autools for eautoreconf
