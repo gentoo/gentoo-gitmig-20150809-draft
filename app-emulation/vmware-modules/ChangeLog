@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.75 2011/03/30 14:48:33 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.76 2011/04/09 11:51:54 vadimk Exp $
+
+  09 Apr 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -files/1.0.0.24-autoconf-generated.patch,
+  -files/1.0.0.24-kernel-2.6.29.patch, -files/1.0.0.24-kernel-2.6.30.patch,
+  -files/1.0.0.24-makefile-kernel-dir.patch, -files/1.0.0.24-sema.patch,
+  -files/1.0.0.24-sk_sleep.patch, -files/1.0.0.24-vmnet-2.6.31.patch,
+  -files/1.0.0.24-unlocked_ioctl.patch, -vmware-modules-1.0.0.24-r3.ebuild:
+  1.0.0.24 is replaced by 208.2
 
   30 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org> files/208-sema.patch:
   corrected sema patch
