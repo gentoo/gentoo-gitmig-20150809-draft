@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.180 2011/04/05 05:16:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.181 2011/04/09 13:46:37 armin76 Exp $
+
+  09 Apr 2011; Raúl Porcel <armin76@gentoo.org> libpcre-8.12.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #358791
 
   05 Apr 2011; Markus Meier <maekke@gentoo.org> libpcre-8.12.ebuild:
   arm stable, bug #358791
