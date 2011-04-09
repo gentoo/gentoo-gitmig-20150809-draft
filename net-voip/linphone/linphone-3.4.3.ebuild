@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.4.3.ebuild,v 1.1 2011/04/09 06:47:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.4.3.ebuild,v 1.2 2011/04/09 06:48:52 pva Exp $
 
 EAPI="4"
 
@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 
 IUSE_LINGUAS=" fr it de ja es pl cs nl sv pt_BR hu ru zh_CN"
 IUSE="${IUSE} ${IUSE_LINGUAS// / linguas_}"
-
 
 pkg_setup() {
 	if ! use gtk && ! use ncurses ; then
