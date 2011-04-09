@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.0_beta2.ebuild,v 1.1 2011/04/07 17:57:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.0_beta2.ebuild,v 1.2 2011/04/09 21:20:34 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -72,8 +72,6 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.1.0-f2py.patch"
 	#epatch "${FILESDIR}/${PN}-1.3.0-fenv-freebsd.patch" # Bug #279487
-	#epatch "${FILESDIR}/${PN}-1.4.0-interix.patch"
-	#epatch "${FILESDIR}/${PN}-1.5.1-python-3.2.patch"
 
 	# Gentoo patch for ATLAS library names
 	sed -i \
@@ -115,14 +113,6 @@ src_prepare() {
 		export {ATLAS,PTATLAS,BLAS,LAPACK,MKL}=None
 	fi
 
-	# Disable tests failing on ppc/ppc64.
-	# http://projects.scipy.org/numpy/ticket/1664
-	if use ppc || use ppc64; then
-		sed \
-			-e "s/test_nextafterl/_&/" \
-			-e "s/test_spacingl/_&/" \
-			-i numpy/core/tests/test_umath.py
-	fi
 	export CC="$(tc-getCC) ${CFLAGS}"
 }
 
