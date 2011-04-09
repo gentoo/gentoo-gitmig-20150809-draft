@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/atftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.26 2011/04/03 18:48:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.27 2011/04/09 13:33:34 klausman Exp $
+
+  09 Apr 2011; Tobias Klausmann <klausman@gentoo.org> atftp-0.7-r2.ebuild:
+  Revert stupid revert of old-style virtual (cf. bug 323883)
 
   03 Apr 2011; Tobias Klausmann <klausman@gentoo.org> atftp-0.7-r2.ebuild,
   metadata.xml:
