@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.281 2011/03/22 19:35:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.282 2011/04/09 14:07:40 eva Exp $
+
+  09 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -eog-2.30.2.ebuild:
+  Clean up old revision.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> eog-2.32.1.ebuild:
   Marking eog-2.32.1 ppc stable for bug 353436
