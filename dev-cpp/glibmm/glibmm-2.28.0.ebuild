@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.28.0.ebuild,v 1.1 2011/04/09 06:58:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.28.0.ebuild,v 1.2 2011/04/09 07:04:33 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -66,4 +66,7 @@ src_install() {
 		find examples -type d -name '.deps' -exec rm -rf {} \; 2>/dev/null
 		dodoc examples
 	fi
+
+	# Remove useless .la files
+	find "${D}" -name '*.la' -exec rm -f {} + || die
 }
