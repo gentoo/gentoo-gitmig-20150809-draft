@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.36 2011/03/16 10:12:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.37 2011/04/09 13:09:23 eva Exp $
+
+  09 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -libunique-1.0.8.ebuild,
+  -files/libunique-1.0.8-automagic-dbus.patch:
+  Clean up old revision.
 
   16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   libunique-1.0.8.ebuild, libunique-1.1.6.ebuild:
