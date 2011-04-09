@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.246 2011/04/07 08:15:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.247 2011/04/09 22:27:32 ulm Exp $
+
+  09 Apr 2011; Ulrich Mueller <ulm@gentoo.org> packages, virtuals:
+  Old-style virtual/portage is replaced by new-style virtual/package-manager,
+  bug 358847.
 
   07 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/pam, bug 358903.
