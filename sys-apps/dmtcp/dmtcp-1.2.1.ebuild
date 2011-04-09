@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmtcp/dmtcp-1.2.1.ebuild,v 1.1 2011/04/09 17:23:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmtcp/dmtcp-1.2.1.ebuild,v 1.2 2011/04/09 18:36:17 nerdboy Exp $
 
 EAPI=3
 
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug emacs fast mpi trace"
 
 RDEPEND="sys-libs/readline
-	sys-devel/patch
 	app-arch/gzip
 	sys-kernel/linux-headers
 	emacs? ( dev-lisp/clisp )
@@ -26,11 +25,18 @@ RDEPEND="sys-libs/readline
 		app-shells/tcsh
 	)"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/patch"
 
 src_prepare() {
+	sed -i -e "s|(cd dmtcp && make install)|\$(MAKE) -C dmtcp install|" \
+		Makefile.in || die "sed make syntax failed"
+	sed -i -e "s/LDFLAGS =/LDFLAGS +=/g" \
+		mtcp/Makefile || die "sed ldflags failed"
+
+	epatch "${FILESDIR}"/${P}-gcc46.patch
+
 	eautoreconf
-	sed -i -e "s|make install|\$(MAKE) install|" Makefile.in
 }
 
 src_configure() {
