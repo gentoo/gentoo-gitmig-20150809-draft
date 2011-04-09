@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.80 2011/01/07 14:41:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.81 2011/04/09 17:08:09 arfrever Exp $
+
+*ipython-0.10.2 (09 Apr 2011)
+
+  09 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +ipython-0.10.2.ebuild:
+  Version bump.
 
   07 Jan 2011; Brent Baude <ranger@gentoo.org> ipython-0.10.1.ebuild:
   Marking ipython-0.10.1 ppc for bug 345495
