@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.0.ebuild,v 1.3 2011/03/31 21:30:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.0.ebuild,v 1.4 2011/04/09 08:46:24 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -13,8 +13,7 @@ SRC_URI="http://www.libimobiledevice.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-#KEYWORDS="~amd64 ~ppc64 ~x86"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="python static-libs"
 
 RDEPEND=">=app-pda/libplist-0.15
