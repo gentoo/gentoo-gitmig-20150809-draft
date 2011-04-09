@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/patron
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.11 2011/02/26 16:11:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.12 2011/04/09 12:42:29 graaff Exp $
+
+  09 Apr 2011; Hans de Graaff <graaff@gentoo.org> patron-0.4.11.ebuild:
+  Add ree18 support.
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> patron-0.4.11.ebuild:
   Marked ~ppc64 wrt #339565
