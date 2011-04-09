@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.43 2011/03/27 19:52:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.44 2011/04/09 16:41:12 flameeyes Exp $
+
+  09 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  singular-3.1.2-r2.ebuild:
+  Don't use raw LDFLAGS (thankfully GCC 4.6 now chokes on this).
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> singular-3.1.2-r2.ebuild:
   stable ppc, bug 352177
