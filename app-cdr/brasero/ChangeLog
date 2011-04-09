@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.128 2011/03/22 18:43:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.129 2011/04/09 16:04:49 eva Exp $
+
+  09 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -brasero-2.30.2.ebuild,
+  -brasero-2.30.3.ebuild:
+  Clean up old revisions.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> brasero-2.32.1.ebuild:
   Marking brasero-2.32.1 ppc stable for bug 353436
