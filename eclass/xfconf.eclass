@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.25 2011/04/09 09:15:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.26 2011/04/09 17:58:05 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -103,12 +103,6 @@ xfconf_src_prepare() {
 # Run econf with opts in XFCONF array
 xfconf_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
-
-	# Convert XFCONF to an array, see base.eclass for original code
-	if [[ "$(declare -p XFCONF 2>/dev/null 2>&1)" != "declare -a"* ]]; then
-		XFCONF=( ${XFCONF} )
-	fi
-
 	econf ${XFCONF[@]}
 }
 
