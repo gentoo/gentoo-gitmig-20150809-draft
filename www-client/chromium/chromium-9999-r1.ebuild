@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.17 2011/04/08 06:23:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.18 2011/04/09 20:21:38 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
 	x11-libs/libXinerama
-	test? ( dev-python/simplejson dev-python/tlslite virtual/krb5 )"
+	test? ( dev-python/simplejson virtual/krb5 )"
 RDEPEND+="
 	!=www-client/chromium-9999
 	kerberos? ( virtual/krb5 )
@@ -181,6 +181,7 @@ src_prepare() {
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
+		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
@@ -301,10 +302,9 @@ src_test() {
 
 	# DiskCache: we need net/data/cache_tests in the tarball (export_tarball.py)
 	# NetUtilTest: bug #361885.
-	# HTTPS/SSL: bug #361939.
 	# UDP: unstable, active development. We should revisit this later.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-*DiskCache*:NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*HTTPS*:*SSL*:*UDP*'
+		'--gtest_filter=-*DiskCache*:NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*UDP*'
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.333 2011/04/08 06:23:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.334 2011/04/09 20:21:38 phajdan.jr Exp $
+
+  09 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-net-tests-r0.patch, chromium-12.0.725.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Fix some net_unittests failures, bug #361939.
 
   08 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-12.0.725.0.ebuild, chromium-9999-r1.ebuild:
