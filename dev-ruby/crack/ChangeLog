@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/crack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.19 2011/02/26 16:12:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.20 2011/04/09 12:19:37 graaff Exp $
+
+  09 Apr 2011; Hans de Graaff <graaff@gentoo.org> crack-0.1.8.ebuild:
+  Add ree18 support.
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> crack-0.1.8.ebuild:
   Marked ~ppc64 wrt #339565
