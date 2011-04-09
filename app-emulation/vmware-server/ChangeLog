@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.71 2011/03/30 16:54:24 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.72 2011/04/09 11:44:59 vadimk Exp $
+
+  09 Apr 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-server-2.0.2.203138-r1.ebuild:
+  cleanup
 
   30 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org> files/vmware-server-2.rc:
   fixed rc 
