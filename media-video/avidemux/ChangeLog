@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.179 2011/03/12 11:26:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.180 2011/04/09 21:11:52 angelos Exp $
+
+  09 Apr 2011; Christoph Mende <angelos@gentoo.org> avidemux-2.5.4-r2.ebuild:
+  Stable on amd64 wrt bug #360613
 
 *avidemux-2.5.4-r2 (12 Mar 2011)
 
