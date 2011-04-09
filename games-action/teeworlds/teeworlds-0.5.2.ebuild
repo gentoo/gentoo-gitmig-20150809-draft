@@ -1,9 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.5.2.ebuild,v 1.2 2010/04/04 13:51:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.5.2.ebuild,v 1.3 2011/04/09 16:39:16 mr_bones_ Exp $
 
 EAPI=2
-
 inherit eutils python games
 
 DESCRIPTION="Online multi-player platform 2D shooter"
@@ -13,7 +12,7 @@ SRC_URI="http://www.teeworlds.com/files/${P}-src.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug dedicated server"
+IUSE="debug dedicated"
 
 RDEPEND="
 	!dedicated? ( media-libs/pnglite
@@ -59,12 +58,10 @@ src_configure() {
 src_compile() {
 	local myopt
 
-	if use dedicated || use server; then
-		if use debug; then
-			myopt=" server_debug"
-		else
-			myopt=" server_release"
-		fi
+	if use debug; then
+		myopt=" server_debug"
+	else
+		myopt=" server_release"
 	fi
 	if ! use dedicated; then
 		if use debug; then
@@ -78,12 +75,10 @@ src_compile() {
 }
 
 src_install() {
-	if use dedicated || use server; then
-		if use debug; then
-			newgamesbin ${PN}_srv_d ${PN}_srv || die "newgamesbin failed"
-		else
-			dogamesbin ${PN}_srv || die "dogamesbin failed"
-		fi
+	if use debug; then
+		newgamesbin ${PN}_srv_d ${PN}_srv || die "newgamesbin failed"
+	else
+		dogamesbin ${PN}_srv || die "dogamesbin failed"
 	fi
 	if ! use dedicated; then
 		if use debug; then

@@ -2,7 +2,7 @@ diff --git a/src/engine/client/ec_snd.c b/src/engine/client/ec_snd.c
 index 034dfb2..67e819c 100644
 --- a/src/engine/client/ec_snd.c
 +++ b/src/engine/client/ec_snd.c
-@@ -359,13 +359,6 @@ static void rate_convert(int sid)
+@@ -359,19 +359,13 @@
  }
  
  
@@ -16,7 +16,14 @@ index 034dfb2..67e819c 100644
  int snd_load_wv(const char *filename)
  {
  	SAMPLE *snd;
-@@ -381,19 +374,12 @@ int snd_load_wv(const char *filename)
+ 	int sid = -1;
+ 	char error[100];
+ 	WavpackContext *context;
++	char completefilename[512];
+ 	
+ 	/* don't waste memory on sound when we are stress testing */
+ 	if(config.dbg_stress)
+@@ -381,19 +375,13 @@
  	if(!sound_enabled)
  		return 1;
  
@@ -33,11 +40,12 @@ index 034dfb2..67e819c 100644
  	snd = &samples[sid];
  
 -	context = WavpackOpenFileInput(read_data, error);
-+	context = WavpackOpenFileInput(filename, error, OPEN_2CH_MAX, 0);
++	engine_getpath(completefilename, sizeof(completefilename), filename, IOFLAG_READ);
++	context = WavpackOpenFileInput(completefilename, error, OPEN_2CH_MAX, 0);
  	if (context)
  	{
  		int samples = WavpackGetNumSamples(context);
-@@ -448,9 +434,6 @@ int snd_load_wv(const char *filename)
+@@ -448,9 +436,6 @@
  		dbg_msg("sound/wv", "failed to open %s: %s", filename, error);
  	}
  
