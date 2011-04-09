@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.53 2011/04/06 14:19:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.54 2011/04/09 19:43:18 dilfridge Exp $
+
+  09 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  plasma-runtime-4.6.2.ebuild:
+  Extend blocker to old kdelibs because of file collisions, bug 362767
 
 *plasma-runtime-4.6.2 (06 Apr 2011)
 

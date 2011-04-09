@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/plasma-runtime-4.6.2.ebuild,v 1.1 2011/04/06 14:19:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/plasma-runtime-4.6.2.ebuild,v 1.2 2011/04/09 19:43:18 dilfridge Exp $
 
 EAPI=3
 
@@ -15,3 +15,4 @@ IUSE="debug"
 
 # cloned from workspace thus introduce collisions.
 add_blocker plasma-workspace '<4.5.60'
+add_blocker kdelibs '<4.5.60'
