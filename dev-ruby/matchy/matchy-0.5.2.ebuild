@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/matchy-0.5.2.ebuild,v 1.6 2011/02/26 16:12:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/matchy/matchy-0.5.2.ebuild,v 1.7 2011/04/09 12:04:28 graaff Exp $
 
 EAPI="2"
 
 MY_OWNER="mcmire"
 
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 jruby ree18"
 
 RUBY_FAKEGEM_DOCDIR=""
 RUBY_FAKEGEM_EXTRADOC=""
