@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet-plugin/xfce4-xfapplet-plugin-0.1.0.ebuild,v 1.6 2011/02/16 22:30:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet-plugin/xfce4-xfapplet-plugin-0.1.0.ebuild,v 1.7 2011/04/09 18:21:58 ssuominen Exp $
 
 EAPI=3
 inherit xfconf
@@ -18,7 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.4:2
 	>=xfce-base/xfce4-panel-4.3.20
 	>=xfce-base/libxfcegui4-4.2
 	>=gnome-base/orbit-2.12.5
-	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )"
+	gnome-base/gnome-panel[bonobo]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
