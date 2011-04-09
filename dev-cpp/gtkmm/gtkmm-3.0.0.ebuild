@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.0.0.ebuild,v 1.1 2011/04/09 06:58:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.0.0.ebuild,v 1.2 2011/04/09 07:02:32 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -53,4 +53,10 @@ src_prepare() {
 		sed 's/^\(SUBDIRS =.*\)demos\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
 			|| die "sed 2 failed"
 	fi
+}
+
+src_install() {
+	gnome2_src_install
+
+	find "${D}" -name '*.la' -exec rm -f {} + || die
 }
