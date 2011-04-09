@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.6.3.ebuild,v 1.1 2011/03/09 16:37:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.6.3.ebuild,v 1.2 2011/04/09 22:01:19 angelos Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils games
@@ -16,7 +16,7 @@ SRC_URI=" mirror://sourceforge/lgames/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="nls themes"
 
 RDEPEND="media-libs/libpng
