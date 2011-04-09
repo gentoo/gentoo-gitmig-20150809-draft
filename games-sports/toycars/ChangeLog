@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/toycars
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.18 2011/03/20 20:16:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.19 2011/04/09 19:22:27 tupone Exp $
+
+  09 Apr 2011; Alfredo Tupone <tupone@gentoo.org> toycars-0.3.10.ebuild,
+  +files/toycars-0.3.10-gcc46.patch:
+  Fix build with gcc-4.6 Bug #362735 by Diego Elio Pettenò
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> toycars-0.3.10.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
