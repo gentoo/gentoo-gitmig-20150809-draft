@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12669 2011/04/09 08:42:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12670 2011/04/09 08:53:33 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -194,15 +194,6 @@ net-analyzer/iptraf
 # Remove this mask message in 60 days.
 media-libs/glitz
 dev-libs/eggdbus
-
-# Samuli Suominen <ssuominen@gentoo.org> (27 Mar 2011)
-# Last packages with hardcoded sys-apps/hal depend.
-# Upstream has either stopped development, or it's too slow.
-# Bugs 313425, 358935 and finally 313389.
-# Removal in 30 days.
-app-crypt/luks-tools
-media-video/thoggen
-sys-auth/pam_usb
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (26 Mar 2011)
 # Mask v8 versions used for www-client/chromium dev channel releases.
