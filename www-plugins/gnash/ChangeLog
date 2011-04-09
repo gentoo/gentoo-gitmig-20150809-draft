@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.58 2011/04/07 23:53:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.59 2011/04/09 09:42:36 chithanh Exp $
+
+  09 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.9.ebuild, +files/gnash-0.8.9-libavcodec-version.patch:
+  One more patch for recent ffmpeg build failure, bug #362683
 
   07 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.9.ebuild, +files/gnash-0.8.9-ffmpeg-detection.patch:
