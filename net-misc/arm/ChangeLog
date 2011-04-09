@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/arm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.6 2011/01/16 16:53:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.7 2011/04/09 01:12:59 blueness Exp $
+
+  09 Apr 2011; Anthony G. Basile <blueness@gentoo.org> -arm-1.4.0.2.ebuild,
+  -arm-1.4.1.0.ebuild, metadata.xml:
+  Removed deprecated versions
 
 *arm-1.4.1.3 (16 Jan 2011)
 

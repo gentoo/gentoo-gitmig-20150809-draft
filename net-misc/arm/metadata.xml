@@ -3,11 +3,11 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>jesse@boldandbusted.com</email>
-    <name>Jesse Adelman</name>
-  </maintainer>
-  <maintainer>
     <email>blueness@gentoo.org</email>
     <name>Anthony G. Basile</name>
+  </maintainer>
+  <maintainer>
+    <email>jesse@boldandbusted.com</email>
+    <name>Jesse Adelman</name>
   </maintainer>
 </pkgmetadata>
