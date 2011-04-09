@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3.ebuild,v 1.1 2011/04/09 06:31:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3.ebuild,v 1.2 2011/04/09 09:38:42 pva Exp $
 
 EAPI="4"
 
@@ -17,8 +17,9 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~ppc-macos ~x86-macos"
 # not built with v4l2 support (taken from configure.ac)
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
 IUSE="+alsa coreaudio debug examples gsm ilbc ipv6 jack oss portaudio pulseaudio
-sdl +speex theora video x264 X xv"
-REQUIRED_USE="|| ( oss alsa jack portaudio coreaudio ) theora? ( video ) X? ( video ) xv? ( X )"
+sdl +speex theora v4l2 video x264 X xv"
+REQUIRED_USE="|| ( oss alsa jack portaudio coreaudio ) theora? ( video ) X? (
+video ) xv? ( X ) v4l2? ( video )"
 
 RDEPEND=">=net-libs/ortp-0.16.2[ipv6?]
 	alsa? ( media-libs/alsa-lib )
@@ -29,9 +30,9 @@ RDEPEND=">=net-libs/ortp-0.16.2[ipv6?]
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	video? (
-		media-libs/libv4l
-		sys-kernel/linux-headers
 		virtual/ffmpeg
+		v4l2? ( media-libs/libv4l
+			sys-kernel/linux-headers )
 		theora? ( media-libs/libtheora )
 		sdl? ( media-libs/libsdl[video,X] )
 		X? ( x11-libs/libX11
@@ -58,6 +59,9 @@ src_prepare() {
 	sed -i -e "s:\(doc_htmldir=\).*:\1\$(htmldir):" help/Makefile.am \
 		|| die "patching help/Makefile.am failed"
 
+	epatch "${FILESDIR}/${PN}-2.7.3-v4l-automagic.patch"
+	# linux/videodev.h dropped in 2.6.38
+	sed -i -e 's:msv4l.c::' src/Makefile.am || die
 	eautoreconf
 
 	# don't build examples in tests/
@@ -96,7 +100,8 @@ src_configure() {
 		$(use_enable speex) \
 		$(use_enable theora) \
 		$(use_enable video) \
-		$(use_enable video libv4l) \
+		$(use_enable v4l2 v4l) \
+		$(use_enable v4l2 libv4l) \
 		$(use_enable sdl) \
 		$(use_enable X x11) \
 		$(use_enable xv)
