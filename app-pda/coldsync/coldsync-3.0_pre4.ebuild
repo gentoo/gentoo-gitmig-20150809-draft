@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.6 2011/04/09 13:45:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.7 2011/04/09 13:52:11 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic perl-module toolchain-funcs
@@ -35,6 +35,7 @@ src_prepare() {
 src_configure() {
 	tc-export CC CXX
 	append-cflags -fno-strict-aliasing
+	# FIXME: Fails to link later because libpconn is underlinked with USE="usb".
 	append-ldflags $(no-as-needed)
 
 	econf \
