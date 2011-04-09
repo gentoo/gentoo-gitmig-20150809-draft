@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/pydot-1.0.23.ebuild,v 1.1 2011/03/04 23:02:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/pydot-1.0.23.ebuild,v 1.2 2011/04/09 21:22:34 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://pydot.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-macos"
 IUSE=""
 
 RDEPEND="dev-python/pyparsing
