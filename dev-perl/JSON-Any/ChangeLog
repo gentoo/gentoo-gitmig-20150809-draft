@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/JSON-Any
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-Any/ChangeLog,v 1.9 2011/03/31 06:29:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-Any/ChangeLog,v 1.10 2011/04/09 06:06:44 tove Exp $
+
+*JSON-Any-1.270.0 (09 Apr 2011)
+
+  09 Apr 2011; Torsten Veller <tove@gentoo.org> +JSON-Any-1.270.0.ebuild:
+  Version bump
 
 *JSON-Any-1.260.0 (31 Mar 2011)
 
