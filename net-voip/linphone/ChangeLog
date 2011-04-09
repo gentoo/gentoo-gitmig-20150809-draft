@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.56 2011/04/09 05:40:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.57 2011/04/09 09:53:34 pva Exp $
+
+*linphone-3.4.3 (09 Apr 2011)
+
+  09 Apr 2011; Peter Volkov <pva@gentoo.org> +linphone-3.4.3.ebuild,
+  linphone-3.4.3-nls.patch:
+  Version bump, bug #354533 thank Ivan Ivanich for report and Andrew Savchenko
+  for help.
 
   09 Apr 2011; Peter Volkov <pva@gentoo.org> linphone-3.3.2.ebuild:
   Update mediastreamer dependency, bug #323281 thank Michael Weber and Petr
