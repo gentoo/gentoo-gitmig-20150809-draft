@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.87 2011/04/09 13:54:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.88 2011/04/09 21:26:14 angelos Exp $
+
+  09 Apr 2011; Christoph Mende <angelos@gentoo.org> xrdb-1.0.9.ebuild:
+  Stable on amd64 wrt bug #362185
 
   09 Apr 2011; Raúl Porcel <armin76@gentoo.org> xrdb-1.0.9.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #362185
