@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.4.ebuild,v 1.3 2010/08/22 07:52:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.4.ebuild,v 1.4 2011/04/09 18:13:34 graaff Exp $
 
 EAPI=2
 
 inherit ruby eutils
 
 DESCRIPTION="Back-end XSLT processor for an XML-based web site"
-HOMEPAGE="http://gentoo.neysx.org/mystuff/gorg/gorg.xml"
+HOMEPAGE="http://www.gentoo.org/proj/en/gdp/doc/gorg.xml"
 SRC_URI="http://gentoo.neysx.org/mystuff/gorg/${P}.tgz"
 IUSE="fastcgi mysql"
 
