@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.35 2011/03/20 09:49:50 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.36 2011/04/09 07:24:38 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -25,6 +25,12 @@ dvb wininet acm vdpau schro zbar"
 # jack moved to -good
 if ! version_is_at_least "0.10.21"; then
 	my_gst_plugins_bad+=" jack"
+fi
+
+# Changes in 0.10.20:
+# New split plugins rtmp, gsettings and shm
+if version_is_at_least "0.10.20"; then
+	my_gst_plugins_bad+=" rtmp gsettings shm"
 fi
 
 # Changes in 0.10.19:
@@ -64,6 +70,15 @@ DEPEND="${RDEPEND}
 		sys-apps/sed
 		dev-util/pkgconfig
 		sys-devel/gettext"
+
+# -bad-0.10.20 uses orc optionally instead of liboil unconditionally.
+# While <0.10.20 configure always check for liboil, it is used only by non-split
+# plugins in gst/ (legacyresample and mpegdemux), so we only builddep for all
+# old packages, and have a RDEPEND in old versions of media-libs/gst-plugins-bad
+if ! version_is_at_least "0.10.20"; then
+DEPEND="${DEPEND} >=dev-libs/liboil-0.3.8"
+fi
+
 RESTRICT=test
 fi
 S=${WORKDIR}/${MY_P}
