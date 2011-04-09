@@ -1,0 +1,77 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmtcp/dmtcp-1.2.1.ebuild,v 1.1 2011/04/09 17:23:16 nerdboy Exp $
+
+EAPI=3
+
+inherit autotools elisp-common eutils multilib
+
+DESCRIPTION="DMTCP is the Distributed MultiThreaded Checkpointing tool."
+HOMEPAGE="http://dmtcp.sourceforge.net/index.html"
+SRC_URI="mirror://sourceforge/dmtcp/${P}.tar.gz"
+
+LICENSE="LGPL-3"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug emacs fast mpi trace"
+
+RDEPEND="sys-libs/readline
+	sys-devel/patch
+	app-arch/gzip
+	sys-kernel/linux-headers
+	emacs? ( dev-lisp/clisp )
+	mpi? ( virtual/mpi )
+	|| ( app-shells/dash
+		app-shells/zsh
+		app-shells/tcsh
+	)"
+
+DEPEND="${RDEPEND}"
+
+src_prepare() {
+	eautoreconf
+	sed -i -e "s|make install|\$(MAKE) install|" Makefile.in
+}
+
+src_configure() {
+	local myconf="--enable-external-socket-handling \
+		--disable-stale-socket-handling"
+
+	if use debug; then
+		use trace && myconf=" ${myconf} --enable-ptrace-support"
+		myconf=" ${myconf} --disable-pid-virtualization"
+	fi
+
+	use fast && myconf=" ${myconf} --disable-pid-virtualization \
+		--disable-external-socket-handling \
+		--enable-forked-checkpointing \
+		--enable-allocator"
+
+	use mpi && myconf=" ${myconf} --with-mpich=/usr/bin"
+
+	econf $(use_enable debug) $myconf
+}
+
+src_test() {
+	make check || die "make check failed"
+	make check1 || die "make check1 failed"
+	make check2 || die "make check2 failed"
+	make check3 || die "make check3 failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+
+	dodoc TODO QUICK-START ${PN}/README
+
+	dodir /usr/share/${PF}/examples
+	mv "${D}"usr/$(get_libdir)/${PN}/examples "${D}"usr/share/${PF}/examples
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
+}
