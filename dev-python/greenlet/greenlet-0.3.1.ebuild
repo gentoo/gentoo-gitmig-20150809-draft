@@ -1,12 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.3.1.ebuild,v 1.1 2010/10/18 15:14:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.3.1.ebuild,v 1.2 2011/04/09 20:31:07 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Lightweight in-process concurrent programming"
 HOMEPAGE="http://pypi.python.org/pypi/greenlet"
@@ -23,3 +24,8 @@ RDEPEND=""
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 DOCS="AUTHORS NEWS README"
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-python-3.2.patch"
+}
