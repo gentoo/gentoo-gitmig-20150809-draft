@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.52.ebuild,v 1.2 2011/04/08 01:35:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.52.ebuild,v 1.3 2011/04/09 00:19:39 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -186,10 +186,10 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	python_mod_optimize "$ROOT"usr/$(get_libdir)/$PN
+	python_mod_optimize /usr/$(get_libdir)/$PN
 	bash-completion_pkg_postinst
 }
 
 pkg_postrm() {
-	python_mod_cleanup "$ROOT"usr/$(get_libdir)/$PN
+	python_mod_cleanup /usr/$(get_libdir)/$PN
 }
