@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.24 2011/02/14 19:52:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.25 2011/04/09 09:15:51 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -63,8 +63,9 @@ EXPORT_FUNCTIONS src_prepare src_configure src_install pkg_preinst pkg_postinst 
 
 # @FUNCTION: xfconf_use_debug
 # @DESCRIPTION:
-# Return --enable-debug, null, --enable-debug=full or --disable-debug based on
-# XFCONF_FULL_DEBUG variable and USE debug
+# If IUSE has debug, return --enable-debug=minimum.
+# If USE debug is enabled, return --enable-debug which is same as --enable-debug=yes.
+# If USE debug is enabled and XFCONF_FULL_DEBUG variable is set, return --enable-debug=full.
 xfconf_use_debug() {
 	if has debug ${IUSE}; then
 		if use debug; then
@@ -74,9 +75,7 @@ xfconf_use_debug() {
 				echo "--enable-debug"
 			fi
 		else
-			if [[ -n $XFCONF_FULL_DEBUG ]]; then
-				echo "--disable-debug"
-			fi
+			echo "--enable-debug=minimum"
 		fi
 	fi
 }
