@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.19.ebuild,v 1.4 2010/12/25 19:38:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.19.ebuild,v 1.5 2011/04/09 15:27:00 jer Exp $
 
 EAPI="2"
 
@@ -24,6 +24,16 @@ RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 COMMON="x11-base/xorg-server
+	gtk? (
+		!media-video/nvidia-settings
+		dev-libs/atk
+		dev-libs/glib
+		x11-libs/gdk-pixbuf
+		x11-libs/gtk+:2
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/pango
+	)
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-opengl )
 	>=app-admin/eselect-opengl-1.0.9"
@@ -32,7 +42,6 @@ DEPEND="${COMMON}
 RDEPEND="${COMMON}
 	kernel_linux? ( virtual/modutils )
 	acpi? ( sys-power/acpid )"
-PDEPEND="gtk? ( media-video/nvidia-settings )"
 
 QA_TEXTRELS_x86="usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
@@ -74,6 +83,7 @@ QA_EXECSTACK_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
 	usr/lib64/xorg/modules/drivers/nvidia_drv.so
+	usr/bin/nvidia-settings
 	usr/bin/nvidia-smi
 	usr/bin/nvidia-xconfig"
 
@@ -104,6 +114,7 @@ QA_DT_HASH_amd64="usr/lib32/libcuda.so.${PV}
 	usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
 	usr/lib64/xorg/modules/drivers/nvidia_drv.so
 	usr/lib64/libvdpau_nvidia.so.${PV}
+	usr/bin/nvidia-settings
 	usr/bin/nvidia-smi
 	usr/bin/nvidia-xconfig"
 
@@ -116,6 +127,7 @@ QA_DT_HASH_x86="usr/lib/libcuda.so.${PV}
 	usr/lib/xorg/modules/drivers/nvidia_drv.so
 	usr/lib/libXvMCNVIDIA.so.${PV}
 	usr/lib/libvdpau_nvidia.so.${PV}
+	usr/bin/nvidia-settings
 	usr/bin/nvidia-smi
 	usr/bin/nvidia-xconfig"
 
@@ -357,6 +369,9 @@ src_install() {
 	# Helper Apps
 	dobin ${NV_EXEC}/nvidia-xconfig || die
 	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
+	if use gtk; then
+		dobin usr/bin/nvidia-settings || die
+	fi
 #	if use kernel_linux; then
 #		dobin ${NV_EXEC}/nvidia-smi || die
 #	fi
