@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.12.ebuild,v 1.3 2010/12/22 18:25:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.12.ebuild,v 1.4 2011/04/09 17:42:02 vapier Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/libvncserver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="fbcon +jpeg +zlib threads ssl crypt v4l xinerama avahi system-libvncserver"
+IUSE="avahi crypt fbcon +jpeg ssl system-libvncserver threads tk v4l xinerama +zlib"
 
 RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=] )
 	!system-libvncserver? (
@@ -21,6 +21,7 @@ RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zli
 		jpeg? ( virtual/jpeg:0 )
 	)
 	ssl? ( dev-libs/openssl )
+	tk? ( dev-lang/tk )
 	avahi? ( >=net-dns/avahi-0.6.4 )
 	xinerama? ( x11-libs/libXinerama )
 	x11-libs/libXfixes
@@ -29,7 +30,6 @@ RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zli
 	>=x11-libs/libXtst-1.1.0
 	x11-libs/libXdamage
 	x11-libs/libXext"
-
 DEPEND="${RDEPEND}
 	x11-libs/libXt
 	xinerama? ( x11-proto/xineramaproto )
@@ -40,8 +40,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 pkg_setup() {
-	if use avahi && ! use threads
-	then
+	if use avahi && ! use threads ; then
 		ewarn "Non-native avahi support has been enabled."
 		ewarn "Native avahi support can be enabled by also enabling the threads USE flag."
 	fi
@@ -67,7 +66,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc x11vnc/{ChangeLog,README}
 	# Remove include files, which conflict with net-libs/libvncserver
 	rm -rf "${D}"/usr/include

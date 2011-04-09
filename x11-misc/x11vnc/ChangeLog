@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x11vnc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.93 2010/12/22 18:25:24 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.94 2011/04/09 17:42:02 vapier Exp $
+
+  09 Apr 2011; Mike Frysinger <vapier@gentoo.org> x11vnc-0.9.12.ebuild,
+  metadata.xml:
+  Add USE=tk to control support for the -gui option #362721 by victor
+  romanchuk.
 
   22 Dec 2010; Sven Wegener <swegener@gentoo.org> x11vnc-0.9.9.ebuild,
   x11vnc-0.9.10.ebuild, x11vnc-0.9.11.ebuild, x11vnc-0.9.12.ebuild:
