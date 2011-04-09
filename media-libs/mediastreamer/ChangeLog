@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.33 2011/01/01 20:36:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.34 2011/04/09 06:31:32 pva Exp $
+
+*mediastreamer-2.7.3 (09 Apr 2011)
+
+  09 Apr 2011; Peter Volkov <pva@gentoo.org> +mediastreamer-2.7.3.ebuild:
+  Version bump, bug #356977 wrt Andrew Savchenko. Use virtual/ffmpeg, bug
+  #356977 by Tomáš Chvátal. Always depend on v4l2 as ./configure.ac
+  suggests, fixes automagic dep on v4l, bug 352713 thank Markus Oehme for
+  report.
 
   01 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
   mediastreamer-2.6.0.ebuild:
