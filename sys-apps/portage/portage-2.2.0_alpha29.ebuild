@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha29.ebuild,v 1.1 2011/03/27 23:26:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha29.ebuild,v 1.2 2011/04/09 22:34:01 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -11,7 +11,6 @@ DESCRIPTION="Portage is the package management and distribution system for Gento
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
-PROVIDE="virtual/portage"
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_pl python2 python3 selinux"
 

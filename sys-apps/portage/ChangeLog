@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.817 2011/04/05 06:24:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.818 2011/04/09 22:34:01 zmedico Exp $
+
+  09 Apr 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.6.7.ebuild,
+  portage-2.1.6.13.ebuild, portage-2.1.8.3.ebuild, portage-2.1.9.25.ebuild,
+  portage-2.1.9.42.ebuild, portage-2.1.9.45.ebuild,
+  portage-2.2.0_alpha28.ebuild, portage-2.2.0_alpha29.ebuild,
+  portage-9999.ebuild:
+  Bug #358847 - Remove virtual/portage PROVIDE since it's been replaced by
+  the virtual/package-manager new-style virtual ebuild (GLEP 37).
 
   05 Apr 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.43.ebuild,
   -portage-2.1.9.44.ebuild, -portage-2.2.0_alpha26.ebuild,
