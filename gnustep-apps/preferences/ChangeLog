@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/preferences
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/ChangeLog,v 1.15 2010/07/14 15:28:21 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/ChangeLog,v 1.16 2011/04/09 21:13:29 angelos Exp $
+
+  09 Apr 2011; Christoph Mende <angelos@gentoo.org>
+  preferences-1.3.0_pre20100523.ebuild:
+  Stable on amd64 wrt bug #360969
 
 *preferences-1.3.0_pre20100523 (14 Jul 2010)
 
