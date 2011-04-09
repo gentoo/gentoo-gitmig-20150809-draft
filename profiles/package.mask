@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12668 2011/04/08 22:49:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12669 2011/04/09 08:42:28 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1178,12 +1178,6 @@ app-portage/udept
 # Matti Bickel <mabi@gentoo.org> (1 Mar 2009)
 # Mask testing branch
 =x11-libs/fox-1.7*
-
-# mask pending removal
-# Benedikt Böhm <hollow@gentoo.org> (10 Jan 2009)
-# baselayout-vserver is unmaintained and obsoleted by baselayout-2/openrc.
-# Please, upgrade to openrc. removal after openrc goes stable, bug #254519
-sys-apps/baselayout-vserver
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (03 Jan 2009)
 # These packages are not supposed to be merged directly, instead
