@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.260 2011/04/08 14:28:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.261 2011/04/09 21:28:10 ulm Exp $
+
+  09 Apr 2011; Ulrich Mueller <ulm@gentoo.org> windows/winnt/packages:
+  Old-style virtual/portage is replaced by new-style virtual/package-manager,
+  bug 358847.
 
   07 Apr 2011; Jeremy Olexa <darkside@gentoo.org>
   -darwin/macos/10.3/package.mask, darwin/macos/10.5/ppc/package.use.mask,
