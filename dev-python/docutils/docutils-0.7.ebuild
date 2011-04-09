@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.14 2010/12/27 21:07:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.15 2011/04/09 23:56:44 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -38,6 +38,9 @@ src_prepare() {
 
 	# Fix installation of extra modules.
 	epatch "${FILESDIR}/${PN}-0.6-extra_modules.patch"
+
+	epatch "${FILESDIR}/${P}-python-3.2-configparser.patch"
+	epatch "${FILESDIR}/${P}-python-3.2-xml.etree.ElementTree.patch"
 
 	sed -e "s/from distutils.core/from setuptools/" -i setup.py || die "sed setup.py failed"
 }

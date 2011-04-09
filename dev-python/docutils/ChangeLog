@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/docutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.126 2010/12/27 21:59:46 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.127 2011/04/09 23:56:44 arfrever Exp $
+
+  09 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  docutils-0.7.ebuild, +files/docutils-0.7-python-3.2-configparser.patch,
+  +files/docutils-0.7-python-3.2-xml.etree.ElementTree.patch:
+  Fix compatibility with Python 3.2 (bug #351063).
 
   27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -docutils-0.6.ebuild:
