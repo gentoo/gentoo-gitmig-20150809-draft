@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gresistor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gresistor/ChangeLog,v 1.6 2011/03/02 21:28:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gresistor/ChangeLog,v 1.7 2011/04/09 21:40:51 arfrever Exp $
+
+  09 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gresistor-0.0.1.ebuild:
+  Fix deprecation warning.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gresistor-0.0.1.ebuild:
   Correct Slots for gtk 3 introduction to tree
