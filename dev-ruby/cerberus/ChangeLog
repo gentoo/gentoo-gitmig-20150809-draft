@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cerberus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.14 2011/01/24 18:38:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.15 2011/04/09 06:31:46 graaff Exp $
+
+  09 Apr 2011; Hans de Graaff <graaff@gentoo.org> -cerberus-0.7.8.ebuild:
+  Remove old version.
 
 *cerberus-0.7.8-r1 (24 Jan 2011)
 
