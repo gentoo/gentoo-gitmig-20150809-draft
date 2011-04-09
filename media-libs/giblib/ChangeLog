@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giblib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.21 2009/06/22 14:29:55 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.22 2011/04/09 14:43:49 klausman Exp $
+
+  09 Apr 2011; Tobias Klausmann <klausman@gentoo.org> giblib-1.2.4.ebuild:
+  Move to proper USE-deps instead of using built_with_use
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> giblib-1.2.4.ebuild:
   Stable for HPPA too.
