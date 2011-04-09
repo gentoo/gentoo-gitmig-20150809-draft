@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.501 2011/04/04 14:03:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.502 2011/04/09 18:50:26 grobian Exp $
+
+  09 Apr 2011; Fabian Groffen <grobian@gentoo.org> gtk+-3.0.8.ebuild,
+  +files/gtk+-3.0.8-darwin-quartz.patch:
+  Add patch from upstream for Darwin
 
 *gtk+-3.0.8 (04 Apr 2011)
 
