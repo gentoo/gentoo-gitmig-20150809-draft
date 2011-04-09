@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.22.ebuild,v 1.2 2010/11/05 12:05:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.23.ebuild,v 1.1 2011/04/09 18:51:59 fauli Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit webapp depend.php
 
 DESCRIPTION="Joomla is a powerful Open Source Content Management System."
 HOMEPAGE="http://www.joomla.org/"
-SRC_URI="http://joomlacode.org/gf/download/frsrelease/13105/57240/Joomla_${PV}-Stable-Full_Package.zip"
+SRC_URI="http://joomlacode.org/gf/download/frsrelease/14506/63460/Joomla_${PV}-Stable-Full_Package.zip"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"

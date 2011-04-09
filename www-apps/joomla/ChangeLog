@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.50 2011/03/13 10:56:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.51 2011/04/09 18:51:59 fauli Exp $
+
+*joomla-1.5.23 (09 Apr 2011)
+
+  09 Apr 2011; Christian Faulhammer <fauli@gentoo.org>
+  -joomla-1.5.22.ebuild, +joomla-1.5.23.ebuild:
+  version bump for security bug 362509
 
   13 Mar 2011; Christian Faulhammer <fauli@gentoo.org> joomla-1.6.1.ebuild:
   Add missing KEYWORDS
