@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/erubis
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.9 2010/12/31 13:54:17 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.10 2011/04/09 09:14:27 graaff Exp $
+
+*erubis-2.7.0 (09 Apr 2011)
+
+  09 Apr 2011; Hans de Graaff <graaff@gentoo.org> +erubis-2.7.0.ebuild:
+  Version bump.
 
   31 Dec 2010; Hans de Graaff <graaff@gentoo.org> -erubis-2.6.5.ebuild:
   Remove old version.
