@@ -1,13 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/synergy-plus-1.3.4.ebuild,v 1.5 2010/07/22 11:32:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy-plus/synergy-plus-1.3.4.ebuild,v 1.6 2011/04/09 07:55:38 xarthisius Exp $
 
 EAPI="2"
 
+inherit autotools
+
 DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple computers"
+HOMEPAGE="http://code.google.com/p/synergy-plus/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 #SRC_URI="mirror://google/files/${PN}/${P}.tar.gz"
-HOMEPAGE="http://code.google.com/p/synergy-plus/"
+
 LICENSE="GPL-2"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
@@ -26,16 +29,22 @@ DEPEND="${CDEPEND}
 	x11-proto/xineramaproto
 	x11-libs/libXt"
 
+src_prepare() {
+	sed -i -e '/ACX_CXX_WARNINGS_ARE_ERRORS/d' configure.in || die #362675
+
+	eautoreconf
+}
+
 src_install () {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README || die
 	insinto /etc
-	doins examples/synergy.conf || die "doins failed"
+	doins examples/synergy.conf || die
 }
 
 pkg_postinst() {
-	elog
+	echo ''
 	elog "${PN} can also be used to connect to computers running Windows or Mac OS X."
 	elog "Visit ${HOMEPAGE} to find the Windows client and Mac OS X client."
-	elog
+	echo ''
 }
