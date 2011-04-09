@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/vmailmgr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.32 2010/10/25 08:41:29 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.33 2011/04/09 16:23:33 arfrever Exp $
+
+  09 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  vmailmgr-0.97-r1.ebuild, +files/vmailmgr-0.97-python.patch:
+  Use Python 2, fix detection of Python library path, don't install .pyc and
+  .pyo files in Python site-packages directory (bug #362723).
 
   25 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
   vmailmgr-0.97-r1.ebuild:
