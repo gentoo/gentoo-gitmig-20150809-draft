@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.0.ebuild,v 1.1 2011/04/05 00:31:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.0.ebuild,v 1.2 2011/04/10 09:34:10 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -43,10 +43,7 @@ pkg_setup() {
 
 src_install() {
 	gnome2_src_install
-
-	# Remove .la files, these libraries are dlopen()-ed.
-	rm -vf "${ED}"/usr/lib*/gtk-2.0/*/engines/libsvg.la
-	rm -vf "${ED}"/usr/lib*/gdk-pixbuf-2.0/*/loaders/libpixbufloader-svg.la
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
