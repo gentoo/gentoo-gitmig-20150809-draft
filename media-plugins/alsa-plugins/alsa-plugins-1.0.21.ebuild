@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.21.ebuild,v 1.9 2010/02/13 16:27:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.21.ebuild,v 1.10 2011/04/10 20:21:10 scarabeus Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}[alsa_pcm_plugins_ioplug]
-	ffmpeg? ( media-video/ffmpeg
+	ffmpeg? ( virtual/ffmpeg
 		media-libs/alsa-lib[alsa_pcm_plugins_rate,alsa_pcm_plugins_plug] )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	libsamplerate? (

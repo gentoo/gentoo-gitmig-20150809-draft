@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.133 2011/02/06 00:41:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.134 2011/04/10 20:21:10 scarabeus Exp $
+
+  10 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  alsa-plugins-1.0.20.ebuild, alsa-plugins-1.0.21.ebuild,
+  alsa-plugins-1.0.22.ebuild, alsa-plugins-1.0.23-r1.ebuild,
+  alsa-plugins-1.0.24.ebuild:
+  Move to virtual/ffmpeg. Fixes bug #362087.
 
 *alsa-plugins-1.0.24 (06 Feb 2011)
 
