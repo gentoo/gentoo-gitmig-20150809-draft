@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.9 2011/03/02 19:51:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.10 2011/04/10 22:00:13 arfrever Exp $
 
-EAPI="1"
+EAPI="3"
 
 inherit autotools eutils distutils flag-o-matic
 
@@ -46,9 +46,7 @@ DEPEND="${RDEPEND}
 		sys-libs/ncurses
 	)"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# add -lm to setup.py again (see bug #250757)
 	sed -i \
 	    -e "s:, gpspacket_sources:, gpspacket_sources, libraries=['m']:g" \
@@ -64,7 +62,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 
 	local my_conf="--enable-shared --with-pic --enable-static \
 		--disable-fast-install"
@@ -99,7 +97,9 @@ src_compile() {
 
 	# still needs an explicit linkage with the math lib (bug #250757)
 	append-ldflags -Wl,-z,-defs -Wl,--no-undefined
+}
 
+src_compile() {
 	emake -j1 || die "emake failed"
 }
 

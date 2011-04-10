@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.60 2011/03/02 19:51:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.61 2011/04/10 22:00:13 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gpsd-2.32.ebuild, gpsd-2.38.ebuild:
+  Fix deprecation warnings.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gpsd-2.38.ebuild,
   gpsd-2.39-r1.ebuild, gpsd-2.95-r1.ebuild:
