@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.28 2011/04/10 18:13:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.29 2011/04/10 18:20:53 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -11,23 +11,23 @@
 
 # @ECLASS-VARIABLE: EAUTORECONF
 # @DESCRIPTION:
-# Run eautoreconf instead of elibtoolize if set "yes"
+# Run eautoreconf instead of elibtoolize if the variable is set.
 
 # @ECLASS-VARIABLE: EINTLTOOLIZE
 # @DESCRIPTION:
-# Run intltoolize --force --copy --automake if set "yes"
+# Run intltoolize --force --copy --automake if the variable is set.
 
 # @ECLASS-VARIABLE: DOCS
 # @DESCRIPTION:
-# Define documentation to install
+# This should be an variable defining documentation to install.
 
 # @ECLASS-VARIABLE: PATCHES
 # @DESCRIPTION:
-# Define patches to apply
+# This should be an array defining patches to apply.
 
 # @ECLASS-VARIABLE: XFCONF
 # @DESCRIPTION:
-# Define options for econf
+# This should be an array defining arguments for econf.
 
 inherit autotools base eutils fdo-mime gnome2-utils libtool
 
