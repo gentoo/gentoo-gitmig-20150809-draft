@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.9 2011/01/27 11:49:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.10 2011/04/10 10:34:21 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://library.gnome.org/devel/libglade/stable/"
 LICENSE="LGPL-2"
 SLOT="2.0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="doc test"
+IUSE="doc static-libs test"
 
 RDEPEND=">=dev-libs/glib-2.10:2
 	>=x11-libs/gtk+-2.8.10:2
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable static-libs static)"
 	DOCS="AUTHORS ChangeLog NEWS README"
 	python_set_active_version 2
 }
@@ -45,6 +46,7 @@ src_prepare() {
 src_install() {
 	dodir /etc/xml
 	gnome2_src_install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 	python_convert_shebangs 2 "${ED}"/usr/bin/libglade-convert
 }
 
