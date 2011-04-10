@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.3.ebuild,v 1.8 2011/03/22 19:16:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.30.3.ebuild,v 1.9 2011/04/10 10:47:32 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -47,11 +47,7 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-
-	if use glade; then
-		# libglade doesn't need .la files
-		find "${ED}/usr/$(get_libdir)/libglade/2.0" -name "*.la" -delete || die
-	fi
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 src_test() {
