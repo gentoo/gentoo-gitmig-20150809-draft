@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.3.ebuild,v 1.1 2011/03/18 19:09:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.3.ebuild,v 1.2 2011/04/10 09:30:59 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -184,7 +184,7 @@ src_install() {
 	done
 
 	# Clean up useless la files
-	find "${ED}"/usr/$(get_libdir)/gtk-2.0/ -name "*.la" -delete
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	python_convert_shebangs 2 "${ED}"usr/bin/gtk-builder-convert
 }
