@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.4-r1.ebuild,v 1.8 2011/04/10 10:22:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.4-r1.ebuild,v 1.9 2011/04/10 12:44:09 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://library.gnome.org/devel/libbonoboui/"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="doc examples static-libs test"
+IUSE="doc examples test"
 
 # GTK+ dep due to bug #126565
 RDEPEND=">=gnome-base/libgnomecanvas-1.116
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF}
-		$(use_enable static-libs static)
+		--disable-static
 		--disable-maintainer-mode"
 }
 
