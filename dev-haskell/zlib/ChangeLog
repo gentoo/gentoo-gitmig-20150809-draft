@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/zlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib/ChangeLog,v 1.11 2011/02/25 12:59:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib/ChangeLog,v 1.12 2011/04/10 19:10:56 grobian Exp $
+
+  10 Apr 2011; Fabian Groffen <grobian@gentoo.org> zlib-0.5.2.0.ebuild:
+  Marked ~x86-macos
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> zlib-0.5.2.0.ebuild:
   ppc/ppc64 stable wrt #339580
