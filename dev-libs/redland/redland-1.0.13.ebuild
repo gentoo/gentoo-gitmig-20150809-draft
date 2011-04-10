@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.13.ebuild,v 1.2 2011/02/03 20:31:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.13.ebuild,v 1.3 2011/04/10 15:43:46 ssuominen Exp $
 
 EAPI=3
 inherit libtool
@@ -70,6 +70,9 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	dohtml {FAQS,NEWS,README,RELEASE,TODO}.html
+
+	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
 }

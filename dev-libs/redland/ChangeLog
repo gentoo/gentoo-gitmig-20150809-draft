@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.80 2011/02/03 20:31:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.81 2011/04/10 15:43:46 ssuominen Exp $
+
+  10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> redland-1.0.13.ebuild:
+  Reset dependency_libs to '' in libtool files.
 
   03 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> redland-1.0.13.ebuild:
   Add ~ppc/~ppc64 wrt #341149
