@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.6.ebuild,v 1.1 2010/12/14 01:54:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.9.6.ebuild,v 1.2 2011/04/10 03:20:29 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs versionator
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v$(get_version_component_range 1
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="cancel-locks crypt debug evil forgery idn ipv6 nls unicode socks5 +etiquette"
 
 DEPEND="
@@ -75,7 +75,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	rm -f "${D}"/usr/share/man/man5/{mbox,mmdf}.5
+	rm -f "${ED}"/usr/share/man/man5/{mbox,mmdf}.5
 
 	dodoc doc/{CHANGES{,.old},CREDITS,TODO,WHATSNEW,*.sample,*.txt} || die "dodoc failed"
 	insinto /etc/tin
