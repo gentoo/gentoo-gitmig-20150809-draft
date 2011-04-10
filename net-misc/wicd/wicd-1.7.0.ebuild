@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.9 2011/03/19 08:23:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.10 2011/04/10 21:42:27 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils distutils
 
@@ -56,7 +56,7 @@ src_compile() {
 	use libnotify || myconf="${myconf} --no-use-notifications"
 	use ncurses || myconf="${myconf} --no-install-ncurses"
 	use pm-utils || myconf="${myconf} --no-install-pmutils"
-	${python} ./setup.py configure --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose ${myconf}
+	$(PYTHON) ./setup.py configure --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose ${myconf}
 	distutils_src_compile
 }
 
