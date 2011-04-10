@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.3.2.ebuild,v 1.3 2010/06/01 07:49:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.3.2.ebuild,v 1.4 2011/04/10 17:00:29 fauli Exp $
 
 EAPI=2
 inherit multilib
@@ -30,7 +30,7 @@ DEPEND="sys-libs/ncurses[unicode?]
 	pulseaudio? ( media-sound/pulseaudio )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	wavpack? ( media-sound/wavpack )
-	wma? ( >=media-video/ffmpeg-0.4.9_p20080326 )"
+	wma? ( virtual/ffmpeg )"
 RDEPEND="${DEPEND}
 	zsh-completion? ( app-shells/zsh )
 	pidgin? ( net-im/pidgin
