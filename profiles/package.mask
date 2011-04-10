@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12672 2011/04/10 09:35:53 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12673 2011/04/10 10:28:22 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -439,12 +439,6 @@ sci-libs/blas-goto
 media-libs/pdflib
 # pecl-pdflib will be removed with pdflib's removal
 dev-php5/pecl-pdflib
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (01 Mar 2011)
-#
-# New "major" version, while it is a stable release it might be worth
-# not using it by default for a little while.
-=app-admin/sudo-1.8*
 
 # Ulrich Mueller <ulm@gentoo.org> (01 Mar 2011)
 # Christian Faulhammer <fauli@gentoo.org>
