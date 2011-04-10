@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libsexymm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/ChangeLog,v 1.13 2011/03/29 06:14:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libsexymm/ChangeLog,v 1.14 2011/04/10 16:46:31 ssuominen Exp $
+
+  10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> libsexymm-0.1.9.ebuild:
+  Remove useless libtool archive wrt #362885 by Cesko Voeten. Remove static
+  archive to match gtkmm behavior.
 
   29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   libsexymm-0.1.9.ebuild:
