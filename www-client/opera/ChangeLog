@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.621 2011/04/10 12:43:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.622 2011/04/10 20:52:28 jer Exp $
+
+*opera-11.10.2090 (10 Apr 2011)
+
+  10 Apr 2011; Jeroen Roovers <jer@gentoo.org> +opera-11.10.2090.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/04/10/barracuda-release-candidate-3
+  -11
 
 *opera-11.10.2087 (10 Apr 2011)
 
