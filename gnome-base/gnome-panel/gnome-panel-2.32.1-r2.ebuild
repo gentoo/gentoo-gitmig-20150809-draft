@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r2.ebuild,v 1.1 2011/04/03 15:44:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r2.ebuild,v 1.2 2011/04/10 08:52:47 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -97,11 +97,7 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-
-	# gnome-panel does not need la files for applets
-	find "${ED}"/usr/$(get_libdir)/${PN} -name "*.la" -delete
-	# no package could ever need this, remove it before anyone tries to
-	rm "${ED}"/usr/$(get_libdir)/libpanel-applet-3.la
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
