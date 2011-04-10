@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.34 2011/04/10 12:18:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.35 2011/04/10 20:51:22 maekke Exp $
+
+  10 Apr 2011; Markus Meier <maekke@gentoo.org> pyro-3.12.ebuild:
+  x86 stable, bug #357989
 
   10 Apr 2011; Tobias Klausmann <klausman@gentoo.org> pyro-3.12.ebuild:
   Stable on alpha, bug #357989
