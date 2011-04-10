@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.1 2011/04/04 21:24:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.2 2011/04/10 10:28:30 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -67,7 +67,7 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-	find "${ED}/usr/$(get_libdir)/pango/1.6.0/modules" -name "*.la" -delete || die
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r1.ebuild,v 1.9 2011/03/05 17:52:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r1.ebuild,v 1.10 2011/04/10 10:25:22 ssuominen Exp $
 
 EAPI=3
 
@@ -146,6 +146,7 @@ src_configure() {
 
 src_install() {
 	# parallel make install fails
-	emake -j1 DESTDIR="${D}" install || die "Installation failed"
+	emake -j1 DESTDIR="${D}" install || die
+	find "${ED}" -name '*.la' -exec rm -f {} +
 	dodoc AUTHORS ChangeLog NEWS README || die
 }
