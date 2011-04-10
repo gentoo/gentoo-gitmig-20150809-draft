@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.11 2008/02/25 02:08:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.12 2011/04/10 14:34:42 ulm Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -23,7 +23,6 @@ RDEPEND=">=sys-libs/ncurses-5.2-r5"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.5"
-PROVIDE="virtual/bootloader"
 
 PATCHDIR="${WORKDIR}/gentoo"
 

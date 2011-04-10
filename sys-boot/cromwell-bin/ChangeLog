@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/cromwell-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell-bin/ChangeLog,v 1.5 2007/07/02 15:30:47 peper Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell-bin/ChangeLog,v 1.6 2011/04/10 14:36:44 ulm Exp $
+
+  10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> cromwell-bin-2.31.ebuild,
+  cromwell-bin-2.40.ebuild:
+  Don't PROVIDE virtual/bootloader, bug 359971.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   cromwell-bin-2.31.ebuild, cromwell-bin-2.40.ebuild:

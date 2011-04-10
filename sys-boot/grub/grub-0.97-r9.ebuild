@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r9.ebuild,v 1.7 2011/02/13 07:41:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r9.ebuild,v 1.8 2011/04/10 14:34:42 ulm Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -26,7 +26,6 @@ DEPEND="ncurses? (
 		>=sys-libs/ncurses-5.2-r5
 		amd64? ( app-emulation/emul-linux-x86-baselibs )
 	)"
-PROVIDE="virtual/bootloader"
 
 pkg_setup() {
 	local arch="$(tc-arch)"
