@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-0.8.0.ebuild,v 1.6 2011/04/03 21:16:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.0.1.ebuild,v 1.1 2011/04/10 23:07:52 dilfridge Exp $
 
-EAPI=2
+EAPI=4
 
 inherit base toolchain-funcs
 
@@ -13,25 +13,26 @@ SRC_URI="mirror://sourceforge/bombono/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-RDEPEND="x11-libs/gtk+:2
+RDEPEND="
+	app-i18n/enca
+	app-cdr/dvd+rw-tools
 	dev-cpp/gtkmm:2.4
+	dev-cpp/libxmlpp:2.6
 	dev-libs/boost
-	>=media-video/mjpegtools-1.8.0
 	media-libs/libdvdread
+	media-sound/twolame
 	media-video/dvdauthor
 	virtual/ffmpeg
-	app-cdr/dvd+rw-tools
-	media-sound/twolame
-	dev-cpp/libxmlpp:2.6"
+	>=media-video/mjpegtools-1.8.0
+	x11-libs/gtk+:2
+"
 
 DEPEND=">=dev-util/scons-0.96.1
 	${RDEPEND}"
-
-PATCHES=( "${FILESDIR}/${P}-boost.patch" )
 
 src_compile() {
 	# scons options differ from make options -> remove everything except "-jX" and "-j X"
