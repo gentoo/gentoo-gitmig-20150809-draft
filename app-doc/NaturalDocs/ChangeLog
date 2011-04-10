@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/NaturalDocs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.30 2010/09/10 14:17:03 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.31 2011/04/10 12:56:38 klausman Exp $
+
+  10 Apr 2011; Tobias Klausmann <klausman@gentoo.org>
+  NaturalDocs-1.40-r1.ebuild:
+  Stable on alpha, bug #359233
 
   10 Sep 2010; Jeroen Roovers <jer@gentoo.org> NaturalDocs-1.40-r1.ebuild:
   Stable for HPPA (bug #325111).
