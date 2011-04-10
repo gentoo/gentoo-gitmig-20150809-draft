@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysyck
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/ChangeLog,v 1.4 2010/07/08 15:09:20 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/ChangeLog,v 1.5 2011/04/10 21:09:37 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pysyck-0.61.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #345539).
 
   08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pysyck-0.61.2.ebuild:

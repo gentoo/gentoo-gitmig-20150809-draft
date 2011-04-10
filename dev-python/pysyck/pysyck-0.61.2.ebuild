@@ -1,8 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/pysyck-0.61.2.ebuild,v 1.4 2010/07/08 15:09:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysyck/pysyck-0.61.2.ebuild,v 1.5 2011/04/10 21:09:37 arfrever Exp $
 
+EAPI="3"
 PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -25,6 +28,11 @@ S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME="syck"
 
 src_test() {
-	PYTHONPATH=./lib/ "${python}" tests/test_syck.py
+	testing() {
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" tests/test_syck.py
+		:
+	}
+	python_execute_function testing
+
 	einfo "Some tests may have failed due to pending bugs in dev-libs/syck"
 }
