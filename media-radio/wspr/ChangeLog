@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/wspr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.1 2011/04/03 06:50:56 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.2 2011/04/10 21:39:35 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  wspr-2.00.ebuild:
+  Use Python 2 (bug #362339).
 
 *wspr-2.00 (03 Apr 2011)
 
