@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.4 2010/04/16 17:43:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.5 2011/04/10 04:54:59 abcd Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit qt4-r2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug pch"
 
 DEPEND="x11-libs/qt-core:4
@@ -26,7 +26,7 @@ src_configure() {
 	use pch && conf_pch="PRECOMPILED=1" || conf_pch="PRECOMPILED=0"
 
 	eqmake4 ${PN}.pro -recursive \
-		PREFIX="${D}/usr" \
+		PREFIX="${ED}/usr" \
 		"${conf_pch}"
 }
 
