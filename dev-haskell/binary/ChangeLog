@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.12 2011/02/25 13:04:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.13 2011/04/10 18:51:44 grobian Exp $
+
+  10 Apr 2011; Fabian Groffen <grobian@gentoo.org> binary-0.5.0.2.ebuild:
+  Marked ~x86-macos
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> binary-0.5.0.2.ebuild:
   ppc/ppc64 stable wrt #339580

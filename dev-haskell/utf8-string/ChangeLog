@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/utf8-string
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.10 2011/02/25 13:01:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.11 2011/04/10 18:59:18 grobian Exp $
+
+  10 Apr 2011; Fabian Groffen <grobian@gentoo.org> utf8-string-0.3.6.ebuild:
+  Marked ~x86-macos
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   utf8-string-0.3.6.ebuild:
