@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.2.0-r1.ebuild,v 1.1 2011/04/09 22:31:01 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.2.0-r1.ebuild,v 1.2 2011/04/10 08:03:44 nerdboy Exp $
 
 EAPI="4"
 
@@ -50,14 +50,17 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/include
-	doins -r mtl
-	doins utils/Options.h utils/System.h core/Solver.h core/SolverTypes.h
-
 	# somewhat brute-force, but so is the build setup...
+	insinto /usr/include/minisat2
+	doins -r mtl
+	rm -f ${ED}/usr/include/minisat2/mtl/config.mk
+	doins core/Solver.h simp/SimpSolver.h
+
+	insinto /usr/include/minisat2/core && doins core/SolverTypes.h
+	insinto /usr/include/minisat2/utils && doins utils/*.h
+
 	if use extended-solver; then
 		cd simp
-		doins SimpSolver.h
 	else
 		cd core
 	fi
@@ -75,6 +78,7 @@ src_install() {
 	cd "${S}"
 
 	dodoc README doc/ReleaseNotes-2.2.0.txt
+
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins "${DISTDIR}"/MiniSat.pdf
