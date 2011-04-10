@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bcel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.52 2010/07/16 19:44:05 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.53 2011/04/10 23:19:57 nerdboy Exp $
+
+*bcel-5.2-r1 (10 Apr 2011)
+
+  10 Apr 2011; Steve Arnold <nerdboy@gentoo.org> +bcel-5.2-r1.ebuild,
+  metadata.xml:
+  Updated to 1.5 source/target and added performance patch for findbugs. 
+  Patch is use-enabled and off by default.
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> bcel-5.2.ebuild:
   Marked ~x64-macos
