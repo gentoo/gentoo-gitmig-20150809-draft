@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.22 2011/03/26 15:27:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.23 2011/04/10 22:10:42 arfrever Exp $
 
-EAPI=1
+EAPI=3
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -108,10 +108,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch rpm/fedora/grass-readline.patch
 	# fix the fortify_source and buffer issues (see bug #261283)
 	epatch "${FILESDIR}"/${P}-o_creat.patch
@@ -130,7 +127,7 @@ src_unpack() {
 	echo "MATHLIB=-lm" >> include/Make/Rules.make
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	addpredict /var/cache/fontconfig
 
@@ -215,8 +212,10 @@ src_compile() {
 		$(use_with postgres) \
 		$(use_with readline) \
 		$(use_with tiff) \
-		--enable-largefile \
+		--enable-largefile
+}
 
+src_compile() {
 	if use wxwidgets; then
 	    # can't use die here since we need to hack the vdigit build
 	    emake -j1

@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.98 2011/04/05 06:38:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.99 2011/04/10 22:10:42 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  grass-6.3.0.ebuild:
+  Fix deprecation warning.
 
   05 Apr 2011; Justin Lecher <jlec@gentoo.org> grass-6.4.0.ebuild:
   Cleaned double /
