@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.8.2-r1.ebuild,v 1.1 2011/01/18 14:06:58 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.8.2-r1.ebuild,v 1.2 2011/04/10 07:10:10 tove Exp $
 
 # WARNING: JUNIT.JAR IS _NOT_ SYMLINKED TO ANT-CORE LIB FOLDER AS JUNIT3 IS
 
@@ -70,7 +70,7 @@ src_test() {
 	ejavac -classpath ${cp} -d classes $(find junit/tests -name "*.java")
 
 	java -classpath ${cp}:classes org.junit.runner.JUnitCore junit.tests.AllTests \
-		|| "Tests failed."
+		|| die "Tests failed."
 }
 
 src_install() {

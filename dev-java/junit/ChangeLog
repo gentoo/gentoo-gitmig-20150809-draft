@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.60 2011/01/18 14:06:58 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.61 2011/04/10 07:10:10 tove Exp $
+
+  10 Apr 2011; Torsten Veller <tove@gentoo.org> junit-4.8.2-r1.ebuild:
+  Add missing die: || "..." -> || die "..."
 
 *junit-4.8.2-r1 (18 Jan 2011)
 
