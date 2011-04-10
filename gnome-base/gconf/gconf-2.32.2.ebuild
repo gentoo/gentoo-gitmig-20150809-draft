@@ -1,46 +1,43 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.28.1.ebuild,v 1.10 2011/03/16 10:24:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.2.ebuild,v 1.1 2011/04/10 13:01:33 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="yes"
+GNOME_ORG_MODULE="GConf"
 
 inherit eutils gnome2
 
-MY_PN=GConf
-MY_P=${MY_PN}-${PV}
-PVP=(${PV//[-\._]/ })
-
 DESCRIPTION="Gnome Configuration System and Daemon"
-HOMEPAGE="http://www.gnome.org/"
-SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
+HOMEPAGE="http://projects.gnome.org/gconf/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="debug doc ldap policykit"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="debug doc +introspection ldap policykit"
 
-RDEPEND=">=dev-libs/glib-2.14:2
+RDEPEND=">=dev-libs/glib-2.25.9:2
 	>=x11-libs/gtk+-2.14:2
 	>=dev-libs/dbus-glib-0.74
 	>=sys-apps/dbus-1
 	>=gnome-base/orbit-2.4:2
 	>=dev-libs/libxml2-2:2
+	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	ldap? ( net-nds/openldap )
 	policykit? ( sys-auth/polkit )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/gtk-doc-am-1.10
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
-
-S="${WORKDIR}/${MY_P}"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		--enable-gtk
 		--disable-static
+		--enable-gsettings-backend
+		--with-gtk=2.0
+		$(use_enable introspection)
 		$(use_with ldap openldap)
 		$(use_enable policykit defaults-service)"
 	kill_gconf
@@ -52,21 +49,12 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# Do not start gconfd when installing schemas, fix bug #238276, upstream ?
+	# Do not start gconfd when installing schemas, fix bug #238276, upstream #631983
 	epatch "${FILESDIR}/${PN}-2.24.0-no-gconfd.patch"
 
-	# Do not crash in gconf_entry_set_value() when entry pointer is NULL
+	# Do not crash in gconf_entry_set_value() when entry pointer is NULL, upstream #631985
 	epatch "${FILESDIR}/${PN}-2.28.0-entry-set-value-sigsegv.patch"
-
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
-
-# Can't run tests, missing script.
-#src_test() {
-#	emake -C tests || die "make tests failed"
-#	sh "${S}"/tests/runtests.sh || die "running tests failed"
-#}
 
 src_install() {
 	gnome2_src_install
@@ -77,8 +65,9 @@ src_install() {
 	keepdir /etc/gconf/gconf.xml.system
 
 	echo 'CONFIG_PROTECT_MASK="/etc/gconf"' > 50gconf
+	echo 'GSETTINGS_BACKEND="gconf"' >> 50gconf
 	doenvd 50gconf || die "doenv failed"
-	dodir /root/.gconfd
+	dodir /root/.gconfd || die
 }
 
 pkg_preinst() {
