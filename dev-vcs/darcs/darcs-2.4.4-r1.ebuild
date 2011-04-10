@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.11 2011/02/25 13:21:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.4.4-r1.ebuild,v 1.12 2011/04/10 19:18:53 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 CABAL_FEATURES="bin lib profile haddock"
 inherit haskell-cabal eutils bash-completion
 
@@ -12,7 +12,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="doc test"
 
 # Dependency notes:
@@ -116,14 +116,14 @@ src_install() {
 	cabal_src_install
 	dobashcompletion "${S}/contrib/darcs_completion" "${PN}"
 
-	rm "${D}/usr/bin/unit" 2> /dev/null
+	rm "${ED}/usr/bin/unit" 2> /dev/null
 
 	# fixup perms in such an an awkward way
-	mv "${D}/usr/share/man/man1/darcs.1" "${S}/darcs.1" || die "darcs.1 not found"
+	mv "${ED}/usr/share/man/man1/darcs.1" "${S}/darcs.1" || die "darcs.1 not found"
 	doman "${S}/darcs.1" || die "failed to register darcs.1 as a manpage"
 
 	# if tests were enabled, make sure the unit test driver is deleted
-	rm -rf "${D}/usr/bin/unit"
+	rm -rf "${ED}/usr/bin/unit"
 }
 
 pkg_postinst() {
@@ -133,5 +133,5 @@ pkg_postinst() {
 	ewarn "NOTE: in order for the darcs send command to work properly,"
 	ewarn "you must properly configure your mail transport agent to relay"
 	ewarn "outgoing mail.  For example, if you are using ssmtp, please edit"
-	ewarn "/etc/ssmtp/ssmtp.conf with appropriate values for your site."
+	ewarn "${EPREFIX}/etc/ssmtp/ssmtp.conf with appropriate values for your site."
 }
