@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.35.ebuild,v 1.3 2011/01/12 18:07:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.35.ebuild,v 1.4 2011/04/10 16:34:50 fauli Exp $
 
 EAPI="3"
 
@@ -15,15 +15,12 @@ SRC_URI="http://dl.cihar.com/wammu/v0/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="bluetooth"
+IUSE="bluetooth gnome"
 
 RDEPEND=">=app-mobilephone/gammu-1.25.0[python]
 	>=dev-python/wxpython-2.8
-	bluetooth? (
-		|| (
-			dev-python/pybluez
-			net-wireless/gnome-bluetooth
-		)
+	bluetooth? ( dev-python/pybluez
+		gnome? ( net-wireless/gnome-bluetooth )
 	)"
 DEPEND="${RDEPEND}"
 

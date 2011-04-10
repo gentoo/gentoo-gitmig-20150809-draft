@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.49 2011/01/12 18:07:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.50 2011/04/10 16:34:50 fauli Exp $
+
+  10 Apr 2011; Christian Faulhammer <fauli@gentoo.org> wammu-0.35.ebuild:
+  Use gnome-bluetooth if USE=gnome is activated, see bug 328955 by Kobboi
 
   12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> wammu-0.35.ebuild:
   Stable on amd64 wrt bug #350079
