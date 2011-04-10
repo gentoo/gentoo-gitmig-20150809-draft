@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.148 2011/03/22 18:44:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.149 2011/04/10 11:47:43 eva Exp $
+
+  10 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -seahorse-2.30.1.ebuild:
+  Clean up old revision.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> seahorse-2.32.0.ebuild:
   Marking seahorse-2.32.0 ppc stable for bug 353436
