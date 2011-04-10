@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.16.ebuild,v 1.1 2010/10/03 17:57:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/yaboot-static-1.3.16.ebuild,v 1.2 2011/04/10 14:24:22 ulm Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ DEPEND="!sys-boot/yaboot
 RDEPEND="!ibm? ( sys-fs/hfsutils
 				 sys-fs/hfsplusutils
 				 sys-fs/mac-fdisk )"
-PROVIDE="virtual/bootloader"
 
 src_install() {
 	cp -pPR "${WORKDIR}"/* "${D}" || die "cp failed"

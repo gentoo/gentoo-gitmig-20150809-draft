@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/quik
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.13 2010/02/10 03:23:37 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.14 2011/04/10 14:22:23 ulm Exp $
+
+  10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> quik-2.1.6.ebuild:
+  Don't PROVIDE virtual/bootloader, bug 359971.
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> quik-2.1.6.ebuild,
   files/headers.patch:

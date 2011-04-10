@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/bootcreator-1.2.ebuild,v 1.1 2007/02/10 22:19:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/bootcreator/bootcreator-1.2.ebuild,v 1.2 2011/04/10 14:18:53 ulm Exp $
 
 inherit eutils
 
@@ -13,8 +13,6 @@ SLOT="0"
 KEYWORDS="ppc -*"
 IUSE=""
 DEPEND=""
-
-PROVIDE="virtual/bootloader"
 
 S=${WORKDIR}
 

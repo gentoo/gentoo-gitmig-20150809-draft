@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r3.ebuild,v 1.4 2009/03/08 19:17:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r3.ebuild,v 1.5 2011/04/10 14:19:39 ulm Exp $
 
 inherit eutils mount-boot
 
@@ -14,8 +14,6 @@ SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
 RESTRICT="strip"
-
-PROVIDE="virtual/bootloader"
 
 src_unpack() {
 	unpack ${A}
