@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.171 2011/03/22 20:47:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.172 2011/04/10 16:33:44 fauli Exp $
+
+*claws-mail-3.7.9 (10 Apr 2011)
+
+  10 Apr 2011; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.7.9.ebuild:
+  version bump
 
   22 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-3.7.6.ebuild, -claws-mail-3.7.7.ebuild:
