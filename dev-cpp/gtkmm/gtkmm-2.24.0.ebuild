@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.0.ebuild,v 1.3 2011/03/29 02:47:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.0.ebuild,v 1.4 2011/04/10 16:30:01 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -56,4 +56,10 @@ src_prepare() {
 		mm-common-prepare --copy --force
 		eautoreconf
 	fi
+}
+
+src_install() {
+	gnome2_src_install
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
