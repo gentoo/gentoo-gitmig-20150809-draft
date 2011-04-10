@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.26.0.ebuild,v 1.9 2011/03/29 06:11:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/libgnomecanvasmm-2.26.0.ebuild,v 1.10 2011/04/10 16:49:18 ssuominen Exp $
 
 EAPI="1"
 
@@ -43,6 +43,8 @@ src_compile() {
 
 src_install() {
 	gnome2_src_install
+
+	find "${D}" -name '*.la' -exec rm -f {} +
 
 	if use doc ; then
 		dohtml -r docs/reference/html/*
