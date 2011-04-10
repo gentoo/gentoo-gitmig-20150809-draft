@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.6.8.5.ebuild,v 1.3 2011/04/08 16:03:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.6.8.5.ebuild,v 1.4 2011/04/10 10:19:09 ssuominen Exp $
 
 EAPI=3
 inherit multilib toolchain-funcs versionator
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86 ~ppc-aix ~x86-fbsd ~x86-interix ~amd64-lin
 IUSE="autotrace bzip2 +corefonts cxx djvu fftw fontconfig fpx graphviz gs hdri jbig jpeg jpeg2k lcms lqr lzma openexr openmp perl png q32 q8 raw static-libs svg tiff truetype webp wmf X xml zlib"
 IUSE="${IUSE} video_cards_nvidia" # opencl support
 
+# libtool is required for loading plugins
 RDEPEND=">=sys-devel/libtool-2.2.6b
 	autotrace? ( >=media-gfx/autotrace-0.31.1 )
 	bzip2? ( app-arch/bzip2 )
@@ -147,4 +148,9 @@ src_install() {
 		find "${ED}" -type f -name perllocal.pod -delete
 		find "${ED}" -depth -mindepth 1 -type d -empty -delete
 	fi
+
+	local la
+	for la in `find "${ED}" -name '*.la'`; do
+		sed -i -e "/^dependency_libs/s:=.*:='':" "${la}" || die
+	done
 }
