@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.59 2011/04/09 09:42:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.60 2011/04/10 22:26:46 chithanh Exp $
+
+  10 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.9.ebuild, +files/gnash-0.8.9-look-harder-for-version_h.patch,
+  +files/gnash-0.8.9-no-deprecated-avcodec-parser.patch:
+  Fix bug 362683, attempt to fix bug 362949.
 
   09 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.9.ebuild, +files/gnash-0.8.9-libavcodec-version.patch:

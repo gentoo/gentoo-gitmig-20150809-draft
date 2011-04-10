@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.4 2011/04/09 09:42:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.5 2011/04/10 22:26:46 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -150,6 +150,10 @@ src_prepare() {
 	# Fix detection of recent ffmpeg, bug #362683
 	epatch "${FILESDIR}"/${PN}-0.8.9-ffmpeg-detection.patch
 	epatch "${FILESDIR}"/${PN}-0.8.9-libavcodec-version.patch
+	epatch "${FILESDIR}"/${PN}-0.8.9-look-harder-for-version_h.patch
+
+	# Fix linking against recent ffmpeg, bug #362949, upstream #107657
+	epatch "${FILESDIR}"/${PN}-0.8.9-no-deprecated-avcodec-parser.patch
 
 	# Fix building on ppc64, bug #342535
 	use ppc64 && append-flags -mminimal-toc
