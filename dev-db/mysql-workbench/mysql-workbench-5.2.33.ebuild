@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.33.ebuild,v 1.3 2011/03/29 06:07:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.33.ebuild,v 1.4 2011/04/10 18:14:18 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -57,6 +57,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-5.2.31-python-libs.patch"
 	epatch "${FILESDIR}/${P}-cpp.patch"
+	epatch "${FILESDIR}/${P}-gtkmm.patch"
 	eautoreconf
 
 	# Remove bundled ctemplate version to make sure we use the system

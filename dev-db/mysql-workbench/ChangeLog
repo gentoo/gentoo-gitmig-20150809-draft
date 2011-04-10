@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.36 2011/03/29 06:07:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.37 2011/04/10 18:14:18 graaff Exp $
+
+  10 Apr 2011; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.33.ebuild, +files/mysql-workbench-5.2.33-gtkmm.patch:
+  Add patch to fix compilation with newer gtkmm versions, fixing bug 361645.
 
   29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   mysql-workbench-5.2.31.ebuild, mysql-workbench-5.2.33.ebuild:
