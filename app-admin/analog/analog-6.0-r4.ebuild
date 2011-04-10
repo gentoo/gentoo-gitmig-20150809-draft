@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r4.ebuild,v 1.2 2011/02/25 17:59:30 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r4.ebuild,v 1.3 2011/04/10 08:36:18 angelos Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -31,7 +31,9 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	emake || die "make failed"
+	# emake in main dir just executes "cd src && make",
+	# i.e. MAKEOPTS are ignored
+	emake -C src || die "make failed"
 }
 
 src_install() {
@@ -41,7 +43,7 @@ src_install() {
 	dodoc README.txt Licence.txt analog.cfg
 	dohtml -a html,gif,css,ico docs/*
 	dohtml -r how-to
-	docinto examples ; dodoc examples/*
+	dodoc -r examples
 	docinto cgi ; dodoc anlgform.pl
 
 	insinto /usr/share/analog/images ; doins images/*
