@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1.ebuild,v 1.9 2011/04/07 14:13:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1.ebuild,v 1.10 2011/04/10 09:22:09 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -47,4 +47,9 @@ pkg_setup() {
 		--disable-deprecations
 		$(use_enable doc desktop-docs)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
