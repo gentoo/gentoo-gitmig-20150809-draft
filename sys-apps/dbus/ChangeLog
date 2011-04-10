@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.279 2011/03/27 19:30:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.280 2011/04/10 19:57:28 maekke Exp $
+
+  10 Apr 2011; Markus Meier <maekke@gentoo.org> dbus-1.4.6.ebuild:
+  arm stable, bug #360769
 
   27 Mar 2011; Christoph Mende <angelos@gentoo.org> dbus-1.4.6.ebuild:
   Stable on amd64 wrt bug #360769
