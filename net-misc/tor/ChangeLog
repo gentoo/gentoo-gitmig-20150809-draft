@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.249 2011/04/02 22:17:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.250 2011/04/10 17:42:03 blueness Exp $
+
+*tor-0.2.1.30-r1 (10 Apr 2011)
+
+  10 Apr 2011; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.1.30-r1.ebuild, +files/tor-0.2.1.30-respect-CFLAGS.patch,
+  files/torrc:
+  Backport of improved build system, see bug #360765
 
   02 Apr 2011; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.1.29.ebuild,
   -tor-0.2.1.29-r1.ebuild:
