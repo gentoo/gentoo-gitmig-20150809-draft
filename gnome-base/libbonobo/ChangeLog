@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/libbonobo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.195 2010/12/20 22:07:13 eva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.196 2011/04/10 13:09:25 pacho Exp $
+
+*libbonobo-2.32.1 (10 Apr 2011)
+
+  10 Apr 2011; Pacho Ramos <pacho@gentoo.org> libbonobo-2.24.3.ebuild,
+  -libbonobo-2.32.0.ebuild, +libbonobo-2.32.1.ebuild:
+  Version bump with only translation updates, remove old. Bump 2.24 to eapi3,
+  pin deps to proper SLOTs.
 
   20 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org> libbonobo-2.32.0.ebuild:
   Sync ebuild with overlay.
