@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-1327.ebuild,v 1.1 2011/03/09 02:20:52 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-1327.ebuild,v 1.2 2011/04/10 07:12:05 tove Exp $
 
 EAPI="2"
 
@@ -75,7 +75,7 @@ src_test() {
 }
 
 src_install() {
-	DESTDIR="${D}" PREFIX="/usr" emake install || "emake install failed"
+	DESTDIR="${D}" PREFIX="/usr" emake install || die "emake install failed"
 
 	dodoc CHANGELOG README || die "dodoc failed"
 
