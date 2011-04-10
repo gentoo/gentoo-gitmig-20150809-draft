@@ -1,15 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.1.2.ebuild,v 1.3 2011/03/26 00:43:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.2.2.ebuild,v 1.1 2011/04/10 11:31:01 scarabeus Exp $
 
-EAPI=3
-
-# Bug 328269
-RESTRICT="test"
+EAPI=4
 
 KDE_LINGUAS="ca ca@valencia da de en_GB es et fi gl it nds nl pt pt_BR sl sv th uk zh_CN zh_TW"
-
-KMNAME="kdevelop"
+VIRTUALX_REQUIRED=test
 inherit kde4-base
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."

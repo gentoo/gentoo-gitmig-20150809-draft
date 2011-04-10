@@ -1,16 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.2.0.ebuild,v 1.3 2011/02/27 14:40:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.2.2.ebuild,v 1.1 2011/04/10 11:30:37 scarabeus Exp $
 
-EAPI=3
-
-# Bug 276208
-RESTRICT="test"
-
-KDE_LINGUAS="ca ca@valencia da de en_GB es et fi gl it nds nl pt pt_BR sl sv th uk zh_CN zh_TW"
+EAPI=4
 
 KMNAME="kdevelop"
+KDE_SCM="git"
+EGIT_REPONAME="${PN}"
 KDE_MINIMAL="4.6"
+VIRTUALX_REQUIRED=test
+KDE_LINGUAS="ca ca@valencia da de en_GB es et fi gl it nds nl pt pt_BR sl sv th uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KDE development support libraries and apps"
@@ -38,6 +37,9 @@ RDEPEND="${DEPEND}
 	cvs? ( dev-vcs/cvs )
 	git? ( dev-vcs/git )
 "
+
+# Quite few fails and upstream is aware
+RESTRICT="test"
 
 src_prepare() {
 	kde4-base_src_prepare
