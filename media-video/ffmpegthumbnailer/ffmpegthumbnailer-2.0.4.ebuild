@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.4.ebuild,v 1.8 2011/01/22 18:05:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-2.0.4.ebuild,v 1.9 2011/04/10 20:13:22 scarabeus Exp $
 
 EAPI=2
 inherit libtool
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="gnome jpeg png"
 
-COMMON_DEPEND=">=media-video/ffmpeg-0.5
+COMMON_DEPEND="virtual/ffmpeg
 	png? ( >=media-libs/libpng-1.4 )
 	jpeg? ( virtual/jpeg )"
 RDEPEND="${COMMON_DEPEND}
