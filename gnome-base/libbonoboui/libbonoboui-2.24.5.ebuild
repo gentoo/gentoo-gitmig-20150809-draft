@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.4.ebuild,v 1.6 2011/03/16 10:47:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.5.ebuild,v 1.1 2011/04/10 13:14:13 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -8,12 +8,12 @@ GCONF_DEBUG="no"
 inherit eutils gnome2 virtualx
 
 DESCRIPTION="User Interface part of libbonobo"
-HOMEPAGE="http://developer.gnome.org/arch/gnome/componentmodel/bonobo.html"
+HOMEPAGE="http://library.gnome.org/devel/libbonoboui/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="doc"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+IUSE="doc examples test"
 
 # GTK+ dep due to bug #126565
 RDEPEND=">=gnome-base/libgnomecanvas-1.116
@@ -33,10 +33,24 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-DOCS="AUTHORS ChangeLog NEWS README"
-
 pkg_setup() {
-	G2CONF="${G2CONF} --disable-maintainer-mode"
+	DOCS="AUTHORS ChangeLog NEWS README"
+	G2CONF="${G2CONF}
+		--disable-static
+		--disable-maintainer-mode"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	if ! use test; then
+		# don't waste time building tests
+		sed 's/tests//' -i Makefile.am Makefile.in || die "sed 1 failed"
+	fi
+
+	if ! use examples; then
+		sed 's/samples//' -i Makefile.am Makefile.in || die "sed 2 failed"
+	fi
 }
 
 src_configure() {
@@ -48,4 +62,9 @@ src_configure() {
 src_test() {
 	addwrite "/root/.gnome2_private"
 	Xemake check || die "tests failed"
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
