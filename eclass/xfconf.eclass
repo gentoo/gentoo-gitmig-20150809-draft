@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.29 2011/04/10 18:20:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.30 2011/04/10 18:25:08 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -79,11 +79,11 @@ xfconf_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 	base_src_prepare
 
-	if [[ "${EINTLTOOLIZE}" == "yes" ]]; then
+	if [[ -n $EINTLTOOLIZE ]]; then
 		intltoolize --force --copy --automake || die
 	fi
 
-	if [[ "${EAUTORECONF}" == "yes" ]]; then
+	if [[ -n $EAUTORECONF ]]; then
 		AT_M4DIR="${EPREFIX}/usr/share/xfce4/dev-tools/m4macros" eautoreconf
 	else
 		elibtoolize
