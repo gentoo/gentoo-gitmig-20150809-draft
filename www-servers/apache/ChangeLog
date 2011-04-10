@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.150 2011/04/04 15:11:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.151 2011/04/10 19:49:50 maekke Exp $
+
+  10 Apr 2011; Markus Meier <maekke@gentoo.org> apache-2.2.17.ebuild:
+  arm stable, bug #360625
 
   04 Apr 2011; Brent Baude <ranger@gentoo.org> apache-2.2.17.ebuild:
   Marking apache-2.2.17 ppc for bug 360625
