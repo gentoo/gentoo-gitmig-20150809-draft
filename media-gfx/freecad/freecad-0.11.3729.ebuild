@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.11.3729.ebuild,v 1.2 2011/03/07 02:23:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.11.3729.ebuild,v 1.3 2011/04/10 20:59:13 dilfridge Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-libs/boost
 	dev-libs/xerces-c
 	dev-python/pivy
-	dev-python/PyQt4
+	dev-python/PyQt4[svg]
 	media-libs/coin
 	media-libs/SoQt
 	>=sci-libs/opencascade-6.3-r3
