@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.48 2011/04/07 19:07:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.49 2011/04/10 10:59:06 phajdan.jr Exp $
+
+  10 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gegl-0.1.6.ebuild:
+  x86 stable wrt bug #360595
 
   07 Apr 2011; Jeroen Roovers <jer@gentoo.org> gegl-0.1.6.ebuild:
   Stable for HPPA (bug #360595).
