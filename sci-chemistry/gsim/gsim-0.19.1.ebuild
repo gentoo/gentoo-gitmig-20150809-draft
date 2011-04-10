@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.19.1.ebuild,v 1.2 2010/11/03 09:54:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.19.1.ebuild,v 1.3 2011/04/10 07:12:58 tove Exp $
 
 EAPI="3"
 
@@ -57,7 +57,7 @@ src_install() {
 	qt4-r2_src_install
 	dobin ${PN} || die "no ${PN}"
 	insinto /usr/share/${PN}
-	doins -r images ${PN}.ico || "no images"
+	doins -r images ${PN}.ico || die "no images"
 	insinto /usr/share/${PN}/ui
 	doins *.ui || die
 }
