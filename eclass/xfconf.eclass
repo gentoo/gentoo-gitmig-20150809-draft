@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.27 2011/04/09 18:00:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.28 2011/04/10 18:13:35 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -31,11 +31,11 @@
 
 inherit autotools base eutils fdo-mime gnome2-utils libtool
 
-if [[ "${EINTLTOOLIZE}" == "yes" ]]; then
+if [[ -n $EINTLTOOLIZE ]]; then
 	_xfce4_intltool="dev-util/intltool"
 fi
 
-if [[ "${EAUTORECONF}" == "yes" ]]; then
+if [[ -n $EAUTORECONF ]]; then
 	_xfce4_m4=">=dev-util/xfce4-dev-tools-4.8.0"
 fi
 
