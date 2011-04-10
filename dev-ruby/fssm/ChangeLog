@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.5 2011/02/28 00:09:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.6 2011/04/10 06:17:10 graaff Exp $
+
+  10 Apr 2011; Hans de Graaff <graaff@gentoo.org> -fssm-0.2.3.ebuild,
+  -fssm-0.2.4.ebuild:
+  Remove old versions.
 
   28 Feb 2011; Brent Baude <ranger@gentoo.org> fssm-0.2.5.ebuild:
   Marking fssm-0.2.5 ~ppc for bug 351212
