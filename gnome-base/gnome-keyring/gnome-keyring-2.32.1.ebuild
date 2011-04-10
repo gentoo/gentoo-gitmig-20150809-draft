@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.32.1.ebuild,v 1.12 2011/03/27 14:35:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.32.1.ebuild,v 1.13 2011/04/10 08:44:07 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -67,10 +67,7 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-	if use pam; then
-		find "${ED}"/$(get_libdir)/security -name "*.la" -delete \
-			|| die "la file removal failed"
-	fi
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 src_test() {

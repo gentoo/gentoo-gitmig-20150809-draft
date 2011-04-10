@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.203 2011/03/27 14:35:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.204 2011/04/10 08:44:07 ssuominen Exp $
+
+  10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-keyring-2.32.1.ebuild:
+  Punt useless libtool files.
 
   27 Mar 2011; Pacho Ramos <pacho@gentoo.org> gnome-keyring-2.32.1.ebuild:
   Recover ~x86-fbsd as this was only due a split in old gnome-keyring.
