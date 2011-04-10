@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/konq-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.18 2011/03/23 12:05:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.19 2011/04/10 18:32:22 dilfridge Exp $
+
+  10 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  konq-plugins-4.4.0-r1.ebuild:
+  Add blocker for kdelibs >=4.6, bug 357545
 
   23 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   konq-plugins-4.6.1.ebuild:
