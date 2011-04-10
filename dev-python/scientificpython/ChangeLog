@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.38 2011/03/09 13:29:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.39 2011/04/10 20:51:57 maekke Exp $
+
+  10 Apr 2011; Markus Meier <maekke@gentoo.org> scientificpython-2.9.1.ebuild:
+  x86 stable, bug #353450
 
   09 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
   scientificpython-2.9.1.ebuild:
