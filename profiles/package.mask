@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12674 2011/04/10 16:22:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12675 2011/04/10 17:07:43 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,23 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Christian Faulhammer <fauli@gentoo.org> (10 Apr 2011)
-=mail-client/claws-mail-3.7.9
-=mail-client/claws-mail-acpi-notifier-1.0.25
-=mail-client/claws-mail-address_keeper-1.0.3
-=mail-client/claws-mail-archive-0.6.9
-=mail-client/claws-mail-attachwarner-0.2.21
-=mail-client/claws-mail-clamd-3.5.1
-=mail-client/claws-mail-fancy-0.9.13
-=mail-client/claws-mail-geolocation-0.0.5
-=mail-client/claws-mail-gtkhtml-0.30
-=mail-client/claws-mail-notification-0.27
-=mail-client/claws-mail-python-0.7
-=mail-client/claws-mail-rssyl-0.30
-=mail-client/claws-mail-spam_report-0.3.13
-=mail-client/claws-mail-tnef_parse-0.3.10
-=mail-client/claws-mail-vcalendar-2.0.10
 
 # Constanze Hausner <constanze@gentoo.org> (10 Apr 2011)
 # Masked for removal in 30 days. Not used by any
