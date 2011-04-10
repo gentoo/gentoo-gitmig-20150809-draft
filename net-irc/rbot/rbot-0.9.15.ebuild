@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.2 2010/08/06 19:06:01 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15.ebuild,v 1.3 2011/04/10 21:02:40 a3li Exp $
 
 EAPI="2"
 # ruby19 needs ruby-gettext on 19 first
@@ -42,7 +42,7 @@ ruby_add_rdepend "
 	timezone? ( dev-ruby/tzinfo )
 	translator? ( dev-ruby/mechanize )
 	shorturl? ( dev-ruby/shorturl )
-	nls? ( dev-ruby/ruby-gettext )
+	nls? ( dev-ruby/ruby-gettext >=dev-ruby/locale-2.0.5-r2 )
 	dict? ( dev-ruby/ruby-dict )"
 
 # gettext does not yet work on 1.9, so generate locales on 1.8
@@ -144,7 +144,7 @@ all_ruby_compile() {
 			done
 		fi
 
-		ruby18 /usr/bin/rake --trace makemo || die "locale generation failed"
+		ruby18 /usr/bin/rake makemo || die "locale generation failed"
 	fi
 }
 

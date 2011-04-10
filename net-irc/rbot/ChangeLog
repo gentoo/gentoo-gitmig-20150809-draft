@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/rbot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.46 2011/01/19 19:04:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.47 2011/04/10 21:02:40 a3li Exp $
+
+  10 Apr 2011; Alex Legler <a3li@gentoo.org> rbot-0.9.15.ebuild:
+  Bump locale dependency to fix compile issue reported in bug 330227. Remove
+  debugging output.
 
   19 Jan 2011; Hans de Graaff <graaff@gentoo.org> -rbot-0.9.14.ebuild:
   Remove old version.
