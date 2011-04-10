@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/gtest-1.5.0.ebuild,v 1.10 2011/02/27 15:48:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/gtest-1.5.0.ebuild,v 1.11 2011/04/10 10:11:34 flameeyes Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -32,6 +32,11 @@ src_configure() {
 	econf \
 		$(use_enable static-libs static) \
 		$(use_with threads pthreads) || die
+}
+
+src_test() {
+	# explicitly use parallel make
+	emake check || die
 }
 
 src_install() {
