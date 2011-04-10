@@ -1,15 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.8.8.ebuild,v 1.6 2010/12/03 00:38:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.8.8.ebuild,v 1.7 2011/04/10 22:52:04 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+
+inherit distutils webapp
+
 MY_PN="moin"
-PYTHON_MODNAME="MoinMoin"
-
-inherit webapp distutils python
-
-WEBAPP_MANUAL_SLOT="yes"
 
 DESCRIPTION="Python WikiClone"
 SRC_URI="http://static.moinmo.in/files/${MY_PN}-${PV}.tar.gz"
@@ -27,6 +25,15 @@ RDEPEND=">=dev-python/docutils-0.4
 need_httpd_cgi
 
 S="${WORKDIR}"/${MY_PN}-${PV}
+
+PYTHON_MODNAME="MoinMoin"
+WEBAPP_MANUAL_SLOT="yes"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+	webapp_pkg_setup
+}
 
 src_install() {
 	webapp_src_preinst
