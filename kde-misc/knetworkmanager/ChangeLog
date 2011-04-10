@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.22 2011/02/04 15:41:41 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.23 2011/04/10 16:33:59 tampakrap Exp $
+
+*knetworkmanager-4.4.0_p20110410 (10 Apr 2011)
+
+  10 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +knetworkmanager-4.4.0_p20110410.ebuild:
+  New snapshot
 
 *knetworkmanager-4.4.0_p20110204 (04 Feb 2011)
 
