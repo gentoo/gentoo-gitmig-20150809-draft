@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.13 2011/03/31 15:51:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.14 2011/04/10 22:36:12 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4 cmake-utils
+inherit eutils flag-o-matic toolchain-funcs versionator python qt4 cmake-utils
 
 MAIN_PV=$(get_major_version)
 MAJOR_PV=$(get_version_component_range 1-2)
