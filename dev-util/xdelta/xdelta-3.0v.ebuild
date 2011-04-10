@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0v.ebuild,v 1.9 2009/10/28 17:36:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0v.ebuild,v 1.10 2011/04/10 21:18:51 arfrever Exp $
 
-EAPI=2
+EAPI=3
 inherit distutils toolchain-funcs
 
 DESCRIPTION="a binary diff and differential compression tools. VCDIFF (RFC 3284) delta compression."
