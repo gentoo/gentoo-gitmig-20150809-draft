@@ -206,7 +206,6 @@ x86-linux		prefix/linux/x86				exp
 ia64-linux		prefix/linux/ia64				exp
 
 # Mac OS X Profiles
-ppc-macos		prefix/darwin/macos/10.3			exp
 ppc-macos		prefix/darwin/macos/10.4/ppc			exp
 x86-macos		prefix/darwin/macos/10.4/x86			exp
 ppc-macos		prefix/darwin/macos/10.5/ppc			exp

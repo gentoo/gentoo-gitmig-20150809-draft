@@ -1,6 +1,12 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.261 2011/04/09 21:28:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.262 2011/04/10 12:42:09 grobian Exp $
+
+  10 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  -darwin/macos/10.3/make.defaults, -darwin/macos/10.3/package.provided,
+  -darwin/macos/10.3/parent, -darwin/macos/10.3/profile.bashrc,
+  -darwin/macos/10.3/use.mask:
+  Drop Mac OS X Panther (10.3) support
 
   09 Apr 2011; Ulrich Mueller <ulm@gentoo.org> windows/winnt/packages:
   Old-style virtual/portage is replaced by new-style virtual/package-manager,
