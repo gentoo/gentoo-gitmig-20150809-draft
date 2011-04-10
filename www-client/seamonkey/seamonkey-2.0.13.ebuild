@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.13.ebuild,v 1.7 2011/04/08 21:29:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.13.ebuild,v 1.8 2011/04/10 11:22:31 armin76 Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -32,7 +32,7 @@ else
 	# This is where arch teams should change the KEYWORDS.
 
 	REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${MY_PV}"
-	KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86"
+	KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 	[[ ${PV} == *alpha* ]] && HAS_LANGS="false"
 fi
 
