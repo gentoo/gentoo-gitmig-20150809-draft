@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.62 2011/03/22 16:10:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.63 2011/04/10 20:37:49 jer Exp $
+
+*lilo-23.2 (10 Apr 2011)
+
+  10 Apr 2011; Jeroen Roovers <jer@gentoo.org> +lilo-23.2.ebuild:
+  Version bump.
 
   22 Mar 2011; Jeroen Roovers <jer@gentoo.org> lilo-22.8-r2.ebuild,
   lilo-23.0.ebuild, lilo-23.0-r1.ebuild, lilo-23.1.ebuild:
