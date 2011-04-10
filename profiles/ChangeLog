@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5271 2011/04/10 10:28:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5272 2011/04/10 14:50:10 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -hardened/amd64/virtuals,
+  -hardened/linux/powerpc/ppc64/64bit-userland/virtuals,
+  -hardened/linux/powerpc/ppc64/virtuals, -hardened/ppc/virtuals,
+  -hardened/ppc64/virtuals, -uclibc/amd64/virtuals, -uclibc/ppc/virtuals,
+  -uclibc/x86/virtuals, hardened/virtuals, uclibc/mips/virtuals:
+  Remove old-style virtual/bootloader, bug 359971.
 
   10 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove mask from sudo 1.8.1.

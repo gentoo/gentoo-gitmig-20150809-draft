@@ -1,5 +1,0 @@
-# Copyright 2004-2008 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/virtuals,v 1.2 2011/03/16 22:12:43 suka Exp $
-
-virtual/bootloader			sys-boot/yaboot

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.122 2011/03/31 08:31:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.123 2011/04/10 14:50:10 ulm Exp $
+
+  10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -virtuals:
+  Remove old-style virtual/bootloader, bug 359971.
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
   xmame is no longer in portage
