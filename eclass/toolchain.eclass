@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.456 2011/03/24 08:37:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.457 2011/04/10 16:54:17 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -787,13 +787,6 @@ copy_minispecs_gcc_specs() {
 #---->> pkg_* <<----
 gcc_pkg_setup() {
 	[[ -z ${ETYPE} ]] && die "Your ebuild needs to set the ETYPE variable"
-
-	if [[ ( $(tc-arch) == "amd64" || $(tc-arch) == "ppc64" ) && ( ${LD_PRELOAD} == "/lib/libsandbox.so" || ${LD_PRELOAD} == "/usr/lib/libsandbox.so" ) ]] && is_multilib ; then
-		eerror "Sandbox in your installed portage does not support compilation."
-		eerror "of a multilib gcc.	Please set FEATURES=-sandbox and try again."
-		eerror "After you have a multilib gcc, re-emerge portage to have a working sandbox."
-		die "No 32bit sandbox.	Retry with FEATURES=-sandbox."
-	fi
 
 	if [[ ${ETYPE} == "gcc-compiler" ]] ; then
 		case $(tc-arch) in
