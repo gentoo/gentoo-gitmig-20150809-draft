@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.133 2011/04/09 12:19:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.134 2011/04/10 04:21:08 tomka Exp $
+
+  10 Apr 2011; Thomas Kahle <tomka@gentoo.org> cfengine-3.1.4.ebuild:
+  x86 stable per bug 352280
 
   09 Apr 2011; Markus Meier <maekke@gentoo.org> cfengine-3.1.4.ebuild:
   arm stable, bug #352280
