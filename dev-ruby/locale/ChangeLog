@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.22 2011/01/10 18:05:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.23 2011/04/10 20:53:19 a3li Exp $
+
+*locale-2.0.5-r2 (10 Apr 2011)
+
+  10 Apr 2011; Alex Legler <a3li@gentoo.org> +locale-2.0.5-r2.ebuild,
+  +files/locale-language-fixes.patch:
+  Revbump, fixing issues with an empty LANGUAGE variable. Patches via upstream
+  rubyforge ticket #26998. Fixes bugs 327677 and 330227.
 
   10 Jan 2011; Hans de Graaff <graaff@gentoo.org> locale-2.0.5-r1.ebuild:
   Keyword ~x86-macos.
