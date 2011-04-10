@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.4-r1.ebuild,v 1.7 2011/03/22 19:15:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.4-r1.ebuild,v 1.8 2011/04/10 10:22:26 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://library.gnome.org/devel/libbonoboui/"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="doc examples test"
+IUSE="doc examples static-libs test"
 
 # GTK+ dep due to bug #126565
 RDEPEND=">=gnome-base/libgnomecanvas-1.116
@@ -35,7 +35,9 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
-	G2CONF="${G2CONF} --disable-maintainer-mode"
+	G2CONF="${G2CONF}
+		$(use_enable static-libs static)
+		--disable-maintainer-mode"
 }
 
 src_prepare() {
@@ -60,4 +62,9 @@ src_configure() {
 src_test() {
 	addwrite "/root/.gnome2_private"
 	Xemake check || die "tests failed"
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
