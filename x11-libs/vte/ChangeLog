@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.273 2011/04/01 10:57:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.274 2011/04/10 09:07:41 ssuominen Exp $
+
+  10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> vte-0.26.2.ebuild:
+  Punt useless libtool file.
 
   01 Apr 2011; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Fixed Typo in USE description

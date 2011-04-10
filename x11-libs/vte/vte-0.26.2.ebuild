@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.26.2.ebuild,v 1.9 2011/03/31 18:22:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.26.2.ebuild,v 1.10 2011/04/10 09:07:41 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -48,5 +48,6 @@ pkg_setup() {
 
 src_install() {
 	gnome2_src_install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 	use python && python_clean_installation_image
 }
