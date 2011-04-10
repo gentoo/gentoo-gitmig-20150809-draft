@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.1-r1.ebuild,v 1.6 2010/04/12 19:03:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/cunit-2.1-r1.ebuild,v 1.7 2011/04/10 02:59:58 abcd Exp $
 
+EAPI=3
 inherit eutils autotools
 
 MY_PN='CUnit'
@@ -15,23 +16,20 @@ HOMEPAGE="http://cunit.sourceforge.net"
 DEPEND=""
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -e "/^docdir/d" -i doc/Makefile.am
 	sed -e '/^dochdrdir/{s:$(prefix)/doc/@PACKAGE@:$(docdir):}' \
 		-i doc/headers/Makefile.am
 	eautoreconf
 }
 
-src_compile() {
-	econf --docdir=/usr/share/doc/${PF}
-	emake || die "make failed"
+src_configure() {
+	econf --docdir="${EPREFIX}"/usr/share/doc/${PF}
 }
 
 src_install() {

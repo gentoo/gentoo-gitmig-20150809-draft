@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/colorgcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.28 2011/01/06 16:47:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/ChangeLog,v 1.29 2011/04/10 03:05:55 abcd Exp $
+
+  10 Apr 2011; Jonathan Callen <abcd@gentoo.org> colorgcc-1.3.2-r5.ebuild:
+  Add prefix support, bump EAPI to 3, add prefix keywords
 
   06 Jan 2011; Justin Lecher <jlec@gentoo.org> colorgcc-1.3.2-r4.ebuild,
   colorgcc-1.3.2-r5.ebuild:

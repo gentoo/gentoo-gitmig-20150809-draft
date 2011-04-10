@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r5.ebuild,v 1.3 2011/01/06 16:48:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r5.ebuild,v 1.4 2011/04/10 03:05:55 abcd Exp $
 
+EAPI=3
 inherit eutils
 
 DESCRIPTION="Adds color to gcc output"
@@ -10,20 +11,20 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gentoo-one.patch \
 		"${FILESDIR}"/${P}-gentoo-two.patch \
 		"${FILESDIR}"/${P}-note.patch
 }
+
+src_configure() { :; }
 
 src_compile() { :; }
 
@@ -60,5 +61,5 @@ pkg_postinst() {
 	echo
 	# portage won't delete the old symlinks for users that are upgrading
 	# because the old symlinks still point to /usr/bin/colorgcc which exists...
-	[ -d "${ROOT}"/usr/bin/wrappers ] && rm -fr "${ROOT}"/usr/bin/wrappers
+	[ -d "${EROOT}"/usr/bin/wrappers ] && rm -fr "${EROOT}"/usr/bin/wrappers
 }
