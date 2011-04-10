@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.37 2011/03/31 13:19:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.38 2011/04/10 16:21:07 ssuominen Exp $
+
+  10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pangomm-2.28.2.ebuild:
+  Remove useless libtool archive wrt #362875 by Cesko Voeten.
 
 *pangomm-2.28.2 (31 Mar 2011)
 

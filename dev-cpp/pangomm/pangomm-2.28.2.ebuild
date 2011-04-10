@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.28.2.ebuild,v 1.1 2011/03/31 13:19:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.28.2.ebuild,v 1.2 2011/04/10 16:21:07 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -35,4 +35,9 @@ src_prepare() {
 		--disable-maintainer-mode
 		$(use_enable doc documentation)"
 	DOCS="AUTHORS ChangeLog NEWS README*"
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
