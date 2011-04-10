@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.7.ebuild,v 1.5 2011/03/24 17:49:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.7.ebuild,v 1.6 2011/04/10 17:34:14 olemarkus Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ LICENSE="PHP-3.01"
 SLOT="0"
 IUSE="mmap"
 
-DEPEND="!dev-php/eaccelerator !dev-php5/xcache"
+DEPEND="!dev-php/eaccelerator !dev-php/xcache"
 RDEPEND="${DEPEND}"
 
 src_configure() {
