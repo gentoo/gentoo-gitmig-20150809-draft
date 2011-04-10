@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.204 2011/04/10 06:40:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.205 2011/04/10 20:00:28 maekke Exp $
+
+  10 Apr 2011; Markus Meier <maekke@gentoo.org> dnsmasq-2.57.ebuild:
+  arm stable, bug #361149
 
   10 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dnsmasq-2.57.ebuild:
   x86 stable wrt bug #361149
