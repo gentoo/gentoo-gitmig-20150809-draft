@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.7.6.ebuild,v 1.1 2011/03/09 11:33:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.7.9.ebuild,v 1.1 2011/04/10 13:24:21 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
 inherit python
 
-DESCRIPTION="Telepathy Mission Control"
-HOMEPAGE="http://telepathy.freedesktop.org"
+DESCRIPTION="An account manager and channel dispatcher for the Telepathy framework."
+HOMEPAGE="http://mission-control.sourceforge.net/"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -48,5 +48,5 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog || die
 
-	find "${D}" -name '*.la' -exec rm -f '{}' + || die
+	find "${ED}" -name '*.la' -exec rm -f '{}' + || die
 }
