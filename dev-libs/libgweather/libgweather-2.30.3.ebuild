@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.3.ebuild,v 1.10 2011/03/22 18:53:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.3.ebuild,v 1.11 2011/04/10 09:37:17 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -58,4 +58,6 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 	python_clean_installation_image
+
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
