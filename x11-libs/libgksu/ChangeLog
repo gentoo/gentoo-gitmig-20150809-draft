@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.78 2011/01/24 16:31:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.79 2011/04/10 17:03:49 ssuominen Exp $
+
+  10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> libgksu-2.0.12-r1.ebuild:
+  Remove useless libtool archive wrt #362889 by Cesko Voeten.
+  USE="static-libs".
 
   24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> libgksu-2.0.12-r1.ebuild:
   Bump to EAPI 3 for dependency slot pinning.
