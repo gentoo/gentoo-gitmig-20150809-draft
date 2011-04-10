@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1.ebuild,v 1.1 2011/04/10 10:27:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1.ebuild,v 1.2 2011/04/10 22:48:59 flameeyes Exp $
 
 EAPI=4
 
@@ -53,6 +53,8 @@ REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 MAKEOPTS="${MAKEOPTS} SAMPLES="
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-parallelinstall.patch
+
 	elibtoolize
 }
 
@@ -131,8 +133,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 
 	if use ldap; then
-		dodoc README.LDAP schema.OpenLDAP
-		dosbin sudoers2ldif
+		dodoc README.LDAP doc/schema.OpenLDAP
+		dosbin plugins/sudoers/sudoers2ldif
 
 		cat - > "${T}"/ldap.conf.sudo <<EOF
 # See ldap.conf(5) and README.LDAP for details\n"

@@ -1,0 +1,11 @@
+--- sudo-1.8.1.orig/plugins/sudoers/Makefile.in	2011-04-06 15:59:31.000000000 +0100
++++ sudo-1.8.1/plugins/sudoers/Makefile.in	2011-04-10 18:41:26.009495892 +0100
+@@ -349,7 +349,7 @@
+ 
+ install-includes:
+ 
+-install-doc:
++install-doc: install-dirs
+ 	@LDAP@$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0555 $(srcdir)/sudoers2ldif $(DESTDIR)$(docdir)
+ 
+ install-plugin: sudoers.la install-dirs
