@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.2.ebuild,v 1.8 2011/03/23 21:22:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.2.ebuild,v 1.9 2011/04/10 20:22:38 scarabeus Exp $
 
 EAPI=1
 
@@ -28,7 +28,7 @@ RDEPEND="dv? ( media-libs/libdv )
 	jpeg? ( virtual/jpeg )
 	vorbis? ( media-libs/libvorbis media-libs/libogg )
 	lame? ( media-sound/lame )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616 )
+	ffmpeg? ( virtual/ffmpeg )
 	x264? ( media-libs/x264 )
 	schroedinger? ( >=media-libs/schroedinger-1.0.5 )
 	X? ( x11-libs/libXaw

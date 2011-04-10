@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.167 2011/03/29 02:43:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.168 2011/04/10 20:22:38 scarabeus Exp $
+
+  10 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libquicktime-1.2.2.ebuild:
+  Move to virtual/ffmpeg. Fixes bug #362075.
 
   29 Mar 2011; Alexis Ballier <aballier@gentoo.org> -libquicktime-1.1.5.ebuild:
   remove old
