@@ -1,0 +1,13 @@
+diff --git a/calfw-ical.el b/calfw-ical.el
+index d95db06..6eba94a 100644
+--- a/calfw-ical.el
++++ b/calfw-ical.el
+@@ -39,6 +39,8 @@
+ (require 'icalendar)
+ (require 'url)
+ 
++(eval-when-compile (require 'cl))
++
+ (defun cfw:decode-to-calendar (dec)
+   (cfw:date
+    (nth 4 dec) (nth 3 dec) (nth 5 dec)))

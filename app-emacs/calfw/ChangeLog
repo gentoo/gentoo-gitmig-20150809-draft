@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/calfw
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calfw/ChangeLog,v 1.1 2011/04/10 16:47:10 naota Exp $
+
+*calfw-0.1 (10 Apr 2011)
+
+  10 Apr 2011; Naohiro Aota <naota@elisp.net> +calfw-0.1.ebuild,
+  +files/calfw-0.1-cl.patch, +files/calfw-0.1-howm-menu.patch, +metadata.xml:
+  New ebuild for calfw. Ebuild written by me.
+
