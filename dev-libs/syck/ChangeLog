@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/syck
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.28 2010/05/19 13:37:36 dagger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.29 2011/04/10 19:54:30 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  syck-0.55-r4.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #312205).
 
   19 May 2010; Robert Piasek <dagger@gentoo.org> syck-0.55-r4.ebuild:
   added ~arm keyword
