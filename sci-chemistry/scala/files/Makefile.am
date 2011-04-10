@@ -1,5 +1,5 @@
 
-LIBS = -lccp4f -llapack
+LIBS = -lccp4f $(LAPACK_LIBS)
 
 bin_PROGRAMS = scala
 

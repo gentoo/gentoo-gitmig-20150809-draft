@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/scala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/ChangeLog,v 1.7 2011/01/18 17:01:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/ChangeLog,v 1.8 2011/04/10 15:38:20 jlec Exp $
+
+*scala-3.3.18-r2 (10 Apr 2011)
+
+  10 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/3.3.18-gcc4.6.patch,
+  +scala-3.3.18-r2.ebuild, files/Makefile.am, files/configure.ac:
+  Fix for compilation with gcc-4.6 (-fwhole-file), #362843; use pkg-config to
+  get lapack libs
 
   18 Jan 2011; Thomas Kahle <tomka@gentoo.org> scala-3.3.18-r1.ebuild:
   x86 stable per bug 351756
