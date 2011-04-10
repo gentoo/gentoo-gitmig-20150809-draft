@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.73 2011/04/09 14:25:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.74 2011/04/10 17:18:41 armin76 Exp $
+
+  10 Apr 2011; Raúl Porcel <armin76@gentoo.org> feh-1.12.ebuild:
+  sparc stable wrt #354063
 
   09 Apr 2011; Tobias Klausmann <klausman@gentoo.org> feh-1.12.ebuild:
   Stable on alpha, bug #354063
