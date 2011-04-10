@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.4 2011/03/02 20:34:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.5 2011/04/10 22:24:06 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="python? 2"
-inherit eutils flag-o-matic python distutils toolchain-funcs versionator
+inherit eutils flag-o-matic python toolchain-funcs versionator
 
 DESCRIPTION="A Free Toolkit for developing mapping applications."
 HOMEPAGE="http://www.mapnik.org/"

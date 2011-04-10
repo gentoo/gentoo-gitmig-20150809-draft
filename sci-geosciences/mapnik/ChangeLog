@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.23 2011/03/02 20:34:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.24 2011/04/10 22:24:06 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mapnik-0.7.1-r1.ebuild:
+  Fix deprecation warning.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> mapnik-0.6.1-r3.ebuild,
   mapnik-0.7.1-r1.ebuild:
