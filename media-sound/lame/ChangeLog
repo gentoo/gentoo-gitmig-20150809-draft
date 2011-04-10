@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.125 2010/12/09 16:09:49 rich0 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.126 2011/04/10 11:43:43 armin76 Exp $
+
+  10 Apr 2011; Raúl Porcel <armin76@gentoo.org> lame-3.98.4.ebuild:
+  ia64 stable
 
   09 Dec 2010; Richard Freeman <rich0@gentoo.org> lame-3.98.4.ebuild:
   amd64 stable - 347625
