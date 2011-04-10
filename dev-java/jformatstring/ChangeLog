@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/jformatstring
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jformatstring/ChangeLog,v 1.1 2011/04/10 17:04:12 nerdboy Exp $
+
+*jformatstring-1.0 (10 Apr 2011)
+
+  10 Apr 2011; Steve Arnold <nerdboy@gentoo.org> +jformatstring-0.9.ebuild,
+  +metadata.xml:
+  New ebuild; required dependency for FindBugs.  Code seems stable for 
+  quite some time.  Exported from trunk and packaged for the mirrors 
+  (however, the upstream site appears to have lost the package).
+
