@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xmlm/xmlm-1.0.2.ebuild,v 1.1 2011/02/21 15:01:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xmlm/xmlm-1.0.2.ebuild,v 1.2 2011/04/10 07:11:06 tove Exp $
 
 EAPI=3
 
@@ -30,7 +30,7 @@ src_install() {
 	export INSTALLDIR=${D}/`ocamlc -where`/${PN}
 	if use ocamlopt ; then
 		./build install || die "install failed"
-		./build install-plugin || "install-plugin failed"
+		./build install-plugin || die "install-plugin failed"
 	else
 		./build install-byte || die "install failed"
 	fi
