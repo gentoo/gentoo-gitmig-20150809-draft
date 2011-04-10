@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/phaser/phaser-2.1.4.ebuild,v 1.1 2010/07/03 13:32:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/phaser/phaser-2.1.4.ebuild,v 1.2 2011/04/10 13:10:22 jlec Exp $
 
 EAPI="3"
 
@@ -16,7 +16,8 @@ SRC_URI="ftp://ftp.ccp4.ac.uk/ccp4/${CCP4VER}/ccp4-${CCP4VER}-${PN}-cctbx-src.ta
 
 LICENSE="|| ( phaser phaser-com ccp4 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+#KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="openmp"
 
 RDEPEND=""
