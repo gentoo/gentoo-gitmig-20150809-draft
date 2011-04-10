@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.5.ebuild,v 1.1 2011/03/31 13:11:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.5.ebuild,v 1.2 2011/04/10 16:24:59 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -27,4 +27,9 @@ src_prepare() {
 	G2CONF="${G2CONF}
 		--disable-maintainer-mode
 		$(use_enable doc documentation)"
+}
+
+src_install() {
+	gnome2_src_install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
