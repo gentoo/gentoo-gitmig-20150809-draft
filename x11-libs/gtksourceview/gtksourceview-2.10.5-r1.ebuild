@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r1.ebuild,v 1.8 2011/03/27 12:57:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r1.ebuild,v 1.9 2011/04/10 10:50:02 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -50,6 +50,7 @@ src_test() {
 
 src_install() {
 	gnome2_src_install
+	find "${D}" -name '*.la' -exec rm -f {} +
 
 	insinto /usr/share/${PN}-2.0/language-specs
 	doins "${FILESDIR}"/2.0/gentoo.lang || die "doins failed"
