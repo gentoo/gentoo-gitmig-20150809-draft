@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/ltris
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.41 2011/04/09 21:27:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.42 2011/04/10 19:07:55 tomka Exp $
+
+  10 Apr 2011; Thomas Kahle <tomka@gentoo.org> ltris-1.0.16.ebuild:
+  x86 stable per bug 362221
 
   09 Apr 2011; Christoph Mende <angelos@gentoo.org> ltris-1.0.16.ebuild:
   Stable on amd64 wrt bug #362221
