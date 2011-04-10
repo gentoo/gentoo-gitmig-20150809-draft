@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbrun
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.23 2011/03/28 17:47:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.24 2011/04/10 07:55:56 xarthisius Exp $
+
+  10 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Change herd from nonexisting commonbox to desktop-wm
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> bbrun-1.6.ebuild:
   Fixed gtk+ dep and cleanup
