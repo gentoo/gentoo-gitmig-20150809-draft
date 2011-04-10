@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.4 2011/03/24 11:49:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.5 2011/04/10 06:51:23 phajdan.jr Exp $
+
+  10 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gunicorn-0.12.0.ebuild:
+  x86 stable wrt bug #360203
 
   24 Mar 2011; Markos Chandras <hwoarang@gentoo.org> gunicorn-0.12.0.ebuild:
   Stable on amd64 wrt bug #360203
