@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/LatLongUTMconversion
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/LatLongUTMconversion/ChangeLog,v 1.2 2007/02/22 01:21:33 jokey Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/LatLongUTMconversion/ChangeLog,v 1.3 2011/04/10 22:16:59 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  LatLongUTMconversion-1.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #316209).
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
