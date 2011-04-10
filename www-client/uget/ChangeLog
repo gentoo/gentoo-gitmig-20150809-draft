@@ -1,6 +1,11 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.21 2011/03/30 10:56:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.22 2011/04/10 23:38:38 wired Exp $
+
+*uget-1.7.4 (10 Apr 2011)
+
+  10 Apr 2011; Alex Alexander <wired@gentoo.org> +uget-1.7.4.ebuild:
+  version bump
 
   30 Mar 2011; Christoph Mende <angelos@gentoo.org> uget-1.7.0.ebuild:
   Stable on amd64 wrt bug #360943
