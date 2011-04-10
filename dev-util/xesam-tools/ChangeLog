@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xesam-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/ChangeLog,v 1.4 2010/07/06 19:25:41 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/ChangeLog,v 1.5 2011/04/10 21:34:39 arfrever Exp $
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xesam-tools-0.7.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #326129).
 
   06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   xesam-tools-0.6.1.ebuild, xesam-tools-0.7.0.ebuild:

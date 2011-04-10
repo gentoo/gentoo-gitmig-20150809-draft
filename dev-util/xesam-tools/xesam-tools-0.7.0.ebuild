@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/xesam-tools-0.7.0.ebuild,v 1.2 2010/07/06 19:25:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/xesam-tools-0.7.0.ebuild,v 1.3 2011/04/10 21:34:39 arfrever Exp $
 
-EAPI=2
+EAPI=3
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="xml"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
@@ -21,6 +23,8 @@ DEPEND=""
 RDEPEND="dev-python/dbus-python
 	dev-python/pygobject
 	dev-python/pygtk"
+
+PYTHON_MODNAME="xesam"
 
 src_install() {
 	distutils_src_install
