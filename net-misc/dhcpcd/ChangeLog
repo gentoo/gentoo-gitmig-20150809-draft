@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.315 2011/04/10 11:32:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.316 2011/04/11 04:06:58 josejx Exp $
+
+  11 Apr 2011; Joseph Jezak <josejx@gentoo.org> dhcpcd-5.2.12.ebuild:
+  Marked ppc stable for bug #362459.
 
   10 Apr 2011; Raúl Porcel <armin76@gentoo.org> dhcpcd-5.2.12.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #362459
