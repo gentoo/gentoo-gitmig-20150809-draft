@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.63 2011/04/10 20:37:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.64 2011/04/11 00:13:56 jer Exp $
+
+  10 Apr 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove chainsaw as maintainer.
 
 *lilo-23.2 (10 Apr 2011)
 

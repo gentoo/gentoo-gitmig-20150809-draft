@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <maintainer>
-  <email>chainsaw@gentoo.org</email>
-  <name>Tony Vroon</name>
-</maintainer>
-<maintainer>
   <email>jer@gentoo.org</email>
   <name>Jeroen Roovers</name>
 </maintainer>
