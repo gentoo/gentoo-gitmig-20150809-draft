@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.81 2011/04/06 22:30:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.82 2011/04/11 18:24:58 vapier Exp $
 
 EAPI="2"
 
@@ -134,9 +134,6 @@ src_prepare() {
 	sed -i \
 		-e 's:lsb_release -d:cat /etc/gentoo-release:' \
 		xbmc/utils/SystemInfo.cpp || die
-
-	# Do not use termcap #262822
-	sed -i 's:-ltermcap::' lib/python/configure || die
 
 	# avoid long delays when powerkit isn't running #348580
 	sed -i \
