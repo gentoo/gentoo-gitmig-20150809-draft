@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r2.ebuild,v 1.1 2011/04/10 19:43:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r2.ebuild,v 1.2 2011/04/11 21:59:37 dilfridge Exp $
 
 EAPI=3
 
@@ -142,6 +142,7 @@ PATCHES=(
 
 src_prepare() {
 	kde4-base_src_prepare
+	use arm && epatch "${FILESDIR}/${PN}-4.6.2-armlinking.patch"
 
 	# Rename applications.menu (needs 01_gentoo_set_xdg_menu_prefix.patch to work)
 	local menu_prefix="kde-${SLOT}-"
