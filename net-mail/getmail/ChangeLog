@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/getmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.181 2011/04/05 17:51:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.182 2011/04/11 06:15:47 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  getmail-4.17.0.ebuild:
+  x86 stable wrt bug #358539
 
   05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   getmail-4.9.1.ebuild, getmail-4.9.2.ebuild, getmail-4.13.0.ebuild:
