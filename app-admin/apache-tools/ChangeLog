@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.88 2011/04/10 19:48:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.89 2011/04/11 13:56:18 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  apache-tools-2.2.17.ebuild:
+  x86 stable wrt bug #360625
 
   10 Apr 2011; Markus Meier <maekke@gentoo.org> apache-tools-2.2.17.ebuild:
   arm stable, bug #360625
