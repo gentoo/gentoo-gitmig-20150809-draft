@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.10.ebuild,v 1.4 2011/04/06 20:35:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.10.ebuild,v 1.5 2011/04/11 11:38:46 scarabeus Exp $
 
 EAPI=3
 
@@ -17,13 +17,12 @@ RDEPEND=""
 add_blocker kde-l10n 0 :4.4
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+handbook"
+IUSE=""
 
 MY_LANGS="ar bg ca ca@valencia cs csb da de el en_GB eo es et eu
-		fi fy ga gl gu he hi hr hu id is it ja kk km kn ko lt lv
+		fi fr fy ga gl gu he hi hr hu id is it ja kk km kn ko lt lv
 		mai mk ml nb nds nl nn pa pl pt pt_BR ro ru si sk sl sr sv tg
 		tr uk wa zh_CN zh_TW"
-# french translation is broken, needs more work
 
 URI_BASE="${SRC_URI/-${PV}.tar.bz2/}"
 SRC_URI=""
@@ -75,17 +74,11 @@ src_unpack() {
 
 src_prepare() {
 	[[ -n ${A} ]] && kde4-base_src_prepare
-
-	# the translations still contain some VERY old files
-	find "${S}" -name "*.docbook" \
-		-exec sed -i -r \
-			-e 's:-//KDE//DTD DocBook XML V4\.1(\..)?-Based Variant V1\.[01]//EN:-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN:g' {} + \
-				|| die 'failed to fix DocBook variant version'
 }
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_build handbook docs)"
+		-DBUILD_docs=OFF"
 	[[ -n ${A} ]] && kde4-base_src_configure
 }
 
