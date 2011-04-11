@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.5 2011/03/11 13:15:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.6 2011/04/11 18:26:50 graaff Exp $
+
+  11 Apr 2011; Hans de Graaff <graaff@gentoo.org> jeweler-1.5.2.ebuild:
+  Remove unused targets from Rakefile that require additional dependencies.
+  Fixes bug 363007.
 
 *jeweler-1.5.2 (11 Mar 2011)
 

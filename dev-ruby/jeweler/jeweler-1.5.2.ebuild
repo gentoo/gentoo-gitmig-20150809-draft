@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-1.5.2.ebuild,v 1.1 2011/03/11 13:15:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-1.5.2.ebuild,v 1.2 2011/04/11 18:26:50 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -33,4 +33,8 @@ all_ruby_prepare() {
 	# Remove bundler support.
 	rm Gemfile Gemfile.lock || die
 	sed -i -e '/bundler/d' -e '/Bundler.setup/d' Rakefile test/test_helper.rb features/support/env.rb || die
+
+	# Remove (currently) unused targets from the Rakefile that require
+	# additional dependencies.
+	sed -i -e '/rcov/,$d' Rakefile || die
 }
