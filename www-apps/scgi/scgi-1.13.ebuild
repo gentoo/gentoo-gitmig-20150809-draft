@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/scgi-1.13.ebuild,v 1.2 2010/01/07 15:55:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/scgi-1.13.ebuild,v 1.3 2011/04/11 19:01:23 arfrever Exp $
+
+EAPI="3"
 
 inherit distutils
 
