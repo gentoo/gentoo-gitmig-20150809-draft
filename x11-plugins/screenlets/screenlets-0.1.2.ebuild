@@ -1,9 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/screenlets-0.1.2.ebuild,v 1.1 2009/08/22 19:38:59 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/screenlets-0.1.2.ebuild,v 1.2 2011/04/11 20:52:51 arfrever Exp $
 
-EAPI=2
-inherit eutils distutils
+EAPI=3
+PYTHON_DEPEND="2"
+
+inherit distutils eutils
 
 DESCRIPTION="Screenlets are small owner-drawn applications"
 HOMEPAGE="http://www.screenlets.org"
@@ -24,17 +26,26 @@ RDEPEND="dev-python/dbus-python
 
 S="${WORKDIR}/${PN}"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	distutils_src_prepare
+	python_convert_shebangs -r 2 src
+	sed -e "s/exec python/&2/" -i src/bin/* || die "sed failed"
+}
+
 src_install() {
-		distutils_src_install
+	distutils_src_install
 
-		insinto /usr/share/desktop-directories
-		doins "${S}"/desktop-menu/desktop-directories/Screenlets.directory
+	insinto /usr/share/desktop-directories
+	doins desktop-menu/desktop-directories/Screenlets.directory || die "doins failed"
 
-	    insinto /usr/share/icons
-	    doins "${S}"/desktop-menu/screenlets.svg
+	insinto /usr/share/icons
+	doins desktop-menu/screenlets.svg || die "doins failed"
 
-		# Insert .desktop files
-	    for x in $(find "${S}"/desktop-menu -name "*.desktop"); do
-			domenu ${x}
-	    done
+	# Insert .desktop files
+	domenu desktop-menu/*.desktop || die "domenu failed"
 }
