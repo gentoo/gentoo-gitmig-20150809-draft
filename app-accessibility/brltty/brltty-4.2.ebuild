@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.13 2011/04/10 12:49:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.14 2011/04/11 21:37:37 williamh Exp $
 
 EAPI="4"
 FINDLIB_USE="ocaml"
@@ -39,6 +39,7 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 	${COMMON_DEP}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-a2.patch
 	epatch "${FILESDIR}"/${P}-fix-ldflags.patch
 	epatch "${FILESDIR}"/${P}-fix-ocaml-install.patch
 	epatch "${FILESDIR}"/${P}-fix-svnversion.patch
@@ -65,7 +66,6 @@ src_configure() {
 		--localstatedir=/var \
 		--disable-stripping \
 		--with-install-root="${D}" \
-		--with-screen-driver=-a2 \
 		$(use_enable api) \
 		$(use_enable beeper beeper-support) \
 		$(use_enable contracted-braille) \
