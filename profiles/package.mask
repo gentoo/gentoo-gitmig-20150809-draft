@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12675 2011/04/10 17:07:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12676 2011/04/11 02:06:00 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -291,10 +291,6 @@ dev-php/PEAR-File_XSPF
 # Needs testing before going to ~arch.
 >=net-fs/openafs-1.6
 >=net-fs/openafs-kernel-1.6
-
-# Jeroen Roovers <jer@gentoo.org> (18 Mar 2011)
-# Snapshots are not supported
->=www-client/opera-11.10.2053
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Mar 2011)
 # Masking openocd prelease snapshot
