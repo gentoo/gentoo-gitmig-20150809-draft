@@ -6,7 +6,4 @@
     <email>williamh@gentoo.org</email>
     <name>William Hubbs</name>
   </maintainer>
-  <use>
-    <flag name="compat">Enable commandline compatibility with dhcpcd-3.x</flag>
-  </use>
 </pkgmetadata>
