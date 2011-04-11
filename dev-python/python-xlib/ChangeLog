@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-xlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.35 2011/04/02 07:11:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.36 2011/04/11 14:25:07 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  python-xlib-0.15_rc1.ebuild:
+  x86 stable wrt bug #361141
 
   02 Apr 2011; Christoph Mende <angelos@gentoo.org>
   python-xlib-0.15_rc1.ebuild:
