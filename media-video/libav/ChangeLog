@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.9 2011/04/01 09:45:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.10 2011/04/11 13:30:23 lu_zero Exp $
+
+  11 Apr 2011; Luca Barbato <lu_zero@gentoo.org> metadata.xml,
+  libav-9999.ebuild:
+  Add support for the Google/VisualOn encoders for aac and amrwb
 
   01 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.6.2.ebuild,
   libav-0.6.9999.ebuild:

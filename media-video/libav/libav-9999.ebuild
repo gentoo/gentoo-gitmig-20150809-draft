@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.6 2011/03/30 09:25:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.7 2011/04/11 13:30:23 lu_zero Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
-IUSE="+3dnow +3dnowext alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
+IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 VIDEO_CARDS="nvidia"
 for x in ${VIDEO_CARDS}; do
@@ -41,7 +41,9 @@ RDEPEND="
 	bzip2? ( app-arch/bzip2 )
 	dirac? ( media-video/dirac )
 	encode? (
+		amr? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
+		!faac? ( aac? ( media-libs/vo-aacenc ) )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		vorbis? ( media-libs/libvorbis media-libs/libogg )
@@ -110,7 +112,9 @@ src_configure() {
 	# Encoders
 	if use encode; then
 		use mp3 && myconf+=" --enable-libmp3lame"
+		use amr && myconf+=" --enable-libvo-amrwbenc --enable-version3"
 		use faac && myconf+=" --enable-libfaac --enable-nonfree"
+		use aac && myconf+=" --enable-libvo-aacenc --enable-version3"
 		uses="theora vorbis x264 xvid"
 		for i in ${uses}; do
 			use ${i} && myconf+=" --enable-lib${i}"

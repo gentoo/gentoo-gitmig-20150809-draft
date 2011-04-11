@@ -14,7 +14,9 @@
 	<flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
 	<flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)</flag>
 	<flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
-	<flag name="faac">Use external faac library for AAC encoding</flag>
+	<flag name="faac">Use external faac library for AAC encoding
+		(notice: the resulting binaries are unredistributable)</flag>
+	<flag name="aac">Use external vo-aacenc library for AAC encoding</flag>
 	<flag name="frei0r">Enable frei0r wrapping in libavfilter</flag>
 	<flag name="hardcoded-tables">Use pre-calculated tables rather than calculating them on the fly.</flag>
 	<flag name="mmxext">Enables mmx2 support</flag>
