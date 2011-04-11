@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.5 2011/04/10 22:24:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.6 2011/04/11 07:05:31 nerdboy Exp $
 
 EAPI=3
 
@@ -81,6 +81,11 @@ src_configure() {
 	BOOST_LIBDIR_SCHEMA="$(get_libdir)/boost-${BOOST_VERSION}"
 	export BOOST_LIB="/usr/${BOOST_LIBDIR_SCHEMA}"
 	elog "${P} BOOST_LIB is ${BOOST_LIB}"
+
+	# force older boost filesystem version until upstream migrates
+	if version_is_at_least "1.46" "${BOOST_VER}"; then
+		append-flags -DBOOST_FILESYSTEM_VERSION=2
+	fi
 
 	# Passing things doesn't seem to hit all the right paths; another
 	# poster-child for just a bit too much complexity for its own good.

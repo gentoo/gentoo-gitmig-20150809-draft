@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.24 2011/04/10 22:24:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.25 2011/04/11 07:05:31 nerdboy Exp $
+
+  11 Apr 2011; Steve Arnold <nerdboy@gentoo.org> mapnik-0.7.1-r1.ebuild:
+  Updated for new boost 1.46 to force the older filesystem interface until
+  upstream migrates (conditional on boost version).
 
   10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mapnik-0.7.1-r1.ebuild:
