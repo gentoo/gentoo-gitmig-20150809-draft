@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/analog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.62 2011/04/10 08:36:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.63 2011/04/11 22:36:00 jer Exp $
+
+  11 Apr 2011; Jeroen Roovers <jer@gentoo.org> analog-6.0-r4.ebuild:
+  Stable for HPPA (bug #362807).
 
   10 Apr 2011; Christoph Mende <angelos@gentoo.org> analog-6.0-r4.ebuild:
   Bump to EAPI4 for dodoc run emake in src to respect MAKEOPTS
