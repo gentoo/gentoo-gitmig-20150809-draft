@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/mount-cifs-3.0.30.ebuild,v 1.8 2009/03/06 04:08:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/mount-cifs-3.0.30.ebuild,v 1.9 2011/04/11 17:00:52 angelos Exp $
 
 inherit toolchain-funcs
 
@@ -17,12 +17,12 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd "${S}/source/client"
-	$(tc-getCC) ${CFLAGS} mount.cifs.c -o mount.cifs || die "make mount.cifs failed"
-	$(tc-getCC) ${CFLAGS} umount.cifs.c -o umount.cifs || die "make umount.cifs failed"
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} mount.cifs.c -o mount.cifs || die "make mount.cifs failed"
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} umount.cifs.c -o umount.cifs || die "make umount.cifs failed"
 }
 
 src_install() {
-	dobin source/client/{mount,umount}.cifs
+	dobin source/client/{mount,umount}.cifs || die
 	dosym /usr/bin/mount.cifs /sbin/mount.cifs
 
 	docinto html
