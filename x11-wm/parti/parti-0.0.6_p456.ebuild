@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-0.0.6_p456.ebuild,v 1.2 2010/11/25 16:55:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-0.0.6_p456.ebuild,v 1.3 2011/04/11 20:59:47 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND=2
 
-inherit distutils eutils python
+inherit distutils eutils
 
 DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy"
 HOMEPAGE="http://partiwm.googlecode.com/"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND="dev-python/pygtk
+COMMON_DEPEND="dev-python/pygtk:2
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -32,6 +32,7 @@ DEPEND="${COMMON_RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/parti
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.6 2010/11/25 16:55:42 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/ChangeLog,v 1.7 2011/04/11 20:59:47 arfrever Exp $
+
+  11 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  parti-0.0.6.ebuild, parti-0.0.6_p456.ebuild, parti-9999.ebuild:
+  Fix deprecation warnings.
 
   25 Nov 2010; Michael Weber <xmw@gentoo.org> parti-0.0.6_p456.ebuild,
   parti-9999.ebuild, -files/parti-9999-constants.pxi:
