@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/alure-1.1.ebuild,v 1.1 2011/04/11 17:10:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/alure-1.1.ebuild,v 1.2 2011/04/11 17:12:42 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -28,8 +28,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# -DMODPLUG because libmodplug has header called libmodplug/sndfile.h
-	# that conflicts with sndfile.h from libsndfile!
+	# FIXME: libmodplug/sndfile.h from libmodplug conflict with sndfile.h from libsndfile
 	local mycmakeargs=(
 		$(cmake-utils_use dumb)
 		$(cmake-utils_use flac)
