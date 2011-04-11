@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.46 2011/04/09 21:29:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.47 2011/04/11 23:40:17 jer Exp $
+
+  11 Apr 2011; Jeroen Roovers <jer@gentoo.org> openntpd-3.9_p1-r3.ebuild:
+  Stable for HPPA (bug #362385).
 
   09 Apr 2011; Christoph Mende <angelos@gentoo.org> openntpd-3.9_p1-r3.ebuild:
   Stable on amd64 wrt bug #362385
