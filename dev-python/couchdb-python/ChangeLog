@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/couchdb-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.14 2011/03/23 12:18:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.15 2011/04/11 13:35:52 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  couchdb-python-0.8.ebuild:
+  x86 stable wrt bug #360111
 
   23 Mar 2011; Christoph Mende <angelos@gentoo.org> couchdb-python-0.8.ebuild:
   Stable on amd64 wrt bug #360111
