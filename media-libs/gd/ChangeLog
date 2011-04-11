@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.65 2010/07/23 20:55:11 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.66 2011/04/11 14:21:39 ssuominen Exp $
+
+  11 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> gd-2.0.35-r2.ebuild:
+  Remove libtool and static archive if USE="static-libs" is not set wrt #362959
+  by Stéphane Pagnon.
 
   23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> gd-2.0.35-r2.ebuild:
   Use virtual/jpeg.
