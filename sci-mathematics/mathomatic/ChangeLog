@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.55 2011/04/08 03:47:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.56 2011/04/11 04:57:25 bicatali Exp $
+
+  11 Apr 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  mathomatic-15.5.2.ebuild:
+  Fixed changed directory names when doc is enabled, bug #362583
 
 *mathomatic-15.5.2 (08 Apr 2011)
 

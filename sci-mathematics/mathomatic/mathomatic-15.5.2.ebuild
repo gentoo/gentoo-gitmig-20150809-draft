@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.5.2.ebuild,v 1.1 2011/04/08 03:47:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.5.2.ebuild,v 1.2 2011/04/11 04:57:25 bicatali Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -44,6 +44,6 @@ src_install() {
 	if use doc; then
 		dohtml doc/*
 		insinto /usr/share/doc/${PF}
-		doins -r tests factorial m4
+		doins -r tests examples m4
 	fi
 }
