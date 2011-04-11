@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.ebuild,v 1.3 2011/01/29 17:07:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.ebuild,v 1.4 2011/04/11 16:01:42 angelos Exp $
 
-EAPI=2
-
+EAPI=4
 inherit base mono eutils
 
 DESCRIPTION="A flexible, irssi-like and user-friendly IRC client for the Gnome Desktop."
@@ -29,6 +28,13 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17
 	>=dev-util/pkgconfig-0.23"
 
+DOCS="FEATURES TODO README"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-visibility.patch \
+		"${FILESDIR}"/${P}-release-build.patch
+}
+
 src_configure() {
 	econf	--disable-dependency-tracking	\
 		--enable-engine-irc		\
@@ -40,10 +46,5 @@ src_configure() {
 
 src_compile() {
 	# This is not parallel build safe, see upstream bug #515
-	emake -j1 || die "emake failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc FEATURES TODO README || die "dodoc failed"
+	emake -j1
 }

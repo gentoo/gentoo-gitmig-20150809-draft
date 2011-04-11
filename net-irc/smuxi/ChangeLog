@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/smuxi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.14 2011/01/29 17:07:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.15 2011/04/11 16:01:42 angelos Exp $
+
+  11 Apr 2011; Christoph Mende <angelos@gentoo.org> smuxi-0.8.ebuild,
+  +files/smuxi-0.8-release-build.patch, +files/smuxi-0.8-visibility.patch:
+  Fixed building against mono-2.10 with patches from Arch (bug #362623)
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> smuxi-0.8.ebuild:
   Stable on amd64 wrt bug #352808
