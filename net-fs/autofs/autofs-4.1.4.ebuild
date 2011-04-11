@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.4.ebuild,v 1.1 2011/04/06 14:10:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.4.ebuild,v 1.2 2011/04/11 14:54:51 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ src_prepare() {
 	# Accumulated fixes for bugs
 	#    #154797: Respect CC and CFLAGS
 	#    #253412: Respect LDFLAGS
-	#    #247969: Link order for --as-needed 
+	#    #247969: Link order for --as-needed
 	epatch "${FILESDIR}"/${P}-respect-user-flags-and-fix-asneeded.patch
 
 	# Reflect init script implementation
