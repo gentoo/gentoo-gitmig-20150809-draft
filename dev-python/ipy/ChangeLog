@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.29 2011/03/24 22:28:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.30 2011/04/11 13:39:28 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ipy-0.74.ebuild:
+  x86 stable wrt bug #360345
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org> ipy-0.74.ebuild:
   Stable on amd64 wrt bug #360345
