@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.6.2.ebuild,v 1.1 2011/04/06 14:18:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.6.2.ebuild,v 1.2 2011/04/11 18:58:24 dilfridge Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 DEPEND="
 	sys-devel/gettext
 "
-RDEPEND=""
+RDEPEND="!<kde-misc/konq-plugins-4.6"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+handbook"
