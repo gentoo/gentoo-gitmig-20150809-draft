@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.158 2011/04/03 16:13:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.159 2011/04/11 21:24:18 sochotnicky Exp $
+
+*rtorrent-0.8.7-r1 (11 Apr 2011)
+*rtorrent-0.8.6-r3 (11 Apr 2011)
+
+  11 Apr 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  -rtorrent-0.8.5.ebuild, -rtorrent-0.8.6.ebuild, -rtorrent-0.8.6-r2.ebuild,
+  +rtorrent-0.8.6-r3.ebuild, -rtorrent-0.8.7.ebuild,
+  +rtorrent-0.8.7-r1.ebuild, files/rtorrentd.init:
+  Fixed up init script a bit
+  Removed old ~arch ebuilds that have been superseded
 
 *rtorrent-0.8.7 (03 Apr 2011)
 

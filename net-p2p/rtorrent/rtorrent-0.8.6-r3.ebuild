@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.6.ebuild,v 1.3 2010/01/21 11:19:34 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.6-r3.ebuild,v 1.1 2011/04/11 21:24:18 sochotnicky Exp $
 
 EAPI=2
 
@@ -27,6 +27,9 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-canvas-fix.patch
+
+	# bug #358271
+	epatch "${FILESDIR}"/${P}-ncurses.patch
 }
 
 src_configure() {
@@ -45,4 +48,13 @@ src_install() {
 		newinitd "${FILESDIR}/rtorrentd.init" rtorrentd || die "newinitd failed"
 		newconfd "${FILESDIR}/rtorrentd.conf" rtorrentd || die "newconfd failed"
 	fi
+}
+
+pkg_postinst() {
+	elog "rtorrent colors patch"
+	elog "Set colors using the options below in .rtorrent.rc:"
+	elog "Options: done_fg_color, done_bg_color, active_fg_color, active_bg_color"
+	elog "Colors: 0 = black, 1 = red, 2 = green, 3 = yellow, 4 = blue,"
+	elog "5 = magenta, 6 = cyan and 7 = white"
+	elog "Example: done_fg_color = 1"
 }
