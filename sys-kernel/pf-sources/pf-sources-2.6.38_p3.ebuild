@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.37_p2.ebuild,v 1.1 2011/01/09 12:39:06 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.38_p3.ebuild,v 1.1 2011/04/11 22:47:48 wired Exp $
 
 EAPI="2"
 
@@ -47,7 +47,6 @@ pkg_setup(){
 	ewarn "Do *not* open bugs in Gentoo's bugzilla unless you have issues with"
 	ewarn "the ebuilds. Thank you."
 	ewarn
-	ebeep 8
 	kernel-2_pkg_setup
 }
 
