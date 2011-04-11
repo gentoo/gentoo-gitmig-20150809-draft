@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.62 2011/03/13 16:05:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.63 2011/04/11 06:20:50 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  lastfmplayer-1.5.4.27091-r1.ebuild:
+  x86 stable wrt bug #358551
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
   lastfmplayer-1.5.4.27091-r1.ebuild:
