@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.36 2011/03/13 16:04:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.37 2011/04/11 06:14:08 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xzgv-0.9.1.ebuild:
+  x86 stable wrt bug #358525
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> xzgv-0.9.1.ebuild:
   Stable on amd64 wrt bug #358515
