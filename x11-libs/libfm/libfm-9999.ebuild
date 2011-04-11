@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.13 2011/02/27 22:54:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.14 2011/04/11 10:51:47 hwoarang Exp $
 
 EAPI=2
 
@@ -49,12 +49,6 @@ src_prepare() {
 	fi
 	intltoolize --force --copy --automake || die
 	#disable unused translations. Bug #356029
-	data/ui/app-chooser.ui
-	data/ui/ask-rename.ui
-	data/ui/exec-file.ui
-	data/ui/file-prop.ui
-	data/ui/preferred-apps.ui
-	data/ui/progress.ui
 	for trans in app-chooser ask-rename exec-file file-prop preferred-apps \
 		progress;do
 		echo "data/ui/"${trans}.ui >> po/POTFILES.in
