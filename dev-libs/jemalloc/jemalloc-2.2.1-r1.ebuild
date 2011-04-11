@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.1.ebuild,v 1.1 2011/04/11 15:04:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.1-r1.ebuild,v 1.1 2011/04/11 15:50:23 anarchy Exp $
 
 EAPI="2"
 
@@ -14,13 +14,14 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="debug profile stats"
+IUSE="debug stats"
 
 DEPEND=""
 RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-strip-optimization.patch"
+	epatch "${FILESDIR}/${PN}-2.2.1-no-pprof.patch"
 
 	eautoreconf
 }
@@ -29,14 +30,11 @@ src_configure() {
 	econf \
 		--with-jemalloc-prefix=j \
 		$(use_enable debug) \
-		$(use_enable profile prof) \
 		$(use_enable stats) \
 		|| die "configure failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install
-
-	# Rename pproff to prevent collision
-	mv "${D}"/usr/bin/pprof "${D}"/usr/bin/jpprof
 }
+

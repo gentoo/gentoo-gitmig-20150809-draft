@@ -6,7 +6,6 @@
 		Jemalloc is a general-purpose scalable concurrent allocator
 	</longdescription>
 	<use>
-		<flag name='profile'>Enable allocation profiling</flag>
 		<flag name='stats'>Enable statistics calculation/reporting</flag>
 	</use>
 </pkgmetadata>
