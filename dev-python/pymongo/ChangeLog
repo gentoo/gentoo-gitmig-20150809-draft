@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pymongo
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.1 2011/04/11 12:40:40 ultrabug Exp $
+
+*pymongo-1.10.1 (11 Apr 2011)
+
+  11 Apr 2011; Ultrabug <ultrabug@gentoo.org> +pymongo-1.10.1.ebuild,
+  +metadata.xml:
+  initial import from sunrise, ebuild written by Johan Bergström.
+
