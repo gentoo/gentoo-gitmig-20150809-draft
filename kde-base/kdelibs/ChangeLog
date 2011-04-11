@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.741 2011/04/10 19:43:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.742 2011/04/11 04:05:32 josejx Exp $
+
+  11 Apr 2011; Joseph Jezak <josejx@gentoo.org> kdelibs-4.4.5-r4.ebuild:
+  Marked ppc stable for bug #361015.
 
 *kdelibs-4.6.2-r2 (10 Apr 2011)
 
