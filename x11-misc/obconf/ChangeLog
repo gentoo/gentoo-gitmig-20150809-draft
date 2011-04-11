@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.77 2011/04/09 12:20:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.78 2011/04/11 06:17:23 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  obconf-2.0.3-r1.ebuild:
+  x86 stable wrt bug #358543
 
   09 Apr 2011; Markus Meier <maekke@gentoo.org> obconf-2.0.3-r1.ebuild:
   arm stable, bug #358543
