@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.222 2011/03/30 13:10:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.223 2011/04/11 06:47:11 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -72,10 +72,6 @@ mail-client/evolution clutter
 # Mask valgrind use flag for net-libs/gnutls as valgrind isn't usable
 # on several of the archs gnutls is stable for.
 net-libs/gnutls valgrind
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (29 Oct 2010)
-# Masked, it's work in progress not supported by upstream.
-www-client/chromium system-v8
 
 # Patrick Lauer <patrick@gentoo.org> (15 Sep 2010)
 # Feature broken in dovecot-1, see #337014
