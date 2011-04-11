@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_scgi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.8 2009/09/17 09:02:53 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.9 2011/04/11 19:30:26 arfrever Exp $
+
+*mod_scgi-1.14 (11 Apr 2011)
+
+  11 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +mod_scgi-1.14.ebuild:
+  Version bump.
 
 *mod_scgi-1.13 (17 Sep 2009)
 
