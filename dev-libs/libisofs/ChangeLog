@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.83 2011/03/23 20:29:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.84 2011/04/11 19:12:32 billie Exp $
+
+*libisofs-1.0.6 (11 Apr 2011)
+
+  11 Apr 2011; Daniel Pielmeier <billie@gentoo.org> +libisofs-1.0.6.ebuild:
+  Version bump. Switch to EAPI 4. Add static-libs USE flag.
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libisofs-1.0.0.ebuild:
   ppc/ppc64 stable wrt #355097
