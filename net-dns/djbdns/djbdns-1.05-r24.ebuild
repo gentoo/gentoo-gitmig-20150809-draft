@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r24.ebuild,v 1.3 2011/04/04 18:58:49 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r24.ebuild,v 1.4 2011/04/11 13:08:57 c1pher Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs
@@ -54,7 +54,8 @@ src_prepare() {
 		# Fix CVE2008-4392
 		epatch \
 			"${FILESDIR}/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries-ipv6.patch" \
-			"${FILESDIR}/CVE2008-4392_0002-dnscache-cache-soa-records-ipv6.patch"
+			"${FILESDIR}/CVE2008-4392_0002-dnscache-cache-soa-records-ipv6.patch" \
+			"${FILESDIR}/makefile-parallel.patch"
 
 		cd "${S}-noipv6"
 	fi
