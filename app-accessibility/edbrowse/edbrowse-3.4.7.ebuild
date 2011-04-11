@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.6.ebuild,v 1.3 2011/03/28 20:05:10 cbrannon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.7.ebuild,v 1.1 2011/04/11 19:09:41 cbrannon Exp $
 
 EAPI="4"
 inherit eutils
@@ -24,7 +24,6 @@ RDEPEND="${COMMON_DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-makefile.patch
-	epatch "${FILESDIR}"/${P}-fix-off-by-one.patch
 }
 
 src_compile() {
@@ -34,11 +33,11 @@ src_compile() {
 		JSLIB=-lmozjs
 	fi
 
-	emake prefix=/usr JSLIB="${JSLIB}"
+	emake prefix=/usr JSLIB="${JSLIB}" STRIP=''
 	if use odbc; then
 		# Top-level makefile doesn't have this target.
 		cd src
-		emake prefix=/usr edbrowseodbc
+		emake prefix=/usr STRIP='' edbrowseodbc
 		cd ..
 	fi
 }
