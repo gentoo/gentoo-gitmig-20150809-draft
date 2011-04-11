@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.4.ebuild,v 1.7 2011/01/06 11:53:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.6.ebuild,v 1.1 2011/04/11 09:08:39 hwoarang Exp $
 
 EAPI="2"
 inherit eutils versionator
@@ -36,7 +36,6 @@ src_configure() {
 		--with-boost-filesystem=boost_filesystem-mt \
 		--with-boost-thread=boost_thread-mt \
 		--with-boost-python=boost_python-mt"
-
 	# detect boost version and location, bug 295474
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.34.1")"
 	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
