@@ -1,6 +1,9 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.18 2011/03/29 10:04:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.19 2011/04/11 13:50:43 phajdan.jr Exp $
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> splix-2.0.0.ebuild:
+  x86 stable wrt bug #360567
 
 *splix-2.0.0_p20110219 (29 Mar 2011)
 

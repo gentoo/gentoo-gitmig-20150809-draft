@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0.ebuild,v 1.3 2011/03/28 17:32:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0.ebuild,v 1.4 2011/04/11 13:50:43 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+jbig"
 
 DEPEND="|| ( >=net-print/cups-1.4.0 net-print/cupsddk )
