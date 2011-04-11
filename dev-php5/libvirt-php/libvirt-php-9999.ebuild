@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/libvirt-php/libvirt-php-9999.ebuild,v 1.1 2011/04/11 12:39:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/libvirt-php/libvirt-php-9999.ebuild,v 1.2 2011/04/11 12:56:28 dev-zero Exp $
 
 EAPI=3
 
@@ -15,8 +15,8 @@ EGIT_REPO_URI="git://libvirt.org/libvirt-php.git"
 
 LICENSE="PHP-3.01"
 SLOT="0"
-KEYWORDS=""
-IUSE="doc examples"
+KEYWORDS="~amd64"
+IUSE="doc"
 
 RDEPEND="app-emulation/libvirt
 	dev-libs/libxml2"
@@ -41,8 +41,4 @@ src_prepare() {
 src_install() {
 	php-ext-source-r2_src_install
 	use doc && dohtml docs/* docs/graphics/*
-	if use examples ; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
 }
