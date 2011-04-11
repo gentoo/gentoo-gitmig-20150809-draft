@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.19 2011/03/09 17:16:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.20 2011/04/11 11:44:06 tove Exp $
+
+*ack-1.94-r1 (11 Apr 2011)
+
+  11 Apr 2011; Torsten Veller <tove@gentoo.org> +ack-1.94-r1.ebuild:
+  Add support for .ebuild and .eclass as gentoo filetypes.
+  Thanks to Henning Schild (#360479)
 
 *ack-1.94 (09 Mar 2011)
 
