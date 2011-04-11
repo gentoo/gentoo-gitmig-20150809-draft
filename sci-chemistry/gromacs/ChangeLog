@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.83 2011/04/10 17:15:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.84 2011/04/11 17:55:07 angelos Exp $
+
+  11 Apr 2011; Christoph Mende <angelos@gentoo.org> gromacs-4.5.4-r1.ebuild:
+  Stable on amd64 wrt bug #357017
 
   10 Apr 2011; Raúl Porcel <armin76@gentoo.org> gromacs-4.5.4-r1.ebuild:
   alpha/sparc stable wrt #357017
