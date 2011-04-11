@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alure
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/ChangeLog,v 1.2 2010/04/27 20:09:48 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/ChangeLog,v 1.3 2011/04/11 17:10:42 ssuominen Exp $
+
+*alure-1.1 (11 Apr 2011)
+
+  11 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> +alure-1.1.ebuild:
+  Version bump.
 
   27 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> alure-1.0.ebuild:
   amd64 stable and fix documentation directory wrt #300514 by Diego E.
