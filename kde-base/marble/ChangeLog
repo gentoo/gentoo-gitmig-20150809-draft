@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.87 2011/04/06 14:19:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.88 2011/04/11 02:06:00 dilfridge Exp $
+
+*marble-4.6.2-r1 (11 Apr 2011)
+
+  11 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -marble-4.6.2.ebuild, +marble-4.6.2-r1.ebuild,
+  +files/marble-4.6.2-magic.patch:
+  Fix automagic dependency on gpsd, bug 360001
 
 *marble-4.6.2 (06 Apr 2011)
 

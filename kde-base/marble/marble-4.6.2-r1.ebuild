@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.6.2.ebuild,v 1.1 2011/04/06 14:19:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.6.2-r1.ebuild,v 1.1 2011/04/11 02:06:01 dilfridge Exp $
 
 EAPI=3
 
@@ -28,6 +28,9 @@ RDEPEND="${DEPEND}
 	!kdeprefix? ( !sci-geosciences/marble )
 "
 
+PATCHES=( "${FILESDIR}/${PN}-4.6.2-magic.patch" )
+# note that this patch will not work if we ever make a qt-only build
+
 pkg_setup() {
 	python_set_active_version 2
 	kde4-meta_pkg_setup
@@ -47,16 +50,11 @@ src_configure() {
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PythonLibrary)
 		$(cmake-utils_use_with python SIP)
+		$(cmake-utils_use_with gps libgps)
+		-DWITH_liblocation=0
 	)
 
 	find "${S}/marble/src/bindings/python/sip" -name "*.sip" | xargs -- sed -i 's/#include <marble\//#include </'
-
-	if use gps; then
-		mycmakeargs+=(-DHAVE_LIBGPS=1)
-	else
-		sed -i -e 's:FIND_LIBRARY(libgps_LIBRARIES gps):# LIBGPS DISABLED &:' \
-			marble/Findlibgps.cmake || die "sed to disable gpsd failed."
-	fi
 
 	kde4-meta_src_configure
 }
