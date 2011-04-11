@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.14 2011/03/23 06:18:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.15 2011/04/11 04:35:04 jer Exp $
+
+  11 Apr 2011; Jeroen Roovers <jer@gentoo.org> sakura-2.3.8.ebuild:
+  Restore keywords (bug #328943).
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> sakura-2.3.8.ebuild,
   sakura-2.4.0.ebuild:
