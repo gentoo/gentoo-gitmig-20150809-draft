@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cssc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.8 2011/01/08 18:29:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.9 2011/04/11 01:31:11 jer Exp $
+
+  11 Apr 2011; Jeroen Roovers <jer@gentoo.org> -cssc-1.0.1.ebuild:
+  Officially remove the old (bug #312089).
 
   08 Jan 2011; Jeroen Roovers <jer@gentoo.org> +cssc-1.2.0.ebuild:
   Oops, should not have removed that.
