@@ -20,6 +20,7 @@
 	</longdescription>
 	<use>
 		<flag name='augeas'>Enable augeas support</flag>
+		<flag name='diff'>Enable diff support</flag>
 		<flag name='rrdtool'>Enable rrdtool support</flag>
 		<flag name='shadow'>Enable shadow support</flag>
 	</use>
