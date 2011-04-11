@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.0.ebuild,v 1.1 2011/03/05 01:33:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.0.ebuild,v 1.2 2011/04/11 23:36:57 jer Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -16,7 +16,7 @@ SLOT="3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
-DEPEND=""
+DEPEND="test? ( app-arch/ncompress )"
 RDEPEND=""
 
 S="${WORKDIR}/${P/-}"
