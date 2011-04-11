@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libsexy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.50 2011/04/05 07:44:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.51 2011/04/11 23:42:46 jer Exp $
+
+  11 Apr 2011; Jeroen Roovers <jer@gentoo.org> libsexy-0.1.11-r2.ebuild:
+  Stable for HPPA (bug #361917).
 
   05 Apr 2011; Christoph Mende <angelos@gentoo.org> libsexy-0.1.11-r2.ebuild:
   Stable on amd64 wrt bug #361917
