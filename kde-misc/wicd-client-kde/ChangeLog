@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/wicd-client-kde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/ChangeLog,v 1.4 2011/02/26 11:19:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/ChangeLog,v 1.5 2011/04/12 10:47:14 scarabeus Exp $
+
+*wicd-client-kde-0.2.2 (12 Apr 2011)
+
+  12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +wicd-client-kde-0.2.2.ebuild:
+  Version bump to latest.
 
   26 Feb 2011; Thomas Kahle <tomka@gentoo.org> wicd-client-kde-0.2.1.ebuild:
   x86 stable per bug 348437
