@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.13.6.ebuild,v 1.1 2011/04/03 19:47:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.13.6.ebuild,v 1.2 2011/04/12 22:26:57 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -110,8 +110,7 @@ src_compile() {
 }
 
 distutils_src_install_post_hook() {
-	# mv "$(distutils_get_intermediate_installation_image)/${ZOPE_INSTALLATION_DIR}/lib/python"{,-${PYTHON_ABI}}
-	mv "${T}/images/${PYTHON_ABI}/${ZOPE_INSTALLATION_DIR}/lib/python"{,-${PYTHON_ABI}}
+	mv "$(distutils_get_intermediate_installation_image)/${ZOPE_INSTALLATION_DIR}/lib/python"{,-${PYTHON_ABI}}
 }
 
 src_install() {
