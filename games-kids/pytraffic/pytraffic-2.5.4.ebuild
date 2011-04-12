@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4.ebuild,v 1.7 2011/04/06 20:04:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4.ebuild,v 1.8 2011/04/12 17:15:51 arfrever Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -53,6 +53,10 @@ pkg_setup() {
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
+	python_mod_optimize "$(games_get_libdir)/${PN}"
 	games_pkg_postinst
+}
+
+pkg_postrm() {
+	python_mod_cleanup "$(games_get_libdir)/${PN}"
 }
