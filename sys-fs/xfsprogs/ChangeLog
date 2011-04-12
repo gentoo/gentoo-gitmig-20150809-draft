@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.132 2011/03/30 16:11:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.133 2011/04/12 17:25:25 vapier Exp $
+
+*xfsprogs-3.1.5 (12 Apr 2011)
+
+  12 Apr 2011; Mike Frysinger <vapier@gentoo.org> +xfsprogs-3.1.5.ebuild:
+  Version bump #363261 by Lars Wendler.
 
   30 Mar 2011; Jeroen Roovers <jer@gentoo.org> xfsprogs-3.1.4.ebuild:
   Stable for HPPA (bug #358499).
