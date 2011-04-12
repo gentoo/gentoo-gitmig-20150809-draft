@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.15.ebuild,v 1.2 2011/04/02 07:39:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.15.ebuild,v 1.3 2011/04/12 02:37:11 tomka Exp $
 
 EAPI=2
 inherit cmake-utils eutils games
@@ -12,7 +12,7 @@ SRC_URI="http://hedgewars.org/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 Apache-2.0 FDL-1.3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4
