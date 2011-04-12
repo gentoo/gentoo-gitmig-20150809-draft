@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tg-widgets-lightbox/tg-widgets-lightbox-2.0.ebuild,v 1.2 2010/07/09 23:09:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tg-widgets-lightbox/tg-widgets-lightbox-2.0.ebuild,v 1.3 2011/04/12 16:19:25 arfrever Exp $
 
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit distutils

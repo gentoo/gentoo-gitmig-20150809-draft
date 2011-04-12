@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.8.ebuild,v 1.3 2010/07/09 23:06:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.8.ebuild,v 1.4 2011/04/12 16:22:22 arfrever Exp $
 
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit distutils
