@@ -6,6 +6,7 @@
   <email>naota@gentoo.org</email>
 </maintainer>
 <use>
-  <flag name='howm'>Add support for app-emacs/howm</flag>
+  <flag name='howm'>Add support for the <pkg>app-emacs/howm</pkg>
+    note-taking tool</flag>
 </use>
 </pkgmetadata>
