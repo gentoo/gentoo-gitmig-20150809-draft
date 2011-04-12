@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.56 2011/04/11 23:38:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.57 2011/04/12 18:51:25 tomka Exp $
+
+  12 Apr 2011; Thomas Kahle <tomka@gentoo.org> xdelta-3.0.0.ebuild:
+  x86 stable per bug 362969
 
   11 Apr 2011; Jeroen Roovers <jer@gentoo.org> xdelta-3.0.0.ebuild:
   Stable for HPPA (bug #362969).
