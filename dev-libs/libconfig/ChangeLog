@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.26 2011/04/12 13:46:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.27 2011/04/12 13:47:27 jer Exp $
+
+  12 Apr 2011; Jeroen Roovers <jer@gentoo.org> libconfig-1.4.7.ebuild:
+  No need for eutils.eclass.
 
   12 Apr 2011; Jeroen Roovers <jer@gentoo.org> libconfig-1.4.7.ebuild:
   Define src_test to get tests run, disable building examples, optionally
