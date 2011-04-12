@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.9 2010/06/09 11:55:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r4.ebuild,v 1.10 2011/04/12 18:13:12 arfrever Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
-PYTHON_MODNAME="tkSnack.py"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit eutils distutils multilib
 
@@ -27,9 +27,16 @@ DEPEND="
 	alsa? ( media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${PN}${PV}/unix"
+
+PYTHON_MODNAME="tkSnack.py"
+
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
+}
 
 src_prepare() {
 	# bug 226137 - snack depends on alsa private symbol _snd_pcm_mmap_hw_ptr
@@ -82,5 +89,17 @@ src_install() {
 			docinto examples/python
 			dodoc demos/python/* || die
 		fi
+	fi
+}
+
+pkg_postinst() {
+	if use python; then
+		distutils_pkg_postinst
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		distutils_pkg_postrm
 	fi
 }
