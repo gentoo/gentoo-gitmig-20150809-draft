@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.4.0.ebuild,v 1.4 2011/02/26 10:32:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.4.0.ebuild,v 1.5 2011/04/12 18:05:58 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -32,6 +32,12 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 DISTUTILS_SETUP_FILES=("bindings/setup.py")
+
+pkg_setup() {
+	if use python; then
+		python_pkg_setup
+	fi
+}
 
 src_unpack() {
 	# we need the -a option, so we can not use 'unpack'
@@ -124,5 +130,17 @@ src_install() {
 	dodoc README || die
 	if use doc; then
 		newdoc "${DOC_PREFIX}-manual.pdf" "manual.pdf" || die
+	fi
+}
+
+pkg_postinst() {
+	if use python; then
+		distutils_pkg_postinst
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		distutils_pkg_postrm
 	fi
 }
