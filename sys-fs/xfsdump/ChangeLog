@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/xfsdump
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.78 2010/08/29 22:21:49 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.79 2011/04/12 17:56:17 vapier Exp $
+
+*xfsdump-3.0.5 (12 Apr 2011)
+
+  12 Apr 2011; Mike Frysinger <vapier@gentoo.org> +xfsdump-3.0.5.ebuild,
+  +files/xfsdump-3.0.5-prompt-overflow.patch:
+  Version bump #363261 by Lars Wendler.
 
   29 Aug 2010; Mike Frysinger <vapier@gentoo.org> xfsdump-3.0.4-r1.ebuild,
   +files/xfsdump-3.0.4-headers.patch:
