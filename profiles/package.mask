@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12677 2011/04/12 13:23:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12678 2011/04/12 13:25:38 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (12 Apr 2011)
+# lacks most features and sanity, waiting for upstream to improve it
+>=sys-power/powertop-1.90
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (12 Apr 2011)
 # GNOME 3 mask, things will be added here slowly
