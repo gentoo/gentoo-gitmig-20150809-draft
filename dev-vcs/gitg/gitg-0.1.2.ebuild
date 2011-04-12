@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.1.2.ebuild,v 1.1 2011/03/27 20:55:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-0.1.2.ebuild,v 1.2 2011/04/12 00:51:16 sping Exp $
 
 EAPI="3"
 
@@ -41,6 +41,11 @@ src_prepare() {
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i "${S}/po/Makefile.in.in" || die "sed failed"
 
 	epatch "${FILESDIR}"/${P}-fix-disable-debug.patch
+}
+
+src_configure() {
+	# Disable maintainer to get rid of -Werror  (bug #363009)
+	econf --disable-maintainer-mode || die
 }
 
 src_install() {
