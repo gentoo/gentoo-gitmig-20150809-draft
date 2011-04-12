@@ -1,5 +1,26 @@
---- configure.ac.orig	2010-09-20 23:15:36.692289201 +0200
-+++ configure.ac	2010-09-20 23:26:30.159014141 +0200
+diff -ruN libindicate-0.4.4.orig/Makefile.am libindicate-0.4.4/Makefile.am
+--- libindicate-0.4.4.orig/Makefile.am	2010-06-02 21:06:51.000000000 +0200
++++ libindicate-0.4.4/Makefile.am	2011-04-13 01:06:13.763221971 +0200
+@@ -1,11 +1,15 @@
+ 
++if WANT_DOC
++DOC_SUBDIR = docs
++endif
++
+ SUBDIRS = \
+ 	libindicate \
+ 	libindicate-gtk \
+ 	bindings \
+ 	examples \
+ 	tests \
+-	docs
++	$(DOC_SUBDIR)
+ 
+ EXTRA_DIST = \
+ 	COPYING.LGPL.2.1 \
+diff -ruN libindicate-0.4.4.orig/configure.ac libindicate-0.4.4/configure.ac
+--- libindicate-0.4.4.orig/configure.ac	2010-09-15 18:24:09.000000000 +0200
++++ libindicate-0.4.4/configure.ac	2011-04-13 01:07:01.744221988 +0200
 @@ -171,8 +171,18 @@
  # GTK Doc 
  ###########################
@@ -19,27 +40,3 @@
  GNOME_COMPILE_WARNINGS
  
  ##############################
-@@ -271,2 +281,7 @@
--	GObject Introspection:  $enable_introspection
--])
-+	GObject Introspection:  $enable_introspection
-+])
-+
-+AM_COND_IF([HAVE_GNOME_DOC_UTILS],
-+	[AC_MSG_NOTICE([	Documentation:          yes])],
-+	[AC_MSG_NOTICE([	Documentation:          no])]
-+)
---- Makefile.am.orig	2010-09-20 23:12:10.442903362 +0200
-+++ Makefile.am	2010-09-20 23:27:12.557785756 +0200
-@@ -1,2 +1,6 @@
- 
-+if WANT_DOC
-+DOC_SUBDIR = docs
-+endif
-+
- SUBDIRS = \
-@@ -8,3 +12,3 @@
- 	tests \
--	docs
-+	$(DOC_SUBDIR)
- 
