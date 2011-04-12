@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.4.ebuild,v 1.2 2011/03/22 08:40:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.4-r1.ebuild,v 1.1 2011/04/12 17:11:57 xarthisius Exp $
 
 EAPI="2"
 
@@ -14,15 +14,13 @@ SRC_URI="http://hg.linux-ha.org/${PN}-STABLE_3_0/archive/STABLE-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc ipmi snmp static-libs"
+IUSE="doc snmp static-libs"
 
 RDEPEND="sys-cluster/cluster-glue
 	dev-libs/glib:2
 	virtual/ssh
 	net-libs/gnutls
-	ipmi? ( sys-libs/openipmi )
-	snmp? ( net-analyzer/net-snmp )
-	"
+	snmp? ( net-analyzer/net-snmp )	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/swig"
@@ -63,7 +61,6 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable doc) \
 		--disable-tipc \
-		$(use_enable ipmi ipmilan) \
 		--enable-dopd \
 		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var \
