@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-3.0-r1.ebuild,v 1.7 2011/03/12 12:47:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-3.0-r1.ebuild,v 1.8 2011/04/12 07:14:34 zmedico Exp $
 
 EAPI="2"
 inherit toolchain-funcs eutils flag-o-matic
@@ -17,7 +17,8 @@ IUSE="bzip2 crypt natspec unicode"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+	natspec? ( dev-libs/libnatspec )"
 
 S=${WORKDIR}/${MY_P}
 
