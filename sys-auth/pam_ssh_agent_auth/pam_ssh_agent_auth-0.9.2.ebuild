@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent_auth/pam_ssh_agent_auth-0.9.2.ebuild,v 1.1 2011/02/05 22:35:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh_agent_auth/pam_ssh_agent_auth-0.9.2.ebuild,v 1.2 2011/04/12 07:23:32 angelos Exp $
 
 EAPI=4
 
-inherit pam
+inherit eutils pam
 
 DESCRIPTION="Simple module to authenticate users against their ssh-agent keys"
 HOMEPAGE="http://pamsshagentauth.sourceforge.net"
@@ -24,6 +24,10 @@ RDEPEND="${DEPEND}
 # needed for pod2man
 DEPEND="${DEPEND}
 	dev-lang/perl"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libs.patch
+}
 
 src_configure() {
 	pammod_hide_symbols
