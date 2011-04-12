@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.49 2011/04/08 03:21:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.50 2011/04/12 06:40:10 flameeyes Exp $
+
+  12 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/irrlicht-1.7.2-gcc46.patch:
+  Fix gcc 4.6 patch.
 
   08 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
   irrlicht-1.7.2.ebuild, files/irrlicht-1.7.2-config.patch,
