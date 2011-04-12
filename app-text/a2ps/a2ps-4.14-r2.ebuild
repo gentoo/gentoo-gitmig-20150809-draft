@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r2.ebuild,v 1.1 2011/01/10 20:39:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.14-r2.ebuild,v 1.2 2011/04/12 21:07:58 abcd Exp $
 
+EAPI=3
 inherit eutils autotools elisp-common
 
 DESCRIPTION="Any to PostScript filter"
@@ -11,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="emacs nls latex vanilla userland_BSD userland_GNU linguas_ja"
 
 RESTRICT="test"
@@ -38,8 +39,9 @@ S="${WORKDIR}/${PN}-${PV:0:4}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd "${S}"
+}
 
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.13c-locale-gentoo.diff"
 	# this will break
 	#epatch "${FILESDIR}/${PN}-4.13c-stdarg.patch"
@@ -76,7 +78,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf="COM_netscape=no COM_acroread=no"
 
 	if ! use emacs ; then
@@ -90,17 +92,19 @@ src_compile() {
 	export LANG=C LC_ALL=C
 
 	econf \
-		--sysconfdir=/etc/a2ps \
+		--sysconfdir="${EPREFIX}"/etc/a2ps \
 		$(use_enable nls) \
-		${myconf} || die "econf failed"
+		${myconf}
+}
 
+src_compile() {
 	# parallel make b0rked
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" \
-		lispdir="${SITELISP}/${PN}" \
+		lispdir="${EPREFIX}${SITELISP}/${PN}" \
 		install || die "emake install failed"
 
 	if use emacs; then

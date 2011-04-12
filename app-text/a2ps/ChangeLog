@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.98 2011/01/10 20:39:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.99 2011/04/12 21:07:58 abcd Exp $
+
+  12 Apr 2011; Jonathan Callen <abcd@gentoo.org> a2ps-4.14-r2.ebuild:
+  Add prefix support, bump EAPI to 3, add prefix keywords
 
 *a2ps-4.14-r2 (10 Jan 2011)
 
