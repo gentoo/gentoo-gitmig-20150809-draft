@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.8 2011/04/12 01:34:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.9 2011/04/12 16:45:30 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -47,6 +47,7 @@ src_prepare() {
 	sed -i \
 		-e 's/\(snprintf(\(textureName\),\)63\(,textureNames\[i\])\)/\1 sizeof(\2), "%s"\3/' \
 		src/map.cc || die
+	epatch "${FILESDIR}"/${P}-warning.patch
 }
 
 src_configure() {
