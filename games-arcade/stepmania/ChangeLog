@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.36 2011/03/31 15:47:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.37 2011/04/12 13:29:48 tupone Exp $
+
+  12 Apr 2011; Alfredo Tupone <tupone@gentoo.org> stepmania-3.9-r2.ebuild,
+  +files/stepmania-3.9-gcc46.patch:
+  Build with gcc-4.6.0 Bugs #363165 by Diego Elio Pettenò
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> stepmania-3.9-r2.ebuild:
   Depend on virtual/ffmpeg instead of media-video/ffmpeg.
