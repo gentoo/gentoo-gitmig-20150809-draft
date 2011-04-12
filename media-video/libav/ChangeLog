@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.11 2011/04/12 13:40:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.12 2011/04/12 14:24:49 scarabeus Exp $
+
+  12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild,
+  metadata.xml:
+  Try to split up gpl code so user can compile just LGPL version.
 
   12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
   Update deps to match latest reality.
