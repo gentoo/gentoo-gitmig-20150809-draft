@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0-r1.ebuild,v 1.1 2010/06/17 22:10:24 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack/jack-3.0.0-r1.ebuild,v 1.2 2011/04/12 17:21:02 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,22 +26,20 @@ RDEPEND="${DEPEND}
 	media-sound/lame
 	media-sound/cdparanoia"
 
+DISTUTILS_SETUP_FILES=("setup-cursesmodule.py")
+
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 }
 
 src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}"/${P}-python26.patch
 }
 
-src_compile() {
-	python setup-cursesmodule.py build || die "compilation failed"
-}
-
 src_install() {
-	python setup-cursesmodule.py install --root="${D}" \
-		|| die "curses module install failed"
+	distutils_src_install
 
 	dobin jack || die "dobin failed"
 
