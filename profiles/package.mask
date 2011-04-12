@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12678 2011/04/12 13:25:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12679 2011/04/12 13:32:19 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -174,7 +174,7 @@ sci-libs/openfoam-solvers
 sci-libs/openfoam-utilities
 sci-libs/openfoam-src
 sci-libs/openfoam-wmake
-sci-libs/openfoam
+<sci-libs/openfoam-1.7
 dev-python/PyFoam
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Mar 2011)
