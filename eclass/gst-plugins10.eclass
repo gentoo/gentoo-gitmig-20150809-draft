@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.3 2010/08/12 10:48:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.4 2011/04/12 05:55:30 leio Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -11,8 +11,8 @@
 #
 # 3rd party applications using gstreamer now should depend on a set of plugins as
 # defined in the source, in case of spider usage obtain recommended plugins to use from
-# Gentoo developers responsible for gstreamer <gnome@gentoo.org>, the application developer
-# or the gstreamer team.
+# Gentoo developers responsible for gstreamer <gstreamer@gentoo.org> or the application
+# developer.
 
 inherit eutils
 
@@ -52,10 +52,10 @@ gst-plugins10_find_plugin_dir() {
 			ewarn "No such plugin directory"
 			die
 		fi
-		einfo "Building system plugin ..."
+		einfo "Building system plugin ${GST_PLUGINS_BUILD_DIR} ..."
 		cd "${S}"/sys/${GST_PLUGINS_BUILD_DIR}
 	else
-		einfo "Building external plugin ..."
+		einfo "Building external plugin ${GST_PLUGINS_BUILD_DIR} ..."
 		cd "${S}"/ext/${GST_PLUGINS_BUILD_DIR}
 	fi
 
@@ -78,4 +78,3 @@ gst-plugins10_remove_unversioned_binaries() {
 	done
 
 }
-
