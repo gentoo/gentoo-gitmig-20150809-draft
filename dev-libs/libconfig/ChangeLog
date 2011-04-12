@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.24 2011/04/12 12:59:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.25 2011/04/12 13:02:55 jer Exp $
+
+  12 Apr 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add maintainers.
 
 *libconfig-1.4.7 (12 Apr 2011)
 
