@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.6.ebuild,v 1.1 2011/04/12 12:28:15 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.6.ebuild,v 1.2 2011/04/12 17:09:25 signals Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -28,7 +28,6 @@ RDEPEND="dev-lang/vala:0.12
 	sys-apps/dbus
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	x11-libs/gtkhotkey
 	x11-libs/pango
 	x11-themes/gnome-icon-theme"
 DEPEND="${RDEPEND}
