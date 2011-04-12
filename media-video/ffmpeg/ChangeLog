@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.405 2011/04/12 13:44:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.406 2011/04/12 14:45:47 aballier Exp $
+
+*ffmpeg-0.6.90_rc0-r1 (12 Apr 2011)
+
+  12 Apr 2011; Alexis Ballier <aballier@gentoo.org>
+  +ffmpeg-0.6.90_rc0-r1.ebuild, +files/avparser.patch:
+  av_parser_parse is to be removed with the next major bump, bug #362949
 
   12 Apr 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   no need to hack the LD_LIBRARY_PATH for libavcore since its no more
