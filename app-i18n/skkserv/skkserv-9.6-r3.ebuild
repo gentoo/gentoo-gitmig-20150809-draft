@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r3.ebuild,v 1.8 2011/02/13 19:11:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/skkserv-9.6-r3.ebuild,v 1.9 2011/04/12 03:44:52 abcd Exp $
 
+EAPI=3
 inherit eutils
 
 MY_P="skk${PV}mu"
@@ -12,7 +13,7 @@ SRC_URI="http://openlab.ring.gr.jp/skk/maintrunk/museum/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=">=app-i18n/skk-jisyo-200210"
@@ -20,15 +21,17 @@ PROVIDE="virtual/skkserv"
 
 S="${WORKDIR}/skk-${PV}mu"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${S}"/skkserv
 	epatch "${FILESDIR}"/${P}-segfault-gentoo.patch
 	epatch "${FILESDIR}"/${P}-inet_ntoa-gentoo.patch
 }
 
+src_configure() {
+	econf --libexecdir="${EPREFIX}"/usr/sbin
+}
+
 src_compile() {
-	econf --libexecdir=/usr/sbin || die "econf failed"
 	cd skkserv
 	emake || die
 }
