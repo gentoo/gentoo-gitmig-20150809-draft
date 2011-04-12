@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.0.ebuild,v 1.3 2011/01/14 03:07:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.0.ebuild,v 1.4 2011/04/12 22:13:49 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -33,7 +33,7 @@ PYTHON_MODNAME="Bcfg2"
 
 distutils_src_install_post_hook() {
 	if ! use server; then
-		rm -f "${T}/images/${PYTHON_ABI}${EPREFIX}/usr/sbin/bcfg2-"*
+		rm -f "$(distutils_get_intermediate_installation_image)${EPREFIX}/usr/sbin/bcfg2-"*
 	fi
 }
 
