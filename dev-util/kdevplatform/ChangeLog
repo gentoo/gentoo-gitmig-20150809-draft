@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.52 2011/04/10 11:30:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.53 2011/04/12 22:22:34 dilfridge Exp $
+
+  12 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdevplatform-1.2.2.ebuild:
+  Fixed linguas list, bug 359521
 
 *kdevplatform-1.2.2 (10 Apr 2011)
 

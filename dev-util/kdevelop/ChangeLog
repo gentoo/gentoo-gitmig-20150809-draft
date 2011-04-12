@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.216 2011/04/10 11:31:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.217 2011/04/12 22:18:21 dilfridge Exp $
+
+  12 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdevelop-4.2.2.ebuild:
+  Fixed linguas list, bug 359521
 
 *kdevelop-4.2.2 (10 Apr 2011)
 
