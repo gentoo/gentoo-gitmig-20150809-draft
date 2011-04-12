@@ -1,16 +1,34 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.11 2011/04/04 12:44:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.12 2011/04/12 17:19:10 scarabeus Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
 [[ ${PV} = *9999* ]] && VCS_ECLASS="git"
+NAMESUF=${PN/mplayer/}
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${VCS_ECLASS}
 
-namesuf="${PN/mplayer/}"
+DESCRIPTION="Media Player for Linux"
+HOMEPAGE="http://www.mplayer2.org/"
+[[ ${PV} == *9999* ]] || \
+	RELEASE_URI="http://ftp.${PN}.org/pub/release/${P}.tar.xz"
+SRC_URI="${RELEASE_URI}
+	!truetype? (
+		mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+		mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+		mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2
+	)
+"
 
+LICENSE="GPL-3"
+SLOT="0"
+if [[ ${PV} != *9999* ]]; then
+	KEYWORDS="~amd64 ~x86"
+else
+	KEYWORDS=""
+fi
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts custom-cflags debug dga
 directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon
@@ -26,28 +44,13 @@ for x in ${VIDEO_CARDS}; do
 	IUSE+=" video_cards_${x}"
 done
 
-FONT_URI="
-	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
-	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-	mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2
-"
-[[ ${PV} == *9999* ]] || \
-	RELEASE_URI="http://ftp.${PN}.org/pub/release/${P}.tar.xz"
-SRC_URI="${RELEASE_URI}
-	!truetype? ( ${FONT_URI} )
-"
-
-DESCRIPTION="Media Player for Linux"
-HOMEPAGE="http://www.mplayer2.org/"
+# bindist does not cope with win32codecs, which are nonfree
+REQUIRED_USE="bindist? ( !win32codecs )"
 
 FONT_RDEPS="
 	virtual/ttf-fonts
 	media-libs/fontconfig
 	>=media-libs/freetype-2.2.1:2
-"
-X_RDEPS="
-	x11-libs/libXext
-	x11-libs/libXxf86vm
 "
 # Rar: althrought -gpl version is nice, it cant do most functions normal rars can
 #	nemesi? ( net-libs/libnemesi )
@@ -61,7 +64,8 @@ RDEPEND+="
 		)
 	)
 	X? (
-		${X_RDEPS}
+		x11-libs/libXext
+		x11-libs/libXxf86vm
 		dga? ( x11-libs/libXxf86dga )
 		ggi? (
 			media-libs/libggi
@@ -127,18 +131,14 @@ RDEPEND+="
 	xanim? ( media-video/xanim )
 	xvid? ( media-libs/xvid )
 "
-
-X_DEPS="
-	x11-proto/videoproto
-	x11-proto/xf86vidmodeproto
-"
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/python
 	sys-devel/gettext
 	X? (
-		${X_DEPS}
+		x11-proto/videoproto
+		x11-proto/xf86vidmodeproto
 		dga? ( x11-proto/xf86dgaproto )
 		dxr3? ( media-video/em8300-libraries )
 		xinerama? ( x11-proto/xineramaproto )
@@ -152,20 +152,6 @@ DEPEND="${RDEPEND}
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
 "
-
-SLOT="0"
-LICENSE="GPL-3"
-if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="~amd64 ~x86"
-else
-	KEYWORDS=""
-fi
-
-# bindist does not cope with win32codecs, which are nonfree
-REQUIRED_USE="bindist? ( !win32codecs )"
-
-PATCHES=(
-)
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then
@@ -230,13 +216,12 @@ src_prepare() {
 		-e "1c\#!${EPREFIX}/bin/bash" \
 		${bash_scripts} || die
 
-	# We want mplayer${namesuf}
-	if [[ -n ${namesuf} ]]; then
-		sed -e "/elif linux ; then/a\  _exesuf=\"${namesuf}\"" \
+	if [[ -n ${NAMESUF} ]]; then
+		sed -e "/elif linux ; then/a\  _exesuf=\"${NAMESUF}\"" \
 			-i configure || die
 		sed -e "/ -m 644 DOCS\/man\/en\/mplayer/i\	mv DOCS\/man\/en\/mplayer.1 DOCS\/man\/en\/${PN}.1" \
 			-e "/ -m 644 DOCS\/man\/\$(lang)\/mplayer/i\	mv DOCS\/man\/\$(lang)\/mplayer.1 DOCS\/man\/\$(lang)\/${PN}.1" \
-			-e "s/er.1/er${namesuf}.1/g" \
+			-e "s/er.1/er${NAMESUF}.1/g" \
 			-i Makefile || die
 		sed -e "s/mplayer/${PN}/" \
 			-i TOOLS/midentify.sh || die
@@ -611,11 +596,11 @@ src_install() {
 		# Do this generic, as the mplayer people like to change the structure
 		# of their zips ...
 		for i in $(find "${WORKDIR}/" -type d -name 'font-arial-*'); do
-			cp -pPR "${i}" "${ED}/usr/share/mplayer${namesuf}/fonts"
+			cp -pPR "${i}" "${ED}/usr/share/${PN}/fonts"
 		done
 		# Fix the font symlink ...
 		rm -rf "${ED}/usr/share/${PN}/font"
-		dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer${namesuf}/font
+		dosym fonts/font-arial-14-iso-8859-1 /usr/share/${PN}/font
 	fi
 
 	insinto /etc/${PN}
@@ -636,5 +621,5 @@ _EOF_
 	fi
 	dosym ../../../etc/${PN}/mplayer.conf /usr/share/${PN}/mplayer.conf
 
-	newbin "${S}/TOOLS/midentify.sh" midentify${namesuf}
+	newbin "${S}/TOOLS/midentify.sh" midentify${NAMESUF}
 }
