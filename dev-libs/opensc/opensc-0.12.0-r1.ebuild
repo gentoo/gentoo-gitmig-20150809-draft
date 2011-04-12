@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r1.ebuild,v 1.1 2011/04/12 07:13:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r1.ebuild,v 1.2 2011/04/12 20:07:44 flameeyes Exp $
 
 EAPI="4"
 
@@ -32,6 +32,7 @@ src_configure() {
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--htmldir="/usr/share/doc/${PF}/html" \
+		--disable-static \
 		$(use_enable doc) \
 		$(use_enable openct) \
 		$(use_enable pcsc-lite pcsc) \
@@ -42,6 +43,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	find "${D}" -name '*.la' -delete
 
 	dodoc ChangeLog
 }
