@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2-r1.ebuild,v 1.6 2011/03/02 20:36:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2-r1.ebuild,v 1.7 2011/04/12 18:20:57 arfrever Exp $
 
 EAPI="2"
 
@@ -68,6 +68,7 @@ pkg_setup() {
 	use java && java-pkg-opt-2_pkg_setup
 	use perl && perl-module_pkg_setup
 	use php && has_php
+	use python && python_pkg_setup
 
 	confutils_use_conflict gdal tiff
 	confutils_use_depend_all java threads
@@ -287,9 +288,13 @@ src_install() {
 
 pkg_postinst() {
 	webapp_pkg_postinst
-	distutils_pkg_postinst
+	use python && distutils_pkg_postinst
 }
 
 pkg_prerm() {
 	webapp_pkg_prerm
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }

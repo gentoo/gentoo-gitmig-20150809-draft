@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.10 2011/04/10 22:00:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.38.ebuild,v 1.11 2011/04/12 18:16:46 arfrever Exp $
 
 EAPI="3"
 
@@ -45,6 +45,10 @@ DEPEND="${RDEPEND}
 		dev-libs/libxslt
 		sys-libs/ncurses
 	)"
+
+pkg_setup() {
+	use python && python_pkg_setup
+}
 
 src_prepare() {
 	# add -lm to setup.py again (see bug #250757)
@@ -152,6 +156,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	use python && distutils_pkg_postinst
+
 	elog ""
 	elog "This version of gpsd has broken support for the SuperStarII"
 	elog "chipset which is currently disabled."
@@ -182,4 +188,8 @@ pkg_postinst() {
 	elog "and make sure udev has the right group permissions set on the"
 	elog "devices if using USB (it should Do The Right Thing (TM))..."
 	elog ""
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
