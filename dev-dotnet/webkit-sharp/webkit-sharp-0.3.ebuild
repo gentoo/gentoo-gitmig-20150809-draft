@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/webkit-sharp/webkit-sharp-0.3.ebuild,v 1.5 2011/03/21 23:01:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/webkit-sharp/webkit-sharp-0.3.ebuild,v 1.6 2011/04/12 07:27:40 pacho Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-2
-	net-libs/webkit-gtk:2
+	=net-libs/webkit-gtk-1.2*:2
 	dev-dotnet/gtk-sharp:2"
 
 RDEPEND="${DEPEND}"
