@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.15 2011/04/11 04:35:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.16 2011/04/12 10:19:03 scarabeus Exp $
+
+  12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> sakura-2.4.0.ebuild:
+  Add linguas handling per irc request by Nikoli.
 
   11 Apr 2011; Jeroen Roovers <jer@gentoo.org> sakura-2.3.8.ebuild:
   Restore keywords (bug #328943).
