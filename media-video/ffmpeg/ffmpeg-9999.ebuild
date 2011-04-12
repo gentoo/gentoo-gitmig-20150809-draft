@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.38 2011/04/05 04:49:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.39 2011/04/12 13:26:26 aballier Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
 IUSE="
-	+3dnow +3dnowext alsa altivec amr avx bindist +bzip2 cpudetection
+	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 cpudetection
 	custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables
 	ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp
 	schroedinger sdl speex +ssse3 static-libs test theora threads truetype v4l
@@ -48,6 +48,8 @@ RDEPEND="
 	bzip2? ( app-arch/bzip2 )
 	dirac? ( media-video/dirac )
 	encode? (
+		aac? ( media-libs/vo-aacenc )
+		amr? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
@@ -67,7 +69,7 @@ RDEPEND="
 	truetype? ( media-libs/freetype:2 )
 	vaapi? ( >=x11-libs/libva-0.32 )
 	video_cards_nvidia? ( vdpau? ( x11-libs/libvdpau ) )
-	vpx? ( media-libs/libvpx )
+	vpx? ( >=media-libs/libvpx-0.9.6 )
 	X? ( x11-libs/libX11 x11-libs/libXext )
 	zlib? ( sys-libs/zlib )
 	!media-video/qt-faststart
@@ -116,6 +118,8 @@ src_configure() {
 	if use encode
 	then
 		use mp3 && myconf="${myconf} --enable-libmp3lame"
+		use aac && myconf="${myconf} --enable-libvo-aacenc"
+		use amr && myconf="${myconf} --enable-libvo-amrwbenc"
 		for i in theora vorbis x264 xvid; do
 			use ${i} && myconf="${myconf} --enable-lib${i}"
 		done
