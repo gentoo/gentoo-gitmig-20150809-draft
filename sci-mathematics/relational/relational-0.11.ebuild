@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.11.ebuild,v 1.1 2010/07/08 14:55:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/relational/relational-0.11.ebuild,v 1.2 2011/04/12 17:43:49 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit python distutils eutils
+inherit python eutils
 
 DESCRIPTION="Qt4 relational algebra application"
 HOMEPAGE="http://galileo.dmi.unict.it/wiki/relational/"
@@ -25,6 +25,7 @@ S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_compile() {
