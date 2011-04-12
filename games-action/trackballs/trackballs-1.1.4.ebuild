@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.7 2010/10/14 04:40:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.1.4.ebuild,v 1.8 2011/04/12 01:34:55 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ IUSE="nls"
 RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl[audio,joystick,video]
-	>=dev-scheme/guile-1.8
+	>=dev-scheme/guile-1.8[deprecated]
 	media-libs/sdl-mixer
 	media-libs/sdl-image
 	media-libs/sdl-ttf
