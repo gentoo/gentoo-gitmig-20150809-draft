@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.404 2011/04/12 13:26:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.405 2011/04/12 13:44:37 aballier Exp $
+
+  12 Apr 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  no need to hack the LD_LIBRARY_PATH for libavcore since its no more
 
   12 Apr 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   Add support for amrwb and aac encodings via the libvo libraries. Bump libvpx
