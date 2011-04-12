@@ -1,6 +1,20 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.267 2011/03/22 19:46:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.268 2011/04/12 10:54:45 pacho Exp $
+
+*epiphany-2.30.6-r1 (12 Apr 2011)
+
+  12 Apr 2011; Pacho Ramos <pacho@gentoo.org> -epiphany-2.30.2-r1.ebuild,
+  -files/epiphany-2.30.2-favicons-completion.patch,
+  -files/epiphany-2.30.2-history-embed.patch,
+  -files/epiphany-2.30.2-leave-fullscreen.patch,
+  -files/epiphany-2.30.2-referer-downloads.patch,
+  -files/epiphany-2.30.2-uri-crash.patch, +epiphany-2.30.6-r1.ebuild,
+  +files/epiphany-2.30.6-clearing-passwd.patch,
+  +files/epiphany-2.30.6-mime-handler.patch:
+  Declare ability to handle http and https (bug #363189 by Ed Catmur), do not
+  crash when clearing the passwords from prefs dialog, upstream bug #606933.
+  Remove old.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> epiphany-2.30.6.ebuild:
   Marking epiphany-2.30.6 ppc stable for bug 353436
