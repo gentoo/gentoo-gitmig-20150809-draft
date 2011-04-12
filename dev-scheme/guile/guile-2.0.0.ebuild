@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-2.0.0.ebuild,v 1.1 2011/04/07 15:23:41 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-2.0.0.ebuild,v 1.2 2011/04/12 18:20:24 mr_bones_ Exp $
 
 EAPI=3
 inherit eutils flag-o-matic elisp-common
