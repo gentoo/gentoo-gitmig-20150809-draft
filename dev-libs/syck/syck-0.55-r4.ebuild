@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.15 2011/04/10 19:54:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r4.ebuild,v 1.16 2011/04/12 22:46:11 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 PDEPEND="php? ( dev-php5/pecl-syck
 		    !=dev-libs/syck-0.55-r1 )"
 
+DISTUTILS_SETUP_FILES=("ext/python|setup.py")
 PYTHON_MODNAME="yaml2xml.py ydump.py ypath.py"
 
 pkg_setup() {
@@ -40,22 +41,12 @@ src_configure() {
 
 src_compile() {
 	emake
-
-	if use python; then
-		pushd ext/python > /dev/null
-		distutils_src_compile
-		popd > /dev/null
-	fi
+	use python && distutils_src_compile
 }
 
 src_install() {
 	einstall
-
-	if use python; then
-		pushd ext/python > /dev/null
-		distutils_src_install
-		popd > /dev/null
-	fi
+	use python && distutils_src_install
 }
 
 pkg_postinst() {
