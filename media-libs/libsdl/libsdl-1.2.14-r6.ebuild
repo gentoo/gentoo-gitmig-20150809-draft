@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.14-r6.ebuild,v 1.3 2011/04/10 22:40:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.14-r6.ebuild,v 1.4 2011/04/12 19:21:42 jer Exp $
 
 EAPI=2
 inherit flag-o-matic multilib toolchain-funcs eutils libtool
@@ -11,7 +11,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 # WARNING:
 # if you disable the audio, video, joystick use flags or turn on the custom-cflags use flag
 # in USE and something breaks, you pick up the pieces.  Be prepared for
