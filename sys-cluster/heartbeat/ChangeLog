@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.92 2011/04/12 17:14:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.93 2011/04/12 17:34:05 jer Exp $
+
+  12 Apr 2011; Jeroen Roovers <jer@gentoo.org> heartbeat-3.0.4-r1.ebuild:
+  Marked ~hppa (bug #359893).
 
   12 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop obsolete description
