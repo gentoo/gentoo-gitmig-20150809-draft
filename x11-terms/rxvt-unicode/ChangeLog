@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.177 2011/03/01 15:56:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.178 2011/04/12 18:43:40 tomka Exp $
+
+  12 Apr 2011; Thomas Kahle <tomka@gentoo.org> rxvt-unicode-9.10.ebuild:
+  x86 stable per bug 353109
 
   01 Mar 2011; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.10.ebuild:
   Use SLOT deps for gtk+ and glib.
