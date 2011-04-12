@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.10 2010/10/10 17:28:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.11 2011/04/12 12:12:50 ulm Exp $
 
 EAPI=1
 
@@ -13,10 +13,9 @@ SRC_URI="mirror://sourceforge/nedit/${P}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~mips ppc sparc x86 ~x86-fbsd"
-IUSE="spell"
+IUSE=""
 
-RDEPEND="spell? ( virtual/aspell-dict )
-	>=x11-libs/openmotif-2.3:0
+RDEPEND=">=x11-libs/openmotif-2.3:0
 	x11-libs/libXp
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
