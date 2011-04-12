@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.23 2011/04/10 22:10:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.24 2011/04/12 17:39:42 arfrever Exp $
 
 EAPI=3
 
-inherit eutils distutils fdo-mime versionator wxwidgets
+inherit eutils fdo-mime python versionator wxwidgets
 
 MY_PV=$(get_version_component_range 1-2 ${PV})
 MY_PVM=$(delete_all_version_separators ${MY_PV})
