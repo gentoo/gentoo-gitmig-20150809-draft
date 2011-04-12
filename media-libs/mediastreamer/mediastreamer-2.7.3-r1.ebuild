@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r1.ebuild,v 1.1 2011/04/09 09:57:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r1.ebuild,v 1.2 2011/04/12 06:15:51 pva Exp $
 
 EAPI="4"
 
@@ -61,6 +61,8 @@ src_prepare() {
 		|| die "patching help/Makefile.am failed"
 
 	epatch "${FILESDIR}/${PN}-2.7.3-v4l-automagic.patch"
+	epatch "${FILESDIR}/${P}-sdl-build.patch"
+
 	# linux/videodev.h dropped in 2.6.38
 	sed -i -e 's:msv4l.c::' src/Makefile.am || die
 	eautoreconf
