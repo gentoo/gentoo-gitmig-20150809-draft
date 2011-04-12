@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.7 2011/04/11 13:30:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.8 2011/04/12 13:40:13 scarabeus Exp $
 
 EAPI=4
 
@@ -61,7 +61,7 @@ RDEPEND="
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	vaapi? ( x11-libs/libva )
 	video_cards_nvidia? ( vdpau? ( x11-libs/libvdpau ) )
-	vpx? ( media-libs/libvpx )
+	vpx? ( >=media-libs/libvpx-0.9.6 )
 	X? ( x11-libs/libX11 x11-libs/libXext )
 	zlib? ( sys-libs/zlib )
 "
@@ -114,7 +114,8 @@ src_configure() {
 		use mp3 && myconf+=" --enable-libmp3lame"
 		use amr && myconf+=" --enable-libvo-amrwbenc --enable-version3"
 		use faac && myconf+=" --enable-libfaac --enable-nonfree"
-		use aac && myconf+=" --enable-libvo-aacenc --enable-version3"
+		# faac has priority
+		use faac || use aac && myconf+=" --enable-libvo-aacenc --enable-version3"
 		uses="theora vorbis x264 xvid"
 		for i in ${uses}; do
 			use ${i} && myconf+=" --enable-lib${i}"
