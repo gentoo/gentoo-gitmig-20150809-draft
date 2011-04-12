@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.5 2011/03/31 01:44:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/libpreludedb-1.0.0-r1.ebuild,v 1.6 2011/04/12 22:37:13 arfrever Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -27,6 +27,7 @@ RDEPEND=">=dev-libs/libprelude-0.9.9
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
+DISTUTILS_SETUP_FILES=("bindings/python|setup.py")
 PYTHON_MODNAME="preludedb.py"
 
 pkg_setup() {
@@ -66,9 +67,7 @@ src_compile() {
 	default
 
 	if use python; then
-		pushd bindings/python > /dev/null
 		distutils_src_compile
-		popd > /dev/null
 	fi
 }
 
@@ -81,9 +80,7 @@ src_install() {
 	fi
 
 	if use python; then
-		pushd bindings/python > /dev/null
 		distutils_src_install
-		popd > /dev/null
 	fi
 }
 
