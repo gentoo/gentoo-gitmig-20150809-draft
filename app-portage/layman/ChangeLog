@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.130 2011/04/10 12:34:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.131 2011/04/12 00:04:17 xmw Exp $
+
+  12 Apr 2011; Michael Weber <xmw@gentoo.org> layman-1.4.1.ebuild:
+  arm/ppc stable (bug 343309)
 
   10 Apr 2011; Tobias Klausmann <klausman@gentoo.org> layman-1.4.1.ebuild:
   Stable on alpha, bug #343309
