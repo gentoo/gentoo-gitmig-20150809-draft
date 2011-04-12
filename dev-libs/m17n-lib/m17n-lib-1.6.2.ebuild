@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.6.2.ebuild,v 1.1 2011/04/04 01:04:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.6.2.ebuild,v 1.2 2011/04/12 08:16:02 flameeyes Exp $
 
 EAPI=4
 
@@ -58,7 +58,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	# bug #363239
+	emake -j1 DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
