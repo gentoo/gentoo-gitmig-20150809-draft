@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.110 2011/03/14 00:33:33 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.111 2011/04/12 07:13:18 flameeyes Exp $
+
+*opensc-0.12.0-r1 (12 Apr 2011)
+
+  12 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> -opensc-0.12.0.ebuild,
+  +opensc-0.12.0-r1.ebuild:
+  Revision bump, thanks to Alon Bar-Lev in bug #351634: re-enable openct
+  backend as an alternative to pcsc-lite (which otherwise would require some
+  KEYWORDS to be dropped); use EAPI=4 and REQUIRED_USE to specify that exactly
+  one between pcsc-lite and openct can be enabled; enable pcsc-lite by default;
+  (these last two also fix bug #363119 by William Keaney); depend on libxslt
+  and docbook stylesheets as it's required to produce the man pages; general
+  cleanups.
 
 *opensc-0.12.0 (14 Mar 2011)
 
