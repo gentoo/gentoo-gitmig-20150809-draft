@@ -1,6 +1,21 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.80 2011/04/06 14:19:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.81 2011/04/12 02:07:56 tampakrap Exp $
+
+  12 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  -files/4.5.0-fix_lancelot.patch, -files/kdeplasma-addons-4.4.74-cmake.patch,
+  -files/kdeplasma-addons-4.5.56-cmake.patch, kdeplasma-addons-4.6.2.ebuild:
+   Reorder of the deps:
+
+  - better handling of semantic-desktop (not ready yet, will be as soon as
+  upstream REVIEW 101095 gets resolved)
+
+  - add attica useflag
+
+  - better handling of the kdepimlibs cmake switch of plasma-workspace dep
+
+  Remove the cmake patch we had there (why wasn't it upstreamfied? anyway, it
+  seems useless, I removed it)
 
 *kdeplasma-addons-4.6.2 (06 Apr 2011)
 
