@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.5 2011/03/31 01:26:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.6 2011/04/12 22:09:53 arfrever Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -28,11 +28,12 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	perl? ( dev-lang/swig )"
 
+DISTUTILS_SETUP_FILES=("bindings/low-level/python|setup.py" "bindings/python|setup.py")
+PYTHON_MODNAME="prelude.py PreludeEasy.py"
+
 pkg_setup() {
 	if use python; then
 		python_pkg_setup
-		PYTHON_DIRS="bindings/low-level/python bindings/python"
-		PYTHON_MODNAME="prelude.py PreludeEasy.py"
 	fi
 }
 
@@ -67,12 +68,7 @@ src_compile() {
 	emake OTHERLDFLAGS="${LDFLAGS}" || die "emake failed"
 
 	if use python; then
-		local dir
-		for dir in ${PYTHON_DIRS}; do
-			pushd "${dir}" > /dev/null
-			distutils_src_compile
-			popd > /dev/null
-		done
+		distutils_src_compile
 	fi
 }
 
@@ -80,7 +76,7 @@ src_install() {
 	emake DESTDIR="${D}" INSTALLDIRS=vendor install || die "make install failed"
 
 	if use lua; then
-		rm - "${ED}usr/$(get_libdir)/PreludeEasy.la"
+		rm -f "${ED}usr/$(get_libdir)/PreludeEasy.la"
 	fi
 
 	if use perl; then
@@ -89,12 +85,7 @@ src_install() {
 	fi
 
 	if use python; then
-		local dir
-		for dir in ${PYTHON_DIRS}; do
-			pushd "${dir}" > /dev/null
-			distutils_src_install
-			popd > /dev/null
-		done
+		distutils_src_install
 	fi
 
 	if use ruby; then
