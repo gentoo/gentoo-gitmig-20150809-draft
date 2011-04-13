@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.4-r2.ebuild,v 1.4 2011/04/13 10:55:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.4-r2.ebuild,v 1.5 2011/04/13 21:41:44 hwoarang Exp $
 
 EAPI="2"
 
@@ -19,7 +19,6 @@ IUSE="+aac +aften +alsa amr +dts esd jack libsamplerate +mp3 nls oss
 	pulseaudio +sdl +truetype +vorbis +x264 +xv +xvid gtk +qt4"
 
 RDEPEND="dev-libs/libxml2
-	dev-lang/yasm
 	aac? (
 		media-libs/faac
 		media-libs/faad2
@@ -46,6 +45,7 @@ RDEPEND="dev-libs/libxml2
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
+	dev-lang/yasm
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
