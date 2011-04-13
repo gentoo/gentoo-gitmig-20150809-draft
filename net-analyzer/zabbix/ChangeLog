@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.45 2011/04/05 07:42:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.46 2011/04/13 16:59:37 patrick Exp $
+
+  13 Apr 2011; Patrick Lauer <patrick@gentoo.org> zabbix-1.9.3.ebuild:
+  Fixing postgres useflag #361721
 
   05 Apr 2011; Christoph Mende <angelos@gentoo.org> zabbix-1.8.4.ebuild:
   Stable on amd64 wrt bug #361873
