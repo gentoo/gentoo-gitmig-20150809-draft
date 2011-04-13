@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.286 2011/02/28 00:32:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.287 2011/04/13 13:18:41 xarthisius Exp $
+
+  13 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> fluxbox-1.3.1.ebuild,
+  +files/fluxbox-1.3.1-gcc46.patch:
+  Cherrypick upstream patch to fix gcc-4.6 build failure wrt #363463 by Diego
+  Elio Pettenò <flameeyes@gentoo.org>
 
 *fluxbox-1.3.1 (28 Feb 2011)
 
