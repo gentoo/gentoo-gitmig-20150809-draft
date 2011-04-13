@@ -1,6 +1,32 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.75 2011/03/11 18:15:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.76 2011/04/13 08:53:32 leio Exp $
+
+*gst-plugins-bad-0.10.21 (13 Apr 2011)
+
+  13 Apr 2011; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  +gst-plugins-bad-0.10.21.ebuild:
+  Version bump. Disable examples building as they aren't installed anyway,
+  also avoiding problems similar to bug 348623. Remove useless debug USE
+  flag - it didn't work correctly and existed only due to previous oversight
+  - and it could only affect -g passing, which is handled via CFLAGS in
+  make.conf in Gentoo.
+  Many improvements, bug fixes, and so on as usual, refer to upstream NEWS;
+  New upstream plugins and elements since previous 0.10.19 version:
+  * coloreffects - Color Look-up Table filters
+  * gaudieffects - Gaudi video effects (burn, dilate, dodge, etc)
+  * geometrictransform - Various geometric image transform elements
+  * ivfparse - IVF parser (demuxes a IVF stream, which contains raw VP8)
+  * videomaxrate - Video maximum rate adjuster
+  * colorspace - ORC optimized colorspace converter
+  * dvbsuboverlay - DVB subtitles renderer/overlay
+  * interlace - Create an interlaced video stream
+  * jp2kdecimator - JPEG2000 decimator
+  * y4mdec - Demuxes/decodes YUV4MPEG streams
+  * audioparsers - New dcaparse (dts/dca parser) and mpegaudioparse elements
+    (mp3parse replacement)
+  * autoconvert - New autovideoconvert element
+  * debugutilsbad - New checksumsink and chopmydata debug elements
 
   11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-bad-0.10.19.ebuild:
