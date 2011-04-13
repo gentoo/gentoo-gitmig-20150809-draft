@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5278 2011/04/13 07:17:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5279 2011/04/13 08:34:29 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Apr 2011; Justin Lecher <jlec@gentoo.org> package.mask:
+  Only mask nvidia beta driver
 
   13 Apr 2011; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Masked dev-php5/php-libvirt for removal.

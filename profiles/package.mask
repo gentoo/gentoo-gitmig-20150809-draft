@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12681 2011/04/13 07:17:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12682 2011/04/13 08:34:30 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -617,7 +617,7 @@ dev-util/plan9port
 
 # Doug Goldstein <cardoe@gentoo.org> (24 Jan 2011)
 # Masked beta versions
->=x11-drivers/nvidia-drivers-270
+=x11-drivers/nvidia-drivers-270.18
 
 # Markos Chandras <hwoarang@gentoo.org> (22 Jan 2011)
 # Mask for testing. Bug #329377
