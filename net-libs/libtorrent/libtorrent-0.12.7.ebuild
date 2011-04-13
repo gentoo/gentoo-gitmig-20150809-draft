@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.7.ebuild,v 1.2 2011/04/13 19:40:46 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.7.ebuild,v 1.3 2011/04/13 21:30:46 sochotnicky Exp $
 
 EAPI=2
 inherit eutils libtool toolchain-funcs
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.12.6-gcc44.patch
 	epatch "${FILESDIR}"/${P}-test.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.6.0.patch
 	epatch "${FILESDIR}"/download_constructor.diff
 	elibtoolize
 }
