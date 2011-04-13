@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.94 2011/03/13 10:19:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.95 2011/04/13 12:07:31 leio Exp $
+
+*gst-python-0.10.21 (13 Apr 2011)
+
+  13 Apr 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-python-0.10.15-r1.ebuild, -gst-python-0.10.16.ebuild,
+  -gst-python-0.10.17.ebuild, -gst-python-0.10.18.ebuild,
+  +gst-python-0.10.21.ebuild:
+  Version bump. gstreamer core/base 0.10.32 API additions, fixed
+  GstDiscoverer methods
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-python-0.10.20.ebuild:
