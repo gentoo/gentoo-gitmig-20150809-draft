@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.18 2011/03/23 18:54:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.19 2011/04/13 17:50:39 tomka Exp $
+
+  13 Apr 2011; Thomas Kahle <tomka@gentoo.org> python-mpd-0.3.0.ebuild:
+  x86 stable per bug 359471
 
   23 Mar 2011; Christoph Mende <angelos@gentoo.org> python-mpd-0.3.0.ebuild:
   Optimize python module (bug #360113 by Laurent Bachelier)
