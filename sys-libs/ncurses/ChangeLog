@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.183 2011/04/12 19:14:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.184 2011/04/13 20:19:09 ranger Exp $
+
+  13 Apr 2011; Brent Baude <ranger@gentoo.org> ncurses-5.7-r7.ebuild:
+  Marking ncurses-5.7-r7 ppc for bug 353437
 
   12 Apr 2011; Jeroen Roovers <jer@gentoo.org> ncurses-5.7-r7.ebuild:
   Stable for HPPA (bug #353437).
