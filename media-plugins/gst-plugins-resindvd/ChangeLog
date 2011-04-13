@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/gst-plugins-resindvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.23 2011/01/30 19:03:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.24 2011/04/13 10:20:21 leio Exp $
+
+*gst-plugins-resindvd-0.10.21 (13 Apr 2011)
+
+  13 Apr 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-resindvd-0.10.11.ebuild,
+  -gst-plugins-resindvd-0.10.14.ebuild,
+  -gst-plugins-resindvd-0.10.17.ebuild,
+  -gst-plugins-resindvd-0.10.18.ebuild,
+  +gst-plugins-resindvd-0.10.21.ebuild:
+  Version bump. Better error messages when DVD not readable (missing
+  dvdcss), other clean-ups and fixes
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-resindvd-0.10.19.ebuild:
