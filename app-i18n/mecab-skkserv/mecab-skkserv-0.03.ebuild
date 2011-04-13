@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.1 2007/08/25 16:05:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.2 2011/04/13 15:15:59 ulm Exp $
 
 inherit eutils
 
@@ -17,8 +17,6 @@ IUSE=""
 DEPEND=">=app-text/mecab-0.91"
 RDEPEND="${DEPEND}
 	sys-apps/xinetd"
-
-PROVIDE="virtual/skkserv"
 
 src_unpack() {
 	unpack ${A}

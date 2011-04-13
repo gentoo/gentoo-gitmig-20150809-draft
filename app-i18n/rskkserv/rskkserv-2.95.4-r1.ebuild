@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4-r1.ebuild,v 1.2 2011/02/13 19:12:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4-r1.ebuild,v 1.3 2011/04/13 15:19:12 ulm Exp $
 
 EAPI="2"
 # dev-ruby/ruby-tcpwrap doesn't work with jruby
@@ -21,8 +21,6 @@ IUSE=""
 ruby_add_bdepend dev-ruby/ruby-tcpwrap
 RDEPEND="${DEPEND}
 	app-i18n/skk-jisyo"
-
-PROVIDE="virtual/skkserv"
 
 RUBY_PATCHES=( "${FILESDIR}/${P}-gentoo.patch" )
 all_src_prepare() {
