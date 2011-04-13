@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.3.3.9.ebuild,v 1.1 2011/04/10 09:26:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.3.3.9.ebuild,v 1.2 2011/04/13 11:22:15 hwoarang Exp $
 
 EAPI="2"
+
+inherit autotools
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -24,6 +26,10 @@ DEPEND=">=dev-db/tokyocabinet-1.4.42
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	eautoreconf
+}
 
 src_configure() {
 	econf \
