@@ -1,6 +1,23 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.13 2011/03/30 17:25:19 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.14 2011/04/13 14:56:32 ultrabug Exp $
+
+*mongodb-1.8.1 (13 Apr 2011)
+*mongodb-1.6.5 (13 Apr 2011)
+
+  13 Apr 2011; Ultrabug <ultrabug@gentoo.org> -mongodb-1.2.4.ebuild,
+  -files/mongodb-1.2-modify-post-strip.patch,
+  -files/mongodb-1.2-modify-testing.patch, -mongodb-1.4.4.ebuild,
+  -files/mongodb-1.4-modify-post-strip.patch,
+  -files/mongodb-1.4-modify-testing.patch, -mongodb-1.5.5.ebuild,
+  -mongodb-1.6.0.ebuild, -files/mongodb-1.6.0-fix-scons.patch,
+  +mongodb-1.6.5.ebuild, +files/mongodb-1.6-fix-scons.patch,
+  +mongodb-1.8.1.ebuild, +files/mongodb-1.8-fix-scons.patch,
+  +files/mongos.confd, +files/mongos.initd, files/mongodb.confd,
+  files/mongodb.initd:
+  Mongodb rework/bump. Fix bugs #329167, #334081, #337085, #337593, #337973,
+  #338039, #340032, #356731. Many thanks to Johan Bergström for his help and
+  testing. Drop old versions.
 
   30 Mar 2011; Ultrabug <ultrabug@gentoo.org> mongodb-1.2.4.ebuild,
   mongodb-1.4.4.ebuild, mongodb-1.5.5.ebuild, mongodb-1.6.0.ebuild:

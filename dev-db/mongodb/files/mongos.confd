@@ -1,0 +1,13 @@
+# Mongos essentials
+MONGOS_EXEC="/usr/bin/mongos"
+MONGOS_RUN="/var/run/mongodb"
+MONGOS_USER="mongodb"
+
+MONGOS_IP="127.0.0.1"
+MONGOS_PORT="27018"
+
+# 1 to 3 comma separated config servers (mandatory)
+MONGOS_CONFIGDB=""
+
+# Set extra options here
+MONGOS_OPTIONS=""

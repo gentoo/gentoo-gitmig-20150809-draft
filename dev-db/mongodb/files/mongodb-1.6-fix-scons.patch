@@ -1,0 +1,39 @@
+diff --git a/SConstruct b/SConstruct
+index e3046ff..529b19b 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -745,20 +745,19 @@ else:
+ 
+ if nix:
+     env.Append( CPPFLAGS="-fPIC -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch" )
+-    if linux:
+-        env.Append( CPPFLAGS=" -Werror " )
+     env.Append( CXXFLAGS=" -Wnon-virtual-dtor " )
++    env.Append( CXXFLAGS=os.environ['CXXFLAGS'])
++    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
+     env.Append( LINKFLAGS=" -fPIC -pthread -rdynamic" )
+     env.Append( LIBS=[] )
+ 
+     if linux and GetOption( "sharedclient" ):
+         env.Append( LINKFLAGS=" -Wl,--as-needed -Wl,-zdefs " )
++        env.Append( SHLINKFLAGS=" -Wl,-soname=libmongoclient.so " )
+ 
+     if debugBuild:
+         env.Append( CPPFLAGS=" -O0 -fstack-protector " );
+         env['ENV']['GLIBCXX_FORCE_NEW'] = 1; # play nice with valgrind
+-    else:
+-        env.Append( CPPFLAGS=" -O3" )
+ 
+     if debugLogging:
+         env.Append( CPPFLAGS=" -D_DEBUG" );
+@@ -972,8 +971,8 @@ def doConfigure( myenv , needPcre=True , shell=False ):
+                 
+         myCheckLib( J , True )
+         mozHeader = "js"
+-        if bigLibString(myenv).find( "mozjs" ) >= 0:
+-            mozHeader = "mozjs"
++        env.Append( CPPPATH=["/usr/include/nspr"] )
++        env.Append( CPPDEFINES=[ "XULRUNNER" ] )
+ 
+         if not conf.CheckHeader( mozHeader + "/jsapi.h" ):
+             if conf.CheckHeader( "jsapi.h" ):

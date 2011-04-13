@@ -1,0 +1,39 @@
+--- a/SConstruct	2011-04-06 06:40:13.000000000 +0200
++++ b/SConstruct	2011-04-10 15:50:52.696516582 +0200
+@@ -671,9 +671,10 @@
+     env.Append( CPPFLAGS="-fPIC -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch" )
+     # env.Append( " -Wconversion" ) TODO: this doesn't really work yet
+     if linux:
+-        env.Append( CPPFLAGS=" -Werror " )
+         env.Append( CPPFLAGS=" -fno-builtin-memcmp " ) # glibc's memcmp is faster than gcc's
++    env.Append( CXXFLAGS=os.environ['CXXFLAGS'])
+     env.Append( CXXFLAGS=" -Wnon-virtual-dtor " )
++    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
+     env.Append( LINKFLAGS=" -fPIC -pthread -rdynamic" )
+     env.Append( LIBS=[] )
+ 
+@@ -683,12 +684,11 @@
+ 
+     if linux and has_option( "sharedclient" ):
+         env.Append( LINKFLAGS=" -Wl,--as-needed -Wl,-zdefs " )
++        env.Append( SHLINKFLAGS=" -Wl,-soname=libmongoclient.so " )
+ 
+     if debugBuild:
+         env.Append( CPPFLAGS=" -O0 -fstack-protector " );
+         env['ENV']['GLIBCXX_FORCE_NEW'] = 1; # play nice with valgrind
+-    else:
+-        env.Append( CPPFLAGS=" -O3" )
+         #env.Append( CPPFLAGS=" -fprofile-generate" )
+         #env.Append( LINKFLAGS=" -fprofile-generate" )
+         # then:
+@@ -911,8 +911,8 @@
+                 
+         myCheckLib( J , True )
+         mozHeader = "js"
+-        if bigLibString(myenv).find( "mozjs" ) >= 0:
+-            mozHeader = "mozjs"
++        env.Append( CPPPATH=["/usr/include/nspr"] )
++        env.Append( CPPDEFINES=[ "XULRUNNER" ] )
+ 
+         if not conf.CheckHeader( mozHeader + "/jsapi.h" ):
+             if conf.CheckHeader( "jsapi.h" ):
