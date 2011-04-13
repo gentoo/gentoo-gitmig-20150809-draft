@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r1.ebuild,v 1.1 2011/04/13 17:59:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r1.ebuild,v 1.2 2011/04/13 18:07:51 flameeyes Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="doc pcsc-lite usb"
+IUSE="doc pcsc-lite usb debug"
 
 # libtool is required at runtime for libltdl
 RDEPEND="pcsc-lite? ( >=sys-apps/pcsc-lite-1.7.2-r1 )
@@ -31,6 +31,8 @@ pkg_setup() {
 }
 
 src_configure() {
+	use debug && append-flags -DDEBUG_IFDH
+
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--htmldir="/usr/share/doc/${PF}/html" \
