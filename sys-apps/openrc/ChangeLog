@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.137 2011/04/12 17:23:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.138 2011/04/13 17:16:14 tove Exp $
 
   12 Apr 2011; William Hubbs <williamh@gentoo.org> -openrc-0.6.3.ebuild,
   -openrc-0.6.5.ebuild, -openrc-0.6.6.ebuild, -openrc-0.6.7.ebuild,
@@ -158,7 +158,7 @@
   21 Dec 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.5.3.ebuild,
   openrc-9999.ebuild, +files/openrc-9999-pause.patch:
   Restore "pause" functionality to teach people to convert #218859 by Martin
-  MokrejÅ¡.
+  Mokrejš.
 
   21 Dec 2009; Mike Frysinger <vapier@gentoo.org>
   files/openrc-9999-msg-style.patch:
@@ -167,7 +167,7 @@
   07 Dec 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.5.3.ebuild,
   openrc-9999.ebuild:
   Migrate hostname by default to avoid default thrashing on conf.d/hostname
-  #295406 by Martin MokrejÅ¡. Also delay automatic dep tree update till
+  #295406 by Martin Mokrejš. Also delay automatic dep tree update till
   after we are done screwing with /etc.
 
   06 Dec 2009; William Hubbs <williamh@gentoo.org> -openrc-0.5.2-r2.ebuild,
@@ -281,7 +281,7 @@
 
   15 Oct 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.5.1-r1.ebuild,
   openrc-9999.ebuild:
-  Relocate docs to normal Gentoo location #241342 by Diego E. PettenÃ².
+  Relocate docs to normal Gentoo location #241342 by Diego E. Pettenò.
 
 *openrc-0.5.1-r1 (15 Oct 2009)
 
@@ -347,14 +347,14 @@
   files/9999/0003-KV.patch:
   Update patches against latest svn #267540 by Vivien Moreau.
 
-  18 Apr 2009; Benedikt BÃ¶hm <hollow@gentoo.org>
+  18 Apr 2009; Benedikt Böhm <hollow@gentoo.org>
   files/0.4.3/0002-support-custom-status.patch:
   backport r1523 and r1524 to fix compile on FreeBSD and still provide the
   system status function in custom hooks
 
 *openrc-0.4.3-r2 (18 Apr 2009)
 
-  18 Apr 2009; Benedikt BÃ¶hm <hollow@gentoo.org>
+  18 Apr 2009; Benedikt Böhm <hollow@gentoo.org>
   +files/0.4.3/0002-support-custom-status.patch,
   -files/openrc-0.4.3-fix-is_older_than.patch,
   +files/0.4.3/0001-fix-is_older_than.patch, openrc-0.4.3-r1.ebuild,
@@ -410,7 +410,7 @@
   03 Jan 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Change comment into useable tags.
 
-  01 Jan 2009; Benedikt BÃ¶hm <hollow@gentoo.org>
+  01 Jan 2009; Benedikt Böhm <hollow@gentoo.org>
   +files/0.4.0/0005-init-script-novserver.patch:
   fix dmesg and sysfs init script inside vservers, bug #253105
 
@@ -604,7 +604,7 @@
   +openrc-0.2.1-r1.ebuild:
   fix bug #216091. crash when stringlist was non-existant
 
-  03 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> openrc-0.2.1.ebuild:
+  03 Apr 2008; Raúl Porcel <armin76@gentoo.org> openrc-0.2.1.ebuild:
   Add ~sparc wrt #214957
 
   02 Apr 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2.1.ebuild,
@@ -665,7 +665,7 @@
   28 Mar 2008; Alexis Ballier <aballier@gentoo.org> openrc-0.2-r1.ebuild:
   keyword ~x86-fbsd
 
-  28 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> openrc-0.2-r1.ebuild:
+  28 Mar 2008; Raúl Porcel <armin76@gentoo.org> openrc-0.2-r1.ebuild:
   Add ~ia64 wrt #214957
 
   27 Mar 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2-r1.ebuild:
