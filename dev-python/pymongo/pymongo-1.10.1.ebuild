@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-1.10.1.ebuild,v 1.1 2011/04/11 12:40:40 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-1.10.1.ebuild,v 1.2 2011/04/13 15:34:28 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
@@ -18,15 +19,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND="|| ( >=dev-lang/python-2.5
-	( =dev-lang/python-2.4* >=dev-python/celementtree-1.0.5 ) )"
+RDEPEND="|| ( dev-lang/python:2.7 dev-lang/python:2.6 dev-lang/python:2.5 >=dev-python/celementtree-1.0.5 )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc?  ( dev-python/sphinx )
-	test? (	dev-python/nose
-		dev-db/mongodb )"
-
-RESTRICT_PYTHON_ABIS="3.*"
+	test? ( dev-db/mongodb )"
 
 src_compile() {
 	distutils_src_compile
