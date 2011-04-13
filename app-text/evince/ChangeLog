@@ -1,6 +1,16 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.213 2011/04/09 13:51:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.214 2011/04/13 09:55:38 pacho Exp $
+
+*evince-2.32.0-r2 (13 Apr 2011)
+
+  13 Apr 2011; Pacho Ramos <pacho@gentoo.org> +evince-2.32.0-r2.ebuild,
+  +files/evince-2.32.0-dvi-security.patch,
+  +files/evince-2.32.0-libview-crash.patch,
+  +files/evince-2.32.0-update-poppler.patch:
+  Fix libview crash, upstream bug #630999; fix another security issue in the
+  dvi-backend; update poppler api with Arch patch (bug #354709 by Justin
+  Lecher, Ian Abbott and Rafał Mużyło).
 
   09 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -evince-2.30.3.ebuild,
   -evince-2.32.0.ebuild:
