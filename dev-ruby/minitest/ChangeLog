@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.38 2011/03/27 19:12:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.39 2011/04/13 05:42:53 graaff Exp $
+
+  13 Apr 2011; Hans de Graaff <graaff@gentoo.org> -minitest-1.6.0.ebuild,
+  -minitest-1.7.2.ebuild:
+  Remove old versions.
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> minitest-2.0.2.ebuild:
   Marking minitest-2.0.2 ppc stable for bug 354481
