@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/serpentine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.26 2010/06/08 16:10:54 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/ChangeLog,v 1.27 2011/04/13 17:12:25 pacho Exp $
+
+  13 Apr 2011; Pacho Ramos <pacho@gentoo.org> serpentine-0.9-r2.ebuild:
+  Fix gnome-python dependencies, bug #352914.
 
   08 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   serpentine-0.9-r2.ebuild:

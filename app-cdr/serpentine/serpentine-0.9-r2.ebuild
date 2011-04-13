@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r2.ebuild,v 1.5 2010/06/08 16:10:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/serpentine/serpentine-0.9-r2.ebuild,v 1.6 2011/04/13 17:12:25 pacho Exp $
 
 GCONF_DEBUG=no
 
@@ -17,9 +17,10 @@ IUSE="muine"
 
 RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygtk-2.6
-	>=dev-python/gnome-python-desktop-2.14.0
 	>=dev-python/gst-python-0.10
-	gnome-base/gconf
+	dev-python/gconf-python
+	dev-python/gnome-vfs-python
+	dev-python/pygobject
 	>=media-plugins/gst-plugins-gnomevfs-0.10
 	muine? ( media-sound/muine )
 	dev-python/pyxml"
