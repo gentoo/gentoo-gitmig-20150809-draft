@@ -1,17 +1,27 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.2 2011/04/03 18:23:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.3 2011/04/13 14:06:56 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit cmake-utils git
+[[ ${PV} == *9999 ]] && git_eclass="git"
+EGIT_REPO_URI="git://anongit.kde.org/${PN}"
+
+MY_PN="phonon-backend-gstreamer"
+MY_P=${MY_PN}-${PV}
+
+inherit cmake-utils ${git_eclass}
 
 DESCRIPTION="Phonon GStreamer backend"
 HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-gstreamer"
-EGIT_REPO_URI="git://anongit.kde.org/${PN}"
+[[ ${PV} == *9999 ]] || SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS=""
+if [[ ${PV} == *9999 ]]; then
+	KEYWORDS=""
+else
+	KEYWORDS="~amd64 ~x86"
+fi
 SLOT="0"
 IUSE="alsa debug"
 
@@ -28,6 +38,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/automoc-0.9.87
 	dev-util/pkgconfig
 "
+
+S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	local mycmakeargs=(
