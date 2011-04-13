@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.0.0.ebuild,v 1.1 2011/04/07 08:52:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.0.0.ebuild,v 1.2 2011/04/13 16:59:45 pacho Exp $
 
 EAPI="3"
 
@@ -13,13 +13,17 @@ SRC_URI="http://download.banshee-project.org/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc lirc lyrics mirage telepathy"
+IUSE="doc lastfmfingerprint lirc lyrics mirage telepathy"
 
 DEPEND=">=dev-lang/mono-2.0
 	>=media-sound/banshee-1.9.6[web]
 	>=gnome-base/gconf-2.0
 	dev-dotnet/gconf-sharp:2
 	doc? ( >=app-text/gnome-doc-utils-0.17.3 )
+	lastfmfingerprint? (
+		sci-libs/fftw:3.0
+		media-libs/libsamplerate
+	)
 	lirc? ( app-misc/lirc  )
 	mirage? (
 		dev-libs/glib:2
@@ -49,11 +53,12 @@ src_configure() {
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--disable-scrollkeeper --disable-clutterflow
 		--disable-appindicator --disable-openvp --enable-ampache
-		--enable-karaoke --enable-jamendo --enable-lastfmfingerprint
+		--enable-karaoke --enable-jamendo
 		--disable-zeitgeistdataprovider --enable-randombylastfm"
 
 	econf \
 		$(use_enable doc user-help) \
+		$(use_enable lastfmfingerprint) \
 		$(use_enable lirc) \
 		$(use_enable lyrics) \
 		$(use_enable mirage) \

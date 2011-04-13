@@ -4,6 +4,8 @@
   <herd>dotnet</herd>
   <herd>gstreamer</herd>
   <use>
+	  <flag name="lastfmfingerprint">Enable support to ientify your
+	  music automatically, using the Last.fm online service.</flag>
 	  <flag name="lirc">Enable the remote control plugin (uses
 		  <pkg>app-misc/lirc</pkg>)</flag>
 	  <flag name="lyrics">Enable support for automatically fetching
