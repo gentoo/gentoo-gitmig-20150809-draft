@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.140 2011/03/10 23:53:08 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.141 2011/04/13 21:06:17 wired Exp $
+
+  13 Apr 2011; Alex Alexander <wired@gentoo.org> -qt-gui-4.7.0-r1.ebuild,
+  -qt-gui-4.7.1-r1.ebuild:
+  old version cleanup
 
   10 Mar 2011; Alex Alexander <wired@gentoo.org> qt-gui-4.7.2.ebuild:
   restored gtk USE flag for GTK style, fixed compilation with cairo[qt4]
