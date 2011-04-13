@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-1.0.18.ebuild,v 1.1 2011/02/03 02:40:47 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-1.0.18-r1.ebuild,v 1.1 2011/04/13 12:32:36 xarthisius Exp $
 
 EAPI="3"
 
@@ -20,12 +20,11 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="doc? ( virtual/latex-base )"
 RDEPEND=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	append-flags -O3 # as recommended by upstream
-	filter-ldflags -Wl,--as-needed # sorry, no time to deal with this. patches welcome
-	epatch "${FILESDIR}"/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-gentoo-r1.diff
 	use doc || sed -i -e '/default :/ s/doc//' "${S}"/Makefile || die
 }
 
