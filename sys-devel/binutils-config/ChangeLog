@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.41 2011/04/12 21:11:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.42 2011/04/13 20:16:22 ranger Exp $
+
+  13 Apr 2011; Brent Baude <ranger@gentoo.org> binutils-config-2-r1.ebuild:
+  Marking binutils-config-2-r1 ppc for bug 361849
 
   12 Apr 2011; Markus Meier <maekke@gentoo.org> binutils-config-2-r1.ebuild:
   arm stable, bug #361849
