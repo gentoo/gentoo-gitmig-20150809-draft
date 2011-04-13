@@ -1,0 +1,10 @@
+# ChangeLog for virtual/skkserv
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/skkserv/ChangeLog,v 1.1 2011/04/13 15:00:49 ulm Exp $
+
+*skkserv-0 (13 Apr 2011)
+
+  13 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +skkserv-0.ebuild,
+  +metadata.xml:
+  Initial import, bug 358851.
+
