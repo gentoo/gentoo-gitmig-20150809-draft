@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.5 2011/03/02 21:27:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.6 2011/04/13 06:21:23 xarthisius Exp $
 
 EAPI=2
 inherit eutils
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dbus nls sdl threads xinerama"
 
-RDEPEND="
-	sci-libs/libticables2
+RDEPEND="sci-libs/libticables2
 	sci-libs/libticalcs2
 	sci-libs/libtifiles2
 	sci-libs/libticonv
@@ -32,7 +31,8 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-remove_depreciated_gtk_calls.patch
+	epatch "${FILESDIR}"/${P}-remove_depreciated_gtk_calls.patch \
+		"${FILESDIR}"/${P}-r2820.patch
 
 	# Don't use GTK_DISABLE_DEPRECATED flags
 	sed 's:-DGTK_DISABLE_DEPRECATED::g' -i configure.ac configure || die
@@ -53,7 +53,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	rm -f "${D}"usr/share/tiemu/{Manpage.txt,COPYING,RELEASE,AUTHORS,LICENSES}
 	dodoc AUTHORS NEWS README README.linux RELEASE TODO
 	make_desktop_entry tiemu "TiEmu Calculator" \

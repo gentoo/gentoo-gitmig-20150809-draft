@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/tiemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.6 2011/03/02 21:27:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.7 2011/04/13 06:21:23 xarthisius Exp $
+
+  13 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> tiemu-3.03.ebuild,
+  +files/tiemu-3.03-r2820.patch:
+  Removed obsolete virtual link cable wrt #363383 by jimtahu
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> tiemu-3.03.ebuild:
   Correct Slots for gtk 3 introduction to tree
