@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.274 2011/04/12 07:25:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.275 2011/04/13 16:36:54 mr_bones_ Exp $
+
+  13 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  nvidia-drivers-270.41.03.ebuild:
+  add a couple more libraries to the TEXTRELS variable for x86
 
 *nvidia-drivers-270.41.03 (12 Apr 2011)
 
