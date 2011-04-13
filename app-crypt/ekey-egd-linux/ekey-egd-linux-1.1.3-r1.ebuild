@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekey-egd-linux/ekey-egd-linux-1.1.3-r1.ebuild,v 1.1 2011/04/04 12:20:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekey-egd-linux/ekey-egd-linux-1.1.3-r1.ebuild,v 1.2 2011/04/13 18:41:58 flameeyes Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-RDEPEND=""
+RDEPEND="!>=app-crypt/ekeyd-1.1.3-r4"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
