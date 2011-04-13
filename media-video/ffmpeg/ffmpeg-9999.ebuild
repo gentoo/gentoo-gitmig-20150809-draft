@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.40 2011/04/12 13:44:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.41 2011/04/13 12:40:50 aballier Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ else # Release
 fi
 FFMPEG_REVISION="${PV#*_p}"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
 SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
@@ -97,6 +97,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf="${EXTRA_FFMPEG_CONF}"
+	# Set to --enable-version3 if (L)GPL-3 is required
+	local version3=""
 
 	# enabled by default
 	for i in debug doc network vaapi zlib; do
@@ -118,8 +120,8 @@ src_configure() {
 	if use encode
 	then
 		use mp3 && myconf="${myconf} --enable-libmp3lame"
-		use aac && myconf="${myconf} --enable-libvo-aacenc"
-		use amr && myconf="${myconf} --enable-libvo-amrwbenc"
+		use aac && { myconf="${myconf} --enable-libvo-aacenc" ; version3=" --enable-version3" ; }
+		use amr && { myconf="${myconf} --enable-libvo-amrwbenc" ; version3=" --enable-version3" ; }
 		for i in theora vorbis x264 xvid; do
 			use ${i} && myconf="${myconf} --enable-lib${i}"
 		done
@@ -153,7 +155,7 @@ src_configure() {
 	use threads && myconf="${myconf} --enable-pthreads"
 
 	# Decoders
-	use amr && myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb"
+	use amr && { myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb" ; version3=" --enable-version3" ; }
 	for i in gsm dirac rtmp schroedinger speex vpx; do
 		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
@@ -190,7 +192,7 @@ src_configure() {
 	# Mandatory configuration
 	myconf="
 		--enable-gpl
-		--enable-version3
+		${version3}
 		--enable-postproc
 		--enable-avfilter
 		--disable-stripping
