@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.1.ebuild,v 1.1 2011/03/20 12:02:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.1.ebuild,v 1.2 2011/04/13 17:22:21 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,7 +17,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-lin
 IUSE="doc gnome"
 
 RDEPEND="
-	>=gnome-base/libglade-2:2.0
 	>=dev-python/pygtk-2.14:2
 	>=dev-python/pygobject-2.8:2
 	gnome? ( >=dev-python/gconf-python-2.22:2 )
