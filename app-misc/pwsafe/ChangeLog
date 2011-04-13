@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/pwsafe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.8 2011/03/27 20:49:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.9 2011/04/13 08:43:50 nirbheek Exp $
+
+*pwsafe-0.2.0-r1 (13 Apr 2011)
+
+  13 Apr 2011; Christopher Head (Hawk777) <headch@gmail.com>
+  +pwsafe-0.2.0-r1.ebuild, +files/pwsafe-0.2.0-cvs-1.57.patch,
+  +files/pwsafe-0.2.0-fake-readline.patch,
+  +files/pwsafe-0.2.0-man-page-option-syntax.patch,
+  +files/pwsafe-0.2.0-printf.patch, metadata.xml:
+  Bringing in upstream CVS 1.57 of pwsafe.cpp plus upstream patches
+  #3259375, #3259514, and #3259580.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
   Add new maintainer + proxy-maintainer

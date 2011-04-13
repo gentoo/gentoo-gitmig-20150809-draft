@@ -13,7 +13,15 @@
   </maintainer>
   <longdescription lang="en">
     pwsafe is a commandline password database utility compatible with
-    Counterpane's Passwordsafe. It is compatible with Counterpane Passwordsafe
-    1.9.x and 2.0 databases. It can interact with X11 selection and clipboard. 
+    Counterpane's Password Safe. It is compatible with Counterpane Password
+    Safe 1.9.x and 2.0 databases. It can interact with X11 selection and
+    clipboard.
   </longdescription>
+  <upstream>
+    <maintainer>
+      <email>ndade@nsd.dyndns.org</email>
+      <name>Nicolas Dade</name>
+    </maintainer>
+    <remote-id type="sourceforge">pwsafe</remote-id>
+  </upstream>
 </pkgmetadata>
