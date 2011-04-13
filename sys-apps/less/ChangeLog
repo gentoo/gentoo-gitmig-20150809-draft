@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.123 2011/04/11 22:09:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.124 2011/04/13 03:49:55 tomka Exp $
+
+  13 Apr 2011; Thomas Kahle <tomka@gentoo.org> less-441.ebuild:
+  x86 stable per bug 363145
 
   11 Apr 2011; Jeroen Roovers <jer@gentoo.org> less-441.ebuild:
   Stable for HPPA (bug #363145).
