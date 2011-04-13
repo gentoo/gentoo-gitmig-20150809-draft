@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/activitymanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/activitymanager/ChangeLog,v 1.15 2011/04/06 22:21:16 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/activitymanager/ChangeLog,v 1.16 2011/04/13 21:19:55 dilfridge Exp $
+
+  13 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  activitymanager-4.6.2.ebuild:
+  Add semantic-desktop useflag, bug 362695
 
   06 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   activitymanager-4.6.2.ebuild:
