@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.6-r1.ebuild,v 1.3 2011/03/15 18:12:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.6-r1.ebuild,v 1.4 2011/04/13 20:18:36 maekke Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.kmess.org"
 SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug gif konqueror libnotify xscreensaver"
 RESTRICT="test"
