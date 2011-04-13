@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.181 2011/04/11 13:54:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.182 2011/04/13 10:55:25 hwoarang Exp $
+
+  13 Apr 2011; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.4-r1.ebuild,
+  avidemux-2.5.4-r2.ebuild:
+  Depend on dev-lang/yasm. Bug #362805. Drop ppc keywords
 
   11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   avidemux-2.5.4-r2.ebuild:
