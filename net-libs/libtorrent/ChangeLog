@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.155 2011/04/03 16:04:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.156 2011/04/13 19:40:46 sochotnicky Exp $
+
+  13 Apr 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  libtorrent-0.12.7.ebuild, +files/libtorrent-0.12.7-test.patch:
+  Add patch to fix tests (thanks to AlphatPC@gmail.com)
 
 *libtorrent-0.12.7 (03 Apr 2011)
 
