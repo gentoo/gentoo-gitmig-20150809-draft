@@ -1,0 +1,33 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/files/pcscd-init.4,v 1.1 2011/04/13 17:51:29 flameeyes Exp $
+
+depend() {
+	need localmount
+
+	after udev openct
+}
+
+start() {
+	[ -d /var/run/pcscd ] || mkdir -p /var/run/pcscd
+
+	chown pcscd:pcscd /var/run/pcscd
+	chmod 0755 /var/run/pcscd
+
+	ebegin "Starting pcscd"
+	start-stop-daemon --start \
+        --exec /usr/sbin/pcscd \
+        --pidfile /var/run/pcscd/pcscd.pid \
+		--chuid pcscd:pcscd \
+		-- ${EXTRA_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pcscd"
+	start-stop-daemon --stop \
+        --exec /usr/sbin/pcscd \
+        --pidfile /var/run/pcscd/pcscd.pid
+	eend $?
+}

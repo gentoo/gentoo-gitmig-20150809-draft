@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.7.2.ebuild,v 1.1 2011/03/31 20:52:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.7.2-r1.ebuild,v 1.1 2011/04/13 17:51:29 flameeyes Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit multilib eutils
 
@@ -27,7 +27,9 @@ RDEPEND="${RDEPEND}
 	!<app-crypt/ccid-1.4.1-r1"
 
 pkg_setup() {
+	enewgroup openct # make sure it exists
 	enewgroup pcscd
+	enewuser pcscd -1 -1 /var/run/pcscd pcscd,openct
 }
 
 src_configure() {
@@ -51,13 +53,13 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	find "${D}" -name '*.la' -delete
 
-	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog || die
+	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog
 
-	newinitd "${FILESDIR}/pcscd-init.3" pcscd || die
+	newinitd "${FILESDIR}/pcscd-init.4" pcscd
 
 	if use kernel_linux; then
 		insinto /lib/udev/rules.d
-		doins "${FILESDIR}"/99-pcscd-hotplug.rules || die
+		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
 }
 

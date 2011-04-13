@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.111 2011/03/31 20:52:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.112 2011/04/13 17:51:29 flameeyes Exp $
+
+*pcsc-lite-1.7.2-r1 (13 Apr 2011)
+
+  13 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pcsc-lite-1.7.2.ebuild, +pcsc-lite-1.7.2-r1.ebuild, +files/pcscd-init.4:
+  Create a convenience user for the pcscd daemon, and make it part of the
+  openct group, so that it can access openct-based readers.
 
 *pcsc-lite-1.7.2 (31 Mar 2011)
 
