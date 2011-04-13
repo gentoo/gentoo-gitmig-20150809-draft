@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.115 2011/03/29 12:43:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.116 2011/04/13 14:05:41 jlec Exp $
+
+*gajim-0.14.1-r3 (13 Apr 2011)
+
+  13 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/0.14.1-link.patch,
+  gajim-0.14.1-r2.ebuild, +gajim-0.14.1-r3.ebuild:
+  Removed uneeded dep on sexy-python, backport clickable link in status message
+  patch, #363289
 
   29 Mar 2011; Jeroen Roovers <jer@gentoo.org> gajim-0.14.1-r2.ebuild:
   Stable for HPPA (bug #357765).
