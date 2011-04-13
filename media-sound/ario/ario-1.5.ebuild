@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.ebuild,v 1.4 2011/03/21 22:08:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.5.ebuild,v 1.5 2011/04/13 18:00:47 tomka Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}-player/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="audioscrobbler dbus debug +idle libnotify nls python taglib zeroconf"
 
 RDEPEND=">=dev-libs/glib-2.14:2

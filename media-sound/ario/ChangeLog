@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ario
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.20 2011/03/21 22:08:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.21 2011/04/13 18:00:47 tomka Exp $
+
+  13 Apr 2011; Thomas Kahle <tomka@gentoo.org> ario-1.5.ebuild:
+  x86 stable per bug 359475
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> ario-1.4.4.ebuild,
   ario-1.5.ebuild:
