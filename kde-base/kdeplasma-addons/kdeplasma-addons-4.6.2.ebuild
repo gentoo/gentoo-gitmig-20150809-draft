@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.6.2.ebuild,v 1.2 2011/04/12 02:07:56 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.6.2.ebuild,v 1.3 2011/04/13 13:02:30 tampakrap Exp $
 
 EAPI=3
 
@@ -48,6 +48,8 @@ RDEPEND="${COMMON_DEPEND}
 
 # kdebase-data: some svg icons moved from data directly here.
 add_blocker kdebase-data '<4.2.88'
+
+PATCHES=( "${FILESDIR}/${P}-optional-akonadi.patch" )
 
 src_prepare() {
 	find "${S}" -name CMakeLists.txt | \
