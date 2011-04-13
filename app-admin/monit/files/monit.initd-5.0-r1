@@ -1,0 +1,38 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/files/monit.initd-5.0-r1,v 1.1 2011/04/13 15:40:32 patrick Exp $
+
+opts="${opts} reload configtest"
+
+
+depend() {
+	use net
+}
+
+configtest() {
+        /usr/bin/monit -t 1>/dev/null 2>&1
+        ret=$?
+        if [ $ret -ne 0 ]; then
+                eerror "${SVCNAME} has detected an error in your setup:"
+                /usr/bin/monit -t
+        fi
+        return $ret
+}
+start() {
+	ebegin "Starting monit"
+	start-stop-daemon --start --quiet --exec /usr/bin/monit >/dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping monit"
+	start-stop-daemon --stop --quiet --exec /usr/bin/monit
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading monit"
+	/usr/bin/monit -c /etc/monitrc reload >/dev/null 2>&1
+	eend $?
+}
