@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.2.ebuild,v 1.1 2011/04/06 14:19:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.2.ebuild,v 1.2 2011/04/13 20:19:37 dilfridge Exp $
 
 EAPI=3
 
@@ -104,7 +104,7 @@ each_ruby_configure() {
 		$(cmake-utils_use_with phonon)
 		$(cmake-utils_use_with plasma)
 		$(cmake-utils_use_with qscintilla QScintilla)
-		$(cmake-utils_use_with qwt Qwt)
+		$(cmake-utils_use_with qwt Qwt5)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_disable webkit QtWebKit)

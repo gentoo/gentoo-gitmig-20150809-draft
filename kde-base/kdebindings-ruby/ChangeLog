@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.34 2011/04/06 14:19:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.35 2011/04/13 20:19:37 dilfridge Exp $
+
+  13 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdebindings-ruby-4.6.2.ebuild:
+  Honor qwt useflag, bug 358333
 
 *kdebindings-ruby-4.6.2 (06 Apr 2011)
 
