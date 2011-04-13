@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.712.0-r1.ebuild,v 1.2 2011/04/05 08:38:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.733.0.ebuild,v 1.1 2011/04/13 15:13:09 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups gnome gnome-keyring kerberos"
+IUSE="cups gnome gnome-keyring kerberos xinerama"
 
 RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
@@ -32,10 +32,10 @@ RDEPEND="app-arch/bzip2
 	media-libs/libpng
 	>=media-libs/libvpx-0.9.5
 	media-libs/speex
-	>=media-video/ffmpeg-0.6_p25767[threads]
 	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/pam
 	sys-libs/zlib
+	>=virtual/ffmpeg-0.6.90[threads]
 	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst"
@@ -45,9 +45,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
-	test? ( dev-python/simplejson dev-python/tlslite virtual/krb5 )"
+	x11-libs/libXinerama
+	test? ( dev-python/simplejson virtual/krb5 )"
 RDEPEND+="
 	kerberos? ( virtual/krb5 )
+	xinerama? ( x11-libs/libXinerama )
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -102,11 +104,8 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}/${PN}-system-vpx-r4.patch"
 
-	# Backport FFmpeg compatibility patch, bug #355405.
-	epatch "${FILESDIR}/${PN}-ffmpeg-build-r1.patch"
-
-	# Make Chromium recognize Gentoo's Heimdal, to be upstreamed.
-	epatch "${FILESDIR}/${PN}-gssapi-heimdal-r0.patch"
+	# Fix some net_unittests failures, bug #361939; to be upstreamed.
+	epatch "${FILESDIR}/${PN}-net-tests-r0.patch"
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -138,6 +137,7 @@ src_prepare() {
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
+		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
@@ -256,12 +256,10 @@ src_test() {
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
 		'--gtest_filter=-ICUStringConversionsTest.*'
 
-	# DiskCache: we need net/data/cache_tests in the tarball (export_tarball.py)
 	# NetUtilTest: bug #361885.
-	# HTTPS/SSL: bug #361939.
 	# UDP: unstable, active development. We should revisit this later.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-*DiskCache*:NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*HTTPS*:*SSL*:*UDP*'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*UDP*'
 }
 
 src_install() {
@@ -321,7 +319,8 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 
-	# For more info see bugs #292201 and bug #352263.
+	# For more info see bug #292201, bug #352263, bug #361859.
+	elog
 	elog "Depending on your desktop environment, you may need"
 	elog "to install additional packages to get icons on the Downloads page."
 	elog
@@ -329,7 +328,21 @@ pkg_postinst() {
 	elog
 	elog "For other desktop environments, try one of the following:"
 	elog " - x11-themes/gnome-icon-theme"
-	elog " - x11-themes/xfce4-icon-theme"
+	elog " - x11-themes/tango-icon-theme"
+
+	# For more info see bug #359153.
+	elog
+	elog "Some web pages may require additional fonts to display properly."
+	elog "Try installing some of the following packages if some characters"
+	elog "are not displayed properly:"
+	elog " - media-fonts/arphicfonts"
+	elog " - media-fonts/bitstream-cyberbit"
+	elog " - media-fonts/droid"
+	elog " - media-fonts/ipamonafont"
+	elog " - media-fonts/ja-ipafonts"
+	elog " - media-fonts/takao-fonts"
+	elog " - media-fonts/wqy-microhei"
+	elog " - media-fonts/wqy-zenhei"
 }
 
 pkg_postrm() {

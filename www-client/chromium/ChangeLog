@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.335 2011/04/13 09:15:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.336 2011/04/13 15:13:09 phajdan.jr Exp $
+
+*chromium-12.0.733.0 (13 Apr 2011)
+
+  13 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-12.0.712.0-r1.ebuild, +chromium-12.0.733.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Enable DiskCache tests, the testing
+  data is now in the tarball. Remove old.
 
 *chromium-11.0.696.43 (13 Apr 2011)
 
