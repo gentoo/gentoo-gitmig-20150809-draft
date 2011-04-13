@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/openct
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.92 2010/11/29 13:18:59 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.93 2011/04/13 17:59:53 flameeyes Exp $
+
+*openct-0.6.20-r1 (13 Apr 2011)
+
+  13 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +openct-0.6.20-r1.ebuild:
+  Revision bump: require a new version of pcsc-lite that is known to work with
+  this version of opensc; install the pcsc-lite bundle properly; disable build
+  of static libraries; remove superfluous ifd library; remove .la files;
+  install ruels in /lib/udev/rules.d instead of /etc.
 
   29 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> openct-0.6.20.ebuild:
   Add missing runtime dependency over libtool (for ltdl).
