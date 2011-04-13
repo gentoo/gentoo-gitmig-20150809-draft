@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.836 2011/04/11 22:26:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.837 2011/04/13 20:09:51 armin76 Exp $
+
+  13 Apr 2011; Raúl Porcel <armin76@gentoo.org> gentoo-sources-2.6.37.ebuild,
+  gentoo-sources-2.6.37-r1.ebuild, gentoo-sources-2.6.37-r2.ebuild,
+  gentoo-sources-2.6.37-r3.ebuild, gentoo-sources-2.6.37-r4.ebuild:
+  All .37 kernels fail to build on alpha
 
   11 Apr 2011; Jeroen Roovers <jer@gentoo.org> gentoo-sources-2.6.37-r4.ebuild:
   Stable for HPPA (bug #362319).
