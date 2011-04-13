@@ -7,6 +7,6 @@
 		<name>Ryan Hill</name>
 	</maintainer>
 	<use>
-		<flag name='htmlsingle'>Also install all-in-one-page HTML version</flag>
+		<flag name='htmlsingle'>Also install single-page HTML version</flag>
 	</use>
 </pkgmetadata>
