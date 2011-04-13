@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.1 2011/02/07 10:05:34 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.2 2011/04/13 22:04:20 dilfridge Exp $
 
 EAPI=2
 
@@ -27,6 +27,7 @@ RDEPEND="dev-libs/glib:2[introspection=]
 	dev-dotnet/gtk-sharp
 	dev-dotnet/gtk-sharp-gapi"
 DEPEND="${RDEPEND}
+	app-text/gnome-doc-utils
 	doc? ( dev-util/gtk-doc )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
 	dev-util/gtk-doc-am
