@@ -1,0 +1,9 @@
+# ChangeLog for virtual/man
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/man/ChangeLog,v 1.1 2011/04/13 15:00:16 ulm Exp $
+
+*man-0 (13 Apr 2011)
+
+  13 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +man-0.ebuild, +metadata.xml:
+  Initial import, bug 358839.
+
