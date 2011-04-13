@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.407 2011/04/13 12:40:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.408 2011/04/13 12:48:00 aballier Exp $
+
+*ffmpeg-0.6.90_rc0-r2 (13 Apr 2011)
+
+  13 Apr 2011; Alexis Ballier <aballier@gentoo.org>
+  +ffmpeg-0.6.90_rc0-r2.ebuild, +files/avutil_aes_sha_h.patch:
+  New revision for installing avutil headers required by mplayer
 
   13 Apr 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   Enable (L)GPL-3 only when needed
