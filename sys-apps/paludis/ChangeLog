@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.199 2011/04/12 18:56:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.200 2011/04/13 12:39:30 dagger Exp $
+
+  13 Apr 2011; Robert Piasek <dagger@gentoo.org> paludis-0.58.5.ebuild,
+  paludis-0.60.1.ebuild, paludis-0.60.3.ebuild, paludis-0.60.4.ebuild,
+  metadata.xml:
+  Removed PROVIDE="virtual/portage" as per bug #358847
+  Updated metadata
 
 *paludis-0.60.4 (12 Apr 2011)
 

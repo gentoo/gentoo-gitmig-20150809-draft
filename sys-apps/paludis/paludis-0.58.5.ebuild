@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.58.5.ebuild,v 1.1 2011/02/16 15:35:55 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.58.5.ebuild,v 1.2 2011/04/13 12:39:30 dagger Exp $
 
 inherit bash-completion eutils
 
@@ -42,8 +42,6 @@ RDEPEND="${COMMON_DEPEND}
 PDEPEND="
 	vim-syntax? ( >=app-editors/vim-core-7 )
 	app-admin/eselect-package-manager"
-
-PROVIDE="virtual/portage"
 
 create-paludis-user() {
 	enewgroup "paludisbuild"

@@ -6,6 +6,10 @@
     <email>tanderson@gentoo.org</email>
     <name>Thomas Anderson</name>
   </maintainer>
+  <maintainer>
+    <email>dagger@gentoo.org</email>
+    <name>Robert Piasek</name>
+  </maintainer>
   <use>
     <flag name="pbins">Enable binary package support. Adds dependency upon
           <pkg>app-arch/libarchive</pkg></flag>
