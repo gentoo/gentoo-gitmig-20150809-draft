@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>pda</herd>
-<longdescription lang="en">
-  Barry is an Open Source Linux application that will
-  allow synchronization, backup, restore, program 
-  management, and charging for BlackBerry devices.
-</longdescription>
-<use>
-  <flag name='boost'>Enable boost support</flag>
-  <flag name='gui'>Gui backup tool support</flag>
-</use>
+	<maintainer>
+		<email>dirtyepic@gentoo.org</email>
+		<name>Ryan Hill</name>
+	</maintainer>
+	<herd>pda</herd>
+	<longdescription lang="en">
+		Barry is a utility for synchronization, backup, restore,
+		program management, and charging of BlackBerry devices.
+	</longdescription>
+	<use>
+		<flag name='boost'>Enable boost support</flag>
+		<flag name='gui'>Install the GUI backup tool</flag>
+		<flag name='opensync'>Install the barry-sync plugin for OpenSync 0.22</flag>
+	</use>
 </pkgmetadata>
