@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r1.ebuild,v 1.2 2011/03/28 14:32:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r1.ebuild,v 1.3 2011/04/13 15:09:00 ulm Exp $
 
 EAPI="3"
 inherit eutils
@@ -27,7 +27,6 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 	migemo? ( >=app-text/migemo-0.40 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/w3m"
 
 src_prepare() {
 	epatch \
