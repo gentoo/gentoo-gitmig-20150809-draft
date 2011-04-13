@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.24 2011/04/10 14:50:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.25 2011/04/13 15:24:37 ulm Exp $
+
+  13 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove old-style virtual/skkserv, bug 358851.
 
   10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/bootloader, bug 359971.
