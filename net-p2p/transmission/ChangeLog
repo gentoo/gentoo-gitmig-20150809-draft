@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.144 2011/04/06 16:29:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.145 2011/04/13 03:50:42 tomka Exp $
+
+  13 Apr 2011; Thomas Kahle <tomka@gentoo.org> transmission-2.13.ebuild:
+  x86 stable per bug 361305
 
 *transmission-2.30_beta1 (06 Apr 2011)
 
