@@ -1,0 +1,35 @@
+Fix parallel install and move gdb python module out of libdir.
+
+http://groups.google.com/group/isl-development/browse_thread/thread/4fd13c45d3fd321e
+
+
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -1814,7 +1814,8 @@ all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(DATA) $(HEADERS) \
+ 		isl_config.h
+ installdirs: installdirs-recursive
+ installdirs-am:
+-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(pkgincludedir)" "$(DESTDIR)$(pkgincludedir)"; do \
++	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(pkgincludedir)" \
++	"$(DESTDIR)$(pkgincludedir)" "$(DESTDIR)usr/share/gdb/auto-load$(libdir)" ; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-recursive
+@@ -1954,14 +1955,14 @@ dist-hook:
+ gitversion.h: @GIT_HEAD@
+ 	echo '#define GIT_HEAD_ID "'@GIT_HEAD_VERSION@'"' > $@
+ 
+-install-data-local: $(srcdir)/isl.py
++install-data-local: $(srcdir)/isl.py installdirs
+ 	@libisl=`sed -ne "/^library_names=/{s/.*='//;s/'$$//;s/ .*//;p}" \
+ 		 $(builddir)/libisl.la`; \
+ 	case $$libisl in \
+ 	'') echo Cannot find isl library name. GDB bindings not installed.;; \
+ 	*) echo $(INSTALL_DATA) $(srcdir)/isl.py \
+-		$(DESTDIR)$(libdir)/$$libisl-gdb.py; \
+-	$(INSTALL_DATA) $(srcdir)/isl.py $(DESTDIR)$(libdir)/$$libisl-gdb.py; esac
++		$(DESTDIR)usr/share/gdb/auto-load$(libdir)/$$libisl-gdb.py; \
++	$(INSTALL_DATA) $(srcdir)/isl.py $(DESTDIR)usr/share/gdb/auto-load$(libdir)/$$libisl-gdb.py; esac
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
