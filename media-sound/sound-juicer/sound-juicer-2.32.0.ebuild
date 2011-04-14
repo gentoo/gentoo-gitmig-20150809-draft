@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0.ebuild,v 1.8 2011/03/27 12:32:56 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0.ebuild,v 1.9 2011/04/14 10:39:06 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -25,6 +25,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 
 	>=media-libs/musicbrainz-3.0.2:3
 	>=gnome-extra/gnome-media-2.11.91
+	<gnome-extra/gnome-media-2.91
 
 	>=media-libs/gstreamer-0.10.15:0.10
 	>=media-libs/gst-plugins-base-0.10:0.10"
