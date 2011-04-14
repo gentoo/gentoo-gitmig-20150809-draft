@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.26.ebuild,v 1.1 2010/02/23 07:59:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.26.ebuild,v 1.2 2011/04/14 12:34:56 scarabeus Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug kate"
 
-RDEPEND=">=media-video/ffmpeg-0.5_p20373
+RDEPEND="virtual/ffmpeg
 	>=media-libs/libvorbis-1.1
 	>=media-libs/libogg-1.1
 	>=media-libs/libtheora-1.1[encode]
