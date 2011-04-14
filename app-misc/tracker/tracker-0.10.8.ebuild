@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.8.ebuild,v 1.1 2011/04/11 22:27:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.8.ebuild,v 1.2 2011/04/14 12:28:44 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -65,7 +65,8 @@ RDEPEND="
 		gtk? ( x11-libs/gdk-pixbuf:2 )
 		qt4? ( >=x11-libs/qt-gui-4.7.1:4 ) )
 	nautilus? (
-		gnome-base/nautilus
+		>=gnome-base/nautilus-2
+		<gnome-base/nautilus-2.90
 		>=x11-libs/gtk+-2.18:2 )
 	networkmanager? ( >=net-misc/networkmanager-0.8 )
 	pdf? (
