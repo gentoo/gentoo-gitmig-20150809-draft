@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r3.ebuild,v 1.1 2010/11/21 21:46:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r3.ebuild,v 1.2 2011/04/14 09:46:42 flameeyes Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 	iptables? ( dev-util/pkgconfig )
 	elibc_glibc? ( >=sys-libs/glibc-2.7 )
 	sys-devel/flex
-	>=virtual/os-headers-2.6.27"
+	>=sys-kernel/linux-headers-2.6.27"
 
 src_prepare() {
 	sed -i \

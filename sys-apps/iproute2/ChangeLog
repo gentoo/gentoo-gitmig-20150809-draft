@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.170 2011/01/07 18:37:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.171 2011/04/14 09:46:42 flameeyes Exp $
+
+  14 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  iproute2-2.6.29.1-r1.ebuild, iproute2-2.6.31.ebuild, iproute2-2.6.33.ebuild,
+  iproute2-2.6.34.ebuild, iproute2-2.6.35-r1.ebuild, iproute2-2.6.35-r2.ebuild,
+  iproute2-2.6.35-r3.ebuild, iproute2-2.6.37.ebuild, iproute2-9999.ebuild:
+  Replace dependency on virtual/os-headers with one on linux-headers, to
+  unbreak ebuild with new-style virtual. Thanks to Marien Zwart in bug #363569
+  for reporting.
 
 *iproute2-2.6.37 (07 Jan 2011)
 
