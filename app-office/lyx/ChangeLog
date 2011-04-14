@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.223 2011/04/14 13:53:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.224 2011/04/14 14:20:32 aballier Exp $
+
+  14 Apr 2011; Alexis Ballier <aballier@gentoo.org> lyx-1.6.9.ebuild:
+  add MimeType to the desktop entry, bug #361437
 
   14 Apr 2011; Alexis Ballier <aballier@gentoo.org> -lyx-1.6.6.1.ebuild,
   -lyx-1.6.7.ebuild, -lyx-1.6.7-r1.ebuild:
