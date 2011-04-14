@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.121 2011/04/13 03:17:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.122 2011/04/14 20:30:53 ranger Exp $
+
+  14 Apr 2011; Brent Baude <ranger@gentoo.org> psycopg-2.4.ebuild:
+  stable ppc, bug 361523
 
   13 Apr 2011; Thomas Kahle <tomka@gentoo.org> psycopg-2.4.ebuild:
   x86 stable per bug 361523
