@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.72 2011/03/28 12:51:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.73 2011/04/14 20:21:24 lack Exp $
+
+  14 Apr 2011; Jim Ramsay <lack@gentoo.org> adobe-flash-10.2.153.1.ebuild:
+  Bug #324365: 32-bit flash player doesn't seem to have the same problems as
+  earlier versions, so removing warnings for 64-bit users.
 
   28 Mar 2011; Jim Ramsay <lack@gentoo.org> adobe-flash-10.2.153.1.ebuild,
   adobe-flash-10.2.153.1_p201011173.ebuild:

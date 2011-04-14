@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.153.1.ebuild,v 1.5 2011/03/28 12:51:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.153.1.ebuild,v 1.6 2011/04/14 20:21:24 lack Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -113,9 +113,10 @@ src_install() {
 
 pkg_postinst() {
 	if use amd64; then
-		elog "Adobe has released 10.1 in only a 32-bit version and upgrading"
-		elog "is required to close a major security vulnerability:"
-		elog "  http://bugs.gentoo.org/322855"
+		elog "Adobe has no stable 64-bit native version at this time. The beta"
+		elog "64-bit native release (codenamed \"square\") is installed as part"
+		elog "of the unstable testing version of this package:"
+		elog "  ${CATEGORY}/${P}_p...."
 		elog
 		if has_version 'www-plugins/nspluginwrapper'; then
 			if [[ $native_install ]]; then
@@ -147,17 +148,11 @@ pkg_postinst() {
 				local FLASH_SOURCE="${ROOT}/${INSTALL_BASE}32/libflashplayer.so"
 				nspluginwrapper -i "${FLASH_SOURCE}"
 				ABI="${oldabi}"
-				ewarn "Using adobe-flash-10.1 in a 64-bit browser is unstable:"
-				ewarn "  http://bugs.gentoo.org/324365"
-				ewarn "The recommended configuration is to use the 32-bit plugin"
-				ewarn "in a 32-bit browser such as www-client/firefox-bin"
 				elog
 			fi
 		elif [[ ! $native_install ]]; then
 			elog "To use the 32-bit flash player in a native 64-bit firefox,"
-			elog "you must install www-plugins/nspluginwrapper, though this"
-			elog "configuration is not recommended:"
-			elog "  http://bugs.gentoo.org/324365"
+			elog "you must install www-plugins/nspluginwrapper."
 			elog
 		fi
 	fi
