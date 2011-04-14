@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pwsafe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.9 2011/04/13 08:43:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.10 2011/04/14 23:38:04 nirbheek Exp $
+
+  14 Apr 2011; Christopher Head (Hawk777) <headch@gmail.com>
+  files/pwsafe-0.2.0-cvs-1.57.patch:
+  Fix bug 363511, cvs was trying to be too smart and broke the patch
 
 *pwsafe-0.2.0-r1 (13 Apr 2011)
 
