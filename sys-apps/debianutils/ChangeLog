@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.155 2011/04/13 15:42:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.156 2011/04/14 17:04:23 ranger Exp $
+
+  14 Apr 2011; Brent Baude <ranger@gentoo.org> debianutils-3.4.4.ebuild:
+  stable ppc, bug 363025
 
   13 Apr 2011; Jeroen Roovers <jer@gentoo.org> debianutils-3.4.4.ebuild:
   Stable for HPPA (bug #363025).
