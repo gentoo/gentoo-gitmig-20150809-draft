@@ -9,6 +9,7 @@
 		this does not mean you can compile pure Qt3 programs with Qt4.</flag>
 	<flag name='exceptions'>Add support for exceptions - like catching them
 		inside the event loop (recommended by Nokia)</flag>
+	<flag name='webkit'>Build the WebView QML element</flag>
 </use>
 <longdescription lang="en">
 </longdescription>
