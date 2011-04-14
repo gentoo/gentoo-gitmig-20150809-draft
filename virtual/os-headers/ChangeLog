@@ -1,0 +1,10 @@
+# ChangeLog for virtual/os-headers
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/ChangeLog,v 1.1 2011/04/14 05:41:13 ulm Exp $
+
+*os-headers-0 (14 Apr 2011)
+
+  14 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +os-headers-0.ebuild,
+  +metadata.xml:
+  Initial import, bug 358999.
+
