@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.8.ebuild,v 1.5 2010/06/07 06:18:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomeradio/gnomeradio-1.8.ebuild,v 1.6 2011/04/14 11:05:58 nirbheek Exp $
 
 GCONF_DEBUG=no
 inherit gnome2
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="lirc"
 
 RDEPEND=">=gnome-extra/gnome-media-2.14
+	<gnome-extra/gnome-media-2.91
 	>=gnome-base/libgnomeui-2.14
 	>=gnome-base/gconf-2.12
 	>=gnome-base/gnome-vfs-2.12
