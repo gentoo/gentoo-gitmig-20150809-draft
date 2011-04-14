@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12687 2011/04/14 16:26:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12688 2011/04/14 16:34:27 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -492,20 +492,6 @@ dev-lang/gwydion-dylan
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Feb 2011)
 # Python 3.2 masked until sufficient number of reverse dependencies is fixed.
 =dev-lang/python-3.2*
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (15 Feb 2011)
-# Dropping support for 1.7 xorg-server series.
-# Please upgrade to xorg-server-1.9.
-# These ebuilds will be removed in 30 days.
-x11-drivers/nouveau-firmware
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (14 Feb 2011)
-# I felt in love with this package so I am taking it with me.
-# On serious note, this is not maintained anymore + has known
-# bugs. Based on bug #348001 I am masking it for removal in
-# 30 days. Use x11-drivers/xf86-video-sis (if supported) or
-# x11-drivers/xf86-video-vesa instead.
-x11-drivers/xf86-video-xgi
 
 # Christian Faulhammer <fauli@gentoo.org> (12 Feb 2011)
 # dev-vcs/bzr-gtk, dev-vcs/bzr-rewrite and dev-vcs/bzr-svn are not
