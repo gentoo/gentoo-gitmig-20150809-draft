@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.66 2011/03/08 16:45:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.67 2011/04/14 01:07:27 tomka Exp $
+
+  14 Apr 2011; Thomas Kahle <tomka@gentoo.org> bsddb3-5.1.2.ebuild:
+  x86 stable per bug 362757
 
 *bsddb3-5.1.2 (08 Mar 2011)
 
