@@ -12,4 +12,4 @@
 #    -I, --nodevice=DEV: force ignore of given interface name.
 #    -p, --plugin=NAME: specify plugins to load.
 #    -P, --noplugin=NAME: specify plugins not to load.
-CONNMAN_OPTS="--compat"
+CONNMAN_OPTS=""

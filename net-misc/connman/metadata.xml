@@ -7,7 +7,6 @@
                 <name>Robert Piasek</name>
         </maintainer>
 	<use>
-		<flag name="dnsproxy">Enable dnsproxy support.</flag>
 		<flag name="ethernet">Enable ethernet support.</flag>
 		<flag name="google">Enable Google Public DNS support.</flag>
 		<flag name="ntpd">Use <pkg>net-misc/ntp</pkg> for nptd plugin.</flag>
