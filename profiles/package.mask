@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12686 2011/04/14 16:23:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12687 2011/04/14 16:26:42 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -498,7 +498,6 @@ dev-lang/gwydion-dylan
 # Please upgrade to xorg-server-1.9.
 # These ebuilds will be removed in 30 days.
 x11-drivers/nouveau-firmware
-=x11-base/nouveau-drm-20100316
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (14 Feb 2011)
 # I felt in love with this package so I am taking it with me.
