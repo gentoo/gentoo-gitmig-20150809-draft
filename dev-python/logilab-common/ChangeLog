@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.91 2011/04/11 13:41:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.92 2011/04/14 20:15:47 ranger Exp $
+
+  14 Apr 2011; Brent Baude <ranger@gentoo.org> logilab-common-0.55.0.ebuild:
+  stable ppc, bug 360351
 
   11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   logilab-common-0.55.0.ebuild:
