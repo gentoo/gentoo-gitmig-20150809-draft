@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6-r1.ebuild,v 1.1 2011/04/12 10:54:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6-r1.ebuild,v 1.2 2011/04/14 11:35:16 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.19.7:2
 	x11-libs/libICE
 	x11-libs/libSM
 
-	app-misc/ca-certificates
+	>=app-misc/ca-certificates-20080514-r2
 	x11-themes/gnome-icon-theme
 
 	avahi? ( >=net-dns/avahi-0.6.22 )

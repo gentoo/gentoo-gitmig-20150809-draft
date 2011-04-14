@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.268 2011/04/12 10:54:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.269 2011/04/14 11:35:16 pacho Exp $
+
+  14 Apr 2011; Pacho Ramos <pacho@gentoo.org> epiphany-2.30.6-r1.ebuild:
+  Update app-misc/ca-certificates RDEPEND to the oldest one confirmed to work
+  ok per problems with even older versions reported in bug #358813.
 
 *epiphany-2.30.6-r1 (12 Apr 2011)
 
