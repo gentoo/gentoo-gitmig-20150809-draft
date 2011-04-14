@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.915.ebuild,v 1.1 2011/04/10 21:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.916.ebuild,v 1.1 2011/04/14 16:54:18 armin76 Exp $
 
 inherit eutils multilib
 SRC_URI="mirror://gentoo/${P}.tar.bz2
