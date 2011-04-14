@@ -128,7 +128,7 @@ RDEPEND="${DEPEND}"
 	#	--host=${CHOST} \
 	#	--prefix=/usr \
 	#	--infodir=/usr/share/info \
-	#	--mandir=/usr/share/man || die "./configure failed"
+	#	--mandir=/usr/share/man || die
 	# Note the use of --infodir and --mandir, above. This is to make
 	# this package FHS 2.2-compliant.  For more information, see
 	#   http://www.pathname.com/fhs/
