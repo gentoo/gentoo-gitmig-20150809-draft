@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.7.2.ebuild,v 1.2 2011/03/26 17:08:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.7.2.ebuild,v 1.3 2011/04/14 22:51:47 wired Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -13,6 +13,7 @@ IUSE="kde qt3support"
 DEPEND="~x11-libs/qt-assistant-${PV}:${SLOT}[aqua=]
 	~x11-libs/qt-core-${PV}:${SLOT}[aqua=,qt3support=]
 	~x11-libs/qt-dbus-${PV}:${SLOT}[aqua=]
+	~x11-libs/qt-declarative-${PV}:${SLOT}[aqua=,webkit]
 	~x11-libs/qt-gui-${PV}:${SLOT}[aqua=,qt3support=]
 	~x11-libs/qt-multimedia-${PV}:${SLOT}[aqua=]
 	~x11-libs/qt-opengl-${PV}:${SLOT}[aqua=,qt3support=]
