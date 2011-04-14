@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.130 2011/01/26 14:47:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.131 2011/04/14 18:28:15 abcd Exp $
+
+  14 Apr 2011; Jonathan Callen <abcd@gentoo.org> dia-0.97.1.ebuild:
+  Add prefix support and keywords
 
   26 Jan 2011; Pacho Ramos <pacho@gentoo.org> dia-0.97.1.ebuild:
   Let it compile when python3 is main interpreter. Bump to eapi3.

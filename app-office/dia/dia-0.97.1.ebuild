@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.11 2011/01/26 14:47:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.12 2011/04/14 18:28:15 abcd Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 PYTHON_DEPEND="python? 2"
 
-inherit eutils gnome2 libtool autotools versionator python
+inherit eutils gnome2 libtool autotools versionator python multilib
 
 MY_P=${P/_/-}
 DESCRIPTION="Diagram/flowchart creation program"
@@ -18,7 +18,7 @@ MY_PV_MM=$(get_version_component_range 1-2)
 SRC_URI="mirror://gnome/sources/${PN}/${MY_PV_MM}/${MY_P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 # the doc USE flag doesn't seem to do anything without docbook2html
 IUSE="cairo doc gnome png python zlib"
 
@@ -58,7 +58,9 @@ pkg_setup() {
 		--without-swig
 		--without-hardbooks
 		--disable-static
-		--docdir=/usr/share/doc/${PF}"
+		--docdir=${EPREFIX}/usr/share/doc/${PF}
+		--exec-prefix=${EPREFIX}/usr"
+	# --exec-prefix makes Python look for modules in the Prefix
 	use python && python_set_active_version 2
 }
 
@@ -71,6 +73,8 @@ src_prepare() {
 	# Fix compilation with USE="python", bug #271855
 	if use python; then
 		epatch "${FILESDIR}/${PN}-0.97-acinclude-python-fixes.patch"
+		# use proper shared lib extension, #298232
+		sed -i -e "s/\.so/$(get_libname)/" acinclude.m4 || die
 	fi
 
 	# Skip man generation
@@ -78,6 +82,10 @@ src_prepare() {
 		sed -i -e '/if HAVE_DB2MAN/,/endif/d' doc/*/Makefile.am \
 			|| die "sed 2 failed"
 	fi
+
+	# Fix naming conflict on Darwin/OSX
+	sed -i -e 's/isspecial/char_isspecial/' \
+		objects/GRAFCET/boolequation.c || die
 
 	# Don't use -DGTK_DISABLE_DEPRECATED, bug #333439
 	sed -i -e 's:-DGTK_DISABLE_DEPRECATED::g' configure.in || die "sed 3 failed"
