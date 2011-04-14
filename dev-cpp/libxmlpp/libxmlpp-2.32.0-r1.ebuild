@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.32.0-r1.ebuild,v 1.1 2011/03/21 01:23:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.32.0-r1.ebuild,v 1.2 2011/04/14 17:55:19 pacho Exp $
 
 EAPI="3"
+GCONF_DEBUG="no"
 
 inherit autotools gnome2
 
@@ -24,9 +25,16 @@ RDEPEND=">=dev-libs/libxml2-2.6.1
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( >=dev-cpp/mm-common-0.9.3 )"
+	doc? ( || (
+		<dev-cpp/glibmm-2.27.97:2[doc?]
+		>=dev-cpp/mm-common-0.9.3
+	) )
+"
 
-DOCS="AUTHORS ChangeLog NEWS README*"
+pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable doc documentation)"
+	DOCS="AUTHORS ChangeLog NEWS README*"
+}
 
 src_prepare() {
 	gnome2_src_prepare

@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.106 2011/03/22 20:00:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.107 2011/04/14 17:55:19 pacho Exp $
+
+  14 Apr 2011; Pacho Ramos <pacho@gentoo.org> libxmlpp-2.32.0-r1.ebuild,
+  libxmlpp-2.33.2.ebuild:
+  Try to handle documentation in a better way (should prevent bug #363597
+  reported by Lars Wendler). Rekeyword on ~ia64 as seems it was dropped by
+  accident.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> libxmlpp-2.32.0.ebuild:
   Marking libxmlpp-2.32.0 ppc stable for bug 353436
