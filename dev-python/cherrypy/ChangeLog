@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.42 2011/03/30 10:28:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.43 2011/04/14 20:28:10 ranger Exp $
+
+  14 Apr 2011; Brent Baude <ranger@gentoo.org> cherrypy-3.2.0.ebuild:
+  stable ppc, bug 361151
 
   30 Mar 2011; Christoph Mende <angelos@gentoo.org> cherrypy-3.2.0.ebuild:
   Stable on amd64 wrt bug #361151
