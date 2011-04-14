@@ -1,0 +1,10 @@
+# ChangeLog for app-text/pdfgrep
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfgrep/ChangeLog,v 1.1 2011/04/14 07:58:27 jlec Exp $
+
+*pdfgrep-1.2 (14 Apr 2011)
+
+  14 Apr 2011; Justin Lecher <jlec@gentoo.org> +pdfgrep-1.2.ebuild,
+  +metadata.xml:
+  Import from sunrise, I will proxy flow in this case.
+
