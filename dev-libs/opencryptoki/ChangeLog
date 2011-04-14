@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opencryptoki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.20 2011/04/14 07:21:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/ChangeLog,v 1.21 2011/04/14 11:06:04 flameeyes Exp $
+
+  14 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  opencryptoki-2.3.3-r5.ebuild:
+  Fix install of pkcs11 symlink.
 
 *opencryptoki-2.3.3-r5 (14 Apr 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r5.ebuild,v 1.1 2011/04/14 07:21:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r5.ebuild,v 1.2 2011/04/14 11:06:04 flameeyes Exp $
 
 EAPI="2"
 
@@ -86,6 +86,8 @@ src_install() {
 
 	# Install libopencryptoki in the standard directory for libraries.
 	mv "${D}"/usr/$(get_libdir)/opencryptoki/libopencryptoki.so* "${D}"/usr/$(get_libdir) || die
+	rm "${D}"/usr/$(get_libdir)/pkcs11/libopencryptoki.so
+	dosym ../libopencryptoki.so /usr/$(get_libdir)/pkcs11/libopencryptoki.so
 
 	# Remove compatibility symlinks as we _never_ required those and
 	# they seem unused even upstream.
