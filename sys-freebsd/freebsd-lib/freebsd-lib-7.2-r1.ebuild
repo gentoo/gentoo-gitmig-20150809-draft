@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.2 2010/03/12 15:38:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.3 2011/04/14 06:12:58 ulm Exp $
 
 EAPI=2
 
@@ -34,8 +34,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		=sys-freebsd/freebsd-sources-${RV}*
 		!bootstrap? ( app-arch/bzip2 )"
 
-	PROVIDE="virtual/libc
-		virtual/os-headers"
+	PROVIDE="virtual/libc"
 
 else
 	SRC_URI="${SRC_URI}
