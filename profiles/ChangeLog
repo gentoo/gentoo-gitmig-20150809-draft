@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5282 2011/04/14 15:41:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5283 2011/04/14 16:23:41 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Apr 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove masks for packages that depend on xorg-server-1.7.99 (bug #344827).
 
   14 Apr 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove masks for nvidia-drivers versions that need <xorg-server-1.7.99 (bug
