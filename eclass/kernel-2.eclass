@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.248 2011/03/22 00:39:09 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.249 2011/04/14 06:10:32 ulm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -53,7 +53,7 @@
 #						  or the license will note the inclusion of freedist
 #						  code.
 # K_LONGTERM			- If set, the eclass will search for the kernel source
-#						  in the long term directories on the upstream servers 
+#						  in the long term directories on the upstream servers
 #						  as the location has been changed by upstream
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
@@ -161,14 +161,14 @@ detect_version() {
 		KV_PATCH=$(get_version_component_range 3- ${OKV})
 	fi
 	KV_PATCH=${KV_PATCH/[-_]*}
-	
+
 	local v n=0 missing
-	for v in CKV OKV KV_{MAJOR,MINOR,PATCH} ; do 
-		[[ -z ${!v} ]] && n=1 && missing="${missing}${v} "; 
+	for v in CKV OKV KV_{MAJOR,MINOR,PATCH} ; do
+		[[ -z ${!v} ]] && n=1 && missing="${missing}${v} ";
 	done
 	[[ $n -eq 1 ]] && \
 		eerror "Missing variables: ${missing}" && \
-		die "Failed to extract kernel version (try explicit CKV in ebuild)!" 
+		die "Failed to extract kernel version (try explicit CKV in ebuild)!"
 	unset v n missing
 
 	KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}"
@@ -223,7 +223,7 @@ detect_version() {
 	# KV_FULL evaluates to MAJ.MIN.PAT.EXT.EXT after EXTRAVERSION
 	if [[ -n ${KV_EXTRA} ]]; then
 		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-		KERNEL_URI="${KERNEL_BASE_URI}/patch-${CKV}.bz2 
+		KERNEL_URI="${KERNEL_BASE_URI}/patch-${CKV}.bz2
 					${KERNEL_BASE_URI}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
 	fi
@@ -244,21 +244,21 @@ detect_version() {
 
 	if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
-		KERNEL_URI="${KERNEL_BASE_URI}/testing/patch-${CKV//_/-}.bz2 
+		KERNEL_URI="${KERNEL_BASE_URI}/testing/patch-${CKV//_/-}.bz2
 					${KERNEL_BASE_URI}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.bz2"
 	fi
 
 	if [[ ${RELEASETYPE} == -git ]]; then
-		KERNEL_URI="${KERNEL_BASE_URI}/snapshots/patch-${OKV}${RELEASE}.bz2 
+		KERNEL_URI="${KERNEL_BASE_URI}/snapshots/patch-${OKV}${RELEASE}.bz2
 					${KERNEL_BASE_URI}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}${RELEASE}.bz2"
 	fi
 
 	if [[ ${RELEASETYPE} == -rc-git ]]; then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
-		KERNEL_URI="${KERNEL_BASE_URI}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2 
-					${KERNEL_BASE_URI}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.bz2 
+		KERNEL_URI="${KERNEL_BASE_URI}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
+					${KERNEL_BASE_URI}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.bz2
 					${KERNEL_BASE_URI}/linux-${OKV}.tar.bz2"
 
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
@@ -321,7 +321,7 @@ if [[ ${ETYPE} == sources ]]; then
 	DEPEND="!build? ( sys-apps/sed
 					  >=sys-devel/binutils-2.11.90.0.31 )"
 	RDEPEND="!build? ( >=sys-libs/ncurses-5.2
-			           sys-devel/make )"
+					   sys-devel/make )"
 	PDEPEND="!build? ( virtual/dev-manager )"
 
 	PROVIDE="virtual/linux-sources"
@@ -355,7 +355,7 @@ if [[ ${ETYPE} == sources ]]; then
 			fi
 			DEBLOB_URI="${DEBLOB_HOMEPAGE}/${DEBLOB_URI_PATH}/${DEBLOB_A}"
 			HOMEPAGE="${HOMEPAGE} ${DEBLOB_HOMEPAGE}"
-				
+
 			KERNEL_URI="${KERNEL_URI}
 				deblob? (
 					${DEBLOB_URI}
@@ -376,8 +376,6 @@ elif [[ ${ETYPE} == headers ]]; then
 	unset KBUILD_OUTPUT
 
 	if [[ ${CTARGET} = ${CHOST} ]]; then
-		DEPEND="!virtual/os-headers"
-		PROVIDE="virtual/os-headers"
 		SLOT="0"
 	else
 		SLOT="${CTARGET}"
