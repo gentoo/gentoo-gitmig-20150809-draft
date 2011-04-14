@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r4.ebuild,v 1.1 2011/04/12 21:25:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.3.3-r5.ebuild,v 1.1 2011/04/14 07:21:17 flameeyes Exp $
 
 EAPI="2"
 
@@ -100,11 +100,8 @@ src_install() {
 
 	# make sure that we don't modify the init script if the USE flags
 	# are enabled for the needed services.
-	sed -n \
-		-e "$(use tpm && echo 'p' || echo '/use tcsd/d')" \
-		"${FILESDIR}/pkcsslotd.init.2" \
-		> "${T}"/pkcsslotd.init || die
-
+	cp "${FILESDIR}"/pkcsslotd.init.2 "${T}"/pkcsslotd.init
+	use tpm || sed -i -e '/use tcsd/d' "${T}"/pkcsslotd.init
 	newinitd "${T}/pkcsslotd.init" pkcsslotd
 
 	dodoc README AUTHORS FAQ TODO doc/openCryptoki-HOWTO.pdf || die
