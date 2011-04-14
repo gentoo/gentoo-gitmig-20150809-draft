@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12684 2011/04/14 13:30:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12685 2011/04/14 15:41:42 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -511,14 +511,6 @@ dev-lang/gwydion-dylan
 <x11-libs/libfontenc-1.1.0
 <x11-libs/libxcb-1.7
 =net-misc/tigervnc-1.0.1_p20100914
-=x11-drivers/nvidia-drivers-256.44
-=x11-drivers/nvidia-drivers-195.36.31
-=x11-drivers/nvidia-drivers-195.36.24
-=x11-drivers/nvidia-drivers-190.53-r1
-=x11-drivers/nvidia-drivers-173.14.27
-=x11-drivers/nvidia-drivers-173.14.25
-=x11-drivers/nvidia-drivers-96.43.18
-=x11-drivers/nvidia-drivers-96.43.16
 =x11-drivers/ati-drivers-10.9-r1
 =x11-drivers/ati-drivers-10.8
 x11-drivers/nouveau-firmware
