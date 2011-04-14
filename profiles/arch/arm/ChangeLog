@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.121 2011/04/08 21:08:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.122 2011/04/14 15:47:40 scarabeus Exp $
+
+  14 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Drop useless kde mask.
 
   08 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
   Masked qscintilla useflag for pykde4, bug 362305
