@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.1 2011/03/12 18:59:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.2 2011/04/14 10:19:37 flameeyes Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -57,7 +57,7 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# We need to unset IDL_DIR, which is set by RSI's IDL.  This causes certain
 	# files to be not found by autotools when compiling ORBit.  See bug #58540
 	# for more information.  Please don't remove -- 8/18/06
@@ -69,7 +69,10 @@ src_compile() {
 		[ -x /usr/bin/orbit-idl-2 ] || die "Please emerge ~${CATEGORY}/${P} on the host system first"
 		G2CONF="${G2CONF} --with-idl-compiler=/usr/bin/orbit-idl-2"
 	fi
+	gnome2_src_configure
+}
 
+src_compile() {
 	# Parallel build fails from time to time, bug #273031
 	MAKEOPTS="${MAKEOPTS} -j1"
 	gnome2_src_compile
