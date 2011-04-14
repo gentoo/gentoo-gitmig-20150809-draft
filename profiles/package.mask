@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12689 2011/04/14 18:41:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12690 2011/04/14 19:03:25 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (14 Apr 2011)
+# Beta/test version -> masked
+>=dev-ml/ocamlnet-3.3.0_beta
 
 # Jim Ramsay <lack@gentoo.org> (14 Apr 2011)
 # Mask old unfetchable (Bug #360529) and security-vulnerable (Bug
