@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.04.ebuild,v 1.2 2011/02/13 17:36:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.04.ebuild,v 1.3 2011/04/14 08:12:45 jlec Exp $
 
-EAPI=3
+EAPI=4
+
+inherit eutils
 
 MYP=HepMC-${PV}
 
@@ -21,6 +23,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYP}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc46.patch
+}
+
 src_configure() {
 	# use MeV over GeV and mm over cm
 	local length_conf="MM"
@@ -34,7 +40,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 	if use doc; then
 		cd doc
 		doxygen doxygen.conf || die "doc building failed"
@@ -46,9 +52,8 @@ src_install() {
 		DESTDIR="${ED}" \
 		INSTALLDIR="${EPREFIX}/usr/share/doc/${PF}/examples" \
 		doc_installdir="${EPREFIX}/usr/share/doc/${PF}" \
-		install || die "emake install failed"
+		install
 
-	dodoc README AUTHORS ChangeLog
 	insinto /usr/share/doc/${PF}
 	if use doc; then
 		doins -r doc/html doc/*.pdf || die

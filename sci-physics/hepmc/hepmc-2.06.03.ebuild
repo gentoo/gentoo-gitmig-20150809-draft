@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.03.ebuild,v 1.6 2011/02/18 17:10:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.03.ebuild,v 1.7 2011/04/14 08:12:45 jlec Exp $
 
 EAPI=2
+
+inherit eutils
 
 MYP=HepMC-${PV}
 
@@ -21,6 +23,9 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYP}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.06.04-gcc46.patch
+}
 src_configure() {
 	# use MeV over GeV and mm over cm
 	local length_conf="MM"

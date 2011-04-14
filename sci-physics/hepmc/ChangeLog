@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/hepmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.25 2011/02/18 17:10:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.26 2011/04/14 08:12:45 jlec Exp $
+
+  14 Apr 2011; Justin Lecher <jlec@gentoo.org> hepmc-2.06.03.ebuild,
+  hepmc-2.06.04.ebuild, +files/hepmc-2.06.04-gcc46.patch:
+  Fix for compilation with gcc-4.6, #363539
 
   18 Feb 2011; Jeroen Roovers <jer@gentoo.org> hepmc-2.06.03.ebuild:
   Stable for HPPA (bug #354011).
