@@ -1,0 +1,35 @@
+diff --git a/src/kadmin/server/network.c b/src/kadmin/server/network.c
+index c8ce4f1..bb911ff 100644
+--- a/src/kadmin/server/network.c
++++ b/src/kadmin/server/network.c
+@@ -1384,6 +1384,10 @@ cleanup:
+     if (local_kaddrs != NULL)
+         krb5_free_addresses(server_handle->context, local_kaddrs);
+ 
++    if ((*response)->data == NULL) {
++        free(*response);
++        *response = NULL;
++    }
+     krb5_kt_close(server_handle->context, kt);
+ 
+     return ret;
+diff --git a/src/kadmin/server/schpw.c b/src/kadmin/server/schpw.c
+index c1b2217..992b55f 100644
+--- a/src/kadmin/server/schpw.c
++++ b/src/kadmin/server/schpw.c
+@@ -74,8 +74,13 @@ process_chpw_request(context, server_handle, realm, keytab,
+     plen = (*ptr++ & 0xff);
+     plen = (plen<<8) | (*ptr++ & 0xff);
+ 
+-    if (plen != req->length)
+-        return(KRB5KRB_AP_ERR_MODIFIED);
++    if (plen != req->length) {
++        ret = KRB5KRB_AP_ERR_MODIFIED;
++        numresult = KRB5_KPASSWD_MALFORMED;
++        strlcpy(strresult, "Request length was inconsistent",
++                sizeof(strresult));
++        goto chpwfail;
++    }
+ 
+     /* verify version number */
+ 
