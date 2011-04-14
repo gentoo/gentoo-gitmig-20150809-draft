@@ -1,13 +1,6 @@
 #!/sbin/runscript
 
-PHPSLOT=${SVCNAME#php-fpm-}
-
-if [[ $PHPSLOT == "php-fpm" ]]; then
-	PHPSLOT=$(eselect php show fpm)
-else
-	PHPSLOT=php${PHPSLOT}
-fi
-
+PHPSLOT="php5.3"
 
 PHP_FPM_CONF="/etc/php/fpm-${PHPSLOT}/php-fpm.conf"
 
@@ -25,12 +18,12 @@ start() {
         start-stop-daemon --start --pidfile ${PHP_FPM_PID} --exec /usr/bin/php-fpm -- -y "${PHP_FPM_CONF}"
         local i=0
         local timeout=5
-        while [[ ! -f ${PHP_FPM_PID} ]] && [[ $i -le $timeout ]]; do
+        while [ ! -f ${PHP_FPM_PID} ] && [ $i -le $timeout ]; do
             sleep 1
             i=$(($i + 1))
         done
         
-        [[ $timeout -gt $i ]]
+        [ $timeout -gt $i ]
         eend $?
 }
 
@@ -42,6 +35,6 @@ stop() {
 
 reload() {
     ebegin "Reloading PHP FastCGI Process Manager"
-    [[ -f ${PHP_FPM_PID} ]] && kill -USR2 $(cat ${PHP_FPM_PID})
+    [ -f ${PHP_FPM_PID} ] && kill -USR2 $(cat ${PHP_FPM_PID})
     eend $?
 }
