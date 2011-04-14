@@ -1,6 +1,15 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.76 2011/04/08 21:28:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.77 2011/04/14 13:13:59 polynomial-c Exp $
+
+*icecat-4.0 (14 Apr 2011)
+
+  14 Apr 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +files/2000-icecat_gentoo_install_dirs.patch,
+  -files/xulrunner-1.9.2-gtk+-2.21.patch, -icecat-3.6.15.ebuild,
+  +icecat-4.0.ebuild, +files/5001_fix-prefs-directory.patch,
+  +files/fix-preferences-gentoo.patch:
+  Version bump. Removed old.
 
   08 Apr 2011; Thomas Kahle <tomka@gentoo.org> icecat-3.6.16.ebuild:
   x86 stable per bug 360055
