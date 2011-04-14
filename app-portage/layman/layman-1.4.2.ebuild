@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.2.ebuild,v 1.3 2011/02/12 19:57:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.2.ebuild,v 1.4 2011/04/14 20:13:00 darkside Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -33,18 +33,6 @@ RDEPEND="${COMMON_DEPS}
 		)
 	)"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
-
-pkg_setup() {
-	if ! has_version dev-vcs/subversion; then
-		ewarn "You do not have dev-vcs/subversion installed!"
-		ewarn "While layman does not exactly depend on this"
-		ewarn "version control system you should note that"
-		ewarn "most available overlays are offered via"
-		ewarn "dev-vcs/subversion. If you do not install it"
-		ewarn "you will be unable to use these overlays."
-		ewarn
-	fi
-}
 
 # Prevent running make
 src_compile() {

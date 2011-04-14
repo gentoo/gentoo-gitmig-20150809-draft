@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.131 2011/04/12 00:04:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.132 2011/04/14 20:13:00 darkside Exp $
+
+  14 Apr 2011; Jeremy Olexa <darkside@gentoo.org> layman-1.2.3.ebuild,
+  layman-1.3.3.ebuild, layman-1.3.4.ebuild, layman-1.4.1.ebuild,
+  layman-1.4.2.ebuild, layman-9999.ebuild:
+  remove pkg_setup noise from all ebuild versions, bug 358649
 
   12 Apr 2011; Michael Weber <xmw@gentoo.org> layman-1.4.1.ebuild:
   arm/ppc stable (bug 343309)
