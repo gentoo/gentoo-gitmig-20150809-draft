@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/conque/conque-1.0.ebuild,v 1.1 2010/05/07 19:06:36 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/conque/conque-2.1.ebuild,v 1.1 2011/04/14 18:57:21 radhermit Exp $
 
 EAPI=3
 
@@ -16,10 +16,9 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+RDEPEND="|| ( app-editors/vim[python] app-editors/gvim[python] )
+	>=dev-lang/python-2.3"
+
 VIM_PLUGIN_HELPFILES="ConqueTerm"
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	rm "${S}/conque_term.vba"
-}

@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/conque
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/conque/ChangeLog,v 1.4 2010/11/22 21:29:03 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/conque/ChangeLog,v 1.5 2011/04/14 18:57:21 radhermit Exp $
+
+*conque-2.1 (14 Apr 2011)
+
+  14 Apr 2011; Tim Harder <radhermit@gentoo.org> -conque-1.0.ebuild,
+  -conque-1.1.ebuild, -conque-1.2.ebuild, +conque-2.1.ebuild:
+  Version bump and remove old.
 
 *conque-2.0 (22 Nov 2010)
 
