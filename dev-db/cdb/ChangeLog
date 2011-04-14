@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/cdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.45 2010/03/30 23:20:28 mabi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/ChangeLog,v 1.46 2011/04/14 14:47:25 abcd Exp $
+
+  14 Apr 2011; Jonathan Callen <abcd@gentoo.org> cdb-0.75-r3.ebuild:
+  Add prefix support, bump EAPI to 3, add prefix keywords
 
 *cdb-0.75-r3 (30 Mar 2010)
 

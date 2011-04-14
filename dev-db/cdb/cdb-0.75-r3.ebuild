@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75-r3.ebuild,v 1.1 2010/03/30 23:20:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75-r3.ebuild,v 1.2 2011/04/14 14:47:25 abcd Exp $
 
+EAPI=3
 inherit eutils toolchain-funcs
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 
 DESCRIPTION="Fast, reliable, simple package for creating and reading constant databases."
 HOMEPAGE="http://cr.yp.to/cdb.html"
@@ -17,9 +18,7 @@ DEPEND=">=sys-apps/sed-4
 		!dev-db/tinycdb"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-errno.diff
 	epatch "${FILESDIR}"/${P}-stdint.diff
 
@@ -27,11 +26,10 @@ src_unpack() {
 		|| die "sed Makefile failed"
 }
 
-src_compile() {
+src_configure() {
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
-	echo "/usr" > conf-home
-	emake || die "emake failed"
+	echo "${EPREFIX}/usr" > conf-home
 }
 
 src_install() {
