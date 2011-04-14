@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.2.ebuild,v 1.3 2011/03/10 23:53:08 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.2.ebuild,v 1.4 2011/04/14 21:49:23 wired Exp $
 
 EAPI="3"
 inherit confutils qt4-build
@@ -8,7 +8,7 @@ inherit confutils qt4-build
 DESCRIPTION="The GUI module for the Qt toolkit"
 SLOT="4"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE="+accessibility cups dbus egl +glib gtk mng nas nis private-headers qt3support raster tiff trace xinerama"
+IUSE="+accessibility cups dbus egl +glib gtkstyle mng nas nis private-headers qt3support raster tiff trace xinerama"
 
 RDEPEND="media-libs/fontconfig
 	media-libs/freetype:2
@@ -28,7 +28,7 @@ RDEPEND="media-libs/fontconfig
 	)
 	cups? ( net-print/cups )
 	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )
-	gtk? ( x11-libs/gtk+:2[aqua=] )
+	gtkstyle? ( x11-libs/gtk+:2[aqua=] )
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	tiff? ( media-libs/tiff )
@@ -49,7 +49,7 @@ pkg_setup() {
 		ewarn "WARNING: if you need 'qtconfig', you _must_ enable qt3support."
 	fi
 
-	confutils_use_depend_all gtk glib
+	confutils_use_depend_all gtkstyle glib
 
 	QT4_TARGET_DIRECTORIES="
 		src/gui
@@ -100,7 +100,7 @@ src_configure() {
 		$(qt_use dbus)
 		$(qt_use egl)
 		$(qt_use qt3support)
-		$(qt_use gtk gtkstyle)
+		$(qt_use gtkstyle)
 		$(qt_use xinerama)"
 
 	use nas	&& myconf="${myconf} -system-nas-sound"
@@ -113,11 +113,14 @@ src_configure() {
 
 	qt4-build_src_configure
 
-	if use gtk; then
+	if use gtkstyle; then
 		einfo "patching the Makefile to fix qgtkstyle compilation"
 		sed "s:-I/usr/include/qt4 ::" -i src/gui/Makefile ||
 			die "sed failed"
 	fi
+	einfo "patching the Makefile to fix bug #361277"
+	sed "s:-I/usr/include/qt4/QtGui ::" -i src/gui/Makefile ||
+		die "sed failed"
 }
 
 src_install() {
