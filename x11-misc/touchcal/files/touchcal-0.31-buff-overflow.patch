@@ -1,0 +1,16 @@
+ touchcal.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/touchcal.c b/touchcal.c
+index 7341fd7..22bd978 100644
+--- a/touchcal.c
++++ b/touchcal.c
+@@ -96,7 +96,7 @@ static void init_mu(char dev[])
+ 	char buf[255],dummy[255];
+ 	char format_tablet[4],get_page[5],set_page[5],mode_stream[4];
+ 	char reset_controler[3],identify[4];
+-	char data[16];
++	char data[26];
+ 
+ 	/*Open serial device for reading and writing*/
+ 	fd = open(dev, O_RDWR | O_NOCTTY );
