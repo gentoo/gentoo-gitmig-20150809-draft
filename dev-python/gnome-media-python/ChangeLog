@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-media-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.50 2011/03/23 20:22:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.51 2011/04/14 10:51:59 nirbheek Exp $
+
+  14 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-media-python-2.32.0.ebuild:
+  Restrict version dependency on gnome-media. Newer versions don't install
+  libgnome-media-profiles.
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-media-python-2.30.2.ebuild:
