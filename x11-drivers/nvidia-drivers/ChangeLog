@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.275 2011/04/13 16:36:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.276 2011/04/14 15:40:43 jer Exp $
+
+  14 Apr 2011; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-96.43.16.ebuild,
+  -nvidia-drivers-96.43.18.ebuild, -nvidia-drivers-173.14.25.ebuild,
+  -nvidia-drivers-173.14.27.ebuild, -nvidia-drivers-190.53-r1.ebuild,
+  -nvidia-drivers-195.36.24.ebuild, -nvidia-drivers-195.36.31.ebuild,
+  -nvidia-drivers-256.44.ebuild:
+  Remove versions that need <xorg-server-1.7.99 (bug #344827).
 
   13 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
   nvidia-drivers-270.41.03.ebuild:
