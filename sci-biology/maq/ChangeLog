@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/maq
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.4 2009/04/04 19:19:39 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.5 2011/04/14 07:46:27 jlec Exp $
+
+*maq-0.7.1-r1 (14 Apr 2011)
+
+  14 Apr 2011; Justin Lecher <jlec@gentoo.org> +maq-0.7.1-r1.ebuild,
+  +files/maq-0.7.1-bfr-overfl.patch, +files/maq-0.7.1-flags.patch:
+  Fix for _FORTIFY_SOURCE indicates presence of overflow, #363537; Don't mix
+  FLAGS
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> maq-0.7.1.ebuild:
   amd64/x86 stable, bug #263735
