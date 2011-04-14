@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre14.ebuild,v 1.1 2011/02/06 14:24:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_pre15.ebuild,v 1.1 2011/04/14 06:12:06 eras Exp $
 
 EAPI=3
 
