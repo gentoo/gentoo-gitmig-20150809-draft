@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.99 2011/04/10 22:10:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.100 2011/04/14 10:42:48 scarabeus Exp $
+
+*grass-6.4.1 (14 Apr 2011)
+
+  14 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> +grass-6.4.1.ebuild:
+  Version bump to latest. (only compilation tested now)
 
   10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   grass-6.3.0.ebuild:
