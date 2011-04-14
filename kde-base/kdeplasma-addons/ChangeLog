@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.82 2011/04/13 13:02:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.83 2011/04/14 23:03:34 tampakrap Exp $
+
+  14 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kdeplasma-addons-4.6.2.ebuild:
+  Apply the akonadi-optional patch conditionally
 
   13 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   kdeplasma-addons-4.6.2.ebuild,
