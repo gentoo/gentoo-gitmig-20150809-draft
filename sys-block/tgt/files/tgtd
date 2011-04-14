@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/files/tgtd,v 1.1 2009/11/25 16:33:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/files/tgtd,v 1.2 2011/04/14 15:29:08 scarabeus Exp $
 
 TGTD_CONFIG=/etc/tgt/targets.conf
 
@@ -11,8 +11,7 @@ depend() {
 	need net
 }
 
-start()
-{
+start() {
 	ebegin "Starting target framework daemon"
 	ebegin "Starting ${SVCNAME}"
 	# Start tgtd first.
@@ -37,8 +36,7 @@ start()
 	eend $?
 }
 
-stop()
-{
+stop() {
 	ebegin "Stopping ${SVCNAME}"
 	ebegin "Stopping target framework daemon"
 	# start-stop-daemon --stop --exec /usr/sbin/tgtd --quiet
@@ -52,7 +50,9 @@ stop()
 	RETVAL=$?
 	if [ "$RETVAL" -eq 107 ] ; then
 	    echo "tgtd is not running"
-	    [ "$TASK" != "restart" ] && exit 1
+	    if [ "$TASK" != "restart" ] ; then
+			exit 1
+		fi
 	elif [ "$RETVAL" -ne 0 ] ; then
 	    echo "Some initiators are still connected - could not stop tgtd"
 	    exit 2
@@ -61,8 +61,7 @@ stop()
 	eend $?
 }
 
-forcedstop()
-{
+forcedstop() {
 	# NOTE: Forced shutdown of the iscsi target may cause data corruption
 	# for initiators that are connected.
 	echo "Force-stopping target framework daemon"
@@ -74,7 +73,9 @@ forcedstop()
 	RETVAL=$?
 	if [ "$RETVAL" -eq 107 ] ; then
 	    echo "tgtd is not running"
-	    [ "$TASK" != "restart" ] && exit 1
+	    if [ "$TASK" != "restart" ] ; then
+			exit 1
+		fi
 	else
 	    tgt-admin --offline ALL
 	    # Remove all targets, even if they are still in use.
@@ -83,15 +84,14 @@ forcedstop()
 	    tgtadm --op delete --mode system
 	    RETVAL=$?
 	    if [ "$RETVAL" -ne 0 ] ; then
-		echo "Failed to shutdown tgtd"
-		exit 1
+			echo "Failed to shutdown tgtd"
+			exit 1
 	    fi
 	fi
 	echo -n
 }
 
-reload()
-{
+reload() {
 	echo "Updating target framework daemon configuration"
 	# Update configuration for targets. Only targets which
 	# are not in use will be updated.
@@ -103,8 +103,7 @@ reload()
 	fi
 }
 
-forcedreload()
-{
+forcedreload() {
 	echo "Force-updating target framework daemon configuration"
 	# Update configuration for targets, even those in use.
 	tgt-admin --update ALL -f -c $TGTD_CONFIG &>/dev/null
@@ -115,8 +114,7 @@ forcedreload()
 	fi
 }
 
-status()
-{
+status() {
 	# Don't name this script "tgtd"...
 	TGTD_PROC=$(ps -C tgtd | grep -c tgtd)
 	if [ "$TGTD_PROC" -eq 2 ] ; then
