@@ -1,6 +1,5 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/cygwin/virtuals,v 1.1 2010/08/31 06:55:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/cygwin/virtuals,v 1.2 2011/04/14 05:57:31 ulm Exp $
 
 virtual/libc           sys-cygwin/libc
-virtual/os-headers     sys-cygwin/libc

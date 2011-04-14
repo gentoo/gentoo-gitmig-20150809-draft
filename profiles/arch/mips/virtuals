@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/virtuals,v 1.5 2011/03/19 18:15:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/virtuals,v 1.6 2011/04/14 05:57:29 ulm Exp $
 
 virtual/linux-sources		sys-kernel/mips-sources
-virtual/os-headers		sys-kernel/linux-headers

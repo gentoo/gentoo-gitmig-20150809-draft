@@ -5,7 +5,8 @@
 app-shells/bash
 sys-devel/autoconf
 sys-devel/automake
-virtual/os-headers
+sys-kernel/linux-headers
+sys-freebsd/freebsd-lib
 sys-devel/binutils
 sys-devel/libtool
 sys-devel/make

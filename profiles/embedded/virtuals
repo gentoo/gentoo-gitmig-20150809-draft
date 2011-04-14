@@ -5,6 +5,5 @@ virtual/libc			sys-libs/glibc
 virtual/inetd			sys-apps/busybox
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/modutils		sys-apps/busybox
-virtual/os-headers		sys-kernel/linux-headers
 virtual/ssh			net-misc/dropbear
 virtual/dev-manager		sys-apps/busybox
