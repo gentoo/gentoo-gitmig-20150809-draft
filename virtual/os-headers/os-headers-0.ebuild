@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/os-headers-0.ebuild,v 1.1 2011/04/14 05:41:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/os-headers-0.ebuild,v 1.2 2011/04/14 06:01:20 ulm Exp $
+
+EAPI=1
 
 DESCRIPTION="Virtual for operating system headers"
 HOMEPAGE=""
@@ -12,7 +14,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-
 IUSE=""
 
 DEPEND=""
+# depend on SLOT 0 of linux-headers, because kernel-2.eclass
+# sets a different SLOT for cross-building
 RDEPEND="!prefix? (
-		|| ( sys-kernel/linux-headers
+		|| ( sys-kernel/linux-headers:0
 			sys-freebsd/freebsd-lib )
 	)"
