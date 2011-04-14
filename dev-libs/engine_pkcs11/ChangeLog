@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/engine_pkcs11
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.39 2010/05/22 15:23:35 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.40 2011/04/14 09:38:21 flameeyes Exp $
+
+  14 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  engine_pkcs11-0.1.8.ebuild:
+  Add missing pkgconfig dependency; update openssl version dependency; drop doc
+  USE flag: it doesn't require rebuild, from tarball, and is the only use
+  documentatin available.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> engine_pkcs11-0.1.8.ebuild:
   stable amd64, bug 304003
