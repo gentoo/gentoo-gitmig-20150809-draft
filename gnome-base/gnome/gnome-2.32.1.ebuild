@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1.ebuild,v 1.12 2011/03/22 19:13:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1.ebuild,v 1.13 2011/04/14 11:09:04 nirbheek Exp $
 
 EAPI="3"
 
@@ -65,6 +65,7 @@ RDEPEND="
 	>=media-libs/gst-plugins-base-0.10.30.4:0.10
 	>=media-libs/gst-plugins-good-0.10.23:0.10
 	>=gnome-extra/gnome-media-2.32.0:2
+	<gnome-extra/gnome-media-2.91:2
 	>=media-sound/sound-juicer-2.32.0
 	>=dev-libs/totem-pl-parser-2.32.1
 	>=media-video/totem-2.32.0
