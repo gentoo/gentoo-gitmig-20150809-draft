@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Amazon-S3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.12 2010/06/11 06:00:38 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.13 2011/04/14 14:12:20 tove Exp $
+
+  14 Apr 2011; Torsten Veller <tove@gentoo.org> Net-Amazon-S3-0.53.ebuild:
+  Class-MOP was merge with Moose-2
 
   11 Jun 2010; Torsten Veller <tove@gentoo.org> -Net-Amazon-S3-0.52.ebuild:
   Cleanup
