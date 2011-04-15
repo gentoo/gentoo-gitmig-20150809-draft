@@ -1,0 +1,11 @@
+# ChangeLog for app-crypt/scl011-bin
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scl011-bin/ChangeLog,v 1.1 2011/04/15 17:39:40 flameeyes Exp $
+
+*scl011-bin-2.06 (15 Apr 2011)
+
+  15 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/92_pcscd_scl011-bin.rules, +scl011-bin-2.06.ebuild, +metadata.xml:
+  Import of SCM Micro scl011-bin driver, ebuild proxy-maintained by Christoph
+  Brill in bug #358119.
+
