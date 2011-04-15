@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/Eval-Closure-0.30.0.ebuild,v 1.1 2011/04/14 13:41:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/Eval-Closure-0.30.0.ebuild,v 1.2 2011/04/15 14:30:18 mr_bones_ Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="safely and cleanly create closures via string eval"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 RDEPEND="
 	dev-perl/Sub-Exporter
