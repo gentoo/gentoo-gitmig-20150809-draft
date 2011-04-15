@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.706 2011/04/15 07:17:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.707 2011/04/15 21:41:11 angelos Exp $
+
+  15 Apr 2011; Christoph Mende <angelos@gentoo.org> vlc-1.1.9.ebuild:
+  Stable on amd64 wrt bug #363359
 
   15 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vlc-1.1.9.ebuild:
   x86 stable wrt security bug #363359
