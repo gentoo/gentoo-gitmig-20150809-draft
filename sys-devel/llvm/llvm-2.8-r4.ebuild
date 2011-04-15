@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.9.ebuild,v 1.1 2011/04/07 09:29:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r4.ebuild,v 1.1 2011/04/15 17:28:55 voyageur Exp $
 
 EAPI="3"
-inherit eutils multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/releases/${PV}/${P}.tgz"
+# Upstream silently re-released the tarball...
+# drop the -> in 2.9
+SRC_URI="http://llvm.org/releases/${PV}/${P}.tgz -> ${P}-r1.tgz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -22,11 +24,13 @@ DEPEND="dev-lang/perl
 	!~sys-devel/bison-1.875
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	libffi? ( virtual/libffi )
+	libffi? ( dev-util/pkgconfig
+		virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
 	udis86? ( amd64? ( dev-libs/udis86[pic] )
 		!amd64? ( dev-libs/udis86 ) )"
 RDEPEND="dev-lang/perl
+	libffi? ( virtual/libffi )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
 S=${WORKDIR}/${PN}-${PV/_pre*}
@@ -80,23 +84,18 @@ src_prepare() {
 	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
 		-i Makefile.rules || die "rpath sed failed"
 
+	epatch "${FILESDIR}"/${PN}-2.7-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
-	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
+	epatch "${FILESDIR}"/${PN}-2.8-darwin8.patch
+	# Upstream backport, r117774
+	epatch "${FILESDIR}"/${P}-alignof.patch
 }
 
 src_configure() {
-	local CONF_FLAGS="--enable-shared"
-
-	if use debug; then
-		CONF_FLAGS="${CONF_FLAGS} --disable-optimized"
-		einfo "Note: Compiling LLVM in debug mode will create huge and slow binaries"
-		# ...and you probably shouldn't use tmpfs, unless it can hold 900MB
-	else
-		CONF_FLAGS="${CONF_FLAGS} \
-			--enable-optimized \
-			--disable-assertions \
-			--disable-expensive-checks"
-	fi
+	local CONF_FLAGS="--enable-shared
+		$(use_enable !debug optimized)
+		$(use_enable debug assertions)
+		$(use_enable debug expensive-checks)"
 
 	if use alltargets; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
@@ -142,6 +141,10 @@ src_configure() {
 
 	if use udis86; then
 		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
+	fi
+
+	if use libffi; then
+		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
 	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
 	econf ${CONF_FLAGS} || die "econf failed"
