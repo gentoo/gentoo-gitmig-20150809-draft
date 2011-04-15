@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.8.2.ebuild,v 1.1 2011/04/04 06:54:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-1.8.2.ebuild,v 1.2 2011/04/15 08:19:45 grobian Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -34,6 +34,14 @@ PYTHON_CFLAGS=(
 
 PYTHON_MODNAME="${PN} hgext"
 SITEFILE="70${PN}-gentoo.el"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# fix up logic that won't work in Gentoo Prefix (also won't outside in
+	# certain cases), bug #362891
+	sed -i -e 's:xcodebuild:nocodebuild:' setup.py || die
+}
 
 src_compile() {
 	distutils_src_compile

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.42 2011/04/04 06:54:39 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.43 2011/04/15 08:19:45 grobian Exp $
+
+  15 Apr 2011; Fabian Groffen <grobian@gentoo.org> mercurial-1.8.2.ebuild:
+  Fix build on Darwin 10 systems with Xcode 4.0, bug #362891
 
 *mercurial-1.8.2 (04 Apr 2011)
 
