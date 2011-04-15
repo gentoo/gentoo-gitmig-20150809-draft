@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/cromwell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/ChangeLog,v 1.13 2011/04/10 14:19:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/ChangeLog,v 1.14 2011/04/15 10:00:25 vapier Exp $
+
+  15 Apr 2011; Mike Frysinger <vapier@gentoo.org> cromwell-2.40-r3.ebuild:
+  Respect toolchain build settings.
 
   10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> cromwell-2.40-r3.ebuild:
   Don't PROVIDE virtual/bootloader, bug 359971.

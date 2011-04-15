@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r3.ebuild,v 1.5 2011/04/10 14:19:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r3.ebuild,v 1.6 2011/04/15 10:00:25 vapier Exp $
 
-inherit eutils mount-boot
+inherit eutils mount-boot toolchain-funcs
 
 DESCRIPTION="Xbox boot loader"
 HOMEPAGE="http://www.xbox-linux.org/wiki/Cromwell"
@@ -20,10 +20,13 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${PF}-cvs-fixes.patch
 	sed -i 's:-Werror::' Makefile Rules.make
+	sed -i \
+		-e '/^bin.imagebld:/,$s:\<gcc\>:${CC}:' \
+		Makefile || die
 }
 
 src_compile() {
-	emake -j1 || die
+	emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" || die
 }
 
 src_install() {
