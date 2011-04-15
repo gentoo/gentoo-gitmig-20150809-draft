@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.139 2011/04/15 03:27:29 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.140 2011/04/15 03:43:47 williamh Exp $
+
+  15 Apr 2011; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  Fix conf.d/local -> local.d transition for bug #363637.
 
   15 Apr 2011; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Disable consolefont on hppa by default for bug #222889, thanks to
