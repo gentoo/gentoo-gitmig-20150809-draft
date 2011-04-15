@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.49 2011/03/15 19:31:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.50 2011/04/15 21:41:41 ulm Exp $
+
+  15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> pump-0.8.24-r3.ebuild:
+  Don't PROVIDE virtual/dhcpc, bug 358827.
 
   15 Mar 2011; Krzysztof Pawlik <nelchael@gentoo.org> pump-0.8.24-r3.ebuild:
   Do not install useless locale files (bug #358007), use emake.

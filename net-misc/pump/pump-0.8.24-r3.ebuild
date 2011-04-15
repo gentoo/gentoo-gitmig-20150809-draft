@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r3.ebuild,v 1.6 2011/03/15 19:31:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r3.ebuild,v 1.7 2011/04/15 21:41:41 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,6 @@ IUSE=""
 
 DEPEND=">=dev-libs/popt-1.5"
 RDEPEND="${DEPEND}"
-PROVIDE="virtual/dhcpc"
 
 src_unpack() {
 	unpack ${A}

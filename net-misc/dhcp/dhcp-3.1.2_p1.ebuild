@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.1.2_p1.ebuild,v 1.9 2010/01/15 19:00:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.1.2_p1.ebuild,v 1.10 2011/04/15 21:40:50 ulm Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -20,8 +20,6 @@ IUSE="doc minimal static selinux kernel_linux"
 
 DEPEND="selinux? ( sec-policy/selinux-dhcp )
 	kernel_linux? ( sys-apps/net-tools )"
-
-PROVIDE="virtual/dhcpc"
 
 S="${WORKDIR}/${MY_P}"
 

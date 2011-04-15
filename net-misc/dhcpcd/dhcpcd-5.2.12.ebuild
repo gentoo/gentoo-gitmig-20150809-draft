@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.12.ebuild,v 1.8 2011/04/11 17:45:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.12.ebuild,v 1.9 2011/04/15 21:39:14 ulm Exp $
 
 EAPI=1
 
@@ -23,7 +23,6 @@ IUSE="+zeroconf elibc_glibc"
 
 DEPEND=""
 RDEPEND="!<sys-apps/openrc-0.6.0"
-PROVIDE="virtual/dhcpc"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.1_p1.ebuild,v 1.1 2011/04/07 23:48:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.1_p1.ebuild,v 1.2 2011/04/15 21:40:50 ulm Exp $
 
 EAPI="2"
 
@@ -27,8 +27,6 @@ DEPEND="selinux? ( sec-policy/selinux-dhcp )
 		net-nds/openldap
 		ssl? ( dev-libs/openssl )
 	)"
-
-PROVIDE="virtual/dhcpc"
 
 S="${WORKDIR}/${MY_P}"
 
