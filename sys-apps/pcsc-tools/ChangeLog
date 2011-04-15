@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcsc-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.10 2011/03/09 16:29:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.11 2011/04/15 18:23:53 flameeyes Exp $
+
+*pcsc-tools-1.4.17-r2 (15 Apr 2011)
+
+  15 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pcsc-tools-1.4.17.ebuild, -pcsc-tools-1.4.17-r1.ebuild,
+  +pcsc-tools-1.4.17-r2.ebuild:
+  Actually install at least one smartcard_list.txt file, combining -r0 and -r1.
 
 *pcsc-tools-1.4.17-r1 (09 Mar 2011)
 

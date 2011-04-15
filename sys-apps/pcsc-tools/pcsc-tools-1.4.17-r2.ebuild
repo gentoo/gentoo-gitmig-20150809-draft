@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.17-r1.ebuild,v 1.1 2011/03/09 16:29:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.17-r2.ebuild,v 1.1 2011/04/15 18:23:53 flameeyes Exp $
 
 EAPI="3"
 
@@ -10,7 +10,8 @@ inherit eutils fdo-mime multilib toolchain-funcs
 
 DESCRIPTION="PC/SC Architecture smartcard tools"
 HOMEPAGE="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/"
-SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz"
+SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz
+	mirror://gentoo/${PN}-smartcard_list-${SMARTCARD_DATE}.txt.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -55,6 +56,9 @@ src_install() {
 		newexe "${FILESDIR}"/smartcard.cron update-smartcard_list \
 			|| die "Failed to install update cronjob"
 	fi
+
+	insinto /usr/share/pcsc
+	newins "${WORKDIR}"/${PN}-smartcard_list-${SMARTCARD_DATE}.txt smartcard_list.txt || die
 }
 
 pkg_postinst() {
