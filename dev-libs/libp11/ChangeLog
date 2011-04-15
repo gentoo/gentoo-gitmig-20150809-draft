@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.54 2011/04/03 22:29:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.55 2011/04/15 23:06:01 flameeyes Exp $
+
+*libp11-0.2.8 (15 Apr 2011)
+
+  15 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> +libp11-0.2.8.ebuild,
+  metadata.xml:
+  Version bump; specify the doc USE flag (and don't tie it to user
+  documentation); disable static archives (requires dynamic linker); remove .la
+  files; run elibtoolize.
 
   03 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> libp11-0.2.7.ebuild:
   Add missing runtime dependency over libtool's libltdl (thanks to Darin Petkov
