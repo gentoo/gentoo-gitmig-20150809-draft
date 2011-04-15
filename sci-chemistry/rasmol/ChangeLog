@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.22 2011/03/07 10:40:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.23 2011/04/15 14:59:29 jlec Exp $
+
+*rasmol-2.7.5.1 (15 Apr 2011)
+
+  15 Apr 2011; Justin Lecher <jlec@gentoo.org> +rasmol-2.7.5.1.ebuild:
+  Version Bump
 
   07 Mar 2011; Justin Lecher <jlec@gentoo.org> rasmol-2.7.5-r1.ebuild:
   Correct Slots for gtk 3 introduction to tree
