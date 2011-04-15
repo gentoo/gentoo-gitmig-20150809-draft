@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.4 2011/04/15 20:06:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.5 2011/04/15 20:08:13 mgorny Exp $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:
@@ -40,6 +40,8 @@
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # The additional parameters to pass to SCons whenever escons() is used.
+# Much like EXTRA_EMAKE, this is not supposed to be used in make.conf
+# and not in ebuilds!
 
 # @ECLASS-VARIABLE: USE_SCONS_TRUE
 # @DESCRIPTION:
