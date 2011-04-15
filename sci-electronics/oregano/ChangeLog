@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.41 2011/03/13 06:39:20 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.42 2011/04/15 20:21:28 mgorny Exp $
+
+  15 Apr 2011; Michał Górny <mgorny@gentoo.org> oregano-0.69.1.ebuild:
+  escons is fatal in EAPI 4.
 
   13 Mar 2011; Thomas Beierlein <tomjbe@gentoo.org> oregano-0.69.1.ebuild:
   drop unneeded dep to gnome-base/libgnomeprint (bug #358441)

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1.ebuild,v 1.3 2011/03/13 06:39:20 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1.ebuild,v 1.4 2011/04/15 20:21:28 mgorny Exp $
 
 EAPI="4"
 
@@ -36,12 +36,12 @@ src_prepare() {
 }
 
 src_compile() {
-	escons --cache-disable PREFIX=/usr || die 'escons failed.'
+	escons --cache-disable PREFIX=/usr
 }
 
 src_install() {
 	escons --cache-disable PREFIX=/usr DESTDIR="${D}" RunUpdateMimeDatabase=no \
-		install || die 'escons install failed.'
+		install
 	dodoc AUTHORS NEWS README
 }
 
