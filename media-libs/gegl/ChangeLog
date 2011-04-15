@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.49 2011/04/10 10:59:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.50 2011/04/15 11:24:51 scarabeus Exp $
+
+  15 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gegl-0.1.6.ebuild:
+  Restrict tests for now per bug #362215.
 
   10 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gegl-0.1.6.ebuild:
   x86 stable wrt bug #360595

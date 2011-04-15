@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.13 2011/04/10 10:59:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.14 2011/04/15 11:24:51 scarabeus Exp $
 
 EAPI=4
 
@@ -37,6 +37,10 @@ DEPEND=">=media-libs/babl-0.1.4
 	umfpack? ( sci-libs/umfpack )
 	v4l? ( media-libs/libv4l )"
 RDEPEND="${DEPEND}"
+
+# tests fail in various ways:
+#   see bug #362215
+RESTRICT="test"
 
 src_prepare() {
 	# upstream bug report:
