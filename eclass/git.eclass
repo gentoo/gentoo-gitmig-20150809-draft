@@ -1,16 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.52 2011/03/19 15:06:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.53 2011/04/15 08:57:04 hkbst Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
 # Tomas Chvatal <scarabeus@gentoo.org>
 # Donnie Berkholz <dberkholz@gentoo.org>
-# @BLURB: This eclass provides functions for fetch and unpack git repositories
+# @BLURB: Fetching and unpacking of git repositories
 # @DESCRIPTION:
-# The eclass is based on subversion eclass.
-# If you use this eclass, the ${S} is ${WORKDIR}/${P}.
-# It is necessary to define the EGIT_REPO_URI variable at least.
+# The git eclass provides functions to fetch, patch and bootstrap
+# software sources from git repositories and is based on the subversion eclass.
+# It is necessary to define at least the EGIT_REPO_URI variable.
 # @THANKS TO:
 # Fernando J. Pereda <ferdy@gentoo.org>
 
@@ -18,7 +18,7 @@ inherit eutils
 
 EGIT="git.eclass"
 
-# We DEPEND on at least a bit recent git version
+# We DEPEND on a not too ancient git version
 DEPEND=">=dev-vcs/git-1.6"
 
 EXPORTED_FUNCTIONS="src_unpack"
@@ -42,6 +42,10 @@ EXPORT_FUNCTIONS ${EXPORTED_FUNCTIONS}
 # Storage directory for git sources.
 # Can be redefined.
 : ${EGIT_STORE_DIR:="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/git-src"}
+
+# @ECLASS-VARIABLE: EGIT_UNPACK_DIR
+# @DESCRIPTION:
+# Directory to unpack git sources in.
 
 # @ECLASS-VARIABLE: EGIT_HAS_SUBMODULES
 # @DESCRIPTION:
@@ -358,22 +362,22 @@ git_fetch() {
 
 	if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
 		pushd "${GIT_DIR}" &> /dev/null
-		debug-print "rsync -rlpgo . \"${S}\""
-		rsync -rlpgo . "${S}"
+		debug-print "rsync -rlpgo . \"${EGIT_UNPACK_DIR:-${S}}\""
+		time rsync -rlpgo . "${EGIT_UNPACK_DIR:-${S}}"
 		popd &> /dev/null
 	else
 		unset GIT_DIR
-		debug-print "git clone -l -s -n \"${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}\" \"${S}\""
-		git clone -l -s -n "${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}" "${S}"
+		debug-print "git clone -l -s -n \"${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}\" \"${EGIT_UNPACK_DIR:-${S}}\""
+		git clone -l -s -n "${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}" "${EGIT_UNPACK_DIR:-${S}}"
 	fi
 
-	pushd "${S}" &> /dev/null
+	pushd "${EGIT_UNPACK_DIR:-${S}}" &> /dev/null
 	git_branch
 	# submodules always reqire net (thanks to branches changing)
 	[[ -z ${EGIT_OFFLINE} ]] && git_submodules
 	popd &> /dev/null
 
-	echo ">>> Unpacked to ${S}"
+	echo ">>> Unpacked to ${EGIT_UNPACK_DIR:-${S}}"
 }
 
 # @FUNCTION: git_bootstrap
@@ -422,7 +426,7 @@ git_bootstrap() {
 git_apply_patches() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	pushd "${S}" > /dev/null
+	pushd "${EGIT_UNPACK_DIR:-${S}}" > /dev/null
 	if [[ ${#EGIT_PATCHES[@]} -gt 1 ]] ; then
 		for i in "${EGIT_PATCHES[@]}"; do
 			debug-print "$FUNCNAME: git_autopatch: patching from ${i}"
