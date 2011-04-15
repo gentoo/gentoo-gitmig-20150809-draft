@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.250 2011/04/13 15:24:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.251 2011/04/15 22:12:23 ulm Exp $
+
+  15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove dev-manager and dhcp old-style virtuals, bugs 361133 and 358827.
 
   13 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/{man,skkserv,w3m}; bugs 358839, 358851, 358855.

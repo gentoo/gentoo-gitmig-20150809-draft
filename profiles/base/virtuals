@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.150 2011/04/13 15:24:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.151 2011/04/15 22:12:23 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -15,8 +15,6 @@
 virtual/aspell-dict			app-dicts/aspell-en
 virtual/blackbox			x11-wm/blackbox
 virtual/cron				sys-process/vixie-cron
-virtual/dev-manager			sys-fs/udev
-virtual/dhcpc				net-misc/dhcpcd
 virtual/inetd				sys-apps/xinetd
 virtual/libc				sys-libs/glibc
 virtual/linux-sources			sys-kernel/gentoo-sources
