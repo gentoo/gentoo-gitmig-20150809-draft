@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.5.ebuild,v 1.1 2011/03/09 14:44:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.5.ebuild,v 1.2 2011/04/15 21:45:30 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -15,7 +15,7 @@ SRC_URI="http://pysvn.barrys-emacs.org/source_kits/${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-freebsd ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ppc ~x86 ~x86-freebsd ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="doc examples"
 
 RDEPEND=">=dev-python/pycxx-6.2.0
