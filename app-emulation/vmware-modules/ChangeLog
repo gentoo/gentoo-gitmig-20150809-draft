@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.76 2011/04/09 11:51:54 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.77 2011/04/15 12:32:45 vadimk Exp $
+
+*vmware-modules-238.4 (15 Apr 2011)
+
+  15 Apr 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-modules-238.4.ebuild:
+  version bump
 
   09 Apr 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   -files/1.0.0.24-autoconf-generated.patch,
