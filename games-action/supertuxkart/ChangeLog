@@ -1,6 +1,9 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.24 2011/04/12 03:34:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.25 2011/04/15 21:52:12 angelos Exp $
+
+  15 Apr 2011; Christoph Mende <angelos@gentoo.org> supertuxkart-0.7.ebuild:
+  Stable on amd64 wrt bug #363129
 
   12 Apr 2011; Thomas Kahle <tomka@gentoo.org> supertuxkart-0.7.ebuild:
   x86 stable per bug 363129
