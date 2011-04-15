@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.9.ebuild,v 1.2 2009/01/14 16:33:25 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.9.ebuild,v 1.3 2011/04/15 21:36:38 ulm Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE="svg"
 
 RDEPEND=">=dev-python/pygtk-2.6.1
 	>=net-wireless/wireless-tools-27-r1
-	virtual/dhcpc"
+	|| ( net-misc/dhcpcd net-misc/dhcp net-misc/pump )"
 
 src_unpack()
 {

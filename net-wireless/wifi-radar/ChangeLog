@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wifi-radar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.22 2010/09/03 14:49:20 s4t4n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.23 2011/04/15 21:36:38 ulm Exp $
+
+  15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> wifi-radar-1.9.8-r1.ebuild,
+  wifi-radar-1.9.9.ebuild, wifi-radar-2.0.8.ebuild:
+  Replace dependency on old-style virtual/dhcpc, bug 358827.
 
 *wifi-radar-2.0.8 (03 Sep 2010)
 
