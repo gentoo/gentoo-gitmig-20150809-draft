@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.1 2010/07/15 10:43:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.2 2011/04/15 11:45:26 tupone Exp $
 
 EAPI="2"
 
@@ -63,6 +63,7 @@ src_prepare() {
 	sed -i \
 		-e "s:^Icon=mupen64plus-large.xpm:Icon=mupen64plus:" \
 		mupen64plus.desktop.in || die "sed failed"
+	epatch "${FILESDIR}"/${P}-gcc46.patch
 }
 
 get_opts() {
