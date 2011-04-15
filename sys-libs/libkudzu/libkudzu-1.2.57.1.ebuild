@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.14 2009/01/11 19:08:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.15 2011/04/15 03:14:58 jer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -31,6 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	if use zlib
 	then
 		perl -pi -e 's| -lpci| -lz -lpci|g' Makefile
