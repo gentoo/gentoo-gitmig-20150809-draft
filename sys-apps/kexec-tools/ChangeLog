@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.39 2011/03/27 08:31:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.40 2011/04/15 21:49:18 flameeyes Exp $
+
+  15 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  kexec-tools-2.0.2-r1.ebuild:
+  Add fix for compiling with gcc 4.6 (bug #631069). Thanks to Vladimir for the
+  patch; upstream already fixed this one.
 
 *kexec-tools-2.0.2-r1 (27 Mar 2011)
 

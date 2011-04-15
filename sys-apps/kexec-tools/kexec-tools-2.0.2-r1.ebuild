@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-2.0.2-r1.ebuild,v 1.1 2011/03/27 08:31:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-2.0.2-r1.ebuild,v 1.2 2011/04/15 21:49:18 flameeyes Exp $
 
 EAPI=2
 
@@ -28,6 +28,9 @@ src_prepare() {
 		filter-flags -fPIE
 		append-ldflags -nopie
 	fi
+
+	# gcc 4.6 compatibility (bug #361069)
+	sed -i 's/--no-undefined/-Wl,--no-undefined/g' purgatory/Makefile || die "sed failed"
 }
 
 src_configure() {
