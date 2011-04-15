@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.0_p20110307.ebuild,v 1.2 2011/03/07 20:36:58 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.0_p20110307.ebuild,v 1.3 2011/04/15 20:06:08 signals Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-use-flag.patch \
 		"${FILESDIR}"/${P}-use-fallback-mac.patch
+	sed -i -e 's/-Werror//' configure.ac || die #363723
 	gtkdocize || die
 	eautoreconf
 }
