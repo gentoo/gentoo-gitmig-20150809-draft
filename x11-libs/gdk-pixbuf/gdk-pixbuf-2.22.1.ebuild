@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1.ebuild,v 1.8 2011/04/04 17:42:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1.ebuild,v 1.9 2011/04/15 13:13:29 ssuominen Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="+X debug doc +introspection jpeg jpeg2k tiff test"
 # librsvg blocker is for the new pixbuf loader API, you lose icons otherwise
 RDEPEND="
 	>=dev-libs/glib-2.25.15
-	>=media-libs/libpng-1.2.43-r2:0
+	>=media-libs/libpng-1.2.44:0
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
@@ -64,12 +64,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die
 
-	dodoc AUTHORS NEWS* README* || die "dodoc failed"
+	dodoc AUTHORS NEWS* README* || die
 
-	# New library, remove .la files
-	rm -vf "${D}"/usr/lib*/gdk-pixbuf-2.0/*/loaders/*.la
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
