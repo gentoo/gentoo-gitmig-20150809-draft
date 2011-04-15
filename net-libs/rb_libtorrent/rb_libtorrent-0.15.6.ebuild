@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.6.ebuild,v 1.2 2011/04/15 14:48:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.6.ebuild,v 1.3 2011/04/15 20:41:33 arfrever Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.6"
@@ -22,8 +22,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/boost-1.36
-	python? ( >=dev-libs/boost-1.36[python] )
+DEPEND=">=dev-libs/boost-1.36[python?]
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
