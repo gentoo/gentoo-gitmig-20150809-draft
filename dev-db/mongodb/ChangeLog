@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.14 2011/04/13 14:56:32 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.15 2011/04/15 07:51:06 ultrabug Exp $
+
+*mongodb-1.8.1-r1 (15 Apr 2011)
+*mongodb-1.6.5-r1 (15 Apr 2011)
+
+  15 Apr 2011; Ultrabug <ultrabug@gentoo.org> -mongodb-1.6.5.ebuild,
+  +mongodb-1.6.5-r1.ebuild, files/mongodb-1.6-fix-scons.patch,
+  -mongodb-1.8.1.ebuild, +mongodb-1.8.1-r1.ebuild,
+  files/mongodb-1.8-fix-scons.patch:
+  improved CXX, remove ggdb flag, drop old
 
 *mongodb-1.8.1 (13 Apr 2011)
 *mongodb-1.6.5 (13 Apr 2011)

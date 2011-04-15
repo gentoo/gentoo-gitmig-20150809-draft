@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.6.5.ebuild,v 1.1 2011/04/13 14:56:32 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.6.5-r1.ebuild,v 1.1 2011/04/15 07:51:06 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -33,7 +33,7 @@ pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
-	scons_opts=" --sharedclient"
+	scons_opts=" --cxx=$(tc-getCXX) --sharedclient"
 	if use v8; then
 		scons_opts+=" --usev8"
 	else

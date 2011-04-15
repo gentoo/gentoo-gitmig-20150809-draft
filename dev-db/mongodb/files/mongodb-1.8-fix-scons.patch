@@ -1,7 +1,11 @@
---- a/SConstruct	2011-04-06 06:40:13.000000000 +0200
-+++ b/SConstruct	2011-04-10 15:50:52.696516582 +0200
-@@ -671,9 +671,10 @@
-     env.Append( CPPFLAGS="-fPIC -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch" )
+--- a/SConstruct	2011-04-13 18:25:01.436551679 +0200
++++ b/SConstruct	2011-04-13 18:25:45.387832601 +0200
+@@ -668,12 +668,13 @@
+     if has_option( "distcc" ):
+         env["CXX"] = "distcc " + env["CXX"]
+         
+-    env.Append( CPPFLAGS="-fPIC -fno-strict-aliasing -ggdb -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch" )
++    env.Append( CPPFLAGS="-fPIC -fno-strict-aliasing -pthread -Wall -Wsign-compare -Wno-unknown-pragmas -Winvalid-pch" )
      # env.Append( " -Wconversion" ) TODO: this doesn't really work yet
      if linux:
 -        env.Append( CPPFLAGS=" -Werror " )
