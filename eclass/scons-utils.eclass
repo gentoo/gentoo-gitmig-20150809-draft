@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.3 2011/02/07 14:55:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.4 2011/04/15 20:06:07 mgorny Exp $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:
@@ -51,6 +51,13 @@
 # The default value for false in scons-use() (0 by default).
 : ${USE_SCONS_FALSE:=0}
 
+# -- EAPI support check --
+
+case ${EAPI:-0} in
+	0|1|2|3|4) ;;
+	*) die "EAPI ${EAPI} unsupported."
+esac
+
 # -- ebuild variables setup --
 
 if [[ -n ${SCONS_MIN_VERSION} ]]; then
@@ -65,14 +72,21 @@ fi
 # @USAGE: [scons-arg] ...
 # @DESCRIPTION:
 # Call scons, passing the supplied arguments, ${MAKEOPTS} and
-# ${EXTRA_ESCONS}. Similar to emake.
+# ${EXTRA_ESCONS}. Similar to emake. Like emake, this function does die
+# on failure in EAPI 4 (unless called nonfatal).
 escons() {
+	local ret
+
 	debug-print-function ${FUNCNAME} "${@}"
 
 	# if SCONSOPTS are _unset_, use cleaned MAKEOPTS
 	set -- scons ${SCONSOPTS-$(scons_clean_makeopts)} ${EXTRA_ESCONS} "${@}"
 	echo "${@}" >&2
 	"${@}"
+	ret=${?}
+
+	[[ ${ret} -ne 0 && ${EAPI:-0} -ge 4 ]] && die "escons failed."
+	return ${ret}
 }
 
 # @FUNCTION: scons_clean_makeopts
