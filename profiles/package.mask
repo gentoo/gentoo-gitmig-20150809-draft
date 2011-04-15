@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12691 2011/04/15 16:22:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12692 2011/04/15 18:02:04 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -84,7 +84,7 @@ net-firewall/shorewall-shell
 # If you wish to have only the ekey-egd-linux service, build
 # app-crypt/ekeyd with USE=minimal.
 #
-# Removal on 2011-04-08
+# Removal on 2011-05-08
 app-crypt/ekey-egd-linux
 
 # Marijn Schouten <hkBst@gentoo.org> (07 April 2011)
@@ -585,17 +585,6 @@ gnome-extra/quick-lounge-applet
 # refer to bug #340375
 www-plugins/moonlight
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (25 Jan 2011)
-#  on behalf of QA team
-#
-# Missing a dedicated maintainer; problems regarding LDFLAGS
-# (bug #335471), overflows (bug #340671), W|X sections,
-# and misc problems (bug #224209) as well as missing version
-# bumps for about two years now (bug #273890).
-#
-# Removal on 2011-03-26
-dev-util/plan9port
-
 # Doug Goldstein <cardoe@gentoo.org> (24 Jan 2011)
 # Masked beta versions
 =x11-drivers/nvidia-drivers-270.18
@@ -632,41 +621,11 @@ media-plugins/vdr-avolctl
 # to prevent lightspark crashes (bug #350150)
 >=dev-cpp/libxmlpp-2.33.1
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (15 Jan 2011)
-#  on behalf of QA team
-#
-# Fails to build without automake-1.7 (not in deps), as per
-# bug #233049, open 2008-07. Last bumped in 2005, and not
-# even touched since.
-#
-# Removal on 2011-03-16
-net-print/gqueue
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (12 Jan 2011)
 # Starting with KOffice version 2.2.0, the functionality of app-office/kchart
 # is provided by the app-office/koffice-libs ebuild. If you still have
 # >=app-office/kchart-2.2.0 installed, please just unmerge it (it is only a dummy).
 >=app-office/kchart-2.2.0
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (11 Jan 2011)
-#  on behalf of QA team
-#
-# Fails to build (but does not die in compile), see bug
-# #298587. The package fails to build since January 2006.
-#
-# Removal on 2011-03-12
-net-mail/cyrus-imspd
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Jan 2011)
-#  on behalf of QA team
-#
-# Fails to build with berkdb 5 (bug #319689) and uses bundled
-# copy on -gdbm if berkdb cannot be used; ignores LDFLAGS
-# (bug #337651), not updated since 2007, requires domain
-# knowledge to maintain.
-#
-# Removal on 2011-03-11
-app-i18n/skktools
 
 # Torsten Veller <tove@gentoo.org> (06 Jan 2011)
 # Next step to remove old perl and libperl versions.
@@ -676,15 +635,6 @@ app-i18n/skktools
 # For other complaints go to bug 350785
 <dev-lang/perl-5.12.2
 <sys-devel/libperl-5.10.1
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (26 Dec 2010)
-#  on behalf of QA team
-#
-# Can't be installed since at least October (bug #341151),
-# fails sanity checks.
-#
-# Removal on 2011-02-24
-dev-util/devel-chroots
 
 # Sergei Trofimovich <slyfox@gentoo.org> (18 Dec 2010)
 # Uses custom buildsystem. As a result has a lot of QA
@@ -830,17 +780,6 @@ x11-misc/lightdm
 app-emulation/opennebula
 app-emulation/qemu-kvm-spice
 =media-libs/celt-0.8.1
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2010)
-#  on behalf of QA team
-#
-# The ebuild breaks about any QA policy regarding not touching
-# live filesystem as it writes to LVM configuration,
-# cron configuration, current-running kernel modules, RPM
-# library, ...
-#
-# Removal on 2010-10-09
-app-admin/webmin
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (22 Jul 2010)
 # Development versions.
