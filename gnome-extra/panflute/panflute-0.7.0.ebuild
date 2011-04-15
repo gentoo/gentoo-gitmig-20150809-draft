@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.1 2011/04/15 12:45:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/panflute/panflute-0.7.0.ebuild,v 1.2 2011/04/15 12:57:47 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -30,7 +30,7 @@ RDEPEND="
 	>=dev-python/gconf-python-2.14
 	>=dev-python/gnome-applets-python-2.14
 	>=dev-python/pygtk-2.16:2
-	libnotify? ( dev-python/notify-python )
+	libnotify? ( >=dev-python/notify-python-0.1.1-r2 )
 	mpd? ( >=dev-python/python-mpd-0.2.1 )
 	!gnome-extra/music-applet
 "
@@ -48,8 +48,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# Upstream: https://bugs.launchpad.net/panflute/+bug/761701
-	has_version ">=x11-libs/libnotify-0.7" && epatch \
-		"${FILESDIR}"/${PN}-0.6.2-libnotify-0.7.patch
+	epatch "${FILESDIR}"/${PN}-0.6.2-libnotify-0.7.patch
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
