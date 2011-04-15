@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.9.ebuild,v 1.1 2011/02/22 08:09:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/mpc-0.9.ebuild,v 1.2 2011/04/15 09:27:58 grobian Exp $
 
 # Unconditional dependency of gcc.  Keep this set to 0.
 EAPI=0
@@ -18,7 +18,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 DEPEND=">=dev-libs/gmp-4.3.2
-		>=dev-libs/mpfr-2.4.2"
+		>=dev-libs/mpfr-2.4.2
+		elibc_SunOS? ( >=sys-devel/gcc-4.5 )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
