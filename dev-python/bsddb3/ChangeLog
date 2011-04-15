@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.68 2011/04/14 20:34:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.69 2011/04/15 21:44:42 angelos Exp $
+
+  15 Apr 2011; Christoph Mende <angelos@gentoo.org> bsddb3-5.1.2.ebuild:
+  Stable on amd64 wrt bug #362757
 
   14 Apr 2011; Brent Baude <ranger@gentoo.org> bsddb3-5.1.2.ebuild:
   stable ppc, bug 362757
