@@ -1,0 +1,10 @@
+# ChangeLog for virtual/dev-manager
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/dev-manager/ChangeLog,v 1.1 2011/04/15 21:46:03 ulm Exp $
+
+*dev-manager-0 (15 Apr 2011)
+
+  15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +dev-manager-0.ebuild,
+  +metadata.xml:
+  Initial import, bug 361133.
+
