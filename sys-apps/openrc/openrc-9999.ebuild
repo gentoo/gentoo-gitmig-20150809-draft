@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.79 2011/03/24 18:49:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.80 2011/04/15 03:27:29 williamh Exp $
 
 EAPI="1"
 
@@ -132,6 +132,11 @@ src_install() {
 
 	# Cater to the norm
 	set_config_yes_no /etc/conf.d/keymaps windowkeys '(' use x86 '||' use amd64 ')'
+
+	# On HPPA, do not run consolefont by default (bug #222889)
+	if use hppa; then
+		rm -f "${D}"/usr/share/openrc/runlevels/boot/consolefont
+	fi
 
 	# Support for logfile rotation
 	insinto /etc/logrotate.d
@@ -406,6 +411,12 @@ pkg_postinst() {
 	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
 		ewarn "your files to /etc/conf.d/modules and delete the directory."
+	fi
+
+	if use hppa; then
+		elog "Setting the console font does not work on all HPPA consoles."
+		elog "You can still enable it by running:"
+		elog "# rc-update add consolefont boot"
 	fi
 
 	# update the dependency tree after touching all files #224171
