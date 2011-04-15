@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/attr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.124 2010/12/05 16:07:43 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.125 2011/04/15 17:17:48 flameeyes Exp $
+
+*attr-2.4.44-r1 (15 Apr 2011)
+
+  15 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> +attr-2.4.44-r1.ebuild:
+  Revision bump: port to EAPI=4, drop prepalldocs, add static-libs USE flag,
+  drop .la files if static-libs are disabled.
 
   05 Dec 2010; Raúl Porcel <armin76@gentoo.org> attr-2.4.44.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #346455
