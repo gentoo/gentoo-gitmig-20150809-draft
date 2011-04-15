@@ -1,6 +1,11 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.233 2011/03/25 14:25:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.234 2011/04/15 08:01:55 pva Exp $
+
+  15 Apr 2011; Peter Volkov <pva@gentoo.org> -pidgin-2.7.10.ebuild,
+  pidgin-2.7.11.ebuild:
+  Allow to build net-libs/libgadu without ssl, bug #363627 thank Bartosz
+  Brachaczek for report. Drop old.
 
   25 Mar 2011; Peter Volkov <pva@gentoo.org> pidgin-2.7.10.ebuild,
   pidgin-2.7.11.ebuild:

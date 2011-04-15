@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.11.ebuild,v 1.8 2011/03/25 14:25:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.7.11.ebuild,v 1.9 2011/04/15 08:01:55 pva Exp $
 
 EAPI=2
 
@@ -48,7 +48,7 @@ RDEPEND="
 		dev-python/dbus-python )
 	perl? ( >=dev-lang/perl-5.8.2-r1[-build] )
 	gadu? ( || ( >=net-libs/libgadu-1.10.1[ssl,gnutls]
-		<net-libs/libgadu-1.10.1[-ssl] ) )
+		net-libs/libgadu[-ssl] ) )
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( >=dev-libs/nss-3.11 )
 	meanwhile? ( net-libs/meanwhile )
