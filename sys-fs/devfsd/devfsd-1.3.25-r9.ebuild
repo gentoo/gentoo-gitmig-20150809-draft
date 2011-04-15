@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r9.ebuild,v 1.4 2008/01/26 07:39:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r9.ebuild,v 1.5 2011/04/15 21:56:12 ulm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND="<sys-kernel/linux-headers-2.6.18"
 RDEPEND=""
-PROVIDE="virtual/dev-manager"
 
 S=${WORKDIR}/${PN}
 

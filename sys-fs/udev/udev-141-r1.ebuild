@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141-r1.ebuild,v 1.4 2010/02/07 20:32:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-141-r1.ebuild,v 1.5 2011/04/15 21:55:18 ulm Exp $
 
 #
 # Please do not remove this version:
@@ -41,9 +41,6 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
 	!<sys-fs/device-mapper-1.02.19-r1
 	>=sys-apps/baselayout-1.12.5"
-
-# We need the lib/rcscripts/addon support
-PROVIDE="virtual/dev-manager"
 
 pkg_setup() {
 	udev_helper_dir="/$(get_libdir)/udev"

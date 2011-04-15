@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-162.ebuild,v 1.1 2010/09/12 12:05:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-162.ebuild,v 1.2 2011/04/15 21:55:18 ulm Exp $
 
 EAPI="1"
 
@@ -64,9 +64,6 @@ fi
 # required kernel options
 CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
 	~!IDE"
-
-# We need the lib/rcscripts/addon support
-PROVIDE="virtual/dev-manager"
 
 udev_check_KV() {
 	local ok=0

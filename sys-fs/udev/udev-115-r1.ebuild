@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r1.ebuild,v 1.14 2011/02/06 11:10:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-115-r1.ebuild,v 1.15 2011/04/15 21:55:18 ulm Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -22,7 +22,6 @@ RDEPEND="!sys-apps/coldplug
 RDEPEND="${DEPEND} ${RDEPEND}
 	>=sys-apps/baselayout-1.12.5"
 # We need the lib/rcscripts/addon support
-PROVIDE="virtual/dev-manager"
 
 pkg_setup() {
 	udev_helper_dir="/$(get_libdir)/udev"

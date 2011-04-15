@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.570 2011/04/03 19:33:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.571 2011/04/15 21:55:18 ulm Exp $
+
+  15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> udev-114.ebuild,
+  udev-115-r1.ebuild, udev-119.ebuild, udev-124-r1.ebuild, udev-124-r2.ebuild,
+  udev-141.ebuild, udev-141-r1.ebuild, udev-146-r1.ebuild, udev-149.ebuild,
+  udev-151-r4.ebuild, udev-162.ebuild, udev-163.ebuild, udev-164.ebuild,
+  udev-164-r1.ebuild, udev-164-r2.ebuild, udev-167.ebuild, udev-167-r1.ebuild,
+  udev-9999.ebuild:
+  Don't PROVIDE virtual/dev-manager, it is a new-style virtual now. Bug 361133.
 
   03 Apr 2011; Matthias Schwarzott <zzam@gentoo.org> udev-167.ebuild,
   udev-167-r1.ebuild, udev-9999.ebuild:
