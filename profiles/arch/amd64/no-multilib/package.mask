@@ -1,32 +1,26 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.97 2011/03/23 16:28:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.98 2011/04/15 20:27:57 angelos Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
 app-accessibility/mbrola
 app-accessibility/perlbox-voice
-app-antivirus/f-prot
 app-arch/stuffit
 app-benchmarks/cpuburn
 =app-editors/emacs-18*
 app-emulation/crossover-office-bin
 app-emulation/crossover-office-pro-bin
 app-emulation/playonlinux
-app-emulation/point2play
 app-emulation/q4wine
 app-emulation/virtualbox
 app-emulation/virtualbox-extpack-oracle
 app-emulation/virtualbox-guest-additions
-app-emulation/vmware-dsp
 app-emulation/vmware-player
 app-emulation/vmware-server
 app-emulation/vmware-server-console
-<app-emulation/vmware-workstation-6.5
 >=app-i18n/atokx3-3.0.0
-app-office/mozilla-sunbird-bin
 app-office/ooextras
-<app-office/openoffice-bin-3.2.0
 app-emulation/emul-linux-x86-baselibs
 app-emulation/emul-linux-x86-compat
 app-emulation/emul-linux-x86-cpplibs
@@ -40,7 +34,6 @@ app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
 app-emulation/emul-linux-x86-java
-app-emulation/ies4linux
 app-emulation/wine
 app-emulation/wine-doors
 app-text/acroread
@@ -52,7 +45,6 @@ dev-lang/dmd-bin
 dev-lang/icc
 dev-lang/idb
 dev-lang/ifc
-dev-lang/realbasic
 dev-perl/Archive-Rar
 dev-python/skype4py
 dev-util/android-sdk-update-manager
@@ -75,10 +67,8 @@ games-arcade/barbarian-bin
 games-arcade/jardinains
 games-arcade/gish-demo
 games-emulation/caps
-games-emulation/goosnes
 games-emulation/nestra
 games-emulation/snes9express
-<games-emulation/snes9x-1.52
 games-emulation/zinc
 games-emulation/zsnes
 games-fps/avp
@@ -136,11 +126,9 @@ games-rpg/nwn-penultimarerolled
 games-rpg/rain-slick
 games-rpg/sacred-gold
 games-server/etqw-ded
-games-server/greenhouse
 games-server/nwn-ded
 games-server/ut2003-ded
 games-simulation/bcs-demo
-games-simulation/secondlife-bin
 games-strategy/coldwar
 games-strategy/coldwar-demo
 games-strategy/darwinia
@@ -155,7 +143,6 @@ games-strategy/smac
 games-strategy/x2
 games-strategy/x2-demo
 mail-client/thunderbird-bin
-mail-filter/MailScanner
 media-fonts/acroread-asianfonts
 media-gfx/picasa
 media-libs/realcodecs
@@ -168,13 +155,11 @@ media-tv/huludesktop
 media-tv/livestation
 media-video/binkplayer
 media-video/tsmuxer
-net-dialup/slmodem
 net-im/skype
 net-im/skysentials
 net-misc/icaclient
 net-misc/ps3mediaserver
 net-p2p/sancho-bin
-net-voip/wengophone-bin
 sci-biology/foldingathome
 sci-electronics/eagle
 sci-chemistry/cara-bin
