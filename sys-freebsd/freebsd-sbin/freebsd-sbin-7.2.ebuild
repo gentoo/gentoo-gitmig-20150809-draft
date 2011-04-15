@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-7.2.ebuild,v 1.3 2009/05/24 22:44:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-7.2.ebuild,v 1.4 2011/04/15 21:47:56 ulm Exp $
 
 EAPI=2
 
@@ -28,8 +28,6 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[ipv6?,atm?,netware?]
 DEPEND="${RDEPEND}
 	!build? ( =sys-freebsd/freebsd-sources-${RV}* )
 	=sys-freebsd/freebsd-mk-defs-${RV}*"
-
-PROVIDE="virtual/dev-manager"
 
 S="${WORKDIR}/sbin"
 

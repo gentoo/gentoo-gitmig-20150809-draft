@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.55 2010/03/19 11:50:49 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.56 2011/04/15 21:47:56 ulm Exp $
+
+  15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> freebsd-sbin-7.2.ebuild,
+  freebsd-sbin-8.0.ebuild:
+  Don't PROVIDE virtual/dev-manager, it is a new-style virtual now. Bug 361133.
 
 *freebsd-sbin-8.0 (19 Mar 2010)
 
