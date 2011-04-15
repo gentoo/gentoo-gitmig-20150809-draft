@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5289 2011/04/15 18:02:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5290 2011/04/15 22:11:47 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -uclibc/arm/2.4/virtuals,
+  -uclibc/arm/armeb/2.4/virtuals, -uclibc/ppc/2.4/virtuals,
+  -uclibc/ppc/hardened/2.4/virtuals, -uclibc/sh/2.4/virtuals,
+  -uclibc/x86/2.4/virtuals, -uclibc/x86/2005.1/2.4/virtuals,
+  -uclibc/x86/hardened/2.4/virtuals, hardened/virtuals:
+  Remove old-style virtual/dev-manager, bug 361133.
 
   15 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove masks for removed packages.
