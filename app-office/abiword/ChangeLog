@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.242 2011/03/31 08:11:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.243 2011/04/15 12:02:14 pacho Exp $
+
+  15 Apr 2011; Pacho Ramos <pacho@gentoo.org> abiword-2.8.6-r1.ebuild:
+  Needs app-text/libwpd:0
 
   31 Mar 2011; Pacho Ramos <pacho@gentoo.org> -abiword-2.8.6.ebuild:
   Remove old.
