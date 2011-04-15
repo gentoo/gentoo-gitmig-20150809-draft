@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.107 2011/04/11 09:08:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.108 2011/04/15 14:48:07 pacho Exp $
+
+  15 Apr 2011; Pacho Ramos <pacho@gentoo.org> rb_libtorrent-0.15.6.ebuild:
+  Needs python2 to compile ok (bug #315321 with Markos Chandras permission).
 
 *rb_libtorrent-0.15.6 (11 Apr 2011)
 

@@ -1,9 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.6.ebuild,v 1.1 2011/04/11 09:08:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.6.ebuild,v 1.2 2011/04/15 14:48:07 pacho Exp $
 
 EAPI="2"
-inherit eutils versionator
+PYTHON_DEPEND="python? 2:2.6"
+PYTHON_USE_WITH="threads"
+
+inherit eutils versionator python
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}
@@ -20,15 +23,21 @@ IUSE="debug doc examples python ssl"
 RESTRICT="test"
 
 DEPEND=">=dev-libs/boost-1.36
-	python? ( >=dev-libs/boost-1.36[python]
-		|| ( dev-lang/python:2.6[threads]
-		dev-lang/python:2.7[threads] ) )
+	python? ( >=dev-libs/boost-1.36[python] )
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
 	ssl? ( dev-libs/openssl )"
 
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	use python && python_set_active_version 2
+}
+
+src_prepare() {
+	use python && python_convert_shebangs -r 2 .
+}
 
 src_configure() {
 	# use multi-threading versions of boost libs
