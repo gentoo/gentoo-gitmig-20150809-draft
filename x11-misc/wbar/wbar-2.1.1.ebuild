@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.1.1.ebuild,v 1.3 2011/03/14 21:18:10 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.1.1.ebuild,v 1.4 2011/04/15 20:11:55 signals Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -43,6 +43,7 @@ src_prepare() {
 			etc/wbar.cfg.in || die "Removing wbar-config from cfg"
 	fi
 	sed -i configure.ac -e "/^CPPFLAGS/d" || die #respect flags
+	sed -i configure.ac -e "s/-Werror//" || die #Don't -Werror
 	eautoreconf
 	# Fix build issue reported by xarthisius
 	mv "${S}"/src/config/Main.cc "${S}"/src/config/Main-config.cc || die
