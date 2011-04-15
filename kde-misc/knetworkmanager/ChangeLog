@@ -1,6 +1,16 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.23 2011/04/10 16:33:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.24 2011/04/15 13:40:25 scarabeus Exp $
+
+*knetworkmanager-4.4.0_p20110415 (15 Apr 2011)
+
+  15 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -knetworkmanager-4.4.0_p20101012.ebuild,
+  -knetworkmanager-4.4.0_p20110204.ebuild,
+  -knetworkmanager-4.4.0_p20110410.ebuild,
+  +knetworkmanager-4.4.0_p20110415.ebuild:
+  Add new tarball that allows setting system wide connections. Drop older. Sync
+  with live ebuild.
 
 *knetworkmanager-4.4.0_p20110410 (10 Apr 2011)
 

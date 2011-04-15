@@ -1,16 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20110204.ebuild,v 1.1 2011/02/04 15:41:41 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20110415.ebuild,v 1.1 2011/04/15 13:40:25 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
-KMNAME="extragear/base"
-KMMODULE="knetworkmanagement"
-KDE_MINIMAL="4.5"
+KDE_MINIMAL="4.6"
 
-if [[ ${PV} != *9999* ]]; then
-	SRC_URI="http://dev.gentoo.org/~tampakrap/tarballs/${P}.tar.bz2"
-fi
+KDE_SCM="git"
+EGIT_REPONAME="networkmanagement"
+[[ ${PV} = 9999* ]] || SRC_URI="mirror://gentoo/${P}.tar.xz"
+[[ ${PV} = 9999* ]] || SRC_URI+=" http://dev.gentoo.org/~scarabeus/${P}.tar.xz"
 
 inherit kde4-base
 
@@ -20,14 +19,11 @@ HOMEPAGE="http://kde.org/"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="consolekit debug +networkmanager wicd"
+IUSE="consolekit debug"
 
 DEPEND="
-	$(add_kdebase_dep solid 'networkmanager?,wicd?')
 	net-misc/mobile-broadband-provider-info
-	>=net-misc/networkmanager-0.7
-	consolekit? ( sys-auth/consolekit )
-	!wicd? ( $(add_kdebase_dep solid 'networkmanager') )
+	$(add_kdebase_dep solid 'networkmanager')
 "
 RDEPEND="${DEPEND}"
 
@@ -46,7 +42,7 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		-DDBUS_SYSTEM_POLICY_DIR=/etc/dbus-1/system.d
 	)
 
