@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12690 2011/04/14 19:03:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12691 2011/04/15 16:22:15 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -63,6 +63,7 @@ dev-php5/php-libvirt
 # Nirbheek Chauhan <nirbheek@gentoo.org> (12 Apr 2011)
 # GNOME 3 mask, things will be added here slowly
 >=x11-wm/metacity-2.34
+>=media-gfx/gthumb-2.13
 
 # Constanze Hausner <constanze@gentoo.org> (10 Apr 2011)
 # Masked for removal in 30 days. Not used by any
