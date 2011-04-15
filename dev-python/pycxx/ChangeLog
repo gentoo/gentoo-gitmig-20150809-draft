@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycxx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.29 2011/04/14 20:35:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycxx/ChangeLog,v 1.30 2011/04/15 21:45:06 angelos Exp $
+
+  15 Apr 2011; Christoph Mende <angelos@gentoo.org> pycxx-6.2.3-r1.ebuild:
+  Stable on amd64 wrt bug #362765
 
   14 Apr 2011; Brent Baude <ranger@gentoo.org> pycxx-6.2.3-r1.ebuild:
   stable ppc, bug 362765
