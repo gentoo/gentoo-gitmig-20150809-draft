@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.44 2011/04/12 21:03:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.45 2011/04/15 18:49:14 eva Exp $
+
+  15 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-disk-utility-2.30.1.ebuild:
+  Clean up old revision.
 
   12 Apr 2011; Markus Meier <maekke@gentoo.org>
   gnome-disk-utility-2.32.1.ebuild:
