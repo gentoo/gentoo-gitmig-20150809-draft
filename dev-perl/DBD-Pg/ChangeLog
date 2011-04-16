@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.92 2011/04/10 10:49:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.93 2011/04/16 18:00:39 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> DBD-Pg-2.17.2.ebuild:
+  alpha/ia64/s390/sh/sparc/x86 stable wrt #360245
 
   10 Apr 2011; Markus Meier <maekke@gentoo.org> DBD-Pg-2.17.2.ebuild:
   arm stable, bug #360245
