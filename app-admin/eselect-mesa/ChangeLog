@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.17 2011/04/09 18:06:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.18 2011/04/16 17:52:48 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> eselect-mesa-0.0.9.ebuild:
+  alpha/ia64/sh/sparc stable wrt #359059
 
 *eselect-mesa-0.0.10 (09 Apr 2011)
 
