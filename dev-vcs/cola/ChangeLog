@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/cola
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/ChangeLog,v 1.8 2011/04/13 19:00:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/ChangeLog,v 1.9 2011/04/16 10:08:24 jlec Exp $
+
+*cola-1.4.3.2-r1 (16 Apr 2011)
+
+  16 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/1.4.3.2-backport.patch,
+  +cola-1.4.3.2-r1.ebuild, metadata.xml:
+  Added myself as maintainer, included backport patch from HEAD, fixing issues
+  with HOME being git repo and general repo cloning, including unicode support
 
 *cola-1.4.3.2 (13 Apr 2011)
 
