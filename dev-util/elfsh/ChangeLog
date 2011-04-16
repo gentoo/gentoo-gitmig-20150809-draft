@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfsh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.13 2010/08/10 20:41:20 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.14 2011/04/16 15:19:33 blueness Exp $
+
+  16 Apr 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Adding myself as maintainer and will give it love :)
 
   10 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   elfsh-0.51_beta3.ebuild:
