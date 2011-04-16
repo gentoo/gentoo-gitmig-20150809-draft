@@ -1,10 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r3.ebuild,v 1.7 2011/03/28 01:03:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r3.ebuild,v 1.8 2011/04/16 22:56:19 arfrever Exp $
 
-EAPI=2
+EAPI=3
+GENTOO_DEPEND_ON_PERL="no"
+PYTHON_DEPEND="python? *"
+SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils linux-info perl-module python multilib base
+inherit eutils linux-info perl-module python base
 
 DESCRIPTION="G15daemon takes control of the G15 keyboard, through the linux kernel uinput device driver"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
@@ -15,14 +18,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="perl python"
 
-DEPEND="=virtual/libusb-0*
+DEPEND="virtual/libusb:0
 	>=dev-libs/libg15-1.2.4
 	>=dev-libs/libg15render-1.2
-	perl? ( >=dev-perl/Inline-0.4 )
-	python? ( dev-lang/python )"
-
-RDEPEND="${DEPEND}
-	perl? ( dev-perl/GDGraph )"
+	perl? (
+		dev-lang/perl
+		dev-perl/GDGraph
+		>=dev-perl/Inline-0.4
+	)"
+RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-forgotten-open-mode.patch" )
 uinput_check() {
@@ -45,6 +49,9 @@ uinput_check() {
 pkg_setup() {
 	linux-info_pkg_setup
 	uinput_check
+	if use python; then
+		python_pkg_setup
+	fi
 }
 
 src_unpack() {
@@ -121,8 +128,11 @@ src_install() {
 		ebegin "Installing Python Bindings (g15daemon.py)"
 		cd "${WORKDIR}/pyg15daemon"
 
-		insinto $(python_get_sitedir)/g15daemon
-		doins g15daemon.py
+		installation() {
+			insinto $(python_get_sitedir)
+			doins g15daemon.py
+		}
+		python_execute_function installation
 
 		docinto python
 		dodoc AUTHORS
@@ -131,7 +141,7 @@ src_install() {
 
 pkg_postinst() {
 	if use python; then
-		python_mod_optimize $(python_get_sitedir)/g15daemon
+		python_mod_optimize g15daemon.py
 		echo ""
 	fi
 
@@ -152,6 +162,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if use python; then
-		python_mod_cleanup $(python_get_sitedir)/g15daemon
+		python_mod_cleanup g15daemon.py
 	fi
 }
