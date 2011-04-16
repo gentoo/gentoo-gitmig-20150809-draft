@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pypanel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.42 2011/04/10 17:48:02 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.43 2011/04/16 18:48:25 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> pypanel-2.4.ebuild,
+  pypanel-2.4-r1.ebuild:
+  Drop alpha keyword
 
   10 Apr 2011; Thomas Kahle <tomka@gentoo.org> pypanel-2.4-r1.ebuild:
   x86 stable per bug 362341
