@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.1.ebuild,v 1.8 2011/04/01 08:21:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.1.ebuild,v 1.9 2011/04/16 17:30:54 armin76 Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://rubyforge.org/projects/highline/"
 IUSE=""
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 all_ruby_prepare() {
 	sed -i -e '/AUTHORS/s:^:#:' Rakefile || die "Fixing the Rakefile failed"
