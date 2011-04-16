@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.9 2011/04/16 11:04:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.1.ebuild,v 1.1 2011/04/16 11:04:30 jlec Exp $
 
 EAPI="3"
 
@@ -54,7 +54,6 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXt"
-
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
 		boost? ( >=dev-libs/boost-1.40.0[mpi?] )
@@ -77,15 +76,24 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${P}-cg-path.patch \
+		"${FILESDIR}"/${PN}-5.6.0-cg-path.patch \
 		"${FILESDIR}"/${PN}-5.2.0-tcl-install.patch \
-		"${FILESDIR}"/${P}-boost-property_map.patch \
-		"${FILESDIR}"/${P}-libpng14.patch \
-		"${FILESDIR}"/${P}-R.patch \
-		"${FILESDIR}"/${P}-odbc.patch
+		"${FILESDIR}"/${PN}-5.6.0-boost-property_map.patch \
+		"${FILESDIR}"/${PN}-5.6.0-libpng14.patch \
+		"${FILESDIR}"/${PN}-5.6.0-R.patch \
+		"${FILESDIR}"/${PN}-5.6.0-odbc.patch \
+		"${FILESDIR}"/${P}-ffmpeg.patch
+
+	# Fix sure buffer overflow on some processors as reported by Flameyes in #338819
+	sed -e "s:CHIPNAME_STRING_LENGTH    (48 + 1):CHIPNAME_STRING_LENGTH    (79 + 1):" \
+		-i Utilities/kwsys/SystemInformation.cxx \
+		|| die "Failed to fix SystemInformation.cxx buffer overflow"
 	sed -e "s:@VTK_TCL_LIBRARY_DIR@:/usr/$(get_libdir):" \
 		-i Wrapping/Tcl/pkgIndex.tcl.in \
 		|| die "Failed to fix tcl pkgIndex file"
+	# Patch FindPythonLibs.cmake for python-2.7, removing it does more harm than good.
+	sed -e "s:2.6 2.5 2.4 2.3 2.2 2.1 2.0:2.7 2.6 2.5 2.4 2.3 2.2 2.1 2.0:" \
+		-i CMake/FindPythonLibs.cmake || die "failed to patch for python 2.7"
 }
 
 src_configure() {
@@ -193,30 +201,11 @@ src_install() {
 
 	# install examples
 	if use examples; then
-		dodir /usr/share/${PN} || \
-			die "Failed to create data/examples directory"
-
-		cp -pPR "${S}"/Examples "${D}"/usr/share/${PN}/examples || \
-			die "Failed to copy example files"
-
-		# fix example's permissions
-		find "${D}"/usr/share/${PN}/examples -type d -exec \
-			chmod 0755 {} \; || \
-			die "Failed to fix example directories permissions"
-		find "${D}"/usr/share/${PN}/examples -type f -exec \
-			chmod 0644 {} \; || \
-			die "Failed to fix example files permissions"
-
-		cp -pPR "${WORKDIR}"/VTKData "${D}"/usr/share/${PN}/data || \
-			die "Failed to copy data files"
-
-		# fix data's permissions
-		find "${D}"/usr/share/${PN}/data -type d -exec \
-			chmod 0755 {} \; || \
-			die "Failed to fix data directories permissions"
-		find "${D}"/usr/share/${PN}/data -type f -exec \
-			chmod 0644 {} \; || \
-			die "Failed to fix data files permissions"
+		insinto /usr/share/${PN}
+		mv -v Examples examples
+		doins -r examples || die
+		mv -v VTKData data || die
+		doins -r data || die
 	fi
 
 	#install big docs
@@ -229,9 +218,11 @@ src_install() {
 	fi
 
 	# environment
-	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> "${T}"/40${PN}
-	echo "VTK_DIR=/usr/$(get_libdir)/${PN}-${SPV}" >> "${T}"/40${PN}
-	echo "VTKHOME=/usr" >> "${T}"/40${PN}
+	cat >> "${T}"/40${PN} <<- EOF
+	VTK_DATA_ROOT=${EPREFIX}/usr/share/${PN}/data
+	VTK_DIR=${EPREFIX}/usr/$(get_libdir)/${PN}-${SPV}
+	VTKHOME=${EPREFIX}/usr
+	EOF
 	doenvd "${T}"/40${PN}
 }
 
