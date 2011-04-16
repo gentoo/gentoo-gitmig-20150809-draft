@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.304 2011/04/12 21:07:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.305 2011/04/16 18:45:50 nixnut Exp $
+
+  16 Apr 2011; nixnut <nixnut@gentoo.org> gnutls-2.10.5.ebuild:
+  ppc stable #361525
 
   12 Apr 2011; Markus Meier <maekke@gentoo.org> gnutls-2.10.5.ebuild:
   arm stable, bug #361525
