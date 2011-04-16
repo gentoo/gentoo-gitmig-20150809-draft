@@ -1,15 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.41 2009/01/10 16:16:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.42 2011/04/16 19:53:30 ulm Exp $
 
 # @ECLASS: aspell-dict.eclass
-# @MAINTAINER: 
+# @MAINTAINER:
 # app-dicts@gentoo.org
 #
 # Original author: Seemant Kulleen
 #
 # @BLURB: An eclass to streamline the construction of ebuilds for new aspell dicts
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # The aspell-dict eclass is designed to streamline the construction of
 # ebuilds for the new aspell dictionaries (from gnu.org) which support
 # aspell-0.50. Support for aspell-0.60 has been added by Sergey Ulanov.
@@ -44,8 +44,6 @@ else
 	RDEPEND=">=app-text/aspell-0.50"
 	DEPEND="${RDEPEND}"
 fi
-
-PROVIDE="virtual/aspell-dict"
 
 # @FUNCTION: aspell-dict_src_compile
 # @DESCRIPTION:
