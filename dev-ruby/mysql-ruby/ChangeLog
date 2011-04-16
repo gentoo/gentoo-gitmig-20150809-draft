@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.97 2011/03/27 19:40:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.98 2011/04/16 17:03:44 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> mysql-ruby-2.8.2.ebuild:
+  ia64/sparc stable wrt #356549
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> mysql-ruby-2.8.2.ebuild:
   Marking mysql-ruby-2.8.2 ppc for bug 356549
