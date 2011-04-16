@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5294 2011/04/16 13:21:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5295 2011/04/16 19:38:23 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +uclibc/package.use,
+  -hardened/linux/x86/minimal/virtuals, uclibc/virtuals:
+  Remove old-style virtual/ssh. Add USE=minimal for new-style virtual/ssh in
+  uclibc profile. Bug 361121.
 
   16 Apr 2011; Anthony G. Basile <blueness@gentoo.org> base/package.mask,
   selinux/package.mask, selinux/v2refpolicy/package.mask:

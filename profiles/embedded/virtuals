@@ -3,4 +3,3 @@ virtual/cron			sys-apps/busybox
 virtual/libc			sys-libs/glibc
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/modutils		sys-apps/busybox
-virtual/ssh			net-misc/dropbear

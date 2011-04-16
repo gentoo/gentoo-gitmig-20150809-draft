@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.153 2011/04/16 19:21:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.154 2011/04/16 19:38:23 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -17,4 +17,3 @@ virtual/cron				sys-process/vixie-cron
 virtual/libc				sys-libs/glibc
 virtual/linux-sources			sys-kernel/gentoo-sources
 virtual/modutils			sys-apps/module-init-tools
-virtual/ssh				net-misc/openssh

@@ -1,7 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/virtuals,v 1.22 2011/04/14 05:57:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/virtuals,v 1.23 2011/04/16 19:38:23 ulm Exp $
 
 virtual/libc			sys-libs/uclibc -sys-libs/glibc
 virtual/linux-sources		sys-kernel/vanilla-sources
-virtual/ssh			net-misc/dropbear
