@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/q7z-0.8.0.ebuild,v 1.3 2010/07/14 16:06:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/q7z-0.8.0.ebuild,v 1.4 2011/04/16 19:35:02 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
+
 inherit eutils python
 
 MY_PN="Q7Z"
@@ -27,6 +28,7 @@ S="${WORKDIR}/${MY_PN}/Build"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -72,9 +74,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "$(python_get_sitedir)/${PN}"
+	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup "$(python_get_sitedir)/${PN}"
+	python_mod_cleanup ${PN}
 }

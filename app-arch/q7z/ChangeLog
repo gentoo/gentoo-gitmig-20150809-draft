@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/q7z
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.8 2010/07/14 16:06:45 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.9 2011/04/16 19:35:02 arfrever Exp $
+
+  16 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  q7z-0.8.0.ebuild:
+  Fix deprecation warnings.
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   q7z-0.8.0.ebuild:
