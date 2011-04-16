@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.4.ebuild,v 1.10 2010/07/23 20:43:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.5.ebuild,v 1.1 2011/04/16 21:25:41 nerdboy Exp $
 
 EAPI=3
 inherit libtool
@@ -11,8 +11,10 @@ SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cxx jbig jpeg static-libs zlib"
+
+RDEPEND="${DEPEND}"
 
 DEPEND="jpeg? ( virtual/jpeg )
 	jbig? ( media-libs/jbigkit )
