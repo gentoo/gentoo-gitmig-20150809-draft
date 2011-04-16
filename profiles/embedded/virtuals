@@ -1,7 +1,6 @@
 virtual/aspell-dict		app-dicts/aspell-en
 virtual/cron			sys-apps/busybox
 virtual/libc			sys-libs/glibc
-virtual/inetd			sys-apps/busybox
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/modutils		sys-apps/busybox
 virtual/ssh			net-misc/dropbear

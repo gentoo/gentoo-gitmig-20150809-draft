@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/virtuals,v 1.6 2011/04/14 05:57:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/virtuals,v 1.7 2011/04/16 19:21:01 ulm Exp $
 
 # This file defines the virtuals that Gentoo/FreeBSD needs to modify respect
 # the base profile
 
 # KEEP THIS FILE SORTED ALPHABETICALLY OR RISK WRATH
 
-virtual/inetd			sys-freebsd/freebsd-usbin
 virtual/libc			sys-freebsd/freebsd-lib
