@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.141 2011/04/15 04:27:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.142 2011/04/16 01:20:08 williamh Exp $
+
+*openrc-0.8.2 (16 Apr 2011)
+
+  16 Apr 2011; William Hubbs <williamh@gentoo.org> +openrc-0.8.2.ebuild:
+  version bump
 
   15 Apr 2011; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Fix conf.d/local -> local.d transition for bug #363637.
