@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.2.5.ebuild,v 1.5 2011/02/27 15:42:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.2.5.ebuild,v 1.6 2011/04/16 22:35:09 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="2:2.5"
 GCONF_DEBUG="no"
@@ -40,6 +40,7 @@ DOCS="NEWS README TODO"
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-mime-install"
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -81,10 +82,10 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/${PN}
+	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup $(python_get_sitedir)/${PN}
+	python_mod_cleanup ${PN}
 }
