@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fetk/fetk-1.5.ebuild,v 1.1 2011/04/16 07:51:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fetk/fetk-1.5.ebuild,v 1.2 2011/04/16 07:52:20 jlec Exp $
 
 # inherit
 
@@ -20,5 +20,3 @@ RDEPEND="
 	~sci-libs/mc-${PV}
 	~media-libs/sg-${PV}"
 DEPEND=""
-
-
