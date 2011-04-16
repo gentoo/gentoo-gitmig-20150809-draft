@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.30.0.ebuild,v 1.4 2011/03/23 06:22:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.30.0.ebuild,v 1.5 2011/04/16 20:01:14 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="session? 2"
 PYTHON_USE_WITH_OPT="session? xml"
@@ -56,6 +56,7 @@ pkg_setup() {
 		$(use_enable python)"
 
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
