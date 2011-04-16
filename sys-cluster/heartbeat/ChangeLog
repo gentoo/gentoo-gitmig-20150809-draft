@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.93 2011/04/12 17:34:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.94 2011/04/16 18:59:10 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> heartbeat-1.2.5-r1.ebuild,
+  heartbeat-2.0.8.ebuild:
+  Drop ia64/sparc
 
   12 Apr 2011; Jeroen Roovers <jer@gentoo.org> heartbeat-3.0.4-r1.ebuild:
   Marked ~hppa (bug #359893).
