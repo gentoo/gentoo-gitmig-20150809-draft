@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbppp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.14 2010/05/30 18:29:20 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.15 2011/04/16 17:33:47 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> bbppp-0.2.3.ebuild,
+  bbppp-0.2.5.ebuild:
+  Remove bogus dependency on virtual/blackbox, bug 358825.
 
 *bbppp-0.2.5 (30 May 2010)
 

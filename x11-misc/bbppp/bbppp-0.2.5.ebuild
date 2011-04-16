@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/bbppp-0.2.5.ebuild,v 1.1 2010/05/30 18:29:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/bbppp-0.2.5.ebuild,v 1.2 2011/04/16 17:33:47 ulm Exp $
 
 EAPI=2
 
@@ -16,8 +16,6 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11"
-RDEPEND="${DEPEND}
-	virtual/blackbox"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc3-multiline.patch \
