@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.9 2011/03/30 11:08:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.10 2011/04/16 22:04:35 arfrever Exp $
 
-EAPI="1"
-inherit confutils eutils gnome2-utils multilib python
+EAPI="3"
+inherit confutils eutils gnome2-utils python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -44,19 +44,16 @@ pkg_setup() {
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
 	echo "ibus/_config.py" >> po/POTFILES.skip || die
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable doc gtk-doc) \
-		$(use_enable nls) || die
-	emake || die
+		$(use_enable nls)
 }
 
 src_install() {
