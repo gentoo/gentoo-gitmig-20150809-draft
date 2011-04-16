@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.80 2011/03/03 02:19:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.81 2011/04/16 19:27:44 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> dropbear-0.52.ebuild,
+  dropbear-0.52-r1.ebuild, dropbear-0.53.1.ebuild:
+  Don't PROVIDE virtual/ssh, bug 361121.
 
 *dropbear-0.53.1 (03 Mar 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.52-r1.ebuild,v 1.1 2010/04/20 08:04:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.52-r1.ebuild,v 1.2 2011/04/16 19:27:44 ulm Exp $
 
 inherit eutils savedconfig pam
 
@@ -18,7 +18,6 @@ DEPEND="zlib? ( sys-libs/zlib )
 	pam? ( virtual/pam )"
 RDEPEND="${DEPEND}
 	pam? ( >=sys-auth/pambase-20080219.1 )"
-PROVIDE="virtual/ssh"
 
 set_options() {
 	use minimal \

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.5_p1-r2.ebuild,v 1.8 2011/02/10 03:10:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.5_p1-r2.ebuild,v 1.9 2011/04/16 19:27:31 ulm Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -46,7 +46,6 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 RDEPEND="${RDEPEND}
 	pam? ( >=sys-auth/pambase-20081028 )"
-PROVIDE="virtual/ssh"
 
 S=${WORKDIR}/${PARCH}
 
