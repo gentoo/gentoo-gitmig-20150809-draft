@@ -3,7 +3,6 @@
 <pkgmetadata>
   <herd>printing</herd>
   <use>
-    <flag name="lprng-failsafe">Build version that doesn't take options for
-    compability with certain LPRng releases.</flag>
+    <flag name="lprng-failsafe">Refuse options for compability with certain LPRng versions.</flag>
   </use>
 </pkgmetadata>

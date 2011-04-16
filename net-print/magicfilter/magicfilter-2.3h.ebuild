@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-2.3h.ebuild,v 1.4 2011/04/16 10:15:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-2.3h.ebuild,v 1.5 2011/04/16 16:33:39 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -16,8 +16,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="lprng-failsafe"
 
-RDEPEND="lprng-failsafe? ( net-print/lprng )"
 DEPEND="app-text/ghostscript-gpl"
+RDEPEND="${DEPEND}
+	lprng-failsafe? ( net-print/lprng )"
 
 S=${WORKDIR}/${MY_P}
 
