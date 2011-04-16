@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20101029.ebuild,v 1.1 2010/11/05 14:28:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20101029.ebuild,v 1.2 2011/04/16 22:16:01 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="sqlite"
 inherit python
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -37,7 +38,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable nls) --enable-db-open-phrase || die
+	econf $(use_enable nls) --enable-db-open-phrase
 }
 
 src_install() {

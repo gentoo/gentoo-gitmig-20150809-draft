@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.2.0.20090915.ebuild,v 1.5 2010/05/26 10:36:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.2.0.20090915.ebuild,v 1.6 2011/04/16 22:16:01 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="sqlite"
 inherit eutils python
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_configure() {
-	econf $(use_enable nls) || die
+	econf $(use_enable nls)
 }
 
 src_install() {

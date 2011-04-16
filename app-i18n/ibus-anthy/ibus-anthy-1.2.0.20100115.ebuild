@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20100115.ebuild,v 1.4 2010/08/11 18:19:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20100115.ebuild,v 1.5 2011/04/16 22:12:10 arfrever Exp $
+
+EAPI=3
 
 inherit eutils python
 
@@ -22,16 +24,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
 }
 
-src_compile() {
-	econf $(use_enable nls) || die
-	emake || die
+src_configure() {
+	econf $(use_enable nls)
 }
 
 src_install() {

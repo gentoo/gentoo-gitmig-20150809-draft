@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.5.ebuild,v 1.1 2010/12/01 16:42:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.5.ebuild,v 1.2 2011/04/16 22:12:10 arfrever Exp $
 
-EAPI=2
+EAPI=3
 PYTHON_DEPEND="2:2.5"
 inherit eutils python
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -36,7 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable nls) || die
+	econf $(use_enable nls)
 }
 
 src_install() {

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-0.0.4.ebuild,v 1.3 2010/05/26 10:40:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-0.0.4.ebuild,v 1.4 2011/04/16 22:19:27 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit python
 
@@ -29,7 +29,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable nls) || die
+	econf $(use_enable nls)
 }
 
 src_install() {
