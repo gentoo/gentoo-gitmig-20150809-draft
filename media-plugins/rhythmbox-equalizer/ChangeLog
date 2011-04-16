@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/rhythmbox-equalizer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rhythmbox-equalizer/ChangeLog,v 1.1 2011/04/16 17:35:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rhythmbox-equalizer/ChangeLog,v 1.2 2011/04/16 18:14:52 nerdboy Exp $
+
+  16 Apr 2011; Steve Arnold <nerdboy@gentoo.org> ChangeLog:
+  Re-manifest...
 
 *rhythmbox-equalizer-0.1 (16 Apr 2011)
 
