@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.29 2011/03/28 12:16:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.30 2011/04/16 17:05:11 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> tinyproxy-1.8.2.ebuild:
+  ia64/sparc stable wrt #358091
 
   28 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   tinyproxy-1.8.2.ebuild:
