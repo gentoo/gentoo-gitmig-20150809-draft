@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.2.0-r2.ebuild,v 1.1 2011/04/10 08:40:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.2.0-r3.ebuild,v 1.1 2011/04/16 21:43:53 nerdboy Exp $
 
 EAPI="4"
 
@@ -52,15 +52,18 @@ src_compile() {
 
 src_install() {
 	# somewhat brute-force, but so is the build setup...
-	insinto /usr/include/minisat2
-	doins -r mtl || die
-	rm -f "${ED}"/usr/include/minisat2/mtl/config.mk || die
-	doins core/Solver.h simp/SimpSolver.h || die
+	fix_headers
 
-	insinto /usr/include/minisat2/core
-	doins core/SolverTypes.h || die
+	insinto /usr/include/${PN}2/mtl
+	doins mtl/*.h || die
 
-	insinto /usr/include/minisat2/utils
+	insinto /usr/include/${PN}2/core
+	doins core/Solver*.h || die
+
+	insinto /usr/include/${PN}2/simp
+	doins simp/Simp*.h || die
+
+	insinto /usr/include/${PN}2/utils
 	doins utils/*.h || die
 
 	newbin ${mydir}/${PN}_${myext} ${PN} || die
@@ -70,4 +73,12 @@ src_install() {
 	if use doc; then
 		dodoc "${DISTDIR}"/MiniSat.pdf || die
 	fi
+}
+
+fix_headers() {
+	# need to fix the circular internal includes a bit for standard usage
+	elog "Fixing header files..."
+
+	patch -p0 < "${FILESDIR}"/${P}-header_fix.patch \
+		|| die "header patch failed..."
 }

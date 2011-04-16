@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/minisat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.4 2011/04/10 08:40:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.5 2011/04/16 21:43:53 nerdboy Exp $
+
+*minisat-2.2.0-r3 (16 Apr 2011)
+
+  16 Apr 2011; Steve Arnold <nerdboy@gentoo.org> -minisat-2.2.0-r2.ebuild,
+  +minisat-2.2.0-r3.ebuild:
+  Updated to reoroganize headers one last time to fix package collision 
+  and apply cleanup patch.
 
 *minisat-2.2.0-r2 (10 Apr 2011)
 
