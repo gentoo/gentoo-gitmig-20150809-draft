@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.224 2011/04/14 14:20:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.225 2011/04/16 10:59:16 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> lyx-1.5.7.ebuild,
+  lyx-1.6.8.ebuild, lyx-1.6.9.ebuild:
+  Fix dependency on aspell, bug 363375.
 
   14 Apr 2011; Alexis Ballier <aballier@gentoo.org> lyx-1.6.9.ebuild:
   add MimeType to the desktop entry, bug #361437
