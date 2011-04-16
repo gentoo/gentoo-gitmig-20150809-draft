@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.117 2010/10/05 04:51:24 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.118 2011/04/16 19:47:30 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> enchant-1.6.0.ebuild:
+  Fix dependency on aspell, bug 363377.
 
   05 Oct 2010; Mart Raudsepp <leio@gentoo.org> -enchant-1.2.5.ebuild,
   -enchant-1.3.0.ebuild, -enchant-1.4.2.ebuild, -enchant-1.5.0.ebuild,
