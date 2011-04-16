@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.56 2011/04/16 13:19:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.57 2011/04/16 13:21:57 blueness Exp $
 
 # >=sci-libs/acml-3.6 requires gcc-4.2.
 >=sci-libs/acml-3.6
@@ -91,7 +91,6 @@
 -sec-policy/selinux-gorg
 -sec-policy/selinux-gpm
 -sec-policy/selinux-gpsd
--sec-policy/selinux-hal
 -sec-policy/selinux-hddtemp
 -sec-policy/selinux-icecast
 -sec-policy/selinux-ifplugd
