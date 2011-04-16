@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.151 2011/04/15 22:12:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.152 2011/04/16 18:25:42 ulm Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -13,7 +13,6 @@
 # PLEASE DON'T ADD ANY NEW ENTRIES!
 
 virtual/aspell-dict			app-dicts/aspell-en
-virtual/blackbox			x11-wm/blackbox
 virtual/cron				sys-process/vixie-cron
 virtual/inetd				sys-apps/xinetd
 virtual/libc				sys-libs/glibc
