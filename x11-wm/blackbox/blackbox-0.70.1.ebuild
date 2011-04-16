@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.13 2010/12/12 20:41:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.14 2011/04/16 18:20:44 ulm Exp $
 
 inherit autotools eutils
 
@@ -21,8 +21,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-apps/sed-4
 	x11-proto/xextproto"
-
-PROVIDE="virtual/blackbox"
 
 src_unpack() {
 	unpack ${A}

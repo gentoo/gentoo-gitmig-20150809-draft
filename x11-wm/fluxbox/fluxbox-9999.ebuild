@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.7 2011/01/19 00:52:17 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.8 2011/04/16 18:22:51 ulm Exp $
 
 EAPI=3
 inherit eutils git prefix
@@ -34,7 +34,6 @@ DEPEND="nls? ( sys-devel/gettext )
 	x11-proto/xextproto
 	xinerama? ( x11-proto/xineramaproto )
 	${RDEPEND}"
-PROVIDE="virtual/blackbox"
 
 SLOT="0"
 LICENSE="MIT"

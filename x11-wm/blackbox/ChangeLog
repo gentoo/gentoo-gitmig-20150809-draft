@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.67 2010/12/12 20:41:03 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.68 2011/04/16 18:20:44 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> blackbox-0.70.1.ebuild:
+  Don't PROVIDE virtual/blackbox, bug 358825.
 
   12 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> blackbox-0.70.1.ebuild:
   Fix building with >=x11-libs/libX11-1.4.0 wrt #348556 by Patrick Lauer
