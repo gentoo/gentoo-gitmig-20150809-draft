@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbtime
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbtime/ChangeLog,v 1.13 2010/05/30 17:29:23 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbtime/ChangeLog,v 1.14 2011/04/16 17:48:29 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> bbtime-0.1.5.ebuild:
+  Remove bogus dependency on virtual/blackbox, bug 358825.
 
   30 May 2010; Kacper Kowalik <xarthisius@gentoo.org> bbtime-0.1.5.ebuild,
   +files/bbtime-0.1.5-asneeded.patch:

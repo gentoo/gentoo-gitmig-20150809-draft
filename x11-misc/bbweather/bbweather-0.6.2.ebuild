@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.2.ebuild,v 1.9 2010/08/25 00:39:56 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.2.ebuild,v 1.10 2011/04/16 17:51:00 ulm Exp $
 
 DESCRIPTION="blackbox weather monitor"
 HOMEPAGE="http://www.netmeister.org/apps/bbweather/"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa"
 IUSE=""
 
-DEPEND="virtual/blackbox
-	>=net-misc/wget-1.7
+DEPEND=">=net-misc/wget-1.7
 	>=dev-lang/perl-5.6.1"
 RDEPEND="${DEPEND}
 	!<=x11-plugins/gkrellweather-2.0.7-r1"
