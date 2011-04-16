@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.411 2011/03/23 20:37:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.412 2011/04/16 23:56:26 flameeyes Exp $
+
+*gnupg-2.0.17-r1 (16 Apr 2011)
+
+  16 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +gnupg-2.0.17-r1.ebuild, +files/gnupg-2.0.17-gpgsm-gencert.patch,
+  metadata.xml:
+  Revision bump: patch gpgsm-gencert.sh to actually work; remove openct and
+  pcsc-lite USE flags: smartcard USE flag now enables scdaemon, and usb enables
+  the internal CCID driver; don't depend on a particular implementation since
+  there are multiple options; use EAPI=4 and REQUIRED_USE to block static
+  support with smartcard.
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gnupg-2.0.17.ebuild:
   ppc/ppc64 stable wrt #355265
