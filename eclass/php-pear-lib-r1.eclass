@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.21 2011/03/14 08:00:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.22 2011/04/16 12:19:00 olemarkus Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 
@@ -38,8 +38,12 @@ fi
 # Adds required PEAR channel if necessary
 php-pear-lib-r1_pkg_setup() {
 	if [[ -n $PHP_PEAR_CHANNEL ]] ; then
-		 pear channel-discover $PHP_PEAR_CHANNEL
-		 pear channel-update $PHP_PEAR_CHANNEL
+		if [[ -f $PHP_PEAR_CHANNEL ]]; then
+		 	pear channel-add $PHP_PEAR_CHANNEL
+		else		
+			pear channel-discover $PHP_PEAR_CHANNEL
+			pear channel-update $PHP_PEAR_CHANNEL
+		fi
 	fi
 }
 
