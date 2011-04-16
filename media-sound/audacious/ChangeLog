@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.226 2011/04/11 22:31:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.227 2011/04/16 20:37:02 chainsaw Exp $
+
+*audacious-2.5.0 (16 Apr 2011)
+
+  16 Apr 2011; Tony Vroon <chainsaw@gentoo.org> -audacious-2.2.ebuild,
+  -audacious-2.4.1.ebuild, -audacious-2.4.2.ebuild, -audacious-2.4.3.ebuild,
+  -audacious-2.5_alpha1.ebuild, +audacious-2.5.0.ebuild:
+  First release on the 2.5 branch; no longer masked. Add dependency on libguess
+  as suggested by Mathieu Zhang in bug #335461. Remove old ebuilds.
 
   11 Apr 2011; Jeroen Roovers <jer@gentoo.org> audacious-2.4.4.ebuild:
   Stable for HPPA (bug #361267).
