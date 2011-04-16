@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.4 2010/03/08 02:22:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.5 2011/04/16 19:55:39 arfrever Exp $
 
-EAPI=2
+EAPI=3
 PYTHON_DEPEND=2
 
 inherit eutils gnome2 python
@@ -20,6 +20,7 @@ RDEPEND="dev-python/wxpython:2.8
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -74,7 +75,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/opendict
+	python_mod_optimize opendict
 	gnome2_icon_cache_update
 
 	echo
@@ -86,6 +87,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/opendict
+	python_mod_cleanup opendict
 	gnome2_icon_cache_update
 }

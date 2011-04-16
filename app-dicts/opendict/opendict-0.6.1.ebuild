@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.9 2011/04/05 05:12:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.10 2011/04/16 19:55:39 arfrever Exp $
+
+EAPI=3
 
 inherit eutils python gnome2
 
@@ -17,12 +19,14 @@ RDEPEND=">=dev-lang/python-2.3
 	dev-python/pyxml"
 S="${WORKDIR}/OpenDict-${PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.6.1-desktop.patch"
 	sed -e "s:), '..')):), '../../../../..', 'share', 'opendict')):g" \
 		-i "${S}/lib/info.py"
+}
+
+src_configure() {
+	default
 }
 
 src_compile() {
@@ -69,7 +73,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/opendict
+	python_mod_optimize opendict
 	gnome2_icon_cache_update
 
 	elog "If you want system-wide plugins, unzip them into"
@@ -78,6 +82,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/opendict
+	python_mod_cleanup opendict
 	gnome2_icon_cache_update
 }
