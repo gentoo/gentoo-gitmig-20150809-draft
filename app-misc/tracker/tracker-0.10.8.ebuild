@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.8.ebuild,v 1.2 2011/04/14 12:28:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.8.ebuild,v 1.3 2011/04/16 18:55:17 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -154,7 +154,7 @@ pkg_setup() {
 		$(use_enable gtk tracker-preferences)
 		$(use_enable gtk tracker-needle)
 		$(use_enable introspection)
-		$(use_enable iptc libiptcdaita)
+		$(use_enable iptc libiptcdata)
 		$(use_enable jpeg libjpeg)
 		$(use_enable laptop upower)
 		$(use_enable mp3 taglib)

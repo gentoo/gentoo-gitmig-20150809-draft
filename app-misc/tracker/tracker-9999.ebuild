@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.39 2011/04/03 21:13:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.40 2011/04/16 18:55:17 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 # USE="doc" is managed by eclass.
-IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist qt4 rss strigi test +tiff upnp +vorbis xine +xml xmp"
+IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk +introspection iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist qt4 rss strigi test +tiff upnp +vorbis xine +xml xmp"
 
 # TODO: rest -> flickr
 # vala is built with debug by default (see VALAFLAGS)
@@ -54,6 +54,7 @@ RDEPEND="
 	gtk? (
 		>=dev-libs/libgee-0.3
 		>=x11-libs/gtk+-2.18:2 )
+	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	iptc? ( media-libs/libiptcdata )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? ( >=sys-power/upower-0.9 )
@@ -62,7 +63,8 @@ RDEPEND="
 		gtk? ( x11-libs/gdk-pixbuf:2 )
 		qt4? ( >=x11-libs/qt-gui-4.7.1:4 ) )
 	nautilus? (
-		gnome-base/nautilus
+		>=gnome-base/nautilus-2
+		<gnome-base/nautilus-2.90
 		>=x11-libs/gtk+-2.18:2 )
 	networkmanager? ( >=net-misc/networkmanager-0.8 )
 	pdf? (
@@ -126,13 +128,6 @@ pkg_setup() {
 		G2CONF="${G2CONF} --enable-video-extractor=external"
 	fi
 
-	# upower is used for AC power detection
-	if use laptop; then
-		G2CONF="${G2CONF} --disable-hal --enable-upower"
-	else
-		G2CONF="${G2CONF} --disable-hal --disable-upower"
-	fi
-
 	if use applet || use gtk; then
 		G2CONF="${G2CONF} VALAC=$(type -P valac-0.12)"
 	fi
@@ -143,6 +138,7 @@ pkg_setup() {
 
 	# unicode-support: libunistring, libicu or glib ?
 	G2CONF="${G2CONF}
+		--disable-hal
 		--enable-tracker-fts
 		--with-enca
 		--with-unicode-support=libicu
@@ -156,8 +152,10 @@ pkg_setup() {
 		$(use_enable gtk tracker-explorer)
 		$(use_enable gtk tracker-preferences)
 		$(use_enable gtk tracker-needle)
+		$(use_enable introspection)
 		$(use_enable iptc libiptcdata)
 		$(use_enable jpeg libjpeg)
+		$(use_enable laptop upower)
 		$(use_enable mp3 taglib)
 		$(use_enable nautilus nautilus-extension)
 		$(use_enable networkmanager network-manager)
