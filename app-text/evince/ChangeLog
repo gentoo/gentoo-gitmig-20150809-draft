@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.217 2011/04/15 21:41:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.218 2011/04/16 13:49:23 pacho Exp $
+
+  16 Apr 2011; Pacho Ramos <pacho@gentoo.org> evince-2.32.0-r2.ebuild:
+  gconf-2.m4 is needed for autoconf, bug #363781 by Jimmy C. Chau.
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> evince-2.32.0-r2.ebuild:
   Stable on amd64 wrt bug #363447
