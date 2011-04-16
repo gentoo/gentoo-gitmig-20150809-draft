@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.1.ebuild,v 1.1 2011/04/16 03:03:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.1-r1.ebuild,v 1.1 2011/04/16 03:49:09 reavertm Exp $
 
 EAPI="4"
 
@@ -15,13 +15,13 @@ SRC_URI="http://www.kadu.net/download/stable/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-#tlen
-IUSE="alsa ao dbus +gadu jabber kde phonon speech spell +ssl"
+#dbus tlen
+IUSE="alsa ao +gadu kde phonon speech spell +ssl xmpp"
 #tlen
 REQUIRED_USE="
 	|| (
 		gadu
-		jabber
+		xmpp
 	)
 "
 
@@ -31,13 +31,12 @@ COMMON_DEPEND="
 	>=media-libs/libsndfile-1.0
 	>=net-libs/libgadu-1.9.0[threads]
 	x11-libs/libXScrnSaver
+	>=x11-libs/qt-dbus-4.4:4
 	>=x11-libs/qt-gui-4.4:4[qt3support]
 	>=x11-libs/qt-sql-4.4:4[sqlite]
 	>=x11-libs/qt-webkit-4.4:4
 	alsa? ( media-libs/alsa-lib )
 	ao? ( media-libs/libao )
-	dbus? ( >=x11-libs/qt-dbus-4.4:4 )
-	jabber? ( net-dns/libidn )
 	kde? ( >=kde-base/kdelibs-4.3.3 )
 	phonon? (
 		!kde? (
@@ -49,9 +48,10 @@ COMMON_DEPEND="
 		kde? ( media-libs/phonon )
 	)
 	spell? ( app-text/enchant )
+	xmpp? ( net-dns/libidn )
 "
 DEPEND="${COMMON_DEPEND}
-	jabber? ( dev-util/automoc )
+	xmpp? ( dev-util/automoc )
 	x11-proto/scrnsaverproto
 "
 RDEPEND="${COMMON_DEPEND}
@@ -74,7 +74,7 @@ src_prepare() {
 		|| die ".config creation failed"
 
 	# Common modules
-	# BLACKISTED config_enable module_advanced_userlist m
+	# BLACKLISTED config_enable module_advanced_userlist m
 	config_enable module_antistring m
 	config_enable module_auto_hide m
 	config_enable module_autoaway m
@@ -126,7 +126,7 @@ src_prepare() {
 		config_enable module_history_migration m
 		config_enable module_profiles_import m
 	fi
-	use jabber && config_enable module_jabber_protocol m
+	use xmpp && config_enable module_jabber_protocol m
 	# BLACKLISTED use tlen && config_enable module_tlen_protocol m
 
 	# Audio outputs
@@ -136,24 +136,26 @@ src_prepare() {
 	use phonon && config_enable module_phonon_sound m
 
 	# Misc stuff
-	if use dbus; then
+	# BLACKLISTED if use dbus; then
 		# dbus interface for Kadu
 		# BLACKLISTED config_enable module_dbus m
-		# Media players - no build time deps so build them all
-		# bmpx_mediaplayer
-		config_enable module_mediaplayer m
-		# amarok1_mediaplayer m
-		config_enable module_amarok2_mediaplayer m
-		config_enable module_audacious_mediaplayer m
-		config_enable module_dragon_mediaplayer m
-		config_enable module_mpris_mediaplayer m
-		# falf_mediaplayer
-		# itunes_mediaplayer
-		config_enable module_vlc_mediaplayer m
-		# xmms2_mediaplayer
-		# xmms_mediaplayer
-		use kde && config_enable module_kde_notify m
-	fi
+	# BLACKLISTED fi
+
+	# Media players - no build time deps so build them all
+	# bmpx_mediaplayer
+	config_enable module_mediaplayer m
+	# amarok1_mediaplayer m
+	config_enable module_amarok2_mediaplayer m
+	config_enable module_audacious_mediaplayer m
+	config_enable module_dragon_mediaplayer m
+	config_enable module_mpris_mediaplayer m
+	# falf_mediaplayer
+	# itunes_mediaplayer
+	config_enable module_vlc_mediaplayer m
+	# xmms2_mediaplayer
+	# xmms_mediaplayer
+
+	use kde && config_enable module_kde_notify m
 	use speech && config_enable module_speech m
 	use spell && config_enable module_spellchecker m
 	if use ssl; then
