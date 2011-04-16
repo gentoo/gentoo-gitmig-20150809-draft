@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.285 2011/04/16 03:55:11 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.286 2011/04/16 05:56:36 tomka Exp $
+
+  16 Apr 2011; Thomas Kahle <tomka@gentoo.org> poppler-0.14.5-r1.ebuild:
+  x86 stable per bug 308017
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> poppler-0.14.5-r1.ebuild:
   Stable on amd64 wrt bug #308017
