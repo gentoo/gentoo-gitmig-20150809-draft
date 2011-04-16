@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.0.1-r1.ebuild,v 1.2 2011/02/21 15:40:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/oxygen-gtk-1.0.4.ebuild,v 1.1 2011/04/16 09:11:04 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit cmake-utils
 
