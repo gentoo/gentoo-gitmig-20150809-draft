@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-3.1-r1.ebuild,v 1.1 2011/04/16 13:55:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-3.1-r2.ebuild,v 1.1 2011/04/16 18:11:13 titanofold Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="doc"
 
-DEPEND="<dev-db/postgresql-base-9.0.0"
+DEPEND="dev-db/postgresql-base"
 RDEPEND="${DEPEND}"
 
 PROPERTIES="interactive"
