@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/xfce4-battery-plugin-1.0.0-r1.ebuild,v 1.1 2011/03/20 15:36:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery-plugin/xfce4-battery-plugin-1.0.0-r1.ebuild,v 1.2 2011/04/16 19:14:53 angelos Exp $
 
 EAPI=3
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/panel-plugins/${PN}/1.0/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~x86"
 IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.6:2
