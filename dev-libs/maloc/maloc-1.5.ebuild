@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-1.5.ebuild,v 1.1 2011/04/16 06:53:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-1.5.ebuild,v 1.2 2011/04/16 06:56:06 jlec Exp $
 
 EAPI="3"
 
@@ -17,11 +17,11 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	sys-libs/readline
+	mpi? ( virtual/mpi )"
+DEPEND="${RDEPEND}
 	doc? (
 		media-gfx/graphviz
-		app-doc/doxygen )
-	mpi? ( virtual/mpi )"
-DEPEND="${RDEPEND}"
+		app-doc/doxygen )"
 
 S="${WORKDIR}/${PN}"
 
