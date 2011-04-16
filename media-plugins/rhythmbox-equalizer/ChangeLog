@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/rhythmbox-equalizer
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rhythmbox-equalizer/ChangeLog,v 1.1 2011/04/16 17:35:14 nerdboy Exp $
+
+*rhythmbox-equalizer-0.1 (16 Apr 2011)
+
+  16 Apr 2011; Steve Arnold <nerdboy@gentoo.org>
+  +rhythmbox-equalizer-0.1.ebuild, +metadata.xml:
+  New ebuild for an actual Rhythmbox plugin, a 10-band graphic equalizer.
+  Using metadata from the edna ebuild, at least as a start.
+
