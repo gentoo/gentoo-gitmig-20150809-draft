@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ipsvd-1.0.0.ebuild,v 1.2 2009/09/23 19:38:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ipsvd-1.0.0.ebuild,v 1.3 2011/04/16 19:12:27 ulm Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="static"
 
 DEPEND=""
-PROVIDE="virtual/inetd"
 
 S="${WORKDIR}/net/${P}"
 

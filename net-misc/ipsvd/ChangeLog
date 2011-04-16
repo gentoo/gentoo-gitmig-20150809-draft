@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ipsvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.8 2011/01/21 00:03:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.9 2011/04/16 19:12:26 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> ipsvd-1.0.0.ebuild,
+  ipsvd-1.0.0-r1.ebuild:
+  Don't PROVIDE virtual/inetd, bug 358831.
 
 *ipsvd-1.0.0-r1 (21 Jan 2011)
 

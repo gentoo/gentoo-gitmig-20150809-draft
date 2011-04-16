@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ipsvd-1.0.0-r1.ebuild,v 1.1 2011/01/21 00:03:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ipsvd-1.0.0-r1.ebuild,v 1.2 2011/04/16 19:12:26 ulm Exp $
 
 EAPI=3
 
@@ -17,7 +17,6 @@ IUSE="static"
 
 DEPEND=""
 RDEPEND=""
-PROVIDE="virtual/inetd"
 
 S="${WORKDIR}/net/${P}"
 
