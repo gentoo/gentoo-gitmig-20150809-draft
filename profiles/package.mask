@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12693 2011/04/16 11:38:28 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12694 2011/04/16 12:15:53 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (16 Apr 2011)
+# Masked for removal in 30 days.  Bug #362847
+sec-policy/selinux-hal
 
 # Alexis Ballier <aballier@gentoo.org> (14 Apr 2011)
 # Beta/test version -> masked
