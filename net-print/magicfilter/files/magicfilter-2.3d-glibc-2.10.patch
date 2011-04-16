@@ -1,6 +1,5 @@
-diff -ur magicfilter-2.3.d.orig/fe.c magicfilter-2.3.d/fe.c
---- magicfilter-2.3.d.orig/fe.c	2003-05-09 21:27:15.000000000 +0300
-+++ magicfilter-2.3.d/fe.c	2009-08-08 23:59:09.000000000 +0300
+--- fe.c
++++ fe.c
 @@ -128,7 +128,7 @@
  
      /* read rules
@@ -10,9 +9,8 @@ diff -ur magicfilter-2.3.d.orig/fe.c magicfilter-2.3.d/fe.c
  	rulecount++;
  	if (tail) {
  	    tail->next = r;
-diff -ur magicfilter-2.3.d.orig/getline.c magicfilter-2.3.d/getline.c
---- magicfilter-2.3.d.orig/getline.c	2002-12-14 11:02:26.000000000 +0200
-+++ magicfilter-2.3.d/getline.c	2009-08-08 23:59:09.000000000 +0300
+--- getline.c
++++ getline.c
 @@ -27,7 +27,7 @@
   *  THE POSSIBILITY OF SUCH DAMAGE.
   */
@@ -89,9 +87,8 @@ diff -ur magicfilter-2.3.d.orig/getline.c magicfilter-2.3.d/getline.c
      return r;
 -} /* getline */
 +} /* get_line */
-diff -ur magicfilter-2.3.d.orig/rule.h magicfilter-2.3.d/rule.h
---- magicfilter-2.3.d.orig/rule.h	2002-07-12 02:23:43.000000000 +0300
-+++ magicfilter-2.3.d/rule.h	2009-08-08 23:59:09.000000000 +0300
+--- rule.h
++++ rule.h
 @@ -55,7 +55,7 @@
      struct rule *next;		/* next rule in the chain */
  } ;

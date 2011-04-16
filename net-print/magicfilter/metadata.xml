@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>printing</herd>
+  <herd>printing</herd>
+  <use>
+    <flag name="lprng-failsafe">Build version that doesn't take options for
+    compability with certain LPRng releases.</flag>
+  </use>
 </pkgmetadata>

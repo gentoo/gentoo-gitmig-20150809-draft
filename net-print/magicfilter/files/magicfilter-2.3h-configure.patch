@@ -1,7 +1,5 @@
-diff --git a/configure.sh b/configure.sh
-index 54561a4..2e8ff4c 100755
---- a/configure.sh
-+++ b/configure.sh
+--- configure.sh
++++ configure.sh
 @@ -423,44 +423,12 @@ EOF
      TLOGN " ($AC_CC)"
      if [ $status -eq 0 ]; then
