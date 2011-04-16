@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/python-wifi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.4 2011/03/30 16:16:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.5 2011/04/16 17:06:20 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> python-wifi-0.5.0-r1.ebuild:
+  Add ~ia64/~sparc wrt #357619
 
   30 Mar 2011; Jeroen Roovers <jer@gentoo.org> python-wifi-0.5.0-r1.ebuild:
   Marked ~hppa (bug #357619).
