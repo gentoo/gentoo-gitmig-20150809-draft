@@ -1,0 +1,9 @@
+# ChangeLog for virtual/ssh
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ssh/ChangeLog,v 1.1 2011/04/16 19:27:07 ulm Exp $
+
+*ssh-0 (16 Apr 2011)
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +ssh-0.ebuild, +metadata.xml:
+  Initial import, bug 361121.
+
