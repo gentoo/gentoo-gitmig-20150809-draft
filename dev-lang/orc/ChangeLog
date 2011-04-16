@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.15 2011/03/18 00:35:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.16 2011/04/16 07:00:58 ford_prefect Exp $
+
+*orc-0.4.12 (16 Apr 2011)
+
+  16 Apr 2011; Arun Raghavan <ford_prefect@gentoo.org> orc-0.4.9.ebuild,
+  +orc-0.4.12.ebuild:
+  Bump to 0.4.12. gcc 4.6 warning fixes and some minor fixes/enhancements.
 
   18 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> orc-0.4.11.ebuild,
   metadata.xml:
