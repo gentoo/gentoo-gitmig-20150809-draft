@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9.ebuild,v 1.9 2011/04/16 22:04:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9.ebuild,v 1.10 2011/04/16 22:08:19 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -63,7 +63,10 @@ update_gtk_immodules() {
 pkg_setup() {
 	# bug #342903
 	confutils_require_any X gtk
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
