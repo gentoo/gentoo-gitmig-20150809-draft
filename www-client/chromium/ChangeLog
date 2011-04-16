@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.338 2011/04/16 16:40:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.339 2011/04/16 18:58:57 angelos Exp $
+
+  16 Apr 2011; Christoph Mende <angelos@gentoo.org>
+  chromium-10.0.648.205.ebuild:
+  Stable on amd64 wrt bug #363629
 
   16 Apr 2011; Christian Faulhammer <fauli@gentoo.org>
   chromium-10.0.648.205.ebuild:
