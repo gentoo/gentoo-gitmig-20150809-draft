@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.8.8.ebuild,v 1.2 2011/03/01 03:22:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.8.8.ebuild,v 1.3 2011/04/16 20:28:27 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit eutils python games
 
@@ -37,9 +38,16 @@ S=${WORKDIR}/${PN}
 # How to deal with wine version installed ? (have a better mgmt of system one)
 # Look at debian pkg: http://packages.debian.org/sid/playonlinux
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
 	sed -i -e "s/\(Categories=\).*/\1Game;Emulator;/" etc/PlayOnLinux.desktop \
 		|| die "sed failed"
+	sed -e 's/PYTHON="python"/PYTHON="python2"/' -i lib/variables || die "sed failed"
+	python_convert_shebangs -r 2 .
 }
 
 src_install() {

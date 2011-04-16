@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/playonlinux
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.11 2010/12/26 16:00:04 volkmar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.12 2011/04/16 20:28:27 arfrever Exp $
+
+  16 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  playonlinux-3.8.8.ebuild:
+  Use Python 2 (bug #363879).
 
 *playonlinux-3.8.8 (26 Dec 2010)
 
