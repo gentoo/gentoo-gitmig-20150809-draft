@@ -1,4 +1,3 @@
-virtual/aspell-dict		app-dicts/aspell-en
 virtual/cron			sys-apps/busybox
 virtual/libc			sys-libs/glibc
 virtual/linux-sources		sys-kernel/gentoo-sources
