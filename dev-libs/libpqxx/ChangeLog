@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libpqxx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.65 2010/10/21 14:52:04 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.66 2011/04/16 11:00:47 titanofold Exp $
+
+*libpqxx-3.1 (16 Apr 2011)
+
+  16 Apr 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  libpqxx-2.6.8.ebuild, libpqxx-2.6.9.ebuild, libpqxx-3.0.2.ebuild,
+  +libpqxx-3.1.ebuild, metadata.xml:
+  Version bump. Fixes bug 349327. Moved to EAPI4 and interactive. Longer
+  description added to metadata.xml. Fixed DESCRIPTION.toolong.
 
   21 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libpqxx-3.0.2.ebuild:

@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.8.ebuild,v 1.12 2010/06/17 18:23:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/libpqxx-2.6.8.ebuild,v 1.13 2011/04/16 11:00:47 titanofold Exp $
 
 inherit eutils
 
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-DESCRIPTION="C++ client API for PostgreSQL. The standard front-end for writing C++ programs that use PostgreSQL. Supersedes older libpq++ interface."
+DESCRIPTION="C++ client API for PostgreSQL. The standard front-end for writing C++ programs that use PostgreSQL."
 SRC_URI="ftp://thaiopensource.org/software/${PN}/${P}.tar.gz"
 HOMEPAGE="http://thaiopensource.org/development/libpqxx/"
 LICENSE="BSD"
