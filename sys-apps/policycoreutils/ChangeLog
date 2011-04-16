@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.80 2011/02/08 17:29:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.81 2011/04/16 18:01:07 blueness Exp $
+
+  16 Apr 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Updated metadata info.
 
   08 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   policycoreutils-2.0.82.ebuild:
