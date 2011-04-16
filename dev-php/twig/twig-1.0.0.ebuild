@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/twig/twig-1.0.0.ebuild,v 1.1 2011/03/27 20:29:15 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/twig/twig-1.0.0.ebuild,v 1.2 2011/04/16 12:32:46 olemarkus Exp $
 
 EAPI="2"
-PHP_PEAR_CHANNEL="pear.twig-project.org"
+PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
 PHP_PEAR_PN="Twig"
 inherit php-pear-lib-r1
 

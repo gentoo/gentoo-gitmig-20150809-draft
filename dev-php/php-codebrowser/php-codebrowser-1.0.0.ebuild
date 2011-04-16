@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codebrowser/php-codebrowser-1.0.0.ebuild,v 1.1 2011/03/31 16:40:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codebrowser/php-codebrowser-1.0.0.ebuild,v 1.2 2011/04/16 12:49:34 olemarkus Exp $
 
-PHP_PEAR_CHANNEL="pear.phpunit.de"
+PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
 PHP_PEAR_PN="PHP_CodeBrowser"
 inherit php-pear-lib-r1
 

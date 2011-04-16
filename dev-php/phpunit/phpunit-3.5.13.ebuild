@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.2 2011/03/26 12:05:19 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.3 2011/04/16 12:57:04 olemarkus Exp $
 
 EAPI="2"
-PHP_PEAR_CHANNEL="pear.phpunit.de"
+PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
 PHP_PEAR_PN="PHPUnit"
 
 inherit php-pear-lib-r1
