@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-desktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-desktop/ChangeLog,v 1.13 2011/03/27 17:31:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-desktop/ChangeLog,v 1.14 2011/04/16 12:22:11 blueness Exp $
+
+  16 Apr 2011; Anthony G. Basile <blueness@gentoo.org>
+  selinux-desktop-2.20090730.ebuild, selinux-desktop-2.20091215.ebuild,
+  selinux-desktop-2.20101213.ebuild, selinux-desktop-20080525.ebuild,
+  metadata.xml:
+  Removed USE="hal".  Bug #362847
 
   27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Move USE="hal" description here from use.desc.
