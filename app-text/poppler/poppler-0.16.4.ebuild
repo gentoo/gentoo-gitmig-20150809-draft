@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.16.3-r1.ebuild,v 1.1 2011/04/14 19:13:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.16.4.ebuild,v 1.1 2011/04/16 03:55:11 reavertm Exp $
 
 EAPI="2"
 
@@ -59,9 +59,9 @@ src_configure() {
 		-DBUILD_QT4_TESTS=OFF
 		-DBUILD_CPP_TESTS=OFF
 		-DWITH_Qt3=OFF
+		-DENABLE_ABIWORD=OFF
 		-DENABLE_SPLASH=ON
 		-DENABLE_ZLIB=ON
-		-DENABLE_ABIWORD=OFF
 		$(cmake-utils_use_enable curl LIBCURL)
 		$(cmake-utils_use_enable cxx CPP)
 		$(cmake-utils_use_enable jpeg2k LIBOPENJPEG)
