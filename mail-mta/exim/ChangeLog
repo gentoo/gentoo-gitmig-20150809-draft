@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.185 2011/03/31 15:21:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.186 2011/04/16 16:21:24 grobian Exp $
+
+  16 Apr 2011; Fabian Groffen <grobian@gentoo.org> files/exim.logrotate:
+  Reload exim, instead of (re)starting it on logrotate, such that exim won't
+  get started when it wasn't, thanks Dmitry A. Bakshaev, bug #363665
 
 *exim-4.75 (31 Mar 2011)
 
