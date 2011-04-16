@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.27 2011/04/10 12:35:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.28 2011/04/16 16:03:55 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> testtools-0.9.8.ebuild:
+  ia64 stable wrt #343309
 
   10 Apr 2011; Tobias Klausmann <klausman@gentoo.org> testtools-0.9.8.ebuild:
   Stable on alpha, bug #343309
