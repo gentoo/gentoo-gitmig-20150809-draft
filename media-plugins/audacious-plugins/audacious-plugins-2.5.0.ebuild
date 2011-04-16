@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5_alpha1.ebuild,v 1.6 2011/03/30 15:29:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5.0.ebuild,v 1.1 2011/04/16 20:37:09 chainsaw Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ lame libnotify libsamplerate lirc midi mms mp3 mtp nls oss pulseaudio scrobbler 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2:2
-	>=media-sound/audacious-2.5_alpha1
+	>=media-sound/audacious-2.5.0
 	>=net-libs/neon-0.26.4
 	>=x11-libs/gtk+-2.14:2
 	aac? ( >=media-libs/faad2-2.7 )
@@ -61,10 +61,6 @@ mp3_warning() {
 	if ! use mp3 ; then
 		ewarn "MP3 support is optional, you may want to enable the mp3 USE-flag"
 	fi
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/2.4.3-libnotify-0.7.patch
 }
 
 src_configure() {
