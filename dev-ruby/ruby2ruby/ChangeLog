@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.35 2011/04/01 07:18:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.36 2011/04/16 17:19:59 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> ruby2ruby-1.2.4-r2.ebuild:
+  ia64 stable wrt #355299
 
   01 Apr 2011; Michael Weber <xmw@gentoo.org> ruby2ruby-1.2.4-r2.ebuild:
   sparc stable (bug 355299)

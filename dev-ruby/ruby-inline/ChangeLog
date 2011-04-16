@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-inline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.39 2011/04/01 07:14:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.40 2011/04/16 17:17:35 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> ruby-inline-3.8.6.ebuild:
+  ia64 stable wrt #355299
 
   01 Apr 2011; Michael Weber <xmw@gentoo.org> ruby-inline-3.8.6.ebuild:
   sparc stable (bug 355299)
