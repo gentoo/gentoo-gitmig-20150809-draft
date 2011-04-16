@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.50 2009/10/10 23:27:07 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.51 2011/04/16 19:16:41 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> xinetd-2.3.14.ebuild:
+  Don't PROVIDE virtual/inetd, bug 358831.
 
   10 Oct 2009; Mike Frysinger <vapier@gentoo.org> files/xinetd.rc6:
   Switch killall to ssd #279931 by Michał Górny.

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.1 2010/10/19 20:23:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.2 2011/04/16 19:13:52 ulm Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-PROVIDE="virtual/inetd"
+
 EPATCH_SUFFIX="patch"
 PATCHES=( "${FILESDIR}" )
 

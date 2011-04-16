@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r17.ebuild,v 1.9 2011/01/13 21:56:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r17.ebuild,v 1.10 2011/04/16 19:15:43 ulm Exp $
 
 inherit eutils fixheadtails flag-o-matic qmail
 
@@ -23,7 +23,6 @@ DEPEND=""
 RDEPEND="${DEPEND}
 	!app-doc/ucspi-tcp-man
 	selinux? ( sec-policy/selinux-ucspi-tcp )"
-PROVIDE="virtual/inetd"
 
 pkg_setup() {
 	if [[ -n "${UCSPI_TCP_PATCH_DIR}" ]]; then

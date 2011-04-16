@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.15 2009/06/20 12:18:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.16 2011/04/16 19:16:41 ulm Exp $
 
 inherit eutils
 
@@ -16,7 +16,6 @@ IUSE="perl tcpd"
 DEPEND="tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
 RDEPEND="${DEPEND}
 	perl? ( dev-lang/perl )"
-PROVIDE="virtual/inetd"
 
 src_unpack() {
 	unpack ${A}

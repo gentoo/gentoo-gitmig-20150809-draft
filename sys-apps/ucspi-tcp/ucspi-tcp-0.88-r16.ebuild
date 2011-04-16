@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r16.ebuild,v 1.9 2008/04/12 09:12:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r16.ebuild,v 1.10 2011/04/16 19:15:43 ulm Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -21,7 +21,6 @@ DEPEND=""
 RDEPEND="${DEPEND}
 	doc? ( app-doc/ucspi-tcp-man )
 	selinux? ( sec-policy/selinux-ucspi-tcp )"
-PROVIDE="virtual/inetd"
 
 src_unpack() {
 	unpack "${P}.tar.gz"
