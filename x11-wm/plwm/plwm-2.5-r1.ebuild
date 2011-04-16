@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5-r1.ebuild,v 1.7 2010/07/14 16:31:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5-r1.ebuild,v 1.8 2011/04/16 18:47:09 armin76 Exp $
 
 PYTHON_DEPEND="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/plwm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND=">=dev-python/python-xlib-0.12"
