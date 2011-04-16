@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.42 2011/04/10 19:45:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.43 2011/04/16 18:14:37 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> pkcs11-helper-1.08.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #360633
 
   10 Apr 2011; Markus Meier <maekke@gentoo.org> pkcs11-helper-1.08.ebuild:
   arm stable, bug #360633
