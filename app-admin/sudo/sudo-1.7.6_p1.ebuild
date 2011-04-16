@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1.ebuild,v 1.2 2011/04/10 22:48:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.6_p1.ebuild,v 1.1 2011/04/16 12:00:38 flameeyes Exp $
 
 EAPI=4
 
-inherit eutils pam multilib libtool
+inherit eutils pam
 
 MY_P=${P/_/}
 MY_P=${MY_P/beta/b}
@@ -29,13 +29,14 @@ LICENSE="as-is BSD"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="pam offensive ldap selinux skey"
+IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( virtual/pam )
 	ldap? (
 		>=net-nds/openldap-2.1.30-r1
 		dev-libs/cyrus-sasl
 	)
+	!pam? ( skey? ( >=sys-auth/skey-1.1.5-r1 ) )
 	app-editors/gentoo-editor
 	virtual/editor
 	virtual/mta"
@@ -50,12 +51,12 @@ S=${WORKDIR}/${MY_P}
 
 REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 
-MAKEOPTS="${MAKEOPTS} SAMPLES="
-
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-parallelinstall.patch
+	# compatability fix.
+	epatch "${FILESDIR}"/${PN}-skeychallengeargs.diff
 
-	elibtoolize
+	# prevent binaries from being stripped.
+	sed -i 's/\($(INSTALL).*\) -s \(.*[(sudo|visudo)]\)/\1 \2/g' Makefile.in
 }
 
 src_configure() {
@@ -111,6 +112,14 @@ src_configure() {
 
 	einfo "...done."
 
+	if use pam; then
+		myconf="--with-pam --without-skey"
+	elif use skey; then
+		myconf="--without-pam --with-skey"
+	else
+		myconf="--without-pam --without-skey"
+	fi
+
 	# audit: somebody got to explain me how I can test this before I
 	# enable it.. — Diego
 	econf --with-secure-path="${ROOTPATH}" \
@@ -120,21 +129,18 @@ src_configure() {
 		$(use_with offensive all-insults) \
 		$(use_with ldap ldap_conf_file /etc/ldap.conf.sudo) \
 		$(use_with ldap) \
-		$(use_with pam) \
-		$(use_with skey) \
-		--without-opie \
 		--without-linux-audit \
 		--with-timedir=/var/db/sudo \
-		--with-plugindir=/usr/$(get_libdir)/sudo \
-		--docdir=/usr/share/doc/${PF}
+		--docdir=/usr/share/doc/${PF} \
+		${myconf}
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
 
 	if use ldap; then
-		dodoc README.LDAP doc/schema.OpenLDAP
-		dosbin plugins/sudoers/sudoers2ldif
+		dodoc README.LDAP schema.OpenLDAP
+		dosbin sudoers2ldif
 
 		cat - > "${T}"/ldap.conf.sudo <<EOF
 # See ldap.conf(5) and README.LDAP for details\n"
@@ -150,6 +156,10 @@ EOF
 	fi
 
 	pamd_mimic system-auth sudo auth account session
+
+	insinto /etc
+	doins "${S}"/sudoers
+	fperms 0440 /etc/sudoers
 
 	keepdir /var/db/sudo
 	fperms 0700 /var/db/sudo
