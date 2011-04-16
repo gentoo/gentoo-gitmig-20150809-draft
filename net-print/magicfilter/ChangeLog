@@ -1,10 +1,10 @@
 # ChangeLog for net-print/magicfilter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.18 2011/04/16 10:15:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/ChangeLog,v 1.19 2011/04/16 10:16:48 ssuominen Exp $
 
   16 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   magicfilter-2.3h.ebuild, metadata.xml:
-  Remove virtual/lpr RDEPEND and add USE="lprng-failsafe".
+  Remove virtual/lpr RDEPEND wrt #358879 and add USE="lprng-failsafe".
 
   26 Dec 2009; Peter Volkov <pva@gentoo.org> magicfilter-1.2-r4.ebuild,
   magicfilter-2.3a.ebuild, magicfilter-2.3d.ebuild, magicfilter-2.3h.ebuild:
