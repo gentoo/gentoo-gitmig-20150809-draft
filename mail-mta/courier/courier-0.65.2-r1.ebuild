@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.10 2011/04/01 23:25:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2-r1.ebuild,v 1.11 2011/04/16 11:14:40 ulm Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -25,7 +25,7 @@ DEPEND="
 	mysql? ( virtual/mysql )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( dev-db/postgresql-base )
-	spell? ( virtual/aspell-dict )
+	spell? ( app-text/aspell )
 	fam? ( virtual/fam )
 	!mail-filter/maildrop
 	!mail-mta/esmtp
