@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3-r1.ebuild,v 1.1 2011/03/01 07:46:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/winefish/winefish-1.3.3-r1.ebuild,v 1.2 2011/04/16 19:50:54 ulm Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ IUSE="spell"
 
 RDEPEND=">=x11-libs/gtk+-2.4:2
 	>=dev-libs/libpcre-6.3
-	spell? ( virtual/aspell-dict )"
+	spell? ( app-text/aspell )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
