@@ -1,6 +1,17 @@
 # ChangeLog for sec-policy/selinux-postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/ChangeLog,v 1.32 2011/03/07 02:50:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/ChangeLog,v 1.33 2011/04/16 13:40:20 blueness Exp $
+
+*selinux-postfix-2.20101213-r3 (16 Apr 2011)
+*selinux-postfix-2.20101213-r2 (16 Apr 2011)
+
+  16 Apr 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-services-postfix-r2.patch,
+  +selinux-postfix-2.20101213-r2.ebuild,
+  +files/fix-services-postfix-r3.patch,
+  +selinux-postfix-2.20101213-r3.ebuild:
+  Allow postfix admin through sysadm (-r2) and postfix_smtpd_t to mysql
+  (-r3)
 
 *selinux-postfix-2.20101213-r1 (07 Mar 2011)
 
