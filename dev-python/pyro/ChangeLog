@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.35 2011/04/10 20:51:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.36 2011/04/16 18:37:57 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> pyro-3.12.ebuild,
+  pyro-4.1.ebuild, pyro-4.2.ebuild, pyro-4.3.ebuild:
+  Drop alpha/ia64/sparc
 
   10 Apr 2011; Markus Meier <maekke@gentoo.org> pyro-3.12.ebuild:
   x86 stable, bug #357989

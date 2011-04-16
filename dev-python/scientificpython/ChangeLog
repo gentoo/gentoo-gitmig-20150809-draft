@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.39 2011/04/10 20:51:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.40 2011/04/16 18:38:36 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org>
+  scientificpython-2.9-r1.ebuild, scientificpython-2.9.1.ebuild:
+  Drop alpha/ia64/sparc
 
   10 Apr 2011; Markus Meier <maekke@gentoo.org> scientificpython-2.9.1.ebuild:
   x86 stable, bug #353450
