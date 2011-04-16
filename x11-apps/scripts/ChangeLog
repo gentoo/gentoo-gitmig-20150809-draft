@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.22 2011/04/08 16:17:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/scripts/ChangeLog,v 1.23 2011/04/16 17:53:45 armin76 Exp $
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> scripts-1.0.1-r1.ebuild:
+  s390/sh stable wrt #359059
 
   08 Apr 2011; Markus Meier <maekke@gentoo.org> scripts-1.0.1-r1.ebuild:
   arm stable, bug #359059
