@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5290 2011/04/15 22:11:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5291 2011/04/16 11:38:28 titanofold Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2011; Aaron W. Swenson <titanofold@gentoo.org> package.mask:
+  Removed dev-cpp/libpqpp mask as dev-cpp/libpqpp has been removed from
+  tree.
 
   15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -uclibc/arm/2.4/virtuals,
   -uclibc/arm/armeb/2.4/virtuals, -uclibc/ppc/2.4/virtuals,

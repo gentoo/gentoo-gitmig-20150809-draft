@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12692 2011/04/15 18:02:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12693 2011/04/16 11:38:28 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -328,11 +328,6 @@ dev-php/PEAR-File_XSPF
 # Markos Chandras <hwoarang@gentoo.org> (17 Mar 2011)
 # Masking openocd prelease snapshot
 =dev-embedded/openocd-0.5.0_pre*
-
-# Aaron W. Swenson <titanofold@gentoo.org> (15 Mar 2011)
-# Upstream no longer exists. Superseded by dev-lib/libpqxx.
-# Removal 15 Apr 2011 (bug #348359)
-dev-cpp/libpqpp
 
 # Pacho Ramos <pacho@gentoo.org> (14 Mar 2011)
 # Still relies on deprecated libgnomeprint, there are many other
