@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.85.20110124.ebuild,v 1.1 2011/02/28 02:38:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.85.20110124.ebuild,v 1.2 2011/04/16 11:11:27 ulm Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/openssl-0.9.6
 	idn? ( net-dns/libidn )
 	ipv6? ( net-dns/libidn )
 	ldap? ( net-nds/openldap )
-	spell? ( virtual/aspell-dict )"
+	spell? ( app-text/aspell )"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 

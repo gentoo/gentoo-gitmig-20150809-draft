@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/cone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.36 2011/02/28 02:38:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.37 2011/04/16 11:11:27 ulm Exp $
+
+  16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> cone-0.84.20100819-r1.ebuild,
+  cone-0.85.20110124.ebuild:
+  Fix dependency on aspell, bug 363381.
 
 *cone-0.85.20110124 (28 Feb 2011)
 
