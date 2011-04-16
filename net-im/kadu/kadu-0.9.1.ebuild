@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.0.ebuild,v 1.3 2011/03/26 16:13:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.1.ebuild,v 1.1 2011/04/16 03:03:23 reavertm Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit base cmake-utils flag-o-matic
 
 MY_P="${P/_/-}"
 
-DESCRIPTION="QT client for popular in Poland Gadu-Gadu instant messaging network"
+DESCRIPTION="An open source Gadu-Gadu and Jabber/XMPP protocol Instant Messenger client."
 HOMEPAGE="http://www.kadu.net"
 SRC_URI="http://www.kadu.net/download/stable/${MY_P}.tar.bz2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 #tlen
-IUSE="alsa ao dbus +gadu jabber kde oss phonon speech spell sqlite +ssl"
+IUSE="alsa ao dbus +gadu jabber kde phonon speech spell +ssl"
 #tlen
 REQUIRED_USE="
 	|| (
@@ -32,6 +32,7 @@ COMMON_DEPEND="
 	>=net-libs/libgadu-1.9.0[threads]
 	x11-libs/libXScrnSaver
 	>=x11-libs/qt-gui-4.4:4[qt3support]
+	>=x11-libs/qt-sql-4.4:4[sqlite]
 	>=x11-libs/qt-webkit-4.4:4
 	alsa? ( media-libs/alsa-lib )
 	ao? ( media-libs/libao )
@@ -48,7 +49,6 @@ COMMON_DEPEND="
 		kde? ( media-libs/phonon )
 	)
 	spell? ( app-text/enchant )
-	sqlite? ( >=x11-libs/qt-sql-4.4:4[sqlite] )
 "
 DEPEND="${COMMON_DEPEND}
 	jabber? ( dev-util/automoc )
@@ -105,6 +105,7 @@ src_prepare() {
 	config_enable module_sms m
 	config_enable module_sound m
 	# BLACKLISTED config_enable module_split_messages m
+	config_enable module_sql_history m
 	config_enable module_tabs m
 	# BLACKLISTED config_enable module_weather m
 	config_enable module_word_fix m
@@ -122,8 +123,8 @@ src_prepare() {
 	if use gadu; then
 		config_enable module_gadu_protocol m
 		config_enable module_server_monitor m
-		use sqlite && config_enable module_history_migration m
-		use sqlite && config_enable module_profiles_import m
+		config_enable module_history_migration m
+		config_enable module_profiles_import m
 	fi
 	use jabber && config_enable module_jabber_protocol m
 	# BLACKLISTED use tlen && config_enable module_tlen_protocol m
@@ -131,7 +132,7 @@ src_prepare() {
 	# Audio outputs
 	use alsa && config_enable module_alsa_sound m
 	use ao && config_enable module_ao_sound m
-	use oss && config_enable module_dsp_sound m
+	# BLACKLISTED use oss && config_enable module_dsp_sound m
 	use phonon && config_enable module_phonon_sound m
 
 	# Misc stuff
@@ -155,7 +156,6 @@ src_prepare() {
 	fi
 	use speech && config_enable module_speech m
 	use spell && config_enable module_spellchecker m
-	use sqlite && config_enable module_sql_history m
 	if use ssl; then
 		config_enable module_encryption_ng m
 		config_enable module_encryption_ng_simlite m
