@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.4.3.ebuild,v 1.1 2011/04/10 18:35:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.4.3.ebuild,v 1.2 2011/04/16 19:31:27 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit python eutils
@@ -31,6 +31,11 @@ RDEPEND="${COMMON_DEPS}
 	qt4? ( dev-python/PyQt4 )"
 
 S="${S}/client"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	python_convert_shebangs -r 2 .

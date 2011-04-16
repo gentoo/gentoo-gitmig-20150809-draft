@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/smolt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.7 2011/04/10 18:35:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.8 2011/04/16 19:31:27 arfrever Exp $
+
+  16 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  smolt-1.4.3.ebuild:
+  Use Python 2 (bug #308281).
 
 *smolt-1.4.3 (10 Apr 2011)
 
