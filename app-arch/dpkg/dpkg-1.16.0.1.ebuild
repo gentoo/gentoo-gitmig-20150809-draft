@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.0.1.ebuild,v 1.1 2011/04/05 14:56:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.0.1.ebuild,v 1.2 2011/04/16 16:29:48 jer Exp $
 
 EAPI=3
 
@@ -15,7 +15,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-solaris ~x86-solaris"
 IUSE="bzip2 dselect nls test unicode zlib"
 
-LANGS="sv de es ja fr hu pl ru"
+LANGS="
+	ast bs ca cs da de dz el eo es et eu fr gl hu id it ja km ko ku lt mr nb ne
+	nl nn pa pl pt_BR pt ro ru sk sv th tl vi zh_CN zh_TW
+"
 
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
