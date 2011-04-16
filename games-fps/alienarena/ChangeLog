@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.32 2011/03/13 07:55:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.33 2011/04/16 19:06:24 angelos Exp $
+
+  16 Apr 2011; Christoph Mende <angelos@gentoo.org> alienarena-20110311.ebuild:
+  Stable on amd64 wrt bug #363645
 
 *alienarena-20110311 (13 Mar 2011)
 
