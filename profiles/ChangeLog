@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5296 2011/04/17 14:21:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5297 2011/04/17 14:25:11 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Apr 2011; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  Mask mail-client/claws-mail-cachesaver
 
   17 Apr 2011; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Remove 2.5 alpha mask for audacious.
