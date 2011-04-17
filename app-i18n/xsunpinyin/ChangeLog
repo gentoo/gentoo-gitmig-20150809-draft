@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/xsunpinyin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/ChangeLog,v 1.4 2011/02/26 08:24:47 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/ChangeLog,v 1.5 2011/04/17 09:07:13 qiaomuf Exp $
+
+  17 Apr 2011; Mu Qiao <qiaomuf@gentoo.org> -xsunpinyin-2.0.3-r1.ebuild,
+  xsunpinyin-2.0.3-r2.ebuild:
+  Fix bug #363759, remove old version
 
 *xsunpinyin-2.0.3-r2 (26 Feb 2011)
 

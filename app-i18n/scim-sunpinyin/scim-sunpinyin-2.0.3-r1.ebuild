@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sunpinyin/scim-sunpinyin-2.0.3-r1.ebuild,v 1.1 2011/02/26 08:21:36 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sunpinyin/scim-sunpinyin-2.0.3-r1.ebuild,v 1.2 2011/04/17 09:14:15 qiaomuf Exp $
 
 EAPI="1"
 inherit eutils scons-utils
@@ -25,9 +25,9 @@ src_unpack() {
 }
 
 src_compile() {
-	escons --prefix="/usr"
+	escons --prefix="/usr" || die
 }
 
 src_install() {
-	escons --prefix="/usr" --install-sandbox="${D}" install
+	escons --prefix="/usr" --install-sandbox="${D}" install || die
 }
