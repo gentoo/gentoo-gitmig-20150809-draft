@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r3.ebuild,v 1.1 2011/04/16 11:04:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r3.ebuild,v 1.2 2011/04/17 13:50:21 jlec Exp $
 
 EAPI="3"
 
@@ -204,8 +204,8 @@ src_install() {
 		insinto /usr/share/${PN}
 		mv -v Examples examples
 		doins -r examples || die
-		mv -v VTKData data || die
-		doins -r data || die
+		mv -v "${WORKDIR}"/{VTKData,data} || die
+		doins -r "${WORKDIR}"/data || die
 	fi
 
 	#install big docs
