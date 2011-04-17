@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.77 2011/04/14 13:13:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.78 2011/04/17 23:51:42 anarchy Exp $
+
+  17 Apr 2011; Jory A. Pratt <anarchy@gentoo.org> icecat-4.0.ebuild:
+  Remove the unused gconf use_enable, bug #363865
 
 *icecat-4.0 (14 Apr 2011)
 
