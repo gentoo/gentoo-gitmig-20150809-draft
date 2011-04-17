@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/minisat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.5 2011/04/16 21:43:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.6 2011/04/17 22:54:19 nerdboy Exp $
+
+*minisat-2.1.0 (17 Apr 2011)
+
+  17 Apr 2011; Steve Arnold <nerdboy@gentoo.org> +minisat-2.1.0.ebuild,
+  minisat-2.2.0-r3.ebuild, +files/minisat-2.2.0-header_fix.patch:
+  Updated and added previous version and missing patch (doh!). The
+  slightly older minisat2 is required for other tools, but is not fully
+  compatible with the 2.2 release.
 
 *minisat-2.2.0-r3 (16 Apr 2011)
 
