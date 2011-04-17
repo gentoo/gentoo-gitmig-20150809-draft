@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r1.ebuild,v 1.5 2010/10/10 21:30:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r2.ebuild,v 1.1 2011/04/17 10:51:55 jlec Exp $
 
 EAPI="3"
 
@@ -80,4 +80,6 @@ src_compile() {
 
 src_install() {
 	./install "${ED}"/usr || die
+	mv "${ED}"/usr/{usr/share,} || die
+	rm -rf "${ED}"/usr/usr
 }
