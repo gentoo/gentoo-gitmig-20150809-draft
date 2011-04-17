@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.36 2011/04/17 09:27:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.37 2011/04/17 18:15:59 reavertm Exp $
+
+  17 Apr 2011; Maciej Mrozowski <reavertm@gentoo.org> udisks-1.0.2.ebuild,
+  udisks-1.0.2-r1.ebuild:
+  intltool is always required
 
   17 Apr 2011; Thomas Kahle <tomka@gentoo.org> udisks-1.0.2-r1.ebuild:
   x86 stable per bug 353343

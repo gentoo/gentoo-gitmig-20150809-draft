@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2-r1.ebuild,v 1.4 2011/04/17 09:27:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2-r1.ebuild,v 1.5 2011/04/17 18:15:59 reavertm Exp $
 
 EAPI=4
 inherit eutils bash-completion linux-info
@@ -28,12 +28,12 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/eject
 	remote-access? ( net-dns/avahi )"
 DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
-	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
+	>=dev-util/intltool-0.40.0
+	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc
-		app-text/docbook-xml-dtd:4.1.2 )
-	nls? ( >=dev-util/intltool-0.40.0 )"
+		app-text/docbook-xml-dtd:4.1.2 )"
 
 RESTRICT="test" # this would need running dbus and sudo available
 
