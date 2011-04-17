@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.105 2011/04/06 14:18:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.106 2011/04/17 17:29:11 reavertm Exp $
+
+  17 Apr 2011; Maciej Mrozowski <reavertm@gentoo.org> pykde4-4.6.2.ebuild,
+  metadata.xml:
+  Remove bogus QScintilla support. Bug 354163.
 
 *pykde4-4.6.2 (06 Apr 2011)
 
