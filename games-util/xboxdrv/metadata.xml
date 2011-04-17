@@ -6,7 +6,4 @@
 		<email>nyhm@gentoo.org</email>
 		<name>Tristan Heaven</name>
 	</maintainer>
-	<use>
-		<flag name="daemon">Install xboxdrv-daemon (and its dependencies)</flag>
-	</use>
 </pkgmetadata>
