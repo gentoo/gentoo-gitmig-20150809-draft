@@ -1,19 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-9999.ebuild,v 1.2 2011/04/17 14:00:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.0.3-r1.ebuild,v 1.1 2011/04/17 14:00:57 titanofold Exp $
 
 EAPI=4
 
-ECVS_SERVER="cvs.pgfoundry.org:/cvsroot/pgpool"
-ECVS_MODULE="pgpool-II"
-inherit autotools-utils cvs autotools
+MY_P="${PN/2/-II}-${PV}"
+inherit autotools-utils autotools
 
 DESCRIPTION="Connection pool server for PostgreSQL"
 HOMEPAGE="http://pgpool.projects.postgresql.org/"
-
+SRC_URI="http://pgfoundry.org/frs/download.php/2958/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="pam ssl static-libs"
 
 RDEPEND="
@@ -37,7 +36,7 @@ HTML_DOCS=(
 	"doc/tutorial-en.html"
 )
 
-S="${WORKDIR}/pgpool-II/"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	sed -i \
