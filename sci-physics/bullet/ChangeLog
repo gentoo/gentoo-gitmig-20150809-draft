@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.22 2011/03/22 17:10:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.23 2011/04/17 11:53:52 jlec Exp $
+
+*bullet-2.78 (17 Apr 2011)
+
+  17 Apr 2011; Justin Lecher <jlec@gentoo.org> bullet-2.77.ebuild,
+  +files/bullet-2.77-gcc46.patch, +bullet-2.78.ebuild,
+  +files/bullet-2.78-soversion.patch:
+  Version Bump, backport fix for gcc46 problems, #363223
 
   22 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> -bullet-2.76-r1.ebuild,
   bullet-2.77.ebuild, metadata.xml:
