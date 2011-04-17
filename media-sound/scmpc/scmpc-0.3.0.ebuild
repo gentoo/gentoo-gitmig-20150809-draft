@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.3.0.ebuild,v 1.1 2011/02/20 21:42:03 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.3.0.ebuild,v 1.2 2011/04/17 08:03:53 angelos Exp $
 
 EAPI=4
 
@@ -16,13 +16,15 @@ IUSE=""
 RDEPEND="dev-libs/glib:2
 	dev-libs/confuse
 	net-misc/curl"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS NEWS README scmpc.conf.example"
 }
 
 src_install() {
-	default_src_install
+	default
 
 	newinitd "${FILESDIR}"/${PN}-2.init ${PN}
 	insinto /etc
