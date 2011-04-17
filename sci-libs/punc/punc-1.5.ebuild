@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.1 2011/04/16 07:32:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.2 2011/04/17 09:12:22 jlec Exp $
 
 EAPI="3"
 
@@ -35,6 +35,8 @@ DEPEND="
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
+	sed 's:punc/slu_ddefs.h:superlu/slu_ddefs.h:g' src/superlu/punc/vsuperlu.h > vsuperlu.h || die
+	sed 's:punc/umfpack.h:umfpack.h:g' src/umfpack/punc/vumfpack.h > vumfpack.h || die
 	rm -rf src/{amd,blas,lapack,arpack,superlu,umfpack}
 	epatch \
 		"${FILESDIR}"/${PV}-linking.patch \
@@ -76,7 +78,9 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
+	insinto /usr/include/punc
+	doins v*.h || die
 
 	dohtml doc/index.html || die "failed to install html docs"
 }
