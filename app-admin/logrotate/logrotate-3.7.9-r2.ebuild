@@ -1,44 +1,53 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.2.ebuild,v 1.18 2011/02/06 05:17:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.9-r2.ebuild,v 1.1 2011/04/17 15:01:06 dang Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Rotates, compresses, and mails system logs"
-HOMEPAGE="http://www.gentoo.org"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+HOMEPAGE="https://fedorahosted.org/logrotate/"
+SRC_URI="https://fedorahosted.org/releases/l/o/logrotate/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="selinux"
 
 RDEPEND="
 	>=dev-libs/popt-1.5
-	selinux? ( sys-libs/libselinux )"
+	selinux? (
+		sys-libs/libselinux
+		sec-policy/selinux-logrotate
+	)"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	selinux? ( sec-policy/selinux-logrotate )"
+	>=sys-apps/sed-4"
 
-src_unpack() {
-	unpack ${P}.tar.bz2
-
-	cd "${S}"
-
+src_prepare() {
 	strip-flags
 
-	sed -i \
-		-e "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" \
-		-e "/CVSROOT =/d" \
-		Makefile || die "sed failed"
+	epatch \
+		"${FILESDIR}"/${PN}-3.7.7-datehack.patch \
+		"${FILESDIR}"/${PN}-3.7.7-ignore-hidden.patch \
+		"${FILESDIR}"/${PN}-3.7.7-fbsd.patch \
+		"${FILESDIR}"/${PN}-3.7.9-atomic-create.patch \
+		"${FILESDIR}"/${PN}-3.7.9-shred.patch \
+		"${FILESDIR}"/${PN}-3.7.9-statefile.patch \
+		"${FILESDIR}"/${PN}-3.7.9-skip-empty-files.patch
+}
+
+src_configure() {
+	return
 }
 
 src_compile() {
 	local myconf
 	myconf="CC=$(tc-getCC)"
 	useq selinux && myconf="${myconf} WITH_SELINUX=yes"
-	emake ${myconf} || die "emake failed"
+	use elibc_FreeBSD && append-flags -DNO_ALLOCA_H
+	emake ${myconf} RPM_OPT_FLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {

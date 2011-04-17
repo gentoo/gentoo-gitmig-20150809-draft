@@ -1,6 +1,24 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.97 2011/04/16 15:52:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.98 2011/04/17 15:01:06 dang Exp $
+
+*logrotate-3.7.9-r2 (17 Apr 2011)
+
+  17 Apr 2011; Daniel Gryniewicz <dang@gentoo.org> -logrotate-3.7.1-r2.ebuild,
+  -files/logrotate-3.7.1-dateext-maxage.patch,
+  -files/logrotate-3.7.1-datehack.patch,
+  -files/logrotate-3.7.1-ignore-hidden.patch,
+  -files/logrotate-3.7.1-manpage-fixes.patch,
+  -files/logrotate-3.7.1-no-tmpdir.patch,
+  -files/logrotate-3.7.1-taboo-to-debug.patch,
+  -files/logrotate-3.7.1-weekly.patch, -logrotate-3.7.2.ebuild,
+  -logrotate-3.7.7.ebuild, +logrotate-3.7.9-r2.ebuild,
+  +files/logrotate-3.7.9-skip-empty-files.patch:
+  Bump to logrotate-3.7.9-r2
+  - Fix bug #363705
+  - Fix bug #195787
+  Remove old versions
+
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> logrotate-3.7.9-r1.ebuild:
   alpha/arm/s390/sh/sparc stable wrt #356811
