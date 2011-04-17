@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.408 2011/04/10 11:21:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.409 2011/04/17 23:47:46 anarchy Exp $
+
+  17 Apr 2011; Jory A. Pratt <anarchy@gentoo.org> xulrunner-2.0-r1.ebuild:
+  Update patchset to support libpng-1.5 and gcc-4.6
 
   10 Apr 2011; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.2.16.ebuild:
   alpha/ia64 stable wrt #360055
