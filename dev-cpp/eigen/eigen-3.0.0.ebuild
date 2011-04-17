@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-3.0.0.ebuild,v 1.1 2011/03/25 16:01:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-3.0.0.ebuild,v 1.2 2011/04/17 12:04:24 jlec Exp $
 
 EAPI="2"
 
@@ -17,6 +17,8 @@ IUSE="debug doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND="!dev-cpp/eigen:0"
+
+PATCHES=( "${FILESDIR}"/${P}-gcc46.patch )
 
 src_unpack() {
 	unpack ${A}
