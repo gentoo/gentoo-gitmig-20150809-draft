@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12694 2011/04/16 12:15:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12695 2011/04/17 14:21:12 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -560,13 +560,6 @@ dev-ruby/IceRuby
 # New package, masked for an initial testing period. Needs exotic
 # hardware. Please post feedback on bug 165399.
 >=sci-libs/linux-gpib-3.2.15
-
-# Tony Vroon <chainsaw@gentoo.org> (30 Jan 2011)
-# Alpha releases; marked for your protection. If you
-# choose to use them, you will report your bugs upstream.
->=dev-libs/libmowgli-0.9.50
-=media-plugins/audacious-plugins-2.5*
-=media-sound/audacious-2.5*
 
 # MATSUU Takuto <matsuu@gentoo.org> (30 Jan 2011)
 # mask for security bug #352569
