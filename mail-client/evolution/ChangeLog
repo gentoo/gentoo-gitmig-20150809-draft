@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.335 2011/04/12 11:14:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.336 2011/04/17 17:07:25 eva Exp $
+
+  17 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/evolution-2.30.1.2-configure.patch, -evolution-2.30.2-r1.ebuild,
+  -files/evolution-2.30.3-fix-linking-issues-in-libeshell.patch,
+  -evolution-2.32.2-r1.ebuild, metadata.xml:
+  Clean up old revisions.
 
 *evolution-2.32.2-r3 (12 Apr 2011)
 
