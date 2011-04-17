@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r1.ebuild,v 1.2 2011/04/04 16:08:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r1.ebuild,v 1.3 2011/04/17 23:59:02 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -20,16 +20,16 @@ EMVER="1.2a1"
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist gconf +crashreporter +crypt +ipc +lightning mozdom"
-#PATCH="${PN}-3.1-patches-1.2"
+PATCH="${PN}-3.3-patches-0.2"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
-	crypt? ( http://dev.gentoo.org/~anarchy/mozilla/firefox/enigmail-${EMVER}-20110316.tar.bz2 )"
-#	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
+	crypt? ( http://dev.gentoo.org/~anarchy/mozilla/firefox/enigmail-${EMVER}-20110316.tar.bz2 )
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
 #for X in ${LANGS} ; do
 #	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
@@ -114,16 +114,16 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/1001-xulrunner_fix_jemalloc_vs_aslr.patch"
-	epatch "${FILESDIR}/2000-thunderbird_gentoo_install_dirs.patch"
-	epatch "${FILESDIR}/thunderbird-3.3-gconf-config-update.patch"
+	# Apply our patches
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"
 
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
 		cd "${S}"/mailnews/extensions/enigmail || die
 		epatch "${FILESDIR}"/enigmail-1.1.2-20110124-locale-fixup.diff
-		cd enigmail
-		./makemake -r 2> /dev/null
+		./makemake -r 2&> /dev/null
 		sed -i -e 's:@srcdir@:${S}/mailnews/extensions/enigmail:' Makefile.in
 		cd "${S}"
 	fi
@@ -156,7 +156,7 @@ src_configure() {
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	if use crypt ; then
-		# omni.jar breaks enigmail
+		# omni.jar breaks enigmail 
 		mozconfig_annotate '' --enable-chrome-format=jar
 	fi
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"

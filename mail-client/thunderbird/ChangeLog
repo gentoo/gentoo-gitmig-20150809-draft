@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.71 2011/04/04 02:33:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.72 2011/04/17 23:59:02 anarchy Exp $
+
+  17 Apr 2011; Jory A. Pratt <anarchy@gentoo.org>
+  thunderbird-3.3_alpha3-r1.ebuild:
+  Update patchset to support libpng-1.5 and gcc-4.6
 
 *thunderbird-3.3_alpha3-r1 (04 Apr 2011)
 
