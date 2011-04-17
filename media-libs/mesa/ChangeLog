@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.332 2011/04/17 21:17:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.333 2011/04/17 22:53:15 chithanh Exp $
+
+*mesa-7.10.2-r1 (17 Apr 2011)
+
+  17 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-7.9.1.ebuild, mesa-7.9.2.ebuild, mesa-7.10.1.ebuild,
+  mesa-7.10.2.ebuild, +mesa-7.10.2-r1.ebuild:
+  Address llvm-2.9 problems, bug #351338.
 
   17 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-7.10.2.ebuild:

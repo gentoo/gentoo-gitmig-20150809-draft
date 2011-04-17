@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.2.ebuild,v 1.3 2011/04/17 21:17:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.2.ebuild,v 1.4 2011/04/17 22:53:15 chithanh Exp $
 
 EAPI=3
 
@@ -78,7 +78,7 @@ RDEPEND="${EXTERNAL_DEPEND}
 			amd64? ( dev-libs/udis86 )
 			x86? ( dev-libs/udis86 )
 			x86-fbsd? ( dev-libs/udis86 )
-			sys-devel/llvm
+			<sys-devel/llvm-2.9
 		)
 	)
 	${LIBDRM_DEPSTRING}[video_cards_nouveau?,video_cards_vmware?]
