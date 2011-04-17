@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.7 2011/02/22 22:05:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.8 2011/04/17 15:57:54 eva Exp $
+
+*rygel-0.10.1 (17 Apr 2011)
+
+  17 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> +rygel-0.10.1.ebuild:
+  Version bump.
 
 *rygel-0.9.9 (22 Feb 2011)
 
