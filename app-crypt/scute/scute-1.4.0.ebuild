@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scute/scute-1.4.0.ebuild,v 1.1 2011/04/17 00:12:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scute/scute-1.4.0.ebuild,v 1.2 2011/04/17 00:13:45 flameeyes Exp $
 
 EAPI=4
 
@@ -48,4 +48,3 @@ src_install() {
 	find "${D}" -name '*.la' -delete
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
-
