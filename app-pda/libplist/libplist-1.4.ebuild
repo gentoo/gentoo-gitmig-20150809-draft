@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.4.ebuild,v 1.1 2011/03/29 02:30:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.4.ebuild,v 1.2 2011/04/17 07:44:51 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
-inherit cmake-utils multilib python
+inherit cmake-utils eutils multilib python
 
 DESCRIPTION="Support library to deal with Apple Property Lists (Binary & XML)"
 HOMEPAGE="http://www.libimobiledevice.org/"
@@ -33,6 +33,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e 's:-Werror::' swig/CMakeLists.txt || die
+	epatch "${FILESDIR}"/${P}-gcc46.patch
 }
 
 src_configure() {
