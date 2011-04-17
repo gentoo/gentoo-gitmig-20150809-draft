@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/parallel-20110122.ebuild,v 1.1 2011/01/25 15:29:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/parallel-20110322.ebuild,v 1.1 2011/04/17 15:37:42 fauli Exp $
 
 EAPI=3
 
