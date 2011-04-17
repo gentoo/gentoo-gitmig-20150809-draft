@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.143 2011/04/16 13:44:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.144 2011/04/17 21:02:51 williamh Exp $
+
+  17 Apr 2011; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  fix the migration of /etc/conf.d/local.* for bug #363949.
 
   16 Apr 2011; William Hubbs <williamh@gentoo.org> -openrc-0.8.1.ebuild:
   remove broken version
