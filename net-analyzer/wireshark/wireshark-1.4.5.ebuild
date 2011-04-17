@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.3.ebuild,v 1.8 2011/01/29 13:33:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.5.ebuild,v 1.1 2011/04/17 13:16:36 pva Exp $
 
-EAPI=2
+EAPI="3"
 PYTHON_DEPEND="python? 2"
 inherit libtool flag-o-matic eutils toolchain-funcs python
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns ares doc doc-pdf gtk ipv6 lua gcrypt geoip kerberos
 profile +pcap pcre portaudio python +caps selinux smi ssl threads zlib"
 
@@ -41,7 +41,6 @@ RDEPEND=">=dev-libs/glib-2.14.0:2
 DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt
 		dev-libs/libxml2
-		www-client/elinks
 		app-doc/doxygen
 		doc-pdf? ( dev-java/fop ) )
 	>=dev-util/pkgconfig-0.15.0
@@ -123,6 +122,7 @@ src_configure() {
 	# profile and pie are incompatible #215806, #292991
 	if use profile; then
 		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
+		ewarn "Also ignore \"unrecognized option '-nopie'\" gcc warning #358101."
 		append-flags $(test-flags-CC -nopie)
 	fi
 
@@ -202,6 +202,7 @@ src_install() {
 		done
 		domenu wireshark.desktop || die
 	fi
+	chmod o-x "${ED}"/usr/bin/dumpcap #357237
 }
 
 pkg_postinst() {
