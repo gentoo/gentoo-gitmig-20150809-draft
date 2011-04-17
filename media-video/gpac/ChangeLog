@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.86 2011/04/03 03:38:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.87 2011/04/17 19:53:44 scarabeus Exp $
+
+  17 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gpac-0.4.5-r1.ebuild,
+  gpac-0.4.5-r4.ebuild:
+  Use virtual/ffmpeg. Per bug #362135.
 
   03 Apr 2011; Alexis Ballier <aballier@gentoo.org> gpac-0.4.5-r4.ebuild:
   Fix build with openjpeg 1.4, bug #361359
