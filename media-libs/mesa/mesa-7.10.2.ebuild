@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.2.ebuild,v 1.2 2011/04/11 11:18:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.2.ebuild,v 1.3 2011/04/17 21:17:53 chithanh Exp $
 
 EAPI=3
 
@@ -48,9 +48,15 @@ IUSE="${IUSE_VIDEO_CARDS}
 	+classic debug +gallium gles llvm motif +nptl pic selinux kernel_FreeBSD hardened"
 
 LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.24"
+# not a runtime dependency of this package, but dependency of packages which
+# depend on this package, bug #342393
+EXTERNAL_DEPEND="
+	>=x11-proto/dri2proto-2.2
+	>=x11-proto/glproto-1.4.11
+"
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
-RDEPEND="
+RDEPEND="${EXTERNAL_DEPEND}
 	!<x11-base/xorg-server-1.7
 	!<=x11-proto/xf86driproto-2.0.3
 	classic? ( app-admin/eselect-mesa )
@@ -93,8 +99,6 @@ DEPEND="${RDEPEND}
 	=dev-lang/python-2*
 	dev-util/pkgconfig
 	x11-misc/makedepend
-	>=x11-proto/dri2proto-2.2
-	>=x11-proto/glproto-1.4.11
 	x11-proto/inputproto
 	>=x11-proto/xextproto-7.0.99.1
 	x11-proto/xf86driproto
