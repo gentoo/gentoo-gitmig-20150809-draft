@@ -1,14 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.2.14.ebuild,v 1.1 2011/03/11 04:26:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.2.15.ebuild,v 1.1 2011/04/17 22:56:33 radhermit Exp $
 
-EAPI=3
-
-inherit versionator
+EAPI=4
 
 DESCRIPTION="library for parsing video download links"
 HOMEPAGE="http://quvi.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/$(get_version_component_range 1-2)/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/${PN}/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -33,8 +31,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog README || die "dodoc failed"
+	default
 	use doc && dodoc doc/How*
 	find "${D}" -name '*.la' -delete
 }
