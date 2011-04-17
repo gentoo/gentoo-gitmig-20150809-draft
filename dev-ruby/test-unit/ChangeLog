@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.36 2011/04/04 19:32:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.37 2011/04/17 14:29:18 fauli Exp $
+
+  17 Apr 2011; Christian Faulhammer <fauli@gentoo.org>
+  test-unit-2.1.2-r1.ebuild:
+  stable x86, 357939
 
 *test-unit-2.1.2-r1 (04 Apr 2011)
 

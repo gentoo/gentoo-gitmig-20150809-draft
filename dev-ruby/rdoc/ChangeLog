@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.53 2011/04/04 19:35:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.54 2011/04/17 14:25:23 fauli Exp $
+
+  17 Apr 2011; Christian Faulhammer <fauli@gentoo.org> rdoc-3.5.1.ebuild:
+  stable x86, 357939
 
   04 Apr 2011; Hans de Graaff <graaff@gentoo.org> -rdoc-3.4.ebuild,
   -rdoc-3.5.ebuild:
