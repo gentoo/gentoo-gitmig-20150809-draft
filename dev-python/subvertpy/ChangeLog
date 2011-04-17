@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.29 2011/04/05 11:06:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.30 2011/04/17 13:18:32 tomka Exp $
+
+  17 Apr 2011; Thomas Kahle <tomka@gentoo.org> subvertpy-0.8.0.ebuild:
+  x86 stable per bug 361975
 
   05 Apr 2011; Christoph Mende <angelos@gentoo.org> subvertpy-0.8.0.ebuild:
   Stable on amd64 wrt bug #361975
