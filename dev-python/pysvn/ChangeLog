@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.20 2011/04/15 21:45:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.21 2011/04/18 18:27:39 tomka Exp $
+
+  18 Apr 2011; Thomas Kahle <tomka@gentoo.org> pysvn-1.7.5.ebuild:
+  x86 stable per bug 362769
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> pysvn-1.7.5.ebuild:
   Stable on amd64 wrt bug #362769
