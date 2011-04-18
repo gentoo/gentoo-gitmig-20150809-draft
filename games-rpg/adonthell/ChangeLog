@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/adonthell
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.21 2010/05/04 22:04:36 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.22 2011/04/18 07:16:37 tupone Exp $
+
+  18 Apr 2011; Tupone Alfredo <tupone@gentoo.org> adonthell-0.3.5.ebuild,
+  +files/adonthell-0.3.5-gcc46.patch:
+  Fix build with gcc-4.6 Bug #363731 by Diego Elio Pettenò
 
   04 May 2010; Tupone Alfredo <tupone@gentoo.org> adonthell-0.3.5.ebuild:
   Force python2 fixing bug #312271 by arfrever@gentoo.org

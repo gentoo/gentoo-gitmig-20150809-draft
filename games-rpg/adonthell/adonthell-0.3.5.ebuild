@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.5 2010/05/04 22:04:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.5.ebuild,v 1.6 2011/04/18 07:16:37 tupone Exp $
 PYTHON_DEPEND="2"
 EAPI=2
 inherit autotools eutils python games
@@ -40,7 +40,8 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-configure.in.patch \
-		"${FILESDIR}"/${P}-glibc-2.10.patch
+		"${FILESDIR}"/${P}-glibc-2.10.patch \
+		"${FILESDIR}"/${P}-gcc46.patch
 	sed -i \
 		-e "/AC_PATH_PROGS/s:python:$(PYTHON):" \
 		configure.in || die "sed failed"
