@@ -1,0 +1,41 @@
+commit 6d80788587894ee0cf3e087f959226a3d764af95
+Author: Thomas McGuire <mcguire@kde.org>
+Date:   Sat Apr 16 21:56:01 2011 +0100
+
+    Use UTF-8 if the charset can't encode the string.
+    
+    Hopefully the call to canEncode() won't affect the performance too
+    much...
+    
+    BUG: 263761
+    (cherry picked from commit 7b75f8a769ef0e40e59dedb1327ff0ed51e63ba9)
+
+diff --git a/kmime/kmime_util.cpp b/kmime/kmime_util.cpp
+index 29ea676..ab1906c 100644
+--- a/kmime/kmime_util.cpp
++++ b/kmime/kmime_util.cpp
+@@ -287,6 +287,11 @@ QByteArray encodeRFC2047String( const QString &src, const QByteArray &charset,
+       usedCS = charset;
+   }
+ 
++  if ( !codec->canEncode( src ) ) {
++    usedCS = "utf-8";
++    codec = QTextCodec::codecForName( usedCS );
++  }
++
+   if ( usedCS.contains( "8859-" ) ) { // use "B"-Encoding for non iso-8859-x charsets
+     useQEncoding = true;
+   }
+diff --git a/kmime/kmime_util.h b/kmime/kmime_util.h
+index 84c061e..ebe2a38 100644
+--- a/kmime/kmime_util.h
++++ b/kmime/kmime_util.h
+@@ -165,7 +165,7 @@ KMIME_EXPORT extern QString decodeRFC2047String( const QByteArray &src );
+   Encodes string @p src according to RFC2047 using charset @p charset.
+ 
+   @param src           source string.
+-  @param charset       charset to use.
++  @param charset       charset to use. If it can't encode the string, UTF-8 will be used instead.
+   @param addressHeader if this flag is true, all special chars
+                        like <,>,[,],... will be encoded, too.
+   @param allow8bitHeaders if this flag is true, 8Bit headers are allowed.

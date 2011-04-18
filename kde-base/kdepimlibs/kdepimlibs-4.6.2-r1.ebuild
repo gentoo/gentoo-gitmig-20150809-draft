@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.6.2.ebuild,v 1.1 2011/04/06 14:19:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.6.2-r1.ebuild,v 1.1 2011/04/18 20:09:32 dilfridge Exp $
 
 EAPI=3
 
@@ -41,6 +41,10 @@ add_blocker akonadi '<4.3.86'
 add_blocker libkholidays
 # @since 4.4 - kontactinterfaces is in kdepimlibs now
 add_blocker kontactinterfaces
+
+PATCHES=(
+	"${FILESDIR}/${PN}-4.6.2-encoding.patch"
+	)
 
 src_prepare() {
 	kde4-base_src_prepare
