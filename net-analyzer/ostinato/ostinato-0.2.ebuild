@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ostinato-0.2.ebuild,v 1.2 2011/04/18 14:34:55 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ostinato-0.2.ebuild,v 1.3 2011/04/18 17:53:33 c1pher Exp $
 
 EAPI=2
 inherit qt4-r2
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="<dev-libs/protobuf-2.4.0
+DEPEND="dev-libs/protobuf
 	net-libs/libpcap
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
