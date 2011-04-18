@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r1.ebuild,v 1.3 2011/04/05 05:31:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r1.ebuild,v 1.4 2011/04/18 21:58:54 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
 
-inherit gnome2-utils python
+inherit distutils gnome2-utils
 
 MINIMUM_COMPIZ_RELEASE=0.6.0
 
@@ -19,30 +20,36 @@ IUSE="gtk qt4"
 
 RDEPEND="
 	>=dev-python/compizconfig-python-${MINIMUM_COMPIZ_RELEASE}
-	dev-lang/python
 	>=x11-wm/compiz-${MINIMUM_COMPIZ_RELEASE}
-	gtk? ( >=dev-python/pygtk-2.10 )
+	x11-apps/xvinfo
+	gtk? ( >=dev-python/pygtk-2.10:2 )
 	qt4? ( dev-python/PyQt4[X] )"
-
-DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19
-	x11-apps/xvinfo"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}"
 
+PYTHON_MODNAME="FusionIcon"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_install() {
-	use gtk && interfaces="${interfaces} gtk"
-	use qt4 && interfaces="${interfaces} qt4"
-	emake "interfaces=${interfaces}" DESTDIR="${D}" install || die "emake install failed"
+	distutils_src_install
+
+	use gtk || rm -fr "${ED}$(python_get_sitedir)/FusionIcon/interface_gtk"
+	use qt4 || rm -fr "${ED}$(python_get_sitedir)/FusionIcon/interface_qt4"
 }
 
 pkg_postinst() {
-	python_need_rebuild
-	python_mod_optimize $(python_get_sitedir)/FusionIcon
+	distutils_pkg_postinst
 
 	use gtk && gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/FusionIcon
+	distutils_pkg_postrm
+
+	use gtk && gnome2_icon_cache_update
 }
