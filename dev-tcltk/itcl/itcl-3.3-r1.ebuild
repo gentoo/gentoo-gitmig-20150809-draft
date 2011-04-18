@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3-r1.ebuild,v 1.6 2006/05/24 20:15:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3-r1.ebuild,v 1.7 2011/04/18 06:20:41 jlec Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ LICENSE="BSD"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
 DEPEND="dev-lang/tcl"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -26,11 +27,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 	emake CFLAGS_DEFAULT="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc CHANGES ChangeLog INCOMPATIBLE README TODO
 }

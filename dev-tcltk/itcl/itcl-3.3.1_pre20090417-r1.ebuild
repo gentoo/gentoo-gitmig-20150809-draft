@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20090417-r1.ebuild,v 1.1 2010/04/02 09:30:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20090417-r1.ebuild,v 1.2 2011/04/18 06:20:41 jlec Exp $
+
+EAPI="3"
 
 inherit eutils
 
@@ -16,12 +18,11 @@ LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 DEPEND="dev-lang/tcl"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}/${PN}"
 
 src_compile() {
-	econf || die "econf failed"
-
 	# adjust install_name on darwin
 	if [[ ${CHOST} == *-darwin* ]]; then
 		sed -i \
@@ -33,6 +34,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc ../{CHANGES,ChangeLog,INCOMPATIBLE,README,TODO}
+	cat >> "${T}"/34${PN} <<- EOF
+	LDPATH="${EPREFIX}/usr/$(get_libdir)/${PN}3.4/"
+	EOF
+	doenvd "${T}"/34${PN} || die
 }
