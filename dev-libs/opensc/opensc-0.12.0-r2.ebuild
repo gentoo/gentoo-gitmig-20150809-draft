@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r1.ebuild,v 1.2 2011/04/12 20:07:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r2.ebuild,v 1.1 2011/04/18 18:49:57 flameeyes Exp $
 
 EAPI="4"
 
@@ -26,19 +26,31 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt"
 
-REQUIRED_USE="^^ ( pcsc-lite openct )"
+REQUIRED_USE="
+	pcsc-lite? ( !openct )
+	openct? ( !pcsc-lite )"
 
 src_configure() {
+	# disable everything, enable selectively
+	local myconf="--disable-pcsc --disable-openct --disable-ctapi"
+
+	if use pcsc-lite; then
+		myconf+=" --enable-pcsc"
+	elif use openct; then
+		myconf+=" --enable-openct"
+	else
+		myconf+=" --enable-ctapi"
+	fi
+
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--htmldir="/usr/share/doc/${PF}/html" \
 		--disable-static \
 		$(use_enable doc) \
 		$(use_enable openct) \
-		$(use_enable pcsc-lite pcsc) \
 		$(use_enable readline) \
-		$(use_enable ssl openssl) \
-		$(use_enable zlib)
+		$(use_enable zlib) \
+		${myconf}
 }
 
 src_install() {

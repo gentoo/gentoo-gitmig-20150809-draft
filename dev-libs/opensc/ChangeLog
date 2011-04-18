@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.112 2011/04/12 20:07:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.113 2011/04/18 18:49:57 flameeyes Exp $
+
+*opensc-0.12.0-r2 (18 Apr 2011)
+
+  18 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -opensc-0.12.0-r1.ebuild, +opensc-0.12.0-r2.ebuild, metadata.xml:
+  Revision bump: when both pcsc-lite and openct are disabled, build the dynamic
+  CT-API interface only rather than error out. This is useful if you only care
+  about the PKCS#11 utilities, rather than actual Smartcard access.
 
   12 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   opensc-0.12.0-r1.ebuild:
