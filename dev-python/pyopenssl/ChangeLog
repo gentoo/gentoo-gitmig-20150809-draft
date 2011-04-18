@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.72 2011/01/29 17:24:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.73 2011/04/18 22:31:46 arfrever Exp $
+
+*pyopenssl-0.12 (18 Apr 2011)
+
+  18 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyopenssl-0.12.ebuild:
+  Version bump.
 
   29 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -pyopenssl-0.10-r1.ebuild, -files/pyopenssl-0.10-openssl-1.patch:
