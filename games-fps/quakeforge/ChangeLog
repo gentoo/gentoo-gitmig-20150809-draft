@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.25 2011/03/08 17:05:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.26 2011/04/18 12:14:09 tupone Exp $
+
+  18 Apr 2011; Tupone Alfredo <tupone@gentoo.org> quakeforge-0.5.5-r2.ebuild,
+  +files/quakeforge-0.5.5-gcc46.patch:
+  Fix build with gcc-4.6 Bug #362839 by Diego Elio Pettenò
 
   08 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> quakeforge-0.5.5.ebuild,
   quakeforge-0.5.5-r2.ebuild:

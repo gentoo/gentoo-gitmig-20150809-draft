@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.7 2011/03/08 17:05:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.5-r2.ebuild,v 1.8 2011/04/18 12:14:09 tupone Exp $
 
 EAPI=2
 inherit base eutils autotools games
@@ -46,6 +46,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-keys.patch
 	"${FILESDIR}"/${P}-amd64.patch
 	"${FILESDIR}"/${P}-noWerror.patch
+	"${FILESDIR}"/${P}-gcc46.patch
 )
 
 src_prepare() {
