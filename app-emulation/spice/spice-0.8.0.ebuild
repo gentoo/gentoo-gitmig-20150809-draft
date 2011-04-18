@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.7.3.ebuild,v 1.1 2011/02/17 10:28:44 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.8.0.ebuild,v 1.1 2011/04/18 07:58:19 dev-zero Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+gui static-libs"
 
-RDEPEND=">=app-emulation/spice-protocol-0.7.1
+RDEPEND="~app-emulation/spice-protocol-${PV}
 	>=x11-libs/pixman-0.17.7
 	media-libs/alsa-lib
 	media-libs/celt:0.5.1
@@ -31,6 +31,8 @@ DEPEND="dev-util/pkgconfig
 
 # maintainer notes:
 # * opengl support is currently broken
+# * add slirp for tunnel-support
+# * add libcacard for smartcard support
 
 src_configure() {
 	local myconf=""
