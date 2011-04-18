@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.33 2011/01/14 16:38:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.34 2011/04/18 05:44:24 graaff Exp $
+
+  18 Apr 2011; Hans de Graaff <graaff@gentoo.org>
+  -ruby-progressbar-0.9.ebuild, -ruby-progressbar-0.9-r1.ebuild:
+  Remove old versions with higher version numbers.
 
 *ruby-progressbar-0.9-r1 (14 Jan 2011)
 
