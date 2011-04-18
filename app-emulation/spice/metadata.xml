@@ -8,8 +8,5 @@
   </maintainer>
   <use>
 	  <flag name="gui">Build some GUI components (inside the guest window).</flag>
-	  <flag name="uri">Add uri-handling support to spicec using <pkg>dev-libs/uriparser</pkg>.</flag>
-	  <flag name="kde">Install a KDE protocol handler configuration for spice
-		  (only in combination with the uri USE flag)</flag>
   </use>
 </pkgmetadata>
