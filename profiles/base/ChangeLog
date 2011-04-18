@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.255 2011/04/16 19:56:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.256 2011/04/18 13:37:09 chithanh Exp $
+
+  18 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Explicitly allow video_cards_nouveau for libdrm until bug #364027 is
+  fixed.
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/aspell-dict, bug 358821.
