@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ostinato
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.4 2010/12/18 12:09:20 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.5 2011/04/18 14:34:55 c1pher Exp $
+
+  18 Apr 2011; Dane Smith <c1pher@gentoo.org> ostinato-0.2.ebuild,
+  ostinato-0.3.ebuild:
+  Change protobuf dep to depend on <2.4.0 in both 0.2 and 0.3 wrt bug
+  363911.
 
   18 Dec 2010; Markos Chandras <hwoarang@gentoo.org> ostinato-0.3.ebuild:
   Stable on amd64 wrt bug #348576
