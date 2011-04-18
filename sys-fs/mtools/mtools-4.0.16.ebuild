@@ -1,16 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.11.ebuild,v 1.8 2009/12/26 19:30:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.16.ebuild,v 1.1 2011/04/18 04:49:01 jer Exp $
 
-inherit eutils
+EAPI="2"
+
+inherit autotools
 
 DESCRIPTION="utilities to access MS-DOS disks from Unix without mounting them"
 HOMEPAGE="http://mtools.linux.lu/"
-SRC_URI="http://mtools.linux.lu/${P}.tar.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X"
 
 DEPEND="
@@ -21,20 +23,16 @@ DEPEND="
 		x11-libs/libX11
 		x11-libs/libXt
 	)"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-flags.patch #232766
-	sed -i 's:/usr/local/etc:/etc:g' mtools.5 mtools.texi
+src_prepare() {
+	eautoconf #341443
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--sysconfdir=/etc/mtools \
-		$(use_with X x) \
-		|| die
-	emake || die "emake failed"
+		$(use_with X x)
 }
 
 src_install() {
@@ -42,5 +40,5 @@ src_install() {
 	insinto /etc/mtools
 	doins mtools.conf || die
 	dosed '/^SAMPLE FILE$/s:^:#:' /etc/mtools/mtools.conf # default is fine
-	dodoc Changelog README* Release.notes
+	dodoc README* Release.notes
 }
