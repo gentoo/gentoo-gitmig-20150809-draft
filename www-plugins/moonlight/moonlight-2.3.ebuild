@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.6 2011/04/04 12:09:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-2.3.ebuild,v 1.7 2011/04/18 09:14:02 scarabeus Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND="
 	>=x11-libs/gtk+-2.14:2
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/cairo-1.8.4
-	>=media-video/ffmpeg-0.4.9_p20090121
+	virtual/ffmpeg
 	>=net-libs/xulrunner-1.9.1:1.9
 	x11-libs/libXrandr
 	alsa? ( >=media-libs/alsa-lib-1.0.18 )
