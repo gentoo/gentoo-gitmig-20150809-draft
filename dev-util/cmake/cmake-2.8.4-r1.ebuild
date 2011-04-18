@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.3-r1.ebuild,v 1.4 2011/01/17 23:29:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4-r1.ebuild,v 1.1 2011/04/18 10:17:30 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils
+inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils virtualx
 
 MY_P="${PN}-$(replace_version_separator 3 - ${MY_PV})"
 
@@ -42,21 +42,21 @@ S="${WORKDIR}/${MY_P}"
 
 CMAKE_BINARY="${S}/Bootstrap.cmk/cmake"
 
+# REDO ME:
+# darwin-no-qt
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.3-darwin-bundle.patch
 	"${FILESDIR}"/${PN}-2.6.3-no-duplicates-in-rpath.patch
 	"${FILESDIR}"/${PN}-2.6.3-fix_broken_lfs_on_aix.patch
 	"${FILESDIR}"/${PN}-2.8.0-darwin-default-install_name.patch
-	"${FILESDIR}"/${PN}-2.8.0-darwin-no-app-with-qt.patch
-	"${FILESDIR}"/${PN}-2.8.1-FindBoost.patch
 	"${FILESDIR}"/${PN}-2.8.1-libform.patch
-	"${FILESDIR}"/${PN}-2.8.3-FindLibArchive.patch
-	"${FILESDIR}"/${PN}-2.8.3-FindPythonLibs.patch
-	"${FILESDIR}"/${PN}-2.8.3-FindPythonInterp.patch
+	"${FILESDIR}"/${PN}-2.8.4-FindPythonLibs.patch
+	"${FILESDIR}"/${PN}-2.8.4-FindPythonInterp.patch
 	"${FILESDIR}"/${PN}-2.8.3-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.8.3-ruby_libname.patch
-	"${FILESDIR}"/${PN}-2.8.3-buffer_overflow.patch
 	"${FILESDIR}"/${PN}-2.8.3-fix_assembler_test.patch
+	"${FILESDIR}"/${PN}-2.8.4-FindBoost.patch
+	"${FILESDIR}"/${PN}-2.8.4-FindQt4.patch
 )
 _src_bootstrap() {
 	  echo ${MAKEOPTS} | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+' > /dev/null
@@ -112,34 +112,43 @@ src_configure() {
 
 src_compile() {
 	cmake-utils_src_compile
-	if use emacs; then
-		elisp-compile Docs/cmake-mode.el || die "elisp compile failed"
-	fi
+	use emacs && elisp-compile Docs/cmake-mode.el
+}
+
+_run_test() {
+	# fix OutDir test
+	# this is altered thanks to our eclass
+	sed -i -e 's:#IGNORE ::g' "${S}"/Tests/OutDir/CMakeLists.txt || die
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
+	# Excluded tests:
+	#    BootstrapTest: we actualy bootstrap it every time so why test it.
+	#    SimpleCOnly_sdcc: sdcc choke on global cflags so just skip the test
+	#        as it was never intended to be used this way.
+	"${CMAKE_BUILD_DIR}"/bin/ctest \
+		-E BootstrapTest SimpleCOnly_sdcc \
+		|| die "Tests failed"
+	popd > /dev/null
 }
 
 src_test() {
-	# fix OutDir test
-	sed -i -e 's:#IGNORE ::g' "${S}"/Tests/OutDir/CMakeLists.txt || die
-	pushd "${CMAKE_BUILD_DIR}" > /dev/null
-	"${CMAKE_BUILD_DIR}"/bin/ctest || die "Tests failed"
-	popd > /dev/null
+	VIRTUALX_COMMAND="_run_test" virtualmake
 }
 
 src_install() {
 	cmake-utils_src_install
 	if use emacs; then
-		elisp-install ${PN} Docs/cmake-mode.el Docs/cmake-mode.elc || die "elisp-install failed"
+		elisp-install ${PN} Docs/cmake-mode.el Docs/cmake-mode.elc
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
-		doins Docs/cmake-syntax.vim || die
+		doins Docs/cmake-syntax.vim
 
 		insinto /usr/share/vim/vimfiles/indent
-		doins Docs/cmake-indent.vim || die
+		doins Docs/cmake-indent.vim
 
 		insinto /usr/share/vim/vimfiles/ftdetect
-		doins "${FILESDIR}/${VIMFILE}" || die
+		doins "${FILESDIR}/${VIMFILE}"
 	fi
 }
 
