@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.276 2011/04/12 11:32:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.277 2011/04/18 08:48:22 hollow Exp $
+
+*nginx-1.0.0-r1 (18 Apr 2011)
+
+  18 Apr 2011; Benedikt Böhm <hollow@gentoo.org>
+  +files/nginx-0.8.32-ey-balancer.patch, +nginx-1.0.0-r1.ebuild,
+  metadata.xml:
+  add slowfs_cache and ey-balancer modules
 
 *nginx-1.0.0 (12 Apr 2011)
 
