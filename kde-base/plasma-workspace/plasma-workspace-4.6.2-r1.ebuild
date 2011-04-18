@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.2.ebuild,v 1.4 2011/04/12 00:40:36 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.2-r1.ebuild,v 1.1 2011/04/18 19:29:32 dilfridge Exp $
 
 EAPI=3
 
@@ -73,6 +73,7 @@ KMLOADLIBS="libkworkspace libplasmaclock libplasmagenericshell libtaskmanager"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch"
 	"${FILESDIR}/${PN}-4.6.2-optional_akonadi-server.patch"
+	"${FILESDIR}/${PN}-4.6.2-oldpimcrash.patch"
 )
 
 pkg_setup() {

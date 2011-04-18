@@ -1,0 +1,31 @@
+commit 3dbdc68fa9fb84fbcc63dbb9acffdf43a1ebfdda
+Author: Sergio Martins <iamsergio@gmail.com>
+Date:   Thu Apr 7 23:43:17 2011 +0100
+
+    Don't segfault in release mode.
+    
+    No idea why it's 0, but we're going to delete this copy of calendar.cpp soon,
+    so it's a waste of time to debugging it.
+    
+    PIM applications don't crash at all regarding this, in plasma the ETM is probably
+    set incorrectly and has items with unsupported payloads.
+    
+    BUG: 261593
+    (cherry picked from commit b2a322448e644cdf55b9990c90920ce8c0ffcc7f)
+
+diff --git a/plasma/generic/dataengines/calendar/akonadi/calendar.cpp b/plasma/generic/dataengines/calendar/akonadi/calendar.cpp
+index 9294f16..c5afa61 100644
+--- a/plasma/generic/dataengines/calendar/akonadi/calendar.cpp
++++ b/plasma/generic/dataengines/calendar/akonadi/calendar.cpp
+@@ -254,7 +254,10 @@ void Calendar::Private::updateItem( const Akonadi::Item &item, UpdateMode mode )
+   const Akonadi::Item::Id id = item.id();
+ 
+   const KCalCore::Incidence::Ptr incidence = CalendarSupport::incidence( item );
+-  Q_ASSERT( incidence );
++
++  if ( !incidence ) {
++    return;
++  }
+ 
+   // TODO: remove this debug message in a few months
+   kDebug() << "id=" << item.id()
