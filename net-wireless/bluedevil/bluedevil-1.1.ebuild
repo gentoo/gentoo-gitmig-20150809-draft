@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-1.0.4.ebuild,v 1.1 2011/04/14 17:55:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/bluedevil-1.1.ebuild,v 1.1 2011/04/18 15:20:21 scarabeus Exp $
 
 EAPI=4
 
-KDE_LINGUAS="ca ca@valencia cs da de en_GB eo es et eu fr ga hu it ja ko lt mai ms nb nds nl pa
-pl pt pt_BR ro ru sk sl sv th tr uk zh_TW"
+KDE_LINGUAS="ca ca@valencia cs da de el en_GB eo es et eu fi fr hu it ja ko lt
+mai ms nb nds nl pa pl pt pt_BR ro ru sk sl sv th tr uk zh_TW"
 inherit kde4-base
 
 DESCRIPTION="Bluetooth stack for KDE"
