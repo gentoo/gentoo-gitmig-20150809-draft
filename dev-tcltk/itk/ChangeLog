@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/itk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.24 2010/10/12 11:57:41 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.25 2011/04/18 06:10:07 jlec Exp $
+
+*itk-3.3.1_pre20090417-r1 (18 Apr 2011)
+
+  18 Apr 2011; Justin Lecher <jlec@gentoo.org> -itk-3.3.1_pre20090417.ebuild,
+  +itk-3.3.1_pre20090417-r1.ebuild:
+  Fix env.d file's LDPATH points to wrong directory, #363791
 
   12 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   itk-3.4_pre20090417.ebuild:

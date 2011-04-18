@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.3.1_pre20090417.ebuild,v 1.7 2010/06/18 05:41:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.3.1_pre20090417-r1.ebuild,v 1.1 2011/04/18 06:10:07 jlec Exp $
 
 inherit multilib versionator
 
@@ -30,7 +30,7 @@ src_install() {
 	dodoc ../{CHANGES,ChangeLog,INCOMPATIBLE,README,TODO}
 
 	cat >> "${T}"/34${PN} <<- EOF
-	LDPATH="/usr/$(get_libdir)/${PN}$(get_version_component_range 1-2)/"
+	LDPATH="/usr/$(get_libdir)/${PN}3.4/"
 	EOF
 	doenvd "${T}"/34${PN} || die
 }
