@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.250 2011/04/10 17:42:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.251 2011/04/18 11:27:58 blueness Exp $
+
+*tor-0.2.2.24_alpha (18 Apr 2011)
+
+  18 Apr 2011; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.2.24_alpha.ebuild,
+  +files/tor-0.2.2.24_alpha-respect-CFLAGS.patch:
+  Version bump
 
 *tor-0.2.1.30-r1 (10 Apr 2011)
 
