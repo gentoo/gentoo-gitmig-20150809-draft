@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xextproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.78 2011/04/16 18:12:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.79 2011/04/18 11:41:40 scarabeus Exp $
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -xextproto-7.1.2.ebuild:
+  old
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> xextproto-7.2.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #359059

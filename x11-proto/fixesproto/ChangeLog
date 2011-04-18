@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/fixesproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.52 2011/04/16 18:07:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.53 2011/04/18 11:40:28 scarabeus Exp $
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -fixesproto-4.1.2.ebuild:
+  old
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> fixesproto-5.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #359059

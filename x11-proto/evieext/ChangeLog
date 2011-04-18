@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/evieext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.47 2011/04/16 18:10:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/evieext/ChangeLog,v 1.48 2011/04/18 11:39:50 scarabeus Exp $
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -evieext-1.1.0.ebuild:
+  old
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> evieext-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #359059
