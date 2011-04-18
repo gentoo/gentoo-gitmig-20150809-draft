@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.100 2011/04/16 03:49:09 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.101 2011/04/18 17:26:57 reavertm Exp $
+
+  18 Apr 2011; Maciej Mrozowski <reavertm@gentoo.org> kadu-0.9.1-r1.ebuild:
+  Remove hardcoded -Werror, bug 363843
 
 *kadu-0.9.1-r1 (16 Apr 2011)
 

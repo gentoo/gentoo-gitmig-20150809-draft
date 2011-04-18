@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.1-r1.ebuild,v 1.1 2011/04/16 03:49:09 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.1-r1.ebuild,v 1.2 2011/04/18 17:26:57 reavertm Exp $
 
 EAPI="4"
 
@@ -62,16 +62,20 @@ RDEPEND="${COMMON_DEPEND}
 # set given .config variable to =m or =y
 # args: <variable> <m/y>
 config_enable() {
-	sed -i -e "s/^\(${1}=\)./\1${2}/" .config || die "config_enable failed"
+	sed -i -e "s/^\(${1}=\)./\1${2}/" .config || die 'config_enable failed'
 }
 
 src_prepare() {
 	# Autopatcher
 	base_src_prepare
 
+	# Filter-out -Werror, bug #363843
+	sed -e 's/-Werror//g' -i CMakeLists.txt \
+		|| die
+
 	# Create .config file with all variables defaulted to =n
-	sed -i -n -e "s/=\(m\|y\)/=n/" -e "/^[a-z]/p" .config \
-		|| die ".config creation failed"
+	sed -i -n -e 's/=\(m\|y\)/=n/' -e '/^[a-z]/p' .config \
+		|| die '.config creation failed'
 
 	# Common modules
 	# BLACKLISTED config_enable module_advanced_userlist m
