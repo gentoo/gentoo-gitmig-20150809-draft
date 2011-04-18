@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.51 2011/04/16 17:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.52 2011/04/18 11:26:33 scarabeus Exp $
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -xvinfo-1.1.0.ebuild:
+  old
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> xvinfo-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #359059
