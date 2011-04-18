@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.2.0-r3.ebuild,v 1.2 2011/04/17 22:54:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/minisat-2.2.0-r3.ebuild,v 1.3 2011/04/18 14:58:36 mr_bones_ Exp $
 
 EAPI="2"
 
