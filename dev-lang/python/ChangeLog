@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.532 2011/04/05 06:01:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.533 2011/04/18 17:59:23 tomka Exp $
+
+  18 Apr 2011; Thomas Kahle <tomka@gentoo.org> python-2.7.1-r1.ebuild:
+  x86 stable per bug 358717
 
   05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> python-2.4.6.ebuild,
   python-2.5.4-r4.ebuild, python-2.6.5-r3.ebuild, python-2.6.6-r1.ebuild,
