@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.1.1.ebuild,v 1.1 2011/04/16 23:32:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.1.1.ebuild,v 1.2 2011/04/18 23:55:22 mr_bones_ Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~blueness/elfix/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 DEPEND="dev-libs/elfutils
 	test? ( dev-lang/yasm )"
