@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12699 2011/04/18 07:59:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12700 2011/04/18 18:56:29 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -562,11 +562,6 @@ app-pda/multisync-gui
 # Doesn't work with latest twitter API.
 # Either this will be removed, or unmasked when new 0.3 version is out.
 net-misc/pino
-
-# Hans de Graaff <graaff@gentoo.org> (02 Feb 2011)
-# Masked for removal in 30 days. Superseded by
-# dev-libs/Ice[ruby].
-dev-ruby/IceRuby
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (31 Jan 2011)
 # New package, masked for an initial testing period. Needs exotic
