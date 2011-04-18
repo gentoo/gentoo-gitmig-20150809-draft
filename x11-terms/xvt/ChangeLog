@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xvt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.16 2010/01/11 17:58:34 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.17 2011/04/18 04:21:09 jer Exp $
+
+*xvt-2.1-r3 (18 Apr 2011)
+
+  18 Apr 2011; Jeroen Roovers <jer@gentoo.org> +xvt-2.1-r3.ebuild,
+  +files/xvt-pts.patch:
+  Fix segfault by Vikraman (bug #363883).
 
   11 Jan 2010; Raúl Porcel <armin76@gentoo.org> xvt-2.1-r1.ebuild,
   xvt-2.1-r2.ebuild:
