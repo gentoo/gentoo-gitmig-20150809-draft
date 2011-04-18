@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.98 2011/04/16 18:09:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.99 2011/04/18 11:36:02 scarabeus Exp $
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libXt-1.0.9.ebuild:
+  old
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> libXt-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #359059

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.73 2011/04/16 18:08:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.74 2011/04/18 11:34:19 scarabeus Exp $
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libXfixes-4.0.5.ebuild:
+  old
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> libXfixes-5.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #359059
