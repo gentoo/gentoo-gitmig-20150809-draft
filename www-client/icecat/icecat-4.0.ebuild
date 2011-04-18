@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.ebuild,v 1.2 2011/04/17 23:51:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.ebuild,v 1.3 2011/04/18 15:06:25 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -109,10 +109,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Integrate rebranding
-	sed -i "s|/firefox|/icecat|" \
-		"${WORKDIR}"/001-firefox_gentoo_install_dirs.patch
-
 	# Fix preferences location
 	sed -i 's|defaults/pref/|defaults/preferences/|' browser/installer/packages-static || die "sed failed"
 
