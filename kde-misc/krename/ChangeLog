@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/krename
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.64 2011/02/13 20:07:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.65 2011/04/18 15:16:29 scarabeus Exp $
+
+*krename-4.0.7 (18 Apr 2011)
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> +krename-4.0.7.ebuild:
+  Version bump.
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/4.0.4-podofo_automagic.patch, -krename-4.0.4.ebuild:
