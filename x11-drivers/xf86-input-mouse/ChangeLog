@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-mouse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.105 2011/04/16 18:00:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.106 2011/04/18 11:28:13 scarabeus Exp $
+
+  18 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-input-mouse-1.6.0.ebuild:
+  old
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> xf86-input-mouse-1.7.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #359059
