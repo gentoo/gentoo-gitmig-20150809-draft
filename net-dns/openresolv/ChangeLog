@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.63 2011/01/05 23:00:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.64 2011/04/18 15:32:41 darkside Exp $
+
+  18 Apr 2011; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  remove myself from metadata, stopped using software
 
 *openresolv-3.4.1 (05 Jan 2011)
 
