@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.2 2010/06/07 15:05:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.3 2011/04/18 06:36:18 jlec Exp $
 
 EAPI="3"
 
@@ -21,6 +21,10 @@ RDEPEND="dev-lang/tcl"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}$(get_version_component_range 1-2)"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-test.patch
+}
 
 src_compile() {
 	# adjust install_name on darwin

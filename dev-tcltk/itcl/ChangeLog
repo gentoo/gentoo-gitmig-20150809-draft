@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.47 2011/04/18 06:20:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.48 2011/04/18 06:36:18 jlec Exp $
+
+  18 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/3.4_beta1-test.patch,
+  itcl-3.4_beta1.ebuild:
+  Fix for tests, upstream didn't correct test according to code changes
 
   18 Apr 2011; Justin Lecher <jlec@gentoo.org> itcl-3.3-r1.ebuild,
   itcl-3.3.1_pre20090417.ebuild, itcl-3.3.1_pre20090417-r1.ebuild:
