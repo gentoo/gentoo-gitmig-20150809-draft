@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.6.0.ebuild,v 1.4 2011/03/19 17:08:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.6.0.ebuild,v 1.5 2011/04/18 10:20:03 eras Exp $
 
 EAPI=2
 inherit autotools eutils multilib libtool
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 # get rid of old style virtual - bug 350792
 # all blockers really needed?
 RDEPEND="${RDEPEND}
-	!net-mail/dovecot
 	!mail-mta/courier
 	!net-mail/bincimap
 	!net-mail/cyrus-imapd

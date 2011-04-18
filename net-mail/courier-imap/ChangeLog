@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.187 2011/03/19 17:08:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.188 2011/04/18 10:20:03 eras Exp $
+
+  18 Apr 2011; Eray Aslan <eras@gentoo.org> courier-imap-4.0.6-r3.ebuild,
+  courier-imap-4.5.0.ebuild, courier-imap-4.6.0.ebuild,
+  courier-imap-4.8.0.ebuild:
+  revert blocker to net-mail/dovecot introduced while changing to new style
+  virtual/imapd
 
   19 Mar 2011; Eray Aslan <eras@gentoo.org> courier-imap-4.0.6-r3.ebuild,
   courier-imap-4.5.0.ebuild, courier-imap-4.6.0.ebuild,
