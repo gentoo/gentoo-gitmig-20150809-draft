@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.86 2011/04/15 21:47:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.87 2011/04/18 19:55:36 tomka Exp $
+
+  18 Apr 2011; Thomas Kahle <tomka@gentoo.org> py-1.4.2.ebuild:
+  x86 stable per bug 362773
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> py-1.4.2.ebuild:
   Stable on amd64 wrt bug #362773
