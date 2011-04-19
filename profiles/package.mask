@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12704 2011/04/19 21:57:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12705 2011/04/19 22:09:09 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -352,12 +352,6 @@ media-plugins/mythzoneminder
 # Masking openocd prelease snapshot
 =dev-embedded/openocd-0.5.0_pre*
 
-# Pacho Ramos <pacho@gentoo.org> (14 Mar 2011)
-# Still relies on deprecated libgnomeprint, there are many other
-# apps to manage photos, no update since 2007.
-# Removal in 30 days (bug #358437)
-media-gfx/gpp
-
 # Markos Chandras <hwoarang@gentoo.org> (13 Mar 2011)
 # Masked for testing
 >=dev-util/boost-build-1.45
@@ -397,11 +391,6 @@ media-plugins/gmpc-coveramazon
 # bug 358591
 # Removal April 10 2011
 media-plugins/vdr-vdricq
-
-# Pacho Ramos <pacho@gentoo.org> (12 Mar 2011)
-# Old, unused, no longer developed (bug #355825).
-# Removal in 30 days.
-=dev-cpp/gtkmm-1.2.9-r2
 
 # Ulrich Mueller <ulm@gentoo.org> (12 Mar 2011)
 # Part of app-editors/emacs since version 23.2.
@@ -580,12 +569,6 @@ net-misc/pino
 >=net-dns/maradns-2
 
 # Pacho Ramos <pacho@gentoo.org> (26 Jan 2011)
-# It makes gnome-panel-2.32 to crash, since upstream looks dead
-# any help on fixing bug 348123 is highly appreciated.
-# Will be removed around 2011-04-07.
-gnome-extra/quick-lounge-applet
-
-# Pacho Ramos <pacho@gentoo.org> (26 Jan 2011)
 # Doesn't work with mono-2.8, upstream tarballs for 2.99.x
 # are incomplete, if you want to help on bumping, please
 # refer to bug #340375
@@ -726,10 +709,6 @@ net-analyzer/ncrack
 # 2.0.9999 instead if you want a kmess
 # that actually builds
 =net-im/kmess-9999
-
-# Arun Raghavan <ford_prefect@gentoo.org> (26 Oct 2010)
-# Mask development versions of Rygel
->=net-misc/rygel-0.9.1
 
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
 # Masked until reverse dependencies are sorted out (bug #342461)
