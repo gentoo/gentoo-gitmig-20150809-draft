@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5303 2011/04/19 17:37:00 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5304 2011/04/19 21:57:52 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask development versions of argus/-clients.
 
   19 Apr 2011; <olemarkus@gentoo.org> package.mask:
   Remove package mask of PEAR-File_XSPF and PEAR-XML_Tree now that they have

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12703 2011/04/19 17:37:00 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12704 2011/04/19 21:57:52 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (19 Apr 2011)
+# development branch of argus/-clients
+=net-analyzer/argus-3.0.5*
+=net-analyzer/argus-clients-3.0.5*
 
 # Luca Barbato <lu_zero@gentoo.org> (19 Apr 2011)
 # Masked for testing, deprecated api removed since this version
