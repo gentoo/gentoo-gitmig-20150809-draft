@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.46.ebuild,v 1.1 2011/01/14 03:41:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.46.ebuild,v 1.2 2011/04/19 03:12:35 robbat2 Exp $
 
 EAPI=2
 MODULE_AUTHOR="DORMANDO"
@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="dev-perl/Net-Netmask
 		>=dev-perl/Danga-Socket-1.61
 		>=dev-perl/Sys-Syscall-0.22
-		>=dev-perl/Perlbal-1.74
+		>=dev-perl/Perlbal-1.76
 		dev-perl/IO-AIO
 		dev-perl/libwww-perl
 		>=dev-perl/MogileFS-Client-1.11
