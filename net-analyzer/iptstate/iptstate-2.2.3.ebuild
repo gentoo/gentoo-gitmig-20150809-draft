@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.2.2.ebuild,v 1.2 2011/04/19 23:18:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.2.3.ebuild,v 1.1 2011/04/19 23:18:36 jer Exp $
 
 EAPI="2"
 
@@ -30,6 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	make PREFIX="${D}"/usr install || die
+	emake PREFIX="${D}"/usr install || die
 	dodoc README Changelog BUGS CONTRIB WISHLIST
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.2.1.ebuild,v 1.10 2009/01/11 21:42:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/iptstate-2.2.1.ebuild,v 1.11 2011/04/19 23:18:36 jer Exp $
 
 inherit base
 
@@ -10,6 +10,7 @@ HOMEPAGE="http://www.phildev.net/iptstate/"
 
 DEPEND="sys-libs/ncurses
 	>=net-libs/libnetfilter_conntrack-0.0.50"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="as-is"
