@@ -15,7 +15,7 @@
  all: ${OBJECTS}
 -	cc $(OBJECTS) -o $(OUT) $(LDFLAGS) $(LIBS)
 -	strip $(OUT)
-+	$(CC) $(OBJECTS) -o $(OUT) $(LDFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJECTS) -o $(OUT) $(LIBS)
  
  clean:
  	rm -rf $(OBJECTS) $(OUT)
