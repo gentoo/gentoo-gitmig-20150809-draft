@@ -1,9 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.5.ebuild,v 1.1 2010/10/17 18:07:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.6.ebuild,v 1.1 2011/04/19 20:42:07 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 KDE_LINGUAS="cs de es et fi fr it nl pl ru tr zh_TW"
+KDE_REQUIRED="optional"
+KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="A simple tag editor for KDE"
@@ -13,7 +15,7 @@ SRC_URI="mirror://sourceforge/kid3/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="flac +handbook mp3 mp4 +taglib vorbis"
+IUSE="flac mp3 mp4 +taglib vorbis"
 
 RDEPEND="
 	flac? (
@@ -26,24 +28,18 @@ RDEPEND="
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}"
 
-src_configure() {
-	# -DWITH_TUNEPIMP is using deprecated RDF WebService
-	# -DWITH_KDE=OFF doesn't compile, last checked 1.4
+REQUIRED_USE="flac? ( vorbis )"
 
-	mycmakeargs+=(
+src_configure() {
+	local mycmakeargs=(
 		$(cmake-utils_use_with flac)
+		$(cmake-utils_use_with kde)
 		$(cmake-utils_use_with mp3 ID3LIB)
 		$(cmake-utils_use_with mp4 MP4V2)
+		$(cmake-utils_use_with vorbis)
 		$(cmake-utils_use_with taglib)
 		"-DWITH_TUNEPIMP=OFF"
-		"-DWITH_KDE=ON"
 		)
-
-	if use flac; then
-		mycmakeargs+=( "-DWITH_VORBIS=ON" )
-	else
-		mycmakeargs+=( $(cmake-utils_use_with vorbis) )
-	fi
 
 	kde4-base_src_configure
 }

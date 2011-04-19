@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/kid3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.53 2010/10/17 18:07:04 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.54 2011/04/19 20:42:07 scarabeus Exp $
+
+*kid3-1.6 (19 Apr 2011)
+
+  19 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kid3-1.5.ebuild,
+  +kid3-1.6.ebuild:
+  Version bump. Optional switching of some features produces bogus make files.
+  This needs to be properly patched before we can even consider stabling it.
 
 *kid3-1.5 (17 Oct 2010)
 
