@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.98 2011/04/18 19:29:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.99 2011/04/19 20:56:06 dilfridge Exp $
+
+  19 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  plasma-workspace-4.6.2-r1.ebuild:
+  Force same semantic-desktop setting for kdelibs, should fix bug 363683
 
 *plasma-workspace-4.6.2-r1 (18 Apr 2011)
 
