@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Domain-TLD
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.20 2009/09/18 16:24:15 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.21 2011/04/19 17:06:12 tove Exp $
+
+*Net-Domain-TLD-1.690.0 (19 Apr 2011)
+
+  19 Apr 2011; Torsten Veller <tove@gentoo.org> +Net-Domain-TLD-1.690.0.ebuild:
+  Version bump
 
   18 Sep 2009; Torsten Veller <tove@gentoo.org> Net-Domain-TLD-1.68.ebuild:
   Fix typo: s/REPEND/RDEPEND/
