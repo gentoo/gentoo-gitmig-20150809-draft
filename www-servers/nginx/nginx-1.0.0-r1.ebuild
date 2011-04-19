@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.0-r1.ebuild,v 1.1 2011/04/18 08:48:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.0-r1.ebuild,v 1.2 2011/04/19 06:50:24 hollow Exp $
 
 EAPI="2"
 
@@ -325,12 +325,12 @@ src_install() {
 
 	if use nginx_modules_http_ey_balancer; then
 		docinto ${HTTP_EY_BALANCER_MODULE_P}
-		dodoc "${WORKDIR}"/${HTTP_EY_BALANCER_MODULE_P}/README
+		dodoc "${WORKDIR}"/ry-nginx-ey-balancer-${HTTP_EY_BALANCER_MODULE_SHA1}/README
 	fi
 
 	if use nginx_modules_http_slowfs_cache; then
 		docinto ${HTTP_SLOWFS_CACHE_MODULE_P}
-		dodoc "${WORKDIR}"/${HTTP_SLOWFS_CACHE_MODULE_P}/{CHANGES,README.md}
+		dodoc "${WORKDIR}"/${HTTP_SLOWFS_CACHE_MODULE_P}/{CHANGES,README}
 	fi
 }
 
