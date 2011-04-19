@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beep
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.26 2009/03/28 05:39:33 solar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.27 2011/04/19 20:40:11 radhermit Exp $
+
+*beep-1.3 (19 Apr 2011)
+
+  19 Apr 2011; Tim Harder <radhermit@gentoo.org> +beep-1.3.ebuild:
+  Version bump.
 
   28 Mar 2009; <solar@gentoo.org> +files/beep-1.2.2-Makefile.patch,
   beep-1.2.2-r1.ebuild:
