@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.64 2011/03/27 21:58:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.65 2011/04/19 21:13:00 radhermit Exp $
+
+*patchutils-0.3.2 (19 Apr 2011)
+
+  19 Apr 2011; Tim Harder <radhermit@gentoo.org> +patchutils-0.3.2.ebuild:
+  Version bump. Update to EAPI 4.
 
   27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -patchutils-0.3.0.ebuild:
   remove old ebuilds
