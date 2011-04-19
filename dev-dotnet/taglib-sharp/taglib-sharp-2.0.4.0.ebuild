@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.4.0.ebuild,v 1.1 2011/04/18 16:16:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.4.0.ebuild,v 1.2 2011/04/19 11:51:22 angelos Exp $
 
 EAPI=4
 inherit mono
@@ -21,15 +21,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
-	sed -i	-e "s:   docs::" \
-		-e "s:   examples::" \
+	sed -i	-e "s:docs::" \
+		-e "s:examples::" \
 		Makefile.in || die "sedding sense into makefiles failed"
 }
 
 src_configure() {
 	econf --disable-docs
-}
-
-src_compile() {
-	emake -j1
 }
