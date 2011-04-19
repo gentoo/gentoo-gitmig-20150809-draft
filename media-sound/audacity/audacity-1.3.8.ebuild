@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.8.ebuild,v 1.8 2010/10/27 03:09:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.8.ebuild,v 1.9 2011/04/19 02:18:40 radhermit Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ COMMON_DEPEND="=x11-libs/wxGTK-2.8*
 	soundtouch? ( >=media-libs/libsoundtouch-1.3.1 )
 	vamp? ( >=media-libs/vamp-plugin-sdk-2.0 )
 	twolame? ( media-sound/twolame )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080617 )
+	ffmpeg? ( virtual/ffmpeg )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.103.0 )"
 # Crashes at  startup here...
