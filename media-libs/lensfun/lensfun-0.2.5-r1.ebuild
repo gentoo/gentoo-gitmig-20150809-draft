@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r1.ebuild,v 1.2 2010/04/17 18:49:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r1.ebuild,v 1.3 2011/04/19 21:26:10 dilfridge Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ src_configure() {
 	local myconf=""
 	use debug && myconf="--mode=debug"
 	# econf does NOT work
-	./configure --prefix=/usr --vectorization= ${myconf} || die
+	./configure --prefix=/usr --docdir="/usr/share/doc/${PF}" --vectorization= ${myconf} || die
 }
 
 src_compile() {
