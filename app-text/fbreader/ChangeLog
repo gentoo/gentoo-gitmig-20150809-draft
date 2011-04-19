@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.20 2011/04/18 15:13:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.21 2011/04/19 13:00:42 ssuominen Exp $
+
+  19 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> -fbreader-0.12.20.ebuild:
+  Punt invalid version bump wrt #364059.
 
 *fbreader-0.12.20 (18 Apr 2011)
 
