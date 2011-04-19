@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.4.2.ebuild,v 1.2 2011/03/21 11:38:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.4.2.ebuild,v 1.3 2011/04/19 09:05:34 tomka Exp $
 
 EAPI=2
 MY_P=${PN}-src-${PV}
@@ -11,7 +11,7 @@ SRC_URI="mirror://berlios/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="pulseaudio"
 
 RDEPEND=">=x11-libs/gtk+-2.14:2

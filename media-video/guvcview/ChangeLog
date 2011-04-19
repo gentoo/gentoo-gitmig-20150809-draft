@@ -1,6 +1,9 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.16 2011/03/21 11:38:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.17 2011/04/19 09:05:34 tomka Exp $
+
+  19 Apr 2011; Thomas Kahle <tomka@gentoo.org> guvcview-1.4.2.ebuild:
+  x86 stable per bug 359603
 
   21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> guvcview-1.4.2.ebuild:
   Stable on amd64 wrt bug #359603
