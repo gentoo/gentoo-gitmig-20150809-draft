@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/XSLoader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.7 2011/04/17 07:03:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.8 2011/04/19 16:53:35 tove Exp $
+
+*XSLoader-0.150.0 (19 Apr 2011)
+
+  19 Apr 2011; Torsten Veller <tove@gentoo.org> +XSLoader-0.150.0.ebuild:
+  Version bump
 
 *XSLoader-0.140.0 (17 Apr 2011)
 
