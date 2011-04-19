@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.1 2011/04/14 10:42:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.2 2011/04/19 17:22:25 scarabeus Exp $
 
 EAPI="3"
 
@@ -128,7 +128,7 @@ pkg_setup() {
 
 src_prepare() {
 	if ! use opengl; then
-		epatch "${FILESDIR}"/${P}-html-nonviz.patch
+		epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
 	fi
 
 	base_src_prepare
