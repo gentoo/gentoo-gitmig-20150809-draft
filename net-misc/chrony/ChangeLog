@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.65 2011/04/19 20:36:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.66 2011/04/19 22:41:24 jer Exp $
+
+  19 Apr 2011; Jeroen Roovers <jer@gentoo.org> chrony-1.25_pre1.ebuild:
+  That was P, not PV.
 
 *chrony-1.25_pre1 (19 Apr 2011)
 

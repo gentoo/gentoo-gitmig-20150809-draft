@@ -1,16 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.25_pre1.ebuild,v 1.1 2011/04/19 20:36:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.25_pre1.ebuild,v 1.2 2011/04/19 22:41:24 jer Exp $
 
 EAPI=2
 
 inherit eutils toolchain-funcs
 
-MY_PV="${P/_pre/-pre}"
+MY_P="${P/_pre/-pre}"
 
 DESCRIPTION="NTP client and server programs"
 HOMEPAGE="http://chrony.tuxfamily.org/"
-SRC_URI="http://download.tuxfamily.org/${PN}/${MY_PV}.tar.gz"
+SRC_URI="http://download.tuxfamily.org/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,7 +23,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.21-hppa.patch
