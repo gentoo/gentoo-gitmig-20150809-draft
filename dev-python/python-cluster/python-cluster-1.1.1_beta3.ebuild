@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cluster/python-cluster-1.1.1_beta3.ebuild,v 1.2 2011/03/22 19:05:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cluster/python-cluster-1.1.1_beta3.ebuild,v 1.3 2011/04/19 09:37:11 tomka Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
