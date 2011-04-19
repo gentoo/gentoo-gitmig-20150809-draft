@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.4 2011/01/12 07:23:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.5 2011/04/19 07:34:42 hollow Exp $
+
+  19 Apr 2011; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself from metadata
 
   12 Jan 2011; Tiziano Müller <dev-zero@gentoo.org> uwsgi-0.9.6.6.ebuild,
   files/uwsgi-0.9.6.6-gentoo-gcc.patch:
