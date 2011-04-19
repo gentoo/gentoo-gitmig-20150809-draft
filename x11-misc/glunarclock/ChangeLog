@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glunarclock
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.23 2010/12/08 18:54:29 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.24 2011/04/19 07:57:13 xmw Exp $
+
+  19 Apr 2011; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Taking maintainer-ship
 
   08 Dec 2010; Pacho Ramos <pacho@gentoo.org> glunarclock-0.34.1.ebuild:
   Needs gnome-panel with bonobo support.
