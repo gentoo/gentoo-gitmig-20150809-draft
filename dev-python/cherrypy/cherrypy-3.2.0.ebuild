@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.2.0.ebuild,v 1.4 2011/04/18 18:10:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.2.0.ebuild,v 1.5 2011/04/19 21:51:35 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -37,6 +37,7 @@ src_test() {
 		PYTHONPATH="build-${PYTHON_ABI}/lib" nosetests -P -s py$(python_get_version --major)/cherrypy/test
 	}
 	python_execute_function testing
+#	python_execute_nosetests -e -P 'build-${PYTHON_ABI}/lib' -- -P -s 'py$(python_get_version --major)/cherrypy/test'
 }
 
 src_install() {
