@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.8.ebuild,v 1.1 2011/04/05 18:46:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.8.ebuild,v 1.2 2011/04/19 11:26:02 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2" # Just a build-time dependency
@@ -42,9 +42,9 @@ src_compile() {
 	export GST_REGISTRY=${T}/registry.cache.xml
 
 	# Clutter tries to access dri without userpriv
-	# Massive failure of a hack, see bug 360219 and bug 360073
+	# Massive failure of a hack, see bug 360219, bug 360073, bug 363917
 	shopt -s nullglob
-	local cards=$(echo -n /dev/dri/card* /dev/nvidiactl* | sed 's/ /:/g')
+	local cards=$(echo -n /dev/{dri,ati}/card* /dev/nvidiactl* | sed 's/ /:/g')
 	shopt -u nullglob
 	test -n "${cards}" && addpredict "${cards}"
 
