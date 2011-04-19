@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.3 2011/04/18 06:36:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.4 2011/04/19 06:02:19 jlec Exp $
 
 EAPI="3"
 
@@ -33,6 +33,8 @@ src_compile() {
 			-e 's:^\(SHLIB_LD\W.*\)$:\1 -install_name ${pkglibdir}/$@:' \
 			"${S}"/Makefile || die 'sed failed'
 	fi
+
+	sed 's:-pipe::g' -i Makefile || die
 
 	emake CFLAGS_DEFAULT="${CFLAGS}" || die "emake failed"
 }

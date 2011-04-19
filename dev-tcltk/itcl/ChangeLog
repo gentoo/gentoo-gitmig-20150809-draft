@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.48 2011/04/18 06:36:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.49 2011/04/19 06:02:19 jlec Exp $
+
+  19 Apr 2011; Justin Lecher <jlec@gentoo.org> itcl-3.4_beta1.ebuild:
+  No automagic addition of -pipe to CFLAGS, thanks ago for the fix
 
   18 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/3.4_beta1-test.patch,
   itcl-3.4_beta1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.25 2011/04/18 06:10:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.26 2011/04/19 05:58:45 jlec Exp $
+
+  19 Apr 2011; Justin Lecher <jlec@gentoo.org> itk-3.3-r1.ebuild,
+  itk-3.3.1_pre20090417-r1.ebuild, itk-3.4_pre20090417.ebuild:
+  No automagic addition of -pipe to CFLAGS, thanks ago for the fix
 
 *itk-3.3.1_pre20090417-r1 (18 Apr 2011)
 
