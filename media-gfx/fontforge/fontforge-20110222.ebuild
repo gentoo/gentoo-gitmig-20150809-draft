@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.1 2011/04/19 16:34:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.2 2011/04/19 16:45:46 pva Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -16,7 +16,7 @@
 EAPI=3
 
 PYTHON_DEPEND="python? 2"
-inherit eutils fdo-mime python
+inherit eutils fdo-mime python autotools
 
 HTDOCSV="20110221"
 CIDMAPV="20090121"
@@ -68,6 +68,7 @@ src_prepare() {
 		chmod -x *.html
 	fi
 	epatch "${FILESDIR}/${P}-lxkbui.patch"
+	eautoconf
 }
 
 src_configure() {
