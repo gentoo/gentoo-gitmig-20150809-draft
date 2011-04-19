@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/herqq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.1 2011/02/21 21:46:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.2 2011/04/19 02:37:14 jmbsvicetto Exp $
+
+  19 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  herqq-0.8.0.ebuild:
+  Added ~amd64 keyword.
 
 *herqq-0.8.0 (21 Feb 2011)
 

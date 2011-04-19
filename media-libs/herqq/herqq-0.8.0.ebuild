@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-0.8.0.ebuild,v 1.1 2011/02/21 21:46:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-0.8.0.ebuild,v 1.2 2011/04/19 02:37:14 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hupnp/${P}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 #no release of QtSolutions using bundled libQtSolutions_SOAP
