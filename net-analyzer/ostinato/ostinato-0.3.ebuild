@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ostinato-0.3.ebuild,v 1.5 2011/04/18 17:53:33 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ostinato-0.3.ebuild,v 1.6 2011/04/19 13:58:13 c1pher Exp $
 
 EAPI=2
 inherit qt4-r2
@@ -20,6 +20,10 @@ DEPEND="dev-libs/protobuf
 	x11-libs/qt-gui:4
 	x11-libs/qt-script:4"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/protobuf-2.4.0.diff
+}
 
 src_configure(){
 	eqmake4 PREFIX=/usr ost.pro

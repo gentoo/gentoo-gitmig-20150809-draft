@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ostinato
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.6 2011/04/18 17:53:33 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.7 2011/04/19 13:58:13 c1pher Exp $
+
+  19 Apr 2011; Dane Smith <c1pher@gentoo.org> -ostinato-0.2.ebuild,
+  ostinato-0.3.ebuild, +files/protobuf-2.4.0.diff:
+  Add new patch for 0.3 wrt bug 363911. Now works protobuf-2.4.0a
 
   18 Apr 2011; Dane Smith <c1pher@gentoo.org> ostinato-0.2.ebuild,
   ostinato-0.3.ebuild:
