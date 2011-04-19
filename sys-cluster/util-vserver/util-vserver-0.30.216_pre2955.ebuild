@@ -1,16 +1,21 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.215-r3.ebuild,v 1.3 2009/11/12 14:28:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.216_pre2955.ebuild,v 1.1 2011/04/19 07:20:03 hollow Exp $
+
+EAPI=4
 
 inherit eutils bash-completion
 
+MY_P=${P/_/-}
+S="${WORKDIR}"/${MY_P}
+
 DESCRIPTION="Linux-VServer admin utilities"
 HOMEPAGE="http://www.nongnu.org/util-vserver/"
-SRC_URI="http://ftp.linux-vserver.org/pub/utils/${PN}/${P}.tar.bz2"
+SRC_URI="http://people.linux-vserver.org/~dhozac/t/uv-testing/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 IUSE=""
 
@@ -39,28 +44,19 @@ pkg_setup() {
 	einfo
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_test() {
+	# do not use $D from portage by accident (#297982)
+	sed -i -e 's/^\$D //' "${S}"/src/testsuite/vunify-test.sh
+	default
+}
 
-	# openrc support
-	epatch "${FILESDIR}"/${P}-openrc.patch
-	epatch "${FILESDIR}"/${P}-typo.patch
-
-	# linux capability fixes
-	epatch "${FILESDIR}"/${P}-capget.patch
-
-	# changeset 2718: fix error reporting if mmap() fails
-	epatch "${FILESDIR}"/${P}-2718.patch
-
-	# avoid a bug in dietlibc - #227793
-	use hppa && epatch "${FILESDIR}"/${P}-dietmmap.patch
+src_configure() {
+	econf --with-vrootdir=${VDIRBASE} \
+		--with-initscripts=gentoo \
+		--localstatedir=/var
 }
 
 src_compile() {
-	econf --with-vrootdir=${VDIRBASE} \
-		--with-initscripts=gentoo \
-		--localstatedir=/var || die "econf failed!"
 	emake || die "emake failed!"
 }
 
@@ -137,10 +133,4 @@ pkg_postinst() {
 		ewarn "  ln -s /etc/init.d/vservers.default /etc/init.d/vservers.<mark>"
 		ewarn
 	fi
-
-	ewarn "You should definitly fix up the barrier of your vserver"
-	ewarn "base directory by using the following command in a root shell:"
-	ewarn
-	ewarn " setattr --barrier ${VDIRBASE}"
-	ewarn
 }
