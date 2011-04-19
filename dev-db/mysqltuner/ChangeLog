@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysqltuner
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltuner/ChangeLog,v 1.4 2010/03/28 14:32:36 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltuner/ChangeLog,v 1.5 2011/04/19 08:06:39 hollow Exp $
+
+*mysqltuner-1.2.0 (19 Apr 2011)
+
+  19 Apr 2011; Benedikt Böhm <hollow@gentoo.org> +mysqltuner-1.2.0.ebuild:
+  version bump
 
   28 Mar 2010; Markus Meier <maekke@gentoo.org> mysqltuner-1.1.1.ebuild:
   amd64 stable, bug #309139
