@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.61 2011/04/17 15:26:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.62 2011/04/19 16:01:26 pva Exp $
+
+*culmus-0.120-r1 (19 Apr 2011)
+
+  19 Apr 2011; Peter Volkov <pva@gentoo.org> -culmus-0.105.ebuild,
+  +culmus-0.120-r1.ebuild:
+  Install type1 fonts required for culmus-latex, bug #350657 thank Thomas Kahle
+  for report. Drop old.
 
   17 Apr 2011; Christian Faulhammer <fauli@gentoo.org> culmus-0.120.ebuild:
   x86 stable per bug 349268
