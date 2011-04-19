@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vkeybd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.40 2010/07/13 14:38:29 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.41 2011/04/19 13:50:40 aballier Exp $
+
+  19 Apr 2011; Alexis Ballier <aballier@gentoo.org> -vkeybd-0.1.17b-r1.ebuild,
+  -files/vkeybd-0.1.17b-desktop-entry.patch, -files/vkeybd-0.1.17b-lash.patch,
+  -files/vkeybd-0.1.17b-makefile.patch, -vkeybd-0.1.18c.ebuild:
+  remove old
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   vkeybd-0.1.18d.ebuild:
