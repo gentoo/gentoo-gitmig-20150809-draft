@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/geoip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.111 2010/10/14 18:45:33 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.112 2011/04/19 22:33:53 jer Exp $
+
+*geoip-1.4.7 (19 Apr 2011)
+
+  19 Apr 2011; Jeroen Roovers <jer@gentoo.org> +geoip-1.4.7.ebuild:
+  Version bump thanks to euscan. Add USE=static-libs.
 
   14 Oct 2010; Jeroen Roovers <jer@gentoo.org> geoip-1.4.5.ebuild,
   geoip-1.4.6.ebuild:
