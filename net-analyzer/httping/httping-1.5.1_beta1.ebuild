@@ -1,27 +1,27 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.3.1.ebuild,v 1.5 2010/01/06 19:57:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.5.1_beta1.ebuild,v 1.1 2011/04/19 22:44:32 jer Exp $
 
 EAPI="2"
 
 inherit flag-o-matic toolchain-funcs
 
+MY_P="${P/_beta1/beta}"
+
 DESCRIPTION="http protocol ping-like program"
 HOMEPAGE="http://www.vanheusden.com/httping/"
-SRC_URI="http://www.vanheusden.com/${PN}/${P}.tgz"
+SRC_URI="http://www.vanheusden.com/${PN}/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~mips ~ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug ssl"
 
 RDEPEND=">=sys-libs/ncurses-5
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	sed 's:^CFLAGS=:CFLAGS+=:' -i Makefile || die
-}
+S="${WORKDIR}"/${MY_P}
 
 src_compile() {
 	append-flags -D_GNU_SOURCE
