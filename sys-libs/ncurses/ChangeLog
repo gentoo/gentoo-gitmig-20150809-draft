@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.186 2011/04/15 23:35:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.187 2011/04/19 06:16:22 xmw Exp $
+
+  19 Apr 2011; Michael Weber <xmw@gentoo.org> ncurses-5.7-r7.ebuild:
+  sparc stable (bug 353437)
 
   15 Apr 2011; Michael Weber <xmw@gentoo.org> ncurses-5.7-r7.ebuild:
   arm stable (bug 353437)
