@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.5.ebuild,v 1.1 2011/04/19 06:48:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.5.ebuild,v 1.2 2011/04/19 09:12:35 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
@@ -120,7 +120,7 @@ src_prepare() {
 		-i src/optional/python-bindings/Makefile.{am,in} \
 		|| die "python tests sed failed"
 
-	# Do not relink to system libraries, bug #XXX
+	# Do not relink to system libraries, upstream bug #644897
 	epatch "${FILESDIR}/${PN}-2.4.5-link-system-libs.patch"
 
 	intltoolize --force --copy --automake || die
