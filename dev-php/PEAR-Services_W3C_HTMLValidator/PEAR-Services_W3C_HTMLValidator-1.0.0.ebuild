@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_W3C_HTMLValidator/PEAR-Services_W3C_HTMLValidator-1.0.0.ebuild,v 1.1 2011/04/19 13:44:59 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_W3C_HTMLValidator/PEAR-Services_W3C_HTMLValidator-1.0.0.ebuild,v 1.2 2011/04/19 23:38:59 mr_bones_ Exp $
 
 inherit php-pear-r1
 
@@ -12,4 +12,3 @@ KEYWORDS="~amd64 ~x86"
 IUSE="minimal"
 
 RDEPEND="!minimal? ( >=dev-php/PEAR-HTTP_Request-1.3.0 )"
-
