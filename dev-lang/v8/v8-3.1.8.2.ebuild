@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.1.8.2.ebuild,v 1.1 2011/03/18 14:31:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.1.8.2.ebuild,v 1.2 2011/04/19 10:15:44 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -17,10 +17,6 @@ IUSE="readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
 DEPEND="${RDEPEND}"
-
-# To make tests work, we compile with sample=shell.
-# For more info see http://groups.google.com/group/v8-users/browse_thread/thread/61ca70420e4476bc
-EXTRA_ESCONS="library=shared soname=on sample=shell importenv=\"LINKFLAGS\""
 
 pkg_setup() {
 	tc-export AR CC CXX RANLIB
@@ -51,7 +47,9 @@ src_configure() {
 }
 
 src_compile() {
-	local myconf=""
+	# To make tests work, we compile with sample=shell.
+	# For more info see http://groups.google.com/group/v8-users/browse_thread/thread/61ca70420e4476bc
+	local myconf="library=shared soname=on sample=shell importenv=\"LINKFLAGS\""
 
 	# Use target arch detection logic from bug #296917.
 	local myarch="$ABI"
