@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/mspdebug-0.13.ebuild,v 1.1 2010/11/26 07:53:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/mspdebug-0.15.ebuild,v 1.1 2011/04/19 02:34:46 radhermit Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -16,20 +16,21 @@ KEYWORDS="~amd64 ~x86"
 IUSE="readline"
 
 DEPEND="readline? ( sys-libs/readline )
-	dev-libs/libusb:0"
+	virtual/libusb:0"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i -e "s:-O1 \(.*\) -ggdb:\1:" Makefile
+}
 
 src_compile() {
 	local myflags
+	! use readline && myflags="WITHOUT_READLINE=1"
 
-	if ! use readline; then
-		myflags="WITHOUT_READLINE=1"
-	fi
-
-	emake CC=$(tc-getCC) ${myflags} || die "emake failed"
+	emake CC=$(tc-getCC) ${myflags}
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install || die "emake install failed"
+	emake DESTDIR="${D}" PREFIX=/usr install
 	dodoc AUTHORS ChangeLog
 }
