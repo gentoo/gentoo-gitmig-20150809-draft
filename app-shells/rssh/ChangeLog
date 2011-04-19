@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/rssh
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.18 2008/02/20 12:55:46 caleb Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.19 2011/04/19 22:40:02 beandog Exp $
+
+*rssh-2.3.3 (19 Apr 2011)
+
+  19 Apr 2011; Steve Dibb <beandog@gentoo.org> +rssh-2.3.3.ebuild:
+  Version bump, bug 344339
 
   20 Feb 2008; Caleb Tennis <caleb@gentoo.org> ChangeLog:
   remove old version
