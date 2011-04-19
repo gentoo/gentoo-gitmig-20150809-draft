@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.25 2011/03/31 04:13:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.26 2011/04/19 04:19:47 darkside Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
@@ -71,7 +71,6 @@ bash-completion_pkg_postinst() {
 
 	if use bash-completion ; then
 		elog "The following bash-completion scripts have been installed:"
-		elog
 		if [[ -n ${BASHCOMPLETION_NAME} ]]; then
 			elog "	${BASHCOMPLETION_NAME}"
 		else
