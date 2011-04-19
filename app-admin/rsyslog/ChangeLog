@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.42 2011/04/16 13:17:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.43 2011/04/19 09:32:05 tomka Exp $
+
+  19 Apr 2011; Thomas Kahle <tomka@gentoo.org> rsyslog-5.6.4.ebuild:
+  x86 stable per bug 359765
 
   16 Apr 2011; Christoph Mende <angelos@gentoo.org> rsyslog-5.6.4.ebuild:
   Stable on amd64 wrt bug #359765
