@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/argus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.27 2010/10/10 11:03:39 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.28 2011/04/19 22:01:40 jer Exp $
+
+*argus-3.0.5.2 (19 Apr 2011)
+*argus-3.0.4 (19 Apr 2011)
+
+  19 Apr 2011; Jeroen Roovers <jer@gentoo.org> +argus-3.0.4.ebuild,
+  +files/argus-3.0.4-disable-tcp-wrappers-automagic.patch,
+  +argus-3.0.5.2.ebuild:
+  Version bumps thanks to euscan.
 
   10 Oct 2010; Markos Chandras <hwoarang@gentoo.org> argus-3.0.3.8.ebuild:
   Stable on amd64 wrt bug #323577
