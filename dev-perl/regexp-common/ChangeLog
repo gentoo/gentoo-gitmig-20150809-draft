@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/regexp-common
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.28 2011/04/17 06:58:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.29 2011/04/19 17:12:25 tove Exp $
+
+*regexp-common-2011041701.0.0 (19 Apr 2011)
+
+  19 Apr 2011; Torsten Veller <tove@gentoo.org>
+  +regexp-common-2011041701.0.0.ebuild:
+  Version bump
 
 *regexp-common-2011041602.0.0 (17 Apr 2011)
 
