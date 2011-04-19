@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.180 2011/04/15 21:39:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.181 2011/04/19 06:18:40 xmw Exp $
+
+  19 Apr 2011; Michael Weber <xmw@gentoo.org> rxvt-unicode-9.10.ebuild:
+  ppc/sparc stable (bug 353109)
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> rxvt-unicode-9.10.ebuild:
   Stable on amd64 wrt bug #353109
