@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12700 2011/04/18 18:56:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12701 2011/04/19 05:52:50 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (19 Apr 2011)
+# Starting from version 2.6.0-rc1 it now uses "proper" autotools, but
+# it requires a bit of changes to avoid automagic dependencies, or
+# forcing of all dependencies.
+=www-apache/mod_security-2.6*
 
 # Christian Faulhammer <fauli@gentoo.org> (17 Apr 2011)
 # Mask for removal, abandoned by upstream with severe bugs, bug 363927
