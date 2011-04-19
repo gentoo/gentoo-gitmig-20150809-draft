@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Text-Diff
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.18 2010/01/14 15:24:45 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.19 2011/04/19 17:16:00 tove Exp $
+
+*Text-Diff-1.410.0 (19 Apr 2011)
+
+  19 Apr 2011; Torsten Veller <tove@gentoo.org> +Text-Diff-1.410.0.ebuild:
+  Version bump
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org> Text-Diff-1.37.ebuild:
   Transfer Prefix keywords
