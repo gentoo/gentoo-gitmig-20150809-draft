@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.12 2011/03/17 16:34:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.13 2011/04/19 16:44:56 olemarkus Exp $
 
 EAPI=2
 
@@ -91,12 +91,12 @@ IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 	empress-bcs esoob exif fdftk frontbase +filter firebird
 	flatfile ftp gd gd-external gdbm gmp +hash +iconv imap inifile
 	interbase iodbc ipv6 +json kerberos ldap ldap-sasl libedit
-	mcve mhash msql mssql mysql mysqli ncurses nls oci8
+	mhash msql mssql mysql mysqli ncurses nls oci8
 	oci8-instant-client odbc pcntl +pcre pdo pic +posix postgres qdbm
 	readline recode reflection sapdb +session sharedext sharedmem
 	+simplexml snmp soap sockets solid spell spl sqlite ssl suhosin
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
-	xml xmlreader xmlwriter xmlrpc xpm xsl yaz zip zlib"
+	xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
 # Enable suhosin if available
 [[ -n $SUHOSIN_VERSION ]] && IUSE="${IUSE} suhosin"
@@ -237,9 +237,7 @@ DEPEND="${DEPEND}
 
 # They are in PDEPEND because we need PHP installed first!
 PDEPEND="doc? ( app-doc/php-docs )
-	suhosin? ( dev-php${PHP_MV}/suhosin )
-	mcve? ( dev-php${PHP_MV}/pecl-mcve )
-	yaz? ( dev-php${PHP_MV}/pecl-yaz )"
+	suhosin? ( dev-php${PHP_MV}/suhosin )"
 
 [[ -n $SUHOSIN_VERSION ]] && PDEPEND="${PDEPEND} suhosin? ( dev-php${PHP_MV}/suhosin )"
 
