@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nautilus-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.7 2011/02/03 07:37:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.8 2011/04/19 06:00:36 pva Exp $
+
+  19 Apr 2011; Peter Volkov <pva@gentoo.org> nautilus-python-0.7.0.ebuild:
+  Use splitted gnome-python-base deps, bug #352920, thank Pacho Ramos for
+  report. Use python eclass, bug 344733, thank Arfrever Frehtes Taifersar
+  Arahesis for report. Dropped .la files
 
 *nautilus-python-0.7.0 (03 Feb 2011)
 
