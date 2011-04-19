@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.80 2011/03/24 17:49:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.81 2011/04/19 17:42:38 olemarkus Exp $
+
+  19 Apr 2011; <olemarkus@gentoo.org> pecl-apc-3.1.7.ebuild:
+  Fixed postinst log message. Thanks to Michael Gisbers for patch. Bug 362413
 
   24 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> pecl-apc-3.1.7.ebuild:
   ppc/ppc64 stable wrt #355611

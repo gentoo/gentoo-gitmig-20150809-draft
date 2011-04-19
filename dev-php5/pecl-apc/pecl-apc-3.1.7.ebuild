@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.7.ebuild,v 1.6 2011/04/10 17:34:14 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/pecl-apc-3.1.7.ebuild,v 1.7 2011/04/19 17:42:38 olemarkus Exp $
 
 EAPI=2
 
@@ -65,5 +65,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "The apc.php file shipped with this release of PECL-APC was"
-	elog "installed into ${PHP_EXT_SHARED_DIR}/apc/."
+	elog "installed into ${PHP_EXT_SHARED_DIR}/."
 }
