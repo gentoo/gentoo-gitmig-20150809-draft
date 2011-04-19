@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12705 2011/04/19 22:09:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12706 2011/04/19 23:49:04 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -800,6 +800,7 @@ net-wireless/fwlanusb
 # The ebuild still needs work, but if you can help testing
 # it, then please unmask (bug #317325)
 =net-analyzer/net-snmp-5.5*
+=net-analyzer/net-snmp-5.6*
 
 # Doug Goldstein <cardoe@gentoo.org> (07 Jul 2010)
 # No actual Gentoo support yet. If you're interested, please see bug #295993
