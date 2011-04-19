@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.ebuild,v 1.1 2011/03/22 14:13:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.ebuild,v 1.2 2011/04/19 20:18:50 scarabeus Exp $
 
 EAPI=3
 
@@ -30,6 +30,11 @@ src_prepare() {
 	autotools-utils_src_prepare
 	eautoreconf # run due to fix_headers patch
 	#elibtoolize # FreeBSD .so version
+
+	# fix test return state
+	sed -i \
+		-e 's:19/2:19/0:' \
+		regress/open_nonarchive.test || die
 }
 
 src_install() {
