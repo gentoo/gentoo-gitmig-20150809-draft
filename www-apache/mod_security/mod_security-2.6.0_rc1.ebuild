@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.0_rc1.ebuild,v 1.1 2011/04/19 07:00:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.0_rc1.ebuild,v 1.2 2011/04/19 08:10:34 flameeyes Exp $
 
 EAPI=3
 
-inherit apache-module autotools
+inherit apache-module
 
 MY_P=modsecurity-apache_${PV/_rc/-rc}
 
