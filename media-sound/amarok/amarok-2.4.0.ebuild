@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.3 2011/02/02 04:11:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.4 2011/04/19 02:40:05 jmbsvicetto Exp $
 
-EAPI=3
+EAPI="3"
 
 # Translations are only in the tarballs, not the git repo
 if [[ ${PV} != *9999* ]]; then

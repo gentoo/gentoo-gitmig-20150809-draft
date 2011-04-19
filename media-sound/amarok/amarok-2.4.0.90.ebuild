@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.3.2-r1.ebuild,v 1.7 2011/04/19 02:40:12 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.90.ebuild,v 1.1 2011/04/19 02:40:12 jmbsvicetto Exp $
 
 EAPI="3"
 
 # Translations are only in the tarballs, not the git repo
 if [[ ${PV} != *9999* ]]; then
-	KDE_LINGUAS="af bg ca ca@valencia cs da de el en_GB es et fr it ja lt lv nb nds pa pl
-	pt pt_BR ru sk sl sr sr@ijekavian sr@ijekavianlatin sr@latin sv th tr uk zh_CN zh_TW"
-	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
-	KEYWORDS="amd64 ~ppc ~ppc64 x86"
+	KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr it ja km nb nds nl
+	pa pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
+	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
+	KEYWORDS=""
 else
 	KDE_SCM="git"
 	KEYWORDS=""
@@ -23,18 +23,11 @@ HOMEPAGE="http://amarok.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
+IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp opengl playdar +player semantic-desktop upnp +utils"
 
 # Tests require gmock - http://code.google.com/p/gmock/
 # It's not in the tree yet
 RESTRICT="test"
-
-# The QT regression patch was submitted by Jeff Mitchell at
-# http://gitweb.kde.org/amarok/amarok.git/commitdiff_plain/79d86829294ac54132c01153660e70e30c15c378?hp=fd2a40d970c57fa2102e95de1a60c59e37892638
-PATCHES=(
-	"${FILESDIR}/${P}-flac-fix.patch"
-	"${FILESDIR}/${P}-fix-qt-regression.patch"
-)
 
 # ipod requires gdk enabled and also gtk compiled in libgpod
 COMMONDEPEND="
@@ -71,6 +64,8 @@ COMMONDEPEND="
 		)
 		mtp? ( >=media-libs/libmtp-1.0.0 )
 		opengl? ( virtual/opengl )
+		playdar? ( dev-libs/qjson )
+		upnp? ( kde-misc/kio-upnp-ms )
 	)
 	utils? (
 		x11-libs/qt-core
@@ -86,6 +81,8 @@ RDEPEND="${COMMONDEPEND}
 	!media-sound/amarok-utils
 	player? ( $(add_kdebase_dep phonon-kde) )
 "
+
+PATCHES=( "${FILESDIR}/${P}-fix-upnp-dep.patch" )
 
 src_prepare() {
 	if ! use player; then
@@ -115,6 +112,8 @@ src_configure() {
 			$(cmake-utils_use_with lastfm LibLastFm)
 			$(cmake-utils_use_with mtp)
 			$(cmake-utils_use_with mp3tunes MP3Tunes)
+			$(cmake-utils_use_with playdar QJSON)
+			$(cmake-utils_use_with upnp HUpnp)
 		)
 	else
 		mycmakeargs=(

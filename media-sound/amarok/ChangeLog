@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.399 2011/02/02 04:11:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.400 2011/04/19 02:40:05 jmbsvicetto Exp $
+
+*amarok-2.4.0.90 (19 Apr 2011)
+
+  19 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.3.2-r1.ebuild, amarok-2.4.0.ebuild, +amarok-2.4.0.90.ebuild,
+  +files/amarok-2.4.0.90-fix-upnp-dep.patch, metadata.xml:
+  Bumped amarok to the 2.4.0.90 release (2.4.1 beta 1).
+  Added a patch to get upnp support - not working yet.
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> amarok-2.3.2-r1.ebuild,
   amarok-2.4.0.ebuild:
