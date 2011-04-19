@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12702 2011/04/19 15:38:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12703 2011/04/19 17:37:00 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -336,14 +336,6 @@ app-misc/filer
 # Removal in 30 days
 www-misc/zoneminder
 media-plugins/mythzoneminder
-
-# Ole Markus With <olemarkus@gentoo.org> (20 Mar 2011)
-# Dead upstream. No stable release since 2002. Superseeded by
-# dev-php/PEAR-XML_Serializer.
-# Removal on 20 Apr 2011
-dev-php/PEAR-XML_Tree
-# Will be removed with dev-php/PEAR-XML_Tree
-dev-php/PEAR-File_XSPF
 
 # Stefaan De Roeck <stefaan@gentoo.org> (19 Mar 2011)
 # New major upstream release.
