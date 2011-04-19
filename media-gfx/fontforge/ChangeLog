@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.135 2011/01/19 19:45:50 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.136 2011/04/19 16:34:47 pva Exp $
+
+*fontforge-20110222 (19 Apr 2011)
+
+  19 Apr 2011; Peter Volkov <pva@gentoo.org> +fontforge-20110222.ebuild,
+  +files/fontforge-20110222-lxkbui.patch:
+  Version bump. Fixes automagic dep on x11-libs/libxkbui, thank Rafał Mużyło
+  for patch and Gef Lebster for report. Python relaed code is verified, fixes
+  #313495 by Arfrever Frehtes Taifersar Arahesis.
 
   19 Jan 2011; Dror Levin <spatz@gentoo.org> -fontforge-20090622.ebuild,
   -fontforge-20090923.ebuild, -files/fontforge-20090923-configure.patch,
