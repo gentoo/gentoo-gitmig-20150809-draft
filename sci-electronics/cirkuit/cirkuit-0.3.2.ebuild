@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/cirkuit/cirkuit-0.2.2.ebuild,v 1.4 2011/02/02 05:38:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/cirkuit/cirkuit-0.3.2.ebuild,v 1.1 2011/04/19 20:10:19 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 inherit kde4-base
 
 DESCRIPTION="An application to generate publication-ready figures"
