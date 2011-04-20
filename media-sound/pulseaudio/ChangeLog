@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.215 2011/04/20 11:20:12 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.216 2011/04/20 15:35:45 jer Exp $
+
+  20 Apr 2011; Jeroen Roovers <jer@gentoo.org> pulseaudio-0.9.22.ebuild:
+  Stable for HPPA (bug #360123).
 
   20 Apr 2011; Arun Raghavan <ford_prefect@gentoo.org> metadata.xml:
   Minor fixes to metadata.xml (thanks to leio for pointing these out).
