@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.89 2011/04/14 06:12:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.90 2011/04/20 18:13:46 ulm Exp $
+
+  20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> freebsd-lib-7.2-r1.ebuild,
+  freebsd-lib-8.0.ebuild:
+  Don't PROVIDE virtual/libc, bug 359001.
 
   14 Apr 2011; Ulrich Mueller <ulm@gentoo.org> freebsd-lib-7.2-r1.ebuild,
   freebsd-lib-8.0.ebuild:

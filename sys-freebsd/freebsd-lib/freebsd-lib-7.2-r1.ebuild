@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.3 2011/04/14 06:12:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.4 2011/04/20 18:13:46 ulm Exp $
 
 EAPI=2
 
@@ -33,9 +33,6 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		>=sys-devel/flex-2.5.31-r2
 		=sys-freebsd/freebsd-sources-${RV}*
 		!bootstrap? ( app-arch/bzip2 )"
-
-	PROVIDE="virtual/libc"
-
 else
 	SRC_URI="${SRC_URI}
 			mirror://gentoo/${SYS}.tar.bz2"
