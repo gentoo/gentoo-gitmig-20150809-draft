@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.9 2011/04/20 09:45:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.10 2011/04/20 09:53:29 scarabeus Exp $
 
 # @ECLASS: virtuoso.eclass
 # @MAINTAINER:
@@ -59,7 +59,6 @@ virtuoso_src_prepare() {
 
 	EPATCH_SUFFIX='patch' EPATCH_FORCE='yes' epatch
 	base_src_prepare
-	epatch_user
 
 	# @ECLASS-VARIABLE: VOS_EXTRACT
 	# @DESCRIPTION:
