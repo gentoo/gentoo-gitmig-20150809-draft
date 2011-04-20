@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.41 2011/04/13 12:40:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.42 2011/04/20 14:25:17 aballier Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
 IUSE="
-	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 cpudetection
+	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 celt cpudetection
 	custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables
 	ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp
 	schroedinger sdl speex +ssse3 static-libs test theora threads truetype v4l
@@ -46,6 +46,7 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	bzip2? ( app-arch/bzip2 )
+	celt? ( >=media-libs/celt-0.11.1 )
 	dirac? ( media-video/dirac )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
@@ -156,7 +157,7 @@ src_configure() {
 
 	# Decoders
 	use amr && { myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb" ; version3=" --enable-version3" ; }
-	for i in gsm dirac rtmp schroedinger speex vpx; do
+	for i in celt gsm dirac rtmp schroedinger speex vpx; do
 		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
@@ -267,10 +268,8 @@ src_install() {
 
 src_test() {
 	if use encode ; then
-		for t in codectest lavftest seektest ; do
-			LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
-				emake ${t} || die "Some tests in ${t} failed"
-		done
+		LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
+			emake test || die "Some tests failed"
 	else
 		ewarn "Tests fail without USE=encode, skipping"
 	fi

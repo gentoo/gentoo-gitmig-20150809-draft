@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.409 2011/04/13 12:49:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.410 2011/04/20 14:25:17 aballier Exp $
+
+  20 Apr 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  simplify tests handling, add celt decoding support
 
   13 Apr 2011; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.6.90_rc0.ebuild,
   -ffmpeg-0.6.90_rc0-r1.ebuild:
