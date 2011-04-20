@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nessus-libraries
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.91 2010/09/06 18:35:14 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.92 2011/04/20 07:17:11 jlec Exp $
+
+*nessus-libraries-2.2.9-r1 (20 Apr 2011)
+
+  20 Apr 2011; Justin Lecher <jlec@gentoo.org>
+  +nessus-libraries-2.2.9-r1.ebuild,
+  +files/nessus-libraries-2.2.9-linking.patch:
+  Respecting LDFLAGS, linking correctly, #247931 & #343339; More config options
+  added
 
   06 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   -nessus-libraries-2.2.6.ebuild:
