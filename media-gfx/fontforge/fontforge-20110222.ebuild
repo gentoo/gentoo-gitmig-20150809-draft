@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.2 2011/04/19 16:45:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.3 2011/04/20 16:34:09 jer Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -63,11 +63,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	if use doc; then
-		cd "${WORKDIR}"/html/
-		chmod -x *.html
-	fi
 	epatch "${FILESDIR}/${P}-lxkbui.patch"
+	if use doc; then
+		chmod -x "${WORKDIR}"/html/*.html || die
+	fi
 	eautoconf
 }
 

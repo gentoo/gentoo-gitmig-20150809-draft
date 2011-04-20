@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.137 2011/04/20 14:41:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.138 2011/04/20 16:34:09 jer Exp $
+
+  20 Apr 2011; Jeroen Roovers <jer@gentoo.org> fontforge-20110222.ebuild:
+  Replace cd html/ thanks to Erik Zeek (bug #364197). Make chmod die().
 
   20 Apr 2011; Jeroen Roovers <jer@gentoo.org>
   files/fontforge-20110222-lxkbui.patch:
