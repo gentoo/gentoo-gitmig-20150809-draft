@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.27 2011/03/26 15:47:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.28 2011/04/20 20:50:51 chithanh Exp $
+
+  20 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/lightspark-0.4.5.1-cmakelists.patch, -lightspark-0.4.5.2.ebuild:
+  Remove old.
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   lightspark-0.4.5.2.ebuild, lightspark-0.4.6.1.ebuild:
