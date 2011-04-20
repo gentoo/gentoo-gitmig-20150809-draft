@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/coolkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.10 2011/04/20 02:22:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.11 2011/04/20 02:26:57 nerdboy Exp $
+
+  20 Apr 2011; Steve Arnold <nerdboy@gentoo.org> coolkey-1.1.0-r4.ebuild:
+  Updated pkg_postrm to check for the system nssdb dir first.
 
 *coolkey-1.1.0-r4 (20 Apr 2011)
 
