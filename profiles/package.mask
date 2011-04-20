@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12708 2011/04/20 12:16:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12709 2011/04/20 12:31:27 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -609,11 +609,6 @@ games-misc/jugglemaster
 # no maintainer
 # bug #352037
 media-plugins/vdr-avolctl
-
-# Pacho Ramos <pacho@gentoo.org> (17 Jan 2011)
-# Upstream considers it as development version but it's needed
-# to prevent lightspark crashes (bug #350150)
->=dev-cpp/libxmlpp-2.33.1
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (12 Jan 2011)
 # Starting with KOffice version 2.2.0, the functionality of app-office/kchart
