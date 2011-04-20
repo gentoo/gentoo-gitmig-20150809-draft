@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.1.ebuild,v 1.8 2010/09/03 19:30:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.3.ebuild,v 1.1 2011/04/20 10:15:33 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit virtuoso
 
 DESCRIPTION="Server binaries for Virtuoso, high-performance object-relational SQL database"
 
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="kerberos ldap readline"
 
 # Bug 305077
@@ -76,6 +76,9 @@ src_install() {
 	# Rename isql executables (conflicts with unixODBC)
 	mv "${ED}/usr/bin/isql" "${ED}/usr/bin/isql-v" || die
 	mv "${ED}/usr/bin/isqlw" "${ED}/usr/bin/isqlw-v" || die
+
+	# remove libtool files
+	find "${ED}" -name '*.la' -delete
 
 	keepdir /var/lib/virtuoso/db
 }
