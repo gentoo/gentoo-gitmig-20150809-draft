@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/wacomtablet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/ChangeLog,v 1.2 2011/01/27 12:24:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wacomtablet/ChangeLog,v 1.3 2011/04/20 20:48:28 scarabeus Exp $
+
+*wacomtablet-1.3_beta2 (20 Apr 2011)
+
+  20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -wacomtablet-1.2.5.ebuild, +wacomtablet-1.3_beta2.ebuild:
+  Version bump to beta. Drop older that does not work with current stable wacom
+  driver.
 
 *wacomtablet-1.2.5 (27 Jan 2011)
 
