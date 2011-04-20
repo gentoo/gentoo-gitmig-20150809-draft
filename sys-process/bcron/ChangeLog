@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/bcron
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.17 2011/01/29 21:52:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.18 2011/04/20 17:52:34 ulm Exp $
+
+  20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> bcron-0.09.ebuild,
+  bcron-0.09-r2.ebuild:
+  Don't PROVIDE and don't block against virtual/cron, bug 360109.
 
   29 Jan 2011; Thilo Bangert <bangert@gentoo.org> bcron-0.09.ebuild,
   bcron-0.09-r2.ebuild:

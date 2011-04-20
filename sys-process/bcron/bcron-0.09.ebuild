@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.12 2011/01/29 21:52:09 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.13 2011/04/20 17:52:34 ulm Exp $
 
 CRON_SYSTEM_CRONTAB="yes"
 
@@ -16,12 +16,10 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-libs/bglibs-1.031"
-RDEPEND="!virtual/cron
-	>=sys-process/cronbase-0.3.2
+RDEPEND=">=sys-process/cronbase-0.3.2
 	virtual/mta
 	sys-apps/ucspi-unix
 	virtual/daemontools"
-PROVIDE="virtual/cron"
 
 src_compile() {
 	echo "/usr/include/bglibs" > conf-bgincs
