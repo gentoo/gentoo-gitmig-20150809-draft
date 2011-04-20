@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.120 2011/01/10 11:13:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.121 2011/04/20 11:40:53 voyageur Exp $
+
+*rdesktop-1.7.0 (20 Apr 2011)
+
+  20 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org> -rdesktop-1.6.0.ebuild,
+  -rdesktop-1.6.0-r3.ebuild, +rdesktop-1.7.0.ebuild,
+  +files/rdesktop-1.7.0+pcsc-lite-1.6.6.patch:
+  Version bump with some important bugfixes, update license, drop rdpusb patch.
+  Drop previous 1.6.0 ebuilds
 
   10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   rdesktop-1.6.0-r4.ebuild:

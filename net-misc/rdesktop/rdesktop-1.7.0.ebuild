@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.6.0-r3.ebuild,v 1.1 2009/07/05 14:26:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.7.0.ebuild,v 1.1 2011/04/20 11:40:53 voyageur Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ DESCRIPTION="A Remote Desktop Protocol Client"
 HOMEPAGE="http://rdesktop.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa ao debug ipv6 libsamplerate oss pcsc-lite"
@@ -38,9 +38,12 @@ src_prepare() {
 		|| die "sed failed in Makefile.in"
 
 	# Automagic dependency on libsamplerate
-	epatch "${FILESDIR}"/${P}-sound_configure.patch
+	epatch "${FILESDIR}"/${PN}-1.6.0-sound_configure.patch
 	# Fix --enable-smartcard logic
-	epatch "${FILESDIR}"/${P}-smartcard_configure.patch
+	epatch "${FILESDIR}"/${PN}-1.6.0-smartcard_configure.patch
+	# bug #349813
+	epatch "${FILESDIR}"/${P}+pcsc-lite-1.6.6.patch
+
 	eautoreconf
 }
 
