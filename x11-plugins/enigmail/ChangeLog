@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.206 2011/03/14 17:09:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.207 2011/04/20 08:30:37 dirtyepic Exp $
+
+  20 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> enigmail-1.1.2-r3.ebuild:
+  Work around build failure w/ GCC 4.6 (bug #346825).
 
   14 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   enigmail-1.1.2-r2.ebuild, enigmail-1.1.2-r3.ebuild:
