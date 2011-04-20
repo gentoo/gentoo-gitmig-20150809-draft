@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gocr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.62 2010/06/11 19:29:29 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.63 2011/04/20 07:47:53 radhermit Exp $
+
+*gocr-0.49 (20 Apr 2011)
+
+  20 Apr 2011; Tim Harder <radhermit@gentoo.org> +gocr-0.49.ebuild:
+  Version bump. Update to EAPI 4.
 
   11 Jun 2010; Alexis Ballier <aballier@gentoo.org> gocr-0.45.ebuild,
   gocr-0.48.ebuild:
