@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.23.ebuild,v 1.2 2010/01/11 20:12:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.23.ebuild,v 1.3 2011/04/20 12:56:14 jlec Exp $
 
 MODULE_AUTHOR=UMEMOTO
-inherit perl-module
+inherit perl-module toolchain-funcs
 
 DESCRIPTION="IPv6 related part of the C socket.h defines and structure manipulators"
 
@@ -15,3 +15,8 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-lang/perl"
+
+src_unpack() {
+	base_src_unpack
+	tc-export CC
+}
