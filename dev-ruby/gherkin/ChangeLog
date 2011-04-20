@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.17 2011/04/12 20:23:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.18 2011/04/20 05:27:07 graaff Exp $
+
+*gherkin-2.3.6 (20 Apr 2011)
+
+  20 Apr 2011; Hans de Graaff <graaff@gentoo.org> +gherkin-2.3.6.ebuild:
+  Version bump. Use rake task files directly to avoid unneeded dependencies,
+  bug 364085.
 
 *gherkin-2.3.5 (12 Apr 2011)
 
