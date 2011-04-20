@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.17 2011/04/20 21:15:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.18 2011/04/20 22:00:57 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -41,6 +41,8 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-python-3.2-configparser.patch"
 	epatch "${FILESDIR}/${P}-python-3.2-xml.etree.ElementTree.patch"
+
+	epatch "${FILESDIR}/${P}-encoding.patch"
 
 	sed -e "s/from distutils.core/from setuptools/" -i setup.py || die "sed setup.py failed"
 }

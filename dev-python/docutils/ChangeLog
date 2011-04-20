@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.128 2011/04/20 18:37:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.129 2011/04/20 22:00:57 arfrever Exp $
+
+  20 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  docutils-0.7.ebuild, +files/docutils-0.7-encoding.patch:
+  Fix installation with some locales (bug #349101).
 
   20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> docutils-0.7.ebuild:
   Workaround bug in docutils that didn't permit installation under various
