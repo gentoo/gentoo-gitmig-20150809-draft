@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.137 2011/04/20 15:33:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.138 2011/04/20 15:50:00 aballier Exp $
 
 EAPI="4"
 
@@ -149,7 +149,6 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	alsa? ( >=media-sound/alsa-headers-1.0.23 )
-	dvb? ( sys-kernel/linux-headers )
 	fbosd? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
 	v4l2? ( >=sys-kernel/linux-headers-2.6.25 )
@@ -228,7 +227,7 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable dshow) \
 		$(use_enable dts dca) \
-		$(use_enable dvb) \
+		$(use_enable dvb dvbpsi) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
 		$(use_enable dxva2) \
 		$(use_enable egl) \
