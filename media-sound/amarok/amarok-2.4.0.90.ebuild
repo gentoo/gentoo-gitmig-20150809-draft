@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.90.ebuild,v 1.1 2011/04/19 02:40:12 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.90.ebuild,v 1.2 2011/04/20 11:48:44 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -82,7 +82,12 @@ RDEPEND="${COMMONDEPEND}
 	player? ( $(add_kdebase_dep phonon-kde) )
 "
 
-PATCHES=( "${FILESDIR}/${P}-fix-upnp-dep.patch" )
+# Upstream patch to fix the plugin detection on startup
+# https://projects.kde.org/projects/extragear/multimedia/amarok/repository/revisions/37eda947bd8181a73ad0fffc88e66c25ddd69f28
+PATCHES=(
+	"${FILESDIR}/${P}-fix-upnp-dep.patch"
+	"${FILESDIR}/${P}-fix-plugin-detection.patch"
+)
 
 src_prepare() {
 	if ! use player; then

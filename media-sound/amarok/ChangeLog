@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.401 2011/04/20 05:05:10 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.402 2011/04/20 11:48:44 jmbsvicetto Exp $
+
+  20 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.4.0.90.ebuild, +files/amarok-2.4.0.90-fix-plugin-detection.patch:
+  Added upstream patch to fix the plugin detection at startup.
 
   20 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   files/amarok-2.4.0.90-fix-upnp-dep.patch:
