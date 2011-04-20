@@ -31,7 +31,7 @@ diff -urN amarok-2.4.0.90.orig/cmake/modules/FindHUpnp.cmake amarok-2.4.0.90/cma
  # HUPNP_FOUND
  
 -find_path(HUPNP_INCLUDE_DIR HUpnp HINTS ${KDE4_INCLUDE_DIR})
-+find_path(HUPNP_INCLUDE_DIR HUpnp HINTS ${KDE4_INCLUDE_DIR} ${KDE_INCLUDE_DIR}/HUpnpCore)
++find_path(HUPNP_INCLUDE_DIR HUpnp HINTS ${KDE4_INCLUDE_DIR} /usr/include/HUpnpCore)
  
  find_library(HUPNP_LIBRARIES HUpnp PATHS ${KDE4_LIB_DIR})
  
