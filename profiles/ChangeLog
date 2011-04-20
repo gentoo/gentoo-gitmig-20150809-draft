@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5306 2011/04/19 23:49:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5307 2011/04/20 11:24:58 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Apr 2011; Justin Lecher <jlec@gentoo.org> package.mask:
+  Dropped nessus-2.3.1 due to pending removal request, #169466
 
   19 Apr 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask net-analyzer/net-snmp-5.6 too.
