@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20110328.387002-r1.ebuild,v 1.1 2011/04/19 15:29:00 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20110328.387002-r2.ebuild,v 1.1 2011/04/20 14:40:51 vadimk Exp $
 
 EAPI="2"
 
@@ -98,8 +98,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "failed to install"
 
-	fperms 4755 "/usr/bin/vmware-user-suid-wrapper" || die
-
 	rm "${D}"/etc/pam.d/vmtoolsd
 	pamd_mimic_system vmtoolsd auth account
 
@@ -111,6 +109,8 @@ src_install() {
 
 	if use X;
 	then
+		fperms 4755 "/usr/bin/vmware-user-suid-wrapper" || die
+
 		dobin "${S}"/scripts/common/vmware-xdg-detect-de
 
 		insinto /etc/xdg/autostart
