@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.9-r1.ebuild,v 1.1 2011/04/15 16:02:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.9-r1.ebuild,v 1.2 2011/04/20 18:08:52 grobian Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -160,7 +160,7 @@ src_install() {
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		for lib in lib{EnhancedDisassembly,LLVM-${PV},BugpointPasses,LLVMHello,LTO,profile_rt}.dylib ; do
+		for lib in lib{EnhancedDisassembly,LLVM-${PV},LTO}.dylib {BugpointPasses,LLVMHello,profile_rt}.dylib ; do
 			# libEnhancedDisassembly is Darwin10 only, so non-fatal
 			[[ -f ${ED}/usr/lib/${PN}/${lib} ]] || continue
 			ebegin "fixing install_name of $lib"
