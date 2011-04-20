@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12709 2011/04/20 12:31:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12710 2011/04/20 13:35:37 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -76,10 +76,6 @@ sec-policy/selinux-hal
 # #354207,#359019) versions of Adobe flash player.
 # Will be removed in a week or so.
 <www-plugins/adobe-flash-10.2.153.1
-
-# Torsten Veller <tove@gentoo.org> (14 Apr 2011)
-# Mask for testing and until all ebuilds are updated
->=dev-perl/Moose-2
 
 # Daniel Gryniewicz <dang@gentoo.org> (13 Apr 2011)
 # Masked for removal in 30 days. Functionality is merged into and maintained in
