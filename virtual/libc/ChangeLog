@@ -1,0 +1,9 @@
+# ChangeLog for virtual/libc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libc/ChangeLog,v 1.1 2011/04/20 18:04:52 ulm Exp $
+
+*libc-0 (20 Apr 2011)
+
+  20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +libc-0.ebuild, +metadata.xml:
+  Initial import, bug 359001.
+
