@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.261 2011/03/29 13:01:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.262 2011/04/20 07:33:44 dirtyepic Exp $
+
+*wxGTK-2.8.12.0 (20 Apr 2011)
+
+  20 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> +wxGTK-2.8.12.0.ebuild:
+  Version bump (bug #363319).
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> wxGTK-2.6.4.0-r6.ebuild:
   Fix gtk+ slot deps
