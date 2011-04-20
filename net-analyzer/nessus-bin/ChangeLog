@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.13 2010/11/24 02:30:15 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.14 2011/04/20 12:21:00 jlec Exp $
+
+*nessus-bin-4.4.1 (20 Apr 2011)
+
+  20 Apr 2011; Justin Lecher <jlec@gentoo.org> -nessus-bin-3.0.5.ebuild,
+  -nessus-bin-3.2.0.ebuild, +nessus-bin-4.4.1.ebuild, files/nessusd-initd:
+  Version BUmp, #265555, #228007, #196035, #210006, #276982; CLeaned old,
+  #276982
 
   24 Nov 2010; <mattst88@gentoo.org> nessus-bin-3.2.0.ebuild:
   Remove redundant dependency on rpm2targz.
