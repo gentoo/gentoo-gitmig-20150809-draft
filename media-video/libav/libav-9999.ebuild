@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.9 2011/04/12 14:24:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.10 2011/04/20 11:01:08 scarabeus Exp $
 
 EAPI=4
 
 if [[ ${PV} == *9999 ]] ; then
-	SCM="git"
+	SCM="git-2"
 	EGIT_REPO_URI="git://git.libav.org/libav.git"
 	[[ ${PV%9999} != "" ]] && EGIT_BRANCH="release/${PV%.9999}"
 fi
