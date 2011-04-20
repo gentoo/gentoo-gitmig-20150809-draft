@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.4.ebuild,v 1.5 2011/02/02 13:34:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.4.4.ebuild,v 1.6 2011/04/20 12:03:40 graaff Exp $
 
 EAPI=2
 
@@ -43,6 +43,8 @@ ruby_add_rdepend "ffi? ( virtual/ruby-ffi )"
 # 	ruby_add_bdepend "test? ( dev-ruby/weakling )"
 
 all_ruby_prepare() {
+	epatch "${FILESDIR}/${P}-libxml-2.7.8.patch"
+
 	sed -i \
 		-e '/tasks\/cross_compile/s:^:#:' \
 		-e '/:test.*prerequisites/s:^:#:' \
