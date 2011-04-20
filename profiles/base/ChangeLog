@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.256 2011/04/18 13:37:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.257 2011/04/20 18:29:11 ulm Exp $
+
+  20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove cron and libc old-style virtuals, bugs 360109 and 359001.
 
   18 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:

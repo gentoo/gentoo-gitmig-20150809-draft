@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.31 2011/04/16 19:56:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.32 2011/04/20 18:29:11 ulm Exp $
+
+  20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove cron and libc old-style virtuals, bugs 360109 and 359001.
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/aspell-dict, bug 358821.
