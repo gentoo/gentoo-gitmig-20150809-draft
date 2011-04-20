@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.159.1.ebuild,v 1.2 2011/04/17 09:31:40 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.2.159.1.ebuild,v 1.3 2011/04/20 19:08:42 angelos Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.adobe.com/"
 IUSE="vdpau"
 SLOT="0"
 
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 LICENSE="AdobeFlash-10.1"
 RESTRICT="strip mirror"
 
