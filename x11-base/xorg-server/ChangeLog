@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.579 2011/04/16 23:34:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.580 2011/04/20 21:28:25 chithanh Exp $
+
+  20 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.10.1.ebuild, +files/xorg-server-glapi_c.patch:
+  Add patch for bug #328917.
 
 *xorg-server-1.10.1 (16 Apr 2011)
 

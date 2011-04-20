@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.1.ebuild,v 1.1 2011/04/16 23:34:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.1.ebuild,v 1.2 2011/04/20 21:28:25 chithanh Exp $
 
 EAPI=4
 
@@ -101,6 +101,7 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
+	"${FILESDIR}"/${PN}-glapi_c.patch
 	)
 
 pkg_setup() {
