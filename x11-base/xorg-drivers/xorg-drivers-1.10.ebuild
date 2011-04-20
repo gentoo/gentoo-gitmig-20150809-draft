@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.10.ebuild,v 1.2 2011/04/04 14:06:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.10.ebuild,v 1.3 2011/04/20 21:40:54 chithanh Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE_INPUT_DEVICES="
 	input_devices_elographics
 	input_devices_evdev
 	input_devices_fpit
+	input_devices_joystick
 	input_devices_keyboard
 	input_devices_mouse
 	input_devices_penmount
@@ -89,6 +90,7 @@ PDEPEND="
 	input_devices_elographics? ( x11-drivers/xf86-input-elographics )
 	input_devices_evdev?       ( x11-drivers/xf86-input-evdev )
 	input_devices_fpit?        ( x11-drivers/xf86-input-fpit )
+	input_devices_joystick?    ( x11-drivers/xf86-input-joystick )
 	input_devices_keyboard?    ( x11-drivers/xf86-input-keyboard )
 	input_devices_mouse?       ( x11-drivers/xf86-input-mouse )
 	input_devices_penmount?    ( x11-drivers/xf86-input-penmount )
@@ -132,7 +134,7 @@ PDEPEND="
 	video_cards_sisusb?        ( x11-drivers/xf86-video-sisusb )
 	video_cards_suncg14?       ( x11-drivers/xf86-video-suncg14 )
 	video_cards_suncg3?        ( x11-drivers/xf86-video-suncg3 )
-	video_cards_suncg6?        ( !x11-drivers/xf86-video-suncg6 )
+	video_cards_suncg6?        ( x11-drivers/xf86-video-suncg6 )
 	video_cards_sunffb?        ( x11-drivers/xf86-video-sunffb )
 	video_cards_sunleo?        ( x11-drivers/xf86-video-sunleo )
 	video_cards_suntcx?        ( x11-drivers/xf86-video-suntcx )
@@ -149,7 +151,6 @@ PDEPEND="
 
 	!x11-drivers/xf86-input-citron
 	!x11-drivers/xf86-input-hyperpen
-	!x11-drivers/xf86-input-joystick
 	!x11-drivers/xf86-input-mutouch
 	!x11-drivers/xf86-video-cyrix
 	!x11-drivers/xf86-video-impact
