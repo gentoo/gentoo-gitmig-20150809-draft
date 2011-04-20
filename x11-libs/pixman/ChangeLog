@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.96 2011/03/20 19:16:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.97 2011/04/20 20:43:03 chithanh Exp $
+
+*pixman-0.21.8 (20 Apr 2011)
+
+  20 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +pixman-0.21.8.ebuild:
+  Bump to release candidate.
 
   20 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org> pixman-0.20.2.ebuild,
   metadata.xml:
