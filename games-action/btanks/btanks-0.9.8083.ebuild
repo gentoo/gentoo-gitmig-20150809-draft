@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.9.8083.ebuild,v 1.3 2010/10/14 03:52:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.9.8083.ebuild,v 1.4 2011/04/20 07:32:12 tupone Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -27,7 +27,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	rm -rf sdlx/gfx
-	epatch "${FILESDIR}"/${P}-scons-blows.patch
+	epatch "${FILESDIR}"/${P}-scons-blows.patch \
+		"${FILESDIR}"/${P}-gcc46.patch
 }
 
 src_compile() {

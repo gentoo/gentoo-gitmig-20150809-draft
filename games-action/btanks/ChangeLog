@@ -1,6 +1,10 @@
 # ChangeLog for games-action/btanks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.23 2010/10/14 03:52:04 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.24 2011/04/20 07:32:12 tupone Exp $
+
+  20 Apr 2011; Tupone Alfredo <tupone@gentoo.org> btanks-0.9.8083.ebuild,
+  +files/btanks-0.9.8083-gcc46.patch:
+  Build with gcc-4.6 Bug #362829 by Diego Elio Pettenò
 
   14 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   btanks-0.9.8083.ebuild:
