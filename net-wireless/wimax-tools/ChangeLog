@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wimax-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/ChangeLog,v 1.5 2011/02/23 11:19:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax-tools/ChangeLog,v 1.6 2011/04/20 17:13:24 alexxy Exp $
+
+*wimax-tools-1.4.5 (20 Apr 2011)
+
+  20 Apr 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/updates/0001-wimaxll_cb_ctx-move-to-internal.h-to-wimaxll.h-fixin.patc
+  h, -wimax-tools-1.4.4.ebuild, -wimax-tools-1.4.4-r1.ebuild,
+  +wimax-tools-1.4.5.ebuild:
+  Version bump
 
 *wimax-tools-1.4.4-r1 (23 Feb 2011)
 
