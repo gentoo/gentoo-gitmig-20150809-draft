@@ -1,3 +1,5 @@
+http://svn.berlios.de/viewvc/docutils?view=revision&revision=7013
+
 --- docutils/writers/odf_odt/__init__.py
 +++ docutils/writers/odf_odt/__init__.py
 @@ -300,7 +300,10 @@
