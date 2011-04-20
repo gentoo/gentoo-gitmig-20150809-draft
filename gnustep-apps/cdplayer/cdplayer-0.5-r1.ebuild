@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cdplayer/cdplayer-0.5.ebuild,v 1.1 2008/11/03 12:17:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cdplayer/cdplayer-0.5-r1.ebuild,v 1.1 2011/04/20 15:35:43 voyageur Exp $
 
-EAPI=1
+EAPI=4
 inherit gnustep-2
 
 S=${WORKDIR}/CDPlayer-${PV}
@@ -31,6 +31,11 @@ cdplayer_preferences() {
 	else
 		echo "prefs=no"
 	fi
+}
+
+src_prepare() {
+	# Reserved keyword
+	sed -e "s/bool/boolean/" -i Cddb/Cddb.h || die "sed failed"
 }
 
 src_compile() {
