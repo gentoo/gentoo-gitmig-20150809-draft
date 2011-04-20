@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.3.ebuild,v 1.1 2011/04/20 10:15:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.3.ebuild,v 1.2 2011/04/20 10:41:57 scarabeus Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="kerberos ldap readline"
 
 # Bug 305077
-RESTRICT="test"
+#RESTRICT="test"
 
 # zeroconf support looks like broken - disabling - last checked around 5.0.12
 # mono support fetches mono source and compiles it manually - disabling for now

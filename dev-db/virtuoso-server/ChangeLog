@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.18 2011/04/20 10:15:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.19 2011/04/20 10:41:57 scarabeus Exp $
+
+  20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  virtuoso-server-6.1.3.ebuild:
+  Try to unmask the test useflag as it seems to work here.
 
 *virtuoso-server-6.1.3 (20 Apr 2011)
 
