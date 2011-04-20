@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.2.1.ebuild,v 1.1 2011/04/06 12:09:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.2.1-r1.ebuild,v 1.1 2011/04/20 17:23:04 mgorny Exp $
 
 EAPI=4
 
@@ -26,11 +26,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.30
 	dev-perl/XML-Parser"
 
-# do not check for runtime deps
-CONFIGURE_OPTIONS="
-	--with-xkb-base=\"${EPREFIX}/usr/share/X11/xkb\"
+XORG_CONFIGURE_OPTIONS=(
+	--with-xkb-base="${EPREFIX}/usr/share/X11/xkb"
 	--enable-compat-rules
-	--with-xkb-rules-symlink=xorg"
+	# do not check for runtime deps
+	--disable-runtime-deps
+	--with-xkb-rules-symlink=xorg
+)
 
 src_prepare() {
 	xorg-2_src_prepare
