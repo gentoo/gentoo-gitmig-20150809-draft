@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.33 2009/07/20 10:53:21 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.34 2011/04/20 21:02:06 radhermit Exp $
+
+*vile-9.8e (20 Apr 2011)
+
+  20 Apr 2011; Tim Harder <radhermit@gentoo.org> +vile-9.8e.ebuild:
+  Version bump. Update to EAPI 4.
 
   20 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> vile-9.6.ebuild:
   Use emake -j1 for install.
