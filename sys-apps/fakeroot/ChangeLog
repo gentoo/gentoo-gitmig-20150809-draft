@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.62 2011/03/30 08:05:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.63 2011/04/20 00:43:39 radhermit Exp $
+
+*fakeroot-1.15.1 (20 Apr 2011)
+
+  20 Apr 2011; Tim Harder <radhermit@gentoo.org> +fakeroot-1.15.1.ebuild:
+  Version bump.
 
   30 Mar 2011; Michael Weber <xmw@gentoo.org> fakeroot-1.14.5.ebuild:
   added ~arm (bug 302981)
