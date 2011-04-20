@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/hwdecode-demos-0.9.5.ebuild,v 1.1 2011/02/27 13:47:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/hwdecode-demos-0.9.5.ebuild,v 1.2 2011/04/20 14:35:46 aballier Exp $
 
 EAPI=2
+
+inherit base
 
 DESCRIPTION="Standalone programs showing off various HW acceleration APIs"
 HOMEPAGE="http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/"
@@ -13,12 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="opengl vaapi vdpau"
 
-RDEPEND="media-video/ffmpeg
+RDEPEND="virtual/ffmpeg
 	opengl? ( virtual/opengl virtual/glu )
 	vaapi? ( x11-libs/libva )
 	vdpau? ( x11-libs/libvdpau )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+PATCHES=( "${FILESDIR}/ffmpeg.patch" )
 
 src_configure() {
 	econf \
