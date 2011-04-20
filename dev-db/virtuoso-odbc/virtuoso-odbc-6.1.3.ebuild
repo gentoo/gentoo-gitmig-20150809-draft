@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.3.ebuild,v 1.1 2011/04/20 10:08:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.3.ebuild,v 1.2 2011/04/20 19:35:05 reavertm Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit virtuoso
 DESCRIPTION="ODBC driver for OpenLink Virtuoso Open-Source Edition"
 
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="static-libs"
+IUSE=""
 
 RDEPEND="
 	>=dev-libs/openssl-0.9.7i:0
@@ -26,7 +26,7 @@ VOS_EXTRACT="
 
 src_configure() {
 	myconf+="
-		$(use_enable static-libs static)
+		--disable-static
 		--without-iodbc
 	"
 

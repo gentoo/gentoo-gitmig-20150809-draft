@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-odbc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.17 2011/04/20 10:08:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.18 2011/04/20 19:35:05 reavertm Exp $
+
+  20 Apr 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  virtuoso-odbc-6.1.3.ebuild:
+  Drop static libs entirely.
 
 *virtuoso-odbc-6.1.3 (20 Apr 2011)
 
