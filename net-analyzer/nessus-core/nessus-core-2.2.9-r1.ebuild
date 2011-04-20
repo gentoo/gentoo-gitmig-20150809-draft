@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.1 2011/04/20 11:08:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.2 2011/04/20 11:13:05 jlec Exp $
 
 EAPI="4"
 
@@ -55,4 +55,7 @@ src_install() {
 	newinitd "${FILESDIR}"/nessusd-r7 nessusd
 	keepdir /var/lib/nessus/logs
 	keepdir /var/lib/nessus/users
+	# newer version is provided by nessus-libraries
+	# should be fixed upstream in version 2.2.6
+	rm "${D}"/usr/include/nessus/includes.h
 }
