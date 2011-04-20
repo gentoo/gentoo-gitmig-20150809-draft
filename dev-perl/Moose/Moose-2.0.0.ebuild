@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-2.0.0.ebuild,v 1.1 2011/04/14 13:39:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-2.0.0.ebuild,v 1.2 2011/04/20 13:34:33 tove Exp $
 
 EAPI=4
 
@@ -57,7 +57,7 @@ CONFLICTS="
 
 RDEPEND="
 	${CONFLICTS}
-	!!dev-perl/Class-MOP
+	!dev-perl/Class-MOP
 	dev-perl/Data-OptList
 	dev-perl/Devel-GlobalDestruction
 	dev-perl/Eval-Closure
