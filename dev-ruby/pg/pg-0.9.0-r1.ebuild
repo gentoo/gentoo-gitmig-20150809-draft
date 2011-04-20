@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.13 2011/03/17 15:02:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.14 2011/04/20 06:24:03 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -25,7 +25,7 @@ RDEPEND="${RDEPEND}
 	dev-db/postgresql-base"
 DEPEND="${DEPEND}
 	dev-db/postgresql-base
-	test? ( dev-db/postgresql-server )"
+	test? ( =dev-db/postgresql-server-8* )"
 
 # For the rakefile (and thus doc generation and testing) to work as
 # intended, you need both rake-compiler _and_ the real RubyGems
