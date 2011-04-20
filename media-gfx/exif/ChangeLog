@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/exif
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.42 2010/11/03 00:15:00 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.43 2011/04/20 01:20:18 radhermit Exp $
+
+*exif-0.6.20 (20 Apr 2011)
+
+  20 Apr 2011; Tim Harder <radhermit@gentoo.org> +exif-0.6.20.ebuild:
+  Version bump. Update to EAPI 4.
 
   03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
