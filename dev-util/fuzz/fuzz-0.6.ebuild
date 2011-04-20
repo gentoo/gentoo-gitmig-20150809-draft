@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fuzz/fuzz-0.6.ebuild,v 1.2 2007/11/27 07:06:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fuzz/fuzz-0.6.ebuild,v 1.3 2011/04/20 12:50:54 jlec Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Stress-tests programs by giving them random input."
 HOMEPAGE="http://fuzz.sourceforge.net/"
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd "${S}"
 	epatch "${DISTDIR}"/${DEB_P}-${DEB_PR}.diff.gz
+	tc-export CC
 }
 
 src_install() {
