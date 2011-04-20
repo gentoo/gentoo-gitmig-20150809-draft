@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.87 2011/04/17 19:53:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.88 2011/04/20 17:35:07 aballier Exp $
+
+  20 Apr 2011; Alexis Ballier <aballier@gentoo.org> gpac-0.4.5-r4.ebuild:
+  fix build with latest ffmpeg
 
   17 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gpac-0.4.5-r1.ebuild,
   gpac-0.4.5-r4.ebuild:
