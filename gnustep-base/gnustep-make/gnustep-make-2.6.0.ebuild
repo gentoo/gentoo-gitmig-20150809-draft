@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.0.ebuild,v 1.1 2011/04/20 17:42:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.0.ebuild,v 1.2 2011/04/20 18:58:05 voyageur Exp $
 
 EAPI="3"
 
@@ -70,4 +70,14 @@ src_install() {
 	exeinto /etc/profile.d
 	doexe "${T}"/gnustep-4.sh
 	doexe "${T}"/gnustep-4.csh
+}
+
+pkg_postinst() {
+	# Warn about new layout if old GNUstep directory is still here
+	if [ -e /usr/GNUstep/System ]; then
+		ewarn "Old layout directory detected (/usr/GNUstep/System)"
+		ewarn "Gentoo has switched to FHS layout for GNUstep packages"
+		ewarn "Please remerge all packages still installed with the old layout"
+		ewarn "You can use gnustep-base/gnustep-updater for this task"
+	fi
 }
