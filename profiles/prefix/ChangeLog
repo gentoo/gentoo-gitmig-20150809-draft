@@ -1,6 +1,13 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.264 2011/04/14 05:57:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.265 2011/04/20 18:25:47 ulm Exp $
+
+  20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -aix/virtuals,
+  -bsd/freebsd/virtuals, -bsd/netbsd/virtuals, -bsd/openbsd/virtuals,
+  -darwin/virtuals, -hpux/virtuals, -irix/virtuals, -linux/virtuals,
+  -mint/virtuals, -sunos/virtuals, -windows/cygwin/virtuals,
+  -windows/interix/virtuals, -windows/winnt/virtuals:
+  Remove old-style virtual/libc, bug 359001.
 
   14 Apr 2011; Ulrich Mueller <ulm@gentoo.org> aix/virtuals,
   bsd/freebsd/virtuals, bsd/netbsd/virtuals, bsd/openbsd/virtuals,

@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.50 2011/04/16 19:21:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.51 2011/04/20 18:28:53 ulm Exp $
+
+  20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -fbsd/virtuals:
+  Remove old-style virtual/libc, bug 359001.
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> fbsd/virtuals:
   Remove old-style virtual/inetd, bug 358831.
