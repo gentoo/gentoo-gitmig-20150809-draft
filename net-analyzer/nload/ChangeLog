@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nload
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.30 2008/11/11 20:31:31 opfer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.31 2011/04/20 00:10:13 jer Exp $
+
+*nload-0.7.2 (20 Apr 2011)
+
+  20 Apr 2011; Jeroen Roovers <jer@gentoo.org> nload-0.7.1.ebuild,
+  +nload-0.7.2.ebuild:
+  Version bump thanks to euscan. Set RDEPEND. Replace prevent-stripping patch
+  with something much simpler.
 
   11 Nov 2008; Christian Faulhammer <opfer@gentoo.org>
   +files/nload-0.6.0-prevent-stripping.patch:
