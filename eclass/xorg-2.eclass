@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.40 2011/04/17 20:46:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.41 2011/04/20 12:48:38 mgorny Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -22,7 +22,7 @@
 
 GIT_ECLASS=""
 if [[ ${PV} == *9999* ]]; then
-	GIT_ECLASS="git"
+	GIT_ECLASS="git-2"
 	XORG_EAUTORECONF="yes"
 fi
 
@@ -82,9 +82,6 @@ if [[ -z ${XORG_MODULE} ]]; then
 		*)                   XORG_MODULE=         ;;
 	esac
 fi
-
-# backcompat, remove when everything in main tree fixed
-[[ -n ${MODULE} ]] && XORG_MODULE=${MODULE} && ewarn "$CATEGORY/$P is using MODULE variable, please migrate to XORG_MODULE to preserve namespace."
 
 # @ECLASS-VARIABLE: XORG_PACKAGE_NAME
 # @DESCRIPTION:
@@ -289,7 +286,7 @@ xorg-2_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	if [[ -n ${GIT_ECLASS} ]]; then
-		git_src_unpack
+		git-2_src_unpack
 	else
 		unpack ${A}
 	fi
@@ -336,7 +333,6 @@ xorg-2_reconf_source() {
 xorg-2_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	[[ -n ${GIT_ECLASS} ]] && git_src_prepare
 	xorg-2_patch_source
 	xorg-2_reconf_source
 }
@@ -401,17 +397,24 @@ xorg-2_src_configure() {
 
 	xorg-2_flags_setup
 
-	# @VARIABLE: CONFIGURE_OPTIONS
+	# @VARIABLE: XORG_CONFIGURE_OPTIONS
 	# @DESCRIPTION:
-	# Any options to pass to configure
+	# Array of an additional options to pass to configure.
 	# @DEFAULT_UNSET
-	CONFIGURE_OPTIONS=${CONFIGURE_OPTIONS:=""}
+	if [[ $(declare -p XORG_CONFIGURE_OPTIONS 2>&-) != "declare -a"* ]]; then
+		# fallback to CONFIGURE_OPTIONS, deprecated.
+		[[ -n "${CONFIGURE_OPTIONS}" ]] && \
+			ewarn "QA: CONFIGURE_OPTIONS are deprecated. Please migrate to XORG_CONFIGURE_OPTIONS to preserve namespace."
+		local xorgconfadd=(${CONFIGURE_OPTIONS})
+	else
+		local xorgconfadd=("${XORG_CONFIGURE_OPTIONS[@]}")
+	fi
 
 	[[ -n "${FONT}" ]] && xorg-2_font_configure
 	local myeconfargs=(
 		--disable-dependency-tracking
-		${CONFIGURE_OPTIONS}
 		${FONT_OPTIONS}
+		"${xorgconfadd[@]}"
 	)
 
 	autotools-utils_src_configure "$@"
