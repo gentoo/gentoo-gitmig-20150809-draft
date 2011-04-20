@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.1 2011/04/20 10:56:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.2 2011/04/20 21:51:21 scarabeus Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -479,7 +479,7 @@ git-2_migrate_repository() {
 		debug-print "${FUNCNAME}: working in bare repository for \"${EGIT_DIR}\""
 		EGIT_OPTIONS+=" --bare"
 		MOVE_COMMAND="git clone -l -s -n ${EGIT_DIR// /\\ }"
-		EGIT_UPDATE_CMD="git fetch -f -u origin ${EGIT_BRANCH}:${EGIT_BRANCH}"
+		EGIT_UPDATE_CMD="git fetch -t -f -u origin ${EGIT_BRANCH}:${EGIT_BRANCH}"
 		UPSTREAM_BRANCH="${EGIT_BRANCH}"
 	else
 		debug-print "${FUNCNAME}: working in bare repository for non-bare \"${EGIT_DIR}\""
