@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/wicd-client-kde-0.2.2.ebuild,v 1.1 2011/04/12 10:47:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/wicd-client-kde-0.2.2.ebuild,v 1.2 2011/04/20 14:39:41 scarabeus Exp $
 
 EAPI=4
 
@@ -9,6 +9,7 @@ zh_TW"
 EGIT_REPONAME="wicd-kde"
 MY_P=${P/-client/}
 KDE_SCM="git"
+KDE_MINIMAL="4.6"
 inherit kde4-base
 
 DESCRIPTION="Wicd client built on the KDE Development Platform"
