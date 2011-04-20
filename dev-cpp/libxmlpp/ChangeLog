@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.107 2011/04/14 17:55:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.108 2011/04/20 12:30:29 pacho Exp $
+
+*libxmlpp-2.34.1 (20 Apr 2011)
+
+  20 Apr 2011; Pacho Ramos <pacho@gentoo.org> -libxmlpp-2.33.2.ebuild,
+  +libxmlpp-2.34.1.ebuild:
+  Version bump including upstream fixes to not require mm-common at buildtime
+  ever. Remove old.
 
   14 Apr 2011; Pacho Ramos <pacho@gentoo.org> libxmlpp-2.32.0-r1.ebuild,
   libxmlpp-2.33.2.ebuild:
