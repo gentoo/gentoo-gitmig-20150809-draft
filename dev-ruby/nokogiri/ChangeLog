@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.50 2011/04/20 12:03:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.51 2011/04/20 12:05:00 graaff Exp $
+
+  20 Apr 2011; Hans de Graaff <graaff@gentoo.org>
+  -files/nokogiri-1.4.1-ruby19.patch,
+  -files/nokogiri-1.4.2+ruby-1.9.2.patch:
+  Remove unused patches.
 
   20 Apr 2011; Hans de Graaff <graaff@gentoo.org> nokogiri-1.4.4.ebuild,
   +files/nokogiri-1.4.4-libxml-2.7.8.patch:
