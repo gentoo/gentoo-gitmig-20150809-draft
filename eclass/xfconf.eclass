@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.30 2011/04/10 18:25:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.31 2011/04/20 21:04:10 angelos Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -11,23 +11,23 @@
 
 # @ECLASS-VARIABLE: EAUTORECONF
 # @DESCRIPTION:
-# Run eautoreconf instead of elibtoolize if the variable is set.
+# Run eautoreconf instead of elibtoolize if the variable is set
 
 # @ECLASS-VARIABLE: EINTLTOOLIZE
 # @DESCRIPTION:
-# Run intltoolize --force --copy --automake if the variable is set.
+# Run intltoolize --force --copy --automake if the variable is set
 
 # @ECLASS-VARIABLE: DOCS
 # @DESCRIPTION:
-# This should be an variable defining documentation to install.
+# This should be a variable defining documentation to install
 
 # @ECLASS-VARIABLE: PATCHES
 # @DESCRIPTION:
-# This should be an array defining patches to apply.
+# This should be an array defining patches to apply
 
 # @ECLASS-VARIABLE: XFCONF
 # @DESCRIPTION:
-# This should be an array defining arguments for econf.
+# This should be an array defining arguments for econf
 
 inherit autotools base eutils fdo-mime gnome2-utils libtool
 
@@ -56,8 +56,8 @@ EXPORT_FUNCTIONS src_prepare src_configure src_install pkg_preinst pkg_postinst 
 # @FUNCTION: xfconf_use_debug
 # @DESCRIPTION:
 # If IUSE has debug, return --enable-debug=minimum.
-# If USE debug is enabled, return --enable-debug which is same as --enable-debug=yes.
-# If USE debug is enabled and XFCONF_FULL_DEBUG variable is set, return --enable-debug=full.
+# If USE debug is enabled, return --enable-debug which is the same as --enable-debug=yes.
+# If USE debug is enabled and the XFCONF_FULL_DEBUG variable is set, return --enable-debug=full.
 xfconf_use_debug() {
 	if has debug ${IUSE}; then
 		if use debug; then
@@ -92,7 +92,7 @@ xfconf_src_prepare() {
 
 # @FUNCTION: xfconf_src_configure
 # @DESCRIPTION:
-# Run econf with opts in XFCONF array
+# Run econf with opts from the XFCONF array
 xfconf_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 	econf ${XFCONF[@]}
@@ -100,7 +100,7 @@ xfconf_src_configure() {
 
 # @FUNCTION: xfconf_src_install
 # @DESCRIPTION:
-# Run emake install and install documentation in DOCS variable
+# Run emake install and install documentation in the DOCS variable
 xfconf_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 	emake DESTDIR="${D}" "$@" install || die
