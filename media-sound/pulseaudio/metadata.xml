@@ -19,11 +19,7 @@
       enable this flag if you want to use a system wide instance. If
       unsure, enable this flag.
     </flag>
-    <flag name="oss" restrict="&lt;media-sound/pulseaudio-0.9.16_pre5">
-      Enable OSS sink/source (output/input). Also build the padsp
-      script to make OSS software use PulseAudio.
-    </flag>
-    <flag name="oss" restrict="&gt;=media-sound/pulseaudio-0.9.16_pre5">
+    <flag name="oss">
       Enable OSS sink/source (output/input). Deprecated, upstream does
       not support this on systems where other sink/source systems are
       available (i.e.: Linux). The padsp wrapper is now always build
@@ -41,7 +37,6 @@
       instructions at http://pulseaudio.org/wiki/WhatIsWrongWithSystemMode .
     </flag>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
-    <flag name="glib">Enable glib eventloop support</flag>
     <flag name="doc">Build the doxygen-described API documentation.</flag>
 	<flag name="realtime" restrict="&gt;=media-sound/pulseaudio-0.9.21.2-r1">
       Makes PulseAudio use RealtimeKit (<pkg>sys-auth/rtkit</pkg>) to get
