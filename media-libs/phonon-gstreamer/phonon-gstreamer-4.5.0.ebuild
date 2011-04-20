@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.5.0.ebuild,v 1.2 2011/04/14 07:51:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.5.0.ebuild,v 1.3 2011/04/20 11:03:07 scarabeus Exp $
 
 EAPI=4
 
-[[ ${PV} == *9999 ]] && git_eclass="git"
+[[ ${PV} == *9999 ]] && git_eclass="git-2"
 EGIT_REPO_URI="git://anongit.kde.org/${PN}"
 
 MY_PN="phonon-backend-gstreamer"
