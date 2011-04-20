@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/libnasl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.87 2010/09/06 18:32:56 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.88 2011/04/20 07:52:55 jlec Exp $
+
+*libnasl-2.2.9-r1 (20 Apr 2011)
+
+  20 Apr 2011; Justin Lecher <jlec@gentoo.org> +libnasl-2.2.9-r1.ebuild,
+  +files/libnasl-2.2.9-gentoo.patch:
+  Respect LDFLAGS, #335967
 
   06 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> -libnasl-2.2.6.ebuild:
   Revert back to ~arch wrt #330455.
