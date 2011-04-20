@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.88 2010/09/06 18:30:52 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.89 2011/04/20 11:09:26 jlec Exp $
+
+  20 Apr 2011; Justin Lecher <jlec@gentoo.org> nessus-2.2.9.ebuild,
+  nessus-2.3.1.ebuild:
+  Fixing repoman things
 
   06 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> -nessus-2.2.6.ebuild:
   Revert back to ~arch wrt #330455.
