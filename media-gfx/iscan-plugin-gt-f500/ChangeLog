@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/iscan-plugin-gt-f500
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f500/ChangeLog,v 1.1 2011/04/20 23:06:58 flameeyes Exp $
+
+*iscan-plugin-gt-f500-1.0.0.1 (20 Apr 2011)
+
+  20 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +iscan-plugin-gt-f500-1.0.0.1.ebuild, +metadata.xml:
+  Initial import of the iscan plugin/firmware for EPSON Perfection 2480/2580.
+
