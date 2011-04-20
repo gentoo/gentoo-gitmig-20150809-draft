@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.13 2011/04/04 11:57:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.14 2011/04/20 17:16:34 ulm Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -144,7 +144,7 @@ esac
 # Set this variable to a non-empty value to disable automatic updating
 # of a bzr source tree.  This is intended to be set outside the ebuild
 # by users.
-: ${EBZR_OFFLINE:=${ESCM_OFFLINE}}
+: ${EBZR_OFFLINE=${EVCS_OFFLINE}}
 
 # @FUNCTION: bzr_initial_fetch
 # @USAGE: <repository URI> <branch directory>
