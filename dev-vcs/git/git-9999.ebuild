@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.18 2011/04/04 08:58:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.19 2011/04/20 11:53:08 scarabeus Exp $
 
 EAPI=3
 
@@ -8,9 +8,10 @@ GENTOO_DEPEND_ON_PERL=no
 
 # bug #329479: git-remote-testgit is not multiple-version aware
 PYTHON_DEPEND="python? 2"
+[[ ${PV} == *9999 ]] && SCM="git-2"
+EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
 
-inherit toolchain-funcs eutils elisp-common perl-module bash-completion python
-[ "$PV" == "9999" ] && inherit git
+inherit toolchain-funcs eutils elisp-common perl-module bash-completion python ${SCM}
 
 MY_PV="${PV/_rc/.rc}"
 MY_P="${PN}-${MY_PV}"
@@ -19,16 +20,13 @@ DOC_VER=${MY_PV}
 
 DESCRIPTION="GIT - the stupid content tracker, the revision control system heavily used by the Linux kernel team"
 HOMEPAGE="http://www.git-scm.com/"
-if [ "$PV" != "9999" ]; then
+if [[ ${PV} != *9999 ]]; then
 	SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 			mirror://kernel/software/scm/git/${PN}-manpages-${DOC_VER}.tar.bz2
 			doc? ( mirror://kernel/software/scm/git/${PN}-htmldocs-${DOC_VER}.tar.bz2 )"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 else
 	SRC_URI=""
-	EGIT_BRANCH="master"
-	EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
-	# EGIT_REPO_URI="http://www.kernel.org/pub/scm/git/git.git"
 	KEYWORDS=""
 fi
 
@@ -75,7 +73,7 @@ DEPEND="${CDEPEND}
 	)"
 
 # Live ebuild builds man pages and HTML docs, additionally
-if [ "$PV" == "9999" ]; then
+if [[ ${PV} == *9999 ]]; then
 	DEPEND="${DEPEND}
 		app-text/asciidoc
 		app-text/xmlto"
@@ -180,7 +178,7 @@ exportmakeopts() {
 }
 
 src_unpack() {
-	if [ "${PV}" != "9999" ]; then
+	if [[ ${PV} != *9999 ]]; then
 		unpack ${MY_P}.tar.bz2
 		cd "${S}"
 		unpack ${PN}-manpages-${DOC_VER}.tar.bz2
@@ -189,7 +187,7 @@ src_unpack() {
 			unpack ${PN}-htmldocs-${DOC_VER}.tar.bz2
 		cd "${S}"
 	else
-		git_src_unpack
+		git-2_src_unpack
 		cd "${S}"
 		#cp "${FILESDIR}"/GIT-VERSION-GEN .
 	fi
@@ -286,7 +284,7 @@ src_compile() {
 	fi
 
 	cd "${S}"/Documentation
-	if [[ "$PV" == "9999" ]] ; then
+	if [[ ${PV} == *9999 ]] ; then
 		git_emake man \
 			|| die "emake man failed"
 		if use doc ; then
