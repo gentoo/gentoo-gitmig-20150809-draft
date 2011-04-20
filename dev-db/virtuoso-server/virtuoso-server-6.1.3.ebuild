@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.3.ebuild,v 1.2 2011/04/20 10:41:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.3.ebuild,v 1.3 2011/04/20 19:36:41 reavertm Exp $
 
 EAPI=4
 
@@ -76,9 +76,6 @@ src_install() {
 	# Rename isql executables (conflicts with unixODBC)
 	mv "${ED}/usr/bin/isql" "${ED}/usr/bin/isql-v" || die
 	mv "${ED}/usr/bin/isqlw" "${ED}/usr/bin/isqlw-v" || die
-
-	# remove libtool files
-	find "${ED}" -name '*.la' -delete
 
 	keepdir /var/lib/virtuoso/db
 }
