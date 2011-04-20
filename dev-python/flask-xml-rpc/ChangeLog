@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/flask-xml-rpc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-xml-rpc/ChangeLog,v 1.1 2011/04/20 07:58:09 rafaelmartins Exp $
+
+*flask-xml-rpc-0.1.2 (20 Apr 2011)
+
+  20 Apr 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +flask-xml-rpc-0.1.2.ebuild, +metadata.xml:
+  Initial commit.
+
