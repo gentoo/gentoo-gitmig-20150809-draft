@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16-r1.ebuild,v 1.1 2011/04/20 08:34:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16-r1.ebuild,v 1.2 2011/04/20 08:41:12 xarthisius Exp $
 
 EAPI=2
 inherit gnome2-utils eutils
@@ -17,6 +17,7 @@ IUSE="nls"
 RDEPEND=">=x11-libs/gtk+-2:2
 	app-cdr/cdrtools"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P/_/}
@@ -26,6 +27,10 @@ src_prepare() {
 	  "${FILESDIR}"/fix_cddb_hidden_tracks.patch \
 	  "${FILESDIR}"/io_compile.patch
 
+	# fix Norwegian locales
+	mv po/{no,nb}.po || die
+	mv po/{no,nb}.gmo || die
+	sed -i -e 's/no/nb/' po/LINGUAS || die
 }
 
 src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.68 2011/04/20 08:34:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.69 2011/04/20 08:41:12 xarthisius Exp $
+
+  20 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xcdroast-0.98_alpha16-r1.ebuild:
+  Fix Norwegian locales
 
 *xcdroast-0.98_alpha16-r1 (20 Apr 2011)
 
