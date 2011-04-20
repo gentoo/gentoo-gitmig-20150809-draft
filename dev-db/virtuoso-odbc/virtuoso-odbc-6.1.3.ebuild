@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.1.ebuild,v 1.7 2010/09/03 19:29:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/virtuoso-odbc-6.1.3.ebuild,v 1.1 2011/04/20 10:08:02 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit virtuoso
 
 DESCRIPTION="ODBC driver for OpenLink Virtuoso Open-Source Edition"
 
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND="
@@ -37,10 +37,5 @@ src_install() {
 	virtuoso_src_install
 
 	# Remove libtool files
-	if ! use static-libs; then
-		local libdir
-		for libdir in $(get_all_libdirs); do
-			rm -f "${ED}/usr/${libdir}"/*.la || die
-		done
-	fi
+	find "${ED}" -name '*.la' -delete
 }
