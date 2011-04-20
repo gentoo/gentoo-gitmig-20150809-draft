@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.126 2011/03/26 17:26:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.127 2011/04/20 11:12:35 scarabeus Exp $
+
+  20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -quassel-0.7.1.ebuild,
+  quassel-0.7.2.ebuild, quassel-9999.ebuild:
+  Use git-2 eclass. Drop 0.7.1. Stabilise 0.7.2 on x86 and amd64.
 
   26 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   quassel-0.7.1.ebuild, quassel-0.7.2.ebuild, quassel-9999.ebuild:
