@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.141 2011/03/29 08:04:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.142 2011/04/20 07:45:23 dirtyepic Exp $
+
+*wxpython-2.8.12.0 (20 Apr 2011)
+
+  20 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> +wxpython-2.8.12.0.ebuild,
+  +files/wxpython-2.8.12-drop-editra.patch:
+  Version bump (bug #363319).
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> wxpython-2.6.4.0-r2.ebuild,
   wxpython-2.8.10.1.ebuild:
