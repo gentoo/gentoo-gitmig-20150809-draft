@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.10 2011/04/10 10:25:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.11 2011/04/20 11:21:30 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/cairo"
-[[ ${PV} == *9999 ]] && GIT_ECLASS="git"
+[[ ${PV} == *9999 ]] && GIT_ECLASS="git-2"
 
 inherit eutils flag-o-matic autotools ${GIT_ECLASS}
 
@@ -60,6 +60,13 @@ DEPEND="${RDEPEND}
 		)
 	)"
 
+# drm module requires X
+# for gallium we need to enable drm
+REQUIRED_USE="
+	drm? ( X )
+	gallium? ( drm )
+"
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
 
@@ -85,29 +92,13 @@ src_configure() {
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
-	if use X; then
+	use X && myopts+=" --enable-tee=yes"
+	if use drm; then
 		myopts+="
-			--enable-tee=yes
-			$(use_enable drm)
+			$(use_enable xcb xcb-drm)
 		"
-
-		if use drm; then
-			myopts+="
-				$(use_enable gallium)
-				$(use_enable xcb xcb-drm)
-			"
-		else
-			use gallium && ewarn "Gallium use requires drm use enabled. So disabling for now."
-			myopts+="
-				--disable-gallium
-				--disable-xcb-drm
-			"
-		fi
 	else
-		use drm && ewarn "drm use requires X use enabled. So disabling for now."
 		myopts+="
-			--disable-drm
-			--disable-gallium
 			--disable-xcb-drm
 		"
 	fi
@@ -131,6 +122,8 @@ src_configure() {
 		$(use_enable svg) \
 		$(use_enable xcb) \
 		$(use_enable xcb xcb-shm) \
+		$(use_enable drm) \
+		$(use_enable gallium) \
 		--enable-ft \
 		--enable-pdf \
 		--enable-png \
@@ -141,7 +134,7 @@ src_configure() {
 
 src_install() {
 	# parallel make install fails
-	emake -j1 DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install
 	find "${ED}" -name '*.la' -exec rm -f {} +
-	dodoc AUTHORS ChangeLog NEWS README || die
+	dodoc AUTHORS ChangeLog NEWS README
 }
