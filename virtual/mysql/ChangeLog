@@ -1,6 +1,10 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.27 2011/01/07 23:57:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.28 2011/04/20 12:26:25 jmbsvicetto Exp $
+
+  20 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mysql-5.1.ebuild, mysql-5.5.ebuild:
+  Added minimal use flag to virtual/mysql ebuilds.
 
   07 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.ebuild,
   mysql-5.1.ebuild:
