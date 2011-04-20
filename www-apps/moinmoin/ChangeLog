@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.71 2011/04/10 22:52:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.72 2011/04/20 19:11:38 radhermit Exp $
+
+  20 Apr 2011; Tim Harder <radhermit@gentoo.org> moinmoin-1.8.8.ebuild:
+  Restrict to at most dev-lang/python-2.6* since 2.7 won't work.
 
   10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   moinmoin-1.8.8.ebuild:
