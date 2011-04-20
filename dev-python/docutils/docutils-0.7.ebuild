@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.16 2011/04/20 18:37:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.17 2011/04/20 21:15:21 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -60,8 +60,7 @@ src_compile() {
 	pushd tools > /dev/null
 
 	echo PYTHONPATH="../build-$(PYTHON -f --ABI)/lib" "$(PYTHON -f)" $([[ -f ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py ]] && echo ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py || echo ../tools/buildhtml.py) --input-encoding=utf-8 --stylesheet-path=../html4css1.css --traceback ..
-	LC_ALL=C LANG=C PYTHONPATH="../build-$(PYTHON -f --ABI)/lib" "$(PYTHON -f)" $([[ -f ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py ]] && echo ../build-$(PYTHON -f 
---ABI)/lib/tools/buildhtml.py || echo ../tools/buildhtml.py) --input-encoding=utf-8 --stylesheet-path=../html4css1.css --traceback .. || die "buildhtml.py failed"
+	PYTHONPATH="../build-$(PYTHON -f --ABI)/lib" "$(PYTHON -f)" $([[ -f ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py ]] && echo ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py || echo ../tools/buildhtml.py) --input-encoding=utf-8 --stylesheet-path=../html4css1.css --traceback .. || die "buildhtml.py failed"
 
 	popd > /dev/null
 
