@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.4 2011/04/19 02:40:05 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.ebuild,v 1.5 2011/04/20 12:35:50 jmbsvicetto Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://amarok.kde.org/"
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
+IUSE="cdda daap debug +embedded handbook ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
 
 # Tests require gmock - http://code.google.com/p/gmock/
 # It's not in the tree yet
@@ -38,19 +38,13 @@ COMMONDEPEND="
 		>=app-misc/strigi-0.5.7[dbus,qt4]
 		$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
 		sys-libs/zlib
-		>=virtual/mysql-5.1
+		>=virtual/mysql-5.1[embedded?]
 		x11-libs/qt-script
 		>=x11-libs/qtscriptgenerator-0.1.0
 		cdda? (
 			$(add_kdebase_dep libkcddb)
 			$(add_kdebase_dep libkcompactdisc)
 			$(add_kdebase_dep kdemultimedia-kioslaves)
-		)
-		embedded? (
-			|| (
-				>=dev-db/mysql-5.1.50-r3[embedded]
-				>=dev-db/mariadb-5.1.50[embedded]
-			)
 		)
 		ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 		lastfm? ( >=media-libs/liblastfm-0.3.0 )
@@ -145,7 +139,7 @@ pkg_postinst() {
 			elog "to configure the external db and migrate your data from the embedded database."
 			echo
 
-			if has_version "dev-db/mysql[minimal]"; then
+			if has_version "virtual/mysql[minimal]"; then
 				elog "You built mysql with the minimal use flag, so it doesn't include the server."
 				elog "You won't be able to use the local mysql installation to store your amarok collection."
 				echo
