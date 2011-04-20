@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.18.ebuild,v 1.1 2010/12/07 07:40:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.18.ebuild,v 1.2 2011/04/20 20:23:45 jlec Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_compile() {
 	# (bug #343655).
 	CPPFLAGS=""
 
-	emake -j1 DIST="${D}" || die
+	emake -j1 DIST="${D}" CC="$(tc-getCC)" || die
 
 	export PATH=${S}/bin:${PATH}
 	cd bin
