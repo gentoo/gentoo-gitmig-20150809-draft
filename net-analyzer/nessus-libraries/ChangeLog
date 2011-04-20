@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.92 2011/04/20 07:17:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.93 2011/04/20 11:19:36 jlec Exp $
+
+  20 Apr 2011; Justin Lecher <jlec@gentoo.org>
+  -nessus-libraries-2.3.1-r2.ebuild:
+  Dropped due to pending removal request, #169466
 
 *nessus-libraries-2.2.9-r1 (20 Apr 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.114 2011/04/20 11:08:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.115 2011/04/20 11:17:47 jlec Exp $
+
+  20 Apr 2011; Justin Lecher <jlec@gentoo.org> -nessus-core-2.3.1.ebuild:
+  Dropped due to pending removal request, #169466
 
 *nessus-core-2.2.9-r1 (20 Apr 2011)
 
