@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/kiki
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.17 2010/09/16 16:56:17 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.18 2011/04/20 13:33:42 tupone Exp $
+
+  20 Apr 2011; Tupone Alfredo <tupone@gentoo.org> kiki-1.0.2-r2.ebuild,
+  +files/kiki-1.0.2-gcc46.patch:
+  Build with gcc-4.6 Bug #362591 by Diego Elio Pettenò
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> kiki-1.0.2-r2.ebuild:
   virtual/glut -> media-libs/glut

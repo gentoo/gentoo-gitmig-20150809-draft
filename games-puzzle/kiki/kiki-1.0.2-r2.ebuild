@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.6 2010/09/16 16:56:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.7 2011/04/20 13:33:42 tupone Exp $
 PYTHON_DEPEND="2"
 EAPI=2
 inherit eutils python toolchain-funcs games
@@ -46,6 +46,7 @@ src_prepare() {
 	cd SWIG
 	swig -c++ -python -globals kiki -o KikiPy_wrap.cpp KikiPy.i || die
 	cp -f kiki.py ../py
+	epatch "${FILESDIR}"/${P}-gcc46.patch
 }
 
 src_compile() {
