@@ -1,6 +1,14 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.218 2011/04/16 13:49:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.219 2011/04/21 12:11:58 pacho Exp $
+
+*evince-2.32.0-r3 (21 Apr 2011)
+
+  21 Apr 2011; Pacho Ramos <pacho@gentoo.org> +evince-2.32.0-r3.ebuild,
+  +files/evince-2.32.0-stop-spinner.patch,
+  +files/evince-2.32.0-use-popup.patch:
+  Revision bump to include upstream patches reported by Arthur Taylor fixing
+  random minimizing (bug #364311) and useless wakeups (bug #364313) problems.
 
   16 Apr 2011; Pacho Ramos <pacho@gentoo.org> evince-2.32.0-r2.ebuild:
   gconf-2.m4 is needed for autoconf, bug #363781 by Jimmy C. Chau.
