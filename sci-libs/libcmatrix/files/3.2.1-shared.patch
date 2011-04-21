@@ -46,22 +46,22 @@ index 1361371..1448e76 100755
 -	chmod a+rx $@
 -	$(RANLIB) $@
 +lib/libcmatrix.so.3.2.1: $(ALLNORMOBJS)
-+	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLNORMOBJS)
++	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLNORMOBJS) @ATLAS_LIBS@
 +	ln -sf libcmatrix.so.3.2.1 lib/libcmatrix.so.3
 +	ln -sf libcmatrix.so.3.2.1 lib/libcmatrix.so
 +
 +lib/libcmatrix_p.so.3.2.1: $(ALLPROFOBJS)
-+	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLPROFOBJS)
++	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLPROFOBJS) @ATLAS_LIBS@
 +	ln -sf libcmatrix_p.so.3.2.1 lib/libcmatrix_p.so.3
 +	ln -sf libcmatrix_p.so.3.2.1 lib/libcmatrix_p.so
 +
 +lib/libcmatrix-g.so.3.2.1: $(ALLGOBJS)
-+	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLGOBJS)
++	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLGOBJS) @ATLAS_LIBS@
 +	ln -sf libcmatrix-g.so.3.2.1 lib/libcmatrix-g.so.3
 +	ln -sf libcmatrix-g.so.3.2.1 lib/libcmatrix-g.so
 +
 +lib/libcmatrix.so_r.3.2.1: $(ALLTHROBJS)
-+	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLTHROBJS)
++	$(CXX) $(LDFLAGS) -fPIC -shared -Wl,--soname,libcmatrix.so.3 -o $@ $(ALLTHROBJS) @ATLAS_LIBS@
 +	ln -sf libcmatrix_r.so.3.2.1 lib/libcmatrix_r.so.3
 +	ln -sf libcmatrix_r.so.3.2.1 lib/libcmatrix_r.so
  
