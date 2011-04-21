@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.158 2011/03/28 22:36:13 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.159 2011/04/21 12:15:19 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -1030,7 +1030,7 @@ mysql_src_configure() {
 
 	# bug #283926, with GCC4.4, this is required to get correct behavior.
 	append-flags -fno-strict-aliasing
-	
+
 	# bug #335185, #335995, with >= GCC4.3.3 on x86 only, omit-frame-pointer
 	# causes a mis-compile.
 	# Upstream bugs:
@@ -1052,6 +1052,7 @@ mysql_src_configure() {
 		--enable-thread-safe-client \
 		--with-comment="Gentoo Linux ${PF}" \
 		--without-docs \
+		--with-LIBDIR="$(get_libdir)" \
 		${myconf} || die "econf failed"
 
 	# TODO: Move this before autoreconf !!!
