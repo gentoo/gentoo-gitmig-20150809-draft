@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/prefix-chain-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/prefix-chain-utils/ChangeLog,v 1.2 2010/07/16 02:39:28 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/prefix-chain-utils/ChangeLog,v 1.3 2011/04/21 03:10:54 darkside Exp $
+
+  21 Apr 2011; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  update metadata
 
   16 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
