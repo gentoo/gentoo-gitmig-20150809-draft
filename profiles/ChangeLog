@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5315 2011/04/20 20:42:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5316 2011/04/21 12:15:59 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Last rites for gnustep-libs/camaelon and x11-themes/camaelon-themes
 
   20 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
