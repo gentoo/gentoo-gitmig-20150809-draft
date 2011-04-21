@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r1.ebuild,v 1.3 2010/12/12 16:50:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r2.ebuild,v 1.1 2011/04/21 15:03:19 scarabeus Exp $
 
-EAPI=2
-inherit multilib
+EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Suspend and hibernation utilities"
 HOMEPAGE="http://pm-utils.freedesktop.org/"
@@ -15,10 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa debug ntp video_cards_intel video_cards_radeon"
 
 vbetool="!video_cards_intel? ( sys-apps/vbetool )"
-DEPEND="!<app-laptop/laptop-mode-tools-1.55-r1
-	!<sys-power/powermgmt-base-1.31
-	!>=sys-power/powermgmt-base-1.31[-pm-utils]"
-RDEPEND="${DEPEND}
+RDEPEND="!<app-laptop/laptop-mode-tools-1.55-r1
+	!sys-power/powermgmt-base[-pm-utils(+)]
 	sys-apps/dbus
 	>=sys-apps/util-linux-2.13
 	sys-power/pm-quirks
@@ -27,6 +26,7 @@ RDEPEND="${DEPEND}
 	amd64? ( ${vbetool} )
 	x86? ( ${vbetool} )
 	video_cards_radeon? ( app-laptop/radeontool )"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	local ignore="01grub"
@@ -34,22 +34,26 @@ src_prepare() {
 
 	use debug && echo 'PM_DEBUG="true"' > "${T}"/gentoo
 	echo "HOOK_BLACKLIST=\"${ignore}\"" >> "${T}"/gentoo
+
+	epatch "${FILESDIR}"/${PV}-bluetooth-sync.patch \
+		"${FILESDIR}"/${PV}-disable-sata-alpm.patch \
+		"${FILESDIR}"/${PV}-fix-intel-audio-powersave-hook.patch \
+		"${FILESDIR}"/${PV}-logging-append.patch
+
 }
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
-		--disable-dependency-tracking \
 		--disable-doc
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS pm/HOWTO* README* TODO || die
-	doman man/*.{1,8} || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog NEWS pm/HOWTO* README* TODO
+	doman man/*.{1,8}
 
 	insinto /etc/pm/config.d
-	doins "${T}"/gentoo || die
+	doins "${T}"/gentoo
 
 	# NetworkManager 0.8.2 is handling suspend/resume on it's own with UPower
 	find "${D}" -type f -name 55NetworkManager -exec rm -f '{}' +

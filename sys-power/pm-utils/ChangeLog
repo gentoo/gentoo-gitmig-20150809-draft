@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/pm-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.57 2010/12/12 16:50:12 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.58 2011/04/21 15:03:19 scarabeus Exp $
+
+*pm-utils-1.4.1-r2 (21 Apr 2011)
+
+  21 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.4.1-bluetooth-sync.patch, +files/1.4.1-disable-sata-alpm.patch,
+  +files/1.4.1-fix-intel-audio-powersave-hook.patch, -pm-utils-1.4.1-r1.ebuild,
+  +files/1.4.1-logging-append.patch, +pm-utils-1.4.1-r2.ebuild:
+  Backport some patches to fix issues with bluetooth/sata/... Per bug #336654.
 
   12 Dec 2010; Raúl Porcel <armin76@gentoo.org> pm-utils-1.4.1.ebuild,
   pm-utils-1.4.1-r1.ebuild:
