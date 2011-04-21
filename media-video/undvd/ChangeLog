@@ -1,6 +1,9 @@
 # ChangeLog for media-video/undvd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/ChangeLog,v 1.13 2010/04/27 12:27:00 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/ChangeLog,v 1.14 2011/04/21 21:25:26 radhermit Exp $
+
+  21 Apr 2011; Tim Harder <radhermit@gentoo.org> undvd-0.7.5.ebuild:
+  Use virtual/ffmpeg (bug #362153).
 
   27 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> undvd-0.7.5.ebuild:
   MPlayer doesn't have USE="aac" anymore.

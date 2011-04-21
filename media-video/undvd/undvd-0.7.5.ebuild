@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.7.5.ebuild,v 1.5 2010/04/27 12:27:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/undvd/undvd-0.7.5.ebuild,v 1.6 2011/04/21 21:25:26 radhermit Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND="sys-apps/coreutils
 	media-video/mplayer[encode,dvd,mp3,x264,xvid?]
 	css? ( media-libs/libdvdcss
 		media-video/vobcopy )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	matroska? ( media-video/mkvtoolnix )
 	ogm? ( media-sound/ogmtools )"
 DEPEND=""
