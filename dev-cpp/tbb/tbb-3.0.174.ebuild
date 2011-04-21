@@ -1,13 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.104.ebuild,v 1.2 2010/11/19 06:11:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-3.0.174.ebuild,v 1.1 2011/04/21 21:04:35 bicatali Exp $
 
 EAPI=3
 inherit eutils versionator toolchain-funcs
-#  url number
-MYU="78/160"
+
+# those 2 below change pretty much every release
+# url number
+MYU="78/166"
 # release update
-MYR="%20update%20"3
+MYR="%20update%20"6
 
 PV1="$(get_version_component_range 1)"
 PV2="$(get_version_component_range 2)"
@@ -28,7 +30,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-tests.patch
+	epatch "${FILESDIR}"/${PN}-3.0.104-tests.patch
+	epatch "${FILESDIR}"/${PN}-3.0.174-gcc46.patch
 	# use fully qualified compilers. do not force pentium4 for x86 users
 	local CC="$(tc-getCC)"
 	sed -i \

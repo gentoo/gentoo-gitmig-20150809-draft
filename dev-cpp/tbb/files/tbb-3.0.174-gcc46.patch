@@ -1,0 +1,33 @@
+diff -Nur tbb30_174oss.orig/src/test/test_condition_variable.h tbb30_174oss/src/test/test_condition_variable.h
+--- tbb30_174oss.orig/src/test/test_condition_variable.h	2011-04-21 21:57:36.000000000 +0100
++++ tbb30_174oss/src/test/test_condition_variable.h	2011-04-21 21:58:57.000000000 +0100
+@@ -189,7 +189,7 @@
+     Counter<M> counter;
+     counter.value = 0;
+     Order = 0;
+-    const long test_size = 100000;
++    const size_t test_size = 100000;
+     NativeParallelFor( nthread, WorkForLocks<Counter<M>, test_size>(counter) );
+ 
+     if( counter.value!=2*test_size )
+diff -Nur tbb30_174oss.orig/src/test/test_mutex_native_threads.cpp tbb30_174oss/src/test/test_mutex_native_threads.cpp
+--- tbb30_174oss.orig/src/test/test_mutex_native_threads.cpp	2011-04-21 21:57:36.000000000 +0100
++++ tbb30_174oss/src/test/test_mutex_native_threads.cpp	2011-04-21 21:58:57.000000000 +0100
+@@ -182,7 +182,7 @@
+     Counter<M> counter;
+     counter.value = 0;
+     Order = 0;
+-    const long test_size = 100000;
++    const size_t test_size = 100000;
+     tbb::tick_count t0 = tbb::tick_count::now();
+     NativeParallelFor( nthread, Work<Counter<M>, test_size>(counter) );
+     tbb::tick_count t1 = tbb::tick_count::now();
+@@ -199,7 +199,7 @@
+     REMARK("testing %s\n",mutex_name);
+     Invariant<M,8> invariant(mutex_name);
+     Order = 0;
+-    static const long test_size = 1000000;
++    static const size_t test_size = 1000000;
+     tbb::tick_count t0 = tbb::tick_count::now();
+     NativeParallelFor( nthread, Work<Invariant<M,8>, test_size>(invariant) );
+     tbb::tick_count t1 = tbb::tick_count::now();
