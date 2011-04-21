@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/cowsay
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.35 2010/08/23 23:18:51 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.36 2011/04/21 20:13:20 mr_bones_ Exp $
+
+  21 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  cowsay-3.03-r2.ebuild, +files/cowsay-3.03-utf8.patch:
+  Add patch snatched from debian for bug #364365
 
   23 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
   cowsay-3.03-r2.ebuild, +files/cowsay-3.03-mech.patch:
