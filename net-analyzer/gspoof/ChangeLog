@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gspoof
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/ChangeLog,v 1.10 2010/08/21 15:23:25 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/ChangeLog,v 1.11 2011/04/21 12:45:38 tomka Exp $
+
+  21 Apr 2011; Thomas Kahle <tomka@gentoo.org> gspoof-3.2-r1.ebuild:
+  x86 stable per bug 360955
 
 *gspoof-3.2-r1 (21 Aug 2010)
 
