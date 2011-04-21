@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/monomer-db
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.13 2011/02/26 11:22:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.14 2011/04/21 07:05:19 jlec Exp $
+
+*monomer-db-5.28 (21 Apr 2011)
+
+  21 Apr 2011; Justin Lecher <jlec@gentoo.org> +monomer-db-5.28.ebuild:
+  Version Bump
 
 *monomer-db-5.25 (26 Feb 2011)
 
