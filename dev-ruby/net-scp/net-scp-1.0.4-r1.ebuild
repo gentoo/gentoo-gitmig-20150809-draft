@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4-r1.ebuild,v 1.1 2011/04/20 06:39:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4-r1.ebuild,v 1.2 2011/04/21 05:54:46 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19"
@@ -23,7 +23,6 @@ IUSE=""
 ruby_add_bdepend "
 	test? (
 		virtual/ruby-test-unit
-		!dev-ruby/test-unit:2
 		dev-ruby/mocha
 	)"
 
