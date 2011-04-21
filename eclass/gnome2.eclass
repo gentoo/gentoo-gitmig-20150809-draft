@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.93 2011/04/21 20:59:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.94 2011/04/21 21:06:15 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@ case "${EAPI:-0}" in
 	0|1)
 		EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 		;;
-	2|3)
+	2|3|4)
 		EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 		;;
 	*) die "EAPI=${EAPI} is not supported" ;;
@@ -85,7 +85,13 @@ gnome2_src_prepare() {
 	gnome2_omf_fix
 
 	# Run libtoolize
-	elibtoolize ${ELTCONF}
+	if has ${EAPI:-0} 0 1 2 3; then
+		elibtoolize ${ELTCONF}
+	else
+		# Everything is fatal EAPI 4 onwards
+		nonfatal elibtoolize ${ELTCONF}
+	fi
+
 }
 
 # @FUNCTION: gnome2_src_configure
