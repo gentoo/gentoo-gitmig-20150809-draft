@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.19 2011/04/13 15:13:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.20 2011/04/21 13:31:43 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -280,8 +280,8 @@ src_compile() {
 	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
-		emake {base,net}_unittests BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/{base,net}_unittests
+		emake {base,crypto,googleurl,net}_unittests BUILDTYPE=Release V=1 || die
+		pax-mark m out/Release/{base,crypto,googleurl,net}_unittests
 	fi
 }
 
@@ -299,6 +299,9 @@ src_test() {
 	# For more info see bug #350347.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
 		'--gtest_filter=-ICUStringConversionsTest.*'
+
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/crypto_unittests virtualmake
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/googleurl_unittests virtualmake
 
 	# NetUtilTest: bug #361885.
 	# UDP: unstable, active development. We should revisit this later.

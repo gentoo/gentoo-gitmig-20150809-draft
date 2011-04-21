@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.725.0.ebuild,v 1.5 2011/04/09 20:21:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.742.0.ebuild,v 1.1 2011/04/21 13:31:43 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -104,11 +104,8 @@ src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}/${PN}-system-vpx-r4.patch"
 
-	# Make Chromium recognize Gentoo's Heimdal, to be upstreamed.
-	epatch "${FILESDIR}/${PN}-gssapi-heimdal-r0.patch"
-
-	# Fix some net_unittests failures, bug #361939; to be upstreamed.
-	epatch "${FILESDIR}/${PN}-net-tests-r0.patch"
+	# Fix compilation with system zlib, bug #364205. To be upstreamed.
+	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -239,8 +236,8 @@ src_compile() {
 	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
-		emake {base,net}_unittests BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/{base,net}_unittests
+		emake {base,crypto,googleurl,net}_unittests BUILDTYPE=Release V=1 || die
+		pax-mark m out/Release/{base,crypto,googleurl,net}_unittests
 	fi
 }
 
@@ -259,11 +256,13 @@ src_test() {
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
 		'--gtest_filter=-ICUStringConversionsTest.*'
 
-	# DiskCache: we need net/data/cache_tests in the tarball (export_tarball.py)
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/crypto_unittests virtualmake
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/googleurl_unittests virtualmake
+
 	# NetUtilTest: bug #361885.
 	# UDP: unstable, active development. We should revisit this later.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-*DiskCache*:NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*UDP*'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*UDP*'
 }
 
 src_install() {
