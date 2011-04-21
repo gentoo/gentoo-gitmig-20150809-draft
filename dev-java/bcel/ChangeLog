@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bcel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.53 2011/04/10 23:19:57 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.54 2011/04/21 08:23:28 ali_bush Exp $
+
+*bcel-5.2-r2 (21 Apr 2011)
+
+  21 Apr 2011; Alistair Bush <ali_bush@gentoo.org> +bcel-5.2-r2.ebuild,
+  +files/bcel-5.2-build.xml.patch,
+  +files/findbugs-bcel-5.2_p20070531.patch.patch:
+  Fix circular dependencies. thanks to sera. see #363147.
 
 *bcel-5.2-r1 (10 Apr 2011)
 
