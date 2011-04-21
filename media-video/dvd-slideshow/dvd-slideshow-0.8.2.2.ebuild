@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.8.2.2.ebuild,v 1.3 2008/12/21 14:52:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.8.2.2.ebuild,v 1.4 2011/04/21 19:49:10 radhermit Exp $
+
+EAPI=2
 
 inherit versionator
 
@@ -18,10 +20,11 @@ KEYWORDS="amd64 ppc x86"
 IUSE="examples mp3 themes vorbis"
 
 RDEPEND="media-sound/sox
-	>media-gfx/imagemagick-5.5.4
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+	media-video/mjpegtools
 	>media-video/dvdauthor-0.6.11
 	virtual/cdrtools
-	>=media-video/ffmpeg-0.4.9
+	virtual/ffmpeg
 	app-cdr/dvd+rw-tools
 	mp3? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )

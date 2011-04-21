@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvd-slideshow
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.19 2008/12/21 14:52:16 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.20 2011/04/21 19:49:10 radhermit Exp $
+
+  21 Apr 2011; Tim Harder <radhermit@gentoo.org> dvd-slideshow-0.8.2.2.ebuild:
+  Allow graphicsmagick to statisfy imagemagick dependency (bug #314335), add
+  media-video/mjpegtools dependency (bug #340779), and use virtual/ffmpeg (bug
+  #362125).
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> dvd-slideshow-0.8.2.2.ebuild:
   Stable on ppc wrt bug 250664
