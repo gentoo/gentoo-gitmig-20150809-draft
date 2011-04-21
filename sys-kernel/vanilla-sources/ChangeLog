@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.864 2011/04/13 20:12:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.865 2011/04/21 12:55:34 mpagano Exp $
+
+*vanilla-sources-2.6.38.3 (21 Apr 2011)
+*vanilla-sources-2.6.32.38 (21 Apr 2011)
+
+  21 Apr 2011; Mike Pagano <mpagano@gentoo.org>
+  +vanilla-sources-2.6.32.38.ebuild, -vanilla-sources-2.6.35.9.ebuild,
+  -vanilla-sources-2.6.35.10.ebuild, -vanilla-sources-2.6.36.2.ebuild,
+  -vanilla-sources-2.6.36.3.ebuild, -vanilla-sources-2.6.37.2.ebuild,
+  -vanilla-sources-2.6.37.3.ebuild, vanilla-sources-2.6.38.ebuild,
+  vanilla-sources-2.6.38.1.ebuild, vanilla-sources-2.6.38.2.ebuild,
+  +vanilla-sources-2.6.38.3.ebuild:
+  Rebuild manifest for deblob script. Linux patch 2.6.38.3. Remove old versions
 
   13 Apr 2011; Raúl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.37.2.ebuild, vanilla-sources-2.6.37.3.ebuild,
