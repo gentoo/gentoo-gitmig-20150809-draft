@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/windowmaker
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.119 2010/11/08 15:01:38 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.120 2011/04/21 14:26:48 voyageur Exp $
+
+*windowmaker-0.92.0-r11 (21 Apr 2011)
+
+  21 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  +windowmaker-0.92.0-r11.ebuild:
+  Use FHS layout for WPrefs, to keep in sync with the new default gnustep
+  layout
 
   08 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org>
   -files/0.91.0/wlist-0.9x.patch,
