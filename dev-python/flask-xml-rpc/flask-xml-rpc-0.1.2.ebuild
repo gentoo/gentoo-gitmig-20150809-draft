@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-xml-rpc/flask-xml-rpc-0.1.2.ebuild,v 1.1 2011/04/20 07:58:09 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-xml-rpc/flask-xml-rpc-0.1.2.ebuild,v 1.2 2011/04/21 01:30:18 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ MY_PN="Flask-XML-RPC"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="XML-RPC support for Flask applications."
-HOMEPAGE="http://packages.python.org/Flask-XML-RPC/"
+HOMEPAGE="http://packages.python.org/Flask-XML-RPC/ http://pypi.python.org/pypi/Flask-XML-RPC"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
