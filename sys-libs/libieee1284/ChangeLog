@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libieee1284
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.27 2011/04/20 21:46:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.28 2011/04/21 10:41:59 flameeyes Exp $
+
+  21 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  libieee1284-0.2.11-r2.ebuild:
+  Fix thinko.
 
 *libieee1284-0.2.11-r2 (20 Apr 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.11-r2.ebuild,v 1.1 2011/04/20 21:46:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/libieee1284-0.2.11-r2.ebuild,v 1.2 2011/04/21 10:41:59 flameeyes Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ pkg_setup() {
 
 src_configure() {
 	econf \
-		--enable-shared $(use_enable static static-libs) \
+		--enable-shared $(use_enable static-libs static) \
 		$(use_with python) \
 		--disable-dependency-tracking
 }
