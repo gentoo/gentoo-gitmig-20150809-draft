@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-harness/netbeans-harness-7.0_rc2.ebuild,v 1.1 2011/04/08 22:42:36 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-harness/netbeans-harness-7.0.ebuild,v 1.1 2011/04/21 10:30:47 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -9,7 +9,7 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Netbeans Harness"
 HOMEPAGE="http://netbeans.org/features/platform/"
 SLOT="7.0"
-SOURCE_URL="http://dlc.sun.com.edgesuite.net/netbeans/7.0/rc2/zip/netbeans-7.0rc2-201104070802-src.zip"
+SOURCE_URL="http://download.netbeans.org/netbeans/7.0/final/zip/netbeans-7.0-201104080000-src.zip"
 SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-${SLOT}-build.xml-r1.patch.bz2
 	http://hg.netbeans.org/binaries/A806D99716C5E9441BFD8B401176FDDEFC673022-bindex-2.2.jar
