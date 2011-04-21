@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.112 2011/03/25 17:51:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.113 2011/04/21 02:45:29 jer Exp $
+
+  21 Apr 2011; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=video_cards_nouveau (bug #364027). Combine all video_cards_ masks
+  into one entry.
 
   25 Mar 2011; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=webm.
