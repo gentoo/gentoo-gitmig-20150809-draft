@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.5 2011/04/11 11:38:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.6 2011/04/21 22:10:21 dilfridge Exp $
+
+*kdepim-l10n-4.4.11.1 (21 Apr 2011)
+
+  21 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.4.11.1.ebuild:
+  Version bump
 
   11 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   kdepim-l10n-4.4.10.ebuild:
