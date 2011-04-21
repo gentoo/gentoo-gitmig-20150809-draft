@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.11 2011/04/20 18:08:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.12 2011/04/21 09:24:25 grobian Exp $
 
 EAPI="3"
 inherit subversion eutils multilib toolchain-funcs
@@ -169,7 +169,7 @@ src_install() {
 		for f in "${ED}"/usr/bin/* "${ED}"/usr/lib/${PN}/libLTO.dylib ; do
 			ebegin "fixing install_name reference to libLLVM-${PV}.dylib of ${f##*/}"
 			install_name_tool \
-				-change "${S}"/Release/lib/libLLVM-${PV}.dylib \
+				-change "@executable_path/../lib/libLLVM-${PV}.dylib" \
 					"${EPREFIX}"/usr/lib/${PN}/libLLVM-${PV}.dylib \
 				"${f}"
 			eend $?
