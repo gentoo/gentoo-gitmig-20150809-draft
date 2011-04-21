@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.90 2011/04/07 18:47:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.91 2011/04/21 09:47:06 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -9,6 +9,13 @@
 # NOTE: Please add your entry at the top!
 #
 
+
+# Fabian Groffen <grobian@gentoo.org> (21 Apr 2011)
+# Fails to link anything, since it crt1.o cannot be found.  They haven't
+# got linking right yet, numerous people on the web report the same
+# problem.  Let's just wait for the moment.
+~sys-devel/llvm-2.9
+~sys-devel/clang-2.9
 
 # Fabian Groffen <grobian@gentoo.org> (03 Feb 2011)
 # Diego's experimental flex for fixing from autoconf problem, breaks

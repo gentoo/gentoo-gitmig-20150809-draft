@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.265 2011/04/20 18:25:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.266 2011/04/21 09:47:06 grobian Exp $
+
+  21 Apr 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask LLVM/clang 2.9, it's broken for Prefix by design at the moment
 
   20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -aix/virtuals,
   -bsd/freebsd/virtuals, -bsd/netbsd/virtuals, -bsd/openbsd/virtuals,
