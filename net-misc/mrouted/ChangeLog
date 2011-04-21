@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mrouted
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.11 2010/09/18 02:22:42 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.12 2011/04/21 13:59:51 jer Exp $
+
+*mrouted-3.9.5 (21 Apr 2011)
+
+  21 Apr 2011; Jeroen Roovers <jer@gentoo.org> +mrouted-3.9.5.ebuild:
+  Version bump.
 
 *mrouted-3.9.2 (18 Sep 2010)
 
