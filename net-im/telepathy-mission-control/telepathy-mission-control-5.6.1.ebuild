@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.1.ebuild,v 1.7 2011/03/22 20:08:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.6.1.ebuild,v 1.8 2011/04/21 11:48:26 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -18,7 +18,6 @@ IUSE="gnome-keyring test"
 
 RDEPEND=">=net-libs/telepathy-glib-0.11.9
 	>=dev-libs/dbus-glib-0.82
-	>=gnome-base/gconf-2
 	gnome-keyring? ( || ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
