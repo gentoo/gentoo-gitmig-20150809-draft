@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.45 2011/04/06 14:22:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.46 2011/04/21 22:32:33 dilfridge Exp $
 
 inherit versionator
 
@@ -131,7 +131,15 @@ buildsycoca() {
 		[[ ${KDEDIR} == /usr ]] && DIRS=${EROOT}usr || DIRS="${EROOT}usr ${EROOT}${KDEDIR}"
 		for y in ${DIRS}; do
 			[[ -d "${y}/${x}" ]] || break # nothing to do if directory does not exist
-			if [[ $(stat --format=%a "${y}/${x}") != 755 ]]; then
+			# fixes Bug 318237
+			if use userland_BSD ; then
+				[[ $(stat -f %p "${y}/${x}") != 40755 ]]
+				local stat_rtn="$?"
+			else
+				[[ $(stat --format=%a "${y}/${x}") != 755 ]]
+				local stat_rtn=$?
+			fi
+			if [[ $stat_rtn != 1 ]] ; then
 				ewarn "QA Notice:"
 				ewarn "Package ${PN} is breaking ${y}/${x} permissions."
 				ewarn "Please report this issue to gentoo bugzilla."
