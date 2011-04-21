@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12717 2011/04/21 20:05:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12718 2011/04/21 22:10:02 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -41,6 +41,7 @@
 ~kde-base/kaddressbook-4.4.11.1
 ~kde-base/kalarm-4.4.11.1
 ~kde-base/kdepim-icons-4.4.11.1
+~kde-base/kdepim-l10n-4.4.11.1
 ~kde-base/kdepim-kresources-4.4.11.1
 ~kde-base/kdepim-meta-4.4.11.1
 ~kde-base/kdepim-strigi-analyzer-4.4.11.1
