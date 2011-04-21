@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine-bin/trine-bin-1.08.ebuild,v 1.2 2011/04/16 22:32:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine-bin/trine-bin-1.08.ebuild,v 1.3 2011/04/21 08:52:57 vapier Exp $
 
 # these are ELFs that include a ZIP (504b0304) appended to it
 #   dd if=Trine.64.run of=Trine.64.zip ibs=$((0x342a8)) skip=1
@@ -22,7 +22,9 @@ RESTRICT="fetch strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=sys-libs/glibc-2.4
-	>=sys-devel/gcc-4.3.0"
+	>=sys-devel/gcc-4.3.0
+	dev-libs/libx86
+	gnome-base/libglade"
 
 S=${WORKDIR}
 
