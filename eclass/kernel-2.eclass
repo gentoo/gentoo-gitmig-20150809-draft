@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.249 2011/04/14 06:10:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.250 2011/04/21 12:34:39 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -332,11 +332,11 @@ if [[ ${ETYPE} == sources ]]; then
 
 	# Bug #266157, deblob for libre support
 	if [[ -z ${K_PREDEBLOBBED} ]] ; then
-		if [[ -z ${K_DEBLOB_AVAILABLE} ]] ; then
-			kernel_is ge 2 6 27 && \
+		# Bug #359865, force a call to detect_version if needed
+		kernel_is ge 2 6 27 && \
+			[[ -z "${K_DEBLOB_AVAILABLE}" ]] && \
 				kernel_is le 2 6 ${DEBLOB_MAX_VERSION} && \
-				K_DEBLOB_AVAILABLE=1
-		fi
+					K_DEBLOB_AVAILABLE=1
 		if [[ ${K_DEBLOB_AVAILABLE} == "1" ]] ; then
 			IUSE="${IUSE} deblob"
 			# Reflect that kernels contain firmware blobs unless otherwise
