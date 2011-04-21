@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.28 2011/04/18 14:51:26 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.29 2011/04/21 13:26:10 tomka Exp $
+
+  21 Apr 2011; Thomas Kahle <tomka@gentoo.org> protobuf-2.4.0a.ebuild:
+  x86 stable per bug 363403
 
   18 Apr 2011; Thomas Kahle <tomka@gentoo.org> protobuf-2.4.0a.ebuild:
   Undo last commit b/c of bug 363911
