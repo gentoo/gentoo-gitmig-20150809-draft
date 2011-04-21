@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.121 2011/04/20 11:40:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.122 2011/04/21 07:19:54 tomka Exp $
+
+  21 Apr 2011; Thomas Kahle <tomka@gentoo.org> rdesktop-1.7.0.ebuild:
+  x86 stable per bug 364191
 
 *rdesktop-1.7.0 (20 Apr 2011)
 
