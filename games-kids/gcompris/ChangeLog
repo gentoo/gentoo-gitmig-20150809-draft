@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.62 2011/04/14 20:35:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.63 2011/04/21 10:25:48 tomka Exp $
+
+  21 Apr 2011; Thomas Kahle <tomka@gentoo.org> gcompris-9.6.ebuild:
+  x86 stable per bug 360727
 
 *gcompris-9.6.1 (14 Apr 2011)
 
