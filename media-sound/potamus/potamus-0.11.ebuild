@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/potamus-0.11.ebuild,v 1.1 2010/06/12 18:47:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/potamus-0.11.ebuild,v 1.2 2011/04/21 19:36:14 radhermit Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2:2
+RDEPEND="x11-libs/gtk+:2
 	>=gnome-base/libglade-2
 	media-libs/libao
 	media-libs/libsamplerate
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2:2
 	media-libs/libmad
 	media-libs/audiofile
 	media-libs/libmodplug
-	>=media-video/ffmpeg-0.5
+	virtual/ffmpeg
 	media-libs/flac
 	media-sound/jack-audio-connection-kit"
 DEPEND="${RDEPEND}

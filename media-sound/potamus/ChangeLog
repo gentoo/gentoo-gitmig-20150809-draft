@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/potamus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.8 2010/06/12 18:47:43 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.9 2011/04/21 19:36:14 radhermit Exp $
+
+*potamus-0.12 (21 Apr 2011)
+
+  21 Apr 2011; Tim Harder <radhermit@gentoo.org> -potamus-0.10.ebuild,
+  potamus-0.11.ebuild, +potamus-0.12.ebuild:
+  Version bump and remove old. Use virtual/ffmpeg (bug #362113) and simplify
+  gtk+ dependency.
 
 *potamus-0.11 (12 Jun 2010)
 
