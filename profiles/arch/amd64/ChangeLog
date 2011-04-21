@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.125 2011/04/15 20:27:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.126 2011/04/21 10:30:15 flameeyes Exp $
+
+  20 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.use.force:
+  Force minimal USE flag for new package to commit.
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> no-multilib/package.mask,
   no-multilib/package.use.mask, package.use.mask:

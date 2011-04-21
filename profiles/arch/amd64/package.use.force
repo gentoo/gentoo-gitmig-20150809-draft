@@ -1,6 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.force,v 1.5 2010/07/17 18:04:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.force,v 1.6 2011/04/21 10:30:15 flameeyes Exp $
+
+# Diego Elio Pettenò <flameeyes@gmail.com> (21 Apr 2011)
+# The plugin is 32-bit only (and I'm not even sure if it works with
+# modern iscan); make sure it only installs the firmware for amd64!
+media-gfx/iscan-plugin-gt-f500 minimal
 
 # <blubb@gentoo.org> (23 Oct 2006)
 # upstream forces sse2 on regardless of what the use flag is
