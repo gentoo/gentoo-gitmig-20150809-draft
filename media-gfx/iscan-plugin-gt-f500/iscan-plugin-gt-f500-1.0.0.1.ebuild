@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f500/iscan-plugin-gt-f500-1.0.0.1.ebuild,v 1.1 2011/04/20 23:06:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f500/iscan-plugin-gt-f500-1.0.0.1.ebuild,v 1.2 2011/04/21 14:28:16 flameeyes Exp $
 
 EAPI="4"
 
@@ -33,38 +33,43 @@ src_install() {
 
 	dodoc "usr/share/doc/${MY_P}/"*
 
-	if ! use minimal; then
-		# install scanner plugins
-		exeinto "/usr/$(get_libdir)/iscan"
-		doexe "${WORKDIR}/usr/$(get_libdir)/iscan/"*
-	fi
+	use minimal && return
+	# install scanner plugins
+	exeinto "/usr/$(get_libdir)/iscan"
+	doexe "${WORKDIR}/usr/$(get_libdir)/iscan/"*
+}
+
+pkg_setup() {
+	basecmd="iscan-registry --COMMAND interpreter usb 0x04b8 0x0121 '/usr/$(get_libdir)/iscan/libesint41.so.2 /usr/share/iscan/esfw41.bin'"
 }
 
 pkg_postinst() {
 	elog
-	elog "Firmware file esfw8b.bin for Epson Perfection 2480/2580 PHOTO"
+	elog "Firmware file esfw41.bin for Epson Perfection 2480/2580 PHOTO"
 	elog "has been installed in /usr/share/iscan."
 	elog
 	use minimal && return
+	[[ -n ${REPLACING_VERSIONS} ]] && return
 
-	# Needed for scaner to work properly.
+	# Needed for scanner to work properly.
 	if [[ ${ROOT} == "/" ]]; then
-		iscan-registry --add interpreter usb 0x04b8 0x0121 "/usr/$(get_libdir)/iscan/libesint41.so.2 /usr/share/iscan/esfw41.bin"
+		eval ${basecmd/COMMAND/add}
 	else
 		ewarn "Unable to register the plugin and firmware when installing outside of /."
 		ewarn "execute the following command yourself:"
-		ewarn "iscan-registry --add interpreter usb 0x04b8 0x0121 '/usr/$(get_libdir)/iscan/libesint41.so.2 /usr/share/iscan/esfw41.bin'"
+		ewarn "${basecmd/COMMAND/add}"
 	fi
 }
 
 pkg_prerm() {
 	use minimal && return
+	[[ -n ${REPLACED_BY_VERSION} ]] && return
 
 	if [[ ${ROOT} == "/" ]]; then
-		iscan-registry --remove interpreter usb 0x04b8 0x0121 "/usr/$(get_libdir)/iscan/libesint41.so.2 /usr/share/iscan/esfw41.bin"
+		eval ${basecmd/COMMAND/remove}
 	else
-		ewarn "Unable to register the plugin and firmware when installing outside of /."
+		ewarn "Unable to de-register the plugin and firmware when installing outside of /."
 		ewarn "execute the following command yourself:"
-		ewarn "iscan-registry --remove interpreter usb 0x04b8 0x0121 '/usr/$(get_libdir)/iscan/libesint41.so.2 /usr/share/iscan/esfw41.bin'"
+		ewarn "${basecmd/COMMAND/remove}"
 	fi
 }
