@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/methane
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.17 2010/10/01 05:00:17 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/ChangeLog,v 1.18 2011/04/21 07:30:41 tupone Exp $
+
+  21 Apr 2011; Tupone Alfredo <tupone@gentoo.org> methane-1.4.8.ebuild,
+  +files/methane-1.4.8-gcc46.patch:
+  Build with gcc-4.6 Bug #362381 by Diego Elio Pettenò
+  Enabling parallell compilation
 
   01 Oct 2010; Tupone Alfredo <tupone@gentoo.org> methane-1.4.8.ebuild,
   +files/methane-1.4.8-ldflags.patch:
