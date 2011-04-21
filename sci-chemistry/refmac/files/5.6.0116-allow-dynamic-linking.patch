@@ -1,19 +1,22 @@
+ makefile_refmac.inc1 |  215 ++++++++++++++++++++++++--------------------------
+ 1 files changed, 104 insertions(+), 111 deletions(-)
+
 diff --git a/makefile_refmac.inc1 b/makefile_refmac.inc1
-index 80b199e..d3ab4c8 100644
+index 0f8bd63..e59fbfb 100644
 --- a/makefile_refmac.inc1
 +++ b/makefile_refmac.inc1
-@@ -93,9 +93,7 @@ messy_pdb.o                 \
- bridge.o                    \
+@@ -96,9 +96,7 @@ bridge.o                    \
  i0.o                        \
  i1.o                        \
--chbevl.o                    \
+ chbevl.o                    \
+-make_unix_ccp4.o            \
 -$(LLIBCIF)                  \
 -$(LLIBLAPACK)
-+chbevl.o
++make_unix_ccp4.o
  
  
  SUBL =                      \
-@@ -130,9 +128,7 @@ cell_symm_subrs.o           \
+@@ -133,9 +131,7 @@ cell_symm_subrs.o           \
  iheap_sort.o                \
  linalgebra.o                \
  math_refmac.o               \
@@ -24,7 +27,7 @@ index 80b199e..d3ab4c8 100644
  
  SUB_FREE  =                 \
  freer_twin.o                 \
-@@ -142,9 +138,7 @@ subnumrec.o                 \
+@@ -145,9 +141,7 @@ subnumrec.o                 \
  libT.o                      \
  iheap_sort.o                \
  cell_symm_subrs.o           \
@@ -35,13 +38,18 @@ index 80b199e..d3ab4c8 100644
  
  SUB_HEADER = header2matr.o
  #--------------------------------------------------------------------------------
-@@ -179,32 +173,32 @@ rharvest_mod.o:  rharvest_mod.f90
+@@ -185,41 +179,41 @@ rharvest_mod.o:  rharvest_mod.f90
  twin77mod.o:  twin77mod.f
  	$(FC) $(FFLAGS) -c twin77mod.f
  
+-gibbs_gm_sampler.o:  linalgebra_f90.f90 gibbs_gm_sampler.f90
+-	$(FC) $(FFLAGS) -c linalgebra_f90.f90 gibbs_gm_sampler.f90
++gibbs_gm_sampler.o:  linalgebra_f90.o gibbs_gm_sampler.f90
++	$(FC) $(FFLAGS) -c gibbs_gm_sampler.f90
+ 
 -max_with_twins.o: restr_files.f90 max_with_twins.f weights.f90 agreem.f90
 -	$(FC) $(FFLAGS) -c restr_files.f90 weights.f90 agreem.f90 max_with_twins.f
-+max_with_twins.o: restr_files.o max_with_twins.f
++max_with_twins.o: restr_files.o max_with_twins.f weights.o agreem.o
 +	$(FC) $(FFLAGS) -c max_with_twins.f
  
 -merohedr_twin.o: restr_files.f90 merohedr_twin.f
@@ -51,12 +59,12 @@ index 80b199e..d3ab4c8 100644
  
 -ls_scaling_twin_save.o: restr_files.f90 ls_scaling_twin_save.f weights.f90 agreem.f90
 -	$(FC) $(FFLAGS) -c restr_files.f90 weights.f90 agreem.f90 ls_scaling_twin_save.f
-+ls_scaling_twin_save.o: restr_files.o ls_scaling_twin_save.f
++ls_scaling_twin_save.o: restr_files.o ls_scaling_twin_save.f weights.o agreem.o
 +	$(FC) $(FFLAGS) -c ls_scaling_twin_save.f
  
 -ml_params_refine.o: restr_files.f90 ml_params_refine.f weights.f90 agreem.f90
 -	$(FC) $(FFLAGS) -c restr_files.f90 weights.f90 agreem.f90 ml_params_refine.f
-+ml_params_refine.o: restr_files.o ml_params_refine.f
++ml_params_refine.o: restr_files.o ml_params_refine.f weights.o agreem.o
 +	$(FC) $(FFLAGS) -c ml_params_refine.f
  
 -optimise_solvent_all.o: optimise_solvent_all.f90 agreem.f90
@@ -64,9 +72,9 @@ index 80b199e..d3ab4c8 100644
 +optimise_solvent_all.o: optimise_solvent_all.f90 agreem.o
 +	$(FC) $(FFLAGS) -c optimise_solvent_all.f90
  
--ncs_rest.o: restr_files.f90 ncs_ncs_generate.f90 ncs_rest.f weights.f90
--	$(FC) $(FFLAGS) -c restr_files.f90 ncs_ncs_generate.f90 weights.f90 ncs_rest.f
-+ncs_rest.o: restr_files.o ncs_ncs_generate.o ncs_rest.f weights.o
+-ncs_rest.o: ncs_rest_mod.f90 restr_files.f90 ncs_ncs_generate.f90 ncs_rest.f weights.f90
+-	$(FC) $(FFLAGS) -c ncs_rest_mod.f90 restr_files.f90 ncs_ncs_generate.f90 weights.f90 ncs_rest.f
++ncs_rest.o: ncs_rest_mod.o restr_files.o ncs_ncs_generate.o ncs_rest.f weights.o
 +	$(FC) $(FFLAGS) -c ncs_rest.f
  
 -ncs_ncs_generate.o: ncs_ncs_generate.f90 align_refmac.f90
@@ -74,76 +82,84 @@ index 80b199e..d3ab4c8 100644
 +ncs_ncs_generate.o: ncs_ncs_generate.f90 align_refmac.o
 +	$(FC) $(FFLAGS) -c ncs_ncs_generate.f90
  
--lsq_exp2.o: restr_files.f90 dist_routines.f90 ncs_simil.f90 ridge.f90 local_tls.f90 lsq_exp2.f weights.f90 rharvest_mod.f90
--	$(FC) $(FFLAGS) -c restr_files.f90 dist_routines.f90 ncs_simil.f90 ridge.f90 local_tls.f90  lsq_exp2.f weights.f90 rharvest_mod.f90
-+lsq_exp2.o: restr_files.o dist_routines.o ncs_simil.o ridge.o local_tls.o lsq_exp2.f weights.o rharvest_mod.o
+-lsq_exp2.o: ncs_rest_mod.f90 restr_files.f90 dist_routines.f90 ncs_simil.f90 ridge.f90 local_tls.f90 lsq_exp2.f weights.f90 rharvest_mod.f90
+-	$(FC) $(FFLAGS) -c ncs_rest_mod.f90 restr_files.f90 dist_routines.f90 ncs_simil.f90 ridge.f90 local_tls.f90  lsq_exp2.f weights.f90 rharvest_mod.f90
++lsq_exp2.o: ncs_rest_mod.o restr_files.o dist_routines.o ncs_simil.o ridge.o local_tls.o lsq_exp2.f weights.o rharvest_mod.o
 +	$(FC) $(FFLAGS) -c lsq_exp2.f
  
--vdw_and_contacts.o: vdw_and_contacts.f local_tls.f90 ridge.f90 restr_files.f90 weights.f90 agreem.f90
--	$(FC) $(FFLAGS) -c restr_files.f90 ridge.f90 local_tls.f90 weights.f90 agreem.f90 vdw_and_contacts.f
-+vdw_and_contacts.o: vdw_and_contacts.f local_tls.o ridge.o restr_files.o weights.o agreem.o
+-vdw_and_contacts.o: ncs_rest_mod.f90 vdw_and_contacts.f local_tls.f90 ridge.f90 restr_files.f90 weights.f90 agreem.f90
+-	$(FC) $(FFLAGS) -c ncs_rest_mod.f90 restr_files.f90 ridge.f90 local_tls.f90 weights.f90 agreem.f90 vdw_and_contacts.f
++vdw_and_contacts.o: ncs_rest_mod.o vdw_and_contacts.f local_tls.o ridge.o restr_files.o weights.o agreem.o
 +	$(FC) $(FFLAGS) -c vdw_and_contacts.f
  
  dist_routines.o: dist_routines.f90
  	$(FC) $(FFLAGS) -c dist_routines.f90
-@@ -218,140 +212,137 @@ ridge.o: ridge.f90
+ 
+-ncs_simil.o: ncs_rest_mod.f90 ncs_simil.f90
+-	$(FC) $(FFLAGS) -c ncs_rest_mod.f90 ncs_simil.f90
++ncs_simil.o: ncs_rest_mod.o ncs_simil.f90
++	$(FC) $(FFLAGS) -c ncs_simil.f90
+ 
+ ridge.o: ridge.f90
+ 	$(FC) $(FFLAGS) -c ridge.f90
+@@ -227,140 +221,138 @@ ridge.o: ridge.f90
  align_refmac.o: align_refmac.f90
  	$(FC) $(FFLAGS) -c align_refmac.f90
  
 -rigid_allocate.o: restr_files.f90 rigid_allocate.f agreem.f90
 -	$(FC) $(FFLAGS) -c restr_files.f90 agreem.f90 rigid_allocate.f
--
--tls_allocate.o: restr_files.f90 tls_allocate.f weights.f90 agreem.f90
--	$(FC) $(FFLAGS) -c restr_files.f90 weights.f90 agreem.f90 tls_allocate.f
 +rigid_allocate.o: restr_files.o rigid_allocate.f agreem.o
 +	$(FC) $(FFLAGS) -c rigid_allocate.f
  
--hkon_secder_tch.o: hkon_secder_tch.f local_tls.f90 ncs_simil.f90 optimise_solvent_all.f90 \
--                   restr_files.f90 weights.f90 agreem.f90 rharvest.f
--	$(FC) $(FFLAGS) -c restr_files.f90 optimise_solvent_all.f90 ncs_simil.f90 local_tls.f90 \
--	                   hkon_secder_tch.f weights.f90 agreem.f90 rharvest.f
+-tls_allocate.o: restr_files.f90 tls_allocate.f weights.f90 agreem.f90
+-	$(FC) $(FFLAGS) -c restr_files.f90 weights.f90 agreem.f90 tls_allocate.f
 +tls_allocate.o: restr_files.o tls_allocate.f weights.o agreem.o
 +	$(FC) $(FFLAGS) -c tls_allocate.f
  
--oppro_allocate.o: oppro_allocate.f filter_params.f90 optimise_solvent_all.f90 restr_files.f90 weights.f90
--	$(FC) $(FFLAGS) -c restr_files.f90 optimise_solvent_all.f90 filter_params.f90 weights.f90 oppro_allocate.f
-+hkon_secder_tch.o: hkon_secder_tch.f local_tls.o ncs_simil.o optimise_solvent_all.o \
-+                   restr_files.o weights.o agreem.o rharvest.f
+-hkon_secder_tch.o: ridge.f90 gibbs_gm_sampler.f90 ncs_rest_mod.f90 hkon_secder_tch.f local_tls.f90 ncs_simil.f90 optimise_solvent_all.f90 \
+-                   restr_files.f90 weights.f90 agreem.f90 rharvest_mod.f90
+-	$(FC) $(FFLAGS) -c ridge.f90 gibbs_gm_sampler.f90 ncs_rest_mod.f90 restr_files.f90 optimise_solvent_all.f90 ncs_simil.f90 local_tls.f90 \
+-	                   hkon_secder_tch.f weights.f90 agreem.f90 rharvest_mod.f90
++hkon_secder_tch.o: ridge.o gibbs_gm_sampler.o ncs_rest_mod.o hkon_secder_tch.f local_tls.o ncs_simil.o optimise_solvent_all.o \
++                   restr_files.o weights.o agreem.o rharvest_mod.o
 +	$(FC) $(FFLAGS) -c hkon_secder_tch.f
+ 
+-oppro_allocate.o: ncs_rest_mod.f90 oppro_allocate.f filter_params.f90 optimise_solvent_all.f90 restr_files.f90 weights.f90
+-	$(FC) $(FFLAGS) -c ncs_rest_mod.f90 restr_files.f90 optimise_solvent_all.f90 filter_params.f90 weights.f90 oppro_allocate.f
++oppro_allocate.o: ncs_rest_mod.o oppro_allocate.f filter_params.o optimise_solvent_all.o restr_files.o weights.o
++	$(FC) $(FFLAGS) -c oppro_allocate.f
  
 -read_extra_restraints.o: restr_files.f90 read_extra_restraints.f weights.f90
 -	$(FC) $(FFLAGS) -c restr_files.f90 weights.f90 read_extra_restraints.f
-+oppro_allocate.o: oppro_allocate.f filter_params.o optimise_solvent_all.o restr_files.o weights.o
-+	$(FC) $(FFLAGS) -c oppro_allocate.f
- 
--coords.o: coords.f90 atomf77mod.f
--	$(FC) $(FFLAGS) -c atomf77mod.f coords.f90
 +read_extra_restraints.o: restr_files.o read_extra_restraints.f weights.o
 +	$(FC) $(FFLAGS) -c read_extra_restraints.f
  
+-coords.o: coords.f90 atomf77mod.f
+-	$(FC) $(FFLAGS) -c atomf77mod.f coords.f90
 +coords.o: coords.f90 atomf77mod.o
 +	$(FC) $(FFLAGS) -c coords.f90
  
+ 
 -ls_scaling_double.o: ls_scaling_double.f weights.f90 agreem.f90
 -	$(FC) $(FFLAGS) -c ls_scaling_double.f weights.f90 agreem.f90
- 
--fast_hessian_tabulation.o: fast_hessian_tabulation.f weights.f90 
--	$(FC) $(FFLAGS) -c fast_hessian_tabulation.f weights.f90
 +ls_scaling_double.o: ls_scaling_double.f weights.o agreem.o
 +	$(FC) $(FFLAGS) -c ls_scaling_double.f
  
--calc_stats_twin.o: calc_stats_twin.f weights.f90 agreem.f90 rharvest_mod.f90
--	$(FC) $(FFLAGS) -c calc_stats_twin.f weights.f90 agreem.f90 rharvest_mod.f90
+-fast_hessian_tabulation.o: fast_hessian_tabulation.f weights.f90 
+-	$(FC) $(FFLAGS) -c fast_hessian_tabulation.f weights.f90
 +fast_hessian_tabulation.o: fast_hessian_tabulation.f weights.o
 +	$(FC) $(FFLAGS) -c fast_hessian_tabulation.f
  
--refpre_twin.o: refpre_twin.f coords.f90 automorphism.f90 restr_files.f90 weights.f90 agreem.f90 rharvest_mod.f90
--	$(FC) $(FFLAGS) -c restr_files.f90 coords.f90 automorphism.f90 weights.f90 agreem.f90 rharvest_mod.f90 refpre_twin.f
+-calc_stats_twin.o: calc_stats_twin.f weights.f90 agreem.f90 rharvest_mod.f90
+-	$(FC) $(FFLAGS) -c calc_stats_twin.f weights.f90 agreem.f90 rharvest_mod.f90
 +calc_stats_twin.o: calc_stats_twin.f weights.o agreem.o rharvest_mod.o
 +	$(FC) $(FFLAGS) -c calc_stats_twin.f
  
+-refpre_twin.o: refpre_twin.f coords.f90 automorphism.f90 restr_files.f90 weights.f90 agreem.f90 rharvest_mod.f90
+-	$(FC) $(FFLAGS) -c restr_files.f90 coords.f90 automorphism.f90 weights.f90 agreem.f90 rharvest_mod.f90 refpre_twin.f
 +refpre_twin.o: refpre_twin.f coords.o automorphism.o restr_files.o weights.o agreem.o rharvest_mod.o
 +	$(FC) $(FFLAGS) -c refpre_twin.f
+ 
  
 -decide_twin_opers_0.o: restr_files.f90 decide_twin_opers_0.f
 -	$(FC) $(FFLAGS) -c restr_files.f90 decide_twin_opers_0.f
@@ -161,11 +177,11 @@ index 80b199e..d3ab4c8 100644
  filter_params.o: filter_params.f90
  	$(FC) $(FFLAGS) -c filter_params.f90
  
--rcard_tor1.o: rcard_tor1.f filter_params.f90 local_tls.f90 ridge.f90 optimise_solvent_all.f90 restr_files.f90 weights.f90 \
+-rcard_tor1.o: ncs_rest_mod.f90 rcard_tor1.f filter_params.f90 local_tls.f90 ridge.f90 optimise_solvent_all.f90 restr_files.f90 weights.f90 \
 -              agreem.f90 rharvest_mod.f90 ncs_constr.f90
--	$(FC) $(FFLAGS) -c restr_files.f90 optimise_solvent_all.f90 filter_params.f90 local_tls.f90 ridge.f90 weights.f90 \
+-	$(FC) $(FFLAGS) -c ncs_rest_mod.f90 restr_files.f90 optimise_solvent_all.f90 filter_params.f90 local_tls.f90 ridge.f90 weights.f90 \
 -	                   agreem.f90 rharvest_mod.f90 ncs_constr.f90 rcard_tor1.f
-+rcard_tor1.o: rcard_tor1.f filter_params.o local_tls.o ridge.o optimise_solvent_all.o restr_files.o weights.o \
++rcard_tor1.o: ncs_rest_mod.o rcard_tor1.f filter_params.o local_tls.o ridge.o optimise_solvent_all.o restr_files.o weights.o \
 +              agreem.o rharvest_mod.o ncs_constr.o
 +	$(FC) $(FFLAGS) -c rcard_tor1.f
  
@@ -182,9 +198,9 @@ index 80b199e..d3ab4c8 100644
  linalgebra_f90.o: linalgebra_f90.f90 
  	$(FC) $(FFLAGS) -c linalgebra_f90.f90
  
--make_refmac_dummy.o: make_refmac_dummy.f optimise_solvent_all.f90 weights.f90 agreem.f90 rharvest_mod.f90
--	$(FC) $(FFLAGS) -c weights.f90 agreem.f90 rharvest_mod.f90 optimise_solvent_all.f90 make_refmac_dummy.f
-+make_refmac_dummy.o: make_refmac_dummy.f optimise_solvent_all.o weights.o agreem.o rharvest_mod.o
+-make_refmac_dummy.o: restr_files.f90 ncs_rest_mod.f90 make_refmac_dummy.f optimise_solvent_all.f90 weights.f90 agreem.f90 rharvest_mod.f90
+-	$(FC) $(FFLAGS) -c restr_files.f90 ncs_rest_mod.f90 weights.f90 agreem.f90 rharvest_mod.f90 optimise_solvent_all.f90 make_refmac_dummy.f
++make_refmac_dummy.o: restr_files.o ncs_rest_mod.o make_refmac_dummy.f optimise_solvent_all.o weights.o agreem.o rharvest_mod.o
 +	$(FC) $(FFLAGS) -c make_refmac_dummy.f
  
 -ml_scaling_double.o: ml_scaling_double.f optimise_solvent_all.f90 weights.f90 agreem.f90 rharvest_mod.f90
@@ -197,10 +213,10 @@ index 80b199e..d3ab4c8 100644
 +refall_twin.o: refall_twin.f optimise_solvent_all.o restr_files.f90 weights.o agreem.o rharvest_mod.o
 +	$(FC) $(FFLAGS) -c refall_twin.f
  
--rharvest.o: rharvest.f optimise_solvent_all.f90 weights.f90 agreem.f90 rharvest_mod.f90
--	$(FC) $(FFLAGS) -c optimise_solvent_all.f90  weights.f90 agreem.f90 rharvest_mod.f90 rharvest.f
-+rharvest.o: rharvest.f optimise_solvent_all.o weights.o agreem.o rharvest_mod.o
-+	$(FC) $(FFLAGS) -c rharvest.f
+-rharvest_subr.o: ncs_rest_mod.f90 rharvest_subr.f optimise_solvent_all.f90 weights.f90 agreem.f90 rharvest_mod.f90
+-	$(FC) $(FFLAGS) -c ncs_rest_mod.f90 optimise_solvent_all.f90  weights.f90 agreem.f90 rharvest_mod.f90 rharvest_subr.f
++rharvest_subr.o: ncs_rest_mod.o rharvest_subr.f optimise_solvent_all.o weights.o agreem.o rharvest_mod.o
++	$(FC) $(FFLAGS) -c rharvest_subr.f
  
 -solvent_contr_mask.o: solvent_contr_mask.f optimise_solvent_all.f90 weights.f90 agreem.f90 rharvest_mod.f90 ncs_constr.f90
 -	$(FC) $(FFLAGS) -c optimise_solvent_all.f90 weights.f90 agreem.f90 rharvest_mod.f90 ncs_constr.f90 solvent_contr_mask.f
@@ -256,16 +272,18 @@ index 80b199e..d3ab4c8 100644
 +	$(FC) $(FFLAGS) -c extra_eigen.f
  
 -subvag.o: subvag.f hkl_pack.f90
+-	$(FC) $(FFLAGS) -c hkl_pack.f90 subvag.f
 +subvag.o: subvag.f hkl_pack.o
- 	$(FC) $(FFLAGS) -c hkl_pack.f90 subvag.f
++	$(FC) $(FFLAGS) -c subvag.f
  
 -make_PDB.o: make_PDB.f ncs_constr.f90
 -	$(FC) $(FFLAGS) -c ncs_constr.f90 make_PDB.f
 +make_PDB.o: make_PDB.f ncs_constr.o
 +	$(FC) $(FFLAGS) -c make_PDB.f
  
- make_CIF.o: make_CIF.f ncs_constr.f90
+-make_CIF.o: make_CIF.f ncs_constr.f90
 -	$(FC) $(FFLAGS) -c ncs_constr.f90 make_CIF.f
++make_CIF.o: make_CIF.f ncs_constr.o
 +	$(FC) $(FFLAGS) -c make_CIF.f
  
  refmac:	$(SUBR)
@@ -300,7 +318,7 @@ index 80b199e..d3ab4c8 100644
  
  header2matr.o:	header2matr.f90
  	$(FC) $(FFLAGS) -c header2matr.f90
-@@ -360,16 +351,17 @@ freer_twin.o:	freer_twin.f90
+@@ -369,16 +361,17 @@ freer_twin.o:	freer_twin.f90
  	$(FC) $(FFLAGS) -c  freer_twin.f90
  
  libcheck:	$(SUBL)

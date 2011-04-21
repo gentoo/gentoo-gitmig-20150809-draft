@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.1 2011/01/31 21:14:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.2 2011/04/21 07:08:54 jlec Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ S="${WORKDIR}"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-allow-dynamic-linking.patch
+	"${FILESDIR}"/${PV}-gcc4.6.patch
 	)
 
 src_prepare() {
@@ -46,7 +47,7 @@ src_compile() {
 		FOPTIM="${FFLAGS:- -O2}" \
 		VERSION="" \
 		XFFLAGS="-fno-second-underscore" \
-		LLIBCCP="-lccp4f -lccp4c -lccif -lmmdb -lstdc++" \
+		LLIBCCP="-lccp4f -lccp4c -lccif $(pkg-config --libs mmdb) -lstdc++" \
 		LLIBLAPACK="$(pkg-config --libs lapack blas)" \
 		${PN} libcheck || die
 }
