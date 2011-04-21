@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/ypserv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.48 2010/09/30 21:38:33 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.49 2011/04/21 14:18:40 jer Exp $
+
+*ypserv-2.24 (21 Apr 2011)
+
+  21 Apr 2011; Jeroen Roovers <jer@gentoo.org> +files/rpc.ypxfrd-2.23,
+  ypserv-2.23.ebuild, +ypserv-2.24.ebuild:
+  Version bump. Use pidfile now that the RPC server supports it.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> ypserv-2.22.ebuild:
   stable ppc64, bug 320325
