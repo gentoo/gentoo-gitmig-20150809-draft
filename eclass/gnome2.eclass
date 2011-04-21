@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.94 2011/04/21 21:06:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.95 2011/04/21 21:27:40 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -27,6 +27,12 @@ esac
 # @DESCRIPTION:
 # Extra configure opts passed to econf
 G2CONF=${G2CONF:-""}
+
+# @ECLASS-VARIABLE: GNOME2_LA_PUNT
+# @DESCRIPTION:
+# Should we delete all the .la files?
+# NOT to be used without due consideration.
+GNOME2_LA_PUNT=${GNOME2_LA_PUNT:-"no"}
 
 # @ECLASS-VARIABLE: ELTCONF
 # @DEFAULT-UNSET
@@ -128,7 +134,7 @@ gnome2_src_compile() {
 # @FUNCTION: gnome2_src_install
 # @DESCRIPTION:
 # Gnome specific install. Handles typical GConf and scrollkeeper setup
-# in packages.
+# in packages and removal of .la files if requested
 gnome2_src_install() {
 	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
 	# if this is not present, scrollkeeper-update may segfault and
@@ -165,6 +171,13 @@ gnome2_src_install() {
 
 	# Make sure this one doesn't get in the portage db
 	rm -fr "${ED}/usr/share/applications/mimeinfo.cache"
+
+	# Delete all .la files
+	if [[ "${GNOME2_LA_PUNT}" != "no" ]]; then
+		ebegin "Removing .la files"
+		find "${ED}" -name '*.la' -delete || die "la file removal failed"
+		eend
+	fi
 }
 
 # @FUNCTION: gnome2_pkg_preinst
