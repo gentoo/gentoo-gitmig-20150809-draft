@@ -1,6 +1,10 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.17 2011/04/19 09:05:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.18 2011/04/21 19:18:42 radhermit Exp $
+
+  21 Apr 2011; Tim Harder <radhermit@gentoo.org> guvcview-1.4.2.ebuild,
+  guvcview-1.4.4.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg.
 
   19 Apr 2011; Thomas Kahle <tomka@gentoo.org> guvcview-1.4.2.ebuild:
   x86 stable per bug 359603
