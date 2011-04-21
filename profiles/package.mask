@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12716 2011/04/21 12:15:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12717 2011/04/21 20:05:31 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,34 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (21 Apr 2011)
+# Masked during initial import and for a first testing phase
+~kde-base/akonadi-4.4.11.1
+~kde-base/akregator-4.4.11.1
+~kde-base/blogilo-4.4.11.1
+~kde-base/kabcclient-4.4.11.1
+~kde-base/kaddressbook-4.4.11.1
+~kde-base/kalarm-4.4.11.1
+~kde-base/kdepim-icons-4.4.11.1
+~kde-base/kdepim-kresources-4.4.11.1
+~kde-base/kdepim-meta-4.4.11.1
+~kde-base/kdepim-strigi-analyzer-4.4.11.1
+~kde-base/kdepim-runtime-4.4.11.1
+~kde-base/kdepim-wizards-4.4.11.1
+~kde-base/kjots-4.4.11.1
+~kde-base/kleopatra-4.4.11.1
+~kde-base/kmail-4.4.11.1
+~kde-base/knode-4.4.11.1
+~kde-base/knotes-4.4.11.1
+~kde-base/konsolekalendar-4.4.11.1
+~kde-base/kontact-4.4.11.1
+~kde-base/korganizer-4.4.11.1
+~kde-base/ktimetracker-4.4.11.1
+~kde-base/libkdepim-4.4.11.1
+~kde-base/libkleo-4.4.11.1
+~kde-base/libkpgp-4.4.11.1
 
 # Bernard Cafarelli <voyageur@gentoo.org> (21 Apr 2011)
 # camaelon does not compile with current gnustep versions in tree,
