@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.92 2011/04/21 20:58:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.93 2011/04/21 20:59:59 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -41,7 +41,7 @@ ELTCONF=${ELTCONF:-""}
 # Should we use EINSTALL instead of DESTDIR
 USE_EINSTALL=${USE_EINSTALL:-""}
 
-# @ECLASS-VARIABLE: USE_EINSTALL
+# @ECLASS-VARIABLE: SCROLLKEEPER_UPDATE
 # @DEPRECATED
 # @DESCRIPTION:
 # Whether to run scrollkeeper for this package or not.
