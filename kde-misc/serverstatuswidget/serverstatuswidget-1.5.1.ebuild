@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/serverstatuswidget/serverstatuswidget-1.3.ebuild,v 1.1 2011/01/13 06:00:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/serverstatuswidget/serverstatuswidget-1.5.1.ebuild,v 1.1 2011/04/21 08:47:57 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
+KDE_LINGUAS="de fr"
 inherit kde4-base
 
 DESCRIPTION="A KDE4 plasma widget used for monitoring servers via ping or tcp
