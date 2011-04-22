@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6.ebuild,v 1.1 2011/04/22 15:44:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6.ebuild,v 1.2 2011/04/22 16:09:06 polynomial-c Exp $
 
 EAPI=4
 
@@ -159,6 +159,9 @@ src_prepare() {
 
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
 	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
+
+	# make configure accept gcc-4.6.x (bug #362861)
+	epatch "${FILESDIR}/${PN}-4.0.4-gcc46.patch"
 
 	# add correct java path
 	if use java ; then
