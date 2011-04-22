@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9-r2.ebuild,v 1.1 2011/03/16 09:38:52 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9-r4.ebuild,v 1.1 2011/04/22 14:03:18 eras Exp $
 
 EAPI=3
 
@@ -39,6 +39,7 @@ src_prepare() {
 	epatch "${FILESDIR}/CVE-2010-4022.patch"
 	epatch "${FILESDIR}/CVE-2011-0281.0282.0283.patch"
 	epatch "${FILESDIR}/CVE-2011-0284.patch"
+	epatch "${FILESDIR}/CVE-2011-0285.patch"
 }
 
 src_configure() {
@@ -92,6 +93,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/mit-krb5kadmind.initd mit-krb5kadmind || die
 	newinitd "${FILESDIR}"/mit-krb5kdc.initd mit-krb5kdc || die
+	newinitd "${FILESDIR}"/mit-krb5kpropd.initd mit-krb5kpropd || die
 
 	insinto /etc
 	newins "${ED}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
