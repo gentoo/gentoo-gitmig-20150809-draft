@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.20 2011/04/20 14:26:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.21 2011/04/22 16:52:56 ranger Exp $
+
+  22 Apr 2011; Brent Baude <ranger@gentoo.org> rssh-2.3.3.ebuild:
+  Marking rssh-2.3.3 ppc for bug 344339
 
   20 Apr 2011; Thomas Kahle <tomka@gentoo.org> rssh-2.3.3.ebuild:
   x86 stable per bug 344339
