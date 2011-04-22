@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/monster-masher
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.23 2011/03/29 07:49:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.24 2011/04/22 21:11:21 eva Exp $
+
+*monster-masher-1.8.1-r1 (22 Apr 2011)
+
+  22 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  +monster-masher-1.8.1-r1.ebuild,
+  +files/monster-masher-1.8.1-libcanberra.patch:
+  Version bump. Port to libcanberra, bug #348605.
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org>
   monster-masher-1.8.1.ebuild:
