@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mda/ChangeLog,v 1.2 2011/03/17 20:41:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mda/ChangeLog,v 1.3 2011/04/22 06:25:36 eras Exp $
+
+  22 Apr 2011; Eray Aslan <eras@gentoo.org> mda-0.ebuild:
+  drop citadel from RDEPEND - bug 364445
 
   17 Mar 2011; Eray Aslan <eras@gentoo.org> mda-0.ebuild:
   add mail-mta/citadel for sunrise
