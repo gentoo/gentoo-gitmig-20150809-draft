@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.110 2011/03/28 09:21:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.111 2011/04/22 16:17:26 flameeyes Exp $
+
+*ssmtp-2.64-r2 (22 Apr 2011)
+
+  22 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> +ssmtp-2.64-r2.ebuild,
+  metadata.xml:
+  Make mta provision optional, so that you can install ssmtp side-by-side with
+  (some) other mta ebuilds. Closes bug #289973. Also only block msmtp if it has
+  the equivalent mta support enabled.
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> ssmtp-2.62-r8.ebuild,
   ssmtp-2.64-r1.ebuild:
