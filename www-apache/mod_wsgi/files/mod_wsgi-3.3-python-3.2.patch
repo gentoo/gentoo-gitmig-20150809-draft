@@ -1,0 +1,49 @@
+http://code.google.com/p/modwsgi/source/detail?r=637ee0510a49f5bf80fe49b2ee27158cf01855c6
+
+--- mod_wsgi.c
++++ mod_wsgi.c
+@@ -1,7 +1,7 @@
+ /* vim: set sw=4 expandtab : */
+ 
+ /*
+- * Copyright 2007-2010 GRAHAM DUMPLETON
++ * Copyright 2007-2011 GRAHAM DUMPLETON
+  *
+  * Licensed under the Apache License, Version 2.0 (the "License");
+  * you may not use this file except in compliance with the License.
+@@ -3598,7 +3598,11 @@
+      */
+ 
+     if (!wsgi_daemon_pool && self->config->pass_apache_request) {
++#if PY_MAJOR_VERSION == 3 && PY_MINOR_VERSION >= 2
++        object = PyCapsule_New(self->r, 0, 0);
++#else
+         object = PyCObject_FromVoidPtr(self->r, 0);
++#endif
+         PyDict_SetItemString(vars, "apache.request_rec", object);
+         Py_DECREF(object);
+     }
+@@ -8369,7 +8373,11 @@
+      */
+ 
+     if (!wsgi_daemon_pool && self->config->pass_apache_request) {
++#if PY_MAJOR_VERSION == 3 && PY_MINOR_VERSION >= 2
++        object = PyCapsule_New(self->r, 0, 0);
++#else
+         object = PyCObject_FromVoidPtr(self->r, 0);
++#endif
+         PyDict_SetItemString(vars, "apache.request_rec", object);
+         Py_DECREF(object);
+     }
+@@ -13372,7 +13380,11 @@
+      */
+ 
+     if (!wsgi_daemon_pool && self->config->pass_apache_request) {
++#if PY_MAJOR_VERSION == 3 && PY_MINOR_VERSION >= 2
++        object = PyCapsule_New(self->r, 0, 0);
++#else
+         object = PyCObject_FromVoidPtr(self->r, 0);
++#endif
+         PyDict_SetItemString(vars, "apache.request_rec", object);
+         Py_DECREF(object);
+     }
