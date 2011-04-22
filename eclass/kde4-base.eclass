@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.89 2011/04/22 11:18:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.90 2011/04/22 18:48:03 abcd Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -167,8 +167,9 @@ KDE_HANDBOOK="${KDE_HANDBOOK:-never}"
 # Set this varible if you want your live package to manage its
 # translations. (Mostly all kde ebuilds does not ship documentation
 # and translations in live ebuilds)
-if [[ ${BUILD_TYPE} == live && -z ${KDE_LINGUAS_LIVE_OVERRIDE} && ${KDEBASE} != "kde-base" ]]; then
-	KDE_HANDBOOK=never
+if [[ ${BUILD_TYPE} == live && -z ${KDE_LINGUAS_LIVE_OVERRIDE} ]]; then
+	# Kdebase actualy provides the handbooks even for live stuff
+	[[ ${KDEBASE} == kde-base ]] || KDE_HANDBOOK=never
 	KDE_LINGUAS=""
 fi
 
@@ -376,15 +377,15 @@ if [[ ${PN} != oxygen-icons ]]; then
 	kderdepend+=" $(add_kdebase_dep oxygen-icons)"
 fi
 
-# add a dependency over kde-l10n if EAPI4 is around
-if [[ ${KDEBASE} != "kde-base" ]] && [[ -n ${KDE_LINGUAS} ]] && has "${EAPI:-0}" 4; then
+# add a dependency over kde-l10n if EAPI4 or better is around
+if [[ ${KDEBASE} != "kde-base" && -n ${KDE_LINGUAS} && ${EAPI:-0} != 3 ]]; then
 	for _lingua in ${KDE_LINGUAS}; do
 		# if our package has lignuas, pull in kde-l10n with selected lingua enabled,
 		# but only for selected ones.
 		# this can't be done on one line because if user doesn't use any localisation
 		# then he is probably not interested in kde-l10n at all.
 		kderdepend+="
-			linguas_${_lingua}? ( $(add_kdebase_dep kde-l10n linguas_${_lingua}(+)?) )
+			linguas_${_lingua}? ( $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)?") )
 		"
 	done
 	unset _lingua
@@ -467,11 +468,11 @@ _calculate_src_uri() {
 	case ${KDEBASE} in
 		kde-base)
 			case ${PV} in
-				4.[456].8[05] | 4.[456].9[023568] | 4.5.94.1)
+				4.[456].8[05] | 4.[456].9[023568])
 					# Unstable KDE SC releases
 					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2"
 					# KDEPIM IS SPECIAL
-					[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/unstable/kdepim/${PV}/src/${_kmname_pv}.tar.bz2"
+					[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/unstable/kdepim/${PV}/${_kmname_pv}.tar.bz2"
 					;;
 				4.4.[6789] | 4.4.1?*)
 					# Stable kdepim releases
@@ -743,10 +744,10 @@ kde4-base_src_prepare() {
 				: ${KDE_DOC_DIRS:=doc}
 				local dir
 				for dir in ${KDE_DOC_DIRS}; do
-					sed -e "/^[[:space:]]*add_subdirectory[[:space:]]*([[:space:]]*${dir}[[:space:]]*)/s/^/#DONOTCOMPILE /" \
-						-e "/^[[:space:]]*ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*${dir}[[:space:]]*)/s/^/#DONOTCOMPILE /" \
-						-e "/^[[:space:]]*macro_optional_add_subdirectory[[:space:]]*([[:space:]]*${dir}[[:space:]]*)/s/^/#DONOTCOMPILE /" \
-						-e "/^[[:space:]]*MACRO_OPTIONAL_ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*${dir}[[:space:]]*)/s/^/#DONOTCOMPILE /" \
+					sed -e "\!^[[:space:]]*add_subdirectory[[:space:]]*([[:space:]]*${dir}[[:space:]]*)!s/^/#DONOTCOMPILE /" \
+						-e "\!^[[:space:]]*ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*${dir}[[:space:]]*)!s/^/#DONOTCOMPILE /" \
+						-e "\!^[[:space:]]*macro_optional_add_subdirectory[[:space:]]*([[:space:]]*${dir}[[:space:]]*)!s/^/#DONOTCOMPILE /" \
+						-e "\!^[[:space:]]*MACRO_OPTIONAL_ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*${dir}[[:space:]]*)!s/^/#DONOTCOMPILE /" \
 						-i CMakeLists.txt || die "failed to comment out handbook"
 				done
 			fi
@@ -938,6 +939,11 @@ kde4-base_src_install() {
 	fi
 
 	cmake-utils_src_install
+
+	# In EAPI 4+, we don't want ${PREFIX}/share/doc/HTML to be compressed,
+	# because then khelpcenter can't find the docs
+	[[ ${EAPI:-0} != 3 && -d ${ED}/${PREFIX}/share/doc/HTML ]] &&
+		docompress -x ${PREFIX}/share/doc/HTML
 }
 
 # @FUNCTION: kde4-base_pkg_preinst
