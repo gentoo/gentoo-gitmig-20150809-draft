@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.287 2011/04/21 22:36:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.288 2011/04/22 16:52:40 ranger Exp $
+
+  22 Apr 2011; Brent Baude <ranger@gentoo.org> poppler-0.14.5-r1.ebuild:
+  Marking poppler-0.14.5-r1 ppc for bug 308017
 
   21 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   poppler-0.14.5-r1.ebuild:
