@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.167 2011/04/21 21:53:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.168 2011/04/22 12:12:51 dilfridge Exp $
+
+  22 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  knotes-4.4.11.1.ebuild:
+  Correctly depend on kde-4.6
 
 *knotes-4.4.11.1 (21 Apr 2011)
 
