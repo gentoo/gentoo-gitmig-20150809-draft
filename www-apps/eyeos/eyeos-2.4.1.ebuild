@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/eyeos-2.4.ebuild,v 1.2 2011/04/22 09:53:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/eyeos-2.4.1.ebuild,v 1.1 2011/04/22 09:53:11 voyageur Exp $
 
 EAPI="4"
 inherit depend.php webapp eutils
@@ -44,5 +44,7 @@ src_install() {
 pkg_postinst() {
 	elog "To finish your install/upgrade, point your browser to the eyeOS installer at:"
 	elog "	http://${VHOST_HOSTNAME}/${PN}/install/"
+	elog "Specific extensions may require additional packages (available or not in"
+	elog "portage), check the installer output"
 	webapp_pkg_postinst
 }
