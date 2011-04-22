@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.712 2011/04/20 15:57:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.713 2011/04/22 18:02:24 ranger Exp $
+
+  22 Apr 2011; Brent Baude <ranger@gentoo.org> vlc-1.1.9.ebuild:
+  Marking vlc-1.1.9 ppc for bug 363359
 
   20 Apr 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   libass 0.9.8 is required now
