@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.36 2011/04/07 09:32:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.37 2011/04/22 11:10:50 grobian Exp $
+
+  21 Apr 2011; Fabian Groffen <grobian@gentoo.org> clang-2.9.ebuild:
+  Update install_name reference to libLLVM
 
 *clang-2.9 (07 Apr 2011)
 

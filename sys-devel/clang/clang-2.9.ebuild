@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.9.ebuild,v 1.1 2011/04/07 09:32:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.9.ebuild,v 1.2 2011/04/22 11:10:50 grobian Exp $
 
 EAPI=3
 
@@ -167,7 +167,7 @@ src_install() {
 			install_name_tool \
 				-change "@rpath/libclang.dylib" \
 					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
-				-change "${S}"/Release/lib/libLLVM-${PV}.dylib \
+				-change "@executable_path/../lib/libLLVM-${PV}.dylib" \
 					"${EPREFIX}"/usr/lib/llvm/libLLVM-${PV}.dylib \
 				-change "${S}"/Release/lib/libclang.dylib \
 					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
