@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.4.ebuild,v 1.8 2011/03/28 09:53:41 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.4.ebuild,v 1.9 2011/04/22 16:12:51 flameeyes Exp $
 
 EAPI="2"
 
@@ -36,7 +36,8 @@ RDEPEND="${DEPEND}
 	!mail-mta/nullmailer
 	!mail-mta/postfix
 	!mail-mta/qmail-ldap
-	!mail-mta/ssmtp"
+	!<mail-mta/ssmtp-2.64-r2
+	!>=mail-mta/ssmtp-2.64-r2[mta]"
 
 PDEPEND="!mbox? ( mail-filter/procmail )"
 

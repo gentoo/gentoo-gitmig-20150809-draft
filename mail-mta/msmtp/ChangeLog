@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.99 2011/03/28 09:07:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.100 2011/04/22 16:10:03 flameeyes Exp $
+
+  22 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> msmtp-1.4.23.ebuild:
+  Prepare for new ssmtp with optional mta support (bug #289973).
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> msmtp-1.4.23.ebuild:
   change to new style virtual/mta - bug 360305

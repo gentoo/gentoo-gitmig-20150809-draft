@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.94 2011/03/28 09:53:41 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.95 2011/04/22 16:12:51 flameeyes Exp $
+
+  22 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> sendmail-8.14.4.ebuild:
+  Prepare for new ssmtp with optional mta support (bug #289973).
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> sendmail-8.14.4.ebuild:
   change to new style virtual/mta - bug 360305. remove mailwrapper support -
