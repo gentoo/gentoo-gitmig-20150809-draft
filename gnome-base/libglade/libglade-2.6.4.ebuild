@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.10 2011/04/10 10:34:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.11 2011/04/22 22:16:58 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2"
 
-inherit eutils gnome2 python
+inherit eutils gnome2 python virtualx
 
 DESCRIPTION="Library to construct graphical interfaces at runtime"
 HOMEPAGE="http://library.gnome.org/devel/libglade/stable/"
@@ -41,6 +41,10 @@ src_prepare() {
 	if ! use test; then
 		sed 's/ tests//' -i Makefile.am Makefile.in || die "sed failed"
 	fi
+}
+
+src_test() {
+	Xemake check || die "make check failed"
 }
 
 src_install() {
