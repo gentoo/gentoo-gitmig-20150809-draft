@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-postgresql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.15 2011/04/19 01:44:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.16 2011/04/22 10:56:00 titanofold Exp $
+
+*eselect-postgresql-1.0.8 (22 Apr 2011)
+
+  22 Apr 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  -eselect-postgresql-1.0.6.ebuild, -eselect-postgresql-1.0.7.ebuild,
+  +eselect-postgresql-1.0.8.ebuild, metadata.xml:
+  Fixes bug 364257 and bug 364237
 
 *eselect-postgresql-1.0.7 (19 Apr 2011)
 

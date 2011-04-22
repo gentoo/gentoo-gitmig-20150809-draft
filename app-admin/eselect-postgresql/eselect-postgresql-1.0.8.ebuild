@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/eselect-postgresql-1.0.7.ebuild,v 1.1 2011/04/19 01:44:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/eselect-postgresql-1.0.8.ebuild,v 1.1 2011/04/22 10:56:00 titanofold Exp $
 
 EAPI="4"
 
@@ -32,7 +32,6 @@ pkg_postinst() {
 	ewarn "    eselect postgresql update"
 	ewarn
 	ewarn "To get your system in a proper state."
-	echo
 	elog "You should set your desired PostgreSQL slot:"
 	elog "    eselect postgresql list"
 	elog "    eselect postgresql set <slot>"
