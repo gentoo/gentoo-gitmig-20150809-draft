@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyltxml/pyltxml-1.3-r1.ebuild,v 1.6 2010/10/31 22:39:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyltxml/pyltxml-1.3-r1.ebuild,v 1.7 2011/04/22 20:27:03 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
