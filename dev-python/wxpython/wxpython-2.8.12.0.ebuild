@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.0.ebuild,v 1.2 2011/04/21 01:20:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.0.ebuild,v 1.3 2011/04/22 05:56:08 dirtyepic Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -84,7 +84,7 @@ src_compile() {
 }
 
 src_install() {
-	local mypyconf
+	local docdir mypyconf
 
 	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
@@ -117,18 +117,22 @@ src_install() {
 	newins "${S}"/wx/py/PyCrust_32.png PyCrust.png
 	newins "${S}"/wx/tools/XRCed/XRCed_32.png XRCed.png
 
+	docdir=${D}usr/share/doc/${PF}
+
 	if use doc; then
 		dodir /usr/share/doc/${PF}/docs
-		cp -R "${DOC_S}"/docs/* "${D}"usr/share/doc/${PF}/docs/
+		cp -R "${DOC_S}"/docs/* "${docdir}"/docs/
 		# For some reason newer API docs aren't available so use 2.8.9.2's
-		cp -R "${WORKDIR}"/wxPython-2.8.9.2/docs/* "${D}"usr/share/doc/${PF}/docs/
+		cp -R "${WORKDIR}"/wxPython-2.8.9.2/docs/* "${docdir}"/docs/
 	fi
 
 	if use examples; then
 		dodir /usr/share/doc/${PF}/demo
+		cp -R "${DOC_S}"/demo/* "${docdir}"/demo
 		dodir /usr/share/doc/${PF}/samples
-		cp -R "${DOC_S}"/demo/* "${D}"/usr/share/doc/${PF}/demo/
-		cp -R "${DOC_S}"/samples/* "${D}"/usr/share/doc/${PF}/samples/
+		cp -R "${DOC_S}"/samples/* "${docdir}"/samples
+		[[ -e ${docdir}/samples/embedded/embedded ]] \
+			&& rm -f "${docdir}"/samples/embedded/embedded
 	fi
 }
 

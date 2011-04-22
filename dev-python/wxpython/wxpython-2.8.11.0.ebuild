@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.11.0.ebuild,v 1.5 2011/04/21 01:20:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.11.0.ebuild,v 1.6 2011/04/22 05:56:08 dirtyepic Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -129,6 +129,7 @@ src_install() {
 		dodir /usr/share/doc/${PF}/samples
 		cp -R "${DOC_S}"/demo/* "${D}"/usr/share/doc/${PF}/demo/
 		cp -R "${DOC_S}"/samples/* "${D}"/usr/share/doc/${PF}/samples/
+		rm -f "${D}"usr/share/doc/${PF}/samples/embedded/embedded
 	fi
 }
 
