@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.17-r1.ebuild,v 1.2 2010/10/06 07:45:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.17-r1.ebuild,v 1.3 2011/04/22 07:17:44 grobian Exp $
+
+EAPI=3
 
 inherit eutils flag-o-matic autotools prefix
 
@@ -9,7 +11,7 @@ CONFVER="1.8"
 MY_P="${P}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
 HOMEPAGE="http://www.tcsh.org/"
-SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz
+SRC_URI="ftp://ftp.astron.com/pub/tcsh/old/${MY_P}.tar.gz
 	http://www.gentoo.org/~grobian/distfiles/tcsh-gentoo-patches-r${CONFVER}.tar.bz2"
 
 LICENSE="BSD"
@@ -28,9 +30,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 CONFDIR=${WORKDIR}/tcsh-gentoo-patches-r${CONFVER}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${MY_P/17/14}"-debian-dircolors.patch # bug #120792
 	epatch "${FILESDIR}"/${PN}-6.14-makefile.patch # bug #151951
 	epatch "${FILESDIR}"/${PN}-6.14-use-ncurses.patch
@@ -60,7 +60,7 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	# make tcsh look and live along the lines of the prefix
 	append-flags -D_PATH_DOTCSHRC="'"'"${EPREFIX}/etc/csh.cshrc"'"'"
 	append-flags -D_PATH_DOTLOGIN="'"'"${EPREFIX}/etc/csh.login"'"'"
@@ -71,8 +71,7 @@ src_compile() {
 	econf \
 		--prefix="${EPREFIX:-/}" \
 		--datarootdir='${prefix}/usr/share' \
-		|| die "econf failed"
-	emake || die "compile problem"
+		|| die
 }
 
 src_install() {
