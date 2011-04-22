@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.2 2011/04/20 11:13:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.3 2011/04/22 10:39:47 jlec Exp $
 
 EAPI="4"
 
@@ -31,7 +31,8 @@ src_prepare() {
 	tc-export CC
 	epatch \
 		"${FILESDIR}"/${PV}-gentoo.patch \
-		"${FILESDIR}"/${PV}-crash.patch
+		"${FILESDIR}"/${PV}-crash.patch \
+		"${FILESDIR}"/${PV}-asneeded.patch
 	sed \
 		-e "/^LDFLAGS/s:$:${LDFLAGS}:g" \
 		-i nessus.tmpl.in

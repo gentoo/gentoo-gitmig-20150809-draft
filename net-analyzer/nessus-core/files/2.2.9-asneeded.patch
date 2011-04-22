@@ -1,0 +1,16 @@
+ nessusd/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/nessusd/Makefile b/nessusd/Makefile
+index 47a1e12..66641aa 100644
+--- a/nessusd/Makefile
++++ b/nessusd/Makefile
+@@ -3,7 +3,7 @@ include ../nessus.tmpl
+ LIBS =  `$(NASLCONFIG) --libs` `$(NESSUSCONFIG) --libs`  \
+ 	$(W_STATIC)  $(W_DYNAMIC) \
+ 	$(DL_LIB)  \
+-	$(COMPAT_LIB) $(LIBWRAP)
++	$(COMPAT_LIB) $(LIBWRAP) `pcap-config --libs`
+ NESSUS_INCLUDE=`sh ./cflags` 
+ OBJS = auth.o \
+        attack.o \
