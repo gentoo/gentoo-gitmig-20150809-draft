@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.2 2011/04/22 16:13:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.3 2011/04/22 16:20:13 ssuominen Exp $
 
 EAPI=4
 inherit eutils pam toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-# FIXME: Why is pam_usb using pmount when it should be using udisks --mount?
+# FIXME: pmount: http://bugs.gentoo.org/show_bug.cgi?id=358935#c5
 COMMON_DEPEND="dev-libs/libxml2
 	sys-apps/dbus
 	virtual/pam"
@@ -28,6 +28,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	# FIXME: push upstream: http://bugs.gentoo.org/show_bug.cgi?id=358935#c6
 	epatch "${FILESDIR}"/${P}-openpam.patch
 }
 
