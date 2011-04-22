@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.24 2011/04/20 15:33:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.25 2011/04/22 16:51:24 ranger Exp $
+
+  22 Apr 2011; Brent Baude <ranger@gentoo.org> libzip-0.10.ebuild:
+  Marking libzip-0.10 ppc for bug 359899
 
   20 Apr 2011; Jeroen Roovers <jer@gentoo.org> libzip-0.10.ebuild:
   Stable for HPPA (bug #359899).
