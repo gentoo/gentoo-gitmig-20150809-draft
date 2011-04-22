@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/em-http-request-0.2.14.ebuild,v 1.4 2011/02/26 16:10:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/em-http-request-0.2.14.ebuild,v 1.5 2011/04/22 17:50:34 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 

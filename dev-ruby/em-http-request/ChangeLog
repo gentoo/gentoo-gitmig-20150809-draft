@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/em-http-request
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.6 2011/02/26 16:10:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/em-http-request/ChangeLog,v 1.7 2011/04/22 17:50:34 graaff Exp $
+
+  22 Apr 2011; Hans de Graaff <graaff@gentoo.org>
+  em-http-request-0.2.14.ebuild:
+  Add ree18 support.
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   em-http-request-0.2.14.ebuild:
