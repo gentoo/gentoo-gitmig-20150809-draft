@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.2.ebuild,v 1.2 2011/01/21 16:52:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6.ebuild,v 1.1 2011/04/22 15:44:24 polynomial-c Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils fdo-mime flag-o-matic linux-info pax-utils qt4-r2 toolchain-funcs java-pkg-opt-2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 sdk vboxwebsrv"
+IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -46,7 +46,9 @@ RDEPEND="!app-emulation/virtualbox-bin
 		x11-libs/libXmu
 		x11-libs/libXt
 		media-libs/libsdl[X,video]
-	)"
+	)
+	vnc? ( >=net-libs/libvncserver-0.9.7 )
+	java? ( >=virtual/jre-1.5 )"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.5-r1
 	>=dev-lang/yasm-0.6.2
@@ -64,7 +66,7 @@ DEPEND="${RDEPEND}
 		dev-texlive/texlive-fontsrecommended
 		dev-texlive/texlive-fontsextra
 	)
-	java? ( virtual/jdk )
+	java? ( >=virtual/jdk-1.5 )
 	dev-util/pkgconfig
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	!headless? ( x11-libs/libXinerama )
@@ -108,7 +110,18 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox/VBoxOGLhostcrutil.so
 	usr/lib/virtualbox/VBoxNetDHCP.so"
 
+REQUIRED_USE="java? ( sdk ) python? ( sdk )"
+
 pkg_setup() {
+	if built_with_use sys-devel/gcc hardened && gcc-config -c | grep -qv -E "hardenednopie|vanilla"; then
+		eerror "The PIE feature provided by the \"hardened\" compiler is incompatible with ${PF}."
+		eerror "You must use gcc-config to select a profile without this feature.  You may"
+		eerror "choose either \"hardenednopie\", \"hardenednopiessp\" or \"vanilla\" profile;"
+		eerror "however, \"hardenednopie\" is preferred because it gives the most hardening."
+		eerror "Remember to run \"source /etc/profile\" before continuing.  See bug #339914."
+		die
+	fi
+
 	if ! use headless && ! use qt4 ; then
 		einfo "No USE=\"qt4\" selected, this build will not include"
 		einfo "any Qt frontend."
@@ -121,6 +134,7 @@ pkg_setup() {
 		einfo "No USE=\"opengl\" selected, this build will lack"
 		einfo "the OpenGL feature."
 	fi
+	java-pkg-opt-2_pkg_setup
 }
 
 src_prepare() {
@@ -132,9 +146,9 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4-localconfig > LocalConfig.kmk || die
 
 	# unset useless/problematic checks in configure
-	epatch "${FILESDIR}/${PN}-ose-3.2.8-mesa-check.patch"
-	epatch "${FILESDIR}/${PN}-4-makeself-check.patch"
-	epatch "${FILESDIR}/${PN}-4-mkisofs-check.patch"
+	epatch "${FILESDIR}/${PN}-ose-3.2.8-mesa-check.patch" \
+		"${FILESDIR}/${PN}-4-makeself-check.patch" \
+		"${FILESDIR}/${PN}-4-mkisofs-check.patch"
 
 	# fix build with --as-needed (bug #249295 and bug #350907)
 	epatch "${FILESDIR}/${PN}-4-asneeded.patch"
@@ -151,6 +165,7 @@ src_prepare() {
 		sed "s:/usr/lib/jvm/java-6-sun:$(java-config -O):" \
 			-i "${S}"/Config.kmk || die
 	fi
+	java-pkg-opt-2_src_prepare
 }
 
 src_configure() {
@@ -161,6 +176,7 @@ src_configure() {
 	use python     || myconf+=" --disable-python"
 	use java       || myconf+=" --disable-java"
 	use vboxwebsrv && myconf+=" --enable-webservice"
+	use vnc        && myconf+=" --enable-vnc"
 	use doc        || myconf+=" --disable-docs"
 	if ! use headless ; then
 		use qt4 || myconf+=" --disable-qt4"
@@ -297,6 +313,12 @@ src_install() {
 	# set an env-variable for 3rd party tools
 	echo -n "VBOX_APP_HOME=/usr/$(get_libdir)/${PN}" > "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
+
+	if use java ; then
+		java-pkg_regjar "${D}/usr/$(get_libdir)/${PN}/sdk/bindings/xpcom/java/vboxjxpcom.jar"
+		java-pkg_regso "${D}/usr/$(get_libdir)/${PN}/libvboxjxpcom.so"
+	fi
+
 }
 
 pkg_postinst() {
