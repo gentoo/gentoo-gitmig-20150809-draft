@@ -1,6 +1,15 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.109 2011/03/23 07:09:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.110 2011/04/22 12:04:38 polynomial-c Exp $
+
+*pure-ftpd-1.0.30-r1 (22 Apr 2011)
+
+  22 Apr 2011; Lars Wendler <polynomial-c@gentoo.org>
+  pure-ftpd-1.0.29-r1.ebuild, -pure-ftpd-1.0.30.ebuild,
+  +pure-ftpd-1.0.30-r1.ebuild:
+  Create /var/lib/run/pure-ftpd or else pure-ftpwho doesn't work. Thanks to
+  László Szalma for reporting this in bug #364477. Committed straight to
+  stable.
 
   23 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> -pure-ftpd-1.0.28.ebuild,
   pure-ftpd-1.0.29-r1.ebuild, -pure-ftpd-1.0.29-r2.ebuild,
