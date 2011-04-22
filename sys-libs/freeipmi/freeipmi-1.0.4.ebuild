@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.2.ebuild,v 1.1 2011/02/23 00:18:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.4.ebuild,v 1.1 2011/04/22 14:03:49 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools
 
@@ -58,7 +58,7 @@ src_install() {
 		dosym ${file} /usr/bin/${file/ipmi/ipmi-}
 	done
 
-	dodoc AUTHORS ChangeLog* DISCLAIMER* NEWS README* TODO doc/*.txt || die
+	dodoc AUTHORS ChangeLog* DISCLAIMER* NEWS README* TODO doc/*.txt
 
 	keepdir \
 		/var/cache/ipmimonitoringsdrcache \
