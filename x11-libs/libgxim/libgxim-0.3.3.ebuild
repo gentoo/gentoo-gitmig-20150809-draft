@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgxim/libgxim-0.3.3.ebuild,v 1.1 2011/01/08 06:11:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgxim/libgxim-0.3.3.ebuild,v 1.2 2011/04/22 13:57:02 naota Exp $
 
 EAPI=3
 
@@ -18,6 +18,7 @@ RDEPEND=">=dev-libs/check-0.9.4
 	>=dev-libs/glib-2.16
 	>=sys-apps/dbus-0.23"
 DEPEND="${RDEPEND}
+	dev-lang/ruby
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
