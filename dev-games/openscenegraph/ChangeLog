@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.39 2011/03/31 15:41:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.40 2011/04/22 08:28:23 tupone Exp $
+
+  22 Apr 2011; Tupone Alfredo <tupone@gentoo.org> openscenegraph-2.8.3.ebuild,
+  +files/openscenegraph-2.8.3-ffmpeg.patch:
+  Build with new ffmpeg. Bug #347481 by Juergen Rose
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   openscenegraph-2.8.3.ebuild:

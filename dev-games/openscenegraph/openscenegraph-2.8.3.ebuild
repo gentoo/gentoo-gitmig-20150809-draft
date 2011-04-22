@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.15 2011/03/31 15:41:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.16 2011/04/22 08:28:23 tupone Exp $
 
 EAPI=2
 
@@ -86,6 +86,7 @@ DOCS=(AUTHORS.txt ChangeLog NEWS.txt)
 
 PATCHES=(
 	"${FILESDIR}/${P}-cmake.patch"
+	"${FILESDIR}/${P}-ffmpeg.patch"
 )
 
 src_configure() {

@@ -1,0 +1,10 @@
+--- src/osgPlugins/ffmpeg/FFmpegHeaders.hpp.old	2011-04-21 16:28:29.026069826 +0200
++++ src/osgPlugins/ffmpeg/FFmpegHeaders.hpp	2011-04-21 16:29:01.115068086 +0200
+@@ -6,6 +6,7 @@
+ extern "C"
+ {
+ #define __STDC_CONSTANT_MACROS
++#define FF_API_OLD_SAMPLE_FMT 0
+ #include <errno.h>    // for error codes defined in avformat.h
+ #include <stdint.h>
+ #include <avcodec.h>
