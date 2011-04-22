@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.1 2011/04/22 16:03:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/pam_usb-0.5.0.ebuild,v 1.2 2011/04/22 16:13:32 ssuominen Exp $
 
 EAPI=4
-inherit pam toolchain-funcs
+inherit eutils pam toolchain-funcs
 
 DESCRIPTION="A pam module to provide authentication using USB device"
 HOMEPAGE="http://pamusb.org/"
@@ -27,9 +27,12 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-openpam.patch
+}
+
 src_compile() {
-	tc-export CC
-	emake
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
