@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.89 2011/04/20 11:24:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.90 2011/04/22 10:33:02 jlec Exp $
+
+  22 Apr 2011; Justin Lecher <jlec@gentoo.org> libnasl-2.2.9-r1.ebuild:
+  Fixed dependency to be fullfilled with any revision, #364471
 
   20 Apr 2011; Justin Lecher <jlec@gentoo.org> -libnasl-2.3.1.ebuild:
   Dropped due to pending removal request, #169466

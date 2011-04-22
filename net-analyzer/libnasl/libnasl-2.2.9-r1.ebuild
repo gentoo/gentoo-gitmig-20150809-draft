@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9-r1.ebuild,v 1.1 2011/04/20 07:52:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9-r1.ebuild,v 1.2 2011/04/22 10:33:02 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="static-libs"
 
-DEPEND="=net-analyzer/nessus-libraries-${PV}"
+DEPEND="~net-analyzer/nessus-libraries-${PV}"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${PN}
