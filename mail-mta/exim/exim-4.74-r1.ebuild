@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.9 2011/03/28 08:22:33 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.10 2011/04/22 16:07:44 flameeyes Exp $
 
 EAPI="3"
 
@@ -58,7 +58,8 @@ RDEPEND="${DEPEND}
 	!mail-mta/postfix
 	!mail-mta/qmail-ldap
 	!mail-mta/sendmail
-	!mail-mta/ssmtp
+	!<mail-mta/ssmtp-2.64-r2
+	!>=mail-mta/ssmtp-2.64-r2[mta]
 	!net-mail/mailwrapper
 	>=net-mail/mailbase-0.00-r5
 	virtual/logger

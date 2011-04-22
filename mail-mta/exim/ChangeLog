@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.186 2011/04/16 16:21:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.187 2011/04/22 16:07:44 flameeyes Exp $
+
+  22 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> exim-4.72.ebuild,
+  exim-4.72-r1.ebuild, exim-4.74-r1.ebuild, exim-4.74-r2.ebuild,
+  exim-4.75.ebuild:
+  Prepare for new ssmtp with optional mta support (bug #289973). exim-4.71 is
+  unported because of EAPI restrictions.
 
   16 Apr 2011; Fabian Groffen <grobian@gentoo.org> files/exim.logrotate:
   Reload exim, instead of (re)starting it on logrotate, such that exim won't
