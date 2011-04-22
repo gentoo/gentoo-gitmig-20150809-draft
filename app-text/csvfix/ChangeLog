@@ -1,0 +1,11 @@
+# ChangeLog for app-text/csvfix
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/csvfix/ChangeLog,v 1.1 2011/04/22 05:05:34 radhermit Exp $
+
+*csvfix-1.00c (22 Apr 2011)
+
+  22 Apr 2011; Tim Harder <radhermit@gentoo.org> +csvfix-1.00c.ebuild,
+  +files/csvfix-1.00c-make.patch, +files/csvfix-1.00c-tests.patch,
+  +metadata.xml:
+  Initial import (bug #317873).
+
