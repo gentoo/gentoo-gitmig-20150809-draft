@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.9.6.ebuild,v 1.3 2011/02/11 22:12:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.10.1.ebuild,v 1.1 2011/04/22 14:47:32 caster Exp $
 
 EAPI="1"
 
@@ -28,7 +28,7 @@ RESTRICT="strip"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/${PN}-${TARBALL_VERSION}"
 
@@ -38,6 +38,8 @@ RDEPEND=">=sys-devel/gcc-4.3
 	virtual/jpeg
 	>=media-libs/libpng-1.4:0
 	>=sys-libs/zlib-1.2.3-r1
+	"
+PDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.20 )
 	X? (
 		>=media-libs/freetype-2.3.9:2
