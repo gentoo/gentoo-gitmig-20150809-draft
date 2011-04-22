@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/pipes-1.16.1.ebuild,v 1.1 2011/04/22 16:07:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/pipes-1.16.1.ebuild,v 1.2 2011/04/22 16:19:44 jer Exp $
 
 EAPI="3"
 
@@ -20,12 +20,13 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_prepare() {
-	sed -i Makefile -e "s:-O2:${CFLAGS}:" || die
+	#sed -i Makefile -e 's:-O2:$(CFLAGS):' || die
+	# Prevent the build system from looking for dependencies
 	touch .depend
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) LDFLAGS="${CFLAGS} ${LDFLAGS}" || die "emake failed"
+	emake CC=$(tc-getCC) OPTIM="${CFLAGS}" LDFLAGS="${CFLAGS} ${LDFLAGS}" || die
 }
 
 src_install() {

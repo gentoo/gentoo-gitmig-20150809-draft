@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pipes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.12 2011/04/22 16:07:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.13 2011/04/22 16:19:44 jer Exp $
+
+  22 Apr 2011; Jeroen Roovers <jer@gentoo.org> pipes-1.16.1.ebuild:
+  Do not hardcode flags in Makefile.
 
 *pipes-1.16.1 (22 Apr 2011)
 
