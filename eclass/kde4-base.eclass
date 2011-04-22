@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.88 2011/04/21 20:01:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.89 2011/04/22 11:18:34 scarabeus Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -378,14 +378,16 @@ fi
 
 # add a dependency over kde-l10n if EAPI4 is around
 if [[ ${KDEBASE} != "kde-base" ]] && [[ -n ${KDE_LINGUAS} ]] && has "${EAPI:-0}" 4; then
-	usedep=''
 	for _lingua in ${KDE_LINGUAS}; do
-		[[ -n ${usedep} ]] && usedep+=","
-		usedep+="linguas_${_lingua}(+)?"
+		# if our package has lignuas, pull in kde-l10n with selected lingua enabled,
+		# but only for selected ones.
+		# this can't be done on one line because if user doesn't use any localisation
+		# then he is probably not interested in kde-l10n at all.
+		kderdepend+="
+			linguas_${_lingua}? ( $(add_kdebase_dep kde-l10n linguas_${_lingua}(+)?) )
+		"
 	done
-	# if our package has lignuas pull in kde-l10n with selected lingua
-	kderdepend+=" $(add_kdebase_dep kde-l10n ${usedep})"
-	unset usedep _lingua
+	unset _lingua
 fi
 
 kdehandbookdepend="
