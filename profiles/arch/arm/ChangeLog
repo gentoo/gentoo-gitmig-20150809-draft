@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.122 2011/04/14 15:47:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.123 2011/04/23 18:47:05 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add video_cards_nouveau to use.mask
 
   14 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Drop useless kde mask.

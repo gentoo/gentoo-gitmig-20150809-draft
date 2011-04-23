@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.47 2011/03/27 15:47:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.48 2011/04/23 18:48:28 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -75,6 +75,10 @@ frei0r
 libev
 
 # Other
+
+# Raúl Porcel <armin76@gentoo.org> (23 Apr 2011)
+# Needs to be tested
+video_cards_nouveau
 
 # Ben de Groot <yngwin@gentoo.org> 11 Feb 2009
 # both x11-libs/qt-phonon and media-sound/phonon are unkeyworded

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.106 2011/04/23 11:16:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.107 2011/04/23 18:48:50 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add video_cards_nouveau to use.mask
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Cleanup package.use.mask

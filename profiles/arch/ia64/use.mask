@@ -97,6 +97,11 @@ xemacs
 
 # Other
 
+# Raúl Porcel <armin76@gentoo.org> (23 Apr 2011)
+# Needs to be tested
+video_cards_nouveau
+
+
 # Samuli Suominen <ssuominen@gentoo.org> (02 Dec 2009)
 # This will need media-sound/musepack-tools
 musepack

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.71 2011/03/31 03:56:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.72 2011/04/23 18:49:58 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -210,6 +210,7 @@ video_cards_nv
 video_cards_vesa
 video_cards_radeonhd
 video_cards_ast
+video_cards_nouveau
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Unmask the Sun-specific drivers
