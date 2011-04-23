@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.3-r1.ebuild,v 1.1 2011/04/23 08:58:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.3-r1.ebuild,v 1.2 2011/04/23 09:00:24 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -39,6 +39,7 @@ src_prepare() {
 }
 
 src_configure() {
+	# FIXME: The only reason why --without-gpm-new-method is passed is lack of testing.
 	econf \
 		$(use_enable gnome nautilus) \
 		--enable-panscan \
