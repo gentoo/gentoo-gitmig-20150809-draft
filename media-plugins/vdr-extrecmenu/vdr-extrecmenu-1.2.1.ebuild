@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2.1.ebuild,v 1.1 2011/04/17 08:00:58 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2.1.ebuild,v 1.2 2011/04/23 21:38:52 hd_brummy Exp $
 
 EAPI="3"
 
@@ -35,6 +35,10 @@ src_prepare() {
 	fi
 
 	vdr-plugin_src_prepare
+
+	if has_version ">=media-video/vdr-1.7.18"; then
+		sed -e "s:Read(f):Read():" -i mymenueditrecording.c
+	fi
 }
 
 src_install() {
