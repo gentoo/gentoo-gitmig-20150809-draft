@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kdepim-common-libs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.1 2011/04/23 17:12:48 tampakrap Exp $
+
+*kdepim-common-libs-4.5.95 (23 Apr 2011)
+
+  23 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kdepim-common-libs-4.5.95.ebuild:
+  Version bump KDEPIM 4.5.95 (4.6 beta 5)
+

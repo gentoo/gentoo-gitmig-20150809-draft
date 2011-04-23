@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.172 2011/04/22 12:12:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.173 2011/04/23 17:12:48 tampakrap Exp $
+
+*kalarm-4.5.95 (23 Apr 2011)
+
+  23 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org> +kalarm-4.5.95.ebuild:
+  Version bump KDEPIM 4.5.95 (4.6 beta 5)
 
   22 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kalarm-4.4.11.1.ebuild:
