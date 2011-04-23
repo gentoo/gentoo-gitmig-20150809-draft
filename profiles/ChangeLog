@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5325 2011/04/23 15:04:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5326 2011/04/23 16:04:53 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Mask KDEPIM 4.6 beta ebuilds
 
   23 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Removed games-util/taxidraw and games-misc/jugglemaster.

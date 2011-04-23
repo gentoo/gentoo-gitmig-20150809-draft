@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12724 2011/04/23 15:04:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12725 2011/04/23 16:04:53 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,31 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Theo Chatzimichos <tampakrap@gentoo.org> (23 Apr 2011)
+# Mask KDEPIM 4.6 beta ebuilds
+~kde-base/akonadiconsole-4.5.95
+~kde-base/akregator-4.5.95
+~kde-base/blogilo:4.5.95
+~kde-base/kabcclient:4.5.95
+~kde-base/kaddressbook:4.5.95
+~kde-base/kalarm:4.5.95
+~kde-base/kdepim-common-libs:4.5.95
+~kde-base/kdepim-icons:4.5.95
+~kde-base/kdepim-kresources:4.5.95
+~kde-base/kdepim-meta:4.5.95
+~kde-base/kdepim-strigi-analyzer:4.5.95
+~kde-base/kdepim-wizards:4.5.95
+~kde-base/kdepim-runtime:4.5.95
+~kde-base/kjots:4.5.95
+~kde-base/kleopatra:4.5.95
+~kde-base/kmail:4.5.95
+~kde-base/knode:4.5.95
+~kde-base/knotes:4.5.95
+~kde-base/konsolekalendar:4.5.95
+~kde-base/kontact:4.5.95
+~kde-base/korganizer:4.5.95
+~kde-base/ktimetracker:4.5.95
 
 # Ryan Hill <dirtyepic@gentoo.org> (23 Apr 2011)
 # Masked for removal on 20110523.
