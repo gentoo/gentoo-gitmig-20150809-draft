@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.3.4.ebuild,v 1.2 2011/04/10 17:00:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.3.4.ebuild,v 1.3 2011/04/23 22:09:02 fauli Exp $
 
 EAPI=2
 inherit multilib
@@ -40,7 +40,7 @@ S=${WORKDIR}/${MY_P}
 
 my_config() {
 	local value
-	use ${1} && value=y || value=n
+	use ${1} && value=a || value=n
 	myconf="${myconf} ${2}=${value}"
 }
 
