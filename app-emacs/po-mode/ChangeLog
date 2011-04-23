@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.22 2011/04/12 21:08:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.23 2011/04/23 12:13:34 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> po-mode-0.18.1.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #361635
 
   12 Apr 2011; Markus Meier <maekke@gentoo.org> po-mode-0.18.1.1.ebuild:
   arm stable, bug #361635
