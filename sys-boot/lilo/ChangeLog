@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.64 2011/04/11 00:13:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.65 2011/04/23 16:06:24 jer Exp $
+
+  23 Apr 2011; Jeroen Roovers <jer@gentoo.org> lilo-23.0-r1.ebuild,
+  lilo-23.1.ebuild, lilo-23.2.ebuild:
+  Fix SRC_URI thanks to Constantin Baranov (bug #364581).
 
   10 Apr 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove chainsaw as maintainer.

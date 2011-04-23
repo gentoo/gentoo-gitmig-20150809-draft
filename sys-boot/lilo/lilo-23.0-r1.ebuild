@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.0-r1.ebuild,v 1.3 2011/03/22 16:10:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.0-r1.ebuild,v 1.4 2011/04/23 16:06:24 jer Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="https://alioth.debian.org/projects/lilo/"
 DOLILO_TAR="dolilo-${DOLILO_V}.tar.bz2"
 
 SRC_URI="
-	https://alioth.debian.org/frs/download.php/3315/${P}.tar.gz
+	http://lilo.alioth.debian.org/ftp/sources/${P}.tar.gz
 	mirror://gentoo/${DOLILO_TAR}
 "
 
