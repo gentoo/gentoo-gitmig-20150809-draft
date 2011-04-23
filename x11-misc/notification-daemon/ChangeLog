@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.76 2011/04/12 21:01:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.77 2011/04/23 17:24:26 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org>
+  notification-daemon-0.5.0.ebuild:
+  alpha/ia64/sh/sparc/x86 stable wrt #361093
 
   12 Apr 2011; Markus Meier <maekke@gentoo.org>
   notification-daemon-0.5.0.ebuild:
