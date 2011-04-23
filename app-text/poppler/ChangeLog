@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.288 2011/04/22 16:52:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.289 2011/04/23 12:07:35 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> poppler-0.14.5-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #308017
 
   22 Apr 2011; Brent Baude <ranger@gentoo.org> poppler-0.14.5-r1.ebuild:
   Marking poppler-0.14.5-r1 ppc for bug 308017
