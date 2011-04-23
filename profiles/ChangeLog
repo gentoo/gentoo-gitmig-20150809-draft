@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5322 2011/04/23 11:24:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5323 2011/04/23 12:17:55 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Removed games-util/taxidraw and games-misc/jugglemaster.
 
   23 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Mask app-text/gnochm for removal.
