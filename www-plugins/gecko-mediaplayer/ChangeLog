@@ -1,6 +1,12 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.46 2011/04/22 11:26:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.47 2011/04/23 09:21:25 ssuominen Exp $
+
+*gecko-mediaplayer-1.0.3-r1 (23 Apr 2011)
+
+  23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +gecko-mediaplayer-1.0.3-r1.ebuild:
+  Stop using gnome2.eclass and remove support for gnome-base/gconf wrt #364513.
 
 *gecko-mediaplayer-1.0.3 (22 Apr 2011)
 
