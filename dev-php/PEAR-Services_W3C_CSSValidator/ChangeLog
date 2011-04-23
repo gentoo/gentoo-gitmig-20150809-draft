@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Services_W3C_CSSValidator
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_W3C_CSSValidator/ChangeLog,v 1.1 2008/03/17 12:50:03 jokey Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_W3C_CSSValidator/ChangeLog,v 1.2 2011/04/23 15:13:23 olemarkus Exp $
+
+*PEAR-Services_W3C_CSSValidator-0.2.2 (23 Apr 2011)
+
+  23 Apr 2011; <olemarkus@gentoo.org>
+  +PEAR-Services_W3C_CSSValidator-0.2.2.ebuild:
+  Version bump. Bug #364153. Thanks to Denny
 
 *PEAR-Services_W3C_CSSValidator-0.1.0 (17 Mar 2008)
 
