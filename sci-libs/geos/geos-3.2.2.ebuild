@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.8 2011/03/12 13:49:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.9 2011/04/23 15:38:47 jlec Exp $
 
 EAPI="3"
+
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
@@ -31,11 +32,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/3.2.0-multipy.patch \
+	epatch \
+		"${FILESDIR}"/3.2.0-multipy.patch \
 		"${FILESDIR}"/3.2.0-swig2.0.patch \
 		"${FILESDIR}"/3.2.0-python.patch \
 		"${FILESDIR}"/3.2.0-darwin.patch \
-		"${FILESDIR}"/3.2.2-disable_static_modules.patch
+		"${FILESDIR}"/${PV}-disable_static_modules.patch \
+		"${FILESDIR}"/${PV}-gcc46.patch
 	eautoreconf
 	echo "#!${EPREFIX}/bin/bash" > py-compile
 }

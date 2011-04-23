@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.56 2011/03/22 10:20:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.57 2011/04/23 15:38:47 jlec Exp $
+
+  23 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/3.2.2-gcc46.patch,
+  geos-3.2.2.ebuild:
+  Fix for gcc-4.6, #362365
 
   22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -geos-3.1.1.ebuild, -files/geos-3.1.1-missing-includes.patch,
