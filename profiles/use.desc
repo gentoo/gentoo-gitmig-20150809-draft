@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.456 2011/04/08 17:47:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.457 2011/04/23 11:11:23 slyfox Exp $
 
 # Keep them sorted
 
@@ -147,6 +147,7 @@ handbook - Enable handbooks generation for KDE4.
 hardened - activate default security enhancements for toolchain (gcc, glibc, binutils)
 hddtemp - Enable monitoring of hdd temperature (app-admin/hddtemp)
 hdf5 - Adds support for the Hierarchical Data Format v5
+hscolour - Includes coloured haskell sources to generated documentation (dev-haskell/hscolour)
 ibm - Add support for IBM ppc64 specific systems
 iconv - Enable support for the iconv character set conversion library
 icq - Enable ICQ IM protocol support
