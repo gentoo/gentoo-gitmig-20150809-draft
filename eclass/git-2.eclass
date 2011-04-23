@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.2 2011/04/20 21:51:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.3 2011/04/23 10:21:11 scarabeus Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -306,7 +306,7 @@ git-2_update_repo() {
 		# git urls might change, so reset it
 		git config remote.origin.url "${repo_uri}"
 
-		debug-print "${EGIT_UPDATE_CMD} ${EGIT_OPTIONS}"
+		debug-print "${EGIT_UPDATE_CMD}"
 		${EGIT_UPDATE_CMD} > /dev/null
 		if [[ $? -eq 0 ]]; then
 			# global variable containing the repo_name we will be using
