@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>games</herd>
-<longdescription>It's a siteswap animator. The idea behind siteswap is to keep track of the order that balls are thrown and caught, and _only_ that. Since no matter how you juggle, you're catching and throwing in _some_ order, there will always be some siteswap describing it. On the other hand, if you're most interested in _where_ the balls are thrown from and to (as in Mills' Mess), then this won't be a very satisfying partial description.</longdescription>
-</pkgmetadata>
