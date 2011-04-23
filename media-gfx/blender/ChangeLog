@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.188 2011/04/21 09:15:32 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.189 2011/04/23 22:29:01 sping Exp $
+
+*blender-2.49b-r2 (23 Apr 2011)
+
+  23 Apr 2011; Sebastian Pipping <sping@gentoo.org> +blender-2.49b-r2.ebuild,
+  +files/blender-2.49b-CVE-2009-3850-v4.patch:
+  Bump to CVE-2009-3850 patch v4 (bug #293130)
 
 *blender-2.49b-r1 (21 Apr 2011)
 
