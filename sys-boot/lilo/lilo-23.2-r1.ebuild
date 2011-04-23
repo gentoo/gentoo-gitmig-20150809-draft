@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.2-r1.ebuild,v 1.1 2011/04/23 16:12:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.2-r1.ebuild,v 1.2 2011/04/23 16:35:21 jer Exp $
 
 EAPI="2"
 
@@ -22,12 +22,11 @@ SLOT="0"
 LICENSE="BSD GPL-2"
 KEYWORDS="-* ~amd64 ~x86"
 
-DEPEND=">=sys-devel/bin86-0.15.5"
+DEPEND=">=sys-devel/bin86-0.15.5
+	app-arch/sharutils"
 RDEPEND="device-mapper? ( || (
 	>=sys-fs/lvm2-2.02.45
 	>=sys-fs/device-mapper-1.02.12 ) )"
-
-S="${WORKDIR}/${PN}-23.0"
 
 src_prepare() {
 	# this patch is needed when booting PXE and the device you're using
@@ -36,8 +35,11 @@ src_prepare() {
 	use pxeserial && epatch "${FILESDIR}/${PN}-22.8-novga.patch"
 
 	# Do not strip and have parallel make
+	# FIXME: images/Makefile does weird stuff
 	sed -i Makefile src/Makefile \
 		-e '/strip/d;s|^	make|	$(MAKE)|g' \
+		-e '/images install/d' \
+		-e '/images all/d' \
 		|| die "sed strip failed"
 }
 

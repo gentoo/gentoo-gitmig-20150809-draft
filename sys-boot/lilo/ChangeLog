@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.66 2011/04/23 16:12:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.67 2011/04/23 16:35:21 jer Exp $
+
+  23 Apr 2011; Jeroen Roovers <jer@gentoo.org> lilo-23.1-r1.ebuild,
+  lilo-23.2-r1.ebuild:
+  Do not run make in images/ since that tries to run lilo.
 
 *lilo-23.2-r1 (23 Apr 2011)
 *lilo-23.1-r1 (23 Apr 2011)
