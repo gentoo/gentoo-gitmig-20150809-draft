@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.1.ebuild,v 1.3 2011/04/23 16:06:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.2-r1.ebuild,v 1.1 2011/04/23 16:12:07 jer Exp $
 
 EAPI="2"
 
