@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libbluedevil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/ChangeLog,v 1.3 2011/04/11 18:48:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/ChangeLog,v 1.4 2011/04/23 12:41:47 scarabeus Exp $
+
+*libbluedevil-1.9 (23 Apr 2011)
+
+  23 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libbluedevil-1.8.ebuild, -libbluedevil-1.8.1.ebuild,
+  +libbluedevil-1.9.ebuild:
+  Version bump to latest. Drop older.
 
 *libbluedevil-1.8.1 (11 Apr 2011)
 
