@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-RSA
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.70 2010/01/21 12:52:12 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/ChangeLog,v 1.71 2011/04/23 14:50:27 grobian Exp $
+
+  23 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  Crypt-OpenSSL-RSA-0.26.ebuild:
+  Marked ~x64-macos, bug #363103
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org>
   Crypt-OpenSSL-RSA-0.25.ebuild, Crypt-OpenSSL-RSA-0.26.ebuild:
