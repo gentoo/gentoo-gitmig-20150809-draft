@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1_alpha5.ebuild,v 1.2 2011/04/23 17:50:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1_alpha5.ebuild,v 1.3 2011/04/23 18:42:04 grobian Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="none"
 
 inherit autotools eutils flag-o-matic multilib prefix versionator
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 # Upstream doesn't have an underscore in the file name
 MY_PV=${PV/_/}
@@ -63,6 +63,7 @@ PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 src_prepare() {
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/base.patch"
+	epatch "${FILESDIR}"/${PN}-9.0.4-stdbool.patch
 
 	eprefixify src/include/pg_config_manual.h
 
