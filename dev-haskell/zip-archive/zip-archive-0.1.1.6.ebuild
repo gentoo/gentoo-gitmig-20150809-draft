@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.1.1.6.ebuild,v 1.9 2011/02/25 13:13:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.1.1.6.ebuild,v 1.10 2011/04/23 11:11:58 slyfox Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 inherit haskell-cabal
@@ -14,10 +14,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.6.1
+RDEPEND=">=dev-lang/ghc-6.6.1
 		dev-haskell/binary
 		>=dev-haskell/cabal-1.2
 		>=dev-haskell/digest-0.0.0.1
 		dev-haskell/mtl
 		>=dev-haskell/utf8-string-0.3.1
 		dev-haskell/zlib"
+DEPEND="${RDEPEND}"
