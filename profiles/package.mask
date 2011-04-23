@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12723 2011/04/23 15:03:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12724 2011/04/23 15:04:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,14 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Samuli Suominen <ssuominen@gentoo.org> (23 Apr 2011)
-# Some applet listing problems wrt #358171 but the actual
-# reason for removal is the need of gnome-panel with USE=bonobo
-# which is no longer available in gnome-panel-3 in the gnome-overlay
-# soon to be moved to tree.
-# Removal in 30 days
-xfce-extra/xfce4-xfapplet-plugin
 
 # Ryan Hill <dirtyepic@gentoo.org> (23 Apr 2011)
 # Masked for removal on 20110523.
