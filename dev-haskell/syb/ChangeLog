@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/syb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.1 2011/04/23 12:39:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.2 2011/04/23 15:28:46 slyfox Exp $
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> syb-0.3.ebuild:
+  keyworded ~ppc64
 
 *syb-0.3 (23 Apr 2011)
 
