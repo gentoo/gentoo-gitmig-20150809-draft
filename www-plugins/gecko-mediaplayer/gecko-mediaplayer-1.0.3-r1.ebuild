@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.3-r1.ebuild,v 1.1 2011/04/23 09:21:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.3-r1.ebuild,v 1.2 2011/04/23 14:24:02 ssuominen Exp $
 
 EAPI=4
 inherit multilib nsplugins
@@ -17,7 +17,7 @@ IUSE="curl"
 RDEPEND=">=dev-libs/dbus-glib-0.92
 	>=dev-libs/glib-2.26:2
 	dev-libs/nspr
-	>=media-video/gnome-mplayer-${PV}[dbus]
+	>=media-video/gnome-mplayer-1.0.3-r2[dbus]
 	>=net-libs/xulrunner-1.9.2:1.9
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}
