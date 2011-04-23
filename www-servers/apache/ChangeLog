@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.152 2011/04/11 13:58:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.153 2011/04/23 16:19:14 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.17.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #360625
 
   11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> apache-2.2.17.ebuild:
   x86 stable wrt bug #360625
