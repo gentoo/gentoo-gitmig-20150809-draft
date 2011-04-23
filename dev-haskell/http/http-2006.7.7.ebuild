@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/http-2006.7.7.ebuild,v 1.5 2007/12/20 13:28:19 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/http-2006.7.7.ebuild,v 1.6 2011/04/23 13:38:15 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit base versionator eutils haskell-cabal
@@ -21,9 +21,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.4
+RDEPEND=">=dev-lang/ghc-6.4
 		<dev-lang/ghc-6.8
 		>=dev-haskell/network-1.0"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 

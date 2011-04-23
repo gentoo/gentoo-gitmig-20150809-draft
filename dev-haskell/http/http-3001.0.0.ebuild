@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/http-3001.0.0.ebuild,v 1.4 2010/07/01 19:57:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/http-3001.0.0.ebuild,v 1.5 2011/04/23 13:38:15 slyfox Exp $
 
 CABAL_FEATURES="profile haddock lib"
 CABAL_MIN_VERSION=1.2
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.4.2
+RDEPEND=">=dev-lang/ghc-6.4.2
 		dev-haskell/network"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
