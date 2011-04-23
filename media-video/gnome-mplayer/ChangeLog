@@ -1,16 +1,18 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.56 2011/04/23 14:05:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.57 2011/04/23 14:07:34 ssuominen Exp $
+
+*gnome-mplayer-1.0.3-r2 (23 Apr 2011)
 
   23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
-  gnome-mplayer-1.0.3-r1.ebuild:
-  Inherit fdo-mime and gnome2-utils to run some cache updating.
+  +gnome-mplayer-1.0.3-r2.ebuild:
+  Inherit fdo-mime and gnome2-utils to run some cache updating wrt #364513.
 
 *gnome-mplayer-1.0.3-r1 (23 Apr 2011)
 
   23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   +gnome-mplayer-1.0.3-r1.ebuild:
-  Stop using gnome2.eclass and remove support for gnome-base/gconf wrt #364513.
+  Stop inheriting gnome2 and remove support for gnome-base/gconf wrt #364513.
 
 *gnome-mplayer-1.0.3 (22 Apr 2011)
 
