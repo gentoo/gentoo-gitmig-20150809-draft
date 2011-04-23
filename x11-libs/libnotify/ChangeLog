@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.65 2011/04/12 21:00:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.66 2011/04/23 17:15:39 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> libnotify-0.7.2.ebuild:
+  alpha/ia64/sh/sparc/x86 stable wrt #361093
 
   12 Apr 2011; Markus Meier <maekke@gentoo.org> libnotify-0.7.2.ebuild:
   arm stable, bug #361093
