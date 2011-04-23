@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.1 2011/04/03 00:17:14 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.2 2011/04/23 18:26:30 flameeyes Exp $
 
 EAPI="2"
 
@@ -48,7 +48,6 @@ RDEPEND="media-gfx/iscan-data
 	media-gfx/sane-backends
 	>=sys-fs/udev-103
 	>=dev-libs/libusb-0.1.12
-	sys-libs/libieee1284
 	X? (
 		x11-libs/gtk+:2
 		gimp? ( media-gfx/gimp )
@@ -58,6 +57,7 @@ RDEPEND="media-gfx/iscan-data
 	)"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	X? ( sys-devel/gettext )"
 
 src_prepare() {

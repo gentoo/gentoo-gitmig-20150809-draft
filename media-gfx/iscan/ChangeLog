@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.41 2011/04/03 00:17:14 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.42 2011/04/23 18:26:30 flameeyes Exp $
+
+  23 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> iscan-2.26.2.ebuild:
+  Drop dependency over libieee1284 (no longer used by iscan), add missing
+  dependency over pkgconfig for completeness.
 
 *iscan-2.26.2 (03 Apr 2011)
 
