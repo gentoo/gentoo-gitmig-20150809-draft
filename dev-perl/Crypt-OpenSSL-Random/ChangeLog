@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-OpenSSL-Random
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.31 2010/01/21 12:48:40 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-Random/ChangeLog,v 1.32 2011/04/23 14:45:56 grobian Exp $
+
+  23 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  Crypt-OpenSSL-Random-0.04.ebuild:
+  Marked ~x64-macos, bug #363105
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org>
   Crypt-OpenSSL-Random-0.04.ebuild:
