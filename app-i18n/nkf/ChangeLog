@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.46 2011/01/08 19:35:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.47 2011/04/23 15:09:01 grobian Exp $
+
+  23 Apr 2011; Fabian Groffen <grobian@gentoo.org> nkf-2.1.0.ebuild:
+  Marked ~x86-macos, bug #360273
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   nkf-2.0.7.ebuild, nkf-2.0.7-r1.ebuild, nkf-2.1.0.ebuild:
