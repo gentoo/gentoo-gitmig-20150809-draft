@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.111 2011/03/27 19:13:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.112 2011/04/23 17:39:49 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> hoe-2.8.0.ebuild:
+  alpha stable
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> hoe-2.8.0.ebuild:
   Marking hoe-2.8.0 ppc stable for bug 354481

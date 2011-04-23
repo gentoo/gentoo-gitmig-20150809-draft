@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.59 2011/03/07 12:03:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.60 2011/04/23 17:36:25 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> json-1.4.6.ebuild:
+  alpha stable
 
   07 Mar 2011; Raúl Porcel <armin76@gentoo.org> json-1.4.3-r1.ebuild,
   json-1.4.6.ebuild, json-1.4.6-r1.ebuild, json-1.5.0.ebuild,
