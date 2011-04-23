@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1_alpha5.ebuild,v 1.1 2011/03/31 02:29:25 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1_alpha5.ebuild,v 1.2 2011/04/23 17:50:54 grobian Exp $
 
 EAPI="4"
 
 WANT_AUTOMAKE="none"
 
-inherit autotools eutils multilib prefix versionator
+inherit autotools eutils flag-o-matic multilib prefix versionator
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-solaris"
 
 # Upstream doesn't have an underscore in the file name
 MY_PV=${PV/_/}
@@ -76,6 +76,11 @@ src_prepare() {
 }
 
 src_configure() {
+	case ${CHOST} in
+		*-darwin*|*-solaris*)
+			use nls && append-libs intl
+		;;
+	esac
 	export LDFLAGS_SL="${LDFLAGS}"
 	econf \
 		--prefix=${EROOT%/}/usr/$(get_libdir)/postgresql-${SLOT} \

@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.3-r1.ebuild,v 1.2 2011/03/22 11:08:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.0.3-r1.ebuild,v 1.3 2011/04/23 17:50:54 grobian Exp $
 
 EAPI="3"
 
 WANT_AUTOMAKE="none"
 
-inherit autotools eutils multilib prefix versionator
+inherit autotools eutils flag-o-matic multilib prefix versionator
 
 SLOT="$(get_version_component_range 1-2)"
 
@@ -74,6 +74,11 @@ src_prepare() {
 }
 
 src_configure() {
+	case ${CHOST} in
+		*-darwin*|*-solaris*)
+			use nls && append-libs intl
+		;;
+	esac
 	export LDFLAGS_SL="${LDFLAGS}"
 	econf \
 		--prefix=${EROOT%/}/usr/$(get_libdir)/postgresql-${SLOT} \
