@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.71 2011/04/02 12:01:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.72 2011/04/23 11:13:05 armin76 Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
 # quvi support is needed to play youtube files now
@@ -34,7 +34,6 @@ media-gfx/povray mkl
 # Mask python3 for stable portage until python-3.x is marked stable.
 =sys-apps/portage-2.1.9* python3
 =sys-apps/portage-2.1.8* python3
-=sys-apps/portage-2.1.7* python3
 
 # Steve Arnold <nerdboy@gentoo.org> (12 Jun 2010)
 # masking for gdal (see bug 315659)
@@ -90,12 +89,6 @@ sci-libs/hdf5 mpi
 
 # wavgain fails to build
 media-sound/rubyripper wav
-
-# Needs chicken
-dev-lang/swig chicken
-
-# Needs pike
-dev-lang/swig pike
 
 # Needs libmodplug
 media-libs/sdl-sound mikmod

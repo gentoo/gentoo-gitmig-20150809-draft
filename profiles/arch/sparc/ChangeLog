@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.128 2011/04/02 12:50:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.129 2011/04/23 11:13:05 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Cleanup package.use.mask
 
   02 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -virtuals:
   Remove old-style virtual/bootloader, bug 359971.

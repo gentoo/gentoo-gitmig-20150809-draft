@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.48 2011/04/04 18:38:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.49 2011/04/23 11:16:26 armin76 Exp $
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2011)
 # Needs sci-libs/umfpack keyworded. Bug #361947.
@@ -40,7 +40,6 @@ dev-ruby/nokogiri ffi
 # Mask python3 for stable portage until python-3.x is marked stable.
 =sys-apps/portage-2.1.9* python3
 =sys-apps/portage-2.1.8* python3
-=sys-apps/portage-2.1.7* python3
 
 # Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
 # custom-optimization doesn't work on ia64
@@ -62,7 +61,6 @@ x11-wm/fvwm lock
 # Raúl Porcel <armin76@gentoo.org> (11 Apr 2009)
 # net-libs/webkit-gtk segfaults but x11-libs/qt-webkit doesn't
 dev-python/PyQt4 -webkit
-x11-libs/qt-assistant -webkit
 
 # Jean-Noel Rivasseau <elvanor@gentoo.org> (28 Jul 2008)
 # icu4j tests need jdk-1.6

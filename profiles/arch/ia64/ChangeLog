@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.105 2011/04/04 18:38:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.106 2011/04/23 11:16:26 armin76 Exp $
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Cleanup package.use.mask
 
   04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
   Mask umfpack useflag on gegl for now. Bug #361947.
