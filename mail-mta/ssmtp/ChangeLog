@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.111 2011/04/22 16:17:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.112 2011/04/23 17:17:27 grobian Exp $
+
+  23 Apr 2011; Fabian Groffen <grobian@gentoo.org> ssmtp-2.64-r2.ebuild,
+  +files/ssmtp-2.64-uint32_t.patch:
+  Fix compilation on Solaris, fix installation on Prefix
 
 *ssmtp-2.64-r2 (22 Apr 2011)
 

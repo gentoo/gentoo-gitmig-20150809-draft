@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.64-r2.ebuild,v 1.1 2011/04/22 16:17:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.64-r2.ebuild,v 1.2 2011/04/23 17:17:27 grobian Exp $
 
 EAPI="4"
 
@@ -51,6 +51,8 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" EPATCH_SOURCE="${WORKDIR}/patches" \
 		epatch
 
+	epatch "${FILESDIR}"/${P}-uint32_t.patch
+
 	eautoconf
 }
 
@@ -92,10 +94,10 @@ src_install() {
 	# Set restrictive perms on ssmtp.conf as per #187841, #239197
 	# Protect the ssmtp configfile from being readable by regular users as it
 	# may contain login/password data to auth against a the mailhub used.
-	fowners root:ssmtp /etc/ssmtp/ssmtp.conf
+	use prefix || fowners root:ssmtp /etc/ssmtp/ssmtp.conf
 	fperms 640 /etc/ssmtp/ssmtp.conf
 
-	fowners root:ssmtp /usr/sbin/ssmtp
+	use prefix || fowners root:ssmtp /usr/sbin/ssmtp
 	fperms 2711 /usr/sbin/ssmtp
 
 	if use mta; then
