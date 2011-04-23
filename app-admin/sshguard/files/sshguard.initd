@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/files/sshguard.initd,v 1.1 2011/04/23 14:44:44 jer Exp $
+
+: ${SSHGUARD_PIDFILE:='/var/run/sshguard.pid'}
+
+depend() {
+	after iptables
+	use logger
+}
+
+
+start() {
+	local LOGS=
+	for l in ${SSHGUARD_LOGFILES} ; do
+    	LOGS="${LOGS} -l ${l}"
+	done
+
+	ebegin "Starting sshguard"
+	start-stop-daemon --start --background --quiet --exec /usr/sbin/sshguard -- \
+		-i ${SSHGUARD_PIDFILE} ${LOGS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping sshguard"
+	start-stop-daemon --stop -p ${SSHGUARD_PIDFILE}
+	eend $?
+}

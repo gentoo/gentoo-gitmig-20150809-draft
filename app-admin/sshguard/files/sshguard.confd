@@ -1,0 +1,14 @@
+# Config file for /etc/init.d/sshguard
+#   See SSHGUARD(8) for details.
+
+# Initial (empty) options.
+SSHGUARD_OPTS=""
+
+# Files to monitor
+#   -l <source>
+SSHGUARD_OPTS="${SSHGUARD_OPTS} -l /var/log/auth.log"
+
+# White listing
+#   -w <addr/host/block/file>
+#SSHGUARD_OPTS="${SSHGUARD_OPTS} -w 192.168.0.0/24"
+
