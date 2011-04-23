@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.3.4.ebuild,v 1.3 2011/04/23 22:09:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.3.4.ebuild,v 1.4 2011/04/23 22:22:48 fauli Exp $
 
-EAPI=2
-inherit multilib
+EAPI=4
+inherit eutils multilib
 
 MY_P=${PN}-v${PV}
 
@@ -42,6 +42,11 @@ my_config() {
 	local value
 	use ${1} && value=a || value=n
 	myconf="${myconf} ${2}=${value}"
+}
+
+src_prepare() {
+	# reported upstream
+	epatch "${FILESDIR}"/${P}-detect_mp4.h.patch
 }
 
 src_configure() {
