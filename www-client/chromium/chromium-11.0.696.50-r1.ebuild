@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.733.0.ebuild,v 1.1 2011/04/13 15:13:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-11.0.696.50-r1.ebuild,v 1.1 2011/04/23 11:41:18 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils fdo-mime flag-o-matic gnome2-utils multilib pax-utils \
-	portability python toolchain-funcs versionator virtualx
+inherit eutils fdo-mime flag-o-matic gnome2-utils linux-info multilib \
+	pax-utils portability python toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -15,7 +15,7 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cups gnome gnome-keyring kerberos xinerama"
+IUSE="cups gnome gnome-keyring"
 
 RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
@@ -32,10 +32,10 @@ RDEPEND="app-arch/bzip2
 	media-libs/libpng
 	>=media-libs/libvpx-0.9.5
 	media-libs/speex
+	>=media-video/ffmpeg-0.6_p25767[threads]
 	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/pam
 	sys-libs/zlib
-	>=virtual/ffmpeg-0.6.90[threads]
 	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst"
@@ -44,12 +44,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex
-	>=sys-devel/make-3.81-r2
-	x11-libs/libXinerama
-	test? ( dev-python/simplejson virtual/krb5 )"
+	>=sys-devel/make-3.81-r2"
 RDEPEND+="
-	kerberos? ( virtual/krb5 )
-	xinerama? ( x11-libs/libXinerama )
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -98,14 +94,21 @@ pkg_setup() {
 		ewarn "If compilation fails, please try removing -g{,gdb} before reporting a bug."
 	fi
 	eshopts_pop
+
+	# Warn if the kernel doesn't support features useful for sandboxing,
+	# bug #363907.
+	CONFIG_CHECK="~PID_NS ~NET_NS"
+	PID_NS_WARNING="PID (process id) namespaces are needed for sandboxing."
+	NET_NS_WARNING="Network namespaces are needed for sandboxing."
+	check_extra_config
 }
 
 src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
-	epatch "${FILESDIR}/${PN}-system-vpx-r4.patch"
+	epatch "${FILESDIR}/${PN}-system-vpx-r3.patch"
 
-	# Fix some net_unittests failures, bug #361939; to be upstreamed.
-	epatch "${FILESDIR}/${PN}-net-tests-r0.patch"
+	# Backport FFmpeg compatibility patch, bug #355405.
+	epatch "${FILESDIR}/${PN}-ffmpeg-build-r0.patch"
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -121,7 +124,6 @@ src_prepare() {
 		\! -path 'third_party/hunspell/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/launchpad_translations/*' \
-		\! -path 'third_party/leveldb/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libvpx/libvpx.h' \
@@ -132,12 +134,10 @@ src_prepare() {
 		\! -path 'third_party/openmax/*' \
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
-		\! -path 'third_party/pyftpdlib/*' \
 		\! -path 'third_party/skia/*' \
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
-		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
@@ -194,18 +194,9 @@ src_configure() {
 	# for Chromium.
 	myconf+=" -Dproprietary_codecs=1"
 
-	# Use target arch detection logic from bug #354601.
-	case ${CHOST} in
-		i?86-*) myarch=x86 ;;
-		x86_64-*)
-			if [[ $ABI = "" ]] ; then
-				myarch=amd64
-			else
-				myarch="$ABI"
-			fi ;;
-		arm*-*) myarch=arm ;;
-		*) die "Unrecognized CHOST: ${CHOST}"
-	esac
+	# Use target arch detection logic from bug #296917.
+	local myarch="$ABI"
+	[[ $myarch = "" ]] && myarch="$ARCH"
 
 	if [[ $myarch = amd64 ]] ; then
 		myconf+=" -Dtarget_arch=x64"
@@ -236,8 +227,8 @@ src_compile() {
 	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
-		emake {base,net}_unittests BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/{base,net}_unittests
+		emake base_unittests BUILDTYPE=Release V=1 || die
+		pax-mark m out/Release/base_unittests
 	fi
 }
 
@@ -255,11 +246,6 @@ src_test() {
 	# For more info see bug #350347.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
 		'--gtest_filter=-ICUStringConversionsTest.*'
-
-	# NetUtilTest: bug #361885.
-	# UDP: unstable, active development. We should revisit this later.
-	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*UDP*'
 }
 
 src_install() {
