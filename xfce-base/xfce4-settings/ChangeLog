@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.76 2011/03/29 13:10:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.77 2011/04/23 17:14:04 ssuominen Exp $
+
+  23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-settings-4.8.1.ebuild:
+  alpha/ia64/sparc stable wrt #358407
 
   29 Mar 2011; Jeroen Roovers <jer@gentoo.org> xfce4-settings-4.8.1.ebuild:
   Stable for HPPA (bug #358407).

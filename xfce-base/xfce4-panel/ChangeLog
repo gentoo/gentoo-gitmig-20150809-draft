@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.194 2011/04/16 19:13:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.195 2011/04/23 17:17:10 ssuominen Exp $
+
+  23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> xfce4-panel-4.8.3.ebuild:
+  alpha/ia64/sparc stable wrt #358407
 
   16 Apr 2011; Christoph Mende <angelos@gentoo.org> xfce4-panel-4.8.3.ebuild:
   Stable on amd64 wrt bug #363767
