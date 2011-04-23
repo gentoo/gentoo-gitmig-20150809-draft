@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>haskell</herd>
-<maintainer>
-  <email>haskell@gentoo.org</email>
-</maintainer>
+	<herd>haskell</herd>
+	<maintainer>
+		<email>haskell@gentoo.org</email>
+	</maintainer>
+	<longdescription>
+		A monad transformer library, inspired by the paper "Functional
+		Programming with Overloading and Higher-Order Polymorphism",
+		by Mark P Jones (http://web.cecs.pdx.edu/~mpj/pubs/springschool.html),
+		Advanced School of Functional Programming, 1995.
+	</longdescription>
 </pkgmetadata>

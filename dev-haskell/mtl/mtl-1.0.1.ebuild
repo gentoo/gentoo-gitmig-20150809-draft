@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/mtl-1.0.1.ebuild,v 1.9 2008/07/15 05:59:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/mtl-1.0.1.ebuild,v 1.10 2011/04/23 11:48:13 slyfox Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.6"
+RDEPEND=">=dev-lang/ghc-6.6"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${PN}"
 
