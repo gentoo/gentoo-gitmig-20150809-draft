@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.4.3.1.ebuild,v 1.1 2011/03/30 08:55:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.4.3.1.ebuild,v 1.2 2011/04/23 07:05:25 jlec Exp $
 
 EAPI="3"
 
@@ -17,12 +17,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND="dev-python/PyQt4
-	>=dev-python/pyinotify-0.7.1
+RDEPEND="
 	dev-python/jsonpickle
-	>=dev-vcs/git-1.6.3"
+	dev-python/pyinotify
+	dev-python/PyQt4
+	dev-vcs/git"
 DEPEND="${RDEPEND}
-	doc? ( app-text/asciidoc
+	doc? (
+		app-text/asciidoc
 		dev-python/sphinx
 		app-text/xmlto )
 	sys-devel/gettext
@@ -49,7 +51,7 @@ src_prepare() {
 	# don't prefix install path with homedir
 	rm setup.cfg
 
-	epatch "${FILESDIR}/1.3.8-disable-tests.patch"
+	epatch "${FILESDIR}"/1.3.8-disable-tests.patch
 
 	python_convert_shebangs 2 bin/git-cola share/git-cola/bin/ssh-askpass
 }
