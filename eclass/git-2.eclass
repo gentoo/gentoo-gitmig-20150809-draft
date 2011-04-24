@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.3 2011/04/23 10:21:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.4 2011/04/24 15:33:56 scarabeus Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -83,7 +83,7 @@ DEPEND="dev-vcs/git"
 # It can be overriden via env using packagename_LIVE_COMMIT
 # variable.
 #
-# EGIT_BRANCH="${EGIT_BRANCH}"
+# EGIT_COMMIT="${EGIT_BRANCH}"
 
 # @ECLASS-VARIABLE: EGIT_REPACK
 # @DEFAULT_UNSET
