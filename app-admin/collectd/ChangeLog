@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.18 2011/04/24 15:15:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.19 2011/04/24 16:01:24 dilfridge Exp $
+
+  24 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  collectd-4.10.3.ebuild, +files/collectd-4.10.3-lt.patch,
+  collectd-5.0.0.ebuild:
+  Properly address the libtool / eautoreconf problem
 
 *collectd-5.0.0 (24 Apr 2011)
 
