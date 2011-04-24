@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.20 2011/04/24 17:10:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.21 2011/04/24 21:16:04 dilfridge Exp $
+
+  24 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  collectd-4.10.3-r1.ebuild, +files/collectd-4.10.3-werror.patch,
+  collectd-5.0.0-r1.ebuild:
+  Don't use -Werror else gcc-4.6 will drive us mad; move 4.10.3 to EAPI=4;
+  use wrappers for chown and chmod
 
 *collectd-5.0.0-r1 (24 Apr 2011)
 *collectd-4.10.3-r1 (24 Apr 2011)

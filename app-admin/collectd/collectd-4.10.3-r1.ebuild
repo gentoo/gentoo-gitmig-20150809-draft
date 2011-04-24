@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.3-r1.ebuild,v 1.1 2011/04/24 17:10:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.3-r1.ebuild,v 1.2 2011/04/24 21:16:04 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils base linux-info perl-app autotools
 
@@ -103,7 +103,7 @@ RDEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-4.10.1"-{libperl,libiptc,noowniptc}.patch
 	"${FILESDIR}/${PN}-4.10.2"-{libocci,libnotify-0.7,nohal}.patch
-	"${FILESDIR}/${PN}-4.10.3"-lt.patch
+	"${FILESDIR}/${PN}-4.10.3"-{lt,werror}.patch
 	)
 
 # @FUNCTION: collectd_plugin_kernel_linux
@@ -292,24 +292,24 @@ src_install() {
 	# use collectd_plugins_ping && setcap cap_net_raw+ep ${D}/usr/sbin/collectd
 	# we cannot do this yet
 
-	chown root:collectd "${D}/etc/collectd.conf" || die
-	chmod u=rw,g=r,o= "${D}/etc/collectd.conf" || die
+	fowners root:collectd /etc/collectd.conf
+	fperms u=rw,g=r,o= /etc/collectd.conf
 
-	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use contrib ; then
 		insinto /usr/share/doc/${PF}
-		doins -r contrib || die
+		doins -r contrib
 	fi
 
-	keepdir /var/lib/${PN} || die
-	chown collectd:collectd "${D}/var/lib/${PN}" || die
+	keepdir /var/lib/${PN}
+	fowners collectd:collectd /var/lib/${PN}
 
-	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
-	newconfd "${FILESDIR}/${PN}.confd" ${PN} || die
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/logrotate" collectd || die
+	newins "${FILESDIR}/logrotate" collectd
 
 	sed -i -e 's:^.*PIDFile     "/var/run/collectd.pid":PIDFile     "/var/run/collectd/collectd.pid":' "${D}"/etc/collectd.conf || die
 	sed -i -e 's:^#	SocketFile "/var/run/collectd-unixsock":#	SocketFile "/var/run/collectd/collectd-unixsock":' "${D}"/etc/collectd.conf || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.0-r1.ebuild,v 1.1 2011/04/24 17:10:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.0-r1.ebuild,v 1.2 2011/04/24 21:16:04 dilfridge Exp $
 
 EAPI=4
 
@@ -103,7 +103,7 @@ RDEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-4.10.1"-{libperl,libiptc,noowniptc}.patch
 	"${FILESDIR}/${PN}-4.10.2"-{libocci,libnotify-0.7,nohal}.patch
-	"${FILESDIR}/${PN}-4.10.3"-lt.patch
+	"${FILESDIR}/${PN}-4.10.3"-{lt,werror}.patch
 	)
 
 # @FUNCTION: collectd_plugin_kernel_linux
@@ -292,8 +292,8 @@ src_install() {
 	# use collectd_plugins_ping && setcap cap_net_raw+ep ${D}/usr/sbin/collectd
 	# we cannot do this yet
 
-	chown root:collectd "${D}/etc/collectd.conf" || die
-	chmod u=rw,g=r,o= "${D}/etc/collectd.conf" || die
+	fowners root:collectd /etc/collectd.conf
+	fperms u=rw,g=r,o= /etc/collectd.conf
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
@@ -303,7 +303,7 @@ src_install() {
 	fi
 
 	keepdir /var/lib/${PN}
-	chown collectd:collectd "${D}/var/lib/${PN}" || die
+	fowners collectd:collectd /var/lib/${PN}
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
