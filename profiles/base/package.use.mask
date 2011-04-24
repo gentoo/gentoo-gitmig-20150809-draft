@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.228 2011/04/24 16:32:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.229 2011/04/24 17:05:26 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -11,7 +11,9 @@
 >=x11-libs/gdk-pixbuf-2.22.1-r1 -introspection
 >=x11-libs/pango-1.28.4 -introspection
 >=dev-libs/atk-1.32.0-r1 -introspection
-=x11-libs/gtk+-3* -introspection
+>=x11-libs/gtk+-3 -introspection
+>=dev-libs/libunique-3 -introspection
+>=dev-libs/gdl-3 -introspection
 net-libs/rest -introspection
 net-libs/libsocialweb -introspection
 
