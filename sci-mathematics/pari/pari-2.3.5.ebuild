@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.4 2011/03/20 19:58:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.5.ebuild,v 1.5 2011/04/24 14:28:26 grobian Exp $
 
-EAPI=2
+EAPI=3
 inherit elisp-common eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A software package for computer-aided number theory"
@@ -58,7 +58,7 @@ src_prepare() {
 		config/get_dlld || die "Failed to fix LDFLAGS"
 	# move doc dir to a gentoo doc dir and replace hardcoded xdvi by xdg-open
 	sed -i \
-		-e "s:\$d = \$0:\$d = '/usr/share/doc/${PF}':" \
+		-e "s:\$d = \$0:\$d = '${EPREFIX}/usr/share/doc/${PF}':" \
 		-e 's:"xdvi":"xdg-open":' \
 		-e 's:xdvi -paper 29.7x21cm:xdg-open:' \
 		doc/gphelp.in || die "Failed to fix doc dir"
@@ -81,11 +81,11 @@ src_configure() {
 	fi
 	# sysdatadir installs a pari.cfg stuff which is informative only
 	./Configure \
-		--prefix=/usr \
-		--datadir=/usr/share/${PN} \
-		--libdir=/usr/$(get_libdir) \
-		--sysdatadir=/usr/share/doc/${PF} \
-		--mandir=/usr/share/man/man1 \
+		--prefix="${EPREFIX}"/usr \
+		--datadir="${EPREFIX}"/usr/share/${PN} \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
+		--sysdatadir="${EPREFIX}"/usr/share/doc/${PF} \
+		--mandir="${EPREFIX}"/usr/share/man/man1 \
 		--with-readline \
 		$(use_with gmp) \
 		|| die "./Configure failed"
@@ -139,8 +139,8 @@ src_install() {
 	if use doc; then
 		emake \
 			DESTDIR="${D}" \
-			EXDIR="${D}/usr/share/doc/${PF}/examples" \
-			DOCDIR="${D}/usr/share/doc/${PF}" \
+			EXDIR="${ED}/usr/share/doc/${PF}/examples" \
+			DOCDIR="${ED}/usr/share/doc/${PF}" \
 			install-doc || die "Failed to install docs"
 		insinto /usr/share/doc/${PF}
 		doins doc/*.pdf || die "Failed to install pdf docs"
