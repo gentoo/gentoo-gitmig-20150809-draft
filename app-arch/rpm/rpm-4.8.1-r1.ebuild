@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1-r1.ebuild,v 1.2 2011/01/08 19:21:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.8.1-r1.ebuild,v 1.3 2011/04/24 14:51:53 flameeyes Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="nls python doc sqlite caps lua acl"
 
-RDEPEND="=sys-libs/db-4.5*
+RDEPEND=">=sys-libs/db-4.5
 	>=sys-libs/zlib-1.2.3-r1
 	>=app-arch/bzip2-1.0.1
 	>=dev-libs/popt-1.7
