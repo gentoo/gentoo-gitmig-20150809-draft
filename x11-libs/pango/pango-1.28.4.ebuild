@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.2 2011/04/10 10:28:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.3 2011/04/24 16:31:15 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
 
 inherit autotools eutils gnome2 multilib toolchain-funcs
 
@@ -12,7 +13,7 @@ HOMEPAGE="http://www.pango.org/"
 
 LICENSE="LGPL-2 FTL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="X doc +introspection test"
 
 RDEPEND=">=dev-libs/glib-2.24:2
@@ -63,11 +64,6 @@ src_prepare() {
 	fi
 
 	elibtoolize # for Darwin bundles
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
