@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwpg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwpg/ChangeLog,v 1.17 2011/04/24 17:13:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwpg/ChangeLog,v 1.18 2011/04/24 17:22:51 eva Exp $
+
+  24 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> libwpg-0.1.3.ebuild:
+  Move the old ebuild revision to proper slot.
 
 *libwpg-0.1.3-r1 (24 Apr 2011)
 
