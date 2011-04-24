@@ -5,6 +5,5 @@
 <maintainer><email>dilfridge@gentoo.org</email></maintainer>
 <use>
 	<flag name="wpd">Build wordperfect document support.</flag>
-	<flag name="wv2">Build MS-Word .doc support.</flag>
 </use>
 </pkgmetadata>
