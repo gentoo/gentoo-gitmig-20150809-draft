@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.304 2011/02/06 00:14:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.305 2011/04/24 20:48:47 ulm Exp $
+
+  24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> alsa-utils-1.0.23-r1.ebuild,
+  alsa-utils-1.0.24.2.ebuild:
+  Replace dependency on virtual/modutils, bug 358891.
 
 *alsa-utils-1.0.24.2 (06 Feb 2011)
 
