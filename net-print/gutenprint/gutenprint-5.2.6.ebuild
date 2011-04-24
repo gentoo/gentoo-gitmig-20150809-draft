@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.6.ebuild,v 1.2 2011/03/29 08:06:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.6.ebuild,v 1.3 2011/04/24 14:24:13 flameeyes Exp $
 
 EAPI="3"
 
@@ -33,6 +33,7 @@ src_prepare() {
 	sed -i -e "s:<ijs\([^/]\):<ijs/ijs\1:g" src/ghost/ijsgutenprint.c || die "sed failed"
 	# Regen configure
 	mkdir m4local
+	rm m4extra/libtool.m4 || die
 	AT_M4DIR="m4extra" eautoreconf
 }
 
