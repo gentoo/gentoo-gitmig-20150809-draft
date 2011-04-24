@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.12.ebuild,v 1.3 2011/03/02 17:46:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.12.ebuild,v 1.4 2011/04/24 17:20:15 eva Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND="gnome-base/libglade:2.0
 	gnome-base/libgnomeprintui:2.2
 	>=gnome-extra/libgsf-1.14
-	x11-libs/goffice:0.6
+	x11-libs/goffice:0.8
 	x11-libs/gtkglext
 	app-text/gnome-doc-utils
 	>=sci-chemistry/openbabel-2.1.1

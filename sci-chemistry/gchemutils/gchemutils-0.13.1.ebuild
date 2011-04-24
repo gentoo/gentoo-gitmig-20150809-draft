@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.2 2011/03/02 17:46:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.3 2011/04/24 17:20:15 eva Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ IUSE="nls nsplugin"
 
 CDEPEND="
 	gnome-base/libglade:2.0
-	x11-libs/goffice:0.6
+	x11-libs/goffice:0.8
 	x11-libs/gtkglext
 	sci-chemistry/chemical-mime-data
 	sci-chemistry/bodr

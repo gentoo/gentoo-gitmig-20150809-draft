@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gchemutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.14 2011/03/02 17:46:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.15 2011/04/24 17:20:15 eva Exp $
+
+  24 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  gchemutils-0.10.12.ebuild, gchemutils-0.13.1.ebuild:
+  Use proper goffice slot, per configure, bug #360637.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gchemutils-0.10.12.ebuild,
   gchemutils-0.13.1.ebuild:
