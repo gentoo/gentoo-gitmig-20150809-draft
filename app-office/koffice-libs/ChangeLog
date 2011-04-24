@@ -1,6 +1,11 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.124 2011/03/13 08:29:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.125 2011/04/24 13:21:57 dilfridge Exp $
+
+  24 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  koffice-libs-2.3.3.ebuild:
+  Add missing dependency on soprano, hard-disable SpaceNavigator plugin as
+  it is not in portage yet; bug 364535
 
   13 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   koffice-libs-2.2.2.ebuild:

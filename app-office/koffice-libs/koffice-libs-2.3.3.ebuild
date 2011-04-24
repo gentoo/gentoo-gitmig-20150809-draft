@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3.ebuild,v 1.1 2011/02/24 12:00:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3.ebuild,v 1.2 2011/04/24 13:21:57 dilfridge Exp $
 
 EAPI=3
 
@@ -18,6 +18,7 @@ RDEPEND="
 	>=app-office/koffice-data-${PV}:${SLOT}
 	dev-libs/libxml2
 	dev-libs/libxslt
+	dev-libs/soprano
 	>=kde-base/kdepimlibs-${KDE_MINIMAL}
 	media-libs/lcms:0
 	crypt? ( app-crypt/qca:2 )
@@ -58,6 +59,7 @@ src_configure() {
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with openexr OpenEXR)
+		-DWITH_Spnav=OFF
 		-DBUILD_kchart=ON
 		-DBUILD_kformula=ON
 		$(cmake-utils_use_build reports koreport)
