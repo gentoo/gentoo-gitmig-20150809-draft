@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.260 2011/04/24 16:32:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.261 2011/04/24 21:23:13 ulm Exp $
+
+  24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> packages, virtuals:
+  Remove old-style virtual/modutils, bug 358891.
 
   24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Unmask USE=introspection for gtk+:3 deps as well (oops)

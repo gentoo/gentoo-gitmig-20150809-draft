@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.32 2011/04/20 18:29:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.33 2011/04/24 21:23:13 ulm Exp $
+
+  24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
+  Remove old-style virtual/modutils, bug 358891.
 
   20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove cron and libc old-style virtuals, bugs 360109 and 359001.
