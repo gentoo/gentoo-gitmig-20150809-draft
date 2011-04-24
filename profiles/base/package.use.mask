@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.226 2011/04/24 12:21:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.227 2011/04/24 16:24:18 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -8,6 +8,7 @@
 # Nirbheek Chauhan <nirbheek@gentoo.org> (24 Apr 2011)
 # Unmask introspection for specific packages. The migration to unmasking of
 # USE=introspection will be done this way
+=x11-libs/gtk+-3* -introspection
 net-libs/rest -introspection
 net-libs/libsocialweb -introspection
 
