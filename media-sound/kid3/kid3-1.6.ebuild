@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.6.ebuild,v 1.1 2011/04/19 20:42:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.6.ebuild,v 1.2 2011/04/24 15:27:28 scarabeus Exp $
 
 EAPI=4
 KDE_LINGUAS="cs de es et fi fr it nl pl ru tr zh_TW"
-KDE_REQUIRED="optional"
+KDE_REQUIRED="always"
 KDE_HANDBOOK="optional"
 inherit kde4-base
 
@@ -33,12 +33,12 @@ REQUIRED_USE="flac? ( vorbis )"
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with flac)
-		$(cmake-utils_use_with kde)
 		$(cmake-utils_use_with mp3 ID3LIB)
 		$(cmake-utils_use_with mp4 MP4V2)
 		$(cmake-utils_use_with vorbis)
 		$(cmake-utils_use_with taglib)
 		"-DWITH_TUNEPIMP=OFF"
+		"-DWITH_KDE=ON"
 		)
 
 	kde4-base_src_configure
