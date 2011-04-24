@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.273-r1.ebuild,v 1.3 2009/07/16 08:02:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.273-r1.ebuild,v 1.4 2011/04/24 21:01:05 ulm Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~sparc x86"
 DEPEND="sys-apps/iproute2"
 RDEPEND="net-firewall/iptables
 	sys-apps/iproute2[-minimal]
-	virtual/modutils
+	sys-apps/module-init-tools
 	|| (
 		net-misc/wget
 		net-misc/curl

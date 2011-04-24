@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.44 2009/09/29 19:30:17 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.45 2011/04/24 21:01:05 ulm Exp $
+
+  24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> firehol-1.273-r1.ebuild:
+  Replace dependency on virtual/modutils, bug 358891.
 
   29 Sep 2009; Thilo Bangert <bangert@gentoo.org>
   -files/firehol-1.226-to-228.patch, -firehol-1.250-r2.ebuild,
