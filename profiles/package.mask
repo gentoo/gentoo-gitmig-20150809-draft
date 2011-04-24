@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12726 2011/04/23 16:09:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12727 2011/04/24 17:13:34 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -92,11 +92,6 @@ gnustep-base/gnustep-updater
 # Breaks net-voip/sflphone, non maintainer update, but is needed by
 # media-video/ffmpeg
 >=media-libs/celt-0.10
-
-# Pacho Ramos <pacho@gentoo.org> (20 Apr 2011)
-# Masked until tree is ready for them, bug #361565 and #363699
->=app-text/libwpd-0.9
->=media-libs/libwpg-0.2
 
 # Jeroen Roovers <jer@gentoo.org> (19 Apr 2011)
 # development branch of argus/-clients
