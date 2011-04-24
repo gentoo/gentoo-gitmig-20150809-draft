@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.59 2011/04/14 18:13:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.60 2011/04/24 17:05:48 nirbheek Exp $
+
+*gdl-3.0.0 (24 Apr 2011)
+
+  24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +gdl-3.0.0.ebuild,
+  metadata.xml:
+  Move libunique:3 from the gnome overlay to tree, ~hppa dropped w.r.t.
+  KEYWORDREQ bug 364693
 
   14 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -gdl-2.30.0.ebuild:
   Clean up old revision.
