@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.266 2011/04/21 09:47:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.267 2011/04/24 12:20:20 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.use.mask:
+  USE-mask libkms on Solaris as it breaks, bug #319285
 
   21 Apr 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask LLVM/clang 2.9, it's broken for Prefix by design at the moment
