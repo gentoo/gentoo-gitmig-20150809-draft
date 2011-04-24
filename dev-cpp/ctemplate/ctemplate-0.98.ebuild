@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.98.ebuild,v 1.1 2010/10/26 07:41:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-0.98.ebuild,v 1.2 2011/04/24 04:47:17 josejx Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://google-ctemplate.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs vim-syntax"
 
 DEPEND=""
