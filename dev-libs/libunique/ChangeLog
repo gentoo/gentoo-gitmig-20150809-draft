@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.38 2011/04/10 10:52:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.39 2011/04/24 17:05:44 nirbheek Exp $
+
+*libunique-3.0.0 (24 Apr 2011)
+
+  24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  libunique-1.1.6.ebuild, +libunique-3.0.0.ebuild:
+  Move libunique:3 from the gnome overlay to tree, use GNOME2_LA_PUNT
+  instead of a 'find' call, ~hppa dropped w.r.t. KEYWORDREQ bug 364693
 
   10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> libunique-1.1.6.ebuild:
   Punt useless libtool file.
