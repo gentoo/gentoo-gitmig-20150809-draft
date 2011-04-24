@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.99 2010/03/31 19:33:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.100 2011/04/24 18:55:20 ulm Exp $
 
 # Author(s): John Mylchreest <johnm@gentoo.org>,
 #            Stefan Schweizer <genstef@gentoo.org>
@@ -57,7 +57,7 @@
 #
 # To get an idea of how these variables are used, here's a few lines
 # of code from around line 540 in this eclass:
-#		
+#
 #	einfo "Installing ${modulename} module"
 #	cd ${objdir} || die "${objdir} does not exist"
 #	insinto /lib/modules/${KV_FULL}/${libdir}
@@ -136,7 +136,7 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst src_install src_compile pkg_
 IUSE="kernel_linux"
 SLOT="0"
 DESCRIPTION="Based on the $ECLASS eclass"
-RDEPEND="kernel_linux? ( virtual/modutils )"
+RDEPEND="kernel_linux? ( sys-apps/module-init-tools )"
 DEPEND="${RDEPEND}
 	sys-apps/sed
 	kernel_linux? ( virtual/linux-sources )"
@@ -602,7 +602,7 @@ linux-mod_pkg_setup() {
 linux-mod_pkg_setup_binary() {
 	debug-print-function ${FUNCNAME} $*
 	local new_CONFIG_CHECK
-	# ~ needs always to be quoted, else bash expands it.	
+	# ~ needs always to be quoted, else bash expands it.
 	for config in $CONFIG_CHECK ; do
 		optional='~'
 		[[ ${config:0:1} == "~" ]] && optional=''
