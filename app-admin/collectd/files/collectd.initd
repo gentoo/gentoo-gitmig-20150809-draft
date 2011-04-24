@@ -1,11 +1,12 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.3 2010/12/16 17:33:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.4 2011/04/24 17:10:05 dilfridge Exp $
 
-: ${COLLECTD_PIDFILE:='/var/run/collectd.pid'}
+: ${COLLECTD_PIDFILE:='/var/run/collectd/collectd.pid'}
 : ${COLLECTD_CFGFILE:='/etc/collectd.conf'}
 : ${COLLECTD_NICELVL:='5'}
+: ${COLLECTD_USER:='collectd'}
 
 opts="${opts} configtest"
 
@@ -42,9 +43,10 @@ checkconfig() {
 
 start() {
 	checkconfig || return 1
+	[ -d /var/run/collectd ] || mkdir /var/run/collectd && chown collectd:collectd /var/run/collectd
 
 	ebegin "Starting collectd"
-	start-stop-daemon --start \
+	start-stop-daemon --start -c "${COLLECTD_USER}:collectd" \
 		--nicelevel "${COLLECTD_NICELVL}" --exec /usr/sbin/collectd -- \
 			-P "${COLLECTD_PIDFILE}" -C "${COLLECTD_CFGFILE}"
 	eend $? "Failed to start collectd"

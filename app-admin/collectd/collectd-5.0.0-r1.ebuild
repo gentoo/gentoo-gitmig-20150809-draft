@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.3.ebuild,v 1.3 2011/04/24 16:01:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.0-r1.ebuild,v 1.1 2011/04/24 17:10:05 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils base linux-info perl-app autotools
 
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin"
+IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin perl static-libs"
 
 # The plugin lists have to follow here since they extend IUSE
 
@@ -21,7 +21,7 @@ IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin"
 COLLECTD_IMPOSSIBLE_PLUGINS="netapp pinba xmms"
 
 # Plugins that still need some work
-COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc modbus"
+COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc modbus amqp genericjmx lpar redis threshold varnish write_redis v5upgrade"
 
 # Plugins that have been (compile) tested and can be enabled via COLLECTD_PLUGINS
 COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswitch
@@ -47,6 +47,7 @@ unset plugin
 # Now come the dependencies.
 
 COMMON_DEPEND="
+	perl?					( dev-lang/perl[ithreads] ( || ( sys-devel/libperl[ithreads] >=sys-devel/libperl-5.10 ) ) )
 	collectd_plugins_apache?		( net-misc/curl )
 	collectd_plugins_ascent?		( net-misc/curl dev-libs/libxml2 )
 	collectd_plugins_bind?			( dev-libs/libxml2 )
@@ -185,6 +186,7 @@ pkg_setup() {
 	fi
 
 	enewgroup collectd
+	enewuser collectd -1 -1 /var/lib/collectd collectd
 }
 
 src_prepare() {
@@ -250,6 +252,13 @@ src_configure() {
 				fi
 				myconf+=" --disable-${plugin}"
 			fi
+		elif [[ "${plugin}" = "collectd_plugins_perl" ]]; then
+			if use collectd_plugins_perl && ! use perl; then
+				ewarn "Perl plugin disabled as perl bindings disabled by -perl use flag"
+				myconf+= --disable-perl
+			else
+				myconf+=" $(use_enable collectd_plugins_${plugin} ${plugin})"
+			fi
 		else
 			myconf+=" $(use_enable collectd_plugins_${plugin} ${plugin})"
 		fi
@@ -265,8 +274,11 @@ src_configure() {
 		myconf+=" --with-libiptc=no"
 	fi
 
+	# The perl bindings
+	myconf+=" $(use_with perl perl-bindings)"
+
 	# Finally, run econf.
-	KERNEL_DIR="${KERNEL_DIR}" econf --config-cache --without-included-ltdl --disable-static --localstatedir=/var ${myconf}
+	KERNEL_DIR="${KERNEL_DIR}" econf --config-cache --without-included-ltdl $(use_enable static-libs static) --localstatedir=/var ${myconf}
 }
 
 src_install() {
@@ -275,22 +287,32 @@ src_install() {
 	fixlocalpod
 
 	find "${D}/usr/" -name "*.la" -exec rm -f {} +
+	rm "${D}/usr/$(get_libdir)"/collectd/*.a
 
-	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	# use collectd_plugins_ping && setcap cap_net_raw+ep ${D}/usr/sbin/collectd
+	# we cannot do this yet
+
+	chown root:collectd "${D}/etc/collectd.conf" || die
+	chmod u=rw,g=r,o= "${D}/etc/collectd.conf" || die
+
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use contrib ; then
 		insinto /usr/share/doc/${PF}
-		doins -r contrib || die
+		doins -r contrib
 	fi
 
-	keepdir /var/lib/${PN} || die
+	keepdir /var/lib/${PN}
+	chown collectd:collectd "${D}/var/lib/${PN}" || die
 
-	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
-	newconfd "${FILESDIR}/${PN}.confd" ${PN} || die
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/logrotate" collectd || die
+	newins "${FILESDIR}/logrotate" collectd
 
+	sed -i -e 's:^.*PIDFile     "/var/run/collectd.pid":PIDFile     "/var/run/collectd/collectd.pid":' "${D}"/etc/collectd.conf || die
+	sed -i -e 's:^#	SocketFile "/var/run/collectd-unixsock":#	SocketFile "/var/run/collectd/collectd-unixsock":' "${D}"/etc/collectd.conf || die
 	sed -i -e 's:^.*LoadPlugin perl$:# The new, correct way to load the perl plugin -- \n# <LoadPlugin perl>\n#   Globals true\n# </LoadPlugin>:' "${D}"/etc/collectd.conf || die
 	sed -i -e 's:^.*LoadPlugin python$:# The new, correct way to load the python plugin -- \n# <LoadPlugin python>\n#   Globals true\n# </LoadPlugin>:' "${D}"/etc/collectd.conf || die
 }
@@ -309,6 +331,11 @@ pkg_postinst() {
 	collectd_rdeps ntpd net-misc/ntp
 	collectd_rdeps openvpn ">=net-misc/openvpn-2.0.9"
 
+	echo
+	elog "collectd is now started as unprivileged user by default."
+	elog "You may want to recheck the configuration."
+	elog
+
 	if use collectd_plugins_email; then
 		ewarn "The email plug-in is deprecated. To submit statistics please use the unixsock plugin."
 	fi
@@ -316,4 +343,9 @@ pkg_postinst() {
 		elog "The scripts in /usr/share/doc/${PF}/collection3 for generating graphs need dev-perl/HTML-Parser,"
 		elog "dev-perl/config-general, dev-perl/regexp-common, and net-analyzer/rrdtool[perl] to be installed."
 	fi
+	ewarn
+	ewarn "Version 5 of collectd uses a database format different from version 4. You will"
+	ewarn "have to migrate your database after the upgrade, following the guide at"
+	ewarn "   http://www.collectd.org/wiki/index.php/V4_to_v5_migration_guide"
+	ewarn
 }
