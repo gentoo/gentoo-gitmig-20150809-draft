@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/menumaker-0.99.7.ebuild,v 1.5 2010/05/28 11:34:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/menumaker/menumaker-0.99.7.ebuild,v 1.6 2011/04/24 14:16:26 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,6 +21,7 @@ RDEPEND=""
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_configure() {
@@ -38,6 +39,7 @@ src_compile() {
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	python_need_rebuild
 
 	find "${D}" "(" -name "*.pyc" -o -name "*.pyo" ")" -print0 | xargs -0 rm -fr
 
