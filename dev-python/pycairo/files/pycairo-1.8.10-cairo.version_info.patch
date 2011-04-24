@@ -1,0 +1,14 @@
+http://cgit.freedesktop.org/py2cairo/patch/?id=3953265c398ccbd600b4d788f7c8f9a8e0e644a2
+
+--- setup.py
++++ setup.py
+@@ -64,8 +64,8 @@
+ #define _CONFIG_H 1
+ 
+ #define PYCAIRO_VERSION_MAJOR %s
+-#define PYCAIRO_VERSION_MICRO %s
+ #define PYCAIRO_VERSION_MINOR %s
++#define PYCAIRO_VERSION_MICRO %s
+ #define VERSION "%s"
+ 
+ #endif // _CONFIG_H

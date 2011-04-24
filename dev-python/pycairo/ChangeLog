@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pycairo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.98 2010/10/23 12:21:38 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.99 2011/04/24 20:31:13 arfrever Exp $
+
+*pycairo-1.10.0 (24 Apr 2011)
+
+  24 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +files/pycairo-1.8.10-cairo.version_info.patch, +pycairo-1.10.0.ebuild,
+  +files/pycairo-1.10.0-svg_check.patch:
+  Version bump. This ebuild provides pycairo 1.10.0 for Python 3 and pycairo
+  1.8.10 for Python 2. Fix cairo.version_info in pycairo 1.8.10 for Python 2
+  (bug #361781).
 
   23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -pycairo-1.8.8.ebuild, -files/pycairo-1.8.8-pkgconfig_dir.patch:
