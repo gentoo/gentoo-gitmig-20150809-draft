@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.3 2011/04/22 16:20:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.4 2011/04/24 05:25:11 eras Exp $
+
+  24 Apr 2011; Eray Aslan <eras@gentoo.org> mta-0.ebuild:
+  add mail-mta/citadel to RDEPEND - bug #364401
 
   22 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> mta-0.ebuild:
   Update msmtp dependency to relate to the mta USE flags like I've done for the
