@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.8.1-r1.ebuild,v 1.1 2010/01/24 01:31:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.8.1-r1.ebuild,v 1.2 2011/04/24 20:53:10 ulm Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ CONFIG_CHECK="USB SOUND"
 MODULE_NAMES="line6usb(usb:${S}:${S})"
 ERROR_PODXTPRO="${P} requires the podxtpro driver to be removed first."
 
-RDEPEND="virtual/modutils
+RDEPEND="sys-apps/module-init-tools
 	dev-lang/perl"
 DEPEND="${RDEPEND}
 	>=media-sound/alsa-headers-1.0.10
@@ -97,8 +97,8 @@ src_install() {
 
 	dodoc INSTALL
 	if use doc; then
-	    insinto /usr/share/doc/${P}
-	    doins "${DISTDIR}"/driverdocs.pdf
+		insinto /usr/share/doc/${P}
+		doins "${DISTDIR}"/driverdocs.pdf
 	fi
 }
 
@@ -118,7 +118,7 @@ check_upgrade() {
 	local old="podxtpro.${KV_OBJ}"
 	local new="line6usb.${KV_OBJ}"
 	if [[ -e \
-	    "/lib/modules/${KV_FULL}/kernel/sound/usb/${old}" ]]; then
+		"/lib/modules/${KV_FULL}/kernel/sound/usb/${old}" ]]; then
 		eerror "The previous version of the driver called podxtpro"
 		eerror "exists on your system."
 		eerror
@@ -127,7 +127,7 @@ check_upgrade() {
 		eerror
 		die "upgrade not possible with existing driver"
 	elif [[ -e \
-	    "/lib/modules/${KV_FULL}/kernel/sound/usb/${new}" ]]; then
+		"/lib/modules/${KV_FULL}/kernel/sound/usb/${new}" ]]; then
 		ewarn
 		ewarn "Depending on the portage version, collisions can be expected"
 		ewarn "(because kernel modules are protected by default).  Use"
