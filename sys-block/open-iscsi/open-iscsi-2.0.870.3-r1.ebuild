@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3-r1.ebuild,v 1.1 2009/10/27 19:47:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3-r1.ebuild,v 1.2 2011/04/24 21:04:38 ulm Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~mips"
 IUSE="modules utils debug"
 DEPEND="virtual/linux-sources"
 RDEPEND="${DEPEND}
-		virtual/modutils
+		sys-apps/module-init-tools
 		sys-apps/util-linux"
 
 S="${WORKDIR}/${MY_PV}"
