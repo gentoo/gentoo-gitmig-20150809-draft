@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigRat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.30 2011/02/14 07:42:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigRat/ChangeLog,v 1.31 2011/04/24 15:27:07 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  Math-BigRat-0.260.200.ebuild:
+  Marked ~x86-solaris, bug #296509
 
 *Math-BigRat-0.260.200 (14 Feb 2011)
 
