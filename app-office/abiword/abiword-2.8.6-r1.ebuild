@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.8 2011/04/15 12:02:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.9 2011/04/24 17:24:12 eva Exp $
 
 EAPI="3"
 
@@ -48,8 +48,8 @@ RDEPEND="
 		readline? ( sys-libs/readline )
 		thesaurus? ( >=app-text/aiksaurus-1.2[gtk] )
 		wordperfect? (
-			>=app-text/libwpd-0.8:0
-			>=media-libs/libwpg-0.1 )
+			app-text/libwpd:0.8
+			media-libs/libwpg:0.1 )
 		wmf? ( >=media-libs/libwmf-0.2.8 )
 	)
 	spell? ( >=app-text/enchant-1.2 )
