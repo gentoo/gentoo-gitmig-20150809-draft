@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.81 2011/04/24 14:28:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.82 2011/04/24 15:49:42 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> pari-2.3.5.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> pari-2.3.5.ebuild:
   Fix for Prefix, use EAPI=3
