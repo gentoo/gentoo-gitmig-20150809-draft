@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.21 2011/03/30 12:09:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.22 2011/04/24 15:24:44 flameeyes Exp $
+
+*lxc-0.7.4.1-r1 (24 Apr 2011)
+
+  24 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> -lxc-0.7.4.1.ebuild,
+  +lxc-0.7.4.1-r1.ebuild, files/lxc.initd:
+  Revision bump to improve the init script so that it searches the new location
+  of configuration files created by lxc-create (closes bug #364611).
 
 *lxc-0.7.4.1 (30 Mar 2011)
 
