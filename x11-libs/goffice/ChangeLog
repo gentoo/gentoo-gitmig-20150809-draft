@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.91 2011/03/26 21:02:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.92 2011/04/24 17:35:05 eva Exp $
+
+  24 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -goffice-0.4.3.ebuild,
+  -goffice-0.6.6.ebuild:
+  Clean up old slots, bug #360639.
 
 *goffice-0.8.14 (26 Mar 2011)
 
