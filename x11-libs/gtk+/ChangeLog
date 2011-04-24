@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.504 2011/04/16 09:10:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.505 2011/04/24 16:35:14 nirbheek Exp $
+
+  24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk+-3.0.8.ebuild,
+  gtk+-3.0.9.ebuild:
+  Drop keywords on mips/hppa w.r.t. KEYWORDREQ bug 364693
 
 *gtk+-3.0.9 (16 Apr 2011)
 

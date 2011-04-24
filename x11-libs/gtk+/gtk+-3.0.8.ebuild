@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.8.ebuild,v 1.2 2011/04/09 18:50:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.8.ebuild,v 1.3 2011/04/24 16:35:14 nirbheek Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SLOT="3"
 #  * http://mail.gnome.org/archives/gtk-devel-list/2010-November/msg00099.html
 # NOTE: Lots of aqua stuff in this ebuild is probably very broken
 IUSE="aqua cups debug doc examples +introspection test vim-syntax xinerama"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # FIXME: introspection data is built against system installation of gtk+:3
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
