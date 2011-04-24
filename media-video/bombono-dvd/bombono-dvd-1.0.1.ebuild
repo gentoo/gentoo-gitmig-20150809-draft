@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.0.1.ebuild,v 1.2 2011/04/11 17:11:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.0.1.ebuild,v 1.3 2011/04/24 15:03:27 dilfridge Exp $
 
 EAPI=4
 
@@ -33,6 +33,8 @@ RDEPEND="
 
 DEPEND=">=dev-util/scons-0.96.1
 	${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-cflags.patch" )
 
 src_compile() {
 	append-flags -DBOOST_FILESYSTEM_VERSION=2
