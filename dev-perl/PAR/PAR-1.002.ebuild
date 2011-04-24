@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/PAR-1.002.ebuild,v 1.2 2010/12/18 10:25:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/PAR-1.002.ebuild,v 1.3 2011/04/24 16:03:51 grobian Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Perl Archive Toolkit"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~x86-solaris"
 IUSE=""
 
 DEPEND="virtual/perl-AutoLoader

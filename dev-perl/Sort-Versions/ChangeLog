@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sort-Versions
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Versions/ChangeLog,v 1.20 2010/01/11 20:13:41 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Versions/ChangeLog,v 1.21 2011/04/24 15:50:39 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Sort-Versions-1.5.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   11 Jan 2010; Fabian Groffen <grobian@gentoo.org> Sort-Versions-1.5.ebuild:
   Transfer Prefix keywords

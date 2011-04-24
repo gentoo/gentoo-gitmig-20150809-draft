@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/convert-pem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.36 2011/01/13 12:34:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.37 2011/04/24 15:51:37 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> convert-pem-0.80.ebuild:
+  Marked ~x86-solaris, bug #296509
 
 *convert-pem-0.80 (13 Jan 2011)
 

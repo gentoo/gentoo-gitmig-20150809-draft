@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/class-loader
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/ChangeLog,v 1.18 2010/01/09 18:54:56 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/ChangeLog,v 1.19 2011/04/24 15:53:56 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> class-loader-2.03.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> class-loader-2.03.ebuild:
   Transfer Prefix keywords

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.29 2011/01/14 17:02:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.30 2011/04/24 15:58:12 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  Module-Signature-0.66.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   14 Jan 2011; Torsten Veller <tove@gentoo.org> -Module-Signature-0.55.ebuild,
   -Module-Signature-0.64.ebuild, -Module-Signature-0.65.ebuild:

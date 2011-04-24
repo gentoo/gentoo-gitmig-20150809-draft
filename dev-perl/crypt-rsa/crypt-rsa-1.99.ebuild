@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.99.ebuild,v 1.6 2009/11/24 19:54:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.99.ebuild,v 1.7 2011/04/24 15:57:02 grobian Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ inherit perl-module
 DESCRIPTION="RSA public-key cryptosystem"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ~ppc sparc x86 ~x86-solaris"
 IUSE=""
 
 DEPEND="dev-perl/class-loader

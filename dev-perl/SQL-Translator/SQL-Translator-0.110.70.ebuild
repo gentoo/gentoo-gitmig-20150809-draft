@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/SQL-Translator-0.110.70.ebuild,v 1.1 2011/02/26 10:10:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/SQL-Translator-0.110.70.ebuild,v 1.2 2011/04/24 16:10:19 grobian Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ DESCRIPTION="Convert RDBMS SQL CREATE syntax"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-solaris"
 IUSE="test"
 
 RDEPEND=">=dev-perl/yaml-0.68

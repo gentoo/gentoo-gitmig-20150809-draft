@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-idea
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.32 2010/01/09 19:04:51 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.33 2011/04/24 15:49:15 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> crypt-idea-1.08.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> crypt-idea-1.08.ebuild:
   Transfer Prefix keywords

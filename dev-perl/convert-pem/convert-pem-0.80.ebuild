@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.80.ebuild,v 1.1 2011/01/13 12:34:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/convert-pem-0.80.ebuild,v 1.2 2011/04/24 15:51:37 grobian Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Read/write encrypted ASN.1 PEM files"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-random
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/ChangeLog,v 1.20 2010/01/09 19:07:25 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/ChangeLog,v 1.21 2011/04/24 15:53:29 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> crypt-random-1.25.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> crypt-random-1.25.ebuild:
   Transfer Prefix keywords

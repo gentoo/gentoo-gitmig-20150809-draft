@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-1.16.ebuild,v 1.9 2010/09/06 18:50:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-1.16.ebuild,v 1.10 2011/04/24 15:57:52 grobian Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ inherit perl-module
 DESCRIPTION="DSA Signatures and Key Generation"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ~ppc sparc x86 ~x86-solaris"
 IUSE="test"
 
 RDEPEND="dev-perl/data-buffer

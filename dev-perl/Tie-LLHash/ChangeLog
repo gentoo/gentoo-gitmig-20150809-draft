@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-LLHash
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-LLHash/ChangeLog,v 1.1 2009/06/30 19:50:28 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-LLHash/ChangeLog,v 1.2 2011/04/24 16:00:02 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Tie-LLHash-1.003.ebuild:
+  Marked ~x86-solaris, bug #296509
 
 *Tie-LLHash-1.003 (30 Jun 2009)
 

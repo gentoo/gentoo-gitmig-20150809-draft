@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-UPnP
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-UPnP/ChangeLog,v 1.8 2010/03/15 19:15:21 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-UPnP/ChangeLog,v 1.9 2011/04/24 16:06:07 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Net-UPnP-1.4.2.ebuild:
+  Marked ~x86-solaris, bug #296509
 
   15 Mar 2010; nixnut <nixnut@gentoo.org> Net-UPnP-1.4.2.ebuild:
   ppc stable #307821
