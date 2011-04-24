@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1_alpha5-r1.ebuild,v 1.1 2011/04/12 00:26:37 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1_alpha5-r1.ebuild,v 1.2 2011/04/24 09:36:30 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
 
 WANT_AUTOMAKE="none"
-inherit autotools eutils multilib pam prefix python versionator
+inherit autotools eutils flag-o-matic multilib pam prefix python versionator
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 # Upstream doesn't have an underscore in the file name
 MY_PV=${PV/_/}
@@ -62,6 +62,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/server.patch"
+	epatch "${FILESDIR}"/${PN}-9.0.4-bool.patch
 
 	eprefixify src/include/pg_config_manual.h
 
@@ -77,6 +78,11 @@ src_prepare() {
 }
 
 src_configure() {
+	case ${CHOST} in
+		*-darwin*|*-solaris*)
+			use nls && append-libs intl
+		;;
+	esac
 	# eval is needed to get along with pg_config quotation of space-rich entities.
 	eval econf "$(${EROOT%/}/usr/$(get_libdir)/postgresql-${SLOT}/bin/pg_config --configure)" \
 		$(use_with perl) \

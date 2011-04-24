@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.4.ebuild,v 1.1 2011/04/20 04:32:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.4.ebuild,v 1.2 2011/04/24 09:36:30 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -10,7 +10,7 @@ inherit autotools eutils multilib pam prefix python versionator
 
 SLOT="$(get_version_component_range 1-2)"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
@@ -62,6 +62,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/server.patch"
+	epatch "${FILESDIR}"/${P}-bool.patch
 
 	eprefixify src/include/pg_config_manual.h
 

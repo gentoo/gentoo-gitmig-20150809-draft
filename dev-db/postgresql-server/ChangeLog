@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.121 2011/04/20 04:32:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.122 2011/04/24 09:36:30 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  postgresql-server-9.0.3-r4.ebuild, postgresql-server-9.0.4.ebuild,
+  +files/postgresql-server-9.0.4-bool.patch,
+  postgresql-server-9.1_alpha5-r1.ebuild:
+  Fixed for and marked ~ppc-macos and ~x86-solaris
 
 *postgresql-server-9.0.4 (20 Apr 2011)
 *postgresql-server-8.4.8 (20 Apr 2011)
