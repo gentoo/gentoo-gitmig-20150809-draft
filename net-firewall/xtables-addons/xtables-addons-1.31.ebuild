@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.31.ebuild,v 1.1 2010/11/11 16:41:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.31.ebuild,v 1.2 2011/04/24 18:18:44 ulm Exp $
 
 EAPI="3"
 
@@ -21,8 +21,7 @@ for mod in ${MODULES}; do
 	IUSE="${IUSE} xtables_addons_${mod}"
 done
 
-DEPEND="virtual/modutils
-	>=net-firewall/iptables-1.4.3"
+DEPEND=">=net-firewall/iptables-1.4.3"
 
 RDEPEND="${DEPEND}
 	xtables_addons_ipset? ( !net-firewall/ipset )

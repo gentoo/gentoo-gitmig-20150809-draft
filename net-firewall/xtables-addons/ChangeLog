@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/xtables-addons
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.12 2010/11/11 16:41:29 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.13 2011/04/24 18:18:44 ulm Exp $
+
+  24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> xtables-addons-1.28-r1.ebuild,
+  xtables-addons-1.30.ebuild, xtables-addons-1.31.ebuild:
+  Remove dependency on virtual/modutils, it is redundant with linux-mod.eclass,
+  bug 358891.
 
 *xtables-addons-1.31 (11 Nov 2010)
 
