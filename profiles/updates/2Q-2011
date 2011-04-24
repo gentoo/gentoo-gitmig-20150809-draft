@@ -6,3 +6,5 @@ move dev-php5/adodb-ext dev-php/adodb-ext
 move dev-php5/onphp dev-php/onphp
 move dev-php5/xcache dev-php/xcache
 move dev-php5/magickwand dev-php/magickwand
+slotmove <app-text/libwpd-0.9 0 0.8
+slotmove >=app-text/libwpd-0.9 0 0.9
