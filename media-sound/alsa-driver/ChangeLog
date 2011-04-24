@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.311 2011/03/19 18:11:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.312 2011/04/24 18:16:25 ulm Exp $
+
+  24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> alsa-driver-1.0.23.ebuild,
+  alsa-driver-9999.ebuild:
+  Remove dependency on virtual/modutils, it is redundant with linux-mod.eclass,
+  bug 358891.
 
   19 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   alsa-driver-1.0.22.1.ebuild, alsa-driver-1.0.23.ebuild,

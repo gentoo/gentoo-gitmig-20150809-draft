@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.18 2011/03/20 13:45:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.19 2011/04/24 18:16:25 ulm Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools git
 
@@ -37,8 +37,7 @@ for iuse_card in ${IUSE_CARDS}; do
 	IUSE="${IUSE} alsa_cards_${iuse_card}"
 done
 
-RDEPEND="virtual/modutils
-	 !media-sound/snd-aoa"
+RDEPEND="!media-sound/snd-aoa"
 DEPEND="${RDEPEND}
 	~media-sound/alsa-headers-${PV}
 	virtual/linux-sources
