@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-2.32.0-r1.ebuild,v 1.8 2011/03/22 19:45:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-2.32.0-r1.ebuild,v 1.9 2011/04/24 08:17:03 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ CDEPEND="
 	>=x11-libs/gtk+-2.20:2
 	=sys-fs/udisks-1.0*[remote-access?]
 	>=dev-libs/libatasmart-0.14
-	>=x11-libs/libnotify-0.3
+	<x11-libs/libnotify-0.7
 	avahi? ( >=net-dns/avahi-0.6.25[gtk] )
 	gnome-keyring? ( || (
 		gnome-base/libgnome-keyring
