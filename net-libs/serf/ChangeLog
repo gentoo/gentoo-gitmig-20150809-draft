@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.50 2011/03/25 10:15:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.51 2011/04/24 16:29:20 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> serf-0.7.2.ebuild:
+  Marked ~ppc-macos and ~x64-macos, bug #293901
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> serf-0.7.1.ebuild:
   ppc/ppc64 stable wrt #357277
