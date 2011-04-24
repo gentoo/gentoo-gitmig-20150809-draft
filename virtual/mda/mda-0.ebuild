@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mda/mda-0.ebuild,v 1.3 2011/04/22 06:25:36 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mda/mda-0.ebuild,v 1.4 2011/04/24 05:19:52 eras Exp $
 
 EAPI=3
 
@@ -20,4 +20,5 @@ RDEPEND="|| (	mail-filter/procmail
 				mail-mta/courier
 				mail-mta/mini-qmail
 				mail-mta/netqmail
-				mail-mta/qmail-ldap )"
+				mail-mta/qmail-ldap
+				mail-mta/citadel )"
