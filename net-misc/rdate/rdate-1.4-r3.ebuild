@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-1.4-r3.ebuild,v 1.14 2010/10/18 16:54:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/rdate-1.4-r3.ebuild,v 1.15 2011/04/24 04:17:43 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="use TCP or UDP to retrieve the current time of another machine"
 HOMEPAGE="http://www.apps.ietf.org/rfc/rfc868.html"
@@ -16,8 +16,8 @@ IUSE="ipv6"
 DEPEND=""
 
 src_compile() {
-	use ipv6 && append-flags "-DINET6"
-	emake RCFLAGS="${CFLAGS}" || die "emake failed"
+	use ipv6 && append-cppflags "-DINET6"
+	emake RCFLAGS="${CFLAGS} ${CPPFLAGS} ${LDFLAGS}" CC="$(tc-getCC)" || die
 }
 
 src_install(){
