@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.18 2011/04/20 03:59:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.19 2011/04/24 16:52:11 nirbheek Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -45,7 +45,7 @@ mozconfig_config() {
 	mozconfig_use_enable debug
 	mozconfig_use_enable debug tests
 	mozconfig_use_enable debug debugger-info-modeules
-	if has ipc ${IUSE}; then
+	if has +ipc ${IUSE}; then
 		mozconfig_use_enable ipc
 	fi
 	mozconfig_use_enable libnotify
