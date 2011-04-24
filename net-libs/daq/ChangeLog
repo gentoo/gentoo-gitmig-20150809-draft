@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.10 2011/03/13 01:03:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.11 2011/04/24 17:48:19 armin76 Exp $
+
+  24 Apr 2011; Raúl Porcel <armin76@gentoo.org> daq-0.5.ebuild:
+  Add ~sparc wrt #351551
 
   13 Mar 2011; Markus Meier <maekke@gentoo.org> daq-0.5.ebuild:
   add ~arm, bug #351551
