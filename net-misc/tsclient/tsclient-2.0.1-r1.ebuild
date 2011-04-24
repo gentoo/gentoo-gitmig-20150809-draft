@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1.ebuild,v 1.4 2011/03/13 08:19:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-2.0.1-r1.ebuild,v 1.1 2011/04/24 14:48:25 eva Exp $
 
 EAPI=2
 
 inherit eutils autotools
 
 DESCRIPTION="GTK2 frontend for rdesktop"
-HOMEPAGE="http://sourceforge.net/projects/${PN}"
+HOMEPAGE="http://sourceforge.net/projects/tsclient"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -35,8 +35,10 @@ RDEPEND="${RDEPEND}
 	>=net-misc/rdesktop-1.3.0"
 
 src_prepare() {
+	# Fix .desktop file as per upstream changes, bug #351386
 	epatch "${FILESDIR}"/${P}-no-networkmanager.patch \
-		"${FILESDIR}"/${P}-libnotify-0.7.patch
+		"${FILESDIR}"/${P}-libnotify-0.7.patch \
+		"${FILESDIR}"/${P}-desktop-file.patch
 
 	# For recent libgnomeui
 	sed -i -e 's:libgnome-2\.0:\0 libgnomeui-2\.0:' \
