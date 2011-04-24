@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20110329.ebuild,v 1.1 2011/03/29 23:01:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20110329-r1.ebuild,v 1.1 2011/04/24 21:54:17 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 inherit base flag-o-matic eutils multilib
 
@@ -28,6 +28,8 @@ RDEPEND="${COMMON_DEPEND}
 
 S=${WORKDIR}/spyview-2011-03-29-10_59
 
+PATCHES=( "${FILESDIR}/${P}-xsection_fn.patch" )
+
 src_prepare() {
 	append-cflags $(fltk-config --cflags)
 	append-cxxflags $(fltk-config --cxxflags) -I/usr/include/netpbm
@@ -36,6 +38,8 @@ src_prepare() {
 	# this one leads to an insane amount of warnings
 
 	append-ldflags -L$(dirname $(fltk-config --libs))
+
+	base_src_prepare
 }
 
 src_configure() {

@@ -1,0 +1,38 @@
+diff -ruN spyview-2011-03-29-10_59.orig/spyview/ImageWindow.C spyview-2011-03-29-10_59/spyview/ImageWindow.C
+--- spyview-2011-03-29-10_59.orig/spyview/ImageWindow.C	2010-08-10 22:12:05.000000000 +0200
++++ spyview-2011-03-29-10_59/spyview/ImageWindow.C	2011-04-24 23:43:55.000000000 +0200
+@@ -2034,25 +2034,25 @@
+ void ImageWindow::exportLinecut()
+ {
+   // Ok, this is a real hack, but it's easy...
+-  char tmp[1024];
+-  char label[1024];
+-  char fn[1024];
++  char tmp[256];
++  char label[256];
++  char fn[256];
+ 
+   //sprintf is just so damn more convenient than c++ strings
+   if (line_cut_type == HORZLINE) 
+-    snprintf(label, 1024, "l.%d", line_cut_yp);
++    snprintf(label, 256, "l.%d", line_cut_yp);
+   else if (line_cut_type == VERTLINE) 
+-    snprintf(label, 1024, "c.%d", line_cut_xp);
++    snprintf(label, 256, "c.%d", line_cut_xp);
+   else 
+     sprintf(label, "other");
+-  snprintf(fn, 1024, "%s.%s.linecut.dat", output_basename, label);
++  snprintf(fn, 256, "%s.%s.linecut.dat", output_basename, label);
+ 	
+   info("exporting linecut to file %s\n", fn);
+ 
+-  strncpy(tmp, xsection_fn, 1024);
+-  strncpy(xsection_fn, fn, 1024);
++  strncpy(tmp, xsection_fn, 256);
++  strncpy(xsection_fn, fn, 256);
+   plotLineCut();
+-  strncpy(xsection_fn, tmp, 1024);
++  strncpy(xsection_fn, tmp, 256);
+ }
+ 
+ void ImageWindow::exportGnuplot()

@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/spyview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.12 2011/03/29 23:01:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/ChangeLog,v 1.13 2011/04/24 21:54:17 dilfridge Exp $
+
+*spyview-20110329-r1 (24 Apr 2011)
+
+  24 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -spyview-20110329.ebuild, +spyview-20110329-r1.ebuild,
+  +files/spyview-20110329-xsection_fn.patch:
+  Fix buffer overflow, bug 339898
 
 *spyview-20110329 (29 Mar 2011)
 
