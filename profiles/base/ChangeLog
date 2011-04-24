@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.257 2011/04/20 18:29:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.258 2011/04/24 12:21:44 nirbheek Exp $
+
+  24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Unmask USE=introspection on a few packages. This list will grow till the
+  use.mask can be removed completely.
 
   20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove cron and libc old-style virtuals, bugs 360109 and 359001.
