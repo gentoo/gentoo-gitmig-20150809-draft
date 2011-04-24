@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/cantarell
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/ChangeLog,v 1.1 2011/04/24 15:39:25 nirbheek Exp $
+
+*cantarell-0.0.6 (24 Apr 2011)
+
+  24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +cantarell-0.0.6.ebuild, +metadata.xml:
+  Move cantarell from the gnome overlay to tree
+
