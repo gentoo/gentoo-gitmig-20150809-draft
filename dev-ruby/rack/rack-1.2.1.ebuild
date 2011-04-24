@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.2.1.ebuild,v 1.6 2011/01/10 18:18:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.2.1.ebuild,v 1.7 2011/04/24 01:40:03 matsuu Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -25,7 +25,7 @@ IUSE=""
 ruby_add_bdepend "test? ( dev-ruby/bacon dev-ruby/ruby-fcgi )"
 
 # Block against versions in older slots that also try to install a binary.
-RDEPEND="${RDEPEND} !<dev-ruby/rack-1.1.0-r1"
+RDEPEND="${RDEPEND} !<dev-ruby/rack-1.1.0-r1:0"
 
 #USE_RUBY=ruby19 \
 #	ruby_add_bdepend "ruby_targets_ruby19 test" '=dev-ruby/test-unit-1*'
