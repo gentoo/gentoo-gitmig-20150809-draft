@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.14 2011/03/27 20:59:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.15 2011/04/24 18:24:20 mgorny Exp $
+
+*smart-live-rebuild-0.7.2 (24 Apr 2011)
+
+  24 Apr 2011; Michał Górny <mgorny@gentoo.org>
+  -smart-live-rebuild-0.7.1.ebuild, +smart-live-rebuild-0.7.2.ebuild:
+  Version bump. The new version adds support for EVCS_OFFLINE (bug #364545) and
+  git-2 eclass.
 
 *smart-live-rebuild-0.7.1 (27 Mar 2011)
 
