@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.3.ebuild,v 1.1 2011/03/10 15:28:17 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.3.ebuild,v 1.2 2011/04/24 16:19:43 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DESCRIPTION="Logitech SqueezeboxServer music server"
 HOMEPAGE="http://www.mysqueezebox.com/download"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-solaris"
 IUSE="lame wavpack ogg flac aac"
 
 # Note: EV present because of bug#287857.
@@ -27,7 +27,7 @@ SRC_URI="http://downloads.slimdevices.com/${SRC_DIR}/${MY_P}.tgz
 # Note: common-sense currently required due to bundled EV (Gentoo bug#287257)
 DEPEND="
 	!media-sound/squeezecenter
-	virtual/logger
+	!prefix? ( virtual/logger )
 	virtual/mysql
 	>=dev-perl/common-sense-2.01
 	"
@@ -35,7 +35,7 @@ DEPEND="
 # (http://bugs.slimdevices.com/show_bug.cgi?id=6143).
 RDEPEND="
 	dev-perl/File-Which
-	virtual/logger
+	!prefix? ( virtual/logger )
 	virtual/mysql
 	>=dev-lang/perl-5.8.8
 	~dev-perl/Audio-Scan-0.840
@@ -163,7 +163,7 @@ src_prepare() {
 # Building of EV present because of bug#287857.
 src_compile() {
 	einfo "Building bundled Perl modules (some warnings are normal here)..."
-	"./build-modules.sh" "${DISTDIR}" "${S}/perl-modules" || die "Unable to build Perl modules"
+	bash build-modules.sh "${DISTDIR}" "${S}/perl-modules" || die "Unable to build Perl modules"
 }
 
 src_install() {
@@ -180,27 +180,27 @@ src_install() {
 	# The server Perl modules
 	local installvendorlib
 	eval `perl '-V:installvendorlib'`
-	dodir "${installvendorlib}"
+	dodir "${installvendorlib#${EPREFIX}}"
 	cp -r Slim "${D}${installvendorlib}" || die "Unable to install server Perl modules"
 
 	# Various directories of architecture-independent static files
 	dodir "${SHAREDIR}"
-	cp -r Firmware "${D}/${SHAREDIR}"	|| die "Unable to install firmware"
-	cp -r Graphics "${D}/${SHAREDIR}"	|| die "Unable to install Graphics"
-	cp -r HTML "${D}/${SHAREDIR}"		|| die "Unable to install HTML"
-	cp -r IR "${D}/${SHAREDIR}"			|| die "Unable to install IR"
-	cp -r SQL "${D}/${SHAREDIR}"		|| die "Unable to install SQL"
+	cp -r Firmware "${ED}/${SHAREDIR}"	|| die "Unable to install firmware"
+	cp -r Graphics "${ED}/${SHAREDIR}"	|| die "Unable to install Graphics"
+	cp -r HTML "${ED}/${SHAREDIR}"		|| die "Unable to install HTML"
+	cp -r IR "${ED}/${SHAREDIR}"			|| die "Unable to install IR"
+	cp -r SQL "${ED}/${SHAREDIR}"		|| die "Unable to install SQL"
 
 	# Remove bundled modified AnyEvent - we depend on a newer version now
 	rm -r lib/AnyEvent.pm lib/AnyEvent || die "Unable to remove bundled AnyEvent"
 
 	# Architecture-dependent static files
 	dodir "${LIBDIR}"
-	cp -r lib/* "${D}${LIBDIR}" || die "Unable to install architecture-dependent files"
+	cp -r lib/* "${ED}${LIBDIR}" || die "Unable to install architecture-dependent files"
 
 	# Install compiled Perl modules because of bug#287857.
 	dodir "${LIBDIR}/CPAN/arch"
-	mv perl-modules/*/*/*/* "${D}${LIBDIR}/CPAN/arch" || die "Unable to install compiled CPAN modules"
+	mv perl-modules/*/*/*/* "${ED}${LIBDIR}/CPAN/arch" || die "Unable to install compiled CPAN modules"
 
 	# Strings and version identification
 	insinto "${SHAREDIR}"
@@ -249,9 +249,9 @@ src_install() {
 	dodir /var/log/squeezeboxserver
 	fowners squeezeboxserver:squeezeboxserver /var/log/squeezeboxserver
 	fperms 770 /var/log/squeezeboxserver
-	touch "${D}/var/log/squeezeboxserver/server.log"
-	touch "${D}/var/log/squeezeboxserver/scanner.log"
-	touch "${D}/var/log/squeezeboxserver/perfmon.log"
+	touch "${ED}/var/log/squeezeboxserver/server.log"
+	touch "${ED}/var/log/squeezeboxserver/scanner.log"
+	touch "${ED}/var/log/squeezeboxserver/perfmon.log"
 	fowners squeezeboxserver:squeezeboxserver /var/log/squeezeboxserver/server.log
 	fowners squeezeboxserver:squeezeboxserver /var/log/squeezeboxserver/scanner.log
 	fowners squeezeboxserver:squeezeboxserver /var/log/squeezeboxserver/perfmon.log
@@ -348,11 +348,11 @@ sc_remove_db_prefs() {
 
 	einfo "Configuring Squeezebox Server database preferences (${MY_PREFS}) ..."
 	TMPPREFS="${T}"/squeezeboxserver-prefs-$$
-	touch "${ROOT}${MY_PREFS}"
-	sed -e '/^dbusername:/d' -e '/^dbpassword:/d' -e '/^dbsource:/d' < "${ROOT}${MY_PREFS}" > "${TMPPREFS}"
-	mv "${TMPPREFS}" "${ROOT}${MY_PREFS}"
-	chown squeezeboxserver:squeezeboxserver "${ROOT}${MY_PREFS}"
-	chmod 660 "${ROOT}${MY_PREFS}"
+	touch "${EROOT}${MY_PREFS}"
+	sed -e '/^dbusername:/d' -e '/^dbpassword:/d' -e '/^dbsource:/d' < "${EROOT}${MY_PREFS}" > "${TMPPREFS}"
+	mv "${TMPPREFS}" "${EROOT}${MY_PREFS}"
+	chown squeezeboxserver:squeezeboxserver "${EROOT}${MY_PREFS}"
+	chmod 660 "${EROOT}${MY_PREFS}"
 }
 
 sc_update_prefs() {
@@ -360,9 +360,9 @@ sc_update_prefs() {
 	MY_DBUSER=$2
 	MY_DBUSER_PASSWD=$3
 
-	echo "dbusername: ${MY_DBUSER}" >> "${ROOT}${MY_PREFS}"
-	echo "dbpassword: ${MY_DBUSER_PASSWD}" >> "${ROOT}${MY_PREFS}"
-	echo "dbsource: dbi:mysql:database=${MY_DBUSER};mysql_socket=/var/run/mysqld/mysqld.sock" >> "${ROOT}${MY_PREFS}"
+	echo "dbusername: ${MY_DBUSER}" >> "${EROOT}${MY_PREFS}"
+	echo "dbpassword: ${MY_DBUSER_PASSWD}" >> "${EROOT}${MY_PREFS}"
+	echo "dbsource: dbi:mysql:database=${MY_DBUSER};mysql_socket=${EPREFIX}/var/run/mysqld/mysqld.sock" >> "${EROOT}${MY_PREFS}"
 }
 
 pkg_config() {
@@ -420,11 +420,11 @@ pkg_config() {
 	# from this as it probably just indicates that the database wasn't
 	# yet present.
 	einfo "Dropping old Squeezebox Server database and user ..."
-	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" < "${SHAREDIR}/SQL/mysql/dbdrop-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" >/dev/null 2>&1
+	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" < "${EPREFIX}${SHAREDIR}/SQL/mysql/dbdrop-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" >/dev/null 2>&1
 
 	# Drop and create the Squeezebox Server user and database.
 	einfo "Creating Squeezebox Server MySQL user and database (${DBUSER}) ..."
-	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" -e "s/__DBPASSWORD__/${DBUSER_PASSWD}/" < "${SHAREDIR}/SQL/mysql/dbcreate-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" || die "Unable to create MySQL database and user"
+	sed -e "s/__DATABASE__/${DBUSER}/" -e "s/__DBUSER__/${DBUSER}/" -e "s/__DBPASSWORD__/${DBUSER_PASSWD}/" < "${EPREFIX}${SHAREDIR}/SQL/mysql/dbcreate-gentoo.sql" | mysql --user=root --password="${ROOT_PASSWD}" || die "Unable to create MySQL database and user"
 
 	# Migrate old preferences, if present.
 	if [ -d "${OLDPREFSFILE}" ]; then
