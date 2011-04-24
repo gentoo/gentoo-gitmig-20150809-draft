@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.41 2011/04/24 17:38:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.42 2011/04/24 18:03:46 graaff Exp $
+
+  24 Apr 2011; Hans de Graaff <graaff@gentoo.org> -mongrel-1.1.5.ebuild:
+  Remove old version.
 
   24 Apr 2011; Raúl Porcel <armin76@gentoo.org> mongrel-1.1.5-r2.ebuild:
   sparc stable wrt #349877
