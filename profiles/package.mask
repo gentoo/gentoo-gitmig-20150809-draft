@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12728 2011/04/24 18:08:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12729 2011/04/24 18:17:43 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ole Markus With <olemarkus@gentoo.org> (19 Apr 2011)
+# Mask for removal on the 19th of May. Dead upstream, does not work
+# with PHP 5.3. Bug 362063
+dev-php/PEAR-Image_Graph
 
 # Hans de Graaff <graaff@gentoo.org> (24 Apr 2011)
 # Masked for removal on 20110524
