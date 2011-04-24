@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kcollectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.7 2011/04/11 21:23:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.8 2011/04/24 14:10:27 dilfridge Exp $
+
+  24 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kcollectd-0.9.ebuild, +files/kcollectd-0.9-cflags.patch:
+  Honor CXXFLAGS, bug 363947
 
   11 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kcollectd-0.9.ebuild:

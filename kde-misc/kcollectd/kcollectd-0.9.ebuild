@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/kcollectd-0.9.ebuild,v 1.7 2011/04/11 21:23:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/kcollectd-0.9.ebuild,v 1.8 2011/04/24 14:10:27 dilfridge Exp $
 
 EAPI=3
 
@@ -20,6 +20,8 @@ DEPEND="dev-libs/boost
 	net-analyzer/rrdtool"
 RDEPEND="${DEPEND}
 	|| ( app-admin/collectd[collectd_plugins_rrdtool] app-admin/collectd[collectd_plugins_rrdcached] )"
+
+PATCHES=( "${FILESDIR}/${P}-cflags.patch" )
 
 src_prepare() {
 	# Working around the eclass linguas magic is way more complicated than just
