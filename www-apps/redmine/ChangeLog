@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.18 2011/03/08 23:48:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.19 2011/04/24 01:45:22 matsuu Exp $
+
+  24 Apr 2011; MATSUU Takuto <matsuu@gentoo.org> -redmine-1.0.5.ebuild,
+  -redmine-1.1.0.ebuild, -redmine-1.1.1.ebuild, redmine-1.1.2.ebuild:
+  Added dev-ruby/rake to dependency, bug #359195. Removed old versions.
 
 *redmine-1.1.2 (08 Mar 2011)
 
