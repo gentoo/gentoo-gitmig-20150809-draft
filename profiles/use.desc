@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.457 2011/04/23 11:11:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.458 2011/04/24 16:22:55 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -202,11 +202,9 @@ lzo - Enables support for lzo compression
 m17n-lib - Enable m17n-lib support
 mad - Adds support for mad (high-quality mp3 decoder library and cli frontend)
 maildir - Adds support for maildir (~/.maildir) style mail spools
-mailwrapper - Adds mailwrapper support to allow multiple MTAs to be installed
 matroska - Adds support for the matroska container format (extensions .mkv, .mka and .mks)
 matrox - Adds Matrox MGA support to mplayer
 mbox - Adds support for mbox (/var/spool/mail) style mail spools
-mcve - Support for the MCVE credit card payment system
 memlimit - Adds memory usage limiting in supporting programs
 mhash - Adds support for the mhash library
 migemo - Enables migemo support for Japanese
@@ -284,7 +282,6 @@ portaudio - Adds support for the crossplatform portaudio audio API
 posix - Adds support for POSIX-compatible functions
 postgres - Adds support for the postgresql database
 ppds - Adds support for automatically generated ppd (printing driver) files
-prefix - Defines if a Gentoo Prefix offset installation is used
 prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds support for software performance analysis (will likely vary from ebuild to ebuild)
 pulseaudio - Adds support for PulseAudio sound server
