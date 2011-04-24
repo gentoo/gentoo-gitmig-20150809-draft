@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-260.19.21.ebuild,v 1.1 2010/11/18 18:33:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-260.19.21.ebuild,v 1.2 2011/04/24 18:48:24 ulm Exp $
 
 EAPI="2"
 
@@ -32,7 +32,6 @@ DEPEND="${COMMON}
 	kernel_linux? ( virtual/linux-sources )"
 RDEPEND="${COMMON}
 	x11-libs/libXvMC
-	kernel_linux? ( virtual/modutils )
 	acpi? ( sys-power/acpid )"
 PDEPEND=">=x11-libs/libvdpau-0.3-r1
 	gtk? ( media-video/nvidia-settings )"

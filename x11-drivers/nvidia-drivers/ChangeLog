@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.276 2011/04/14 15:40:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.277 2011/04/24 18:48:24 ulm Exp $
+
+  24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> nvidia-drivers-96.43.19.ebuild,
+  nvidia-drivers-173.14.28.ebuild, nvidia-drivers-256.44-r1.ebuild,
+  nvidia-drivers-256.52.ebuild, nvidia-drivers-256.53.ebuild,
+  nvidia-drivers-260.19.21.ebuild, nvidia-drivers-260.19.26.ebuild,
+  nvidia-drivers-260.19.29.ebuild, nvidia-drivers-260.19.36.ebuild,
+  nvidia-drivers-260.19.44.ebuild, nvidia-drivers-270.18.ebuild,
+  nvidia-drivers-270.41.03.ebuild:
+  Remove dependency on virtual/modutils, it is redundant with linux-mod.eclass,
+  bug 358891.
 
   14 Apr 2011; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-96.43.16.ebuild,
   -nvidia-drivers-96.43.18.ebuild, -nvidia-drivers-173.14.25.ebuild,

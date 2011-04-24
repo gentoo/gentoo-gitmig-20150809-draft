@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.19.ebuild,v 1.5 2011/04/09 15:27:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.19.ebuild,v 1.6 2011/04/24 18:48:24 ulm Exp $
 
 EAPI="2"
 
@@ -40,7 +40,6 @@ COMMON="x11-base/xorg-server
 DEPEND="${COMMON}
 	kernel_linux? ( virtual/linux-sources )"
 RDEPEND="${COMMON}
-	kernel_linux? ( virtual/modutils )
 	acpi? ( sys-power/acpid )"
 
 QA_TEXTRELS_x86="usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
