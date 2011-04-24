@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.5.ebuild,v 1.9 2010/08/06 05:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.5.ebuild,v 1.10 2011/04/24 21:28:11 ulm Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -21,8 +21,7 @@ RESTRICT="test"
 
 DEPEND="sys-libs/zlib
 	>=sys-apps/baselayout-1.12.7-r2
-	!virtual/modutils"
-PROVIDE="virtual/modutils"
+	!sys-apps/modutils"
 
 S=${WORKDIR}/${MY_P}
 
