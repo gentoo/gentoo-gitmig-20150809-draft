@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.180 2011/04/06 22:11:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.181 2011/04/24 17:51:33 armin76 Exp $
+
+  24 Apr 2011; Raúl Porcel <armin76@gentoo.org> nfs-utils-1.2.3-r1.ebuild:
+  sparc stable wrt #358509
 
   06 Apr 2011; Mike Frysinger <vapier@gentoo.org> files/nfs.confd,
   files/nfs.initd:
