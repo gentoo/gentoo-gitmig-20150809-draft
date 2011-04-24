@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-xetex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.38 2011/01/06 14:20:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-xetex/ChangeLog,v 1.39 2011/04/24 11:14:40 grobian Exp $
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  texlive-xetex-2010-r1.ebuild:
+  Re-keywording ~ppc-macos and ~x86-macos, bug #323049
 
   06 Jan 2011; Alexis Ballier <aballier@gentoo.org>
   texlive-xetex-2010-r1.ebuild:
