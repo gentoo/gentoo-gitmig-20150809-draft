@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/freedoom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.20 2011/03/18 12:50:30 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/ChangeLog,v 1.21 2011/04/24 17:33:00 armin76 Exp $
+
+  24 Apr 2011; Raúl Porcel <armin76@gentoo.org> freedoom-0.4.1.ebuild,
+  freedoom-0.7.ebuild:
+  Drop sparc keyword
 
   18 Mar 2011; Thomas Kahle <tomka@gentoo.org> freedoom-0.7.ebuild:
   x86 stable per bug 356487
