@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.182 2011/04/13 11:35:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.183 2011/04/24 17:50:15 armin76 Exp $
+
+  24 Apr 2011; Raúl Porcel <armin76@gentoo.org> snort-2.9.0.4-r1.ebuild,
+  snort-2.9.0.5.ebuild:
+  Add ~sparc wrt #351551
 
 *snort-2.9.0.5 (13 Apr 2011)
 
