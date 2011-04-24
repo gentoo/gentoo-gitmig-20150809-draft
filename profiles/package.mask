@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12727 2011/04/24 17:13:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12728 2011/04/24 18:08:01 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (24 Apr 2011)
+# Masked for removal on 20110524
+# Legacy bugfix code for very old versions of dev-lang/ruby,
+# still required up to now by www-servers/mongrel.
+# No longer needed and not applicable to dev-lang/ruby versions
+# that are still in the tree.
+dev-ruby/cgi_multipart_eof_fix
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (23 Apr 2011)
 # Mask KDEPIM 4.6 beta ebuilds
