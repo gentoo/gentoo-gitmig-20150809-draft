@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.31 2011/03/21 22:22:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.32 2011/04/24 08:44:00 angelos Exp $
 
 EAPI=3
-inherit git eutils fdo-mime gnome2-utils python waf-utils
+inherit eutils fdo-mime gnome2-utils python waf-utils git-2
 
 DESCRIPTION="A lightweight web browser based on WebKitGTK+"
 HOMEPAGE="http://www.twotoasts.de/index.php?/pages/midori_summary.html"
-SRC_URI=""
 EGIT_REPO_URI="git://git.xfce.org/apps/${PN}"
 
 LICENSE="LGPL-2.1"
@@ -38,8 +37,6 @@ pkg_setup() {
 	DOCS=( AUTHORS ChangeLog INSTALL TODO )
 	HTML_DOCS=( data/faq.html data/faq.css )
 }
-
-src_unpack() { git_src_unpack; }
 
 src_prepare() {
 	# Make it work with slotted vala versions
