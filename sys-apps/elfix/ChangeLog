@@ -1,5 +1,10 @@
 
 
+*elfix-0.1.2 (25 Apr 2011)
+
+  25 Apr 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.1.2.ebuild:
+  Version bump, fixes test on x86
+
 *elfix-0.1.1 (16 Apr 2011)
 
   16 Apr 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.1.1.ebuild,
