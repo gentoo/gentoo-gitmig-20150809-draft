@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.3-r2.ebuild,v 1.1 2011/04/23 14:07:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.3-r2.ebuild,v 1.2 2011/04/25 15:52:03 ssuominen Exp $
 
 EAPI=4
-inherit eutils fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils
 
 DESCRIPTION="A GTK+ interface to MPlayer"
 HOMEPAGE="http://code.google.com/p/gnome-mplayer/"
@@ -33,10 +33,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS="ChangeLog README DOCS/keyboard_shortcuts.txt DOCS/tech/dbus.txt DOCS/tech/plugin-interaction.txt"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.0.2-implicit_declaration.patch
-}
 
 src_configure() {
 	# FIXME: The only reason why --without-gpm-new-method is passed is lack of testing.
