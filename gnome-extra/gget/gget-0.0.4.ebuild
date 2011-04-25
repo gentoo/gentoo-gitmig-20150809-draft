@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/gget-0.0.4.ebuild,v 1.3 2010/12/03 23:42:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gget/gget-0.0.4.ebuild,v 1.4 2011/04/25 21:08:46 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
@@ -59,10 +59,10 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/gget
+	python_mod_optimize gget
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup $(python_get_sitedir)/gget
+	python_mod_cleanup gget
 }
