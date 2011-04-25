@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.6.1-r1.ebuild,v 1.5 2011/01/10 21:43:12 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.6.1-r1.ebuild,v 1.6 2011/04/25 18:41:11 arfrever Exp $
 
-EAPI=2
+EAPI=3
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="xml"
 
