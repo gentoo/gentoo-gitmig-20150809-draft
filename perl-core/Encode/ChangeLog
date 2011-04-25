@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Encode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.16 2011/04/08 16:48:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.17 2011/04/25 06:03:32 tove Exp $
+
+*Encode-2.420.0 (25 Apr 2011)
+
+  25 Apr 2011; Torsten Veller <tove@gentoo.org> -Encode-2.420.ebuild,
+  +Encode-2.420.0.ebuild:
+  Change version scheme
 
   08 Apr 2011; Markus Meier <maekke@gentoo.org> Encode-2.40-r1.ebuild:
   add ~arm, bug #358079
