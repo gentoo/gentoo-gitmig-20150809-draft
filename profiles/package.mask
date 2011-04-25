@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12729 2011/04/24 18:17:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12730 2011/04/25 09:38:41 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -166,6 +166,7 @@ dev-php5/php-libvirt
 # GNOME 3 mask, things will be added here slowly
 >=x11-wm/metacity-2.34
 >=media-gfx/gthumb-2.13
+>=gnome-extra/nautilus-open-terminal-0.19
 
 # Constanze Hausner <constanze@gentoo.org> (10 Apr 2011)
 # Masked for removal in 30 days. Not used by any

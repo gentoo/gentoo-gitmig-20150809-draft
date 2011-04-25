@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5330 2011/04/24 18:17:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5331 2011/04/25 09:38:41 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add gnome-extra/nautilus-open-terminal to Gnome 3 mask.
 
   24 Apr 2011; <olemarkus@gentoo.org> package.mask:
   Masking dev-php/PEAR-Image_Graph for removal
