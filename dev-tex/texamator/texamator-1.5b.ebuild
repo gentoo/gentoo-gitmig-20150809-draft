@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texamator/texamator-1.5b.ebuild,v 1.1 2009/12/03 11:27:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texamator/texamator-1.5b.ebuild,v 1.2 2011/04/25 19:27:48 arfrever Exp $
 
-EAPI=2
+EAPI="3"
+PYTHON_DEPEND="2"
+
 inherit multilib python
 
 MY_PN=TeXamator
@@ -19,10 +21,18 @@ IUSE=""
 DEPEND="dev-python/PyQt4
 	app-text/dvipng
 	virtual/latex-base"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_install() {
+	python_need_rebuild
+
 	dodoc ${MY_PN}/README
 	rm -f ${MY_PN}/README
 
