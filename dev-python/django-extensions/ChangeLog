@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-extensions
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/ChangeLog,v 1.1 2010/08/27 13:48:03 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/ChangeLog,v 1.2 2011/04/25 12:49:06 tomka Exp $
+
+  25 Apr 2011; Thomas Kahle <tomka@gentoo.org> django-extensions-0.5.ebuild:
+  ~x86 per bug 357801
 
 *django-extensions-0.5 (27 Aug 2010)
 
