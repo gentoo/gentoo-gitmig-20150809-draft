@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.139 2011/03/19 18:13:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.140 2011/04/25 06:45:37 ulm Exp $
+
+  25 Apr 2011; Ulrich Mueller <ulm@gentoo.org> mips-sources-2.6.29.1.ebuild,
+  mips-sources-2.6.31.12.ebuild, mips-sources-2.6.34.7.ebuild,
+  mips-sources-2.6.35.9.ebuild, mips-sources-2.6.36.3.ebuild,
+  mips-sources-2.6.37.ebuild:
+  Remove redundant PROVIDE line, virtual/linux-sources is already provided via
+  kernel-2.eclass, bug 118442.
 
   19 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   mips-sources-2.6.29.1.ebuild, mips-sources-2.6.31.12.ebuild,
