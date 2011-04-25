@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.19.ebuild,v 1.1 2010/12/13 08:23:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.19.ebuild,v 1.2 2011/04/25 20:25:58 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="tk? 2"
 PYTHON_USE_WITH_OPT="tk"
@@ -30,8 +30,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /var/lib/${PN} ${PN}
-	use tk && python_set_active_version 2
-	python_pkg_setup
+	if use tk; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -85,12 +87,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	use tk && python_mod_optimize "$(python_get_sitedir)/fetchmailconf.py"
+	use tk && python_mod_optimize fetchmailconf.py
 
 	elog "Please see /etc/conf.d/fetchmail if you want to adjust"
 	elog "the polling delay used by the fetchmail init script."
 }
 
 pkg_postrm() {
-	use tk && python_mod_cleanup "$(python_get_sitedir)/fetchmailconf.py"
+	use tk && python_mod_cleanup fetchmailconf.py
 }

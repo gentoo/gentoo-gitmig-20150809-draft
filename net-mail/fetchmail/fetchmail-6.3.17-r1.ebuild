@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.17-r1.ebuild,v 1.1 2010/05/18 06:06:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.17-r1.ebuild,v 1.2 2011/04/25 20:25:58 arfrever Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="tk? 2"
 PYTHON_USE_WITH_OPT="tk"
@@ -30,8 +30,10 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /var/lib/${PN} ${PN}
-	use tk && python_set_active_version 2
-	python_pkg_setup
+	if use tk; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -89,7 +91,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	use tk && python_mod_optimize "$(python_get_sitedir)/fetchmailconf.py"
+	use tk && python_mod_optimize fetchmailconf.py
 
 	ewarn "From the NEWS:"
 	ewarn "Fetchmail now supports a bad-header command line or rcfile option that takes"
@@ -106,5 +108,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use tk && python_mod_cleanup "$(python_get_sitedir)/fetchmailconf.py"
+	use tk && python_mod_cleanup fetchmailconf.py
 }
