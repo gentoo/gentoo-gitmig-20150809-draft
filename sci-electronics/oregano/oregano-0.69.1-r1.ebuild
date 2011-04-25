@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.1 2011/04/19 14:40:09 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.2 2011/04/25 15:10:03 armin76 Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Oregano is an application for schematic capture and simulation of e
 SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${P/-/_}.orig.tar.gz"
 HOMEPAGE="http://oregano.gforge.lug.fi.uba.ar/" # broken
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
 IUSE=""
 
