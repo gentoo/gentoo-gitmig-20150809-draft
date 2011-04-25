@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.6 2011/04/20 11:02:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.7 2011/04/25 17:46:05 dilfridge Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="git://anongit.kde.org/${PN}"
 LICENSE="LGPL-2.1"
 KEYWORDS=""
 SLOT="0"
-IUSE="debug gstreamer pulseaudio +vlc xine"
+IUSE="aqua debug gstreamer pulseaudio +vlc xine"
 
 COMMON_DEPEND="
 	>=x11-libs/qt-core-4.6.0:4
@@ -28,9 +28,9 @@ COMMON_DEPEND="
 # directshow? ( media-sound/phonon-directshow )
 # mmf? ( media-sound/phonon-mmf )
 # mplayer? ( media-sound/phonon-mplayer )
-# quicktime? ( media-sound/phonon-quicktime )
 # waveout? ( media-sound/phonon-waveout )
 PDEPEND="
+	aqua? ( media-libs/phonon-qt7 )
 	gstreamer? ( media-libs/phonon-gstreamer )
 	vlc? ( >=media-libs/phonon-vlc-0.3.2 )
 	xine? ( >=media-libs/phonon-xine-0.4.4 )
