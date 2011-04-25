@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.38 2011/04/24 16:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.39 2011/04/25 02:45:24 polynomial-c Exp $
+
+*physfs-2.0.2-r1 (25 Apr 2011)
+
+  25 Apr 2011; Lars Wendler <polynomial-c@gentoo.org> -physfs-2.0.2.ebuild,
+  +physfs-2.0.2-r1.ebuild:
+  Non-maintainer commit: Don't install libs into /usr/lib6464. Thanks to Nick
+  Bowler for reporting this in bug #364741.
 
 *physfs-2.0.2 (24 Apr 2011)
 

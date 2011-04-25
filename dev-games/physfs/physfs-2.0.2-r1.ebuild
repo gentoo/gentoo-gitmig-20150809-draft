@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.2.ebuild,v 1.1 2011/04/24 16:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.2-r1.ebuild,v 1.1 2011/04/25 02:45:24 polynomial-c Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -20,7 +20,6 @@ DEPEND="doc? ( app-doc/doxygen )"
 src_prepare() {
 	sed -i \
 		-e 's:-Werror::' \
-		-e '/DESTINATION/s:lib:lib${LIB_SUFFIX}:' \
 		CMakeLists.txt \
 		|| die "sed failed"
 	# make sure these libs aren't used
