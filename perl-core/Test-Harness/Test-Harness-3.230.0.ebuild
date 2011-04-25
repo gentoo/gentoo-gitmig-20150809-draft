@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/Test-Harness-3.230.ebuild,v 1.1 2011/02/23 07:42:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/Test-Harness-3.230.0.ebuild,v 1.1 2011/04/25 06:14:19 tove Exp $
 
 EAPI=3
 
