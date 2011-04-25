@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volti/volti-0.2.3.ebuild,v 1.2 2011/04/02 16:09:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volti/volti-0.2.3.ebuild,v 1.3 2011/04/25 14:03:45 tomka Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="libnotify X"
 
 RDEPEND=">=dev-python/pygtk-2.16
