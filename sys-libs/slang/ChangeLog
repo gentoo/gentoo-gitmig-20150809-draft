@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/slang
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.119 2010/12/27 12:51:44 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.120 2011/04/25 15:07:01 ssuominen Exp $
+
+*slang-2.2.4 (25 Apr 2011)
+
+  25 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> +slang-2.2.4.ebuild:
+  Version bump.
 
 *slang-2.2.3 (27 Dec 2010)
 
