@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/orsa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.19 2010/02/19 04:28:54 markusle Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.20 2011/04/25 15:04:13 armin76 Exp $
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> orsa-0.6.1.ebuild,
+  orsa-0.7.0.ebuild:
+  Drop sparc keywords
 
   19 Feb 2010; Markus Dittrich <markusle@gentoo.org> orsa-0.6.1.ebuild,
   orsa-0.7.0.ebuild:
