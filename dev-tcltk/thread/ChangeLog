@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/thread
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.17 2010/12/07 13:40:29 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.18 2011/04/25 17:17:46 jlec Exp $
+
+  25 Apr 2011; Justin Lecher <jlec@gentoo.org> thread-2.6.2.ebuild,
+  thread-2.6.6.ebuild:
+  Fixed missing debug in IUSE, #364811; Fix build with USE=-gdbm, #247586
 
 *thread-2.6.6 (07 Dec 2010)
 

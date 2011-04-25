@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.16 2010/12/07 13:40:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.17 2011/04/25 17:17:46 jlec Exp $
 
 EAPI=2
 
@@ -31,18 +31,17 @@ src_prepare() {
 
 	sed -i -e "s/relid'/relid/" tclconfig/tcl.m4
 
-	eaclocal
-	eautoconf
+	eautoreconf
 }
 
 src_configure() {
-	local use_gdbm=""
-	if use gdbm; then use_gdbm="--with-gdbm"; fi
+	local myconf=""
+	use gdbm && myconf+=" --with-gdbm"
+	use debug && myconf+=" --enable-symbols"
 	econf \
-		--with-threads \
 		--with-tclinclude=/usr/include \
 		--with-tcl="/usr/$(get_libdir)" \
-		${use_gdbm}
+		${myconf}
 }
 
 src_install() {
