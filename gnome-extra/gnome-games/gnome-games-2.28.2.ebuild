@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.9 2011/03/23 08:11:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.10 2011/04/25 21:17:50 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
 WANT_AUTOMAKE="1.11"
+PYTHON_DEPEND="2"
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
@@ -71,6 +72,9 @@ _omitgame() {
 }
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+
 	# create the games user / group
 	games_pkg_setup
 
@@ -170,15 +174,17 @@ pkg_postinst() {
 	games-ggz_update_modules
 	gnome2_pkg_postinst
 	python_need_rebuild
-	python_mod_optimize $(python_get_sitedir)/gnome_sudoku
+	python_mod_optimize gnome_sudoku
 	if use opengl; then
-		python_mod_optimize $(python_get_sitedir)/glchess
+		python_mod_optimize glchess
 	fi
 }
 
 pkg_postrm() {
 	games-ggz_update_modules
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/{gnome_sudoku,glchess}
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/glchess
+	python_mod_cleanup gnome_sudoku
+	if use opengl; then
+		python_mod_cleanup glchess
+	fi
 }
