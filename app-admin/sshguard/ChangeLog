@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sshguard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.13 2011/04/23 16:59:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.14 2011/04/25 04:59:42 jer Exp $
+
+*sshguard-1.5-r1 (25 Apr 2011)
+
+  25 Apr 2011; Jeroen Roovers <jer@gentoo.org> -sshguard-1.5.ebuild,
+  +sshguard-1.5-r1.ebuild, files/sshguard.initd:
+  Use the correct init.d file, and RDEPEND on openrc, by Johan Bergström (bug
+  #351665).
 
   23 Apr 2011; Jeroen Roovers <jer@gentoo.org> files/sshguard.confd,
   files/sshguard.initd:
