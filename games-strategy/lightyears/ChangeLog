@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/lightyears
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/ChangeLog,v 1.12 2010/08/14 05:53:18 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/ChangeLog,v 1.13 2011/04/25 20:36:38 arfrever Exp $
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  lightyears-1.3a.ebuild:
+  Fix deprecation warnings.
 
   14 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
   lightyears-1.3a.ebuild:
