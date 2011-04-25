@@ -11,7 +11,7 @@ index ad691e3..32489d5 100644
  extern "C" {
  #ifdef HAS_OLD_HEADER
 -# include <ffmpeg/avformat.h>
-+# include <libavcodec/avformat.h>
++# include <libavformat/avformat.h>
  #else
  # include <libavformat/avformat.h>
  #endif
@@ -23,7 +23,7 @@ index 0bf4314..1c10a93 100644
  extern "C" {
  #ifdef HAS_OLD_HEADER
 -# include <ffmpeg/avformat.h>
-+# include <libavcodec/avformat.h>
++# include <libavformat/avformat.h>
  #else
  # include <libavformat/avformat.h>
  #endif
@@ -36,7 +36,7 @@ index 52673ef..ffbb78f 100644
  extern "C" {
  #ifdef VTK_FFMPEG_HAS_OLD_HEADER
 -# include <ffmpeg/avformat.h>
-+# include <libavcodec/avformat.h>
++# include <libavformat/avformat.h>
  #else
  # include <libavformat/avformat.h>
  #endif

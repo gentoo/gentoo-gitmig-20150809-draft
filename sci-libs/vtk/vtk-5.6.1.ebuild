@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.1.ebuild,v 1.2 2011/04/17 13:50:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.1.ebuild,v 1.3 2011/04/25 09:51:24 jlec Exp $
 
 EAPI="3"
 
@@ -82,7 +82,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.6.0-libpng14.patch \
 		"${FILESDIR}"/${PN}-5.6.0-R.patch \
 		"${FILESDIR}"/${PN}-5.6.0-odbc.patch \
-		"${FILESDIR}"/${P}-ffmpeg.patch
+		"${FILESDIR}"/${P}-ffmpeg.patch \
+		"${FILESDIR}"/${P}-gcc-46.patch
 
 	# Fix sure buffer overflow on some processors as reported by Flameyes in #338819
 	sed -e "s:CHIPNAME_STRING_LENGTH    (48 + 1):CHIPNAME_STRING_LENGTH    (79 + 1):" \

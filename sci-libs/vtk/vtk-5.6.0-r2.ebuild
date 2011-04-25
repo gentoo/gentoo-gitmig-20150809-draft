@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.9 2011/04/16 11:04:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.0-r2.ebuild,v 1.10 2011/04/25 09:51:24 jlec Exp $
 
 EAPI="3"
 
@@ -82,7 +82,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-boost-property_map.patch \
 		"${FILESDIR}"/${P}-libpng14.patch \
 		"${FILESDIR}"/${P}-R.patch \
-		"${FILESDIR}"/${P}-odbc.patch
+		"${FILESDIR}"/${P}-odbc.patch \
+		"${FILESDIR}"/${PN}-5.6.1-gcc-46.patch
 	sed -e "s:@VTK_TCL_LIBRARY_DIR@:/usr/$(get_libdir):" \
 		-i Wrapping/Tcl/pkgIndex.tcl.in \
 		|| die "Failed to fix tcl pkgIndex file"
