@@ -8,5 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name="gtk">Install the GTK+ based graphical interface</flag>
+		<flag name="nvcontrol">Add NVCONTROL support for OpenGL options</flag>
 	</use>
 </pkgmetadata>

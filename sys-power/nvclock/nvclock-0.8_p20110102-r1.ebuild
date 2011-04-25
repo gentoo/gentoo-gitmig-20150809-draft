@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.4 2011/04/25 03:04:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.5 2011/04/25 03:41:08 jer Exp $
 
 EAPI="2"
 
@@ -13,9 +13,12 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gtk"
+IUSE="gtk nvcontrol"
 
-RDEPEND="gtk? ( x11-libs/gtk+:2 )"
+RDEPEND="
+	gtk? ( x11-libs/gtk+:2 )
+	nvcontrol? ( x11-libs/libX11 x11-libs/libXext )
+"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -24,8 +27,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# Qt support would mean Qt 3.
 	econf --bindir=/usr/bin --disable-qt --docdir=/usr/share/doc/${PF} \
-		$(use_enable gtk) $(use_enable gtk nvcontrol)
+		$(use_enable gtk) $(use_enable nvcontrol)
 }
 
 src_compile() {
