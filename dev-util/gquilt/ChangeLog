@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gquilt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.17 2010/05/08 20:51:06 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.18 2011/04/25 20:11:55 arfrever Exp $
+
+*gquilt-0.25 (25 Apr 2011)
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +gquilt-0.25.ebuild:
+  Version bump (bug #316861). Use Python 2 (bug #364837).
 
   08 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gquilt-0.21.ebuild:
