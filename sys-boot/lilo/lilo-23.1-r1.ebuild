@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.1-r1.ebuild,v 1.2 2011/04/23 16:35:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.1-r1.ebuild,v 1.3 2011/04/25 01:44:37 jer Exp $
 
 EAPI="2"
 
@@ -22,8 +22,7 @@ SLOT="0"
 LICENSE="BSD GPL-2"
 KEYWORDS="-* ~amd64 ~x86"
 
-DEPEND=">=sys-devel/bin86-0.15.5
-	app-arch/sharutils"
+DEPEND=">=sys-devel/bin86-0.15.5"
 RDEPEND="device-mapper? ( || (
 	>=sys-fs/lvm2-2.02.45
 	>=sys-fs/device-mapper-1.02.12 ) )"
