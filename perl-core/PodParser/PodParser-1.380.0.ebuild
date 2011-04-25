@@ -1,11 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.38.ebuild,v 1.9 2010/01/05 19:17:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.380.0.ebuild,v 1.1 2011/04/25 06:12:23 tove Exp $
 
 MODULE_AUTHOR=MAREKR
+MODULE_VERSION=1.38
 MY_PN=Pod-Parser
-MY_P=${MY_PN}-${PV}
-
 inherit perl-module
 
 DESCRIPTION="Base class for creating POD filters and translators"
