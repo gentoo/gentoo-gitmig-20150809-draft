@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.48 2011/04/17 13:42:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.49 2011/04/25 15:05:49 armin76 Exp $
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> ginac-1.5.5.ebuild,
+  ginac-1.5.7.ebuild, ginac-1.5.8.ebuild:
+  Drop sparc keywords
 
   17 Apr 2011; Thomas Kahle <tomka@gentoo.org> ginac-1.5.8.ebuild:
   x86 stable per bug 360605
