@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.52 2011/03/04 19:42:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.53 2011/04/25 14:52:20 armin76 Exp $
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> sonata-1.6.2.1.ebuild:
+  Drop sparc keywords
 
   04 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   sonata-1.6.2.1.ebuild:

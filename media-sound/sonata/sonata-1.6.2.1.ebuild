@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1.ebuild,v 1.6 2011/03/04 19:42:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1.ebuild,v 1.7 2011/04/25 14:52:20 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="dbus lyrics taglib +trayicon"
 
 RDEPEND=">=dev-python/pygtk-2.12
