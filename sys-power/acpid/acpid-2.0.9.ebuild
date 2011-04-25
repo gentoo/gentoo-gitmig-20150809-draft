@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.7.ebuild,v 1.1 2011/01/23 20:02:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.9.ebuild,v 1.1 2011/04/25 07:47:22 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface"
@@ -37,8 +37,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}-2.0.3-init.d acpid || die
 	newconfd "${FILESDIR}"/${PN}-1.0.6-conf.d acpid || die
-
-	prepalldocs
 }
 
 pkg_postinst() {
