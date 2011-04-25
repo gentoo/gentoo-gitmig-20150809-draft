@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5-r1.ebuild,v 1.1 2010/12/21 05:29:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5-r1.ebuild,v 1.2 2011/04/25 09:36:45 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -20,7 +20,9 @@ DEPEND="jpeg2k? ( || ( media-libs/jasper media-libs/openjpeg ) )
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch \
+		"${FILESDIR}"/${P}-autotools.patch \
+		"${FILESDIR}"/${P}-32bit.patch
 	eautoreconf
 }
 
