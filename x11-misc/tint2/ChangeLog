@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tint2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.23 2011/03/29 15:40:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.24 2011/04/25 13:52:51 tomka Exp $
+
+  25 Apr 2011; Thomas Kahle <tomka@gentoo.org> tint2-0.11-r1.ebuild:
+  x86 stable per bug 361101
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> tint2-0.11-r1.ebuild:
   Stable on amd64 wrt bug #361101
