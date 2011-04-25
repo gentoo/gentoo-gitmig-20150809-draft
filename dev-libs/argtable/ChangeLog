@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/argtable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.36 2011/04/13 17:31:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/argtable/ChangeLog,v 1.37 2011/04/25 14:50:24 armin76 Exp $
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> argtable-2.12.ebuild,
+  argtable-2.13.ebuild:
+  Drop sparc keywords
 
   13 Apr 2011; Thomas Kahle <tomka@gentoo.org> argtable-2.13.ebuild:
   x86 stable per bug 359469
