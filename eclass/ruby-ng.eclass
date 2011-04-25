@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.31 2011/04/25 06:27:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.32 2011/04/25 08:37:26 graaff Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -259,7 +259,11 @@ _ruby_invoke_environment() {
 	old_S=${S}
 	case ${EAPI} in
 		4)
-			sub_S=${RUBY_S}
+			if [ -z ${RUBY_S} ]; then
+				sub_S=${P}
+			else
+				sub_S=${RUBY_S}
+			fi
 			;;
 		*)
 			sub_S=${S#${WORKDIR}/}
