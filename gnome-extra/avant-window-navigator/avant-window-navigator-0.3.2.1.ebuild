@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.8 2011/03/21 22:31:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.9 2011/04/25 20:43:46 arfrever Exp $
 
-EAPI=1
+EAPI=3
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 
 inherit gnome2 python
 
@@ -17,10 +19,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc gnome thunar vala"
 
 RDEPEND="
-	|| (
-		=dev-lang/python-2*
-		dev-python/elementtree
-	)
 	dev-libs/dbus-glib
 	>=dev-libs/glib-2.16.0
 	dev-python/pycairo
@@ -46,15 +44,20 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-src_unpack() {
-	gnome2_src_unpack
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	gnome2_src_prepare
 
 	# Disable pyc compiling.
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use gnome; then myconf="--with-desktop=gnome"
@@ -70,8 +73,6 @@ src_compile() {
 		VALAC=$(type -P valac-0.10) \
 		VALA_GEN_INTROSPECT=$(type -O vapigen-0.10) \
 		${myconf}
-
-	emake || die "emake failed"
 }
 
 pkg_postinst() {
@@ -80,10 +81,10 @@ pkg_postinst() {
 	ewarn
 	ewarn "AWN will be of no use if you do not have a compositing manager."
 
-	python_mod_optimize $(python_get_sitedir)/awn
+	python_mod_optimize awn
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup $(python_get_sitedir)/awn
+	python_mod_cleanup awn
 }
