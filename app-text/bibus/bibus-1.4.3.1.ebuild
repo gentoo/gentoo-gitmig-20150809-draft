@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.4.3.1.ebuild,v 1.3 2009/02/26 15:48:53 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.4.3.1.ebuild,v 1.4 2011/04/25 18:47:01 arfrever Exp $
+
+EAPI="3"
 
 inherit python multilib eutils
 
@@ -33,9 +35,7 @@ RDEPEND="virtual/ooo
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-install.patch
 	sed -e "s:/usr/lib/:/usr/$(get_libdir)/:" \
 		-i Setup/bibus.sh Makefile || die "Failed to fix bibus wrapper"

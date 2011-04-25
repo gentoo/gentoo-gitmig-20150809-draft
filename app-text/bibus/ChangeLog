@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.28 2011/04/07 18:43:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.29 2011/04/25 18:47:01 arfrever Exp $
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bibus-1.4.3.1.ebuild:
+  Fix deprecation warnings.
 
   07 Apr 2011; Sébastien Fabbro <bicatali@gentoo.org> bibus-1.5.1.ebuild:
   Changed from virtual/ooo back to use source openoffice or libreoffice because
