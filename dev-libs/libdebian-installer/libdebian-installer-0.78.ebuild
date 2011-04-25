@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/libdebian-installer-0.78.ebuild,v 1.1 2011/04/19 20:15:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/libdebian-installer-0.78.ebuild,v 1.2 2011/04/25 10:31:09 flameeyes Exp $
 
 EAPI=2
 
@@ -48,5 +48,5 @@ src_install() {
 
 	dodoc HACKING debian/changelog
 
-	use static_libs || remove_libtool_files
+	use static-libs || remove_libtool_files
 }
