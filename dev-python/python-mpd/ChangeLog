@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.19 2011/04/13 17:50:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.20 2011/04/25 14:53:12 armin76 Exp $
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> python-mpd-0.2.1.ebuild,
+  python-mpd-0.3.0.ebuild:
+  Drop sparc keywords
 
   13 Apr 2011; Thomas Kahle <tomka@gentoo.org> python-mpd-0.3.0.ebuild:
   x86 stable per bug 359471
