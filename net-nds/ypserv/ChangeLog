@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.49 2011/04/21 14:18:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.50 2011/04/25 17:12:57 hwoarang Exp $
+
+  25 Apr 2011; Markos Chandras <hwoarang@gentoo.org> ypserv-2.23.ebuild:
+  Stable on amd64 wrt bug #364355
 
 *ypserv-2.24 (21 Apr 2011)
 
