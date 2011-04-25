@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.ebuild,v 1.7 2010/06/13 19:26:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.ebuild,v 1.8 2011/04/25 21:30:47 arfrever Exp $
 
-EAPI="2"
+EAPI="3"
 GCONF_DEBUG="no"
+PYTHON_DEPEND="2"
 
 inherit eutils gnome2 python autotools
 
@@ -17,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.8
-	dev-lang/python
 	>=dev-python/pygtk-2.6
 	>=gnome-base/gconf-2.0
 	>=dev-python/gst-python-0.10.0
@@ -33,6 +33,11 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.8
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	dev-util/pkgconfig"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	gnome2_src_prepare
@@ -62,10 +67,10 @@ src_configure() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize $(python_get_sitedir)/istanbul
+	python_mod_optimize istanbul
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup $(python_get_sitedir)/istanbul
+	python_mod_cleanup istanbul
 }

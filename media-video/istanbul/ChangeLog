@@ -1,6 +1,10 @@
 # ChangeLog for media-video/istanbul
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.17 2011/02/23 13:15:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.18 2011/04/25 21:30:47 arfrever Exp $
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  istanbul-0.2.2.ebuild:
+  Use Python 2 (bug #313991).
 
   23 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org> -istanbul-0.2.1.ebuild:
   Clean up old revision.
