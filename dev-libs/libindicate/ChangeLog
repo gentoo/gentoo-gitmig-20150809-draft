@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.14 2011/04/13 22:04:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.15 2011/04/25 20:48:28 dilfridge Exp $
+
+  25 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libindicate-0.4.4-r2.ebuild:
+  Dont install .la files and static archives for python, bug 356015
 
   13 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   libindicate-0.4.4-r2.ebuild:

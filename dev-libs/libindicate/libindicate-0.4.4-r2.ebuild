@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.2 2011/04/13 22:04:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.3 2011/04/25 20:48:28 dilfridge Exp $
 
 EAPI=2
 
@@ -80,5 +80,10 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
+
+	# cleanup (bug 356015)
+	find "${D}" -name "*.la" -exec rm {} +
+	find "${D}" -name "_indicate.a" -exec rm {} +
+
 	dodoc AUTHORS || die "dodoc failed"
 }
