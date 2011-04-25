@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.68 2011/03/25 19:58:15 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.69 2011/04/25 13:44:57 tomjbe Exp $
+
+  25 Apr 2011; Thomas Beierlein <tomjbe@gentoo.org> geda-1.6.1.ebuild,
+  geda-1.6.2.ebuild:
+  Remove blockers for split geda packages no longer in tree.
 
   25 Mar 2011; Thomas Beierlein <tomjbe@gentoo.org> -geda-1.4.0-r1.ebuild,
   -files/geda-gattrib-1.4.0-gtkentry.patch:

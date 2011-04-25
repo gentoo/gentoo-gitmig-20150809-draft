@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.1.ebuild,v 1.7 2011/03/25 19:36:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.1.ebuild,v 1.8 2011/04/25 13:44:57 tomjbe Exp $
 
 EAPI="2"
 
@@ -25,15 +25,6 @@ CDEPEND="
 	stroke? ( >=dev-libs/libstroke-0.5.1 )"
 
 DEPEND="${CDEPEND}
-	!sci-libs/libgeda
-	!sci-electronics/geda-docs
-	!sci-electronics/geda-examples
-	!sci-electronics/geda-gattrib
-	!sci-electronics/geda-gnetlist
-	!sci-electronics/geda-gschem
-	!sci-electronics/geda-gsymcheck
-	!sci-electronics/geda-symbols
-	!sci-electronics/geda-utils
 	sys-apps/groff
 	dev-util/desktop-file-utils
 	x11-misc/shared-mime-info
