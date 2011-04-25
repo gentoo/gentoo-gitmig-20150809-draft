@@ -1,37 +1,41 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.100.ebuild,v 1.2 2011/02/23 14:05:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.101-r1.ebuild,v 1.1 2011/04/25 10:13:13 nirbheek Exp $
 
-EAPI="3"
+EAPI=3
 inherit eutils pam
 
 DESCRIPTION="Policy framework for controlling privileges for system-wide services"
 HOMEPAGE="http://hal.freedesktop.org/docs/polkit/"
-SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
+SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz
+	mirror://gentoo/${P}-CVE-2011-1485.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples gtk +introspection kde nls pam"
 
-RDEPEND=">=dev-libs/glib-2.25.12
+RDEPEND=">=dev-libs/glib-2.28
 	dev-libs/expat
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
-	!!>=sys-auth/policykit-0.92
-	!<sys-auth/policykit-0.92
+	!!sys-auth/policykit
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.36
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 PDEPEND=">=sys-auth/consolekit-0.4[policykit]
-	gtk? ( || ( >=gnome-extra/polkit-gnome-0.96-r1 lxde-base/lxpolkit ) )
+	gtk? ( || ( >=gnome-extra/polkit-gnome-0.101 lxde-base/lxpolkit ) )
 	kde? ( || ( sys-auth/polkit-kde-agent sys-auth/polkit-kde ) )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.96-getcwd.patch
+	default
+
+	# http://lists.freedesktop.org/archives/polkit-devel/2011-April/000349.html
+	# Not needed for next release
+	epatch "${WORKDIR}/polkit-0.101-CVE-2011-1485/"*.patch
 }
 
 src_configure() {
@@ -56,7 +60,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc docs/TODO HACKING NEWS README
 
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	find "${D}" -name '*.la' -exec rm -f {} +
 
 	# We disable example compilation above, and handle it here
 	if use examples; then
