@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/spek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.3 2011/04/05 21:26:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.4 2011/04/25 19:06:02 xmw Exp $
+
+*spek-0.7 (25 Apr 2011)
+
+  25 Apr 2011; Michael Weber <xmw@gentoo.org> +spek-0.7.ebuild:
+  Version bump
 
   05 Apr 2011; Michael Weber <xmw@gentoo.org> spek-0.6.ebuild:
   Updated dependency to virtual/ffmpeg (bug 362115)
