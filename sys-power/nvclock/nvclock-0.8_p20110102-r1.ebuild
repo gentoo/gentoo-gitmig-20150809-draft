@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.2 2011/03/01 15:49:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.3 2011/04/25 02:30:52 jer Exp $
 
 EAPI="2"
 
@@ -26,6 +26,10 @@ src_prepare() {
 src_configure() {
 	econf --bindir=/usr/bin --disable-qt --docdir=/usr/share/doc/${PF} \
 		$(use_enable gtk) $(use_enable gtk nvcontrol)
+}
+
+src_compile() {
+	emake -C src/ nvclock smartdimmer || die
 }
 
 src_install() {
