@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.30 2010/11/07 22:52:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.31 2011/04/25 06:27:22 graaff Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -48,6 +48,14 @@
 # @DESCRIPTION:
 # Set the value to "yes" to make the dependency on a Ruby interpreter optional.
 
+# @ECLASS-VARIABLE: RUBY_S
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If defined this variable determines the source directory name after
+# unpacking. This defaults to the name of the package. Note that this
+# variable supports a wildcard mechanism to help with github tarballs
+# that contain the commit hash as part of the directory name.
+
 inherit eutils toolchain-funcs
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_test src_install pkg_setup
@@ -56,6 +64,10 @@ case ${EAPI} in
 	0|1)
 		die "Unsupported EAPI=${EAPI} (too old) for ruby-ng.eclass" ;;
 	2|3) ;;
+	4)
+		# S is no longer automatically assigned when it doesn't exist.
+		S="${WORKDIR}"
+		;;
 	*)
 		die "Unknown EAPI=${EAPI} for ruby-ng.eclass"
 esac
@@ -245,7 +257,14 @@ done
 
 _ruby_invoke_environment() {
 	old_S=${S}
-	sub_S=${S#${WORKDIR}/}
+	case ${EAPI} in
+		4)
+			sub_S=${RUBY_S}
+			;;
+		*)
+			sub_S=${S#${WORKDIR}/}
+			;;
+	esac
 
 	# Special case, for the always-lovely GitHub fetches. With this,
 	# we allow the star glob to just expand to whatever directory it's
