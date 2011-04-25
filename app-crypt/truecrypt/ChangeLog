@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.60 2011/03/20 15:46:52 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.61 2011/04/25 14:15:37 c1pher Exp $
+
+  25 Apr 2011; Dane Smith <c1pher@gentoo.org> truecrypt-7.0a-r2.ebuild:
+  Re-added the fetch and mirror restriction after a conversation on -dev. 
+  Please see bug 241650 before removing this in the future.
 
   20 Mar 2011; Dane Smith <c1pher@gentoo.org> truecrypt-7.0a-r2.ebuild:
   Correct typo for rc-update wrt bug 359485.
