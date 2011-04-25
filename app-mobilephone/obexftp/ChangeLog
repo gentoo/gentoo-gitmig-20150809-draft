@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.60 2010/07/14 16:12:48 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.61 2011/04/25 18:29:23 arfrever Exp $
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  obexftp-0.23-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #311665). Delete useless "swig" USE flag.
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   obexftp-0.22.ebuild, obexftp-0.23.ebuild, obexftp-0.23-r1.ebuild:
