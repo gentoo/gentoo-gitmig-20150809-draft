@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.7 2011/04/23 17:24:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.8 2011/04/25 05:37:03 ssuominen Exp $
 
 EAPI=3
 GCONF_DEBUG=no
+GNOME2_LA_PUNT=yes
+
 inherit eutils gnome2
 
 DESCRIPTION="Notification daemon"
@@ -22,8 +24,7 @@ RDEPEND=">=dev-libs/glib-2.4:2
 	>=media-libs/libcanberra-0.4[gtk]
 	x11-libs/libnotify
 	x11-libs/libwnck:1
-	x11-libs/libX11
-"
+	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.14
@@ -38,9 +39,4 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 	gnome2_src_prepare
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name "*.la" -delete
 }
