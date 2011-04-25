@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/highlighting-kate
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/highlighting-kate/ChangeLog,v 1.1 2011/04/25 09:56:06 slyfox Exp $
+
+*highlighting-kate-0.2.9 (25 Apr 2011)
+
+  25 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +highlighting-kate-0.2.9.ebuild, +metadata.xml:
+  Initial version.
+
