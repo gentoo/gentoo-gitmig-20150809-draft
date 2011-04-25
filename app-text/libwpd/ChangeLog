@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.69 2011/04/24 15:13:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.70 2011/04/25 13:44:18 pacho Exp $
+
+  25 Apr 2011; Pacho Ramos <pacho@gentoo.org> libwpd-0.9.1.ebuild:
+  Enable 'tools' by default as it adds no additional dependencies and is
+  required by libwpg, that is a common package requiring libwpd.
 
 *libwpd-0.8.14-r1 (24 Apr 2011)
 
