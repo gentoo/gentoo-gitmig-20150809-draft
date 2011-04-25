@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.5 2011/04/25 03:41:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.6 2011/04/25 04:26:56 jer Exp $
 
 EAPI="2"
 
-inherit eutils autotools
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="NVIDIA Overclocking Utility"
 HOMEPAGE="http://www.linuxhardware.org/nvclock/"
@@ -27,6 +27,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# libc_wrapper.c:54: warning: implicit declaration of function usleep
+	append-flags -D_BSD_SOURCE
+
 	# Qt support would mean Qt 3.
 	econf --bindir=/usr/bin --disable-qt --docdir=/usr/share/doc/${PF} \
 		$(use_enable gtk) $(use_enable nvcontrol)
