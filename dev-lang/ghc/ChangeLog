@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.203 2011/03/27 19:44:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.204 2011/04/25 17:55:08 slyfox Exp $
+
+*ghc-6.12.3-r2 (25 Apr 2011)
+
+  25 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> -ghc-6.12.3-r1.ebuild,
+  +ghc-6.12.3-r2.ebuild, +files/ghc-6.12.3-configure-CHOST-prefix.patch,
+  +files/ghc-6.12.3-darwin8.patch,
+  +files/ghc-6.12.3-mach-o-relocation-limit.patch,
+  +files/ghc-6.12.3-pic-powerpc.patch,
+  +files/ghc-6.12.3-powerpc-darwin-no-mmap.patch, files/ghc-apply-gmp-hack:
+  Added support for x86-macos/ppc-macos/x85-solaric/ppc-solaris systems by
+  Fabian Groffen <grobian@gentoo.org>.
 
 *ghc-6.12.3-r1 (27 Mar 2011)
 

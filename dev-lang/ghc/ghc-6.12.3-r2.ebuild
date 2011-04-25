@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r1.ebuild,v 1.1 2011/03/27 19:44:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.1 2011/04/25 17:55:08 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -48,17 +48,24 @@ arch_binaries="$arch_binaries ppc? ( mirror://gentoo/ghc-bin-${PV}-ppc.tbz2 )"
 # various ports:
 arch_binaries="$arch_binaries x86-fbsd? ( http://code.haskell.org/~slyfox/ghc-x86-fbsd/ghc-bin-${PV}-x86-fbsd.tbz2 )"
 
+# prefix ports:
+arch_binaries="$arch_binaries x86-macos? ( http://www.haskell.org/ghc/dist/6.10.1/maeder/ghc-6.10.1-i386-apple-darwin.tar.bz2 )"
+arch_binaries="$arch_binaries ppc-macos? ( http://www.haskell.org/ghc/dist/6.10.1/maeder/ghc-6.10.1-powerpc-apple-darwin.tar.bz2 )"
+arch_binaries="$arch_binaries x86-solaris? ( http://www.haskell.org/ghc/dist/6.10.4/maeder/ghc-6.10.4-i386-unknown-solaris2.tar.bz2 )"
+arch_binaries="$arch_binaries sparc-solaris? ( http://www.haskell.org/ghc/dist/6.10.4/maeder/ghc-6.10.4-sparc-sun-solaris2.tar.bz2 )"
+
 SRC_URI="!binary? ( http://darcs.haskell.org/download/dist/${PV}/${P}-src.tar.bz2 )
 	!ghcbootstrap? ( $arch_binaries )"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="binary doc ghcbootstrap"
 
 RDEPEND="
 	!dev-lang/ghc-bin
-	>=sys-devel/gcc-2.95.3
-	>=sys-devel/binutils-2.17
+	!kernel_Darwin? ( >=sys-devel/gcc-2.95.3 )
+	kernel_linux? ( >=sys-devel/binutils-2.17 )
+	kernel_SunOS? ( >=sys-devel/binutils-2.17 )
 	>=dev-lang/perl-5.6.1
 	>=dev-libs/gmp-4.1
 	!<dev-haskell/haddock-2.4.2
@@ -203,11 +210,18 @@ src_unpack() {
 	# Create the ${S} dir if we're using the binary version
 	use binary && mkdir "${S}"
 
-	base_src_unpack
+	# the Solaris and Darwin binaries from ghc (maeder) need to be
+	# unpacked separately, so prevent them from being unpacked
+	local ONLYA=${A}
+	case ${CHOST} in
+		*-darwin* | *-solaris*)  ONLYA=${P}-src.tar.bz2  ;;
+	esac
+	unpack ${ONLYA}
 }
 
 src_prepare() {
-	source "${FILESDIR}/ghc-apply-gmp-hack" "$(get_libdir)"
+	[[ ${CHOST} != *-darwin* ]] && \
+		source "${FILESDIR}/ghc-apply-gmp-hack" "$(get_libdir)"
 
 	ghc_setup_cflags
 
@@ -232,7 +246,64 @@ src_prepare() {
 		mv "${WORKDIR}/usr" "${S}"
 	else
 		if ! use ghcbootstrap; then
-			relocate_ghc "${WORKDIR}"
+			case ${CHOST} in
+				*-darwin* | *-solaris*)
+				mkdir "${WORKDIR}"/ghc-bin-installer || die
+				pushd "${WORKDIR}"/ghc-bin-installer > /dev/null || die
+				use sparc-solaris && unpack ghc-6.10.4-sparc-sun-solaris2.tar.bz2
+				use x86-solaris && unpack ghc-6.10.4-i386-unknown-solaris2.tar.bz2
+				use ppc-macos && unpack ghc-6.10.1-powerpc-apple-darwin.tar.bz2
+				use x86-macos && unpack ghc-6.10.1-i386-apple-darwin.tar.bz2
+				popd > /dev/null
+
+				pushd "${WORKDIR}"/ghc-bin-installer/ghc-6.10.? > /dev/null || die
+				# fix the binaries so they run, on Solaris we need an
+				# LD_LIBRARY_PATH which has our prefix libdirs, on
+				# Darwin we need to replace the frameworks with our libs
+				# from the prefix fix before installation, because some
+				# of the tools are actually used during configure/make
+				if [[ ${CHOST} == *-solaris* ]] ; then
+					export LD_LIBRARY_PATH="${EPREFIX}/$(get_libdir):${EPREFIX}/usr/$(get_libdir):${LD_LIBRARY_PATH}"
+				elif [[ ${CHOST} == *-darwin* ]] ; then
+					# http://hackage.haskell.org/trac/ghc/ticket/2942
+					pushd utils/haddock/dist-install/build > /dev/null
+					ln -s Haddock haddock >& /dev/null # fails on IN-sensitive
+					popd > /dev/null
+
+					local readline_framework=GNUreadline.framework/GNUreadline
+					local gmp_framework=/opt/local/lib/libgmp.3.dylib
+					local ncurses_file=/opt/local/lib/libncurses.5.dylib
+					for binary in $(scanmacho -BRE MH_EXECUTE -F '%F' .) ; do
+						install_name_tool -change \
+							${readline_framework} \
+							"${EPREFIX}"/lib/libreadline.dylib \
+							${binary} || die
+						install_name_tool -change \
+							${gmp_framework} \
+							"${EPREFIX}"/usr/lib/libgmp.dylib \
+							${binary} || die
+						install_name_tool -change \
+							${ncurses_file} \
+							"${EPREFIX}"/usr/lib/libncurses.dylib \
+							${binary} || die
+					done
+					# we don't do frameworks!
+					sed -i \
+						-e 's/\(frameworks = \)\["GMP"\]/\1[]/g' \
+						-e 's/\(extraLibraries = \)\["m"\]/\1["m","gmp"]/g' \
+						rts/package.conf.in || die
+				fi
+
+				# it is autoconf, but we really don't want to give it too
+				# much arguments, in fact we do the make in-place anyway
+				./configure --prefix="${WORKDIR}"/usr || die
+				make install || die
+				popd > /dev/null
+				;;
+				*)
+				relocate_ghc "${WORKDIR}"
+				;;
+			esac
 		fi
 
 		sed -i -e "s|\"\$topdir\"|\"\$topdir\" ${GHC_CFLAGS}|" \
@@ -263,6 +334,7 @@ src_prepare() {
 		epatch "${FILESDIR}/ghc-6.12.1-configure-CHOST.patch"
 		epatch "${FILESDIR}/ghc-6.12.2-configure-CHOST-part2.patch"
 		epatch "${FILESDIR}/ghc-6.12.3-configure-CHOST-freebsd.patch"
+		epatch "${FILESDIR}/ghc-6.12.3-configure-CHOST-prefix.patch"
 
 		# -r and --relax are incompatible
 		epatch "${FILESDIR}/ghc-6.12.3-ia64-fixed-relax.patch"
@@ -283,7 +355,9 @@ src_prepare() {
 		epatch "${FILESDIR}/ghc-6.12.3-autoconf-2.66-4252.patch"
 
 		# ticket 2615, linker scripts
-		epatch "${FILESDIR}/ghc-6.12.3-ticket-2615-linker-script.patch"
+		# breaks Darwin
+		[[ ${CHOST} != *-darwin* ]] && \
+			epatch "${FILESDIR}/ghc-6.12.3-ticket-2615-linker-script.patch"
 
 		# export typechecker internals even if ghci is disabled
 		# http://hackage.haskell.org/trac/ghc/ticket/3558
@@ -292,6 +366,11 @@ src_prepare() {
 		# This patch unbreaks ghci on GRSEC kernels hardened with
 		# TPE (Trusted Path Execution) protection.
 		epatch "${FILESDIR}/ghc-6.12.3-libffi-incorrect-detection-of-selinux.patch"
+
+		epatch "${FILESDIR}"/${P}-pic-powerpc.patch
+		epatch "${FILESDIR}"/${P}-darwin8.patch
+		epatch "${FILESDIR}"/${P}-mach-o-relocation-limit.patch
+		epatch "${FILESDIR}"/${P}-powerpc-darwin-no-mmap.patch
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix
@@ -315,7 +394,11 @@ src_configure() {
 
 		# We also need to use the GHC_CFLAGS flags when building ghc itself
 		echo "SRC_HC_OPTS+=${GHC_CFLAGS}" >> mk/build.mk
-		echo "SRC_CC_OPTS+=${CFLAGS} -Wa,--noexecstack" >> mk/build.mk
+		case $($(tc-getAS) -v 2>&1 </dev/null) in
+			*"GNU Binutils"*) # GNU ld
+			echo "SRC_CC_OPTS+=${CFLAGS} -Wa,--noexecstack" >> mk/build.mk
+			;;
+		esac
 
 		# We can't depend on haddock except when bootstrapping when we
 		# must build docs and include them into the binary .tbz2 package
@@ -378,7 +461,6 @@ src_compile() {
 
 src_install() {
 	if use binary; then
-		mkdir -p "${ED}"
 		mv "${S}/usr" "${ED}"
 
 		# Remove the docs if not requested
