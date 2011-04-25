@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.3 2011/04/20 16:34:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.4 2011/04/25 22:45:31 arfrever Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -48,8 +48,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_unpack() {
