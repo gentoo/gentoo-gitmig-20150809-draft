@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.26 2011/03/16 14:13:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.27 2011/04/25 21:10:28 sping Exp $
 
-# genkernel-9999        -> latest Git branch "stable"
-# genkernel-99999       -> latest Git branch "master" (upcoming 4.x using sys-kernel/dracut)
+# genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
 
 VERSION_BUSYBOX='1.18.1'
@@ -39,7 +38,7 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 if [[ ${PV} == 9999* ]]
 then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/genkernel.git"
-	[[ ${PV} == 99999* ]] && EGIT_BRANCH=master || EGIT_BRANCH=stable
+	EGIT_BRANCH=master
 	inherit git bash-completion eutils
 	S="${WORKDIR}/${PN}"
 	SRC_URI="${COMMON_URI}"
