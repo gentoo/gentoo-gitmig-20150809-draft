@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gtetrinet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.20 2011/04/15 21:44:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.21 2011/04/25 14:54:56 armin76 Exp $
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> gtetrinet-0.7.11.ebuild,
+  gtetrinet-0.7.11-r1.ebuild:
+  Drop sparc keywords
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> gtetrinet-0.7.11-r1.ebuild:
   Stable on amd64 wrt bug #362659
