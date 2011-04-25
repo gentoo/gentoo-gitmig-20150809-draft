@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.57 2011/04/10 18:56:31 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.58 2011/04/25 16:24:59 armin76 Exp $
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.9.2.15.ebuild:
+  sparc stable wrt #357655
 
   10 Apr 2011; Thomas Kahle <tomka@gentoo.org> spidermonkey-1.9.2.15.ebuild:
   x86 stable per bug 357655

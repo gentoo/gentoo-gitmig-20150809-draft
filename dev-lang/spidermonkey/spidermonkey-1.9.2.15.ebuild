@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.9.2.15.ebuild,v 1.7 2011/04/10 18:56:31 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.9.2.15.ebuild,v 1.8 2011/04/25 16:24:59 armin76 Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs multilib python
@@ -14,7 +14,7 @@ SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2"
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="threadsafe"
 
 S="${WORKDIR}/mozilla-1.9.2"
