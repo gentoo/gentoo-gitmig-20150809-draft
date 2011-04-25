@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.7 2010/12/18 21:15:32 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.8 2011/04/25 21:00:29 arfrever Exp $
 
-EAPI=2
+EAPI=3
 # desklets don't run with USE=debug
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.4"
