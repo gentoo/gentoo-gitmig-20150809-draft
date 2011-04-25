@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.7 2011/04/25 20:34:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.8 2011/04/25 20:43:51 mr_bones_ Exp $
 
-EAPI="3"
-
+EAPI=3
 inherit eutils python games
 
 MUS_P=${PN}-musicpack-1.0
