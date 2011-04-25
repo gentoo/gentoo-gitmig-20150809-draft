@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.10.ebuild,v 1.6 2011/03/21 21:45:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.10.ebuild,v 1.7 2011/04/25 13:35:35 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic
@@ -21,13 +21,12 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=dev-libs/libical-0.33
 	app-text/gtkspell
 	gnome-extra/gtkhtml:2
-	>=x11-libs/libnotify-0.4.4"
+	>=x11-libs/libnotify-0.7"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	has_version ">=x11-libs/libnotify-0.7" && epatch \
-		"${FILESDIR}"/${P}-libnotify-0.7.patch
+	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 }
 
 src_configure() {
