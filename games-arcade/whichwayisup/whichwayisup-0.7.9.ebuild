@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.9 2010/05/04 04:39:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.10 2011/04/25 20:19:11 arfrever Exp $
 
 PYTHON_DEPEND="2"
-EAPI=2
+EAPI=3
 inherit eutils python games
 
 MY_PV=${PV//./}
