@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-7207.ebuild,v 1.2 2011/04/16 18:52:53 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-7207.ebuild,v 1.3 2011/04/25 14:58:42 armin76 Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://maatkit.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="udf"
 
 COMMON_DEPEND="dev-perl/DBI

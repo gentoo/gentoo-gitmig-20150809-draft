@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-6070.ebuild,v 1.5 2011/01/04 00:24:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-6070.ebuild,v 1.6 2011/04/25 14:58:42 armin76 Exp $
 
 EAPI=2
 inherit perl-app toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://maatkit.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="udf"
 
 DEPEND="dev-perl/DBD-mysql
