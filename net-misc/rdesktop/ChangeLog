@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.125 2011/04/24 02:38:05 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.126 2011/04/25 09:48:01 hwoarang Exp $
+
+  25 Apr 2011; Markos Chandras <hwoarang@gentoo.org> rdesktop-1.7.0.ebuild:
+  Stable on amd64 wrt bug #364191
 
   24 Apr 2011; Joseph Jezak <josejx@gentoo.org> rdesktop-1.7.0.ebuild:
   Marked ppc stable for bug #364191.
