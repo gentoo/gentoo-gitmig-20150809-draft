@@ -6,5 +6,8 @@
 <flag name='gcrypt'>
 	Use <pkg>dev-libs/libgcrypt</pkg> for low-level crypto
 </flag>
+<flag name='ntlm'>
+	Add support for Microsoft's NTLM mechanism using <pkg>net-libs/libntlm</pkg>
+</flag>
 </use>
 </pkgmetadata>

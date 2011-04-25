@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.37 2011/03/15 19:25:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.38 2011/04/25 15:13:59 eras Exp $
+
+*gsasl-1.6.0-r1 (25 Apr 2011)
+
+  25 Apr 2011; Eray Aslan <eras@gentoo.org> +gsasl-1.6.0-r1.ebuild,
+  metadata.xml:
+  EAPI bump. Tidy up and hopefully solve bug #331707
 
   15 Mar 2011; Jeroen Roovers <jer@gentoo.org> gsasl-1.6.0.ebuild,
   metadata.xml:
