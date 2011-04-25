@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.8-r1.ebuild,v 1.3 2011/03/22 06:20:44 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.8-r1.ebuild,v 1.4 2011/04/25 15:24:12 arfrever Exp $
 
+EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils eutils
@@ -30,9 +31,7 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PV}-magic-compat.patch"
 	distutils_src_prepare
 }
