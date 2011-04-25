@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/conspire
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.19 2011/03/29 15:08:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.20 2011/04/25 14:39:11 tomka Exp $
+
+  25 Apr 2011; Thomas Kahle <tomka@gentoo.org> conspire-1.0.1.ebuild:
+  x86 stable per bug 360999
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> conspire-1.0.1.ebuild:
   Stable on amd64 wrt bug #360999

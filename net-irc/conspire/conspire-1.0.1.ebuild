@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.6 2011/03/29 15:08:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-1.0.1.ebuild,v 1.7 2011/04/25 14:39:11 tomka Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~sparc x86"
 IUSE="dbus ipv6 mmx nls python socks5"
 
 RDEPEND=">=dev-libs/glib-2.14:2
