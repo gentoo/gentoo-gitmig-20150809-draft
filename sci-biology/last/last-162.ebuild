@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-162.ebuild,v 1.1 2011/04/02 18:26:30 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-162.ebuild,v 1.2 2011/04/25 11:00:59 jlec Exp $
 
 EAPI="2"
 
@@ -18,6 +18,10 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PV}-gcc46.patch
+}
 src_compile() {
 	emake -e -C src CXX="$(tc-getCXX)" \
 		STRICT="${LDFLAGS}" || die

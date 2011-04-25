@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-162-r1.ebuild,v 1.1 2011/04/08 06:29:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-162-r1.ebuild,v 1.2 2011/04/25 11:00:59 jlec Exp $
 
 EAPI="2"
 
@@ -19,7 +19,9 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
+	epatch \
+		"${FILESDIR}"/${PV}-ldflags.patch \
+		"${FILESDIR}"/${PV}-gcc46.patch
 }
 
 src_compile() {
