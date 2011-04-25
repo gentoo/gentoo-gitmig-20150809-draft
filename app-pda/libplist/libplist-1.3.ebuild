@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.3.ebuild,v 1.6 2011/03/29 02:16:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-1.3.ebuild,v 1.7 2011/04/25 18:38:44 arfrever Exp $
 
-EAPI=2
+EAPI=3
 inherit cmake-utils eutils multilib python
 
 DESCRIPTION="Support library to deal with Apple Property Lists (Binary & XML)"
@@ -34,9 +34,9 @@ src_configure() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/plist
+	python_mod_optimize plist
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/plist
+	python_mod_cleanup plist
 }
