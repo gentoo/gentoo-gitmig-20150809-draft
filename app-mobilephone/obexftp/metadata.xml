@@ -7,7 +7,4 @@
     <name>Alin Nastac</name>
 </maintainer>
 <longdescription>File transfer over OBEX for mobile phones.</longdescription>
-<use>
-  <flag name='swig'>Enable rebuild of <pkg>dev-lang/swig</pkg> bindings</flag>
-</use>
 </pkgmetadata>
