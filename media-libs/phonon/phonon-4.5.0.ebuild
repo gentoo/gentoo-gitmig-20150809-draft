@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.1 2011/04/08 17:09:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.2 2011/04/25 14:15:48 grobian Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon"
 SRC_URI="mirror://kde/stable/phonon/${PV}/src/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
 IUSE="debug gstreamer pulseaudio +vlc xine"
 
