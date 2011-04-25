@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/cream
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.44 2010/11/21 02:55:28 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.45 2011/04/25 16:50:49 lack Exp $
+
+*cream-0.43 (25 Apr 2011)
+
+  25 Apr 2011; Jim Ramsay <lack@gentoo.org> +cream-0.43.ebuild:
+  Version bump: 0.43 is released (Bug #306949)
 
   21 Nov 2010; Sebastian Pipping <sping@gentoo.org> -files/cream.sh:
   Remove unused file (bug #344617)
