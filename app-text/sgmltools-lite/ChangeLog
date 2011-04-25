@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.52 2011/04/05 05:06:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.53 2011/04/25 18:51:36 arfrever Exp $
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sgmltools-lite-3.0.3-r10.ebuild:
+  Use Python 2 (bug #312123).
 
   05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> sgmltools-lite-3.0.3-r10.ebuild:
   Depend on dev-lang/python because virtual/python will go away, bug 358849.

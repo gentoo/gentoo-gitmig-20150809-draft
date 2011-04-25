@@ -1,6 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.14 2011/04/05 05:06:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r10.ebuild,v 1.15 2011/04/25 18:51:36 arfrever Exp $
+
+EAPI="3"
+PYTHON_DEPEND="2"
 
 inherit python sgml-catalog
 
@@ -14,8 +17,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="jadetex"
 
-DEPEND=">=dev-lang/python-1.5
-	app-text/sgml-common
+DEPEND="app-text/sgml-common
 	~app-text/docbook-sgml-dtd-3.1
 	app-text/docbook-dsssl-stylesheets
 	app-text/openjade
@@ -27,17 +29,18 @@ DEPEND=">=dev-lang/python-1.5
 sgml-catalog_cat_include "/etc/sgml/sgml-lite.cat" \
 	"/usr/share/sgml/stylesheets/sgmltools/sgmltools.cat"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
+src_prepare() {
 	# Remove CVS directories from the tree
 	find . -name CVS | xargs rm -rf
 }
 
 src_compile() {
-	econf || die
-	emake || die
+	default
 }
 
 src_install() {
