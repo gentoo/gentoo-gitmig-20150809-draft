@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.9.ebuild,v 1.1 2011/04/25 07:47:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.9.ebuild,v 1.2 2011/04/25 07:49:39 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -20,23 +20,23 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC CPP
-	emake || die
-	emake -C kacpimon || die
+	emake
+	emake -C kacpimon
 }
 
 src_install() {
-	emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install || die
+	emake DESTDIR="${D}" DOCDIR=/usr/share/doc/${PF} install
 
-	dobin kacpimon/kacpimon || die
+	dobin kacpimon/kacpimon
 	newdoc kacpimon/README README.kacpimon
 
 	exeinto /etc/acpi
-	newexe "${FILESDIR}"/${PN}-1.0.6-default.sh default.sh || die
+	newexe "${FILESDIR}"/${PN}-1.0.6-default.sh default.sh
 	insinto /etc/acpi/events
-	newins "${FILESDIR}"/${PN}-1.0.4-default default || die
+	newins "${FILESDIR}"/${PN}-1.0.4-default default
 
-	newinitd "${FILESDIR}"/${PN}-2.0.3-init.d acpid || die
-	newconfd "${FILESDIR}"/${PN}-1.0.6-conf.d acpid || die
+	newinitd "${FILESDIR}"/${PN}-2.0.3-init.d acpid
+	newconfd "${FILESDIR}"/${PN}-1.0.6-conf.d acpid
 }
 
 pkg_postinst() {
