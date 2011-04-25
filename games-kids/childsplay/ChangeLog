@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/childsplay
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.17 2010/04/26 10:27:00 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.18 2011/04/25 20:31:32 arfrever Exp $
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  childsplay-0.90.2.ebuild:
+  Fix deprecation warnings.
 
   26 Apr 2010; Tupone Alfredo <tupone@gentoo.org> childsplay-0.90.2.ebuild,
   +files/childsplay-0.90.2-gentoo.patch:
