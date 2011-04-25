@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Crypt-SMIME
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SMIME/ChangeLog,v 1.1 2011/04/25 15:05:34 idl0r Exp $
+
+*Crypt-SMIME-0.10 (25 Apr 2011)
+
+  25 Apr 2011; Christian Ruppert <idl0r@gentoo.org> +Crypt-SMIME-0.10.ebuild,
+  +metadata.xml:
+  Initial commit for dev-perl/Crypt-SMIME.
+
