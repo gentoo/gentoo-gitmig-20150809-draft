@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-qt7
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/ChangeLog,v 1.1 2011/04/24 18:45:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/ChangeLog,v 1.2 2011/04/25 14:45:44 grobian Exp $
+
+  25 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  phonon-qt7-0_pre20110424.ebuild,
+  +files/phonon-qt7-0_pre20110424-QWidget-cast-dynamic.patch:
+  Fix deps, add patch and keyword for ~ppc-macos, bug #353362
 
 *phonon-qt7-0_pre20110424 (24 Apr 2011)
 
