@@ -1,0 +1,89 @@
+From a7aac809d740a7393c9fd20f701802a7786bba42 Mon Sep 17 00:00:00 2001
+From: Brian Dolbec <brian.dolbec@gmail.com>
+Date: Fri, 22 Apr 2011 23:53:19 -0700
+Subject: [PATCH] fix bug 363797 python-2.5 test errors.
+
+---
+ layman/overlays/bzr.py       |    2 +-
+ layman/overlays/cvs.py       |    4 ++--
+ layman/overlays/darcs.py     |    2 +-
+ layman/overlays/git.py       |    2 +-
+ layman/overlays/mercurial.py |    2 +-
+ 5 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/layman/overlays/bzr.py b/layman/overlays/bzr.py
+index e73c2f4..4725c98 100644
+--- a/layman/overlays/bzr.py
++++ b/layman/overlays/bzr.py
+@@ -61,7 +61,7 @@ class BzrOverlay(OverlaySource):
+ 
+         # bzr pull --overwrite SOURCE
+         args = ['pull', '--overwrite', self.src]
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
+diff --git a/layman/overlays/cvs.py b/layman/overlays/cvs.py
+index f8fc277..4924ca4 100644
+--- a/layman/overlays/cvs.py
++++ b/layman/overlays/cvs.py
+@@ -83,7 +83,7 @@ class CvsOverlay(OverlaySource):
+         args.append(self.parent.name)
+         args.append(self.subpath)
+ 
+-        return self.run_command(*args, cwd=base, env=dict(CVSROOT=self.src))
++        return self.run_command(args, cwd=base, env=dict(CVSROOT=self.src))
+ 
+     def sync(self, base, quiet = False):
+         '''Sync overlay.'''
+@@ -96,7 +96,7 @@ class CvsOverlay(OverlaySource):
+             args.append('-q')
+         args.append('update')
+         args.append('-d')
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
+diff --git a/layman/overlays/darcs.py b/layman/overlays/darcs.py
+index 7d89477..12e75ec 100644
+--- a/layman/overlays/darcs.py
++++ b/layman/overlays/darcs.py
+@@ -60,7 +60,7 @@ class DarcsOverlay(OverlaySource):
+ 
+         # darcs pull --all SOURCE
+         args = ['pull', '--all', self.src]
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
+diff --git a/layman/overlays/git.py b/layman/overlays/git.py
+index caa73f4..8db6c51 100644
+--- a/layman/overlays/git.py
++++ b/layman/overlays/git.py
+@@ -70,7 +70,7 @@ class GitOverlay(OverlaySource):
+         args = ['pull']
+         if quiet:
+             args.append('-q')
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
+diff --git a/layman/overlays/mercurial.py b/layman/overlays/mercurial.py
+index 06cf59d..ea3f9da 100644
+--- a/layman/overlays/mercurial.py
++++ b/layman/overlays/mercurial.py
+@@ -60,7 +60,7 @@ class MercurialOverlay(OverlaySource):
+ 
+         # hg pull -u SOURCE
+         args = ['pull', '-u', self.src]
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
+-- 
+1.7.3.4
