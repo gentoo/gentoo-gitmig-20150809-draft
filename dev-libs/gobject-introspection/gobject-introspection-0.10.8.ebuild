@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.3 2011/04/25 17:28:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.4 2011/04/25 19:33:47 grobian Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
-inherit gnome2 python
+inherit gnome2 python libtool
 
 DESCRIPTION="Introspection infrastructure for gobject library bindings"
 HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
@@ -39,6 +39,9 @@ src_prepare() {
 
 	# Don't pre-compile .py
 	ln -sf $(type -P true) py-compile
+
+	# Fix Darwin bundles
+	elibtoolize
 }
 
 src_install() {
