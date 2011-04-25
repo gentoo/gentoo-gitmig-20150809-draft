@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.2.0.ebuild,v 1.6 2011/04/12 21:48:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.2.0.ebuild,v 1.7 2011/04/25 20:29:47 dilfridge Exp $
 
 EAPI=3
 
@@ -29,4 +29,4 @@ RDEPEND="
 	doc? ( >=dev-util/kdevelop-php-docs-${PV}:${SLOT} )
 "
 
-PATCHES=( "${FILESDIR}/${P}"-dbustests.patch )
+PATCHES=( "${FILESDIR}/${P}"-{dbustests,parmake}.patch )
