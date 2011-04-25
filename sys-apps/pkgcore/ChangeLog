@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.105 2011/03/22 06:16:40 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.106 2011/04/25 03:10:26 ferringb Exp $
+
+*pkgcore-0.6 (25 Apr 2011)
+
+  25 Apr 2011; Brian Harring <ferringb@gentoo.org> +pkgcore-0.6.ebuild:
+  pkgcore 0.6; adds eapi4 support, and fixes a ton of issues.
 
   22 Mar 2011; Brian Harring <ferringb@gentoo.org> pkgcore-0.5.11.6.ebuild,
   pkgcore-0.5.11.7.ebuild, pkgcore-0.5.11.8.ebuild, pkgcore-0.5.11.8-r1.ebuild:
