@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.218 2011/04/23 18:40:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.219 2011/04/26 14:46:37 xarthisius Exp $
+
+  26 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> pulseaudio-0.9.22.ebuild:
+  ppc64 stable wrt #360123
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> pulseaudio-0.9.22.ebuild:
   alpha/ia64/sh/sparc stable wrt #360123
