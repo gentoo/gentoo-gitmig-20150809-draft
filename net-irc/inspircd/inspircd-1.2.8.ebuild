@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.2.8.ebuild,v 1.1 2010/11/05 11:37:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.2.8.ebuild,v 1.2 2011/04/26 14:22:31 c1pher Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs multilib

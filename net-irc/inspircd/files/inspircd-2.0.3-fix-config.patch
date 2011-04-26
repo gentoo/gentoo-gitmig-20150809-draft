@@ -1,0 +1,58 @@
+diff -Nur a/docs/inspircd.conf.example b/docs/inspircd.conf.example
+--- a/docs/inspircd.conf.example	2011-02-02 03:25:41.000000000 +0100
++++ b/docs/inspircd.conf.example	2011-04-06 22:30:03.591000071 +0200
+@@ -402,11 +402,11 @@
+ 
+ # This file has all the information about oper classes, types and o:lines.
+ # You *MUST* edit it.
+-<include file="conf/opers.conf.example">
++<include file="/etc/inspircd/opers.conf.example">
+ 
+ # This file has all the information about server links and ulined servers.
+ # You *MUST* edit it if you intend to link servers.
+-<include file="conf/links.conf.example">
++<include file="/etc/inspircd/links.conf.example">
+ 
+ #-#-#-#-#-#-#-#-#-#-  MISCELLANEOUS CONFIGURATION  -#-#-#-#-#-#-#-#-#-#
+ #                                                                     #
+@@ -416,7 +416,8 @@
+ #   motd - displayed on connect and when a user executes /MOTD
+ #   rules - displayed when the user executes /RULES
+ # Modules can also define their own files
+-<files motd="conf/inspircd.motd.example" rules="conf/inspircd.rules.example">
++<files motd="/etc/inspircd/inspircd.motd.example"
++       rules="/etc/inspircd/inspircd.rules.example">
+ 
+ # Example of an executable file include. Note this will be read on rehash,
+ # not when the command is run.
+@@ -462,7 +463,7 @@
+ # the default of 'inspircd.pid' is used.                              #
+ #                                                                     #
+ 
+-#<pid file="/path/to/inspircd.pid">
++<pid file="/var/run/inspircd/inspircd.pid">
+ 
+ #-#-#-#-#-#-#-#-#-#-#-#-#- BANLIST LIMITS #-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ #                                                                     #
+@@ -908,7 +909,7 @@
+ # provide almost all the features of InspIRCd. :)                     #
+ #                                                                     #
+ # The default does nothing -- we include it for simplicity for you.   #
+-<include file="conf/modules.conf.example">
++<include file="/etc/inspircd/modules.conf.example">
+ 
+ # Here are some pre-built modules.conf files that closely match the
+ # default configurations of some popular IRCd's. You still may want to
+@@ -920,10 +921,10 @@
+ # recommended that you make your own modules file based on modules.conf.example.
+ 
+ # Settings similar to UnrealIRCd defaults.
+-#<include file="conf/modules/modules.conf.unreal">
++#<include file="/etc/inspircd/modules/modules.conf.unreal">
+ 
+ # Settings similar to Charybdis IRCd defaults.
+-#<include file="conf/modules/modules.conf.charybdis">
++#<include file="/etc/inspircd/modules/modules.conf.charybdis">
+ 
+ 
+ #########################################################################
