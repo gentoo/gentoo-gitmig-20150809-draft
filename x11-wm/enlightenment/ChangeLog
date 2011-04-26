@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/enlightenment
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.143 2010/12/28 01:47:10 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.144 2011/04/26 19:52:52 vapier Exp $
+
+*enlightenment-1.0.8 (26 Apr 2011)
+
+  26 Apr 2011; Mike Frysinger <vapier@gentoo.org> +enlightenment-1.0.8.ebuild:
+  Version bump.
 
   28 Dec 2010; Brent Baude <ranger@gentoo.org> enlightenment-1.0.2.ebuild:
   stable ppc64, bug 330573
