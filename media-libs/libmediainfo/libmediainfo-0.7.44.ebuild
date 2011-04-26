@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.42.ebuild,v 1.1 2011/03/04 21:54:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.44.ebuild,v 1.1 2011/04/26 07:16:52 radhermit Exp $
 
 EAPI="4"
 
-inherit autotools-utils multilib eutils
+inherit autotools-utils multilib
 
 MY_PN="MediaInfo"
 DESCRIPTION="MediaInfo libraries"
@@ -29,9 +29,6 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
 
 src_prepare() {
-	# Fix linking problem for bug #343125
-	EPATCH_OPTS="-p1 -d ${WORKDIR}/${MY_PN}Lib" epatch "${FILESDIR}"/${PN}-0.7.41-curl.patch
-
 	# Don't force -O2 by default
 	sed -i -e "s:-O2::" configure.ac
 
