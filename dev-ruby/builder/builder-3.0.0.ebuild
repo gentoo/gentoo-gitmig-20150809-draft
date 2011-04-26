@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-3.0.0.ebuild,v 1.3 2011/03/07 12:04:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-3.0.0.ebuild,v 1.4 2011/04/26 12:02:55 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -16,7 +16,7 @@ DESCRIPTION="A builder to facilitate programatic generation of XML markup"
 HOMEPAGE="http://rubyforge.org/projects/builder/"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
