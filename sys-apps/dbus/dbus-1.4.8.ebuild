@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.8.ebuild,v 1.1 2011/04/20 13:44:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.8.ebuild,v 1.2 2011/04/26 16:13:24 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic python virtualx
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc selinux static-libs test X"
 
-CDEPEND="
+RDEPEND="
 	X? (
 		x11-libs/libX11
 		x11-libs/libXt
@@ -23,11 +23,9 @@ CDEPEND="
 		sys-libs/libselinux
 		sec-policy/selinux-dbus
 	)
-"
-RDEPEND="${CDEPEND}
 	>=dev-libs/expat-1.95.8
 "
-DEPEND="${CDEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
 		app-doc/doxygen
