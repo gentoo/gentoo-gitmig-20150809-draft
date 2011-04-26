@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.7.ebuild,v 1.1 2011/04/23 19:06:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.7.ebuild,v 1.2 2011/04/26 17:32:40 vapier Exp $
 
 EAPI="3"
 
@@ -8,18 +8,20 @@ inherit eutils libtool multilib
 
 DESCRIPTION="Portable Network Graphics library"
 HOMEPAGE="http://www.libpng.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
+	apng? ( mirror://sourceforge/${PN}-apng/${PN}-master/${PV}/${P}-apng.patch.gz )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
-IUSE="static-libs"
+IUSE="apng static-libs"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
 src_prepare() {
+	use apng && epatch "${WORKDIR}"/${P}-apng.patch
 	elibtoolize
 }
 
