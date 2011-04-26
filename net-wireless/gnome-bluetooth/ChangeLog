@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.96 2011/04/16 19:33:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.97 2011/04/26 18:53:24 pacho Exp $
+
+  26 Apr 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  We are main maintainers as pda and mobile are more inactive.
 
   16 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
   -gnome-bluetooth-2.28.6.ebuild, -files/gnome-bluetooth-2.30.0-add-pin.patch,
