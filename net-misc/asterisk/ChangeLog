@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.305 2011/04/26 08:22:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.306 2011/04/26 08:32:13 chainsaw Exp $
+
+*asterisk-1.6.2.17.3 (26 Apr 2011)
+
+  26 Apr 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.6.2.17.3.ebuild:
+  Update in 1.6.2 branch for security bug #364887 by Tim Sammut. Addresses
+  CVE-2011-1507 (AST-2011-005/AST-2011-006) and is planned for fast-track
+  stabilisation.
 
 *asterisk-1.8.3.3 (26 Apr 2011)
 
