@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop-php-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/ChangeLog,v 1.17 2011/04/12 22:20:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/ChangeLog,v 1.18 2011/04/26 16:05:14 scarabeus Exp $
+
+  26 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdevelop-php-docs-1.1.2.ebuild:
+  old
 
   12 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kdevelop-php-docs-1.2.0.ebuild:
