@@ -10,3 +10,4 @@ slotmove <app-text/libwpd-0.9 0 0.8
 slotmove >=app-text/libwpd-0.9 0 0.9
 slotmove <media-libs/libwpg-0.2 0 0.1
 slotmove >=media-libs/libwpg-0.2 0 0.2
+slotmove =dev-ruby/builder-3.0.0 0 3
