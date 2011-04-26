@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.7.8.ebuild,v 1.2 2011/04/26 11:39:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.7.8.ebuild,v 1.3 2011/04/26 11:41:15 scarabeus Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ x86name="${P}.i686"
 amd64name="${P}.x86_64"
 
 DESCRIPTION="XVBA Backend for Video Acceleration (VA) API"
-HOMEPAGE="http://www.splitted-desktop.com/~gbeauchesne/xvba-video/"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/vaapi/"
 SRC_URI="
 	amd64? ( http://www.splitted-desktop.com/~gbeauchesne/${PN}/${amd64name}.tar.gz )
 	x86? ( http://www.splitted-desktop.com/~gbeauchesne/${PN}/${x86name}.tar.gz )
