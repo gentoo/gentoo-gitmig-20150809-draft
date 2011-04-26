@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.17.3.ebuild,v 1.1 2011/04/26 08:32:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.17.3.ebuild,v 1.2 2011/04/26 10:30:05 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -26,7 +26,7 @@ RDEPEND="sys-libs/ncurses
 	alsa? ( media-libs/alsa-lib )
 	caps? ( sys-libs/libcap )
 	dahdi? ( >=net-libs/libpri-1.4.7
-		net-misc/dahdi-tools )
+		>=net-misc/dahdi-tools-2.4.1 )
 	freetds? ( dev-db/freetds )
 	iconv? ( virtual/libiconv )
 	jabber? ( dev-libs/iksemel )
