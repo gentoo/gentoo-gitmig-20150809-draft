@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/espresso
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.1 2011/04/20 13:03:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.2 2011/04/26 21:08:25 ottxor Exp $
+
+  26 Apr 2011; Christoph Junghans <ottxor@gentoo.org> espresso-3.0.0.ebuild:
+  added ~amd64 (bug 266648#c10)
 
 *espresso-3.0.0 (20 Apr 2011)
 

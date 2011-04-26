@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.0.0.ebuild,v 1.1 2011/04/20 13:03:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.0.0.ebuild,v 1.2 2011/04/26 21:08:25 ottxor Exp $
 
 EAPI="4"
 
@@ -8,12 +8,22 @@ inherit autotools-utils savedconfig
 
 DESCRIPTION="Extensible Simulation Package for Research on Soft matter"
 HOMEPAGE="http://www.espressomd.org"
-SRC_URI="mirror://nongnu/${PN}md/${P}.tar.gz"
+
+if [ "${PV%9999}" != "${PV}" ]; then
+	EGIT_REPO_URI="git://git.savannah.nongnu.org/espressomd.git"
+	EGIT_BRANCH="master"
+	inherit git
+else
+	SRC_URI="mirror://nongnu/${PN}md/${P}.tar.gz"
+fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X doc examples fftw mpi packages test -tk"
+REQUIRED_USE="tk? ( X )"
+
+RESTRICT="tk? ( test )"
 
 RDEPEND="dev-lang/tcl
 	X? ( x11-libs/libX11 )
@@ -60,9 +70,11 @@ src_install() {
 	save_config ${AUTOTOOLS_BUILD_DIR}/src/myconfig-final.h
 
 	if use doc; then
-		newdoc doc/ug/ug.pdf user_guide.pdf
+		local where="."
+		[ "${PV%9999}" != "${PV}" ] && where="${AUTOTOOLS_BUILD_DIR}"
+		newdoc ${where}/doc/ug/ug.pdf user_guide.pdf
 		dohtml -r ${AUTOTOOLS_BUILD_DIR}/doc/dg/html/*
-		newdoc doc/tutorials/tut2/tut2.pdf tutorial.pdf
+		newdoc ${where}/doc/tutorials/tut2/tut2.pdf tutorial.pdf
 	fi
 
 	if use examples; then
