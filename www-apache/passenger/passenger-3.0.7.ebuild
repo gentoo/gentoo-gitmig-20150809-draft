@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.7.ebuild,v 1.1 2011/04/18 17:59:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-3.0.7.ebuild,v 1.2 2011/04/26 06:25:37 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -21,9 +21,10 @@ ruby_add_rdepend "
 	>=dev-ruby/fastthread-1.0.1
 	>=dev-ruby/rack-1.0.0"
 
-RDEPEND="${RDEPEND} >=dev-libs/libev-3.90"
-DEPEND="${DEPEND}
-	>=dev-libs/libev-3.90
+CDEPEND=">=dev-libs/libev-3.90 net-misc/curl[ssl]"
+
+RDEPEND="${RDEPEND} ${CDEPEND}"
+DEPEND="${DEPEND} ${CDEPEND}
 	doc? ( app-text/asciidoc[highlight] )"
 
 APACHE2_MOD_CONF="30_mod_${PN}-2.0.1 30_mod_${PN}"
