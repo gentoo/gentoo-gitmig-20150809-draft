@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.68 2011/04/16 18:26:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.69 2011/04/26 17:17:33 xarthisius Exp $
+
+  26 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> audit-1.7.4.ebuild:
+  ppc stable wrt #341167
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> audit-1.7.4.ebuild:
   ia64/sparc stable wrt #341167
