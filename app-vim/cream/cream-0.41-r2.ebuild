@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.41-r2.ebuild,v 1.1 2008/09/25 13:46:29 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.41-r2.ebuild,v 1.2 2011/04/26 19:53:49 angelos Exp $
 
 inherit vim-plugin eutils fdo-mime
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 IUSE="linguas_en linguas_fr linguas_es linguas_de"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 
 DEPEND="
 	>=app-editors/gvim-7.0
