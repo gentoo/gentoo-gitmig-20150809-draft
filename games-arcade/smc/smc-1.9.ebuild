@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.9.ebuild,v 1.3 2009/11/08 08:05:22 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.9.ebuild,v 1.4 2011/04/26 22:12:04 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils flag-o-matic games
 
 MUSIC_P=SMC_Music_4.1_high
 DESCRIPTION="Secret Maryo Chronicles"
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd "${S}"
 	use music && unpack ${MUSIC_P}.zip
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
 }
 
 src_install() {

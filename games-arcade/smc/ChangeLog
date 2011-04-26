@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/smc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.23 2009/11/08 08:05:22 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.24 2011/04/26 22:12:04 mr_bones_ Exp $
+
+  26 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org> smc-1.9.ebuild:
+  fix building with boost-1.46 (bug #362899)
 
   08 Nov 2009; Joseph Jezak <josejx@gentoo.org> smc-1.9.ebuild:
   Marked ppc stable for bug #290267.
