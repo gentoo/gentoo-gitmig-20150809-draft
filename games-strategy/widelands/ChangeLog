@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.32 2011/02/26 16:44:28 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.33 2011/04/26 12:12:49 tupone Exp $
+
+  26 Apr 2011; Tupone Alfredo <tupone@gentoo.org> widelands-0.15.ebuild,
+  +files/widelands-0.15-gcc46.patch:
+  Build with gcc-4.6 Bug #362379 by Diego Elio Pettenò
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> widelands-0.15.ebuild:
   Updated depends from media-libs/jpeg to virtual-jpeg
