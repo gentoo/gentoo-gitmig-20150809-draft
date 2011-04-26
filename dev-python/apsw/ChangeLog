@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.36 2011/04/10 20:50:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.37 2011/04/26 17:11:45 arfrever Exp $
+
+*apsw-3.7.6.2.1 (26 Apr 2011)
+
+  26 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +apsw-3.7.6.2.1.ebuild:
+  Version bump.
 
   10 Apr 2011; Markus Meier <maekke@gentoo.org> apsw-3.7.5.1.ebuild:
   x86 stable, bug #348090
