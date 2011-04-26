@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.5.ebuild,v 1.1 2011/04/01 19:33:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.5.ebuild,v 1.2 2011/04/26 21:12:33 eva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -91,8 +91,7 @@ src_configure() {
 	# an unusable form as it disables some commonly used API.  Please do not
 	# convert this to the use_enable form, as it results in a broken build.
 	# -- compnerd (3/27/06)
-	# disable-visibility needed for reference debug, bug #274647
-	use debug && myconf="--enable-debug --disable-visibility"
+	use debug && myconf="--enable-debug"
 
 	# Always use internal libpcre, bug #254659
 	econf ${myconf} \
