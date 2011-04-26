@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.105 2011/04/16 18:55:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.106 2011/04/26 20:59:20 eva Exp $
+
+*tracker-0.10.10 (26 Apr 2011)
+
+  26 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> +tracker-0.10.10.ebuild,
+  tracker-9999.ebuild, metadata.xml:
+  Version bump. Enable flickr support.
 
   16 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.10.8.ebuild,
   tracker-0.10.9.ebuild, tracker-9999.ebuild:
