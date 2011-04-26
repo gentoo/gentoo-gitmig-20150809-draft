@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.220 2011/04/23 17:44:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.221 2011/04/26 11:18:18 xarthisius Exp $
+
+  26 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> evince-2.32.0-r2.ebuild:
+  ppc64 stable wrt #363447
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> evince-2.32.0-r2.ebuild:
   alpha/arm/ia64/sparc stable wrt #363447
