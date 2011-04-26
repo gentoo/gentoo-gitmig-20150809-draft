@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.1.ebuild,v 1.2 2010/07/20 23:55:38 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/combine_wave/combine_wave-0.3.1-r1.ebuild,v 1.1 2011/04/26 12:51:29 angelos Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ src_prepare() {
 	# fix makefile
 	sed -i -e "s:gcc:\$(CC):g" -e "s:= -O2:+=:g" \
 		-e "s:\( -o \): \$(LDFLAGS)\1:g" Makefile
+	epatch "${FILESDIR}"/${P}-overflow.patch
 }
 
 src_compile() {
