@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r6.ebuild,v 1.2 2009/12/09 21:56:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r6.ebuild,v 1.3 2011/04/26 16:31:56 darkside Exp $
 
 EAPI="2"
 
@@ -17,7 +17,8 @@ IUSE="static selinux"
 RESTRICT="test"
 
 DEPEND="sys-apps/groff"
-RDEPEND="selinux? ( sec-policy/selinux-clockspeed )"
+RDEPEND="selinux? ( sec-policy/selinux-clockspeed )
+	net-dns/djbdns"
 
 # this is the trailing part of the name for the latest leapseconds file.
 LEAPSECONDS_DATE="20081114"
