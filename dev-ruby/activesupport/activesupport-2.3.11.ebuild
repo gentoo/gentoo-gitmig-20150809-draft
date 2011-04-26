@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.11.ebuild,v 1.1 2011/02/21 20:08:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.11.ebuild,v 1.2 2011/04/26 12:08:50 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -20,7 +20,7 @@ SLOT="2.3"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/builder-2.1.2 >=dev-ruby/tzinfo-0.3.16 >=dev-ruby/i18n-0.4.1:0.4"
+ruby_add_rdepend ">=dev-ruby/builder-2.1.2:0 >=dev-ruby/tzinfo-0.3.16 >=dev-ruby/i18n-0.4.1:0.4"
 
 all_ruby_prepare() {
 	# Remove the bundled packages!
