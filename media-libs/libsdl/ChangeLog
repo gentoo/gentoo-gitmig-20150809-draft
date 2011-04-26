@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.176 2011/04/23 17:24:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.177 2011/04/26 22:16:16 mr_bones_ Exp $
+
+  26 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  -libsdl-1.2.14.ebuild, -libsdl-1.2.14-r1.ebuild, -libsdl-1.2.14-r2.ebuild,
+  -libsdl-1.2.14-r3.ebuild, -libsdl-1.2.14-r4.ebuild,
+  -libsdl-1.2.14-r5.ebuild:
+  clean old revs
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> libsdl-1.2.14-r6.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #362005
