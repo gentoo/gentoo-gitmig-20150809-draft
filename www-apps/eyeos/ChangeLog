@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/eyeos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/ChangeLog,v 1.9 2011/04/22 09:53:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/ChangeLog,v 1.10 2011/04/26 08:35:50 voyageur Exp $
+
+*eyeos-1.9.0.3.1 (26 Apr 2011)
+
+  26 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org> -eyeos-1.9.0.2.ebuild,
+  +eyeos-1.9.0.3.1.ebuild:
+  1.x bugfix version bump
 
 *eyeos-2.4.1 (22 Apr 2011)
 
