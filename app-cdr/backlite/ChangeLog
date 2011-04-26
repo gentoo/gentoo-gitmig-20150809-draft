@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/backlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.18 2011/03/31 15:31:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.19 2011/04/26 21:34:05 billie Exp $
+
+*backlite-1.0.2 (26 Apr 2011)
+
+  26 Apr 2011; Daniel Pielmeier <billie@gentoo.org> +backlite-1.0.2.ebuild:
+  Version bump.
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> backlite-1.0.1.ebuild:
   Depend on virtual/ffmpeg instead of media-video/ffmpeg.
