@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.13 2011/04/20 17:49:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.14 2011/04/26 11:37:37 ulm Exp $
 
 # @ECLASS: cron
 # @MAINTAINER:
@@ -27,13 +27,11 @@ SLOT="0"
 
 DEPEND=">=sys-apps/sed-4.0.5"
 
-RDEPEND="!sys-process/vixie-cron
-	!sys-process/bcron
-	!sys-process/cronie
-	!sys-process/dcron
-	!sys-process/fcron
-	virtual/mta
+RDEPEND="virtual/mta
 	>=sys-process/cronbase-0.3.2"
+for pn in vixie-cron bcron cronie dcron fcron; do
+	[[ ${pn} == "${PN}" ]] || RDEPEND="${RDEPEND} !sys-process/${pn}"
+done
 
 # @FUNCTION: docrondir
 # @USAGE: [ dir ] [ perms ]
