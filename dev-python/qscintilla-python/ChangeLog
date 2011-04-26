@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.74 2011/03/16 21:10:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.75 2011/04/26 19:28:00 arfrever Exp $
+
+*qscintilla-python-2.5.1 (26 Apr 2011)
+
+  26 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +qscintilla-python-2.5.1.ebuild,
+  +files/qscintilla-python-2.5.1-disable_stripping.patch:
+  Version bump.
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   qscintilla-python-2.4.5.ebuild:
