@@ -1,8 +1,8 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.55 2011/04/24 08:44:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.56 2011/04/26 13:15:50 ssuominen Exp $
 
-  24 Apr 2011; Christoph Mende <christoph@gentoo.org> midori-9999.ebuild:
+  24 Apr 2011; Christoph Mende <angelos@gentoo.org> midori-9999.ebuild:
   Use git-2
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
