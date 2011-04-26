@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/substract_wave/substract_wave-0.3.ebuild,v 1.3 2009/05/11 20:21:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/substract_wave/substract_wave-0.3-r1.ebuild,v 1.1 2011/04/26 13:02:50 angelos Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-Makefile.patch \
+		"${FILESDIR}"/${P}-overflow.patch
 }
 
 src_compile() {
