@@ -10,7 +10,6 @@
 		<flag name="alias">Enable plugin for alias control.</flag>
 		<flag name="charset">Enable encoding conversions.</flag>
 		<flag name="fifo">Enable FIFO support (sh pipes).</flag>
-		<flag name="gtk">Enable (experimental) gtk interface.</flag>
 		<flag name="logger">Enable support for logging.</flag>
 		<flag name="relay">Enable relay plugin (experimental)</flag>
 		<flag name="rmodifier">Enable rmodifier plugin.</flag>
