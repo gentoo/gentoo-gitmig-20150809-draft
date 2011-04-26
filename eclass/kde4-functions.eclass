@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.46 2011/04/21 22:32:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.47 2011/04/26 16:19:44 scarabeus Exp $
 
 inherit versionator
 
@@ -428,7 +428,9 @@ add_kdebase_dep() {
 
 	if [[ ${KDEBASE} = kde-base ]]; then
 		echo " !kdeprefix? ( >=kde-base/${1}-${ver}[aqua=,-kdeprefix${use}] )"
-		echo " kdeprefix? ( >=kde-base/${1}-${ver}:${SLOT}[aqua=,kdeprefix${use}] )"
+		# kdeprefix is no-go for kdepim 4.4
+		[[ ( ${KMNAME} == kdepim || ${PN} == kdepim-runtime ) && ${SLOT} == 4.4 ]] || \
+			echo " kdeprefix? ( >=kde-base/${1}-${ver}:${SLOT}[aqua=,kdeprefix${use}] )"
 	elif [[ ${ver} == live ]]; then
 		echo " kde-base/${1}:live[aqua=${use}]"
 	else
