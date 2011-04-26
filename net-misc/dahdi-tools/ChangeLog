@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.11 2011/04/21 12:16:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.12 2011/04/26 10:27:21 chainsaw Exp $
+
+  26 Apr 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-tools-2.4.1.ebuild:
+  Fast-track AMD64 stable for security bug #364887. Testing by Agostino "ago"
+  Sarubbo.
 
 *dahdi-tools-2.4.1 (21 Apr 2011)
 

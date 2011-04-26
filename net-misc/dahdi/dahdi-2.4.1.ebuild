@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.4.1.ebuild,v 1.1 2011/04/17 13:35:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.4.1.ebuild,v 1.2 2011/04/26 10:26:24 chainsaw Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ mirror://gentoo/gentoo-dahdi-patchset-0.5.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="flash"
 RESTRICT="test"
 
