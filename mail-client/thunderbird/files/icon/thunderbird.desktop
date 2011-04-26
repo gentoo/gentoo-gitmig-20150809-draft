@@ -6,3 +6,4 @@ Icon=thunderbird-icon
 Terminal=false
 Type=Application
 Categories=Office;Email;
+MimeType=x-scheme-handler/mailto;
