@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.1.ebuild,v 1.3 2011/04/25 13:44:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.1.ebuild,v 1.4 2011/04/26 18:33:41 pacho Exp $
 
 EAPI="4"
 
@@ -27,6 +27,8 @@ RDEPEND="${RDEPEND}
 src_prepare() {
 	# Do not abort build for warnings
 	sed -i -e 's:-Werror::g' configure.in configure || die
+
+	epatch "${FILESDIR}/${P}-gcc46.patch"
 
 	# Do not build tests if not needed (and no before the lib itself)
 	epatch "${FILESDIR}/${P}-test-build.patch"
