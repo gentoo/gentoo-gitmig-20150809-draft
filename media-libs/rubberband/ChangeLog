@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/rubberband
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.12 2010/05/05 07:25:38 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.13 2011/04/26 05:34:56 radhermit Exp $
+
+*rubberband-1.6.0 (26 Apr 2011)
+
+  26 Apr 2011; Tim Harder <radhermit@gentoo.org> +rubberband-1.6.0.ebuild:
+  Version bump. Update to EAPI 4 and use slot dep for sci-libs/fftw.
 
 *rubberband-1.5.0 (05 May 2010)
 
