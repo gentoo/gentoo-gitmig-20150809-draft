@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.9.ebuild,v 1.2 2011/04/17 14:39:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.9.ebuild,v 1.3 2011/04/26 18:26:48 ssuominen Exp $
 
 EAPI="2"
 
-inherit eutils multilib
+inherit eutils multilib gnome2-utils
 
 DESCRIPTION="An email client (and news reader) based on GTK+"
 HOMEPAGE="http://www.claws-mail.org/"
@@ -114,8 +114,12 @@ src_install() {
 	rm -f "${D}"/usr/lib*/${PN}/plugins/*.{la,a}
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
-	gtk-update-icon-cache -f -t "${ROOT}"/usr/share/icons/hicolor
+	gnome2_icon_cache_update
 
 	UPDATE_PLUGINS=""
 	for x in ${PLUGIN_NAMES}; do
@@ -133,5 +137,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	gtk-update-icon-cache -f -t "${ROOT}"/usr/share/icons/hicolor
+	gnome2_icon_cache_update
 }
