@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.6 2010/09/25 12:03:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.7 2011/04/26 08:57:17 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -30,7 +30,9 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	sed -i -e '/dnl/d' {src,test}/Makefile.am || die #334899
 	epatch "${FILESDIR}"/${P}-glibc210.patch \
-		"${FILESDIR}"/${P}-libtool.patch
+		"${FILESDIR}"/${P}-libtool.patch \
+		"${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-parallel.patch
 	rm -rf libltdl
 	eautoreconf
 }
@@ -40,7 +42,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 CXXFLAGS="${CXXFLAGS}" || die "emake failed"
+	emake CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
