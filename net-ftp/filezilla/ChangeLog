@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.77 2011/03/28 14:19:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.78 2011/04/26 10:59:43 voyageur Exp $
+
+  26 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  filezilla-3.3.4.1.ebuild, -filezilla-3.3.5.1.ebuild, filezilla-3.4.0.ebuild:
+  Add xdg-utils dependency, thanks Felix Leimbach <felix.leimbach@gmx.net> in
+  bug #364643
 
   28 Mar 2011; Bernard Cafarelli <voyageur@gentoo.org> filezilla-3.4.0.ebuild:
   Fix the new version, bug #360915
