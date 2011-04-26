@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wavpack
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/ChangeLog,v 1.54 2009/12/16 14:13:29 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavpack/ChangeLog,v 1.55 2011/04/26 20:09:08 scarabeus Exp $
+
+  26 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> wavpack-4.60.1.ebuild:
+  Disable building of not-required static libs
 
 *wavpack-4.60.1 (16 Dec 2009)
 
