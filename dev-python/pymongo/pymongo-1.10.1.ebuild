@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-1.10.1.ebuild,v 1.2 2011/04/13 15:34:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-1.10.1.ebuild,v 1.3 2011/04/26 10:03:14 ultrabug Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,6 +24,13 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc?  ( dev-python/sphinx )
 	test? ( dev-db/mongodb )"
+
+pkg_setup() {
+	if use test; then
+		ewarn "WARNING: You need a running instance of mongod in order to test this package !"
+		sleep 3
+	fi
+}
 
 src_compile() {
 	distutils_src_compile
