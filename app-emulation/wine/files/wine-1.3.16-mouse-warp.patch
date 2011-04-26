@@ -1,3 +1,5 @@
+http://bugs.winehq.org/show_bug.cgi?id=6971
+
 diff --git a/configure b/configure
 index 51321db..4ea7489 100755
 --- a/configure
