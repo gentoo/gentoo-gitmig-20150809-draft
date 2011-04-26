@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.10.ebuild,v 1.1 2011/03/22 00:29:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.10.ebuild,v 1.2 2011/04/26 05:23:08 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.11"
@@ -32,7 +32,7 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
-	>=dev-libs/atk-1.17
+	>=dev-libs/atk-1.17[introspection?]
 
 	virtual/opengl
 	x11-libs/libdrm
