@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.2.2.ebuild,v 1.1 2011/04/26 08:39:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.2.2.ebuild,v 1.2 2011/04/26 17:06:45 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.4"
@@ -26,9 +26,5 @@ RESTRICT="test"
 PYTHON_MODNAME=psshlib
 
 src_prepare() {
-	sed -i -e "s|'man/man1'|'share/man/man1'|g" setup.py
-}
-
-pkg_postinst() {
-	doman "${D}/usr/share/man/man1/pssh.1"
+	sed -i -e "s|man/man1'|share/&|g" setup.py || die
 }
