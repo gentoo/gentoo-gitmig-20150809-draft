@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.143 2011/04/22 05:56:08 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.144 2011/04/26 16:04:53 jer Exp $
+
+  26 Apr 2011; Jeroen Roovers <jer@gentoo.org> wxpython-2.8.11.0.ebuild:
+  Stable for HPPA (bug #364203).
 
   22 Apr 2011; Ryan Hill <dirtyepic@gentoo.org> wxpython-2.8.11.0.ebuild,
   wxpython-2.8.12.0.ebuild:
