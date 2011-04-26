@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/apngdis
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngdis/ChangeLog,v 1.1 2011/04/26 17:41:13 vapier Exp $
+
+*apngdis-2.3 (26 Apr 2011)
+
+  26 Apr 2011; Mike Frysinger <vapier@gentoo.org> +apngdis-2.3.ebuild,
+  +metadata.xml:
+  New package.
+

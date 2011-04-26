@@ -1,0 +1,9 @@
+# ChangeLog for media-gfx/apng2gif
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apng2gif/ChangeLog,v 1.1 2011/04/26 17:38:47 vapier Exp $
+
+*apng2gif-1.1 (26 Apr 2011)
+
+  26 Apr 2011; Mike Frysinger <vapier@gentoo.org> +apng2gif-1.1.ebuild,
+  +metadata.xml:
+  New package.
