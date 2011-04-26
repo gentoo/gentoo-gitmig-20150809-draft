@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.77 2011/02/21 20:11:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.78 2011/04/26 16:31:56 graaff Exp $
+
+  26 Apr 2011; Hans de Graaff <graaff@gentoo.org>
+  activeresource-2.3.10.ebuild, activeresource-2.3.11.ebuild,
+  activeresource-3.0.3.ebuild:
+  Remove x86-fbsd keyword since it is not clear who added it and
+  dependencies have not been keyworded.
 
 *activeresource-2.3.11 (21 Feb 2011)
 
