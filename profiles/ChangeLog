@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5333 2011/04/26 12:05:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5334 2011/04/26 13:49:22 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Apr 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking qt-creator-2.2.0_rc1 release. Remove entry for beta release
 
   26 Apr 2011; Hans de Graaff <graaff@gentoo.org> updates/2Q-2011:
   Slot move builder 3.0.0 into slot 3.

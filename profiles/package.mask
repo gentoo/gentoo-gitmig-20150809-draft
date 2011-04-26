@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12732 2011/04/25 13:38:18 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12733 2011/04/26 13:49:22 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (26 Apr 2011)
+# Masking qt-creator rc releases
+~dev-util/qt-creator-2.2.0_rc1
 
 # Christian Faulhammer <fauli@gentoo.org> (25 Apr 2011)
 # Abandoned by upstream, bug 364775
@@ -359,10 +363,6 @@ dev-libs/eggdbus
 # Will be removed in 30 days.
 media-plugins/gmpc-osd
 media-plugins/gmpc-qosd
-
-# Markos Chandras <hwoarang@gentoo.org> (25 Mar 2011)
-# Masking qt-creator beta releases
-~dev-util/qt-creator-2.2.0_beta
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (25 Mar 2011)
 # Dev channel releases are only for people who are developers or want more
