@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.24 2011/03/10 06:43:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.25 2011/04/26 09:29:06 scarabeus Exp $
+
+*eiskaltdcpp-2.2.2 (26 Apr 2011)
+
+  26 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -eiskaltdcpp-2.2.0.ebuild, +eiskaltdcpp-2.2.2.ebuild,
+  eiskaltdcpp-9999.ebuild, metadata.xml:
+  Version bump, updated to eapi4. Drop older. Proxy commit for Nikoli.
 
   10 Mar 2011; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild:
   Sync 9999 with 2.2.1.
