@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.77 2011/04/25 15:02:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.78 2011/04/26 16:10:28 jer Exp $
+
+  26 Apr 2011; Jeroen Roovers <jer@gentoo.org>
+  speech-dispatcher-0.7.1-r1.ebuild:
+  Stable for HPPA (bug #357587).
 
   25 Apr 2011; Raúl Porcel <armin76@gentoo.org>
   speech-dispatcher-0.7.1-r1.ebuild:
