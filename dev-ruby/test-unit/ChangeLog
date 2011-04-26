@@ -1,8 +1,8 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.39 2011/04/26 19:56:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.40 2011/04/26 20:12:31 angelos Exp $
 
-  26 Apr 2011; Christoph Mende <christoph@gentoo.org>
+  26 Apr 2011; Christoph Mende <angelos@gentoo.org>
   test-unit-2.1.2-r1.ebuild:
   Stable on amd64 wrt bug #357939
 
