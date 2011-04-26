@@ -1,27 +1,26 @@
-diff --git a/wave_header.h b/wave_header.h
-index e1f6071..70d30e4 100644
---- a/wave_header.h
-+++ b/wave_header.h
-@@ -3,10 +3,10 @@
+diff --git a/combine_wave.c b/combine_wave.c
+index 5bfa4aa..391db25 100644
+--- a/combine_wave.c
++++ b/combine_wave.c
+@@ -601,9 +601,9 @@ for(i = 0; i < header_size; i++)
+ 	*ptr = 0;
+ 	ptr++;
+ 	}
+-strcpy(out_header -> main_chunk, "RIFF");
+-strcpy(out_header -> chunk_type, "WAVE"); 
+-strcpy(out_header -> sub_chunk, "fmt ");
++memcpy(out_header -> main_chunk, "RIFF", 4);
++memcpy(out_header -> chunk_type, "WAVE", 4);
++memcpy(out_header -> sub_chunk, "fmt ", 4);
+ out_header -> length_chunk = 16; //always 16
+ out_header -> format = 1; //PCM
  
- typedef struct
- 	{						/* header for WAV-Files */
--	char main_chunk[4];		/* 'RIFF' */
-+	char main_chunk[5];		/* 'RIFF' */
- 	uint32_t length;		/* length of file */
--	char chunk_type[4];		/* 'WAVE' */
--	char sub_chunk[4];		/* 'fmt' */
-+	char chunk_type[5];		/* 'WAVE' */
-+	char sub_chunk[5];		/* 'fmt ' */
- 	uint32_t length_chunk;	/* length sub_chunk, always 16 bytes */
- 	uint16_t format;		/* always 1 = PCM-Code */
- 	uint16_t modus;			/* 1 = Mono, 2 = Stereo */
-@@ -14,7 +14,7 @@ typedef struct
- 	uint32_t byte_p_sec;	/* Data per sec */
- 	uint16_t byte_p_spl;	/* bytes per sample, 1=8 bit, 2=16 bit (mono) 2=8 bit, 4=16 bit (stereo) */
- 	uint16_t bit_p_spl;		/* bits per sample, 8, 12, 16 */
--	char data_chunk[4];		/* 'data' */
-+	char data_chunk[5];		/* 'data' */
- 	uint32_t data_length;	/* length of data */
- 	} wave_header;
- 					
+@@ -622,7 +622,7 @@ else
+ 
+ out_header -> sample_fq = left_header -> sample_fq;
+ out_header -> bit_p_spl = 16; // left_header -> bit_p_spl;
+-strcpy(out_header -> data_chunk, "data");
++memcpy(out_header -> data_chunk, "data", 4);
+ 
+ if(right_header -> data_length > left_header -> data_length) 
+ 	{
