@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.22.0.ebuild,v 1.1 2011/04/20 17:44:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.22.0.ebuild,v 1.2 2011/04/26 08:06:35 voyageur Exp $
 
 EAPI="3"
 
@@ -14,14 +14,15 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linu
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
-IUSE="+libffi gnutls zeroconf"
+IUSE="gnutls +icu +libffi zeroconf"
 
 RDEPEND="${GNUSTEP_CORE_DEPEND}
 	>=gnustep-base/gnustep-make-2.6.0
+	gnutls? ( net-libs/gnutls )
+	icu? ( >=dev-libs/icu-4.0 )
 	!libffi? ( dev-libs/ffcall
 		gnustep-base/gnustep-make[-native-exceptions] )
 	libffi? ( virtual/libffi )
-	gnutls? ( net-libs/gnutls )
 	>=dev-libs/libxml2-2.6
 	>=dev-libs/libxslt-1.1
 	>=dev-libs/gmp-4.1
@@ -44,6 +45,7 @@ src_configure() {
 		myconf="--disable-libffi --enable-ffcall"
 	fi
 
+	myconf="$myconf $(use_enable icu)"
 	myconf="$myconf $(use_enable gnutls tls)"
 	myconf="$myconf $(use_enable zeroconf)"
 	myconf="$myconf --with-xml-prefix=${EPREFIX}/usr"
