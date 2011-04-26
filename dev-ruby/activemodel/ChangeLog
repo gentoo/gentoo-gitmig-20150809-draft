@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.7 2011/02/13 21:21:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.8 2011/04/26 18:01:36 graaff Exp $
+
+*activemodel-3.0.7 (26 Apr 2011)
+
+  26 Apr 2011; Hans de Graaff <graaff@gentoo.org> +activemodel-3.0.7.ebuild:
+  Version bump for Rails 3.0.7.
 
   13 Feb 2011; Thomas Kahle <tomka@gentoo.org> activemodel-3.0.3-r1.ebuild:
   keyworded ~x86 per bug 351835
