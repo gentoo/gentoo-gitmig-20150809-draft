@@ -1,6 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/transcend-0.3.ebuild,v 1.5 2010/09/16 16:50:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/transcend-0.3.ebuild,v 1.6 2011/04/26 07:08:48 tupone Exp $
+EAPI=2
 
 inherit games
 
@@ -18,13 +19,13 @@ DEPEND="x11-libs/libXmu
 	virtual/opengl
 	virtual/glu
 	media-libs/freeglut"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/Transcend_${PV}_UnixSource/Transcend
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	chmod a+x portaudio/configure
+	mkdir portaudio/{lib,bin}
 	rm -f game/Makefile
 	cat \
 		Makefile.GnuLinuxX86 \
@@ -40,9 +41,13 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	cd portaudio
 	egamesconf || die
+}
+
+src_compile() {
+	cd portaudio
 	emake
 	cd ../game
 	emake || die
