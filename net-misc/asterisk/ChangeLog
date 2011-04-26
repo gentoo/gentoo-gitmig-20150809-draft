@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.307 2011/04/26 10:30:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.308 2011/04/26 10:31:47 chainsaw Exp $
+
+  26 Apr 2011; Tony Vroon <chainsaw@gentoo.org> asterisk-1.6.2.17.3.ebuild:
+  Mark stable on AMD64 for security bug #364887. Arch testing by Agostino "ago"
+  Sarubbo.
 
   26 Apr 2011; Tony Vroon <chainsaw@gentoo.org> asterisk-1.6.2.17.3.ebuild:
   Make dependency on newer DAHDI explicit to avoid surprises for the X86 team.
