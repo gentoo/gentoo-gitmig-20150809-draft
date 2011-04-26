@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.38_p5.ebuild,v 1.1 2011/04/22 12:41:54 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-2.6.38_p5.ebuild,v 1.2 2011/04/26 11:36:22 wired Exp $
 
 EAPI="2"
 
@@ -25,17 +25,17 @@ PF_FILE="patch-${PF_KERNEL}-pf${PF_PATCHSET}${COMPRESSTYPE}"
 PF_URI="http://pf.natalenko.name/sources/$(get_version_component_range 1-3)/${PF_FILE}"
 EXPERIMENTAL_PATCHES=(
 	# http://ck-hack.blogspot.com/2010/11/create-task-groups-by-tty-comment.html
-	http://ck.kolivas.org/patches/bfs/bfs357-penalise_fork_depth_account_threads.patch
+	# http://ck.kolivas.org/patches/bfs/bfs357-penalise_fork_depth_account_threads.patch
 )
 EXPERIMENTAL_URI="
 	experimental? (
 		${EXPERIMENTAL_PATCHES[@]}
 	)
 "
-SRC_URI="${KERNEL_URI} ${PF_URI} ${EXPERIMENTAL_URI}"
+SRC_URI="${KERNEL_URI} ${PF_URI}" # \${EXPERIMENTAL_URI}
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
-IUSE="experimental"
+IUSE="" # experimental
 
 KV_FULL="${PVR/_p/-pf}"
 S="${WORKDIR}"/linux-"${KV_FULL}"
@@ -52,11 +52,11 @@ pkg_setup(){
 
 src_prepare(){
 	epatch "${DISTDIR}"/"${PF_FILE}"
-	if use experimental; then
-		for patch in ${EXPERIMENTAL_PATCHES[@]}; do
-			epatch "${DISTDIR}"/"${patch/*\/}"
-		done
-	fi
+	#if use experimental; then
+		#for patch in ${EXPERIMENTAL_PATCHES[@]}; do
+			#epatch "${DISTDIR}"/"${patch/*\/}"
+		#done
+	#fi
 }
 
 K_EXTRAEINFO="For more info on pf-sources and details on how to report problems, see: \
