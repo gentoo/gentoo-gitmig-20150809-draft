@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.80 2010/10/03 16:42:40 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.81 2011/04/26 20:14:00 scarabeus Exp $
+
+  26 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> audiofile-0.2.7.ebuild:
+  Introduce possibility to disable static library.
 
   03 Oct 2010; Raúl Porcel <armin76@gentoo.org> audiofile-0.2.7.ebuild:
   ia64/sh/sparc stable wrt #327611
