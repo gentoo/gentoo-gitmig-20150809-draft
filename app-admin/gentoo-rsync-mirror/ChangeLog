@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.35 2010/06/02 06:42:03 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.36 2011/04/27 00:16:59 c1pher Exp $
+
+  26 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
+  Updated metadata to reflect new maintainers. Thanks Robert Kowalski
+  for offering to help.
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tantive from metadata.xml (#200343)
