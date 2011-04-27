@@ -7,6 +7,7 @@
 		<name>Tiziano Müller</name>
 	</maintainer>
 	<use>
+		<flag name="gtk3">Link against <pkg>x11-libs/gtk+:3</pkg> instead of <pkg>x11-libs/gtk+:2</pkg></flag>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
 	</use>
 </pkgmetadata>
