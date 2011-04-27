@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.1 2011/04/25 11:44:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.2 2011/04/27 16:45:34 scarabeus Exp $
+
+*grantlee-0.1.8 (27 Apr 2011)
+
+  27 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> +grantlee-0.1.8.ebuild:
+  Version bump to latest.
 
 *grantlee-0.1.7 (25 Apr 2011)
 
