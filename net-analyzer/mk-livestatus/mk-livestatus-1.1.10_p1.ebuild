@@ -1,17 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.1.8.ebuild,v 1.3 2011/04/27 13:50:15 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.1.10_p1.ebuild,v 1.1 2011/04/27 13:50:15 idl0r Exp $
 
 EAPI=3
 
 GENTOO_DEPEND_ON_PERL=no
 PERL_EXPORT_PHASE_FUNCTIONS=no
 
+MY_PV="${PV/_p/p}"
+MY_P="${PN}-${MY_PV}"
+
 inherit perl-module python
 
 DESCRIPTION="Nagios/Icinga event broker module that allows quick/direct access to your status data"
 HOMEPAGE="http://mathias-kettner.de/checkmk_livestatus.html"
-SRC_URI="http://mathias-kettner.de/download/${P}.tar.gz"
+SRC_URI="http://mathias-kettner.de/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,6 +43,8 @@ DEPEND="${RDEPEND}
 
 # For perl test
 SRC_TEST="parallel"
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# Use system Module::Install instead, it will be copied to $S by
