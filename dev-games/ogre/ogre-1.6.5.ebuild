@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.8 2010/12/01 17:22:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.9 2011/04/27 12:13:07 tupone Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -51,6 +51,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-boost.patch \
 		"${FILESDIR}"/${P}-automake.patch \
 		"${FILESDIR}"/${P}-cegui.patch \
+		"${FILESDIR}"/${P}-gcc46.patch \
 		"${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 }

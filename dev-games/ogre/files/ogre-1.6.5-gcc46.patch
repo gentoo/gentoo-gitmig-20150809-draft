@@ -1,0 +1,20 @@
+--- OgreMain/include/OgreOptimisedUtil.h.old	2011-04-27 12:15:41.957298149 +0200
++++ OgreMain/include/OgreOptimisedUtil.h	2011-04-27 12:16:01.317505414 +0200
+@@ -31,6 +31,7 @@
+ 
+ #include "OgrePrerequisites.h"
+ #include "OgreEdgeListBuilder.h"
++#include <cstddef>
+ 
+ namespace Ogre {
+ 
+--- Tools/XMLConverter/src/OgreXMLMeshSerializer.cpp.old	2011-04-27 14:01:28.271664381 +0200
++++ Tools/XMLConverter/src/OgreXMLMeshSerializer.cpp	2011-04-27 14:01:48.714945677 +0200
+@@ -38,6 +38,7 @@
+ #include "OgreAnimation.h"
+ #include "OgreAnimationTrack.h"
+ #include "OgreKeyFrame.h"
++#include <cstddef>
+ 
+ namespace Ogre {
+ 
