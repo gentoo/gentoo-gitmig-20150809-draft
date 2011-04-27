@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.2 2011/04/27 13:38:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.3 2011/04/27 14:08:25 ssuominen Exp $
 
 EAPI=3
 
@@ -19,13 +19,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-# qt-qt3support wrt buggy .ui files #365019
-RDEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-qt3support:4"
+RDEPEND="x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
 	pushd src >/dev/null
+	sed -i -e '/qPixmapFromMimeSource/d' *.ui || die #365019
 	qt4-r2_src_prepare
 	popd
 
