@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.3 2011/04/27 14:08:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.4 2011/04/27 14:19:28 ssuominen Exp $
 
 EAPI=3
 
@@ -51,9 +51,9 @@ src_install() {
 
 	distutils_src_install
 
-	dodoc CHANGES README* TODO doc/*.txt
+	dodoc CHANGES README* TODO doc/*.txt src/doc.txt
 
-	dohtml doc/*.{png,html}
+	dohtml doc/*.{png,html} src/doc.html
 
 	# example tools, use these to build your own ones
 	insinto /usr/share/doc/${PF}
