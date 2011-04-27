@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.14 2011/04/20 06:24:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.9.0-r1.ebuild,v 1.15 2011/04/27 05:48:15 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -33,6 +33,7 @@ DEPEND="${DEPEND}
 # lacks the packaging tasks for Rake.
 ruby_add_bdepend "
 	doc? (
+		>=dev-ruby/rdoc-2.4.3
 		dev-ruby/rake-compiler
 		dev-ruby/rubygems )
 	test? ( dev-ruby/rspec:0 )"
