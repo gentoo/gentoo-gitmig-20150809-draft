@@ -1,44 +1,66 @@
+ configdialog.cpp   |    2 +-
+ latexeditor.h      |    2 +-
+ latexeditorview.h  |    2 +-
+ latexhighlighter.h |    2 +-
+ spellerdialog.h    |    2 +-
+ texmaker.h         |    2 +-
+ texmaker.pro       |   36 +++---------------------------------
+ 7 files changed, 9 insertions(+), 39 deletions(-)
+
+diff --git a/configdialog.cpp b/configdialog.cpp
+index ef30bd4..1acc9d1 100644
+--- a/configdialog.cpp
++++ b/configdialog.cpp
+@@ -122,7 +122,7 @@ void ConfigDialog::browseAspell()
+ QDir spelldir(QCoreApplication::applicationDirPath());
+ #else
+ #ifdef DEBIAN_SPELLDIR
+-QDir spelldir(PREFIX"/share/myspell/dicts");
++QDir spelldir(PREFIX"/share/myspell");
+ #else
+ QDir spelldir(PREFIX"/share/texmaker");
+ #endif
 diff --git a/latexeditor.h b/latexeditor.h
-index d339f7b..32a7f0e 100644
+index b18ff9b..4fe11a0 100644
 --- a/latexeditor.h
 +++ b/latexeditor.h
-@@ -22,7 +22,7 @@
+@@ -26,7 +26,7 @@
+ #include <QTimer>
  
  #include "latexhighlighter.h"
- #include "parenmatcher.h"
 -#include "hunspell/hunspell.hxx"
 +#include <hunspell.hxx>
  
- //class QCompleter;
- //class ParenMatcher;
+ typedef  int UserBookmarkList[3];
+ 
 diff --git a/latexeditorview.h b/latexeditorview.h
-index 5635464..8fb37cb 100644
+index 0471d6f..f663fdf 100644
 --- a/latexeditorview.h
 +++ b/latexeditorview.h
-@@ -18,7 +18,7 @@
- #include "latexeditor.h"
+@@ -19,7 +19,7 @@
  #include "linenumberwidget.h"
  #include "findwidget.h"
+ #include "minisplitter.h"
 -#include "hunspell/hunspell.hxx"
 +#include <hunspell.hxx>
  
  class LatexEditorView : public QWidget  {
     Q_OBJECT
 diff --git a/latexhighlighter.h b/latexhighlighter.h
-index 453bab7..c0b9fde 100644
+index 83ca79c..a1e437a 100644
 --- a/latexhighlighter.h
 +++ b/latexhighlighter.h
-@@ -19,7 +19,7 @@
- #include <QTextCharFormat>
+@@ -20,7 +20,7 @@
  #include <QColor>
  #include <QTextBlockUserData>
+ //#include "latexeditor.h"
 -#include "hunspell/hunspell.hxx"
 +#include <hunspell.hxx>
  
  class QTextDocument;
- 
+ class LatexEditor;
 diff --git a/spellerdialog.h b/spellerdialog.h
-index 88e1c93..2622834 100644
+index 83248ae..cd16dad 100644
 --- a/spellerdialog.h
 +++ b/spellerdialog.h
 @@ -13,7 +13,7 @@
@@ -51,20 +73,20 @@ index 88e1c93..2622834 100644
  #include <QTextCursor>
  
 diff --git a/texmaker.h b/texmaker.h
-index a959fe8..551fe20 100644
+index 8c98526..f9bbb1a 100644
 --- a/texmaker.h
 +++ b/texmaker.h
-@@ -43,7 +43,7 @@
+@@ -47,7 +47,7 @@
  #include "logeditor.h"
  #include "gotolinedialog.h"
  #include "replacedialog.h"
 -#include "hunspell/hunspell.hxx"
 +#include <hunspell.hxx>
  #include "browser.h"
+ #include "pdfviewerwidget.h"
  #include "pdfviewer.h"
- 
 diff --git a/texmaker.pro b/texmaker.pro
-index f36cf16..dbd73b8 100755
+index 86e46ac..9938814 100644
 --- a/texmaker.pro
 +++ b/texmaker.pro
 @@ -4,7 +4,8 @@ TARGET	 = texmaker
@@ -74,11 +96,11 @@ index f36cf16..dbd73b8 100755
 -CONFIG	+= qt warn_off release
 +CONFIG	+= qt warn_off release link_pkgconfig
 +PKGCONFIG = hunspell
- TEXMAKERVERSION=2.2.1
+ TEXMAKERVERSION=3.0.2
  DEFINES += TEXMAKERVERSION=\\\"$${TEXMAKERVERSION}\\\"
  DEFINES += HAVE_SPLASH
-@@ -54,25 +55,6 @@ HEADERS	+= texmaker.h \
- 	userquickdialog.h \
+@@ -56,25 +57,6 @@ HEADERS	+= texmaker.h \
+ 	usercompletiondialog.h \
  	synctex_parser.h \
  	synctex_parser_utils.h \
 -	hunspell/affentry.hxx \
@@ -103,8 +125,8 @@ index f36cf16..dbd73b8 100755
  	singleapp/qtlocalpeer.h \
  	singleapp/qtlockedfile.h \
  	singleapp/qtsingleapplication.h \
-@@ -121,18 +103,6 @@ SOURCES	+= main.cpp \
- 	userquickdialog.cpp \
+@@ -150,18 +132,6 @@ SOURCES	+= main.cpp \
+ 	usercompletiondialog.cpp \
  	synctex_parser.c \
  	synctex_parser_utils.c \
 -	hunspell/affentry.cxx \
@@ -122,3 +144,12 @@ index f36cf16..dbd73b8 100755
  	singleapp/qtlocalpeer.cpp \
  	singleapp/qtlockedfile.cpp \
  	singleapp/qtsingleapplication.cpp \
+@@ -253,7 +223,7 @@ LIBS         += -L/usr/lib -lz
+ DEFINES += PREFIX=\\\"$${PREFIX}\\\"
+ target.path = $${PREFIX}/bin
+ 
+-#DEFINES += DEBIAN_SPELLDIR
++DEFINES += DEBIAN_SPELLDIR
+ 
+ INSTALLS = target
+ HEADERS	+= x11fontdialog.h 

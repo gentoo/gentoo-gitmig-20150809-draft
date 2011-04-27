@@ -1,6 +1,16 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.80 2011/04/25 16:20:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.81 2011/04/27 06:38:17 jlec Exp $
+
+*texmaker-3.02 (27 Apr 2011)
+
+  27 Apr 2011; Justin Lecher <jlec@gentoo.org> -texmaker-2.10.ebuild,
+  -files/texmaker-2.10-hunspell.patch, -texmaker-2.20.ebuild,
+  -files/texmaker-2.20-hunspell.patch, -texmaker-2.21.ebuild,
+  -files/texmaker-2.21-hunspell.patch, -texmaker-2.22.ebuild,
+  -files/texmaker-2.22-hunspell.patch, +texmaker-3.02.ebuild,
+  +files/texmaker-3.02-hunspell.patch:
+  Version Bump, Cleaned old
 
   25 Apr 2011; Markos Chandras <hwoarang@gentoo.org> texmaker-2.30.ebuild:
   Stable on amd64 wrt bug #363937
