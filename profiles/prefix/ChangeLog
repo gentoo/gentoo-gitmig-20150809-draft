@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.269 2011/04/25 14:59:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.270 2011/04/27 08:15:31 mduft Exp $
+
+  27 Apr 2011; Markus Duft <mduft@gentoo.org> windows/interix/package.mask:
+  removed mask for perl on interix
 
   25 Apr 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
   Also mask sys-devel/llvm-gcc-2.9, such that it doesn't try to pull in masked

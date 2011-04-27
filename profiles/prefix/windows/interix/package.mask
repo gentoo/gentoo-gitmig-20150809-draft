@@ -1,14 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.12 2010/11/16 08:16:36 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.13 2011/04/27 08:15:31 mduft Exp $
 
-# $Id: package.mask,v 1.12 2010/11/16 08:16:36 mduft Exp $
-
-# Markus Duft <mduft@gentoo.org> (17 Feb 2010)
-# not quite yet... seems that perl itself is simply not even trying
-# to compile - something with the ebuild? need time ...
->=dev-lang/perl-5.10.0
->=sys-devel/libperl-5.10.0
+# $Id: package.mask,v 1.13 2011/04/27 08:15:31 mduft Exp $
 
 # Markus Duft <mduft@gentoo.org> (29 Oct 2008)
 # this version doesn't work on interix, since unconditional
