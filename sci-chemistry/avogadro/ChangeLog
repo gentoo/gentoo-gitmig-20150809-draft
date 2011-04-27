@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.36 2011/04/26 16:26:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.37 2011/04/27 07:26:04 jlec Exp $
+
+  27 Apr 2011; Justin Lecher <jlec@gentoo.org> avogadro-1.0.0.ebuild,
+  avogadro-1.0.1.ebuild, avogadro-1.0.3.ebuild:
+  Add USE=sse2
 
 *avogadro-1.0.3 (26 Apr 2011)
 
