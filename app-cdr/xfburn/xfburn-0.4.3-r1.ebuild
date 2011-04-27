@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r1.ebuild,v 1.6 2011/01/29 07:11:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r1.ebuild,v 1.7 2011/04/27 20:24:50 angelos Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
@@ -21,8 +21,8 @@ RDEPEND=">=dev-libs/libburn-0.4.2
 	>=xfce-base/libxfcegui4-4.4
 	>=xfce-base/exo-0.3
 	dbus? ( >=dev-libs/dbus-glib-0.88 )
-	gstreamer? ( media-libs/gstreamer
-		>=media-libs/gst-plugins-base-0.10.20 )
+	gstreamer? ( media-libs/gstreamer:0.10
+		>=media-libs/gst-plugins-base-0.10.20:0.10 )
 	thunar? ( xfce-extra/thunar-vfs )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		$(use_enable dbus)
 		$(xfconf_use_debug)
 		$(use_enable gstreamer)
