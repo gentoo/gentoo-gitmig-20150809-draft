@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/spice-protocol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.6 2011/04/18 07:57:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.7 2011/04/27 11:33:19 dev-zero Exp $
+
+*spice-protocol-0.8.0-r1 (27 Apr 2011)
+
+  27 Apr 2011; Tiziano Müller <dev-zero@gentoo.org>
+  +files/2ffbca210033be262fc75e6a73742e0f0e6d5242.patch,
+  +spice-protocol-0.8.0-r1.ebuild:
+  Added patch (from upstream) to add missing include and thus fix compilation
+  with spice-gtk.
 
 *spice-protocol-0.8.0 (18 Apr 2011)
 
