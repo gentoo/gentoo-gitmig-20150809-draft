@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.54 2011/04/12 15:02:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.55 2011/04/27 14:44:33 angelos Exp $
+
+  27 Apr 2011; Christoph Mende <angelos@gentoo.org> hydra-6.1.ebuild:
+  Stable on amd64 wrt bug #363295
 
   12 Apr 2011; Jeroen Roovers <jer@gentoo.org> hydra-6.1.ebuild:
   Do not try to install TODO (bug #363305).
