@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.185 2011/04/23 17:12:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.186 2011/04/27 07:32:08 dilfridge Exp $
+
+*akregator-4.4.11.1-r1 (27 Apr 2011)
+
+  27 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akregator-4.4.11.1-r1.ebuild, +files/akregator-4.4.11.1-revert.patch:
+  Revert only change between .10 and .11.1, which completely broke the whole
+  thing
 
 *akregator-4.5.95 (23 Apr 2011)
 
