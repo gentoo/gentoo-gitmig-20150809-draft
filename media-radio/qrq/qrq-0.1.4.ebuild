@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/qrq-0.1.4.ebuild,v 1.1 2011/02/05 14:38:04 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/qrq-0.1.4.ebuild,v 1.2 2011/04/27 08:10:58 angelos Exp $
 
 DESCRIPTION="Yet another CW trainer for Linux/Unix"
 HOMEPAGE="http://fkurz.net/ham/qrq.html"
@@ -8,7 +8,7 @@ SRC_URI="http://fkurz.net/ham/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
