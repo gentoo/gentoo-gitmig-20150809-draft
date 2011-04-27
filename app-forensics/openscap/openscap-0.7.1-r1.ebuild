@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.7.1.ebuild,v 1.1 2011/03/24 01:33:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.7.1-r1.ebuild,v 1.1 2011/04/27 11:56:26 hwoarang Exp $
 
 EAPI=3
 
@@ -32,10 +32,6 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-sql-fix.patch
-}
-
 src_configure() {
 	local myconf
 	if use python || use perl ; then
@@ -53,6 +49,7 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	sed -i 's/^Description/&:/'	"${D}"/usr/$(get_libdir)/pkgconfig/libopenscap.pc || die
 	#--enable-bindings enable all bindings, clean unwanted bindings
 	if use python && ! use perl ; then
 		rm -rf "${D}"/usr/$(get_libdir)/perl5 || die
