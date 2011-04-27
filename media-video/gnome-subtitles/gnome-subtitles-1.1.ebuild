@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-1.1.ebuild,v 1.1 2011/03/30 10:55:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-1.1.ebuild,v 1.2 2011/04/27 20:29:46 angelos Exp $
 
 EAPI=2
 inherit mono gnome2
@@ -18,10 +18,10 @@ RDEPEND=">=dev-lang/mono-1.1
 	>=dev-dotnet/glade-sharp-2.12
 	>=dev-dotnet/gtk-sharp-2.12
 	>=dev-dotnet/gconf-sharp-2.12
-	>=media-libs/gstreamer-0.10
+	media-libs/gstreamer:0.10
 	>=app-text/gtkspell-2.0
 	>=app-text/enchant-1.3
-	>=media-libs/gst-plugins-base-0.10"
+	media-libs/gst-plugins-base:0.10"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig

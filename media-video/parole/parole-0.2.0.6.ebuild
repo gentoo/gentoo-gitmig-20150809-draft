@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.1 2011/04/17 12:30:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.2 2011/04/27 20:30:50 angelos Exp $
 
 EAPI=4
 inherit xfconf
@@ -19,9 +19,9 @@ RDEPEND=">=x11-libs/gtk+-2.16:2
 	>=xfce-base/libxfce4util-4.6
 	>=xfce-base/libxfcegui4-4.6
 	>=dev-libs/dbus-glib-0.70
-	>=media-libs/gstreamer-0.10.11
-	>=media-libs/gst-plugins-base-0.10.11
-	media-plugins/gst-plugins-meta
+	>=media-libs/gstreamer-0.10.11:0.10
+	>=media-libs/gst-plugins-base-0.10.11:0.10
+	media-plugins/gst-plugins-meta:0.10
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	taglib? ( >=media-libs/taglib-1.4 )"
 DEPEND="${RDEPEND}
