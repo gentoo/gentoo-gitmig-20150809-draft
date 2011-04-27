@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-5.5.ebuild,v 1.2 2011/04/27 09:35:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-5.5.ebuild,v 1.3 2011/04/27 11:34:21 jlec Exp $
 
 EAPI="3"
 
@@ -22,7 +22,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x64-solaris"
 IUSE="X"
 
-DEPEND="X? ( dev-python/PyQt4[X,assistant] )"
+DEPEND="X? (
+		dev-python/PyQt4[X,assistant]
+		dev-python/qscintilla-python
+		)"
 RDEPEND="${DEPEND}"
 
 RESTRICT="test"
