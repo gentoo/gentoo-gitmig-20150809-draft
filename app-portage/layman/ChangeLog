@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.135 2011/04/25 19:43:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.136 2011/04/27 13:23:50 idl0r Exp $
+
+*layman-1.4.2-r1 (27 Apr 2011)
+
+  27 Apr 2011; Christian Ruppert <idl0r@gentoo.org> -layman-1.4.2.ebuild,
+  +layman-1.4.2-r1.ebuild, files/layman-1.4.2-python-compatbility-fix.patch:
+  Revision bump. The "python-compatbility-fix.patch" has been extended.
 
   25 Apr 2011; Christian Ruppert <idl0r@gentoo.org> layman-1.4.2.ebuild,
   +files/layman-1.4.2-python-compatbility-fix.patch:
