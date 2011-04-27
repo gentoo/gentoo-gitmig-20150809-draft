@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20101104.ebuild,v 1.3 2010/11/04 11:56:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20101104.ebuild,v 1.4 2011/04/27 18:08:01 aballier Exp $
 
 EAPI=3
 inherit autotools eutils multilib flag-o-matic
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/libpng-1.4.0
 	media-libs/a52dec
 	media-libs/libsndfile
 	media-libs/tiff
-	media-video/ffmpeg
+	virtual/ffmpeg
 	media-sound/lame
 	>=sci-libs/fftw-3.0.1
 	media-libs/x264
@@ -49,6 +49,8 @@ DEPEND="${RDEPEND}
 	mmx? ( dev-lang/nasm )"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-v4l1_removal.patch" \
+		"${FILESDIR}/${PN}-ffmpeg.patch"
 	AT_M4DIR="m4" eautoreconf
 }
 

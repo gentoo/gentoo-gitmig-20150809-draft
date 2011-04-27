@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.46 2010/11/04 00:24:46 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.47 2011/04/27 18:08:01 aballier Exp $
+
+  27 Apr 2011; Alexis Ballier <aballier@gentoo.org> cinelerra-20101104.ebuild,
+  +files/cinelerra-ffmpeg.patch, +files/cinelerra-v4l1_removal.patch:
+  fix build with latest linux headers (ie: drop v4l1 support), bug #361709; fix
+  build with ffmpeg/libav trunk, convert to virtual/ffmpeg
 
 *cinelerra-20101104 (04 Nov 2010)
 
