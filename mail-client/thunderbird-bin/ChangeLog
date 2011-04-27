@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.31 2011/03/30 13:33:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.32 2011/04/27 16:20:45 ssuominen Exp $
+
+  27 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  files/icon/thunderbird-bin.desktop:
+  Synchronize MimeType and Categories from desktop entry of
+  mail-client/thunderbird. See ChangeLog of mail-client/thunderbird for
+  information.
 
   30 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   thunderbird-bin-3.1.9.ebuild:
