@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.13b.ebuild,v 1.2 2011/04/26 19:00:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.13b.ebuild,v 1.3 2011/04/27 08:17:31 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
