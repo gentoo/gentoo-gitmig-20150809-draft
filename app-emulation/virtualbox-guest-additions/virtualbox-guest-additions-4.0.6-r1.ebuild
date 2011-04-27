@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.6-r1.ebuild,v 1.1 2011/04/26 22:55:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.6-r1.ebuild,v 1.2 2011/04/27 19:48:04 polynomial-c Exp $
 
 EAPI=2
 
@@ -146,9 +146,11 @@ src_install() {
 		# udev rule for vboxdrv
 		dodir /lib/udev/rules.d
 		echo 'KERNEL=="vboxguest", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
-		>> "${D}/lib/udev/rules.d/60-virtualbox-guest-additions.rules"
+		>> "${D}/lib/udev/rules.d/60-virtualbox-guest-additions.rules" \
+			|| die
 		echo 'KERNEL=="vboxuser", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
-		>> "${D}/lib/udev/rules.d/60-virtualbox-guest-additions.rules"
+		>> "${D}/lib/udev/rules.d/60-virtualbox-guest-additions.rules" \
+			|| die
 
 		# VBoxClient autostart file
 		insinto /etc/xdg/autostart
