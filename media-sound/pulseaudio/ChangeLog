@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.220 2011/04/27 07:18:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.221 2011/04/27 07:56:07 angelos Exp $
+
+  27 Apr 2011; Christoph Mende <angelos@gentoo.org> pulseaudio-0.9.22.ebuild:
+  Restrict xcb-util dep to <0.3.8
 
 *pulseaudio-0.9.22-r1 (27 Apr 2011)
 
