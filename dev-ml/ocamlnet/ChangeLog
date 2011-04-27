@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.47 2011/04/14 19:05:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.48 2011/04/27 17:58:58 angelos Exp $
+
+  27 Apr 2011; Christoph Mende <angelos@gentoo.org> ocamlnet-3.2.1.ebuild:
+  Stable on amd64 wrt bug #363617
 
 *ocamlnet-3.3.0_beta1 (14 Apr 2011)
 
