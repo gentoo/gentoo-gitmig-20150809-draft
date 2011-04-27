@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-1.1.ebuild,v 1.1 2010/12/08 17:27:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-1.2.ebuild,v 1.1 2011/04/27 12:10:20 alexxy Exp $
 
 inherit webapp eutils depend.php
 
