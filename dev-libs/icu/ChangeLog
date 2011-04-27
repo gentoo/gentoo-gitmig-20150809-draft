@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.145 2011/04/26 20:17:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.146 2011/04/27 18:49:31 arfrever Exp $
+
+  27 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  icu-4.6.1.ebuild, +files/icu-4.6.1-parallel_installation.patch:
+  Fix parallel installation (bug #272328).
 
   26 Apr 2011; Christoph Mende <angelos@gentoo.org> icu-4.6.1.ebuild:
   Stable on amd64 wrt bug #364409
