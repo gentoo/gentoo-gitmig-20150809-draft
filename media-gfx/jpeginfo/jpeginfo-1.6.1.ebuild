@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.1.ebuild,v 1.1 2011/04/27 18:22:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.1.ebuild,v 1.2 2011/04/27 18:22:28 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -27,6 +27,6 @@ src_configure() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die
+	emake INSTALL_ROOT="${D}" install
 	dodoc README
 }
