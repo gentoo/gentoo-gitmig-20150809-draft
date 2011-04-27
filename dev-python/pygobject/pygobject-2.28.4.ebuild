@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.4.ebuild,v 1.1 2011/04/20 13:13:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.4.ebuild,v 1.2 2011/04/27 16:43:06 arfrever Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 SUPPORT_PYTHON_ABIS="1"
+# pygobject is partially incompatible with Python 3.
+# PYTHON_DEPEND="2:2.6 3:3.1"
+# RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 *-jython"
 PYTHON_DEPEND="2:2.6"
-# FIXME: Supports Python 3, but needs pycairo-3 support too
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
 
 # XXX: Is the alternatives stuff needed anymore?
 inherit alternatives autotools gnome2 python virtualx
@@ -116,11 +118,11 @@ pkg_postinst() {
 	}
 	python_execute_function create_symlinks
 
-	python_mod_optimize gtk-2.0 pygtk.py
+	python_mod_optimize $(use introspection && echo gi) glib gobject gtk-2.0 pygtk.py
 }
 
 pkg_postrm() {
-	python_mod_cleanup gtk-2.0 pygtk.py
+	python_mod_cleanup $(use introspection && echo gi) glib gobject gtk-2.0 pygtk.py
 
 	create_symlinks() {
 		alternatives_auto_makesym "$(python_get_sitedir)/pygtk.py" pygtk.py-[0-9].[0-9]
