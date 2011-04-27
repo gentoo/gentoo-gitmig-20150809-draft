@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-0.97-r1.ebuild,v 1.1 2011/01/30 12:30:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-1.00.ebuild,v 1.1 2011/04/27 20:19:08 xarthisius Exp $
 
 EAPI=3
 
@@ -27,16 +27,17 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-qa.patch
+	epatch "${FILESDIR}"/${P}-qa.patch \
+		"${FILESDIR}"/${P}-gcc46.patch
 }
 
 src_compile() {
-	emake CXX="$(tc-getCXX)" -C src/Release all || die
+	emake CXX="$(tc-getCXX)" -C makefiles all || die
 }
 
 src_install() {
-	dobin src/Release/${PN} || die
-	dodoc README.txt CHANGE_LOG.txt || die
+	dobin makefiles/${PN} || die
+	dodoc README NEWS || die
 	insinto /usr/share/${PN}
 	doins -r .${PN}/* || die
 }

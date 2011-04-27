@@ -2,9 +2,9 @@ Respect CXX,CXXFLAGS, fix as-needed
 
 Patch written by Kacper Kowalik <xarthisius@gentoo.org>
 
---- a/src/Release/makefile
-+++ b/src/Release/makefile
-@@ -43,7 +43,7 @@
+--- a/makefiles/makefile
++++ b/makefiles/makefile
+@@ -44,7 +44,7 @@
  mandelbulber: $(OBJS) $(USER_OBJS)
  	@echo 'Building target: $@'
  	@echo 'Invoking: GCC C++ Linker'
@@ -13,18 +13,10 @@ Patch written by Kacper Kowalik <xarthisius@gentoo.org>
  	@echo 'Finished building target: $@'
  	@echo ' '
  
---- a/src/Release/subdir.mk
-+++ b/src/Release/subdir.mk
-@@ -65,14 +65,14 @@
- Render3D.o: ../Render3D.cpp
- 	@echo 'Building file: $<'
- 	@echo 'Invoking: GCC C++ Compiler'
--	g++ -O2 -ffast-math -Wall -c -fmessage-length=0 `pkg-config --cflags gtk+-2.0 gthread-2.0;` -MMD -MP -MF"$(@:%.o=%.d)" -MT"Render3D.d" -o"$@" "$<"
-+	$(CXX) $(CXXFLAGS) -Wall -c -fmessage-length=0 `pkg-config --cflags gtk+-2.0 gthread-2.0;` -MMD -MP -MF"$(@:%.o=%.d)" -MT"Render3D.d" -o"$@" "$<"
- 	@echo 'Finished building: $<'
- 	@echo ' '
- 
- %.o: ../%.cpp
+--- a/makefiles/src/subdir.mk
++++ b/makefiles/src/subdir.mk
+@@ -65,7 +65,7 @@
+ src/%.o: ../src/%.cpp
  	@echo 'Building file: $<'
  	@echo 'Invoking: GCC C++ Compiler'
 -	g++ -O2 -ffast-math -Wall -c -fmessage-length=0 `pkg-config --cflags gtk+-2.0 gthread-2.0;` -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
