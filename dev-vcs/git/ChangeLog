@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.90 2011/04/20 11:53:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.91 2011/04/27 05:27:36 robbat2 Exp $
+
+*git-1.7.5_rc3 (27 Apr 2011)
+*git-1.7.4.5 (27 Apr 2011)
+
+  27 Apr 2011; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.4.5.ebuild,
+  +git-1.7.5_rc3.ebuild:
+  Version bump.
 
   20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> git-9999.ebuild:
   Migrate to git-2 eclass. Update live/stable logic conditionals.
