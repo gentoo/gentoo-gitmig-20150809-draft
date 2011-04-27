@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.1.ebuild,v 1.3 2010/12/31 20:43:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.1.4.ebuild,v 1.1 2011/04/27 12:06:59 alexxy Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gluster.com/pub/gluster/${PN}/$(get_version_component_range 
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="emacs extras +fuse infiniband static-libs vim-syntax"
 
 DEPEND="emacs? ( virtual/emacs )
@@ -26,6 +26,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.1.0-parallel-build.patch" \
 		"${FILESDIR}/${PN}-docdir.patch" \
 		"${FILESDIR}/glusterd-workdir.patch"
+	sed -i -e "s/ -ggdb3//g" argp-standalone/configure.ac || die
 	eautoreconf
 }
 
@@ -60,9 +61,10 @@ src_install() {
 	fi
 
 	if use extras ; then
-		newbin extras/volgen/glusterfs-volgen glusterfs-volgen || die
 		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize || die
+		newbin extras/backend-cleanup.sh glusterfs-backend-cleanup || die
 		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute || die
+		newbin extras/disk_usage_sync.sh glusterfs-disk-usage-sync || die
 	fi
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS || die
