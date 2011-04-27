@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/gaffitter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/ChangeLog,v 1.4 2011/01/25 12:22:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/ChangeLog,v 1.5 2011/04/27 22:01:53 hwoarang Exp $
+
+*gaffitter-0.6.0-r1 (27 Apr 2011)
+
+  27 Apr 2011; Markos Chandras <hwoarang@gentoo.org>
+  +gaffitter-0.6.0-r1.ebuild:
+  Install additional scripts. Thanks to fleg <fleg@lavabit.com> for the
+  patches. Bug #363775
 
   25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   gaffitter-0.6.0.ebuild:
