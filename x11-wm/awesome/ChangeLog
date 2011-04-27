@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.119 2011/03/30 11:13:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.120 2011/04/27 11:14:34 matsuu Exp $
+
+*awesome-3.4.9-r1 (27 Apr 2011)
+
+  27 Apr 2011; MATSUU Takuto <matsuu@gentoo.org>
+  +files/3.4-0001-Update-the-code-following-release-of-xcb-util-0.3.8.patch,
+  -awesome-2.3.6.ebuild, -awesome-3.4.4.ebuild, awesome-3.4.8.ebuild,
+  awesome-3.4.9.ebuild, +awesome-3.4.9-r1.ebuild:
+  Fixed building with xcb-util >= 0.3.8 wrt #364987. Removed old versions..
 
   30 Mar 2011; Christoph Mende <angelos@gentoo.org> awesome-2.3.6.ebuild:
   Fix gtk+ slot deps
