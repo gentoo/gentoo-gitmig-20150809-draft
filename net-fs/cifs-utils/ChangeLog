@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.5 2011/03/31 17:31:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.6 2011/04/27 17:59:15 vostorga Exp $
+
+  27 Apr 2011; Víctor Ostorga <vostorga@gentoo.org>
+  cifs-utils-4.8.1.ebuild:
+  Replacing eerror to ewarn, and dropping die bug #364679
 
   31 Mar 2011; Jeroen Roovers <jer@gentoo.org> cifs-utils-4.8.1.ebuild:
   Marked ~hppa (bug #358401).
