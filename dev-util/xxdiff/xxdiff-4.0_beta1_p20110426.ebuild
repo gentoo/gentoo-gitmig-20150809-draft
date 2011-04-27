@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.1 2011/04/26 14:18:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.2 2011/04/27 13:38:56 ssuominen Exp $
 
 EAPI=3
 
@@ -12,14 +12,16 @@ inherit distutils qt4-r2
 
 DESCRIPTION="A graphical file and directories comparator and merge tool"
 HOMEPAGE="http://furius.ca/xxdiff/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qt-gui:4"
+# qt-qt3support wrt buggy .ui files #365019
+RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-qt3support:4"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
