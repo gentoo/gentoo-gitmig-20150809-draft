@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.270 2011/04/27 08:15:31 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.271 2011/04/27 17:26:26 grobian Exp $
+
+  27 Apr 2011; Fabian Groffen <grobian@gentoo.org> +mint/package.use.force,
+  darwin/package.mask:
+  Force USE=static on libarchive for FreeMiNT, bug #364789
 
   27 Apr 2011; Markus Duft <mduft@gentoo.org> windows/interix/package.mask:
   removed mask for perl on interix
