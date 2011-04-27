@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/chromium-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/chromium-tools/ChangeLog,v 1.9 2011/02/22 16:12:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/chromium-tools/ChangeLog,v 1.10 2011/04/27 11:25:23 phajdan.jr Exp $
+
+*chromium-tools-0.1.8 (27 Apr 2011)
+
+  27 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-tools-0.1.8.ebuild:
+  Version bump.
 
 *chromium-tools-0.1.7 (22 Feb 2011)
 
