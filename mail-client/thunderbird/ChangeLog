@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.73 2011/04/26 18:10:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.74 2011/04/27 16:09:08 ssuominen Exp $
+
+  27 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  files/icon/thunderbird.desktop, files/icon/thunderbird-unbranded.desktop:
+  Append Network; to Categories line of desktop entry because Email; is not
+  allowed without correct main category per freedesktop.org spec.
 
 *thunderbird-3.1.9-r1 (26 Apr 2011)
 
