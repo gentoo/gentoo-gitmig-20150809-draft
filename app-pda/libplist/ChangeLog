@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libplist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.14 2011/04/25 18:38:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.15 2011/04/27 08:11:47 angelos Exp $
+
+  27 Apr 2011; Christoph Mende <angelos@gentoo.org> libplist-1.4.ebuild:
+  Stable on amd64 wrt bug #364829
 
   25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libplist-1.3.ebuild:
