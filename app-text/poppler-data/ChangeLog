@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.38 2011/04/12 22:34:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.39 2011/04/27 17:53:31 grobian Exp $
+
+  27 Apr 2011; Fabian Groffen <grobian@gentoo.org> poppler-data-0.4.4.ebuild:
+  Marked ~m68k-mint, bug #364787
 
   12 Apr 2011; Jonathan Callen <abcd@gentoo.org> poppler-data-0.4.4.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords
