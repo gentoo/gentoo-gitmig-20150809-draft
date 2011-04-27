@@ -1,0 +1,14 @@
+Unsure if this patch should go here, or baselayout's /etc/filesystems.
+
+Waiting for upstream reply: http://bugs.freedesktop.org/show_bug.cgi?id=36361
+
+--- src/device.c
++++ src/device.c
+@@ -5909,6 +5909,7 @@
+   "vfat",
+   "exfat"
+   "ntfs",
++  "ntfs-3g",
+   NULL,
+ };
+ 
