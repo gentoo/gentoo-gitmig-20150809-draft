@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.6 2011/01/12 23:56:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.7 2011/04/27 18:30:32 williamh Exp $
 
 EGIT_REPO_URI="git://github.com/williamh/espeakup.git"
-inherit git
+inherit git linux-info
 
 DESCRIPTION="espeakup is a small lightweight connector for espeak and speakup"
 HOMEPAGE="http://www.github.com/williamh/espeakup"
@@ -15,8 +15,22 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="app-accessibility/espeak"
-RDEPEND="${DEPEND}
-	|| ( >=virtual/linux-sources-2.6.37 app-accessibility/speakup )"
+RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	if kernel_is -ge 2 6 37; then
+		CONFIG_CHECK="~SPEAKUP ~SPEAKUP_SYNTH_SOFT"
+		ERROR_SPEAKUP="CONFIG_SPEAKUP is not enabled in this kernel!"
+		ERROR_SPEAKUP_SYNTH_SOFT=\
+			"CONFIG_SPEAKUP_SYNTH_SOFT is not enabled in this kernel!"
+		check_extra_config
+	elif ! has_version app-accessibility/speakup; then
+		ewarn "Cannot find speakup on your system."
+		ewarn "Please upgrade your kernel to 2.6.37 or later and enable the"
+		ewarn "CONFIG_SPEAKUP and CONFIG_SPEAKUP_SYNTH_SOFT options"
+		ewarn "or install app-accessibility/speakup."
+	fi
+}
 
 src_compile() {
 	emake || die "Compile failed."
