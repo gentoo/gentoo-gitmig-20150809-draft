@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.173 2011/04/23 17:12:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.174 2011/04/27 22:12:47 dilfridge Exp $
+
+*kalarm-4.4.11.1-r1 (27 Apr 2011)
+
+  27 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kalarm-4.4.11.1-r1.ebuild, +files/kalarm-4.4.11.1-crash.patch:
+  Added upstream patch against a crash, bug 365139
 
 *kalarm-4.5.95 (23 Apr 2011)
 
