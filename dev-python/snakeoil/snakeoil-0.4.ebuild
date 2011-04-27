@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.4.ebuild,v 1.1 2011/04/25 03:09:17 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.4.ebuild,v 1.2 2011/04/27 16:40:53 ferringb Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Miscellaneous python utility code."
 HOMEPAGE="http://www.pkgcore.org/"
@@ -20,6 +20,10 @@ DEPEND="!<sys-apps/pkgcore-0.4.7.8"
 RDEPEND=${DEPEND}
 
 DOCS="AUTHORS NEWS"
+
+src_prepare() {
+	epatch "${FILESDIR}/snakeoil-0.4-lib2to3.patch"
+}
 
 pkg_setup() {
 	# disable snakeoil 2to3 caching
