@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.5-r1.ebuild,v 1.1 2011/04/26 21:08:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.5-r1.ebuild,v 1.2 2011/04/27 13:34:13 tupone Exp $
 
 EAPI=4
 inherit eutils
@@ -45,7 +45,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-tinyxml.patch
+	epatch "${FILESDIR}"/${P}-tinyxml.patch \
+		"${FILESDIR}"/${P}-gcc46.patch
 
 	if use examples ; then
 		cp -r Samples Samples.clean
