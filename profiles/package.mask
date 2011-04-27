@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12733 2011/04/26 13:49:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12734 2011/04/27 20:42:28 angelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -357,13 +357,6 @@ dev-libs/eggdbus
 # Currently v8-3.2 versions are used for chromium-12.x versions.
 >=dev-lang/v8-3.2
 
-# Christoph Mende <angelos@gentoo.org> (26 Mar 2011)
-# Unmaintained upstream and replaced by media-plugins/gmpc-libnotify
-# and gmpc's built in notifications.
-# Will be removed in 30 days.
-media-plugins/gmpc-osd
-media-plugins/gmpc-qosd
-
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (25 Mar 2011)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -440,11 +433,6 @@ media-plugins/mythzoneminder
 =dev-vcs/darcs-1.0.9
 <dev-haskell/http-4000
 =dev-lang/helium-1.2-r1
-
-# Christoph Mende <angelos@gentoo.org> (13 Mar 2011)
-# Unmaintained upstream and doesn't work with current gmpc.
-# Will be removed in 30 days.
-media-plugins/gmpc-coveramazon
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (12 Mar 2011)
 # no maintainer, dead on upstream, dead Homepage
