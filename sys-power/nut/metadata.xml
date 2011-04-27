@@ -6,7 +6,4 @@
     <email>robbat2@gentoo.org</email>
     <name>Robin H. Johnson</name>
   </maintainer>
-  <use>
-    <flag name='hal'>Enable obsolete <pkg>sys-apps/hal</pkg> support</flag>
-  </use>
 </pkgmetadata>
