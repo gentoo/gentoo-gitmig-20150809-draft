@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.ebuild,v 1.3 2011/03/28 10:14:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-0.7.ebuild,v 1.4 2011/04/27 20:27:08 angelos Exp $
 
 EAPI=4
 
@@ -33,8 +33,8 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.24.1-r1:2
 	dev-libs/libxml2
 	media-libs/libechonest
-	>=media-libs/gstreamer-0.10
-	>=media-libs/gst-plugins-base-0.10
+	media-libs/gstreamer:0.10
+	media-libs/gst-plugins-base:0.10
 	ayatana? ( dev-libs/libindicate-qt )
 	ipod? (
 		>=media-libs/libgpod-0.8.0[ios?]
@@ -55,9 +55,9 @@ RDEPEND="${COMMON_DEPEND}
 	dbus? ( udev? ( sys-fs/udisks ) )
 	mtp? ( gnome-base/gvfs )
 	projectm? ( >=media-libs/libprojectm-1.2.0 )
-	>=media-plugins/gst-plugins-meta-0.10
-	>=media-plugins/gst-plugins-gio-0.10
-	>=media-plugins/gst-plugins-soup-0.10
+	media-plugins/gst-plugins-meta:0.10
+	media-plugins/gst-plugins-gio:0.10
+	media-plugins/gst-plugins-soup:0.10
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.39
