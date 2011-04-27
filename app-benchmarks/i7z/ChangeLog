@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/i7z
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/ChangeLog,v 1.2 2011/02/08 17:55:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/ChangeLog,v 1.3 2011/04/27 07:45:55 jlec Exp $
+
+  27 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/0.26-gcc46.patch,
+  i7z-0.26.ebuild:
+  Fix for gcc46
 
   08 Feb 2011; Justin Lecher <jlec@gentoo.org> i7z-0.26.ebuild:
   Do not install outside EPREFIX

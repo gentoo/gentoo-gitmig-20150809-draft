@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.26.ebuild,v 1.2 2011/02/08 17:55:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.26.ebuild,v 1.3 2011/04/27 07:45:55 jlec Exp $
 
 EAPI="3"
 
@@ -21,7 +21,9 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${PV}-gcc46.patch
 	tc-export CC
 }
 
