@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.2.1.ebuild,v 1.7 2010/04/26 19:40:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.2.1.ebuild,v 1.8 2011/04/28 19:01:45 ulm Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=virtual/linux-sources-2.6.19"
+DEPEND="virtual/linux-sources"
 RDEPEND=""
 
 S="${WORKDIR}/vhba-module-${PV}"
