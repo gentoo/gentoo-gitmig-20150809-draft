@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/zprod-manager
-# Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.28 2008/11/30 18:43:26 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.29 2011/04/28 15:58:15 halcy0n Exp $
+
+  28 Apr 2011; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Non-existant herd: zope -> net-zope
 
   30 Nov 2008; Raúl Porcel <armin76@gentoo.org>
   zprod-manager-0.3.2-r1.ebuild:
