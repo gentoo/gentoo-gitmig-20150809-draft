@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.201 2011/04/19 21:55:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.202 2011/04/28 17:15:58 nirbheek Exp $
+
+  28 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtkmm-3.0.0.ebuild:
+  Drop ~hppa w.r.t. bug 364693
 
   19 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -gtkmm-1.2.9-r2.ebuild:
   Drop slot 1.2, bug #355825.
