@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/tuxanci
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.9 2011/04/28 22:07:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.10 2011/04/28 22:36:10 scarabeus Exp $
+
+*tuxanci-99999999 (28 Apr 2011)
+*tuxanci-20110429 (28 Apr 2011)
+
+  28 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -tuxanci-0.21.0.ebuild,
+  -tuxanci-9999.ebuild, +tuxanci-20110429.ebuild, +tuxanci-99999999.ebuild,
+  metadata.xml:
+  Add new snapshot, bump live version so it is again the latest.
 
   28 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> tuxanci-0.21.0.ebuild,
   tuxanci-9999.ebuild:
