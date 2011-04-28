@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.11 2011/03/23 07:42:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.12 2011/04/28 07:43:24 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -19,9 +19,9 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-image[jpeg,png]
 	virtual/glu
 	virtual/opengl"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}_src_${PV}
+
 PATCHES=( "${FILESDIR}/${P}-sconstruct-sandbox.patch"
 	"${FILESDIR}/${P}-nvidia_glext.patch"
 	"${FILESDIR}/${P}-segfaults.patch"
