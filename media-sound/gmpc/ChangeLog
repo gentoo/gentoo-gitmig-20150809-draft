@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.76 2011/03/22 18:57:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.77 2011/04/28 21:19:05 angelos Exp $
+
+  28 Apr 2011; Christoph Mende <angelos@gentoo.org>
+  -files/gmpc-0.18.0-libxspf.patch, -files/gmpc-0.18.0-password_dialog.patch:
+  Removed old patches
 
   22 Mar 2011; Christoph Mende <angelos@gentoo.org> gmpc-0.20.0.ebuild:
   Use vala-0.10 (bug #359843)
