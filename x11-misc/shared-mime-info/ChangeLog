@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.179 2011/04/27 16:59:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.180 2011/04/28 10:33:14 phajdan.jr Exp $
+
+  28 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  shared-mime-info-0.90.ebuild:
+  x86 stable wrt security bug #364973
 
   27 Apr 2011; Jeroen Roovers <jer@gentoo.org> shared-mime-info-0.90.ebuild:
   Stable for HPPA (bug #364973).
