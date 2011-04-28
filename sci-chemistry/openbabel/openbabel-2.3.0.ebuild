@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.3 2011/03/28 19:30:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.4 2011/04/28 18:17:28 arfrever Exp $
 
 EAPI="3"
 
@@ -23,11 +23,12 @@ RDEPEND="
 	!sci-chemistry/babel
 	sci-libs/inchi
 	sys-libs/zlib
-	perl? ( sci-chemistry/openbabel-perl )
-	python? ( sci-chemistry/openbabel-python )
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.8"
+PDEPEND="
+	perl? ( sci-chemistry/openbabel-perl )
+	python? ( sci-chemistry/openbabel-python )"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS doc/*.inc doc/README* doc/*.mol2"
 
