@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.2.ebuild,v 1.1 2011/03/27 21:43:04 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.2.ebuild,v 1.2 2011/04/28 20:56:34 grozin Exp $
 EAPI=2
 inherit multilib elisp-common
 
@@ -12,11 +12,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 # Supported lisps, number 0 is the default
-LISPS=( sbcl cmucl gcl ecl    clisp clozurecl )
+LISPS=( sbcl cmucl     gcl ecl    clisp clozurecl )
 # . means just dev-lisp/${LISP}; foo-x.y.z means >=dev-lisp/foo-x.y.z
-DEPS=(  .    .     .   ecls-9 .     .         )
+DEPS=(  .    cmucl-20b .   ecls-9 .     .         )
 # command name: . means just ${LISP}
-COMS=(  .    lisp  .   .      .     ccl       )
+COMS=(  .    lisp      .   .      .     ccl       )
 
 IUSE="${LISPS[*]} X emacs gmp"
 RDEPEND="X? ( x11-libs/libXpm x11-libs/libICE )
