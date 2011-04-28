@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12734 2011/04/27 20:42:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12735 2011/04/28 16:09:38 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -303,44 +303,9 @@ x11-plugins/wmnetmon
 sys-apps/ren
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Mar 2011)
-# Masked for QA.
-# Not installable for almost an year now wrt bugs #326613,
-# #284921, #316515, #315411.    Other minor bugs, #336126.
-# Removal in 30 days.
-sci-libs/openfoam-kernel
-sci-libs/openfoam-meta
-sci-libs/openfoam-solvers
-sci-libs/openfoam-utilities
-sci-libs/openfoam-src
-sci-libs/openfoam-wmake
-<sci-libs/openfoam-1.7
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Mar 2011)
 # Masked temporarily until bug 360849 is solved so people
 # can emerge udev.
 =sys-apps/pciutils-3.1.7-r1
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
-# Last release in 2006, nobody looking after it.
-# Pending removal on 2011-04-27
-app-text/ssddiff
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
-# Abandoned project of mine. Nothing really use it.
-# Pending removal on 2011-04-27
-app-text/mxml2man
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (27 Mar 2011)
-# Abandoned project of mine; doesn't work as intended on Linux
-# nowadays.
-# Pending removal on 2011-04-27
-sys-block/unieject
-
-# Jeroen Roovers <jer@gentoo.org> (27 Mar 2011)
-# Unmaintained, does not work with IPv6 (bug #257353), forked to iptraf-ng (bug
-# #305781) - please use net-analyzer/iptraf-ng instead.
-# To be removed in 30 days.
-net-analyzer/iptraf
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Mar 2011)
 # Orphaned libraries. No longer required.
@@ -366,34 +331,11 @@ dev-libs/eggdbus
 # Some packages fail to build or work with GnuTLS built with Nettle crypto backend.
 =net-libs/gnutls-2.12*
 
-# Samuli Suominen <ssuominen@gentoo.org> (23 Mar 2011)
-# Fails to compile wrt bug #322219.
-# Runtime error wrt bug #318763.
-# Installs docs into wrong directory wrt bug #297639.
-# Needs a version bump and switch from autotools to scons wrt
-# bug 290671.   Masked for removal in 30 days.
-dev-util/bugle
-
-# Torsten Veller <tove@gentoo.org> (23 Mar 2011)
-# Mask app-misc/filer for removal (#360093)
-# - HOMEPAGE dead
-# - list archives
-#   - full of spam
-#   - last on-topic mails from Jan/Jun/Jul 2006, one topic was "still alive?"
-app-misc/filer
-
 # Aaron W. Swenson <titanofold@gentoo.org> (20 Mar 2011)
 # Masking 9.1 pre-release versions
 >=dev-db/postgresql-docs-9.1_alpha4
 >=dev-db/postgresql-base-9.1_alpha4
 >=dev-db/postgresql-server-9.1_alpha4
-
-# Samuli Suominen <ssuominen@gentoo.org> (20 Mar 2011)
-# Masked for QA
-# Fails to build in various ways, see tracker bug 359605.
-# Removal in 30 days
-www-misc/zoneminder
-media-plugins/mythzoneminder
 
 # Stefaan De Roeck <stefaan@gentoo.org> (19 Mar 2011)
 # New major upstream release.
@@ -434,12 +376,6 @@ media-plugins/mythzoneminder
 <dev-haskell/http-4000
 =dev-lang/helium-1.2-r1
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (12 Mar 2011)
-# no maintainer, dead on upstream, dead Homepage
-# bug 358591
-# Removal April 10 2011
-media-plugins/vdr-vdricq
-
 # Ulrich Mueller <ulm@gentoo.org> (12 Mar 2011)
 # Part of app-editors/emacs since version 23.2.
 # Cannot be compiled with Emacs 23. Last release in 2003.
@@ -449,19 +385,6 @@ app-emacs/htmlfontify
 # Christian Faulhammer <fauli@gentoo.org> (12 Mar 2011)
 # Mask for testing
 >=www-apps/joomla-1.6.0
-
-# Hans de Graaff <graaff@gentoo.org> (12 Mar 2011)
-# Mask for removal on 20110412 (#358431)
-# Needs libgnomeprint that is deprecated and unsupported for
-# a long time. Nothing in the tree needs this.
-dev-ruby/ruby-gnomeprint
-dev-ruby/ruby-gnomeprintui
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (11 Mar 2011)
-# Already in TeXlive since 2008, so the separate packages
-# are obsolete. Masked for removal in 30 days.
-dev-tex/memoir
-dev-tex/listings
 
 # Ulrich Mueller <ulm@gentoo.org> (11 Mar 2011)
 # Part of app-editors/emacs since version 22.1 or 23.1.
@@ -480,11 +403,6 @@ x11-themes/qgtkstyle
 # Diego E. Pettenò <flameeyes@gentoo.org> (01 Mar 2011)
 # Messed up build system, automagic dependencies.
 dev-util/perf
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (08 Mar 2011)
-# Broken ldflags, should not work
-# Masked for removal in 30 days per bug #335586
-media-libs/glide-v3
 
 # Justin Lecher <jlec@gentoo.org> (04 Mar 2011)
 # Probably API change, packages fail to compile
@@ -507,34 +425,11 @@ www-client/chromium-bin
 # Masking zen-kernel snapshot release
 =sys-kernel/zen-sources-2.6.37_p20110303
 
-# Sebastien Fabbro <bicatali@gentoo.org> (02 Mar 2011)
-# Mask 30 days for removal (bug #316061)
-# unmaintained, multiple bugs, and tar ball absent upstream (no mirror allowed)
-# will be replaced with goto2 or openblas
-sci-libs/blas-goto
-
-# Jeremy Olexa <darkside@gentoo.org> (01 Mar 2011)
-# # Masked for removal in 60 days by treecleaners
-# - Multiple bugs tracked in bug 355971
-# - One security bug!
-# - No Gentoo maintainer
-# - Upstream moved to a commercial license, no future upgrades to the free
-# version
-media-libs/pdflib
-# pecl-pdflib will be removed with pdflib's removal
-dev-php5/pecl-pdflib
-
 # Ulrich Mueller <ulm@gentoo.org> (01 Mar 2011)
 # Christian Faulhammer <fauli@gentoo.org>
 # Emacs live ebuilds. Use at your own risk.
 ~app-editors/emacs-vcs-23.3.9999
 ~app-editors/emacs-vcs-24.0.9999
-
-# Hans de Graaff <graaff@gentoo.org> (27 Feb 2011)
-# Deprecated by upstream. Latest version already installs stubs only.
-# Nothing in the tree still depends on it.
-# Masked for removal in 30 days.
-dev-ruby/bones-extras
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Feb 2011)
 # Masked for removal due to libgnome ABI breakage
@@ -549,11 +444,6 @@ dev-ruby/bones-extras
 # - Last release in 2005
 # - Multiple alternatives
 net-ftp/yafc
-
-# Jeremy Olexa <darkside@gentoo.org> (22 Feb 2011)
-# Masked for removal in 60 days by treecleaners
-# Doesn't build, gentoo maintainer is not interested. bug 316501 & bug 247043
-dev-lang/gwydion-dylan
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Feb 2011)
 # Python 3.2 masked until sufficient number of reverse dependencies is fixed.
