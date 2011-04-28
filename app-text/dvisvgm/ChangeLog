@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.9 2011/04/14 12:22:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.10 2011/04/28 14:50:58 aballier Exp $
+
+*dvisvgm-1.0.6 (28 Apr 2011)
+
+  28 Apr 2011; Alexis Ballier <aballier@gentoo.org> +dvisvgm-1.0.6.ebuild:
+  version bump
 
 *dvisvgm-1.0.5 (14 Apr 2011)
 
