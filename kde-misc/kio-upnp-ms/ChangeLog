@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kio-upnp-ms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/ChangeLog,v 1.3 2011/04/20 19:30:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/ChangeLog,v 1.4 2011/04/28 19:36:00 ottxor Exp $
+
+  28 Apr 2011; Christoph Junghans <ottxor@gentoo.org>
+  kio-upnp-ms-0.8.0_p20110110.ebuild, kio-upnp-ms-0.8.0_p20110313.ebuild:
+  fixed deps
 
 *kio-upnp-ms-0.8.0_p20110313 (20 Apr 2011)
 

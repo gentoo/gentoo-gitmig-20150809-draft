@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/kio-upnp-ms-0.8.0_p20110110.ebuild,v 1.2 2011/04/19 02:38:40 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/kio-upnp-ms-0.8.0_p20110110.ebuild,v 1.3 2011/04/28 19:36:00 ottxor Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="=media-libs/herqq-0.8.0
+RDEPEND="~media-libs/herqq-0.8.0
 	kde-base/kdelibs
 	x11-libs/qt-core"
 DEPEND="${RDEPEND}"
