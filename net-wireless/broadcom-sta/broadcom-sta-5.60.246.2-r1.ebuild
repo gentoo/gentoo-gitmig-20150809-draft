@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.60.246.2-r1.ebuild,v 1.1 2010/10/30 06:44:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.60.246.2-r1.ebuild,v 1.2 2011/04/28 18:57:12 ulm Exp $
 
 EAPI="2"
 inherit eutils linux-mod
@@ -17,7 +17,7 @@ IUSE=""
 
 RESTRICT="mirror"
 
-DEPEND=">=virtual/linux-sources-2.6.22"
+DEPEND="virtual/linux-sources"
 RDEPEND=""
 
 S="${WORKDIR}"
