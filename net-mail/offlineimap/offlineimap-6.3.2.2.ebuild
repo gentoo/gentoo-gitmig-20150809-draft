@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.3.2.ebuild,v 1.2 2011/03/10 19:48:49 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.3.2.2.ebuild,v 1.1 2011/04/28 12:40:48 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}"/${P}-darwin10.patch
+	epatch "${FILESDIR}"/offlineimap-6.3.2-darwin10.patch
 }
 
 src_compile() {
