@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/PyFoam-0.5.4-r1.ebuild,v 1.2 2010/12/30 21:54:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/PyFoam-0.5.4-r1.ebuild,v 1.3 2011/04/28 16:25:14 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="extras"
 
 DEPEND="sci-visualization/gnuplot
-	|| ( sci-libs/openfoam sci-libs/openfoam-bin sci-libs/openfoam-meta )
+	|| ( sci-libs/openfoam sci-libs/openfoam-bin )
 	extras? (
 		dev-python/matplotlib
 		dev-python/numpy
