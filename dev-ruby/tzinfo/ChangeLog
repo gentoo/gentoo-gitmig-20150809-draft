@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.77 2011/04/02 23:18:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.78 2011/04/28 06:31:06 graaff Exp $
+
+*tzinfo-0.3.27 (28 Apr 2011)
+
+  28 Apr 2011; Hans de Graaff <graaff@gentoo.org> +tzinfo-0.3.27.ebuild:
+  Version bump.
 
 *tzinfo-0.3.26 (02 Apr 2011)
 
