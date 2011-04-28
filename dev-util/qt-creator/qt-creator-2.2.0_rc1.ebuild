@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.0_rc1.ebuild,v 1.1 2011/04/26 13:49:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.0_rc1.ebuild,v 1.2 2011/04/28 14:08:14 scarabeus Exp $
 
 EAPI="4"
-LANGS="de es fr it ja pl ru sl"
+LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
 
 inherit qt4-r2 multilib
 MY_PN="${PN/-/}"
