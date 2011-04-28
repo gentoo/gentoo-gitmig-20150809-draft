@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6-r1.ebuild,v 1.4 2011/04/27 14:20:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6-r1.ebuild,v 1.5 2011/04/28 10:23:59 phajdan.jr Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://projects.gnome.org/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="avahi doc +introspection networkmanager +nss test"
 
 # TODO: add seed support
