@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.6 2011/02/21 14:17:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.7 2011/04/28 07:46:47 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -20,7 +20,6 @@ DEPEND="
 	X? (
 		x11-libs/libXaw
 		media-libs/libpng )"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
