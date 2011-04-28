@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9.0.597.84.ebuild,v 1.2 2011/03/01 07:26:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9.0.597.84.ebuild,v 1.3 2011/04/28 16:27:20 ssuominen Exp $
 
 EAPI="2"
 inherit eutils multilib portability
@@ -48,7 +48,6 @@ RDEPEND="app-arch/bzip2
 		x11-themes/gnome-icon-theme
 		x11-themes/oxygen-molecule
 		x11-themes/tango-icon-theme
-		x11-themes/xfce4-icon-theme
 	)"
 
 pkg_setup() {
