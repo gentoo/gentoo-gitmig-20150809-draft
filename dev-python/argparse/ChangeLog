@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.17 2011/04/04 12:33:36 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.18 2011/04/28 16:14:46 hwoarang Exp $
+
+  28 Apr 2011; Markos Chandras <hwoarang@gentoo.org> argparse-1.2.1.ebuild:
+  Stable on amd64 wrt bug #364727
 
   04 Apr 2011; Maxim (maksbotan) <kolmax94@gmail.com> argparse-1.2.1.ebuild:
   Added dev-python/setuptools to DEPEND, fixes bug #361901
