@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.03.09.ebuild,v 1.6 2009/09/06 21:17:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.03.09.ebuild,v 1.7 2011/04/28 18:59:44 ulm Exp $
 
 inherit eutils linux-mod versionator
 
@@ -20,7 +20,7 @@ KEYWORDS="amd64 x86"
 
 IUSE=""
 
-DEPEND=">=virtual/linux-sources-2.6.27"
+DEPEND="virtual/linux-sources"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/${PN}"
