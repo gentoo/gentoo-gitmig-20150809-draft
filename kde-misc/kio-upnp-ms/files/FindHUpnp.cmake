@@ -6,7 +6,11 @@
 # HUPNP_LIBS
 # HUPNP_FOUND
 
-find_path(HUPNP_INCLUDE_DIR HUpnp HINTS ${KDE4_INCLUDE_DIR})
+find_path(HUPNP_INCLUDE_DIR
+	HUpnp HINTS
+	${KDE4_INCLUDE_DIR}
+	/usr/include/HUpnpCore/
+)
 
 find_library(HUPNP_LIBS HUpnp PATHS ${KDE4_LIB_DIR})
 
