@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.91.ebuild,v 1.1 2011/03/30 09:49:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.91.ebuild,v 1.2 2011/04/28 20:58:08 scarabeus Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.bluez.org/"
 # Because of oui.txt changing from time to time without noticement, we need to supply it
 # ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
 # See bugs #345263 and #349473 for reference.
-OUIDATE="20110330" # Needed because of bug #345263
+OUIDATE="20110330"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
 	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt"
 LICENSE="GPL-2 LGPL-2.1"
@@ -21,29 +21,37 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
 IUSE="alsa attrib caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmcia pnat test-programs usb"
 
-CDEPEND="alsa? (
+CDEPEND="
+	>=dev-libs/glib-2.14:2
+	media-libs/libsndfile
+	sys-apps/dbus
+	>=sys-fs/udev-146[extras]
+	alsa? (
 		media-libs/alsa-lib[alsa_pcm_plugins_extplug,alsa_pcm_plugins_ioplug]
 	)
 	caps? ( >=sys-libs/libcap-ng-0.6.2 )
+	cups? ( net-print/cups )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10:0.10
-		>=media-libs/gst-plugins-base-0.10:0.10 )
+		>=media-libs/gst-plugins-base-0.10:0.10
+	)
 	usb? ( dev-libs/libusb:1 )
-	cups? ( net-print/cups )
-	>=sys-fs/udev-146[extras]
-	>=dev-libs/glib-2.14:2
-	sys-apps/dbus
-	media-libs/libsndfile
-	!net-wireless/bluez-libs
-	!net-wireless/bluez-utils"
-DEPEND="sys-devel/flex
+"
+DEPEND="${CDEPEND}
 	>=dev-util/pkgconfig-0.20
-	${CDEPEND}"
+	sys-devel/flex
+"
 RDEPEND="${CDEPEND}
+	!net-wireless/bluez-libs
+	!net-wireless/bluez-utils
 	consolekit? ( sys-auth/consolekit )
 	test-programs? (
 		dev-python/dbus-python
-		dev-python/pygobject:2 )"
+		dev-python/pygobject:2
+	)
+"
+
+DOCS=( AUTHORS ChangeLog README )
 
 pkg_setup() {
 	if ! use consolekit; then
@@ -58,7 +66,8 @@ src_prepare() {
 	fi
 
 	if use cups; then
-		sed -i -e "s:cupsdir = \$(libdir)/cups:cupsdir = `cups-config --serverbin`:" \
+		sed -i \
+			-e "s:cupsdir = \$(libdir)/cups:cupsdir = `cups-config --serverbin`:" \
 			Makefile.tools Makefile.in || die
 	fi
 }
@@ -95,8 +104,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog README
+	default
 
 	if use test-programs ; then
 		cd "${S}/test"
@@ -138,49 +146,31 @@ src_install() {
 	insinto /var/lib/misc
 	newins "${DISTDIR}/oui-${OUIDATE}.txt" oui.txt
 
-	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
+	find "${ED}" -name "*.la" -delete
 }
 
 pkg_postinst() {
 	udevadm control --reload-rules && udevadm trigger --subsystem-match=bluetooth
 
 	if ! has_version "net-dialup/ppp"; then
-		elog
 		elog "To use dial up networking you must install net-dialup/ppp."
 	fi
 
-	if ! has_version "net-wireless/gnome-bluetooth" && ! has_version "net-wireless/kbluetooth"; then
-		elog
-		elog "For desktop integration you can try net-wireless/gnome-bluetooth"
-		elog "for gnome and net-wireless/kbluetooth for kde."
-	fi
-
-	if ! use old-daemons; then
-		elog
-		elog "Use the old-daemons use flag to get the old daemons like hidd or pand"
-		elog "installed. Please note that 'bluetooth' init script doesn't stop the old"
-		elog "daemons after you update it, so it's recommended to stop all of them using"
-		elog "their own init scripts or manually killing them."
-	fi
-
-	if use consolekit; then
-		elog
-		elog "If you want to use rfcomm as a normal user, you need to add the user"
-		elog "to the uucp group."
-	else
-		elog
-		elog "Since you have the consolekit use flag disabled, you will only be able to run"
-		elog "bluetooth clients as root. If you want to be able to run bluetooth clientes as "
-		elog "a regular user, you need to enable the consolekit use flag for this package or"
-		elog "to add the user to the plugdev group."
-	fi
-
 	if use old-daemons; then
-		elog
 		elog "dund and hidd init scripts were installed because you have the old-daemons"
 		elog "use flag on. They are not started by default via udev so please add them"
 		elog "to the required runlevels using rc-update <runlevel> add <dund/hidd>. If"
 		elog "you need init scripts for the other daemons, please file requests"
 		elog "to https://bugs.gentoo.org."
+	fi
+
+	if use consolekit; then
+		elog "If you want to use rfcomm as a normal user, you need to add the user"
+		elog "to the uucp group."
+	else
+		elog "Since you have the consolekit use flag disabled, you will only be able to run"
+		elog "bluetooth clients as root. If you want to be able to run bluetooth clientes as "
+		elog "a regular user, you need to enable the consolekit use flag for this package or"
+		elog "to add the user to the plugdev group."
 	fi
 }
