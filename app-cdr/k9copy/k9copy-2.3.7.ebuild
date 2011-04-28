@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.7.ebuild,v 1.1 2011/04/27 23:56:47 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.7.ebuild,v 1.2 2011/04/28 21:09:40 aballier Exp $
 
 EAPI=3
 
@@ -39,6 +39,8 @@ RDEPEND="${DEPEND}
 "
 
 DOCS=( README )
+
+PATCHES=( "${FILESDIR}/${P}-ffmpeg.patch" )
 
 pkg_postinst() {
 	kde4-base_pkg_postinst
