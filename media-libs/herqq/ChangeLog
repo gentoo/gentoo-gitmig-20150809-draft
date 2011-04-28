@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/herqq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.3 2011/04/20 17:43:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.4 2011/04/28 20:00:37 ottxor Exp $
+
+*herqq-1.0.0-r1 (28 Apr 2011)
+*herqq-0.8.0-r1 (28 Apr 2011)
+
+  28 Apr 2011; Christoph Junghans <ottxor@gentoo.org> -herqq-0.8.0.ebuild,
+  +herqq-0.8.0-r1.ebuild, -herqq-1.0.0.ebuild, +herqq-1.0.0-r1.ebuild:
+  added multilib support (fixes bug #365155)
 
 *herqq-1.0.0 (20 Apr 2011)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-1.0.0.ebuild,v 1.1 2011/04/20 17:43:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-1.0.0-r1.ebuild,v 1.1 2011/04/28 20:00:37 ottxor Exp $
 
 EAPI="3"
 
-inherit base qt4-r2
+inherit base multilib qt4-r2
 
 DESCRIPTION="A software library for building UPnP devices"
 HOMEPAGE="http://www.herqq.org"
@@ -21,6 +21,10 @@ DEPEND="${RDEPEND}"
 
 DOCS=( hupnp/ChangeLog )
 HTML_DOCS=( hupnp/docs/html/ )
+
+src_prepare() {
+	find . -name "*.pro" -exec sed -i "s@PREFIX/lib@PREFIX/$(get_libdir)@" {} \; || die
+}
 
 src_configure() {
 	eqmake4 herqq.pro PREFIX="${EPREFIX}/usr" || die
