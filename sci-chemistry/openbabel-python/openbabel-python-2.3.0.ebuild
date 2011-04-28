@@ -1,14 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.0.ebuild,v 1.3 2011/03/29 06:00:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.0.ebuild,v 1.4 2011/04/28 19:21:51 arfrever Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 PYTHON_MODNAME="openbabel.py pybel.py"
 
-inherit cmake-utils eutils distutils
+inherit distutils eutils
 
 DESCRIPTION="Python bindings for OpenBabel (including Pybel)"
 HOMEPAGE="http://openbabel.sourceforge.net/"
@@ -26,34 +27,18 @@ RDEPEND="
 	~sci-chemistry/openbabel-${PV}
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	>=dev-lang/swig-2
-	dev-util/cmake"
+	>=dev-lang/swig-2"
 
 S="${WORKDIR}"/openbabel-${PV}
 
-DISTUTILS_SETUP_FILES="${S}/scripts/python/setup.py"
+DISTUTILS_SETUP_FILES="scripts|python/setup.py"
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-wrap_OBInternalCoord.patch \
 		"${FILESDIR}"/${P}-py3_iterator.patch \
-		"${FILESDIR}"/${P}-swig.patch
-}
+		"${FILESDIR}"/${P}-swig.patch \
+		"${FILESDIR}"/${P}-system_openbabel.patch
 
-src_configure() {
-	local mycmakeargs="-DPYTHON_BINDINGS=ON"
-	mycmakeargs="${mycmakeargs}
-		-DRUN_SWIG=ON"
-	cmake-utils_src_configure
-}
-
-src_compile() {
-	cmake-utils_src_compile _openbabel
-	cd "${WORKDIR}/${P}_build/scripts"
-	distutils_src_compile
-}
-
-src_install() {
-	cd "${WORKDIR}/${P}_build/scripts"
-	distutils_src_install
+	swig -python -c++ -small -O -templatereduce -naturalvar -I/usr/include/openbabel-2.0 -o scripts/python/openbabel-python.cpp -DHAVE_EIGEN2 -outdir scripts/python scripts/openbabel-python.i || die "Regeneration of openbabel-python.cpp failed"
 }

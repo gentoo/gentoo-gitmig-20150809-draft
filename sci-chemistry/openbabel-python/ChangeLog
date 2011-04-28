@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/openbabel-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.3 2011/03/29 06:00:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.4 2011/04/28 19:21:51 arfrever Exp $
+
+  28 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  openbabel-python-2.3.0.ebuild,
+  +files/openbabel-python-2.3.0-system_openbabel.patch:
+  Don't use cmake. Use system libopenbabel.
 
   29 Mar 2011; Justin Lecher <jlec@gentoo.org> openbabel-python-2.3.0.ebuild:
   Depend on >=swig-2
