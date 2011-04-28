@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-1.0.0-r1.ebuild,v 1.1 2011/04/28 20:00:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-1.0.0-r1.ebuild,v 1.2 2011/04/28 20:25:58 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit base multilib qt4-r2
+inherit multilib base qt4-r2
 
 DESCRIPTION="A software library for building UPnP devices"
 HOMEPAGE="http://www.herqq.org"
@@ -15,24 +15,30 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-#no release of QtSolutions using bundled libQtSolutions_SOAP
-RDEPEND="x11-libs/qt-core"
+# no release of QtSolutions using bundled libQtSolutions_SOAP
+RDEPEND="
+	x11-libs/qt-core:4
+	x11-libs/qt-xmlpatterns:4
+"
 DEPEND="${RDEPEND}"
 
 DOCS=( hupnp/ChangeLog )
 HTML_DOCS=( hupnp/docs/html/ )
 
 src_prepare() {
-	find . -name "*.pro" -exec sed -i "s@PREFIX/lib@PREFIX/$(get_libdir)@" {} \; || die
+	# fix the .pro file for multilib issues
+	sed \
+		-e "s:PREFIX/lib:PREFIX/$(get_libdir):" \
+		-i "${S}/hupnp/src.pro" \
+		-i "${S}/hupnp/lib/qtsoap-2.7-opensource/buildlib/buildlib.pro" || die
+	qt4-r2_src_prepare
 }
 
 src_configure() {
-	eqmake4 herqq.pro PREFIX="${EPREFIX}/usr" || die
+	eqmake4 PREFIX="${EPREFIX}/usr/"
 }
 
 src_install() {
-	qt4-r2_src_install || die
-	if use doc; then
-		base_src_install_docs || die
-	fi
+	qt4-r2_src_install
+	use doc && base_src_install_docs
 }
