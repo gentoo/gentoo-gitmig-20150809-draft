@@ -8,7 +8,6 @@
 	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for
 		introspection</flag>
 	<flag name="json">Enable support for JSON format</flag>
-	<flag name='mdb'>Enables Microsoft Access DB support</flag>
 	<flag name="sourceview">Enable support for <pkg>x11-libs/gtksourceview</pkg></flag>
 	<flag name='xbase'>Enables support for xbase databases (dBase, FoxPro,
 		etc.)</flag>
