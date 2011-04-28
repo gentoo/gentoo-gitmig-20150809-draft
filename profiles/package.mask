@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12736 2011/04/28 16:13:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12737 2011/04/28 16:16:33 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,11 +220,6 @@ app-crypt/ekey-egd-linux
 # Ryan Hill <dirtyepic@gentoo.org> (02 Apr 2011)
 # Masked for testing
 >=sys-devel/gcc-4.6.0
-
-# Pacho Ramos <pacho@gentoo.org> (31 Mar 2011)
-# Upstream dead for a long time, packages still needing it
-# will be dropped also. Removal in 30 days (bug #355309)
-=gnome-extra/libgda-1.2.4
 
 # Eray Aslan <eras@gentoo.org> (29 Mar 2011)
 # Abandoned project.  Last release in 2005.  Bugs #158003, #97589,
