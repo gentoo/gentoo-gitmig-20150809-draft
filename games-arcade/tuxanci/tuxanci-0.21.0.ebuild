@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.8 2010/02/21 01:44:42 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.9 2011/04/28 22:07:32 scarabeus Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="!dedicated? (
 				>=media-libs/sdl-mixer-1.2.7[vorbis]
 			)
 		)
-	dev-libs/zziplib[sdl]"
+	dev-libs/zziplib"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.0
 	nls? ( sys-devel/gettext )"
