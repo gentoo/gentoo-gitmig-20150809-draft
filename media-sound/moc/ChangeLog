@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.84 2011/03/26 16:18:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.85 2011/04/28 18:04:37 scarabeus Exp $
+
+*moc-2.5.0_alpha4_p20110428 (28 Apr 2011)
+
+  28 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +moc-2.5.0_alpha4_p20110428.ebuild:
+  Add new snapshot. Update and clear the ebuild and its dependencies.
 
   26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> -moc-9999.ebuild:
   Remove live version, they don't belong in gentoo-x86.
