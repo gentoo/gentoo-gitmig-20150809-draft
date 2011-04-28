@@ -1,21 +1,24 @@
-From 35815463599b2aa843edcc976920d996f6e4b0e2 Mon Sep 17 00:00:00 2001
-From: dol-sen <brian.dolbec@gmail.com>
-Date: Wed, 27 Apr 2011 03:58:06 -0700
-Subject: [PATCH] fix broken *args for python 2.5 and 2.6+.
- Also fixes my previous fix & resultant breakage.
+From edce984f2c034254af33fd6fe18bc1e2689581bf Mon Sep 17 00:00:00 2001
+From: Brian Dolbec <brian.dolbec@gmail.com>
+Date: Fri, 22 Apr 2011 23:53:19 -0700
+Subject: [PATCH] fix bug 363797 python-2.5 test errors.
+ fixes broken *args for python 2.5 and 2.6+.
  Passes tests for all python versions supported.
 
 ---
  bin/layman                   |    2 +-
- layman/overlays/bzr.py       |    2 +-
- layman/overlays/darcs.py     |    2 +-
- layman/overlays/git.py       |    2 +-
- layman/overlays/mercurial.py |    2 +-
+ layman/overlays/bzr.py       |    4 ++--
+ layman/overlays/cvs.py       |    4 ++--
+ layman/overlays/darcs.py     |    4 ++--
+ layman/overlays/git.py       |    4 ++--
+ layman/overlays/mercurial.py |    4 ++--
  layman/overlays/rsync.py     |    2 +-
  layman/overlays/source.py    |    4 ++--
  layman/overlays/svn.py       |    4 ++--
  layman/overlays/tar.py       |    2 +-
- 9 files changed, 11 insertions(+), 11 deletions(-)
+ 10 files changed, 17 insertions(+), 17 deletions(-)
+ mode change 100644 => 100755 layman/tests/dtest.py
+ mode change 100644 => 100755 layman/tests/external.py
 
 diff --git a/bin/layman b/bin/layman
 index b85f4fa..01ee0c8 100755
@@ -28,7 +31,7 @@ index b85f4fa..01ee0c8 100755
  # LAYMAN - A UTILITY TO SELECT AND UPDATE GENTOO OVERLAYS
  ################################################################################
 diff --git a/layman/overlays/bzr.py b/layman/overlays/bzr.py
-index 4725c98..b59cf6c 100644
+index e73c2f4..b59cf6c 100644
 --- a/layman/overlays/bzr.py
 +++ b/layman/overlays/bzr.py
 @@ -52,7 +52,7 @@ class BzrOverlay(OverlaySource):
@@ -40,8 +43,39 @@ index 4725c98..b59cf6c 100644
  
      def sync(self, base, quiet = False):
          '''Sync overlay.'''
+@@ -61,7 +61,7 @@ class BzrOverlay(OverlaySource):
+ 
+         # bzr pull --overwrite SOURCE
+         args = ['pull', '--overwrite', self.src]
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
+diff --git a/layman/overlays/cvs.py b/layman/overlays/cvs.py
+index f8fc277..4924ca4 100644
+--- a/layman/overlays/cvs.py
++++ b/layman/overlays/cvs.py
+@@ -83,7 +83,7 @@ class CvsOverlay(OverlaySource):
+         args.append(self.parent.name)
+         args.append(self.subpath)
+ 
+-        return self.run_command(*args, cwd=base, env=dict(CVSROOT=self.src))
++        return self.run_command(args, cwd=base, env=dict(CVSROOT=self.src))
+ 
+     def sync(self, base, quiet = False):
+         '''Sync overlay.'''
+@@ -96,7 +96,7 @@ class CvsOverlay(OverlaySource):
+             args.append('-q')
+         args.append('update')
+         args.append('-d')
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
 diff --git a/layman/overlays/darcs.py b/layman/overlays/darcs.py
-index 12e75ec..c062543 100644
+index 7d89477..c062543 100644
 --- a/layman/overlays/darcs.py
 +++ b/layman/overlays/darcs.py
 @@ -51,7 +51,7 @@ class DarcsOverlay(OverlaySource):
@@ -53,8 +87,17 @@ index 12e75ec..c062543 100644
  
      def sync(self, base, quiet = False):
          '''Sync overlay.'''
+@@ -60,7 +60,7 @@ class DarcsOverlay(OverlaySource):
+ 
+         # darcs pull --all SOURCE
+         args = ['pull', '--all', self.src]
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
 diff --git a/layman/overlays/git.py b/layman/overlays/git.py
-index 8db6c51..3b2608b 100644
+index caa73f4..3b2608b 100644
 --- a/layman/overlays/git.py
 +++ b/layman/overlays/git.py
 @@ -60,7 +60,7 @@ class GitOverlay(OverlaySource):
@@ -66,8 +109,17 @@ index 8db6c51..3b2608b 100644
  
      def sync(self, base, quiet = False):
          '''Sync overlay.'''
+@@ -70,7 +70,7 @@ class GitOverlay(OverlaySource):
+         args = ['pull']
+         if quiet:
+             args.append('-q')
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
 diff --git a/layman/overlays/mercurial.py b/layman/overlays/mercurial.py
-index ea3f9da..8bf919b 100644
+index 06cf59d..8bf919b 100644
 --- a/layman/overlays/mercurial.py
 +++ b/layman/overlays/mercurial.py
 @@ -51,7 +51,7 @@ class MercurialOverlay(OverlaySource):
@@ -79,6 +131,15 @@ index ea3f9da..8bf919b 100644
  
      def sync(self, base, quiet = False):
          '''Sync overlay.'''
+@@ -60,7 +60,7 @@ class MercurialOverlay(OverlaySource):
+ 
+         # hg pull -u SOURCE
+         args = ['pull', '-u', self.src]
+-        return self.run_command(*args, cwd=path([base, self.parent.name]))
++        return self.run_command(args, cwd=path([base, self.parent.name]))
+ 
+     def supported(self):
+         '''Overlay type supported?'''
 diff --git a/layman/overlays/rsync.py b/layman/overlays/rsync.py
 index 3a5a342..bf01462 100644
 --- a/layman/overlays/rsync.py
@@ -143,6 +204,12 @@ index 919f4df..612b6b6 100644
  
          os.unlink(pkg)
          return result
+diff --git a/layman/tests/dtest.py b/layman/tests/dtest.py
+old mode 100644
+new mode 100755
+diff --git a/layman/tests/external.py b/layman/tests/external.py
+old mode 100644
+new mode 100755
 -- 
-1.7.3.4
+1.7.4.1
 
