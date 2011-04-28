@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>noherd</herd>
+	<herd>no-herd</herd>
 	<maintainer>
 		<email>ken69267@gentoo.org</email>
 		<name>Kenneth Prugh</name>
@@ -12,4 +12,3 @@
 		<name>Evan Plumlee</name>
 	</maintainer>
 </pkgmetadata>
-
