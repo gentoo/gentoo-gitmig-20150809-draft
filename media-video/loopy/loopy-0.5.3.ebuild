@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/loopy/loopy-0.3.ebuild,v 1.2 2011/02/02 05:19:56 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/loopy/loopy-0.5.3.ebuild,v 1.1 2011/04/28 13:24:51 scarabeus Exp $
 
-EAPI=3
-KDE_LINGUAS="de"
+EAPI=4
+KDE_LINGUAS="cs de hu pt_BR"
 inherit kde4-base
 
-MY_P=${PN}_${PV}
+MY_P=${P/-/_}
 
 DESCRIPTION="A simple video player for KDE"
 HOMEPAGE="http://www.kde-apps.org/content/show.php/Loopy?content=120880"
