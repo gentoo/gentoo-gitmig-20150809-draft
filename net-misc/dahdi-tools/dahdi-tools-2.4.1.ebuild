@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.4.1.ebuild,v 1.2 2011/04/26 10:27:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.4.1.ebuild,v 1.3 2011/04/28 21:39:02 tomka Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.digium.com/pub/telephony/dahdi-tools/releases/${P}.tar
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ppp"
 
 DEPEND="dev-libs/newt

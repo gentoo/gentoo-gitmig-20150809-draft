@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.16 2011/04/26 10:26:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.17 2011/04/28 21:37:53 tomka Exp $
+
+  28 Apr 2011; Thomas Kahle <tomka@gentoo.org> dahdi-2.4.1.ebuild:
+  x86 stable per bug 364887
 
   26 Apr 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-2.4.1.ebuild:
   Fast-track AMD64 stable for security bug #364887. Testing by Agostino "ago"
