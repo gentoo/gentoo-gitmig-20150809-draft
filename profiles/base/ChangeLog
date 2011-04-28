@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.261 2011/04/24 21:23:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.262 2011/04/28 13:52:14 aballier Exp $
+
+  28 Apr 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask celt useflag for non live ffmpeg ebuilds as libcelt is masked
 
   24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> packages, virtuals:
   Remove old-style virtual/modutils, bug 358891.
