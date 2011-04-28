@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gspiceui
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.4 2010/11/01 15:25:20 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.5 2011/04/28 15:58:00 tomjbe Exp $
+
+*gspiceui-0.9.99-r1 (28 Apr 2011)
+
+  28 Apr 2011; Thomas Beierlein <tomjbe@gentoo.org> +gspiceui-0.9.99-r1.ebuild,
+  +files/gspiceui-0.9.99-examples.patch:
+  Fix user manual lookup. Add missing spice models for USE=examples
 
   01 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   gspiceui-0.9.99.ebuild:
