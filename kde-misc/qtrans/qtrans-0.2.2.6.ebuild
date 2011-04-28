@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/qtrans/qtrans-0.2.2.6.ebuild,v 1.2 2011/01/31 06:25:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/qtrans/qtrans-0.2.2.6.ebuild,v 1.3 2011/04/28 21:16:16 scarabeus Exp $
 
 EAPI=3
 WEBKIT_REQUIRED=always
@@ -17,7 +17,7 @@ IUSE="debug"
 
 DOCS=( ChangeLog README )
 
-src_install() {
-	kde4-base_src_install
-	rm -f "${ED}"usr/share/apps/qtrans/{ChangeLog,README}
-}
+PATCHES=(
+	"${FILESDIR}/${PV}-define_return.patch"
+	"${FILESDIR}/${PV}-do_not_install_files.patch"
+)
