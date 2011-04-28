@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-9999.ebuild,v 1.3 2011/04/11 20:59:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/parti/parti-9999.ebuild,v 1.4 2011/04/28 21:32:11 xmw Exp $
 
 EAPI=3
 
@@ -26,10 +26,10 @@ COMMON_DEPEND="dev-python/pygtk:2
 	x11-libs/libXdamage
 	x11-libs/libXtst"
 
-RDEPEND="${COMMON_RDEPEND}
+RDEPEND="${COMMON_DEPEND}
 	dev-python/ipython
 	x11-apps/xmodmap"
-DEPEND="${COMMON_RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	dev-python/cython
 	dev-python/pyrex
 	dev-util/pkgconfig"
