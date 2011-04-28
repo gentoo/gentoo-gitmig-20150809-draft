@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/cmucl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.35 2010/12/17 20:17:43 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.36 2011/04/28 20:21:33 grozin Exp $
+
+*cmucl-20b_p001 (29 Apr 2011)
+
+  29 Apr 2011; Andrey Grozin <grozin@gentoo.org>
+  +files/20b-customize-lisp-implementation-version.patch,
+  +cmucl-20b_p001.ebuild, +files/20b-execstack-fixes.patch,
+  +files/20b-nositeinit-build.patch, +files/20b-patch001.patch,
+  files/site-init.lisp.in, metadata.xml:
+  Version bump from the lisp overlay
 
   17 Dec 2010; Ulrich Mueller <ulm@gentoo.org> cmucl-19c.ebuild,
   cmucl-19d_p2.ebuild, cmucl-20a.ebuild:

@@ -12,10 +12,6 @@
 
 (in-package "SYSTEM")
 
-(ext:without-package-locks
-  (defun lisp-implementation-version ()
-    (format nil "~X-~A" c:byte-fasl-file-version "@VERSION@")))
-
 (if (probe-file "/etc/cmuclrc")
     (load "/etc/cmuclrc")
   (format t "~%;;; Warning: There is no /etc/cmuclrc file (which should have been created during emerge"))
