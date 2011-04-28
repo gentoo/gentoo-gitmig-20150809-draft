@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.28-r1.ebuild,v 1.5 2011/04/24 18:18:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.28-r1.ebuild,v 1.6 2011/04/28 18:54:21 ulm Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 		dev-perl/Text-CSV_XS )"
 
 DEPEND="${DEPEND}
-	>virtual/linux-sources-2.6.22"
+	virtual/linux-sources"
 
 pkg_setup()	{
 	if use modules; then

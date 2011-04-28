@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.13 2011/04/24 18:18:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.14 2011/04/28 18:54:21 ulm Exp $
+
+  28 Apr 2011; Ulrich Mueller <ulm@gentoo.org> xtables-addons-1.28-r1.ebuild,
+  xtables-addons-1.30.ebuild, xtables-addons-1.31.ebuild:
+  Fix dependency on virtual/linux-sources, bug 118442.
 
   24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> xtables-addons-1.28-r1.ebuild,
   xtables-addons-1.30.ebuild, xtables-addons-1.31.ebuild:
