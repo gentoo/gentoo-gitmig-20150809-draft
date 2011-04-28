@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-4.4.11.1-r1.ebuild,v 1.1 2011/04/27 07:32:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-4.4.11.1-r1.ebuild,v 1.2 2011/04/28 04:44:41 mr_bones_ Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=( 
+PATCHES=(
 	"${FILESDIR}/${PN}"-4.4.10-enablefinal.patch
 	"${FILESDIR}/${PN}"-4.4.11.1-revert.patch
 )
