@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmail.eclass,v 1.2 2010/07/28 12:37:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmail.eclass,v 1.3 2011/04/29 14:07:43 ssuominen Exp $
 
 # @ECLASS: qmail.eclass
 # @MAINTAINER: qmail-bugs@gentoo.org
@@ -249,13 +249,8 @@ qmail_sendmail_install() {
 	diropts -m 755
 	dodir /usr/sbin /usr/lib
 
-	if use mailwrapper; then
-		insinto /etc/mail
-		doins "${GENQMAIL_S}"/conf/mailer.conf
-	else
-		dosym "${QMAIL_HOME}"/bin/sendmail /usr/sbin/sendmail
-		dosym "${QMAIL_HOME}"/bin/sendmail /usr/lib/sendmail
-	fi
+	dosym "${QMAIL_HOME}"/bin/sendmail /usr/sbin/sendmail
+	dosym "${QMAIL_HOME}"/bin/sendmail /usr/lib/sendmail
 
 	declare -F qmail_sendmail_install_hook >/dev/null && \
 		qmail_sendmail_install_hook
