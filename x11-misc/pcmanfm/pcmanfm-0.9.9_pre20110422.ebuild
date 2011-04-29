@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110422.ebuild,v 1.1 2011/04/22 09:09:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110422.ebuild,v 1.2 2011/04/29 10:33:35 hwoarang Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	inherit autotools
 	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~ppc ~x86"
+	KEYWORDS="amd64 ~arm ~ppc ~x86"
 fi
 
 inherit fdo-mime
