@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.33 2011/04/14 20:21:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.34 2011/04/29 20:10:26 ssuominen Exp $
+
+  29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> webob-1.0.6.ebuild:
+  ppc64 stable wrt #365335
 
   14 Apr 2011; Brent Baude <ranger@gentoo.org> webob-1.0.3.ebuild:
   stable ppc, bug 360369
