@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyasn1-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.3 2011/04/27 08:18:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.4 2011/04/29 20:39:56 ssuominen Exp $
+
+  29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  pyasn1-modules-0.0.1a.ebuild:
+  ppc64 stable wrt #364869
 
   27 Apr 2011; Christoph Mende <angelos@gentoo.org>
   pyasn1-modules-0.0.1a.ebuild:
