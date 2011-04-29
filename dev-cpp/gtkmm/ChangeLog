@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.202 2011/04/28 17:15:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.203 2011/04/29 00:57:19 jer Exp $
+
+  29 Apr 2011; Jeroen Roovers <jer@gentoo.org> gtkmm-3.0.0.ebuild:
+  Marked ~hppa (bug #364693).
 
   28 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtkmm-3.0.0.ebuild:
   Drop ~hppa w.r.t. bug 364693
