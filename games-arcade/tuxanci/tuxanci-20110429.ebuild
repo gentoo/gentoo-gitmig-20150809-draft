@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-20110429.ebuild,v 1.1 2011/04/28 22:36:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-20110429.ebuild,v 1.2 2011/04/29 10:15:23 scarabeus Exp $
 
 EAPI=3
 
@@ -50,7 +50,7 @@ src_configure() {
 		$(cmake-utils_use_with physfs)
 		$(cmake-utils_use_with opengl)
 		$(cmake-utils_use_enable ipv6)
-		$(cmake-utils_use_enable debug)
+		$(cmake-utils_use debug DEVELOPER)
 	)
 
 	mycmakeargs+=(
