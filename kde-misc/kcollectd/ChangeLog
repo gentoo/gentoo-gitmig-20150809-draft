@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcollectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.8 2011/04/24 14:10:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.9 2011/04/29 13:59:41 scarabeus Exp $
+
+  29 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> kcollectd-0.9.ebuild:
+  Actualy do no magic hackery and strip kde_linguas.
 
   24 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kcollectd-0.9.ebuild, +files/kcollectd-0.9-cflags.patch:
