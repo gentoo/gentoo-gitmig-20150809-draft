@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/kio-upnp-ms-0.8.0_p20110313.ebuild,v 1.3 2011/04/28 20:27:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/kio-upnp-ms-0.8.0_p20110313.ebuild,v 1.4 2011/04/29 14:02:46 scarabeus Exp $
 
 EAPI=4
 
@@ -23,6 +23,6 @@ src_prepare() {
 	cp "${FILESDIR}"/FindHUpnp.cmake "${S}/cmake/modules/" || die
 	sed -i '6 a \
 set(CMAKE_MODULE_PATH \${CMAKE_MODULE_PATH} \${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)' \
-		${S}/CMakeLists.txt || die
+		"${S}/CMakeLists.txt" || die
 	kde4-base_src_prepare
 }
