@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.27 2011/04/26 10:53:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.28 2011/04/29 11:00:54 scarabeus Exp $
+
+*libzip-0.10-r1 (29 Apr 2011)
+
+  29 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libzip-0.9.ebuild,
+  +libzip-0.10-r1.ebuild, +files/libzip-0.10-fix_pkgconfig.patch:
+  Drop older. Revision bump to fix pkgconfig file that had wrong include
+  defined.
 
   26 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> libzip-0.10.ebuild:
   ppc64 stable wrt #359899
