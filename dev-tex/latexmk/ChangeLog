@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.24 2011/02/27 15:52:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.25 2011/04/29 03:25:15 radhermit Exp $
+
+*latexmk-423a (29 Apr 2011)
+
+  29 Apr 2011; Tim Harder <radhermit@gentoo.org> +latexmk-423a.ebuild:
+  Version bump. Update to EAPI 4.
 
   27 Feb 2011; Raúl Porcel <armin76@gentoo.org> latexmk-418.ebuild,
   latexmk-422e.ebuild:
