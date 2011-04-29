@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/cgit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.4 2010/06/16 16:32:52 ramereth Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.5 2011/04/29 19:02:19 pva Exp $
+
+*cgit-9999 (29 Apr 2011)
+*cgit-0.9 (29 Apr 2011)
+*cgit-0.8.3.5 (29 Apr 2011)
+
+  29 Apr 2011; Peter Volkov <pva@gentoo.org> +cgit-0.8.3.5.ebuild,
+  +cgit-0.9.ebuild, +cgit-9999.ebuild, files/cgitrc, metadata.xml:
+  Version bump, bug #325411. Fixes security bug #357819, thank Paweł Hajdan,
+  Jr. for report. Fixes cgi support bug 310961 wrt parafin. Thank Nikoli for
+  this job.
 
   16 Jun 2010; Lance Albertson <ramereth@gentoo.org> -cgit-0.8.3.1.ebuild,
   cgit-0.8.3.1-r1.ebuild:
