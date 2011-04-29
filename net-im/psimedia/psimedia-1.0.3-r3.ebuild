@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r3.ebuild,v 1.3 2011/04/22 02:51:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r3.ebuild,v 1.4 2011/04/29 10:34:50 pva Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-ogg-0.10.22
 	media-plugins/gst-plugins-v4l2
 	media-plugins/gst-plugins-jpeg
+	net-im/psi
 	!<net-im/psi-0.13_rc1
 "
 DEPEND="${COMMON_DEPEND}
