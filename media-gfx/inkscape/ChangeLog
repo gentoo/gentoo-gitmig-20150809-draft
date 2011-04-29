@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.157 2011/04/24 17:27:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.158 2011/04/29 09:30:59 radhermit Exp $
+
+*inkscape-0.48.1-r1 (29 Apr 2011)
+
+  29 Apr 2011; Tim Harder <radhermit@gentoo.org>
+  +files/inkscape-0.48.0-libwpd.patch, +inkscape-0.48.1-r1.ebuild,
+  +files/inkscape-0.48.1-gcc-4.6.patch:
+  Revision bump. Apply patch to work with the latest libwpd/libwpg (bug #363703
+  by Pacho Ramos, patch by Fedora) and fix compile with gcc-4.6 (bug #362639 by
+  emil karlson).
 
   24 Apr 2011; Raúl Porcel <armin76@gentoo.org> inkscape-0.47.ebuild,
   inkscape-0.48.0.ebuild:
