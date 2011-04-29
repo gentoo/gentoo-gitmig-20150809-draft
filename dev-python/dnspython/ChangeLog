@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.71 2011/03/28 21:32:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.72 2011/04/29 20:28:08 ssuominen Exp $
+
+  29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> dnspython-1.9.4.ebuild:
+  ppc64 stable wrt #365333
 
 *dnspython-1.9.4 (28 Mar 2011)
 
