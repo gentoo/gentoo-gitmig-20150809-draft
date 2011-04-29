@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/enigma
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.49 2010/07/14 21:34:42 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.50 2011/04/29 06:55:25 tupone Exp $
+
+  29 Apr 2011; Tupone Alfredo <tupone@gentoo.org> enigma-1.01.ebuild,
+  +files/enigma-1.01-gcc46.patch:
+  Build with gcc-4.6 Bug #365219 by Diego Elio Pettenò
 
   14 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org> enigma-1.01.ebuild:
   Block dependency on the enet version.
