@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.25 2011/04/26 09:29:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.26 2011/04/29 19:58:45 pva Exp $
+
+  29 Apr 2011; Peter Volkov <pva@gentoo.org> eiskaltdcpp-2.2.2.ebuild,
+  eiskaltdcpp-9999.ebuild:
+  Fix REQUIRED_USE constraints.
 
 *eiskaltdcpp-2.2.2 (26 Apr 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.2.ebuild,v 1.1 2011/04/26 09:29:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.2.ebuild,v 1.2 2011/04/29 19:58:45 pva Exp $
 
 EAPI="4"
 
@@ -21,11 +21,11 @@ done
 
 REQUIRED_USE="
 	emoticons? ( || ( gtk qt4 ) )
-	dbus ( qt4 )
+	dbus? ( qt4 )
 	gnome? ( gtk )
 	javascript? ( qt4 )
 	libnotify? ( gtk )
-	spell ( qt4 )
+	spell? ( qt4 )
 	sound? ( || ( gtk qt4 ) )
 	sqlite? ( qt4 )
 "
