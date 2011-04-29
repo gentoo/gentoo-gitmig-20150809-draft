@@ -1,6 +1,14 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.183 2011/04/13 21:41:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.184 2011/04/29 14:15:38 hwoarang Exp $
+
+  29 Apr 2011; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.4-r2.ebuild,
+  +files/avidemux-2.5.4-openfileqt.patch,
+  +files/avidemux-2.5.4-x264-build115.patch, +files/avidemux-2.5.4-x264.patch,
+  +files/avidemux-2.5.4-xvid.patch:
+  Add gcc-4.6 patches thanks to Fabio Scaccabarozzi <fsvm88@gmail.com>. Add
+  patch for latest x264 thanks to zimous <zimous@matfyz.cz>. Bugs #364009 and
+  #365153
 
   13 Apr 2011; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.4-r1.ebuild,
   avidemux-2.5.4-r2.ebuild:
