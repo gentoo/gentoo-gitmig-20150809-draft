@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jay
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/ChangeLog,v 1.5 2009/10/25 21:26:13 volkmar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/ChangeLog,v 1.6 2011/04/29 18:22:27 halcy0n Exp $
+
+  29 Apr 2011; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Invalid herd: mono -> dotnet
 
   25 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> jay-1.1.1-r2.ebuild:
   Keywording for ppc, bug 270910
