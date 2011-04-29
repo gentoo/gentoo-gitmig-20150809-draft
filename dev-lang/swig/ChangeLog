@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.149 2011/04/28 19:46:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.150 2011/04/29 09:24:55 pchrist Exp $
+
+  29 Apr 2011; Panagiotis Christopoulos <pchrist@gentoo.org>
+  swig-2.0.4_pre12643.ebuild:
+  Minor change to the snapshot and swig-2.0.4_pre12643 ebuild (xz-->bz2 and
+  addition of ccache-swig.1 man file), fixes bug #365279 reported by Justin
+  Lecher (jlec)
 
 *swig-2.0.4_pre12643 (28 Apr 2011)
 

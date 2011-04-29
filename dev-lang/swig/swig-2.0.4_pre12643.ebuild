@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-2.0.4_pre12643.ebuild,v 1.1 2011/04/28 19:46:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-2.0.4_pre12643.ebuild,v 1.2 2011/04/29 09:24:55 pchrist Exp $
 
 EAPI="3"
 
 DESCRIPTION="Simplified Wrapper and Interface Generator"
 HOMEPAGE="http://www.swig.org/"
 if [[ "${PV}" == *_pre* ]]; then
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
+	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 fi
