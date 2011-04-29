@@ -43,7 +43,7 @@ Index: nagios-plugins-1.4.15/configure.in
 +if test "$with_ldap" != "no"; then
 +
 +	_SAVEDLIBS="$LIBS"
-+	AC_CHECK_LIB(ldap,main,[:],,-llber)
++	AC_CHECK_LIB(ldap,main,,,-llber)
 +	if test "$ac_cv_lib_ldap_main" = "yes"; then
 +		LDAPLIBS="-lldap -llber"\
 +		LDAPINCLUDE="-I/usr/include/ldap"
