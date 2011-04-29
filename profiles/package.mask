@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12740 2011/04/29 14:13:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12741 2011/04/29 14:16:14 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -409,12 +409,6 @@ app-pda/multisync-gui
 =dev-ruby/actionmailer-2.2*
 =dev-ruby/actionpack-2.2*
 
-# Samuli Suominen <ssuominen@gentoo.org> (07 Feb 2011)
-# Using old :0 slot of vala which includes broken bindings for libnotify-0.7.
-# Doesn't work with latest twitter API.
-# Either this will be removed, or unmasked when new 0.3 version is out.
-net-misc/pino
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (31 Jan 2011)
 # New package, masked for an initial testing period. Needs exotic
 # hardware. Please post feedback on bug 165399.
@@ -617,19 +611,6 @@ media-libs/shivavg
 # doesn't compile against latest media-libs/spandsp.
 # not needed anymore for Asterisk 1.6.
 net-misc/asterisk-spandsp_codec_g726
-
-# Stefan Briesenick <sbriesen@gentoo.org> (21 Jul 2010)
-# Abandoned upstream. Won't work with current kernels.
-net-dialup/e2220pc
-net-dialup/e5520pc
-net-dialup/fcclassic
-net-dialup/fcpcmcia
-net-dialup/fcpnp
-net-dialup/fcusb
-net-dialup/fcusb2
-net-dialup/fritzcapi
-net-dialup/fxusb
-net-dialup/fxusb_CZ
 
 # Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
 # The ebuild still needs work, but if you can help testing
