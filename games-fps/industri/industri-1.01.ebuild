@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.18 2010/10/13 21:25:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.19 2011/04/29 10:50:33 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -50,7 +50,8 @@ src_prepare() {
 		gl_warp.c || die
 
 	epatch "${FILESDIR}"/${P}-exec-stack.patch \
-		"${FILESDIR}"/${P}-ldflags.patch
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-glext.patch
 }
 
 src_compile() {

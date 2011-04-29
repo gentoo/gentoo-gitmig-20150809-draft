@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/industri
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/ChangeLog,v 1.12 2010/10/13 09:53:58 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/ChangeLog,v 1.13 2011/04/29 10:50:33 tupone Exp $
+
+  29 Apr 2011; Tupone Alfredo <tupone@gentoo.org> industri-1.01.ebuild,
+  +files/industri-1.01-glext.patch:
+  Fix build with new (?) glext.h Bug #365013 by Diego Elio Pettenò
 
   13 Oct 2010; Tupone Alfredo <tupone@gentoo.org> industri-1.01.ebuild,
   +files/industri-1.01-ldflags.patch:
