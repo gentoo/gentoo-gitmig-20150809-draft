@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.33 2011/04/26 05:23:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.34 2011/04/29 12:23:52 nirbheek Exp $
+
+  29 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -clutter-1.6.10.ebuild, clutter-1.6.14.ebuild:
+  Add cairo[glib] dependency according to bug 365159, remove old
 
   26 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> clutter-1.6.10.ebuild,
   clutter-1.6.14.ebuild:
