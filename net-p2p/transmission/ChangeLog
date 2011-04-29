@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.145 2011/04/13 03:50:42 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.146 2011/04/29 06:30:12 pva Exp $
+
+*transmission-2.30_beta3 (29 Apr 2011)
+
+  29 Apr 2011; Peter Volkov <pva@gentoo.org> -transmission-2.30_beta1.ebuild,
+  +transmission-2.30_beta3.ebuild:
+  Bump unstable version thank Daniel Rune Jensen for report. Dropped gnome USE
+  flag: it was used for gconf to register magnet links, fixes bug #364347.
 
   13 Apr 2011; Thomas Kahle <tomka@gentoo.org> transmission-2.13.ebuild:
   x86 stable per bug 361305

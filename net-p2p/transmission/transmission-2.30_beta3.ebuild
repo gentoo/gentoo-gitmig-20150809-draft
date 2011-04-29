@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.30_beta1.ebuild,v 1.1 2011/04/06 16:29:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.30_beta3.ebuild,v 1.1 2011/04/29 06:30:12 pva Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils qt4-r2
@@ -14,18 +14,19 @@ SRC_URI="http://download.transmissionbt.com/${PN}/files/${MY_P}.tar.xz"
 LICENSE="MIT GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="gnome gtk kde libnotify libcanberra qt4 utp"
+IUSE="gtk kde libnotify libcanberra qt4 utp"
 
+# >=dev-libs/glib-2.28 is required for updated mime support. This makes gconf
+# unnecessary for handling magnet links
 RDEPEND="
 	sys-libs/zlib
 	>=dev-libs/libevent-2.0.10
 	>=dev-libs/openssl-0.9.4
 	|| ( >=net-misc/curl-7.16.3[ssl]
 		>=net-misc/curl-7.16.3[gnutls] )
-	gtk? ( >=dev-libs/glib-2.15.5:2
+	gtk? ( >=dev-libs/glib-2.28:2
 		>=x11-libs/gtk+-2.12:2
 		>=dev-libs/dbus-glib-0.70
-		gnome? ( >=gnome-base/gconf-2.20.0 )
 		libnotify? ( >=x11-libs/libnotify-0.4.3 )
 		libcanberra? ( >=media-libs/libcanberra-0.10 ) )
 	qt4? ( x11-libs/qt-gui:4[dbus] )"
@@ -71,7 +72,7 @@ src_configure() {
 		$(use_enable utp) \
 		$(use gtk && use_enable libnotify) \
 		$(use gtk && use_enable libcanberra) \
-		$(use gtk && use_enable gnome gconf2)
+		--disable-gconf2
 
 	use qt4 && cd qt && eqmake4 qtr.pro
 }
