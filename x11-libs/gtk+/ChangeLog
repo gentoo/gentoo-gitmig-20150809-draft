@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.506 2011/04/29 00:56:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.507 2011/04/29 12:22:42 nirbheek Exp $
+
+  29 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk+-3.0.8.ebuild,
+  gtk+-3.0.9.ebuild:
+  Add cairo[glib] dependency according to bug 365159
 
   29 Apr 2011; Jeroen Roovers <jer@gentoo.org> gtk+-3.0.9.ebuild:
   Marked ~hppa (bug #364693).
