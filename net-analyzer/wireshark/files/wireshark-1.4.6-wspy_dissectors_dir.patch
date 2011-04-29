@@ -1,4 +1,5 @@
-=== modified file 'epan/wspython/Makefile.am'
+https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5872
+
 --- epan/wspython/Makefile.am	2011-04-29 06:57:10 +0000
 +++ epan/wspython/Makefile.am	2011-04-29 07:15:20 +0000
 @@ -44,12 +44,14 @@
