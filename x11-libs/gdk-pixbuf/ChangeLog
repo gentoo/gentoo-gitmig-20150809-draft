@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.13 2011/04/24 16:31:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.14 2011/04/29 00:55:21 jer Exp $
+
+  29 Apr 2011; Jeroen Roovers <jer@gentoo.org> gdk-pixbuf-2.22.1-r1.ebuild:
+  Marked ~hppa (bug #364693).
 
 *gdk-pixbuf-2.22.1-r1 (24 Apr 2011)
 

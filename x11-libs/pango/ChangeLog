@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.317 2011/04/24 16:31:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.318 2011/04/29 00:54:27 jer Exp $
+
+  29 Apr 2011; Jeroen Roovers <jer@gentoo.org> pango-1.28.4.ebuild:
+  Marked ~hppa (bug #364693).
 
   24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> pango-1.28.4.ebuild:
   Drop keywords on hppa/mips w.r.t. KEYWORDREQ bug 364693
