@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/glpk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.46 2010/12/22 05:57:59 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.47 2011/04/29 14:02:04 haubi Exp $
+
+  29 Apr 2011; Michael Haubenwallner <haubi@gentoo.org> glpk-4.45.ebuild:
+  Add prefix keywords: ~ppc-aix and ~x86-linux for now.
 
 *glpk-4.45 (22 Dec 2010)
 
