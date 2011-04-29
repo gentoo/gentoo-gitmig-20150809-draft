@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.47 2011/03/22 19:42:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.48 2011/04/29 17:58:25 nirbheek Exp $
+
+*libsoup-gnome-2.34.1 (29 Apr 2011)
+
+  29 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +libsoup-gnome-2.34.1.ebuild,
+  +files/libsoup-gnome-2.34.1-system-lib.patch:
+  Move libsoup-gnome-2.34.1 from the gnome overlay, introspection unmasked
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> libsoup-gnome-2.32.2.ebuild:
   Marking libsoup-gnome-2.32.2 ppc stable for bug 353436
