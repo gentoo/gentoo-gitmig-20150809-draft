@@ -1,6 +1,11 @@
 # ChangeLog for app-text/cuneiform
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cuneiform/ChangeLog,v 1.3 2011/01/15 22:22:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cuneiform/ChangeLog,v 1.4 2011/04/29 09:11:06 pva Exp $
+
+*cuneiform-1.1.0 (29 Apr 2011)
+
+  29 Apr 2011; Peter Volkov <pva@gentoo.org> +cuneiform-1.1.0.ebuild:
+  Version bump, thank yaleks for this job.
 
 *cuneiform-1.0.0 (15 Jan 2011)
 
