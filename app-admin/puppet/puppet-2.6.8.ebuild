@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.2.ebuild,v 1.1 2010/11/04 07:13:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.8.ebuild,v 1.1 2011/04/29 07:06:14 matsuu Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_TASK_TEST="test"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG* README*"
 
 inherit elisp-common eutils ruby-fakegem
@@ -16,22 +16,33 @@ HOMEPAGE="http://puppetlabs.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="augeas emacs ldap rrdtool shadow vim-syntax"
+IUSE="augeas diff doc emacs ldap rrdtool selinux shadow sqlite3 vim-syntax"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 ruby_add_rdepend "
 	>=dev-ruby/facter-1.5.1
 	augeas? ( dev-ruby/ruby-augeas )
+	diff? ( dev-ruby/diff-lcs )
+	doc? ( dev-ruby/rdoc )
 	ldap? ( dev-ruby/ruby-ldap )
 	shadow? ( dev-ruby/ruby-shadow )
+	sqlite3? ( dev-ruby/sqlite3-ruby )
 	virtual/ruby-ssl"
-#rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
+#	couchdb? ( dev-ruby/couchrest )
+#	mongrel? ( www-servers/mongrel )
+#	rack? ( >=dev-ruby/rack-1 )
+#	rails? (
+#		dev-ruby/rails
+#		>=dev-ruby/activerecord-2.1
+#	)
+#	stomp? ( dev-ruby/stomp )
 
 DEPEND="${DEPEND}
 	emacs? ( virtual/emacs )"
 RDEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
+	selinux? ( sys-libs/libselinux[ruby] )
 	>=app-portage/eix-0.18.0"
 
 SITEFILE="50${PN}-mode-gentoo.el"
@@ -63,6 +74,7 @@ all_ruby_install() {
 
 	# Initial configuration files
 	keepdir /etc/puppet/manifests || die
+	keepdir /etc/puppet/modules || die
 	insinto /etc/puppet
 
 	# Bug #338439
@@ -74,6 +86,7 @@ all_ruby_install() {
 	keepdir /var/run/puppet || die
 	keepdir /var/log/puppet || die
 	keepdir /var/lib/puppet/ssl || die
+	keepdir /var/lib/puppet/facts || die
 	keepdir /var/lib/puppet/files || die
 	fowners -R puppet:puppet /var/{run,log,lib}/puppet || die
 
