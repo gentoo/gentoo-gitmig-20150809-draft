@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.107 2011/03/26 08:43:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.108 2011/04/29 10:12:47 ultrabug Exp $
+
+*drbd-8.3.7 (29 Apr 2011)
+
+  29 Apr 2011; Ultrabug <ultrabug@gentoo.org> -drbd-8.3.6.ebuild,
+  +drbd-8.3.7.ebuild:
+  Add a drbd-8.3.7 version to match sys-kernel/xen-sources-2.6.34 userland
+  needs. Fix bug #365005. Drop old. Thanks to Luca Lesinigo for reporting.
 
   26 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> drbd-8.3.9.ebuild:
   Disable global survey by default in example conf file wrt #360483 by robbat2
