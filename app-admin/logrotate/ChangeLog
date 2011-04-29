@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.98 2011/04/17 15:01:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.99 2011/04/29 00:03:00 dang Exp $
+
+  29 Apr 2011; Daniel Gryniewicz <dang@gentoo.org> logrotate-3.7.9-r1.ebuild,
+  logrotate-3.7.9-r2.ebuild, +files/logrotate-3.7.9-no-cloexec.patch:
+  Fix bug #365137: allow to build on systems without O_CLOEXEC
 
 *logrotate-3.7.9-r2 (17 Apr 2011)
 

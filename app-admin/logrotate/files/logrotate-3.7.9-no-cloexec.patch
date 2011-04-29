@@ -1,0 +1,24 @@
+diff '--exclude-from=/home/dang/.scripts/diffrc' -up -ruN logrotate-3.7.9.orig//config.c logrotate-3.7.9/config.c
+--- logrotate-3.7.9.orig//config.c	2010-06-28 04:04:56.000000000 -0400
++++ logrotate-3.7.9/config.c	2011-04-28 19:16:55.422051174 -0400
+@@ -514,12 +514,19 @@ static int readConfigFile(const char *co
+ 		.l_whence = SEEK_SET,
+ 		.l_type = F_RDLCK
+ 	};
++	int flags;
+ 
+     /* FIXME: createOwner and createGroup probably shouldn't be fixed
+        length arrays -- of course, if we aren't run setuid it doesn't
+        matter much */
+ 
+-    fd = open(configFile, O_RDONLY | O_CLOEXEC);
++#ifdef O_CLOEXEC
++	flags = O_RDONLY | O_CLOEXEC;
++#else
++	flags = O_RDONLY;
++#endif
++
++    fd = open(configFile, flags);
+     if (fd < 0) {
+ 	message(MESS_ERROR, "failed to open config file %s: %s\n",
+ 		configFile, strerror(errno));

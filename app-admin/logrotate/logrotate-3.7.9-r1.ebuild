@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.9-r1.ebuild,v 1.7 2011/04/16 15:52:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.9-r1.ebuild,v 1.8 2011/04/29 00:03:00 dang Exp $
 
 EAPI="2"
 
@@ -35,7 +35,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-3.7.7-fbsd.patch \
 		"${FILESDIR}"/${PN}-3.7.9-atomic-create.patch \
 		"${FILESDIR}"/${PN}-3.7.9-shred.patch \
-		"${FILESDIR}"/${PN}-3.7.9-statefile.patch
+		"${FILESDIR}"/${PN}-3.7.9-statefile.patch \
+		"${FILESDIR}"/${PN}-3.7.9-no-cloexec.patch
 }
 
 src_configure() {

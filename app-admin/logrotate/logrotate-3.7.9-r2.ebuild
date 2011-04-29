@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.9-r2.ebuild,v 1.1 2011/04/17 15:01:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.9-r2.ebuild,v 1.2 2011/04/29 00:03:00 dang Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-3.7.9-atomic-create.patch \
 		"${FILESDIR}"/${PN}-3.7.9-shred.patch \
 		"${FILESDIR}"/${PN}-3.7.9-statefile.patch \
+		"${FILESDIR}"/${PN}-3.7.9-no-cloexec.patch \
 		"${FILESDIR}"/${PN}-3.7.9-skip-empty-files.patch
 }
 
