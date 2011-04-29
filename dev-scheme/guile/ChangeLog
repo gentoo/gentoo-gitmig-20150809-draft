@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.83 2011/04/07 15:23:41 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.84 2011/04/29 09:44:07 pchrist Exp $
+
+  29 Apr 2011; Panagiotis Christopoulos <pchrist@gentoo.org>
+  guile-1.8.8.ebuild:
+  dev-scheme/guile-1.8.8: merging elisp and emacs USE flags to emacs only
 
 *guile-2.0.0 (07 Apr 2011)
 

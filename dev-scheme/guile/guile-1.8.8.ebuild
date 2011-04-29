@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8.ebuild,v 1.1 2010/12/24 16:46:11 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8.ebuild,v 1.2 2011/04/29 09:44:07 pchrist Exp $
 
 EAPI=3
 inherit eutils flag-o-matic elisp-common
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="networking +regex discouraged +deprecated elisp emacs nls debug-freelist debug-malloc debug +threads"
+IUSE="networking +regex discouraged +deprecated emacs nls debug-freelist debug-malloc debug +threads"
 RESTRICT="!regex? ( test )"
 
 DEPEND="
@@ -40,7 +40,7 @@ src_configure() {
 		$(use_enable regex) \
 		$(use deprecated || use_enable discouraged) \
 		$(use_enable deprecated) \
-		$(use_enable elisp) \
+		$(use_enable emacs elisp) \
 		$(use_enable nls) \
 		--disable-rpath \
 		$(use_enable debug-freelist) \
