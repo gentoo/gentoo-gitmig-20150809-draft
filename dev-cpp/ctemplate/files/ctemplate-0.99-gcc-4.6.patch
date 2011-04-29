@@ -1,0 +1,10 @@
+--- ctemplate-0.99.orig/src/ctemplate/template_dictionary.h.in
++++ ctemplate-0.99/src/ctemplate/template_dictionary.h.in
+@@ -54,6 +54,7 @@
+ #include <map>
+ #include <string>
+ #include <vector>
++#include <cstddef>
+ #include <ctemplate/template_dictionary_interface.h>
+ #include <ctemplate/template_string.h>
+ #include <ctemplate/template_modifiers.h>
