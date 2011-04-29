@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.285 2011/04/29 03:08:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.286 2011/04/29 09:51:08 pva Exp $
+
+  29 Apr 2011; Peter Volkov <pva@gentoo.org> wireshark-1.4.5.ebuild,
+  -wireshark-1.4.6.ebuild, +wireshark-1.4.6-r1.ebuild,
+  +files/wireshark-1.4.6-wspy_dissectors_dir.patch:
+  Fix wspy_dissectors error, bug 363895#c5. Drop stable keywords on 1.4.5 as
+  it's buggy.
+
+*wireshark-1.4.6-r1 (29 Apr 2011)
+
+  29 Apr 2011; Peter Volkov <pva@gentoo.org> -wireshark-1.4.6.ebuild,
+  +wireshark-1.4.6-r1.ebuild,
+  +files/wireshark-1.4.6-wspy_dissectors_dir.patch:
+  Fix wspy_dissectors error, bug 363895#c5
 
 *wireshark-1.4.6 (29 Apr 2011)
 
