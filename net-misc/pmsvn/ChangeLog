@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pmsvn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/ChangeLog,v 1.3 2010/10/23 00:38:14 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/ChangeLog,v 1.4 2011/04/29 18:35:48 halcy0n Exp $
+
+  29 Apr 2011; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  maintainer-needed is not a herd
 
   23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata
