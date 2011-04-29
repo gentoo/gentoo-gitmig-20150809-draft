@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12738 2011/04/29 09:38:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12739 2011/04/29 13:59:11 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -602,10 +602,6 @@ gnustep-base/libobjc2
 # masked live version
 =x11-libs/cairo-9999*
 
-# Kacper Kowalik <xarthisius@gentoo.org> (7 Sep 2010)
-# Mask until fully tested
-x11-misc/lightdm
-
 # Sebastian Pipping <sping@gentoo.org> (1 Sep 2010)
 # Mask upcoming bumps, potentially too hot to push to everyone
 =media-libs/libdvdread-4.1.3_p1217
@@ -642,12 +638,6 @@ net-misc/asterisk-spandsp_codec_g726
 net-dialup/e2220pc
 net-dialup/e5520pc
 net-dialup/fcclassic
-net-dialup/fcdsl
-net-dialup/fcdsl2
-net-dialup/fcdslsl
-net-dialup/fcdslslusb
-net-dialup/fcdslusb
-net-dialup/fcdslusba
 net-dialup/fcpcmcia
 net-dialup/fcpnp
 net-dialup/fcusb
@@ -655,7 +645,6 @@ net-dialup/fcusb2
 net-dialup/fritzcapi
 net-dialup/fxusb
 net-dialup/fxusb_CZ
-net-wireless/fwlanusb
 
 # Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
 # The ebuild still needs work, but if you can help testing
