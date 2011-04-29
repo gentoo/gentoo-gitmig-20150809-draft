@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.280 2011/04/20 11:21:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.281 2011/04/29 12:05:19 scarabeus Exp $
+
+  29 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> cairo-1.10.2-r1.ebuild,
+  cairo-9999.ebuild, metadata.xml:
+  Add optional dependency on glib. Per bug #365159
 
   20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> cairo-9999.ebuild:
   Migrate live ebuild to git-2 eclass and update to eapi4.

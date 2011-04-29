@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.11 2011/04/20 11:21:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.12 2011/04/29 12:05:19 scarabeus Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://cairographics.org/"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="X aqua debug directfb doc drm gallium opengl openvg qt4 static-libs +svg xcb"
+IUSE="X aqua debug directfb doc drm gallium +glib opengl openvg qt4 static-libs +svg xcb"
 
 # Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
 RESTRICT="test"
@@ -27,6 +27,7 @@ RDEPEND="media-libs/fontconfig
 	sys-libs/zlib
 	>=x11-libs/pixman-0.18.4
 	directfb? ( dev-libs/DirectFB )
+	glib? ( >=dev-libs/glib-2.28.6:2 )
 	opengl? ( virtual/opengl )
 	openvg? ( media-libs/mesa[gallium] )
 	qt4? ( >=x11-libs/qt-gui-4.4:4 )
@@ -114,6 +115,7 @@ src_configure() {
 		$(use_enable aqua quartz-image) \
 		$(use_enable debug test-surfaces) \
 		$(use_enable directfb) \
+		$(use_enable glib gobject) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable openvg vg) \
 		$(use_enable opengl gl) \
