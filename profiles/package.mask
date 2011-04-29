@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12739 2011/04/29 13:59:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12740 2011/04/29 14:13:39 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -209,13 +209,6 @@ app-crypt/ekey-egd-linux
 # Masked for testing
 >=sys-devel/gcc-4.6.0
 
-# Eray Aslan <eras@gentoo.org> (29 Mar 2011)
-# Abandoned project.  Last release in 2005.  Bugs #158003, #97589,
-# #359411.
-# Removal in 90 days
-net-mail/mailwrapper
-net-mail/mailer-config
-
 # Sebastien Fabbro <bicatali@gentoo.org> (28 Mar 2011)
 # Still beta
 =dev-python/numpy-1.6*
@@ -369,14 +362,6 @@ www-client/chromium-bin
 # See bug #348644.
 =games-arcade/monster-masher-1.8.1
 =games-puzzle/gtetrinet-0.7.11
-
-# Jeremy Olexa <darkside@gentoo.org> (22 Feb 2011)
-# Masked for removal in 60 days by treecleaners
-# - Open bugs, tracked in bug 355961
-# - Fixes submitted but no gentoo dev is interested
-# - Last release in 2005
-# - Multiple alternatives
-net-ftp/yafc
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Feb 2011)
 # Python 3.2 masked until sufficient number of reverse dependencies is fixed.
@@ -1065,12 +1050,6 @@ app-benchmarks/ltp
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
 =dev-vcs/cvs-1.12.13*
-
-# Fernando J. Pereda <ferdy@gentoo.org> (25 April 2005)
-# mask these until the new mailwrapper/mailer-config scheme is ready
-# it is secure to unmask them to test
-net-mail/mailer-config
-=net-mail/mailwrapper-0.2.1-r1
 
 # <klieber@gentoo.org> (01 Apr 2004)
 # The following packages contain a remotely-exploitable
