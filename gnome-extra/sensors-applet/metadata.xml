@@ -6,7 +6,4 @@
 		<email>murray.alex@gmail.com</email>
 		<name>Alex Murray</name>
 	</maintainer>
-	<use>
-		<flag name='nvidia'>Enables support for sensors on NVidia chips</flag>
-	</use>
 </pkgmetadata>
