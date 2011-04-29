@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.8 2011/04/29 14:04:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.9 2011/04/29 14:04:47 scarabeus Exp $
 
 EAPI=4
 KDE_LINGUAS="cs de en_GB es fr pt_BR ru zh_CN"
@@ -30,7 +30,7 @@ S=${WORKDIR}/KGtk-${PV}
 DOCS=( AUTHORS ChangeLog README TODO )
 
 src_configure() {
-	mycmakeargs+=(
+	local mycmakeargs+=(
 		-DKGTK_KDE4=true -DKGTK_QT4=true -DKGTK_GTK2=true
 	)
 	kde4-base_src_configure
