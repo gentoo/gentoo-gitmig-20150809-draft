@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.60 2011/04/24 17:05:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.61 2011/04/29 00:58:33 jer Exp $
+
+  29 Apr 2011; Jeroen Roovers <jer@gentoo.org> gdl-3.0.0.ebuild:
+  Marked ~hppa (bug #364693).
 
 *gdl-3.0.0 (24 Apr 2011)
 

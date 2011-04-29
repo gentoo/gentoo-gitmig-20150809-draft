@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.33 2011/04/28 10:32:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.34 2011/04/29 00:51:51 jer Exp $
+
+  29 Apr 2011; Jeroen Roovers <jer@gentoo.org>
+  gobject-introspection-0.10.8.ebuild:
+  Marked ~hppa (bug #364693).
 
   28 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gobject-introspection-0.10.8.ebuild:

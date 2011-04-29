@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.218 2011/04/24 16:31:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.219 2011/04/29 00:54:01 jer Exp $
+
+  29 Apr 2011; Jeroen Roovers <jer@gentoo.org> atk-1.32.0-r1.ebuild:
+  Marked ~hppa (bug #364693).
 
 *atk-1.32.0-r1 (24 Apr 2011)
 
