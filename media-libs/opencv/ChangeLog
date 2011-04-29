@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.26 2011/04/14 12:39:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.27 2011/04/29 14:46:39 ssuominen Exp $
+
+  29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Move package to KDE herd because of digikam and kipi-plugins.
 
   14 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> opencv-2.0.0.ebuild,
   opencv-2.1.0.ebuild:
