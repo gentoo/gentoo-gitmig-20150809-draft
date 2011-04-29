@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.23 2011/04/23 18:18:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.24 2011/04/29 20:37:42 ssuominen Exp $
+
+  29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pytest-2.0.2.ebuild:
+  ppc64 stable wrt #362773
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> pytest-2.0.2.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #362773
