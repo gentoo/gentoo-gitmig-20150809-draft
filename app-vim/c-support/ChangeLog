@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/c-support
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/c-support/ChangeLog,v 1.1 2011/04/29 04:28:46 radhermit Exp $
+
+*c-support-5.13 (29 Apr 2011)
+
+  29 Apr 2011; Tim Harder <radhermit@gentoo.org> +c-support-5.13.ebuild,
+  +metadata.xml:
+  Initial import.
+
