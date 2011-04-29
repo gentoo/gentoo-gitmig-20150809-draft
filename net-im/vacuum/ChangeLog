@@ -1,0 +1,13 @@
+# ChangeLog for net-im/vacuum
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.1 2011/04/29 16:08:39 maksbotan Exp $
+
+*vacuum-9999 (29 Apr 2011)
+*vacuum-1.1.0 (29 Apr 2011)
+
+  29 Apr 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  +vacuum-1.1.0.ebuild, +vacuum-9999.ebuild, +metadata.xml:
+  Add net-im/vacuum-1.1.0 and 9999, thanks to Nikoli(nikoli@lavabit.com),
+  fixes
+  bug #296004
+
