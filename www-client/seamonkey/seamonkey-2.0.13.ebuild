@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.13.ebuild,v 1.8 2011/04/10 11:22:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.13.ebuild,v 1.9 2011/04/29 10:20:51 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -11,7 +11,7 @@ PATCH="${PN}-2.0.11-patches-01"
 EMVER="1.0.1"
 
 LANGS="be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it ja ka lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN"
-NOSHORTLANGS="en-GB es-AR es-ES nb-NO pt-PT sv-SE zh-CN"
+NOSHORTLANGS="en-GB es-AR"
 
 MY_PV="${PV/_pre*}"
 MY_PV="${MY_PV/_alpha/a}"
@@ -279,7 +279,9 @@ src_install() {
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		unzip "${S}"/mozilla/dist/bin/enigmail*.xpi || die
+	fi
 
+	if use mailnews ; then
 		sed 's|^\(MimeType=.*\)$|\1MimeType=text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;|' \
 			-i "${T}"/${PN}.desktop || die
 		sed 's|^\(Categories=.*\)$|\1Email;|' -i "${T}"/${PN}.desktop \
@@ -293,14 +295,14 @@ src_install() {
 		done
 	fi
 
+	# Add StartupNotify=true bug 290401
+	if use startup-notification ; then
+		echo "StartupNotify=true" >> "${T}"/${PN}.desktop
+	fi
+
 	# Install icon and .desktop for menu entry
 	newicon "${S}"/suite/branding/content/icon64.png seamonkey.png || die
 	domenu "${T}"/${PN}.desktop || die
-
-	# Add StartupNotify=true bug 290401
-	if use startup-notification ; then
-		echo "StartupNotify=true" >> "${D}"/usr/share/applications/seamonkey.desktop
-	fi
 
 	# Add our default prefs
 	sed "s|SEAMONKEY_PVR|${PVR}|" "${FILESDIR}"/all-gentoo.js \

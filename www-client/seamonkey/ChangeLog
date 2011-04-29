@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.305 2011/04/29 01:05:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.306 2011/04/29 10:20:51 polynomial-c Exp $
+
+  29 Apr 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.0.13.ebuild,
+  seamonkey-2.0.14.ebuild:
+  Don't depend on crypt USE flag for addition of email mime types to .desktop
+  file. Minor ebuild improvements.
 
 *seamonkey-2.0.14 (29 Apr 2011)
 
