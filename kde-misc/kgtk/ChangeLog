@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.27 2011/01/31 05:06:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.28 2011/04/29 14:04:11 scarabeus Exp $
+
+  29 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> kgtk-0.10.1.ebuild:
+  Fix repoman warnings.
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kgtk-0.10.1.ebuild:
   EAPI3, slotmove to 4, use add_kdebase_dep, use array for DOCS and mycmakeargs

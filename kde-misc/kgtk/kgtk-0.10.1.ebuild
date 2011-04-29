@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.7 2011/01/31 05:06:13 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.8 2011/04/29 14:04:11 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 KDE_LINGUAS="cs de en_GB es fr pt_BR ru zh_CN"
 KDE_LINGUAS_DIR="kdialogd4/po"
 inherit kde4-base
@@ -21,6 +21,7 @@ DEPEND="
 	x11-libs/qt-gui:4
 	$(add_kdebase_dep kdebase-startkde)
 "
+RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-glibc-2.10.patch" )
 

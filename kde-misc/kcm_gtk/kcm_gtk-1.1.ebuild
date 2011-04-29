@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/kcm_gtk-1.1.ebuild,v 1.5 2011/01/31 03:40:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_gtk/kcm_gtk-1.1.ebuild,v 1.6 2011/04/29 14:05:35 scarabeus Exp $
 
 EAPI=3
 CMAKE_IN_SOURCE_BUILD="1"
@@ -19,8 +19,9 @@ SLOT="4"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
-DEPEND="!x11-themes/gtk-engines-qt
+RDEPEND="!x11-themes/gtk-engines-qt
 	x11-libs/gtk+:2"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_PN}
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-thinklight/kopete-thinklight-0.50.ebuild,v 1.2 2011/01/31 05:53:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-thinklight/kopete-thinklight-0.50.ebuild,v 1.3 2011/04/29 14:01:52 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 inherit kde4-base
 
 DESCRIPTION="A thinkpad's light flash on every incoming message"
@@ -14,7 +14,9 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="
+RDEPEND="
 	$(add_kdebase_dep kopete)
 "
+DEPEND="${RDEPEND}"
+
 DOCS=( CREDITS )
