@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.8.2.ebuild,v 1.1 2011/04/29 13:32:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.8.2.ebuild,v 1.2 2011/04/29 13:45:07 scarabeus Exp $
 
 EAPI=4
 
@@ -52,5 +52,10 @@ src_configure() {
 }
 
 src_test() {
-	CMAKE_BUILD_DIR=${CMAKE_BUILD_DIR}/tests VIRTUALX_COMMAND=cmake-utils_src_test virtualmake
+	local builddir=${CMAKE_BUILD_DIR}
+
+	CMAKE_BUILD_DIR=${CMAKE_BUILD_DIR}/tests \
+		VIRTUALX_COMMAND=cmake-utils_src_test virtualmake
+
+	CMAKE_BUILD_DIR=${builddir}
 }
