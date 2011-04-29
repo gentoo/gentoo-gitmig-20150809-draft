@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pngrewrite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/ChangeLog,v 1.25 2010/02/07 17:03:57 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngrewrite/ChangeLog,v 1.26 2011/04/29 06:01:50 radhermit Exp $
+
+*pngrewrite-1.4.0 (29 Apr 2011)
+
+  29 Apr 2011; Tim Harder <radhermit@gentoo.org> +pngrewrite-1.4.0.ebuild:
+  Version bump (bug #357467). Update to EAPI 4.
 
   07 Feb 2010; Markus Meier <maekke@gentoo.org> -pngrewrite-1.2.1.ebuild:
   old
