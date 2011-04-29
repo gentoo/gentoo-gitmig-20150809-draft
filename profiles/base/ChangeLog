@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.262 2011/04/28 13:52:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.263 2011/04/29 17:45:52 nirbheek Exp $
+
+  29 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Unmask introspection for libsoup-2.34, libsoup-gnome-2.34
 
   28 Apr 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask celt useflag for non live ffmpeg ebuilds as libcelt is masked
