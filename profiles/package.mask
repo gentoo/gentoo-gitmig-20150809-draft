@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12737 2011/04/28 16:16:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12738 2011/04/29 09:38:37 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -94,18 +94,6 @@ x11-themes/camaelon-themes
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (20 Apr 2011)
 # Mask prerelease versions
 =x11-libs/pixman-0.21*
-
-# Bernard Cafarelli <voyageur@gentoo.org> (20 Apr 2011)
-# New gnustep release, switching to FHS layout
-# Currently testing transition from old layout
->=gnustep-base/gnustep-make-2.6.0
->=gnustep-base/gnustep-base-1.22.0
->=gnustep-base/gnustep-gui-0.20.0
->=gnustep-base/gnustep-back-art-0.20.0
->=gnustep-base/gnustep-back-cairo-0.20.0
->=gnustep-base/gnustep-back-xlib-0.20.0
->=virtual/gnustep-back-0.20.0
-gnustep-base/gnustep-updater
 
 # Peter Volkov <pva@gentoo.org> (20 Apr 2011)
 # Mask beta version
