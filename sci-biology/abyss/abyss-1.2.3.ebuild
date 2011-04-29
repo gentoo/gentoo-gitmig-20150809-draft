@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.2.3.ebuild,v 1.4 2011/04/28 15:01:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/abyss/abyss-1.2.3.ebuild,v 1.5 2011/04/29 17:27:31 mr_bones_ Exp $
 
 EAPI="2"
-
 
 DESCRIPTION="Assembly By Short Sequences - a de novo, parallel, paired-end sequence assembler"
 HOMEPAGE="http://www.bcgsc.ca/platform/bioinfo/software/abyss/"
