@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/avra-1.3.0.ebuild,v 1.1 2010/08/11 21:12:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/avra-1.3.0.ebuild,v 1.2 2011/04/30 22:11:13 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools
 
@@ -24,20 +24,18 @@ src_prepare() {
 src_install() {
 	local datadir="${WORKDIR}/${P}"
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
-	dodoc ${datadir}/{AUTHORS,INSTALL,README,TODO} || die
+	dodoc ${datadir}/{AUTHORS,INSTALL,README,TODO}
 
 	# install headers
-	insinto "${EPREFIX}/usr/include/avr"
-	doins "${datadir}/includes/"* || die
+	insinto /usr/include/avr
+	doins "${datadir}/includes/"*
 
-	if use doc; then
-		dohtml -r "${datadir}/doc/"* || die
-	fi
+	use doc && dohtml -r "${datadir}/doc/"*
 
 	if use examples; then
-		insinto "${EPREFIX}/usr/share/doc/${PF}/examples"
-		doins "${datadir}/examples/"* || die
+		insinto /usr/share/doc/${PF}/examples
+		doins "${datadir}/examples/"*
 	fi
 }
