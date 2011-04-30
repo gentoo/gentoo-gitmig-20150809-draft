@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.408 2011/04/30 15:39:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.409 2011/04/30 15:50:53 scarabeus Exp $
+
+  30 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.6-r1.ebuild:
+  Add new shiny elog message about what usb useflag does on cups.
 
 *cups-1.4.6-r1 (30 Apr 2011)
 

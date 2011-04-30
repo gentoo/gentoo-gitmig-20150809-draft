@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.1 2011/04/30 15:39:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.2 2011/04/30 15:50:53 scarabeus Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://easysw/${PN}/${PV}/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static-libs +threads +tiff +usb X xinetd"
+IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static-libs +threads +tiff usb X xinetd"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
 for X in ${LANGS} ; do
@@ -238,4 +238,14 @@ pkg_postinst() {
 	elog "For information about installing a printer and general cups setup"
 	elog "take a look at: http://www.gentoo.org/doc/en/printing-howto.xml"
 	echo
+
+	if use usb; then
+		elog "You are going to use new libusb backed to access your usb printer."
+		elog "This interface has quite few known issues and does not report all"
+		elog "issues and just refuses to print."
+		elog "Please consider disabling usb useflag if you are having issues."
+		elog
+		elog "Please note that that if you disable the usb useflag your device will"
+		elog "be still working using old kernel usblp interface instead of libusb."
+	fi
 }
