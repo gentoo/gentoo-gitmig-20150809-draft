@@ -1,24 +1,41 @@
---- lib/defaults.c.orig
-+++ lib/defaults.c
-@@ -19,7 +19,9 @@
+=== modified file 'Makefile.rules'
+--- Makefile.rules	2011-04-30 18:13:36 +0000
++++ Makefile.rules	2011-04-30 18:12:37 +0000
+@@ -42,6 +42,10 @@
+ AUTOFS_LDFLAGS += $(DMALLOCLIB)
+ endif
+ 
++ifdef SASL
++CFLAGS +=  $(XML_FLAGS)
++endif
++
+ # Standard rules
+ 
+ .SUFFIXES: .c .o .s .so
+
+=== modified file 'lib/defaults.c'
+--- lib/defaults.c	2011-04-30 18:13:36 +0000
++++ lib/defaults.c	2011-04-30 18:12:37 +0000
+@@ -19,7 +19,10 @@
  
  #include "list.h"
  #include "defaults.h"
-+#ifdef HAVE_LDAP
++#include "config.h"
++#ifdef WITH_LDAP
  #include "lookup_ldap.h"
 +#endif
  #include "log.h"
  #include "automount.h"
  
-@@ -197,6 +199,7 @@ static int parse_line(char *line, char *
+@@ -197,6 +200,7 @@
  	return 1;
  }
  
-+#ifdef HAVE_LDAP
++#ifdef WITH_LDAP
  void defaults_free_uris(struct list_head *list)
  {
  	struct list_head *next;
-@@ -252,9 +255,11 @@ static unsigned int add_uris(char *value
+@@ -252,9 +256,11 @@
  
  	return 1;
  }
@@ -26,11 +43,11 @@
  
  struct list_head *defaults_get_uris(void)
  {
-+#ifdef HAVE_LDAP
++#ifdef WITH_LDAP
  	FILE *f;
  	char buf[MAX_LINE_LEN];
  	char *res;
-@@ -288,6 +292,9 @@ struct list_head *defaults_get_uris(void
+@@ -288,6 +294,9 @@
  
  	fclose(f);
  	return list;
@@ -40,15 +57,15 @@
  }
  
  /*
-@@ -450,6 +457,7 @@ unsigned int defaults_get_ldap_network_t
+@@ -450,6 +459,7 @@
  	return res;
  }
  
-+#ifdef HAVE_LDAP
++#ifdef WITH_LDAP
  struct ldap_schema *defaults_get_default_schema(void)
  {
  	struct ldap_schema *schema;
-@@ -645,6 +653,7 @@ struct ldap_schema *defaults_get_schema(
+@@ -645,6 +655,7 @@
  
  	return schema;
  }
@@ -56,3 +73,4 @@
  
  unsigned int defaults_get_mount_nfs_default_proto(void)
  {
+
