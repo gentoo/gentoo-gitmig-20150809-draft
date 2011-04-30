@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6.ebuild,v 1.3 2011/04/07 22:26:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.1 2011/04/30 15:39:44 scarabeus Exp $
 
 EAPI=3
 
@@ -26,7 +26,6 @@ done
 
 RDEPEND="
 	app-text/libpaper
-	dev-libs/libgcrypt
 	acl? (
 		kernel_linux? (
 			sys-apps/acl
@@ -44,7 +43,10 @@ RDEPEND="
 	png? ( >=media-libs/libpng-1.4.3 )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	ssl? (
-		gnutls? ( net-libs/gnutls )
+		gnutls? (
+			dev-libs/libgcrypt
+			net-libs/gnutls
+		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
 	tiff? ( >=media-libs/tiff-3.5.5 )
@@ -91,6 +93,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.4-perl-includes.patch"
 	epatch "${FILESDIR}/${PN}-1.4.6-force-gnutls.patch"
 	epatch "${FILESDIR}/${PN}-1.4.6-serialize-gnutls.patch"
+	# interface hangs using some browsers, bug #325871
+	epatch "${FILESDIR}/${PN}-1.4.6-web-hang.patch"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf
