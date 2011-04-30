@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.22 2011/04/25 09:15:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.23 2011/04/30 17:29:18 armin76 Exp $
+
+  30 Apr 2011; Raúl Porcel <armin76@gentoo.org> rssh-2.3.3.ebuild:
+  sparc stable wrt #344339
 
   25 Apr 2011; Markos Chandras <hwoarang@gentoo.org> rssh-2.3.3.ebuild:
   Stable on amd64 wrt bug #344339
