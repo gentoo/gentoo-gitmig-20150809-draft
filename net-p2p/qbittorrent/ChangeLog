@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.150 2011/04/20 22:38:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.151 2011/04/30 18:51:10 hwoarang Exp $
+
+  30 Apr 2011; Markos Chandras <hwoarang@gentoo.org> qbittorrent-2.7.2.ebuild,
+  qbittorrent-2.7.3.ebuild, qbittorrent-2.8.0_beta4.ebuild,
+  qbittorrent-9999.ebuild:
+  Lower down the minimum Qt4 version. Bug #364321
 
 *qbittorrent-2.8.0_beta4 (20 Apr 2011)
 *qbittorrent-2.7.3 (20 Apr 2011)
