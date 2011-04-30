@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/postfixadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.21 2011/01/02 22:26:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.22 2011/04/30 19:17:21 pva Exp $
+
+*postfixadmin-2.3.3 (30 Apr 2011)
+
+  30 Apr 2011; Peter Volkov <pva@gentoo.org> +postfixadmin-2.3.3.ebuild:
+  Version bump, bug #363041, thank Per Pomsel for report.
 
   02 Jan 2011; Markos Chandras <hwoarang@gentoo.org> postfixadmin-2.3.2.ebuild:
   Stable on amd64 wrt bug #349266
