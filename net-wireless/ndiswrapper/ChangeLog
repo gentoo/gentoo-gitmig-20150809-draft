@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.116 2011/03/02 19:49:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.117 2011/04/30 15:31:54 angelos Exp $
+
+  30 Apr 2011; Christoph Mende <angelos@gentoo.org>
+  -files/ndiswrapper-1.55-2.6.31.patch:
+  Removed old files
 
   02 Mar 2011; <angelos@gentoo.org> -ndiswrapper-1.55-r1.ebuild:
   Removed old
