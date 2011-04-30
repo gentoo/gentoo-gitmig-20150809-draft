@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.4 2011/04/27 08:06:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.5 2011/04/30 19:15:55 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib
@@ -46,7 +46,7 @@ RDEPEND="!sys-cluster/mpich2
 	mad? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod )
 	modplug? ( media-libs/libmodplug )
-	mpg123? ( media-sound/mpg123 )
+	mpg123? ( >=media-sound/mpg123-1.12.2 )
 	musepack? ( media-sound/musepack-tools )
 	ogg? ( media-libs/libogg )
 	openal? ( media-libs/openal )
