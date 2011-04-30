@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.573 2011/04/30 13:15:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.574 2011/04/30 20:07:08 zzam Exp $
+
+*udev-168-r1 (30 Apr 2011)
+
+  30 Apr 2011; Matthias Schwarzott <zzam@gentoo.org> +udev-168-r1.ebuild:
+  fixed install location of baselayout-1 scripts, bug #364375.
 
   30 Apr 2011; Matthias Schwarzott <zzam@gentoo.org> udev-168.ebuild,
   udev-9999.ebuild:
