@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.31 2011/04/27 05:48:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.32 2011/04/30 06:54:08 graaff Exp $
+
+*pg-0.11.0 (30 Apr 2011)
+
+  30 Apr 2011; Hans de Graaff <graaff@gentoo.org> +pg-0.11.0.ebuild:
+  Version bump.
 
   21 Apr 2011; Hans de Graaff <graaff@gentoo.org> pg-0.9.0-r1.ebuild:
   Add missing rdoc dependency, reported in bug 358723.

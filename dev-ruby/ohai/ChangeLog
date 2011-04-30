@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ohai
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.5 2011/04/23 06:28:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.6 2011/04/30 06:50:24 graaff Exp $
+
+*ohai-0.6.4 (30 Apr 2011)
+
+  30 Apr 2011; Hans de Graaff <graaff@gentoo.org> +ohai-0.6.4.ebuild:
+  Version bump.
 
 *ohai-0.6.2 (23 Apr 2011)
 
