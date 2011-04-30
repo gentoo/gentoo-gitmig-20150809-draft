@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.31 2011/04/20 21:04:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.32 2011/04/30 07:38:34 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -19,7 +19,7 @@
 
 # @ECLASS-VARIABLE: DOCS
 # @DESCRIPTION:
-# This should be a variable defining documentation to install
+# This should be an array defining documentation to install
 
 # @ECLASS-VARIABLE: PATCHES
 # @DESCRIPTION:
@@ -74,7 +74,7 @@ xfconf_use_debug() {
 
 # @FUNCTION: xfconf_src_prepare
 # @DESCRIPTION:
-# Run base_src_util autopatch and eautoreconf or elibtoolize
+# Run base_src_prepare and eautoreconf or elibtoolize
 xfconf_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 	base_src_prepare
@@ -84,7 +84,7 @@ xfconf_src_prepare() {
 	fi
 
 	if [[ -n $EAUTORECONF ]]; then
-		AT_M4DIR="${EPREFIX}/usr/share/xfce4/dev-tools/m4macros" eautoreconf
+		AT_M4DIR=${EPREFIX}/usr/share/xfce4/dev-tools/m4macros eautoreconf
 	else
 		elibtoolize
 	fi
@@ -95,7 +95,7 @@ xfconf_src_prepare() {
 # Run econf with opts from the XFCONF array
 xfconf_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
-	econf ${XFCONF[@]}
+	econf "${XFCONF[@]}"
 }
 
 # @FUNCTION: xfconf_src_install
@@ -105,8 +105,12 @@ xfconf_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 	emake DESTDIR="${D}" "$@" install || die
 
-	if [[ -n ${DOCS} ]]; then
-		dodoc ${DOCS} || die
+	if [[ -n ${DOCS[@]} ]]; then
+		if [[ $(declare -p DOCS) == "declare -a "* ]]; then
+			dodoc "${DOCS[@]}" || die
+		else
+			dodoc ${DOCS} || die
+		fi
 	fi
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
