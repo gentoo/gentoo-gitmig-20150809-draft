@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.4.2.ebuild,v 1.1 2010/11/22 08:01:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.5.0.ebuild,v 1.1 2011/04/30 09:48:18 xarthisius Exp $
 
 EAPI=2
 
-inherit eutils versionator
+inherit autotools-utils eutils versionator
 
 MY_PV=$(get_version_component_range 1-2)
 
@@ -19,12 +19,16 @@ IUSE="avahi doc gtk server static-libs"
 RDEPEND="dev-libs/glib:2
 	dev-libs/libxml2
 	net-libs/gnutls
+	sys-libs/pam
 	>=virtual/gsasl-0.2.21
 	avahi? ( net-dns/avahi )
-	gtk? ( >=x11-libs/gtk+-2.12:2 )"
+	gtk? ( x11-libs/gtk+:3 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.23
+	sys-devel/gettext
 	doc? ( dev-util/gtk-doc )"
+
+DOCS=(AUTHORS NEWS README TODO)
 
 pkg_setup() {
 	if use server ; then
@@ -34,21 +38,20 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf \
-		$(use_enable doc gtk-doc) \
-		$(use_with gtk inftextgtk) \
-		$(use_with gtk infgtk) \
-		$(use_with server infinoted) \
-		$(use_enable static-libs static) \
-		$(use_with avahi) \
+	local myeconfargs=(
+		$(use_enable doc gtk-doc)
+		$(use_with gtk inftextgtk)
+		$(use_with gtk infgtk)
+		$(use_with gtk gtk3)
+		$(use_with server infinoted)
+		$(use_with avahi)
 		$(use_with avahi libdaemon)
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	find "${D}" -name "*.la" -delete
-
-	dodoc AUTHORS NEWS README TODO || die
+	autotools-utils_src_install
 
 	if use server ; then
 		newinitd "${FILESDIR}/infinoted.initd" infinoted
