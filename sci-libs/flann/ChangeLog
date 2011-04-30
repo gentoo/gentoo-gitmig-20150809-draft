@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/flann
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.1 2011/04/30 19:14:46 dilfridge Exp $
+
+*flann-1.6.8 (30 Apr 2011)
+
+  30 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +flann-1.6.8.ebuild, +metadata.xml:
+  New library, dependency for media-libs/opencv-2.2
+
