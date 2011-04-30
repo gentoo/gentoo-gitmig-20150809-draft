@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.6.ebuild,v 1.4 2011/02/05 08:50:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.6.ebuild,v 1.5 2011/04/30 06:26:23 vapier Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups custom-cflags dbus esd fontconfig +gecko gnutls gphoto2 gsm gstreamer hal jack jpeg lcms ldap mp3 nas ncurses openal +opengl +oss +perl png pulseaudio samba scanner ssl test +threads +truetype +win32 +win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags dbus esd fontconfig +gecko gnutls gphoto2 gsm gstreamer hal jack jpeg lcms ldap mp3 nas ncurses openal +opengl +oss +perl png pulseaudio samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 MLIB_DEPS="amd64? (
@@ -84,6 +84,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	scanner? ( media-gfx/sane-backends )
 	ssl? ( dev-libs/openssl )
 	png? ( media-libs/libpng )
+	v4l? ( media-libs/libv4l )
 	!win64? ( ${MLIB_DEPS} )
 	win32? ( ${MLIB_DEPS} )
 	xcomposite? ( x11-libs/libXcomposite ) "
@@ -157,6 +158,7 @@ do_configure() {
 		$(use_with scanner sane) \
 		$(use_enable test tests) \
 		$(use_with truetype freetype) \
+		$(use_with v4l) \
 		$(use_with X x) \
 		$(use_with xcomposite) \
 		$(use_with xinerama) \
