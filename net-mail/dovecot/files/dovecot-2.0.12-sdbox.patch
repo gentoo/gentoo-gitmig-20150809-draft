@@ -1,0 +1,17 @@
+
+diff -r d4945c93c33b -r 663528c5c799 src/lib-storage/index/dbox-single/sdbox-storage.c
+--- a/src/lib-storage/index/dbox-single/sdbox-storage.c	Tue Apr 12 18:38:50 2011 +0300
++++ b/src/lib-storage/index/dbox-single/sdbox-storage.c	Sat Apr 30 15:55:08 2011 +0300
+@@ -118,6 +118,8 @@
+ 		mail_index_update_header_ext(trans, mbox->hdr_ext_id, 0,
+ 					     &new_hdr, sizeof(new_hdr));
+ 	}
++	memcpy(mbox->mailbox_guid, new_hdr.mailbox_guid,
++	       sizeof(mbox->mailbox_guid));
+ }
+ 
+ static int sdbox_mailbox_create_indexes(struct mailbox *box,
+
+
+
+
