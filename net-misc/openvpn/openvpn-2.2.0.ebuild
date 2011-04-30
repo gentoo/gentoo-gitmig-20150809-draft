@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.2.0.ebuild,v 1.1 2011/04/30 21:02:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.2.0.ebuild,v 1.2 2011/04/30 21:13:19 djc Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils multilib toolchain-funcs autotools flag-o-matic
 
@@ -110,7 +110,6 @@ src_install() {
 		# dodoc does not supportly support directory traversal, #15193
 		insinto /usr/share/doc/${PF}/examples
 		doins -r sample-{config-files,keys,scripts} contrib
-		prepalldocs
 	fi
 
 	# Install plugins and easy-rsa
