@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.0.7.ebuild,v 1.1 2011/04/29 20:16:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.0.7.ebuild,v 1.2 2011/04/30 16:52:04 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="WebOb"
 MY_P="${MY_PN}-${PV}"
@@ -32,9 +32,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	distutils_src_prepare
-
-	# https://bitbucket.org/ianb/webob/issue/11
-	sed -e "s/test_multidict_cgi/_&/" -i tests/test_misc.py
+	epatch "${FILESDIR}/${P}-tests.patch"
 }
 
 src_compile() {
