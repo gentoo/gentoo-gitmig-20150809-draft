@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.27 2011/04/29 14:46:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.28 2011/04/30 19:23:01 dilfridge Exp $
+
+*opencv-2.2.0 (30 Apr 2011)
+
+  30 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +opencv-2.2.0.ebuild, +files/opencv-2.2.0-convert_sets_to_options.patch,
+  +files/opencv-2.2.0-ffmpeg01.patch, +files/opencv-2.2.0-ffmpeg02.patch,
+  +files/opencv-2.2.0-gcc46.patch, +files/opencv-2.2.0-libpng1.5.patch,
+  +files/opencv-2.2.0-numpy.patch, +files/opencv-2.2.0-ptrcvcapture.patch,
+  +files/opencv-2.2.0-use_system_libs.patch,
+  +files/opencv-2.2.0-v4l_2.6.38.patch, metadata.xml:
+  Version bump, with a lot of help from Scarabeus
 
   29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Move package to KDE herd because of digikam and kipi-plugins.
