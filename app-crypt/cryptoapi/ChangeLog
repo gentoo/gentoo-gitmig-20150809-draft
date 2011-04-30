@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/cryptoapi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.18 2009/10/14 00:51:45 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.19 2011/04/30 21:52:09 halcy0n Exp $
+
+  30 Apr 2011; Mark Loeser <halcy0n@gentoo.org> cryptoapi-2.4.7.0.ebuild:
+  Helper function shouldn't use ; fix implicit RDEPEND
 
   14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> cryptoapi-2.4.7.0.ebuild:
   QA fixes; unquoted variables

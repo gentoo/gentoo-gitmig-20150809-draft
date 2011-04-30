@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.29 2009/10/14 00:51:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.30 2011/04/30 21:52:09 halcy0n Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 -ppc"
 IUSE=""
 
-DEPEND=">=sys-apps/util-linux-2.11o-r2
+RDEPEND=">=sys-apps/util-linux-2.11o-r2"
+DEPEND="${RDEPEND}
 	virtual/linux-sources"
 
 pkg_setup() {
@@ -36,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir "${D}"/lib/modules/${KV}/misc
+	dodir /lib/modules/${KV}/misc
 	make MODLIB="${D}"/lib/modules/${KV}/misc install || die
 
 	dodoc AUTHORS ChangeLog INSTALL LICENSE.crypto
