@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.271 2011/04/27 17:26:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.272 2011/04/30 15:17:34 grobian Exp $
+
+  30 Apr 2011; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.4/package.mask:
+  Mask media-libs/mediastreamer-2.7.3 and beyond due to incompatibility with OS
+  X 10.4 (Tiger)
 
   27 Apr 2011; Fabian Groffen <grobian@gentoo.org> +mint/package.use.force,
   darwin/package.mask:
