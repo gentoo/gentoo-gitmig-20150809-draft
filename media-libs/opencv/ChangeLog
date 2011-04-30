@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.28 2011/04/30 19:23:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.29 2011/04/30 19:37:06 dilfridge Exp $
+
+*opencv-2.2.0-r10 (30 Apr 2011)
+
+  30 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  opencv-2.2.0.ebuild, +opencv-2.2.0-r10.ebuild:
+  Hard-disable ipp in -r0 to ease stabilization, create -r10 with ipp
+  support
 
 *opencv-2.2.0 (30 Apr 2011)
 
