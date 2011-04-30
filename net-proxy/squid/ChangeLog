@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.319 2011/04/29 13:24:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.320 2011/04/30 12:46:52 flameeyes Exp $
+
+  30 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> squid-3.1.12.ebuild:
+  Fix install with USE=-pam.
 
 *squid-3.1.12 (29 Apr 2011)
 

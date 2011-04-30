@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.12.ebuild,v 1.1 2011/04/29 13:24:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.12.ebuild,v 1.2 2011/04/30 12:46:52 flameeyes Exp $
 
 EAPI="4"
 
@@ -163,9 +163,11 @@ src_install() {
 
 	# need suid root for looking into /etc/shadow
 	fowners root:squid /usr/libexec/squid/ncsa_auth
-	fowners root:squid /usr/libexec/squid/pam_auth
 	fperms 4750 /usr/libexec/squid/ncsa_auth
-	fperms 4750 /usr/libexec/squid/pam_auth
+	if use pam; then
+		fowners root:squid /usr/libexec/squid/pam_auth
+		fperms 4750 /usr/libexec/squid/pam_auth
+	fi
 
 	# some cleanups
 	rm -f "${D}"/usr/bin/Run*
