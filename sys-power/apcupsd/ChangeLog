@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.65 2011/03/14 20:37:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.66 2011/04/30 17:57:54 armin76 Exp $
+
+  30 Apr 2011; Raúl Porcel <armin76@gentoo.org> apcupsd-3.14.7.ebuild,
+  apcupsd-3.14.8-r1.ebuild:
+  Drop alpha/sparc keywords
 
 *apcupsd-3.14.8-r1 (14 Mar 2011)
 
