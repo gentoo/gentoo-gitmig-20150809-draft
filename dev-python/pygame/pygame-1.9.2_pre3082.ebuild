@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre3082.ebuild,v 1.1 2011/04/29 18:40:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre3082.ebuild,v 1.2 2011/04/30 18:06:47 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -42,7 +42,7 @@ src_configure() {
 	"$(PYTHON -f)" config.py -auto
 
 	if ! use X; then
-		sed -e "s:^scrap :#&" -i Setup || die "sed failed"
+		sed -e "s:^scrap :#&:" -i Setup || die "sed failed"
 	fi
 }
 
