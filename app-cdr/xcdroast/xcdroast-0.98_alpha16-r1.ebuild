@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16-r1.ebuild,v 1.2 2011/04/20 08:41:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16-r1.ebuild,v 1.3 2011/04/30 16:39:07 armin76 Exp $
 
 EAPI=2
 inherit gnome2-utils eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xcdroast/${P/_/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2:2
