@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.48 2011/04/23 18:48:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.49 2011/04/30 17:55:40 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -12,6 +12,7 @@
 
 # No hardware to test by the team
 3dfx
+apcupsd
 bluetooth
 chipcard
 dvb
