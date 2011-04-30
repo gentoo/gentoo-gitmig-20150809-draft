@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/weakling
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/weakling/ChangeLog,v 1.1 2011/04/30 15:13:34 graaff Exp $
+
+*weakling-0.0.3 (30 Apr 2011)
+
+  30 Apr 2011; Hans de Graaff <graaff@gentoo.org> +weakling-0.0.3.ebuild,
+  +metadata.xml:
+  Initial import. Dependency for nokogiri with jruby support.
+
