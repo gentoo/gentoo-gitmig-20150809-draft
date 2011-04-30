@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/python-twitter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.5 2009/12/09 18:50:22 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/ChangeLog,v 1.6 2011/04/30 15:47:35 maksbotan Exp $
+
+*python-twitter-0.8.1 (30 Apr 2011)
+
+  30 Apr 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  -python-twitter-0.6.ebuild, +python-twitter-0.8.1.ebuild:
+  dev-python/python-twitter version bump, #356815
+  Removed dev-python/python-twitter as it's unusable now, commented out
+  testsuite in ebuild as not passable, drop ppc keyword 'cause mandatory
+  dependency oauth2 doesn't have it.
 
   09 Dec 2009; nixnut <nixnut@gentoo.org> python-twitter-0.6.ebuild:
   ppc stable #295223
