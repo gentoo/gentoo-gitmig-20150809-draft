@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.12a-r1.ebuild,v 1.2 2011/04/30 11:12:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.16.ebuild,v 1.1 2011/04/30 11:12:50 jlec Exp $
 
 EAPI="2"
 
