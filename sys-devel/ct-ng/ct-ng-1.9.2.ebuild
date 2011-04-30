@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.9.2.ebuild,v 1.1 2011/02/01 11:39:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.9.2.ebuild,v 1.2 2011/04/30 04:47:45 blueness Exp $
 
 inherit bash-completion
 
-DESCRIPTION="A tool to build cross-compiling toolchains"
+DESCRIPTION="crosstool-ng is a tool to build cross-compiling toolchains"
 HOMEPAGE="http://ymorin.is-a-geek.org/projects/crosstool"
 MY_P=${P/ct/crosstool}
 S=${WORKDIR}/${MY_P}

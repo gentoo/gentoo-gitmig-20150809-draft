@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/ct-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.8 2011/04/23 13:33:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.9 2011/04/30 04:47:45 blueness Exp $
+
+  30 Apr 2011; Anthony G. Basile <blueness@gentoo.org> ct-ng-1.8.0.ebuild,
+  ct-ng-1.8.1.ebuild, ct-ng-1.8.2.ebuild, ct-ng-1.9.0.ebuild,
+  ct-ng-1.9.1.ebuild, ct-ng-1.9.2.ebuild, ct-ng-1.10.0.ebuild,
+  ct-ng-1.10.1.ebuild:
+  Updated DESCRIPTION to include the full name for easier searching
 
 *ct-ng-1.10.1 (23 Apr 2011)
 *ct-ng-1.10.0 (23 Apr 2011)
