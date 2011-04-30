@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.66 2011/04/24 15:57:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.67 2011/04/30 07:31:07 tove Exp $
+
+*math-pari-2.10.806.50 (30 Apr 2011)
+
+  30 Apr 2011; Torsten Veller <tove@gentoo.org> +math-pari-2.10.806.50.ebuild:
+  Version bump
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
   math-pari-2.01080604-r1.ebuild:
