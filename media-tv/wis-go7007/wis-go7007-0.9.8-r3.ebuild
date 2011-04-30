@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r3.ebuild,v 1.1 2008/08/20 04:57:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/wis-go7007-0.9.8-r3.ebuild,v 1.2 2011/04/30 22:50:32 halcy0n Exp $
 
 inherit eutils linux-mod
 
@@ -15,6 +15,7 @@ IUSE="alsa"
 DEPEND="|| ( >=sys-fs/udev-103 sys-apps/hotplug )
 		sys-apps/hotplug-base
 	sys-apps/fxload"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
@@ -64,22 +65,22 @@ src_install() {
 	cd "${S}/apps"
 	make KERNELDIR="${KERNEL_DIR}" DESTDIR="${D}" PREFIX=/usr install || die "failed to install"
 	cd "${S}"
-	dodir "${ROOT}/lib/modules"
-	insinto "${ROOT}/lib/modules"
+	dodir "/lib/modules"
+	insinto "/lib/modules"
 	dodoc README README.saa7134 RELEASE-NOTES
 	cd "${S}/kernel"
 	linux-mod_src_install || die "failed to install modules"
 
 	insinto "${KERNEL_DIR}/include/linux"
 	doins "${S}/include/*.h"
-	insinto "${ROOT}/lib/firmware"
+	insinto "/lib/firmware"
 	doins "${S}/firmware/*.bin"
-	insinto "${ROOT}/lib/firmware/ezusb"
+	insinto "/lib/firmware/ezusb"
 	doins "${S}/firmware/ezusb/*.hex"
-	insinto" ${ROOT}/etc/udev/rules.d"
+	insinto"/etc/udev/rules.d"
 	doins "${S}/udev/wis-ezusb.rules"
 
-	exeinto "${ROOT}/usr/bin"
+	exeinto "/usr/bin"
 	use alsa && doexe "${S}/apps/gorecord"
 	doexe "${S}/apps/modet"
 }

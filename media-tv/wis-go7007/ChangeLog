@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/wis-go7007
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.6 2008/08/20 04:57:01 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/wis-go7007/ChangeLog,v 1.7 2011/04/30 22:50:32 halcy0n Exp $
+
+  30 Apr 2011; Mark Loeser <halcy0n@gentoo.org> -wis-go7007-0.9.8.ebuild,
+  -wis-go7007-0.9.8-r1.ebuild, -wis-go7007-0.9.8-r2.ebuild,
+  wis-go7007-0.9.8-r3.ebuild:
+  Remove unnecessary revisions. dodir and insinto prepend ROOT
 
 *wis-go7007-0.9.8-r3 (20 Aug 2008)
 
