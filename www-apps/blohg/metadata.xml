@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>rafaelmartins@gentoo.org</email>
+    <name>Rafael G. Martins</name>
+  </maintainer>
+  <longdescription lang="en">
+    blohg is a Mercurial-based blogging engine written in Python, built with
+	the Flask micro-framework and some of his available extensions. All the
+	content of the blogs are stored inside Mercurial repositories and the
+	repository history is used for build the posts and pages. blohg uses
+	Jinja2 as template engine.
+  </longdescription>
+</pkgmetadata>
+
