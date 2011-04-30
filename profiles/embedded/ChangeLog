@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.33 2011/04/24 21:23:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.34 2011/04/30 17:18:18 ulm Exp $
+
+  30 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -virtuals:
+  Remove old-style virtual/linux-sources, bug 118442.
 
   24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> virtuals:
   Remove old-style virtual/modutils, bug 358891.

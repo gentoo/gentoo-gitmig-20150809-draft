@@ -1,6 +1,6 @@
-# Copyright 2002-2006 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.24 2009/08/08 02:19:11 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/packages,v 1.25 2011/04/30 17:18:18 ulm Exp $
 
 # This file extends the base packages file for the default profile that all
 # architectures will enjoy.  Please note that default is what most architectures
@@ -48,6 +48,7 @@
 
 # SELinux is integrated in 2.6
 >=sys-kernel/vanilla-sources-2.6.0
+>=virtual/linux-sources-2.6
 
 # Critical xattr fixes:
 >=sys-boot/grub-0.94

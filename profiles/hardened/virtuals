@@ -1,5 +1,0 @@
-# Copyright 1999-2011 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/virtuals,v 1.23 2011/04/15 22:11:47 ulm Exp $
-
-virtual/linux-sources	sys-kernel/hardened-sources

@@ -1,5 +1,0 @@
-# Copyright 1999-2011 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/virtuals,v 1.24 2011/04/20 18:28:53 ulm Exp $
-
-virtual/linux-sources		sys-kernel/vanilla-sources

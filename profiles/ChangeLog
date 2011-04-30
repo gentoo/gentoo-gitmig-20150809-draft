@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5340 2011/04/29 20:50:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5341 2011/04/30 17:18:17 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -hardened/linux/virtuals,
+  -hardened/virtuals, -uclibc/mips/virtuals, -uclibc/ppc/hardened/virtuals,
+  -uclibc/virtuals, -uclibc/x86/hardened/virtuals, selinux/packages:
+  Remove old-style virtual/linux-sources, bug 118442.
 
   29 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Mask notification-daemon-0.7, GTK3 version
