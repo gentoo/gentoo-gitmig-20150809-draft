@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.35 2011/04/30 12:29:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.36 2011/04/30 13:15:40 zzam Exp $
 
 EAPI="1"
 
@@ -197,7 +197,7 @@ src_compile() {
 
 src_install() {
 	emake -C "${WORKDIR}/${scriptname}" \
-		DESTDIR="${D}" LIBDIR="$(get_libdir)" \
+		DESTDIR="${D}" \
 		KV_min="${KV_min}" KV_reliable="${KV_reliable}" \
 		install || die "make install failed"
 
