@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.51 2011/04/28 18:17:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.52 2011/04/30 18:01:39 armin76 Exp $
+
+  30 Apr 2011; Raúl Porcel <armin76@gentoo.org> openbabel-2.2.3.ebuild:
+  Drop sparc keywords
 
   28 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   openbabel-2.3.0.ebuild:
