@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r3.ebuild,v 1.5 2011/02/11 20:32:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r4.ebuild,v 1.1 2011/04/30 09:50:09 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils cmake-utils
+inherit base cmake-utils
 
 DESCRIPTION="f2c'ed version of LAPACK"
 HOMEPAGE="http://www.netlib.org/clapack/"
@@ -21,10 +21,10 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${P}-CMAKE
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-noblasf2c.patch
-	rm -rf INCLUDE/f2c.h F2CLIBS || die
-}
+PATCHES=(
+	"${FILESDIR}/${P}-fix_include_file.patch"
+	"${FILESDIR}/${P}-noblasf2c.patch"
+)
 
 src_configure() {
 	local mycmakeargs=( $(cmake-utils_use_enable test TESTS) )
