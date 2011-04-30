@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.25 2011/04/15 20:32:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.26 2011/04/30 17:53:11 abcd Exp $
+
+  30 Apr 2011; Jonathan Callen <abcd@gentoo.org> multilib/make.defaults:
+  Udev now unconditionally installs to /lib/udev, don't die because of that
 
   15 Apr 2011; Christoph Mende <angelos@gentoo.org> 64bit-native/package.mask:
   Sync 64bit-native/package.mask with amd64/no-multilib/package.mask
