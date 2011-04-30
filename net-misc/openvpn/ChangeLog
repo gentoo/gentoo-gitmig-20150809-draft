@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.212 2011/03/21 08:22:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.213 2011/04/30 21:02:53 djc Exp $
+
+*openvpn-2.2.0 (30 Apr 2011)
+
+  30 Apr 2011; Dirkjan Ochtman <djc@gentoo.org> +openvpn-2.2.0.ebuild:
+  Version bump to 2.2.0, add ipv6 payload support (bug 335563).
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> openvpn-2.1.4.ebuild:
   ppc/ppc64 stable wrt #354661
