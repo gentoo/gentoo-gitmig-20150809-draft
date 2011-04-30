@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.14.ebuild,v 1.3 2011/04/29 15:49:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.14.ebuild,v 1.4 2011/04/30 03:31:45 polynomial-c Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -282,7 +282,7 @@ src_install() {
 	fi
 
 	if use mailclient ; then
-		sed 's|^\(MimeType=.*\)$|\1MimeType=text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;|' \
+		sed 's|^\(MimeType=.*\)$|\1text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;|' \
 			-i "${T}"/${PN}.desktop || die
 		sed 's|^\(Categories=.*\)$|\1Email;|' -i "${T}"/${PN}.desktop \
 			|| die

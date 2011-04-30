@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.307 2011/04/29 15:49:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.308 2011/04/30 03:31:42 polynomial-c Exp $
+
+  30 Apr 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.0.13.ebuild,
+  seamonkey-2.0.14.ebuild:
+  Fixed MimeType sed line in ebuilds.
 
   29 Apr 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.0.13.ebuild,
   seamonkey-2.0.14.ebuild:
