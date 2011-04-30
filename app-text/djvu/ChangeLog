@@ -1,6 +1,13 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.117 2011/04/16 18:52:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.118 2011/04/30 20:14:27 pva Exp $
+
+*djvu-3.5.24 (30 Apr 2011)
+
+  30 Apr 2011; Peter Volkov <pva@gentoo.org> +djvu-3.5.24.ebuild,
+  +files/djvu-3.5.24-gcc46.patch:
+  Version bump. Fixes gcc46 build issue, bug #361057, thank Vladimir for report
+  and Ryan Hill for fix.
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> djvu-3.5.23.ebuild:
   ia64/s390/sh stable wrt #358193
