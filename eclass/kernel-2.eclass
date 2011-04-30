@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.250 2011/04/21 12:34:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.251 2011/04/30 17:07:50 ulm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -323,8 +323,6 @@ if [[ ${ETYPE} == sources ]]; then
 	RDEPEND="!build? ( >=sys-libs/ncurses-5.2
 					   sys-devel/make )"
 	PDEPEND="!build? ( virtual/dev-manager )"
-
-	PROVIDE="virtual/linux-sources"
 
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the ${KV_MAJOR}.${KV_MINOR} linux kernel"
