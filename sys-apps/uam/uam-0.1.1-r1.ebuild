@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.1.1.ebuild,v 1.1 2011/01/31 22:19:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.1.1-r1.ebuild,v 1.1 2011/04/30 21:00:53 mgorny Exp $
 
 EAPI=3
 inherit autotools-utils eutils multilib
@@ -21,7 +21,7 @@ DOCS=( NEWS README )
 
 src_configure() {
 	myeconfargs=(
-		--libdir=/$(get_libdir)
+		--libdir=/lib
 	)
 	autotools-utils_src_configure
 }

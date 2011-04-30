@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.11 2011/01/31 22:19:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.12 2011/04/30 21:00:53 mgorny Exp $
+
+*uam-0.1.1-r1 (30 Apr 2011)
+
+  30 Apr 2011; Michał Górny <mgorny@gentoo.org> -uam-0.1.1.ebuild,
+  +uam-0.1.1-r1.ebuild:
+  Install in /lib, following similar change to sys-fs/udev.
 
 *uam-0.1.1 (31 Jan 2011)
 
