@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.7.ebuild,v 1.4 2011/03/28 18:34:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.11-r1.ebuild,v 1.1 2011/04/30 19:53:52 radhermit Exp $
 
-EAPI=2
-inherit eutils toolchain-funcs
+EAPI=4
+
+inherit eutils flag-o-matic toolchain-funcs scons-utils
 
 DESCRIPTION="Digital Audio Workstation"
 HOMEPAGE="http://ardour.org/"
@@ -14,17 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="altivec curl debug nls lv2 sse"
 
-# FIXME: Bundled libraries in libs/
 RDEPEND="media-libs/aubio
 	media-libs/liblo
 	lv2? ( >=media-libs/slv2-0.6.1 )
 	sci-libs/fftw:3.0
 	media-libs/freetype:2
 	>=dev-libs/glib-2.10.1:2
+	dev-cpp/glibmm:2
 	>=x11-libs/gtk+-2.8.1:2
 	>=dev-libs/libxml2-2.6:2
 	>=media-libs/libsndfile-1.0.18
 	>=media-libs/libsamplerate-0.1
+	>=media-libs/rubberband-1.6.0
 	media-libs/libsoundtouch
 	media-libs/flac
 	>=media-libs/raptor-1.4.2:0
@@ -37,37 +39,44 @@ RDEPEND="media-libs/aubio
 	>=dev-cpp/gtkmm-2.16:2.4
 	>=dev-cpp/libgnomecanvasmm-2.26:2.6
 	media-libs/alsa-lib
+	x11-libs/pango
+	x11-libs/cairo
+	media-libs/libart_lgpl
+	virtual/libusb:0
 	curl? ( net-misc/curl )"
 DEPEND="${RDEPEND}
 	dev-libs/boost
 	dev-util/pkgconfig
-	>=dev-util/scons-1
 	nls? ( sys-devel/gettext )"
 
-ardour_use_enable() {
-	use ${2} && echo "${1}=1" || echo "${1}=0"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-flags.patch \
+		"${FILESDIR}"/${P}-syslibs.patch \
+		"${FILESDIR}"/${P}-type.patch \
+		"${FILESDIR}"/${P}-ldpath.patch \
+		"${FILESDIR}"/${P}-gcc46.patch
 }
 
 src_compile() {
-	local FPU_OPTIMIZATION=$((use altivec || use sse) && echo 1 || echo 0)
+	local FPU_OPTIMIZATION=$($(use altivec || use sse) && echo 1 || echo 0)
 	tc-export CC CXX
+	append-cxxflags -D__STDC_FORMAT_MACROS
 	mkdir -p "${D}"
 
-	scons \
-		CFLAGS="${CFLAGS}" \
-		$(ardour_use_enable DEBUG debug) \
+	escons \
 		DESTDIR="${D}" \
-		$(ardour_use_enable FREESOUND curl) \
 		FPU_OPTIMIZATION="${FPU_OPTIMIZATION}" \
-		$(ardour_use_enable NLS nls) \
 		PREFIX=/usr \
 		SYSLIBS=1 \
-		$(ardour_use_enable LV2 lv2) \
-		|| die
+		$(use_scons curl FREESOUND) \
+		$(use_scons debug DEBUG) \
+		$(use_scons nls NLS) \
+		$(use_scons lv2 LV2)
 }
 
 src_install() {
-	scons install || die
+	escons install
+	doman ${PN}.1
 	newicon icons/icon/ardour_icon_mac.png ${PN}.png
-	make_desktop_entry ardour2 Ardour
+	make_desktop_entry ardour2 ardour AudioVideo
 }

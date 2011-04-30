@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.92 2011/04/30 10:06:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.93 2011/04/30 19:53:52 radhermit Exp $
+
+*ardour-2.8.11-r1 (30 Apr 2011)
+
+  30 Apr 2011; Tim Harder <radhermit@gentoo.org> -ardour-2.8.7.ebuild,
+  -ardour-2.8.11.ebuild, +ardour-2.8.11-r1.ebuild,
+  +files/ardour-2.8.11-ldpath.patch:
+  Revision bump to fix security bug #341567 and remove old.
 
 *ardour-2.8.11 (30 Apr 2011)
 
