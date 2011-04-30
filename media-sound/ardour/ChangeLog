@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.91 2011/03/28 18:34:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.92 2011/04/30 10:06:58 radhermit Exp $
+
+*ardour-2.8.11 (30 Apr 2011)
+
+  30 Apr 2011; Tim Harder <radhermit@gentoo.org> +ardour-2.8.11.ebuild,
+  +files/ardour-2.8.11-flags.patch, +files/ardour-2.8.11-gcc46.patch,
+  +files/ardour-2.8.11-syslibs.patch, +files/ardour-2.8.11-type.patch:
+  Version bump (bug #346019). Update to EAPI 4, use scons-utils eclass, fix
+  compile with gcc-4.6, use system libraries (bug #255759), respect CFLAGS and
+  LDFLAGS (bug #277983), and force the __STDC_FORMAT_MACROS flag on by default
+  (fixes bug #355993).
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> ardour-2.8.7.ebuild:
   Fixed slot deps
