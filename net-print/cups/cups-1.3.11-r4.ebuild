@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r4.ebuild,v 1.4 2011/03/19 17:56:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r4.ebuild,v 1.5 2011/04/30 15:10:52 scarabeus Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
@@ -54,7 +54,7 @@ RDEPEND="${COMMON_DEPEND}
 	X? ( x11-misc/xdg-utils )
 "
 PDEPEND="
-	app-text/ghostscript-gpl
+	app-text/ghostscript-gpl[cups]
 	>=app-text/poppler-0.12.3-r3[utils]
 	ppds? (
 		|| (
@@ -254,19 +254,6 @@ pkg_postinst() {
 	elog "For information about installing a printer and general cups setup"
 	elog "take a look at: http://www.gentoo.org/doc/en/printing-howto.xml"
 	echo
-
-	local good_gs=false
-	for x in app-text/ghostscript-gpl app-text/ghostscript-gnu ; do
-		if has_version ${x} && built_with_use ${x} cups ; then
-			good_gs=true
-			break
-		fi
-	done
-	if ! ${good_gs} ; then
-		echo
-		ewarn "You need to emerge ghostscript with the \"cups\" USE flag turned on."
-		echo
-	fi
 
 	if [[ $upgrade_from_1_2 = 0 ]] ; then
 		echo
