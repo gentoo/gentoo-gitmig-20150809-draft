@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.93.ebuild,v 1.3 2010/06/18 11:41:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.94.ebuild,v 1.1 2011/04/30 09:50:35 xarthisius Exp $
 
 EAPI=2
 
@@ -15,11 +15,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="avahi doc nls"
 
 RDEPEND="dev-cpp/glibmm:2
-	dev-cpp/gtkmm:2.4
+	dev-cpp/gtkmm:3.0
 	dev-libs/libsigc++:2
 	>=net-libs/libinfinity-0.4[gtk,avahi?]
+	x11-libs/gtk+:3
 	dev-cpp/libxmlpp:2.6
-	x11-libs/gtksourceview:2.0"
+	x11-libs/gtksourceview:3.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
@@ -29,7 +30,8 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.12.1 )"
 
 src_configure() {
-	econf $(use_enable nls)
+	econf $(use_enable nls) \
+		--with-gtk3
 }
 
 src_install() {
