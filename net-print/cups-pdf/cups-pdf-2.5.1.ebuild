@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.5.0-r1.ebuild,v 1.1 2010/08/07 13:41:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.5.1.ebuild,v 1.1 2011/04/30 15:04:55 scarabeus Exp $
 
-inherit toolchain-funcs multilib
+EAPI=4
+
+inherit toolchain-funcs
 
 DESCRIPTION="Provides a virtual printer for CUPS to produce PDF files."
 HOMEPAGE="http://www.cups-pdf.de/"
@@ -19,22 +21,21 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd "${S}"/src
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o cups-pdf cups-pdf.c || die "Compilation failed."
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o ${PN} ${PN}.c || die "Compilation failed."
 }
 
 src_install () {
-	exeinto $(cups-config --serverbin)/backend
-	has_version '>=net-print/cups-1.2' && exeopts -m0700
-	doexe src/cups-pdf || die "doexe cups-pdf failed."
+	exeinto /usr/libexec/cups/backend
+	doexe src/cups-pdf
 
 	insinto /usr/share/cups/model
-	doins extra/CUPS-PDF.ppd || die "doins CUPS-PDF.ppd failed."
+	doins extra/CUPS-PDF.ppd
 
 	insinto /etc/cups
-	doins extra/cups-pdf.conf || die "doins cups-pdf.conf failed."
+	doins extra/cups-pdf.conf
 
-	dodoc ChangeLog README || die "dodoc failed."
-	newdoc contrib/Contents contrib_Contents || die "newdoc failed."
+	dodoc ChangeLog README
+	newdoc contrib/Contents contrib_Contents
 }
 
 pkg_postinst () {
