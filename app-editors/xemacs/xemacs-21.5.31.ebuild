@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.1 2011/04/30 08:03:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.2 2011/04/30 08:12:03 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -154,8 +154,8 @@ src_configure() {
 		myconf="${myconf} --without-database"
 	fi
 
-	use debug && myconf="${myconf} --with-optimization=no --with-debug" ||
-		myconf="${myconf} --with-optimization=yes"
+	use debug && myconf="${myconf} --with-debug" ||
+		myconf="${myconf} --with-optimization"
 
 	econf ${myconf} \
 		$(use_with gif ) \
@@ -171,7 +171,6 @@ src_configure() {
 		--with-site-lisp=yes \
 		--with-site-modules=yes \
 		--with-newgc \
-		--with-optimizations \
 		--enable-option-checking=no \
 		--with-last-packages=/usr/lib/xemacs \
 		|| die "configuration failed"
