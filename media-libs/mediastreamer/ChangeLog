@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.40 2011/04/20 18:39:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.41 2011/04/30 17:38:31 pva Exp $
+
+  30 Apr 2011; Peter Volkov <pva@gentoo.org> mediastreamer-2.7.3-r3.ebuild:
+  Update REQUIRED_USE to avoid build failure, bug #364657, wrt Diego Elio
+  Pettenò
 
 *mediastreamer-2.7.3-r3 (20 Apr 2011)
 
