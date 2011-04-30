@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.78 2011/01/03 16:08:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.79 2011/04/30 17:07:40 pva Exp $
+
+*madwifi-ng-0.9.4.4136.20110203 (30 Apr 2011)
+
+  30 Apr 2011; Peter Volkov <pva@gentoo.org>
+  +madwifi-ng-0.9.4.4136.20110203.ebuild:
+  Version bump for kernel 2.6.38, bug #361801, thank Oschtan for report.
 
   03 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   madwifi-ng-0.9.4.4133.20100621.ebuild:
