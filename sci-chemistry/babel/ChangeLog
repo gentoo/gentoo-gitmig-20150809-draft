@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/babel
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.6 2008/10/19 14:53:11 markusle Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.7 2011/04/30 18:07:31 armin76 Exp $
+
+  30 Apr 2011; Raúl Porcel <armin76@gentoo.org> babel-1.6.ebuild,
+  babel-1.6-r1.ebuild:
+  Drop sparc keywords
 
 *babel-1.6-r1 (19 Oct 2008)
 
