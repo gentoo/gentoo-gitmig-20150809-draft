@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.15 2011/04/23 17:59:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.16 2011/05/01 16:22:03 scarabeus Exp $
 
 EAPI=4
 
@@ -46,6 +46,9 @@ src_prepare() {
 	# upstream bug report:
 	# https://bugzilla.gnome.org/show_bug.cgi?id=642494
 	epatch "${FILESDIR}"/gegl-doubledestdir.diff
+
+	# new ffmpeg api
+	epatch "${FILESDIR}/${PV}-ffmpeg.patch"
 
 	# fix OSX loadable module filename extension
 	sed -i -e 's/\.dylib/.bundle/' configure.ac || die
