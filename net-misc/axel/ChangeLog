@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/axel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.58 2011/02/26 18:14:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.59 2011/05/01 14:49:25 jlec Exp $
+
+*axel-2.4-r1 (01 May 2011)
+
+  01 May 2011; Justin Lecher <jlec@gentoo.org> axel-1.1.ebuild,
+  +axel-2.4-r1.ebuild:
+  Fix for largefile support, #365563
 
   26 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> axel-2.3-r1.ebuild,
   axel-2.4.ebuild:

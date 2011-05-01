@@ -1,12 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.1.ebuild,v 1.7 2008/07/17 18:48:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.1.ebuild,v 1.8 2011/05/01 14:49:25 jlec Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="light Unix download accelerator"
+DOWNLOAD_ID=2287
+
+DESCRIPTION="Light Unix download accelerator"
 HOMEPAGE="http://axel.alioth.debian.org/"
-SRC_URI="http://alioth.debian.org/frs/download.php/2287/${P}.tar.gz"
+SRC_URI="http://alioth.debian.org/frs/download.php/${DOWNLOAD_ID}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
