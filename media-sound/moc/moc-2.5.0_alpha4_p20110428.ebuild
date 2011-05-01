@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20110428.ebuild,v 1.1 2011/04/28 18:04:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha4_p20110428.ebuild,v 1.2 2011/05/01 17:05:43 scarabeus Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
 HOMEPAGE="http://moc.daper.net"
@@ -40,6 +40,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	epatch \
+		"${FILESDIR}/${PN}-ffmpeg.patch"
 	eautoreconf
 }
 

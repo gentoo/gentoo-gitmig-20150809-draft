@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.85 2011/04/28 18:04:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.86 2011/05/01 17:05:43 scarabeus Exp $
+
+  01 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  moc-2.5.0_alpha4_p20110428.ebuild, +files/moc-ffmpeg.patch:
+  Add patch to compile with new ffmpeg api.
 
 *moc-2.5.0_alpha4_p20110428 (28 Apr 2011)
 
