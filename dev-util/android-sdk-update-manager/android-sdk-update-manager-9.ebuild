@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-9.ebuild,v 1.3 2011/02/12 14:41:30 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-9.ebuild,v 1.4 2011/05/01 00:20:54 halcy0n Exp $
 
 EAPI="3"
 
@@ -74,7 +74,7 @@ src_install(){
 
 	echo "SEARCH_DIRS_MASK=\"${EPREFIX}${ANDROID_SDK_DIR}\"" > "${T}/80${PN}" || die
 
-	insinto "${EPREFIX}/etc/revdep-rebuild" && doins "${T}/80${PN}" || die
+	insinto "/etc/revdep-rebuild" && doins "${T}/80${PN}" || die
 
 }
 

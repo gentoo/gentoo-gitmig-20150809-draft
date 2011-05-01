@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/android-sdk-update-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.20 2011/02/23 15:51:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.21 2011/05/01 00:20:54 halcy0n Exp $
+
+  01 May 2011; Mark Loeser <halcy0n@gentoo.org>
+  android-sdk-update-manager-8-r2.ebuild, android-sdk-update-manager-9.ebuild,
+  android-sdk-update-manager-10.ebuild:
+  insinto already has EPREFIX prepended
 
   23 Feb 2011; Richard Freeman <rich0@gentoo.org>
   -android-sdk-update-manager-6-r2.ebuild,
