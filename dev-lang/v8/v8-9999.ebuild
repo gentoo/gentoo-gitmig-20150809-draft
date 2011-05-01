@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.9 2011/04/19 10:15:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.10 2011/05/01 16:55:02 grobian Exp $
 
 EAPI="2"
 
@@ -50,7 +50,7 @@ src_compile() {
 	# To make tests work, we compile with sample=shell and visibility=default.
 	# For more info see http://groups.google.com/group/v8-users/browse_thread/thread/61ca70420e4476bc
 	# and http://groups.google.com/group/v8-users/browse_thread/thread/165f89728ed6f97d
-	local myconf="library=shared sample=shell visibility=default importenv=\"LINKFLAGS\""
+	local myconf="library=shared sample=shell visibility=default importenv=LINKFLAGS,PATH"
 
 	# Use target arch detection logic from bug #354601.
 	case ${CHOST} in
