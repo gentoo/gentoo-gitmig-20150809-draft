@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0.ebuild,v 1.3 2011/05/01 17:53:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0.ebuild,v 1.4 2011/05/01 17:59:49 dilfridge Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 test tiff v4l xine"
+IUSE="doc eigen examples ffmpeg gstreamer gtk ieee1394 jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 test tiff v4l xine"
 
 # all tests fail, needs further investigation, bug 296681 - dilfridge
 RESTRICT=test
@@ -30,7 +30,6 @@ RDEPEND="
 	>=sci-libs/clapack-3.2.1-r4
 	sci-libs/flann
 	virtual/lapack
-	cuda? ( dev-util/nvidia-cuda-toolkit )
 	eigen? ( dev-cpp/eigen:2 )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
@@ -109,7 +108,7 @@ src_configure() {
 		$(cmake-utils_use_enable ssse3 SSSE3)
 		-DUSE_ipp=OFF
 		$(cmake-utils_use_with ieee1394 1394)
-		$(cmake-utils_use_with cuda)
+		-DWITH_cuda=OFF
 		$(cmake-utils_use_with eigen)
 		$(cmake-utils_use_with ffmpeg)
 		$(cmake-utils_use_with gstreamer)
