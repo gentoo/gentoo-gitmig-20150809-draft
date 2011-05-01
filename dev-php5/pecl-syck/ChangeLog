@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-syck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/ChangeLog,v 1.27 2011/04/30 23:52:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-syck/ChangeLog,v 1.28 2011/05/01 02:07:36 halcy0n Exp $
+
+  01 May 2011; Mark Loeser <halcy0n@gentoo.org> pecl-syck-0.9.3-r1.ebuild:
+  Stable on ppc64
 
   30 Apr 2011; Mark Loeser <halcy0n@gentoo.org> pecl-syck-0.9.3-r1.ebuild:
   Stable on ppc
