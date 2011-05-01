@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.181 2011/04/02 14:35:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.182 2011/05/01 11:49:24 xarthisius Exp $
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> pciutils-3.1.7.ebuild:
+  ppc/ppc64 stable wrt #360793
 
   02 Apr 2011; Raúl Porcel <armin76@gentoo.org> pciutils-3.1.7.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #360793
