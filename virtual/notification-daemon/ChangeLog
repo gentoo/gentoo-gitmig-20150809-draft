@@ -1,0 +1,10 @@
+# ChangeLog for virtual/notification-daemon
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.1 2011/05/01 17:53:49 ssuominen Exp $
+
+*notification-daemon-0 (01 May 2011)
+
+  01 May 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +notification-daemon-0.ebuild:
+  Initial commit.
+
