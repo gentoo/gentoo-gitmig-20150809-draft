@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/files/ufdb.initd,v 1.1 2010/12/07 09:11:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/files/ufdb.initd,v 1.2 2011/05/01 16:05:50 flameeyes Exp $
 
 # reconfig is what the upstream documentation suggests, so let's
 # provide it for compatibility.
@@ -21,10 +21,14 @@ gentables() {
 	local dbhome=$(get_config dbhome)
 
 	for gt in ${UFDB_GT} ; do
-		if [ -f "${dbhome}/${gt}/domains" ] ; then
-			einfo "Generating domainlist ${gt}"
-			ufdbGenTable -t "${gt}" -d "${dbhome}/${gt}/domains"
-		fi
+		[ -f "${dbhome}/${gt}/domains" ] || continue
+
+		urls=
+		[ -f "${dbhome}/${gt}/urls" ] && urls="${dbhome}/${gt}/urls"
+
+		ebegin "Generating domainlist ${gt}"
+		ufdbGenTable ${GENTABLE_OPTIONS} -t "${gt}" -d "${dbhome}/${gt}/domains" ${urls:+-u "${urls}"}
+		eend $?
 	done
 }
 
@@ -44,7 +48,9 @@ start() {
 	fi
 
 	ebegin "Starting ufdbGuard"
-	start-stop-daemon --start --chuid ${UFDB_USER} \
+	start-stop-daemon --start \
+		--chuid ${UFDB_USER} \
+		--wait 1500 \
 		--exec /usr/libexec/ufdbguard/ufdbguardd \
 		--pidfile /var/run/ufdbguard/ufdbguardd.pid -- \
 		-c /etc/ufdbGuard.conf ${UFDB_OPTS}

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.23-r1.ebuild,v 1.1 2011/01/31 05:37:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.24-r1.ebuild,v 1.1 2011/05/01 16:05:51 flameeyes Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	epatch "${FILESDIR}"/${PN}-1.23-parallel-make.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 	egrep -r -e '/var/tmp/ufdb(guard|http)d.pid' "${S}" -lZ | xargs -0 \
