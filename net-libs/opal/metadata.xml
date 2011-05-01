@@ -17,6 +17,7 @@
 		<flag name="h323">Enable H.323 protocol</flag>
 		<flag name="iax">Enable Inter-Asterisk eXchange protocol</flag>
 		<flag name="ivr">Enable Interactive Voice Response</flag>
+		<flag name="ilbc">Enable iLBC (RFC 3951) speech codec</flag>
 		<flag name="ixj">Enable xJack cards support</flag>
 		<flag name="lid">Enable Line Interface Device</flag>
 		<flag name="plugins">Enable plugins support</flag>
