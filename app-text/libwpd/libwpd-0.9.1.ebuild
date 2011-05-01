@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.1.ebuild,v 1.4 2011/04/26 18:33:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.1.ebuild,v 1.5 2011/05/01 10:04:00 pacho Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0.9"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc test +tools"
 
-RDEPEND="dev-libs/glib:2"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )
