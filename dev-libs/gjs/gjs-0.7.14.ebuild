@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-0.7.14.ebuild,v 1.1 2011/05/01 15:40:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-0.7.14.ebuild,v 1.2 2011/05/01 15:42:03 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -62,6 +62,6 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins ${S}/examples/* || die "doins examples failed!"
+		doins "${S}"/examples/* || die "doins examples failed!"
 	fi
 }
