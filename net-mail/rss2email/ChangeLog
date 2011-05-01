@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/rss2email
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.10 2011/04/05 05:50:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.11 2011/05/01 18:53:02 hwoarang Exp $
+
+  01 May 2011; Markos Chandras <hwoarang@gentoo.org> rss2email-2.71.ebuild:
+  Stable on amd64 wrt bug #365465
 
   05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> rss2email-2.65.ebuild:
   Depend on dev-lang/python because virtual/python will go away, bug 358849.
