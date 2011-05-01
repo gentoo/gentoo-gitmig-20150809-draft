@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.16 2011/01/18 15:09:27 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.17 2011/05/01 02:26:33 halcy0n Exp $
+
+  01 May 2011; Mark Loeser <halcy0n@gentoo.org> pdfbox-0.7.3-r2.ebuild:
+  Add ~ppc64; bug #355353
 
   18 Jan 2011; Miroslav Šulc <fordfrog@gentoo.org> pdfbox-0.7.3-r2.ebuild:
   Fixed einfo about renaming app commands, bug #335061
