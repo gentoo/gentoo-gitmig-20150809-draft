@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.411 2011/04/30 18:42:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.412 2011/05/01 12:01:13 xarthisius Exp $
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xulrunner-1.9.2.17.ebuild:
+  ppc/ppc64 stable wrt #365323
 
   30 Apr 2011; Markos Chandras <hwoarang@gentoo.org> xulrunner-1.9.2.17.ebuild:
   Stable on amd64 wrt bug #365323
