@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.16.5.ebuild,v 1.1 2011/04/08 09:12:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ortp-0.16.5.ebuild,v 1.2 2011/05/01 18:09:52 hwoarang Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/linphone/${PN}/
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="debug doc examples ipv6 minimal srtp ssl"
 
 RDEPEND="srtp? ( net-libs/libsrtp )
