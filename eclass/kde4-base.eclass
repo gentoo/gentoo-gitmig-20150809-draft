@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.90 2011/04/22 18:48:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.91 2011/05/01 13:52:09 scarabeus Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -20,12 +20,12 @@
 # for tests you should proceed with setting VIRTUALX_REQUIRED=test.
 : ${VIRTUALX_REQUIRED:=manual}
 
-inherit kde4-functions fdo-mime gnome2-utils base virtualx versionator eutils
+inherit kde4-functions toolchain-funcs fdo-mime gnome2-utils base virtualx versionator eutils
 
 if [[ ${BUILD_TYPE} = live ]]; then
 	case ${KDE_SCM} in
 		svn) inherit subversion ;;
-		git) inherit git ;;
+		git) inherit git-2 ;;
 	esac
 fi
 
@@ -385,7 +385,7 @@ if [[ ${KDEBASE} != "kde-base" && -n ${KDE_LINGUAS} && ${EAPI:-0} != 3 ]]; then
 		# this can't be done on one line because if user doesn't use any localisation
 		# then he is probably not interested in kde-l10n at all.
 		kderdepend+="
-			linguas_${_lingua}? ( $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)?") )
+			linguas_${_lingua}? ( $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)") )
 		"
 	done
 	unset _lingua
@@ -608,18 +608,7 @@ _calculate_live_repo() {
 					;;
 			esac
 
-			case $_kmname in
-				kdepim|kdepim-runtime)
-					case ${PV} in
-						# kdepim still did not branch
-						4.6.9999)
-							EGIT_BRANCH="master"
-							;;
-					esac
-					;;
-			esac
 			EGIT_REPO_URI="${EGIT_MIRROR}/${_kmname}"
-			EGIT_PROJECT="${_kmname}"
 
 			debug-print "${FUNCNAME}: Repository: ${EGIT_REPO_URI}"
 			debug-print "${FUNCNAME}: Branch: ${EGIT_BRANCH}"
@@ -652,6 +641,14 @@ kde4-base_pkg_setup() {
 
 	# Don't set KDEHOME during compilation, it will cause access violations
 	unset KDEHOME
+
+	# Check if gcc compiler is fresh enough.
+	# In theory should be in pkg_pretend but we check it only for kdelibs there
+	# and for others we do just quick scan in pkg_setup because pkg_pretend
+	# executions consume quite some time.
+	[[ $(gcc-major-version) -lt 4 ]] || \
+			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) \
+		&& die "Sorry, but gcc-4.3 and earlier wont work for KDE (see bug 354837)."
 
 	if [[ ${KDEBASE} = kde-base ]]; then
 		if use kdeprefix; then
@@ -710,7 +707,7 @@ kde4-base_src_unpack() {
 				subversion_src_unpack
 				;;
 			git)
-				git_src_unpack
+				git-2_src_unpack
 				;;
 		esac
 	else
