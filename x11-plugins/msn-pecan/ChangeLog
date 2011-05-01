@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/msn-pecan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/ChangeLog,v 1.9 2010/08/28 22:27:59 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/ChangeLog,v 1.10 2011/05/01 19:20:26 voyageur Exp $
+
+*msn-pecan-0.1.2 (01 May 2011)
+
+  01 May 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -msn-pecan-0.0.19.ebuild, -msn-pecan-0.1.0.ebuild, -msn-pecan-0.1.1.ebuild,
+  +msn-pecan-0.1.2.ebuild:
+  Version bump, fixes connection. Remove previous versions that do not work
+  anymore
 
 *msn-pecan-0.1.1 (28 Aug 2010)
 

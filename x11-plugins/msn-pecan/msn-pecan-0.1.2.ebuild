@@ -1,13 +1,15 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.0.19.ebuild,v 1.1 2009/07/19 19:54:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.1.2.ebuild,v 1.1 2011/05/01 19:20:26 voyageur Exp $
 
-inherit toolchain-funcs multilib
+EAPI="2"
+
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="Alternative MSN protocol plugin for libpurple"
 HOMEPAGE="http://code.google.com/p/msn-pecan/"
 
-SRC_URI="http://msn-pecan.googlecode.com/files/${P}.tar.bz2"
+SRC_URI="http://msn-pecan.googlecode.com/files/${P/_/-}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -19,13 +21,20 @@ RDEPEND="net-im/pidgin"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
+S=${WORKDIR}/${P/_/-}
+
+src_prepare() {
+	sed -e "/^LDFLAGS/{s/$/ ${LDFLAGS}/;}" \
+		-e "/^CFLAGS/{s/$/ ${CFLAGS}/;}" -i Makefile || die
+}
+
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed"
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc COPYRIGHT ChangeLog README TODO || die "dodoc failed"
+	dodoc ChangeLog README TODO || die "dodoc failed"
 }
 
 pkg_postinst() {
