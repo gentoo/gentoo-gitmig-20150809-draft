@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/evms
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.99 2010/09/13 03:10:32 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.100 2011/05/01 17:19:36 armin76 Exp $
+
+  01 May 2011; Raúl Porcel <armin76@gentoo.org> evms-2.5.5-r5.ebuild,
+  evms-2.5.5-r10.ebuild, evms-2.5.5-r11.ebuild:
+  Drop ia64/sparc keywords
 
   13 Sep 2010; Joseph Jezak <josejx@gentoo.org> evms-2.5.5-r11.ebuild:
   Marked ppc/ppc64 stable for bug #302103.
