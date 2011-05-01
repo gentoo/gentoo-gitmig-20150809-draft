@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.30.6.ebuild,v 1.11 2011/05/01 15:55:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-3.0.0.ebuild,v 1.1 2011/05/01 15:55:03 nirbheek Exp $
 
 EAPI="3"
-GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -12,12 +12,12 @@ DESCRIPTION="A window navigation construction kit"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
-SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+SLOT="3"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 IUSE="doc +introspection startup-notification"
 
-RDEPEND=">=x11-libs/gtk+-2.19.7:2[introspection?]
+RDEPEND=">=x11-libs/gtk+-3.0:3[introspection?]
 	>=dev-libs/glib-2.16:2
 	x11-libs/libX11
 	x11-libs/libXres
@@ -35,10 +35,12 @@ DEPEND="${RDEPEND}
 #	gnome-base/gnome-common
 
 pkg_setup() {
+	# Don't collide with SLOT=1
 	G2CONF="${G2CONF}
 		--disable-static
 		$(use_enable introspection)
-		$(use_enable startup-notification)"
+		$(use_enable startup-notification)
+		--program-suffix=-${SLOT}"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 }
 
@@ -50,4 +52,11 @@ src_prepare() {
 		append-flags "-I${EPREFIX}/usr/include/bind"
 		append-ldflags "-L${EPREFIX}/usr/lib/bind"
 	fi
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+
+	elog "wnckprop is now called wnckprop-${SLOT}"
+	elog "wnck-urgency-monitor is now called wnck-urgency-monitor-${SLOT}"
 }
