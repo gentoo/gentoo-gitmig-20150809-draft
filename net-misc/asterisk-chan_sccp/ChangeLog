@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk-chan_sccp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/ChangeLog,v 1.19 2009/08/29 17:40:45 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_sccp/ChangeLog,v 1.20 2011/05/01 00:42:40 halcy0n Exp $
+
+  01 May 2011; Mark Loeser <halcy0n@gentoo.org>
+  asterisk-chan_sccp-0.0.20050807.ebuild,
+  asterisk-chan_sccp-0.0.20050826.ebuild,
+  asterisk-chan_sccp-0.0.20050902.ebuild,
+  asterisk-chan_sccp-0.0.20050906.ebuild,
+  asterisk-chan_sccp-0.0.20050913.ebuild,
+  asterisk-chan_sccp-0.0.20050922.ebuild,
+  asterisk-chan_sccp-0.0.20051118.ebuild,
+  asterisk-chan_sccp-0.0.20051125.ebuild,
+  asterisk-chan_sccp-0.0.20060204.ebuild:
+  Dropping ppc since there is no asterisk keyworded anymore
 
   29 Aug 2009; Robin H. Johnson <robbat2@gentoo.org>
   asterisk-chan_sccp-0.0.20060204.ebuild:

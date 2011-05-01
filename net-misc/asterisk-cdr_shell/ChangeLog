@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-cdr_shell
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/ChangeLog,v 1.6 2008/08/16 16:06:07 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-cdr_shell/ChangeLog,v 1.7 2011/05/01 00:40:04 halcy0n Exp $
+
+  01 May 2011; Mark Loeser <halcy0n@gentoo.org>
+  asterisk-cdr_shell-20050626.ebuild, asterisk-cdr_shell-20060120.ebuild:
+  Dropping ppc since there is no asterisk keyworded anymore
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove stkn from metadata.xml (#27693)

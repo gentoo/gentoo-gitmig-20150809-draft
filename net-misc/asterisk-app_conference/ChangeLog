@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk-app_conference
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.8 2008/08/16 15:59:41 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_conference/ChangeLog,v 1.9 2011/05/01 00:39:08 halcy0n Exp $
+
+  01 May 2011; Mark Loeser <halcy0n@gentoo.org>
+  asterisk-app_conference-0.0.1_pre20050506.ebuild,
+  asterisk-app_conference-0.0.1_pre20060210.ebuild:
+  Dropping ppc since there is no asterisk keyworded anymore
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove stkn from metadata.xml (#27693)
