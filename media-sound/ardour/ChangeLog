@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.93 2011/04/30 19:53:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.94 2011/05/01 12:04:01 radhermit Exp $
+
+  01 May 2011; Tim Harder <radhermit@gentoo.org> ardour-2.8.11-r1.ebuild:
+  Conditionally apply the gcc-4.6 patch (bug #365437).
 
 *ardour-2.8.11-r1 (30 Apr 2011)
 
