@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r1.ebuild,v 1.7 2011/01/09 13:57:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r1.ebuild,v 1.8 2011/05/01 10:11:26 pva Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -73,6 +73,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-urwfonts.patch"
 	epatch "${FILESDIR}/${P}-mkstemp.patch" #264575
 	epatch "${FILESDIR}/${P}-CVE-2010-4262.patch" #348344
+	epatch "${FILESDIR}/${P}-libpng-1.5.patch" #356753
+
 	sed_Imakefile Imakefile
 	sed -e "s:/usr/lib/X11/xfig:/usr/share/doc/${PF}:" \
 		-i Doc/xfig.man -i Doc/xfig_man.html || die
