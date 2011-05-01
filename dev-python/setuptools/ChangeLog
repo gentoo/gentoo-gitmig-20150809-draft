@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.130 2011/04/29 20:35:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.131 2011/05/01 00:23:21 arfrever Exp $
+
+*setuptools-0.6.16 (01 May 2011)
+
+  01 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +setuptools-0.6.16.ebuild,
+  +files/distribute-0.6.16-fix_deprecation_warnings.patch:
+  Version bump.
 
   29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> setuptools-0.6.15.ebuild:
   ppc64 stable wrt #364413
