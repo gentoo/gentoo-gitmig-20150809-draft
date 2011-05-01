@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.113 2011/04/21 02:45:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.114 2011/05/01 16:21:34 nirbheek Exp $
+
+  01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Mask USE=gtk3 on libcanberra as well
 
   21 Apr 2011; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=video_cards_nouveau (bug #364027). Combine all video_cards_ masks

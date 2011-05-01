@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.79 2011/02/24 18:34:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.80 2011/05/01 16:21:34 nirbheek Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -46,7 +46,7 @@ net-im/pidgin gstreamer
 x11-misc/xscreensaver new-login
 x11-libs/wxGTK gstreamer
 net-p2p/mldonkey guionly gtk
-media-libs/libcanberra gtk
+media-libs/libcanberra gtk gtk3
 gnome-extra/libgsf thumbnail
 dev-vcs/git gtk
 app-cdr/cdrdao gcdmaster
