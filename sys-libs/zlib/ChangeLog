@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.91 2011/04/10 17:23:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.92 2011/05/01 09:52:06 xarthisius Exp $
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> zlib-1.2.5-r2.ebuild:
+  ppc64 stable wrt #359953
 
   10 Apr 2011; Raúl Porcel <armin76@gentoo.org> zlib-1.2.5-r2.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #359953
