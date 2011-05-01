@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.46 2011/04/25 16:47:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.47 2011/05/01 12:24:35 xarthisius Exp $
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> mtools-4.0.15.ebuild:
+  ppc/ppc64 stable wrt #363985
 
   25 Apr 2011; Markos Chandras <hwoarang@gentoo.org> mtools-4.0.15.ebuild:
   Stable on amd64 wrt bug #363985
