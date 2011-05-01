@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.223 2011/04/21 11:05:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.224 2011/05/01 12:10:14 xarthisius Exp $
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> hdparm-9.36.ebuild:
+  ppc64 stable wrt #360799
 
   21 Apr 2011; Thomas Kahle <tomka@gentoo.org> hdparm-9.36.ebuild:
   x86 stable per bug 360799
