@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.275 2011/04/30 10:16:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.276 2011/05/01 15:13:33 nirbheek Exp $
+
+  01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -files/vte-0.24.1-background-color.patch,
+  -files/vte-0.24.1-background-color2.patch,
+  -files/vte-0.24.1-cleanup-background.patch,
+  -files/vte-0.24.2-invisible-cursor.patch,
+  -files/vte-0.24.2-invisible-cursor2.patch,
+  +files/vte-0.28.0-fix-gdk-targets.patch:
+  Remove unused patches, fix bug 365555
 
 *vte-0.28.0-r300 (30 Apr 2011)
 *vte-0.28.0-r200 (30 Apr 2011)
