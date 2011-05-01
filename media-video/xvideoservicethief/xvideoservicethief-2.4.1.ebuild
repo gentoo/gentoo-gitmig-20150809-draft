@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1.ebuild,v 1.5 2010/11/03 21:49:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1.ebuild,v 1.6 2011/05/01 21:30:39 hwoarang Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ DEPEND="app-arch/unzip
 	>=x11-libs/qt-webkit-4.5.3:4
 	doc? ( app-doc/doxygen )"
 RDEPEND=">=x11-libs/qt-gui-4.5.3:4
-	media-video/ffmpeg
+	virtual/ffmpeg
 	media-video/flvstreamer"
 
 RES_NAME="xVST"
