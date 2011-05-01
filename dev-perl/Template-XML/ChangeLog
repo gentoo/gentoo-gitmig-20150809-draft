@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-XML
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.26 2009/12/23 19:43:08 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.27 2011/05/01 17:33:24 armin76 Exp $
+
+  01 May 2011; Raúl Porcel <armin76@gentoo.org> Template-XML-2.17-r1.ebuild:
+  Add ~arm
 
   23 Dec 2009; Fabian Groffen <grobian@gentoo.org>
   Template-XML-2.17-r1.ebuild:
