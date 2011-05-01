@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.9.1.ebuild,v 1.1 2011/04/30 06:09:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.9.1.ebuild,v 1.2 2011/05/01 19:06:20 williamh Exp $
 
-EAPI="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[456] 3.*"
+EAPI="3"
 PYTHON_DEPEND="2:2.7"
 PYTHON_MODNAME="bugz"
 PYTHON_USE_WITH="readline"
@@ -30,6 +28,10 @@ IUSE="zsh-completion"
 
 RDEPEND="${DEPEND}
 	zsh-completion? ( app-shells/zsh )"
+
+pkg_setup() {
+	python_set_active_version 2.7
+}
 
 src_install() {
 	distutils_src_install
