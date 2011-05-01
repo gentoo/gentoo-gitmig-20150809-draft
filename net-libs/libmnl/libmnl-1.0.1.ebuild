@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.1.ebuild,v 1.1 2011/05/01 11:57:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.1.ebuild,v 1.2 2011/05/01 12:15:52 pva Exp $
 
 EAPI=4
+
+inherit multilib
 
 DESCRIPTION="Minimalistic nelink library"
 HOMEPAGE="http://netfilter.org/projects/libmnl"
@@ -13,11 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+src_configure() {
+	econf \
+		--libdir=/$(get_libdir)
+}
 
 src_install() {
 	emake DESTDIR="${D}" install
+	dodir /usr/$(get_libdir)/pkgconfig/
+	mv "${ED}"/{,usr/}$(get_libdir)/pkgconfig/libmnl.pc || die
 	dodoc README
 
 	if use examples; then
