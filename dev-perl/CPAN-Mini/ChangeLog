@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CPAN-Mini
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.36 2011/04/30 06:20:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.37 2011/05/01 16:24:40 tove Exp $
+
+*CPAN-Mini-1.111.6 (01 May 2011)
+
+  01 May 2011; Torsten Veller <tove@gentoo.org> +CPAN-Mini-1.111.6.ebuild:
+  Version bump
 
 *CPAN-Mini-1.111.5 (30 Apr 2011)
 
