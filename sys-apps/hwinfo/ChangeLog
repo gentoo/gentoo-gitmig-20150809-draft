@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwinfo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.20 2010/11/01 18:52:57 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.21 2011/05/01 10:42:09 ssuominen Exp $
+
+*hwinfo-18.5 (01 May 2011)
+
+  01 May 2011; Samuli Suominen <ssuominen@gentoo.org> +hwinfo-18.5.ebuild:
+  Version bump.
 
   01 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> hwinfo-18.1.ebuild:
   ppc stable wrt wrt bug #342753
