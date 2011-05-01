@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.1.ebuild,v 1.2 2011/05/01 12:15:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.1.ebuild,v 1.3 2011/05/01 12:25:59 grobian Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="examples"
 
 src_configure() {
 	econf \
-		--libdir=/$(get_libdir)
+		--libdir="${EPREFIX}"/$(get_libdir)
 }
 
 src_install() {
