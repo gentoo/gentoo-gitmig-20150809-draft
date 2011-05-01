@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.56 2011/04/30 18:40:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.57 2011/05/01 16:47:47 phajdan.jr Exp $
+
+  01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  firefox-bin-3.6.17.ebuild:
+  x86 stable wrt security bug #365323
 
   30 Apr 2011; Markos Chandras <hwoarang@gentoo.org> firefox-bin-3.6.17.ebuild:
   Stable on amd64 wrt bug #365323

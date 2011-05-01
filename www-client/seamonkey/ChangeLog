@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.310 2011/05/01 12:03:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.311 2011/05/01 16:49:25 phajdan.jr Exp $
+
+  01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  seamonkey-2.0.14.ebuild:
+  x86 stable wrt security bug #365323
 
   01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> seamonkey-2.0.14.ebuild:
   ppc/ppc64 stable wrt #365323

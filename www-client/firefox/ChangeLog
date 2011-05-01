@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.65 2011/05/01 12:02:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.66 2011/05/01 16:46:44 phajdan.jr Exp $
+
+  01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  firefox-3.6.17.ebuild:
+  x86 stable wrt security bug #365323
 
   01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> firefox-3.6.17.ebuild:
   ppc/ppc64 stable wrt #365323
