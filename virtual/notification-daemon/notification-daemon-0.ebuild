@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.1 2011/05/01 17:53:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.2 2011/05/01 17:54:39 ssuominen Exp $
 
 EAPI=2
 
-DESCRIPTION=""
+DESCRIPTION="Virtual for notification daemon dbus service"
 HOMEPAGE=""
 SRC_URI=""
 
