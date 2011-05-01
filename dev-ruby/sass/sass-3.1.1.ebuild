@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.1.1.ebuild,v 1.1 2011/05/01 08:27:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.1.1.ebuild,v 1.2 2011/05/01 08:28:54 graaff Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="rails init.rb VERSION VERSION_NAME"
 
 inherit ruby-fakegem
 
-DESCRIPTION="Sass is an extension of CSS3, adding nested rules, variables, mixins, selector inheritance, and more."
+DESCRIPTION="An extension of CSS3, adding nested rules, variables, mixins, selector inheritance, and more."
 HOMEPAGE="http://sass-lang.com/"
 LICENSE="MIT"
 
