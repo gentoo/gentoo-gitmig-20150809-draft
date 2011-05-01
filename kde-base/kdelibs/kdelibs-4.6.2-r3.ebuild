@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r2.ebuild,v 1.5 2011/05/01 13:55:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.1 2011/05/01 22:47:43 dilfridge Exp $
 
 EAPI=4
 
@@ -138,6 +138,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.90-xslt.patch"
 	"${FILESDIR}/${PN}-4.6.0-kateacc.patch"
 	"${FILESDIR}/${PN}-4.6.2-nonepomuk.patch"
+	"${FILESDIR}/${PN}-4.6.3-no_suid_kdeinit.patch"
 )
 
 pkg_pretend() {

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.747 2011/05/01 13:55:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.748 2011/05/01 22:47:43 dilfridge Exp $
+
+*kdelibs-4.6.2-r3 (01 May 2011)
+
+  01 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdelibs-4.6.2-r2.ebuild, +kdelibs-4.6.2-r3.ebuild,
+  +files/kdelibs-4.6.3-no_suid_kdeinit.patch:
+  Do not install start_kdeinit setuid, bug 365633
 
   01 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> kdelibs-4.6.2-r2.ebuild:
   Add pkg_pretend check for gcc. Just moves the functionality from eclass to
