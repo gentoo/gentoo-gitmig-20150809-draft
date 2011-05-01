@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5341 2011/04/30 17:18:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5342 2011/05/01 19:05:45 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 May 2011; Fabian Groffen <grobian@gentoo.org> profiles.desc:
+  Add Prefix FreeBSD 8.2 x64 profile
 
   30 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -hardened/linux/virtuals,
   -hardened/virtuals, -uclibc/mips/virtuals, -uclibc/ppc/hardened/virtuals,
