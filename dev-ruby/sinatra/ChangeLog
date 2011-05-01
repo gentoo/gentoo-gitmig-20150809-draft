@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sinatra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.19 2011/04/15 17:34:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.20 2011/05/01 07:41:34 graaff Exp $
+
+*sinatra-1.2.5 (01 May 2011)
+
+  01 May 2011; Hans de Graaff <graaff@gentoo.org> +sinatra-1.2.5.ebuild:
+  Version bump.
 
 *sinatra-1.2.3 (15 Apr 2011)
 
