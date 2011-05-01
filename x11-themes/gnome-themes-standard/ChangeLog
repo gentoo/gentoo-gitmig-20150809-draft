@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/gnome-themes-standard
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.1 2011/05/01 13:02:30 nirbheek Exp $
+
+*gnome-themes-standard-3.0.1 (01 May 2011)
+
+  01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-themes-standard-3.0.1.ebuild, +metadata.xml:
+  Move gnome-themes-standard from the overlay to the tree
+
