@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/goocanvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.22 2011/03/29 12:58:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/ChangeLog,v 1.23 2011/05/01 16:01:44 nirbheek Exp $
+
+*goocanvas-2.0.0 (01 May 2011)
+
+  01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +goocanvas-2.0.0.ebuild:
+  Move goocanvas from the gnome overlay to the tree
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> goocanvas-0.14.ebuild:
   Fix gtk+ slot deps
