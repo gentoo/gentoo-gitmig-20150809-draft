@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.91.ebuild,v 1.2 2011/04/28 20:58:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.91.ebuild,v 1.3 2011/05/01 15:55:38 ssuominen Exp $
 
 EAPI="4"
 
@@ -134,9 +134,9 @@ src_install() {
 		network/network.conf \
 		serial/serial.conf
 
-	insinto /$(get_libdir)/udev/rules.d/
+	insinto /lib/udev/rules.d/
 	newins "${FILESDIR}/${PN}-4.18-udev.rules" 70-bluetooth.rules
-	exeinto /$(get_libdir)/udev/
+	exeinto /lib/udev/
 	newexe "${FILESDIR}/${PN}-4.18-udev.script" bluetooth.sh
 
 	newinitd "${FILESDIR}/bluetooth-init.d" bluetooth
