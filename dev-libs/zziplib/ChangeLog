@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.105 2011/04/16 18:43:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.106 2011/05/01 12:07:53 xarthisius Exp $
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  zziplib-0.13.60-r1.ebuild:
+  ppc64 stable wrt #360721
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> zziplib-0.13.60-r1.ebuild:
   ia64/s390/sh/sparc stable wrt #360721
