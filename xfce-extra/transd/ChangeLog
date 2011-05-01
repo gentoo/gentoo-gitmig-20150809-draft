@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/transd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/ChangeLog,v 1.5 2011/03/29 05:01:07 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/ChangeLog,v 1.6 2011/05/01 11:48:08 ssuominen Exp $
+
+*transd-0_p20110501 (01 May 2011)
+
+  01 May 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +transd-0_p20110501.ebuild:
+  New snapshot.
 
   13 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
   transd-0_p20101006.ebuild:
