@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.14 2011/04/12 17:19:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.15 2011/05/01 16:34:44 scarabeus Exp $
+
+  01 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +files/2.0-ffmpeg.patch,
+  mplayer2-2.0.ebuild:
+  Compile with latest ffmpeg api.
 
   12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   Update and reorder variables a bit. Based off Nikoli's patch.
