@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.410 2011/04/30 16:28:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.411 2011/05/01 15:15:04 scarabeus Exp $
+
+  01 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.6-r1.ebuild:
+  use linux-info rather than linux-mod eclass. Per bug #365491.
 
   30 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.6-r1.ebuild:
   Add the kernel check so we really ensure nobody tries both libusb and usblp

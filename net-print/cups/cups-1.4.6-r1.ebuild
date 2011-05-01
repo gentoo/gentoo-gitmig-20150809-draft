@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.3 2011/04/30 16:28:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.4 2011/05/01 15:15:04 scarabeus Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit autotools eutils flag-o-matic linux-mod multilib pam perl-module python versionator java-pkg-opt-2
+inherit autotools eutils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2
 
 MY_P=${P/_}
 
@@ -81,7 +81,7 @@ pkg_setup() {
 		python_pkg_setup
 	fi
 
-	linux-mod_pkg_setup
+	linux-info_pkg_setup
 	if  ! linux_config_exists; then
 		ewarn "Can't check the linux kernel configuration."
 		ewarn "You might have some incompatible options enabled."
