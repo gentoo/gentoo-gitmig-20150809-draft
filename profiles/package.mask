@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12744 2011/04/29 20:50:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12745 2011/05/01 20:10:25 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ole Markus With <olemarkus@gentoo.org> (1 May 2011)
+# Masking SVN snaphots.
+>=dev-lang/php-5.4.0_pre1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (30 Apr 2011)
 # GTK3 version of notification-daemon, added for testing
