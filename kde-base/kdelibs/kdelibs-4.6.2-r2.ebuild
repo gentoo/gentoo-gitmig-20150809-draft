@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r2.ebuild,v 1.4 2011/04/18 20:27:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r2.ebuild,v 1.5 2011/05/01 13:55:25 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 CPPUNIT_REQUIRED="optional"
 DECLARATIVE_REQUIRED="always"
 OPENGL_REQUIRED="optional"
 WEBKIT_REQUIRED="always"
 KDE_SCM="git"
-inherit kde4-base fdo-mime
+inherit kde4-base fdo-mime toolchain-funcs
 
 DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
@@ -140,6 +140,12 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.6.2-nonepomuk.patch"
 )
 
+pkg_pretend() {
+	[[ $(gcc-major-version) -lt 4 ]] || \
+			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) \
+		&& die "Sorry, but gcc-4.3 and earlier won't work for KDE SC 4.6 (see bug #354837)."
+}
+
 src_prepare() {
 	kde4-base_src_prepare
 	use arm && epatch "${FILESDIR}/${PN}-4.6.2-armlinking.patch"
@@ -255,13 +261,13 @@ src_install() {
 	# use system certificates
 	rm -f "${ED}/${KDEDIR}"/share/apps/kssl/ca-bundle.crt || die
 	dosym /etc/ssl/certs/ca-certificates.crt \
-	"${KDEDIR}"/share/apps/kssl/ca-bundle.crt || die
+	"${KDEDIR}"/share/apps/kssl/ca-bundle.crt
 
 	if use doc; then
 		einfo "Installing API documentation. This could take a bit of time."
 		cd "${S}"/doc/api/
 		docinto /HTML/en/kdelibs-apidox
-		dohtml -r ${P}-apidocs/* || die "Install phase of KDE4 API Documentation failed"
+		dohtml -r ${P}-apidocs/*
 	fi
 
 	if use aqua; then
@@ -285,8 +291,8 @@ src_install() {
 
 	einfo Installing environment file.
 	echo "COLON_SEPARATED=QT_PLUGIN_PATH" > "${T}/77kde"
-	echo "QT_PLUGIN_PATH=${EROOT}/${KDEDIR}/$(get_libdir)/kde4/plugins/" >> "${T}/77kde"
-	doenvd "${T}/77kde" || die
+	echo "QT_PLUGIN_PATH=${EKDEDIR}/$(get_libdir)/kde4/plugins" >> "${T}/77kde"
+	doenvd "${T}/77kde"
 }
 
 pkg_postinst() {
