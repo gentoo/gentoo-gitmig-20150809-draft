@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.32 2011/04/30 07:38:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.33 2011/05/01 11:46:49 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -80,7 +80,10 @@ xfconf_src_prepare() {
 	base_src_prepare
 
 	if [[ -n $EINTLTOOLIZE ]]; then
-		intltoolize --force --copy --automake || die
+		local _intltoolize="intltoolize --force --copy --automake"
+		ebegin "Running ${_intltoolize}"
+		${_intltoolize} || die
+		eend $?
 	fi
 
 	if [[ -n $EAUTORECONF ]]; then
