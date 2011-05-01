@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.234 2011/04/30 10:16:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.235 2011/05/01 15:54:47 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -10,6 +10,7 @@
 # needs to be slotted. See bug 364831 for details
 >=x11-libs/gtksourceview-3 glade
 >=x11-libs/vte-0.28 glade
+>=x11-libs/libwnck-3 glade
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (24 Apr 2011)
 # Unmask introspection for specific packages. The migration to unmasking of
@@ -27,6 +28,7 @@
 >=net-libs/libsoup-2.34 -introspection
 >=net-libs/libsoup-gnome-2.34 -introspection
 >=x11-libs/vte-0.28 -introspection
+>=x11-libs/libwnck-3 -introspection
 net-libs/rest -introspection
 net-libs/libsocialweb -introspection
 
