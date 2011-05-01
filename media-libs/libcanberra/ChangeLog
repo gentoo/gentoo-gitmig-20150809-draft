@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.66 2011/04/10 10:44:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.67 2011/05/01 16:21:53 nirbheek Exp $
+
+*libcanberra-0.28-r1 (01 May 2011)
+
+  01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +libcanberra-0.28-r1.ebuild:
+  Add libcanberra-0.28-r1 from the gnome overlay
 
   10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> libcanberra-0.26.ebuild:
   Reset dependency_libs to '' in libtool files.
