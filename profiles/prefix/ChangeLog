@@ -1,6 +1,14 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.272 2011/04/30 15:17:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.273 2011/05/01 15:32:07 grobian Exp $
+
+  01 May 2011; Fabian Groffen <grobian@gentoo.org>
+  +darwin/macos/10.4/ppc/package.use.mask,
+  +darwin/macos/10.4/ppc64/package.use.mask,
+  +darwin/macos/10.5/ppc64/package.use.mask,
+  darwin/macos/10.5/ppc/package.use.mask:
+  Mask USE=jit for qt-script and qt-webkit on OSX PowerPC profiles, since it
+  isn't implemented
 
   30 Apr 2011; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.4/package.mask:

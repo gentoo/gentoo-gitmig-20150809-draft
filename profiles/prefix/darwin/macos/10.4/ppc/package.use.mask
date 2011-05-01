@@ -1,0 +1,11 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.4/ppc/package.use.mask,v 1.1 2011/05/01 15:32:07 grobian Exp $
+
+# Joseph Jezak <JoseJX@gentoo.org> (25 Jan 2011)
+# x11-libs/qt-webkit doesn't have a working JIT yet on PowerPC
+x11-libs/qt-webkit jit
+
+# Tomas Touceda <chiiph@gentoo.org> (21 Nov 2010)
+# JIT isn't implemented on ppc: bug #346167
+x11-libs/qt-script jit
