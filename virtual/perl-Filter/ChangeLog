@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Filter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter/ChangeLog,v 1.10 2011/04/24 19:30:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter/ChangeLog,v 1.11 2011/05/01 16:18:19 tove Exp $
+
+*perl-Filter-1.390.0 (01 May 2011)
+
+  01 May 2011; Torsten Veller <tove@gentoo.org> +perl-Filter-1.390.0.ebuild:
+  Version bump
 
 *perl-Filter-1.380.0 (24 Apr 2011)
 
