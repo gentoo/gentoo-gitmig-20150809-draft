@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mediastreamer-amr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/ChangeLog,v 1.1 2011/04/09 09:50:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/ChangeLog,v 1.2 2011/05/01 18:10:37 hwoarang Exp $
+
+  01 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  mediastreamer-amr-0.0.1.ebuild:
+  Stable on amd64 wrt bug #363311
 
 *mediastreamer-amr-0.0.1 (09 Apr 2011)
 
