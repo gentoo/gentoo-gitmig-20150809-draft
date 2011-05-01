@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.10 2011/04/29 17:39:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.11 2011/05/01 09:34:42 ssuominen Exp $
 
 EAPI=3
 GCONF_DEBUG=no
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT=yes
 inherit eutils gnome2
 
 DESCRIPTION="Notification daemon"
-HOMEPAGE="http://www.galago-project.org/"
+HOMEPAGE="http://git.gnome.org/browse/notification-daemon/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,12 +24,12 @@ RDEPEND=">=dev-libs/glib-2.4:2
 	>=media-libs/libcanberra-0.4[gtk]
 	x11-libs/libnotify
 	x11-libs/libwnck:1
-	x11-libs/libX11"
+	x11-libs/libX11
+	!<xfce-extra/xfce4-notifyd-0.2.1_p20110101
+	!x11-misc/notify-osd"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
-	>=sys-devel/gettext-0.14
-	!xfce-extra/xfce4-notifyd
-	!x11-misc/notify-osd"
+	>=sys-devel/gettext-0.14"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS"
