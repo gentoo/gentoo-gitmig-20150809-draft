@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/ris-linux
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ris-linux/ChangeLog,v 1.1 2011/05/01 20:06:53 maksbotan Exp $
+
+*ris-linux-0.4 (01 May 2011)
+
+  01 May 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  +ris-linux-0.4.ebuild, +files/binlsrv.confd, +files/binlsrv.initd,
+  +files/setup.py, +metadata.xml:
+  Add net-misc/ris-linux, bug #365605
+
