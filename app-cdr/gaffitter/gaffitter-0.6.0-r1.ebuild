@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/gaffitter-0.6.0-r1.ebuild,v 1.1 2011/04/27 22:01:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/gaffitter-0.6.0-r1.ebuild,v 1.2 2011/05/01 20:22:55 hwoarang Exp $
 
 EAPI="2"
 
@@ -24,7 +24,9 @@ src_prepare() {
 	sed -i  -e "/^INCLUDES\ =.*/d" \
 		-e "s/^CXXFLAGS\ =.*/CXXFLAGS\ =\ ${CXXFLAGS} ${LDFLAGS}/" \
 		-e "s/^CXX\ =.*/CXX\ =\ $(tc-getCXX)/" src/Makefile || die "sed failed"
-	sed -i -re "s:--data((cd)|(dvd)):--data:" "${WORKDIR}"/${PN}/${SCRIPTS}/gaff-k3b || die
+	if use scripts; then
+		sed -i -re "s:--data((cd)|(dvd)):--data:" "${WORKDIR}"/${PN}/${SCRIPTS}/gaff-k3b || die
+	fi
 }
 
 src_install() {

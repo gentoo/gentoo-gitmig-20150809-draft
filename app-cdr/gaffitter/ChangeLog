@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gaffitter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/ChangeLog,v 1.5 2011/04/27 22:01:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gaffitter/ChangeLog,v 1.6 2011/05/01 20:22:55 hwoarang Exp $
+
+  01 May 2011; Markos Chandras <hwoarang@gentoo.org> gaffitter-0.6.0-r1.ebuild:
+  Guard script sed command with an if statement
 
 *gaffitter-0.6.0-r1 (27 Apr 2011)
 
