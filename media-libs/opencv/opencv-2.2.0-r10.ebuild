@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.1 2011/04/30 19:37:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.2 2011/05/01 17:53:38 dilfridge Exp $
 
 EAPI=3
 
@@ -25,6 +25,7 @@ RESTRICT=test
 RDEPEND="
 	app-arch/bzip2
 	dev-libs/libf2c
+	sys-devel/gcc[fortran]
 	sys-libs/zlib
 	>=sci-libs/clapack-3.2.1-r4
 	sci-libs/flann
@@ -64,6 +65,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${P}-convert_sets_to_options.patch"
+	"${FILESDIR}/${P}-fortran.patch"
 	"${FILESDIR}/${P}-ffmpeg01.patch"
 	"${FILESDIR}/${P}-ffmpeg02.patch"
 	"${FILESDIR}/${P}-gcc46.patch"
