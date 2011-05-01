@@ -1,6 +1,30 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.63 2011/01/09 13:58:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.64 2011/05/01 09:58:24 pva Exp $
+
+*transfig-3.2.5d-r1 (01 May 2011)
+
+  01 May 2011; Peter Volkov <pva@gentoo.org> -transfig-3.2.5-r2.ebuild,
+  -files/transfig-3.2.5-SetFigFont-params.patch,
+  -files/transfig-3.2.5-arrows-and-QA.patch,
+  -files/transfig-3.2.5-displaywho.patch,
+  -files/transfig-3.2.5-fig2ps2tex_bashisms.patch,
+  -files/transfig-3.2.5-imagemap.patch, -files/transfig-3.2.5-locale.patch,
+  -transfig-3.2.5c.ebuild, -files/transfig-3.2.5c-avoid_warnings.patch,
+  -files/transfig-3.2.5c-cups_workaround.patch,
+  -files/transfig-3.2.5c-fig2mpdf.patch, +transfig-3.2.5d-r1.ebuild,
+  +files/transfig-3.2.5d-MAXWIDTH.patch, -files/transfig-3.2.5d-fig2mpdf.patch,
+  +files/transfig-3.2.5d-fig2mpdf-r1.patch,
+  +files/transfig-3.2.5d-leadspace.patch,
+  +files/transfig-3.2.5d-libpng-1.5.patch,
+  +files/transfig-3.2.5d-precision.patch:
+  Update to EAPI=4 and incorportage some prefix changes, bug #353408, thank
+  Jeremy Olexa for report. Fix build issue with libpng-1.5, bug #356751 thank
+  Alexis Ballier for the patch. Added debian fixes: update fig2mpdf patch to
+  use list of layers instead of range of layers; leadspace patch to aoid wrong
+  leading spaces in PIC text; precision to change the precision of PIC floating
+  point output from %.2f to %.3f; MAXWIDTH to increasese MAXWIDTH of embedded
+  images from 8K to 16K. Drop old.
 
   09 Jan 2011; Brent Baude <ranger@gentoo.org> transfig-3.2.5d.ebuild:
   Marking transfig-3.2.5d ppc for bug 348344

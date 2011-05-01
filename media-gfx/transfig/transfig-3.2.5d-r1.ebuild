@@ -1,20 +1,20 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5c.ebuild,v 1.6 2010/11/24 12:15:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5d-r1.ebuild,v 1.1 2011/05/01 09:58:24 pva Exp $
 
-EAPI="2"
+EAPI="4"
 inherit toolchain-funcs eutils flag-o-matic
 
 MY_P=${PN}.${PV}
 
 DESCRIPTION="A set of tools for creating TeX documents with graphics"
 HOMEPAGE="http://www.xfig.org/"
-SRC_URI="http://xfig.org/software/xfig/${PV/[a-z]}/${MY_P}.tar.gz
+SRC_URI="mirror://sourceforge/mcj/${MY_P}.tar.gz
 	mirror://gentoo/fig2mpdf-1.1.2.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXpm
@@ -29,12 +29,14 @@ S=${WORKDIR}/${MY_P}
 
 sed_Imakefile() {
 	# see fig2dev/Imakefile for details
-	vars2subs="BINDIR=/usr/bin
-			MANDIR=/usr/share/man/man\$\(MANSUFFIX\)
-			XFIGLIBDIR=/usr/share/xfig
+	vars2subs="BINDIR=${EPREFIX}/usr/bin
+			MANDIR=${EPREFIX}/usr/share/man/man\$\(MANSUFFIX\)
+			XFIGLIBDIR=${EPREFIX}/usr/share/xfig
+			PNGINC=-I${EPREFIX}/usr/include/X11
+			XPMINC=-I${EPREFIX}/usr/include/X11
 			USEINLINE=-DUSE_INLINE
-			RGB=/usr/share/X11/rgb.txt
-			FIG2DEV_LIBDIR=/usr/share/fig2dev"
+			RGB=${EPREFIX}/usr/share/X11/rgb.txt
+			FIG2DEV_LIBDIR=${EPREFIX}/usr/share/fig2dev"
 
 	for variable in ${vars2subs} ; do
 		varname=${variable%%=*}
@@ -46,10 +48,13 @@ sed_Imakefile() {
 src_prepare() {
 	find . -type f -exec chmod a-x '{}' \;
 	find . -name Makefile -delete
-	epatch "${FILESDIR}"/${P}-cups_workaround.patch
-	epatch "${FILESDIR}"/${P}-avoid_warnings.patch
-	epatch "${FILESDIR}"/${P}-fig2mpdf.patch
-	epatch "${FILESDIR}"/${P}-maxfontsize.patch
+	epatch "${FILESDIR}"/${P}-fig2mpdf-r1.patch
+	epatch "${FILESDIR}"/${PN}-3.2.5c-maxfontsize.patch
+	epatch "${FILESDIR}"/${P}-leadspace.patch
+	epatch "${FILESDIR}"/${P}-precision.patch
+	epatch "${FILESDIR}"/${P}-MAXWIDTH.patch
+	epatch "${FILESDIR}"/${P}-libpng-1.5.patch #356751
+
 	sed -e 's:-L$(ZLIBDIR) -lz::' \
 		-e 's: -lX11::' \
 			-i fig2dev/Imakefile || die
@@ -58,27 +63,29 @@ src_prepare() {
 
 src_compile() {
 	xmkmf || die "xmkmf failed"
-	emake Makefiles || die "make Makefiles failed"
+	emake Makefiles
 
 	emake CC="$(tc-getCC)" LOCAL_LDFLAGS="${LDFLAGS}" CDEBUGFLAGS="${CFLAGS}" \
-		USRLIBDIR=/usr/$(get_libdir) || die "emake failed"
+		USRLIBDIR="${EPREFIX}/usr/$(get_libdir)"
 }
 
 src_install() {
 	emake DESTDIR="${D}" \
-		${transfig_conf} install install.man || die
+		${transfig_conf} install install.man
 
-	dobin "${WORKDIR}/fig2mpdf/fig2mpdf" || die
-	doman "${WORKDIR}/fig2mpdf/fig2mpdf.1" || die
+	dobin "${WORKDIR}/fig2mpdf/fig2mpdf"
+	doman "${WORKDIR}/fig2mpdf/fig2mpdf.1"
 
 	insinto /usr/share/fig2dev/
-	newins "${FILESDIR}/transfig-ru_RU.CP1251.ps" ru_RU.CP1251.ps || die
-	newins "${FILESDIR}/transfig-ru_RU.KOI8-R.ps" ru_RU.KOI8-R.ps || die
-	newins "${FILESDIR}/transfig-uk_UA.KOI8-U.ps" uk_UA.KOI8-U.ps || die
+	newins "${FILESDIR}/transfig-ru_RU.CP1251.ps" ru_RU.CP1251.ps
+	newins "${FILESDIR}/transfig-ru_RU.KOI8-R.ps" ru_RU.KOI8-R.ps
+	newins "${FILESDIR}/transfig-uk_UA.KOI8-U.ps" uk_UA.KOI8-U.ps
 
 	dohtml "${WORKDIR}/fig2mpdf/doc/"* || die
 
-	dodoc README CHANGES LATEX.AND.XFIG NOTES || die
+	mv "${ED}"/usr/bin/fig2ps2tex{.sh,} || die #338295
+
+	dodoc README CHANGES LATEX.AND.XFIG NOTES
 }
 
 pkg_postinst() {
