@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.24 2011/04/26 15:49:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.25 2011/05/01 14:58:16 xarthisius Exp $
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> garcon-0.1.7.ebuild:
+  ppc/ppc64 stable wrt #363767
 
   26 Apr 2011; Jeroen Roovers <jer@gentoo.org> garcon-0.1.7.ebuild:
   Stable for HPPA (bug #363767).
