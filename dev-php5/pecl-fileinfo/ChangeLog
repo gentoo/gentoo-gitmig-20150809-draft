@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/pecl-fileinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.33 2011/04/16 19:49:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.34 2011/05/02 15:47:05 jer Exp $
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> pecl-fileinfo-1.0.4-r2.ebuild:
+  Stable for HPPA (bug #363811).
 
   16 Apr 2011; Christoph Mende <angelos@gentoo.org>
   pecl-fileinfo-1.0.4-r2.ebuild:
