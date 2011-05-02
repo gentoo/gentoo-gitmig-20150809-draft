@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.32 2011/03/14 19:39:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.33 2011/05/02 21:24:52 billie Exp $
+
+  02 May 2011; Daniel Pielmeier <billie@gentoo.org> rubyripper-0.5.5-r1.ebuild,
+  rubyripper-0.5.7.ebuild, rubyripper-0.6.0.ebuild:
+  Remove unneeded dependency on dev-ruby/rcairo. Every version of rubyripper
+  compiles and runs without it.
 
   14 Mar 2011; Daniel Pielmeier <billie@gentoo.org> rubyripper-0.6.0.ebuild:
   Use VIRTUALX_COMMAND.

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.7.ebuild,v 1.3 2009/12/06 12:14:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.7.ebuild,v 1.4 2011/05/02 21:24:52 billie Exp $
 
 EAPI=2
 VIRTUALX_REQUIRED="always"
@@ -21,8 +21,7 @@ for lingua in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lingua}"
 done
 
-RDEPEND="gtk? ( dev-ruby/ruby-gtk2
-	>=dev-ruby/rcairo-1.8.0-r1[svg] )
+RDEPEND="gtk? ( dev-ruby/ruby-gtk2 )
 	dev-ruby/ruby-gettext
 	virtual/eject
 	media-sound/cd-discid
