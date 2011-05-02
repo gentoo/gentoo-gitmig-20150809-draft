@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/fprintd-0.2.0.ebuild,v 1.1 2010/10/27 12:10:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/fprintd-0.2.0.ebuild,v 1.2 2011/05/02 14:50:14 halcy0n Exp $
 
 EAPI=3
 
@@ -52,9 +52,9 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README TODO || die
 	if use doc ; then
-		insinto ${EPREFIX}/usr/share/doc/${PF}/html
+		insinto /usr/share/doc/${PF}/html
 		doins doc/{fprintd-docs,version}.xml || die
-		insinto ${EPREFIX}/usr/share/doc/${PF}/html/dbus
+		insinto /usr/share/doc/${PF}/html/dbus
 		doins doc/dbus/net.reactivated.Fprint.{Device,Manager}.ref.xml || die
 	fi
 }
