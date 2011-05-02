@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.93 2011/03/27 14:34:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.94 2011/05/02 13:15:06 tomka Exp $
+
+  02 May 2011; Thomas Kahle <tomka@gentoo.org> libarchive-2.8.4-r1.ebuild:
+  x86 stable per bug 357771
 
   27 Mar 2011; Tobias Klausmann <klausman@gentoo.org>
   libarchive-2.8.4-r1.ebuild:
