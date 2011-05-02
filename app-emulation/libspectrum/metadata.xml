@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>neurogeek@gentoo.org</email>
+	<name>Jesus Rivero</name>
 	<description>Proxy Maintainer</description>
 </maintainer>
 <maintainer>
@@ -17,4 +18,8 @@ Spectrum emulator files slightly easier. It is intended to be usable on Unix
 variants, Win32 and Mac OS X. Currently, it is mainly (only?) used by Fuse,
 but other Spectrum emulator and utility authors are encouraged to use it.
 </longdescription>
+<use>
+	<flag name='gcrypt'>Use <pkg>dev-libs/libgcrypt</pkg> for low-level crypto of some
+	features, including logfiles.</flag>
+</use>
 </pkgmetadata>

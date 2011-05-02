@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/libspectrum
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.27 2010/03/28 03:59:33 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.28 2011/05/02 19:29:50 neurogeek Exp $
+
+*libspectrum-1.0.0 (02 May 2011)
+
+  02 May 2011; Jesus Rivero <neurogeek@gentoo.org>
+  +libspectrum-1.0.0.ebuild, metadata.xml:
+  Version bump. WRT bug #351726
 
   28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   Drop myself from metadata, add maintainer-needed
