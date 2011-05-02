@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.4 2011/04/08 16:00:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.5 2011/05/02 15:55:10 jer Exp $
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> libwebp-0.1.2.ebuild:
+  Marked ~hppa (bug #359963).
 
   08 Apr 2011; Markus Meier <maekke@gentoo.org> libwebp-0.1.ebuild:
   add ~arm, bug #359963
