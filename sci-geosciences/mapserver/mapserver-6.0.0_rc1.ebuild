@@ -1,10 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.4 2011/05/02 18:40:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.5 2011/05/02 19:01:42 scarabeus Exp $
 
 EAPI=3
 
 MY_P="${PN}-${PV/_/-}"
+
+PHP_EXT_NAME="php_mapscript"
+PHP_EXT_S="${WORKDIR}/${MY_P}/mapscript/php/"
+PHP_EXT_SKIP_PHPIZE="no"
+USE_PHP="php5-3"
 
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,7 +20,7 @@ PYTHON_MODNAME="mapscript.py"
 
 WEBAPP_MANUAL_SLOT=yes
 
-inherit eutils autotools depend.apache webapp distutils perl-module # ruby-ng
+inherit eutils autotools depend.apache webapp distutils perl-module php-ext-source-r2 # ruby-ng
 
 DESCRIPTION="OpenSource development environment for constructing spatially enabled Internet-web applications."
 HOMEPAGE="http://mapserver.org"
@@ -25,7 +30,7 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 
 # I must check for mygis use flag availability
-IUSE="bidi cairo gdal geos gif mysql opengl perl postgis proj python threads tiff xml xslt" # ruby php tcl
+IUSE="bidi cairo gdal geos gif mysql opengl perl php postgis proj python threads tiff xml xslt" # ruby php tcl
 
 RDEPEND="
 	dev-libs/expat
@@ -87,7 +92,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	default
+	# unpack A and then copy the php thingies into workdir/php-slot
+	php-ext-source-r2_src_unpack
 }
 
 src_prepare() {
@@ -109,7 +115,7 @@ src_configure() {
 	fi
 
 	# some scripts require configure time options so place it here
-	#use php && myopts+=" --with-php=$(${PHPCONFIG} --include-dir)"
+	use php && myopts+=" --with-php=${EPREFIX}/usr/lib64/php5.3/include/php/"
 
 	# sde is ESRI package that you have to buy first
 	# oraclespatial needs oracle server for testing/usage
@@ -148,10 +154,11 @@ src_configure() {
 }
 
 src_compile() {
-	default
+	emake -j1 || die
 	use python && _enter_build_dir "${S}/mapscript/python" "distutils_src_compile"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_prep"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_compile"
+	use php && php-ext-source-r2_src_compile
 	#use ruby && _enter_build_dir "${S}/mapscript/ruby" "ruby-ng_src_compile"
 }
 
@@ -173,6 +180,7 @@ src_install() {
 	use python && _enter_build_dir "${S}/mapscript/python" "distutils_src_install"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_install"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "fixlocalpod"
+	use php && php-ext-source-r2_src_install
 	#use ruby && _enter_build_dir "${S}/mapscript/ruby" "ruby-ng_src_install"
 
 	webapp_src_preinst
