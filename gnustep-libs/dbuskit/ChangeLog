@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-libs/dbuskit
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/dbuskit/ChangeLog,v 1.1 2011/05/02 13:41:54 voyageur Exp $
+
+*dbuskit-0.1 (02 May 2011)
+
+  02 May 2011; Bernard Cafarelli <voyageur@gentoo.org> +dbuskit-0.1.ebuild,
+  +metadata.xml:
+  Initial commit
+
