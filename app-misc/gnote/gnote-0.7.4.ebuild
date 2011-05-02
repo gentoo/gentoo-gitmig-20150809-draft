@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.2.ebuild,v 1.4 2011/03/07 00:18:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.4.ebuild,v 1.1 2011/05/02 21:02:38 eva Exp $
 
-EAPI="2"
+EAPI="3"
+GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -14,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="applet debug" # dbus
 
-RDEPEND=">=x11-libs/gtk+-2.14:2
-	>=dev-cpp/glibmm-2:2
+RDEPEND=">=x11-libs/gtk+-2.20:2
+	>=dev-cpp/glibmm-2.18:2
 	>=dev-cpp/gtkmm-2.12:2.4
 	>=dev-libs/libxml2-2:2
 	dev-libs/libxslt
@@ -26,6 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.14:2
 	sys-libs/e2fsprogs-libs
 	applet? (
 		>=gnome-base/gnome-panel-2
+		<gnome-base/gnome-panel-2.91
 		>=dev-cpp/libpanelappletmm-2.26:2.6 )"
 # Build with dbus is currently not implemented
 #	dbus? ( >=dev-libs/dbus-glib-0.70 )"
@@ -35,9 +37,8 @@ DEPEND="${DEPEND}
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		--disable-dbus
 		--disable-static
@@ -51,9 +52,4 @@ src_prepare() {
 	# Do not set idiotic defines in a released tarball, bug #311979
 	sed 's/-DG.*_DISABLE_DEPRECATED//g' -i libtomboy/Makefile.am \
 		libtomboy/Makefile.in || die "sed failed"
-}
-
-src_install() {
-	gnome2_src_install
-	find "${D}" -name "*.la" -delete || die "la file removal failed"
 }
