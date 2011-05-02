@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.38 2011/04/04 07:24:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.39 2011/05/02 16:26:19 ssuominen Exp $
+
+  02 May 2011; Samuli Suominen <ssuominen@gentoo.org> nettle-2.1.ebuild:
+  ppc64 stable wrt #337160
 
   04 Apr 2011; Michael Weber <xmw@gentoo.org> nettle-2.1.ebuild:
   arm/sparc stable (bug 337160)
