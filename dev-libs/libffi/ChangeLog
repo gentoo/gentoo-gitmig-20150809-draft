@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.120 2011/04/13 20:14:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.121 2011/05/02 09:16:11 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> libffi-3.0.10_rc8.ebuild:
+  Marked ~x64-freebsd
 
   13 Apr 2011; Brent Baude <ranger@gentoo.org> libffi-3.0.9-r2.ebuild:
   Marking libffi-3.0.9-r2 ppc for bug 360465
