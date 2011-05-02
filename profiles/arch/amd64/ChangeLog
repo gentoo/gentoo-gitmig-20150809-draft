@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.128 2011/05/01 10:20:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.129 2011/05/02 14:12:39 hwoarang Exp $
+
+  02 May 2011; Markos Chandras <hwoarang@gentoo.org> package.use.mask,
+  use.mask:
+  Keep firebird masked globally. Unmask it only for php
 
   01 May 2011; Markos Chandras <hwoarang@gentoo.org> use.mask:
   Move firebird to a more appropriate section
