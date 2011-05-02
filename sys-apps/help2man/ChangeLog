@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.59 2011/03/03 01:31:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.60 2011/05/02 09:17:32 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> help2man-1.39.1.ebuild:
+  Marked ~x64-freebsd
 
 *help2man-1.39.1 (03 Mar 2011)
 
