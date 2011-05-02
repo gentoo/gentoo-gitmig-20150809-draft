@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.6.0.ebuild,v 1.2 2011/03/15 19:25:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.6.0.ebuild,v 1.3 2011/05/02 06:03:40 jer Exp $
+
+EAPI="2"
+
+inherit autotools-utils
 
 DESCRIPTION="The GNU SASL client, server, and library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -8,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="doc gcrypt idn kerberos nls static"
+IUSE="doc gcrypt idn kerberos nls static-libs"
 
 # TODO: check http://www.gnu.org/software/gsasl/#dependencies for more
 # 	optional external libraries.
@@ -20,7 +24,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	econf \
 		--enable-client \
 		--enable-server \
@@ -29,13 +33,12 @@ src_compile() {
 		$(use_with gcrypt libgcrypt) \
 		$(use_enable nls) \
 		$(use_with idn stringprep) \
-		$(use_enable static) \
-	|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable static-libs static)
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "einstall failed"
+	use static-libs || remove_libtool_files
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 	doman doc/gsasl.1
 
