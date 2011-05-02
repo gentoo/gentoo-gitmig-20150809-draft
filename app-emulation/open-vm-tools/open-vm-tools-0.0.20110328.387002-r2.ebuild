@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20110328.387002-r2.ebuild,v 1.1 2011/04/20 14:40:51 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20110328.387002-r2.ebuild,v 1.2 2011/05/02 11:15:33 angelos Exp $
 
 EAPI="2"
 
@@ -21,17 +21,17 @@ KEYWORDS="~amd64 ~x86"
 IUSE="X doc fuse icu +pic unity xinerama"
 
 RDEPEND="app-emulation/open-vm-tools-kmod
-	>=dev-libs/glib-2
+	dev-libs/glib:2
 	dev-libs/libdnet
 	sys-apps/ethtool
 	sys-process/procps
 	virtual/pam
 	X? (
-		dev-cpp/gtkmm
+		dev-cpp/gtkmm:2.4
 		x11-base/xorg-server
 		x11-drivers/xf86-input-vmmouse
 		x11-drivers/xf86-video-vmware
-		x11-libs/gtk+
+		x11-libs/gtk+:2
 		x11-libs/libnotify
 		x11-libs/libX11
 		x11-libs/libXtst
