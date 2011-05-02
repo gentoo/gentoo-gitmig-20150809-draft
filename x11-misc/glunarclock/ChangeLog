@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glunarclock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.24 2011/04/19 07:57:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.25 2011/05/02 12:15:33 tomka Exp $
+
+  02 May 2011; Thomas Kahle <tomka@gentoo.org> glunarclock-0.34.1.ebuild:
+  x86 stable per bug 318967
 
   19 Apr 2011; Michael Weber <xmw@gentoo.org> metadata.xml:
   Taking maintainer-ship
