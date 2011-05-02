@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.3 2011/05/02 18:28:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.4 2011/05/02 18:40:38 scarabeus Exp $
 
 EAPI=3
 
@@ -55,8 +55,12 @@ RDEPEND="
 	xml? ( dev-libs/libxml2:2 )
 	xslt? ( dev-libs/libxslt[crypt] )
 "
+for i in perl python; do
+	SWIG_DEPEND+=" ${i}? ( >=dev-lang/swig-2.0 )"
+done
+DEPEND="${RDEPEND} ${SWIG_DEPEND}"
+unset SWIG_DEPEND
 
-DEPEND="${RDEPEND}"
 need_apache2
 
 S=${WORKDIR}/${MY_P}
