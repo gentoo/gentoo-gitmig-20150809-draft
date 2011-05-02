@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpi-dotnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.7 2011/01/25 23:34:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.8 2011/05/02 14:51:21 halcy0n Exp $
+
+  02 May 2011; Mark Loeser <halcy0n@gentoo.org> mpi-dotnet-1.0.0.ebuild:
+  ROOT is already prepended when using insinto
 
   25 Jan 2011; Matti Bickel <mabi@gentoo.org> mpi-dotnet-1.0.0.ebuild:
   allow building with mono-2.8 (bug #346133)
