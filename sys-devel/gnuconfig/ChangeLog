@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.54 2011/02/19 17:40:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.55 2011/05/02 08:55:30 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> gnuconfig-20110202.ebuild:
+  Marked ~x64-freebsd
 
 *gnuconfig-20110202 (19 Feb 2011)
 
