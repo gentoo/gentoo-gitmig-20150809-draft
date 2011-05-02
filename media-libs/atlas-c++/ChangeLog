@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.36 2011/03/14 13:32:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.37 2011/05/02 09:47:29 tupone Exp $
+
+  02 May 2011; Tupone Alfredo <tupone@gentoo.org> atlas-c++-0.6.2.ebuild,
+  +files/atlas-c++-0.6.2-Werror.patch:
+  Remove -Werror. Bug #362733 by Diego Elio Pettenò
 
   14 Mar 2011; Alfredo Tupone <tupone@gentoo.org> -atlas-c++-0.4.5.ebuild,
   -atlas-c++-0.5.92.ebuild:

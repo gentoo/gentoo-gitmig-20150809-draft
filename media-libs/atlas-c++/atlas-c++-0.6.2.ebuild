@@ -1,7 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.2.ebuild,v 1.5 2011/02/12 18:06:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.2.ebuild,v 1.6 2011/05/02 09:47:29 tupone Exp $
 EAPI=2
+
+inherit eutils autotools
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
@@ -19,6 +21,11 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-Werror.patch
+	eautoreconf
+}
 
 src_compile() {
 	emake || die "Error: emake failed!"
