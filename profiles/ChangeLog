@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5343 2011/05/01 20:10:25 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5344 2011/05/02 05:36:24 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
+  Remove patan.com.ar mirrors.
 
   01 May 2011; <olemarkus@gentoo.org> package.mask:
   Masking SVN snapshot versions of PHP
