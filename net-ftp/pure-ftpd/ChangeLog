@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.111 2011/04/27 11:54:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.112 2011/05/02 20:40:08 polynomial-c Exp $
+
+*pure-ftpd-1.0.32 (02 May 2011)
+
+  02 May 2011; Lars Wendler <polynomial-c@gentoo.org> +pure-ftpd-1.0.32.ebuild:
+  Security bump. Thanks to Mark Wagner for reporting this issue in bug #365751.
 
 *pure-ftpd-1.0.31 (27 Apr 2011)
 
