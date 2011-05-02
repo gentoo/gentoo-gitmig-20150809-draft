@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.165 2011/04/28 21:26:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.166 2011/05/02 13:14:03 tomka Exp $
+
+  02 May 2011; Thomas Kahle <tomka@gentoo.org> cmake-2.8.4-r1.ebuild:
+  x86 stable per bug 357771
 
   28 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -cmake-2.8.4.ebuild,
   cmake-2.8.4-r1.ebuild:
