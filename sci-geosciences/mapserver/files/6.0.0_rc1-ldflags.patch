@@ -1,6 +1,6 @@
-diff -urN mapserver-6.0.0-rc1.old//Makefile.in mapserver-6.0.0-rc1/Makefile.in
---- mapserver-6.0.0-rc1.old//Makefile.in	2011-05-02 12:10:03.000000000 +0200
-+++ mapserver-6.0.0-rc1/Makefile.in	2011-05-02 12:12:46.000000000 +0200
+diff -urN mapserver-6.0.0-rc1.old/Makefile.in mapserver-6.0.0-rc1/Makefile.in
+--- mapserver-6.0.0-rc1.old/Makefile.in	2011-05-02 12:10:03.000000000 +0200
++++ mapserver-6.0.0-rc1/Makefile.in	2011-05-02 16:29:31.000000000 +0200
 @@ -264,7 +264,7 @@
  # STATIC_LIBS is full filename with path of libs that will be statically linked
  STATIC_LIBS= $(GD_STATIC)
@@ -83,7 +83,7 @@ diff -urN mapserver-6.0.0-rc1.old//Makefile.in mapserver-6.0.0-rc1/Makefile.in
  	echo $(IGNORE_MISSING_DATA) $(USE_POINT_Z_M) $(STRINGS) @ALL_ENABLED@ >> mapscriptvars
  	echo -I. $(PROJ_INC) $(GD_INC) $(TTF_INC) $(JPEG_INC) $(SDE_INC) $(OGR_INC) $(GDAL_INC) $(GEOS_INC) >> mapscriptvars
 -	echo $(EXE_LDFLAGS) >> mapscriptvars
-+	echo $(LDFLAGS) >> mapscriptvars
++	echo $(EXE_LIBS) >> mapscriptvars
  	echo $(STATIC_LIBS) >> mapscriptvars
  	grep '#define MS_VERSION ' mapserver.h >> mapscriptvars
  
