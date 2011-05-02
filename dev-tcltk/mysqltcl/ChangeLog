@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/mysqltcl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.14 2010/03/24 21:30:28 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.15 2011/05/02 06:03:44 jlec Exp $
+
+  02 May 2011; Justin Lecher <jlec@gentoo.org> mysqltcl-2.40.ebuild,
+  mysqltcl-2.50.ebuild, mysqltcl-3.05.ebuild,
+  +files/mysqltcl-3.05-ldflags.patch:
+  Respect LDFLAGS, #336129
 
   24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mysqltcl-3.05.ebuild:
   Bug #264690: fix compile on non-symlink multilib systems.

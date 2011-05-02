@@ -1,17 +1,20 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-2.40.ebuild,v 1.6 2006/11/23 17:37:23 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-2.40.ebuild,v 1.7 2011/05/02 06:03:44 jlec Exp $
 
 DESCRIPTION="TCL MySQL Interface"
 HOMEPAGE="http://www.xdobry.de/mysqltcl/"
 SRC_URI="http://www.xdobry.de/mysqltcl/${P}.tar.gz"
+
 IUSE=""
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=dev-lang/tcl-8.1.0
+DEPEND="
+	dev-lang/tcl
 	virtual/mysql"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -21,13 +24,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
+	econf
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING README README-msqltcl ChangeLog
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS README README-msqltcl ChangeLog
 	dohtml doc/mysqltcl.html
-	prepalldocs
 }
