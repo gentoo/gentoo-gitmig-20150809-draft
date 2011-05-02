@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.7 2011/05/02 19:48:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.8 2011/05/02 19:53:02 arfrever Exp $
 
 EAPI=3
 
 MY_P="${PN}-${PV/_/-}"
 
+PHP_EXT_OPTIONAL_USE="php"
 PHP_EXT_NAME="php_mapscript"
 PHP_EXT_S="${WORKDIR}/${MY_P}/mapscript/php/"
 PHP_EXT_SKIP_PHPIZE="no"
