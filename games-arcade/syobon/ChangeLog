@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/syobon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/ChangeLog,v 1.1 2011/04/25 22:16:50 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/ChangeLog,v 1.2 2011/05/02 07:37:34 mr_bones_ Exp $
+
+  02 May 2011; Michael Sterrett <mr_bones_@gentoo.org> syobon-1.0.1.ebuild:
+  tidy; add use deps
 
 *syobon-1.0.1 (25 Apr 2011)
 
