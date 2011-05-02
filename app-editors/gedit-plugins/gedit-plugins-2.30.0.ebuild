@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.30.0.ebuild,v 1.5 2011/04/16 20:01:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.30.0.ebuild,v 1.6 2011/05/02 19:12:17 arfrever Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
-PYTHON_DEPEND="session? 2"
-PYTHON_USE_WITH_OPT="session? xml"
+PYTHON_DEPEND="session? 2:2.6"
+PYTHON_USE_WITH="xml"
+PYTHON_USE_WITH_OPT="session"
 
 inherit gnome2 multilib python eutils
 
