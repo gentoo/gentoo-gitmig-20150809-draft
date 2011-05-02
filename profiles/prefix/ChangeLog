@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.275 2011/05/01 20:15:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.276 2011/05/02 19:36:17 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> bsd/package.mask,
+  sunos/solaris/package.mask:
+  Drop qt-7 masks (darwin bit was accidentially removed before)
 
   01 May 2011; Fabian Groffen <grobian@gentoo.org> bsd/freebsd/package.mask:
   Mask binutils-2.21.51 on FreeBSD, as long as #347931 isn't fully fixed
