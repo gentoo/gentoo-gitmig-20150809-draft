@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.370 2011/04/25 16:00:07 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.371 2011/05/02 17:00:18 jer Exp $
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> vim-7.3.135.ebuild:
+  Stable for HPPA (bug #364807).
 
 *vim-7.3.162 (25 Apr 2011)
 

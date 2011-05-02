@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.356 2011/04/25 15:58:53 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.357 2011/05/02 16:59:54 jer Exp $
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> vim-core-7.3.135.ebuild:
+  Stable for HPPA (bug #364807).
 
 *vim-core-7.3.162 (25 Apr 2011)
 
