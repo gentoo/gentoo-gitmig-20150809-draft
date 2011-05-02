@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.19.9.ebuild,v 1.2 2011/02/23 15:40:50 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.19.9.ebuild,v 1.3 2011/05/02 16:46:15 signals Exp $
 
 EAPI=4
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -26,6 +26,10 @@ src_prepare() {
 	sed -i \
 		-e 's^icons/gnome/16x16/mimetypes^gentoo/icons^' \
 		gentoorc.in || die "Fixing icon path failed."
+	sed -i \
+		-e '/GTK_DISABLE_DEPRECATED/ d' \
+		configure.in || die "Fixing configure.in failed" #357343
+	eautoreconf
 }
 
 src_configure() {
