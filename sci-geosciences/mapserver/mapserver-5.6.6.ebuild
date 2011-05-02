@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.4.2-r1.ebuild,v 1.7 2011/04/12 18:20:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.6.6.ebuild,v 1.1 2011/05/02 10:16:17 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -64,7 +64,7 @@ cd_script() {
 }
 
 pkg_setup() {
-	webapp_pkg_setup
+	#webapp_pkg_setup
 	use java && java-pkg-opt-2_pkg_setup
 	use perl && perl-module_pkg_setup
 	use php && has_php
@@ -75,7 +75,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
+	epatch "${FILESDIR}"/5.4.2-ldflags.patch
 
 	if use tcl ; then
 		epatch "${FILESDIR}"/${PN}_tcl.patch-r1
