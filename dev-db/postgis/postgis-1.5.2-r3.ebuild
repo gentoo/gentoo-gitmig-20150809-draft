@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.2-r2.ebuild,v 1.1 2011/05/02 04:31:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.2-r3.ebuild,v 1.1 2011/05/02 11:40:31 titanofold Exp $
 
 EAPI="4"
 
@@ -42,9 +42,9 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 PGIS="$(get_version_component_range 1-2)"
-PGSLOT="$(postgresql-config show)"
 
-pkg_pretend() {
+pkg_setup() {
+	export PGSLOT="$(postgresql-config show)"
 	if [[ ${PGSLOT//.} < 83 ]] ; then
 		eerror "You must build ${CATEGORY}/${PN} against PostgreSQL 8.3 or higher."
 		eerror "Set an appropriate slot with postgresql-config."
