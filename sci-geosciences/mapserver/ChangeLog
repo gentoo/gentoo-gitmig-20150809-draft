@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.37 2011/05/02 20:09:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.38 2011/05/02 21:51:22 scarabeus Exp $
+
+  02 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/6.0.0_rc1-php_ldflags.patch, mapserver-6.0.0_rc1.ebuild:
+  Make php extension really work.
 
   02 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   mapserver-6.0.0_rc1.ebuild:

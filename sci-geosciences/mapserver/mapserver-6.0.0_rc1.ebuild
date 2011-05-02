@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.10 2011/05/02 20:09:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.11 2011/05/02 21:51:22 scarabeus Exp $
 
 EAPI=3
 
@@ -87,6 +87,16 @@ _enter_build_dir() {
 
 each_ruby_configure() { ${RUBY} extconf.rb || die ; }
 
+ext-source-r2_src_install() {
+	local slot
+	for slot in $(php_get_slots); do
+		php_init_slot_env ${slot}
+		insinto "${EXT_DIR}"
+		newins "${PHP_EXT_NAME}.so" "${PHP_EXT_NAME}.so" || die "Unable to install extension"
+	done
+	php-ext-source-r2_createinifiles
+}
+
 pkg_setup() {
 	webapp_pkg_setup
 	use perl && perl-module_pkg_setup
@@ -97,11 +107,17 @@ pkg_setup() {
 src_unpack() {
 	# unpack A and then copy the php thingies into workdir/php-slot
 	php-ext-source-r2_src_unpack
+	# HACK: and then remove it and replace by symlink
+	for slot in $(php_get_slots); do
+		rm -rf "${WORKDIR}/${slot}" || die
+		ln -s "${PHP_EXT_S}" "${WORKDIR}/${slot}" || die
+	done
 }
 
 src_prepare() {
 	epatch "${FILESDIR}/6.0.0_rc1-ldflags.patch" \
-		"${FILESDIR}/6.0.0_rc1-bool.patch"
+		"${FILESDIR}/6.0.0_rc1-bool.patch" \
+		"${FILESDIR}/6.0.0_rc1-php_ldflags.patch"
 	eautoreconf
 }
 
@@ -158,11 +174,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die
+	emake || die
 	use python && _enter_build_dir "${S}/mapscript/python" "distutils_src_compile"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_prep"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_compile"
-	use php && php-ext-source-r2_src_compile
+	#use php && php-ext-source-r2_src_compile # already compiled by the emake all
 	#use ruby && _enter_build_dir "${S}/mapscript/ruby" "ruby-ng_src_compile"
 }
 
@@ -184,7 +200,7 @@ src_install() {
 	use python && _enter_build_dir "${S}/mapscript/python" "distutils_src_install"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_install"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "fixlocalpod"
-	use php && php-ext-source-r2_src_install
+	use php && ext-source-r2_src_install
 	#use ruby && _enter_build_dir "${S}/mapscript/ruby" "ruby-ng_src_install"
 
 	webapp_src_preinst
