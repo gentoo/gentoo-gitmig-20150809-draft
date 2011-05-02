@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.36 2011/04/28 20:21:33 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.37 2011/05/02 19:34:55 grozin Exp $
+
+  02 May 2011; Andrey Grozin <grozin@gentoo.org> files/20b-patch001.patch:
+  cvs commit mangled the file 20b-patch001.patch; now the offending chunk is
+  removed
 
 *cmucl-20b_p001 (29 Apr 2011)
 
