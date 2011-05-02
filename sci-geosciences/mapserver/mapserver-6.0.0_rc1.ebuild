@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.9 2011/05/02 20:05:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.10 2011/05/02 20:09:56 scarabeus Exp $
 
 EAPI=3
 
@@ -30,11 +30,11 @@ SRC_URI="http://download.osgeo.org/mapserver/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
-
-# I must check for mygis use flag availability
+SLOT="0"
 IUSE="bidi cairo gdal geos gif mysql opengl perl php postgis proj python threads tiff xml xslt" # ruby php tcl
 
 RDEPEND="
+	!${CATEGORY}/${PN}:${PV}
 	dev-libs/expat
 	dev-libs/fcgi
 	>=media-libs/gd-2.0.12[truetype,jpeg,png,zlib]
