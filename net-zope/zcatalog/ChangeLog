@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/zcatalog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zcatalog/ChangeLog,v 1.7 2011/04/21 23:43:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zcatalog/ChangeLog,v 1.8 2011/05/02 22:01:49 arfrever Exp $
+
+*zcatalog-2.13.12 (02 May 2011)
+
+  02 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zcatalog-2.13.12.ebuild:
+  Version bump.
 
 *zcatalog-2.13.10 (21 Apr 2011)
 
