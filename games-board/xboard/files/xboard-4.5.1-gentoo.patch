@@ -1,0 +1,101 @@
+diff -ru xboard-4.5.1.orig/Makefile.am xboard-4.5.1/Makefile.am
+--- xboard-4.5.1.orig/Makefile.am	2011-02-08 00:07:46.000000000 -0500
++++ xboard-4.5.1/Makefile.am	2011-04-07 01:59:35.259757241 -0400
+@@ -33,14 +33,10 @@
+ 		 $(ZPY)
+ xboard_LDADD = -lm @XAW_LIBS@ @X_LIBS@
+ 
+-EXTRA_DIST = pixmaps bitmaps winboard sounds filebrowser/README \
+-	xboard.texi gpl.texinfo texi2man texinfo.tex xboard.man xboard.desktop \
+-	COPYRIGHT FAQ.html engine-intf.html ics-parsing.txt readme.htm zippy.README \
+-	xboard.conf.in SHORTLOG DIFFSTAT history.c
+-
+ DISTCLEANFILES = stamp-h
+ 
+-AM_CPPFLAGS=-DINFODIR='"$(infodir)"' @X_CFLAGS@  -DSYSCONFDIR='"$(sysconfdir)"' -DBITMAPDIR='"$(datadir)/games/xboard/bitmaps/"'
++bitmapdir = $(datadir)
++AM_CPPFLAGS=-DINFODIR='"$(infodir)"' @X_CFLAGS@  -DSYSCONFDIR='"$(sysconfdir)"' -DBITMAPDIR='"$(bitmapdir)/"'
+ 
+ info_TEXINFOS =  xboard.texi
+ xboard_TEXINFOS =  copyright.texi 
+@@ -54,21 +50,20 @@
+ 
+ ### icon files
+ 
+-icondir = $(datadir)/icons/hicolor/48x48/apps
++icondir = /usr/share/icons/hicolor/48x48/apps
+ dist_icon_DATA = xboard.png
+-svgicondir = $(datadir)/icons/hicolor/scalable/apps
++svgicondir = /usr/share/icons/hicolor/scalable/apps
+ dist_svgicon_DATA = xboard.svg
+ 
+ 
+ ### desktop files for KDE and gnome
+ 
+-Applicationsdir = $(datadir)/applications
++Applicationsdir = /usr/share/applications
+ Applications_DATA = xboard.desktop
+ 
+ 
+ ### directory and files to be used as bitmaps
+ 
+-bitmapdir = $(datadir)/games/xboard/
+ dist_bitmap_DATA = pixmaps/wood_d.xpm pixmaps/wood_l.xpm
+ 
+ 
+diff -ru xboard-4.5.1.orig/configure.ac xboard-4.5.1/configure.ac
+--- xboard-4.5.1.orig/configure.ac	2011-02-20 19:11:12.000000000 -0500
++++ xboard-4.5.1/configure.ac	2011-04-07 00:51:46.421901524 -0400
+@@ -133,30 +133,17 @@
+ 
+ dnl | test if user wants ot use Xaw3d or Xaw
+ 
+-dnl | add configure option for Xaw3d
+-AC_ARG_WITH([Xaw3d],
+-            [AS_HELP_STRING([--with-Xaw3d],[use Xaw3d instead of Xaw])],
+-            [],
+-            [with_Xaw3d=no])
+-
+-dnl | check availability of Xaw3d
+-XAW_LIBS=
+-AS_IF([test x"$with_Xaw3d" != x"no"],
+-      [AC_CHECK_LIB([Xaw3d], 
+-                    [XawTextReplace],
+-                    [AC_SUBST([XAW_LIBS],["-lXaw3d"])
+-                     AC_DEFINE([USE_XAW3D], [1],
+-                               [Define if you want to use Xaw3d])],
+-                    [AC_MSG_ERROR([--with-Xaw3d was given, but test for Xaw3d failed. Make sure that you have Xaw3d installed, else you might want to try the configure option --without-Xaw3d])],
+-			       [-lXaw])])
+-dnl | no Xaw3d, check for Xaw
+-if test x"$with_Xaw3d" = x"no" ; then
+-   AC_CHECK_HEADER(X11/Xaw/Dialog.h,xaw_headers="yes", xaw_headers="no")
+-   if test x"$xaw_headers" = x"no" ; then
+-      AC_MSG_ERROR([Xaw headers not found. Please install the Xaw package and headers.])
+-   fi
+-   XAW_LIBS="-lXaw"
++AC_ARG_WITH(Xaw3d, 
++[  --with-Xaw3d            use Xaw3d instead of Xaw],
++[ with_xaw3d="$withval"], [enable_xaw3d="no"])
++
++if test "$withval" = yes; then
++       AC_DEFINE(USE_XAW3D)
++       XAW_LIBS="-lXaw3d"
++else
++       XAW_LIBS="-lXaw"
+ fi
++
+ AC_SUBST(XAW_LIBS)
+ 
+ dnl | end Xaw/Xaw3d test
+diff -ru xboard-4.5.1.orig/xboard.h xboard-4.5.1/xboard.h
+--- xboard-4.5.1.orig/xboard.h	2011-02-03 11:36:36.000000000 -0500
++++ xboard-4.5.1/xboard.h	2011-04-07 00:51:46.422901324 -0400
+@@ -104,7 +104,7 @@
+ 
+ #define BORDER_X_OFFSET 3
+ #define BORDER_Y_OFFSET 27
+-#define FIRST_CHESS_PROGRAM	"fairymax"
++#define FIRST_CHESS_PROGRAM	"gnuchess"
+ #define SECOND_CHESS_PROGRAM	"fairymax"
+ #define FIRST_DIRECTORY         "."
+ #define SECOND_DIRECTORY        "."
