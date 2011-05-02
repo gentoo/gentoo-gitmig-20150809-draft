@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Archive-Tar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.36 2011/04/25 05:59:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.37 2011/05/02 20:16:15 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> Archive-Tar-1.760.0.ebuild:
+  Marked ~x64-freebsd
 
 *Archive-Tar-1.760.0 (25 Apr 2011)
 

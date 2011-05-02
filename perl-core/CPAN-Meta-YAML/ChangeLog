@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CPAN-Meta-YAML
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.6 2011/02/27 12:05:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.7 2011/05/02 19:36:59 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> CPAN-Meta-YAML-0.3.ebuild:
+  Marked ~x64-freebsd
 
   27 Feb 2011; Fabian Groffen <grobian@gentoo.org> CPAN-Meta-YAML-0.3.ebuild:
   Add Prefix keywords, bug #353115

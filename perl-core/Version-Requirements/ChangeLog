@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.5 2011/03/19 12:29:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.6 2011/05/02 19:33:25 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org>
+  Version-Requirements-0.101.20.ebuild:
+  Marked ~x64-freebsd
 
   19 Mar 2011; Raúl Porcel <armin76@gentoo.org>
   Version-Requirements-0.101.20.ebuild:

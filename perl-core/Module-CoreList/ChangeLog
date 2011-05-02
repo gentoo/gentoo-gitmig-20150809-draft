@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-CoreList
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.32 2011/03/22 06:43:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.33 2011/05/02 19:53:27 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org>
+  Module-CoreList-2.460.0.ebuild:
+  Marked ~x64-freebsd
 
 *Module-CoreList-2.460.0 (22 Mar 2011)
 

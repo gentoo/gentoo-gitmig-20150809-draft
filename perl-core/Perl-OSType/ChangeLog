@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Perl-OSType
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.5 2011/02/27 11:57:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.6 2011/05/02 19:45:36 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> Perl-OSType-1.2.ebuild:
+  Marked ~x64-freebsd
 
   27 Feb 2011; Fabian Groffen <grobian@gentoo.org> Perl-OSType-1.2.ebuild:
   Add Prefix keywords, bug #353115
