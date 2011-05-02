@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.4 2011/04/24 15:33:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.5 2011/05/02 21:15:30 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -358,7 +358,7 @@ git-2_fetch() {
 		echo "GIT update -->"
 		echo "   repository:               ${EGIT_REPO_URI_SELECTED}"
 		# write out message based on the revisions
-		if [[ "${oldsha1}" != "${cursha1}" ]]; then
+		if [[ "${oldsha}" != "${cursha}" ]]; then
 			echo "   updating from commit:     ${oldsha}"
 			echo "   to commit:                ${cursha}"
 		else
@@ -370,7 +370,7 @@ git-2_fetch() {
 		popd > /dev/null
 	fi
 	# export the version the repository is at
-	export EGIT_VERSION="${cursha1}"
+	export EGIT_VERSION="${cursha}"
 	# log the repo state
 	[[ ${EGIT_COMMIT} != ${EGIT_BRANCH} ]] \
 		&& echo "   commit:                   ${EGIT_COMMIT}"
