@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.5 2011/05/02 19:01:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.6 2011/05/02 19:05:01 scarabeus Exp $
 
 EAPI=3
 
@@ -65,6 +65,7 @@ for i in perl python; do
 done
 DEPEND="${RDEPEND} ${SWIG_DEPEND}"
 unset SWIG_DEPEND
+unset i
 
 need_apache2
 
@@ -164,8 +165,8 @@ src_compile() {
 
 src_install() {
 	local step="Installing"
-
 	local extra_dir="fonts tests tests/vera symbols"
+	local i
 
 	dobin shp2img legend shptree shptreevis shp2img legend shptreetst scalebar \
 		sortshp tile4ms msencrypt mapserver-config
