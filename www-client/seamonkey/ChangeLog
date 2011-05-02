@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.311 2011/05/01 16:49:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.312 2011/05/02 15:38:45 jer Exp $
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> seamonkey-2.0.14.ebuild:
+  Stable for HPPA (bug #365323).
 
   01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   seamonkey-2.0.14.ebuild:
