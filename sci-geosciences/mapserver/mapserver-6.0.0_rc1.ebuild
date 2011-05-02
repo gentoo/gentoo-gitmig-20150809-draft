@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.6 2011/05/02 19:05:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.7 2011/05/02 19:48:20 arfrever Exp $
 
 EAPI=3
 
@@ -11,8 +11,9 @@ PHP_EXT_S="${WORKDIR}/${MY_P}/mapscript/php/"
 PHP_EXT_SKIP_PHPIZE="no"
 USE_PHP="php5-3"
 
-PYTHON_DEPEND="python? *"
+PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 PYTHON_MODNAME="mapscript.py"
 
 #USE_RUBY="ruby18 ruby19"
