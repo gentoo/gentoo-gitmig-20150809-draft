@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-led-notification/pidgin-led-notification-0.1.ebuild,v 1.3 2010/11/07 17:58:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-led-notification/pidgin-led-notification-0.1.ebuild,v 1.4 2011/05/02 16:40:09 halcy0n Exp $
 
 EAPI=3
 
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	insinto ${EPREFIX}/usr/$(get_libdir)/pidgin
+	insinto /usr/$(get_libdir)/pidgin
 	insopts -m755
 	doins ${MY_PN}.so || die
 	dodoc README || die

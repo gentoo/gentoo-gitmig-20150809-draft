@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-led-notification
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-led-notification/ChangeLog,v 1.2 2010/11/07 17:58:12 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-led-notification/ChangeLog,v 1.3 2011/05/02 16:40:09 halcy0n Exp $
+
+  02 May 2011; Mark Loeser <halcy0n@gentoo.org>
+  pidgin-led-notification-0.1.ebuild:
+  insinto already has EPREFIX prepended
 
   07 Nov 2010; Michael Weber <xmw@gentoo.org>
   pidgin-led-notification-0.1.ebuild:
