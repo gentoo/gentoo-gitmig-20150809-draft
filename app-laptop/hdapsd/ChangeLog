@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/hdapsd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.15 2009/10/26 06:56:25 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.16 2011/05/02 20:25:12 hwoarang Exp $
+
+  02 May 2011; Markos Chandras <hwoarang@gentoo.org> hdapsd-20090401.ebuild:
+  Stable on amd64 wrt bug #334737
 
   26 Oct 2009; Thilo Bangert <bangert@gentoo.org> files/hdapsd.init:
   fix spelling
