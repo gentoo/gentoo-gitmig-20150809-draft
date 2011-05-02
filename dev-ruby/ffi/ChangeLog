@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.15 2010/12/28 08:51:18 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.16 2011/05/02 18:12:25 graaff Exp $
+
+*ffi-1.0.7 (02 May 2011)
+
+  02 May 2011; Hans de Graaff <graaff@gentoo.org> +ffi-1.0.7.ebuild:
+  Version bump.
 
   28 Dec 2010; Fabian Groffen <grobian@gentoo.org> ffi-0.6.3-r1.ebuild:
   Marked ~x64-solaris
