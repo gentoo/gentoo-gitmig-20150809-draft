@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.68 2011/04/25 01:44:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.69 2011/05/02 00:33:22 jer Exp $
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Describe USE=minimal locally.
 
   25 Apr 2011; Jeroen Roovers <jer@gentoo.org> lilo-23.1-r1.ebuild,
   lilo-23.2-r1.ebuild:
