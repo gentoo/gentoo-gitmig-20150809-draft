@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.1 2011/05/02 10:16:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.2 2011/05/02 10:20:58 scarabeus Exp $
 
 EAPI=3
 
 PHP_EXT_NAME="php_mapscript php_proj"
+
+USE_RUBY="ruby18 ruby19"
 RUBY_OPTIONAL="yes"
 
 PYTHON_DEPEND="2"
@@ -12,7 +14,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 PYTHON_MODNAME="mapscript.py"
 
-inherit eutils autotools confutils multilib distutils depend.php perl-module php-ext-source-r1 depend.apache webapp ruby java-pkg-opt-2
+inherit eutils autotools confutils multilib distutils depend.php perl-module php-ext-source-r1 depend.apache webapp ruby-ng java-pkg-opt-2
 
 MY_P="${PN}-${PV/_/-}"
 
@@ -44,7 +46,6 @@ RDEPEND="
 	php? ( dev-lang/php )
 	postgis? ( dev-db/postgis )
 	proj? ( sci-libs/proj net-misc/curl )
-	ruby? ( dev-lang/ruby )
 	tcl? ( dev-lang/tcl )
 	tiff? ( media-libs/tiff sci-libs/libgeotiff )
 	unicode? ( virtual/libiconv )
@@ -73,6 +74,7 @@ pkg_setup() {
 	use perl && perl-module_pkg_setup
 	use php && has_php
 	use python && python_pkg_setup
+	use ruby && ruby-ng_pkg_setup
 
 	confutils_use_conflict gdal tiff
 	confutils_use_depend_all java threads
@@ -85,6 +87,7 @@ src_prepare() {
 		sed -i -e "s:@libdir@:$(get_libdir):g" mapscript/tcl/Makefile.in \
 			|| die "failed to fix libdir in Makefile.in"
 	fi
+	use ruby && ruby-ng_src_prepare
 	eautoreconf
 }
 
@@ -132,7 +135,7 @@ src_configure() {
 	if use ruby; then
 		cd_script ruby ${step}
 		RUBY_ECONF="-I${D}"
-		ruby_econf
+		ruby-ng_econf
 		cp ../mapscript.i . || die "Unable to find mapscript.i"
 		sed -e "s:ruby.h defines.h::g" -i ./Makefile
 	fi
@@ -174,7 +177,7 @@ src_compile() {
 
 	if use ruby; then
 		cd_script ruby ${step}
-		ruby_emake
+		ruby-ng_src_compile
 	fi
 
 	if use tcl; then
@@ -233,7 +236,7 @@ src_install() {
 
 	if use ruby ; then
 		cd_script ruby ${step}
-			ruby_einstall
+		ruby-ng_src_install
 		mapscript_install_examples ruby
 	fi
 
