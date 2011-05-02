@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.48 2011/05/01 17:33:49 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.49 2011/05/02 04:31:33 titanofold Exp $
+
+*postgis-1.5.2-r2 (02 May 2011)
+
+  02 May 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgis-1.5.2-r1.ebuild, +postgis-1.5.2-r2.ebuild:
+  Addressed sandbox violations regarding man and docs.
 
 *postgis-1.5.2-r1 (01 May 2011)
 

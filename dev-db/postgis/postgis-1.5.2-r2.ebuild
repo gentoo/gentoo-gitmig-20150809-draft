@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.2-r1.ebuild,v 1.1 2011/05/01 17:33:49 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.2-r2.ebuild,v 1.1 2011/05/02 04:31:33 titanofold Exp $
 
 EAPI="4"
 
@@ -76,15 +76,15 @@ src_compile() {
 	emake -j1
 
 	if use doc ; then
-		cd "${S}"
-		emake -j1 docs
+		cd "${S}/doc/"
+		emake -j1
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	cd "${S}/topology/"
-	emake DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install
+	cd topology/
+	emake -j1 DESTDIR="${D}" install
 
 	cd "${S}"
 	dodoc CREDITS TODO loader/README.* doc/*txt
@@ -94,14 +94,17 @@ src_install() {
 	dobin ./utils/postgis_restore.pl
 
 	if use doc; then
-		emake DESTDIR="${D}" docs-install
+		cd doc/html
+		dohtml -r *
 	fi
 
 	insinto /etc
 	doins "${FILESDIR}/postgis_dbs"
 
+	cd "${S}/doc"
+	doman man/*
 	insinto /usr/share/postgresql-${PGSLOT}/contrib/postgis-${PGIS}/
-	doins "${S}/doc/postgis_comments.sql"
+	doins postgis_comments.sql
 }
 
 pkg_postinst() {
