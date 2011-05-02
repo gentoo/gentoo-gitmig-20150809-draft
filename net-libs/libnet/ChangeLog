@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.68 2010/11/13 08:40:15 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.69 2011/05/02 13:56:41 tomka Exp $
+
+  02 May 2011; Thomas Kahle <tomka@gentoo.org> libnet-1.1.5.ebuild:
+  x86 stable per bug 359037
 
   13 Nov 2010; Fabian Groffen <grobian@gentoo.org> libnet-1.1.5.ebuild,
   +files/libnet-1.1.5-darwin.patch:
