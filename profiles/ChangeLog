@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5344 2011/05/02 05:36:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5345 2011/05/02 18:37:52 halcy0n Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 May 2011; Mark Loeser <halcy0n@gentoo.org> package.mask:
+  Mask reverse deps of dev-php/PEAR-Image_Graph
 
   02 May 2011; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
   Remove patan.com.ar mirrors.

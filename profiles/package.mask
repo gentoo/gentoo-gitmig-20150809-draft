@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12747 2011/05/02 15:21:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12748 2011/05/02 18:37:52 halcy0n Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,8 +58,10 @@ app-emacs/psql
 
 # Ole Markus With <olemarkus@gentoo.org> (19 Apr 2011)
 # Mask for removal on the 19th of May. Dead upstream, does not work
-# with PHP 5.3. Bug 362063
+# with PHP 5.3. Also masked its reverse dependnencies Bug 362063 
 dev-php/PEAR-Image_Graph
+net-analyzer/base
+net-analyzer/centreon
 
 # Hans de Graaff <graaff@gentoo.org> (24 Apr 2011)
 # Masked for removal on 20110524
