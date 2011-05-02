@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-IO-Compress
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/ChangeLog,v 1.43 2011/01/22 10:10:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/ChangeLog,v 1.44 2011/05/02 20:14:18 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-IO-Compress-2.33.ebuild:
+  Marked ~x64-freebsd
 
   22 Jan 2011; Torsten Veller <tove@gentoo.org> perl-IO-Compress-2.024.ebuild:
   Add perl-5.12.3 as provider

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.35 2011/02/27 10:44:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.36 2011/05/02 20:19:10 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> perl-version-0.880.ebuild:
+  Marked ~x64-freebsd
 
   27 Feb 2011; Fabian Groffen <grobian@gentoo.org> perl-version-0.880.ebuild:
   Add Prefix keywords, bug #351526

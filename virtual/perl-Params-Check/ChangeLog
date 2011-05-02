@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Params-Check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Params-Check/ChangeLog,v 1.12 2011/05/02 14:32:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Params-Check/ChangeLog,v 1.13 2011/05/02 19:59:26 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-Params-Check-0.280.ebuild:
+  Marked ~x64-freebsd
 
   02 May 2011; Mark Loeser <halcy0n@gentoo.org> perl-Params-Check-0.26.ebuild,
   perl-Params-Check-0.280.ebuild:

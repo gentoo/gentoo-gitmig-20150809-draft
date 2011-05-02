@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.28 2011/03/19 12:51:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.29 2011/05/02 19:28:23 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> perl-IO-1.25.ebuild:
+  Marked ~x64-freebsd
 
   19 Mar 2011; Raúl Porcel <armin76@gentoo.org> perl-IO-1.25.ebuild:
   Add ~alpha/~s390/~sh wrt #357599

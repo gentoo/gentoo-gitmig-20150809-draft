@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-digest-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.33 2011/01/22 10:14:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.34 2011/05/02 19:22:18 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-digest-base-1.16.ebuild:
+  Marked ~x64-freebsd
 
   22 Jan 2011; Torsten Veller <tove@gentoo.org> perl-digest-base-1.16.ebuild:
   Add perl-5.12.3 as provider

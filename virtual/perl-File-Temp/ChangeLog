@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.51 2011/02/27 11:31:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.52 2011/05/02 19:50:28 grobian Exp $
+
+  02 May 2011; Fabian Groffen <grobian@gentoo.org> perl-File-Temp-0.22.ebuild:
+  Marked ~x64-freebsd
 
   27 Feb 2011; Fabian Groffen <grobian@gentoo.org> perl-File-Temp-0.22.ebuild:
   Add Prefix keywords, bug #351526
