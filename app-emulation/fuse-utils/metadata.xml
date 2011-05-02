@@ -12,4 +12,8 @@
 		<description>Proxied Maintainer. Please assign on bugs.</description>
 		<name>José Manuel Ferrer Ortiz</name>
 	</maintainer>
+	<use>
+		<flag name='gcrypt'>Use <pkg>dev-libs/libgcrypt</pkg> for low-level crypto of some
+		features, including logfiles.</flag>
+	</use>
 </pkgmetadata>

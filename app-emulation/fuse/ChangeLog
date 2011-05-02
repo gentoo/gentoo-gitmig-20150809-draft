@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.32 2011/03/27 10:25:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.33 2011/05/02 20:01:15 neurogeek Exp $
+
+*fuse-1.0.0 (02 May 2011)
+
+  02 May 2011; Jesus Rivero <neurogeek@gentoo.org> +fuse-1.0.0.ebuild:
+  Version bump. WRT bug #351726
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> fuse-0.7.0.ebuild,
   fuse-0.10.0.2-r3.ebuild:
