@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnssec-root
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.2 2011/04/28 15:07:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.3 2011/05/02 15:53:42 darkside Exp $
+
+  02 May 2011; Jeremy Olexa <darkside@gentoo.org>
+  dnssec-root-20100715.ebuild:
+  stabilize for all, just installs a few files and passes test suite. bug
+  365191
 
   28 Apr 2011; Jeremy Olexa <darkside@gentoo.org>
   dnssec-root-20100715.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20100715.ebuild,v 1.3 2011/04/28 15:07:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20100715.ebuild,v 1.4 2011/05/02 15:53:42 darkside Exp $
 
 DESCRIPTION="The DNSSEC root key(s)"
 HOMEPAGE="https://www.iana.org/dnssec/"
@@ -15,7 +15,7 @@ SRC_URI="http://data.iana.org/root-anchors/root-anchors.xml
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 
 IUSE="test"
 
