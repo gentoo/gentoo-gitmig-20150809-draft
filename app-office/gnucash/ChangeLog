@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.233 2011/04/19 06:48:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.234 2011/05/02 16:52:51 klausman Exp $
+
+  02 May 2011; Tobias Klausmann <klausman@gentoo.org> gnucash-2.4.5.ebuild:
+  Stable on alpha, bug #344059
 
 *gnucash-2.4.5 (19 Apr 2011)
 
