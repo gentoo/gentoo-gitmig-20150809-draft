@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.59.ebuild,v 1.1 2011/04/30 17:02:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.7.59.ebuild,v 1.2 2011/05/02 16:02:06 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -34,7 +34,7 @@ SHARED_DEPEND="
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/PyQt4-4.8.2[X,svg,webkit]
-	|| ( >=media-gfx/imagemagick-6.5.9 media-gfx/graphicsmagick[imagemagick] )
+	>=media-gfx/imagemagick-6.5.9
 	>=media-libs/libwmf-0.2.8
 	virtual/libusb:0
 	>=x11-misc/xdg-utils-1.0.2"
