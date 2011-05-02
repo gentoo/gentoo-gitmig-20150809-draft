@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.8 2011/05/02 19:53:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0_rc1.ebuild,v 1.9 2011/05/02 20:05:01 scarabeus Exp $
 
 EAPI=3
 
@@ -100,7 +100,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/6.0.0_rc1-ldflags.patch"
+	epatch "${FILESDIR}/6.0.0_rc1-ldflags.patch" \
+		"${FILESDIR}/6.0.0_rc1-bool.patch"
 	eautoreconf
 }
 
