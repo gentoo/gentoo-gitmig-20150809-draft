@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.8.2.ebuild,v 1.1 2011/04/10 15:10:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.8.3.ebuild,v 1.1 2011/05/03 22:37:08 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils autotools
 
 DESCRIPTION="World Coordinate System library for astronomical FITS images"
@@ -16,7 +16,7 @@ IUSE=""
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-3.8.2-autotools.patch \
+		"${FILESDIR}"/${PN}-3.8.3-autotools.patch \
 		"${FILESDIR}"/${PN}-3.8.1-format.patch \
 		"${FILESDIR}"/${PN}-3.8.1-invalid_free.patch \
 		"${FILESDIR}"/${PN}-3.8.1-overflows.patch
@@ -26,7 +26,7 @@ src_prepare() {
 		-e 's/getdate/wcsgetdate/' \
 		-e 's/crlf/wcscrlf/' \
 		-e 's/remap/wcsremap/' \
-		-e "s/3.7.x/${PV}/" \
+		-e "s/3.... Programs/${PV} Programs/" \
 		wcstools || die
 	eautoreconf
 }
@@ -41,11 +41,11 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	doman Man/man1/* || die
-	dodoc Readme Programs NEWS libned/NED_client || die
-	newdoc libwcs/Readme Readme.libwcs || die
-	newdoc libwcs/NEWS NEWS.libwcs || die
+	emake DESTDIR="${D}" install
+	doman Man/man1/*
+	dodoc Readme Programs NEWS libned/NED_client
+	newdoc libwcs/Readme Readme.libwcs
+	newdoc libwcs/NEWS NEWS.libwcs
 }
 
 pkg_postinst() {

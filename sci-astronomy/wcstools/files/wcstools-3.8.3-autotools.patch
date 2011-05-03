@@ -2,7 +2,7 @@
 +++ configure.ac	2011-04-10 15:54:07.000000000 +0100
 @@ -0,0 +1,11 @@
 +AC_PREREQ([2.59])
-+AC_INIT(wcstools, 3.8.2 , [http://tdc-www.harvard.edu/wcstools/])
++AC_INIT(wcstools, 3.8.x , [http://tdc-www.harvard.edu/wcstools/])
 +AM_INIT_AUTOMAKE([foreign])
 +AM_CONFIG_HEADER(config.h)
 +
