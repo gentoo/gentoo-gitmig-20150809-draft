@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.5 2011/03/15 11:08:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.6 2011/05/03 11:34:23 scarabeus Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs git
+inherit eutils toolchain-funcs git-2
 
 DESCRIPTION="tool that helps you find what software is using the most power"
 HOMEPAGE="http://www.lesswatts.org/projects/powertop/"
@@ -29,6 +29,8 @@ RDEPEND="
 	x11-apps/xset
 "
 
+DOCS=( TODO README )
+
 src_prepare() {
 	use unicode || sed -i 's:-lncursesw:-lncurses:' Makefile
 	# fix ldflags
@@ -44,8 +46,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${ED}"
-	dodoc TODO README
+	default
 	keepdir /var/cache/powertop
 }
 
