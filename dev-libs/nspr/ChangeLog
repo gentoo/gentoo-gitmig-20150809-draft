@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.157 2011/05/03 14:08:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.158 2011/05/03 17:01:41 tomka Exp $
+
+  03 May 2011; Thomas Kahle <tomka@gentoo.org> nspr-4.8.7.ebuild:
+  x86 stable per bug 360315
 
   03 May 2011; Markos Chandras <hwoarang@gentoo.org> nspr-4.8.7.ebuild:
   Stable on amd64 wrt bug #360315
