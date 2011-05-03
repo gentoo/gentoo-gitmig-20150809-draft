@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.411 2011/05/01 15:15:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.412 2011/05/03 10:16:08 scarabeus Exp $
+
+  03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.6-r1.ebuild:
+  Try to reorder the warnings for the usb useflag to be more self-explanatory.
 
   01 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.4.6-r1.ebuild:
   use linux-info rather than linux-mod eclass. Per bug #365491.

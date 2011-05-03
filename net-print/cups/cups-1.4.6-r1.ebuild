@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.4 2011/05/01 15:15:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.5 2011/05/03 10:16:08 scarabeus Exp $
 
 EAPI=3
 
@@ -81,6 +81,17 @@ pkg_setup() {
 		python_pkg_setup
 	fi
 
+	if use usb; then
+		elog "You are going to use new libusb backed to access your usb printer."
+		elog "This interface has quite few known issues and does not report all"
+		elog "issues and just refuses to print."
+		elog "Please consider disabling usb useflag if you are having issues."
+		elog
+		elog "Please note that if you disable the usb useflag your device will be"
+		elog "still working using kernel usblp interface instead of libusb."
+		echo
+	fi
+
 	linux-info_pkg_setup
 	if  ! linux_config_exists; then
 		ewarn "Can't check the linux kernel configuration."
@@ -89,9 +100,7 @@ pkg_setup() {
 		# recheck that we don't have usblp to collide with libusb
 		if use usb; then
 			if linux_chkconfig_present USB_PRINTER; then
-				eerror "Your usb printers will be managed via libusb."
-				eerror "Note that this interface still has issues so alternatively"
-				eerror "you should just disable usb useflag on ${P}."
+				eerror "Your usb printers will be managed via libusb which collides with kernel module."
 				eerror "${P} requires the USB_PRINTER support disabled."
 				eerror "Please disable it:"
 				eerror "    CONFIG_USB_PRINTER=n"
@@ -273,15 +282,4 @@ pkg_postinst() {
 	elog "For information about installing a printer and general cups setup"
 	elog "take a look at: http://www.gentoo.org/doc/en/printing-howto.xml"
 	echo
-
-	if use usb; then
-		elog
-		elog "You are going to use new libusb backed to access your usb printer."
-		elog "This interface has quite few known issues and does not report all"
-		elog "issues and just refuses to print."
-		elog "Please consider disabling usb useflag if you are having issues."
-		elog
-		elog "Please note that if you disable the usb useflag your device will be"
-		elog "still working using kernel usblp interface instead of libusb."
-	fi
 }
