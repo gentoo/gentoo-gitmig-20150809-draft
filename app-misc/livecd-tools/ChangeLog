@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.112 2011/05/01 03:31:10 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.113 2011/05/03 05:21:50 williamh Exp $
+
+*livecd-tools-2.0 (03 May 2011)
+
+  03 May 2011; William Hubbs <williamh@gentoo.org> +livecd-tools-2.0.ebuild:
+  version bump for openrc and baselayout-2 support
 
 *livecd-tools-9999 (01 May 2011)
 
