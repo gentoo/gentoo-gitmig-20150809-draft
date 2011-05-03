@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.13.080428-r1.ebuild,v 1.7 2011/05/03 17:49:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.14.080821.ebuild,v 1.1 2011/05/03 17:49:48 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://kinemage.biochem.duke.edu/downloads/software/reduce31/${MY_P}.tg
 
 LICENSE="richardson"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""
@@ -25,30 +25,27 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PV}-LDFLAGS.patch \
+		"${FILESDIR}"/3.13.080428-LDFLAGS.patch \
 		"${FILESDIR}"/${PV}-CFLAGS.patch
 }
 
 src_compile() {
 	DICT_DIR="/usr/share/reduce"
-	DICT_FILE="reduce_het_dict.txt"
+	DICT_FOLD="reduce_het_dict.txt"
+	DICT_FNEW="reduce_wwPDB_het_dict.txt"
 
+	emake clean
 	emake \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)" \
 		OPT="${CXXFLAGS}" \
-		DICT_HOME="${EPREFIX}/${DICT_DIR}/${DICT_FILE}" \
-		|| die "make failed"
+		DICT_HOME="${EPREFIX}/${DICT_DIR}/${DICT_FNEW}" \
+		DICT_OLD="${EPREFIX}/${DICT_DIR}/${DICT_FOLD}"
 }
 
 src_install() {
-	dobin "${S}"/reduce_src/reduce || die
+	dobin "${S}"/reduce_src/reduce
 	insinto ${DICT_DIR}
-	doins "${S}"/${DICT_FILE} "${S}"/reduce_wwPDB_het_dict.txt || die
-	dodoc README.usingReduce.txt || die
-}
-
-pkg_postinst() {
-	elog "To use the PDBv3 dictionary instead of PDBv2, set the environment"
-	elog "variable REDUCE_HET_DICT to ${EPREFIX}/usr/share/reduce/reduce_wwPDB_het_dict.txt"
+	doins "${S}"/${DICT_FOLD} "${S}"/${DICT_FNEW}
+	dodoc README.usingReduce.txt
 }
