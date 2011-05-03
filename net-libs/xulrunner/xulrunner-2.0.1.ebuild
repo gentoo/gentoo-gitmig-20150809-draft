@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1.ebuild,v 1.1 2011/05/02 23:28:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1.ebuild,v 1.2 2011/05/03 01:38:43 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -38,7 +38,8 @@ RDEPEND="
 	media-libs/libpng[apng]
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
-		media-libs/alsa-lib )
+		media-libs/alsa-lib
+		media-libs/mesa )
 	!www-plugins/weave"
 
 DEPEND="${RDEPEND}
