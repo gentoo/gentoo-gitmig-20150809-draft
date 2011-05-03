@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/liberation-fonts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.13 2011/02/20 16:17:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.14 2011/05/03 13:50:02 je_fro Exp $
+
+*liberation-fonts-1.06.0.20100721-r1 (03 May 2011)
+
+  03 May 2011; Jeff Gardner <je_fro@gentoo.org> files/60-liberation.conf,
+  -liberation-fonts-1.06.0.20100721.ebuild,
+  +liberation-fonts-1.06.0.20100721-r1.ebuild:
+  Adding Liberation Sans Narrow to 60-liberation.conf thanks to Alex Domingo in
+  bug #365317
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   liberation-fonts-1.04.ebuild:

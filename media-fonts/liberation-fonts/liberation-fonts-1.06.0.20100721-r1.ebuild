@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-1.06.0.20100721.ebuild,v 1.1 2011/01/19 17:44:56 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-1.06.0.20100721-r1.ebuild,v 1.1 2011/05/03 13:50:02 je_fro Exp $
 
 EAPI=3
 
