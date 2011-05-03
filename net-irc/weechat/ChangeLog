@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.87 2011/05/03 11:22:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.88 2011/05/03 13:06:31 hwoarang Exp $
+
+  03 May 2011; Markos Chandras <hwoarang@gentoo.org> weechat-0.3.4.ebuild:
+  Stable on amd64 wrt bug #365177
 
   03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> weechat-9999.ebuild:
   Migrate to git-2 eclass.
