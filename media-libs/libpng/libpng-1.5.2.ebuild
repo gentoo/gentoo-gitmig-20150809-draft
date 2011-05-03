@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.2.ebuild,v 1.2 2011/04/26 17:32:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.2.ebuild,v 1.3 2011/05/03 13:20:04 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils libtool multilib
 
@@ -20,6 +20,8 @@ RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
+DOCS=( ANNOUNCE CHANGES libpng-manual.txt README TODO )
+
 src_prepare() {
 	use apng && epatch "${WORKDIR}"/${P}-apng.patch
 	elibtoolize
@@ -32,9 +34,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc ANNOUNCE CHANGES libpng-manual.txt README TODO
-
+	default
 	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
