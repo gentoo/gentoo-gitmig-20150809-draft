@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.57 2011/04/23 15:38:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.58 2011/05/03 11:18:28 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> geos-3.2.2.ebuild:
+  Marked ~x64-freebsd
 
   23 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/3.2.2-gcc46.patch,
   geos-3.2.2.ebuild:
