@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.91 2011/04/27 05:27:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.92 2011/05/03 06:57:02 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> git-1.7.5_rc3.ebuild:
+  Marked ~x64-freebsd
 
 *git-1.7.5_rc3 (27 Apr 2011)
 *git-1.7.4.5 (27 Apr 2011)
