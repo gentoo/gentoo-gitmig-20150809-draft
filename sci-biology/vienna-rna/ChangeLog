@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.36 2011/03/20 20:32:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.37 2011/05/03 11:10:40 jlec Exp $
+
+  03 May 2011; Justin Lecher <jlec@gentoo.org> vienna-rna-1.8.5.ebuild,
+  +files/vienna-rna-1.8.5-setup.py:
+  Added python support, #365793
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> vienna-rna-1.8.4-r1.ebuild,
   vienna-rna-1.8.4-r2.ebuild, vienna-rna-1.8.5.ebuild:

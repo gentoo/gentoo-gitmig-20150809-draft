@@ -1,10 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.5.ebuild,v 1.2 2011/03/20 20:32:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.5.ebuild,v 1.3 2011/05/03 11:10:40 jlec Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit toolchain-funcs multilib autotools perl-module
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit distutils toolchain-funcs multilib autotools perl-module
 
 DESCRIPTION="RNA secondary structure prediction and comparison"
 HOMEPAGE="http://www.tbi.univie.ac.at/~ivo/RNA/"
@@ -12,7 +15,7 @@ SRC_URI="http://www.tbi.univie.ac.at/~ivo/RNA/ViennaRNA-${PV}.tar.gz"
 
 LICENSE="vienna-rna"
 SLOT="0"
-IUSE=""
+IUSE="python"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="
@@ -40,6 +43,7 @@ src_prepare() {
 
 	eautoreconf
 	cd RNAforester && eautoreconf
+	use python && cp "${FILESDIR}"/${P}-setup.py "${S}"/setup.py
 }
 
 src_configure() {
@@ -57,6 +61,14 @@ src_compile() {
 	emake || die
 	emake -C Readseq || die "Failed to compile readseq."
 	# TODO: Add (optional?) support for the NCBI toolkit.
+	if use python; then
+		pushd Perl > /dev/null
+			mv RNA_wrap.c{,-perl}
+			swig -python RNA.i
+		popd > /dev/null
+		distutils_src_compile
+		mv Perl/RNA_wrap.c{-perl,}
+	fi
 }
 
 src_test() {
@@ -74,4 +86,5 @@ src_install() {
 
 	# remove perlocal.pod to avoid file collisions (see #240358)
 	fixlocalpod || die "Failed to remove perlocal.pod"
+	use python && distutils_src_install
 }
