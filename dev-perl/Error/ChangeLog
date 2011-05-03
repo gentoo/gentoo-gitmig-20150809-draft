@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.68 2011/02/09 16:43:00 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.69 2011/05/03 06:51:20 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> Error-0.170.160.ebuild:
+  Marked ~x64-freebsd
 
 *Error-0.170.160 (14 Jan 2011)
 

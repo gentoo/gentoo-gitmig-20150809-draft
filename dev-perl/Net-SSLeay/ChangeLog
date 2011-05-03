@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.66 2010/06/11 05:57:36 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.67 2011/05/03 06:47:25 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> Net-SSLeay-1.36.ebuild:
+  Marked ~x64-freebsd
 
   11 Jun 2010; Torsten Veller <tove@gentoo.org> -Net-SSLeay-1.35.ebuild,
   -Net-SSLeay-1.35-r1.ebuild:

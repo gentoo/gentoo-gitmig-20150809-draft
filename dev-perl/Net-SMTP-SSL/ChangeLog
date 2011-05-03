@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SMTP-SSL
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.10 2010/01/10 19:06:59 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.11 2011/05/03 06:53:15 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> Net-SMTP-SSL-1.01.ebuild:
+  Marked ~x64-freebsd
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> Net-SMTP-SSL-1.01.ebuild:
   Transfer Prefix keywords
