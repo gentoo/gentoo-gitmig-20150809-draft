@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.ebuild,v 1.1 2011/05/03 05:21:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.ebuild,v 1.2 2011/05/03 05:50:26 williamh Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-util/dialog
+	>=sys-apps/baselayout-2
+	>=sys-apps/openrc-0.8.2-r1
 	sys-apps/pciutils
 	sys-apps/gawk
 	sys-apps/sed"

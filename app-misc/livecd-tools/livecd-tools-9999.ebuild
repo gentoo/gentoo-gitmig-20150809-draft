@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.1 2011/05/01 03:31:10 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.2 2011/05/03 05:50:26 williamh Exp $
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/livecd-tools.git"
 inherit eutils git
@@ -15,6 +15,8 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="dev-util/dialog
+	>=sys-apps/baselayout-2
+	>=sys-apps/openrc-0.8.2-r1
 	sys-apps/pciutils
 	sys-apps/gawk
 	sys-apps/sed"
