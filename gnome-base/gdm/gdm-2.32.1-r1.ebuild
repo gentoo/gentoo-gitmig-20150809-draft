@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.32.0.ebuild,v 1.2 2010/11/11 11:48:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.32.1-r1.ebuild,v 1.1 2011/05/03 06:46:10 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -102,8 +102,8 @@ src_prepare() {
 	# daemonize so that the boot process can continue, bug #236701
 	epatch "${FILESDIR}/${PN}-2.32.0-fix-daemonize-regression.patch"
 
-	# fix VT grab problem causing GDM to grab VT2 instead of 7, bug #261339
-	epatch "${FILESDIR}/${PN}-2.32.0-broken-VT-detection.patch"
+	# GDM grabs VT2 instead of VT7, bug 261339, bug 284053, bug 288852
+	epatch "${FILESDIR}/${PN}-2.32.0-fix-vt-problems.patch"
 
 	# make custom session work, bug #216984
 	epatch "${FILESDIR}/${PN}-2.32.0-custom-session.patch"
