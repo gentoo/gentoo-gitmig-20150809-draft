@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.113 2010/07/16 20:46:56 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.114 2011/05/03 18:32:01 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> xerces-2.9.1.ebuild:
+  Marked ~x64-freebsd
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> xerces-2.9.1.ebuild:
   Marked ~x64-macos

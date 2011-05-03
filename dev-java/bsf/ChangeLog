@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.55 2010/07/16 20:53:12 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.56 2011/05/03 18:22:10 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> bsf-2.4.0-r1.ebuild:
+  Marked ~x64-freebsd
 
   16 Jul 2010; Fabian Groffen <grobian@gentoo.org> bsf-2.4.0-r1.ebuild:
   Marked ~x64-macos

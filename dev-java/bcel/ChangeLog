@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.54 2011/04/21 08:23:28 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.55 2011/05/03 18:35:07 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> bcel-5.2.ebuild:
+  Marked ~x64-freebsd
 
 *bcel-5.2-r2 (21 Apr 2011)
 
