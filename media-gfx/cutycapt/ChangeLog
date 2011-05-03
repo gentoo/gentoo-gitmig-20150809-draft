@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/cutycapt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.1 2011/05/03 04:11:10 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.2 2011/05/03 06:47:20 mattm Exp $
+
+*cutycapt-0_p20110502-r1 (03 May 2011)
+
+  03 May 2011; <matt@gentoo.org> +cutycapt-0_p20110502-r1.ebuild:
+  Found a compilation dependency on x11-libs/qt-svg
 
 *cutycapt-0_p20110502 (03 May 2011)
 
