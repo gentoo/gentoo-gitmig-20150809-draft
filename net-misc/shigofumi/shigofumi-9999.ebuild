@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.2 2010/07/09 10:51:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.3 2011/05/03 11:24:17 scarabeus Exp $
 
 EAPI=3
 
-[[ ${PV} = 9999* ]] && GIT="git autotools"
+[[ ${PV} = 9999* ]] && GIT="git-2 autotools"
 EGIT_REPO_URI='git://repo.or.cz/shigofumi.git'
 WANT_AUTOMAKE="1.11"
 inherit base ${GIT}
@@ -36,7 +36,6 @@ DEPEND="${RDEPEND}
 DOCS=( "NEWS" "README" "AUTHORS" "ChangeLog" )
 
 src_prepare() {
-	base_src_prepare
 	[[ ${PV} = 9999* ]] && eautoreconf
 }
 
