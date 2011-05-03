@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Event
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.69 2009/12/23 18:08:58 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.70 2011/05/03 18:40:21 tove Exp $
+
+*Event-1.150.0 (03 May 2011)
+
+  03 May 2011; Torsten Veller <tove@gentoo.org> +Event-1.150.0.ebuild:
+  Version bump
 
   23 Dec 2009; Fabian Groffen <grobian@gentoo.org> Event-1.13.ebuild:
   Marked ~x86-solaris, bug #296509
