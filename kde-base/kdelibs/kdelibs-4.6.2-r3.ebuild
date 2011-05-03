@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.1 2011/05/01 22:47:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.2 2011/05/03 21:48:29 dilfridge Exp $
 
 EAPI=4
 
@@ -313,6 +313,10 @@ pkg_postinst() {
 
 	elog "Your homedir is set to \${HOME}/${HME}"
 	echo
+
+	ewarn "In case you just upgraded from KDE 4.4.5 to KDE 4.6.2 (e.g. as stable tree user),"
+	ewarn "you may want to have a look at the Gentoo KDE 4.4 - 4.6 upgrade guide:"
+	ewarn "     http://www.gentoo.org/proj/en/desktop/kde/kde44-46-upgrade.xml"
 
 	kde4-base_pkg_postinst
 }
