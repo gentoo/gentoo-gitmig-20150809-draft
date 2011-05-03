@@ -3,8 +3,4 @@
 <pkgmetadata>
 	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
-	<use>
-		<flag name="gecko-mediaplayer">Allow the browser to load
-			<pkg>www-plugins/gecko-mediaplayer</pkg></flag>
-	</use>
 </pkgmetadata>
