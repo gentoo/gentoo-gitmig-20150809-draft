@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmtcp/dmtcp-1.2.1.ebuild,v 1.2 2011/04/09 18:36:17 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmtcp/dmtcp-1.2.1.ebuild,v 1.3 2011/05/03 08:30:18 nerdboy Exp $
 
 EAPI=3
 
@@ -60,9 +60,6 @@ src_configure() {
 
 src_test() {
 	make check || die "make check failed"
-	make check1 || die "make check1 failed"
-	make check2 || die "make check2 failed"
-	make check3 || die "make check3 failed"
 }
 
 src_install() {
