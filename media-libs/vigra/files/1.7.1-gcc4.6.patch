@@ -1,0 +1,10 @@
+--- a/include/vigra/sifImport.hxx	2011-04-10 09:36:12.735845000 -0500
++++ b/include/vigra/sifImport.hxx	2011-04-10 09:36:41.805845002 -0500
+@@ -58,6 +58,7 @@
+ #include <cstring>
+ #include <vector> 
+ #include "vigra/multi_array.hxx"
++#include <cstddef>
+ 
+ namespace vigra {
+  
