@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.10 2011/02/18 11:53:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.11 2011/05/03 11:31:02 scarabeus Exp $
+
+  03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
+  Bump eapi to 4 and migrate to git-2 eclass.
 
 *trojita-0.2.9.3 (18 Feb 2011)
 
