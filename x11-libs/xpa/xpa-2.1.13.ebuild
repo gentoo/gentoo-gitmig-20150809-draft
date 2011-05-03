@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.12.ebuild,v 1.2 2011/05/03 17:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.13.ebuild,v 1.1 2011/05/03 17:25:13 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils autotools
 
@@ -41,8 +41,8 @@ src_compile() {
 }
 
 src_install () {
+	dodir /usr/$(get_libdir)
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dosym libtclxpa.so.1.0 /usr/$(get_libdir)/libtclxpa.so
 	insinto /usr/$(get_libdir)/tclxpa
 	doins pkgIndex.tcl
 	mv "${D}"/usr/$(get_libdir)/libtclxpa* "${D}"/usr/$(get_libdir)/tclxpa/
