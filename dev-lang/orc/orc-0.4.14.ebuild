@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.13.ebuild,v 1.1 2011/04/19 06:06:31 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.14.ebuild,v 1.1 2011/05/03 03:16:36 ford_prefect Exp $
 
 EAPI=3
 inherit autotools flag-o-matic
