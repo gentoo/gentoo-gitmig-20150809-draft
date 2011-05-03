@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gretl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.31 2011/03/14 21:19:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.32 2011/05/03 16:31:05 bicatali Exp $
+
+*gretl-1.9.5 (03 May 2011)
+
+  03 May 2011; Sébastien Fabbro <bicatali@gentoo.org> +gretl-1.9.5.ebuild:
+  Version bump
 
   14 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> gretl-1.9.4.ebuild:
   Removed obsolete dependencies on gnomeprint, bug #358443
