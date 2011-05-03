@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12749 2011/05/03 15:29:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12750 2011/05/03 22:34:53 lu_zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Luca Barbato <lu_zero@gentoo.org> (4 May 2011)
+# depends on python-3.2
+>=media-gfx/blender-2.57
 
 # Anthony G. Basile <blueness@gentoo.org> (3 May 2011)
 # Masked for removal in 30 days.  Bug #365825
@@ -62,7 +66,7 @@ app-emacs/psql
 
 # Ole Markus With <olemarkus@gentoo.org> (19 Apr 2011)
 # Mask for removal on the 19th of May. Dead upstream, does not work
-# with PHP 5.3. Also masked its reverse dependnencies Bug 362063 
+# with PHP 5.3. Also masked its reverse dependnencies Bug 362063
 dev-php/PEAR-Image_Graph
 net-analyzer/base
 net-analyzer/centreon
