@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-3.05.ebuild,v 1.3 2011/05/02 06:03:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-3.05.ebuild,v 1.4 2011/05/03 11:41:32 jlec Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	sed -i 's/-pipe//g;s/-O2//g;s/-fomit-frame-pointer//g' configure || die
 }
 
 src_configure() {
