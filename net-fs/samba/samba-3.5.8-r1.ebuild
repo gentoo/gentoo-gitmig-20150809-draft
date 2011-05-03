@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8-r1.ebuild,v 1.1 2011/03/23 11:04:30 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8-r1.ebuild,v 1.2 2011/05/03 15:26:29 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit pam confutils versionator multilib eutils
+inherit pam versionator multilib eutils
 
 MY_PV=${PV/_/}
 MY_P="${PN}-${MY_PV}"
@@ -65,6 +65,11 @@ S="${WORKDIR}/${MY_P}/source3"
 
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 
+REQUIRED_USE="
+	ads? ( ldap )
+	swat? ( server )
+"
+
 pkg_setup() {
 	if use server ; then
 		SBINPROGS="${SBINPROGS} bin/smbd bin/nmbd"
@@ -104,9 +109,6 @@ pkg_setup() {
 		eerror "Please use at least the latest stable gcc version."
 		die "Using sys-devel/gcc < 4.3 with winbind use flag."
 	fi
-
-	confutils_use_depend_all ads ldap
-	confutils_use_depend_all swat server
 }
 
 src_prepare() {
@@ -125,16 +127,16 @@ src_configure() {
 	local myconf
 
 	# Filter out -fPIE
-	[[ ${CHOST} == *-*bsd* ]] && myconf="${myconf} --disable-pie"
+	[[ ${CHOST} == *-*bsd* ]] && myconf+=" --disable-pie"
 
 	# Upstream refuses to make this configurable
 	use caps && export ac_cv_header_sys_capability_h=yes || export ac_cv_header_sys_capability_h=no
 
 	# use_with doesn't accept 2 USE-flags
 	if use client && use ads ; then
-		myconf="${myconf} --with-cifsupcall"
+		myconf+=" --with-cifsupcall"
 	else
-		myconf="${myconf} --without-cifsupcall"
+		myconf+=" --without-cifsupcall"
 	fi
 
 	# Notes:
@@ -201,54 +203,54 @@ src_compile() {
 	# compile libs
 	if use addns ; then
 		einfo "make addns library"
-		emake libaddns || die "emake libaddns failed"
+		emake libaddns
 	fi
 	if use netapi ; then
 		einfo "make netapi library"
-		emake libnetapi || die "emake libnetapi failed"
+		emake libnetapi
 	fi
 	if use smbclient ; then
 		einfo "make smbclient library"
-		emake libsmbclient || die "emake libsmbclient failed"
+		emake libsmbclient
 	fi
 	if use smbsharemodes ; then
 		einfo "make smbsharemodes library"
-		emake libsmbsharemodes || die "emake libsmbsharemodes failed"
+		emake libsmbsharemodes
 	fi
 
 	# compile modules
-	emake modules || die "building modules failed"
+	emake modules
 
 	# compile pam moudles
 	if use pam ; then
 		einfo "make pam modules"
-		emake pam_modules || die "emake pam_modules failed";
+		emake pam_modules
 	fi
 
 	# compile winbind nss modules
 	if use winbind ; then
 		einfo "make nss modules"
-		emake nss_modules || die "emake nss_modules failed";
+		emake nss_modules
 	fi
 
 	# compile utilities
 	if [ -n "${BINPROGS}" ] ; then
 		einfo "make binprogs"
-		emake ${BINPROGS} || die "emake binprogs failed";
+		emake ${BINPROGS}
 	fi
 	if [ -n "${SBINPROGS}" ] ; then
 		einfo "make sbinprogs"
-		emake ${SBINPROGS} || die "emake sbinprogs failed";
+		emake ${SBINPROGS}
 	fi
 
 	if [ -n "${KRBPLUGIN}" ] ; then
 		einfo "make krbplugin"
-		emake ${KRBPLUGIN}${PLUGINEXT} || die "emake krbplugin failed";
+		emake ${KRBPLUGIN}${PLUGINEXT}
 	fi
 
 	if use client ; then
 		einfo "make {,u}mount.cifs"
-		emake bin/{,u}mount.cifs || die "emake {,u}mount.cifs failed"
+		emake bin/{,u}mount.cifs
 	fi
 }
 
@@ -256,27 +258,27 @@ src_install() {
 	# install libs
 	if use addns ; then
 		einfo "install addns library"
-		emake installlibaddns DESTDIR="${D}" || die "emake install libaddns failed"
+		emake installlibaddns DESTDIR="${D}"
 	fi
 	if use netapi ; then
 		einfo "install netapi library"
-		emake installlibnetapi DESTDIR="${D}" || die "emake install libnetapi failed"
+		emake installlibnetapi DESTDIR="${D}"
 	fi
 	if use smbclient ; then
 		einfo "install smbclient library"
-		emake installlibsmbclient DESTDIR="${D}" || die "emake install libsmbclient failed"
+		emake installlibsmbclient DESTDIR="${D}"
 	fi
 	if use smbsharemodes ; then
 		einfo "install smbsharemodes library"
-		emake installlibsmbsharemodes DESTDIR="${D}" || die "emake install libsmbsharemodes failed"
+		emake installlibsmbsharemodes DESTDIR="${D}"
 	fi
 
 	# install modules
-	emake installmodules DESTDIR="${D}" || die "installing modules failed"
+	emake installmodules DESTDIR="${D}"
 
 	if use pam ; then
 		einfo "install pam modules"
-		emake installpammodules DESTDIR="${D}" || die "emake installpammodules failed"
+		emake installpammodules DESTDIR="${D}"
 
 		if use winbind ; then
 			newpamd "${CONFDIR}/system-auth-winbind.pam" system-auth-winbind
@@ -290,7 +292,7 @@ src_install() {
 	# Nsswitch extensions. Make link for wins and winbind resolvers
 	if use winbind ; then
 		einfo "install libwbclient"
-		emake installlibwbclient DESTDIR="${D}" || die "emake installlibwbclient failed"
+		emake installlibwbclient DESTDIR="${D}"
 		dolib.so ../nsswitch/libnss_wins.so
 		dosym libnss_wins.so /usr/$(get_libdir)/libnss_wins.so.2
 		dolib.so ../nsswitch/libnss_winbind.so
@@ -310,29 +312,27 @@ src_install() {
 	# install binaries
 	insinto /usr
 	for prog in ${SBINPROGS} ; do
-		dosbin ${prog} || die "installing ${prog} failed"
-		doman ../docs/manpages/${prog/bin\/}* || die "doman failed"
+		dosbin ${prog}
+		doman ../docs/manpages/${prog/bin\/}*
 	done
 
 	for prog in ${BINPROGS} ; do
-		dobin ${prog} || die "installing ${prog} failed"
-		doman ../docs/manpages/${prog/bin\/}* || die "doman failed"
+		dobin ${prog}
+		doman ../docs/manpages/${prog/bin\/}*
 	done
 
 	# install krbplugin
 	if [ -n "${KRBPLUGIN}" ] ; then
 		if has_version app-crypt/mit-krb5 ; then
 			insinto /usr/$(get_libdir)/krb5/plugins/libkrb5
-			doins ${KRBPLUGIN}${PLUGINEXT} || die "installing
-			${KRBPLUGIN}${PLUGINEXT} failed"
+			doins ${KRBPLUGIN}${PLUGINEXT}
 		elif has_version app-crypt/heimdal ; then
 			insinto /usr/$(get_libdir)/plugin/krb5
-			doins ${KRBPLUGIN}${PLUGINEXT} || die "installing
-			${KRBPLUGIN}${PLUGINEXT} failed"
+			doins ${KRBPLUGIN}${PLUGINEXT}
 		fi
 		insinto /usr
 		for prog in ${KRBPLUGIN} ; do
-			doman ../docs/manpages/${prog/bin\/}* || die "doman failed"
+			doman ../docs/manpages/${prog/bin\/}*
 		done
 	fi
 
@@ -366,8 +366,7 @@ src_install() {
 		if use swat ; then
 			insinto /etc/xinetd.d
 			newins "${CONFDIR}/swat.xinetd" swat
-			script/installswat.sh "${D}" "${ROOT}/usr/share/doc/${PF}/swat" "${S}" \
-				|| die "installing swat failed"
+			script/installswat.sh "${D}" "${ROOT}/usr/share/doc/${PF}/swat" "${S}"
 		fi
 
 		dodoc ../MAINTAINERS ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS
@@ -376,8 +375,8 @@ src_install() {
 	# install client files ({u,}mount.cifs into /)
 	if use client ; then
 		into /
-		dosbin bin/{u,}mount.cifs || die "u/mount.cifs not around"
-		doman ../docs/manpages/{u,}mount.cifs.8 || die "can't create man pages"
+		dosbin bin/{u,}mount.cifs
+		doman ../docs/manpages/{u,}mount.cifs.8
 	fi
 
 	# install the spooler to cups
