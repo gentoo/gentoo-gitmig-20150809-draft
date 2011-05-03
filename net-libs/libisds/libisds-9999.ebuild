@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.8 2011/03/07 15:23:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-9999.ebuild,v 1.9 2011/05/03 11:25:29 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
-[[ ${PV} = 9999* ]] && GIT="git autotools"
+[[ ${PV} = 9999* ]] && GIT="git-2 autotools"
 EGIT_REPO_URI="git://repo.or.cz/${PN}.git"
 inherit autotools-utils ${GIT}
 
@@ -37,10 +37,9 @@ RDEPEND="${COMMON_DEPEND}
 	>=app-crypt/gnupg-2
 "
 
-DOCS=( "NEWS" "README" "AUTHORS" "ChangeLog" )
+DOCS=( NEWS README AUTHORS ChangeLog )
 
 src_prepare() {
-	autotools-utils_src_prepare
 	[[ ${PV} = 9999* ]] && eautoreconf
 }
 

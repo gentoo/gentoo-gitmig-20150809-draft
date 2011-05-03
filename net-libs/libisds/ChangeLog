@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libisds
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.8 2011/03/07 15:23:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/ChangeLog,v 1.9 2011/05/03 11:25:29 scarabeus Exp $
+
+  03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> libisds-9999.ebuild:
+  Move to git-2 and latest eapi.
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> libisds-0.5.ebuild,
   libisds-9999.ebuild:
