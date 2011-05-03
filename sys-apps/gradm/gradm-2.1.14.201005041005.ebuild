@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.14.201005041005.ebuild,v 1.7 2010/08/26 11:43:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.14.201005041005.ebuild,v 1.8 2011/05/03 15:23:01 blueness Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND=""
 DEPEND="sys-devel/bison
 	sys-devel/flex
 	pam? ( virtual/pam )
-	|| ( sys-apps/paxctl sys-apps/chpax )"
+	sys-apps/paxctl"
 
 S="${WORKDIR}/${PN}2"
 
