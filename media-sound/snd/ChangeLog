@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.52 2011/05/02 23:49:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.53 2011/05/03 08:35:11 radhermit Exp $
+
+  03 May 2011; Tim Harder <radhermit@gentoo.org> snd-12.1.ebuild:
+  Only depend on gtk+-3 (bug #365777).
 
   02 May 2011; Tim Harder <radhermit@gentoo.org> snd-12.1.ebuild:
   Depend on either gtk+-3 or gtk+-2 properly.

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.1.ebuild,v 1.2 2011/05/02 23:49:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.1.ebuild,v 1.3 2011/05/03 08:35:11 radhermit Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RDEPEND="media-libs/audiofile
 		dev-libs/mpc
 		dev-libs/mpfr )
 	gsl? ( >=sci-libs/gsl-0.8 )
-	gtk? ( || ( x11-libs/gtk+:3 x11-libs/gtk+:2 )
+	gtk? ( x11-libs/gtk+:3
 		x11-libs/pango
 		x11-libs/cairo
 		opengl? ( x11-libs/gtkglext ) )
