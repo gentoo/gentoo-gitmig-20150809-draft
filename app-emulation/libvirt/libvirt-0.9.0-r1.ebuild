@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.0-r1.ebuild,v 1.1 2011/04/12 21:36:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.0-r1.ebuild,v 1.2 2011/05/03 20:16:42 flameeyes Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -47,7 +47,7 @@ RDEPEND="sys-libs/readline
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	iscsi? ( sys-block/open-iscsi )
-	json? ( dev-libs/yajl )
+	json? ( =dev-libs/yajl-1* )
 	libvirtd? ( net-misc/bridge-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	macvtap? ( >=dev-libs/libnl-1.1 )

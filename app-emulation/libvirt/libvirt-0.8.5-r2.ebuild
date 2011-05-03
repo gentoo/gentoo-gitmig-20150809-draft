@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.5-r2.ebuild,v 1.5 2011/02/02 19:25:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.8.5-r2.ebuild,v 1.6 2011/05/03 20:16:42 flameeyes Exp $
 
 BACKPORTS=2
 
@@ -54,7 +54,7 @@ RDEPEND="sys-libs/readline
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( >=sys-fs/udev-145 >=x11-libs/libpciaccess-0.10.9 )
-	json? ( dev-libs/yajl )"
+	json? ( =dev-libs/yajl-1* )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
