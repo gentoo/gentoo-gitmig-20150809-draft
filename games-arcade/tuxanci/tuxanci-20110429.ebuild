@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-20110429.ebuild,v 1.2 2011/04/29 10:15:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-20110429.ebuild,v 1.3 2011/05/03 18:00:30 scarabeus Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ if [[ ${PV} = 9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 LICENSE="GPL-2"
 
