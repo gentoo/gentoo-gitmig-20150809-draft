@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.192 2011/02/17 13:50:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.193 2011/05/03 11:29:42 scarabeus Exp $
+
+  03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> xpdf-9999.ebuild:
+  Bump eapi and use git-2 eclass.
 
   17 Feb 2011; Alexis Ballier <aballier@gentoo.org> xpdf-3.02-r4.ebuild,
   +files/xpdf-3.02-poppler-0.16.patch:
