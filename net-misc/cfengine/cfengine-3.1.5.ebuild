@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.2.ebuild,v 1.9 2011/02/13 13:06:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.5.ebuild,v 1.1 2011/05/03 23:16:33 idl0r Exp $
 
 EAPI="3"
 
@@ -15,16 +15,13 @@ SRC_URI="http://www.cfengine.org/tarballs/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="3"
-KEYWORDS="amd64 arm ~ppc ~s390 sparc x86"
+KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
 
 # libvirt disabled for now because it blocks stabilization etc.
-IUSE="examples gd graphviz html ldap mysql postgres qdbm selinux tests tokyocabinet vim-syntax"
+IUSE="examples html mysql postgres qdbm selinux tests tokyocabinet vim-syntax"
 
 # libvirt? ( app-emulation/libvirt )
 DEPEND=">=sys-libs/db-4
-	gd? ( media-libs/gd )
-	graphviz? ( media-gfx/graphviz )
-	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	selinux? ( sys-libs/libselinux )
@@ -66,9 +63,6 @@ src_configure() {
 		--with-workdir=/var/cfengine \
 		--with-pcre \
 		${myconf} \
-		$(use_with gd) \
-		$(use_with graphviz) \
-		$(use_with ldap) \
 		$(use_enable selinux)
 
 	# Fix Makefile to skip inputs, see below "examples"
@@ -76,16 +70,6 @@ src_configure() {
 
 	# We install documentation through portage
 	sed -i -e 's/\(install-data-am.*\) install-docDATA/\1/' Makefile || die
-
-	if use tests; then
-		# Fix Makefiles to install tests in correct directory
-		for i in file_masters file_operands units ; do
-			sed -i -e "s/\(docdir.*\) =.*/\1 = \/usr\/share\/doc\/${PF}\/tests\/${i}/" \
-				tests/${i}/Makefile || die
-		done
-	else
-		sed -i -e 's/\(SUBDIRS =\).*/\1/' tests/Makefile || die
-	fi
 }
 
 src_install() {

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.135 2011/04/25 14:30:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.136 2011/05/03 23:16:33 idl0r Exp $
+
+*cfengine-3.1.5 (03 May 2011)
+
+  03 May 2011; Christian Ruppert <idl0r@gentoo.org> -cfengine-2.2.10.ebuild,
+  -cfengine-3.1.2.ebuild, +cfengine-3.1.5.ebuild:
+  Version bump to 3.1.5. Remove old versions.
 
   25 Apr 2011; Raúl Porcel <armin76@gentoo.org> cfengine-3.1.4.ebuild:
   sparc stable wrt #352280
