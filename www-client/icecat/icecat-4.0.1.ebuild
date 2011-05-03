@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.ebuild,v 1.3 2011/04/18 15:06:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.1.ebuild,v 1.1 2011/05/03 21:11:10 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -13,7 +13,7 @@ XUL_PV="${MAJ_XUL_PV}${PV/${MAJ_FF_PV}/}" # 1.9.3_alpha6, 1.9.2.3, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
-PATCH="firefox-4.0-patches-0.8"
+PATCH="firefox-4.0-patches-0.9"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -33,6 +33,7 @@ RDEPEND="
 	>=dev-libs/nss-3.12.9
 	>=dev-libs/nspr-4.8.7
 	>=dev-libs/glib-2.26
+	>=media-libs/libpng-1.4.7[apng]
 	x11-libs/pango[X]
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	~net-libs/xulrunner-${XUL_PV}[wifi=,libnotify=,system-sqlite=,webm=]
@@ -166,6 +167,7 @@ src_configure() {
 	mozconfig_annotate '' --disable-mailnews
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --enable-safe-browsing
+	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --with-system-libxul
 	mozconfig_annotate '' --with-libxul-sdk="${EPREFIX}"/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
 
@@ -208,21 +210,20 @@ src_install() {
 	local size sizes icon_path icon name
 	sizes="16 32 48"
 	icon_path="${S}/browser/branding/unofficial"
-	icon="tumucumaque"
-	name="Tumucumaque"
 
-	# Install icons and .desktop for menu entry
+	## Install icons and .desktop for menu entry
 	for size in ${sizes}; do
 		insinto "/usr/share/icons/hicolor/${size}x${size}/apps"
-		newins "${icon_path}/default${size}.png" "${icon}.png" || die
+		newins "${icon_path}/default${size}.png" "${PN}.png" || die
 	done
 	# The 128x128 icon has a different name
 	insinto "/usr/share/icons/hicolor/128x128/apps"
-	newins "${icon_path}/mozicon128.png" "${icon}.png" || die
+	newins "${icon_path}/mozicon128.png" "${PN}.png" || die
 	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
-	newicon "${icon_path}/content/icon48.png" "${icon}.png" || die
+	newicon "${icon_path}/content/icon48.png" "${PN}.png" || die
 	newmenu "${FILESDIR}/icon/${PN}.desktop" "${PN}.desktop" || die
-	sed -i -e "s:@NAME@:${name}:" -e "s:@ICON@:${icon}:" \
+
+	sed -e "/^Icon/s:${PN}-icon:${PN}:" -i \
 		"${ED}/usr/share/applications/${PN}.desktop" || die
 
 	# Add StartupNotify=true bug 237317
