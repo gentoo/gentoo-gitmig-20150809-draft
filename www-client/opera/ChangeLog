@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.625 2011/04/12 01:54:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.626 2011/05/03 19:35:45 jer Exp $
+
+*opera-11.10.2092-r1 (03 May 2011)
+
+  03 May 2011; Jeroen Roovers <jer@gentoo.org> -opera-11.10.2092.ebuild,
+  +opera-11.10.2092-r1.ebuild:
+  Use PN instead of hard-coded "opera" where needed in preparation for
+  www-client/opera-next package. Fix /usr/bin/opera wrapper to be able to run
+  opera and opera-next concurrently.
 
   12 Apr 2011; Jeroen Roovers <jer@gentoo.org> -opera-11.10.2090.ebuild,
   -opera-11.10.2091.ebuild, opera-11.10.2092.ebuild:

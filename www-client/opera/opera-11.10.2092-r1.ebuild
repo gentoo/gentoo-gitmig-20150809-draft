@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.10.2092.ebuild,v 1.2 2011/04/12 01:54:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.10.2092-r1.ebuild,v 1.1 2011/05/03 19:35:45 jer Exp $
 
 EAPI="3"
 
@@ -16,7 +16,6 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer"
 
 RESTRICT="test"
 
-# http://snapshot.opera.com/unix/minor_11.01-1160/opera-11.01-1160.i386.linux.tar.xz
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
@@ -113,23 +112,23 @@ src_prepare() {
 	done
 
 	# Remove doc directory but keep the LICENSE under another name (bug #315473)
-	mv share/doc/opera/LICENSE share/opera/defaults/license.txt
+	mv share/doc/${PN}/LICENSE share/${PN}/defaults/license.txt
 	rm -rf share/doc
-	for locale in share/opera/locale/*; do
+	for locale in share/${PN}/locale/*; do
 		rm -f "${locale}/license.txt"
-		ln -sn /usr/share/opera/defaults/license.txt "${locale}/license.txt" \
+		ln -sn /usr/share/${PN}/defaults/license.txt "${locale}/license.txt" \
 			|| die "ln -sn license.txt"
 	done
 
 	# Remove package directory
-	rm -rf share/opera/package
+	rm -rf share/${PN}/package
 
 	# Leave libopera*.so only if the user chooses
 	if ! use gtk; then
-		rm lib/opera/liboperagtk.so || die "rm liboperagtk.so failed"
+		rm lib/${PN}/liboperagtk.so || die "rm liboperagtk.so failed"
 	fi
 	if ! use kde; then
-		rm lib/opera/liboperakde4.so || die "rm liboperakde4.so failed"
+		rm lib/${PN}/liboperakde4.so || die "rm liboperakde4.so failed"
 	fi
 
 	# Unzip the man pages before sedding
@@ -141,20 +140,22 @@ src_prepare() {
 		-e "s:@@{SUFFIX}::g" \
 		-e "s:@@{_SUFFIX}::g" \
 		-e "s:@@{USUFFIX}::g" \
-		share/mime/packages/opera-widget.xml \
+		share/mime/packages/${PN}-widget.xml \
 		share/man/man1/* \
-		share/applications/opera-browser.desktop \
-		share/applications/opera-widget-manager.desktop \
+		share/applications/${PN}-browser.desktop \
+		share/applications/${PN}-widget-manager.desktop \
 		|| die "sed failed"
 
-	# Create /usr/bin/opera wrapper
-	echo '#!/bin/sh' > opera
-	echo 'export OPERA_DIR=/usr/share/opera' >> opera
-	echo 'exec '"${OPREFIX}"'/opera/opera "$@"' >> opera
+	# Create /usr/bin/${PN} wrapper
+	echo '#!/bin/sh' > ${PN}
+	echo 'export OPERA_DIR=/usr/share/'"${PN}" >> ${PN}
+	echo 'export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"${HOME}/.'${PN}'"}' \
+		>> ${PN}
+	echo 'exec '"${OPREFIX}/${PN}/${PN}"' "$@"' >> ${PN}
 
 	# Fix libdir in defaults/pluginpath.ini
 	sed -i \
-		share/opera/defaults/pluginpath.ini \
+		share/${PN}/defaults/pluginpath.ini \
 		-e "s|/usr/lib32|${OPREFIX}|g" \
 		-e '/netscape/{s|[0-1]|2|g}' \
 		|| die "sed pluginpath.ini failed"
@@ -188,13 +189,14 @@ src_install() {
 
 	# Stop revdep-rebuild from checking opera binaries
 	dodir /etc/revdep-rebuild
-	echo "SEARCH_DIRS_MASK=\"${OPREFIX}/${PN}\"" > "${D}"/etc/revdep-rebuild/90opera
+	echo "SEARCH_DIRS_MASK=\"${OPREFIX}/${PN}\"" \
+		> "${D}"/etc/revdep-rebuild/90${PN}
 
 	# Set PaX markings for hardened/PaX (bug #344267)
 	pax-mark m \
-		"${D}/${OPREFIX}/opera/opera" \
-		"${D}/${OPREFIX}/opera/operaplugincleaner" \
-		"${D}/${OPREFIX}/opera/operapluginwrapper"
+		"${D}/${OPREFIX}/${PN}/${PN}" \
+		"${D}/${OPREFIX}/${PN}/operaplugincleaner" \
+		"${D}/${OPREFIX}/${PN}/operapluginwrapper"
 }
 
 pkg_preinst() {
@@ -204,7 +206,7 @@ pkg_preinst() {
 pkg_postinst() {
 	elog "To change the UI language, choose [Tools] -> [Preferences], open the"
 	elog "[General] tab, click on [Details...] then [Choose...] and point the"
-	elog "file chooser at /usr/share/opera/locale/, then enter the"
+	elog "file chooser at /usr/share/${PN}/locale/, then enter the"
 	elog "directory for the language you want and [Open] the .lng file."
 
 	if use elibc_FreeBSD; then
