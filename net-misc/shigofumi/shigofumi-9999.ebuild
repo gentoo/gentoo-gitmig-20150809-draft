@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.3 2011/05/03 11:24:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.4 2011/05/03 11:26:15 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 [[ ${PV} = 9999* ]] && GIT="git-2 autotools"
 EGIT_REPO_URI='git://repo.or.cz/shigofumi.git'
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-text/docbook-xsl-stylesheets"
 
-DOCS=( "NEWS" "README" "AUTHORS" "ChangeLog" )
+DOCS=( NEWS README AUTHORS ChangeLog )
 
 src_prepare() {
 	[[ ${PV} = 9999* ]] && eautoreconf
