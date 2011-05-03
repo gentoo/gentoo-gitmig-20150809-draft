@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.26 2011/04/05 05:36:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.27 2011/05/03 05:40:15 bicatali Exp $
+
+*gwyddion-2.24 (03 May 2011)
+
+  03 May 2011; Sébastien Fabbro <bicatali@gentoo.org> +gwyddion-2.24.ebuild:
+  Version bump
 
   05 Apr 2011; Ulrich Mueller <ulm@gentoo.org> gwyddion-2.10.ebuild:
   Depend on dev-lang/python because virtual/python will go away, bug 358849.
