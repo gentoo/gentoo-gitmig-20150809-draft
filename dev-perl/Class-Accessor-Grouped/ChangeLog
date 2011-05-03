@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Class-Accessor-Grouped
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/ChangeLog,v 1.18 2011/01/14 18:36:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Grouped/ChangeLog,v 1.19 2011/05/03 18:22:17 tove Exp $
+
+*Class-Accessor-Grouped-0.100.30 (03 May 2011)
+
+  03 May 2011; Torsten Veller <tove@gentoo.org>
+  +Class-Accessor-Grouped-0.100.30.ebuild:
+  Version bump
 
   14 Jan 2011; Torsten Veller <tove@gentoo.org>
   -Class-Accessor-Grouped-0.09003.ebuild,
