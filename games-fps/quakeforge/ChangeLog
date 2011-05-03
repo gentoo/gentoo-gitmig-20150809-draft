@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quakeforge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.26 2011/04/18 12:14:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.27 2011/05/03 21:15:11 mr_bones_ Exp $
+
+  03 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  quakeforge-0.5.5-r2.ebuild:
+  install less crap in the doc directory (bug #365865)
 
   18 Apr 2011; Tupone Alfredo <tupone@gentoo.org> quakeforge-0.5.5-r2.ebuild,
   +files/quakeforge-0.5.5-gcc46.patch:
