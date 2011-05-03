@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/fig2sxd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fig2sxd/ChangeLog,v 1.9 2010/01/02 18:21:49 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fig2sxd/ChangeLog,v 1.10 2011/05/03 15:12:59 bicatali Exp $
+
+*fig2sxd-0.21 (03 May 2011)
+
+  03 May 2011; Sébastien Fabbro <bicatali@gentoo.org> -fig2sxd-0.18.ebuild,
+  +fig2sxd-0.21.ebuild:
+  Version bump
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> fig2sxd-0.20.ebuild:
   Transfer Prefix keywords
