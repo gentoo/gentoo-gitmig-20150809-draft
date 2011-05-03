@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-amrwbenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.1 2011/04/07 12:02:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.2 2011/05/03 22:25:02 lu_zero Exp $
+
+  03 May 2011; Luca Barbato <lu_zero@gentoo.org> vo-amrwbenc-9999.ebuild:
+  Update to git-2
 
 *vo-amrwbenc-0.1.0 (07 Apr 2011)
 

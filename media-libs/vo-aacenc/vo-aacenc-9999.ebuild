@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.1 2011/04/07 11:33:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.2 2011/05/03 22:22:10 lu_zero Exp $
 
 EAPI=4
 
 if [[ ${PV} == *9999 ]] ; then
-	SCM="git"
+	SCM="git-2"
 	EGIT_REPO_URI="git://github.com/mstorsjo/${PN}.git"
 	[[ ${PV%9999} != "" ]] && EGIT_BRANCH="release/${PV%.9999}"
 fi
