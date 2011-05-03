@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/python-bibtex-1.2.4.ebuild,v 1.8 2011/05/03 14:10:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/python-bibtex-1.2.5.ebuild,v 1.1 2011/05/03 14:10:34 jlec Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/pybliographer/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="
@@ -27,8 +27,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	distutils_src_prepare
-
-	epatch "${FILESDIR}/${P}-fix_tests.patch"
 
 	# Disable tests during installation.
 	sed -e "/self.run_command ('check')/d" -i setup.py

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-bibtex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.21 2010/03/27 18:55:08 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.22 2011/05/03 14:10:34 jlec Exp $
+
+*python-bibtex-1.2.5 (03 May 2011)
+
+  03 May 2011; Justin Lecher <jlec@gentoo.org> python-bibtex-1.2.4.ebuild,
+  +python-bibtex-1.2.5.ebuild:
+  Non-maintainer version bump, fix slotting for gnome3
 
   27 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-bibtex-1.2.4.ebuild, +files/python-bibtex-1.2.4-fix_tests.patch:
