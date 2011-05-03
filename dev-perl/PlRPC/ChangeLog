@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.49 2011/02/26 10:01:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.50 2011/05/03 09:45:43 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> PlRPC-0.202.0.ebuild:
+  Marked ~x64-freebsd
 
 *PlRPC-0.202.0 (26 Feb 2011)
 
