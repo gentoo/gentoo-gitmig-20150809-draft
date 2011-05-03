@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.59 2011/03/13 08:33:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.60 2011/05/03 11:22:56 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> gtk-doc-am-1.17.ebuild:
+  Marked ~x64-freebsd
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> gtk-doc-am-1.16.ebuild:
   ppc/ppc64 stable wrt #353436
