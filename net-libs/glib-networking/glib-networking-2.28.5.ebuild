@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.5.ebuild,v 1.1 2011/04/24 10:54:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.5.ebuild,v 1.2 2011/05/03 15:47:37 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
 		--disable-maintainer-mode
-		--with-ca-certificates=${ROOT}/etc/ssl/certs/ca-certificates.crt
+		--with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
 		$(use_with gnome gnome-proxy)
 		$(use_with libproxy)
 		$(use_with ssl gnutls)"
