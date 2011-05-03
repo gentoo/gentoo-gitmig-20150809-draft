@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.28 2010/02/22 22:35:26 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.29 2011/05/03 14:03:37 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org> jre-1.6.0.ebuild:
+  Marked ~x64-freebsd
 
   22 Feb 2010; Vlastimil Babka <caster@gentoo.org> -jre-1.4.1.ebuild,
   -jre-1.4.2.ebuild:
