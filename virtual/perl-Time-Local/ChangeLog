@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.44 2011/01/13 08:05:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.45 2011/05/03 19:16:24 grobian Exp $
+
+  03 May 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-Time-Local-1.200.ebuild:
+  Marked ~x64-macos, bug #365285
 
 *perl-Time-Local-1.200 (13 Jan 2011)
 
