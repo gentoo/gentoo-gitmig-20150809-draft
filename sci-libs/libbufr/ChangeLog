@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/libbufr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.4 2011/03/17 06:20:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.5 2011/05/03 05:23:55 nerdboy Exp $
+
+*libbufr-000387 (03 May 2011)
+
+  03 May 2011; Steve Arnold <nerdboy@gentoo.org> +libbufr-000387.ebuild,
+  +files/libbufr-makefile.patch:
+  Updated to newer upstream version, including tests.
 
   17 Mar 2011; Steve Arnold <nerdboy@gentoo.org> libbufr-000360.ebuild:
   Updated to address static makefiles ignoring flags; see bug 334901.
