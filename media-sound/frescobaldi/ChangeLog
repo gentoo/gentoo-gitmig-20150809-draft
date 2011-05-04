@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/frescobaldi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.5 2011/01/13 03:14:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.6 2011/05/04 11:02:50 scarabeus Exp $
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/frescobaldi-1.0.3-python27.patch:
+  old
 
 *frescobaldi-1.2.0 (13 Jan 2011)
 
