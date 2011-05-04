@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8-r1.ebuild,v 1.2 2011/05/03 15:26:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8-r1.ebuild,v 1.3 2011/05/04 16:36:07 vostorga Exp $
 
 EAPI=4
 
@@ -121,6 +121,7 @@ src_prepare() {
 
 	epatch "${CONFDIR}"/${PN}-3.5.6-kerberos-dummy.patch
 	use smbtav2 && cd "${WORKDIR}/${P}" && epatch "${WORKDIR}"/smb_traffic_analyzer_v2.diff
+	cd "${WORKDIR}/${MY_P}" && epatch "${CONFDIR}"/${PN}-3.5.8-uclib-build.patch
 }
 
 src_configure() {
