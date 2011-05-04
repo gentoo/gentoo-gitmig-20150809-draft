@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.468 2011/05/03 15:26:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.469 2011/05/04 14:08:27 vostorga Exp $
+
+*samba-3.4.13 (04 May 2011)
+
+  04 May 2011; Víctor Ostorga <vostorga@gentoo.org> -samba-3.4.9.ebuild,
+  +samba-3.4.13.ebuild, -samba-3.5.7.ebuild:
+  Version bump to 3.4.13, cleaning up old ebuilds
 
   03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> samba-3.5.8-r1.ebuild:
   Migrate to eapi4
