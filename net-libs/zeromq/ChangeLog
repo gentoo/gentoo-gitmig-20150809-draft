@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.9 2011/04/26 20:24:04 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.10 2011/05/04 08:29:13 djc Exp $
+
+*zeromq-2.1.6-r1 (04 May 2011)
+
+  04 May 2011; Dirkjan Ochtman <djc@gentoo.org> +files/2.1.6-msg-mask.patch,
+  +zeromq-2.1.6-r1.ebuild:
+  Take upstream fix for bad assertion.
 
 *zeromq-2.1.6 (26 Apr 2011)
 
