@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/ldapuserfolder
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.11 2007/08/05 02:14:16 aross Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/ldapuserfolder/ChangeLog,v 1.12 2011/05/04 18:58:29 arfrever Exp $
+
+*ldapuserfolder-2.19 (04 May 2011)
+
+  04 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +ldapuserfolder-2.19.ebuild:
+  Version bump.
 
   05 Aug 2007; Andrew Ross <aross@gentoo.org> ldapuserfolder-2.8.ebuild:
   Correct deps and add missing docs.
