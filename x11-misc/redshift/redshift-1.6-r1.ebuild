@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.5.ebuild,v 1.3 2010/09/21 07:46:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.6-r1.ebuild,v 1.1 2011/05/04 06:33:06 xarthisius Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="gtk? 2:2.6"
 
-inherit gnome2-utils python
+inherit eutils gnome2-utils python
 
 DESCRIPTION="A screen color temperature adjusting software"
 HOMEPAGE="http://jonls.dk/redshift/"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome gtk nls"
 
-COMMON_DEPEND="|| ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 )
+COMMON_DEPEND=">=x11-libs/libX11-1.4
 	x11-libs/libXxf86vm
 	x11-libs/libxcb
 	gnome? ( dev-libs/glib:2
@@ -34,14 +34,16 @@ pkg_setup() {
 
 src_prepare() {
 	if use gtk; then
-		ln -nfs $(type -P true) py-compile || die
+		rm -f py-compile
+		ln -s $(type -P true) py-compile || die
 		python_convert_shebangs 2 src/gtk-redshift/gtk-redshift
 	fi
+	epatch "${FILESDIR}"/${PV}-bonoboiidfix.patch
 }
 
 src_configure() {
 	local myconf
-	use gtk || myconf="--enable-gui=none"
+	use gtk || myconf="--disable-gui"
 
 	econf \
 		--disable-dependency-tracking \
@@ -54,7 +56,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS NEWS README
 }
 
 pkg_preinst() {
