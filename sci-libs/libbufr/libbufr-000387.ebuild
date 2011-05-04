@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.1 2011/05/03 05:23:55 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.2 2011/05/04 04:28:29 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -170,9 +170,6 @@ generate_files() {
 	N
 	N
 	1
-
-
-
 
 	N
 	EOF
