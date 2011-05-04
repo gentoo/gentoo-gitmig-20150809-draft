@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2.ebuild,v 1.1 2011/05/04 03:29:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2.ebuild,v 1.2 2011/05/04 03:45:32 jsbronder Exp $
 
 EAPI=2
 
@@ -133,7 +133,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install || die
 
 	dodir /usr/share/doc/${PF}
 	dodoc COPYRIGHT README CHANGES RELEASE_NOTES || die
