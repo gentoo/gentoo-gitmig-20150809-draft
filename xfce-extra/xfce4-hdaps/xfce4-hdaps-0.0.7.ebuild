@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.7.ebuild,v 1.1 2011/04/18 16:26:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.7.ebuild,v 1.2 2011/05/04 18:58:46 hwoarang Exp $
 
 EAPI=4
 inherit linux-info xfconf
@@ -11,7 +11,7 @@ SRC_URI="http://michael.orlitzky.com/code/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.12:2
