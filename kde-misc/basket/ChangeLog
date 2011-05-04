@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/basket
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.11 2011/03/10 13:02:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.12 2011/05/04 11:08:39 scarabeus Exp $
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/basket-1.80-crypt.patch:
+  old
 
   10 Mar 2011; <angelos@gentoo.org> basket-1.81.ebuild:
   QA: Fixed VIRTUALX_REQUIRED
