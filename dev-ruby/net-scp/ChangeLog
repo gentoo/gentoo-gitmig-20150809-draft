@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.23 2011/04/21 05:54:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.24 2011/05/04 18:30:01 angelos Exp $
+
+  04 May 2011; Christoph Mende <angelos@gentoo.org> net-scp-1.0.4.ebuild:
+  Stable on amd64 wrt bug #321103
 
   21 Apr 2011; Hans de Graaff <graaff@gentoo.org> net-scp-1.0.4-r1.ebuild:
   Remove the blocker on test-unit since tests now work with it installed.
