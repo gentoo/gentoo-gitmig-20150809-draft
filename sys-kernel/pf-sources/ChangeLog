@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.24 2011/04/26 11:36:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.25 2011/05/04 07:34:37 wired Exp $
+
+*pf-sources-2.6.38_p7 (04 May 2011)
+
+  04 May 2011; Alex Alexander <wired@gentoo.org> +pf-sources-2.6.38_p7.ebuild:
+  version bump
 
   26 Apr 2011; Alex Alexander <wired@gentoo.org> pf-sources-2.6.38_p4.ebuild,
   pf-sources-2.6.38_p5.ebuild, pf-sources-2.6.38_p6.ebuild:
