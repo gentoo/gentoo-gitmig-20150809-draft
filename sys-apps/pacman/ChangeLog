@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pacman
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.2 2010/11/01 00:56:08 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.3 2011/05/04 23:38:25 binki Exp $
+
+  04 May 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Take over pacman which used to be proxy maintained for me.
 
 *pacman-3.4.1 (01 Nov 2010)
 
