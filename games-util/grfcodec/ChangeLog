@@ -1,6 +1,12 @@
 # ChangeLog for games-util/grfcodec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.5 2010/10/15 13:49:56 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.6 2011/05/04 16:55:22 mr_bones_ Exp $
+
+*grfcodec-5.1.1 (04 May 2011)
+
+  04 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +grfcodec-5.1.1.ebuild:
+  version bump (bug #365957) submitted by Locke Shinseiko
 
   15 Oct 2010; Markus Meier <maekke@gentoo.org> grfcodec-0_pre2306.ebuild:
   add ~arm, bug #316003
