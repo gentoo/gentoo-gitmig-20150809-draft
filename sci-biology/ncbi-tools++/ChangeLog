@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/ncbi-tools++
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.18 2011/05/02 09:43:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.19 2011/05/04 19:06:17 jlec Exp $
+
+*ncbi-tools++-2010.06.15-r1 (04 May 2011)
+
+  04 May 2011; Justin Lecher <jlec@gentoo.org>
+  -ncbi-tools++-2009.05.15-r6.ebuild, ncbi-tools++-2010.06.15.ebuild,
+  +ncbi-tools++-2010.06.15-r1.ebuild,
+  +files/ncbi-tools++-2010.06.15-asneeded.patch,
+  +files/ncbi-tools++-2010.06.15-asneeded-ng.patch:
+  Fix for asneeded, #297193; removed old, #312921
 
   02 May 2011; Justin Lecher <jlec@gentoo.org> ncbi-tools++-2010.06.15.ebuild,
   +files/ncbi-tools++-2010.06.15-gcc46.patch:

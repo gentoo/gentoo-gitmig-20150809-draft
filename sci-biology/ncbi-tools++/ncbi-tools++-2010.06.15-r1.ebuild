@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2010.06.15.ebuild,v 1.3 2011/05/04 19:06:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2010.06.15-r1.ebuild,v 1.1 2011/05/04 19:06:17 jlec Exp $
 
 EAPI="3"
 
@@ -27,16 +27,19 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	filter-ldflags -Wl,--as-needed
+#	filter-ldflags -Wl,--as-needed
+#	append-ldflags -Wl,--no-undefined
 	sed -i -e 's/-print-file-name=libstdc++.a//' \
 		-e '/sed/ s/\([gO]\[0-9\]\)\*/\1\\+/' \
 		src/build-system/configure || die
-	epatch "${FILESDIR}"/${P}-gcc46.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_configure() {
 	tc-export CXX CC
-
+# conf check for sqlite and mysql
 	"${S}"/configure --without-debug \
 		--with-bin-release \
 		--with-bincopy \
