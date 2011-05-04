@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009.ebuild,v 1.1 2011/03/04 05:39:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009.ebuild,v 1.2 2011/05/04 13:29:22 nyhm Exp $
 
 EAPI=2
 
@@ -23,7 +23,8 @@ RDEPEND=">=media-libs/libpng-1.4
 	gtk? ( >=dev-cpp/glibmm-2.4.0:2
 		>=dev-cpp/gtkmm-2.4.0:2.4
 		>=dev-cpp/gtkglextmm-1.2.0 )
-	lirc? ( app-misc/lirc )"
+	lirc? ( app-misc/lirc )
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	x86? ( || ( dev-lang/nasm dev-lang/yasm ) )
 	nls? ( sys-devel/gettext )
@@ -31,6 +32,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	confutils_require_any sdl gtk
+	games_pkg_setup
 }
 
 src_configure() {

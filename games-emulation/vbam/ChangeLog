@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/vbam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.3 2011/03/04 05:39:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.4 2011/05/04 13:29:22 nyhm Exp $
+
+  04 May 2011; Tristan Heaven <nyhm@gentoo.org> vbam-1.8.0.1009.ebuild:
+  Call games_pkg_setup; add virtual/libintl rdep
 
 *vbam-1.8.0.1009 (04 Mar 2011)
 
