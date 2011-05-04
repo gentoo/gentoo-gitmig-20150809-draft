@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/squirrel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squirrel/ChangeLog,v 1.4 2011/01/25 12:17:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squirrel/ChangeLog,v 1.5 2011/05/04 22:20:54 binki Exp $
+
+  04 May 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Take over squirrel which used to be proxy maintained for me.
 
   25 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
   squirrel-2.2.4-r1.ebuild:
