@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.247 2011/05/02 15:42:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.248 2011/05/04 11:22:00 scarabeus Exp $
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/ati-drivers-2.6.33.patch, -files/ati-drivers-2.6.34.patch,
+  -files/ati-drivers-CVE-2010-3081-fix.patch:
+  old
 
 *ati-drivers-11.4 (02 May 2011)
 
