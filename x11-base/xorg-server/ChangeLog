@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.581 2011/04/28 18:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.582 2011/05/04 11:20:16 scarabeus Exp $
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0001-Fix-tslib-check-fallback-to-set-TSLIB_LIBS.patch:
+  old
 
   28 Apr 2011; Markos Chandras <hwoarang@gentoo.org> xorg-server-1.9.5.ebuild:
   Stable on amd64 wrt bug #363965
