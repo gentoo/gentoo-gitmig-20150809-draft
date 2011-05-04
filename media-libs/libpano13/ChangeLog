@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpano13
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.26 2011/02/22 21:03:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.27 2011/05/04 22:55:58 radhermit Exp $
+
+*libpano13-2.9.18 (04 May 2011)
+
+  04 May 2011; Tim Harder <radhermit@gentoo.org> +libpano13-2.9.18.ebuild:
+  version bump
 
   22 Feb 2011; Mike Frysinger <vapier@gentoo.org> libpano13-2.9.17.ebuild,
   +files/libpano13-2.9.17-libpng-1.5.patch:
