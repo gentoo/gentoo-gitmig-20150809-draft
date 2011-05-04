@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.23 2011/03/20 09:44:45 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.24 2011/05/04 03:19:27 leio Exp $
 
 # Author : foser <foser@gentoo.org>, zaheerm <zaheerm@gentoo.org>
 
@@ -30,18 +30,13 @@ MY_P=${MY_PN}-${PV}
 # sys/ plugins; rest is split plugin options in order of ./configure --help output.
 # Good ways of validation are seeing diff of old and new configure.ac, and ./configure --help
 #
-# This list is current to gst-plugins-good-0.10.23:
+# This list is current to gst-plugins-good-0.10.28:
 my_gst_plugins_good="gconftool zlib bz2
-directsound oss sunaudio osx_audio osx_video gst_v4l2 x xshm xvideo
+directsound oss oss4 sunaudio osx_audio osx_video gst_v4l2 x xshm xvideo
 aalib aalibtest annodex cairo esd esdtest flac gconf gdk_pixbuf hal jpeg
 libcaca libdv libpng pulse dv1394 shout2 shout2test soup speex taglib wavpack"
 
 # When adding conditionals like below, be careful about having leading spaces in concat
-
-# sys/oss4 moved here since 0.10.23
-if version_is_at_least "0.10.23"; then
-	my_gst_plugins_good+=" oss4"
-fi
 
 # ext/jack moved here since 0.10.27
 if version_is_at_least "0.10.27"; then
