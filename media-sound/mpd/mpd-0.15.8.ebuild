@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.8.ebuild,v 1.8 2011/04/04 12:31:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.8.ebuild,v 1.9 2011/05/04 18:37:06 angelos Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -17,7 +17,7 @@ fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
 mikmod modplug musepack +network ogg oss pipe pulseaudio sid sqlite unicode
 vorbis wavpack zip"
 
-RDEPEND="!sys-cluster/mpich2
+RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	>=dev-libs/glib-2.4:2
 	aac? ( >=media-libs/faad2-2 )
 	alsa? ( media-sound/alsa-utils )

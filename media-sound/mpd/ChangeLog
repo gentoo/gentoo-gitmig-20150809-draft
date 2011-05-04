@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.251 2011/05/04 18:07:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.252 2011/05/04 18:38:18 angelos Exp $
+
+  04 May 2011; Christoph Mende <angelos@gentoo.org> mpd-0.15.8.ebuild,
+  mpd-0.15.15.ebuild, mpd-0.15.16.ebuild, mpd-0.16.2.ebuild:
+  Change mpich2 block to <1.4-rc2 (bug #145367)
 
   04 May 2011; Christoph Mende <angelos@gentoo.org> mpd-0.16.2.ebuild,
   files/mpd-0.16.conf.patch:
