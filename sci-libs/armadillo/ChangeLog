@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.1 2011/03/06 19:23:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.2 2011/05/04 00:29:37 bicatali Exp $
+
+*armadillo-1.2.0 (04 May 2011)
+
+  04 May 2011; Sébastien Fabbro <bicatali@gentoo.org> +armadillo-1.2.0.ebuild:
+  Version bump
 
 *armadillo-1.1.6 (06 Mar 2011)
 
