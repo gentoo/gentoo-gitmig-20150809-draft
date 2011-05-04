@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.3.0.ebuild,v 1.2 2011/01/08 18:26:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.3.0.ebuild,v 1.3 2011/05/04 15:17:39 jer Exp $
 
 EAPI="2"
 
@@ -25,6 +25,14 @@ src_configure() {
 
 src_compile() {
 	emake all || die "emake failed"
+}
+
+src_test() {
+	if [[ ${UID} = 0 ]]; then
+		einfo "Tests will not be run as root"
+	else
+		emake check || die
+	fi
 }
 
 src_install () {

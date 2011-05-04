@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cssc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.9 2011/04/11 01:31:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/ChangeLog,v 1.10 2011/05/04 15:17:39 jer Exp $
+
+  04 May 2011; Jeroen Roovers <jer@gentoo.org> cssc-1.3.0.ebuild:
+  Run tests only when UID != 0 (bug #363113).
 
   11 Apr 2011; Jeroen Roovers <jer@gentoo.org> -cssc-1.0.1.ebuild:
   Officially remove the old (bug #312089).
