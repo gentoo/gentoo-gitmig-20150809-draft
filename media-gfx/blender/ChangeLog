@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.190 2011/04/28 19:55:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.191 2011/05/04 22:06:26 tomka Exp $
+
+  04 May 2011; Thomas Kahle <tomka@gentoo.org> blender-2.49b-r2.ebuild:
+  x86 stable per bug 349847
 
   28 Apr 2011; Markos Chandras <hwoarang@gentoo.org> blender-2.49b-r2.ebuild:
   Stable on amd64 wrt bug #349847
