@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.69 2011/05/02 13:56:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.70 2011/05/04 19:55:36 hwoarang Exp $
+
+  04 May 2011; Markos Chandras <hwoarang@gentoo.org> libnet-1.1.5.ebuild:
+  Stable on amd64 wrt bug #359037
 
   02 May 2011; Thomas Kahle <tomka@gentoo.org> libnet-1.1.5.ebuild:
   x86 stable per bug 359037
