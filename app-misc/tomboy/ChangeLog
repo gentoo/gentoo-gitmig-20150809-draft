@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.118 2011/04/06 13:33:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.119 2011/05/04 15:47:30 pacho Exp $
+
+*tomboy-1.6.1 (04 May 2011)
+
+  04 May 2011; Pacho Ramos <pacho@gentoo.org> -tomboy-1.4.2.ebuild,
+  +tomboy-1.6.1.ebuild:
+  Version bump, remove old.
 
 *tomboy-1.6.0 (06 Apr 2011)
 
