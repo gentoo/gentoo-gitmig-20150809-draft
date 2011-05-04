@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.39_rc6.ebuild,v 1.1 2011/05/04 15:13:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.39_rc6.ebuild,v 1.2 2011/05/04 18:52:40 mpagano Exp $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
@@ -25,7 +25,7 @@ IUSE=""
 K_EXTRAEINFO="This kernel is not supported by Gentoo due to its unstable and
 experimental nature. If you have any issues, try a matching vanilla-sources
 ebuild -- if the problem is not there, please contact the upstream kernel
-developers at http://bugme.osdl.org and on the linux-kernel mailing list to
+developers at http://bugzilla.kernel.org and on the linux-kernel mailing list to
 report the problem so it can be fixed in time for the next kernel release."
 
 pkg_postinst() {
