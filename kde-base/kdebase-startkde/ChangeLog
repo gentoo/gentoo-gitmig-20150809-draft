@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.224 2011/04/06 14:19:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.225 2011/05/04 11:13:50 scarabeus Exp $
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/4.6.0-startkde.patch:
+  old
 
 *kdebase-startkde-4.6.2 (06 Apr 2011)
 

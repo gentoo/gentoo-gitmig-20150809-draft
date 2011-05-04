@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.80 2011/04/06 14:19:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.81 2011/05/04 11:12:28 scarabeus Exp $
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/kalgebra-4.5.1-opengl.patch:
+  old
 
 *kalgebra-4.6.2 (06 Apr 2011)
 
