@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.750 2011/05/04 11:17:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.751 2011/05/04 20:25:39 dilfridge Exp $
+
+  04 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.6.2-r3.ebuild:
+  Add blocker for net-libs/glib-networking to work around bug 365637; the
+  exact problem is still unclear.
 
   04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/kdelibs-4.5.2-open-https.patch,
