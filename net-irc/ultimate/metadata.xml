@@ -3,13 +3,7 @@
 <pkgmetadata>
   <herd>net-irc</herd>
   <maintainer>
-    <email>ohnobinki@ohnopublishing.net</email>
+    <email>binki@gentoo.org</email>
     <name>Nathan Phillip Brink</name>
-    <description>Maintainer. Assign bugs to him</description>
-  </maintainer>
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-    <name>Diego Elio Pettenò</name>
-    <description>Proxy maintainer. CC him on bugs</description>
   </maintainer>
 </pkgmetadata>
