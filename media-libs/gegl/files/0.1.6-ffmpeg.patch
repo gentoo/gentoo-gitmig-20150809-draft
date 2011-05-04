@@ -1,17 +1,20 @@
-diff -urN gegl-0.1.6.old/operations/external/ff-load.c gegl-0.1.6/operations/external/ff-load.c
---- gegl-0.1.6.old/operations/external/ff-load.c	2011-05-01 18:10:42.000000000 +0200
-+++ gegl-0.1.6/operations/external/ff-load.c	2011-05-01 18:15:58.000000000 +0200
-@@ -69,7 +69,7 @@
+diff -urN gegl-0.1.6.old//operations/external/ff-load.c gegl-0.1.6/operations/external/ff-load.c
+--- gegl-0.1.6.old//operations/external/ff-load.c   2011-01-24 19:03:30.000000000 -0300
++++ gegl-0.1.6/operations/external/ff-load.c    2011-05-04 09:59:48.910379742 -0300
+@@ -69,17 +69,17 @@
  {
    switch (err)
      {
 -    case AVERROR_NUMEXPECTED:
-+    case AVERROR(EINVAL):
++    case AVERROR(EDOM):
        g_warning ("%s: Incorrect image filename syntax.\n"
                   "Use '%%d' to specify the image number:\n"
                   "  for img1.jpg, img2.jpg, ..., use 'img%%d.jpg';\n"
-@@ -79,7 +79,7 @@
-     case AVERROR_INVALIDDATA:
+                  "  for img001.jpg, img002.jpg, ..., use 'img%%03d.jpg'.\n",
+                  filename);
+       break;
+-    case AVERROR_INVALIDDATA:
++    case AVERROR(EINVAL):
        g_warning ("%s: Error while parsing header\n", filename);
        break;
 -    case AVERROR_NOFMT:

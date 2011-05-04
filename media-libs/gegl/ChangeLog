@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.52 2011/05/01 16:22:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.53 2011/05/04 13:17:52 scarabeus Exp $
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/0.1.6-ffmpeg.patch:
+  Update the gegl ffmpeg patch to be more correct.
 
   01 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/0.1.6-ffmpeg.patch, gegl-0.1.6.ebuild:
