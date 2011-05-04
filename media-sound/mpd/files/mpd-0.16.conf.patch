@@ -1,7 +1,7 @@
-Index: mpd-0.16/doc/mpdconf.example
+Index: mpd-0.16/doc/mpdconf.dist
 ===================================================================
---- mpd-0.16.orig/doc/mpdconf.example
-+++ mpd-0.16/doc/mpdconf.example
+--- mpd-0.16.orig/doc/mpdconf.dist
++++ mpd-0.16/doc/mpdconf.dist
 @@ -10,14 +10,14 @@
  # be disabled and audio files will only be accepted over ipc socket (using
  # file:// protocol) or streaming files over an accepted protocol.

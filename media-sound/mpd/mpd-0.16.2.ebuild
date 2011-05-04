@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.6 2011/05/03 09:52:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.2.ebuild,v 1.7 2011/05/04 18:07:24 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib
@@ -154,7 +154,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	insinto /etc
-	newins doc/mpdconf.example mpd.conf
+	newins doc/mpdconf.dist mpd.conf
 
 	newinitd "${FILESDIR}"/mpd.init mpd
 
