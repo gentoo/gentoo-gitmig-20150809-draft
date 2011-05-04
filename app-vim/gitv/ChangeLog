@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/gitv
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.1 2011/05/04 08:23:23 radhermit Exp $
+
+*gitv-1.0 (04 May 2011)
+
+  04 May 2011; Tim Harder <radhermit@gentoo.org> +gitv-1.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
