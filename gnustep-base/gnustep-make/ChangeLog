@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.97 2011/04/20 18:58:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.98 2011/05/04 14:41:46 voyageur Exp $
+
+  04 May 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-make-2.6.0.ebuild:
+  Warn the user to first update configuration files before rebuilding gnustep
+  packages
 
   20 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-make-2.6.0.ebuild:
