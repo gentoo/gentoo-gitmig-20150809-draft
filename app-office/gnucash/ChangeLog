@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.235 2011/05/04 17:49:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.236 2011/05/04 19:35:39 hwoarang Exp $
+
+  04 May 2011; Markos Chandras <hwoarang@gentoo.org> gnucash-2.4.5.ebuild:
+  Stable on amd64 wrt bug #344059
 
   04 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gnucash-2.4.5.ebuild:
   x86 stable wrt security bug #344059
