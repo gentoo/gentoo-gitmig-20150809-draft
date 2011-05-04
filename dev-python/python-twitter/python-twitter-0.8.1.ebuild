@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.8.1.ebuild,v 1.1 2011/04/30 15:47:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-twitter/python-twitter-0.8.1.ebuild,v 1.2 2011/05/04 11:58:57 maksbotan Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,6 +32,8 @@ src_prepare() {
 	rm -fr simplejson
 }
 
+#Test are disabled because they are broken.
+#See http://code.google.com/p/python-twitter/issues/detail?id=196 for details.
 #src_test() {
 #	testing() {
 #		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" twitter_test.py
