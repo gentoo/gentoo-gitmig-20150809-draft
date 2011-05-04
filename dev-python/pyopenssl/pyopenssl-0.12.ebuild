@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.12.ebuild,v 1.1 2011/04/18 22:31:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.12.ebuild,v 1.2 2011/05/04 16:54:56 arfrever Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -94,8 +94,6 @@ src_install() {
 	fi
 
 	# Install examples
-	docinto examples
-	dodoc examples/* || die "dodoc failed"
-	docinto examples/simple
-	dodoc examples/simple/* || die "dodoc failed"
+	insinto /usr/share/doc/${PF}/examples
+	doins -r examples/* || die "doins failed"
 }
