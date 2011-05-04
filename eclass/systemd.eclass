@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.1 2011/05/04 10:53:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.2 2011/05/04 16:02:10 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -24,8 +24,6 @@
 #	autotools-utils_src_configure
 # }
 # @CODE
-
-inherit multilib
 
 case ${EAPI:-0} in
 	0|1|2|3|4) ;;
