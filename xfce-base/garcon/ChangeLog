@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.25 2011/05/01 14:58:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.26 2011/05/05 11:04:13 phajdan.jr Exp $
+
+  05 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> garcon-0.1.7.ebuild:
+  x86 stable wrt bug #363767
 
   01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> garcon-0.1.7.ebuild:
   ppc/ppc64 stable wrt #363767
