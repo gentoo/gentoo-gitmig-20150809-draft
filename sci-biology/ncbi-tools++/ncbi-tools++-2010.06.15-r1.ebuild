@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2010.06.15-r1.ebuild,v 1.1 2011/05/04 19:06:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2010.06.15-r1.ebuild,v 1.2 2011/05/05 13:05:51 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,9 @@ MY_P="ncbi_cxx--${MY_TAG}"
 
 DESCRIPTION="NCBI C++ Toolkit, including NCBI BLAST+"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=toolkit"
-SRC_URI="ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/${MY_Y}/${MY_TAG}/${MY_P}.tar.gz"
+SRC_URI="
+	ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/${MY_Y}/${MY_TAG}/${MY_P}.tar.gz
+	http://dev.gentoo.org/~jlec/distfiles/${P}-asneeded.patch.xz"
 
 LICENSE="public-domain"
 SLOT="0"
@@ -34,7 +36,7 @@ src_prepare() {
 		src/build-system/configure || die
 	epatch \
 		"${FILESDIR}"/${P}-gcc46.patch \
-		"${FILESDIR}"/${P}-asneeded.patch
+		"${WORKDIR}"/${P}-asneeded.patch
 }
 
 src_configure() {
