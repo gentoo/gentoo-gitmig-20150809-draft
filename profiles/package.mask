@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12750 2011/05/03 22:34:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12751 2011/05/05 09:42:48 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -648,10 +648,6 @@ net-misc/netcf
 # Mask dev-libs/seed; several ebuild issues, and missing pure-runtime deps
 # Also needs USE=introspection to be unmasked
 dev-libs/seed
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (22 Jun 2010)
-# Masked for testing. It's quite "challenging" to package.
->=sci-mathematics/nusmv-2.5.0
 
 # Justin Lecher <jlec@gentoo.org> (16 Jun 10)
 # Just working with the masked experimental version of refmac
