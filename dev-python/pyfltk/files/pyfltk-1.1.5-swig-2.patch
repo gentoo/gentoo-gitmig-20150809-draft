@@ -1,0 +1,12 @@
+http://pyfltk.svn.sourceforge.net/viewvc/pyfltk?view=revision&revision=463
+
+--- swig/Fl.i
++++ swig/Fl.i
+@@ -37,6 +37,7 @@
+ %ignore Fl::remove_handler;
+ %ignore Fl::remove_check;
+ %ignore Fl::gl_visual;
++%ignore Fl::get_awake_handler_;
+ 
+ #ifdef __APPLE__ 
+ %ignore Fl::free_color() 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyfltk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.26 2011/04/01 16:37:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.27 2011/05/05 15:17:41 arfrever Exp $
+
+  05 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyfltk-1.1.5.ebuild, +files/pyfltk-1.1.5-swig-2.patch:
+  Fix building with SWIG 2 (bug #346605).
 
   01 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> pyfltk-1.1.5.ebuild:
   Marked ~ppc64 wrt #342297
