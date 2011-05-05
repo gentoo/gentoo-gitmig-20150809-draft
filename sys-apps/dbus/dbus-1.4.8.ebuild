@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.8.ebuild,v 1.2 2011/04/26 16:13:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.8.ebuild,v 1.3 2011/05/05 12:58:16 ssuominen Exp $
 
 EAPI=2
-inherit autotools eutils multilib flag-o-matic python virtualx
+inherit autotools eutils multilib flag-o-matic python systemd virtualx
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -86,7 +86,7 @@ src_configure() {
 		--with-system-socket=/var/run/dbus/system_bus_socket
 		--with-session-socket-dir=/tmp
 		--with-dbus-user=messagebus
-		--without-systemdsystemunitdir
+		$(systemd_with_unitdir)
 		--localstatedir=/var"
 
 	mkdir "${BD}"
