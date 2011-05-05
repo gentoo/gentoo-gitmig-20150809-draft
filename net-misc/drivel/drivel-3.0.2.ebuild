@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.2.ebuild,v 1.1 2011/04/18 17:45:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.2.ebuild,v 1.2 2011/05/05 16:58:43 graaff Exp $
 
 EAPI="2"
 
@@ -39,7 +39,6 @@ pkg_setup() {
 		$(use_with dbus)
 		--disable-mime-update
 		--disable-desktop-update
-		--disable-error-on-warning
-		--disable-compile-warnings
+		--enable-error-on-warning=no
 		--localstatedir=${D}/var"
 }
