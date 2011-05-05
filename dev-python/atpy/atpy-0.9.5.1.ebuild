@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.1.ebuild,v 1.1 2011/05/04 14:25:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.1.ebuild,v 1.2 2011/05/05 16:31:08 arfrever Exp $
 
 EAPI="2"
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
 inherit distutils
 
@@ -13,7 +14,7 @@ MYPN=ATpy
 MYP="${MYPN}-${PV}"
 
 DESCRIPTION="Astronomical tables support for Python"
-HOMEPAGE="http://atpy.github.com/"
+HOMEPAGE="http://atpy.github.com/ http://pypi.python.org/pypi/ATpy"
 SRC_URI="https://github.com/downloads/${PN}/${PN}/${MYP}.tar.gz"
 
 RDEPEND="dev-python/numpy
@@ -24,8 +25,6 @@ RDEPEND="dev-python/numpy
 	postgres? ( dev-db/pygresql )
 	sqlite? ( dev-python/pysqlite )
 	votable? ( dev-python/vo )"
-
-RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
 DEPEND=">=dev-python/numpy-1.3"
 
