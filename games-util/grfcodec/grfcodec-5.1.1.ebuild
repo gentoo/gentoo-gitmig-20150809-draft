@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-5.1.1.ebuild,v 1.1 2011/05/04 16:55:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-5.1.1.ebuild,v 1.2 2011/05/05 00:01:39 mr_bones_ Exp $
 
 EAPI=3
 
@@ -46,6 +46,7 @@ cat > Makefile.local <<-__EOF__
 		LDOPT = ${LDFLAGS}
 		UPX =
 		V = 1
+		undefine FLAGS
 	__EOF__
 }
 
