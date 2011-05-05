@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4-r1.ebuild,v 1.2 2011/04/21 05:54:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4-r1.ebuild,v 1.3 2011/05/05 05:38:50 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc README.rdoc"
