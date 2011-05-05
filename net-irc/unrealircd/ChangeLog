@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/unrealircd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.80 2010/06/12 21:18:26 a3li Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.81 2011/05/05 18:32:57 binki Exp $
+
+  05 May 2011; Nathan Phillip Brink <binki@gentoo.org>
+  unrealircd-3.2.8.1-r1.ebuild:
+  Fix bug 316379 reported by shimi by adding buildtime depend on pkgconfig.
 
   12 Jun 2010; Alex Legler <a3li@gentoo.org> -unrealircd-3.2.8.1.ebuild,
   unrealircd-3.2.8.1-r1.ebuild:
