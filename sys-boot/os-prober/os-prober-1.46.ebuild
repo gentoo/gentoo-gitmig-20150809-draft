@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.35.ebuild,v 1.2 2009/12/15 21:37:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.46.ebuild,v 1.1 2011/05/05 00:30:51 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils multilib toolchain-funcs
 
@@ -15,30 +15,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S="${WORKDIR}/${PN}"
-
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-multilib.patch
-
 	sed -i -e "s:/lib/udev:/$(get_libdir)/udev:g" common.sh || die "sed failed on common.sh"
+	find "${S}" -type f -exec sed -i -e "s:/usr/lib/:/usr/libexec/:g" {} + || die "failed on find and sed lib->libexec"
+	sed -i -e "s:/lib/ld\*\.so\*:/lib*/ld*.so*:g" os-probes/mounted/common/90linux-distro  || die "sed failed on 90linux-distro"
 
-	# Just use the default rules provided by GNU Make
+	# use default GNU rules
 	rm Makefile
 }
 
 src_compile() {
 	tc-export CC
-	emake newns || die "emake failed"
+	emake newns
 }
 
 src_install() {
-	dobin os-prober linux-boot-prober || die "dobin failed"
+	dobin os-prober linux-boot-prober
 
 	exeinto /usr/libexec/os-prober
-	doexe newns || die "doexe newns failed"
+	doexe newns
 
 	insinto /usr/share/os-prober
-	doins common.sh || die "doins common.sh failed"
+	doins common.sh
 
 	keepdir /var/lib/os-prober
 
@@ -51,18 +49,18 @@ src_install() {
 
 	for dir in os-probes{,/mounted,/init} linux-boot-probes{,/mounted}; do
 		exeinto /usr/libexec/$dir
-		doexe $dir/common/* || die "doexe failed in $dir/common"
+		doexe $dir/common/*
 		if [[ -d $dir/$debarch ]]; then
-			doexe $dir/$debarch/* || die "doexe failed in $dir/$debarch"
+			doexe $dir/$debarch/*
 		fi
 	done
 
 	if use amd64 || use x86; then
 		exeinto /usr/libexec/os-probes/mounted
-		doexe os-probes/mounted/powerpc/20macosx || die "doexe failed on 20macosx"
+		doexe os-probes/mounted/powerpc/20macosx
 	fi
 
-	dodoc README TODO debian/changelog || die "dodoc failed"
+	dodoc README TODO debian/changelog
 }
 
 pkg_postinst() {
