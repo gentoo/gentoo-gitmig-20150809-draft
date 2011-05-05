@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.6 2011/05/04 19:29:20 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-9999.ebuild,v 1.7 2011/05/05 00:16:45 williamh Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.7"
@@ -29,6 +29,8 @@ IUSE="zsh-completion"
 RDEPEND="${DEPEND}
 	zsh-completion? ( app-shells/zsh )"
 
+DOCS="bugzrc.example"
+
 pkg_setup() {
 	python_set_active_version 2.7
 }
@@ -36,7 +38,6 @@ pkg_setup() {
 src_install() {
 	distutils_src_install
 
-dodoc bugzrc.example README
 	doman man/bugz.1
 	dobashcompletion contrib/bash-completion bugz
 
