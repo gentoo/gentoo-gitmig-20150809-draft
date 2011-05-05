@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.24.2.ebuild,v 1.2 2011/04/24 20:48:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.24.2-r1.ebuild,v 1.1 2011/05/05 17:18:15 mgorny Exp $
 
 EAPI=3
-inherit base
+inherit base systemd
 
 MY_P=${P/_rc/rc}
 ALSA_DRIVER_VER="1.0.24"
@@ -48,7 +48,8 @@ src_configure() {
 	use doc || myconf="--disable-xmlto"
 
 	econf ${myconf} \
-		$(use_enable nls)
+		$(use_enable nls) \
+		"$(systemd_with_unitdir)"
 }
 
 src_install() {

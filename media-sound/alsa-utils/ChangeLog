@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.305 2011/04/24 20:48:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.306 2011/05/05 17:18:15 mgorny Exp $
+
+*alsa-utils-1.0.24.2-r1 (05 May 2011)
+
+  05 May 2011; Michał Górny <mgorny@gentoo.org> -alsa-utils-1.0.24.2.ebuild,
+  +alsa-utils-1.0.24.2-r1.ebuild:
+  Use systemd eclass to install systemd units, wrt bug #366109.
 
   24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> alsa-utils-1.0.23-r1.ebuild,
   alsa-utils-1.0.24.2.ebuild:
