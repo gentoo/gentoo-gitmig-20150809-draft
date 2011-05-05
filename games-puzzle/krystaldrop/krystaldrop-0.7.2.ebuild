@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.11 2009/06/13 17:43:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.12 2011/05/05 10:27:33 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -32,6 +32,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-deps.patch \
+		"${FILESDIR}"/${P}-icu.patch \
 		"${FILESDIR}"/${P}-glibc2.10.patch
 
 	sed -i \
