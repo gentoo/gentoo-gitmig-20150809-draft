@@ -1,8 +1,0 @@
-diff -ur quadkonsole4-0.1.orig/src/quadkonsole4.desktop quadkonsole4-0.1/src/quadkonsole4.desktop
---- quadkonsole4-0.1.orig/src/quadkonsole4.desktop	2009-11-16 21:38:35.000000000 +0200
-+++ quadkonsole4-0.1/src/quadkonsole4.desktop	2009-12-28 13:15:39.000000000 +0200
-@@ -40,3 +40,4 @@
- GenericName[zh_CN]=QuadKonsole4
- GenericName[zh_TW]=QuadKonsole4
- Terminal=false
-+Categories=Qt;KDE;System;TerminalEmulator;
