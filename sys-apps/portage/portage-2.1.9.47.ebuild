@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.25.ebuild,v 1.10 2011/04/09 22:34:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.9.47.ebuild,v 1.1 2011/05/05 19:42:06 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -10,15 +10,16 @@ inherit eutils multilib python
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_pl python3 selinux"
+IUSE="build doc epydoc +ipc linguas_pl python2 python3 selinux"
 
 python_dep="python3? ( =dev-lang/python-3* )
-	!python3? (
-		build? ( || ( dev-lang/python:2.8 dev-lang/python:2.7 dev-lang/python:2.6 ) )
-		!build? ( || ( dev-lang/python:2.8 dev-lang/python:2.7 dev-lang/python:2.6 >=dev-lang/python-3 ) )
-	)"
+	!python2? ( !python3? (
+		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) )
+		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 >=dev-lang/python-3 ) )
+	) )
+	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) ) )"
 
 # The pysqlite blocker is for bug #282760.
 DEPEND="${python_dep}
@@ -82,7 +83,11 @@ pkg_setup() {
 	[[ -z $(get_libdir) ]] && \
 		die "get_libdir returned an empty string"
 
-	if ! use python3 && ! compatible_python_is_selected ; then
+	if use python2 && use python3 ; then
+		ewarn "Both python2 and python3 USE flags are enabled, but only one"
+		ewarn "can be in the shebangs. Using python3."
+	fi
+	if ! use python2 && ! use python3 && ! compatible_python_is_selected ; then
 		ewarn "Attempting to select a compatible default python interpreter"
 		local x success=0
 		for x in /usr/bin/python2.* ; do
@@ -104,6 +109,8 @@ pkg_setup() {
 
 	if use python3; then
 		python_set_active_version 3
+	elif use python2; then
+		python_set_active_version 2
 	fi
 }
 
@@ -133,6 +140,9 @@ src_prepare() {
 	if use python3; then
 		einfo "Converting shebangs for python3..."
 		python_convert_shebangs -r 3 .
+	elif use python2; then
+		einfo "Converting shebangs for python2..."
+		python_convert_shebangs -r 2 .
 	fi
 }
 
@@ -201,14 +211,16 @@ src_install() {
 		rm "${S}"/bin/ebuild-helpers/sed || die "Failed to remove sed wrapper"
 	fi
 
-	local x symlinks
+	local x symlinks files
 
 	cd "$S" || die "cd failed"
 	for x in $(find bin -type d) ; do
 		exeinto $portage_base/$x || die "exeinto failed"
 		cd "$S"/$x || die "cd failed"
-		doexe $(find . -mindepth 1 -maxdepth 1 -type f ! -type l) || \
-			die "doexe failed"
+		files=$(find . -mindepth 1 -maxdepth 1 -type f ! -type l)
+		if [ -n "$files" ] ; then
+			doexe $files || die "doexe failed"
+		fi
 		symlinks=$(find . -mindepth 1 -maxdepth 1 -type l)
 		if [ -n "$symlinks" ] ; then
 			cp -P $symlinks "$D$portage_base/$x" || die "cp failed"
