@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2011.01.ebuild,v 1.2 2011/05/05 12:57:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2011.04.ebuild,v 1.1 2011/05/05 12:57:25 patrick Exp $
 
 EAPI=3
 
-PARROT_VERSION="3.0.0"
+PARROT_VERSION="3.3.0"
 inherit eutils multilib
 
 DESCRIPTION="A Perl 6 implementation built on the Parrot virtual machine"
