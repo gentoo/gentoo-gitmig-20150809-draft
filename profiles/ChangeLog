@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5350 2011/05/05 20:12:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5351 2011/05/05 22:07:57 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 May 2011; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/package.mask:
+  sys-devel/prelink: Masked on hardened, use sys-apps/elfix instead to fix
+  gnustack
 
   05 May 2011; Anthony G. Basile <blueness@gentoo.org> package.mask:
   sys-apps/chpax: Unmasked after discussion, see Bug #365825
