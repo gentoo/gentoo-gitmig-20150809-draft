@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.0.ebuild,v 1.1 2011/04/30 11:02:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.2.ebuild,v 1.1 2011/05/05 14:20:37 scarabeus Exp $
 
 EAPI=4
 
