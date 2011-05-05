@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r1.ebuild,v 1.7 2008/12/07 11:49:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r1.ebuild,v 1.8 2011/05/05 15:20:19 scarabeus Exp $
+
+EAPI=4
 
 inherit eutils libtool
 
@@ -22,29 +24,33 @@ DEPEND="!media-libs/libungif
 	)
 	rle? ( media-libs/urt )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gif2rle.patch
 	epatch "${FILESDIR}"/${P}-giffix-null-Extension-fix.patch
 	elibtoolize
 	epunt_cxx
 }
 
-src_compile() {
-	local myconf="--disable-gl $(use_enable X x11)"
+src_configure() {
+	local myconf=""
+
 	# prevent circular depend #111455
 	if has_version media-libs/urt ; then
 		myconf="${myconf} $(use_enable rle)"
 	else
 		myconf="${myconf} --disable-rle"
 	fi
-	econf ${myconf}
-	emake || die "emake failed"
+
+	econf \
+		--disable-static \
+		--disable-gl \
+		$(use_enable X x11) \
+		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	default
+	find "${ED}" -name '*.la' -delete
 	dodoc AUTHORS BUGS ChangeLog NEWS ONEWS README TODO doc/*.txt
 	dohtml -r doc
 }
