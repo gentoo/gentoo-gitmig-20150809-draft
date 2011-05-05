@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.85 2011/05/05 06:32:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.86 2011/05/05 17:38:47 pacho Exp $
+
+*bluez-4.93 (05 May 2011)
+
+  05 May 2011; Pacho Ramos <pacho@gentoo.org> -bluez-4.89.ebuild,
+  -bluez-4.90.ebuild, +bluez-4.93.ebuild:
+  Version bump, remove old.
 
   05 May 2011; Christoph Mende <angelos@gentoo.org> bluez-4.91.ebuild:
   Stable on amd64 wrt bug #365527
