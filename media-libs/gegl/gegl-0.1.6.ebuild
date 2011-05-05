@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.16 2011/05/01 16:22:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6.ebuild,v 1.17 2011/05/05 14:53:06 scarabeus Exp $
 
 EAPI=4
 
@@ -41,6 +41,8 @@ RDEPEND="${DEPEND}"
 # tests fail in various ways:
 #   see bug #362215
 RESTRICT="test"
+
+DOCS=( ChangeLog INSTALL README NEWS )
 
 src_prepare() {
 	# upstream bug report:
@@ -95,7 +97,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	find "${ED}" -name '*.la' -delete
 	dodoc ChangeLog INSTALL README NEWS
 }
