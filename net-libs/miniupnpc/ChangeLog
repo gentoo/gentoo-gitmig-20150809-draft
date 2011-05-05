@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.7 2011/01/05 14:53:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.8 2011/05/05 08:45:58 hwoarang Exp $
+
+  05 May 2011; Markos Chandras <hwoarang@gentoo.org> miniupnpc-1.5.ebuild:
+  Stable on amd64 wrt bug #365341
 
 *miniupnpc-1.5 (05 Jan 2011)
 
