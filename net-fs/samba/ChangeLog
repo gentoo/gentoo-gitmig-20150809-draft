@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.470 2011/05/04 16:36:07 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.471 2011/05/05 17:24:10 vostorga Exp $
+
+  05 May 2011; Víctor Ostorga <vostorga@gentoo.org> samba-3.4.12.ebuild,
+  samba-3.4.13.ebuild, samba-3.5.8.ebuild, samba-3.5.8-r1.ebuild:
+  Specifying net-dns/avahi[dbus] dependency when avahi use flag is enabled,
+  bug 364539
 
   04 May 2011; Víctor Ostorga <vostorga@gentoo.org> samba-3.5.8-r1.ebuild,
   +files/3.5/samba-3.5.8-uclib-build.patch:

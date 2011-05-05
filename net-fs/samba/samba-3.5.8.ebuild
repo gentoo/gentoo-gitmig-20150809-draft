@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8.ebuild,v 1.2 2011/03/15 16:01:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.8.ebuild,v 1.3 2011/05/05 17:24:10 vostorga Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ DEPEND="dev-libs/popt
 	virtual/libiconv
 	ads? ( virtual/krb5 sys-fs/e2fsprogs
 		client? ( sys-apps/keyutils ) )
-	avahi? ( net-dns/avahi )
+	avahi? ( net-dns/avahi[dbus] )
 	caps? ( sys-libs/libcap )
 	client? ( !net-fs/mount-cifs
 		dev-libs/iniparser )
