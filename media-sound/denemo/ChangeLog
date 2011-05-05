@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/denemo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.31 2011/03/21 22:57:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.32 2011/05/05 17:54:55 angelos Exp $
+
+*denemo-0.9.0 (05 May 2011)
+
+  05 May 2011; Christoph Mende <angelos@gentoo.org> +denemo-0.9.0.ebuild,
+  metadata.xml:
+  Version bump
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> denemo-0.8.2.ebuild,
   denemo-0.8.16.ebuild:
