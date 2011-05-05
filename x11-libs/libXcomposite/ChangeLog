@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.81 2011/02/14 23:22:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.82 2011/05/05 14:17:55 scarabeus Exp $
+
+*libXcomposite-0.4.3-r1 (05 May 2011)
+
+  05 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libXcomposite-0.4.3-r1.ebuild:
+  Revision bump to fix useless dep over libXext. Also bumps eapi and fixes QA
+  warnings.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libXcomposite-0.4.3.ebuild:
