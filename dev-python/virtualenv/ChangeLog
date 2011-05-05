@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.53 2011/05/02 15:22:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.54 2011/05/05 06:39:32 angelos Exp $
+
+  05 May 2011; Christoph Mende <angelos@gentoo.org> virtualenv-1.6.ebuild:
+  Stable on amd64 wrt bug #365573
 
   02 May 2011; Samuli Suominen <ssuominen@gentoo.org> virtualenv-1.6.ebuild:
   ppc64 stable wrt #365573
