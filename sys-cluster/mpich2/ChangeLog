@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.68 2011/05/04 03:29:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.69 2011/05/05 19:51:56 jsbronder Exp $
+
+  05 May 2011; Justin Bronder <jsbronder@gentoo.org> mpich2-1.4_rc2.ebuild:
+  Re-enable some tests
 
 *mpich2-1.4_rc2 (04 May 2011)
 
