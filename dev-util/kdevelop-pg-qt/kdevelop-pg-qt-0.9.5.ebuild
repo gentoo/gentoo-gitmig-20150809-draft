@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/kdevelop-pg-qt-0.9.0.ebuild,v 1.2 2011/01/30 12:54:50 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/kdevelop-pg-qt-0.9.5.ebuild,v 1.1 2011/05/05 14:30:12 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
+KDE_SCM=git
 inherit kde4-base
 
 DESCRIPTION="A LL(1) parser generator used mainly by KDevelop language plugins"
