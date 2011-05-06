@@ -1,6 +1,20 @@
 # ChangeLog for games-arcade/criticalmass
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.19 2010/10/15 12:36:01 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.20 2011/05/06 18:21:27 mr_bones_ Exp $
+
+  06 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +criticalmass-1.0.2.ebuild, +files/criticalmass-1.0.2-gcc43.patch,
+  +files/criticalmass-1.0.2-libpng14.patch,
+  +files/criticalmass-1.0.2-system_curl.patch:
+  version bump
+
+*criticalmass-1.0.2 (06 May 2011)
+
+  06 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +criticalmass-1.0.2.ebuild, +files/criticalmass-1.0.2-gcc43.patch,
+  +files/criticalmass-1.0.2-libpng14.patch,
+  +files/criticalmass-1.0.2-system_curl.patch:
+  version bump
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> criticalmass-1.0.0-r1.ebuild:
   stable ppc, bug 313911
