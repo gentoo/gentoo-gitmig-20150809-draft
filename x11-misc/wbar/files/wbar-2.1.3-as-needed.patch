@@ -1,0 +1,36 @@
+Fix automake issues with having two Main.cc
+Fix building with --as-needed
+
+https://bugs.gentoo.org/358557
+
+Patch provided by xarthisius@gentoo.org for 2.1.1
+Patch adapted to 2.1.3 by Kevin McCarthy <signals@gentoo.org>
+
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -27,7 +27,7 @@
+ $(top_srcdir)/src/config/Run.cc \
+ $(top_srcdir)/src/config/Functions.cc \
+ $(top_srcdir)/src/config/Functions.h \
+-$(top_srcdir)/src/config/Main.cc \
++$(top_srcdir)/src/config/Main-config.cc \
+ $(UTILS)
+ endif
+ 
+@@ -42,11 +42,12 @@
+ $(top_srcdir)/src/utils/OptParser.h \
+ $(top_srcdir)/src/utils/i18n.h
+ 
+-wbar_CPPFLAGS = @modules_CFLAGS@ -I$(top_srcdir)/src/utils
+-wbar_LDFLAGS = @modules_LIBS@
++AM_CPPFLAGS = -I$(top_srcdir)/src/utils
++wbar_CXXFLAGS = @modules_CFLAGS@
++wbar_LDADD = @modules_LIBS@
+ 
+ if WBAR_CONFIG
+-wbar_config_CPPFLAGS = @gui_modules_CFLAGS@ -I$(top_srcdir)/src/utils
+-wbar_config_LDFLAGS = @gui_modules_LIBS@
++wbar_config_CXXFLAGS = @gui_modules_CFLAGS@
++wbar_config_LDADD = @gui_modules_LIBS@
+ endif
+ 
