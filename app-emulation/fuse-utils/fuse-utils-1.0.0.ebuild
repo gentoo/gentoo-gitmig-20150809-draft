@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/fuse-utils-1.0.0.ebuild,v 1.1 2011/05/02 20:05:35 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/fuse-utils-1.0.0.ebuild,v 1.2 2011/05/06 19:45:08 neurogeek Exp $
 
 EAPI="3"
+
+inherit autotools eutils
 
 DESCRIPTION="Utils for the Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://fuse-emulator.sourceforge.net"
