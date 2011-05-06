@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.11.ebuild,v 1.1 2011/04/03 22:09:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.11.ebuild,v 1.2 2011/05/06 18:24:08 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 
 IUSE="doc examples fits"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 LICENSE="GPL-2"
 
 DEPEND="dev-python/numpy"
