@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.13 2011/05/06 06:59:22 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.14 2011/05/06 07:00:22 djc Exp $
+
+  06 May 2011; Dirkjan Ochtman <djc@gentoo.org> -files/configure.ac-1.02:
+  And one more.
 
   06 May 2011; Dirkjan Ochtman <djc@gentoo.org>
   -files/01-dont-print-pid-on-startup.diff, -redis-1.2.6.ebuild,
