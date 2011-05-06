@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.8.1.ebuild,v 1.2 2011/04/29 12:02:49 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.8.1.ebuild,v 1.3 2011/05/06 16:13:38 ali_bush Exp $
 
 EAPI="3"
 JAVA_PKG_IUSE="doc examples source"
@@ -43,8 +43,6 @@ pkg_setup() {
 		ewarn "This package can fail to build with memory allocation errors in some cases."
 		ewarn "If you are unable to build from sources, please try USE=binary"
 		ewarn "for this package. See bug #181390 for more information."
-		ebeep 3
-		epause 5
 
 		if use amd64; then
 			CHECKREQS_MEMORY="1024"
