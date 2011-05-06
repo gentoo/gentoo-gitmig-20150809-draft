@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.81 2011/04/27 06:38:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.82 2011/05/06 17:26:32 phajdan.jr Exp $
+
+  06 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> texmaker-2.30.ebuild:
+  x86 stable wrt bug #363937
 
 *texmaker-3.02 (27 Apr 2011)
 
