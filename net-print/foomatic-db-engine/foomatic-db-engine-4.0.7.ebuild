@@ -1,35 +1,41 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20070508.ebuild,v 1.2 2007/05/11 11:12:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-4.0.7.ebuild,v 1.1 2011/05/06 16:03:31 jlec Exp $
 
-inherit perl-app eutils versionator
+EAPI="2"
 
-MY_P=${PN}-$(replace_version_separator 2 '-')
+inherit eutils perl-app versionator
+
 DESCRIPTION="Generates ppds out of xml foomatic printer description files"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
-SRC_URI="http://gentooexperimental.org/~calchan/distfiles/${MY_P}.tar.gz
-	http://www.linuxprinting.org/download/foomatic/${MY_P}.tar.gz"
+SRC_URI="http://www.linuxprinting.org/download/foomatic/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="dev-libs/libxml2
+RDEPEND="
+	dev-libs/libxml2
 	net-print/foomatic-filters"
 PDEPEND="net-print/foomatic-db"
 
-S=${WORKDIR}/${MY_P}
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PV}-perl-module.patch \
+		"${FILESDIR}"/${PV}-respect-ldflag.patch
+	sed -i -e "s:@LIB_CUPS@:$(cups-config --serverbin):" "${S}"/Makefile.in
+}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/perl-module-${PV}.diff
-	sed -i -e "s:@LIB_CUPS@:$(cups-config --serverbin):" Makefile.in
+src_configure() {
+	default
+	emake defaults || die "emake defaults failed"
+
+	cd lib
+	perl-app_src_configure
 }
 
 src_compile() {
-	econf || die "econf failed"
 	emake || die "emake failed"
 
 	cd lib
