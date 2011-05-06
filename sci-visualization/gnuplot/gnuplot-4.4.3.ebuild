@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3.ebuild,v 1.1 2011/05/05 07:58:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3.ebuild,v 1.2 2011/05/06 18:56:00 ulm Exp $
 
 EAPI=3
 
@@ -84,7 +84,9 @@ src_configure() {
 		&& myconf="${myconf} --with-readline=gnu" \
 		|| myconf="${myconf} --with-readline=builtin"
 
-	econf ${myconf} DIST_CONTACT="http://bugs.gentoo.org/"
+	econf ${myconf} \
+		DIST_CONTACT="http://bugs.gentoo.org/" \
+		EMACS=$(usev emacs || usev xemacs || echo no)
 
 	if use xemacs; then
 		einfo "Configuring gnuplot-mode for XEmacs ..."
@@ -109,7 +111,7 @@ src_compile() {
 	# example plots.
 	addwrite /dev/svga:/dev/mouse:/dev/tts/0
 
-	emake || die
+	emake all info || die
 
 	if use xemacs; then
 		cd "${S}/lisp-xemacs"

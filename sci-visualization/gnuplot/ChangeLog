@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.152 2011/05/05 07:58:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.153 2011/05/06 18:56:00 ulm Exp $
+
+  06 May 2011; Ulrich Mueller <ulm@gentoo.org> gnuplot-4.4.3.ebuild:
+  Suppress autodetection of Emacs (again, see ChangeLog entry of 20 Sep 2007),
+  fixes bug 366129. Build GNU Info file in src_compile.
 
 *gnuplot-4.4.3 (05 May 2011)
 
