@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.119 2011/04/24 03:11:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.120 2011/05/06 22:18:41 mattst88 Exp $
+
+  06 May 2011; Matt Turner <mattst88@gentoo.org> use.mask:
+  use.mask mumble, media-sound/mumble not keyworded on ppc
 
   24 Apr 2011; Joseph Jezak <josejx@gentoo.org> package.use.mask, use.mask:
   Allow nouveau on ppc/ppc64.

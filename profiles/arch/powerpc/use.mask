@@ -171,3 +171,7 @@ ios
 # Samuli Suominen <ssuominen@gentoo.org> (03 Nov 2010)
 # and it's also masked in arch/powerpc/ppc64/32ul/package.mask
 lirc
+
+# Matt Turner <mattst88@gmail.com> (06 May 2011)
+# media-sound/mumble not keyworded on ppc
+mumble
