@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/adhearsion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.21 2011/04/10 06:16:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/ChangeLog,v 1.22 2011/05/06 14:28:40 graaff Exp $
+
+  06 May 2011; Hans de Graaff <graaff@gentoo.org> -adhearsion-0.8.3-r1.ebuild,
+  -adhearsion-0.8.6.ebuild, -adhearsion-1.0.1.ebuild:
+  Remove old versions.
 
 *adhearsion-1.0.2 (10 Apr 2011)
 
