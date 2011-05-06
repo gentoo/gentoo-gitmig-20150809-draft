@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/smbldap-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.33 2009/09/11 11:32:37 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.34 2011/05/06 15:20:19 vostorga Exp $
+
+*smbldap-tools-0.9.6 (06 May 2011)
+
+  06 May 2011; Víctor Ostorga <vostorga@gentoo.org>
+  -smbldap-tools-0.9.1-r1.ebuild, +smbldap-tools-0.9.6.ebuild:
+  Version bump to 0.9.6, Fixing sambagrouptype bug 242428, fixing home
+  directory ownership bug 284277, dropping old ebuild
 
   11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   smbldap-tools-0.9.4-r1.ebuild, smbldap-tools-0.9.5.ebuild:
