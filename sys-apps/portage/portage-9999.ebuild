@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.22 2011/04/09 22:34:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.23 2011/05/06 04:21:51 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
 EAPI=2
-inherit git eutils multilib python
+inherit git-2 eutils multilib python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -105,7 +105,7 @@ src_prepare() {
 	einfo "Setting portage.VERSION to ${_version} ..."
 	sed -e "s/^VERSION=.*/VERSION='${_version}'/" -i pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
-	sed -e "1s/VERSION/${PVR}/" -i doc/fragment/version || \
+	sed -e "1s/VERSION/${_version}/" -i doc/fragment/version || \
 		die "Failed to patch VERSION in doc/fragment/version"
 	sed -e "1s/VERSION/${_version}/" -i man/* || \
 		die "Failed to patch VERSION in man page headers"
