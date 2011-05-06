@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_ipmi_sensor/nagios-check_ipmi_sensor-1.3.ebuild,v 1.1 2011/01/17 11:23:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_ipmi_sensor/nagios-check_ipmi_sensor-1.3.ebuild,v 1.2 2011/05/06 08:11:34 tomka Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.thomas-krenn.com/en/oss/ipmi-plugin/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=""
