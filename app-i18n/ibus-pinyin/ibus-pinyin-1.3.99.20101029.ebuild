@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20101029.ebuild,v 1.2 2011/04/16 22:16:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20101029.ebuild,v 1.3 2011/05/06 12:48:27 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-RDEPEND=">=app-i18n/ibus-1.3
+RDEPEND=">=app-i18n/ibus-1.3.99
 	>=dev-libs/boost-1.39
 	sys-apps/util-linux
 	nls? ( virtual/libintl )"
