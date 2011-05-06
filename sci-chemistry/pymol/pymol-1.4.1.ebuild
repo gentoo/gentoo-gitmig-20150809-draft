@@ -1,49 +1,50 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.3.0.ebuild,v 1.4 2010/09/19 19:32:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4.1.ebuild,v 1.1 2011/05/06 07:59:31 jlec Exp $
 
 EAPI="3"
 
-SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 PYTHON_USE_WITH="tk"
-REV="3909"
+PYTHON_MODNAME="${PN} chempy pmg_tk pmg_wx"
 
-inherit eutils distutils prefix
+inherit eutils distutils prefix versionator
 
 DESCRIPTION="A Python-extensible molecular graphics system."
 HOMEPAGE="http://pymol.sourceforge.net/"
-SRC_URI="http://pymol.svn.sourceforge.net/viewvc/pymol/trunk/pymol.tar.gz?view=tar&pathrev=${REV} -> ${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 LICENSE="PSF-2.2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="apbs numpy shaders vmd"
+IUSE="apbs numpy vmd"
 
 DEPEND="
-		dev-python/numpy
-		dev-python/pmw
-		media-libs/freetype:2
-		media-libs/libpng
-		media-video/mpeg-tools
-		sys-libs/zlib
-		media-libs/freeglut
-		apbs? (
-			dev-libs/maloc
-			sci-chemistry/apbs
-			sci-chemistry/pdb2pqr
-			sci-chemistry/pymol-apbs-plugin
-		)"
+	dev-python/numpy
+	dev-python/pmw
+	media-libs/freetype:2
+	media-libs/glew
+	media-libs/libpng
+	media-video/mpeg-tools
+	sys-libs/zlib
+	media-libs/freeglut
+	apbs? (
+		dev-libs/maloc
+		sci-chemistry/apbs
+		sci-chemistry/pdb2pqr
+		sci-chemistry/pymol-apbs-plugin
+	)"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.* 2.4 2.5"
-
-S="${WORKDIR}"/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/1.2.2-data-path.patch
+	epatch \
+		"${FILESDIR}"/${PV}-data-path.patch \
+		"${FILESDIR}"/${PV}-shaders.patch
 
 	epatch "${FILESDIR}"/1.2.2-prefix.patch && \
-	eprefixify setup.py
+		eprefixify setup.py
 
 	# Turn off splash screen.  Please do make a project contribution
 	# if you are able though. #299020
@@ -54,9 +55,7 @@ src_prepare() {
 		-e "s:\(ext_comp_args=\).*:\1[]:g" \
 		"${S}"/setup.py || die "Failed running sed on setup.py"
 
-	use shaders && epatch "${FILESDIR}"/${PN}-1.2.2-shaders.patch
-
-	use vmd && epatch "${FILESDIR}"/${PV}-vmd.patch
+	use vmd && epatch "${FILESDIR}"/$(get_version_component_range 1-2)-vmd.patch
 
 	use numpy && \
 		sed \
@@ -101,4 +100,11 @@ src_install() {
 	doins -r examples || die "Failed to install docs."
 
 	dodoc DEVELOPERS README || die "Failed to install docs."
+}
+
+pkg_postinst() {
+	elog "\t USE=shaders was removed,"
+	elog "please use pymol config settings"
+	elog "\t set use_shaders, 1"
+	distutils_pkg_postinst
 }
