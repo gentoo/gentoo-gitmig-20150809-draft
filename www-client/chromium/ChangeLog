@@ -1,6 +1,22 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.349 2011/05/03 10:21:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.350 2011/05/06 08:56:05 phajdan.jr Exp $
+
+*chromium-12.0.742.21 (06 May 2011)
+
+  06 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -files/chromium-ffmpeg-build-r1.patch,
+  -files/chromium-gecko-mediaplayer-r0.patch,
+  -files/chromium-gecko-mediaplayer-r1.patch,
+  -files/chromium-gssapi-heimdal-r0.patch, -files/chromium-launcher.sh,
+  -files/chromium-net-tests-r0.patch, -files/chromium-system-flac-r0.patch,
+  -files/chromium-system-icu-r0.patch, -files/chromium-system-speex-r0.patch,
+  -files/chromium-system-vpx-r1.patch, -files/chromium-system-vpx-r2.patch,
+  -files/chromium-system-xdg-utils-r0.patch,
+  -files/chromium-webkit-version.patch, -files/experimental.gyp,
+  -files/flac.gyp, -files/speex.gyp, -files/v8.gyp,
+  -chromium-12.0.742.12.ebuild, +chromium-12.0.742.21.ebuild:
+  Version bump for dev channel release. Remove old ebuilds and files.
 
 *chromium-12.0.742.16 (03 May 2011)
 
