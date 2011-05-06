@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.164 2011/04/20 16:54:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.165 2011/05/06 17:10:32 pacho Exp $
+
+*libgda-4.2.7 (06 May 2011)
+
+  06 May 2011; Pacho Ramos <pacho@gentoo.org> +libgda-4.2.7.ebuild:
+  Version bump, use eapi4.
 
 *libgda-4.2.6 (20 Apr 2011)
 
