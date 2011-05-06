@@ -1,6 +1,13 @@
 # ChangeLog for games-board/biloba
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/ChangeLog,v 1.5 2009/11/21 19:21:46 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/ChangeLog,v 1.6 2011/05/06 16:50:00 mr_bones_ Exp $
+
+*biloba-0.9.3 (06 May 2011)
+
+  06 May 2011; Michael Sterrett <mr_bones_@gentoo.org> +biloba-0.9.3.ebuild,
+  +files/biloba-0.9.3-no-X11-dep.patch,
+  +files/biloba-0.9.3-not-windows.patch:
+  version bump
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> biloba-0.6.ebuild:
   x86 stable, bug #289064
