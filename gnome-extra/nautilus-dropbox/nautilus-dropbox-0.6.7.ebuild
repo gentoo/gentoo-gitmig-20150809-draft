@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7.ebuild,v 1.2 2011/02/16 19:32:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7.ebuild,v 1.3 2011/05/06 21:52:43 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ IUSE="debug"
 
 RDEPEND="gnome-base/nautilus
 	dev-libs/glib:2
-	dev-python/pygtk
+	dev-python/pygtk:2
 	x11-libs/gtk+:2
 	x11-libs/libnotify
 	x11-libs/libXinerama"
@@ -34,7 +34,13 @@ CONFIG_CHECK="INOTIFY_USER"
 pkg_setup () {
 	check_extra_config
 	enewgroup dropbox
+	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	gnome2_src_prepare
+	python_convert_shebangs 2 dropbox.in
 }
 
 src_install () {
