@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.4.ebuild,v 1.1 2010/05/17 20:37:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.7.ebuild,v 1.1 2011/05/06 15:49:10 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit autotools eutils versionator
 
@@ -35,17 +35,17 @@ src_prepare() {
 	fi
 
 	# Search for libs in ${libdir}, not just /usr/lib
-	epatch "${FILESDIR}"/${PN}-4.0.3-multilib.patch
-	eautoreconf || die "eautoreconf failed"
+	epatch "${FILESDIR}"/${P}-multilib.patch
+	eautoreconf
 
 	export CUPS_BACKENDS=${CUPS_SERVERBIN}/backend \
 		CUPS_FILTERS=${CUPS_SERVERBIN}/filter CUPS=${CUPS_SERVERBIN}/
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
-	dosym /usr/bin/foomatic-rip /usr/bin/lpdomatic || die
+	dosym /usr/bin/foomatic-rip /usr/bin/lpdomatic
 
 	if use cups; then
 		dosym /usr/bin/foomatic-gswrapper "${CUPS_SERVERBIN}/filter/foomatic-gswrapper"

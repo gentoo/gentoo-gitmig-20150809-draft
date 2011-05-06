@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.5.ebuild,v 1.1 2010/11/23 10:27:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-4.0.5.ebuild,v 1.2 2011/05/06 15:49:10 jlec Exp $
 
-EAPI="2"
+EAPI=2
 
 inherit autotools eutils versionator
 
@@ -36,7 +36,7 @@ src_prepare() {
 
 	# Search for libs in ${libdir}, not just /usr/lib
 	epatch "${FILESDIR}"/${PN}-4.0.3-multilib.patch
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 
 	export CUPS_BACKENDS=${CUPS_SERVERBIN}/backend \
 		CUPS_FILTERS=${CUPS_SERVERBIN}/filter CUPS=${CUPS_SERVERBIN}/
