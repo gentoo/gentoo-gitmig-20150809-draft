@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.49 2011/04/27 11:34:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.50 2011/05/06 06:49:56 jlec Exp $
+
+  06 May 2011; Justin Lecher <jlec@gentoo.org> linkchecker-5.2.ebuild,
+  linkchecker-5.5.ebuild:
+  Fix wrong usage of python eclass, #366137
 
   27 Apr 2011; Justin Lecher <jlec@gentoo.org> linkchecker-5.5.ebuild:
   Added missing dependency on dev-python/qscintilla-python
