@@ -1,6 +1,12 @@
 # ChangeLog for net-im/reaim
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/reaim/ChangeLog,v 1.7 2009/01/14 04:45:22 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/reaim/ChangeLog,v 1.8 2011/05/06 14:38:12 signals Exp $
+
+*reaim-0.8-r1 (06 May 2011)
+
+  06 May 2011; Kevin McCarthy <signals@gentoo.org> +reaim-0.8-r1.ebuild:
+  Respect CC,CFLAGS #365863. Use dohtml -r #365861. Install CREDITS file.
+  EAPI=4 bump.
 
   14 Jan 2009; Mike Frysinger <vapier@gentoo.org> reaim-0.8.ebuild:
   Cleanup ebuild a bit.
