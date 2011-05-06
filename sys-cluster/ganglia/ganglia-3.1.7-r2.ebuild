@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.7-r2.ebuild,v 1.1 2010/08/25 01:53:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.7-r2.ebuild,v 1.2 2011/05/06 23:26:49 jsbronder Exp $
 
 EAPI="3"
 WEBAPP_OPTIONAL="yes"
@@ -46,6 +46,10 @@ src_prepare() {
 	# This patch just gives a group to the disk statistics.
 	# I.E. it's just cosmetics
 	epatch "${FILESDIR}"/${PN}-3.1.1-multidisk-group.patch
+
+	# Disable modpython by default (#358359)
+	sed -i '/ *params/N;s,\( *\)\(params = "[^"]*"\),\1\2\n\1enabled = no,' \
+		gmond/modules/conf.d/modpython.conf.in || die
 }
 
 src_configure() {
@@ -66,6 +70,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL NEWS README || die
 
 	dodir /etc/ganglia/conf.d
+	use python && dodir /usr/$(get_libdir)/ganglia/python_modules
 	gmond/gmond -t > "${ED}"/etc/ganglia/gmond.conf
 
 	if use examples; then
@@ -109,9 +114,4 @@ pkg_postinst() {
 
 pkg_prerm() {
 	use minimal || webapp_pkg_prerm
-}
-
-pkg_postrm() {
-	[ -d "${ROOT}"/usr/$(get_libdir)/ganglia ] && \
-		rmdir "${ROOT}"/usr/$(get_libdir)/ganglia 2>/dev/null
 }
