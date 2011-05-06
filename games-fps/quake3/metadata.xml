@@ -16,6 +16,8 @@ interested in checking out the technology behind Quake III, then
 "emerge quake3-demo" to get the playable demo.
 </longdescription>
   <use>
+    <flag name="mumble">Adds player-location (positional audio) support to VoIP</flag>
     <flag name="teamarena">Adds support for Team Arena expansion pack</flag>
+    <flag name="voice">Adds VoIP support</flag>
   </use>
 </pkgmetadata>

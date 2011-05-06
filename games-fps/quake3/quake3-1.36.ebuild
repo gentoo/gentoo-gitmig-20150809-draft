@@ -1,102 +1,145 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36.ebuild,v 1.3 2011/01/31 00:30:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36.ebuild,v 1.4 2011/05/06 22:21:19 mattst88 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
 # quake3-VER_alphaREV  -> svn snapshot REV for version VER
 # quake3-VER           -> normal quake release
 
-EAPI=2
-if [[ ${PV} == 9999* ]] ; then
-	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
-	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
-	inherit subversion flag-o-matic toolchain-funcs eutils games
+EAPI="2"
 
-	SRC_URI=""
-	KEYWORDS=""
-	S=${WORKDIR}/trunk
-else
-	inherit flag-o-matic toolchain-funcs eutils games
-	SRC_URI="http://ioquake3.org/files/${PV}/ioquake3-${PV}.tar.bz2"
-	KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-	S=${WORKDIR}/io${P}
-fi
+inherit eutils flag-o-matic games toolchain-funcs
+[[ "${PV}" == 9999* ]] && inherit subversion
+
+MY_PN="ioquake3"
+MY_PV="${PV}"
+MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Quake III Arena - 3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://ioquake3.org/"
+[[ "${PV}" != 9999* ]] && SRC_URI="http://ioquake3.org/files/${MY_PV}/${MY_P}.tar.bz2"
+ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="dedicated teamarena"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+# "smp" is omitted, because currently it does not work.
+IUSE="dedicated opengl teamarena +openal curl vorbis voice mumble"
 
-DEPEND="!dedicated? (
-	virtual/opengl
-	media-libs/openal
-	media-libs/libsdl[joystick,opengl]
-	)"
+UIDEPEND="virtual/opengl
+	media-libs/libsdl[audio,video,joystick,X,opengl]
+	openal? ( media-libs/openal )
+	vorbis? (
+		media-libs/libogg
+		media-libs/libvorbis
+	)
+	voice? ( media-libs/speex )
+	curl? ( net-misc/curl )"
+DEPEND="opengl? ( ${UIDEPEND} )
+	!dedicated? ( ${UIDEPEND} )"
+UIRDEPEND="voice? ( mumble? ( media-sound/mumble ) )"
 RDEPEND="${DEPEND}
+	opengl? ( ${UIRDEPEND} )
+	!dedicated? ( ${UIRDEPEND} )
 	games-fps/quake3-data
 	teamarena? ( games-fps/quake3-teamarena )"
 
-src_unpack() {
-	if [[ ${PV} == 9999* ]] ; then
-		subversion_src_unpack
-	else
-		unpack ${A}
-	fi
+if [[ "${PV}" == 9999* ]] ; then
+	S="${WORKDIR}/trunk"
+else
+	S="${WORKDIR}/${MY_P}"
+fi
+
+my_arch() {
+	case "${ARCH}" in
+		x86)    echo "i386" ;;
+		amd64)  echo "x86_64" ;;
+		*)      tc-arch-kernel ;;
+	esac
+}
+
+my_platform() {
+	case "${ARCH}" in
+		alpha|amd64|ppc|x86)  echo "linux" ;;
+		x86-fbsd)             echo "freebsd" ;;
+	esac
 }
 
 src_prepare() {
-	sed -i -e '/INSTALL/s: -s : :' Makefile || die
-	if [[ ${PV} != 9999* ]] ; then
+	if [[ "${PV}" == 9999* ]] ; then
+		# Workaround for the version string
+		ln -s "${ESVN_WC_PATH}/.svn" .svn || die "ln ${ESVN_WC_PATH}/.svn"
+	else
 		epatch "${FILESDIR}"/${P}-bots.patch
 	fi
+
+	einfo "Fixing libspeex linking..."
+	sed -i -e 's/\(-lspeex\)/\1 -lspeexdsp/' Makefile || die "sed failed"
 }
 
 src_compile() {
-	filter-flags -mfpmath=sse
+
 	buildit() { use $1 && echo 1 || echo 0 ; }
+
+	# This is the easiest way to pass CPPFLAGS to the build system, which
+	# are otherwise ignored.
+	append-flags ${CPPFLAGS}
+
+	# OPTIMIZE is disabled in favor of CFLAGS.
+	#
+	# TODO: BUILD_CLIENT_SMP=$(buildit smp)
 	emake \
-		V=1 \
-		BUILD_SERVER=1 \
-		BUILD_CLIENT=$(( $(buildit !dedicated) )) \
-		TEMPDIR="${T}" \
-		CC="$(tc-getCC)" \
-		ARCH=$(tc-arch-kernel) \
-		OPTIMIZE="${CFLAGS}" \
-		DEFAULT_BASEDIR="${GAMES_DATADIR}/quake3" \
-		DEFAULT_LIBDIR="$(games_get_libdir)/quake3" \
-		Q3ASM_CFLAGS="${CFLAGS}" \
-		|| die
+		ARCH="$(my_arch)" \
+		BUILD_CLIENT=$(( $(buildit opengl) | $(buildit !dedicated) )) \
+		BUILD_GAME_QVM=0 \
+		BUILD_GAME_SO=0 \
+		BUILD_SERVER=$(buildit dedicated) \
+		DEFAULT_BASEDIR="${GAMES_DATADIR}/${PN}" \
+		GENERATE_DEPENDENCIES=0 \
+		OPTIMIZE="" \
+		PLATFORM="$(my_platform)" \
+		USE_CODEC_VORBIS=$(buildit vorbis) \
+		USE_CURL=$(buildit curl) \
+		USE_CURL_DLOPEN=0 \
+		USE_INTERNAL_SPEEX=0 \
+		USE_INTERNAL_ZLIB=0 \
+		USE_LOCAL_HEADERS=0 \
+		USE_MUMBLE=$(buildit mumble) \
+		USE_OPENAL=$(buildit openal) \
+		USE_OPENAL_DLOPEN=0 \
+		USE_VOIP=$(buildit voice) \
+		|| die "emake failed"
 }
 
 src_install() {
-	dodoc id-readme.txt TODO README BUGS ChangeLog
-
-	if ! use dedicated ; then
-		doicon misc/quake3.png
-		make_desktop_entry quake3 "Quake III Arena"
+	dodoc BUGS ChangeLog id-readme.txt md4-readme.txt NOTTODO README TODO || die
+	if use voice ; then
+		dodoc voip-readme.txt || die
 	fi
 
-	cd build/release*
-	local old_x x
-	for old_x in ioq* ; do
-		x=${old_x%.*}
-		newgamesbin ${old_x} ${x} || die "newgamesbin ${x}"
-		dosym ${x} "${GAMES_BINDIR}"/${x/io}
+	if use opengl || ! use dedicated ; then
+		doicon misc/quake3.svg || die
+		make_desktop_entry quake3 "Quake III Arena"
+		#use smp && make_desktop_entry quake3-smp "Quake III Arena (SMP)"
+	fi
+
+	cd build/release-$(my_platform)-$(my_arch) || die
+	local exe target
+	for exe in {ioquake3,ioquake3-smp,ioq3ded}.$(my_arch) ; do
+		if [[ -x ${exe} ]] ; then
+			target=${exe%.*}
+			newgamesbin ${exe} ${target} || die "newgamesbin ${target}"
+			dosym ${target} "${GAMES_BINDIR}/${target/io}" || die "dosym ${target}"
+		fi
 	done
-	exeinto "$(games_get_libdir)"/${PN}/baseq3
-	doexe baseq3/*.so || die "baseq3 .so"
-	exeinto "$(games_get_libdir)"/${PN}/missionpack
-	doexe missionpack/*.so || die "missionpack .so"
 
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	ewarn "The source version of Quake 3 will not work with Punk Buster."
-	ewarn "If you need pb support, then use the quake3-bin package."
-	echo
+
+	ewarn "The source version of Quake III Arena will not work with PunkBuster."
+	ewarn "If you need PB support, then use the games-fps/quake3-bin package."
 }

@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.56 2011/01/31 00:30:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.57 2011/05/06 22:21:19 mattst88 Exp $
+
+  06 May 2011; Matt Turner <mattst88@gentoo.org> quake3-1.36.ebuild,
+  quake3-9999.ebuild, metadata.xml:
+  Rewritten ebuild from Andrey Vihrov. Adds curl, mumble, opengl, openal,
+  voice, and vorbis USE flags (Bug 222005). Removes bundled openal, curl,
+  speex, sdl, zlib, and jpeg in favor of using system libraries and headers
+  (Bug 250080). Huge thanks to Andrey Vihrov!
 
   31 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> quake3-1.36.ebuild,
   +files/quake3-1.36-bots.patch:
