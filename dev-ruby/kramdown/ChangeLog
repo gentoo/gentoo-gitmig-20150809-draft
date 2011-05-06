@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/kramdown
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.5 2011/05/06 14:53:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.6 2011/05/06 14:57:30 graaff Exp $
+
+*kramdown-0.13.3 (06 May 2011)
+
+  06 May 2011; Hans de Graaff <graaff@gentoo.org> +kramdown-0.13.3.ebuild:
+  Version bump.
 
   06 May 2011; Hans de Graaff <graaff@gentoo.org> -kramdown-0.11.0.ebuild,
   -kramdown-0.12.0.ebuild, -kramdown-0.13.1.ebuild:
