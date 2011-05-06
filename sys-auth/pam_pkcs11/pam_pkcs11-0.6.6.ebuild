@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.6.ebuild,v 1.1 2011/02/23 14:50:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.6.ebuild,v 1.2 2011/05/06 09:29:04 flameeyes Exp $
 
 EAPI="3"
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="curl ldap nss +pcsc-lite"
 
-RDEPEND="dev-libs/opensc
-	sys-libs/pam
+RDEPEND="sys-libs/pam
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )
 	nss? (
@@ -79,9 +78,13 @@ pkg_config() {
 }
 
 pkg_postinst() {
+	elog "For ${PN} to work you need a PKCS#11 provider, such as one of:"
+	elog "  - dev-libs/opensc"
+	elog "  - dev-libs/opencryptoki"
+	elog ""
 	elog "You probably want to configure the '${EROOT}etc/${PN}/${PN}.conf' file with"
 	elog "the settings for your pkcs11 provider."
-	elog
+	elog ""
 	elog "You might also want to set up '${EROOT}etc/${PN}/pkcs11_eventmgr.conf' with"
 	elog "the settings for the event manager, and start it up at user login."
 }

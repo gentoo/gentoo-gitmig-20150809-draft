@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_pkcs11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.19 2011/02/23 14:50:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.20 2011/05/06 09:29:04 flameeyes Exp $
+
+  06 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  pam_pkcs11-0.6.6.ebuild:
+  Drop dependency over opensc, any PKCS#11 provider would do.
 
 *pam_pkcs11-0.6.6 (23 Feb 2011)
 
