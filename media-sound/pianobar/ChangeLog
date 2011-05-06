@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/pianobar
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.1 2011/05/06 08:19:33 radhermit Exp $
+
+*pianobar-2011.04.27 (06 May 2011)
+
+  06 May 2011; Tim Harder <radhermit@gentoo.org> +pianobar-2011.04.27.ebuild,
+  +files/pianobar-2011.04.27-linking.patch, +metadata.xml:
+  Initial import.
+
