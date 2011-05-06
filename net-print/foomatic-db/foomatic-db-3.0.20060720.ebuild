@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-3.0.20060720.ebuild,v 1.1 2008/05/07 23:13:53 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-3.0.20060720.ebuild,v 1.2 2011/05/06 16:11:32 jlec Exp $
 
 inherit versionator
 
@@ -20,7 +20,9 @@ RDEPEND="net-print/foomatic-db-engine"
 S="${WORKDIR}/${PN}-$(get_version_component_range 3 ${PV})"
 
 src_compile() {
-	econf --disable-gzip-ppds --disable-ppds-to-cups || die "econf failed"
+	econf \
+		--disable-gzip-ppds \
+		--disable-ppds-to-cups
 	# ppd files do not belong to this package
 	rm -r db/source/PPD
 }

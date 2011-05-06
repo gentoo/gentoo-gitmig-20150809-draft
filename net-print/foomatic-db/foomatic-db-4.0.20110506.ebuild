@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-4.0.20100218.ebuild,v 1.1 2010/05/17 20:40:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-4.0.20110506.ebuild,v 1.1 2011/05/06 16:11:32 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit versionator
 
@@ -34,8 +34,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README USAGE || die
+	default
 
 	# Avoid collision with foo2zjs, bug 185486
 	rm "${ED}"/usr/share/foomatic/db/source/{driver/foo2{hp,lava,xqx,zjs}.xml,printer/{Generic-ZjStream_Printer,HP-{Color_LaserJet_{1500,1600,2600n},LaserJet_{10{00,05,18,20,22},M1005_MFP}},Minolta-{Color_PageWorks_Pro_L,magicolor_2{20,30,43}0_DL},Samsung-CLP-{3,6}00}.xml}

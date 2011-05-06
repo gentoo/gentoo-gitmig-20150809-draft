@@ -1,6 +1,14 @@
 # ChangeLog for net-print/foomatic-db
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.68 2010/11/23 10:23:14 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.69 2011/05/06 16:11:32 jlec Exp $
+
+*foomatic-db-4.0.20110506 (06 May 2011)
+
+  06 May 2011; Justin Lecher <jlec@gentoo.org> foomatic-db-3.0.20060720.ebuild,
+  -foomatic-db-3.0.20070508.ebuild, -foomatic-db-3.0.20080507.ebuild,
+  -foomatic-db-4.0.20100205.ebuild, -foomatic-db-4.0.20100218.ebuild,
+  foomatic-db-4.0.20101123.ebuild, +foomatic-db-4.0.20110506.ebuild:
+  Non-maintainer Version Bump, notified by euscan
 
 *foomatic-db-4.0.20101123 (23 Nov 2010)
 
