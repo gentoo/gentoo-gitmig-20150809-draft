@@ -1,22 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.3.0.ebuild,v 1.7 2011/01/12 20:47:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.4.1.ebuild,v 1.1 2011/05/07 21:49:44 nelchael Exp $
 
 EAPI="3"
 
 JAVA_PKG_IUSE="source"
 PYTHON_DEPEND="python? 2"
+DISTUTILS_SRC_TEST="setup.py"
 
-inherit autotools eutils distutils python java-pkg-opt-2 elisp-common
+inherit autotools eutils distutils java-pkg-opt-2 elisp-common
 
 DESCRIPTION="Google's Protocol Buffers -- an efficient method of encoding structured data"
 HOMEPAGE="http://code.google.com/p/protobuf/"
-SRC_URI="http://protobuf.googlecode.com/files/${PF}.tar.bz2"
+SRC_URI="http://protobuf.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x64-macos"
-IUSE="emacs examples java python vim-syntax"
+IUSE="emacs examples java python static-libs vim-syntax"
 
 DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
 	python? ( dev-python/setuptools )
@@ -24,8 +25,8 @@ DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )
 	emacs? ( virtual/emacs )"
 
+DISTUTILS_SETUP_FILES=("python|setup.py")
 PYTHON_MODNAME="google/protobuf"
-DISTUTILS_SRC_TEST="setup.py"
 
 pkg_setup() {
 	if use python; then
@@ -35,7 +36,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch
 	eautoreconf
 
 	if use python; then
@@ -44,14 +45,17 @@ src_prepare() {
 	fi
 }
 
+src_configure() {
+	econf \
+		$(use_enable static-libs static)
+}
+
 src_compile() {
-	emake || die
+	emake || die "emake failed"
 
 	if use python; then
 		einfo "Compiling Python library ..."
-		pushd python
 		distutils_src_compile
-		popd
 	fi
 
 	if use java; then
@@ -70,23 +74,21 @@ src_compile() {
 }
 
 src_test() {
-	emake check
+	emake check || die "emake check failed"
 
 	if use python; then
-		 pushd python
 		 distutils_src_test
-		 popd
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc CHANGES.txt CONTRIBUTORS.txt README.txt
 
+	use static-libs || rm -rf "${D}"/usr/lib*/*.la
+
 	if use python; then
-		pushd python
 		distutils_src_install
-		popd
 	fi
 
 	if use java; then
@@ -97,6 +99,8 @@ src_install() {
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
 		doins editors/proto.vim
+		insinto /usr/share/vim/vimfiles/ftdetect/
+		doins "${FILESDIR}/proto.vim"
 	fi
 
 	if use emacs; then
