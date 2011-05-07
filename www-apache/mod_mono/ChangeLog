@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.76 2011/03/21 20:27:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.77 2011/05/07 16:47:23 tomka Exp $
+
+  07 May 2011; Thomas Kahle <tomka@gentoo.org> mod_mono-2.10.ebuild:
+  x86 stable per bug 359651
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> mod_mono-2.10.ebuild:
   Marking mod_mono-2.10 ppc stable for bug 359651
