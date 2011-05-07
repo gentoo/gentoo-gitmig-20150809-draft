@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.15 2010/12/03 00:33:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.16 2011/05/07 17:17:23 angelos Exp $
 
-inherit autotools
+inherit eutils autotools
 
 DESCRIPTION="Command line CD player"
 HOMEPAGE="http://bard.sytes.net/takcd/"
@@ -16,6 +16,7 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-overflow.patch
 	eautoreconf
 }
 
