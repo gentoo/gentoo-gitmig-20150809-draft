@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.192 2011/05/07 00:02:09 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.193 2011/05/07 01:16:37 sping Exp $
+
+  07 May 2011; Sebastian Pipping <sping@gentoo.org>
+  files/blender-2.57-desktop.patch, files/blender.desktop:
+  Fix titles of desktop entries to "Blender 2.4x" and "Blender 2.5x"
 
 *blender-2.57 (06 May 2011)
 
