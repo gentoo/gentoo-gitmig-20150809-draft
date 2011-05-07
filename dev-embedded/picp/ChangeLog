@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/picp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picp/ChangeLog,v 1.6 2009/09/23 16:40:32 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picp/ChangeLog,v 1.7 2011/05/07 08:28:51 radhermit Exp $
+
+*picp-0.6.8 (07 May 2011)
+
+  07 May 2011; Tim Harder <radhermit@gentoo.org> -picp-0.6.5.ebuild,
+  -picp-0.6.7.ebuild, +picp-0.6.8.ebuild, +files/picp-0.6.8-errno.patch:
+  Version bump and remove old. Update to EAPI 4, add ~amd64 keyword, don't
+  pre-strip files (bug #240161), and respect LDFLAGS (bug #335542).
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> picp-0.6.4.ebuild,
   picp-0.6.5.ebuild, picp-0.6.7.ebuild:
