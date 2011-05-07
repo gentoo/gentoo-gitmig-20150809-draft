@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.2 2011/03/07 12:42:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.3 2011/05/07 10:16:23 ulm Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ IUSE="doc emacs +gd ggi latex lua plotutils readline svga wxwidgets X xemacs"
 RESTRICT="wxwidgets? ( test )"
 
 RDEPEND="
-	xemacs? ( app-editors/xemacs app-xemacs/texinfo app-xemacs/xemacs-base )
+	xemacs? ( app-editors/xemacs app-xemacs/xemacs-base )
 	emacs? ( virtual/emacs !app-emacs/gnuplot-mode )
 	lua? ( >=dev-lang/lua-5.1 )
 	ggi? ( media-libs/libggi )
@@ -38,7 +38,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( virtual/latex-base
-		app-text/ghostscript-gpl )"
+		app-text/ghostscript-gpl )
+	!emacs? ( xemacs? ( app-xemacs/texinfo ) )"
 
 S="${WORKDIR}/${MY_P}"
 E_SITEFILE="50${PN}-gentoo.el"

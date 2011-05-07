@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3.ebuild,v 1.2 2011/05/06 18:56:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3.ebuild,v 1.3 2011/05/07 10:16:23 ulm Exp $
 
 EAPI=3
 
@@ -37,12 +37,12 @@ RDEPEND="!app-emacs/gnuplot-mode
 		x11-libs/gtk+:2 )
 	X? ( x11-libs/libXaw )
 	xemacs? ( app-editors/xemacs
-		app-xemacs/xemacs-base
-		app-xemacs/texinfo )"
+		app-xemacs/xemacs-base )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( virtual/latex-base
-		app-text/ghostscript-gpl )"
+		app-text/ghostscript-gpl )
+	!emacs? ( xemacs? ( app-xemacs/texinfo ) )"
 
 S="${WORKDIR}/${MY_P}"
 GP_VERSION="${PV%.*}"
