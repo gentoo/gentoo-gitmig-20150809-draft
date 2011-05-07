@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.0_beta6.ebuild,v 1.1 2011/03/09 15:42:10 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/luajit-2.0.0_beta7.ebuild,v 1.1 2011/05/07 11:06:00 rafaelmartins Exp $
 
 EAPI="2"
 
