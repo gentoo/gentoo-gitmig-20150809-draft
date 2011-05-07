@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.0.ebuild,v 1.6 2011/03/28 12:31:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.0.ebuild,v 1.7 2011/05/07 10:01:28 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit libtool toolchain-funcs
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
@@ -15,9 +15,15 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
+NASM_DEPEND="dev-lang/nasm"
 RDEPEND="!media-libs/jpeg:0"
 DEPEND="${RDEPEND}
-	dev-lang/nasm"
+	amd64? ( ${NASM_DEPEND} )
+	x86? ( ${NASM_DEPEND} )
+	amd64-linux? ( ${NASM_DEPEND} )
+	x86-linux? ( ${NASM_DEPEND} )"
+
+DOCS=( BUILDING.txt ChangeLog.txt example.c README-turbo.txt )
 
 src_prepare() {
 	elibtoolize
@@ -25,16 +31,15 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
 		--with-jpeg8
 }
 
 src_compile() {
-	emake || die
+	default
 
 	cd ../debian/extra || die
-	emake CC="$(tc-getCC)" CFLAGS="${LDFLAGS} ${CFLAGS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${LDFLAGS} ${CFLAGS}"
 }
 
 src_test() {
@@ -42,12 +47,11 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc BUILDING.txt ChangeLog.txt example.c README-turbo.txt
+	default
 	find "${D}" -name '*.la' -exec rm -f {} +
 
 	cd ../debian/extra || die
 	emake DESTDIR="${D}" prefix="${EPREFIX}/usr" \
 		INSTALL="install -m755" INSTALLDIR="install -d -m755" \
-		install || die
+		install
 }
