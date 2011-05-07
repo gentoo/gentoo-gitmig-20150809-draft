@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.46.ebuild,v 1.1 2011/05/05 00:30:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.46.ebuild,v 1.2 2011/05/07 18:10:57 abcd Exp $
 
 EAPI=4
 
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_prepare() {
-	sed -i -e "s:/lib/udev:/$(get_libdir)/udev:g" common.sh || die "sed failed on common.sh"
 	find "${S}" -type f -exec sed -i -e "s:/usr/lib/:/usr/libexec/:g" {} + || die "failed on find and sed lib->libexec"
 	sed -i -e "s:/lib/ld\*\.so\*:/lib*/ld*.so*:g" os-probes/mounted/common/90linux-distro  || die "sed failed on 90linux-distro"
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/os-prober
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.8 2011/05/05 00:30:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.9 2011/05/07 18:10:57 abcd Exp $
+
+  07 May 2011; Jonathan Callen <abcd@gentoo.org> os-prober-1.46.ebuild:
+  udev now installs to /lib/udev, so remove sed adjusting its path
 
 *os-prober-1.46 (05 May 2011)
 
