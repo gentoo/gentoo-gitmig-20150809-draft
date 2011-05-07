@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.22 2011/04/28 06:27:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.23 2011/05/07 13:45:22 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -49,7 +49,11 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
 	x11-libs/libXinerama
-	test? ( dev-python/simplejson virtual/krb5 )"
+	test? (
+		dev-python/pyftpdlib
+		dev-python/simplejson
+		virtual/krb5
+	)"
 RDEPEND+="
 	!=www-client/chromium-9999
 	kerberos? ( virtual/krb5 )
@@ -183,7 +187,6 @@ src_prepare() {
 		\! -path 'third_party/openmax/*' \
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
-		\! -path 'third_party/pyftpdlib/*' \
 		\! -path 'third_party/skia/*' \
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
