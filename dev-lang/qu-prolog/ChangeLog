@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.76 2011/05/04 20:33:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.77 2011/05/07 16:12:29 phajdan.jr Exp $
+
+  07 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> qu-prolog-8.12.ebuild:
+  x86 stable wrt bug #365369
 
   04 May 2011; Markos Chandras <hwoarang@gentoo.org> qu-prolog-8.12.ebuild:
   Stable on amd64 wrt bug #365369
