@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.191 2011/05/04 22:06:26 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.192 2011/05/07 00:02:09 sping Exp $
+
+*blender-2.57 (06 May 2011)
+
+  06 May 2011; Sebastian Pipping <sping@gentoo.org> +blender-2.57.ebuild,
+  +files/blender-2.57-CVE-2009-3850-v1.patch, +files/blender-2.57-bmake.patch,
+  +files/blender-2.57-desktop.patch, +files/blender-2.57-doxygen.patch,
+  +files/blender-2.57-eigen.patch, +files/blender-2.57-glew.patch,
+  +files/blender-2.57-libav-0.7.patch, metadata.xml:
+  Bump to version 2.57, main work by lu_zero (bug #312593)
+  Includes patch for CVE-2009-3850 (bug #364291)
 
   04 May 2011; Thomas Kahle <tomka@gentoo.org> blender-2.49b-r2.ebuild:
   x86 stable per bug 349847

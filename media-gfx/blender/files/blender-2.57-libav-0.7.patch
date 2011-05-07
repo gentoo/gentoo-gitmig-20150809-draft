@@ -1,0 +1,278 @@
+diff -burN blender-2.57.orig//intern/audaspace/ffmpeg/AUD_FFMPEGReader.cpp blender-2.57/intern/audaspace/ffmpeg/AUD_FFMPEGReader.cpp
+--- blender-2.57.orig//intern/audaspace/ffmpeg/AUD_FFMPEGReader.cpp	2011-04-14 17:06:35.000000000 +0200
++++ blender-2.57/intern/audaspace/ffmpeg/AUD_FFMPEGReader.cpp	2011-05-04 01:44:30.184004582 +0200
+@@ -64,15 +64,10 @@
+ 
+ 		// read samples from the packet
+ 		data_size = buf_size - buf_pos;
+-		/*read_length = avcodec_decode_audio3(m_codecCtx,
++		read_length = avcodec_decode_audio3(m_codecCtx,
+ 			(int16_t*)(((data_t*)buffer.getBuffer())+buf_pos),
+ 			&data_size,
+-			packet);*/
+-		read_length = avcodec_decode_audio2(m_codecCtx,
+-						(int16_t*)(((data_t*)buffer.getBuffer()) + buf_pos),
+-						&data_size,
+-						audio_pkg_data,
+-						audio_pkg_size);
++			packet);
+ 
+ 		// read error, next packet!
+ 		if(read_length < 0)
+@@ -112,7 +107,7 @@
+ 
+ 	for(unsigned int i = 0; i < m_formatCtx->nb_streams; i++)
+ 	{
+-		if((m_formatCtx->streams[i]->codec->codec_type == CODEC_TYPE_AUDIO)
++		if((m_formatCtx->streams[i]->codec->codec_type == AVMEDIA_TYPE_AUDIO)
+ 			&& (m_stream < 0))
+ 		{
+ 			m_stream=i;
+diff -burN blender-2.57.orig//source/blender/blenkernel/intern/writeffmpeg.c blender-2.57/source/blender/blenkernel/intern/writeffmpeg.c
+--- blender-2.57.orig//source/blender/blenkernel/intern/writeffmpeg.c	2011-04-14 17:17:03.000000000 +0200
++++ blender-2.57/source/blender/blenkernel/intern/writeffmpeg.c	2011-05-04 03:36:08.365219076 +0200
+@@ -163,7 +163,7 @@
+ 	}
+ 
+ 	pkt.stream_index = audio_stream->index;
+-	pkt.flags |= PKT_FLAG_KEY;
++	pkt.flags |= AV_PKT_FLAG_KEY;
+ 	if (av_interleaved_write_frame(outfile, &pkt) != 0) {
+ 		fprintf(stderr, "Error writing audio packet!\n");
+ 		return -1;
+@@ -290,7 +290,7 @@
+ 			fprintf(stderr, "Video Frame PTS: not set\n");
+ 		}
+ 		if (c->coded_frame->key_frame)
+-			packet.flags |= PKT_FLAG_KEY;
++			packet.flags |= AV_PKT_FLAG_KEY;
+ 		packet.stream_index = video_stream->index;
+ 		packet.data = video_buffer;
+ 		packet.size = outsize;
+@@ -396,7 +396,7 @@
+ 	switch(prop->type) {
+ 	case IDP_STRING:
+ 		fprintf(stderr, "%s.\n", IDP_String(prop));
+-		rv = av_set_string(c, prop->name, IDP_String(prop));
++		av_set_string3(c, prop->name, IDP_String(prop), 0, &rv);
+ 		break;
+ 	case IDP_FLOAT:
+ 		fprintf(stderr, "%g.\n", IDP_Float(prop));
+@@ -407,7 +407,7 @@
+ 		
+ 		if (param) {
+ 			if (IDP_Int(prop)) {
+-				rv = av_set_string(c, name, param);
++				av_set_string3(c, name, param, 0, &rv);
+ 			} else {
+ 				return;
+ 			}
+@@ -461,7 +461,7 @@
+ 	
+ 	c = get_codec_from_stream(st);
+ 	c->codec_id = codec_id;
+-	c->codec_type = CODEC_TYPE_VIDEO;
++	c->codec_type = AVMEDIA_TYPE_VIDEO;
+ 
+ 
+ 	/* Get some values from the current render settings */
+@@ -519,7 +519,7 @@
+ 		c->pix_fmt = PIX_FMT_YUV422P;
+ 	}
+ 
+-	if (codec_id == CODEC_ID_XVID) {
++	if (codec_id == CODEC_ID_MPEG4) {
+ 		/* arghhhh ... */
+ 		c->pix_fmt = PIX_FMT_YUV420P;
+ 		c->codec_tag = (('D'<<24) + ('I'<<16) + ('V'<<8) + 'X');
+@@ -588,7 +588,7 @@
+ 
+ 	c = get_codec_from_stream(st);
+ 	c->codec_id = codec_id;
+-	c->codec_type = CODEC_TYPE_AUDIO;
++	c->codec_type = AVMEDIA_TYPE_AUDIO;
+ 
+ 	c->sample_rate = rd->ffcodecdata.audio_mixrate;
+ 	c->bit_rate = ffmpeg_audio_bitrate*1000;
+@@ -666,13 +666,13 @@
+ 		BKE_report(reports, RPT_ERROR, "No valid formats found.");
+ 		return 0;
+ 	}
+-	fmt = guess_format(NULL, exts[0], NULL);
++	fmt = av_guess_format(NULL, exts[0], NULL);
+ 	if (!fmt) {
+ 		BKE_report(reports, RPT_ERROR, "No valid formats found.");
+ 		return 0;
+ 	}
+ 
+-	of = av_alloc_format_context();
++	of = avformat_alloc_context();
+ 	if (!of) {
+ 		BKE_report(reports, RPT_ERROR, "Error opening output file");
+ 		return 0;
+@@ -713,7 +713,7 @@
+ 		fmt->video_codec = CODEC_ID_H264;
+ 		break;
+ 	case FFMPEG_XVID:
+-		fmt->video_codec = CODEC_ID_XVID;
++		fmt->video_codec = CODEC_ID_MPEG4;
+ 		break;
+ 	case FFMPEG_FLV:
+ 		fmt->video_codec = CODEC_ID_FLV1;
+@@ -834,7 +834,7 @@
+ 			fprintf(stderr, "Video Frame PTS: not set\n");
+ 		}
+ 		if (c->coded_frame->key_frame) {
+-			packet.flags |= PKT_FLAG_KEY;
++			packet.flags |= AV_PKT_FLAG_KEY;
+ 		}
+ 		packet.stream_index = video_stream->index;
+ 		packet.data = video_buffer;
+@@ -1314,7 +1314,7 @@
+ 	case FFMPEG_PRESET_XVID:
+ 		if(preset == FFMPEG_PRESET_XVID) {
+ 			rd->ffcodecdata.type = FFMPEG_AVI;
+-			rd->ffcodecdata.codec = CODEC_ID_XVID;
++			rd->ffcodecdata.codec = CODEC_ID_MPEG4;
+ 		}
+ 		else if(preset == FFMPEG_PRESET_THEORA) {
+ 			rd->ffcodecdata.type = FFMPEG_OGG; // XXX broken
+@@ -1357,7 +1357,7 @@
+ 		}
+ 	}
+ 	else if(rd->imtype == R_XVID) {
+-		if(rd->ffcodecdata.codec != CODEC_ID_XVID) {
++		if(rd->ffcodecdata.codec != CODEC_ID_MPEG4) {
+ 			ffmpeg_set_preset(rd, FFMPEG_PRESET_XVID);
+ 			audio= 1;
+ 		}
+diff -burN blender-2.57.orig//source/blender/imbuf/intern/anim_movie.c blender-2.57/source/blender/imbuf/intern/anim_movie.c
+--- blender-2.57.orig//source/blender/imbuf/intern/anim_movie.c	2011-04-14 17:19:18.000000000 +0200
++++ blender-2.57/source/blender/imbuf/intern/anim_movie.c	2011-05-04 03:33:56.724566283 +0200
+@@ -566,7 +566,7 @@
+ 	videoStream=-1;
+ 	for(i=0; i<pFormatCtx->nb_streams; i++)
+ 		if(get_codec_from_stream(pFormatCtx->streams[i])->codec_type
+-		   == CODEC_TYPE_VIDEO)	{
++		   == AVMEDIA_TYPE_VIDEO)	{
+ 			videoStream=i;
+ 			break;
+ 		}
+@@ -830,10 +830,10 @@
+ 			&& position - (anim->curposition + 1) < anim->preseek) {
+ 			while(av_read_frame(anim->pFormatCtx, &packet)>=0) {
+ 				if (packet.stream_index == anim->videoStream) {
+-					avcodec_decode_video(
++					avcodec_decode_video2(
+ 						anim->pCodecCtx, 
+ 						anim->pFrame, &frameFinished, 
+-						packet.data, packet.size);
++						&packet);
+ 
+ 					if (frameFinished) {
+ 						anim->curposition++;
+@@ -915,9 +915,9 @@
+ 
+ 	while(av_read_frame(anim->pFormatCtx, &packet)>=0) {
+ 		if(packet.stream_index == anim->videoStream) {
+-			avcodec_decode_video(anim->pCodecCtx, 
++			avcodec_decode_video2(anim->pCodecCtx,
+ 						 anim->pFrame, &frameFinished, 
+-						 packet.data, packet.size);
++						 &packet);
+ 
+ 			if (seek_by_bytes && preseek_count > 0) {
+ 				preseek_count--;
+diff -burN blender-2.57.orig//source/blender/imbuf/intern/util.c blender-2.57/source/blender/imbuf/intern/util.c
+--- blender-2.57.orig//source/blender/imbuf/intern/util.c	2011-04-14 17:19:18.000000000 +0200
++++ blender-2.57/source/blender/imbuf/intern/util.c	2011-05-04 02:15:26.369208909 +0200
+@@ -292,7 +292,7 @@
+ 	for(i=0; i<pFormatCtx->nb_streams; i++)
+ 		if(pFormatCtx->streams[i] &&
+ 		   get_codec_from_stream(pFormatCtx->streams[i]) && 
+-		  (get_codec_from_stream(pFormatCtx->streams[i])->codec_type==CODEC_TYPE_VIDEO))
++		  (get_codec_from_stream(pFormatCtx->streams[i])->codec_type==AVMEDIA_TYPE_VIDEO))
+ 		{
+ 			videoStream=i;
+ 			break;
+diff -burN blender-2.57.orig//source/blender/makesrna/intern/rna_scene.c blender-2.57/source/blender/makesrna/intern/rna_scene.c
+--- blender-2.57.orig//source/blender/makesrna/intern/rna_scene.c	2011-04-14 17:18:53.000000000 +0200
++++ blender-2.57/source/blender/makesrna/intern/rna_scene.c	2011-05-04 02:19:10.326319453 +0200
+@@ -2135,7 +2135,7 @@
+ 		{CODEC_ID_HUFFYUV, "HUFFYUV", 0, "HuffYUV", ""},
+ 		{CODEC_ID_DVVIDEO, "DV", 0, "DV", ""},
+ 		{CODEC_ID_H264, "H264", 0, "H.264", ""},
+-		{CODEC_ID_XVID, "XVID", 0, "Xvid", ""},
++		{CODEC_ID_MPEG4, "XVID", 0, "Xvid", ""},
+ 		{CODEC_ID_THEORA, "THEORA", 0, "Theora", ""},
+ 		{CODEC_ID_FLV1, "FLASH", 0, "Flash Video", ""},
+ 		{CODEC_ID_FFV1, "FFV1", 0, "FFmpeg video codec #1", ""},
+diff -burN blender-2.57.orig//source/gameengine/VideoTexture/VideoFFmpeg.cpp blender-2.57/source/gameengine/VideoTexture/VideoFFmpeg.cpp
+--- blender-2.57.orig//source/gameengine/VideoTexture/VideoFFmpeg.cpp	2011-04-14 17:13:34.000000000 +0200
++++ blender-2.57/source/gameengine/VideoTexture/VideoFFmpeg.cpp	2011-05-04 02:49:31.147348425 +0200
+@@ -182,7 +182,7 @@
+ 	{
+ 		if(formatCtx->streams[i] &&
+ 			get_codec_from_stream(formatCtx->streams[i]) && 
+-			(get_codec_from_stream(formatCtx->streams[i])->codec_type==CODEC_TYPE_VIDEO))
++			(get_codec_from_stream(formatCtx->streams[i])->codec_type==AVMEDIA_TYPE_VIDEO))
+ 		{
+ 			videoStream=i;
+ 			break;
+@@ -368,9 +368,9 @@
+ 				BLI_remlink(&video->m_packetCacheBase, cachePacket);
+ 				// use m_frame because when caching, it is not used in main thread
+ 				// we can't use currentFrame directly because we need to convert to RGB first
+-				avcodec_decode_video(video->m_codecCtx, 
++				avcodec_decode_video2(video->m_codecCtx,
+ 					video->m_frame, &frameFinished, 
+-					cachePacket->packet.data, cachePacket->packet.size);
++					&cachePacket->packet);
+ 				if(frameFinished) 
+ 				{
+ 					AVFrame * input = video->m_frame;
+@@ -641,7 +641,7 @@
+ 	if (m_captRate <= 0.f)
+ 		m_captRate = defFrameRate;
+ 	sprintf(rateStr, "%f", m_captRate);
+-	av_parse_video_frame_rate(&frameRate, rateStr);
++	av_parse_video_rate(&frameRate, rateStr);
+ 	// populate format parameters
+ 	// need to specify the time base = inverse of rate
+ 	formatParams.time_base.num = frameRate.den;
+@@ -924,10 +924,10 @@
+ 			{
+ 				if (packet.stream_index == m_videoStream) 
+ 				{
+-					avcodec_decode_video(
++					avcodec_decode_video2(
+ 						m_codecCtx, 
+ 						m_frame, &frameFinished, 
+-						packet.data, packet.size);
++						&packet);
+ 					if (frameFinished)
+ 					{
+ 						m_curPosition = (long)((packet.dts-startTs) * (m_baseFrameRate*timeBase) + 0.5);
+@@ -999,9 +999,9 @@
+ 	{
+ 		if(packet.stream_index == m_videoStream) 
+ 		{
+-			avcodec_decode_video(m_codecCtx, 
++			avcodec_decode_video2(m_codecCtx,
+ 				m_frame, &frameFinished, 
+-				packet.data, packet.size);
++				&packet);
+ 			// remember dts to compute exact frame number
+ 			dts = packet.dts;
+ 			if (frameFinished && !posFound) 
+diff -burN blender-2.57.orig//source/gameengine/VideoTexture/VideoFFmpeg.h blender-2.57/source/gameengine/VideoTexture/VideoFFmpeg.h
+--- blender-2.57.orig//source/gameengine/VideoTexture/VideoFFmpeg.h	2011-04-14 17:13:34.000000000 +0200
++++ blender-2.57/source/gameengine/VideoTexture/VideoFFmpeg.h	2011-05-04 03:11:53.106002831 +0200
+@@ -34,6 +34,7 @@
+ #include <libavformat/avformat.h>
+ #include <libavcodec/avcodec.h>
+ #include <libavutil/rational.h>
++#include <libavutil/parseutils.h>
+ #include <libswscale/swscale.h>
+ #include "DNA_listBase.h"
+ #include "BLI_threads.h"
