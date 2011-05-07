@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.4.9.ebuild,v 1.2 2011/03/21 20:25:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.4.9.ebuild,v 1.3 2011/05/07 16:42:38 tomka Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://dist.codehaus.org/boo/distributions/${P}-src.tar.bz2"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.0
