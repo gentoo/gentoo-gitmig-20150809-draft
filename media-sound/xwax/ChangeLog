@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.30 2011/04/04 12:33:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.31 2011/05/07 17:50:00 nixphoeni Exp $
+
+*xwax-0.9 (07 May 2011)
+
+  07 May 2011; Joe Sapp <nixphoeni@gentoo.org> -xwax-0.9_beta3.ebuild,
+  +xwax-0.9.ebuild, metadata.xml:
+  Version bump, deprecated XWAX_DECODERS for USE flags, bumped EAPI to reflect
+  proper USE flag configurations, and moved patching of the import script to
+  src_prepare(). Also added OSS support through USE and the --prefix flag to
+  econf.
 
   04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> xwax-0.7.ebuild,
   xwax-0.8.ebuild, xwax-0.9_beta3.ebuild:
