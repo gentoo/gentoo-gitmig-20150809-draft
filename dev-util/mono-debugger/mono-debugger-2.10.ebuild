@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.10.ebuild,v 1.1 2011/02/27 13:37:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.10.ebuild,v 1.2 2011/05/07 16:44:26 tomka Exp $
 
 # bah, tests fail. Needs to be fixed ...
 RESTRICT="test"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.mono-project.com/"
 
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 
 #Bundles jay
