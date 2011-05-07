@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksnapshot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.167 2011/04/23 19:38:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.168 2011/05/07 10:47:48 scarabeus Exp $
+
+*ksnapshot-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +ksnapshot-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
   23 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -ksnapshot-4.6.2.ebuild:

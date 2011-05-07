@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.88 2011/04/11 02:06:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.89 2011/05/07 10:47:47 scarabeus Exp $
+
+*marble-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +marble-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
 *marble-4.6.2-r1 (11 Apr 2011)
 

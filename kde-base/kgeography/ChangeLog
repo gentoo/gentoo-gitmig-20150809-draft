@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.139 2011/04/06 14:19:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.140 2011/05/07 10:47:53 scarabeus Exp $
+
+*kgeography-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +kgeography-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
 *kgeography-4.6.2 (06 Apr 2011)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.87 2011/04/07 22:11:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.88 2011/05/07 10:47:59 scarabeus Exp $
+
+*krunner-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +krunner-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
   07 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   krunner-4.6.2.ebuild, +files/krunner-4.6.2-noxf86misc.patch:

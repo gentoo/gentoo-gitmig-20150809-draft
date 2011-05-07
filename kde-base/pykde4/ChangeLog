@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.107 2011/05/04 11:15:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.108 2011/05/07 10:47:43 scarabeus Exp $
+
+*pykde4-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +pykde4-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
   04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -pykde4-4.4.5.ebuild,
   -files/pykde4-4.5.5-typedefs-fix.patch:

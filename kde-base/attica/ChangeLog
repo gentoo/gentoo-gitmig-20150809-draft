@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/attica
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.31 2011/04/06 14:19:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.32 2011/05/07 10:47:49 scarabeus Exp $
+
+*attica-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +attica-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
 *attica-4.6.2 (06 Apr 2011)
 

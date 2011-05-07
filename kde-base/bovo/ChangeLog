@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.75 2011/04/06 14:18:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.76 2011/05/07 10:47:39 scarabeus Exp $
+
+*bovo-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +bovo-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
 *bovo-4.6.2 (06 Apr 2011)
 

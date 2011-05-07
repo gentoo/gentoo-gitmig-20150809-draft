@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.167 2011/04/06 14:19:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.168 2011/05/07 10:47:59 scarabeus Exp $
+
+*kpat-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +kpat-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
 *kpat-4.6.2 (06 Apr 2011)
 

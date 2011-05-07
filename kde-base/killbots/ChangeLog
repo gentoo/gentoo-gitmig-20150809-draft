@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/killbots
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.61 2011/04/06 14:19:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.62 2011/05/07 10:47:48 scarabeus Exp $
+
+*killbots-4.6.3 (07 May 2011)
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> +killbots-4.6.3.ebuild:
+  Version bump KDE SC 4.6.3
 
 *killbots-4.6.2 (06 Apr 2011)
 
