@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r1.ebuild,v 1.6 2011/05/07 04:45:49 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r1.ebuild,v 1.7 2011/05/07 21:42:55 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -161,4 +161,3 @@ pkg_postinst() {
 	elog "You can also use /etc/init.d/unrealircd to start at boot"
 	elog
 }
-
