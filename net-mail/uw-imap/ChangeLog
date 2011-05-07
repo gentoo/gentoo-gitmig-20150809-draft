@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.116 2011/03/19 17:03:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.117 2011/05/07 11:20:37 eras Exp $
+
+  07 May 2011; Eray Aslan <eras@gentoo.org> uw-imap-2007e.ebuild,
+  +files/uw-imap-ldflags.patch:
+  QA fixes bug 332721. Do not block bincimap bug 290353
 
   19 Mar 2011; Eray Aslan <eras@gentoo.org> uw-imap-2007e.ebuild:
   remove old style virtual/imapd

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007e.ebuild,v 1.11 2011/03/19 17:03:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007e.ebuild,v 1.12 2011/05/07 11:20:37 eras Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,7 +32,6 @@ RDEPEND="${DEPEND}
 RDEPEND="${RDEPEND}
 	!net-mail/dovecot
 	!mail-mta/courier
-	!net-mail/bincimap
 	!net-mail/courier-imap
 	!net-mail/cyrus-imapd"
 
@@ -75,13 +74,15 @@ src_unpack() {
 		# Apply our patch to actually build the shared library for PHP5
 		epatch "${FILESDIR}"/${PN}-2004c-amd64-so-fix.patch
 	fi
+	epatch "${FILESDIR}/${PN}-ldflags.patch"
 
 	# Now we must make all the individual Makefiles use different CFLAGS,
 	# otherwise they would all use -fPIC
 	sed -i -e "s|\`cat \$C/CFLAGS\`|${CFLAGS}|g" src/dmail/Makefile \
 		src/imapd/Makefile src/ipopd/Makefile src/mailutil/Makefile \
 		src/mlock/Makefile src/mtest/Makefile src/tmail/Makefile \
-		|| die "sed failed patching Makefile CFLAGS."
+		|| die "sed failed patching Makefile FLAGS."
+
 	# Now there is only c-client left, which should be built with -fPIC
 	append-flags -fPIC
 
@@ -173,11 +174,12 @@ src_install() {
 	doins c-client/linkage.{c,h}
 	doins c-client/{osdep,env_unix,env,fs,ftl,nl,tcp}.h
 	dolib.a c-client/c-client.a
-	dosym /usr/$(get_libdir)/c-client.a /usr/$(get_libdir)/libc-client.a
+	cd "${D}"/usr/$(get_libdir)
+	dosym c-client.a libc-client.a
+	cd "${S}"
 
 	doman src/ipopd/ipopd.8 src/imapd/imapd.8
 	doman src/dmail/dmail.1 src/tmail/tmail.1
-
 	dodoc README docs/*.txt docs/CONFIG docs/RELNOTES
 
 	docinto rfc
