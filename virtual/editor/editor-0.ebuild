@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.22 2011/02/06 11:56:55 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/editor-0.ebuild,v 1.23 2011/05/07 21:21:56 ulm Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ DEPEND=""
 RDEPEND="|| ( app-editors/nano
 	app-editors/dav
 	app-editors/e3
-	app-editors/easyedit
+	app-editors/ee
 	app-editors/efte
 	app-editors/elvis
 	app-editors/emacs
