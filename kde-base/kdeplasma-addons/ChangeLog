@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.84 2011/05/07 10:48:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.85 2011/05/07 15:12:01 scarabeus Exp $
+
+  07 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdeplasma-addons-4.6.3.ebuild:
+  Akonadi patch is still required.
 
 *kdeplasma-addons-4.6.3 (07 May 2011)
 
