@@ -1,0 +1,39 @@
+diff --git a/ChangeLog b/ChangeLog
+index 54255e0..0a9f20b 100644
+--- a/ChangeLog
++++ b/ChangeLog
+@@ -1,3 +1,8 @@
++2011-05-07  Naohiro Aota  <naota@elisp.net>
++
++	* test/test-twittering-mode.el (test-toggle-proxy): Improve proxy
++	test.
++
+ 2011-05-06  Tadashi MATSUO  <tad@mymail.twin.jp>
+ 
+ 	* twittering-mode.el: Replace the symbol `us-ascii' for a
+diff --git a/test/test-twittering-mode.el b/test/test-twittering-mode.el
+index a686cf9..2b8eff6 100644
+--- a/test/test-twittering-mode.el
++++ b/test/test-twittering-mode.el
+@@ -17,7 +17,13 @@
+   (test-assert-eq nil (assocref 'quxx '((baz . qux) (foo . bar)))))
+ 
+ (defcase test-toggle-proxy nil nil
+-  (setq twittering-proxy-use nil)
++  (setq twittering-proxy-use nil
++	twittering-http-proxy-server nil
++	twittering-http-proxy-port nil)
++  (twittering-toggle-proxy)
++  (test-assert-ok (not twittering-proxy-use))
++  (setq twittering-http-proxy-server "proxy.example.com"
++	twittering-http-proxy-port 8080)
+   (twittering-toggle-proxy)
+   (test-assert-ok twittering-proxy-use)
+   (twittering-toggle-proxy)
+@@ -565,4 +571,4 @@
+       access-token access-token-secret
+       oauth-params))
+    "OAuth oauth_nonce=\"oElnnMTQIZvqvlfXM56aBLAf5noGD0AQR3Fmi7Q6Y\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1272325550\",oauth_consumer_key=\"GDdmIQH6jhtmLUypg82g\",oauth_token=\"819797-Jxq8aYUDRmykzVKrgoLhXSq67TEa5ruc4GJC2rWimw\",oauth_version=\"1.0\",oauth_signature=\"yOahq5m0YjDDjfjxHaXEsW9D%2BX0%3D\"")
+-  )
+\ No newline at end of file
++  )
