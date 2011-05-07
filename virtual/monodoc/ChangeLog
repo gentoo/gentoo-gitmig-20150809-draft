@@ -1,6 +1,9 @@
 # ChangeLog for virtual/monodoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.38 2011/03/21 20:27:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/ChangeLog,v 1.39 2011/05/07 16:46:51 tomka Exp $
+
+  07 May 2011; Thomas Kahle <tomka@gentoo.org> monodoc-2.10.ebuild:
+  x86 stable per bug 359651
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> monodoc-2.10.ebuild:
   Marking monodoc-2.10 ppc stable for bug 359651
