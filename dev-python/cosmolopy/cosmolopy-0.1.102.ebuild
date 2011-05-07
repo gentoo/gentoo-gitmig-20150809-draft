@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/cosmolopy-0.1.102.ebuild,v 1.2 2011/05/05 15:57:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/cosmolopy-0.1.102.ebuild,v 1.3 2011/05/07 21:42:03 mr_bones_ Exp $
 
 EAPI=2
 
@@ -26,7 +26,6 @@ DEPEND="dev-python/nose
 	dev-lang/swig
 	doc? ( dev-python/epydoc )"
 RDEPEND="sci-libs/scipy"
-
 
 S=${WORKDIR}/${MY_P}
 
