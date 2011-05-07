@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.292 2011/05/02 15:00:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.293 2011/05/07 16:37:47 armin76 Exp $
+
+  07 May 2011; Raúl Porcel <armin76@gentoo.org> wireshark-1.4.6-r1.ebuild:
+  ia64/sparc stable wrt #363895
 
   02 May 2011; Tobias Klausmann <klausman@gentoo.org>
   wireshark-1.4.6-r1.ebuild:
