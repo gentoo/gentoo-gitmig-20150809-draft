@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.22.ebuild,v 1.1 2011/03/05 18:02:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.3.24.ebuild,v 1.1 2011/05/07 10:48:01 ulm Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="Zile is a small Emacs clone"
 HOMEPAGE="http://www.gnu.org/software/zile/"
@@ -15,8 +15,6 @@ IUSE="livecd test valgrind"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
-	dev-lang/perl
-	sys-apps/help2man
 	test? ( valgrind? ( dev-util/valgrind ) )"
 
 src_configure() {
@@ -24,10 +22,10 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	# FAQ is installed by the build system in /usr/share/zile
-	dodoc AUTHORS BUGS NEWS README THANKS || die
+	dodoc AUTHORS BUGS NEWS README THANKS
 
 	# Zile should never install charset.alias (even on non-glibc arches)
 	rm -f "${ED}"/usr/lib/charset.alias
