@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.33 2011/05/02 13:47:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.34 2011/05/07 17:36:58 armin76 Exp $
+
+  07 May 2011; Raúl Porcel <armin76@gentoo.org> pg-0.9.0-r1.ebuild:
+  ia64/sparc stable wrt #358723
 
   02 May 2011; Thomas Kahle <tomka@gentoo.org> pg-0.9.0-r1.ebuild:
   x86 stable per bug 358723
