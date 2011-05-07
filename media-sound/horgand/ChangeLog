@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/horgand
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.25 2011/03/20 20:09:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.26 2011/05/07 17:46:18 angelos Exp $
+
+  07 May 2011; Christoph Mende <angelos@gentoo.org> horgand-1.14.ebuild,
+  +files/horgand-1.14-overflow.patch:
+  Fix possible overflow (bug #351290)
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> horgand-1.14.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly

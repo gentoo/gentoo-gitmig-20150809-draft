@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.14.ebuild,v 1.6 2011/03/20 20:09:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-1.14.ebuild,v 1.7 2011/05/07 17:46:18 angelos Exp $
 
-EAPI="1"
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Opensource software organ"
@@ -23,8 +23,11 @@ RDEPEND="x11-libs/fltk:1
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-overflow.patch
+}
+
 src_compile() {
-	econf
 	emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS} $(fltk-config --cxxflags) \
 		$(pkg-config --cflags jack) $(pkg-config --cflags sndfile)" || die "emake failed."
 }
