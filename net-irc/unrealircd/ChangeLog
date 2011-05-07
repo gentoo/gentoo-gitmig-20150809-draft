@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.81 2011/05/05 18:32:57 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.82 2011/05/07 04:45:49 binki Exp $
+
+  07 May 2011; Nathan Phillip Brink <binki@gentoo.org>
+  unrealircd-3.2.8.1-r1.ebuild:
+  When compiling with curl support, require curl to be compiled against
+  c-ares.
 
   05 May 2011; Nathan Phillip Brink <binki@gentoo.org>
   unrealircd-3.2.8.1-r1.ebuild:
