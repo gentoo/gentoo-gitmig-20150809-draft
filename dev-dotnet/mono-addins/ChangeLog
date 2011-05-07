@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono-addins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.25 2011/04/29 18:16:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.26 2011/05/07 16:41:14 tomka Exp $
+
+  07 May 2011; Thomas Kahle <tomka@gentoo.org> mono-addins-0.6.ebuild:
+  x86 stable per bug 359651
 
   29 Apr 2011; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Invalid herd: dev-dotnet -> dotnet

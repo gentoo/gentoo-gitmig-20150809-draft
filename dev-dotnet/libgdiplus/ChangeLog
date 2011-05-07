@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.129 2011/03/21 20:23:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.130 2011/05/07 16:40:44 tomka Exp $
+
+  07 May 2011; Thomas Kahle <tomka@gentoo.org> libgdiplus-2.10.ebuild:
+  x86 stable per bug 359651
 
   21 Mar 2011; Brent Baude <ranger@gentoo.org> libgdiplus-2.10.ebuild:
   Marking libgdiplus-2.10 ppc stable for bug 359651

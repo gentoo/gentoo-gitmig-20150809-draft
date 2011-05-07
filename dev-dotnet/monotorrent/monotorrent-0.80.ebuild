@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/monotorrent-0.80.ebuild,v 1.1 2011/02/27 13:57:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/monotorrent-0.80.ebuild,v 1.2 2011/05/07 16:41:36 tomka Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://projects.qnetp.net/attachments/download/28/${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RDEPEND=">=dev-lang/mono-2.0.1"
 DEPEND="${RDEPEND}
