@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.159 2011/04/21 12:15:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.160 2011/05/07 19:16:48 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -1171,7 +1171,9 @@ mysql_src_install() {
 
 	# Docs
 	einfo "Installing docs"
-	dodoc README ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE
+	for i in README ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE ; do
+		[[ -f "$i" ]] && dodoc "$i"
+	done
 	doinfo "${S}"/Docs/mysql.info
 
 	# Minimal builds don't have the MySQL server
