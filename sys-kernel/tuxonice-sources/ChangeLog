@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.115 2011/02/06 17:18:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.116 2011/05/07 22:48:56 nelchael Exp $
+
+*tuxonice-sources-2.6.38 (07 May 2011)
+*tuxonice-sources-2.6.37-r1 (07 May 2011)
+*tuxonice-sources-2.6.36-r6 (07 May 2011)
+
+  07 May 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  -tuxonice-sources-2.6.34-r6.ebuild, -tuxonice-sources-2.6.35-r10.ebuild,
+  -tuxonice-sources-2.6.36-r4.ebuild, +tuxonice-sources-2.6.36-r6.ebuild,
+  +tuxonice-sources-2.6.37-r1.ebuild, +tuxonice-sources-2.6.38.ebuild:
+  Version bumps, those kernels use the brand new TuxOnIce 3.2.
 
 *tuxonice-sources-2.6.36-r5 (06 Feb 2011)
 

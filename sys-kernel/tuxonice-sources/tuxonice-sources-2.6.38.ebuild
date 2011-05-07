@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.36-r4.ebuild,v 1.1 2010/12/28 16:46:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.38.ebuild,v 1.1 2011/05/07 22:48:56 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="8"
+K_GENPATCHES_VER="5"
 
 inherit kernel-2
 detect_version
@@ -15,11 +15,11 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/ http://www.tuxonice.net"
 IUSE=""
 
 TUXONICE_SNAPSHOT=""
-TUXONICE_VERSION="3.2-rc2"
-TUXONICE_TARGET="2.6.36"
+TUXONICE_VERSION="3.2"
+TUXONICE_TARGET="2.6.38"
 
 if [[ -n "${TUXONICE_SNAPSHOT}" ]]; then
-	TUXONICE_SRC="current-tuxonice-for-${TUXONICE_TARGET}.patch-${TUXONICE_SNAPSHOT}"
+	TUXONICE_SRC="current-tuxonice-for-${TUXONICE_TARGET}.patch_${TUXONICE_SNAPSHOT}"
 else
 	TUXONICE_SRC="tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch"
 fi
