@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2011.04.27.ebuild,v 1.1 2011/05/06 08:19:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2011.04.27.ebuild,v 1.2 2011/05/07 01:12:19 radhermit Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX=/usr install
 	dodoc ChangeLog README
 
-	insinto /usr/share/doc/${PF}/contrib
-	doins -r contrib/{config-example,*.sh,eventcmd-examples}
+	docinto contrib
+	dodoc -r contrib/{config-example,*.sh,eventcmd-examples}
 	docompress -x /usr/share/doc/${PF}/contrib
 }
