@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.4 2011/04/28 18:17:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.0.ebuild,v 1.5 2011/05/07 09:18:00 jlec Exp $
 
 EAPI="3"
 
@@ -60,6 +60,7 @@ src_test() {
 	local mycmakeargs=""
 	mycmakeargs="${mycmakeargs}
 		-DOPENBABEL_USE_SYSTEM_INCHI=ON
+		-DPYTHON_EXECUTABLE=false
 		$(cmake-utils_use wxwidgets BUILD_GUI)
 		$(cmake-utils_use_enable test TESTS)"
 

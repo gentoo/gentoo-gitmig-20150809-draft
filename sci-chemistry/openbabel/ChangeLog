@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.52 2011/04/30 18:01:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.53 2011/05/07 09:18:00 jlec Exp $
+
+  07 May 2011; Justin Lecher <jlec@gentoo.org> openbabel-2.3.0.ebuild:
+  Do not test things which are installed as PDEPEND like openbabel-python
 
   30 Apr 2011; Raúl Porcel <armin76@gentoo.org> openbabel-2.2.3.ebuild:
   Drop sparc keywords
