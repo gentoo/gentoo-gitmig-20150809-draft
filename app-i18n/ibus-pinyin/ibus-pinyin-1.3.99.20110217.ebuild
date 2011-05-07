@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20101029.ebuild,v 1.3 2011/05/06 12:48:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.3.99.20110217.ebuild,v 1.1 2011/05/07 15:06:09 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="sqlite"
-inherit python
+inherit python eutils
 
 PYDB_TAR="pinyin-database-1.2.99.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
@@ -16,10 +16,13 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls"
+IUSE="boost nls"
 
 RDEPEND=">=app-i18n/ibus-1.3.99
-	>=dev-libs/boost-1.39
+	boost? (
+		>=dev-libs/boost-1.39
+		!=dev-libs/boost-1.46.1
+	)
 	sys-apps/util-linux
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
@@ -35,10 +38,12 @@ src_prepare() {
 	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/data/db/open-phrase/ || die
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
+
+	epatch "${FILESDIR}"/${PN}-1.3.99.20110217-m_instance.patch
 }
 
 src_configure() {
-	econf $(use_enable nls) --enable-db-open-phrase
+	econf $(use_enable nls) $(use_enable boost) --enable-db-open-phrase
 }
 
 src_install() {
