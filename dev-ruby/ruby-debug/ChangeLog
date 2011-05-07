@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-debug
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.23 2011/01/23 21:51:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ChangeLog,v 1.24 2011/05/07 08:11:19 graaff Exp $
+
+  07 May 2011; Hans de Graaff <graaff@gentoo.org> -ruby-debug-0.10.3-r3.ebuild,
+  -ruby-debug-0.10.3-r4.ebuild, -ruby-debug-0.10.3-r5.ebuild:
+  Remove old versions.
 
   23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ruby-debug-0.10.3-r6.ebuild:
