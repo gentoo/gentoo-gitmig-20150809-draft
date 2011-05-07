@@ -1,0 +1,18 @@
+# ChangeLog for dev-java/byaccj
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/ChangeLog,v 1.1 2011/05/07 19:51:18 elvanor Exp $
+
+*byaccj-1.15 (07 May 2011)
+
+  07 May 2011; <elvanor@gentoo.org> +byaccj-1.15.ebuild, +files/Makefile,
+  +metadata.xml:
+  Version bump to 1.15, commited to main Portage tree.
+
+  18 Jan 2009; Alistair Bush <ali_bush@gentoo.org> +metadata.xml,
+  byaccj-1.14.ebuild:
+  Fix QA issues.
+
+  24 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -byaccj-1.1.ebuild,
+  +byaccj-1.14.ebuild:
+  Version bump.
+
