@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.22.ebuild,v 1.1 2011/05/07 07:47:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.22.ebuild,v 1.2 2011/05/07 17:07:11 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
 
 DESCRIPTION="A media player for Gtk+ with a slick GUI, great speed and lots of
-faetures"
+features"
 HOMEPAGE="http://www.xnoise-media-player.com/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
