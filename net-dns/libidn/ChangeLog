@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.134 2011/05/05 20:55:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.135 2011/05/07 20:26:25 phajdan.jr Exp $
+
+  07 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libidn-1.20.ebuild:
+  x86 stable wrt bug #364847
 
 *libidn-1.22 (05 May 2011)
 
