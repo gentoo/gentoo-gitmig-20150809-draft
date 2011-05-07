@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.101 2011/04/08 15:25:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.102 2011/05/07 14:21:51 phajdan.jr Exp $
+
+  07 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mtr-0.80.ebuild:
+  x86 stable wrt bug #362609
 
   08 Apr 2011; Jeremy Olexa <darkside@gentoo.org> mtr-0.80.ebuild:
   Import changes from Gentoo Prefix overlay, KEYWORDS, append-libs for osx,
