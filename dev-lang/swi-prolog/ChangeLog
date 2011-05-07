@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.277 2011/05/06 21:38:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.278 2011/05/07 20:41:37 keri Exp $
+
+  07 May 2011; <keri@gentoo.org> swi-prolog-5.10.4.ebuild,
+  swi-prolog-5.11.20.ebuild:
+  Fix JPL handling of long values
 
 *swi-prolog-5.11.20 (06 May 2011)
 
