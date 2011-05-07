@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2-r1.ebuild,v 1.3 2011/05/07 10:16:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.2-r1.ebuild,v 1.4 2011/05/07 10:35:13 ulm Exp $
 
 EAPI=3
 
@@ -109,7 +109,7 @@ src_compile() {
 	# example plots.
 	addwrite /dev/svga:/dev/mouse:/dev/tts/0
 
-	emake || die
+	emake all info || die
 
 	if use xemacs; then
 		cd "${S}/lisp-xemacs"
