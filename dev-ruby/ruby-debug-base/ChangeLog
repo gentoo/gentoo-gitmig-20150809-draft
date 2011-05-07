@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-debug-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.17 2011/05/07 08:25:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.18 2011/05/07 08:27:00 graaff Exp $
+
+  07 May 2011; Hans de Graaff <graaff@gentoo.org>
+  ruby-debug-base-0.10.4.ebuild:
+  Add mistakenly dropped ppc64 keyword.
 
 *ruby-debug-base-0.10.4 (07 May 2011)
 
