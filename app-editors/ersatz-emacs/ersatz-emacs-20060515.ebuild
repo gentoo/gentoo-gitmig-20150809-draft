@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.7 2010/08/13 21:21:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.8 2011/05/07 21:03:48 ulm Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -16,13 +18,11 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
-	!app-editors/easyedit"
+	!app-editors/ee"
 
 S="${WORKDIR}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i -e "s%/usr/local/share/%/usr/share/doc/${PF}/%" ee.1 \
 		|| die "sed failed"
@@ -31,7 +31,7 @@ src_unpack() {
 src_compile() {
 	emake CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} -Wall" \
-		LFLAGS="${LDFLAGS} -lncurses" || die "emake failed"
+		LFLAGS="${LDFLAGS} -lncurses"
 }
 
 src_install() {
@@ -39,5 +39,5 @@ src_install() {
 	# is ever keyworded *-fbsd the binary has to be renamed.
 	dobin ee
 	doman ee.1
-	dodoc ChangeLog ERSATZ.keys README || die "dodoc failed"
+	dodoc ChangeLog ERSATZ.keys README
 }

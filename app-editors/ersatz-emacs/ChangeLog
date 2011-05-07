@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ersatz-emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.7 2011/02/15 20:24:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ChangeLog,v 1.8 2011/05/07 21:03:48 ulm Exp $
+
+  07 May 2011; Ulrich Mueller <ulm@gentoo.org> ersatz-emacs-20060515.ebuild:
+  Update blocker after package move from easyedit to ee. Update EAPI to 4.
 
   15 Feb 2011; Ulrich Mueller <ulm@gentoo.org>
   files/ersatz-emacs-20060515-gentoo.patch:
