@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.15 2011/03/26 03:02:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.16 2011/05/07 17:03:46 tomka Exp $
+
+  07 May 2011; Thomas Kahle <tomka@gentoo.org> ldns-1.6.9.ebuild:
+  x86 stable per bug 362015
 
 *ldns-1.6.9 (26 Mar 2011)
 
