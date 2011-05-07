@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.80 2011/04/27 17:59:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.81 2011/05/07 18:41:05 armin76 Exp $
+
+  07 May 2011; Raúl Porcel <armin76@gentoo.org> libgpg-error-1.10.ebuild:
+  arm/ia64/m68k/s390/sh/sparc stable wrt #355265
 
   27 Apr 2011; Fabian Groffen <grobian@gentoo.org> libgpg-error-1.10.ebuild:
   Marked ~m68k-mint, bug #364787
