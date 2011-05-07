@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/shout-0.8.0-r2.ebuild,v 1.7 2008/12/19 19:04:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/shout-0.8.0-r2.ebuild,v 1.8 2011/05/07 17:12:16 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,9 +16,10 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/variables.diff
-	epatch "${FILESDIR}"/ldflags.patch
-	epatch "${FILESDIR}"/implicitdecls.patch
+	epatch "${FILESDIR}"/variables.diff \
+		"${FILESDIR}"/ldflags.patch \
+		"${FILESDIR}"/implicitdecls.patch \
+		"${FILESDIR}"/${P}-overflow.patch
 	rm -f sock.o
 	sed -i -e "s/-ansi//" configure
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/shout
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.16 2008/12/19 19:04:16 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.17 2011/05/07 17:12:16 angelos Exp $
+
+  07 May 2011; Christoph Mende <angelos@gentoo.org> shout-0.8.0-r2.ebuild,
+  +files/shout-0.8.0-overflow.patch:
+  Fix possible overflows (bug #337527)
 
   19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   +files/implicitdecls.patch, +files/ldflags.patch, shout-0.8.0-r2.ebuild:
