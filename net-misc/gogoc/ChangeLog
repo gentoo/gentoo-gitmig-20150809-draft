@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gogoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.13 2011/04/26 16:00:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.14 2011/05/07 18:14:11 tomka Exp $
+
+  07 May 2011; Thomas Kahle <tomka@gentoo.org> gogoc-1.2-r1.ebuild:
+  x86 stable per bug 362549
 
   26 Apr 2011; Jeroen Roovers <jer@gentoo.org> gogoc-1.2-r1.ebuild:
   Stable for HPPA (bug #362549).
