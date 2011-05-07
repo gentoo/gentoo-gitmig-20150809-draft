@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.1.0.ebuild,v 1.2 2011/03/23 20:44:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.1.1.ebuild,v 1.1 2011/05/07 14:51:33 hattya Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit autotools eutils
 
-IUSE="crypt ipv6 ldap nls pda spell ssl xface"
+IUSE="crypt ipv6 ldap nls oniguruma pda spell ssl xface"
 
 DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.sraoss.jp/"
@@ -20,6 +20,7 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.4:2
 	nls? ( >=sys-devel/gettext-0.12.1 )
 	crypt? ( >=app-crypt/gpgme-1 )
 	ldap? ( net-nds/openldap )
+	oniguruma? ( dev-libs/oniguruma )
 	pda? ( app-pda/jpilot )
 	spell? ( app-text/gtkspell )
 	ssl? ( dev-libs/openssl )"
@@ -28,15 +29,11 @@ DEPEND="${COMMON_DEPEND}
 	xface? ( >=media-libs/compface-1.4 )"
 RDEPEND="${COMMON_DEPEND}
 	app-misc/mime-types
-	net-misc/curl
-	x11-misc/shared-mime-info"
+	net-misc/curl"
 
 AT_M4DIR="ac"
 
 src_prepare() {
-
-	epatch "${FILESDIR}"/${PN}-2.7-*.diff
-	epatch "${FILESDIR}"/${PN}-3.*.diff
 
 	use crypt || cp ac/missing/gpgme.m4 ac
 
@@ -52,6 +49,7 @@ src_configure() {
 		$(use_enable crypt gpgme) \
 		$(use_enable ipv6) \
 		$(use_enable ldap) \
+		$(use_enable oniguruma) \
 		$(use_enable pda jpilot) \
 		$(use_enable spell gtkspell) \
 		$(use_enable ssl) \
