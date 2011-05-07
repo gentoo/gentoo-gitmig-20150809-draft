@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.30 2011/04/26 20:10:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.31 2011/05/07 18:09:40 tomka Exp $
+
+  07 May 2011; Thomas Kahle <tomka@gentoo.org> bitbake-1.10.2.ebuild:
+  x86 stable per bug 362333
 
   26 Apr 2011; Christoph Mende <angelos@gentoo.org> bitbake-1.10.2.ebuild:
   Stable on amd64 wrt bug #362333
