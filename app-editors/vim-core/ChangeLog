@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.358 2011/05/03 15:24:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.359 2011/05/07 14:56:05 phajdan.jr Exp $
+
+  07 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vim-core-7.3.135.ebuild:
+  x86 stable wrt bug #364807
 
   03 May 2011; Markos Chandras <hwoarang@gentoo.org> vim-core-7.3.135.ebuild:
   Stable on amd64 wrt bug #364807
