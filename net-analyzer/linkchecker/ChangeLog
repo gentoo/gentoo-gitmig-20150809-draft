@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.50 2011/05/06 06:49:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.51 2011/05/07 09:36:31 jlec Exp $
+
+  07 May 2011; Justin Lecher <jlec@gentoo.org> linkchecker-5.5.ebuild:
+  Added changes suggested by Arfrever in #366137, renaming of function in
+  src_install
 
   06 May 2011; Justin Lecher <jlec@gentoo.org> linkchecker-5.2.ebuild,
   linkchecker-5.5.ebuild:
