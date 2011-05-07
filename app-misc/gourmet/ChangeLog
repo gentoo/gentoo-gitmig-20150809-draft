@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.27 2011/05/03 11:16:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.28 2011/05/07 18:18:53 nixphoeni Exp $
+
+*gourmet-0.15.9 (07 May 2011)
+
+  07 May 2011; Joe Sapp <nixphoeni@gentoo.org> +gourmet-0.15.9.ebuild:
+  Version bump (bug #365567)
 
   03 May 2011; Markos Chandras <hwoarang@gentoo.org> gourmet-0.15.8.ebuild:
   Stable on amd64 wrt bug #365571
