@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6-r1.ebuild,v 1.1 2011/05/08 16:00:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6-r1.ebuild,v 1.2 2011/05/08 17:51:33 polynomial-c Exp $
 
 EAPI=4
 
@@ -306,8 +306,10 @@ src_install() {
 	popd &>/dev/null || die
 
 	# New way of handling USB device nodes for VBox (bug #356215)
-	exeinto /lib/udev
-	doexe VBoxCreateUSBNode.sh
+	insinto /lib/udev
+	doins VBoxCreateUSBNode.sh
+	fowners root:vboxusers /lib/udev/VBoxCreateUSBNode.sh
+	fperms 0750 /lib/udev/VBoxCreateUSBNode.sh
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
 
