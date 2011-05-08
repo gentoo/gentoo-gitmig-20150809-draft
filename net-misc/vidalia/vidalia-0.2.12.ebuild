@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.2.12.ebuild,v 1.1 2011/04/13 15:22:55 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.2.12.ebuild,v 1.2 2011/05/08 01:07:09 chiiph Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils qt4-r2 cmake-utils
 
 DESCRIPTION="Qt 4 front-end for Tor"
 HOMEPAGE="https://www.torproject.org/projects/vidalia.html.en"
-SRC_URI="https://www.torproject.org/dist/${P}.tar.gz"
+SRC_URI="https://www.torproject.org/dist/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( GPL-3 GPL-2 ) openssl"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.19 2011/04/13 15:22:55 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.20 2011/05/08 01:07:09 chiiph Exp $
+
+  08 May 2011; Tomas Touceda <chiiph@gentoo.org> vidalia-0.2.12.ebuild:
+  Update SRC_URI wrt bug 363615
 
 *vidalia-0.2.12 (13 Apr 2011)
 
