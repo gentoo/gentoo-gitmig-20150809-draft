@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/qdox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.23 2010/01/23 12:47:51 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.24 2011/05/08 14:57:23 elvanor Exp $
+
+*qdox-1.12 (08 May 2011)
+
+  08 May 2011; <elvanor@gentoo.org> +qdox-1.12.ebuild:
+  Bump to 1.12. New slot, not sure if needed.
 
   23 Jan 2010; Alexis Ballier <aballier@gentoo.org> qdox-1.6.3.ebuild:
   keyword ~x86-fbsd and fix find call to be bsd-compatible
