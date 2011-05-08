@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.0.ebuild,v 1.2 2011/05/08 15:13:06 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.0.ebuild,v 1.3 2011/05/08 15:28:18 sochotnicky Exp $
 
 EAPI="3"
 
@@ -61,7 +61,6 @@ src_configure() {
 		--with-external-db \
 		$(use_enable python) \
 		$(use_with doc hackingdocs) \
-		$(use_enable sqlite sqlite3) \
 		$(use_enable nls) \
 		$(use_with lua) \
 		$(use_with caps cap)\
