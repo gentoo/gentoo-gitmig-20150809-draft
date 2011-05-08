@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.2.ebuild,v 1.1 2010/04/09 13:14:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.5.ebuild,v 1.1 2011/05/08 21:09:48 slyfox Exp $
 
 EAPI="2"
 
@@ -45,6 +45,7 @@ src_compile() {
 }
 
 src_test() {
+	source env.sh # needed for built in-place python plugin
 	./spatch standard.h -parse_c -dir tests/ || die
 	yes | ./spatch -iso_file standard.iso -macro_file_builtins standard.h -testall || die
 	if use ocamlopt ; then
