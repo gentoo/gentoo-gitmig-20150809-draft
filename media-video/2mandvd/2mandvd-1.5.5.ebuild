@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.5.5.ebuild,v 1.1 2011/04/22 16:00:01 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.5.5.ebuild,v 1.2 2011/05/08 01:51:38 chiiph Exp $
 
 EAPI="2"
 LANGS="cs de en it"
@@ -37,9 +37,14 @@ RDEPEND="${DEPEND}
 	media-video/mjpegtools
 	media-video/mplayer[encode]"
 
+S="${WORKDIR}/${MY_PN}"
+
 PATCHES=( "${FILESDIR}/2mandvd-fix-const-char-concatenation.patch" )
 
-S="${WORKDIR}/${MY_PN}"
+src_unpack() {
+	# Filter alot of noisy messages (differences between bsd tar and gnu one):
+	unpack ${A} 2> "/dev/null"
+}
 
 src_prepare() {
 	# Cleaning old backup files:
