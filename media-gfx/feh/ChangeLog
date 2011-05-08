@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.76 2011/04/11 16:25:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.77 2011/05/08 10:16:33 radhermit Exp $
+
+*feh-1.13 (08 May 2011)
+
+  08 May 2011; Tim Harder <radhermit@gentoo.org> +feh-1.13.ebuild:
+  Version bump. Update HOMEPAGE and SRC_URI, bump to EAPI 4, install examples
+  in the correct directory, and remove old postinst message.
 
   11 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> feh-1.12.ebuild:
   ppc64 stable wrt #354063
