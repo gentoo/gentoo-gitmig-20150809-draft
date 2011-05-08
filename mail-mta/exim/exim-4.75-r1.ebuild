@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.75-r1.ebuild,v 1.1 2011/05/07 19:12:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.75-r1.ebuild,v 1.2 2011/05/08 09:30:49 grobian Exp $
 
 EAPI="3"
 
@@ -72,6 +72,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
 	epatch "${FILESDIR}"/exim-4.74-radius-db-ENV-clash.patch # 287426
 	epatch "${FILESDIR}"/exim-4.75-CVE-2011-1764.patch
+	epatch "${FILESDIR}"/exim-4.75-makefile-freebsd.patch
 
 	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
 	use dsn && epatch "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
