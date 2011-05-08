@@ -15,4 +15,4 @@ all: FastCollector
 	${CC} -c ${CFLAGS} $<
 
 FastCollector: ${OBJ}
-	${LD} -o $@ ${LDFLAGS} ${OBJ} ${LIBS}
+	${LD} -o $@ ${CFLAGS} ${LDFLAGS} ${OBJ} ${LIBS}
