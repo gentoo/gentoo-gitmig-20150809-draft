@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.4.0.ebuild,v 1.1 2010/08/21 17:04:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.4.3.ebuild,v 1.1 2011/05/08 20:43:11 jer Exp $
 
 EAPI="2"
 
@@ -15,12 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="net-analyzer/net-snmp
-	=x11-libs/gtk+-2*"
+DEPEND="
+	dev-libs/glib
+	net-analyzer/net-snmp
+	x11-libs/gdk-pixbuf
+	x11-libs/gtk+:2
+"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i acinclude.m4 \
-		-e '/LDFLAGS=/d' || die "sed failed"
+		-e '/LDFLAGS=/d' \
+		|| die
 	eautoreconf
 }
 
