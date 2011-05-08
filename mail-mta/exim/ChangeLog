@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.191 2011/05/08 12:02:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.192 2011/05/08 22:13:10 hwoarang Exp $
+
+  08 May 2011; Markos Chandras <hwoarang@gentoo.org> exim-4.75-r1.ebuild:
+  Stable on amd64 wrt bug #366396
 
   08 May 2011; Christian Faulhammer <fauli@gentoo.org> exim-4.75-r1.ebuild:
   stable x86, security bug 366369
