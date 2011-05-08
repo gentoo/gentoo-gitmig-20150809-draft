@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.20.0.ebuild,v 1.1 2011/04/20 17:50:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.20.1.ebuild,v 1.1 2011/05/08 19:20:35 voyageur Exp $
 
 inherit gnustep-base
 
@@ -17,7 +17,7 @@ LICENSE="LGPL-2.1"
 IUSE="opengl xim"
 
 DEPEND="${GNUSTEP_CORE_DEPEND}
-	~gnustep-base/gnustep-gui-${PV}
+	=gnustep-base/gnustep-gui-${PV%.*}*
 	opengl? ( virtual/opengl virtual/glu )
 	x11-libs/libICE
 	x11-libs/libSM
