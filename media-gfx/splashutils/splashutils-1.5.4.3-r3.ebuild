@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.13 2011/03/27 07:09:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.14 2011/05/08 15:30:15 spock Exp $
 
 EAPI="2"
 
@@ -89,6 +89,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-makefile.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-splash_geninitramfs.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-libjpeg.patch
+	epatch "${FILESDIR}"/splashutils-1.5.4.3-libpng15_compat.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-daemon-exit-signal.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-splash-functions.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-splash_util.patch
