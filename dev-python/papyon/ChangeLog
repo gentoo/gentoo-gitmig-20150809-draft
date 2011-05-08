@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/papyon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.22 2011/03/22 20:06:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.23 2011/05/08 10:43:03 pacho Exp $
+
+*papyon-0.5.5 (08 May 2011)
+
+  08 May 2011; Pacho Ramos <pacho@gentoo.org> +papyon-0.5.5.ebuild:
+  Version bump, bug #366267 by Arfrever Frehtes Taifersar Arahesis.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> papyon-0.5.4.ebuild:
   Marking papyon-0.5.4 ppc stable for bug 353436
