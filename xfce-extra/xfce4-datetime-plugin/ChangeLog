@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-datetime-plugin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/ChangeLog,v 1.4 2010/08/24 03:05:39 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/ChangeLog,v 1.5 2011/05/08 09:44:24 ssuominen Exp $
+
+  08 May 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-datetime-plugin-0.6.1.ebuild:
+  Remove USE="debug" wrt #366033 by CBke.
 
   24 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-datetime-plugin-0.6.1.ebuild:
