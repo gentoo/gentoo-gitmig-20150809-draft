@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.0.ebuild,v 1.1 2011/05/08 13:26:00 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.0.ebuild,v 1.2 2011/05/08 15:13:06 sochotnicky Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="nls python doc sqlite caps lua acl"
+IUSE="nls python doc caps lua acl"
 
 RDEPEND=">=sys-libs/db-4.5
 	>=sys-libs/zlib-1.2.3-r1
@@ -29,7 +29,6 @@ RDEPEND=">=sys-libs/db-4.5
 	dev-libs/nss
 	python? ( >=dev-lang/python-2.3 )
 	nls? ( virtual/libintl )
-	sqlite? ( >=dev-db/sqlite-3.3.5 )
 	lua? ( >=dev-lang/lua-5.1.0 )
 	acl? ( virtual/acl )
 	caps? ( >=sys-libs/libcap-2.0 )"
