@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.29 2011/03/13 20:12:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.30 2011/05/08 15:00:43 slyfox Exp $
 #
 # @ECLASS: ghc-package.eclass
 # @MAINTAINER:
@@ -121,6 +121,14 @@ ghc-saneghc() {
 		fi
 	fi
 	return
+}
+
+# @FUNCTION: ghc-supports-shared-libraries
+# @DESCRIPTION:
+# checks if ghc is built with support for building
+# shared libraries (aka '-dynamic' option)
+ghc-supports-shared-libraries() {
+	$(ghc-getghc) --info | grep "RTS ways" | grep -q "dyn"
 }
 
 # @FUNCTION: ghc-extractportageversion
@@ -282,7 +290,6 @@ ghc-unregister-pkg() {
 	local localpkgconf
 	local i
 	local pkg
-	local protected
 	local unregister_flag
 	localpkgconf="$(ghc-confdir)/$1"
 
@@ -292,23 +299,15 @@ ghc-unregister-pkg() {
 		unregister_flag="--remove-package"
 	fi
 
-	for i in $(ghc-confdir)/*.conf; do
-		[[ "${i}" != "${localpkgconf}" ]] && protected="${protected} $(ghc-listpkg ${i})"
-	done
-	# protected now contains the packages that cannot be unregistered yet
-
 	if [[ -f "${localpkgconf}" ]]; then
 		for pkg in $(ghc-reverse "$(ghc-listpkg ${localpkgconf})"); do
-			if $(ghc-elem "${pkg}" "${protected}"); then
-				einfo "Package ${pkg} is protected."
-			elif ! ghc-package-exists "${pkg}"; then
-				:
-				# einfo "Package ${pkg} is not installed for ghc-$(ghc-version)."
-			else
-				ebegin "Unregistering ${pkg} "
-				$(ghc-getghcpkg) "${unregister_flag}" "${pkg}" --force > /dev/null
-				eend $?
-			fi
+		  if ! ghc-package-exists "${pkg}"; then
+			einfo "Package ${pkg} is not installed for ghc-$(ghc-version)."
+		  else
+			ebegin "Unregistering ${pkg} "
+			$(ghc-getghcpkg) "${unregister_flag}" "${pkg}" --force > /dev/null
+			eend $?
+		  fi
 		done
 	fi
 }
