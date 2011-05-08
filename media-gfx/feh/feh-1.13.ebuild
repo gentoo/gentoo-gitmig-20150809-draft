@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.13.ebuild,v 1.1 2011/05/08 10:16:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.13.ebuild,v 1.2 2011/05/08 10:21:35 radhermit Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="A fast, lightweight imageviewer using imlib2"
 HOMEPAGE="http://feh.finalrewind.org/"
