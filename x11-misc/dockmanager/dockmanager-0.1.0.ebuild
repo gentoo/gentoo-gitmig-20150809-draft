@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dockmanager/dockmanager-0.1.0.ebuild,v 1.1 2011/03/13 21:46:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dockmanager/dockmanager-0.1.0.ebuild,v 1.2 2011/05/08 08:41:39 angelos Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS"
 	python_set_active_version 2
+}
+
+src_prepare() {
+	rm -f {scripts,metadata}/pidgin_control.* || die
+	sed -i -e "/pidgin_control/d" {scripts,metadata}/Makefile.* || die
 }
 
 src_configure() {
