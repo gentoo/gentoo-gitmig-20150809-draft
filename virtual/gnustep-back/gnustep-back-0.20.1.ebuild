@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/gnustep-back-0.20.0.ebuild,v 1.1 2011/04/20 17:51:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/gnustep-back-0.20.1.ebuild,v 1.1 2011/05/08 19:22:23 voyageur Exp $
 
 DESCRIPTION="Virtual for back-end component for the GNUstep GUI Library"
 HOMEPAGE=""
