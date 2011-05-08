@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_p1.ebuild,v 1.1 2011/05/08 11:12:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_p1.ebuild,v 1.2 2011/05/08 23:08:32 idl0r Exp $
 
 EAPI="3"
 
@@ -106,9 +106,8 @@ src_prepare() {
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
 		sed -i -e 's/MINORVER=7/MINORVER=8/' \
 			-e 's/PATCHVER=2/PATCHVER=0/' \
-			-e 's/RELEASETYPE=-P/RELEASETYPE=/' \
-			-e 's/-RELEASEVER=2/-RELEASEVER=/' \
-			-e 's/+RELEASEVER=2-geoip-1.3/+RELEASEVER=-geoip-1.3/' \
+			-e 's/-RELEASEVER=2/-RELEASEVER=1/' \
+			-e 's/+RELEASEVER=2-geoip-1.3/+RELEASEVER=1-geoip-1.3/' \
 			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi

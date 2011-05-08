@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.330 2011/05/08 11:12:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.331 2011/05/08 23:08:32 idl0r Exp $
+
+  08 May 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.0_p1.ebuild:
+  Fix geoip patch for 9.8.0_p1, bug 366499.
 
 *bind-9.8.0_p1 (08 May 2011)
 
