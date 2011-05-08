@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.138 2011/04/07 17:57:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.139 2011/05/08 00:36:49 arfrever Exp $
+
+*numpy-1.6.0_rc3 (08 May 2011)
+
+  08 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +numpy-1.6.0_rc3.ebuild:
+  Version bump.
 
 *numpy-1.6.0_beta2 (07 Apr 2011)
 
