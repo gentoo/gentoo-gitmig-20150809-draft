@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-1.111.6.ebuild,v 1.1 2011/05/01 16:24:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-1.111.6.ebuild,v 1.2 2011/05/08 12:29:12 tove Exp $
 
 EAPI=4
 
@@ -21,5 +21,10 @@ RDEPEND="dev-perl/libwww-perl
 	dev-perl/URI"
 DEPEND="${RDEPEND}
 	test? ( >=virtual/perl-Test-Simple-0.96 )"
+
+src_test() {
+	mv "${S}"/t/app.t{,.disable} || die
+	perl-module_src_test
+}
 
 SRC_TEST="do"
