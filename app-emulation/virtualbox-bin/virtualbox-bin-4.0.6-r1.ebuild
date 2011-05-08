@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.6.ebuild,v 1.1 2011/04/22 15:43:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.6-r1.ebuild,v 1.1 2011/05/08 16:01:09 polynomial-c Exp $
 
 EAPI=2
 
@@ -291,10 +291,16 @@ src_install() {
 	# set an env-variable for 3rd party tools
 	echo -n "VBOX_APP_HOME=/opt/VirtualBox" > "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
+
+	insinto /lib/udev/rules.d
+	doins "${FILESDIR}"/10-virtualbox.rules
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	udevadm control --reload-rules && udevadm trigger --subsystem-match=usb
+
 	elog ""
 	if ! use headless ; then
 		elog "To launch VirtualBox just type: \"VirtualBox\""

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6.ebuild,v 1.2 2011/04/22 16:09:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6-r1.ebuild,v 1.1 2011/05/08 16:00:55 polynomial-c Exp $
 
 EAPI=4
 
@@ -305,6 +305,12 @@ src_install() {
 	done
 	popd &>/dev/null || die
 
+	# New way of handling USB device nodes for VBox (bug #356215)
+	exeinto /lib/udev
+	doexe VBoxCreateUSBNode.sh
+	insinto /lib/udev/rules.d
+	doins "${FILESDIR}"/10-virtualbox.rules
+
 	insinto /usr/share/${PN}
 	if ! use headless && use qt4 ; then
 		doins -r nls
@@ -321,13 +327,15 @@ src_install() {
 		java-pkg_regjar "${D}/usr/$(get_libdir)/${PN}/sdk/bindings/xpcom/java/vboxjxpcom.jar"
 		java-pkg_regso "${D}/usr/$(get_libdir)/${PN}/libvboxjxpcom.so"
 	fi
-
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	udevadm control --reload-rules && udevadm trigger --subsystem-match=usb
+
 	if ! use headless && use qt4 ; then
-		elog "To launch VirtualBox just type: \"VirtualBox\""
+		elog "To launch VirtualBox just type: \"VirtualBox\"."
 	fi
 	elog "You must be in the vboxusers group to use VirtualBox."
 	elog ""

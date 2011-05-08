@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.105 2011/04/22 15:43:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.106 2011/05/08 16:01:09 polynomial-c Exp $
+
+*virtualbox-bin-4.0.6-r1 (08 May 2011)
+
+  08 May 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +files/10-virtualbox.rules, -virtualbox-bin-4.0.6.ebuild,
+  +virtualbox-bin-4.0.6-r1.ebuild:
+  Handle USB devices through new udev rules as intended by upstream (bug
+  #356215).
 
 *virtualbox-bin-4.0.6 (22 Apr 2011)
 
