@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.3.ebuild,v 1.3 2011/02/12 14:48:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.6.1.ebuild,v 1.1 2011/05/08 11:18:39 idl0r Exp $
 
 EAPI="3"
 
@@ -10,7 +10,8 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit eutils python
 
-MY_P=${P/-/_}
+MY_P="${PN}_${PV/_/-}"
+MY_PN="Nagstamon"
 
 DESCRIPTION="Nagstamon is a Nagios status monitor for a systray and displays a realtime status of a Nagios box"
 HOMEPAGE="http://nagstamon.sourceforge.net"
@@ -29,9 +30,9 @@ RDEPEND="dev-python/pygtk
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.9.0-sharedir.patch"
+	epatch "${FILESDIR}/nagstamon-0.9.5-resources.patch"
 
-	python_convert_shebangs 2 Nagstamon/nagstamon
+	python_convert_shebangs 2 nagstamon.py
 }
 
 src_install() {
@@ -42,15 +43,14 @@ src_install() {
 	rm resources/{LICENSE,nagstamon.1}
 
 	nagstamon_install() {
-		exeinto $(python_get_sitedir)/${PN}
-		doexe nagstamon || die
-		dosym $(python_get_sitedir)/${PN}/${PN} /usr/bin/${PN} || die
+		exeinto $(python_get_sitedir)/${MY_PN}
+		doexe ../nagstamon.py || die
+		dosym $(python_get_sitedir)/${MY_PN}/${PN}.py /usr/bin/${PN} || die
 
-		insinto $(python_get_sitedir)/${PN}
-		doins nagstamonActions.py || die
-		doins nagstamonConfig.py || die
-		doins nagstamonGUI.py || die
-		doins nagstamonObjects.py || die
+		insinto $(python_get_sitedir)/${MY_PN}
+		doins {GUI,Config,Objects,Custom,Actions}.py || die
+		touch "${D}/$(python_get_sitedir)/${MY_PN}/__init__.py" || die
+		doins -r Server/ || die
 
 		insinto /usr/share/${PN}/resources
 		doins resources/* || die
@@ -63,9 +63,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${PN}
+	python_mod_optimize ${MY_PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup ${PN}
+	python_mod_cleanup ${MY_PN}
 }
