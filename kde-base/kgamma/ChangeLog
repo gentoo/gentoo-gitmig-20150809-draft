@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.167 2011/05/07 10:47:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.168 2011/05/08 11:24:14 scarabeus Exp $
+
+  08 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> kgamma-4.6.3.ebuild:
+  Fix unpacking with handbook useflag.
 
 *kgamma-4.6.3 (07 May 2011)
 
