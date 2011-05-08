@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/kwallet-4.6.3.ebuild,v 1.1 2011/05/07 10:47:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/kwallet-4.6.3.ebuild,v 1.2 2011/05/08 17:51:02 armin76 Exp $
 
 EAPI=4
 
@@ -9,5 +9,5 @@ KMNAME="kdeutils"
 inherit kde4-meta
 
 DESCRIPTION="KDE Wallet Management Tool"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
