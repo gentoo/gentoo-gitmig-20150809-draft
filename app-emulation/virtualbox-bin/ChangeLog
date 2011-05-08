@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.106 2011/05/08 16:01:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.107 2011/05/08 17:29:10 polynomial-c Exp $
+
+  08 May 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-bin-4.0.6-r1.ebuild:
+  Fix permissions on VBoxCreateUSBNode.sh. Thanks to Mao PU for reporting this
+  in bug #356217.
 
 *virtualbox-bin-4.0.6-r1 (08 May 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.6-r1.ebuild,v 1.1 2011/05/08 16:01:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.6-r1.ebuild,v 1.2 2011/05/08 17:29:10 polynomial-c Exp $
 
 EAPI=2
 
@@ -294,6 +294,7 @@ src_install() {
 
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
+	fperms 0750 /opt/VirtualBox/VBoxCreateUSBNode.sh
 }
 
 pkg_postinst() {
