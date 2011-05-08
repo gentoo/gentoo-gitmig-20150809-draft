@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.752 2011/05/07 10:47:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.753 2011/05/08 20:53:38 dilfridge Exp $
+
+  08 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> kdelibs-4.6.3.ebuild:
+  Only block glib-networking[libproxy] for a try
 
 *kdelibs-4.6.3 (07 May 2011)
 
