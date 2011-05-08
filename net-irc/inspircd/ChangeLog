@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.34 2011/05/03 11:45:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.35 2011/05/08 19:08:56 c1pher Exp $
+
+  08 May 2011; Dane Smith <c1pher@gentoo.org> inspircd-2.0.3.ebuild:
+  Apply patch from Chema wrt bug 366233. Fix typo. No revbump.
 
   03 May 2011; Markos Chandras <hwoarang@gentoo.org> inspircd-2.0.3.ebuild:
   Stable on amd64 wrt bug #364905

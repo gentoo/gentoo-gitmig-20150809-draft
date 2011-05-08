@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.3.ebuild,v 1.3 2011/05/03 11:45:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.3.ebuild,v 1.4 2011/05/08 19:08:56 c1pher Exp $
 
 EAPI=2
 inherit eutils multilib flag-o-matic
@@ -61,9 +61,9 @@ src_configure() {
 	# allow inspircd to be built by root
 	touch .force-root-ok || die
 
-	[ ${extras} ] && ./configure --disable-interactive \
+	[ ${extras} ] && ( ./configure --disable-interactive \
 	                             --enable-extras=${extras} \
-	              || die "configure failed"
+	              || die "configure failed" )
 
 	./configure \
 		$(use_enable openssl) \
@@ -108,7 +108,7 @@ src_install() {
 pkg_postinst() {
 	elog "Before starting inspircd the first time you should create"
 	elog "the /etc/inspircd/inspircd.conf file."
-	elog "You can find an expample configuration files under /etc/inspircd."
+	elog "You can find example configuration files under /etc/inspircd."
 	elog "Read the inspircd.conf.example file carefully before starting "
 	elog "the service."
 	elog
