@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.823 2011/05/06 04:21:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.824 2011/05/08 22:25:23 zmedico Exp $
+
+*portage-2.2.0_alpha32 (08 May 2011)
+
+  08 May 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha32.ebuild:
+  2.2.0_alpha32 version bump. This fixes bug #366061 (preserved-libs not
+  garbage collected when appropriate), and includes all of the fixes in
+  portage-2.1.9.48. This also includes support for FEATURES=parallel-install,
+  which can greatly improve performance when installing large numbers of
+  binary packages. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.48 (08 May 2011)
+
+  08 May 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.48.ebuild:
+  2.1.9.48 version bump. This fixes a regression in 2.1.9.47 which causes
+  "AttributeError: 'vardbapi' object has no attribute 'match_pkgs'" errors
+  with emerge --resume and --keep-going. Bug #358927 tracks all bugs fixed
+  since portage-2.1.9.42.
 
   06 May 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Migrate to git-2.eclass.
