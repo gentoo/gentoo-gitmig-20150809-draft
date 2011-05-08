@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.90.ebuild,v 1.5 2011/05/08 16:21:45 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.1.ebuild,v 1.1 2011/05/08 16:21:45 jmbsvicetto Exp $
 
 EAPI="3"
 
 # Translations are only in the tarballs, not the git repo
 if [[ ${PV} != *9999* ]]; then
-	KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr it ja km nb nds nl
+	KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr hu it ja km nb nds nl
 	pa pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
-	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
+	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 else
 	KDE_SCM="git"
@@ -80,7 +80,6 @@ RDEPEND="${COMMONDEPEND}
 # https://projects.kde.org/projects/extragear/multimedia/amarok/repository/revisions/37eda947bd8181a73ad0fffc88e66c25ddd69f28
 PATCHES=(
 	"${FILESDIR}/${PN}-fix-upnp-dep.patch"
-	"${FILESDIR}/${P}-fix-plugin-detection.patch"
 )
 
 src_prepare() {
