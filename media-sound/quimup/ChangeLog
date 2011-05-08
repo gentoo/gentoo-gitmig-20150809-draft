@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quimup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/ChangeLog,v 1.8 2011/05/03 09:57:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/ChangeLog,v 1.9 2011/05/08 11:23:00 angelos Exp $
+
+  08 May 2011; Christoph Mende <angelos@gentoo.org> quimup-1.2.0.ebuild:
+  Use newicon instead of newins
 
   03 May 2011; Thomas Kahle <tomka@gentoo.org> quimup-1.2.0.ebuild:
   x86 stable per bug 359479
