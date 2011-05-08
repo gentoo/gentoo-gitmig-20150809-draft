@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.1.901.ebuild,v 1.1 2011/05/07 15:08:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.1.901.ebuild,v 1.2 2011/05/08 11:52:53 scarabeus Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	>=x11-libs/libXdmcp-1.0.2
 	>=x11-libs/libXfont-1.4.2
 	>=x11-libs/libxkbfile-1.0.4
-	>=x11-libs/pixman-0.15.20
+	>=x11-libs/pixman-0.21.8
 	>=x11-libs/xtrans-1.2.2
 	>=x11-misc/xbitmaps-1.0.1
 	>=x11-misc/xkeyboard-config-1.4
@@ -101,7 +101,13 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
-	)
+)
+
+pkg_pretend() {
+	# older gcc is not supported
+	[[ $(gcc-major-version) -lt 4 ]] && \
+		die "Sorry, but gcc earlier than 4.0 wont work for xorg-server."
+}
 
 pkg_setup() {
 	xorg-2_pkg_setup
@@ -112,7 +118,7 @@ pkg_setup() {
 	#	--enable-install-setuid needed because sparcs default off
 	# NOTE: fop is used for doc generating ; and i have no idea if gentoo
 	#	package it somewhere
-	CONFIGURE_OPTIONS="
+	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable ipv6)
 		$(use_enable dmx)
 		$(use_enable kdrive)
@@ -143,11 +149,10 @@ pkg_setup() {
 		--without-dtrace
 		--without-fop
 		--with-os-vendor=Gentoo
-	"
+	)
 
 	# Xorg-server requires includes from OS mesa which are not visible for
 	# users of binary drivers.
-	# Due to the limitations of CONFIGURE_OPTIONS, we have to export this
 	mkdir -p "${T}/mesa-symlinks/GL"
 	for i in gl glx glxmd glxproto glxtokens; do
 		ln -s "${EROOT}usr/$(get_libdir)/opengl/xorg-x11/include/$i.h" "${T}/mesa-symlinks/GL/$i.h" || die
@@ -156,25 +161,6 @@ pkg_setup() {
 		ln -s "${EROOT}usr/$(get_libdir)/opengl/global/include/$i.h" "${T}/mesa-symlinks/GL/$i.h" || die
 	done
 	append-cppflags "-I${T}/mesa-symlinks"
-
-	# Incompatible with GCC 3.x SSP on x86, bug #244352
-	if use x86 ; then
-		if [[ $(gcc-major-version) -lt 4 ]]; then
-			filter-flags -fstack-protector
-		fi
-	fi
-
-	# Incompatible with GCC 3.x CPP, bug #314615
-	if [[ $(gcc-major-version) -lt 4 ]]; then
-		ewarn "GCC 3.x C preprocessor may cause build failures. Use GCC 4.x"
-		ewarn "or set CPP=cpp-4.3.4 (replace with the actual installed version)"
-	fi
-
-	# detect if we should inform user about ebuild breakage
-	if ! has_version "x11-base/xorg-server" ||
-			has_version "<x11-base/xorg-server-$(get_version_component_range 1-2)"; then
-		INFO="yes"
-	fi
 }
 
 src_install() {
@@ -202,7 +188,7 @@ pkg_postinst() {
 	# sets up libGL and DRI2 symlinks if needed (ie, on a fresh install)
 	eselect opengl set xorg-x11 --use-old
 
-	if [[ ${INFO} = yes ]]; then
+	if [[ ${PV} != 9999 && $(get_version_component_range 2 ${REPLACING_VERSIONS}) != $(get_version_component_range 2 ${PV}) ]]; then
 		elog "You should consider reading upgrade guide for this release:"
 		elog "	http://www.gentoo.org/proj/en/desktop/x/x11/xorg-server-$(get_version_component_range 1-2)-upgrade-guide.xml"
 		echo
@@ -214,15 +200,15 @@ pkg_postinst() {
 		ewarn "You can generate a list of all installed packages in the x11-drivers"
 		ewarn "category using this command:"
 		ewarn "	emerge portage-utils; qlist -I -C x11-drivers/"
+		ewarn "or using sets from portage-2.2:"
+		ewarn "	emerge @x11-module-rebuild"
 	fi
 }
 
 pkg_postrm() {
 	# Get rid of module dir to ensure opengl-update works properly
-	if ! has_version x11-base/xorg-server; then
-		if [[ -e ${ROOT}/usr/$(get_libdir)/xorg/modules ]]; then
-			rm -rf "${ROOT}"/usr/$(get_libdir)/xorg/modules
-		fi
+	if [[ -z ${REPLACED_BY_VERSION} && -e ${ROOT}/usr/$(get_libdir)/xorg/modules ]]; then
+		rm -rf "${ROOT}"/usr/$(get_libdir)/xorg/modules
 	fi
 }
 

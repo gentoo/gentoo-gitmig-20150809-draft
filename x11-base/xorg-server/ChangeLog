@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.583 2011/05/07 15:08:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.584 2011/05/08 11:52:53 scarabeus Exp $
+
+  08 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  xorg-server-1.10.1.901.ebuild:
+  Rather base of live ebuild for this snapshot so it does not throw qa warning
+  anymore.
 
 *xorg-server-1.10.1.901 (07 May 2011)
 
