@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.2.2.ebuild,v 1.2 2011/04/12 22:18:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.2.2.ebuild,v 1.3 2011/05/08 21:15:59 dilfridge Exp $
 
 EAPI=4
 
@@ -26,6 +26,9 @@ RDEPEND="${DEPEND}
 	cxx? ( >=sys-devel/gdb-7.0[python] )
 "
 # see bug 347547 about the kdevplatform[subversion] dependency
+
+RESTRICT="test"
+# see bug 366471
 
 src_prepare() {
 	kde4-base_src_prepare
