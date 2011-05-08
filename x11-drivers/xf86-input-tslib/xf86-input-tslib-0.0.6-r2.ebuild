@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r2.ebuild,v 1.10 2011/03/27 17:09:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.6-r2.ebuild,v 1.11 2011/05/08 12:33:38 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
-# Based on xf86-input-synaptics ebuild
-inherit toolchain-funcs eutils linux-info x-modular
+inherit xorg-2
 
 PATCHLEVEL=3
 DEBSOURCES="${PN}_${PV}-${PATCHLEVEL}.tar.gz"
@@ -15,24 +14,17 @@ HOMEPAGE="http://www.pengutronix.de/software/xf86-input-tslib/index_en.html"
 SRC_URI="ftp://cdn.debian.net/debian/pool/main/x/${PN}/${DEBSOURCES}"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE=""
 
-RDEPEND="x11-base/xorg-server
-	x11-libs/tslib"
+RDEPEND="x11-libs/tslib"
 DEPEND="${RDEPEND}
-	x11-proto/inputproto"
+	x11-proto/randrproto"
 
 S=${WORKDIR}/${PN}-trunk
 
-# Remove stupid evdev checks.
-# Never die simply cuz kernel sources do not exist.
+DOCS=( COPYING ChangeLog )
 
-src_install() {
-	DOCS="COPYING ChangeLog"
-	x-modular_src_install
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/fix-overlapped-variable.patch
-}
+PATCHES=(
+	"${FILESDIR}"/fix-overlapped-variable.patch
+)
