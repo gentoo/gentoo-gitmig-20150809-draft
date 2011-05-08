@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.79 2011/04/22 15:42:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.80 2011/05/08 16:00:22 polynomial-c Exp $
+
+*virtualbox-modules-4.0.6-r1 (08 May 2011)
+
+  08 May 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-modules-4.0.6.ebuild, +virtualbox-modules-4.0.6-r1.ebuild:
+  Moved installation of udev rules to virtualbox{,-bin} (bug #356215).
 
 *virtualbox-modules-4.0.6 (22 Apr 2011)
 
