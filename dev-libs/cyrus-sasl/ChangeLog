@@ -1,6 +1,22 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.217 2011/05/08 16:44:56 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.218 2011/05/08 19:38:13 eras Exp $
+
+*cyrus-sasl-2.1.23-r3 (08 May 2011)
+
+  08 May 2011; Eray Aslan <eras@gentoo.org>
+  +files/cyrus-sasl-0001_versioned_symbols.patch, +cyrus-sasl-2.1.23-r3.ebuild,
+  +files/cyrus-sasl-0002_testsuite.patch,
+  +files/cyrus-sasl-0006_library_mutexes.patch,
+  +files/cyrus-sasl-0008_one_time_sasl_set_alloc.patch,
+  +files/cyrus-sasl-0010_maintainer_mode.patch,
+  +files/cyrus-sasl-0011_saslauthd_ac_prog_libtool.patch,
+  +files/cyrus-sasl-0012_xopen_crypt_prototype.patch,
+  +files/cyrus-sasl-0014_avoid_pic_overwrite.patch,
+  +files/cyrus-sasl-0016_pid_file_lock_creation_mask.patch,
+  +files/cyrus-sasl-0026_drop_krb5support_dependency.patch:
+  Drop sqlite USE flag bug #245072. Drop pg_config from configure script bug
+  #296391. Cherry pick and add debian patches. EAPI bump.
 
   08 May 2011; Eray Aslan <eras@gentoo.org> -cyrus-sasl-2.1.22-r2.ebuild,
   -cyrus-sasl-2.1.23.ebuild:
