@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.8.ebuild,v 1.1 2011/04/30 19:14:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.8.ebuild,v 1.2 2011/05/08 21:19:33 dilfridge Exp $
 
 EAPI=3
 
@@ -21,6 +21,9 @@ RDEPEND="sci-libs/hdf5[mpi,threads]
 	python? ( dev-python/numpy )"
 DEPEND="${DEPEND}
 	test? ( dev-util/gtest )"
+
+RESTRICT=test
+# bug 366477
 
 S=${WORKDIR}/${P}-src
 

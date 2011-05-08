@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.1 2011/04/30 19:14:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.2 2011/05/08 21:19:33 dilfridge Exp $
+
+  08 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> flann-1.6.8.ebuild:
+  Restrict tests for the moment, bug 366477
 
 *flann-1.6.8 (30 Apr 2011)
 
