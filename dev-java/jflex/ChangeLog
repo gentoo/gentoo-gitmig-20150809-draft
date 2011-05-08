@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jflex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.4 2009/01/31 14:27:08 serkan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.5 2011/05/08 14:50:23 elvanor Exp $
+
+*jflex-1.4.3 (08 May 2011)
+
+  08 May 2011; <elvanor@gentoo.org> +jflex-1.4.3.ebuild:
+  Version bump to 1.4.3.
 
 *jflex-1.4.1-r1 (31 Jan 2009)
 
