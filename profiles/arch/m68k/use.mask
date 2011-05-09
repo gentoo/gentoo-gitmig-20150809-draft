@@ -67,9 +67,6 @@ latex
 # Robin H. Johnson <robbat2@gentoo.org>
 audit
 
-# Masking this for vim since we don't have a stable libXt and libSM
-vim-with-x
-
 # Masking since dev-db/sqlite is masked
 sqlite
 

@@ -70,7 +70,6 @@ raw
 X
 opengl
 xpm
-vim-with-x
 video_cards_sis
 
 # I need to have some of the bad tcltk uses fixed, until then...
