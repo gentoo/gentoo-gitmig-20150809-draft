@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1.ebuild,v 1.4 2011/05/04 21:15:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1.ebuild,v 1.5 2011/05/09 04:56:42 maekke Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ if [[ ${PV} == "9999" ]] ; then
 	#KEYWORDS=""
 else
 	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+	KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 fi
 
 LICENSE="GPL-2"

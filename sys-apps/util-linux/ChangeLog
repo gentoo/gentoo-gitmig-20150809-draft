@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.339 2011/05/04 21:15:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.340 2011/05/09 04:56:42 maekke Exp $
+
+  09 May 2011; Markus Meier <maekke@gentoo.org> util-linux-2.19.1.ebuild:
+  arm stable, bug #359759
 
   04 May 2011; Thomas Kahle <tomka@gentoo.org> util-linux-2.19.1.ebuild:
   x86 stable per bug 359759
