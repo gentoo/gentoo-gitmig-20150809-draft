@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.239 2011/05/07 18:23:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.240 2011/05/09 08:35:35 phajdan.jr Exp $
+
+  09 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mldonkey-3.0.6.ebuild:
+  x86 stable wrt bug #366375
 
 *mldonkey-3.0.7 (07 May 2011)
 
