@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/fast_gettext
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/ChangeLog,v 1.1 2011/05/09 06:30:52 graaff Exp $
+
+*fast_gettext-0.5.11 (09 May 2011)
+
+  09 May 2011; Hans de Graaff <graaff@gentoo.org> +fast_gettext-0.5.11.ebuild,
+  +metadata.xml:
+  Initial import. New dependency of ruby-activeldap.
+
