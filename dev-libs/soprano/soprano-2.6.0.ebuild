@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.6.0.ebuild,v 1.2 2011/05/09 08:17:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.6.0.ebuild,v 1.3 2011/05/09 17:48:29 jlec Exp $
 
 EAPI=3
 
 inherit cmake-utils flag-o-matic
 
 DESCRIPTION="Library that provides a nice Qt interface to RDF storage solutions"
-HOMEPAGE="http://sourceforge.net/projects/soprano"
+HOMEPAGE="http://soprano.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"

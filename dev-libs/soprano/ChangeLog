@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.68 2011/05/09 08:17:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.69 2011/05/09 17:48:29 jlec Exp $
+
+  09 May 2011; Justin Lecher <jlec@gentoo.org> soprano-2.4.4.ebuild,
+  soprano-2.5.3.ebuild, soprano-2.6.0.ebuild:
+  Corrected HOMEPAGE from sourceforge project page to upstreams homepage
 
   09 May 2011; Thomas Kahle <tomka@gentoo.org> soprano-2.6.0.ebuild:
   x86 stable per bug 354033
