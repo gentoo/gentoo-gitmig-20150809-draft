@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.14 2008/10/23 02:33:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.15 2011/05/09 21:55:41 xmw Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="A tool for dynamically adjusting the nice-level of processes"
-HOMEPAGE="http://ahab.cnde.iastate.edu/~sdh4/verynice/"
+HOMEPAGE="http://thermal.cnde.iastate.edu/~sdh4/verynice/"
 SRC_URI="http://thermal.cnde.iastate.edu/~sdh4/verynice/down/${P}.tar.gz"
 
 LICENSE="GPL-2"
