@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.459 2011/04/29 17:31:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.460 2011/05/09 19:43:53 ulm Exp $
 
 # Keep them sorted
 
@@ -282,6 +282,7 @@ portaudio - Adds support for the crossplatform portaudio audio API
 posix - Adds support for POSIX-compatible functions
 postgres - Adds support for the postgresql database
 ppds - Adds support for automatically generated ppd (printing driver) files
+prefix - Defines if a Gentoo Prefix offset installation is used
 prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds support for software performance analysis (will likely vary from ebuild to ebuild)
 pulseaudio - Adds support for PulseAudio sound server
