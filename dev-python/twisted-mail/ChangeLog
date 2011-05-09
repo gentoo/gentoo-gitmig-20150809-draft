@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.59 2011/04/04 20:47:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.60 2011/05/09 09:50:00 hwoarang Exp $
+
+  09 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  twisted-mail-11.0.0.ebuild:
+  Stable on amd64 wrt bug #366131
 
 *twisted-mail-11.0.0 (04 Apr 2011)
 
