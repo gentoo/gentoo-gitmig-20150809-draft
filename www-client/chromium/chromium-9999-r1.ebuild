@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.24 2011/05/09 06:57:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.25 2011/05/09 16:43:38 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -64,8 +64,8 @@ src_unpack() {
 	subversion_src_unpack
 	mv "${S}" "${WORKDIR}"/depot_tools || die
 
-	mkdir -p ${ESVN_STORE_DIR}/${PN} || die
-	cd ${ESVN_STORE_DIR}/${PN} || die
+	mkdir -p "${ESVN_STORE_DIR}/${PN}" || die
+	cd "${ESVN_STORE_DIR}/${PN}" || die
 
 	einfo "gclient config -->"
 	cp -f "${FILESDIR}/dot-gclient" .gclient || die
