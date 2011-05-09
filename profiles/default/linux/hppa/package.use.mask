@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/package.use.mask,v 1.9 2010/07/25 19:07:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/package.use.mask,v 1.10 2011/05/09 14:20:58 ssuominen Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -29,9 +29,5 @@ x11-libs/qt-xmlpatterns pch
 # Jeroen Roovers <jer@gentoo.org> (15 Jul 2008)
 # media-libs/openinventor isn't ported to HPPA.
 sci-physics/geant openinventor
-
-# Jeroen Roovers <jer@gentoo.org> (17 Jun 2008)
-# loudmouth doesn't work properly (bugs #215125 and #225395).
-app-office/abiword-plugins jabber
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
