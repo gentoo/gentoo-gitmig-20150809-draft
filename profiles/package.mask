@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12757 2011/05/09 13:58:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12758 2011/05/09 14:23:03 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -649,15 +649,6 @@ app-crypt/hmaccalc
 # Peter Volkov <pva@gentoo.org> (09 May 2010)
 # Fails to build/work, bug #319085
 net-analyzer/ipac-ng
-
-# Stanislav Ochotnicky <sochotnicky@gentoo.org> (05 May 2010)
-# Masked for testing.
-=app-arch/rpm-4.8.0
-
-# Tony Vroon <chainsaw@gentoo.org> (02 May 2010)
-# Fails to build, 1.6.1/1.6.2 patched to provide equivalent functionality.
-# Removal at end of May.
-net-misc/asterisk-app_nv_faxdetect
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Apr 2010)
 # Replaced by >sci-libs/netcdf-4.0
