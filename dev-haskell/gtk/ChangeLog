@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/gtk
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.1 2011/05/09 19:37:00 slyfox Exp $
+
+*gtk-0.12.0 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> +gtk-0.12.0.ebuild,
+  +metadata.xml:
+  Initial version. Haskell bindings for gtk+.
+
