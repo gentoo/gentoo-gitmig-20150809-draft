@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.236 2011/05/02 15:55:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.237 2011/05/09 14:13:26 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -192,7 +192,6 @@ media-gfx/k3d cuda
 # Broken on so many setups it is just insane.
 # 0.7 is API/ABI incompatible but is the way to go.
 # Masking to lower maintainance headache, bug #291501.
-<gnome-base/nautilus-2.28 tracker
 media-video/totem tracker
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Oct 2009)
