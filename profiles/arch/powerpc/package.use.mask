@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.79 2011/04/24 03:11:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.80 2011/05/09 14:29:34 ssuominen Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (16 Jan 2011)
 # bug 350513, app-pda/jpilot is not keyworded
@@ -98,10 +98,6 @@ net-im/pidgin zephyr
 # Joseph Jezak <josejx@gentoo.org> (27 Feb 2009)
 # Marked ~ppc, but masking current versions because of stable keyword
 <=media-plugins/gst-plugins-meta-0.10-r2 dvb mythtv
-
-# nixnut <nixnut@gentoo.org> (11 mar 2008)
-# USE=musepack wants musepack-tools which can't be build on ppc
-media-sound/squeezecenter musepack
 
 # Mark Loeser <halcy0n@gentoo.org> (18 Jan 2008)
 # mono doesn't work with Openoffice - bug #202361
