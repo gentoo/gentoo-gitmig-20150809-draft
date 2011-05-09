@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.167 2011/02/18 17:02:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.168 2011/05/09 20:54:03 arfrever Exp $
+
+*apr-1.4.4 (09 May 2011)
+
+  09 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +apr-1.4.4.ebuild:
+  Version bump.
 
 *apr-1.4.2-r1 (18 Feb 2011)
 
