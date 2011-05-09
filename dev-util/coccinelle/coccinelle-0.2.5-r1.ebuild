@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.5.ebuild,v 1.1 2011/05/08 21:09:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.5-r1.ebuild,v 1.1 2011/05/09 21:14:09 slyfox Exp $
 
 EAPI="2"
 
@@ -13,13 +13,18 @@ SRC_URI="http://coccinelle.lip6.fr/distrib/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +ocamlopt python"
+IUSE="doc +ocamlopt python ocaml"
 
+# ocaml enables ocaml scripting (uses findlib)
 RDEPEND="python? ( dev-lang/python )
-	>=dev-lang/ocaml-3.10[ocamlopt?]"
+	>=dev-lang/ocaml-3.10[ocamlopt?]
+	ocaml? ( dev-ml/findlib )"
+
+# dev-texlive/texlive-fontsextra contains 'ifsym.sty'
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra app-text/ptex ) )"
+		|| ( dev-texlive/texlive-latexextra app-text/ptex )
+		dev-texlive/texlive-fontsextra )"
 
 src_configure() {
 	# non-autoconf
@@ -27,6 +32,7 @@ src_configure() {
 		--prefix=/usr \
 		$(use ocamlopt || echo "--no-opt") \
 		$(use_with python) \
+		$(use_with ocaml) \
 		|| die
 	sed -i "s:^LIBDIR=.*:LIBDIR=/usr/$(get_libdir)/ocaml/stublibs/:" Makefile.config
 	sed -i "s:^SHAREDIR=.*:SHAREDIR=/usr/libexec/${PN}/:" Makefile.config

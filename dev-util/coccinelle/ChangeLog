@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.6 2011/05/08 21:09:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.7 2011/05/09 21:14:09 slyfox Exp $
+
+*coccinelle-0.2.5-r1 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> -coccinelle-0.2.5.ebuild,
+  +coccinelle-0.2.5-r1.ebuild:
+  Fixed missing runtime depend on findlib as found out Jakub Zawadzki in bug
+  #366553. Added USE=ocaml for ocaml scripting support.
 
 *coccinelle-0.2.5 (08 May 2011)
 
