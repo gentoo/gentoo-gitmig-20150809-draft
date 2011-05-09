@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.10 2011/04/25 17:46:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.11 2011/05/09 08:20:19 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> phonon-4.5.0.ebuild:
+  x86 stable per bug 354033
 
   25 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org> phonon-9999.ebuild:
   Update live ebuild

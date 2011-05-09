@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon-xine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/ChangeLog,v 1.1 2011/03/28 23:11:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/ChangeLog,v 1.2 2011/05/09 08:21:27 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> phonon-xine-4.4.4.ebuild:
+  x86 stable per bug 354033
 
   28 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +phonon-xine-4.4.4.ebuild, +phonon-xine-9999.ebuild, +metadata.xml:
