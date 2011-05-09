@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.104 2011/04/13 21:03:02 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.105 2011/05/09 06:51:31 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> qt-assistant-4.7.2.ebuild:
+  x86 stable per bug 354033
 
   13 Apr 2011; Alex Alexander <wired@gentoo.org> -qt-assistant-4.7.0.ebuild,
   -qt-assistant-4.7.1.ebuild:
