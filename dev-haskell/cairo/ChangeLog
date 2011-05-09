@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/cairo
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.1 2011/05/09 13:42:27 slyfox Exp $
+
+*cairo-0.12.0 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> +cairo-0.12.0.ebuild,
+  +metadata.xml:
+  Initial version. Haskell bindings for x11-libs/cairo.
+
