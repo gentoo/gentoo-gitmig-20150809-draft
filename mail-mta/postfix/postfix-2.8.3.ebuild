@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.3.ebuild,v 1.1 2011/05/09 04:00:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.3.ebuild,v 1.2 2011/05/09 08:02:18 eras Exp $
 
 EAPI=4
 
@@ -21,12 +21,13 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="cdb doc dovecot-sasl examples hardened ipv6 ldap mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
+IUSE="cdb doc dovecot-sasl examples hardened ipv6 ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	cdb? ( || ( >=dev-db/tinycdb-0.76 >=dev-db/cdb-0.75-r1 ) )
-	ldap? ( >=net-nds/openldap-1.2[sasl?] )
+	ldap? ( net-nds/openldap )
+	ldap-bind? ( net-nds/openldap[sasl] )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
@@ -37,7 +38,6 @@ DEPEND=">=sys-libs/db-3.2
 RDEPEND="${DEPEND}
 	dovecot-sasl? ( net-mail/dovecot )
 	net-mail/mailbase
-	!net-mail/mailwrapper
 	selinux? ( sec-policy/selinux-postfix )
 	!mail-mta/courier
 	!mail-mta/esmtp
@@ -51,6 +51,8 @@ RDEPEND="${DEPEND}
 	!mail-mta/sendmail
 	!<mail-mta/ssmtp-2.64-r2
 	!>=mail-mta/ssmtp-2.64-r2[mta]"
+
+REQUIRED_USE="ldap-bind? ( ldap sasl )"
 
 S="${WORKDIR}/${MY_SRC}"
 
@@ -116,7 +118,7 @@ src_configure() {
 			# Set dovecot as default.
 			mycc="${mycc} -DDEF_SASL_SERVER=\\\"dovecot\\\""
 		fi
-		if use ldap ; then
+		if use ldap-bind ; then
 			mycc="${mycc} -DUSE_LDAP_SASL"
 		fi
 		mycc="${mycc} -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl"
