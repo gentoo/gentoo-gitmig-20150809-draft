@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.218 2011/05/08 21:15:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.219 2011/05/09 08:36:22 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> kdevelop-4.2.2.ebuild:
+  x86 stable per bug 354033
 
   08 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> kdevelop-4.2.2.ebuild:
   Restrict tests for the moment, see bug 366471

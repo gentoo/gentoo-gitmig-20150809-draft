@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.53 2011/04/12 22:22:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.54 2011/05/09 08:36:58 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> kdevplatform-1.2.2.ebuild:
+  x86 stable per bug 354033
 
   12 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kdevplatform-1.2.2.ebuild:
