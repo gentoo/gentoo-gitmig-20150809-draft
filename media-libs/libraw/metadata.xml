@@ -11,4 +11,7 @@
 		<name>Andreas Nüßlein</name>
 		<description>Proxy maintainer. Please CC on bugs.</description>
 	</maintainer>
+	<use>
+		<flag name="demosaic">Enable support for external interpolation algorithms</flag> 
+	</use>
 </pkgmetadata>

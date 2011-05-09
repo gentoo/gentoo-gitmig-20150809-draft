@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libraw
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.3 2010/09/19 20:13:44 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.4 2011/05/09 00:53:40 radhermit Exp $
+
+*libraw-0.13.4 (09 May 2011)
+
+  09 May 2011; Tim Harder <radhermit@gentoo.org> +libraw-0.13.4.ebuild,
+  +files/libraw-0.13.4-docs.patch, +files/libraw-0.13.4-examples.patch,
+  metadata.xml:
+  Version bump (bug #358463). Update to EAPI 4, add support for using external
+  demosaic packs via the related USE flag, bump lcms dependency, don't install
+  unneeded license/copyright files.
 
 *libraw-0.10.0-r1 (19 Sep 2010)
 
