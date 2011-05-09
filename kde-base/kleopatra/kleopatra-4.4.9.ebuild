@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.9.ebuild,v 1.4 2011/03/24 19:32:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.9.ebuild,v 1.5 2011/05/09 21:18:29 dilfridge Exp $
 
 EAPI="3"
 
@@ -10,6 +10,8 @@ inherit kde4-meta
 DESCRIPTION="Kleopatra - KDE X.509 key manager"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
+
+SRC_URI+=" http://dev.gentoo.org/~dilfridge/distfiles/${PN}-4.4.3-assuan2.patch.bz2"
 
 DEPEND="
 	app-crypt/gpgme
@@ -29,7 +31,7 @@ KMEXTRACTONLY="
 KMLOADLIBS="libkleo"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-4.4.3-assuan2.patch"
+	"${DISTDIR}/${PN}-4.4.3-assuan2.patch.bz2"
 )
 
 src_unpack() {
