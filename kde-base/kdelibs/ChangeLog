@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.754 2011/05/09 08:48:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.755 2011/05/09 18:19:11 scarabeus Exp $
+
+*kdelibs-4.6.3-r1 (09 May 2011)
+
+  09 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kdelibs-4.6.3.ebuild,
+  +kdelibs-4.6.3-r1.ebuild, +files/kdelibs-4.6.3-use_QWeakPointer.patch:
+  Apply upstream patch to fix plasma crash when removing icons from systray.
+  Thanks to Ian (thev00d00) for the pointer.
 
   09 May 2011; Thomas Kahle <tomka@gentoo.org> kdelibs-4.6.2-r3.ebuild:
   x86 stable per bug 354033
