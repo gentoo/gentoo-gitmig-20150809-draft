@@ -1,14 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.6 2011/03/31 08:31:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.7 2011/05/09 14:27:48 ssuominen Exp $
 
 # Mike Frysinger <vapier@gentoo.org> (10 Feb 2011)
 # Waiting for keywording #354309
 net-firewall/iptables netlink
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
-# Mask python3 for stable portage until python-3.x is marked stable.
-=sys-apps/portage-2.1.8* python3
 
 # Diego Pettenò <flameeyes@gentoo.org> (10 Nov 2007)
 # Tests for Linux-PAM 0.99 require >=sys-libs/glibc-2.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.49 2011/04/23 11:16:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.50 2011/05/09 14:27:48 ssuominen Exp $
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2011)
 # Needs sci-libs/umfpack keyworded. Bug #361947.
@@ -39,7 +39,6 @@ dev-ruby/nokogiri ffi
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
 =sys-apps/portage-2.1.9* python3
-=sys-apps/portage-2.1.8* python3
 
 # Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
 # custom-optimization doesn't work on ia64
