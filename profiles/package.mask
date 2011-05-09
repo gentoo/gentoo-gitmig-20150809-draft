@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12758 2011/05/09 14:23:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12759 2011/05/09 16:36:36 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -274,11 +274,6 @@ sys-apps/ren
 # Mask v8 versions used for www-client/chromium dev channel releases.
 # Currently v8-3.2 versions are used for chromium-12.x versions.
 >=dev-lang/v8-3.2
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (25 Mar 2011)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-12
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Mar 2011)
 # Some packages fail to build or work with GnuTLS built with Nettle crypto backend.
