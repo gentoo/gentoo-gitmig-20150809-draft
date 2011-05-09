@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.6.2.ebuild,v 1.1 2011/04/06 14:19:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.6.2.ebuild,v 1.2 2011/05/09 08:48:43 tomka Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="http://dev.gentoo.org/~scarabeus/${P}.tar.xz"
 #SRC_URI="mirror://kde/unstable/${PV}/src/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="aqua"
 
 # Block conflicting packages

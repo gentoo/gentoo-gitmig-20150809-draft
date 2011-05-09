@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebindings-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.92 2011/05/07 10:47:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/ChangeLog,v 1.93 2011/05/09 08:48:22 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> kdebindings-meta-4.6.2.ebuild:
+  x86 stable per bug 354033
 
 *kdebindings-meta-4.6.3 (07 May 2011)
 

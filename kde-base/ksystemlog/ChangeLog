@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.69 2011/05/07 10:47:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.70 2011/05/09 08:48:34 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> ksystemlog-4.6.2.ebuild:
+  x86 stable per bug 354033
 
 *ksystemlog-4.6.3 (07 May 2011)
 

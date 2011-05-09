@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.181 2011/05/08 17:26:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.182 2011/05/09 08:48:31 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> ark-4.6.2.ebuild:
+  x86 stable per bug 354033
 
 *ark-4.6.3-r1 (08 May 2011)
 *ark-4.6.2-r1 (08 May 2011)

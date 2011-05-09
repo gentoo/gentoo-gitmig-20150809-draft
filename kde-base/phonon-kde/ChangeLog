@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.79 2011/05/07 10:47:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.80 2011/05/09 08:48:30 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> phonon-kde-4.6.2.ebuild:
+  x86 stable per bug 354033
 
 *phonon-kde-4.6.3 (07 May 2011)
 
