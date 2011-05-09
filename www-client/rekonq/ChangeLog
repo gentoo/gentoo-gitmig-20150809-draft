@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.26 2011/04/26 15:58:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.27 2011/05/09 08:40:52 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> rekonq-0.7.0.ebuild:
+  x86 stable per bug 354033
 
   26 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/rekonq-0.5.0-cve-2010-2536.patch, -rekonq-0.6.1.ebuild,
