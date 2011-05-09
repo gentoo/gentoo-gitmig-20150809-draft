@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.23 2011/05/07 13:45:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.24 2011/05/09 06:57:31 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -12,7 +12,6 @@ DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
 # subversion eclass fetches gclient, which will then fetch chromium itself
 ESVN_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
-EGCLIENT_REPO_URI="http://src.chromium.org/svn/trunk/src/"
 
 LICENSE="BSD"
 SLOT="live"
@@ -63,45 +62,27 @@ RDEPEND+="
 
 src_unpack() {
 	subversion_src_unpack
-	mv "${S}" "${WORKDIR}"/depot_tools
+	mv "${S}" "${WORKDIR}"/depot_tools || die
 
-	# Most subversion checks and configurations were already run
-	EGCLIENT="${WORKDIR}"/depot_tools/gclient
-	cd "${ESVN_STORE_DIR}" || die "gclient: can't chdir to ${ESVN_STORE_DIR}"
+	mkdir -p ${ESVN_STORE_DIR}/${PN} || die
+	cd ${ESVN_STORE_DIR}/${PN} || die
 
-	if [[ ! -d ${PN} ]]; then
-		mkdir -p "${PN}" || die "gclient: can't mkdir ${PN}."
-	fi
-
-	cd "${PN}" || die "gclient: can't chdir to ${PN}"
-
-	if [[ ! -f .gclient ]]; then
-		einfo "gclient config -->"
-		${EGCLIENT} config ${EGCLIENT_REPO_URI} || die "gclient: error creating config"
-	fi
+	einfo "gclient config -->"
+	cp -f "${FILESDIR}/dot-gclient" .gclient || die
+	cat .gclient || die
 
 	einfo "gclient sync start -->"
-	einfo "     repository: ${EGCLIENT_REPO_URI}"
-	${EGCLIENT} sync --nohooks || die
+	"${WORKDIR}/depot_tools/gclient" sync --force --nohooks || die
 	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
 
-	mkdir -p "${S}"
-	# From export_tarball.py
-	CHROMIUM_EXCLUDES="--exclude=src/chrome/test/data
-	--exclude=src/chrome/tools/test/reference_build
-	--exclude=src/chrome_frame --exclude=src/gears/binaries
-	--exclude=src/net/data/cache_tests --exclude=src/o3d/documentation
-	--exclude=src/o3d/samples --exclude=src/third_party/lighttpd
-	--exclude=src/third_party/WebKit/LayoutTests
-	--exclude=src/webkit/data/layout_tests
-	--exclude=src/webkit/tools/test/reference_build"
-	rsync -rlpgo --exclude=".svn/" ${CHROMIUM_EXCLUDES} src/ "${S}" || die "gclient: can't export to ${S}."
+	mkdir -p "${S}" || die
+	rsync -rlpgo --exclude=".svn/" src/ "${S}" || die
 
-	# Display correct svn revision in about box, and log new version
+	# Display correct svn revision in about box, and log new version.
 	CREV=$(subversion__svn_info "src" "Revision")
-	echo ${CREV} > "${S}"/build/LASTCHANGE.in || die "setting revision failed"
+	echo ${CREV} > "${S}"/build/LASTCHANGE.in || die
 	. src/chrome/VERSION
-	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH}_p${CREV} "
+	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH} (Developer Build ${CREV})"
 }
 
 gyp_use() {
@@ -179,6 +160,7 @@ src_prepare() {
 		\! -path 'third_party/launchpad_translations/*' \
 		\! -path 'third_party/leveldb/*' \
 		\! -path 'third_party/libjingle/*' \
+		\! -path 'third_party/libphonenumber/*' \
 		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libvpx/libvpx.h' \
 		\! -path 'third_party/mesa/*' \
