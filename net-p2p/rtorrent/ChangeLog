@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.160 2011/04/18 20:03:52 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.161 2011/05/09 21:34:21 sochotnicky Exp $
+
+*rtorrent-0.8.7-r3 (09 May 2011)
+*rtorrent-0.8.6-r4 (09 May 2011)
+
+  09 May 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  -rtorrent-0.8.6-r3.ebuild, +rtorrent-0.8.6-r4.ebuild,
+  -rtorrent-0.8.7-r2.ebuild, +rtorrent-0.8.7-r3.ebuild, files/rtorrentd.init:
+  Fixed up init script for daemon mode (problems when using baselayout-2)
 
 *rtorrent-0.8.7-r2 (18 Apr 2011)
 
