@@ -1,2 +1,3 @@
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/smtp.sasl,v 1.2 2004/07/18 03:26:56 dragonheart Exp $
-pwcheck_method:pam
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/smtp.sasl,v 1.3 2011/05/09 12:36:20 eras Exp $
+pwcheck_method:saslauthd
+mech_list: PLAIN
