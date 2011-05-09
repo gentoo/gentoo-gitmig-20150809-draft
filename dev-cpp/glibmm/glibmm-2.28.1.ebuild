@@ -1,6 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.22.1.ebuild,v 1.8 2010/05/11 19:47:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.28.1.ebuild,v 1.1 2011/05/09 11:35:47 pacho Exp $
+
+EAPI="4"
+GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -9,19 +13,26 @@ HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="doc examples test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+IUSE="doc debug examples test"
 
-RDEPEND=">=dev-libs/libsigc++-2.2
-	>=dev-libs/glib-2.21.1"
+RDEPEND=">=dev-libs/libsigc++-2.2:2
+	>=dev-libs/glib-2.28:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
-DOCS="AUTHORS ChangeLog NEWS README"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README"
+	G2CONF="${G2CONF}
+		$(use_enable debug debug-refcounting)
+		$(use_enable doc documentation)
+		--disable-schemas-compile
+		--enable-deprecated-api"
+}
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	if ! use test; then
 		# don't waste time building tests
@@ -38,13 +49,9 @@ src_unpack() {
 
 src_test() {
 	cd "${S}/tests/"
-	emake check || die "emake check failed"
+	emake check
 
-	# Workaround bug 295726 until upstream fixes it
-	# for i in */test; do
-	export  \
-	LD_LIBRARY_PATH="${S}/glib/glibmm/.libs:${S}/gio/giomm/.libs:${LD_LIBRARY_PATH}"
-	for i in */.libs/test; do
+	for i in */test; do
 		${i} || die "Running tests failed at ${i}"
 	done
 }
@@ -53,7 +60,7 @@ src_install() {
 	gnome2_src_install
 
 	if ! use doc && ! use examples; then
-		rm -fr "${D}/usr/share/doc/glibmm*"
+		rm -fr "${ED}usr/share/doc/glibmm*"
 	fi
 
 	if use examples; then
