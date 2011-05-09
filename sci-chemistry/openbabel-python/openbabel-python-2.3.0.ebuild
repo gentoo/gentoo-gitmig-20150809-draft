@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.0.ebuild,v 1.4 2011/04/28 19:21:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.0.ebuild,v 1.5 2011/05/09 15:53:32 jlec Exp $
 
 EAPI="3"
 
@@ -40,5 +40,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-swig.patch \
 		"${FILESDIR}"/${P}-system_openbabel.patch
 
-	swig -python -c++ -small -O -templatereduce -naturalvar -I/usr/include/openbabel-2.0 -o scripts/python/openbabel-python.cpp -DHAVE_EIGEN2 -outdir scripts/python scripts/openbabel-python.i || die "Regeneration of openbabel-python.cpp failed"
+	sed \
+		-e "s:/usr:${EPREFIX}/usr:g" \
+		-i ./scripts/python/setup.py || die
+
+	swig -python -c++ -small -O -templatereduce -naturalvar -I"${EPREFIX}/usr/include/openbabel-2.0" -o scripts/python/openbabel-python.cpp -DHAVE_EIGEN2 -outdir scripts/python scripts/openbabel-python.i || die "Regeneration of openbabel-python.cpp failed"
 }
