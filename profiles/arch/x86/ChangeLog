@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.66 2011/04/30 17:18:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.67 2011/05/09 21:20:22 chithanh Exp $
+
+  09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  use.mask:
+  Remove video_cards_nouveau unmask, bug #364027.
 
   30 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -xbox/virtuals:
   Remove old-style virtual/linux-sources, bug 118442.

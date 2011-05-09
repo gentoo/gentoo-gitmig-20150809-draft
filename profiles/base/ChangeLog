@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.268 2011/05/02 15:55:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.269 2011/05/09 21:20:22 chithanh Exp $
+
+  09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask, use.mask:
+  Unmask video_cards_nouveau, bug #364027.
 
   02 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Add telepathy-glib to the introspection list, remove libwnck from glade

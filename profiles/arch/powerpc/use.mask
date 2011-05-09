@@ -147,9 +147,6 @@ video_cards_sis
 video_cards_tga
 video_cards_tseng
 video_cards_vesa
-# 2011/04/23 - Joseph Jezak <josejx@gentoo.org>
-# Allow nouveau on ppc/ppc64
--video_cards_nouveau
 
 
 # Doug Goldstein <cardoe@gentoo.org> (3 Apr 2008)

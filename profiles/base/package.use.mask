@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.237 2011/05/09 14:13:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.238 2011/05/09 21:20:22 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -31,10 +31,6 @@
 >=x11-libs/libwnck-3 -introspection
 net-libs/rest -introspection
 net-libs/libsocialweb -introspection
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (18 Apr 2011)
-# Explicitly allow video_cards_nouveau for libdrm until bug #364027 is fixed.
->=x11-libs/libdrm-2.4.25 -video_cards_nouveau
 
 # Andrey Grozin <grozin@gentoo.org> (29 Mar 2011)
 # dev-lang/swig-2.0.2 with -octave generated .cpp files

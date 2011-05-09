@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.23 2011/05/02 14:12:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.24 2011/05/09 21:20:22 chithanh Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -64,7 +64,6 @@
 -video_cards_via
 -video_cards_virtualbox
 -video_cards_vmware
--video_cards_nouveau
 -video_cards_qxl
 
 # Diego Pettenò <flameeyes@gentoo.org> (4 Jan 2007)

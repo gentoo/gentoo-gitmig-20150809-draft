@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.129 2011/05/02 14:12:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.130 2011/05/09 21:20:22 chithanh Exp $
+
+  09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  use.mask:
+  Remove video_cards_nouveau unmask, bug #364027.
 
   02 May 2011; Markos Chandras <hwoarang@gentoo.org> package.use.mask,
   use.mask:

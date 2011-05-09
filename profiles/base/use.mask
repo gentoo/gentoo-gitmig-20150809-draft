@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.117 2011/05/01 20:10:25 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.118 2011/05/09 21:20:22 chithanh Exp $
 
 # This ABI is in constant change and currently only available for SVN snapshots
 php_targets_php5-4
@@ -118,7 +118,6 @@ video_cards_virtualbox
 video_cards_omapfb
 
 # linux-only drivers
-video_cards_nouveau
 video_cards_qxl
 
 # not needed on non-x86, non-amd64, non-ppc systems
