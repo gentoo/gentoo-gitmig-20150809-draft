@@ -3,13 +3,15 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <use>
-  <flag name='authdaemond'>Enable Courier-IMAP authdaemond's unix socket
+  <flag name='authdaemond'>Adds Courier-IMAP authdaemond's unix socket
     support (<pkg>net-mail/courier-imap</pkg>, <pkg>mail-mta/courier</pkg>)
     </flag>
-  <flag name='ntlm_unsupported_patch'>Add NTLM <pkg>net-fs/samba</pkg>
+  <flag name='ntlm_unsupported_patch'>Adds NTLM <pkg>net-fs/samba</pkg>
     NOT supported patch</flag>
-  <flag name='sample'>Build sample client and server</flag>
-  <flag name='srp'>Enable SRP</flag>
+  <flag name='openldap'>Adds ldap support for saslauthd and enable ldapdb
+  plugin</flag>
+  <flag name='sample'>Adds sample client and server</flag>
+  <flag name='srp'>Enable SRP authentication</flag>
   <flag name='urandom'>Use /dev/urandom instead of /dev/random</flag>
 </use>
 </pkgmetadata>

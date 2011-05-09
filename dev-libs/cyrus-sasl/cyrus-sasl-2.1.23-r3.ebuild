@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r3.ebuild,v 1.1 2011/05/08 19:38:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.23-r3.ebuild,v 1.2 2011/05/09 06:38:47 eras Exp $
 
 EAPI=2
 
@@ -17,13 +17,13 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 LICENSE="as-is"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="authdaemond berkdb crypt gdbm kerberos ldap mysql ntlm_unsupported_patch pam postgres sample srp ssl urandom"
+IUSE="authdaemond berkdb crypt gdbm kerberos openldap mysql ntlm_unsupported_patch pam postgres sample srp ssl urandom"
 
 DEPEND="authdaemond? ( || ( >=net-mail/courier-imap-3.0.7 >=mail-mta/courier-0.46 ) )
 	berkdb? ( >=sys-libs/db-3.2 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	kerberos? ( virtual/krb5 )
-	ldap? ( >=net-nds/openldap-2.0.25 )
+	openldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
 	ntlm_unsupported_patch? ( >=net-fs/samba-3.0.9 )
 	pam? ( virtual/pam )
@@ -138,8 +138,8 @@ src_configure() {
 		--with-dbpath=/etc/sasl2/sasldb2 \
 		$(use_with ssl openssl) \
 		$(use_with pam) \
-		$(use_with ldap) \
-		$(use_enable ldap ldapdb) \
+		$(use_with openldap ldap) \
+		$(use_enable openldap ldapdb) \
 		$(use_enable sample) \
 		$(use_enable kerberos gssapi) \
 		$(use_enable java) \
