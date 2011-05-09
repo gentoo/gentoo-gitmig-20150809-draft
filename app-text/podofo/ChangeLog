@@ -1,6 +1,11 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.20 2011/02/24 17:31:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.21 2011/05/09 08:06:31 zmedico Exp $
+
+*podofo-0.9.1 (09 May 2011)
+
+  09 May 2011; Zac Medico <zmedico@gentoo.org> +podofo-0.9.1.ebuild:
+  0.9.1 version bump.
 
   24 Feb 2011; Zac Medico <zmedico@gentoo.org> podofo-0.8.4.ebuild:
   Bug #356293 - libpng-1.5 compatibility
