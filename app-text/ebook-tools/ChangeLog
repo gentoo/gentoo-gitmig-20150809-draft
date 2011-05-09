@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ebook-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.18 2011/05/09 08:41:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.19 2011/05/09 23:16:24 hwoarang Exp $
+
+  09 May 2011; Markos Chandras <hwoarang@gentoo.org> ebook-tools-0.2.1.ebuild:
+  Stable on amd64 wrt bug #354033
 
   09 May 2011; Thomas Kahle <tomka@gentoo.org> ebook-tools-0.2.1.ebuild:
   x86 stable per bug 354033
