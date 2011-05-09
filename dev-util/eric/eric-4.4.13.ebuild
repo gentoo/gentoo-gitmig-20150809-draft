@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.13.ebuild,v 1.2 2011/05/05 11:08:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.4.13.ebuild,v 1.3 2011/05/09 08:55:16 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,7 @@ SRC_URI="${BASE_URI}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="kde spell"
 
 DEPEND="dev-python/PyQt4[assistant,svg,webkit,X]
