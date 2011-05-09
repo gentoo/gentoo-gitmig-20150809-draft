@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.165 2011/05/05 14:32:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.166 2011/05/09 08:39:43 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> ktorrent-4.1.1.ebuild:
+  x86 stable per bug 354033
 
   05 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> ktorrent-4.1.1.ebuild:
   Use eapi=4
