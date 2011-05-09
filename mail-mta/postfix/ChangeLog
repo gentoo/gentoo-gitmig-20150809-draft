@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.254 2011/05/09 12:36:20 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.255 2011/05/09 20:08:02 eras Exp $
+
+*postfix-2.7.4 (09 May 2011)
+
+  09 May 2011; Eray Aslan <eras@gentoo.org> +postfix-2.7.4.ebuild:
+  Version bump
 
   09 May 2011; Eray Aslan <eras@gentoo.org> files/smtp.sasl:
   use saslauthd by default bug #207661
