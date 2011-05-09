@@ -23,6 +23,6 @@ index a3a2116..44ad27d 100644
      'CC'        => $CC,
      'LD'        => '$(CC)',
      'INC'       => '-I../../include -I'.$cmakesrcdir.'/include',
-+    'DESTDIR'   => @ENV{"ED"},
++    'DESTDIR'   => @ENV{"D"},
      'OBJECT'    => 'openbabel-perl.o'
  );
