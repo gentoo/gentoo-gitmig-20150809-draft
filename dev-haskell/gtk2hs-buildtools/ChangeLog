@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/gtk2hs-buildtools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.1 2011/05/09 11:14:32 slyfox Exp $
+
+*gtk2hs-buildtools-0.12.0 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +gtk2hs-buildtools-0.12.0.ebuild, +metadata.xml:
+  Initial version. A helper to autogenerate haskell bindings for gtk.
+
