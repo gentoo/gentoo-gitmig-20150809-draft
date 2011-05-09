@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2-r2.ebuild,v 1.1 2011/04/27 14:03:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2-r3.ebuild,v 1.1 2011/05/09 16:14:55 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion linux-info
@@ -38,7 +38,7 @@ DEPEND="${COMMON_DEPEND}
 RESTRICT="test" # this would need running dbus and sudo available
 
 pkg_setup() {
-	DOCS="AUTHORS HACKING NEWS README"
+	DOCS=( AUTHORS HACKING NEWS README )
 
 	if use amd64 || use x86; then
 		CONFIG_CHECK="~USB_SUSPEND ~!IDE"
@@ -49,13 +49,12 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-CVE-2010-4661.patch \
-		"${FILESDIR}"/${P}-ntfs-3g.patch
+		"${FILESDIR}"/${P}-missing_comma.patch
 }
 
 src_configure() {
 	econf \
 		--localstatedir="${EPREFIX}"/var \
-		--disable-dependency-tracking \
 		--disable-static \
 		$(use_enable debug verbose-mode) \
 		--enable-man-pages \

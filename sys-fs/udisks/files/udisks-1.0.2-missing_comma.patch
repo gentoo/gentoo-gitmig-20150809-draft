@@ -1,0 +1,24 @@
+From 75b6187f77ca95ce435dd78f2ecb244af55e7faf Mon Sep 17 00:00:00 2001
+From: David Zeuthen <davidz@redhat.com>
+Date: Mon, 09 May 2011 16:03:13 +0000
+Subject: Add missing comma in fs whitelist
+
+https://bugs.freedesktop.org/show_bug.cgi?id=36361
+
+Signed-off-by: David Zeuthen <davidz@redhat.com>
+---
+diff --git a/src/device.c b/src/device.c
+index 22779c7..6a34940 100644
+--- a/src/device.c
++++ b/src/device.c
+@@ -5905,7 +5905,7 @@ static const gchar *well_known_filesystems[] =
+   "msdos",
+   "umsdos",
+   "vfat",
+-  "exfat"
++  "exfat",
+   "ntfs",
+   NULL,
+ };
+--
+cgit v0.8.3-6-g21f6
