@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/polkit-kde-kcmodules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/ChangeLog,v 1.1 2011/01/26 19:46:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/ChangeLog,v 1.2 2011/05/09 08:19:01 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org>
+  polkit-kde-kcmodules-0.98_pre20101127.ebuild:
+  x86 stable per bug 354033
 
 *polkit-kde-kcmodules-0.98_pre20101127 (26 Jan 2011)
 
