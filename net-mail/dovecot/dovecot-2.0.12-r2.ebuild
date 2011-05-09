@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.12-r2.ebuild,v 1.1 2011/04/30 20:48:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.12-r2.ebuild,v 1.2 2011/05/09 08:24:33 eras Exp $
 
 EAPI="3"
 
@@ -23,10 +23,9 @@ SLOT="0"
 LICENSE="LGPL-2.1 MIT"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
-IUSE="berkdb bzip2 caps cydir sdbox doc ipv6 kerberos ldap +maildir managesieve mbox mdbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
+IUSE="bzip2 caps cydir sdbox doc ipv6 kerberos ldap +maildir managesieve mbox mdbox mysql pam postgres sieve sqlite +ssl suid vpopmail zlib"
 
-DEPEND="berkdb? ( sys-libs/db )
-	caps? ( sys-libs/libcap )
+DEPEND="caps? ( sys-libs/libcap )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
