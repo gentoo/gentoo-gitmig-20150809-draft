@@ -1,6 +1,9 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.15 2011/04/25 17:09:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.16 2011/05/09 19:48:37 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> bombono-dvd-1.0.0.ebuild:
+  x86 stable per bug 363003
 
 *bombono-dvd-1.0.2 (25 Apr 2011)
 
