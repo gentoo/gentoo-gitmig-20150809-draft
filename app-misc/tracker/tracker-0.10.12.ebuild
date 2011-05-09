@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.9.ebuild,v 1.2 2011/04/16 18:55:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.12.ebuild,v 1.1 2011/05/09 22:27:13 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils gnome2 linux-info python virtualx
@@ -15,13 +16,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # USE="doc" is managed by eclass.
-IUSE="applet doc eds exif flac gif gnome-keyring gsf gstreamer gtk +introspection iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist qt4 rss strigi test +tiff upnp +vorbis xine +xml xmp"
+IUSE="applet doc eds exif flac flickr gif gnome-keyring gsf gstreamer gtk +introspection iptc +jpeg laptop mp3 nautilus networkmanager pdf playlist qt4 rss strigi test +tiff upnp +vorbis xine +xml xmp"
 
 # Test suite highly disfunctional, loops forever
 # putting aside for now
 RESTRICT="test"
 
-# TODO: rest -> flickr
 # vala is built with debug by default (see VALAFLAGS)
 RDEPEND="
 	>=app-i18n/enca-1.9
@@ -43,6 +43,7 @@ RDEPEND="
 		>=gnome-extra/evolution-data-server-2.32 )
 	exif? ( >=media-libs/libexif-0.6 )
 	flac? ( >=media-libs/flac-1.2.1 )
+	flickr? ( net-libs/rest:0.7 )
 	gif? ( media-libs/giflib )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.26 )
 	gsf? (
@@ -88,7 +89,7 @@ DEPEND="${RDEPEND}
 	applet? ( >=dev-lang/vala-0.12:0.12 )
 	gtk? (
 		app-office/dia
-		>=dev-lang/vala-0.11.4:0.12
+		>=dev-lang/vala-0.12:0.12
 		>=dev-libs/libgee-0.3 )
 	doc? (
 		>=dev-util/gtk-doc-1.8
@@ -148,6 +149,7 @@ pkg_setup() {
 		$(use_enable eds miner-evolution)
 		$(use_enable exif libexif)
 		$(use_enable flac libflac)
+		$(use_enable flickr miner-flickr)
 		$(use_enable gnome-keyring)
 		$(use_enable gsf libgsf)
 		$(use_enable gtk tracker-explorer)
@@ -197,10 +199,4 @@ src_prepare() {
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
 	Xemake check XDG_DATA_HOME="${T}" XDG_CONFIG_HOME="${T}" || die "tests failed"
-}
-
-src_install() {
-	gnome2_src_install
-	# Tracker and none of the plugins it provides needs la files
-	find "${ED}" -name "*.la" -delete || die
 }

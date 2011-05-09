@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.107 2011/04/30 18:44:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.108 2011/05/09 22:27:13 eva Exp $
+
+*tracker-0.10.12 (09 May 2011)
+
+  09 May 2011; Gilles Dartiguelongue <eva@gentoo.org> -tracker-0.10.8.ebuild,
+  -tracker-0.10.9.ebuild, +tracker-0.10.12.ebuild:
+  Version bump. Add backup/restore feature. Add rss miner command line
+  utilities. Clean up old revisions.
 
 *tracker-0.10.11 (30 Apr 2011)
 
