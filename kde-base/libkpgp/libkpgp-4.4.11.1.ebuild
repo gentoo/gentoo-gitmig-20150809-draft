@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/libkpgp-4.4.11.1.ebuild,v 1.2 2011/05/09 08:48:22 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/libkpgp-4.4.11.1.ebuild,v 1.3 2011/05/09 23:09:53 hwoarang Exp $
 
 EAPI=4
 
@@ -9,5 +9,5 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="KDE pgp abstraction library"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"

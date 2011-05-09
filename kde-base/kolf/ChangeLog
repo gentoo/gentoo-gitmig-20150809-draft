@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.168 2011/05/09 08:48:37 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.169 2011/05/09 23:03:51 hwoarang Exp $
+
+  09 May 2011; Markos Chandras <hwoarang@gentoo.org> kolf-4.6.2.ebuild:
+  Stable on amd64 wrt bug #354033
 
   09 May 2011; Thomas Kahle <tomka@gentoo.org> kolf-4.6.2.ebuild:
   x86 stable per bug 354033

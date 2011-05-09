@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klickety
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.105 2011/05/09 08:48:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.106 2011/05/09 22:59:50 hwoarang Exp $
+
+  09 May 2011; Markos Chandras <hwoarang@gentoo.org> klickety-4.6.2.ebuild:
+  Stable on amd64 wrt bug #354033
 
   09 May 2011; Thomas Kahle <tomka@gentoo.org> klickety-4.6.2.ebuild:
   x86 stable per bug 354033

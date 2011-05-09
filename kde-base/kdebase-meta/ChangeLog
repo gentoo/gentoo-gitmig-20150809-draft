@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.186 2011/05/09 08:48:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.187 2011/05/09 22:43:06 hwoarang Exp $
+
+  09 May 2011; Markos Chandras <hwoarang@gentoo.org> kdebase-meta-4.6.2.ebuild:
+  Stable on amd64 wrt bug #354033
 
   09 May 2011; Thomas Kahle <tomka@gentoo.org> kdebase-meta-4.6.2.ebuild:
   x86 stable per bug 354033
