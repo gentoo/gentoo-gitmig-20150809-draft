@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.62 2011/04/11 07:02:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.63 2011/05/09 08:23:51 tomka Exp $
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> gpsd-2.95-r1.ebuild:
+  x86 stable per bug 354033
 
   11 Apr 2011; Michael Weber <xmw@gentoo.org> gpsd-2.95-r1.ebuild:
   Added ~arm (bug 341695)
