@@ -1,6 +1,9 @@
 # ChangeLog for app-text/goldendict
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.4 2011/05/01 18:33:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.5 2011/05/09 14:46:59 phajdan.jr Exp $
+
+  09 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> goldendict-1.0.1.ebuild:
+  x86 stable wrt bug #365343
 
   01 May 2011; Markos Chandras <hwoarang@gentoo.org> goldendict-1.0.1.ebuild:
   Stable on amd64 wrt bug #365343
