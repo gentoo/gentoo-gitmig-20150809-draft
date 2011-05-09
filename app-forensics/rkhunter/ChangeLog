@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/rkhunter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.79 2010/07/09 02:26:38 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.80 2011/05/09 11:47:58 jer Exp $
+
+*rkhunter-1.3.8 (09 May 2011)
+
+  09 May 2011; Jeroen Roovers <jer@gentoo.org> +rkhunter-1.3.8.ebuild:
+  Version bump thanks to Max Nokhrin (bug #346617).
 
   09 Jul 2010; Jeroen Roovers <jer@gentoo.org> rkhunter-1.3.4-r3.ebuild,
   rkhunter-1.3.6.ebuild:
