@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12756 2011/05/09 13:54:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12757 2011/05/09 13:58:25 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -121,10 +121,6 @@ app-text/gnochm
 # Masked for removal in 30 days, bug #328559
 gnustep-libs/camaelon
 x11-themes/camaelon-themes
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (20 Apr 2011)
-# Mask prerelease versions
-=x11-libs/pixman-0.21*
 
 # Peter Volkov <pva@gentoo.org> (20 Apr 2011)
 # Mask beta version
@@ -373,10 +369,6 @@ dev-util/perf
 #    often we have source compatibility, but not binary compatibility
 www-client/chromium-bin
 
-# Markos Chandras <hwoarang@gentoo.org> (03 Mar 2011)
-# Masking zen-kernel snapshot release
-=sys-kernel/zen-sources-2.6.37_p20110303
-
 # Ulrich Mueller <ulm@gentoo.org> (01 Mar 2011)
 # Christian Faulhammer <fauli@gentoo.org>
 # Emacs live ebuilds. Use at your own risk.
@@ -508,18 +500,6 @@ www-apps/horde-groupware
 # Test suite gives one error, previous version did not.
 # Upcoming bump seems too risky for ~arch right now.
 ~app-text/xmlstarlet-1.0.3
-
-# Mike Pagano <mpagano@gentoo.org> (20 Nov 2010)
-# Mask this version of gentoo-sources while we test
-# the effectiveness of the TTY-based group scheduling
-# patch.
-=sys-kernel/gentoo-sources-2.6.36-r2
-
-# Alex Alexander <wired@gentoo.org> (14 Nov 2010)
-# the qt-gui/qgtkstyle split keeps backfiring at me
-# masking the stable bits for now, we'll revisit this later
-=x11-libs/qt-gui-4.6.3-r1
-~x11-themes/qgtkstyle-4.6.3
 
 # Alexis Ballier <aballier@gentoo.org> (13 Nov 2010)
 # Last rites: app-text/ptex
