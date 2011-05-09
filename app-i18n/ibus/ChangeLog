@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.84 2011/04/24 03:06:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.85 2011/05/09 23:51:32 matsuu Exp $
+
+*ibus-1.3.99.20110419-r1 (09 May 2011)
+*ibus-1.3.9-r2 (09 May 2011)
+
+  09 May 2011; MATSUU Takuto <matsuu@gentoo.org> +ibus-1.3.9-r2.ebuild,
+  -ibus-1.3.99.20101118-r1.ebuild, -ibus-1.3.99.20110228.ebuild,
+  +ibus-1.3.99.20110419-r1.ebuild, metadata.xml:
+  gtk3 support, bug #366157. Removed old versions.
 
 *ibus-1.3.99.20110419 (24 Apr 2011)
 

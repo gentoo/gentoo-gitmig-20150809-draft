@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.99.20110228.ebuild,v 1.3 2011/04/16 22:08:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r2.ebuild,v 1.1 2011/05/09 23:51:32 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,16 +13,15 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="doc +gconf gtk introspection nls +python vala X"
+IUSE="doc +gconf gtk gtk3 introspection nls +python vala X"
 
-RDEPEND=">=dev-libs/glib-2.26:2
+RDEPEND=">=dev-libs/glib-2.18:2
 	gconf? ( >=gnome-base/gconf-2.12:2 )
 	gnome-base/librsvg:2
 	sys-apps/dbus
 	app-text/iso-codes
-	gtk? (
-		x11-libs/gtk+:2
-	)
+	gtk? ( x11-libs/gtk+:2 )
+	gtk3? ( x11-libs/gtk+:3 )
 	X? (
 		x11-libs/libX11
 		x11-libs/gtk+:2
@@ -61,9 +60,15 @@ update_gtk_immodules() {
 	fi
 }
 
+update_gtk3_immodules() {
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
+	fi
+}
+
 pkg_setup() {
 	# bug #342903
-	confutils_require_any X gtk
+	confutils_require_any X gtk gtk3
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup
@@ -85,11 +90,11 @@ src_configure() {
 		$(use_enable gconf) \
 		$(use_enable gtk gtk2) \
 		$(use_enable gtk xim) \
+		$(use_enable gtk3) \
 		$(use_enable nls) \
 		$(use_enable python) \
 		$(use_enable vala) \
 		$(use_enable X xim)
-		#$(use_enable gtk gtk3) \
 }
 
 src_install() {
@@ -112,6 +117,7 @@ pkg_preinst() {
 pkg_postinst() {
 	use gconf && gnome2_gconf_install
 	use gtk && update_gtk_immodules
+	use gtk3 && update_gtk3_immodules
 	use python && python_mod_optimize /usr/share/${PN}
 	gnome2_icon_cache_update
 
@@ -135,6 +141,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 	use gtk && update_gtk_immodules
+	use gtk3 && update_gtk3_immodules
 	use python && python_mod_cleanup /usr/share/${PN}
 	gnome2_icon_cache_update
 }
