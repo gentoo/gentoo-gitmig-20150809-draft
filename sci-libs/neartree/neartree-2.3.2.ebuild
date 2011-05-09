@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-2.3.2.ebuild,v 1.1 2011/05/05 16:17:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/neartree/neartree-2.3.2.ebuild,v 1.2 2011/05/09 15:07:22 jlec Exp $
 
 EAPI=4
 
@@ -26,7 +26,8 @@ S="${WORKDIR}"/${MY_P}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/2.1.4-test.patch \
-		"${FILESDIR}"/${PV}-gentoo.patch
+		"${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${PV}-notest.patch
 
 	sed \
 		-e "s:GENTOOLIBDIR:$(get_libdir):g" \
