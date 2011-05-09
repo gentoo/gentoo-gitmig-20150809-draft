@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/b43-firmware-4.174.64.19.ebuild,v 1.1 2010/01/09 21:30:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/b43-firmware-4.174.64.19.ebuild,v 1.2 2011/05/09 14:12:49 nelchael Exp $
 
 : ${B43_FIRMWARE_SRC_OBJ:=wl_apsta.o}
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.openwrt.org/sources/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="b43"
-#KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="nomirror binchecks strip"
 
