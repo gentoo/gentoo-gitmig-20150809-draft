@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maqview/maqview-0.2.5-r1.ebuild,v 1.1 2011/05/06 08:42:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maqview/maqview-0.2.5-r1.ebuild,v 1.2 2011/05/09 14:45:31 phajdan.jr Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/maq/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND="
 	media-libs/freeglut
