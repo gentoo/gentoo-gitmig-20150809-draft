@@ -1,0 +1,76 @@
+diff -ru baselayout-prefix-1.12.14.1707.orig/src/headers.h baselayout-prefix-1.12.14.1707/src/headers.h
+--- baselayout-prefix-1.12.14.1707.orig/src/headers.h	2011-05-02 15:10:43 +0200
++++ baselayout-prefix-1.12.14.1707/src/headers.h	2011-05-02 14:34:30 +0200
+@@ -8,7 +8,9 @@
+  */
+ 
+ /* Common includes */
+-#define HAVE_TIOCNOTTY
++#ifndef OSInterix
++# define HAVE_TIOCNOTTY
++#endif
+ #define HAVE_SETSID
+ 
+ /* OS-specific includes */
+diff -ru baselayout-prefix-1.12.14.1707.orig/src/start-stop-daemon.c baselayout-prefix-1.12.14.1707/src/start-stop-daemon.c
+--- baselayout-prefix-1.12.14.1707.orig/src/start-stop-daemon.c	2011-05-02 15:10:43 +0200
++++ baselayout-prefix-1.12.14.1707/src/start-stop-daemon.c	2011-05-02 15:10:23 +0200
+@@ -60,6 +60,8 @@
+ #  define OSDarwin
+ #elif defined(_AIX)
+ #  define OSaix
++#elif defined(__INTERIX)
++#  define OSInterix
+ #else
+ #  error Unknown architecture - cannot build start-stop-daemon
+ #endif
+@@ -93,7 +95,7 @@
+ #include <sys/pstat.h>
+ #endif
+ 
+-#if defined(OSaix)
++#if defined(OSaix) || defined(OSInterix)
+ #include <sys/procfs.h>
+ #endif
+ #if defined(OSsunos)
+@@ -808,7 +810,7 @@
+ /* WTA: this  needs to be an autoconf check for /proc/pid existance.
+  */
+ 
+-#if defined(OSLinux) || defined (OSsunos) || defined(OSfreebsd) || defined(OSaix) || defined(OSsunos)
++#if defined(OSLinux) || defined (OSsunos) || defined(OSfreebsd) || defined(OSaix) || defined(OSsunos) || defined(OSInterix)
+ static void
+ do_procinit(void)
+ {
+@@ -1076,7 +1078,7 @@
+ }
+ #endif /* OShpux */
+ 
+-#if defined(OSaix) || defined(OSsunos)
++#if defined(OSaix) || defined(OSsunos) || defined(OSInterix)
+ /* max possible pid (signed long) in theory:
+  * 32bit: 2147483647 (10 digits)
+  * 64bit: 9223372036854775807 (19 digits)
+@@ -1112,7 +1114,11 @@
+ {
+ 	char buf[40];
+ 	FILE *f;
++    #ifdef OSInterix
++    psinfo_t psi;
++    #else
+ 	struct psinfo psi;
++    #endif
+ 	int r;
+ 
+ 	sprintf(buf, "/proc/%ld/psinfo", pid);
+@@ -1466,8 +1472,10 @@
+ 	if (changeuser != NULL) {
+ 		if (setgid(runas_gid))
+ 			fatal("Unable to set gid to %d", runas_gid);
++#ifndef OSInterix
+ 		if (initgroups(changeuser, runas_gid))
+ 			fatal("Unable to set initgroups() with gid %d", runas_gid);
++#endif
+ 		if (setuid(runas_uid))
+ 			fatal("Unable to set uid to %s", changeuser);
+ 	}

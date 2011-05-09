@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.2 2011/05/01 19:32:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.3 2011/05/09 07:41:54 mduft Exp $
 
 EAPI=3
 
@@ -39,6 +39,8 @@ src_prepare() {
 
 	# The consoletype application in this form will only work on Linux
 	[[ ${CHOST} == *-linux-* ]] || epatch "${FILESDIR}"/baselayout-1.12.5-prefix-no-consoletype.patch
+
+	epatch "${FILESDIR}"/baselayout-1.12.14-interix.patch
 
 	cd "${S}"
 	eprefixify \
