@@ -1,6 +1,9 @@
 # ChangeLog for virtual/os-headers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/ChangeLog,v 1.1 2011/04/14 05:41:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/ChangeLog,v 1.2 2011/05/09 19:51:57 ulm Exp $
+
+  09 May 2011; Ulrich Mueller <ulm@gentoo.org> os-headers-0.ebuild:
+  prefix flag was missing from IUSE.
 
 *os-headers-0 (14 Apr 2011)
 
