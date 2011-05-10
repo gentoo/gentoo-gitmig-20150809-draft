@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20110428.ebuild,v 1.1 2011/05/10 17:18:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20110428.ebuild,v 1.2 2011/05/10 18:21:36 flameeyes Exp $
 
 NUM="20050"
 DESCRIPTION="Intel IA32 microcode update data"
@@ -18,7 +18,7 @@ S=${WORKDIR}
 
 src_install() {
 	insinto /lib/firmware
-	newins microcode-${PV}.dat microcode.dat || die
+	doins microcode.dat || die
 }
 
 pkg_postinst() {
