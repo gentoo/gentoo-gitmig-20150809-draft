@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.51 2011/04/02 12:54:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.52 2011/05/10 10:38:41 xmw Exp $
+
+  10 May 2011; Michael Weber <xmw@gentoo.org> hping-2.0.0_rc3-r2.ebuild,
+  hping-3_pre20051105-r3.ebuild, files/bytesex.h.patch:
+  added arm support (bug 361279), added ~arm keyword (bug 302981)
 
   02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   hping-2.0.0_rc3-r1.ebuild, hping-2.0.0_rc3-r2.ebuild:
