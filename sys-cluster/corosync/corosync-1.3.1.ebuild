@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.1.ebuild,v 1.1 2011/04/29 09:53:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.3.1.ebuild,v 1.2 2011/05/10 13:24:24 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit base autotools
 
@@ -29,7 +29,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-docs.patch"
 )
 
-DOCS=( "README.recovery" "README.devmap" "SECURITY" "TODO" "AUTHORS" )
+DOCS=( README.recovery README.devmap SECURITY TODO AUTHORS )
 
 src_prepare() {
 	base_src_prepare
@@ -38,7 +38,7 @@ src_prepare() {
 
 src_configure() {
 	# appends lib to localstatedir automatically
-	# FIXME: install both static and shared libs
+	# FIXME: install just shared libs --disable-static does not work
 	econf \
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/${PF} \
@@ -48,11 +48,11 @@ src_configure() {
 }
 
 src_install() {
-	base_src_install
-	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
+	default
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${PN}.logrotate ${PN} || die
+	newins "${FILESDIR}"/${PN}.logrotate ${PN}
 
 	keepdir /var/lib/corosync
 }
