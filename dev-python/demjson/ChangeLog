@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/demjson
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.13 2011/04/03 20:36:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.14 2011/05/10 22:11:12 hwoarang Exp $
+
+  10 May 2011; Markos Chandras <hwoarang@gentoo.org> demjson-1.6.ebuild:
+  Stable on amd64 wrt bug #365881
 
 *demjson-1.6 (03 Apr 2011)
 
