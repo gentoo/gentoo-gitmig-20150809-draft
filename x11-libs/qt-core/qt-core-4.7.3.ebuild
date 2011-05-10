@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.3.ebuild,v 1.1 2011/05/10 20:04:33 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.3.ebuild,v 1.2 2011/05/10 21:40:09 tampakrap Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -17,10 +17,6 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 PDEPEND="qt3support? ( ~x11-libs/qt-gui-${PV}[aqua=,glib=,qt3support] )"
-
-PATCHES=(
-	"${FILESDIR}/blacklist_ssl.patch"
-)
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="
