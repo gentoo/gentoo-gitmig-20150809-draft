@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ostinato
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.8 2011/04/19 16:08:03 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ostinato/ChangeLog,v 1.9 2011/05/10 17:12:17 c1pher Exp $
+
+*ostinato-0.4.1 (10 May 2011)
+
+  10 May 2011; Dane Smith <c1pher@gentoo.org> -ostinato-0.4.ebuild,
+  +ostinato-0.4.1.ebuild, -files/protobuf-2.4.0.diff:
+  Version bump. Gentoo patches merged into upstream. Remove old experimental
+  and patch.
 
 *ostinato-0.4 (19 Apr 2011)
 
