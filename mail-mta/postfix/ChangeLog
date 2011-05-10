@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.255 2011/05/09 20:08:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.256 2011/05/10 12:21:09 phajdan.jr Exp $
+
+  10 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> postfix-2.7.4.ebuild:
+  x86 stable wrt security bug #366605
 
 *postfix-2.7.4 (09 May 2011)
 
