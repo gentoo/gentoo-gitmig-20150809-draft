@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.6.1.ebuild,v 1.1 2011/05/08 11:18:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.6.1-r1.ebuild,v 1.1 2011/05/10 12:10:40 idl0r Exp $
 
 EAPI="3"
 
@@ -31,8 +31,12 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/nagstamon-0.9.5-resources.patch"
+	epatch "${FILESDIR}/${P}-system-beautifulsoup.patch"
 
 	python_convert_shebangs 2 nagstamon.py
+
+	rm Nagstamon/resources/LICENSE
+	rm Nagstamon/BeautifulSoup.py
 }
 
 src_install() {
@@ -40,7 +44,7 @@ src_install() {
 	cd Nagstamon/
 
 	doman resources/nagstamon.1 || die
-	rm resources/{LICENSE,nagstamon.1}
+	rm resources/nagstamon.1
 
 	nagstamon_install() {
 		exeinto $(python_get_sitedir)/${MY_PN}

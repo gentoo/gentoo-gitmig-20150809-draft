@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.17 2011/05/08 11:18:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.18 2011/05/10 12:10:40 idl0r Exp $
+
+*nagstamon-0.9.6.1-r1 (10 May 2011)
+
+  10 May 2011; Christian Ruppert <idl0r@gentoo.org> -nagstamon-0.9.6.1.ebuild,
+  +nagstamon-0.9.6.1-r1.ebuild,
+  +files/nagstamon-0.9.6.1-system-beautifulsoup.patch:
+  Fix BeautifulSoup import, bug 366703.
 
 *nagstamon-0.9.6.1 (08 May 2011)
 
