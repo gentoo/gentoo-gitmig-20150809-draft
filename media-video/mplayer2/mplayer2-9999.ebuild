@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.13 2011/05/03 14:57:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.14 2011/05/10 13:22:49 scarabeus Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ libcaca lirc +live mad md5sum +mmx mmxext mng +mp3 nas
 +network nut +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc samba +shm sdl +speex sse sse2 ssse3
 tga +theora +truetype +unicode v4l v4l2 vdpau
-+vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid xvmc"
++vorbis win32codecs +X xanim xinerama +xscreensaver +xv xvid"
 
 VIDEO_CARDS="s3virge mga tdfx vesa"
 for x in ${VIDEO_CARDS}; do
@@ -77,7 +77,6 @@ RDEPEND+="
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? (
 			x11-libs/libXv
-			xvmc? ( x11-libs/libXvMC )
 		)
 	)
 	a52? ( media-libs/a52dec )
@@ -478,7 +477,7 @@ src_configure() {
 	# X enabled configuration #
 	###########################
 	if use X; then
-		uses="dxr3 ggi xinerama"
+		uses="dxr3 ggi xinerama xv"
 		for i in ${uses}; do
 			use ${i} || myconf+=" --disable-${i}"
 		done
@@ -488,20 +487,6 @@ src_configure() {
 		use vdpau || myconf+=" --disable-vdpau"
 		use video_cards_vesa || myconf+=" --disable-vesa"
 		use xscreensaver || myconf+=" --disable-xss"
-
-		if use xv; then
-			if use xvmc; then
-				myconf+=" --enable-xvmc --with-xvmclib=XvMCW"
-			else
-				myconf+=" --disable-xvmc"
-			fi
-		else
-			myconf+="
-				--disable-xv
-				--disable-xvmc
-			"
-			use xvmc && elog "Disabling xvmc because it requires \"xv\" useflag enabled."
-		fi
 	else
 		myconf+="
 			--disable-dga1
@@ -513,7 +498,6 @@ src_configure() {
 			--disable-xinerama
 			--disable-xss
 			--disable-xv
-			--disable-xvmc
 			--disable-x11
 		"
 		uses="dga dxr3 ggi opengl osdmenu vdpau xinerama xscreensaver xv"

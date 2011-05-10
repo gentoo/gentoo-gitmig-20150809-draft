@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.16 2011/05/03 14:57:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.17 2011/05/10 13:22:49 scarabeus Exp $
+
+  10 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
+  Drop xvmc support same as upstream did in git.
 
   03 May 2011; Jeremy Olexa <darkside@gentoo.org> mplayer2-2.0.ebuild,
   mplayer2-9999.ebuild:
