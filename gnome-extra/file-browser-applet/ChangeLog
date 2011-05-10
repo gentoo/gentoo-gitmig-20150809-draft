@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/file-browser-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/ChangeLog,v 1.26 2011/04/26 20:13:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/ChangeLog,v 1.27 2011/05/10 14:07:40 phajdan.jr Exp $
+
+  10 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  file-browser-applet-0.6.7.ebuild:
+  x86 stable wrt bug #364045
 
   26 Apr 2011; Christoph Mende <angelos@gentoo.org>
   file-browser-applet-0.6.7.ebuild:
