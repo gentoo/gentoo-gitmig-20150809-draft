@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2.ebuild,v 1.4 2011/05/05 19:51:56 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2.ebuild,v 1.5 2011/05/10 14:31:03 jsbronder Exp $
 
 EAPI=2
 
@@ -48,7 +48,7 @@ src_prepare() {
 	# in the environment, however that's messy and doesn't for for LDFLAGS.
 	sed -i \
 		-e 's,\(.*=\ *\)"@WRAPPER_[A-Z]*FLAGS@",\1"",' \
-		src/env/*.conf.in || die
+		src/env/*.in || die
 }
 
 src_configure() {
