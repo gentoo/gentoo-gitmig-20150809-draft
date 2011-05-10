@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.0.ebuild,v 1.1 2011/05/09 19:57:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.1.ebuild,v 1.1 2011/05/10 07:14:49 angelos Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -49,12 +49,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e '/-no-undefined/d' src/Makefile.am || die
+	sed -i -e 's/^#elseif/#elif/' lib/sensors-interface.c || die
 	xfconf_src_prepare
-}
-
-src_configure() {
-	xfconf_src_configure
-	if has_version ">=x11-libs/libnotify-0.7"; then
-		sed -i -e "/LIBNOTIFY4/d" config.h || die
-	fi
 }
