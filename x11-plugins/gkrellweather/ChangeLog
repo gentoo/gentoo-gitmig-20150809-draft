@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/gkrellweather
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.32 2010/08/25 00:44:14 lack Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.33 2011/05/10 18:20:14 lack Exp $
+
+*gkrellweather-2.0.8 (10 May 2011)
+
+  10 May 2011; Jim Ramsay <lack@gentoo.org> +gkrellweather-2.0.8.ebuild,
+  +files/gkrellweather-2.0.8-Move-GrabWeather.patch,
+  +files/gkrellweather-2.0.8-Respect-LDFLAGS.patch:
+  Bug #363593 - Version bump
 
 *gkrellweather-2.0.7-r2 (25 Aug 2010)
 
