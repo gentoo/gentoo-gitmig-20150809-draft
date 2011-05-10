@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5359 2011/05/10 21:59:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5360 2011/05/10 22:32:58 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 May 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Remove entry for qt-creator 2.2.0 RC release
 
   10 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/2Q-2011:
   Move keyjnote to new name impressive, bug 364161
