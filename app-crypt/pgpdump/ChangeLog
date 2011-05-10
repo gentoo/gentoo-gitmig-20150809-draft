@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/pgpdump
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.17 2009/05/19 14:39:41 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.18 2011/05/10 15:49:27 matsuu Exp $
+
+*pgpdump-0.27 (10 May 2011)
+
+  10 May 2011; MATSUU Takuto <matsuu@gentoo.org> +pgpdump-0.27.ebuild:
+  Version bumped.
 
   19 May 2009; MATSUU Takuto <matsuu@gentoo.org> -pgpdump-0.22.ebuild:
   Removed old version.
