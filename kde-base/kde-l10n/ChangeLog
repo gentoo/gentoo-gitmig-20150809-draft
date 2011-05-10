@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.85 2011/05/09 22:36:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.86 2011/05/10 21:21:39 dilfridge Exp $
+
+  10 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> kde-l10n-4.6.3.ebuild:
+  Dont generate kdepim-runtime messages, bug 366353
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kde-l10n-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.6.3.ebuild,v 1.1 2011/05/07 10:47:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.6.3.ebuild,v 1.2 2011/05/10 21:21:39 dilfridge Exp $
 
 EAPI="3"
 
@@ -59,6 +59,16 @@ src_unpack() {
 			fi
 		done
 	fi
+}
+
+src_prepare() {
+	# Upstream added kdepim-runtime translations by mistake and does not want to
+	# make a new tarball, bug 366353
+
+	find "${S}" -name CMakeLists.txt -type f \
+		-exec sed -i -e 's:add_subdirectory(kdepim-runtime):# no kdepim-runtime:g' {} +
+
+	kde4-base_src_prepare
 }
 
 src_configure() {
