@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.84 2011/05/03 18:30:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.85 2011/05/10 12:30:45 phajdan.jr Exp $
+
+  10 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> antlr-2.7.7-r2.ebuild:
+  x86 stable wrt bug #366423
 
 *antlr-2.7.7-r2 (08 Apr 2011)
 
