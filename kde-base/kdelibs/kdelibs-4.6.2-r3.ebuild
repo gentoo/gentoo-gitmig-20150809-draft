@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.6 2011/05/10 17:02:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.7 2011/05/10 19:48:48 dilfridge Exp $
 
 EAPI=4
 
@@ -309,6 +309,16 @@ pkg_postinst() {
 		einfo "to include 'mdns', e.g.:"
 		einfo "	hosts: files mdns dns"
 		echo
+	fi
+
+	if has_version 'net-libs/libproxy'; then
+		echo
+		elog "You have net-libs/libproxy installed. This may lead to serious problems, e.g."
+		elog "not being able to log in. We used to prohibit that combination via a blocker,"
+		elog "however the blocker has been removed because of popular request. Now everyone"
+		elog "may shoot himself in the foot as much as he wants."
+		ewarn "If you encounter timeouts and/or hangs, please have a look at bug 365479,"
+		ewarn "https://bugs.gentoo.org/show_bug.cgi?id=365479"
 	fi
 
 	elog "Your homedir is set to \${HOME}/${HME}"

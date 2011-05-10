@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.757 2011/05/10 17:02:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.758 2011/05/10 19:48:48 dilfridge Exp $
+
+  10 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.6.2-r3.ebuild, kdelibs-4.6.3-r1.ebuild:
+  Added ewarn message if libproxy is present
 
   10 May 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   kdelibs-4.6.2-r3.ebuild, kdelibs-4.6.3-r1.ebuild:
