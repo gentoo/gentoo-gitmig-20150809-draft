@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20100311.ebuild,v 1.2 2011/05/10 10:20:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/mmix-20110420.ebuild,v 1.1 2011/05/10 10:20:54 xmw Exp $
 
 EAPI="2"
 
@@ -21,9 +21,7 @@ IUSE="doc"
 S="${WORKDIR}"
 
 src_prepare() {
-cp -av Makefile{,.orig}
-	epatch \
-		"${FILESDIR}"/${PN}-20060324-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
@@ -37,10 +35,10 @@ src_compile() {
 }
 
 src_install () {
-	dobin mmix mmixal mmmix mmotype abstime
-	dodoc README mmix.1
+	dobin mmix mmixal mmmix mmotype abstime || die
+	dodoc README mmix.1 || die
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
-		doins *.ps
+		doins *.ps || die
 	fi
 }
