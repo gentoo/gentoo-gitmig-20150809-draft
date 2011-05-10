@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.54 2011/05/09 23:38:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.55 2011/05/10 04:06:21 vapier Exp $
+
+  10 May 2011; Mike Frysinger <vapier@gentoo.org> nbd-2.9.21.ebuild,
+  +files/sh.tmpl:
+  Add file missing from upstream dist.
 
 *nbd-2.9.21 (09 May 2011)
 
