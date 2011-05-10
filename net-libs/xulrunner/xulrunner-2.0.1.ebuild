@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1.ebuild,v 1.2 2011/05/03 01:38:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1.ebuild,v 1.3 2011/05/10 01:40:48 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -28,6 +28,8 @@ REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 # More URIs appended below...
 SRC_URI="http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
+ASM_DEPEND=">=dev-lang/yasm-1.1.0"
+
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.9
@@ -44,7 +46,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-lang/yasm"
+	webm? ( amd64? ( ${ASM_DEPEND} )
+		x86? ( ${ASM_DEPEND} ) )"
 
 if [[ ${PV} =~ alpha|beta ]]; then
 	# hg snapshot tarball
@@ -136,6 +139,9 @@ src_configure() {
 	if [[ $(gcc-major-version) -lt 4 ]]; then
 		append-flags -fno-stack-protector
 	fi
+
+	# Ensure we do not fail on i{3,5,7} processors that support -mavx
+	append-flags -mno-avx
 
 	####################################
 	#
