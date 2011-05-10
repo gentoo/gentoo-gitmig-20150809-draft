@@ -1,6 +1,16 @@
 # ChangeLog for media-video/ttcut
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.26 2010/03/20 20:16:49 billie Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.27 2011/05/10 17:49:14 billie Exp $
+
+*ttcut-0.19.6-r3 (10 May 2011)
+
+  10 May 2011; Daniel Pielmeier <billie@gentoo.org> +ttcut-0.19.6-r3.ebuild,
+  +files/ttcut-0.19.6-ffmpeg-vf-setdar.patch,
+  +files/ttcut-0.19.6-ntsc-fps.patch, +files/ttcut.desktop:
+  Revision bump. Switch to EAPI 4. Add desktop file. Update desktop database.
+  Add patch written by me with some polishing from Robert William Fuller to use
+  ffmpeg instead of transcode for frame accurate cutting. Add patch to support
+  NTSC framrate 29.97 thanks to Robert William Fuller.
 
   20 Mar 2010; Daniel Pielmeier <billie@gentoo.org> ttcut-0.19.6-r2.ebuild:
   Switch to qt4-r2 eclass.
