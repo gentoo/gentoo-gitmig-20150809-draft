@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/maatkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.20 2011/04/25 14:58:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.21 2011/05/10 13:22:29 phajdan.jr Exp $
+
+  10 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> maatkit-7207.ebuild:
+  x86 stable wrt bug #363245
 
   25 Apr 2011; Raúl Porcel <armin76@gentoo.org> maatkit-5014.ebuild,
   maatkit-5240.ebuild, maatkit-6070.ebuild, maatkit-7041.ebuild,
