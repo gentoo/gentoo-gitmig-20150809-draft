@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.2.ebuild,v 1.1 2011/04/09 17:08:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.2.ebuild,v 1.2 2011/05/10 14:42:26 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -60,6 +60,9 @@ src_prepare() {
 
 	# Disable failing test.
 	sed -e "s/test_obj_del/_&/" -i IPython/tests/test_magic.py || die "sed failed"
+
+	# Disable tests requiring foolscap when foolscap is unavailable.
+	sed -e "/^if not have_twisted:$/i if not have_foolscap:\n    EXCLUDE.append(pjoin('IPython', 'kernel'))\n" -i IPython/testing/iptest.py || die "sed failed"
 }
 
 src_compile() {
