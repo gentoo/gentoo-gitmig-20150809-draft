@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.5 2011/05/09 22:49:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.6 2011/05/10 17:02:00 tampakrap Exp $
 
 EAPI=4
 
@@ -33,7 +33,6 @@ COMMONDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/giflib
-	!net-libs/glib-networking
 	>=media-libs/libpng-1.4
 	>=media-libs/phonon-4.4.3
 	sys-libs/zlib
