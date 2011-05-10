@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r1.ebuild,v 1.4 2011/04/18 23:45:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r1.ebuild,v 1.5 2011/05/10 01:44:23 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -51,6 +51,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.9
 	>=dev-libs/nspr-4.8.7
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
+	media-libs/libpng[apng]
 	!x11-plugins/lightning
 	!x11-plugins/enigmail
 	crypt?  ( || (
@@ -156,12 +157,13 @@ src_configure() {
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	if use crypt ; then
-		# omni.jar breaks enigmail
+		# omni.jar breaks enigmail 
 		mozconfig_annotate '' --enable-chrome-format=jar
 	fi
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --with-default-mozilla-five-home="${EPREFIX}${MOZILLA_FIVE_HOME}"
 	mozconfig_annotate '' --with-user-appdir=.thunderbird
+	mozconfig_annotate '' --with-system-png
 
 	# Use enable features
 	mozconfig_use_enable lightning calendar
@@ -187,6 +189,9 @@ src_configure() {
 	if [[ $(gcc-major-version) -lt 4 ]]; then
 		append-cxxflags -fno-stack-protector
 	fi
+
+       # Ensure we do not fail on i{3,5,7} processors that support -mavx
+       append-flags -mno-avx
 
 	CPPFLAGS="${CPPFLAGS}" \
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
