@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5357 2011/05/10 02:02:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5358 2011/05/10 14:13:35 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 May 2011; Eray Aslan <eras@gentoo.org> package.mask:
+  Needs some testing first net-mail/cyrus-imapd-2.4.8
 
   10 May 2011; Justin Bronder <jsbronder@gentoo.org> package.mask:
   Masking sys-cluster/pvfs2 for removal (#337374)
