@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.1.1.ebuild,v 1.1 2011/02/06 18:34:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.1.1.ebuild,v 1.2 2011/05/10 07:55:36 xmw Exp $
 
 EAPI=2
 
@@ -28,7 +28,8 @@ RDEPEND="dev-python/configobj
 	gedit? ( app-editors/gedit )
 	git? ( dev-python/dulwich )
 	nautilus? ( >=dev-python/nautilus-python-0.7.0
-		dev-python/dbus-python )
+		dev-python/dbus-python
+		dev-python/gnome-vfs-python )
 	spell? ( dev-python/gtkspell-python )
 	thunar? ( dev-python/thunarx-python
 		dev-python/dbus-python )"

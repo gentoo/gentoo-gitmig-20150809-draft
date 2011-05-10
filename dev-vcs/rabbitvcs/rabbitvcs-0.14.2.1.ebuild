@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.13.3.ebuild,v 1.1 2010/10/26 20:59:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.2.1.ebuild,v 1.1 2011/05/10 07:55:36 xmw Exp $
 
 EAPI=2
 
@@ -17,16 +17,19 @@ SRC_URI="http://rabbitvcs.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cli diff gedit nautilus spell thunar"
+IUSE="cli diff gedit git nautilus spell thunar"
 
 RDEPEND="dev-python/configobj
 	dev-python/pygobject
 	dev-python/pygtk
 	dev-python/pysvn
+	dev-python/simplejson
 	diff? ( dev-util/meld )
 	gedit? ( app-editors/gedit )
-	nautilus? ( dev-python/nautilus-python
-		dev-python/dbus-python )
+	git? ( dev-python/dulwich )
+	nautilus? ( >=dev-python/nautilus-python-0.7.0
+		dev-python/dbus-python
+		dev-python/gnome-vfs-python )
 	spell? ( dev-python/gtkspell-python )
 	thunar? ( dev-python/thunarx-python
 		dev-python/dbus-python )"
