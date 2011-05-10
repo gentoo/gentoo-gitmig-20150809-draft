@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.14 2011/05/10 13:22:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.15 2011/05/10 13:27:54 scarabeus Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
-[[ ${PV} = *9999* ]] && VCS_ECLASS="git"
+[[ ${PV} = *9999* ]] && VCS_ECLASS="git-2"
 NAMESUF=${PN/mplayer/}
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${VCS_ECLASS}
@@ -24,11 +24,7 @@ SRC_URI="${RELEASE_URI}
 
 LICENSE="GPL-3"
 SLOT="0"
-if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="~amd64 ~x86 ~amd64-linux"
-else
-	KEYWORDS=""
-fi
+[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="3dnow 3dnowext +a52 aalib +alsa altivec aqua +ass bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection custom-cpuopts custom-cflags debug dga
 directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca esd +faad fbcon
@@ -196,9 +192,9 @@ pkg_setup() {
 
 src_unpack() {
 	if [[ ${PV} = *9999* ]]; then
-		git_src_unpack
+		git-2_src_unpack
 	else
-		unpack ${A}
+		default
 	fi
 
 	if ! use truetype; then
