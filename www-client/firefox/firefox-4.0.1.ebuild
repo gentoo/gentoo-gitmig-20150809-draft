@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0.1.ebuild,v 1.1 2011/05/02 23:33:17 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0.1.ebuild,v 1.2 2011/05/10 01:42:37 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -28,12 +28,14 @@ REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 # More URIs appended below...
 SRC_URI="http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
+ASM_DEPEND=">=dev-lang/yasm-1.1"
+
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.9
 	>=dev-libs/nspr-4.8.7
 	>=dev-libs/glib-2.26
-	>=media-libs/libpng-1.4.7[apng]
+	media-libs/libpng[apng]
 	x11-libs/pango[X]
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	~net-libs/xulrunner-${XUL_PV}[wifi=,libnotify=,system-sqlite=,webm=]
@@ -42,7 +44,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	webm? ( dev-lang/yasm )"
+	webm? ( x86? ( ${ASM_DEPEND} )
+		amd64? ( ${ASM_DEPEND} ) )"
 
 # No source releases for alpha|beta
 if [[ ${PV} =~ alpha|beta ]]; then
