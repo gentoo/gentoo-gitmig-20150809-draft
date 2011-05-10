@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.2.8.ebuild,v 1.1 2011/05/08 20:18:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/libssh2-1.2.8-r1.ebuild,v 1.1 2011/05/10 20:00:28 jer Exp $
 
 EAPI="2"
 
-inherit autotools-utils
+inherit autotools-utils eutils
 
 DESCRIPTION="Library implementing the SSH2 protocol"
 HOMEPAGE="http://www.libssh2.org/"
@@ -19,6 +19,11 @@ DEPEND="!gcrypt? ( dev-libs/openssl )
 	gcrypt? ( dev-libs/libgcrypt )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-version.patch
+	eautoreconf
+}
 
 src_configure() {
 	local myconf
