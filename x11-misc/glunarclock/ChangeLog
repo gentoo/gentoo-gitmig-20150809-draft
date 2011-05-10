@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glunarclock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.26 2011/05/02 20:27:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.27 2011/05/10 09:09:04 xmw Exp $
+
+  10 May 2011; Michael Weber <xmw@gentoo.org> glunarclock-0.34.1.ebuild:
+  ppc stable (bug 318967)
 
   02 May 2011; Markos Chandras <hwoarang@gentoo.org> glunarclock-0.34.1.ebuild:
   Stable on amd64 wrt bug #318967
