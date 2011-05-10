@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.158 2011/03/30 19:04:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.159 2011/05/10 14:22:48 eras Exp $
+
+*cyrus-imapd-2.4.8 (10 May 2011)
+
+  10 May 2011; Eray Aslan <eras@gentoo.org> +cyrus-imapd-2.4.8.ebuild:
+  version bump - bug #350013
 
   30 Mar 2011; Michael Weber <xmw@gentoo.org> cyrus-imapd-2.3.16.ebuild:
   added ~arm (bug 302981)
