@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.1 2011/05/10 14:22:48 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.2 2011/05/10 14:37:07 eras Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit db-use eutils ssl-cert pam multilib
 MY_P=${P/_/}
 
 DESCRIPTION="The Cyrus IMAP Server."
-HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
+HOMEPAGE="http://www.cyrusimap.org/"
 SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/${MY_P}.tar.gz"
 LIBWRAP_PATCH_VER="2.2"
 
@@ -143,11 +143,6 @@ pkg_postinst() {
 			chown cyrus:mail "${ROOT}"etc/ssl/cyrus/server.{key,pem}
 		fi
 	fi
-
-	ewarn "If the queue directory of the mail daemon resides on an ext2"
-	ewarn "filesystem you need to set it manually to update"
-	ewarn "synchronously. E.g. 'chattr +S /var/spool/mqueue'."
-	echo
 
 	elog "For correct logging add the following to /etc/syslog.conf:"
 	elog "    local6.*         /var/log/imapd.log"
