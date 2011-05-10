@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.59 2011/04/23 17:54:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.60 2011/05/10 09:46:15 xmw Exp $
+
+  10 May 2011; Michael Weber <xmw@gentoo.org> xdelta-3.0.0.ebuild:
+  ppc stable (bug 362969)
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> xdelta-3.0.0.ebuild:
   alpha/ia64/sparc stable wrt #362969
