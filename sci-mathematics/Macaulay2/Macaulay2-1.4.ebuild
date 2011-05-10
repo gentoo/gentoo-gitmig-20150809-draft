@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.4.ebuild,v 1.3 2011/03/02 21:08:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.4.ebuild,v 1.4 2011/05/10 20:54:03 hwoarang Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.math.uiuc.edu/Macaulay2/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND="sys-libs/gdbm
 	>=dev-libs/ntl-5.5.2

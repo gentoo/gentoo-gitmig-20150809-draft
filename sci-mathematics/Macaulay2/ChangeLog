@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.21 2011/03/02 21:08:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.22 2011/05/10 20:54:03 hwoarang Exp $
+
+  10 May 2011; Markos Chandras <hwoarang@gentoo.org> Macaulay2-1.4.ebuild:
+  Stable on amd64 wrt bug #366379
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> Macaulay2-1.4.ebuild:
   Correct Slots for gtk 3 introduction to tree
