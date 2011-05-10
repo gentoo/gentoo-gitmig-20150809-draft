@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/wipe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.24 2010/09/19 03:56:16 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.25 2011/05/10 09:06:14 xmw Exp $
+
+*wipe-2.3.1 (10 May 2011)
+
+  10 May 2011; Michael Weber <xmw@gentoo.org> +wipe-2.3.1.ebuild,
+  +files/wipe-2.3.1-LDFLAGS.patch, metadata.xml:
+  Taking care of this one, version bump (thanks to AwoL, bug 365741), ebuild
+  update
 
 *wipe-2.2.20050509-r1 (19 Sep 2010)
 

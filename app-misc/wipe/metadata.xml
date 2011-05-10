@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
+		<email>xmw@gentoo.org</email>
+		<name>Michael Weber</name>
 	</maintainer>
 </pkgmetadata>
