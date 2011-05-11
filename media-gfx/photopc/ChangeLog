@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/photopc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.11 2009/10/24 12:37:55 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.12 2011/05/11 23:58:22 xmw Exp $
+
+*photopc-3.06 (11 May 2011)
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> +photopc-3.06.ebuild:
+  Version bump (thanks to hitachi for the report, bug 306729)
 
   24 Oct 2009; nixnut <nixnut@gentoo.org> photopc-3.05.ebuild:
   ppc stable #286572
