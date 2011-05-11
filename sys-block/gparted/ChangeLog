@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.92 2011/04/22 18:02:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.93 2011/05/11 08:56:47 eva Exp $
+
+  11 May 2011; Gilles Dartiguelongue <eva@gentoo.org> gparted-0.8.0.ebuild:
+  Add missing mtools for writing fat labels and ntfs3g support, bug #366773.
 
   22 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -gparted-0.7.0.ebuild:
   Clean up old revision.

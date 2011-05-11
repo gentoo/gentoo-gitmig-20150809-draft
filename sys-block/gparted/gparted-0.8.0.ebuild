@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.8.0.ebuild,v 1.1 2011/03/22 22:57:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.8.0.ebuild,v 1.2 2011/05/11 08:56:47 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -32,14 +32,18 @@ RDEPEND="${common_depends}
 			sys-fs/device-mapper )
 		sys-fs/dmraid
 		sys-fs/multipath-tools )
-	fat? ( sys-fs/dosfstools )
+	fat? (
+		sys-fs/dosfstools
+		sys-fs/mtools )
 	hfs? (
 		sys-fs/diskdev_cmds
 		sys-fs/udev
 		sys-fs/hfsutils )
 	jfs? ( sys-fs/jfsutils )
 	mdadm? ( sys-fs/mdadm )
-	ntfs? ( sys-fs/ntfsprogs )
+	ntfs? ( || (
+		>=sys-fs/ntfs3g-2011.4.12[ntfsprogs]
+		sys-fs/ntfsprogs ) )
 	reiserfs? ( sys-fs/reiserfsprogs )
 	reiser4? ( sys-fs/reiser4progs )
 	xfs? ( sys-fs/xfsprogs sys-fs/xfsdump )"
