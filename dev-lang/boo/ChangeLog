@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.40 2011/05/07 16:42:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.41 2011/05/11 19:27:42 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> boo-0.9.4.9.ebuild:
+  Stable on amd64 wrt bug #359651
 
   07 May 2011; Thomas Kahle <tomka@gentoo.org> boo-0.9.4.9.ebuild:
   x86 stable per bug 359651
