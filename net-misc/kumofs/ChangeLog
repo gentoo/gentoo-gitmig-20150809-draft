@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/kumofs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kumofs/ChangeLog,v 1.3 2010/05/11 14:47:48 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kumofs/ChangeLog,v 1.4 2011/05/11 15:38:22 matsuu Exp $
+
+*kumofs-0.4.13 (11 May 2011)
+
+  11 May 2011; MATSUU Takuto <matsuu@gentoo.org> +kumofs-0.4.13.ebuild:
+  Version bumped.
 
 *kumofs-0.3.6 (11 May 2010)
 
