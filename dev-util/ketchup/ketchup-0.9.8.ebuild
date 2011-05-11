@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.8.ebuild,v 1.7 2010/02/22 18:46:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.8.ebuild,v 1.8 2011/05/11 15:32:19 jlec Exp $
 
 inherit eutils
 
-DESCRIPTION="tool for updating or switching between versions of the Linux kernel source"
+DESCRIPTION="Tool for updating or switching between versions of the Linux kernel source"
 HOMEPAGE="http://www.selenic.com/ketchup/"
 
 if [[ $PV == *_p* ]]; then
