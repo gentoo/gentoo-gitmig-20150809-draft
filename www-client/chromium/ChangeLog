@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.357 2011/05/09 16:43:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.358 2011/05/11 14:55:16 phajdan.jr Exp $
+
+  11 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999-r1.ebuild:
+  Download missing NaCl files in src_unpack (bug #366413 by Mike Gilbert
+  <floppymaster@gmail.com>).
 
   09 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium-9999-r1.ebuild:
   Fix variable quoting (add missing quotes). Spotted by Mike Gilbert

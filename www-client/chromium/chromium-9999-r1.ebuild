@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.25 2011/05/09 16:43:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.26 2011/05/11 14:55:16 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -73,6 +73,7 @@ src_unpack() {
 
 	einfo "gclient sync start -->"
 	"${WORKDIR}/depot_tools/gclient" sync --force --nohooks || die
+	"$(PYTHON)" src/build/download_nacl_irt.py || die  # bug #366413
 	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
 
 	mkdir -p "${S}" || die
