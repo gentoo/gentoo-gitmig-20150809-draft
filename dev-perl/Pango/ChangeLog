@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.15 2011/01/24 04:06:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.16 2011/05/11 08:41:19 xmw Exp $
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> Pango-1.221.ebuild:
+  added ~arm keyword (bug 264983)
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org> Pango-1.221.ebuild:
   Stable for HPPA (bug #351661).

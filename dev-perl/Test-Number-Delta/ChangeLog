@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Number-Delta
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/ChangeLog,v 1.16 2010/01/14 14:48:31 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/ChangeLog,v 1.17 2011/05/11 08:40:03 xmw Exp $
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> Test-Number-Delta-1.03.ebuild:
+  added ~arm keyword (bug 264983)
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Test-Number-Delta-1.03.ebuild:

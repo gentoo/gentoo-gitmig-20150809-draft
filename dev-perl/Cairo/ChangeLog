@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.53 2011/05/02 18:23:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/ChangeLog,v 1.54 2011/05/11 08:40:54 xmw Exp $
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> Cairo-1.62.0.ebuild:
+  added ~arm keyword (bug 264983)
 
 *Cairo-1.62.0 (02 May 2011)
 
