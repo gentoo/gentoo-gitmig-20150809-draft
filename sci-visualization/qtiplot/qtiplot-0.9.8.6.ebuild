@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.6.ebuild,v 1.1 2011/05/09 15:26:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.6.ebuild,v 1.2 2011/05/11 08:58:39 jlec Exp $
 
 EAPI=3
 
@@ -109,13 +109,18 @@ src_prepare() {
 	echo "TAMUANOVA_LIBS = -ltamuanova" >> build.conf && \
 	echo "TAMUANOVA_INCLUDEPATH = \"${EPREFIX}/usr/include/tamu_anova\"" >> build.conf
 
-	sed -e "s:doc/${PN}/manual:doc/${PN}/html:" \
-		-e "s:/usr/local/${PN}:$(python_get_sitedir)/qtiplot:" \
-			-i qtiplot/qtiplot.pro || die
-
-	sed -e '/INSTALLS.*documentation/d' \
+	sed \
+		-e "s:doc/${PN}/manual:doc/${PN}/html:" \
+		-e "s:/usr/local/${PN}:${EPREFIX}$(python_get_sitedir)/qtiplot:" \
+		-e '/INSTALLS.*documentation/d' \
 		-e '/INSTALLS.*manual/d' \
-			-i qtiplot/qtiplot.pro || die
+		-e "/INSTALLBASE/s: /usr: ${EPREFIX}/usr:g" \
+		-e 's:/usr/local/qtiplot:$$INSTALLBASE:g' \
+		-i qtiplot/qtiplot.pro || die
+
+	sed \
+		-e "/^target.path/s:/usr:${EPREFIX}/usr:g" \
+		-i fitPlugins/*/*.pro || die
 
 	sed -e '/manual/d' -i qtiplot.pro || die
 
