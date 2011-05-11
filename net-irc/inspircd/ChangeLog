@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.36 2011/05/11 08:35:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.37 2011/05/11 11:51:29 c1pher Exp $
+
+  11 May 2011; Dane Smith <c1pher@gentoo.org> inspircd-2.0.3.ebuild:
+  Fix use of || die in subshell in ebuild. No revbump.
 
   11 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> inspircd-2.0.3.ebuild:
   x86 stable wrt bug #364905
