@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/acgmake
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/ChangeLog,v 1.6 2008/12/04 01:52:45 jsbronder Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/ChangeLog,v 1.7 2011/05/11 20:03:08 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> acgmake-1.4.ebuild:
+  Stable on amd64 wrt bug #365649
 
 *acgmake-1.4 (04 Dec 2008)
 
