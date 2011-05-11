@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnucap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.49 2010/01/23 17:54:29 calchan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.50 2011/05/11 19:46:34 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org>
+  gnucap-0.35.20091207.ebuild:
+  Stable on amd64 wrt bug #365415
 
 *gnucap-0.35.20091207 (23 Jan 2010)
 
