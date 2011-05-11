@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.9.ebuild,v 1.2 2011/05/07 17:03:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.9.ebuild,v 1.3 2011/05/11 19:36:54 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
@@ -13,7 +13,7 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~ppc-macos ~x64-macos"
+KEYWORDS="amd64 x86 ~ppc-macos ~x64-macos"
 IUSE="doc gost python ssl static-libs vim-syntax"
 
 RESTRICT="test" # 1.6.9 has no test directory
