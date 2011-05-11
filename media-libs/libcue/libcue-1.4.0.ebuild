@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/libcue-1.4.0.ebuild,v 1.1 2011/04/19 19:01:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/libcue-1.4.0.ebuild,v 1.2 2011/05/11 14:06:17 scarabeus Exp $
 
-EAPI=2
+EAPI=4
+
 DESCRIPTION="CUE Sheet Parser Library"
 HOMEPAGE="http://libcue.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -10,13 +11,20 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND=""
 DEPEND="sys-devel/flex
 	|| ( dev-util/yacc sys-devel/bison )"
 
+DOCS=( AUTHORS ChangeLog NEWS  )
+
+src_configure() {
+	econf \
+		$(use_enable static-libs static)
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS
+	default
+	find "${ED}" -name '*.la' -delete
 }
