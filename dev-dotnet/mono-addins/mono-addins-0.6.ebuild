@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.6.ebuild,v 1.3 2011/05/07 16:41:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/mono-addins-0.6.ebuild,v 1.4 2011/05/11 19:26:32 angelos Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://go-mono.com/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="+gtk"
 
 RDEPEND=">=dev-lang/mono-2

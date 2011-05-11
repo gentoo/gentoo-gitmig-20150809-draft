@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/flickrnet-bin-2.2-r1.ebuild,v 1.3 2011/05/07 16:39:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/flickrnet-bin-2.2-r1.ebuild,v 1.4 2011/05/11 19:25:08 angelos Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${MY_PN}${PV}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.4"

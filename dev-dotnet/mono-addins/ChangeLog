@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/mono-addins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.26 2011/05/07 16:41:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.27 2011/05/11 19:26:32 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> mono-addins-0.6.ebuild:
+  Stable on amd64 wrt bug #359651
 
   07 May 2011; Thomas Kahle <tomka@gentoo.org> mono-addins-0.6.ebuild:
   x86 stable per bug 359651
