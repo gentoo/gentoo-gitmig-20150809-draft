@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.3.0.ebuild,v 1.8 2010/08/30 14:02:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.3.0.ebuild,v 1.9 2011/05/11 20:24:50 arfrever Exp $
 
 EAPI="3"
 
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.1.8-et_EE.patch"
+	epatch "${FILESDIR}/${P}-gnupg-2.0.17.patch"
 
 	# Call elibtoolize to get sane .so versioning on FreeBSD.
 	elibtoolize
