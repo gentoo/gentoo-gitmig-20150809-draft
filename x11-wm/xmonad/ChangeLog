@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.19 2011/04/19 13:21:48 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.20 2011/05/11 21:26:16 slyfox Exp $
+
+*xmonad-0.9.2 (11 May 2011)
+
+  11 May 2011; Sergei Trofimovich <slyfox@gentoo.org> -xmonad-0.5.ebuild,
+  -xmonad-0.5-r1.ebuild, -xmonad-0.6.ebuild, -xmonad-0.7.ebuild,
+  -xmonad-0.8.ebuild, -xmonad-0.8.1.ebuild, +xmonad-0.9.2.ebuild,
+  +files/xmonad-0.9.2-unbreak-haddock.patch:
+  Version bump. Drop old.
 
   19 Apr 2011; Thomas Kahle <tomka@gentoo.org> xmonad-0.9.ebuild:
   x86 stable per bug 359843
