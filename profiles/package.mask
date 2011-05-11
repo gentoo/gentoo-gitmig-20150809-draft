@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12762 2011/05/10 22:32:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12763 2011/05/11 13:53:27 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Eray Aslan <eras@gentoo.org> (10 May 2011)
 # Needs testing
 =net-mail/cyrus-imapd-2.4.8*
+=net-mail/cyrus-imap-admin-2.4.8*
 
 # Justin Bronder <jsbronder@gentoo.org> (09 May 2011)
 #

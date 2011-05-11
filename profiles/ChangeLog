@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5360 2011/05/10 22:32:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5361 2011/05/11 13:53:27 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 May 2011; Eray Aslan <eras@gentoo.org> package.mask:
+  Mask cyrus-imap-admin-2.4.8. Needs testing first
 
   10 May 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Remove entry for qt-creator 2.2.0 RC release
