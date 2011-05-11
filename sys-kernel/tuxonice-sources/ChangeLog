@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.116 2011/05/07 22:48:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.117 2011/05/11 19:52:43 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org>
+  tuxonice-sources-2.6.37.ebuild:
+  Stable on amd64 wrt bug #366211
 
 *tuxonice-sources-2.6.38 (07 May 2011)
 *tuxonice-sources-2.6.37-r1 (07 May 2011)
