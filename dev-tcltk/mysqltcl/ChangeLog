@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/mysqltcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.16 2011/05/03 11:41:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.17 2011/05/11 19:58:29 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> mysqltcl-3.05.ebuild:
+  Stable on amd64 wrt bug #364825
 
   03 May 2011; Justin Lecher <jlec@gentoo.org> mysqltcl-3.05.ebuild:
   Respect CFLAGS, #365801 thanks Agostino Sarubbo

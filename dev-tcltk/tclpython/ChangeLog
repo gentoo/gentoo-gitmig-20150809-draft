@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.15 2011/04/06 18:49:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.16 2011/05/11 19:59:12 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> tclpython-4.1-r2.ebuild:
+  Stable on amd64 wrt bug #364825
 
   06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tclpython-3.1-r1.ebuild, tclpython-4.1-r2.ebuild:

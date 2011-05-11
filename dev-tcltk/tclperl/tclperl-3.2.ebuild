@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/tclperl-3.2.ebuild,v 1.2 2010/05/28 23:00:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/tclperl-3.2.ebuild,v 1.3 2011/05/11 19:58:52 angelos Exp $
 
 inherit flag-o-matic multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://jfontain.free.fr/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.3.3
