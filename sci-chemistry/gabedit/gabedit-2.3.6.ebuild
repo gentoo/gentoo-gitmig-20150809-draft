@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.6.ebuild,v 1.1 2011/03/04 07:29:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.6.ebuild,v 1.2 2011/05/11 18:56:42 hwoarang Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/GabeditDevloppment/${MY_PN}${MY_PV}/${MY_P}.
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="openmp"
 
 RDEPEND="
