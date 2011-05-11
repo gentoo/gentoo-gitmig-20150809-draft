@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xwrits
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.22 2011/05/02 18:44:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.23 2011/05/11 08:57:21 phajdan.jr Exp $
+
+  11 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xwrits-2.26.ebuild:
+  x86 stable wrt bug #365391
 
   02 May 2011; Markos Chandras <hwoarang@gentoo.org> xwrits-2.26.ebuild:
   Stable on amd64 wrt bug #365391
