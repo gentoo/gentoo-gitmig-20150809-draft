@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.30 2011/04/22 21:58:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.31 2011/05/11 19:12:59 arfrever Exp $
+
+  11 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  files/mod_wsgi-3.3-python-3.2.patch:
+  Fix compatibility with Python 3.2 (bug #364583).
 
   22 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mod_wsgi-3.3.ebuild, +files/mod_wsgi-3.3-python-3.2.patch:
