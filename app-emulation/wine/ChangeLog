@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.361 2011/05/10 15:48:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.362 2011/05/11 12:50:37 scarabeus Exp $
+
+  11 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> wine-1.3.19.ebuild,
+  wine-9999.ebuild:
+  QA: Fix non applying patches. Per bug #366301.
 
 *wine-1.3.19 (10 May 2011)
 

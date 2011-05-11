@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.19.ebuild,v 1.1 2011/05/10 15:48:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.19.ebuild,v 1.2 2011/05/11 12:50:37 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-pulse_patches() { echo "$1"/winepulse-{0.39,configure.ac-1.3.10,winecfg-1.3.11}.patch ; }
+pulse_patches() { echo "$1"/winepulse-{0.39,configure.ac-1.3.19,winecfg-1.3.11}.patch ; }
 GV="1.2.0"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
