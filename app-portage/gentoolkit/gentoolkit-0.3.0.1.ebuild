@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.1.ebuild,v 1.1 2011/05/09 23:47:32 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.1.ebuild,v 1.2 2011/05/11 00:28:02 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -69,4 +69,9 @@ pkg_postinst() {
 	einfo "guide: http://www.gentoo.org/doc/en/gentoolkit.xml"
 	einfo
 	einfo "Another alternative to equery is app-portage/portage-utils"
+	ewarn
+	ewarn "glsa-check since gentoolkit 0.3 has modified some output,"
+	ewarn "options and default behavior. The list of injected GLSAs"
+	ewarn "has moved to /var/lib/portage/glsa_injected, please"
+	ewarn "run 'glsa-check -p affected' before copying the existing checkfile."
 }
