@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.65 2011/03/16 13:48:15 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.66 2011/05/11 10:47:57 eras Exp $
+
+*c-client-2007e-r2 (11 May 2011)
+
+  11 May 2011; Eray Aslan <eras@gentoo.org> +c-client-2007e-r2.ebuild:
+  Symlink shared library - bug #255118. Drop kolab USE flag.
 
   16 Mar 2011; Eray Aslan <eras@gentoo.org> c-client-2007e.ebuild,
   c-client-2007e-r1.ebuild:
