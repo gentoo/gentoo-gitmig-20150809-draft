@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/nautilus-dropbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/ChangeLog,v 1.3 2011/05/06 21:52:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/ChangeLog,v 1.4 2011/05/11 15:34:32 hwoarang Exp $
+
+*nautilus-dropbox-0.6.7-r1 (11 May 2011)
+
+  11 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  +nautilus-dropbox-0.6.7-r1.ebuild:
+  Use system's rst2man module. Thanks to Arfrever Frehtes Taifersar Arahesis
+  <arfrever@gentoo.org>. Bug #365181
 
   06 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   nautilus-dropbox-0.6.7.ebuild:
