@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.62 2011/02/23 10:45:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.63 2011/05/11 08:42:52 xmw Exp $
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> ccid-1.4.2.ebuild:
+  added ~arm keyword (bug 264983)
 
 *ccid-1.4.2 (23 Feb 2011)
 
