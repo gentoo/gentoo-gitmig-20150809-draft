@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/superlu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.7 2011/04/07 17:43:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.8 2011/05/11 20:00:30 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> superlu-4.1-r1.ebuild:
+  Stable on amd64 wrt bug #364863
 
   07 Apr 2011; Fabian Groffen <grobian@gentoo.org> superlu-4.1-r1.ebuild:
   Fixed for Darwin, marked ~ppc-macos

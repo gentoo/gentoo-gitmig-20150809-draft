@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.65 2011/03/26 17:10:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.66 2011/05/11 20:02:07 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> scipy-0.9.0-r1.ebuild:
+  Stable on amd64 wrt bug #364863
 
 *scipy-0.9.0-r1 (26 Mar 2011)
 
