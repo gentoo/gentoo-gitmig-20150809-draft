@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.14 2011/02/19 19:00:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.15 2011/05/11 23:17:27 xmw Exp $
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> zssh-1.5c.ebuild:
+  added ~amd64 keyword (bug 363001, thanks to Agostino Sarubbo for testing)
 
   19 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> zssh-1.5c.ebuild:
   Mark ~ppc wrt #346269. Thanks to XU Benda <heroxbd@gmail.com> for the
