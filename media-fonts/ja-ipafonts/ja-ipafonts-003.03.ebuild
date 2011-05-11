@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ja-ipafonts-003.02.ebuild,v 1.1 2010/02/27 18:06:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ja-ipafonts-003.03.ebuild,v 1.1 2011/05/11 22:45:31 matsuu Exp $
 
 inherit font
 
@@ -17,6 +17,7 @@ IUSE=""
 S="${WORKDIR}/${MY_P}"
 FONT_SUFFIX="ttf"
 FONT_S="${S}"
+FONT_CONF=( "${FILESDIR}/66-${PN}.conf" )
 
 DOCS="Readme_${MY_P}.txt"
 
