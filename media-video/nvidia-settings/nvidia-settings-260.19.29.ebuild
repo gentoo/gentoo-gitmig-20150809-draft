@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-260.19.29.ebuild,v 1.4 2011/03/28 22:41:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-260.19.29.ebuild,v 1.5 2011/05/11 23:40:21 xmw Exp $
 
 EAPI=2
 
@@ -25,12 +25,14 @@ DEPEND="x11-libs/gtk+:2
 	x11-base/xorg-server
 	x11-libs/libXt
 	x11-libs/libXv
+	x11-libs/pango[X]
 	x11-proto/xf86driproto
 	x11-proto/xf86vidmodeproto"
 
 RDEPEND="x11-libs/gtk+:2
 	x11-base/xorg-server
 	x11-libs/libXt
+	x11-libs/pango[X]
 	x11-drivers/nvidia-drivers"
 
 src_prepare() {
