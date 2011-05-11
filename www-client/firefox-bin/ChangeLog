@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.57 2011/05/01 16:47:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.58 2011/05/11 20:55:02 anarchy Exp $
+
+*firefox-bin-4.0.1 (11 May 2011)
+
+  11 May 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-bin-4.0.ebuild,
+  +firefox-bin-4.0.1.ebuild:
+  Address locale issues bug #361433, version bump bug #366087
 
   01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   firefox-bin-3.6.17.ebuild:
