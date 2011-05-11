@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/stumpwm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.4 2009/09/07 20:36:20 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.5 2011/05/11 08:58:21 xmw Exp $
+
+*stumpwm-0.9.7 (11 May 2011)
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> +stumpwm-0.9.7.ebuild:
+  Version bump (thanks to drg, bug 366769)
 
   07 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> stumpwm-0.9.2.ebuild:
   Migrate to EAPI 2 in order to get rid of built_with_use.
