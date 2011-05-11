@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.35 2011/04/05 08:24:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.36 2011/05/11 07:27:13 jlec Exp $
+
+  11 May 2011; Justin Lecher <jlec@gentoo.org> cns-1.2.1.ebuild,
+  cns-1.2.1-r5.ebuild, cns-1.2.1-r6.ebuild:
+  Remove unnessesary definition of g77on()
 
 *cns-1.2.1-r6 (05 Apr 2011)
 

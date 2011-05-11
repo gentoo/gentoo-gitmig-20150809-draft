@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.10 2010/12/17 18:22:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.11 2011/05/11 07:27:13 jlec Exp $
 
 inherit eutils toolchain-funcs versionator flag-o-matic
 
@@ -120,6 +120,7 @@ src_install() {
 		-e "s:CNS_MODULE \$CNS_SOLVE/modules:CNS_MODULE \$CNS_DATA/modules:g" \
 		-e "s:CNS_HELPLIB \$CNS_SOLVE/helplib:CNS_HELPLIB \$CNS_DATA/helplib:g" \
 		-e "s:\$CNS_SOLVE/bin/cns_info:\$CNS_DATA/cns_info:g" \
+		-e "/^g77on/d" \
 		"${S}"/cns_solve_env
 	# I don't entirely understand why the sh version requires a leading /
 	# for CNS_SOLVE and CNS_ROOT, but it does
@@ -132,6 +133,7 @@ src_install() {
 		-e "s:CNS_MODULE=\$CNS_SOLVE/modules:CNS_MODULE=\$CNS_DATA/modules:g" \
 		-e "s:CNS_HELPLIB=\$CNS_SOLVE/helplib:CNS_HELPLIB=\$CNS_DATA/helplib:g" \
 		-e "s:\$CNS_SOLVE/bin/cns_info:\$CNS_DATA/cns_info:g" \
+		-e "/^g77on/d" \
 		"${T}"/cns_solve_env_sh
 
 	# Get rid of setup stuff we don't need in the installed script
