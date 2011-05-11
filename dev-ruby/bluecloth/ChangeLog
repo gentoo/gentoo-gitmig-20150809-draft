@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.45 2011/04/20 08:19:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.46 2011/05/11 19:42:25 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> bluecloth-2.0.7.ebuild:
+  Stable on amd64 wrt bug #364215
 
   20 Apr 2011; Hans de Graaff <graaff@gentoo.org> bluecloth-2.0.7.ebuild:
   Drop ruby19 to create stable candidate.
