@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/binutils-apple
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.16 2010/11/18 19:37:05 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.17 2011/05/11 20:06:45 grobian Exp $
+
+*binutils-apple-4.0 (11 May 2011)
+*binutils-apple-3.2.6 (11 May 2011)
+
+  11 May 2011; Fabian Groffen <grobian@gentoo.org>
+  +binutils-apple-3.2.6.ebuild, +binutils-apple-4.0.ebuild,
+  +files/binutils-apple-4.0-as.patch, +files/binutils-apple-4.0-as-dir.patch,
+  +files/binutils-apple-4.0-no-oss-dir.patch, +files/ld64-123.2-Makefile,
+  +files/ld64-123.2-darwin8-no-mlong-branch-warning.patch,
+  +files/ld64-123.2-debug-backtrace.patch:
+  Bump to versions from Developer Tools 3.2.6 and 4.0. The latter cannot be
+  compiled due to missing libraries
 
 *binutils-apple-3.2.3-r2 (18 Nov 2010)
 
