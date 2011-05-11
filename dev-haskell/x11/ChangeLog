@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/x11
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.21 2010/07/01 19:59:30 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.22 2011/05/11 21:07:29 slyfox Exp $
+
+*x11-1.5.0.0 (11 May 2011)
+
+  11 May 2011; Sergei Trofimovich <slyfox@gentoo.org> -x11-1.2.ebuild,
+  -x11-1.2.1.ebuild, -x11-1.2.2.ebuild, -x11-1.4.0.ebuild, -x11-1.4.1.ebuild,
+  -x11-1.4.2.ebuild, -x11-1.4.5.ebuild, +x11-1.5.0.0.ebuild:
+  Version bump. Removed ancient ones.
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> x11-1.4.2.ebuild,
   x11-1.4.5.ebuild, x11-1.4.6.1.ebuild:
