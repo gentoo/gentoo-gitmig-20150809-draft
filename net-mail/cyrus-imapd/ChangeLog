@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.160 2011/05/10 14:37:07 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.161 2011/05/11 17:58:20 eras Exp $
+
+  11 May 2011; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.8.ebuild:
+  Fix configuring with mysql
 
   10 May 2011; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.8.ebuild:
   Fix home page

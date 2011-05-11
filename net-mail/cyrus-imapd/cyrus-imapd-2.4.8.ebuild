@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.2 2011/05/10 14:37:07 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.3 2011/05/11 17:58:20 eras Exp $
 
 EAPI=4
 
@@ -73,6 +73,11 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
+	if use mysql ; then
+		myconf=$(mysql_config --include)
+		myconf="--with-mysql-incdir=${myconf#-I}"
+	fi
 	econf \
 		--enable-murder \
 		--enable-netscapehack \
@@ -99,7 +104,8 @@ src_configure() {
 		$(use_with ssl openssl) \
 		$(use_with snmp) \
 		$(use_with tcpd libwrap) \
-		$(use_with zlib)
+		$(use_with zlib) \
+		${myconf}
 }
 
 src_install() {
