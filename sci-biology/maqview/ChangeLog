@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/maqview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/maqview/ChangeLog,v 1.5 2011/05/09 14:45:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maqview/ChangeLog,v 1.6 2011/05/11 19:19:47 angelos Exp $
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> maqview-0.2.5-r1.ebuild:
+  Stable on amd64 wrt bug #298094
 
   09 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> maqview-0.2.5-r1.ebuild:
   x86 stable wrt security bug #298094
