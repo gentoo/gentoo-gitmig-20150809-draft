@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-21.5.ebuild,v 1.3 2010/03/22 20:29:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/moodss-21.5.ebuild,v 1.4 2011/05/11 19:59:57 angelos Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/moodss/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="mysql perl python"
 
 DEPEND=">=dev-lang/tcl-8.4[threads]"
