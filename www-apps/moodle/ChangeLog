@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/moodle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.6 2011/03/10 15:04:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.7 2011/05/11 19:14:39 blueness Exp $
+
+*moodle-2.0.3 (11 May 2011)
+*moodle-1.9.12 (11 May 2011)
+
+  11 May 2011; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.12.ebuild,
+  +moodle-2.0.3.ebuild:
+  Version bumps address several security issues.
+  See http://docs.moodle.org/en/Moodle_1.9.12_release_notes
+  and http://docs.moodle.org/en/Moodle_2.0.3_release_notes
 
   10 Mar 2011; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.9.ebuild,
   -moodle-1.9.9-r1.ebuild, -moodle-1.9.10.ebuild, -moodle-2.0.1.ebuild:
