@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdebootstrap/cdebootstrap-0.5.7.ebuild,v 1.2 2011/04/13 10:46:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdebootstrap/cdebootstrap-0.5.7.ebuild,v 1.3 2011/05/11 11:33:42 tomka Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/dpkg
