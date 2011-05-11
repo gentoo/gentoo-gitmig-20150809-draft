@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.642 2011/04/10 20:10:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.643 2011/05/11 19:11:38 aballier Exp $
+
+  11 May 2011; Alexis Ballier <aballier@gentoo.org> xine-lib-1.1.19.ebuild,
+  +files/xine-lib-1.1.19-ffmpeg.patch:
+  fix build with ffmpeg/libav trunk
 
   10 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> xine-lib-1.1.19.ebuild:
   Move to virtual/ffmpeg from media-video/ffmpeg. Fixes bug #362083.

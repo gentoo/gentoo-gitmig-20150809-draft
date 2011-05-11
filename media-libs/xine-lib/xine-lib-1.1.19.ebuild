@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.19.ebuild,v 1.13 2011/04/10 20:10:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.19.ebuild,v 1.14 2011/05/11 19:11:38 aballier Exp $
 
 EAPI=3
 inherit eutils flag-o-matic toolchain-funcs multilib
@@ -90,7 +90,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${DISTDIR}"/${PN}-1.1.15-textrel-fix.patch \
-		"${FILESDIR}"/${P}-xvmc.patch
+		"${FILESDIR}"/${P}-xvmc.patch \
+		"${FILESDIR}"/${P}-ffmpeg.patch
 }
 
 src_configure() {
