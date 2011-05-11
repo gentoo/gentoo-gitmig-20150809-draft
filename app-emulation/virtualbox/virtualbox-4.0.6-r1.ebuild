@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6-r1.ebuild,v 1.2 2011/05/08 17:51:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6-r1.ebuild,v 1.3 2011/05/11 05:51:53 polynomial-c Exp $
 
 EAPI=4
 
@@ -355,6 +355,11 @@ pkg_postinst() {
 	elog "Starting with version 4.0.0, ${PN} has USB-1 support."
 	elog "For USB-2 support, PXE-boot ability and VRDP support please"
 	elog "emerge app-emulation/virtualbox-extpack-oracle package."
+	if [ -e "${ROOT}/etc/udev/rules.d/10-virtualbox.rules" ] ; then
+		elog ""
+		elog "Please remove \"${ROOT}/etc/udev/rules.d/10-virtualbox.rules\""
+		elog "or else USB in ${PN} won't work."
+	fi
 }
 
 pkg_postrm() {

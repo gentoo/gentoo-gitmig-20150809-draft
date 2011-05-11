@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.70 2011/05/08 17:51:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.71 2011/05/11 05:51:53 polynomial-c Exp $
+
+  11 May 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-4.0.6-r1.ebuild:
+  Show a warning when old udev rule is found.
 
   08 May 2011; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-4.0.6-r1.ebuild:
