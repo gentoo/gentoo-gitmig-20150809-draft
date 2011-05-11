@@ -1,7 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.26 2011/04/27 17:26:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.27 2011/05/11 18:34:51 grobian Exp $
 
+
+# Fabian Groffen <grobian@gentoo.org> (11 May 2011)
+# Uses the horribly broken build-system waf.  When hacked far enough,
+# produces a MH_OBJ with invalid install_name called _cairo.bundle.
+~dev-python/pycairo-1.10.0
 
 # Fabian Groffen <grobian@gentoo.org> (21 Apr 2010)
 # Requires thread-local storage (__thread), Darwin has pthread_getspecific

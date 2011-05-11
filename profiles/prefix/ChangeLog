@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.276 2011/05/02 19:36:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.277 2011/05/11 18:34:51 grobian Exp $
+
+  11 May 2011; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Mask pycairo-1.10, it uses waf, a broken by design build-system
 
   02 May 2011; Fabian Groffen <grobian@gentoo.org> bsd/package.mask,
   sunos/solaris/package.mask:
