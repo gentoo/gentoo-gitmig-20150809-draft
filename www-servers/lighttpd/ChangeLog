@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.244 2011/03/16 19:52:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.245 2011/05/12 18:15:56 hwoarang Exp $
+
+*lighttpd-1.4.28-r2 (12 May 2011)
+
+  12 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  +lighttpd-1.4.28-r2.ebuild, files/lighttpd.confd, files/lighttpd.initd:
+  Revbump to fix init script per bug #366811
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> lighttpd-1.4.28.ebuild:
   ppc/ppc64 stable wrt #349213
