@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/pointless
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.16 2011/04/10 14:50:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.17 2011/05/12 15:06:06 jlec Exp $
+
+*pointless-1.5.21 (12 May 2011)
+
+  12 May 2011; Justin Lecher <jlec@gentoo.org> -pointless-1.5.19.ebuild,
+  +pointless-1.5.21.ebuild:
+  1.5.19 is seriously broken, bump to 21: "specifically, files written in a
+  point group of lower symmetry than the apparent lattice group were not
+  sorted, but were flagged as sorted in the file. This leads to apparent
+  completeness in Scala > 100% and failure to merge properly"
 
 *pointless-1.5.19 (10 Apr 2011)
 
