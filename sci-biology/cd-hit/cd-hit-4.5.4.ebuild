@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cd-hit/cd-hit-4.5.1.ebuild,v 1.2 2011/05/12 06:27:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cd-hit/cd-hit-4.5.4.ebuild,v 1.1 2011/05/12 06:27:48 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 inherit flag-o-matic toolchain-funcs
 
-RELDATE="2011-01-31"
+RELDATE="2011-03-07"
 RELEASE="${PN}-v${PV}-${RELDATE}"
 
 DESCRIPTION="Clustering Database at High Identity with Tolerance"
@@ -33,10 +33,11 @@ src_prepare() {
 src_compile() {
 	local myconf=
 	use openmp && myconf="openmp=yes"
-	emake ${myconf} || die
+	emake ${myconf}
 }
 
 src_install() {
-	dobin cd-hit cd-hit-est cd-hit-2d cd-hit-est-2d cd-hit-div *.pl || die
-	dodoc ChangeLog cdhit-user-guide.pdf || die
+	dodir /usr/bin
+	emake PREFIX="${ED}/usr/bin" install
+	dodoc ChangeLog cdhit-user-guide.pdf
 }
