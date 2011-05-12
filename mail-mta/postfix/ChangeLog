@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.258 2011/05/11 18:21:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.259 2011/05/12 17:23:31 jer Exp $
+
+  12 May 2011; Jeroen Roovers <jer@gentoo.org> postfix-2.8.3.ebuild:
+  Marked ~hppa (bug #366525).
 
   11 May 2011; Markos Chandras <hwoarang@gentoo.org> postfix-2.7.4.ebuild:
   Stable on amd64 wrt bug #366605
