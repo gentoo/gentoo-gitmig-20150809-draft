@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>video</herd>
-  <herd>media-tv</herd>
-  <maintainer>
-    <email>media-video@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>media-tv@gentoo.org</email>
-  </maintainer>
-  <use>
-    <flag name="yv12">Enables support for the YV12 pixel format</flag>
-  </use>
+	<herd>video</herd>
+	<herd>media-tv</herd>
+	<maintainer>
+		<email>billie@gentoo.org</email>
+		<name>Daniel Pielmeier</name>
+	</maintainer>
+	<use>
+		<flag name="yv12">Enables support for the YV12 pixel format</flag>
+	</use> 
 </pkgmetadata>
