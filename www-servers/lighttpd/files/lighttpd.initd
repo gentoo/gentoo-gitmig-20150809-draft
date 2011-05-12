@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.14 2011/05/12 18:15:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.15 2011/05/12 18:25:04 hwoarang Exp $
 
 opts="reload graceful"
 
@@ -19,7 +19,7 @@ checkconfig() {
 	fi
 
 	if [ -z "${LIGHTTPD_PID}" ] ; then
-		ewarn "servber.pid-file variable in ${LIHTTPD_CONF}"
+		ewarn "servber.pid-file variable in ${LIGHTTPD_CONF}"
 		ewarn "is not set. Falling back to lighttpd.pid"
 		LIGHTTPD_PID="lighttpd.pid"
 	fi
