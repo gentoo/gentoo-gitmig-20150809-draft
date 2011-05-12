@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.15 2011/04/16 18:10:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.2.ebuild,v 1.16 2011/05/12 16:49:35 jer Exp $
 
 EAPI="4"
 FINDLIB_USE="ocaml"
@@ -14,7 +14,7 @@ SRC_URI="http://mielke.cc/brltty/releases/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86"
 IUSE="+api +beeper bluetooth +contracted-braille doc +fm gpm iconv icu
 		java +learn-mode +midi nls ocaml +pcm python usb +speech
 		tcl X"
