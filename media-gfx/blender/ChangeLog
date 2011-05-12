@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.193 2011/05/07 01:16:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.194 2011/05/12 14:37:29 sping Exp $
+
+  12 May 2011; Sebastian Pipping <sping@gentoo.org> blender-2.49b-r2.ebuild,
+  +files/blender-2.49b-insecure.desktop:
+  Add desktop file "Blender 2.4x (reduced security)"
 
   07 May 2011; Sebastian Pipping <sping@gentoo.org>
   files/blender-2.57-desktop.patch, files/blender.desktop:
