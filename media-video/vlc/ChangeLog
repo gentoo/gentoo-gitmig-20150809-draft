@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.716 2011/05/10 15:25:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.717 2011/05/12 14:01:16 aballier Exp $
+
+  12 May 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  update, again and again, the freetype patch
 
   10 May 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   bluray support needs libxml2
