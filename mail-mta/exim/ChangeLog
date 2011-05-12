@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.194 2011/05/10 16:32:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.195 2011/05/12 17:22:19 grobian Exp $
+
+  12 May 2011; Fabian Groffen <grobian@gentoo.org> exim-4.76.ebuild:
+  Allow for msmtp with optional mta support, by Christian Aistleitner, bug
+  #366899
 
 *exim-4.76 (10 May 2011)
 
