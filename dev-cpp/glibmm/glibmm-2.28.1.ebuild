@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.28.1.ebuild,v 1.1 2011/05/09 11:35:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.28.1.ebuild,v 1.2 2011/05/12 19:03:35 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -65,6 +65,6 @@ src_install() {
 
 	if use examples; then
 		find examples -type d -name '.deps' -exec rm -rf {} \; 2>/dev/null
-		dodoc examples
+		dodoc -r examples
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.164 2011/05/09 11:35:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.165 2011/05/12 19:03:35 pacho Exp $
+
+  12 May 2011; Pacho Ramos <pacho@gentoo.org> -glibmm-2.28.0.ebuild,
+  glibmm-2.28.1.ebuild:
+  Fix examples installation (bug #366691 by Erik Zeek). Remove old.
 
 *glibmm-2.28.1 (09 May 2011)
 
