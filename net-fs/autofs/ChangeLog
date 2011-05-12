@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.104 2011/04/30 18:20:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.105 2011/05/12 15:38:22 darkside Exp $
+
+  12 May 2011; Jeremy Olexa <darkside@gentoo.org> -autofs-4.1.4.ebuild:
+  QA: remove version with non-fetchable patchball
 
 *autofs-5.0.5-r3 (30 Apr 2011)
 
