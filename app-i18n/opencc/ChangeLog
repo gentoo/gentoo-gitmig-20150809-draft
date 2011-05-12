@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/opencc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.1 2010/09/20 02:46:56 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.2 2011/05/12 16:08:38 matsuu Exp $
+
+*opencc-0.2.0 (12 May 2011)
+
+  11 May 2011; MATSUU Takuto <matsuu@gentoo.org> +opencc-0.2.0.ebuild:
+  Version bumped. Added static-libs USE flag.
 
 *opencc-0.1.2 (20 Sep 2010)
 
