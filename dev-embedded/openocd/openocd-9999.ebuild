@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.13 2011/03/17 12:50:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.14 2011/05/12 18:51:10 hwoarang Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-		[[ ${PV} != "9999" ]]  && sed -i -e "/@include version.texi/d" doc/${PN}.texi
+		sed -i -e "/@include version.texi/d" doc/${PN}.texi || die
 		AT_NO_RECURSIVE=yes eautoreconf
 }
 
@@ -47,7 +47,6 @@ src_configure() {
 		myconf="${myconf} --enable-usbprog --enable-jlink --enable-rlink \
 			--enable-vsllink --enable-arm-jtag-ew"
 	fi
-	[[ ${PV} != "9999" ]] && myconf="${myconf} --enable-maintainer-mode"
 	# add explicitely the path to libftd2xx
 	use ftd2xx && ! use ftdi && LDFLAGS="${LDFLAGS} -L/opt/$(get_libdir)"
 	econf \
