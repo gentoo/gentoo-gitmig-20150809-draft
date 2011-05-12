@@ -1,6 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.8 2011/04/25 20:43:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.9 2011/05/12 13:13:42 tupone Exp $
+PYTHON_DEPEND="2"
 
 EAPI=3
 inherit eutils python games
@@ -21,16 +22,24 @@ DEPEND=""
 
 S=${WORKDIR}/${P}/jools
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd "${S}"
-	echo "MEDIAROOT = \"${GAMES_DATADIR}/${PN}\"" > config.py
-	cd music
+	cd "${S}"/music
 	unpack ${MUS_P}.tar.gz
 }
 
+src_prepare() {
+	echo "MEDIAROOT = \"${GAMES_DATADIR}/${PN}\"" > config.py
+	python_convert_shebangs -r 2 .
+}
+
 src_install() {
-	games_make_wrapper ${PN} "python ./__init__.py" "$(games_get_libdir)"/${PN}
+	games_make_wrapper ${PN} "$(PYTHON) ./__init__.py" "$(games_get_libdir)"/${PN}
 	insinto "$(games_get_libdir)"/${PN}
 	doins *.py || die "doins py failed"
 	insinto "${GAMES_DATADIR}"/${PN}
