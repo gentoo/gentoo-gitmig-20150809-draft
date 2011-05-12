@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.24 2011/05/10 20:04:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.25 2011/05/12 19:09:42 grobian Exp $
+
+  12 May 2011; Fabian Groffen <grobian@gentoo.org> qt-declarative-4.7.3.ebuild:
+  Marked ~ppc-macos
 
 *qt-declarative-4.7.3 (10 May 2011)
 
