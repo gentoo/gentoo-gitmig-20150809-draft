@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.825 2011/05/11 19:43:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.826 2011/05/12 21:05:58 zmedico Exp $
+
+*portage-2.2.0_alpha33 (12 May 2011)
+
+  12 May 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha33.ebuild:
+  2.2.0_alpha33 version bump. This includes all of the fixes in
+  portage-2.1.9.49. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.9.49 (12 May 2011)
+
+  12 May 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.9.49.ebuild:
+  2.1.9.49 version bump. This fixes bug #366939 (extract binpkg
+  environment.bz2 for pkg_pretend). Bug #358927 tracks all bugs fixed
+  since portage-2.1.9.42.
 
   11 May 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.46.ebuild,
   -portage-2.1.9.47.ebuild, -portage-2.2.0_alpha31.ebuild:
