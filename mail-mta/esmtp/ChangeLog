@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/esmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.26 2011/03/28 10:42:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.27 2011/05/12 10:30:53 eras Exp $
+
+  12 May 2011; Eray Aslan <eras@gentoo.org> esmtp-1.2.ebuild:
+  add flex to DEPEND - bug #221389
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> esmtp-0.5.0-r1.ebuild:
   mailwrapper USE flag is gone. Remove if use mailwrapper..fi construct from
