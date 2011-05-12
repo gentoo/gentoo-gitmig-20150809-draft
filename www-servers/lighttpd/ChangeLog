@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.245 2011/05/12 18:15:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.246 2011/05/12 18:35:31 hwoarang Exp $
+
+  12 May 2011; Markos Chandras <hwoarang@gentoo.org> files/lighttpd.initd:
+  Modify init script to fallback to the correct location
 
 *lighttpd-1.4.28-r2 (12 May 2011)
 
