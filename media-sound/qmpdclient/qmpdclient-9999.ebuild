@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-9999.ebuild,v 1.5 2011/04/30 16:19:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-9999.ebuild,v 1.6 2011/05/12 12:57:51 scarabeus Exp $
 
 EAPI=4
 inherit fdo-mime cmake-utils git-2
@@ -22,9 +22,10 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
+DOCS=( AUTHORS README THANKSTO Changelog )
+
 src_configure() {
-	DOCS=( AUTHORS README THANKSTO Changelog )
-	mycmakeargs=( "-DVERSION=${PV}" )
+	local mycmakeargs=( "-DVERSION=${PV}" )
 	cmake-utils_src_configure
 }
 
