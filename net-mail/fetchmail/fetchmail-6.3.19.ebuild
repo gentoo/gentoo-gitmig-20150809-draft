@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.19.ebuild,v 1.4 2011/05/02 15:47:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.19.ebuild,v 1.5 2011/05/12 09:36:24 eras Exp $
 
 EAPI=3
 
@@ -25,6 +25,7 @@ RDEPEND="hesiod? ( net-dns/hesiod )
 	nls? ( virtual/libintl )
 	elibc_FreeBSD? ( sys-libs/e2fsprogs-libs )"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
