@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r1.ebuild,v 1.5 2011/05/10 01:44:23 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r1.ebuild,v 1.6 2011/05/12 12:57:53 mr_bones_ Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -157,7 +157,7 @@ src_configure() {
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	if use crypt ; then
-		# omni.jar breaks enigmail 
+		# omni.jar breaks enigmail
 		mozconfig_annotate '' --enable-chrome-format=jar
 	fi
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
