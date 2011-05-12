@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-4.3.ebuild,v 1.13 2010/11/13 18:43:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-4.3.ebuild,v 1.14 2011/05/12 06:29:53 eras Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit multilib
 
 DESCRIPTION="Kerberos 5 PAM Authentication Module"
 HOMEPAGE="http://www.eyrie.org/~eagle/software/pam-krb5"
-SRC_URI="http://archives.eyrie.org/software/kerberos/pam-krb5-${PV}.tar.gz"
+SRC_URI="http://archives.eyrie.org/software/ARCHIVE/pam-krb5/pam-krb5-${PV}.tar.gz"
 
 LICENSE="|| ( BSD-2 GPL-2 )"
 SLOT="0"
