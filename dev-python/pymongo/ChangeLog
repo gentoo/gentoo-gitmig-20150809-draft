@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.2 2011/04/26 10:03:14 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.3 2011/05/12 09:22:56 ultrabug Exp $
+
+*pymongo-1.11 (12 May 2011)
+
+  12 May 2011; Ultrabug <ultrabug@gentoo.org> +pymongo-1.11.ebuild:
+  Version bump, thanks to Mohamed Elmi Guessod for spotting.
 
   26 Apr 2011; Ultrabug <ultrabug@gentoo.org> pymongo-1.10.1.ebuild:
   Add a warning for test phase, wrt #364671.
