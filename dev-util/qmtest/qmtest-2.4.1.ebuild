@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/qmtest-2.4.1.ebuild,v 1.4 2011/04/07 19:34:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/qmtest-2.4.1.ebuild,v 1.5 2011/05/12 00:22:39 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,4 +29,8 @@ pkg_setup() {
 src_install() {
 	distutils_src_install
 	find "${D}" -name config.py -print0 | xargs -0 sed -i "s:${D}:/usr:"
+	dodir /usr/share/doc/${PF}
+	rm -r "${D}"/usr/share/doc/${PN}/{COPYING,LICENSE.OPL} || die
+	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${PF} || die
+	rm -r "${D}"/usr/share/doc/${PN} || die
 }
