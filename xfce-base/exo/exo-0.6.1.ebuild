@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.1.ebuild,v 1.1 2011/05/09 18:15:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.1.ebuild,v 1.2 2011/05/12 09:37:16 angelos Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -34,6 +34,7 @@ pkg_setup() {
 
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--disable-dependency-tracking
 		--disable-static
 		$(use_enable python)
 		$(xfconf_use_debug)
