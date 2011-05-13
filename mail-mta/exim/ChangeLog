@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.196 2011/05/12 18:15:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.197 2011/05/13 17:48:20 grobian Exp $
+
+  13 May 2011; Fabian Groffen <grobian@gentoo.org> exim-4.76.ebuild:
+  Fix patching when USE=-dsn
 
   12 May 2011; Fabian Groffen <grobian@gentoo.org> exim-4.76.ebuild,
   +files/exim-4.76-dsn.patch:
