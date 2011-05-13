@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.222 2011/04/27 08:36:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.223 2011/05/13 04:57:57 ford_prefect Exp $
+
+*pulseaudio-0.9.22-r2 (13 May 2011)
+
+  13 May 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  -pulseaudio-0.9.22-r1.ebuild, +pulseaudio-0.9.22-r2.ebuild,
+  +files/pulseaudio-0.9.22-xcb-atom-2.patch, pulseaudio-9999.ebuild:
+  Bump to 0.9.22-r2 since we need one more patch for newer xcb-util (fixes
+  segv+leaks). Remove -r1 since the first patch is not enough.
 
   27 Apr 2011; Christoph Mende <angelos@gentoo.org> pulseaudio-0.9.22.ebuild:
   Restrict xcb-util dep to <0.3.8
