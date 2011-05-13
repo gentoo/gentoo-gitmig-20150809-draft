@@ -1,6 +1,15 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.19 2011/04/11 13:50:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.20 2011/05/13 22:17:48 voyageur Exp $
+
+*splix-2.0.0_p20110219-r1 (13 May 2011)
+
+  13 May 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/splix-1.1.0-fix-makefile.patch, -splix-1.1.1.ebuild,
+  splix-2.0.0.ebuild, splix-2.0.0_p20110219.ebuild,
+  +splix-2.0.0_p20110219-r1.ebuild:
+  Set PSTORASTER to gstoraster for >=ghostscript-gpl-9.02, force older version
+  in other ebuilds, thanks everyone in bug #367071. Also remove 1.x version
 
   11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> splix-2.0.0.ebuild:
   x86 stable wrt bug #360567

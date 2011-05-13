@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0_p20110219.ebuild,v 1.1 2011/03/29 10:04:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-2.0.0_p20110219.ebuild,v 1.2 2011/05/13 22:17:48 voyageur Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+jbig"
 
-DEPEND="|| ( >=net-print/cups-1.4.0 net-print/cupsddk )
+DEPEND="<app-text/ghostscript-gpl-9.02
+	|| ( >=net-print/cups-1.4.0 net-print/cupsddk )
 	jbig? ( media-libs/jbigkit )"
 RDEPEND="${DEPEND}"
 
