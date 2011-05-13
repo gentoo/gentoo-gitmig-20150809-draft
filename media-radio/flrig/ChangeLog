@@ -1,0 +1,10 @@
+# ChangeLog for media-radio/flrig
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/ChangeLog,v 1.1 2011/05/13 07:03:37 tomjbe Exp $
+
+*flrig-1.1.3 (13 May 2011)
+
+  13 May 2011; Thomas Beierlein <tomjbe@gentoo.org> +flrig-1.1.3.ebuild,
+  +metadata.xml:
+  Initial ebuild. Based on bug #355471. Thanks gomezloper@msn.com
+
