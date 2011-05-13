@@ -1,0 +1,11 @@
+# ChangeLog for x11-drivers/xf86-input-mtrack
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mtrack/ChangeLog,v 1.1 2011/05/13 00:22:41 naota Exp $
+
+*xf86-input-mtrack-0.1.1 (13 May 2011)
+
+  13 May 2011; Naohiro Aota <naota@gentoo.org> +xf86-input-mtrack-0.1.1.ebuild,
+  +files/xf86-input-mtrack-0.1.1-autoconf.patch:
+  New ebuild x11-drivers/xf86-input-mtrack-0.1.1 first written by Ryan
+  Bourgeois and improved by me. Bug #364033
+
