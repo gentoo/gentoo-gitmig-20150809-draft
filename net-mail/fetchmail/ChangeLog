@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.201 2011/05/12 09:36:24 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.202 2011/05/13 14:16:18 jer Exp $
+
+  13 May 2011; Jeroen Roovers <jer@gentoo.org> fetchmail-6.3.19.ebuild:
+  Stable for HPPA (bug #364849).
 
   12 May 2011; Eray Aslan <eras@gentoo.org> fetchmail-6.3.19.ebuild:
   Add flex to depend - bug #221399
