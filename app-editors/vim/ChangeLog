@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.374 2011/05/07 18:19:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.375 2011/05/13 00:25:28 lack Exp $
+
+*vim-7.3.189 (12 May 2011)
+
+  12 May 2011; Jim Ramsay <lack@gentoo.org> +vim-7.3.189.ebuild:
+  Version bump: 7.3.189 is released
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> vim-7.3.135.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #364807

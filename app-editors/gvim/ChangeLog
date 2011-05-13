@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.341 2011/05/07 18:38:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.342 2011/05/13 00:26:14 lack Exp $
+
+*gvim-7.3.189 (12 May 2011)
+
+  12 May 2011; Jim Ramsay <lack@gentoo.org> +gvim-7.3.189.ebuild:
+  Version bump: 7.3.189 is released
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> gvim-7.3.135.ebuild:
   alpha/arm/ia64/sparc stable wrt #364807

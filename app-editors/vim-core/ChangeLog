@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.360 2011/05/07 18:13:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.361 2011/05/13 00:23:46 lack Exp $
+
+*vim-core-7.3.189 (12 May 2011)
+
+  12 May 2011; Jim Ramsay <lack@gentoo.org> +vim-core-7.3.189.ebuild:
+  Version bump: 7.3.189 is released
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> vim-core-7.3.135.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #364807
