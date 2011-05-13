@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.310 2011/04/28 22:09:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.311 2011/05/13 11:46:33 chainsaw Exp $
+
+*asterisk-1.8.4 (13 May 2011)
+
+  13 May 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.4.ebuild:
+  Build additional utilities like smsq as suggested by Nico Baggus in bug
+  #358001. Fix up dodoc call and drop broken misdn support, bugs #360141 &
+  #360143 by Agostino "ago" Sarubbo. Apply patch for upstream bug #19192, as
+  diagnosed by Stefan "stkn" Knoblich.
 
   28 Apr 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.17.2.ebuild:
   Removed vulnerable ebuild for CVE-2011-{1507,1599}, security bug #364887.
