@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/cucumber-rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.13 2011/01/10 18:29:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.14 2011/05/13 07:15:33 graaff Exp $
+
+*cucumber-rails-0.4.1 (13 May 2011)
+
+  13 May 2011; Hans de Graaff <graaff@gentoo.org> +cucumber-rails-0.4.1.ebuild:
+  Version bump.
+
+  22 Apr 2011; Hans de Graaff <graaff@gentoo.org>
+  cucumber-rails-0.3.2-r1.ebuild:
+  Fix cucumber dependency to match gemspec, now that we have this version in
+  the tree.
 
   10 Jan 2011; Hans de Graaff <graaff@gentoo.org>
   cucumber-rails-0.3.2-r1.ebuild:
