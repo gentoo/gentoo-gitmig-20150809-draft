@@ -5,14 +5,18 @@ module Gem
       ConfigMap[:sitelibdir].gsub('site_ruby', 'gems')
     end
 
+    def local_dir
+      portage_gems_dir.gsub('@GENTOO_PORTAGE_EPREFIX@/usr', '@GENTOO_PORTAGE_EPREFIX@/usr/local')
+    end
+ 
     undef :default_dir
     def default_dir
-      portage_gems_dir.gsub('@GENTOO_PORTAGE_EPREFIX@/usr', '@GENTOO_PORTAGE_EPREFIX@/usr/local')
+      Process.euid == 0 ? local_dir : user_dir
     end
 
     undef :default_path
     def default_path
-      [user_dir, default_dir, portage_gems_dir]
+      [user_dir, local_dir, portage_gems_dir]
     end
 
     undef :default_bindir
