@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.0.ebuild,v 1.1 2011/04/21 10:32:42 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.0.ebuild,v 1.2 2011/05/13 11:12:46 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -66,7 +66,7 @@ RDEPEND=">=virtual/jdk-1.6
 	dev-java/jsr250:0
 	dev-java/jta:0
 	dev-java/jtidy:0
-	dev-java/maven-bin:3.0
+	>=dev-java/maven-bin-3.0.3:3.0
 	dev-java/saaj:0
 	dev-java/stax-ex:0
 	dev-java/xmlstreambuffer:0"
