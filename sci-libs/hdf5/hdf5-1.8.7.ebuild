@@ -1,16 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.5_p1-r1.ebuild,v 1.1 2010/11/05 17:29:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.7.ebuild,v 1.1 2011/05/13 20:01:44 xarthisius Exp $
 
 EAPI=2
-
-MY_P=${P/_p/-patch}
 
 inherit autotools eutils
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
-SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${MY_P}.tar.bz2"
+SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${P}.tar.bz2"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
@@ -26,8 +24,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	sys-process/time"
 
-S=${WORKDIR}/${MY_P}
-
 pkg_setup() {
 	if use mpi; then
 		if has_version 'sci-libs/hdf5[-mpi]'; then
@@ -37,10 +33,6 @@ pkg_setup() {
 		if use cxx; then
 			ewarn "Simultaneous mpi and cxx is not supported by ${PN}"
 			ewarn "Will disable cxx interface"
-		fi
-		export CC=mpicc
-		if use fortran; then
-			export FC=mpif90
 		fi
 	elif has_version 'sci-libs/hdf5[mpi]'; then
 		ewarn "Installing hdf5 with mpi disabled while having hdf5 installed with mpi enabled may fail."
@@ -91,6 +83,7 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--enable-deprecated-symbols \
 		--enable-shared \
+		--disable-silent-rules \
 		$(use_enable debug debug all) \
 		$(use_enable fortran) \
 		$(use_enable mpi parallel) \
