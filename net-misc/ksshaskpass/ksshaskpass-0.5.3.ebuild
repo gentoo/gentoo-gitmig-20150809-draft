@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksshaskpass/ksshaskpass-0.5.3.ebuild,v 1.1 2011/01/12 23:34:51 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksshaskpass/ksshaskpass-0.5.3.ebuild,v 1.2 2011/05/13 09:44:18 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit kde4-base
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde-apps.org/content/show.php?content=50971&forumpage=0"
 SRC_URI="http://www.kde-apps.org/CONTENT/content-files/50971-${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug"
 
