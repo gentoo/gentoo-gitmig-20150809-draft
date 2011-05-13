@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12765 2011/05/13 07:38:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12766 2011/05/13 10:23:07 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -148,8 +148,8 @@ x11-themes/camaelon-themes
 =net-analyzer/argus-clients-3.0.5*
 
 # Luca Barbato <lu_zero@gentoo.org> (19 Apr 2011)
-# Masked for testing, deprecated api removed since this version
-=media-video/libav-0.7_beta1
+# Masked for testing, breaks reverse dependencies 
+=media-video/libav-0.7_beta2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (19 Apr 2011)
 # Starting from version 2.6.0-rc1 it now uses "proper" autotools, but
