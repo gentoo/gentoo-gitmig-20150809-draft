@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7_beta1.ebuild,v 1.1 2011/04/19 15:27:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7_beta2.ebuild,v 1.1 2011/05/13 10:23:37 scarabeus Exp $
 
 EAPI=4
 
 if [[ ${PV} == *9999 ]] ; then
-	SCM="git"
+	SCM="git-2"
 	EGIT_REPO_URI="git://git.libav.org/libav.git"
 	[[ ${PV%9999} != "" ]] && EGIT_BRANCH="release/${PV%.9999}"
 fi
@@ -18,8 +18,8 @@ if [[ ${PV} == *9999 ]] ; then
 	SRC_URI=""
 elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
-else # Official Prerelease
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
+else # Official release
+	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
 
 LICENSE="LGPL-2 gpl? ( GPL-3 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.10 2011/04/20 11:01:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.11 2011/05/13 10:23:37 scarabeus Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ if [[ ${PV} == *9999 ]] ; then
 elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
 else # Official release
-	SRC_URI="http://${PN}.org/releases/${P}.tar.bz2"
+	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
 
 LICENSE="LGPL-2 gpl? ( GPL-3 )"
