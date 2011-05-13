@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.496 2011/05/12 15:05:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.497 2011/05/13 19:03:43 armin76 Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  13 May 2011; Raúl Porcel <armin76@gentoo.org> baselayout-2.0.2.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #295613
 
   12 May 2011; Joseph Jezak <josejx@gentoo.org> baselayout-2.0.2.ebuild:
   Marked ppc/ppc64 stable for bug #295613.
