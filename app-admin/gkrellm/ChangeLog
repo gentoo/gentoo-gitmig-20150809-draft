@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.181 2011/05/11 19:23:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.182 2011/05/13 14:55:47 tomka Exp $
+
+  13 May 2011; Thomas Kahle <tomka@gentoo.org> gkrellm-2.3.5.ebuild:
+  x86 stable per bug 356973
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> gkrellm-2.3.5.ebuild:
   Stable on amd64 wrt bug #356973
