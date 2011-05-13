@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.14 2011/05/09 22:18:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.15 2011/05/13 09:18:20 scarabeus Exp $
+
+  13 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> kajongg-4.6.2.ebuild,
+  kajongg-4.6.3.ebuild:
+  Add missing dependency over libkmahjongg. Fixes bug #366977.
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kajongg-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033

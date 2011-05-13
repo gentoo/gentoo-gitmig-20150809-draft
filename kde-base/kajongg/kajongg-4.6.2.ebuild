@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/kajongg-4.6.2.ebuild,v 1.4 2011/05/09 22:18:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/kajongg-4.6.2.ebuild,v 1.5 2011/05/13 09:18:20 scarabeus Exp $
 
 EAPI=3
 
@@ -18,5 +18,6 @@ DEPEND="
 	$(add_kdebase_dep pykde4)
 "
 RDEPEND="${DEPEND}
+	$(add_kdebase_dep libkmahjongg)
 	>=dev-python/twisted-8.2.0
 "
