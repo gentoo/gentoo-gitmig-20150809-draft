@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-timidity
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-timidity/ChangeLog,v 1.15 2009/11/06 20:59:29 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-timidity/ChangeLog,v 1.16 2011/05/13 18:42:51 hwoarang Exp $
+
+*eselect-timidity-20110513 (13 May 2011)
+
+  13 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  +eselect-timidity-20110513.ebuild:
+  Version bump. Include fluid-soundfont target. Bug #272037. Thanks to Mike
+  MacDonald <crazymykl@gmail.com> for the patch
 
 *eselect-timidity-20091106 (06 Nov 2009)
 
