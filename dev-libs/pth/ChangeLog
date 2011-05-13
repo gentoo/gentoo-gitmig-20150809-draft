@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.65 2011/05/11 18:21:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.66 2011/05/13 15:35:48 jer Exp $
+
+  13 May 2011; Jeroen Roovers <jer@gentoo.org> pth-2.0.7-r3.ebuild:
+  Stable for HPPA (bug #366665).
 
   11 May 2011; Markos Chandras <hwoarang@gentoo.org> pth-2.0.7-r3.ebuild:
   Stable on amd64 wrt bug #366665

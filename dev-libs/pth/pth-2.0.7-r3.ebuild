@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.7-r3.ebuild,v 1.2 2011/05/11 18:21:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.7-r3.ebuild,v 1.3 2011/05/13 15:35:48 jer Exp $
 
 inherit eutils fixheadtails libtool flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND=""
