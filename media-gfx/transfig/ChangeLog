@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.64 2011/05/01 09:58:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.65 2011/05/13 14:48:08 pva Exp $
+
+  13 May 2011; Peter Volkov <pva@gentoo.org>
+  +files/transfig-3.2.5d-fig2mpdf.patch:
+  Revert patch that is still in use, bug #366041, thank Don A. Bailey for
+  report.
 
 *transfig-3.2.5d-r1 (01 May 2011)
 
