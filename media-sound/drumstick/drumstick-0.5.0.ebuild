@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.4 2011/02/16 22:26:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.5 2011/05/13 09:10:35 scarabeus Exp $
 
-EAPI=2
-inherit cmake-utils fdo-mime gnome2-utils
+EAPI=4
+
+inherit base cmake-utils fdo-mime gnome2-utils
 
 DESCRIPTION="Qt4/C++ wrapper for ALSA sequencer"
 HOMEPAGE="http://drumstick.sourceforge.net/"
@@ -12,27 +13,40 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="dbus"
+IUSE="dbus doc"
 
 RDEPEND="media-libs/alsa-lib
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
+	x11-misc/shared-mime-info
 	dbus? ( x11-libs/qt-dbus:4 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	doc? (
+		app-doc/doxygen
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt
+	)
+"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
+
+PATCHES=(
+	"${FILESDIR}"/${PV}-doc_automagicness.patch
+)
 
 src_prepare() {
 	sed -i \
 		-e '/CMAKE_EXE_LINKER_FLAGS/d' \
 		CMakeLists.txt || die
+	base_src_prepare
 }
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		$(cmake-utils_use_use dbus)
-		)
+		$(cmake-utils_use_with doc)
+	)
 
 	cmake-utils_src_configure
 }
