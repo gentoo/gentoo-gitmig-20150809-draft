@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.361 2011/05/13 08:20:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.362 2011/05/13 10:20:21 phajdan.jr Exp $
+
+*chromium-13.0.761.0 (13 May 2011)
+
+  13 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-13.0.761.0.ebuild:
+  Version bump for dev channel release. Native Client is temporarily disabled
+  wrt bug #366413.
 
 *chromium-12.0.742.53 (13 May 2011)
 
