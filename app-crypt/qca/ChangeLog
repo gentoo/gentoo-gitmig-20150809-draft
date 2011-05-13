@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.86 2011/05/11 07:56:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.87 2011/05/13 14:23:40 jer Exp $
+
+  13 May 2011; Jeroen Roovers <jer@gentoo.org> qca-2.0.3.ebuild:
+  Stable for HPPA (bug #364405).
 
   11 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> qca-2.0.3.ebuild:
   x86 stable wrt bug #364405
