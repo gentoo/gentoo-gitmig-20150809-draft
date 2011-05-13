@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-1.2.ebuild,v 1.3 2011/05/12 10:30:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-1.2.ebuild,v 1.4 2011/05/13 06:52:50 eras Exp $
 
 DESCRIPTION="esmtp is a user configurable relay-only Mail Transfer Agent (MTA) with a sendmail compatible syntax"
 HOMEPAGE="http://esmtp.sourceforge.net/"
@@ -30,5 +30,9 @@ RDEPEND="net-libs/libesmtp
 
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	dodoc AUTHORS ChangeLog NEWS README TODO sample.esmtprc || die
+}
+
+pkg_postinst() {
+	elog "A sample esmtprc file has been installed in /usr/share/doc/${P}"
 }
