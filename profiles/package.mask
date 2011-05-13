@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12768 2011/05/13 17:47:26 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12769 2011/05/13 19:37:19 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -399,10 +399,6 @@ www-client/chromium-bin
 # See bug #348644.
 =games-arcade/monster-masher-1.8.1
 =games-puzzle/gtetrinet-0.7.11
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (21 Feb 2011)
-# Python 3.2 masked until sufficient number of reverse dependencies is fixed.
-=dev-lang/python-3.2*
 
 # Christian Faulhammer <fauli@gentoo.org> (12 Feb 2011)
 # dev-vcs/bzr-gtk, dev-vcs/bzr-rewrite and dev-vcs/bzr-svn are not

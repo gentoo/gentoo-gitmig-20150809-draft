@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5365 2011/05/13 17:47:26 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5366 2011/05/13 19:37:19 arfrever Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  package.mask:
+  Unmask Python 3.2.
 
   13 May 2011; Nathan Phillip Brink <binki@gentoo.org> package.mask:
   Mask net-irc/oer and net-irc/oer-mysql for removal due to no more support
