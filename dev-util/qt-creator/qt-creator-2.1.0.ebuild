@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0.ebuild,v 1.3 2011/05/09 23:16:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.1.0.ebuild,v 1.4 2011/05/13 10:39:50 hwoarang Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -23,6 +23,7 @@ QTVER="4.7.1:4"
 DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
 	>=x11-libs/qt-sql-${QTVER}
 	>=x11-libs/qt-svg-${QTVER}
+	debug? ( >=x11-libs/qt-test-${QTVER} )
 	!qml? ( >=x11-libs/qt-gui-${QTVER} )
 	qml? (
 		>=x11-libs/qt-declarative-${QTVER}[private-headers]
