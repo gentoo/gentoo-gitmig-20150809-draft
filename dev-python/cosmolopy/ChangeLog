@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cosmolopy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.1 2011/05/03 22:12:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.2 2011/05/13 04:46:10 bicatali Exp $
+
+*cosmolopy-0.1.103 (13 May 2011)
+
+  13 May 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +cosmolopy-0.1.103.ebuild:
+  Version bump
 
 *cosmolopy-0.1.102 (03 May 2011)
 
