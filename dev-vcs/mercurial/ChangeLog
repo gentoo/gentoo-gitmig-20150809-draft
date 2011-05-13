@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.44 2011/05/04 09:04:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.45 2011/05/13 07:19:08 djc Exp $
+
+*mercurial-1.8.3 (13 May 2011)
+
+  13 May 2011; Dirkjan Ochtman <djc@gentoo.org> +mercurial-1.8.3.ebuild:
+  Version bump to 1.8.3 (bug 366837).
 
   04 May 2011; Fabian Groffen <grobian@gentoo.org> mercurial-1.8.2.ebuild:
   Marked ~x64-freebsd
