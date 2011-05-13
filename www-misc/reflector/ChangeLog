@@ -1,0 +1,10 @@
+# ChangeLog for www-misc/reflector
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/reflector/ChangeLog,v 1.1 2011/05/13 18:28:19 binki Exp $
+
+*reflector-2011.05.13.1 (13 May 2011)
+
+  13 May 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +reflector-2011.05.13.1.ebuild, +metadata.xml:
+  Add new ebuild for www-misc/reflector-2011.05.13.1 fixing bug 317831.
+
