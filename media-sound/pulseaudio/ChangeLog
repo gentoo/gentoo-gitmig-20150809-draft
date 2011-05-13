@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.223 2011/05/13 04:57:57 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.224 2011/05/13 05:16:31 ford_prefect Exp $
+
+  13 May 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
+  Migrate live ebuild to git-2.eclass, clean out some deps.
 
 *pulseaudio-0.9.22-r2 (13 May 2011)
 
