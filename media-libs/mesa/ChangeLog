@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.336 2011/05/13 05:05:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.337 2011/05/13 14:44:29 jer Exp $
+
+  13 May 2011; Jeroen Roovers <jer@gentoo.org> mesa-7.10.2.ebuild:
+  Stable for HPPA (bug #363965).
 
   13 May 2011; Markus Meier <maekke@gentoo.org> mesa-7.10.2.ebuild:
   arm stable, bug #363965
