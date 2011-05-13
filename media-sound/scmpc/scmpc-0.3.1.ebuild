@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.3.0.ebuild,v 1.3 2011/05/12 18:03:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.3.1.ebuild,v 1.1 2011/05/13 16:19:58 angelos Exp $
 
 EAPI=4
 
@@ -19,9 +19,7 @@ RDEPEND="dev-libs/glib:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-pkg_setup() {
-	DOCS="AUTHORS NEWS README scmpc.conf.example"
-}
+DOCS=( AUTHORS ChangeLog NEWS README scmpc.conf.example )
 
 src_install() {
 	default
@@ -30,8 +28,4 @@ src_install() {
 	insinto /etc
 	insopts -m600
 	newins scmpc.conf.example scmpc.conf
-}
-
-pkg_postinst() {
-	elog "Note: This version of scmpc requires mpd-0.14"
 }
