@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.5.0.ebuild,v 1.1 2011/02/02 07:17:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.7.0-r1.ebuild,v 1.1 2011/05/13 10:05:57 radhermit Exp $
 
-EAPI=3
+EAPI=4
 
-inherit wxwidgets
+inherit wxwidgets autotools
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -18,7 +18,7 @@ IUSE="bzip2 debug lzo pch wxwidgets"
 RDEPEND="
 	>=dev-libs/libebml-1.2.0
 	>=media-libs/libmatroska-1.1.0
-	dev-libs/boost
+	>=dev-libs/boost-1.36.0
 	dev-libs/expat
 	media-libs/flac
 	media-libs/libogg
@@ -32,6 +32,14 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-ruby/rake
 "
+
+src_prepare() {
+	# Disable automagic curl dep used for online update checking
+	sed -i -e '/curl/d' configure.in
+	export CURL_CFLAGS="" CURL_LIBS=""
+
+	eautoreconf
+}
 
 src_configure() {
 	local myconf
@@ -64,6 +72,6 @@ src_install() {
 	# Don't run strip while installing stuff, leave to portage the job.
 	DESTDIR="${D}" rake install || die
 
-	dodoc AUTHORS ChangeLog README TODO || die
-	doman doc/man/*.1 || die
+	dodoc AUTHORS ChangeLog README TODO
+	doman doc/man/*.1
 }
