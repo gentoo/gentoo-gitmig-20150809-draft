@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.415 2011/04/26 20:09:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.416 2011/05/13 04:36:22 maekke Exp $
+
+  13 May 2011; Markus Meier <maekke@gentoo.org> emacs-23.3.ebuild:
+  arm stable, bug #363633
 
   26 Apr 2011; Christoph Mende <angelos@gentoo.org> emacs-23.3.ebuild:
   Stable on amd64 wrt bug #363633
