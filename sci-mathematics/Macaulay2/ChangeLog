@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.22 2011/05/10 20:54:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.23 2011/05/14 14:34:21 tomka Exp $
+
+  14 May 2011; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4.ebuild:
+  x86 stable per bug 366379
 
   10 May 2011; Markos Chandras <hwoarang@gentoo.org> Macaulay2-1.4.ebuild:
   Stable on amd64 wrt bug #366379
