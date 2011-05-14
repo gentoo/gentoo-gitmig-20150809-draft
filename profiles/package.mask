@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12771 2011/05/14 12:15:43 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12772 2011/05/14 23:16:24 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -247,10 +247,6 @@ app-crypt/ekey-egd-linux
 # Ryan Hill <dirtyepic@gentoo.org> (02 Apr 2011)
 # Masked for testing
 >=sys-devel/gcc-4.6.0
-
-# Sebastien Fabbro <bicatali@gentoo.org> (28 Mar 2011)
-# Still beta
-=dev-python/numpy-1.6*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (28 Mar 2011)
 #  on behalf of QA team
