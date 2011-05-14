@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-check_fail2ban
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/ChangeLog,v 1.3 2010/05/30 06:31:01 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/ChangeLog,v 1.4 2011/05/14 06:28:43 hollow Exp $
+
+  14 May 2011; Benedikt Böhm <hollow@gentoo.org>
+  nagios-check_fail2ban-3.ebuild:
+  change HOMEPAGE and SRC_URI to github
 
 *nagios-check_fail2ban-3 (30 May 2010)
 

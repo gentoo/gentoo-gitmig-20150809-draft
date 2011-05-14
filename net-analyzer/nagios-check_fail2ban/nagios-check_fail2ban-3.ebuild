@@ -1,14 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/nagios-check_fail2ban-3.ebuild,v 1.1 2010/05/30 06:31:01 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/nagios-check_fail2ban-3.ebuild,v 1.2 2011/05/14 06:28:43 hollow Exp $
 
 EAPI="2"
 
 inherit multilib autotools
 
+GITHUB_AUTHOR="hollow"
+GITHUB_PROJECT="check_fail2ban"
+GITHUB_COMMIT="c554837"
+
 DESCRIPTION="A nagios plugin for checking the fail2ban daemon"
-HOMEPAGE="http://bb.xnull.de/projects/check_fail2ban/"
-SRC_URI="http://bb.xnull.de/projects/check_fail2ban/dist/check_fail2ban-${PV}.tar.bz2"
+HOMEPAGE="https://github.com/hollow/check_fail2ban"
+SRC_URI="http://nodeload.github.com/${GITHUB_AUTHOR}/${GITHUB_PROJECT}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -18,7 +22,7 @@ IUSE=""
 DEPEND=">=net-analyzer/nagios-plugins-1.4.13-r1"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/check_fail2ban-${PV}
+S="${WORKDIR}"/${GITHUB_AUTHOR}-${GITHUB_PROJECT}-${GITHUB_COMMIT}
 
 src_prepare() {
 	eautoreconf
