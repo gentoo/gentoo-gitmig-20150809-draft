@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.39 2011/04/27 20:27:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.40 2011/05/14 09:57:06 hwoarang Exp $
+
+  14 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  clementine-0.7.1-r1.ebuild:
+  Stable on amd64 wrt bug #366927
 
   27 Apr 2011; Christoph Mende <angelos@gentoo.org> clementine-0.6-r2.ebuild,
   clementine-0.7.ebuild, clementine-0.7.1.ebuild, clementine-0.7.1-r1.ebuild:
