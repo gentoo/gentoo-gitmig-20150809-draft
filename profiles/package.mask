@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12770 2011/05/14 01:10:43 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12771 2011/05/14 12:15:43 constanze Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -211,13 +211,6 @@ dev-php5/php-libvirt
 >=x11-wm/metacity-2.34
 >=media-gfx/gthumb-2.13
 >=gnome-extra/nautilus-open-terminal-0.19
-
-# Constanze Hausner <constanze@gentoo.org> (10 Apr 2011)
-# Masked for removal in 30 days. Not used by any
-# shorewall* version in the tree anymore.
-net-firewall/shorewall-common
-net-firewall/shorewall-perl
-net-firewall/shorewall-shell
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Apr 2011)
 # Mask new beta release series
