@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.61 2011/05/13 04:17:29 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.62 2011/05/14 04:46:48 serkan Exp $
+
+  14 May 2011; Serkan Kaba <serkan@gentoo.org> commons-lang-2.6.ebuild:
+  Fix for bug #367063 contributed by Kasun Gajasinghe
+  <kasun.gajasinghe@gmail.com>
 
 *commons-lang-2.6 (13 May 2011)
 

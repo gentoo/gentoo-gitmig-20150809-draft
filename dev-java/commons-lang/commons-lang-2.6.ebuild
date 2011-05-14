@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.6.ebuild,v 1.1 2011/05/13 04:17:29 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.6.ebuild,v 1.2 2011/05/14 04:46:48 serkan Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -29,6 +29,6 @@ src_install() {
 
 	dodoc RELEASE-NOTES.txt NOTICE.txt || die
 	dohtml *.html || die
-	use doc && java-pkg_dojavadoc dist/docs/api
+	use doc && java-pkg_dojavadoc target/apidocs
 	use source && java-pkg_dosrc src/main/java/*
 }
