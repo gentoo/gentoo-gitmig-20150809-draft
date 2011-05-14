@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.9 2011/04/08 02:02:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.10 2011/05/14 12:48:33 dilfridge Exp $
 
 EAPI=3
 
@@ -14,13 +14,15 @@ LICENSE="GPL-2"
 
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 SLOT="0"
-IUSE="debug doc static-libs test"
+IUSE="debug doc static-libs"
 
 RDEPEND=">=app-text/ghostscript-gpl-8.62"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( app-doc/doxygen )
-	test? ( x11-libs/cairo )"
+	doc? ( app-doc/doxygen )"
+
+# does not actually test anything, see bug 362557
+RESTRICT="test"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.0-interix.patch
@@ -33,7 +35,7 @@ src_configure() {
 		$(use_enable debug asserts) \
 		$(use_enable debug checks) \
 		$(use_enable static-libs static) \
-		$(use_enable test)
+		--disable-test
 }
 
 src_compile() {
