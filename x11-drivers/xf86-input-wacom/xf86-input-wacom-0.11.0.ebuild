@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.11.0.ebuild,v 1.2 2011/05/14 16:26:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.11.0.ebuild,v 1.3 2011/05/14 16:29:21 scarabeus Exp $
 
 EAPI=4
 
@@ -17,16 +17,12 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
 RDEPEND="!x11-drivers/linuxwacom
-	>=x11-base/xorg-server-1.7
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXi
 	x11-libs/libXrandr"
 DEPEND="${RDEPEND}
-	x11-proto/inputproto
-	x11-proto/kbproto
-	x11-proto/randrproto
-	x11-proto/xproto"
+	x11-proto/randrproto"
 
 pkg_setup() {
 	XORG_CONFIGURE_OPTIONS=(
