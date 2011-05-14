@@ -19,5 +19,9 @@
 
 		<flag name='vdpau'>Enables VDPAU support to offload video processing
 			(32-bit flash player only)</flag>
+
+		<!-- www-plugins/adobe-flash-10.3 has a KDE KCM thingy -->
+		<flag name='kde'>Enables a KCM plugin for configuring flash player
+			preferences (32-bit KDE4 only)</flag>
 	</use>
 </pkgmetadata>

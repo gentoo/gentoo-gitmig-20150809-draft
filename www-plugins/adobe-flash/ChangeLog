@@ -1,6 +1,14 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.76 2011/04/20 19:08:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.77 2011/05/14 00:57:51 lack Exp $
+
+*adobe-flash-10.3.181.14 (14 May 2011)
+
+  14 May 2011; Jim Ramsay <lack@gentoo.org> +adobe-flash-10.3.181.14.ebuild,
+  metadata.xml:
+  Version bump: 10.3.181.14 is released. This does not include a 64-bit native
+  version (again), but does include a small gtk utility (and a Kde4 kcm add-on)
+  to manage some user settings. (Bug #367031)
 
   20 Apr 2011; Christoph Mende <angelos@gentoo.org>
   adobe-flash-10.2.159.1.ebuild:
