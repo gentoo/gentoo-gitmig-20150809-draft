@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.2.1.ebuild,v 1.2 2011/05/10 20:27:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.2.1.ebuild,v 1.3 2011/05/14 09:33:32 tomka Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mpir.org/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+cxx cpudetection"
 
 DEPEND="x86? ( dev-lang/yasm )
