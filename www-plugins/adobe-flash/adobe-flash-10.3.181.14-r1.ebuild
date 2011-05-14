@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.14.ebuild,v 1.2 2011/05/14 01:06:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.14-r1.ebuild,v 1.1 2011/05/14 16:15:18 lack Exp $
 
 EAPI=4
 inherit nsplugins rpm multilib toolchain-funcs
@@ -113,7 +113,7 @@ pkg_postinst() {
 			elog "nspluginwrapper detected: Installing plugin wrapper"
 			local oldabi="${ABI}"
 			ABI="x86"
-			local FLASH_SOURCE="${ROOT}/${INSTALL_BASE32}/libflashplayer.so"
+			local FLASH_SOURCE="${ROOT}/${INSTALL_BASE32}/plugin/libflashplayer.so"
 			nspluginwrapper -i "${FLASH_SOURCE}"
 			ABI="${oldabi}"
 			elog

@@ -1,6 +1,12 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.80 2011/05/14 01:29:18 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.81 2011/05/14 16:15:18 lack Exp $
+
+*adobe-flash-10.3.181.14-r1 (14 May 2011)
+
+  14 May 2011; Jim Ramsay <lack@gentoo.org> -adobe-flash-10.3.181.14.ebuild,
+  +adobe-flash-10.3.181.14-r1.ebuild:
+  Fix nspluginwrapper auto-install logic for amd64
 
   14 May 2011; Jim Ramsay <lack@gentoo.org> -adobe-flash-9.0.289.0.ebuild,
   -adobe-flash-10.1.102.64.ebuild, -adobe-flash-10.2.152.27.ebuild,
