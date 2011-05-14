@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/pecl-fileinfo-1.0.4-r2.ebuild,v 1.5 2011/05/02 15:47:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/pecl-fileinfo-1.0.4-r2.ebuild,v 1.6 2011/05/14 14:33:51 tomka Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ USE_PHP="php5-2"
 
 inherit php-ext-pecl-r2
 
-KEYWORDS="amd64 hppa ~x86"
+KEYWORDS="amd64 hppa x86"
 
 DESCRIPTION="libmagic bindings for PHP."
 LICENSE="PHP-3"
