@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-2.6.0.ebuild,v 1.1 2011/05/13 06:46:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/rspec-2.6.0.ebuild,v 1.2 2011/05/14 06:30:18 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -21,6 +21,6 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~pp
 IUSE=""
 
 ruby_add_rdepend "
-	=dev-ruby/rspec-core-2.5*
+	~dev-ruby/rspec-core-${PV}
 	~dev-ruby/rspec-expectations-${PV}
 	~dev-ruby/rspec-mocks-${PV}"
