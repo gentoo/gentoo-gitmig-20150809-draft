@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.101-r1.ebuild,v 1.6 2011/04/30 17:48:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.101-r1.ebuild,v 1.7 2011/05/14 17:28:42 eva Exp $
 
 EAPI=3
 inherit eutils pam
@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2.28
 DEPEND="${RDEPEND}
 	!!sys-auth/policykit
 	dev-libs/libxslt
+	app-text/docbook-xml-dtd:4.1.2
 	app-text/docbook-xsl-stylesheets
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.36
