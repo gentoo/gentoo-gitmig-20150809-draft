@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.3.3-r1.ebuild,v 1.1 2011/04/24 13:11:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.3.3-r1.ebuild,v 1.2 2011/05/14 15:54:36 dilfridge Exp $
 
 EAPI=3
 
@@ -16,6 +16,7 @@ IUSE="wpd"
 SRC_URI+=" http://dev.gentoo.org/~dilfridge/distfiles/kword-2.3.3-libwpg02.patch.bz2"
 
 DEPEND="
+	gnome-extra/libgsf
 	wpd? ( app-text/libwpd )
 "
 RDEPEND="${DEPEND}
