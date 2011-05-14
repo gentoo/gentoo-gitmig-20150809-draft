@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/linux-gpib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.1 2011/01/31 22:29:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.2 2011/05/14 17:05:08 dilfridge Exp $
+
+*linux-gpib-3.2.16 (14 May 2011)
+
+  14 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +linux-gpib-3.2.16.ebuild:
+  Version bump with bugfix
 
 *linux-gpib-3.2.15 (31 Jan 2011)
 
