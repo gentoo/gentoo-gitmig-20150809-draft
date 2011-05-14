@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.43 2011/05/08 12:27:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.44 2011/05/14 16:27:50 scarabeus Exp $
 #
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -215,7 +215,7 @@ if [[ -n "${DRIVER}" ]]; then
 		x11-base/xorg-server[xorg]
 	"
 fi
-if [[ -n "${DRIVER}" && ${PN} == xf86-video-* ]]; then
+if [[ -n "${DRIVER}" && ${PN} == xf86-input-* ]]; then
 	DEPEND+="
 		x11-proto/inputproto
 		x11-proto/kbproto
