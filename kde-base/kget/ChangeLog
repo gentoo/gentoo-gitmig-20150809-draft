@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.185 2011/05/09 22:55:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.186 2011/05/14 13:43:34 dilfridge Exp $
+
+*kget-4.6.2-r1 (14 May 2011)
+
+  14 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kget-4.6.2-r1.ebuild,
+  +files/kget-4.6.2-metalinker.patch:
+  Add upstream security patch, CVE-2010-1000
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kget-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
