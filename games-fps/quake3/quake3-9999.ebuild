@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.20 2011/05/06 22:21:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.21 2011/05/14 22:38:11 mattst88 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -70,6 +70,7 @@ my_platform() {
 src_prepare() {
 	if [[ "${PV}" == 9999* ]] ; then
 		# Workaround for the version string
+		subversion_wc_info
 		ln -s "${ESVN_WC_PATH}/.svn" .svn || die "ln ${ESVN_WC_PATH}/.svn"
 	fi
 }
