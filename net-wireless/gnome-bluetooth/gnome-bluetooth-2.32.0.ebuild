@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.14 2011/03/22 19:45:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.32.0.ebuild,v 1.15 2011/05/14 16:29:14 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -30,6 +30,7 @@ RDEPEND="${COMMON_DEPEND}
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
 DEPEND="${COMMON_DEPEND}
 	!!net-wireless/bluez-gnome
+	app-text/docbook-xml-dtd:4.1.2
 	app-text/gnome-doc-utils
 	app-text/scrollkeeper
 	dev-libs/libxml2
