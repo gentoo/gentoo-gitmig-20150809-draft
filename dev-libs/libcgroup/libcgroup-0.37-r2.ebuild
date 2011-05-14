@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.37-r1.ebuild,v 1.1 2011/03/05 17:35:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/libcgroup-0.37-r2.ebuild,v 1.1 2011/05/14 18:11:14 nerdboy Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ src_configure() {
 		$(use_enable daemon)
 		$(use_enable debug)
 		$(use_enable pam)
-		$(use_enable static)
+		$(use_enable static-libs static)
 		$(use_enable tools)"
 
 	if use pam; then
