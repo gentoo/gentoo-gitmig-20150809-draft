@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-1.2.0.ebuild,v 1.4 2011/05/02 15:32:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-1.2.0.ebuild,v 1.5 2011/05/14 21:10:17 arfrever Exp $
 
 EAPI="3"
 
@@ -23,5 +23,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${ED}" -name "*.la" -print0 | xargs -0 rm -f
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO VERSION || die "dodoc failed"
 }
