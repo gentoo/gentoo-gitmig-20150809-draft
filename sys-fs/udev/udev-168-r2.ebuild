@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.37 2011/05/14 14:00:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-168-r2.ebuild,v 1.1 2011/05/14 14:00:34 zzam Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs linux-info autotools
 
-#PATCHSET=${P}-gentoo-patchset-v1
+PATCHSET=${P}-gentoo-patchset-v1
 scriptversion=v3
-scriptname=${PN}-gentoo-scripts-${scriptversion}
+scriptname=udev-gentoo-scripts-${scriptversion}
 
 if [[ ${PV} == "9999" ]]; then
 	SRC_URI="mirror://gentoo/${scriptname}.tar.bz2"
@@ -27,7 +27,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux extras test"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )

@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.574 2011/04/30 20:07:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.575 2011/05/14 14:00:34 zzam Exp $
+
+*udev-168-r2 (14 May 2011)
+
+  14 May 2011; Matthias Schwarzott <zzam@gentoo.org> +udev-168-r2.ebuild,
+  udev-9999.ebuild:
+  Remove /run is not existing message, Bug #365679. Fix uinput rule to match
+  what newer kernels does, Bug #321677. Only run modprobe unix when unix
+  sockets are not yet available, Bug #363549.
 
 *udev-168-r1 (30 Apr 2011)
 
