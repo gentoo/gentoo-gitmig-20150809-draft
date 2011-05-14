@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.2.ebuild,v 1.3 2011/05/09 23:23:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.2.ebuild,v 1.4 2011/05/14 14:32:16 dilfridge Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="akonadi attica debug kate okular +phonon qimageblitz qscintilla qwt semantic-desktop"
 
 COMMON_DEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep kdelibs 'semantic-desktop?,opengl')
 	akonadi? ( $(add_kdebase_dep kdepimlibs) )
 	attica? ( dev-libs/libattica )
 	kate? ( $(add_kdebase_dep kate) )
