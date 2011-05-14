@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/squeezeboxserver.init.d,v 1.4 2011/01/05 19:53:27 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/squeezeboxserver.init.d,v 1.5 2011/05/14 15:26:12 lavajoe Exp $
 
 # These fit the Squeezebox Server ebuild and so shouldn't need to be changed;
 # user-servicable parts go in /etc/conf.d/squeezeboxserver.
@@ -24,12 +24,11 @@ start() {
 
 	cd /
 	start-stop-daemon \
-		--start --exec /usr/bin/perl /usr/sbin/${scname} \
-		--pidfile ${pidfile} \
-		--startas /usr/sbin/${scname} \
+		--start --exec /usr/sbin/${scname} \
 		--chuid ${scuser} \
+		--background \
 		-- \
-		--quiet --daemon \
+		--quiet \
 		--pidfile=${pidfile} \
 		--cachedir=${cachedir} \
 		--prefsfile=${prefsfile} \
@@ -44,6 +43,6 @@ start() {
 
 stop() {
 	ebegin "Stopping Squeezebox Server"
-	start-stop-daemon --oknodo --retry 10 --stop --pidfile ${pidfile}
+	start-stop-daemon --retry 10 --stop --pidfile ${pidfile}
 	eend $? "Failed to stop Squeezebox Server"
 }
