@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20110311.ebuild,v 1.2 2011/04/16 19:06:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20110311.ebuild,v 1.3 2011/05/14 14:16:59 tomka Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -12,7 +12,7 @@ SRC_URI="http://icculus.org/alienarena/Files/${MY_PN}-linux${PV}.tar.gz"
 
 LICENSE="GPL-2 free-noncomm"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated +dga +vidmode"
 
 UIRDEPEND="virtual/jpeg
