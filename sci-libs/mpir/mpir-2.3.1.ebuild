@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.1.3.ebuild,v 1.2 2010/11/13 12:51:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.3.1.ebuild,v 1.1 2011/05/14 09:27:18 tomka Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit eutils autotools
 
 DESCRIPTION="Library for arbitrary precision integer arithmetic derived from version 4.2.1 of gmp"
 HOMEPAGE="http://www.mpir.org/"
-SRC_URI="http://www.mpir.org/${P}.tar.gz"
+SRC_URI="http://www.mpir.org/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -21,7 +21,7 @@ RDEPEND=""
 
 src_prepare(){
 	epatch \
-		"${FILESDIR}/${PN}-2.0.0-yasm.patch" \
+		"${FILESDIR}/${PN}-2.2.0-yasm.patch" \
 		"${FILESDIR}/${PN}-1.3.0-ABI-multilib.patch"
 	# In the same way there was QA regarding executable stacks
 	# with GMP we have some here as well. We cannot apply the
