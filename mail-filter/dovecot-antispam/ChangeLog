@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dovecot-antispam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.20 2010/10/15 17:23:41 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.21 2011/05/14 06:47:38 hollow Exp $
+
+  14 May 2011; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  assign to net-mail herd
 
   15 Oct 2010; Jeremy Olexa <darkside@gentoo.org>
   -files/dovecot-antispam-dovecot1.2-compilefix.patch,
