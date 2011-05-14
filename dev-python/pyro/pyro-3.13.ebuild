@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-3.13.ebuild,v 1.1 2011/05/09 22:18:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-3.13.ebuild,v 1.2 2011/05/14 18:26:16 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -27,11 +27,6 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="Pyro"
-
-src_prepare() {
-	distutils_src_prepare
-	find examples -name "*.pyc" -print0 | xargs -0 rm -f
-}
 
 src_install() {
 	distutils_src_install
