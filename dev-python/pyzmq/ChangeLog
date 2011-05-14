@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.6 2011/05/02 12:27:09 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.7 2011/05/14 12:00:13 djc Exp $
+
+*pyzmq-2.1.7 (14 May 2011)
+
+  14 May 2011; Dirkjan Ochtman <djc@gentoo.org> +pyzmq-2.1.7.ebuild:
+  Version bump to 2.1.7.
 
 *pyzmq-2.1.4 (02 May 2011)
 
