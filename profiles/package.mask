@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12769 2011/05/13 19:37:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12770 2011/05/14 01:10:43 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -190,12 +190,6 @@ sec-policy/selinux-hal
 # Alexis Ballier <aballier@gentoo.org> (14 Apr 2011)
 # Beta/test version -> masked
 >=dev-ml/ocamlnet-3.3.0_beta
-
-# Jim Ramsay <lack@gentoo.org> (14 Apr 2011)
-# Mask old unfetchable (Bug #360529) and security-vulnerable (Bug
-# #354207,#359019) versions of Adobe flash player.
-# Will be removed in a week or so.
-<www-plugins/adobe-flash-10.2.153.1
 
 # Daniel Gryniewicz <dang@gentoo.org> (13 Apr 2011)
 # Masked for removal in 30 days. Functionality is merged into and maintained in

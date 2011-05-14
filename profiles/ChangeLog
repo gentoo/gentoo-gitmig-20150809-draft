@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5366 2011/05/13 19:37:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5367 2011/05/14 01:10:43 lack Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 May 2011; Jim Ramsay <lack@gentoo.org> package.mask:
+  Removed old adobe-flash versions as foretold in package.mask
 
   13 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   package.mask:
