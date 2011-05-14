@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.91 2011/05/01 13:52:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.92 2011/05/14 16:03:22 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -337,6 +337,7 @@ kdecommondepend="
 		x11-libs/libXext
 		x11-libs/libXt
 		x11-libs/libXxf86vm
+		x11-libs/libXcomposite
 	)
 "
 
