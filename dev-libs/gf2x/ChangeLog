@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gf2x
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.9 2010/12/25 10:14:30 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.10 2011/05/14 09:56:27 tomka Exp $
+
+*gf2x-1.0 (14 May 2011)
+
+  14 May 2011; Thomas Kahle <tomka@gentoo.org> -gf2x-0.3.1.ebuild,
+  -files/gf2x-0.3.1-shared.patch, +gf2x-1.0.ebuild:
+  bump to 1.0 (bug #366947), remove old
 
   24 Dec 2010; Fabian Groffen <grobian@gentoo.org> gf2x-0.9.5.ebuild:
   Marked ~x86-linux, ~amd64-linux and ~ppc-macos, bug #341989
