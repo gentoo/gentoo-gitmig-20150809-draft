@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.14.ebuild,v 1.1 2011/05/14 00:57:51 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.14.ebuild,v 1.2 2011/05/14 01:06:38 lack Exp $
 
 EAPI=4
 inherit nsplugins rpm multilib toolchain-funcs
@@ -103,10 +103,11 @@ src_install() {
 
 pkg_postinst() {
 	if use amd64; then
-		elog "Adobe has no stable 64-bit native version at this time. The beta"
-		elog "64-bit native release (codenamed \"square\") is installed as part"
-		elog "of the unstable testing version of this package:"
-		elog "  ${CATEGORY}/${P}_p...."
+		elog "Adobe has no stable 64-bit native version at this time."
+		#elog "The beta"
+		#elog "64-bit native release (codenamed \"square\") is installed as part"
+		#elog "of the unstable testing version of this package:"
+		#elog "  ${CATEGORY}/${P}_p...."
 		elog
 		if has_version 'www-plugins/nspluginwrapper'; then
 			elog "nspluginwrapper detected: Installing plugin wrapper"
