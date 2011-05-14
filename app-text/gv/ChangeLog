@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.85 2010/08/16 02:23:37 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.86 2011/05/14 09:38:32 hwoarang Exp $
+
+*gv-3.7.1-r1 (14 May 2011)
+
+  14 May 2011; Markos Chandras <hwoarang@gentoo.org> +gv-3.7.1-r1.ebuild,
+  +files/gv-3.7.1-aplinedel.patch:
+  Revbump to fix offended keysym. Thanks to Christian Speckner
+  <cnspeckn@physik.uni-wuerzburg.de> for the patch. Bug #339394
 
   16 Aug 2010; Jeroen Roovers <jer@gentoo.org> gv-3.7.1.ebuild:
   Stable for HPPA (bug #329125).
