@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.3.ebuild,v 1.1 2011/04/15 11:18:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.3.ebuild,v 1.2 2011/05/14 13:56:25 dilfridge Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ DEPEND="
 	scanner? ( $(add_kdebase_dep libksane) )
 	semantic-desktop? ( dev-libs/soprano[raptor,redland] )
 	taglib? ( >=media-libs/taglib-1.5 )
-	v4l? ( media-libs/libv4l )
+	v4l? ( >=media-libs/libv4l-0.8.3 )
 	xmp? ( >=media-libs/exempi-2 )
 	yaz? ( >=dev-libs/yaz-2 )
 "
