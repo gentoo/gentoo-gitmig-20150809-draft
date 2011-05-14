@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.199 2011/05/14 08:43:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.200 2011/05/14 10:25:11 xarthisius Exp $
+
+  14 May 2011; Kacper Kowalik <xarthisius@gentoo.org> exim-4.76.ebuild:
+  ppc/ppc64 stable wrt #366369
 
   14 May 2011; Thomas Kahle <tomka@gentoo.org> exim-4.76.ebuild:
   x86 stable per bug 366369
