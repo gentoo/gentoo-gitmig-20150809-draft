@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.4.3.ebuild,v 1.3 2011/05/01 18:10:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.4.3.ebuild,v 1.4 2011/05/14 09:35:40 tomka Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/${PN}/$(get_ver
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~ppc-macos ~x86-macos"
 # TODO: run-time test for ipv6: does it need mediastreamer[ipv6]?
 IUSE="doc gtk ipv6 ncurses nls video"
 
