@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-4.6.3.ebuild,v 1.1 2011/05/07 10:47:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/kdeutils-meta-4.6.3-r1.ebuild,v 1.1 2011/05/14 16:13:44 dilfridge Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
@@ -19,6 +19,7 @@ RDEPEND="
 	$(add_kdebase_dep kremotecontrol)
 	$(add_kdebase_dep ktimer)
 	$(add_kdebase_dep kwallet)
+	$(add_kdebase_dep okteta)
 	$(add_kdebase_dep superkaramba)
 	$(add_kdebase_dep sweeper)
 	cups? ( $(add_kdebase_dep printer-applet) )
