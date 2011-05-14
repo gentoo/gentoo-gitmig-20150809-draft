@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.2 2011/05/04 04:28:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.3 2011/05/14 19:01:34 nerdboy Exp $
 
 EAPI="3"
 
@@ -160,6 +160,7 @@ pkg_postinst() {
 }
 
 generate_files() {
+	## Do not remove blank lines from the response file
 	cat <<-EOF > 20${PN}
 	BUFR_TABLES="/usr/share/bufrtables"
 	CONFIG_PROTECT="/usr/share/bufrtables"
@@ -170,6 +171,9 @@ generate_files() {
 	N
 	N
 	1
+
+
+
 
 	N
 	EOF
