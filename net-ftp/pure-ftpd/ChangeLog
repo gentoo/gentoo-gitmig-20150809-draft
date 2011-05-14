@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.116 2011/05/07 16:43:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.117 2011/05/14 08:26:56 xarthisius Exp $
+
+  14 May 2011; Kacper Kowalik <xarthisius@gentoo.org> pure-ftpd-1.0.32.ebuild:
+  ppc/ppc64 stable wrt #365751
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> pure-ftpd-1.0.32.ebuild:
   alpha/arm/ia64/sparc stable wrt #365751
