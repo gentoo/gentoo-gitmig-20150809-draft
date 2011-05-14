@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.11.0.ebuild,v 1.1 2011/04/28 10:13:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.11.0.ebuild,v 1.2 2011/05/14 16:26:04 scarabeus Exp $
 
 EAPI=4
 
@@ -29,11 +29,10 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 pkg_setup() {
-	linux-info_pkg_setup
-
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable debug)
 	)
+	xorg-2_pkg_setup
 }
 
 src_install() {
@@ -42,8 +41,8 @@ src_install() {
 	rm -rf "${D}"/usr/share/hal
 }
 
-pkg_postinst() {
-	xorg-2_pkg_postinst
+pkg_pretend() {
+	linux-info_pkg_setup
 
 	if ! linux_config_exists \
 			|| ! linux_chkconfig_present TABLET_USB_WACOM \
