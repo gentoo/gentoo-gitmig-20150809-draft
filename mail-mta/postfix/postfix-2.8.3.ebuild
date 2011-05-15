@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.3.ebuild,v 1.4 2011/05/15 10:16:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.3.ebuild,v 1.5 2011/05/15 17:14:50 eras Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ RDEPEND="${DEPEND}
 	!mail-mta/esmtp
 	!mail-mta/exim
 	!mail-mta/mini-qmail
-	!mail-mta/msmtp
+	!mail-mta/msmtp[mta]
 	!mail-mta/nbsmtp
 	!mail-mta/netqmail
 	!mail-mta/nullmailer
