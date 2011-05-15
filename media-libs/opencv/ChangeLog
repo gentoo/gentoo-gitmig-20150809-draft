@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.34 2011/05/11 20:10:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.35 2011/05/15 16:42:14 dilfridge Exp $
+
+  15 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  opencv-2.2.0-r10.ebuild:
+  Fix CUDA integration, bug 365509
 
   11 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> -opencv-2.0.0.ebuild,
   -files/opencv-2.0.0-multilib.patch:

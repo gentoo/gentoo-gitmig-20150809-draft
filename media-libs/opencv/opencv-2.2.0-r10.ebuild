@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.2 2011/05/01 17:53:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.3 2011/05/15 16:42:14 dilfridge Exp $
 
 EAPI=3
 
@@ -30,7 +30,10 @@ RDEPEND="
 	>=sci-libs/clapack-3.2.1-r4
 	sci-libs/flann
 	virtual/lapack
-	cuda? ( dev-util/nvidia-cuda-toolkit )
+	cuda? (
+		>=dev-util/nvidia-cuda-toolkit-3.2
+		>=dev-util/nvidia-cuda-npp-3.2
+	)
 	eigen? ( dev-cpp/eigen:2 )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
@@ -74,6 +77,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-ptrcvcapture.patch"
 	"${FILESDIR}/${P}-use_system_libs.patch"
 	"${FILESDIR}/${P}-v4l_2.6.38.patch"
+	"${FILESDIR}/${P}-findnpp.patch"
 )
 
 CMAKE_BUILD_TYPE="Release"
@@ -156,6 +160,11 @@ src_configure() {
 		"-DCMAKE_SKIP_RPATH=ON"
 		"-DBUILD_SHARED_LIBS=ON"
 		"-DOPENCV_DOC_INSTALL_PATH=${EPREFIX}/usr/share/doc/${PF}"
+	)
+
+	# hardcode cuda paths
+	mycmakeargs+=(
+		"-DCUDA_NPP_LIBRARY_ROOT_DIR=/opt/cuda"
 	)
 
 	cmake-utils_src_configure
