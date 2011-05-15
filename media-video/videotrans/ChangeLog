@@ -1,6 +1,9 @@
 # ChangeLog for media-video/videotrans
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/ChangeLog,v 1.7 2008/12/17 21:10:04 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/ChangeLog,v 1.8 2011/05/15 15:43:09 scarabeus Exp $
+
+  15 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> videotrans-1.6.0.ebuild:
+  Depend on virtual/ffmpeg. Move to eapi4. Fixes bug #362155.
 
   17 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/videotrans-1.6.0-forced-as-needed.patch, videotrans-1.6.0.ebuild:

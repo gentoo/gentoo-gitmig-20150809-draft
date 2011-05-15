@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.6.0.ebuild,v 1.2 2008/12/17 21:10:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.6.0.ebuild,v 1.3 2011/05/15 15:43:09 scarabeus Exp $
+
+EAPI=4
 
 inherit base eutils
 
@@ -15,9 +17,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
 
-DEPEND="media-video/ffmpeg
+DEPEND="virtual/ffmpeg
 	media-video/mplayer
-	media-video/mjpegtools
+	media-video/mjpegtools[png]
 	media-video/dvdauthor
 	media-gfx/imagemagick"
 
@@ -28,14 +30,7 @@ RDEPEND="${DEPEND}
 
 PATCHES=( "${FILESDIR}/${P}-forced-as-needed.patch" )
 
-pkg_setup() {
-	if ! built_with_use media-video/mjpegtools png; then
-		eerror "Please emerge media-video/mjpegtools with useflag 'png'."
-		die "Fix USE flags and re-emerge"
-	fi
-}
-
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dodoc CHANGES THANKS TODO aspects.txt
 }
