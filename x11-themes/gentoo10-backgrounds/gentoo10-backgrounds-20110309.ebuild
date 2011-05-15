@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo10-backgrounds/gentoo10-backgrounds-20110309.ebuild,v 1.2 2011/03/28 19:28:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo10-backgrounds/gentoo10-backgrounds-20110309.ebuild,v 1.3 2011/05/15 14:22:05 fauli Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/pr/releases/10.0/graphics.xml"
 SRC_URI="http://dev.gentoo.org/~flameeyes/${P}.tar.xz"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=""
