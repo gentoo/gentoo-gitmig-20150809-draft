@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.0.ebuild,v 1.2 2009/02/28 23:38:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-1.0.ebuild,v 1.3 2011/05/15 22:27:43 binki Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,27 +13,24 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="iconv ipv6 perl ssl tcl socks5"
 
 DEPEND=">=sys-libs/ncurses-5.6-r2
-	iconv? ( sys-libs/glibc )
+	iconv? ( virtual/libiconv )
 	perl? ( >=dev-lang/perl-5.8.8-r2 )
 	ssl? ( >=dev-libs/openssl-0.9.8e-r3 )
 	tcl? ( dev-lang/tcl )
 	socks5? ( net-proxy/dante )"
 # ruby? ( >=dev-lang/ruby-1.8.6_p287-r1 ) # fails at the moment
-
-src_unpack() {
-	unpack ${A}
-}
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \
 		--libexecdir=/usr/lib/misc \
+		--without-ruby \
 		$(use_with iconv) \
 		$(use_with ipv6) \
 		$(use_with perl) \
 		$(use_with ssl) \
 		$(use_with tcl tcl) \
-		$(use_with socks5) \
-		|| die "econf failed"
+		$(use_with socks5)
 	# $(use_with ruby) fails at the moment
 
 	# parallel build failure
@@ -45,11 +42,11 @@ src_install () {
 		sharedir="${D}"/usr/share \
 		libexecdir="${D}"/usr/lib/misc || die "einstall failed"
 
-	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
+	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES || die
 
-	cd "${S}"/doc
+	cd "${S}"/doc || die
 	docinto doc
 	dodoc \
 		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
-		nicknames outputhelp README.SSL SILLINESS TS4
+		nicknames outputhelp README.SSL SILLINESS TS4 || die
 }
