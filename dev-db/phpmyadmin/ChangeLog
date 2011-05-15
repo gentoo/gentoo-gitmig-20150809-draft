@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.413 2011/01/05 15:25:36 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.414 2011/05/15 22:16:45 a3li Exp $
+
+*phpmyadmin-3.4.0 (15 May 2011)
+
+  15 May 2011; Alex Legler <a3li@gentoo.org> files/postinstall-en-3.1.txt,
+  +phpmyadmin-3.4.0.ebuild, metadata.xml:
+  Version bump. The installation of the PMA setup utility can now be controlled
+  via the 'setup' USE flag.
 
 *phpmyadmin-3.3.9 (05 Jan 2011)
 
