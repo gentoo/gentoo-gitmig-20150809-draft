@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-2.03.09-r1.ebuild,v 1.3 2011/05/15 18:35:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-2.03.09-r1.ebuild,v 1.4 2011/05/15 18:50:12 xarthisius Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND="=sys-cluster/ccs-${CLUSTER_RELEASE}*
 	=sys-cluster/cman-lib-${CLUSTER_RELEASE}*"
 
 DEPEND="${RDEPEND}
-	dev-libs/libxml2
+	dev-libs/libxml2[-icu]
 	=sys-libs/slang-2*"
 
 S=${WORKDIR}/${MY_P}/${PN}
