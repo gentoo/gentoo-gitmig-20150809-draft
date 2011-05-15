@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.33 2011/01/25 15:10:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/ChangeLog,v 1.34 2011/05/15 17:28:26 armin76 Exp $
+
+  15 May 2011; Raúl Porcel <armin76@gentoo.org> facets-2.8.4-r1.ebuild:
+  ia64 stable wrt #344447
 
   25 Jan 2011; Markos Chandras <hwoarang@gentoo.org> facets-2.8.4-r1.ebuild:
   Stable on amd64 wrt bug #344477
