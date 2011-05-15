@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/revenge-of-the-titans-1.80.10.ebuild,v 1.1 2011/03/22 17:20:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/revenge-of-the-titans-1.80.12.ebuild,v 1.1 2011/05/15 21:56:30 mr_bones_ Exp $
 
 EAPI="3"
 
