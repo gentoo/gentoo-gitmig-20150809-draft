@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.3 2011/04/19 07:56:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.4 2011/05/15 15:36:12 scarabeus Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"
@@ -17,10 +17,9 @@ KEYWORDS="amd64 x86"
 IUSE="mplayer nls spell"
 
 RDEPEND=">=virtual/jre-1.5
-	>=media-video/ffmpeg-0.4.9_p20080326
+	virtual/ffmpeg
 	mplayer? ( media-video/mplayer[ass] )
-	spell?
-	(
+	spell? (
 		app-text/aspell
 		>=dev-java/zemberek-2.0[linguas_tr]
 	)"
