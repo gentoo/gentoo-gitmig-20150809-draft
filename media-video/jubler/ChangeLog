@@ -1,6 +1,11 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.41 2011/05/15 15:36:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.42 2011/05/15 15:38:42 scarabeus Exp $
+
+  15 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/jubler-3.9.6-ffmpegfix.patch, -files/jubler-3.9.6.patch,
+  -jubler-4.0.ebuild, -files/jubler-4.0.patch, -jubler-4.1.1.ebuild:
+  Punt overshadowed version so virtual/ffmpeg depending one is only around.
 
   15 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> jubler-4.6.1-r3.ebuild:
   Depend on virtual/ffmpeg. Per bug #362159.
