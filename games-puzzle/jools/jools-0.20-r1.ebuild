@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.9 2011/05/12 13:13:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jools/jools-0.20-r1.ebuild,v 1.10 2011/05/15 21:29:53 mr_bones_ Exp $
 PYTHON_DEPEND="2"
 
 EAPI=3
@@ -25,6 +25,7 @@ S=${WORKDIR}/${P}/jools
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+	games_pkg_setup
 }
 
 src_unpack() {
