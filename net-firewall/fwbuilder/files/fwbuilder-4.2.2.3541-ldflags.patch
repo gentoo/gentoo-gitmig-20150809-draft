@@ -1,0 +1,11 @@
+diff -ruN fwbuilder-4.2.2.3541.orig/qmake.inc.in fwbuilder-4.2.2.3541/qmake.inc.in
+--- fwbuilder-4.2.2.3541.orig/qmake.inc.in	2011-05-11 23:02:03.000000000 +0200
++++ fwbuilder-4.2.2.3541/qmake.inc.in	2011-05-15 19:36:03.000000000 +0200
+@@ -39,6 +39,7 @@
+     QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
+     QMAKE_CXXFLAGS_DEBUG += -Wno-unused-parameter
+     QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
++    QMAKE_LFLAGS = @LDFLAGS@
+ 
+     !macx {
+ 
