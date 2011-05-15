@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.44 2011/05/05 16:58:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.45 2011/05/15 10:46:33 graaff Exp $
+
+*drivel-3.0.3 (15 May 2011)
+
+  15 May 2011; Hans de Graaff <graaff@gentoo.org> +drivel-3.0.3.ebuild:
+  Version bump.
 
   05 May 2011; Hans de Graaff <graaff@gentoo.org> drivel-3.0.2.ebuild:
   Tweak configuration options to avoid -Werror, fixing bug 366097.
