@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.4 2011/05/14 09:35:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.5 2011/05/15 10:48:40 pva Exp $
 
 EAPI="4"
 
@@ -17,12 +17,11 @@ KEYWORDS="amd64 x86"
 # not built with v4l2 support (taken from configure.ac)
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
 IUSE="+alsa amr bindist coreaudio debug examples gsm ilbc ipv6 jack oss portaudio
-pulseaudio sdl +speex theora v4l2 video x264 X xv"
+pulseaudio sdl +speex theora v4l2 video x264 X"
 REQUIRED_USE="|| ( oss alsa jack portaudio coreaudio )
 	video? ( || ( sdl X ) )
 	theora? ( video )
 	X? ( video )
-	xv? ( X )
 	v4l2? ( video )"
 
 RDEPEND=">=net-libs/ortp-0.16.2[ipv6?]
@@ -40,10 +39,10 @@ RDEPEND=">=net-libs/ortp-0.16.2[ipv6?]
 		theora? ( media-libs/libtheora )
 		sdl? ( media-libs/libsdl[video,X] )
 		X? ( x11-libs/libX11
-			xv? ( x11-libs/libXv ) ) )"
+			x11-libs/libXv ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	xv? ( x11-proto/videoproto )"
+	x11-proto/videoproto"
 
 PDEPEND="amr? ( !bindist? ( media-plugins/mediastreamer-amr ) )
 	ilbc? ( media-plugins/mediastreamer-ilbc )
@@ -112,7 +111,7 @@ src_configure() {
 		$(use_enable v4l2 libv4l) \
 		$(use_enable sdl) \
 		$(use_enable X x11) \
-		$(use_enable xv)
+		$(use_enable X xv)
 }
 
 src_install() {
