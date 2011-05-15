@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.337 2011/05/13 14:44:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.338 2011/05/15 13:42:28 armin76 Exp $
+
+  15 May 2011; Raúl Porcel <armin76@gentoo.org> mesa-7.10.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #363965
 
   13 May 2011; Jeroen Roovers <jer@gentoo.org> mesa-7.10.2.ebuild:
   Stable for HPPA (bug #363965).
