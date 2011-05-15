@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.27 2011/04/15 17:57:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.28 2011/05/15 08:13:51 angelos Exp $
+
+  15 May 2011; Christoph Mende <angelos@gentoo.org> dulwich-0.7.1.ebuild:
+  Stable on amd64 wrt bug #367299
 
   15 Apr 2011; Fabian Groffen <grobian@gentoo.org> dulwich-0.7.1.ebuild:
   Marked ~x64-solaris
