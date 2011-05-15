@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.164 2011/05/02 17:39:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.165 2011/05/15 07:52:16 angelos Exp $
+
+  15 May 2011; Christoph Mende <angelos@gentoo.org> vino-2.32.2.ebuild:
+  Stable on amd64 wrt bug #366697
 
 *vino-2.32.2 (02 May 2011)
 
