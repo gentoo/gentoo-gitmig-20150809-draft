@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/suspend
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.20 2011/05/15 20:49:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.21 2011/05/15 20:50:55 xmw Exp $
+
+  15 May 2011; Michael Weber <xmw@gentoo.org> -suspend-0.8.ebuild:
+  Removed old version
 
   15 May 2011; Michael Weber <xmw@gentoo.org> suspend-0.8-r1.ebuild,
   -suspend-0.9_pre0.ebuild, -files/suspend-0.9_pre0-errno.patch,
