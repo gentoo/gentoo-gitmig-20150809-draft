@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.587 2011/05/13 14:47:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.588 2011/05/15 13:37:05 armin76 Exp $
+
+  15 May 2011; Raúl Porcel <armin76@gentoo.org> xorg-server-1.9.5.ebuild:
+  alpha/ia64/sh/sparc stable wrt #363965
 
   13 May 2011; Jeroen Roovers <jer@gentoo.org> xorg-server-1.9.5.ebuild:
   Stable for HPPA (bug #363965).
