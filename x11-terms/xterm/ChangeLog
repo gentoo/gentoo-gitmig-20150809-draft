@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.321 2011/05/13 14:44:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.322 2011/05/15 13:46:51 armin76 Exp $
+
+  15 May 2011; Raúl Porcel <armin76@gentoo.org> xterm-269.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #363965
 
   13 May 2011; Jeroen Roovers <jer@gentoo.org> xterm-269.ebuild:
   Stable for HPPA (bug #363965).
