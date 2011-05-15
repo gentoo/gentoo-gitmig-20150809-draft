@@ -1,0 +1,13 @@
+# Copyright 1999-2011 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/calligra_features.desc,v 1.1 2011/05/15 16:34:35 scarabeus Exp $
+
+# This file contains descriptions of KOFFICE_FEATURES USE_EXPAND flags.
+
+# Keep it sorted.
+karbon - KOFFICE_FEATURES option to build vector image editor
+kexi - KOFFICE_FEATURES option to build database manager
+kpresenter - KOFFICE_FEATURES option to build presentation processor
+krita - KOFFICE_FEATURES option to build raster image editor
+tables - KOFFICE_FEATURES option to build table processor
+words - KOFFICE_FEATURES option to build word processor
