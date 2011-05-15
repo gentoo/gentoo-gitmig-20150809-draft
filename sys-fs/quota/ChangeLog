@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.57 2011/05/13 14:51:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.58 2011/05/15 21:02:20 maekke Exp $
+
+  15 May 2011; Markus Meier <maekke@gentoo.org> quota-3.17-r1.ebuild:
+  arm stable, bug #364361
 
   13 May 2011; Jeroen Roovers <jer@gentoo.org> quota-3.17-r1.ebuild:
   Stable for HPPA (bug #364361).
