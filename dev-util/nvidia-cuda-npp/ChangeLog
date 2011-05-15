@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/nvidia-cuda-npp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-npp/ChangeLog,v 1.1 2011/05/15 16:37:55 dilfridge Exp $
+
+*nvidia-cuda-npp-3.2 (15 May 2011)
+
+  15 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +nvidia-cuda-npp-3.2.ebuild, +files/nvidia-cuda-npp-3.2-asneeded.patch,
+  +metadata.xml:
+  New library, dependency of media-libs/opencv
+
