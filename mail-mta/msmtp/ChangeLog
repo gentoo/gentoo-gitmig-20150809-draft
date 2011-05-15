@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.102 2011/04/29 06:17:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.103 2011/05/15 16:57:10 eras Exp $
+
+  15 May 2011; Eray Aslan <eras@gentoo.org> msmtp-1.4.24.ebuild:
+  Fix building with doc USE flag bug #367179. Thanks to Andrew Savchenko.
 
   29 Apr 2011; Tim Harder <radhermit@gentoo.org> -files/mailer.conf:
   Remove old mailwrapper related file.

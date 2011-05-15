@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.24.ebuild,v 1.1 2011/04/29 06:15:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.24.ebuild,v 1.2 2011/05/15 16:57:10 eras Exp $
 
 EAPI=4
 
@@ -22,7 +22,6 @@ CDEPEND="idn? ( net-dns/libidn )
 	sasl? ( >=virtual/gsasl-0.2.4 )"
 
 RDEPEND="${CDEPEND}
-	!net-mail/mailwrapper
 	mta? (	!mail-mta/courier
 			!mail-mta/esmtp
 			!mail-mta/exim
@@ -37,6 +36,7 @@ RDEPEND="${CDEPEND}
 			!>=mail-mta/ssmtp-2.64-r2[mta] )"
 
 DEPEND="${CDEPEND}
+	doc? ( virtual/texi2dvi )
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
@@ -62,6 +62,14 @@ src_configure() {
 		$(use_with gnome-keyring ) \
 		$(use_enable nls) \
 		${myconf}
+}
+
+src_compile() {
+	default_src_compile
+	if use doc ; then
+		cd doc || die "cd failed"
+		emake html pdf
+	fi
 }
 
 src_install() {
