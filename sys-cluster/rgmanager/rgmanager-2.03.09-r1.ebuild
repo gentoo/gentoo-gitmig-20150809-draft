@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-2.03.09-r1.ebuild,v 1.2 2011/03/24 13:36:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-2.03.09-r1.ebuild,v 1.3 2011/05/15 18:35:33 xarthisius Exp $
 
 EAPI=2
 
@@ -33,6 +33,7 @@ S=${WORKDIR}/${MY_P}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-CVE-2010-3389.patch
+	sed -i -e 's/-Werror//g' src/{clulib,utils,daemons}/Makefile || die
 }
 
 src_configure() {
