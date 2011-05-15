@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-apc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.82 2011/05/02 20:25:15 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.83 2011/05/15 11:24:09 olemarkus Exp $
+
+*pecl-apc-3.1.9 (15 May 2011)
+
+  15 May 2011; <olemarkus@gentoo.org> -pecl-apc-3.1.8.ebuild,
+  +pecl-apc-3.1.9.ebuild:
+  Added 3.1.9. Removed 3.1.8 due to a critical regression fixed in 3.1.9
 
 *pecl-apc-3.1.8 (02 May 2011)
 
