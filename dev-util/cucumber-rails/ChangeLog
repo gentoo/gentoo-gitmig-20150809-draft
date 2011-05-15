@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cucumber-rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.14 2011/05/13 07:15:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber-rails/ChangeLog,v 1.15 2011/05/15 17:33:28 graaff Exp $
+
+  15 May 2011; Hans de Graaff <graaff@gentoo.org> cucumber-rails-0.4.1.ebuild:
+  Move 0.4.1 into a new slot for use with Rails 3. Rails 2 support is broken in
+  0.4.1 and removed in subsequent versions upstream.
 
 *cucumber-rails-0.4.1 (13 May 2011)
 
