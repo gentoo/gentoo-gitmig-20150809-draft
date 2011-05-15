@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.238 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.239 2011/05/15 17:09:38 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -49,10 +49,6 @@ media-video/mplayer2 vdpau bluray
 #
 # Mask pdnsd's Linux-specific USE flags.
 net-dns/pdnsd isdn urandom
-
-# Samuli Suominen <ssuominen@gentoo.org> (27 Mar 2011)
-# Remove this when KDE 4.6 is stable.
-kde-base/solid -hal
 
 # Gilles Dartiguelongue <eva@gentoo.org> (26 Mar 2011)
 # Mask due to unsatisfied dependencies
