@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1.ebuild,v 1.3 2011/04/05 05:23:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1.ebuild,v 1.4 2011/05/15 11:03:33 hwoarang Exp $
 
 EAPI="2"
 
@@ -86,6 +86,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/remove-toolset-${PV}.patch"
 	epatch "${FILESDIR}/${PN}-1.45.0-lambda_bind.patch"
+	
+	# Compile against python 3.2. Bug #367245
+	epatch "${FILESDIR}"/${P}-python32.patch
 
 	# This enables building the boost.random library with /dev/urandom support
 	if [[ -e /dev/urandom ]] ; then
