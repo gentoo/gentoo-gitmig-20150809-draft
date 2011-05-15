@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5372 2011/05/15 16:34:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5373 2011/05/15 17:36:30 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 May 2011; Hans de Graaff <graaff@gentoo.org> updates/2Q-2011:
+  Slotmove latest cucumber-rails into a new slot.
 
   15 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   +desc/calligra_features.desc, base/make.defaults:

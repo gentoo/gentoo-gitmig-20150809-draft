@@ -14,3 +14,4 @@ slotmove =dev-ruby/builder-3.0.0 0 3
 move app-editors/easyedit app-editors/ee
 move media-gfx/keyjnote app-office/impressive
 move kde-misc/filelight kde-base/filelight
+slotmove =dev-util/cucumber-rails-0.4.1 0 1
