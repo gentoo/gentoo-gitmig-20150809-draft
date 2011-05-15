@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.0.ebuild,v 1.1 2011/05/09 07:01:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.1.ebuild,v 1.1 2011/05/15 19:01:12 scarabeus Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -10,7 +10,7 @@ inherit python distutils eutils fdo-mime bash-completion multilib
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
-SRC_URI="http://calibre-ebook.googlecode.com/files/$P.tar.gz"
+SRC_URI="http://calibre-ebook.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -20,7 +20,7 @@ SLOT="0"
 
 IUSE=""
 
-SHARED_DEPEND="
+COMMON_DEPEND="
 	>=app-text/podofo-0.8.2
 	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers]
 	>=dev-libs/chmlib-0.40
@@ -39,19 +39,17 @@ SHARED_DEPEND="
 	virtual/libusb:0
 	>=x11-misc/xdg-utils-1.0.2"
 
-RDEPEND="$SHARED_DEPEND
+RDEPEND="${COMMON_DEPEND}
 	>=dev-python/reportlab-2.1"
 
-DEPEND="$SHARED_DEPEND
+DEPEND="${COMMON_DEPEND}
 	>=dev-python/setuptools-0.6_rc5
 	>=gnome-base/librsvg-2.0.0
 	>=x11-misc/xdg-utils-1.0.2-r2"
 
-S=$WORKDIR/$PN
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
-	[[ -z $(get_libdir) ]] && \
-		die "get_libdir returned an empty string"
 	python_set_active_version 2.7
 }
 
@@ -75,7 +73,7 @@ src_install() {
 	# Bypass kbuildsycoca and update-mime-database in order to
 	# avoid sandbox violations if xdg-mime tries to call them.
 	cat - > "${T}/kbuildsycoca" <<-EOF
-	#!$BASH
+	#!${BASH}
 	exit 0
 	EOF
 
@@ -98,11 +96,11 @@ src_install() {
 
 	# Bug #295672 - Avoid sandbox violation in ~/.config by forcing
 	# variables to point to our fake temporary $HOME.
-	export HOME="$T/fake_homedir"
-	export XDG_CONFIG_HOME="$HOME/.config"
-	export XDG_DATA_HOME="$HOME/.local/share"
-	export CALIBRE_CONFIG_DIRECTORY="$XDG_CONFIG_HOME/calibre"
-	mkdir -p "$XDG_CONFIG_HOME" "$CALIBRE_CONFIG_DIRECTORY"
+	export HOME="${T}/fake_homedir"
+	export XDG_CONFIG_HOME="${HOME}/.config"
+	export XDG_DATA_HOME="${HOME}/.local/share"
+	export CALIBRE_CONFIG_DIRECTORY="${XDG_CONFIG_HOME}/calibre"
+	mkdir -p "${XDG_CONFIG_HOME}" "${CALIBRE_CONFIG_DIRECTORY}"
 
 	# Bug #334243 - respect LDFLAGS when building calibre-mount-helper
 	export OVERRIDE_CFLAGS="$CFLAGS $LDFLAGS"
@@ -120,21 +118,21 @@ src_install() {
 	# This code may fail if behavior of --root, --bindir or
 	# --sharedir changes in the future.
 	local libdir=$(get_libdir)
-	dodir /usr/$libdir
-	mv "${D}lib/calibre" "${D}usr/$libdir/" ||
+	dodir /usr/${libdir}
+	mv "${D}lib/calibre" "${D}usr/${libdir}/" ||
 		die "failed to move libdir"
 	find "${D}"lib -type d -empty -delete
 	grep -rlZ "/usr/lib/calibre" "${D}" | \
-		xargs -0 sed -e "s:/usr/lib/calibre:/usr/$libdir/calibre:g" -i ||
+		xargs -0 sed -e "s:/usr/lib/calibre:/usr/${libdir}/calibre:g" -i ||
 		die "failed to fix harcoded libdir paths"
 
 	find "${D}"share/calibre/man -type f -print0 | \
 		while read -r -d $'\0' ; do
-			if [[ $REPLY = *.[0-9]calibre.bz2 ]] ; then
+			if [[ ${REPLY} = *.[0-9]calibre.bz2 ]] ; then
 				newname=${REPLY%calibre.bz2}.bz2
-				mv "$REPLY" "$newname"
-				doman "$newname" || die "doman failed"
-				rm -f "$newname" || die "rm failed"
+				mv "${REPLY}" "${newname}"
+				doman "${newname}" || die "doman failed"
+				rm -f "${newname}" || die "rm failed"
 			fi
 		done
 	rmdir "${D}"share/calibre/man/* || \
@@ -155,11 +153,11 @@ src_install() {
 	# The menu entries end up here due to '--mode user' being added to
 	# xdg-* options in src_prepare.
 	dodir /usr/share/mime/packages
-	chmod -fR a+rX,u+w,g-w,o-w "$HOME"/.local
-	mv "$HOME"/.local/share/mime/packages/* "$D"usr/share/mime/packages/ ||
+	chmod -fR a+rX,u+w,g-w,o-w "${HOME}"/.local
+	mv "${HOME}"/.local/share/mime/packages/* "${D}"usr/share/mime/packages/ ||
 		die "failed to register mime types"
 	dodir /usr/share/icons
-	mv "$HOME"/.local/share/icons/* "$D"usr/share/icons/ ||
+	mv "${HOME}"/.local/share/icons/* "${D}"usr/share/icons/ ||
 		die "failed to install icon files"
 
 	# Bug #358065 - Remove inappropriate mime types from *.desktop.
@@ -170,26 +168,26 @@ src_install() {
 		-e "s:text/html;::g" \
 		-e "s:text/plain;::g" \
 		-e "s:text/rtf;::g" \
-		-i "$HOME"/.local/share/applications/*.desktop \
+		-i "${HOME}"/.local/share/applications/*.desktop \
 		|| die "sed failed"
 
-	domenu "$HOME"/.local/share/applications/*.desktop ||
+	domenu "${HOME}"/.local/share/applications/*.desktop ||
 		die "failed to install .desktop menu files"
 
-	dobashcompletion "$D"etc/bash_completion.d/calibre
+	dobashcompletion "${D}"etc/bash_completion.d/calibre
 	rm -r "${D}"etc/bash_completion.d
 	find "${D}"etc -type d -empty -delete
 
-	python_convert_shebangs -r $(python_get_version) "$D"
+	python_convert_shebangs -r $(python_get_version) "${D}"
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-	python_mod_optimize /usr/$(get_libdir)/$PN
+	python_mod_optimize /usr/$(get_libdir)/${PN}
 	bash-completion_pkg_postinst
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/$PN
+	python_mod_cleanup /usr/$(get_libdir)/${PN}
 }
