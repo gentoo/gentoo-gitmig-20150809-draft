@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.11 2011/02/26 19:18:41 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.12 2011/05/15 15:26:01 scarabeus Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs autotools
 
@@ -53,7 +53,7 @@ COMMON_DEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	x11-libs/libXv
 	x11-apps/xset
 	xinerama? ( x11-libs/libXinerama )
-	ffmpeg? ( media-video/ffmpeg )"
+	ffmpeg? ( virtual/ffmpeg )"
 
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )
@@ -70,10 +70,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	schedule? ( sys-process/at )"
 
-# Make sure the assembler USE flags are unmasked on amd64
-# Remove this once default-linux/amd64/2006.1 is deprecated
-DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
-
 extension_iter() {
 	local my_a
 	for my_a in ${A} ; do
@@ -86,16 +82,18 @@ extension_iter() {
 
 extension_compile() {
 	einfo "Building ${1}"
-	cd "${WORKDIR}/${1}"
+	pushd "${WORKDIR}/${1}" > /dev/null
 
-	econf || die "econf failed"
-	emake CC=$(tc-getCC) || die "emake failed"
+	econf
+	emake CC=$(tc-getCC) || die
+	popd > /dev/null
 }
 
 extension_install() {
 	einfo "Installing ${1}"
-	cd "${WORKDIR}/${1}" \
-		&& emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)/${PN}" install
+	pushd "${WORKDIR}/${1}" > /dev/null
+	emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)/${PN}" install || die
+	popd > /dev/null
 }
 
 src_unpack() {
@@ -124,10 +122,6 @@ src_compile() {
 		ewarn "If you want a better GUI toolkit, enable either \"neXt\" or \"Xaw3d\" USE flags."
 	fi
 
-	has_version '<x11-base/xorg-x11-7.0' && \
-		appdefaultsdir="/etc/X11/app-defaults" || \
-		appdefaultsdir="/usr/share/X11/app-defaults"
-
 	econf ${xawconf} \
 		$(use_enable mmx) \
 		$(use_enable alsa) \
@@ -150,8 +144,7 @@ src_compile() {
 		--enable-pixmaps \
 		--disable-cpu-detection \
 		--disable-divx4linux \
-		--with-appdefaultsdir=${appdefaultsdir} \
-		|| die "Configuration failed."
+		--with-appdefaultsdir=${appdefaultsdir}
 
 	emake || die "Compilation failed."
 
@@ -169,7 +162,7 @@ src_install() {
 	# Install the icons in the hicolor theme
 	for dim in 48 32 16; do
 		insinto /usr/share/icons/hicolor/${dim}x${dim}/apps
-		newins "${S}/xdtv-${dim}.png" xdtv.png
+		newins "${S}/xdtv-${dim}.png" xdtv.png || die
 	done
 
 	# Install documentation

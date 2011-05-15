@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.58 2011/02/26 19:18:41 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.59 2011/05/15 15:26:01 scarabeus Exp $
+
+  15 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> xdtv-2.4.0.ebuild:
+  Depend on virtual/ffmpeg.
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> xdtv-2.4.0.ebuild:
   Updated depends from media-libs/jpeg to virtual/jpeg
