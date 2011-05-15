@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircmap
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ChangeLog,v 1.10 2007/05/06 12:33:18 genone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ChangeLog,v 1.11 2011/05/15 01:25:56 binki Exp $
+
+  14 May 2011; Nathan Phillip Brink <binki@gentoo.org> ircmap-0.99.ebuild:
+  Fix DESCRIPTION and update HOMEPAGE.
 
   06 May 2007; Marius Mauch <genone@gentoo.org> ircmap-0.99.ebuild:
   Replacing einfo with elog

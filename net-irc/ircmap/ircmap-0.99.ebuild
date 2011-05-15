@@ -1,9 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.12 2007/05/06 12:33:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.13 2011/05/15 01:25:56 binki Exp $
 
-DESCRIPTION="This script connects to the specified IRC server and creates a diagram of the network performing LINKS command."
-HOMEPAGE="http://pasky.ji.cz/~pasky/irc/"
+DESCRIPTION="Scripts to treate diagrams of IRC networks using the LINKS command"
+HOMEPAGE="http://pasky.or.cz/~pasky/irc/"
 SRC_URI="http://pasky.ji.cz/~pasky/irc/${PN}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
