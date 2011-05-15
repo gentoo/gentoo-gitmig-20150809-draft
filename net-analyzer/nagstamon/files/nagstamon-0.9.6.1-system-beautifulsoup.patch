@@ -5,8 +5,8 @@
  import re
  
 -from Nagstamon.BeautifulSoup import BeautifulSoup, BeautifulStoneSoup
-+import BeautifulSoup
-+import BeautifulStoneSoup
++from BeautifulSoup import BeautifulSoup
++from BeautifulSoup import BeautifulStoneSoup
 +
  from Nagstamon.Actions import HostIsFilteredOutByRE, ServiceIsFilteredOutByRE, not_empty
  from Nagstamon.Objects import *
