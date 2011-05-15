@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_pre201104301030.ebuild,v 1.1 2011/05/01 20:15:53 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_pre201105151030.ebuild,v 1.1 2011/05/15 19:17:23 olemarkus Exp $
 
 EAPI=4
 
@@ -105,7 +105,7 @@ IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
 	mssql mysql mysqlnd mysqli nls oci8
 	oci8-instant-client odbc pcntl pdo +phar pic +posix postgres qdbm
 	readline recode sapdb +session sharedext sharedmem
-	+simplexml snmp soap sockets solid spell sqlite sqlite3 ssl
+	+simplexml snmp soap sockets solid spell sqlite ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
 	xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
@@ -172,8 +172,7 @@ DEPEND="!dev-lang/php:5
 	soap? ( >=dev-libs/libxml2-2.6.8 )
 	solid? ( >=dev-db/unixODBC-1.8.13 )
 	spell? ( >=app-text/aspell-0.50 )
-	sqlite? ( =dev-db/sqlite-2* pdo? ( >=dev-db/sqlite-3.7.4 ) )
-	sqlite3? ( >=dev-db/sqlite-3.7.4 )
+	sqlite? ( >=dev-db/sqlite-3.7.4 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase-ct? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
@@ -347,7 +346,7 @@ eblit-pkg() {
 eblit-pkg pkg_setup v2
 
 src_prepare() { eblit-run src_prepare snapshots ; }
-src_configure() { eblit-run src_configure v2 ; }
+src_configure() { eblit-run src_configure snapshots ; }
 src_compile() { eblit-run src_compile v1 ; }
 src_install() { eblit-run src_install v2 ; }
 src_test() { eblit-run src_test v1 ; }

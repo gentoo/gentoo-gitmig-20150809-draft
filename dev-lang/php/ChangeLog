@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.488 2011/05/01 20:15:53 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.489 2011/05/15 19:17:23 olemarkus Exp $
+
+*php-5.4.0_pre201105151030 (15 May 2011)
+
+  15 May 2011; <olemarkus@gentoo.org> -php-5.4.0_pre201104301030.ebuild,
+  +php-5.4.0_pre201105151030.ebuild,
+  +files/eblits/src_configure-snapshots.eblit:
+  Bumped the php snapshot version
+
+  08 May 2011; <olemarkus@gentoo.org> php-5.4.0_pre201104301030.ebuild,
+  +files/eblits/src_configure-snapshots.eblit:
+  Remove sqlite2 support and the sqlite3 USE flag. sqlite USE flag now enabled
+  sqlite3
 
 *php-5.4.0_pre201104301030 (01 May 2011)
 

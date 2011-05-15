@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_prepare-snapshots.eblit,v 1.1 2011/05/01 20:15:52 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_prepare-snapshots.eblit,v 1.2 2011/05/15 19:17:23 olemarkus Exp $
 
 eblit-php-src_prepare() {
 	# USE=sharedmem (session/mod_mm to be exact) tries to mmap() this path
@@ -32,7 +32,7 @@ eblit-php-src_prepare() {
 	sed -i \
 		-e "s,-i -a -n php${PHP_MV},-i -n php${PHP_MV},g" \
 		-e "s,-i -A -n php${PHP_MV},-i -n php${PHP_MV},g" \
-		configure sapi/apache2filter/config.m4 sapi/apache2handler/config.m4
+	configure sapi/apache2filter/config.m4 sapi/apache2handler/config.m4
 
 	# Patch PHP to support heimdal instead of mit-krb5
 	if has_version "app-crypt/heimdal" ; then
@@ -53,21 +53,8 @@ eblit-php-src_prepare() {
 
 	#Add user patches #357637
 	epatch_user
-
-	# rebuild the whole autotools stuff as we are heavily patching it
-	# (suhosin, fastbuild, ...)
-
-	# eaclocal doesn't accept --force, so we try to force re-generation
-	# this way
+	
+	#force rebuilding aclocal.m4
 	rm aclocal.m4
-
-	# work around divert() issues with newer autoconf, bug #281697
-	if has_version '>=sys-devel/autoconf-2.64' ; then
-		sed -i -r \
-			-e 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
-			$(grep -l divert $(find . -name '*.m4') configure.in) || die
-	fi
-	eautoreconf --force -W no-cross
+	eautoreconf
 }
-
-
