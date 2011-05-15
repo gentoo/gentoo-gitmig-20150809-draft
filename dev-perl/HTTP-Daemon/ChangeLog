@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.4 2011/04/24 11:42:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.5 2011/05/15 18:37:31 armin76 Exp $
+
+  15 May 2011; Raúl Porcel <armin76@gentoo.org> HTTP-Daemon-6.0.0.ebuild:
+  Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #358079
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> HTTP-Daemon-6.0.0.ebuild:
   (Re)keyword for Prefix, bug #358079

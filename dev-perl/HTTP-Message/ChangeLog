@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Message
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.6 2011/04/24 11:40:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.7 2011/05/15 18:35:44 armin76 Exp $
+
+  15 May 2011; Raúl Porcel <armin76@gentoo.org> HTTP-Message-6.20.0.ebuild:
+  Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #358079
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> HTTP-Message-6.20.0.ebuild:
   (Re)keyword for Prefix, bug #358079
