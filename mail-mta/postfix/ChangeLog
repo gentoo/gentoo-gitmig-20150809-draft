@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.262 2011/05/15 10:16:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.263 2011/05/15 17:11:10 eras Exp $
+
+  15 May 2011; Eray Aslan <eras@gentoo.org> -postfix-2.7.3-r1.ebuild,
+  -postfix-2.8.1-r1.ebuild, -postfix-2.8.2.ebuild, -postfix-2.8.2-r1.ebuild:
+  Remove vulnerable versions - bug #366605
 
   15 May 2011; Kacper Kowalik <xarthisius@gentoo.org> postfix-2.8.3.ebuild:
   Marked ~ppc64 wrt #366525
@@ -10,6 +14,10 @@
 
   14 May 2011; Kacper Kowalik <xarthisius@gentoo.org> postfix-2.7.4.ebuild:
   ppc/ppc64 stable wrt #366605
+
+  15 May 2011; Eray Aslan <eras@gentoo.org> -postfix-2.7.3-r1.ebuild,
+  -postfix-2.8.1-r1.ebuild, -postfix-2.8.2.ebuild, -postfix-2.8.2-r1.ebuild:
+  Remove vulnerable versions - bug 366605
 
   12 May 2011; Jeroen Roovers <jer@gentoo.org> postfix-2.8.3.ebuild:
   Marked ~hppa (bug #366525).
