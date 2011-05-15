@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12773 2011/05/15 10:03:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12774 2011/05/15 17:11:00 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -187,10 +187,6 @@ app-portage/gatt
 # Mask for removal, abandoned by upstream, bug 363925
 # 30 days to live
 mail-client/claws-mail-cachesaver
-
-# Anthony G. Basile <blueness@gentoo.org> (16 Apr 2011)
-# Masked for removal in 30 days.  Bug #362847
-sec-policy/selinux-hal
 
 # Alexis Ballier <aballier@gentoo.org> (14 Apr 2011)
 # Beta/test version -> masked
