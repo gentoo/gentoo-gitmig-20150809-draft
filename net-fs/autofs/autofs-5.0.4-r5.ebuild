@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.8 2010/09/29 16:54:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.9 2011/05/15 11:03:49 pva Exp $
 
 inherit eutils multilib autotools
 
@@ -116,6 +116,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# work around bug #355975 (mount modifies timestamp of /etc/mtab)
+	# with >=sys-apps/util-linux-2.19,
+	addpredict "/etc/mtab"
+
 	CFLAGS="${CFLAGS}" \
 	econf \
 		$(use_with ldap openldap) \
