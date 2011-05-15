@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/suspend
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.19 2011/05/05 21:42:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.20 2011/05/15 20:49:06 xmw Exp $
+
+  15 May 2011; Michael Weber <xmw@gentoo.org> suspend-0.8-r1.ebuild,
+  -suspend-0.9_pre0.ebuild, -files/suspend-0.9_pre0-errno.patch,
+  suspend-1.0.ebuild, +files/suspend-1.0-errno.patch:
+  Removed old versions, reviewed -1.0.ebuild, added USE=static-libs to
+  dev-libs/lzo, dev-libs/libgcrypt and dev-libs/libgpg-error (edit on stable
+  version, thanks to IAN DELANEY, bug 366807)
 
 *suspend-1.0 (05 May 2011)
 
