@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.4-r1.ebuild,v 1.1 2011/05/05 16:51:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5.ebuild,v 1.1 2011/05/15 07:14:20 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit autotools eutils linux-info multilib pam systemd
 
 MY_PN=ConsoleKit
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.88
 	sys-libs/zlib
 	x11-libs/libX11
 	pam? ( virtual/pam )
-	policykit? ( >=sys-auth/polkit-0.96-r1 )"
+	policykit? ( >=sys-auth/polkit-0.101-r1 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
@@ -66,7 +66,7 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		htmldocdir="${EPREFIX}"/usr/share/doc/${PF}/html \
-		install || die
+		install
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README TODO
 
@@ -78,10 +78,10 @@ src_install() {
 	keepdir /var/log/ConsoleKit
 
 	exeinto /etc/X11/xinit/xinitrc.d
-	newexe "${FILESDIR}"/90-consolekit-3 90-consolekit || die
+	newexe "${FILESDIR}"/90-consolekit-3 90-consolekit
 
 	exeinto /usr/$(get_libdir)/ConsoleKit/run-session.d
-	doexe "${FILESDIR}"/pam-foreground-compat.ck || die
+	doexe "${FILESDIR}"/pam-foreground-compat.ck
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
 }
