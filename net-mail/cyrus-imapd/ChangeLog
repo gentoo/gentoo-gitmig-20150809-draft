@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.162 2011/05/15 14:16:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.163 2011/05/15 14:45:13 xarthisius Exp $
+
+  15 May 2011; Kacper Kowalik <xarthisius@gentoo.org> cyrus-imapd-2.4.8.ebuild:
+  ppc/ppc64 stable wrt #365909
 
   15 May 2011; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.8.ebuild:
   Fix linking against net-fs/openafs
