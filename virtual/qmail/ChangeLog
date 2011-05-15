@@ -1,6 +1,9 @@
 # ChangeLog for virtual/qmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.11 2011/02/06 12:01:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/qmail/ChangeLog,v 1.12 2011/05/15 10:11:50 xarthisius Exp $
+
+  15 May 2011; Kacper Kowalik <xarthisius@gentoo.org> qmail-1.03.ebuild:
+  Marked ppc64 wrt #366525
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> qmail-1.03.ebuild:
   Drop to ~mips
