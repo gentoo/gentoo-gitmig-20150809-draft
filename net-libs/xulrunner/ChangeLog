@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.417 2011/05/07 17:59:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.418 2011/05/16 00:35:06 anarchy Exp $
+
+*xulrunner-2.0.1-r1 (16 May 2011)
+
+  16 May 2011; Jory A. Pratt <anarchy@gentoo.org> -xulrunner-2.0.1.ebuild,
+  +xulrunner-2.0.1-r1.ebuild:
+  Fix hunspell dictionary detection, use system libffi, add powerpc atomic ops
+  support
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.2.17.ebuild:
   alpha/arm/ia64 stable wrt #365323
