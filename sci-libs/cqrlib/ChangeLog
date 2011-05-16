@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cqrlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.9 2011/05/05 16:18:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.10 2011/05/16 06:09:35 jlec Exp $
+
+  16 May 2011; Justin Lecher <jlec@gentoo.org> files/1.0.6-gentoo.patch:
+  Fixed underlinking, #367457
 
 *cqrlib-1.0.6 (05 May 2011)
 

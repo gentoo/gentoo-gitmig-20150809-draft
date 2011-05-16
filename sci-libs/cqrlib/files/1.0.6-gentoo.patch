@@ -1,8 +1,8 @@
- Makefile |   54 ++++++++++++++++--------------------------------------
- 1 files changed, 16 insertions(+), 38 deletions(-)
+ Makefile |   56 +++++++++++++++++---------------------------------------
+ 1 files changed, 17 insertions(+), 39 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index 9590e50..7703c41 100644
+index 9590e50..1aa14e5 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -88,7 +88,7 @@ INCLUDES = -I$(INC)
@@ -81,6 +81,15 @@ index 9590e50..7703c41 100644
  	
  
  $(LIB):
+@@ -255,7 +233,7 @@ $(BIN):
+ #
+ $(LIB)/libCQRlib.$(LIB_EXT): $(SOURCE) $(HEADERS) $(COMMONDEP)
+ 	$(COMPILE_COMMAND) -c $(SOURCE)
+-	$(LIBRARY_LINK_COMMAND) -o $(LIB)/libCQRlib.$(LIB_EXT) *.$(OBJ_EXT) 
++	$(LIBRARY_LINK_COMMAND) -o $(LIB)/libCQRlib.$(LIB_EXT) *.$(OBJ_EXT) -lm
+ 
+ #
+ # CQRlibTest example program
 @@ -274,7 +252,7 @@ $(BIN)/CPPQRTest: $(EXAMPLES)/CPPQRTest.cpp
  #
  # Tests
