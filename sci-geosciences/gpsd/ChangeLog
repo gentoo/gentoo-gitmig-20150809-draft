@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.65 2011/05/10 13:08:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.66 2011/05/16 10:43:42 scarabeus Exp $
+
+*gpsd-2.96 (16 May 2011)
+
+  16 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/2.96-fix-ldflags.patch,
+  -files/gpsd-2.33-duplicate-device-add-hang.patch,
+  -files/gpsd-2.33-hotplug-background-fix.patch, -gpsd-2.38.ebuild,
+  -gpsd-2.39-r1.ebuild, +files/2.96-fix-tests.patch, +gpsd-2.96.ebuild:
+  Version bump to latest. Drop older. Fixes bug #362979.
 
   10 May 2011; Michael Weber <xmw@gentoo.org> gpsd-2.95-r1.ebuild:
   arm/ppc stable (bug 362981)
