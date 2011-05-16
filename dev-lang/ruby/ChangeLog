@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.490 2011/03/13 19:20:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.491 2011/05/16 18:11:17 graaff Exp $
+
+*ruby-1.9.2-r1 (16 May 2011)
+
+  16 May 2011; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.2-r1.ebuild:
+  Don't remove racc files since all other ruby targets ship these files
+  themselves as well. Closes bug 363419.
 
   13 Mar 2011; Hans de Graaff <graaff@gentoo.org> -ruby-1.8.7_p302.ebuild,
   ruby-1.8.7_p334.ebuild:
