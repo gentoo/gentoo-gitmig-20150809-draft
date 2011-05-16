@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-9999.ebuild,v 1.4 2011/03/22 21:34:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-9999.ebuild,v 1.5 2011/05/16 20:40:51 arfrever Exp $
 
 inherit subversion
 
-DESCRIPTION="Script used to remerge python packages when changing Python version."
-HOMEPAGE="http://www.gentoo.org/proj/en/Python"
+DESCRIPTION="Script used to reinstall Python packages after changing of active Python versions"
+HOMEPAGE="http://www.gentoo.org/proj/en/Python/"
 SRC_URI=""
 ESVN_REPO_URI="https://overlays.gentoo.org/svn/proj/python/projects/${PN}/trunk"
 
@@ -25,5 +25,5 @@ src_compile() {
 src_install() {
 	dosbin ${PN} || die "dosbin failed"
 	doman ${PN}.1 || die "doman failed"
-	dodoc AUTHORS ChangeLog || die "dodoc failed"
+	dodoc AUTHORS || die "dodoc failed"
 }
