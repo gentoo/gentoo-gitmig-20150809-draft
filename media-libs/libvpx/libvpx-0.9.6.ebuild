@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.1 2011/03/09 23:35:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.2 2011/05/16 16:39:23 xarthisius Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs
@@ -11,11 +11,11 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 elif [[ ${PV} == *pre* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux"
 else
 	MY_P="${PN}-v${PV}"
 	SRC_URI="http://webm.googlecode.com/files/${MY_P}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux"
 	S="${WORKDIR}/${MY_P}"
 fi
 

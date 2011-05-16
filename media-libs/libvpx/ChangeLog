@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.15 2011/03/09 23:35:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.16 2011/05/16 16:39:23 xarthisius Exp $
+
+  16 May 2011; Kacper Kowalik <xarthisius@gentoo.org> libvpx-0.9.6.ebuild:
+  Marked ~ppc/~ppc64 wrt #360427
 
 *libvpx-0.9.6 (09 Mar 2011)
 
