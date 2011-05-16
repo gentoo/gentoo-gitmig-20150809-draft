@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-ossl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.32 2011/05/04 11:09:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.33 2011/05/16 19:44:54 jer Exp $
+
+  16 May 2011; Jeroen Roovers <jer@gentoo.org>
+  files/qca-ossl-openssl-1.0.0.patch:
+  Remove relative paths in patch.
 
   04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/qca-ossl-openssl-0.9.8i.patch:

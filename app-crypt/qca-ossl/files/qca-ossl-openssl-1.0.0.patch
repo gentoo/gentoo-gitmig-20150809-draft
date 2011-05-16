@@ -1,6 +1,6 @@
-diff -ru ../qca-ossl-2.0.0-beta3/CMakeLists.txt ./CMakeLists.txt
---- ../qca-ossl-2.0.0-beta3/CMakeLists.txt	2007-06-29 23:10:53.000000000 +0200
-+++ ./CMakeLists.txt	2010-04-18 04:05:09.000000000 +0200
+diff -ru a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2007-06-29 23:10:53.000000000 +0200
++++ b/CMakeLists.txt	2010-04-18 04:05:09.000000000 +0200
 @@ -1,5 +1,12 @@
  # QCA OSSL
  
@@ -14,9 +14,9 @@ diff -ru ../qca-ossl-2.0.0-beta3/CMakeLists.txt ./CMakeLists.txt
  SET(QCA_OSSL_SOURCES qca-ossl.cpp)
  
  MY_AUTOMOC( QCA_OSSL_SOURCES )
-diff -ru ../qca-ossl-2.0.0-beta3/qca-ossl.cpp ./qca-ossl.cpp
---- ../qca-ossl-2.0.0-beta3/qca-ossl.cpp	2007-12-11 07:34:57.000000000 +0100
-+++ ./qca-ossl.cpp	2010-04-18 04:08:46.000000000 +0200
+diff -ru a/qca-ossl.cpp b/qca-ossl.cpp
+--- a/qca-ossl.cpp	2007-12-11 07:34:57.000000000 +0100
++++ b/qca-ossl.cpp	2010-04-18 04:08:46.000000000 +0200
 @@ -42,6 +42,15 @@
  #define OSSL_097
  #endif
