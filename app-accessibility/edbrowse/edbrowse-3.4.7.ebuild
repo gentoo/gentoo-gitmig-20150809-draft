@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.7.ebuild,v 1.1 2011/04/11 19:09:41 cbrannon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/edbrowse-3.4.7.ebuild,v 1.2 2011/05/16 12:23:15 cbrannon Exp $
 
 EAPI="4"
 inherit eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://the-brannons.com/edbrowse/"
 SRC_URI="http://the-brannons.com/${PN}/${P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="linguas_fr odbc"
 COMMON_DEPEND="dev-lang/spidermonkey
 	>=sys-libs/readline-6.0
