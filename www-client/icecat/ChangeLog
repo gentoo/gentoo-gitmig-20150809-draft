@@ -1,6 +1,12 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.85 2011/05/14 08:18:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.86 2011/05/16 07:21:14 polynomial-c Exp $
+
+*icecat-4.0.1-r1 (16 May 2011)
+
+  16 May 2011; Lars Wendler <polynomial-c@gentoo.org> -icecat-4.0.1.ebuild,
+  +icecat-4.0.1-r1.ebuild:
+  Use system libffi
 
   14 May 2011; Kacper Kowalik <xarthisius@gentoo.org> icecat-3.6.16-r1.ebuild:
   ppc/ppc64 stable wrt #365323
