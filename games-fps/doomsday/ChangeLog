@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.37 2011/03/18 19:38:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.38 2011/05/16 14:40:29 tupone Exp $
+
+  16 May 2011; Tupone Alfredo <tupone@gentoo.org> doomsday-1.9.0_beta69.ebuild,
+  +files/doomsday-1.9.0_beta69-underlink.patch:
+  Fix underlinking. Bug #367353 by Diego Elio Pettenò
 
   18 Mar 2011; Thomas Kahle <tomka@gentoo.org> doomsday-1.9.0_beta69.ebuild:
   x86 stable per bug 356491
