@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.51.ebuild,v 1.1 2011/04/29 22:41:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.51.ebuild,v 1.2 2011/05/16 06:05:11 vapier Exp $
 
 EAPI="4"
 
@@ -30,6 +30,7 @@ src_prepare() {
 		epatch acl-2.2.42-CITI_NFS4_ALL-2.dif
 	fi
 	epatch "${FILESDIR}"/${PN}-2.2.49-quote-strchr.patch
+	epatch "${FILESDIR}"/${PN}-2.2.51-config-shell.patch #365397
 	sed -i \
 		-e '/^as_dummy=/s:=":="$PATH$PATH_SEPARATOR:' \
 		configure # hack PATH with AC_PATH_PROG
