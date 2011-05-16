@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.419 2011/05/16 13:28:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.420 2011/05/16 13:37:21 anarchy Exp $
+
+  16 May 2011; Jory A. Pratt <anarchy@gentoo.org>
+  +files/mozilla-2.0_support_64bit_big_endian.patch,
+  -files/mozilla-2.0_support_64bit_big_indian.patch, xulrunner-2.0.1-r1.ebuild:
+  Fix typo, from indian to endian
 
   16 May 2011; Jory A. Pratt <anarchy@gentoo.org>
   +files/mozilla-2.0_support_64bit_big_indian.patch, xulrunner-2.0.1-r1.ebuild:

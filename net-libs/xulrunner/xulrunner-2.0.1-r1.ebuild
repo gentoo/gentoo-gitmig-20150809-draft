@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.2 2011/05/16 13:28:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.3 2011/05/16 13:37:21 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -72,7 +72,7 @@ src_prepare() {
 	epatch "${WORKDIR}"
 
 	#64bit big indian support
-	epatch "${FILESDIR}/mozilla-2.0_support_64bit_big_indian.patch"
+	epatch "${FILESDIR}/mozilla-2.0_support_64bit_big_endian.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
