@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Perl-Critic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.76 2011/04/01 11:53:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.77 2011/05/16 12:29:50 tove Exp $
+
+*Perl-Critic-1.116.0 (16 May 2011)
+
+  16 May 2011; Torsten Veller <tove@gentoo.org> +Perl-Critic-1.116.0.ebuild:
+  Version bump
 
 *Perl-Critic-1.115.0 (01 Apr 2011)
 
