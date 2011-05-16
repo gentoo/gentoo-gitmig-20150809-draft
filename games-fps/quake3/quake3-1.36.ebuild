@@ -1,14 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36.ebuild,v 1.4 2011/05/06 22:21:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36.ebuild,v 1.5 2011/05/16 15:09:32 mr_bones_ Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
 # quake3-VER_alphaREV  -> svn snapshot REV for version VER
 # quake3-VER           -> normal quake release
 
-EAPI="2"
-
+EAPI=2
 inherit eutils flag-o-matic games toolchain-funcs
 [[ "${PV}" == 9999* ]] && inherit subversion
 
