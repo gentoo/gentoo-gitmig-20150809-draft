@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r4.ebuild,v 1.6 2011/04/20 17:35:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r4.ebuild,v 1.7 2011/05/16 20:30:53 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="GPAC is an implementation of the MPEG-4 Systems standard developed 
 HOMEPAGE="http://gpac.sourceforge.net/"
 NBV="610"
 WBV="600"
-PATCHLEVEL="7"
+PATCHLEVEL="8"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}-patches-${PATCHLEVEL}.tar.bz2"
 
@@ -80,6 +80,7 @@ src_unpack() {
 		need-wxwidgets unicode
 		sed -i -e "s:wx-config:${WX_CONFIG}:g" configure
 	else
+		sed -i -e "s:wx-config:false:g" configure
 		sed -i -e 's:^has_wx="yes:has_wx="no:' configure
 	fi
 
