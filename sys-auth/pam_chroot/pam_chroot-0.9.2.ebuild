@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.2.ebuild,v 1.2 2008/03/21 14:34:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_chroot/pam_chroot-0.9.2.ebuild,v 1.3 2011/05/16 09:09:19 flameeyes Exp $
 
 inherit toolchain-funcs pam flag-o-matic eutils
 
@@ -17,9 +17,15 @@ DEPEND="virtual/pam
 	!<sys-libs/pam-0.99"
 RDEPEND="${DEPEND}"
 
+doecho() {
+	echo "$@"
+	"$@" || die
+}
+
 src_compile() {
-	LDFLAGS="$(raw-ldflags)" emake \
-		CC="$(tc-getCC)" LD="$(tc-getLD)" || die "emake failed"
+	# using the Makefile would require patching it to work properly, so
+	# rather simply re-create it here.
+	doecho $(tc-getCC) ${LDFLAGS} -shared -fPIC ${CFLAGS} ${PN}.c -o ${PN}.so -lpam
 }
 
 src_install() {
