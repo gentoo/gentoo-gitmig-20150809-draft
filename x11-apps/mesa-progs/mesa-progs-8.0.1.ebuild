@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.0.1.ebuild,v 1.7 2011/03/05 17:58:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-8.0.1.ebuild,v 1.8 2011/05/16 07:55:20 mgorny Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ src_configure() {
 
 src_compile() {
 	tc-export CC
-	emake LDLIBS='-lGL -lm' src/xdemos/{glxgears,glxinfo} || die
+	emake LDLIBS='-lX11 -lGL -lm' src/xdemos/{glxgears,glxinfo} || die
 }
 
 src_install() {
