@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p10.ebuild,v 1.1 2011/05/09 14:56:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p10.ebuild,v 1.2 2011/05/16 10:36:26 nyhm Exp $
 
 EAPI="1"
 
@@ -167,7 +167,9 @@ pkg_preinst() {
 		# rewrite the symlink to ensure that its mtime changes. having /bin/sh
 		# missing even temporarily causes a fatal error with paludis.
 		local target=$(readlink "${ROOT}"/bin/sh)
-		ln -sf "${target}" "${ROOT}"/bin/sh
+		local tmp=$(emktemp "${ROOT}"/bin)
+		ln -sf "${target}" "${tmp}"
+		mv -f "${tmp}" "${ROOT}"/bin/sh
 	fi
 }
 
