@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r1.ebuild,v 1.6 2011/05/12 12:57:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.3_alpha3-r2.ebuild,v 1.1 2011/05/16 02:23:33 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -190,8 +190,8 @@ src_configure() {
 		append-cxxflags -fno-stack-protector
 	fi
 
-       # Ensure we do not fail on i{3,5,7} processors that support -mavx
-       append-flags -mno-avx
+	# Ensure we do not fail on i{3,5,7} processors that support -mavx
+	append-flags -mno-avx
 
 	CPPFLAGS="${CPPFLAGS}" \
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
