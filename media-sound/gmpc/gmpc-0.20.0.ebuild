@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.20.0.ebuild,v 1.10 2011/03/22 18:57:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.20.0.ebuild,v 1.11 2011/05/16 11:06:37 angelos Exp $
 
 EAPI=2
-inherit gnome2-utils
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="A GTK+2 client for the Music Player Daemon"
 HOMEPAGE="http://gmpc.wikia.com/wiki/Gnome_Music_Player_Client"
@@ -28,6 +28,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-underlinking.patch
+	eautoreconf
+}
 
 src_configure() {
 	VALAC=$(type -p valac-0.10) \
