@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.22.ebuild,v 1.2 2011/05/07 17:07:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.22.ebuild,v 1.3 2011/05/16 11:28:18 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -29,6 +29,7 @@ RDEPEND="dev-db/sqlite:3
 	libnotify? ( x11-libs/libnotify )
 	lyrics? ( net-libs/libsoup:2.4 )"
 DEPEND="${RDEPEND}
+	dev-lang/vala:0.12
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
@@ -36,6 +37,7 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS NEWS README )
 
 src_configure() {
+	VALAC=$(type -p valac-0.12) \
 	econf \
 		--disable-soundmenu \
 		--disable-soundmenu2 \
