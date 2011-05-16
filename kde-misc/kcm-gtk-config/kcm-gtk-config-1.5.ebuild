@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/kcm-gtk-config-1.4.ebuild,v 1.1 2011/05/13 08:53:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/kcm-gtk-config-1.5.ebuild,v 1.1 2011/05/16 09:03:36 scarabeus Exp $
 
 EAPI=4
 
 KDE_MINIMAL="4.6"
 KDE_LINGUAS_DIR=translations
-KDE_LINGUAS="ca el es fr gl id it"
+KDE_LINGUAS="ca cs el es fr gl id it"
 MY_P=${P/kcm/chakra}
 inherit kde4-base
 
