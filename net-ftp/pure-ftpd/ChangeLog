@@ -1,6 +1,17 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.117 2011/05/14 08:26:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.118 2011/05/16 14:54:53 polynomial-c Exp $
+
+*pure-ftpd-1.0.32-r1 (16 May 2011)
+
+  16 May 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -pure-ftpd-1.0.30-r1.ebuild, -pure-ftpd-1.0.31.ebuild,
+  +pure-ftpd-1.0.32-r1.ebuild, +files/pure-ftpd.conf_d-3,
+  +files/pure-ftpd.rc11:
+  Fixed startup of pure-ftpd with openrc when pure-uploadscript should be
+  started as well. Thanks to Kilburn Abrahams for reporting this in bug
+  #366761. Improved readability of the init script a bit (requested by jer).
+  Removed old (vulnerable) versions.
 
   14 May 2011; Kacper Kowalik <xarthisius@gentoo.org> pure-ftpd-1.0.32.ebuild:
   ppc/ppc64 stable wrt #365751

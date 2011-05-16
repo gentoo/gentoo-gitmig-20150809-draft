@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.31.ebuild,v 1.1 2011/04/27 11:54:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.32-r1.ebuild,v 1.1 2011/05/16 14:54:53 polynomial-c Exp $
 
 EAPI=2
 inherit eutils confutils flag-o-matic
@@ -90,9 +90,9 @@ src_install() {
 
 	dodoc AUTHORS CONTACT ChangeLog FAQ HISTORY INSTALL README* NEWS
 
-	newconfd "${FILESDIR}/pure-ftpd.conf_d-2" pure-ftpd
+	newconfd "${FILESDIR}/pure-ftpd.conf_d-3" pure-ftpd
 
-	newinitd "${FILESDIR}/pure-ftpd.rc10" pure-ftpd
+	newinitd "${FILESDIR}/pure-ftpd.rc11" pure-ftpd
 
 	dodir /var/lib/run/${PN}
 
