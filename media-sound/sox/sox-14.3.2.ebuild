@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2.ebuild,v 1.3 2011/04/03 11:07:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.2.ebuild,v 1.4 2011/05/16 21:51:47 aballier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-uclibc.patch
+	epatch "${FILESDIR}"/${P}-ffmpeg.patch
 }
 
 src_configure() {
