@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.0.ebuild,v 1.1 2011/04/26 07:33:03 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.0-r1.ebuild,v 1.1 2011/05/16 10:56:47 ultrabug Exp $
 
-EAPI=3
+EAPI=4
+
+inherit autotools-utils systemd
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
@@ -30,6 +32,12 @@ BRANCH="5-stable"
 # need access to certain device nodes
 RESTRICT="test"
 
+# Maitainer note : open a bug to upstream
+# showing that building in a separate dir fails
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
+
 src_configure() {
 	# Maintainer notes:
 	# * rfc3195 needs a library and development of that library
@@ -37,67 +45,68 @@ src_configure() {
 	# * About the java GUI:
 	#   The maintainer says there is no real installation support
 	#   for the java GUI, so we disable it for now.
-	econf \
-		--disable-gui \
-		--disable-rfc3195 \
-		--enable-largefile \
-		--enable-unlimited-select \
-		--enable-imdiag \
-		--enable-imfile \
-		--enable-imtemplate \
-		--enable-imptcp \
-		--enable-mail \
-		--enable-omprog \
-		--enable-omstdout \
-		--enable-omtemplate \
-		--enable-omdbalerting \
-		--enable-omuxsock \
-		--enable-pmlastmsg \
-		--enable-pmrfc3164sd \
-		$(use_enable extras omudpspoof) \
-		$(use_enable zlib) \
-		$(use_enable mysql) \
-		$(use_enable dbi libdbi) \
-		$(use_enable postgres pgsql) \
-		$(use_enable oracle oracle) \
-		$(use_enable gnutls) \
-		$(use_enable kerberos gssapi-krb5) \
-		$(use_enable relp) \
-		$(use_enable snmp) \
-		$(use_enable debug) \
-		$(use_enable debug rtinst) \
-		$(use_enable debug diagtools) \
-		$(use_enable debug memcheck) \
-		$(use_enable debug valgrind) \
-		$(use_enable static-libs static)
+	local myeconfargs=(
+		--disable-gui
+		--disable-rfc3195
+		--enable-largefile
+		--enable-unlimited-select
+		--enable-imdiag
+		--enable-imfile
+		--enable-imtemplate
+		--enable-imptcp
+		--enable-mail
+		--enable-omprog
+		--enable-omstdout
+		--enable-omtemplate
+		--enable-omdbalerting
+		--enable-omuxsock
+		--enable-pmlastmsg
+		--enable-pmrfc3164sd
+		$(use_enable extras omudpspoof)
+		$(use_enable zlib)
+		$(use_enable mysql)
+		$(use_enable dbi libdbi)
+		$(use_enable postgres pgsql)
+		$(use_enable oracle oracle)
+		$(use_enable gnutls)
+		$(use_enable kerberos gssapi-krb5)
+		$(use_enable relp)
+		$(use_enable snmp)
+		$(use_enable debug)
+		$(use_enable debug rtinst)
+		$(use_enable debug diagtools)
+		$(use_enable debug memcheck)
+		$(use_enable debug valgrind)
+	)
+
+	systemd_to_myeconfargs
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc AUTHORS ChangeLog doc/rsyslog-example.conf || die
-	use doc && dohtml -r doc/*
+	use doc && HTML_DOCS=(doc/)
+	autotools-utils_src_install
 
 	insinto /etc
-	newins "${FILESDIR}/${BRANCH}/rsyslog-gentoo.conf" rsyslog.conf || die
-	newconfd "${FILESDIR}/${BRANCH}/rsyslog.confd" rsyslog || die
-	newinitd "${FILESDIR}/${BRANCH}/rsyslog.initd" rsyslog || die
-	keepdir /var/spool/rsyslog
-	keepdir /etc/ssl/rsyslog
-	keepdir /etc/rsyslog.d
+	newins "${FILESDIR}/${BRANCH}/${PN}-gentoo.conf" ${PN}.conf
+	newconfd "${FILESDIR}/${BRANCH}/${PN}.confd" ${PN}
+	newinitd "${FILESDIR}/${BRANCH}/${PN}.initd" ${PN}
+	keepdir /var/spool/${PN}
+	keepdir /etc/ssl/${PN}
+	keepdir /etc/${PN}.d
 
 	if use mysql; then
 		insinto /usr/share/doc/${PF}/scripts/mysql
-		doins plugins/ommysql/{createDB.sql,contrib/delete_mysql} || die
+		doins plugins/ommysql/{createDB.sql,contrib/delete_mysql}
 	fi
 
 	if use postgres; then
 		insinto /usr/share/doc/${PF}/scripts/pgsql
-		doins plugins/ompgsql/createDB.sql || die
+		doins plugins/ompgsql/createDB.sql
 	fi
 
 	insinto /etc/logrotate.d/
-	newins "${FILESDIR}/${BRANCH}/rsyslog.logrotate" rsyslog || die
+	newins "${FILESDIR}/${BRANCH}/${PN}.logrotate" ${PN}
 }
 
 pkg_postinst() {
