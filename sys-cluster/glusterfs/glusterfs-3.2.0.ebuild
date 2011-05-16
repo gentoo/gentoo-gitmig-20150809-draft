@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.0.ebuild,v 1.1 2011/05/16 10:13:39 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.0.ebuild,v 1.2 2011/05/16 10:35:55 ultrabug Exp $
 
 EAPI=4
 
@@ -93,15 +93,15 @@ pkg_postinst() {
 	elog "    # ${EDITOR} /etc/glusterfs/glusterfsd2.vol"
 	elog "You can now treat glusterfsd2 like any other service"
 	elog
-	elog "For more information on how to mount exported GlusterFS filesystems visit:"
-	elog "http://www.gluster.org/docs/index.php/Mounting_a_GlusterFS_Volume"
-	elog
-	elog "If you are upgrading from glusterfs 3.0.x please read:"
-	elog "http://www.gluster.com/community/documentation/index.php/Gluster_3.0_to_3.1_Upgrade_Guide"
-	elog
 	ewarn "You need to use a ntp client to keep the clocks synchronized across all"
 	ewarn "of your servers.  Setup a NTP synchronizing service before attempting to"
 	ewarn "run GlusterFS."
+
+	if [[ ${REPLACING_VERSIONS} < 3.1 ]]; then
+		elog
+		elog "You are upgrading from a previous version of ${PN}, please read:"
+		elog "http://www.gluster.com/community/documentation/index.php/Gluster_3.0_to_3.2_Upgrade_Guide"
+	fi
 
 	use emacs && elisp-site-regen
 }
