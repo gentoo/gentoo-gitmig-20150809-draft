@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/bzip2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.85 2010/10/09 16:30:07 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.86 2011/05/16 03:31:10 vapier Exp $
+
+*bzip2-1.0.6-r2 (16 May 2011)
+
+  16 May 2011; Mike Frysinger <vapier@gentoo.org> +bzip2-1.0.6-r2.ebuild,
+  +files/bzip2-1.0.6-progress.patch:
+  Update progress patch by Justin Binns for LFS #365639 by Christopher Head.
 
   09 Oct 2010; Raúl Porcel <armin76@gentoo.org> bzip2-1.0.6.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #338215
