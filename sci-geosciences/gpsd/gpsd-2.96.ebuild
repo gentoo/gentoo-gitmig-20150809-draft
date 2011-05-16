@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96.ebuild,v 1.1 2011/05/16 10:43:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96.ebuild,v 1.2 2011/05/16 11:07:47 flameeyes Exp $
 
 EAPI=3
 
@@ -46,6 +46,7 @@ PATCHES=(
 	"${FILESDIR}/2.95-disable-strip.patch"
 	"${FILESDIR}/${PV}-fix-ldflags.patch"
 	"${FILESDIR}/${PV}-fix-tests.patch"
+	"${FILESDIR}/${PV}-pkgconfig.patch"
 )
 
 pkg_setup() {
