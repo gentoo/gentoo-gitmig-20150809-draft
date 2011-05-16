@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kbd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.98 2010/10/08 01:57:43 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.99 2011/05/16 23:15:42 vapier Exp $
+
+*kbd-1.15.3 (16 May 2011)
+
+  16 May 2011; Mike Frysinger <vapier@gentoo.org> +kbd-1.15.3.ebuild:
+  Version bump.
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> kbd-1.12-r8.ebuild,
   kbd-1.13-r1.ebuild:
