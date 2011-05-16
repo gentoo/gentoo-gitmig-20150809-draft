@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.146 2011/05/09 18:15:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.147 2011/05/16 17:12:40 graaff Exp $
+
+  16 May 2011; Hans de Graaff <graaff@gentoo.org> xemacs-21.5.31.ebuild:
+  Make the blocker on old sys-libs/db version strong to make sure it is gone
+  during compilation. Fixes bug 367527.
 
   09 May 2011; Hans de Graaff <graaff@gentoo.org> xemacs-21.5.31.ebuild:
   Tweak sys-libs/db requirements to avoid incompatible versions. Should fix bug

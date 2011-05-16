@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.3 2011/05/09 18:15:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.4 2011/05/16 17:12:40 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -24,7 +24,7 @@ IUSE="alsa debug eolconv esd gif gpm pop postgres ldap xface nas dnd X jpeg tiff
 X_DEPEND="x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps"
 
 RDEPEND="
-	berkdb? ( >=sys-libs/db-4 !<sys-libs/db-4 )
+	berkdb? ( >=sys-libs/db-4 !!<sys-libs/db-4 )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.6
