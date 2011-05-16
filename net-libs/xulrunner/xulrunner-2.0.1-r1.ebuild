@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.3 2011/05/16 13:37:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.4 2011/05/16 17:58:38 xarthisius Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -19,7 +19,7 @@ PATCH="${PN}-2.0-patches-1.8"
 DESCRIPTION="Mozilla runtime package that can be used to bootstrap XUL+XPCOM applications"
 HOMEPAGE="http://developer.mozilla.org/en/docs/XULRunner"
 
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="1.9"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+crashreporter gconf +ipc system-sqlite +webm"
