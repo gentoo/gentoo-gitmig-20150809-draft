@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.68 2011/04/15 20:32:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.69 2011/05/16 01:01:28 anarchy Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -179,6 +179,7 @@ www-client/seamonkey-bin
 =www-plugins/adobe-flash-10.1*
 =www-plugins/adobe-flash-10.2.152.27
 =www-plugins/adobe-flash-10.2.153.1
+>=www-plugins/adobe-flash-10.3.181.14
 www-plugins/nspluginwrapper
 www-plugins/google-talkplugin
 
