@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/revenge-of-the-titans-1.80.12.ebuild,v 1.1 2011/05/15 21:56:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/revenge-of-the-titans-1.80.12.ebuild,v 1.2 2011/05/16 15:09:53 mr_bones_ Exp $
 
-EAPI="3"
-
+EAPI=3
 inherit games java-pkg-2
 
 DESCRIPTION="defeat the returning Titan horde in a series of epic ground battles"
