@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/chntpw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.18 2011/04/05 13:47:29 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.19 2011/05/16 16:09:59 c1pher Exp $
+
+*chntpw-110511 (16 May 2011)
+
+  16 May 2011; Dane Smith <c1pher@gentoo.org> +chntpw-110511.ebuild:
+  Version bump to 110511 wrt bug 367267.
 
   05 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
   Updated metadata to reflect me as the new maintainer. Added to the 
