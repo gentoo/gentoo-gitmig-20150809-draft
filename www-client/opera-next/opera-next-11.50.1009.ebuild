@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-11.50.1009.ebuild,v 1.1 2011/05/03 19:42:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-11.50.1009.ebuild,v 1.2 2011/05/16 16:11:22 jer Exp $
 
 EAPI="3"
 
@@ -140,6 +140,7 @@ src_prepare() {
 		-e "s:@@{SUFFIX}::g" \
 		-e "s:@@{_SUFFIX}::g" \
 		-e "s:@@{USUFFIX}::g" \
+		-e "s:opera:${PN}:g" \
 		share/man/man1/* \
 		share/applications/${PN}-browser.desktop \
 		|| die "sed failed"
