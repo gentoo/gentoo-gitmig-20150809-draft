@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.5 2011/05/15 14:45:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.6 2011/05/16 13:16:24 eras Exp $
 
 EAPI=4
 
@@ -16,10 +16,10 @@ LIBWRAP_PATCH_VER="2.2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc ~x86"
-IUSE="afs kerberos mysql nntp pam postgres replication +sieve snmp sqlite ssl
-tcpd zlib"
+IUSE="afs kerberos mysql nntp pam postgres replication +sieve snmp sqlite ssl tcpd"
 
 RDEPEND=">=sys-libs/db-3.2
+	sys-libs/zlib
 	>=dev-libs/cyrus-sasl-2.1.13
 	afs? ( net-fs/openafs )
 	kerberos? ( virtual/krb5 )
@@ -33,8 +33,7 @@ RDEPEND=">=sys-libs/db-3.2
 	snmp? ( >=net-analyzer/net-snmp-5.2.2-r1 )
 	sqlite? ( dev-db/sqlite )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 snmp? ( net-analyzer/net-snmp[tcpd=] ) )
-	zlib? ( sys-libs/zlib )"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 snmp? ( net-analyzer/net-snmp[tcpd=] ) )"
 
 DEPEND="$RDEPEND"
 
@@ -101,6 +100,7 @@ src_configure() {
 		--without-krbdes \
 		--with-bdb \
 		--with-bdb-incdir=$(db_includedir) \
+		--with-zlib \
 		$(use_enable afs) \
 		$(use_enable afs krb5afspts) \
 		$(use_enable nntp) \
@@ -113,7 +113,6 @@ src_configure() {
 		$(use_with ssl openssl) \
 		$(use_with snmp) \
 		$(use_with tcpd libwrap) \
-		$(use_with zlib) \
 		${myconf}
 }
 
