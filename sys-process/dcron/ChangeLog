@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/dcron
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.17 2010/10/26 07:07:10 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.18 2011/05/16 20:28:54 vapier Exp $
+
+*dcron-4.5 (16 May 2011)
+
+  16 May 2011; Mike Frysinger <vapier@gentoo.org> +files/dcron.init-4.5,
+  +dcron-4.5.ebuild, +files/dcron-4.5-ldflags.patch,
+  +files/dcron-4.5-pidfile.patch:
+  Version bump #366991 by Alec Moskvin.
 
 *dcron-4.4 (26 Oct 2010)
 
