@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.1-r1.ebuild,v 1.1 2011/05/16 07:21:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.1-r1.ebuild,v 1.2 2011/05/16 17:59:35 xarthisius Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -18,7 +18,7 @@ PATCH="firefox-4.0-patches-1.0"
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="+ipc system-sqlite +webm"
