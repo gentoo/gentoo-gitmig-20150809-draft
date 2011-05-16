@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.12-r1.ebuild,v 1.3 2011/05/11 19:20:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.12-r1.ebuild,v 1.4 2011/05/16 22:37:58 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static"
+RESTRICT="test"
 
 DEPEND="sys-libs/zlib
 	>=sys-apps/baselayout-2.0.1
@@ -20,6 +21,7 @@ DEPEND="sys-libs/zlib
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	rm -rf tests/build # punt precompiled objects
 	touch *.5 *.8 # dont regen manpages
 }
 
@@ -36,7 +38,8 @@ src_compile() {
 }
 
 src_test() {
-	./tests/runtests || die
+	# this manually runs configure and stuff, so ignore it
+	./tests/runtests -v || die
 }
 
 src_install() {
