@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.48 2011/05/13 22:10:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.49 2011/05/16 09:45:14 ultrabug Exp $
+
+  16 May 2011; Ultrabug <ultrabug@gentoo.org> -files/3-stable/rsyslog.conf,
+  -files/3-stable/rsyslog.init, -files/3-stable/rsyslog.logrotate,
+  -rsyslog-3.22.0.ebuild, -files/3-stable/rsyslog-gentoo.conf,
+  -rsyslog-3.22.1.ebuild, -rsyslog-5.6.4.ebuild:
+  Remove obsolete v3 branch. Drop old wrt #361219.
 
   13 May 2011; Markos Chandras <hwoarang@gentoo.org> rsyslog-5.6.5.ebuild:
   Stable on amd64 wrt bug #361219
