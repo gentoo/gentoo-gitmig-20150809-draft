@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.224 2011/05/13 05:16:31 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.225 2011/05/16 12:14:49 ford_prefect Exp $
+
+  16 May 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
+  PulseAudio master now requires json-c.
 
   13 May 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
   Migrate live ebuild to git-2.eclass, clean out some deps.

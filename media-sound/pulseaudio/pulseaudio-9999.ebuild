@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.3 2011/05/13 05:16:31 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.4 2011/05/16 12:14:49 ford_prefect Exp $
 
 EAPI=3
 
@@ -48,6 +48,7 @@ RDEPEND="app-admin/eselect-esd
 	>=media-libs/speex-1.2_beta
 	>=media-libs/libsndfile-1.0.20
 	sys-libs/gdbm
+	dev-libs/json-c
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
 DEPEND="${RDEPEND}
