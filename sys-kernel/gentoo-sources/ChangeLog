@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.845 2011/05/11 14:06:53 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.846 2011/05/17 00:05:44 mpagano Exp $
+
+*gentoo-sources-2.6.37-r5 (17 May 2011)
+
+  17 May 2011; Mike Pagano <mpagano@gentoo.org>
+  -gentoo-sources-2.6.16-r13.ebuild, +gentoo-sources-2.6.37-r5.ebuild:
+  Removal of gentoo-sources-2.6.16-r13. Add patch to fix rt2800pci driver
+  firmware fix in gentoo-sources-23.6.37-r5
 
 *gentoo-sources-2.6.32-r30 (11 May 2011)
 
