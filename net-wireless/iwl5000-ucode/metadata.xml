@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>chainsaw@gentoo.org</email>
-		<name>Tony Vroon</name>
-	</maintainer>
 	<herd>mobile</herd>
 	<longdescription lang="en">
 		Firmware image for Intel Wireless 5000 series network cards

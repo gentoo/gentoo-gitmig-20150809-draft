@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/iwl5000-ucode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.9 2011/03/18 08:39:51 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.10 2011/05/17 08:16:26 chainsaw Exp $
+
+  17 May 2011; Tony Vroon <chainsaw@gentoo.org> metadata.xml:
+  Drop maintainership; my new laptop has Centrino Advanced-N 6200 hardware.
+  Will reassign bugs.
 
 *iwl5000-ucode-8.83.5.1 (18 Mar 2011)
 
