@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/rgmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/ChangeLog,v 1.17 2011/05/15 18:50:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/ChangeLog,v 1.18 2011/05/17 07:52:33 phajdan.jr Exp $
+
+  17 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rgmanager-2.03.09-r1.ebuild:
+  x86 stable wrt security bug #352213
 
   15 May 2011; Kacper Kowalik <xarthisius@gentoo.org>
   rgmanager-2.03.09-r1.ebuild:
