@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nmh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.27 2010/12/29 11:18:49 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.28 2011/05/17 20:54:07 hwoarang Exp $
+
+  17 May 2011; Markos Chandras <hwoarang@gentoo.org> -nmh-1.3-r2.ebuild:
+  remove old
 
 *nmh-1.3-r3 (29 Dec 2010)
 
