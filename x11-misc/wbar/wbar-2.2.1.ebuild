@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.1.1.ebuild,v 1.4 2011/04/15 20:11:55 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.2.1.ebuild,v 1.1 2011/05/17 10:54:41 xarthisius Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -30,23 +30,14 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-warnings.patch\
-		"${FILESDIR}"/${P}-opt-config.patch \
-		"${FILESDIR}"/${P}-as-needed.patch
-	sed -i \
-		-e 's^truetype/dustin/PenguinAttack^corefonts/arial^' \
-		-e 's^openoffice.png^ooffice.png^' \
-		etc/wbar.cfg.in || die "Fixing font in cfg."
 	if ! use gtk; then
 		# Remove wbar-config from default cfg.
 		sed -i -e '5,8d' \
 			etc/wbar.cfg.in || die "Removing wbar-config from cfg"
 	fi
-	sed -i configure.ac -e "/^CPPFLAGS/d" || die #respect flags
-	sed -i configure.ac -e "s/-Werror//" || die #Don't -Werror
+	sed -i -e '/Werror/d' src/Makefile.am || die
+	sed -i configure.ac -e "s/imlib2/& x11/" || die #367549
 	eautoreconf
-	# Fix build issue reported by xarthisius
-	mv "${S}"/src/config/Main.cc "${S}"/src/config/Main-config.cc || die
 }
 
 src_configure() {
