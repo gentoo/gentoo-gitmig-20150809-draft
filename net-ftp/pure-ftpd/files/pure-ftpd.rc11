@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc11,v 1.1 2011/05/16 14:54:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc11,v 1.2 2011/05/17 15:09:50 polynomial-c Exp $
 
 ftpd_pidfile="/var/run/pure-ftpd.pid"
 script_pidfile="/var/run/pure-uploadscript.pid"
@@ -23,8 +23,15 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 
+	UPSCRIPT=""
+	if [ -n "$UPLOADSCRIPT" ] ; then
+		UPSCRIPT="--uploadscript"
+	fi
+
 	FTPD_CONFIG="$SERVER $MAX_CONN $MAX_CONN_IP $DISK_FULL $USE_NAT $AUTH
 		     $LOG $TIMEOUT $CHARCONV $MISC_OTHER $UPSCRIPT"
+
+	WAIT="--wait 100"
 
 	if ${TMPFS_MOUNT:-false} && grep -q tmpfs /proc/filesystems ; then
 		[ -n "${TMPFS_OPTS}" ] && MOUNT_OPTS="-o ${TMPFS_OPTS}"
@@ -33,12 +40,6 @@ start() {
 			|| eerror "Unable to mount tmpfs"
 	fi
 
-	WAIT="--wait 100"
-
-	UPSCRIPT=""
-	if [ -n "$UPLOADSCRIPT" ] ; then
-		UPSCRIPT="--uploadscript"
-	fi
 	ebegin "Starting Pure-FTPd"
 	start-stop-daemon --start --quiet --pidfile ${ftpd_pidfile} \
 		--make-pidfile --background --exec /usr/sbin/pure-ftpd ${WAIT} \
