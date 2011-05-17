@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/4suite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.45 2010/09/20 19:32:43 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.46 2011/05/17 18:28:17 arfrever Exp $
+
+*4suite-1.0.2-r2 (17 May 2011)
+
+  17 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +4suite-1.0.2-r2.ebuild, +files/4suite-1.0.2-pyxml.patch:
+  Use xml.use_pyxml() (bug #367745).
 
   20 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   4suite-1.0.2-r1.ebuild, +files/4suite-1.0.2-version_parsing.patch:
