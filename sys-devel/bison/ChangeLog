@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.98 2011/05/16 19:37:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.99 2011/05/17 19:28:44 phajdan.jr Exp $
+
+  17 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bison-2.4.3.ebuild:
+  x86 stable wrt bug #367575
 
 *bison-2.5 (16 May 2011)
 
