@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.196 2011/05/17 16:11:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.197 2011/05/17 17:50:51 ssuominen Exp $
+
+  17 May 2011; Samuli Suominen <ssuominen@gentoo.org> blender-2.57.ebuild,
+  blender-2.57-r1.ebuild:
+  Use virtual/jpeg wrt #367779 by Ooblick.
 
 *blender-2.57-r1 (17 May 2011)
 

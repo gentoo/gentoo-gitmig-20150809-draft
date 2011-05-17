@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.1 2011/05/17 16:11:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.2 2011/05/17 17:50:51 ssuominen Exp $
 
 PYTHON_DEPEND="3:3.2"
 
@@ -40,7 +40,7 @@ SLOT="2.5"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND="media-libs/jpeg
+RDEPEND="virtual/jpeg
 	media-libs/libpng
 	x11-libs/libXi
 	x11-libs/libX11
