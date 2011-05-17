@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.10.ebuild,v 1.8 2011/05/17 15:34:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.10.ebuild,v 1.9 2011/05/17 16:34:18 mr_bones_ Exp $
+
 EAPI=2
-inherit autotools
+inherit autotools eutils
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="library that allows you to use TrueType fonts in SDL applications"
