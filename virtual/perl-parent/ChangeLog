@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-parent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.13 2011/03/09 07:36:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.14 2011/05/17 17:54:40 tove Exp $
+
+*perl-parent-0.225.0-r1 (17 May 2011)
+
+  17 May 2011; Torsten Veller <tove@gentoo.org> -perl-parent-0.225.0.ebuild,
+  +perl-parent-0.225.0-r1.ebuild:
+  Add perl-5.14.0 as provider
 
 *perl-parent-0.225.0 (09 Mar 2011)
 
