@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/opentyrian
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.8 2010/06/22 18:52:36 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.9 2011/05/17 12:50:57 chainsaw Exp $
+
+*opentyrian-20110517 (17 May 2011)
+
+  17 May 2011; Tony Vroon <chainsaw@gentoo.org>
+  +files/20110517-cflag-idiocy.diff, +files/20110517-datapath.diff,
+  +opentyrian-20110517.ebuild:
+  Bump to new snapshot, as requested by Torsten Kaiser in bug #333011. Port to
+  EAPI=3.
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   opentyrian-20090702.ebuild:
