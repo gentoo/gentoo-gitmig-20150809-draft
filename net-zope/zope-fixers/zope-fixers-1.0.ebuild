@@ -1,10 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/zope-fixers-1.0.ebuild,v 1.2 2010/10/30 19:02:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/zope-fixers-1.0.ebuild,v 1.3 2011/05/17 21:07:31 arfrever Exp $
 
 EAPI="3"
-PYTHON_DEPEND="3:3.1"
+PYTHON_DEPEND="2:2.6 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
+# lib2to3 module required. Python 3.0 not supported.
+RESTRICT_PYTHON_ABIS="2.[45] 3.0"
+# Testing not supported with Python 2.
+PYTHON_TESTS_RESTRICTED_ABIS="2.*"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
@@ -23,9 +27,8 @@ IUSE=""
 
 DEPEND="dev-python/setuptools"
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="2.* 3.0"
 
 S="${WORKDIR}/${MY_P}"
 
-PYTHON_MODNAME="${PN/-//}"
 DOCS="CHANGES.txt README.txt"
+PYTHON_MODNAME="${PN/-//}"

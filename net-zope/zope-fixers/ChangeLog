@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-fixers
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.1 2010/05/05 20:49:58 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.2 2011/05/17 21:07:31 arfrever Exp $
+
+  17 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zope-fixers-1.0.ebuild:
+  Allow installation for Python 2.
 
 *zope-fixers-1.0 (05 May 2010)
 
