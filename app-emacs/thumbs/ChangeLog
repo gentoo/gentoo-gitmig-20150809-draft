@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/thumbs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.23 2010/10/12 22:36:11 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/ChangeLog,v 1.24 2011/05/17 20:46:09 ulm Exp $
+
+  17 May 2011; Ulrich Mueller <ulm@gentoo.org> thumbs-2.0.ebuild:
+  Depend on imagemagick or graphicsmagick, bug 314207.
 
   12 Oct 2010; Ulrich Mueller <ulm@gentoo.org>
   -files/thumbs.el-gentoo.patch:

@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/thumbs-2.0.ebuild,v 1.8 2010/05/22 15:30:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thumbs/thumbs-2.0.ebuild,v 1.9 2011/05/17 20:46:09 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -13,6 +15,6 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
-RDEPEND="media-gfx/imagemagick"
+RDEPEND="|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )"
 
 SITEFILE="50${PN}-gentoo.el"
