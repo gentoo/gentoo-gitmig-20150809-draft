@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.94 2011/02/20 22:24:38 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.95 2011/05/17 21:46:52 spatz Exp $
+
+*pbzip2-1.1.4 (17 May 2011)
+
+  17 May 2011; Dror Levin <spatz@gentoo.org> -pbzip2-1.1.2.ebuild,
+  +pbzip2-1.1.4.ebuild:
+  Version bump, bug 363191. Also hopefully fixes 320313. Drop old.
 
 *pbzip2-1.1.2 (20 Feb 2011)
 
