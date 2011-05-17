@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.2.8.27.ebuild,v 1.1 2010/11/05 12:20:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.2.8.27.ebuild,v 1.2 2011/05/17 16:09:22 hwoarang Exp $
 
 EAPI="3"
 inherit autotools confutils eutils
@@ -32,9 +32,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PN}-1.1.0-m4.patch" \
-		"${FILESDIR}/04-update-smash-fix.dpatch" \
-		"${FILESDIR}/${PN}-1.1.0-gentoo.patch"
+		"${FILESDIR}/${P}-m4.patch" \
+		"${FILESDIR}/${P}-gentoo.patch"
 	eautoreconf
 }
 

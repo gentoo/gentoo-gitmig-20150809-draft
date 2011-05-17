@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/mydns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.35 2010/11/05 12:20:35 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.36 2011/05/17 16:09:22 hwoarang Exp $
+
+  17 May 2011; Markos Chandras <hwoarang@gentoo.org> mydns-1.2.8.27.ebuild,
+  +files/mydns-1.2.8.27-gentoo.patch, +files/mydns-1.2.8.27-m4.patch:
+  Use proper patches. Bug #347485. Thanks to Dries Harnie
+  <botje.linux@gmail.com>
 
 *mydns-1.2.8.27 (04 Nov 2010)
 
