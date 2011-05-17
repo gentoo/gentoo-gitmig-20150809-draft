@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads-shared/perl-threads-shared-1.370.0.ebuild,v 1.1 2011/04/23 06:26:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads-shared/perl-threads-shared-1.370.0-r1.ebuild,v 1.1 2011/05/17 13:28:52 tove Exp $
 
 DESCRIPTION="Virtual for threads-shared"
 HOMEPAGE=""
@@ -12,4 +12,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="~perl-core/threads-shared-${PV}"
+RDEPEND="|| ( ~dev-lang/perl-5.14.0 ~perl-core/threads-shared-${PV} )"
