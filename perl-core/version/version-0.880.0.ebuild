@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/version-0.880.ebuild,v 1.3 2011/05/02 20:18:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/version-0.880.0.ebuild,v 1.1 2011/05/17 13:22:49 tove Exp $
 
 EAPI=3
 
