@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00b.ebuild,v 1.1 2011/03/16 21:07:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.1 2011/05/17 18:14:04 bicatali Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -10,11 +10,12 @@ inherit versionator eutils elisp-common fdo-mime python toolchain-funcs flag-o-m
 DOC_PV=5_26
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4.03
+PATCH_PV=5.28.00b
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
-	http://dev.gentoo.org/~bicatali/${P}-xrootd-prop-flags.patch.bz2
+	http://dev.gentoo.org/~bicatali/${PN}-${PATCH_PV}-xrootd-prop-flags.patch.bz2
 	doc? ( ftp://root.cern.ch/${PN}/doc/Users_Guide_${DOC_PV}.pdf
 	math? (
 		ftp://root.cern.ch/${PN}/doc/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf
@@ -107,12 +108,12 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${WORKDIR}"/${P}-xrootd-prop-flags.patch \
-		"${FILESDIR}"/${P}-prop-ldflags.patch \
-		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-nobyte-compile.patch \
-		"${FILESDIR}"/${P}-glibc212.patch \
-		"${FILESDIR}"/${P}-unuran.patch
+		"${WORKDIR}"/${PN}-${PATCH_PV}-xrootd-prop-flags.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV}-prop-ldflags.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV}-asneeded.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV}-nobyte-compile.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV}-glibc212.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV}-unuran.patch
 
 	# make sure we use system libs and headers
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
