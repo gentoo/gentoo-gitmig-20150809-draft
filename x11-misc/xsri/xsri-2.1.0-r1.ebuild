@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/xsri-2.1.0-r1.ebuild,v 1.9 2010/10/10 10:20:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/xsri-2.1.0-r1.ebuild,v 1.10 2011/05/17 10:19:58 xarthisius Exp $
 
 EAPI=2
 inherit autotools rpm
@@ -20,10 +20,12 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i -e '/-DG.*_DISABLE_DEPRECATED/d' Makefile.am || die
+	sed -e 's/PKG_CHECK_MODULES(GTK,/& x11 /' \
+		-i configure.in || die #367663
 	eautoreconf
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS README
+	dodoc AUTHORS README || die
 }
