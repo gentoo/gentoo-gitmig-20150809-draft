@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.717 2011/05/12 14:01:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.718 2011/05/17 19:04:29 aballier Exp $
+
+  17 May 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  bump gnutls dep
 
   12 May 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   update, again and again, the freetype patch

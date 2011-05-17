@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.141 2011/05/12 14:01:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.142 2011/05/17 19:04:29 aballier Exp $
 
 EAPI="4"
 
@@ -86,7 +86,7 @@ RDEPEND="
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		gme? ( media-libs/game-music-emu )
 		gnome? ( gnome-base/gnome-vfs )
-		gnutls? ( >=net-libs/gnutls-1.7.4 )
+		gnutls? ( >=net-libs/gnutls-2.0.0 )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1 >=sys-libs/libavc1394-0.5.3 )
 		ios-vout? ( virtual/opengl )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
