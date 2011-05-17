@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.18 2011/03/27 12:03:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.19 2011/05/17 14:45:53 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -160,6 +160,11 @@ src_prepare() {
 
 	# Fix insecure creation of temporary files, bug #351724
 	epatch "${FILESDIR}"/${PN}-0.8.8-secure-tempfile-creation.patch
+
+	# Fix detection of recent ffmpeg, bug #362683
+	epatch "${FILESDIR}"/${PN}-0.8.9-ffmpeg-detection.patch
+	epatch "${FILESDIR}"/${PN}-0.8.9-libavcodec-version.patch
+	epatch "${FILESDIR}"/${PN}-0.8.9-look-harder-for-version_h.patch
 
 	# Fix building on ppc64, bug #342535
 	use ppc64 && append-flags -mminimal-toc
