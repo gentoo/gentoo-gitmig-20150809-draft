@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.88 2011/05/13 21:47:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.89 2011/05/17 08:11:22 chainsaw Exp $
+
+*libpri-1.4.12_beta3 (17 May 2011)
+
+  17 May 2011; Tony Vroon <chainsaw@gentoo.org> +libpri-1.4.12_beta3.ebuild,
+  +files/libpri-1.4.12-multilib.patch,
+  +files/libpri-1.4.12-respect-cflags.patch,
+  +files/libpri-1.4.12-respect-ldflags.patch:
+  New beta; patchset rediffed by Stefan Knoblich in bug #346573. Consolidated
+  Werror removal and CFLAGS patches; remove -O2 and -g as per Agostino "ago"
+  Sarubbo in bug #360139. Contains important PTP fixes with regard to
+  downing/restarting links.
 
   13 May 2011; Tony Vroon <chainsaw@gentoo.org> metadata.xml:
   Maintainer tag was missing in metadata.xml; fixing.

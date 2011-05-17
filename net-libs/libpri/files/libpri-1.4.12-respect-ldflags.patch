@@ -1,0 +1,11 @@
+--- libpri-1.4.12-beta3/Makefile.orig	2010-11-23 22:08:35.749769167 +0100
++++ libpri-1.4.12-beta3/Makefile	2010-11-23 22:10:01.036710213 +0100
+@@ -211,7 +211,7 @@
+ 	ranlib $(STATIC_LIBRARY)
+ 
+ $(DYNAMIC_LIBRARY): $(DYNAMIC_OBJS)
+-	$(CC) $(SOFLAGS) -o $@ $(DYNAMIC_OBJS)
++	$(CC) $(SOFLAGS) $(LDFLAGS) -o $@ $(DYNAMIC_OBJS)
+ 	$(LDCONFIG) $(LDCONFIG_FLAGS) .
+ 	ln -sf libpri.so.$(SONAME) libpri.so
+ 
