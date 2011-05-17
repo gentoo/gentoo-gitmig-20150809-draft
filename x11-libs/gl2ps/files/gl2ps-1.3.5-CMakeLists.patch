@@ -1,7 +1,11 @@
-diff -Nur gl2ps-1.3.5-source.orig/CMakeLists.txt gl2ps-1.3.5-source/CMakeLists.txt
---- gl2ps-1.3.5-source.orig/CMakeLists.txt	2011-03-16 19:21:58.000000000 +0000
-+++ gl2ps-1.3.5-source/CMakeLists.txt	2011-03-16 19:29:50.000000000 +0000
-@@ -46,6 +46,7 @@
+ CMakeLists.txt |   25 ++++++++++---------------
+ 1 files changed, 10 insertions(+), 15 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 69b88e2..e0b9278 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -46,6 +46,7 @@ project(gl2ps C)
  
  option(ENABLE_ZLIB "Enable compression using ZLIB" ON)
  option(ENABLE_PNG "Enable PNG support" ON)
@@ -9,7 +13,7 @@ diff -Nur gl2ps-1.3.5-source.orig/CMakeLists.txt gl2ps-1.3.5-source/CMakeLists.t
  
  set(GL2PS_MAJOR_VERSION 1)
  set(GL2PS_MINOR_VERSION 3)
-@@ -103,39 +104,40 @@
+@@ -103,39 +104,33 @@ endif(ENABLE_PNG)
  include_directories(${EXTERNAL_INCLUDES})
  
  if(OPENGL_FOUND)
@@ -46,20 +50,18 @@ diff -Nur gl2ps-1.3.5-source.orig/CMakeLists.txt gl2ps-1.3.5-source/CMakeLists.t
  install(FILES ${CMAKE_SOURCE_DIR}/gl2psTestSimple.c DESTINATION ${GL2PS_DOC})
 +install(FILES ${CMAKE_SOURCE_DIR}/gl2ps.pdf DESTINATION ${GL2PS_DOC})
  
- if(GLUT_FOUND)
-   add_executable(gl2psTest WIN32 gl2psTest.c)
+-if(GLUT_FOUND)
+-  add_executable(gl2psTest WIN32 gl2psTest.c)
 -  target_link_libraries(gl2psTest lib ${EXTERNAL_LIBRARIES})
-+  target_link_libraries(gl2psTest shared ${EXTERNAL_LIBRARIES})
-   add_executable(gl2psTestSimple WIN32 gl2psTestSimple.c)
+-  add_executable(gl2psTestSimple WIN32 gl2psTestSimple.c)
 -  target_link_libraries(gl2psTestSimple lib ${EXTERNAL_LIBRARIES})
-+  target_link_libraries(gl2psTestSimple shared ${EXTERNAL_LIBRARIES})
- endif(GLUT_FOUND)
- 
+-endif(GLUT_FOUND)
+-
 +if(ENABLE_DOC)
  find_package(LATEX)
  if(PDFLATEX_COMPILER)
    add_custom_command(OUTPUT gl2ps.pdf DEPENDS gl2ps.tex 
-@@ -144,7 +146,6 @@
+@@ -144,7 +139,6 @@ if(PDFLATEX_COMPILER)
                       COMMAND ${PDFLATEX_COMPILER} ARGS ${CMAKE_SOURCE_DIR}/gl2ps.tex
                       COMMAND ${CMAKE_COMMAND} -E copy gl2ps.pdf ${CMAKE_SOURCE_DIR})
    add_custom_target(pdf ALL DEPENDS gl2ps.pdf)
@@ -67,7 +69,7 @@ diff -Nur gl2ps-1.3.5-source.orig/CMakeLists.txt gl2ps-1.3.5-source/CMakeLists.t
    find_program(TTH tth)
    if(TTH)
      add_custom_command(OUTPUT gl2ps.html DEPENDS gl2ps.tex gl2ps.pdf
-@@ -154,6 +155,7 @@
+@@ -154,6 +148,7 @@ if(PDFLATEX_COMPILER)
      add_custom_target(html DEPENDS gl2ps.html)
    endif(TTH)
  endif(PDFLATEX_COMPILER)

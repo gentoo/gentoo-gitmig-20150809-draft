@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.5-r2.ebuild,v 1.1 2011/03/16 20:31:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gl2ps/gl2ps-1.3.5-r2.ebuild,v 1.2 2011/05/17 09:53:51 jlec Exp $
 
-EAPI="3"
+EAPI=3
 inherit cmake-utils multilib
 
 DESCRIPTION="OpenGL to PostScript printing library"
@@ -14,14 +14,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc png zlib"
 
-DEPEND="media-libs/freeglut
+DEPEND="
+	media-libs/freeglut
 	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )
-	doc? ( dev-tex/tth dev-texlive/texlive-latex )"
+	doc? ( dev-tex/tth dev-texlive/texlive-latex )
+	zlib? ( sys-libs/zlib )"
+RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${P}-source"
+S=${WORKDIR}/${P}-source
 
-PATCHES=( "${FILESDIR}"/${P}-CMakeLists.patch "${FILESDIR}"/${P}-soversion.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-CMakeLists.patch
+	"${FILESDIR}"/${P}-soversion.patch )
 
 src_configure() {
 	local mycmakeargs=(
