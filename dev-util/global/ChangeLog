@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.81 2011/05/10 11:24:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.82 2011/05/17 00:10:38 arfrever Exp $
+
+*global-5.9.5 (17 May 2011)
+
+  17 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +global-5.9.5.ebuild:
+  Version bump.
 
   10 May 2011; Naohiro Aota <naota@gentoo.org> global-5.9.4.ebuild:
   Add ~x86-fbsd keyword
