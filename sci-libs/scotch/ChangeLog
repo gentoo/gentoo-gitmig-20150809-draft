@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scotch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.4 2011/03/15 16:58:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.5 2011/05/17 10:08:20 xarthisius Exp $
+
+  17 May 2011; Kacper Kowalik <xarthisius@gentoo.org> files/Makefile.inc.in:
+  Fix underlinking wrt #367495. Thanks to Diego Elio Pettenò
+  <flameeyes@gentoo.org> for the report.
 
   15 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> scotch-5.1.11.ebuild:
   Added linking with zlib, librt and libm for as-needed
