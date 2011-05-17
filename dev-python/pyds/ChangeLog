@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyds
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.21 2011/02/25 20:20:10 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.22 2011/05/17 18:45:46 arfrever Exp $
+
+  17 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyds-0.7.3.ebuild:
+  Update dependencies (bug #367747).
 
   25 Feb 2011; Kevin McCarthy <signals@gentoo.org> pyds-0.7.3.ebuild:
   Update depends from media-libs/jpeg to virtual/jpeg

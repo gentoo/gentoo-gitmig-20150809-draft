@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3.ebuild,v 1.3 2011/02/25 20:20:10 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3.ebuild,v 1.4 2011/05/17 18:45:46 arfrever Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
@@ -27,7 +27,6 @@ RDEPEND="app-text/silvercity
 	>=dev-python/imaging-1.1.3
 	>=dev-python/medusa-0.5.4
 	>=dev-python/pyrex-0.5
-	>=dev-python/pyxml-0.8.2
 	>=dev-python/soappy-0.11.1
 	virtual/jpeg
 	sys-libs/zlib"
