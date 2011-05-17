@@ -1,6 +1,7 @@
-Respect user LDFLAGS
+Respect user LDFLAGS, fix underlinking
 
 http://bugs.gentoo.org/show_bug.cgi?id=237698
+http://bugs.gentoo.org/show_bug.cgi?id=367695
 
 --- src/Makefile
 +++ src/Makefile
@@ -20,7 +21,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=237698
  
  $(GTKPROGS): %: %.o
 -	$(CC) $^ $(GTKLIBS) -o $@
-+	$(CC) $(CFLAGS) $(LDFLAGS) $^ $(GTKLIBS) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS) $^ $(GTKLIBS) $(X11LIBS) -o $@
  
  $(XAWPROGS): %: %.o
 -	$(CC) $^ $(XAWLIBS) -o $@

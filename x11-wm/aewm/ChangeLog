@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/aewm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.27 2011/03/29 13:07:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.28 2011/05/17 10:00:53 xarthisius Exp $
+
+  17 May 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  files/aewm-1.2.7-ldflags.patch:
+  Fix underlinking wrt #367695. Thanks to Diego Elio Pettenò
+  <flameeyes@gentoo.org>
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> aewm-1.2.7.ebuild:
   Fix gtk+ slot deps
