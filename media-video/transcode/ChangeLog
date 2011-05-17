@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.285 2011/03/26 15:56:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.286 2011/05/17 19:29:07 aballier Exp $
+
+  17 May 2011; Alexis Ballier <aballier@gentoo.org> transcode-1.1.5-r2.ebuild,
+  +files/transcode-1.1.5-ffmpeg.patch:
+  fix build with ffmpeg git
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused useflags from metadata.xml

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r2.ebuild,v 1.8 2011/03/26 15:55:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r2.ebuild,v 1.9 2011/05/17 19:29:07 aballier Exp $
 
 EAPI=2
 
@@ -79,6 +79,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-jpeg-7.patch
 	epatch "${FILESDIR}"/${P}-mpa.patch
+	epatch "${FILESDIR}"/${P}-ffmpeg.patch
 
 	eautoreconf
 }
