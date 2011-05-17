@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/habak
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.42 2011/05/10 11:04:46 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.43 2011/05/17 11:33:01 xarthisius Exp $
+
+  17 May 2011; Kacper Kowalik <xarthisius@gentoo.org> habak-0.2.5-r1.ebuild:
+  Fix underlinking wrt #367711. Thanks to Diego Elio Pettenò
+  <flameeyes@gentoo.org> for the report.
 
   10 May 2011; Naohiro Aota <naota@gentoo.org> habak-0.2.5-r1.ebuild:
   Add ~x86-fbsd keyword
