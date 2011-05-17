@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/dynamips
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.4 2010/10/17 13:51:26 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.5 2011/05/17 09:22:37 chainsaw Exp $
+
+*dynamips-0.2.8_rc3 (17 May 2011)
+
+  17 May 2011; Tony Vroon <chainsaw@gentoo.org> +dynamips-0.2.8_rc3.ebuild,
+  +files/dynamips-0.2.8_rc3-makefile.patch:
+  Version bump to the GNS3 community release. All the hard patching work done
+  by Jan Bednar in bug #365049; ported to EAPI=3.
 
   17 Oct 2010; <chainsaw@gentoo.org>
   files/dynamips-0.2.8_rc2-makefile.patch:
