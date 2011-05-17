@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.1 2011/05/12 21:26:12 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.2 2011/05/17 22:41:30 binki Exp $
 
 EAPI=3
 GCONF_DEBUG="yes"
@@ -52,7 +52,7 @@ pkg_setup() {
 		$(use_with ssl openssl)
 		$(use_enable perl)
 		$(use_enable python)
-		$(use_enable tcl tcl=/usr/$(get_libdir))
+		$(use_enable tcl tcl /usr/$(get_libdir))
 		$(use_enable mmx)
 		$(use_enable dbus)
 		$(use_enable nls)
