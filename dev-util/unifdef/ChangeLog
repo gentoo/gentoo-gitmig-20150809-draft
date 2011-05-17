@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.12 2011/05/15 08:06:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.13 2011/05/17 20:22:22 phajdan.jr Exp $
+
+  17 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> unifdef-2.3.ebuild:
+  x86 stable wrt bug #367271
 
   15 May 2011; Christoph Mende <angelos@gentoo.org> unifdef-2.3.ebuild:
   Stable on amd64 wrt bug #367271
