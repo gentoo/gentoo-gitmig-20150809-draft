@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.0.ebuild,v 1.2 2011/05/13 10:39:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.0-r1.ebuild,v 1.1 2011/05/17 15:57:09 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
@@ -105,7 +105,11 @@ src_configure() {
 
 src_install() {
 	#install wrapper
-	dobin bin/${MY_PN} || die "Failed to install launcher"
+	dobin bin/${MY_PN} bin/qtpromaker || die "dobin failed"
+	if use qml; then
+		# qmlpuppet component. Bug #367383
+		dobin bin/qmlpuppet || die "Failed to install qmlpuppet component"
+	fi
 	emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_subtargets || die
 	if use doc;then
 		emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_qch_docs || die
