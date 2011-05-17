@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-mozc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.14 2011/04/21 12:39:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.15 2011/05/17 13:36:40 matsuu Exp $
+
+*ibus-mozc-1.1.690.102 (17 May 2011)
+
+  17 May 2011; MATSUU Takuto <matsuu@gentoo.org> +ibus-mozc-1.1.690.102.ebuild:
+  Version bumped. Add app-i18n/zinnia to dependency.
 
   21 Apr 2011; Thomas Kahle <tomka@gentoo.org> ibus-mozc-1.0.558.102.ebuild:
   x86 stable per bug 360951
