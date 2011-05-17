@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/batti
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.14 2011/04/13 20:17:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.15 2011/05/17 20:52:04 hwoarang Exp $
+
+  17 May 2011; Markos Chandras <hwoarang@gentoo.org> -batti-0.3.7.ebuild:
+  remove old
 
   13 Apr 2011; Markus Meier <maekke@gentoo.org> batti-0.3.8-r1.ebuild:
   x86 stable, bug #358575
