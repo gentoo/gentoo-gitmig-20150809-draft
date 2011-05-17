@@ -1,0 +1,8 @@
+# Copyright 1999-2011 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/virtuals,v 1.1 2011/05/17 10:46:50 blueness Exp $
+
+# Use this virtuals file to either overload the base profile's defined
+# virtuals, or add virtuals that are specific to this family of profiles
+
+virtual/linux-sources		sys-kernel/gentoo-sources

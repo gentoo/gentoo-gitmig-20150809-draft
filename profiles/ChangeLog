@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5377 2011/05/16 23:25:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5378 2011/05/17 10:46:49 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 May 2011; Anthony G. Basile <blueness@gentoo.org>
+  +features/selinux/make.defaults, +features/selinux/package.mask,
+  +features/selinux/package.use.force, +features/selinux/package.use.mask,
+  +features/selinux/packages, +features/selinux/profile.bashrc,
+  +features/selinux/use.force, +features/selinux/use.mask,
+  +features/selinux/virtuals, +hardened/linux/amd64/no-multilib/selinux/parent,
+  +hardened/linux/amd64/selinux/parent, +hardened/linux/x86/selinux/parent,
+  profiles.desc:
+  Added new features/selinux profile. Bug #365483
 
   16 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   package.mask:
