@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.2 2011/04/27 20:30:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.3 2011/05/17 08:54:21 angelos Exp $
 
 EAPI=4
+EAUTORECONF="yes"
 inherit xfconf
 
 DESCRIPTION="a simple media player based on the GStreamer framework for the Xfce4 desktop"
@@ -36,5 +37,6 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog README THANKS TODO"
+	DOCS=( AUTHORS ChangeLog README THANKS TODO )
+	PATCHES=( "${FILESDIR}"/${P}-underlinking.patch )
 }

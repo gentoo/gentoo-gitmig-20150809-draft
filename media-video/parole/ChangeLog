@@ -1,6 +1,10 @@
 # ChangeLog for media-video/parole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.18 2011/04/27 20:30:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.19 2011/05/17 08:54:21 angelos Exp $
+
+  17 May 2011; Christoph Mende <angelos@gentoo.org> parole-0.2.0.6.ebuild,
+  +files/parole-0.2.0.6-underlinking.patch:
+  Fix underlinking (bug #367603)
 
   27 Apr 2011; Christoph Mende <angelos@gentoo.org> parole-0.2.0.2-r1.ebuild,
   parole-0.2.0.6.ebuild:
