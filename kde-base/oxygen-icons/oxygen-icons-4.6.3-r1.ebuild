@@ -1,11 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.6.3.ebuild,v 1.1 2011/05/07 10:47:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.6.3-r1.ebuild,v 1.1 2011/05/18 10:42:30 scarabeus Exp $
 
 EAPI=4
 
-if [[ ${PV} = *9999 ]]; then
+if [[ ${PV} == *9999 ]]; then
 	KMNAME="kdesupport"
+else
+	# Upstream does not ship releases properly so we dont want all versions
+	MY_PV="4.6.2"
+	MY_P="${PN}-${MY_PV}"
 fi
 KDE_REQUIRED="never"
 inherit kde4-base
@@ -15,9 +19,10 @@ HOMEPAGE="http://www.oxygen-icons.org/"
 # Note that the upstream tarball is .bz2, ours is .xz -- if upstream
 # changes its compression format to .xz, we will need to change the
 # filename of one of the tarballs
+[[ ${PV} == *9999 ]] || \
 SRC_URI="
-	!bindist? ( http://dev.gentoo.org/~scarabeus/${P}.tar.xz )
-	bindist? ( ${SRC_URI} )
+	!bindist? ( http://dev.gentoo.org/~scarabeus/${MY_P}.tar.xz )
+	bindist? ( ${SRC_URI//${PV}/${MY_PV}} )
 "
 
 LICENSE="LGPL-3"
@@ -28,6 +33,8 @@ DEPEND="
 	!bindist? ( app-arch/xz-utils )
 "
 RDEPEND=""
+
+[[ ${PV} == *9999 ]] || S=${WORKDIR}/${MY_P}
 
 # Block conflicting packages
 add_blocker kdebase-data '<4.2.67'
