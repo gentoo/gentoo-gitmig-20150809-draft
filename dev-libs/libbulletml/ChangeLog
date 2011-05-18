@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libbulletml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.8 2011/04/13 14:34:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.9 2011/05/18 10:33:38 tupone Exp $
+
+  18 May 2011; Tupone Alfredo <tupone@gentoo.org> libbulletml-0.0.6.ebuild,
+  +files/libbulletml-0.0.6-gcc46.patch:
+  Fix build with gcc-4.6 Bug #367883 by Diego Elio Pettenò
 
   13 Apr 2011; Alfredo Tupone <tupone@gentoo.org> libbulletml-0.0.6.ebuild:
   Depend on dev-libs/boost, remove local copy. Bug #363187 by Steven Wilson

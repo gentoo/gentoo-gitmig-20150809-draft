@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/libbulletml-0.0.6.ebuild,v 1.7 2011/04/13 14:34:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/libbulletml-0.0.6.ebuild,v 1.8 2011/05/18 10:33:38 tupone Exp $
 EAPI=2
 
 inherit eutils
@@ -20,7 +20,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN#lib}/src"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-gcc46.patch
 	rm -r boost || die "remove of local boost failed"
 }
 
