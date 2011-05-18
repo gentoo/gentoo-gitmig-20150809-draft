@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.70 2011/05/09 22:41:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.71 2011/05/18 11:19:12 scarabeus Exp $
+
+  18 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdebase-desktoptheme-4.6.2.ebuild, kdebase-desktoptheme-4.6.3.ebuild:
+  Add blocker for the knetworkmanager due to file collision. Per bug #367715.
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   kdebase-desktoptheme-4.6.2.ebuild:
