@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12779 2011/05/17 16:31:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12780 2011/05/18 03:00:03 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (18 May 2011)
+# Mask release candidates
+=media-gfx/hugin-2011.0.0_rc*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (16 May 2011)
 # Masked until reverse dependencies of dev-python/pyxml are updated.
