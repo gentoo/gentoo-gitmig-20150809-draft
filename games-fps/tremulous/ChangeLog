@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/tremulous
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.20 2011/02/26 15:20:35 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.21 2011/05/18 19:30:04 mr_bones_ Exp $
+
+  18 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  tremulous-1.1.0-r4.ebuild:
+  Change the instructions about additional maps to be more general (bug
+  #365133)
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> tremulous-1.1.0-r4.ebuild:
   Update depends from media-libs/jpeg to virtual/jpeg

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.6 2011/02/26 15:20:35 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.7 2011/05/18 19:30:04 mr_bones_ Exp $
 
 EAPI=2
 
@@ -102,8 +102,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	elog "If you want to add extra maps, download"
-	elog "http://tremulous.bricosoft.com/base/all-maps.tgz"
-	elog "and unpack it into ~/.tremulous/base for your user"
+	elog "If you want to add extra maps, you can download them"
+	elog "and unpack them into ~/.tremulous/base for your user"
 	elog "or into ${GAMES_DATADIR}/${PN}/base for all users."
 }
