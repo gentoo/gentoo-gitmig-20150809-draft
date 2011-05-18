@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.143 2011/03/05 16:42:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.144 2011/05/18 15:25:43 jer Exp $
+
+  18 May 2011; Jeroen Roovers <jer@gentoo.org> vsftpd-2.3.4.ebuild:
+  Marked ~hppa too.
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> vsftpd-2.3.4.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #357001
