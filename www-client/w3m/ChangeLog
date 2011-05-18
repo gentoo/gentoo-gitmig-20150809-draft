@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3m
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.66 2011/04/13 15:12:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/ChangeLog,v 1.67 2011/05/18 03:44:20 naota Exp $
+
+  18 May 2011; Naohiro Aota <naota@gentoo.org> w3m-0.5.3-r1.ebuild:
+  Remove CVS directories. Fix bug #367499
 
   13 Apr 2011; Ulrich Mueller <ulm@gentoo.org> w3m-0.5.2-r4.ebuild,
   w3m-0.5.3.ebuild, w3m-0.5.3-r1.ebuild:
