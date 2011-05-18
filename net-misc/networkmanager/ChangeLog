@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.104 2011/05/18 09:23:32 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.105 2011/05/18 11:20:12 qiaomuf Exp $
+
+*networkmanager-0.8.4.0-r1 (18 May 2011)
+
+  18 May 2011; Mu Qiao <qiaomuf@gentoo.org> -networkmanager-0.8.4.0.ebuild,
+  +networkmanager-0.8.4.0-r1.ebuild,
+  +files/networkmanager-0.8.4.0-fix-tests.patch,
+  +files/networkmanager-0.8.4.0-ifnet-smarter-write.patch,
+  +files/networkmanager-0.8.4.0-shared-connection.patch:
+  Add backported patches for the ifnet plug-in.
 
 *networkmanager-0.8.4.0 (18 May 2011)
 

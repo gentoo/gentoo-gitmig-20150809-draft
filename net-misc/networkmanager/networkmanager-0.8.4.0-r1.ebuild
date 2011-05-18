@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0.ebuild,v 1.1 2011/05/18 09:23:32 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r1.ebuild,v 1.1 2011/05/18 11:20:12 qiaomuf Exp $
 
 EAPI="2"
 
-inherit eutils gnome.org linux-info
+inherit autotools eutils gnome.org linux-info
 
 # NetworkManager likes itself with capital letters
 MY_PN=${PN/networkmanager/NetworkManager}
@@ -79,8 +79,13 @@ pkg_setup() {
 	fi
 }
 
-#src_prepare() {
-#}
+src_prepare() {
+	# backported ifnet patches
+	epatch "${FILESDIR}/${P}-shared-connection.patch"
+	epatch "${FILESDIR}/${P}-fix-tests.patch"
+	epatch "${FILESDIR}/${P}-ifnet-smarter-write.patch"
+	eautoreconf
+}
 
 src_configure() {
 	ECONF="--disable-more-warnings
