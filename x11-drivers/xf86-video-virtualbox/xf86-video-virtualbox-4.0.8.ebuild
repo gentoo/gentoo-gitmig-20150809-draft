@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.0.4.ebuild,v 1.2 2011/03/05 19:06:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.0.8.ebuild,v 1.1 2011/05/18 21:36:43 polynomial-c Exp $
 
 EAPI=2
 
@@ -77,9 +77,9 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-2.2.0-enable-opengl.patch"
 
 		# unset useless/problematic checks in configure
-		epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch"
-		epatch "${FILESDIR}/${PN}-4-makeself-check.patch"
-		epatch "${FILESDIR}/${PN}-4-mkisofs-check.patch"
+		epatch "${FILESDIR}/${PN}-3.2.8-mesa-check.patch" \
+			"${FILESDIR}/${PN}-4-makeself-check.patch" \
+			"${FILESDIR}/${PN}-4-mkisofs-check.patch"
 }
 
 src_configure() {
@@ -119,15 +119,12 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+		# xorg-server-1.10.x
+		if has_version ">=x11-base/xorg-server-1.10" ; then
+				newins vboxvideo_drv_110.so vboxvideo_drv.so
 		# xorg-server-1.9.x
-		if has_version ">=x11-base/xorg-server-1.9" ; then
-				newins vboxvideo_drv_19.so vboxvideo_drv.so
-		# xorg-server-1.8.x
-		elif has_version ">=x11-base/xorg-server-1.8" ; then
-				newins vboxvideo_drv_18.so vboxvideo_drv.so
-		# xorg-server-1.7.x
 		else
-				newins vboxvideo_drv_17.so vboxvideo_drv.so
+				newins vboxvideo_drv_19.so vboxvideo_drv.so
 		fi
 
 		# Guest OpenGL driver

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.4.ebuild,v 1.2 2011/03/28 08:46:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.8.ebuild,v 1.1 2011/05/18 21:37:05 polynomial-c Exp $
 
 EAPI=2
 
@@ -67,28 +67,23 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/input
 
+		# xorg-server-1.10
+		if has_version "=x11-base/xorg-server-1.10*" ; then
+				newins vboxmouse_drv_110.so vboxmouse_drv.so
 		# xorg-server-1.9
-		if has_version "=x11-base/xorg-server-1.9*" ; then
-				newins vboxmouse_drv_19.so vboxmouse_drv.so
-		# xorg-server-1.8
-		elif has_version "=x11-base/xorg-server-1.8*" ; then
-				newins vboxmouse_drv_18.so vboxmouse_drv.so
-		# xorg-server-1.7
 		else
-				newins vboxmouse_drv_17.so vboxmouse_drv.so
+				newins vboxmouse_drv_19.so vboxmouse_drv.so
 		fi
 
 		cd "${S}/src/VBox/Additions/linux/installer" || die
 
-		if has_version ">=x11-base/xorg-server-1.8" ; then
-			# install udev information file about the mouse driver
-			insinto /lib/udev/rules.d
-			doins 70-xorg-vboxmouse.rules
+		# install udev information file about the mouse driver
+		insinto /lib/udev/rules.d
+		doins 70-xorg-vboxmouse.rules
 
-			# install X11 information file about the mouse driver
-			insinto /etc/X11/xorg.conf.d
-			doins "${S}/src/VBox/Additions/x11/Installer/50-vboxmouse.conf"
-		fi
+		# install X11 information file about the mouse driver
+		insinto /etc/X11/xorg.conf.d
+		doins "${S}/src/VBox/Additions/x11/Installer/50-vboxmouse.conf"
 }
 
 pkg_postinst() {
