@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.4.ebuild,v 1.1 2011/02/19 08:34:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.8.ebuild,v 1.1 2011/05/18 21:34:03 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-70112
+MY_PV=${PV}-71778
 SDK_PV=${MY_PV}
 MY_P=VirtualBox-${MY_PV}-Linux
 EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
@@ -291,10 +291,17 @@ src_install() {
 	# set an env-variable for 3rd party tools
 	echo -n "VBOX_APP_HOME=/opt/VirtualBox" > "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
+
+	insinto /lib/udev/rules.d
+	doins "${FILESDIR}"/10-virtualbox.rules
+	fperms 0750 /opt/VirtualBox/VBoxCreateUSBNode.sh
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	udevadm control --reload-rules && udevadm trigger --subsystem-match=usb
+
 	elog ""
 	if ! use headless ; then
 		elog "To launch VirtualBox just type: \"VirtualBox\""
@@ -308,6 +315,11 @@ pkg_postinst() {
 	elog "Please visit http://www.virtualbox.org/wiki/Editions for"
 	elog "an overview about the different features of ${PN}"
 	elog "and virtualbox-ose"
+	if [ -e "${ROOT}/etc/udev/rules.d/10-virtualbox.rules" ] ; then
+		elog ""
+		elog "Please remove \"${ROOT}/etc/udev/rules.d/10-virtualbox.rules\""
+		elog "or else USB in ${PN} won't work."
+	fi
 }
 
 pkg_postrm() {

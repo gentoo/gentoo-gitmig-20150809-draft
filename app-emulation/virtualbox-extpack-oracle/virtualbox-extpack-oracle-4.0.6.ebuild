@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.0.6.ebuild,v 1.1 2011/04/22 15:44:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.0.6.ebuild,v 1.2 2011/05/18 21:36:06 polynomial-c Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ LICENSE="PUEL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 
 RDEPEND="~app-emulation/virtualbox-${PV}"
 

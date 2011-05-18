@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.4.ebuild,v 1.1 2011/02/19 08:37:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.8.ebuild,v 1.1 2011/05/18 21:37:27 polynomial-c Exp $
 
 EAPI=2
 
@@ -93,7 +93,7 @@ src_compile() {
 		--build-headless || die "configure failed"
 		source ./env.sh
 
-		for each in	/src/VBox/{Runtime,Additions/common} \
+		for each in /src/VBox/{Runtime,Additions/common} \
 		/src/VBox/Additions/linux/{sharedfolders,daemon} ; do
 				cd "${S}"${each}
 				MAKE="kmk" emake TOOL_YASM_AS=yasm \
@@ -144,11 +144,13 @@ src_install() {
 		fi
 
 		# udev rule for vboxdrv
-		dodir /etc/udev/rules.d
+		dodir /lib/udev/rules.d
 		echo 'KERNEL=="vboxguest", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
-		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
+		>> "${D}/lib/udev/rules.d/60-virtualbox-guest-additions.rules" \
+			|| die
 		echo 'KERNEL=="vboxuser", OWNER="vboxguest", GROUP="vboxguest", MODE="0660"' \
-		>> "${D}/etc/udev/rules.d/60-virtualbox-guest-additions.rules"
+		>> "${D}/lib/udev/rules.d/60-virtualbox-guest-additions.rules" \
+			|| die
 
 		# VBoxClient autostart file
 		insinto /etc/xdg/autostart

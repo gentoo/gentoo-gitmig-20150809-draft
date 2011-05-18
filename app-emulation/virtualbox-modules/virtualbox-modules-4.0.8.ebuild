@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.0.4.ebuild,v 1.1 2011/02/19 08:34:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.0.8.ebuild,v 1.1 2011/05/18 21:33:36 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -42,13 +42,6 @@ src_prepare() {
 
 src_install() {
 	linux-mod_src_install
-
-	# udev rule for vboxdrv
-	dodir /etc/udev/rules.d
-	echo '#SUBSYSTEM=="usb_device", GROUP="vboxusers", MODE="0644"' \
-	> "${D}/etc/udev/rules.d/10-virtualbox.rules"
-	echo '#SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="vboxusers", MODE="0644"' \
-	>> "${D}/etc/udev/rules.d/10-virtualbox.rules"
 }
 
 pkg_postinst() {
@@ -62,11 +55,4 @@ pkg_postinst() {
 	else
 		elog "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
 	fi
-	elog ""
-	elog "If you are experiencing problems on your guests"
-	elog "with USB support and app-emulation/virtualbox-bin,"
-	elog "uncomment the udev rules placed in:"
-	elog ""
-	elog "/etc/udev/rules.d/10-virtualbox.rules"
-	elog ""
 }

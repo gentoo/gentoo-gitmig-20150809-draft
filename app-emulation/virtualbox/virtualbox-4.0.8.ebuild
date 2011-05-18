@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.4-r1.ebuild,v 1.4 2011/03/29 18:13:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.8.ebuild,v 1.1 2011/05/18 21:35:43 polynomial-c Exp $
 
 EAPI=4
 
@@ -146,9 +146,9 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4-localconfig > LocalConfig.kmk || die
 
 	# unset useless/problematic checks in configure
-	epatch "${FILESDIR}/${PN}-ose-3.2.8-mesa-check.patch"
-	epatch "${FILESDIR}/${PN}-4-makeself-check.patch"
-	epatch "${FILESDIR}/${PN}-4-mkisofs-check.patch"
+	epatch "${FILESDIR}/${PN}-ose-3.2.8-mesa-check.patch" \
+		"${FILESDIR}/${PN}-4-makeself-check.patch" \
+		"${FILESDIR}/${PN}-4-mkisofs-check.patch"
 
 	# fix build with --as-needed (bug #249295 and bug #350907)
 	epatch "${FILESDIR}/${PN}-4-asneeded.patch"
@@ -159,9 +159,6 @@ src_prepare() {
 
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
 	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
-
-	# add the --enable-vnc option to configure script (bug #348204)
-	epatch "${FILESDIR}/${PN}-4-vnc.patch"
 
 	# add correct java path
 	if use java ; then
@@ -305,6 +302,14 @@ src_install() {
 	done
 	popd &>/dev/null || die
 
+	# New way of handling USB device nodes for VBox (bug #356215)
+	insinto /lib/udev
+	doins VBoxCreateUSBNode.sh
+	fowners root:vboxusers /lib/udev/VBoxCreateUSBNode.sh
+	fperms 0750 /lib/udev/VBoxCreateUSBNode.sh
+	insinto /lib/udev/rules.d
+	doins "${FILESDIR}"/10-virtualbox.rules
+
 	insinto /usr/share/${PN}
 	if ! use headless && use qt4 ; then
 		doins -r nls
@@ -321,13 +326,15 @@ src_install() {
 		java-pkg_regjar "${D}/usr/$(get_libdir)/${PN}/sdk/bindings/xpcom/java/vboxjxpcom.jar"
 		java-pkg_regso "${D}/usr/$(get_libdir)/${PN}/libvboxjxpcom.so"
 	fi
-
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+
+	udevadm control --reload-rules && udevadm trigger --subsystem-match=usb
+
 	if ! use headless && use qt4 ; then
-		elog "To launch VirtualBox just type: \"VirtualBox\""
+		elog "To launch VirtualBox just type: \"VirtualBox\"."
 	fi
 	elog "You must be in the vboxusers group to use VirtualBox."
 	elog ""
@@ -345,6 +352,11 @@ pkg_postinst() {
 	elog "Starting with version 4.0.0, ${PN} has USB-1 support."
 	elog "For USB-2 support, PXE-boot ability and VRDP support please"
 	elog "emerge app-emulation/virtualbox-extpack-oracle package."
+	if [ -e "${ROOT}/etc/udev/rules.d/10-virtualbox.rules" ] ; then
+		elog ""
+		elog "Please remove \"${ROOT}/etc/udev/rules.d/10-virtualbox.rules\""
+		elog "or else USB in ${PN} won't work."
+	fi
 }
 
 pkg_postrm() {
