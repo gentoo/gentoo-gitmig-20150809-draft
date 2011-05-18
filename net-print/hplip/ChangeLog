@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.184 2011/04/23 18:37:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.185 2011/05/18 20:21:50 billie Exp $
+
+*hplip-3.11.5 (18 May 2011)
+
+  18 May 2011; Daniel Pielmeier <billie@gentoo.org> -hplip-3.11.1-r2.ebuild,
+  -hplip-3.11.3a.ebuild, +hplip-3.11.5.ebuild:
+  Version bump. Remove old.
 
   23 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Drop me from metadata, I no longer have an HP printer.
