@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.1 2011/02/12 19:34:11 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.17.ebuild,v 1.2 2011/05/18 21:04:30 grozin Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -65,7 +65,7 @@ src_install() {
 	fi
 
 	rm_unneeded() {
-		local path="${D}$(python_get_sitedir)/${PN}/libmp/"
+		local path="${ED}$(python_get_sitedir)/${PN}/libmp/"
 		if [[ "${PYTHON_ABI}" == 2.* ]]; then
 			rm -f "${path}exec_py3.py"
 		else if [[ "${PYTHON_ABI}" == 3.* ]]; then
