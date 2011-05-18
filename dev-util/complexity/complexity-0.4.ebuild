@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/complexity/complexity-0.4.ebuild,v 1.2 2011/05/18 02:25:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/complexity/complexity-0.4.ebuild,v 1.3 2011/05/18 02:35:43 jer Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND=">=sys-devel/autogen-5.11.7"
