@@ -1,11 +1,6 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.26 2011/05/18 19:25:42 billie Exp $
-
-  18 May 2011; Daniel Pielmeier <billie@gentoo.org> -pfl-2.1-r1.ebuild,
-  +pfl-2.2.ebuild:
-  Version bump. Fixes bug #367741. Thanks to Arfrever Frehtes Taifersar
-  Arahesis for the report and Daniel for the upstream fix. Remove old.
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.27 2011/05/18 19:28:20 billie Exp $
 
 *pfl-2.2 (18 May 2011)
 
