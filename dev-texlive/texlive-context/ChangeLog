@@ -1,6 +1,14 @@
 # ChangeLog for dev-texlive/texlive-context
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.39 2011/02/09 19:38:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.40 2011/05/18 14:27:41 aballier Exp $
+
+*texlive-context-2010-r1 (18 May 2011)
+
+  18 May 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-context-2010-r1.ebuild, +files/luatools.patch:
+  fix luatools with luatex 0.65, based on
+  https://github.com/mpg/lualibs/commit/ebac0e8e8d5d57eec5dfd3a3217e7e2fc3fe9bb
+  d#lualibs-dir.lua
 
   09 Feb 2011; Alexis Ballier <aballier@gentoo.org>
   texlive-context-2010.ebuild:
