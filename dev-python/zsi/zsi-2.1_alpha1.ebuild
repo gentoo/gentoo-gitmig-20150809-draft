@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.4 2010/10/10 19:00:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.1_alpha1.ebuild,v 1.5 2011/05/18 19:52:29 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -19,8 +19,7 @@ SLOT="0"
 LICENSE="PYTHON"
 IUSE="examples doc twisted"
 
-DEPEND=">=dev-python/pyxml-0.8.3
-	>=dev-python/setuptools-0.6_rc7-r1
+DEPEND=">=dev-python/setuptools-0.6_rc7-r1
 	twisted? ( >=dev-python/twisted-2
 		>=dev-python/twisted-web-0.5 )"
 
