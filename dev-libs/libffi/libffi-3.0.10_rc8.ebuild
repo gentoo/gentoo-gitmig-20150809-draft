@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.10_rc8.ebuild,v 1.2 2011/05/02 09:16:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.10_rc8.ebuild,v 1.3 2011/05/18 06:11:56 mduft Exp $
 
 EAPI=2
 
 MY_P=${P/_}
 
-inherit libtool toolchain-funcs
+inherit libtool toolchain-funcs eutils
 
 DESCRIPTION="a portable, high level programming interface to various calling conventions."
 HOMEPAGE="http://sourceware.org/libffi/"
@@ -33,6 +33,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3.0.10-interix.patch
 	elibtoolize
 }
 
