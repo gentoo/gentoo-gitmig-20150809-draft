@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.71 2011/05/14 11:41:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.72 2011/05/18 18:05:07 hwoarang Exp $
+
+  18 May 2011; Markos Chandras <hwoarang@gentoo.org> fail2ban-0.8.4-r3.ebuild,
+  +files/fail2ban-0.8.4-gentoo-init.patch:
+  Remove obsolete code from init script. Bug #367819. Thanks to Robert Trace
+  <bugzilla-gentoo@farcaster.org>
 
   14 May 2011; Markos Chandras <hwoarang@gentoo.org> -fail2ban-0.8.4.ebuild,
   -fail2ban-0.8.4-r1.ebuild, -fail2ban-0.8.4-r2.ebuild:

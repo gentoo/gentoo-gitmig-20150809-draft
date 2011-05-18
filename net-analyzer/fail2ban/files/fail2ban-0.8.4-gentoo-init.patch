@@ -1,0 +1,27 @@
+diff -r ce6b6bcedb6d files/gentoo-initd
+--- a/files/gentoo-initd	Tue May 17 13:20:13 2011 -0600
++++ b/files/gentoo-initd	Tue May 17 13:36:56 2011 -0600
+@@ -19,7 +19,7 @@
+ # 
+ # $Revision: 1.1 $
+ 
+-opts="start stop restart reload showlog"
++opts="reload showlog"
+ 
+ FAIL2BAN="/usr/bin/fail2ban-client ${FAIL2BAN_OPTIONS}"
+ 
+@@ -41,14 +41,6 @@
+ 	eend $? "Failed to stop fail2ban"
+ }
+ 
+-restart() {
+-	if ! service_stopped "${SVCNAME}" ; then
+-		svc_stop || return "$?"
+-		sleep 1
+-	fi
+-	svc_start
+-}
+-
+ reload() {
+ 	ebegin "Reloading fail2ban"
+ 	${FAIL2BAN} reload > /dev/null

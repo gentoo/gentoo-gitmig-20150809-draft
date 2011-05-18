@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.4-r3.ebuild,v 1.5 2011/05/14 10:58:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.4-r3.ebuild,v 1.6 2011/05/18 18:05:07 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-hashlib.patch \
 		"${FILESDIR}"/${P}-sshd-breakin.patch \
 		"${FILESDIR}"/gentoo-initd_create_run_dir.patch \
-		"${FILESDIR}"/${P}-cve2009-5023.patch
+		"${FILESDIR}"/${P}-cve2009-5023.patch \
+		"${FILESDIR}"/${P}-gentoo-init.patch 
 	distutils_src_prepare
 }
 
