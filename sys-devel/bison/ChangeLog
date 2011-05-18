@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.99 2011/05/17 19:28:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.100 2011/05/18 15:13:02 jer Exp $
+
+  18 May 2011; Jeroen Roovers <jer@gentoo.org> bison-2.4.3.ebuild:
+  Stable for HPPA (bug #367575).
 
   17 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bison-2.4.3.ebuild:
   x86 stable wrt bug #367575
