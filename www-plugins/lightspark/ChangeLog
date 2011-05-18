@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.29 2011/05/16 15:28:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.30 2011/05/18 00:27:18 chithanh Exp $
+
+  18 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lightspark-0.4.7.1.ebuild:
+  Fix oversight in patch name, bug #367617.
 
 *lightspark-0.4.7.1 (16 May 2011)
 
