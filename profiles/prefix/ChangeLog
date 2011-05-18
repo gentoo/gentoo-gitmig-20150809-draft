@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.277 2011/05/11 18:34:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.278 2011/05/18 18:29:45 grobian Exp $
+
+  18 May 2011; Fabian Groffen <grobian@gentoo.org> darwin/packages:
+  Add pkill-darwin to the system set for darwin hosts
 
   11 May 2011; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask pycairo-1.10, it uses waf, a broken by design build-system
