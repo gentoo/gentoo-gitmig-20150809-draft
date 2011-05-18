@@ -1,7 +1,10 @@
---- ipvsadm-1.25/Makefile
-+++ ipvsadm-1.25/Makefile
-@@ -45,11 +45,11 @@
- STATIC_LIBS	= libipvs/libipvs.a
+--- a/Makefile
++++ b/Makefile
+@@ -43,14 +43,13 @@
+ INIT		= $(BUILD_ROOT)/etc/rc.d/init.d
+ MKDIR		= mkdir
+ INSTALL		= install
+-STATIC_LIBS	= libipvs/libipvs.a
  
  ifeq "${ARCH}" "sparc64"
 -    CFLAGS = -Wall -Wunused -Wstrict-prototypes -g -m64 -pipe -mcpu=ultrasparc -mcmodel=medlow
@@ -15,22 +18,32 @@
  
  #####################################
  # No servicable parts below this line
-@@ -92,10 +92,12 @@
+@@ -94,10 +93,12 @@
  all:            libs ipvsadm
  
  libs:
 -		make -C libipvs
 +		$(MAKE) -C libipvs
 +
-+$(STATIC_LIBS): libs
++$(OBJS):	libs
  
- ipvsadm:	$(OBJS) $(STATIC_LIBS)
+-ipvsadm:	$(OBJS) $(STATIC_LIBS)
 -		$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
-+		$(CC) $(LDFLAGS) $(OPTFLAGS) $(CFLAGS) -o $@ $^ $(LIBS)
++ipvsadm:	$(OBJS)
++		$(CC) $(LDFLAGS) $(OPTFLAGS) $(CFLAGS) -o $@ $^ -Llibipvs -lipvs $(LIBS)
  
- install:        all
+-install:        all
++install:
  		if [ ! -d $(SBIN) ]; then $(MKDIR) -p $(SBIN); fi
-@@ -115,7 +117,7 @@
+@@ -108,15 +109,13 @@
+ 		$(INSTALL) -m 0644 ipvsadm.8 $(MAN)
+ 		$(INSTALL) -m 0644 ipvsadm-save.8 $(MAN)
+ 		$(INSTALL) -m 0644 ipvsadm-restore.8 $(MAN)
+-		[ -d $(INIT) ] || $(MKDIR) -p $(INIT)
+-		$(INSTALL) -m 0755 ipvsadm.sh $(INIT)/ipvsadm
+ 
+ clean:
+ 		rm -f ipvsadm $(NAME).spec $(NAME)-$(VERSION).tar.gz
  		rm -rf debian/tmp
  		find . -name '*.[ao]' -o -name "*~" -o -name "*.orig" \
  		  -o -name "*.rej" -o -name core | xargs rm -f
@@ -39,20 +52,20 @@
  
  distclean:	clean
  
-@@ -148,4 +150,4 @@
+@@ -149,4 +148,4 @@
  		dpkg-buildpackage
  
  %.o:	%.c
 -		$(CC) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
 +		$(CC) $(OPTFLAGS) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
---- ipvsadm-1.25/libipvs/Makefile
-+++ ipvsadm-1.25/libipvs/Makefile
-@@ -1,14 +1,14 @@
+--- a/libipvs/Makefile
++++ b/libipvs/Makefile
+@@ -1,32 +1,39 @@
  # Makefile for libipvs
  
  CC		= gcc
 -CFLAGS		= -Wall -Wunused -Wstrict-prototypes -g -fPIC
-+OPTFLAGS = -Wall -Wunused -Wstrict-prototypes -fPIC
++OPTFLAGS = -Wall -Wunused -Wstrict-prototypes
  ifneq (0,$(HAVE_NL))
 -CFLAGS		+= -DLIBIPVS_USE_NL
 +DEFINES += -DLIBIPVS_USE_NL
@@ -65,16 +78,36 @@
  		    echo "-DHAVE_NET_IP_VS_H"; fi;)
  
  .PHONY		= all clean install dist distclean rpm rpms
-@@ -21,10 +21,10 @@
+-STATIC_LIB	= libipvs.a
+-SHARED_LIB	= libipvs.so
+ 
+-all:		$(STATIC_LIB) $(SHARED_LIB)
++TARGETS = libipvs.so
+ 
+-$(STATIC_LIB):	libipvs.o ip_vs_nl_policy.o
++ifeq (1,$(STATIC_LIB))
++TARGETS += libipvs.a
++endif
++
++all:		$(TARGETS)
++
++libipvs.a:	libipvs.o ip_vs_nl_policy.o
  		ar rv $@ $^
  
- $(SHARED_LIB):	libipvs.o ip_vs_nl_policy.o
+-$(SHARED_LIB):	libipvs.o ip_vs_nl_policy.o
 -		$(CC) -shared -Wl,-soname,$@ -o $@ $^
++libipvs.so:	libipvs.lo ip_vs_nl_policy.lo
 +		$(CC) $(LDFLAGS) -shared -Wl,-soname,$@ -o $@ $^
++
++%.lo:		%.c
++		$(CC) -fPIC $(OPTFLAGS) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
  
  %.o:		%.c
 -		$(CC) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
 +		$(CC) $(OPTFLAGS) $(CFLAGS) $(INCLUDE) $(DEFINES) -c -o $@ $<
  
  clean:
- 		rm -f *.[ao] *~ *.orig *.rej core *.so
+-		rm -f *.[ao] *~ *.orig *.rej core *.so
++		rm -f *.[ao] *~ *.orig *.rej core *.so *.lo
+ 
+ distclean:	clean

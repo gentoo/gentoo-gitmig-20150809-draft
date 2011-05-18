@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.46 2011/03/07 19:44:12 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.47 2011/05/18 07:25:17 xarthisius Exp $
+
+*ipvsadm-1.26-r1 (18 May 2011)
+
+  18 May 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -files/ipvsadm-1.25-r1-build-fixup.diff, -ipvsadm-1.26.ebuild,
+  +ipvsadm-1.26-r1.ebuild, +files/ipvsadm-1.26-buildsystem.patch:
+  Drop old. Use higher EAPI, introduce static-libs IUSE, don't build static
+  with -fPIC, fix underlinking wrt #367871.
 
 *ipvsadm-1.26 (07 Mar 2011)
 

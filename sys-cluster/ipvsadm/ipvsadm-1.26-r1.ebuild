@@ -1,22 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26.ebuild,v 1.1 2011/03/07 19:44:12 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r1.ebuild,v 1.1 2011/05/18 07:25:17 xarthisius Exp $
 
-EAPI=3
-inherit linux-info toolchain-funcs eutils
+EAPI=4
 
-DESCRIPTION="utility to administer the IP virtual server services offered by the Linux kernel"
+inherit eutils linux-info toolchain-funcs
+
+DESCRIPTION="utility to administer the IP virtual server services"
 HOMEPAGE="http://linuxvirtualserver.org/"
 SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.6/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND=">=sys-libs/ncurses-5.2
-		dev-libs/libnl"
-DEPEND="${RDEPEND}"
+	dev-libs/libnl
+	dev-libs/popt"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if kernel_is 2 4; then
@@ -26,7 +29,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.25-r1-build-fixup.diff
+	epatch "${FILESDIR}"/${P}-buildsystem.patch
+	use static-libs && export STATIC=1
 }
 
 src_compile() {
@@ -34,7 +38,9 @@ src_compile() {
 		INCLUDE="-I.. -I." \
 		CC="$(tc-getCC)" \
 		HAVE_NL=1 \
-		 || die "error compiling source"
+		STATIC_LIB=${STATIC} \
+		POPT_LIB="$(pkg-config --libs popt)" \
+		 || die
 }
 
 src_install() {
@@ -47,8 +53,7 @@ src_install() {
 	newinitd "${FILESDIR}"/ipvsadm-init ipvsadm
 	keepdir /var/lib/ipvsadm
 
-	insinto /usr/$(get_libdir)
-	dolib.a libipvs/libipvs.a || die
+	use static-libs && dolib.a libipvs/libipvs.a
 	dolib.so libipvs/libipvs.so || die
 
 	insinto /usr/include/ipvs
