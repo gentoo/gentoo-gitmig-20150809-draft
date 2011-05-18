@@ -1,0 +1,22 @@
+From 9dd79566fbff234f43cbc7b01078fd942f9fb31a Mon Sep 17 00:00:00 2001
+From: Shiro Kawai <shiro@acm.org>
+Date: Wed, 22 Dec 2010 08:55:00 +0000
+Subject: fix list->queue bug
+
+
+diff --git a/ext/util/queue.scm b/ext/util/queue.scm
+index 0f35361..12eb88d 100644
+--- a/ext/util/queue.scm
++++ b/ext/util/queue.scm
+@@ -257,7 +257,7 @@
+            (Q_LENGTH q) len)))
+  )
+ 
+-(define (list->queue lis :optional (class <queue>) :rest (initargs '()))
++(define (list->queue lis :optional (class <queue>) :rest initargs)
+   (rlet1 q (apply make class initargs)
+     (%queue-set-content! q (list-copy lis))))
+ 
+-- 
+1.7.3.4
+
