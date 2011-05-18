@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12780 2011/05/18 03:00:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12781 2011/05/18 18:29:06 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -340,24 +340,9 @@ sys-apps/ren
 <dev-haskell/http-4000
 =dev-lang/helium-1.2-r1
 
-# Ulrich Mueller <ulm@gentoo.org> (12 Mar 2011)
-# Part of app-editors/emacs since version 23.2.
-# Cannot be compiled with Emacs 23. Last release in 2003.
-# Masked for removal in 60 days, bug 358351.
-app-emacs/htmlfontify
-
 # Christian Faulhammer <fauli@gentoo.org> (12 Mar 2011)
 # Mask for testing
 >=www-apps/joomla-1.6.0
-
-# Ulrich Mueller <ulm@gentoo.org> (11 Mar 2011)
-# Part of app-editors/emacs since version 22.1 or 23.1.
-# Masked for removal in 60 days, bug 358351.
-app-emacs/calc
-app-emacs/easypg
-app-emacs/ibuffer
-app-emacs/table
-app-emacs/tramp
 
 # Alex Alexander <wired@gentoo.org> (11 Mar 2011)
 # not needed anymore. the cairo[qt4] blocker issue was fixed and

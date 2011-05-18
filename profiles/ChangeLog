@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5380 2011/05/18 03:00:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5381 2011/05/18 18:29:06 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 May 2011; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove mask for several removed packages in app-emacs category, bug 358351.
 
   18 May 2011; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask hugin release candidates.
