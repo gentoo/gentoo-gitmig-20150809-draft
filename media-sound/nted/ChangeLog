@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/nted
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.20 2010/10/12 18:22:04 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.21 2011/05/18 17:47:47 hwoarang Exp $
+
+*nted-1.10.18 (18 May 2011)
+
+  18 May 2011; Markos Chandras <hwoarang@gentoo.org> -nted-1.10.16.ebuild,
+  +nted-1.10.18.ebuild:
+  Version bump
 
   12 Oct 2010; Markos Chandras <hwoarang@gentoo.org> -nted-1.10.13.ebuild:
   Remove old

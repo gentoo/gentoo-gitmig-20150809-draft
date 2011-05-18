@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.16.ebuild,v 1.1 2010/10/03 17:00:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18.ebuild,v 1.1 2011/05/18 17:47:47 hwoarang Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ABOUT_THE_EXAMPLES.TXT FAQ README || die "dodoc failed"
-	doman "man/${PN}.1" || die "doman failed"
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ABOUT_THE_EXAMPLES.TXT FAQ README
+	doman "man/${PN}.1"
 }
