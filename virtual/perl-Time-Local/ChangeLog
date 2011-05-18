@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.45 2011/05/03 19:16:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.46 2011/05/18 16:22:28 tove Exp $
+
+*perl-Time-Local-1.200.0 (18 May 2011)
+
+  18 May 2011; Torsten Veller <tove@gentoo.org> -perl-Time-Local-1.200.ebuild,
+  +perl-Time-Local-1.200.0.ebuild:
+  Add perl-5.14.0 as provider. Change version scheme
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org>
   perl-Time-Local-1.200.ebuild:
