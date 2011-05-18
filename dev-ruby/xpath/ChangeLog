@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/xpath
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xpath/ChangeLog,v 1.1 2011/05/18 14:10:09 graaff Exp $
+
+*xpath-0.1.4 (18 May 2011)
+
+  18 May 2011; Hans de Graaff <graaff@gentoo.org> +xpath-0.1.4.ebuild,
+  +metadata.xml:
+  Initial import. Dependency of forthcoming capybara.
+
