@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.9.7.ebuild,v 1.1 2011/04/08 08:32:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.2.ebuild,v 1.1 2011/05/18 08:12:39 hollow Exp $
 
 EAPI="2"
 
@@ -34,6 +34,15 @@ HTTP_CACHE_PURGE_MODULE_P="ngx_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}"
 HTTP_UPLOAD_MODULE_PV="2.2.0"
 HTTP_UPLOAD_MODULE_P="nginx_upload_module-${HTTP_UPLOAD_MODULE_PV}"
 
+# ey-balancer/maxconn module (https://github.com/ry/nginx-ey-balancer, as-is)
+HTTP_EY_BALANCER_MODULE_PV="0.0.6"
+HTTP_EY_BALANCER_MODULE_P="nginx-ey-balancer-${HTTP_EY_BALANCER_MODULE_PV}"
+HTTP_EY_BALANCER_MODULE_SHA1="d373670"
+
+# http_slowfs_cache (http://labs.frickle.com/nginx_ngx_slowfs_cache/, BSD-2 license)
+HTTP_SLOWFS_CACHE_MODULE_PV="1.5"
+HTTP_SLOWFS_CACHE_MODULE_P="ngx_slowfs_cache-${HTTP_SLOWFS_CACHE_MODULE_PV}"
+
 inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
@@ -44,9 +53,11 @@ SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz
 	nginx_modules_http_headers_more? ( http://github.com/agentzh/headers-more-nginx-module/tarball/v${HTTP_HEADERS_MORE_MODULE_PV} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
 	nginx_modules_http_push? ( http://pushmodule.slact.net/downloads/${HTTP_PUSH_MODULE_P}.tar.gz )
 	nginx_modules_http_cache_purge? ( http://labs.frickle.com/files/${HTTP_CACHE_PURGE_MODULE_P}.tar.gz )
-	nginx_modules_http_upload? ( http://www.grid.net.ru/nginx/download/${HTTP_UPLOAD_MODULE_P}.tar.gz )"
+	nginx_modules_http_upload? ( http://www.grid.net.ru/nginx/download/${HTTP_UPLOAD_MODULE_P}.tar.gz )
+	nginx_modules_http_ey_balancer? ( https://github.com/ry/nginx-ey-balancer/tarball/v${HTTP_EY_BALANCER_MODULE_PV} -> ${HTTP_EY_BALANCER_MODULE_P}.tar.gz )
+	nginx_modules_http_slowfs_cache? ( http://labs.frickle.com/files/${HTTP_SLOWFS_CACHE_MODULE_P}.tar.gz )"
 
-LICENSE="BSD BSD-2 GPL-2 MIT"
+LICENSE="as-is BSD BSD-2 GPL-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
@@ -57,7 +68,7 @@ NGINX_MODULES_OPT="addition dav degradation flv geoip gzip_static image_filter
 perl random_index realip secure_link stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
 NGINX_MODULES_3RD="http_cache_purge http_headers_more http_passenger http_push
-http_upload"
+http_upload http_ey_balancer http_slowfs_cache"
 
 IUSE="aio debug +http +http-cache ipv6 libatomic +pcre ssl vim-syntax"
 
@@ -146,6 +157,10 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i 's/ make/ \\$(MAKE)/' "${S}"/auto/lib/perl/make
+
+	if use nginx_modules_http_ey_balancer; then
+		epatch "${FILESDIR}"/nginx-0.8.32-ey-balancer.patch
+	fi
 }
 
 src_configure() {
@@ -196,6 +211,16 @@ src_configure() {
 	if use nginx_modules_http_upload; then
 		http_enabled=1
 		myconf="${myconf} --add-module=${WORKDIR}/${HTTP_UPLOAD_MODULE_P}"
+	fi
+
+	if use nginx_modules_http_ey_balancer; then
+		http_enabled=1
+		myconf="${myconf} --add-module=${WORKDIR}/ry-nginx-ey-balancer-${HTTP_EY_BALANCER_MODULE_SHA1}"
+	fi
+
+	if use nginx_modules_http_slowfs_cache; then
+		http_enabled=1
+		myconf="${myconf} --add-module=${WORKDIR}/${HTTP_SLOWFS_CACHE_MODULE_P}"
 	fi
 
 	if use http || use http-cache; then
@@ -296,6 +321,16 @@ src_install() {
 	if use nginx_modules_http_upload; then
 		docinto ${HTTP_UPLOAD_MODULE_P}
 		dodoc "${WORKDIR}"/${HTTP_UPLOAD_MODULE_P}/{Changelog,README}
+	fi
+
+	if use nginx_modules_http_ey_balancer; then
+		docinto ${HTTP_EY_BALANCER_MODULE_P}
+		dodoc "${WORKDIR}"/ry-nginx-ey-balancer-${HTTP_EY_BALANCER_MODULE_SHA1}/README
+	fi
+
+	if use nginx_modules_http_slowfs_cache; then
+		docinto ${HTTP_SLOWFS_CACHE_MODULE_P}
+		dodoc "${WORKDIR}"/${HTTP_SLOWFS_CACHE_MODULE_P}/{CHANGES,README}
 	fi
 }
 
