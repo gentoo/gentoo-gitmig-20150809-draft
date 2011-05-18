@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.4.ebuild,v 1.1 2011/05/18 09:43:51 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.4.ebuild,v 1.2 2011/05/18 16:38:28 ssuominen Exp $
 
 EAPI=2
-inherit eutils gnome2
+inherit gnome2
 
 MY_PN="${PN/nm-applet/network-manager-applet}"
 
@@ -46,9 +46,4 @@ pkg_setup () {
 		--localstatedir=/var"
 
 	DOCS="AUTHORS ChangeLog NEWS README"
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
-	gnome2_src_prepare
 }
