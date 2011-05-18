@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.7 2009/11/02 20:45:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.8 2011/05/18 03:22:32 mr_bones_ Exp $
 
 inherit eutils multilib games
 
@@ -56,6 +56,9 @@ src_install() {
 	doexe bin/x86/glibc-2.1/${PN} || die "doexe failed"
 
 	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
+	sed -i \
+		-e 's/^exec /__GL_ExtensionStringVersion=17700 exec /' \
+		"${D}/${GAMES_BINDIR}/${PN}" || die
 	newicon icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Heretic II"
 
