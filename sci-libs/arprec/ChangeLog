@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/arprec
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.3 2009/08/25 13:09:27 grozin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.4 2011/05/18 20:37:14 grozin Exp $
+
+*arprec-2.2.7 (18 May 2011)
+
+  18 May 2011; Andrey Grozin <grozin@gentoo.org> +arprec-2.2.7.ebuild:
+  Version bump
 
   23 Aug 2009; Andrey Grozin <grozin@gentoo.org> arprec-2.2.2.ebuild:
   Fixing a typo in the ebuild
