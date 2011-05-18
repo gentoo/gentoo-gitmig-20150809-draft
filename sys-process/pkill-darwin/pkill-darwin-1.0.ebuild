@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pkill-darwin/pkill-darwin-1.0.ebuild,v 1.1 2011/05/18 18:24:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pkill-darwin/pkill-darwin-1.0.ebuild,v 1.2 2011/05/18 18:27:47 grobian Exp $
 
 EAPI=3
 
@@ -32,8 +32,8 @@ src_install() {
 
 pkg_postinst() {
 	einfo "If you you want pgrep to be able to show and match on the arguments"
-	ewarn "of all processes, you will have to make pgrep suid root.  To do so"
-	ewarn "you have to perform the following steps:"
-	ewarn "  % sudo chown root ${EPREFIX}/usr/bin/pgrep"
-	ewarn "  % sudo chmod u+s ${EPREFIX}/usr/bin/prgep"
+	einfo "of all processes, you will have to make pgrep suid root.  To do so"
+	einfo "you have to perform the following steps:"
+	einfo "  % sudo chown root ${EPREFIX}/usr/bin/pgrep"
+	einfo "  % sudo chmod u+s ${EPREFIX}/usr/bin/prgep"
 }
