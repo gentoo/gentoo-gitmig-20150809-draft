@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/files/sysstat.init.d,v 1.2 2010/08/02 16:17:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/files/sysstat.init.d,v 1.3 2011/05/18 02:21:33 jer Exp $
 
 depend() {
     use hostname
@@ -15,12 +15,5 @@ start() {
 
 stop() {
     ebegin "Cannot stop writing a dummy startup record (see sadc(8))..."
-    eend $?
-}
-
-# restart emulation
-# svc_start svc_stop
-restart() {
-    ebegin "Not writing yet another dummy startup record (see sadc(8))..."
     eend $?
 }
