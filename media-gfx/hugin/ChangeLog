@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.109 2011/05/18 06:41:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.110 2011/05/18 20:08:59 radhermit Exp $
+
+  18 May 2011; Tim Harder <radhermit@gentoo.org> hugin-2011.0.0_rc1.ebuild:
+  Bump libpano13 dependency (bug #367917 by Daniel Neugebauer).
 
 *hugin-2011.0.0_rc1 (18 May 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0_rc1.ebuild,v 1.1 2011/05/18 06:41:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0_rc1.ebuild,v 1.2 2011/05/18 20:08:59 radhermit Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -24,7 +24,7 @@ CDEPEND="
 	>=media-gfx/enblend-3.0_p20080807
 	media-gfx/exiv2
 	media-libs/freeglut
-	>=media-libs/libpano13-2.9.17
+	>=media-libs/libpano13-2.9.18
 	media-libs/libpng
 	media-libs/openexr
 	media-libs/tiff
