@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.13 2011/05/17 20:22:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.14 2011/05/18 15:16:16 jer Exp $
+
+  18 May 2011; Jeroen Roovers <jer@gentoo.org> unifdef-2.3.ebuild:
+  Stable for HPPA (bug #367271).
 
   17 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> unifdef-2.3.ebuild:
   x86 stable wrt bug #367271
