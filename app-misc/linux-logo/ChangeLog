@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.69 2011/05/15 08:11:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.70 2011/05/18 06:58:00 phajdan.jr Exp $
+
+  18 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  linux-logo-5.10-r1.ebuild:
+  x86 stable wrt bug #367275
 
   15 May 2011; Christoph Mende <angelos@gentoo.org> linux-logo-5.10-r1.ebuild:
   Stable on amd64 wrt bug #367275
