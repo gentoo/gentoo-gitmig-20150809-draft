@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.1-r1.ebuild,v 1.4 2011/05/01 14:04:28 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.2.ebuild,v 1.1 2011/05/18 19:25:42 billie Exp $
 
 EAPI=3
 
 PYTHON_DEPEND=2
+PYTHON_USE_WITH=xml
 
 inherit python
 
@@ -22,7 +23,6 @@ IUSE="+network-cron"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	dev-python/pyxml
 	net-misc/curl
 	sys-apps/portage"
 
