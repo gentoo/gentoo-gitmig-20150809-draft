@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/easypg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/ChangeLog,v 1.15 2010/05/13 19:41:31 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/easypg/ChangeLog,v 1.16 2011/05/18 18:19:09 ulm Exp $
+
+  18 May 2011; Ulrich Mueller <ulm@gentoo.org> -files/50easypg-gentoo.el,
+  -easypg-0.0.16-r1.ebuild, -metadata.xml:
+  Remove app-emacs/easypg, bug 358351.
 
   13 May 2010; Ulrich Mueller <ulm@gentoo.org> easypg-0.0.16-r1.ebuild:
   Remove dependency on virtual/gnus.
