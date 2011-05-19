@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.11.ebuild,v 1.2 2011/05/19 17:41:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.11.ebuild,v 1.3 2011/05/19 20:35:55 wired Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit autotools
 
@@ -14,8 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	256-color afterimage blink fading-colors +font-styles force-hints iso14755
-	+mousewheel perl pixbuf truetype unicode3 +vanilla wcwidth
+	256-color alt-font-width afterimage blink +focused-urgency fading-colors
+	+font-styles force-hints iso14755 +mousewheel perl pixbuf truetype unicode3
+	+vanilla wcwidth
 "
 
 RDEPEND="x11-libs/libX11
@@ -29,6 +30,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xproto"
 
+REQUIRED_USE="vanilla? ( !alt-font-width focused-urgency !force-hints !wcwidth )"
+
 src_prepare() {
 	if ! use afterimage && ! use pixbuf; then
 		einfo " + If you want transparency support, please enable either the *pixbuf*"
@@ -39,18 +42,12 @@ src_prepare() {
 		ewarn " + You have enabled the vanilla USE flag."
 		ewarn "   This means no USE flag controlled patches will be applied."
 	else
-		if use wcwidth || use force-hints; then
-			ewarn " + You enabled wcwidth or force-hints or both."
-			ewarn "   Please note that these are not supported by upstream."
-			ewarn "   You are at your own if you run into problems."
-		fi
-
-		local tdir=/usr/share/terminfo
+		ewarn " + You are going to include unsupported third-party bug fixes/features."
 
 		use wcwidth && epatch doc/wcwidth.patch
 
 		# bug #240165
-		epatch "${FILESDIR}"/${PN}-9.06-no-urgency-if-focused.diff
+		use focused-urgency || epatch "${FILESDIR}"/${PN}-9.06-no-urgency-if-focused.diff
 
 		# bug #263638
 		epatch "${FILESDIR}"/${PN}-9.06-popups-hangs.patch
@@ -59,11 +56,9 @@ src_prepare() {
 		use force-hints && epatch "${FILESDIR}"/${PN}-9.10-force-hints.patch
 
 		# bug #237271
-		ewarn " + You are going to include third-party bug fixes/features."
-		ewarn "   They came without any warranty and are not supported by the"
-		ewarn "   Gentoo community."
 		epatch "${FILESDIR}"/${PN}-9.05_no-MOTIF-WM-INFO.patch
-		epatch "${FILESDIR}"/${PN}-9.06-font-width.patch
+
+		use alt-font-width && epatch "${FILESDIR}"/${PN}-9.06-font-width.patch
 	fi
 
 	# kill the rxvt-unicode terminfo file - #192083

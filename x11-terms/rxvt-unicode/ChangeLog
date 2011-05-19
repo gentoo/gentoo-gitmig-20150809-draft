@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.184 2011/05/19 17:41:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.185 2011/05/19 20:35:55 wired Exp $
+
+  19 May 2011; Alex Alexander <wired@gentoo.org> rxvt-unicode-9.11.ebuild,
+  metadata.xml:
+  EAPI 4, added REQUIRED_USE and a few new USE flags, fixed bug #365813
 
   19 May 2011; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.11.ebuild,
   metadata.xml:
