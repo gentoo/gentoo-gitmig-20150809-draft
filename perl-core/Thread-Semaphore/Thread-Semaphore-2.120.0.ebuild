@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Semaphore/Thread-Semaphore-2.120.ebuild,v 1.1 2011/03/11 08:24:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Semaphore/Thread-Semaphore-2.120.0.ebuild,v 1.1 2011/05/19 13:17:18 tove Exp $
 
 EAPI=3
 
