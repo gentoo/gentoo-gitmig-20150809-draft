@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-penultima
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-penultima/ChangeLog,v 1.2 2010/06/28 22:30:21 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-penultima/ChangeLog,v 1.3 2011/05/19 04:23:20 calchan Exp $
+
+*nwn-penultima-1-r1 (19 May 2011)
+
+  19 May 2011; Denis Dupeyron <calchan@gentoo.org> +nwn-penultima-1-r1.ebuild:
+  Undo my file renaming which breaks launching modules from Penultima City.
 
   28 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
   nwn-penultima-1.ebuild:
