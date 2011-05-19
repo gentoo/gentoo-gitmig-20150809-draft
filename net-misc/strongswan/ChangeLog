@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.87 2011/02/12 16:08:59 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.88 2011/05/19 08:14:20 gurligebis Exp $
+
+*strongswan-4.5.2 (19 May 2011)
+
+  19 May 2011; <gurligebis@gentoo.org> -files/strongswan-4.2.7-install.patch,
+  -files/strongswan-4.3.3-install.patch, -strongswan-4.3.7.ebuild,
+  -strongswan-4.4.1.ebuild, +strongswan-4.5.2.ebuild:
+  Bumping to 4.5.2 and removing old versions and unused patches.
 
 *strongswan-4.5.1 (12 Feb 2011)
 

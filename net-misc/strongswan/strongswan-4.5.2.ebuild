@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.4.1.ebuild,v 1.1 2010/08/03 08:10:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.5.2.ebuild,v 1.1 2011/05/19 08:14:20 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -12,7 +12,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="+caps cisco curl debug dhcp farp gcrypt ldap +ikev1 +ikev2 mysql nat-transport +non-root +openssl smartcard sqlite"
+IUSE="+caps cisco curl debug dhcp eap farp gcrypt ldap +ikev1 +ikev2 mysql nat-transport +non-root +openssl smartcard sqlite"
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -117,6 +117,18 @@ src_configure() {
 		$(use_enable smartcard) \
 		$(use_enable cisco cisco-quirks) \
 		$(use_enable debug leak-detective) \
+		$(use_enable eap eap-sim) \
+		$(use_enable eap eap-sim-file) \
+		$(use_enable eap eap-simaka-sql) \
+		$(use_enable eap eap-simaka-pseudonym) \
+		$(use_enable eap eap-simaka-reauth) \
+		$(use_enable eap eap-identity) \
+		$(use_enable eap eap-md5) \
+		$(use_enable eap eap-gtc) \
+		$(use_enable eap eap-aka) \
+		$(use_enable eap eap-aka-3gpp2) \
+		$(use_enable eap eap-mschapv2) \
+		$(use_enable eap eap-radius) \
 		$(use_enable nat-transport) \
 		$(use_enable openssl) \
 		$(use_enable gcrypt) \
