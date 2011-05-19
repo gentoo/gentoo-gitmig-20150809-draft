@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.1.ebuild,v 1.2 2011/05/12 09:37:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.6.1.ebuild,v 1.3 2011/05/19 22:01:12 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -41,7 +41,7 @@ pkg_setup() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 
-	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
+	DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS TODO )
 }
 
 src_prepare() {
