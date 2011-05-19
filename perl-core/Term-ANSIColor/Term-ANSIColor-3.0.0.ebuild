@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Term-ANSIColor/Term-ANSIColor-3.00.ebuild,v 1.10 2011/01/18 22:17:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Term-ANSIColor/Term-ANSIColor-3.0.0.ebuild,v 1.1 2011/05/19 19:04:45 tove Exp $
 
 EAPI=3
 
 MY_PN="ANSIColor"
-MY_P="${MY_PN}-${PV}"
-S="${WORKDIR}/${MY_P}"
 MODULE_AUTHOR=RRA
+MODULE_VERSION=3.00
 inherit perl-module
 
 DESCRIPTION="Color screen output using ANSI escape sequences."
