@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc1_p20110329.ebuild,v 1.2 2011/03/31 07:07:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc1_p20110519.ebuild,v 1.1 2011/05/19 14:27:48 ssuominen Exp $
 
 EAPI=4
 
 DESCRIPTION="Portland utils for cross-platform/cross-toolkit/cross-desktop interoperability"
 HOMEPAGE="http://portland.freedesktop.org/"
-SRC_URI="mirror://gentoo/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
 #SRC_URI="http://portland.freedesktop.org/download/${MY_P}.tar.gz"
 
 LICENSE="MIT"
@@ -43,5 +43,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	[[ $(type -P gtk-update-icon-cache) ]] || elog "Install x11-libs/gtk+:2 for the gtk-update-icon-cache command."
+	[[ -x $(type -P gtk-update-icon-cache) ]] || elog "Install x11-libs/gtk+:2 for the gtk-update-icon-cache command."
 }
