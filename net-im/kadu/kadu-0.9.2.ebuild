@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.1-r1.ebuild,v 1.3 2011/05/19 16:08:13 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.9.2.ebuild,v 1.1 2011/05/19 16:08:13 reavertm Exp $
 
 EAPI="4"
 
@@ -69,10 +69,6 @@ src_prepare() {
 	# Autopatcher
 	base_src_prepare
 
-	# Filter-out -Werror, bug #363843
-	sed -e 's/-Werror//g' -i CMakeLists.txt \
-		|| die
-
 	# Create .config file with all variables defaulted to =n
 	sed -i -n -e 's/=\(m\|y\)/=n/' -e '/^[a-z]/p' .config \
 		|| die '.config creation failed'
@@ -125,7 +121,6 @@ src_prepare() {
 	# Protocols
 	if use gadu; then
 		config_enable module_gadu_protocol m
-		config_enable module_server_monitor m
 		config_enable module_history_migration m
 		config_enable module_profiles_import m
 	fi
