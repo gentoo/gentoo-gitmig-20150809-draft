@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.8.1.ebuild,v 1.8 2011/05/19 22:08:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.8.1.ebuild,v 1.9 2011/05/19 22:43:19 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -52,5 +52,5 @@ src_install() {
 
 	echo startxfce4 > "${T}"/Xfce4
 	exeinto /etc/X11/Sessions
-	doexe "${T}"/Xfce4 || die
+	doexe "${T}"/Xfce4
 }
