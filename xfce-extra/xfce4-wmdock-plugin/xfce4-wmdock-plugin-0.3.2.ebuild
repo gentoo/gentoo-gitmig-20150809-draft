@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.3.2.ebuild,v 1.6 2011/03/21 22:41:47 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.3.2.ebuild,v 1.7 2011/05/19 20:57:00 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="a compatibility layer for running WindowMaker dockapps on Xfce4."
@@ -15,9 +15,9 @@ KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.6:2
-	>=xfce-base/xfce4-panel-4.6
-	>=xfce-base/libxfcegui4-4.3.90.2
-	>=xfce-base/libxfce4util-4.3.90.2
+	>=xfce-base/xfce4-panel-4.8
+	>=xfce-base/libxfcegui4-4.8
+	>=xfce-base/libxfce4util-4.8
 	>=x11-libs/libwnck-2.8.1:1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -26,12 +26,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-libxfce4panel_h.patch )
-	XFCONF=(
-		--disable-dependency-tracking
-		$(xfconf_use_debug)
-		)
-
-	DOCS="AUTHORS ChangeLog README TODO"
+	XFCONF=( $(xfconf_use_debug) )
+	DOCS=( AUTHORS ChangeLog README TODO )
 }
 
 src_prepare() {

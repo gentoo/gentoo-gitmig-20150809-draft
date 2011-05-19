@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-1.2.0.ebuild,v 1.5 2011/02/14 19:50:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vfs/thunar-vfs-1.2.0.ebuild,v 1.6 2011/05/19 21:01:51 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Xfce's filesystem libraries (deprecated: don't use this for future development)"
@@ -34,7 +34,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		$(use_enable dbus)
 		$(use_enable gnome gnome-thumbnailers)
 		$(use_enable startup-notification)
@@ -43,7 +42,7 @@ pkg_setup() {
 		--with-volume-manager=none
 		)
 
-	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
+	DOCS=( AUTHORS ChangeLog HACKING NEWS README TODO )
 }
 
 src_install() {

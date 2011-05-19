@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.8.0.ebuild,v 1.6 2011/02/14 19:46:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.8.0.ebuild,v 1.7 2011/05/19 21:05:07 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Application finder and launcher for the Xfce desktop environment"
@@ -25,10 +25,6 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
-	XFCONF=(
-		--disable-dependency-tracking
-		$(xfconf_use_debug)
-		)
-
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	XFCONF=( $(xfconf_use_debug) )
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }

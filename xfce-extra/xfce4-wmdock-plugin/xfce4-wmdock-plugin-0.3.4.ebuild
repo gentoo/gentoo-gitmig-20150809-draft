@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.3.4.ebuild,v 1.1 2011/04/29 07:11:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/xfce4-wmdock-plugin-0.3.4.ebuild,v 1.2 2011/05/19 20:57:00 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.6:2
-	>=xfce-base/xfce4-panel-4.6
-	>=xfce-base/libxfcegui4-4.3.90.2
-	>=xfce-base/libxfce4util-4.3.90.2
+	>=xfce-base/xfce4-panel-4.8
+	>=xfce-base/libxfcegui4-4.8
+	>=xfce-base/libxfce4util-4.8
 	>=x11-libs/libwnck-2.8.1:1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=( $(xfconf_use_debug) )
-	DOCS="AUTHORS ChangeLog README TODO"
+	DOCS=( AUTHORS ChangeLog README TODO )
 }
 
 src_prepare() {
