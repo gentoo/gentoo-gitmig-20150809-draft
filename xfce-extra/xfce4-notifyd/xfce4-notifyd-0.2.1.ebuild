@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notifyd/xfce4-notifyd-0.2.1.ebuild,v 1.4 2011/03/22 10:47:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notifyd/xfce4-notifyd-0.2.1.ebuild,v 1.5 2011/05/19 21:06:42 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Notification daemon for the Xfce desktop environment"
@@ -29,10 +29,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF=(
-		--disable-dependency-tracking
-		$(xfconf_use_debug)
-		)
-
-	DOCS="AUTHORS NEWS README TODO"
+	XFCONF=( $(xfconf_use_debug) )
+	DOCS=( AUTHORS NEWS README TODO )
 }
