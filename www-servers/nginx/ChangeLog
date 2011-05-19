@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.279 2011/05/18 08:12:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.280 2011/05/19 08:28:24 hollow Exp $
+
+  19 May 2011; Benedikt Böhm <hollow@gentoo.org> nginx-1.0.2.ebuild:
+  bump cache_purge module to fix build after nginx-1.0.1
 
 *nginx-1.0.2 (18 May 2011)
 
