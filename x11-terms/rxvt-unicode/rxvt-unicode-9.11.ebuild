@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.11.ebuild,v 1.1 2011/05/02 16:27:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.11.ebuild,v 1.2 2011/05/19 17:41:37 jer Exp $
 
 EAPI="3"
 
@@ -13,7 +13,10 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="256-color afterimage blink fading-colors +font-styles force-hints iso14755 perl pixbuf truetype unicode3 +vanilla wcwidth"
+IUSE="
+	256-color afterimage blink fading-colors +font-styles force-hints iso14755
+	+mousewheel perl pixbuf truetype unicode3 +vanilla wcwidth
+"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXft
@@ -80,6 +83,7 @@ src_configure() {
 		$(use_enable blink text-blink) \
 		$(use_enable fading-colors fading) \
 		$(use_enable font-styles) \
+		$(use_enable mousewheel) \
 		$(use_enable perl) \
 		$(use_enable pixbuf) \
 		$(use_enable truetype xft) \
