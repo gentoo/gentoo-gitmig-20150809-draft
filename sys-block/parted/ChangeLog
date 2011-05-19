@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/parted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.5 2011/04/07 15:32:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.6 2011/05/19 03:25:57 jer Exp $
+
+*parted-2.4 (19 May 2011)
+
+  19 May 2011; Jeroen Roovers <jer@gentoo.org> +parted-2.4.ebuild:
+  Version bump.
 
 *parted-2.3-r2 (07 Apr 2011)
 
