@@ -1,6 +1,29 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.123 2011/05/03 02:51:40 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.124 2011/05/19 16:05:01 scarabeus Exp $
+
+  19 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/postgresql.conf-8.2, -files/postgresql.init-8.2,
+  -postgresql-server-8.2.18.ebuild, -postgresql-server-8.2.19.ebuild,
+  postgresql-server-8.2.20.ebuild, -postgresql-server-8.2.20-r1.ebuild,
+  -postgresql-server-8.2.20-r2.ebuild, -postgresql-server-8.2.20-r3.ebuild,
+  -files/postgresql.conf-8.3, -files/postgresql.init-8.3,
+  -postgresql-server-8.3.12.ebuild, -postgresql-server-8.3.13.ebuild,
+  postgresql-server-8.3.14.ebuild, -postgresql-server-8.3.14-r1.ebuild,
+  -postgresql-server-8.3.14-r2.ebuild, -postgresql-server-8.3.14-r3.ebuild,
+  -files/postgresql.conf-8.4, -files/postgresql.init-8.4,
+  -postgresql-server-8.4.5.ebuild, -postgresql-server-8.4.6.ebuild,
+  postgresql-server-8.4.7.ebuild, -postgresql-server-8.4.7-r1.ebuild,
+  -postgresql-server-8.4.7-r2.ebuild, -postgresql-server-8.4.7-r3.ebuild,
+  -files/postgresql.conf-9.0, -files/postgresql.init-9.0,
+  -postgresql-server-9.0.1.ebuild, -postgresql-server-9.0.2.ebuild,
+  -postgresql-server-9.0.3-r2.ebuild, -postgresql-server-9.0.3-r3.ebuild,
+  -postgresql-server-9.0.3-r4.ebuild, -postgresql-server-9.1_alpha4.ebuild,
+  -postgresql-server-9.1_alpha4-r1.ebuild,
+  -postgresql-server-9.1_alpha5.ebuild,
+  -postgresql-server-9.1_alpha5-r1.ebuild:
+  Spring cleanup, drop overshadowed versions. Add lacking keyword to some
+  versions that were stated in bug as stabled but was never commited.
 
 *postgresql-server-9.1_beta1 (03 May 2011)
 
