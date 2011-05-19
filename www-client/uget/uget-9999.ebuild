@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-9999.ebuild,v 1.3 2011/03/29 12:57:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-9999.ebuild,v 1.4 2011/05/19 20:53:08 wired Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ RDEPEND="
 	libnotify? ( x11-libs/libnotify )
 	"
 DEPEND="${RDEPEND}
+	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
