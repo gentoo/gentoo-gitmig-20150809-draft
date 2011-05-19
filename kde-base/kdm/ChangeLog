@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.243 2011/05/09 22:51:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.244 2011/05/19 16:28:52 abcd Exp $
+
+*kdm-4.6.3-r1 (19 May 2011)
+
+  19 May 2011; Jonathan Callen <abcd@gentoo.org> -kdm-4.6.3.ebuild,
+  +kdm-4.6.3-r1.ebuild:
+  Attempt to do some migration from old directories, fix permissions on
+  /var/lib/kdm, warn about old directories in /var/lib; remove old
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kdm-4.6.2-r1.ebuild:
   Stable on amd64 wrt bug #354033
