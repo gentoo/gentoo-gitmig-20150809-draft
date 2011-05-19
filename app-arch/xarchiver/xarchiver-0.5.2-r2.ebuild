@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r2.ebuild,v 1.11 2011/01/25 18:07:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/xarchiver-0.5.2-r2.ebuild,v 1.12 2011/05/19 22:17:18 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="a GTK+ based and advanced archive manager that can be used with Thunar"
@@ -26,12 +26,8 @@ pkg_setup() {
 		"${FILESDIR}"/${P}-add_xz_support.patch
 		)
 
-	XFCONF=(
-		--disable-dependency-tracking
-		$(xfconf_use_debug)
-		)
-
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	XFCONF=( $(xfconf_use_debug) )
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
 
 src_prepare() {
