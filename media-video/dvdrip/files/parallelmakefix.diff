@@ -1,0 +1,26 @@
+--- src/Makefile	2011-05-12 08:47:37.601613368 -0400
++++ Makefile.new	2011-05-12 08:52:59.412613500 -0400
+@@ -3,10 +3,10 @@
+ all:	../bin/dvdrip-splitpipe ../bin/dvdrip-progress
+ 
+ ../bin/dvdrip-splitpipe:	dvdrip-splitpipe.c
+-	$(CC) $(OTHERLDFLAGS) $(CFLAGS) -o dvdrip-splitpipe dvdrip-splitpipe.c && mv dvdrip-splitpipe ../bin
++	$(CC) $(OTHERLDFLAGS) $(CFLAGS) -o ../bin/dvdrip-splitpipe dvdrip-splitpipe.c
+ 
+ ../bin/dvdrip-progress:	dvdrip-progress.c
+-	$(CC) $(OTHERLDFLAGS) $(CFLAGS) -o dvdrip-progress dvdrip-progress.c && mv dvdrip-progress ../bin
++	$(CC) $(OTHERLDFLAGS) $(CFLAGS) -o ../bin/dvdrip-progress dvdrip-progress.c
+ 
+ clean:
+ 	rm -f dvdrip-splitpipe ../bin/dvdrip-splitpipe dvdrip-progress ../bin/dvdrip-progress
+--- Makefile.PL	2009-12-19 08:42:17.000000000 -0500
++++ Makefile.PL.new	2011-05-17 15:57:46.447000011 -0400
+@@ -52,7 +52,7 @@
+ sub MY::postamble {
+     '
+ bin/dvdrip-splitpipe bin/dvdrip-progress: src/Makefile
+-	cd src && make
++	cd src && ( $(MAKE) CC=$(CC) )
+ ';
+ }
+ 
