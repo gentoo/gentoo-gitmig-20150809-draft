@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.8.1.ebuild,v 1.5 2011/02/14 19:09:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.8.1.ebuild,v 1.6 2011/05/19 22:04:58 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Xfce's basic utilities library"
@@ -22,11 +22,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		--disable-static
 		$(xfconf_use_debug)
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
+	DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
 }

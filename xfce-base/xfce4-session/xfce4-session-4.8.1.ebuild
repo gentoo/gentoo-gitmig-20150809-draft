@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.8.1.ebuild,v 1.8 2011/04/23 17:23:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.8.1.ebuild,v 1.9 2011/05/19 21:59:42 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Xfce's session manager"
@@ -38,7 +38,6 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
-		--disable-dependency-tracking
 		--disable-static
 		$(use_enable xfce_plugins_logout panel-plugin)
 		$(use_enable gnome)
@@ -50,5 +49,5 @@ pkg_setup() {
 		$(use_enable policykit polkit)
 		)
 
-	DOCS="AUTHORS BUGS ChangeLog NEWS README TODO"
+	DOCS=( AUTHORS BUGS ChangeLog NEWS README TODO )
 }

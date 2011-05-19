@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.8.1.ebuild,v 1.7 2011/04/23 17:18:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.8.1.ebuild,v 1.8 2011/05/19 22:08:19 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Utilities for the Xfce desktop environment"
@@ -35,7 +35,6 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
-		--disable-dependency-tracking
 		--disable-xfconf-migration
 		$(use_enable dbus)
 		$(xfconf_use_debug)
@@ -43,7 +42,7 @@ pkg_setup() {
 		--with-xsession-prefix="${EPREFIX}"/usr
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS"
+	DOCS=( AUTHORS ChangeLog NEWS )
 }
 
 src_install() {

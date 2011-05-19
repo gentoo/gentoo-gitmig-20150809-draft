@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.1.ebuild,v 1.10 2011/04/23 17:14:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.1.ebuild,v 1.11 2011/05/19 22:03:30 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Configuration system for the Xfce desktop environment"
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		--disable-static
 		$(use_enable libnotify)
 		$(use_enable xklavier libxklavier)
@@ -46,7 +45,7 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS TODO"
+	DOCS=( AUTHORS ChangeLog NEWS TODO )
 }
 
 src_prepare() {

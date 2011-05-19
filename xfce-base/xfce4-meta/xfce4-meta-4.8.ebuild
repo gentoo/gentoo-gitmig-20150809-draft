@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/xfce4-meta-4.8.ebuild,v 1.7 2011/02/14 19:43:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/xfce4-meta-4.8.ebuild,v 1.8 2011/05/19 22:11:51 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="The Xfce Desktop Environment (meta package)"
 HOMEPAGE="http://www.xfce.org/"
