@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5381 2011/05/18 18:29:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5382 2011/05/19 20:27:11 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 May 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Unmask mod_security 2.6.0.
 
   18 May 2011; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for several removed packages in app-emacs category, bug 358351.
