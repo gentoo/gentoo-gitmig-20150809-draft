@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.0.ebuild,v 1.1 2011/04/19 13:08:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.0.ebuild,v 1.2 2011/05/19 21:47:30 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -31,5 +31,5 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog README"
+	DOCS=( AUTHORS ChangeLog README )
 }
