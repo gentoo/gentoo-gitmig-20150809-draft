@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/shutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.19 2011/04/10 09:55:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutter/ChangeLog,v 1.20 2011/05/19 20:24:28 hwoarang Exp $
+
+  19 May 2011; Markos Chandras <hwoarang@gentoo.org> shutter-0.87.2.ebuild:
+  Stable on amd64 wrt bug #367825
 
 *shutter-0.87.2 (10 Apr 2011)
 
