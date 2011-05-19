@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.7.ebuild,v 1.2 2011/05/04 18:58:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.7.ebuild,v 1.3 2011/05/19 21:48:23 ssuominen Exp $
 
 EAPI=4
 inherit linux-info xfconf
@@ -15,9 +15,9 @@ KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.12:2
-	>=xfce-base/libxfce4ui-4.7
-	>=xfce-base/libxfce4util-4.6
-	>=xfce-base/xfce4-panel-4.6"
+	>=xfce-base/libxfce4ui-4.8
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/xfce4-panel-4.8"
 RDEPEND="${COMMON_DEPEND}
 	>=app-laptop/hdapsd-20081213
 	>=app-laptop/tp_smapi-0.39"
@@ -32,7 +32,7 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 	linux-info_pkg_setup
 
