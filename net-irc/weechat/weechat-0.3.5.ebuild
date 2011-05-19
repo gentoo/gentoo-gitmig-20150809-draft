@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.9 2011/05/19 07:06:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.5.ebuild,v 1.1 2011/05/19 07:06:48 scarabeus Exp $
 
 EAPI=3
 
