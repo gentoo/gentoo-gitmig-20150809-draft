@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.3.0.ebuild,v 1.1 2011/03/26 08:08:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.3.0.ebuild,v 1.2 2011/05/19 22:32:24 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
@@ -29,7 +29,7 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS README"
+	DOCS=( AUTHORS ChangeLog NEWS README )
 
 	python_set_active_version 2
 	python_pkg_setup
