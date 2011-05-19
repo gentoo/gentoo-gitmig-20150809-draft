@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/xfwm4-themes-4.6.0.ebuild,v 1.13 2010/12/13 19:44:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/xfwm4-themes-4.6.0.ebuild,v 1.14 2011/05/19 22:30:00 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Xfce's window manager themes"
@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=xfce-base/xfwm4-${PV}"
+RDEPEND=">=xfce-base/xfwm4-4.8"
 DEPEND=""
 
 RESTRICT="binchecks strip"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog README TODO"
+	DOCS=( AUTHORS ChangeLog README TODO )
 }
