@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.1.ebuild,v 1.7 2011/04/23 17:27:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.1.ebuild,v 1.8 2011/05/19 21:52:12 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit flag-o-matic xfconf
 
 DESCRIPTION="Xfce's calendar suite (with panel plug-in)"
@@ -19,8 +19,8 @@ RDEPEND=">=dev-libs/libical-0.43
 	>=x11-libs/gtk+-2.10:2
 	berkdb? ( >=sys-libs/db-4 )
 	dbus? ( >=dev-libs/dbus-glib-0.88 )
-	libnotify? ( >=x11-libs/libnotify-0.3.2 )
-	xfce_plugins_clock? ( >=xfce-base/xfce4-panel-4.6 )"
+	libnotify? ( >=x11-libs/libnotify-0.4.5 )
+	xfce_plugins_clock? ( >=xfce-base/xfce4-panel-4.8 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
@@ -30,7 +30,6 @@ pkg_setup() {
 
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}/html
-		--disable-dependency-tracking
 		$(use_enable xfce_plugins_clock libxfce4panel)
 		$(use_enable dbus)
 		$(use_enable libnotify)
@@ -38,5 +37,5 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
