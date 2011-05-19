@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/chordii/chordii-4.3.ebuild,v 1.1 2011/05/18 07:37:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/chordii/chordii-4.3.ebuild,v 1.2 2011/05/19 23:14:48 radhermit Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
 RDEPEND=""
-DEPEND=""
+DEPEND=">=sys-devel/autoconf-2.67"
 
 src_prepare() {
 	sed -i -e "/dist_man_MAN/d" man/Makefile.am
