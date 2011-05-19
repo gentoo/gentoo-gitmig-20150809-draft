@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12782 2011/05/19 20:27:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12783 2011/05/19 23:00:01 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -156,14 +156,6 @@ dev-ruby/cgi_multipart_eof_fix
 # Ryan Hill <dirtyepic@gentoo.org> (23 Apr 2011)
 # Masked for removal on 20110523.
 app-text/gnochm
-
-# Bernard Cafarelli <voyageur@gentoo.org> (21 Apr 2011)
-# camaelon does not compile with current gnustep versions in tree,
-# deprecated by upstream, use gnustep built-in theming suppport instead
-# Also remove associated themes, they do not work with built-in engine
-# Masked for removal in 30 days, bug #328559
-gnustep-libs/camaelon
-x11-themes/camaelon-themes
 
 # Peter Volkov <pva@gentoo.org> (20 Apr 2011)
 # Mask beta version
