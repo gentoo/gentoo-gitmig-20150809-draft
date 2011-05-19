@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.2.ebuild,v 1.1 2011/05/19 18:33:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.8.2.ebuild,v 1.2 2011/05/19 19:25:34 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Configuration system for the Xfce desktop environment"
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.88
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.14:2
-	>=x11-libs/libX11-1
+	x11-libs/libX11
 	>=x11-libs/libXcursor-1.1
 	>=x11-libs/libXi-1.3
 	>=x11-libs/libXrandr-1.2
@@ -27,8 +27,8 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=xfce-base/xfconf-4.8
 	>=xfce-base/exo-0.6
 	libcanberra? ( >=media-libs/libcanberra-0.25[sound] )
-	libnotify? ( >=x11-libs/libnotify-0.1.3 )
-	xklavier? ( >=x11-libs/libxklavier-0.3 )"
+	libnotify? ( >=x11-libs/libnotify-0.4.5 )
+	xklavier? ( x11-libs/libxklavier )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		--disable-static
 		$(use_enable libnotify)
 		$(use_enable xklavier libxklavier)
@@ -46,7 +45,7 @@ pkg_setup() {
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS TODO"
+	DOCS=( AUTHORS ChangeLog NEWS TODO )
 }
 
 src_prepare() {
