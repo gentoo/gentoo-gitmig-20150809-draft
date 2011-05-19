@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-1.1.3.ebuild,v 1.10 2011/03/28 14:39:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-1.1.3.ebuild,v 1.11 2011/05/19 21:26:46 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 EAUTORECONF=yes
 inherit xfconf
 
-DESCRIPTION="a simple cliboard history manager for Xfce4 Panel"
+DESCRIPTION="A clipboard manager plug-in for the Xfce panel"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/1.1/${P}.tar.bz2"
 
@@ -19,11 +19,11 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	dev-libs/libunique:1
 	>=gnome-base/libglade-2.6:2.0
 	>=x11-libs/gtk+-2.10:2
-	>=xfce-base/libxfce4util-4.4
-	>=xfce-base/libxfcegui4-4.4
-	>=xfce-base/xfce4-panel-4.4
-	>=xfce-base/xfconf-4.6
-	>=xfce-base/exo-0.3"
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/libxfcegui4-4.8
+	>=xfce-base/xfce4-panel-4.8
+	>=xfce-base/xfconf-4.8
+	>=xfce-base/exo-0.6"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
@@ -31,11 +31,15 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${PN}-1.1.1-exo.patch )
+	XFCONF=( $(use_enable debug) )
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
+}
 
-	XFCONF=(
-		--disable-dependency-tracking
-		$(use_enable debug)
-		)
+src_prepare() {
+	sed -i \
+		-e "/imagesdir/s:xfce4/doc:doc/${PF}/html:" \
+		-e "/TARGET_DIR/s:xfce4/doc:doc/${PF}/html:" \
+		docs/manual/*/{,images/}Makefile.am || die
 
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	xfconf_src_prepare
 }

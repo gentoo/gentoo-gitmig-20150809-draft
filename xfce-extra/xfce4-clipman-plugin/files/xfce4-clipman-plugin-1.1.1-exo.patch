@@ -1,6 +1,5 @@
-diff -ur xfce4-clipman-plugin-1.1.1.orig/configure.ac xfce4-clipman-plugin-1.1.1/configure.ac
---- xfce4-clipman-plugin-1.1.1.orig/configure.ac	2009-09-30 19:04:22.000000000 +0300
-+++ xfce4-clipman-plugin-1.1.1/configure.ac	2009-10-24 20:28:34.000000000 +0300
+--- configure.ac
++++ configure.ac
 @@ -63,7 +63,8 @@
  dnl *** Check for required packages ***
  dnl ***********************************
