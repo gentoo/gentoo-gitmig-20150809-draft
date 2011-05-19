@@ -1,6 +1,10 @@
 # ChangeLog for games-action/powermanga
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.19 2010/11/13 07:39:56 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/ChangeLog,v 1.20 2011/05/19 06:02:58 tupone Exp $
+
+  19 May 2011; Tupone Alfredo <tupone@gentoo.org> powermanga-0.90.ebuild,
+  +files/powermanga-0.90-underlink.patch:
+  Fix underlinking. Bug #367431 by Diego Elio Pettenò
 
   13 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   powermanga-0.90.ebuild:
