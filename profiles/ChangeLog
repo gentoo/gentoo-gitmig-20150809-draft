@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5383 2011/05/19 23:00:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5384 2011/05/19 23:14:45 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 May 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite spcaview, aatv, camsource, effectv, setpwc, fame, fmio and came for
+  linux-headers-2.6.38 wrt #359595.
 
   19 May 2011; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Remove mask on last-rited gnustep-libs/camaelon and

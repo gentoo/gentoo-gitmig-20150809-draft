@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12783 2011/05/19 23:00:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12784 2011/05/19 23:14:45 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,29 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (20 May 2011)
+# Some abandonware that fails to build with linux-headers-2.6.38,
+# and other issues
+#
+# spcaview, bugs 329065, 336599, 364843
+# aatv, bug 364845
+# camsource, bug 365683
+# effectv, bug 365255
+# setpwc, bug 363469 (if saved, reopen bug 121073)
+# fmio, bugs 361581, 350024
+# fame, bug 362993
+# came, bug 361585
+#
+# Removal in 30 days (or feel free to pick up these and port to v4l2)
+media-video/spcaview
+media-tv/aatv
+media-video/camsource
+media-video/effectv
+media-video/setpwc
+media-video/fame
+media-radio/fmio
+media-video/came
 
 # Tim Harder <radhermit@gentoo.org> (18 May 2011)
 # Mask release candidates
