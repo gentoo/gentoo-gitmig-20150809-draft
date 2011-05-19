@@ -1,6 +1,6 @@
 # ChangeLog for dev-texlive/texlive-luatex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.12 2011/05/18 14:35:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.13 2011/05/19 11:25:35 tove Exp $
 
 *texlive-luatex-2010-r1 (18 May 2011)
 
@@ -17,7 +17,7 @@
   01 Jun 2010; Joseph Jezak <josejx@gentoo.org> texlive-luatex-2009.ebuild:
   Marked ~ppc for bug #300526.
 
-  13 May 2010; RaÃºl Porcel <armin76@gentoo.org> texlive-luatex-2009.ebuild:
+  13 May 2010; Raúl Porcel <armin76@gentoo.org> texlive-luatex-2009.ebuild:
   Add ~sparc wrt #300526
 
   12 May 2010; Brent Baude <ranger@gentoo.org> texlive-luatex-2009.ebuild:
@@ -26,10 +26,10 @@
   10 May 2010; Markus Meier <maekke@gentoo.org> texlive-luatex-2009.ebuild:
   add ~arm, bug #300526
 
-  13 Feb 2010; RaÃºl Porcel <armin76@gentoo.org> texlive-luatex-2009.ebuild:
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> texlive-luatex-2009.ebuild:
   Add ~sh wrt #300526
 
-  13 Feb 2010; RaÃºl Porcel <armin76@gentoo.org> texlive-luatex-2009.ebuild:
+  13 Feb 2010; Raúl Porcel <armin76@gentoo.org> texlive-luatex-2009.ebuild:
   Add ~alpha/~ia64 wrt #300526
 
   03 Feb 2010; Jonathan Callen <abcd@gentoo.org> texlive-luatex-2009.ebuild:
