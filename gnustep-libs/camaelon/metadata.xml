@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>gnustep</herd>
-<longdescription>
-Camaelon provides a theme engine for GNUstep.
-Use of Camaelon requires using a USE flag with gnustep-gui, that patches support in.
-</longdescription>
-</pkgmetadata>
