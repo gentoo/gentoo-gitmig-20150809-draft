@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/cfv-1.18.3.ebuild,v 1.3 2010/01/20 23:35:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/cfv-1.18.3.ebuild,v 1.4 2011/05/19 19:22:51 grobian Exp $
 
 DESCRIPTION="Utility to test and create .sfv, .csv, .crc and md5sum files"
 HOMEPAGE="http://cfv.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/cfv/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="bittorrent"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 
 DEPEND=""
 RDEPEND="dev-lang/python

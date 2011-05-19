@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cfv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.36 2010/01/20 23:35:48 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.37 2011/05/19 19:22:51 grobian Exp $
+
+  19 May 2011; Fabian Groffen <grobian@gentoo.org> cfv-1.18.3.ebuild:
+  Marked ~x64-macos, bug #367895
 
   20 Jan 2010; Sven Wegener <swegener@gentoo.org> cfv-1.18.3.ebuild,
   metadata.xml:
