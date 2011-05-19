@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20101006.ebuild,v 1.8 2011/03/29 04:06:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20101006.ebuild,v 1.9 2011/05/19 21:28:38 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 EAUTORECONF=yes
 EINTLTOOLIZE=yes
 inherit xfconf
@@ -17,18 +17,14 @@ KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="x11-libs/libX11
-	>=xfce-base/libxfcegui4-4.2"
+	>=xfce-base/libxfcegui4-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	XFCONF=(
-		--disable-dependency-tracking
-		$(xfconf_use_debug)
-		)
-
-	DOCS="AUTHORS README TODO"
+	XFCONF=( $(xfconf_use_debug) )
+	DOCS=( AUTHORS README TODO )
 }
 
 src_prepare() {
