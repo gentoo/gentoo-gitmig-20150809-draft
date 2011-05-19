@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.0_rc1.ebuild,v 1.2 2011/04/19 08:10:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.0.ebuild,v 1.1 2011/05/19 20:24:42 flameeyes Exp $
 
-EAPI=3
+EAPI=4
 
-inherit apache-module
+inherit apache-module autotools
 
 MY_P=modsecurity-apache_${PV/_rc/-rc}
 
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}
 	geoip? ( dev-libs/geoip )"
 PDEPEND="www-apache/modsecurity-crs"
 
-S="${WORKDIR}/${PV/_rc/-rc}"
+S="${WORKDIR}/${MY_P}"
 
 APACHE2_MOD_FILE="apache2/.libs/${PN}2.so"
 APACHE2_MOD_DEFINE="SECURITY"
@@ -38,6 +38,8 @@ need_apache2
 
 src_prepare() {
 	cp "${FILESDIR}"/modsecurity.conf "${T}"/79_modsecurity.conf || die
+
+	eautoreconf
 }
 
 src_configure() {
@@ -69,14 +71,11 @@ src_install() {
 	insinto "${APACHE_MODULES_CONFDIR}"
 	doins "${T}"/79_modsecurity.conf
 
-	# install documentation; don't install index.html as it references
-	# the PDF and split-pages versions of the same documentation.
 	dodoc CHANGES
-	dohtml "${S}"/doc/*.{css,gif,jpg} "${S}"/doc/modsecurity2*.html
 
-	keepdir /var/cache/modsecurity || die
-	fowners apache:apache /var/cache/modsecurity || die
-	fperms 0770 /var/cache/modsecurity || die
+	keepdir /var/cache/modsecurity
+	fowners apache:apache /var/cache/modsecurity
+	fperms 0770 /var/cache/modsecurity
 }
 
 pkg_postinst() {
