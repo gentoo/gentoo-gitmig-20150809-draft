@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.7.ebuild,v 1.1 2011/04/05 18:05:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.4.7.ebuild,v 1.2 2011/05/19 22:16:06 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 MY_P=${P/t/T}
 inherit xfconf
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/libX11
 	>=x11-libs/vte-0.22.5:0
-	>=xfce-base/exo-0.3.4
+	>=xfce-base/exo-0.6
 	dbus? ( >=dev-libs/dbus-glib-0.88 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
@@ -30,11 +30,10 @@ S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		$(use_enable dbus)
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS"
+	DOCS=( AUTHORS ChangeLog HACKING NEWS README THANKS )
 }
