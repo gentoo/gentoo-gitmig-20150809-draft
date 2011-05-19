@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/garcon-0.1.7.ebuild,v 1.6 2011/05/07 17:44:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/garcon-0.1.7.ebuild,v 1.7 2011/05/19 22:12:28 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -28,5 +28,5 @@ pkg_setup() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 
-	DOCS="AUTHORS ChangeLog HACKING NEWS README STATUS TODO"
+	DOCS=( AUTHORS ChangeLog HACKING NEWS README STATUS TODO )
 }
