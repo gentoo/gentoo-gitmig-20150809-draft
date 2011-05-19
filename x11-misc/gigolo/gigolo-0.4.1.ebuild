@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.4 2011/03/22 10:55:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.4.1.ebuild,v 1.5 2011/05/19 22:23:37 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 EAUTORECONF=yes
 EINTLTOOLIZE=yes
 inherit xfconf
@@ -17,12 +17,14 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.12:2
+RDEPEND=">=x11-libs/gtk+-2.12:2
 	>=dev-libs/glib-2.16:2"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/intltool
+	dev-util/pkgconfig"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
 
 src_install() {
