@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.8.1.ebuild,v 1.7 2011/04/23 17:25:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-2.8.1.ebuild,v 1.8 2011/05/19 21:53:36 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 MY_PN=gtk-xfce-engine
 inherit xfconf
 
@@ -24,10 +24,9 @@ S=${WORKDIR}/${MY_PN}-${PV}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		--disable-static
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS README"
+	DOCS=( AUTHORS ChangeLog NEWS README )
 }
