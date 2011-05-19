@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpufreq-plugin/xfce4-cpufreq-plugin-1.0.0.ebuild,v 1.4 2011/03/22 20:49:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpufreq-plugin/xfce4-cpufreq-plugin-1.0.0.ebuild,v 1.5 2011/05/19 21:29:58 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="A panel plugin for showing information about cpufreq settings"
@@ -15,18 +15,14 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.6:2
-	>=xfce-base/libxfce4util-4.3.90
-	>=xfce-base/libxfcegui4-4.3.90
-	>=xfce-base/xfce4-panel-4.3.90"
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/libxfcegui4-4.8
+	>=xfce-base/xfce4-panel-4.8"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF=(
-		--disable-dependency-tracking
-		)
-
-	DOCS="AUTHORS ChangeLog NEWS README"
+	DOCS=( AUTHORS ChangeLog NEWS README )
 }

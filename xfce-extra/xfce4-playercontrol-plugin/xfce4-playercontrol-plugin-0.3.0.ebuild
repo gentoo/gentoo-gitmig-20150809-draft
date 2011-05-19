@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-playercontrol-plugin/xfce4-playercontrol-plugin-0.3.0.ebuild,v 1.4 2011/03/02 19:12:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-playercontrol-plugin/xfce4-playercontrol-plugin-0.3.0.ebuild,v 1.5 2011/05/19 21:32:12 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Audacious and MPD panel plugins"
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="audacious mpd"
 
-RDEPEND=">=xfce-base/libxfcegui4-4.2
-	>=xfce-base/xfce4-panel-4.3.20
-	>=xfce-base/libxfce4util-4.3
+RDEPEND=">=xfce-base/libxfcegui4-4.8
+	>=xfce-base/xfce4-panel-4.8
+	>=xfce-base/libxfce4util-4.8
 	>=x11-libs/pango-1.8
 	>=x11-libs/gtk+-2.4:2
 	mpd? ( >=media-libs/libmpd-0.12 )
@@ -30,18 +30,17 @@ pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${P}-undeclared_XfceRc.patch )
 
 	XFCONF=(
-		--disable-dependency-tracking
 		--disable-static
 		--disable-xmms
 		$(use_enable audacious)
 		$(use_enable mpd)
 		)
 
-	DOCS="AUTHORS ChangeLog README README.developers"
+	DOCS=( AUTHORS ChangeLog README README.developers )
 }
 
 src_prepare() {
-	xfconf_src_prepare
 	echo panel-plugin/mpc.c >> po/POTFILES.skip
 	echo panel-plugin/popupmenu.c >> po/POTFILES.skip
+	xfconf_src_prepare
 }

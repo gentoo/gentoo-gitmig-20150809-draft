@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.3.0.ebuild,v 1.6 2011/04/23 17:48:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/thunar-archive-plugin-0.3.0.ebuild,v 1.7 2011/05/19 21:44:35 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Thunar's archive plug-in"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="debug"
 
-RDEPEND=">=xfce-base/libxfce4util-4.6
+RDEPEND=">=xfce-base/libxfce4util-4.8
 	>=xfce-base/exo-0.6
 	>=xfce-base/thunar-1.2"
 DEPEND="${RDEPEND}
@@ -23,10 +23,6 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF=(
-		--disable-dependency-tracking
-		$(xfconf_use_debug)
-		)
-
-	DOCS="AUTHORS ChangeLog NEWS README THANKS"
+	XFCONF=( $(xfconf_use_debug) )
+	DOCS=( AUTHORS ChangeLog NEWS README THANKS )
 }

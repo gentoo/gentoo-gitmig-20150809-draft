@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.21.ebuild,v 1.6 2011/04/26 17:48:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/tumbler-0.1.21.ebuild,v 1.7 2011/05/19 21:35:54 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="A thumbnail service for the filemanager of Xfce desktop environment"
@@ -31,7 +31,6 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		--disable-static
 		$(use_enable jpeg jpeg-thumbnailer)
 		$(use_enable ffmpeg ffmpeg-thumbnailer)
@@ -40,5 +39,5 @@ pkg_setup() {
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }

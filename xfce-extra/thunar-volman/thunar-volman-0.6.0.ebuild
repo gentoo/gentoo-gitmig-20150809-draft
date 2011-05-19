@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.6 2011/02/14 19:48:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.7 2011/05/19 21:41:59 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Daemon that enforces volume-related policies"
@@ -31,10 +31,9 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	XFCONF=(
-		--disable-dependency-tracking
 		$(use_enable libnotify notifications)
 		$(xfconf_use_debug)
 		)
 
-	DOCS="AUTHORS ChangeLog NEWS README THANKS"
+	DOCS=( AUTHORS ChangeLog NEWS README THANKS )
 }
