@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.8.0.ebuild,v 1.10 2011/04/27 20:32:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.8.0.ebuild,v 1.11 2011/05/19 20:04:30 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -24,14 +24,15 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=xfce-base/xfconf-4.8"
 RDEPEND="${COMMON_DEPEND}
 	alsa? ( media-plugins/gst-plugins-alsa:0.10 )
-	oss? ( media-plugins/gst-plugins-oss:0.10 )"
+	oss? ( media-plugins/gst-plugins-oss:0.10 )
+	!alsa? ( !oss? ( media-plugins/gst-plugins-meta:0.10 ) )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
 pkg_setup() {
 	XFCONF=( $(xfconf_use_debug) )
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
 
 src_prepare() {
