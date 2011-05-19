@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.65 2011/05/19 12:03:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.66 2011/05/19 12:05:13 scarabeus Exp $
 
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -10,37 +10,26 @@
 # The webapp eclass contains functions to handle web applications with
 # webapp-config. Part of the implementation of GLEP #11
 
-# @ECLASS-VARIABLE: WABAPP_MINIMAL
-# @DESCRIPTION:
-# Minimal version of webapp-config the package requires for sucessfull install.
-: ${WEBAPP_MINIMAL:=1.50.15}
-
 # @ECLASS-VARIABLE: WEBAPP_DEPEND
 # @DESCRIPTION:
 # An ebuild should use WEBAPP_DEPEND if a custom DEPEND needs to be built, most
 # notably in combination with WEBAPP_OPTIONAL.
-: ${WEBAPP_DEPEND:=">=app-admin/webapp-config-${WEBAPP_MINIMAL}"}
+WEBAPP_DEPEND=">=app-admin/webapp-config-1.50.15"
 
-# @ECLASS-VARIABLE: WEBAPP_AUTO_INSTALL
+# @ECLASS-VARIABLE: WEBAPP_NO_AUTO_INSTALL
 # @DESCRIPTION:
-# An ebuild sets this to `no' if an automatic installation and/or upgrade is
+# An ebuild sets this to `yes' if an automatic installation and/or upgrade is
 # not possible. The ebuild should overwrite pkg_postinst() and explain the
 # reason for this BEFORE calling webapp_pkg_postinst().
-: ${WEBAPP_AUTO_INSTALL:=yes}
-if [[ -n ${WEBAPP_NO_AUTO_INSTALL} ]]; then
-	WEBAPP_AUTO_INSTALL=no
-	ewarn "QA: using deprecated variable \"WEBAPP_NO_AUTO_INSTALL\"."
-	ewarn "QA: please migrate to WEBAPP_AUTO_INSTALL with inverse logic"
-	ewarn "QA: that defaults to yes."
-fi
 
 # @ECLASS-VARIABLE: WEBAPP_OPTIONAL
 # @DESCRIPTION:
 # An ebuild sets this to `yes' to make webapp support optional, in which case
 # you also need to take care of USE-flags and dependencies.
-if [[ ${WEBAPP_OPTIONAL} != yes ]]; then
-	[[ ${WEBAPP_AUTO_INSTALL} == yes ]] && IUSE="vhosts"
-	: ${SLOT:=${PVR}}
+
+if [[ "${WEBAPP_OPTIONAL}" != "yes" ]]; then
+	[[ "${WEBAPP_NO_AUTO_INSTALL}" == "yes" ]] || IUSE="vhosts"
+	SLOT="${PVR}"
 	DEPEND="${WEBAPP_DEPEND}"
 	RDEPEND="${DEPEND}"
 fi
@@ -67,18 +56,22 @@ WEBAPP_CLEANER="${ROOT}usr/sbin/webapp-cleaner"
 webapp_read_config() {
 	debug-print-function $FUNCNAME $*
 
-	ENVVAR=$(${WEBAPP_CONFIG} --query ${PN} ${PVR}) || die "Could not read settings from webapp-config!"
-	eval ${ENVVAR} || die
+	if has_version '>=app-admin/webapp-config-1.50'; then
+		ENVVAR=$(${WEBAPP_CONFIG} --query ${PN} ${PVR}) || die "Could not read settings from webapp-config!"
+		eval ${ENVVAR}
+	else
+		. ${ETC_CONFIG} || die "Unable to read ${ETC_CONFIG}"
+	fi
 }
 
 # Check whether a specified file exists in the given directory (`.' by default)
 webapp_checkfileexists() {
 	debug-print-function $FUNCNAME $*
 
-	local msg my_prefix=${2:+${2}/}
+	local my_prefix=${2:+${2}/}
 
 	if [[ ! -e "${my_prefix}${1}" ]]; then
-		msg="ebuild error: file '${1}' not found"
+		msg="ebuild fault: file '${1}' not found"
 		eerror "$msg"
 		eerror "Please report this as a bug at http://bugs.gentoo.org/"
 		die "$msg"
@@ -108,20 +101,19 @@ webapp_strip_cwd() {
 webapp_getinstalltype() {
 	debug-print-function $FUNCNAME $*
 
-	local my_output my_pn my_pvr
-
 	if ! has vhosts ${IUSE} || use vhosts; then
 		return
 	fi
 
+	local my_output
 	my_output="$(webapp_check_installedat)"
 
 	if [[ $? -eq 0 ]]; then
 		# something is already installed there
 		# make sure it isn't the same version
 
-		my_pn="$(echo ${my_output} | awk '{ print $1 }')"
-		my_pvr="$(echo ${my_output} | awk '{ print $2 }')"
+		local my_pn="$(echo ${my_output} | awk '{ print $1 }')"
+		local my_pvr="$(echo ${my_output} | awk '{ print $2 }')"
 
 		REMOVE_PKG="${my_pn}-${my_pvr}"
 
@@ -139,18 +131,6 @@ webapp_getinstalltype() {
 	else
 		elog "This is an installation"
 	fi
-}
-
-# helper for webapp_serverowned()
-_webapp_serverowned() {
-	debug-print-function $FUNCNAME $*
-
-	webapp_checkfileexists "${1}" "${D}"
-	local my_file="$(webapp_strip_appdir "${1}")"
-	my_file="$(webapp_strip_cwd "${my_file}")"
-
-	elog "(server owned) ${my_file}"
-	echo "${my_file}" >> "${D}/${WA_SOLIST}"
 }
 
 # ==============================================================================
@@ -191,8 +171,6 @@ need_httpd_fastcgi() {
 webapp_configfile() {
 	debug-print-function $FUNCNAME $*
 
-	[[ $# -lt 1 ]] && die "${FUNCNAME}: I require at least 1 argument. Please read eclass documentation."
-
 	local m
 	for m in "$@"; do
 		webapp_checkfileexists "${m}" "${D}"
@@ -200,75 +178,62 @@ webapp_configfile() {
 		local my_file="$(webapp_strip_appdir "${m}")"
 		my_file="$(webapp_strip_cwd "${my_file}")"
 
-		elog "[webapp-config] ${my_file}"
+		elog "(config) ${my_file}"
 		echo "${my_file}" >> ${D}/${WA_CONFIGLIST}
 	done
 }
 
 # @FUNCTION: webapp_hook_script
-# @USAGE: <file> [more files ...]
+# @USAGE: <file>
 # @DESCRIPTION:
 # Install a script that will run after a virtual copy is created, and
 # before a virtual copy has been removed.
 webapp_hook_script() {
 	debug-print-function $FUNCNAME $*
 
-	[[ $# -lt 1 ]] && die "${FUNCNAME}: I require at least 1 argument. Please read eclass documentation."
+	webapp_checkfileexists "${1}"
 
-	local m
-	for m in "$@"; do
-		webapp_checkfileexists "${m}"
-
-		elog "[webapp-hook] ${m}"
-		cp "${1}" "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")" || die "Unable to install ${1} into \"${D}/${MY_HOOKSCRIPTSDIR}/\""
-		chmod 555 "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")"
-	done
+	elog "(hook) ${1}"
+	cp "${1}" "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")" || die "Unable to install ${1} into ${D}/${MY_HOOKSCRIPTSDIR}/"
+	chmod 555 "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")"
 }
 
 # @FUNCTION: webapp_postinst_txt
-# @USAGE: <lang> <file> [more files ...]
+# @USAGE: <lang> <file>
 # @DESCRIPTION:
 # Install a text file containing post-installation instructions.
 webapp_postinst_txt() {
 	debug-print-function $FUNCNAME $*
 
-	local lang m
+	webapp_checkfileexists "${2}"
 
-	[[ $# -lt 2 ]] && die "${FUNCNAME}: I require at least 2 arguments. Please read eclass documentation."
-
-	lang=${1}
-	shift
-
-	local m
-	for m in "$@"; do
-		webapp_checkfileexists "${m}"
-
-		elog "[webapp-info] \"${m}\" (lang: ${lang})"
-		cp "${m}" "${D}/${MY_APPDIR}/${m}-postinst-${lang}.txt" || die
-	done
+	elog "(info) ${2} (lang: ${1})"
+	cp "${2}" "${D}/${MY_APPDIR}/postinst-${1}.txt"
 }
 
 # @FUNCTION: webapp_postupgrade_txt
-# @USAGE: <lang> <file> [more files ...]
+# @USAGE: <lang> <file>
 # @DESCRIPTION:
 # Install a text file containing post-upgrade instructions.
 webapp_postupgrade_txt() {
 	debug-print-function $FUNCNAME $*
 
-	local lang m
+	webapp_checkfileexists "${2}"
 
-	[[ $# -lt 2 ]] && die "${FUNCNAME}: I require at least 2 arguments. Please read eclass documentation."
+	elog "(info) ${2} (lang: ${1})"
+	cp "${2}" "${D}/${MY_APPDIR}/postupgrade-${1}.txt"
+}
 
-	lang=${1}
-	shift
+# helper for webapp_serverowned()
+_webapp_serverowned() {
+	debug-print-function $FUNCNAME $*
 
-	local m
-	for m in "$@"; do
-		webapp_checkfileexists "${m}"
+	webapp_checkfileexists "${1}" "${D}"
+	local my_file="$(webapp_strip_appdir "${1}")"
+	my_file="$(webapp_strip_cwd "${my_file}")"
 
-		elog "[webapp-info] \"${m}\" (lang: ${lang})"
-		cp "${m}" "${D}/${MY_APPDIR}/${m}-postupgrade-${lang}.txt" || die
-	done
+	elog "(server owned) ${my_file}"
+	echo "${my_file}" >> "${D}/${WA_SOLIST}"
 }
 
 # @FUNCTION: webapp_serverowned
@@ -306,8 +271,6 @@ webapp_serverowned() {
 webapp_server_configfile() {
 	debug-print-function $FUNCNAME $*
 
-	[[ $# -lt 2 ]] && die "${FUNCNAME}: I require at least 2 arguments. Please read eclass documentation."
-
 	webapp_checkfileexists "${2}"
 
 	# WARNING:
@@ -317,7 +280,7 @@ webapp_server_configfile() {
 
 	local my_file="${1}-${3:-$(basename "${2}")}"
 
-	elog "[webapp] Server \"${1}\" config file \"${my_file}\""
+	elog "(${1}) config file '${my_file}'"
 	cp "${2}" "${D}/${MY_SERVERCONFIGDIR}/${my_file}"
 }
 
@@ -331,23 +294,23 @@ webapp_server_configfile() {
 webapp_sqlscript() {
 	debug-print-function $FUNCNAME $*
 
-	[[ $# -lt 2 ]] && die "${FUNCNAME}: I require at least 2 arguments. Please read eclass documentation."
-
 	webapp_checkfileexists "${2}"
+
+	dodir "${MY_SQLSCRIPTSDIR}/${1}"
 
 	# WARNING:
 	#
 	# do NOT change the naming convention used here without changing all
 	# the other scripts that also rely upon these names
 
-	insinto "${MY_SQLSCRIPTSDIR}/${1}"
-	insopts -m0600
-	if [[ -n ${3} ]]; then
-		elog "[webapp] DB: \"${1}\" upgrade script for ${PN}-${3} to ${PVR}"
-		newins "${2}" "${3}_to_${PVR}.sql" || die
+	if [[ -n "${3}" ]]; then
+		elog "(${1}) upgrade script for ${PN}-${3} to ${PVR}"
+		cp "${2}" "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
+		chmod 600 "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
 	else
-		elog "[webapp] DB: \"${1}\" create script for ${PN}-${PVR}"
-		newins "${2}" "${PVR}_create.sql"
+		elog "(${1}) create script for ${PN}-${PVR}"
+		cp "${2}" "${D}/${MY_SQLSCRIPTSDIR}/${1}/${PVR}_create.sql"
+		chmod 600 "${D}/${MY_SQLSCRIPTSDIR}/${1}/${PVR}_create.sql"
 	fi
 }
 
@@ -359,7 +322,7 @@ webapp_src_preinst() {
 	debug-print-function $FUNCNAME $*
 
 	# sanity checks, to catch bugs in the ebuild
-	if [[ ! -f ${T}/${SETUP_CHECK_FILE} ]]; then
+	if [[ ! -f "${T}/${SETUP_CHECK_FILE}" ]]; then
 		eerror
 		eerror "This ebuild did not call webapp_pkg_setup() at the beginning"
 		eerror "of the pkg_setup() function"
@@ -408,8 +371,9 @@ webapp_pkg_setup() {
 	touch "${T}/${SETUP_CHECK_FILE}"
 
 	# special case - some ebuilds *do* need to overwride the SLOT
-	[[ ${SLOT} != ${PVR} && ${WEBAPP_MANUAL_SLOT} != yes ]] && \
+	if [[ "${SLOT}+" != "${PVR}+" && "${WEBAPP_MANUAL_SLOT}" != "yes" ]]; then
 		die "Set WEBAPP_MANUAL_SLOT=\"yes\" if you need to SLOT manually"
+	fi
 
 	# pull in the shared configuration file
 	G_HOSTNAME="localhost"
@@ -427,14 +391,17 @@ webapp_pkg_setup() {
 
 	if [[ $? -ne 0 ]]; then
 		# okay, whatever is there, it isn't webapp-config-compatible
+		echo
 		ewarn
 		ewarn "You already have something installed in ${my_dir}"
 		ewarn
-		ewarn "Whatever is in \"${my_dir}\", it's not"
+		ewarn "Whatever is in ${my_dir}, it's not"
 		ewarn "compatible with webapp-config."
 		ewarn
 		ewarn "This ebuild may be overwriting important files."
 		ewarn
+		echo
+		ebeep 10
 	elif [[ "$(echo ${my_output} | awk '{ print $1 }')" != "${PN}" ]]; then
 		echo
 		eerror "You already have ${my_output} installed in ${my_dir}"
@@ -444,6 +411,7 @@ webapp_pkg_setup() {
 		echo
 		die "Cannot upgrade contents of ${my_dir}"
 	fi
+
 }
 
 # @FUNCTION: webapp_src_install
@@ -511,22 +479,23 @@ webapp_pkg_postinst() {
 			local my_mode=-I
 			webapp_getinstalltype
 
-			if [[ ${IS_REPLACE} == 1 ]]; then
-				elog "[webapp] ${PN}-${PVR} is already installed - replacing"
-			elif [[ ${IS_UPGRADE} == 1 ]]; then
-				elog "[webapp] ${REMOVE_PKG} is already installed - upgrading"
+			if [[ "${IS_REPLACE}" == "1" ]]; then
+				elog "${PN}-${PVR} is already installed - replacing"
+				my_mode=-I
+			elif [[ "${IS_UPGRADE}" == "1" ]]; then
+				elog "${REMOVE_PKG} is already installed - upgrading"
 				my_mode=-U
 			else
-				elog "[webapp] ${PN}-${PVR} is not installed - using install mode"
+				elog "${PN}-${PVR} is not installed - using install mode"
 			fi
 
 			my_cmd="${WEBAPP_CONFIG} ${my_mode} -h localhost -u root -d ${INSTALL_DIR} ${PN} ${PVR}"
-			elog "[webapp] Running ${my_cmd}"
+			elog "Running ${my_cmd}"
 			${my_cmd}
 
 			echo
 			local cleaner="${WEBAPP_CLEANER} -p -C ${PN}"
-			einfo "[webapp] Running ${cleaner}"
+			einfo "Running ${cleaner}"
 			${cleaner}
 		else
 			elog
@@ -575,10 +544,10 @@ webapp_pkg_prerm() {
 					${WEBAPP_CONFIG} -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR}
 				fi
 			else
-				ewarn "[webapp] Cannot find file ${x}/.webapp"
+				ewarn "Cannot find file ${x}/.webapp"
 			fi
 		done
-	elif [[ -n ${my_output} ]]; then
+	elif [[ "${my_output}" != "" ]]; then
 		echo
 		ewarn
 		ewarn "Don't forget to use webapp-config to remove any copies of"
@@ -587,9 +556,9 @@ webapp_pkg_prerm() {
 
 		echo "${my_output}" | while read x; do
 			if [[ -f "${x}"/.webapp ]]; then
-				ewarn "[webapp]    ${x}"
+				ewarn "    ${x}"
 			else
-				ewarn "[webapp] Cannot find file ${x}/.webapp"
+				ewarn "Cannot find file ${x}/.webapp"
 			fi
 		done
 
