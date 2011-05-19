@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.33 2011/05/01 11:46:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.34 2011/05/19 22:39:07 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -103,18 +103,12 @@ xfconf_src_configure() {
 
 # @FUNCTION: xfconf_src_install
 # @DESCRIPTION:
-# Run emake install and install documentation in the DOCS variable
+# Run emake install and install documentation in the DOCS array
 xfconf_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 	emake DESTDIR="${D}" "$@" install || die
 
-	if [[ -n ${DOCS[@]} ]]; then
-		if [[ $(declare -p DOCS) == "declare -a "* ]]; then
-			dodoc "${DOCS[@]}" || die
-		else
-			dodoc ${DOCS} || die
-		fi
-	fi
+	[[ -n ${DOCS[@]} ]] && dodoc "${DOCS[@]}"
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
 
