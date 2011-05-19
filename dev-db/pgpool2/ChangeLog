@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgpool2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.6 2011/04/17 14:00:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/ChangeLog,v 1.7 2011/05/19 15:34:36 scarabeus Exp $
+
+  19 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -pgpool2-3.0.3.ebuild:
+  remove old
 
 *pgpool2-3.0.3-r1 (17 Apr 2011)
 
