@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.1.ebuild,v 1.4 2009/11/08 19:20:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.2-r2.ebuild,v 1.1 2011/05/19 10:29:33 pva Exp $
+
+EAPI="4"
 
 inherit versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -11,20 +13,24 @@ DESCRIPTION="Utility that enables basic Ethernet frame filtering on a Linux brid
 HOMEPAGE="http://ebtables.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-KEYWORDS="amd64 ppc x86"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="static"
 LICENSE="GPL-2"
 SLOT="0"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	if use static; then
+		ewarn "You've chosen static build which is useful for embedded devices."
+		ewarn "It has no init script. Make sure that's really what you want."
+	fi
+}
 
-	# Enchance ebtables-save to take table names as parameters bug #189315
+src_prepare() {
+	# Enhance ebtables-save to take table names as parameters bug #189315
 	epatch "${FILESDIR}/${PN}-2.0.8.1-ebt-save.diff"
-	epatch "${FILESDIR}/${PN}-v2.0.9-1-LDFLAGS.diff"
+	epatch "${FILESDIR}/${PN}-v2.0.9-2-LDFLAGS.diff"
 	epatch "${FILESDIR}/${PN}-v2.0.8-2-ethertype-DESTDIR-mkdir.patch"
 
 	sed -i -e "s,^MANDIR:=.*,MANDIR:=/usr/share/man," \
@@ -32,21 +38,29 @@ src_unpack() {
 		-e "s,^INITDIR:=.*,INITDIR:=/usr/share/doc/${PF}," \
 		-e "s,^SYSCONFIGDIR:=.*,SYSCONFIGDIR:=/usr/share/doc/${PF}," \
 		-e "s,^LIBDIR:=.*,LIBDIR:=/$(get_libdir)/\$(PROGNAME)," Makefile
-	sed -i -e "s/^CFLAGS:=/CFLAGS+=/" Makefile
-	sed -i -e "s,^CC:=.*,CC:=$(tc-getCC)," Makefile
 }
 
 src_compile() {
 	# This package uses _init functions to initialise extensions. With
 	# --as-needed this will not work.
 	append-ldflags $(no-as-needed)
-	emake || die "emake failed"
+	emake \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		$(use static && echo static)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	if ! use static; then
+		make DESTDIR="${D}" install
+		keepdir /var/lib/ebtables/
+		newinitd "${FILESDIR}"/ebtables.initd-r1 ebtables
+		newconfd "${FILESDIR}"/ebtables.confd-r1 ebtables
+	else
+		into /
+		newsbin static ebtables
+		insinto /etc
+		doins ethertypes
+	fi
 	dodoc ChangeLog THANKS || die
-	keepdir /var/lib/ebtables/
-	newinitd "${FILESDIR}"/ebtables.initd ebtables || die
-	newconfd "${FILESDIR}"/ebtables.confd ebtables || die
 }
