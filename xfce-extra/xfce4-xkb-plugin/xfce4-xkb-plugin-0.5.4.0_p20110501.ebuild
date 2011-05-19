@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.0_p20110501.ebuild,v 1.1 2011/05/01 11:25:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.0_p20110501.ebuild,v 1.2 2011/05/19 21:50:41 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -8,7 +8,7 @@ inherit xfconf
 
 DESCRIPTION="XKB layout switching panel plug-in for the Xfce desktop environment"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-xkb-plugin"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 #SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.5/${P}.tar.bz2"
 
 LICENSE="BSD-2 GPL-2"
