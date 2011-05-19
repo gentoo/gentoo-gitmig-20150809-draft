@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.93.ebuild,v 1.6 2011/04/23 17:26:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.0.93.ebuild,v 1.7 2011/05/19 22:19:17 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 EAUTORECONF=yes
 inherit xfconf
 
@@ -18,10 +18,10 @@ IUSE="debug"
 RDEPEND="media-libs/libexif
 	>=x11-libs/gtk+-2.14:2
 	>=dev-libs/glib-2.18:2
-	>=dev-libs/dbus-glib-0.34
-	>=xfce-base/libxfce4util-4.7
-	>=xfce-base/libxfce4ui-4.7
-	>=xfce-base/xfconf-4.7
+	>=dev-libs/dbus-glib-0.88
+	>=xfce-base/libxfce4util-4.8
+	>=xfce-base/libxfce4ui-4.8
+	>=xfce-base/xfconf-4.8
 	>=x11-libs/cairo-1.8"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -29,18 +29,13 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	XFCONF=(
-		--disable-dependency-tracking
-		$(xfconf_use_debug)
-		)
-
-	DOCS="AUTHORS ChangeLog NEWS README TODO"
+	XFCONF=( $(xfconf_use_debug) )
+	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
 
 src_prepare() {
 	sed -i \
 		-e "/TARGET_DIR/s:(datadir)/doc/ristretto:(datadir)/doc/${PF}:" \
 		docs/manual/C/Makefile.am || die
-
 	xfconf_src_prepare
 }
