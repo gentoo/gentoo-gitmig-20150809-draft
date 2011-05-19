@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/steamcompanion
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/steamcompanion/ChangeLog,v 1.1 2011/05/19 12:28:12 scarabeus Exp $
+
+*steamcompanion-0.2.2 (19 May 2011)
+
+  19 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +steamcompanion-0.2.2.ebuild, +metadata.xml:
+  Initial commit for handy plasmoid.
+
