@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/xfce4-dev-tools-4.8.0.ebuild,v 1.6 2011/02/14 18:59:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/xfce4-dev-tools-4.8.0.ebuild,v 1.7 2011/05/19 22:30:31 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit xfconf
 
 DESCRIPTION="Xfce's build scripts and aclocal macros"
@@ -15,5 +15,5 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~
 IUSE=""
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+	DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 }
