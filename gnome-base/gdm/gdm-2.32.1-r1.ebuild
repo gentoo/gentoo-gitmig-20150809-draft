@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.32.1-r1.ebuild,v 1.1 2011/05/03 06:46:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.32.1-r1.ebuild,v 1.2 2011/05/19 16:26:52 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -31,7 +31,8 @@ RDEPEND="
 	>=x11-libs/pango-1.3
 	>=media-libs/libcanberra-0.4[gtk]
 	>=gnome-base/gconf-2.31.3
-	>=gnome-base/gnome-panel-2
+	>=gnome-base/gnome-panel-2[bonobo]
+	<gnome-base/gnome-panel-2.91
 	>=gnome-base/gnome-session-2.28
 	>=x11-misc/xdg-utils-1.0.2-r3
 	>=sys-power/upower-0.9
