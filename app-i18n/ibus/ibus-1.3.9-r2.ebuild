@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r2.ebuild,v 1.1 2011/05/09 23:51:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r2.ebuild,v 1.2 2011/05/20 17:30:36 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
-inherit confutils eutils gnome2-utils multilib python
+inherit confutils eutils gnome2-utils multilib python autotools
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -80,6 +80,8 @@ src_prepare() {
 	ln -s "$(type -P true)" py-compile || die
 	echo "ibus/_config.py" >> po/POTFILES.skip || die
 	sed -i -e "s/python/python2/" setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in || die
+	epatch "${FILESDIR}"/${P}-remove-unused-build.patch #367653
+	eautoreconf
 }
 
 src_configure() {
