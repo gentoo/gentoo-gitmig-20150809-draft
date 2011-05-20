@@ -6,4 +6,8 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
+  <maintainer>
+  	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
+  </maintainer>
 </pkgmetadata>
