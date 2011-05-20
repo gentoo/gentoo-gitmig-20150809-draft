@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.5 2011/05/20 16:02:31 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.6 2011/05/20 16:11:29 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools eutils libtool flag-o-matic versionator git-2
 
@@ -111,12 +111,11 @@ src_configure() {
 		--localstatedir="${EPREFIX}"/var \
 		--disable-per-user-esound-socket \
 		--with-database=gdbm \
-		--with-udev-rules-dir="${EPREFIX}/$(get_libdir)/udev/rules.d" \
-		|| die "econf failed"
+		--with-udev-rules-dir="${EPREFIX}/$(get_libdir)/udev/rules.d"
 
 	if use doc; then
 		pushd doxygen
-		doxygen doxygen.conf || die
+		doxygen doxygen.conf
 		popd
 	fi
 }
@@ -125,11 +124,11 @@ src_test() {
 	# We avoid running the toplevel check target because that will run
 	# po/'s tests too, and they are broken. Officially, it should work
 	# with intltool 0.41, but that doesn't look like a stable release.
-	emake -C src check || die
+	emake -C src check
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "make install failed"
+	emake -j1 DESTDIR="${D}" install
 
 	# Drop the script entirely if X is disabled
 	use X || rm "${ED}"/usr/bin/start-pulseaudio-x11
@@ -155,11 +154,11 @@ src_install() {
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${ED}/etc/pulse/default.pa"
 
-	dodoc README ChangeLog todo || die
+	dodoc README ChangeLog todo
 
 	if use doc; then
 		pushd doxygen/html
-		dohtml * || die
+		dohtml *
 		popd
 	fi
 

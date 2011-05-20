@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.226 2011/05/20 16:02:31 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.227 2011/05/20 16:11:29 scarabeus Exp $
+
+  20 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> pulseaudio-9999.ebuild:
+  Update to eapi4 as acked by Arun.
 
   20 May 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
   Upstream git repo changed
