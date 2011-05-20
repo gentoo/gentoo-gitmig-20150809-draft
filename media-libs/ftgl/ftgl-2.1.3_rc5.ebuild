@@ -1,6 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.14 2010/10/10 15:47:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.15 2011/05/20 09:24:18 tupone Exp $
+EAPI=2
 
 inherit eutils flag-o-matic autotools
 
@@ -25,17 +26,16 @@ DEPEND=">=media-libs/freetype-2.0.9
 
 S=${WORKDIR}/${MY_P2}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-	AT_M4DIR=m4 eautoreconf
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-underlink.patch
+#	AT_M4DIR=m4 eautoreconf
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	strip-flags # ftgl is sensitive - bug #112820
 	econf
-	emake || die "emake failed"
 }
 
 src_install() {
