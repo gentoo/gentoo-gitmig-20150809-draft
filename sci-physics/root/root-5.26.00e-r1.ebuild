@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.4 2011/03/02 21:12:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.5 2011/05/20 01:14:42 jer Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 hppa ~x86"
 IUSE="afs clarens doc emacs examples fftw geant4 graphviz kerberos ldap
 	+math mysql	odbc +opengl openmp oracle postgres pythia6 pythia8 python
 	+reflex	ruby qt4 ssl xft xml xinetd xrootd"
