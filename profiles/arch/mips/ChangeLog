@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.55 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.56 2011/05/20 19:17:04 xarthisius Exp $
+
+  20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Mask net-nds/ypbind[debug] as dev-libs/dmalloc is not keyworded
 
   09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   use.mask:
