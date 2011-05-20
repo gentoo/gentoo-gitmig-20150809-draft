@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Math-BigInt-FastCalc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.26 2011/04/24 15:26:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.27 2011/05/20 14:35:56 tove Exp $
+
+*perl-Math-BigInt-FastCalc-0.280.0-r1 (20 May 2011)
+
+  20 May 2011; Torsten Veller <tove@gentoo.org>
+  -perl-Math-BigInt-FastCalc-0.280.0.ebuild,
+  +perl-Math-BigInt-FastCalc-0.280.0-r1.ebuild:
+  Add perl-5.14.0 as provider
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> ChangeLog:
   Marked ~x86-solaris, bug #296509
