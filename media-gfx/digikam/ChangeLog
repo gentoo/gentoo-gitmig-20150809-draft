@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.185 2011/05/14 20:20:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.186 2011/05/20 22:29:03 dilfridge Exp $
+
+  20 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  digikam-1.9.0-r1.ebuild, +files/digikam-1.9.0-turbo.patch:
+  Backport build fix for libjpeg-turbo
 
   14 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -digikam-1.2.0-r4.ebuild, -files/digikam-1.2.0-docs-r3.patch,
