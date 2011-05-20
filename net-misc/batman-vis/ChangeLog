@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/batman-vis
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-vis/ChangeLog,v 1.1 2011/05/20 23:37:58 xmw Exp $
+
+*batman-vis-0.3.2 (20 May 2011)
+
+  20 May 2011; Michael Weber <xmw@gentoo.org> +batman-vis-0.3.2.ebuild,
+  +files/batman-vis-conf.d, +files/batman-vis-init.d, +metadata.xml:
+  Initial import, thanks to Emil Langrock for the report (bug 368213) and s3d
+  for the initial ebuild.
+
