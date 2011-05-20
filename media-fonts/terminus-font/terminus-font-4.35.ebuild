@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.34.ebuild,v 1.1 2011/05/06 15:38:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.35.ebuild,v 1.1 2011/05/20 06:00:56 jlec Exp $
 
 EAPI=3
 
