@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/phc-intel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.5 2011/03/16 23:19:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.6 2011/05/20 13:13:40 xmw Exp $
+
+  20 May 2011; Michael Weber <xmw@gentoo.org> phc-intel-0.3.2.12.1-r2.ebuild,
+  +files/phc-intel-0.3.2.12.1-2.6.39.patch:
+  New patch set for kernel 2.6.39
 
   16 Mar 2011; Michael Weber <xmw@gentoo.org> phc-intel-0.3.2.12.1-r2.ebuild,
   +files/phc-intel-0.3.2.12.1-2.6.38.patch:
