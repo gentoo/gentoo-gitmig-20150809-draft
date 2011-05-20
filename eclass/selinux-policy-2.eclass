@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.5 2011/02/05 11:28:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.6 2011/05/20 19:06:07 blueness Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -85,7 +85,7 @@ selinux-policy-2_pkg_postinst() {
 		einfo "Inserting the following modules into the $i module store: ${MODS}"
 
 		cd /usr/share/selinux/${i}
-		semodule -s ${i} ${COMMAND}
+		semodule -s ${i} ${COMMAND} || die "Failed to load in modules ${MODS} in the $i policy store"
 	done
 }
 
