@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.6 2011/05/19 12:03:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.7 2011/05/20 14:35:01 scarabeus Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -506,7 +506,7 @@ git-2_migrate_repository() {
 
 # @FUNCTION: git-2_src_unpack
 # @DESCRIPTION:
-# Default git src_upack function.
+# Default git src_unpack function.
 git-2_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
 
