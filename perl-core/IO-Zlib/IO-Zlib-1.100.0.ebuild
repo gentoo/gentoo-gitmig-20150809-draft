@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/IO-Zlib-1.10.ebuild,v 1.12 2010/10/22 18:12:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/IO-Zlib-1.100.0.ebuild,v 1.1 2011/05/20 15:14:00 tove Exp $
 
 EAPI=2
 
 MODULE_AUTHOR=TOMHUGHES
+MODULE_VERSION=1.10
 inherit perl-module
 
 DESCRIPTION="IO:: style interface to Compress::Zlib"
