@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.242 2011/05/20 14:58:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.243 2011/05/20 19:02:03 xarthisius Exp $
+
+  20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> nmap-5.51.ebuild:
+  ppc/ppc64 stable wrt #359853
 
   20 May 2011; Thomas Kahle <tomka@gentoo.org> nmap-5.51.ebuild:
   x86 stable per bug 359853
