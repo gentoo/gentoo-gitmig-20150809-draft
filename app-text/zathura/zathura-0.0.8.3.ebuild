@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.0.8.3.ebuild,v 1.1 2011/05/02 18:31:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.0.8.3.ebuild,v 1.2 2011/05/20 15:42:14 ssuominen Exp $
 
 EAPI=4
 inherit savedconfig toolchain-funcs
 
 DESCRIPTION="A highly customizable and functional PDF viewer based on poppler and GTK+"
 HOMEPAGE="http://zathura.pwmt.org/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 #SRC_URI="http://zathura.pwmt.org/attachments/download/31/${P}.tar.gz"
 
 LICENSE="ZLIB"
