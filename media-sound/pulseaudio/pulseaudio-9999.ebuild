@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.4 2011/05/16 12:14:49 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.5 2011/05/20 16:02:31 ford_prefect Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ inherit autotools eutils libtool flag-o-matic versionator git-2
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
 
-EGIT_REPO_URI="git://0pointer.de/pulseaudio.git"
+EGIT_REPO_URI="git://anongit.freedesktop.org/pulseaudio/pulseaudio.git"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
