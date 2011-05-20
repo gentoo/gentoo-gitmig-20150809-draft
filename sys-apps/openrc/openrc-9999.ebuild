@@ -1,22 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.82 2011/04/17 21:02:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.83 2011/05/20 16:29:33 scarabeus Exp $
 
-EAPI="1"
+EAPI=4
 
-inherit eutils flag-o-matic multilib toolchain-funcs
-
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/openrc.git"
-	inherit git
-	KEYWORDS=""
-else
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-fi
+EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git"
+[[ ${PV} == "9999" ]] && SCM_ECLASS="git-2"
+inherit eutils flag-o-matic multilib toolchain-funcs ${SCM_ECLASS}
+unset SCM_ECLASS
 
 DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
+if [[ ${PV} != "9999" ]] ; then
+	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+fi
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -60,15 +58,14 @@ pkg_setup() {
 	export MKTERMCAP=$(usev ncurses)
 }
 
-src_unpack() {
+src_prepare() {
+	sed -i 's:0444:0644:' mk/sys.mk || die
+	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile || die #241342
+
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
-	else
-		unpack ${A}
+		local ver="git-${EGIT_VERSION:0:6}"
+		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
 	fi
-	cd "${S}"
-	sed -i 's:0444:0644:' mk/sys.mk
-	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile #241342
 
 	# Allow user patches to be applied without modifying the ebuild
 	epatch_user
@@ -77,13 +74,8 @@ src_unpack() {
 src_compile() {
 	make_args
 
-	if [[ ${PV} == "9999" ]] ; then
-		local ver="git-$(echo ${EGIT_VERSION} | cut -c1-8)"
-		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk
-	fi
-
 	tc-export CC AR RANLIB
-	emake ${MAKE_ARGS} || die "emake ${MAKE_ARGS} failed"
+	emake ${MAKE_ARGS}
 }
 
 # set_config <file> <option name> <yes value> <no value> test
@@ -94,13 +86,14 @@ set_config() {
 	[[ ${val} == "#" ]] && com="#" && val='\2'
 	sed -i -r -e "/^#?${var}=/{s:=([\"'])?([^ ]*)\1?:=\1${val}\1:;s:^#?:${com}:}" "${file}"
 }
+
 set_config_yes_no() {
 	set_config "$1" "$2" YES NO "${@:3}"
 }
 
 src_install() {
 	make_args
-	emake ${MAKE_ARGS} DESTDIR="${D}" install || die
+	emake ${MAKE_ARGS} DESTDIR="${D}" install
 
 	# install the readme for the new network scripts
 	dodoc README.newnet
