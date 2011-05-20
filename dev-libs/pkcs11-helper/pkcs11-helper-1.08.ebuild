@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.08.ebuild,v 1.8 2011/04/16 18:14:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.08.ebuild,v 1.9 2011/05/20 20:45:10 xarthisius Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc gnutls nss static-libs"
 
 RDEPEND=">=dev-libs/openssl-0.9.7
