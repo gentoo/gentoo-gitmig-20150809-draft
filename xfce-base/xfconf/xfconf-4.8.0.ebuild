@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.8.0.ebuild,v 1.7 2011/05/19 22:09:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.8.0.ebuild,v 1.8 2011/05/20 17:47:26 grobian Exp $
 
 EAPI=4
 inherit xfconf
@@ -36,6 +36,7 @@ pkg_setup() {
 		--with-perl-options=INSTALLDIRS=vendor
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
+	[[ ${CHOST} == *-darwin* ]] && XFCONF+=( --disable-visibility ) # 366857
 
 	DOCS=( AUTHORS ChangeLog NEWS TODO )
 }

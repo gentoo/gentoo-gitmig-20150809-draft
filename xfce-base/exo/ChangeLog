@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.55 2011/05/12 09:37:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.56 2011/05/20 17:55:18 grobian Exp $
+
+  20 May 2011; Fabian Groffen <grobian@gentoo.org> exo-0.6.1.ebuild:
+  Add --disable-visibility on Darwin, bug #366857
 
   12 May 2011; Christoph Mende <angelos@gentoo.org> exo-0.6.1.ebuild:
   Readd --disable-dependency-tracking
