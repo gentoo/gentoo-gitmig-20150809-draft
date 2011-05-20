@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Module-Metadata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.7 2011/05/02 19:44:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.8 2011/05/20 14:05:42 tove Exp $
+
+*perl-Module-Metadata-1.0.4-r1 (20 May 2011)
+
+  20 May 2011; Torsten Veller <tove@gentoo.org>
+  -perl-Module-Metadata-1.0.4.ebuild, +perl-Module-Metadata-1.0.4-r1.ebuild:
+  Add perl-5.14.0 as provider
 
   02 May 2011; Fabian Groffen <grobian@gentoo.org>
   perl-Module-Metadata-1.0.4.ebuild:
