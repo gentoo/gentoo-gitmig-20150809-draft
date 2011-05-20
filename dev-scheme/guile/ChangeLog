@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.85 2011/04/29 14:17:17 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.86 2011/05/20 07:52:39 tomka Exp $
+
+  20 May 2011; Thomas Kahle <tomka@gentoo.org> guile-1.8.8-r1.ebuild:
+  x86 stable per bug 335657
 
 *guile-1.8.8-r1 (29 Apr 2011)
 
