@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.56 2011/05/05 15:11:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.57 2011/05/20 20:20:01 xarthisius Exp $
+
+  20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> gegl-0.1.6.ebuild:
+  ppc/ppc64 stable wrt #360595
 
   05 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> gegl-0.1.6.ebuild:
   Drop useless dodoc line.
