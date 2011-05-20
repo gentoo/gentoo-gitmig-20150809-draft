@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.9.ebuild,v 1.4 2011/04/29 12:22:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.9.ebuild,v 1.5 2011/05/20 17:31:49 grobian Exp $
 
 EAPI="3"
 
@@ -11,11 +11,9 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="3"
-# NOTE: *-macos support is BROKEN. See `quartz-backend` etc in configure
 # NOTE: This gtk+ has multi-gdk-backend support, see:
 #  * http://blogs.gnome.org/kris/2010/12/29/gdk-3-0-on-mac-os-x/
 #  * http://mail.gnome.org/archives/gtk-devel-list/2010-November/msg00099.html
-# NOTE: Lots of aqua stuff in this ebuild is probably very broken
 IUSE="aqua cups debug doc examples +introspection test vim-syntax xinerama"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
