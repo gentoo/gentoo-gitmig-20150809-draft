@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.630 2011/05/19 15:51:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.631 2011/05/20 14:36:24 jer Exp $
+
+  20 May 2011; Jeroen Roovers <jer@gentoo.org> opera-11.11.2109.ebuild:
+  Fix linguas list. Die when we try to remove unknown linguas.
 
   19 May 2011; Jeroen Roovers <jer@gentoo.org> -opera-11.01.1190.ebuild,
   -opera-11.10.2092-r1.ebuild:

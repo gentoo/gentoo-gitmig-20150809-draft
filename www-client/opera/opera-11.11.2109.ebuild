@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.11.2109.ebuild,v 1.3 2011/05/19 12:31:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.11.2109.ebuild,v 1.4 2011/05/20 14:36:24 jer Exp $
 
 EAPI="3"
 
@@ -35,11 +35,9 @@ QA_DT_HASH="${OPREFIX}/${PN}/.*"
 QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
 
 O_LINGUAS="
-	af az be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy gd hi hr hu id
-	it ja ka ko lt me mk ms nb nl nn pl pt pt-BR ro ru sk sr sv ta te th tl tr
-	uk uz vi zh-CN zh-TW
+	be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy gd hi hr hu id it ja
+	ka ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk vi zh-CN zh-TW
 "
-
 for O_LINGUA in ${O_LINGUAS}; do
 	IUSE="${IUSE} linguas_${O_LINGUA/-/_}"
 done
@@ -107,7 +105,7 @@ src_prepare() {
 	for LINGUA in ${O_LINGUAS}; do
 		if ! use linguas_${LINGUA/-/_}; then
 			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
-			rm -r "${LINGUA}"
+			rm -r "${LINGUA}" || die "The list of linguas needs to be fixed"
 		fi
 	done
 
