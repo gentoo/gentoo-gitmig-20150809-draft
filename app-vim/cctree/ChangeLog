@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cctree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cctree/ChangeLog,v 1.1 2011/05/20 09:12:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cctree/ChangeLog,v 1.2 2011/05/20 19:14:31 radhermit Exp $
+
+  20 May 2011; Tim Harder <radhermit@gentoo.org> cctree-1.51.ebuild:
+  Fix description.
 
 *cctree-1.51 (20 May 2011)
 
