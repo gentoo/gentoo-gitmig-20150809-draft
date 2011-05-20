@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.5 2011/04/10 06:51:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.6 2011/05/20 04:34:46 rafaelmartins Exp $
+
+*gunicorn-0.12.2 (20 May 2011)
+
+  20 May 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +gunicorn-0.12.2.ebuild:
+  Version bump.
 
   10 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gunicorn-0.12.0.ebuild:
