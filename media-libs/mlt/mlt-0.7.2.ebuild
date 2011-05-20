@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.2.ebuild,v 1.1 2011/05/16 21:45:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.7.2.ebuild,v 1.2 2011/05/20 11:50:40 scarabeus Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -41,7 +41,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 #	php? ( dev-lang/php )
 #	tcl? ( dev-lang/tcl )
 
-SWIG_DEPEND=">=dev-lang/swig-1.3.38"
+SWIG_DEPEND=">=dev-lang/swig-2.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	compressed-lumas? ( || ( media-gfx/imagemagick
