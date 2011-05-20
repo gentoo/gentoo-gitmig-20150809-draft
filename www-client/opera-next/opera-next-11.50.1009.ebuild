@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-11.50.1009.ebuild,v 1.2 2011/05/16 16:11:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-11.50.1009.ebuild,v 1.3 2011/05/20 16:28:32 jer Exp $
 
 EAPI="3"
 
@@ -107,7 +107,7 @@ src_prepare() {
 	for LINGUA in ${O_LINGUAS}; do
 		if ! use linguas_${LINGUA/-/_}; then
 			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
-			rm -r "${LINGUA}"
+			rm -r "${LINGUA}" || die "The list of linguas needs to be fixed"
 		fi
 	done
 
