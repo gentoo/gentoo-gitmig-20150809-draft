@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/perl-MIME-Base64-3.13.ebuild,v 1.1 2010/11/27 18:25:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/perl-MIME-Base64-3.130.0.ebuild,v 1.1 2011/05/20 14:41:58 tove Exp $
 
 DESCRIPTION="Virtual for MIME-Base64"
 HOMEPAGE=""
@@ -12,4 +12,4 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND=""
-RDEPEND="~perl-core/MIME-Base64-${PV}"
+RDEPEND="|| ( ~dev-lang/perl-5.14.0 ~perl-core/MIME-Base64-${PV} )"
