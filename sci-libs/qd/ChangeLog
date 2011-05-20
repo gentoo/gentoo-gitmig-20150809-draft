@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/qd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.4 2011/05/18 20:32:23 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.5 2011/05/20 14:39:29 grozin Exp $
+
+  20 May 2011; Andrey Grozin <grozin@gentoo.org>
+  +files/qd-2.3.11-configure-version.patch, +files/qd-2.3.11-docpath.patch:
+  Add missing patches, bug #368065
 
 *qd-2.3.11 (18 May 2011)
 
