@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.87 2011/05/13 14:14:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.88 2011/05/20 19:26:31 maekke Exp $
+
+  20 May 2011; Markus Meier <maekke@gentoo.org> bluez-4.91.ebuild:
+  arm stable, bug #365527
 
   13 May 2011; Jeroen Roovers <jer@gentoo.org> bluez-4.91.ebuild:
   Stable for HPPA (bug #365527).
