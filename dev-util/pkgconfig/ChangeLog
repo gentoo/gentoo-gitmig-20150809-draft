@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconfig
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.92 2010/10/14 19:25:45 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.93 2011/05/20 07:30:42 ssuominen Exp $
+
+*pkgconfig-0.26 (20 May 2011)
+
+  20 May 2011; Samuli Suominen <ssuominen@gentoo.org> +pkgconfig-0.26.ebuild:
+  Version bump.
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> pkgconfig-0.25-r2.ebuild:
   stable ppc, bug 331345
