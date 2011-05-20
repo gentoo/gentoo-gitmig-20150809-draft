@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.110 2011/05/18 20:08:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.111 2011/05/20 19:19:23 maekke Exp $
+
+  20 May 2011; Markus Meier <maekke@gentoo.org> hugin-2011.0.0_rc1.ebuild:
+  add ro to LANGS, update enblend version
 
   18 May 2011; Tim Harder <radhermit@gentoo.org> hugin-2011.0.0_rc1.ebuild:
   Bump libpano13 dependency (bug #367917 by Daniel Neugebauer).

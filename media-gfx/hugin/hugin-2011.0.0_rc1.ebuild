@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0_rc1.ebuild,v 1.2 2011/05/18 20:08:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0_rc1.ebuild,v 1.3 2011/05/20 19:19:23 maekke Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -14,14 +14,14 @@ LICENSE="GPL-2 SIFT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-LANGS=" bg ca cs de en_GB es fi fr hu it ja ko nl pl pt_BR ru sk sl sv uk zh_CN zh_TW"
+LANGS=" bg ca cs de en_GB es fi fr hu it ja ko nl pl pt_BR ro ru sk sl sv uk zh_CN zh_TW"
 IUSE="lapack sift $(echo ${LANGS//\ /\ linguas_})"
 
 CDEPEND="
 	!!dev-util/cocom
 	app-arch/zip
 	>=dev-libs/boost-1.35.0-r5
-	>=media-gfx/enblend-3.0_p20080807
+	>=media-gfx/enblend-4.0
 	media-gfx/exiv2
 	media-libs/freeglut
 	>=media-libs/libpano13-2.9.18
