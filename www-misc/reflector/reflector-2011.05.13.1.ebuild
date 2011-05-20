@@ -1,12 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/reflector/reflector-2011.05.13.1.ebuild,v 1.1 2011/05/13 18:28:19 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/reflector/reflector-2011.05.13.1.ebuild,v 1.2 2011/05/20 12:59:17 binki Exp $
 
 EAPI=3
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES=1
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="*:2.6"
+RESTRICT_PYTHON_ABIS="2.[45]"
 SUPPORT_PYTHON_ABIS=1
+
 inherit eutils distutils
 
 DESCRIPTION="archlinux's take on mirrorselect"
@@ -21,6 +23,8 @@ IUSE=""
 RDEPEND="dev-python/argparse"
 
 S=${WORKDIR}/${PN}
+
+PYTHON_MODNAME="Reflector.py"
 
 src_prepare() {
 	distutils_src_prepare
