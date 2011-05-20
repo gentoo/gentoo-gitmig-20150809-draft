@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.7 2011/05/20 14:35:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.8 2011/05/20 15:32:54 scarabeus Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -238,8 +238,6 @@ git-2_prepare_storedir() {
 			|| die "${FUNCNAME}: can't mkdir \"${EGIT_STORE_DIR}\""
 	fi
 
-	cd -P "${EGIT_STORE_DIR}" \
-		|| die "${FUNCNAME}:  can't chdir to \"${EGIT_STORE_DIR}\""
 	# allow writing into EGIT_STORE_DIR
 	addwrite "${EGIT_STORE_DIR}"
 	# calculate the proper store dir for data
