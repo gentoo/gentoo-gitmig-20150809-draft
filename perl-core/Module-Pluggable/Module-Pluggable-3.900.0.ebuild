@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Pluggable/Module-Pluggable-3.9.ebuild,v 1.9 2009/12/23 16:36:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Pluggable/Module-Pluggable-3.900.0.ebuild,v 1.1 2011/05/20 14:03:56 tove Exp $
 
 EAPI=2
 
+MODULE_VERSION=3.9
 MODULE_AUTHOR=SIMONW
 inherit perl-module
 
