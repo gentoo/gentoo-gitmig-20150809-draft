@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/MIME-Base64-3.13.ebuild,v 1.1 2010/11/27 18:25:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/MIME-Base64-3.130.0.ebuild,v 1.1 2011/05/20 14:41:42 tove Exp $
 
 EAPI=3
 
 MODULE_AUTHOR=GAAS
+MODULE_VERSION=3.13
 inherit perl-module
 
 DESCRIPTION="A base64/quoted-printable encoder/decoder Perl Modules"
