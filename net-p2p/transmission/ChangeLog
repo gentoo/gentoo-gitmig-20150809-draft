@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.149 2011/05/05 06:22:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.150 2011/05/20 12:13:48 pva Exp $
+
+*transmission-2.31 (20 May 2011)
+
+  20 May 2011; Peter Volkov <pva@gentoo.org> -transmission-2.21.ebuild,
+  -transmission-2.30_beta3.ebuild, +transmission-2.31.ebuild:
+  Version bump, bug #367791 thank Jeroen Roovers and Andrew Savchenko for
+  report. Drop unused.
 
   05 May 2011; Christoph Mende <angelos@gentoo.org> transmission-2.22.ebuild:
   Stable on amd64 wrt bug #361169
