@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.25-r2.ebuild,v 1.10 2010/10/14 19:25:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.25-r2.ebuild,v 1.11 2011/05/20 07:31:38 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="elibc_FreeBSD hardened"
 
-DEPEND=">=dev-libs/popt-1.15"
+RDEPEND=">=dev-libs/popt-1.15"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
