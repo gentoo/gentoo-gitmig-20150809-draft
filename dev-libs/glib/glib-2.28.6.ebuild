@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.6.ebuild,v 1.8 2011/05/20 07:47:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.6.ebuild,v 1.9 2011/05/20 08:00:53 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 		>=dev-libs/libxslt-1.0
 		>=dev-util/gtk-doc-1.13
 		~app-text/docbook-xml-dtd-4.1.2 )
-	test? ( >=sys-apps/dbus-1.2.14 )"
+	test? ( dev-util/pkgconfig
+		>=sys-apps/dbus-1.2.14 )"
 PDEPEND="introspection? ( dev-libs/gobject-introspection )
 	!<gnome-base/gvfs-1.6.4-r990" # Earlier versions do not work with glib
 

@@ -1,11 +1,12 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.463 2011/05/20 07:47:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.464 2011/05/20 08:00:53 ssuominen Exp $
 
   20 May 2011; Samuli Suominen <ssuominen@gentoo.org> glib-2.28.6.ebuild:
-  Remove dev-util/pkgconfig DEPEND to avoid circular dependency because it's
-  now using system copy of dev-libs/glib:2. Download pkg.m4 in SRC_URI for
-  eautoreconf instead.
+  Move dev-util/pkgconfig DEPEND behind USE="test" because it's only required
+  for checking sys-apps/dbus. This way we don't get circular dependencies now
+  that dev-util/pkgconfig is using system copy of dev-libs/glib:2.
+  Download pkg.m4 in SRC_URI for eautoreconf.
 
   30 Apr 2011; Raúl Porcel <armin76@gentoo.org> glib-2.28.6.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #364973
