@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/perl-Memoize-1.02.ebuild,v 1.1 2010/11/30 19:34:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/perl-Memoize-1.20.0.ebuild,v 1.1 2011/05/20 14:34:36 tove Exp $
 
 DESCRIPTION="Virtual for Memoize"
 HOMEPAGE=""
@@ -11,4 +11,4 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
-RDEPEND="~perl-core/Memoize-${PV}"
+RDEPEND="|| ( ~dev-lang/perl-5.14.0 ~perl-core/Memoize-${PV} )"

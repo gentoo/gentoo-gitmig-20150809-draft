@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Memoize
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.7 2010/11/30 19:34:10 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/ChangeLog,v 1.8 2011/05/20 14:34:36 tove Exp $
+
+*perl-Memoize-1.20.0 (20 May 2011)
+
+  20 May 2011; Torsten Veller <tove@gentoo.org> -perl-Memoize-1.02.ebuild,
+  +perl-Memoize-1.20.0.ebuild:
+  Add perl-5.14.0 as provider. Change version scheme
 
 *perl-Memoize-1.02 (30 Nov 2010)
 
