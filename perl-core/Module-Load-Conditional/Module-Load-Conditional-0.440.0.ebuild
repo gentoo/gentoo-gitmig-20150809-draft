@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/Module-Load-Conditional-0.440.ebuild,v 1.4 2011/05/02 19:55:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/Module-Load-Conditional-0.440.0.ebuild,v 1.1 2011/05/20 14:25:15 tove Exp $
 
 EAPI=3
 

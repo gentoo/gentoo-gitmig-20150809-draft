@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/Module-Load-0.18.ebuild,v 1.6 2011/05/02 19:51:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/Module-Load-0.180.0.ebuild,v 1.1 2011/05/20 14:28:05 tove Exp $
 
 EAPI=2
 
 MODULE_AUTHOR=BINGOS
+MODULE_VERSION=0.18
 inherit perl-module
 
 DESCRIPTION="runtime require of both modules and files"
