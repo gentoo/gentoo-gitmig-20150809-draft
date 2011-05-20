@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.8 2011/05/20 15:32:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.9 2011/05/20 15:53:43 scarabeus Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -518,4 +518,8 @@ git-2_src_unpack() {
 	git-2_branch
 	git-2_bootstrap
 	echo ">>> Unpacked to ${EGIT_SOURCEDIR}"
+
+	# Users can specify some SRC_URI and we should
+	# unpack the files too.
+	default_src_unpack
 }
