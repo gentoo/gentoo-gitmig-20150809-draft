@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.6.ebuild,v 1.7 2011/04/30 17:35:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.6.ebuild,v 1.8 2011/05/20 07:47:59 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,6 +9,8 @@ inherit autotools gnome.org libtool eutils flag-o-matic pax-utils python virtual
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
+SRC_URI="${SRC_URI}
+	http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -20,7 +22,6 @@ RDEPEND="virtual/libiconv
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.16
 	>=sys-devel/gettext-0.11
 	>=dev-util/gtk-doc-am-1.13
 	doc? (
@@ -38,6 +39,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	mv -vf "${WORKDIR}"/pkg-config-*/pkg.m4 "${WORKDIR}"/ || die
+
 	if use ia64 ; then
 		# Only apply for < 4.1
 		local major=$(gcc-major-version)
@@ -77,7 +80,7 @@ src_prepare() {
 
 	# Needed for the punt-python-check patch, disabling timeout test
 	# Also needed to prevent croscompile failures, see bug #267603
-	eautoreconf
+	AT_M4DIR="${WORKDIR}" eautoreconf
 
 	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 
