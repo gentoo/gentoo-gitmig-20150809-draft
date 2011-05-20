@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Pod-Escapes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Escapes/ChangeLog,v 1.2 2009/12/16 21:55:13 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Escapes/ChangeLog,v 1.3 2011/05/20 13:41:58 tove Exp $
+
+*Pod-Escapes-1.40.0 (20 May 2011)
+
+  20 May 2011; Torsten Veller <tove@gentoo.org> -Pod-Escapes-1.04.ebuild,
+  +Pod-Escapes-1.40.0.ebuild:
+  Change version scheme
 
   16 Dec 2009; Jonathan Callen <abcd@gentoo.org> Pod-Escapes-1.04.ebuild:
   QA: Transfer prefix keywords
