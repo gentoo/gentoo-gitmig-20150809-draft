@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/CPAN-Meta-YAML-0.3.ebuild,v 1.7 2011/05/02 19:36:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/CPAN-Meta-YAML-0.3.0.ebuild,v 1.1 2011/05/21 06:44:09 tove Exp $
 
 EAPI=3
 

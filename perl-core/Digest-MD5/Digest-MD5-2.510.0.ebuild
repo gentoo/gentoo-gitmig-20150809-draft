@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/Digest-MD5-2.51.ebuild,v 1.2 2011/05/02 19:17:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/Digest-MD5-2.510.0.ebuild,v 1.1 2011/05/21 06:40:25 tove Exp $
 
 EAPI=3
 
 MODULE_AUTHOR=GAAS
+MODULE_VERSION=2.51
 inherit perl-module
 
 DESCRIPTION="MD5 message digest algorithm"
