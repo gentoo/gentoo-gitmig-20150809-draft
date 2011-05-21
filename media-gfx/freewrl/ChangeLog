@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.32 2011/04/02 14:29:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.33 2011/05/21 05:38:28 ssuominen Exp $
+
+  21 May 2011; Samuli Suominen <ssuominen@gentoo.org>
+  freewrl-1.22.10-r1.ebuild:
+  Use -lmozjs instead of -ljs and force at least spidermonkey >= 1.9 wrt
+  #361663 by Ian Stakenvicius.
 
 *freewrl-1.22.10-r1 (02 Apr 2011)
 

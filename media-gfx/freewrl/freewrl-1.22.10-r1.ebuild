@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.10-r1.ebuild,v 1.2 2011/04/03 19:39:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.10-r1.ebuild,v 1.3 2011/05/21 05:38:28 ssuominen Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ COMMONDEPEND="x11-libs/libXau
 	>=media-libs/freetype-2
 	media-libs/fontconfig
 	curl? ( net-misc/curl )
-	dev-lang/spidermonkey"
+	>=dev-lang/spidermonkey-1.9"
 DEPEND="${COMMONDEPEND}
 	>=dev-util/pkgconfig-0.22
 	java? ( >=virtual/jdk-1.4 )"
@@ -64,7 +64,7 @@ src_configure() {
 	myconf="${myconf} --disable-mozilla-js --disable-xulrunner-js --disable-firefox-js --disable-seamonkey-js"
 	# spidermonkey has no pkg-config, so override ./configure
 	JAVASCRIPT_ENGINE_CFLAGS="-I/usr/include/js -DXP_UNIX"
-	JAVASCRIPT_ENGINE_LIBS="-ljs"
+	JAVASCRIPT_ENGINE_LIBS="-lmozjs"
 	if has_version dev-lang/spidermonkey[threadsafe] ; then
 		JAVASCRIPT_ENGINE_CFLAGS="${JAVASCRIPT_ENGINE_CFLAGS} -DJS_THREADSAFE $(pkg-config --cflags nspr)"
 		JAVASCRIPT_ENGINE_LIBS="$(pkg-config --libs nspr) ${JAVASCRIPT_ENGINE_LIBS}"
