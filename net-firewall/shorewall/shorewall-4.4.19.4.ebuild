@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.4.18.ebuild,v 1.1 2011/03/13 11:46:35 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.4.19.4.ebuild,v 1.1 2011/05/21 15:05:06 constanze Exp $
 
 EAPI="2"
 
@@ -49,7 +49,6 @@ src_install() {
 		cd "${WORKDIR}/${MY_P_DOCS}"
 		# install documentation
 		dohtml -r *
-		## dosym Documentation_Index.html "/usr/share/doc/${PF}/html/index.htm"
 		# install samples
 		cp -pR "${S}${MY_P_BETA}/Samples" "${D}/usr/share/doc/${PF}"
 	fi
@@ -62,7 +61,4 @@ pkg_postinst() {
 	elog "Alternatively, if you only have one Shorewall-Lite system in your network"
 	elog "then you can use the configfiles dir but set CONFIG_PROTECT appropriately"
 	elog "in /etc/make.conf (man make.conf)."
-	elog
-	elog "${PN} now uses Perl only. The shell compiler is obsolete."
-	elog "shorewall-common, shorewall-shell and shorewall-perl have been removed."
 }

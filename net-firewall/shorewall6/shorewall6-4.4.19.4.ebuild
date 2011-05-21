@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.4.18.1.ebuild,v 1.1 2011/03/27 11:01:48 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.4.19.4.ebuild,v 1.1 2011/05/21 15:06:32 constanze Exp $
 
 inherit versionator linux-info
 
 # Select version (stable, RC, Beta, upstream patched):
 MY_PV_TREE=$(get_version_component_range 1-2)	# for devel versions use "development/$(get_version_component_range 1-2)"
 MY_P_BETA=""      				# stable or experimental (eg. "-RC1" or "-Beta4")
-MY_PV_BASE=$(get_version_component_range 1-3)	# which shorewall-common to use
+MY_PV_BASE=$(get_version_component_range 1-3)
 
 MY_PN="${PN/6/}"
 MY_P="${MY_PN}-${MY_PV_BASE}${MY_P_BETA}"
