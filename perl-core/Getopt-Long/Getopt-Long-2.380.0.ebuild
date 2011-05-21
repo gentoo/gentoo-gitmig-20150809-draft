@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/Getopt-Long-2.38.ebuild,v 1.9 2010/01/05 18:52:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Getopt-Long/Getopt-Long-2.380.0.ebuild,v 1.1 2011/05/21 06:15:04 tove Exp $
 
 EAPI=2
 
 MODULE_AUTHOR=JV
+MODULE_VERSION=2.38
 inherit perl-module
 
 DESCRIPTION="Advanced handling of command line options"
