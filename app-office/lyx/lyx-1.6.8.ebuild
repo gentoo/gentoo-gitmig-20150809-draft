@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.8.ebuild,v 1.7 2011/04/16 10:59:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.8.ebuild,v 1.8 2011/05/21 04:25:37 ssuominen Exp $
 
 EAPI=2
 
@@ -52,7 +52,7 @@ COMMONDEPEND="x11-libs/qt-gui:4
 RDEPEND="${COMMONDEPEND}
 	|| ( dev-texlive/texlive-fontsextra app-text/ptex )
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick )
-	cups? ( virtual/lpr )
+	cups? ( net-print/cups )
 	latex? (
 		virtual/latex-base
 		app-text/ghostscript-gpl
