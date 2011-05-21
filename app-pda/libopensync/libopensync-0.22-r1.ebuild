@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22-r1.ebuild,v 1.4 2011/05/11 20:05:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.22-r1.ebuild,v 1.5 2011/05/21 17:29:54 armin76 Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="OpenSync synchronisation framework library"
 HOMEPAGE="http://www.opensync.org/"
 SRC_URI="http://www.opensync.org/download/releases/${PV}/${P}.tar.bz2"
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="debug doc python"

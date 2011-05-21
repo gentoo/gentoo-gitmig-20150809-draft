@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.7 2011/02/20 03:31:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-9999.ebuild,v 1.8 2011/05/21 17:29:54 armin76 Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI=""
 
 ESVN_REPO_URI="http://svn.opensync.org/trunk"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE="debug doc python" # test
