@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.41 2011/04/29 21:36:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.42 2011/05/21 17:34:47 armin76 Exp $
+
+  21 May 2011; Raúl Porcel <armin76@gentoo.org> mpdscribble-0.19.ebuild,
+  mpdscribble-0.20.ebuild, mpdscribble-0.21.ebuild:
+  Drop sparc keywords and x86 stable wrt #365067
 
   29 Apr 2011; Markos Chandras <hwoarang@gentoo.org> mpdscribble-0.21.ebuild:
   Stable on amd64 wrt bug #365067

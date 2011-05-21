@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.20.ebuild,v 1.1 2010/10/11 17:03:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.20.ebuild,v 1.2 2011/05/21 17:34:47 armin76 Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.11"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="+curl"
 
 RDEPEND=">=dev-libs/glib-2.16:2
