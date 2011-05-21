@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.3.ebuild,v 1.1 2011/05/21 18:45:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.3.ebuild,v 1.2 2011/05/21 18:54:11 nirbheek Exp $
 
 EAPI=3
 inherit autotools eutils gnome.org
@@ -37,7 +37,7 @@ src_unpack() {
 src_prepare() {
 	# Add configure switch for gtk+:3 based tests
 	# and make tests build only when needed
-	epatch "${FILESDIR}"/${PN}-0.7.1-gtk3-tests.patch
+	epatch "${FILESDIR}"/${PN}-0.7.3-gtk3-tests.patch
 
 	AT_M4DIR=${WORKDIR} eautoreconf
 }
