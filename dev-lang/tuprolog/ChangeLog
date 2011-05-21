@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tuprolog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.35 2010/11/05 23:55:42 keri Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.36 2011/05/21 04:50:38 keri Exp $
+
+*tuprolog-2.3.1_beta (21 May 2011)
+
+  21 May 2011; <keri@gentoo.org> +tuprolog-2.3.1_beta.ebuild,
+  +files/tuprolog-2.3.1_beta-javadocs.patch:
+  Version bump
 
   05 Nov 2010; <keri@gentoo.org> tuprolog-2.3.0_alpha.ebuild:
   Add die to do... function calls, add die to cp call
