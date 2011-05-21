@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.118 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.119 2011/05/21 16:42:43 olemarkus Exp $
 
-# This ABI is in constant change and currently only available for SVN snapshots
+# These ABIs are in constant change and currently only available for SVN snapshots
 php_targets_php5-4
+php_targets_php5-5
 
 # deprecated and replaced by USE="udev"
 hal
