@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.183 2011/05/20 19:34:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.184 2011/05/21 17:37:23 armin76 Exp $
+
+  21 May 2011; Raúl Porcel <armin76@gentoo.org> gkrellm-2.3.5.ebuild:
+  alpha/ia64/sparc stable wrt #356973
 
   20 May 2011; Markus Meier <maekke@gentoo.org> gkrellm-2.3.5.ebuild:
   arm stable, bug #356973
