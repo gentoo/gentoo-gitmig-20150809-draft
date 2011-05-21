@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.10_rc8.ebuild,v 1.3 2011/05/18 06:11:56 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.10_rc8.ebuild,v 1.4 2011/05/21 18:42:36 naota Exp $
 
 EAPI=2
 
@@ -38,6 +38,7 @@ src_prepare() {
 }
 
 src_configure() {
+	use userland_BSD && export HOST="${CHOST}"
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable static-libs static) \

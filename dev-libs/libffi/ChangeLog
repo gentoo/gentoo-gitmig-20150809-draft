@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.123 2011/05/20 19:54:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.124 2011/05/21 18:42:36 naota Exp $
+
+  21 May 2011; Naohiro Aota <naota@gentoo.org> libffi-3.0.10_rc8.ebuild:
+  Fix build failure bug #363275 on BSD
 
   20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> libffi-3.0.9-r2.ebuild:
   ppc64 stable wrt #360465
