@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.103 2011/05/09 23:21:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.104 2011/05/21 20:22:49 dilfridge Exp $
+
+*plasma-workspace-4.6.3-r1 (21 May 2011)
+*plasma-workspace-4.6.2-r2 (21 May 2011)
+
+  21 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +plasma-workspace-4.6.2-r2.ebuild,
+  +files/plasma-workspace-4.6.2-panelplacement.patch,
+  +plasma-workspace-4.6.3-r1.ebuild:
+  Revert upstream commit causing problems with panel placement, bug 364555
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   plasma-workspace-4.6.2-r1.ebuild:
