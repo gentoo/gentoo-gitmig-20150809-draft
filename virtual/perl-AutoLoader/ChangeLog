@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-AutoLoader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-AutoLoader/ChangeLog,v 1.13 2011/04/24 15:24:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-AutoLoader/ChangeLog,v 1.14 2011/05/21 06:47:53 tove Exp $
+
+*perl-AutoLoader-5.710.0 (21 May 2011)
+
+  21 May 2011; Torsten Veller <tove@gentoo.org> -perl-AutoLoader-5.71.ebuild,
+  +perl-AutoLoader-5.710.0.ebuild:
+  Add perl-5.14.0 as provider. Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> ChangeLog:
   Marked ~x86-solaris, bug #296509
