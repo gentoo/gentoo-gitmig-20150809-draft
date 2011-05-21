@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/gitolite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.4 2011/03/03 18:04:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.5 2011/05/21 16:30:44 idl0r Exp $
+
+*gitolite-2.0.1 (21 May 2011)
+
+  21 May 2011; Christian Ruppert <idl0r@gentoo.org> +gitolite-2.0.1.ebuild:
+  Version bump to 2.0.1, bug 367411.
 
   03 Mar 2011; Christian Ruppert <idl0r@gentoo.org> gitolite-1.5.9.1.ebuild:
   Fix rm.
