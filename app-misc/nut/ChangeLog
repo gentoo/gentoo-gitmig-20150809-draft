@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.18 2011/04/05 15:50:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.19 2011/05/21 16:53:49 jer Exp $
+
+*nut-16.11 (21 May 2011)
+
+  21 May 2011; Jeroen Roovers <jer@gentoo.org> +nut-16.11.ebuild:
+  Version bump.
 
 *nut-16.9 (05 Apr 2011)
 
