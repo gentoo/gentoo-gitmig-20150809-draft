@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/boinc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.94 2010/11/08 17:52:35 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.95 2011/05/21 19:34:02 scarabeus Exp $
+
+  21 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.conf,
+  files/boinc.init:
+  Drop not fully tested features from initscript. Should solve most issues.
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org>
   boinc-6.10.58-r1.ebuild:

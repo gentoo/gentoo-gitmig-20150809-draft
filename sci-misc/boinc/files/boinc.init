@@ -24,7 +24,7 @@ create_work_directory() {
 generate_logs() {
 	if [ ! -f "${LOGFILE}" ]; then
 		einfo "No ${LOGFILE} around. Creating new..."
-		einfo "For good log rotation is great tool app-admin/logrotate"
+		einfo "You really should use app-admin/logrotate for the log rotation."
 		touch "${LOGFILE}"
 		chown "${USER}:${GROUP}" "${LOGFILE}"
 	fi
@@ -40,7 +40,7 @@ cuda_check() {
 start() {
 	ebegin "Starting BOINC"
 
-	create_work_directory
+	create_work_directory || return 1
 	cuda_check
 
 	cd "${RUNTIMEDIR}"
@@ -68,14 +68,7 @@ start() {
 
 	generate_logs
 
-	# sys-apps/util-linux (setup scheduling policy if specified, otherwise blank out
-    if [ "${SCHED_PARAM}" = "" ]; then
-        CHRT=""
-    else
-    	CHRT="eval /usr/bin/chrt ${SCHED_PARAM}"
-    fi
-
-	${CHRT} start-stop-daemon \
+	start-stop-daemon \
 		--start --quiet --chdir "${RUNTIMEDIR}" \
 		--make-pidfile \
 		--pidfile "${PIDFILE}" \
@@ -84,15 +77,6 @@ start() {
 		--exec "${BOINCBIN}" ${PARAMS}
 
 	RESULT=$?
-
-	if [ "${CPU_SHARE}" ] && [ -d /sys/kernel/uids ]; then
-		BUID="$(id -u "${USER}")"
-		# It might take a moment for start-stop-daemon to chuid
-		[ -d /sys/kernel/uids/"${BUID}" ] || sleep 5 # 5 was working always here
-		if [ -w /sys/kernel/uids/"${BUID}"/cpu_share ]; then
-			echo "${CPU_SHARE}" > /sys/kernel/uids/"${BUID}"/cpu_share
-		fi							      
-	fi	  
 
 	eend ${RESULT}
 }
