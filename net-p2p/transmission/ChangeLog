@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.150 2011/05/20 12:13:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.151 2011/05/21 16:05:05 xmw Exp $
+
+  21 May 2011; Michael Weber <xmw@gentoo.org> transmission-2.22.ebuild:
+  ppc stable (bug 361169)
 
 *transmission-2.31 (20 May 2011)
 
