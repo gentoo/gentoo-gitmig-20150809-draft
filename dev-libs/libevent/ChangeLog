@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.175 2011/05/13 04:32:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.176 2011/05/21 16:00:33 xmw Exp $
+
+  21 May 2011; Michael Weber <xmw@gentoo.org> libevent-2.0.10.ebuild:
+  ppc/sparc stable (bug 361143)
 
   13 May 2011; Markus Meier <maekke@gentoo.org> libevent-2.0.10.ebuild:
   arm stable, bug #361143
