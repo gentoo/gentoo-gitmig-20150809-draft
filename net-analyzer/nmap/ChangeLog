@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.244 2011/05/20 19:37:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.245 2011/05/21 05:53:26 jer Exp $
+
+  21 May 2011; Jeroen Roovers <jer@gentoo.org> nmap-5.51.ebuild:
+  Stable for HPPA (bug #359853).
 
   20 May 2011; Markus Meier <maekke@gentoo.org> nmap-5.51.ebuild:
   arm stable, bug #359853
