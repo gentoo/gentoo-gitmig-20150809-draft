@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ExtUtils-Manifest-1.58.ebuild,v 1.9 2010/09/13 14:25:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ExtUtils-Manifest-1.580.0.ebuild,v 1.1 2011/05/21 06:26:57 tove Exp $
 
 EAPI=2
 
 MODULE_AUTHOR=RKOBES
+MODULE_VERSION=1.58
 inherit perl-module
 
 DESCRIPTION="Utilities to write and check a MANIFEST file"
