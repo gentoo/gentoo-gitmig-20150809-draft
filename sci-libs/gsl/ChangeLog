@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gsl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.79 2010/12/19 19:33:15 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.80 2011/05/21 10:18:03 ottxor Exp $
+
+*gsl-1.15 (21 May 2011)
+
+  21 May 2011; Christoph Junghans <ottxor@gentoo.org> +gsl-1.15.ebuild,
+  +files/gsl-1.15-cblas.patch:
+  Version bump (bug #368223)
 
   19 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> gsl-1.14-r1.ebuild:
   Use filter-mfpmath instead of filter-flags
