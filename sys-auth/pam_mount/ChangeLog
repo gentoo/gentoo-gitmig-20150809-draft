@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.52 2011/05/14 20:27:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.53 2011/05/21 22:32:46 mattst88 Exp $
+
+  21 May 2011; Matt Turner <mattst88@gentoo.org> pam_mount-2.10.ebuild:
+  Fix a few dependencies. Thanks to Sander Sweers, bug 363149
 
   14 May 2011; Matt Turner <mattst88@gentoo.org> pam_mount-2.10.ebuild:
   Fix crypt use flag, add ssl and selinux use flags. Thanks to Sander Sweers
