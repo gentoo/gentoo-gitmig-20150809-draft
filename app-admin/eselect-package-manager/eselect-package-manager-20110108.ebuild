@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/eselect-package-manager-20110108.ebuild,v 1.2 2011/05/15 10:48:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/eselect-package-manager-20110108.ebuild,v 1.3 2011/05/21 17:59:07 armin76 Exp $
 
 DESCRIPTION="Manages PACKAGE_MANAGER environment variable"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND=">=app-admin/eselect-1.1.1"
