@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.100 2011/04/26 15:07:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.101 2011/05/21 04:28:05 ssuominen Exp $
+
+  21 May 2011; Samuli Suominen <ssuominen@gentoo.org>
+  emul-linux-x86-java-1.6.0.24.ebuild, emul-linux-x86-java-1.6.0.25.ebuild:
+  Change reference of virtual/lpr to net-print/cups and net-print/lprng wrt
+  #358879.
 
 *emul-linux-x86-java-1.6.0.25 (26 Apr 2011)
 

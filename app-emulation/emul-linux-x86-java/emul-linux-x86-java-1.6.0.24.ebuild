@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.24.ebuild,v 1.2 2011/02/16 21:44:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.24.ebuild,v 1.3 2011/05/21 04:28:05 ssuominen Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -107,6 +107,6 @@ pkg_postinst() {
 	fi
 
 	echo
-	ewarn "Some parts of Sun's JDK require ${xwarn} virtual/lpr to be installed."
+	ewarn "Some parts of Sun's JDK require ${xwarn} net-print/cups or net-print/lprng to be installed."
 	ewarn "Be careful which Java libraries you attempt to use."
 }
