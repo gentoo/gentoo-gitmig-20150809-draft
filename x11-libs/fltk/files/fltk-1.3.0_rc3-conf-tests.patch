@@ -32,19 +32,6 @@ index ccec15c..747625e 100644
  portable-dist:
  	epm -v -s fltk.xpm fltk
  
-diff --git a/configure.in b/configure.in
-index 3ca79ef..bf0dc28 100644
---- a/configure.in
-+++ b/configure.in
-@@ -1114,7 +1114,7 @@ if test -n "$GCC"; then
-         if test "x$with_optim" != x; then
- 	    OPTIM="$with_optim $OPTIM"
- 	else
--            OPTIM="-Os $OPTIM"
-+            OPTIM="$OPTIM"
- 	fi
-     fi
- 
 diff --git a/documentation/Makefile b/documentation/Makefile
 index 1742cfa..8102c43 100644
 --- a/documentation/Makefile
