@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/perl-File-Temp-0.22.ebuild,v 1.19 2011/05/02 19:50:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/perl-File-Temp-0.220.0.ebuild,v 1.1 2011/05/21 06:19:27 tove Exp $
 
 DESCRIPTION="Virtual for File-Temp"
 HOMEPAGE=""
@@ -12,4 +12,4 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 ~sh sparc x86 ~pp
 
 IUSE=""
 DEPEND=""
-RDEPEND="|| ( ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~dev-lang/perl-5.10.1 ~perl-core/File-Temp-${PV} )"
+RDEPEND="|| ( ~dev-lang/perl-5.14.0 ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~dev-lang/perl-5.10.1 ~perl-core/File-Temp-${PV} )"
