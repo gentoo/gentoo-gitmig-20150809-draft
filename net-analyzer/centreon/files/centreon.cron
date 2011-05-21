@@ -1,7 +1,0 @@
-OREON_DIR=/usr/share/centreon
-LOG_DIR=/var/log/centreon
-
-0 0 * * *    nagios /usr/bin/php -q ${OREON_DIR}/cron/inventory_update.php 2>&1 >> ${LOG_DIR}/Inventory_log
-0 1 1-31 * * nagios /usr/bin/php -q ${OREON_DIR}/cron/reporting/ArchiveLogInDB.php 2>&1 >> ${LOG_DIR}/ArchiveLogInDB_log
-* * * * *    nagios ${OREON_DIR}/cron/parsing_status.pl 2>&1 >> ${LOG_DIR}/ods_parsing_status
-* * * * *    nagios ${OREON_DIR}/cron/parsing_log.pl 2>&1 >> ${LOG_DIR}/ods_parsing_log
