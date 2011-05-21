@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.68 2011/05/14 09:34:22 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.69 2011/05/21 17:46:33 armin76 Exp $
+
+  21 May 2011; Raúl Porcel <armin76@gentoo.org> ortp-0.16.5.ebuild:
+  alpha/ia64/sparc stable wrt #363311
 
   14 May 2011; Thomas Kahle <tomka@gentoo.org> ortp-0.16.5.ebuild:
   x86 stable per bug 363311
