@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc5.ebuild,v 1.1 2011/05/21 11:00:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0_rc5.ebuild,v 1.2 2011/05/21 11:08:52 jlec Exp $
 
 EAPI=3
 
@@ -45,6 +45,7 @@ LIBDIR=${EPREFIX}/usr/$(get_libdir)/fltk-${SLOT}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	rm -rf zlib jpeg png || die
 	epatch \
 		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-share.patch \
