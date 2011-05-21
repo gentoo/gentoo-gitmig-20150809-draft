@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.50 2011/05/11 19:46:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.51 2011/05/21 16:26:30 armin76 Exp $
+
+  21 May 2011; Raúl Porcel <armin76@gentoo.org> gnucap-0.35.ebuild,
+  gnucap-0.35.20091207.ebuild:
+  Drop sparc keywords
 
   11 May 2011; Christoph Mende <angelos@gentoo.org>
   gnucap-0.35.20091207.ebuild:
