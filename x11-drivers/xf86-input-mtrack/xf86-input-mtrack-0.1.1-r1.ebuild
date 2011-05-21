@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mtrack/xf86-input-mtrack-0.1.1.ebuild,v 1.1 2011/05/13 00:22:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mtrack/xf86-input-mtrack-0.1.1-r1.ebuild,v 1.1 2011/05/21 07:13:35 naota Exp $
 
 EAPI=4
 
@@ -26,7 +26,8 @@ DEPEND="${DEPEND}
 
 DOCS=( "README" )
 
-PATCHES=( "${FILESDIR}"/${P}-autoconf.patch )
+PATCHES=( "${FILESDIR}"/${P}-autoconf.patch
+	"${FILESDIR}"/${P}-export.patch )
 
 pkg_setup() {
 	xorg-2_pkg_setup
