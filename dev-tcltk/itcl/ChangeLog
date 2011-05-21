@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.51 2011/04/26 20:12:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.52 2011/05/21 08:22:53 tomka Exp $
+
+  21 May 2011; Thomas Kahle <tomka@gentoo.org> itcl-3.4_beta1.ebuild:
+  x86 stable per bug 363991
 
   26 Apr 2011; Christoph Mende <angelos@gentoo.org> itcl-3.4_beta1.ebuild:
   Stable on amd64 wrt bug #363991
