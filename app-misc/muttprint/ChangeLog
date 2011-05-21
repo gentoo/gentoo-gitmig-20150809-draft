@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/muttprint
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.42 2009/12/03 18:38:17 vostorga Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.43 2011/05/21 19:40:12 hwoarang Exp $
+
+*muttprint-0.72d-r2 (21 May 2011)
+
+  21 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  +muttprint-0.72d-r2.ebuild, +files/muttprint-0.72d-warning.patch:
+  Apply patch from bug #347671. Thanks to Bob Johnson <ke6fis@arrl.net>
 
   03 Dec 2009; Víctor Ostorga <vostorga@gentoo.org>
   muttprint-0.72d-r1.ebuild:
