@@ -1,6 +1,11 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.52 2011/01/07 21:35:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.53 2011/05/22 08:13:38 tove Exp $
+
+*po4a-0.41 (22 May 2011)
+
+  22 May 2011; Torsten Veller <tove@gentoo.org> +po4a-0.41.ebuild:
+  Version bump. Thanks to Tim Harder (#368303)
 
   07 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> po4a-0.38.ebuild:
   ppc64 stable wrt #350877
