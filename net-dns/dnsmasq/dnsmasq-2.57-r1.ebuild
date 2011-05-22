@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.57-r1.ebuild,v 1.1 2011/05/22 10:07:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.57-r1.ebuild,v 1.2 2011/05/22 19:39:43 phajdan.jr Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -55,7 +55,7 @@ src_compile() {
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		COPTS="${COPTS}" \
-		all$(use nls && echo "-i18n") || die
+		all$(use nls && echo "-i18n")
 }
 
 src_install() {
@@ -63,7 +63,7 @@ src_install() {
 		PREFIX=/usr \
 		MANDIR=/usr/share/man \
 		DESTDIR="${D}" \
-		install$(use nls && echo "-i18n") || die
+		install$(use nls && echo "-i18n")
 
 	dodoc CHANGELOG FAQ
 	dohtml *.html

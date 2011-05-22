@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.207 2011/05/22 10:07:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.208 2011/05/22 19:39:43 phajdan.jr Exp $
+
+  22 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dnsmasq-2.57-r1.ebuild:
+  Bump to EAPI 4, to make sure the ebuild dies on all failures.
 
 *dnsmasq-2.57-r1 (22 May 2011)
 
