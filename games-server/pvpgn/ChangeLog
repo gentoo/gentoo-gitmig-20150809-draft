@@ -1,6 +1,9 @@
 # ChangeLog for games-server/pvpgn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.20 2010/09/14 09:24:19 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.21 2011/05/22 21:04:13 mr_bones_ Exp $
+
+  22 May 2011; Michael Sterrett <mr_bones_@gentoo.org> files/pvpgn.rc:
+  update init script with patch from Anton Podavalov via bug #368203
 
   14 Sep 2010; Markos Chandras <hwoarang@gentoo.org> pvpgn-1.8.5.ebuild:
   Keyworded for amd64. Bug #336410. Thanks to Anton Podavalov
