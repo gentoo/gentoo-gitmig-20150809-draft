@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hgsubversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.14 2011/03/03 03:40:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/ChangeLog,v 1.15 2011/05/22 12:48:48 tomka Exp $
+
+  22 May 2011; Thomas Kahle <tomka@gentoo.org> hgsubversion-1.2.1.ebuild:
+  x86 stable per bug 364403
 
 *hgsubversion-1.2.1 (03 Mar 2011)
 
