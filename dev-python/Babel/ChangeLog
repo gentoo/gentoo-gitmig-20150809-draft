@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.37 2011/05/18 15:29:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.38 2011/05/22 21:30:27 tomka Exp $
+
+  22 May 2011; Thomas Kahle <tomka@gentoo.org> Babel-0.9.6.ebuild:
+  x86 stable per bug 364705
 
   18 May 2011; Jeroen Roovers <jer@gentoo.org> Babel-0.9.6.ebuild:
   Stable for HPPA (bug #364705).
