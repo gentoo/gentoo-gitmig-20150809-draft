@@ -12,10 +12,5 @@
   NOTE: works only for subset of nvidia graphic cards so make sure your card
   is supported before opening bug about it.
   </flag>
-  <flag name="client">
-  Build client part of the boinc. Not only the manager but also the computation
-  unit. With +X only you will have only manager which can connect to remote
-  clients.
-  </flag>
 </use>
 </pkgmetadata>
