@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.5.ebuild,v 1.4 2011/05/10 22:13:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.5.ebuild,v 1.5 2011/05/22 08:04:17 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -25,9 +25,8 @@ src_prepare() {
 	rm -f lisp/org-install.el
 }
 
-# This is NOT redundant, elisp.eclass redefines src_compile.
 src_compile() {
-	emake
+	default
 }
 
 src_install() {
