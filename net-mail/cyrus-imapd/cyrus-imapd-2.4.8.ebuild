@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.10 2011/05/21 17:17:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.8.ebuild,v 1.11 2011/05/22 20:09:24 eras Exp $
 
 EAPI=4
 
@@ -117,9 +117,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "email install failed"
+	emake DESTDIR="${D}" install
 
-	doman man/*.[0-8]
+	# file collision - bug #368245
+	if ! use nntp ; then
+		rm "${D}"/usr/share/man/man8/fetchnews.8*
+	fi
+
 	dodoc README*
 	dohtml doc/*.html doc/murder.png
 	docinto text
