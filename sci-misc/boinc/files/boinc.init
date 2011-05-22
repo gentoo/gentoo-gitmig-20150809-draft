@@ -99,7 +99,7 @@ attach() {
 	fi
 
 	ebegin "Attaching to project"
-		boinccmd --host localhost --passwd ${password} ${args}
+		boinccmd --host localhost --passwd "${password}" ${args}
 	eend $?
 
 	unset password args url key
