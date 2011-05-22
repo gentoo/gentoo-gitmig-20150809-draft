@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.86 2011/05/01 17:26:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.87 2011/05/22 03:22:07 radhermit Exp $
+
+  22 May 2011; Tim Harder <radhermit@gentoo.org> ufraw-0.16.ebuild,
+  ufraw-0.17.ebuild, ufraw-0.18.ebuild:
+  Add dev-libs/glib dependency (bug #368291 by Mathieu Goutfreind).
 
 *ufraw-0.18 (01 May 2011)
 
