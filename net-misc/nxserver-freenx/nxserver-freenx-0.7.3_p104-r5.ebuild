@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r5.ebuild,v 1.3 2010/10/05 21:10:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r5.ebuild,v 1.4 2011/05/22 14:12:31 voyageur Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND="dev-tcltk/expect
 	media-fonts/font-cursor-misc
 	media-fonts/font-misc-misc
 	net-analyzer/gnu-netcat
-	>=net-misc/nx-2.1.0
+	<net-misc/nx-3.5.0
 	sys-apps/gawk
 	virtual/ssh
 	x11-apps/xauth
