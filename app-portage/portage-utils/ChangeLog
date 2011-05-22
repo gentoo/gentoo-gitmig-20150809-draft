@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.112 2011/03/17 04:08:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.113 2011/05/22 02:15:54 naota Exp $
+
+  22 May 2011; Naohiro Aota <naota@gentoo.org> portage-utils-0.5.ebuild:
+  Drop ~x86-fbsd keyword
 
 *portage-utils-0.5 (17 Mar 2011)
 
