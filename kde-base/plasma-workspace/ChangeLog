@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.105 2011/05/21 22:54:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.106 2011/05/22 18:20:36 dilfridge Exp $
+
+*plasma-workspace-4.6.3-r2 (22 May 2011)
+
+  22 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -plasma-workspace-4.6.3.ebuild, -plasma-workspace-4.6.3-r1.ebuild,
+  +plasma-workspace-4.6.3-r2.ebuild,
+  +files/plasma-workspace-4.6.3-dduplicate.patch:
+  Add upstream patch for duplicate code line, bug 367525
 
   21 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   plasma-workspace-4.6.2-r2.ebuild, plasma-workspace-4.6.3-r1.ebuild:
