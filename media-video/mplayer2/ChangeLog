@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.18 2011/05/10 13:27:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.19 2011/05/22 20:54:58 maekke Exp $
+
+  22 May 2011; Markus Meier <maekke@gentoo.org> mplayer2-2.0.ebuild:
+  add ~arm, bug #365953
 
   10 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   Use git-2 eclass.
