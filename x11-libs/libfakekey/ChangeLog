@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libfakekey
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.7 2009/12/14 04:58:28 yvasilev Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfakekey/ChangeLog,v 1.8 2011/05/22 14:43:15 miknix Exp $
+
+*libfakekey-0.1-r1 (22 May 2011)
+
+  22 May 2011; Angelo Arrifano <miknix@gentoo.org> -libfakekey-0.1.ebuild,
+  +libfakekey-0.1-r1.ebuild, +files/libfakekey-0.1-ac.patch:
+  - Fix underlinking, bug #367595 .
+  - Patch configure.ac to work with latest autoconf (based on commit
+  e13586b6b78d3636c3e00b437fdb4f3ac449b185 of cairo git)
+  - Move to EAPI 2.
 
   14 Dec 2009; Yuri Vasilevski <yvasilev@gentoo.org> libfakekey-0.1.ebuild:
   Fixed dodoc QA notice, fixes bug #296757. Thanks flameeyes.
