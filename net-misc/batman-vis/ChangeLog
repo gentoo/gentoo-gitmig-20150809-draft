@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/batman-vis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-vis/ChangeLog,v 1.1 2011/05/20 23:37:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-vis/ChangeLog,v 1.2 2011/05/22 23:32:08 xmw Exp $
+
+  22 May 2011; Michael Weber <xmw@gentoo.org> batman-vis-0.3.2.ebuild:
+  Improved sed expression, src_compile and updated SRC_URI, thanks to Emil
+  Langrock (bug 368213)
 
 *batman-vis-0.3.2 (20 May 2011)
 
