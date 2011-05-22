@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.17.ebuild,v 1.4 2011/05/03 11:22:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.17.ebuild,v 1.5 2011/05/22 12:36:44 nirbheek Exp $
 
 EAPI="3"
 
@@ -19,11 +19,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
-# pkg-config is used by gtkdoc-rebase at runtime
-RDEPEND=">=dev-lang/perl-5.6
-	dev-util/pkgconfig"
+RDEPEND=">=dev-lang/perl-5.6"
 DEPEND="${RDEPEND}
 	!<dev-util/gtk-doc-${MAJ_PV}"
+# pkg-config is used by gtkdoc-rebase at runtime
+# PDEPEND to avoid circular deps, bug 368301
+PDEPEND="dev-util/pkgconfig"
 
 # This ebuild doesn't even compile anything, causing tests to fail when updating (bug #316071)
 RESTRICT="test"
