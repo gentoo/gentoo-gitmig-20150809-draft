@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.28 2011/05/13 10:53:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.29 2011/05/22 18:28:02 dilfridge Exp $
+
+  22 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  knetworkmanager-4.4.0_p20110513.ebuild:
+  Raise networkmanager version dependency, bug 367099
 
 *knetworkmanager-4.4.0_p20110513 (13 May 2011)
 
