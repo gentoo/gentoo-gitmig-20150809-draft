@@ -1,42 +1,41 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.10 2010/03/09 10:35:33 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.11 2011/05/22 01:01:40 blueness Exp $
 
-# Author:
-#	Kevin F. Quinn <kevquinn@gentoo.org>
+# @ECLASS: pax-utils.eclass
+# @MAINTAINER:
+# Maintained by
+# 	The Gentoo Linux Hardened Team <hardened@gentoo.org>
+# Original Author
+# 	Kevin F. Quinn <kevquinn@gentoo.org>
+# Modifications for bug #365825, @ ECLASS markup
+#	Anthony G. Basile <blueness@gentoo.org>
+# @BLURB: functions to provide pax markings
+# @DESCRIPTION:
+# This eclass provides support for manipulating PaX markings on ELF binaries,
+# wrapping the use of the paxctl and scanelf utilities.  It decides which to
+# use depending on what is installed on the build host, preferring paxctl to
+# scanelf.  If paxctl is not installed, we fall back to scanelf since it is
+# always present.  However, currently scanelf doesn't do all that paxctl can.
 #
-# This eclass provides support for manipulating PaX markings on ELF
-# binaries, wrapping the use of the chpaxi, paxctl and scanelf utilities.
-# Currently it decides which to use depending on what is installed on the
-# build host; this may change in the future to use a control variable
-# (which would also mean modifying DEPEND to bring in sys-apps/paxctl etc).
+# To control what markings are made, set PAX_MARKINGS in /etc/make.conf to
+# contain either "PT" or "none".  If PAX_MARKINGS is set to "PT", and the
+# necessary utility is installed, the PT_PAX_FLAGS markings will be made.  If
+# PAX_MARKINGS is set to "none", no markings will be made.
+
+inherit eutils
+
+# Default to PT markings.
+PAX_MARKINGS=${PAX_MARKINGS:="PT"}
+
+# @FUNCTION: pax-mark
+# @USAGE: <flags> {<ELF files>}
+# @RETURN: Shell true if we succeed, shell false otherwise
+# @DESCRIPTION:
+# Marks <ELF files> with provided PaX <flags>
 #
-#
-# CONTROL
-# -------
-#
-# To control what markings are set, assign PAX_MARKINGS in
-# /etc/make.conf to contain the strings "EI" and/or "PT".
-# If EI is present in PAX_MARKINGS (and the chpax utility
-# is present), the legacy 'chpax' style markings will be
-# set.  If PT is present in PAX_MARKINGS (and the paxctl
-# utility is present), the 'paxctl' markings will be set.
-# Default is to try to do both.  Set it to "none" to prevent
-# any markings being made.
-#
-#
-# PROVIDED FUNCTIONS
-# ------------------
-#
-#### pax-mark <flags> {<ELF files>}
-# Marks files <files> with provided PaX flags <flags>
-#
-# Please confirm any relaxation of restrictions with the
-# Gentoo Hardened team; either ask on the gentoo-hardened
-# mailing list, or CC/assign hardened@g.o on a bug.
-#
-# Flags are passed directly to the utilities unchanged.  Possible
-# flags at the time of writing, taken from /sbin/paxctl, are:
+# Flags are passed directly to the utilities unchanged.  Possible flags at the
+# time of writing, taken from /sbin/paxctl, are:
 #
 #	p: disable PAGEEXEC		P: enable PAGEEXEC
 #	e: disable EMUTRMAP		E: enable EMUTRMAP
@@ -44,60 +43,20 @@
 #	r: disable RANDMMAP		R: enable RANDMMAP
 #	s: disable SEGMEXEC		S: enable SEGMEXEC
 #
-# Default flags are 'PeMRS', which are the most restrictive
-# settings.  Refer to http://pax.grsecurity.net/ for details
-# on what these flags are all about.  There is an obsolete
-# flag 'x'/'X' which has been removed from PaX.
+# Default flags are 'PeMRS', which are the most restrictive settings.  Refer
+# to http://pax.grsecurity.net/ for details on what these flags are all about.
+# Do not use the obsolete flag 'x'/'X' which has been deprecated.
 #
-# If chpax is not installed, the legacy EI flags (which are
-# not strip-safe, and strictly speaking violate the ELF spec)
-# will not be set.  If paxctl is not installed, it falls back
-# to scanelf.  scanelf is always present, but currently doesn't
-# quite do all that paxctl can do.
-# Returns fail if one or more files could not be marked.
-#
-#
-#### list-paxables {<files>}
-# Prints to stdout all of <files> that are suitable to having PaX
-# flags (i.e. filter to just ELF files).  Useful for passing wild-card
-# lists of files to pax-mark, although in general it is preferable
-# for ebuilds to list precisely which executables are to be marked.
-# Use like:
-#     pax-mark -m $(list-paxables ${S}/{,usr/}bin/*)
-#
-#
-#### host-is-pax
-# Returns true if the host has a PaX-enabled kernel, false otherwise.
-# Intended for use where the build process must be modified conditionally
-# in order to satisfy PaX.  Note; it is _not_ intended to indicate
-# whether the final executables should satisfy PaX - executables should
-# always be marked appropriately even if they're only going to be
-# installed on a non-PaX system.
-
-inherit eutils
-
-# Default to both EI and PT markings.
-PAX_MARKINGS=${PAX_MARKINGS:="EI PT"}
-
-# pax-mark <flags> {<ELF files>}
+# Please confirm any relaxation of restrictions with the Gentoo Hardened team.
+# Either ask on the gentoo-hardened mailing list, or CC/assign hardened@g.o on
+# the bug report.
 pax-mark() {
 	local f flags fail=0 failures="" zero_load_alignment
 	# Ignore '-' characters - in particular so that it doesn't matter if
 	# the caller prefixes with -
 	flags=${1//-}
 	shift
-	# Try chpax, for (deprecated) EI legacy marking.
-	if type -p chpax > /dev/null && hasq EI ${PAX_MARKINGS}; then
-		elog "Legacy EI PaX marking -${flags}"
-		_pax_list_files elog "$@"
-		for f in "$@"; do
-			chpax -${flags} "${f}" && continue
-			fail=1
-			failures="${failures} ${f}"
-		done
-	fi
-	# Try paxctl, then scanelf - paxctl takes precedence
-	# over scanelf.
+	# Try paxctl, then scanelf.  paxctl is preferred.
 	if type -p paxctl > /dev/null && hasq PT ${PAX_MARKINGS}; then
 		# Try paxctl, the upstream supported tool.
 		elog "PT PaX marking -${flags}"
@@ -127,8 +86,7 @@ pax-mark() {
 		done
 	elif type -p scanelf > /dev/null && [[ ${PAX_MARKINGS} != "none" ]]; then
 		# Try scanelf, the Gentoo swiss-army knife ELF utility
-		# Currently this sets EI and PT if it can, no option to
-		# control what it does.
+		# Currently this sets PT if it can, no option to control what it does.
 		elog "Fallback PaX marking -${flags}"
 		_pax_list_files elog "$@"
 		scanelf -Xxz ${flags} "$@"
@@ -145,13 +103,28 @@ pax-mark() {
 	return ${fail}
 }
 
-# list-paxables {<files>}
+# @FUNCTION: list-paxables
+# @USAGE: {<files>}
+# @RETURN: Subset of {<files>} which are ELF executables or shared objects
+# @DESCRIPTION:
+# Print to stdout all of the <files> that are suitable to have PaX flag
+# markings, i.e., filter out the ELF executables or shared objects from a list
+# of files.  This is useful for passing wild-card lists to pax-mark, although
+# in general it is preferable for ebuilds to list precisely which ELFS are to
+# be marked.  Often not all the ELF installed by a package need remarking.
+# @EXAMPLE:
+# pax-mark -m $(list-paxables ${S}/{,usr/}bin/*)
 list-paxables() {
 	file "$@" 2> /dev/null | grep -E 'ELF.*(executable|shared object)' | sed -e 's/: .*$//'
 }
 
-# host-is-pax
-# Note: if procfs is not on /proc, this returns False (e.g. Gentoo/FBSD).
+# @FUNCTION: host-is-pax
+# @RETURN: Shell true if the build process is PaX enabled, shell false otherwise
+# @DESCRIPTION:
+# This is intended for use where the build process must be modified conditionally
+# depending on whether the host is PaX enabled or not.  It is not intedened to
+# determine whether the final binaries need PaX markings.  Note: if procfs is
+# not mounted on /proc, this returns shell false (e.g. Gentoo/FBSD).
 host-is-pax() {
 	grep -qs ^PaX: /proc/self/status
 }
