@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_pre201105151030.ebuild,v 1.1 2011/05/15 19:17:23 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_pre201105211430.ebuild,v 1.1 2011/05/22 07:17:51 olemarkus Exp $
 
 EAPI=4
 
@@ -42,11 +42,10 @@ PHP_MV="$(get_major_version)"
 
 # alias, so we can handle different types of releases (finals, rcs, alphas,
 # betas, ...) w/o changing the whole ebuild
-PHP_PV="$(get_version_component_range 4 )"
-PHP_PV="${PHP_PV/pre/trunk-}"
+PHP_PV="${PV/.0_pre/-}"
 
 PHP_RELEASE="olemarkus"
-PHP_P="${PN}-${PHP_PV}"
+PHP_P="${PN}${PHP_PV}"
 
 PHP_PATCHSET_LOC="olemarkus"
 

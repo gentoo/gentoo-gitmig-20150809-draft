@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.489 2011/05/15 19:17:23 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.490 2011/05/22 07:17:51 olemarkus Exp $
+
+*php-5.5.0_pre201105211430 (22 May 2011)
+*php-5.4.0_pre201105211430 (22 May 2011)
+
+  22 May 2011; Ole Markus With <olemarkus@gentoo.org>
+  -php-5.4.0_pre201105151030.ebuild, +php-5.4.0_pre201105211430.ebuild,
+  +php-5.5.0_pre201105211430.ebuild:
+  Bumped snapshot versions and added a snapshot from the 5.4 branch (5.5 being
+  trunk now)
 
 *php-5.4.0_pre201105151030 (15 May 2011)
 
