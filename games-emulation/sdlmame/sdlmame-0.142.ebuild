@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.142.ebuild,v 1.1 2011/04/11 16:29:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.142.ebuild,v 1.2 2011/05/22 21:51:33 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -64,14 +64,8 @@ src_prepare() {
 		einfo "Patching release with source updates"
 		epatch ${MY_PV%%_p*}*.diff
 	fi
-	sed -i \
-		-e '/CFLAGS += -O$(OPTIMIZE)/s:^:# :' \
-		-e '/CFLAGS += -pipe/s:^:# :' \
-		-e '/LDFLAGS += -s/s:^:# :' \
-		-e '/LDFLAGS =/d' \
-		-e 's:-Werror::' \
-		makefile \
-		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-makefile.patch
+
 	# Don't compile zlib and expat
 	einfo "Disabling embedded libraries: zlib and expat"
 	disable_feature BUILD_ZLIB
