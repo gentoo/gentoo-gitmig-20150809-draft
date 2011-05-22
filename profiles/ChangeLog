@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5391 2011/05/22 12:45:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5392 2011/05/22 15:26:07 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 May 2011; Eray Aslan <eras@gentoo.org> package.mask:
+  mailfilter/amavisd-new-2.7.0_pre* is no longer in the tree.
 
   22 May 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking net-p2p/ghostwhitecrab for removal. Bug #322361
