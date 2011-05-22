@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.1.3.ebuild,v 1.7 2011/03/01 01:13:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.1.3.ebuild,v 1.8 2011/05/22 22:45:39 jer Exp $
 
 EAPI="3"
 
@@ -29,10 +29,11 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
-	app-arch/xz-utils
-	nls? ( sys-devel/gettext )
-	dev-lang/perl
 	=sys-devel/libtool-2*
+	app-arch/xz-utils
+	dev-lang/perl
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )
 "
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.0.2.91-lafile.patch"
