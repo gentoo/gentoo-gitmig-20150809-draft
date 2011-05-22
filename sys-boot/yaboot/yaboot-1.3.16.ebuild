@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.16.ebuild,v 1.4 2011/04/10 14:23:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.16.ebuild,v 1.5 2011/05/22 07:48:57 josejx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
 HOMEPAGE="http://yaboot.ozlabs.org"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~ppc -ppc64"
+KEYWORDS="-* ppc -ppc64"
 IUSE="ibm"
 
 DEPEND="sys-apps/powerpc-utils"
@@ -31,6 +31,9 @@ src_unpack() {
 	if [[ "$(gcc-major-version)" -eq "4" ]]; then
 		epatch "${FILESDIR}/yaboot-nopiessp-gcc4.patch"
 	fi
+
+	# e2fsprogs memalign patch
+	epatch "${FILESDIR}/${P}-memalign.patch"
 }
 
 src_compile() {
