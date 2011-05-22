@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2.ebuild,v 1.2 2011/04/07 21:03:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.2.ebuild,v 1.3 2011/05/22 17:03:59 suka Exp $
 
 EAPI="3"
 
@@ -268,6 +268,7 @@ src_prepare() {
 	cp -f "${FILESDIR}/${PN}-3.3-libpng-1.5.diff" "${S}/patches/hotfixes"
 	cp -f "${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff" "${S}/patches/hotfixes"
 	cp -f "${FILESDIR}/${PN}-libdb5-fix-check.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${P}-bison25.diff" "${S}/patches/hotfixes"
 
 	#Use flag checks
 	if use java ; then
