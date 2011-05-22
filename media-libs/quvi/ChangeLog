@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.23 2011/04/17 22:56:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.24 2011/05/22 03:28:44 radhermit Exp $
+
+*quvi-0.2.16 (22 May 2011)
+
+  22 May 2011; Tim Harder <radhermit@gentoo.org> +quvi-0.2.16.ebuild:
+  Version bump.
 
 *quvi-0.2.15 (17 Apr 2011)
 
