@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/batctl-2011.1.0.ebuild,v 1.2 2011/05/20 23:39:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/batctl-2011.1.0.ebuild,v 1.3 2011/05/22 23:22:09 xmw Exp $
 
 EAPI=3
 
@@ -27,15 +27,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -e "/^CFLAGS/s: -O.* : :" \
-		-e "/^CFLAGS/s: -g.* : :" \
-		-e "/^NUM_CPUS/d" \
-		-e "/\$(MAKE)/s: -j \$(NUM_CPUS) : :" \
+	sed -e "/^CFLAGS/s: -O[^[:space:]]* : :" \
+		-e "/^CFLAGS/s: -g[^[:space:]]* : :" \
+		-e "s: -j \$(NUM_CPUS) : :" \
 		-i Makefile || die
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) Q_CC="" Q_LD="" || die
+	emake CC="$(tc-getCC)" V=1 || die
 }
 
 src_install() {
