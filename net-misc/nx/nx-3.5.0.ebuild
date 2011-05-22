@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0.ebuild,v 1.4 2010/11/08 09:56:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.ebuild,v 1.1 2011/05/22 14:33:10 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -10,18 +10,18 @@ HOMEPAGE="http://www.nomachine.com/developers.php"
 
 URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
 SRC_NX_X11="nx-X11-$PV-1.tar.gz"
-SRC_NXAGENT="nxagent-$PV-3.tar.gz"
+SRC_NXAGENT="nxagent-$PV-2.tar.gz"
 SRC_NXAUTH="nxauth-$PV-1.tar.gz"
 SRC_NXCOMP="nxcomp-$PV-1.tar.gz"
 SRC_NXCOMPEXT="nxcompext-$PV-1.tar.gz"
-SRC_NXCOMPSHAD="nxcompshad-$PV-1.tar.gz"
-SRC_NXPROXY="nxproxy-$PV-2.tar.gz"
+SRC_NXCOMPSHAD="nxcompshad-$PV-2.tar.gz"
+SRC_NXPROXY="nxproxy-$PV-1.tar.gz"
 
 SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT $URI_BASE/$SRC_NXPROXY $URI_BASE/$SRC_NXAUTH $URI_BASE/$SRC_NXCOMPEXT $URI_BASE/$SRC_NXCOMPSHAD $URI_BASE/$SRC_NXCOMP"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXau
@@ -47,12 +47,6 @@ src_prepare() {
 	cd "${WORKDIR}"/nxproxy
 	epatch "${FILESDIR}"/${PN}-3.2.0-nxproxy_read_from_stdin.patch
 
-	# Quiet some warnings
-	cd "${WORKDIR}"/nxcomp
-	epatch "${FILESDIR}"/${PN}-2.1.0-invalid-options.patch
-	# GCC 4.4 + glibc 2.10
-	epatch "${FILESDIR}"/${PN}-3.3.0-nxcomp-glibc2.10.patch
-
 	cd "${WORKDIR}"
 	# Fix sandbox violation
 	epatch "${FILESDIR}"/1.5.0/nx-x11-1.5.0-tmp-exec.patch
@@ -73,6 +67,9 @@ src_prepare() {
 	echo "#define CcCmd $(tc-getCC)" >> ${HOSTCONF}
 	echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> ${HOSTCONF}
+	# Respect LDFLAGS
+	echo "#define ExtraLoadFlags ${LDFLAGS}" >> ${HOSTCONF}
+	echo "#define SharedLibraryLoadFlags -shared ${LDFLAGS}" >> ${HOSTCONF}
 }
 
 src_configure() {
