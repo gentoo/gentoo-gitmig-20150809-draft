@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.6 2010/07/18 18:46:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.7 2011/05/22 16:41:59 mattst88 Exp $
 
 EAPI=1
 inherit linux-info
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/oprofile/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/popt-1.7-r1
