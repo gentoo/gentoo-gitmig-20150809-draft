@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.61 2011/03/13 23:20:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.62 2011/05/22 14:03:45 voyageur Exp $
+
+*nxnode-3.5.0.3 (22 May 2011)
+
+  22 May 2011; Bernard Cafarelli <voyageur@gentoo.org> -nxnode-3.4.0.14.ebuild,
+  -nxnode-3.4.0.16.ebuild, +nxnode-3.5.0.3.ebuild:
+  3.5.0 version bump, mostly fixes consolidation from 3.4.0 branch. Drop some
+  3.4.0 versions
 
 *nxnode-3.4.0.16-r1 (13 Mar 2011)
 

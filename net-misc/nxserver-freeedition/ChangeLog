@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.51 2011/03/02 15:27:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.52 2011/05/22 14:05:24 voyageur Exp $
+
+*nxserver-freeedition-3.5.0.4 (22 May 2011)
+
+  22 May 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -nxserver-freeedition-3.4.0.15.ebuild, +nxserver-freeedition-3.5.0.4.ebuild:
+  3.5.0 version bump, mostly fixes consolidation from 3.4.0 branch. Drop some
+  3.4.0 versions
 
 *nxserver-freeedition-3.4.0.17 (02 Mar 2011)
 
