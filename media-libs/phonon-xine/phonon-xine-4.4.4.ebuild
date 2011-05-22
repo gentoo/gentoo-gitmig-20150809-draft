@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/phonon-xine-4.4.4.ebuild,v 1.3 2011/05/09 23:02:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/phonon-xine-4.4.4.ebuild,v 1.4 2011/05/22 14:53:35 josejx Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-xine"
 SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/src/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 SLOT="0"
 IUSE="debug +xcb"
 
