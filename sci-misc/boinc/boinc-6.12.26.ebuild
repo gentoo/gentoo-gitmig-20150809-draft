@@ -1,19 +1,19 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.10.58-r1.ebuild,v 1.3 2010/11/08 17:52:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.26.ebuild,v 1.1 2011/05/22 09:22:59 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit flag-o-matic depend.apache eutils wxwidgets autotools autotools-utils
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
-SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.bz2"
+SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X +client cuda"
+IUSE="X cuda"
 
 RDEPEND="
 	!sci-misc/boinc-bin
@@ -30,13 +30,23 @@ RDEPEND="
 	X? (
 		dev-db/sqlite:3
 		media-libs/freeglut
+		sys-libs/glibc:2.2
 		virtual/jpeg
+		x11-libs/gtk+:2
+		x11-libs/libnotify
 		x11-libs/wxGTK:2.8[X,opengl]
 	)
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext
+	app-text/docbook-xml-dtd:4.4
+	app-text/docbook2X
 "
+
+PATCHES=(
+	"${FILESDIR}/${PV}-fix_subdirs.patch"
+	"${FILESDIR}/${PV}-libnotify-0.7.patch"
+)
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
@@ -55,10 +65,11 @@ src_prepare() {
 
 src_configure() {
 	local wxconf=""
-	local conf=""
 
 	# define preferable CFLAGS (recommended by upstream)
 	append-flags -O3 -funroll-loops -fforce-addr -ffast-math
+	# add gtk includes
+	append-flags "$(pkg-config --cflags gtk+-2.0)"
 
 	# look for wxGTK
 	if use X; then
@@ -69,19 +80,16 @@ src_configure() {
 		wxconf+=" --without-wxdir"
 	fi
 
-	conf+=" --disable-server"
-	use X || conf+=" --disable-manager"
-	use client || conf+=" --disable-client"
-
-	# configure
 	myeconfargs=(
-		--disable-dependency-tracking
+		--disable-server
+		--enable-client
+		--enable-dynamic-client-linkage
 		--disable-static
 		--enable-unicode
 		--with-ssl
 		$(use_with X x)
+		$(use_enable X manager)
 		${wxconf}
-		${conf}
 	)
 	autotools-utils_src_configure
 }

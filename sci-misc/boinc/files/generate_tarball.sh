@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## $Id: generate_tarball.sh,v 1.1 2010/04/02 09:48:24 scarabeus Exp $
+## $Id: generate_tarball.sh,v 1.2 2011/05/22 09:22:59 scarabeus Exp $
 ## Modified by scarabeus 2008-10-23
 ###############################################################################
 # functions
@@ -83,8 +83,8 @@ popd > /dev/null
 ###############################################################################
 # create tbz
 ###############################################################################
-tar cjf "${PACKAGE}".tar.bz2 ${PACKAGE} >> "${LOG}"
-find ./ -maxdepth 1 -type f -name \*.tar.bz2 -print | while read FILE ; do
+tar cJf "${PACKAGE}".tar.xz ${PACKAGE} >> "${LOG}"
+find ./ -maxdepth 1 -type f -name \*.tar.xz -print | while read FILE ; do
 	echo "FILE: ${FILE}"
 	echo "      SIZE: $(`which du` -h ${FILE} |`which awk` -F' ' '{print $1}')"
 	echo "    MD5SUM: $(`which md5sum` ${FILE} |`which awk` -F' ' '{print $1}')"
