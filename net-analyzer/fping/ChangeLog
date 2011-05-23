@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fping
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.30 2010/08/25 16:22:07 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.31 2011/05/23 20:44:00 hwoarang Exp $
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  fping-2.4_beta2_p161-r1.ebuild:
+  Stable on amd64 wrt bug #367905
 
 *fping-2.4_beta2_p161-r1 (25 Aug 2010)
 
