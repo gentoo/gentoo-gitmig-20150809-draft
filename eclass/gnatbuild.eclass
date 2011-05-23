@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.51 2011/03/10 19:36:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.52 2011/05/23 14:09:04 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -436,9 +436,12 @@ gnatbuild_src_compile() {
 		fi
 
 		export CC="${GNATBOOT}/bin/gnatgcc"
-		export INCLUDE_DIR="${GNATLIB}/include"
-		export C_INCLUDE_PATH="${GNATLIB}/include"
-		export CPLUS_INCLUDE_PATH="${GNATLIB}/include"
+		# CPATH is supposed to be applied for any language, thus
+		# superceding either of C/CPLUS/OBJC_INCLUDE_PATHs
+		export CPATH="${GNATLIB}/include"
+		#export INCLUDE_DIR="${GNATLIB}/include"
+		#export C_INCLUDE_PATH="${GNATLIB}/include"
+		#export CPLUS_INCLUDE_PATH="${GNATLIB}/include"
 		export LIB_DIR="${GNATLIB}"
 		export LDFLAGS="-L${GNATLIB}"
 
