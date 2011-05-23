@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.288 2011/03/29 11:10:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.289 2011/05/23 08:27:48 phajdan.jr Exp $
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gstreamer-0.10.32-r1.ebuild:
+  x86 stable wrt bug #368281
 
   28 Mar 2011; Mart Raudsepp <leio@gentoo.org> gstreamer-0.10.32-r1.ebuild:
   Add ~mips keyword
