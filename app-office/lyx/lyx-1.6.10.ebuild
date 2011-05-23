@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.10.ebuild,v 1.2 2011/05/21 04:25:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.10.ebuild,v 1.3 2011/05/23 03:00:03 aballier Exp $
 
 EAPI=2
 
@@ -94,6 +94,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/1.6.7-python.patch
+	epatch "${FILESDIR}"/1.6.10-gcc.patch
 	echo "#!/bin/sh" > config/py-compile
 	sed "s:python -tt:$(PYTHON) -tt:g" -i lib/configure.py || die
 }
