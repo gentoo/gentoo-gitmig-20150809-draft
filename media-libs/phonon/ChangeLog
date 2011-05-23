@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.13 2011/05/22 14:58:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.14 2011/05/23 20:07:59 scarabeus Exp $
+
+  23 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> phonon-4.5.0.ebuild,
+  phonon-9999.ebuild:
+  Follow the upstream and make gstreamer default (since 4.5.0 it is default for
+  upstream).
 
   22 May 2011; Joseph Jezak <josejx@gentoo.org> phonon-4.5.0.ebuild:
   Marked ~ppc/~ppc64.

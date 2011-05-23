@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.6 2011/05/22 14:58:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.7 2011/05/23 20:07:59 scarabeus Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/stable/phonon/${PV}/src/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
-IUSE="aqua debug gstreamer pulseaudio +vlc xine"
+IUSE="aqua debug +gstreamer pulseaudio vlc xine"
 
 COMMON_DEPEND="
 	>=x11-libs/qt-core-4.6.0:4
