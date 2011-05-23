@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.5 2011/03/02 13:12:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/chemtool-1.6.12.ebuild,v 1.6 2011/05/23 15:18:32 jlec Exp $
 
-EAPI="1"
+EAPI=1
 
 inherit eutils
 
-DESCRIPTION="A GTK program for drawing organic molecules"
+DESCRIPTION="GTK program for drawing organic molecules"
 HOMEPAGE="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/"
 SRC_URI="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/${P}.tar.gz"
 
@@ -43,13 +43,12 @@ src_compile() {
 		config_opts="${config_opts} --without-gnomedir" ;
 	fi
 
-	econf ${config_opts} --enable-menu \
-		|| die "./configure failed"
+	econf ${config_opts} --enable-menu
 	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog INSTALL README TODO
 	insinto /usr/share/${PN}/examples
 	doins "${S}"/examples/*
