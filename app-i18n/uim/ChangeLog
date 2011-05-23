@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.231 2011/03/29 10:50:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.232 2011/05/23 17:28:21 matsuu Exp $
+
+*uim-1.7.0 (23 May 2011)
+
+  23 May 2011; MATSUU Takuto <matsuu@gentoo.org> +uim-1.7.0.ebuild,
+  files/xinput-uim, metadata.xml:
+  Version bumped. Added gtk3 local USE flag. Fixed bug #366889.
 
   29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> uim-1.5.7.ebuild:
   Apply -1.6.1-libnotify-0.7.patch also for current stable.
