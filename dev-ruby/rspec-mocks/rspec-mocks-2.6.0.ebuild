@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/rspec-mocks-2.6.0.ebuild,v 1.1 2011/05/13 06:45:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/rspec-mocks-2.6.0.ebuild,v 1.2 2011/05/23 17:26:00 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 
@@ -47,7 +47,15 @@ all_ruby_compile() {
 }
 
 each_ruby_test() {
-	PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -S rake spec || die
+	case ${RUBY} in
+		*jruby)
+			# This particular failure is reported to be fixed in jruby 1.6.
+			ewarn "Tests disabled because they crash jruby."
+			;;
+		*)
+			PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -S rake spec || die
+			;;
+	esac
 
 	# There are features but they require aruba which we don't have yet.
 }

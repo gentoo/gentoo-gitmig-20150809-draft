@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.6.0.ebuild,v 1.1 2011/05/13 10:26:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.6.0.ebuild,v 1.2 2011/05/23 17:24:58 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18 ree18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC="none"
@@ -24,12 +24,13 @@ RDEPEND="${RDEPEND} !<dev-ruby/rspec-1.3.1-r1"
 
 ruby_add_bdepend "test? (
 		dev-ruby/syntax
+		>=dev-ruby/zentest-4.4.1
 		dev-ruby/rspec-expectations:2
 		dev-ruby/rspec-mocks:2
 	)"
 
 #	>=dev-ruby/cucumber-0.5.3
-#	>=dev-ruby/autotest-4.2.9
+#	>=dev-ruby/autotest-4.2.9 -> zentest-4.4.1
 #	dev-ruby/aruba"
 
 all_ruby_prepare() {
@@ -41,6 +42,11 @@ all_ruby_prepare() {
 
 	# Also clean the /usr/lib/rubyee path (which is our own invention).
 	sed -i -e 's#lib\\d\*\\/ruby\\/#lib\\d*\\/ruby(ee|)\\/#' lib/rspec/core/configuration.rb || die
+
+	# Remove jruby-specific comparison documents since for us the normal
+	# version passes.
+	cp spec/rspec/core/formatters/html_formatted-1.8.7.html spec/rspec/core/formatters/html_formatted-1.8.7-jruby.html|| die
+	cp spec/rspec/core/formatters/text_mate_formatted-1.8.7.html spec/rspec/core/formatters/text_mate_formatted-1.8.7-jruby.html|| die
 }
 
 all_ruby_compile() {
@@ -50,7 +56,16 @@ all_ruby_compile() {
 }
 
 each_ruby_test() {
-	PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -S rake spec || die "Tests failed."
+	case ${RUBY} in
+		*jruby)
+			# Run jruby's tests with the installed rspec script since
+			# otherwise files can't be found for some unknown reason.
+			RUBYLIB=${S}/lib ${RUBY} -S rspec --color spec || die "Tests failed."
+			;;
+		*)
+			PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -S rake spec || die "Tests failed."
+			;;
+	esac
 
 	# There are features but it seems as if these only work against a
 	# fully installed version.
