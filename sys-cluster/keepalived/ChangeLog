@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.72 2011/02/11 11:11:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.73 2011/05/23 20:09:12 hwoarang Exp $
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org> keepalived-1.2.2.ebuild:
+  Stable on amd64 wrt bug #368225
 
   11 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/keepalived-1.1.13-do-not-need-kernel-sources.patch,
