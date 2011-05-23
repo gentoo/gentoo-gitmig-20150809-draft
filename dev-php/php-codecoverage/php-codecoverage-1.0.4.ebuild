@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codecoverage/php-codecoverage-1.0.4.ebuild,v 1.4 2011/04/16 12:53:36 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codecoverage/php-codecoverage-1.0.4.ebuild,v 1.5 2011/05/23 10:28:15 phajdan.jr Exp $
 
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
 PHP_PEAR_PN="PHP_CodeCoverage"
@@ -9,7 +9,7 @@ inherit php-pear-lib-r1
 DESCRIPTION="Library that provides collection, processing, and rendering functionality for PHP code coverage"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 HOMEPAGE="http://pear.phpunit.de"
 

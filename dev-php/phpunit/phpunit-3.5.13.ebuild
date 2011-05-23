@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.3 2011/04/16 12:57:04 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-3.5.13.ebuild,v 1.4 2011/05/23 10:30:34 phajdan.jr Exp $
 
 EAPI="2"
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
@@ -8,7 +8,7 @@ PHP_PEAR_PN="PHPUnit"
 
 inherit php-pear-lib-r1
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DESCRIPTION="Unit testing framework for PHP5"
 HOMEPAGE="http://www.phpunit.de/"

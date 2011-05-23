@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.2 2011/03/26 11:43:06 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.3 2011/05/23 10:30:34 phajdan.jr Exp $
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> phpunit-3.5.13.ebuild:
+  x86 stable wrt bug #368293
 
 *phpunit-3.5.13 (26 Mar 2011)
 
