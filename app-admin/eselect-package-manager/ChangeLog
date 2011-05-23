@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-package-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.10 2011/05/21 17:59:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.11 2011/05/23 00:52:20 josejx Exp $
+
+  23 May 2011; Joseph Jezak <josejx@gentoo.org>
+  eselect-package-manager-20110108.ebuild:
+  Marked ppc/ppc64 stable for bug #366937.
 
   21 May 2011; Raúl Porcel <armin76@gentoo.org>
   eselect-package-manager-20110108.ebuild:
