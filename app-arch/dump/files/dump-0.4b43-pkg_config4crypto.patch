@@ -1,0 +1,50 @@
+=== modified file 'configure.in'
+--- configure.in	2011-05-20 09:47:25 +0000
++++ configure.in	2011-05-20 09:51:37 +0000
+@@ -113,7 +113,6 @@
+ if test "$enableval" = "no"
+ then
+ 	ERMT=""
+-	CRYPTO=""
+ 	echo "Not compiling ermt"
+ else
+ 	if test "$RMTDIR" = ""
+@@ -121,16 +120,13 @@
+ 		AC_MSG_ERROR(ermt requires --enable-rmt)
+ 	fi
+ 	ERMT="ermt"
+-	CRYPTO="-lcrypto"
+ 	echo "Compiling ermt"
+ fi
+ ,
+ ERMT=""
+-CRYPTO=""
+ echo "Not compiling ermt by default"
+ )
+ AC_SUBST(ERMT)
+-AC_SUBST(CRYPTO)
+ 
+ dnl
+ dnl Handle --enable-kerberos
+@@ -600,10 +596,19 @@
+ if test "$ERMT" != ""; then
+ 	AC_CHECK_HEADER(openssl/evp.h, [evp_h=yes], [evp_h=no])
+ 	AC_CHECK_LIB(crypto, EVP_CIPHER_CTX_set_padding, [crypto_lib=yes], [crypto_lib=no])
+-	if test "$evp_h" = no -o "$crypto_lib" = no; then
++	PKG_CHECK_EXISTS([libcrypto],
++		[
++		if test -n $STATIC ; then
++			CRYPTO=`$PKG_CONFIG --libs --static libcrypto`
++		else
++			CRYPTO=`$PKG_CONFIG --libs libcrypto`
++		fi
++		],[CRYPTO=""])
++	if test "$evp_h" = no -o "x$CRYPTO" = "x"; then
+ 		AC_MSG_ERROR(You need to install the OpenSSL library (version 0.9.7a or later), or configure without --enable-ermt)
+ 	fi
+ fi
++AC_SUBST(CRYPTO)
+ 
+ dnl
+ dnl Check for types
+
