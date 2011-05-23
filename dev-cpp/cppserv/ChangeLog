@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/cppserv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.54 2010/12/21 02:22:41 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.55 2011/05/23 14:31:27 iluxa Exp $
+
+*cppserv-0.2.14 (23 May 2011)
+
+  23 May 2011; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  +cppserv-0.2.14.ebuild, +files/cppserv-0.2.14-asneeded.patch:
+  Verbump to 0.2.14
 
   21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> cppserv-0.2.13.ebuild:
   Stable on amd64 wrt bug #346887
