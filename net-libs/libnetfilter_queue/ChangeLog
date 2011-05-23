@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnetfilter_queue
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.12 2009/09/08 16:58:19 ikelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.13 2011/05/23 10:28:41 jer Exp $
+
+*libnetfilter_queue-1.0.0 (23 May 2011)
+
+  23 May 2011; Jeroen Roovers <jer@gentoo.org>
+  +libnetfilter_queue-1.0.0.ebuild:
+  Version bump thanks to Peter Volkov (bug #). Add IUSE=static-libs.
 
   08 Sep 2009; Mike Auty <ikelos@gentoo.org>
   libnetfilter_queue-0.0.12.ebuild, libnetfilter_queue-0.0.13.ebuild,
