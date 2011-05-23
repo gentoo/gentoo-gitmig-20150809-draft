@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.72 2011/03/20 20:19:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.73 2011/05/23 13:48:26 iluxa Exp $
+
+*sptk-4.11 (23 May 2011)
+
+  23 May 2011; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org> +sptk-4.11.ebuild:
+  Verbump to 4.11
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> sptk-3.5.8.10.ebuild,
   sptk-3.5.8.14.ebuild, sptk-3.5.8.14-r1.ebuild, sptk-4.00.ebuild,
