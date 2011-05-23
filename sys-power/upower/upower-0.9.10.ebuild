@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.10.ebuild,v 1.1 2011/05/15 10:16:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.10.ebuild,v 1.2 2011/05/23 18:34:35 scarabeus Exp $
 
 EAPI=4
-inherit linux-info
+inherit linux-info eutils
 
 DESCRIPTION="D-Bus abstraction for enumerating power devices and querying history and statistics"
 HOMEPAGE="http://upower.freedesktop.org/"
@@ -49,6 +49,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e '/DISABLE_DEPRECATED/d' configure || die
+	epatch "${FILESDIR}/${PV}-glib.patch"
 }
 
 src_configure() {

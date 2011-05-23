@@ -1,0 +1,40 @@
+From 2b42890480f21d55a2516de9126a9d83a54742da Mon Sep 17 00:00:00 2001
+From: Richard Hughes <richard@hughsie.com>
+Date: Mon, 23 May 2011 08:42:38 +0000
+Subject: Only include glib-unix.h if the GLib version is >= 2.29.4
+
+Many thanks to Takahiro HASHIMOTO for debugging the problem. Fixes fdo#37489
+---
+diff --git a/src/up-main.c b/src/up-main.c
+index 2e35f9e..c1e490b 100644
+--- a/src/up-main.c
++++ b/src/up-main.c
+@@ -41,7 +41,7 @@
+ #include "up-kbd-backlight.h"
+ #include "up-wakeups.h"
+ 
+-#if GLIB_CHECK_VERSION(2,28,7)
++#if GLIB_CHECK_VERSION(2,29,4)
+  #include <glib-unix.h>
+ #endif
+ 
+@@ -92,7 +92,7 @@ out:
+ 	return ret;
+ }
+ 
+-#if GLIB_CHECK_VERSION(2,28,7)
++#if GLIB_CHECK_VERSION(2,29,4)
+ 
+ /**
+  * up_main_sigint_cb:
+@@ -201,7 +201,7 @@ main (gint argc, gchar **argv)
+ 		goto out;
+ 	}
+ 
+-#if GLIB_CHECK_VERSION(2,28,7)
++#if GLIB_CHECK_VERSION(2,29,4)
+ 	/* do stuff on ctrl-c */
+ 	g_unix_signal_add_watch_full (SIGINT,
+ 				      G_PRIORITY_DEFAULT,
+--
+cgit v0.8.3-6-g21f6
