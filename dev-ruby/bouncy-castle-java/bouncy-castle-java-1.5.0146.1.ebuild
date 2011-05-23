@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bouncy-castle-java/bouncy-castle-java-1.5.0146.1.ebuild,v 1.1 2011/04/30 06:08:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bouncy-castle-java/bouncy-castle-java-1.5.0146.1.ebuild,v 1.2 2011/05/23 20:43:21 tomka Exp $
 
 EAPI=2
 
@@ -16,5 +16,5 @@ HOMEPAGE="http://www.bouncycastle.org/java.html"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""

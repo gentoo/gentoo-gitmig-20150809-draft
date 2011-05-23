@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bouncy-castle-java
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bouncy-castle-java/ChangeLog,v 1.2 2011/04/30 06:08:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bouncy-castle-java/ChangeLog,v 1.3 2011/05/23 20:43:21 tomka Exp $
+
+  23 May 2011; Thomas Kahle <tomka@gentoo.org>
+  bouncy-castle-java-1.5.0146.1.ebuild:
+  ~x86 keyword per bug 365379
 
 *bouncy-castle-java-1.5.0146.1 (30 Apr 2011)
 
