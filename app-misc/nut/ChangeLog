@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.20 2011/05/21 16:58:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.21 2011/05/23 00:38:56 jer Exp $
+
+  23 May 2011; Jeroen Roovers <jer@gentoo.org> nut-16.5.ebuild,
+  nut-16.9.ebuild, nut-16.11.ebuild:
+  Change x11-libs/fltk dependency thanks to Michael Weber (bug #368271).
 
   21 May 2011; Jeroen Roovers <jer@gentoo.org> -nut-10.15.ebuild,
   nut-14.1.ebuild, nut-16.5.ebuild, nut-16.9.ebuild, nut-16.11.ebuild:
