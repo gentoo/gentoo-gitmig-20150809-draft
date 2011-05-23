@@ -81,7 +81,7 @@ attach() {
 	password=$(cat "${RUNTIMEDIR}/gui_rpc_auth.cfg")
 
 	ebegin "${SVCNAME}: Attaching to project"
-	su -m ${USER} -c "boinccmd --passwd "${password}" --project_attach ${url} ${key}"
+	su -m ${USER} -c "boinccmd --passwd \"${password}\" --project_attach ${url} ${key}"
 	eend $?
 
 	unset password url key
@@ -96,7 +96,7 @@ stop() {
 	password=$(cat "${RUNTIMEDIR}/gui_rpc_auth.cfg")
 
 	ebegin "Stopping ${SVCNAME}"
-	su -m ${USER} -c "boinccmd --passwd "${password}" --quit"
+	su -m ${USER} -c "boinccmd --passwd \"${password}\" --quit"
 	eend $?
 
 	unset password
