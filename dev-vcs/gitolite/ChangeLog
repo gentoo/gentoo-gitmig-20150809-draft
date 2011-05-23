@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitolite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.5 2011/05/21 16:30:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.6 2011/05/23 21:40:43 hwoarang Exp $
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org> gitolite-1.5.9.1.ebuild:
+  Stable on amd64 wrt bug #368263
 
 *gitolite-2.0.1 (21 May 2011)
 

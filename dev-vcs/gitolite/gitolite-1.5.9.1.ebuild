@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-1.5.9.1.ebuild,v 1.2 2011/03/03 18:04:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-1.5.9.1.ebuild,v 1.3 2011/05/23 21:40:43 hwoarang Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="contrib vim-syntax"
 
 DEPEND="dev-lang/perl
