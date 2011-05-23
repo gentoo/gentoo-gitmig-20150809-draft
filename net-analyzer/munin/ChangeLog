@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.51 2011/04/03 22:15:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.52 2011/05/23 20:32:41 hwoarang Exp $
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org> munin-1.4.5-r3.ebuild:
+  Stable on amd64 wrt bug #367721
 
   03 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   files/munin-node_init.d_1.4.5-r3:
