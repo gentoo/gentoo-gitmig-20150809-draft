@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.106 2011/05/22 18:20:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.107 2011/05/23 19:17:27 tampakrap Exp $
+
+  23 May 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  plasma-workspace-4.6.3-r2.ebuild:
+  Revert the panel misplacement patch per popular demand, bug 364555
 
 *plasma-workspace-4.6.3-r2 (22 May 2011)
 
