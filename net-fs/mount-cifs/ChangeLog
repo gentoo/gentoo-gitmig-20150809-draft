@@ -1,9 +1,9 @@
 # ChangeLog for net-fs/mount-cifs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.22 2011/04/11 17:00:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/ChangeLog,v 1.23 2011/05/23 16:23:08 vostorga Exp $
 
   11 Apr 2011; Christoph Mende <angelos@gentoo.org> mount-cifs-3.0.30.ebuild:
-  QA: Respect LDFLAGS, added missing die
+  QA: Respect LDFLAGS, added missing die, bug #253106
 
   06 Mar 2009; Joshua Kinard <kumba@gentoo.org> mount-cifs-3.0.30.ebuild:
   Added ~mips to KEYWORDS
