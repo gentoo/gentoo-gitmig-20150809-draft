@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/PEAR-Text_Template
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-Text_Template/ChangeLog,v 1.1 2010/10/04 22:46:17 jokey Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/PEAR-Text_Template/ChangeLog,v 1.2 2011/05/23 10:25:40 phajdan.jr Exp $
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  PEAR-Text_Template-1.0.0.ebuild:
+  x86 stable wrt bug #368293
 
 *PEAR-Text_Template-1.0.0 (04 Oct 2010)
 
