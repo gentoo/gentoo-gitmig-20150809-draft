@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.96 2011/05/17 05:50:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.97 2011/05/23 18:00:39 tomka Exp $
+
+  23 May 2011; Thomas Kahle <tomka@gentoo.org> gdata-2.0.14.ebuild:
+  x86 stable per bug 364867
 
   17 May 2011; Markus Meier <maekke@gentoo.org> gdata-2.0.14.ebuild:
   arm stable, bug #364867
