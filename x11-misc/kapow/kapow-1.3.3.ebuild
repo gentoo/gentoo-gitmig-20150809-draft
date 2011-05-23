@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kapow/kapow-1.3.2.ebuild,v 1.1 2010/07/02 08:04:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kapow/kapow-1.3.3.ebuild,v 1.1 2011/05/23 16:48:59 xarthisius Exp $
 
-EAPI=2
+EAPI=4
 inherit qt4-r2
 
 DESCRIPTION="A punch clock program designed to easily keep track of your hours"
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
