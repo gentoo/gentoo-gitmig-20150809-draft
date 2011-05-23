@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/tkpiechart-6.5-r1.ebuild,v 1.2 2011/05/11 19:59:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/tkpiechart-6.5-r1.ebuild,v 1.3 2011/05/23 07:14:35 tomka Exp $
 
 inherit multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jfontain.free.fr/piechart6.htm"
 SRC_URI="http://jfontain.free.fr/${P}.tar.bz2"
 
 LICENSE="as-is"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
 

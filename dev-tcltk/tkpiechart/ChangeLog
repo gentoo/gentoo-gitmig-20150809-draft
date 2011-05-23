@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkpiechart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/ChangeLog,v 1.8 2011/05/11 19:59:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpiechart/ChangeLog,v 1.9 2011/05/23 07:14:35 tomka Exp $
+
+  23 May 2011; Thomas Kahle <tomka@gentoo.org> tkpiechart-6.5-r1.ebuild:
+  x86 stable per bug 364825
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> tkpiechart-6.5-r1.ebuild:
   Stable on amd64 wrt bug #364825

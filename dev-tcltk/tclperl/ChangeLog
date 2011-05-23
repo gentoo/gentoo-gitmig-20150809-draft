@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclperl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.9 2011/05/11 19:58:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.10 2011/05/23 07:16:41 tomka Exp $
+
+  23 May 2011; Thomas Kahle <tomka@gentoo.org> tclperl-3.2.ebuild:
+  x86 stable per bug 364825
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> tclperl-3.2.ebuild:
   Stable on amd64 wrt bug #364825
