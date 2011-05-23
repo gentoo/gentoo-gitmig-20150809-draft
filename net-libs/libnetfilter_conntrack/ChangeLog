@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.35 2010/10/06 16:07:04 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.36 2011/05/23 10:31:37 jer Exp $
+
+*libnetfilter_conntrack-0.9.1 (23 May 2011)
+
+  23 May 2011; Jeroen Roovers <jer@gentoo.org>
+  +libnetfilter_conntrack-0.9.1.ebuild:
+  Version bump thanks to Peter Volkov (bug #329059). Add IUSE=static-libs.
 
   06 Oct 2010; Jeroen Roovers <jer@gentoo.org>
   libnetfilter_conntrack-0.0.101.ebuild:
