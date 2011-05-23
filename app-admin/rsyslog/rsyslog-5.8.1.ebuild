@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.0-r1.ebuild,v 1.1 2011/05/16 10:56:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.1.ebuild,v 1.1 2011/05/23 08:01:54 ultrabug Exp $
 
 EAPI=4
 
@@ -52,6 +52,7 @@ src_configure() {
 		--enable-unlimited-select
 		--enable-imdiag
 		--enable-imfile
+		--enable-impstats
 		--enable-imtemplate
 		--enable-imptcp
 		--enable-mail
@@ -62,6 +63,9 @@ src_configure() {
 		--enable-omuxsock
 		--enable-pmlastmsg
 		--enable-pmrfc3164sd
+		--enable-pmcisconames
+		--enable-pmaixforwardedfrom
+		--enable-pmsnare
 		$(use_enable extras omudpspoof)
 		$(use_enable zlib)
 		$(use_enable mysql)
@@ -72,6 +76,7 @@ src_configure() {
 		$(use_enable kerberos gssapi-krb5)
 		$(use_enable relp)
 		$(use_enable snmp)
+		$(use_enable snmp mmsnmptrapd)
 		$(use_enable debug)
 		$(use_enable debug rtinst)
 		$(use_enable debug diagtools)
