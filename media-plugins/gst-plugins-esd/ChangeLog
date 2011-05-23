@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-esd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.166 2011/03/20 08:43:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.167 2011/05/23 08:40:25 phajdan.jr Exp $
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-esd-0.10.28.ebuild:
+  x86 stable wrt bug #368281
 
 *gst-plugins-esd-0.10.28 (20 Mar 2011)
 

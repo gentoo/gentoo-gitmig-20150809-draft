@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/gst-plugins-x264-0.10.17.ebuild,v 1.1 2011/03/17 21:34:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/gst-plugins-x264-0.10.17.ebuild,v 1.2 2011/05/23 08:53:37 phajdan.jr Exp $
 
 inherit eutils gst-plugins-ugly
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 # 20100224 ensures us X264_BUILD >= 86, which added presets support

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/gst-plugins-a52dec-0.10.17.ebuild,v 1.1 2011/03/17 21:34:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/gst-plugins-a52dec-0.10.17.ebuild,v 1.2 2011/05/23 08:51:12 phajdan.jr Exp $
 
 EAPI=1
 
@@ -9,7 +9,7 @@ GST_ORC=yes
 
 inherit gst-plugins-ugly
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=media-libs/a52dec-0.7.3
