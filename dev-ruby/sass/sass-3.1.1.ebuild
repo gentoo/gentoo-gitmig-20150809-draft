@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.1.1.ebuild,v 1.2 2011/05/01 08:28:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.1.1.ebuild,v 1.3 2011/05/23 12:48:09 graaff Exp $
 
 EAPI=2
 
@@ -26,4 +26,4 @@ IUSE=""
 ruby_add_bdepend "doc? ( >=dev-ruby/yard-0.5.3 >=dev-ruby/maruku-0.5.9 )"
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
-ruby_add_rdepend "dev-ruby/fssm"
+ruby_add_rdepend "dev-ruby/fssm !!<dev-ruby/haml-3.1"
