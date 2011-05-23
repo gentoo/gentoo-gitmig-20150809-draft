@@ -1,6 +1,9 @@
 # ChangeLog for games-action/garden
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.6 2011/03/26 17:28:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.7 2011/05/23 01:08:43 josejx Exp $
+
+  23 May 2011; Joseph Jezak <josejx@gentoo.org> garden-1.0.8.ebuild:
+  Marked ~ppc for bug #365995.
 
   26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> garden-1.0.8.ebuild:
   Pin media-libs/allegro to old version.
