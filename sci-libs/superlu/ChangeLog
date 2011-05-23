@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/superlu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.8 2011/05/11 20:00:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.9 2011/05/23 17:19:08 tomka Exp $
+
+  23 May 2011; Thomas Kahle <tomka@gentoo.org> superlu-4.1-r1.ebuild:
+  x86 stable per bug 364863
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> superlu-4.1-r1.ebuild:
   Stable on amd64 wrt bug #364863
