@@ -1,32 +1,30 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.3-r1.ebuild,v 1.1 2011/02/19 17:23:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.6.ebuild,v 1.1 2011/05/23 08:51:20 scarabeus Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
-EAPI=3
+EAPI=4
 
-inherit multilib eutils libtool prefix
+inherit autotools multilib eutils libtool prefix
 
-#MY_P=${P/_pre/-}
 DESCRIPTION="A Client that groks URLs"
 HOMEPAGE="http://curl.haxx.se/"
-#SRC_URI="http://cool.haxx.se/curl-daily/${MY_P}.tar.bz2"
 SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="ares gnutls idn ipv6 kerberos ldap libssh2 nss ssl test threads"
+IUSE="ares gnutls idn ipv6 kerberos ldap libssh2 nss ssl static-libs test threads"
 
 RDEPEND="ldap? ( net-nds/openldap )
 	ssl? (
-		gnutls? ( net-libs/gnutls app-misc/ca-certificates )
+		gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
 		nss? ( !gnutls? ( dev-libs/nss app-misc/ca-certificates ) )
 		!gnutls? ( !nss? ( dev-libs/openssl ) )
 	)
 	idn? ( net-dns/libidn )
-	!threads? ( ares? ( >=net-dns/c-ares-1.4.0 ) )
+	ares? ( >=net-dns/c-ares-1.4.0 )
 	kerberos? ( virtual/krb5 )
 	libssh2? ( >=net-libs/libssh2-0.16 )"
 
@@ -41,37 +39,34 @@ DEPEND="${RDEPEND}
 	)"
 # used - but can do without in self test: net-misc/stunnel
 
-pkg_setup() {
-	if ! use ssl && ( use gnutls || use nss ) ; then
-		ewarn "USE='gnutls nss' are ignored without USE='ssl'."
-		ewarn "Please review the local USE flags for this package."
-	fi
-	if use ares && use threads; then
-		ewarn "USE flags 'ares' and 'threads' are mutually exclusive,"
-		ewarn "disabling 'ares', please review and re-emerge if needed."
-	fi
-}
+# ares must be disabled for threads and both can be disabled
+# one can use wether gnutls or nss if ssl is enabled
+REQUIRED_USE="threads? ( !ares )
+	gnutls? ( ssl )
+	nss? ( ssl )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.20.0-strip-ldflags.patch \
 		"${FILESDIR}"/${PN}-7.19.7-test241.patch \
 		"${FILESDIR}"/${PN}-7.18.2-prefix.patch \
-		"${FILESDIR}"/${PN}-7.21.3-buffer-overflow.patch
+		"${FILESDIR}"/${PN}-respect-cflags.patch
 
 	eprefixify curl-config.in
-	# for FreeMiNT
-	elibtoolize
+	eautoreconf
 }
 
 src_configure() {
+	local myconf
+
 	myconf="$(use_enable ldap)
 		$(use_enable ldap ldaps)
 		$(use_with idn libidn)
 		$(use_with kerberos gssapi "${EPREFIX}"/usr)
 		$(use_with libssh2)
+		$(use_enable static-libs static)
 		$(use_enable ipv6)
 		$(use_enable threads threaded-resolver)
-		$(use threads && echo --disable-ares || use_enable ares)
+		$(use_enable ares)
 		--enable-http
 		--enable-ftp
 		--enable-gopher
@@ -93,31 +88,32 @@ src_configure() {
 
 	if use ssl ; then
 		if use gnutls; then
-			myconf="${myconf} --without-ssl --with-gnutls --without-nss"
-			myconf="${myconf} --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
+			myconf+=" --without-ssl --with-gnutls --without-nss"
+			myconf+=" --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
 		elif use nss; then
-			myconf="${myconf} --without-ssl --without-gnutls --with-nss"
-			myconf="${myconf} --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
+			myconf+=" --without-ssl --without-gnutls --with-nss"
+			myconf+=" --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
 		else
-			myconf="${myconf} --without-gnutls --without-nss --with-ssl"
-			myconf="${myconf} --without-ca-bundle --with-ca-path=${EPREFIX}/etc/ssl/certs"
+			myconf+=" --without-gnutls --without-nss --with-ssl"
+			myconf+=" --without-ca-bundle --with-ca-path=${EPREFIX}/etc/ssl/certs"
 		fi
 	else
-		myconf="${myconf} --without-gnutls --without-nss --without-ssl"
+		myconf+=" --without-gnutls --without-nss --without-ssl"
 	fi
 
-	econf ${myconf} || die 'configure failed'
+	econf ${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installed failed for current version"
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 	rm -rf "${ED}"/etc/
 
 	# https://sourceforge.net/tracker/index.php?func=detail&aid=1705197&group_id=976&atid=350976
 	insinto /usr/share/aclocal
-	doins docs/libcurl/libcurl.m4 || die
+	doins docs/libcurl/libcurl.m4
 
-	dodoc CHANGES README || die
-	dodoc docs/FEATURES docs/INTERNALS || die
-	dodoc docs/MANUAL docs/FAQ docs/BUGS docs/CONTRIBUTE || die
+	dodoc CHANGES README
+	dodoc docs/FEATURES docs/INTERNALS
+	dodoc docs/MANUAL docs/FAQ docs/BUGS docs/CONTRIBUTE
 }
