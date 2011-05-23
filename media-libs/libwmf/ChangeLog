@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.69 2011/03/28 16:51:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.70 2011/05/23 17:18:32 scarabeus Exp $
+
+  23 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libwmf-0.2.8.4-r3.ebuild, +files/libwmf-0.2.8.4-libpng-1.5.patch:
+  Fixup building with png-1.5. Move to EAPI=4. Drop static libs.
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> libwmf-0.2.8.4-r3.ebuild:
   Fixed gtk+ dep

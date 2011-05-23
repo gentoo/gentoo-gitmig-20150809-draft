@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.12 2011/03/28 16:51:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.13 2011/05/23 17:18:32 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils autotools
 
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd 
 IUSE="X expat xml debug doc gtk"
 
 RDEPEND="app-text/ghostscript-gpl
-	xml? ( !expat? ( dev-libs/libxml2 ) )
+	xml? (  dev-libs/libxml2 )
 	expat? ( dev-libs/expat )
 	>=media-libs/freetype-2.0.1
 	sys-libs/zlib
@@ -40,40 +40,33 @@ DEPEND="${RDEPEND}
 	)"
 # plotutils are not really supported yet, so looks like that's it
 
+REQUIRED_USE="xml? ( !expat ) expat? ( !xml )"
+
 src_prepare() {
 	if ! use doc ; then
-		sed -e 's:doc::' -i Makefile.am
+		sed -e 's:doc::' -i Makefile.am || die
 	fi
-	if ! use gtk ; then
-		sed -e 's:@LIBWMF_GDK_PIXBUF_TRUE@:#:' -i src/Makefile.in
-	fi
-	epatch "${FILESDIR}"/${P}-intoverflow.patch \
+	epatch \
+		"${FILESDIR}"/${P}-intoverflow.patch \
 		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-pngfix.patch
+		"${FILESDIR}"/${P}-pngfix.patch \
+		"${FILESDIR}"/${P}-libpng-1.5.patch
 
 	eautoreconf
 }
 
 src_configure() {
-	if use expat && use xml ; then
-		elog "You can specify only one USE flag from expat and xml, to use expat"
-		elog "or libxml2, respectively."
-		elog
-		elog "You have both flags enabled, we will default to expat (like autocheck does)."
-		myconf="${myconf} --with-expat --without-libxml2"
-	else
-		myconf="${myconf} $(use_with expat) $(use_with xml libxml2)"
-	fi
-
 	# NOTE: The gd that is included is gd-2.0.0. Even with --with-sys-gd, that gd is built
 	# and included in libwmf. Since nothing in-tree seems to use media-libs/libwmf[gd],
 	# we're explicitly disabling gd use w.r.t. bug 268161
 	econf \
+		--disable-static \
 		$(use_enable debug) \
 		$(use_with X x) \
+		$(use_with expat) \
+		$(use_with xml libxml2) \
 		--disable-gd \
 		--with-sys-gd \
-		${myconf} \
 		--with-gsfontdir="${EPREFIX}"/usr/share/ghostscript/fonts \
 		--with-fontdir="${EPREFIX}"/usr/share/libwmf/fonts/ \
 		--with-docdir="${EPREFIX}"/usr/share/doc/${PF}
@@ -81,7 +74,7 @@ src_configure() {
 
 src_install() {
 	# bug #298596
-	emake -j1 install DESTDIR="${D}" || die
+	emake -j1 install DESTDIR="${D}"
 	dodoc README AUTHORS CREDITS ChangeLog NEWS TODO
 
 	find "${ED}" -name '*.la' -exec rm -f '{}' +
