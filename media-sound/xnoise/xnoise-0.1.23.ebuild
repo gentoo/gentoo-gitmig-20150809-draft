@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.23.ebuild,v 1.1 2011/05/21 22:04:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.23.ebuild,v 1.2 2011/05/23 20:54:23 tomka Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+cover libnotify +lyrics"
 
 RDEPEND="dev-db/sqlite:3
