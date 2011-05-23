@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.92 2011/05/14 16:03:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.93 2011/05/23 22:56:36 abcd Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -980,15 +980,6 @@ kde4-base_pkg_postinst() {
 			einfo "Use it at your own risk."
 			einfo "Do _NOT_ file bugs at bugs.gentoo.org because of this ebuild!"
 			echo
-		elif [[ ${BUILD_TYPE} != live ]] && has kdeprefix ${IUSE//+} && use kdeprefix; then
-			# warning about kdeprefix for non-live users
-			echo
-			ewarn "WARNING! You have the kdeprefix useflag enabled."
-			ewarn "This setting is strongly discouraged and might lead to potential trouble"
-			ewarn "with KDE update strategies."
-			ewarn "You are using this setup at your own risk and the kde team does not"
-			ewarn "take responsibilities for dead kittens."
-			echo
 		fi
 		# for all 3rd party soft tell user that he SHOULD install kdebase-startkde or kdebase-runtime-meta
 		if [[ ${KDEBASE} != kde-base ]] && \
@@ -1002,6 +993,15 @@ kde4-base_pkg_postinst() {
 				ewarn "All missing features you report for misc packages will be probably ignored or closed as INVALID."
 			fi
 		fi
+	fi
+	if has kdeprefix ${IUSE//+} && use kdeprefix; then
+		# warning about kdeprefix
+		echo
+		ewarn "WARNING! You have the kdeprefix useflag enabled."
+		eerror "This setting will be removed on or about 2011-06-06."
+		ewarn "You are using this setup at your own risk and the kde team does not"
+		ewarn "take responsibilities for dead kittens."
+		echo
 	fi
 }
 
