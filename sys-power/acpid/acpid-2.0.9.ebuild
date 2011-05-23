@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.9.ebuild,v 1.2 2011/04/25 07:49:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.9.ebuild,v 1.3 2011/05/23 13:19:40 hwoarang Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://tedfelix.com/linux/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 -ppc ~x86"
+KEYWORDS="amd64 ~ia64 -ppc ~x86"
 IUSE=""
 
 src_prepare() {
