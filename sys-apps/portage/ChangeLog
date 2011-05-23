@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.827 2011/05/18 05:57:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.828 2011/05/23 07:16:39 zmedico Exp $
+
+*portage-2.2.0_alpha35 (23 May 2011)
+
+  23 May 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha35.ebuild:
+  2.2.0_alpha35 version bump. This fixes bug #288597 (FEATURES=distcc-pump).
+  It also includes some subtle merge order optimizations and fixes a possible
+  KeyError in the preserve-libs code from bug #286714. Bug #210077 tracks all
+  bugs fixed since portage-2.1.x.
 
 *portage-2.2.0_alpha34 (18 May 2011)
 
