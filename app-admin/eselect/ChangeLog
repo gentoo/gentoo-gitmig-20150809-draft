@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.184 2011/05/07 17:21:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.185 2011/05/23 00:04:32 josejx Exp $
+
+  23 May 2011; Joseph Jezak <josejx@gentoo.org> eselect-1.2.15.ebuild:
+  Marked ppc/ppc64 stable for bug #363943.
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> eselect-1.2.15.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #363943
