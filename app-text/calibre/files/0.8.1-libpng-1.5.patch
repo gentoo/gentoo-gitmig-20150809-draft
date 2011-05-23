@@ -1,0 +1,25 @@
+=== modified file 'recipes/economist.recipe'
+--- recipes/economist.recipe	2011-04-07 15:33:47 +0000
++++ recipes/economist.recipe	2011-05-14 14:35:14 +0000
+@@ -20,7 +20,7 @@
+     INDEX = 'http://www.economist.com/printedition'
+     description = ('Global news and current affairs from a European'
+             ' perspective. Best downloaded on Friday mornings (GMT)')
+-
++    extra_css      = '.headline {font-size: x-large;} \n h2 { font-size: small;  } \n h1 { font-size: medium;  }'
+     oldest_article = 7.0
+     cover_url = 'http://www.economist.com/images/covers/currentcoverus_large.jpg'
+     remove_tags = [
+
+=== modified file 'src/calibre/ebooks/pdf/images.cpp'
+--- src/calibre/ebooks/pdf/images.cpp	2011-02-20 07:07:51 +0000
++++ src/calibre/ebooks/pdf/images.cpp	2011-05-14 14:35:14 +0000
+@@ -13,6 +13,7 @@
+ #include <math.h>
+ #include <iostream>
+ #include <wand/MagickWand.h>
++#include <zlib.h>
+ 
+ #include "images.h"
+ #include "utils.h"
+

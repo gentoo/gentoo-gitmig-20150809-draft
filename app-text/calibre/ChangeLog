@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.148 2011/05/15 19:01:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.149 2011/05/23 17:31:44 scarabeus Exp $
+
+  23 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> calibre-0.8.1.ebuild,
+  +files/0.8.1-libpng-1.5.patch:
+  Fix builiding with libpng-1.5.
 
 *calibre-0.8.1 (15 May 2011)
 

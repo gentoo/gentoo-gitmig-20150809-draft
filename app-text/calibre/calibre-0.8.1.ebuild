@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.1.ebuild,v 1.2 2011/05/17 15:01:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.1.ebuild,v 1.3 2011/05/23 17:31:44 scarabeus Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -64,6 +64,8 @@ src_prepare() {
 	# Disable unnecessary privilege dropping for bug #287067.
 	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
 		-i setup/install.py || die "sed'ing in the IMAGE path failed"
+
+	epatch "${FILESDIR}/${PV}-libpng-1.5.patch"
 
 	distutils_src_prepare
 }
