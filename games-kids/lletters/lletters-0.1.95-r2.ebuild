@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r2.ebuild,v 1.7 2010/10/12 07:59:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r2.ebuild,v 1.8 2011/05/24 08:54:01 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${WORKDIR}"/${PN}_${PV}+gtk2-${PATCH_LEVEL}.diff \
 		"${FILESDIR}"/${P}-build-2.patch \
+		"${FILESDIR}"/${P}-underlink.patch \
 		"${FILESDIR}"/${P}-make-382.patch
 	cp -r "${WORKDIR}"/{images,sounds} . || die
 }
