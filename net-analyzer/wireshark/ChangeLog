@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.294 2011/05/15 13:41:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.295 2011/05/24 10:44:24 pva Exp $
+
+*wireshark-1.6.0_rc1 (24 May 2011)
+
+  24 May 2011; Peter Volkov <pva@gentoo.org> +wireshark-1.6.0_rc1.ebuild:
+  Bump release candidate. Please, test and enjoy!
 
   15 May 2011; Peter Volkov <pva@gentoo.org> wireshark-1.4.6-r1.ebuild,
   +files/wireshark-1.4.6-gnutls_nettle.patch:
