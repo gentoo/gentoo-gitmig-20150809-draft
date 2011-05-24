@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.2.8.2.ebuild,v 1.3 2011/05/01 16:55:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.2.8.2.ebuild,v 1.4 2011/05/24 08:04:01 phajdan.jr Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib scons-utils toolchain-funcs
+inherit eutils flag-o-matic multilib pax-utils scons-utils toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -76,6 +76,7 @@ src_compile() {
 	fi
 
 	escons $(use_scons readline console readline dumb) ${myconf} . || die
+	pax-mark -m obj/test/release/cctest shell d8
 }
 
 src_install() {
