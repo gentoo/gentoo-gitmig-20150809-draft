@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ascii85
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.5 2010/10/09 09:09:01 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.6 2011/05/24 08:16:15 graaff Exp $
+
+*ascii85-1.0.1 (24 May 2011)
+
+  24 May 2011; Hans de Graaff <graaff@gentoo.org> +ascii85-1.0.1.ebuild:
+  Version bump.
 
   09 Oct 2010; Hans de Graaff <graaff@gentoo.org> ascii85-1.0.0-r1.ebuild:
   Depend on rspec-1.
