@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r4.ebuild,v 1.5 2011/01/07 14:48:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.3-r4.ebuild,v 1.6 2011/05/24 09:47:21 hwoarang Exp $
 
 EAPI="3"
 
@@ -20,6 +20,7 @@ RDEPEND=">=app-crypt/gnupg-1.3.92
 	dev-perl/GnuPG-Interface
 	dev-perl/text-template
 	dev-perl/MIME-tools
+	net-mail/qprint
 	>=dev-perl/MailTools-1.62
 	virtual/mailx
 	virtual/mta
