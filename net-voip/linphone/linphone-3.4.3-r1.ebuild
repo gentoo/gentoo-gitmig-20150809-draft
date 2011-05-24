@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.3.1.ebuild,v 1.1 2010/06/07 14:49:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.4.3-r1.ebuild,v 1.1 2011/05/24 08:08:28 pva Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit eutils autotools multilib versionator
+inherit eutils autotools multilib versionator pax-utils
 
 DESCRIPTION="Video softphone based on the SIP protocol"
 HOMEPAGE="http://www.linphone.org/"
@@ -13,12 +13,13 @@ SRC_URI="http://download.savannah.nongnu.org/releases-noredirect/${PN}/$(get_ver
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
+# TODO: run-time test for ipv6: does it need mediastreamer[ipv6]?
 IUSE="doc gtk ipv6 ncurses nls video"
 
-RDEPEND=">=media-libs/mediastreamer-2.4.0[video?]
+RDEPEND=">=media-libs/mediastreamer-2.7.3[video?,ipv6?]
 	>=net-libs/libeXosip-3.0.2
 	>=net-libs/libosip-3.0.0
-	>=net-libs/ortp-0.16.2
+	>=net-libs/ortp-0.16.3
 	gtk? ( dev-libs/glib:2
 		>=gnome-base/libglade-2.4.0:2.0
 		>=x11-libs/gtk+-2.4.0:2 )
@@ -33,13 +34,6 @@ DEPEND="${RDEPEND}
 IUSE_LINGUAS=" fr it de ja es pl cs nl sv pt_BR hu ru zh_CN"
 IUSE="${IUSE} ${IUSE_LINGUAS// / linguas_}"
 
-# TODO:
-# update ortp ?
-# update mediastreamer ?
-
-# TODO:
-# run-time test for ipv6 : does it need mediastreamer[ipv6] ?
-
 pkg_setup() {
 	if ! use gtk && ! use ncurses ; then
 		ewarn "gtk and ncurses are disabled."
@@ -51,19 +45,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.2.99.1-external-mediastreamer.patch
-	epatch "${FILESDIR}"/${PN}-3.2.1-nls.patch
-
+	epatch "${FILESDIR}"/${PN}-3.4.3-nls.patch
 	# remove speex check, avoid bug when mediastreamer[-speex]
-	sed -i -e '/SPEEX/d' configure.in || die "patching configure.in failed"
+	sed -i -e '/SPEEX/d' configure.ac || die "patching configure.ac failed"
 
 	# fix path to use lib64
-	sed -i -e "s:lib\(/liblinphone\):$(get_libdir)\1:" configure.in \
-		|| die "patching configure.in failed"
+	sed -i -e "s:lib\(/liblinphone\):$(get_libdir)\1:" configure.ac \
+		|| die "patching configure.ac failed"
 
 	# removing bundled libs dir prevent them to be reconf
 	rm -rf mediastreamer2 oRTP || die "should not die"
-	# and references in Makefile.am
 	sed -i -e "s:oRTP::;s:mediastreamer2::" Makefile.am \
 		|| die "patching Makefile.am failed"
 
@@ -84,7 +75,6 @@ src_configure() {
 		--enable-external-ortp \
 		--enable-external-mediastreamer \
 		--disable-truespeech \
-		--disable-dependency-tracking \
 		$(use_enable doc manual) \
 		$(use_enable gtk gtk_ui) \
 		$(use_enable ipv6) \
@@ -94,8 +84,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dosym linphone-3 /usr/bin/linphone || die
-	dodoc AUTHORS BUGS ChangeLog NEWS README README.arm TODO || die
-	#cp "${ED}/usr/share/pixmaps/"{linphone/linphone2.png,linphone2.png} || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS BUGS ChangeLog NEWS README README.arm TODO
+	pax-mark m "${ED}usr/bin/linphone"
 }
