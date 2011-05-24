@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/shell-fm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.14 2010/08/18 21:05:26 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shell-fm/ChangeLog,v 1.15 2011/05/24 21:12:43 radhermit Exp $
+
+*shell-fm-0.8 (24 May 2011)
+
+  24 May 2011; Tim Harder <radhermit@gentoo.org> +shell-fm-0.8.ebuild:
+  Version bump (bug #368365). Update to EAPI 4 and use github tarball.
 
   18 Aug 2010; Jeremy Olexa <darkside@gentoo.org> shell-fm-0.7.ebuild:
   Add ~amd64-linux, bug 333029
