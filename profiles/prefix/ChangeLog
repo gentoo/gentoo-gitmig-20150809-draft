@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.278 2011/05/18 18:29:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.279 2011/05/24 12:59:38 mduft Exp $
+
+  24 May 2011; <mduft@gentoo.org> windows/interix/6.0/x86/make.defaults,
+  windows/interix/6.1/x86/make.defaults:
+  use versioned CHOST again for interix, as libc version is not sufficient
 
   18 May 2011; Fabian Groffen <grobian@gentoo.org> darwin/packages:
   Add pkill-darwin to the system set for darwin hosts
