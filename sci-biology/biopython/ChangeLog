@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.62 2011/05/06 10:14:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.63 2011/05/24 21:04:25 maekke Exp $
+
+  24 May 2011; Markus Meier <maekke@gentoo.org> biopython-1.57.ebuild:
+  x86 stable, bug #365877
 
   06 May 2011; Justin Lecher <jlec@gentoo.org> biopython-1.56.ebuild,
   biopython-1.57.ebuild:
