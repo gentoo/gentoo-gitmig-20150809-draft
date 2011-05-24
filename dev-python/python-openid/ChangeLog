@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-openid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.17 2011/05/05 09:00:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.18 2011/05/24 21:02:40 maekke Exp $
+
+  24 May 2011; Markus Meier <maekke@gentoo.org> python-openid-2.2.5.ebuild:
+  x86 stable, bug #365537
 
   05 May 2011; Markos Chandras <hwoarang@gentoo.org>
   python-openid-2.2.5.ebuild:
