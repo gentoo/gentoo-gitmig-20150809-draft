@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.23.ebuild,v 1.2 2011/05/23 20:54:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.23.ebuild,v 1.3 2011/05/24 17:38:04 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -38,7 +38,7 @@ DOCS=( AUTHORS NEWS README )
 src_configure() {
 	econf \
 		--disable-soundmenu \
-		--disable-soundmenu2 \
+		--enable-soundmenu2 \
 		$(use_enable cover lastfm-covers) \
 		$(use_enable libnotify notifications) \
 		$(use_enable lyrics leoslyrics) \

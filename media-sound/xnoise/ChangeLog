@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xnoise
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.5 2011/05/23 20:54:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/ChangeLog,v 1.6 2011/05/24 17:38:04 angelos Exp $
+
+  24 May 2011; Christoph Mende <angelos@gentoo.org> -xnoise-0.1.22.ebuild,
+  xnoise-0.1.23.ebuild, xnoise-9999.ebuild:
+  Enable soundmenu2, remove old
 
   23 May 2011; Thomas Kahle <tomka@gentoo.org> xnoise-0.1.23.ebuild:
   ~x86 per bug 366315

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.1 2011/05/17 10:41:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.2 2011/05/24 17:38:04 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils mercurial
@@ -45,7 +45,7 @@ src_configure() {
 	VALAC=$(type -p valac-0.12) \
 	econf \
 		--disable-soundmenu \
-		--disable-soundmenu2 \
+		--enable-soundmenu2 \
 		$(use_enable cover lastfm-covers) \
 		$(use_enable libnotify notifications) \
 		$(use_enable lyrics leoslyrics) \
