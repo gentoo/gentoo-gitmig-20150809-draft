@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.31 2011/04/04 05:16:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.32 2011/05/24 04:11:10 vapier Exp $
+
+*xz-utils-5.0.3 (24 May 2011)
+
+  24 May 2011; Mike Frysinger <vapier@gentoo.org> +xz-utils-5.0.3.ebuild:
+  Version bump.
 
 *xz-utils-5.0.2 (04 Apr 2011)
 
