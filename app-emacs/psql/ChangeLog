@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/psql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psql/ChangeLog,v 1.13 2010/06/17 19:05:24 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psql/ChangeLog,v 1.14 2011/05/24 16:16:04 ulm Exp $
+
+  24 May 2011; Ulrich Mueller <ulm@gentoo.org> -files/50psql-gentoo.el,
+  -psql-1.10.ebuild, -metadata.xml:
+  Remove package app-emacs/psql, bug 364775.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> psql-1.10.ebuild:
   Migrating away from deprecated postgres virtuals
