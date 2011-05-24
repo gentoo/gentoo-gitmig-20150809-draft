@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.761.0.ebuild,v 1.1 2011/05/13 10:20:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.772.0.ebuild,v 1.1 2011/05/24 09:11:21 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -34,7 +34,6 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/libwebp-0.1.2
 	media-libs/speex
 	cups? ( >=net-print/cups-1.3.11 )
-	sys-libs/pam
 	sys-libs/zlib
 	>=virtual/ffmpeg-0.6.90[threads]
 	x11-libs/gtk+:2
