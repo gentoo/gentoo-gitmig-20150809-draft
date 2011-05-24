@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.35.8.ebuild,v 1.7 2010/12/26 17:06:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.35.8.ebuild,v 1.8 2011/05/24 12:55:06 mpagano Exp $
 
 EAPI="2"
 K_NOUSENAME="yes"
