@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/rss2email
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.11 2011/05/01 18:53:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/rss2email/ChangeLog,v 1.12 2011/05/24 20:59:25 maekke Exp $
+
+  24 May 2011; Markus Meier <maekke@gentoo.org> rss2email-2.71.ebuild:
+  x86 stable, bug #365465
 
   01 May 2011; Markos Chandras <hwoarang@gentoo.org> rss2email-2.71.ebuild:
   Stable on amd64 wrt bug #365465
