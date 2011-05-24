@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.47 2011/04/26 16:19:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.48 2011/05/24 20:54:58 abcd Exp $
 
 inherit versionator
 
@@ -48,7 +48,7 @@ fi
 # @DESCRIPTION:
 # The slots used by all KDE versions later than 4.0. The live KDE releases use
 # KDE_LIVE_SLOTS instead. Values should be ordered.
-KDE_SLOTS=( "4.1" "4.2" "4.3" "4.4" "4.5" "4.6" )
+KDE_SLOTS=( "4.1" "4.2" "4.3" "4.4" "4.5" "4.6" "4.7" )
 
 # @ECLASS-VARIABLE: KDE_LIVE_SLOTS
 # @DESCRIPTION:
