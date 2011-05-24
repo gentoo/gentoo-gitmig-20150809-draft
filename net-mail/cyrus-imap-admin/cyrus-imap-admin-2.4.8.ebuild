@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.8.ebuild,v 1.5 2011/05/19 12:51:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.8.ebuild,v 1.6 2011/05/24 11:43:28 phajdan.jr Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/cyrus-imapd-${MY_PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 ~sparc x86"
 IUSE="ssl kerberos"
 
 RDEPEND=">=sys-libs/db-3.2

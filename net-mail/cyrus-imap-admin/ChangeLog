@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.95 2011/05/19 12:51:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.96 2011/05/24 11:43:28 phajdan.jr Exp $
+
+  24 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cyrus-imap-admin-2.4.8.ebuild:
+  x86 stable wrt security bug #365909
 
   19 May 2011; Markos Chandras <hwoarang@gentoo.org>
   cyrus-imap-admin-2.4.8.ebuild:
