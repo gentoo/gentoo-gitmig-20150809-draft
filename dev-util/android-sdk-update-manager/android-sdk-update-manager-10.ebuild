@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-10.ebuild,v 1.2 2011/05/01 00:20:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-10.ebuild,v 1.3 2011/05/24 19:18:17 rich0 Exp $
 
 EAPI="3"
 
@@ -80,6 +80,7 @@ src_install(){
 
 pkg_postinst() {
 	elog "The Android SDK now uses its own manager for the development	environment."
+	elog "Run 'android' to download the full SDK, including some of the platform tools."
 	elog "You must be in the android group to manage the development environment."
 	elog "Just run 'gpasswd -a <USER> android', then have <USER> re-login."
 	elog "See http://developer.android.com/sdk/adding-components.html for more"
