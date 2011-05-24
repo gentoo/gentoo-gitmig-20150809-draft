@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/miau
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.14 2007/12/13 21:34:15 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.15 2011/05/24 17:46:03 cla Exp $
+
+*miau-0.6.6 (24 May 2011)
+
+  24 May 2011; Dawid Węgliński <cla@gentoo.org> +miau-0.6.6.ebuild:
+  Version bump (bug #346105)
 
   13 Dec 2007; Raúl Porcel <armin76@gentoo.org> -miau-0.6.4.ebuild,
   miau-0.6.5.ebuild:
