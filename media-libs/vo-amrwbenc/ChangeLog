@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-amrwbenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.5 2011/05/24 12:42:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.6 2011/05/24 12:49:54 scarabeus Exp $
+
+  24 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> vo-amrwbenc-9999.ebuild:
+  Sync keywords to live ebuild too.
 
   24 May 2011; Thomas Kahle <tomka@gentoo.org> vo-amrwbenc-0.1.1.ebuild:
   ~x86 per bug 365203
