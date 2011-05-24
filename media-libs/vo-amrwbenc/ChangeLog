@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-amrwbenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.4 2011/05/15 18:41:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.5 2011/05/24 12:42:09 tomka Exp $
+
+  24 May 2011; Thomas Kahle <tomka@gentoo.org> vo-amrwbenc-0.1.1.ebuild:
+  ~x86 per bug 365203
 
   15 May 2011; Raúl Porcel <armin76@gentoo.org> vo-amrwbenc-0.1.1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #365203
