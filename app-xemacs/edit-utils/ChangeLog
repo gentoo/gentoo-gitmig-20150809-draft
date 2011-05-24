@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/edit-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.30 2010/08/13 11:54:05 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.31 2011/05/24 06:20:54 graaff Exp $
+
+*edit-utils-2.44 (24 May 2011)
+
+  24 May 2011; Hans de Graaff <graaff@gentoo.org> +edit-utils-2.44.ebuild:
+  Bump to experimental version since this contains my patches that make editing
+  ruby bearable.
 
 *edit-utils-2.43 (13 Aug 2010)
 
