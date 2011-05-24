@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.101 2011/05/14 16:49:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.102 2011/05/24 03:24:26 calchan Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -126,6 +126,7 @@ games-rpg/nwn-cep
 games-rpg/nwn-data
 games-rpg/nwn-penultima
 games-rpg/nwn-penultimarerolled
+games-rpg/nwn-shadowlordsdreamcatcherdemon
 games-rpg/rain-slick
 games-rpg/sacred-gold
 games-server/etqw-ded

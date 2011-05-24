@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5393 2011/05/22 20:23:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5394 2011/05/24 03:24:26 calchan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 May 2011; Denis Dupeyron <calchan@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  Add games-rpg/nwn-shadowlordsdreamcatcherdemon to
+  arch/amd64/no-multilib/package.mask and features/64bit-native/package.mask.
 
   22 May 2011; Eray Aslan <eras@gentoo.org> package.mask:
   mask mail-filter/amavisd-new-2.7.0 release candidates
