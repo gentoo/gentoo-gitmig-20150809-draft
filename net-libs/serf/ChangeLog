@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.55 2011/05/22 16:29:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.56 2011/05/24 15:14:18 ranger Exp $
+
+  24 May 2011; Brent Baude <ranger@gentoo.org> serf-0.7.2.ebuild:
+  Marking serf-0.7.2 ppc for bug 364417
 
   22 May 2011; Thomas Kahle <tomka@gentoo.org> serf-0.7.2.ebuild:
   x86 stable per bug 364417
