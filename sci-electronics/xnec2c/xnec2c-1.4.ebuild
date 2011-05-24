@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-1.4.ebuild,v 1.3 2011/03/02 19:45:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-1.4.ebuild,v 1.4 2011/05/24 13:47:15 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://5b4az.chronos.org.uk/pkg/nec2/xnec2c/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
 S="${WORKDIR}/${PN}"
