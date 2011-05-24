@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/kicad
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.53 2010/12/25 21:37:38 rafaelmartins Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.54 2011/05/24 23:56:20 rafaelmartins Exp $
+
+  24 May 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  kicad-99999999.ebuild:
+  Fixed live ebuild. Thanks to Dmitry Olyenyov (bug #358459).
 
   25 Dec 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   kicad-20100505_p2356.ebuild, kicad-99999999.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.5 2010/12/25 21:37:38 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.6 2011/05/24 23:56:20 rafaelmartins Exp $
 
 # rafaelmartins: Please try to keep the live ebuild synchronized with
 # the latest snapshot ebuild. e.g.:
@@ -58,11 +58,13 @@ else
 		EBZR_REPO_URI="lp:~kicad-testing-committers/kicad/testing" bzr_fetch
 		if ! use minimal; then
 			EBZR_REPO_URI="lp:~kicad-lib-committers/kicad/library" \
+				EBZR_PROJECT="kicad-library" \
 				P="${P}/kicad-library" \
 				EBZR_CACHE_DIR="kicad-library" bzr_fetch
 		fi
 		if use doc; then
 			EBZR_REPO_URI="lp:~kicad-developers/kicad/doc" \
+				EBZR_PROJECT="kicad-doc" \
 				P="${P}/kicad-doc" \
 				EBZR_CACHE_DIR="kicad-doc" bzr_fetch
 		fi
@@ -131,6 +133,9 @@ src_configure() {
 		-DKICAD_DOCS=/usr/share/doc/${PF}
 		-DKICAD_HELP=/usr/share/doc/${PF}
 		$(cmake-utils_use python KICAD_PYTHON)"
+
+	[[ "${PV}" = "99999999" ]] && \
+		mycmakeargs="${mycmakeargs} -DKICAD_TESTING_VERSION=ON"
 
 	cmake-utils_src_configure
 }
