@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.149 2011/05/18 18:36:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.150 2011/05/24 15:09:09 ranger Exp $
+
+  24 May 2011; Brent Baude <ranger@gentoo.org> icu-4.6.1.ebuild:
+  Marking icu-4.6.1 ppc for bug 364409
 
 *icu-4.8_rc1 (18 May 2011)
 
