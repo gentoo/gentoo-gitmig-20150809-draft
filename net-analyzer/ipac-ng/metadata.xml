@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>netmon</herd>
-<longdescription>ip accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like mrtg</longdescription>
-</pkgmetadata>
