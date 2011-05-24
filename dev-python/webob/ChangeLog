@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.37 2011/05/01 18:29:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.38 2011/05/24 18:52:43 phajdan.jr Exp $
+
+  24 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> webob-1.0.6.ebuild:
+  x86 stable wrt bug #365335
 
   01 May 2011; Markos Chandras <hwoarang@gentoo.org> webob-1.0.6.ebuild:
   Stable on amd64 wrt bug #365335
