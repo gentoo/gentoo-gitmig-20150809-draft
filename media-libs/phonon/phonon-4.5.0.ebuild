@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.7 2011/05/23 20:07:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0.ebuild,v 1.8 2011/05/24 11:21:05 scarabeus Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 "
 
-REQURIED_USE="|| ( gstreamer vlc xine )"
+REQUIRED_USE="|| ( aqua gstreamer vlc xine )"
 
 src_configure() {
 	local mycmakeargs=(
