@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.15 2011/05/22 20:56:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.16 2011/05/24 14:55:06 ranger Exp $
+
+  24 May 2011; Brent Baude <ranger@gentoo.org> unifdef-2.3.ebuild:
+  Marking unifdef-2.3 ppc for bug 367271
 
   22 May 2011; Markus Meier <maekke@gentoo.org> unifdef-2.3.ebuild:
   arm stable, bug #367271
