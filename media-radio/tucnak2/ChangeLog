@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tucnak2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.27 2011/02/25 18:06:13 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.28 2011/05/24 13:43:29 hwoarang Exp $
+
+  24 May 2011; Markos Chandras <hwoarang@gentoo.org> tucnak2-2.39.ebuild:
+  Stable on amd64 wrt bug #368371
 
 *tucnak2-2.39 (25 Feb 2011)
 
