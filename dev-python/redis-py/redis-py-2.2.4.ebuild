@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.2.4.ebuild,v 1.3 2011/05/02 18:23:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.2.4.ebuild,v 1.4 2011/05/24 21:00:37 maekke Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://cloud.github.com/downloads/andymccurdy/${PN}/redis-${PV}.tar.gz 
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
