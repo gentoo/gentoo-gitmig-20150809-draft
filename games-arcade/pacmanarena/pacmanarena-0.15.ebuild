@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.14 2009/01/13 02:07:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.15 2011/05/24 06:53:32 tupone Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils autotools games
 
 DESCRIPTION="a Pacman clone in full 3D with a few surprises. Rockets, bombs and explosions abound."
 HOMEPAGE="http://pacmanarena.sourceforge.net/"
@@ -41,6 +41,8 @@ src_prepare() {
 		-e '/CFLAGS/s:-g::' \
 		configure \
 		|| die "sed configure failed"
+	epatch "${FILESDIR}"/${P}-underlink.patch
+	eautoreconf
 }
 
 src_install() {

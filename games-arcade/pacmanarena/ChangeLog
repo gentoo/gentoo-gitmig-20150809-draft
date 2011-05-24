@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pacmanarena
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.14 2009/01/13 02:07:19 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.15 2011/05/24 06:53:32 tupone Exp $
+
+  24 May 2011; Tupone Alfredo <tupone@gentoo.org> pacmanarena-0.15.ebuild,
+  +files/pacmanarena-0.15-underlink.patch:
+  Fix underlink. Bug #367601 by Diego Elio Pettenò
 
   13 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   pacmanarena-0.15.ebuild:
