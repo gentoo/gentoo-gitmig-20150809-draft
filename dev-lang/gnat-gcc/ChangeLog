@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.40 2011/05/23 14:24:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.41 2011/05/24 11:12:32 george Exp $
+
+  24 May 2011; <portage-cvs@gentoo.org> gnat-gcc-4.4.5.ebuild:
+  new bootstrap for sparc
 
 *gnat-gcc-4.4.5 (23 May 2011)
 
