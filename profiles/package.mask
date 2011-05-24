@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12793 2011/05/24 10:05:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12794 2011/05/24 14:14:08 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -649,10 +649,6 @@ app-crypt/hmaccalc
 # Masked for testing, and some testsuite failures.
 # Bug 313769
 =sys-libs/db-5.0*
-
-# Peter Volkov <pva@gentoo.org> (09 May 2010)
-# Fails to build/work, bug #319085
-net-analyzer/ipac-ng
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Apr 2010)
 # Replaced by >sci-libs/netcdf-4.0
