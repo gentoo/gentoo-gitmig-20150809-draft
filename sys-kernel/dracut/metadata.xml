@@ -3,12 +3,12 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
-	<maintainer>
 		<email>aidecoe@gentoo.org</email>
 		<name>Amadeusz Żołnowski</name>
+	</maintainer>
+	<maintainer>
+		<email>ramereth@gentoo.org</email>
+		<name>Lance Albertson</name>
 	</maintainer>
 	<use>
         <flag name="bootchart">Add support for bootchart (app-benchmarks/bootchart)</flag>
