@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.43 2011/05/21 21:54:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.44 2011/05/24 21:13:45 angelos Exp $
+
+  24 May 2011; Christoph Mende <angelos@gentoo.org> mpdscribble-0.21.ebuild:
+  Adjust curl dependency
 
   21 May 2011; Christoph Mende <angelos@gentoo.org> -mpdscribble-0.19.ebuild,
   -mpdscribble-0.20.ebuild:

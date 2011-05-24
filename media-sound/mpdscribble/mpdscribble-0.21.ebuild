@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.21.ebuild,v 1.3 2011/05/21 17:34:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.21.ebuild,v 1.4 2011/05/24 21:13:45 angelos Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.11"
@@ -17,7 +17,7 @@ IUSE="+curl"
 
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=media-libs/libmpdclient-2.2
-	curl? ( net-misc/curl )
+	curl? ( <net-misc/curl-7.21 )
 	!curl? ( net-libs/libsoup:2.4 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
