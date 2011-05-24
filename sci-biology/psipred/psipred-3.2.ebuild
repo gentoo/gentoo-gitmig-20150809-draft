@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.2.ebuild,v 1.1 2010/10/16 08:50:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.2.ebuild,v 1.2 2011/05/24 12:18:04 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 inherit eutils prefix toolchain-funcs versionator
 
