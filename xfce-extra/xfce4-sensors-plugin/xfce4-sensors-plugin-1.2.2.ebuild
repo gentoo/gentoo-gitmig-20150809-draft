@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.1.ebuild,v 1.3 2011/05/14 14:42:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.2.ebuild,v 1.1 2011/05/24 07:40:30 angelos Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -51,9 +51,5 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e '/-no-undefined/d' src/Makefile.am || die
-	sed -i -e 's/^#elseif/#elif/' lib/sensors-interface.c || die
-	sed -e 's/libxfcegui4/libxfce4ui/g' \
-		-i src/actions.c -i src/callbacks.c -i src/interface.c \
-		-i lib/sensors-interface.c || die
 	xfconf_src_prepare
 }
