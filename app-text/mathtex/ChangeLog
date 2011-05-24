@@ -1,6 +1,13 @@
 # ChangeLog for app-text/mathtex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mathtex/ChangeLog,v 1.1 2009/12/21 20:34:57 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mathtex/ChangeLog,v 1.2 2011/05/24 15:19:11 pva Exp $
+
+*mathtex-1.04 (24 May 2011)
+
+  24 May 2011; Peter Volkov <pva@gentoo.org> +mathtex-1.04.ebuild,
+  metadata.xml:
+  Version bump. Add support to generate png images by default, bug #368471
+  thank Alexander Sulfrian for report.
 
 *mathtex-1.03 (21 Dec 2009)
 
