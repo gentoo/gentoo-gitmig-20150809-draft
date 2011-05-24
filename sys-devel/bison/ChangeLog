@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.102 2011/05/22 20:57:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.103 2011/05/24 14:53:42 ranger Exp $
+
+  24 May 2011; Brent Baude <ranger@gentoo.org> bison-2.4.3.ebuild:
+  Marking bison-2.4.3 ppc for bug 367575
 
   22 May 2011; Markus Meier <maekke@gentoo.org> bison-2.4.3.ebuild:
   arm stable, bug #367575
