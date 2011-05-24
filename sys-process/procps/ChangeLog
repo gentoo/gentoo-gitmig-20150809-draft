@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.45 2011/05/21 17:56:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.46 2011/05/24 14:50:43 ranger Exp $
+
+  24 May 2011; Brent Baude <ranger@gentoo.org> procps-3.2.8-r2.ebuild:
+  Marking procps-3.2.8-r2 ppc for bug 367279
 
   21 May 2011; Raúl Porcel <armin76@gentoo.org> procps-3.2.8-r2.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #367279
