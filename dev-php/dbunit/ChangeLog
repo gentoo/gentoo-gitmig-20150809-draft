@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/dbunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/ChangeLog,v 1.3 2011/05/23 10:26:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/ChangeLog,v 1.4 2011/05/24 14:54:24 hwoarang Exp $
+
+  24 May 2011; Markos Chandras <hwoarang@gentoo.org> dbunit-1.0.1.ebuild:
+  Stable on amd64 wrt bug #368293
 
   23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dbunit-1.0.1.ebuild:
   x86 stable wrt bug #368293

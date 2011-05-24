@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-tokenstream
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.3 2011/05/23 10:25:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.4 2011/05/24 14:56:39 hwoarang Exp $
+
+  24 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  php-tokenstream-1.0.1.ebuild:
+  Stable on amd64 wrt bug #368293
 
   23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   php-tokenstream-1.0.1.ebuild:
