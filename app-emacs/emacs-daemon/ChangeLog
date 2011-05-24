@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.40 2010/09/20 18:24:21 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.41 2011/05/24 14:34:46 hwoarang Exp $
+
+  24 May 2011; Markos Chandras <hwoarang@gentoo.org> emacs-daemon-0.18.ebuild:
+  Stable on amd64 wrt bug #368459
 
 *emacs-daemon-0.18 (20 Sep 2010)
 
