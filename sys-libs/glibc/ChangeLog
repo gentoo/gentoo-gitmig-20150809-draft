@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.769 2011/05/19 10:52:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.770 2011/05/24 02:44:44 vapier Exp $
+
+  24 May 2011; Mike Frysinger <vapier@gentoo.org> glibc-2.12.2.ebuild:
+  Update hppa patch #368079 by Jeroen Roovers.
 
   19 May 2011; Markos Chandras <hwoarang@gentoo.org> glibc-2.12.2.ebuild:
   Stable on amd64 wrt bug #356913
