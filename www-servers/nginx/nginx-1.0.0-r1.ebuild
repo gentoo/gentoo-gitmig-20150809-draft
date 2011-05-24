@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.0-r1.ebuild,v 1.4 2011/05/24 12:48:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.0-r1.ebuild,v 1.5 2011/05/24 21:12:51 maekke Exp $
 
 EAPI="2"
 
@@ -59,7 +59,7 @@ SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz
 
 LICENSE="as-is BSD BSD-2 GPL-2 MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_zone map memcached proxy referer rewrite scgi ssi
