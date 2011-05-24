@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/cone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.38 2011/04/19 19:09:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.39 2011/05/24 22:56:47 radhermit Exp $
+
+*cone-0.89 (24 May 2011)
+
+  24 May 2011; Tim Harder <radhermit@gentoo.org> -cone-0.85.20110124.ebuild,
+  -files/cone-0.85.20110124-skip-rfc2045-test.patch, +cone-0.89.ebuild:
+  Version bump and remove old.
 
 *cone-0.86 (19 Apr 2011)
 
