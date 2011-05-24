@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.22-r1.ebuild,v 1.1 2011/01/13 09:14:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.22-r1.ebuild,v 1.2 2011/05/24 13:30:35 hwoarang Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mummer/MUMmer${PV}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND=""
 RDEPEND="app-shells/tcsh"
