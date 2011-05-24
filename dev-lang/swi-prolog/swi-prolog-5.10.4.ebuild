@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.10.4.ebuild,v 1.4 2011/05/07 20:41:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.10.4.ebuild,v 1.5 2011/05/24 11:58:49 phajdan.jr Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.swi-prolog.org/download/stable/src/pl-${PV}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 IUSE="debug doc gmp hardened java minimal odbc readline ssl static test zlib X"
 
 RDEPEND="sys-libs/ncurses
