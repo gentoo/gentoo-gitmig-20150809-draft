@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/libdesktop-agnostic-0.3.92.ebuild,v 1.2 2011/03/13 21:37:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/libdesktop-agnostic-0.3.92.ebuild,v 1.3 2011/05/24 15:49:00 angelos Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -24,8 +24,8 @@ RDEPEND="dev-libs/glib:2
 	gnome? ( gnome-base/gnome-desktop:2 )"
 DEPEND="${RDEPEND}
 	dev-lang/vala:0.10[vapigen]
-	introspection? ( dev-libs/gobject-introspection
-		x11-libs/gtk+:2[introspection] )"
+	dev-libs/gobject-introspection
+	introspection? ( x11-libs/gtk+:2[introspection] )"
 
 pkg_setup() {
 	python_set_active_version 2

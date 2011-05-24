@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libdesktop-agnostic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/ChangeLog,v 1.2 2011/03/13 21:37:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdesktop-agnostic/ChangeLog,v 1.3 2011/05/24 15:49:00 angelos Exp $
+
+  24 May 2011; Christoph Mende <angelos@gentoo.org>
+  libdesktop-agnostic-0.3.92.ebuild:
+  gobject-introspection is always required to build
 
   13 Mar 2011; <angelos@gentoo.org> libdesktop-agnostic-0.3.92.ebuild,
   metadata.xml:
