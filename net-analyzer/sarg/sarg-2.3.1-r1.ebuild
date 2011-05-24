@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.1-r1.ebuild,v 1.1 2010/09/21 13:22:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.1-r1.ebuild,v 1.2 2011/05/24 11:15:54 pva Exp $
 
-EAPI="2"
+EAPI="4"
 inherit eutils autotools
 
 DESCRIPTION="Squid Analysis Report Generator"
@@ -42,6 +42,8 @@ src_prepare() {
 	sed -e 's:/usr/local/\(sarg/sarg.conf\):/etc/\1:' \
 		-e 's:/usr/local/\(squidGuard/squidGuard.conf\):/etc/\1:' \
 			-i sarg.1 sarg-php/sarg-squidguard-block.php || die
+
+	epatch "${FILESDIR}/${P}-underlinking.patch"
 }
 
 src_configure() {
@@ -49,6 +51,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "sarg installation failed"
-	dodoc BETA-TESTERS CONTRIBUTORS DONATIONS README ChangeLog htaccess || die
+	emake DESTDIR="${D}" install
+	dodoc BETA-TESTERS CONTRIBUTORS DONATIONS README ChangeLog htaccess
 }

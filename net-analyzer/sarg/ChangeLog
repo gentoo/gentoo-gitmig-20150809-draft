@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sarg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.55 2010/09/21 13:22:58 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.56 2011/05/24 11:15:54 pva Exp $
+
+  24 May 2011; Peter Volkov <pva@gentoo.org> sarg-2.3.1-r1.ebuild,
+  +files/sarg-2.3.1-underlinking.patch:
+  Fix underlinking, bug #367519 thank Diego Elio Pettenò for report. Bump EAPI
+  to 4.
 
 *sarg-2.3.1-r1 (21 Sep 2010)
 
