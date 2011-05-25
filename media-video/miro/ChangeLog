@@ -1,6 +1,13 @@
 # ChangeLog for media-video/miro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.9 2011/03/11 20:47:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.10 2011/05/25 14:23:34 scarabeus Exp $
+
+*miro-4.0.1 (25 May 2011)
+
+  25 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.0.1-ffmpeg.patch, +miro-4.0.1.ebuild, metadata.xml:
+  Add new version. Fixes bug #342093. Also add patch to build with latest
+  ffmpeg (patch not submitted upstream).
 
   11 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   miro-2.5.4.ebuild:
