@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urwvn-fonts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.31 2010/07/20 16:14:52 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.32 2011/05/25 16:50:24 flameeyes Exp $
+
+  25 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -urwvn-fonts-3.04.ebuild:
+  QA: drop old.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> urwvn-fonts-3.05.ebuild:
   Stable for HPPA (bug #323575).
