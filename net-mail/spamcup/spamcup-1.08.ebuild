@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/spamcup-1.08.ebuild,v 1.4 2004/11/06 04:12:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/spamcup-1.08.ebuild,v 1.5 2011/05/25 06:31:32 eras Exp $
 
 DESCRIPTION="This script does the same you would do when you report spam with your browser in Spamcop.net."
 HOMEPAGE="http://sourceforge.net/projects/spamcup/"
@@ -13,11 +13,13 @@ IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0
 	dev-perl/Getopt-ArgvFile
-	dev-perl/libwww-perl"
+	|| ( ( >dev-perl/libwww-perl-6 dev-perl/HTML-Form ) <dev-perl/libwww-perl-6
+	) "
+RDEPEND="${DEPEND}"
 
 src_install() {
 	dodir /usr/bin
 	dobin spamcup
 
-	dodoc ChangeLog INSTALL LICENSE README
+	dodoc ChangeLog INSTALL README
 }

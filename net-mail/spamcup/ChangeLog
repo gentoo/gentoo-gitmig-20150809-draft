@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/spamcup
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.8 2008/10/27 04:58:35 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.9 2011/05/25 06:31:32 eras Exp $
+
+  25 May 2011; Eray Aslan <eras@gentoo.org> spamcup-1.08.ebuild,
+  spamcup-1.09.ebuild:
+  Fix libwww-perl dependency - bug #368261
 
   27 Oct 2008; Jeremy Olexa <darkside@gentoo.org> spamcup-1.09.ebuild:
   net-mail/spamcup - modify dobin call to actually do something, bug #241192
