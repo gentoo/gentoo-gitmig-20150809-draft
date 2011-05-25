@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12797 2011/05/25 00:07:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12798 2011/05/25 16:13:30 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (25 May 2011)
+# Needs an old version of bison that isn't in the tree anymore.
+dev-lang/open64
 
 # Jeroen Roovers <jer@gentoo.org> (24 May 2011)
 # Opera Next is forever unstable and unsupported.
