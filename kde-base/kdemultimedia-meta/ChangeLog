@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.175 2011/05/09 22:46:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.176 2011/05/25 21:02:52 dilfridge Exp $
+
+  25 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdemultimedia-meta-4.6.3.ebuild:
+  Introduce useflag mplayer for mplayerthumbs, bug 368681
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   kdemultimedia-meta-4.6.2.ebuild:
