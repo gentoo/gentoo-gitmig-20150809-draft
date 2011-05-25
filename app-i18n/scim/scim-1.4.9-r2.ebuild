@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r2.ebuild,v 1.11 2011/03/27 10:56:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.9-r2.ebuild,v 1.1 2011/05/25 16:57:29 matsuu Exp $
 
-EAPI="1"
-
-inherit eutils flag-o-matic autotools
+EAPI="3"
+inherit autotools eutils flag-o-matic multilib
 
 DESCRIPTION="Smart Common Input Method (SCIM) is an Input Method (IM) development platform"
 HOMEPAGE="http://www.scim-im.org/"
@@ -12,14 +11,14 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/libX11
+	dev-libs/glib:2
 	x11-libs/gtk+:2
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
-	>=dev-libs/glib-2
 	!app-i18n/scim-cvs"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
@@ -29,50 +28,47 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.33
 	sys-devel/libtool"
 
-get_gtk_confdir() {
-	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ; then
-		echo "/etc/gtk-2.0/${CHOST}"
-	else
-		echo "/etc/gtk-2.0"
+update_gtk_immodules() {
+	local GTK2_CONFDIR="/etc/gtk-2.0"
+	# bug #366889
+	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
+		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
+	fi
+	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
+
+	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-syslibltdl.patch"
-	# bug #216127
-	epatch "${FILESDIR}/bug-248159_remove_unload.patch"
-	rm "${S}"/src/ltdl.{cpp,h}
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-1.4.7-syslibltdl.patch"
+	# bug #283317
+	epatch "${FILESDIR}/${PN}-fix-disappeared-status-icon.patch"
+	rm "${S}"/src/ltdl.{cpp,h} || die
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	# bug #83625
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
 
-	# bug #191696
-	## We cannot use "use_enable"
-	#if ! use gtk ; then
-	#	myconf="${myconf} --disable-panel-gtk"
-	#	myconf="${myconf} --disable-setup-ui"
-	#	myconf="${myconf} --disable-gtk2-immodule"
-	#fi
-
 	econf \
 		$(use_with doc doxygen) \
 		--enable-ld-version-script \
 		${myconf} || die
-	emake || die
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc README AUTHORS ChangeLog docs/developers docs/scim.cfg
+
+	sed -e "s:@EPREFIX@:${EPREFIX}:" "${FILESDIR}/xinput-${PN}" > "${T}/${PN}.conf" || die
+	insinto /etc/X11/xinit/xinput.d
+	doins "${T}/${PN}.conf" || die
+
+	dodoc README AUTHORS ChangeLog docs/developers docs/scim.cfg || die
 	use doc && dohtml -r docs/html/*
 }
 
@@ -89,8 +85,6 @@ pkg_postinst() {
 	elog "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
 	elog "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
 	elog
-	elog "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
-	elog
 	elog "To use Chinese input methods:"
 	elog "	# emerge app-i18n/scim-tables app-i18n/scim-pinyin"
 	elog "To use Korean input methods:"
@@ -103,12 +97,10 @@ pkg_postinst() {
 	ewarn
 	ewarn "If you upgraded from scim-1.2.x or scim-1.0.x, you should remerge all SCIM modules."
 	ewarn
-	epause 10
 
-	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
+	update_gtk_immodules
 }
 
 pkg_postrm() {
-
-	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
+	update_gtk_immodules
 }

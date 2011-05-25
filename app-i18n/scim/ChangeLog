@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.144 2011/03/27 10:56:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.145 2011/05/25 16:57:29 matsuu Exp $
+
+*scim-1.4.9-r2 (25 May 2011)
+
+  25 May 2011; MATSUU Takuto <matsuu@gentoo.org> -files/scim-1.4.5-fbsd.patch,
+  -files/scim-1.4.5-imengine.patch, -scim-1.4.7-r2.ebuild,
+  scim-1.4.9-r1.ebuild, +scim-1.4.9-r2.ebuild,
+  -files/bug-248159_remove_unload.patch, +files/xinput-scim:
+  Fixed GTK2_CONFDIR handling, bug #366889. Removed unused files, bug #342543.
+  Support app-i18n/imsettings. Removed old versions.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> scim-1.4.7-r2.ebuild,
   scim-1.4.9-r1.ebuild:
