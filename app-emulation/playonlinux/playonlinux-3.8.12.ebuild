@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.8.12.ebuild,v 1.1 2011/04/17 12:17:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.8.12.ebuild,v 1.2 2011/05/25 14:29:40 volkmar Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -41,6 +41,7 @@ S=${WORKDIR}/${PN}
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+	games_pkg_setup
 }
 
 src_prepare() {

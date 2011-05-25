@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/playonlinux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.13 2011/04/17 12:17:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.14 2011/05/25 14:29:40 volkmar Exp $
+
+  25 May 2011; Mounir Lamouri <volkmar@gentoo.org> playonlinux-3.8.12.ebuild:
+  Add missing games_pkg_setup.
 
 *playonlinux-3.8.12 (17 Apr 2011)
 
