@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/oldstandard
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oldstandard/ChangeLog,v 1.1 2008/12/02 19:59:09 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oldstandard/ChangeLog,v 1.2 2011/05/25 16:37:22 flameeyes Exp $
+
+  25 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  oldstandard-2.0.2.ebuild:
+  QA: avoid runtime dependency on app-arch/unzip.
 
 *oldstandard-2.0.2 (02 Dec 2008)
 
