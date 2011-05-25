@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.33 2011/04/25 14:21:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.34 2011/05/25 18:39:27 ranger Exp $
+
+  25 May 2011; Brent Baude <ranger@gentoo.org> apg-2.3.0b-r5.ebuild:
+  Marking apg-2.3.0b-r5 ppc for bug 356969
 
   25 Apr 2011; Raúl Porcel <armin76@gentoo.org> apg-2.3.0b-r4.ebuild,
   apg-2.3.0b-r5.ebuild:
