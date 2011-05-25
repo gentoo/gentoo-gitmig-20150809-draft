@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.2-r2.ebuild,v 1.2 2011/05/21 22:54:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.2-r2.ebuild,v 1.3 2011/05/25 21:15:57 dilfridge Exp $
 
 EAPI=3
 
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug google-gadgets gps python qalculate +rss semantic-desktop xinerama"
 
 COMMONDEPEND="
-	dev-libs/boost
 	$(add_kdebase_dep kdelibs 'semantic-desktop=')
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep ksysguard)
@@ -43,6 +42,7 @@ COMMONDEPEND="
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${COMMONDEPEND}
+	dev-libs/boost
 	x11-proto/compositeproto
 	x11-proto/damageproto
 	x11-proto/fixesproto
