@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.0.ebuild,v 1.1 2011/05/24 23:08:11 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.0-r1.ebuild,v 1.1 2011/05/25 01:15:25 chutzpah Exp $
 
 EAPI=2
 
-inherit eutils nsplugins multilib flag-o-matic
+inherit eutils multilib flag-o-matic
 
 DESCRIPTION="Netscape Plugin Wrapper - Load 32bit plugins on 64bit browser"
 HOMEPAGE="http://nspluginwrapper.davidben.net/"
@@ -65,7 +65,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	inst_plugin "/usr/$(get_libdir)/${PN}/x86_64/linux/npwrapper.so"
 	dosym "/usr/$(get_libdir)/${PN}/x86_64/linux/npconfig" "/usr/bin/${PN}"
 
 	dodoc NEWS README TODO ChangeLog

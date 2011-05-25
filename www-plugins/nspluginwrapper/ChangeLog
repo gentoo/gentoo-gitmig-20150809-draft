@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.10 2011/05/24 23:08:11 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.11 2011/05/25 01:15:25 chutzpah Exp $
+
+*nspluginwrapper-1.4.0-r1 (25 May 2011)
+
+  25 May 2011; Patrick McLean <chutzpah@gentoo.org>
+  -nspluginwrapper-1.4.0.ebuild, +nspluginwrapper-1.4.0-r1.ebuild:
+  Revision bump: Don't install npwrapper.so as a plugin, as it is just a
+  placeholder (see comment #4 on bug #365987).
 
 *nspluginwrapper-1.4.0 (24 May 2011)
 
