@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.6 2011/05/25 00:51:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.7 2011/05/25 14:33:44 jer Exp $
+
+*opera-next-11.50.1016 (25 May 2011)
+
+  25 May 2011; Jeroen Roovers <jer@gentoo.org> +opera-next-11.50.1016.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/05/25/slashing-bugs
 
   25 May 2011; Jeroen Roovers <jer@gentoo.org> opera-next-11.50.1009.ebuild,
   opera-next-11.50.1015.ebuild:
