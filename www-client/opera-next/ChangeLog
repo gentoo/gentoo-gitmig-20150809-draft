@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.5 2011/05/23 14:33:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.6 2011/05/25 00:51:06 jer Exp $
+
+  25 May 2011; Jeroen Roovers <jer@gentoo.org> opera-next-11.50.1009.ebuild,
+  opera-next-11.50.1015.ebuild:
+  Remove unneeded RESTRICT="test".
 
 *opera-next-11.50.1015 (23 May 2011)
 
