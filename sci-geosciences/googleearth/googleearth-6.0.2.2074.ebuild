@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-6.0.2.2074.ebuild,v 1.3 2011/05/24 16:29:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-6.0.2.2074.ebuild,v 1.4 2011/05/25 15:20:42 mr_bones_ Exp $
 
 EAPI=2
 
@@ -64,7 +64,6 @@ pkg_nofetch() {
 	elog "If you can get the distfile from e.g. another computer of yours,"
 	elog "copy the file ${SRC_URI} to ${DISTDIR}."
 }
-
 
 pkg_nofetch() {
 	einfo "Wrong checksum or file size means that Google silently replaced the distfile with a newer version."
