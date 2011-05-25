@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.4 2011/05/03 15:50:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.5 2011/05/25 01:50:57 eva Exp $
+
+*glib-networking-2.28.7 (25 May 2011)
+
+  25 May 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  +glib-networking-2.28.7.ebuild:
+  Version bump, thread-safety fixes.
 
   03 May 2011; Jeremy Olexa <darkside@gentoo.org>
   glib-networking-2.28.6.1.ebuild:
