@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-9999.ebuild,v 1.3 2011/05/25 14:08:54 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.11.ebuild,v 1.1 2011/05/25 14:08:54 mduft Exp $
 
 EAPI=3
 
-inherit toolchain-funcs flag-o-matic git
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="library wrapping the interix lib-c to make it less buggy."
 HOMEPAGE="http://suacomp.sf.net"
-EGIT_REPO_URI="http://git.code.sf.net/p/suacomp/git"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BEER-WARE"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="-* ~x86-interix"
 IUSE="debug"
 
 DEPEND=""
