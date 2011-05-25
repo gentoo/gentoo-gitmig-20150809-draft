@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12798 2011/05/25 16:13:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12799 2011/05/25 17:56:31 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -161,14 +161,6 @@ app-crypt/scsign
 # Bugs 320543, 344723
 # Removal in 30 days
 dev-python/cgal-python
-
-# Hans de Graaff <graaff@gentoo.org> (24 Apr 2011)
-# Masked for removal on 20110524
-# Legacy bugfix code for very old versions of dev-lang/ruby,
-# still required up to now by www-servers/mongrel.
-# No longer needed and not applicable to dev-lang/ruby versions
-# that are still in the tree.
-dev-ruby/cgi_multipart_eof_fix
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (23 Apr 2011)
 # Mask KDEPIM 4.6 beta ebuilds
