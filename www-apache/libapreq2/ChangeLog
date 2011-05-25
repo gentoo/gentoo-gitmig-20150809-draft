@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/libapreq2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.40 2011/05/24 14:30:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.41 2011/05/25 18:38:26 ranger Exp $
+
+  25 May 2011; Brent Baude <ranger@gentoo.org> libapreq2-2.12.ebuild:
+  Marking libapreq2-2.12 ppc for bug 368469
 
   24 May 2011; Markos Chandras <hwoarang@gentoo.org> libapreq2-2.12.ebuild:
   Stable on amd64 wrt bug #368469
