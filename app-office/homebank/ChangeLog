@@ -1,6 +1,9 @@
 # ChangeLog for app-office/homebank
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.22 2011/03/27 12:15:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.23 2011/05/25 19:24:38 ranger Exp $
+
+  25 May 2011; Brent Baude <ranger@gentoo.org> homebank-4.3.ebuild:
+  Marking homebank-4.3 ppc for bug 354853
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> homebank-4.3.ebuild:
   Fix slot-dep on gtk+
