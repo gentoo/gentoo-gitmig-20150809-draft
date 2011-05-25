@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.40 2011/05/09 23:26:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.41 2011/05/25 04:44:25 maekke Exp $
+
+  25 May 2011; Markus Meier <maekke@gentoo.org> simplejson-2.1.6.ebuild:
+  add ~arm, bug #366619
 
 *simplejson-2.1.6 (09 May 2011)
 

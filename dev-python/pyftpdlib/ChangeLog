@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyftpdlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.1 2011/05/07 10:19:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.2 2011/05/25 04:43:13 maekke Exp $
+
+  25 May 2011; Markus Meier <maekke@gentoo.org> pyftpdlib-0.6.0.ebuild:
+  add ~arm, bug #366619
 
 *pyftpdlib-0.6.0 (07 May 2011)
 
