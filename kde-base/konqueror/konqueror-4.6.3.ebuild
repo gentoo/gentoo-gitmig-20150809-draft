@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.6.3.ebuild,v 1.1 2011/05/07 10:47:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.6.3.ebuild,v 1.2 2011/05/25 20:55:29 dilfridge Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit flag-o-matic kde4-meta
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+bookmarks debug svg thumbnail"
+IUSE="+bookmarks debug svg"
 # 4 of 4 tests fail. Last checked for 4.0.3
 RESTRICT="test"
 
@@ -22,9 +22,6 @@ RDEPEND="${DEPEND}
 	$(add_kdebase_dep kfmclient)
 	bookmarks? ( $(add_kdebase_dep keditbookmarks) )
 	svg? ( $(add_kdebase_dep svgpart) )
-"
-PDEPEND="
-	thumbnail? ( $(add_kdebase_dep mplayerthumbs) )
 "
 
 KMEXTRACTONLY="
