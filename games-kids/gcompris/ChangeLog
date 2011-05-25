@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.64 2011/05/01 10:21:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.65 2011/05/25 19:36:56 tomka Exp $
+
+  25 May 2011; Thomas Kahle <tomka@gentoo.org> gcompris-9.6.1.ebuild:
+  x86 stable per bug 365101
 
   01 May 2011; Markos Chandras <hwoarang@gentoo.org> gcompris-9.6.1.ebuild:
   Stable on amd64 wrt bug #365101
