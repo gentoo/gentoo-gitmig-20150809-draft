@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/ibus-hangul
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ChangeLog,v 1.13 2011/04/02 02:24:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ChangeLog,v 1.14 2011/05/25 00:04:59 matsuu Exp $
+
+*ibus-hangul-1.3.1-r1 (25 May 2011)
+
+  25 May 2011; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-hangul-1.1.0.20090328.ebuild, ibus-hangul-1.2.0.20100102.ebuild,
+  -ibus-hangul-1.3.0.20100329.ebuild, ibus-hangul-1.3.1.ebuild,
+  +ibus-hangul-1.3.1-r1.ebuild, +files/ibus-hangul-ibus-1.4.patch:
+  Fixed to work with >=app-i18n/ibus-1.3.99. Removed old versions.
 
 *ibus-hangul-1.3.1 (02 Apr 2011)
 

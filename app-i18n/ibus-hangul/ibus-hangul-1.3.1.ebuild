@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.3.1.ebuild,v 1.1 2011/04/02 02:24:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.3.1.ebuild,v 1.2 2011/05/25 00:04:59 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 RDEPEND=">=app-i18n/ibus-1.2.99
+	!>=app-i18n/ibus-1.3.99
 	>=app-i18n/libhangul-0.0.12
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
