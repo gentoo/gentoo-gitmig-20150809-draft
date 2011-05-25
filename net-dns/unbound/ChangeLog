@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.23 2011/05/11 19:37:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.24 2011/05/25 15:41:15 matsuu Exp $
+
+*unbound-1.4.10 (25 May 2011)
+
+  25 May 2011; MATSUU Takuto <matsuu@gentoo.org> -unbound-1.4.3.ebuild,
+  -unbound-1.4.6.ebuild, -unbound-1.4.7.ebuild, -unbound-1.4.7-r1.ebuild,
+  +unbound-1.4.10.ebuild:
+  Version bumped. Removed *.la files. Removed old versions.
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> unbound-1.4.8.ebuild:
   Stable on amd64 wrt bug #362015
