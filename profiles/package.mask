@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12796 2011/05/24 16:20:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12797 2011/05/25 00:07:34 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -516,11 +516,6 @@ www-apps/horde-groupware
 # Will be removed on max{13 Dec 2010, TeX Live 2010 stabilized}.
 # Bugs: 303965, 323559 and 344585
 app-text/ptex
-
-# MATSUU Takuto <matsuu@gentoo.org> (08 Oct 2010)
-# testing mask for development series
->=app-i18n/ibus-1.3.99
->=app-i18n/ibus-pinyin-1.3.99
 
 # Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
 # Masking alpha releases

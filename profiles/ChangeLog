@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5398 2011/05/24 16:20:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5399 2011/05/25 00:07:34 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 May 2011; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  Unmask ibus packages.
 
   24 May 2011; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for removed app-emacs/psql, bug 364775.
