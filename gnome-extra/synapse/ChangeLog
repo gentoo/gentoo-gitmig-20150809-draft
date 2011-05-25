@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/synapse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.4 2011/04/12 17:09:25 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.5 2011/05/25 19:12:51 signals Exp $
+
+  25 May 2011; Kevin McCarthy <signals@gentoo.org> synapse-0.2.6.ebuild:
+  Add minimum versions to DEPEND #368401
 
   12 Apr 2011; Kevin McCarthy <signals@gentoo.org> synapse-0.2.6.ebuild:
   Fix duplicate dep on gtkhotkey
