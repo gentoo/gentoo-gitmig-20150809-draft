@@ -1,25 +1,31 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r3.ebuild,v 1.6 2010/08/16 15:17:14 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-9999.ebuild,v 1.1 2011/05/26 10:30:50 haubi Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs autotools
 
 DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
 HOMEPAGE="http://www.mico.org/"
 SRC_URI="http://www.mico.org/${P}.tar.gz"
 
-PATCH_VER=0.1
+PATCH_VER=20110526
+
+if [[ ${PV} == 9999 ]]; then
+	SRC_URI=""
+	EDARCS_REPOSITORY="http://mico.org/mico-darcs-repository"
+	inherit darcs
+fi
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~ppc-aix ~ia64-hpux ~amd64-linux ~x86-linux ~sparc-solaris ~x86-winnt"
+KEYWORDS=""
 IUSE="gtk postgres qt4 ssl tcl threads X"
 RESTRICT="test" #298101
 
 [[ -z ${PATCH_VER} ]] || \
-	SRC_URI="${SRC_URI} mirror://gentoo/${P}-gentoo-patches-${PATCH_VER}.tar.bz2"
+	SRC_URI="${SRC_URI} http://dev.gentoo.org/~haubi/distfiles/${P}-gentoo-patches-${PATCH_VER}.tar.bz2"
 
 # doesn't compile:
 #   bluetooth? ( net-wireless/bluez )
@@ -37,10 +43,17 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.22
 "
 
-S=${WORKDIR}/${PN}
+if [[ ${PV} == 9999 ]]; then
+	src_unpack() {
+		darcs_src_unpack
+		default
+	}
+fi
 
 src_prepare() {
 	EPATCH_SUFFIX=patch epatch "${WORKDIR}"/patches
+
+	eautoreconf
 
 	# cannot use big TOC (AIX only), gdb doesn't like it.
 	# This assumes that the compiler (or -wrapper) uses
@@ -73,42 +86,49 @@ src_configure() {
 	# CFLAGS aren't used when checking for <qapplication.h>, but CPPFLAGS are.
 	use qt4 && append-cppflags $(pkg-config --cflags Qt3Support)
 
-	local winopts=
-	if [[ ${CHOST} == *-winnt* ]]; then
-		# disabling static libs, since ar on interix takes nearly
-		# one hour per library, thanks to mico's monster objects.
-		winopts="${winopts} --disable-threads --disable-static --enable-final"
-		append-flags -D__STDC__
-	fi
+	local myconf=
+	myconf() {
+		myconf="${myconf} $*"
+	}
+
+	myconf --disable-mini-stl
+	myconf $(use_enable threads)
+
+	# '--without-*' or '--with-*=no' does not disable some features,
+	# the value needs to be empty instead.
+	# This applies to: gtk, pgsql, qt, tcl, bluetooth.
+	myconf --with-gtk=$(  use gtk      && echo "${EPREFIX}"/usr)
+	myconf --with-pgsql=$(use postgres && echo "${EPREFIX}"/usr)
+	myconf --with-qt=$(   use qt4      && echo "${EPREFIX}"/usr)
+	myconf --with-tcl=$(  use tcl      && echo "${EPREFIX}"/usr)
+	# bluetooth and wireless both don't compile cleanly
+	myconf --with-bluetooth=''
+	myconf --disable-wireless
+	# But --without-x works.
+	myconf $(use_with X x "${EPREFIX}"/usr)
 
 	# http://www.mico.org/pipermail/mico-devel/2009-April/010285.html
 	[[ ${CHOST} == *-hpux* ]] && append-cppflags -D_XOPEN_SOURCE_EXTENDED
 
-	# '--without-*' or '--with-*=no' does not disable some features, the value
-	# needs to be empty instead. This applies to: bluetooth, gtk, pgsql, qt, tcl.
-	# But --without-x works.
+	if [[ ${CHOST} == *-winnt* ]]; then
+		# disabling static libs, since ar on interix takes nearly
+		# one hour per library, thanks to mico's monster objects.
+		use threads &&
+		ewarn "disabling USE='threads', does not work on ${CHOST}"
+		myconf --disable-threads --disable-static --enable-final
+		append-flags -D__STDC__
+	fi
 
-	# bluetooth and wireless both don't compile cleanly
-	econf \
-		--disable-mini-stl \
-		$(use_enable threads) \
-		--with-gtk=$(use gtk && echo "${EPREFIX}"/usr) \
-		--with-pgsql=$(use postgres && echo "${EPREFIX}"/usr) \
-		--with-qt=$(use qt4 && echo "${EPREFIX}"/usr) \
-		--with-tcl=$(use tcl && echo "${EPREFIX}"/usr) \
-		$(use_with X x "${EPREFIX}"/usr) \
-		--with-bluetooth='' \
-		--disable-wireless \
-		${winopts}
+	econf ${myconf}
 }
 
 src_install() {
-	emake INSTDIR="${D}${EPREFIX}"/usr SHARED_INSTDIR="${D}${EPREFIX}"/usr install LDCONFIG=: || die "install failed"
+	emake INSTDIR="${ED}"usr SHARED_INSTDIR="${ED}"usr install LDCONFIG=: || die "install failed"
 
 	dodir /usr/share || die
-	mv "${D}${EPREFIX}"/usr/man "${D}${EPREFIX}"/usr/share || die
+	mv "${ED}"usr/man "${ED}"usr/share || die
 	dodir /usr/share/doc/${PF} || die
-	mv "${D}${EPREFIX}"/usr/doc "${D}${EPREFIX}"/usr/share/doc/${PF} || die
+	mv "${ED}"usr/doc "${ED}"usr/share/doc/${PF} || die
 
-	dodoc BUGS CHANGES* CONVERT FAQ README* ROADMAP TODO VERSION WTODO || die
+	dodoc BUGS CHANGES* CONVERT README* ROADMAP TODO VERSION WTODO || die
 }
