@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/mcollective
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.3 2011/04/19 21:59:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.4 2011/05/26 22:53:12 ramereth Exp $
+
+*mcollective-1.2.0 (26 May 2011)
+*mcollective-1.1.4 (26 May 2011)
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org> +mcollective-1.1.4.ebuild,
+  +mcollective-1.2.0.ebuild:
+  Version bump
 
   19 Apr 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Use no-herd
