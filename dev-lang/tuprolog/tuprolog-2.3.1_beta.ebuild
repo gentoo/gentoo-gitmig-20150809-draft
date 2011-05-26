@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.1_beta.ebuild,v 1.1 2011/05/21 04:50:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/tuprolog-2.3.1_beta.ebuild,v 1.2 2011/05/26 06:27:07 keri Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ src_prepare() {
 
 	cp "${FILESDIR}"/build.xml "${S}" || die
 	sed -i -e "s|test/unit|test|" "${S}"/build.xml \
-		die "sed build.xml failed"
+		|| die "sed build.xml failed"
 }
 
 src_compile() {
