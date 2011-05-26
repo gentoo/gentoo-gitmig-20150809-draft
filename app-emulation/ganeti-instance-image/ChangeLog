@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/ganeti-instance-image
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ChangeLog,v 1.4 2011/03/26 21:12:26 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ChangeLog,v 1.5 2011/05/26 16:44:28 ramereth Exp $
+
+*ganeti-instance-image-0.5.1 (26 May 2011)
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org>
+  -ganeti-instance-image-0.4.ebuild, ganeti-instance-image-0.5.ebuild,
+  +ganeti-instance-image-0.5.1.ebuild:
+  Version bump, fix qemu dep #367565), cleanup
 
 *ganeti-instance-image-0.5 (26 Mar 2011)
 
