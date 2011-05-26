@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.150 2011/05/24 09:49:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.151 2011/05/26 21:27:27 zmedico Exp $
+
+  26 May 2011; Zac Medico <zmedico@gentoo.org> calibre-0.8.2.ebuild:
+  Bug #358065 - Stop filtering mime types from the desktop files, since it
+  doesn't appear to be necessary now that application/octet-stream is no longer
+  listed.
 
 *calibre-0.8.2 (24 May 2011)
 
