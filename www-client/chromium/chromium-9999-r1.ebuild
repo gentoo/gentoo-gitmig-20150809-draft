@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.27 2011/05/24 09:11:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.28 2011/05/26 11:09:13 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -307,7 +307,7 @@ src_install() {
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
-	newexe "${FILESDIR}"/chromium-launcher-r1.sh chromium-launcher.sh || die
+	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	sed "s:chromium-browser:chromium-browser${SUFFIX}:g" \
 		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
 	sed "s:chromium.desktop:chromium${SUFFIX}.desktop:g" \
@@ -320,6 +320,11 @@ src_install() {
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser${SUFFIX} || die
 	# keep the old symlink around for consistency
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium${SUFFIX} || die
+
+	# Allow users to override command-line options, bug #357629.
+	dodir /etc/chromium || die
+	insinto /etc/chromium
+	newins "${FILESDIR}/chromium.default" "default" || die
 
 	insinto "${CHROMIUM_HOME}"
 	doins out/Release/chrome.pak || die

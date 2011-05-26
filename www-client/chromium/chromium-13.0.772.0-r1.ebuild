@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.772.0.ebuild,v 1.2 2011/05/25 04:46:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.772.0-r1.ebuild,v 1.1 2011/05/26 11:09:13 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -281,13 +281,18 @@ src_install() {
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
-	newexe "${FILESDIR}"/chromium-launcher-r1.sh chromium-launcher.sh || die
+	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 
 	# It is important that we name the target "chromium-browser",
 	# xdg-utils expect it; bug #355517.
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser || die
 	# keep the old symlink around for consistency
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium || die
+
+	# Allow users to override command-line options, bug #357629.
+	dodir /etc/chromium || die
+	insinto /etc/chromium
+	newins "${FILESDIR}/chromium.default" "default" || die
 
 	insinto "${CHROMIUM_HOME}"
 	doins out/Release/chrome.pak || die
