@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/megacli
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.6 2009/05/07 13:10:49 wschlich Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.7 2011/05/26 18:12:27 ramereth Exp $
+
+*megacli-8.00.46 (26 May 2011)
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org> -megacli-1.01.40.ebuild,
+  -megacli-2.00.15.ebuild, -megacli-4.00.11.ebuild, +megacli-8.00.46.ebuild,
+  metadata.xml:
+  Version bump resolves #337560, cleanup
 
 *megacli-2.00.15 (07 May 2009)
 

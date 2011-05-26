@@ -1,12 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-4.00.11.ebuild,v 1.2 2009/05/07 13:10:49 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.00.46.ebuild,v 1.1 2011/05/26 18:12:27 ramereth Exp $
+
+EAPI="3"
 
 inherit rpm
 
 DESCRIPTION="LSI Logic MegaRAID Command Line Interface management tool"
 HOMEPAGE="http://www.lsi.com/"
-SRC_URI="http://www.lsi.com/DistributionSystem/AssetDocument/${PV}_Linux_MegaCLI.zip"
+SRC_URI="http://www.lsi.com/DistributionSystem/User/AssetMgr.aspx?asset=56682 -> ${PV}_Linux_MegaCLI.zip"
 
 LICENSE="LSI"
 SLOT="0"
@@ -16,16 +18,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
+RDEPEND=""
 
 RESTRICT="strip mirror test"
-
-S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	unpack ./MegaCliLin.zip || die "failed to unpack inner ZIP"
-	rpm_unpack "${S}"/MegaCli-${PV}-1.i386.rpm || die "failed to unpack RPM"
+	rpm_unpack ./MegaCli-${PV}-1.i386.rpm || die "failed to unpack RPM"
+	rpm_unpack ./Lib_Utils-1.00-08.noarch.rpm || die "failed to unpack RPM"
 }
 
 src_compile() {
@@ -34,14 +36,18 @@ src_compile() {
 
 src_install() {
 	exeinto /opt/MegaRAID/MegaCli
+
+	libsysfs=libsysfs.so.2.0.2
 	case ${ARCH} in
-		amd64) MegaCli=MegaCli64;;
+		amd64) MegaCli=MegaCli64 libsysfs="x86_64/${libsysfs}";;
 		x86) MegaCli=MegaCli;;
 		*) die "invalid ARCH";;
 	esac
 	doexe opt/MegaRAID/MegaCli/${MegaCli}
 	dosym /opt/MegaRAID/MegaCli/${MegaCli} /usr/sbin/MegaCli
-	dodoc "${FILESDIR}"/${PV}_Linux_MegaCLI.txt
+	dosym /opt/MegaRAID/MegaCli/${MegaCli} /usr/sbin/megacli
+	dolib.so opt/lsi/3rdpartylibs/${libsysfs}
+	dodoc ${PV}_Linux_MegaCLI.txt
 }
 
 pkg_postinst() {
