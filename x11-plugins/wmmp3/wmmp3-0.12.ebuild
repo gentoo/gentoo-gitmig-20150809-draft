@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.12 2010/07/22 14:34:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/wmmp3-0.12.ebuild,v 1.13 2011/05/26 13:12:45 s4t4n Exp $
 
 inherit eutils
 
 IUSE=""
 
 DESCRIPTION="Mp3 player dock app for WindowMaker; frontend to mpg123"
-HOMEPAGE="http://www.dotfiles.com/software/wmmp3/"
-SRC_URI="http://www.dotfiles.com/software/wmmp3/${P}.tar.gz"
+HOMEPAGE="http://www.dockapps.org/file.php/id/60"
+SRC_URI="http://www.dockapps.org/download.php/id/91/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
