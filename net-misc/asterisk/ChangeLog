@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.313 2011/05/25 01:59:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.314 2011/05/26 14:29:52 chainsaw Exp $
+
+*asterisk-1.8.4.1 (26 May 2011)
+
+  26 May 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.4.1.ebuild:
+  Bugfix release; Cisco 79xx phones now register again. Unreachable TCP/TLS
+  peers no longer cause the SIP stack to explode. Snom phones can now reliably
+  register over TLS. Upstream patch scavenged to prevent PUBLISH dialogs
+  accumulating.
 
   25 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   asterisk-1.6.2.17.3.ebuild, asterisk-1.6.2.18.ebuild,
