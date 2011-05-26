@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.47.ebuild,v 1.1 2011/05/26 18:59:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.47.ebuild,v 1.2 2011/05/26 19:01:37 abcd Exp $
 
 EAPI=4
 
@@ -14,6 +14,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+S=${WORKDIR}/${PN}
 
 src_prepare() {
 	find "${S}" -type f -exec sed -i -e "s:/usr/lib/:/usr/libexec/:g" {} + || die "failed on find and sed lib->libexec"
