@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmlaptop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/ChangeLog,v 1.9 2010/09/09 09:54:32 s4t4n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/ChangeLog,v 1.10 2011/05/26 14:52:47 s4t4n Exp $
+
+  26 May 2011; Michele Noberasco <s4t4n@gentoo.org> wmlaptop-1.4.ebuild,
+  wmlaptop-1.3.ebuild:
+  Added patch to check for /proc/acpi instead of /proc/acpi/info. Partially fixes bug #348124.
+
+*wmlaptop-1.4 (26 May 2011)
+
+  26 May 2011; Michele Noberasco <s4t4n@gentoo.org> wmlaptop-1.4.ebuild:
+  Version bump.
 
   09 Sep 2010; Michele Noberasco <s4t4n@gentoo.org>; wmlaptop-1.3.ebuild,
   +files/wmlaptop-1.3-Makefile.patch:

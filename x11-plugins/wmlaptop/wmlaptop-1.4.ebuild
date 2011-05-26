@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/wmlaptop-1.3.ebuild,v 1.9 2011/05/26 14:52:47 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/wmlaptop-1.4.ebuild,v 1.1 2011/05/26 14:52:47 s4t4n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ MY_P="${P}"
 S="${WORKDIR}/${MY_P}/src"
 
 DESCRIPTION="Dockapp for laptop users"
-SRC_URI="http://www.dockapps.org/download.php/id/474/${P}.tar.bz2"
+SRC_URI="http://www.dockapps.org/download.php/id/509/${P}.tar.gz"
 HOMEPAGE="http://www.dockapps.org/file.php/id/227"
 
 RDEPEND="x11-libs/libX11
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 src_unpack() {
 	unpack ${A}
