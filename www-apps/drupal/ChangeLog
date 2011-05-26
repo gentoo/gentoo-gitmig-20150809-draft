@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.69 2011/01/06 00:45:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.70 2011/05/26 23:44:18 tampakrap Exp $
+
+*drupal-6.22 (26 May 2011)
+
+  26 May 2011; Theo Chatzimichos <tampakrap@gentoo.org> +drupal-6.22.ebuild:
+  Version bump to 6.22
 
 *drupal-7.0 (06 Jan 2011)
 
