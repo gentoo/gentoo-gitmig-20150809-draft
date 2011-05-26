@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.6.2.ebuild,v 1.3 2011/04/10 06:59:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.6.2.ebuild,v 1.4 2011/05/26 16:12:26 angelos Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils
 
 DESCRIPTION="a fast, small and powerful file manager and graphical shell"
-HOMEPAGE="http://sourceforge.net/projects/xffm/"
+HOMEPAGE="http://rodent.xffm.org"
 SRC_URI="mirror://sourceforge/project/xffm/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
