@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.28 2011/04/08 20:22:15 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.29 2011/05/26 20:03:22 ranger Exp $
+
+  26 May 2011; Brent Baude <ranger@gentoo.org> mg-20110120.ebuild:
+  Marking mg-20110120 ppc for bug 361631
 
   08 Apr 2011; Thomas Kahle <tomka@gentoo.org> mg-20110120.ebuild:
   x86 stable per bug 361631
