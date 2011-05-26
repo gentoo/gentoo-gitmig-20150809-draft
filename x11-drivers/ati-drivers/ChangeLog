@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.250 2011/05/17 15:27:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.251 2011/05/26 20:17:09 chithanh Exp $
+
+  26 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/ati-drivers-2.6.39.patch, ati-drivers-11.5.ebuild:
+  Import 2.6.39 patch and Enrico Tagliavini's ebuild from the x11 overlay, bug
+  #368081.
 
 *ati-drivers-11.5 (17 May 2011)
 

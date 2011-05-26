@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.5.ebuild,v 1.1 2011/05/17 15:27:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.5.ebuild,v 1.2 2011/05/26 20:17:09 chithanh Exp $
 
 EAPI=4
 
@@ -84,7 +84,7 @@ QA_WX_LOAD="
 QA_PRESTRIPPED="
 	usr/lib\(32\|64\)\?/libXvBAW.so.1.0
 	usr/lib\(32\|64\)\?/opengl/ati/lib/libGL.so.1.2
-	usr/lib\(32\|64\)\?/opengl/ati/extensions/libglx.so
+	usr/lib\(32\|64\)\?/opengl/ati/extensions/fglrx-libglx.so
 	usr/lib\(32\|64\)\?/xorg/modules/glesx.so
 	usr/lib\(32\|64\)\?/libAMDXvBA.so.1.0
 	usr/lib\(32\|64\)\?/libaticaldd.so
@@ -200,7 +200,7 @@ _check_kernel_config() {
 		failed=1
 	fi
 
-	kernel_is ge 2 6 37 && if ! linux_chkconfig_present BKL ; then
+	kernel_is ge 2 6 37 && kernel_is le 2 6 38 && if ! linux_chkconfig_present BKL ; then
 		eerror "${P} requires BKL."
 		eerror "Please enable the Big Kernel Lock:"
 		eerror "Kernel hacking  --->"
@@ -292,6 +292,11 @@ src_prepare() {
 
 	# Fix a known compilation error
 	epatch "${FILESDIR}"/ati-drivers-fix_compilation-bug-297322.patch
+
+	# Experimental 2.6.39 support
+	if kernel_is -ge 2 6 39 ; then
+		epatch "${FILESDIR}"/ati-drivers-2.6.39.patch || die "epatch failed"
+	fi
 
 	# These are the userspace utilities that we also have source for.
 	# We rebuild these later.
