@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20101107a.ebuild,v 1.2 2011/05/26 18:17:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20101107a.ebuild,v 1.3 2011/05/26 23:00:59 ramereth Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="gd"
 
 DEPEND=""
-RDEPEND="dev-lang/php[xml]
+RDEPEND="dev-lang/php[xml,spl]
 	gd? ( || ( dev-lang/php[gd]
 		media-gfx/imagemagick )
 	)"
