@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.115 2011/03/02 06:16:12 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.116 2011/05/26 18:25:22 ramereth Exp $
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org> -stunnel-4.29-r1.ebuild,
+  -stunnel-4.31-r1.ebuild, stunnel-4.33.ebuild, stunnel-4.35.ebuild:
+  Stablize on x86/amd64 (resolves #349074, #353955), cleanup
 
 *stunnel-4.35 (02 Mar 2011)
 
