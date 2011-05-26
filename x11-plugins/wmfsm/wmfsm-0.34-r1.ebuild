@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.34-r1.ebuild,v 1.8 2009/06/04 00:16:35 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.34-r1.ebuild,v 1.9 2011/05/26 13:34:42 s4t4n Exp $
 
 inherit eutils
 
 IUSE=""
 DESCRIPTION="dockapp for monitoring filesystem usage"
-HOMEPAGE="http://www.cs.ubc.ca/~cmg/"
-SRC_URI="http://www.cs.ubc.ca/~cmg/${P}.tar.gz"
+HOMEPAGE="http://www.dockapps.org/file.php/id/100"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
