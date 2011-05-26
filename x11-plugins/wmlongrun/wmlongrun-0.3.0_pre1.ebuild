@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.3.0_pre1.ebuild,v 1.1 2008/01/19 13:27:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlongrun/wmlongrun-0.3.0_pre1.ebuild,v 1.2 2011/05/26 13:42:19 s4t4n Exp $
 
 DESCRIPTION="A dockapp to monitor LongRun on a Transmeta Crusoe processor"
-HOMEPAGE="http://seiichisato.jp/dockapps/"
-SRC_URI="http://seiichisato.jp/dockapps/src/${P/_/}.tar.gz"
+HOMEPAGE="http://www.dockapps.org/file.php/id/38"
+SRC_URI="mirror://gentoo/${P/_/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
