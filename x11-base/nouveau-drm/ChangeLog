@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/nouveau-drm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.16 2011/04/16 23:15:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.17 2011/05/26 21:39:06 chithanh Exp $
+
+*nouveau-drm-20110526 (26 May 2011)
+
+  26 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -nouveau-drm-20110415.ebuild, +nouveau-drm-20110526.ebuild:
+  New snapshot, no longer needs firmware for NVC0 generation chipsets.
 
 *nouveau-drm-20110415 (16 Apr 2011)
 
