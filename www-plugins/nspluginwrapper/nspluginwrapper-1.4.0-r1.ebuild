@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.0-r1.ebuild,v 1.1 2011/05/25 01:15:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.0-r1.ebuild,v 1.2 2011/05/26 15:55:44 chutzpah Exp $
 
 EAPI=2
 
@@ -67,7 +67,7 @@ src_install() {
 
 	dosym "/usr/$(get_libdir)/${PN}/x86_64/linux/npconfig" "/usr/bin/${PN}"
 
-	dodoc NEWS README TODO ChangeLog
+	dodoc NEWS README TODO
 }
 
 pkg_postinst() {
