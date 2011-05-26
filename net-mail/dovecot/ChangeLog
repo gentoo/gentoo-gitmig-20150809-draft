@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.303 2011/05/22 15:12:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.304 2011/05/26 11:37:41 phajdan.jr Exp $
+
+  26 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dovecot-1.2.17.ebuild,
+  dovecot-2.0.13.ebuild:
+  x86 stable wrt security bug #368653
 
 *dovecot-1.2.17 (22 May 2011)
 
