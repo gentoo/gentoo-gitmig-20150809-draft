@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.109 2011/05/11 18:57:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.110 2011/05/26 21:21:00 maekke Exp $
+
+  26 May 2011; Markus Meier <maekke@gentoo.org> rb_libtorrent-0.15.6.ebuild:
+  x86 stable, bug #365393
 
   11 May 2011; Markos Chandras <hwoarang@gentoo.org>
   rb_libtorrent-0.15.6.ebuild:
