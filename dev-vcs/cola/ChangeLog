@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/cola
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/ChangeLog,v 1.10 2011/04/23 07:05:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/ChangeLog,v 1.11 2011/05/26 06:38:42 jlec Exp $
+
+*cola-1.4.3.4 (26 May 2011)
+
+  26 May 2011; Justin Lecher <jlec@gentoo.org> +cola-1.4.3.4.ebuild:
+  Version Bump
 
 *cola-1.4.3.3 (23 Apr 2011)
 
