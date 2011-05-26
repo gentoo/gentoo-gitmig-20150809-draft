@@ -1,0 +1,13 @@
+# ChangeLog for app-admin/drush
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/drush/ChangeLog,v 1.1 2011/05/26 22:22:01 ramereth Exp $
+
+*drush-4.4 (26 May 2011)
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org> +drush-4.4.ebuild,
+  +metadata.xml:
+  Initial ebuild, resolves #313869
+
+  Thanks to Claes <letharion@gmail.com> and several others on the same ticket
+  for contributing to the original ebuild.
+
