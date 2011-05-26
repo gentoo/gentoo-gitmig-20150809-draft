@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.287 2011/05/23 10:04:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.288 2011/05/26 21:58:55 xarthisius Exp $
+
+  26 May 2011; Kacper Kowalik <xarthisius@gentoo.org> xscreensaver-5.14.ebuild:
+  Workaround failure with latest rpm wrt #368025. Thanks to Ole Craig
+  <olc@macmillan-craig.net> for the report and ungift-ed <ungifted01@gmail.com>
+  for the solution.
 
 *xscreensaver-5.14 (23 May 2011)
 
