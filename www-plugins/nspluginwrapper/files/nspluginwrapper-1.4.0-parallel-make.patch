@@ -25,16 +25,20 @@ diff -ur nspluginwrapper-1.4.0.orig//Makefile nspluginwrapper-1.4.0/Makefile
  install.viewer:
  install.libnoxshm:
  endif
- install.viewer.bin: $(npviewer_PROGRAM)
+-install.viewer.bin: $(npviewer_PROGRAM)
++install.viewer.bin: install.dirs $(npviewer_PROGRAM)
  	$(INSTALL) -m 755 $(STRIP_OPT) $(npviewer_PROGRAM) $(DESTDIR)$(nptargetdir)/$(npviewer_PROGRAM)
 -install.viewer.glue::
 +install.viewer.glue:: install.dirs
  	p=$(DESTDIR)$(nptargetdir)/$(npviewer_PROGRAM:%.bin=%);	\
  	echo "#!/bin/sh" > $$p;								\
  	echo "TARGET_OS=$(TARGET_OS)" >> $$p;						\
-@@ -274,11 +274,11 @@
+@@ -272,13 +272,13 @@
+ 	echo "esac" >> $$p;								\
+ 	echo ". $(npcommondir)/$(nploader_PROGRAM)" >> $$p;			\        
  	chmod 755 $$p
- do.install.libnoxshm: $(libnoxshm_LIBRARY)
+-do.install.libnoxshm: $(libnoxshm_LIBRARY)
++do.install.libnoxshm: install.dirs $(libnoxshm_LIBRARY)
  	$(INSTALL) -m 755 $(STRIP_OPT) $(libnoxshm_LIBRARY) $(DESTDIR)$(nptargetdir)/$(libnoxshm_LIBRARY)
 -install.config: $(npconfig_PROGRAM)
 +install.config: install.dirs $(npconfig_PROGRAM)
