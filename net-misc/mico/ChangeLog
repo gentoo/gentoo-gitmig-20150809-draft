@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mico
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.30 2010/12/01 09:57:46 haubi Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.31 2011/05/26 09:46:17 haubi Exp $
+
+*mico-2.3.13-r5 (26 May 2011)
+
+  26 May 2011; Michael Haubenwallner <haubi@gentoo.org>
+  +mico-2.3.13-r5.ebuild:
+  Fix building with gcc-4.6.0 (#365117). run eautoreconf. Improve support
+  for -Wl,--as-needed (#280678); Keep patches-tarball in devspace.
 
 *mico-2.3.13-r4 (29 Nov 2010)
 
