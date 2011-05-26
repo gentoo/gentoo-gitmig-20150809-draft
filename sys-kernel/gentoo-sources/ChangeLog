@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.852 2011/05/25 00:39:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.853 2011/05/26 16:28:59 mpagano Exp $
+
+*gentoo-sources-2.6.37-r6 (26 May 2011)
+
+  26 May 2011; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.37-r6.ebuild:
+  Xen compilation error fix and patch to disable -Wunused-but-set-variable for
+  gcc
 
   25 May 2011; Jeroen Roovers <jer@gentoo.org> gentoo-sources-2.6.38-r6.ebuild:
   Stable for HPPA (bug #368609).
