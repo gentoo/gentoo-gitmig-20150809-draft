@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-9999.ebuild,v 1.2 2011/05/26 20:44:27 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-9999.ebuild,v 1.3 2011/05/26 20:47:56 haubi Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
-DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
 if [[ ${PV} == 9999 ]]; then
 	EDARCS_REPOSITORY="http://mico.org/mico-darcs-repository"
 	inherit darcs
@@ -14,6 +13,7 @@ fi
 
 PATCH_VER=20110526
 
+DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
 HOMEPAGE="http://www.mico.org/"
 SRC_URI="http://www.mico.org/${P}.tar.gz"
 
