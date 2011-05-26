@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmemmon
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.22 2008/06/27 20:18:45 armin76 Exp $
+# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.23 2011/05/26 13:51:50 s4t4n Exp $
+
+  26 May 2011; Michele Noberasco <s4t4n@gentoo.org> wmmemmon-1.0.2_pre2.ebuild,
+  wmmemmon-1.0.1.ebuild:
+  Fixed HOMEPAGE and SRC_URI. Closes bug #367167.
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org> wmmemmon-1.0.2_pre2.ebuild:
   alpha/sparc/x86 stable wrt #229581
