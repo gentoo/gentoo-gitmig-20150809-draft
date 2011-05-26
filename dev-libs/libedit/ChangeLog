@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.50 2011/05/22 03:03:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.51 2011/05/26 17:50:45 naota Exp $
+
+  26 May 2011; Naohiro Aota <naota@gentoo.org>
+  -files/libedit-20050531-debian-to-gentoo.patch, -libedit-20050930.ebuild,
+  -libedit-20061103-r2.ebuild, -files/libedit-20061103-debian-to-gentoo.patch,
+  -files/libedit-20061103-freebsd.patch, -files/libedit-20061103-glibc.patch,
+  -files/libedit-20061103-ldflags.patch:
+  Remove old versions. bug #348660
 
   22 May 2011; Naohiro Aota <naota@gentoo.org> libedit-20100424.3.0.ebuild,
   +files/libedit-20100424.3.0-bsd.patch,
