@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.51 2011/05/21 16:26:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.52 2011/05/26 21:23:46 maekke Exp $
+
+  26 May 2011; Markus Meier <maekke@gentoo.org> gnucap-0.35.20091207.ebuild:
+  x86 stable, bug #365415
 
   21 May 2011; Raúl Porcel <armin76@gentoo.org> gnucap-0.35.ebuild,
   gnucap-0.35.20091207.ebuild:

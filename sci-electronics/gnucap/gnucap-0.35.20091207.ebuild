@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20091207.ebuild,v 1.3 2011/05/21 16:26:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20091207.ebuild,v 1.4 2011/05/26 21:23:46 maekke Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.gnucap.org/"
 IUSE="examples"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND=""
 RDEPEND=""
