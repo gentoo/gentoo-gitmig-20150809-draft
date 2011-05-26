@@ -1,31 +1,33 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-9999.ebuild,v 1.1 2011/05/26 10:30:50 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-9999.ebuild,v 1.2 2011/05/26 20:44:27 haubi Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
 DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
-HOMEPAGE="http://www.mico.org/"
-SRC_URI="http://www.mico.org/${P}.tar.gz"
-
-PATCH_VER=20110526
-
 if [[ ${PV} == 9999 ]]; then
-	SRC_URI=""
 	EDARCS_REPOSITORY="http://mico.org/mico-darcs-repository"
 	inherit darcs
 fi
+
+PATCH_VER=20110526
+
+HOMEPAGE="http://www.mico.org/"
+SRC_URI="http://www.mico.org/${P}.tar.gz"
+
+[[ ${PV} == 9999 ]] &&
+	SRC_URI=""
+
+[[ -n ${PATCH_VER} ]] &&
+	SRC_URI="${SRC_URI} http://dev.gentoo.org/~haubi/distfiles/${P}-gentoo-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="gtk postgres qt4 ssl tcl threads X"
 RESTRICT="test" #298101
-
-[[ -z ${PATCH_VER} ]] || \
-	SRC_URI="${SRC_URI} http://dev.gentoo.org/~haubi/distfiles/${P}-gentoo-patches-${PATCH_VER}.tar.bz2"
 
 # doesn't compile:
 #   bluetooth? ( net-wireless/bluez )

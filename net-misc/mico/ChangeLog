@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mico
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.32 2011/05/26 10:30:50 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.33 2011/05/26 20:44:27 haubi Exp $
+
+  26 May 2011; Michael Haubenwallner <haubi@gentoo.org> mico-9999.ebuild:
+  Do all inherits before any other metadata. Little reorg in metadata
+  setting for more readability.
 
 *mico-9999 (26 May 2011)
 
