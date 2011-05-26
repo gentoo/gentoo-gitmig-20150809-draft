@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cronolog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.28 2010/12/02 17:51:48 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.29 2011/05/26 23:08:33 ramereth Exp $
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org> cronolog-1.6.2-r4.ebuild:
+  Mark stable
 
   02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -cronolog-1.6.2-r2.ebuild:
