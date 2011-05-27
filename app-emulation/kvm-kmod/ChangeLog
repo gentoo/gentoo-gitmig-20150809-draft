@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/kvm-kmod
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.21 2011/05/25 14:56:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.22 2011/05/27 23:23:35 cardoe Exp $
+
+  27 May 2011; Doug Goldstein <cardoe@gentoo.org> -kvm-kmod-2.6.32.17.ebuild:
+  Removed for CVE-2010-0435
 
 *kvm-kmod-2.6.38.6 (25 May 2011)
 *kvm-kmod-2.6.36.2 (25 May 2011)
