@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9.ebuild,v 1.4 2011/01/08 11:45:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9.ebuild,v 1.5 2011/05/27 12:32:04 flameeyes Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -71,5 +71,5 @@ src_test() {
 	cd unittests
 	# Remove failing tests due to non-existing files
 	rm test_maimport.py test_mayaascii.py test_mayabinary.py test_ri.py test_slparams.py
-	PYTHONPATH="$(ls -d ../build/lib*)" "$(PYTHON)" all.py || die "Tests failed"
+	PYTHONPATH="$(ls -d ../build/lib*)" "$(PYTHON)" all.py || die "Tests failed"
 }
