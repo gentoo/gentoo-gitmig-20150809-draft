@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.2-r1.ebuild,v 1.1 2011/02/28 18:20:11 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.32.3.ebuild,v 1.1 2011/05/27 07:21:52 xarthisius Exp $
 
-EAPI=2
-inherit eutils
+EAPI=4
+
+inherit base
 
 DESCRIPTION="MS-Explorer-like minimalist file manager for X"
 HOMEPAGE="http://roland65.free.fr/xfe"
@@ -21,10 +22,11 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-missing_Xlib_h.patch \
-		"${FILESDIR}"/${P}-destructive-move.patch
+DOCS=( AUTHORS BUGS ChangeLog NEWS README TODO )
+PATCHES=( "${FILESDIR}"/${PN}-1.32.2-missing_Xlib_h.patch )
 
+src_prepare() {
+	base_src_prepare
 	cat >po/POTFILES.skip <<-EOF
 	src/icons.cpp
 	xfe.desktop.in.in
@@ -41,9 +43,4 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable startup-notification sn) \
 		$(use_enable debug)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }

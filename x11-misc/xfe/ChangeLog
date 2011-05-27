@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.65 2011/02/28 18:20:11 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.66 2011/05/27 07:21:52 xarthisius Exp $
+
+*xfe-1.32.3 (27 May 2011)
+
+  27 May 2011; Kacper Kowalik <xarthisius@gentoo.org> -xfe-1.32.2.ebuild,
+  -xfe-1.32.2-r1.ebuild, -files/xfe-1.32.2-destructive-move.patch,
+  +xfe-1.32.3.ebuild:
+  Version bump wrt #361049. Thanks to <teidakankan@gmail.com> for the report.
+  Drop old
 
 *xfe-1.32.2-r1 (28 Feb 2011)
 
