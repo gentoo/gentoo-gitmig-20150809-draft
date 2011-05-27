@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.51 2011/03/28 03:31:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.52 2011/05/27 23:04:14 cardoe Exp $
+
+*qemu-kvm-0.14.1 (27 May 2011)
+
+  27 May 2011; Doug Goldstein <cardoe@gentoo.org> +qemu-kvm-0.14.1.ebuild:
+  Version bump. Contains a fix for CVE-2011-1750 & CVE-2011-1751. Adds new USE
+  flags for additional features in 0.14.x and previously unexposed debug
+  options and vnc-threads
 
   28 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   qemu-kvm-0.12.5-r1.ebuild, qemu-kvm-0.13.0-r1.ebuild,
