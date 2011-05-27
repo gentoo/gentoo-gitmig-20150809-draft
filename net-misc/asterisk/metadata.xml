@@ -7,7 +7,6 @@
     <name>Tony Vroon</name>
   </maintainer>
   <use>
-    <flag name="misdn">Build with mISDN (chan_misdn) support for BRI ISDN cards</flag>
     <flag name="newt">Include additional tools that require redhats windowing toolkit</flag>
     <flag name="dahdi">Support Digium compatible hardware (formerly known as Zaptel).</flag>
     <flag name="span">Enable support for the spandsp codec</flag>
