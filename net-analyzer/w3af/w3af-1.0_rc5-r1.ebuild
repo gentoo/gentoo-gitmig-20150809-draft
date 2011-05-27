@@ -1,11 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc4-r1.ebuild,v 1.1 2010/12/29 11:22:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.0_rc5-r1.ebuild,v 1.1 2011/05/27 09:48:55 hwoarang Exp $
 
 EAPI=2
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit multilib python versionator
 
@@ -32,18 +33,19 @@ RDEPEND=">=dev-python/fpconst-0.7.2
 	|| (
 		net-analyzer/gnu-netcat
 		net-analyzer/netcat
-		net-analyzer/netcat6
-		sys-apps/busybox )
-	net-analyzer/scapy
+		net-analyzer/netcat6 )
+	>=net-analyzer/scapy-2
 	gtk? ( media-gfx/graphviz
-		>dev-python/pygtk-2.0 )"
+		>dev-python/pygtk-2.0
+		dev-python/pygtksourceview )"
 
 S=${WORKDIR}/${PN}
 
 src_prepare(){
-	rm -r extlib/{cluster,fpconst-0.7.2,nltk,nltk_contrib,pyPdf,scapy,simplejson,SOAPpy,yaml} || die
+	rm -r extlib/{cluster,fpconst-0.7.2,pyPdf,simplejson,SOAPpy,yaml} || die
 	rm readme/{GPL,INSTALL} || die
 	rm plugins/attack/payloads/code/netcat || die #bug 349780
+	find "${S}" -type d -name .svn -exec rm -R {} +
 }
 
 src_install() {
