@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/arandr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.2 2010/10/27 03:14:25 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.3 2011/05/27 07:32:02 xarthisius Exp $
+
+*arandr-0.1.4 (27 May 2011)
+
+  27 May 2011; Kacper Kowalik <xarthisius@gentoo.org> -arandr-0.1.3.ebuild,
+  +arandr-0.1.4.ebuild:
+  Version bump wrt #352076. Thanks to <teidakankan@gmail.com> for 
+  the report. Drop old.
 
   27 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> arandr-0.1.3.ebuild:
   Fix python depend to >= 2.5 wrt #342865 by James Rowe.
