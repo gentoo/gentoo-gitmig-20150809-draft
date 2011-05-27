@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.100 2011/04/24 18:55:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.101 2011/05/27 09:46:14 ferringb Exp $
 
 # Author(s): John Mylchreest <johnm@gentoo.org>,
 #            Stefan Schweizer <genstef@gentoo.org>
@@ -576,8 +576,15 @@ find_module_params() {
 linux-mod_pkg_setup() {
 	debug-print-function ${FUNCNAME} $*
 
+	local is_bin="${MERGE_TYPE}"
+
 	# If we are installing a binpkg, take a different path.
-	if [[ $EMERGE_FROM == binary ]]; then
+	# use MERGE_TYPE if available (eapi>=4); else use non-PMS EMERGE_FROM (eapi<4)
+	if has ${EAPI} 0 1 2 3; then
+		is_bin=${EMERGE_FROM}
+	fi
+
+	if [[ ${is_bin} == binary ]]; then
 		linux-mod_pkg_setup_binary
 		return
 	fi
