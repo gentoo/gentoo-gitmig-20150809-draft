@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.65 2011/01/10 19:08:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.66 2011/05/27 11:28:39 naota Exp $
+
+  27 May 2011; Naohiro Aota <naota@gentoo.org> slim-1.3.2-r3.ebuild,
+  +files/slim-1.3.2-bsd-install.patch:
+  Add ~x86-fbsd keyword; add patch for bsd install
 
   10 Jan 2011; Brent Baude <ranger@gentoo.org> slim-1.3.2-r3.ebuild:
   stable ppc, bug 348542

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r3.ebuild,v 1.5 2011/01/10 19:08:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r3.ebuild,v 1.6 2011/05/27 11:28:39 naota Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="branding pam"
 
 RDEPEND="x11-libs/libXmu
@@ -41,6 +41,12 @@ src_prepare() {
 		Makefile || die "sed failed in Makefile"
 	# Our Gentoo-specific config changes
 	epatch "${FILESDIR}/${PN}-1.3.2-r2-config.diff"
+
+	if use elibc_FreeBSD; then
+		sed -i -e "s/CUSTOM=-DHAVE_SHADOW/CUSTOM=-DNEEDS_BASENAME/" Makefile \
+			|| die "sed failed in Makefile"
+		epatch "${FILESDIR}/${PN}-1.3.2-bsd-install.patch"
+	fi
 
 	if use branding; then
 		sed -i -e 's/  default/  slim-gentoo-simple/' slim.conf || die
