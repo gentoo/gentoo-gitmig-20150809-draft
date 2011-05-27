@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apiextractor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/ChangeLog,v 1.10 2011/03/20 19:08:13 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apiextractor/ChangeLog,v 1.11 2011/05/27 18:16:29 chiiph Exp $
+
+*apiextractor-0.10.3 (27 May 2011)
+
+  27 May 2011; Tomas Touceda <chiiph@gentoo.org> +apiextractor-0.10.3.ebuild:
+  Version bump
 
 *apiextractor-0.10.0 (20 Mar 2011)
 
