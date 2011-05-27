@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.110 2011/05/23 01:18:03 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.111 2011/05/27 08:51:47 ferringb Exp $
+
+*pkgcore-0.6.2 (27 May 2011)
+
+  27 May 2011; Brian Harring <ferringb@gentoo.org> +pkgcore-0.6.2.ebuild:
+  portage configuration compatibility fixes, and fixing misbehaving binpkgs
+  relying on portage internals
 
 *pkgcore-0.6.1 (23 May 2011)
 
