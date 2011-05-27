@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.4.2.ebuild,v 1.1 2011/05/10 15:40:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.4.5.ebuild,v 1.1 2011/05/27 21:09:28 hwoarang Exp $
 
 EAPI="4"
 
