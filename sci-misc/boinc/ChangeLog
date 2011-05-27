@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.100 2011/05/23 19:47:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.101 2011/05/27 06:32:04 scarabeus Exp $
+
+  27 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> boinc-6.12.26-r1.ebuild:
+  Make the dep on libnotify versioned so even suckers that do not update wont
+  get crashes. Per bug #368809.
 
   23 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
   Fix quoting in attach and stop.
