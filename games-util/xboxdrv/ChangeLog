@@ -1,6 +1,12 @@
 # ChangeLog for games-util/xboxdrv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.14 2011/05/07 22:06:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.15 2011/05/27 21:28:23 mr_bones_ Exp $
+
+*xboxdrv-0.8.0 (27 May 2011)
+
+  27 May 2011; Michael Sterrett <mr_bones_@gentoo.org> +xboxdrv-0.8.0.ebuild,
+  +files/xboxdrv-0.8.0-scons-blows.patch:
+  version bump
 
 *xboxdrv-0.7.3 (07 May 2011)
 
