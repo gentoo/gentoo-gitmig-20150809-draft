@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.46 2011/05/22 21:51:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.47 2011/05/27 07:46:22 phajdan.jr Exp $
+
+  27 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sdlmame-0.142.ebuild:
+  x86 stable wrt bug #367123
 
   22 May 2011; Michael Sterrett <mr_bones_@gentoo.org> sdlmame-0.142.ebuild,
   +files/sdlmame-0.142-makefile.patch:
