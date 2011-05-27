@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20101107a.ebuild,v 1.3 2011/05/26 23:00:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20101107a.ebuild,v 1.4 2011/05/27 15:28:11 ramereth Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit webapp depend.php
 
@@ -19,7 +19,8 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="gd"
 
 DEPEND=""
-RDEPEND="dev-lang/php[xml,spl]
+RDEPEND="
+	|| ( <dev-lang/php-5.3[xml,spl] >=dev-lang/php-5.3[xml] )
 	gd? ( || ( dev-lang/php[gd]
 		media-gfx/imagemagick )
 	)"
