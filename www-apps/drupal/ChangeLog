@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.70 2011/05/26 23:44:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.71 2011/05/27 21:24:43 radhermit Exp $
+
+*drupal-7.2 (27 May 2011)
+
+  27 May 2011; Tim Harder <radhermit@gentoo.org> +drupal-7.2.ebuild:
+  Version bump. Update to EAPI 4 and add USE flags for database support (bug
+  #354475).
 
 *drupal-6.22 (26 May 2011)
 
