@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.82.0.ebuild,v 1.1 2011/04/01 17:03:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.90.0.ebuild,v 1.1 2011/05/27 07:56:00 pva Exp $
 
 EAPI="4"
 inherit fixheadtails
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="geoip"
 
-DEPEND="geoip? ( >=dev-libs/geoip-1.4.1 )"
+DEPEND="geoip? ( >=dev-libs/geoip-1.4.7 )"
 
 src_prepare() {
 	ht_fix_file configure
