@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.121 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.122 2011/05/27 22:54:52 cardoe Exp $
+
+  27 May 2011; Doug Goldstein <cardoe@gentoo.org> package.use.mask:
+  Mask rbd, spice, and xen USE flags for app-emulation/qemu-kvm as the
+  necessary
+  depends are masked. bug #368959
 
   09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   use.mask:

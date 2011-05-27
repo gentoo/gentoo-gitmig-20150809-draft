@@ -1,6 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.80 2011/05/09 14:29:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.81 2011/05/27 22:54:52 cardoe Exp $
+
+# Doug Goldstein <cardoe@gentoo.org> (27 May 2011)
+# app-emulation/spice, app-emulation/xen, and sys-cluster/ceph
+# are not keyworded. bug #368959
+app-emulation/qemu-kvm spice xen rbd
 
 # Kacper Kowalik <xarthisius@gentoo.org> (16 Jan 2011)
 # bug 350513, app-pda/jpilot is not keyworded
