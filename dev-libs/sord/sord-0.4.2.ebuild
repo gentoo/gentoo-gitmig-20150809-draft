@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/sord-0.4.2.ebuild,v 1.1 2011/05/27 05:39:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/sord-0.4.2.ebuild,v 1.2 2011/05/27 05:48:46 aballier Exp $
 
 EAPI=3
 
-inherit base multilib
+inherit base multilib toolchain-funcs
 
 DESCRIPTION="Library for storing RDF data in memory"
 HOMEPAGE="http://drobilla.net/software/sord/"
@@ -18,11 +18,13 @@ IUSE="doc test"
 RDEPEND="dev-libs/glib:2
 	dev-libs/serd"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	dev-util/pkgconfig"
 
 PATCHES=( "${FILESDIR}/ldconfig.patch" )
 
 src_configure() {
+	tc-export CC CXX CPP AR RANLIB
 	./waf configure \
 		--prefix=/usr \
 		--libdir="/usr/$(get_libdir)" \
