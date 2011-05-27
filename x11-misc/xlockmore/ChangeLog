@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.91 2011/01/03 16:53:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.92 2011/05/27 11:36:01 xmw Exp $
+
+  27 May 2011; Michael Weber <xmw@gentoo.org> xlockmore-5.31.ebuild:
+  added ~arm keyword (bug 368715)
 
   03 Jan 2011; Michael Weber <xmw@gentoo.org> xlockmore-5.31.ebuild:
   sparc stable (bug 347845)
