@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/slim-themes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.29 2010/05/21 22:27:52 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.30 2011/05/27 11:19:33 naota Exp $
+
+  27 May 2011; Naohiro Aota <naota@gentoo.org> slim-themes-1.2.3a-r6.ebuild:
+  Add ~x86-fbsd keyword
 
   21 May 2010; Jeremy Olexa <darkside@gentoo.org>
   -slim-themes-1.2.3a-r5.ebuild, slim-themes-1.2.3a-r6.ebuild:
