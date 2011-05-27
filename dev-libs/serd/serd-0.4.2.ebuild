@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serd/serd-0.4.2.ebuild,v 1.2 2011/05/27 05:33:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serd/serd-0.4.2.ebuild,v 1.3 2011/05/27 05:46:02 aballier Exp $
 
 EAPI=3
 
-inherit base multilib
+inherit base multilib toolchain-funcs
 
 DESCRIPTION="Library for RDF syntax which supports reading and writing Turtle and NTriples"
 HOMEPAGE="http://drobilla.net/software/serd/"
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}/ldconfig.patch" )
 
 src_configure() {
+	tc-export CC CXX CPP AR RANLIB
 	./waf configure \
 		--prefix=/usr \
 		--libdir="/usr/$(get_libdir)" \
