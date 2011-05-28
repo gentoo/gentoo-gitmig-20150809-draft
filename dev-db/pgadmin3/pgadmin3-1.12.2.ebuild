@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.12.2.ebuild,v 1.5 2011/03/20 18:32:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.12.2.ebuild,v 1.6 2011/05/28 12:26:41 ranger Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.pgadmin.org/"
 SRC_URI="mirror://postgresql/${PN}/release/v${PV}/src/${P}.tar.gz"
 
 LICENSE="Artistic"
-KEYWORDS="alpha amd64 ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE="debug"
 
