@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdebian-installer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.7 2011/05/27 10:08:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdebian-installer/ChangeLog,v 1.8 2011/05/28 11:14:59 hwoarang Exp $
+
+  28 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  libdebian-installer-0.78.ebuild:
+  Stable on amd64 wrt bug #368625
 
   27 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libdebian-installer-0.78.ebuild:
