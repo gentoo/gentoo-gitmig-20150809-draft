@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/libpst
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.22 2009/12/21 15:38:37 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.23 2011/05/28 23:43:26 radhermit Exp $
+
+*libpst-0.6.52 (28 May 2011)
+
+  28 May 2011; Tim Harder <radhermit@gentoo.org> +libpst-0.6.52.ebuild,
+  +files/libpst-0.6.52-no-static-python-lib.patch:
+  Version bump. Update to EAPI 4, add doc and static-libs USE flags, and don't
+  install the static python library and libtool archive file (bug #298881 by
+  Diego Elio Pettenò and Kacper Kowalik).
 
   21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> libpst-0.6.41.ebuild,
   +files/libpst-0.6.41-asneeded.patch:
