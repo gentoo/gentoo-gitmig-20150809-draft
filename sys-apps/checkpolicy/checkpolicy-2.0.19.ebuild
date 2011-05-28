@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.0.19.ebuild,v 1.1 2009/08/02 01:17:05 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.0.19.ebuild,v 1.2 2011/05/28 06:12:07 blueness Exp $
 
 IUSE="debug"
 
@@ -27,13 +27,12 @@ RDEPEND="=sys-libs/libsemanage-${SEMNG_VER}*"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	[ ! -z "${BUGFIX_PATCH}" ] && epatch "${BUGFIX_PATCH}"
 }
 
 src_compile() {
-	cd ${S}
 	emake YACC="bison -y" || die
 }
 
