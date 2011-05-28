@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.51 2011/05/09 08:39:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.52 2011/05/28 17:49:02 armin76 Exp $
+
+  28 May 2011; Raúl Porcel <armin76@gentoo.org> ypserv-2.22.ebuild,
+  ypserv-2.23.ebuild, ypserv-2.24.ebuild:
+  Drop ia64/sparc keyword
 
   09 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ypserv-2.23.ebuild:
   x86 stable wrt bug #364355
