@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.17 2011/05/28 06:06:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.18 2011/05/28 06:48:45 graaff Exp $
+
+*bundler-1.0.14 (28 May 2011)
+
+  28 May 2011; Hans de Graaff <graaff@gentoo.org> +bundler-1.0.14.ebuild:
+  Version bump. Drop x86 due to new dependency on app-text/ronn, bug 368983.
 
   28 May 2011; Hans de Graaff <graaff@gentoo.org> -bundler-1.0.10.ebuild,
   -bundler-1.0.12.ebuild:
