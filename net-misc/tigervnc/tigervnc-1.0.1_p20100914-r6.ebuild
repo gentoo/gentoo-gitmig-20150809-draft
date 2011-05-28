@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_p20100914-r6.ebuild,v 1.6 2011/05/15 13:52:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_p20100914-r6.ebuild,v 1.7 2011/05/28 17:04:40 armin76 Exp $
 
 EAPI="1"
 
@@ -136,6 +136,7 @@ src_compile() {
 			--enable-dri2 \
 			--disable-config-dbus \
 			--disable-config-hal \
+			--with-xmlto=no \
 			$(use_enable opengl glx) \
 			$(use_enable nptl glx-tls) \
 			|| die "econf server failed"
