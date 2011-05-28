@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.363 2011/05/28 17:51:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.364 2011/05/28 17:52:01 vapier Exp $
 
   11 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> wine-1.3.19.ebuild,
   wine-9999.ebuild:
@@ -13,7 +13,7 @@
 
   01 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> wine-1.3.18.ebuild,
   wine-9999.ebuild:
-  QA: drop useflag and epatch that does not apply at all (upstream obviously
+  Drop USE=mousewarp and epatch that does not apply at all (upstream obviously
   included it in git so it is in next release anyway).
 
   30 Apr 2011; Mike Frysinger <vapier@gentoo.org> wine-1.2.ebuild,
