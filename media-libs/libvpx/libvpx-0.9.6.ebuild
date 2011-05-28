@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.2 2011/05/16 16:39:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.3 2011/05/28 19:08:23 tommy Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs
@@ -41,6 +41,10 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC
+	local archparams=""
+	[ "$ABI" = "x86" ] && archparams=" --target=x86-linux-gcc"
+	[ "$ABI" = "amd64" ] && archparams=" --target=x86_64-linux-gcc"
+	( use x86 || use amd64 ) && archparams+=" --as=yasm"
 	./configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -58,6 +62,7 @@ src_configure() {
 		$(use_enable doc install-docs) \
 		$(use_enable postproc) \
 		$(use_enable threads multithread) \
+		$archparams \
 		|| die
 }
 
