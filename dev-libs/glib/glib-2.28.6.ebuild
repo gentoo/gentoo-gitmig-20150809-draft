@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.6.ebuild,v 1.9 2011/05/20 08:00:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.6.ebuild,v 1.10 2011/05/28 17:25:47 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -50,6 +50,9 @@ src_prepare() {
 			epatch "${FILESDIR}/glib-2.10.3-ia64-atomic-ops.patch"
 		fi
 	fi
+
+	# Fix compilation on several arches, bug #351387
+	epatch "${FILESDIR}/${PN}-2.26.1-gatomic-header.patch"
 
 	# Don't fail gio tests when ran without userpriv, upstream bug 552912
 	# This is only a temporary workaround, remove as soon as possible
