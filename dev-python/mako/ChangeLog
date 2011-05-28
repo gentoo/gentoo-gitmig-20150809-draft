@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.37 2011/05/23 17:57:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.38 2011/05/28 13:51:14 ranger Exp $
+
+  28 May 2011; Brent Baude <ranger@gentoo.org> mako-0.4.1.ebuild:
+  Marking mako-0.4.1 ppc for bug 368087
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org> mako-0.4.1.ebuild:
   Stable on amd64 wrt bug #368087
