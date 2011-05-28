@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r2.ebuild,v 1.2 2011/05/20 17:30:36 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r2.ebuild,v 1.3 2011/05/28 01:55:14 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -51,8 +51,10 @@ RESTRICT="test"
 
 update_gtk_immodules() {
 	local GTK2_CONFDIR="/etc/gtk-2.0"
-	# An arch specific config directory is used on multilib systems
-	has_multilib_profile && GTK2_CONFDIR="${GTK2_CONFDIR}/${CHOST}"
+	# bug #366889
+	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
+		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
+	fi
 	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
 
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
@@ -101,6 +103,8 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+
+	find "${ED}" -name '*.la' -exec rm {} + || die
 
 	insinto /etc/X11/xinit/xinput.d
 	newins xinput-ibus ibus.conf || die
