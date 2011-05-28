@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.3-r2.ebuild,v 1.3 2011/05/25 21:15:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.3-r2.ebuild,v 1.4 2011/05/28 22:06:43 dilfridge Exp $
 
 EAPI=3
 
@@ -75,6 +75,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch"
 	"${FILESDIR}/${PN}-4.6.2-optional_akonadi-server.patch"
 	"${FILESDIR}/${PN}-4.6.3-dduplicate.patch"
+	"${FILESDIR}/${PN}-4.6.3-gpsdapi.patch"
 )
 
 pkg_setup() {
