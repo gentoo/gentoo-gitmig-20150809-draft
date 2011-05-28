@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/reduce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.19 2011/05/03 17:49:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.20 2011/05/28 13:53:28 ranger Exp $
+
+  28 May 2011; Brent Baude <ranger@gentoo.org> reduce-3.13.080428-r1.ebuild:
+  Marking reduce-3.13.080428-r1 ppc for bug 325999
 
 *reduce-3.14.080821 (03 May 2011)
 
