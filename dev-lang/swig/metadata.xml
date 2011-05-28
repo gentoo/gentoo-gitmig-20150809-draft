@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>scheme</herd>
 	<maintainer>
+		<email>pchrist@gentoo.org</email>
+		<name>Panagiotis Christopoulos</name>
+	</maintainer>
+	<maintainer>
 		<email>hkBst@gentoo.org</email>
 	</maintainer>
 	
