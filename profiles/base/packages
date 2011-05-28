@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.49 2011/04/24 21:23:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.50 2011/05/28 19:00:21 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -50,7 +50,8 @@
 *sys-process/procps
 *sys-process/psmisc
 *sys-apps/sed
-*sys-apps/shadow
+# eutils.eclass relies on options from newer shadow #367633
+*>=sys-apps/shadow-4.1
 *sys-apps/texinfo
 *sys-apps/which
 *sys-devel/autoconf
