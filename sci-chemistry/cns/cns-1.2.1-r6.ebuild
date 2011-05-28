@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r6.ebuild,v 1.2 2011/05/11 07:27:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r6.ebuild,v 1.3 2011/05/28 12:09:36 jlec Exp $
 
 EAPI="3"
 
@@ -167,6 +167,7 @@ src_install() {
 		-e "s:CNS_HELPLIB=\$CNS_SOLVE/helplib:CNS_HELPLIB=\$CNS_DATA/helplib:g" \
 		-e "s:\$CNS_SOLVE/bin/cns_info:\$CNS_DATA/cns_info:g" \
 		-e "/^g77on/d" \
+		-e "/^g77off/d" \
 		"${T}"/cns_solve_env_sh
 
 	# Get rid of setup stuff we don't need in the installed script
