@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.60 2011/05/28 12:26:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.61 2011/05/28 12:34:36 scarabeus Exp $
+
+  28 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -pgadmin3-1.8.2.ebuild:
+  old
 
   28 May 2011; Brent Baude <ranger@gentoo.org> pgadmin3-1.12.2.ebuild:
   Marking pgadmin3-1.12.2 ppc for bug 355321
