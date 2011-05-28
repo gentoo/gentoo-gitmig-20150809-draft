@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.6 2011/05/24 07:21:58 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.7 2011/05/28 11:53:27 ranger Exp $
+
+  28 May 2011; Brent Baude <ranger@gentoo.org> pyasn1-modules-0.0.1a.ebuild:
+  Marking pyasn1-modules-0.0.1a ppc for bug 364869
 
   24 May 2011; Thomas Kahle <tomka@gentoo.org> pyasn1-modules-0.0.1a.ebuild:
   x86 stable per bug 364869
