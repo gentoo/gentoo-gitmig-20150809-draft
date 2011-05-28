@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/amos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.9 2011/05/23 20:01:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.10 2011/05/28 19:26:40 phajdan.jr Exp $
+
+  28 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> amos-3.0.0.ebuild:
+  x86 stable wrt bug #368287
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org> amos-3.0.0.ebuild:
   Stable on amd64 wrt bug #368287
