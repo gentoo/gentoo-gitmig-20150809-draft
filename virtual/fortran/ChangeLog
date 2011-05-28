@@ -1,6 +1,9 @@
 # ChangeLog for virtual/fortran
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.2 2011/04/15 08:29:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.3 2011/05/28 11:17:51 jlec Exp $
+
+  28 May 2011; Justin Lecher <jlec@gentoo.org> fortran-0.ebuild:
+  Compiler is needed at build and runtime
 
   15 Apr 2011; Fabian Groffen <grobian@gentoo.org> fortran-0.ebuild:
   Allow gcc-apple[fortran] to satisfy this virtual as well
