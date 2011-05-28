@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/snpfile
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/ChangeLog,v 1.6 2010/10/02 07:52:04 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/ChangeLog,v 1.7 2011/05/28 10:58:46 jlec Exp $
+
+  28 May 2011; Justin Lecher <jlec@gentoo.org> snpfile-2.0.1-r1.ebuild,
+  +files/snpfile-2.0.1-gold.patch:
+  Gold fix, #369001
 
   02 Oct 2010; Kacper Kowalik <xarthisius@gentoo.org>
   files/snpfile-2.0.1-gentoo.diff:

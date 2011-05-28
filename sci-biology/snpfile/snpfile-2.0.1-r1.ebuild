@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/snpfile-2.0.1-r1.ebuild,v 1.1 2010/06/20 16:58:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/snpfile-2.0.1-r1.ebuild,v 1.2 2011/05/28 10:58:46 jlec Exp $
 
-EAPI=2
+EAPI=4
+
 inherit autotools eutils
 
 DESCRIPTION="A library and API for manipulating large SNP datasets"
@@ -18,16 +19,13 @@ RDEPEND="dev-libs/boost"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-gentoo.diff
+	epatch \
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-gentoo.diff \
+		"${FILESDIR}"/${P}-gold.patch
 	eautoreconf
 }
 
 src_configure() {
 	econf $(use_enable static-libs static)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS README NEWS || die
 }
