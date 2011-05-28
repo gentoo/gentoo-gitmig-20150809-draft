@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.82.ebuild,v 1.2 2011/02/08 17:29:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.82.ebuild,v 1.3 2011/05/28 05:27:06 blueness Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20100525/devel/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
