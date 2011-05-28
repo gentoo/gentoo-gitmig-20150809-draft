@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/imhangul
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.31 2011/03/27 10:49:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.32 2011/05/28 02:40:50 matsuu Exp $
+
+*imhangul-3.0.0 (28 May 2011)
+*imhangul-2.0.0 (28 May 2011)
+
+  28 May 2011; MATSUU Takuto <matsuu@gentoo.org> -imhangul-0.9.13.ebuild,
+  -imhangul-0.9.14.ebuild, -imhangul-0.9.15.ebuild, +imhangul-2.0.0.ebuild,
+  +imhangul-3.0.0.ebuild:
+  Version bumped. Changed LICENSE. Fixed GTK2_CONFDIR handling, bug #366889.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   imhangul-0.9.12.ebuild, imhangul-0.9.13.ebuild, imhangul-0.9.14.ebuild,
