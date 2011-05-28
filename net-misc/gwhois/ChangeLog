@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwhois
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.48 2011/05/24 15:54:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.49 2011/05/28 11:38:33 hwoarang Exp $
+
+  28 May 2011; Markos Chandras <hwoarang@gentoo.org> gwhois-20100728.ebuild:
+  Stable on amd64 wrt bug #356495
 
   24 May 2011; Jeroen Roovers <jer@gentoo.org> gwhois-20100728.ebuild:
   Stable for HPPA (bug #356495).
