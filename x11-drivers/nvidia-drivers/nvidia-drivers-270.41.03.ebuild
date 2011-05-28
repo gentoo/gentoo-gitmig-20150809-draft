@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-270.41.03.ebuild,v 1.3 2011/04/24 18:48:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-270.41.03.ebuild,v 1.4 2011/05/28 15:13:24 vapier Exp $
 
 EAPI="2"
 
@@ -280,7 +280,6 @@ src_prepare() {
 			-e 's:-Wsign-compare::g' \
 			"${NV_SRC}"/Makefile.kbuild
 
-		# Add support for the 'x86' unified kernel arch in conftest.sh
 		epatch "${FILESDIR}"/256.35-unified-arch.patch
 
 		# If you set this then it's your own fault when stuff breaks :)
