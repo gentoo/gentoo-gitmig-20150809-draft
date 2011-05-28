@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/formencode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.24 2011/05/24 21:04:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.25 2011/05/28 13:46:59 ranger Exp $
+
+  28 May 2011; Brent Baude <ranger@gentoo.org> formencode-1.2.4.ebuild:
+  Marking formencode-1.2.4 ppc for bug 365883
 
   24 May 2011; Markus Meier <maekke@gentoo.org> formencode-1.2.4.ebuild:
   x86 stable, bug #365883
