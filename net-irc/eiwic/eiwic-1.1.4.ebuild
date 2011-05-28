@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.4.ebuild,v 1.4 2011/05/16 08:44:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.4.ebuild,v 1.5 2011/05/28 07:59:47 phajdan.jr Exp $
 
 inherit autotools eutils multilib flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc ipv6 rss"
 
 DEPEND="rss? ( <media-libs/raptor-1.9.0 )"
