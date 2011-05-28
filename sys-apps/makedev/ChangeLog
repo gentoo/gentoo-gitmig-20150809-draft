@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/makedev
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.3 2010/10/15 18:23:05 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.4 2011/05/28 20:42:26 xarthisius Exp $
+
+  28 May 2011; Kacper Kowalik <xarthisius@gentoo.org> makedev-3.23.1.ebuild:
+  ppc/ppc64 stable wrt #369085
 
   15 Oct 2010; Mike Frysinger <vapier@gentoo.org> makedev-3.23.1.ebuild,
   +files/makedev-3.23.1-headers.patch:

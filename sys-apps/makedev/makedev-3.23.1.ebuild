@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.5 2010/10/15 18:23:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.6 2011/05/28 20:42:26 xarthisius Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://people.redhat.com/nalin/MAKEDEV/${MY_P}-${MY_REL}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="build selinux"
 
 RDEPEND="!<sys-apps/baselayout-2.0.0_rc"
