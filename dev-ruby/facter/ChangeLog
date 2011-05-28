@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.34 2010/11/04 06:49:59 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.35 2011/05/28 06:53:31 graaff Exp $
+
+*facter-1.5.9 (28 May 2011)
+
+  28 May 2011; Hans de Graaff <graaff@gentoo.org> +facter-1.5.9.ebuild:
+  Version bump.
 
   04 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> +facter-1.5.7-r1.ebuild:
   Revert for hppa.
