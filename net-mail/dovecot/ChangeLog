@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.307 2011/05/28 16:48:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.308 2011/05/28 17:42:28 eras Exp $
+
+  28 May 2011; Eray Aslan <eras@gentoo.org> -dovecot-1.2.16.ebuild,
+  -dovecot-2.0.11.ebuild, -dovecot-2.0.12.ebuild, -dovecot-2.0.12-r1.ebuild,
+  -dovecot-2.0.12-r2.ebuild:
+  Remove vulnerable versions
 
   28 May 2011; Raúl Porcel <armin76@gentoo.org> dovecot-1.2.17.ebuild,
   dovecot-2.0.13.ebuild:
