@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.119 2011/05/27 06:13:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.120 2011/05/28 16:49:54 armin76 Exp $
+
+  28 May 2011; Raúl Porcel <armin76@gentoo.org> stunnel-4.35.ebuild:
+  alpha/arm/ia64/sparc stable wrt #353955
 
   27 May 2011; Kacper Kowalik <xarthisius@gentoo.org> stunnel-4.35.ebuild:
   ppc/ppc64 stable wrt #353955
