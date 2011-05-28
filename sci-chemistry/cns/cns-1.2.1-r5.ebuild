@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.8 2011/05/28 12:19:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.9 2011/05/28 12:20:57 jlec Exp $
 
 EAPI=3
 
@@ -59,7 +59,7 @@ get_bitness() {
 		*64-bit*|*ppc64*|*x86_64*) export _bitness="64";;
 		*32-bit*|*ppc*|*i386*) export _bitness="32";;
 		*) die "Failed to detect whether your arch is 64bits or 32bits, disable distcc if you're using it, please";;
-   esac
+	esac
 }
 
 src_prepare() {

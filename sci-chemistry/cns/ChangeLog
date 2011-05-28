@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.38 2011/05/28 12:19:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.39 2011/05/28 12:20:57 jlec Exp $
+
+  28 May 2011; Justin Lecher <jlec@gentoo.org> cns-1.2.1-r5.ebuild,
+  cns-1.2.1-r6.ebuild, cns-1.3_p5.ebuild:
+  Ebuild contains leading spaces on line: fixed
 
   28 May 2011; Justin Lecher <jlec@gentoo.org> cns-1.2.1-r5.ebuild,
   cns-1.2.1-r6.ebuild, cns-1.3_p5.ebuild:
