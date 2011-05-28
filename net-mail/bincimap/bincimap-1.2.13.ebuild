@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.12 2011/03/19 17:11:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.13 2011/05/28 10:59:43 eras Exp $
 
 inherit eutils
 
 DESCRIPTION="IMAP server for Maildir"
 SRC_URI="http://www.bincimap.org/dl/tarballs/1.2/${P}final.tar.bz2"
-HOMEPAGE="http://www.bincimap.org/"
+HOMEPAGE="http://freshmeat.net/projects/bincimap/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ~ppc x86"
@@ -22,7 +22,6 @@ RDEPEND="${DEPEND}
 # get rid of old style virtual - bug 350792
 # all blockers really needed?
 RDEPEND="${RDEPEND}
-	!net-mail/dovecot
 	!mail-mta/courier
 	!net-mail/courier-imap
 	!net-mail/cyrus-imapd
