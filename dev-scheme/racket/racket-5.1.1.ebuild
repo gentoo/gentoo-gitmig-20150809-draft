@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.1.1.ebuild,v 1.1 2011/05/10 15:03:12 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/racket-5.1.1.ebuild,v 1.2 2011/05/28 14:17:09 tomka Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ EGIT_REPO_URI="git://git.racket-lang.org/plt.git"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="backtrace cairo doc futures jit places plot threads X"
 
 RDEPEND="X? ( x11-libs/cairo[X] ) virtual/libffi"

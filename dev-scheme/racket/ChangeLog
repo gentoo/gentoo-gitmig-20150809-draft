@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/racket
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/ChangeLog,v 1.1 2011/05/10 15:03:12 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/ChangeLog,v 1.2 2011/05/28 14:17:09 tomka Exp $
+
+  28 May 2011; Thomas Kahle <tomka@gentoo.org> racket-5.1.1.ebuild:
+  ~x86 keyword added per bug 366765
 
 *racket-5.1.1 (10 May 2011)
 
