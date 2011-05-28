@@ -1,0 +1,258 @@
+diff -ru ibus-unikey-0.5.1.orig/src/engine.cpp ibus-unikey-0.5.1/src/engine.cpp
+--- ibus-unikey-0.5.1.orig/src/engine.cpp	2010-09-11 20:56:49.000000000 +0900
++++ ibus-unikey-0.5.1/src/engine.cpp	2011-02-21 10:29:28.751755007 +0900
+@@ -138,9 +138,8 @@
+ 
+ static void ibus_unikey_engine_init(IBusUnikeyEngine* unikey)
+ {
+-    GValue v = {0};
++    GVariant *v = NULL;
+     gchar* str;
+-    gboolean succ;
+     guint i;
+ 
+     unikey->preeditstr = new std::string();
+@@ -160,10 +159,10 @@
+ 
+ // read config value
+     // read Input Method
+-    succ = ibus_config_get_value(config, "engine/Unikey", "InputMethod", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey", "InputMethod");
++    if (v)
+     {
+-        str = (gchar*)g_value_get_string(&v);
++        str = (gchar*)g_variant_get_string(v, NULL);
+         for (i = 0; i < NUM_INPUTMETHOD; i++)
+         {
+             if (strcasecmp(str, Unikey_IMNames[i]) == 0)
+@@ -171,14 +170,14 @@
+                 unikey->im = Unikey_IM[i];
+             }
+         }
+-        g_value_unset(&v);
++        g_variant_unref(v);
+     } // end read Input Method
+ 
+     // read Output Charset
+-    succ = ibus_config_get_value(config, "engine/Unikey", "OutputCharset", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey", "OutputCharset");
++    if (v)
+     {
+-        str = (gchar*)g_value_get_string(&v);
++        str = (gchar*)g_variant_get_string(v, NULL);
+         for (i = 0; i < NUM_OUTPUTCHARSET; i++)
+         {
+             if (strcasecmp(str, Unikey_OCNames[i]) == 0)
+@@ -186,64 +185,64 @@
+                 unikey->oc = Unikey_OC[i];
+             }
+         }
+-        g_value_unset(&v);
++        g_variant_unref(v);
+     } // end read Output Charset
+ 
+     // read Unikey Option
+     // freemarking
+-    succ = ibus_config_get_value(config, "engine/Unikey/Options", "FreeMarking", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey/Options", "FreeMarking");
++    if (v)
+     {
+-        unikey->ukopt.freeMarking = g_value_get_boolean(&v);
+-        g_value_unset(&v);
++        unikey->ukopt.freeMarking = g_variant_get_boolean(v);
++        g_variant_unref(v);
+     }
+ 
+     // modernstyle
+-    succ = ibus_config_get_value(config, "engine/Unikey/Options", "ModernStyle", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey/Options", "ModernStyle");
++    if (v)
+     {
+-        unikey->ukopt.modernStyle = g_value_get_boolean(&v);
+-        g_value_unset(&v);
++        unikey->ukopt.modernStyle = g_variant_get_boolean(v);
++        g_variant_unref(v);
+     }
+ 
+     // macroEnabled
+-    succ = ibus_config_get_value(config, "engine/Unikey/Options", "MacroEnabled", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey/Options", "MacroEnabled");
++    if (v)
+     {
+-        unikey->ukopt.macroEnabled = g_value_get_boolean(&v);
+-        g_value_unset(&v);
++        unikey->ukopt.macroEnabled = g_variant_get_boolean(v);
++        g_variant_unref(v);
+     }
+ 
+     // spellCheckEnabled
+-    succ = ibus_config_get_value(config, "engine/Unikey/Options", "SpellCheckEnabled", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey/Options", "SpellCheckEnabled");
++    if (v)
+     {
+-        unikey->ukopt.spellCheckEnabled = g_value_get_boolean(&v);
+-        g_value_unset(&v);
++        unikey->ukopt.spellCheckEnabled = g_variant_get_boolean(v);
++        g_variant_unref(v);
+     }
+ 
+     // autoNonVnRestore
+-    succ = ibus_config_get_value(config, "engine/Unikey/Options", "AutoNonVnRestore", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey/Options", "AutoNonVnRestore");
++    if (v)
+     {
+-        unikey->ukopt.autoNonVnRestore = g_value_get_boolean(&v);
+-        g_value_unset(&v);
++        unikey->ukopt.autoNonVnRestore = g_variant_get_boolean(v);
++        g_variant_unref(v);
+     }
+ 
+     // ProcessWAtBegin
+-    succ = ibus_config_get_value(config, "engine/Unikey/Options", "ProcessWAtBegin", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey/Options", "ProcessWAtBegin");
++    if (v)
+     {
+-        unikey->process_w_at_begin = g_value_get_boolean(&v);
+-        g_value_unset(&v);
++        unikey->process_w_at_begin = g_variant_get_boolean(v);
++        g_variant_unref(v);
+     }
+ 
+     // MouseCapture
+-    succ = ibus_config_get_value(config, "engine/Unikey/Options", "MouseCapture", &v);
+-    if (succ)
++    v = ibus_config_get_value(config, "engine/Unikey/Options", "MouseCapture");
++    if (v)
+     {
+-        unikey->mouse_capture = g_value_get_boolean(&v);
+-        g_value_unset(&v);
++        unikey->mouse_capture = g_variant_get_boolean(v);
++        g_variant_unref(v);
+     }
+     // end read Unikey Option
+ // end read config value
+@@ -331,7 +330,7 @@
+ {
+     IBusProperty* prop;
+     IBusText* label;
+-    GValue v = {0};
++    GVariant *v;
+     guint i, j;
+ 
+     unikey = (IBusUnikeyEngine*)engine;
+@@ -346,9 +345,8 @@
+             {
+                 unikey->im = Unikey_IM[i];
+ 
+-                g_value_init(&v, G_TYPE_STRING);
+-                g_value_set_string(&v, Unikey_IMNames[i]);
+-                ibus_config_set_value(config, "engine/Unikey", "InputMethod", &v);
++                v = g_variant_new_string(Unikey_IMNames[i]);
++                ibus_config_set_value(config, "engine/Unikey", "InputMethod", v);
+ 
+                 // update label
+                 for (j=0; j<unikey->prop_list->properties->len; j++)
+@@ -391,9 +389,8 @@
+             {
+                 unikey->oc = Unikey_OC[i];
+ 
+-                g_value_init(&v, G_TYPE_STRING);
+-                g_value_set_string(&v, Unikey_OCNames[i]);
+-                ibus_config_set_value(config, "engine/Unikey", "OutputCharset", &v);
++                v = g_variant_new_string(Unikey_OCNames[i]);
++                ibus_config_set_value(config, "engine/Unikey", "OutputCharset", v);
+ 
+                 // update label
+                 for (j=0; j<unikey->prop_list->properties->len; j++)
+@@ -431,9 +428,8 @@
+     {
+         unikey->ukopt.spellCheckEnabled = !unikey->ukopt.spellCheckEnabled;
+ 
+-        g_value_init(&v, G_TYPE_BOOLEAN);
+-        g_value_set_boolean(&v, unikey->ukopt.spellCheckEnabled);
+-        ibus_config_set_value(config, "engine/Unikey/Options", "SpellCheckEnabled", &v);
++        v = g_variant_new_boolean (unikey->ukopt.spellCheckEnabled);
++        ibus_config_set_value(config, "engine/Unikey/Options", "SpellCheckEnabled", v);
+ 
+         // update state of state
+         for (j = 0; j < unikey->menu_opt->properties->len ; j++)
+@@ -456,9 +452,8 @@
+     {
+         unikey->ukopt.macroEnabled = !unikey->ukopt.macroEnabled;
+ 
+-        g_value_init(&v, G_TYPE_BOOLEAN);
+-        g_value_set_boolean(&v, unikey->ukopt.macroEnabled);
+-        ibus_config_set_value(config, "engine/Unikey/Options", "MacroEnabled", &v);
++        v = g_variant_new_boolean(unikey->ukopt.macroEnabled);
++        ibus_config_set_value(config, "engine/Unikey/Options", "MacroEnabled", v);
+ 
+         // update state of state
+         for (j = 0; j < unikey->menu_opt->properties->len ; j++)
+@@ -481,9 +476,8 @@
+     {
+         unikey->mouse_capture = !unikey->mouse_capture;
+ 
+-        g_value_init(&v, G_TYPE_BOOLEAN);
+-        g_value_set_boolean(&v, unikey->mouse_capture);
+-        ibus_config_set_value(config, "engine/Unikey/Options", "MouseCapture", &v);
++        v = g_variant_new_boolean(unikey->mouse_capture);
++        ibus_config_set_value(config, "engine/Unikey/Options", "MouseCapture", v);
+ 
+         // update state of state
+         for (j = 0; j < unikey->menu_opt->properties->len ; j++)
+diff -ru ibus-unikey-0.5.1.orig/src/main.cpp ibus-unikey-0.5.1/src/main.cpp
+--- ibus-unikey-0.5.1.orig/src/main.cpp	2010-09-12 16:17:47.000000000 +0900
++++ ibus-unikey-0.5.1/src/main.cpp	2011-02-21 09:48:48.188754964 +0900
+@@ -58,7 +58,7 @@
+     for (p = engines; p != NULL; p = p->next)
+     {
+         IBusEngineDesc* engine = (IBusEngineDesc*)p->data;
+-        ibus_factory_add_engine(factory, engine->name, IBUS_TYPE_UNIKEY_ENGINE);
++        ibus_factory_add_engine(factory, ibus_engine_desc_get_name(engine), IBUS_TYPE_UNIKEY_ENGINE);
+     }
+ 
+     if (ibus)
+Only in ibus-unikey-0.5.1.orig/src: unikey.xml.in
+diff -ru ibus-unikey-0.5.1.orig/src/utils.cpp ibus-unikey-0.5.1/src/utils.cpp
+--- ibus-unikey-0.5.1.orig/src/utils.cpp	2010-06-12 01:43:48.000000000 +0900
++++ ibus-unikey-0.5.1/src/utils.cpp	2011-02-21 10:04:31.003755036 +0900
+@@ -35,20 +35,20 @@
+                                    "",
+                                    PACKAGE_NAME);
+ 
+-    engine = ibus_engine_desc_new
++    engine = ibus_engine_desc_new_varargs
+     (
+-        "Unikey",
+-        "Unikey",
+-        IU_DESC,
+-        "vi",
+-        "GPLv2",
+-        "Lê Quốc Tuấn <mr.lequoctuan@gmail.com>",
+-        PKGDATADIR"/icons/ibus-unikey.png",
+-        "us"
++        "name", "Unikey",
++        "longname", "Unikey",
++        "description", IU_DESC,
++        "language", "vi",
++        "license", "GPLv2",
++        "author", "Lê Quốc Tuấn <mr.lequoctuan@gmail.com>",
++        "icon", PKGDATADIR"/icons/ibus-unikey.png",
++        "layout", "us",
++        "rank", 99,
++        NULL
+     );
+     
+-    engine->rank = 99;
+-
+     ibus_component_add_engine(component, engine);
+ 
+     return component;
