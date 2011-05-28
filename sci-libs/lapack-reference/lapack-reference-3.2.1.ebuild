@@ -1,15 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1.ebuild,v 1.6 2010/12/19 19:14:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1.ebuild,v 1.7 2011/05/28 11:14:37 jlec Exp $
 
-inherit eutils autotools flag-o-matic multilib toolchain-funcs
+inherit autotools eutils flag-o-matic multilib toolchain-funcs
 
 MyPN="${PN/-reference/}"
 PATCH_V="3.2.1"
 
 DESCRIPTION="FORTRAN reference implementation of LAPACK Linear Algebra PACKage"
 HOMEPAGE="http://www.netlib.org/lapack/index.html"
-SRC_URI="mirror://gentoo/${MyPN}-${PV}.tgz
+SRC_URI="
+	mirror://gentoo/${MyPN}-${PV}.tgz
 	mirror://gentoo/${PN}-${PATCH_V}-autotools.patch.bz2"
 
 LICENSE="BSD"
@@ -17,11 +18,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="virtual/blas
-	dev-util/pkgconfig
-	app-admin/eselect-lapack"
-RDEPEND="virtual/blas
+RDEPEND="
 	app-admin/eselect-lapack
+	virtual/blas
+	virtual/fortran"
+DEPEND="
+	${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/lapack-docs )"
 
 S="${WORKDIR}/${MyPN}-${PV}"

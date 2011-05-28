@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226-r2.ebuild,v 1.4 2010/12/17 13:35:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226-r2.ebuild,v 1.5 2011/05/28 11:10:33 jlec Exp $
 
 EAPI="3"
 
@@ -18,7 +18,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="doc"
 
-DEPEND="app-admin/eselect-blas"
+DEPEND="
+	app-admin/eselect-blas
+	virtual/fortran"
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs )"
 
