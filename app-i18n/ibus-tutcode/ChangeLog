@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-tutcode
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-tutcode/ChangeLog,v 1.1 2011/05/28 00:56:41 naota Exp $
+
+*ibus-tutcode-1.0.0 (28 May 2011)
+
+  28 May 2011; Naohiro Aota <naota@gentoo.org> +ibus-tutcode-1.0.0.ebuild:
+  New ebuild app-i18n/ibus-tutcode written by me. Japanese TUT-Code input
+  engine for IBus
+
