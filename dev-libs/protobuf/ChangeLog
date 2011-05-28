@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.32 2011/05/07 21:49:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.33 2011/05/28 12:12:40 ranger Exp $
+
+  28 May 2011; Brent Baude <ranger@gentoo.org> protobuf-2.4.0a.ebuild:
+  Marking protobuf-2.4.0a ppc for bug 363403
 
 *protobuf-2.4.1 (07 May 2011)
 
