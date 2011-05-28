@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/icdprog
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/ChangeLog,v 1.7 2008/01/14 02:39:16 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/icdprog/ChangeLog,v 1.8 2011/05/28 00:40:02 radhermit Exp $
+
+*icdprog-0.5 (28 May 2011)
+
+  28 May 2011; Tim Harder <radhermit@gentoo.org> icdprog-0.3.ebuild,
+  +icdprog-0.5.ebuild:
+  Version bump. Update HOMEPAGE, fix repoman quoting warning for old version,
+  bump to EAPI 4, and add ~amd64 keyword.
 
   14 Jan 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Change metadata.
