@@ -1,11 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/magicrescue-1.1.6.ebuild,v 1.1 2009/03/08 16:40:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/magicrescue-1.1.6.ebuild,v 1.2 2011/05/28 23:52:27 radhermit Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Find deleted files in block devices"
-HOMEPAGE="http://jbj.rapanden.dk/magicrescue/"
+HOMEPAGE="http://www.itu.dk/people/jobr/magicrescue/"
 SRC_URI="http://jbj.rapanden.dk/magicrescue/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
