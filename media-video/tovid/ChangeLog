@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tovid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.24 2010/05/28 21:33:54 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.25 2011/05/28 23:50:52 zmedico Exp $
+
+  28 May 2011; Zac Medico <zmedico@gentoo.org> tovid-0.31-r2.ebuild:
+  Pull in virtual/ffmpeg instead of media-video/ffmpeg.
 
   28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tovid-0.31-r2.ebuild:

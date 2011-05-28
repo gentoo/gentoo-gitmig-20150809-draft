@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31-r2.ebuild,v 1.5 2010/05/28 21:33:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.31-r2.ebuild,v 1.6 2011/05/28 23:50:52 zmedico Exp $
 
 inherit eutils python
 
@@ -11,7 +11,7 @@ IUSE="tk wxwidgets"
 DEPEND="media-video/mplayer
 	app-text/txt2tags"
 RDEPEND="media-video/mjpegtools
-	media-video/ffmpeg
+	virtual/ffmpeg
 	>=media-video/transcode-1.1.5
 	media-sound/normalize
 	media-gfx/imagemagick
