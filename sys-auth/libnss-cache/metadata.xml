@@ -3,7 +3,11 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-	<email>xmw@gentoo.org</email>
-	<name>Michael Weber</name>
+		<email>xmw@gentoo.org</email>
+		<name>Michael Weber</name>
+	</maintainer>
+	<maintainer>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
 	</maintainer>
 </pkgmetadata>

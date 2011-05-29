@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/libnss-cache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.6 2011/01/13 06:47:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.7 2011/05/29 16:03:46 idl0r Exp $
+
+*libnss-cache-0.10.1 (29 May 2011)
+
+  29 May 2011; Christian Ruppert <idl0r@gentoo.org> -libnss-cache-0.1.ebuild,
+  -libnss-cache-0.10.ebuild, +libnss-cache-0.10.1.ebuild,
+  -files/0.1-make-install.patch, +files/libnss-cache-0.10.1-make.patch,
+  -files/libnss-cache-0.10-make.patch, metadata.xml:
+  Version bump, also fixes bug 368951. Remove old versions. Add multilib
+  support. Add myself as secondary maintainer.
 
 *libnss-cache-0.10 (13 Jan 2011)
 
