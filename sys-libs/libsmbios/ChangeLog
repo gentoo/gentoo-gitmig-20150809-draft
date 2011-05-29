@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libsmbios
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.28 2010/09/28 15:33:23 polynomial-c Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.29 2011/05/29 10:10:23 polynomial-c Exp $
+
+  29 May 2011; Lars Wendler <polynomial-c@gentoo.org> libsmbios-2.2.26.ebuild,
+  +files/libsmbios-2.2.26-gcc46.patch:
+  Fixed building with >=gcc-4.6.0. Thanks to Billy DeVincentis for reporting
+  this issue in bug #364285 and to steveb for giving the right hints how to fix
+  this.
 
 *libsmbios-2.2.26 (28 Sep 2010)
 

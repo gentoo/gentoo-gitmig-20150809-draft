@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.26.ebuild,v 1.1 2010/09/28 15:33:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.26.ebuild,v 1.2 2011/05/29 10:10:23 polynomial-c Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? *:2.4"
 
-inherit python flag-o-matic autotools
+inherit eutils python flag-o-matic autotools
 
 DESCRIPTION="Provide access to (SM)BIOS information"
 HOMEPAGE="http://linux.dell.com/libsmbios/main/index.html"
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	test? ( >=dev-util/cppunit-1.9.6 )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.2.26-gcc46.patch
 	rm pkg/py-compile
 	ln -s "$(type -P true)" pkg/py-compile || die
 	eautoreconf
