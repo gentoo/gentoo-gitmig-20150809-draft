@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.19.ebuild,v 1.1 2011/01/13 07:29:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.21.14.ebuild,v 1.1 2011/05/29 13:03:38 idl0r Exp $
 
 EAPI=3
 
@@ -33,15 +33,13 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
-	rm "${ED}"/usr/bin/runtests*
+
+	# overwrite default with working config.
 	insinto /etc
-	doins "${FILESDIR}/nsscache.conf" # overwrite default with working config.
+	doins "${FILESDIR}/nsscache.conf" || die
+
 	doman nsscache.1 nsscache.conf.5
 	dodoc THANKS nsscache.cron
+
 	keepdir /var/lib/nsscache
 }
-
-#src_test() {
-	# Needs several modules not in the tree
-	#./runtests.py || die
-#}
