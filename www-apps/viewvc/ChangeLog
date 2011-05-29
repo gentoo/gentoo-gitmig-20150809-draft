@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.74 2011/05/23 17:32:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.75 2011/05/29 16:56:41 armin76 Exp $
+
+  29 May 2011; Raúl Porcel <armin76@gentoo.org> viewvc-1.1.10.ebuild:
+  sparc stable wrt #364865
 
   23 May 2011; Thomas Kahle <tomka@gentoo.org> viewvc-1.1.10.ebuild:
   x86 stable per bug 364865
