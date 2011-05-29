@@ -29,7 +29,7 @@ diff -Naur burn-0.2.0-beta5.orig/vdrburn-dvd.sh burn-0.2.0-beta5/vdrburn-dvd.sh
 -				-jar $PROJECTX_HOME/ProjectX.jar \
 -				-ini $CONFIG_PATH/ProjectX.ini \
 +				/usr/bin/projectx_nogui \
-+				-ini /usr/share/vdr/burn/projectx-vdr.ini
++				-ini /usr/share/vdr/burn/projectx-vdr.ini \
  				$TTXT_OPTS \
  				$CUT -id $USED_TRACKS \
  				-demux -out "$MPEG_DATA_PATH" -name vdrsync \
