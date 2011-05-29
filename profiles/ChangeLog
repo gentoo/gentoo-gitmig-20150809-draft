@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5406 2011/05/29 15:05:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5407 2011/05/29 21:08:39 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2011; Markus Meier <maekke@gentoo.org> package.mask:
+  remove hugin mask, final version is in tree
 
   29 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> desc/linguas.desc:
   Add Filipino (fil) locale,
