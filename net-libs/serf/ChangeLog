@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.56 2011/05/24 15:14:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.57 2011/05/29 16:42:12 armin76 Exp $
+
+  29 May 2011; Raúl Porcel <armin76@gentoo.org> serf-0.7.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #364417
 
   24 May 2011; Brent Baude <ranger@gentoo.org> serf-0.7.2.ebuild:
   Marking serf-0.7.2 ppc for bug 364417
