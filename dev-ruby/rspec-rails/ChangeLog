@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.41 2011/05/29 06:36:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.42 2011/05/29 06:47:39 graaff Exp $
+
+*rspec-rails-2.6.1 (29 May 2011)
+
+  29 May 2011; Hans de Graaff <graaff@gentoo.org> +rspec-rails-2.6.1.ebuild:
+  Version bump.
 
   29 May 2011; Hans de Graaff <graaff@gentoo.org> -rspec-rails-2.4.1.ebuild:
   Remove old version.
