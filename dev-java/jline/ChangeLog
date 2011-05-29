@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.23 2011/04/28 07:22:10 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.24 2011/05/29 17:27:18 hwoarang Exp $
+
+  29 May 2011; Markos Chandras <hwoarang@gentoo.org> jline-1.0.ebuild:
+  Stable on amd64 wrt bug #368989
 
 *jline-1.0 (28 Apr 2011)
 
