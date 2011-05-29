@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.1 2011/05/15 17:25:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.2 2011/05/29 17:06:15 dilfridge Exp $
 
 EAPI=4
 
-inherit eutils qt4-r2 multilib autotools
+inherit eutils base qt4-r2 multilib autotools
 
 DESCRIPTION="A firewall GUI"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -21,9 +21,13 @@ DEPEND=">=x11-libs/qt-gui-4.3
 	!net-libs/libfwbuilder"
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${P}-ldflags.patch"
+	"${FILESDIR}/${P}-ccache.patch"
+)
+
 src_prepare() {
 	qt4-r2_src_prepare
-	epatch "${FILESDIR}/${P}-ldflags.patch"
 	eautoreconf
 
 	# This package fundamentally changed its build system.  We have to
@@ -33,7 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf
+	econf --with-ccache=no --with-distcc=no
 }
 
 src_install() {
