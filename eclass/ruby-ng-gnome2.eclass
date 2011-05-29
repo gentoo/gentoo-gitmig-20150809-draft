@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.6 2011/05/29 13:43:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.7 2011/05/29 13:47:14 naota Exp $
 #
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -13,14 +13,19 @@
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
 
-inherit ruby-ng multilib
+inherit ruby-ng multilib versionator
 
 IUSE=""
 
 # Define EPREFIX if needed
 has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 
-subbinding=${PN#ruby-} ; subbinding=${subbinding%2}
+subbinding=${PN#ruby-}
+if [ $(get_version_component_range "1-2") == "0.19" ]; then
+	subbinding=${subbinding/%2}
+else
+	subbinding=${subbinding/-/_}
+fi
 S=${WORKDIR}/ruby-gnome2-all-${PV}/${subbinding}
 SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-${PV}.tar.gz"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
