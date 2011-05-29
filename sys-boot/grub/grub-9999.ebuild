@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.32 2011/04/03 18:18:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.33 2011/05/29 17:25:05 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
+EAPI="2"
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -37,24 +38,18 @@ DEPEND="${RDEPEND}
 export STRIP_MASK="*/grub/*/*.mod"
 QA_EXECSTACK="sbin/grub-probe sbin/grub-setup sbin/grub-mkdevicemap bin/grub-script-check bin/grub-fstest"
 
-src_unpack() {
-	if [[ ${PV} == "9999" ]] ; then
-		bzr_src_unpack
-	else
-		unpack ${A}
-	fi
-	cd "${S}"
+src_prepare() {
 	epatch_user
 
 	# autogen.sh does more than just run autotools
 	# need to eautomake due to weirdness #296013
 	if [[ ${PV} == "9999" ]] ; then
-		sed -i -e '/^autoreconf/s:^:e:' autogen.sh || die
+		sed -i -e '/^autoreconf/s:^:set +e; e:' autogen.sh || die
 		(. ./autogen.sh) || die
 	fi
 }
 
-src_compile() {
+src_configure() {
 	use custom-cflags || unset CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
 
@@ -69,7 +64,10 @@ src_compile() {
 		$(use_enable debug mm-debug) \
 		$(use sdl && use_enable debug grub-emu-sdl) \
 		$(use_enable debug grub-emu-usb)
-	emake -j1 || die "making regular stuff"
+}
+
+src_compile() {
+	emake -j1 || die
 }
 
 src_install() {

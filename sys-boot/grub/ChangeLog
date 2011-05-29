@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.154 2011/04/10 14:34:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.155 2011/05/29 17:25:05 vapier Exp $
+
+  29 May 2011; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild:
+  Convert to EAPI=2 and do not run `set -e` with eautoreconf #369093 by Zachary
+  Bedell.
 
   10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> grub-0.92-r1.ebuild,
   grub-0.94-r1.ebuild, grub-0.96-r1.ebuild, grub-0.96-r2.ebuild,
