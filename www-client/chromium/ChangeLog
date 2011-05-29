@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.372 2011/05/27 10:00:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.373 2011/05/29 15:08:06 phajdan.jr Exp $
+
+  29 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-13.0.772.0-r1.ebuild, chromium-9999-r1.ebuild:
+  Support LINGUAS, bug #332751 by Nikoli <nikoli@lavabit.com>.
 
   27 May 2011; Markos Chandras <hwoarang@gentoo.org>
   chromium-11.0.696.71.ebuild:

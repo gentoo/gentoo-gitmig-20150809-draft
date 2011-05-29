@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.28 2011/05/26 11:09:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.29 2011/05/29 15:08:06 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -17,6 +17,14 @@ LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
 IUSE="cups gnome gnome-keyring kerberos xinerama"
+
+# en_US is ommitted on purpose from the list below. It must always be available.
+LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
+hu id it ja kn ko lt lv ml mr nb nl pl pt_BR pt_PT ro ru sk sl sr sv sw ta te th
+tr uk vi zh_CN zh_TW"
+for lang in ${LANGS}; do
+	IUSE+=" linguas_${lang}"
+done
 
 RDEPEND="app-arch/bzip2
 	dev-libs/dbus-glib
@@ -97,6 +105,16 @@ egyp() {
 	set -- build/gyp_chromium --depth=. "${@}"
 	echo "${@}" >&2
 	"${@}"
+}
+
+# Chromium uses different names for some langs,
+# return Chromium name corresponding to a Gentoo lang.
+chromium_lang() {
+	if [[ "$1" == "es_LA" ]]; then
+		echo "es_419"
+	else
+		echo "$1"
+	fi
 }
 
 pkg_setup() {
@@ -325,6 +343,44 @@ src_install() {
 	dodir /etc/chromium || die
 	insinto /etc/chromium
 	newins "${FILESDIR}/chromium.default" "default" || die
+
+	# Support LINGUAS, bug #332751.
+	local pak
+	for pak in out/Release/locales/*.pak; do
+		local pakbasename="$(basename ${pak})"
+		local pakname="${pakbasename%.pak}"
+		local langname="${pakname//-/_}"
+
+		# Do not issue warning for en_US locale. This is the fallback
+		# locale so it should always be installed.
+		if [[ "${langname}" == "en_US" ]]; then
+			continue
+		fi
+
+		local found=false
+		local lang
+		for lang in ${LANGS}; do
+			local crlang="$(chromium_lang ${lang})"
+			if [[ "${langname}" == "${crlang}" ]]; then
+				found=true
+				break
+			fi
+		done
+		if ! $found; then
+			ewarn "LINGUAS warning: no ${langname} in LANGS"
+		fi
+	done
+	local lang
+	for lang in ${LANGS}; do
+		local crlang="$(chromium_lang ${lang})"
+		local pakfile="out/Release/locales/${crlang//_/-}.pak"
+		if [ ! -f "${pakfile}" ]; then
+			ewarn "LINGUAS warning: no .pak file for ${lang} (${pakfile} not found)"
+		fi
+		if ! use linguas_${lang}; then
+			rm "${pakfile}" || die
+		fi
+	done
 
 	insinto "${CHROMIUM_HOME}"
 	doins out/Release/chrome.pak || die
