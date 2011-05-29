@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.169 2011/05/22 20:09:24 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.170 2011/05/29 20:10:18 eras Exp $
+
+  29 May 2011; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.8.ebuild:
+  Remove blocker against dovecot - bug #369213
 
   22 May 2011; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.8.ebuild:
   Don't install fetchnews man page when nntp USE flag is not set - bug #368245
