@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/klayout-0.21.10.ebuild,v 1.1 2011/05/28 22:41:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/klayout-0.21.10.ebuild,v 1.2 2011/05/29 08:44:55 dilfridge Exp $
 
 EAPI=3
 
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}"
 all_ruby_prepare() {
 	# now we generate the stub build configuration file for the home-brew build system
 	cp "${FILESDIR}/${PN}-0.21.7-Makefile.conf.linux-gentoo" "${S}/config/Makefile.conf.linux-gentoo" || die
+
+	epatch "${FILESDIR}/${P}-gcc46.patch"
 }
 
 each_ruby_configure() {
