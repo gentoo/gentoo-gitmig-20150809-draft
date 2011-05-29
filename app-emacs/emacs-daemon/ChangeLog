@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.42 2011/05/28 12:03:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.43 2011/05/29 09:56:50 fauli Exp $
+
+  29 May 2011; Christian Faulhammer <fauli@gentoo.org>
+  emacs-daemon-0.18.ebuild:
+  stable x86, bug 368459
 
   28 May 2011; Brent Baude <ranger@gentoo.org> emacs-daemon-0.18.ebuild:
   Marking emacs-daemon-0.18 ppc for bug 368459
