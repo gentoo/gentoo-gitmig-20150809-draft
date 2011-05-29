@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/spruz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spruz/ChangeLog,v 1.5 2011/02/12 08:50:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spruz/ChangeLog,v 1.6 2011/05/29 07:09:57 graaff Exp $
+
+*spruz-0.2.7 (29 May 2011)
+
+  29 May 2011; Hans de Graaff <graaff@gentoo.org> +spruz-0.2.7.ebuild:
+  Version bump.
 
   12 Feb 2011; Hans de Graaff <graaff@gentoo.org> -spruz-0.2.0.ebuild,
   -spruz-0.2.1.ebuild:
