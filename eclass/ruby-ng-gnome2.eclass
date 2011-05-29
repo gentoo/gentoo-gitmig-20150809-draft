@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.5 2010/12/15 12:38:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.6 2011/05/29 13:43:16 naota Exp $
 #
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -43,7 +43,9 @@ each_ruby_compile() {
 	# unfortunately rely on the lazy load of other extensions; see bug
 	# #320545.
 	find . -name Makefile -print0 | xargs -0 \
-		sed -i -e 's:-Wl,--no-undefined ::' || die "--no-undefined removal failed"
+		sed -i -e 's:-Wl,--no-undefined ::' \
+		-e "s/^ldflags  = /ldflags = $\(LDFLAGS\) /" \
+		|| die "--no-undefined removal failed"
 
 	emake || die "emake failed"
 }
