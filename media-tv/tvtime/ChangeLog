@@ -1,6 +1,16 @@
 # ChangeLog for media-tv/tvtime
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.48 2010/12/01 05:10:42 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.49 2011/05/29 22:08:33 a3li Exp $
+
+*tvtime-1.0.2_p20110131 (29 May 2011)
+
+  29 May 2011; Alex Legler <a3li@gentoo.org> +tvtime-1.0.2_p20110131.ebuild,
+  +files/tvtime-1.0.2_p20110131-autotools.patch,
+  +files/tvtime-1.0.2_p20110131-gettext.patch,
+  +files/tvtime-1.0.2_p20110131-libsupc++.patch, metadata.xml:
+  Bump to 1.0.2_p20110131 from new upstream. Fixes building with
+  linux-headers-2.6.38 and newer autoconf. Closes bug 359743 by Billy
+  DeVincentis.
 
   01 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> tvtime-1.0.2-r2.ebuild,
   +files/tvtime-1.0.2-autotools.patch:
