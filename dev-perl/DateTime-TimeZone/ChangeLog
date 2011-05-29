@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.167 2011/04/26 16:40:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.168 2011/05/29 18:40:55 grobian Exp $
+
+  29 May 2011; Fabian Groffen <grobian@gentoo.org>
+  DateTime-TimeZone-1.340.0.ebuild:
+  Marked ~x64-macos, bug #368545
 
 *DateTime-TimeZone-1.340.0 (26 Apr 2011)
 
