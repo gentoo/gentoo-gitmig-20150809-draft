@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.6 2011/05/28 20:42:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.7 2011/05/29 18:14:26 vapier Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ src_prepare() {
 
 src_compile() {
 	use selinux && export SELINUX=1
-	emake CC=$(tc-getCC) OPTFLAGS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" OPTFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
@@ -41,5 +41,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	use build && MAKEDEV -d "${ROOT}"/dev generic
+	if use build ; then
+		# set up a base set of nodes to make recovery easier #368597
+		MAKEDEV -d "${ROOT}"/dev hda input std sd tty
+		# trim useless nodes
+		rm -f "${ROOT}"/dev/fd[0-9]* # floppy
+		rm -f "${ROOT}"/dev/sd[a-d][a-z]* "${ROOT}"/dev/sd[e-z]* # excess sata
+		rm -f "${ROOT}"/dev/tty[a-z]* # excess tty
+	fi
 }
