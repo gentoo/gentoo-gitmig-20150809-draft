@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.2.ebuild,v 1.2 2010/11/08 21:26:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.3.ebuild,v 1.1 2011/05/29 10:51:12 dilfridge Exp $
 
 MY_P="Argyll_V${PV}"
 DESCRIPTION="Open source, ICC compatible color management system"
@@ -47,7 +47,13 @@ src_install() {
 	jam -q -fJambase install || die
 
 	rm bin/License.txt || die
-	dobin bin/* || die
+
+	cd bin || die
+	local binname
+	for binname in * ; do
+		newbin ${binname} argyll-${binname} || die
+	done
+	cd .. || die
 
 	if use doc; then
 		dohtml doc/* || die
@@ -63,6 +69,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "To avoid file collisions, all binary names have been prefixed"
+	elog "with \"argyll-\". E.g., the \"refine\" program is now called"
+	elog "\"argyll-refine\"."
 	elog
 	elog "If you have a Spyder2 you need to extract the firmware"
 	elog "from the spyder2_setup.exe (ColorVision CD)"
