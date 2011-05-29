@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r1.ebuild,v 1.4 2011/02/08 18:20:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r1.ebuild,v 1.5 2011/05/29 08:36:05 xarthisius Exp $
 
 EAPI=2
 inherit flag-o-matic multilib toolchain-funcs
@@ -49,6 +49,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e "/BINSH \!=/d" mk/hdr.mk || die #335083
+	sed -i -e 's/-lXext/& -lXrender -lX11/' cmd/Makefile || die #369115
 }
 
 src_compile() {
