@@ -1,6 +1,12 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.53 2011/05/22 08:13:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.54 2011/05/29 08:03:38 tove Exp $
+
+  29 May 2011; Torsten Veller <tove@gentoo.org> +files/0.41-po4a-build.patch,
+  po4a-0.41.ebuild:
+  Depend on dev-libs/libxslt, app-text/docbook-xsl-stylesheets (#368909),
+  app-text/docbook-xml-dtd:4.1.2. Work around the endless waiting if output is
+  redirected (#369011)
 
 *po4a-0.41 (22 May 2011)
 

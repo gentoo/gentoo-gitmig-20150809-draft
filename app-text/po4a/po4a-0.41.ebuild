@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.41.ebuild,v 1.1 2011/05/22 08:13:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.41.ebuild,v 1.2 2011/05/29 08:03:38 tove Exp $
 
 EAPI=4
 
@@ -18,13 +18,17 @@ IUSE="test"
 RDEPEND="dev-perl/SGMLSpm
 	>=sys-devel/gettext-0.13
 	app-text/openjade
+	dev-libs/libxslt
 	dev-perl/Locale-gettext
 	dev-perl/TermReadKey
 	dev-perl/Text-WrapI18N"
 DEPEND="${RDEPEND}
 	>=virtual/perl-Module-Build-0.34.0201
+	app-text/docbook-xsl-stylesheets
+	app-text/docbook-xml-dtd:4.1.2
 	test? ( app-text/docbook-sgml-dtd
 		app-text/docbook-sgml-utils
 		virtual/tex-base )"
 
 SRC_TEST="do"
+PATCHES=( "${FILESDIR}"/0.41-po4a-build.patch )
