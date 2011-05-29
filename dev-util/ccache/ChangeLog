@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.80 2011/03/06 09:07:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.81 2011/05/29 16:32:27 vapier Exp $
+
+*ccache-3.1.5 (29 May 2011)
+
+  29 May 2011; Mike Frysinger <vapier@gentoo.org> +ccache-3.1.5.ebuild:
+  Version bump.
 
   06 Mar 2011; Michael Weber <xmw@gentoo.org> ccache-2.4-r9.ebuild:
   ppc stable (bug 320687)
