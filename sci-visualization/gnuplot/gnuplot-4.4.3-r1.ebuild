@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.2 2011/05/29 09:17:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.3 2011/05/29 19:30:39 ottxor Exp $
 
 EAPI=3
 
@@ -110,7 +110,7 @@ src_configure() {
 
 	econf ${myconf} \
 		DIST_CONTACT="http://bugs.gentoo.org/" \
-		EMACS=$(usev emacs || usev xemacs)
+		EMACS=$(usev emacs || usev xemacs || echo no)
 
 	if use xemacs; then
 		einfo "Configuring gnuplot-mode for XEmacs ..."
