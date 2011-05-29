@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/magicrescue
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.13 2011/05/28 23:52:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.14 2011/05/29 00:26:12 radhermit Exp $
+
+*magicrescue-1.1.9 (29 May 2011)
+
+  29 May 2011; Tim Harder <radhermit@gentoo.org> magicrescue-1.1.4-r1.ebuild,
+  magicrescue-1.1.6.ebuild, magicrescue-1.1.8.ebuild,
+  +magicrescue-1.1.9.ebuild, +files/magicrescue-1.1.9-makefile.patch:
+  Version bump. Update to EAPI 4 and fix all SRC_URIs.
 
   28 May 2011; Tim Harder <radhermit@gentoo.org> magicrescue-1.1.4-r1.ebuild,
   magicrescue-1.1.6.ebuild, magicrescue-1.1.8.ebuild:
