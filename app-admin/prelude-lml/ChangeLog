@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.41 2011/01/10 20:56:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.42 2011/05/29 16:17:32 armin76 Exp $
+
+  29 May 2011; Raúl Porcel <armin76@gentoo.org> prelude-lml-0.9.1.ebuild,
+  prelude-lml-0.9.10.1.ebuild, prelude-lml-0.9.14.ebuild,
+  prelude-lml-1.0.0.ebuild:
+  Drop sparc keywords
 
   10 Jan 2011; Thomas Kahle <tomka@gentoo.org> prelude-lml-0.9.1.ebuild,
   prelude-lml-0.9.10.1.ebuild:

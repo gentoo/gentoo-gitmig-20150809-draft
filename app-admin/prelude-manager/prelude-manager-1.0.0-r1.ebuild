@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-1.0.0-r1.ebuild,v 1.1 2010/05/27 16:04:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-1.0.0-r1.ebuild,v 1.2 2011/05/29 16:18:52 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}/download/releases/prelude-manager/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug xml dbx tcpwrapper"
 
 RDEPEND="!dev-libs/libprelude-cvs
