@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.131 2011/04/30 17:56:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.132 2011/05/29 16:14:15 armin76 Exp $
+
+  29 May 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask prelude
 
   30 Apr 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask apcupsd

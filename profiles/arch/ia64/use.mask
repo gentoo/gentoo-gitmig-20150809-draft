@@ -83,6 +83,7 @@ vpx
 frei0r
 lpsol
 libev
+prelude
 
 # Stuff that doesn't compile on ia64
 chicken

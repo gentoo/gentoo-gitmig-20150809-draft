@@ -84,6 +84,7 @@ google-gadgets
 oracle
 libvirt
 pdfannotextractor
+prelude
 
 # havent tested yet
 cupsddk
