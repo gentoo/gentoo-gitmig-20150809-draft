@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.42 2011/03/31 02:00:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.43 2011/05/29 16:20:14 armin76 Exp $
+
+  29 May 2011; Raúl Porcel <armin76@gentoo.org> prewikka-0.9.14-r2.ebuild,
+  prewikka-0.9.15.ebuild:
+  Drop sparc keywords
 
   31 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   prewikka-0.9.14-r2.ebuild, prewikka-0.9.15.ebuild:
