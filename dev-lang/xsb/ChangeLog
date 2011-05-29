@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.30 2011/05/12 06:51:47 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.31 2011/05/29 00:29:19 keri Exp $
+
+*xsb-3.3.2 (29 May 2011)
+
+  29 May 2011; <keri@gentoo.org> +xsb-3.3.2.ebuild:
+  Version bump
 
 *xsb-3.3.1 (12 May 2011)
 
