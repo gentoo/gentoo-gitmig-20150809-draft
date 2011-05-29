@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gtksourceview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.26 2011/03/23 16:50:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.27 2011/05/29 15:06:02 naota Exp $
+
+*ruby-gtksourceview-0.90.8 (29 May 2011)
+
+  29 May 2011; Naohiro Aota <naota@gentoo.org>
+  +ruby-gtksourceview-0.90.8.ebuild:
+  Version bump. Bug 345721
 
   23 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org>
   ruby-gtksourceview-0.19.4.ebuild:

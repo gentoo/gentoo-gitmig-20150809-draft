@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.17 2011/03/23 06:24:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.18 2011/05/29 15:17:06 naota Exp $
+
+*ruby-vte-0.90.8 (29 May 2011)
+
+  29 May 2011; Naohiro Aota <naota@gentoo.org> +ruby-vte-0.90.8.ebuild:
+  Version bump.
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> ruby-vte-0.19.4.ebuild:
   Use SLOT dependencies for x11-libs/vte.
