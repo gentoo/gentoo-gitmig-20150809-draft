@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.53 2011/04/08 14:29:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.54 2011/05/29 15:05:44 phajdan.jr Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -56,6 +56,7 @@ et_EE - Estonian locale
 eu - Basque locale
 fa - Persian locale
 fi - Finnish locale
+fil - Filipino locale
 fo -  Faroese locale
 fr - French locale
 fr_CA - French locale for Canada
