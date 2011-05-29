@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.11.ebuild,v 1.6 2010/10/29 20:18:06 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.11.ebuild,v 1.7 2011/05/29 16:46:35 armin76 Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.itee.uq.edu.au/~pjr/HomePages/QPFiles/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug doc examples pedro qt4 threads"
 
 RDEPEND="!dev-util/mpatch
