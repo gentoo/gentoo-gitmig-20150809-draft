@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.3-r1.ebuild,v 1.6 2011/04/24 17:51:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.3-r1.ebuild,v 1.7 2011/05/29 00:34:58 vapier Exp $
 
 EAPI="2"
 
@@ -100,6 +100,7 @@ pkg_postinst() {
 	# src_install we put them in /usr/lib/nfs for safe-keeping, but
 	# the daemons actually use the files in /var/lib/nfs.  #30486
 	local f
+	mkdir -p "${ROOT}"/var/lib/nfs #368505
 	for f in "${ROOT}"/usr/$(get_libdir)/nfs/*; do
 		[[ -e ${ROOT}/var/lib/nfs/${f##*/} ]] && continue
 		einfo "Copying default ${f##*/} from /usr/$(get_libdir)/nfs to /var/lib/nfs"

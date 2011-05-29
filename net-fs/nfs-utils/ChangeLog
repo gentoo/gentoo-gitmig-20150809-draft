@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.181 2011/04/24 17:51:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.182 2011/05/29 00:34:58 vapier Exp $
+
+  29 May 2011; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.3-r1.ebuild:
+  Make sure /var/lib/nfs exists before copying into it #368505 by William
+  Throwe.
 
   24 Apr 2011; Raúl Porcel <armin76@gentoo.org> nfs-utils-1.2.3-r1.ebuild:
   sparc stable wrt #358509
