@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.101 2011/05/15 17:25:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.102 2011/05/29 16:21:42 dilfridge Exp $
+
+  29 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  fwbuilder-3.0.7.ebuild:
+  Needs dev-java/antlr[static-libs] if useflag defined, bug 368325; EAPI bump
 
 *fwbuilder-4.2.2.3541 (15 May 2011)
 

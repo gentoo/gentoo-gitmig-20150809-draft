@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-3.0.7.ebuild,v 1.6 2010/09/13 06:28:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-3.0.7.ebuild,v 1.7 2011/05/29 16:21:42 dilfridge Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils qt4-r2 multilib
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="+pch"
 
 DEPEND="~net-libs/libfwbuilder-${PV}
-	>=dev-java/antlr-2.7.7:0[cxx]
+	>=dev-java/antlr-2.7.7:0[cxx,static-libs(+)]
 	x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}"
 
@@ -54,12 +54,12 @@ src_configure() {
 		--with-docdir=/usr/share/doc/${PF}
 
 	for pro_file in $(find "${S}" -name "*.pro"); do
-		eqmake4 "${pro_file}" -o "$(dirname ${pro_file})/Makefile" "CONFIG+=nostrip" || die "eqmake4 for ${pro_file} failed"
+		eqmake4 "${pro_file}" -o "$(dirname ${pro_file})/Makefile" "CONFIG+=nostrip"
 	done
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	emake INSTALL_ROOT="${D}" install
 	cd doc
 	dodoc AUTHORS ChangeLog Credits README* \
 		FWBuilder-Routing-LICENSE.txt PatchAcceptancePolicy.txt
