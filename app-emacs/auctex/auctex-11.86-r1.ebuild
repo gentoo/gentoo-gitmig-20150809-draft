@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.86-r1.ebuild,v 1.3 2011/05/23 20:55:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.86-r1.ebuild,v 1.4 2011/05/29 10:03:10 fauli Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="preview-latex"
 
 DEPEND="virtual/latex-base
