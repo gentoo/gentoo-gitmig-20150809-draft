@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Validate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.88 2011/05/28 19:11:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.89 2011/05/29 18:37:19 grobian Exp $
+
+  29 May 2011; Fabian Groffen <grobian@gentoo.org>
+  Params-Validate-0.990.0.ebuild:
+  Marked ~x64-macos, bug #368547
 
 *Params-Validate-0.990.0 (28 May 2011)
 
