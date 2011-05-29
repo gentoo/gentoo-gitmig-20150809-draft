@@ -1,10 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.156 2011/05/29 09:17:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.157 2011/05/29 09:30:16 ulm Exp $
 
   29 May 2011; Ulrich Mueller <ulm@gentoo.org> gnuplot-4.4.3-r1.ebuild:
-  Don't depend on Emacs with USE="-emacs -xemacs". Update outdated texinfo
-  file, bug 366129.
+  Don't depend on Emacs with USE="-emacs -xemacs", bug 369097. Update outdated
+  texinfo file, bug 366129.
 
 *gnuplot-4.4.3-r1 (28 May 2011)
 
