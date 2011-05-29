@@ -1,12 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.56 2011/05/27 23:04:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.57 2011/05/29 11:26:25 fauli Exp $
 
 # This file requires >=portage-2.1.1
-
-# Doug Goldstein <cardoe@gentoo.org> (27 May 2011)
-# app-emulation/spice is not keywored on this arch (bug #368961)
-app-emulation/qemu-kvm spice
 
 # Andrey Grozin <grozin@gentoo.org> (28 Apr 2011)
 # cmucl is only available on x86
