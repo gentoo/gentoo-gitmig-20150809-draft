@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.1 2011/05/28 12:54:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.2 2011/05/29 09:17:18 ulm Exp $
 
 EAPI=3
 
@@ -20,7 +20,8 @@ if [[ -z ${PV%%*9999} ]]; then
 	SRC_URI=""
 else
 	MY_P="${P/_/-}"
-	SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
+	SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz
+		mirror://gentoo/${P}-texinfo-update.patch.gz"
 fi
 
 LICENSE="gnuplot GPL-2"
@@ -54,8 +55,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( virtual/latex-base
 		app-text/ghostscript-gpl )
-	!emacs? ( xemacs? ( app-xemacs/texinfo ) )
-	!emacs? ( !xemacs? ( || ( virtual/emacs app-xemacs/texinfo ) ) )"
+	!emacs? ( xemacs? ( app-xemacs/texinfo ) )"
 
 S="${WORKDIR}/${MY_P}"
 GP_VERSION="${PV%.*}"
@@ -70,6 +70,8 @@ src_prepare() {
 				die "make -f Makefile.am.in Makefile.am in $dir failed"
 		done
 		eautoreconf
+	else
+		epatch "${WORKDIR}"/${P}-texinfo-update.patch
 	fi
 
 	# Add special version identification as required by provision 2
@@ -106,15 +108,9 @@ src_configure() {
 		&& myconf="${myconf} --with-readline=gnu" \
 		|| myconf="${myconf} --with-readline=builtin"
 
-	if has_version virtual/emacs; then
-		emacs="emacs"
-	elif has_version app-xemacs/texinfo; then
-		emacs="xemacs"
-	fi
-
 	econf ${myconf} \
 		DIST_CONTACT="http://bugs.gentoo.org/" \
-		EMACS="${emacs}"
+		EMACS=$(usev emacs || usev xemacs)
 
 	if use xemacs; then
 		einfo "Configuring gnuplot-mode for XEmacs ..."
