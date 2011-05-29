@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0_rc1.ebuild,v 1.3 2011/05/20 19:19:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0.ebuild,v 1.1 2011/05/29 21:07:01 maekke Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -40,7 +40,7 @@ DEPEND="${CDEPEND}
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
-PATCHES=( "${FILESDIR}"/${P}-libpng15.patch )
+PATCHES=( "${FILESDIR}"/${P}_rc1-libpng15.patch )
 
 pkg_setup() {
 	DOCS="authors.txt README TODO"
