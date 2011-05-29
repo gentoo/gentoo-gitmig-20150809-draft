@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.117 2011/05/21 16:20:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.118 2011/05/29 18:48:56 grobian Exp $
+
+  29 May 2011; Fabian Groffen <grobian@gentoo.org> DateTime-0.700.0.ebuild:
+  Marked ~x64-macos, bug #368541
 
   21 May 2011; Raúl Porcel <armin76@gentoo.org> DateTime-0.700.0.ebuild:
   Add ~alpha/~arm/~ia64/~s390/~sh/~sparc wrt #366911
