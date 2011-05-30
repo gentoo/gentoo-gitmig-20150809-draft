@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/automatictexplugin-9.3.5.ebuild,v 1.1 2011/04/29 03:46:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/automatictexplugin-9.5.ebuild,v 1.1 2011/05/30 10:16:07 radhermit Exp $
 
 EAPI="4"
 VIM_PLUGIN_VIM_VERSION="7.3"
@@ -19,6 +19,11 @@ S=${WORKDIR}
 
 VIM_PLUGIN_HELPFILES="automatic-tex-plugin.txt"
 
-RDEPEND="!app-vim/vim-latex
+RDEPEND="|| ( app-editors/vim[python] app-editors/gvim[python] )
+	!app-vim/vim-latex
+	app-text/wdiff
+	>=dev-lang/python-2.7
+	dev-python/psutil
 	dev-tex/latexmk
-	app-text/wdiff"
+	dev-tex/detex
+	virtual/tex-base"
