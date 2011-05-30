@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0.ebuild,v 1.1 2011/05/23 20:58:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0.ebuild,v 1.2 2011/05/30 17:09:21 billie Exp $
 
 EAPI=4
 
-inherit flag-o-matic linux-info toolchain-funcs
+inherit flag-o-matic toolchain-funcs
 
 MY_P=${P/_/}
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P/_rc*}"
 
 pkg_pretend() {
-	if kernel_is ge 2 6 38 && use v4l; then
+	if has_version ">=sys-kernel/linux-headers-2.6.38" && use v4l; then
 		ewarn "Current versions of mjpegtools only support V4L1 which is not available"
 		ewarn "for kernels versions 2.6.38 and above. V4L1 will be disabled."
 	fi

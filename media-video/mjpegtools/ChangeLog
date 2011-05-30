@@ -1,6 +1,16 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.154 2011/05/23 20:58:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.155 2011/05/30 17:09:21 billie Exp $
+
+  30 May 2011; Daniel Pielmeier <billie@gentoo.org>
+  -mjpegtools-2.0.0_rc1.ebuild, mjpegtools-2.0.0.ebuild,
+  -files/mjpegtools-2.0.0_rc1-X11.patch,
+  -files/mjpegtools-2.0.0_rc1-amd-k8.patch,
+  -files/mjpegtools-2.0.0_rc1-dga-gtk-sdl-automagic.patch,
+  -files/mjpegtools-2.0.0_rc1-libpng-1.5.patch,
+  -files/mjpegtools-2.0.0_rc1-v4l-automagic.patch:
+  Check for linux-headers instead of the current kernel version. Thanks to Jory
+  A. Pratt by mail. Remove old.
 
 *mjpegtools-2.0.0 (23 May 2011)
 
