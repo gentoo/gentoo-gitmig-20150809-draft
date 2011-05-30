@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.79 2011/02/14 14:49:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.80 2011/05/30 20:13:31 scarabeus Exp $
+
+  30 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> libxcb-1.7.ebuild:
+  Silence deprecation warning.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> libxcb-1.7.ebuild:
   ppc stable wrt #344827, #354237
