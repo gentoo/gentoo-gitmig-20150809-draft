@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.14 2011/05/26 15:55:44 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.15 2011/05/30 14:24:04 chutzpah Exp $
+
+  30 May 2011; Patrick McLean <chutzpah@gentoo.org>
+  nspluginwrapper-1.4.0-r1.ebuild:
+  Create lib64 nsplugins dir on src_install (bug #369221).
 
   26 May 2011; Patrick McLean <chutzpah@gentoo.org>
   nspluginwrapper-1.4.0-r1.ebuild,
