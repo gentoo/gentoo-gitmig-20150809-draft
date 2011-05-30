@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.5 2011/03/20 21:42:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.6 2011/05/30 10:41:39 chithanh Exp $
+
+*libmicrohttpd-0.9.11 (30 May 2011)
+
+  30 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -libmicrohttpd-0.9.8.ebuild, +libmicrohttpd-0.9.11.ebuild:
+  Version bump.
 
 *libmicrohttpd-0.9.8 (20 Mar 2011)
 
