@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12805 2011/05/29 21:08:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12806 2011/05/30 15:46:41 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (30 May 2011)
+# Does not build against gcc-4.5.2. Requires obsolete
+# net-libs/rb_libtorrent-0.14.* which does not build
+# against python-2.7. Alternatives: net-p2p/rtorrent
+# Masked for removal in 30 days
+net-p2p/hrktorrent
 
 # Markos Chandras <hwoarang@gentoo.org> (28 May 2011)
 # emesene-2 is on early stage of development and very 
