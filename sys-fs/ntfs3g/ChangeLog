@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.114 2011/05/09 15:23:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.115 2011/05/30 14:34:22 chutzpah Exp $
+
+  30 May 2011; Patrick McLean <chutzpah@gentoo.org> ntfs3g-2011.4.12.ebuild:
+  RDEPEND on net-libs/gnutls (bug #366701).
 
 *ntfs3g-2011.4.12 (09 May 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.1 2011/05/09 15:23:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.2 2011/05/30 14:34:22 chutzpah Exp $
 
 EAPI=2
 inherit linux-info
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl crypt debug ntfsprogs suid xattr +udev +external-fuse"
 
 RDEPEND="external-fuse? ( >=sys-fs/fuse-2.8.0 )
-	ntfsprogs? ( !!sys-fs/ntfsprogs )"
+	ntfsprogs? ( !!sys-fs/ntfsprogs )
+	crypt? ( net-libs/gnutls )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
