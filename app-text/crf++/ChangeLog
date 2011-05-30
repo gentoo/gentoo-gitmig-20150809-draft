@@ -1,6 +1,14 @@
 # ChangeLog for app-text/crf++
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.11 2010/12/02 01:18:51 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.12 2011/05/30 23:32:56 matsuu Exp $
+
+*crf++-0.54 (30 May 2011)
+
+  30 May 2011; MATSUU Takuto <matsuu@gentoo.org> -crf++-0.50.ebuild,
+  -files/crf++-0.50-gcc43.patch, -crf++-0.51.ebuild, +crf++-0.54.ebuild,
+  +files/crf++-0.54-gcc46.patch:
+  Version bumped, bug #356959. Fixed to build with gcc-4.6, bug #365921. Added
+  static-libs USE flag. Removed *.la files. Removed old versions.
 
   02 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> crf++-0.51.ebuild,
   crf++-0.53.ebuild:
