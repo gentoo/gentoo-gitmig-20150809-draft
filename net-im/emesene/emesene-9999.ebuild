@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.1 2011/05/30 17:56:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.2 2011/05/30 18:03:20 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -57,8 +57,8 @@ src_install() {
 pkg_postinst() {
 	ewarn
 	ewarn "${PN}-2 is on early stages of development."
-	ewarn "Please do not file bugs on Gentoo buzilla"
-	ewarn "unless you have problems with the ebuild."
+	ewarn "Please do not file bugs on Gentoo bugzilla"
+	ewarn "unless you have problems with this ebuild."
 	ewarn "Use the upstram bug tracker to report bugs:"
 	ewarn
 	ewarn "https://github.com/emesene/emesene/issues"
