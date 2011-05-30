@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.11.4.ebuild,v 1.1 2011/05/29 12:06:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.11.5.ebuild,v 1.1 2011/05/30 17:56:47 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,11 +8,15 @@ PYTHON_USE_WITH="sqlite"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
+EMESENE_COMMIT="5cf77b3"
+GIT_COMMIT="5c6aad"
+
+MY_P="${PN}-${PN}-v${PV}-0-gb${GIT_COMMIT}"
 inherit distutils eutils
 
 DESCRIPTION="Platform independent MSN Messenger client written in Python+GTK"
 HOMEPAGE="http://www.emesene.org"
-SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 LGPL-3 )"
 SLOT="2"
@@ -24,15 +28,19 @@ RDEPEND="dev-python/pygtk:2
 	dev-python/notify-python
 	jabber? ( dev-python/xmpppy )"
 
+S="${WORKDIR}/${PN}-${PN}-${EMESENE_COMMIT}"
+
 src_prepare() {
 	# do not import dummy session
-	sed -i -e  "/import e3dummy/d" ${PN}.py
+	sed -i -e  "/import e3dummy/d" ${PN}/${PN}.py || die
 	# fix .desktop icon to look for emesene-2 executable
 	sed -i -e "s:${PN}:${PN}-2:g" \
-		${PN}/data/share/applications/${PN}.desktop
+		${PN}/data/share/applications/${PN}.desktop || die
 	# Use a better meny entry
 	sed -i -e "/^Name/s:${PN}-2:Emesene v2:" \
-		${PN}/data/share/applications/${PN}.desktop
+		${PN}/data/share/applications/${PN}.desktop || die
+	epatch "${FILESDIR}"/${P}-svgfix.patch
+
 	distutils_src_prepare
 }
 
