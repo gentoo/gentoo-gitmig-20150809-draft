@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.47 2011/04/23 15:09:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.48 2011/05/30 23:39:24 matsuu Exp $
+
+*nkf-2.1.0-r1 (31 May 2011)
+
+  30 May 2011; MATSUU Takuto <matsuu@gentoo.org> +nkf-2.1.0-r1.ebuild:
+  Fixed python handling, bug #311215.
 
   23 Apr 2011; Fabian Groffen <grobian@gentoo.org> nkf-2.1.0.ebuild:
   Marked ~x86-macos, bug #360273
