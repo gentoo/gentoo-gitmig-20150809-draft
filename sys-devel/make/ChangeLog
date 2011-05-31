@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.76 2011/05/29 21:54:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.77 2011/05/31 20:31:09 maekke Exp $
+
+  31 May 2011; Markus Meier <maekke@gentoo.org> make-3.82.ebuild:
+  x86 stable, bug #367265
 
   29 May 2011; Markos Chandras <hwoarang@gentoo.org> make-3.82.ebuild:
   Stable on amd64 wrt bug #367265
