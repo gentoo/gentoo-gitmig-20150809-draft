@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.67 2011/03/16 21:17:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.68 2011/05/31 08:15:38 cedk Exp $
+
+*dmenu-4.3.1 (31 May 2011)
+
+  31 May 2011; Cédric Krier <cedk@gentoo.org> +dmenu-4.3.1.ebuild:
+  Version bump
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> dmenu-4.2.1.ebuild:
   ppc64 stable wrt #349630
