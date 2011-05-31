@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.44 2011/05/23 13:18:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.45 2011/05/31 20:36:08 maekke Exp $
+
+  31 May 2011; Markus Meier <maekke@gentoo.org> emelfm2-0.7.5.ebuild:
+  x86 stable, bug #368267
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org> emelfm2-0.7.5.ebuild:
   Stable on amd64 wrt bug #368267
