@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.29 2011/05/23 21:00:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.30 2011/05/31 20:25:07 maekke Exp $
+
+  31 May 2011; Markus Meier <maekke@gentoo.org> libconfig-1.4.7.ebuild:
+  x86 stable, bug #367889
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org> libconfig-1.4.7.ebuild:
   Stable on amd64 wrt bug #367889
