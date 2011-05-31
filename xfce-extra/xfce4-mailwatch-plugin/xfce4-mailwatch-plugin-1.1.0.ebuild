@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/xfce4-mailwatch-plugin-1.1.0.ebuild,v 1.5 2011/05/19 21:42:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/xfce4-mailwatch-plugin-1.1.0.ebuild,v 1.6 2011/05/31 11:08:37 angelos Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -27,6 +27,7 @@ pkg_setup() {
 	PATCHES=(
 		"${FILESDIR}"/${P}-no-ssl.patch
 		"${FILESDIR}"/${P}-link_to_libxfcegui4.patch
+		"${FILESDIR}"/${P}-link_to_libgcrypt.patch
 		)
 
 	XFCONF=(
