@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qtmpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/ChangeLog,v 1.1 2011/05/12 13:07:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/ChangeLog,v 1.2 2011/05/31 10:30:38 scarabeus Exp $
+
+  31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Reassign to kde herd, rather than to me and qt as it is kde player.
 
 *qtmpc-0.6.1 (12 May 2011)
 
