@@ -1,0 +1,43 @@
+reported upstream: http://thread.gmane.org/gmane.comp.version-control.git/174407/focus=174438
+
+diff -ru git-1.7.5.rc3.orig/Makefile git-1.7.5.rc3/Makefile
+--- git-1.7.5.rc3.orig/Makefile	2011-05-27 08:40:59 +0200
++++ git-1.7.5.rc3/Makefile	2011-05-27 09:00:58 +0200
+@@ -1121,8 +1121,6 @@
+ 	X = .exe
+ endif
+ ifeq ($(uname_S),Interix)
+-	NO_SYS_POLL_H = YesPlease
+-	NO_INTTYPES_H = YesPlease
+ 	NO_INITGROUPS = YesPlease
+ 	NO_IPV6 = YesPlease
+ 	NO_MEMMEM = YesPlease
+@@ -1133,10 +1131,14 @@
+ 	ifeq ($(uname_R),3.5)
+ 		NO_INET_NTOP = YesPlease
+ 		NO_INET_PTON = YesPlease
++		NO_SOCKADDR_STORAGE = YesPlease
++		NO_FNMATCH_CASEFOLD = YesPlease
+ 	endif
+ 	ifeq ($(uname_R),5.2)
+ 		NO_INET_NTOP = YesPlease
+ 		NO_INET_PTON = YesPlease
++		NO_SOCKADDR_STORAGE = YesPlease
++		NO_FNMATCH_CASEFOLD = YesPlease
+ 	endif
+ endif
+ ifneq (,$(findstring MINGW,$(uname_S)))
+diff -ru git-1.7.5.rc3.orig/compat/fnmatch/fnmatch.c git-1.7.5.rc3/compat/fnmatch/fnmatch.c
+--- git-1.7.5.rc3.orig/compat/fnmatch/fnmatch.c	2011-05-27 08:40:57 +0200
++++ git-1.7.5.rc3/compat/fnmatch/fnmatch.c	2011-05-27 09:01:47 +0200
+@@ -127,6 +127,10 @@
+ extern int errno;
+ # endif
+ 
++# ifndef NULL
++#  define NULL 0
++# endif
++
+ /* This function doesn't exist on most systems.  */
+ 
+ # if !defined HAVE___STRCHRNUL && !defined _LIBC

@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.93 2011/05/30 09:29:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.94 2011/05/31 06:27:02 mduft Exp $
+
+  30 May 2011; Markus Duft <mduft@gentoo.org> git-1.7.5.3.ebuild,
+  git-9999.ebuild, +files/git-1.7.5-interix.patch:
+  add build fix for interix.
 
 *git-1.7.5.2 (30 May 2011)
 
@@ -18,7 +22,7 @@
   +git-1.7.5_rc3.ebuild:
   Version bump.
 
-  20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> git-9999.ebuild:
+  20 Apr 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> git-9999.ebuild:
   Migrate to git-2 eclass. Update live/stable logic conditionals.
 
 *git-1.7.5_rc1 (06 Apr 2011)
@@ -141,7 +145,7 @@
   Version bump. Also backport minor improvement to testsuite running to get
   cleaner repeat results.
 
-  01 Jan 2011; Raúl Porcel <armin76@gentoo.org> git-1.6.4.5.ebuild,
+  01 Jan 2011; RaÃºl Porcel <armin76@gentoo.org> git-1.6.4.5.ebuild,
   git-1.7.2.5.ebuild, git-1.7.3.4-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #349045
 
@@ -294,7 +298,7 @@
   13 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.2.3.ebuild:
   Bug #337104: verbump.
 
-  11 Sep 2010; Raúl Porcel <armin76@gentoo.org> git-1.7.2.2.ebuild:
+  11 Sep 2010; RaÃºl Porcel <armin76@gentoo.org> git-1.7.2.2.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #335891
 
   10 Sep 2010; Jeroen Roovers <jer@gentoo.org> git-1.7.2.2.ebuild:
@@ -372,7 +376,7 @@
   +files/git-1.7.2-always-install-js.patch:
   Version bump.
 
-  18 Jul 2010; Raúl Porcel <armin76@gentoo.org> git-1.7.1-r1.ebuild:
+  18 Jul 2010; RaÃºl Porcel <armin76@gentoo.org> git-1.7.1-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #321899
 
   18 Jul 2010; <nixnut@gentoo.org> git-1.7.0.ebuild:
@@ -568,7 +572,7 @@
   03 Dec 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.5.4.ebuild:
   Version bump.
 
-  18 Nov 2009; Raúl Porcel <armin76@gentoo.org> git-1.6.5.1-r1.ebuild,
+  18 Nov 2009; RaÃºl Porcel <armin76@gentoo.org> git-1.6.5.1-r1.ebuild,
   git-1.6.5.2.ebuild, git-1.6.5.3.ebuild:
   Add ~alpha/~ia64 wrt #290163
 
@@ -624,7 +628,7 @@
   18 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.5.1.ebuild:
   Version bump
 
-  12 Oct 2009; Raúl Porcel <armin76@gentoo.org> git-1.6.4.4.ebuild:
+  12 Oct 2009; RaÃºl Porcel <armin76@gentoo.org> git-1.6.4.4.ebuild:
   ia64/s390/sh/sparc stable wrt #287031
 
 *git-1.6.5 (11 Oct 2009)
@@ -654,7 +658,7 @@
   01 Oct 2009; Jeroen Roovers <jer@gentoo.org> git-1.6.4.4.ebuild:
   Stable for HPPA (bug #287031).
 
-  30 Sep 2009; Dawid Węgliński <cla@gentoo.org> git-1.6.4.4.ebuild:
+  30 Sep 2009; Dawid WÄgliÅski <cla@gentoo.org> git-1.6.4.4.ebuild:
   Stable on amd64 (bu #287031)
 
   30 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> git-1.6.5_rc2.ebuild:
@@ -730,7 +734,7 @@
   +git-1.6.4.ebuild:
   New upstream releases.
 
-  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> git-1.6.3.3.ebuild:
+  30 Jun 2009; RaÃºl Porcel <armin76@gentoo.org> git-1.6.3.3.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #273905
 
   27 Jun 2009; Brent Baude <ranger@gentoo.org> git-1.6.3.3.ebuild:
@@ -896,7 +900,7 @@
   06 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.1.ebuild:
   Version bump, bug 250321.
 
-  01 Jan 2009; Raúl Porcel <armin76@gentoo.org> git-1.6.0.6.ebuild:
+  01 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> git-1.6.0.6.ebuild:
   s390/sh stable wrt #251343
 
   29 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org> git-1.6.0.6.ebuild:
@@ -905,7 +909,7 @@
   25 Dec 2008; Jeroen Roovers <jer@gentoo.org> git-1.6.0.6.ebuild:
   Stable for HPPA (bug #251343).
 
-  23 Dec 2008; Raúl Porcel <armin76@gentoo.org> git-1.6.0.6.ebuild:
+  23 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> git-1.6.0.6.ebuild:
   alpha/arm/ia64 stable wrt #251343
 
   23 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> git-1.6.0.6.ebuild:
@@ -1023,7 +1027,7 @@
   08 Aug 2008; Tobias Scherbaum <dertobi123@gentoo.org> git-1.5.6.4.ebuild:
   ppc stable, bug #234075
 
-  08 Aug 2008; Raúl Porcel <armin76@gentoo.org> git-1.5.6.4.ebuild:
+  08 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> git-1.5.6.4.ebuild:
   alpha/ia64 stable wrt #234075
 
   07 Aug 2008; Markus Meier <maekke@gentoo.org> git-1.5.6.4.ebuild:
@@ -1073,7 +1077,7 @@
   11 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> +git-1.5.5.4.ebuild:
   Version bump.
 
-  10 Jun 2008; Raúl Porcel <armin76@gentoo.org> git-1.5.4.5.ebuild:
+  10 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> git-1.5.4.5.ebuild:
   alpha/ia64/sparc/x86 stable wrt #225231
 
   09 Jun 2008; Brent Baude <ranger@gentoo.org> git-1.5.4.5.ebuild:
@@ -1127,7 +1131,7 @@
   29 Mar 2008; Robin H. Johnson <robbat2@gentoo.org> +git-1.5.4.5.ebuild:
   Version bump.
 
-  24 Mar 2008; Raúl Porcel <armin76@gentoo.org> git-1.5.4.4-r1.ebuild:
+  24 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> git-1.5.4.4-r1.ebuild:
   Re-add ~ia64 wrt #214464
 
 *git-1.5.4.4-r1 (24 Mar 2008)
@@ -1167,7 +1171,7 @@
   17 Feb 2008; Fernando J. Pereda <ferdy@gentoo.org> +git-1.5.4.2.ebuild:
   New upstream version
 
-  11 Feb 2008; Diego Pettenò <flameeyes@gentoo.org> git-1.5.4.ebuild:
+  11 Feb 2008; Diego PettenÃ² <flameeyes@gentoo.org> git-1.5.4.ebuild:
   Fix sed for LDFLAGS, and make CFLAGS sed as robust as that.
 
   03 Feb 2008; Fernando J. Pereda <ferdy@gentoo.org> git-1.5.4.ebuild:
@@ -1224,7 +1228,7 @@
   27 Dec 2007; Robin H. Johnson <robbat2@gentoo.org> git-1.5.3.7-r1.ebuild:
   Stable on amd64. Tested by myself and gentoofan23.
 
-  25 Dec 2007; Raúl Porcel <armin76@gentoo.org> git-1.5.3.7-r1.ebuild:
+  25 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> git-1.5.3.7-r1.ebuild:
   alpha/ia64/sparc/x86 stable wrt #202383
 
   25 Dec 2007; Brent Baude <ranger@gentoo.org> git-1.5.3.7-r1.ebuild:
@@ -1325,7 +1329,7 @@
   20 Sep 2007; Christoph Mende <angelos@gentoo.org> git-1.5.2.5.ebuild:
   Stable on amd64 wrt bug #193113
 
-  20 Sep 2007; Raúl Porcel <armin76@gentoo.org> git-1.5.2.5.ebuild:
+  20 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> git-1.5.2.5.ebuild:
   alpha/ia64 stable wrt #193113
 
   20 Sep 2007; Jeroen Roovers <jer@gentoo.org> git-1.5.2.5.ebuild:
@@ -1430,7 +1434,7 @@
   28 May 2007; Brent Baude <ranger@gentoo.org> git-1.5.1.6.ebuild:
   Marking git-1.5.1.6 ppc64 stable for bug 179245
 
-  24 May 2007; Raúl Porcel <armin76@gentoo.org> git-1.5.1.6.ebuild:
+  24 May 2007; RaÃºl Porcel <armin76@gentoo.org> git-1.5.1.6.ebuild:
   ia64 + x86 stable wrt #179245
 
   23 May 2007; Fernando J. Pereda <ferdy@gentoo.org> git-1.5.2.ebuild:
@@ -1476,7 +1480,7 @@
   -git-1.4.4.4.ebuild, -git-1.5.1.1.ebuild:
   Remove unused stuff
 
-  23 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> git-1.5.0.7.ebuild:
+  23 Apr 2007; Bryan Ãstergaard <kloeri@gentoo.org> git-1.5.0.7.ebuild:
   Stable on Mips, bug 173327.
 
 *git-1.5.1.2 (23 Apr 2007)
@@ -1508,7 +1512,7 @@
   04 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> git-1.5.0.7.ebuild:
   Stable on sparc wrt #173327
 
-  04 Apr 2007; Raúl Porcel <armin76@gentoo.org> git-1.5.0.7.ebuild:
+  04 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> git-1.5.0.7.ebuild:
   ia64 + x86 stable wrt bug 173327
 
   04 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> -git-1.4.2.4.ebuild,
@@ -1613,7 +1617,7 @@
   git-1.4.4.3.ebuild:
   einfo -> elog
 
-  04 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> git-1.4.4.3.ebuild:
+  04 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org> git-1.4.4.3.ebuild:
   Stable on IA64.
 
   04 Jan 2007; Torsten Veller <tove@gentoo.org> git-1.4.4.3.ebuild:
@@ -1821,7 +1825,7 @@
 
 *git-1.4.1.1 (25 Jul 2006)
 
-  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +git-1.4.1.1.ebuild:
+  25 Jul 2006; Diego PettenÃ² <flameeyes@gentoo.org> +git-1.4.1.1.ebuild:
   Version bump.
 
   11 Jul 2006; Aron Griffis <agriffis@gentoo.org> git-1.4.0-r1.ebuild,
@@ -1830,7 +1834,7 @@
 
 *git-1.4.1 (02 Jul 2006)
 
-  02 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +git-1.4.1.ebuild:
+  02 Jul 2006; Diego PettenÃ² <flameeyes@gentoo.org> +git-1.4.1.ebuild:
   Version bump to version 1.4.1. No gitweb installed as of yet.
 
   28 Jun 2006; Fabian Groffen <grobian@gentoo.org> git-1.4.0-r1.ebuild:
@@ -1860,7 +1864,7 @@
   17 May 2006; Fernando J. Pereda <ferdy@gentoo.org> +git-1.3.3.ebuild:
   New upstream version.
 
-  14 May 2006; Diego Pettenò <flameeyes@gentoo.org> git-1.3.2.ebuild:
+  14 May 2006; Diego PettenÃ² <flameeyes@gentoo.org> git-1.3.2.ebuild:
   Add ~x86-fbsd keyword.
 
 *git-1.3.2 (04 May 2006)
@@ -2285,7 +2289,7 @@
 
 *git-0.99.3 (09 Aug 2005)
 
-  09 Aug 2005; Michał Januszewski <spock@gentoo.org> +git-0.99.3.ebuild:
+  09 Aug 2005; MichaÅ Januszewski <spock@gentoo.org> +git-0.99.3.ebuild:
   Version bump.
 
   15 Jul 2005; Carlos Silva <r3pek@gentoo.org> git-0.7.ebuild:

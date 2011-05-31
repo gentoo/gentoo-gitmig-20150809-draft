@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.20 2011/05/30 09:29:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.21 2011/05/31 06:27:02 mduft Exp $
 
 EAPI=3
 
@@ -243,6 +243,9 @@ src_prepare() {
 	# bug #318289
 	# Merged upstream
 	#epatch "${FILESDIR}"/git-1.7.3.2-interix.patch
+
+	# reported upstream. should be in the next release.
+	epatch "${FILESDIR}"/git-1.7.5-interix.patch
 }
 
 git_emake() {
