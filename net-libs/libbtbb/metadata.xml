@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>sidhayn@gmail.com</email>
+    <name>Zero_Chaos</name>
+    <description>Proxy Maintainer, assign bugs</description>
+  </maintainer>
+  <maintainer>
+    <email>binki@gentoo.org</email>
+    <name>Nathan Phillip Brink</name>
+    <description>Committer, CC in bugs</description>
+  </maintainer>
+</pkgmetadata>
