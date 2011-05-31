@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/stomp-1.1.7.ebuild,v 1.2 2011/05/27 06:10:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/stomp-1.1.7.ebuild,v 1.3 2011/05/31 18:08:48 graaff Exp $
 
 EAPI="2"
 
@@ -22,4 +22,4 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
+ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
