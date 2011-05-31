@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/slimrat-9999.ebuild,v 1.2 2010/06/19 12:16:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/slimrat-9999.ebuild,v 1.3 2011/05/31 10:28:38 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
-inherit eutils confutils subversion
+inherit eutils subversion
 
 DESCRIPTION="Linux Rapidshare downloader"
 HOMEPAGE="http://code.google.com/p/slimrat/"
@@ -43,11 +43,11 @@ src_install() {
 
 	exeinto "/usr/share/${PN}"
 
-	doexe "src/${PN}" || die "doexe failed"
+	doexe "src/${PN}"
 	dosym "/usr/share/${PN}/${PN}" "${ROOT}usr/bin/${PN}"
 
 	if use X; then
-		doexe "src/${PN}-gui" || die "doexe failed"
+		doexe "src/${PN}-gui"
 		dosym "/usr/share/${PN}/${PN}-gui" "/usr/bin/${PN}-gui"
 	fi
 
@@ -56,5 +56,5 @@ src_install() {
 	newins "${S}/slimrat.conf" slimrat.conf
 
 	insinto "/usr/share/${PN}"
-	doins -r "src/"*.pm "src/plugins/" "src/${PN}.glade" || die "doins failed"
+	doins -r "src/"*.pm "src/plugins/" "src/${PN}.glade"
 }

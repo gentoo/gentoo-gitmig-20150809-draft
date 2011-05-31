@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/slimrat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/ChangeLog,v 1.4 2010/07/13 12:42:31 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/ChangeLog,v 1.5 2011/05/31 10:28:38 scarabeus Exp $
+
+  31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -slimrat-1.0.ebuild,
+  slimrat-9999.ebuild:
+  Migrate to eapi4, drop release that was no longer working with most services.
+  The app is developed, but they don't do any releases.
 
   13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
