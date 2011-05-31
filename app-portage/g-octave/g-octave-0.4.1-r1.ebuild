@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1.ebuild,v 1.2 2010/10/24 01:19:50 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r1.ebuild,v 1.1 2011/05/31 05:24:11 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -9,7 +9,7 @@ PYTHON_DEPEND="*:2.6"
 DB_COMMIT="d66097a24ed9654f350f16ba6f7395f314e9e48f"
 DB_DIR="rafaelmartins-${PN}-db-${DB_COMMIT:0:7}"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A tool that generates and installs ebuilds for Octave-Forge"
 HOMEPAGE="http://www.g-octave.org/"
@@ -20,7 +20,7 @@ SRC_URI="http://www.g-octave.org/releases/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 DEPEND="doc? ( >=dev-python/sphinx-1.0 )"
@@ -30,6 +30,7 @@ PYTHON_MODNAME="g_octave"
 
 src_prepare() {
 	distutils_src_prepare
+	epatch "${FILESDIR}/${P}-add_cave_support.patch"
 	sed -i -e 's/^has_fetch.*$/has_fetch = False/' scripts/g-octave \
 		|| die 'failed to patch the g-octave main script'
 }

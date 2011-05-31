@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/g-octave
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.3 2010/10/24 01:19:50 rafaelmartins Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.4 2011/05/31 05:24:11 rafaelmartins Exp $
+
+*g-octave-0.4.1-r1 (31 May 2011)
+
+  31 May 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -g-octave-0.4.1.ebuild, +g-octave-0.4.1-r1.ebuild,
+  +files/g-octave-0.4.1-add_cave_support.patch:
+  Revision bump, fixes bug #274593, thanks to Karol Szumski
 
   24 Oct 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   g-octave-0.4.1.ebuild:
