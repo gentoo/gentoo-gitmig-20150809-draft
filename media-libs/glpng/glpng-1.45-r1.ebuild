@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/glpng-1.45-r1.ebuild,v 1.7 2011/01/15 15:57:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/glpng-1.45-r1.ebuild,v 1.8 2011/05/31 10:33:05 scarabeus Exp $
+
+EAPI=4
 
 inherit cmake-utils multilib
 
@@ -16,11 +18,9 @@ IUSE=""
 RDEPEND="virtual/opengl
 	media-libs/libpng
 	sys-libs/zlib"
-DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.6.1"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	# fix libdir placement
 	sed -i \
 		-e "s:CMAKE_INSTALL_LIBDIR lib:CMAKE_INSTALL_LIBDIR $(get_libdir):g"\
