@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.491 2011/05/16 18:11:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.492 2011/05/31 19:08:06 a3li Exp $
+
+*ruby-1.8.7_p334-r1 (31 May 2011)
+
+  31 May 2011; Alex Legler <a3li@gentoo.org> +ruby-1.8.7_p334-r1.ebuild:
+  Revision bump for security bug 369141 (CVE-2011-0188)
 
 *ruby-1.9.2-r1 (16 May 2011)
 
