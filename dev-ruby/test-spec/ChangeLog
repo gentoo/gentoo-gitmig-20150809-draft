@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.18 2011/05/24 13:32:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.19 2011/05/31 20:21:28 maekke Exp $
+
+  31 May 2011; Markus Meier <maekke@gentoo.org> test-spec-0.10.0-r2.ebuild:
+  x86 stable, bug #367469
 
   24 May 2011; Markos Chandras <hwoarang@gentoo.org>
   test-spec-0.10.0-r2.ebuild:
