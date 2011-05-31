@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kio-ftps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.2 2011/01/28 15:39:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.3 2011/05/31 10:34:34 scarabeus Exp $
+
+  31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> kio-ftps-0.2.ebuild,
+  metadata.xml:
+  Update to eapi4. Drop maintainership in favour of whole kde team.
 
   28 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> kio-ftps-0.2.ebuild:
   Move to eapi3 update deps to use new syntax.
