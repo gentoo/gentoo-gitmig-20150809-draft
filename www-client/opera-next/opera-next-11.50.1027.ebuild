@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-11.50.1027.ebuild,v 1.1 2011/05/30 19:11:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-11.50.1027.ebuild,v 1.2 2011/05/31 07:17:30 jer Exp $
 
 EAPI="3"
 
@@ -132,7 +132,7 @@ src_prepare() {
 	# Unzip the man pages before sedding
 	gunzip share/man/man1/* || die "gunzip failed"
 
-	# Replace PREFIX, SUFFIX and "opera" in various files
+	# Replace PREFIX, SUFFIX and PN in various files
 	sed -i \
 		-e "s:@@{PREFIX}:/usr:g" \
 		-e "s:@@{SUFFIX}::g" \
