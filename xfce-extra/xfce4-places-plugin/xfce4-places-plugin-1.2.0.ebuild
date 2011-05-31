@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0.ebuild,v 1.16 2011/05/19 21:34:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0.ebuild,v 1.17 2011/05/31 11:24:05 angelos Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -26,7 +26,10 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-exo.patch )
+	PATCHES=(
+		"${FILESDIR}"/${P}-exo.patch
+		"${FILESDIR}"/${P}-link-against-libx11.patch
+	)
 	XFCONF=( $(xfconf_use_debug) )
 	DOCS=( AUTHORS ChangeLog NEWS README TODO )
 }
