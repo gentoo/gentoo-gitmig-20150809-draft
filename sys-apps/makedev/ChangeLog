@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/makedev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.7 2011/05/30 02:36:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.8 2011/05/31 18:07:44 williamh Exp $
+
+  31 May 2011; William Hubbs <williamh@gentoo.org> makedev-3.23.1.ebuild:
+  Add the virtual consoles back to the stages for bug #368597.
 
   30 May 2011; Mike Frysinger <vapier@gentoo.org> makedev-3.23.1.ebuild:
   Build console/ptmx too, and trim a few more tty devices #368597 by Jorge

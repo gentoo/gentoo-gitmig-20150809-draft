@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.9 2011/05/30 02:36:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.10 2011/05/31 18:07:44 williamh Exp $
 
 EAPI="2"
 
@@ -47,6 +47,6 @@ pkg_postinst() {
 		# trim useless nodes
 		rm -f "${ROOT}"/dev/fd[0-9]* # floppy
 		rm -f "${ROOT}"/dev/sd[a-d][a-z]* "${ROOT}"/dev/sd[e-z]* # excess sata/scsi
-		rm -f "${ROOT}"/dev/tty[a-zA-Z]* "${ROOT}"/dev/tty[2-9]? # excess tty
+		rm -f "${ROOT}"/dev/tty[a-zA-Z]* # excess tty
 	fi
 }
