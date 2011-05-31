@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>kde</herd>
-	<maintainer>
-		<email>scarabeus@gentoo.org</email>
-		<name>Tomáš Chvátal</name>
-	</maintainer>
 </pkgmetadata>
