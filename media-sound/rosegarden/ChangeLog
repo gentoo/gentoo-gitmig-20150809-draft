@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.85 2011/05/23 21:37:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.86 2011/05/31 06:43:41 radhermit Exp $
+
+  31 May 2011; Tim Harder <radhermit@gentoo.org> rosegarden-10.04.ebuild:
+  Restrict the qt dependency to working versions only.
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org> rosegarden-11.02.ebuild:
   Stable on amd64 wrt bug #368149
