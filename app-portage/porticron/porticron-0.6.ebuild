@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.6.ebuild,v 1.3 2011/05/19 03:22:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.6.ebuild,v 1.4 2011/05/31 20:17:15 maekke Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://nodeload.github.com/${GITHUB_AUTHOR}/${GITHUB_PROJECT}/tarball/v
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~x86"
+KEYWORDS="amd64 hppa ~ppc x86"
 IUSE=""
 
 DEPEND=""
