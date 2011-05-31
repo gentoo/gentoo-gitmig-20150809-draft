@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aqualung
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.16 2011/05/12 18:38:52 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.17 2011/05/31 18:10:40 billie Exp $
+
+  31 May 2011; Daniel Pielmeier <billie@gentoo.org> aqualung-0.9_beta11.ebuild,
+  aqualung-0.9_beta11-r1.ebuild:
+  Aqualung needs libcdio built with USE="-minimal". This fixes bug #369151.
+  Thanks to David Honour for the report.
 
   12 May 2011; Daniel Pielmeier <billie@gentoo.org> aqualung-0.9_beta11.ebuild,
   aqualung-0.9_beta11-r1.ebuild:
