@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.162 2011/05/19 03:28:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.163 2011/05/31 00:03:19 jer Exp $
+
+*debianutils-4.0.1 (31 May 2011)
+
+  31 May 2011; Jeroen Roovers <jer@gentoo.org> +debianutils-4.0.1.ebuild:
+  Version bump.
 
 *debianutils-4 (19 May 2011)
 
