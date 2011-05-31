@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/safecopy-1.6.ebuild,v 1.1 2011/01/05 09:57:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/safecopy-1.6.ebuild,v 1.2 2011/05/31 10:22:47 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit base
 
@@ -12,39 +12,37 @@ SRC_URI="mirror://sourceforge/safecopy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND=""
 DEPEND=""
 
+DOCS=( README )
+
 src_prepare() {
+	base_src_prepare
 	sed -e 's:bin/sh:bin/bash:' \
-		-i "${S}"/test/test.sh || die "sed failed"
+		-i "${S}"/test/test.sh || die
 }
 
 src_configure() {
-	base_src_configure
+	default_src_configure
 	if use test; then
 		cd "${S}"/simulator
-		econf
+		default_src_configure
 	fi
 }
 
 src_compile() {
-	base_src_compile
+	default_src_compile
 	if use test; then
 		cd "${S}"/simulator
-		emake || die "Simulator compilation failed -- needed for testing"
+		default_src_compile
 	fi
-}
-
-src_install() {
-	base_src_install
-	dodoc README || die "copying documentation failed"
 }
 
 src_test() {
 	cd "${S}"/test
-	./test.sh || die "./tesh.sh failed"
+	./test.sh || die
 }

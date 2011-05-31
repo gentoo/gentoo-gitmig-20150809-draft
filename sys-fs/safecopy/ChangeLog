@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/safecopy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.6 2011/01/05 09:57:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.7 2011/05/31 10:22:47 scarabeus Exp $
+
+  31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> safecopy-1.6.ebuild:
+  EAPI=4. Stabilise on amd64 and x86.
 
 *safecopy-1.6 (05 Jan 2011)
 
