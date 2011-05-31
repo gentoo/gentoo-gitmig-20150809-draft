@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.14 2011/05/23 21:43:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.15 2011/05/31 17:23:16 phajdan.jr Exp $
+
+  31 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gitolite-gentoo-1.5.9.1-r1.ebuild:
+  x86 stable wrt bug #368263
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org>
   gitolite-gentoo-1.5.9.1-r1.ebuild:
