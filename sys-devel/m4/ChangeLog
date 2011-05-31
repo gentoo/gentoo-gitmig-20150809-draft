@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.151 2011/03/01 23:20:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.152 2011/05/31 15:37:21 darkside Exp $
+
+  31 May 2011; Jeremy Olexa <darkside@gentoo.org> m4-1.4.16.ebuild:
+  Add Gentoo Prefix modifications since the ebuild was already EAPI3. Keywords,
+  dosym, ED usage.
 
 *m4-1.4.16 (01 Mar 2011)
 
