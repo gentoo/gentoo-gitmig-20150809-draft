@@ -1,0 +1,11 @@
+# ChangeLog for x11-terms/st
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.1 2011/05/31 03:40:26 xmw Exp $
+
+*st-9999 (31 May 2011)
+*st-0.1.1 (31 May 2011)
+
+  31 May 2011; Michael Weber <xmw@gentoo.org> +st-0.1.1.ebuild,
+  +st-9999.ebuild, +metadata.xml:
+  Initial import
+
