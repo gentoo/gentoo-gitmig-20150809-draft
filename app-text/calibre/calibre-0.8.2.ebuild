@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.2.ebuild,v 1.2 2011/05/26 21:27:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.2.ebuild,v 1.3 2011/05/31 06:14:09 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -10,7 +10,7 @@ inherit python distutils eutils fdo-mime bash-completion multilib
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
-SRC_URI="http://calibre-ebook.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://sourceforge.net/projects/calibre/files/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 

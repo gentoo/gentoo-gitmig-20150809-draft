@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.151 2011/05/26 21:27:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.152 2011/05/31 06:14:09 zmedico Exp $
+
+  31 May 2011; Zac Medico <zmedico@gentoo.org> calibre-0.8.2.ebuild:
+  Bug #369021 - Update SRC_URI to point to sourceforge.
 
   26 May 2011; Zac Medico <zmedico@gentoo.org> calibre-0.8.2.ebuild:
   Bug #358065 - Stop filtering mime types from the desktop files, since it
