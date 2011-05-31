@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1.ebuild,v 1.1 2011/05/27 23:04:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r1.ebuild,v 1.1 2011/05/31 15:53:45 cardoe Exp $
 
 BACKPORTS=1
 
@@ -134,7 +134,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local conf_opts audio_opts user_targets softmmu_targets
+	local conf_opts audio_opts user_targets
 
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${target}" && \
