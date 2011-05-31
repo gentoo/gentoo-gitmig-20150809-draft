@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.5 2011/04/19 07:34:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.6 2011/05/31 19:49:07 maksbotan Exp $
+
+*uwsgi-0.9.7.2 (31 May 2011)
+
+  31 May 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  -uwsgi-0.9.5.ebuild, +uwsgi-0.9.7.2.ebuild, +files/uwsgi.confd,
+  +files/uwsgi.initd, metadata.xml:
+  Bumping to 0.9.7.2 (bug #340058). Added init scripts from that bug.
+  Removed
+  uwsgi-0.9.5 as obsolete. Drop usage of gcc patch in 0.9.7.2 as issue is
+  fixed
+  upstream.
 
   19 Apr 2011; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from metadata
