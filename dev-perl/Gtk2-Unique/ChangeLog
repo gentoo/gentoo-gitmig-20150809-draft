@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Gtk2-Unique
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Unique/ChangeLog,v 1.5 2011/05/19 20:14:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Unique/ChangeLog,v 1.6 2011/05/31 20:23:03 maekke Exp $
+
+  31 May 2011; Markus Meier <maekke@gentoo.org> Gtk2-Unique-0.05.ebuild:
+  x86 stable, bug #367831
 
   19 May 2011; Markos Chandras <hwoarang@gentoo.org> Gtk2-Unique-0.05.ebuild:
   Stable on amd64 wrt bug #367831

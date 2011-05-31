@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Unique/Gtk2-Unique-0.05.ebuild,v 1.4 2011/05/19 20:14:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Unique/Gtk2-Unique-0.05.ebuild,v 1.5 2011/05/31 20:23:03 maekke Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit eutils perl-module
 DESCRIPTION="Perl binding for C libunique library"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
