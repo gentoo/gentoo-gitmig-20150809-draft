@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.6.2.ebuild,v 1.4 2011/05/26 16:12:26 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/rodent-4.6.4.ebuild,v 1.1 2011/05/31 14:25:43 angelos Exp $
 
 EAPI=4
-inherit autotools eutils fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils
 
 DESCRIPTION="a fast, small and powerful file manager and graphical shell"
 HOMEPAGE="http://rodent.xffm.org"
@@ -25,21 +25,10 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
 
-DOCS="ChangeLog README TODO"
-
-src_prepare() {
-	rm -f Build/bin/*.desktop
-
-	epatch \
-		"${FILESDIR}"/${P}-libs.patch \
-		"${FILESDIR}"/${P}-validate.patch
-
-	eautoreconf
-}
+DOCS=( ChangeLog README TODO )
 
 src_install() {
 	default
-
 	find "${D}" -name '*.la' -exec rm -f {} +
 }
 
