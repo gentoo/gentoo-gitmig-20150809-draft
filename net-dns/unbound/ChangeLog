@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.25 2011/05/31 11:26:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.26 2011/05/31 13:31:03 phajdan.jr Exp $
+
+  31 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> unbound-1.4.10.ebuild:
+  x86 stable wrt security bug #368981
 
   31 May 2011; Christoph Mende <angelos@gentoo.org> unbound-1.4.10.ebuild:
   Stable on amd64 wrt bug #368981
