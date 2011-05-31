@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r2.ebuild,v 1.2 2011/05/27 10:53:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r2.ebuild,v 1.3 2011/05/31 16:31:50 eras Exp $
 
 EAPI="2"
 
@@ -83,10 +83,8 @@ src_install() {
 	# Now the shared library
 	dolib.so c-client/libc-client.so.1.0.0 || die
 
-	cd "${D}"/usr/$(get_libdir)
-	ln -s libc-client.so.1.0.0 libc-client.so.1
-	ln -s libc-client.so.1.0.0 libc-client.so
-	cd "${S}"
+	dosym libc-client.so.1.0.0 /usr/$(get_libdir)/libc-client.so
+	dosym libc-client.so.1.0.0 /usr/$(get_libdir)/libc-client.so.1
 
 	# Headers
 	insinto /usr/include/imap

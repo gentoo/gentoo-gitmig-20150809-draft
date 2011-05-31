@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.67 2011/05/27 10:53:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.68 2011/05/31 16:31:50 eras Exp $
+
+  31 May 2011; Eray Aslan <eras@gentoo.org> c-client-2007e-r2.ebuild:
+  Improve symlink code - bug #369351. Thanks to Nicola Rauseo.
 
   27 May 2011; Markos Chandras <hwoarang@gentoo.org> c-client-2007e-r2.ebuild:
   Stable on amd64 wrt bug #368585
