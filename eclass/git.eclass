@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.54 2011/04/20 10:57:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.55 2011/05/31 10:17:01 scarabeus Exp $
 
 # @DEPRECATED
 # This eclass has been superseded by git-2 eclass.
@@ -8,7 +8,6 @@
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
-# Tomas Chvatal <scarabeus@gentoo.org>
 # Donnie Berkholz <dberkholz@gentoo.org>
 # @BLURB: Fetching and unpacking of git repositories
 # @DESCRIPTION:
