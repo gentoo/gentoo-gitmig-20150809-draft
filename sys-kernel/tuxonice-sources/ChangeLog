@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.118 2011/05/24 14:11:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.119 2011/05/31 10:23:37 scarabeus Exp $
+
+  31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  I stopped using tuxonice so drop myself from maintainers.
 
 *tuxonice-sources-2.6.38-r1 (24 May 2011)
 *tuxonice-sources-2.6.37-r2 (24 May 2011)
