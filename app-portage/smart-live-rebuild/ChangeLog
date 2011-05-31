@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.16 2011/05/17 19:57:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.17 2011/05/31 19:38:36 mgorny Exp $
+
+*smart-live-rebuild-0.8.1 (31 May 2011)
+
+  31 May 2011; Michał Górny <mgorny@gentoo.org>
+  -smart-live-rebuild-0.8.ebuild, +smart-live-rebuild-0.8.1.ebuild:
+  Version bump. This version fixes environment leakages in bash parser and adds
+  support for SLOT-ted packages (bug #368423).
 
 *smart-live-rebuild-0.8 (17 May 2011)
 
