@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.22 2011/05/23 00:55:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.23 2011/05/31 20:50:01 maekke Exp $
+
+  31 May 2011; Markus Meier <maekke@gentoo.org> nut-16.9.ebuild:
+  x86 stable, bug #368271
 
   23 May 2011; Michael Weber <xmw@gentoo.org> nut-16.5.ebuild:
   ppc stable (bug 368271)
