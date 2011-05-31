@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r2.ebuild,v 1.3 2011/05/31 16:31:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r2.ebuild,v 1.4 2011/05/31 20:50:37 maekke Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc kernel_linux kernel_FreeBSD pam ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
