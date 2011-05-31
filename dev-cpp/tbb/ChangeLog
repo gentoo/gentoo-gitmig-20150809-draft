@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.11 2011/04/21 21:04:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.12 2011/05/31 21:34:13 bicatali Exp $
+
+*tbb-3.0.196 (31 May 2011)
+
+  31 May 2011; Sébastien Fabbro <bicatali@gentoo.org> +tbb-3.0.196.ebuild:
+  Version bump
 
 *tbb-3.0.174 (21 Apr 2011)
 
