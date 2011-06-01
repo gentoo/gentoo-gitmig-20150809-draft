@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.188 2011/05/09 23:04:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.189 2011/06/01 19:35:20 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> akregator-4.4.11.1-r1.ebuild:
+  Marking akregator-4.4.11.1-r1 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   akregator-4.4.11.1-r1.ebuild:
