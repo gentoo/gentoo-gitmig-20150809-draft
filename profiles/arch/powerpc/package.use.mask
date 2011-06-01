@@ -1,6 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.81 2011/05/27 22:54:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.82 2011/06/01 16:14:25 ranger Exp $
+
+
+# Doug Goldstein <cardoe@gentoo.org> (27 May 2011)
+# dev-libs/libdbusmenu-qt masking test USE to complete bug 354033
+=dev-libs/libdbusmenu-qt-0.6.2 test
 
 # Doug Goldstein <cardoe@gentoo.org> (27 May 2011)
 # app-emulation/spice, app-emulation/xen, and sys-cluster/ceph
