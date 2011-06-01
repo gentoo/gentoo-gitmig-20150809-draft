@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.10 2010/10/11 15:15:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.11 2011/06/01 15:05:41 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -41,6 +41,10 @@ src_prepare() {
 		acinclude.m4 \
 		|| die "sed failed"
 	eautoreconf
+}
+
+src_compile() {
+	emake LIBTOOL="/usr/bin/libtool" || die "emake failed"
 }
 
 src_install() {
