@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.244 2011/05/19 16:28:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.245 2011/06/01 18:19:23 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kdm-4.6.2-r1.ebuild:
+  Marking kdm-4.6.2-r1 ppc stable for bug 354033
 
 *kdm-4.6.3-r1 (19 May 2011)
 
