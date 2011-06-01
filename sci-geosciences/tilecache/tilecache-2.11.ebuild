@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tilecache/tilecache-2.10.ebuild,v 1.4 2010/04/27 12:31:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tilecache/tilecache-2.11.ebuild,v 1.1 2011/06/01 09:53:25 scarabeus Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="2"
 inherit distutils
