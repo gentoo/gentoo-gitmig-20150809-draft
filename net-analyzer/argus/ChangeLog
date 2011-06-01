@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/argus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.29 2011/04/19 22:08:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.30 2011/06/01 00:27:28 jer Exp $
+
+*argus-3.0.5.3 (01 Jun 2011)
+
+  01 Jun 2011; Jeroen Roovers <jer@gentoo.org> +argus-3.0.5.3.ebuild:
+  Version bump.
 
   19 Apr 2011; Jeroen Roovers <jer@gentoo.org>
   files/argus-3.0.4-disable-tcp-wrappers-automagic.patch:
