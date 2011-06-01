@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.165 2011/05/09 23:15:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.166 2011/06/01 19:03:20 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> ktux-4.6.2.ebuild:
+  Marking ktux-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> ktux-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
