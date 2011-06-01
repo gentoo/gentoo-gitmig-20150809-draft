@@ -1,0 +1,38 @@
+diff -Naur mozc-1.1.717.102.orig/base/util.cc mozc-1.1.717.102/base/util.cc
+--- mozc-1.1.717.102.orig/base/util.cc	2011-05-20 17:17:00.000000000 +0900
++++ mozc-1.1.717.102/base/util.cc	2011-05-31 19:14:38.129021596 +0900
+@@ -373,7 +373,6 @@
+     while (*str == ' ' || *str == '\t') {
+       ++str;
+     }
+-    bool inquote = false;
+     if (*str == '"') {
+       start = ++str;
+       end = start;
+@@ -385,7 +384,6 @@
+         }
+         *end++ = *str;
+       }
+-      inquote = true;
+       str = find(str, eos, ',');
+     } else {
+       start = str;
+diff -Naur mozc-1.1.717.102.orig/rewriter/collocation_rewriter.cc mozc-1.1.717.102/rewriter/collocation_rewriter.cc
+--- mozc-1.1.717.102.orig/rewriter/collocation_rewriter.cc	2011-05-20 17:17:03.000000000 +0900
++++ mozc-1.1.717.102/rewriter/collocation_rewriter.cc	2011-06-01 08:17:44.886890850 +0900
+@@ -575,7 +575,6 @@
+   for (size_t i = segments->history_segments_size();
+        i < segments->segments_size(); ++i) {
+     bool rewrited_next = false;
+-    bool rewrited_prev = false;
+ 
+     if (IsKeyUnknown(segments->segment(i))) {
+       continue;
+@@ -596,7 +595,6 @@
+         RewriteFromPrevSegment(segments->segment(i - 1).candidate(0),
+                                segments->mutable_segment(i))) {
+       changed = true;
+-      rewrited_prev =true;
+       segs_changed[i - 1] = true;
+       segs_changed[i] = true;
+     }
