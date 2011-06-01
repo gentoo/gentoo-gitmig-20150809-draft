@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktimetracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.77 2011/05/09 23:09:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.78 2011/06/01 19:44:07 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> ktimetracker-4.4.11.1.ebuild:
+  Marking ktimetracker-4.4.11.1 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   ktimetracker-4.4.11.1.ebuild:
