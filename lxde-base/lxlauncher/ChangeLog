@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxlauncher
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxlauncher/ChangeLog,v 1.10 2011/03/07 20:33:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxlauncher/ChangeLog,v 1.11 2011/06/01 10:24:21 klausman Exp $
+
+  01 Jun 2011; Tobias Klausmann <klausman@gentoo.org>
+  lxlauncher-0.2.1-r1.ebuild:
+  Keyworded on alpha, bug #330911
 
   07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> lxlauncher-0.2.1.ebuild:
   Keyworded on alpha, bug #330911
