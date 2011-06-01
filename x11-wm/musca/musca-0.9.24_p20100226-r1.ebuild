@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24.ebuild,v 1.6 2010/02/18 05:41:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24_p20100226-r1.ebuild,v 1.1 2011/06/01 15:47:06 jer Exp $
 
 EAPI="2"
 
@@ -9,11 +9,11 @@ inherit eutils savedconfig toolchain-funcs
 DESCRIPTION="A simple dynamic window manager for X, with features nicked from
 ratpoison and dwm"
 HOMEPAGE="http://aerosuidae.net/musca/"
-SRC_URI="http://aerosuidae.net/${P}.tgz"
+SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="apis xlisten"
 
 COMMON="x11-libs/libX11"
@@ -24,7 +24,7 @@ RDEPEND="
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-make.patch
+	epatch "${FILESDIR}"/${P/_p*}-make.patch
 
 	local i
 	for i in apis xlisten; do
@@ -40,14 +40,18 @@ src_compile() {
 }
 
 src_install() {
-	dobin musca || die "dobin failed"
+	dobin musca || die
 
 	local i
 	for i in xlisten apis; do
 		if use ${i}; then
-			dobin ${i} || die "dobin ${i} failed"
+			dobin ${i} || die
 		fi
 	done
-	doman musca.1 || die "doman failed"
+	doman musca.1 || die
+
+	exeinto /etc/X11/Sessions
+	newexe "${FILESDIR}"/${PN}.xsession musca || die
+
 	save_config config.h
 }
