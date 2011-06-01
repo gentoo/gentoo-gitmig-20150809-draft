@@ -6,6 +6,10 @@
 		<email>reavertm@gentoo.org</email>
 		<name>Maciej Mrozowski</name>
 	</maintainer>
+	<maintainer>
+		<email>ago@autistici.org</email>
+		<name>Agostino Sarubbo</name>
+	</maintainer>
 	<use>
 		<flag name="gadu">Enables Gadu communication protocol</flag>
 		<flag name="phonon">Enables phonon audio plugin</flag>
