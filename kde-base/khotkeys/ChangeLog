@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.179 2011/05/09 22:56:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.180 2011/06/01 18:28:27 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> khotkeys-4.6.2.ebuild:
+  Marking khotkeys-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> khotkeys-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
