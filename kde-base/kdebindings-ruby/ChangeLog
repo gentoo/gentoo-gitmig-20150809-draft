@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.38 2011/05/09 22:44:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/ChangeLog,v 1.39 2011/06/01 18:07:20 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org>
+  kdebindings-ruby-4.6.2.ebuild:
+  Marking kdebindings-ruby-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   kdebindings-ruby-4.6.2.ebuild:
