@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/osm2mp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2mp/ChangeLog,v 1.4 2010/05/11 01:00:59 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2mp/ChangeLog,v 1.5 2011/06/01 11:51:56 scarabeus Exp $
+
+  01 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> osm2mp-0.80.ebuild:
+  Depend on unzip. Fixes bug #369265.
 
   11 May 2010; Jeroen Roovers <jer@gentoo.org> osm2mp-0.80.ebuild:
   Exchange newbin arguments thanks to Juergen Rose and HMC (bug #318547).
