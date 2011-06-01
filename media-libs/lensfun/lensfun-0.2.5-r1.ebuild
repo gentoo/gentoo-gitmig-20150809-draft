@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r1.ebuild,v 1.7 2011/05/09 08:29:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r1.ebuild,v 1.8 2011/06/01 19:47:11 ranger Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/lensfun/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86"
 IUSE="debug doc"
 
 RDEPEND="
