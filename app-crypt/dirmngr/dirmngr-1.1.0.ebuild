@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.1.0.ebuild,v 1.8 2010/10/23 14:19:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-1.1.0.ebuild,v 1.9 2011/06/01 14:18:21 flameeyes Exp $
 
 EAPI="3"
 
@@ -27,7 +27,8 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.12.1 )"
 
 src_configure() {
-	econf --docdir="/usr/share/doc/${PF}" $(use_enable nls)
+	econf --docdir="/usr/share/doc/${PF}" $(use_enable nls) \
+		LDAPLIBS="-lldap -llber"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/dirmngr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.61 2010/10/23 14:20:52 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.62 2011/06/01 14:18:21 flameeyes Exp $
+
+  01 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> dirmngr-1.1.0.ebuild:
+  Force use of -lldap -llber for linking, closes bug #369321.
 
   23 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -dirmngr-1.0.3.ebuild, -dirmngr-1.1.0_rc1.ebuild:
