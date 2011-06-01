@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.82 2011/06/01 16:14:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.83 2011/06/01 17:31:52 ranger Exp $
 
 
-# Doug Goldstein <cardoe@gentoo.org> (27 May 2011)
+# Brent Baude <ranger@gentoo.org> (1 June  2011)
+# dev-util/kdevplatform masking reviewboard USE
+=dev-util/kdevplatform-1.2.2 reviewboard
+
+# Brent Baude <ranger@gentoo.org> (1 June  2011)
 # dev-libs/libdbusmenu-qt masking test USE to complete bug 354033
 =dev-libs/libdbusmenu-qt-0.6.2 test
 
