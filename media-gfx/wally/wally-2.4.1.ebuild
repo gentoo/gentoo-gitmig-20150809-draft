@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.1.ebuild,v 1.3 2011/02/02 11:31:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.1.ebuild,v 1.4 2011/06/01 15:40:40 hwoarang Exp $
 
 EAPI=3
 KDE_REQUIRED="optional"
@@ -18,6 +18,8 @@ IUSE="debug kde"
 DEPEND="
 	media-libs/libexif
 	x11-libs/qt-svg:4
+	x11-libs/qt-dbus:4
+	x11-libs/qt-sql:4
 	kde? ( $(add_kdebase_dep kdelibs) )
 "
 RDEPEND="${DEPEND}"

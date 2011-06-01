@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.32 2011/02/02 11:31:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.33 2011/06/01 15:40:40 hwoarang Exp $
+
+  01 Jun 2011; Markos Chandras <hwoarang@gentoo.org> wally-2.3.2.ebuild,
+  wally-2.4.1.ebuild:
+  Add missing x11-libs/qt-{sql,dbus} dependencies. Bug #369267
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> wally-2.3.2.ebuild,
   -wally-2.4.ebuild, wally-2.4.1.ebuild:
