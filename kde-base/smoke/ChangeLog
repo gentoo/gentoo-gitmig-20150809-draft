@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.132 2011/05/14 14:32:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.133 2011/06/01 19:25:33 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> smoke-4.6.2.ebuild:
+  Marking smoke-4.6.2 ppc stable for bug 354033
 
   14 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> smoke-4.6.2.ebuild,
   smoke-4.6.3.ebuild:
