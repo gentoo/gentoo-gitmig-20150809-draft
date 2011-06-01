@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.183 2011/05/09 22:41:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.184 2011/06/01 18:01:44 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kdebase-data-4.6.2.ebuild:
+  Marking kdebase-data-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kdebase-data-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
