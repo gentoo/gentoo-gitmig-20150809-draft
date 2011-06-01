@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.7.2.ebuild,v 1.5 2011/05/09 22:08:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.7.2.ebuild,v 1.6 2011/06/01 15:04:21 ranger Exp $
 
 EAPI="3"
 inherit qt4-build
 
 DESCRIPTION="Demonstration module of the Qt toolkit"
 SLOT="4"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="kde qt3support"
 
 DEPEND="~x11-libs/qt-assistant-${PV}:${SLOT}[aqua=]
