@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt-garmindev/qlandkartegt-garmindev-0.3.3.ebuild,v 1.1 2010/04/27 10:28:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt-garmindev/qlandkartegt-garmindev-0.3.4.ebuild,v 1.1 2011/06/01 11:34:33 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 MY_P=${P/qlandkartegt-/}
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	dev-libs/libusb
+	virtual/libusb
 	sci-geosciences/qlandkartegt
 "
 RDEPEND="${DEPEND}"

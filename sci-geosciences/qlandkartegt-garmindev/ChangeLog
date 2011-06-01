@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/qlandkartegt-garmindev
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt-garmindev/ChangeLog,v 1.5 2010/04/27 10:28:18 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt-garmindev/ChangeLog,v 1.6 2011/06/01 11:34:33 scarabeus Exp $
+
+*qlandkartegt-garmindev-0.3.4 (01 Jun 2011)
+
+  01 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -qlandkartegt-garmindev-0.3.3.ebuild, +qlandkartegt-garmindev-0.3.4.ebuild:
+  Version bump. Drop older.
 
 *qlandkartegt-garmindev-0.3.3 (27 Apr 2010)
 
