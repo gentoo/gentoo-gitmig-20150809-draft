@@ -1,13 +1,13 @@
 # ChangeLog for x11-wm/musca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.16 2011/06/01 15:47:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.17 2011/06/01 15:48:27 jer Exp $
 
 *musca-0.9.24_p20100226-r1 (01 Jun 2011)
 
   01 Jun 2011; Jeroen Roovers <jer@gentoo.org> -musca-0.9.24.ebuild,
   +musca-0.9.24_p20100226-r1.ebuild, +files/musca.xsession:
-  Add xsession entry thanks to Matthew Alexander (bug #369355). Remove die()
-  messages.
+  Add xsession entry thanks to Matthew Alexander LaChance (bug #369355). Remove
+  die() messages.
 
   02 Feb 2011; Tim Harder <radhermit@gentoo.org> musca-0.9.24_p20100226.ebuild:
   Add ~amd64 keyword.
