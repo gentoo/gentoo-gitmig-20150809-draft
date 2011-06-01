@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.117 2011/05/07 11:20:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.118 2011/06/01 21:38:02 eras Exp $
+
+*uw-imap-2007e-r1 (01 Jun 2011)
+
+  01 Jun 2011; Eray Aslan <eras@gentoo.org> +uw-imap-2007e-r1.ebuild:
+  Fix patching - bug #368785. Proper SSL key generation - bug #235227. Tidy up
+  and EAPI bump.
 
   07 May 2011; Eray Aslan <eras@gentoo.org> uw-imap-2007e.ebuild,
   +files/uw-imap-ldflags.patch:
