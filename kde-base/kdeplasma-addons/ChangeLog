@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.87 2011/05/09 22:48:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.88 2011/06/01 18:13:34 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org>
+  kdeplasma-addons-4.6.2.ebuild:
+  Marking kdeplasma-addons-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   kdeplasma-addons-4.6.2.ebuild:
