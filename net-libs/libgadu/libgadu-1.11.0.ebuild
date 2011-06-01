@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.10.1.ebuild,v 1.1 2011/03/17 17:13:48 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.0.ebuild,v 1.1 2011/06/01 01:09:11 reavertm Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ REQUIRED_USE="
 	gnutls? ( ssl )
 "
 COMMON_DEPEND="
+	sys-libs/zlib
 	ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( >=dev-libs/openssl-0.9.6m )
