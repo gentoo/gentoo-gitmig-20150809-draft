@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/konq-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.21 2011/05/09 23:10:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.22 2011/06/01 19:46:18 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> konq-plugins-4.6.1.ebuild:
+  Marking konq-plugins-4.6.1 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> konq-plugins-4.6.1.ebuild:
   Stable on amd64 wrt bug #354033
