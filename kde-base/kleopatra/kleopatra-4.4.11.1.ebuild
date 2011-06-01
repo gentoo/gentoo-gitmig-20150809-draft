@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.11.1.ebuild,v 1.5 2011/05/09 23:07:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.11.1.ebuild,v 1.6 2011/06/01 19:40:51 ranger Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="Kleopatra - KDE X.509 key manager"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug +handbook"
 
 SRC_URI+=" http://dev.gentoo.org/~dilfridge/distfiles/${PN}-4.4.3-assuan2.patch.bz2"
