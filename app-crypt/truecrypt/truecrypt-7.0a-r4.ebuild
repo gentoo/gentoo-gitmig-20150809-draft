@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r3.ebuild,v 1.1 2011/06/01 14:46:10 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r4.ebuild,v 1.1 2011/06/01 19:51:23 c1pher Exp $
 
 EAPI="2"
 
@@ -13,17 +13,17 @@ SRC_URI="${P}.tar.gz"
 
 LICENSE="truecrypt-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE="X"
 RESTRICT="mirror fetch bindist"
 
 RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
 	sys-fs/fuse
-	x11-libs/wxGTK:2.8[X?]"
-DEPEND="${RDEPEND}
-	|| ( dev-libs/pkcs11-helper dev-libs/opensc )"
-RDEPEND="${RDEPEND}
+	x11-libs/wxGTK:2.8[X?]
 	app-admin/sudo"
+DEPEND="${RDEPEND}
+	|| ( dev-libs/pkcs11-helper dev-libs/opensc )
+	!ppc? ( dev-lang/nasm )"
 
 S="${WORKDIR}/${P}-source"
 
