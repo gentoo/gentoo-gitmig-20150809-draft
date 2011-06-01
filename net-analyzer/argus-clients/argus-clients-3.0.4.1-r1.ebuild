@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.4.1.ebuild,v 1.1 2011/04/19 22:18:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.4.1-r1.ebuild,v 1.1 2011/06/01 00:30:14 jer Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ src_compile() {
 
 src_install() {
 	# argus_parse.a and argus_common.a are supplied by net-analyzer/argus
-	dobin bin/ra* || die "Failed to install ra*"
+	dobin bin/ra* radium/radium || die "Failed to install ra*"
 	dodoc ChangeLog CREDITS README doc/{CHANGES,FAQ,HOW-TO} || die
 	doman man/man{1,5}/*
 }
