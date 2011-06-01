@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r4.ebuild,v 1.1 2011/06/01 19:51:23 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r5.ebuild,v 1.1 2011/06/01 21:24:10 c1pher Exp $
 
 EAPI="2"
 
@@ -53,6 +53,7 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}/makefile-archdetect.diff"
+	epatch "${FILESDIR}/execstack-fix.diff"
 }
 
 src_compile() {
