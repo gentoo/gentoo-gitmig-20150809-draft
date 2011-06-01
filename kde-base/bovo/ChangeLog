@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.78 2011/05/09 22:14:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.79 2011/06/01 17:35:44 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> bovo-4.6.2.ebuild:
+  Marking bovo-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> bovo-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
