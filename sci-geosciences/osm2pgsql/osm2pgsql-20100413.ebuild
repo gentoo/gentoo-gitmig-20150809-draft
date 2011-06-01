@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-20100413.ebuild,v 1.4 2011/03/02 20:44:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-20100413.ebuild,v 1.5 2011/06/01 11:40:40 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils autotools
+inherit autotools
 
 DESCRIPTION="Converts OSM data to SQL and insert into PostgreSQL db"
 HOMEPAGE="http://wiki.openstreetmap.org/wiki/Osm2pgsql"
@@ -28,12 +28,8 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${PN}
 
+DOCS=( README.txt )
+
 src_prepare() {
 	eautoreconf
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-
-	dodoc README.txt || die "dodoc failed"
 }
