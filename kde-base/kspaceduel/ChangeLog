@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspaceduel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.168 2011/05/09 23:10:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.169 2011/06/01 18:54:19 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kspaceduel-4.6.2.ebuild:
+  Marking kspaceduel-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kspaceduel-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
