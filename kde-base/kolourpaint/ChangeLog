@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolourpaint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.171 2011/05/09 23:04:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.172 2011/06/01 18:42:26 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kolourpaint-4.6.2.ebuild:
+  Marking kolourpaint-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kolourpaint-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
