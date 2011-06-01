@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.188 2011/05/15 16:23:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.189 2011/06/01 18:25:43 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kget-4.6.2-r1.ebuild:
+  Marking kget-4.6.2-r1 ppc stable for bug 354033
 
   15 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kget-4.6.2-r1.ebuild:
   x86 stable wrt security bug #363881
