@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osmosis/osmosis-0.39.ebuild,v 1.1 2011/06/01 12:00:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osmosis/osmosis-0.35.1.ebuild,v 1.1 2011/06/01 13:08:38 scarabeus Exp $
 
 EAPI=4
 
@@ -17,13 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mysql postgres"
 
 DEPEND=">=virtual/jdk-1.5"
-RDEPEND="
-	>=virtual/jre-1.5
-	dev-java/classworlds
-	dev-java/jpf
-	mysql? ( dev-java/jdbc-mysql )
-	postgres? ( dev-java/jdbc-postgresql )
-"
+RDEPEND=">=virtual/jre-1.5"
 
 src_compile() {
 	eant build_binary || die
