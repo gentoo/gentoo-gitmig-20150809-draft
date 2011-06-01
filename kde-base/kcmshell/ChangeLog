@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcmshell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.82 2011/05/09 22:35:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.83 2011/06/01 17:51:25 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kcmshell-4.6.2.ebuild:
+  Marking kcmshell-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kcmshell-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
