@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/liboxygenstyle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.14 2011/05/09 23:21:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.15 2011/06/01 19:14:05 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> liboxygenstyle-4.6.2.ebuild:
+  Marking liboxygenstyle-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   liboxygenstyle-4.6.2.ebuild:
