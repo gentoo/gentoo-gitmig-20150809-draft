@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.61 2011/05/09 22:19:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.62 2011/06/01 17:44:40 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kapman-4.6.2.ebuild:
+  Marking kapman-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kapman-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
