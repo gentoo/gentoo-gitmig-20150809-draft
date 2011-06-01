@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/faenza-icon-theme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/ChangeLog,v 1.4 2011/05/20 14:58:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/ChangeLog,v 1.5 2011/06/01 11:33:15 hwoarang Exp $
+
+*faenza-icon-theme-0.9.2-r1 (01 Jun 2011)
+
+  01 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  -faenza-icon-theme-0.9.2.ebuild, +faenza-icon-theme-0.9.2-r1.ebuild:
+  Use Gentoo icon by default. Thanks to Samuli Suominen <ssuominen@gentoo.org>
+  for the patch. Bug #369425
 
   20 May 2011; Markos Chandras <hwoarang@gentoo.org>
   faenza-icon-theme-0.9.2.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-0.9.2.ebuild,v 1.2 2011/05/20 14:58:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-0.9.2-r1.ebuild,v 1.1 2011/06/01 11:33:15 hwoarang Exp $
+
+EAPI="4"
 
 inherit gnome2-utils
 
@@ -19,6 +21,17 @@ RDEPEND="!minimal? ( x11-themes/gnome-icon-theme )
 RESTRICT="binchecks strip"
 
 S=${WORKDIR}
+
+src_prepare() {
+	for x in Faenza Faenza-Dark; do
+		for res in 22 24 32 48; do
+			cp "${x}"/places/${res}/start-here-gentoo.png \
+				"${x}"/places/${res}/start-here.png || die
+		done
+		cp "${x}"/places/scalable/start-here-gentoo.svg \
+			"${x}"/places/scalable/start-here.svg ||die
+	done
+}
 
 src_install() {
 	insinto /usr/share/icons
