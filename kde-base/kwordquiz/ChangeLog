@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwordquiz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.173 2011/05/09 23:17:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.174 2011/06/01 19:07:52 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kwordquiz-4.6.2.ebuild:
+  Marking kwordquiz-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kwordquiz-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
