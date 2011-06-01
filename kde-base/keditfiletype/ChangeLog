@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/keditfiletype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.56 2011/05/09 22:52:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.57 2011/06/01 18:21:10 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> keditfiletype-4.6.2.ebuild:
+  Marking keditfiletype-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org>
   keditfiletype-4.6.2.ebuild:
