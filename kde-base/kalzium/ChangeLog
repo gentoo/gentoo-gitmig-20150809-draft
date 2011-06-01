@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.185 2011/05/09 22:19:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.186 2011/06/01 17:43:18 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kalzium-4.6.2.ebuild:
+  Marking kalzium-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kalzium-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
