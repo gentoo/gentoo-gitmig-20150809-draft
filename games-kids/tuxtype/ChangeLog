@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/tuxtype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.18 2011/03/04 12:56:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.19 2011/06/01 23:58:20 mr_bones_ Exp $
+
+  01 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org> tuxtype-1.8.1.ebuild:
+  fix librsvg dep and add use flag with patch from Piotr Szymaniak via bug
+  #369275
 
   04 Mar 2011; Brent Baude <ranger@gentoo.org> tuxtype-1.8.1.ebuild:
   stable ppc, bug 353819

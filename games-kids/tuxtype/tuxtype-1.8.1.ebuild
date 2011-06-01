@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.7 2011/03/04 12:56:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.8.1.ebuild,v 1.8 2011/06/01 23:58:20 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -12,13 +12,14 @@ SRC_URI="http://alioth.debian.org/frs/download.php/3270/tuxtype_w_fonts-${PV}.ta
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE=""
+IUSE="svg"
 
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-pango
 	media-libs/sdl-mixer
 	media-libs/sdl-image
-	media-libs/sdl-ttf"
+	media-libs/sdl-ttf
+	svg? ( gnome-base/librsvg )"
 
 S=${WORKDIR}/tuxtype_w_fonts-${PV}
 
@@ -27,6 +28,12 @@ src_prepare() {
 		-e 's:$(prefix)/share:'${GAMES_DATADIR}':g' \
 		-e 's:$(prefix)/doc/$(PACKAGE):/usr/share/doc/'${PF}':g' \
 		$(find -name Makefile.in) || die "fixing Makefile paths"
+}
+
+src_configure() {
+	egamesconf \
+		--disable-dependency-tracking \
+		$(use_with svg rsvg)
 }
 
 src_install() {
