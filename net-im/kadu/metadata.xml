@@ -9,6 +9,7 @@
 	<maintainer>
 		<email>ago@autistici.org</email>
 		<name>Agostino Sarubbo</name>
+		<description>Please CC on bugs</description>
 	</maintainer>
 	<use>
 		<flag name="gadu">Enables Gadu communication protocol</flag>
