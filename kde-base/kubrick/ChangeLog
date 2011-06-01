@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.67 2011/05/09 23:15:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.68 2011/06/01 19:03:47 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kubrick-4.6.2.ebuild:
+  Marking kubrick-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kubrick-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
