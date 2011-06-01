@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.223 2011/05/14 15:49:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.224 2011/06/01 19:07:25 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kwin-4.6.2.ebuild:
+  Marking kwin-4.6.2 ppc stable for bug 354033
 
 *kwin-4.6.3-r1 (14 May 2011)
 
