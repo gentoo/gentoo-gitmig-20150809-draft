@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/argus-clients
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.19 2011/06/01 00:44:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.20 2011/06/01 00:50:30 jer Exp $
+
+  01 Jun 2011; Jeroen Roovers <jer@gentoo.org> argus-clients-3.0.4.1-r1.ebuild,
+  argus-clients-3.0.5.6.ebuild, argus-clients-3.0.5.11.ebuild:
+  Add missing sys-libs/ncurses dependency.
 
 *argus-clients-3.0.5.11 (01 Jun 2011)
 

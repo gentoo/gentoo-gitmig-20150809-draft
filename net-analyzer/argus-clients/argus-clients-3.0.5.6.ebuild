@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.5.6.ebuild,v 1.1 2011/04/19 22:18:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.5.6.ebuild,v 1.2 2011/06/01 00:50:30 jer Exp $
 
 EAPI="2"
 
@@ -16,18 +16,25 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug geoip mysql tcpd"
 
 #sasl? ( >=dev-libs/cyrus-sasl-1.5.24 )
-MY_CDEPEND="net-libs/libpcap
+MY_CDEPEND="
+	net-libs/libpcap
 	net-analyzer/rrdtool[perl]
 	geoip? ( dev-libs/geoip )
-	mysql? ( virtual/mysql )"
+	mysql? ( virtual/mysql )
+	sys-libs/ncurses
+"
 
 #	>=net-analyzer/argus-2.0.6[sasl?]"
-RDEPEND="${MY_CDEPEND}
-	>=net-analyzer/argus-3.0.2"
+RDEPEND="
+	${MY_CDEPEND}
+	>=net-analyzer/argus-3.0.2
+"
 
-DEPEND="${MY_CDEPEND}
+DEPEND="
+	${MY_CDEPEND}
 	>=sys-devel/bison-1.28
-	>=sys-devel/flex-2.4.6"
+	>=sys-devel/flex-2.4.6
+"
 
 src_prepare() {
 	for x in $(find . -name "Makefile.in"); do
