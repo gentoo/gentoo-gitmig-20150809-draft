@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.184 2011/05/09 22:18:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.185 2011/06/01 17:33:56 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> ark-4.6.2.ebuild:
+  Marking ark-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ark-4.4.5-r1.ebuild,
   -ark-4.6.3.ebuild:
