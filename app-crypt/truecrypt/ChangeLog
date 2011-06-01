@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.61 2011/04/25 14:15:37 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.62 2011/06/01 14:46:10 c1pher Exp $
+
+*truecrypt-7.0a-r3 (01 Jun 2011)
+
+  01 Jun 2011; Dane Smith <c1pher@gentoo.org> +truecrypt-7.0a-r3.ebuild,
+  +files/makefile-archdetect.diff:
+  Add new patch to fix arch detection for the i{3,5,7} processors.
+  Revbump to r3 and include that patch. Fixes bug 369203.
+  Paxmark the installed binary.
 
   25 Apr 2011; Dane Smith <c1pher@gentoo.org> truecrypt-7.0a-r2.ebuild:
   Re-added the fetch and mirror restriction after a conversation on -dev. 
