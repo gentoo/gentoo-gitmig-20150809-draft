@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.44.ebuild,v 1.1 2011/04/26 07:16:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.44.ebuild,v 1.2 2011/06/01 08:24:59 radhermit Exp $
 
 EAPI="4"
 
-inherit autotools-utils multilib
+inherit autotools-utils multilib eutils
 
 MY_PN="MediaInfo"
 DESCRIPTION="MediaInfo libraries"
@@ -29,6 +29,10 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
 
 src_prepare() {
+	pushd "${WORKDIR}"/${MY_PN}Lib > /dev/null
+	epatch "${FILESDIR}"/${P}-libmms.patch
+	popd > /dev/null
+
 	# Don't force -O2 by default
 	sed -i -e "s:-O2::" configure.ac
 
