@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.30 2011/05/09 22:57:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.31 2011/06/01 18:29:47 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kigo-4.6.2.ebuild:
+  Marking kigo-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kigo-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
