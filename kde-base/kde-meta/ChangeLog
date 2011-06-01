@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.185 2011/05/09 22:37:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.186 2011/06/01 17:54:09 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kde-meta-4.6.2.ebuild:
+  Marking kde-meta-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kde-meta-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
