@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mtkbabel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/ChangeLog,v 1.4 2010/04/27 10:44:07 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/ChangeLog,v 1.5 2011/06/01 12:19:09 scarabeus Exp $
+
+  01 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> mtkbabel-0.8.2.ebuild:
+  Update to eapi4.
 
 *mtkbabel-0.8.2 (27 Apr 2010)
 

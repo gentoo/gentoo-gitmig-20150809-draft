@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/mtkbabel-0.8.2.ebuild,v 1.1 2010/04/27 10:44:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/mtkbabel-0.8.2.ebuild,v 1.2 2011/06/01 12:19:09 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 DESCRIPTION="MTKBabel is a Perl program to operate the i-Blue 747 GPS data logger."
 HOMEPAGE="http://sourceforge.net/projects/mtkbabel/"
@@ -20,7 +20,7 @@ RDEPEND="
 "
 
 src_install() {
-	doman mtkbabel.1 || die
-	dobin mtkbabel || die
-	dodoc MtkExtensionsv1.xsd README changelog || die
+	doman mtkbabel.1
+	dobin mtkbabel
+	dodoc MtkExtensionsv1.xsd README changelog
 }
