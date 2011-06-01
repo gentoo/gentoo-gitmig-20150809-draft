@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.1.ebuild,v 1.1 2011/03/17 12:12:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.1.ebuild,v 1.2 2011/06/01 09:47:26 scarabeus Exp $
 
 EAPI=4
 
@@ -16,21 +16,29 @@ KEYWORDS="~amd64 ~ppc ~x86"
 COMMONDEPEND="dev-libs/expat
 	dev-libs/glib:2
 	net-misc/curl
+	sys-libs/zlib
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
 	gps? ( sci-geosciences/gpsd )
-	nls? ( sys-devel/gettext )"
+"
 RDEPEND="${COMMONDEPEND}
-	sci-geosciences/gpsbabel"
+	sci-geosciences/gpsbabel
+"
 DEPEND="${COMMONDEPEND}
 	app-text/gnome-doc-utils
 	app-text/rarian
-	dev-util/intltool
+	dev-libs/libxslt
 	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+"
+
+DOCS=( README doc/GEOCODED-PHOTOS doc/GETTING-STARTED doc/GPSMAPPER )
 
 src_configure() {
 	econf \
+		--disable-deprecations \
+		--with-libcurl \
+		--with-expat \
 		--enable-google \
 		--enable-terraserver \
 		--enable-expedia \
@@ -42,9 +50,4 @@ src_configure() {
 		--disable-dem24k \
 		$(use_enable gps realtime-gps-tracking) \
 		$(use_enable nls)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README doc/GEOCODED-PHOTOS doc/GETTING-STARTED doc/GPSMAPPER
 }
