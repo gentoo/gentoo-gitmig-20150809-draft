@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.315 2011/05/27 13:37:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.316 2011/06/01 20:38:13 chainsaw Exp $
+
+  01 Jun 2011; Tony Vroon <chainsaw@gentoo.org>
+  -files/1.8.0/asterisk-1.8.0-alarm-receiver-use-playtones.patch,
+  -files/1.8.0/asterisk-1.8.0-confbridge-menu-invocation.patch,
+  -files/1.8.0/asterisk-1.8.0-dahdiras-without-root.patch,
+  -files/1.8.0/asterisk-1.8.0-gsm-pic.patch,
+  -files/1.8.0/asterisk-1.8.0-iax2-peerstate.patch,
+  -files/1.8.0/asterisk-1.8.0-inband-indications.patch,
+  -files/1.8.0/asterisk-1.8.0-pbxstart-failed-spurious-bye.patch,
+  -files/1.8.0/asterisk-1.8.0-pri-missing-keyword.patch,
+  -files/1.8.0/asterisk-1.8.0-uclibc.patch:
+  Remove old 1.8 patches in files directory; a patch tarball has been used for
+  a while now.
 
   27 May 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.3.3.ebuild,
   -asterisk-1.8.4.ebuild, metadata.xml:
