@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.163 2011/05/09 22:48:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.164 2011/06/01 18:14:30 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> kdesdk-meta-4.6.2.ebuild:
+  Marking kdesdk-meta-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kdesdk-meta-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
