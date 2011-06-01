@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.36 2011/05/09 23:04:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.37 2011/06/01 19:35:46 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> blogilo-4.4.11.1.ebuild:
+  Marking blogilo-4.4.11.1 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> blogilo-4.4.11.1.ebuild:
   Stable on amd64 wrt bug #354033
