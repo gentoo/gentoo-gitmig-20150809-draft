@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.68 2011/05/08 13:52:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.69 2011/06/01 01:31:21 flameeyes Exp $
+
+  01 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  libcanberra-0.28-r2.ebuild, +files/libcanberra-0.28-underlinking.patch:
+  Avoid underlinking the modules, fixes bug #367355.
 
 *libcanberra-0.28-r2 (08 May 2011)
 

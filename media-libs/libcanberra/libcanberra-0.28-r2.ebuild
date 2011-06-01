@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r2.ebuild,v 1.1 2011/05/08 13:52:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r2.ebuild,v 1.2 2011/06/01 01:31:21 flameeyes Exp $
 
 EAPI="4"
 
-inherit gnome2-utils libtool systemd
+inherit gnome2-utils libtool systemd autotools eutils
 
 DESCRIPTION="Portable Sound Event Library"
 HOMEPAGE="http://0pointer.de/lennart/projects/libcanberra/"
@@ -36,8 +36,10 @@ DEPEND="${COMMON_DEPEND}
 REQUIRED_USE="udev? ( alsa )"
 
 src_prepare() {
-	# Run elibtoolize for ~x86-fbsd.
-	use x86-fbsd && elibtoolize
+	epatch "${FILESDIR}"/${P}-underlinking.patch
+
+	eautoreconf
+	elibtoolize
 }
 
 src_configure() {
