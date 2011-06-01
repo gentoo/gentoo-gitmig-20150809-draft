@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whatmask
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.20 2010/06/02 16:51:01 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.21 2011/06/01 15:59:43 hwoarang Exp $
+
+  01 Jun 2011; Markos Chandras <hwoarang@gentoo.org> whatmask-1.2-r1.ebuild:
+  Stable on amd64 wrt bug #369233
 
 *whatmask-1.2-r1 (02 Jun 2010)
 
