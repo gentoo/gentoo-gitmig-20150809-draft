@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.3.ebuild,v 1.4 2011/05/09 23:14:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.3.ebuild,v 1.5 2011/06/01 19:49:24 ranger Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://github.com/mxcl/liblastfm/"
 SRC_URI="http://github.com/mxcl/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 SLOT="0"
 IUSE=""
 
