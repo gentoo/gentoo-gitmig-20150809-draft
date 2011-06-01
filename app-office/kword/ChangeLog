@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.165 2011/05/14 15:54:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.166 2011/06/01 21:46:30 dilfridge Exp $
+
+  01 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kword-2.2.2.ebuild:
+  Remove old
 
   14 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> kword-2.3.3-r1.ebuild:
   Added missing dependency to libgsf, bug 366217

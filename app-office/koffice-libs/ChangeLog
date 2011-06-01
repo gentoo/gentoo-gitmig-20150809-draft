@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.127 2011/05/09 23:12:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.128 2011/06/01 21:46:40 dilfridge Exp $
+
+  01 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -koffice-libs-2.2.2.ebuild, -files/koffice-libs-2.2.2-kspreadcommon.patch:
+  Remove old
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> koffice-libs-2.3.3.ebuild:
   Stable on amd64 wrt bug #354033

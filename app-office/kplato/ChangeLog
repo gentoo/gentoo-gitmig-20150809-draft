@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.95 2011/05/09 23:13:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.96 2011/06/01 21:45:46 dilfridge Exp $
+
+  01 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kplato-2.2.2.ebuild:
+  Remove old
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> kplato-2.3.3.ebuild:
   Stable on amd64 wrt bug #354033
