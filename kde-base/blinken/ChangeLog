@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.148 2011/05/09 22:13:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.149 2011/06/01 17:34:51 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> blinken-4.6.2.ebuild:
+  Marking blinken-4.6.2 ppc stable for bug 354033
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> blinken-4.6.2.ebuild:
   Stable on amd64 wrt bug #354033
