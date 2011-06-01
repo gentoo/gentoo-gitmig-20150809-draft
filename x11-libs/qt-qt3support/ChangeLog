@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-qt3support
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.93 2011/05/10 20:07:28 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-qt3support/ChangeLog,v 1.94 2011/06/01 15:07:00 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> qt-qt3support-4.7.2.ebuild:
+  Marking qt-qt3support-4.7.2 ppc stable for bug 354033
 
 *qt-qt3support-4.7.3 (10 May 2011)
 
