@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/qlandkartegt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.12 2011/02/23 15:11:36 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.13 2011/06/01 10:12:27 scarabeus Exp $
+
+*qlandkartegt-1.1.2 (01 Jun 2011)
+
+  01 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.1.2-fix_automagicness.patch, -qlandkartegt-0.18.1.ebuild,
+  -qlandkartegt-1.1.0.ebuild, +qlandkartegt-1.1.2.ebuild:
+  Version bump to latest. Drop older. Fix automagicness.
 
   23 Feb 2011; Hanno Boeck <hanno@gentoo.org> qlandkartegt-1.1.0.ebuild:
   Add dependency to qt-webkit, thanks to Joop Stakenborg in #356175.
