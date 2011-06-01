@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.108 2011/05/12 19:11:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.109 2011/06/01 15:02:22 ranger Exp $
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org> qt-assistant-4.7.2.ebuild:
+  Marking qt-assistant-4.7.2 ppc stable for bug 354033
 
   12 May 2011; Fabian Groffen <grobian@gentoo.org> qt-assistant-4.7.3.ebuild:
   Marked ~ppc-macos, bug #346361
