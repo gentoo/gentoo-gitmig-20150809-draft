@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4.1.ebuild,v 1.1 2011/05/06 07:59:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.4.1.ebuild,v 1.2 2011/06/02 08:39:41 jlec Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 LICENSE="PSF-2.2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="apbs numpy vmd"
+IUSE="apbs numpy vmd web"
 
 DEPEND="
 	dev-python/numpy
@@ -35,13 +35,16 @@ DEPEND="
 		sci-chemistry/apbs
 		sci-chemistry/pdb2pqr
 		sci-chemistry/pymol-apbs-plugin
-	)"
+	)
+	web? ( !dev-python/webpy )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-data-path.patch \
 		"${FILESDIR}"/${PV}-shaders.patch
+
+	use web || epatch "${FILESDIR}"/${PV}-web.patch
 
 	epatch "${FILESDIR}"/1.2.2-prefix.patch && \
 		eprefixify setup.py

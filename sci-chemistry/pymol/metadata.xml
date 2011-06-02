@@ -10,5 +10,6 @@
 		<flag name="numpy">Compile numpy support</flag>
 		<flag name="shaders">Build with Shaders support - good for high-end 3D video cards.</flag>
 		<flag name="vmd">Enable vmd module for trajectories</flag>
+		<flag name="web">Install Pymodule needed for web app support</flag>
 </use>
 </pkgmetadata>
