@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.3.ebuild,v 1.1 2011/06/02 00:52:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.3.ebuild,v 1.2 2011/06/02 00:56:33 radhermit Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-flags -D_GNU_SOURCE
+	append-cflags -D_GNU_SOURCE
 	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}"
 }
 
