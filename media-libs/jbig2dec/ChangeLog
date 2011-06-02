@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/jbig2dec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.7 2011/06/02 10:07:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.8 2011/06/02 10:09:32 dilfridge Exp $
 
-  02 Jun 2011; <huettel@gentoo.org> jbig2dec-0.11.ebuild:
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> jbig2dec-0.11.ebuild:
+  Silence Repoman
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> jbig2dec-0.11.ebuild:
   Added note that tests make no sense, bug 324275
 
   29 Mar 2011; Michael Weber <xmw@gentoo.org> jbig2dec-0.11.ebuild:
