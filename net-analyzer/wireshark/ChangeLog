@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.297 2011/06/02 06:02:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.298 2011/06/02 19:06:57 pva Exp $
+
+  02 Jun 2011; Peter Volkov <pva@gentoo.org> wireshark-1.4.7.ebuild:
+  Drop patch (issue fixed upstream), bug 369683 thank Agostino Sarubbo for
+  report.
 
 *wireshark-1.4.7 (01 Jun 2011)
 
