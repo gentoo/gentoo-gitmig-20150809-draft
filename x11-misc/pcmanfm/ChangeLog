@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.55 2011/06/01 10:23:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.56 2011/06/02 12:16:12 maekke Exp $
+
+  02 Jun 2011; Markus Meier <maekke@gentoo.org>
+  pcmanfm-0.9.9_pre20110422.ebuild:
+  arm stable, bug #365231
 
   01 Jun 2011; Tobias Klausmann <klausman@gentoo.org>
   pcmanfm-0.9.9_pre20110422.ebuild:
