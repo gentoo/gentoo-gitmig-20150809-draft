@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.ebuild,v 1.1 2011/06/01 15:31:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.ebuild,v 1.2 2011/06/02 15:47:51 jlec Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -24,7 +24,6 @@ RDEPEND=">=dev-db/sqlite-3.5.9:3
 	>=dev-libs/libunique-1:1
 	>=dev-libs/libxml2-2.6.32:2
 	>=gnome-base/gconf-2.22.0:2
-	gnome-base/gnome-vfs:2
 	>=media-libs/gexiv2-0.2.0
 	media-libs/gstreamer:0.10
 	media-libs/lcms:2
