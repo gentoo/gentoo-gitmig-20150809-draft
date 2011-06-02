@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.153 2011/05/28 15:40:26 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.154 2011/06/02 12:16:51 maekke Exp $
+
+  02 Jun 2011; Markus Meier <maekke@gentoo.org> swig-2.0.2.ebuild:
+  arm stable, bug #365315
 
 *swig-2.0.4 (28 May 2011)
 
