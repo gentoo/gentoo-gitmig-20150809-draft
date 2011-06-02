@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.251 2011/05/27 15:53:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.252 2011/06/02 15:37:17 nirbheek Exp $
+
+*libsoup-2.34.2 (02 Jun 2011)
+
+  02 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +libsoup-2.34.2.ebuild:
+  Bump to 2.34.2
 
   27 May 2011; Jeroen Roovers <jer@gentoo.org> libsoup-2.34.1.ebuild:
   Marked ~hppa (bug #365331).
