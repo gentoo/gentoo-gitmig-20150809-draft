@@ -1,40 +1,36 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/buddy-2.4.ebuild,v 1.5 2010/01/02 18:06:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/buddy-2.4.ebuild,v 1.6 2011/06/02 07:29:42 jlec Exp $
+
+EAPI=4
 
 inherit eutils
 
-DESCRIPTION="BuDDY - A Binary Decision Diagram Package"
-HOMEPAGE="http://sourceforge.net/projects/buddy"
+DESCRIPTION="Binary Decision Diagram Package"
+HOMEPAGE="http://sourceforge.net/projects/buddy/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos"
+IUSE="examples"
 
-IUSE=""
-DEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-gold.patch
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	default
 
-	dodoc ChangeLog NEWS AUTHORS README doc/*.txt || \
-		die "failed to install docs"
+	dodoc doc/*.txt
 
-	insinto /usr/share/doc/${P}/ps
-	doins doc/*.ps || die "failed to install postscripts files"
+	insinto /usr/share/doc/${PF}/ps
+	doins doc/*.ps
 
-	insinto /usr/share/${PN}/examples
-	cd examples
-	for example in *; do
-		tar -czf ${example}.tar.gz ${example}
-		doins ${example}.tar.gz
-	done
+	if use examples; then
+		insinto /usr/share/${PN}/
+		doins -r examples
+	fi
 }
