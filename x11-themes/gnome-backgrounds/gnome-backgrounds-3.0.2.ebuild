@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/gnome-backgrounds-3.0.1.ebuild,v 1.1 2011/04/30 16:18:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/gnome-backgrounds-3.0.2.ebuild,v 1.1 2011/06/02 16:57:25 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
