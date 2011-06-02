@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.195 2011/05/27 19:03:47 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.196 2011/06/02 10:54:16 flameeyes Exp $
+
+  02 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  bind-tools-9.8.0.ebuild:
+  Fix cross-compilation (bug #266570) by exporting BUILD_CC and forcing-enabled
+  epoll on Linux builds. Also change the libiconv dependency on idn. Note that
+  USE=ssl fails because there is another AC_TRY_RUN call that is not
+  short-circuitable.
 
   27 May 2011; Christian Ruppert <idl0r@gentoo.org>
   -bind-tools-9.6.2_p2-r2.ebuild, -bind-tools-9.6.3.ebuild,

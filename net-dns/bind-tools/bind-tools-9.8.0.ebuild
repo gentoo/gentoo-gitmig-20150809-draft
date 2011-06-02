@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.8.0.ebuild,v 1.1 2011/03/01 17:52:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.8.0.ebuild,v 1.2 2011/06/02 10:54:16 flameeyes Exp $
 
 EAPI="3"
 
-inherit eutils autotools flag-o-matic
+inherit eutils autotools flag-o-matic toolchain-funcs
 
 MY_PN=${PN//-tools}
 MY_PV=${PV/_p/-P}
@@ -23,7 +23,7 @@ IUSE="doc idn ipv6 ssl urandom xml"
 DEPEND="ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )
 	idn? (
-		|| ( sys-libs/glibc dev-libs/libiconv )
+		virtual/libiconv
 		net-dns/idnkit
 		)"
 RDEPEND="${DEPEND}"
@@ -58,8 +58,10 @@ src_configure() {
 	# bug 344029
 	append-cflags "-DDIG_SIGCHASE"
 
+	tc-export BUILD_CC
 	econf \
 		$(use_enable ipv6) \
+		$(use_enable kernel_linux epoll) \
 		$(use_with idn) \
 		$(use_with ssl openssl) \
 		$(use_with xml libxml2) \
