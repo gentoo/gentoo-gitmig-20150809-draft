@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.41 2011/06/01 10:24:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.42 2011/06/02 12:15:47 maekke Exp $
+
+  02 Jun 2011; Markus Meier <maekke@gentoo.org>
+  libfm-0.1.15_pre20110422.ebuild:
+  arm stable, bug #365231
 
   01 Jun 2011; Tobias Klausmann <klausman@gentoo.org>
   libfm-0.1.15_pre20110422.ebuild:

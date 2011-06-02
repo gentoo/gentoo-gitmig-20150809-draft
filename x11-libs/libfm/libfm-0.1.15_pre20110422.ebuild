@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110422.ebuild,v 1.4 2011/06/01 10:24:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.15_pre20110422.ebuild,v 1.5 2011/06/02 12:15:47 maekke Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	inherit autotools
 	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
-	KEYWORDS="~alpha amd64 ~arm ~ppc x86"
+	KEYWORDS="~alpha amd64 arm ~ppc x86"
 	S="${WORKDIR}"
 fi
 
