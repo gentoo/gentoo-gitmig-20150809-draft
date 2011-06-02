@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.508 2011/05/20 17:31:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.509 2011/06/02 15:30:25 nirbheek Exp $
+
+*gtk+-3.0.10 (02 Jun 2011)
+
+  02 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -gtk+-3.0.8.ebuild,
+  +gtk+-3.0.10.ebuild:
+  Bump to 3.0.10
 
   20 May 2011; Fabian Groffen <grobian@gentoo.org> gtk+-3.0.9.ebuild:
   Drop comments about broken *-macos support, since that works for a while
