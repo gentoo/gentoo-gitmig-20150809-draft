@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.11 2011/03/21 18:33:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.12 2011/06/02 19:14:36 dilfridge Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="X Printing Panel"
@@ -32,17 +32,17 @@ src_prepare() {
 
 src_configure() {
 	export CXX="$(tc-getCXX)"
-	export LDFLAGS="-L/usr/lib/fltk-1.1 -lfltk"
-	export CPPFLAGS="-I/usr/include/fltk-1.1"
+	export LDFLAGS="-L/usr/lib/fltk-1 -lfltk"
+	export CPPFLAGS="-I/usr/include/fltk-1"
 
-	econf
+	STRIP=/bin/echo econf
 }
 
 src_compile() {
-	emake -j1 || die #297200
+	emake -j1
 }
 
 src_install() {
-	einstall || die
+	einstall
 	dodoc ChangeLog README
 }

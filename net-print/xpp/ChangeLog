@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.22 2011/02/28 18:22:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.23 2011/06/02 19:14:36 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> xpp-1.5.ebuild:
+  Make build again, EAPI bump, no prestripped files (bug 252030)
 
   28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> xpp-1.5.ebuild:
   Use virtual/jpeg.
