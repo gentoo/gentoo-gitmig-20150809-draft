@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.374 2011/06/02 12:58:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.375 2011/06/02 18:40:41 phajdan.jr Exp $
+
+  02 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-13.0.782.1.ebuild, chromium-9999-r1.ebuild:
+  Clean up: remove /dev/shm checks (hopefully obsolete thanks to openrc),
+  remove unused _WARNING variables, remove libsrtp from bundled libs exclusion
+  list, switch to tc-arch for arch detection (for simplicity - we shouldn't
+  have custom code for that).
 
 *chromium-13.0.782.1 (02 Jun 2011)
 
