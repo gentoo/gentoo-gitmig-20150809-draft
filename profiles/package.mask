@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12807 2011/05/30 15:52:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12808 2011/06/02 13:32:31 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -130,11 +130,6 @@ media-video/came
 # Mask new versions until thread-related crashes have been fixed.
 # See bug 367423.
 =dev-lang/ruby-enterprise-1.8.7.2011.03
-
-# Markos Chandras <hwoarang@gentoo.org> (15 May 2011)
-# Dead upstream. Does not work with KDE 4.6.
-# Bug #366921. Removal in 2011-07-15
-kde-misc/quickaccess
 
 # Nathan Phillip Brink <binki@gentoo.org> (13 May 2011)
 #
