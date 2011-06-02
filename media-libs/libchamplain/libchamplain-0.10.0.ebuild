@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.10.0.ebuild,v 1.1 2011/06/02 21:34:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.10.0.ebuild,v 1.2 2011/06/02 22:17:28 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
-	vala? ( dev-lang/vala:0.12 )"
+	vala? ( dev-lang/vala:0.12[vapigen] )"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
