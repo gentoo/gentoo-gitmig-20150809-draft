@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.29 2011/05/29 15:08:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.30 2011/06/02 12:58:20 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -325,6 +325,10 @@ src_install() {
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
+
+	insinto "${CHROMIUM_HOME}"
+	doins out/Release/libppGoogleNaClPluginChrome.so || die
+
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	sed "s:chromium-browser:chromium-browser${SUFFIX}:g" \
 		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
