@@ -1,11 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/prime-el-1.5.1.3.ebuild,v 1.7 2007/10/07 18:50:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/prime-el/prime-el-1.5.1.3.ebuild,v 1.8 2011/06/02 10:44:52 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
 MY_P="${P/_p/.}"
-
 DESCRIPTION="PRIME Client for Emacs"
 HOMEPAGE="http://taiyaki.org/prime/"
 SRC_URI="http://prime.sourceforge.jp/src/${MY_P}.tar.gz"
@@ -16,6 +17,7 @@ KEYWORDS="alpha ~amd64 ppc ppc64 x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
+SITEFILE="50${PN}-gentoo.el"
 
 DEPEND="app-emacs/apel
 	app-emacs/mell
@@ -23,20 +25,20 @@ DEPEND="app-emacs/apel
 RDEPEND="${DEPEND}
 	>=app-i18n/prime-0.8.6"
 
-src_compile() {
+src_configure() {
 	econf --with-prime-initdir=/usr/share/emacs/site-lisp \
-			--with-prime-docdir=usr/share/doc/${PF} \
-			|| die
-	emake || die
+		--with-prime-docdir=/usr/share/doc/${PF}
+}
+
+src_compile() {
+	default
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	make DESTDIR="${D}" install-etc || die
+	emake DESTDIR="${D}" install install-etc
 
-	elisp-site-file-install "${FILESDIR}"/50prime-el-gentoo.el
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 
-	dodoc [A-Z][A-Z]* ChangeLog
-
-	mv "${D}"/usr/share/doc/${PF}/{emacs,html}
+	dodoc AUTHORS ChangeLog README
+	mv "${D}"/usr/share/doc/${PF}/{emacs,html} || die
 }
