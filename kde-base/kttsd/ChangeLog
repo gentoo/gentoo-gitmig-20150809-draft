@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.166 2010/08/09 17:34:20 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.167 2011/06/02 21:57:42 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kttsd-4.4.5.ebuild:
+  Drop KDE-4.4
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> kttsd-4.4.5.ebuild:
   Drop alpha ia64 and sparc per the AT Lead permission.

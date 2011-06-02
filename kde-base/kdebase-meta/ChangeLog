@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.188 2011/06/01 18:04:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.189 2011/06/02 21:57:57 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdebase-meta-4.4.5.ebuild:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> kdebase-meta-4.6.2.ebuild:
   Marking kdebase-meta-4.6.2 ppc stable for bug 354033

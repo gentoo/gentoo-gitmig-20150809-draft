@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.149 2011/06/01 18:14:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.150 2011/06/02 21:57:46 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdesdk-misc-4.4.5.ebuild, -kdesdk-misc-4.4.5-r1.ebuild:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> kdesdk-misc-4.6.2.ebuild:
   Marking kdesdk-misc-4.6.2 ppc stable for bug 354033

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.100 2011/06/01 19:26:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.101 2011/06/02 21:57:48 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -solid-4.4.5.ebuild:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> solid-4.6.2.ebuild:
   Marking solid-4.6.2 ppc stable for bug 354033

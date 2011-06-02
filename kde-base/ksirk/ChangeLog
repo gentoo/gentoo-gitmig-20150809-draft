@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.69 2011/06/01 18:52:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.70 2011/06/02 21:57:50 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -ksirk-4.4.5.ebuild:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> ksirk-4.6.2.ebuild:
   Marking ksirk-4.6.2 ppc stable for bug 354033

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.185 2011/06/01 17:33:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.186 2011/06/02 21:57:57 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -ark-4.4.5.ebuild,
+  -ark-4.4.5-r2.ebuild, -files/ark-4.4.5-cli7zip.patch,
+  -files/ark-4.4.5-detect-libarchive-in-proper-place.patch:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> ark-4.6.2.ebuild:
   Marking ark-4.6.2 ppc stable for bug 354033

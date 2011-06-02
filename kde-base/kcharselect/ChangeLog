@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.158 2011/06/01 17:50:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.159 2011/06/02 21:57:45 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kcharselect-4.4.5.ebuild:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> kcharselect-4.6.2.ebuild:
   Marking kcharselect-4.6.2 ppc stable for bug 354033

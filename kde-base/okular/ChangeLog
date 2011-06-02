@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.98 2011/06/01 19:19:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.99 2011/06/02 21:57:57 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -okular-4.4.5.ebuild,
+  -okular-4.4.5-r1.ebuild, -okular-4.4.5-r2.ebuild,
+  -files/okular-4.4.5-overflow.patch:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> okular-4.6.2.ebuild:
   Marking okular-4.6.2 ppc stable for bug 354033

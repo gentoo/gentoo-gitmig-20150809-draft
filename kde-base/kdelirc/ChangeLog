@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelirc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.111 2010/11/03 16:55:22 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.112 2011/06/02 21:57:48 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kdelirc-4.4.5.ebuild:
+  Drop KDE-4.4
 
   03 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> kdelirc-4.4.5.ebuild:
   Remove PowerPC keywording because app-misc/lirc is masked in

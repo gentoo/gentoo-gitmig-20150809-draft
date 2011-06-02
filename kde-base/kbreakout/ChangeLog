@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbreakout
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.67 2011/06/01 17:48:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.68 2011/06/02 21:57:59 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kbreakout-4.4.5.ebuild:
+  Drop KDE-4.4
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> kbreakout-4.6.2.ebuild:
   Marking kbreakout-4.6.2 ppc stable for bug 354033
