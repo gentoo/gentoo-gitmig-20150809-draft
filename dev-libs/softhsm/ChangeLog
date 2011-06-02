@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/softhsm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/ChangeLog,v 1.1 2011/06/02 10:24:30 scarabeus Exp $
+
+*softhsm-1.2.1 (02 Jun 2011)
+
+  02 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> +softhsm-1.2.1.ebuild,
+  +metadata.xml:
+  Inital ebuild. Fixes bug #278576. Thanks to Tom Hendrikx for the basic
+  ebuild.
+
