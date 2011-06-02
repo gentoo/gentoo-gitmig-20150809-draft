@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.0.ebuild,v 1.1 2011/06/02 15:54:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.0.ebuild,v 1.2 2011/06/02 16:52:01 vostorga Exp $
 
 EAPI=2
 
@@ -38,14 +38,11 @@ pkg_setup() {
 }
 
 src_configure() {
-	local myconf=
-	use caps && myconf="${myconf} --with-libcap-ng=no"
-	use caps-ng &&  myconf="${myconf} --with-libcap-ng=yes"
 	econf \
 		$(use_enable ads cifsupcall) \
 		$(use_with caps libcap) \
-		$(use_enable creds cifscreds) \
-		${myconf}
+		$(use_with caps-ng libcap-ng) \
+		$(use_enable creds cifscreds)
 }
 
 src_install() {

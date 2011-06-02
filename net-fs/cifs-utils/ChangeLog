@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.8 2011/06/02 15:54:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.9 2011/06/02 16:52:01 vostorga Exp $
+
+  02 Jun 2011; Víctor Ostorga <vostorga@gentoo.org> cifs-utils-5.0.ebuild:
+  Using use_with in the caps-ng use flag case, thanks to leio for the heads up
 
 *cifs-utils-5.0 (02 Jun 2011)
 
