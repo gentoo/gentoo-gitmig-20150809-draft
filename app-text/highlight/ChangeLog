@@ -1,6 +1,10 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.37 2011/06/02 11:38:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.38 2011/06/02 19:17:45 radhermit Exp $
+
+  02 Jun 2011; Tim Harder <radhermit@gentoo.org> highlight-3.3.ebuild,
+  highlight-3.4.ebuild:
+  Use eqmake4 and remove redundant flags.
 
   02 Jun 2011; Tim Harder <radhermit@gentoo.org> highlight-3.3.ebuild,
   highlight-3.4.ebuild:

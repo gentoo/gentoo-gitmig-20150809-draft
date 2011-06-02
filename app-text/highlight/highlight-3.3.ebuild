@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.3.ebuild,v 1.3 2011/06/02 11:38:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.3.ebuild,v 1.4 2011/06/02 19:17:45 radhermit Exp $
 
 EAPI=4
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils qt4-r2
 
 DESCRIPTION="converts source code to formatted text ((X)HTML, RTF, (La)TeX, XSL-FO, XML) with syntax highlight"
 HOMEPAGE="http://www.andre-simon.de/"
@@ -24,11 +24,8 @@ RDEPEND="${DEPEND}"
 pkg_setup() {
 	myhlopts=(
 		"CXX=$(tc-getCXX)"
-		"LINK=$(tc-getCXX)"
 		"AR=$(tc-getAR)"
 		"LDFLAGS=${LDFLAGS}"
-		"LFLAGS=${LDFLAGS}"
-		"CXXFLAGS=${CXXFLAGS}"
 		"CFLAGS=${CXXFLAGS}"
 		"DESTDIR=${ED}"
 		"PREFIX=${EPREFIX}/usr"
@@ -46,7 +43,11 @@ src_prepare() {
 
 src_compile() {
 	emake -f makefile "${myhlopts[@]}"
-	use qt4 && emake -f makefile "${myhlopts[@]}" gui
+	if use qt4 ; then
+		cd src/gui-qt
+		eqmake4 'DEFINES+=DATA_DIR=\\\"/usr/share/${PN}/\\\" CONFIG_DIR=\\\"/etc/${PN}/\\\" DOC_DIR=\\\"/usr/share/doc/${PF}/\\\"'
+		emake
+	fi
 }
 
 src_install() {
