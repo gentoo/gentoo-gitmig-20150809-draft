@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11.ebuild,v 1.9 2011/06/02 10:09:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/jbig2dec-0.11.ebuild,v 1.10 2011/06/02 15:21:19 mr_bones_ Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ DEPEND="png? ( >=media-libs/libpng-1.4 )"
 RDEPEND=${DEPEND}
 
 RESTRICT="test"
-#the test files are missing from the tarball, nothing is tested and the 
+#the test files are missing from the tarball, nothing is tested and the
 #test function just returns error. permanently restricted, see bug 324275
 
 src_configure() {
