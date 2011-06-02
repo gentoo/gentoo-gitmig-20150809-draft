@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.161 2011/06/01 19:42:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.162 2011/06/02 22:05:13 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -konsolekalendar-4.4.9.ebuild, -konsolekalendar-4.4.10.ebuild:
+  Drop kdepim 4.4.9 and 4.4.10
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org>
   konsolekalendar-4.4.11.1.ebuild:

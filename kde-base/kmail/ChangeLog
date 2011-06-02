@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.249 2011/06/01 19:41:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.250 2011/06/02 22:05:14 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kmail-4.4.9.ebuild,
+  -kmail-4.4.10.ebuild, -kmail-4.4.10-r1.ebuild:
+  Drop kdepim 4.4.9 and 4.4.10
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> kmail-4.4.11.1.ebuild:
   Marking kmail-4.4.11.1 ppc stable for bug 354033

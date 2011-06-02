@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.90 2011/06/01 19:34:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.91 2011/06/02 22:05:13 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -akonadi-4.4.9.ebuild,
+  -akonadi-4.4.10.ebuild:
+  Drop kdepim 4.4.9 and 4.4.10
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> akonadi-4.4.11.1.ebuild:
   Marking akonadi-4.4.11.1 ppc stable for bug 354033
