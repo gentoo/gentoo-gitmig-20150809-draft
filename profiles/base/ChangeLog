@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.271 2011/05/28 19:00:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.272 2011/06/02 21:33:01 nirbheek Exp $
+
+  02 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Unmask USE=introspection on media-libs/libchamplain
 
   28 May 2011; Mike Frysinger <vapier@gentoo.org> packages:
   Force newer shadow versions in the whole tree #367633.
