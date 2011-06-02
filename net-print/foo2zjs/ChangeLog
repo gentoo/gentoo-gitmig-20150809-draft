@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.40 2011/03/12 12:17:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.41 2011/06/02 10:36:52 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  foo2zjs-20080225.ebuild, foo2zjs-20081129.ebuild, foo2zjs-99999999.ebuild:
+  Add missing ghostscript dependency, bug 241012
 
 *foo2zjs-99999999 (12 Mar 2011)
 

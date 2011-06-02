@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20080225.ebuild,v 1.4 2008/08/27 21:44:28 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20080225.ebuild,v 1.5 2011/06/02 10:36:52 dilfridge Exp $
 
 inherit eutils
 
@@ -63,7 +63,8 @@ SRC_URI="${SRC_URI}${ALL_BEGIN}${ALL_MIDDLE}${ALL_END}"
 RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+	app-text/ghostscript-gpl"
 RDEPEND="cups? ( net-print/cups )
 	foomaticdb? ( net-print/foomatic-db-engine )
 	net-print/foomatic-filters
