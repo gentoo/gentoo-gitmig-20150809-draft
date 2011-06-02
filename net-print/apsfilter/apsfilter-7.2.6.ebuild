@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.6.ebuild,v 1.4 2011/05/21 04:18:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.6.ebuild,v 1.5 2011/06/02 18:19:23 dilfridge Exp $
+
+EAPI=4
 
 DESCRIPTION="Apsfilter Prints So Fine, It Leads To Extraordinary Results"
 HOMEPAGE="http://www.apsfilter.org"
@@ -21,18 +23,18 @@ DEPEND="${RDEPEND}"
 SRC_URI="http://www.apsfilter.org/download/${P}.tar.bz2"
 S=${WORKDIR}/apsfilter
 
-src_compile() {
+src_configure() {
 	# assume thet lprng is installed if cups isn't USEd
 	use cups && \
 	    myconf="--with-printcap=/etc/cups/printcap --with-spooldir=/var/spool/cups" || \
 	    myconf="--with-printcap=/etc/lprng/printcap"
-	./configure --prefix=/usr ${myconf} || die
 
-	emake || die
+	./configure --prefix=/usr --mandir=/usr/share/man --docdir=/usr/share/doc/${PF} ${myconf} || die
+	# econf dont work here :(
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dosym /usr/share/apsfilter/SETUP /usr/bin/apsfilter
 	use cups && \
 	    dosym /etc/cups/printcap /etc/printcap || \
