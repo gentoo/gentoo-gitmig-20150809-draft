@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.30 2011/03/29 07:54:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.31 2011/06/02 00:22:30 mr_bones_ Exp $
+
+  02 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org> hexxagon-1.0.1.ebuild:
+  update SRC_URI to match upstream change (bug #369429)
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> hexxagon-1.0.1.ebuild:
   Fixed slot deps

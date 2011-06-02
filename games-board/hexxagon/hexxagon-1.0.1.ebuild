@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.1.ebuild,v 1.5 2011/03/29 07:54:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.1.ebuild,v 1.6 2011/06/02 00:22:30 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
 
 DESCRIPTION="clone of the original DOS game"
 HOMEPAGE="http://www.nesqi.se/"
-SRC_URI="http://www.nesqi.se/hexxagon/download/${P}.tar.bz2"
+SRC_URI="http://www.nesqi.se/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
