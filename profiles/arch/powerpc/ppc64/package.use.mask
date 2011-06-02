@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.40 2011/04/10 18:00:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.41 2011/06/02 20:10:54 xarthisius Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (22 Mar 2011)
 # Mask polkit[kde] wrt #354509
@@ -41,10 +41,6 @@ media-sound/rhythmbox webkit
 # Ben de Groot <yngwin@gentoo.org> (15 Jul 2009)
 # Mask dillo useflag as current version is unkeyworded (bug 253083)
 mail-client/claws-mail dillo
-
-# Brent Baude <ranger@gentoo.org> (30 May 2009)
-# Masking prolog from dev-libs/ppl
-dev-libs/ppl prolog
 
 # Brent Baude <ranger@gentoo.org> (05 May 2009)
 # Masking webkit from  libproxy due to TOC failure on webkit
