@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.3.10.ebuild,v 1.1 2011/06/02 07:18:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.3.10.ebuild,v 1.2 2011/06/02 09:52:49 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -40,6 +40,8 @@ ruby_add_bdepend "
 ruby_add_rdepend ">=dev-ruby/json-1.4.6"
 
 all_ruby_prepare() {
+	epatch "${FILESDIR}/${P}-no-werror.patch"
+
 	# Remove Bundler-related things.
 	sed -i -e '/[Bb]undler/d' Rakefile spec/spec_helper.rb features/support/env.rb || die
 	rm Gemfile || die
