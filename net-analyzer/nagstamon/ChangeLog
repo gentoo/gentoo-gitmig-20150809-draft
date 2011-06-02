@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.20 2011/06/02 11:19:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.21 2011/06/02 14:04:13 idl0r Exp $
+
+  02 Jun 2011; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Take over nagstamon
 
 *nagstamon-0.9.7.1 (02 Jun 2011)
 
