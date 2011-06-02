@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-1.0.ebuild,v 1.2 2011/05/29 17:27:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-1.0.ebuild,v 1.3 2011/06/02 13:40:38 maekke Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source test"
@@ -11,7 +11,7 @@ HOMEPAGE="http://jline.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
