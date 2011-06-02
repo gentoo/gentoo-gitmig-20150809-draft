@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ptabtools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.14 2007/12/05 14:56:59 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.15 2011/06/02 08:07:43 radhermit Exp $
+
+*ptabtools-0.5.0 (02 Jun 2011)
+
+  02 Jun 2011; Tim Harder <radhermit@gentoo.org> +ptabtools-0.5.0.ebuild,
+  +files/ptabtools-0.5.0-makefile.patch:
+  Version bump. Update HOMEPAGE and SRC_URI, respect LDFLAGS (bug #336817), and
+  update to EAPI 4.
 
   05 Dec 2007; Raúl Porcel <armin76@gentoo.org>
   -files/ptabtools-0.3.1-fPIC.patch,
