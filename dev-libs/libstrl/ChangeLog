@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libstrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.3 2011/05/04 21:08:44 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.4 2011/06/02 04:08:11 binki Exp $
+
+  02 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> -libstrl-0.2.ebuild:
+  Drop old libstrl-0.2.
 
   04 May 2011; Nathan Phillip Brink (binki) <binki@gentoo.org> metadata.xml:
   Take over package which used to be proxy maintained for me.
