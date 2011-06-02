@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.23 2011/03/16 14:31:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.24 2011/06/02 17:56:29 vostorga Exp $
+
+  02 Jun 2011; Víctor Ostorga <vostorga@gentoo.org> talloc-2.0.5.ebuild:
+  Adding dependency dev-lang/python[threads] bug 363071
 
   16 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> talloc-2.0.5.ebuild:
   Stop unnecessarily forcing Python 2.6.
