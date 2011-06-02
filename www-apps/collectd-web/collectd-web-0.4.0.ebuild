@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/collectd-web/collectd-web-0.3.0.ebuild,v 1.2 2011/02/28 14:39:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/collectd-web/collectd-web-0.4.0.ebuild,v 1.1 2011/06/02 13:33:00 alexxy Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ IUSE=""
 
 need_httpd_cgi
 
-S="${WORKDIR}/httpdss-collectd-web-ee521b6"
+S="${WORKDIR}/httpdss-collectd-web-a23c49f"
 
 DEPEND="dev-perl/HTML-Parser
 	net-analyzer/rrdtool[perl]
