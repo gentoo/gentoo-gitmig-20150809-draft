@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.84 2011/06/02 19:41:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.85 2011/06/02 20:09:29 xarthisius Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (2 June 2011)
 # kde-base/krossjava fails to build wrt #354033
@@ -50,10 +50,6 @@ net-im/ekg2 oracle
 # Nirbheek Chauhan <nirbheek@gentoo.org> (10 Dec 2010)
 # net-misc/connman is not keyworded, bug 348308
 mail-client/evolution connman
-
-# Dane Smith <c1pher@gentoo.org> (12 Nov 2010)
-# Valgrind is only available on amd64/x86/ppc/ppc64.
-net-libs/gnutls -valgrind
 
 # Justin Lecher <jlec@gentoo.org> (01 Nov 2010)
 # Deps not Keyworded
