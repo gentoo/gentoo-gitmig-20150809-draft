@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/taucs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/ChangeLog,v 1.2 2010/03/15 06:01:29 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/ChangeLog,v 1.3 2011/06/02 10:42:41 jlec Exp $
+
+  02 Jun 2011; Justin Lecher <jlec@gentoo.org> taucs-2.2.ebuild:
+  Make it gold ready, #369755
 
   15 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org> taucs-2.2.ebuild:
   Forced metis (bug #309271), and changed flag static to static-libs

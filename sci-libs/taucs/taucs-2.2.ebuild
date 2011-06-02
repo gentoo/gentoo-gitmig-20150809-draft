@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.2 2010/03/15 06:01:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.3 2011/06/02 10:42:41 jlec Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic
@@ -15,7 +15,8 @@ LICENSE="LGPL-2.1"
 IUSE="cilk doc static-libs"
 SLOT="0"
 
-RDEPEND="virtual/blas
+RDEPEND="
+	virtual/blas
 	virtual/lapack
 	|| ( sci-libs/metis sci-libs/parmetis )
 	cilk? ( dev-lang/cilk )"
@@ -28,12 +29,14 @@ src_configure() {
 	cat > config/linux_shared.mk <<-EOF
 		CFLAGS=${CFLAGS} -fPIC
 		FC=$(tc-getFC)
+		CC=$(tc-getCC)
 		FFLAGS=${FFLAGS} -fPIC
 		LDFLAGS=${LDFLAGS} -fPIC
 		LIBBLAS=$(pkg-config --libs blas)
 		LIBLAPACK=$(pkg-config --libs lapack)
 		LIBF77=
 	EOF
+	[[ $(tc-getFC) =~ fortran ]] && echo "LIBF77=-lgfortran" >> config/linux_shared.mk
 	echo "LIBMETIS=$(pkg-config --libs metis)" >> config/linux_shared.mk
 	# no cat <<EOF because -o has a trailing space
 	if use cilk; then
