@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.63 2011/05/26 16:03:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.64 2011/06/02 12:20:06 maekke Exp $
+
+  02 Jun 2011; Markus Meier <maekke@gentoo.org> twisted-words-11.0.0.ebuild:
+  arm stable, bug #366131
 
   26 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   twisted-words-11.0.0.ebuild:
