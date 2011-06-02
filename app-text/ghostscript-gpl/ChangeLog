@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.111 2011/05/10 18:51:46 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.112 2011/06/02 09:59:25 dilfridge Exp $
+
+  02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Add local description for bindist use-flag, bug 369243
 
 *ghostscript-gpl-9.02 (10 May 2011)
 
