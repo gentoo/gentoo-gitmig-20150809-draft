@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.15 2011/05/31 15:45:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.16 2011/06/02 00:12:53 chithanh Exp $
+
+*linux-firmware-20110601 (02 Jun 2011)
+
+  02 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -linux-firmware-20090421.ebuild, -linux-firmware-20100930.ebuild,
+  -linux-firmware-20110128.ebuild, -linux-firmware-20110311.ebuild,
+  +linux-firmware-20110601.ebuild, linux-firmware-99999999.ebuild,
+  metadata.xml:
+  New snapshot. Update live ebuild to git-2.eclass, allow individual selection
+  of firmware files through savedconfig. Remove old.
 
   31 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   linux-firmware-20110429.ebuild:
