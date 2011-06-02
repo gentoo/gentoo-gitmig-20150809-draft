@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.4.ebuild,v 1.1 2011/06/01 23:54:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.4.ebuild,v 1.2 2011/06/02 11:38:20 radhermit Exp $
 
 EAPI=4
 
@@ -17,13 +17,20 @@ IUSE="examples qt4"
 
 DEPEND="dev-lang/lua
 	dev-libs/boost
-	qt4? ( x11-libs/qt-gui:4 )"
+	qt4? ( x11-libs/qt-gui:4
+		x11-libs/qt-core:4 )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	myhlopts=(
 		"CXX=$(tc-getCXX)"
-		"DESTDIR=${D}"
+		"LINK=$(tc-getCXX)"
+		"AR=$(tc-getAR)"
+		"LDFLAGS=${LDFLAGS}"
+		"LFLAGS=${LDFLAGS}"
+		"CXXFLAGS=${CXXFLAGS}"
+		"CFLAGS=${CXXFLAGS}"
+		"DESTDIR=${ED}"
 		"PREFIX=${EPREFIX}/usr"
 		"doc_dir=${EPREFIX}/usr/share/doc/${PF}/"
 		"conf_dir=${EPREFIX}/etc/highlight/"
@@ -33,10 +40,6 @@ pkg_setup() {
 src_prepare() {
 	sed -i -e "/LSB_DOC_DIR/s:doc/${PN}:doc/${PF}:" \
 		src/core/datadir.cpp || die
-
-	sed -i -e 's:-O2::' \
-		-e 's:CFLAGS:CXXFLAGS:g' \
-		src/makefile || die
 }
 
 src_compile() {
@@ -51,6 +54,6 @@ src_install() {
 	if use examples ; then
 		docompress -x /usr/share/doc/${PF}/examples
 	else
-		rm -rf "${D}"/usr/share/doc/${PF}/examples
+		rm -rf "${ED}"/usr/share/doc/${PF}/examples
 	fi
 }

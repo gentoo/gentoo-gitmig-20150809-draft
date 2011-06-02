@@ -1,6 +1,11 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.36 2011/06/01 23:54:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.37 2011/06/02 11:38:20 radhermit Exp $
+
+  02 Jun 2011; Tim Harder <radhermit@gentoo.org> highlight-3.3.ebuild,
+  highlight-3.4.ebuild:
+  Respect C(XX)FLAGS (bug #217964), respect LDFLAGS (bug #369793), and add
+  dependency on qt-core.
 
 *highlight-3.4 (01 Jun 2011)
 
