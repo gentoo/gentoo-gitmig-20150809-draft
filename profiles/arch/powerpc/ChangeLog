@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.122 2011/05/27 22:54:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.123 2011/06/02 19:41:36 xarthisius Exp $
+
+  02 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Mask kde-base/kdebindings-meta[java] since kde-base/krossjava-4.6.2 fails to
+  build wrt bug 354033 c#33
 
   27 May 2011; Doug Goldstein <cardoe@gentoo.org> package.use.mask:
   Mask rbd, spice, and xen USE flags for app-emulation/qemu-kvm as the
