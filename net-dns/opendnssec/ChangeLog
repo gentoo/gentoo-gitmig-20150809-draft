@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/opendnssec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.1 2011/06/02 12:26:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.2 2011/06/02 15:38:29 scarabeus Exp $
+
+  02 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  opendnssec-1.3.0_rc2.ebuild:
+  Fix messup with Id header. Move trang to be test only dep.
 
 *opendnssec-1.3.0_rc2 (02 Jun 2011)
 

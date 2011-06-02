@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0_rc2.ebuild,v 1.1 2011/06/02 12:26:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0_rc2.ebuild,v 1.2 2011/06/02 15:38:29 scarabeus Exp $
 
 EAPI=4
 
@@ -34,9 +34,11 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	app-text/trang
 	doc? ( app-doc/doxygen )
-	test? ( dev-util/cunit )
+	test? (
+		app-text/trang
+		dev-util/cunit
+	)
 "
 
 REQUIRED_USE="
@@ -152,7 +154,7 @@ src_install() {
 
 	# Remove subversion tags from config files to avoid useless config updates
 	sed -i \
-		-e 's/<!-- \$Id: opendnssec-1.3.0_rc2.ebuild,v 1.1 2011/06/02 12:26:28 scarabeus Exp $ -->//g' \
+		-e '/<!-- \$Id:/ d' \
 		"${ED}"/etc/opendnssec/* || die
 
 	# install update scripts
