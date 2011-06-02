@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sudo/ChangeLog,v 1.20 2011/03/07 02:56:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sudo/ChangeLog,v 1.21 2011/06/02 13:00:44 blueness Exp $
+
+  02 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
+  selinux-sudo-2.20101213-r2.ebuild:
+  Stable amd64 x86
 
 *selinux-sudo-2.20101213-r2 (07 Mar 2011)
 

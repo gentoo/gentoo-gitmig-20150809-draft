@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-virt/selinux-virt-2.20101213.ebuild,v 1.2 2011/02/06 00:06:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-virt/selinux-virt-2.20101213.ebuild,v 1.3 2011/06/02 13:08:04 blueness Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ inherit selinux-policy-2
 
 DESCRIPTION="SELinux policy for libvirtd"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 src_install() {
 	selinux-policy-2_src_install

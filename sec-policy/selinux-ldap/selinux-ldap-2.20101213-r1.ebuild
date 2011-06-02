@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ldap/selinux-ldap-2.20101213-r1.ebuild,v 1.1 2011/04/16 13:25:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ldap/selinux-ldap-2.20101213-r1.ebuild,v 1.2 2011/06/02 12:32:02 blueness Exp $
 
 MODS="ldap"
 IUSE=""
@@ -9,7 +9,7 @@ inherit selinux-policy-2
 
 DESCRIPTION="SELinux policy for OpenLDAP server"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 RDEPEND="!<=sec-policy/selinux-openldap-2.20101213
 		>=sys-apps/policycoreutils-1.30.30
 		>=sec-policy/selinux-base-policy-${PV}"
