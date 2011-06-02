@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.6.ebuild,v 1.3 2011/04/24 14:24:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.6.ebuild,v 1.4 2011/06/02 18:39:41 dilfridge Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools flag-o-matic eutils multilib
 
@@ -56,26 +56,22 @@ src_configure() {
 
 	econf \
 		--enable-test \
-		--enable-epson \
 		--with-ghostscript \
-		--with-user-guide \
-		--with-samples \
-		--with-escputil \
 		--disable-translated-cups-ppds \
 		--enable-nls \
 		$(use_with readline) \
 		$(use_with gimp gimp2) \
 		$(use_with gimp gimp2-as-gutenprint) \
 		$(use_with cups) \
-		${myconf} || die "econf failed"
+		${myconf}
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	dodoc AUTHORS ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt}
 	dohtml doc/FAQ.html
-	dohtml -r doc/gutenprintui2/html doc/gutenprint/developer-html
+	dohtml -r doc/gutenprintui2/html
 	rm -fR "${D}"/usr/share/gutenprint/doc
 	if ! use gtk && ! use gimp; then
 		rm -f "${D}"/usr/$(get_libdir)/pkgconfig/gutenprintui2.pc
