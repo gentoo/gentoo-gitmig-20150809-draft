@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.41 2011/06/02 10:36:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.42 2011/06/02 15:15:55 phajdan.jr Exp $
+
+  02 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> foo2zjs-99999999.ebuild:
+  Install missing ppd files, bug #356695 comment #5 by Mads <mads@ab3.no>. Bump
+  to EAPI 4.
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   foo2zjs-20080225.ebuild, foo2zjs-20081129.ebuild, foo2zjs-99999999.ebuild:
