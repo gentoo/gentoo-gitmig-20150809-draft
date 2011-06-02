@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.576 2011/06/01 11:43:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.577 2011/06/02 20:26:43 williamh Exp $
+
+  02 Jun 2011; William Hubbs <williamh@gentoo.org> udev-164-r2.ebuild,
+  udev-9999.ebuild:
+  Add udev to the sysinit runlevel for the stages, bug #369037
 
   01 Jun 2011; Tobias Klausmann <klausman@gentoo.org> udev-164-r2.ebuild:
   Stable on alpha, bug #352827

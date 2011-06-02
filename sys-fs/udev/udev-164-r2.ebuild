@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.4 2011/06/01 11:43:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.5 2011/06/02 20:26:43 williamh Exp $
 
 EAPI="1"
 
@@ -374,13 +374,23 @@ restart_udevd() {
 }
 
 postinst_init_scripts() {
-	# FIXME: we may need some code that detects if this is a system bootstrap
-	# and auto-enables udev then
-	#
+	local enable_postmount=false
+
 	# FIXME: inconsistent handling of init-scripts here
 	#  * udev is added to sysinit in openrc-ebuild
 	#  * we add udev-postmount to default in here
 	#
+
+	# If we are building stages, add udev to the sysinit runlevel automatically.
+	if use build
+	then
+		if [[ -x "${ROOT}"/etc/init.d/udev  \
+			&& -d "${ROOT}"/etc/runlevels/sysinit ]]
+		then
+			ln -s "${ROOT}"/etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
+		fi
+		enable_postmount=true
+	fi
 
 	# migration to >=openrc-0.4
 	if [[ -e "${ROOT}"/etc/runlevels/sysinit && ! -e "${ROOT}"/etc/runlevels/sysinit/udev ]]
@@ -400,11 +410,10 @@ postinst_init_scripts() {
 	# already enabled?
 	[[ -e "${ROOT}"/etc/runlevels/default/udev-postmount ]] && return
 
-	local enable_postmount=0
-	[[ -e "${ROOT}"/etc/runlevels/sysinit/udev ]] && enable_postmount=1
-	[[ "${ROOT}" = "/" && -d /dev/.udev/ ]] && enable_postmount=1
+	[[ -e "${ROOT}"/etc/runlevels/sysinit/udev ]] && enable_postmount=true
+	[[ "${ROOT}" = "/" && -d /dev/.udev/ ]] && enable_postmount=true
 
-	if [[ ${enable_postmount} = 1 ]]
+	if $enable_postmount
 	then
 		local initd=udev-postmount
 
