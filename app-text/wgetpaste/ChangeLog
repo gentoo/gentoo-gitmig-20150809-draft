@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.113 2011/05/31 17:31:23 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.114 2011/06/02 12:22:52 maekke Exp $
+
+  02 Jun 2011; Markus Meier <maekke@gentoo.org> wgetpaste-2.18.ebuild:
+  arm stable, bug #368107
 
   31 May 2011; Kenneth Prugh <ken69267@gentoo.org> wgetpaste-2.18.ebuild:
   amd64 stable, bug #368107
