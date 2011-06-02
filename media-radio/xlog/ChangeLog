@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.22 2011/05/23 17:16:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.23 2011/06/02 13:15:00 maekke Exp $
+
+  02 Jun 2011; Markus Meier <maekke@gentoo.org> xlog-2.0.5.ebuild:
+  x86 stable, bug #368369
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org> xlog-2.0.5.ebuild:
   Stable on amd64 wrt bug #368369
