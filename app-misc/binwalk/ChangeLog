@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/binwalk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binwalk/ChangeLog,v 1.2 2011/06/03 08:04:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binwalk/ChangeLog,v 1.3 2011/06/03 08:21:54 radhermit Exp $
+
+  03 Jun 2011; Tim Harder <radhermit@gentoo.org> binwalk-0.3.1.ebuild,
+  +files/binwalk-0.3.1-ldflags.patch:
+  Respect LDFLAGS.
 
 *binwalk-0.3.1 (03 Jun 2011)
 
