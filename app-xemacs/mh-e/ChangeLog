@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mh-e
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mh-e/ChangeLog,v 1.16 2010/08/13 10:12:24 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mh-e/ChangeLog,v 1.17 2011/06/03 12:30:21 graaff Exp $
+
+  03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -mh-e-1.31.ebuild:
+  Remove old version.
 
 *mh-e-1.32 (13 Aug 2010)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pcl-cvs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.18 2010/08/13 09:00:39 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.19 2011/06/03 12:34:12 graaff Exp $
+
+  03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -pcl-cvs-1.68.ebuild:
+  Remove old version.
 
 *pcl-cvs-1.70 (13 Aug 2010)
 
