@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.509 2011/06/02 15:30:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.510 2011/06/03 18:58:10 pacho Exp $
+
+*gtk+-2.24.4 (03 Jun 2011)
+
+  03 Jun 2011; Pacho Ramos <pacho@gentoo.org> -files/gtk+-2.8.0-multilib.patch,
+  -files/gtk+-2.18.5-macosx-aqua.patch,
+  -files/gtk+-2.18.9-notifications-gtkentry.patch, -gtk+-2.20.1-r1.ebuild,
+  -files/gtk+-2.20.1-GtkOffscreenWindow.patch,
+  -files/gtk+-2.20.1-darwin8.patch, -files/gtk+-2.20.1-gail_cell_type.patch,
+  -files/gtk+-2.20.1-gtkrange.patch,
+  -files/gtk+-2.20.1-libpixbufloader-warning.patch,
+  -files/gtk+-2.20.1-libpng-fix.patch, +gtk+-2.24.4.ebuild,
+  +files/gtk+-2.24.4-old-icons.patch:
+  Version bump as upstream bug #646609 is not a regression over 2.24.3 and
+  doesn't look to be a major problem. Remove old.
 
 *gtk+-3.0.10 (02 Jun 2011)
 
