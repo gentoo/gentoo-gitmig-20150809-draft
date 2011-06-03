@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.2_rc2.ebuild,v 1.1 2011/06/03 18:33:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.2_rc2.ebuild,v 1.2 2011/06/03 22:21:55 cardoe Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -27,7 +27,7 @@ S="${WORKDIR}/${P%_rc*}"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap +network nfs \
+IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
 	uml virtualbox virt-network xen"
 # IUSE=one : bug #293416 & bug #299011
@@ -120,7 +120,7 @@ src_configure() {
 	myconf="${myconf} --with-esx"
 
 	## additional host drivers
-	myconf="${myconf} $(use_with network)"
+	myconf="${myconf} $(use_with virt-network network)"
 	myconf="${myconf} --with-storage-fs"
 	myconf="${myconf} $(use_with lvm storage-lvm)"
 	myconf="${myconf} $(use_with iscsi storage-iscsi)"
@@ -139,7 +139,7 @@ src_configure() {
 	myconf="${myconf} $(use_with policykit polkit)"
 	myconf="${myconf} $(use_with sasl)"
 
-	# network biits
+	# network bits
 	myconf="${myconf} $(use_with macvtap)"
 	myconf="${myconf} $(use_with pcap libpcap)"
 
