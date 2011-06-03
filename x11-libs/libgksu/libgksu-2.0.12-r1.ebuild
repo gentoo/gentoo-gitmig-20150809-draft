@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.10 2011/04/10 17:03:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.11 2011/06/03 14:28:39 flameeyes Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -55,7 +55,11 @@ src_prepare() {
 	# Make this gmake-3.82 compliant, bug #333961
 	epatch "${FILESDIR}/${P}-fix-make-3.82.patch"
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
+	# Do not build test programs that are never executed; also fixes bug
+	# #367397 (underlinking issues).
+	epatch "${FILESDIR}/${P}-notests.patch"
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
