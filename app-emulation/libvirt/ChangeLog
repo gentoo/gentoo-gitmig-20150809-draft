@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.109 2011/06/03 22:17:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.110 2011/06/03 22:20:06 cardoe Exp $
+
+  03 Jun 2011; Doug Goldstein <cardoe@gentoo.org> files/libvirtd.init-r4:
+  Ensure sanlock is started before us as well
 
   03 Jun 2011; Doug Goldstein <cardoe@gentoo.org> libvirt-9999.ebuild:
   Change the live build to use the latest init script

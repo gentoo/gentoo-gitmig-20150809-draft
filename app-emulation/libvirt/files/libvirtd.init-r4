@@ -4,7 +4,7 @@ opts="start stop status reload restart"
 
 depend() {
     need net
-	after ntp-client ntpd nfs iscsid nfsmount portmap rpc.statd iptables ip6tables ebtables ceph corosync
+	after ntp-client ntpd nfs iscsid nfsmount portmap rpc.statd iptables ip6tables ebtables ceph corosync sanlock
 }
 
 libvirtd_virsh() {
