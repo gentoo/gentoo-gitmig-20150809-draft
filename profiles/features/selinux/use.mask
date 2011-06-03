@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/use.mask,v 1.1 2011/05/17 10:46:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/use.mask,v 1.2 2011/06/03 12:14:33 blueness Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -12,9 +12,6 @@
 
 # amd64 only:
 emul-linux-x86
-
-# Only used by mips and old amd64 profiles
-multilib
 
 # ppc and x86/amd64
 x264
