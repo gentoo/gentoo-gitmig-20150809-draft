@@ -1,6 +1,7 @@
 https://bugs.gentoo.org/show_bug.cgi?id=330847
 
 Patch by the OpenSUSE folks, found by pacho.
+Updated with https://build.opensuse.org/request/show/69983
 
 Index: yelp-2.30.2/m4/gecko.m4
 ===================================================================
@@ -236,7 +237,7 @@ Index: yelp-2.30.2/src/yelp-gecko-utils.cpp
 -    "1.9a", PR_TRUE,
 -    "2", PR_TRUE
 +    "2.0a", PR_TRUE,
-+    "2.0", PR_TRUE
++    "2.0.*", PR_TRUE
      };
      char xpcomLocation[PATH_MAX];
      rv = GRE_GetGREPathWithProperties(&greVersion, 1, nsnull, 0, xpcomLocation, sizeof (xpcomLocation));
