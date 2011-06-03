@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.107 2011/06/03 18:13:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.108 2011/06/03 18:33:21 cardoe Exp $
+
+*libvirt-0.9.2_rc2 (03 Jun 2011)
+
+  03 Jun 2011; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.9.2_rc2.ebuild,
+  +files/libvirtd.init-r4:
+  Version bump. Contains updates to the init script service ordering. bug
+  #344211
 
   03 Jun 2011; Doug Goldstein <cardoe@gentoo.org> libvirt-9999.ebuild:
   Fix issue where the git eclass isn't pulled in for the 9999 build. bug
