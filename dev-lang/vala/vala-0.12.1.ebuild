@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.11.7.ebuild,v 1.2 2011/03/17 23:06:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.12.1.ebuild,v 1.1 2011/06/03 17:23:41 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit alternatives gnome2
 
@@ -36,7 +37,6 @@ src_install() {
 	gnome2_src_install
 	mv "${ED}"/usr/share/aclocal/vala.m4 \
 		"${ED}"/usr/share/aclocal/vala-${SLOT/./-}.m4 || die "failed to move vala m4 macro"
-	find "${ED}" -name "*.la" -delete || die "la file removal failed"
 }
 
 pkg_postinst() {
