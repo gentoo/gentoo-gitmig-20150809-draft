@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.76 2011/05/31 20:18:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.77 2011/06/03 17:35:30 armin76 Exp $
+
+  03 Jun 2011; Raúl Porcel <armin76@gentoo.org> klibc-1.5.8.ebuild,
+  klibc-1.5.11.ebuild, klibc-1.5.12.ebuild, klibc-1.5.12-r1.ebuild,
+  klibc-1.5.15.ebuild, klibc-1.5.15-r1.ebuild, klibc-1.5.20.ebuild:
+  Drop sparc keywords
 
   31 May 2011; Markus Meier <maekke@gentoo.org> klibc-1.5.20.ebuild:
   x86 stable, bug #367269
