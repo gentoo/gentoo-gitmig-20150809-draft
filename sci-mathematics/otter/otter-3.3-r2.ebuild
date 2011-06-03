@@ -1,40 +1,44 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/otter-3.3-r2.ebuild,v 1.1 2010/01/13 02:29:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/otter-3.3-r2.ebuild,v 1.2 2011/06/03 08:58:54 jlec Exp $
 
-EAPI="2"
+EAPI=4
+
 inherit eutils
 
 DESCRIPTION="An Automated Deduction System."
-SRC_URI="http://www-unix.mcs.anl.gov/AR/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www-unix.mcs.anl.gov/AR/otter/"
+HOMEPAGE="http://www.cs.unm.edu/~mccune/otter/"
+SRC_URI="http://www.cs.unm.edu/~mccune/otter/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 LICENSE="otter"
 SLOT="0"
 IUSE=""
-DEPEND="virtual/libc"
+
+RDEPEND="
+	x11-libs/libX11
+	x11-libs/libXaw
+	x11-libs/libXt"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-gold.patch
 }
 
 src_compile() {
 	cd source
-	CC=$(tc-getCC) emake || die "emake failed"
+	CC=$(tc-getCC) emake
 	cd "${S}"/mace2
-	CC=$(tc-getCC) emake || die "emake in mace2 failed"
+	CC=$(tc-getCC) emake
 }
 
 src_install() {
-	dobin bin/* source/formed/formed \
-		|| die "failed to install binaries"
-	dodoc README* Legal Changelog Contents \
-		|| die "failed to install regular docs"
+	dobin bin/* source/formed/formed
+	dodoc README* Legal Changelog Contents
 	insinto /usr/share/doc/${PF}
-	doins documents/*.pdf \
-		|| die "failed to install pdf docs"
+	doins documents/*.pdf
 	insinto /usr/share/${PN}/
-	doins -r examples examples-mace2 \
-		|| die "failed to install examples"
+	doins -r examples examples-mace2
 }
