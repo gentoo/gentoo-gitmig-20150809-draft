@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.52 2011/05/26 16:00:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.53 2011/06/03 14:15:32 ranger Exp $
+
+  03 Jun 2011; Brent Baude <ranger@gentoo.org> twisted-lore-11.0.0.ebuild:
+  Marking twisted-lore-11.0.0 ppc stable for bug 366131
 
   26 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   twisted-lore-11.0.0.ebuild:
