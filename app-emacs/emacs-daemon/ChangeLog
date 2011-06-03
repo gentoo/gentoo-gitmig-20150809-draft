@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.43 2011/05/29 09:56:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.44 2011/06/03 18:21:44 armin76 Exp $
+
+  03 Jun 2011; Raúl Porcel <armin76@gentoo.org> emacs-daemon-0.18.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #368459
 
   29 May 2011; Christian Faulhammer <fauli@gentoo.org>
   emacs-daemon-0.18.ebuild:
