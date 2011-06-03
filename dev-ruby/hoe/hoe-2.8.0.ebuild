@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.8.0.ebuild,v 1.11 2011/04/23 17:39:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/hoe-2.8.0.ebuild,v 1.12 2011/06/03 07:45:32 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -21,6 +21,12 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
+
+# Restrict tests since we lack a dependency on hoe-seattlerb (bug
+# 368631)), and this can't be added easily since not all arches have it
+# stable. Newer versions of hoe no longer have this requirement, so we
+# just restrict tests here to avoid test failure.
+RESTRICT="test"
 
 RUBY_PATCHES=( "${P}-test-file-ordering.patch" )
 
