@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.5-r1.ebuild,v 1.1 2011/04/04 15:40:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.8.ebuild,v 1.1 2011/06/03 17:42:16 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
 
 inherit autotools db-use eutils flag-o-matic gnome2 java-pkg-opt-2
 
@@ -80,6 +81,8 @@ pkg_setup() {
 		$(use_with gtk ui)
 		$(use_with http libsoup)
 		$(use_enable introspection)
+		$(use_enable introspection gda-gi)
+		$(use_enable introspection gdaui-gi)
 		$(use_with java java $JAVA_HOME)
 		$(use_with mysql mysql /usr)
 		$(use_with postgres postgres /usr)
@@ -113,19 +116,10 @@ src_prepare() {
 	# Fix compilation failure of keyword_hash.c, upstream #630959
 	epatch "${FILESDIR}/${PN}-4.2.0-missing-include-in-keyword_hash-generator.patch"
 
-	# Don't break when running autoreconf, upstream bug #639319
-	epatch "${FILESDIR}/${PN}-4.2.5-missing-m4.patch"
-
 	intltoolize --force --copy --automake || die
 	eautoreconf
 }
 
 src_test() {
 	emake check XDG_DATA_HOME="${T}/.local" || die "tests failed"
-}
-
-src_install() {
-	gnome2_src_install
-	# Nothing uses these in the tree
-	find "${D}" -name '*.la' -exec rm -f '{}' + || die
 }
