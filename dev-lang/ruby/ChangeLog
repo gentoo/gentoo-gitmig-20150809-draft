@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.497 2011/06/03 15:11:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.498 2011/06/03 17:21:58 armin76 Exp $
+
+  03 Jun 2011; Raúl Porcel <armin76@gentoo.org> ruby-1.8.7_p334-r1.ebuild:
+  ia64/s390/sh/sparc stable wrt #369141
 
   03 Jun 2011; Jeroen Roovers <jer@gentoo.org> ruby-1.8.7_p334-r1.ebuild:
   Stable for HPPA (bug #369141).
