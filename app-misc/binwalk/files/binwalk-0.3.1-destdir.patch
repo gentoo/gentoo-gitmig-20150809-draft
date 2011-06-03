@@ -1,0 +1,25 @@
+--- binwalk-0.3.1/src/Makefile.in.orig
++++ binwalk-0.3.1/src/Makefile.in
+@@ -22,9 +22,10 @@
+ 	$(CC) $(CFLAGS) -c filter.c
+ 
+ install:
+-	if ! test -d $(ETC); then mkdir $(ETC); fi
+-	cp $(MAGIC) $(ETC)/$(MAGIC)
+-	cp $(TARGET) $(BIN)/$(TARGET)
++	if ! test -d $(DESTDIR)$(ETC); then mkdir -p $(DESTDIR)$(ETC); fi
++	if ! test -d $(DESTDIR)$(BIN); then mkdir -p $(DESTDIR)$(BIN); fi
++	cp $(MAGIC) $(DESTDIR)$(ETC)/$(MAGIC)
++	cp $(TARGET) $(DESTDIR)$(BIN)/$(TARGET)
+ 
+ clean:
+ 	rm -f $(TARGET) *.o
+@@ -34,6 +35,6 @@
+ 	rm -f Makefile
+ 
+ distclean: cleanall
+-	rm -rf $(ETC)
+-	rm -f $(BIN)/$(TARGET)
++	rm -rf $(DESTDIR)$(ETC)
++	rm -f $(DESTDIR)$(BIN)/$(TARGET)
+ 
