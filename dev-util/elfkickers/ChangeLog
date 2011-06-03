@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.35 2011/06/02 00:25:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.36 2011/06/03 03:14:45 blueness Exp $
+
+*elfkickers-3.0-r1 (03 Jun 2011)
+
+  03 Jun 2011; Anthony G. Basile <blueness@gentoo.org> -elfkickers-3.0.ebuild,
+  +elfkickers-3.0-r1.ebuild, +files/respect-CFLAGS-LDFLAGS.patch:
+  Respect CC/CFLAGS/LDFLAGS, bugs #369813 and 369817
 
   02 Jun 2011; Anthony G. Basile <blueness@gentoo.org> Manifest:
   Fixed manifest
