@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/radeon-ucode-20110531.ebuild,v 1.1 2011/06/01 00:48:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/radeon-ucode-20110531.ebuild,v 1.2 2011/06/03 10:28:16 chithanh Exp $
 
 inherit linux-info
 
@@ -43,7 +43,7 @@ UCODE_FILES=(
 	"TURKS_pfp.bin"
 )
 
-DESCRIPTION="IRQ microcode for r6xx/r7xx/Evergreen Radeon GPUs"
+DESCRIPTION="IRQ microcode for r6xx/r7xx/Evergreen/Northern Islands Radeon GPUs and APUs"
 HOMEPAGE="http://people.freedesktop.org/~agd5f/radeon_ucode/"
 SRC_URI="${UCODE_FILES[@]/#/${UCODE_BASE_URI}/}"
 
