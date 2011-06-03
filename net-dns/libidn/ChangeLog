@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.136 2011/05/15 21:16:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.137 2011/06/03 18:08:16 armin76 Exp $
+
+  03 Jun 2011; Raúl Porcel <armin76@gentoo.org> libidn-1.20.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #364847
 
   15 May 2011; Markus Meier <maekke@gentoo.org> libidn-1.20.ebuild:
   arm stable, bug #364847
