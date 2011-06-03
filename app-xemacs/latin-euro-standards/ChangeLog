@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/latin-euro-standards
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-euro-standards/ChangeLog,v 1.7 2010/08/13 10:45:29 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-euro-standards/ChangeLog,v 1.8 2011/06/03 12:16:03 graaff Exp $
+
+  03 Jun 2011; Hans de Graaff <graaff@gentoo.org>
+  -latin-euro-standards-1.08.ebuild:
+  Remove old version.
 
 *latin-euro-standards-1.09 (13 Aug 2010)
 

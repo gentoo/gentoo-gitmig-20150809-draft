@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/gnus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.28 2010/08/13 11:03:54 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gnus/ChangeLog,v 1.29 2011/06/03 12:13:41 graaff Exp $
+
+  03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -gnus-1.93.ebuild:
+  Remove old version.
 
 *gnus-1.94 (13 Aug 2010)
 
