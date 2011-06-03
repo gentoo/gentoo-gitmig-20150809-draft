@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.8.ebuild,v 1.1 2011/04/02 17:09:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.10.ebuild,v 1.1 2011/06/03 16:30:03 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
