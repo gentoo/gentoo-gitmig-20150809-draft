@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.8.ebuild,v 1.1 2011/04/02 17:01:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.10.ebuild,v 1.1 2011/06/03 15:33:06 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ IUSE="test"
 RDEPEND="dev-libs/dbus-glib
 	>=dev-libs/glib-2.8.6:2
 	>=dev-libs/openssl-0.9.7
-	>=net-libs/telepathy-glib-0.13.9
+	>=net-libs/telepathy-glib-0.13.10
 	sys-apps/dbus"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
