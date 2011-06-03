@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5.2-r1.ebuild,v 1.1 2011/05/18 21:18:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.5.3.ebuild,v 1.1 2011/06/03 08:47:11 radhermit Exp $
 
 EAPI="2"
 
-inherit eutils webapp depend.php
+inherit webapp depend.php
 
 MY_PN="${PN}mail"
 MY_P="${MY_PN}-${PV/_/-}"
@@ -45,8 +45,6 @@ pkg_setup() {
 src_prepare() {
 	cp config/db.inc.php{.dist,}
 	cp config/main.inc.php{.dist,}
-
-	epatch "${FILESDIR}"/${P}-fix-imap-disconnect.patch
 }
 
 src_install() {
