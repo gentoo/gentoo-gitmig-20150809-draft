@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.32-r49.ebuild,v 1.1 2011/05/25 12:27:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.32-r49.ebuild,v 1.2 2011/06/03 04:28:42 blueness Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ DESCRIPTION="Hardened kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 IUSE=""
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
