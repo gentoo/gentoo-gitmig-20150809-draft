@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.9.9.ebuild,v 1.1 2011/02/22 22:05:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.10.2.ebuild,v 1.1 2011/06/03 17:13:31 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -21,7 +22,7 @@ RDEPEND="
 	>=dev-libs/glib-2.26:2
 	>=dev-libs/libgee-0.5.2
 	>=media-libs/gupnp-dlna-0.5
-	>=media-libs/gstreamer-0.10.23
+	>=media-libs/gstreamer-0.10.28
 	>=media-libs/gst-plugins-base-0.10.28
 	>=net-libs/gssdp-0.9.2
 	>=net-libs/gupnp-0.13.4
@@ -55,9 +56,4 @@ pkg_setup() {
 		$(use_enable sqlite media-export-plugin)
 		$(use_enable tracker tracker-plugin)
 		$(use_with X ui)"
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name "*.la" -delete || die
 }
