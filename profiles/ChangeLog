@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5412 2011/06/03 20:10:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5413 2011/06/03 21:33:05 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jun 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking sys-fs/evms for removal
 
   03 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   pmask kbluetooth (requires KDE 4.4)
