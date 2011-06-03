@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.34.2.ebuild,v 1.1 2011/06/02 15:37:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.34.2.ebuild,v 1.2 2011/06/03 13:26:27 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -61,7 +61,7 @@ src_prepare() {
 	# Patch *must* be applied conditionally (see patch for details)
 	if use doc; then
 		# Fix bug 268592 (upstream #573685) (build fails without gnome && doc)
-		epatch "${FILESDIR}/${PN}-2.30.1-fix-build-without-gnome-with-doc.patch"
+		epatch "${FILESDIR}/${PN}-2.34.2-fix-build-without-gnome-with-doc.patch"
 		eautoreconf
 	fi
 }
