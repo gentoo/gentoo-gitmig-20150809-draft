@@ -1,0 +1,12 @@
+diff -ur piklab-0.15.10/src/xml_to_data/device_xml_to_data.h piklab-0.15.10-gcc46/src/xml_to_data/device_xml_to_data.h
+--- piklab-0.15.10/src/xml_to_data/device_xml_to_data.h	2010-07-05 18:16:57.000000000 +0200
++++ piklab-0.15.10-gcc46/src/xml_to_data/device_xml_to_data.h	2011-01-31 17:03:42.000000000 +0100
+@@ -61,7 +61,7 @@
+     ts << "const char *" << namespaceName() << "::DATA_STREAM =" << endl;
+     QValueList<DataType *> list;
+     for (QMap<QString, Data *>::const_iterator it=_map.begin(); it!=_map.end(); ++it)
+-      list.append(static_cast<const DataType *>(it.data()));
++      list.append(static_cast<DataType *>(it.data()));
+     uint size = toCppString(list, ts);
+     ts << ";" << endl;
+     ts << "const uint " << namespaceName() << "::DATA_SIZE = " << size << ";" << endl;
