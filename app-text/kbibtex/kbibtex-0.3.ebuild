@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.3.ebuild,v 1.1 2011/06/02 16:18:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.3.ebuild,v 1.2 2011/06/03 02:57:57 mr_bones_ Exp $
 
 EAPI=4
-
 
 inherit versionator kde4-base
 
