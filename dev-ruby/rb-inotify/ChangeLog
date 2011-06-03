@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rb-inotify
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.1 2011/06/03 09:08:58 graaff Exp $
+
+*rb-inotify-0.8.5 (03 Jun 2011)
+
+  03 Jun 2011; Hans de Graaff <graaff@gentoo.org> +rb-inotify-0.8.5.ebuild,
+  +metadata.xml:
+  Initial import. Optional but usefull dependency for dev-ruby/fssm.
+
