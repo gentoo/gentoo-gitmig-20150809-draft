@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12809 2011/06/02 20:15:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12810 2011/06/03 20:10:34 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (3 Jun 2011)
+# Requires KDE 4.4, which is not in the portage tree anymore.
+# Please unmerge before upgrading KDE, and emerge afterwards
+# net-wireless/bluedevil for bluetooth support in KDE 4.6.
+# Masked for removal in 15 days
+net-wireless/kbluetooth
 
 # Markos Chandras <hwoarang@gentoo.org> (30 May 2011)
 # Broken ebuild. Bug #351697
