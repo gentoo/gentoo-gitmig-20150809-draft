@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24.ebuild,v 1.2 2011/04/12 22:31:39 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24.ebuild,v 1.3 2011/06/03 21:28:41 dilfridge Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils
+inherit eutils autotools
 
 MY_PV=${PV/_p/+nmu}
 DESCRIPTION="Library for handling paper characteristics"
@@ -18,9 +18,14 @@ IUSE=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
+src_prepare() {
+	eautoreconf
+	default
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README ChangeLog debian/changelog || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc README ChangeLog debian/changelog
 	dodir /etc
 	(paperconf 2>/dev/null || echo a4) > "${ED}"/etc/papersize \
 		|| die "papersize config failed"

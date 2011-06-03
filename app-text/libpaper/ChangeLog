@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.42 2011/04/12 22:31:39 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.43 2011/06/03 21:28:41 dilfridge Exp $
+
+  03 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libpaper-1.1.24.ebuild:
+  EAPI bump; regenerate autotools files because of locale brokenness, bug
+  338615
 
   12 Apr 2011; Jonathan Callen <abcd@gentoo.org> libpaper-1.1.24.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords
