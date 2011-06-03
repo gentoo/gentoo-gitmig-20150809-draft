@@ -1,0 +1,10 @@
+--- release-0.2.0/src/seqfile.c.orig
++++ release-0.2.0/src/seqfile.c
+@@ -21,6 +21,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include "seqfile.h"
+ 
+ struct seq_file {

@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/ccglue
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccglue/ChangeLog,v 1.1 2011/06/03 07:06:38 radhermit Exp $
+
+*ccglue-0.2.0 (03 Jun 2011)
+
+  03 Jun 2011; Tim Harder <radhermit@gentoo.org> +ccglue-0.2.0.ebuild,
+  +files/ccglue-0.2.0-string.patch, +metadata.xml:
+  Initial import.
+
