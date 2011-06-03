@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.252 2011/06/03 13:07:33 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.253 2011/06/03 20:20:23 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -154,7 +154,7 @@ detect_version() {
 
 	# if KV_MAJOR >= 3, then we have no more KV_MINOR
 	if [[ ${KV_MAJOR} -lt 3 ]]; then
-		KV_MINOR=$(get_version_component_range 2 )
+		KV_MINOR=$(get_version_component_range 2 ${OKV})
 		KV_PATCH=$(get_version_component_range 3 ${OKV})
 		if [[ ${KV_MAJOR}${KV_MINOR}${KV_PATCH} -ge 269 ]]; then
 	        KV_EXTRA=$(get_version_component_range 4- ${OKV})
