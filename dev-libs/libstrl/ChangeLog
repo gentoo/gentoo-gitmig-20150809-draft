@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libstrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.5 2011/06/02 17:22:06 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.6 2011/06/03 02:29:20 binki Exp $
+
+  02 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> -libstrl-0.3.ebuild:
+  Remove old and broken libstrl-0.3.
 
 *libstrl-0.4 (02 Jun 2011)
 
