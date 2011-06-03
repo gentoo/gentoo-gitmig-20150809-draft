@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/difffilter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.7 2011/05/04 23:31:32 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.8 2011/06/03 19:49:20 binki Exp $
+
+  03 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  -difffilter-0.2.ebuild:
+  Remove old difffilter-0.2.
 
   04 May 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
   Take over difffilter which used to be proxy maintained for me.
