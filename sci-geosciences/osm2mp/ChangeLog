@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/osm2mp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2mp/ChangeLog,v 1.5 2011/06/01 11:51:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2mp/ChangeLog,v 1.6 2011/06/04 07:56:26 scarabeus Exp $
+
+  04 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> osm2mp-0.80.ebuild:
+  Fix removal of l from filenamesuffix that caused doins failures. Bug #369971.
 
   01 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> osm2mp-0.80.ebuild:
   Depend on unzip. Fixes bug #369265.
