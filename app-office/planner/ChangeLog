@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.58 2011/03/16 08:55:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.59 2011/06/04 18:40:12 pacho Exp $
+
+  04 Jun 2011; Pacho Ramos <pacho@gentoo.org> planner-0.14.4.ebuild:
+  Add a note on upstream report for the patch we are applying.
 
   16 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> planner-0.14.4.ebuild:
   Fix slot-deps on gtk+ and other libs
