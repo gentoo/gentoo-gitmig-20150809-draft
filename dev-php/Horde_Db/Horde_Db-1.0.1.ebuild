@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Db/Horde_Db-1.0.1.ebuild,v 1.1 2011/06/04 19:45:25 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Db/Horde_Db-1.0.1.ebuild,v 1.2 2011/06/04 20:03:50 a3li Exp $
 
 EAPI=4
 
@@ -23,8 +23,8 @@ RDEPEND="${DEPEND}"
 src_install() {
 	php-pear-r1_src_install
 
-	cd ${D}/usr/bin/
-	mv horde-db-migrate horde-db-migrate-base
+	cd "${D}/usr/bin/" || die
+	mv horde-db-migrate horde-db-migrate-base || die
 
 	elog "The horde-db-migrate(1) tool has been installed as horde-db-migrate-base"
 	elog "as www-apps/horde provides a similiar script with the same name."
