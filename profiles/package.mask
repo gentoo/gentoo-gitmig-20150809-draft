@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12813 2011/06/04 08:18:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12814 2011/06/04 20:31:00 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (4 June 2011)
+# Dead upstream. Not needed as Google supports
+# IMAP access to mailboxes now. Bug #151470
+# Removal in 30 days
+net-mail/gml
 
 # Tim Harder <radhermit@gentoo.org> (3 June 2011)
 # Mask release candidates
