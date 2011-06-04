@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cmockery
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.1 2011/06/04 15:34:18 radhermit Exp $
+
+*cmockery-0.1.2 (04 Jun 2011)
+
+  04 Jun 2011; Tim Harder <radhermit@gentoo.org> +cmockery-0.1.2.ebuild,
+  +metadata.xml:
+  Initial import (bug #339070).
+
