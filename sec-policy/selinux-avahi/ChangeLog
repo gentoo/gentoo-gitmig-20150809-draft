@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-avahi/ChangeLog,v 1.13 2011/06/02 12:06:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-avahi/ChangeLog,v 1.14 2011/06/04 16:09:37 blueness Exp $
+
+  04 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
+  -selinux-avahi-2.20090730.ebuild, -selinux-avahi-2.20091215.ebuild,
+  -selinux-avahi-20080525.ebuild:
+  Removed deprecated policies
 
   02 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
   selinux-avahi-2.20101213.ebuild:
