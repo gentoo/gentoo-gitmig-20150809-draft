@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-rails
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.38 2010/09/10 10:25:24 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.39 2011/06/04 06:48:57 graaff Exp $
+
+*eselect-rails-0.17 (04 Jun 2011)
+
+  04 Jun 2011; Hans de Graaff <graaff@gentoo.org> +eselect-rails-0.17.ebuild:
+  Support prefix, implements bug 361855.
 
 *eselect-rails-0.16 (10 Sep 2010)
 
