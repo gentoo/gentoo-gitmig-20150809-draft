@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-kerberos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-kerberos/ChangeLog,v 1.17 2011/06/02 12:30:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-kerberos/ChangeLog,v 1.18 2011/06/04 17:15:44 blueness Exp $
+
+  04 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
+  -selinux-kerberos-2.20090730.ebuild, -selinux-kerberos-2.20091215.ebuild,
+  -selinux-kerberos-20080525.ebuild:
+  Removed deprecated policies
 
   02 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
   selinux-kerberos-2.20101213.ebuild:
