@@ -1,6 +1,11 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.54 2011/05/17 18:24:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.55 2011/06/04 17:36:33 pacho Exp $
+
+  04 Jun 2011; Pacho Ramos <pacho@gentoo.org> griffith-0.12.1.ebuild,
+  griffith-9999.ebuild:
+  RDEPEND on splitted python ebuilds (bug #352935 with Markos Chandras
+  approval).
 
   17 May 2011; Markos Chandras <hwoarang@gentoo.org> -griffith-0.11.ebuild,
   -griffith-0.12.ebuild:

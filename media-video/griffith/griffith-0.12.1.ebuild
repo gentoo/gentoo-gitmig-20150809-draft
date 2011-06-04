@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.12.1.ebuild,v 1.3 2011/01/24 13:13:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.12.1.ebuild,v 1.4 2011/06/04 17:36:33 pacho Exp $
 
 EAPI="2"
 
@@ -22,12 +22,13 @@ IUSE="csv doc spell"
 RDEPEND="dev-python/imaging
 	gnome-base/libglade
 	dev-python/pyxml
-	>=dev-python/pygtk-2.6.1
+	>=dev-python/pygtk-2.6.1:2
+	dev-python/pygobject:2
 	dev-python/pysqlite:2
 	>=dev-python/sqlalchemy-0.5.2
 	>=dev-python/reportlab-1.19
 	csv? ( dev-python/chardet )
-	spell? ( >=dev-python/gnome-python-extras-2.0 )"
+	spell? ( dev-python/gtkspell-python )"
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook2X )"
 

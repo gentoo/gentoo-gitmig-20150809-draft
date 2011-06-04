@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.4 2010/10/23 21:38:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.5 2011/06/04 17:36:33 pacho Exp $
 
 EAPI="1"
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/griffith/trunk"
@@ -20,13 +20,14 @@ IUSE="csv doc spell"
 RDEPEND="dev-python/imaging
 	dev-util/glade:3
 	dev-python/pyxml
-	>=dev-python/pygtk-2.6.1
+	>=dev-python/pygtk-2.6.1:2
+	dev-python/pygobject:2
 	dev-python/pysqlite:2
 	>=dev-python/sqlalchemy-0.5.2
 	>=dev-python/reportlab-1.19
 	>=dev-python/sqlalchemy-0.4.6
 	csv? ( dev-python/chardet )
-	spell? ( >=dev-python/gnome-python-extras-2.0 )"
+	spell? ( dev-python/gtkspell-python )"
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook2X )"
 
