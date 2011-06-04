@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.87 2011/04/28 19:25:46 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.88 2011/06/04 21:03:14 grozin Exp $
+
+*maxima-5.24.0-r1 (04 Jun 2011)
+
+  04 Jun 2011; Andrey Grozin <grozin@gentoo.org> -maxima-5.24.0.ebuild,
+  +maxima-5.24.0-r1.ebuild:
+  With USE=ecls, build and install also the ecl library. Also, get rid of
+  maintainer mode (again). Thanks to Francois Bissey <fbissey@slingshot.co.nz>
 
 *maxima-5.24.0 (29 Apr 2011)
 
