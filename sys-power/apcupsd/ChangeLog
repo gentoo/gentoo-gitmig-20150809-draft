@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.68 2011/05/21 08:04:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.69 2011/06/04 18:42:57 flameeyes Exp $
+
+  04 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> files/apcupsd.init.2:
+  Wait 1.5 seconds to see if apcupsd exits diretly.
 
   21 May 2011; Thomas Kahle <tomka@gentoo.org> apcupsd-3.14.8-r1.ebuild:
   x86 stable per bug 363087
