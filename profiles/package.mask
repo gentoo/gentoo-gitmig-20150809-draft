@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12812 2011/06/03 22:43:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12813 2011/06/04 08:18:30 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -407,19 +407,6 @@ dev-util/perf
 # Justin Lecher <jlec@gentoo.org> (04 Mar 2011)
 # Probably API change, packages fail to compile
 ~sci-libs/mmdb-1.23.2
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (04 Mar 2011)
-# Masked for removal in 90 days.
-# Multiple hard to fix and time consuming maintenance problems:
-#  - history of bugs (bug #304527, bug #335101, bug #347175,
-#    bug #349249, bug #356609)
-#  - upstream's binary builds cannot be used on Gentoo
-#    as easily as other -bin packages (ubuntu-specific
-#    library names that require compatibility symlinks,
-#    bundling libraries, mirror/redistribution policy, and so on)
-#  - dependencies for the -bin package are harder to manage;
-#    often we have source compatibility, but not binary compatibility
-www-client/chromium-bin
 
 # Ulrich Mueller <ulm@gentoo.org> (01 Mar 2011)
 # Christian Faulhammer <fauli@gentoo.org>
