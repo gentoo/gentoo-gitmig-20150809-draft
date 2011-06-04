@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.30 2011/05/28 11:39:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.31 2011/06/04 18:58:19 armin76 Exp $
+
+  04 Jun 2011; Raúl Porcel <armin76@gentoo.org> itk-3.4_pre20090417.ebuild:
+  alpha/ia64/sparc stable wrt #363991
 
   28 May 2011; Brent Baude <ranger@gentoo.org> itk-3.4_pre20090417.ebuild:
   Marking itk-3.4_pre20090417 ppc for bug 363991
