@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.1.ebuild,v 1.2 2011/06/04 17:34:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.1.ebuild,v 1.3 2011/06/04 17:37:58 jer Exp $
 
 EAPI="2"
 
@@ -37,18 +37,16 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-sysstat_count() {
-	echo ${#}
-}
-
 src_prepare() {
 	epatch "${FILESDIR}/${P}-nls.patch"
 	local po_count li_count lingua NLSDIR="${S}/nls"
 
-	po_count=$(sysstat_count ${NLSDIR}/*.po)
-	li_count=$(sysstat_count ${SYSSTAT_LINGUAS})
+	count() { echo ${#}; }
+	po_count=$(count ${NLSDIR}/*.po)
+	li_count=$(count ${SYSSTAT_LINGUAS})
 	[[ ${po_count} = ${li_count} ]] \
 		|| die "Number of LINGUAS does not match number of .po files"
+	unset count
 
 	einfo "Keeping these locales: ${LINGUAS}."
 	for lingua in ${SYSSTAT_LINGUAS}; do
