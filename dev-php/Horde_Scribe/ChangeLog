@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/Horde_Scribe
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Scribe/ChangeLog,v 1.1 2011/06/04 19:54:27 a3li Exp $
+
+*Horde_Scribe-1.0.0 (04 Jun 2011)
+
+  04 Jun 2011; Alex Legler <a3li@gentoo.org> +Horde_Scribe-1.0.0.ebuild,
+  +metadata.xml:
+  Initial commit, part of Horde 4.
+
