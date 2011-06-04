@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.11.0.1.ebuild,v 1.2 2011/03/20 19:59:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.11.2.ebuild,v 1.1 2011/06/04 18:05:45 grozin Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ inherit autotools wxwidgets python versionator toolchain-funcs
 
 DESCRIPTION="Math Graphics Library"
 HOMEPAGE="http://mathgl.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz mirror://sourceforge/${PN}/STIX_font.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz mirror://sourceforge/${PN}/STIX_font.tgz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -29,7 +29,7 @@ RDEPEND="media-libs/libpng
 	jpeg? ( virtual/jpeg )
 	hdf5? ( >=sci-libs/hdf5-1.8 )
 	gsl? ( sci-libs/gsl )
-	octave? ( sci-mathematics/octave )
+	octave? ( >=sci-mathematics/octave-3.4.0 )
 	qt4? ( x11-libs/qt-gui:4 )
 	wxwidgets? ( x11-libs/wxGTK:2.8 )"
 DEPEND="${RDEPEND}
@@ -61,6 +61,9 @@ src_unpack() {
 src_prepare() {
 	# bug #267061
 	epatch "${FILESDIR}"/${PN}-1.10.2-gcc43.patch
+
+	# bug #358245
+	epatch "${FILESDIR}"/${PN}-octave-3.4.patch
 
 	# correct location of numpy/arrayobject.h
 	if use python; then
