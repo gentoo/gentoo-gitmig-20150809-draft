@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.118 2011/06/01 21:38:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.119 2011/06/04 08:20:22 phajdan.jr Exp $
+
+  04 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> uw-imap-2007e-r1.ebuild:
+  x86 stable wrt security bug #235227
 
 *uw-imap-2007e-r1 (01 Jun 2011)
 
