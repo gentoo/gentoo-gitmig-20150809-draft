@@ -1,17 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.0_beta2.ebuild,v 1.2 2011/05/29 23:17:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.0.ebuild,v 1.1 2011/06/04 16:54:26 hwoarang Exp $
 
 EAPI=2
-inherit gnome2-utils eutils games
-
-MY_PV=${PV/_/-}
-MY_P=${PN}-${MY_PV}
+inherit gnome2-utils games
 
 DESCRIPTION="A 2D space trading and combat game, in a similar vein to Escape Velocity"
 HOMEPAGE="http://code.google.com/p/naev/"
-SRC_URI="http://naev.googlecode.com/files/${MY_P}.tar.bz2
-	http://naev.googlecode.com/files/ndata-${MY_PV}"
+SRC_URI="mirror://sourceforge/naev/${P}.tar.bz2
+	mirror://sourceforge/naev/ndata-${PV}"
 
 LICENSE="GPL-2 GPL-3 public-domain CCPL-Attribution-3.0 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
@@ -31,10 +28,8 @@ RDEPEND="media-libs/libsdl[X,audio,video]
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${MY_P}
-
 src_unpack() {
-	unpack ${MY_P}.tar.bz2
+	unpack ${P}.tar.bz2
 }
 
 src_configure() {
@@ -54,7 +49,7 @@ src_install() {
 		install || die
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	newins "${DISTDIR}"/ndata-${MY_PV} ndata || die
+	newins "${DISTDIR}"/ndata-${PV} ndata || die
 
 	local res
 	for res in 16 64 128 256; do
@@ -62,7 +57,8 @@ src_install() {
 		newins extras/logos/logo${res}.png naev.png || die
 	done
 
-	domenu naev.desktop
+	rm -f "${D}"/usr/share/doc/${PF}/LICENSE
+	prepalldocs
 
 	prepgamesdirs
 }
