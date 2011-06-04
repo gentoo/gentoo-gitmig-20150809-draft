@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wepdecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.15 2011/03/20 20:02:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.16 2011/06/04 06:49:34 jlec Exp $
+
+  04 Jun 2011; Justin Lecher <jlec@gentoo.org> wepdecrypt-0.8.ebuild,
+  wepdecrypt-0.8-r1.ebuild, +files/wepdecrypt-0.8-fltk.patch:
+  Fix detection of fltk:1, #359645
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> wepdecrypt-0.8.ebuild,
   wepdecrypt-0.8-r1.ebuild:

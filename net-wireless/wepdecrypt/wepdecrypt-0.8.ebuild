@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.9 2011/03/20 20:02:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.10 2011/06/04 06:49:34 jlec Exp $
 
-EAPI="1"
+EAPI=1
 
 inherit eutils
 
 MY_P="${P}"
+
 DESCRIPTION="Enhanced version of WepAttack a tool for breaking 802.11 WEP keys"
 HOMEPAGE="http://wepdecrypt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/wepdecrypt/${MY_P}.tar.gz"
@@ -15,11 +16,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
-RDEPEND="X? ( x11-libs/fltk:1 )
-	sys-libs/zlib
+RDEPEND="
+	dev-libs/openssl
 	net-libs/libpcap
-	dev-libs/openssl"
-
+	sys-libs/zlib
+	X? ( x11-libs/fltk:1 )"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
