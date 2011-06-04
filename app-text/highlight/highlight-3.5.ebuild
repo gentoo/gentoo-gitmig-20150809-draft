@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.4.ebuild,v 1.3 2011/06/02 19:17:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.5.ebuild,v 1.1 2011/06/04 08:12:54 radhermit Exp $
 
 EAPI=4
 
