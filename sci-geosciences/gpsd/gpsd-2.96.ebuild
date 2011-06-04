@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96.ebuild,v 1.2 2011/05/16 11:07:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96.ebuild,v 1.3 2011/06/04 08:03:01 scarabeus Exp $
 
 EAPI=3
 
@@ -70,14 +70,13 @@ src_configure() {
 	done
 
 	if ! use qt4 ;  then
-		myopts+=" --disable-libQgpsmm --disable-libgpsmm ${myopts}"
+		myopts+=" --disable-libQgpsmm --disable-libgpsmm"
 	fi
 
 	# --disable-bluetooth: considered experimental -> disable
 	# Hack to make it not generate docs on the fly; xmlto is
 	# needed for man pages (xsltproc is only needed for web pages)
 	WITH_XMLTO=yes WITH_XSLTPROC=no econf \
-		--build=${CBUILD} \
 		--disable-dependency-tracking \
 		--disable-bluetooth \
 		--disable-static \
