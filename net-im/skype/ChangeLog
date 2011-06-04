@@ -1,6 +1,12 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.115 2011/04/07 09:24:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.116 2011/06/04 17:38:34 hwoarang Exp $
+
+*skype-2.2.0.35 (04 Jun 2011)
+
+  04 Jun 2011; Markos Chandras <hwoarang@gentoo.org> skype-2.1.0.81.ebuild,
+  +skype-2.2.0.35.ebuild:
+  Version bump. Bug #369827. Drop stable amd64 keyword. Bug #357475
 
 *skype-2.2.0.25 (07 Apr 2011)
 

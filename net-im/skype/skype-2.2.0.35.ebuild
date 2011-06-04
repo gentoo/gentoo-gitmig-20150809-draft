@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.1.0.81.ebuild,v 1.10 2011/06/04 17:38:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35.ebuild,v 1.1 2011/06/04 17:38:34 hwoarang Exp $
 
-EAPI=3
-inherit gnome2-utils eutils qt4 pax-utils
+EAPI=4
+inherit gnome2-utils eutils qt4-r2 pax-utils
 
 SFILENAME=${PN}_static-${PV}.tar.bz2
 DFILENAME=${P}.tar.bz2
