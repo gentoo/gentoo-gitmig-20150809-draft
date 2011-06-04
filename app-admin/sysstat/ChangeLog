@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.195 2011/06/03 14:11:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.196 2011/06/04 17:34:01 jer Exp $
+
+  04 Jun 2011; Jeroen Roovers <jer@gentoo.org> sysstat-10.0.1.ebuild:
+  Add a simple linguas counter. Die() when removing lingua fails.
 
 *sysstat-10.0.1 (03 Jun 2011)
 
