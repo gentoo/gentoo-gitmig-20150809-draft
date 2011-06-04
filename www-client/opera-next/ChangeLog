@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.13 2011/06/01 14:43:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.14 2011/06/04 17:54:09 jer Exp $
+
+  04 Jun 2011; Jeroen Roovers <jer@gentoo.org> opera-next-11.50.1031.ebuild:
+  Add a simple linguas counter.
 
 *opera-next-11.50.1031 (01 Jun 2011)
 

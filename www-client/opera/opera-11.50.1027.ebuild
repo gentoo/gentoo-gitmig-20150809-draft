@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.50.1027.ebuild,v 1.1 2011/05/31 07:16:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.50.1027.ebuild,v 1.2 2011/06/04 17:51:13 jer Exp $
 
 EAPI="3"
 
@@ -99,9 +99,19 @@ src_unpack() {
 }
 
 src_prepare() {
+	local LNGDIR="share/${PN}/locale"
+
+	# Count linguas
+	count() { echo ${#}; }
+	local lingua_count=$(count ${O_LINGUAS} en)
+	local locale_count=$(count ${LNGDIR}/*)
+	[[ ${lingua_count} = ${locale_count} ]] \
+		|| die "Number of LINGUAS does not match number of locales"
+	unset count
+
 	# Remove unwanted linguas
-	LNGDIR="share/${PN}/locale"
 	einfo "Keeping these locales (linguas): ${LINGUAS}."
+
 	for LINGUA in ${O_LINGUAS}; do
 		if ! use linguas_${LINGUA/-/_}; then
 			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
