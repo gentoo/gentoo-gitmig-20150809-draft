@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.62 2011/05/02 20:05:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.63 2011/06/04 05:52:35 naota Exp $
+
+*rcairo-1.10.0-r4 (04 Jun 2011)
+
+  04 Jun 2011; Naohiro Aota <naota@gentoo.org> +rcairo-1.10.0-r4.ebuild:
+  Support ruby19
 
   02 May 2011; Hans de Graaff <graaff@gentoo.org> +rcairo-1.8.1.ebuild:
   Add back rcairo 1.8.1 until newer versions go together with
