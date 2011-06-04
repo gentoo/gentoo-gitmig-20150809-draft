@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r1.ebuild,v 1.3 2011/05/10 19:48:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r2.ebuild,v 1.1 2011/06/04 18:01:13 dilfridge Exp $
 
 EAPI=4
 
@@ -135,6 +135,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.6.2-nonepomuk.patch"
 	"${FILESDIR}/${PN}-4.6.3-no_suid_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.6.3-use_QWeakPointer.patch"
+	"${FILESDIR}/${PN}-4.6.3-doublepost.patch"
 )
 
 pkg_pretend() {
