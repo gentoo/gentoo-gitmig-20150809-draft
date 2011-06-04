@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/udav-0.6.1.ebuild,v 1.1 2010/03/08 19:16:04 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/udav-0.7.1.2.ebuild,v 1.1 2011/06/04 20:18:08 grozin Exp $
 
 EAPI=2
 inherit qt4 fdo-mime
@@ -11,13 +11,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RDEPEND=">=sci-libs/mathgl-1.10.1[qt4,hdf5]"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+RDEPEND=">=sci-libs/mathgl-1.10.2[qt4,hdf5]"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-pro.patch
-	rm src/Makefile || die "no src/Makefile"
 }
 
 src_compile() {
