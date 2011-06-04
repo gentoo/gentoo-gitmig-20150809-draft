@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.3.ebuild,v 1.11 2011/04/10 09:37:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-2.30.3.ebuild,v 1.12 2011/06/04 18:38:23 pacho Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -29,6 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.11:2
 		>=dev-python/pygtk-2 )
 	!<gnome-base/gnome-applets-2.22.0"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	>=dev-util/intltool-0.40.3
 	>=dev-util/pkgconfig-0.19
 	>=dev-util/gtk-doc-am-1.9

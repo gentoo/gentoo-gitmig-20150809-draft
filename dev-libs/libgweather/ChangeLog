@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.78 2011/04/10 09:37:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.79 2011/06/04 18:38:23 pacho Exp $
+
+  04 Jun 2011; Pacho Ramos <pacho@gentoo.org> -libgweather-2.30.2.ebuild,
+  libgweather-2.30.3.ebuild:
+  DEPEND on sys-devel/gettext per bug #368527 by Cédric Jeanneret. Remove old.
 
   10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   libgweather-2.30.3.ebuild:
