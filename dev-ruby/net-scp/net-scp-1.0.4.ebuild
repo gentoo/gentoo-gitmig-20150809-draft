@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4.ebuild,v 1.6 2011/05/26 21:19:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/net-scp-1.0.4.ebuild,v 1.7 2011/06/04 17:11:04 armin76 Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -17,7 +17,7 @@ HOMEPAGE="http://net-ssh.rubyforge.org/scp"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ia64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "

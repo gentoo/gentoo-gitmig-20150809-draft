@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.66 2011/05/26 21:20:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.67 2011/06/04 17:12:34 armin76 Exp $
+
+  04 Jun 2011; Raúl Porcel <armin76@gentoo.org> capistrano-2.5.20.ebuild:
+  ia64 stable wrt #321103
 
   26 May 2011; Markus Meier <maekke@gentoo.org> capistrano-2.5.20.ebuild:
   x86 stable, bug #321103
