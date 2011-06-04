@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/gnubiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.32 2011/03/23 20:40:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.33 2011/06/04 20:14:09 eras Exp $
+
+*gnubiff-2.2.13-r2 (04 Jun 2011)
+
+  04 Jun 2011; Eray Aslan <eras@gentoo.org> +gnubiff-2.2.13-r2.ebuild,
+  +files/gnubiff-2.2.13-gold.patch:
+  Fix linking with gold - bug #369563. EAPI bump
 
   23 Mar 2011; Tim Harder <radhermit@gentoo.org> gnubiff-2.2.13-r1.ebuild:
   Use slot dependency for gtk+.
