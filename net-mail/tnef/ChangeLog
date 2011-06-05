@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/tnef
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.50 2010/09/30 21:33:50 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.51 2011/06/05 18:12:48 eras Exp $
+
+*tnef-1.4.8 (05 Jun 2011)
+
+  05 Jun 2011; Eray Aslan <eras@gentoo.org> -tnef-1.4.6.ebuild,
+  +tnef-1.4.8.ebuild:
+  Version bump. Remove old.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> tnef-1.4.7.ebuild:
   stable ppc64, bug 323427
