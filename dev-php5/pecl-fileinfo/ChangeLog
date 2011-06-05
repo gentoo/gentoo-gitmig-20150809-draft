@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-fileinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.35 2011/05/14 14:33:51 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-fileinfo/ChangeLog,v 1.36 2011/06/05 10:54:25 olemarkus Exp $
+
+  05 Jun 2011; <olemarkus@gentoo.org> -pecl-fileinfo-1.0.4.ebuild,
+  -pecl-fileinfo-1.0.4-r1.ebuild:
+  Removed versions support major version slotting. Includes dropping keyword
+  for ppc/ppc64
 
   14 May 2011; Thomas Kahle <tomka@gentoo.org> pecl-fileinfo-1.0.4-r2.ebuild:
   x86 stable per bug 363811
