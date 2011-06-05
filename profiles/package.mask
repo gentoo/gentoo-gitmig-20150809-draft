@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12816 2011/06/05 16:32:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12817 2011/06/05 16:44:35 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,13 +31,17 @@
 
 #--- END OF EXAMPLES ---
 
-# Eray Aslan <eras@gentoo.org> (4 June 2011)
+# Jeroen Roovers <jer@gentoo.org> (5 Jun 2011)
+# Masked until bug #370163 is resolved.
+>=sys-block/parted-3.0
+
+# Eray Aslan <eras@gentoo.org> (4 Jun 2011)
 # Dead upstream. Not needed as Google supports
 # IMAP access to mailboxes now. Bug #151470
 # Removal in 30 days
 net-mail/gml
 
-# Tim Harder <radhermit@gentoo.org> (3 June 2011)
+# Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
 =app-office/scribus-1.4.0_rc*
 
