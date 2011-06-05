@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/gnome-speech
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.144 2010/07/20 14:56:53 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.145 2011/06/05 17:32:15 pacho Exp $
+
+*gnome-speech-0.4.25-r1 (05 Jun 2011)
+
+  05 Jun 2011; Pacho Ramos <pacho@gentoo.org> +gnome-speech-0.4.25-r1.ebuild,
+  +files/gnome-speech-0.4.25-disable-java.patch:
+  Drop java support as configure is completly broken and makes that support
+  automagic (bug #188136), also, looks like nothing in the tree needs that
+  support and other distributions are already suppling this without java
+  support for a long time.
 
   20 Jul 2010; Jeroen Roovers <jer@gentoo.org> gnome-speech-0.4.25.ebuild:
   Drop HPPA keywording (bug #324511).
