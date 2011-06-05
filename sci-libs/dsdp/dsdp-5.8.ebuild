@@ -1,14 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8.ebuild,v 1.2 2011/03/14 17:22:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8.ebuild,v 1.3 2011/06/05 12:19:57 jlec Exp $
 
-EAPI="4"
+EAPI=4
+
 inherit eutils toolchain-funcs versionator
 
 MYP=DSDP${PV}
+
 DESCRIPTION="Software for interior-point for semidefinite programming"
-HOMEPAGE="http://www.mcs.anl.gov/hs/software/DSDP"
-SRC_URI="${HOMEPAGE}/${MYP}.tar.gz"
+HOMEPAGE="http://www.mcs.anl.gov/hs/software/DSDP/"
+SRC_URI="http://www.mcs.anl.gov/hs/software/DSDP//${MYP}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -31,7 +33,9 @@ make_shared_lib() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-readsdpa.patch
+	epatch \
+		"${FILESDIR}"/${P}-readsdpa.patch \
+		"${FILESDIR}"/${P}-gold.patch
 	# to do proper parallel compilation
 	find . -name Makefile -exec \
 		sed -i -e 's:make :$(MAKE) :g' '{}' \;
