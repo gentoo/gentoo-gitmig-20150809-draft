@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.19 2011/04/10 19:18:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.20 2011/06/05 12:08:48 slyfox Exp $
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  -files/darcs-1.0.8-ghc66.patch, -darcs-1.0.9.ebuild,
+  -files/darcs-1.1.0pre1-ghc68.patch, -darcs-2.0.2.ebuild,
+  -files/darcs-2.0.2-add-dummy-base-dependency.diff, -darcs-2.1.0-r1.ebuild,
+  -darcs-2.2.1.ebuild, -darcs-2.4.4.ebuild:
+  Removed old.
 
   10 Apr 2011; Fabian Groffen <grobian@gentoo.org> darcs-2.4.4-r1.ebuild:
   Marked ~x86-macos, fixed for Prefix (EAPI=3)
