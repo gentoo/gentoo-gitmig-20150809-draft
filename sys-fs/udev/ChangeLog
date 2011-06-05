@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.578 2011/06/05 18:24:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.579 2011/06/05 19:59:06 zzam Exp $
+
+*udev-171 (05 Jun 2011)
+
+  05 Jun 2011; Matthias Schwarzott <zzam@gentoo.org> +udev-171.ebuild,
+  udev-9999.ebuild, metadata.xml:
+  Version bumped, Bug #368331. Split extras use flag into a lot small ones, Bug
+  #348472. Fix cross compiling issue, Bug #360397. Use systemd eclass, Bug
+  #365943. Update minimum required kernel version.
 
   05 Jun 2011; Jeroen Roovers <jer@gentoo.org> udev-164-r2.ebuild:
   Stable for HPPA (bug #352827).
