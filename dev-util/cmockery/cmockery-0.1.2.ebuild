@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/cmockery-0.1.2.ebuild,v 1.1 2011/06/04 15:34:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/cmockery-0.1.2.ebuild,v 1.2 2011/06/05 10:58:51 radhermit Exp $
 
 EAPI=4
 
@@ -37,5 +37,5 @@ src_install() {
 		docompress -x /usr/share/doc/${PF}/examples
 	fi
 
-	use static-libs || find "${D}" -name '*.la' -exec rm -f '{}' +
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f '{}' +
 }
