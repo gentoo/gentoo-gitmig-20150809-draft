@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.143 2011/05/21 16:14:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.144 2011/06/05 10:03:14 olemarkus Exp $
+
+*PEAR-PEAR-1.9.3 (05 Jun 2011)
+
+  05 Jun 2011; <olemarkus@gentoo.org> +PEAR-PEAR-1.9.3.ebuild:
+  Version bump
 
 *PEAR-PEAR-1.9.2-r2 (21 May 2011)
 
