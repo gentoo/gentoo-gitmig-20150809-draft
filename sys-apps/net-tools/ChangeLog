@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.109 2011/06/02 13:10:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.110 2011/06/05 10:24:34 maekke Exp $
+
+  05 Jun 2011; Markus Meier <maekke@gentoo.org>
+  net-tools-1.60_p20110409135728.ebuild:
+  arm stable, bug #368061
 
   02 Jun 2011; Markus Meier <maekke@gentoo.org>
   net-tools-1.60_p20110409135728.ebuild:
