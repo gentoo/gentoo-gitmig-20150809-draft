@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-drizzle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-drizzle/ChangeLog,v 1.3 2010/10/15 14:58:01 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-drizzle/ChangeLog,v 1.4 2011/06/05 10:11:34 olemarkus Exp $
+
+*pecl-drizzle-0.4.2-r1 (05 Jun 2011)
+
+  05 Jun 2011; <olemarkus@gentoo.org> +pecl-drizzle-0.4.2-r1.ebuild:
+  Upgraded EAPI version and php-ext eclass version to work with minor version
+  slotted PHP. Ref bug 363825
 
   15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   pecl-drizzle-0.4.2.ebuild:
