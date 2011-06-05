@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vqadmin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.9 2008/04/06 19:42:23 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vqadmin/ChangeLog,v 1.10 2011/06/05 14:46:04 eras Exp $
+
+  05 Jun 2011; Eray Aslan <eras@gentoo.org> metadata.xml:
+  herd net-mail -> no-herd
 
   06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> vqadmin-2.3.7.ebuild:
   use qmail.eclass
