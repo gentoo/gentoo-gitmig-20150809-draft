@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/cabal-install
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.5 2010/10/02 21:37:04 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.6 2011/06/05 12:29:37 slyfox Exp $
+
+*cabal-install-0.8.2 (05 Jun 2011)
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-0.8.2.ebuild, +files/cabal-install-0.8-nopref.patch,
+  metadata.xml:
+  Version bump.
 
   02 Oct 2010; Sergei Trofimovich <slyfox@gentoo.org>
   cabal-install-0.8.0.ebuild:
