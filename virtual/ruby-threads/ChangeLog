@@ -1,0 +1,15 @@
+# ChangeLog for virtual/ruby-threads
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.1 2011/06/05 09:10:10 graaff Exp $
+
+*ruby-threads-3 (05 Jun 2011)
+*ruby-threads-2 (05 Jun 2011)
+*ruby-threads-1 (05 Jun 2011)
+*ruby-threads-0 (05 Jun 2011)
+
+  05 Jun 2011; Hans de Graaff <graaff@gentoo.org> +ruby-threads-0.ebuild,
+  +ruby-threads-1.ebuild, +ruby-threads-2.ebuild, +ruby-threads-3.ebuild,
+  +metadata.xml:
+  Virtual to be able to request a version of the ruby interpreter with threads
+  enabled.
+
