@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.54 2011/04/25 08:51:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.55 2011/06/05 13:45:05 slyfox Exp $
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -network-1.0.ebuild,
+  -files/network-2.2.0.0-ghc-6.10-build-fix.patch, -network-2.2.1.ebuild,
+  -network-2.2.1.4.ebuild:
+  Removed old.
 
 *network-2.3.0.2 (25 Apr 2011)
 
