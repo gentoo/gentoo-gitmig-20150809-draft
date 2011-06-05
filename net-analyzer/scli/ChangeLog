@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.10 2011/06/01 02:15:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.11 2011/06/05 13:12:27 xarthisius Exp $
+
+  05 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> scli-0.4.0.ebuild:
+  Marked ~ppc wrt #369595
 
 *scli-0.4.0 (01 Jun 2011)
 

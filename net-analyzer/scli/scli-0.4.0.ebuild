@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.4.0.ebuild,v 1.1 2011/06/01 02:15:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.4.0.ebuild,v 1.2 2011/06/05 13:12:27 xarthisius Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ibr.cs.tu-bs.de/pub/local/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
 RDEPEND="
