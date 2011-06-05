@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.5 2011/06/05 13:01:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.28.4.ebuild,v 1.6 2011/06/05 13:07:34 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}
 		~app-text/docbook-xml-dtd-4.1.2
 		x11-libs/libXft )
 	X? ( x11-proto/xproto )
-	!~sys-devel/autoconf-2.63"
+	!<=sys-devel/autoconf-2.63:2.5"
 
 function multilib_enabled() {
 	has_multilib_profile || ( use x86 && [ "$(get_libdir)" = "lib32" ] )
