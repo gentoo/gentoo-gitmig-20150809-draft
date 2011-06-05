@@ -1,6 +1,16 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.318 2011/04/02 12:03:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.319 2011/06/05 12:55:10 pacho Exp $
+
+*totem-2.32.0-r2 (05 Jun 2011)
+
+  05 Jun 2011; Pacho Ramos <pacho@gentoo.org> +totem-2.32.0-r2.ebuild:
+  Try to handle a bit better bug #316409: youtube plugin needs --enable-python
+  to be passed due upstream bug #572713, we was workarounding this defaulting
+  to USE=+python, after this change, people will be able to set USE=-python to
+  skip python based plugins but python RDEPEND will still be pulled in by
+  'youtube' USE flag as it still needs it. Also add some comments about vala
+  plugins that will probably be enabled in totem-3.
 
 *totem-2.32.0-r1 (02 Apr 2011)
 
