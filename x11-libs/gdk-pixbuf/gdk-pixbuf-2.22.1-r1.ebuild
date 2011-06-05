@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1-r1.ebuild,v 1.2 2011/04/29 00:55:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.22.1-r1.ebuild,v 1.3 2011/06/05 12:25:59 pacho Exp $
 
 EAPI="3"
 
@@ -34,6 +34,8 @@ DEPEND="${RDEPEND}
 	doc? (
 		>=dev-util/gtk-doc-1.11
 		~app-text/docbook-xml-dtd-4.1.2 )"
+# Needed as reported in bug #363715
+PDEPEND="gnome-base/librsvg"
 
 src_prepare() {
 	# Only build against libX11 if the user wants to do so

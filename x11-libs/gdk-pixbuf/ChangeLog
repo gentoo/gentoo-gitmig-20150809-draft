@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.14 2011/04/29 00:55:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.15 2011/06/05 12:25:59 pacho Exp $
+
+  05 Jun 2011; Pacho Ramos <pacho@gentoo.org> -gdk-pixbuf-2.22.0.ebuild,
+  gdk-pixbuf-2.22.1-r1.ebuild:
+  PDEPEND on gnome-base/librsvg as reported in bug #363715 by Cedric. Remove
+  old.
 
   29 Apr 2011; Jeroen Roovers <jer@gentoo.org> gdk-pixbuf-2.22.1-r1.ebuild:
   Marked ~hppa (bug #364693).
