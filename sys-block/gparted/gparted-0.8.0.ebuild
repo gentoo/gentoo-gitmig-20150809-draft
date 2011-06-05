@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.8.0.ebuild,v 1.2 2011/05/11 08:56:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.8.0.ebuild,v 1.3 2011/06/05 21:43:30 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -19,6 +19,7 @@ IUSE="btrfs dmraid fat gtk hfs jfs kde mdadm ntfs reiserfs reiser4 xfs"
 
 # FIXME: add gpart support
 common_depends=">=sys-block/parted-2.3
+	<sys-block/parted-3
 	>=dev-cpp/gtkmm-2.16:2.4"
 
 RDEPEND="${common_depends}
