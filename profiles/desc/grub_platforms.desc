@@ -1,0 +1,17 @@
+# Copyright 2011-2011 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/grub_platforms.desc,v 1.1 2011/06/05 10:13:33 scarabeus Exp $
+
+# This file contains descriptions of GRUB_PLATFORMS USE_EXPAND flags.
+
+# Keep it sorted.
+
+coreboot - Coreboot platform support
+efi - EFI platform support
+emu - Emulation platform support
+ieee1275 - IEEE1275 pltaform support
+multiboot - Multiboot platform support
+pc - PC platform suppport
+qemu - QEMU platform support
+qemu-mips - QEMU MIPS platform support
+yeeloong - YEEELONG MIPS platform support
