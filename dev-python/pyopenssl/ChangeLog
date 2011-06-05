@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.78 2011/05/31 13:49:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.79 2011/06/05 20:10:18 jer Exp $
+
+  05 Jun 2011; Jeroen Roovers <jer@gentoo.org> pyopenssl-0.12.ebuild:
+  Stable for HPPA (bug #368085).
 
   31 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyopenssl-0.12.ebuild:
   x86 stable wrt bug #368085
