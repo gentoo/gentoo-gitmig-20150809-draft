@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.33 2011/04/09 16:23:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.34 2011/06/05 15:18:58 eras Exp $
+
+  05 Jun 2011; Eray Aslan <eras@gentoo.org> metadata.xml:
+  Change herd: net-mail -> no-herd - bug #370143
 
   09 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   vmailmgr-0.97-r1.ebuild, +files/vmailmgr-0.97-python.patch:
