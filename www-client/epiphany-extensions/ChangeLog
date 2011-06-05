@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.147 2011/04/28 18:47:12 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.148 2011/06/05 09:56:32 pacho Exp $
+
+*epiphany-extensions-2.32.0-r1 (05 Jun 2011)
+
+  05 Jun 2011; Pacho Ramos <pacho@gentoo.org>
+  -epiphany-extensions-2.30.2.ebuild, +epiphany-extensions-2.32.0-r1.ebuild:
+  Add support for adblock extension as reported by Jani Kananen in bug #370081,
+  the problem was fixed by upstream in newer glib versions time ago, RDEPENDing
+  then on glib version I have used to confirm the original problem went away.
+  Remove old.
 
   28 Apr 2011; Mark Loeser <halcy0n@gentoo.org>
   -epiphany-extensions-2.26.1-r1.ebuild:

@@ -1,27 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.30.2.ebuild,v 1.4 2011/03/21 23:24:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.32.0-r1.ebuild,v 1.1 2011/06/05 09:56:32 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
+PYTHON_DEPEND="2"
 
-inherit gnome2 versionator
-
-MY_MAJORV=$(get_version_component_range 1-2)
+inherit gnome2 python
 
 DESCRIPTION="Extensions for the Epiphany web browser"
-HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
+HOMEPAGE="http://projects.gnome.org/epiphany/extensions.html"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus examples pcre"
 
-RDEPEND=">=www-client/epiphany-${MY_MAJORV}
+RDEPEND=">=www-client/epiphany-2.30.0
 	app-text/opensp
-	>=dev-libs/glib-2.15.5:2
+	>=dev-libs/glib-2.28.7:2
 	>=gnome-base/gconf-2.0:2
 	>=dev-libs/libxml2-2.6:2
-	>=x11-libs/gtk+-2.19.5:2
+	>=x11-libs/gtk+-2.21.6:2
 	>=net-libs/webkit-gtk-1.1:2
 
 	dbus? ( >=dev-libs/dbus-glib-0.34 )
@@ -33,33 +34,29 @@ DEPEND="${RDEPEND}
 # eautoreconf dependencies:
 #	  gnome-base/gnome-common
 
-DOCS="AUTHORS ChangeLog HACKING NEWS README"
-
-# FIXME: Open security issues:
-# FIXME: - adblock        ( https://bugzilla.gnome.org/show_bug.cgi?id=595255 )
 # FIXME: broken extensions:
 # FIXME: - session-saver  ( https://bugzilla.gnome.org/show_bug.cgi?id=316245 )
 
 pkg_setup() {
 	local extensions=""
-
 	extensions="actions auto-reload auto-scroller certificates \
 			   error-viewer extensions-manager-ui gestures html5tube \
 			   java-console livehttpheaders page-info permissions \
 			   push-scroller select-stylesheet \
 			   smart-bookmarks soup-fly tab-groups tab-states"
 	use dbus && extensions="${extensions} rss"
-
-	use pcre && extensions="${extensions} greasemonkey"
-
+	use pcre && extensions="${extensions} adblock greasemonkey"
 	use examples && extensions="${extensions} sample"
 
 	G2CONF="${G2CONF}
 		--disable-maintainer-mode
 		--with-extensions=$(echo "${extensions}" | sed -e 's/[[:space:]]\+/,/g')"
+	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+
+	python_set_active_version 2
 }
 
-src_install() {
-	gnome2_src_install
-	find "${D}" -name "*.la" -delete || die "remove of la files failed"
+src_prepare() {
+	gnome2_src_prepare
+	python_convert_shebangs -r 2 .
 }
