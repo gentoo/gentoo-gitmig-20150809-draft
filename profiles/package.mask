@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12817 2011/06/05 16:44:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12818 2011/06/05 23:38:40 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -115,11 +115,6 @@ net-p2p/ghostwhitecrab
 # No upstream, no in-tree dependencies. Does not build.
 # Bug #334779. Pending removal in 30 days
 media-libs/sdl-gui
-
-# Markos Chandras <hwoarang@gentoo.org> (21 May 2011)
-# Does not build ( #363163 ) and no active upstream.
-# Masked for removal in 30 days
-net-misc/guidedog
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 May 2011)
 # Some abandonware that fails to build with linux-headers-2.6.38,
