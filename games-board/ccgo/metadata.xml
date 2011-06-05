@@ -2,10 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<longdescription>
-Go is an ancient boardgame, very common in Japan, China and Korea.
-
-qGo is a Go client and full featured SGF editor, available for 
-Linux/Windows and MacOS X. qGo code is C++/Qt and it's free.
-</longdescription>
 </pkgmetadata>
