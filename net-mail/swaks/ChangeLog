@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/swaks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.14 2010/06/16 05:43:51 dragonheart Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/ChangeLog,v 1.15 2011/06/05 19:09:13 eras Exp $
+
+  05 Jun 2011; Eray Aslan <eras@gentoo.org> -swaks-20061116.0.ebuild:
+  Remove old.
 
 *swaks-20100211.0 (16 Jun 2010)
 
