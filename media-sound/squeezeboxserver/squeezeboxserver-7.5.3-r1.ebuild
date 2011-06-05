@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.3.ebuild,v 1.2 2011/04/24 16:19:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.3-r1.ebuild,v 1.1 2011/06/05 16:06:47 lavajoe Exp $
 
 EAPI="3"
 
@@ -156,7 +156,7 @@ src_prepare() {
 
 	# Copy in the module builder - can't run it from the files directory in case
 	# Portage is mounted 'noexec'.
-	cp "${FILESDIR}/build-modules-${PVR}.sh" "${S}/build-modules.sh"	|| die
+	cp "${FILESDIR}/build-modules-${PV}.sh" "${S}/build-modules.sh"	|| die
 	chmod 555 "${S}/build-modules.sh"			|| die
 }
 
@@ -228,7 +228,7 @@ src_install() {
 
 	# Install init scripts
 	newconfd "${FILESDIR}/squeezeboxserver.conf.d" squeezeboxserver
-	newinitd "${FILESDIR}/squeezeboxserver.init.d" squeezeboxserver
+	newinitd "${FILESDIR}/squeezeboxserver.init.d.baselayout1" squeezeboxserver
 
 	# Install the SQL configuration scripts
 	insinto "${SHAREDIR}/SQL/mysql"

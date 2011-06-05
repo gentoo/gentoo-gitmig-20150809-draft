@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/squeezeboxserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/ChangeLog,v 1.17 2011/05/14 15:26:12 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/ChangeLog,v 1.18 2011/06/05 16:06:47 lavajoe Exp $
+
+*squeezeboxserver-7.5.4-r1 (05 Jun 2011)
+*squeezeboxserver-7.5.3-r1 (05 Jun 2011)
+*squeezeboxserver-7.5.1-r2 (05 Jun 2011)
+
+  05 Jun 2011; Joe Peterson <lavajoe@gentoo.org>
+  -squeezeboxserver-7.5.1-r1.ebuild, +squeezeboxserver-7.5.1-r2.ebuild,
+  -files/build-modules-7.5.1-r1.sh, +files/build-modules-7.5.1.sh,
+  -squeezeboxserver-7.5.3.ebuild, +squeezeboxserver-7.5.3-r1.ebuild,
+  -squeezeboxserver-7.5.4.ebuild, +squeezeboxserver-7.5.4-r1.ebuild,
+  +files/squeezeboxserver.init.d.baselayout1, files/squeezeboxserver.init.d:
+  Fix init script to set pidfile (bug #367995); revert to old (pre-baselayout2)
+  init scripts for old versions that do not require baselayout2
 
 *squeezeboxserver-7.5.4 (14 May 2011)
 
