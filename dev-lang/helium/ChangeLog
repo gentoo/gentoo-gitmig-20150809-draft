@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/helium
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.26 2010/08/29 19:18:34 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.27 2011/06/05 11:45:18 slyfox Exp $
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -helium-1.2-r1.ebuild,
+  -files/helium-1.2-libraries.patch, -files/helium-1.2-readline.patch,
+  -files/helium-wrapper:
+  Removed old (requires ancient ghc).
 
   29 Aug 2010; Sergei Trofimovich <slyfox@gentoo.org> -helium-1.1.ebuild,
   -files/helium-1.1-readline.patch:
