@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/batman-adv-2011.1.0.ebuild,v 1.2 2011/05/20 22:30:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/batman-adv-2011.1.0.ebuild,v 1.3 2011/06/05 08:31:28 xmw Exp $
 
 EAPI=3
 
@@ -21,6 +21,11 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_compile() {
+	export KERNELPATH="${KERNEL_DIR}"
+	linux-mod_src_compile
+}
 
 src_install() {
 	linux-mod_src_install
