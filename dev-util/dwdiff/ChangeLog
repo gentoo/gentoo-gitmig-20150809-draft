@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dwdiff
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/ChangeLog,v 1.1 2010/07/07 23:53:29 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/ChangeLog,v 1.2 2011/06/05 13:18:50 xarthisius Exp $
+
+*dwdiff-1.9 (05 Jun 2011)
+
+  05 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> -dwdiff-1.8.ebuild,
+  +dwdiff-1.9.ebuild:
+  Version bump, drop old. Mark ~ppc wrt #368759
 
 *dwdiff-1.8 (07 Jul 2010)
 
