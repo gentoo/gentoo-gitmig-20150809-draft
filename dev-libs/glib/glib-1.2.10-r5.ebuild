@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.53 2008/08/03 22:36:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.54 2011/06/05 13:12:30 pacho Exp $
 
 inherit autotools libtool flag-o-matic eutils portability
 
@@ -16,6 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE="hardened"
 
 DEPEND=""
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
