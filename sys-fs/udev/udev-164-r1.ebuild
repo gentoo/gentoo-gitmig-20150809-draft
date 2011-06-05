@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r1.ebuild,v 1.2 2011/04/15 21:55:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r1.ebuild,v 1.3 2011/06/05 21:09:22 robbat2 Exp $
 
 EAPI="1"
 
@@ -67,9 +67,13 @@ fi
 CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
 	~!IDE"
 
+# Return values:
+# 2 - reliable
+# 1 - unreliable
+# 0 - too old
 udev_check_KV() {
 	local ok=0
-	if [[ ${KV_MAJOR} == 2 && ${KV_MINOR} == 6 ]]
+	if [[ ${KV_MAJOR} == 2 && ${KV_MINOR} == 6 ]] || [[ ${KV_MAJOR} == 3 ]]
 	then
 		if kernel_is -ge 2 6 ${KV_PATCH_reliable} ; then
 			ok=2
