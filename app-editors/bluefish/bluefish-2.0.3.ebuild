@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.0.ebuild,v 1.1 2010/02/15 18:46:45 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.0.3.ebuild,v 1.1 2011/06/05 09:33:51 scarabeus Exp $
 
-EAPI=2
+EAPI=3
 
-inherit autotools eutils fdo-mime
+PYTHON_DEPEND="python? 2"
 
-IUSE="gucharmap nls python spell"
+inherit autotools eutils fdo-mime python
 
 MY_P=${P/_/-}
 
@@ -17,36 +17,47 @@ HOMEPAGE="http://bluefish.openoffice.nl/"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
+IUSE="gucharmap nls python spell"
 
 RDEPEND="
-	dev-libs/libpcre
-	x11-libs/gtk+:2
-	spell? ( app-text/enchant[aspell] )"
+	>=x11-libs/gtk+-2.12:2
+	spell? ( app-text/enchant )"
 
 DEPEND="${RDEPEND}
-	dev-libs/glib:2
-	dev-libs/libxml2
+	>=dev-libs/glib-2.16:2
+	dev-libs/libxml2:2
 	dev-util/pkgconfig
 	x11-libs/pango
 	gucharmap? ( gnome-extra/gucharmap )
-	nls? ( sys-devel/gettext dev-util/intltool )
-	python? ( dev-lang/python )"
+	nls? ( sys-devel/gettext dev-util/intltool )"
 
 S=${WORKDIR}/${MY_P}
 
+pkg_setup() {
+	if use python ; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
+
 src_prepare () {
+	intltoolize --copy --force || die "intltoolize failed"
+	for po_dir in src/plugin_*/po ; do
+		cp po/Makefile.in.in ${po_dir}
+	done
+
 	# Fixes automagic installation of charmap plugin
 	# Upstream bug: https://bugzilla.gnome.org/show_bug.cgi?id=570990
-	epatch "${FILESDIR}"/${P}-gucharmap-automagic.patch
+	epatch "${FILESDIR}"/${PN}-2.0.0-gucharmap-automagic.patch
 	eautoreconf
 }
 
 src_configure() {
 	econf \
+		--docdir="/usr/share/doc/${PF}" \
 		--disable-dependency-tracking \
 		--disable-update-databases \
 		--disable-xml-catalog-update \
-		--enable-splash-screen \
 		$(use_enable nls) \
 		$(use_enable spell spell-check) \
 		$(use_enable gucharmap charmap) \
@@ -55,6 +66,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
@@ -71,6 +83,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 	einfo "Removing XML catalog entries..."
 	/usr/bin/xmlcatalog  --noout \
 		--del 'Bluefish/DTD/Bflang' \
