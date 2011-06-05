@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/dwdiff-1.9.ebuild,v 1.1 2011/06/05 13:18:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/dwdiff-1.9.ebuild,v 1.2 2011/06/05 13:32:40 xarthisius Exp $
 
-EAPI=3
+EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="A front-end for the diff program that operates at the word level instead of the line level"
@@ -38,5 +38,4 @@ src_compile() {
 
 src_install() {
 	emake prefix="${D}/usr" docdir="${D}/usr/share/doc/${PF}" install || die
-	prepalldocs
 }
