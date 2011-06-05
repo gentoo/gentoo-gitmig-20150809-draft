@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-sidplay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-sidplay/ChangeLog,v 1.57 2011/05/23 14:56:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-sidplay/ChangeLog,v 1.58 2011/06/05 14:03:48 armin76 Exp $
+
+  05 Jun 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-sidplay-0.10.17.ebuild:
+  alpha/sparc stable wrt #368281
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-sidplay-0.10.17.ebuild:
