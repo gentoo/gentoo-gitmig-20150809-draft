@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.2.ebuild,v 1.4 2011/03/27 12:16:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.2.ebuild,v 1.5 2011/06/05 15:31:15 dilfridge Exp $
 
 EAPI="1"
 
@@ -48,6 +48,19 @@ QA_EXECSTACK="opt/Adobe/Reader9/Reader/intellinux/bin/acroread
 	opt/Adobe/Reader9/Reader/intellinux/lib/libsccore.so
 	opt/Adobe/Reader9/Reader/intellinux/lib/libcrypto.so.0.9.8
 	opt/Adobe/Reader9/Reader/intellinux/plug_ins/PPKLite.api"
+
+QA_DT_HASH="opt/Adobe/Reader9/Reader/intellinux/plug_ins3d/.*.x3d
+	opt/Adobe/Reader9/Reader/intellinux/lib/lib.*
+	opt/Adobe/Reader9/Reader/intellinux/bin/SynchronizerApp-binary
+	opt/Adobe/Reader9/Reader/intellinux/bin/acroread
+	opt/Adobe/Reader9/Reader/intellinux/bin/xdg-user-dirs-update
+	opt/Adobe/Reader9/Reader/intellinux/SPPlugins/ADMPlugin.apl
+	opt/Adobe/Reader9/Reader/intellinux/plug_ins/AcroForm/PMP/.*.pmp
+	opt/Adobe/Reader9/Reader/intellinux/plug_ins/Multimedia/MPP/.*.mpp
+	opt/Adobe/Reader9/Reader/intellinux/plug_ins/.*.api
+	opt/Adobe/Reader9/Reader/intellinux/sidecars/.*.DEU
+	opt/Adobe/Reader9/Browser/intellinux/nppdf.so
+	opt/netscape/plugins/nppdf.so"
 
 INSTALLDIR=/opt
 
