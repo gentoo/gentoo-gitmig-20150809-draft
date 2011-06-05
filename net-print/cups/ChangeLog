@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.414 2011/06/05 20:27:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.415 2011/06/05 20:44:09 dilfridge Exp $
+
+*cups-1.4.6-r21 (05 Jun 2011)
+*cups-1.4.6-r2 (05 Jun 2011)
+
+  05 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> +cups-1.4.6-r2.ebuild,
+  +cups-1.4.6-r21.ebuild:
+  Split into libusb and non-libusb ebuild revisions, so we can stable without
+  taking care of the libusb mess first.
 
   05 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.4.6-r1.ebuild:
   Improve informational messages
