@@ -1,6 +1,10 @@
 # ChangeLog for app-text/c2ps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.17 2011/04/10 03:15:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.18 2011/06/05 18:28:24 dilfridge Exp $
+
+  05 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> c2ps-4.0.ebuild,
+  +files/c2ps-4.0-LDFLAGS.patch:
+  EAPI bump; respect LDFLAGS (bug 337917)
 
   10 Apr 2011; Jonathan Callen <abcd@gentoo.org> c2ps-4.0.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords
