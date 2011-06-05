@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.204 2011/04/25 17:55:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.205 2011/06/05 16:27:38 slyfox Exp $
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -files/10ghc,
+  -ghc-6.2.2.ebuild, -ghc-6.4.2.ebuild, -files/ghc-6.4.2-sparc32plus.patch,
+  -files/ghc-6.4.2-sparcmangler.patch, -files/ghc-6.5-norelax.patch,
+  -ghc-6.6.ebuild, -ghc-6.6.1.ebuild, -files/ghc-6.6-nothreadedrts.patch,
+  -ghc-6.8.2.ebuild, -ghc-6.8.2-r1.ebuild, -files/ghc-6.10.2-readline.patch,
+  -files/depsort.py, -files/ghc-updater:
+  Remove old ghc versions. Many of them are very hard to impossible to
+  build/use.
 
 *ghc-6.12.3-r2 (25 Apr 2011)
 
