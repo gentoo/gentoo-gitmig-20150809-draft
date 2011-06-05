@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.12 2011/06/05 19:52:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/makedev-3.23.1.ebuild,v 1.13 2011/06/05 20:12:58 williamh Exp $
 
 EAPI="2"
 
@@ -43,7 +43,8 @@ src_install() {
 pkg_postinst() {
 	if use build ; then
 		# set up a base set of nodes to make recovery easier #368597
-		"${ROOT}"/sbin/MAKEDEV -d "${ROOT}"/dev console hda input ptmx std sd tty
+		"${ROOT}"/sbin/MAKEDEV -c "${ROOT}"/etc/makedev.d \
+			-d "${ROOT}"/dev console hda input ptmx std sd tty
 		# trim useless nodes
 		rm -f "${ROOT}"/dev/fd[0-9]* # floppy
 		rm -f "${ROOT}"/dev/sd[a-d][a-z]* "${ROOT}"/dev/sd[e-z]* # excess sata/scsi
