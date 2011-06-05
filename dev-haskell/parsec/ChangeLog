@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/parsec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.19 2011/06/05 13:26:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.20 2011/06/05 13:37:30 slyfox Exp $
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> parsec-2.1.0.1.ebuild:
+  stable on alpha/ia64
 
   05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -parsec-2.0.ebuild,
   -parsec-2.1.0.0.ebuild:
