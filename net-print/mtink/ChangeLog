@@ -1,6 +1,10 @@
 # ChangeLog for net-print/mtink
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.32 2010/10/10 18:10:50 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.33 2011/06/05 19:38:17 dilfridge Exp $
+
+  05 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> mtink-1.0.16.ebuild,
+  +files/mtink-1.0.16-options.patch:
+  EAPI=4; respect LDFLAGS (bug 336125)
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> mtink-1.0.11.ebuild,
   mtink-1.0.16.ebuild:

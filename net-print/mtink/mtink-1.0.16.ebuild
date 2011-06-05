@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.16.ebuild,v 1.2 2010/10/10 18:10:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.16.ebuild,v 1.3 2011/06/05 19:38:17 dilfridge Exp $
 
-EAPI="2"
-inherit eutils
+EAPI=4
+inherit eutils base
 
 DESCRIPTION="mtink is a status monitor and inkjet cartridge changer for some Epson printers"
 HOMEPAGE="http://xwtools.automatix.de/"
@@ -22,10 +22,7 @@ DEPEND="X? ( x11-libs/libX11
 	dev-libs/libusb"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	#prevent stripping
-	sed -i -e 's:DBG =.*:DBG =:' Makefile.ORG
-}
+PATCHES=( "${FILESDIR}/${P}-options.patch" )
 
 src_configure() {
 	./Configure || die
