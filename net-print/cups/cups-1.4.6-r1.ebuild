@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.5 2011/05/03 10:16:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r1.ebuild,v 1.6 2011/06/05 20:27:40 dilfridge Exp $
 
 EAPI=3
 
@@ -108,6 +108,7 @@ pkg_setup() {
 				eerror "    Device Drivers --->"
 				eerror "        USB support  --->"
 				eerror "            [ ] USB Printer support"
+				eerror "Alternatively, just disable the usb useflag for cups (your printer will still work)."
 				die "USB_PRINTER module enabled"
 			fi
 		else
@@ -121,6 +122,7 @@ pkg_setup() {
 				ewarn "    Device Drivers --->"
 				ewarn "        USB support  --->"
 				ewarn "            [*] USB Printer support"
+				ewarn "Alternatively, enable the usb useflag for cups and use the new, less-tested libusb code."
 			fi
 		fi
 	fi
