@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.16 2011/05/02 18:12:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.17 2011/06/05 09:17:28 graaff Exp $
+
+*ffi-1.0.9 (05 Jun 2011)
+
+  05 Jun 2011; Hans de Graaff <graaff@gentoo.org> +ffi-1.0.9.ebuild:
+  Version bump. Depend on virtual/ruby-threads to ensure that the ruby
+  interpreter has threading. Add back ree18.
 
 *ffi-1.0.7 (02 May 2011)
 
