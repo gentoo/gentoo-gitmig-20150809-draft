@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.3 2011/05/09 07:41:54 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.4 2011/06/05 19:04:21 grobian Exp $
 
 EAPI=3
 
 inherit eutils toolchain-funcs multilib prefix flag-o-matic autotools
 
 # last part in e.g. 1.12.14.1704
-PVER=1707
+PVER=1709
 
 DESCRIPTION="Baselayout for Gentoo Prefix installs"
 HOMEPAGE="http://prefix.gentoo.org/"
@@ -39,8 +39,6 @@ src_prepare() {
 
 	# The consoletype application in this form will only work on Linux
 	[[ ${CHOST} == *-linux-* ]] || epatch "${FILESDIR}"/baselayout-1.12.5-prefix-no-consoletype.patch
-
-	epatch "${FILESDIR}"/baselayout-1.12.14-interix.patch
 
 	cd "${S}"
 	eprefixify \
