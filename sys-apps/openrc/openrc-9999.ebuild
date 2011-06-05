@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.83 2011/05/20 16:29:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.84 2011/06/05 22:46:01 vapier Exp $
 
 EAPI=4
 
@@ -282,7 +282,7 @@ migrate_from_baselayout_1() {
 	elog "init.d scripts.  If you use such a thing, make sure you have the"
 	elog "required init.d scripts added to your boot runlevel."
 
-	# Upgrade out state for baselayout-1 users
+	# Upgrade our state for baselayout-1 users
 	if [[ ! -e ${ROOT}${LIBDIR}/rc/init.d/started ]] ; then
 		(
 		[[ -e ${ROOT}/etc/conf.d/rc ]] && source "${ROOT}"/etc/conf.d/rc
