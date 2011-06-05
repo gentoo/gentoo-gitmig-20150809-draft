@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.41 2011/02/25 13:17:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/ChangeLog,v 1.42 2011/06/05 13:10:15 slyfox Exp $
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -hunit-1.1.ebuild,
+  -hunit-1.1-r1.ebuild, -hunit-1.1.1.ebuild, -hunit-1.2.0.0.ebuild:
+  Removed old.
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> hunit-1.2.0.3.ebuild:
   ppc64 stable wrt #339580

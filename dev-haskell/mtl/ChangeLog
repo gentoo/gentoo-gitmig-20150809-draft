@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.39 2011/04/23 11:48:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.40 2011/06/05 13:12:41 slyfox Exp $
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -mtl-1.0.ebuild,
+  -mtl-1.0-r1.ebuild, -mtl-1.0.1.ebuild, -mtl-1.1.0.0.ebuild:
+  Removed old.
 
 *mtl-1.1.1.1 (23 Apr 2011)
 
