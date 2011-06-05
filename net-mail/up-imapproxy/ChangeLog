@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/up-imapproxy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.25 2009/09/12 14:12:56 vostorga Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.26 2011/06/05 17:56:29 eras Exp $
+
+*up-imapproxy-1.2.7 (05 Jun 2011)
+
+  05 Jun 2011; Eray Aslan <eras@gentoo.org> -up-imapproxy-1.2.7_rc2.ebuild,
+  +up-imapproxy-1.2.7.ebuild, +files/up-imapproxy-1.2.7-ldflags.patch:
+  Version bump - bug#309291. Respect LDFLAGS - bug #337355. EAPI bump. Remove
+  old.
 
   12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> +files/imapproxyd.8,
   +files/pimpstat.8:

@@ -1,18 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.7_rc2.ebuild,v 1.3 2009/06/01 12:12:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.7.ebuild,v 1.1 2011/06/05 17:56:29 eras Exp $
 
-EAPI=2
+EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Proxy IMAP transactions between an IMAP client and an IMAP server."
 HOMEPAGE="http://www.imapproxy.org/"
-SRC_URI="http://www.imapproxy.org/downloads/${P/_}.tar.gz"
+SRC_URI="mirror://sourceforge/squirrelmail/squirrelmail-imap_proxy-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-# This version has issues, don't keyword wrt #272044, Comment #1, by Holger
-# Hoffstätte. But do so for next release candidate.
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="kerberos ssl +tcpd"
 
 RDEPEND="sys-libs/ncurses
@@ -22,11 +22,19 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
-S=${WORKDIR}/${P/_}
+S=${WORKDIR}/squirrelmail-imap_proxy-${PV}
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}"-ldflags.patch
 	sed -i -e 's:in\.imapproxyd:imapproxyd:g' \
 		README Makefile.in include/imapproxy.h || die "sed failed"
+
+	#buffer oveflow
+	#http://lists.andrew.cmu.edu/pipermail/imapproxy-info/2010-June/000874.html
+	sed -i \
+		-e "/define BUFSIZE/s/4096/8192/" \
+		-e "/define MAXPASSWDLEN/s/64/8192/" \
+		include/imapproxy.h
 }
 
 src_configure() {
@@ -37,19 +45,15 @@ src_configure() {
 }
 
 src_install() {
-	dosbin bin/imapproxyd bin/pimpstat || die "dosbin failed"
+	dosbin bin/imapproxyd bin/pimpstat
 
 	insinto /etc
-	doins scripts/imapproxy.conf || die "doins failed"
+	doins scripts/imapproxy.conf
 
-	newinitd "${FILESDIR}"/imapproxy.initd imapproxy || die "newinitd failed"
+	newinitd "${FILESDIR}"/imapproxy.initd imapproxy
 
 	dodoc ChangeLog README README.known_issues
 	use ssl && dodoc README.ssl
 
 	doman "${FILESDIR}"/*.8
-}
-
-pkg_postinst() {
-	einfo "Installed manpages are for version 1.2.6."
 }
