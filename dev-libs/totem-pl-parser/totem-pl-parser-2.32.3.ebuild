@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3.ebuild,v 1.10 2011/03/22 18:54:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.3.ebuild,v 1.11 2011/06/05 11:58:02 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -28,8 +28,10 @@ DEPEND="${RDEPEND}
 	!<media-video/totem-2.21
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.35
+	gnome-base/gnome-common
+	>=dev-util/gtk-doc-am-1.11
 	doc? ( >=dev-util/gtk-doc-1.11 )
-	>=dev-util/gtk-doc-am-1.11"
+"
 # eautoreconf needs:
 #	>=dev-util/gtk-doc-am-1.11
 
