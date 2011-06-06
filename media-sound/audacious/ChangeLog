@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.230 2011/04/29 17:46:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.231 2011/06/06 13:58:44 chainsaw Exp $
+
+*audacious-2.5.1 (06 Jun 2011)
+
+  06 Jun 2011; Tony Vroon <chainsaw@gentoo.org> +audacious-2.5.1.ebuild:
+  Version bump, thanks to Rion in bug #368683. Fixes, among other things,
+  embedded album art, prev/next whilst stopped, titles for AAC streams and
+  crashing on corrupted M3Us.
 
   29 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> audacious-2.4.4.ebuild:
   ppc stable wrt #361267
