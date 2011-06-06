@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.2.ebuild,v 1.5 2011/06/01 18:07:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-ruby/kdebindings-ruby-4.6.2.ebuild,v 1.6 2011/06/06 21:08:22 abcd Exp $
 
 EAPI=3
 
 KMNAME="kdebindings"
 KMMODULE="ruby"
 DECLARATIVE_REQUIRED="optional"
-WEBKIT_REQUIRED="optional"
 
 USE_RUBY="ruby18"
 # No ruby19 for three reasons:
@@ -20,7 +19,7 @@ inherit kde4-meta ruby-ng
 
 DESCRIPTION="KDE Ruby bindings"
 KEYWORDS="amd64 ppc x86"
-IUSE="akonadi debug kate okular phonon plasma qscintilla qwt semantic-desktop"
+IUSE="akonadi debug kate okular phonon plasma qscintilla qwt semantic-desktop webkit"
 
 DEPEND="
 	$(add_kdebase_dep smoke 'akonadi?,declarative?,kate?,okular?,phonon?,qscintilla?,qwt?,semantic-desktop?,webkit?')

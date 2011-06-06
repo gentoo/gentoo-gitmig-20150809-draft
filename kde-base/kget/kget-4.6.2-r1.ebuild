@@ -1,17 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.6.2-r1.ebuild,v 1.4 2011/06/01 18:25:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.6.2-r1.ebuild,v 1.5 2011/06/06 21:10:57 abcd Exp $
 
 EAPI=3
 
 KDE_HANDBOOK="optional"
 KMNAME="kdenetwork"
-WEBKIT_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="An advanced download manager for KDE"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
-IUSE="debug bittorrent semantic-desktop sqlite"
+IUSE="debug bittorrent semantic-desktop sqlite webkit"
 
 RDEPEND="
 	app-crypt/qca:2

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/kdebindings-perl-4.6.2.ebuild,v 1.5 2011/06/01 18:06:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/kdebindings-perl-4.6.2.ebuild,v 1.6 2011/06/06 21:07:34 abcd Exp $
 
 EAPI=3
 
@@ -9,12 +9,11 @@ KMMODULE="perl"
 DECLARATIVE_REQUIRED="optional"
 MULTIMEDIA_REQUIRED="optional"
 QTHELP_REQUIRED="optional"
-WEBKIT_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="KDE Perl bindings"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
-IUSE="akonadi attica debug kate okular phonon plasma qimageblitz qscintilla qwt semantic-desktop"
+IUSE="akonadi attica debug kate okular phonon plasma qimageblitz qscintilla qwt semantic-desktop webkit"
 
 DEPEND="
 	>=dev-lang/perl-5.10.1

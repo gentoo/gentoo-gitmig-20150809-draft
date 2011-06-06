@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.3.ebuild,v 1.2 2011/05/14 14:32:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.3.ebuild,v 1.3 2011/06/06 21:06:21 abcd Exp $
 
 EAPI=4
 
 DECLARATIVE_REQUIRED="optional"
 MULTIMEDIA_REQUIRED="optional"
 QTHELP_REQUIRED="optional"
-WEBKIT_REQUIRED="optional"
 
 KDE_SCM="git"
 if [[ ${PV} == *9999 ]]; then
@@ -21,7 +20,7 @@ inherit ${eclass}
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="akonadi attica debug kate okular +phonon qimageblitz qscintilla qwt semantic-desktop"
+IUSE="akonadi attica debug kate okular +phonon qimageblitz qscintilla qwt semantic-desktop webkit"
 
 COMMON_DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop=,opengl')

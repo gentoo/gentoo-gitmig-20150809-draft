@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebindings-perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/ChangeLog,v 1.17 2011/06/01 18:06:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-perl/ChangeLog,v 1.18 2011/06/06 21:07:34 abcd Exp $
+
+  06 Jun 2011; Jonathan Callen <abcd@gentoo.org> kdebindings-perl-4.6.2.ebuild,
+  kdebindings-perl-4.6.3.ebuild:
+  Fix removal of WEBKIT_REQUIRED in the eclass
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org>
   kdebindings-perl-4.6.2.ebuild:

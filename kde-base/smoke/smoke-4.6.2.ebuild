@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.2.ebuild,v 1.5 2011/06/01 19:25:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.2.ebuild,v 1.6 2011/06/06 21:06:21 abcd Exp $
 
 EAPI=3
 
@@ -8,12 +8,11 @@ KMNAME="kdebindings"
 DECLARATIVE_REQUIRED="optional"
 MULTIMEDIA_REQUIRED="optional"
 QTHELP_REQUIRED="optional"
-WEBKIT_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine"
 KEYWORDS="amd64 ppc ~ppc64 x86"
-IUSE="akonadi attica debug kate okular +phonon qimageblitz qscintilla qwt semantic-desktop"
+IUSE="akonadi attica debug kate okular +phonon qimageblitz qscintilla qwt semantic-desktop webkit"
 
 COMMON_DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?,opengl')
