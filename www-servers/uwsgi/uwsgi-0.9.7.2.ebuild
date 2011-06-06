@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.7.2.ebuild,v 1.1 2011/05/31 19:49:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.7.2.ebuild,v 1.2 2011/06/06 16:10:11 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -25,6 +25,7 @@ APACHE2_MOD_CONF="42_mod_${PN}"
 want_apache2_2
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-no-werror.patch
 	python_copy_sources
 }
 
