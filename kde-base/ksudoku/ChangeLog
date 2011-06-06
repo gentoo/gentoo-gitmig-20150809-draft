@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.83 2011/06/02 21:57:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.84 2011/06/06 20:37:26 abcd Exp $
+
+  06 Jun 2011; Jonathan Callen <abcd@gentoo.org> ksudoku-4.6.2.ebuild,
+  ksudoku-4.6.3.ebuild:
+  Remove mentions of kdeprefix
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -ksudoku-4.4.5.ebuild:
   Drop KDE-4.4

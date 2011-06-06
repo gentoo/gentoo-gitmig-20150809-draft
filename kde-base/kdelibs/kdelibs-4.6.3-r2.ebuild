@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r2.ebuild,v 1.1 2011/06/04 18:01:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r2.ebuild,v 1.2 2011/06/06 20:32:11 abcd Exp $
 
 EAPI=4
 
@@ -206,15 +206,10 @@ src_configure() {
 	else
 		mycmakeargs=(-DWITH_Avahi=OFF -DWITH_DNSSD=OFF)
 	fi
-	if use kdeprefix; then
-		HME=".kde${SLOT}"
-	else
-		HME=".kde4"
-	fi
 	mycmakeargs+=(
 		-DWITH_HSPELL=OFF
 		-DWITH_ASPELL=OFF
-		-DKDE_DEFAULT_HOME=${HME}
+		-DKDE_DEFAULT_HOME=.kde4
 		-DKAUTH_BACKEND=POLKITQT-1
 		$(cmake-utils_use_build handbook doc)
 		$(cmake-utils_use_has 3dnow X86_3DNOW)
@@ -318,7 +313,7 @@ pkg_postinst() {
 		ewarn "https://bugs.gentoo.org/show_bug.cgi?id=365479"
 	fi
 
-	elog "Your homedir is set to \${HOME}/${HME}"
+	elog "Your homedir is set to \${HOME}/.kde4"
 	echo
 
 	kde4-base_pkg_postinst

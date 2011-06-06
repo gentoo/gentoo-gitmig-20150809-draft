@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.6.3.ebuild,v 1.1 2011/05/07 10:47:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/kdesdk-kioslaves-4.6.3.ebuild,v 1.2 2011/06/06 20:36:48 abcd Exp $
 
 EAPI=4
 
@@ -19,9 +19,7 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}
-	!kdeprefix? (
-		subversion? ( !>=dev-vcs/kdesvn-1.5.2:4 )
-	)
+	subversion? ( !>=dev-vcs/kdesvn-1.5.2:4 )
 "
 
 src_configure() {

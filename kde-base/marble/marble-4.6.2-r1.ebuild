@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.6.2-r1.ebuild,v 1.4 2011/06/01 19:16:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.6.2-r1.ebuild,v 1.5 2011/06/06 20:38:02 abcd Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}
-	!kdeprefix? ( !sci-geosciences/marble )
+	!sci-geosciences/marble
 "
 
 PATCHES=( "${FILESDIR}/${PN}-4.6.2-magic.patch" )

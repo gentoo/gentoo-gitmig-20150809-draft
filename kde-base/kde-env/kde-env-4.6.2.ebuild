@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.2.ebuild,v 1.4 2011/06/01 17:53:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.2.ebuild,v 1.5 2011/06/06 20:30:06 abcd Exp $
 
 EAPI=3
 
@@ -29,58 +29,18 @@ src_prepare() {
 }
 
 src_install() {
-	if use kdeprefix; then
-		# List all the multilib libdirs
-		local _libdir _libdirs
-		for _libdir in $(get_all_libdirs); do
-			_libdirs+=":${EKDEDIR}/${_libdir}"
-		done
-		_libdirs=${_libdirs#:}
-
-		# number goes down with version
-		cat <<-EOF > 43kdepaths-${SLOT}
-PATH="${EKDEDIR}/bin"
-ROOTPATH="${EKDEDIR}/sbin:${EKDEDIR}/bin"
-LDPATH="${_libdirs}"
-MANPATH="${EKDEDIR}/share/man"
-CONFIG_PROTECT="${KDEDIR}/share/config ${KDEDIR}/env ${KDEDIR}/shutdown /usr/share/config"
-#KDE_IS_PRELINKED=1
-PKG_CONFIG_PATH="${EKDEDIR}/$(get_libdir)/pkgconfig"
-XDG_DATA_DIRS="${EKDEDIR}/share"
-EOF
-		doenvd 43kdepaths-${SLOT}
-		cat <<-EOF > 50-kde-${SLOT}
-SEARCH_DIRS="${EKDEDIR}/bin ${EKDEDIR}/lib*"
-EOF
-		insinto /etc/revdep-rebuild
-		doins 50-kde-${SLOT}
-
-		# kdeglobals needed to make third party apps installed in /usr work
-		cat <<-EOF > kdeglobals
-[Directories][\$i]
-prefixes=${EPREFIX}/usr
-EOF
-		insinto ${KDEDIR}/share/config
-		doins kdeglobals
-
-		KDE_X="KDE-${SLOT}"
-	else
-		# Much simpler for the FHS compliant -kdeprefix install
-		# number goes down with version
-		cat <<-EOF > 43kdepaths
+	# number goes down with version
+	cat <<-EOF > 43kdepaths
 CONFIG_PROTECT="/usr/share/config"
 #KDE_IS_PRELINKED=1
 EOF
-		doenvd 43kdepaths
-
-		KDE_X="KDE-4"
-	fi
+	doenvd 43kdepaths
 
 	# Properly place xinitrc.d file that exports XDG_MENU_PREFIX to env
 	cat <<EOF > 11-xdg-menu-kde-${SLOT}
 #!/bin/sh
 
-if [ -z \${XDG_MENU_PREFIX} ] && [ "\${DESKTOP_SESSION}" = "${KDE_X}" ]; then
+if [ -z \${XDG_MENU_PREFIX} ] && [ "\${DESKTOP_SESSION}" = "KDE-4" ]; then
 	export XDG_MENU_PREFIX="kde-${SLOT}-"
 fi
 EOF
