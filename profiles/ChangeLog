@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5421 2011/06/05 23:38:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5422 2011/06/06 08:05:43 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jun 2011; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask sys-apps/systemd before adding.
 
   05 Jun 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   net-misc/guidedog will stay
