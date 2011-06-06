@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.10.ebuild,v 1.4 2011/06/06 22:16:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.11.ebuild,v 1.1 2011/06/06 22:16:36 chithanh Exp $
 
 EAPI=4
 

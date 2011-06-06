@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.46 2011/04/20 21:40:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.47 2011/06/06 22:16:36 chithanh Exp $
+
+*xorg-drivers-1.11 (06 Jun 2011)
+
+  06 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-drivers-1.10.ebuild, +xorg-drivers-1.11.ebuild:
+  Update for non-working drivers, bug #366297, bug #368691, bug #369885. Bump
+  for next xorg-server release.
 
   20 Apr 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-drivers-1.10.ebuild:
