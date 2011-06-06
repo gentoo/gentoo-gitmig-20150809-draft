@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.31.ebuild,v 1.1 2010/11/27 12:32:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.31.ebuild,v 1.2 2011/06/06 06:18:52 robbat2 Exp $
 
 EAPI="2"
 
@@ -39,7 +39,7 @@ pkg_setup() {
 
 	linux-info_pkg_setup
 
-	if kernel_is 2 6; then
+	if kernel_is -ge 2 6; then
 		einfo "This ebuild will set ${P} to use 2.6 native IPsec (KAME)."
 		einfo "KLIPS will not be compiled/installed."
 		MYMAKE="programs"
@@ -181,7 +181,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if kernel_is 2 6; then
+	if kernel_is -ge 2 6; then
 		CONFIG_CHECK="~NET_KEY ~INET_XFRM_MODE_TRANSPORT ~INET_XFRM_MODE_TUNNEL ~INET_AH ~INET_ESP ~INET_IPCOMP"
 		WARNING_INET_AH="CONFIG_INET_AH:\tmissing IPsec AH support (needed if you want only authentication)"
 		WARNING_INET_ESP="CONFIG_INET_ESP:\tmissing IPsec ESP support (needed if you want authentication and encryption)"
