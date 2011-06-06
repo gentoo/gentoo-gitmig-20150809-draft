@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.34 2011/05/19 22:39:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.35 2011/06/06 14:38:46 angelos Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -69,6 +69,8 @@ xfconf_use_debug() {
 		else
 			echo "--enable-debug=minimum"
 		fi
+	else
+		ewarn "${FUNCNAME} called without debug in IUSE"
 	fi
 }
 
