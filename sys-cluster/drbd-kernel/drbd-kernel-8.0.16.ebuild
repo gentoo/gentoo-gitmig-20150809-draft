@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.0.16.ebuild,v 1.3 2009/08/17 10:20:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.0.16.ebuild,v 1.4 2011/06/06 00:44:15 robbat2 Exp $
 
 inherit eutils versionator linux-mod
 
@@ -24,7 +24,7 @@ SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if ! kernel_is 2 6; then
+	if ! kernel_is -ge 2 6; then
 		die "Unsupported kernel, drbd-8.0.x needs kernel 2.6.x ."
 	fi
 

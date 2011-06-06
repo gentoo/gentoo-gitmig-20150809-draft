@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.3.6.ebuild,v 1.4 2010/08/13 07:20:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.3.6.ebuild,v 1.5 2011/06/06 00:44:15 robbat2 Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ src_prepare() {
 }
 
 pkg_setup() {
-	if ! kernel_is 2 6; then
+	if ! kernel_is -ge 2 6; then
 		die "Unsupported kernel, drbd-${PV} needs kernel 2.6.x ."
 	fi
 
