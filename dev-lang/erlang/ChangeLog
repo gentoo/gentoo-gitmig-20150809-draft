@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.210 2011/06/06 08:40:13 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.211 2011/06/06 08:53:33 djc Exp $
+
+*erlang-14.2.3 (06 Jun 2011)
+
+  06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> +erlang-14.2.3.ebuild:
+  Version bump erlang to 14.2.3.
 
   06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> -erlang-14.2.1.ebuild,
   -files/erlang-14.2.1-fortify.patch, -erlang-14.2.2.ebuild:
