@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.31 2011/05/06 21:00:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.32 2011/06/06 19:50:05 eras Exp $
+
+  06 Jun 2011; Eray Aslan <eras@gentoo.org> -uw-mailutils-2007b.ebuild,
+  uw-mailutils-2007e-r1.ebuild:
+  Respect LDFLAGS - bug #336565. Remove old. EAPI bump.
 
 *uw-mailutils-2007e-r1 (06 May 2011)
 

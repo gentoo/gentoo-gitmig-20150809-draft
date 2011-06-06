@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2007e-r1.ebuild,v 1.1 2011/05/06 21:00:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/uw-mailutils-2007e-r1.ebuild,v 1.2 2011/06/06 19:50:05 eras Exp $
+
+EAPI=4
 
 inherit eutils flag-o-matic
 
@@ -22,14 +24,11 @@ DEPEND="!<mail-client/pine-4.64-r1
 RDEPEND="${DEPEND}
 	!<net-mail/uw-imap-${PV}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	chmod -R ug+w "${S}"
 
-	cd "${S}"
-
-	epatch "${FILESDIR}/${PN}-2004g.patch" || die "epatch failed"
-	epatch "${FILESDIR}/${PN}-ssl.patch" || die "epatch failed"
+	epatch "${FILESDIR}/${PN}-2004g.patch"
+	epatch "${FILESDIR}/${PN}-ssl.patch"
 
 	sed -i -e "s|\`cat \$C/CFLAGS\`|${CFLAGS}|g" \
 		src/mailutil/Makefile \
@@ -44,11 +43,10 @@ src_compile() {
 	use pam && port=lnp
 	local ssltype=none
 	use ssl && ssltype=nopwd
-	yes | make "${port}" EXTRACFLAGS="${CFLAGS}" SSLTYPE="${ssltype}" || die
+	emake -j1 "${port}" EXTRACFLAGS="${CFLAGS}" EXTRALDFLAGS="${LDFLAGS}" SSLTYPE="${ssltype}"
 }
 
 src_install() {
-	into /usr
 	dobin mailutil/mailutil mtest/mtest
 	doman src/mailutil/mailutil.1
 }
