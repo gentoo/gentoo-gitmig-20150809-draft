@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/mlmmj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.38 2010/09/11 21:49:40 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.39 2011/06/06 12:32:37 eras Exp $
+
+  06 Jun 2011; Eray Aslan <eras@gentoo.org> -mlmmj-1.2.4.ebuild,
+  -mlmmj-1.2.8.ebuild, -mlmmj-1.2.9.ebuild, -mlmmj-1.2.10.ebuild,
+  -mlmmj-1.2.11.ebuild, -mlmmj-1.2.11-r1.ebuild,
+  -files/mlmmj-1.2.11_subscriber_mmap.patch, -mlmmj-1.2.12.ebuild,
+  -mlmmj-1.2.13.ebuild, -mlmmj-1.2.14.ebuild, -mlmmj-1.2.15.ebuild,
+  -mlmmj-1.2.15-r1.ebuild, -files/mlmmj-1.2.15_mmap_zero_byte.patch,
+  -mlmmj-1.2.16.ebuild, -mlmmj-1.2.16-r1.ebuild,
+  -files/mlmmj-1.2.16-requeue-unlink-fix.patch,
+  -files/mlmmj-1.2.16-unsub-digest-text.patch, -mlmmj-1.2.17.ebuild:
+  Remove vulnerable versions
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> mlmmj-1.2.17.1.ebuild:
   Marked ppc stable for bug #259968.
