@@ -1,0 +1,45 @@
+diff -r -U1 fotoxx-11.06.orig/Makefile fotoxx-11.06/Makefile
+--- fotoxx-11.06.orig/Makefile	2011-06-04 20:53:41.000000000 +0700
++++ fotoxx-11.06/Makefile	2011-06-07 03:27:17.000000000 +0700
+@@ -6,5 +6,6 @@
+ # defaults for parameters that may be pre-defined
+-CXXFLAGS ?= -O3 -g -Wall
+-LDFLAGS ?= -O3 -g -Wall -rdynamic
++CXXFLAGS += -Wall -c `pkg-config --cflags gtk+-2.0`
++LDFLAGS += -rdynamic
+ PREFIX ?= /usr
++LIBS = `pkg-config --libs gtk+-2.0 gthread-2.0`
+ 
+@@ -16,3 +17,3 @@
+ LOCALESDIR = $(SHAREDIR)/locales
+-DOCDIR = $(PREFIX)/share/doc/fotoxx
++DOCDIR = $(PREFIX)/share/doc/$(PF)
+ MANDIR = $(PREFIX)/share/man/man1
+@@ -21,5 +22,2 @@
+ 
+-CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-2.0`
+-LIBS = `pkg-config --libs gtk+-2.0 gthread-2.0`
+-
+ fotoxx: fotoxx.o fotoxx_area.o fotoxx_info.o fotoxx_edit.o zfuncs.o
+@@ -30,15 +28,15 @@
+ fotoxx.o: $(VERSION) fotoxx.h
+-	$(CXX) $(CFLAGS) -o fotoxx.o $(VERSION)
++	$(CXX) $(CXXFLAGS) -o fotoxx.o $(VERSION)
+ 
+ fotoxx_area.o: fotoxx_area.cc fotoxx.h
+-	$(CXX) $(CFLAGS) fotoxx_area.cc
++	$(CXX) $(CXXFLAGS) fotoxx_area.cc
+ 
+ fotoxx_info.o: fotoxx_info.cc fotoxx.h
+-	$(CXX) $(CFLAGS) fotoxx_info.cc
++	$(CXX) $(CXXFLAGS) fotoxx_info.cc
+ 
+ fotoxx_edit.o: fotoxx_edit.cc fotoxx.h
+-	$(CXX) $(CFLAGS) fotoxx_edit.cc
++	$(CXX) $(CXXFLAGS) fotoxx_edit.cc
+ 
+ zfuncs.o: zfuncs.cc
+-	$(CXX) $(CFLAGS) zfuncs.cc
++	$(CXX) $(CXXFLAGS) -DPF=\"$(PF)\" zfuncs.cc
+ 
+Только в fotoxx-11.06: Makefile~
