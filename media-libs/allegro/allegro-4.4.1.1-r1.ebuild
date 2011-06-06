@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.11 2011/04/02 11:52:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.1.1-r1.ebuild,v 1.12 2011/06/06 22:10:05 tupone Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -46,6 +46,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-shared.patch \
 		"${FILESDIR}"/${P}-optional_drivers.patch \
+		"${FILESDIR}"/${P}-underlink.patch \
 		"${FILESDIR}"/${P}-rpath.patch
 
 	sed -i \
