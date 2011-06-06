@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.0_p20101205-r3.ebuild,v 1.5 2011/01/26 08:17:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.0_p20101205-r3.ebuild,v 1.6 2011/06/06 12:15:53 flameeyes Exp $
 
 EAPI=2
 
-inherit eutils versionator
+inherit eutils
 
 MY_P=${PN}-${PV%_p*}
 
