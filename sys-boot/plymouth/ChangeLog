@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.8 2011/05/14 17:43:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.9 2011/06/06 13:03:40 aidecoe Exp $
+
+*plymouth-0.8.3-r3 (06 Jun 2011)
+
+  06 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +plymouth-0.8.3-r3.ebuild:
+  Init script has been replaced by OpenRC plugin. Because of this plymouth
+  depends on sys-apps/openrc, now. This rev-bump solves bug #359683.
 
 *plymouth-0.8.3-r2 (14 May 2011)
 
