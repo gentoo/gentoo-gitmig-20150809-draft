@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.3.ebuild,v 1.2 2011/06/06 20:30:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.3.ebuild,v 1.3 2011/06/06 20:30:56 abcd Exp $
 
 EAPI=4
 
@@ -29,7 +29,6 @@ src_prepare() {
 }
 
 src_install() {
-	# Much simpler for the FHS compliant -kdeprefix install
 	# number goes down with version
 	cat <<-EOF > 43kdepaths
 CONFIG_PROTECT="/usr/share/config"
