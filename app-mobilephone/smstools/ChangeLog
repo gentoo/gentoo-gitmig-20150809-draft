@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/smstools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.14 2008/10/31 16:28:50 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.15 2011/06/06 13:43:40 chainsaw Exp $
+
+*smstools-3.1.14 (06 Jun 2011)
+
+  06 Jun 2011; Tony Vroon <chainsaw@gentoo.org> +smstools-3.1.14.ebuild:
+  Version bump to forked 3.X branch, closes bug #224191. With thanks to Walter
+  for reporting the bug and to Gabor Veszi for ebuild work.
 
   31 Oct 2008; <chainsaw@gentoo.org> smstools-2.2.20.ebuild:
   Update ebuild based on -dev ML feedback by Torsten Veller
