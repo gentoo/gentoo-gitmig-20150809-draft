@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.1.0-r1.ebuild,v 1.1 2011/05/30 23:39:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.1.0-r1.ebuild,v 1.2 2011/06/06 23:30:49 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -17,7 +17,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-macos"
 IUSE="perl python linguas_ja"
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python ; then
+		python_set_active_version 2
+	fi
 }
 
 src_prepare() {
@@ -67,5 +69,17 @@ src_install() {
 	if use python; then
 		cd "${S}/NKF.python"
 		distutils_src_install
+	fi
+}
+
+pkg_postinst() {
+	if use python ; then
+		distutils_pkg_postinst
+	fi
+}
+
+pkg_postrm() {
+	if use python ; then
+		distutils_pkg_postrm
 	fi
 }
