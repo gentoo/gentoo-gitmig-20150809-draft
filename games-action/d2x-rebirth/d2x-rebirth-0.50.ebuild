@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.50.ebuild,v 1.3 2008/03/06 03:15:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.50.ebuild,v 1.4 2011/06/06 04:12:20 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 # DV is the Descent version. Used because the d1x-rebirth ebuild is similar.
@@ -35,7 +36,7 @@ UIRDEPEND="media-libs/alsa-lib
 	media-libs/libpng
 	>=media-libs/libsdl-1.2.9
 	>=media-libs/sdl-image-1.2.3-r1
-	>=dev-games/physfs-1.0.1
+	>=dev-games/physfs-1.0.1[hog,zip]
 	virtual/glu
 	virtual/opengl
 	x11-libs/libX11
@@ -53,10 +54,7 @@ DEPEND="${UIRDEPEND}
 S=${WORKDIR}/${PN}
 dir=${GAMES_DATADIR}/${DVX}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Midi music - awe32 for most SoundBlaster cards
 	if use awe32 ; then
 		sed -i \
@@ -70,8 +68,7 @@ src_unpack() {
 	eautoreconf || die "eautoreconf failed"
 }
 
-src_compile() {
-
+src_configure() {
 	# Configure options are specified in dxx-compile.txt
 	local opts
 	use x86 || opts="${opts} --disable-fastfileio"
@@ -84,10 +81,11 @@ src_compile() {
 	egamesconf \
 		${opts} \
 		--with-sharepath="${dir}" \
-		--with-opengl \
-		|| die "egamesconf failed"
+		--with-opengl
+}
 
-	emake -j1 || die "emake failed"
+src_compile() {
+	emake -j1 || die
 }
 
 src_install() {
