@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/fcpci
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.22 2010/12/19 12:42:16 sbriesen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcpci/ChangeLog,v 1.23 2011/06/06 06:25:01 robbat2 Exp $
+
+  06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> fcpci-0.1-r2.ebuild:
+  Linux-3.0 changes.
 
   19 Dec 2010; Stefan Briesenick <sbriesen@gentoo.org> fcpci-0.1-r2.ebuild:
   fixed minor QA issues
