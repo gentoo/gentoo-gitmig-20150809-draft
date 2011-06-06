@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.3.ebuild,v 1.1 2011/04/17 21:24:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.3.ebuild,v 1.2 2011/06/06 19:29:48 voyageur Exp $
 
 EAPI=3
 inherit multilib
 
 # We need gnustep-make, but gnustep-make can depend on libobjc
 # Use a temporary setup to install in /usr/
-GSMAKE=gnustep-make-2.4.0
+GSMAKE=gnustep-make-2.6.1
 DESCRIPTION="GNUstep Objective-C runtime"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="http://download.gna.org/gnustep/${P}.tar.bz2
