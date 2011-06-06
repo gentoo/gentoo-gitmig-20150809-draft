@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.316 2011/06/01 20:38:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.317 2011/06/06 13:04:08 chainsaw Exp $
+
+*asterisk-1.8.4.2 (06 Jun 2011)
+
+  06 Jun 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.4.1.ebuild,
+  +asterisk-1.8.4.2.ebuild:
+  Security update 1.8.4.2; upstream vulnerability report AST-2011-007 describes
+  a remotely exploitable crash in the SIP channel driver. Remove vulnerable
+  1.8.4.1 ebuild; the 1.6.2 branch is not affected and remains the current
+  stable.
 
   01 Jun 2011; Tony Vroon <chainsaw@gentoo.org>
   -files/1.8.0/asterisk-1.8.0-alarm-receiver-use-playtones.patch,
