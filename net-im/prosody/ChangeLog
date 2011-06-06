@@ -1,6 +1,11 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.12 2011/05/02 16:55:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.13 2011/06/06 11:42:39 djc Exp $
+
+*prosody-0.8.1 (06 Jun 2011)
+
+  06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> +prosody-0.8.1.ebuild:
+  Version bump to 0.8.1, change SQL dependencies (bug 369623).
 
 *prosody-0.8.0-r1 (02 May 2011)
 
