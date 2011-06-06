@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.52 2011/05/01 13:52:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.53 2011/06/06 17:51:26 abcd Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -21,7 +21,7 @@ EXPORT_FUNCTIONS ${KDEMETA_EXPF}
 
 # Add dependencies that all packages in a certain module share.
 case ${KMNAME} in
-	kdebase|kdebase-apps|kdebase-workspace|kdebase-runtime|kdegraphics)
+	kdebase|kdebase-apps|kde-baseapps|kdebase-workspace|kde-workspace|kdebase-runtime|kde-runtime|kdegraphics)
 		COMMONDEPEND+=" >=media-libs/qimageblitz-0.0.4"
 		;;
 	kdepim|kdepim-runtime)
@@ -239,8 +239,7 @@ kde4-meta_src_extract() {
 
 		kde4-meta_create_extractlists
 
-		for f in cmake/ CMakeLists.txt ConfigureChecks.cmake config.h.cmake \
-			AUTHORS COPYING INSTALL README NEWS ChangeLog
+		for f in cmake/ CMakeLists.txt ConfigureChecks.cmake config.h.cmake
 		do
 			extractlist+=" ${topdir}${moduleprefix}${f}"
 		done
@@ -261,7 +260,9 @@ kde4-meta_src_extract() {
 		fi
 
 		# Default $S is based on $P; rename the extracted directory to match $S if necessary
-		mv ${topdir} ${P} || die "Died while moving \"${topdir}\" to \"${P}\""
+		if [[ ${KMNAME} != ${PN} ]]; then
+			mv ${topdir} ${P} || die "Died while moving \"${topdir}\" to \"${P}\""
+		fi
 
 		popd > /dev/null
 
@@ -322,16 +323,16 @@ kde4-meta_create_extractlists() {
 					ConfigureChecks.cmake"
 			fi
 			;;
-		kdebase-apps)
+		kdebase-apps | kde-baseapps)
 			KMEXTRACTONLY+="
 				config-apps.h.cmake
 				ConfigureChecks.cmake"
 			;;
-		kdebase-runtime)
+		kdebase-runtime | kde-runtime)
 			KMEXTRACTONLY+="
 				config-runtime.h.cmake"
 			;;
-		kdebase-workspace)
+		kdebase-workspace | kde-workspace)
 			KMEXTRACTONLY+="
 				config-unix.h.cmake
 				ConfigureChecks.cmake
@@ -392,7 +393,7 @@ kde4-meta_create_extractlists() {
 	#   should not try in that case
 	if [[ ${KMNAME} != kdegraphics ]] || { [[ ${SLOT} != 4.6 || ${PV} < 4.6.2 ]] && ! slot_is_at_least 4.7 ${SLOT}; }; then
 		case ${KMNAME} in
-			kdebase-runtime|kdebase-workspace|kdeedu|kdegames|kdegraphics)
+			kdebase-runtime|kde-runtime|kdebase-workspace|kde-workspace|kdeedu|kdegames|kdegraphics)
 				case ${PN} in
 					libkdegames|libkdeedu|libkworkspace)
 						KMEXTRA+="
@@ -560,7 +561,7 @@ kde4-meta_change_cmakelists() {
 	done
 
 	case ${KMNAME} in
-		kdebase-workspace)
+		kdebase-workspace | kde-workspace)
 			# COLLISION PROTECT section
 			# Install the startkde script just once, as a part of kde-base/kdebase-startkde,
 			# not as a part of every package.
@@ -575,7 +576,7 @@ kde4-meta_change_cmakelists() {
 					-i CMakeLists.txt || die "${LINENO}: sed died in kdebase-workspace strip config install and fix EXPORT section"
 			fi
 			;;
-		kdebase-runtime)
+		kdebase-runtime | kde-runtime)
 			# COLLISION PROTECT section
 			# Only install the kde4 script as part of kde-base/kdebase-data
 			if [[ ${PN} != kdebase-data && -f CMakeLists.txt ]]; then

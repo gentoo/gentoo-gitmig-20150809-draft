@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.93 2011/05/23 22:56:36 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.94 2011/06/06 17:51:26 abcd Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -132,12 +132,6 @@ OPENGL_REQUIRED="${OPENGL_REQUIRED:-never}"
 # Is qt-multimedia required? Possible values are 'always', 'optional' and 'never'.
 # This variable must be set before inheriting any eclasses. Defaults to 'never'.
 MULTIMEDIA_REQUIRED="${MULTIMEDIA_REQUIRED:-never}"
-
-# @ECLASS-VARIABLE: WEBKIT_REQUIRED
-# @DESCRIPTION:
-# Is qt-webkit requred? Possible values are 'always', 'optional' and 'never'.
-# This variable must be set before inheriting any eclasses. Defaults to 'never'.
-WEBKIT_REQUIRED="${WEBKIT_REQUIRED:-never}"
 
 # @ECLASS-VARIABLE: CPPUNIT_REQUIRED
 # @DESCRIPTION:
@@ -280,32 +274,6 @@ case ${MULTIMEDIA_REQUIRED} in
 esac
 unset qtmultimediadepend
 
-# WebKit dependencies
-case ${KDE_REQUIRED} in
-	always)
-		qtwebkitusedeps="[kde]"
-		;;
-	optional)
-		qtwebkitusedeps="[kde?]"
-		;;
-	*) ;;
-esac
-qtwebkitdepend="
-	>=x11-libs/qt-webkit-${QT_MINIMAL}:4${qtwebkitusedeps}
-"
-unset qtwebkitusedeps
-case ${WEBKIT_REQUIRED} in
-	always)
-		COMMONDEPEND+=" ${qtwebkitdepend}"
-		;;
-	optional)
-		IUSE+=" webkit"
-		COMMONDEPEND+=" webkit? ( ${qtwebkitdepend} )"
-		;;
-	*) ;;
-esac
-unset qtwebkitdepend
-
 # CppUnit dependencies
 cppuintdepend="
 	dev-util/cppunit
@@ -322,6 +290,17 @@ case ${CPPUNIT_REQUIRED} in
 esac
 unset cppuintdepend
 
+
+# WebKit use dependencies
+case ${KDE_REQUIRED} in
+	always)
+		qtwebkitusedeps="[kde]"
+		;;
+	optional)
+		qtwebkitusedeps="[kde?]"
+		;;
+	*) ;;
+esac
 # KDE dependencies
 # Qt accessibility classes are needed in various places, bug 325461
 kdecommondepend="
@@ -333,6 +312,7 @@ kdecommondepend="
 	>=x11-libs/qt-sql-${QT_MINIMAL}:4[qt3support]
 	>=x11-libs/qt-svg-${QT_MINIMAL}:4
 	>=x11-libs/qt-test-${QT_MINIMAL}:4
+	>=x11-libs/qt-webkit-${QT_MINIMAL}:4${qtwebkitusedeps}
 	!aqua? (
 		x11-libs/libXext
 		x11-libs/libXt
@@ -601,8 +581,11 @@ _calculate_live_repo() {
 				*)
 					# set EGIT_BRANCH and EGIT_COMMIT to ${SLOT}
 					case ${_kmname} in
-						kdeplasma-addons | kdepim | kdepim-runtime | kdepimlibs)
+						kdeplasma-addons | kdepim | kdepim-runtime | kdepimlibs | okular)
 							EGIT_BRANCH="${SLOT}"
+							;;
+						marble)
+							EGIT_BRANCH="kde-${SLOT}"
 							;;
 						*) EGIT_BRANCH="KDE/${SLOT}" ;;
 					esac

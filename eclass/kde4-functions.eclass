@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.48 2011/05/24 20:54:58 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.49 2011/06/06 17:51:26 abcd Exp $
 
 inherit versionator
 
@@ -78,6 +78,9 @@ if [[ ${BUILD_TYPE} == live ]]; then
 		kdebase-apps)
 			KDE_SCM="git"
 			EGIT_REPONAME=${EGIT_REPONAME:=kde-baseapps}
+		;;
+		kde-workspace|kde-runtime|kde-baseapps)
+			KDE_SCM="git"
 		;;
 	esac
 fi
