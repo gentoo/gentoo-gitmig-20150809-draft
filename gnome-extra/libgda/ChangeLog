@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.166 2011/06/03 17:42:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.167 2011/06/06 14:36:43 angelos Exp $
+
+  06 Jun 2011; Christoph Mende <angelos@gentoo.org> libgda-4.2.8.ebuild,
+  +files/libgda-4.2.8-ldap.patch:
+  Fix compilation without LDAP (bug #370233) and add missing ldap USE flag
 
 *libgda-4.2.8 (03 Jun 2011)
 

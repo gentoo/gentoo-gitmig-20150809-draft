@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.8.ebuild,v 1.1 2011/06/03 17:42:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.8.ebuild,v 1.2 2011/06/06 14:36:43 angelos Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2 LGPL-2"
 
 # MDB support currently works with CVS only, so disable it in the meantime
-IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json mysql oci8 postgres sourceview ssl"
+IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mysql oci8 postgres sourceview ssl"
 SLOT="4"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
@@ -39,6 +39,7 @@ RDEPEND="
 	http? ( >=net-libs/libsoup-2.24:2.4 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.5 )
 	json?     ( dev-libs/json-glib )
+	ldap?     ( net-nds/openldap )
 	mysql?    ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	ssl?      ( dev-libs/openssl )
@@ -84,6 +85,7 @@ pkg_setup() {
 		$(use_enable introspection gda-gi)
 		$(use_enable introspection gdaui-gi)
 		$(use_with java java $JAVA_HOME)
+		$(use_with ldap)
 		$(use_with mysql mysql /usr)
 		$(use_with postgres postgres /usr)
 		$(use_enable ssl crypto)
@@ -115,6 +117,9 @@ src_prepare() {
 
 	# Fix compilation failure of keyword_hash.c, upstream #630959
 	epatch "${FILESDIR}/${PN}-4.2.0-missing-include-in-keyword_hash-generator.patch"
+
+	# Fix compilation without ldap, bug #370233, upstream #651713
+	epatch "${FILESDIR}/${P}-ldap.patch"
 
 	intltoolize --force --copy --automake || die
 	eautoreconf
