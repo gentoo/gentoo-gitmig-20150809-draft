@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.85 2011/05/31 20:29:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.86 2011/06/06 01:31:48 jer Exp $
+
+  06 Jun 2011; Jeroen Roovers <jer@gentoo.org> root-5.26.00-r2.ebuild,
+  root-5.26.00e-r1.ebuild:
+  Drop HPPA keywording (bug #355963).
 
   31 May 2011; Markus Meier <maekke@gentoo.org> root-5.26.00e-r1.ebuild:
   x86 stable, bug #367321
