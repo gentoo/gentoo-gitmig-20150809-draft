@@ -1,18 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.4.11.1.ebuild,v 1.5 2011/06/01 19:38:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.4.11.1.ebuild,v 1.6 2011/06/06 20:34:43 abcd Exp $
 
 EAPI=4
-
-inherit kde4-functions
+inherit kde4-meta-pkg
 
 DESCRIPTION="kdepim - merge this to pull in all kdepim-derived packages"
-HOMEPAGE="http://www.kde.org/"
-
-LICENSE="GPL-2"
-SLOT="4.4"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
-IUSE="aqua kdeprefix nls semantic-desktop"
+IUSE="nls semantic-desktop"
 
 RDEPEND="
 	$(add_kdebase_dep akregator)
@@ -37,7 +32,7 @@ RDEPEND="
 	$(add_kdebase_dep libkdepim)
 	$(add_kdebase_dep libkleo)
 	$(add_kdebase_dep libkpgp)
-	nls? (  ( $(add_kdebase_dep kde-l10n ) ) ||
+	nls? ( ( $(add_kdebase_dep kde-l10n ) )
 		( $(add_kdebase_dep kdepim-l10n) ) )
 	semantic-desktop? ( $(add_kdebase_dep akonadi) )
 	$(block_other_slots)
