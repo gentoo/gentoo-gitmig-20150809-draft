@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-pinyin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.35 2011/05/07 15:13:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.36 2011/06/06 16:25:13 matsuu Exp $
+
+*ibus-pinyin-1.3.99.20110520 (06 Jun 2011)
+
+  06 Jun 2011; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-pinyin-1.3.99.20110520.ebuild, metadata.xml:
+  Version bumped. Added lua and opencc USE flags.
 
   07 May 2011; Naohiro Aota <naota@gentoo.org> ChangeLog:
   Sign the package.
