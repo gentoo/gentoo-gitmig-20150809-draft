@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ezusb2131
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ezusb2131/ChangeLog,v 1.3 2007/02/05 16:21:19 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ezusb2131/ChangeLog,v 1.4 2011/06/06 00:26:19 robbat2 Exp $
+
+  06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> ezusb2131-1.0.ebuild:
+  Linux-3.0 changes.
 
   05 Feb 2007; Mike Frysinger <vapier@gentoo.org> ezusb2131-1.0.ebuild:
   Update kernel checks.
