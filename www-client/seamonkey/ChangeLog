@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.313 2011/05/07 18:25:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.314 2011/06/06 14:41:21 polynomial-c Exp $
+
+*seamonkey-2.0.14-r1 (06 Jun 2011)
+
+  06 Jun 2011; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.0.13.ebuild,
+  +seamonkey-2.0.14-r1.ebuild, files/icon/seamonkey.desktop:
+  Revbump to fix .desktop file. Thanks to derf for reporting this in bug
+  #370219. Commit goes straight to stable.
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> seamonkey-2.0.14.ebuild:
   alpha/arm/ia64/sparc stable wrt #365323
