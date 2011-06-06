@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r2.ebuild,v 1.1 2011/06/05 20:44:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r2.ebuild,v 1.2 2011/06/06 21:54:07 dilfridge Exp $
 
 EAPI=3
 
@@ -139,6 +139,16 @@ src_configure() {
 		"
 	fi
 
+	# bug 352252, recheck for later versions if still necessary....
+	if use gnutls && ! use threads ; then
+		ewarn "The useflag gnutls requires also threads enabled. Switching on threads."
+	fi
+	if use gnutls || use threads ; then
+		myconf+=" --enable-threads "
+	else
+		myconf+=" --disable-threads "
+	fi
+
 	econf \
 		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var \
@@ -159,7 +169,6 @@ src_configure() {
 		$(use_enable png) \
 		$(use_enable slp) \
 		$(use_enable static-libs static) \
-		$(use_enable threads) \
 		$(use_enable tiff) \
 		--disable-libusb \
 		$(use_with java) \
