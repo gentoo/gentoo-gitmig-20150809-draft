@@ -6,6 +6,10 @@
 		<email>mgorny@gentoo.org</email>
 		<name>Michał Górny</name>
 	</maintainer>
+	<maintainer>
+		<email>dagger@gentoo.org</email>
+		<name>Robert Piasek</name>
+	</maintainer>
 	<use>
 		<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
 	</use>
