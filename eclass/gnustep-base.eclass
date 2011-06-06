@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.16 2011/04/20 20:48:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.17 2011/06/06 19:17:38 voyageur Exp $
 
 # @ECLASS: gnustep-base.eclass
 # @MAINTAINER:
@@ -120,8 +120,15 @@ egnustep_env() {
 		source "${GS_MAKEFILES}"/GNUstep-reset.sh
 		source "${GS_MAKEFILES}"/GNUstep.sh
 
-		# Needed to run installed GNUstep apps in sandbox
-		addpredict "/root/GNUstep"
+		# Create compilation GNUstep.conf if it does not exist yet
+		if [[ ! -f ${T}/GNUstep.conf ]]; then
+			cp "${EPREFIX}"/etc/GNUstep/GNUstep.conf "${T}" \
+				|| die "GNUstep.conf copy failed"
+			sed -e "s#\(GNUSTEP_USER_DIR=\).*#\1${T}#" \
+				-e "s#\(GNUSTEP_USER_DEFAULTS_DIR=\).*#\1${T}/Defaults#" \
+				-i "${T}"/GNUstep.conf || die "GNUstep.conf sed failed"
+		fi
+
 
 		if [[ ! -d ${EPREFIX}/usr/share/GNUstep/Makefiles ]]; then
 			# Set rpath in ldflags when available
@@ -139,6 +146,7 @@ egnustep_env() {
 			ADDITIONAL_NATIVE_LIB_DIRS="${GNUSTEP_SYSTEM_LIBRARIES}" \
 			DESTDIR="${D}" \
 			HOME="${T}" \
+			GNUSTEP_CONFIG_FILE="${T}"/GNUstep.conf \
 			GNUSTEP_USER_DIR="${T}" \
 			GNUSTEP_USER_DEFAULTS_DIR="${T}"/Defaults \
 			GNUSTEP_INSTALLATION_DOMAIN=SYSTEM \
