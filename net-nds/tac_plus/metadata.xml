@@ -9,5 +9,6 @@
   <use>
 	  <flag name='finger'>Adds support for checking user counts via fingering
 		  the NAS</flag>
+	  <flag name='maxsess'>Enforce a limit on maximum sessions per user</flag>
   </use>
 </pkgmetadata>
