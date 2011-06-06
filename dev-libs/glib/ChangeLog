@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.467 2011/06/05 13:12:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.468 2011/06/06 16:00:07 pacho Exp $
+
+*glib-2.28.8 (06 Jun 2011)
+
+  06 Jun 2011; Pacho Ramos <pacho@gentoo.org> +glib-2.28.8.ebuild:
+  Version bump, also skip tests requiring dev-python/dbus-python and
+  dev-util/desktop-file-utils when they are not available as cannot DEPEND on
+  them due circular dependencies problem (bugs #286629 and #349236).
 
   05 Jun 2011; Pacho Ramos <pacho@gentoo.org> glib-1.2.10-r5.ebuild,
   -files/glib-2.24-punt-python-check.patch,
