@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.4.ebuild,v 1.5 2011/05/07 18:36:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.6.ebuild,v 1.1 2011/06/06 10:33:36 pacho Exp $
 
 EAPI="3"
+GNOME2_LA_PUNT="yes"
+GCONF_DEBUG="no"
 PYTHON_DEPEND="python? 2:2.4"
 
-inherit eutils gnome2 python
+inherit gnome2 python
 
 DOC_VER="2.2.0"
 
@@ -59,11 +61,6 @@ DEPEND="${RDEPEND}
 "
 
 PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
-#ELTCONF="--patch-only"
-
-# FIXME: no the best thing to do but it'd be even better to fix autofoo
-# XXX: does not break here
-#MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
 	DOCS="doc/README.OFX doc/README.HBCI"
@@ -122,6 +119,7 @@ src_prepare() {
 }
 
 src_test() {
+	unset DBUS_SESSION_BUS_ADDRESS
 	GUILE_WARN_DEPRECATED=no \
 	GNC_DOT_DIR="${T}"/.gnucash \
 	emake check \
@@ -133,8 +131,6 @@ src_install() {
 	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_install GNC_DOC_INSTALL_DIR=/usr/share/doc/${PF}
 
 	rm -rf "${ED}"/usr/share/doc/${PF}/{examples/,COPYING,INSTALL,*win32-bin.txt,projects.html}
-#	prepalldocs
 	mv "${ED}"/usr/share/doc/${PF} "${T}"/cantuseprepalldocs || die
 	dodoc "${T}"/cantuseprepalldocs/* || die
-	find "${ED}" -name '*.la' -delete || die
 }
