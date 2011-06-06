@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.15 2008/05/21 13:30:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.16 2011/06/06 07:13:43 robbat2 Exp $
 
 : ${EHG_REPO_URI:=${V4L_DVB_HG_REPO_URI:-http://linuxtv.org/hg/v4l-dvb}}
 
@@ -20,7 +20,7 @@ S="${WORKDIR}/${EHG_REPO_URI##*/}/v4l"
 pkg_setup()
 {
 	linux-mod_pkg_setup
-	if [[ "${KV_MAJOR}.${KV_MINOR}" != "2.6"  ]]; then
+	if ! kernel_is -ge 2 6; then
 		ewarn "other Kernel than 2.6.x are not supported at the moment."
 		die "unsupported Kernel (not 2.6.x)"
 	fi
