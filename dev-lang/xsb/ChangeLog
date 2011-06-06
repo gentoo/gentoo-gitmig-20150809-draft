@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.32 2011/06/03 22:34:15 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.33 2011/06/06 00:27:32 keri Exp $
+
+  06 Jun 2011; <keri@gentoo.org> xsb-3.3.2.ebuild:
+  Fix compile when odbc/iodbc not in USE flags. Closes #369765
 
   03 Jun 2011; <keri@gentoo.org> xsb-3.3.2.ebuild:
   Set an unrecoverable error when running out of tagged address space with
