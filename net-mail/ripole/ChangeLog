@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/ripole
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.9 2010/03/19 17:01:48 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.10 2011/06/06 10:12:20 eras Exp $
+
+  06 Jun 2011; Eray Aslan <eras@gentoo.org> ripole-0.2.0.ebuild,
+  +files/ripole-0.2.0-ldflags.patch:
+  Respect LDFLAGS - bug #337843
 
   19 Mar 2010; Jeroen Roovers <jer@gentoo.org> ripole-0.2.0.ebuild:
   Do not install LICENSE.
