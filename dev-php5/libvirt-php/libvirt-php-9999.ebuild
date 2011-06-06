@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/libvirt-php/libvirt-php-9999.ebuild,v 1.2 2011/04/11 12:56:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/libvirt-php/libvirt-php-9999.ebuild,v 1.3 2011/06/06 15:09:40 halcy0n Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://libvirt.org/libvirt-php.git"
 
 LICENSE="PHP-3.01"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE="doc"
 
 RDEPEND="app-emulation/libvirt
