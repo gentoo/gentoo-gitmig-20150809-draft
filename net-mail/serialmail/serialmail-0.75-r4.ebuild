@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r4.ebuild,v 1.1 2011/02/07 10:43:44 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r4.ebuild,v 1.2 2011/06/06 07:36:09 eras Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils
 
@@ -30,11 +30,12 @@ src_prepare() {
 	sed -i "s:@CFLAGS@:${CFLAGS}:" conf-cc
 	use static && LDFLAGS="${LDFLAGS} -static"
 	sed -i "s:@LDFLAGS@:${LDFLAGS}:" conf-ld
+	epatch "${FILESDIR}"/${P}-implicit.patch
 }
 
 src_compile() {
 	grep -v man hier.c | grep -v doc > hier.c.tmp ; mv hier.c.tmp hier.c
-	emake it man || die
+	emake it man
 }
 
 src_install() {
