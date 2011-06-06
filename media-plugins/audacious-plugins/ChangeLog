@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.208 2011/04/29 17:45:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.209 2011/06/06 13:59:05 chainsaw Exp $
+
+*audacious-plugins-2.5.1 (06 Jun 2011)
+
+  06 Jun 2011; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-2.5.1.ebuild:
+  Version bump, thanks to Rion in bug #368683. Fixes, among other things,
+  embedded album art, prev/next whilst stopped, titles for AAC streams and
+  crashing on corrupted M3Us.
 
   29 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org>
   audacious-plugins-2.4.4-r1.ebuild:
