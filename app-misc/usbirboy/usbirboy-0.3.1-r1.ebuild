@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.3.1-r1.ebuild,v 1.1 2009/10/23 08:13:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/usbirboy-0.3.1-r1.ebuild,v 1.2 2011/06/06 00:21:38 robbat2 Exp $
 
 inherit linux-mod eutils
 
@@ -21,7 +21,7 @@ S="${WORKDIR}/${P}/usbirboykmod"
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	if ! kernel_is 2 6; then
+	if ! kernel_is -ge 2 6; then
 		die "This package works only with 2.6 kernel!"
 	fi
 
