@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.9.ebuild,v 1.4 2006/09/03 09:03:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.9.ebuild,v 1.5 2011/06/06 06:21:03 robbat2 Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -34,7 +34,7 @@ pcmcia_src_unpack() {
 	if linux_chkconfig_present PCMCIA; then
 		einfo "Kernel based PCMCIA support has been detected."
 	else
-		if kernel_is 2 6; then
+		if kernel_is -ge 2 6; then
 			einfo "We have detected that you are running a 2.6 kernel"
 			einfo "but you are not using the built-in PCMCIA support."
 			einfo "We will assume you know what you are doing, but please"
