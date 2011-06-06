@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.9 2011/05/19 06:02:58 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.10 2011/06/06 21:06:24 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-0.11.0[audio,joystick,video]
+DEPEND=">=media-libs/libsdl-1.2[audio,joystick,video]
 	media-libs/libpng
 	x11-libs/libXext
 	x11-libs/libXxf86dga
