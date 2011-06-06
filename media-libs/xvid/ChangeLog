@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xvid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.125 2011/04/25 14:20:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.126 2011/06/06 16:33:46 aballier Exp $
+
+*xvid-1.3.2 (06 Jun 2011)
+
+  06 Jun 2011; Alexis Ballier <aballier@gentoo.org> +xvid-1.3.2.ebuild:
+  version bump
 
   25 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> xvid-1.3.1.ebuild:
   append-cflags -mno-vis for sparc wrt #357149 by Alex Buell
