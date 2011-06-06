@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.12 2011/01/26 17:48:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.13 2011/06/06 19:40:25 voyageur Exp $
 
 EAPI=3
 
@@ -17,11 +17,11 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/cfe/trunk"
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug +static-analyzer system-cxx-headers test"
+IUSE="alltargets debug +static-analyzer system-cxx-headers test"
 
 # Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
 DEPEND="static-analyzer? ( dev-lang/perl )"
-RDEPEND="~sys-devel/llvm-${PV}"
+RDEPEND="~sys-devel/llvm-${PV}[alltargets=]"
 
 S="${WORKDIR}/llvm"
 
@@ -62,7 +62,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local CONF_FLAGS=""
+	local CONF_FLAGS="--enable-shared"
 
 	if use debug; then
 		CONF_FLAGS="${CONF_FLAGS} --disable-optimized"
@@ -81,6 +81,12 @@ src_configure() {
 			--with-c-include-dirs=${EPREFIX}/usr/include:/usr/include"
 	fi
 
+	if use alltargets; then
+		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
+	else
+		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host-only"
+	fi
+
 	if use amd64; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
@@ -89,8 +95,10 @@ src_configure() {
 	CONF_FLAGS="${CONF_FLAGS} --with-llvmgccdir=/dev/null"
 
 	if use system-cxx-headers; then
-		# Try to get current C++ headers path
-		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=$(gcc-config -X| cut -d: -f1 | sed '/-v4$/! s,$,/include/g++-v4,')"
+		# Try to get current gcc headers path
+		local CXX_PATH=$(gcc-config -X| cut -d: -f1 | sed 's,/include/g++-v4$,,')
+		CONF_FLAGS="${CONF_FLAGS} --with-c-include-dirs=/usr/include:${CXX_PATH}/include"
+		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=${CXX_PATH}/include/g++-v4"
 		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
 		if has_multilib_profile; then
 			CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-32bit-dir=32"
@@ -154,7 +162,7 @@ src_install() {
 			install_name_tool \
 				-change "@rpath/libclang.dylib" \
 					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
-				-change "${S}"/Release/lib/libLLVM-${PV}.dylib \
+				-change "@executable_path/../lib/libLLVM-${PV}.dylib" \
 					"${EPREFIX}"/usr/lib/llvm/libLLVM-${PV}.dylib \
 				-change "${S}"/Release/lib/libclang.dylib \
 					"${EPREFIX}"/usr/lib/llvm/libclang.dylib \
