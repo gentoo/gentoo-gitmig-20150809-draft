@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ocfs/ocfs-1.0.14.ebuild,v 1.3 2007/04/12 18:52:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ocfs/ocfs-1.0.14.ebuild,v 1.4 2011/06/06 00:27:31 robbat2 Exp $
 
 inherit linux-mod
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 pkg_setup() {
-	if kernel_is 2 6; then
+	if kernel_is -ge 2 6; then
 		die "${P} supports only 2.4 kernels"
 	fi
 }
