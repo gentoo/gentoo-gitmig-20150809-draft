@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.198 2011/05/21 06:37:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.199 2011/06/06 23:50:24 vapier Exp $
+
+*file-5.07-r2 (06 Jun 2011)
+
+  06 Jun 2011; Mike Frysinger <vapier@gentoo.org> +file-5.07-r2.ebuild:
+  Add USE=zlib support and handle cross-compiling #362941.
 
 *file-5.07-r1 (21 May 2011)
 
