@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.11 2011/06/01 17:39:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.12 2011/06/06 20:22:17 abcd Exp $
+
+  06 Jun 2011; Jonathan Callen <abcd@gentoo.org> filelight-4.6.2.ebuild,
+  filelight-4.6.3.ebuild:
+  Remove mentions of kdeprefix
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> filelight-4.6.2.ebuild:
   Marking filelight-4.6.2 ppc stable for bug 354033
