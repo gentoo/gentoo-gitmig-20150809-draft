@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gnumail
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.32 2008/12/16 15:18:43 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.33 2011/06/06 09:09:49 voyageur Exp $
+
+  06 Jun 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  gnumail-1.2.0_pre3-r1.ebuild:
+  Fix dependency on pantomime
 
   16 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
   gnumail-1.2.0_pre3-r1.ebuild:
