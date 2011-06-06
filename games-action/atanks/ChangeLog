@@ -1,6 +1,12 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.62 2011/04/25 19:00:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.63 2011/06/06 17:32:31 mr_bones_ Exp $
+
+*atanks-5.0 (06 Jun 2011)
+
+  06 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org> +atanks-5.0.ebuild,
+  +files/atanks-5.0-build.patch:
+  version bump
 
 *atanks-4.9 (25 Apr 2011)
 
