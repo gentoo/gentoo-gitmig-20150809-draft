@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.6.2.ebuild,v 1.8 2011/06/06 20:35:39 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.6.2.ebuild,v 1.9 2011/06/06 21:09:43 abcd Exp $
 
 EAPI=3
 
-WEBKIT_REQUIRED="always"
 KDE_SCM="git"
 inherit kde4-base
 

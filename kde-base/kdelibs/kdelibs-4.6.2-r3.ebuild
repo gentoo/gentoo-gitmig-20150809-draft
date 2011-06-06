@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.9 2011/06/06 20:32:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.10 2011/06/06 21:09:12 abcd Exp $
 
 EAPI=4
 
 CPPUNIT_REQUIRED="optional"
 DECLARATIVE_REQUIRED="always"
 OPENGL_REQUIRED="optional"
-WEBKIT_REQUIRED="always"
 KDE_SCM="git"
 inherit kde4-base fdo-mime toolchain-funcs
 

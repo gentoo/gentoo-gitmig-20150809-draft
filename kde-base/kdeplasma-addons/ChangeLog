@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.90 2011/06/06 20:35:39 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.91 2011/06/06 21:09:43 abcd Exp $
+
+  06 Jun 2011; Jonathan Callen <abcd@gentoo.org> kdeplasma-addons-4.6.2.ebuild,
+  kdeplasma-addons-4.6.3.ebuild:
+  WEBKIT_REQUIRED doesn't do anything anymore, drop it
 
   06 Jun 2011; Jonathan Callen <abcd@gentoo.org> kdeplasma-addons-4.6.2.ebuild,
   kdeplasma-addons-4.6.3.ebuild:
