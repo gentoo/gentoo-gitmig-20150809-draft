@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0_rc2.ebuild,v 1.3 2011/06/04 01:15:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0_rc2-r1.ebuild,v 1.1 2011/06/06 18:44:39 scarabeus Exp $
 
 EAPI=4
 
@@ -76,15 +76,12 @@ check_pkcs11_setup() {
 		if [[ -n ${PKCS11_SCA6000} ]]; then
 			PKCS11_LIB=sca6000
 			PKCS11_PATH=${PKCS11_SCA6000}
-
 		elif [[ -n ${PKCS11_ETOKEN} ]]; then
 			PKCS11_LIB=etoken
 			PKCS11_PATH=${PKCS11_ETOKEN}
-
 		elif [[ -n ${PKCS11_NCIPHER} ]]; then
 			PKCS11_LIB=ncipher
 			PKCS11_PATH=${PKCS11_NCIPHER}
-
 		elif [[ -n ${PKCS11_AEPKEYPER} ]]; then
 			PKCS11_LIB=aepkeyper
 			PKCS11_PATH=${PKCS11_AEPKEYPER}
@@ -120,6 +117,9 @@ pkg_pretend() {
 pkg_setup() {
 	enewgroup opendnssec
 	enewuser opendnssec -1 -1 -1 opendnssec
+
+	# pretend does not preserve variables so we need to run this once more
+	check_pkcs11_setup
 }
 
 src_prepare() {
