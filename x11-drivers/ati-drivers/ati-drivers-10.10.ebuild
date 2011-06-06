@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.10.ebuild,v 1.2 2010/11/23 21:06:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-10.10.ebuild,v 1.3 2011/06/06 06:47:00 robbat2 Exp $
 
 EAPI="2"
 
@@ -125,7 +125,7 @@ QA_DT_HASH="
 _check_kernel_config() {
 	local failed=0
 	local error=""
-	if ! kernel_is 2 6; then
+	if ! kernel_is -ge 2 6; then
 		eerror "You need a 2.6 linux kernel to compile against!"
 		die "No 2.6 Kernel found"
 	fi

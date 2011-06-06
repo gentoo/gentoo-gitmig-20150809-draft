@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.251 2011/05/26 20:17:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.252 2011/06/06 06:47:00 robbat2 Exp $
+
+  06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> ati-drivers-10.10.ebuild,
+  ati-drivers-10.11.ebuild, ati-drivers-10.12.ebuild, ati-drivers-11.2.ebuild,
+  ati-drivers-11.3.ebuild, ati-drivers-11.4.ebuild, ati-drivers-11.5.ebuild:
+  Linux-3.0 changes.
 
   26 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/ati-drivers-2.6.39.patch, ati-drivers-11.5.ebuild:
