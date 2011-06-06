@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.76 2011/04/06 01:01:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.77 2011/06/06 00:24:56 robbat2 Exp $
+
+  06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> ipsec-tools-0.7.3.ebuild,
+  ipsec-tools-0.7.3-r1.ebuild:
+  Linux-3.0 changes.
 
   06 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   ipsec-tools-0.7.3-r1.ebuild:

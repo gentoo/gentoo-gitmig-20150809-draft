@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.3 2011/04/06 01:01:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.4 2011/06/06 00:24:56 robbat2 Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -31,7 +31,7 @@ DEPEND="${DEPEND_COMMON}
 
 pkg_setup() {
 	get_version
-	if kernel_is 2 6 ; then
+	if kernel_is -ge 2 6 ; then
 		if test "${KV_PATCH}" -ge 19 ; then
 		# Just for kernel >=2.6.19
 			einfo "Checking for suitable kernel configuration (Networking | Networking support | Networking options)"
