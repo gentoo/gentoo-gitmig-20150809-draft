@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.1-r1.ebuild,v 1.3 2011/04/25 01:44:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-23.2-r2.ebuild,v 1.1 2011/06/06 01:17:31 jer Exp $
 
 EAPI="2"
 
@@ -42,20 +42,28 @@ src_prepare() {
 		|| die "sed strip failed"
 }
 
+src_configure() {
+	if ! use device-mapper; then
+		sed -i make.vars -e 's|-DDEVMAPPER||g' || die
+	fi
+}
+
 src_compile() {
 	# lilo needs this. bug #140209
 	export LC_ALL=C
 
 	# hardened automatic PIC plus PIE building should be suppressed
 	# because of assembler instructions that cannot be compiled PIC
-	HARDENED_CFLAGS="`test-flags-CC -fno-pic -nopie`"
+	HARDENED_CFLAGS=$(test-flags-CC -fno-pic -nopie)
 
 	# we explicitly prevent the custom CFLAGS for stability reasons
 	if use static; then
-		emake CC="$(tc-getCC) ${LDFLAGS} ${HARDENED_CFLAGS}" alles || die
+		local target=alles
 	else
-		emake CC="$(tc-getCC) ${LDFLAGS} ${HARDENED_CFLAGS}" all || die
+		local target=all
 	fi
+
+	emake CC="$(tc-getCC) ${LDFLAGS} ${HARDENED_CFLAGS}" ${target} || die
 }
 
 src_install() {

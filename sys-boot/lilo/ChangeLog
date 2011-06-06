@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.69 2011/05/02 00:33:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.70 2011/06/06 01:17:31 jer Exp $
+
+*lilo-23.2-r2 (06 Jun 2011)
+
+  06 Jun 2011; Jeroen Roovers <jer@gentoo.org> -lilo-23.0.ebuild,
+  -lilo-23.0-r1.ebuild, -lilo-23.1-r1.ebuild, +lilo-23.2-r2.ebuild:
+  Do not automagically use lvm2 if present thanks to Michał Górny (bug
+  #369927). Do not use backticks for subshell. Define a target variable instead
+  of duplicating the entire command.
 
   02 May 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe USE=minimal locally.
