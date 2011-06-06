@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-sdl-games
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ChangeLog,v 1.16 2008/06/22 15:25:31 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ChangeLog,v 1.17 2011/06/06 19:22:03 mr_bones_ Exp $
+
+  06 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  ggz-sdl-games-0.0.14.1.ebuild:
+  EAPI=2; add use deps for bug #369273
 
   22 Jun 2008; Markus Meier <maekke@gentoo.org>
   ggz-sdl-games-0.0.14.1.ebuild:
