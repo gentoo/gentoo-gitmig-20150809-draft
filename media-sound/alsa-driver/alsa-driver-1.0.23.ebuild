@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.23.ebuild,v 1.5 2011/04/24 18:16:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.23.ebuild,v 1.6 2011/06/06 06:24:21 robbat2 Exp $
 
 inherit autotools linux-mod flag-o-matic eutils multilib
 
@@ -155,7 +155,7 @@ src_install() {
 
 	dodoc CARDS-STATUS FAQ README WARNING TODO SUPPORTED_KERNELS
 
-	if kernel_is 2 6; then
+	if kernel_is -ge 2 6; then
 		# mv the drivers somewhere they won't be killed by the kernel's make modules_install
 		mv "${D}/lib/modules/${KV_FULL}/kernel/sound" "${D}/lib/modules/${KV_FULL}/${PN}"
 		rmdir "${D}/lib/modules/${KV_FULL}/kernel" &> /dev/null
@@ -174,7 +174,7 @@ pkg_postinst() {
 
 	linux-mod_pkg_postinst
 
-	if kernel_is 2 6 && [ -e "${ROOT}/lib/modules/${KV_FULL}/kernel/sound" ]; then
+	if kernel_is -ge 2 6 && [ -e "${ROOT}/lib/modules/${KV_FULL}/kernel/sound" ]; then
 		# Cleanup if they had older alsa installed
 		for file in $(find "${ROOT}/lib/modules/${KV_FULL}/${PN}" -type f); do
 			rm -f ${file//${KV_FULL}\/${PN}/${KV_FULL}\/kernel\/sound}
