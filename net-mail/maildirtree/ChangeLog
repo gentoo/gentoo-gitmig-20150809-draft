@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/maildirtree
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/ChangeLog,v 1.7 2008/05/30 07:15:27 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildirtree/ChangeLog,v 1.8 2011/06/06 19:19:12 eras Exp $
+
+*maildirtree-0.6-r1 (06 Jun 2011)
+
+  06 Jun 2011; Eray Aslan <eras@gentoo.org> +maildirtree-0.6-r1.ebuild,
+  +files/maildirtree-0.6-ldflags.patch:
+  Respect LDFLAGS - bug #337243
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
