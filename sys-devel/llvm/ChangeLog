@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.42 2011/05/23 11:43:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.43 2011/06/06 19:34:32 voyageur Exp $
+
+  06 Jun 2011; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
+  Update live ebuild to sync latest ebuild changes (vim-syntax, libffi, ...)
 
 *llvm-2.9-r2 (23 May 2011)
 

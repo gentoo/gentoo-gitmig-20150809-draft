@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.12 2011/04/21 09:24:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.13 2011/06/06 19:34:32 voyageur Exp $
 
 EAPI="3"
-inherit subversion eutils multilib toolchain-funcs
+inherit subversion eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -13,7 +13,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/llvm/trunk"
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS=""
-IUSE="alltargets debug +libffi llvm-gcc ocaml test udis86"
+IUSE="alltargets debug +libffi llvm-gcc ocaml test udis86 vim-syntax"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/make-3.79
@@ -23,11 +23,14 @@ DEPEND="dev-lang/perl
 	!~sys-devel/bison-1.875
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	libffi? ( virtual/libffi )
+	libffi? ( dev-util/pkgconfig
+		virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
 	udis86? ( amd64? ( dev-libs/udis86[pic] )
 		!amd64? ( dev-libs/udis86 ) )"
-RDEPEND="dev-lang/perl"
+RDEPEND="dev-lang/perl
+	libffi? ( virtual/libffi )
+	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
 S=${WORKDIR}/${PN}-${PV/_pre*}
 
@@ -80,23 +83,15 @@ src_prepare() {
 	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
 		-i Makefile.rules || die "rpath sed failed"
 
-	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-2.6-commandguide-nops.patch
+	epatch "${FILESDIR}"/${PN}-2.9-nodoctargz.patch
 }
 
 src_configure() {
-	local CONF_FLAGS="--enable-shared"
-
-	if use debug; then
-		CONF_FLAGS="${CONF_FLAGS} --disable-optimized"
-		einfo "Note: Compiling LLVM in debug mode will create huge and slow binaries"
-		# ...and you probably shouldn't use tmpfs, unless it can hold 900MB
-	else
-		CONF_FLAGS="${CONF_FLAGS} \
-			--enable-optimized \
-			--disable-assertions \
-			--disable-expensive-checks"
-	fi
+	local CONF_FLAGS="--enable-shared
+		$(use_enable !debug optimized)
+		$(use_enable debug assertions)
+		$(use_enable debug expensive-checks)"
 
 	if use alltargets; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
@@ -143,6 +138,10 @@ src_configure() {
 	if use udis86; then
 		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
 	fi
+
+	if use libffi; then
+		append-cppflags "$(pkg-config --cflags libffi)"
+	fi
 	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
 	econf ${CONF_FLAGS} || die "econf failed"
 }
@@ -153,6 +152,11 @@ src_compile() {
 
 src_install() {
 	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install || die "install failed"
+
+	if use vim-syntax; then
+		insinto /usr/share/vim/vimfiles/syntax
+		doins utils/vim/*.vim
+	fi
 
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
