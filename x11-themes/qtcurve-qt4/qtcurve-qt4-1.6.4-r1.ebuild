@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.6.4-r1.ebuild,v 1.9 2011/03/05 13:56:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.6.4-r1.ebuild,v 1.10 2011/06/07 02:55:37 abcd Exp $
 
 EAPI=3
 KDE_REQUIRED="optional"
@@ -18,8 +18,8 @@ IUSE="kde windeco"
 
 DEPEND="x11-libs/qt-gui:4[dbus]
 	x11-libs/qt-svg:4
-	kde? ( >=kde-base/systemsettings-${KDE_MINIMAL}
-		windeco? ( >=kde-base/kwin-${KDE_MINIMAL} ) )"
+	kde? ( $(add_kdebase_dep systemsettings)
+		windeco? ( $(add_kdebase_dep kwin) ) )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -39,10 +39,10 @@ pkg_setup() {
 
 src_configure() {
 	if use kde; then
-		mycmakeargs="$(use windeco && echo "-DQTC_KWIN=true")"
+		mycmakeargs=( $(cmake-utils_use windeco QTC_KWIN) )
 		kde4-base_src_configure
 	else
-		mycmakeargs="-DQTC_QT_ONLY=true"
+		mycmakeargs=( -DQTC_QT_ONLY=true )
 		cmake-utils_src_configure
 	fi
 }

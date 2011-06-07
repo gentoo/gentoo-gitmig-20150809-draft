@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.126 2011/03/26 23:02:55 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.127 2011/06/07 02:55:37 abcd Exp $
+
+  07 Jun 2011; Jonathan Callen <abcd@gentoo.org> qtcurve-qt4-0.69.2.ebuild,
+  qtcurve-qt4-1.6.4-r1.ebuild:
+  Use add_kdebase_dep() for KDE deps
 
 *qtcurve-qt4-1.8.6 (26 Mar 2011)
 

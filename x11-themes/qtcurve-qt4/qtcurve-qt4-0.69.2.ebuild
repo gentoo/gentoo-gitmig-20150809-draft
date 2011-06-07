@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.69.2.ebuild,v 1.10 2011/01/29 18:12:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.69.2.ebuild,v 1.11 2011/06/07 02:55:37 abcd Exp $
 
 EAPI=3
 KDE_REQUIRED="optional"
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
 IUSE="kde"
 
 DEPEND="x11-libs/qt-gui:4[dbus]
-	kde? ( >=kde-base/kwin-${KDE_MINIMAL} )"
+	kde? ( $(add_kdebase_dep kwin) )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,7 @@ src_configure() {
 	if use kde ; then
 		kde4-base_src_configure
 	else
-		mycmakeargs="-DQTC_QT_ONLY=true"
+		mycmakeargs=(-DQTC_QT_ONLY=true)
 		cmake-utils_src_configure
 	fi
 }
