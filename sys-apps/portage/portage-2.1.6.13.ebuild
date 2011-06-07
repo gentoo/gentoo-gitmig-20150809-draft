@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.22 2011/06/07 01:07:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.23 2011/06/07 13:10:55 zmedico Exp $
 
 # EAPI 1 since python-2.5 is also EAPI 1.
 EAPI=1
@@ -28,12 +28,12 @@ RDEPEND="${python_dep}
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
-	less? ( sys-apps/less )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	!>=dev-util/debugedit-4.4.6-r2"
 PDEPEND="
 	!build? (
+		less? ( sys-apps/less )
 		>=net-misc/rsync-2.6.4
 		userland_GNU? ( >=sys-apps/coreutils-6.4 )
 	)"
