@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.2 2011/06/06 11:25:01 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.3 2011/06/07 14:10:44 mgorny Exp $
+
+  07 Jun 2011; Michał Górny <mgorny@gentoo.org> systemd-28.ebuild,
+  metadata.xml:
+  Support libcryptsetup, misc fixes.
 
   06 Jun 2011; Robert Piasek <dagger@gentoo.org> metadata.xml:
   Add dagger to metadata as maintainer

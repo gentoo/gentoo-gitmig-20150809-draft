@@ -11,6 +11,8 @@
 		<name>Robert Piasek</name>
 	</maintainer>
 	<use>
+		<!-- XXX: describe those two better -->
 		<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
+		<flag name='cryptsetup'>Use libcryptsetup</flag>
 	</use>
 </pkgmetadata>

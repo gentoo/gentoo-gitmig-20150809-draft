@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-28.ebuild,v 1.1 2011/06/06 08:31:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-28.ebuild,v 1.2 2011/06/07 14:10:44 mgorny Exp $
 
 EAPI=4
 
@@ -13,15 +13,14 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="audit gtk pam selinux tcpd"
-
-# XXX: libcryptsetup
+IUSE="audit cryptsetup gtk pam selinux tcpd"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.4.8-r1
 	>=sys-fs/udev-171
 	>=sys-apps/util-linux-2.19
 	sys-libs/libcap
 	audit? ( >=sys-process/audit-2 )
+	cryptsetup? ( sys-fs/cryptsetup )
 	gtk? (
 		dev-libs/dbus-glib
 		>=dev-libs/glib-2.26
@@ -61,7 +60,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Force the rebuild of .vala sources
-	touch src/*.vala
+	touch src/*.vala || die
 	autotools-utils_src_prepare
 }
 
@@ -71,6 +70,7 @@ src_configure() {
 		--with-rootdir=
 		--localstatedir=/var
 		$(use_enable audit)
+		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable gtk)
 		$(use_enable pam)
 		$(use_enable selinux)
@@ -88,7 +88,7 @@ src_install() {
 	autotools-utils_src_install
 
 	dodoc "${D}"/usr/share/doc/systemd/*
-	rm -rf "${D}"/usr/share/doc/systemd
+	rm -rf "${D}"/usr/share/doc/systemd || die
 
 	cd "${D}"/usr/share/man/man8/
 	for i in halt poweroff reboot runlevel shutdown telinit; do
@@ -97,13 +97,13 @@ src_install() {
 
 	# Drop the .pc file to avoid automagic depends.
 	# This a temporary workaround for gx86 packages.
-	rm -f "${D}"/usr/share/pkgconfig/systemd.pc
+	rm -f "${D}"/usr/share/pkgconfig/systemd.pc || die
 
 	keepdir /run
 }
 
 check_mtab_is_symlink() {
-	if test ! -L "${ROOT}"etc/mtab; then
+	if [[ ! -L "${ROOT}"etc/mtab ]]; then
 		ewarn "${ROOT}etc/mtab must be a symlink to ${ROOT}proc/self/mounts!"
 		ewarn "To correct that, execute"
 		ewarn "    $ ln -sf '${ROOT}proc/self/mounts' '${ROOT}etc/mtab'"
@@ -115,7 +115,7 @@ systemd_machine_id_setup() {
 	if ! "${ROOT}"bin/systemd-machine-id-setup; then
 		ewarn "Setting up /etc/machine-id failed, to fix it please see"
 		ewarn "  http://lists.freedesktop.org/archives/dbus/2011-March/014187.html"
-	elif test ! -L "${ROOT}"var/lib/dbus/machine-id; then
+	elif [[ ! -L "${ROOT}"var/lib/dbus/machine-id ]]; then
 		# This should be fixed in the dbus ebuild, but we warn about it here.
 		ewarn "${ROOT}var/lib/dbus/machine-id ideally should be a symlink to"
 		ewarn "${ROOT}etc/machine-id to make it clear that they have the same"
