@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.20 2011/04/09 22:34:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.21 2011/06/07 01:07:37 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc selinux linguas_pl"
+IUSE="build doc epydoc less selinux linguas_pl"
 
 python_dep=">=dev-lang/python-2.4 <dev-lang/python-2.6.6"
 
@@ -26,6 +26,7 @@ RDEPEND="${python_dep}
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
 	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
+	less? ( sys-apps/less )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	!>=dev-util/debugedit-4.4.6-r2"

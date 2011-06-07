@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.ebuild,v 1.1 2011/06/06 12:57:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.ebuild,v 1.2 2011/06/07 01:07:37 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_pl python2 python3 selinux"
+IUSE="build doc epydoc +ipc +less linguas_pl python2 python3 selinux"
 
 python_dep="python3? ( =dev-lang/python-3* )
 	!python2? ( !python3? (
@@ -34,6 +34,7 @@ RDEPEND="${python_dep}
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
 	elibc_glibc? ( >=sys-apps/sandbox-1.6 )
 	elibc_uclibc? ( >=sys-apps/sandbox-1.6 )
+	less? ( sys-apps/less )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
 	!<app-shells/bash-3.2_p17"
