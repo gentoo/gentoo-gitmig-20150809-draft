@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/opentyrian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.9 2011/05/17 12:50:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.10 2011/06/07 13:45:40 chainsaw Exp $
+
+*opentyrian-20110517-r1 (07 Jun 2011)
+
+  07 Jun 2011; Tony Vroon <chainsaw@gentoo.org> +opentyrian-20110517-r1.ebuild:
+  Revision bump. Renaming the game binary for backwards compatibility was
+  ill-advised as it broke the desktop launcher file. Diagnosed & fixed up by
+  Alexandre Rostovtsev in bug #367979.
 
 *opentyrian-20110517 (17 May 2011)
 
