@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/realtime-base
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/ChangeLog,v 1.1 2011/06/07 20:27:26 aballier Exp $
+
+*realtime-base-0.1 (07 Jun 2011)
+
+  07 Jun 2011; Alexis Ballier <aballier@gentoo.org> +realtime-base-0.1.ebuild,
+  +metadata.xml:
+  initial import, small package to create a group with realtime scheduling
+  privileges as described on http://www.jackaudio.org/linux_rt_config
+
