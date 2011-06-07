@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.5 2011/04/10 22:26:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.6 2011/06/07 02:47:28 abcd Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -58,7 +58,7 @@ RDEPEND=">=dev-libs/boost-1.41.0
 		net-libs/xulrunner:1.9
 		python? ( dev-python/pygtk:2 )
 	)
-	kde? ( >=kde-base/kdebase-startkde-${KDE_MINIMAL} )
+	kde? ( $(add_kdebase_dep kdebase-startkde) )
 	opengl? (
 		virtual/opengl
 		gtk? ( x11-libs/gtkglext )

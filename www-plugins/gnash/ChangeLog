@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.61 2011/05/17 14:45:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.62 2011/06/07 02:47:28 abcd Exp $
+
+  07 Jun 2011; Jonathan Callen <abcd@gentoo.org> gnash-0.8.8.ebuild,
+  gnash-0.8.9.ebuild:
+  Use add_kdebase_dep() for KDE deps
 
   17 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.8.ebuild:
