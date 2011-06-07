@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.1.3.ebuild,v 1.1 2011/04/30 17:22:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-2.1.3.ebuild,v 1.2 2011/06/07 23:21:16 tampakrap Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--program-suffix=2 \
 		$(use_with X x) \

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.55 2011/04/30 17:22:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.56 2011/06/07 23:21:16 tampakrap Exp $
+
+  07 Jun 2011; Theo Chatzimichos <tampakrap@gentoo.org> libdc1394-2.1.3.ebuild:
+  Non maintainer fix, there were two src_compile() instead of a src_configure
+  obviously by mistake
 
 *libdc1394-2.1.3 (30 Apr 2011)
 
