@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.43 2011/03/28 08:40:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.44 2011/06/07 17:11:50 cardoe Exp $
+
+*virt-manager-0.8.7-r1 (07 Jun 2011)
+
+  07 Jun 2011; Doug Goldstein <cardoe@gentoo.org>
+  -files/virt-manager-0.8.2-ssh-tunnel-shutdown.patch,
+  -files/virt-manager-0.8.4-customize-dialog-xmlparsedoc.patch,
+  -files/virt-manager-0.8.4-default-keyring.patch,
+  +virt-manager-0.8.7-r1.ebuild, +files/virt-manager-0.8.7-vcpu-stats.patch:
+  Add back a patch from Michael Williams <spacex@gmail.com> that shows CPU
+  usage per guest instead of as a system whole. Extremely useful when you have
+  a 16 core host with 40 VMs running. Additionally, dropped some stale patches
+  from files/
 
 *virt-manager-0.8.7 (28 Mar 2011)
 
