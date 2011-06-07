@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sfc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.16 2011/03/20 20:07:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.17 2011/06/07 04:57:43 radhermit Exp $
+
+*sfc-0.018 (07 Jun 2011)
+
+  07 Jun 2011; Tim Harder <radhermit@gentoo.org> +sfc-0.018.ebuild:
+  Version bump (bug #370173). Update to EAPI 4, add RDEPEND, and respect
+  CXXFLAGS.
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> sfc-0.016.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
