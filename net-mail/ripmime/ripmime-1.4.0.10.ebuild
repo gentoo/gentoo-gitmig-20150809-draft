@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.10.ebuild,v 1.1 2011/04/19 19:27:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ripmime-1.4.0.10.ebuild,v 1.2 2011/06/07 18:48:31 hwoarang Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pldaniels.com/ripmime/${P}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="static-libs"
 
 src_prepare() {
