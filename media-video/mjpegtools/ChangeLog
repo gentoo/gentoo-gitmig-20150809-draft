@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.155 2011/05/30 17:09:21 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.156 2011/06/07 17:58:56 billie Exp $
+
+*mjpegtools-2.0.0-r1 (07 Jun 2011)
+
+  07 Jun 2011; Daniel Pielmeier <billie@gentoo.org>
+  +mjpegtools-2.0.0-r1.ebuild, +files/mjpegtools-2.0.0-sdlgfx-automagic.patch,
+  metadata.xml:
+  Revision bump to fix bug #259207, thanks to Victor Yu. Kowalsky for the
+  report.
 
   30 May 2011; Daniel Pielmeier <billie@gentoo.org>
   -mjpegtools-2.0.0_rc1.ebuild, mjpegtools-2.0.0.ebuild,
