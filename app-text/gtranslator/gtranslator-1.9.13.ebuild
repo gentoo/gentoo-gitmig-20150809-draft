@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.7 2011/03/22 18:47:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.8 2011/06/07 20:43:45 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -37,6 +37,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-text/gnome-doc-utils
 	app-text/docbook-xml-dtd:4.1.2
+	gnome-base/gnome-common
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {
