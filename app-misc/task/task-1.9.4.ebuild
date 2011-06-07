@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.4.ebuild,v 1.1 2011/03/07 07:56:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.4.ebuild,v 1.2 2011/06/07 09:37:48 radhermit Exp $
 
 EAPI=3
 
@@ -46,7 +46,7 @@ src_install() {
 
 	if use bash-completion ; then
 		insinto /usr/share/bash-completion
-		doins scripts/bash/*
+		newins scripts/bash/task_completion.sh task
 	fi
 
 	if use vim-syntax ; then
