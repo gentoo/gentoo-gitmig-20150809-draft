@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.1.4a.ebuild,v 1.6 2010/11/29 16:01:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.1.4a.ebuild,v 1.7 2011/06/07 17:07:22 tupone Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -26,7 +26,8 @@ RDEPEND="lua? ( dev-lang/lua )
 S=${WORKDIR}/fceu${PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ovflfix.patch
+	epatch "${FILESDIR}"/${P}-ovflfix.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	# mentioned in bug #335836
 	if ! use lua ; then
 		sed -i -e '/_S9XLUA_H/d' SConstruct || die
