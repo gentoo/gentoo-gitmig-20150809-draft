@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kportagetray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.8 2011/06/07 02:45:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.9 2011/06/07 03:05:21 abcd Exp $
+
+  07 Jun 2011; Jonathan Callen <abcd@gentoo.org> kportagetray-0.2.4.ebuild:
+  Missed one
 
   07 Jun 2011; Jonathan Callen <abcd@gentoo.org> kportagetray-0.2.4.ebuild:
   Use add_kdebase_dep() for KDE deps

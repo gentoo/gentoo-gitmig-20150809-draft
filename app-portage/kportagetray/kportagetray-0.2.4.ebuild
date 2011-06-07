@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.4.ebuild,v 1.2 2011/06/07 02:45:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.4.ebuild,v 1.3 2011/06/07 03:05:21 abcd Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ IUSE=""
 
 DEPEND="
 	dev-python/PyQt4[svg,dbus]
-	>=kde-base/pykde4-${KDE_MINIMAL}
+	$(add_kdebase_dep pykde4)
 "
 RDEPEND="${DEPEND}
 	app-portage/eix
