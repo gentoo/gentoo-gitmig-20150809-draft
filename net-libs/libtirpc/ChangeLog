@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.18 2011/01/20 18:28:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.19 2011/06/07 19:35:50 flameeyes Exp $
+
+*libtirpc-0.2.2 (07 Jun 2011)
+
+  07 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> +libtirpc-0.2.2.ebuild:
+  Version bump, which should hopefully build with glibc-2.14.
 
   20 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libtirpc-0.2.1-r1.ebuild:
