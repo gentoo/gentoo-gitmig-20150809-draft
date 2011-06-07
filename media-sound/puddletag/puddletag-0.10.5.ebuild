@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-0.10.2.ebuild,v 1.2 2011/03/31 21:54:03 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-0.10.5.ebuild,v 1.1 2011/06/07 16:56:57 billie Exp $
 
 EAPI=3
 
@@ -16,14 +16,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cover quodlibet"
+IUSE="cover musicbrainz quodlibet"
 
 DEPEND=""
 RDEPEND=">=dev-python/PyQt4-4.5
 	>=dev-python/pyparsing-1.5.1
 	>=media-libs/mutagen-1.20
 	>=dev-python/configobj-4.7.2
-	>=dev-python/python-musicbrainz-0.7.2
+	musicbrainz? ( >=dev-python/python-musicbrainz-0.7.2 )
 	cover? ( >=dev-python/imaging-1.1.7 )
 	quodlibet? ( >=media-sound/quodlibet-2.2.1 )
 	>=dev-python/sip-4.11.2
@@ -37,6 +37,11 @@ pkg_setup() {
 src_prepare() {
 	python_convert_shebangs -q -r 2 .
 	distutils_src_prepare
+}
+
+src_install() {
+	distutils_src_install
+	dodoc changelog HACKING THANKS
 }
 
 pkg_postinst() {

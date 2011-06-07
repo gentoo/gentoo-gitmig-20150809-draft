@@ -8,6 +8,7 @@
 	</maintainer>
 	<use>
 		<flag name="cover"> Enables editing of FLAC cover art</flag>
-		<flag name="quodlibet">Enables editing a QuodLibet library</flag>
+		<flag name="musicbrainz"> Enables support for musicbrainz, needs <pkg>dev-python/python-musicbrainz</pkg></flag>
+		<flag name="quodlibet">Enables support for editing <pkg>media-sound/quodlibet</pkg> databases</flag>
 	</use>
 </pkgmetadata>
