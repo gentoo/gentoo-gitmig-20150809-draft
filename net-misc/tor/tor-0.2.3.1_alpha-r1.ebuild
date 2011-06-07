@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.1_alpha.ebuild,v 1.1 2011/05/08 15:37:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.1_alpha-r1.ebuild,v 1.1 2011/06/07 22:02:29 blueness Exp $
 
 EAPI=3
 
@@ -47,6 +47,7 @@ src_configure() {
 }
 
 src_install() {
+	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r4 tor
 	emake DESTDIR="${D}" install || die
 	keepdir /var/{lib,log,run}/tor
@@ -64,10 +65,6 @@ src_install() {
 
 	insinto /etc/logrotate.d
 	newins contrib/tor.logrotate tor
-
-	# allow the tor user more open files to avoid errors, see bug 251171
-	insinto /etc/security/limits.d/
-	doins "${FILESDIR}"/tor.conf
 }
 
 pkg_postinst() {

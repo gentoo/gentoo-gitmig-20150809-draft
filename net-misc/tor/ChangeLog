@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.256 2011/06/07 21:12:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.257 2011/06/07 22:02:29 blueness Exp $
+
+*tor-0.2.3.1_alpha-r1 (07 Jun 2011)
+*tor-0.2.2.27_beta-r1 (07 Jun 2011)
+
+  07 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
+  -tor-0.2.2.27_beta.ebuild, +tor-0.2.2.27_beta-r1.ebuild,
+  -tor-0.2.3.1_alpha.ebuild, +tor-0.2.3.1_alpha-r1.ebuild:
+  Forward ported rc_ulimit fix to beta and alpha, see bug #268396, comment #19
 
 *tor-0.2.1.30-r2 (07 Jun 2011)
 
