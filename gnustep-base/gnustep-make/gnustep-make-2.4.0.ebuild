@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.4.0.ebuild,v 1.6 2010/08/13 17:28:28 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.4.0.ebuild,v 1.7 2011/06/07 13:48:56 voyageur Exp $
 
 EAPI="3"
 
@@ -17,7 +17,8 @@ LICENSE="GPL-2"
 
 DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-devel/gcc-3.3[objc]
-	>=sys-devel/make-3.75"
+	>=sys-devel/make-3.75
+	!gnustep-base/libobjc2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
