@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/ZendFramework
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.9 2011/06/03 15:01:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.10 2011/06/07 09:38:40 xarthisius Exp $
+
+  07 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ZendFramework-1.11.6.ebuild:
+  ppc64 stable wrt #369139
 
   03 Jun 2011; Brent Baude <ranger@gentoo.org> ZendFramework-1.11.6.ebuild:
   Marking ZendFramework-1.11.6 ppc for bug 369139
