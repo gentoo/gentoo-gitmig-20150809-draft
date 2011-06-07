@@ -1,6 +1,9 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.128 2011/06/01 21:46:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.129 2011/06/07 03:06:16 abcd Exp $
+
+  07 Jun 2011; Jonathan Callen <abcd@gentoo.org> koffice-libs-2.3.3.ebuild:
+  Use add_kdebase_dep() for KDE deps
 
   01 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -koffice-libs-2.2.2.ebuild, -files/koffice-libs-2.2.2-kspreadcommon.patch:

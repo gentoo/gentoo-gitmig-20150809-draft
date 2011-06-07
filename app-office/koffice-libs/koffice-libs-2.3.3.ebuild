@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3.ebuild,v 1.4 2011/05/09 23:12:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3.ebuild,v 1.5 2011/06/07 03:06:16 abcd Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ RDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/soprano
-	>=kde-base/kdepimlibs-${KDE_MINIMAL}
+	$(add_kdebase_dep kdepimlibs)
 	media-libs/lcms:0
 	crypt? ( app-crypt/qca:2 )
 	openexr? ( media-libs/openexr )
