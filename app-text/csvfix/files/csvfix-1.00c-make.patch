@@ -46,11 +46,13 @@
  
  _OBJS = csved_atable.o \
  		csved_case.o \
-@@ -82,15 +82,14 @@
+@@ -81,16 +81,15 @@
+ 	strip $(WINOUT)
  
  $(LINOUT): $(OBJS) 
- 	$(CC) -o $@ $^ $(LINLIBS)
+-	$(CC) -o $@ $^ $(LINLIBS)
 -	strip $(LINOUT)
++	$(CC) $(LDFLAGS) -o $@ $^ $(LINLIBS)
  
  .PHONY: win
  win:

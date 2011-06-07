@@ -1,6 +1,9 @@
 # ChangeLog for app-text/csvfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/csvfix/ChangeLog,v 1.1 2011/04/22 05:05:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/csvfix/ChangeLog,v 1.2 2011/06/07 09:27:21 radhermit Exp $
+
+  07 Jun 2011; Tim Harder <radhermit@gentoo.org> files/csvfix-1.00c-make.patch:
+  Respect LDFLAGS (bug #370423).
 
 *csvfix-1.00c (22 Apr 2011)
 
