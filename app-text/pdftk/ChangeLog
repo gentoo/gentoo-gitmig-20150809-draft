@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdftk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.34 2010/11/27 22:16:39 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.35 2011/06/07 20:18:38 hwoarang Exp $
+
+  07 Jun 2011; Markos Chandras <hwoarang@gentoo.org> pdftk-1.44.ebuild:
+  Stable on amd64 wrt bug #370169
 
 *pdftk-1.41-r2 (27 Nov 2010)
 
