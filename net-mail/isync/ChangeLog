@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/isync
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.12 2009/09/23 19:06:55 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.13 2011/06/07 11:12:01 eras Exp $
+
+  07 Jun 2011; Eray Aslan <eras@gentoo.org> isync-1.0.4.ebuild:
+  Fix documentation dir - bug #298102
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> isync-1.0.2.ebuild,
   isync-1.0.3.ebuild, isync-1.0.4.ebuild:
