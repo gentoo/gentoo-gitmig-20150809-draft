@@ -1,6 +1,17 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.56 2011/05/20 19:17:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.57 2011/06/07 19:30:53 mattst88 Exp $
+
+  07 Jun 2011; Matt Turner <mattst88@gentoo.org>
+  +mips64/multilib/n32/make.defaults, +mips64/multilib/n32/parent,
+  +mips64/multilib/n64/make.defaults, +mips64/multilib/n64/parent,
+  +mipsel/mips64el/multilib/n32/make.defaults,
+  +mipsel/mips64el/multilib/n32/parent,
+  +mipsel/mips64el/multilib/n64/make.defaults,
+  +mipsel/mips64el/multilib/n64/parent, mips64/multilib/make.defaults,
+  mips64/multilib/parent, mipsel/mips64el/multilib/make.defaults:
+  Add multilib/n{32,64} subprofiles to specify default ABI for multilib
+  installations.
 
   20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Mask net-nds/ypbind[debug] as dev-libs/dmalloc is not keyworded
