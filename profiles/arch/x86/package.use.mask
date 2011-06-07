@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.57 2011/05/29 11:26:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.58 2011/06/07 14:31:40 voyageur Exp $
 
 # This file requires >=portage-2.1.1
+
+# Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
+# libobjc2/clang works on x86
+gnustep-base/gnustep-make -libobjc2
 
 # Andrey Grozin <grozin@gentoo.org> (28 Apr 2011)
 # cmucl is only available on x86

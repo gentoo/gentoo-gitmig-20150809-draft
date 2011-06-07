@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.93 2011/05/14 01:14:45 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.94 2011/06/07 14:32:37 voyageur Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
+# libobjc2/clang works on amd64
+gnustep-base/gnustep-make -libobjc2
 
 # Jim Ramsay <lack@gentoo.org> (14 May 2011)
 # Mask 'kde' flag for adobe-flash, since the KCM plugin is 32-bit only.
