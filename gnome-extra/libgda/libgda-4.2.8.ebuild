@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.8.ebuild,v 1.2 2011/06/06 14:36:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.8.ebuild,v 1.3 2011/06/07 08:17:07 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -120,6 +120,9 @@ src_prepare() {
 
 	# Fix compilation without ldap, bug #370233, upstream #651713
 	epatch "${FILESDIR}/${P}-ldap.patch"
+
+	# Fix sandbox violations with USE doc, bug #370013, upstream #651922
+	epatch "${FILESDIR}/${P}-sandbox-fix.patch"
 
 	intltoolize --force --copy --automake || die
 	eautoreconf
