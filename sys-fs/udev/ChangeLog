@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.580 2011/06/05 21:09:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.581 2011/06/07 05:54:01 williamh Exp $
+
+  07 Jun 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  migrate live ebuild to eapi 4.
 
   05 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> udev-146-r1.ebuild,
   udev-149.ebuild, udev-151-r4.ebuild, udev-162.ebuild, udev-163.ebuild,

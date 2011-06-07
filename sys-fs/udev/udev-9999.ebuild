@@ -1,33 +1,42 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.40 2011/06/05 21:09:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.41 2011/06/07 05:54:01 williamh Exp $
 
-EAPI="1"
+EAPI=4
 
-inherit eutils flag-o-matic multilib toolchain-funcs linux-info systemd
-
-PATCHSET=${P}-gentoo-patchset-v1
+KV_min=2.6.32
+KV_reliable=2.6.32
+#PATCHSET=${P}-gentoo-patchset-v1
 scriptversion=v3
 scriptname=udev-gentoo-scripts-${scriptversion}
 
-if [[ ${PV} == "9999" ]]; then
-	SRC_URI="mirror://gentoo/${scriptname}.tar.bz2"
+if [[ ${PV} == "9999" ]]
+then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 	EGIT_BRANCH="master"
-	inherit git autotools
-else
+	vcs="git-2 autotools"
+fi
+
+inherit ${VCS} eutils flag-o-matic multilib toolchain-funcs linux-info systemd
+
+if [[ ${PV} != "9999" ]]
+then
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
-			 test? ( mirror://gentoo/${PN}-151-testsys.tar.bz2 )
-			 mirror://gentoo/${scriptname}.tar.bz2"
-	[[ -n "${PATCHSET}" ]] && SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
+			 test? ( mirror://gentoo/${PN}-151-testsys.tar.bz2 )"
+	if [[ -n "${PATCHSET}" ]]
+	then
+		SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
+	fi
 fi
+SRC_URI="${SRC_URI} mirror://gentoo/${scriptname}.tar.bz2"
+
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="selinux test debug +rule_generator +hwdb +udev_acl +gudev introspection +keymap floppy edd action_modeswitch"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
@@ -46,17 +55,14 @@ DEPEND="${COMMON_DEPEND}
 	test? ( app-text/tree )"
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb?
-	(
-		>=sys-apps/usbutils-0.82
-		sys-apps/pciutils
-	)
+	hwdb? ( >=sys-apps/usbutils-0.82 sys-apps/pciutils )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
 	>=sys-apps/baselayout-1.12.5"
 
-if [[ ${PV} == "9999" ]]; then
+if [[ ${PV} == "9999" ]]
+then
 	# for documentation processing with xsltproc
 	DEPEND="${DEPEND}
 		app-text/docbook-xsl-stylesheets
@@ -74,13 +80,12 @@ CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
 # 0 - too old
 udev_check_KV() {
 	local ok=0
-	if [[ ${KV_MAJOR} == 2 && ${KV_MINOR} == 6 ]] || [[ ${KV_MAJOR} == 3 ]]
+	if kernel_is -ge ${KV_reliable//./ }
 	then
-		if kernel_is -ge 2 6 ${KV_PATCH_reliable} ; then
-			ok=2
-		elif kernel_is -ge 2 6 ${KV_PATCH_min} ; then
-			ok=1
-		fi
+		ok=2
+	elif kernel_is -ge ${KV_min//./ }
+	then
+		ok=1
 	fi
 	return $ok
 }
@@ -88,67 +93,56 @@ udev_check_KV() {
 pkg_setup() {
 	linux-info_pkg_setup
 
-	# udev requires signalfd introduced in kernel 2.6.25,
-	# but a glibc compiled against >=linux-headers-2.6.27 uses the
-	# new signalfd syscall introduced in kernel 2.6.27 without falling back
-	# to the old one. So we just depend on 2.6.27 here, see Bug #281312.
-	KV_PATCH_min=32
-	KV_PATCH_reliable=32
-	KV_min=2.6.${KV_PATCH_min}
-	KV_reliable=2.6.${KV_PATCH_reliable}
-
 	# always print kernel version requirements
 	ewarn
 	ewarn "${P} does not support Linux kernel before version ${KV_min}!"
-	if [[ ${KV_PATCH_min} != ${KV_PATCH_reliable} ]]; then
+	if [[ ${KV_min} != ${KV_reliable} ]]
+	then
 		ewarn "For a reliable udev, use at least kernel ${KV_reliable}"
 	fi
 
-	echo
-	# We don't care about the secondary revision of the kernel.
-	# 2.6.30.4 -> 2.6.30 is all we check
 	udev_check_KV
 	case "$?" in
 		2)	einfo "Your kernel version (${KV_FULL}) is new enough to run ${P} reliably." ;;
 		1)	ewarn "Your kernel version (${KV_FULL}) is new enough to run ${P},"
 			ewarn "but it may be unreliable in some cases."
-			ebeep ;;
+			;;
 		0)	eerror "Your kernel version (${KV_FULL}) is too old to run ${P}"
-			ebeep ;;
+			;;
 	esac
-	echo
 
 	KV_FULL_SRC=${KV_FULL}
 	get_running_version
 	udev_check_KV
-	if [[ "$?" = "0" ]]; then
+	if [[ "$?" = "0" ]]
+	then
 		eerror
 		eerror "udev cannot be restarted after emerging,"
 		eerror "as your running kernel version (${KV_FULL}) is too old."
 		eerror "You really need to use a newer kernel after a reboot!"
 		NO_RESTART=1
-		ebeep
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
-	if [[ ${PV} == "9999" ]] ; then
+	if [[ ${PV} == "9999" ]]
+	then
 		git_src_unpack
-	else
-		if use test; then
-			mv "${WORKDIR}"/test/sys "${S}"/test/
-		fi
 	fi
+}
 
-	#cd "${WORKDIR}/${scriptname}"
-
-	cd "${S}"
+src_prepare() {
+	if use test
+	then
+		mv "${WORKDIR}"/test/sys "${S}"/test/
+	fi
 
 	# patches go here...
 
 	# backport some patches
-	if [[ -n "${PATCHSET}" ]]; then
+	if [[ -n "${PATCHSET}" ]]
+	then
 		EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
 			  EPATCH_FORCE="yes" epatch
 	fi
@@ -158,29 +152,28 @@ src_unpack() {
 		-i rules/{rules.d,arch}/*.rules \
 	|| die "failed to change group dialout to uucp"
 
-	if [[ ${PV} != 9999 ]]; then
+	if [[ ${PV} != 9999 ]]
+	then
 		# Make sure there is no sudden changes to upstream rules file
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
 		if [[ ${MD5} != a9954d57e97aa0ad2e0ed53899d9559a ]]
 		then
-			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
 			eerror "md5sum: ${MD5}"
 			die "50-udev-default.rules has been updated, please validate!"
 		fi
 	fi
 
-	if [[ ${PV} == 9999 ]]; then
+	if [[ ${PV} == 9999 ]]
+	then
 		gtkdocize --copy || die "gtkdocize failed"
 		eautoreconf
 	fi
 }
 
-src_compile() {
-	filter-flags -fprefetch-loop-arrays
-
+src_configure() {
 	econf \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -204,18 +197,22 @@ src_compile() {
 		$(use_enable edd) \
 		$(use_enable action_modeswitch) \
 		$(systemd_with_unitdir)
+}
 
-	emake || die "compiling udev failed"
+src_compile() {
+	filter-flags -fprefetch-loop-arrays
+
+	emake
 }
 
 src_install() {
 	emake -C "${WORKDIR}/${scriptname}" \
 		DESTDIR="${D}" LIBDIR="$(get_libdir)" \
 		KV_min="${KV_min}" KV_reliable="${KV_reliable}" \
-		install || die "make install failed"
+		install
 
 	into /
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
 	exeinto /lib/udev
 	keepdir /lib/udev/state
@@ -251,12 +248,13 @@ src_install() {
 	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
 
 	# documentation
-	dodoc ChangeLog README TODO || die "failed installing docs"
+	dodoc ChangeLog README TODO
 
 	# keep doc in just one directory, Bug #281137
 	rm -rf "${D}/usr/share/doc/${PN}"
-	if use keymap; then
-		dodoc extras/keymap/README.keymap.txt || die "failed installing docs"
+	if use keymap
+	then
+		dodoc extras/keymap/README.keymap.txt
 	fi
 }
 
@@ -333,7 +331,8 @@ fix_old_persistent_net_rules() {
 
 # See Bug #129204 for a discussion about restarting udevd
 restart_udevd() {
-	if [[ ${NO_RESTART} = "1" ]]; then
+	if [[ ${NO_RESTART} = "1" ]]
+	then
 		ewarn "Not restarting udevd, as your kernel is too old!"
 		return
 	fi
@@ -359,13 +358,13 @@ restart_udevd() {
 
 	/sbin/udevd --daemon
 	sleep 3
-	if [[ ! -n $(pidof udevd) ]]; then
+	if [[ ! -n $(pidof udevd) ]]
+	then
 		eerror "FATAL: udev died, please check your kernel is"
 		eerror "new enough and configured correctly for ${P}."
 		eerror
 		eerror "Please have a look at this before rebooting."
 		eerror "If in doubt, please downgrade udev back to your old version"
-		ebeep
 	fi
 }
 
@@ -432,7 +431,8 @@ pkg_postinst() {
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
 	rmdir "${ROOT}"/dev/loop 2>/dev/null
-	if [[ -d "${ROOT}"/dev/loop ]]; then
+	if [[ -d "${ROOT}"/dev/loop ]]
+	then
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
 	fi
