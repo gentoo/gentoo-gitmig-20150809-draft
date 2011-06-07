@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.25.ebuild,v 1.2 2011/06/07 16:44:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.25-r1.ebuild,v 1.1 2011/06/07 16:44:33 jer Exp $
 
 EAPI=2
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	sed -i "s:/etc/chrony\.:/etc/chrony/chrony.:g" \
 		examples/* chrony*.{1,5,8} faq.txt chrony.texi || die "sed failed"
+	epatch "${FILESDIR}"/${P}-linux3.patch
 }
 
 src_configure() {

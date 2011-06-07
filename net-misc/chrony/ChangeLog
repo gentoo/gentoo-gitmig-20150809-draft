@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.70 2011/05/08 17:38:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.71 2011/06/07 16:44:33 jer Exp $
+
+*chrony-1.25-r1 (07 Jun 2011)
+
+  07 Jun 2011; Jeroen Roovers <jer@gentoo.org> chrony-1.25.ebuild,
+  +chrony-1.25-r1.ebuild, +files/chrony-1.25-linux3.patch:
+  Remove _pre logic since it is not effective. Patch by GerbilSoft (bug
+  #370391) to recognise Linux 3.0.
 
   08 May 2011; Tobias Klausmann <klausman@gentoo.org> files/chrony.logrotate:
   Fix logrotate script (end markers for here documents have to be at the
