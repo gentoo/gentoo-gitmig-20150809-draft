@@ -1,6 +1,16 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.31 2011/04/24 21:04:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.32 2011/06/07 14:32:38 sping Exp $
+
+*open-iscsi-2.0.872 (07 Jun 2011)
+
+  07 Jun 2011; Sebastian Pipping <sping@gentoo.org> +open-iscsi-2.0.872.ebuild,
+  +files/open-iscsi-2.0.872-conf.d,
+  +files/open-iscsi-2.0.872-dont-call-configure.patch,
+  +files/open-iscsi-2.0.872-glibc212.patch, +files/open-iscsi-2.0.872-init.d,
+  +files/open-iscsi-2.0.872-ldflags.patch,
+  +files/open-iscsi-2.0.872-makefile-cleanup.patch:
+  Bump to 2.0.872 (bug #340425)
 
   24 Apr 2011; Ulrich Mueller <ulm@gentoo.org> open-iscsi-2.0.870.3-r1.ebuild:
   Replace dependency on virtual/modutils, bug 358891.
