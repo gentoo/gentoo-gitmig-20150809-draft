@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2-r3.ebuild,v 1.1 2011/05/09 16:14:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.2-r4.ebuild,v 1.1 2011/06/07 08:49:26 nirbheek Exp $
 
 EAPI=4
 inherit eutils bash-completion linux-info
@@ -49,7 +49,8 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-CVE-2010-4661.patch \
-		"${FILESDIR}"/${P}-missing_comma.patch
+		"${FILESDIR}"/${P}-missing_comma.patch \
+		"${FILESDIR}"/${P}-ntfs-3g.patch
 }
 
 src_configure() {
