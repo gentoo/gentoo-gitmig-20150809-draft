@@ -1,6 +1,16 @@
 # ChangeLog for sci-geosciences/gpscorrelate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.8 2011/03/02 20:33:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.9 2011/06/07 09:14:32 scarabeus Exp $
+
+*gpscorrelate-1.6.1 (07 Jun 2011)
+
+  07 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -gpscorrelate-1.5.6.ebuild, -files/gpscorrelate-1.5.6-cflags.patch,
+  -gpscorrelate-1.5.8.ebuild, -files/gpscorrelate-1.5.8-makefile.diff,
+  -gpscorrelate-1.6.0.ebuild, +gpscorrelate-1.6.1.ebuild,
+  +files/gpscorrelate-1.6.1-makefile.patch, -files/gpscorrelate.1:
+  Version bump to latest. Punt older. This thing was by some magic accident
+  stable on amd64 so un-stable it.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gpscorrelate-1.5.6.ebuild,
   gpscorrelate-1.5.8.ebuild, gpscorrelate-1.6.0.ebuild:
