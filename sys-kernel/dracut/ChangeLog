@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.22 2011/04/01 22:54:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.23 2011/06/07 20:16:01 aidecoe Exp $
+
+*dracut-010-r2 (07 Jun 2011)
+
+  07 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010-r2.ebuild:
+  Added missing net-misc/ifenslave runtime dependency.
 
 *dracut-010-r1 (01 Apr 2011)
 
