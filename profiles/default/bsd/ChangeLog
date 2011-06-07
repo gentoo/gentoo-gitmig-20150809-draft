@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.53 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.54 2011/06/07 12:52:29 naota Exp $
+
+  07 Jun 2011; Naohiro Aota <naota@gentoo.org> packages:
+  Add -*>=sys-apps/shadow-4.1
 
   09 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   use.mask:
