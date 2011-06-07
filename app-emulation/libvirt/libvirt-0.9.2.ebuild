@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.2_rc2.ebuild,v 1.2 2011/06/03 22:21:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.2.ebuild,v 1.1 2011/06/07 15:08:51 cardoe Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -153,6 +153,9 @@ src_configure() {
 
 	# we use udev over hal
 	myconf="${myconf} --without-hal"
+
+	# locking support
+	myconf="${myconf} --without-sanlock"
 
 	# this is a nasty trick to work around the problem in bug
 	# #275073. The reason why we don't solve this properly is that
