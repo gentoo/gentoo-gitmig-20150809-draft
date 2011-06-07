@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.9.0.ebuild,v 1.4 2011/05/09 23:10:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.9.0.ebuild,v 1.5 2011/06/07 02:51:21 abcd Exp $
 
 EAPI=3
 
@@ -26,11 +26,11 @@ SLOT="4"
 IUSE="addressbook debug doc geolocation gphoto2 handbook semantic-desktop themedesigner +thumbnails video"
 
 CDEPEND="
-	>=kde-base/kdelibs-${KDE_MINIMAL}[semantic-desktop?]
-	>=kde-base/libkdcraw-${KDE_MINIMAL}
-	>=kde-base/libkexiv2-${KDE_MINIMAL}
-	>=kde-base/libkipi-${KDE_MINIMAL}
-	>=kde-base/solid-${KDE_MINIMAL}
+	$(add_kdebase_dep kdelibs 'semantic-desktop?')
+	$(add_kdebase_dep libkdcraw)
+	$(add_kdebase_dep libkexiv2)
+	$(add_kdebase_dep libkipi)
+	$(add_kdebase_dep solid)
 	media-libs/jasper
 	virtual/jpeg
 	media-libs/lcms:0
@@ -44,16 +44,16 @@ CDEPEND="
 	virtual/mysql
 	x11-libs/qt-gui[qt3support]
 	|| ( x11-libs/qt-sql[mysql] x11-libs/qt-sql[sqlite] )
-	addressbook? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} )
-	geolocation? ( >=kde-base/marble-${KDE_MINIMAL}[plasma] )
+	addressbook? ( $(add_kdebase_dep kdepimlibs) )
+	geolocation? ( $(add_kdebase_dep marble plasma) )
 	gphoto2? ( media-libs/libgphoto2 )
 "
 RDEPEND="${CDEPEND}
-	>=kde-base/kreadconfig-${KDE_MINIMAL}
+	$(add_kdebase_dep kreadconfig)
 	video? (
 		|| (
-			>=kde-base/mplayerthumbs-${KDE_MINIMAL}
-			>=kde-base/ffmpegthumbs-${KDE_MINIMAL}
+			( $(add_kdebase_dep mplayerthumbs) )
+			( $(add_kdebase_dep ffmpegthumbs) )
 		)
 	)
 "
@@ -120,6 +120,6 @@ pkg_postinst() {
 	kde4-base_pkg_postinst
 
 	if use doc; then
-		elog The digikam api documentation has been installed at /usr/share/doc/${PF}/html
+		elog "The digikam api documentation has been installed at /usr/share/doc/${PF}/html"
 	fi
 }
