@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.38 2011/02/18 17:06:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.39 2011/06/07 16:10:14 jer Exp $
+
+  07 Jun 2011; Jeroen Roovers <jer@gentoo.org> pythia-6.4.24.ebuild,
+  pythia-8.1.45.ebuild:
+  Drop HPPA keywording
 
   18 Feb 2011; Jeroen Roovers <jer@gentoo.org> pythia-6.4.24.ebuild,
   pythia-8.1.45.ebuild:
