@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.742.68.ebuild,v 1.1 2011/05/26 08:57:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-12.0.742.91.ebuild,v 1.1 2011/06/07 09:53:52 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
