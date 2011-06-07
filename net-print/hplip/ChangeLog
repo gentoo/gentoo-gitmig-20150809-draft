@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.185 2011/05/18 20:21:50 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.186 2011/06/07 16:37:53 billie Exp $
+
+  07 Jun 2011; Daniel Pielmeier <billie@gentoo.org> hplip-3.10.9-r1.ebuild,
+  hplip-3.11.5.ebuild, metadata.xml:
+  Fix udev dependency bug #370389. Thanks to William Hubbs for the report.
+  Change udev-acl use flag to acl according to udev itself.
 
 *hplip-3.11.5 (18 May 2011)
 

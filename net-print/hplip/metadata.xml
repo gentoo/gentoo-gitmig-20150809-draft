@@ -23,7 +23,7 @@
 		<flag name="scanner">Enable scanner on multifunction devices which support it</flag>
 		<flag name="snmp">Add support for <pkg>net-analyzer/net-snmp</pkg> which enables this driver to work over networks (both for server and client)</flag>
 		<flag name="static-ppds">Use statically-generated PPDs instead of Dynamic PPDs. Although this is deprecated some printers may still need it to work properly. Use this flag if hp-setup fails to find/create a valid PPD file</flag>
-		<flag name="udev-acl">Install udev acl rules which needs <pkg>sys-fs/udev</pkg> with acl support</flag>
+		<flag name="acl">Install udev acl rules which needs <pkg>sys-fs/udev</pkg> with acl support</flag>
 		<flag name="X">Enables scanner GUI dependencies with USE="scanner" where <pkg>media-gfx/xsane</pkg> is preferred over <pkg>media-gfx/sane-frontends</pkg></flag>
 	</use>
 </pkgmetadata>
