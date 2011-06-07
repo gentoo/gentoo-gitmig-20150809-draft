@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r2.ebuild,v 1.5 2011/06/05 20:09:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007e-r2.ebuild,v 1.6 2011/06/07 19:54:18 eras Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
-IUSE="doc kernel_linux kernel_FreeBSD pam ssl"
+IUSE="doc kernel_linux kernel_FreeBSD kolab pam ssl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	!net-mail/uw-imap"
@@ -59,6 +59,12 @@ src_prepare() {
 		-e "s/ARRC=ar/ARRC=$(tc-getAR)/" \
 		-e "s/RANLIB=ranlib/RANLIB=$(tc-getRANLIB)/" \
 		-i src/osdep/unix/Makefile || die "Respecting build flags"
+
+	# Add kolab support.
+	# http://kolab.org/cgi-bin/viewcvs-kolab.cgi/server/patches/imap/
+	if use kolab ; then
+		epatch "${FILESDIR}"/${PN}-2006k_KOLAB_Annotations.patch || die "epatch failed"
+	fi
 
 	elibtoolize
 }

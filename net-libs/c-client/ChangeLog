@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.72 2011/06/07 13:11:08 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.73 2011/06/07 19:54:18 eras Exp $
+
+  07 Jun 2011; Eray Aslan <eras@gentoo.org> c-client-2007e-r2.ebuild:
+  Add back kolab patch - bug #370489
 
   07 Jun 2011; Eray Aslan <eras@gentoo.org> files/c-client-2007e-ldflags.patch:
   Fix as-needed properly - bug #370421
