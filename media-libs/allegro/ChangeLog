@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.103 2011/06/06 22:10:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.104 2011/06/07 06:23:19 tupone Exp $
+
+*allegro-5.0.3 (07 Jun 2011)
+
+  07 Jun 2011; Tupone Alfredo <tupone@gentoo.org> +allegro-5.0.3.ebuild,
+  +files/allegro-5.0.3-underlink.patch:
+  Version bump to 5.0.3
+  allegro now require opengl if built with X 
 
   06 Jun 2011; Tupone Alfredo <tupone@gentoo.org> allegro-4.4.1.1-r1.ebuild,
   +files/allegro-4.4.1.1-underlink.patch, allegro-5.0.1.ebuild,
