@@ -1,18 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.7.ebuild,v 1.3 2010/10/26 21:54:14 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.8.ebuild,v 1.1 2011/06/07 17:11:15 billie Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils ssl-cert
 
 DESCRIPTION="WWW Admin for the Video Disk Recorder"
 HOMEPAGE="http://andreas.vdr-developer.org/vdradmin-am/index.html"
-SRC_URI="http://andreas.vdr-developer.org/download/${P}.tar.bz2"
+SRC_URI="http://andreas.vdr-developer.org/vdradmin-am/download/${P}.tar.bz2"
 
-KEYWORDS="~amd64 x86"
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="ipv6 ssl +vdr"
 
 DEPEND="dev-lang/perl
@@ -32,8 +32,6 @@ RDEPEND="${DEPEND}"
 ETC_DIR=/etc/vdradmin
 CERTS_DIR=/etc/vdradmin/certs
 LIB_DIR=/usr/share/vdradmin
-LOG_DIR=/var/log/vdradmin
-PID_DIR=/var/run/vdradmin
 CACHE_DIR=/var/cache/vdradmin
 VDRADMIN_USER=vdradmin
 VDRADMIN_GROUP=vdradmin
@@ -56,23 +54,18 @@ pkg_setup() {
 
 	if ! use vdr; then
 		elog
-		elog "You can run vdradmin-am outside a vdr install. For minimal"
+		elog "You can run ${PN} outside a vdr install. For minimal"
 		elog "functionality you need access to the epg.data file of your VDR."
 	fi
 }
 
 src_prepare() {
 	sed -i vdradmind.pl \
-		-e "/COMPILE_DIR/s-/tmp-${CACHE_DIR}-" \
-		-e "s-FILES_IN_SYSTEM    = 0;-FILES_IN_SYSTEM    = 1;-g"
+		-e "s-FILES_IN_SYSTEM    = 0;-FILES_IN_SYSTEM    = 1;-g" || die
 }
 
-src_configure() { : ; }
-
-src_compile() { : ; }
-
 src_install() {
-	newinitd "${FILESDIR}"/vdradmin-3.6.6.init vdradmin
+	newinitd "${FILESDIR}"/vdradmin-3.6.7.init vdradmin
 	newconfd "${FILESDIR}"/vdradmin-3.6.6.conf vdradmin
 
 	insinto /etc/logrotate.d
@@ -91,31 +84,32 @@ src_install() {
 
 	newman vdradmind.pl.1 vdradmind.8
 
-	dodoc CREDITS HISTORY INSTALL README* REQUIREMENTS FAQ ChangeLog
+	dodoc CREDITS ChangeLog FAQ HISTORY INSTALL README* REQUIREMENTS
 	docinto contrib
 	dodoc "${S}"/contrib/*
 
 	diropts "-m755 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP}"
-	keepdir "${ETC_DIR}"
-	keepdir "${CACHE_DIR}"
-	keepdir "${LOG_DIR}"
-	keepdir "${PID_DIR}"
-	use ssl && keepdir "${CERTS_DIR}"
+	keepdir ${ETC_DIR}
+	use ssl && keepdir ${CERTS_DIR}
 }
 
 pkg_preinst() {
-	if [[ -f ${ROOT}${ETC_DIR}/vdradmind.conf ]]; then
-		cp "${ROOT}"${ETC_DIR}/vdradmind.conf "${D}"${ETC_DIR}/vdradmind.conf
+	install -m 0644 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} /dev/null \
+		"${D}"${ETC_DIR}/vdradmind.conf || die
+
+	if [[ -f "${ROOT}"${ETC_DIR}/vdradmind.conf ]]; then
+		cp "${ROOT}"${ETC_DIR}/vdradmind.conf \
+			"${D}"${ETC_DIR}/vdradmind.conf || die
 	else
 		elog
 		elog "Creating a new config-file."
 		echo
 
 		cat <<-EOF > "${D}"${ETC_DIR}/vdradmind.conf
-			VDRCONFDIR = /etc/vdr
-			VIDEODIR = /var/vdr/video
-			EPG_FILENAME = /var/vdr/video/epg.data
-			EPGIMAGES = /var/vdr/video/epgimages
+			VDRCONFDIR = "${ROOT%/}"/etc/vdr
+			VIDEODIR = "${ROOT%/}"/var/vdr/video
+			EPG_FILENAME = "${ROOT%/}"/var/vdr/video/epg.data
+			EPGIMAGES = "${ROOT%/}"/var/vdr/video/epgimages
 			PASSWORD = gentoo-vdr
 			USERNAME = gentoo-vdr
 		EOF
@@ -124,12 +118,13 @@ pkg_preinst() {
 			| "${D}"/usr/bin/vdradmind --cfgdir "${D}"${ETC_DIR} --config \
 			|sed -e 's/: /: \n/g'
 
-		[[ ${PIPESTATUS[1]} == "0" ]] || die "Failed to create initial configuration."
+		[[ ${PIPESTATUS[1]} == "0" ]] \
+			|| die "Failed to create initial configuration."
 
 		elog
 		elog "Created default user/password: gentoo-vdr/gentoo-vdr"
 		elog
-		elog "You can run \"emerge --config vdradmin-am\" if the default-values"
+		elog "You can run \"emerge --config ${PN}\" if the default-values"
 		elog "do not match your installation or change them in the Setup-Menu"
 		elog "of the Web-Interface."
 	fi
@@ -147,23 +142,25 @@ pkg_postinst() {
 		elog "To use ssl connection to your vdr"
 		elog "you need to enable it in ${ROOT%/}/etc/conf.d/vdradmin"
 
-		if [[ ! -f "${ROOT}${CERTS_DIR}/server-cert.pem" && \
-			! -f "${ROOT}${CERTS_DIR}/server-key.pem" ]]; then
+		if [[ ! -f "${ROOT}"${CERTS_DIR}/server-cert.pem || \
+			! -f "${ROOT}"${CERTS_DIR}/server-key.pem ]]; then
 			create_ssl_cert
 			local base=$(get_base 1)
-			install -m0400 "${base}.key" "${ROOT}${CERTS_DIR}/server-key.pem"
-			install -m0444 "${base}.crt" "${ROOT}${CERTS_DIR}/server-cert.pem"
+			install -D -m 0400 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} \
+				"${base}".key "${ROOT}"${CERTS_DIR}/server-key.pem || die
+			install -D -m 0444 -o ${VDRADMIN_USER} -g ${VDRADMIN_GROUP} \
+				"${base}".crt "${ROOT}"${CERTS_DIR}/server-cert.pem || die
 		fi
 	fi
 
 	elog
-	elog "To extend vdradmin-am you can emerge"
-	elog ">=media-plugins/vdr-epgsearch-0.9.25 to search the EPG"
-	elog "media-plugins/vdr-streamdev for livetv streaming"
+	elog "To extend ${PN} you can emerge"
+	elog ">=media-plugins/vdr-epgsearch-0.9.25 to search the EPG,"
+	elog "media-plugins/vdr-streamdev for livetv streaming and/or"
 	elog "media-video/vdr with USE=\"liemikuutio\" to rename recordings"
-	elog "on the machine running the VDR you connect to with vdradmin-am."
+	elog "on the machine running the VDR you connect to with ${PN}."
 }
 
 pkg_config() {
-	/usr/bin/vdradmind -c
+	"${ROOT}"/usr/bin/vdradmind -c
 }
