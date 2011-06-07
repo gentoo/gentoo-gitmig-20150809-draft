@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.7 2011/05/19 21:41:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.6.0.ebuild,v 1.8 2011/06/07 09:10:44 angelos Exp $
 
 EAPI=4
 inherit xfconf
@@ -17,7 +17,7 @@ IUSE="debug libnotify"
 COMMON_DEPEND=">=xfce-base/exo-0.6
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.14:2
-	>=sys-fs/udev-145[extras]
+	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
 	>=xfce-base/libxfce4ui-4.8
 	>=xfce-base/libxfce4util-4.8
 	>=xfce-base/xfconf-4.8
