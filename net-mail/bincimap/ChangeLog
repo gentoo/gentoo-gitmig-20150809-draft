@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.54 2011/05/28 10:59:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.55 2011/06/07 14:55:21 eras Exp $
+
+  07 Jun 2011; Eray Aslan <eras@gentoo.org> bincimap-1.2.13.ebuild:
+  Fix document directory - bug #241300
 
   28 May 2011; Eray Aslan <eras@gentoo.org> -bincimap-1.2.12.ebuild,
   bincimap-1.2.13.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.13 2011/05/28 10:59:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.14 2011/06/07 14:55:21 eras Exp $
 
 inherit eutils
 
@@ -52,6 +52,8 @@ src_install () {
 
 	dodoc AUTHORS ChangeLog INSTALL \
 		NEWS README README.SSL TODO
+	dohtml doc/*.{html,css}
+	rm -rf "${D}"/usr/share/doc/"${PN}"
 
 	# backward compatibility
 	dosym /etc/bincimap/service/bincimap /etc/bincimap/service/imap
