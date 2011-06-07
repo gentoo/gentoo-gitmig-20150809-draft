@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.4.ebuild,v 1.2 2011/06/07 09:37:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.4.ebuild,v 1.3 2011/06/07 09:54:43 radhermit Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils cmake-utils
 
@@ -27,9 +27,9 @@ src_prepare() {
 	# Don't automatically install scripts
 	sed -i -e '/scripts/d' CMakeLists.txt
 
-	epatch "${FILESDIR}"/${P}-rcdir.patch
-	epatch "${FILESDIR}"/${P}-lua-automagic.patch
-	epatch "${FILESDIR}"/${P}-remove-ncurses.patch
+	epatch "${FILESDIR}"/${P}-rcdir.patch \
+		"${FILESDIR}"/${P}-lua-automagic.patch \
+		"${FILESDIR}"/${P}-remove-ncurses.patch
 }
 
 src_configure() {
@@ -60,6 +60,6 @@ src_install() {
 		doins scripts/zsh/*
 	fi
 
-	insinto /usr/share/doc/${PF}/scripts
-	doins scripts/add-ons/*
+	exeinto /usr/share/${PN}/scripts
+	doexe scripts/add-ons/*
 }
