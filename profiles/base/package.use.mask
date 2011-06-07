@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.241 2011/06/02 21:34:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.242 2011/06/07 14:28:52 voyageur Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
+# libobjc2/clang only works on some arches
+gnustep-base/gnustep-make libobjc2
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (30 Apr 2011)
 # glade-catalog creation needs >glade-3.9.0, which is broken and
