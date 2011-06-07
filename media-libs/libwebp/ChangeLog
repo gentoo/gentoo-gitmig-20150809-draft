@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.7 2011/06/01 16:20:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.8 2011/06/07 17:25:57 hwoarang Exp $
+
+  07 Jun 2011; Markos Chandras <hwoarang@gentoo.org> libwebp-0.1.2.ebuild:
+  Stable on amd64 wrt bug #370481
 
   01 Jun 2011; Tobias Klausmann <klausman@gentoo.org> libwebp-0.1.2.ebuild:
   Keyworded on alpha, bug #359963
