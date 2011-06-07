@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.19 2011/04/07 05:18:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.20 2011/06/07 22:25:51 vapier Exp $
 
 EAPI="2"
 
@@ -41,6 +41,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
+		po/update-potfiles
 		autopoint --force
 		eautoreconf
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.342 2011/05/14 19:27:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.343 2011/06/07 22:25:51 vapier Exp $
+
+  07 Jun 2011; Mike Frysinger <vapier@gentoo.org> util-linux-9999.ebuild:
+  Run the helper po script so the subdir gets the necessary files created
+  #370455 by Michał Górny.
 
   14 May 2011; Raúl Porcel <armin76@gentoo.org> util-linux-2.19.1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #359759
