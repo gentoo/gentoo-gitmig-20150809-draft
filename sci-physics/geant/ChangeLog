@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.48 2011/03/22 03:45:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.49 2011/06/07 16:05:29 jer Exp $
+
+  07 Jun 2011; Jeroen Roovers <jer@gentoo.org> geant-3.21.14-r2.ebuild,
+  geant-4.9.2_p02.ebuild, geant-4.9.3_p02-r1.ebuild, geant-4.9.4_p01.ebuild:
+  Drop HPPA keywording.
 
   22 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org> geant-4.9.4_p01.ebuild:
   Proper CMake optional use bug #359437 thanks Rafal Lalik
