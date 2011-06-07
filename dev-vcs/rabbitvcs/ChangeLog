@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rabbitvcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.3 2011/05/10 07:55:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.4 2011/06/07 12:31:01 pva Exp $
+
+  07 Jun 2011; Peter Volkov <pva@gentoo.org> rabbitvcs-0.14.2.1.ebuild:
+  Update elog message: don't need to run nautilus twice any more, thank Rion
+  for this fix.
 
 *rabbitvcs-0.14.2.1 (10 May 2011)
 

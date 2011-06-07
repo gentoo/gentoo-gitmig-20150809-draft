@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.2.1.ebuild,v 1.1 2011/05/10 07:55:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.2.1.ebuild,v 1.2 2011/06/07 12:31:01 pva Exp $
 
 EAPI=2
 
@@ -75,7 +75,7 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 
 	elog "You should restart file manager to changes take effect:"
-	use nautilus && elog "\$ nautilus -q && nautilus &"
+	use nautilus && elog "\$ nautilus -q"
 	use thunar && elog "\$ thunar -q && thunar &"
 	elog ""
 	elog "Also you should really look at known issues page:"
