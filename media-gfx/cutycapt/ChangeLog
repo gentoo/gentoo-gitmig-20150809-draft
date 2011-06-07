@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/cutycapt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.2 2011/05/03 06:47:20 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.3 2011/06/07 00:35:25 mattm Exp $
+
+*cutycapt-0_p20110502-r2 (07 Jun 2011)
+
+  07 Jun 2011; <matt@gentoo.org> +cutycapt-0_p20110502-r2.ebuild:
+  Fixes for bug #367629
+  Thanks to radhermit@gentoo.org for reporting
 
 *cutycapt-0_p20110502-r1 (03 May 2011)
 
