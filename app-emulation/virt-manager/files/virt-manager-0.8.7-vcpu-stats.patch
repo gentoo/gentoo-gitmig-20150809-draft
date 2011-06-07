@@ -12,7 +12,7 @@ diff -ur a/src/virtManager/domain.py b/src/virtManager/domain.py
 +            if self.vcpu_count() > 0:
 +                 pcentCpuTime /= self.vcpu_count()
 +            else:
-+                 pcentCpuTime /= self.connection.host_active_processor_count()))
++                 pcentCpuTime /= self.connection.host_active_processor_count()
  
              # Due to timing diffs between getting wall time & getting
              # the domain's time, its possible to go a tiny bit over
