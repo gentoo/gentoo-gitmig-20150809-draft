@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2-r2.ebuild,v 1.3 2010/12/30 16:35:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2-r2.ebuild,v 1.4 2011/06/07 02:56:56 abcd Exp $
 
 EAPI="3"
 
@@ -17,15 +17,16 @@ SRC_URI="mirror://kde/stable/${KDE_PV}/src/extragear/${P}-kde${KDE_PV}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug plasma"
 
-RDEPEND="plasma? ( >=kde-base/plasma-workspace-${KDE_MINIMAL} )"
+RDEPEND="plasma? ( $(add_kdebase_dep plasma-workspace) )"
 DEPEND="${RDEPEND}
 		sys-devel/gettext"
 
 S=${WORKDIR}/${P}-kde${KDE_PV}
 
 src_configure() {
-	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_with plasma Plasma)"
+	mycmakeargs=(
+		$(cmake-utils_use_with plasma)
+	)
 
 	kde4-base_src_configure
 }

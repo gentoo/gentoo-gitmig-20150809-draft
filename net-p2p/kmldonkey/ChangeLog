@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/kmldonkey
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.43 2010/12/30 16:35:09 tampakrap Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.44 2011/06/07 02:56:56 abcd Exp $
+
+  07 Jun 2011; Jonathan Callen <abcd@gentoo.org> kmldonkey-2.0.2-r2.ebuild:
+  Use add_kdebase_dep() for KDE deps
 
   30 Dec 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   kmldonkey-2.0.2-r2.ebuild, -files/kmldonkey-2.0.2-gcc44.patch:
