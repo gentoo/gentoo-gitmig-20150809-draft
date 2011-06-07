@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-2.1.ebuild,v 1.2 2010/11/08 16:36:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-2.1.ebuild,v 1.3 2011/06/07 15:17:50 eras Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="a small mail monitor similar to xbiff."
 HOMEPAGE="http://www.tigr.net"
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 src_compile() {
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 	tc-export CC
 	econf $(use_enable jpeg)
 	emake || die "emake failed."
