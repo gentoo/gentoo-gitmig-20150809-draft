@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta-pkg.eclass,v 1.3 2011/06/06 21:38:18 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta-pkg.eclass,v 1.4 2011/06/07 20:11:04 abcd Exp $
 
 # @ECLASS: kde4-meta-pkg.eclass
 # @MAINTAINER:
@@ -22,7 +22,7 @@ if [[ ${PV} < 4.6.4 ]]; then
 	IUSE+=" kdeprefix"
 fi
 
-SLOT=$(_calculate_kde_slot)
+SLOT=$(get_kde_version)
 [[ -z ${SLOT} ]] && die "Unsupported ${PV}"
 
 RDEPEND="$(block_other_slots)"
