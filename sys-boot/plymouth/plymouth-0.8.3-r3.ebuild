@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r3.ebuild,v 1.1 2011/06/06 13:03:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r3.ebuild,v 1.2 2011/06/07 21:05:51 aidecoe Exp $
 
 EAPI="3"
 
@@ -86,7 +86,8 @@ src_install() {
 	fi
 
 	cd "${SP}"
-	emake DESTDIR="${D}" install || die 'emake install'
+	insinto /$(get_libdir)/rc/plugins
+	doins plymouth.so
 }
 
 pkg_postinst() {
