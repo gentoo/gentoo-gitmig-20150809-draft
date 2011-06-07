@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.80 2011/06/05 17:33:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.81 2011/06/07 13:18:10 chainsaw Exp $
+
+*make-3.82-r1 (07 Jun 2011)
+
+  07 Jun 2011; Tony Vroon <chainsaw@gentoo.org> +make-3.82-r1.ebuild,
+  +files/make-3.82-memory-corruption.patch:
+  Revision bump. Patch from upstream fixes memory corruption for
+  Android/Cyanogenmod builds; Savannah bug report #33125. As reported by blackd
+  in bug #355907; patch scavenged by Mike "SpanKY" Frysinger, additional
+  research by Peter "loki_val" Alfredsen & Samuli Suominen.
 
   05 Jun 2011; Jeroen Roovers <jer@gentoo.org> make-3.82.ebuild:
   Stable for HPPA (bug #367265).
