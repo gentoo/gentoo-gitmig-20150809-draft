@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/frescobaldi-1.2.0.ebuild,v 1.1 2011/01/13 03:14:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/frescobaldi-1.2.0.ebuild,v 1.2 2011/06/07 02:57:40 abcd Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ IUSE="+handbook"
 
 DEPEND="
 	dev-python/PyQt4[examples]
-	>=kde-base/pykde4-${KDE_MINIMAL}
+	$(add_kdebase_dep pykde4)
 	media-gfx/imagemagick
 	media-sound/lilypond
 "

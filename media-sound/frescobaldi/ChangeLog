@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/frescobaldi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.6 2011/05/04 11:02:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.7 2011/06/07 02:57:40 abcd Exp $
+
+  07 Jun 2011; Jonathan Callen <abcd@gentoo.org> frescobaldi-1.2.0.ebuild:
+  Use add_kdebase_dep() for KDE deps
 
   04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/frescobaldi-1.0.3-python27.patch:
