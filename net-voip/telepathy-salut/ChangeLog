@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-salut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.18 2011/05/08 18:45:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.19 2011/06/07 03:04:39 tester Exp $
+
+  07 Jun 2011; Olivier Crête <tester@gentoo.org> telepathy-salut-0.5.0.ebuild:
+  xmldiff is alwasy required for the configure to pass
 
 *telepathy-salut-0.5.0 (08 May 2011)
 

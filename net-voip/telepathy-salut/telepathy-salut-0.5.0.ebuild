@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.5.0.ebuild,v 1.1 2011/05/08 18:45:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.5.0.ebuild,v 1.2 2011/06/07 03:04:39 tester Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -24,8 +24,8 @@ RDEPEND="dev-libs/libxml2
 	net-libs/libsoup:2.4
 	sys-apps/util-linux"
 DEPEND="${RDEPEND}
+	app-text/xmldiff
 	test? (
-		app-text/xmldiff
 		>=dev-libs/check-0.9.4
 		net-libs/libgsasl
 		dev-python/twisted-words )
