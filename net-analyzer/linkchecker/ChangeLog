@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.54 2011/05/28 12:38:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.55 2011/06/08 16:29:33 xarthisius Exp $
+
+  08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> linkchecker-6.9.ebuild,
+  linkchecker-7.0.ebuild:
+  Marked ~ppc wrt #366541
 
   28 May 2011; Thomas Kahle <tomka@gentoo.org> linkchecker-6.9.ebuild:
   ~x86 per bug 366541
