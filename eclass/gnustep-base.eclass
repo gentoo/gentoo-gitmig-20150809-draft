@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.17 2011/06/06 19:17:38 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.18 2011/06/08 08:55:55 voyageur Exp $
 
 # @ECLASS: gnustep-base.eclass
 # @MAINTAINER:
@@ -151,8 +151,7 @@ egnustep_env() {
 			GNUSTEP_USER_DEFAULTS_DIR="${T}"/Defaults \
 			GNUSTEP_INSTALLATION_DOMAIN=SYSTEM \
 			TAR_OPTIONS="${TAR_OPTIONS} --no-same-owner" \
-			messages=yes \
-			-j1 )
+			messages=yes )
 
 		use debug \
 			&& GS_ENV=( "${GS_ENV[@]}" "debug=yes" ) \
