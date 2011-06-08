@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.6.6.ebuild,v 1.3 2011/01/12 07:23:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-0.9.8.ebuild,v 1.1 2011/06/08 18:00:13 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -25,7 +25,7 @@ APACHE2_MOD_CONF="42_mod_${PN}"
 want_apache2_2
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gentoo-gcc.patch"
+	epatch "${FILESDIR}"/${P}-no-werror.patch
 	python_copy_sources
 }
 
@@ -54,6 +54,10 @@ src_install() {
 			apache-module_src_install
 		done
 	fi
+
+	newinitd "${FILESDIR}"/uwsgi.initd uwsgi
+	newconfd "${FILESDIR}"/uwsgi.confd uwsgi
+	mkdir "${ED}"/var/run/uwsgi
 }
 
 pkg_postinst() {

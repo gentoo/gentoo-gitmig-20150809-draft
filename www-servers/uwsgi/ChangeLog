@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.7 2011/06/06 16:10:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.8 2011/06/08 18:00:12 maksbotan Exp $
+
+*uwsgi-0.9.8 (08 Jun 2011)
+
+  08 Jun 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  -uwsgi-0.9.6.6.ebuild, +uwsgi-0.9.8.ebuild,
+  +files/uwsgi-0.9.8-no-werror.patch:
+  Bumped to 0.9.8, removed old unsupported 0.9.6.6
 
   06 Jun 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
   uwsgi-0.9.7.2.ebuild, +files/uwsgi-0.9.7.2-no-werror.patch:
