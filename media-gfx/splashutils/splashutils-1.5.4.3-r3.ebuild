@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.14 2011/05/08 15:30:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.15 2011/06/08 13:23:09 xarthisius Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://berlios/fbsplash/${PN}-lite-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 RDEPEND="gpm? ( sys-libs/gpm )
 	truetype? ( >=media-libs/freetype-2 )
 	png? ( >=media-libs/libpng-1.4.3[static-libs] )
