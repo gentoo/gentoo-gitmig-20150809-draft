@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.110 2011/06/05 10:24:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.111 2011/06/08 13:01:59 xarthisius Exp $
+
+  08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  net-tools-1.60_p20110409135728.ebuild:
+  ppc/ppc64 stable wrt #368061
 
   05 Jun 2011; Markus Meier <maekke@gentoo.org>
   net-tools-1.60_p20110409135728.ebuild:
