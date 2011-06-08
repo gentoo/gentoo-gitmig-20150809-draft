@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/krosspython-4.6.3.ebuild,v 1.1 2011/05/07 10:48:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/krosspython-4.6.3.ebuild,v 1.2 2011/06/08 23:01:20 tomka Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ PYTHON_DEPEND="2"
 inherit python kde4-meta
 
 DESCRIPTION="Kross scripting framework: Python interpreter"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 pkg_setup() {

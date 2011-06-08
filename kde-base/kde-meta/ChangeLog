@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.187 2011/06/02 21:57:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.188 2011/06/08 23:04:53 tomka Exp $
+
+  08 Jun 2011; Thomas Kahle <tomka@gentoo.org> kde-meta-4.6.3.ebuild:
+  x86 stable per bug 369979
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kde-meta-4.4.5.ebuild:
