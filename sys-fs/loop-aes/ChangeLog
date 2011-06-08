@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.77 2011/06/02 14:12:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.78 2011/06/08 13:13:16 c1pher Exp $
+
+*loop-aes-3.6b-r1 (08 Jun 2011)
+
+  08 Jun 2011; Dane Smith <c1pher@gentoo.org> +loop-aes-3.6b-r1.ebuild,
+  metadata.xml:
+  Revision bump. Add support for AES-NI via new use flag aes-ni. Closes bug
+  362357.
 
   02 Jun 2011; Markus Meier <maekke@gentoo.org> loop-aes-3.6b.ebuild:
   arm stable, bug #364407
