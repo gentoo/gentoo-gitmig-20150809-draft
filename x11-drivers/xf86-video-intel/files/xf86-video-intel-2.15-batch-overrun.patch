@@ -1,0 +1,26 @@
+From c9fb69cb2502917dfb2828c90802de7766072899 Mon Sep 17 00:00:00 2001
+From: Chris Wilson <chris@chris-wilson.co.uk>
+Date: Sun, 17 Apr 2011 09:42:05 +0000
+Subject: i965/video: We need 150 dwords of space for video state emission
+
+(Actually around 131, with additional 10% just for safety.)
+
+Reported-by: Modestas Vainius <geromanas@mailas.com>
+Bugzilla: https://bugs.freedesktop.org/show_bug.cgi?id=36319
+Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
+---
+diff --git a/src/i965_video.c b/src/i965_video.c
+index c757681..53a9394 100644
+--- a/src/i965_video.c
++++ b/src/i965_video.c
+@@ -1210,7 +1210,7 @@ I965DisplayVideoTextured(ScrnInfoPtr scrn,
+ 			intel_batch_submit(scrn);
+ 		}
+ 
+-		intel_batch_start_atomic(scrn, 100);
++		intel_batch_start_atomic(scrn, 150);
+ 
+ 		i965_emit_video_setup(scrn, surface_state_binding_table_bo, n_src_surf, pixmap);
+ 
+--
+cgit v0.8.3-6-g21f6

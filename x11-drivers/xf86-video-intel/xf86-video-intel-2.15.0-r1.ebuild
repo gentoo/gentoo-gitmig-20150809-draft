@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.15.0.ebuild,v 1.1 2011/04/18 09:35:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.15.0-r1.ebuild,v 1.1 2011/06/08 09:41:59 chithanh Exp $
 
 EAPI=4
 
@@ -17,6 +17,10 @@ RDEPEND="x11-libs/libXext
 	x11-libs/libXvMC
 	>=x11-libs/libxcb-1.5"
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/xf86-video-intel-2.15-batch-overrun.patch"
+	"${FILESDIR}/xf86-video-intel-2.15-unsigned-promotion.patch"
+)
 
 pkg_setup() {
 	xorg-2_pkg_setup
