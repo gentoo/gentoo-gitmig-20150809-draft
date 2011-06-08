@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.52 2011/06/02 20:57:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.53 2011/06/08 13:04:21 xarthisius Exp $
+
+  08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> dmalloc-5.5.2-r3.ebuild:
+  ppc/ppc64 stable wrt #367929
 
   02 Jun 2011; Jeroen Roovers <jer@gentoo.org> dmalloc-5.5.2-r3.ebuild:
   Stable for HPPA (bug #367929).
