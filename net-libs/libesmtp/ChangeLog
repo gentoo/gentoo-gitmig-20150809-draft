@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.52 2011/02/21 08:38:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.53 2011/06/08 08:27:50 eras Exp $
+
+  08 Jun 2011; Eray Aslan <eras@gentoo.org> -libesmtp-1.0.3.ebuild,
+  -libesmtp-1.0.4.ebuild:
+  Remove old
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> libesmtp-1.0.6.ebuild:
   Stable for HPPA (bug #354461).
