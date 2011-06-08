@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5426 2011/06/07 14:31:33 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5427 2011/06/08 00:52:46 binki Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> updates/2Q-2011:
+  Rename net-irc/atheme to net-irc/atheme-services to follow upstream's
+  package name change.
 
   07 Jun 2011; Sebastian Pipping <sping@gentoo.org> package.mask:
   Mask upcoming sys-block/open-iscsi-2.0.872 (bug #340425)

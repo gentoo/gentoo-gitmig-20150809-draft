@@ -16,3 +16,4 @@ move media-gfx/keyjnote app-office/impressive
 move kde-misc/filelight kde-base/filelight
 slotmove =dev-util/cucumber-rails-0.4.1 0 1
 move games-action/chromium games-action/chromium-bsu
+move net-irc/atheme net-irc/atheme-services
