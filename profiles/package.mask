@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12823 2011/06/07 14:31:33 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12824 2011/06/08 07:42:21 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -367,10 +367,6 @@ sys-apps/ren
 # Masked temporarily until bug 360849 is solved so people
 # can emerge udev.
 =sys-apps/pciutils-3.1.7-r1
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (26 Mar 2011)
-# Old dev channel releases, failing tests.
-=dev-lang/v8-3.2*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Mar 2011)
 # Some packages fail to build or work with GnuTLS built with Nettle crypto backend.
