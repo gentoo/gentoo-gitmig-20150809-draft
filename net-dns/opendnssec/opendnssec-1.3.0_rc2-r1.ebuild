@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0_rc2-r1.ebuild,v 1.1 2011/06/06 18:44:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0_rc2-r1.ebuild,v 1.2 2011/06/08 22:34:52 scarabeus Exp $
 
 EAPI=4
 
@@ -28,6 +28,8 @@ RDEPEND="
 		virtual/mysql
 		dev-perl/DBD-mysql
 	)
+	opensc? ( dev-libs/opensc )
+	softhsm? ( dev-libs/softhsm )
 	sqlite? (
 		dev-db/sqlite:3
 		dev-perl/DBD-SQLite
