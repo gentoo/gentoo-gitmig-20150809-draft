@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.42 2011/06/07 06:05:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.43 2011/06/08 06:10:41 williamh Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="selinux test debug +rule_generator +hwdb +acl +gudev introspection +keymap floppy edd action_modeswitch"
+IUSE="selinux test debug +rule_generator hwdb acl gudev introspection keymap floppy edd action_modeswitch"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
