@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pacman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.4 2011/06/08 01:37:54 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.5 2011/06/08 12:16:32 binki Exp $
+
+  08 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> -pacman-3.3.3.ebuild:
+  Drop old pacman-3.3.3.
 
 *pacman-3.5.2 (08 Jun 2011)
 
