@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.77 2011/06/07 11:10:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.78 2011/06/08 05:32:14 robbat2 Exp $
+
+  08 Jun 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +files/keepalived-1.1.13-linux-2.6.21-ip_vs.h:
+  Add ip_vs.h back, as the 1.2.2 ebuild still uses it.
 
   07 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
   -files/keepalived-1.1.13-linux-2.6.21-ip_vs.h, -keepalived-1.1.20.ebuild,
