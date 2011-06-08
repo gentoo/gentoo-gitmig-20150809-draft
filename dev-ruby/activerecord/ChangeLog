@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.154 2011/05/08 07:51:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.155 2011/06/08 18:48:45 graaff Exp $
+
+  08 Jun 2011; Hans de Graaff <graaff@gentoo.org> activerecord-3.0.7.ebuild:
+  Depend on slot of mysql2 that is compatible with this version of
+  activerecord.
 
   08 May 2011; Hans de Graaff <graaff@gentoo.org> activerecord-3.0.7.ebuild:
   Update sqlite3 dependency to a version that we install in the expected path.
