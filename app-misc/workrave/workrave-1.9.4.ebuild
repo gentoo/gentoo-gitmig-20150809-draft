@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.2.ebuild,v 1.4 2011/03/16 09:24:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.4.ebuild,v 1.1 2011/06/08 17:42:27 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+GCONF_DEBUG="yes"
+PYTHON_DEPEND="2:2.5"
 
 inherit eutils gnome2 python
 
@@ -16,22 +18,22 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dbus doc distribution gnome gstreamer nls pulseaudio test xml"
 
 RDEPEND=">=dev-libs/glib-2.10:2
-	>=gnome-base/gconf-2:2
+	>=gnome-base/gconf-2
 	>=x11-libs/gtk+-2.8:2
 	>=dev-cpp/gtkmm-2.10:2.4
 	>=dev-cpp/glibmm-2.10:2
-	>=dev-libs/libsigc++-2
+	>=dev-libs/libsigc++-2:2
 	dbus? (
 		>=sys-apps/dbus-1.2
 		dev-libs/dbus-glib )
-	distribution? ( net-libs/gnet:2 )
+	distribution? ( >=net-libs/gnet-2 )
 	gnome? (
 		|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 		>=gnome-base/libbonobo-2
 		>=gnome-base/orbit-2.8.3 )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10:0.10
-		>=media-libs/gst-plugins-base-0.10:0.10 )
+		>=media-libs/gstreamer-0.10
+		>=media-libs/gst-plugins-base-0.10 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )
 	xml? ( dev-libs/gdome2 )
 	x11-libs/libSM
@@ -51,13 +53,15 @@ DEPEND="${RDEPEND}
 		app-text/xmlto )
 	nls? ( sys-devel/gettext )"
 
-DOCS="AUTHORS NEWS README TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS NEWS README TODO"
 	G2CONF="${G2CONF}
 		--without-arts
 		--disable-kde
 		--enable-gconf
+		--disable-x11-monitoring-fallback
+		--disable-gnome3
+		--disable-experimental
 		$(use_enable dbus)
 		$(use_enable doc manual)
 		$(use_enable distribution)
