@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.101 2011/06/08 19:43:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.102 2011/06/08 19:50:57 aballier Exp $
 
 EAPI=4
 
@@ -611,22 +611,17 @@ src_configure() {
 		"
 	fi
 
-	###################
-	# External FFmpeg #
-	###################
-	myconf+=" --disable-ffmpeg_a"
-
-	myconf="--cc=$(tc-getCC)
-		--host-cc=$(tc-getBUILD_CC)
-		--prefix=${EPREFIX}/usr
-		--bindir=${EPREFIX}/usr/bin
-		--libdir=${EPREFIX}/usr/$(get_libdir)
-		--confdir=${EPREFIX}/etc/mplayer
-		--datadir=${EPREFIX}/usr/share/mplayer${namesuf}
-		--mandir=${EPREFIX}/usr/share/man
-		${myconf}"
-
-	./configure ${myconf} || die
+	./configure \
+		--cc="$(tc-getCC)" \
+		--host-cc="$(tc-getBUILD_CC)" \
+		--prefix="${EPREFIX}/usr" \
+		--bindir="${EPREFIX}/usr/bin" \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--confdir="${EPREFIX}/etc/mplayer" \
+		--datadir="${EPREFIX}/usr/share/mplayer${namesuf}" \
+		--mandir="${EPREFIX}/usr/share/man" \
+		--disable-ffmpeg_a \
+		${myconf} || die
 }
 
 src_compile() {
