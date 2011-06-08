@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/procmail-lib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/ChangeLog,v 1.5 2009/03/08 20:57:10 tcunha Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/ChangeLog,v 1.6 2011/06/08 13:16:15 eras Exp $
+
+  08 Jun 2011; Eray Aslan <eras@gentoo.org> procmail-lib-20081108.ebuild:
+  Fix doc directory - bug #294280
 
   08 Mar 2009; Tiago Cunha <tcunha@gentoo.org> procmail-lib-20081108.ebuild:
   stable sparc, bug 261522

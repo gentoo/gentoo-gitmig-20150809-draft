@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/procmail-lib-20081108.ebuild,v 1.5 2009/03/08 20:57:10 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/procmail-lib-20081108.ebuild,v 1.6 2011/06/08 13:16:15 eras Exp $
 
 MY_PV="2008.1108"
 
@@ -19,5 +19,6 @@ RDEPEND="mail-filter/procmail"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_install() {
-	make DESTDIR="${D}" prefix=/usr install || die "make install failed"
+	emake DESTDIR="${D}" prefix=/usr install || die "make install failed"
+	mv "${D}"/usr/share/doc/"${PN}" "${D}"/usr/share/doc/"${PF}"
 }
