@@ -22,7 +22,7 @@ Reason: Fix --as-needed (Gentoo bug #210624), X11 path,
  CFLAGS="$CFLAGS -I$X11_PATH/include"
 -LDFLAGS="$LDFLAGS -L$X11_PATH/lib -lX11"
 +LDFLAGS="$LDFLAGS -L$X11_PATH/lib"
-+LIBS="-lX11"
++LIBS="-lX11 -lc"
  
  if test "_$CC" = "_"; then
  	CC="cc"
