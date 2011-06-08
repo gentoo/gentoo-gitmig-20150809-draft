@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.30 2011/05/30 18:17:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.31 2011/06/08 18:25:56 maekke Exp $
+
+  08 Jun 2011; Markus Meier <maekke@gentoo.org> hpricot-0.8.4.ebuild:
+  amd64/x86 stable, bug #369377
 
 *hpricot-0.8.4-r1 (30 May 2011)
 
