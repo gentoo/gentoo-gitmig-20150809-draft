@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.61 2011/05/24 21:05:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.62 2011/06/08 16:34:25 jer Exp $
+
+  08 Jun 2011; Jeroen Roovers <jer@gentoo.org> -unetbootin-502.ebuild:
+  ^^^^
 
   24 May 2011; Markus Meier <maekke@gentoo.org> unetbootin-549.ebuild:
   x86 stable, bug #366517
