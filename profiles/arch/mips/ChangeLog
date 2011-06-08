@@ -1,6 +1,46 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.57 2011/06/07 19:30:53 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.58 2011/06/08 18:38:22 mattst88 Exp $
+
+  08 Jun 2011; Matt Turner <mattst88@gentoo.org>
+  +mips64/multilib/n32-n64/make.defaults, +mips64/multilib/n32-n64/parent,
+  +mips64/multilib/n32-n64/use.force, +mips64/multilib/n32-o32/make.defaults,
+  +mips64/multilib/n32-o32/parent, +mips64/multilib/n32-o32/use.force,
+  +mips64/multilib/n32/use.force, +mips64/multilib/n64-n32/make.defaults,
+  +mips64/multilib/n64-n32/parent, +mips64/multilib/n64-n32/use.force,
+  +mips64/multilib/n64-o32/make.defaults, +mips64/multilib/n64-o32/parent,
+  +mips64/multilib/n64-o32/use.force, +mips64/multilib/n64/use.force,
+  +mips64/multilib/o32-n32/make.defaults, +mips64/multilib/o32-n32/parent,
+  +mips64/multilib/o32-n32/use.force, +mips64/multilib/o32-n64/make.defaults,
+  +mips64/multilib/o32-n64/parent, +mips64/multilib/o32-n64/use.force,
+  +mips64/multilib/o32/make.defaults, +mips64/multilib/o32/parent,
+  +mips64/multilib/o32/use.force,
+  +mipsel/mips64el/multilib/n32-n64/make.defaults,
+  +mipsel/mips64el/multilib/n32-n64/parent,
+  +mipsel/mips64el/multilib/n32-n64/use.force,
+  +mipsel/mips64el/multilib/n32-o32/make.defaults,
+  +mipsel/mips64el/multilib/n32-o32/parent,
+  +mipsel/mips64el/multilib/n32-o32/use.force,
+  +mipsel/mips64el/multilib/n32/use.force,
+  +mipsel/mips64el/multilib/n64-n32/make.defaults,
+  +mipsel/mips64el/multilib/n64-n32/parent,
+  +mipsel/mips64el/multilib/n64-n32/use.force,
+  +mipsel/mips64el/multilib/n64-o32/make.defaults,
+  +mipsel/mips64el/multilib/n64-o32/parent,
+  +mipsel/mips64el/multilib/n64-o32/use.force,
+  +mipsel/mips64el/multilib/n64/use.force,
+  +mipsel/mips64el/multilib/o32-n32/make.defaults,
+  +mipsel/mips64el/multilib/o32-n32/parent,
+  +mipsel/mips64el/multilib/o32-n32/use.force,
+  +mipsel/mips64el/multilib/o32-n64/make.defaults,
+  +mipsel/mips64el/multilib/o32-n64/parent,
+  +mipsel/mips64el/multilib/o32-n64/use.force,
+  +mipsel/mips64el/multilib/o32/make.defaults,
+  +mipsel/mips64el/multilib/o32/parent,
+  +mipsel/mips64el/multilib/o32/use.force, mips64/multilib/make.defaults,
+  mips64/multilib/use.force, mipsel/mips64el/multilib/make.defaults,
+  mipsel/mips64el/multilib/parent, mipsel/mips64el/multilib/use.force:
+  Add more multilib subprofiles for each possible ABI combination.
 
   07 Jun 2011; Matt Turner <mattst88@gentoo.org>
   +mips64/multilib/n32/make.defaults, +mips64/multilib/n32/parent,
