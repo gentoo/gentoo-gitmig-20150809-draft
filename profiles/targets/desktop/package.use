@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.11 2011/04/04 14:10:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.12 2011/06/08 07:51:06 williamh Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Required by sys-fs/udisks for xfce4-power-manager, gnome-disk-utility (gvfs),
 # e_dbus (e17), and libfm (pcmanfm)
 # http://tinderbox.dev.gentoo.org/misc/rindex/sys-fs/udisks
-sys-fs/udev extras
+sys-fs/udev extras gudev hwdb keymap
 sys-block/parted device-mapper
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
