@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.36 2011/03/31 12:28:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.37 2011/06/08 11:40:49 scarabeus Exp $
+
+*josm-4064 (08 Jun 2011)
+
+  08 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -josm-3695.ebuild,
+  -josm-3701.ebuild, -josm-3966.ebuild, +josm-4064.ebuild, -files/josm-r1,
+  -files/josm.png:
+  Version bump to latest. Drop older.
 
 *josm-3966 (31 Mar 2011)
 

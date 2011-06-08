@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-3966.ebuild,v 1.1 2011/03/31 12:28:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-4064.ebuild,v 1.1 2011/06/08 11:40:49 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
+
+JAVA_ANT_ENCODING=UTF-8
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -22,7 +24,6 @@ S="${WORKDIR}/${PN}"
 IUSE=""
 
 src_compile() {
-	JAVA_ANT_ENCODING=UTF-8
 	eant dist
 }
 
