@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.791 2011/06/08 19:33:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.792 2011/06/08 19:43:31 aballier Exp $
+
+  08 Jun 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  remove useless CFLAGS variable assignment
 
   08 Jun 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild,
   +files/dump_ffmpeg.sh, metadata.xml:

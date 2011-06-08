@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.100 2011/06/08 19:33:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.101 2011/06/08 19:43:31 aballier Exp $
 
 EAPI=4
 
@@ -626,7 +626,7 @@ src_configure() {
 		--mandir=${EPREFIX}/usr/share/man
 		${myconf}"
 
-	CFLAGS="${CFLAGS}" ./configure ${myconf} || die
+	./configure ${myconf} || die
 }
 
 src_compile() {
