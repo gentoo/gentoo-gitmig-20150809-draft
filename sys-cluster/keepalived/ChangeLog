@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.79 2011/06/08 05:38:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.80 2011/06/08 05:44:11 robbat2 Exp $
+
+*keepalived-1.2.2-r1 (08 Jun 2011)
+
+  08 Jun 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +keepalived-1.2.2-r1.ebuild:
+  Add seperate variant that uses newer linux-headers instead of the bundled
+  ip_vs.h. Tested on ipv6-ready forums.gentoo.org.
 
   08 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> keepalived-1.2.2.ebuild:
   Fix automagic dependency on libnl that is needed for working IPv6 support.
