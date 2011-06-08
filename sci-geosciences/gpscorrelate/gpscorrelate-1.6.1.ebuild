@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.6.1.ebuild,v 1.1 2011/06/07 09:14:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/gpscorrelate-1.6.1.ebuild,v 1.2 2011/06/08 12:22:57 scarabeus Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ src_prepare() {
 src_compile() {
 	tc-export CC CXX
 	local opts="gpscorrelate gpscorrelate.1"
-	use gtk && opts+=" gpscorrelate-gui"
+	use gtk && opts+=" gpscorrelate-gui BUILD_GUI=1"
 	emake ${opts}
 }
 

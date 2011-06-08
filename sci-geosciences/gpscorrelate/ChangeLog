@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpscorrelate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.9 2011/06/07 09:14:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.10 2011/06/08 12:22:57 scarabeus Exp $
+
+  08 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  gpscorrelate-1.6.1.ebuild, files/gpscorrelate-1.6.1-makefile.patch:
+  Update the makefile patch so the gtk is really optional.
 
 *gpscorrelate-1.6.1 (07 Jun 2011)
 
