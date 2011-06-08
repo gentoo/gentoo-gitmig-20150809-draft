@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.20.1.ebuild,v 1.1 2011/05/08 19:20:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.20.1.ebuild,v 1.2 2011/06/08 09:01:50 voyageur Exp $
 
 inherit gnustep-base
 
@@ -51,14 +51,17 @@ src_compile() {
 
 	# Create font lists for DejaVu
 	einfo "Generating nfonts support files"
-	cd Fonts
-	${GNUSTEP_SYSTEM_TOOLS}/mknfonts \
-		$(fc-list : file|grep -v '\.gz'|cut -d: -f1) \
-		|| die "nfonts support files creation failed"
-	# Trim whitepsaces
-	for fdir in *\ */; do
-		mv "$fdir" `echo $fdir | tr -d [:space:]`
-	done
+	(
+		cd Fonts
+		export "${GS_ENV[@]}"
+		${GNUSTEP_SYSTEM_TOOLS}/mknfonts \
+			$(fc-list : file|grep -v '\.gz'|cut -d: -f1) \
+			|| die "nfonts support files creation failed"
+		# Trim whitepsaces
+		for fdir in *\ */; do
+			mv "$fdir" `echo $fdir | tr -d [:space:]`
+		done
+	)
 }
 
 src_install() {
