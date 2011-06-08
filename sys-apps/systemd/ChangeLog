@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.3 2011/06/07 14:10:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.4 2011/06/08 11:08:41 mgorny Exp $
+
+  08 Jun 2011; Michał Górny <mgorny@gentoo.org> systemd-28.ebuild:
+  Fix DESCRIPTION. Rely on dbus-1.4.10 to set up /etc/machine-id for us. Add a
+  warning about downsides of having /etc/mtab symlinked, reformat messages.
 
   07 Jun 2011; Michał Górny <mgorny@gentoo.org> systemd-28.ebuild,
   metadata.xml:

@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-28.ebuild,v 1.2 2011/06/07 14:10:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-28.ebuild,v 1.3 2011/06/08 11:08:41 mgorny Exp $
 
 EAPI=4
 
 inherit autotools-utils linux-info pam
 
-DESCRIPTION="systemd is a system and service manager for Linux"
+DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.bz2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="audit cryptsetup gtk pam selinux tcpd"
 
-COMMON_DEPEND=">=sys-apps/dbus-1.4.8-r1
+COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-fs/udev-171
 	>=sys-apps/util-linux-2.19
 	sys-libs/libcap
@@ -102,37 +102,19 @@ src_install() {
 	keepdir /run
 }
 
-check_mtab_is_symlink() {
-	if [[ ! -L "${ROOT}"etc/mtab ]]; then
-		ewarn "${ROOT}etc/mtab must be a symlink to ${ROOT}proc/self/mounts!"
-		ewarn "To correct that, execute"
-		ewarn "    $ ln -sf '${ROOT}proc/self/mounts' '${ROOT}etc/mtab'"
-	fi
-}
-
-systemd_machine_id_setup() {
-	einfo "Setting up /etc/machine-id..."
-	if ! "${ROOT}"bin/systemd-machine-id-setup; then
-		ewarn "Setting up /etc/machine-id failed, to fix it please see"
-		ewarn "  http://lists.freedesktop.org/archives/dbus/2011-March/014187.html"
-	elif [[ ! -L "${ROOT}"var/lib/dbus/machine-id ]]; then
-		# This should be fixed in the dbus ebuild, but we warn about it here.
-		ewarn "${ROOT}var/lib/dbus/machine-id ideally should be a symlink to"
-		ewarn "${ROOT}etc/machine-id to make it clear that they have the same"
-		ewarn "content."
-	fi
-}
-
 pkg_postinst() {
-	check_mtab_is_symlink
-	systemd_machine_id_setup
+	if [[ ! -L "${ROOT}"etc/mtab ]]; then
+		ewarn "Upstream suggests that the /etc/mtab file should be a symlink to /proc/mounts."
+		ewarn "It is known to cause users being unable to unmount user mounts. If you don't"
+		ewarn "require that specific feature, please call:"
+		ewarn "	$ ln -sf '${ROOT}proc/self/mounts' '${ROOT}etc/mtab'"
+		ewarn
+	fi
 
-	# Inform user about extra configuration
-	elog "You may need to perform some additional configuration for some"
-	elog "programs to work, see the systemd manpages for loading modules and"
-	elog "handling tmpfiles:"
-	elog "    $ man modules-load.d"
-	elog "    $ man tmpfiles.d"
+	elog "You may need to perform some additional configuration for some programs"
+	elog "to work, see the systemd manpages for loading modules and handling tmpfiles:"
+	elog "	$ man modules-load.d"
+	elog "	$ man tmpfiles.d"
 	elog
 
 	ewarn "Please note this is a work-in-progress and many packages in Gentoo"
