@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.43 2011/06/08 06:10:41 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.44 2011/06/08 15:30:14 williamh Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ then
 	vcs="git-2 autotools"
 fi
 
-inherit ${VCS} eutils flag-o-matic multilib toolchain-funcs linux-info systemd
+inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd
 
 if [[ ${PV} != "9999" ]]
 then
