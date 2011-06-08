@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.468 2011/06/06 16:00:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.469 2011/06/08 17:47:44 pacho Exp $
+
+  08 Jun 2011; Pacho Ramos <pacho@gentoo.org> glib-2.28.8.ebuild:
+  Notify people about some tests will be skipped in certain situations and
+  intruct them about how to run all of them. Thanks a lot to Gilles for
+  explaining me the possible problems could appear if people ignores this
+  situation.
 
 *glib-2.28.8 (06 Jun 2011)
 

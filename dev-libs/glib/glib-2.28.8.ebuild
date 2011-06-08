@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.1 2011/06/06 16:00:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.2 2011/06/08 17:47:44 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -76,6 +76,8 @@ src_prepare() {
 
 	# Disable tests requiring dev-util/desktop-file-utils when not installed, bug #286629
 	if ! has_version dev-util/desktop-file-utils ; then
+		ewarn "Some tests will be skipped due dev-util/desktop-file-utils not being present on your system,"
+		ewarn "think on installing it to get these tests run."
 		sed -i -e "/appinfo\/associations/d" gio/tests/appinfo.c || die
 		sed -i -e "/desktop-app-info\/default/d" gio/tests/desktop-app-info.c || die
 		sed -i -e "/desktop-app-info\/fallback/d" gio/tests/desktop-app-info.c || die
@@ -84,6 +86,8 @@ src_prepare() {
 
 	# Disable tests requiring dev-python/dbus-python, bug #349236
 	if ! has_version dev-python/dbus-python ; then
+		ewarn "Some tests will be skipped due dev-python/dbus-python not being present on your system,"
+		ewarn "think on installing it to get these tests run."
 		sed -i -e "/connection\/filter/d" gio/tests/gdbus-connection.c || die
 		sed -i -e "/connection\/large_message/d" gio/tests/gdbus-connection-slow.c || die
 		sed -i -e "/gdbus\/proxy/d" gio/tests/gdbus-proxy.c || die
