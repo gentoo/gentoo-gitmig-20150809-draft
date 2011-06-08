@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.8.2.ebuild,v 1.2 2011/04/29 13:45:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.8.2.ebuild,v 1.3 2011/06/08 23:52:40 tomka Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ else
 	# upstream has no permissions to use some kde written code so repack git
 	# repo every time
 	SRC_URI="http://dev.gentoo.org/~scarabeus/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 fi
 
 LICENSE="LGPL-2"
