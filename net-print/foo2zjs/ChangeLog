@@ -1,6 +1,15 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.42 2011/06/02 15:15:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.43 2011/06/08 14:08:23 phajdan.jr Exp $
+
+  08 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -foo2zjs-20080225.ebuild, -files/foo2zjs-Makefile-20080225.diff,
+  -files/foo2zjs-udevfwld-20080225.diff, -foo2zjs-20081129.ebuild,
+  -files/foo2zjs-20081129-Makefile.patch,
+  -files/foo2zjs-20081129-udevfwld.patch:
+  Remove non-live ebuilds, they are broken by design. Discussion:
+  <http://archives.gentoo.org/gentoo-dev/msg_9ff2c9974486981d84816f74c7eea0d9.x
+  ml>
 
   02 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> foo2zjs-99999999.ebuild:
   Install missing ppd files, bug #356695 comment #5 by Mads <mads@ab3.no>. Bump
