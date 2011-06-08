@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.47 2011/02/22 17:02:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.48 2011/06/08 15:14:04 jer Exp $
+
+  08 Jun 2011; Jeroen Roovers <jer@gentoo.org> grace-5.1.22-r1.ebuild,
+  grace-5.1.22-r2.ebuild:
+  Remove HPPA keywording.
 
   22 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> grace-5.1.22-r1.ebuild,
   grace-5.1.22-r2.ebuild, -files/grace-5.1.22-pdfdrv.patch:
