@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r1.ebuild,v 1.2 2011/06/07 11:46:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r1.ebuild,v 1.3 2011/06/08 02:36:58 robbat2 Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	dev-libs/libnl
-	dev-libs/popt"
+	>=dev-libs/popt-1.16"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
