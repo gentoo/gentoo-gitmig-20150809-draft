@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.38 2011/04/28 17:08:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.39 2011/06/08 18:27:59 graaff Exp $
+
+  08 Jun 2011; Hans de Graaff <graaff@gentoo.org> -rake-compiler-0.7.6.ebuild,
+  -rake-compiler-0.7.7.ebuild:
+  Remove old versions.
 
 *rake-compiler-0.7.8 (28 Apr 2011)
 
