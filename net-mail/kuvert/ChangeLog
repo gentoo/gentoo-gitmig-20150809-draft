@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/kuvert
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/ChangeLog,v 1.8 2011/06/08 06:23:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/ChangeLog,v 1.9 2011/06/08 07:47:05 xarthisius Exp $
+
+  08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> kuvert-2.0.4.ebuild:
+  Marked ~ppc wrt #370621
 
 *kuvert-2.0.4 (08 Jun 2011)
 
