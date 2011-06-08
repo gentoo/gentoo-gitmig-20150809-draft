@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12824 2011/06/08 07:42:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12825 2011/06/08 16:29:06 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (8 Jun 2011)
+# Broken upstream
+=net-libs/libtirpc-0.2.2
 
 # Sebastian Pipping <sping@gentoo.org> (7 Jun 2011)
 # Experimental bump (bug #340425)
