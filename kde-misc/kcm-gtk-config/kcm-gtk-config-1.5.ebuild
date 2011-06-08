@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/kcm-gtk-config-1.5.ebuild,v 1.3 2011/05/17 05:47:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/kcm-gtk-config-1.5.ebuild,v 1.4 2011/06/08 23:52:10 tomka Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://chakra-project.org/sources/gtk-integration/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86"
 SLOT="4"
 IUSE=""
 
