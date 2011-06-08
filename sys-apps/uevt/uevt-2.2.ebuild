@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.2.ebuild,v 1.1 2011/05/09 13:28:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/uevt-2.2.ebuild,v 1.2 2011/06/08 06:19:57 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="${COMMON_DEPEND}
 	sys-fs/udisks
 	sys-power/upower"
 DEPEND="${COMMON_DEPEND}
-	dev-lang/vala:0.12
+	>=dev-lang/vala-0.12:0.12
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
