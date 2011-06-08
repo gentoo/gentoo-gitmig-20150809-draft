@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.7.ebuild,v 1.12 2011/06/08 09:25:23 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.7.ebuild,v 1.13 2011/06/08 15:48:51 scarabeus Exp $
 
 EAPI=3
 
+XORG_EAUTORECONF=yes
 inherit python xorg-2
 
 DESCRIPTION="X C-language Bindings library"
@@ -24,6 +25,8 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	=dev-lang/python-2*[xml]"
 
+	PATCHES=( "${FILESDIR}/${P}-interix.patch" )
+
 pkg_setup() {
 	python_set_active_version 2
 	xorg-2_pkg_setup
@@ -32,6 +35,4 @@ pkg_setup() {
 		$(use_enable selinux)
 		--enable-xinput
 	)
-
-	PATCHES=( "${FILESDIR}/${P}-interix.patch" )
 }
