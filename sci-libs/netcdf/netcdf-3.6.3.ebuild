@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.15 2010/12/01 16:55:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.16 2011/06/08 15:13:24 jer Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.unidata.ucar.edu/software/netcdf/"
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE="fortran debug doc"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 sparc x86"
 
 RDEPEND=""
 DEPEND="${RDEPEND}

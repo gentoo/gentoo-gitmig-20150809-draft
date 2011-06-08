@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.89 2011/03/20 18:19:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.90 2011/06/08 15:13:24 jer Exp $
+
+  08 Jun 2011; Jeroen Roovers <jer@gentoo.org> netcdf-3.6.3.ebuild,
+  netcdf-4.1.1-r4.ebuild:
+  Remove HPPA keywording.
 
   20 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> -netcdf-4.1.1.ebuild,
   -netcdf-4.1.1-r3.ebuild, netcdf-4.1.1-r4.ebuild:
