@@ -17,7 +17,7 @@ index 6d65ea3..7d82c5c 100644
            goto error;
  
 -     if (setjmp( data->png_ptr->jmpbuf )) {
-+     if (png_jmpbuf( data->png_ptr )) {
++     if (setjmp( png_jmpbuf( data->png_ptr ))) {
            D_ERROR( "ImageProvider/PNG: Error reading header!\n" );
            goto error;
       }
@@ -26,7 +26,7 @@ index 6d65ea3..7d82c5c 100644
       }
  
 -     if (setjmp( data->png_ptr->jmpbuf )) {
-+     if (png_jmpbuf( data->png_ptr )) {
++     if (setjmp( png_jmpbuf( data->png_ptr ))) {
            D_ERROR( "ImageProvider/PNG: Error during decoding!\n" );
  
            if (data->stage < STAGE_IMAGE)
