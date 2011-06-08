@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.70.ebuild,v 1.2 2010/07/12 16:00:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/postal/postal-0.70.ebuild,v 1.3 2011/06/08 09:33:51 eras Exp $
 
 inherit autotools eutils
 
@@ -17,6 +17,7 @@ DEPEND="ssl? (
 	!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	gnutls? ( >=net-libs/gnutls-2.2.2 )
 	)"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	myconf=" --disable-stripping
@@ -33,6 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}/03_${P}-c++0x-integrated.patch"
 	epatch "${FILESDIR}/04_${P}-warnings.patch"
 	epatch "${FILESDIR}/05_${P}-openssl-1.patch"
+	epatch "${FILESDIR}/06_${P}-ldflags.patch"
 	eautoreconf
 }
 
