@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twill
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.5 2010/12/30 22:18:29 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.6 2011/06/08 16:15:13 xarthisius Exp $
+
+  08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> twill-0.9.ebuild:
+  Marked ~ppc wrt #366541
 
   30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   twill-0.9.ebuild:
