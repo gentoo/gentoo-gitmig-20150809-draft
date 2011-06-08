@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.8.1.ebuild,v 1.1 2011/04/19 13:52:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.8.1.ebuild,v 1.2 2011/06/08 09:56:05 flameeyes Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 src_configure() {
 	econf \
 		$(use_enable alsa) \
-		$(use_enable flag) \
+		$(use_enable flac) \
 		$(use_enable gpm) \
 		$(use_enable mad mp3) \
 		$(use_enable vorbis ogg) \
