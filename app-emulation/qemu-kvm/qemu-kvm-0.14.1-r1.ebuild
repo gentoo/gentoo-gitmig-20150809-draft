@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r1.ebuild,v 1.1 2011/05/31 15:53:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r1.ebuild,v 1.2 2011/06/08 22:17:26 cardoe Exp $
 
 BACKPORTS=1
 
@@ -166,7 +166,7 @@ src_configure() {
 	use static && conf_opts="${conf_opts} --static"
 
 	# Support debug USE flag
-	use debug && conf_opts="${conf_opts} --enable-debug"
+	use debug && conf_opts="${conf_opts} --enable-debug --disable-strip"
 
 	# Fix the $(prefix)/etc issue
 	conf_opts="${conf_opts} --sysconfdir=/etc"
@@ -176,8 +176,6 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable bluetooth bluez)"
 	conf_opts="${conf_opts} $(use_enable brltty brlapi)"
 	conf_opts="${conf_opts} $(use_enable curl)"
-	conf_opts="${conf_opts} $(use_enable debug strip)"
-	conf_opts="${conf_opts} $(use_enable debug debug-tcg)"
 	conf_opts="${conf_opts} $(use_enable fdt)"
 	conf_opts="${conf_opts} $(use_enable hardened user-pie)"
 	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
