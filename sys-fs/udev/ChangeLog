@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.585 2011/06/08 15:30:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.586 2011/06/08 17:28:40 hwoarang Exp $
+
+  08 Jun 2011; Markos Chandras <hwoarang@gentoo.org> udev-164-r2.ebuild:
+  Stable on amd64 wrt bug #352827
 
   08 Jun 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   fix typo: VCS should be vcs. bug #370647.
