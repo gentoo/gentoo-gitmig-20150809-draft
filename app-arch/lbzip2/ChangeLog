@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.6 2010/04/25 11:14:05 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.7 2011/06/08 15:29:18 mattst88 Exp $
+
+  08 Jun 2011; Matt Turner <mattst88@gentoo.org> lbzip2-0.23-r1.ebuild:
+  Add missing sys-devel/bc dependency for USE=test
 
 *lbzip2-0.23-r1 (27 Mar 2010)
 

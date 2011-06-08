@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.23-r1.ebuild,v 1.1 2010/03/27 09:48:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.23-r1.ebuild,v 1.2 2011/06/08 15:29:18 mattst88 Exp $
 
 EAPI="3"
 
@@ -19,6 +19,7 @@ RDEPEND="app-arch/bzip2"
 DEPEND="${REDEPEND}
 	test? (
 		app-shells/dash
+		sys-devel/bc
 		sys-process/time
 	)"
 
