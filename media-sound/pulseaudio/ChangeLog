@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.227 2011/05/20 16:11:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.228 2011/06/08 21:43:57 williamh Exp $
+
+  08 Jun 2011; William Hubbs <williamh@gentoo.org> pulseaudio-0.9.22.ebuild,
+  pulseaudio-0.9.22-r2.ebuild, pulseaudio-9999.ebuild:
+  Fix the udev dependency for bug #370335, thanks to ford_prefect.
 
   20 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> pulseaudio-9999.ebuild:
   Update to eapi4 as acked by Arun.
