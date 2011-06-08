@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.6.3.ebuild,v 1.2 2011/05/23 18:19:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.6.3.ebuild,v 1.3 2011/06/08 18:21:09 maekke Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/dbus-python

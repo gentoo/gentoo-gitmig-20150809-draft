@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.10 2011/05/23 18:19:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.11 2011/06/08 18:21:09 maekke Exp $
+
+  08 Jun 2011; Markus Meier <maekke@gentoo.org> radiotray-0.6.3.ebuild:
+  x86 stable, bug #368221
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org> radiotray-0.6.3.ebuild:
   Restrict python3 ABIS. Stable on amd64. Bug #368221
