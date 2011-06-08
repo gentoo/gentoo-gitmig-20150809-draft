@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-gudev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/ChangeLog,v 1.4 2011/04/11 02:56:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/ChangeLog,v 1.5 2011/06/08 22:26:09 williamh Exp $
+
+  08 Jun 2011; William Hubbs <williamh@gentoo.org> python-gudev-147.2.ebuild:
+  Fix the udev dependency for bug #370351, thanks to ford_prefect and
+  laurento.frittella@gmail.com.
 
   11 Apr 2011; Thomas Kahle <tomka@gentoo.org> python-gudev-147.2.ebuild:
   x86 stable per bug 358457
