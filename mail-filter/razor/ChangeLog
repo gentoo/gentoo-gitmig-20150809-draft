@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/razor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.89 2010/03/31 02:15:47 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.90 2011/06/08 12:44:41 eras Exp $
+
+  08 Jun 2011; Eray Aslan <eras@gentoo.org> -razor-2.77.ebuild,
+  -razor-2.82.ebuild:
+  Remove old
 
 *razor-2.85-r1 (31 Mar 2010)
 
