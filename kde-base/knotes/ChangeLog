@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.174 2011/06/09 22:12:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.175 2011/06/09 22:52:46 tampakrap Exp $
+
+  09 Jun 2011; Theo Chatzimichos <tampakrap@gentoo.org> -knotes-4.5.95.ebuild:
+  Remove KDEPIM 4.5.95
 
 *knotes-4.6.0 (09 Jun 2011)
 

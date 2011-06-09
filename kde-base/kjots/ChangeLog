@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.177 2011/06/09 22:12:52 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.178 2011/06/09 22:52:45 tampakrap Exp $
+
+  09 Jun 2011; Theo Chatzimichos <tampakrap@gentoo.org> -kjots-4.5.95.ebuild:
+  Remove KDEPIM 4.5.95
 
 *kjots-4.6.0 (09 Jun 2011)
 
