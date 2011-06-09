@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/puddletag
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.15 2011/06/07 19:58:13 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.16 2011/06/09 18:59:25 billie Exp $
+
+  09 Jun 2011; Daniel Pielmeier <billie@gentoo.org> -puddletag-0.10.3.ebuild:
+  Remove old.
 
 *puddletag-0.10.6 (07 Jun 2011)
 
