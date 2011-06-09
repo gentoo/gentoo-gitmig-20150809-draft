@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.772.0-r1.ebuild,v 1.2 2011/05/29 15:08:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.13.ebuild,v 1.1 2011/06/09 09:01:22 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -99,19 +99,6 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
-	# Prevent user problems like bug #299777.
-	if ! grep -q /dev/shm <<< $(get_mounts); then
-		ewarn "You don't have tmpfs mounted at /dev/shm."
-		ewarn "${PN} may fail to start in that configuration."
-		ewarn "Please uncomment the /dev/shm entry in /etc/fstab,"
-		ewarn "and run 'mount /dev/shm'."
-	fi
-	if [ `stat -c %a /dev/shm` -ne 1777 ]; then
-		ewarn "/dev/shm does not have correct permissions."
-		ewarn "${PN} may fail to start in that configuration."
-		ewarn "Please run 'chmod 1777 /dev/shm'."
-	fi
-
 	# Prevent user problems like bug #348235.
 	eshopts_push -s extglob
 	if is-flagq '-g?(gdb)?([1-9])'; then
@@ -124,8 +111,6 @@ pkg_setup() {
 	# Warn if the kernel doesn't support features useful for sandboxing,
 	# bug #363907.
 	CONFIG_CHECK="~PID_NS ~NET_NS"
-	PID_NS_WARNING="PID (process id) namespaces are needed for sandboxing."
-	NET_NS_WARNING="Network namespaces are needed for sandboxing."
 	check_extra_config
 }
 
@@ -150,7 +135,6 @@ src_prepare() {
 		\! -path 'third_party/leveldb/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
-		\! -path 'third_party/libsrtp/*' \
 		\! -path 'third_party/libvpx/libvpx.h' \
 		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
@@ -178,9 +162,6 @@ src_configure() {
 	# Never tell the build system to "enable" SSE2, it has a few unexpected
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
-
-	# Temporarily disable Native Client, bug #366413.
-	myconf+=" -Ddisable_nacl=1"
 
 	# Use system-provided libraries.
 	# TODO: use_system_hunspell (upstream changes needed).
@@ -223,19 +204,7 @@ src_configure() {
 	# for Chromium.
 	myconf+=" -Dproprietary_codecs=1"
 
-	# Use target arch detection logic from bug #354601.
-	case ${CHOST} in
-		i?86-*) myarch=x86 ;;
-		x86_64-*)
-			if [[ $ABI = "" ]] ; then
-				myarch=amd64
-			else
-				myarch="$ABI"
-			fi ;;
-		arm*-*) myarch=arm ;;
-		*) die "Unrecognized CHOST: ${CHOST}"
-	esac
-
+	local myarch="$(tc-arch)"
 	if [[ $myarch = amd64 ]] ; then
 		myconf+=" -Dtarget_arch=x64"
 	elif [[ $myarch = x86 ]] ; then
@@ -299,6 +268,10 @@ src_install() {
 	doexe out/Release/chrome
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
+
+	insinto "${CHROMIUM_HOME}"
+	doins out/Release/libppGoogleNaClPluginChrome.so || die
+
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 
 	# It is important that we name the target "chromium-browser",
