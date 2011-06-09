@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/policyd-weight
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/ChangeLog,v 1.15 2008/05/30 06:57:52 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd-weight/ChangeLog,v 1.16 2011/06/09 19:12:17 eras Exp $
+
+*policyd-weight-0.1.15.1 (09 Jun 2011)
+
+  09 Jun 2011; Eray Aslan <eras@gentoo.org> +policyd-weight-0.1.15.1.ebuild:
+  Version bump.
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
