@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009.ebuild,v 1.2 2011/05/04 13:29:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009-r1.ebuild,v 1.1 2011/06/09 21:35:36 radhermit Exp $
 
 EAPI=2
 
@@ -35,6 +35,12 @@ pkg_setup() {
 	games_pkg_setup
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-desktop.patch
+
+	sed -i -e "s:\(DESTINATION\) bin:\1 ${GAMES_BINDIR}:" CMakeLists.txt || die
+}
+
 src_configure() {
 	local myconf
 	use x86 && myconf="-DENABLE_ASM_SCALERS=ON -DENABLE_ASM_CORE=ON"
@@ -46,7 +52,7 @@ src_configure() {
 		$(cmake-utils_use_enable nls NLS)
 		$(cmake-utils_use_enable sdl SDL)
 		${myconf}
-		"-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}"
+		"-DDATA_INSTALL_DIR=share/games/${PN}"
 	)
 
 	cmake-utils_src_configure
@@ -54,9 +60,16 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
+
 	if use sdl ; then
-		dodoc doc/ReadMe.SDL.txt
-		doman debian/vbam.1
+		dodoc doc/ReadMe.SDL.txt || die
+		doman debian/vbam.1 || die
 	fi
+
+	if use gtk ; then
+		domenu src/gtk/gvbam.desktop || die
+		doicon src/gtk/icons/scalable/apps/vbam.svg || die
+	fi
+
 	prepgamesdirs
 }
