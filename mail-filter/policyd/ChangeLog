@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/policyd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/ChangeLog,v 1.7 2009/05/22 20:12:04 dertobi123 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/ChangeLog,v 1.8 2011/06/09 12:56:50 eras Exp $
+
+  09 Jun 2011; Eray Aslan <eras@gentoo.org> policyd-1.82-r1.ebuild,
+  +files/policyd-post182.patch, files/policyd-makefile.patch:
+  Respect LDFLAGS - bug #332099. Small post 1.82 fixes - bug #288438.
 
   22 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   -policyd-1.80.ebuild, -policyd-1.81.ebuild, policyd-1.82.ebuild:

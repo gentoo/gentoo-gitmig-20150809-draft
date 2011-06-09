@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/policyd-1.82.ebuild,v 1.5 2011/06/09 12:56:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/policyd-1.82-r1.ebuild,v 1.1 2011/06/09 12:56:50 eras Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Policy daemon for postfix and other MTAs"
 HOMEPAGE="http://policyd.sf.net/"
@@ -20,7 +20,9 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${PN}-post182.patch"
 	epatch "${FILESDIR}/${PN}-makefile.patch"
+	sed -i -e "s/gcc/$(tc-getCC)/" Makefile
 
 	ebegin "Applying config patches"
 	sed -i -e s:UID=0:UID=65534:g \
