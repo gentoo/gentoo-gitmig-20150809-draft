@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/rrdcollect-0.2.9.ebuild,v 1.1 2011/06/09 17:36:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/rrdcollect-0.2.9.ebuild,v 1.2 2011/06/09 17:46:29 jer Exp $
 
 EAPI="3"
 
@@ -34,5 +34,8 @@ src_configure() {
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS TODO || die
+	docinto examples
+	dodoc doc/examples/* || die
 }

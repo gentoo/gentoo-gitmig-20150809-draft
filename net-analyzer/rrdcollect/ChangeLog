@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdcollect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/ChangeLog,v 1.5 2011/06/09 17:36:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdcollect/ChangeLog,v 1.6 2011/06/09 17:46:29 jer Exp $
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org> rrdcollect-0.2.9.ebuild:
+  No need for einstall. Install some more docs/examples.
 
 *rrdcollect-0.2.9 (09 Jun 2011)
 
