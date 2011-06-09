@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.62 2009/10/23 19:31:08 gengor Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.63 2011/06/09 16:58:06 vapier Exp $
+
+*libstdc++-v3-3.3.6-r1 (09 Jun 2011)
+
+  09 Jun 2011; Mike Frysinger <vapier@gentoo.org>
+  +libstdc++-v3-3.3.6-r1.ebuild:
+  Fix from upstream for missing symbol versions in multilib builds #304239.
 
   23 Oct 2009; Gordon Malm <gengor@gentoo.org> libstdc++-v3-3.3.6.ebuild:
   filter-flags -fstrict-overflow too, bug #290202
