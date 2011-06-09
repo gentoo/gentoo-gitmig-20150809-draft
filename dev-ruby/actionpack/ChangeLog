@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.175 2011/05/01 14:11:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.176 2011/06/09 15:22:30 graaff Exp $
+
+  09 Jun 2011; Hans de Graaff <graaff@gentoo.org> -actionpack-2.2.3-r1.ebuild,
+  -files/actionpack-2.2.3-strip_tags.patch:
+  Remove old version.
 
   01 May 2011; Hans de Graaff <graaff@gentoo.org> -actionpack-2.3.10.ebuild,
   -actionpack-3.0.3-r1.ebuild:
