@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.10.2.ebuild,v 1.6 2011/06/09 01:17:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.12.0.ebuild,v 1.1 2011/06/09 01:17:27 radhermit Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
-	KEYWORDS="amd64 ~ppc x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="package management tool for OpenEmbedded"
@@ -24,7 +24,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
 
-RDEPEND="|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] >=dev-python/pysqlite-2.3.2 )"
+RDEPEND="|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] >=dev-python/pysqlite-2.3.2 )
+	dev-python/ply
+	dev-python/progressbar"
 DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.8 2011/01/26 16:40:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.9 2011/06/09 01:17:27 radhermit Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -9,7 +9,7 @@ inherit distutils
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.openembedded.org/bitbake.git"
-	inherit git
+	inherit git-2
 	SRC_URI=""
 	KEYWORDS=""
 else
@@ -24,7 +24,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc"
 
-RDEPEND="|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] >=dev-python/pysqlite-2.3.2 )"
+RDEPEND="|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] >=dev-python/pysqlite-2.3.2 )
+	dev-python/ply
+	dev-python/progressbar"
 DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt )"
 
