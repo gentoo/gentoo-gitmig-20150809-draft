@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5431 2011/06/08 18:47:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5432 2011/06/09 09:29:30 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking net-misc/gateway6 for QA removal.
 
   08 Jun 2011; Hans de Graaff <graaff@gentoo.org> updates/2Q-2011:
   slotmove versions of dev-ruby/mysql2 into separate slots.
