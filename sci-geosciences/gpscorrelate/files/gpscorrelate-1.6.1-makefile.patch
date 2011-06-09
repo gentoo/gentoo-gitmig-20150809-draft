@@ -12,7 +12,7 @@ diff -urN gpscorrelate-1.6.1.old/Makefile gpscorrelate-1.6.1/Makefile
 -prefix   = /usr/local
 +CFLAGS += $(shell pkg-config --cflags libxml-2.0) -I/usr/include/exiv2
 +CXXFLAGS += $(shell pkg-config --cflags libxml-2.0) -I/usr/include/exiv2
-+CLIBS += $(shell pkg-config --libs libxml-2.0) -lm -lexiv2 -lstdc++
++CLIBS = $(shell pkg-config --libs libxml-2.0) -lm -lexiv2 -lstdc++
 +ifdef BUILD_GUI
 +CXXFLAGS += $(shell pkg-config --cflags gtk+-2.0)
 +CFLAGS += $(shell pkg-config --cflags gtk+-2.0)

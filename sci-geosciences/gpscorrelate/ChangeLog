@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpscorrelate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.10 2011/06/08 12:22:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.11 2011/06/09 20:55:12 scarabeus Exp $
+
+  09 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/gpscorrelate-1.6.1-makefile.patch:
+  Do not allow pollution of CLIBS variable. Fixes bug #370463.
 
   08 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   gpscorrelate-1.6.1.ebuild, files/gpscorrelate-1.6.1-makefile.patch:
