@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.203 2011/04/14 10:44:36 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.204 2011/06/09 01:21:35 sping Exp $
+
+  09 Jun 2011; Sebastian Pipping <sping@gentoo.org> rhythmbox-0.12.8-r1.ebuild,
+  rhythmbox-0.13.3.ebuild:
+  Add >=sys-fs/udev-171[gudev] as an alternative dependency to
+  >=sys-fs/udev-145[extras] (bug #370379)
 
   14 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   rhythmbox-0.13.3.ebuild:
