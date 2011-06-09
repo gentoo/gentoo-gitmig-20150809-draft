@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.2 2011/06/09 04:38:06 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.3 2011/06/09 05:06:46 binki Exp $
+
+  09 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  -atheme-services-0.2.2.ebuild, -atheme-services-1.2.1.ebuild,
+  -files/atheme-1.2.1-postgresl.patch, -files/atheme.initd,
+  -files/make-postgresql-support-optional.patch,
+  -files/makefile-DESTDIR-support.patch:
+  Drop atheme-services-0.2.2 and atheme-services-1.2.1 which are ancient and
+  affected by bug #313373 and bug #335467.
 
 *atheme-services-6.0.8 (09 Jun 2011)
 
