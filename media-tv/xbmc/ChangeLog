@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.93 2011/05/18 18:56:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.94 2011/06/09 00:46:23 vapier Exp $
+
+  09 Jun 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Add yajl to depend since upstream now needs it #370229 by BT.
 
   18 May 2011; Mike Frysinger <vapier@gentoo.org> xbmc-10.1.ebuild,
   +files/xbmc-10.1-gcc-4.6.patch:
