@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-ofa
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ofa/ChangeLog,v 1.1 2011/06/09 19:34:40 beandog Exp $
+
+*gst-plugins-ofa-0.10.21 (09 Jun 2011)
+
+  09 Jun 2011; Steve Dibb <beandog@gentoo.org>
+  +gst-plugins-ofa-0.10.21.ebuild:
+  Initial commit, bug 360851
+
