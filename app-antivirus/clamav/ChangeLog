@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.386 2011/03/16 11:47:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.387 2011/06/09 23:57:34 radhermit Exp $
+
+*clamav-0.97.1 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> +clamav-0.97.1.ebuild:
+  Version bump (bug #370791). Add static-libs USE flag.
 
   16 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> clamav-0.97.ebuild:
   Drop virtual definition per bug #358817. Drop glibc check as minimal user can
