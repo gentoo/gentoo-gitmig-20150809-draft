@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.6.ebuild,v 1.2 2011/03/02 21:10:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-11.04.0.ebuild,v 1.1 2011/06/09 22:53:39 bicatali Exp $
 
 WX_GTK_VER="2.8"
-EAPI="2"
+EAPI=4
 inherit wxwidgets fdo-mime
 
 MYP=wxMaxima-${PV}
@@ -28,11 +28,12 @@ S="${WORKDIR}/${MYP}"
 
 src_prepare() {
 	# consistent package names
-	sed -e "s:${datadir}/wxMaxima:${datadir}/${PN}:g" \
+	sed -e "s:\${datadir}/wxMaxima:\${datadir}/${PN}:g" \
 		-i Makefile.in data/Makefile.in || die "sed failed"
 
 	sed -e 's:share/wxMaxima:share/wxmaxima:g' \
-		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp || die "sed failed"
+		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp src/Config.cpp \
+		|| die "sed failed"
 }
 
 src_configure() {
@@ -44,12 +45,11 @@ src_configure() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	doicon data/wxmaxima.png
 	make_desktop_entry wxmaxima wxMaxima wxmaxima
 	dodir /usr/share/doc/${PF}
 	dosym /usr/share/${PN}/README /usr/share/doc/${PF}/README
-	dodoc AUTHORS
 }
 
 pkg_postinst() {
