@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.97 2011/06/07 20:11:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.98 2011/06/09 21:05:45 tampakrap Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -167,7 +167,7 @@ case ${KDEBASE} in
 
 		# Only add the kdeprefix USE flag for older versions, to help
 		# non-portage package managers handle the upgrade
-		if [[ ${PV} < 4.6.4 ]]; then
+		if [[ ${PV} < 4.6.4 && ( ( ${KMNAME} != kdepim && ${PN} != kdepim-runtime ) || ${PV} < 4.6 ) ]]; then
 			IUSE+=" kdeprefix"
 		fi
 
@@ -445,13 +445,11 @@ _calculate_src_uri() {
 					# KDEPIM IS SPECIAL
 					[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/unstable/kdepim/${PV}/${_kmname_pv}.tar.bz2"
 					;;
-				4.4.[6789] | 4.4.1?*)
-					# Stable kdepim releases
-					SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2"
-					;;
 				*)
 					# Stable KDE SC releases
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2"
+					# KDEPIM IS SPECIAL
+					[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2"
 					;;
 			esac
 			;;
