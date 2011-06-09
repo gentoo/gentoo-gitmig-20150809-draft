@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.1 2011/06/08 00:45:34 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.2 2011/06/09 04:38:06 binki Exp $
+
+*atheme-services-6.0.8 (09 Jun 2011)
+
+  09 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +atheme-services-6.0.8.ebuild, +files/atheme-services.initd.in,
+  metadata.xml:
+  Completely reworked for bump to atheme-services-6.0.8, fixing bug #305411.
 
 *atheme-services-1.2.1 (08 Jun 2011)
 *atheme-services-0.2.2 (08 Jun 2011)
