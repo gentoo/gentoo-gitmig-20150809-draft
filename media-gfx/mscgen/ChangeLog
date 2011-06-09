@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/mscgen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mscgen/ChangeLog,v 1.1 2010/11/02 19:13:34 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mscgen/ChangeLog,v 1.2 2011/06/09 07:52:01 radhermit Exp $
+
+*mscgen-0.20 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> +mscgen-0.20.ebuild:
+  Version bump.
 
 *mscgen-0.18 (02 Nov 2010)
 
