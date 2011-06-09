@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.99 2011/06/09 16:58:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.100 2011/06/09 23:03:05 bicatali Exp $
+
+  09 Jun 2011; Sébastien Fabbro <bicatali@gentoo.org> itpp-4.2-r1.ebuild,
+  +files/itpp-4.2-test-fftw.patch:
+  Added patch for test from upstream, closing bug #358885
 
 *itpp-4.2-r1 (09 Jun 2011)
 

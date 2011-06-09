@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.1 2011/06/09 16:58:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.2 2011/06/09 23:03:05 bicatali Exp $
 
 EAPI=4
 inherit flag-o-matic eutils
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.0.7-fastica-fix-endless-loop.patch
 	epatch "${FILESDIR}"/${PN}-4.2-fastica-correct-dim.patch
+	epatch "${FILESDIR}"/${PN}-4.2-test-fftw.patch
 }
 
 src_configure() {
