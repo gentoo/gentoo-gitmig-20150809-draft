@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.70 2011/03/25 20:08:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.71 2011/06/09 07:33:47 radhermit Exp $
+
+*cdk-5.0.20110517 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> -cdk-5.0.20060507.ebuild,
+  -files/cdk-5.0.20060507-as-needed.patch, -cdk-5.0.20081105.ebuild,
+  -files/cdk-5.0.20081105-ldflags.patch, +cdk-5.0.20110517.ebuild,
+  +files/cdk-5.0.20110517-ldflags.patch,
+  +files/cdk-5.0.20110517-makefile.patch:
+  Version bump and remove old. Add static-libs and unicode USE flags.
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> cdk-5.0.20090215.ebuild:
   ppc stable wrt #299479
