@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.105 2011/05/18 11:20:12 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.106 2011/06/09 01:41:03 sping Exp $
+
+  09 Jun 2011; Sebastian Pipping <sping@gentoo.org>
+  networkmanager-0.8-r1.ebuild, networkmanager-0.8.1-r6.ebuild,
+  networkmanager-0.8.2-r1.ebuild, networkmanager-0.8.2-r2.ebuild,
+  networkmanager-0.8.2-r6.ebuild, networkmanager-0.8.2-r10.ebuild,
+  networkmanager-0.8.4.0-r1.ebuild:
+  Add >=sys-fs/udev-171[gudev] as an alternative dependency to
+  >=sys-fs/udev-145[extras] (bug #370339)
 
 *networkmanager-0.8.4.0-r1 (18 May 2011)
 

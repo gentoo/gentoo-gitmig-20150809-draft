@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r1.ebuild,v 1.1 2011/05/18 11:20:12 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r1.ebuild,v 1.2 2011/06/09 01:41:03 sping Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ IUSE="avahi bluetooth doc nss gnutls dhclient dhcpcd kernel_linux resolvconf con
 RDEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.75
 	>=net-wireless/wireless-tools-28_pre9
-	>=sys-fs/udev-145[extras]
+	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
 	>=dev-libs/glib-2.18
 	>=sys-auth/polkit-0.92
 	>=dev-libs/libnl-1.1
