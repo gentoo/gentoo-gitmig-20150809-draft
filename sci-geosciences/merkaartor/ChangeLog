@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/merkaartor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.17 2010/03/09 13:08:42 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.18 2011/06/09 20:25:12 scarabeus Exp $
+
+*merkaartor-0.17.2 (09 Jun 2011)
+
+  09 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.17.2-includes.patch, -merkaartor-0.11.ebuild,
+  -merkaartor-0.12.ebuild, -merkaartor-0.13.1.ebuild,
+  -merkaartor-0.13.2.ebuild, +merkaartor-0.17.2.ebuild, merkaartor-9999.ebuild,
+  metadata.xml:
+  Version bump to 0.17.2. Drop older. Fix live ebuild.
 
   09 Mar 2010; Jonathan Callen <abcd@gentoo.org> merkaartor-0.12.ebuild,
   merkaartor-0.13.1.ebuild:

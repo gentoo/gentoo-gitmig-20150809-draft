@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.8 2011/06/09 20:25:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.17.2.ebuild,v 1.1 2011/06/09 20:25:12 scarabeus Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.merkaartor.be"
 LICENSE="GPL-2"
 SLOT="0"
 [[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
-IUSE="debug exif gps nls libproxy webkit"
+IUSE="debug exif gps nls libproxy"
 
 QT_MINIMAL="4.7.2"
 DEPEND="
@@ -25,16 +25,18 @@ DEPEND="
 	>=sci-libs/proj-4.6
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
 	>=x11-libs/qt-svg-${QT_MINIMAL}:4
+	>=x11-libs/qt-webkit-${QT_MINIMAL}:4
 	exif? ( media-gfx/exiv2 )
 	gps? ( >=sci-geosciences/gpsd-2.92 )
 	libproxy? ( net-libs/libproxy )
-	webkit? ( >=x11-libs/qt-webkit-${QT_MINIMAL}:4 )
 "
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS CHANGELOG HACKING"
 
-MAKEOPTS+=" -j1"
+PATCHES=(
+	"${FILESDIR}/${PV}-includes.patch"
+)
 
 merkaartor_use() {
 	local useflag=${1}
@@ -53,7 +55,7 @@ src_configure() {
 	myconf+=" GPSDLIB=$(${PN}_use gps)"
 	myconf+=" LIBPROXY=$(${PN}_use libproxy)"
 	myconf+=" NODEBUG=$(use debug && echo "0" || echo "1")" # inverse logic
-	myconf+=" NOUSEWEBKIT=$(use webkit && echo "0" || echo "1")" # inverse logic
+	myconf+=" NOUSEWEBKIT=0" # fails to link if disabled, upstream needs to fix
 
 	if use nls; then
 		lrelease src/src.pro || die "lrelease failed"
