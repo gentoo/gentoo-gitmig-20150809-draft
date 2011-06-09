@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.77 2011/05/11 23:13:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.78 2011/06/09 14:55:41 matsuu Exp $
+
+*mlterm-3.0.5 (09 Jun 2011)
+
+  09 Jun 2011; MATSUU Takuto <matsuu@gentoo.org> +mlterm-3.0.5.ebuild,
+  +files/mlterm-3.0.5-ibus.patch, +files/mlterm-3.0.5-ldflags.patch,
+  metadata.xml:
+  Version bumped. Added debug, libssh and xft USE flags.
 
 *mlterm-3.0.3 (11 May 2011)
 
