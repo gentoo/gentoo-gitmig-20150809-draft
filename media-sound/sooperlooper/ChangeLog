@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sooperlooper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.17 2010/01/08 14:38:28 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.18 2011/06/09 09:50:09 radhermit Exp $
+
+*sooperlooper-1.6.17 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> +sooperlooper-1.6.17.ebuild:
+  Version bump. Update to EAPI 4 and make sure CXXFLAGS are respected
+  everywhere.
 
 *sooperlooper-1.6.14 (08 Jan 2010)
 
