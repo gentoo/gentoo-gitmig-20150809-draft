@@ -4,6 +4,6 @@
 <herd>netmon</herd>
 <use>
 <flag name="exec">Enable exec:/// support</flag>
-<flag name="pcap">Use <pkg>net-libs/libpcap</pkg> for packet capturing</flag>
+<flag name="librrd">Use the librrd library from <pkg>net-analyzer/rrdtool</pkg></flag>
 </use>
 </pkgmetadata>
