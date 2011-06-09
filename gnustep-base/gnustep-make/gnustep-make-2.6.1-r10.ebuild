@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.1-r10.ebuild,v 1.1 2011/06/07 14:35:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.1-r10.ebuild,v 1.2 2011/06/09 09:47:21 voyageur Exp $
 
 EAPI="3"
 
@@ -79,9 +79,9 @@ src_install() {
 
 	# Copy the documentation
 	if use doc ; then
-		dodir ${GNUSTEP_SYSTEM_LIBRARY}
-		cp -r Documentation/tmp-installation/System/Library/Documentation \
-			"${ED}"${GNUSTEP_SYSTEM_LIBRARY}
+		dodir ${GNUSTEP_SYSTEM_DOC}
+		cp -r Documentation/tmp-installation/System/Library/Documentation/* \
+			"${ED}"${GNUSTEP_SYSTEM_DOC=}
 	fi
 
 	dodoc FAQ README RELEASENOTES

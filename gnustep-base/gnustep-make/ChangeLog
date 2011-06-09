@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.101 2011/06/07 14:35:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.102 2011/06/09 09:47:21 voyageur Exp $
+
+*gnustep-make-2.6.1-r1 (09 Jun 2011)
+
+  09 Jun 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-make-2.6.1.ebuild, +gnustep-make-2.6.1-r1.ebuild,
+  gnustep-make-2.6.1-r10.ebuild:
+  Fix documentation install location
 
 *gnustep-make-2.6.1-r10 (07 Jun 2011)
 
