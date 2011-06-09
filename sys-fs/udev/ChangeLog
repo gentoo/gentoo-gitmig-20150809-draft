@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.586 2011/06/08 17:28:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.587 2011/06/09 12:53:59 zzam Exp $
+
+  09 Jun 2011; Matthias Schwarzott <zzam@gentoo.org> -udev-162.ebuild,
+  -udev-163.ebuild, -udev-164.ebuild, -udev-164-r1.ebuild, -udev-167.ebuild,
+  -udev-167-r1.ebuild, -udev-168.ebuild, -udev-168-r1.ebuild, -udev-171.ebuild:
+  Removed unneeded versions.
 
   08 Jun 2011; Markos Chandras <hwoarang@gentoo.org> udev-164-r2.ebuild:
   Stable on amd64 wrt bug #352827
