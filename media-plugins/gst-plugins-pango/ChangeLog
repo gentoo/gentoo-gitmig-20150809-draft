@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.158 2011/06/05 13:33:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.159 2011/06/09 16:04:30 jer Exp $
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-pango-0.10.32.ebuild:
+  Stable for HPPA (bug #368281).
 
   05 Jun 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-pango-0.10.32.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-esd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.170 2011/06/05 13:41:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-esd/ChangeLog,v 1.171 2011/06/09 16:07:19 jer Exp $
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-esd-0.10.28.ebuild:
+  Stable for HPPA (bug #368281).
 
   05 Jun 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-esd-0.10.28.ebuild:

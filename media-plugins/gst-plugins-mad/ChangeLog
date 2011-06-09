@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.161 2011/06/05 14:01:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.162 2011/06/09 16:15:41 jer Exp $
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-mad-0.10.17.ebuild:
+  Stable for HPPA (bug #368281).
 
   05 Jun 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-mad-0.10.17.ebuild:
