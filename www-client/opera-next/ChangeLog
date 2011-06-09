@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.15 2011/06/06 22:04:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.16 2011/06/09 11:39:18 jer Exp $
+
+*opera-next-11.50.1036 (09 Jun 2011)
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org> +opera-next-11.50.1036.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/06/09/opera-dragonfly-fix
 
 *opera-next-11.50.1035 (06 Jun 2011)
 
