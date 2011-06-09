@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009-r1.ebuild,v 1.1 2011/06/09 21:35:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009-r1.ebuild,v 1.2 2011/06/09 21:45:46 radhermit Exp $
 
 EAPI=2
 
-inherit confutils cmake-utils games
+inherit confutils cmake-utils games eutils
 
 DESCRIPTION="Game Boy, GBC, and GBA emulator forked from VisualBoyAdvance"
 HOMEPAGE="http://vba-m.ngemu.com"
