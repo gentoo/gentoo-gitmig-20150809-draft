@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.250 2011/06/02 22:05:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.251 2011/06/09 22:12:53 tampakrap Exp $
+
+*kmail-4.6.0 (09 Jun 2011)
+
+  09 Jun 2011; Theo Chatzimichos <tampakrap@gentoo.org> +kmail-4.6.0.ebuild:
+  Version bump KDEPIM 4.6.0
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kmail-4.4.9.ebuild,
   -kmail-4.4.10.ebuild, -kmail-4.4.10-r1.ebuild:
