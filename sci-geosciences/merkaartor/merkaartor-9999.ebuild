@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.8 2011/06/09 20:25:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.9 2011/06/09 20:30:38 scarabeus Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ REDMINE_HASH="253"
 [[ ${PV} == 9999 ]] && SCM_ECLASS=git-2
 EGIT_REPO_URI="git://gitorious.org/merkaartor/main.git"
 EGIT_PROJECT=${PN}
-inherit qt4-r2 ${SCM_ECLASS}
+inherit multilib qt4-r2 ${SCM_ECLASS}
 
 DESCRIPTION="A Qt4 based map editor for the openstreetmap.org project"
 HOMEPAGE="http://www.merkaartor.be"
@@ -59,5 +59,5 @@ src_configure() {
 		lrelease src/src.pro || die "lrelease failed"
 	fi
 
-	eqmake4 Merkaartor.pro ${myconf}
+	eqmake4 Merkaartor.pro LIBDIR=/usr/$(get_libdir) PREFIX=/usr/ ${myconf}
 }
