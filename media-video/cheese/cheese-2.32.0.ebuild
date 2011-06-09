@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.11 2011/03/31 07:51:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.12 2011/06/09 01:28:06 sping Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.7
 	>=x11-libs/cairo-1.4
 	>=x11-libs/pango-1.18
 	>=sys-apps/dbus-1[X]
-	>=sys-fs/udev-145-r1[extras]
+	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145-r1[extras] )
 	>=gnome-base/gconf-2.16:2
 	>=gnome-base/gnome-desktop-2.26:2
 	>=gnome-base/librsvg-2.18:2
