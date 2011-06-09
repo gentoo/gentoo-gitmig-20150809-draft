@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.25-r1.ebuild,v 1.1 2011/06/07 16:44:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.25-r1.ebuild,v 1.2 2011/06/09 15:21:01 jer Exp $
 
 EAPI=2
 
@@ -55,8 +55,6 @@ src_install() {
 	doinfo chrony.info* || die
 
 	newinitd "${FILESDIR}"/chronyd.rc chronyd || die
-	dosed "s:the documentation directory:/usr/share/doc/${PF}/:" \
-		/etc/init.d/chronyd || die "doc sed failed"
 	newconfd "${FILESDIR}"/chronyd.conf chronyd || die
 
 	keepdir /var/{lib,log}/chrony /etc/chrony
