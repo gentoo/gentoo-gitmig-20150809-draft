@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2.ebuild,v 1.1 2010/09/25 18:58:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.1 2011/06/09 16:58:04 bicatali Exp $
 
-EAPI=3
-inherit flag-o-matic
+EAPI=4
+inherit flag-o-matic eutils
 
-DESCRIPTION="C++ library of mathematical, signal processing and communication classes and functions"
+DESCRIPTION="C++ library of mathematical, signal processing and communication"
 LICENSE="GPL-3"
 HOMEPAGE="http://itpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.0.7-fastica-fix-endless-loop.patch
+	epatch "${FILESDIR}"/${PN}-4.2-fastica-correct-dim.patch
 }
 
 src_configure() {
@@ -47,9 +48,4 @@ src_configure() {
 		$(use_with fftw fft) \
 		--with-blas="${blasconf}" \
 		--with-lapack="${lapackconf}"
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }

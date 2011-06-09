@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.98 2011/01/03 01:28:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.99 2011/06/09 16:58:04 bicatali Exp $
+
+*itpp-4.2-r1 (09 Jun 2011)
+
+  09 Jun 2011; Sébastien Fabbro <bicatali@gentoo.org> -itpp-4.0.7-r1.ebuild,
+  -files/itpp-4.0.7-window_test_fail_fix.patch, -itpp-4.2.ebuild,
+  +itpp-4.2-r1.ebuild, +files/itpp-4.2-fastica-correct-dim.patch:
+  Applied a patch for FastICA from Gert Wollny (bug #370475). Switched to
+  EAPI4. Removed old.
 
   03 Jan 2011; Sébastien Fabbro <bicatali@gentoo.org> itpp-4.0.7-r1.ebuild,
   +files/itpp-4.0.7-window_test_fail_fix.patch:
