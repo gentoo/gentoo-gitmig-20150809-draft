@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wavegain
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/ChangeLog,v 1.8 2010/06/11 21:31:36 yngwin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavegain/ChangeLog,v 1.9 2011/06/09 19:20:42 radhermit Exp $
+
+*wavegain-1.3.0 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> +wavegain-1.3.0.ebuild:
+  Version bump. Update to EAPI 4 and remove unused dependency on libsndfile.
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer, reassign to sound herd
