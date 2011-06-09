@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.102 2011/03/20 20:01:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.103 2011/06/09 21:58:24 bicatali Exp $
+
+*octave-3.4.0-r1 (09 Jun 2011)
+
+  09 Jun 2011; Sébastien Fabbro <bicatali@gentoo.org> -octave-3.2.4-r2.ebuild,
+  -octave-3.4.0.ebuild, +octave-3.4.0-r1.ebuild,
+  +files/octave-3.4.0-fltk.patch, +files/octave-3.4.0-gcc46.patch,
+  +files/octave-3.4.0-help.patch, +files/octave-3.4.0-pkgbuilddir.patch:
+  Added some patches for compiling on gcc-4.6, fixing fltk, and building
+  packages directory from fedora. Added a parallel compilation patch.
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> octave-3.2.4-r1.ebuild,
   octave-3.2.4-r2.ebuild, octave-3.2.4-r3.ebuild, octave-3.4.0.ebuild:

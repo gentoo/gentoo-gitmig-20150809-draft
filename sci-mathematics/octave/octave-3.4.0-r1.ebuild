@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0.ebuild,v 1.3 2011/03/20 20:01:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0-r1.ebuild,v 1.1 2011/06/09 21:58:24 bicatali Exp $
 
-EAPI="2"
-inherit multilib
+EAPI=4
+inherit eutils base
 
 DESCRIPTION="High-level interactive language for numerical computations"
 LICENSE="GPL-3"
@@ -46,6 +46,11 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-{gcc46,pkgbuilddir,fltk,help}.patch
+	eautoreconf
+}
+
 src_configure() {
 	# hdf5 disabled because not really useful (bug #299876)
 	econf \
@@ -70,14 +75,12 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-
+	default
 	if use doc; then
 		einfo "Installing documentation..."
 		insinto /usr/share/doc/${PF}
 		doins $(find doc -name \*.pdf)
 	fi
-
 	use test && dodoc test/fntests.log
 	echo "LDPATH=/usr/$(get_libdir)/octave-${PV}" > 99octave
 	doenvd 99octave || die
