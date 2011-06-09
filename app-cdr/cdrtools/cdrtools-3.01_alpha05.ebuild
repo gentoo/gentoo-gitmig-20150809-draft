@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha04.ebuild,v 1.1 2011/04/12 21:08:41 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha05.ebuild,v 1.1 2011/06/09 18:09:05 billie Exp $
 
-EAPI=2
+EAPI=4
 
 inherit multilib eutils toolchain-funcs flag-o-matic
 
@@ -101,7 +101,7 @@ src_compile() {
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
 		LDOPTX="${LDFLAGS}" \
 		INS_BASE="${D}/usr" INS_RBASE="${D}" LINKMODE="dynamic" \
-		RUNPATH="" GMAKE_NOWARN="true" || die "emake"
+		RUNPATH="" GMAKE_NOWARN="true"
 }
 
 src_install() {
@@ -109,23 +109,21 @@ src_install() {
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
 		LDOPTX="${LDFLAGS}" \
 		INS_BASE="${D}/usr" INS_RBASE="${D}" LINKMODE="dynamic" \
-		RUNPATH="" GMAKE_NOWARN="true" install || die "emake install"
+		RUNPATH="" GMAKE_NOWARN="true" install
 
 	# These symlinks are for compat with cdrkit.
-	dosym schily /usr/include/scsilib || die "dosym scsilib"
-	dosym ../scg /usr/include/schily/scg || die "dosym scg"
+	dosym schily /usr/include/scsilib
+	dosym ../scg /usr/include/schily/scg
 
-	dodoc ABOUT Changelog* CONTRIBUTING PORTING README.linux-shm READMEs/README.linux \
-		|| die "dodoc"
+	dodoc ABOUT Changelog* CONTRIBUTING PORTING README.linux-shm READMEs/README.linux
 
 	cd "${S}"/cdda2wav
 	docinto cdda2wav
-	dodoc Changelog FAQ Frontends HOWTOUSE NEEDED README THANKS TODO \
-		|| die "dodoc cdda2wav"
+	dodoc Changelog FAQ Frontends HOWTOUSE NEEDED README THANKS TODO
 
 	cd "${S}"/mkisofs
 	docinto mkisofs
-	dodoc ChangeLog* TODO || die "dodoc mkisofs"
+	dodoc ChangeLog* TODO
 
 	# Remove man pages related to the build system
 	rm -rvf "${D}"/usr/share/man/man5
