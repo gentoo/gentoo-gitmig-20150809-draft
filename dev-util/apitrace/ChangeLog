@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/apitrace
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.1 2011/06/09 05:47:25 radhermit Exp $
+
+*apitrace-1.0 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> +apitrace-1.0.ebuild,
+  +files/apitrace-1.0-automagic-qt.patch, +metadata.xml:
+  Initial import.
+
