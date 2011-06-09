@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/coppermine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.28 2010/03/10 10:14:23 a3li Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.29 2011/06/09 06:53:54 pva Exp $
+
+*coppermine-1.4.27 (09 Jun 2011)
+
+  09 Jun 2011; Peter Volkov <pva@gentoo.org> +coppermine-1.4.27.ebuild:
+  Version bump, bug #347287, thank cilly for this job.
 
 *coppermine-1.4.26 (10 Mar 2010)
 
