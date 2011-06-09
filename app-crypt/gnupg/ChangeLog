@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.414 2011/05/14 19:37:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.415 2011/06/09 14:13:22 c1pher Exp $
+
+*gnupg-2.0.17-r2 (09 Jun 2011)
+
+  09 Jun 2011; Dane Smith <c1pher@gentoo.org> -gnupg-2.0.17-r1.ebuild,
+  +gnupg-2.0.17-r2.ebuild:
+  Revision bump. Remove caps USE flag since capabilities are no longer 
+  used anywhere wrt bug 360421.
+  Remove no longer needed || die.
+  Drop old revision. No keyword changes necessary.
 
   14 May 2011; Raúl Porcel <armin76@gentoo.org> gnupg-2.0.17.ebuild:
   ia64/s390/sh/sparc stable wrt #355265
