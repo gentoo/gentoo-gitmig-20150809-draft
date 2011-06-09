@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/anomy-sanitizer
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/ChangeLog,v 1.14 2007/03/18 02:46:49 genone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/ChangeLog,v 1.15 2011/06/09 20:21:01 tove Exp $
+
+  09 Jun 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Move to maintainer-needed
 
   18 Mar 2007; Marius Mauch <genone@gentoo.org> anomy-sanitizer-1.67.ebuild,
   anomy-sanitizer-1.70.ebuild, anomy-sanitizer-1.76.ebuild,
