@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.49 2011/03/29 14:20:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.50 2011/06/09 17:54:37 jer Exp $
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org> -libnl-0.5.0.ebuild,
+  -files/libnl-0.5.0-include.diff, -files/libnl-0.5.0-libdir.patch,
+  -libnl-1.0_pre6.ebuild, -libnl-1.0_pre6-r1.ebuild,
+  -files/libnl-1.0_pre5-__u64_x86_64.patch, -files/libnl-1.0_pre5-include.diff,
+  -files/libnl-1.0_pre6-__u64_x86_64.patch, -libnl-1.1.ebuild,
+  -libnl-1.1-r1.ebuild, files/libnl-1.1-flags.patch,
+  files/libnl-1.1-glibc-2.8-ULONG_MAX.patch, -files/libnl-1.pc:
+  Remove old. Clean up patches.
 
 *libnl-3.0 (29 Mar 2011)
 
