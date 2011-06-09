@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r1.ebuild,v 1.3 2011/06/09 13:10:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r1.ebuild,v 1.4 2011/06/09 13:55:35 williamh Exp $
 
 EAPI="1"
 
@@ -28,9 +28,14 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="selinux test debug +rule_generator hwdb acl gudev introspection keymap floppy edd action_modeswitch"
+IUSE="selinux test debug +rule_generator hwdb acl gudev introspection keymap
+floppy edd action_modeswitch extras"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
+	extras? ( sys-apps/acl
+		dev-libs/glib:2
+		dev-libs/gobject-introspection
+		virtual/libusb:0 )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
@@ -40,6 +45,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
+	extras? ( dev-util/gperf )
 	dev-util/pkgconfig
 	virtual/os-headers
 	!<sys-kernel/linux-headers-2.6.29
@@ -47,6 +53,11 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	hwdb?
+	(
+		>=sys-apps/usbutils-0.82
+		sys-apps/pciutils
+	)
+	extras?
 	(
 		>=sys-apps/usbutils-0.82
 		sys-apps/pciutils
@@ -181,6 +192,7 @@ src_unpack() {
 src_compile() {
 	filter-flags -fprefetch-loop-arrays
 
+	if ! use extras; then
 	econf \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -204,6 +216,31 @@ src_compile() {
 		$(use_enable edd) \
 		$(use_enable action_modeswitch) \
 		$(systemd_with_unitdir)
+	else
+	econf \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--sbindir=/sbin \
+		--libdir=/usr/$(get_libdir) \
+		--with-rootlibdir=/$(get_libdir) \
+		--libexecdir=/lib/udev \
+		--enable-logging \
+		--enable-static \
+		$(use_with selinux) \
+		$(use_enable debug) \
+		--enable-rule_generator \
+		--enable-hwdb \
+		--with-pci-ids-path=/usr/share/misc/pci.ids \
+		--with-usb-ids-path=/usr/share/misc/usb.ids \
+		--enable-udev_acl \
+		--enable-gudev \
+		--enable-introspection \
+		--enable-keymap \
+		--enable-floppy \
+		--enable-edd \
+		--enable-action_modeswitch \
+		$(systemd_with_unitdir)
+	fi
 
 	emake || die "compiling udev failed"
 }
