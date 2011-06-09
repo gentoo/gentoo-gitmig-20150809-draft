@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.4_p20110205.ebuild,v 1.1 2011/02/05 00:00:36 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.4_p20110205.ebuild,v 1.2 2011/06/09 02:02:42 sping Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="doc policykit test"
 
 RDEPEND=">=dev-libs/glib-2.18
-	>=sys-fs/udev-145[extras]
+	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
 	>=dev-libs/dbus-glib-0.86
 	net-dialup/ppp
 	policykit? ( >=sys-auth/polkit-0.95 )"
