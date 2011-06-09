@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.5.ebuild,v 1.6 2011/05/15 13:37:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.9.5.ebuild,v 1.7 2011/06/09 21:40:37 mattst88 Exp $
 
 EAPI=3
 inherit xorg-2 multilib versionator
@@ -12,7 +12,7 @@ OPENGL_DIR="xorg-x11"
 DESCRIPTION="X.Org X servers"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 
-IUSE_SERVERS="dmx kdrive xorg"
+IUSE_SERVERS="dmx kdrive xnest xorg xvfb"
 IUSE="${IUSE_SERVERS} doc ipv6 minimal nptl tslib +udev"
 RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	dev-libs/openssl
@@ -127,15 +127,15 @@ pkg_setup() {
 		$(use_enable kdrive kdrive-evdev)
 		$(use_enable tslib)
 		$(use_enable tslib xcalibrate)
-		$(use_enable !minimal xvfb)
-		$(use_enable !minimal xnest)
 		$(use_enable !minimal record)
 		$(use_enable !minimal xfree86-utils)
 		$(use_enable !minimal install-libxf86config)
 		$(use_enable !minimal dri)
 		$(use_enable !minimal dri2)
 		$(use_enable !minimal glx)
+		$(use_enable xnest)
 		$(use_enable xorg)
+		$(use_enable xvfb)
 		$(use_enable nptl glx-tls)
 		$(use_enable udev config-udev)
 		$(use_with doc doxygen)

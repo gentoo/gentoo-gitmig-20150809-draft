@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.591 2011/06/06 22:41:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.592 2011/06/09 21:40:37 mattst88 Exp $
+
+  09 Jun 2011; Matt Turner <mattst88@gentoo.org> xorg-server-1.9.4.ebuild,
+  xorg-server-1.9.5.ebuild, xorg-server-1.10.2.ebuild,
+  xorg-server-1.10.99.901.ebuild:
+  Split xvfb and xnest USE flags out of minimal USE flag.
 
 *xorg-server-1.10.99.901 (06 Jun 2011)
 
