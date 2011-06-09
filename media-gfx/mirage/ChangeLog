@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.38 2011/03/22 13:06:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.39 2011/06/09 07:41:52 radhermit Exp $
+
+*mirage-0.9.5.2 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> +mirage-0.9.5.2.ebuild:
+  Version bump (bug #365807).
 
   22 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -mirage-0.9.3.ebuild:
