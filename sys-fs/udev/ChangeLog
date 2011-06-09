@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.588 2011/06/09 13:10:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.589 2011/06/09 13:18:21 zzam Exp $
+
+  09 Jun 2011; Matthias Schwarzott <zzam@gentoo.org> udev-9999.ebuild:
+  Fix unpacking with git-2 eclass, bug #370647.
 
   09 Jun 2011; Matthias Schwarzott <zzam@gentoo.org> udev-171-r1.ebuild,
   udev-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.45 2011/06/09 13:10:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.46 2011/06/09 13:18:21 zzam Exp $
 
 EAPI=4
 
@@ -128,7 +128,7 @@ src_unpack() {
 	unpack ${A}
 	if [[ ${PV} == "9999" ]]
 	then
-		git_src_unpack
+		git-2_src_unpack
 	fi
 }
 
