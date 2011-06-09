@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.111 2011/06/08 13:01:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.112 2011/06/09 18:32:39 jer Exp $
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org>
+  net-tools-1.60_p20110409135728.ebuild:
+  Stable for HPPA (bug #368061).
 
   08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
   net-tools-1.60_p20110409135728.ebuild:
