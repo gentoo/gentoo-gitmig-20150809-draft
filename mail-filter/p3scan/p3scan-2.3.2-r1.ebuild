@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.2-r1.ebuild,v 1.1 2010/07/12 09:05:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.2-r1.ebuild,v 1.2 2011/06/09 19:56:58 eras Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="This is a full-transparent proxy-server for POP3-Clients."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -26,8 +26,8 @@ src_prepare() {
 
 	# respect CC (bug #244144), and CFLAGS (bug #240786)
 	sed -i \
-		-e '/^CC=/d' \
-		-e "s:^CFLAGS=-Wall -O2 :CFLAGS=-O2 ${CFLAGS} :" \
+		-e "s/gcc/$(tc-getCC)/" \
+		-e "s:^CFLAGS=-Wall -O2 :CFLAGS=${CFLAGS} :" \
 		-e '/^LDFLAGS=/d' \
 		-e '/^ripmime\/libripmime/,+7d' \
 		-e '/^\.c\.o:/,+3d' \
@@ -38,11 +38,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die
+	emake || die
 }
 
 src_install () {
-	newinitd ${FILESDIR}/${PN}.init ${PN}
+	newinitd "${FILESDIR}"/${PN}.init ${PN}
 
 	dosbin ${PN} || die
 
@@ -71,7 +71,7 @@ src_install () {
 
 	doman p3scan.8.gz p3scan_readme.8.gz
 
-	dodoc AUTHORS CHANGELOG CONTRIBUTERS LICENSE NEWS README \
+	dodoc AUTHORS CHANGELOG CONTRIBUTERS NEWS README \
 		README-rpm TODO.list p3scan.sh spamfaq.*
 }
 
