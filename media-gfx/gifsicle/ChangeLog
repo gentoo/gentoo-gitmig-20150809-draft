@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gifsicle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.29 2010/01/07 22:06:05 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.30 2011/06/09 06:37:14 radhermit Exp $
+
+*gifsicle-1.62 (09 Jun 2011)
+
+  09 Jun 2011; Tim Harder <radhermit@gentoo.org> +gifsicle-1.62.ebuild:
+  Version bump.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> gifsicle-1.55.ebuild:
   Transfer Prefix keywords
