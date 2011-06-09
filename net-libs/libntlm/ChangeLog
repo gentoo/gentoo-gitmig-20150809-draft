@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libntlm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.19 2011/01/09 17:00:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.20 2011/06/09 18:37:15 jer Exp $
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org> libntlm-1.2.ebuild:
+  Stable for HPPA (bug #370629).
 
   09 Jan 2011; Jeroen Roovers <jer@gentoo.org> libntlm-1.2.ebuild:
   Do not run valgrind tests (bug #336457).
