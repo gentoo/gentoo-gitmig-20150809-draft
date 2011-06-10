@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/rblcheck
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/ChangeLog,v 1.9 2010/10/19 05:55:35 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/ChangeLog,v 1.10 2011/06/10 14:32:10 jer Exp $
+
+  10 Jun 2011; Jeroen Roovers <jer@gentoo.org> rblcheck-1.5-r1.ebuild:
+  Stable for HPPA (bug #370669).
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> rblcheck-1.5.ebuild:
   Drop to ~mips

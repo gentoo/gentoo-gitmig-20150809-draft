@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/rblcheck-1.5-r1.ebuild,v 1.1 2010/07/10 22:03:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/rblcheck-1.5-r1.ebuild,v 1.2 2011/06/10 14:32:10 jer Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rblcheck/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
