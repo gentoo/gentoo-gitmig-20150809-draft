@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.1.ebuild,v 1.1 2011/06/09 23:57:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.1.ebuild,v 1.2 2011/06/10 00:21:56 radhermit Exp $
 
 EAPI=4
 
@@ -12,13 +12,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="bzip2 clamdtop iconv ipv6 milter selinux static-libs"
 
 CDEPEND="bzip2? ( app-arch/bzip2 )
 	clamdtop? ( sys-libs/ncurses )
 	iconv? ( virtual/libiconv )
 	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
+	dev-libs/libtommath
 	>=sys-libs/zlib-1.2.2"
 DEPEND="${CDEPEND}
 	>=dev-util/pkgconfig-0.20"
@@ -41,6 +42,7 @@ src_configure() {
 		--disable-experimental \
 		--enable-id-check \
 		--with-dbdir=/var/lib/clamav \
+		--with-system-tommath \
 		$(use_enable bzip2) \
 		$(use_enable clamdtop) \
 		$(use_enable ipv6) \
