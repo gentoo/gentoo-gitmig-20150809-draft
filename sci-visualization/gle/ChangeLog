@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.14 2010/11/08 17:55:39 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.15 2011/06/10 12:07:38 grozin Exp $
+
+  10 Jun 2011; Andrey Grozin <grozin@gentoo.org> gle-4.2.3b.ebuild:
+  Fixed dependence with USE=qt4, thanks to fulvio ciriaco <oivulf@gmail.com>
+  (bug #370723)
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> gle-4.2.3b.ebuild:
   media-libs/jpeg -> virtual/jpeg
