@@ -1,6 +1,10 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.12 2011/03/31 19:21:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.13 2011/06/10 15:15:46 jer Exp $
+
+  10 Jun 2011; Jeroen Roovers <jer@gentoo.org> surf-0.4.1.ebuild:
+  Block sci-chemistry/surf (bug #371037). Unblock media-gfx/surf since it is
+  gone.
 
   31 Mar 2011; Jeroen Roovers <jer@gentoo.org> surf-0.4.1.ebuild:
   Add x11-apps/xprop to RDEPEND thanks to makhluk.aneh (bug #361493).
