@@ -3,12 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>mgorny@gentoo.org</email>
-		<name>Michał Górny</name>
-	</maintainer>
-	<maintainer>
-		<email>dagger@gentoo.org</email>
-		<name>Robert Piasek</name>
+		<email>systemd@gentoo.org</email>
+		<name>Gentoo systemd team</name>
 	</maintainer>
 	<use>
 		<!-- XXX: describe those two better -->
