@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.9.ebuild,v 1.1 2011/05/23 14:54:47 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.12.ebuild,v 1.1 2011/06/10 13:59:03 mduft Exp $
 
 EAPI=3
 
@@ -39,9 +39,6 @@ pkg_setup() {
 	if use debug; then
 		append-flags -D_DEBUG -D_DEBUG_TRACE
 	fi
-
-	[[ ${CHOST} == *-interix3* ]] && append-flags -DINTERIX3
-	[[ ${CHOST} == *-interix5* ]] && append-flags -DINTERIX5
 }
 
 src_compile() {
