@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.2.ebuild,v 1.7 2010/10/11 07:39:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-1.2.2.ebuild,v 1.8 2011/06/10 12:32:39 eras Exp $
 
 EAPI=2
 
-inherit db-use flag-o-matic
+inherit db-use flag-o-matic toolchain-funcs
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -26,6 +26,7 @@ DEPEND="virtual/libiconv
 	)
 	sci-libs/gsl"
 #	app-arch/pax" # only needed for bf_tar
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	has_version mail-filter/bogofilter || return 0
@@ -74,6 +75,11 @@ src_configure() {
 	# Include the right berkdb headers for FreeBSD
 	if ${berkdb} ; then
 		append-flags "-I$(db_includedir)"
+	fi
+
+	# bug #324405
+	if [[ $(gcc-version) == "3.4" ]] ; then
+		epatch "${FILESDIR}"/${P}-gcc34.patch
 	fi
 
 	econf ${myconf} || die "configure failed"
