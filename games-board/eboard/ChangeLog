@@ -1,6 +1,9 @@
 # ChangeLog for games-board/eboard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.32 2010/11/07 21:56:52 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.33 2011/06/10 07:11:28 tupone Exp $
+
+  10 Jun 2011; Tupone Alfredo <tupone@gentoo.org> eboard-1.1.1-r1.ebuild:
+  Fix underlink. Bug #367843 by Diego Elio Pettenò
 
   07 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   eboard-1.1.1-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.7 2010/11/07 21:56:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.8 2011/06/10 07:11:28 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -44,6 +44,7 @@ src_configure() {
 		--prefix="${GAMES_PREFIX}" \
 		--data-prefix="${GAMES_DATADIR}" \
 		--man-prefix="/usr/share/man" \
+		--extra-libs="dl" \
 		$(use_enable nls) || die # not an autoconf script
 }
 
