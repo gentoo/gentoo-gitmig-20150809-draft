@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.18 2011/06/10 11:50:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.19 2011/06/10 18:00:16 dilfridge Exp $
+
+*kajongg-4.6.4 (10 Jun 2011)
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kajongg-4.6.4.ebuild:
+  Version bump
 
   10 Jun 2011; Markos Chandras <hwoarang@gentoo.org> kajongg-4.6.3.ebuild:
   Stable on amd64 wrt bug #369979

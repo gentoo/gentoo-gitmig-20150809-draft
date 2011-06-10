@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.188 2011/06/10 11:50:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.189 2011/06/10 17:59:44 dilfridge Exp $
+
+*khelpcenter-4.6.4 (10 Jun 2011)
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +khelpcenter-4.6.4.ebuild:
+  Version bump
 
   10 Jun 2011; Markos Chandras <hwoarang@gentoo.org> khelpcenter-4.6.3.ebuild:
   Stable on amd64 wrt bug #369979

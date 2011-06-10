@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kruler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.170 2011/06/10 11:50:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.171 2011/06/10 18:00:06 dilfridge Exp $
+
+*kruler-4.6.4 (10 Jun 2011)
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kruler-4.6.4.ebuild:
+  Version bump
 
   10 Jun 2011; Markos Chandras <hwoarang@gentoo.org> kruler-4.6.3.ebuild:
   Stable on amd64 wrt bug #369979

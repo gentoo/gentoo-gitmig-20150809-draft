@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.86 2011/06/10 11:50:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.87 2011/06/10 17:59:45 dilfridge Exp $
+
+*ksudoku-4.6.4 (10 Jun 2011)
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> +ksudoku-4.6.4.ebuild:
+  Version bump
 
   10 Jun 2011; Markos Chandras <hwoarang@gentoo.org> ksudoku-4.6.3.ebuild:
   Stable on amd64 wrt bug #369979

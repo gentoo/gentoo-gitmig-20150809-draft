@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.113 2011/06/10 11:50:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.114 2011/06/10 18:00:06 dilfridge Exp $
+
+*plasma-workspace-4.6.4 (10 Jun 2011)
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +plasma-workspace-4.6.4.ebuild:
+  Version bump
 
   10 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   plasma-workspace-4.6.3-r2.ebuild:
