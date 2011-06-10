@@ -6,7 +6,8 @@
 	<email>jlec@gentoo.org</email>
 </maintainer>
 	<longdescription lang="en">
-		A parallel implementation of bzip2 for modern
-		multi-processor, multi-core machines.
+	A multi-threaded bzip2/bunzip2 utility that employs multiple threads and an 
+	input-bound splitter even when decompressing .bz2 files created by standard 
+	bzip2
 	</longdescription>
 </pkgmetadata>

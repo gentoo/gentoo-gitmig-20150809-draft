@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.10 2011/06/09 18:33:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.11 2011/06/10 07:19:46 jlec Exp $
+
+  10 Jun 2011; Justin Lecher <jlec@gentoo.org> lbzip2-0.20.ebuild,
+  lbzip2-0.22.ebuild, lbzip2-0.23.ebuild, lbzip2-0.23-r1.ebuild, metadata.xml:
+  Adopted DESCRIPTION as sugested in bug 370685
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org> lbzip2-0.23-r1.ebuild:
   Marked ~hppa (bug #370685).
