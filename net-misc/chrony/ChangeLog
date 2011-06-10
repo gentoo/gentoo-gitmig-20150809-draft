@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.73 2011/06/09 15:21:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.74 2011/06/10 03:46:54 jer Exp $
+
+  10 Jun 2011; Jeroen Roovers <jer@gentoo.org> chrony-1.25.ebuild:
+  Stable for HPPA (bug #370485).
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org> chrony-1.25-r1.ebuild:
   Users can find the documentation directory on their own, and prevent having
