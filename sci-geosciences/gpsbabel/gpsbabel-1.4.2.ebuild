@@ -1,31 +1,97 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.2.ebuild,v 1.1 2010/11/08 00:59:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.2.ebuild,v 1.2 2011/06/10 09:30:56 scarabeus Exp $
 
-EAPI=2
+EAPI=4
+
+inherit qt4-r2 base autotools
 
 DESCRIPTION="GPS waypoints, tracks and routes converter"
 HOMEPAGE="http://www.gpsbabel.org/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	doc? ( http://www.gpsbabel.org/style3.css -> gpsbabel.org-style3.css )"
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="usb"
 
-RDEPEND="dev-libs/expat
-	usb? ( dev-libs/libusb )"
-DEPEND="${RDEPEND}"
+SLOT="0"
+KEYWORDS="amd64 ~ppc x86"
+IUSE="doc qt4"
+
+RDEPEND="
+	dev-libs/expat
+	sci-libs/shapelib
+	virtual/libusb
+	qt4? (
+		x11-libs/qt-gui:4
+		x11-libs/qt-webkit:4
+	)
+"
+DEPEND="${RDEPEND}
+	doc? (
+		dev-lang/perl
+		dev-libs/libxslt
+		app-text/docbook-xml-dtd:4.1.2
+	)
+"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-disable_statistic_uploading.patch"
+	"${FILESDIR}/${PN}-disable_update_check.patch"
+	"${FILESDIR}/${PN}-disable_version_check.patch"
+	"${FILESDIR}/${PN}-fix_binary_name.patch"
+	"${FILESDIR}/${PN}-freebsd.patch"
+	"${FILESDIR}/${PN}-use_system_shapelib.patch"
+	"${FILESDIR}/${PN}-xmldoc.patch"
+)
+
+src_prepare() {
+	base_src_prepare
+	rm -rf shapelib || die
+
+	use doc && cp "${DISTDIR}/gpsbabel.org-style3.css" "${S}"
+
+	eautoreconf
+}
 
 src_configure() {
-	econf $(use_with usb libusb) \
+	econf \
+		$(use_with doc doc "${S}"/doc/manual) \
 		--with-zlib=system
+
+	if use qt4; then
+		pushd "${S}/gui" > /dev/null
+		lrelease *.ts || die
+		eqmake4
+		popd > /dev/null
+	fi
 }
 
 src_compile() {
-	emake || die
+	emake
+	if use qt4; then
+		pushd "${S}/gui" > /dev/null
+		emake
+		popd > /dev/null
+	fi
+
+	if use doc; then
+		perl xmldoc/makedoc
+		emake gpsbabel.html
+	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README* || die
+	default
+	dodoc README*
+
+	if use qt4; then
+		dobin gui/objects/gpsbabelfe
+		insinto /usr/share/qt4/translations/
+		doins gui/gpsbabel*_*.qm
+		newicon gui/images/appicon.png ${PN}.png
+		make_desktop_entry gpsbabelfe ${PN} ${PN} "Science;Geoscience"
+	fi
+
+	if use doc; then
+		dohtml gpsbabel.*
+	fi
 }
