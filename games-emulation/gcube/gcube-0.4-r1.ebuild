@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/gcube-0.4-r1.ebuild,v 1.6 2011/03/15 20:18:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/gcube-0.4-r1.ebuild,v 1.7 2011/06/10 12:27:14 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -26,7 +26,8 @@ src_prepare() {
 	sed -i \
 		-e '/^CFLAGS=-g/d' Makefile.rules \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 }
 
 src_install() {
