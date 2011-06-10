@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.766 2011/06/10 18:00:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.767 2011/06/10 21:37:58 dilfridge Exp $
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/dist/01_gentoo_set_xdg_menu_prefix-1.patch:
+  Add missing patch, bug 371063
 
 *kdelibs-4.6.4 (10 Jun 2011)
 
