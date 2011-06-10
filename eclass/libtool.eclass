@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.92 2011/06/10 10:14:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.93 2011/06/10 16:17:57 flameeyes Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -29,13 +29,13 @@ ELT_try_and_apply_patch() {
 	local patch=$2
 
 	echo -e "\nTrying $(basename "$(dirname "${patch}")")-${patch##*/}.patch on ${file}" \
-		&>> "${T}/elibtool.log"
+		>> "${T}/elibtool.log" 2>&1
 
 	# We only support patchlevel of 0 - why worry if its static patches?
-	if patch -p0 --dry-run "${file}" "${patch}" &>> "${T}/elibtool.log" ; then
+	if patch -p0 --dry-run "${file}" "${patch}" >> "${T}/elibtool.log" 2>&1 ; then
 		einfo "  Applying $(basename "$(dirname "${patch}")")-${patch##*/}.patch ..."
 		patch -p0 -g0 --no-backup-if-mismatch "${file}" "${patch}" \
-			&>> "${T}/elibtool.log"
+			>> "${T}/elibtool.log" 2>&1
 		ret=$?
 		export ELT_APPLIED_PATCHES="${ELT_APPLIED_PATCHES} ${patch##*/}"
 	else
