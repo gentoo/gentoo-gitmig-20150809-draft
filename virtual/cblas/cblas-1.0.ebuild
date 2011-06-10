@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/cblas-1.0.ebuild,v 1.8 2010/01/11 10:56:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/cblas-1.0.ebuild,v 1.9 2011/06/10 11:00:36 xarthisius Exp $
+
+EAPI=2
 
 DESCRIPTION="Virtual for BLAS C implementation"
 HOMEPAGE=""
@@ -14,7 +16,7 @@ IUSE=""
 RDEPEND="|| (
 		sci-libs/cblas-reference
 		>=sci-libs/blas-atlas-3.7.39
-		>=sci-libs/gsl-1.9-r1
+		sci-libs/gsl[-cblas-external]
 		>=sci-libs/mkl-9.1.023
 	)"
 DEPEND=""
