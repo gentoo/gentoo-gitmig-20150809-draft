@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/session
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/session/ChangeLog,v 1.1 2011/06/10 20:26:17 radhermit Exp $
+
+*session-1.4.6 (10 Jun 2011)
+
+  10 Jun 2011; Tim Harder <radhermit@gentoo.org> +session-1.4.6.ebuild,
+  +metadata.xml:
+  Initial import.
+
