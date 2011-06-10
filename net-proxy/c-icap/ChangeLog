@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/c-icap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.4 2011/02/18 02:27:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.5 2011/06/10 18:00:51 flameeyes Exp $
+
+*c-icap-0.1.6 (10 Jun 2011)
+
+  10 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/c-icap-0.1.4-crosscompile.patch, +c-icap-0.1.6.ebuild,
+  +files/c-icap-0.1.6-implicit.patch:
+  Version bump; add cross-compilation patch, thanks to Bertrand Jacquin in bug
+  #370945.
 
 *c-icap-0.1.4 (18 Feb 2011)
 
