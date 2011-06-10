@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20110111.ebuild,v 1.2 2011/01/11 10:48:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20110610.ebuild,v 1.1 2011/06/10 13:29:34 jlec Exp $
 
 EAPI="2"
 
