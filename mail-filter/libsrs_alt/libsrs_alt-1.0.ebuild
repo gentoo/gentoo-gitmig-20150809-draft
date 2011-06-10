@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0.ebuild,v 1.2 2009/09/23 17:55:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0.ebuild,v 1.3 2011/06/10 09:41:17 eras Exp $
 
 MY_PV=${PV}
 MY_RC=${PV}
@@ -19,6 +19,9 @@ DEPEND="!dev-perl/Mail-SRS"
 RDEPEND=""
 
 src_compile() {
+	# add missing header
+	sed -i -e '/timeb.h>/ a #include <stdlib.h>' test.c
+
 	# Since the primary intended consumers of this library are MTAs,
 	# use non-standard separator characters (--with-base64compat).
 	# This breaks "SRS Compliancy", which is a rough standard at
