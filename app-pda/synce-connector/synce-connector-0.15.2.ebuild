@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-connector/synce-connector-0.15.2.ebuild,v 1.1 2011/03/28 02:39:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-connector/synce-connector-0.15.2.ebuild,v 1.2 2011/06/10 08:53:11 ssuominen Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.88
 	>=dev-libs/glib-2.7
 	>=dev-libs/libsynce-0.15.1[dbus]
 	>=net-libs/gnet-2
-	sys-fs/udev[extras]"
+	|| ( >=sys-fs/udev-171-r1[gudev] <sys-fs/udev-171-r1[extras] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
