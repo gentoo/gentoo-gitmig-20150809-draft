@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/mimedefang
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/ChangeLog,v 1.6 2009/08/22 23:45:11 mrness Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/ChangeLog,v 1.7 2011/06/10 07:53:21 eras Exp $
+
+*mimedefang-2.71 (10 Jun 2011)
+
+  10 Jun 2011; Eray Aslan <eras@gentoo.org> +mimedefang-2.71.ebuild,
+  +files/mimedefang-2.71-ldflags.patch:
+  Respect LDFLAGS - bug #335695. Version bump. EAPI bump.
 
 *mimedefang-2.67 (22 Aug 2009)
 
