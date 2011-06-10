@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/libksane-4.6.3.ebuild,v 1.2 2011/06/08 23:30:15 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/libksane-4.6.3.ebuild,v 1.3 2011/06/10 11:50:46 hwoarang Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="SANE Library interface for KDE"
 HOMEPAGE="http://www.kipi-plugins.org"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 LICENSE="LGPL-2"
 

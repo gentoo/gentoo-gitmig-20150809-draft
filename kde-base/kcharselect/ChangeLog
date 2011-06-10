@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.160 2011/06/08 22:59:40 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.161 2011/06/10 11:50:34 hwoarang Exp $
+
+  10 Jun 2011; Markos Chandras <hwoarang@gentoo.org> kcharselect-4.6.3.ebuild:
+  Stable on amd64 wrt bug #369979
 
   08 Jun 2011; Thomas Kahle <tomka@gentoo.org> kcharselect-4.6.3.ebuild:
   x86 stable per bug 369979

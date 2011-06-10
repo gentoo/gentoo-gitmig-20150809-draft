@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.154 2011/06/08 23:09:30 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.155 2011/06/10 11:50:38 hwoarang Exp $
+
+  10 Jun 2011; Markos Chandras <hwoarang@gentoo.org> kstart-4.6.3.ebuild:
+  Stable on amd64 wrt bug #369979
 
   08 Jun 2011; Thomas Kahle <tomka@gentoo.org> kstart-4.6.3.ebuild:
   x86 stable per bug 369979
