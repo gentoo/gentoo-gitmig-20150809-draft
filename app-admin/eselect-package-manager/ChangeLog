@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-package-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.12 2011/05/29 21:32:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.13 2011/06/10 14:33:25 jer Exp $
+
+  10 Jun 2011; Jeroen Roovers <jer@gentoo.org>
+  eselect-package-manager-20110108.ebuild:
+  Stable for HPPA (bug #366937).
 
   29 May 2011; Markos Chandras <hwoarang@gentoo.org>
   eselect-package-manager-20110108.ebuild:
