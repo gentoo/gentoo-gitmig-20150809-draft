@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.25.ebuild,v 1.4 2010/10/24 14:50:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.25.ebuild,v 1.5 2011/06/10 20:51:06 idl0r Exp $
 
-inherit eutils versionator
+inherit eutils versionator toolchain-funcs
 
 DESCRIPTION="A TCP/HTTP reverse proxy for high availability environments"
 HOMEPAGE="http://haproxy.1wt.eu"
@@ -29,7 +29,7 @@ src_compile() {
 	use kernel_linux && args="${args} USE_LINUX_SPLICE=1"
 	use kernel_linux && args="${args} USE_LINUX_TPROXY=1"
 
-	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" ${args} || die
+	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args} || die
 }
 
 src_install() {
