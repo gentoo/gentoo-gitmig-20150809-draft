@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/libdomainkeys
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.17 2010/07/10 22:12:47 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdomainkeys/ChangeLog,v 1.18 2011/06/10 11:13:25 eras Exp $
+
+*libdomainkeys-0.69 (10 Jun 2011)
+
+  10 Jun 2011; Eray Aslan <eras@gentoo.org> +libdomainkeys-0.69.ebuild:
+  version bump
 
 *libdomainkeys-0.68-r2 (10 Jul 2010)
 
