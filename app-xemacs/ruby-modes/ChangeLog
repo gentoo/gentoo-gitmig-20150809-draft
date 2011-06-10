@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ruby-modes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ruby-modes/ChangeLog,v 1.16 2010/08/13 07:55:56 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ruby-modes/ChangeLog,v 1.17 2011/06/10 17:14:08 jer Exp $
+
+  10 Jun 2011; Jeroen Roovers <jer@gentoo.org> ruby-modes-1.04.ebuild:
+  Stable for HPPA (bug #369897).
 
 *ruby-modes-1.04 (13 Aug 2010)
 
