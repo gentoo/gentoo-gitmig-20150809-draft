@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.833 2011/06/07 01:07:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.834 2011/06/10 09:20:25 zmedico Exp $
+
+*portage-2.2.0_alpha39 (10 Jun 2011)
+
+  10 Jun 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha39.ebuild:
+  2.2.0_alpha39 version bump. This includes all of the fixes in
+  portage-2.1.10.1. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.1 (10 Jun 2011)
+
+  10 Jun 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.1.ebuild:
+  2.1.10.1 version bump. This fixes bug #355283 (fix distcc and ccache
+  features to use the default ABI dir), bug #368817 (don't show 'unexpected
+  exit' message when killed by signal), bug #370465 (EAPI mask messages
+  handled incorrectly sometimes), bug #370477 (keywords mask messages handled
+  incorrectly sometimes), and bug #370565 (treat DEPEND strings containing
+  empty parenthesis as invalid). Bug #358927 tracks all bugs fixed since
+  portage-2.1.9.42.
 
   07 Jun 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.6.7.ebuild,
   portage-2.1.6.13.ebuild, portage-2.1.9.42.ebuild, portage-2.1.9.50.ebuild,
