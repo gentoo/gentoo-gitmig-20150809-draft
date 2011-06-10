@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/antlr-c
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/antlr-c/ChangeLog,v 1.1 2011/06/10 07:02:40 qiaomuf Exp $
+
+*antlr-c-3.3_pre20110403 (10 Jun 2011)
+
+  10 Jun 2011; Mu Qiao <qiaomuf@gentoo.org> +files/antlr-c-3.1.4-doxygen.patch,
+  +antlr-c-3.3_pre20110403.ebuild, +files/antlr-c-3.3-cflags.patch,
+  +metadata.xml:
+  Initial commit for antlr-c
+
