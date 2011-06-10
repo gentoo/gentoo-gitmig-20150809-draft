@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.31 2011/06/02 18:40:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.32 2011/06/10 16:44:10 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -277,6 +277,11 @@ src_test() {
 		eerror "  http://www.gentoo.org/doc/en/guide-localization.xml"
 		eerror "  http://www.gentoo.org/doc/en/utf-8.xml"
 		die "locale ${mylocale} is not supported"
+	fi
+
+	# For more info see bug #370957.
+	if [[ $UID -eq 0 ]]; then
+		die "Tests must be run as non-root. Please use FEATURES=userpriv."
 	fi
 
 	# For more info see bug #350347.
