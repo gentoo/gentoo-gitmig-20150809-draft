@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.06.ebuild,v 1.7 2009/12/26 17:33:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.06.ebuild,v 1.8 2011/06/10 01:16:36 radhermit Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="modular and portable cryptographic toolkit"
 HOMEPAGE="http://libtomcrypt.org/"
 SRC_URI="http://libtomcrypt.org/files/crypt-${PV}.tar.bz2"
 
-LICENSE="public-domain"
+LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc libtommath tomsfastmath"

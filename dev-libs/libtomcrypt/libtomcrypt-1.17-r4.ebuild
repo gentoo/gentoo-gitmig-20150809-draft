@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r4.ebuild,v 1.2 2010/09/19 04:37:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r4.ebuild,v 1.3 2011/06/10 01:16:36 radhermit Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="modular and portable cryptographic toolkit"
 HOMEPAGE="http://libtom.org/?page=features&whatfile=crypt"
 SRC_URI="http://libtom.org/files/crypt-${PV}.tar.bz2"
 
-LICENSE="public-domain"
+LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc libtommath tomsfastmath"
