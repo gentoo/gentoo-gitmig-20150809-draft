@@ -1,6 +1,11 @@
 # ChangeLog for games-action/heroes
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.15 2007/05/03 21:18:32 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.16 2011/06/10 10:07:40 tupone Exp $
+
+  10 Jun 2011; Tupone Alfredo <tupone@gentoo.org> heroes-0.21-r1.ebuild,
+  +files/heroes-0.21-underlink.patch:
+  Migrating to EAPI=2
+  Fix underlink. Bug #367857 by Diego Elio Pettenò
 
   03 May 2007; Michael Sterrett <mr_bones_@gentoo.org>
   heroes-0.21-r1.ebuild:

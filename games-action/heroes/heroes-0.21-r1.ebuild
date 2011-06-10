@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.8 2007/05/03 21:18:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.9 2011/06/10 10:07:40 tupone Exp $
+EAPI=2
 
 inherit eutils autotools games
 
@@ -27,20 +28,18 @@ RDEPEND="nls? ( virtual/libintl )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-S=${WORKDIR}
-
-src_unpack() {
-	unpack ${A}
-	cd "${WORKDIR}"/${P}
-	epatch "${FILESDIR}"/${PV}-cvs-segfault-fix.patch #56118
-	epatch "${FILESDIR}/${P}"-gcc4.patch
+src_prepare() {
+	#56118
+	epatch "${FILESDIR}"/${PV}-cvs-segfault-fix.patch \
+		"${FILESDIR}/${P}"-gcc4.patch \
+		"${FILESDIR}/${P}"-underlink.patch
 	sed -i 's:$(localedir):/usr/share/locale:' \
 		$(find . -name 'Makefile.in*') \
 		|| die "sed failed"
-	AT_M4DIR=m4 eautoreconf
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use sdl || ! use ggi ; then
@@ -51,21 +50,20 @@ src_compile() {
 
 	local pkg
 	for pkg in ${A//.tar.bz2} ; do
-		cd "${S}"/${pkg}
+		cd "${WORKDIR}"/${pkg}
 		egamesconf \
 			--disable-heroes-debug \
 			--disable-optimizations \
 			$(use_enable nls) \
 			${myconf} \
 			|| die
-		emake || die "unable to compile ${pkg}"
 	done
 }
 
 src_install() {
 	local pkg
 	for pkg in ${A//.tar.bz2} ; do
-		cd "${S}"/${pkg}
+		cd "${WORKDIR}"/${pkg}
 		emake DESTDIR="${D}" install || die "emake install failed"
 	done
 	prepgamesdirs
