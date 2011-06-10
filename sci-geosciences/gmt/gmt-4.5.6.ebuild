@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.6.ebuild,v 1.2 2011/06/07 13:15:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.6.ebuild,v 1.3 2011/06/10 07:52:05 scarabeus Exp $
 
 EAPI=4
 
@@ -85,7 +85,7 @@ src_install() {
 	find "${ED}/usr/$(get_libdir)" -name '*.a' -exec rm -f {} +
 
 	dodoc README
-	use doc && dodoc -r "${S}/share/doc/${PN}/*"
+	use doc && dodoc -r "${S}"/share/doc/${PN}/*
 
 	cat << _EOF_ > "${T}/99gmt"
 GMTHOME=${EPREFIX}/usr/share/${P}
