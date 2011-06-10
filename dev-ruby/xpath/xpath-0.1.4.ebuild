@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xpath/xpath-0.1.4.ebuild,v 1.2 2011/05/19 06:00:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xpath/xpath-0.1.4.ebuild,v 1.3 2011/06/10 15:22:22 graaff Exp $
 
 EAPI="4"
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
