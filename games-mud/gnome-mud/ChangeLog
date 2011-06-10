@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.27 2011/03/23 07:34:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.28 2011/06/10 17:22:15 mr_bones_ Exp $
+
+  10 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org> gnome-mud-0.11.2.ebuild:
+  Add gconf dep (bug #371041)
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> gnome-mud-0.11.2.ebuild:
   Use SLOT dependencies for x11-libs/vte.
