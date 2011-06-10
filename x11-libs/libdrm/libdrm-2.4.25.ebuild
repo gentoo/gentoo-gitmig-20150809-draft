@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.25.ebuild,v 1.6 2011/05/15 13:41:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.25.ebuild,v 1.7 2011/06/10 19:47:06 mattst88 Exp $
 
 EAPI=4
 inherit xorg-2
@@ -25,7 +25,8 @@ IUSE="${IUSE_VIDEO_CARDS} +libkms"
 RESTRICT="test" # see bug #236845
 
 RDEPEND="dev-libs/libpthread-stubs"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=x11-libs/libpciaccess-0.10"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.4.23-solaris.patch
