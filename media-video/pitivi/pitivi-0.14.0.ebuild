@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.14.0.ebuild,v 1.1 2011/06/06 18:46:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.14.0.ebuild,v 1.2 2011/06/10 03:06:58 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,18 +18,21 @@ IUSE="v4l"
 
 # gst-plugins-good-0.10.24 needed for prefer-passthrough property
 # gst-plugins-base-0.10.31 needed for add-borders property, and decodebin2
-RDEPEND="
+COMMON_DEPEND="
 	>=dev-python/pygtk-2.18:2
-	dev-python/dbus-python
-	>=dev-python/gconf-python-2.12
 	dev-python/pycairo
-	dev-python/pygoocanvas
-	net-zope/zope-interface
-	gnome-base/librsvg
 
 	>=media-libs/gstreamer-0.10.28:0.10
 	>=dev-python/gst-python-0.10.19
-	>=media-libs/gnonlin-0.10.16
+	>=media-libs/gnonlin-0.10.16"
+RDEPEND="${COMMON_DEPEND}
+	dev-python/dbus-python
+	>=dev-python/gconf-python-2.12
+	dev-python/pygoocanvas
+	dev-python/pyxdg
+	net-zope/zope-interface
+	gnome-base/librsvg
+
 	>=media-libs/gst-plugins-base-0.10.31:0.10
 	>=media-libs/gst-plugins-good-0.10.24:0.10
 	>=media-plugins/gst-plugins-ffmpeg-0.10:0.10
@@ -39,6 +42,7 @@ RDEPEND="
 	v4l? ( media-plugins/gst-plugins-v4l2:0.10 )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
+	sys-devel/gettext
 	>=dev-util/intltool-0.35.5"
 
 pkg_setup() {
