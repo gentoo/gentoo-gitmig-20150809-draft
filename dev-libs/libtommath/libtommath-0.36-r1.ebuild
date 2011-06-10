@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.14 2009/07/30 17:24:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.15 2011/06/10 00:57:30 radhermit Exp $
 
 inherit eutils multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="highly optimized and portable routines for integer based number the
 HOMEPAGE="http://www.libtom.org/"
 SRC_URI="http://www.libtom.org/files/ltm-${PV}.tar.bz2"
 
-LICENSE="public-domain"
+LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
 IUSE=""

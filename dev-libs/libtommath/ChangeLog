@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libtommath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.33 2011/03/07 21:07:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.34 2011/06/10 00:57:30 radhermit Exp $
+
+*libtommath-0.42.0 (10 Jun 2011)
+
+  10 Jun 2011; Tim Harder <radhermit@gentoo.org> libtommath-0.36-r1.ebuild,
+  libtommath-0.41.ebuild, +libtommath-0.42.0.ebuild,
+  +files/libtommath-0.42.0-makefile.patch:
+  Version bump. Update LICENSE and add doc, examples, and static-libs USE
+  flags.
 
   07 Mar 2011; Jeroen Roovers <jer@gentoo.org> libtommath-0.41.ebuild:
   Stable for HPPA (bug #355133).
