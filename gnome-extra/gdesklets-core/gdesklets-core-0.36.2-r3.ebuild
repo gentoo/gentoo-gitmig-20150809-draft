@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.8 2011/04/25 21:00:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.9 2011/06/10 00:53:10 nixphoeni Exp $
 
 EAPI=3
 # desklets don't run with USE=debug
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="GNOME Desktop Applets: Core library for desktop applets"
 SRC_URI="http://gdesklets.de/files/${MY_PN}-${PV}.tar.bz2"
-HOMEPAGE="http://www.gdesklets.de"
+HOMEPAGE="http://gdesklets.de"
 LICENSE="GPL-2"
 
 SLOT="0"
