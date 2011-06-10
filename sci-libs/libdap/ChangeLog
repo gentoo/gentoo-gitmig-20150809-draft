@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libdap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.10 2011/06/02 10:49:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.11 2011/06/10 17:55:17 scarabeus Exp $
+
+  10 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> libdap-3.11.1.ebuild:
+  Sort test dep. Remove useless dies.
 
 *libdap-3.11.1 (02 Jun 2011)
 
