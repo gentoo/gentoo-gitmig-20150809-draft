@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tomsfastmath/tomsfastmath-0.05.ebuild,v 1.4 2006/10/22 04:04:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tomsfastmath/tomsfastmath-0.05.ebuild,v 1.5 2011/06/10 01:25:49 radhermit Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="portable fixed precision math library geared towards doing one thin
 HOMEPAGE="http://libtomcrypt.org/tfm/"
 SRC_URI="http://libtomcrypt.org/tfm/files/tfm-${PV}.zip"
 
-LICENSE="public-domain"
+LICENSE="WTFPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ppc x86"
 IUSE=""
