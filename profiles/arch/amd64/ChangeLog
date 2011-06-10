@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.131 2011/06/07 14:32:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.132 2011/06/10 18:58:33 hwoarang Exp $
+
+  10 Jun 2011; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Unmasking firebird from qt-sql. Bug #337451
 
   07 Jun 2011; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
   Allow libobjc2 USE-flag on gnustep-base/gnustep-make
