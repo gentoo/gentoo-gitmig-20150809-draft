@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.104 2011/06/10 17:59:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.105 2011/06/10 21:34:42 dilfridge Exp $
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
+  Remanifest as tarball was changed
 
 *solid-4.6.4 (10 Jun 2011)
 

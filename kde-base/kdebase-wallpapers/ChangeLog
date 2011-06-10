@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-wallpapers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.61 2011/06/10 18:00:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.62 2011/06/10 21:24:53 dilfridge Exp $
+
+  10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
+  Remanifest as tarball was changed
 
 *kdebase-wallpapers-4.6.4 (10 Jun 2011)
 
