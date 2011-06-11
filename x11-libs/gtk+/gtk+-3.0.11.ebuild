@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.11.ebuild,v 1.1 2011/06/11 02:13:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.11.ebuild,v 1.2 2011/06/11 03:05:04 nirbheek Exp $
 
 EAPI="3"
+GNOME_TARBALL_SUFFIX="xz"
 
 inherit eutils flag-o-matic gnome.org gnome2-utils libtool virtualx
 
