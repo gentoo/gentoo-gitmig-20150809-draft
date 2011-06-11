@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.6.4.ebuild,v 1.1 2011/06/10 17:59:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.6.4.ebuild,v 1.2 2011/06/11 08:11:43 dilfridge Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ PATCHES=("${FILESDIR}/gentoo-startkde4-4.patch")
 src_prepare() {
 	kde4-meta_src_prepare
 
-	cp "${FILESDIR}/KDE-4" "${T}"
+	cp "${FILESDIR}/KDE-4" "${T}" || die
 
 	# fix ${EPREFIX}
 	eprefixify startkde.cmake "${T}/KDE-4"

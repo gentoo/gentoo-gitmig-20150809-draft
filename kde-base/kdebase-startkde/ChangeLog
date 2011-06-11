@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.236 2011/06/11 06:46:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.237 2011/06/11 08:11:43 dilfridge Exp $
+
+  11 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> +files/KDE-4,
+  kdebase-startkde-4.6.4.ebuild:
+  Added missing file and missing die, bug 371115
 
   11 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +files/gentoo-startkde4-4.patch:
