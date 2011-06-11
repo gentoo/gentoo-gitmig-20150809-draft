@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbrun
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.24 2011/04/10 07:55:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.25 2011/06/11 09:12:38 xarthisius Exp $
+
+*bbrun-1.6-r1 (11 Jun 2011)
+
+  11 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> +bbrun-1.6-r1.ebuild,
+  +files/bbrun-1.6-makefile.patch:
+  Fix underlinking wrt #367853. Remove multilib eclass, bump to EAPI4, simplify
+  ebuild
 
   10 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Change herd from nonexisting commonbox to desktop-wm
