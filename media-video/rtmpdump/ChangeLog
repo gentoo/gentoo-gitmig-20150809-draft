@@ -1,6 +1,9 @@
 # ChangeLog for media-video/rtmpdump
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.16 2010/10/11 18:51:42 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.17 2011/06/11 12:55:59 maekke Exp $
+
+  11 Jun 2011; Markus Meier <maekke@gentoo.org> rtmpdump-2.3.ebuild:
+  add ~arm, bug #354467
 
   11 Oct 2010; Jeroen Roovers <jer@gentoo.org> rtmpdump-2.3.ebuild:
   Stable for HPPA (bug #332361).
