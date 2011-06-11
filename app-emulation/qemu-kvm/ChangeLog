@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.56 2011/06/09 00:09:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.57 2011/06/11 04:29:39 cardoe Exp $
+
+  11 Jun 2011; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.14.1-r1.ebuild:
+  Make USE=vhost-net the default. bug #370939
 
   09 Jun 2011; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.14.1-r1.ebuild:
   Remove USE=static, since its depends can not be expressed with current EAPIs

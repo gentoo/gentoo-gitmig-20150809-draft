@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r1.ebuild,v 1.3 2011/06/09 00:09:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r1.ebuild,v 1.4 2011/06/11 04:29:39 cardoe Exp $
 
 BACKPORTS=1
 
@@ -30,7 +30,7 @@ SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses \
 png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
-vhost-net xen"
++vhost-net xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
 
