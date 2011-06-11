@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.10 2011/05/03 11:18:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.2.2.ebuild,v 1.11 2011/06/11 13:43:29 scarabeus Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="http://download.osgeo.org/geos/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
-IUSE="doc python ruby"
+IUSE="doc python ruby static-libs"
 
 RDEPEND="ruby? ( dev-lang/ruby:1.8 )"
 DEPEND="${RDEPEND}
@@ -26,9 +26,7 @@ DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )"
 
 pkg_setup() {
-	if use python; then
-		python_pkg_setup
-	fi
+	use python && python_pkg_setup
 }
 
 src_prepare() {
@@ -44,7 +42,10 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable python) $(use_enable ruby)
+	econf \
+		$(use_enable python) \
+		$(use_enable ruby) \
+		$(use_enable static-libs static)
 }
 
 src_compile() {
@@ -81,21 +82,20 @@ src_install() {
 		python_execute_function -s --source-dir swig/python installation
 		python_clean_installation_image
 	fi
+
 	dodoc AUTHORS NEWS README TODO || die
 	if use doc; then
 		cd "${S}/doc"
 		dohtml -r doxygen_docs/html/* || die
 	fi
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
-	if use python; then
-		python_mod_optimize geos/geos.py
-	fi
+	use python && python_mod_optimize geos/geos.py
 }
 
 pkg_postrm() {
-	if use python; then
-		python_mod_cleanup geos/geos.py
-	fi
+	use python && python_mod_cleanup geos/geos.py
 }
