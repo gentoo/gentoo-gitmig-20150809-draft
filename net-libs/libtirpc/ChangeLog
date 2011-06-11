@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.19 2011/06/07 19:35:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.20 2011/06/11 19:52:16 vapier Exp $
+
+*libtirpc-0.2.2-r1 (11 Jun 2011)
+
+  11 Jun 2011; Mike Frysinger <vapier@gentoo.org> +libtirpc-0.2.2-r1.ebuild,
+  +files/libtirpc-0.2.2-rpc-des-prot.patch:
+  Stub out des_crypt for now #370713 by Nicolas Schlumberger, fix building with
+  glibc-2.14 #370663 by Diego Elio Pettenò, restore static lib support, and
+  start installing into / for glibc replacement.
 
 *libtirpc-0.2.2 (07 Jun 2011)
 
