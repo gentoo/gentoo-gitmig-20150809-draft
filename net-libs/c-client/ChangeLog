@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.73 2011/06/07 19:54:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.74 2011/06/11 12:00:19 maekke Exp $
+
+  11 Jun 2011; Markus Meier <maekke@gentoo.org> c-client-2007e-r2.ebuild:
+  arm stable, bug #368585
 
   07 Jun 2011; Eray Aslan <eras@gentoo.org> c-client-2007e-r2.ebuild:
   Add back kolab patch - bug #370489
