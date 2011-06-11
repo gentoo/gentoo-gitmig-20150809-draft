@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.271 2011/03/27 04:48:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.272 2011/06/11 19:54:56 vapier Exp $
+
+*busybox-1.18.4 (11 Jun 2011)
+
+  11 Jun 2011; Mike Frysinger <vapier@gentoo.org> +busybox-1.18.4.ebuild,
+  +files/busybox-1.18.4-fuser.patch, +files/busybox-1.18.4-hush.patch,
+  metadata.xml:
+  Version bump, disable a bunch of utils and devfs support #371059 by Kirill
+  Elagin, and start using libtirpc for nfs support to replace glibc #371129 by
+  Diego Elio Pettenò.
 
   27 Mar 2011; Mike Frysinger <vapier@gentoo.org> busybox-1.18.3.ebuild:
   We respect $CC, and LD in build defaults to $CC, so dont force LD directly
