@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.2.ebuild,v 1.1 2010/04/11 19:18:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/lwm/lwm-1.2.2.ebuild,v 1.2 2011/06/11 08:37:32 xarthisius Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit toolchain-funcs
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libSM
+	x11-libs/libICE
 	x11-libs/libX11
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
@@ -24,6 +25,7 @@ DEPEND="${RDEPEND}
 	x11-misc/imake"
 
 src_prepare() {
+	sed -i -e "s/(SMLIB)/& -lICE/g" Imakefile || die #370127
 	xmkmf || die
 }
 
@@ -39,5 +41,5 @@ src_install() {
 	dobin lwm
 
 	newman lwm.man lwm.1
-	dodoc AUTHORS BUGS ChangeLog INSTALL TODO
+	dodoc AUTHORS BUGS ChangeLog
 }
