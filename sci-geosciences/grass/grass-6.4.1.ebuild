@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.2 2011/04/19 17:22:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.3 2011/06/11 14:13:15 scarabeus Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="python? 2"
 
@@ -43,15 +43,10 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	png? ( media-libs/libpng )
-	postgres? (
-		|| (
-			>=dev-db/postgresql-base-8.4
-			>=dev-db/postgresql-server-8.4
-		)
-	)
+	postgres? ( >=dev-db/postgresql-base-8.4 )
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite:3 )
-	tiff? ( >=media-libs/tiff-4 )
+	tiff? ( media-libs/tiff )
 	truetype? ( media-libs/freetype:2 )
 	X? (
 		x11-libs/libICE
@@ -127,10 +122,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if ! use opengl; then
-		epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
-	fi
-
+	use opengl || epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
 	base_src_prepare
 }
 
@@ -318,5 +310,5 @@ generate_files() {
 	Icon=${PN}-48x48.png
 	Categories=Science;Education;
 	Terminal=false
-	EOF
+EOF
 }
