@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0.ebuild,v 1.1 2011/06/01 13:18:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0.ebuild,v 1.2 2011/06/11 15:08:55 scarabeus Exp $
 
 EAPI=3
 
@@ -31,13 +31,14 @@ SRC_URI="http://download.osgeo.org/mapserver/${MY_P}.tar.gz"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="bidi cairo gdal geos gif mysql opengl perl php postgis proj python threads tiff xml xslt" # ruby php tcl
+IUSE="bidi cairo gdal geos mysql opengl perl php postgis proj python threads tiff xml xslt" # ruby php tcl
 
 RDEPEND="
 	!${CATEGORY}/${PN}:${PV}
 	dev-libs/expat
 	dev-libs/fcgi
 	>=media-libs/gd-2.0.12[truetype,jpeg,png,zlib]
+	media-libs/giflib
 	net-misc/curl
 	virtual/jpeg
 	virtual/libiconv
@@ -46,7 +47,6 @@ RDEPEND="
 	cairo? ( x11-libs/cairo )
 	gdal? ( >=sci-libs/gdal-1.8.0 )
 	geos? ( sci-libs/geos )
-	gif? ( media-libs/giflib )
 	mysql? ( virtual/mysql )
 	opengl? (
 		media-libs/ftgl
@@ -146,6 +146,7 @@ src_configure() {
 		--with-libiconv \
 		--with-jpeg \
 		--with-gd \
+		--with-gif="${EPREFIX}/usr/" \
 		--with-wms \
 		--with-kml \
 		--with-curl-config \
@@ -154,7 +155,6 @@ src_configure() {
 		--with-fastcgi \
 		$(use_with opengl ogl) \
 		$(use_with opengl ftgl) \
-		$(use_with gif gif "${EPREFIX}/usr/") \
 		$(use_with proj) \
 		$(use_with threads) \
 		$(use_with geos) \
