@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.3 2011/06/09 05:06:46 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.4 2011/06/11 18:43:00 binki Exp $
+
+  11 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Mark myself as maintainer of net-irc/atheme-services.
 
   09 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
   -atheme-services-0.2.2.ebuild, -atheme-services-1.2.1.ebuild,
