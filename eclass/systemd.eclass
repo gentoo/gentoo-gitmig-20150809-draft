@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.2 2011/05/04 16:02:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.3 2011/06/11 06:06:43 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -50,6 +50,20 @@ systemd_dounit() {
 
 	(
 		insinto "$(systemd_get_unitdir)"
+		doins "${@}"
+	)
+}
+
+# @FUNCTION: systemd_dotmpfilesd
+# @USAGE: tmpfilesd1 [...]
+# @DESCRIPTION:
+# Install systemd tmpfiles.d files. Uses doins, thus it is fatal
+# in EAPI 4 and non-fatal in earlier EAPIs.
+systemd_dotmpfilesd() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	(
+		insinto /usr/lib/tmpfiles.d/
 		doins "${@}"
 	)
 }
