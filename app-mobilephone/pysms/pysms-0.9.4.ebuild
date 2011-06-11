@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/pysms/pysms-0.9.4.ebuild,v 1.3 2010/07/06 17:14:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/pysms/pysms-0.9.4.ebuild,v 1.4 2011/06/11 14:34:47 jer Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils
 
 DESCRIPTION="Tool for sending text messages for various Swiss providers"
-HOMEPAGE="http://pysms.sourceforge.net/"
+HOMEPAGE="http://sourceforge.net/projects/pysms/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
