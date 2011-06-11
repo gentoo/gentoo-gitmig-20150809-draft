@@ -303,12 +303,12 @@
 +		 */
 +		if (new_vid <= original_vid) {
 +			new_control = (original_control & ~INTEL_MSR_VID_MASK) | new_vid;
-+			dprintk("setting control at %i to %x (default is %x)\n",
++			pr_debug("setting control at %i to %x (default is %x)\n",
 +			        freq_index, new_control, original_control);
 +			acpi_data->states[state_index].control = new_control;
 +
 +		} else {
-+			printk("skipping vid at %i, %u is greater than default %u\n",
++			pr_debug("skipping vid at %i, %u is greater than default %u\n",
 +			       freq_index, new_vid, original_vid);
 +		}
 +
@@ -396,7 +396,7 @@
 +							if (new_vid <= original_vid)
 +							{
 +								new_control = (original_control & ~INTEL_MSR_VID_MASK) | new_vid;
-+								dprintk("setting control at %i to %x (default is %x)\n",
++								pr_debug("setting control at %i to %x (default is %x)\n",
 +								        state_index, new_control, original_control);
 +								acpi_data->states[state_index].control = new_control;
 +

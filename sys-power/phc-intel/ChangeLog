@@ -1,6 +1,16 @@
 # ChangeLog for sys-power/phc-intel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.6 2011/05/20 13:13:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.7 2011/06/11 13:51:30 xmw Exp $
+
+*phc-intel-0.3.2.12.1-r3 (11 Jun 2011)
+
+  11 Jun 2011; Michael Weber <xmw@gentoo.org> -phc-intel-0.3.2.12.1-r2.ebuild,
+  +phc-intel-0.3.2.12.1-r3.ebuild, files/phc-intel-0.3.2.12.1-2.6.37.patch,
+  -files/phc-intel-0.3.2.12.1-2.6.38.patch,
+  -files/phc-intel-0.3.2.12.1-2.6.39.patch:
+  Revision bump for upcoming linux 3.0. Remove check for 2.6 kernel version in
+  Makefile. Replace buggy prepare.sh with patch in src_prepare. Replace dprintk
+  with pr_debug
 
   20 May 2011; Michael Weber <xmw@gentoo.org> phc-intel-0.3.2.12.1-r2.ebuild,
   +files/phc-intel-0.3.2.12.1-2.6.39.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.1-r2.ebuild,v 1.4 2011/05/20 13:13:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.1-r3.ebuild,v 1.1 2011/06/11 13:51:30 xmw Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE=""
 S=${WORKDIR}/${PN}-$(replace_version_separator 3 '-' $(replace_version_separator 4 '-'))
 
 CONFIG_CHECK="~!X86_ACPI_CPUFREQ"
-ERROR_X86_ACPI_CPUFREQ="CONFIG_X86_ACPI_CPUFREQ has to be configured to Module or Not set to enable the replacement of acpi-cpufreq with phc-intel."
+ERROR_X86_ACPI_CPUFREQ="CONFIG_X86_ACPI_CPUFREQ has to be configured to Module to enable the replacement of acpi-cpufreq with phc-intel."
 
 MODULE_NAMES="phc-intel(misc:)"
 BUILD_PARAMS="KERNELSRC=\"${KERNEL_DIR}\" -j1"
@@ -34,15 +34,21 @@ pkg_setup() {
 }
 
 src_prepare() {
-	local my_k="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-	if kernel_is eq 2 6 35 || kernel_is eq 2 6 36 || kernel_is eq 2 6 37 || \
-		kernel_is eq 2 6 38 || kernel_is eq 2 6 39 ; then
-		cp "${KERNEL_DIR}"/arch/x86/kernel/cpu/cpufreq/mperf.h . || die
-		mkdir inc/${my_k} || die
-		cp "${FILESDIR}"/${P}-${my_k}.patch \
-			inc/${my_k}/linux-phc-$(get_version_component_range 1-3).patch \
-			|| die
-		cp "${KERNEL_DIR}"/arch/x86/kernel/cpu/cpufreq/acpi-cpufreq.c inc/${my_k} || die
+	sed -e '/^all:/s:prepare::' \
+		-e '/error Only support for 2.6 series kernels/d' \
+		-i Makefile || die
+
+	local my_sub=arch/x86/kernel/cpu
+	if kernel_is gt 2 6 39 ; then
+		my_sub=drivers
+	fi
+	cp -v "${KERNEL_DIR}"/${my_sub}/cpufreq/acpi-cpufreq.c phc-intel.c || die
+	cp -v "${KERNEL_DIR}"/${my_sub}/cpufreq/mperf.h . || die
+
+	if kernel_is eq 2 6 35 || kernel_is eq 2 6 36 ; then
+		patch phc-intel.c "${FILESDIR}"/${P}-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.patch
+	else
+		patch phc-intel.c "${FILESDIR}"/${P}-2.6.37.patch
 	fi
 }
 
