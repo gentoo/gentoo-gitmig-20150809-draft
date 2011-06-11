@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.143 2011/04/08 00:13:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.144 2011/06/11 21:10:03 maekke Exp $
+
+  11 Jun 2011; Markus Meier <maekke@gentoo.org> mdadm-3.1.4.ebuild:
+  add ~arm, bug #361511
 
 *mdadm-3.2.1 (08 Apr 2011)
 
