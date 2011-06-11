@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.171 2011/04/14 09:46:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.172 2011/06/11 13:18:51 scarabeus Exp $
+
+*iproute2-2.6.38 (11 Jun 2011)
+
+  11 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/iproute2-2.6.26-linux-2.6.27-API.patch, -iproute2-2.6.31.ebuild,
+  -iproute2-2.6.33.ebuild, -iproute2-2.6.34.ebuild,
+  -files/iproute2-2.6.34-dnet-fix-strict-aliasing-warnings.patch,
+  -files/iproute2-2.6.34-netem-fix-installs-of-dist-files.patch,
+  -files/iproute2-2.6.34-tc-revert-echo-in-install-target.patch,
+  -iproute2-2.6.35-r1.ebuild, -iproute2-2.6.37.ebuild, +iproute2-2.6.38.ebuild,
+  iproute2-9999.ebuild:
+  Cleanup live version to use git-2 and base eclasses, EAPI=4, remove wrong
+  prepalldocs call. Version bump to 2.6.38 (copy from live) which works with
+  latest iptables. Punt all overshadowed versions keeping 2 in testing and 2 in
+  stable. This also fixes bug #370793.
 
   14 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   iproute2-2.6.29.1-r1.ebuild, iproute2-2.6.31.ebuild, iproute2-2.6.33.ebuild,
