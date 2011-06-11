@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.5.ebuild,v 1.2 2011/05/03 15:47:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.5.ebuild,v 1.3 2011/06/11 15:57:28 armin76 Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://git.gnome.org/browse/glib-networking/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sh ~sparc ~x86"
 IUSE="+gnome +libproxy +ssl"
 
 RDEPEND=">=dev-libs/glib-2.27.90:2
