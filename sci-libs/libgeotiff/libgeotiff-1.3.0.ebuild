@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0.ebuild,v 1.2 2010/11/08 17:41:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.3.0.ebuild,v 1.3 2011/06/11 13:30:32 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 inherit base
 
 MY_P=${P/_rc/RC}
@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P/RC*/}
 
+DOCS=( README ChangeLog )
+
 src_configure() {
 	econf \
 		$(use_enable static-libs static) \
@@ -36,7 +38,7 @@ src_configure() {
 
 }
 src_compile() {
-	base_src_compile
+	default
 
 	if use doc; then
 		mkdir -p docs/api
@@ -47,10 +49,10 @@ src_compile() {
 }
 
 src_install() {
-	base_src_install
+	default
 
-	dodoc README ChangeLog || die
-	use doc && { dohtml docs/api/* || die ; }
+	use doc && dohtml docs/api/*
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
