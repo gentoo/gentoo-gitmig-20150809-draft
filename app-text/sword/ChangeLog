@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sword
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.58 2010/05/14 08:14:39 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.59 2011/06/11 17:52:00 beandog Exp $
+
+*sword-1.6.2 (11 Jun 2011)
+
+  11 Jun 2011; Steve Dibb <beandog@gentoo.org> +sword-1.6.2.ebuild:
+  Version bump, bug 344247
 
   14 May 2010; Fabian Groffen <grobian@gentoo.org> sword-1.6.1.ebuild:
   Add Prefix changes and keywords, bug #317935
