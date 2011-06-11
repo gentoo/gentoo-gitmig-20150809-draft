@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.412 2011/06/09 03:24:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.413 2011/06/11 20:16:57 aballier Exp $
+
+  11 Jun 2011; Alexis Ballier <aballier@gentoo.org> binutils-2.21.ebuild:
+  keyword -x86-fbsd and -sparc-fbsd until bug #347931 is solved; it doesnt
+  build
 
 *binutils-2.21.52.0.1 (09 Jun 2011)
 
