@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.10.ebuild,v 1.1 2011/05/16 21:05:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.10.ebuild,v 1.2 2011/06/11 21:07:32 maekke Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -12,7 +12,7 @@ SRC_URI="http://awesome.naquadah.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dbus doc elibc_FreeBSD"
 
 COMMON_DEPEND=">=dev-lang/lua-5.1
