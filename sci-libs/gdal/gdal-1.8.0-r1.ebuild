@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.1 2011/03/03 07:21:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.2 2011/06/11 11:49:31 scarabeus Exp $
 
 EAPI="2"
 
@@ -42,21 +42,17 @@ RDEPEND="
 	pdf? ( app-text/poppler )
 	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng )
-	postgres? (
-		|| (
-			>=dev-db/postgresql-base-8.4
-			>=dev-db/postgresql-server-8.4
-		)
-	)
+	postgres? ( >=dev-db/postgresql-base-8.4 )
 	python? ( dev-python/numpy )
 	ruby? ( $(ruby_implementation_depend ruby18) )
 	sqlite? ( >=dev-db/sqlite-3 )"
 
+SWIG_DEP=">=dev-lang/swig-2.0.2"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	perl? ( >=dev-lang/swig-1.3.32 )
-	python? ( >=dev-lang/swig-1.3.32 )
-	ruby? ( >=dev-lang/swig-1.3.32 )"
+	perl? ( ${SWIG_DEP} )
+	python? ( ${SWIG_DEP} )
+	ruby? ( ${SWIG_DEP} )"
 
 AT_M4DIR="${S}/m4"
 MAKEOPTS+=" -j1"
@@ -158,19 +154,19 @@ src_configure() {
 	# mysql-config puts this in (and boy is it a PITA to get it out)
 	if use mysql; then
 		sed -i \
-	    	-e "s: -rdynamic : :" \
-		    GDALmake.opt || die "sed LIBS failed"
+			-e "s: -rdynamic : :" \
+			GDALmake.opt || die "sed LIBS failed"
 	fi
 
 	# updated for newer swig (must specify the path to input files)
 	if use python; then
-	    sed -i \
+		sed -i \
 			-e "s: gdal_array.i: ../include/gdal_array.i:" \
-	        -e "s:\$(DESTDIR)\$(prefix):\$(DESTDIR)\$(INST_PREFIX):g" \
-	        swig/python/GNUmakefile || die "sed python makefile failed"
-	    sed -i \
+			-e "s:\$(DESTDIR)\$(prefix):\$(DESTDIR)\$(INST_PREFIX):g" \
+			swig/python/GNUmakefile || die "sed python makefile failed"
+		sed -i \
 			-e "s:library_dirs = :library_dirs = /usr/$(get_libdir):g" \
-	        swig/python/setup.cfg || die "sed python setup.cfg failed"
+			swig/python/setup.cfg || die "sed python setup.cfg failed"
 	fi
 }
 
@@ -188,23 +184,23 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use perl ; then
-	    cd "${S}"/swig/perl
-	    perl-module_src_prep
-	    perl-module_src_compile
-	    cd "${S}"
+		pushd "${S}"/swig/perl > /dev/null
+		perl-module_src_prep
+		perl-module_src_compile
+		popd > /dev/null
 	fi
 
 	if use doc ; then
-	    make docs || die "make docs failed"
+		emake docs || die "make docs failed"
 	fi
 }
 
 src_install() {
 	if use perl ; then
-	    pushd "${S}"/swig/perl > /dev/null
-	    perl-module_src_install
-	    popd > /dev/null
-	    sed -i \
+		pushd "${S}"/swig/perl > /dev/null
+		perl-module_src_install
+		popd > /dev/null
+		sed -i \
 			-e "s:BINDINGS        =       python ruby perl:BINDINGS        =       python ruby:g" \
 			GDALmake.opt || die
 	fi
@@ -212,12 +208,12 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	if use ruby ; then
-	    # weird reinstall collision; needs manual intervention...
-	    pushd "${S}"/swig/ruby > /dev/null
-	    rm -rf "${D}"${RUBY_MOD_DIR}/gdal
-	    exeinto ${RUBY_MOD_DIR}/gdal
-	    doexe *.so || die "doins ruby modules failed"
-	    popd > /dev/null
+		# weird reinstall collision; needs manual intervention...
+		pushd "${S}"/swig/ruby > /dev/null
+		rm -rf "${D}"${RUBY_MOD_DIR}/gdal
+		exeinto ${RUBY_MOD_DIR}/gdal
+		doexe *.so || die "doins ruby modules failed"
+		popd > /dev/null
 	fi
 
 	use perl && fixlocalpod
@@ -225,15 +221,15 @@ src_install() {
 	dodoc Doxyfile HOWTO-RELEASE NEWS || die
 
 	if use doc ; then
-	    dohtml html/* || die "install html failed"
-	    docinto ogr
-	    dohtml ogr/html/* || die "install ogr html failed"
+		dohtml html/* || die "install html failed"
+		docinto ogr
+		dohtml ogr/html/* || die "install ogr html failed"
 	fi
 
 	if use python; then
-	    newdoc swig/python/README.txt README-python.txt || die
-	    insinto /usr/share/${PN}/samples
-	    doins swig/python/samples/* || die
+		newdoc swig/python/README.txt README-python.txt || die
+		insinto /usr/share/${PN}/samples
+		doins swig/python/samples/* || die
 	fi
 }
 
