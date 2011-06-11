@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.108 2011/04/05 17:00:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.109 2011/06/11 00:04:12 nirbheek Exp $
+
+*webkit-gtk-1.4.1-r300 (11 Jun 2011)
+*webkit-gtk-1.4.1-r200 (11 Jun 2011)
+
+  11 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +webkit-gtk-1.4.1-r200.ebuild, +webkit-gtk-1.4.1-r300.ebuild:
+  Add 1.4.1, gtk2 (-r2xx) and gtk3 (-r3xx) versions, drop keywords, bug 365331
 
   05 Apr 2011; Christoph Mende <angelos@gentoo.org>
   files/webkit-gtk-1.2.7-libpng15.patch:
