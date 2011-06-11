@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.834 2011/06/10 09:20:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.835 2011/06/11 23:11:14 zmedico Exp $
+
+*portage-2.2.0_alpha40 (11 Jun 2011)
+
+  11 Jun 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha40.ebuild:
+  2.2.0_alpha40 version bump. This includes all of the fixes in
+  portage-2.1.10.2. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.2 (11 Jun 2011)
+
+  11 Jun 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.2.ebuild:
+  2.1.10.2 version bump. This fixes breakage in the fakedbapi class which may
+  be used by some API consumers. It also fixes poor merge order in some cases
+  involving circular dependencies. Bug #358927 tracks all bugs fixed since
+  portage-2.1.9.42.
 
 *portage-2.2.0_alpha39 (10 Jun 2011)
 
