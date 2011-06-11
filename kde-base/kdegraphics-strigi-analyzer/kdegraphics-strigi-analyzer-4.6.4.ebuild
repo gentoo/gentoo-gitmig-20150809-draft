@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/kdegraphics-strigi-analyzer-4.6.4.ebuild,v 1.1 2011/06/10 17:59:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/kdegraphics-strigi-analyzer-4.6.4.ebuild,v 1.2 2011/06/11 04:28:48 mr_bones_ Exp $
 
 EAPI=4
 
@@ -35,4 +35,3 @@ src_install() {
 	rm "${ED}/usr/share/apps/cmake/modules/FindKSane.cmake" || die
 }
 fi
-
