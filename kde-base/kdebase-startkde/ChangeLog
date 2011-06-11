@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.235 2011/06/10 21:24:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.236 2011/06/11 06:46:53 dilfridge Exp $
+
+  11 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/gentoo-startkde4-4.patch:
+  Add missing patch, bug 371115
 
   10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
   Remanifest as tarball was changed
