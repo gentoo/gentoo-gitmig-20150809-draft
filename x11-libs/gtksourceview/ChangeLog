@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.201 2011/04/30 09:38:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.202 2011/06/11 03:15:29 nirbheek Exp $
+
+*gtksourceview-3.0.3 (11 Jun 2011)
+
+  11 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gtksourceview-3.0.3.ebuild:
+  Bump to 3.0.3
 
 *gtksourceview-3.0.1 (30 Apr 2011)
 
