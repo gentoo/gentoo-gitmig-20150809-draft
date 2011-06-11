@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksaneplugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksaneplugin/ChangeLog,v 1.66 2011/06/10 18:00:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksaneplugin/ChangeLog,v 1.67 2011/06/11 18:51:58 dilfridge Exp $
+
+  11 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  ksaneplugin-4.6.4.ebuild:
+  Remove duplicate file, bug 371123
 
 *ksaneplugin-4.6.4 (10 Jun 2011)
 
