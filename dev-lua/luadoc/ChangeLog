@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luadoc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadoc/ChangeLog,v 1.1 2010/11/05 23:32:31 rafaelmartins Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadoc/ChangeLog,v 1.2 2011/06/11 21:06:08 maekke Exp $
+
+  11 Jun 2011; Markus Meier <maekke@gentoo.org> luadoc-3.0.1.ebuild:
+  add ~arm, bug #359137
 
   05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   +luadoc-3.0.1.ebuild, +metadata.xml:
