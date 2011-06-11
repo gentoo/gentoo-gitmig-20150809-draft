@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/amiwm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.12 2010/05/29 13:11:33 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.13 2011/06/11 11:52:47 xarthisius Exp $
+
+*amiwm-0.21_p2 (11 Jun 2011)
+
+  11 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> +amiwm-0.21_p2.ebuild,
+  +files/amiwm-0.21_p2-gentoo.diff, +files/amiwm-0.21_p2-implicts.patch:
+  Version bump wrt #354575 by Tomáš Hlušička <tomas.hlusicka@seznam.cz>
 
   29 May 2010; Kacper Kowalik <xarthisius@gentoo.org> amiwm-0.20_p48.ebuild,
   +files/amiwm-0.20_p48-gentoo.diff:
