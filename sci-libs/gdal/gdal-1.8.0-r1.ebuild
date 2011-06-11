@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.2 2011/06/11 11:49:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.3 2011/06/11 14:06:16 scarabeus Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ IUSE="+aux_xml curl debug doc ecwj2k fits geos gif gml hdf5 jpeg jpeg2k mysql ne
 
 RDEPEND="
 	dev-libs/expat
-	>=media-libs/tiff-4.0.0_beta6
+	media-libs/tiff
 	sci-libs/libgeotiff
 	sys-libs/zlib
 	curl? ( net-misc/curl )
@@ -123,8 +123,8 @@ src_configure() {
 		--with-ogr \
 		--with-grib \
 		--with-vfk \
-		--with-libtiff \
-		--with-geotiff \
+		--with-libtiff=external \
+		--with-geotiff=external \
 		$(use_enable debug) \
 		$(use_with postgres pg) \
 		$(use_with fits cfitsio) \
