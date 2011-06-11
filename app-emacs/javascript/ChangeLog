@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/javascript
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/javascript/ChangeLog,v 1.6 2009/10/15 21:42:59 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/javascript/ChangeLog,v 1.7 2011/06/11 14:30:47 ulm Exp $
+
+  11 Jun 2011; Ulrich Mueller <ulm@gentoo.org> javascript-2.0_beta8.ebuild,
+  javascript-2.2.1.ebuild:
+  HOMEPAGE has moved, bug 371101.
 
 *javascript-2.2.1 (15 Oct 2009)
 
