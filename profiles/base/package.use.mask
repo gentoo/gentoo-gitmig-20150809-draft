@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.242 2011/06/07 14:28:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.243 2011/06/11 00:05:17 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -31,6 +31,7 @@ gnustep-base/gnustep-make libobjc2
 >=media-libs/libchamplain-0.8 -introspection
 >=net-libs/libsoup-2.34 -introspection
 >=net-libs/libsoup-gnome-2.34 -introspection
+>=net-libs/webkit-gtk-1.4 -introspection
 >=net-libs/telepathy-glib-0.14 -introspection
 >=x11-libs/vte-0.28 -introspection
 >=x11-libs/libwnck-3 -introspection

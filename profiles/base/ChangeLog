@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.273 2011/06/07 14:28:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.274 2011/06/11 00:05:17 nirbheek Exp $
+
+  11 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Unmask USE=introspection for webkit-gtk
 
   07 Jun 2011; Bernard Cafarelli <voyageur@gentoo.org> package.use.mask:
   Mask libobjc2 flag for gnustep-base/gnustep-make
