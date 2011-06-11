@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop2imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.6 2011/06/10 16:28:15 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.7 2011/06/11 13:26:28 eras Exp $
+
+  11 Jun 2011; Eray Aslan <eras@gentoo.org> pop2imap-1.18.ebuild:
+  EAPI bump.
 
 *pop2imap-1.18 (10 Jun 2011)
 
