@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5435 2011/06/09 22:50:17 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5436 2011/06/11 16:24:07 slyfox Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
+  Masked dev-haskell/gtk2hs for removal.
 
   09 Jun 2011; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   Remove KDEPIM 4.5.95 mask, the regular release is now in tree
