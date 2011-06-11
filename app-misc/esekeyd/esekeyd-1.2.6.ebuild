@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/esekeyd/esekeyd-1.2.6.ebuild,v 1.1 2010/05/14 17:42:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/esekeyd/esekeyd-1.2.6.ebuild,v 1.2 2011/06/11 21:13:23 maekke Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.burghardt.pl/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE=""
 
 src_install() {
