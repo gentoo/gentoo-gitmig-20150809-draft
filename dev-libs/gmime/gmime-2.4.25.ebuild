@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.23.ebuild,v 1.1 2011/03/08 14:19:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.25.ebuild,v 1.1 2011/06/11 15:17:27 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 
 inherit gnome2 eutils mono libtool
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	sys-libs/zlib
 	mono? (
 		dev-lang/mono
-		>=dev-dotnet/gtk-sharp-2.4.0:2 )"
+		>=dev-dotnet/glib-sharp-2.4.0:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
@@ -57,15 +57,15 @@ src_prepare() {
 }
 
 src_compile() {
-	MONO_PATH="${S}" emake || die "emake failed"
+	MONO_PATH="${S}" emake
 	if use doc; then
-		emake -C docs/tutorial html || die "emake html failed"
+		emake -C docs/tutorial html
 	fi
 }
 
 src_install() {
 	emake GACUTIL_FLAGS="/root '${ED}/usr/$(get_libdir)' /gacdir '${EPREFIX}/usr/$(get_libdir)' /package ${PN}" \
-		DESTDIR="${D}" install || die "installation failed"
+		DESTDIR="${D}" install
 
 	if use doc ; then
 		# we don't use docinto/dodoc, because we don't want html doc gzipped
@@ -73,7 +73,7 @@ src_install() {
 		doins docs/tutorial/html/*
 	fi
 
-	dodoc $DOCS || die "dodoc failed"
+	dodoc $DOCS
 
 	# rename these two, so they don't conflict with app-arch/sharutils
 	# (bug #70392)	Ticho, 2004-11-10
