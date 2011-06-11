@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/scrotwm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/scrotwm/ChangeLog,v 1.1 2011/06/11 17:02:51 xmw Exp $
+
+*scrotwm-0.9.28 (11 Jun 2011)
+
+  11 Jun 2011; Michael Weber <xmw@gentoo.org> +scrotwm-0.9.28.ebuild,
+  +files/scrotwm-0.9.28-makefile.patch, +metadata.xml:
+  Initial import, thanks to Massimo Gengarelli, Nikolay Ostanen and Toffanin
+  for the initial ebuilds (bug 284350)
+
