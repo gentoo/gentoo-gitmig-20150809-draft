@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.91 2011/06/05 06:49:44 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.92 2011/06/11 20:30:55 keri Exp $
+
+  11 Jun 2011; <keri@gentoo.org> mercury-extras-11.01.ebuild:
+  Restrict mercury_cairo package to non-debug grades when default grade !=
+  asm_fast
 
   05 Jun 2011; <keri@gentoo.org> mercury-extras-11.01.ebuild:
   Restrict mercury_cairo package to non-debug grades
