@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.15.ebuild,v 1.2 2011/06/12 17:00:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.15.ebuild,v 1.3 2011/06/12 22:11:48 mr_bones_ Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ DOCS=( AUTHORS BUGS ChangeLog NEWS README THANKS TODO )
 pkg_pretend() {
 	# prevent to use external cblas from a previously installed gsl
 	local current_lib
-	if use cblas-external; then 
+	if use cblas-external; then
 		current_lib=$(eselect cblas show | cut -d' ' -f2)
 		if [[ ${current_lib} == gsl ]]; then
 			ewarn "USE flag cblas-external is set: linking gsl with an external cblas."
