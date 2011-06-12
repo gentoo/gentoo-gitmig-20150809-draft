@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.69 2011/03/02 21:34:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.70 2011/06/12 10:42:44 xarthisius Exp $
+
+*celestia-1.6.1 (12 Jun 2011)
+
+  12 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> +celestia-1.6.1.ebuild,
+  +files/celestia-1.6.1-as-needed.patch, +files/celestia-1.6.1-gcc46.patch:
+  Version bump wrt #370499 by Nils Larsson <ni1s@nerdshack.com>. Fixes building
+  with gcc-4.6 (bug #366073)
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> celestia-1.6.0.ebuild:
   Correct Slots for gtk 3 introduction to tree
