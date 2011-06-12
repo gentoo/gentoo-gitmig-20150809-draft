@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/edict
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edict/ChangeLog,v 1.14 2010/08/13 12:00:21 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edict/ChangeLog,v 1.15 2011/06/12 04:04:06 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> edict-1.17.ebuild:
+  x86 stable per bug 369897
 
 *edict-1.17 (13 Aug 2010)
 

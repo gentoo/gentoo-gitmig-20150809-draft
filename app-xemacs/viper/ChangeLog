@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/viper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.25 2011/06/03 13:00:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.26 2011/06/12 04:40:52 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> viper-1.67.ebuild:
+  x86 stable per bug 369897
 
   03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -viper-1.65.ebuild:
   Remove old version.

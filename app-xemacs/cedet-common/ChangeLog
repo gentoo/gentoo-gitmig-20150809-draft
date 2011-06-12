@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/cedet-common
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cedet-common/ChangeLog,v 1.5 2010/01/02 14:56:05 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cedet-common/ChangeLog,v 1.6 2011/06/12 03:59:14 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> cedet-common-1.01.ebuild:
+  x86 stable per bug 369897
 
   02 Jan 2010; Brent Baude <ranger@gentoo.org> cedet-common-1.01.ebuild:
   Marking cedet-common-1.01 ~ppc64 for bug 278914

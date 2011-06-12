@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/prog-modes-2.20.ebuild,v 1.1 2010/08/13 08:32:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/prog-modes-2.20.ebuild,v 1.2 2011/06/12 04:29:52 tomka Exp $
 
 SLOT="0"
 IUSE=""
@@ -23,6 +23,6 @@ app-xemacs/ilisp
 app-xemacs/sh-script
 app-xemacs/cedet-common
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
 
 inherit xemacs-packages

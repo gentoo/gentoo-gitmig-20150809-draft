@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/auctex-1.51.ebuild,v 1.1 2009/02/22 15:06:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/auctex-1.51.ebuild,v 1.2 2011/06/12 03:56:52 tomka Exp $
 
 SLOT="0"
 IUSE=""
@@ -13,6 +13,6 @@ app-xemacs/fsf-compat
 app-xemacs/mail-lib
 app-xemacs/edit-utils
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
 
 inherit xemacs-packages

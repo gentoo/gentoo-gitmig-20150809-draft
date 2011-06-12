@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vc/vc-1.48.ebuild,v 1.1 2010/08/13 07:43:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vc/vc-1.48.ebuild,v 1.2 2011/06/12 04:40:08 tomka Exp $
 
 SLOT="0"
 IUSE=""
@@ -19,6 +19,6 @@ app-xemacs/elib
 app-xemacs/edebug
 app-xemacs/gnus
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
 
 inherit xemacs-packages

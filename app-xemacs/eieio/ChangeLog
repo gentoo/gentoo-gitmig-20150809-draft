@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/eieio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eieio/ChangeLog,v 1.15 2011/06/03 11:52:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eieio/ChangeLog,v 1.16 2011/06/12 04:08:10 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> eieio-1.07.ebuild:
+  x86 stable per bug 369897
 
   03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -eieio-1.06.ebuild:
   Remove old version.

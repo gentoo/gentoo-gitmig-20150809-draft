@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/xemacs-devel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.19 2011/06/03 13:02:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-devel/ChangeLog,v 1.20 2011/06/12 04:43:43 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> xemacs-devel-1.80.ebuild:
+  x86 stable per bug 369897
 
   03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -xemacs-devel-1.79.ebuild:
   Remove old versions.

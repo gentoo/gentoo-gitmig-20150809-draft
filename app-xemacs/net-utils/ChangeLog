@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/net-utils
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.25 2009/02/22 09:48:54 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.26 2011/06/12 04:24:56 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> net-utils-1.56.ebuild:
+  x86 stable per bug 369897
 
 *net-utils-1.56 (22 Feb 2009)
 

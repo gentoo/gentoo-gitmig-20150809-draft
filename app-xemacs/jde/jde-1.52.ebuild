@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/jde-1.52.ebuild,v 1.1 2010/02/10 21:21:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/jde/jde-1.52.ebuild,v 1.2 2011/06/12 04:17:28 tomka Exp $
 
 SLOT="0"
 IUSE=""
@@ -23,6 +23,6 @@ app-xemacs/sh-script
 app-xemacs/fsf-compat
 app-xemacs/os-utils
 "
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
 
 inherit xemacs-packages

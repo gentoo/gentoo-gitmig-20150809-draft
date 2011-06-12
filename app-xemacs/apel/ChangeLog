@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/apel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.20 2011/06/10 17:12:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/apel/ChangeLog,v 1.21 2011/06/12 03:56:04 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> apel-1.34.ebuild:
+  x86 stable per bug 369897
 
   10 Jun 2011; Jeroen Roovers <jer@gentoo.org> apel-1.34.ebuild:
   Stable for HPPA (bug #369897).

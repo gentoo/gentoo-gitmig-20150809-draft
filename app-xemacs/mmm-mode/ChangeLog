@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mmm-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mmm-mode/ChangeLog,v 1.15 2011/06/03 12:31:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mmm-mode/ChangeLog,v 1.16 2011/06/12 04:22:44 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> mmm-mode-1.05.ebuild:
+  x86 stable per bug 369897
 
   03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -mmm-mode-1.03.ebuild:
   Remove old version.

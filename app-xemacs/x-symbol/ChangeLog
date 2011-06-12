@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/x-symbol
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/x-symbol/ChangeLog,v 1.5 2009/02/21 10:29:22 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/x-symbol/ChangeLog,v 1.6 2011/06/12 04:45:48 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> x-symbol-1.11.ebuild:
+  x86 stable per bug 369897
 
 *x-symbol-1.11 (21 Feb 2009)
 

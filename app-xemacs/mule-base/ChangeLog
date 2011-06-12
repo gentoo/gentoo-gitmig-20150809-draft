@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mule-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.24 2011/06/10 17:13:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.25 2011/06/12 04:23:28 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> mule-base-1.56.ebuild:
+  x86 stable per bug 369897
 
   10 Jun 2011; Jeroen Roovers <jer@gentoo.org> mule-base-1.56.ebuild:
   Stable for HPPA (bug #369897).

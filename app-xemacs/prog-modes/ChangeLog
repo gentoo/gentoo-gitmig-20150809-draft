@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/prog-modes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.25 2011/06/03 12:35:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.26 2011/06/12 04:29:52 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> prog-modes-2.20.ebuild:
+  x86 stable per bug 369897
 
   03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -prog-modes-2.19.ebuild:
   Remove old version.

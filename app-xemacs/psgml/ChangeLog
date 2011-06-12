@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/psgml
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.14 2009/02/22 08:27:47 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/psgml/ChangeLog,v 1.15 2011/06/12 04:30:34 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> psgml-1.45.ebuild:
+  x86 stable per bug 369897
 
 *psgml-1.45 (22 Feb 2009)
 

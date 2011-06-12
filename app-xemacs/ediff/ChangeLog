@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ediff
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.24 2010/08/13 11:56:17 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.25 2011/06/12 04:04:54 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> ediff-1.81.ebuild:
+  x86 stable per bug 369897
 
 *ediff-1.81 (13 Aug 2010)
 

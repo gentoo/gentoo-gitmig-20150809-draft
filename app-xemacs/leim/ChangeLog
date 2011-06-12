@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/leim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.17 2011/06/03 12:16:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.18 2011/06/12 04:18:58 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> leim-1.31.ebuild:
+  x86 stable per bug 369897
 
   03 Jun 2011; Hans de Graaff <graaff@gentoo.org> -leim-1.28.ebuild:
   Remove old versions.

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/eudc
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/ChangeLog,v 1.13 2009/02/22 13:22:24 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eudc/ChangeLog,v 1.14 2011/06/12 04:10:31 tomka Exp $
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> eudc-1.40.ebuild:
+  x86 stable per bug 369897
 
 *eudc-1.40 (22 Feb 2009)
 
