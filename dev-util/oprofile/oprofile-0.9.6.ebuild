@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.7 2011/05/22 16:41:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6.ebuild,v 1.8 2011/06/12 12:45:57 spock Exp $
 
 EAPI=1
 inherit linux-info
@@ -24,6 +24,12 @@ pkg_setup() {
 		elog "In order for oprofile to work, you need to configure your kernel"
 		elog "with CONFIG_OPROFILE set to 'm' or 'y'."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/oprofile-0.9.6-mutable.patch
 }
 
 src_compile() {

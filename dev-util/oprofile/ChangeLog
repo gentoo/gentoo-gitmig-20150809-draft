@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.66 2011/05/22 16:41:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.67 2011/06/12 12:45:57 spock Exp $
+
+  12 Jun 2011; Michał Januszewski <spock@gentoo.org> oprofile-0.9.6.ebuild,
+  +files/oprofile-0.9.6-mutable.patch:
+  Add upstream build fix for GCC 4.6 (bug #363259).
 
   22 May 2011; Matt Turner <mattst88@gentoo.org> oprofile-0.9.6.ebuild:
   Add ~alpha keyword
