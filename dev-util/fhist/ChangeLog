@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fhist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.24 2011/04/12 22:28:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.25 2011/06/12 20:04:44 mattst88 Exp $
+
+  12 Jun 2011; Matt Turner <mattst88@gentoo.org> fhist-1.16.ebuild:
+  Drop mips keyword, bug 350891
 
   12 Apr 2011; Jonathan Callen <abcd@gentoo.org> fhist-1.19.ebuild:
   Add prefix keywords
