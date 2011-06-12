@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.61 2011/05/05 15:20:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.62 2011/06/12 11:26:29 scarabeus Exp $
+
+  12 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> giflib-4.1.6-r1.ebuild:
+  Introduce (add back) optional support for static libraries as per bug
+  #371173.
 
   05 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> giflib-4.1.6-r1.ebuild:
   Punt static library and .la file archive.
