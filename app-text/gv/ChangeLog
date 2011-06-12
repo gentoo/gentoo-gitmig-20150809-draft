@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.87 2011/06/05 20:22:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.88 2011/06/12 12:17:43 maekke Exp $
+
+  12 Jun 2011; Markus Meier <maekke@gentoo.org> gv-3.7.2.ebuild:
+  add ~arm, bug #369731
 
 *gv-3.7.2 (05 Jun 2011)
 
