@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.205 2011/04/14 10:39:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.206 2011/06/12 11:07:47 pacho Exp $
+
+  12 Jun 2011; Pacho Ramos <pacho@gentoo.org> sound-juicer-2.32.0.ebuild:
+  RDEPEND on gnome-base/gvfs[cdda,udev] to prevent problems recognizing drives
+  (bug #371089 by Allan Gottlieb and fix by Alexandre Rostovtsev).
 
   14 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   sound-juicer-2.32.0.ebuild:

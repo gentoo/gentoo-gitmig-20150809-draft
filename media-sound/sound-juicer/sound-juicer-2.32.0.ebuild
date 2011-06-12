@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0.ebuild,v 1.9 2011/04/14 10:39:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0.ebuild,v 1.10 2011/06/12 11:07:47 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 
 inherit gnome2
 
-DESCRIPTION="CD ripper for GNOME 2"
+DESCRIPTION="CD ripper for GNOME"
 HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
 
 LICENSE="GPL-2"
@@ -31,6 +31,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=media-libs/gst-plugins-base-0.10:0.10"
 
 RDEPEND="${COMMON_DEPEND}
+	gnome-base/gvfs[cdda,udev]
 	>=media-plugins/gst-plugins-gconf-0.10:0.10
 	>=media-plugins/gst-plugins-gio-0.10:0.10
 	|| (
