@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.9.0.ebuild,v 1.2 2011/06/11 21:26:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.9.0.ebuild,v 1.3 2011/06/12 08:48:42 radhermit Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -27,7 +27,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.7.6-clean-install.patch
+	epatch "${FILESDIR}"/${PN}-0.7.6-clean-install.patch \
+		"${FILESDIR}"/${P}-jack.patch
+
 	eautoreconf
 }
 
