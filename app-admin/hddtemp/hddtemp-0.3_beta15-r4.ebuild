@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r4.ebuild,v 1.2 2010/07/05 13:17:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r4.ebuild,v 1.3 2011/06/12 13:18:20 spock Exp $
 
 inherit eutils autotools
 
@@ -69,6 +69,10 @@ pkg_postinst() {
 	einfo "If your hard drive is not recognized by hddtemp, please consider"
 	einfo "submitting your HDD info for inclusion into the Gentoo hddtemp"
 	einfo "database by filing a bug at https://bugs.gentoo.org/"
+	einfo ""
+	einfo "The hddtemp deamon requires a network interface to be up.  If you"
+	einfo "don't have an Ethernet interface, make sure at least the loopback"
+	einfo "interface is up by setting 'rc_depend_strict=\"NO\"' in /etc/rc.conf."
 }
 
 update_db() {
