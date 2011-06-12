@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/convertible
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/convertible/ChangeLog,v 1.1 2011/06/12 13:05:35 slyfox Exp $
+
+*convertible-1.0.10.0 (12 Jun 2011)
+
+  12 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +convertible-1.0.10.0.ebuild, +metadata.xml:
+  Initial version. New package: Typeclasses and instances library for
+  converting between types.
+
