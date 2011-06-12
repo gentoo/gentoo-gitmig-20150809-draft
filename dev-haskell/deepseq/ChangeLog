@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/deepseq
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/ChangeLog,v 1.1 2011/06/12 12:37:37 slyfox Exp $
+
+*deepseq-1.1.0.2 (12 Jun 2011)
+
+  12 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> +deepseq-1.1.0.2.ebuild,
+  +metadata.xml:
+  Initial version. New package: library for deep evaluation of data structures.
+
