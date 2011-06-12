@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2.ebuild,v 1.5 2011/05/10 14:31:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.1 2011/06/12 22:37:21 jsbronder Exp $
 
 EAPI=2
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 MY_PV=${PV/_/}
 DESCRIPTION="MPICH2 - A portable MPI implementation"
@@ -49,6 +49,10 @@ src_prepare() {
 	sed -i \
 		-e 's,\(.*=\ *\)"@WRAPPER_[A-Z]*FLAGS@",\1"",' \
 		src/env/*.in || die
+
+	# 369263 and 1044, 1500 upstream.   
+	epatch "${FILESDIR}"/fix-pkg-config-files.patch
+	AT_M4DIR="${S}"/confdb eautoreconf || die
 }
 
 src_configure() {
