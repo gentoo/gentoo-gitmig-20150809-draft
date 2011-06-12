@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bustle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.2 2011/05/10 21:53:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.3 2011/06/12 13:28:56 phajdan.jr Exp $
+
+  12 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bustle-0.2.3.ebuild:
+  x86 stable wrt bug #314059
 
   10 May 2011; Sergei Trofimovich <slyfox@gentoo.org> bustle-0.2.3.ebuild:
   Set SRC_URI=http://willthompson.co.uk/bustle/ as noticed Samuel BAUER in bug
