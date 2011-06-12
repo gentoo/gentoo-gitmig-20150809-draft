@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.7.ebuild,v 1.15 2011/01/29 13:06:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.7.ebuild,v 1.16 2011/06/12 16:20:39 spock Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ DEPEND=">=dev-libs/expat-1.95.4
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	X? ( x11-libs/libX11 x11-libs/libXt )
-	zlib? ( >=sys-libs/zlib-1.1.4 )
 	lua? ( >=dev-lang/lua-5 )
 	gpm? ( >=sys-libs/ncurses-5.2 >=sys-libs/gpm-1.20.0-r5 )
 	guile? ( >=dev-scheme/guile-1.6.4-r1[deprecated,discouraged] )
@@ -78,14 +77,15 @@ src_configure() {
 		myconf="${myconf} --without-openssl --without-gnutls"
 	fi
 
+	# zlib support disabled due to bug #365585
 	econf \
 		--sysconfdir=/etc/elinks \
 		--enable-leds \
 		--enable-88-colors \
 		--enable-256-colors \
 		--enable-html-highlight \
+		--without-zlib \
 		$(use_with gpm) \
-		$(use_with zlib) \
 		$(use_with bzip2 bzlib) \
 		$(use_with X x) \
 		$(use_with lua) \
