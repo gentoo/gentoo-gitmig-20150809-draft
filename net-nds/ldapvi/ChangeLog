@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/ldapvi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.22 2009/05/22 15:46:53 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ChangeLog,v 1.23 2011/06/12 15:29:40 xmw Exp $
+
+*ldapvi-1.7-r1 (12 Jun 2011)
+
+  12 Jun 2011; Michael Weber <xmw@gentoo.org> +ldapvi-1.7-r1.ebuild,
+  +files/ldapvi-1.7-vim-encoding.patch, metadata.xml:
+  Revision bump to fix vim syntax, thanks to Denis Seleznyov for the report
+  (bug 368387), taking maint.
 
   22 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> ldapvi-1.7.ebuild,
   +files/ldapvi-1.7+glibc-2.10.patch:
