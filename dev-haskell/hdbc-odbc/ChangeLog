@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/hdbc-odbc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.13 2010/07/12 13:16:28 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.14 2011/06/12 19:51:22 slyfox Exp $
+
+*hdbc-odbc-2.2.3.2 (12 Jun 2011)
+
+  12 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  -hdbc-odbc-1.0.0.0.ebuild, -hdbc-odbc-1.0.1.1.ebuild,
+  -hdbc-odbc-1.1.3.0.ebuild, +hdbc-odbc-2.2.3.2.ebuild,
+  -files/hdbc-odbc-helper.h, metadata.xml:
+  Version bump. Requested by Christopher Howard (bug #367211). Removed old
+  versions.
 
   12 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
   hdbc-odbc-1.1.3.0.ebuild:
