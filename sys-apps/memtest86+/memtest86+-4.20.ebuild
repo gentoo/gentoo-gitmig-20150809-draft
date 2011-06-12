@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.20.ebuild,v 1.1 2011/03/16 23:00:26 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.20.ebuild,v 1.2 2011/06/12 12:59:51 spock Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.10-hardcoded_cc.patch
 
-	sed -i -e 's/$(LD) -s /$(LD) /' Makefile || die
+	sed -i -e 's/$(LD) -s /$(LD) /' -e 's/-nopie//' Makefile || die
 	sed -i -e 's,0x10000,0x100000,' memtest.lds || die
 
 	if use serial ; then
