@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.5.0.ebuild,v 1.4 2011/03/06 09:17:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.0.ebuild,v 1.1 2011/06/12 17:09:56 scarabeus Exp $
 
 EAPI=3
 
@@ -10,45 +10,43 @@ inherit python base cmake-utils eutils
 
 DESCRIPTION="User friendly Geographic Information System"
 HOMEPAGE="http://www.qgis.org/"
-SRC_URI="http://download.osgeo.org/${PN}/src/${PN}_${PV}.tar.gz
+SRC_URI="http://qgis.org/downloads/${P}.tar.bz2
 	examples? ( http://download.osgeo.org/qgis/data/qgis_sample_data.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples gps grass gsl postgres python sqlite"
+IUSE="examples gps grass gsl postgres python spatialite test"
 
-RDEPEND=">=sci-libs/gdal-1.6.1[geos,postgres?,python?,sqlite?]
-	x11-libs/qt-core:4[qt3support]
+RDEPEND="
+	dev-libs/expat
+	sci-geosciences/gpsbabel
+	>=sci-libs/gdal-1.6.1[geos,python?]
+	sci-libs/geos
+	sci-libs/gsl
+	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
 	x11-libs/qt-sql:4
 	x11-libs/qt-webkit:4
-	sci-libs/geos
-	gps? (
-		dev-libs/expat
-		sci-geosciences/gpsbabel
-		x11-libs/qwt:5
-	)
-	grass? ( >=sci-geosciences/grass-6.4.0_rc6[postgres?,python?,sqlite?] )
-	gsl? ( sci-libs/gsl )
-	postgres? (
-		|| (
-			>=dev-db/postgresql-base-8.4
-			>=dev-db/postgresql-server-8.4
-		)
-	)
+	x11-libs/qwt:5[svg]
+	x11-libs/qwtpolar
+	grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] )
+	postgres? ( >=dev-db/postgresql-base-8.4 )
 	python? ( dev-python/PyQt4[X,sql,svg] )
-	sqlite? ( dev-db/sqlite:3 )"
+	spatialite? (
+		dev-db/sqlite:3
+		dev-db/spatialite
+	)"
 
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-PATCHES=(
-	"${FILESDIR}/${P}-sip.patch"
-	"${FILESDIR}/${P}-qset.patch"
-)
+DOCS=( AUTHORS BUGS ChangeLog CODING.pdf README SPONSORS CONTRIBUTORS )
+
+# Does not find the test binaries at all
+RESTRICT="test"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -56,21 +54,22 @@ pkg_setup() {
 }
 
 src_configure() {
-	local mycmakeargs
-	mycmakeargs+=(
+	local mycmakeargs+=(
 		"-DQGIS_MANUAL_SUBDIR=/share/man/"
 		"-DBUILD_SHARED_LIBS=ON"
 		"-DBINDINGS_GLOBAL_INSTALL=ON"
 		"-DQGIS_LIB_SUBDIR=$(get_libdir)"
 		"-DQGIS_PLUGIN_SUBDIR=$(get_libdir)/qgis"
-		"-DWITH_INTERNAL_SPATIALITE:BOOL=OFF"
+		"-DWITH_INTERNAL_SPATIALITE=OFF"
+		"-DWITH_INTERNAL_QWTPOLAR=OFF"
+		"-DPEDANTIC=OFF"
+		"-DWITH_APIDOC=OFF"
 		$(cmake-utils_use_with postgres POSTGRESQL)
-		$(cmake-utils_use_with grass)
-		$(cmake-utils_use_with gps EXPAT)
-		$(cmake-utils_use_with gps QWT)
-		$(cmake-utils_use_with gsl)
+		$(cmake-utils_use_with grass GRASS)
 		$(cmake-utils_use_with python BINDINGS)
-		$(cmake-utils_use_with sqlite SPATIALITE)
+		$(cmake-utils_use python BINDINGS_GLOBAL_INSTALL)
+		$(cmake-utils_use_with spatialite SPATIALITE)
+		$(cmake-utils_use_enable test TESTS)
 	)
 	use grass && mycmakeargs+=( "-DGRASS_PREFIX=/usr/" )
 
@@ -79,10 +78,9 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	dodoc AUTHORS BUGS ChangeLog README SPONSORS CONTRIBUTORS || die
 
 	newicon images/icons/qgis-icon.png qgis.png || die
-	make_desktop_entry qgis "Quantum GIS " qgis
+	make_desktop_entry qgis "Quantum GIS" qgis
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
