@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.11 2011/06/10 07:19:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.12 2011/06/12 12:20:20 maekke Exp $
+
+  12 Jun 2011; Markus Meier <maekke@gentoo.org> lbzip2-0.23-r1.ebuild:
+  add ~arm, bug #370685
 
   10 Jun 2011; Justin Lecher <jlec@gentoo.org> lbzip2-0.20.ebuild,
   lbzip2-0.22.ebuild, lbzip2-0.23.ebuild, lbzip2-0.23-r1.ebuild, metadata.xml:
