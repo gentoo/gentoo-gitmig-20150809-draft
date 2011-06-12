@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.767 2011/06/10 21:37:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.768 2011/06/12 23:04:45 abcd Exp $
+
+  12 Jun 2011; Jonathan Callen <abcd@gentoo.org>
+  -files/kdelibs-4.3.3-klauncher_kdeinit.patch,
+  -files/kdelibs-4.3.3-klauncher_kioslave.patch,
+  -files/kdelibs-4.4.3-mimetypes.patch,
+  -files/dist/02_gentoo_append_xdg_config_dirs.patch,
+  -files/dist/23_solid_no_double_build.patch,
+  -files/kdelibs-4.3.3-klauncher_mac.patch, kdelibs-4.6.2-r3.ebuild,
+  kdelibs-4.6.3-r2.ebuild:
+  Use $(get_kde_version) instead of ${SLOT} to allow changing the SLOT
+  properly; remove old patches
 
   10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +files/dist/01_gentoo_set_xdg_menu_prefix-1.patch:

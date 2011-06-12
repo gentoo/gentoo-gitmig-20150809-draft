@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.10 2011/06/06 21:09:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.2-r3.ebuild,v 1.11 2011/06/12 23:04:45 abcd Exp $
 
 EAPI=4
 
@@ -151,7 +151,7 @@ src_prepare() {
 	use arm && epatch "${FILESDIR}/${PN}-4.6.2-armlinking.patch"
 
 	# Rename applications.menu (needs 01_gentoo_set_xdg_menu_prefix.patch to work)
-	local menu_prefix="kde-${SLOT}-"
+	local menu_prefix="kde-$(get_kde_version)-"
 	sed -e "s|FILES[[:space:]]applications.menu|FILES applications.menu RENAME ${menu_prefix}applications.menu|g" \
 		-i kded/CMakeLists.txt || die "Sed on CMakeLists.txt for applications.menu failed."
 	sed -e "s|@REPLACE_MENU_PREFIX@|${menu_prefix}|g" \
