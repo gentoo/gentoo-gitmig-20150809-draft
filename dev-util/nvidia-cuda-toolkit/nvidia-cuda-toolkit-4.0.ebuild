@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.1 2011/05/29 20:24:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.2 2011/06/12 14:19:04 spock Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 		media-libs/libpng:1.2
 	)
 	debugger? ( >=sys-libs/libtermcap-compat-2.0.8-r2 )
-	!<=x11-drivers/nvidia-drivers-256.53"
+	!<=x11-drivers/nvidia-drivers-270.41"
 
 S="${WORKDIR}"
 

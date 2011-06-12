@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.36 2011/05/29 20:24:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.37 2011/06/12 14:19:04 spock Exp $
+
+  12 Jun 2011; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-4.0.ebuild:
+  Update the nvidia-drivers dependency for CUDA 4.0 to req. at least 270.41+.
 
 *nvidia-cuda-toolkit-4.0 (29 May 2011)
 
