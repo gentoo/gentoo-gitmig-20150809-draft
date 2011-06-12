@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.51 2011/06/03 14:17:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.52 2011/06/12 14:46:27 armin76 Exp $
+
+  12 Jun 2011; Raúl Porcel <armin76@gentoo.org> twisted-news-11.0.0.ebuild:
+  alpha/ia64/sparc stable wrt #366131
 
   03 Jun 2011; Brent Baude <ranger@gentoo.org> twisted-news-11.0.0.ebuild:
   Marking twisted-news-11.0.0 ppc stable for bug 366131
