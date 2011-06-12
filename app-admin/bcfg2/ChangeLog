@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/bcfg2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.16 2011/01/14 03:07:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.17 2011/06/12 16:35:17 xmw Exp $
+
+*bcfg2-1.1.2 (12 Jun 2011)
+
+  12 Jun 2011; Michael Weber <xmw@gentoo.org> +bcfg2-1.1.2.ebuild,
+  metadata.xml:
+  Version bump (bug 370549, thanks for the report)
 
   14 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bcfg2-1.1.0.ebuild:
