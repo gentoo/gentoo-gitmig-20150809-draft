@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/tktreectrl-2.2.9.ebuild,v 1.6 2011/05/03 20:06:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/tktreectrl-2.2.9.ebuild,v 1.7 2011/06/12 10:15:51 xarthisius Exp $
 
 EAPI=3
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="X debug shellicon threads"
 
-RDEPEND=">=dev-lang/tcl-8.4"
-DEPEND="${REDEPEND}"
+RDEPEND=">=dev-lang/tk-8.4"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-as-needed.patch

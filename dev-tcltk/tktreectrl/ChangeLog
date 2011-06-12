@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tktreectrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.6 2011/05/03 20:06:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.7 2011/06/12 10:15:51 xarthisius Exp $
+
+  12 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> tktreectrl-2.2.9.ebuild,
+  tktreectrl-2.2.10.ebuild:
+  Correct dependencies wrt #371215 by Piotr Szymaniak <lazy_bum@o2.pl>. Fix
+  typo in DEPEND
 
 *tktreectrl-2.2.10 (03 May 2011)
 
