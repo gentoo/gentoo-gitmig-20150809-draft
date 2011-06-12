@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.274 2011/06/11 00:05:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.275 2011/06/12 10:10:10 ferringb Exp $
+
+  12 Jun 2011; Brian Harring <ferringb@gentoo.org> profile.bashrc:
+  Remove /etc/portage/env hack- it belongs in the PM, and has been in
+  portage since 04/10, and alt PMs have their own ways of doing the
+  same.
 
   11 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Unmask USE=introspection for webkit-gtk
