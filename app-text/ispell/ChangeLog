@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ispell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.45 2011/02/06 05:59:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ChangeLog,v 1.46 2011/06/12 12:16:05 maekke Exp $
+
+  12 Jun 2011; Markus Meier <maekke@gentoo.org> ispell-3.3.02-r1.ebuild:
+  add ~arm, bug #370183
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> ispell-3.2.06-r6.ebuild:
   Drop to ~mips
