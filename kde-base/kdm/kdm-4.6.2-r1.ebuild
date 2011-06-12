@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.6.2-r1.ebuild,v 1.4 2011/06/01 18:19:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.6.2-r1.ebuild,v 1.5 2011/06/12 23:06:38 abcd Exp $
 
 EAPI=3
 
@@ -50,7 +50,7 @@ pkg_setup() {
 	kde4-meta_pkg_setup
 
 	# Create kdm:kdm user
-	KDM_HOME=/var/lib/kdm-${SLOT}
+	KDM_HOME=/var/lib/kdm-$(get_kde_version)
 	enewgroup kdm
 	enewuser kdm -1 -1 "${KDM_HOME}" kdm
 }
@@ -78,8 +78,8 @@ src_install() {
 	# - SessionDirs set to /usr/share/xsessions
 	# - increase server timeout to 30s
 	# - TerminateServer=true to workaround X server regen bug, bug 278473
-	# - DataDir set to /var/lib/kdm-${SLOT}
-	# - FaceDir set to /var/lib/kdm-${SLOT}/faces
+	# - DataDir set to /var/lib/kdm-$(get_kde_version)
+	# - FaceDir set to /var/lib/kdm-$(get_kde_version)/faces
 	sed -e "s|^.*SessionsDirs=.*$|#&\nSessionsDirs=${EPREFIX}/usr/share/xsessions|" \
 		-e "/#ServerTimeout=/s/^.*$/ServerTimeout=30/" \
 		-e "/#TerminateServer=/s/^.*$/TerminateServer=true/" \
