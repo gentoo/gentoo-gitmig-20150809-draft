@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.15.ebuild,v 1.5 2011/05/14 08:47:46 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.15.ebuild,v 1.6 2011/06/12 14:29:32 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://jfs.sourceforge.net/project/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE="static"
 
 DEPEND="virtual/libc"
