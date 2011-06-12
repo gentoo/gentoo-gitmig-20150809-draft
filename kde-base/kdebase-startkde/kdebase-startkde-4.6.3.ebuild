@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.6.3.ebuild,v 1.4 2011/06/10 11:50:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.6.3.ebuild,v 1.5 2011/06/12 22:57:37 abcd Exp $
 
 EAPI=4
 
@@ -83,7 +83,7 @@ src_install() {
 	doexe "${T}/KDE-4"
 
 	# freedesktop compliant session script
-	sed -e "s:\${KDE4_BIN_INSTALL_DIR}:${EPREFIX}/usr/bin:g;s:Name=KDE:Name=KDE ${SLOT}:" \
+	sed -e "s:\${KDE4_BIN_INSTALL_DIR}:${EPREFIX}/usr/bin:g;s:Name=KDE:Name=KDE $(get_kde_version):" \
 		"${S}/kdm/kfrontend/sessions/kde-plasma.desktop.cmake" > "${T}/KDE-4.desktop"
 	insinto /usr/share/xsessions
 	doins "${T}/KDE-4.desktop"
@@ -98,7 +98,7 @@ pkg_postinst () {
 	elog "${EPREFIX}/etc/kde/shutdown/agent-shutdown.sh"
 	echo
 	elog "The name of the session script has changed."
-	elog "If you currently have XSESSION=\"kde-${SLOT}\" in your"
+	elog "If you currently have XSESSION=\"kde-$(get_kde_version)\" in your"
 	elog "configuration files, you will need to change it to"
 	elog "XSESSION=\"KDE-4\""
 }

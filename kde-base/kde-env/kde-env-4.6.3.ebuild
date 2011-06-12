@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.3.ebuild,v 1.5 2011/06/10 11:51:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.3.ebuild,v 1.6 2011/06/12 22:54:49 abcd Exp $
 
 EAPI=4
 
@@ -37,15 +37,15 @@ EOF
 	doenvd 43kdepaths
 
 	# Properly place xinitrc.d file that exports XDG_MENU_PREFIX to env
-	cat <<EOF > 11-xdg-menu-kde-${SLOT}
+	cat <<EOF > 11-xdg-menu-kde-$(get_kde_version)
 #!/bin/sh
 
 if [ -z \${XDG_MENU_PREFIX} ] && [ "\${DESKTOP_SESSION}" = "KDE-4" ]; then
-	export XDG_MENU_PREFIX="kde-${SLOT}-"
+	export XDG_MENU_PREFIX="kde-$(get_kde_version)-"
 fi
 EOF
 	exeinto /etc/X11/xinit/xinitrc.d/
-	doexe 11-xdg-menu-kde-${SLOT} || die "doexe failed"
+	doexe 11-xdg-menu-kde-$(get_kde_version) || die "doexe failed"
 }
 
 pkg_preinst() {
