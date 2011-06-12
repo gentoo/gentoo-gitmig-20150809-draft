@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/prekin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prekin/ChangeLog,v 1.3 2010/10/10 21:28:36 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prekin/ChangeLog,v 1.4 2011/06/12 10:10:35 xarthisius Exp $
+
+  12 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -prekin-6.51.081122.ebuild, prekin-6.51.081122-r1.ebuild:
+  Add missing dependencies wrt #371235 by Piotr Szymaniak <lazy_bum@o2.pl>, add
+  missing die, remove unnecessary messages and quotes. Drop old
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> prekin-6.51.081122.ebuild,
   prekin-6.51.081122-r1.ebuild:
