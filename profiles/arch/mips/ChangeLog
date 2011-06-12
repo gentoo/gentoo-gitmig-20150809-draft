@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.58 2011/06/08 18:38:22 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.59 2011/06/12 20:21:08 mattst88 Exp $
+
+  12 Jun 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Add 'dev-vcs/mercurial bugzilla' to package.use.mask
 
   08 Jun 2011; Matt Turner <mattst88@gentoo.org>
   +mips64/multilib/n32-n64/make.defaults, +mips64/multilib/n32-n64/parent,
