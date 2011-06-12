@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.0.ebuild,v 1.1 2011/06/12 17:09:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.0.ebuild,v 1.2 2011/06/12 21:11:53 scarabeus Exp $
 
 EAPI=3
 
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
-DOCS=( AUTHORS BUGS ChangeLog CODING.pdf README SPONSORS CONTRIBUTORS )
+DOCS=( BUGS ChangeLog CODING.pdf README )
 
 # Does not find the test binaries at all
 RESTRICT="test"
