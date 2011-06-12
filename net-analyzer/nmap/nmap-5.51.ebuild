@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.51.ebuild,v 1.9 2011/06/03 17:29:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.51.ebuild,v 1.10 2011/06/12 22:14:04 spock Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -39,6 +39,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.75-nolua.patch
 	epatch "${FILESDIR}"/${PN}-5.10_beta1-string.patch
 	epatch "${FILESDIR}"/${PN}-5.21-python.patch
+	epatch "${FILESDIR}"/${PN}-5.51-su-to-zenmap-fix.patch
 	sed -i -e 's/-m 755 -s ncat/-m 755 ncat/' ncat/Makefile.in
 }
 

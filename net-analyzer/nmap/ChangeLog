@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.248 2011/06/03 17:29:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.249 2011/06/12 22:14:04 spock Exp $
+
+  12 Jun 2011; Michał Januszewski <spock@gentoo.org> nmap-5.51.ebuild,
+  +files/nmap-5.51-su-to-zenmap-fix.patch:
+  Fix bug #369543.
 
   03 Jun 2011; Raúl Porcel <armin76@gentoo.org> nmap-5.51.ebuild:
   ia64/s390/sh/sparc stable wrt #359853
