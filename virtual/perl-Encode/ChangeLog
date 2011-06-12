@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Encode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.25 2011/05/22 06:23:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.26 2011/06/12 23:58:24 mattst88 Exp $
+
+  12 Jun 2011; Matt Turner <mattst88@gentoo.org> perl-Encode-2.430.0.ebuild:
+  Added ~mips, bug 358079
 
 *perl-Encode-2.430.0 (22 May 2011)
 
