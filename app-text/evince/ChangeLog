@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.221 2011/04/26 11:18:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.222 2011/06/12 18:41:46 pacho Exp $
+
+  12 Jun 2011; Pacho Ramos <pacho@gentoo.org> -evince-2.32.0-r1.ebuild,
+  evince-2.32.0-r3.ebuild:
+  Fix gconf-2.m4 missing again (bug #371272 by Francesco Turco). Remove old.
 
   26 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> evince-2.32.0-r2.ebuild:
   ppc64 stable wrt #363447

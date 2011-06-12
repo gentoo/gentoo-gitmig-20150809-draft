@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r3.ebuild,v 1.1 2011/04/21 12:11:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r3.ebuild,v 1.2 2011/06/12 18:41:46 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -119,6 +119,11 @@ src_prepare() {
 
 	# Fix .desktop file so menu item shows up
 	epatch "${FILESDIR}"/${PN}-0.7.1-display-menu.patch
+
+	# gconf-2.m4 is needed for autoconf, bug #291339
+	if ! use gnome; then
+		cp "${FILESDIR}/gconf-2.m4" m4/ || die "Copying gconf-2.m4 failed!"
+	fi
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
