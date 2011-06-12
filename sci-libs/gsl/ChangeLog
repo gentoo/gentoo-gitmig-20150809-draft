@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.80 2011/05/21 10:18:03 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.81 2011/06/12 17:00:25 scarabeus Exp $
+
+  12 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> gsl-1.15.ebuild:
+  Move to eapi4. Punt .la files. Run eselect only if really required for
+  pretend phase.
 
 *gsl-1.15 (21 May 2011)
 

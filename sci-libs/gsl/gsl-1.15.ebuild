@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.15.ebuild,v 1.1 2011/05/21 10:18:03 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.15.ebuild,v 1.2 2011/06/12 17:00:25 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils flag-o-matic autotools toolchain-funcs
 
@@ -20,16 +20,24 @@ DEPEND="${RDEPEND}
 	app-admin/eselect-cblas
 	dev-util/pkgconfig"
 
+DOCS=( AUTHORS BUGS ChangeLog NEWS README THANKS TODO )
+
+pkg_pretend() {
+	# prevent to use external cblas from a previously installed gsl
+	local current_lib
+	if use cblas-external; then 
+		current_lib=$(eselect cblas show | cut -d' ' -f2)
+		if [[ ${current_lib} == gsl ]]; then
+			ewarn "USE flag cblas-external is set: linking gsl with an external cblas."
+			ewarn "However the current selected external cblas is gsl."
+			ewarn "Please install and/or eselect another cblas"
+			die "Circular gsl dependency"
+		fi
+	fi
+}
+
 pkg_setup() {
 	ESELECT_PROF="gsl"
-	# prevent to use external cblas from a previously installed gsl
-	local current_lib=$(eselect cblas show | cut -d' ' -f2)
-	if use cblas-external && [[ ${current_lib} == gsl ]]; then
-		ewarn "USE flag cblas-external is set: linking gsl with an external cblas."
-		ewarn "However the current selected external cblas is gsl."
-		ewarn "Please install and/or eselect another cblas"
-		die "Circular gsl dependency"
-	fi
 
 	# bug 349005
 	[[ $(tc-getCC)$ == *gcc* ]] && \
@@ -63,8 +71,9 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed."
-	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
+	default
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	# take care of pkgconfig file for cblas implementation.
 	sed -e "s/@LIBDIR@/$(get_libdir)/" \
