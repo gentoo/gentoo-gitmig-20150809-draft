@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/anacron
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.9 2009/09/23 21:06:06 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.10 2011/06/12 12:18:52 maekke Exp $
+
+  12 Jun 2011; Markus Meier <maekke@gentoo.org> anacron-2.3-r2.ebuild:
+  add ~arm, bug #370209
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> anacron-2.3-r2.ebuild:
   Remove virtual/libc
