@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.0.3.7.ebuild,v 1.1 2011/06/06 10:43:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.0.3.8.ebuild,v 1.1 2011/06/12 17:33:29 naota Exp $
 
 EAPI=3
 
@@ -17,15 +17,15 @@ SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+libnotify sqlite"
+IUSE="+libnotify sound"
 
 DEPEND=""
 RDEPEND="$(ruby_implementation_depend ruby18 '>=' -1.8.7)[ssl]
-	libnotify? ( x11-libs/libnotify )"
+	libnotify? ( x11-libs/libnotify )
+	sound? ( media-sound/alsa-utils )"
 
 ruby_add_rdepend "dev-ruby/ruby-gtk2
 	dev-ruby/rcairo
-	dev-ruby/ruby-hmac
 	dev-ruby/httpclient"
 
 S="${WORKDIR}/${PN}"
