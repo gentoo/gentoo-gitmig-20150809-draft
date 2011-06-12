@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/text
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.1 2011/06/12 12:57:57 slyfox Exp $
+
+*text-0.11.1.1 (12 Jun 2011)
+
+  12 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> +text-0.11.1.1.ebuild,
+  +metadata.xml:
+  Initial version. New package: library for efficient packed Unicode text type
+  string representation.
+
