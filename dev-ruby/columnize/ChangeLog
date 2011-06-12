@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/columnize
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.19 2011/01/24 07:18:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.20 2011/06/12 06:47:44 graaff Exp $
+
+*columnize-0.3.3 (12 Jun 2011)
+
+  12 Jun 2011; Hans de Graaff <graaff@gentoo.org> +columnize-0.3.3.ebuild:
+  Version bump.
 
   24 Jan 2011; Hans de Graaff <graaff@gentoo.org>
   -columnize-0.3.1-r2.ebuild:
