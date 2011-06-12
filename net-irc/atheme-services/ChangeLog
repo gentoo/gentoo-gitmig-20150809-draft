@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.4 2011/06/11 18:43:00 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.5 2011/06/12 03:21:12 binki Exp $
+
+  12 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  atheme-services-6.0.8.ebuild:
+  Disabled PIE for USE="profile", should fix bug #371119.
 
   11 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
   Mark myself as maintainer of net-irc/atheme-services.
