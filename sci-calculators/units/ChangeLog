@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.30 2010/05/21 21:57:51 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.31 2011/06/12 12:14:36 maekke Exp $
+
+  12 Jun 2011; Markus Meier <maekke@gentoo.org> units-1.88.ebuild:
+  add ~arm, bug #369727
 
   21 May 2010; Kenneth Prugh <ken69267@gentoo.org> units-1.88.ebuild:
   amd64 stable, bug #311159
