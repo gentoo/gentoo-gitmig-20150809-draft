@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/thin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.16 2010/08/13 23:38:19 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.17 2011/06/12 17:13:51 a3li Exp $
+
+*thin-1.2.11 (12 Jun 2011)
+
+  12 Jun 2011; Alex Legler <a3li@gentoo.org> +thin-1.2.11.ebuild,
+  +files/thin.confd, +files/thin.initd:
+  Version bump. The package now installs init scripts and works with more rspec
+  versions.
 
   13 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   thin-1.2.5-r1.ebuild:
