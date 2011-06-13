@@ -1,12 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.2 2007/03/18 02:46:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.3 2011/06/13 11:57:41 jlec Exp $
 
 inherit eutils
 
 DESCRIPTION="Perl based e-mail filtering tool, sensitive to html tags, mime types and attachments"
 HOMEPAGE="http://mailtools.anomy.net/"
-SRC_URI="http://mailtools.anomy.net/dist/${PN}-${PV}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/sample_e-mail-architecture.png.tar
+	http://mailtools.anomy.net/dist/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,11 +37,11 @@ src_install() {
 	mv "${S}/contrib" "${D}/usr/share/doc/${PF}/"
 
 	insinto /usr/share/doc/${PF}/examples
-	doins ${FILESDIR}/*.{sh,png,flw}
+	doins "${FILESDIR}"/*.{sh,flw} "${WORKDIR}"/*.png
 
 	keepdir ${SANI_CONFDIR}
 	insinto ${SANI_CONFDIR}
-	doins ${FILESDIR}/*.conf
+	doins "${FILESDIR}"/*.conf
 
 	keepdir ${SANI_WORKDIR}
 	dodir ${DEST}
@@ -52,7 +54,7 @@ src_install() {
 		_di=`echo $i | sed -e "s/^anomy//g; s/^\///g"` &>/dev/null
 		insinto ${DEST}/$_di
 
-		_sublist=`find ${WORKDIR}/$i/* -type f -maxdepth 0`
+		_sublist=`find "${WORKDIR}"/$i/* -maxdepth 0 -type f`
 		for l in $_sublist; do
 			echo &>/dev/null
 			doins $l

@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/anomy-sanitizer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/ChangeLog,v 1.15 2011/06/09 20:21:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/ChangeLog,v 1.16 2011/06/13 11:57:41 jlec Exp $
+
+  13 Jun 2011; Justin Lecher <jlec@gentoo.org> -anomy-sanitizer-1.67.ebuild,
+  -anomy-sanitizer-1.70.ebuild, -anomy-sanitizer-1.76.ebuild,
+  anomy-sanitizer-1.76-r1.ebuild, -files/sample_e-mail-architecture.png:
+  No binaryfiles in VCS please, #370867
 
   09 Jun 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
   Move to maintainer-needed
