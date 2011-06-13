@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.2.0.ebuild,v 1.4 2010/02/01 20:24:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.2.0.ebuild,v 1.5 2011/06/13 15:00:52 pacho Exp $
 
 inherit gnome2
 
@@ -16,9 +16,9 @@ IUSE="libnotify"
 COMMON_DEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygtk-2.6
 	>=dev-python/pygobject-2.6
-	>=dev-python/gnome-python-2.6
 	>=dev-python/libgnome-python-2.6
 	>=dev-python/gnome-applets-python-2.6
+	dev-python/gconf-python
 	>=dev-python/dbus-python-0.71
 	>=app-cdr/cdemud-1.0.0"
 DEPEND="${COMMON_DEPEND}
