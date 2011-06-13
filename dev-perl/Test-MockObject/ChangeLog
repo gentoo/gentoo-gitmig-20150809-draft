@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-MockObject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockObject/ChangeLog,v 1.4 2011/06/06 11:45:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockObject/ChangeLog,v 1.5 2011/06/13 07:24:11 tove Exp $
+
+*Test-MockObject-1.201.106.120 (13 Jun 2011)
+
+  13 Jun 2011; Torsten Veller <tove@gentoo.org>
+  +Test-MockObject-1.201.106.120.ebuild:
+  Version bump
 
 *Test-MockObject-1.201.106.60 (06 Jun 2011)
 
