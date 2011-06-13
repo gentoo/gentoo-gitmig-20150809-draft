@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.20.ebuild,v 1.2 2011/06/13 10:11:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.20.ebuild,v 1.3 2011/06/13 14:12:02 jer Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ src_prepare() {
 
 src_configure() {
 	append-flags -DSPOOFSOURCE
-	econf || die
+	econf
 }
 
 src_install() {
