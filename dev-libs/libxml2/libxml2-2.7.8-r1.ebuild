@@ -1,20 +1,23 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.7.ebuild,v 1.14 2010/12/31 23:49:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8-r1.ebuild,v 1.1 2011/06/13 14:55:35 pacho Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="python? 2"
+PYTHON_USE_WITH="-build xml"
+PYTHON_USE_WITH_OPT="python"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit libtool flag-o-matic eutils python
+inherit libtool flag-o-matic eutils python autotools prefix
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="debug doc examples ipv6 python readline test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+IUSE="debug doc examples icu ipv6 python readline test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
 XSTS_NAME_1="xmlschema2002-01-16"
@@ -28,7 +31,7 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz
 		${XSTS_HOME}/${XSTS_NAME_2}/${XSTS_TARBALL_2} )"
 
 RDEPEND="sys-libs/zlib
-	python? ( || ( <dev-lang/python-3[xml] ( <dev-lang/python-3 dev-python/pyxml ) ) )
+	icu? ( dev-libs/icu )
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
@@ -55,14 +58,38 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Patches needed for prefix support
+	epatch "${FILESDIR}"/${PN}-2.7.1-catalog_path.patch
+	epatch "${FILESDIR}"/${PN}-2.7.2-winnt.patch
+
+	eprefixify catalog.c xmlcatalog.c runtest.c xmllint.c
+
 	epunt_cxx
+
+	# Reactivate the shared library versionning script
+	epatch "${FILESDIR}/${P}-reactivate-script.patch"
+
+	# Fix a potential memory access error
+	epatch "${FILESDIR}/${P}-xpath-memory.patch"
+
+	# Fix a potential freeing error in XPath
+	epatch "${FILESDIR}/${P}-xpath-freeing.patch"
+	epatch "${FILESDIR}/${P}-xpath-freeing2.patch"
+
+	# Fix some potential problems on reallocation failures
+	epatch "${FILESDIR}/${P}-reallocation-failures.patch"
+
+	epatch "${FILESDIR}/${P}-disable_static_modules.patch"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
-	elibtoolize
+	# We now need to run eautoreconf at the end to prevent maintainer mode.
+#	elibtoolize
 
 	# Python bindings are built/tested/installed manually.
-	sed -e "s/@PYTHON_SUBDIR@//" -i Makefile.in || die "sed failed"
+	sed -e "s/@PYTHON_SUBDIR@//" -i Makefile.am || die "sed failed"
+
+	eautoreconf
 }
 
 src_configure() {
@@ -75,10 +102,10 @@ src_configure() {
 
 	# --with-mem-debug causes unusual segmentation faults (bug #105120).
 
-	local myconf="--with-zlib
-		--with-html-subdir=${PF}/html
-		--docdir=/usr/share/doc/${PF}
+	local myconf="--with-html-subdir=${PF}/html
+		--docdir=${EPREFIX}/usr/share/doc/${PF}
 		$(use_with debug run-debug)
+		$(use_with icu)
 		$(use_with python)
 		$(use_with readline)
 		$(use_with readline history)
@@ -96,8 +123,8 @@ src_compile() {
 	if use python; then
 		python_copy_sources python
 		building() {
-			emake PYTHON_INCLUDES="$(python_get_includedir)" \
-				PYTHON_SITE_PACKAGES="$(python_get_sitedir)"
+			emake PYTHON_INCLUDES="${EPREFIX}$(python_get_includedir)" \
+				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir python building
 	fi
@@ -116,15 +143,24 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" \
-		EXAMPLES_DIR=/usr/share/doc/${PF}/examples \
+		EXAMPLES_DIR="${EPREFIX}"/usr/share/doc/${PF}/examples \
 		install || die "Installation failed"
+
+	# on windows, xmllint is installed by interix libxml2 in parent prefix.
+	# this is the version to use. the native winnt version does not support
+	# symlinks, which makes repoman fail if the portage tree is linked in
+	# from another location (which is my default). -- mduft
+	if [[ ${CHOST} == *-winnt* ]]; then
+		rm -rf "${ED}"/usr/bin/xmllint
+		rm -rf "${ED}"/usr/bin/xmlcatalog
+	fi
 
 	if use python; then
 		installation() {
 			emake DESTDIR="${D}" \
-				PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
-				docsdir=/usr/share/doc/${PF}/python \
-				exampledir=/usr/share/doc/${PF}/python/examples \
+				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
+				docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
+				exampledir="${EPREFIX}"/usr/share/doc/${PF}/python/examples \
 				install
 		}
 		python_execute_function -s --source-dir python installation
@@ -132,22 +168,22 @@ src_install() {
 		python_clean_installation_image
 	fi
 
-	rm -rf "${D}"/usr/share/doc/${P}
+	rm -rf "${ED}"/usr/share/doc/${P}
 	dodoc AUTHORS ChangeLog Copyright NEWS README* TODO* || die "dodoc failed"
 
 	if ! use python; then
-		rm -rf "${D}"/usr/share/doc/${PF}/python
-		rm -rf "${D}"/usr/share/doc/${PN}-python-${PV}
+		rm -rf "${ED}"/usr/share/doc/${PF}/python
+		rm -rf "${ED}"/usr/share/doc/${PN}-python-${PV}
 	fi
 
 	if ! use doc; then
-		rm -rf "${D}"/usr/share/gtk-doc
-		rm -rf "${D}"/usr/share/doc/${PF}/html
+		rm -rf "${ED}"/usr/share/gtk-doc
+		rm -rf "${ED}"/usr/share/doc/${PF}/html
 	fi
 
 	if ! use examples; then
-		rm -rf "${D}/usr/share/doc/${PF}/examples"
-		rm -rf "${D}/usr/share/doc/${PF}/python/examples"
+		rm -rf "${ED}/usr/share/doc/${PF}/examples"
+		rm -rf "${ED}/usr/share/doc/${PF}/python/examples"
 	fi
 }
 
@@ -163,14 +199,14 @@ pkg_postinst() {
 		elog "Skipping XML catalog creation for stage building (bug #208887)."
 	else
 		# need an XML catalog, so no-one writes to a non-existent one
-		CATALOG="${ROOT}etc/xml/catalog"
+		CATALOG="${EROOT}etc/xml/catalog"
 
 		# we dont want to clobber an existing catalog though,
 		# only ensure that one is there
 		# <obz@gentoo.org>
 		if [ ! -e ${CATALOG} ]; then
-			[ -d "${ROOT}etc/xml" ] || mkdir -p "${ROOT}etc/xml"
-			/usr/bin/xmlcatalog --create > ${CATALOG}
+			[ -d "${EROOT}etc/xml" ] || mkdir -p "${EROOT}etc/xml"
+			"${EPREFIX}"/usr/bin/xmlcatalog --create > ${CATALOG}
 			einfo "Created XML catalog in ${CATALOG}"
 		fi
 	fi

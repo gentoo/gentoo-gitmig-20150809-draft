@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.304 2011/02/26 17:17:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.305 2011/06/13 14:55:35 pacho Exp $
+
+*libxml2-2.7.8-r1 (13 Jun 2011)
+
+  13 Jun 2011; Pacho Ramos <pacho@gentoo.org> -libxml2-2.7.7.ebuild,
+  +libxml2-2.7.8-r1.ebuild, +files/libxml2-2.7.8-reallocation-failures.patch:
+  Fix some potential problems on reallocation failures (CVE-2011-1944), bug
+  #370715 by Sylvia. Remove old.
 
   26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libxml2-2.7.8.ebuild, +files/libxml2-2.7.8-disable_static_modules.patch:
