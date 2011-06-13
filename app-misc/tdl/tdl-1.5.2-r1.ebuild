@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2-r1.ebuild,v 1.6 2010/12/05 18:08:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2-r1.ebuild,v 1.7 2011/06/13 11:24:01 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,9 @@ inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Command line To Do List manager"
 HOMEPAGE="http://www.rc0.org.uk/tdl/"
-SRC_URI="http://www.rpcurnow.force9.co.uk/tdl/${P}.tar.gz"
+SRC_URI="
+	http://www.rpcurnow.force9.co.uk/tdl/${P}.tar.gz
+	http://dev.gentoo.org/~jlec/distfiles/${PN}-screenshot.png.tar"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -52,7 +54,7 @@ src_compile() {
 src_install() {
 	local i
 
-	dodoc README NEWS tdl.txt "${FILESDIR}/screenshot.png" || die
+	dodoc README NEWS tdl.txt "${WORKDIR}"/screenshot.png || die
 	doinfo tdl.info || die
 	dohtml tdl.html || die
 
