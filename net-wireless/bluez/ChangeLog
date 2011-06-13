@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.92 2011/06/09 16:23:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.93 2011/06/13 15:22:55 pacho Exp $
+
+  13 Jun 2011; Pacho Ramos <pacho@gentoo.org> bluez-4.94-r1.ebuild:
+  Use latest to be compatible with testing udev versions and prevent bugs like
+  #370829.
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org> bluez-4.93.ebuild:
   Stable for HPPA (bug #370707).
