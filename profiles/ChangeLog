@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5437 2011/06/12 14:09:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5438 2011/06/13 11:41:43 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2011; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  Remove some spurious entries for already removed packages
 
   12 Jun 2011; Michał Januszewski <spock@gentoo.org> package.mask:
   Masked dev-util/nvidia-cuda-profiler for removal.
