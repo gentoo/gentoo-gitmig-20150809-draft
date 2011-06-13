@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/gns3
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.1 2011/06/13 09:23:49 hwoarang Exp $
+
+*gns3-0.7.4 (13 Jun 2011)
+
+  13 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +gns3-0.7.4.ebuild,
+  +files/gns3-0.7.4_set_dynamips_path.patch,
+  +files/gns3-0.7.4_set_qemu_path.patch, +files/gns3.xpm, +metadata.xml:
+  Initial commit for gns3. Bug #213539. Thanks to Ján Bednár
+  <jan.bednar@gmail.com> for the ebuilds and for becoming proxy maintainer
+
