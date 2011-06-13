@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.36 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.37 2011/06/13 22:49:45 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -275,9 +275,6 @@ trusted
 voodoo3
 smartcard
 emacs
-
-# should work but jasper not tested yet
-jpeg2k
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
