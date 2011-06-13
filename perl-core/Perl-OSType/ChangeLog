@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Perl-OSType
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.6 2011/05/02 19:45:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.7 2011/06/13 00:20:39 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org> Perl-OSType-1.2.ebuild:
+  Added ~mips, bug 357599
 
   02 May 2011; Fabian Groffen <grobian@gentoo.org> Perl-OSType-1.2.ebuild:
   Marked ~x64-freebsd
