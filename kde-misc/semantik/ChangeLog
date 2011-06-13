@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/semantik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.1 2011/06/13 21:53:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.2 2011/06/13 21:55:15 dilfridge Exp $
+
+  13 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  semantik-0.7.3_p20091013.ebuild:
+  Fixed license
 
 *semantik-0.7.3_p20091013 (13 Jun 2011)
 
