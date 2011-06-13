@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/simple-scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.7 2011/06/10 09:34:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.8 2011/06/13 23:15:19 nirbheek Exp $
+
+  13 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
+  Add myself as maintainer in accordance with Markos's mail to gentoo-dev. No
+  oustanding bugs found for reassignment.
 
   10 Jun 2011; Christoph Mende <angelos@gentoo.org> simple-scan-2.31.1.ebuild,
   simple-scan-2.31.91.ebuild, simple-scan-2.32.0.1.ebuild,
