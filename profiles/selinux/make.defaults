@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/make.defaults,v 1.6 2009/08/10 17:07:09 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/make.defaults,v 1.7 2011/06/13 12:13:57 blueness Exp $
 #
 
 USE="-acl selinux"
 
-FEATURES="selinux sesandbox sfperms loadpolicy"
+FEATURES="selinux sesandbox sfperms"
 
 POLICY_TYPES="strict targeted"
 PORTAGE_T="portage_t"
