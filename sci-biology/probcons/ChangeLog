@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/probcons
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.13 2010/07/16 22:01:47 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.14 2011/06/13 11:17:41 jlec Exp $
+
+  13 Jun 2011; Justin Lecher <jlec@gentoo.org> probcons-1.12-r1.ebuild,
+  +files/probcons-1.12-gcc-4.6.patch:
+  Make it gcc46 resistant, #370471
 
   16 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   probcons-1.12-r1.ebuild:
