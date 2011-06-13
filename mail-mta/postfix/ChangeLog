@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.264 2011/05/15 17:14:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.265 2011/06/13 09:34:20 eras Exp $
+
+*postfix-2.8.3-r1 (13 Jun 2011)
+
+  13 Jun 2011; Eray Aslan <eras@gentoo.org> +postfix-2.8.3-r1.ebuild:
+  sh and s390 dropped - bug #371379. Hopefully fix bug #349944
 
   15 May 2011; Eray Aslan <eras@gentoo.org> postfix-2.7.4.ebuild,
   postfix-2.8.3.ebuild:
