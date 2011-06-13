@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0-r1.ebuild,v 1.1 2011/06/09 21:58:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0-r1.ebuild,v 1.2 2011/06/13 22:39:30 bicatali Exp $
 
 EAPI=4
-inherit eutils base
+inherit eutils base autotools
 
 DESCRIPTION="High-level interactive language for numerical computations"
 LICENSE="GPL-3"
