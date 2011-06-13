@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.8 2011/06/13 12:25:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.9 2011/06/13 13:14:50 jlec Exp $
 
 EAPI="3"
 
@@ -10,7 +10,9 @@ inherit eutils multilib python toolchain-funcs
 
 DESCRIPTION="Visual Molecular Dynamics"
 HOMEPAGE="http://www.ks.uiuc.edu/Research/vmd/"
-SRC_URI="${P}.src.tar.gz"
+SRC_URI="
+	mirror://gentoo/${P}-gentoo-patches.tar.xz
+	${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="vmd"
@@ -48,10 +50,8 @@ QA_DT_HASH_amd64="usr/lib64/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
 QA_DT_HASH_x86="usr/lib/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
 
 pkg_nofetch() {
-	elog "Please download ${A} from"
+	elog "Please download ${P}.src.tar.gz from"
 	elog "${VMD_DOWNLOAD}"
-	elog "and"
-	elog "http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo-patches.tar.xz"
 	elog "after agreeing to the license and then move it to "
 	elog "${DISTDIR}"
 
