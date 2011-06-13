@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/flickrnet-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/ChangeLog,v 1.8 2011/05/11 19:25:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/ChangeLog,v 1.9 2011/06/13 22:19:27 flameeyes Exp $
+
+  13 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  flickrnet-bin-2.2-r1.ebuild:
+  Add missing unzip dependency (thanks to Piotr Szymaniak in bug #371515).
 
   11 May 2011; Christoph Mende <angelos@gentoo.org>
   flickrnet-bin-2.2-r1.ebuild:

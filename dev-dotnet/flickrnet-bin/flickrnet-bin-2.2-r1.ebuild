@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/flickrnet-bin-2.2-r1.ebuild,v 1.4 2011/05/11 19:25:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/flickrnet-bin/flickrnet-bin-2.2-r1.ebuild,v 1.5 2011/06/13 22:19:27 flameeyes Exp $
 
 EAPI=2
 
@@ -22,13 +22,12 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.4"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}"
 
-src_compile() {
-	:
-}
+src_compile() { :; }
 
 src_install() {
 	egacinstall Release/${MY_PN}.dll ${MY_PN} || die
