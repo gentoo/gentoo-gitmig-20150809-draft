@@ -3,18 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>toffanin.mauro@gmail.com</email>
-		<name>Mauro Toffanin</name>
-		<description>Maintainer. Assign bugs to him</description>
-	</maintainer>
-	<maintainer>
 		<email>djc@gentoo.org</email>
 		<name>Dirkjan Ochtman</name>
-	</maintainer>
-	<maintainer>
-		<email>flameeyes@gentoo.org</email>
-		<name>Diego Elio Pettenò</name>
-		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 	<upstream>
 		<maintainer>
