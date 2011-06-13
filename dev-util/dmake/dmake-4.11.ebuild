@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.11.ebuild,v 1.1 2010/09/18 03:38:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.11.ebuild,v 1.2 2011/06/13 22:08:54 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-DEPEND="sys-apps/groff"
+DEPEND="
+	app-arch/unzip
+	sys-apps/groff
+"
 RDEPEND=""
 
 S=${WORKDIR}/${PN}
