@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>sci-mathematics</herd>
 <maintainer>
-  <email>spock@gentoo.org</email>
-  <name>Michal Januszewski</name>
+  <email>tomka@gentoo.org</email>
+  <name>Thomas Kahle</name>
 </maintainer>
 </pkgmetadata>

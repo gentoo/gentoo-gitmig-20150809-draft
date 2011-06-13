@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.40 2011/05/08 15:13:58 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.41 2011/06/13 05:36:14 tomka Exp $
+
+  13 Jun 2011; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  Taking over maintainership
 
 *gimps-26.6 (08 May 2011)
 
