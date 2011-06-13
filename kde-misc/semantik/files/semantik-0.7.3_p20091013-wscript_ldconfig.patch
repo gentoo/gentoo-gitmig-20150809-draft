@@ -1,0 +1,13 @@
+diff -ruN semantik-0.7.4.orig/wscript semantik-0.7.4/wscript
+--- semantik-0.7.4.orig/wscript	2009-10-12 18:26:26.000000000 +0200
++++ semantik-0.7.4/wscript	2011-06-13 15:05:53.246840006 +0200
+@@ -260,9 +260,6 @@
+ 	opt.add_option('--use64', action='store_true', default=False, help='set the installation into lib+64 (configuration)')
+ 
+ def post_build(bld):
+-	if Options.commands['install']:
+-		try: os.popen('/sbin/ldconfig 2> /dev/null')
+-		except: pass
+ 	if Options.options.exe:
+ 		#os.popen('export LD_LIBRARY_PATH=out/default/:$LD_LIBRARY_PATH; PATH=plugins:$PATH out/default/src/semantik')
+ 		Utils.pproc.Popen('LD_LIBRARY_PATH=out/default/:$LD_LIBRARY_PATH out/default/src/semantik --style plastique', shell=True).wait()

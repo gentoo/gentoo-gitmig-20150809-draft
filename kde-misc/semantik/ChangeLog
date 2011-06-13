@@ -1,0 +1,12 @@
+# ChangeLog for kde-misc/semantik
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.1 2011/06/13 21:53:49 dilfridge Exp $
+
+*semantik-0.7.3_p20091013 (13 Jun 2011)
+
+  13 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +semantik-0.7.3_p20091013.ebuild,
+  +files/semantik-0.7.3_p20091013-wscript_ldconfig.patch, +metadata.xml:
+  New package, bug 185523. Thanks to Harry.TX, Julien Cynober, and all the
+  other people who contributed.
+
