@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871-r1.ebuild,v 1.6 2010/03/31 23:19:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871-r1.ebuild,v 1.7 2011/06/13 01:47:26 sping Exp $
 
 EAPI=2
 inherit versionator linux-info eutils flag-o-matic
@@ -22,7 +22,7 @@ S="${WORKDIR}/${MY_PV}"
 pkg_setup() {
 	linux-info_pkg_setup
 
-	if [ $KV_PATCH -lt 15 ]; then
+	if kernel_is -lt 2 6 16; then
 		die "Sorry, your kernel must be 2.6.16-rc5 or newer!"
 	fi
 

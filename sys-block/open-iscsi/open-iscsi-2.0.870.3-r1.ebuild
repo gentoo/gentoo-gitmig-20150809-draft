@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3-r1.ebuild,v 1.2 2011/04/24 21:04:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3-r1.ebuild,v 1.3 2011/06/13 01:47:26 sping Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -28,7 +28,7 @@ ERROR_CFG="open-iscsi needs CRC32C support in your kernel."
 src_unpack() {
 	unpack ${A}
 	export EPATCH_OPTS="-d${S}"
-	if [ $KV_PATCH -lt 15 ]; then
+	if kernel_is -lt 2 6 16; then
 		die "Sorry, your kernel must be 2.6.16-rc5 or newer!"
 	fi
 	epatch "${FILESDIR}"/CVE-2009-1297.patch
