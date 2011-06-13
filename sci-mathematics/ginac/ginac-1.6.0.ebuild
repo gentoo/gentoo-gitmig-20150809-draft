@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.7.ebuild,v 1.3 2011/04/25 15:05:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.6.0.ebuild,v 1.1 2011/06/13 21:54:19 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 DESCRIPTION="C++ library and tools for symbolic calculations"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.ginac.de/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc static-libs"
 
 RDEPEND=">=sci-libs/cln-1.2.2"
 DEPEND="${RDEPEND}
@@ -25,33 +25,35 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.1-pkgconfig.patch
-	epatch "${FILESDIR}"/${P}-gcc45.patch
+}
+
+src_configure() {
+	econf \
+		--disable-rpath \
+		$(use_enable static-libs static)
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 	if use doc; then
 		export VARTEXFONTS="${T}"/fonts
 		cd "${S}/doc/reference"
 		#pdf generation for reference failed (1.5.1), bug #264774
 		#emake html pdf || die "emake doc reference failed"
-		emake html || die "emake ref failed"
+		emake html
 		cd "${S}/doc/tutorial"
-	   emake ginac.pdf ginac.html || die "emake doc tutorial failed"
+		emake ginac.pdf ginac.html
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README NEWS AUTHORS || die
-
+	default
 	if use doc; then
 		cd doc
 		insinto /usr/share/doc/${PF}
-		newins tutorial/ginac.pdf tutorial.pdf || die "tutorial install failed"
-		#newins reference/ginac.pdf reference.pdf || die "ref install failed"
+		newins tutorial/ginac.pdf tutorial.pdf
 		insinto /usr/share/doc/${PF}/html/reference
-		doins -r reference/html_files/* || die
+		doins -r reference/html_files/*
 		insinto /usr/share/doc/${PF}/html
 		newins tutorial/ginac.html tutorial.html
 		insinto /usr/share/doc/${PF}/examples

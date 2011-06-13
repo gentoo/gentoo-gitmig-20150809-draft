@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.50 2011/04/26 08:46:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.51 2011/06/13 21:54:19 bicatali Exp $
+
+*ginac-1.6.0 (13 Jun 2011)
+
+  13 Jun 2011; Sébastien Fabbro <bicatali@gentoo.org> -ginac-1.5.7.ebuild,
+  -files/ginac-1.5.7-gcc45.patch, +ginac-1.6.0.ebuild:
+  Version bump. Switched to EAPI4. Added static-libs flag
 
   26 Apr 2011; Markos Chandras <hwoarang@gentoo.org> ginac-1.5.8.ebuild:
   Stable on amd64 wrt bug #360605
