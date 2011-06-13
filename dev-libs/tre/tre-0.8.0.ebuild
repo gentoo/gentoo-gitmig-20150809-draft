@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.17 2011/06/13 12:29:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.18 2011/06/13 12:35:46 jlec Exp $
 
 EAPI=3
 
@@ -33,7 +33,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-python.patch
+	epatch \
+		"${FILESDIR}"/${PV}-python.patch \
+		"${FILESDIR}"/${PV}-pkgcfg.patch
 }
 
 src_configure() {
