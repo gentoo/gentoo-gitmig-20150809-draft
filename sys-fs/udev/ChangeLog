@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.592 2011/06/11 12:05:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.593 2011/06/13 20:15:44 williamh Exp $
+
+  13 Jun 2011; William Hubbs <williamh@gentoo.org> udev-171-r1.ebuild,
+  udev-9999.ebuild:
+  Update glibc requirement to 2.10 for bug #370691.
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> udev-164-r2.ebuild:
   arm stable, bug #352827
