@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>qt</herd>
   <herd>video</herd>
-  <maintainer>
-    <email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
-  </maintainer>
   <use>
     <flag name='aften'>Enable A/52 (AC-3) audio encoder support</flag>
     <flag name='amr'>Enable Adaptive Multi-Rate format support through
