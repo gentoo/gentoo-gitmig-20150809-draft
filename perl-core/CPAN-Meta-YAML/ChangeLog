@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CPAN-Meta-YAML
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.8 2011/05/21 06:44:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.9 2011/06/13 00:39:45 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org> CPAN-Meta-YAML-0.3.0.ebuild:
+  Added ~mips, bug 357599
 
 *CPAN-Meta-YAML-0.3.0 (21 May 2011)
 
