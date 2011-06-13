@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r8.ebuild,v 1.7 2011/03/20 11:45:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r8.ebuild,v 1.8 2011/06/13 12:38:33 jlec Exp $
 
 EAPI="3"
 
@@ -50,6 +50,7 @@ src_configure() {
 	# bug 167934
 	append-flags -fPIC
 
+	LC_ALL=C \
 	econf \
 		--x-includes="${EPREFIX}/usr/include" \
 		--x-libraries="${EPREFIX}/usr/$(get_libdir)" \

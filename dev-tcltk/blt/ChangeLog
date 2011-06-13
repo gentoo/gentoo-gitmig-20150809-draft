@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.41 2011/03/20 11:45:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.42 2011/06/13 12:38:33 jlec Exp $
+
+  13 Jun 2011; Justin Lecher <jlec@gentoo.org> blt-2.4z-r8.ebuild:
+  Fix compilation under et_EE locale, #367539
 
   20 Mar 2011; Raúl Porcel <armin76@gentoo.org> blt-2.4z-r8.ebuild:
   Add ~ia64/~s390/~sh wrt #355373
