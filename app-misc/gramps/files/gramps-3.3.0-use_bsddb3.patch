@@ -1,0 +1,11 @@
+--- src/config.py.orig	2011-06-12 20:21:57.440733545 +0200
++++ src/config.py	2011-06-12 20:22:22.945653970 +0200
+@@ -292,7 +292,7 @@
+ register('preferences.use-last-view', True)
+ register('preferences.last-view', '')
+ register('preferences.last-views', [])
+-register('preferences.use-bsddb3', False)
++register('preferences.use-bsddb3', True)
+ 
+ register('researcher.researcher-addr', '')
+ register('researcher.researcher-locality', '')
