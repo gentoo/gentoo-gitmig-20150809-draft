@@ -1,21 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.5 2011/03/02 13:44:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.6 2011/06/13 11:42:21 jlec Exp $
 
-EAPI=2
+EAPI=4
+
 inherit eutils autotools
 
 DESCRIPTION="A very fast real-time fractal zoomer"
 HOMEPAGE="http://xaos.sf.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/${PN}.png.tar
+	mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="aalib doc -gtk nls png svga threads X"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="
 	sci-libs/gsl
+	sys-libs/zlib
 	aalib? ( media-libs/aalib )
 	gtk? ( x11-libs/gtk+:2 )
 	png? ( media-libs/libpng )
@@ -25,15 +29,18 @@ RDEPEND="sys-libs/zlib
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( virtual/latex-base
+	doc? (
+		virtual/latex-base
 		dev-texlive/texlive-texinfo )
-	X? ( x11-proto/xf86vidmodeproto
-		 x11-proto/xextproto
-		 x11-proto/xproto )"
+	X? (
+		x11-proto/xf86vidmodeproto
+		x11-proto/xextproto
+		x11-proto/xproto )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.4-png.patch
-	epatch "${FILESDIR}"/${PN}-3.4-include.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.4-png.patch \
+		"${FILESDIR}"/${PN}-3.4-include.patch
 	sed -i -e 's/-s//' Makefile.in
 	eautoreconf
 }
@@ -53,27 +60,26 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	default
 	if use doc; then
 		cd "${S}"/doc
-		emake xaos.dvi || die
+		emake xaos.dvi
 		dvipdf xaos.dvi || die
 		cd "${S}"/help
-		emake html || die
+		emake html
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog* NEWS README AUTHORS
+	default
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins doc/xaos.pdf || die
-		dohtml -r help/* || die
+		doins doc/xaos.pdf
+		dohtml -r help/*
 	fi
 	local driver="x11"
 	use gtk && driver="\"GTK+ Driver\""
 	make_desktop_entry "xaos -driver ${driver}" "XaoS Fractal Zoomer" \
 		xaos "Application;Education;Math;Graphics;"
-	doicon "${FILESDIR}"/${PN}.png || die
+	doicon "${WORKDIR}"/${PN}.png
 }

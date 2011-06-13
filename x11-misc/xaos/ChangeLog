@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.37 2011/03/02 13:44:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.38 2011/06/13 11:42:21 jlec Exp $
+
+  13 Jun 2011; Justin Lecher <jlec@gentoo.org> xaos-3.2.ebuild,
+  xaos-3.4-r1.ebuild, xaos-3.5-r1.ebuild, -files/xaos.png:
+  No binaryfiles in VCS please, #370871
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> xaos-3.4-r1.ebuild,
   xaos-3.5-r1.ebuild:

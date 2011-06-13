@@ -1,22 +1,22 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.7 2008/07/31 22:36:54 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.8 2011/06/13 11:42:21 jlec Exp $
 
 inherit eutils
-
-IUSE="X svga aalib nls"
 
 MY_PN=XaoS
 MY_P=${MY_PN}-${PV}
 
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="A very fast real-time fractal zoomer"
 HOMEPAGE="http://sourceforge.net/projects/xaos/"
-SRC_URI="mirror://sourceforge/xaos/${MY_P}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/${PN}.png.tar
+	mirror://sourceforge/xaos/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
+IUSE="X svga aalib nls"
 
 RDEPEND="X? (
 				(
@@ -42,6 +42,8 @@ DEPEND="${RDEPEND}
 				x11-proto/xproto
 				)
 			)"
+
+S="${WORKDIR}"/${MY_P}
 
 src_compile() {
 	local myconf

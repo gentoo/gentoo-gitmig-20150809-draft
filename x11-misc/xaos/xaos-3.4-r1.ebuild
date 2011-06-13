@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.4-r1.ebuild,v 1.2 2011/03/02 13:44:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.4-r1.ebuild,v 1.3 2011/06/13 11:42:21 jlec Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -10,7 +10,9 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="A very fast real-time fractal zoomer"
 HOMEPAGE="http://xaos.sf.net/"
-SRC_URI="mirror://sourceforge/xaos/${MY_P}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/${PN}.png.tar
+	mirror://sourceforge/xaos/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -89,5 +91,5 @@ src_install() {
 	use gtk && driver="\"GTK+ Driver\""
 	make_desktop_entry "xaos -driver ${driver}" "XaoS Fractal Zoomer" \
 		xaos "Application;Education;Math;Graphics;"
-	doicon "${FILESDIR}"/${PN}.png
+	doicon "${WORKDIR}"/${PN}.png
 }
