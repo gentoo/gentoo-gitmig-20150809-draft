@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.4.0-r1.ebuild,v 1.6 2011/03/22 20:10:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.4.0-r1.ebuild,v 1.7 2011/06/13 15:26:47 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -15,6 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="test"
+
+# Tests failing, see upstream: https://bugs.freedesktop.org/34577
+RESTRICT="test"
 
 RDEPEND=">=net-im/pidgin-2.6
 	>=net-libs/telepathy-glib-0.9.2
