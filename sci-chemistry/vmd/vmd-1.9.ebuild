@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.3 2011/03/27 11:02:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.4 2011/06/13 12:25:25 jlec Exp $
 
 EAPI="3"
 
@@ -55,6 +55,8 @@ QA_DT_HASH_x86="usr/lib/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
 pkg_nofetch() {
 	elog "Please download ${A} from"
 	elog "${VMD_DOWNLOAD}"
+	elog "and"
+	elog "http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo-patches.tar.xz"
 	elog "after agreeing to the license and then move it to "
 	elog "${DISTDIR}"
 }
