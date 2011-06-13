@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.124 2011/06/12 11:43:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.125 2011/06/13 09:53:39 eras Exp $
+
+  13 Jun 2011; Eray Aslan <eras@gentoo.org> -uw-imap-2007e.ebuild:
+  Remove vulnerable version
 
   12 Jun 2011; Raúl Porcel <armin76@gentoo.org> uw-imap-2007e-r1.ebuild:
   alpha/ia64/sparc stable wrt #235227
