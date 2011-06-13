@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.3.ebuild,v 1.15 2011/04/07 05:50:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.3.ebuild,v 1.16 2011/06/13 23:44:13 flameeyes Exp $
 
 EAPI="3"
 
-inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use autotools
+inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use
 
 MY_PN="Linux-PAM"
 MY_P="${MY_PN}-${PV}"
