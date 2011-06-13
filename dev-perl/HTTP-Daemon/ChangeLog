@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.5 2011/05/15 18:37:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.6 2011/06/13 00:05:12 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org> HTTP-Daemon-6.0.0.ebuild:
+  Added ~mips, bug 358079
 
   15 May 2011; Raúl Porcel <armin76@gentoo.org> HTTP-Daemon-6.0.0.ebuild:
   Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #358079

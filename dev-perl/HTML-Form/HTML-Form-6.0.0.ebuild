@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/HTML-Form-6.0.0.ebuild,v 1.2 2011/05/15 18:39:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/HTML-Form-6.0.0.ebuild,v 1.3 2011/06/13 00:06:21 mattst88 Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Class that represents an HTML form element"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~m68k ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~m68k ~mips ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 RDEPEND="

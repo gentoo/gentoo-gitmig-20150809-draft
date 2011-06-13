@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/LWP-MediaTypes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.5 2011/05/15 17:46:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.6 2011/06/13 00:02:43 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org> LWP-MediaTypes-6.10.0.ebuild:
+  Added ~mips, bug 358079
 
   15 May 2011; Raúl Porcel <armin76@gentoo.org> LWP-MediaTypes-6.10.0.ebuild:
   Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #358079
