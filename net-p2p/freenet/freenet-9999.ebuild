@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.15 2011/05/07 13:09:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.16 2011/06/13 13:00:27 tommy Exp $
 
 EAPI="2"
-DATE=20110506
+DATE=20110611
 JAVA_PKG_IUSE="doc source"
 
 EGIT_REPO_URI="git://github.com/freenet/fred-official.git"
@@ -30,11 +30,11 @@ CDEPEND="dev-db/db-je:3.3
 	dev-java/lzma
 	dev-java/lzmajio
 	dev-java/mersennetwister"
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 	${CDEPEND}
 	test? ( dev-java/junit )
 	dev-java/ant-core"
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.6
 	net-libs/nativebiginteger
 	${CDEPEND}"
 PDEPEND="net-libs/NativeThread
