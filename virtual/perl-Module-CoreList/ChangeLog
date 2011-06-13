@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-CoreList
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.37 2011/05/14 22:20:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.38 2011/06/13 02:02:11 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org>
+  perl-Module-CoreList-2.490.0.ebuild:
+  Added ~mips, bug 351526
 
 *perl-Module-CoreList-2.490.0 (14 May 2011)
 
