@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12832 2011/06/13 11:41:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12833 2011/06/13 11:49:45 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <fauli@gentoo.org> (13 Jun 2011)
+# Will update the database, give it one or two minor versions to
+# settle the migration code
+>=app-misc/gramps-3.3.0
 
 # Michal Januszewski <spock@gentoo.org> (12 Jun 2011)
 # Masked for removal in 30 days. The profiler is now provided by
