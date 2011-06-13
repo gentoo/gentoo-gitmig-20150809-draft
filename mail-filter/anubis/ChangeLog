@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/anubis
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.14 2010/06/17 21:35:44 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.15 2011/06/13 18:07:56 eras Exp $
+
+*anubis-4.1.1 (13 Jun 2011)
+
+  13 Jun 2011; Eray Aslan <eras@gentoo.org> +files/4.1.1-gnutls.patch,
+  +files/4.1.1-gpgme.patch, +files/4.1.1-testsuite.patch, +anubis-4.1.1.ebuild:
+  Version bump - bug #253193. Correct pam.d file - bug #210818. Do not abuse
+  ROOT - bug #258110.
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> anubis-3.9.95.ebuild:
   Migrating away from deprecated postgres virtuals

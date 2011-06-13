@@ -1,0 +1,22 @@
+--- configure.ac	2011-06-13 19:40:37.856822010 +0300
++++ configure.ac	2011-06-13 19:43:27.000000000 +0300
+@@ -149,10 +149,18 @@
+    AC_MSG_CHECKING(for $1/include/gpgme.h)
+    AC_MSG_RESULT([yes])
+    return 0
++  else
++   if test -f "$1/include/gpgme/gpgme.h"; then
++    gpgmedir=1
++    INCLUDES="$INCLUDES -I$1/include/gpgme"
++    AC_MSG_CHECKING(for $1/include/gpgme/gpgme.h)
++    AC_MSG_RESULT([yes])
++    return 0
++   fi
+   fi
+   return 1
+  }
+- for maindir in /usr/pkg /opt /sw; do
++ for maindir in /usr/pkg /opt /sw /usr; do
+   findgpgmedir $maindir && break 2
+  done
+  if test $gpgmedir; then
