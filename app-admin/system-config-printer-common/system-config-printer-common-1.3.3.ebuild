@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.2.6.ebuild,v 1.3 2011/02/23 17:04:46 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.3.ebuild,v 1.1 2011/06/13 20:24:58 reavertm Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ MY_P="${PN%-common}-${PV}"
 
 DESCRIPTION="Common modules of Red Hat's printer administration tool"
 HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
-SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.2/${MY_P}.tar.xz"
+SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.3/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
@@ -50,7 +50,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.2.6-split.patch"
+	epatch "${FILESDIR}/${PN}-1.3.3-split.patch"
 
 	eautoreconf
 }

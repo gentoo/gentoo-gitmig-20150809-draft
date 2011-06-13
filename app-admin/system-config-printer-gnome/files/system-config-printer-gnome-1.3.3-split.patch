@@ -1,7 +1,9 @@
-diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
---- system-config-printer-1.2.6/Makefile.am	2011-01-14 17:04:25.000000000 +0100
-+++ new/Makefile.am	2011-01-27 02:07:03.255000001 +0100
-@@ -2,77 +2,8 @@
+diff -ruN system-config-printer-1.3.3/Makefile.am my/Makefile.am
+--- system-config-printer-1.3.3/Makefile.am	2011-03-16 17:44:41.000000000 +0100
++++ my/Makefile.am	2011-03-19 01:03:54.708000002 +0100
+@@ -1,90 +1,9 @@
+-AM_CFLAGS=-g -O2 -Wall $(GLIB_CFLAGS)
++AM_CFLAGS=-Wall $(GLIB_CFLAGS)
  
  SUBDIRS=po
  
@@ -10,7 +12,11 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
 -	cupshelpers/cupshelpers.py		\
 -	cupshelpers/installdriver.py		\
 -	cupshelpers/ppds.py			\
--	cupshelpers/openprinting.py
+-	cupshelpers/openprinting.py		\
+-	cupshelpers/xmldriverprefs.py
+-
+-EXPORT_MODULES_GEN=				\
+-	cupshelpers/config.py
 -
 -### Automake hooks for Distutils.
 -# The distutils module doesn't understand srcdir != builddir,
@@ -19,7 +25,7 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
 -.stamp-distutils-in-builddir:	setup.py $(EXPORT_MODULES)
 -	if [ "$(top_srcdir)" != "$(top_builddir)" ]; then	\
 -		cp $(top_srcdir)/setup.py .;			\
--		mkdir cupshelpers;				\
+-		$(mkdir_p) cupshelpers;				\
 -		for file in $(EXPORT_MODULES); do		\
 -			cp $(top_srcdir)/$$file $$file;		\
 -		done;						\
@@ -45,8 +51,15 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
 -	  -e "s|\@PACKAGE\@|$(PACKAGE)|" \
 -	  $< > $@
 -
+-cupshelpers/config.py: cupshelpers/config.py.in Makefile
+-	$(mkdir_p) cupshelpers
+-	sed \
+-	  -e "s|\@prefix\@|$(prefix)|" \
+-	  -e "s|\@sysconfdir\@|$(sysconfdir)|" \
+-	  $< > $@
+-
 -# Use distutils to build the module.
--all-local: .stamp-distutils-in-builddir config.py
+-all-local: .stamp-distutils-in-builddir config.py cupshelpers/config.py
 -	$(PYTHON) setup.py build
 -
 -# Use distutils to install the module.
@@ -58,8 +71,8 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
 -# doesn't provide a way to do this itself.
 -uninstall-local:
 -	rm -f $(DESTDIR)/$(pythondir)/cupshelpers*.egg-info
--	for file in $(EXPORT_MODULES); do				\
--		rm -f $(DESTDIR)/$(pythondir)/$$file*;			\
+-	for file in $(EXPORT_MODULES) $(EXPORT_MODULES_GEN); do	\
+-		rm -f $(DESTDIR)/$(pythondir)/$$file*;		\
 -	done
 -
 -# Tell distutils to clean up.
@@ -67,7 +80,8 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
 -	-$(PYTHON) setup.py clean --all
 -	if [ "$(top_srcdir)" != "$(top_builddir)" ]; then	\
 -		rm -f setup.py;					\
--		for file in $(EXPORT_MODULES); do		\
+-		for file in $(EXPORT_MODULES)			\
+-			$(EXPORT_MODULES_GEN); do		\
 -			rm -f $$file*;				\
 -		done;						\
 -	fi
@@ -76,10 +90,10 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
  nobase_pkgdata_SCRIPTS=				\
  	check-device-ids.py			\
 -	pysmb.py				\
+ 	scp-dbus-service.py			\
  	system-config-printer.py		\
  	troubleshoot/__init__.py		\
- 	applet.py
-@@ -83,35 +14,22 @@
+@@ -95,39 +14,26 @@
  	asyncipp.py					\
  	asyncpk1.py					\
  	authconn.py					\
@@ -98,26 +112,30 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
 -	installpackage.py				\
  	jobviewer.py					\
 -	monitor.py					\
+ 	newprinter.py					\
  	options.py					\
  	optionwidgets.py				\
 -	PhysicalDevice.py				\
+ 	ppdcache.py					\
 -	ppdippstr.py					\
  	ppdsloader.py					\
+ 	printerproperties.py				\
 -	probe_printer.py				\
  	gtk_label_autowrap.py				\
 -	SearchCriterion.py				\
+ 	serversettings.py				\
 -	smburi.py					\
 -	statereason.py					\
  	timedops.py					\
  	ToolbarSearchEntry.py				\
  	userdefault.py					\
 -	XmlHelper.py					\
- 	ui/AboutDialog.glade				\
- 	ui/ConnectDialog.glade				\
- 	ui/ConnectingDialog.glade			\
-@@ -156,28 +74,10 @@
- 	system-config-printer			\
- 	system-config-printer-applet
+ 	ui/AboutDialog.ui				\
+ 	ui/ConnectDialog.ui				\
+ 	ui/ConnectingDialog.ui			\
+@@ -180,28 +86,10 @@
+ 	system-config-printer-applet		\
+ 	dbus/scp-dbus-service
  
 -if UDEV_RULES
 -udevrulesdir=$(sysconfdir)/udev/rules.d
@@ -137,10 +155,10 @@ diff -ru system-config-printer-1.2.6/Makefile.am new/Makefile.am
  	man/system-config-printer-applet.1
  
 -dbus_DATA =					\
--	newprinternotification.conf		\
--	printerdriversinstaller.conf
+-	dbus/com.redhat.NewPrinterNotification.conf		\
+-	dbus/com.redhat.PrinterDriversInstaller.conf
 -dbusdir = $(sysconfdir)/dbus-1/system.d/
 -
- desktop_DATA =\
- 	system-config-printer.desktop \
- 	print-applet.desktop \
+ dbusinterfaces_DATA =				\
+ 	dbus/org.fedoraproject.Config.Printing.xml
+ dbusinterfacesdir = $(datadir)/dbus-1/interfaces/
