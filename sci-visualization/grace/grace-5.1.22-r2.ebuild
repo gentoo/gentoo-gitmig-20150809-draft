@@ -1,29 +1,32 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.6 2011/06/08 15:14:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.7 2011/06/13 11:33:59 jlec Exp $
 
-EAPI=3
+EAPI=4
+
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Motif based XY-plotting tool"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
-SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/${PN}.png.tar
+	ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="fortran fftw jpeg netcdf png"
 
-DEPEND=">=x11-libs/openmotif-2.3:0
-	sys-libs/zlib
+DEPEND="
 	media-libs/t1lib
 	media-libs/tiff
+	sys-libs/zlib
+	>=x11-libs/openmotif-2.3:0
 	x11-libs/xbae
 	fftw? ( sci-libs/fftw:2.1 )
+	jpeg? ( virtual/jpeg )
 	netcdf? ( sci-libs/netcdf )
-	png? ( media-libs/libpng )
-	jpeg? ( virtual/jpeg )"
-
+	png? ( media-libs/libpng )"
 RDEPEND="${DEPEND}
 	x11-misc/xdg-utils"
 
@@ -88,14 +91,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc CHANGES ChangeLog DEVELOPERS README || die
+	default
 
 	dosym ../../${PN}/examples /usr/share/doc/${PF}/examples
 	dosym ../../${PN}/doc /usr/share/doc/${PF}/html
 
 	doman "${ED}"/usr/share/doc/${PF}/html/*.1
 	rm -f "${ED}"/usr/share/doc/${PF}/html/*.1
-	doicon "${FILESDIR}"/${PN}.png || die
+	doicon "${WORKDIR}"/${PN}.png || die
 	make_desktop_entry xmgrace Grace grace
 }

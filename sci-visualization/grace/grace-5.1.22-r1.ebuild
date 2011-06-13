@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.12 2011/06/08 15:14:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.13 2011/06/13 11:33:59 jlec Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Motif based XY-plotting tool"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
-SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/${PN}.png.tar
+	ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
@@ -91,6 +93,6 @@ src_install() {
 
 	doman "${ED}"/usr/share/doc/${PF}/html/*.1
 	rm -f "${ED}"/usr/share/doc/${PF}/html/*.1
-	doicon "${FILESDIR}"/${PN}.png || die "failed installing icon"
+	doicon "${WORKDIR}"/${PN}.png || die "failed installing icon"
 	make_desktop_entry xmgrace Grace grace
 }

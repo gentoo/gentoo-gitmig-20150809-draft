@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.48 2011/06/08 15:14:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.49 2011/06/13 11:33:59 jlec Exp $
+
+  13 Jun 2011; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r1.ebuild,
+  grace-5.1.22-r2.ebuild, -files/grace.png:
+  No binaryfiles in VCS please, #370885
 
   08 Jun 2011; Jeroen Roovers <jer@gentoo.org> grace-5.1.22-r1.ebuild,
   grace-5.1.22-r2.ebuild:
