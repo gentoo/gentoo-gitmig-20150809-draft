@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/365495
+
+--- src/filter/facedetect/facedetect.c
++++ src/filter/facedetect/facedetect.c
+@@ -228,7 +228,7 @@
+       double t = (double)cvGetTickCount();
+       faces = cvHaarDetectObjects( small_img, cascade, storage,
+                                    1.1, 2, 0/*CV_HAAR_DO_CANNY_PRUNING*/,
+-                                   cvSize(30, 30) );
++                                   cvSize(30, 30), cvSize(0, 0) );
+       t = (double)cvGetTickCount() - t;
+       //printf( "detection time = %gms\n", t/((double)cvGetTickFrequency()*1000.) );
+ 
