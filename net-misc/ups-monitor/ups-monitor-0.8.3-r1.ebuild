@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ups-monitor-0.8.3-r1.ebuild,v 1.2 2008/02/25 17:10:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ups-monitor-0.8.3-r1.ebuild,v 1.3 2011/06/13 15:02:40 pacho Exp $
 
 DESCRIPTION="A UPS monitor for NUT (Network UPS Tools)"
 HOMEPAGE="http://rudd-o.com/wp-content/projects/files/ups-monitor"
@@ -12,10 +12,12 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-util/desktop-file-utils"
-RDEPEND=">=dev-python/gnome-python-2
-	>=gnome-base/libglade-2
+RDEPEND=">=gnome-base/libglade-2
 	>=dev-python/pygtk-2.4
-	>=dev-python/pyorbit-2.0.1"
+	>=dev-python/pyorbit-2.0.1
+	dev-python/gnome-python-base
+	dev-python/pygobject
+	dev-python/libgnome-python"
 
 src_unpack() {
 	unpack ${A}

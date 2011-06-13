@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ups-monitor
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ChangeLog,v 1.8 2008/02/25 17:10:46 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ups-monitor/ChangeLog,v 1.9 2011/06/13 15:02:40 pacho Exp $
+
+  13 Jun 2011; Pacho Ramos <pacho@gentoo.org> ups-monitor-0.8.3-r1.ebuild:
+  RDEPEND on splitted python, bug #352934.
 
   25 Feb 2008; <pva@gentoo.org> -ups-monitor-0.8.2.ebuild,
   ups-monitor-0.8.3-r1.ebuild:
