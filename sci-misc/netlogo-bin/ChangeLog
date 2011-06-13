@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/netlogo-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/ChangeLog,v 1.13 2010/05/22 11:00:35 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/ChangeLog,v 1.14 2011/06/13 12:09:37 jlec Exp $
+
+  13 Jun 2011; Justin Lecher <jlec@gentoo.org> netlogo-bin-3.0.2.ebuild,
+  -netlogo-bin-3.1.3.ebuild, -netlogo-bin-3.1.4.ebuild,
+  netlogo-bin-4.0.4.ebuild, -files/netlogo.gif:
+  No binaryfiles in VCS please, #370925
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove humpback from metadata.xml (#34793)

@@ -1,24 +1,26 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-4.0.4.ebuild,v 1.2 2009/12/22 23:58:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-4.0.4.ebuild,v 1.3 2011/06/13 12:09:37 jlec Exp $
 
 inherit eutils java-pkg-2
-#RESTRICT="fetch"
+
 MY_PN="netlogo"
 MY_P=${MY_PN}-${PV}
-DESCRIPTION="NetLogo cross-platform multi-agent programmable modeling environment"
 
+DESCRIPTION="Cross-platform multi-agent programmable modeling environment"
 HOMEPAGE="http://ccl.northwestern.edu/netlogo/"
-SRC_URI="http://ccl.northwestern.edu/netlogo/${PV}/${MY_P}.tar.gz"
+SRC_URI="
+	http://dev.gentoo.org/~jlec/distfiles/${PN/-bin}.gif.tar
+	http://ccl.northwestern.edu/netlogo/${PV}/${MY_P}.tar.gz"
 LICENSE="netlogo"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
+
 DEPEND=""
 RDEPEND=">=virtual/jre-1.5"
 
-IUSE=""
-
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_install() {
 	java-pkg_dojar *.jar
@@ -36,7 +38,7 @@ src_install() {
 	doins -r models/*
 
 	insinto /usr/share/pixmaps
-	doins  "${FILESDIR}"/netlogo.gif
+	doins  "${WORKDIR}"/netlogo.gif
 
 	exeinto /opt/bin
 	newexe "${FILESDIR}"/netlogo.sh netlogo
