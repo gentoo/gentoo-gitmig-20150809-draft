@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rand
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rand/ChangeLog,v 1.3 2011/01/15 11:54:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rand/ChangeLog,v 1.4 2011/06/13 10:13:58 graaff Exp $
+
+*rand-0.9.1 (13 Jun 2011)
+
+  13 Jun 2011; Hans de Graaff <graaff@gentoo.org> rand-0.9.0-r1.ebuild,
+  +rand-0.9.1.ebuild:
+  Version bump. Convert to ruby-fakegem. Add ree18 and jruby. Fix homepage, bug
+  371339.
 
   15 Jan 2011; Hans de Graaff <graaff@gentoo.org> -rand-0.9.0.ebuild:
   Remove old version.
