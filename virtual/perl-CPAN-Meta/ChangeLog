@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-CPAN-Meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.9 2011/05/02 19:35:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.10 2011/06/13 00:45:45 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org>
+  perl-CPAN-Meta-2.110.930.ebuild:
+  Added ~mips, bug 357599
 
   02 May 2011; Fabian Groffen <grobian@gentoo.org>
   perl-CPAN-Meta-2.110.930.ebuild:
