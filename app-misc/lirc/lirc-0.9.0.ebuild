@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0.ebuild,v 1.1 2011/06/02 08:48:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0.ebuild,v 1.2 2011/06/13 12:30:21 fauli Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -49,7 +49,7 @@ IUSE_LIRC_DEVICES_DIRECT="
 	irlink irman irreal it87 ite8709
 	knc_one kworld leadtek_0007 leadtek_0010
 	leadtek_pvr2000 livedrive_midi
-	livedrive_seq logitech macmini mceusb
+	livedrive_seq logitech macmini
 	mediafocusI mouseremote
 	mouseremote_ps2 mp3anywhere mplay nslu2
 	packard_bell parallel pcmak pcmak_usb
@@ -72,7 +72,7 @@ IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 #device-driver which use libusb
 LIBUSB_USED_BY_DEV="
 	all atilibusb awlibusb sasem igorplugusb imon imon_lcd imon_pad
-	imon_rsc streamzap mceusb xboxusb irlink commandir"
+	imon_rsc streamzap xboxusb irlink commandir"
 
 for dev in ${LIBUSB_USED_BY_DEV}; do
 	DEPEND="${DEPEND} lirc_devices_${dev}? ( dev-libs/libusb )"
@@ -122,10 +122,10 @@ add_device() {
 
 pkg_setup() {
 
-	if use lirc_devices_mceusb2
+	if use lirc_devices_mceusb2 || use lirc_devices_mceusb
 	then
-		ewarn "The mceusb2 driver has been merged into the mceusb."
-		ewarn "Please only use the latter now."
+		ewarn "The mceusb2 and mceusb drivers have been merged into the mainline kernel"
+		ewarn "Please only use the latter now and the userspace driver"
 	fi
 
 	ewarn "If your LIRC device requires modules, you'll need MODULE_UNLOAD"

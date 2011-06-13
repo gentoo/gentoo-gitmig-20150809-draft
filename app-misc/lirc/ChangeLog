@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.222 2011/06/02 08:48:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.223 2011/06/13 12:30:21 fauli Exp $
+
+  13 Jun 2011; Christian Faulhammer <fauli@gentoo.org> lirc-0.9.0.ebuild:
+  mceusb driver has been merged into the kernel, note that
 
 *lirc-0.9.0 (02 Jun 2011)
 
