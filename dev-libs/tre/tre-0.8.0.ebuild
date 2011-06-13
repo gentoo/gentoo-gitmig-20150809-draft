@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.16 2011/03/21 10:54:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/tre-0.8.0.ebuild,v 1.17 2011/06/13 12:29:51 jlec Exp $
 
 EAPI=3
 
@@ -63,7 +63,11 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	mv ${ED}/usr/bin/agrep{,-tre} || die
+
+	local exe_ext=
+	[[ ${CHOST} = *mingw32* ]] && exe_ext=.exe
+	mv "${ED}"/usr/bin/agrep{,-tre}${exe_ext} || die
+
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
 	dohtml doc/*.{css,html} || die
 	use python && distutils_src_install
