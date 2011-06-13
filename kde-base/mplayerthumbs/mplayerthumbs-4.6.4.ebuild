@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/mplayerthumbs-4.6.4.ebuild,v 1.1 2011/06/10 17:59:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/mplayerthumbs-4.6.4.ebuild,v 1.2 2011/06/13 11:14:37 dilfridge Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kde-apps.org/content/show.php?content=41180"
 LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug mplayer"
+IUSE="debug"
 
 RDEPEND="
 	!media-video/mplayerthumbs
@@ -20,7 +20,6 @@ RDEPEND="
 		$(add_kdebase_dep dolphin)
 		$(add_kdebase_dep konqueror)
 	)
-	mplayer? ( media-video/mplayer )
 "
 
 src_configure() {

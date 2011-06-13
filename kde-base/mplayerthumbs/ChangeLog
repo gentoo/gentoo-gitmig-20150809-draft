@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.57 2011/06/10 17:59:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.58 2011/06/13 11:14:37 dilfridge Exp $
+
+  13 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  mplayerthumbs-4.6.4.ebuild:
+  Remove mplayer useflag as it only adds a dependency
 
 *mplayerthumbs-4.6.4 (10 Jun 2011)
 
