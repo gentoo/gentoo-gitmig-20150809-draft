@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.7 2011/05/18 16:15:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.8 2011/06/13 00:23:14 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org>
+  perl-Version-Requirements-0.101.20-r1.ebuild:
+  Added ~mips, bug 357599
 
 *perl-Version-Requirements-0.101.20-r1 (18 May 2011)
 
