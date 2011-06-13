@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.78 2011/06/08 13:13:16 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.79 2011/06/13 16:56:43 c1pher Exp $
+
+*loop-aes-3.6c (13 Jun 2011)
+
+  13 Jun 2011; Dane Smith <c1pher@gentoo.org> -loop-aes-3.5b.ebuild,
+  -loop-aes-3.6a.ebuild, loop-aes-3.6b.ebuild, loop-aes-3.6b-r1.ebuild,
+  +loop-aes-3.6c.ebuild, -files/loop-AES-v3.5b-20101231.diff:
+  *Change DEPEND in 3.6b[-r1] to require +loop-aes in util-linux.
+  Fixes bug 370635.
+  *Add new version 3.6c.
+  *Remove old versions / patches.
+  *Add myself to metadata that way I actually get CC'd on bugs.
 
 *loop-aes-3.6b-r1 (08 Jun 2011)
 

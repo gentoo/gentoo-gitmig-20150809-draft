@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6b-r1.ebuild,v 1.1 2011/06/08 13:13:16 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6b-r1.ebuild,v 1.2 2011/06/13 16:56:43 c1pher Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE="aes-ni extra-ciphers keyscrub padlock"
 
-DEPEND="|| ( >=sys-apps/util-linux-2.12r[crypt] >=sys-apps/util-linux-2.12r[loop-aes] )"
+DEPEND=">=sys-apps/util-linux-2.12r[crypt,loop-aes]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

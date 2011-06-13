@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.5b.ebuild,v 1.5 2011/01/08 21:34:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6c.ebuild,v 1.1 2011/06/13 16:56:43 c1pher Exp $
 
 EAPI="3"
 
-inherit eutils linux-mod
+inherit linux-mod
 
 MY_P="${PN/aes/AES}-v${PV}"
 
@@ -14,10 +14,10 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ppc ~sparc x86"
-IUSE="extra-ciphers keyscrub padlock"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+IUSE="aes-ni extra-ciphers keyscrub padlock"
 
-DEPEND="|| ( >=sys-apps/util-linux-2.12r[crypt] >=sys-apps/util-linux-2.12r[loop-aes] )"
+DEPEND=">=sys-apps/util-linux-2.12r[crypt,loop-aes]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -33,6 +33,7 @@ pkg_setup() {
 		LINUX_SOURCE=\"${KERNEL_DIR}\" \
 		KBUILD_OUTPUT=\"${KBUILD_OUTPUT}\" \
 		USE_KBUILD=y MODINST=n RUNDM=n"
+	use aes-ni && BUILD_PARAMS="${BUILD_PARAMS} INTELAES=y"
 	use keyscrub && BUILD_PARAMS="${BUILD_PARAMS} KEYSCRUB=y"
 	use padlock && BUILD_PARAMS="${BUILD_PARAMS} PADLOCK=y"
 
@@ -47,9 +48,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e 's/make/$(MAKE)/g' -i Makefile || die "sed failed"
-
-	# http://loop-aes.sourceforge.net/updates/loop-AES-v3.5b-20101231.diff.bz2
-	epatch "${FILESDIR}/loop-AES-v3.5b-20101231.diff"
 }
 
 src_install() {
@@ -66,5 +64,10 @@ pkg_postinst() {
 	einfo
 	einfo "For more instructions take a look at examples in README at:"
 	einfo "'${EPREFIX}/usr/share/doc/${PF}'"
+	einfo
+	einfo "If you have a newer Intel processor (i5, i7), and you use AES"
+	einfo "you may want to consider using the aes-ni use flag. It will"
+	einfo "use your processors native AES instructions giving quite a speed"
+	einfo "increase."
 	einfo
 }
