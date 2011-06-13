@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/allison-2.0.3-r1.ebuild,v 1.2 2011/02/28 16:08:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/allison-2.0.3-r1.ebuild,v 1.3 2011/06/13 09:37:20 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="cache"
 inherit ruby-fakegem
 
 DESCRIPTION="A modern, pretty RDoc template."
-HOMEPAGE="http://blog.evanweaver.com/files/doc/fauna/allison/files/README.html"
+HOMEPAGE="http://fauna.github.com/fauna/allison/files/README.html"
 
 LICENSE="AFL-3.0"
 SLOT="0"
