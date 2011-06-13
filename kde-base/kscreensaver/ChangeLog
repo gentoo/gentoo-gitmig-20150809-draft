@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.184 2011/06/10 21:30:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.185 2011/06/13 20:38:26 dilfridge Exp $
+
+  13 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kscreensaver-4.6.4.ebuild, +files/kscreensaver-4.6.4-xf86misc.patch:
+  Fix automagic dependency on libXxf86misc, bug 358655
 
   10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
   Remanifest as tarball was changed

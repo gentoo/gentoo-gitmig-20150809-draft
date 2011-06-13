@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-4.6.4.ebuild,v 1.1 2011/06/10 17:59:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-4.6.4.ebuild,v 1.2 2011/06/13 20:38:26 dilfridge Exp $
 
 EAPI=4
 
@@ -25,13 +25,17 @@ DEPEND="${RDEPEND}
 	x11-proto/randrproto
 "
 
-PATCHES=( "${FILESDIR}/kdebase-4.0.2-pam-optional.patch"
-	"${FILESDIR}/${PN}-4.5.95-nsfw.patch" )
+PATCHES=(
+	"${FILESDIR}/kdebase-4.0.2-pam-optional.patch"
+	"${FILESDIR}/${PN}-4.5.95-nsfw.patch" 
+	"${FILESDIR}/${PN}-4.6.4-xf86misc.patch" 
+)
 
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with pam)
+		-DHAVE_XF86MISC=0
 	)
 
 	kde4-meta_src_configure
