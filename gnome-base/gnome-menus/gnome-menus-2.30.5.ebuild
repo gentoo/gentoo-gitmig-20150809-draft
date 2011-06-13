@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.5.ebuild,v 1.6 2011/03/22 19:10:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.30.5.ebuild,v 1.7 2011/06/13 16:16:51 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -77,6 +77,8 @@ src_install() {
 
 	exeinto /etc/X11/xinit/xinitrc.d/
 	doexe "${FILESDIR}/10-xdg-menu-gnome" || die "doexe failed"
+
+	python_convert_shebangs -r 2 "${ED}"usr/bin/gmenu-simple-editor
 }
 
 pkg_postinst() {
