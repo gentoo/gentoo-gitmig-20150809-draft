@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.1 2011/06/12 22:37:21 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4_rc2-r1.ebuild,v 1.2 2011/06/13 15:01:35 mr_bones_ Exp $
 
 EAPI=2
 
@@ -50,7 +50,7 @@ src_prepare() {
 		-e 's,\(.*=\ *\)"@WRAPPER_[A-Z]*FLAGS@",\1"",' \
 		src/env/*.in || die
 
-	# 369263 and 1044, 1500 upstream.   
+	# 369263 and 1044, 1500 upstream.
 	epatch "${FILESDIR}"/fix-pkg-config-files.patch
 	AT_M4DIR="${S}"/confdb eautoreconf || die
 }
