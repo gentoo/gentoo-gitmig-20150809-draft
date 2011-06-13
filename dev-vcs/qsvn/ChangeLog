@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qsvn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/ChangeLog,v 1.4 2010/06/22 18:50:23 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/ChangeLog,v 1.5 2011/06/13 15:05:25 hwoarang Exp $
+
+  13 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml
 
   22 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   qsvn-0.8.3.ebuild:
