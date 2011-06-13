@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.39 2011/05/02 16:26:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.40 2011/06/13 04:01:55 mattst88 Exp $
+
+  13 Jun 2011; Matt Turner <mattst88@gentoo.org> nettle-2.1.ebuild:
+  Added ~mips, bug 337367
 
   02 May 2011; Samuli Suominen <ssuominen@gentoo.org> nettle-2.1.ebuild:
   ppc64 stable wrt #337160
