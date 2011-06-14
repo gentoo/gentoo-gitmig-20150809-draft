@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.459 2011/04/11 23:11:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.460 2011/06/14 20:28:20 mattst88 Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -151,11 +151,6 @@ else
 
 		if tc_version_is_at_least 3 ; then
 			IUSE+=" bootstrap doc gcj gtk hardened libffi multilib objc"
-
-			# gcc-{nios2,bfin} don't accept these
-			if [[ ${PN} == "gcc" ]] ; then
-				IUSE+=" n32 n64"
-			fi
 
 			tc_version_is_at_least "4.0" && IUSE+=" objc-gc mudflap"
 			tc_version_is_at_least "4.1" && IUSE+=" objc++"
@@ -787,27 +782,6 @@ gcc_pkg_setup() {
 	[[ -z ${ETYPE} ]] && die "Your ebuild needs to set the ETYPE variable"
 
 	if [[ ${ETYPE} == "gcc-compiler" ]] ; then
-		case $(tc-arch) in
-		mips)
-			# Must compile for mips64-linux target if we want n32/n64 support
-			case "${CTARGET}" in
-				mips64*) ;;
-				*)
-					if use n32 || use n64; then
-						eerror "n32/n64 can only be used when target host is mips64*-*-linux-*";
-						die "Invalid USE flags for CTARGET ($CTARGET)";
-					fi
-				;;
-			esac
-
-			#cannot have both n32 & n64 without multilib
-			if use n32 && use n64 && ! is_multilib; then
-				eerror "Please enable multilib if you want to use both n32 & n64";
-				die "Invalid USE flag combination";
-			fi
-		;;
-		esac
-
 		# Setup variables which would normally be in the profile
 		if is_crosscompile ; then
 			multilib_env ${CTARGET}
@@ -1234,8 +1208,8 @@ gcc-compiler-configure() {
 		# Add --with-abi flags to set default MIPS ABI
 		mips)
 			local mips_abi=""
-			use n64 && mips_abi="--with-abi=64"
-			use n32 && mips_abi="--with-abi=n32"
+			[[ ${DEFAULT_ABI} == n64 ]] && mips_abi="--with-abi=64"
+			[[ ${DEFAULT_ABI} == n32 ]] && mips_abi="--with-abi=n32"
 			[[ -n ${mips_abi} ]] && confgcc="${confgcc} ${mips_abi}"
 			;;
 		# Default arch for x86 is normally i386, lets give it a bump
