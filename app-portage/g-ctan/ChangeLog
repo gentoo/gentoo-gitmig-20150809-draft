@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-ctan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.17 2010/11/15 12:38:51 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.18 2011/06/14 03:32:00 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> g-ctan-2010.1.ebuild:
+  Added ~mips, bug 342513
 
   15 Nov 2010; Christian Faulhammer <fauli@gentoo.org>
   -g-ctan-2009.2.ebuild:
