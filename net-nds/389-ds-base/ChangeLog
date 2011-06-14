@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/389-ds-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.16 2011/06/14 18:28:08 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/ChangeLog,v 1.17 2011/06/14 19:02:24 lxnay Exp $
+
+*389-ds-base-1.2.8.3 (14 Jun 2011)
+
+  14 Jun 2011; Fabio Erculiani <lxnay@gentoo.org> +389-ds-base-1.2.8.3.ebuild,
+  -389-ds-base-1.2.8.2.ebuild:
+  version bump
 
 *389-ds-base-1.2.8.2 (14 Jun 2011)
 

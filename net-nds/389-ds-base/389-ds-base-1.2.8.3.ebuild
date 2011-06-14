@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.8.2.ebuild,v 1.1 2011/06/14 18:28:08 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.8.3.ebuild,v 1.1 2011/06/14 19:02:24 lxnay Exp $
 
 EAPI=2
 
