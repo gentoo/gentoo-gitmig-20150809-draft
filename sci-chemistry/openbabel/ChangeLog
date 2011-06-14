@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.53 2011/05/07 09:18:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.54 2011/06/14 18:06:06 jlec Exp $
+
+  14 Jun 2011; Justin Lecher <jlec@gentoo.org>
+  files/openbabel-2.3.0-swig.patch:
+  Fixed empty swig patch, thanks matts88
 
   07 May 2011; Justin Lecher <jlec@gentoo.org> openbabel-2.3.0.ebuild:
   Do not test things which are installed as PDEPEND like openbabel-python
