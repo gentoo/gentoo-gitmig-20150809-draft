@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.16 2007/07/22 07:54:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.17 2011/06/14 11:38:47 pva Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="alpha amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-misc/imake
-		x11-apps/bdftopcf"
+	x11-apps/mkfontdir
+	x11-apps/bdftopcf"
 RDEPEND=""
 
 FONTPATH="/usr/share/fonts/jmk"
@@ -27,13 +28,11 @@ src_unpack() {
 }
 
 src_compile() {
-
 	xmkmf || die
 	emake || die
 }
 
 src_install() {
-
 	make install INSTALL_DIR="${D}${FONTPATH}" || die
 	dodoc README NEWS
 }
