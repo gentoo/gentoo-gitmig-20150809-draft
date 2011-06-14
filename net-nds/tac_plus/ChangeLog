@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/tac_plus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.5 2011/06/06 13:27:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.6 2011/06/14 12:07:35 flameeyes Exp $
+
+*tac_plus-4.0.4.19-r1 (14 Jun 2011)
+
+  14 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +tac_plus-4.0.4.19-r1.ebuild, +files/tac_plus-4.0.4.19-parallelmake.patch:
+  Add patch to fix build with parallel make (bug #371399); version bump with
+  EAPI bump as discussed with Tony.
 
 *tac_plus-4.0.4.19 (06 Jun 2011)
 
