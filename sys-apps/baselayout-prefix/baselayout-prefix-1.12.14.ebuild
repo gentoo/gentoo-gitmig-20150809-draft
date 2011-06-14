@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.4 2011/06/05 19:04:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14.ebuild,v 1.5 2011/06/14 17:08:29 grobian Exp $
 
 EAPI=3
 
@@ -74,9 +74,10 @@ src_compile() {
 
 	[[ ${SYMLINK_LIB} == "yes" ]] && libdir=$(get_abi_LIBDIR "${DEFAULT_ABI}")
 
+	# CFLAGS in LD for #370695
 	make -C "${S}"/src \
 		CC="$(tc-getCC)" \
-		LD="$(tc-getCC) ${LDFLAGS}" \
+		LD="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" \
 		LIBDIR="${libdir}" || die
 }
