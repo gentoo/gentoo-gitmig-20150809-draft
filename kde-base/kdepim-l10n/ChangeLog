@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.10 2011/06/01 19:45:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.11 2011/06/14 23:33:56 abcd Exp $
+
+  14 Jun 2011; Jonathan Callen <abcd@gentoo.org> kdepim-l10n-4.4.11.1.ebuild,
+  kdepim-l10n-4.4.11.1-r1.ebuild:
+  Simplify blockers a bit for new version of add_blocker function and SLOT
+  changes
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org>
   kdepim-l10n-4.4.11.1-r1.ebuild:
