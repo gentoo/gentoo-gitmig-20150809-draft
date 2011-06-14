@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.6-r2.ebuild,v 1.2 2011/03/23 06:25:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.8.2.ebuild,v 1.1 2011/06/14 18:28:08 lxnay Exp $
 
 EAPI=2
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="autobind auto-dn-suffix debug doc +pam-passthru +dna +ldapi +bitwise +presence kerberos selinux"
 
-ALL_DEPEND="dev-libs/nss[utils]
+ALL_DEPEND="!>=sys-libs/db-5.0
+	dev-libs/nss[utils]
 	dev-libs/nspr
 	dev-libs/svrcore
 	dev-libs/mozldap
@@ -114,6 +115,7 @@ src_install () {
 
 	# for build free-ipa require winsync-plugin
 	doins ldap/servers/plugins/replication/winsync-plugin.h
+	doins ldap/servers/plugins/replication/repl-session-plugin.h
 
 	# make sure perl scripts have a proper shebang
 	cd "${D}"/usr/share/dirsrv/script-templates/
