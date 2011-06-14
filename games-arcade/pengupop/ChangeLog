@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pengupop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.19 2010/06/14 17:18:49 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.20 2011/06/14 19:59:39 tupone Exp $
+
+  14 Jun 2011; Tupone Alfredo <tupone@gentoo.org> pengupop-2.2.5.ebuild,
+  +files/pengupop-2.2.5-underlink.patch:
+  Fix underlink. Bug #368923 by Diego Elio Pettenò
 
   14 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
   pengupop-2.2.5.ebuild:
