@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/moleinvasion
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/ChangeLog,v 1.5 2010/01/04 22:20:09 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/ChangeLog,v 1.6 2011/06/14 20:18:03 tupone Exp $
+
+  14 Jun 2011; Tupone Alfredo <tupone@gentoo.org> moleinvasion-0.4-r1.ebuild,
+  +files/moleinvasion-0.4-underlink.patch:
+  Fix underlink. Bug #368931 by Diego Elio Pettenò
 
   04 Jan 2010; Markus Meier <maekke@gentoo.org> moleinvasion-0.4-r1.ebuild:
   x86 stable, bug #297869

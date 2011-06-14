@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/moleinvasion-0.4-r1.ebuild,v 1.3 2010/01/04 22:20:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/moleinvasion-0.4-r1.ebuild,v 1.4 2011/06/14 20:18:03 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -31,7 +31,8 @@ src_prepare() {
 		-e "/^FINALDATADIR/s:/usr.*:${GAMES_DATADIR}/${PN}:" \
 		Makefile \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-opengl.patch
+	epatch "${FILESDIR}"/${P}-opengl.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 }
 
 src_install() {
