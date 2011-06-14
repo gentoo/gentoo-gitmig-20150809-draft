@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/389-admin-console
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.5 2011/01/11 22:25:07 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/ChangeLog,v 1.6 2011/06/14 19:01:03 lxnay Exp $
+
+*389-admin-console-1.1.7 (14 Jun 2011)
+
+  14 Jun 2011; Fabio Erculiani <lxnay@gentoo.org>
+  +389-admin-console-1.1.7.ebuild, -389-admin-console-1.1.4-r1.ebuild,
+  -389-admin-console-1.1.5.ebuild:
+  version bump, fixes Gentoo bug #371633, drop older releases
 
 *389-admin-console-1.1.5 (11 Jan 2011)
 

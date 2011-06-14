@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.5.ebuild,v 1.1 2011/01/11 22:25:07 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-admin-console/389-admin-console-1.1.7.ebuild,v 1.1 2011/06/14 19:01:03 lxnay Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ IUSE=""
 
 COMMON_DEP="dev-java/jss:3.4
 	dev-java/ldapsdk:4.1
-	>=dev-java/idm-console-framework-1.1"
+	>=dev-java/idm-console-framework-1.1.7"
 RDEPEND="|| ( >=virtual/jre-1.5 >=virtual/jdk-1.5 )
 	${COMMON_DEP}"
 DEPEND="sys-apps/sed
