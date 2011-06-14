@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.75 2011/01/02 16:33:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.76 2011/06/14 03:29:05 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> dvipng-1.14.ebuild:
+  Added ~mips, bug 342513
 
 *dvipng-1.14 (02 Jan 2011)
 
