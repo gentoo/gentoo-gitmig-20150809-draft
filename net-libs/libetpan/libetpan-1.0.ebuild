@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.0.ebuild,v 1.2 2011/06/14 13:41:24 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.0.ebuild,v 1.3 2011/06/14 14:04:45 eras Exp $
 
 EAPI="2"
 
@@ -60,12 +60,6 @@ src_configure() {
 		$(use_enable liblockfile lockfile) \
 		${sslconf} \
 		|| die
-}
-
-src_compile() {
-	# nonnull already checked for newsnntp.c
-	append-flags -Wno-nonnull
-	emake
 }
 
 src_install() {
