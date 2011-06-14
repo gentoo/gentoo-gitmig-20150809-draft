@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.42 2011/01/30 23:08:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.43 2011/06/14 04:34:58 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> emacs-23.ebuild:
+  Added ~mips, bug 234095
 
   30 Jan 2011; Ulrich Mueller <ulm@gentoo.org> emacs-22.ebuild:
   Fix keywords, Emacs 22 does not support prefix.
