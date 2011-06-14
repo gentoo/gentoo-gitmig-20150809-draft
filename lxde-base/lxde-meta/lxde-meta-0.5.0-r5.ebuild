@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.0-r5.ebuild,v 1.7 2011/03/07 20:30:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.0-r5.ebuild,v 1.8 2011/06/14 14:50:17 vostorga Exp $
 
 DESCRIPTION="Meta ebuild for LXDE, the Lightweight X11 Desktop Environment"
 HOMEPAGE="http://lxde.sf.net/"
@@ -12,7 +12,7 @@ IUSE=""
 
 RDEPEND="=lxde-base/lxappearance-0.5*
 	=lxde-base/lxde-icon-theme-0.0*
-	=lxde-base/lxde-common-0.5.0-r1
+	=lxde-base/lxde-common-0.5.0*
 	=lxde-base/lxmenu-data-0.1*
 	=lxde-base/lxinput-0.3*
 	=lxde-base/lxpanel-0.5.6*
