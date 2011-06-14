@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.66 2011/06/08 15:51:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.67 2011/06/14 03:20:17 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> lcdf-typetools-2.90.ebuild:
+  Added ~mips, bug 342513
 
 *lcdf-typetools-2.90 (08 Jun 2011)
 
