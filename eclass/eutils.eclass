@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.356 2011/04/18 15:09:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.357 2011/06/14 20:16:51 betelgeuse Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -499,7 +499,7 @@ egetent() {
 	*-darwin[678])
 		case "$2" in
 		*[!0-9]*) # Non numeric
-			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2$/) {print \$0;exit;} }"
+			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2\$/) {print \$0;exit;} }"
 			;;
 		*)	# Numeric
 			nidump $1 . | awk -F":" "{ if (\$3 == $2) {print \$0;exit;} }"
