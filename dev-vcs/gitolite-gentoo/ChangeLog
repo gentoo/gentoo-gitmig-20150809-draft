@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.15 2011/05/31 17:23:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.16 2011/06/14 13:21:08 idl0r Exp $
+
+*gitolite-gentoo-2.0.1 (14 Jun 2011)
+
+  14 Jun 2011; Christian Ruppert <idl0r@gentoo.org>
+  +gitolite-gentoo-2.0.1.ebuild:
+  Version bump to 2.0.1.
 
   31 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gitolite-gentoo-1.5.9.1-r1.ebuild:
