@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.116 2011/03/05 18:01:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.117 2011/06/14 11:50:15 mgorny Exp $
+
+*xdm-1.1.10-r2 (14 Jun 2011)
+
+  14 Jun 2011; Michał Górny <mgorny@gentoo.org> +xdm-1.1.10-r2.ebuild,
+  +files/systemd-service.patch:
+  Use XORG_CONFIGURE_OPTIONS, install a systemd unit file.
 
   05 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> xdm-1.1.10-r1.ebuild:
   ppc64 stable wrt #354237
