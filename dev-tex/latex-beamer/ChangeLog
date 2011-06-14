@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.64 2010/12/09 16:48:04 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.65 2011/06/14 03:30:10 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> latex-beamer-3.10-r1.ebuild:
+  Added ~mips, bug 342513
 
   09 Dec 2010; Alexis Ballier <aballier@gentoo.org> latex-beamer-3.07.ebuild:
   3.07 is incompatible with texlive-latex-2010, mark it as such to force an

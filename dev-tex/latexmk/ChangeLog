@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.25 2011/04/29 03:25:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.26 2011/06/14 03:26:31 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> latexmk-423a.ebuild:
+  Added ~mips, bug 342513
 
 *latexmk-423a (29 Apr 2011)
 
