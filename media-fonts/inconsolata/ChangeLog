@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/inconsolata
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.6 2010/07/02 16:51:04 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.7 2011/06/14 17:37:17 grobian Exp $
+
+  14 Jun 2011; Fabian Groffen <grobian@gentoo.org> inconsolata-20090222.ebuild:
+  Marked ~x86-macos (#369547) and ~ppc-macos
 
   02 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
   inconsolata-20090222.ebuild:

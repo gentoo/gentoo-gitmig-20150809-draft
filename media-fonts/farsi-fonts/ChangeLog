@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/farsi-fonts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.12 2011/05/25 16:36:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.13 2011/06/14 17:33:56 grobian Exp $
+
+  14 Jun 2011; Fabian Groffen <grobian@gentoo.org> farsi-fonts-0.4.ebuild:
+  Marked ~x86-macos (#369547) and ~ppc-macos
 
   25 May 2011; Diego E. Pettenò <flameeyes@gentoo.org> farsi-fonts-0.4.ebuild:
   QA: avoid runtime dependency on app-arch/unzip.
