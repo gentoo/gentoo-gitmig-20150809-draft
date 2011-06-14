@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.35 2011/06/07 18:48:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.36 2011/06/14 19:11:50 maekke Exp $
+
+  14 Jun 2011; Markus Meier <maekke@gentoo.org> ripmime-1.4.0.10.ebuild:
+  x86 stable, bug #370255
 
   07 Jun 2011; Markos Chandras <hwoarang@gentoo.org> ripmime-1.4.0.10.ebuild:
   Stable on amd64 wrt bug #370255
