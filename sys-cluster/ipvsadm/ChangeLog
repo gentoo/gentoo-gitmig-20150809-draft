@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.50 2011/06/08 02:36:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.51 2011/06/14 19:35:58 maekke Exp $
+
+  14 Jun 2011; Markus Meier <maekke@gentoo.org> ipvsadm-1.26-r1.ebuild:
+  amd64/x86 stable, bug #370441
 
   08 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> ipvsadm-1.26-r1.ebuild:
   popt only got pkgconfig in 1.16, and some infra systems have older versions
