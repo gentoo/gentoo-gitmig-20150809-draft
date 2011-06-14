@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moo/ChangeLog,v 1.1 2011/06/04 08:12:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moo/ChangeLog,v 1.2 2011/06/14 17:29:27 grobian Exp $
+
+  14 Jun 2011; Fabian Groffen <grobian@gentoo.org> Moo-0.9.8.ebuild:
+  Marked ~x86-solaris (#369997) and ~ppc-macos
 
 *Moo-0.9.8 (04 Jun 2011)
 
