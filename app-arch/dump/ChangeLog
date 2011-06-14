@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.61 2011/05/23 08:01:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.62 2011/06/14 14:51:59 jer Exp $
+
+*dump-0.4.44 (14 Jun 2011)
+
+  14 Jun 2011; Jeroen Roovers <jer@gentoo.org> +dump-0.4.44.ebuild:
+  Version bump.
 
 *dump-0.4.43 (23 May 2011)
 
