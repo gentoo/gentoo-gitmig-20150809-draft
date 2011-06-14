@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.37 2011/06/13 22:49:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.38 2011/06/14 05:49:44 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -370,6 +370,10 @@ llvm
 # Mart Raudsepp <leio@gentoo.org> (7 Apr 2011)
 # Mask policykit for now, to get other keywording going first
 policykit
+
+# Matt Turner <mattst88@gentoo.org (14 Jun 2011)
+# pdfannotextractor needs java
+pdfannotextractor
 
 # Mips USE flags
 -n32
