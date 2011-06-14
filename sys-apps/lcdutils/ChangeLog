@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/lcdutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdutils/ChangeLog,v 1.6 2010/10/08 02:07:15 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdutils/ChangeLog,v 1.7 2011/06/14 03:55:20 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> lcdutils-0.2.ebuild,
+  +files/include-stdlib.h-for-exit.patch:
+  Fix QA issues and bug 298023
 
   08 Oct 2010; Mart Raudsepp <leio@gentoo.org> lcdutils-0.2.ebuild:
   Drop to ~mips
