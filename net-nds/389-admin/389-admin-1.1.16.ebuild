@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.11_rc1-r1.ebuild,v 1.1 2010/11/12 06:36:48 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.16.ebuild,v 1.1 2011/06/14 19:14:10 lxnay Exp $
 
 EAPI="2"
 
@@ -54,7 +54,9 @@ src_prepare() {
 	# as per 389 documentation, when 64bit, export USE_64
 	use amd64 && export USE_64=1
 
-	epatch "${FILESDIR}/${PV}/"*.patch
+	epatch "${FILESDIR}/1.1.11_rc1/0001-gentoo-apache-names.patch"
+	epatch "${FILESDIR}/1.1.11_rc1/0003-find-mod_nss.m4.patch"
+	epatch "${FILESDIR}/1.1.11_rc1/0004-rpath-fix.configure.ac.patch"
 	# Configuration fixes
 	epatch "${FILESDIR}/${PN}-cfgstuff-1.patch"
 
@@ -108,7 +110,7 @@ src_install () {
 	doexe "${S}/.libs"/mod_admserv.so || die "internal ebuild error: mod_admserv not found"
 
 	insinto "${APACHE_MODULES_CONFDIR}"
-	newins "${FILESDIR}/${PV}"/48_mod_admserv.conf 48_mod_admserv \
+	newins "${FILESDIR}/1.1.11_rc1"/48_mod_admserv.conf 48_mod_admserv \
 				|| die "internal ebuild error: 48_mod_admserv.conf not found"
 
 	# install mod_restard
@@ -116,7 +118,7 @@ src_install () {
 	doexe "${S}/.libs"/mod_restartd.so || die "internal ebuild error: mod_restartd  not found"
 
 	insinto "${APACHE_MODULES_CONFDIR}"
-	newins "${FILESDIR}/${PV}"/48_mod_restartd.conf 48_mod_restartd \
+	newins "${FILESDIR}/1.1.11_rc1"/48_mod_restartd.conf 48_mod_restartd \
 		|| die "internal ebuild error: 48_mod_restard.conf not found"
 
 	if use selinux; then
