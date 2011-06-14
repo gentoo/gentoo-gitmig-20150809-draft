@@ -1,0 +1,78 @@
+#!/sbin/runscript
+# Copyright (C) 2011 Henning Schild <henning@wh9.tu-dresden.de>
+# Copyright (C) 2011 Sebastian Pipping <sebastian@pipping.org>
+#
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+opts="low high info"
+
+SMAPI_SYSFS="/sys/devices/platform/smapi"
+BATS="BAT0 BAT1"
+
+depend() {
+	after modules
+}
+
+start() {
+	ebegin "Making sure that module 'tp_smapi' is loaded"
+	modprobe tp_smapi
+	eend $? || return $?
+
+	ebegin "Checking for ${SMAPI_SYSFS}"
+	test -d ${SMAPI_SYSFS}
+	eend $? || return $?
+
+	ebegin "Starting ${SVCNAME}"
+	set_all ${SMAPI_THRESH_START} ${SMAPI_THRESH_STOP}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${SVCNAME}"
+	eend $?
+}
+
+require_started() {
+	service_started && return 0
+
+	ewarn "WARNING: ${SVCNAME} is not running"
+	return 1
+}
+
+high() {
+	require_started || return $?
+
+	ebegin "Switching ${SVCNAME} to high thesholds"
+	set_all ${SMAPI_HIGH_THRESH_START} ${SMAPI_HIGH_THRESH_STOP}
+	eend $?
+}
+
+low() {
+	require_started || return $?
+
+	ebegin "Switching ${SVCNAME} to low thesholds"
+	set_all ${SMAPI_LOW_THRESH_START} ${SMAPI_LOW_THRESH_STOP}
+	eend $?
+}
+
+set_all() {
+	local tstart=$1
+	local tstop=$2
+	for bat in ${BATS}; do
+		ebegin "  setting thresholds for ${bat}: $tstart $tstop"
+		echo $tstart > ${SMAPI_SYSFS}/${bat}/start_charge_thresh && \
+		echo $tstop > ${SMAPI_SYSFS}/${bat}/stop_charge_thresh
+		eend $?
+	done
+}
+
+info() {
+	require_started || return $?
+
+	for bat in ${BATS}; do
+		local tstart=$( cat ${SMAPI_SYSFS}/${bat}/start_charge_thresh)
+		local tstop=$( cat ${SMAPI_SYSFS}/${bat}/stop_charge_thresh)
+		local presence=$( [[ $(cat ${SMAPI_SYSFS}/${bat}/installed) = 1 ]] && echo '  [installed]')
+		einfo "${bat}: ${tstart} ${tstop}${presence}"
+	done
+}
