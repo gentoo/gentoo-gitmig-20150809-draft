@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.2.ebuild,v 1.6 2011/06/12 22:54:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.6.2.ebuild,v 1.7 2011/06/14 23:26:16 abcd Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="as-is"
 IUSE="aqua"
 
-add_blocker kdelibs 4.2.2-r1 '<3.5.10-r3:3.5' 4.2.70:4.3
+add_blocker kdelibs 4.2.70 '<3.5.10-r3:3.5'
 
 S=${WORKDIR}
 
