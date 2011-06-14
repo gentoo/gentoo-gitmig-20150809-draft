@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/uriparser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.29 2010/01/18 16:22:50 rbu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.30 2011/06/14 18:52:46 sping Exp $
+
+  14 Jun 2011; Sebastian Pipping <sping@gentoo.org> uriparser-0.7.5.ebuild,
+  +files/uriparser-0.7.5-no-gifs.patch:
+  No longer try installing missing .gif files (bug #350131)
 
   18 Jan 2010; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Dropping maintenance, adding sping
