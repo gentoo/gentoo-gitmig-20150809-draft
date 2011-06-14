@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/nanumfont/nanumfont-2.0-r1.ebuild,v 1.1 2010/06/11 20:16:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/nanumfont/nanumfont-2.0-r1.ebuild,v 1.2 2011/06/14 10:59:00 pva Exp $
 
 EAPI=2
 inherit font
@@ -17,6 +17,9 @@ IUSE=""
 
 # Only installs fonts
 RESTRICT="strip binchecks"
+
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
 S="${WORKDIR}"
 FONT_S="${S}"
