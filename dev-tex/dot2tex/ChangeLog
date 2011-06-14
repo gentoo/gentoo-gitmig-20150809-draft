@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2tex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.19 2011/02/27 16:35:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.20 2011/06/14 05:20:39 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> dot2tex-2.8.7.ebuild:
+  Added ~mips, bug 352300
 
   27 Feb 2011; Raúl Porcel <armin76@gentoo.org> dot2tex-2.8.7.ebuild:
   Add ~alpha/~ia64/~s390/~sh/~sparc wrt #342513
