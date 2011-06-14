@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.61 2011/06/13 22:57:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.62 2011/06/14 04:25:05 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> package.mask:
+  Remove texlive from package.mask now that bug 342513 is complete
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Remove mercurial from package.use.mask now that it's keyworded
