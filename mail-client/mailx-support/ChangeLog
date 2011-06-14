@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx-support
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.23 2010/10/19 05:54:22 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.24 2011/06/14 10:56:57 eras Exp $
+
+  14 Jun 2011; Eray Aslan <eras@gentoo.org> -mailx-support-20030215.ebuild,
+  -mailx-support-20060102.ebuild:
+  Remove old versions.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org>
   mailx-support-20030215.ebuild, mailx-support-20060102-r1.ebuild:
