@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.36 2011/05/02 04:39:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.37 2011/06/14 05:37:51 nirbheek Exp $
+
+  14 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gobject-introspection-0.10.2.ebuild, -gobject-introspection-0.10.7.ebuild:
+  Remove old.
 
   02 May 2011; Jeroen Roovers <jer@gentoo.org>
   gobject-introspection-0.10.8.ebuild:
