@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.305 2011/06/13 14:55:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.306 2011/06/14 03:42:21 jer Exp $
+
+  14 Jun 2011; Jeroen Roovers <jer@gentoo.org> libxml2-2.7.8-r1.ebuild:
+  Stable for HPPA (bug #370715).
 
 *libxml2-2.7.8-r1 (13 Jun 2011)
 
