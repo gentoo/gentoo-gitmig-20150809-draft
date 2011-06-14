@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.2.ebuild,v 1.2 2011/06/07 17:22:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.2.ebuild,v 1.3 2011/06/14 09:16:44 flameeyes Exp $
 
 #BACKPORTS=1
 #AUTOTOOLIZE=yes
@@ -29,7 +29,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
-	uml virtualbox virt-network xen"
+	uml virtualbox virt-network xen elibc_glibc"
 # IUSE=one : bug #293416 & bug #299011
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
@@ -70,7 +70,8 @@ RDEPEND="sys-libs/readline
 	virt-network? ( net-dns/dnsmasq
 		>=net-firewall/iptables-1.4.10
 		net-firewall/ebtables
-		sys-apps/iproute2 )"
+		sys-apps/iproute2 )
+	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
