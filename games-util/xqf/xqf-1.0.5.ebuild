@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.5.ebuild,v 1.8 2010/01/07 23:13:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.5.ebuild,v 1.9 2011/06/14 19:36:52 tupone Exp $
 
 EAPI=2
-inherit eutils
+inherit base eutils
 
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
 HOMEPAGE="http://www.linuxgames.com/xqf/"
@@ -23,9 +23,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-cpu-overrun.patch # bug #288853
-}
+# bug #288853
+PATCHES=( "${FILESDIR}"/${P}-cpu-overrun.patch
+	"${FILESDIR}"/${P}-underlink.patch )
 
 src_configure() {
 	econf \
