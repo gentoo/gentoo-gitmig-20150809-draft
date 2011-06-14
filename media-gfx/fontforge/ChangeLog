@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.138 2011/04/20 16:34:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.139 2011/06/14 17:45:05 grobian Exp $
+
+  14 Jun 2011; Fabian Groffen <grobian@gentoo.org> fontforge-20110222.ebuild:
+  Marked ~x86-macos (#369547)
 
   20 Apr 2011; Jeroen Roovers <jer@gentoo.org> fontforge-20110222.ebuild:
   Replace cd html/ thanks to Erik Zeek (bug #364197). Make chmod die().
