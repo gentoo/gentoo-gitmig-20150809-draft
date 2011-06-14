@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.4.ebuild,v 1.4 2011/06/07 19:15:46 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-1.9.4.ebuild,v 1.5 2011/06/14 19:29:57 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://taskwarrior.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="bash-completion lua vim-syntax zsh-completion"
 
 DEPEND="lua? ( dev-lang/lua )"
