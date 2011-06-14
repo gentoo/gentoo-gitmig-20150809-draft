@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.8 2011/02/20 16:13:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inter/ChangeLog,v 1.9 2011/06/14 13:53:16 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> Test-Inter-1.01.ebuild:
+  Added ~mips, bug 341969
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> Test-Inter-1.01.ebuild:
   No stable keywords for prefix
