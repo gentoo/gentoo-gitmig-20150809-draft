@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.125 2011/05/16 21:51:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.126 2011/06/14 04:45:07 mattst88 Exp $
+
+  14 Jun 2011; Matt Turner <mattst88@gentoo.org> sox-14.3.2.ebuild:
+  Added ~mips, bug 260095
 
   16 May 2011; Alexis Ballier <aballier@gentoo.org> sox-14.3.2.ebuild,
   +files/sox-14.3.2-ffmpeg.patch:
