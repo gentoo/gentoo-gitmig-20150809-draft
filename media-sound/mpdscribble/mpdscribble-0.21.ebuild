@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.21.ebuild,v 1.4 2011/05/24 21:13:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.21.ebuild,v 1.5 2011/06/14 16:36:04 angelos Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.11"
@@ -13,12 +13,11 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ~ppc x86"
-IUSE="+curl"
+IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=media-libs/libmpdclient-2.2
-	curl? ( <net-misc/curl-7.21 )
-	!curl? ( net-libs/libsoup:2.4 )"
+	net-libs/libsoup:2.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -28,11 +27,9 @@ src_prepare() {
 }
 
 src_configure() {
-	local myclient=soup
-	use curl && myclient=curl
 	econf \
 		--disable-dependency-tracking \
-		--with-http-client=${myclient}
+		--with-http-client=soup
 }
 
 src_install() {
