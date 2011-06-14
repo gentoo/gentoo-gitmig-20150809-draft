@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/kanjistrokeorders
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kanjistrokeorders/ChangeLog,v 1.6 2011/03/30 13:58:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kanjistrokeorders/ChangeLog,v 1.7 2011/06/14 10:57:12 pva Exp $
+
+  14 Jun 2011; Peter Volkov <pva@gentoo.org> kanjistrokeorders-2.016.ebuild:
+  Add missing app-arch/unzip dependency, bug 371225, thank Piotr Szymaniak for
+  report.
 
 *kanjistrokeorders-2.016 (30 Mar 2011)
 

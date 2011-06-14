@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kanjistrokeorders/kanjistrokeorders-2.016.ebuild,v 1.1 2011/03/30 13:58:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kanjistrokeorders/kanjistrokeorders-2.016.ebuild,v 1.2 2011/06/14 10:57:12 pva Exp $
 
 inherit font
 
@@ -16,6 +16,9 @@ IUSE=""
 
 # Only installs fonts
 RESTRICT="strip binchecks"
+
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
 S="${WORKDIR}"
 FONT_S="${S}"
