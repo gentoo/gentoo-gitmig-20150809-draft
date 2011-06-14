@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-abyssinica
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-abyssinica/ChangeLog,v 1.2 2009/03/20 13:40:40 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-abyssinica/ChangeLog,v 1.3 2011/06/14 17:56:38 grobian Exp $
+
+  14 Jun 2011; Fabian Groffen <grobian@gentoo.org> sil-abyssinica-1.0.ebuild:
+  Marked ~x86-macos (#369547) and ~ppc-macos
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
