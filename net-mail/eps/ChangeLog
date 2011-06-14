@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/eps
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/ChangeLog,v 1.10 2010/09/25 18:45:23 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/ChangeLog,v 1.11 2011/06/14 19:37:36 maekke Exp $
+
+  14 Jun 2011; Markus Meier <maekke@gentoo.org> eps-1.7.ebuild:
+  x86 stable, bug #370461
 
 *eps-1.7 (25 Sep 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/eps-1.7.ebuild,v 1.1 2010/09/25 18:45:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/eps/eps-1.7.ebuild,v 1.2 2011/06/14 19:37:36 maekke Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.inter7.com/eps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="sys-apps/sed"
