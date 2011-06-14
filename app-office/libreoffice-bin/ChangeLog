@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.24 2011/06/05 17:47:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.25 2011/06/14 18:17:56 suka Exp $
+
+*libreoffice-bin-3.4.0-r1 (14 Jun 2011)
+
+  14 Jun 2011; Andreas Proschofsky <suka@gentoo.org>
+  -libreoffice-bin-3.4.0.ebuild, +libreoffice-bin-3.4.0-r1.ebuild:
+  Fix wrong command in desktop files, bug #370345 and a problem with
+  offlinehelp installation, bug #370179
 
 *libreoffice-bin-3.4.0 (05 Jun 2011)
 

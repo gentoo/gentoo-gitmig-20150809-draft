@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.0.ebuild,v 1.1 2011/06/05 17:47:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.0-r1.ebuild,v 1.1 2011/06/14 18:17:56 suka Exp $
 
 EAPI="3"
 
@@ -46,7 +46,7 @@ for X in ${LANGS} ; do
 done
 
 for Y in ${LANGS2} ; do
-	[[ ${Y} != "en" ]] && SRC_URI="${SRC_URI} linguas_${X}? (
+	[[ ${Y} != "en" ]] && SRC_URI="${SRC_URI} linguas_${Y}? (
 		amd64? ( offlinehelp? ( "${FILEPATH}"/x86_64/LibO_${PV}_Linux_x86-64_helppack-rpm_${Y/_/-}.tar.gz ) )
 		x86? ( offlinehelp? ( "${FILEPATH}"/x86/LibO_${PV}_Linux_x86_helppack-rpm_${Y/_/-}.tar.gz ) ) )"
 done
@@ -164,6 +164,7 @@ src_install () {
 			use java || { rm javafilter.desktop; continue; }
 		fi
 		mv ${desk}.desktop ${NM1}-${desk}.desktop
+		sed -i -e s/${NM2}/${NM}/g ${NM1}-${desk}.desktop || die
 		domenu ${NM1}-${desk}.desktop
 	done
 	insinto /usr/share
