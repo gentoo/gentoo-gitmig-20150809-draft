@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtpolar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/ChangeLog,v 1.1 2011/06/12 15:26:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/ChangeLog,v 1.2 2011/06/14 10:11:28 scarabeus Exp $
+
+  14 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> qwtpolar-0.1.0.ebuild:
+  Do not install qwtlicense manpage as it is just license converted to manpage.
 
 *qwtpolar-0.1.0 (12 Jun 2011)
 

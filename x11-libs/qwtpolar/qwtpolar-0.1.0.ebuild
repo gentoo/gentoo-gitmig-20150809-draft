@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/qwtpolar-0.1.0.ebuild,v 1.1 2011/06/12 15:26:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/qwtpolar-0.1.0.ebuild,v 1.2 2011/06/14 10:11:28 scarabeus Exp $
 
 EAPI=4
 
@@ -38,6 +38,6 @@ src_install() {
 	dodir /usr/include/${PN}
 	mv "${ED}/usr/include/"*.h "${ED}/usr/include/${PN}/" || die
 
-	doman doc/man/man3/*
+	doman doc/man/man3/QwtPolar*
 	dohtml -r doc/html
 }
