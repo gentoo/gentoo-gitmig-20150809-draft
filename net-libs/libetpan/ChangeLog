@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.82 2010/04/20 18:41:57 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.83 2011/06/14 13:41:24 eras Exp $
+
+  14 Jun 2011; Eray Aslan <eras@gentoo.org> libetpan-1.0.ebuild,
+  +files/libetpan-1.0-nonnull.patch:
+  Disable nonnull warning for newsnntp.c. QA
 
 *libetpan-1.0 (20 Apr 2010)
 
