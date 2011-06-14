@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.84 2011/06/01 01:11:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.85 2011/06/14 18:34:58 a3li Exp $
+
+*adobe-flash-10.3.181.22 (14 Jun 2011)
+
+  14 Jun 2011; Alex Legler <a3li@gentoo.org> +adobe-flash-10.3.181.22.ebuild:
+  Non-maintainer commit: Version bump for security bug 370215
 
   01 Jun 2011; Jim Ramsay <lack@gentoo.org> metadata.xml:
   Added local USE flag description for 'bindist' (Bug #369257)
