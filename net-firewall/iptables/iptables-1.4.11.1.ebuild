@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.11.1.ebuild,v 1.1 2011/06/09 07:42:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.11.1.ebuild,v 1.2 2011/06/14 02:12:35 jer Exp $
 
 EAPI="4"
 
@@ -18,8 +18,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ipv6 netlink"
 
-DEPEND="virtual/os-headers"
-RDEPEND="netlink? ( net-libs/libnfnetlink )"
+COMMON_DEPEND="
+	netlink? ( net-libs/libnfnetlink )
+"
+DEPEND="
+	${COMMON_DEPEND}
+	virtual/os-headers
+"
+RDEPEND="
+	${COMMON_DEPEND}
+"
 
 src_prepare() {
 	# Only run autotools if user patched something
