@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.6.2.ebuild,v 1.1 2011/06/13 22:20:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-15.6.2.ebuild,v 1.2 2011/06/14 16:13:48 bicatali Exp $
 
 EAPI=4
-inherit toolchain-funcs
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="Automatic algebraic manipulator"
 HOMEPAGE="http://www.mathomatic.org/"
@@ -20,8 +20,14 @@ RDEPEND="${DEPEND}
 	gnuplot? ( sci-visualization/gnuplot )"
 
 src_compile() {
+	append-cflags -DBOLD_COLOR=1
 	emake READLINE=1 CC=$(tc-getCC)
 	emake CC=$(tc-getCC) -C primes
+}
+
+src_test() {
+	default
+	emake -C primes check
 }
 
 src_install() {

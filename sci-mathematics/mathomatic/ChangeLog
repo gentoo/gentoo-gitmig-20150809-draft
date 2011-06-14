@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.58 2011/06/13 22:20:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.59 2011/06/14 16:13:48 bicatali Exp $
+
+  14 Jun 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  mathomatic-15.6.2.ebuild:
+  Tests for primes re-enabled. Added bold color flag
 
 *mathomatic-15.6.2 (13 Jun 2011)
 
