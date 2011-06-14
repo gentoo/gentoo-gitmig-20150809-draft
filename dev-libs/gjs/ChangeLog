@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gjs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.1 2011/05/01 15:40:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.2 2011/06/14 13:19:59 nirbheek Exp $
+
+*gjs-1.29.0 (14 Jun 2011)
+
+  14 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +gjs-1.29.0.ebuild:
+  Bump to 1.29.0, developmental version
 
 *gjs-0.7.14 (01 May 2011)
 
