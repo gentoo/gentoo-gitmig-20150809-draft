@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.281 2011/05/29 18:02:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.282 2011/06/14 21:35:13 abcd Exp $
+
+  14 Jun 2011; Jonathan Callen <abcd@gentoo.org> packages:
+  Add version to shadow to match base/packages
 
   29 May 2011; Fabian Groffen <grobian@gentoo.org> mint/package.use.force:
   force static-libs on libarchive for MiNT too, bug #364789
