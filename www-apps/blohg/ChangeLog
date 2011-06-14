@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.4 2011/06/06 18:37:32 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.5 2011/06/14 02:26:02 rafaelmartins Exp $
+
+*blohg-0.5.1 (14 Jun 2011)
+
+  14 Jun 2011; Rafael G. Martins <rafaelmartins@gentoo.org> -blohg-0.4.ebuild,
+  -blohg-0.5.ebuild, +blohg-0.5.1.ebuild:
+  Version bump. Removed old versions.
 
   06 Jun 2011; Rafael G. Martins <rafaelmartins@gentoo.org> metadata.xml:
   Fixed metadata.xml

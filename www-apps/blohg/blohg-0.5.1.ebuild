@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.4.ebuild,v 1.1 2011/05/02 00:22:09 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.5.1.ebuild,v 1.1 2011/06/14 02:26:02 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -27,6 +27,7 @@ DEPEND=">=dev-python/docutils-0.7
 	>=dev-vcs/mercurial-1.6
 	dev-python/pyyaml
 	dev-python/setuptools
+	dev-python/pygments
 	doc? ( dev-python/sphinx )"
 
 RDEPEND="${DEPEND}"
