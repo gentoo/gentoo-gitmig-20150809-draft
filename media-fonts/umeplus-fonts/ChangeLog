@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/umeplus-fonts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/ChangeLog,v 1.4 2010/01/23 07:58:12 matsuu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/ChangeLog,v 1.5 2011/06/14 18:04:00 grobian Exp $
+
+  14 Jun 2011; Fabian Groffen <grobian@gentoo.org>
+  umeplus-fonts-20100106.ebuild:
+  Marked ~x86-macos (#369547) and ~ppc-macos
 
 *umeplus-fonts-20100106 (23 Jan 2010)
 
