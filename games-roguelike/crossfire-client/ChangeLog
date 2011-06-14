@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/crossfire-client
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.24 2010/09/16 16:57:08 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.25 2011/06/14 10:42:55 tupone Exp $
+
+  14 Jun 2011; Tupone Alfredo <tupone@gentoo.org>
+  crossfire-client-1.12.0.ebuild,
+  +files/crossfire-client-1.12.0-underlink.patch:
+  Fix underlink. Bug #368889 by Diego Elio Pettenò
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   crossfire-client-1.12.0.ebuild:
