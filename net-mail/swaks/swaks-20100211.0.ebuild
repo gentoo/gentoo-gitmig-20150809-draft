@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20100211.0.ebuild,v 1.2 2010/06/16 05:57:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/swaks/swaks-20100211.0.ebuild,v 1.3 2011/06/14 19:05:23 maekke Exp $
 
 DESCRIPTION="Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH"
 HOMEPAGE="http://www.jetmore.org/john/code/swaks"
 SRC_URI="http://www.jetmore.org/john/code/swaks/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 IUSE="ssl"
 
