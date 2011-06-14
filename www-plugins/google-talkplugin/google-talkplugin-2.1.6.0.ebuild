@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.0.6.0.ebuild,v 1.1 2011/04/27 17:35:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.6.0.ebuild,v 1.1 2011/06/14 19:43:20 ottxor Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ SRC_URI="x86? ( ${MY_URL}/${MY_PKG} )
 	amd64? ( ${MY_URL}/${MY_PKG/i386/amd64} )"
 
 HOMEPAGE="http://www.google.com/chat/video"
-IUSE="+system-libCg"
+IUSE="libnotify +system-libCg"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
@@ -51,7 +51,8 @@ NATIVE_DEPS="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	x11-libs/libXrender
 	x11-libs/libXt
 	sys-apps/lsb-release
-	virtual/opengl"
+	virtual/opengl
+	libnotify? ( x11-libs/libnotify )"
 
 DEPEND=""
 
