@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.58.ebuild,v 1.1 2011/02/15 21:04:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.58.ebuild,v 1.2 2011/06/14 17:36:54 tommy Exp $
 
 EAPI="2"
 
@@ -15,11 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="frost"
 
-DEPEND="virtual/libiconv
+RDEPEND="virtual/libiconv
 	frost? ( >=dev-libs/libtomcrypt-1.17-r3[libtommath] )
 	>=dev-libs/poco-1.2.9
 	|| ( >=dev-db/sqlite-3.6.15 =dev-db/sqlite-3.6.13* =dev-db/sqlite-3.6.12* =dev-db/sqlite-3.6.11* =dev-db/sqlite-3.6.6.2* )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}
 
