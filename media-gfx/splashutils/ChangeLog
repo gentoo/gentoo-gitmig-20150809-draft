@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.191 2011/06/12 22:40:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.192 2011/06/14 21:33:32 spock Exp $
+
+  14 Jun 2011; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.4.4.ebuild, +files/splashutils-1.5.4.4-gentoo-typo-fix.patch:
+  Fix a typo in the Gentoo initscript.
 
 *splashutils-1.5.4.4 (12 Jun 2011)
 

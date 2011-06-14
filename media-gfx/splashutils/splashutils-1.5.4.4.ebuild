@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4.ebuild,v 1.1 2011/06/12 22:40:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4.ebuild,v 1.2 2011/06/14 21:33:32 spock Exp $
 
 EAPI="2"
 
@@ -69,6 +69,9 @@ src_prepare() {
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
 	rm "${S}/libs/zlib-${V_ZLIB}/Makefile"
+
+	cd "${SG}"
+	epatch "${FILESDIR}/splashutils-1.5.4.4-gentoo-typo-fix.patch"
 
 	cd "${S}"
 	ln -sf "${S}/src" "${WORKDIR}/core"
