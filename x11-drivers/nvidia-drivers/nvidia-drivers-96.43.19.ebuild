@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.19.ebuild,v 1.7 2011/05/28 15:15:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.19.ebuild,v 1.8 2011/06/14 20:57:06 jer Exp $
 
 EAPI="2"
 
@@ -188,7 +188,7 @@ pkg_setup() {
 		linux-mod_pkg_setup
 		MODULE_NAMES="nvidia(video:${S}/usr/src/nv)"
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
-		SYSOUT=${KV_OUT_DIR} HOST_CC=$(tc-getBUILD_CC)"
+		SYSOUT=${KV_OUT_DIR} CC=$(tc-getBUILD_CC)"
 		mtrr_check
 		lockdep_check
 	fi

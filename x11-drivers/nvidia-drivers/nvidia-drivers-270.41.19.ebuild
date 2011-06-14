@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-270.41.19.ebuild,v 1.2 2011/05/28 15:13:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-270.41.19.ebuild,v 1.3 2011/06/14 20:57:06 jer Exp $
 
 EAPI="2"
 
@@ -209,7 +209,7 @@ pkg_setup() {
 		linux-mod_pkg_setup
 		MODULE_NAMES="nvidia(video:${S}/kernel)"
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
-		SYSOUT=${KV_OUT_DIR} HOST_CC=$(tc-getBUILD_CC)"
+		SYSOUT=${KV_OUT_DIR} CC=$(tc-getBUILD_CC)"
 		mtrr_check
 		lockdep_check
 	fi
