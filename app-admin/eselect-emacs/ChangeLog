@@ -1,9 +1,9 @@
 # ChangeLog for app-admin/eselect-emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.92 2011/06/14 04:15:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/ChangeLog,v 1.93 2011/06/14 04:17:03 mattst88 Exp $
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> eselect-emacs-1.13.ebuild:
-  Added ~mips, bug 260095
+  Added ~mips, bug 234095
 
   06 Jun 2010; Ulrich Mueller <ulm@gentoo.org> -eselect-emacs-1.10.ebuild,
   -eselect-emacs-1.12.ebuild:
