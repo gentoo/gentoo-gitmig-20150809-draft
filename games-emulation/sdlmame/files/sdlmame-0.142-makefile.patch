@@ -1,6 +1,5 @@
-diff -ru work.orig/makefile work/makefile
---- work.orig/makefile	2011-02-12 15:17:48.000000000 -0500
-+++ work/makefile	2011-05-22 17:27:47.006482020 -0400
+--- work.orig/makefile
++++ work/makefile
 @@ -431,9 +431,6 @@
  CPPONLYFLAGS += -x c++ -std=gnu++98
  COBJFLAGS += -x objective-c++
