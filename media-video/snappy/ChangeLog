@@ -1,6 +1,9 @@
 # ChangeLog for media-video/snappy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.1 2011/06/14 01:14:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.2 2011/06/15 04:15:08 nirbheek Exp $
+
+  15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> snappy-9999.ebuild:
+  Fix description by inheriting before setting DESCRIPTION
 
 *snappy-9999 (14 Jun 2011)
 
