@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.5.7-r1.ebuild,v 1.2 2011/04/13 15:05:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.0.2.ebuild,v 1.1 2011/06/15 03:51:02 jer Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit autotools-utils eutils
 
 DESCRIPTION="a man replacement that utilizes berkdb instead of flat files"
 HOMEPAGE="http://www.nongnu.org/man-db/"
@@ -12,25 +12,25 @@ SRC_URI="http://download.savannah.nongnu.org/releases/man-db/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb +gdbm nls"
+KEYWORDS="~amd64 ~x86"
+IUSE="berkdb +gdbm nls static-libs"
 
-RDEPEND="berkdb? ( sys-libs/db )
+RDEPEND="
+	dev-libs/libpipeline
+	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
 	!berkdb? ( !gdbm? ( sys-libs/gdbm ) )
 	|| ( sys-apps/groff >=app-doc/heirloom-doctools-080407-r2 )
-	!sys-apps/man"
-DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	!sys-apps/man
+"
+DEPEND="
+	${RDEPEND}
+	nls? ( sys-devel/gettext )
+"
 
 pkg_setup() {
 	enewgroup man 15
 	enewuser man 13 -1 /usr/share/man man
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-non-gnu-nroff.patch #309635
-	epatch "${FILESDIR}"/${P}-uncompressed-non-en.patch #327347
 }
 
 src_configure() {
@@ -39,11 +39,12 @@ src_configure() {
 	econf \
 		--with-sections="1 1p 8 2 3 3p 4 5 6 7 9 0p tcl n l p o 1x 2x 3x 4x 5x 6x 7x 8x" \
 		$(use_enable nls) \
-		--with-db=${db} \
-		|| die
+		$(use_enable static-libs static) \
+		--with-db=${db}
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc README ChangeLog NEWS docs/{HACKING,TODO}
+	use static-libs || remove_libtool_files
 }
