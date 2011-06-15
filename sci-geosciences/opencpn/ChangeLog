@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/opencpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.1 2011/06/15 00:11:29 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.2 2011/06/15 01:30:15 mschiff Exp $
+
+  15 Jun 2011; Marc Schiffbauer <mschiff@gentoo.org> opencpn-2.3.1.ebuild:
+  Drop bogus bzip2 dep and force default build flags
 
 *opencpn-2.3.1 (15 Jun 2011)
 
