@@ -1,6 +1,16 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.30 2011/05/18 00:27:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.31 2011/06/15 13:16:55 chithanh Exp $
+
+*lightspark-0.4.8.1 (15 Jun 2011)
+
+  15 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/lightspark-0.4.6.1-cmakelists.patch, -lightspark-0.4.7.1.ebuild,
+  -files/lightspark-0.4.7.1-allow-disabling-pulseaudio.patch,
+  +lightspark-0.4.8.1.ebuild,
+  +files/lightspark-0.4.8.1-allow-disabling-pulseaudio.patch,
+  +files/lightspark-0.4.8.1-cmakelists.patch:
+  Version bump, bug #371757.
 
   18 May 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   lightspark-0.4.7.1.ebuild:

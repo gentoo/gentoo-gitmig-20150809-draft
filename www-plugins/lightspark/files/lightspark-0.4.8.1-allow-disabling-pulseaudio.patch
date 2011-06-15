@@ -1,6 +1,6 @@
 diff -ur a/CMakeLists.txt b/CMakeLists.txt
---- a/CMakeLists.txt	2011-05-05 00:28:39.000000000 +0200
-+++ b/CMakeLists.txt	2011-05-16 17:21:31.562259992 +0200
+--- a/CMakeLists.txt	2011-05-27 14:02:19.000000000 +0200
++++ b/CMakeLists.txt	2011-06-15 15:08:21.079714248 +0200
 @@ -122,6 +122,7 @@
  SET(COMPILE_LIGHTSPARK TRUE CACHE BOOL "Compile Lightspark?")
  SET(COMPILE_TIGHTSPARK TRUE CACHE BOOL "Compile Tightspark?")
@@ -9,9 +9,12 @@ diff -ur a/CMakeLists.txt b/CMakeLists.txt
  SET(ENABLE_CURL TRUE CACHE BOOL "Enable CURL? (Required for Downloader functionality)")
  SET(ENABLE_LIBAVCODEC TRUE CACHE BOOL "Enable libavcodec and dependent functionality?")
  SET(ENABLE_RTMP FALSE CACHE BOOL "Enable librtmp and dependent functionality?")
-@@ -412,7 +413,9 @@
- GETTEXT_CREATE_TRANSLATIONS(i18n/lightspark.pot ALL i18n/pl.po i18n/fr.po
-         i18n/zh_CN.po)
+diff -ur a/src/CMakeLists.txt b/src/CMakeLists.txt
+--- a/src/CMakeLists.txt	2011-06-15 15:07:47.375546914 +0200
++++ b/src/CMakeLists.txt	2011-06-15 15:09:07.819945946 +0200
+@@ -140,6 +140,8 @@
+   ADD_SUBDIRECTORY(plugin)
+ ENDIF(COMPILE_PLUGIN)
  
 -ADD_SUBDIRECTORY(backends/interfaces/audio/pulse)
 +IF(${AUDIO_BACKEND} MATCHES "pulse")
@@ -19,4 +22,3 @@ diff -ur a/CMakeLists.txt b/CMakeLists.txt
 +ENDIF(${AUDIO_BACKEND} MATCHES "pulse")
  #ADD_SUBDIRECTORY(backends/interfaces/audio/alsa)
  #ADD_SUBDIRECTORY(backends/interfaces/audio/openal)
- 
