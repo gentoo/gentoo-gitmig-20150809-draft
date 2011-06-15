@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.4.0.ebuild,v 1.1 2010/01/08 02:30:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/collectl-3.5.1.ebuild,v 1.1 2011/06/15 03:15:51 jer Exp $
+
+EAPI="3"
 
 inherit eutils
 
@@ -19,13 +21,8 @@ RDEPEND=">=dev-lang/perl-5.8.8
 	sys-apps/ethtool
 	sys-apps/pciutils"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-install.patch
-	sed -i \
-		-e "/^DOCDIR/s:doc/collectl:doc/${PF}:" \
-		INSTALL || die
+src_prepare() {
+	sed -i INSTALL -e "/^DOCDIR/s:doc/collectl:doc/${PF}:" || die
 }
 
 src_install() {
