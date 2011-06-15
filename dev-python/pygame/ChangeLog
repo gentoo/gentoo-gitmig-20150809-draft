@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.75 2011/06/14 20:16:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.76 2011/06/15 15:30:16 jer Exp $
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> pygame-1.9.2_pre3082.ebuild:
+  Stable for HPPA (bug #370509).
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> pygame-1.9.2_pre3082.ebuild:
   x86 stable, bug #370509
