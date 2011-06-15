@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-28.ebuild,v 1.3 2011/06/08 11:08:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-28.ebuild,v 1.4 2011/06/15 13:33:05 mgorny Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="audit cryptsetup gtk pam selinux tcpd"
+IUSE="audit cryptsetup gtk pam plymouth selinux tcpd"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-fs/udev-171
@@ -27,6 +27,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 		x11-libs/gtk+:2
 		>=x11-libs/libnotify-0.7 )
 	pam? ( virtual/pam )
+	plymouth? ( sys-boot/plymouth )
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )"
 
@@ -75,6 +76,10 @@ src_configure() {
 		$(use_enable pam)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
+
+		# right now it is enabled on per-distro basis
+		# let's just hack into the check
+		$(use plymouth && echo have_plymouth=true)
 	)
 
 	if use gtk; then
