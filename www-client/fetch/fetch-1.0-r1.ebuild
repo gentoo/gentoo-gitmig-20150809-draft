@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/fetch/fetch-1.0-r1.ebuild,v 1.1 2010/01/03 06:52:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/fetch/fetch-1.0-r1.ebuild,v 1.2 2011/06/15 15:47:42 jer Exp $
 
 DESCRIPTION="Fetch is a simple, fast, and flexible HTTP download tool built on the HTTP Fetcher library."
-HOMEPAGE="http://cs.nmu.edu/~lhanson/fetch/"
-SRC_URI="http://cs.nmu.edu/~lhanson/fetch/dls/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/fetch/"
+SRC_URI="mirror://sourceforge/fetch/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
