@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.18.ebuild,v 1.4 2011/04/04 12:18:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.20.ebuild,v 1.1 2011/06/15 21:06:28 xmw Exp $
 
 EAPI=2
 
@@ -26,10 +26,8 @@ RDEPEND="dev-db/sqlite
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${PN}
-
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.0.18-Makefile.patch
 }
 
 src_compile() {
@@ -37,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
