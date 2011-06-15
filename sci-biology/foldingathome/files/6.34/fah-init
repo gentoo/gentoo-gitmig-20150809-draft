@@ -1,0 +1,27 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/6.34/fah-init,v 1.1 2011/06/15 17:26:03 je_fro Exp $
+
+opts="${opts} unitinfo"
+
+unitinfo() {
+	einfo "$(head -n1 /opt/foldingathome/unitinfo.txt):"
+	sed -e '1,2d' /opt/foldingathome/unitinfo.txt
+}
+
+start() {
+	ebegin "Starting Folding@Home"
+	cd /opt/foldingathome
+	start-stop-daemon --chdir ${PWD} --chuid foldingathome --nicelevel 19 \
+		--make-pidfile --pidfile "${PIDFILE}" \
+		--start --background --exec ./fah6 -- ${FOLD_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Folding@Home"
+	start-stop-daemon --stop --user foldingathome --pidfile "${PIDFILE}"
+	eend $?
+	[[ -f ${PIDFILE} ]] && killall --user foldingathome --signal SIGKILL
+}
