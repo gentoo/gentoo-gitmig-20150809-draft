@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5442 2011/06/14 17:49:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5443 2011/06/15 10:15:18 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2011; Eray Aslan <eras@gentoo.org> package.mask:
+  Mask experimental mail-mta/postfix-2.9 releases
 
   14 Jun 2011; Eray Aslan <eras@gentoo.org> package.mask:
   Mask net-mail/signature for removal
