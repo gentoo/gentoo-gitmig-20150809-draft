@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.216 2011/05/25 16:01:49 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.217 2011/06/15 07:53:29 phajdan.jr Exp $
+
+  15 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gentoolkit-0.3.0.4.ebuild:
+  x86 stable wrt bug #343843
 
 *gentoolkit-0.3.0.4 (25 May 2011)
 
