@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.54 2011/01/30 18:22:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.55 2011/06/15 08:32:30 mduft Exp $
+
+  15 Jun 2011; Markus Duft <mduft@gentoo.org> tango-icon-theme-0.8.90.ebuild:
+  add ~x86-interix prefix keyword
 
   30 Jan 2011; Raúl Porcel <armin76@gentoo.org>
   tango-icon-theme-0.8.90.ebuild:
