@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.1 2011/06/05 17:32:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.2 2011/06/15 16:09:09 pacho Exp $
 
 EAPI="4"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2 eutils
 
