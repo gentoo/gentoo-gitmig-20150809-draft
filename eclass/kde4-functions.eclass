@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.52 2011/06/15 00:11:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.53 2011/06/15 12:10:54 abcd Exp $
 
 inherit versionator
 
@@ -461,7 +461,7 @@ _do_blocker() {
 	fi
 
 	local slot ver="$1" atom old_ver="unset"
-	[[ "$2" == *:3.5 ]] && old_ver=${2::-4}
+	[[ "$2" == *:3.5 ]] && old_ver=${2%:3.5}
 
 	for slot in ${KDE_SLOTS[@]} ${KDE_LIVE_SLOTS[@]}; do
 		# If no version was passed, or the version is greater than the maximum
