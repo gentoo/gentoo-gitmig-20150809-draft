@@ -1,12 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ApE-1.17.ebuild,v 1.1 2009/02/17 03:54:29 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ApE-2.0.7.ebuild,v 1.1 2011/06/15 16:11:04 je_fro Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="ApE - A Plasmid Editor"
 HOMEPAGE="http://www.biology.utah.edu/jorgensen/wayned/ape/"
-SRC_URI="http://www.biology.utah.edu/jorgensen/wayned/ape/Download/ApE_linux_current.zip"
+SRC_URI="http://www.biology.utah.edu/jorgensen/wayned/ape/Download/ApE_linux_current.zip -> ${P}.zip"
 
 LICENSE="ApE"
 RESTRICT="mirror"
@@ -14,8 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="dev-lang/tcl"
+DEPEND="app-arch/unzip"
+RDEPEND="dev-lang/tcl
+	 dev-lang/tk"
 
 src_compile() {
 	echo

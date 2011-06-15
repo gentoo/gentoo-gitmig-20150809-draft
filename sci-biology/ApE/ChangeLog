@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/ApE
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.6 2009/11/14 01:46:22 je_fro Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.7 2011/06/15 16:11:04 je_fro Exp $
+
+*ApE-2.0.7 (15 Jun 2011)
+
+  15 Jun 2011; Jeff Gardner <je_fro@gentoo.org> ApE-1.17.ebuild,
+  +ApE-2.0.7.ebuild:
+  New version, fix bugs raised in #371473, thanks to Piotr Szymaniak and Jeroen
+  Roovers.
 
   14 Nov 2009; Jeff Gardner <je_fro@gentoo.org> Manifest:
   Update digest thanks to a bump from Martin Mokrejs and Stefanie D. Hueber
