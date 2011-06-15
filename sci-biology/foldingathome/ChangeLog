@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.31 2011/06/15 17:26:03 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.32 2011/06/15 18:00:52 je_fro Exp $
+
+  15 Jun 2011; Jeff Gardner <je_fro@gentoo.org>
+  -files/copy_client_config-5.0.2-r1, -files/init-5.0.2-r3,
+  -files/init-5.0.2-r5, -foldingathome-5.0.2-r5.ebuild,
+  -foldingathome-6.02-r1.ebuild, -foldingathome-6.29.ebuild,
+  -files/folding-conf.d-r1, -files/initfolding-r2:
+  Remove broken old versions.
 
 *foldingathome-6.34 (15 Jun 2011)
 
