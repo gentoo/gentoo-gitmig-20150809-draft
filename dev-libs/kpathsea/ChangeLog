@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.11 2011/06/13 20:51:53 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.12 2011/06/15 05:50:16 naota Exp $
+
+  15 Jun 2011; Naohiro Aota <naota@gentoo.org> kpathsea-6.0.0_p20100722.ebuild:
+  Added ~x86-fbsd, bug #345317
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org>
   kpathsea-6.0.0_p20100722.ebuild:
