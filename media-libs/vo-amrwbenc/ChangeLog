@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-amrwbenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.6 2011/05/24 12:49:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.7 2011/06/15 16:47:40 jer Exp $
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> vo-amrwbenc-0.1.1.ebuild:
+  Marked ~hppa (bug #365203).
 
   24 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> vo-amrwbenc-9999.ebuild:
   Sync keywords to live ebuild too.
