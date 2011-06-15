@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/spek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.4 2011/04/25 19:06:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spek/ChangeLog,v 1.5 2011/06/15 21:35:33 xmw Exp $
+
+  15 Jun 2011; Michael Weber <xmw@gentoo.org> -spek-0.6.ebuild:
+  Remove old version
 
 *spek-0.7 (25 Apr 2011)
 
