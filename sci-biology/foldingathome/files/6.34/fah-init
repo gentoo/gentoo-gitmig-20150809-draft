@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/6.34/fah-init,v 1.1 2011/06/15 17:26:03 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/6.34/fah-init,v 1.2 2011/06/15 17:41:48 je_fro Exp $
 
 opts="${opts} unitinfo"
 
@@ -23,5 +23,5 @@ stop() {
 	ebegin "Stopping Folding@Home"
 	start-stop-daemon --stop --user foldingathome --pidfile "${PIDFILE}"
 	eend $?
-	[[ -f ${PIDFILE} ]] && killall --user foldingathome --signal SIGKILL
+	killall --user foldingathome --signal SIGKILL
 }
