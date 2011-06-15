@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.22.ebuild,v 1.1 2011/06/14 18:34:58 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.26.ebuild,v 1.1 2011/06/15 08:39:34 a3li Exp $
 
 EAPI=4
 inherit nsplugins rpm multilib toolchain-funcs
