@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Encode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.22 2011/06/12 23:59:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.23 2011/06/15 06:16:16 naota Exp $
+
+  15 Jun 2011; Naohiro Aota <naota@gentoo.org> Encode-2.40-r1.ebuild,
+  Encode-2.420.0.ebuild, Encode-2.430.0.ebuild:
+  Add ~x86-fbsd, bug 358079
 
   12 Jun 2011; Matt Turner <mattst88@gentoo.org> Encode-2.430.0.ebuild:
   Added ~mips, bug 358079
