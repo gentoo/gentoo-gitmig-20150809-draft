@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20100714.ebuild,v 1.2 2010/07/24 18:00:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20110511.ebuild,v 1.1 2011/06/15 03:54:24 dirtyepic Exp $
 
 EAPI="2"
 
@@ -8,10 +8,15 @@ inherit eutils flag-o-matic
 
 DESCRIPTION="Modifies ELFs to avoid runtime symbol resolutions resulting in faster load times"
 HOMEPAGE="http://people.redhat.com/jakub/prelink"
-#SRC_URI="http://people.redhat.com/jakub/prelink/${P}.tar.bz2"
-# if not on http://people.redhat.com/jakub/prelink/, releases can usually be ripped from
-# http://mirrors.kernel.org/fedora/development/source/SRPMS/prelink-<blah>.src.rpm
+
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
+#SRC_URI="http://people.redhat.com/jakub/prelink/${P}.tar.bz2"
+#
+# if not available rip the distfile with rpm2targz from
+# http://mirrors.kernel.org/fedora/development/rawhide/source/SRPMS/prelink-[ver].src.rpm
+
+# track http://pkgs.fedoraproject.org/gitweb/?p=prelink.git;a=summary for
+# version bumps
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,14 +36,13 @@ src_prepare() {
 
 	sed -i -e 's:undosyslibs.sh::' testsuite/Makefile.in #254201
 	sed -i -e '/^CC=/s: : -Wl,--disable-new-dtags :' testsuite/functions.sh #100147
+
+	# older GCCs don't support this flag
+	# sed it from the Makefile then add it back to CFLAGS so we can use
+	# strip-unsupported-flags
 	sed -i -e 's:-Wno-pointer-sign::' src/Makefile.in #325269
 	append-cflags -Wno-pointer-sign
 	strip-unsupported-flags
-}
-
-src_test() {
-	unset LD_AS_NEEDED # 303797
-	emake -j1 check
 }
 
 src_install() {
