@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.202 2011/06/11 03:15:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.203 2011/06/15 06:47:35 nirbheek Exp $
+
+  15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gtksourceview-3.0.1.ebuild, gtksourceview-3.0.3.ebuild:
+  Fix glade dependency, see bug 364831
 
 *gtksourceview-3.0.3 (11 Jun 2011)
 

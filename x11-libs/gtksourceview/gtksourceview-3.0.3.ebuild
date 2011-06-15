@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.0.3.ebuild,v 1.1 2011/06/11 03:15:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.0.3.ebuild,v 1.2 2011/06/15 06:47:35 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~
 RDEPEND=">=x11-libs/gtk+-3.0:3[introspection?]
 	>=dev-libs/libxml2-2.6:2
 	>=dev-libs/glib-2.28:2
-	glade? ( >=dev-util/glade-3.9:3 )
+	glade? ( >=dev-util/glade-3.9:3.10 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.0 )"
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.17

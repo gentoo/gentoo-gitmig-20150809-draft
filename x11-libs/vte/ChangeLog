@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.277 2011/06/15 02:27:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.278 2011/06/15 06:44:42 nirbheek Exp $
+
+  15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> vte-0.28.1-r200.ebuild,
+  vte-0.28.1-r300.ebuild:
+  Fix glade dependency, see bug 364831
 
 *vte-0.28.1-r300 (15 Jun 2011)
 *vte-0.28.1-r200 (15 Jun 2011)
