@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.39 2011/06/15 04:55:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.40 2011/06/15 05:02:34 jer Exp $
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> files/memtest86-4.0-build.patch:
+  Clean up patch.
 
 *memtest86-4.0 (15 Jun 2011)
 
