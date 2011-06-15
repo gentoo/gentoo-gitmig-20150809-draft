@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Date
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Date/ChangeLog,v 1.7 2011/06/14 04:23:42 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Date/ChangeLog,v 1.8 2011/06/15 04:47:13 naota Exp $
+
+  14 Jun 2011; Naohiro Aota <naota@gentoo.org> ChangeLog:
+  Update sign
 
   14 Jun 2011; Naohiro Aota <naota@gentoo.org> HTTP-Date-6.0.0.ebuild:
   Added ~x86-fbsd, bug #358079
