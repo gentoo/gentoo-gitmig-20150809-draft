@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12837 2011/06/15 10:15:17 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12838 2011/06/15 10:17:20 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,7 @@
 
 # Eray Aslan <eras@gentoo.org> (15 Jun 2011)
 # Mask experimental software
-mail-mta/postfix-2.9*
+=mail-mta/postfix-2.9*
 
 # Eray Aslan <eras@gentoo.org> (14 Jun 2011)
 # Last release in 2000. Possible buffer overflow - bug #349786.
