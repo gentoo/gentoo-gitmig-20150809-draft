@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.102 2011/06/10 18:00:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.103 2011/06/15 18:35:34 dilfridge Exp $
+
+*okular-4.6.4-r1 (15 Jun 2011)
+
+  15 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +okular-4.6.4-r1.ebuild:
+  Bump okular to real 4.6.4 with one big patch, since upstream packaged the
+  code of ~4.6.1 into the 4.6.4 tarball
 
 *okular-4.6.4 (10 Jun 2011)
 
