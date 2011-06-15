@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110604.ebuild,v 1.1 2011/06/05 17:11:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110604.ebuild,v 1.2 2011/06/15 21:48:05 flameeyes Exp $
 
 EAPI=3
 inherit savedconfig
@@ -32,6 +32,8 @@ RDEPEND="!savedconfig? (
 		!media-tv/linuxtv-dvb-firmware[dvb_cards_cx231xx]
 		!media-tv/linuxtv-dvb-firmware[dvb_cards_cx23885]
 		!media-tv/linuxtv-dvb-firmware[dvb_cards_usb-dib0700]
+		!net-dialup/ueagle-atm
+		!net-dialup/ueagle4-atm
 		!net-wireless/i2400m-fw
 		!net-wireless/iwl1000-ucode
 		!net-wireless/iwl3945-ucode

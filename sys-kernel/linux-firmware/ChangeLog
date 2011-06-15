@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.17 2011/06/05 17:11:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.18 2011/06/15 21:48:05 flameeyes Exp $
+
+  15 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  linux-firmware-20110604.ebuild, linux-firmware-99999999.ebuild:
+  Block ueagle-atm and ueagle4-atm.
 
 *linux-firmware-20110604 (05 Jun 2011)
 
