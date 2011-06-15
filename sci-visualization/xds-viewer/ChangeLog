@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/xds-viewer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xds-viewer/ChangeLog,v 1.1 2010/01/31 22:52:49 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xds-viewer/ChangeLog,v 1.2 2011/06/15 09:11:26 jlec Exp $
+
+  15 Jun 2011; Justin Lecher <jlec@gentoo.org> xds-viewer-0.6.ebuild:
+  Fix broken dependency assignment, #371585
 
   31 Jan 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   +xds-viewer-0.6.ebuild, +metadata.xml:
