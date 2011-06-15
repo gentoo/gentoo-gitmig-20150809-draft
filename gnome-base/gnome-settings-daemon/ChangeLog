@@ -1,6 +1,16 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.79 2011/04/07 15:40:02 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.80 2011/06/15 19:32:02 pacho Exp $
+
+*gnome-settings-daemon-2.32.1-r2 (15 Jun 2011)
+
+  15 Jun 2011; Pacho Ramos <pacho@gentoo.org>
+  +gnome-settings-daemon-2.32.1-r2.ebuild,
+  +files/gnome-settings-daemon-2.32.1-media-keys-react.patch,
+  +files/gnome-settings-daemon-2.32.1-syndaemon-mode.patch:
+  Revision bump with upstream patches to react to stream-removed signal from
+  GvcMixerControl and use event driven mode for syndaemon (bug #371455 by Alex
+  Domingo).
 
   07 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-settings-daemon-2.32.1.ebuild,
