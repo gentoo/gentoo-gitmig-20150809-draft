@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.98 2011/06/09 21:05:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.99 2011/06/15 00:11:05 abcd Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -572,6 +572,9 @@ _calculate_live_repo() {
 						kdeplasma-addons | kdepim | kdepim-runtime | kdepimlibs | okular)
 							EGIT_BRANCH="$(get_kde_version)"
 							;;
+						kdeedu)
+							EGIT_BRANCH="$(get_kde_version)"
+							;;
 						marble)
 							EGIT_BRANCH="kde-$(get_kde_version)"
 							;;
@@ -580,7 +583,14 @@ _calculate_live_repo() {
 					;;
 			esac
 
-			EGIT_REPO_URI="${EGIT_MIRROR}/${_kmname}"
+			# default repo uri
+			case ${_kmname} in
+				kdeedu)
+					EGIT_REPO_URI="${EGIT_MIRROR}/${PN}"
+					;;
+				*)
+					EGIT_REPO_URI="${EGIT_MIRROR}/${_kmname}"
+			esac
 
 			debug-print "${FUNCNAME}: Repository: ${EGIT_REPO_URI}"
 			debug-print "${FUNCNAME}: Branch: ${EGIT_BRANCH}"
