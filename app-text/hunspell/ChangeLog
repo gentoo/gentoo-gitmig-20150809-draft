@@ -1,12 +1,13 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.83 2011/06/15 19:22:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.84 2011/06/15 19:27:27 pva Exp $
 
 *hunspell-1.3.2-r1 (15 Jun 2011)
 
   15 Jun 2011; Peter Volkov <pva@gentoo.org> +hunspell-1.3.2-r1.ebuild:
   Create libhunspell.so symlink, probable fix for bug #368975 wrt tman but
-  anyway still required for bug #342449. Drop .la files and USE=static-libs.
+  anyway still required for bug #342449. Fix QA issue, bug #347860 by David J
+  Cozatt. Drop .la files and USE=static-libs.
 
 *hunspell-1.3.2 (24 May 2011)
 
