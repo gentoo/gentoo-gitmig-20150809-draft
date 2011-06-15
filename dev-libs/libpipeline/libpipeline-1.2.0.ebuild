@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/libpipeline-1.2.0.ebuild,v 1.1 2011/03/20 19:20:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/libpipeline-1.2.0.ebuild,v 1.2 2011/06/15 17:00:04 jer Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="static-libs test"
 
 RDEPEND=""
