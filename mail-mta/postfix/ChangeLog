@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.266 2011/06/14 20:27:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.267 2011/06/15 10:24:58 eras Exp $
+
+*postfix-2.9_pre20110605 (15 Jun 2011)
+
+  15 Jun 2011; Eray Aslan <eras@gentoo.org> +postfix-2.9_pre20110605.ebuild,
+  +files/postfix.rc6.2.6:
+  Version bump. Add multi instance support.
 
 *postfix-2.8.3-r2 (14 Jun 2011)
 
