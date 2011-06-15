@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.1 2011/04/30 10:16:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.2 2011/06/15 06:38:48 nirbheek Exp $
+
+*gnome-pty-helper-0.28.1 (15 Jun 2011)
+
+  15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gnome-pty-helper-0.28.0.ebuild, +gnome-pty-helper-0.28.1.ebuild:
+  Bump to 0.28.1, fixes a compiler warning
 
 *gnome-pty-helper-0.28.0 (30 Apr 2011)
 
