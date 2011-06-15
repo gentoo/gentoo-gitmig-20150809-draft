@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/isapnptools
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/ChangeLog,v 1.10 2006/11/03 20:07:58 blubb Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/ChangeLog,v 1.11 2011/06/15 03:31:43 jer Exp $
+
+*isapnptools-1.27 (15 Jun 2011)
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> -isapnptools-1.26-r1.ebuild,
+  +isapnptools-1.27.ebuild, +files/isapnptools-1.27-include.patch:
+  Version bump. Fix missing include.
 
   03 Nov 2006; <blubb@gentoo.org> isapnptools-1.26-r2.ebuild:
   stable on amd64
