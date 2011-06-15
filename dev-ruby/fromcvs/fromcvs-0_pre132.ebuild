@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fromcvs/fromcvs-0_pre132.ebuild,v 1.1 2011/06/15 22:04:56 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fromcvs/fromcvs-0_pre132.ebuild,v 1.2 2011/06/15 22:08:01 sochotnicky Exp $
 
 EAPI=2
 
@@ -38,7 +38,7 @@ src_prepare() {
 each_ruby_install() {
 	siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
 	insinto ${siteruby}
-	doins *.rb || die "Installation of rb files failes"
+	doins *.rb || die "Installation of rb files failed"
 
 	make_script togit
 	make_script tohg
