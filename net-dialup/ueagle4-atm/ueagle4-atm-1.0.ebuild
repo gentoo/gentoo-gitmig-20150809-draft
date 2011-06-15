@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle4-atm/ueagle4-atm-1.0.ebuild,v 1.1 2009/08/22 06:56:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle4-atm/ueagle4-atm-1.0.ebuild,v 1.2 2011/06/15 21:50:44 flameeyes Exp $
 
 EAPI="2"
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="net-dialup/ppp"
+RDEPEND="net-dialup/ppp
+	!sys-kernel/linux-firmware"
 
 S="${WORKDIR}/ueagle4-data-${PV}"
 
