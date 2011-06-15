@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/bobotpp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.22 2010/12/03 00:40:33 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.23 2011/06/15 04:06:52 binki Exp $
+
+*bobotpp-2.2.3 (15 Jun 2011)
+
+  15 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +bobotpp-2.2.3.ebuild, +files/bobotpp-2.2.3-stdout.patch:
+  Bump to bobotpp-2.2.3 and to EAPI=4.
 
   03 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org> bobotpp-2.2.2.ebuild:
   Use modern autotools for rebuilding.
