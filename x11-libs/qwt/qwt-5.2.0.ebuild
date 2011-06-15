@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.0.ebuild,v 1.10 2010/06/25 20:31:15 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.0.ebuild,v 1.11 2011/06/15 06:15:49 jlec Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -58,6 +58,7 @@ src_install () {
 	dodoc CHANGES README
 	insinto /usr/share/doc/${PF}
 	if use doc; then
+		rm doc/man/*/*license*
 		doman doc/man/*/* || die
 		doins -r doc/html || die
 	fi

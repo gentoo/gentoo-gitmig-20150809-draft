@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.1.ebuild,v 1.6 2011/03/05 11:42:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.1.ebuild,v 1.7 2011/06/15 06:15:49 jlec Exp $
 
 EAPI="3"
 
@@ -57,6 +57,7 @@ src_install () {
 	qt4-r2_src_install
 	insinto /usr/share/doc/${PF}
 	if use doc; then
+		rm doc/man/*/*license*
 		doman doc/man/*/* || die
 		doins -r doc/html || die
 	fi
