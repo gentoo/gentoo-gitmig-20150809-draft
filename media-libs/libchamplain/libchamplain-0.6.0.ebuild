@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.9 2011/03/02 09:55:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.10 2011/06/15 06:10:56 jlec Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-libs/glib:2
 	>=x11-libs/cairo-1.4
 	net-libs/libsoup-gnome:2.4
-	media-libs/clutter:1.0
+	media-libs/clutter:1.0[introspection?]
 	media-libs/memphis
 	dev-db/sqlite:3
 	gtk? (

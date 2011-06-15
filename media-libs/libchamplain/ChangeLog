@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.13 2011/06/02 22:17:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.14 2011/06/15 06:10:56 jlec Exp $
+
+  15 Jun 2011; Justin Lecher <jlec@gentoo.org> libchamplain-0.6.0.ebuild,
+  libchamplain-0.8.0.ebuild, libchamplain-0.8.1.ebuild,
+  libchamplain-0.8.2.ebuild, libchamplain-0.8.3.ebuild:
+  Depend on introspection support in clutter, #371471
 
   02 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   libchamplain-0.10.0.ebuild:
