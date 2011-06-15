@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.9 2011/06/13 13:14:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7-r2.ebuild,v 1.10 2011/06/15 08:29:15 jlec Exp $
 
 EAPI="3"
 
@@ -59,7 +59,7 @@ pkg_nofetch() {
 
 src_prepare() {
 	# apply LINUX-arch patches to vmd configure
-	cd "${WORKDIR}" && epatch "${FILESDIR}/${P}-gentoo.patch"
+	cd "${WORKDIR}" && epatch "${WORKDIR}/${P}-gentoo.patch"
 
 	# prepare the plugins
 	cd "${WORKDIR}"/plugins
@@ -178,7 +178,7 @@ src_install() {
 
 	# install icon and generate desktop entry
 	insinto /usr/share/pixmaps
-	doins "${FILESDIR}"/vmd.png || die "Failed to install vmd icon"
+	doins "${WORKDIR}"/vmd.png || die "Failed to install vmd icon"
 	insinto /usr/share/applications
-	doins "${FILESDIR}"/vmd.desktop || die "Failed to install desktop entry"
+	doins "${WORKDIR}"/vmd.desktop || die "Failed to install desktop entry"
 }

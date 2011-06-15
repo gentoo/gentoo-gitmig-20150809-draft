@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.5 2011/06/13 13:14:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.ebuild,v 1.6 2011/06/15 08:29:15 jlec Exp $
 
 EAPI="3"
 
@@ -64,7 +64,7 @@ pkg_nofetch() {
 src_prepare() {
 	cd "${WORKDIR}"/plugins
 
-	epatch "${FILESDIR}"/${P}-gentoo-plugins.patch
+	epatch "${WORKDIR}"/${P}-gentoo-plugins.patch
 
 	[[ ${SILENT} == yes ]] || sed '/^.SILENT/d' -i $(find -name Makefile)
 
@@ -84,7 +84,7 @@ src_prepare() {
 	# prepare vmd itself
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-gentoo-base.patch
+	epatch "${WORKDIR}"/${P}-gentoo-base.patch
 
 	# PREFIX
 	sed \
@@ -198,7 +198,7 @@ src_install() {
 
 	# install icon and generate desktop entry
 	insinto /usr/share/pixmaps
-	doins "${FILESDIR}"/vmd.png || die "Failed to install vmd icon"
+	doins "${WORKDIR}"/vmd.png || die "Failed to install vmd icon"
 	insinto /usr/share/applications
-	doins "${FILESDIR}"/vmd.desktop || die "Failed to install desktop entry"
+	doins "${WORKDIR}"/vmd.desktop || die "Failed to install desktop entry"
 }
