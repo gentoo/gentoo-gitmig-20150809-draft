@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.10 2011/06/15 06:10:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.11 2011/06/15 08:43:37 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ RDEPEND="
 	media-libs/memphis
 	dev-db/sqlite:3
 	gtk? (
-		x11-libs/gtk+:2
+		x11-libs/gtk+:2[introspection?]
 		media-libs/memphis:0.2
 		>=media-libs/clutter-gtk-0.10:0.10 )
 	python? (
