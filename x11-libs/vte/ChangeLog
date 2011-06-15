@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.276 2011/05/01 15:13:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.277 2011/06/15 02:27:55 nirbheek Exp $
+
+*vte-0.28.1-r300 (15 Jun 2011)
+*vte-0.28.1-r200 (15 Jun 2011)
+
+  15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -vte-0.28.0-r200.ebuild,
+  -vte-0.28.0-r300.ebuild, +vte-0.28.1-r200.ebuild, +vte-0.28.1-r300.ebuild:
+  Bump to 0.28.1, security bump, remove vulnerable versions
 
   01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -files/vte-0.24.1-background-color.patch,

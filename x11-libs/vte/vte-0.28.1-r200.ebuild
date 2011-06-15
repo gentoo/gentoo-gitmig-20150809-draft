@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.0-r200.ebuild,v 1.1 2011/04/30 10:16:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.1-r200.ebuild,v 1.1 2011/06/15 02:27:55 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.4"
 
