@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Kolab_Format/Horde_Kolab_Format-1.0.0.ebuild,v 1.1 2011/06/04 19:48:56 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Kolab_Format/Horde_Kolab_Format-1.0.0.ebuild,v 1.2 2011/06/15 16:50:58 a3li Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SLOT="0"
 DESCRIPTION="A package for reading/writing Kolab data formats."
 LICENSE="LGPL-2"
 HOMEPAGE="http://www.horde.org/"
-SRC_URI="http://pear.horde.org/${P}.tgz"
+SRC_URI="http://pear.horde.org/get/${P}.tgz"
 
 DEPEND="dev-lang/php[xml]
 	>=dev-lang/php-5.2.0

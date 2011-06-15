@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/Horde_Autoloader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Autoloader/ChangeLog,v 1.1 2011/06/04 20:03:06 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Autoloader/ChangeLog,v 1.2 2011/06/15 16:38:51 a3li Exp $
+
+  15 Jun 2011; Alex Legler <a3li@gentoo.org> Horde_Autoloader-1.0.0.ebuild:
+  Fix SRC_URI
 
 *Horde_Autoloader-1.0.0 (04 Jun 2011)
 

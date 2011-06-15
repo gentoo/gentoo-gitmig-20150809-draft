@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Imap_Client/Horde_Imap_Client-1.0.7.ebuild,v 1.1 2011/06/04 19:47:50 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Imap_Client/Horde_Imap_Client-1.0.7.ebuild,v 1.2 2011/06/15 16:49:07 a3li Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SLOT="0"
 DESCRIPTION="Horde IMAP abstraction interface"
 LICENSE="LGPL-2"
 HOMEPAGE="http://www.horde.org/"
-SRC_URI="http://pear.horde.org/${P}.tgz"
+SRC_URI="http://pear.horde.org/get/${P}.tgz"
 
 DEPEND="dev-lang/php[hash]
 	>=dev-lang/php-5.2.0
