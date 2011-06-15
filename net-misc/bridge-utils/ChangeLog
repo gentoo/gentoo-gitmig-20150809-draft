@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bridge-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.56 2010/09/19 19:34:13 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.57 2011/06/15 03:01:34 jer Exp $
+
+*bridge-utils-1.5 (15 Jun 2011)
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> +bridge-utils-1.5.ebuild:
+  Version bump. Remove old init script warning.
 
   19 Sep 2010; Michael Weber <xmw@gentoo.org> bridge-utils-1.4.ebuild:
   Added ~arm keyword
