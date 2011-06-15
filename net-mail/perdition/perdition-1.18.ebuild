@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.18.ebuild,v 1.1 2011/06/15 14:44:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.18.ebuild,v 1.2 2011/06/15 15:24:06 eras Exp $
 
 EAPI=4
 inherit eutils pam
@@ -32,6 +32,7 @@ RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewuser perdition
+	enewgroup perdition
 }
 
 src_configure() {
@@ -57,7 +58,4 @@ src_install() {
 
 	rm -f "${D}"/etc/pam.d/perdition
 	pamd_mimic sys-auth perdition auth account password session
-
-	keepdir /var/run/perdition
-	chown perdition "${D}"/var/run/perdition
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/perdition
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/ChangeLog,v 1.13 2011/06/15 14:44:11 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/ChangeLog,v 1.14 2011/06/15 15:24:06 eras Exp $
+
+  15 Jun 2011; Eray Aslan <eras@gentoo.org> perdition-1.18.ebuild,
+  files/perdition.initd:
+  Fix pid dir creation in init script.
 
 *perdition-1.18 (15 Jun 2011)
 
