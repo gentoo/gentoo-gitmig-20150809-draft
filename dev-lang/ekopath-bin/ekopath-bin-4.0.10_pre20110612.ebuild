@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath-bin/ekopath-bin-4.0.10_pre20110612.ebuild,v 1.1 2011/06/15 08:27:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath-bin/ekopath-bin-4.0.10_pre20110612.ebuild,v 1.2 2011/06/15 08:27:58 xarthisius Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ QA_PREBUILT="
 	${PATHSCALE_SDP_DIR}/bin/assign"
 
 src_unpack() {
-	cp ${DISTDIR}/${A} ${S}/${P}.run #work around BitRock failing on symlink
+	cp "${DISTDIR}"/${A} "${S}"/${P}.run #work around BitRock failing on symlink
 	fperms 0755 ${P}.run
 }
 
