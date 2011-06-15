@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/FusionSound
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.7 2009/12/23 11:13:31 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.8 2011/06/15 19:01:23 phajdan.jr Exp $
+
+*FusionSound-1.1.1-r1 (15 Jun 2011)
+
+  15 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +FusionSound-1.1.1-r1.ebuild, +files/FusionSound-1.1.1-ffmpeg-0.6.90.patch:
+  Fix build with >=ffmpeg-0.6.90, bug #367437 by hwoarang.
 
   23 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   FusionSound-1.1.1.ebuild:
