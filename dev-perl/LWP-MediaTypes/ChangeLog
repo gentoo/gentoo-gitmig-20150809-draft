@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/LWP-MediaTypes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.6 2011/06/13 00:02:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-MediaTypes/ChangeLog,v 1.7 2011/06/15 05:31:49 naota Exp $
+
+  15 Jun 2011; Naohiro Aota <naota@gentoo.org> LWP-MediaTypes-6.10.0.ebuild:
+  Added ~x86-fbsd, bug #358079
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> LWP-MediaTypes-6.10.0.ebuild:
   Added ~mips, bug 358079
