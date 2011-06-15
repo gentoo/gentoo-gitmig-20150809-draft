@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.120 2011/05/19 16:03:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.121 2011/06/15 13:15:46 titanofold Exp $
+
+*postgresql-base-9.1_beta1-r2 (15 Jun 2011)
+*postgresql-base-9.0.4-r2 (15 Jun 2011)
+*postgresql-base-8.4.8-r2 (15 Jun 2011)
+*postgresql-base-8.3.15-r2 (15 Jun 2011)
+*postgresql-base-8.2.21-r2 (15 Jun 2011)
+
+  15 Jun 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-base-8.2.21-r2.ebuild, +postgresql-base-8.3.15-r2.ebuild,
+  +postgresql-base-8.4.8-r2.ebuild, +postgresql-base-9.0.4-r2.ebuild,
+  +postgresql-base-9.1_beta1-r2.ebuild:
+  Added >=sys-apps/sandbox-2.0 as a dependency.
 
   19 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -postgresql-base-8.2.18.ebuild, -postgresql-base-8.2.19.ebuild,
