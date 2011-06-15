@@ -1,0 +1,11 @@
+# ChangeLog for sci-geosciences/opencpn
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.1 2011/06/15 00:11:29 mschiff Exp $
+
+*opencpn-2.3.1 (15 Jun 2011)
+
+  15 Jun 2011; Marc Schiffbauer <mschiff@gentoo.org> +opencpn-2.3.1.ebuild,
+  +metadata.xml:
+  New ebuild for opencpn. Thanks to Tim Mohlmann for ebuild update. Fixes bug
+  #334283
+
