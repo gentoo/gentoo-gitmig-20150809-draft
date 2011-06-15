@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.5.0.297975.ebuild,v 1.2 2011/03/03 22:08:34 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.5.0.297975-r1.ebuild,v 1.1 2011/06/15 22:15:57 tgurr Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit versionator
+inherit eutils autotools versionator
 
 MY_PV=$(replace_version_separator 3 '-' )
 MY_P="${PN/vm/VM}-source-${MY_PV}"
@@ -24,24 +24,31 @@ COMMON_DEPEND="
 	>=dev-libs/libxml2-2.6.0
 	>=dev-libs/openssl-0.9.8
 	>=net-misc/curl-7.16.0[ssl]
-	x11-libs/gtk+:2"
+	x11-libs/gtk+:2
+"
 
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.21
-	>=dev-util/pkgconfig-0.9.0"
+	>=dev-util/pkgconfig-0.9.0
+"
 
 RDEPEND="${COMMON_DEPEND}
-	>=net-misc/rdesktop-1.4.1"
+	>=net-misc/rdesktop-1.4.1
+"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-linking.patch"
+	sed -e "s:e.x.p:$(get_version_component_range 1-3):" \
+		-e "s:00000:$(get_version_component_range 4):" \
+		-i configure.ac
+	AT_M4DIR="${AT_M4DIR} -I ${ROOT}/usr/share/aclocal" eautoreconf
+}
 
 src_configure() {
 	econf \
 		--disable-static-icu \
 		--enable-nls \
 		--with-boost
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
 }
