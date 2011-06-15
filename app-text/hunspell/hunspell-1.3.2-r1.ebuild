@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r1.ebuild,v 1.1 2011/06/15 19:22:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r1.ebuild,v 1.2 2011/06/15 19:30:09 pva Exp $
 
 EAPI="4"
 inherit eutils multilib autotools flag-o-matic versionator
@@ -68,7 +68,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	#342449
-	pushd ${ED}/usr/$(get_libdir)/ >/dev/null
+	pushd "${ED}"/usr/$(get_libdir)/ >/dev/null
 	ln -s lib${PN}{-$(get_major_version).$(get_version_component_range 2).so.0.0.0,.so}
 	popd >/dev/null
 
