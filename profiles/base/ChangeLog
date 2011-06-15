@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.275 2011/06/12 10:10:10 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.276 2011/06/15 06:44:32 nirbheek Exp $
+
+  15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Edit vte glade mask to only affect slot 2.90 (slightly broken, but this will
+  go away soon)
 
   12 Jun 2011; Brian Harring <ferringb@gentoo.org> profile.bashrc:
   Remove /etc/portage/env hack- it belongs in the PM, and has been in
