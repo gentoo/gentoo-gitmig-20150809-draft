@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5445 2011/06/15 19:13:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5446 2011/06/15 22:03:13 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2011; Jonathan Callen <abcd@gentoo.org> updates/2Q-2011:
+  Add The Great KDE Slot Move: gentoo-x86 Edition
 
   15 Jun 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Retire gpixpod for bugs 221277 and 351307.
