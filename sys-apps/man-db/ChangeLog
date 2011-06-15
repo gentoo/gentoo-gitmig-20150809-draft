@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.17 2011/06/15 17:00:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.18 2011/06/15 18:43:04 mattst88 Exp $
+
+  15 Jun 2011; Matt Turner <mattst88@gentoo.org> man-db-2.6.0.2.ebuild:
+  Added ~mips, bug 371687
 
   15 Jun 2011; Jeroen Roovers <jer@gentoo.org> man-db-2.6.0.2.ebuild:
   Marked ~hppa (bug #371687).
