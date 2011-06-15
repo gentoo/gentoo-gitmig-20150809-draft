@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.40 2011/04/29 00:59:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.41 2011/06/15 04:07:18 nirbheek Exp $
+
+*libunique-3.0.2 (15 Jun 2011)
+
+  15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +libunique-3.0.2.ebuild:
+  Bump to 3.0.2
 
   29 Apr 2011; Jeroen Roovers <jer@gentoo.org> libunique-3.0.0.ebuild:
   Marked ~hppa (bug #364693).
