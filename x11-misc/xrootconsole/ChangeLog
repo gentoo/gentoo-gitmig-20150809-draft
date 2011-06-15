@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xrootconsole
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.23 2010/02/08 11:10:28 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.24 2011/06/15 15:53:43 jer Exp $
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> xrootconsole-0.4-r1.ebuild,
+  xrootconsole-0.6.ebuild:
+  Fix HOMEPAGE by David (bug #371701).
 
   08 Feb 2010; Jeroen Roovers <jer@gentoo.org> xrootconsole-0.6.ebuild,
   files/xrootconsole-0.6.makefile.patch:
