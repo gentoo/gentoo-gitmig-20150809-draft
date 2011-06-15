@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.19.ebuild,v 1.3 2009/12/26 17:46:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.19.ebuild,v 1.4 2011/06/15 05:55:30 jlec Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ RESTRICT="test"
 
 DEPEND=">=sci-libs/netcdf-3.5.0
 	virtual/latex-base
-	media-gfx/imagemagick
+	media-gfx/imagemagick[png]
 	app-text/ghostscript-gpl
 	emacs? ( virtual/emacs )"
 
