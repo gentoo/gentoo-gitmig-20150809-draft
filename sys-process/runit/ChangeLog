@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/runit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.31 2011/06/15 05:43:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.32 2011/06/15 18:55:12 flameeyes Exp $
+
+  15 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> runit-2.1.1.ebuild:
+  QA: actually make runit build, since it was broken with a blind version bump.
 
 *runit-2.1.1 (15 Jun 2011)
 
