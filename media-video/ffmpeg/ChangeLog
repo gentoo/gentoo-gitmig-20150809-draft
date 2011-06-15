@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.413 2011/05/24 12:44:22 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.414 2011/06/15 16:48:57 jer Exp $
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.7_rc1.ebuild:
+  Marked ~hppa (bug #365203).
 
   24 May 2011; Thomas Kahle <tomka@gentoo.org> ffmpeg-0.7_rc1.ebuild:
   ~x86 per bug 365203
