@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.7.ebuild,v 1.1 2011/05/06 17:10:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.7.ebuild,v 1.2 2011/06/15 16:31:44 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools db-use eutils flag-o-matic gnome2 java-pkg-opt-2
 
