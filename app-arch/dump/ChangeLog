@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.62 2011/06/14 14:51:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.63 2011/06/16 09:54:35 pva Exp $
+
+  16 Jun 2011; Peter Volkov <pva@gentoo.org> dump-0.4.44.ebuild,
+  +files/dump-0.4.44-underlinking.patch:
+  Fix underlinking build problem, bug #369461 thank Diego Elio Pettenò for
+  report.
 
 *dump-0.4.44 (14 Jun 2011)
 

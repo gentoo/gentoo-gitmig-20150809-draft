@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.44.ebuild,v 1.1 2011/06/14 14:51:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.44.ebuild,v 1.2 2011/06/16 09:54:35 pva Exp $
 
 EAPI="4"
-inherit eutils
+inherit eutils autotools
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -26,6 +26,11 @@ RDEPEND=">=sys-fs/e2fsprogs-1.27
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	virtual/os-headers"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-underlinking.patch"
+	eautoreconf
+}
 
 src_configure() {
 	econf \
