@@ -1,0 +1,13 @@
+# ChangeLog for app-forensics/ovaldi
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.1 2011/06/16 09:30:07 hwoarang Exp $
+
+*ovaldi-5.9.1 (16 Jun 2011)
+
+  16 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +ovaldi-5.9.1.ebuild,
+  +files/ovaldi-5.9.1-disable-ldap-probes.patch,
+  +files/ovaldi-5.9.1-strnicmp.patch, +files/ovaldi-5.9.1-xerces3.patch,
+  +files/rpmdb.patch, +files/use_local_rpmdb.patch, +metadata.xml:
+  Initial commit. Moved from sunrise. Thanks to Anton Bolshakov for the
+  original ebuild and LABBE Corentin for proxy-maintaining it. Bug #225065
+
