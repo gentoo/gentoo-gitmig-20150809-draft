@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/tac_plus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.7 2011/06/16 15:31:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.8 2011/06/16 16:00:43 chainsaw Exp $
+
+*tac_plus-4.0.4.19-r2 (16 Jun 2011)
+
+  16 Jun 2011; Tony Vroon <chainsaw@gentoo.org> -tac_plus-4.0.4.19.ebuild,
+  -tac_plus-4.0.4.19-r1.ebuild, +tac_plus-4.0.4.19-r2.ebuild:
+  Revision bump now that we have a flawless version, and remove the previous
+  two incarnations.
 
   16 Jun 2011; Jeroen Roovers <jer@gentoo.org> files/tac_plus.confd2:
   Convert line endings by Alan McKinnon (bug #371799).
