@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.71.ebuild,v 1.1 2011/03/17 13:50:51 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.75.ebuild,v 1.1 2011/06/16 12:11:51 dagger Exp $
 
 EAPI="2"
 
-inherit multilib eutils
+inherit eutils systemd
 
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="http://connman.net"
@@ -35,11 +35,14 @@ DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.30
 	doc? ( dev-util/gtk-doc )"
 
+src_prepare() {
+	epatch "${FILESDIR}"/fix-for-iptables-1.4.11.patch
+}
+
 src_configure() {
 	econf \
 		--localstatedir=/var \
 		--enable-client \
-		--enable-nmcompat=builtin \
 		--enable-fake \
 		--enable-datafiles \
 		--enable-loopback=builtin \
@@ -63,14 +66,15 @@ src_configure() {
 		--disable-hh2serial-gps \
 		--disable-portal \
 		--disable-meego \
-		--disable-openconnect
+		--disable-openconnect \
+		--with-systemdunitdir="$(systemd_get_unitdir)"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dobin client/cm || die "client installation failed"
 
-	keepdir /var/"$(get_libdir)"/${PN} || die
+	keepdir /var/lib/${PN} || die
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
 }

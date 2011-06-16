@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.38 2011/04/19 08:19:38 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.39 2011/06/16 12:11:51 dagger Exp $
+
+*connman-0.75 (16 Jun 2011)
+
+  16 Jun 2011; Robert Piasek <dagger@gentoo.org> -connman-0.70.ebuild,
+  -connman-0.71.ebuild, -connman-0.72.ebuild, +connman-0.75.ebuild,
+  +files/fix-for-iptables-1.4.11.patch:
+  Add version 0.75. Use systemd eclasas
 
 *connman-0.73 (19 Apr 2011)
 
