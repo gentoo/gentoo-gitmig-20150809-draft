@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_fprint/pam_fprint-0.2.ebuild,v 1.1 2010/10/17 22:54:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_fprint/pam_fprint-0.2-r1.ebuild,v 1.1 2011/06/16 23:50:32 xmw Exp $
 
 EAPI=3
 
-inherit autotools eutils multilib
+inherit eutils pam
 
 DESCRIPTION="a simple PAM module which uses libfprint's functionality for authentication"
 HOMEPAGE="http://www.reactivated.net/fprint/wiki/Pam_fprint"
@@ -21,15 +21,11 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-headers.patch
-
-	# adjust /lib/security to architecture
-	sed -i -e "/^pammoddir=/s:=.*:=\"${EPREFIX}\"/$(get_libdir)/security:" \
-		src/Makefile.am || die
-	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	dopammod src/${PN}.so || die
 	newbin src/pamtest pamtest.fprint || die
+	dobin src/pam_fprint_enroll || die
 	dodoc AUTHORS ChangeLog NEWS README || die
 }
