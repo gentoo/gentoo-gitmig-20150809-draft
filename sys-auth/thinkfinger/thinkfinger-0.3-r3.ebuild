@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r2.ebuild,v 1.1 2010/04/11 15:33:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r3.ebuild,v 1.1 2011/06/16 23:55:46 xmw Exp $
 
-inherit pam linux-info eutils
+EAPI=2
+
+inherit eutils linux-info multilib pam
 
 DESCRIPTION="Support for the UPEK/SGS Thomson Microelectronics fingerprint reader, often seen in Thinkpads"
 HOMEPAGE="http://thinkfinger.sourceforge.net/"
@@ -19,13 +21,11 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	>=dev-util/pkgconfig-0.9.0"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-direct_set_config_usb_hello.patch" || die
-	epatch "${FILESDIR}/${PV}-carriagereturn.patch" || die
-	epatch "${FILESDIR}/${PV}-send-sync-event.patch" || die
-	epatch "${FILESDIR}/${PV}-tftoolgroup.patch" || die
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-direct_set_config_usb_hello.patch || die
+	epatch "${FILESDIR}"/${PV}-carriagereturn.patch || die
+	epatch "${FILESDIR}"/${PV}-send-sync-event.patch || die
+	epatch "${FILESDIR}"/${PV}-tftoolgroup.patch || die
 }
 
 pkg_preinst() {
@@ -52,9 +52,9 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	keepdir /etc/pam_thinkfinger
-	dodoc AUTHORS ChangeLog NEWS README
-	insinto /etc/udev/rules.d/
-	doins "${FILESDIR}/60-thinkfinger.rules"
+	dodoc AUTHORS ChangeLog NEWS README || die
+	insinto /$(get_libdir)/udev/rules.d
+	doins "${FILESDIR}"/60-thinkfinger.rules || die
 }
 
 pkg_postinst() {

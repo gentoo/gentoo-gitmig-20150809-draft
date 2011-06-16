@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/thinkfinger
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.9 2010/10/01 21:33:09 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.10 2011/06/16 23:55:46 xmw Exp $
+
+*thinkfinger-0.3-r3 (16 Jun 2011)
+
+  16 Jun 2011; Michael Weber <xmw@gentoo.org> -thinkfinger-0.3-r2.ebuild,
+  +thinkfinger-0.3-r3.ebuild:
+  Updated ebuild
 
   01 Oct 2010; Michael Weber <xmw@gentoo.org> metadata.xml:
   Taking maintainership
