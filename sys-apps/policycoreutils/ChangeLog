@@ -1,10 +1,10 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.83 2011/06/16 01:33:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.84 2011/06/16 01:36:00 blueness Exp $
 
   16 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
   policycoreutils-2.0.82.ebuild:
-  Drop use_nls dependency on gettext. Its mandatory. See bug #29681.
+  Drop use_nls dependency on gettext. Its mandatory. See bug #299681.
   Also put gettext in COMMON_DEPS, it is more than a RDEPEND.
 
   28 May 2011; Anthony G. Basile <blueness@gentoo.org>
