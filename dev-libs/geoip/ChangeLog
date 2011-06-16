@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.116 2011/06/07 14:38:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.117 2011/06/16 14:59:15 pva Exp $
+
+*geoip-1.4.7-r1 (16 Jun 2011)
+
+  16 Jun 2011; Peter Volkov <pva@gentoo.org> +geoip-1.4.7-r1.ebuild,
+  +files/geoipupdate.sh:
+  Add script for geoip database updates, bug #255147, thank toto for report and
+  Christian Ruppert (idl0r) for this script.
 
   07 Jun 2011; Jeroen Roovers <jer@gentoo.org> geoip-1.4.7.ebuild:
   Install the IPv6 database with USE=ipv6 thanks to Tom Hendrikx (bug #358287).
