@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.3.ebuild,v 1.2 2011/04/10 09:30:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5.ebuild,v 1.1 2011/06/16 07:44:52 nirbheek Exp $
 
 EAPI="3"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2:2.4"
 
 inherit eutils flag-o-matic gnome.org libtool python virtualx autotools
@@ -35,7 +37,7 @@ RDEPEND="!aqua? (
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
 	xinerama? ( x11-libs/libXinerama )
-	>=dev-libs/glib-2.27.3
+	>=dev-libs/glib-2.27.3:2
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/atk-1.29.2[introspection?]
 	media-libs/fontconfig
@@ -87,7 +89,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.14.3-limit-gtksignal-includes.patch"
 
 	# Create symlinks to old icons until apps are ported, bug #339319
-	epatch "${FILESDIR}/${PN}-2.22.1-old-icons.patch"
+	epatch "${FILESDIR}/${PN}-2.24.4-old-icons.patch"
 
 	# Stop trying to build unmaintained docs, bug #349754
 	strip_builddir SUBDIRS tutorial docs/Makefile.am docs/Makefile.in
@@ -182,9 +184,6 @@ src_install() {
 	use aqua && for i in gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc; do
 		sed -i -e "s:Libs\: :Libs\: -framework Carbon :" "${ED%/}"/usr/lib/pkgconfig/$i || die "sed failed"
 	done
-
-	# Clean up useless la files
-	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	python_convert_shebangs 2 "${ED}"usr/bin/gtk-builder-convert
 }
