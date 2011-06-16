@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.238 2011/06/14 02:12:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.239 2011/06/16 12:35:16 pva Exp $
+
+*iptables-1.4.11.1-r1 (16 Jun 2011)
+
+  16 Jun 2011; Peter Volkov <pva@gentoo.org> +iptables-1.4.11.1-r1.ebuild,
+  +files/iptables-1.4.11.1-man-fixes.patch:
+  Fix ip{,6}tables manpage generation.
 
   14 Jun 2011; Jeroen Roovers <jer@gentoo.org> iptables-1.4.10-r1.ebuild,
   iptables-1.4.11.1.ebuild:
