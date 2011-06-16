@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.31-r1.ebuild,v 1.1 2011/06/16 09:13:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.31-r1.ebuild,v 1.2 2011/06/16 09:30:23 pva Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils qt4-r2 autotools
@@ -47,9 +47,10 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-qt-libutp.patch" #368187
-	epatch "${FILESDIR}/0001-configure.ac-Drop-redudant-code-indentation.patch"
-	epatch "${FILESDIR}/0002-Add-qt-config-to-make-qmake-aware-about-.-configure-.patch"
-	epatch "${FILESDIR}/0003-Allow-usage-of-system-miniupnp.-Rename-miniupnp-mini.patch"
+	epatch "${FILESDIR}/${P}-0001-configure.ac.patch"
+	epatch "${FILESDIR}/${P}-0002-config.in-4-qt.pro.patch"
+	epatch "${FILESDIR}/${P}-0003-system-miniupnpc.patch"
+	epatch "${FILESDIR}/${P}-no-tests.patch"
 	mv third-party/miniupnp{,c} || die
 	eautoreconf
 

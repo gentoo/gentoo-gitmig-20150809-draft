@@ -1,6 +1,17 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.153 2011/06/16 09:13:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.154 2011/06/16 09:30:23 pva Exp $
+
+  16 Jun 2011; Peter Volkov <pva@gentoo.org>
+  -files/0001-configure.ac-Drop-redudant-code-indentation.patch,
+  -files/0002-Add-qt-config-to-make-qmake-aware-about-.-configure-.patch,
+  -files/0003-Allow-usage-of-system-miniupnp.-Rename-miniupnp-mini.patch,
+  transmission-2.31-r1.ebuild,
+  +files/transmission-2.31-0001-configure.ac.patch,
+  +files/transmission-2.31-0002-config.in-4-qt.pro.patch,
+  +files/transmission-2.31-0003-system-miniupnpc.patch,
+  +files/transmission-2.31-no-tests.patch:
+  Don't build tests during normal build. Rename patches.
 
 *transmission-2.31-r1 (16 Jun 2011)
 

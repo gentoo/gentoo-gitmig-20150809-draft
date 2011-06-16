@@ -1,0 +1,19 @@
+commit b46cac3a9fb95fa6edd6f18c82b7738ab81c062d
+Author: Peter Volkov <pva@gentoo.org>
+Date:   Thu Jun 16 13:21:12 2011 +0400
+
+    Don't build programs required for tests.
+
+diff --git a/libtransmission/Makefile.am b/libtransmission/Makefile.am
+index a68349b..656f8aa 100644
+--- a/libtransmission/Makefile.am
++++ b/libtransmission/Makefile.am
+@@ -133,7 +133,7 @@ TESTS = \
+     test-peer-id \
+     utils-test
+ 
+-noinst_PROGRAMS = $(TESTS)
++check_PROGRAMS = $(TESTS)
+ 
+ apps_ldflags = \
+     @ZLIB_LDFLAGS@
