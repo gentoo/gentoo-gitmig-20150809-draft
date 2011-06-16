@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.376 2011/05/22 14:29:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.377 2011/06/16 23:30:46 lack Exp $
+
+*vim-7.3.219 (16 Jun 2011)
+
+  16 Jun 2011; Jim Ramsay <lack@gentoo.org> +vim-7.3.219.ebuild:
+  Version bump: 7.3.219 is released
 
   22 May 2011; Joseph Jezak <josejx@gentoo.org> vim-7.3.135.ebuild:
   Marked ppc/ppc64 stable for bug #364807.
