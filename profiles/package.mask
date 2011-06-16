@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12840 2011/06/15 19:13:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12841 2011/06/16 00:20:59 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (15 Jun 2011)
+# Masked for removal in 30 days.
+# We don't have policykit in the tree anymore, bug #371441
+sec-policy/selinux-policykit
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Jun 2011)
 # Retire gpixpod for bugs 221277 and 351307.   Removal in 30 days.
