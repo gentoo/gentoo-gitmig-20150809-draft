@@ -411,10 +411,6 @@ slotmove kde-base/kdebase-meta 4.3 4
 slotmove kde-base/kdebase-meta 4.4 4
 slotmove kde-base/kdebase-meta 4.5 4
 slotmove kde-base/kdebase-meta 4.6 4
-slotmove kde-base/kdebase-pam 4.ebuild,v 4
-slotmove kde-base/kdebase-pam 5.ebuild,v 4
-slotmove kde-base/kdebase-pam 6.ebuild,v 4
-slotmove kde-base/kdebase-pam 7.ebuild,v 4
 slotmove kde-base/kdebase-runtime-meta 4.3 4
 slotmove kde-base/kdebase-runtime-meta 4.4 4
 slotmove kde-base/kdebase-runtime-meta 4.5 4
@@ -454,12 +450,6 @@ slotmove kde-base/kdeedu-meta 4.3 4
 slotmove kde-base/kdeedu-meta 4.4 4
 slotmove kde-base/kdeedu-meta 4.5 4
 slotmove kde-base/kdeedu-meta 4.6 4
-slotmove kde-base/kde-env 1.ebuild,v 4
-slotmove kde-base/kde-env 3.ebuild,v 4
-slotmove kde-base/kde-env 3-r1.ebuild,v 4
-slotmove kde-base/kde-env 3-r2.ebuild,v 4
-slotmove kde-base/kde-env 3-r3.ebuild,v 4
-slotmove kde-base/kde-env 3-r4.ebuild,v 4
 slotmove kde-base/kde-env 4.2 4
 slotmove kde-base/kde-env 4.3 4
 slotmove kde-base/kde-env 4.4 4
@@ -483,7 +473,6 @@ slotmove kde-base/kdegraphics-strigi-analyzer 4.3 4
 slotmove kde-base/kdegraphics-strigi-analyzer 4.4 4
 slotmove kde-base/kdegraphics-strigi-analyzer 4.5 4
 slotmove kde-base/kdegraphics-strigi-analyzer 4.6 4
-slotmove kde-base/kde-i18n 20001016.ebuild,v 4
 slotmove kde-base/kde-l10n 4.1 4
 slotmove kde-base/kde-l10n 4.2 4
 slotmove kde-base/kde-l10n 4.3 4
@@ -1599,7 +1588,6 @@ slotmove kde-base/pykde4 4.1 4
 slotmove kde-base/pykde4 4.2 4
 slotmove kde-base/pykde4 4.3 4
 slotmove kde-base/pykde4 4.4 4
-slotmove kde-base/pykde4 4.4.9999.ebuild,v 4
 slotmove kde-base/pykde4 4.5 4
 slotmove kde-base/pykde4 4.6 4
 slotmove kde-base/qguiplatformplugin_kde 4.4 4
