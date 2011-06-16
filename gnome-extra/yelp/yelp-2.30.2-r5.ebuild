@@ -1,18 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r4.ebuild,v 1.1 2011/06/03 19:16:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r5.ebuild,v 1.1 2011/06/16 13:09:17 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils gnome2
 
 DESCRIPTION="Help browser for GNOME"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://projects.gnome.org/yelp/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 # FIXME: lzma/xz support will be fixed in yelp3, bug #314923
 IUSE=""
 
@@ -24,7 +25,7 @@ RDEPEND=">=gnome-base/gconf-2:2
 	>=dev-libs/libxslt-1.1.4
 	>=x11-libs/startup-notification-0.8
 	>=dev-libs/dbus-glib-0.71
-	>=net-libs/xulrunner-2.0:1.9
+	net-libs/xulrunner:1.9
 	sys-libs/zlib
 	app-arch/bzip2
 	>=app-text/rarian-0.7
@@ -55,7 +56,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.28.1-system-nspr.patch"
 
 	# Fix build with xulrunner-2.0 (we really need to get rid of this package)
-	epatch "${FILESDIR}/${P}-port-to-xulrunner-2-r1.patch"
+#	epatch "${FILESDIR}/${P}-port-to-xulrunner-2-r1.patch"
 
 	# Use g_build_filename to avoid missing slash problem
 	epatch "${FILESDIR}/${P}-missing-slash.patch"
@@ -71,6 +72,9 @@ src_prepare() {
 
 	# Fix small freezes when moving window
 	epatch "${FILESDIR}/${P}-freeze-move.patch"
+
+	# Ensure schema is regenerated properly to prevent warnings
+	rm -f data/yelp.schemas || die
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
