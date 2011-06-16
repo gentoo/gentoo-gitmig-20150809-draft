@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5448 2011/06/16 01:55:02 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5449 2011/06/16 13:48:25 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jun 2011; Peter Volkov <pva@gentoo.org> desc/xtables_addons.desc:
+  add xtables_addons_{dnetmap,ipset{4,6}} USE flags descriptions
 
   16 Jun 2011; Jonathan Callen <abcd@gentoo.org> updates/2Q-2011:
   Fix stupid typos from not reading the output of my scripts
