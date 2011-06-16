@@ -1,6 +1,19 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.152 2011/05/23 07:32:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.153 2011/06/16 09:13:27 pva Exp $
+
+*transmission-2.31-r1 (16 Jun 2011)
+
+  16 Jun 2011; Peter Volkov <pva@gentoo.org>
+  +files/0001-configure.ac-Drop-redudant-code-indentation.patch,
+  +files/0002-Add-qt-config-to-make-qmake-aware-about-.-configure-.patch,
+  +transmission-2.31-r1.ebuild,
+  +files/0003-Allow-usage-of-system-miniupnp.-Rename-miniupnp-mini.patch,
+  +files/transmission-daemon.initd.8:
+  Fixed utp related build issue reported in bug #368523, thank jhdtl for
+  report. Suggest sysctl settings for utp, bug 369211, thank jhdtl for report.
+  Allow multiple transmission-daemon instanses through init script, bug #363559
+  thank Oleg Gawriloff for this work. Use system libminiupnpc.
 
   23 May 2011; Peter Volkov <pva@gentoo.org> -transmission-2.13.ebuild,
   -files/transmission-2.13-libnotify-0.7.patch, transmission-2.31.ebuild,
