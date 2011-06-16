@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.82.ebuild,v 1.3 2011/05/28 05:27:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.82.ebuild,v 1.4 2011/06/16 01:33:17 blueness Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -15,6 +15,8 @@ SEMNG_VER="2.0.45"
 SELNX_VER="2.0.94"
 SEPOL_VER="2.0.41"
 
+IUSE=""
+
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20100525/devel/${P}.tar.gz
@@ -23,7 +25,6 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20100525/devel/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="nls"
 
 COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	>=sys-libs/glibc-2.4
@@ -32,15 +33,15 @@ COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	sys-libs/pam
 	>=sys-libs/libsemanage-${SEMNG_VER}[python]
 	sys-libs/libcap-ng
-	>=sys-libs/libsepol-${SEPOL_VER}"
+	>=sys-libs/libsepol-${SEPOL_VER}
+	sys-devel/gettext"
 
 # pax-utils for scanelf used by rlpkg
 RDEPEND="${COMMON_DEPS}
 	dev-python/sepolgen
 	app-misc/pax-utils"
 
-DEPEND="${COMMON_DEPS}
-	nls? ( sys-devel/gettext )"
+DEPEND="${COMMON_DEPS}"
 
 S2=${WORKDIR}/policycoreutils-extra
 
