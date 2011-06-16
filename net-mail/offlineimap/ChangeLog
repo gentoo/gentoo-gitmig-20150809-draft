@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.67 2011/05/28 17:51:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.68 2011/06/16 05:53:55 tomka Exp $
+
+*offlineimap-6.3.4_rc2 (16 Jun 2011)
+
+  16 Jun 2011; Thomas Kahle <tomka@gentoo.org> -offlineimap-6.3.3.ebuild,
+  +offlineimap-6.3.4_rc2.ebuild:
+  bump to 6.3.4_rc2, 6.3.3 contains a potentially critical error and was
+  removed.
 
   28 May 2011; Raúl Porcel <armin76@gentoo.org> offlineimap-6.3.1-r1.ebuild,
   offlineimap-6.3.2.2.ebuild, offlineimap-6.3.3.ebuild:
