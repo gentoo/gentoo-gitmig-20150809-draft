@@ -4,9 +4,8 @@ Initial Package Version: 0.10
 Upstream Status: Accepted to be included in next release
 Description: Allows the leftmost queue to have an escalation number if it is the only queue mentioned.
 
-diff -ur tenshi-0.10/tenshi tenshi-0.10.new/tenshi
---- tenshi-0.10/tenshi	2008-10-06 16:55:37.000000000 -0700
-+++ tenshi-0.10.new/tenshi	2008-10-06 17:18:07.000000000 -0700
+--- a/tenshi
++++ b/tenshi
 @@ -522,7 +522,7 @@
                  }
              }
@@ -16,9 +15,8 @@ diff -ur tenshi-0.10/tenshi tenshi-0.10.new/tenshi
                  die RED "[ERROR] Left most queue in a multiple queue declaration can not have an escalation number\n";
              }
  
-diff -ur tenshi-0.10/tenshi.8 tenshi-0.10.new/tenshi.8
---- tenshi-0.10/tenshi.8	2008-03-13 04:31:12.000000000 -0700
-+++ tenshi-0.10.new/tenshi.8	2008-10-06 17:09:36.000000000 -0700
+--- a/tenshi.8
++++ b/tenshi.8
 @@ -337,16 +337,16 @@
  regexp. The queue will receive the message that matched the regexp at the time
  of escalation, with a count equal to the escalation number. The count of

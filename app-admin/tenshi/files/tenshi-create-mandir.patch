@@ -1,5 +1,5 @@
---- Makefile.orig	2007-10-04 19:57:24.000000000 +0100
-+++ Makefile	2008-03-21 12:59:04.000000000 +0000
+--- a/Makefile
++++ b/Makefile
 @@ -38,5 +38,7 @@
  		install -g root -m 0644 -D tenshi.conf ${DESTDIR}${sysconfdir}/tenshi/tenshi.conf
  	install -d ${DESTDIR}${docdir}

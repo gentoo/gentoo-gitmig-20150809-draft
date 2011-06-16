@@ -4,9 +4,8 @@ Initial Package Version: 0.10
 Upstream Status: No response
 Description: Warns on log files that tenshi can't open and continues monitoring the ones that it can, instead of just exiting.
 
-diff -ur tenshi-0.10/tenshi tenshi-0.10.new/tenshi
---- tenshi-0.10/tenshi	2008-10-06 16:55:37.000000000 -0700
-+++ tenshi-0.10.new/tenshi	2008-10-07 11:46:06.000000000 -0700
+--- a/tenshi
++++ b/tenshi
 @@ -141,10 +141,23 @@
          die RED "[ERROR] $main{'csv'}{'path'}: not executable";
      }

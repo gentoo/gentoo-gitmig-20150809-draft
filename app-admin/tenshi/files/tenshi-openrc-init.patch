@@ -1,5 +1,5 @@
---- tenshi.gentoo-init.orig	2008-04-17 12:25:05.000000000 +0100
-+++ tenshi.gentoo-init	2008-04-17 12:32:06.000000000 +0100
+--- a/tenshi.gentoo-init
++++ b/tenshi.gentoo-init
 @@ -13,7 +13,7 @@
  
  start() {

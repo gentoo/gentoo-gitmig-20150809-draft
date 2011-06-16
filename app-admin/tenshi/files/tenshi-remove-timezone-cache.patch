@@ -1,5 +1,5 @@
---- tenshi.orig	2008-06-09 21:33:55.000000000 +0100
-+++ tenshi	2008-06-09 21:35:41.000000000 +0100
+--- a/tenshi
++++ b/tenshi
 @@ -45,7 +45,6 @@
  
  my $our_hostname = hostname();

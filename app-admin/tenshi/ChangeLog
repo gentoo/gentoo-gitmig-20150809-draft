@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/tenshi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.62 2010/10/15 00:28:14 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.63 2011/06/16 17:23:13 jer Exp $
+
+*tenshi-0.12 (16 Jun 2011)
+
+  16 Jun 2011; Jeroen Roovers <jer@gentoo.org>
+  files/tenshi-0.10-solo-queue-escalation.patch,
+  files/tenshi-0.10-warn-logfile.patch, +tenshi-0.12.ebuild,
+  files/tenshi-create-mandir.patch, files/tenshi-openrc-init.patch,
+  files/tenshi-remove-timezone-cache.patch:
+  Version bump. Clean up patches.
 
   15 Oct 2010; Michael Weber <xmw@gentoo.org>
   -files/tenshi-0.9.1-fix-tail_pids-array-length.patch:
