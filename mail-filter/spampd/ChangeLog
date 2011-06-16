@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spampd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spampd/ChangeLog,v 1.12 2011/06/15 15:40:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spampd/ChangeLog,v 1.13 2011/06/16 06:30:14 eras Exp $
+
+  16 Jun 2011; Eray Aslan <eras@gentoo.org> -spampd-2.11-r1.ebuild:
+  Remove old. QA
 
   15 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> spampd-2.30.ebuild:
   x86 stable wrt bug #370651
