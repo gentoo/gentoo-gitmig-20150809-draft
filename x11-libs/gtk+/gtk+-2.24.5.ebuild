@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5.ebuild,v 1.1 2011/06/16 07:44:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5.ebuild,v 1.2 2011/06/16 11:07:26 nirbheek Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -131,9 +131,11 @@ src_prepare() {
 		strip_builddir SRC_SUBDIRS demos Makefile.am Makefile.in
 	fi
 
+	# http://bugs.gentoo.org/show_bug.cgi?id=371907
+	mkdir -p "${S}/m4"
+	AT_M4DIR=m4macros eautoreconf
 	# Use elibtoolize in place of eautoreconf when it will be dropped
 	#elibtoolize
-	eautoreconf
 }
 
 src_configure() {
