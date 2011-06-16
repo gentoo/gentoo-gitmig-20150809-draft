@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_p2.ebuild,v 1.1 2011/05/27 18:53:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_p2-r1.ebuild,v 1.1 2011/06/16 18:54:12 idl0r Exp $
 
 EAPI="3"
 
@@ -225,7 +225,7 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone || die
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
 
-	newinitd "${FILESDIR}"/named.init-r10 named || die
+	newinitd "${FILESDIR}"/named.init-r11 named || die
 	newconfd "${FILESDIR}"/named.confd-r6 named || die
 
 	if use ssl && [ -e /usr/lib/engines/libgost.so ]; then

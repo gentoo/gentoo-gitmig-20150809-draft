@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.339 2011/05/30 00:15:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.340 2011/06/16 18:54:12 idl0r Exp $
+
+*bind-9.8.0_p2-r1 (16 Jun 2011)
+
+  16 Jun 2011; Christian Ruppert <idl0r@gentoo.org> -bind-9.8.0_p2.ebuild,
+  +bind-9.8.0_p2-r1.ebuild, +files/named.init-r11:
+  Revision bump. A timeout has been added to the fuser/mount check which can be
+  configured through the MOUNT_CHECK_TIMEOUT variable. mounting/umounting has
+  been improved.
 
   30 May 2011; Jeroen Roovers <jer@gentoo.org> bind-9.7.3_p1.ebuild:
   Stable for HPPA (bug #368863).
