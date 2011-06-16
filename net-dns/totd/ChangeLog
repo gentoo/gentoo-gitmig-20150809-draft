@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/totd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.11 2010/07/13 14:43:01 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.12 2011/06/16 22:25:26 xmw Exp $
+
+  16 Jun 2011; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Adding myself as maintainer
 
   13 Jul 2010; Christian Faulhammer <fauli@gentoo.org> totd-1.5.1.ebuild:
   stable x86, bug 326771
