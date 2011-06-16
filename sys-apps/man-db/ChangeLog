@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.18 2011/06/15 18:43:04 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.19 2011/06/16 17:56:47 jer Exp $
+
+  16 Jun 2011; Jeroen Roovers <jer@gentoo.org> man-db-2.6.0.2.ebuild,
+  +files/man-db-2.6.0.2-flock.h.patch:
+  Fix building with USE=-gdbm by Maciej Mrozowski.
 
   15 Jun 2011; Matt Turner <mattst88@gentoo.org> man-db-2.6.0.2.ebuild:
   Added ~mips, bug 371687
