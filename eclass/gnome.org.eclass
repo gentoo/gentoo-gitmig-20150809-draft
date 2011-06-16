@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome.org.eclass,v 1.11 2011/03/18 07:58:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome.org.eclass,v 1.12 2011/06/16 05:50:44 nirbheek Exp $
 
 # @ECLASS: gnome.org.eclass
 # @MAINTAINER:
@@ -18,9 +18,15 @@ inherit versionator
 
 # @ECLASS-VARIABLE: GNOME_TARBALL_SUFFIX
 # @DESCRIPTION:
-# Most projects hosted on gnome.org mirrors provide tarballs as tar.gz or
-# tar.bz2. This eclass defaults to bz2 which is often smaller in size.
-: ${GNOME_TARBALL_SUFFIX:="bz2"}
+# Most projects hosted on gnome.org mirrors provide tarballs as tar.bz2 or
+# tar.xz. This eclass defaults to bz2 for EAPI 0, 1, 2, 3 and defaults to xz for
+# everything else. This is because the gnome mirrors are moving to only have xz
+# tarballs for new releases.
+if has "${EAPI}" 0 1 2 3; then
+	: ${GNOME_TARBALL_SUFFIX:="bz2"}
+else
+	: ${GNOME_TARBALL_SUFFIX:="xz"}
+fi
 
 # @ECLASS-VARIABLE: GNOME_ORG_MODULE
 # @DESCRIPTION:
