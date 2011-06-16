@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/mkgmap-1955.ebuild,v 1.1 2011/06/01 13:11:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/mkgmap-1962.ebuild,v 1.1 2011/06/16 14:37:47 scarabeus Exp $
 
 EAPI=4
 
