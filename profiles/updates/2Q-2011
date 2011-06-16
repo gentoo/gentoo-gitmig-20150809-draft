@@ -1669,3 +1669,4 @@ slotmove kde-base/umbrello 4.5 4
 slotmove kde-base/umbrello 4.6 4
 slotmove net-analyzer/nagios-check_ipmi_sensor 1 0
 slotmove net-analyzer/nagios-check_ipmi_sensor 2 0
+move dev-ruby/fromcvs dev-vcs/fromcvs
