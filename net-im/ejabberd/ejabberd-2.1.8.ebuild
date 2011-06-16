@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.8.ebuild,v 1.1 2011/06/14 11:42:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.1.8.ebuild,v 1.2 2011/06/16 05:02:12 pva Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ src_prepare() {
 	if use mod_statsdx; then
 		ewarn "mod_statsdx is not a part of upstream tarball but is a third-party module"
 		ewarn "taken from here: http://www.ejabberd.im/mod_stats2file"
-		epatch "${WORKDIR}/2.1.1-mod_statsdx.patch"
+		epatch "${WORKDIR}/ejabberd-mod_statsdx-1080.patch"
 	fi
 
 	# don't install release notes (we'll do this manually)
@@ -102,26 +102,26 @@ src_configure() {
 }
 
 src_compile() {
-	emake $(use debug && echo debug=true ejabberd_debug=true) || die "compiling ejabberd core failed"
+	emake $(use debug && echo debug=true ejabberd_debug=true)
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "install failed"
+	emake DESTDIR="${ED}" install
 
 	# Pam helper module permissions
 	# http://www.process-one.net/docs/ejabberd/guide_en.html
 	if use pam; then
 		pamd_mimic_system xmpp auth account || die "Cannot create pam.d file"
-		fowners root:jabber "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam" || die
-		fperms 4750 "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam" || die "Cannot adjust epam permissions"
+		fowners root:jabber "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam"
+		fperms 4750 "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam"
 	fi
 
 	cd "${WORKDIR}/${P}/doc"
-	dodoc "release_notes_${PV%%_rc*}.txt" || die
+	dodoc "release_notes_${PV%%_rc*}.txt"
 
 	#dodir /var/lib/ejabberd
-	newinitd "${FILESDIR}/${PN}-3.initd" ${PN} || die "Cannot install init.d script"
-	newconfd "${FILESDIR}/${PN}-3.confd" ${PN} || die "Cannot install conf.d file"
+	newinitd "${FILESDIR}/${PN}-3.initd" ${PN}
+	newconfd "${FILESDIR}/${PN}-3.confd" ${PN}
 }
 
 pkg_postinst() {
