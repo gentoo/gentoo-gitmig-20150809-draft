@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.11.1-r1.ebuild,v 1.1 2011/06/16 12:35:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.11.1-r2.ebuild,v 1.1 2011/06/16 12:53:26 pva Exp $
 
 EAPI="4"
 
@@ -24,6 +24,7 @@ COMMON_DEPEND="
 DEPEND="
 	${COMMON_DEPEND}
 	virtual/os-headers
+	sys-devel/automake
 "
 RDEPEND="
 	${COMMON_DEPEND}
@@ -32,6 +33,7 @@ RDEPEND="
 src_prepare() {
 	# Only run autotools if user patched something
 	epatch "${FILESDIR}/${P}-man-fixes.patch"
+	eautomake
 	epatch_user && eautoreconf || elibtoolize
 }
 
@@ -70,11 +72,11 @@ src_install() {
 	doins include/iptables/internal.h
 
 	keepdir /var/lib/iptables
-	newinitd "${FILESDIR}"/${PN}-1.3.2.init iptables
+	newinitd "${FILESDIR}"/${PN}-1.4.11.init iptables
 	newconfd "${FILESDIR}"/${PN}-1.3.2.confd iptables
 	if use ipv6 ; then
 		keepdir /var/lib/ip6tables
-		newinitd "${FILESDIR}"/iptables-1.3.2.init ip6tables
+		newinitd "${FILESDIR}"/iptables-1.4.11.init ip6tables
 		newconfd "${FILESDIR}"/ip6tables-1.3.2.confd ip6tables
 	fi
 
