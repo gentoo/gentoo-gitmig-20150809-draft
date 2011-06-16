@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.7.ebuild,v 1.1 2011/06/16 11:22:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.7-r1.ebuild,v 1.1 2011/06/16 12:32:39 pva Exp $
 
 EAPI="4"
 inherit autotools linux-info linux-mod
@@ -23,8 +23,8 @@ IP_NF_SET_MAX=${IP_NF_SET_MAX:-256}
 
 BUILD_TARGETS="modules"
 MODULE_NAMES_ARG="kernel/net/netfilter/ipset/:${S}/kernel/net/netfilter/ipset"
-MODULE_NAMES=""
-for i in ip_set{,_bitmap_{ip{,mac},port},_hash_{ip{,port{,ip,net}},net,netport},_list_set}; do
+MODULE_NAMES="xt_set(kernel/net/netfilter/ipset/:${S}/kernel/net/netfilter/)"
+for i in ip_set{,_bitmap_{ip{,mac},port},_hash_{ip{,port{,ip,net}},net,net{port,iface}},_list_set}; do
 	MODULE_NAMES+=" ${i}(${MODULE_NAMES_ARG})"
 done
 CONFIG_CHECK="NETFILTER IP6_NF_IPTABLES"
