@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome.org.eclass,v 1.12 2011/06/16 05:50:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome.org.eclass,v 1.13 2011/06/16 07:37:20 abcd Exp $
 
 # @ECLASS: gnome.org.eclass
 # @MAINTAINER:
@@ -22,7 +22,7 @@ inherit versionator
 # tar.xz. This eclass defaults to bz2 for EAPI 0, 1, 2, 3 and defaults to xz for
 # everything else. This is because the gnome mirrors are moving to only have xz
 # tarballs for new releases.
-if has "${EAPI}" 0 1 2 3; then
+if has "${EAPI:-0}" 0 1 2 3; then
 	: ${GNOME_TARBALL_SUFFIX:="bz2"}
 else
 	: ${GNOME_TARBALL_SUFFIX:="xz"}
