@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.9.ebuild,v 1.3 2010/11/08 12:22:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.9.ebuild,v 1.4 2011/06/16 10:11:03 tupone Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -34,7 +34,8 @@ src_prepare() {
 		-e "/mandir/s:=.*:=\$(DESTDIR)/usr/share/man/man6:" \
 		makefile \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	append-ldflags -Wl,-z,noexecstack
 }
 

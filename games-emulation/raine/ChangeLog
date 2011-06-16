@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/raine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.29 2010/11/08 12:22:49 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.30 2011/06/16 10:11:03 tupone Exp $
+
+  16 Jun 2011; Tupone Alfredo <tupone@gentoo.org> raine-0.51.9.ebuild,
+  +files/raine-0.51.9-underlink.patch:
+  Fix underlink. Bug #368949 by Diego Elio Pettenò
 
   08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> raine-0.51.9.ebuild:
   x86 stable wrt bug #344597
