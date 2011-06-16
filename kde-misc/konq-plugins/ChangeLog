@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/konq-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.22 2011/06/01 19:46:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.23 2011/06/16 06:04:26 abcd Exp $
+
+  16 Jun 2011; Jonathan Callen <abcd@gentoo.org> -konq-plugins-4.4.0-r1.ebuild:
+  Remove old version: requires an old, removed version of kdelibs
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> konq-plugins-4.6.1.ebuild:
   Marking konq-plugins-4.6.1 ppc stable for bug 354033
