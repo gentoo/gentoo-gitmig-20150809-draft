@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.45.ebuild,v 1.1 2011/03/17 13:52:54 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.50.ebuild,v 1.1 2011/06/16 09:48:35 dagger Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit multilib systemd
 
 DESCRIPTION="Open Source mobile telephony (GSM/UMTS) daemon."
 HOMEPAGE="http://ofono.org/"
@@ -37,7 +37,8 @@ src_configure() {
 		$(use_enable phonesim) \
 		$(use_enable tools) \
 		--enable-test \
-		--localstatedir=/var
+		--localstatedir=/var \
+		--with-systemdunitdir="$(systemd_get_unitdir)"
 }
 
 src_install() {
