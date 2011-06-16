@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.1.22-r1.ebuild,v 1.6 2010/11/26 16:29:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.1.22-r1.ebuild,v 1.7 2011/06/16 22:59:29 jer Exp $
 
 EAPI="2"
 inherit base eutils autotools multilib
@@ -11,7 +11,7 @@ SRC_URI="http://propirate.net/frei0r/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="doc facedetect scale0tilt"
 
 DEPEND="facedetect? ( media-libs/opencv )
