@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.514 2011/06/16 11:07:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.515 2011/06/16 11:33:22 nirbheek Exp $
+
+  16 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk+-2.24.4.ebuild,
+  gtk+-2.24.5.ebuild:
+  Skip tests known to fail, fix introspection eautoreconf failure
 
   16 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk+-2.24.5.ebuild:
   Fix bug 371907 by creating m4, and passing the appropriate AT_M4DIR

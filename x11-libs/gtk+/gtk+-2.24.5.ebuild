@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5.ebuild,v 1.2 2011/06/16 11:07:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5.ebuild,v 1.3 2011/06/16 11:33:22 nirbheek Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -11,6 +11,7 @@ inherit eutils flag-o-matic gnome.org libtool python virtualx autotools
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
+SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -124,6 +125,11 @@ src_prepare() {
 	if ! use test; then
 		# don't waste time building tests
 		strip_builddir SRC_SUBDIRS tests Makefile.am Makefile.in
+	else
+		# Skip tests known to fail
+		# https://bugzilla.gnome.org/show_bug.cgi?id=646609
+		sed -e '/g_test_add_func.*test_text_access/s:^://:' \
+			-i "${S}/gtk/tests/testing.c" || die
 	fi
 
 	if ! use examples; then
@@ -132,7 +138,8 @@ src_prepare() {
 	fi
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=371907
-	mkdir -p "${S}/m4"
+	mkdir -p "${S}/m4" || die
+	mv "${WORKDIR}/introspection.m4" "${S}/m4macros" || die
 	AT_M4DIR=m4macros eautoreconf
 	# Use elibtoolize in place of eautoreconf when it will be dropped
 	#elibtoolize

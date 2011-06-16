@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.4.ebuild,v 1.1 2011/06/03 18:58:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.4.ebuild,v 1.2 2011/06/16 11:33:22 nirbheek Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -123,6 +123,11 @@ src_prepare() {
 	if ! use test; then
 		# don't waste time building tests
 		strip_builddir SRC_SUBDIRS tests Makefile.am Makefile.in
+	else
+		# Skip tests known to fail
+		# https://bugzilla.gnome.org/show_bug.cgi?id=646609
+		sed -e '/g_test_add_func.*test_text_access/s:^://:' \
+			-i "${S}/gtk/tests/testing.c" || die
 	fi
 
 	if ! use examples; then
@@ -130,9 +135,9 @@ src_prepare() {
 		strip_builddir SRC_SUBDIRS demos Makefile.am Makefile.in
 	fi
 
+	eautoreconf
 	# Use elibtoolize in place of eautoreconf when it will be dropped
 	#elibtoolize
-	eautoreconf
 }
 
 src_configure() {
