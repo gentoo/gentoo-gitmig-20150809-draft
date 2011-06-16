@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.3 2011/06/11 06:06:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.4 2011/06/16 16:39:18 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -88,15 +88,22 @@ systemd_enable_service() {
 }
 
 # @FUNCTION: systemd_with_unitdir
+# @USAGE: [configure option]
 # @DESCRIPTION:
 # Output '--with-systemdsystemunitdir' as expected by systemd-aware configure
 # scripts. This function always succeeds. Its output may be quoted in order
 # to preserve whitespace in paths. systemd_to_myeconfargs() is preferred over
 # this function.
+#
+# If upstream does use invalid configure option to handle installing systemd
+# units (e.g. `--with-systemdunitdir'), you can pass the 'suffix' as an optional
+# argument to this function (`$(systemd_with_unitdir systemdunitdir)'). Please
+# remember to report a bug upstream as well.
 systemd_with_unitdir() {
 	debug-print-function ${FUNCNAME} "${@}"
+	local optname=${1:-systemdsystemunitdir}
 
-	echo -n --with-systemdsystemunitdir="$(systemd_get_unitdir)"
+	echo -n --with-${optname}="$(systemd_get_unitdir)"
 }
 
 # @FUNCTION: systemd_to_myeconfargs
