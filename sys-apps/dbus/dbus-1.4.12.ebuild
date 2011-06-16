@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.12.ebuild,v 1.2 2011/06/14 16:05:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.12.ebuild,v 1.3 2011/06/16 15:40:07 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic python systemd virtualx
@@ -32,7 +32,10 @@ DEPEND="${RDEPEND}
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/xmlto
 	)
-	test? ( =dev-lang/python-2* )
+	test? (
+		=dev-lang/python-2*
+		>=dev-libs/glib-2.22:2
+	)
 "
 
 # out of sources build directory
@@ -97,14 +100,22 @@ src_configure() {
 		$(use_enable doc xml-docs)
 
 	if use test; then
+		local circular
+		if ! has_version dev-libs/dbus-glib; then
+			circular="--disable-modular-tests"
+			ewarn "Skipping modular tests because dev-libs/dbus-glib is missing"
+		fi
+
 		mkdir "${TBD}"
 		cd "${TBD}"
 		einfo "Running configure in ${TBD}"
 		ECONF_SOURCE="${S}" econf \
 			${my_conf} \
 			$(use_enable test checks) \
-			$(use_enable test tests) \
-			$(use_enable test asserts)
+			$(use_enable test embedded-tests) \
+			$(use_enable test modular-tests) \
+			$(use_enable test asserts) \
+			${circular}
 	fi
 }
 
