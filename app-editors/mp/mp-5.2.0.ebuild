@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.0.ebuild,v 1.1 2011/06/16 18:28:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.0.ebuild,v 1.2 2011/06/16 18:47:45 jer Exp $
 
 EAPI="3"
 
@@ -29,7 +29,8 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-5.1.1-prll.patch
+	epatch "${FILESDIR}"/${PN}-5.1.1-prll.patch \
+		"${FILESDIR}"/${PN}-5.2.0-make.patch
 }
 
 src_configure() {
@@ -60,11 +61,6 @@ src_configure() {
 		echo ${CFLAGS} >> $i/config.ldflags
 		echo ${LDFLAGS} >> $i/config.ldflags
 	done
-}
-
-src_compile() {
-	# bug #326987
-	emake -j1 || die "emake failed"
 }
 
 src_install() {
