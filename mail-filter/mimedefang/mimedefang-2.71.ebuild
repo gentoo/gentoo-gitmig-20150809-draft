@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.71.ebuild,v 1.1 2011/06/10 07:53:21 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/mimedefang-2.71.ebuild,v 1.2 2011/06/16 05:52:57 eras Exp $
 
 EAPI=4
 
@@ -20,7 +20,6 @@ DEPEND="dev-perl/MIME-tools
 	virtual/perl-MIME-Base64
 	dev-perl/Digest-SHA1
 	clamav? ( app-antivirus/clamav )
-	>=mail-mta/postfix-2.4
 	|| ( mail-filter/libmilter mail-mta/sendmail )"
 RDEPEND="${DEPEND}"
 RESTRICT="test"

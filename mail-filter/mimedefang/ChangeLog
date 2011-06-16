@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/mimedefang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/ChangeLog,v 1.7 2011/06/10 07:53:21 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mimedefang/ChangeLog,v 1.8 2011/06/16 05:52:57 eras Exp $
+
+  16 Jun 2011; Eray Aslan <eras@gentoo.org> mimedefang-2.71.ebuild:
+  Fix unconditional DEPEND on postfix - bug #371853
 
 *mimedefang-2.71 (10 Jun 2011)
 
