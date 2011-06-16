@@ -1,0 +1,14 @@
+# ChangeLog for dev-vcs/fromcvs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fromcvs/ChangeLog,v 1.1 2011/06/16 18:58:34 sochotnicky Exp $
+
+  16 Jun 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +fromcvs-0_pre132.ebuild, +metadata.xml:
+  Moved from dev-ruby to dev-vcs
+
+*fromcvs-0_pre132 (15 Jun 2011)
+
+  15 Jun 2011; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +fromcvs-0_pre132.ebuild, +metadata.xml:
+  New ebuild for fromcvs added to the tree. Fixes #173341
+
