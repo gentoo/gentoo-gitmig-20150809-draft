@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.4.11.1.ebuild,v 1.6 2011/06/06 20:34:43 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.4.11.1.ebuild,v 1.7 2011/06/16 05:02:40 abcd Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
@@ -32,8 +32,9 @@ RDEPEND="
 	$(add_kdebase_dep libkdepim)
 	$(add_kdebase_dep libkleo)
 	$(add_kdebase_dep libkpgp)
-	nls? ( ( $(add_kdebase_dep kde-l10n ) )
-		( $(add_kdebase_dep kdepim-l10n) ) )
+	nls? (
+		$(add_kdebase_dep kde-l10n)
+		$(add_kdebase_dep kdepim-l10n)
+	)
 	semantic-desktop? ( $(add_kdebase_dep akonadi) )
-	$(block_other_slots)
 "
