@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/ultimate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.21 2011/05/04 21:04:09 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.22 2011/06/16 13:06:44 binki Exp $
+
+*ultimate-3.0.2-r2 (16 Jun 2011)
+
+  16 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  -ultimate-3.0.2-r1.ebuild, +ultimate-3.0.2-r2.ebuild,
+  -files/ultimate-3.0.2-system-zlib.patch,
+  +files/ultimate-3.0.2-system-zlib-r1.patch:
+  Fix bug #371889 by flameeyes caused by bad system-zlib patch.
 
   04 May 2011; Nathan Phillip Brink (binki) <binki@gentoo.org> metadata.xml:
   Take ownership of this package now that I don't need to proxy it.

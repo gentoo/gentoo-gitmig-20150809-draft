@@ -3,6 +3,10 @@ Subject: Don't  compile against internal  zlib. Missing ./configure.ac
 	changes  because ./configure.ac wasn't  shipped with  the dist
 	tarball.
 Date: 2011/04/27
+Subject: Use @ZLIB_LIBS@ and @ZLIB_CFLAGS@ instead of $(ZLIB_LIBS) and
+	friends because we don't get AC_SUBST() declared as Makefile
+	variables for free. https://bugs.gentoo.org/371889
+Date: 2011/06/16
 
 --- a/autoconf/configure.in
 +++ b/autoconf/configure.in
@@ -39,10 +43,10 @@ Date: 2011/04/27
  SSL_INCLUDES	= @SSL_INCLUDES@
  
 -IRCDLIBS	= ../zlib/libz.a @LIBS@ $(SSL_LIBS)
-+IRCDLIBS	= $(ZLIB_LIBS) @LIBS@ $(SSL_LIBS)
++IRCDLIBS	= @ZLIB_LIBS@ @LIBS@ $(SSL_LIBS)
  
 -INCLUDES	= -I../include -I../zlib $(SSL_INCLUDES)
-+INCLUDES	= -I../include $(ZLIB_CFLAGS) $(SSL_INCLUDES)
++INCLUDES	= -I../include @ZLIB_CFLAGS@ $(SSL_INCLUDES)
  CPPFLAGS	= ${INCLUDES} @CPPFLAGS@
  
  default:	all

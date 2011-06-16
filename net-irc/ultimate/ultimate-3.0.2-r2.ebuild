@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2-r1.ebuild,v 1.1 2011/05/02 20:43:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2-r2.ebuild,v 1.1 2011/06/16 13:06:45 binki Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ src_prepare() {
 	eprefixify "${T}"/${P}-config.patch
 	epatch "${T}"/${P}-config.patch
 
-	epatch "${FILESDIR}"/${P}-system-zlib.patch
+	epatch "${FILESDIR}"/${P}-system-zlib-r1.patch
 	epatch "${FILESDIR}"/${P}-make-failfast.patch
 	epatch "${FILESDIR}"/${P}-open-mode.patch
 	epatch "${FILESDIR}"/${P}-entropy-path.patch
