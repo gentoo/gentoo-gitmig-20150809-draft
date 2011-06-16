@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.160 2011/06/10 19:47:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.161 2011/06/16 00:02:43 chithanh Exp $
+
+*libdrm-2.4.26 (16 Jun 2011)
+
+  16 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.26.ebuild:
+  Version bump.
 
   10 Jun 2011; Matt Turner <mattst88@gentoo.org> libdrm-2.4.25.ebuild:
   Add missing libpciaccess dependency.
