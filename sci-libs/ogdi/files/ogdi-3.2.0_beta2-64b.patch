@@ -1,29 +1,5 @@
 --- ogdi.old/ogdi/driver/vrf/feature.c	2007/05/09 20:46:28	1.16
 +++ ogdi/ogdi/driver/vrf/feature.c	2009/05/08 04:15:50	1.17
-@@ -17,6 +17,9 @@
-  ******************************************************************************
-  *
-  * $Log: not supported by cvs2svn $
-  * Revision 1.1  2011/06/17 11:00:15  scarabeus
-  * Fix one issue with 64b patched post release in upstream repo.
-  *
-  * (Portage version: 2.2.0_alpha38/cvs/Linux x86_64)
-  *
-+ * Revision 1.17  2009/05/08 04:15:50  warmerda
-+ * fixed count type in VRF driver for 64bit systems (#2787502)
-+ *
-  * Revision 1.16  2007/05/09 20:46:28  cbalint
-  * From: Even Rouault <even.rouault@mines-paris.org>
-  * Date: Friday 21:14:18
-@@ -106,7 +109,7 @@
- #include "vrf.h"
- #include <assert.h>
- 
--ECS_CVSID("$Id: ogdi-3.2.0_beta2-64b.patch,v 1.2 2011/06/17 11:03:37 scarabeus Exp $");
-+ECS_CVSID("$Id: ogdi-3.2.0_beta2-64b.patch,v 1.2 2011/06/17 11:03:37 scarabeus Exp $");
- 
- vpf_projection_type NOPROJ = {DDS, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0,
-                               NULL, NULL, "Decimal Degrees     "};
 @@ -1347,7 +1350,7 @@
    short int temp4;
    int temp5;

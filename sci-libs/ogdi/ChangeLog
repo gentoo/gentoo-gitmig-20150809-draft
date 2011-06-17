@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ogdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.29 2011/06/17 11:00:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.30 2011/06/17 11:05:12 scarabeus Exp $
+
+  17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/ogdi-3.2.0_beta2-64b.patch:
+  Minimalise the patch so our cvs wont fck it up with the $ replaces.
 
   17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> ogdi-3.2.0_beta2.ebuild,
   +files/ogdi-3.2.0_beta2-64b.patch:
