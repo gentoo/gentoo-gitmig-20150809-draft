@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.6.ebuild,v 1.2 2010/06/24 14:49:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.1.6.ebuild,v 1.3 2011/06/17 10:23:35 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -44,19 +44,16 @@ src_compile() {
 	emake -j1 \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC)" \
-		SHLIB_LD="$(tc-getCC)" \
-		|| die "make failed"
+		SHLIB_LD="$(tc-getCC)"
 }
 
 src_install() {
 	mv "${S}"/bin/${TARGET}/*.so* "${S}"/lib/Linux/. || die "lib move failed"
-	dobin "${S}"/bin/${TARGET}/*  || die
+	dobin "${S}"/bin/${TARGET}/*
 	insinto /usr/include
-	doins ogdi/include/ecs.h ogdi/include/ecs_util.h || die
-	dolib.so lib/${TARGET}/lib* || die
-	if use static-libs; then
-		dolib.a lib/${TARGET}/static/*.a || die
-	fi
+	doins ogdi/include/ecs.h ogdi/include/ecs_util.h
+	dolib.so lib/${TARGET}/lib*
+	use static-libs && dolib.a lib/${TARGET}/static/*.a
 #	dosym libogdi31.so /usr/$(get_libdir)/libogdi.so || die "symlink failed"
-	dodoc ChangeLog NEWS README || die
+	dodoc ChangeLog NEWS README
 }

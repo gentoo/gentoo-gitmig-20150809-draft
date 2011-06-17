@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ogdi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.26 2010/06/24 14:46:47 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.27 2011/06/17 10:23:35 scarabeus Exp $
+
+  17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> ogdi-3.1.6.ebuild:
+  Move to eapi4.
 
 *ogdi-3.1.6 (24 Jun 2010)
 
