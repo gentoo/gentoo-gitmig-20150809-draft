@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.6 2011/06/15 13:33:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.7 2011/06/17 15:14:06 mgorny Exp $
+
+*systemd-29 (17 Jun 2011)
+
+  17 Jun 2011; Michał Górny <mgorny@gentoo.org> +systemd-29.ebuild:
+  Version bump.
 
   15 Jun 2011; Michał Górny <mgorny@gentoo.org> systemd-28.ebuild,
   metadata.xml:
