@@ -20,3 +20,13 @@
    findgpgmedir $maindir && break 2
   done
   if test $gpgmedir; then
+--- configure.ac	2011-06-17 11:54:29.000000000 +0000
++++ configure.ac	2011-06-17 11:56:22.000000000 +0000
+@@ -137,6 +137,7 @@
+ else
+  AM_PATH_GPGME([1.0.0], with_gpgme=yes, with_gpgme=no)
+  AC_CHECK_LIB(gpgme, main,, with_gpgme=no)
++ AC_CHECK_LIB(gpg-error, gpg_err_init,, with_gpgme=no)
+ fi
+ if test "$with_gpgme" = "no"; then
+  AC_MSG_RESULT([Disabling GPGME support...])

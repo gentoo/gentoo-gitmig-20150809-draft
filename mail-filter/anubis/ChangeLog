@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/anubis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.15 2011/06/13 18:07:56 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.16 2011/06/17 12:12:02 eras Exp $
+
+  17 Jun 2011; Eray Aslan <eras@gentoo.org> files/4.1.1-gpgme.patch:
+  Fix underlinking - bug #372017
 
 *anubis-4.1.1 (13 Jun 2011)
 
