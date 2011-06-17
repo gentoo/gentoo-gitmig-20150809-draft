@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96.ebuild,v 1.3 2011/06/04 08:03:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96-r1.ebuild,v 1.1 2011/06/17 09:39:38 scarabeus Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ for protocol in ${GPSD_PROTOCOLS}; do
 	IUSE_GPSD_PROTOCOLS+=" gpsd_protocols_${protocol}"
 done
 
-IUSE="${IUSE_GPSD_PROTOCOLS} dbus ipv6 ntp qt4"
+IUSE="${IUSE_GPSD_PROTOCOLS} dbus ipv6 ntp qt4 udev"
 
 # those harddeps are de-facto automagicall
 RDEPEND="
@@ -69,7 +69,7 @@ src_configure() {
 		myopts+=" $(use_enable gpsd_protocols_${protocol} ${protocol})"
 	done
 
-	if ! use qt4 ;  then
+	if ! use qt4 ; then
 		myopts+=" --disable-libQgpsmm --disable-libgpsmm"
 	fi
 
@@ -92,6 +92,13 @@ src_configure() {
 src_install() {
 	# no it can't be done using emake cause it is non-compliant
 	make DESTDIR="${D}" install || die
+
+	if use udev ; then
+		insinto /lib/udev/rules.d/
+		newins gpsd.rules 25-gpsd.rules
+		exeinto /lib/udev/
+		doexe gpsd.hotplug{,.wrapper}
+	fi
 
 	# needs this header for libQgpsmm
 	if use qt4 ; then
