@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.172 2011/06/15 04:37:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.173 2011/06/17 02:19:33 jer Exp $
+
+  17 Jun 2011; Jeroen Roovers <jer@gentoo.org> module-init-tools-3.16.ebuild:
+  Set RDEPEND explicitly (bug #371837).
 
 *module-init-tools-3.16 (15 Jun 2011)
 
