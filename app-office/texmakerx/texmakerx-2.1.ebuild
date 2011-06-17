@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmakerx/texmakerx-2.1.ebuild,v 1.1 2011/06/12 07:33:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmakerx/texmakerx-2.1.ebuild,v 1.2 2011/06/17 07:55:28 jlec Exp $
 
 EAPI=4
 
@@ -16,13 +16,15 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEPEND="
+	app-text/hunspell
 	app-text/poppler[qt4]
 	x11-libs/libX11
 	x11-libs/libXext
 	>=x11-libs/qt-gui-4.6.1:4
 	>=x11-libs/qt-core-4.6.1:4
-	>=x11-libs/qt-webkit-4.6.1:4
-	>=app-text/hunspell-1.2.4"
+	>=x11-libs/qt-script-4.6.1:4
+	>=x11-libs/qt-test-4.6.1:4
+	>=x11-libs/qt-webkit-4.6.1:4"
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
 	app-text/psutils
