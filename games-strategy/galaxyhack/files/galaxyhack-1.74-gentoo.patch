@@ -13,7 +13,7 @@
 -CXXFLAGS = $(shell sdl-config --cflags) -O3
 -LDFLAGS = $(shell sdl-config --libs) -lSDL_image -lSDL_mixer -lboost_filesystem
 +CXXFLAGS += $(shell sdl-config --cflags)
-+LDLIBS = $(shell sdl-config --libs) -lSDL_image -lSDL_mixer -lboost_filesystem
++LDLIBS = $(shell sdl-config --libs) -lSDL_image -lSDL_mixer -lboost_filesystem -lboost_system -lm
  
  OBJS = AIInterpreter.o AutoFireUnit.o BCCompiler.o DerivedGroups.o DragWindow.o \
  	ForceSelect.o ForceSelectWin.o GenWindow.o GenWindow_Base.o GFX.o Globals.o \

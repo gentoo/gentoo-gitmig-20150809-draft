@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/galaxyhack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.8 2011/04/27 03:06:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.9 2011/06/17 12:35:23 tupone Exp $
+
+  17 Jun 2011; Tupone Alfredo <tupone@gentoo.org> files/galaxyhack-1.74-gentoo.patch:
+  Fix underlink. Bug #369041 by Diego Elio Pettenò
 
   27 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
   galaxyhack-1.74.ebuild:
