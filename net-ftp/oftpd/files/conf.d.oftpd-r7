@@ -17,4 +17,4 @@ FTPROOT=/home/ftp
 FTPPORT=21
 
 ## Uncoment this line to activate oftpd service
-#OFTPD_OPTS="-p ${FTPPORT} ${FTPUSER} ${FTPPORT}"
+#OFTPD_OPTS="-p ${FTPPORT} ${FTPUSER} ${FTPROOT}"
