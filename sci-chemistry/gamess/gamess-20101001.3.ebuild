@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.1-r1.ebuild,v 1.1 2011/01/23 12:42:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3.ebuild,v 1.1 2011/06/17 10:58:11 alexxy Exp $
 
 EAPI="3"
 
@@ -36,7 +36,7 @@ S="${WORKDIR}/${PN}"
 RESTRICT="fetch"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
-GAMESS_VERSION="1 OCT 2010 (R1)"
+GAMESS_VERSION="1 OCT 2010 (R3)"
 
 pkg_nofetch() {
 	echo
@@ -267,12 +267,20 @@ src_install() {
 	dodoc *.DOC qmnuc/*.DOC || die "Failed installing docs"
 
 	# install ericftm
-	insinto /usr/share/${PN}/ericfmt
-	doins ericfmt.dat || die "Failed installing ericfmt.dat"
+	insinto /usr/share/${PN}
+	doins auxdata/ericfmt.dat || die "Failed installing ericfmt.dat"
 
 	# install mcpdata
-	insinto /usr/share/${PN}/mcpdata
-	doins mcpdata/* || die "Failed installing mcpdata"
+	insinto /usr/share/${PN}/MCP
+	doins auxdata/MCP/* || die "Failed installing MCP"
+
+	# install BASES
+	insinto /usr/share/${PN}/BASES
+	doins auxdata/BASES/* || die "Failed installing BASES"
+
+	# install QUANPOL
+	insinto /usr/share/${PN}/QUANPOL
+	doins auxdata/QUANPOL/* || die "Failed installing QUANPOL"
 
 	# install tinker params in case of qmmm
 	if use qmmm-tinker ; then

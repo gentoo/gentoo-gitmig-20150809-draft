@@ -1,0 +1,410 @@
+diff -urN gamess.orig/comp gamess/comp
+--- gamess.orig/comp	2010-08-05 19:04:54.000000000 +0400
++++ gamess/comp	2010-12-07 20:29:13.000000000 +0300
+@@ -1390,7 +1390,7 @@
+ #   g77 does not support FORTRAN logical units above 99, or 128 bit math.
+ #
+    case g77:
+-   set OPT = '-O2'
++   set gentoo-OPT = '-O2'
+    if ($MODULE == ormas1) set OPT='-O2 -fno-move-all-movables' # RH9, g77 3.3
+    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
+    if (($MODULE == qeigen) || ($MODULE == int2c)) then
+@@ -1420,7 +1420,7 @@
+ #      -std=legacy  suppresses warnings about use of f77 constructs.
+ #
+    case gfortran:
+-   set OPT='-O2'
++   set gentoo-OPT = '-O2'
+    if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
+    if ($MODULE == pcmcv2) set OPT='-O1'  # EFP+CPCM, ala Francois, v4.1.2
+    if (($MODULE == qeigen) || ($MODULE == int2c)) then
+@@ -1446,7 +1446,7 @@
+ #    optimizations in 32 bit mode, as a function of the ifort version.
+ #
+    case ifort:
+-   set OPT = '-O3'
++   set gentoo-OPT = '-O2'
+    if ($MODULE == delocl) set OPT='-O0'  # from Cheol
+    if ($MODULE == zheev)  set OPT='-O0'
+    set echo
+@@ -1558,7 +1558,7 @@
+    case gfortran:
+ #           -finit-real=<zero|inf|-inf|nan>  could be interesting debug opt
+ #           -fno-automatic forces static storage of all local variables
+-      set OPT='-O2'
++      set gentoo-OPT = '-O2'
+       if ($MODULE == zheev)  set OPT='-O0'  # defensive compiling
+       if (($MODULE == qeigen) || ($MODULE == int2c)) then
+          mv -f $MODULE.f $MODULE.junk
+@@ -1587,7 +1587,7 @@
+ #     -WB means warn but don't fail on out-of-bounds array references
+ #     -ftz flushes underflow results to zero
+ #
+-      set OPT = '-O2'
++      set gentoo-OPT = '-O2'
+ #       alas, I'm so tired of hearing about so many versions failing to
+ #       diagonalize, that this time critical code is run w/o optimization.
+ #       Very many (all?) ifort versions have problems with eigen.src.
+diff -urN gamess.orig/compall gamess/compall
+--- gamess.orig/compall	2010-10-01 19:37:31.000000000 +0400
++++ gamess/compall	2010-12-07 20:21:55.000000000 +0300
+@@ -84,15 +84,14 @@
+    endif
+ endif
+ if ($TARGET == linux32)      set extraflags='-DLINUX32'
+-if ($TARGET == linux64)      then
++if ($TARGET == linux64) then
++	set chip=`uname -m`
+ #      Ubuntu uses the non-standard -m flag, its -p replies "unknown"
+-                         set chip=`uname -p`
+-   if ($chip == unknown) set chip=`uname -m`
+-   if ($chip == x86_64) set extraflags='-DLINUX64 -m64'
+-   if ($chip == ia64)   set extraflags='-DLINUX64'  # this always 64 bits
++   	if ($chip == x86_64) set extraflags='-DLINUX64 -m64'
++   	if ($chip == ia64)   set extraflags='-DLINUX64'  # this always 64 bits
+ endif
+ if ($TARGET == mac32)        set extraflags='-DLINUX32'
+-if ($TARGET == mac64)    set extraflags='-DLINUX64 -m64 -I/usr/include/malloc'
++if ($TARGET == mac64)        set extraflags='-DLINUX64 -m64 -I/usr/include/malloc'
+ if ($TARGET == necsx)        set extraflags='-DNECSX -size_t64'
+ if ($TARGET == sgi32)        set extraflags='-DSGI32 -n32'
+ if ($TARGET == sgi64)        set extraflags='-DSGI64 -64'
+diff -urN gamess.orig/ddi/compddi gamess/ddi/compddi
+--- gamess.orig/ddi/compddi	2010-06-24 02:35:20.000000000 +0400
++++ gamess/ddi/compddi	2010-12-07 20:21:55.000000000 +0300
+@@ -628,7 +628,7 @@
+ 
+      set FORTRAN=$GMS_FORTRAN   # might be g77, gfortran, ifort, pgf77, f2c
+ 
+-     set CC = 'gcc'
++     set gentoo-CC = 'gcc'
+      set CFLAGS = "-DLINUX -O3 -fstrict-aliasing -I./"
+      set CLIBS  = "-lpthread"
+ 
+@@ -681,7 +681,7 @@
+                              set ARCH='-m64'
+      if (`uname -p` == ia64) set ARCH=''
+ 
+-     set CC = 'gcc'
++     set gentoo-CC = 'gcc'
+      set CFLAGS = "-DLINUX $ARCH -O3 -fstrict-aliasing -I./"
+      set CLIBS  = "-lpthread"
+ 
+diff -urN gamess.orig/ddi/kickoff/ddikick.c gamess/ddi/kickoff/ddikick.c
+--- gamess.orig/ddi/kickoff/ddikick.c	2008-05-06 14:16:12.000000000 +0400
++++ gamess/ddi/kickoff/ddikick.c	2010-12-07 20:21:55.000000000 +0300
+@@ -105,7 +105,7 @@
+           remoteshell = argv[++i];
+        } else {
+           if((remoteshell = getenv("DDI_RSH")) == NULL) {
+-              remoteshell = (char *) strdup("rsh");
++              remoteshell = (char *) strdup("ssh");
+           }
+        }
+ 
+diff -urN gamess.orig/lked gamess/lked
+--- gamess.orig/lked	2010-10-01 19:37:05.000000000 +0400
++++ gamess/lked	2010-12-07 20:26:57.000000000 +0300
+@@ -53,7 +53,7 @@
+ #
+ #   3. optional Nuclear-Electronic Orbital method, using NEO code
+ #
+-set NEO=false
++set NEO=true
+ #
+ #   4. optional Nvidia/CUDA code, for closed shell SCF Fock construction 
+ #         see ~/gamess/libqc/aaa.readme.1st for more information
+@@ -356,17 +356,17 @@
+    switch ($GMS_FORTRAN)
+      case g77:
+         set LDR='g77'
+-        set LDOPTS=' '  # add '-Wl,-M' to see load map
++        set gentoo-LDOPTS=' '  # add '-Wl,-M' to see load map
+         set FORTLIBS=' '
+         breaksw
+      case gfortran:
+         set LDR='gfortran'
+-        set LDOPTS=' '
++        set gentoo-LDOPTS=' '
+         set FORTLIBS=' '
+         breaksw
+      case ifort:
+         set LDR='ifort'
+-        set LDOPTS=' '  # add '-Wl,-M' to see load map
++        set gentoo-LDOPTS=' '  # add '-Wl,-M' to see load map
+         set FORTLIBS='-Vaxlib'
+         breaksw
+      case pgf77:
+@@ -376,7 +376,7 @@
+         breaksw
+      case f2c:
+         set LDR='gcc'
+-        set LDOPTS=' '
++        set gentoo-LDOPTS=' '
+         set FORTLIBS='-lf2c -lm'
+         breaksw
+      default:
+@@ -427,12 +427,7 @@
+       #     Otherwise, attempt a link against shared object libs.
+       #     See the 64 bit Atlas below for a way to fix the linker's
+       #     not being able to locate -lf77blas, if that happens.
+-      if (-e $GMS_MATHLIB_PATH/libf77blas.a) then
+-         set MATHLIBS="$GMS_MATHLIB_PATH/libf77blas.a"
+-         set MATHLIBS="$MATHLIBS $GMS_MATHLIB_PATH/libatlas.a"
+-      else
+-         set MATHLIBS="-L$GMS_MATHLIB_PATH -lf77blas -latlas"
+-      endif
++      set MATHLIBS=`pkg-config --libs blas`
+       set BLAS=' '
+       breaksw
+ 
+@@ -466,12 +461,12 @@
+    switch ($GMS_FORTRAN)
+       case gfortran:
+          set LDR='gfortran'
+-         set LDOPTS=' '
++         set gentoo-LDOPTS=' '
+          set FORTLIBS=' '
+          breaksw
+       case ifort:
+          set LDR='ifort'
+-         set LDOPTS='-i8'  # -Wl,-M generates a load map
++         set gentoo-LDOPTS=' '  # -Wl,-M generates a load map
+ #            this auxiliary library seems to have disappeared in ifort 10
+          set FORTLIBS=' '
+          if($GMS_IFORT_VERNO < 10) set FORTLIBS='-Vaxlib'
+@@ -549,12 +544,7 @@
+       #          ln -s liblapack_atlas.so.3.0 liblapack.so
+       #          ln -s liblapack.so.3.0       liblapack.so
+       #     It is strange the RPM's don't do these soft links for us.
+-      if (-e $GMS_MATHLIB_PATH/libf77blas.a) then
+-         set MATHLIBS="$GMS_MATHLIB_PATH/libf77blas.a"
+-         set MATHLIBS="$MATHLIBS $GMS_MATHLIB_PATH/libatlas.a"
+-      else
+-         set MATHLIBS="-L$GMS_MATHLIB_PATH -lf77blas -latlas"
+-      endif
++      set MATHLIBS=`pkg-config --libs blas`
+       set BLAS=' '
+       breaksw
+ 
+diff -urN gamess.orig/runall gamess/runall
+--- gamess.orig/runall	2009-02-28 02:57:18.000000000 +0300
++++ gamess/runall	2010-12-07 20:21:55.000000000 +0300
+@@ -10,7 +10,6 @@
+ #
+ #  Only the following two lines need to be customized:
+ #
+-chdir /u1/mike/gamess
+ set VERNO=00
+ #
+ #  Loop over all Ntest jobs supplied with GAMESS
+@@ -27,7 +26,7 @@
+      gms -v $VERNO -q ti -l exam$NUM.log exam$NUM
+      sleep 5
+   else
+-     ./rungms exam$NUM $VERNO 1  >&  exam$NUM.log
++     rungms exam$NUM $VERNO 1  >&  exam$NUM.log
+   endif
+   @ i++
+ end
+diff -urN gamess.orig/rungms gamess/rungms
+--- gamess.orig/rungms	2010-08-17 17:46:59.000000000 +0400
++++ gamess/rungms	2010-12-07 20:36:43.000000000 +0300
+@@ -55,7 +55,7 @@
+ #       one for LoadLeveler "ll-gms" on the IBM SP line.
+ #
+ set TARGET=sockets
+-set SCR=/scr/$USER
++set SCR=`pwd`
+ #
+ set JOB=$1      # name of the input file xxx.inp, give only the xxx part
+ set VERNO=$2    # revision number of the executable created by 'lked' step
+@@ -139,22 +139,22 @@
+ #  c) The NUCBAS directory is for the NEO plug-in code, see its documentation
+ #  Note that you must edit a+b, but will probably skip c+d.
+ #                        ASCII input files (see explanation above)
+-setenv AUXDATA ~mike/gamess/auxdata
++setenv AUXDATA /usr/share/gamess
+ setenv  EXTBAS /dev/null
+ setenv  NUCBAS /dev/null
+ #
+ set echo
+ #
+ setenv ERICFMT $AUXDATA/ericfmt.dat
+ setenv MCPPATH $AUXDATA/MCP
+ setenv BASPATH $AUXDATA/BASES
+ setenv QUANPOL $AUXDATA/QUANPOL
+-setenv  MAKEFP ~$USER/scr/$JOB.efp
+-setenv   GAMMA ~$USER/scr/$JOB.gamma
+-setenv TRAJECT ~$USER/scr/$JOB.trj
+-setenv RESTART ~$USER/scr/$JOB.rst
++setenv  MAKEFP $SCR/$JOB.efp
++setenv   GAMMA $SCR/$JOB.gamma
++setenv TRAJECT $SCR/$JOB.trj
++setenv RESTART $SCR/$JOB.rst
+ setenv   INPUT $SCR/$JOB.F05
+-setenv   PUNCH ~$USER/scr/$JOB.dat
++setenv   PUNCH $SCR/$JOB.dat
+ setenv  AOINTS $SCR/$JOB.F08
+ setenv  MOINTS $SCR/$JOB.F09
+ setenv DICTNRY $SCR/$JOB.F10
+@@ -321,7 +321,7 @@
+     if (null$4 == null) set ELGNAME=ELGFILE
+     set echo
+     setenv AOINTS   $SCR/$ELGNAME.F08
+-    setenv ELGDOS   ~$USER/scr/$JOB.ldos
++    setenv ELGDOS   $SCR/$JOB.ldos
+     setenv ELGDAT   $SCR/$ELGNAME.F71
+     setenv ELGPAR   $SCR/$ELGNAME.F72
+     setenv ELGCUT   $SCR/$ELGNAME.F74
+@@ -474,7 +474,7 @@
+    if ($os == AIX)     set GMSPATH=/u1/mike/gamess
+    if ($os == Darwin)  set GMSPATH=/Users/mike/desktop/gamess
+    if ($os == HP-UX)   set GMSPATH=/zr/mike/gamess
+-   if ($os == Linux)   set GMSPATH=/cu/mike/gamess
++   if ($os == Linux)   set GMSPATH=/usr/bin
+    if ($os == OSF1)    set GMSPATH=/in/mike/gamess
+    if ($os == SunOS)   set GMSPATH=/hf/mike/gamess
+ #       special compilation for Sun E450 uSPARC       (uname also= SunOS)
+@@ -543,85 +543,6 @@
+       set HOSTLIST=(`hostname`)
+    endif
+ #
+-#       2. This is an example of how to run on a 4-way SMP enclosure,
+-#          where all CPUs (aka COREs) are inside a -single- NODE.
+-#          The example is repeated for some nodes we use as 2-way's.
+-#     At other locations, you may wish to consider some of the examples
+-#     that follow below, after commenting out this ISU specific part.
+-   if ($NCPUS > 1) then
+-      switch (`hostname`)
+-         case ti.msg.chem.iastate.edu:
+-         case cd.msg.chem.iastate.edu:
+-         case zn.msg.chem.iastate.edu:
+-         case ni.msg.chem.iastate.edu:
+-         case co.msg.chem.iastate.edu:
+-         case pb.msg.chem.iastate.edu:
+-         case bi.msg.chem.iastate.edu:
+-         case po.msg.chem.iastate.edu:
+-         case at.msg.chem.iastate.edu:
+-         case sc.msg.chem.iastate.edu:
+-            if ($NCPUS > 4) set NCPUS=4
+-            set NNODES=1
+-            set HOSTLIST=(`hostname`:cpus=$NCPUS)
+-            breaksw
+-         case se.msg.chem.iastate.edu:
+-         case sb.msg.chem.iastate.edu:
+-         case br.msg.chem.iastate.edu:
+-            if ($NCPUS > 2) set NCPUS=2
+-            set NNODES=1
+-            set HOSTLIST=(`hostname`:cpus=$NCPUS)
+-            breaksw
+-         default:
+-            echo I do not know how to run this node in parallel.
+-            exit 20
+-      endsw
+-   endif
+-#
+-#       3. How to run in a single computer, namely the "localhost", so
+-#          this computer needn't have a proper Internet name.
+-#          This example also presumes SysV was deliberately *not* chosen
+-#          when DDI was compiled, so that host names have to be repeated,
+-#          instead of using the simpler localhost:cpus=$NCPU form.
+-#
+-#          This example is appropriate for use with the pre-compiled
+-#          Apple binary from our web site, provided it is uncommented,
+-#          and the passage #2 just above is deleted or commented out.
+-#
+-#--   set HOSTLIST=()
+-#--   @ n=1
+-#--   while ($n <= $NCPUS)
+-#--      set HOSTLIST=($HOSTLIST localhost)
+-#--      @ n++
+-#--   end
+-#--   set NNODES=$NCPUS
+-#
+-#       4. A phony example, of four dual processors (arbitrary names)
+-#          Since their names never change, we just can just specify them.
+-#          Note that we can use a short name like 'bb' if and only if
+-#          system name resolution can map them onto the true host names.
+-   if (`hostname` == aa.msg.chem.iastate.edu) then
+-      set NCPUS=8
+-      set NNODES=4
+-      set HOSTLIST=(aa:cpus=2 bb:cpus=2 cc:cpus=2 dd:cpus=2)
+-   endif
+-#
+-#       5. An example of 16 uniprocessor boxes in a Beowulf-type cluster.
+-#          Because they are uniprocessors, we just set NNODES = NCPUS.
+-#          Their host names fall into the pattern fly1 to fly16,
+-#          which we can turn into a HOSTLIST with a small loop.
+-   if (`hostname` == fly1.fi.ameslab.gov) then
+-      set NNODES=$NCPUS
+-      set HOSTLIST=()
+-      set nmax=$NCPUS
+-      if ($nmax > 16) set nmax=16
+-      @ CPU=1
+-      while ($CPU <= $nmax)
+-         set HOSTLIST=($HOSTLIST fly$CPU)
+-         @ CPU++
+-      end
+-      unset $CPU
+-   endif
+-#
+ #       6. Scalable Computing Lab's clusters running PBS batch queues.
+ #          Here the task is to manipulate the dynamically assigned host
+ #          names into the HOSTLIST string for the kickoff program,
+@@ -604,8 +530,6 @@
+ #
+ #         The IBM cluster has two Gigabit adapters in each 4-way SMP,
+ #         while the AXP cluster is based on a Myrinet network.
+-      if (`uname` == AIX)   set NETEXT=".gig,.gig2"
+-      if (`uname` == Linux) set NETEXT=".myri"
+ #
+ #         repeated host names in the PBS host file indicate being assigned
+ #         CPUs in the same SMP enclosure, which we must count up correctly.
+@@ -636,12 +560,11 @@
+       @ NNODES = 1
+       @ NSMPCPU = 1
+       set spacer1=":cpus="
+-      set spacer2=":netext="
+       while($IPROC <= $nmax)
+          set MYPROC=`sed -n -e "$IPROC p" $PBS_NODEFILE`
+          set MYPROC=`echo $MYPROC | awk '{split($0,a,"."); print a[1]}'`
+          if($MYPROC != $MYNODE) then
+-            set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU$spacer2$NETEXT)
++            set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU)
+             set MYNODE=$MYPROC
+             @ NSMPCPU = 0
+             @ NNODES++
+@@ -649,13 +572,13 @@
+          @ IPROC++
+          @ NSMPCPU++
+       end
+-      set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU$spacer2$NETEXT)
++      set HOSTLIST = ($HOSTLIST $MYNODE$spacer1$NSMPCPU)
+    endif
+ #
+ #        we have now finished setting up a correct HOSTLIST.
+ #        uncomment the next two if you are doing script debugging.
+-#--echo "The generated host list is"
+-#--echo $HOSTLIST
++  echo "The generated host list is"
++  echo $HOSTLIST
+ #
+ 
+ #        One way to be sure that the master node of each subgroup
+diff -urN gamess.orig/tools/checktst/checktst gamess/tools/checktst/checktst
+--- gamess.orig/tools/checktst/checktst	2008-12-30 18:33:09.000000000 +0300
++++ gamess/tools/checktst/checktst	2010-12-07 20:21:55.000000000 +0300
+@@ -3,11 +3,6 @@
+ # Compare the results of GAMESS sample jobs to pre-stored correct values.
+ # This script can be executed from any directory with write permissions.
+ # Written by D. G. Fedorov, AIST, July 20, 2004.
+-#
+-# Only the path name in the very next line needs to be customized.
+-#
+-set GMSPATH=~/gamess
+-
+ # The Ntest outputs are assumed to be named exam01.log, exam02.log, ...
+ # but the user will be allowed to specify the directory containing them.
+ #
