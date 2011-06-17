@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95-r1.ebuild,v 1.7 2011/05/10 13:08:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.95-r1.ebuild,v 1.8 2011/06/17 10:57:37 xarthisius Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~ppc64 x86"
+KEYWORDS="amd64 arm ppc ppc64 x86"
 
 GPSD_PROTOCOLS="ashtech aivdm clientdebug earthmate evermore fv18 garmin
 	garmintxt gpsclock itrax mtk3301 nmea ntrip navcom oceanserver
