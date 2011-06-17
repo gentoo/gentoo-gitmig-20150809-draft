@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.74 2011/06/12 14:38:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.75 2011/06/17 00:04:39 jer Exp $
+
+  17 Jun 2011; Jeroen Roovers <jer@gentoo.org> twisted-conch-11.0.0.ebuild:
+  Stable for HPPA (bug #366131).
 
   12 Jun 2011; Raúl Porcel <armin76@gentoo.org> twisted-conch-11.0.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #366131
