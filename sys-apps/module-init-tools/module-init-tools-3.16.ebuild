@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.16.ebuild,v 1.2 2011/06/17 02:19:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.16.ebuild,v 1.3 2011/06/17 02:25:00 jer Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,11 +14,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="static"
 RESTRICT="test"
 
-DEPEND="sys-libs/zlib
-	!<sys-apps/baselayout-2.0.1
-	!sys-apps/modutils
+COMMON_DEPEND="sys-libs/zlib"
+DEPEND="${COMMON_DEPEND}
 	app-text/docbook-sgml-utils"
-RDEPEND="${DEPEND}"
+RDEPEND="${COMMON_DEPEND}
+	!<sys-apps/baselayout-2.0.1
+	!sys-apps/modutils"
 
 src_unpack() {
 	unpack ${A}
