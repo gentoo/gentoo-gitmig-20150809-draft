@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.78 2011/05/16 11:06:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.79 2011/06/17 10:04:02 angelos Exp $
+
+  17 Jun 2011; Christoph Mende <angelos@gentoo.org> gmpc-0.20.0.ebuild:
+  Bump gob dependency to 2.0.17 (bug #371953)
 
   16 May 2011; Christoph Mende <angelos@gentoo.org> gmpc-0.20.0.ebuild,
   +files/gmpc-0.20.0-underlinking.patch:
