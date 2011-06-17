@@ -4,6 +4,11 @@
   ******************************************************************************
   *
   * $Log: not supported by cvs2svn $
+  * Revision 1.1  2011/06/17 11:00:15  scarabeus
+  * Fix one issue with 64b patched post release in upstream repo.
+  *
+  * (Portage version: 2.2.0_alpha38/cvs/Linux x86_64)
+  *
 + * Revision 1.17  2009/05/08 04:15:50  warmerda
 + * fixed count type in VRF driver for 64bit systems (#2787502)
 + *
@@ -14,8 +19,8 @@
  #include "vrf.h"
  #include <assert.h>
  
--ECS_CVSID("$Id: ogdi-3.2.0_beta2-64b.patch,v 1.1 2011/06/17 11:00:15 scarabeus Exp $");
-+ECS_CVSID("$Id: ogdi-3.2.0_beta2-64b.patch,v 1.1 2011/06/17 11:00:15 scarabeus Exp $");
+-ECS_CVSID("$Id: ogdi-3.2.0_beta2-64b.patch,v 1.2 2011/06/17 11:03:37 scarabeus Exp $");
++ECS_CVSID("$Id: ogdi-3.2.0_beta2-64b.patch,v 1.2 2011/06/17 11:03:37 scarabeus Exp $");
  
  vpf_projection_type NOPROJ = {DDS, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0,
                                NULL, NULL, "Decimal Degrees     "};
