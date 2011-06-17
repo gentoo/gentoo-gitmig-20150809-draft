@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/asmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.12 2011/06/07 15:17:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.13 2011/06/17 14:51:54 eras Exp $
+
+  17 Jun 2011; Eray Aslan <eras@gentoo.org> asmail-2.1.ebuild:
+  Fix underlinking - bug #372055
 
   07 Jun 2011; Eray Aslan <eras@gentoo.org> asmail-2.1.ebuild,
   +files/asmail-2.1-ldflags.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-2.1.ebuild,v 1.3 2011/06/07 15:17:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/asmail-2.1.ebuild,v 1.4 2011/06/17 14:51:54 eras Exp $
 
 inherit toolchain-funcs eutils
 
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	sed -i -e "/LIB/s/-lssl/-lssl -lcrypto/g" \
+		configure
 	tc-export CC
 	econf $(use_enable jpeg)
 	emake || die "emake failed."
