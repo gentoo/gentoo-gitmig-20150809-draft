@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009-r1.ebuild,v 1.2 2011/06/09 21:45:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1009-r1.ebuild,v 1.3 2011/06/17 21:01:12 radhermit Exp $
 
 EAPI=2
 
@@ -36,7 +36,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-desktop.patch
+	epatch "${FILESDIR}"/${P}-desktop.patch \
+		"${FILESDIR}"/${P}-no-nls.patch
 
 	sed -i -e "s:\(DESTINATION\) bin:\1 ${GAMES_BINDIR}:" CMakeLists.txt || die
 }

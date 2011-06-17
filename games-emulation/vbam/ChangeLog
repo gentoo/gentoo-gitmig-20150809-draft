@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/vbam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.6 2011/06/09 21:45:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.7 2011/06/17 21:01:12 radhermit Exp $
+
+  17 Jun 2011; Tim Harder <radhermit@gentoo.org> vbam-1.8.0.1009-r1.ebuild,
+  +files/vbam-1.8.0.1009-no-nls.patch:
+  Fix build when nls is disabled thanks to Jonathan Callen (bug #372099).
 
   09 Jun 2011; Tim Harder <radhermit@gentoo.org> vbam-1.8.0.1009-r1.ebuild:
   Explicitly inherit the eutils eclass.
