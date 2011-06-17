@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r1.ebuild,v 1.3 2011/03/21 21:04:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r1.ebuild,v 1.4 2011/06/17 09:22:22 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
 inherit cmake-utils eutils fdo-mime versionator
 
@@ -13,35 +13,39 @@ SRC_URI="${HOMEPAGE}/packages/${P/_/}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-S=${WORKDIR}/${P/_/}
-
 KEYWORDS="~amd64 ~ppc ~x86"
-# submit bug for ppc64
 
 IUSE="dbus -debug -kismet libgda gdal mapnik scripts -speech"
 
-COMMON_DEP=">=sci-geosciences/gpsd-2.94
-	net-misc/curl
-	dev-libs/libxml2:2
+COMMON_DEP="
 	dev-db/sqlite:3
+	dev-libs/libxml2:2
+	net-misc/curl
+	>=sci-geosciences/gpsd-2.96
 	x11-libs/gtk+:2
 	x11-libs/gdk-pixbuf:2
 	dbus? ( dev-libs/dbus-glib )
 	gdal? ( sci-libs/gdal )
 	kismet? ( net-wireless/kismet )
-	mapnik? ( >=sci-geosciences/mapnik-0.7.0[postgres]
-		>=dev-db/postgis-1.5.2 )
 	libgda? ( =gnome-extra/libgda-3.0*:3[postgres] )
-	speech? ( >=app-accessibility/speech-dispatcher-0.6.7 )"
+	mapnik? (
+		>=sci-geosciences/mapnik-0.7.0[postgres]
+		>=dev-db/postgis-1.5.2
+	)
+	speech? ( >=app-accessibility/speech-dispatcher-0.6.7 )
+"
 
 DEPEND="${COMMON_DEP}
-	>=dev-util/cmake-2.8.0
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+"
 
 RDEPEND="${COMMON_DEP}
+	media-fonts/dejavu
 	sci-geosciences/openstreetmap-icons
 	sci-geosciences/mapnik-world-boundaries
-	media-fonts/dejavu"
+"
+
+S=${WORKDIR}/${P/_/}
 
 src_prepare() {
 	# Get rid of the package's FindBoost.
@@ -68,8 +72,10 @@ src_prepare() {
 		-e "s:Graphics;Network;Geography:Education;Science;Geography;GPS:g" \
 		data/gpsdrive.desktop || die "sed failed"
 
-	epatch "${FILESDIR}"/${P}_DefineOptions_gpsd.patch
-	epatch "${FILESDIR}"/${P}-add-gdk-pixbuf2.patch
+	epatch \
+		"${FILESDIR}"/${P}_DefineOptions_gpsd.patch \
+		"${FILESDIR}"/${P}-add-gdk-pixbuf2.patch \
+		"${FILESDIR}"/${P}-gpsd-2.96.patch
 }
 
 src_configure() {
@@ -77,9 +83,9 @@ src_configure() {
 
 		# set policy for new linker paths
 		cmake_policy(SET CMP0003 NEW) # or cmake_policy(VERSION 2.6)
-	_EOF_
+_EOF_
 
-	local mycmakeargs="${mycmakeargs}
+	local mycmakeargs=(
 		$(cmake-utils_use_with scripts SCRIPTS)
 		$(cmake-utils_use_with mapnik MAPNIK)
 		$(cmake-utils_use_with mapnik POSTGIS)
@@ -87,7 +93,8 @@ src_configure() {
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with libgda GDA3)
 		$(cmake-utils_use_with speech SPEECH)
-		$(cmake-utils_use_with gdal GDAL)"
+		$(cmake-utils_use_with gdal GDAL)
+	)
 	cmake-utils_src_configure
 }
 
@@ -100,16 +107,14 @@ src_install() {
 	if use mapnik ; then
 		dodoc Documentation/install-mapnik-osm.txt
 	else
-		rm -f "${D}"usr/bin/gpsdrive_mapnik_gentiles.py
-		rm -f "${D}"usr/share/gpsdrive/osm-template.xml
+		rm -f "${ED}"usr/bin/gpsdrive_mapnik_gentiles.py
+		rm -f "${ED}"usr/share/gpsdrive/osm-template.xml
 	fi
 	if use scripts ; then
 		dodoc Documentation/README.gpspoint2gspdrive
-		if ! use gdal ; then
-			rm -f "${D}"usr/bin/{gdal_slice,nasaconv}.sh
-		fi
+		use gdal || rm -f "${ED}"usr/bin/{gdal_slice,nasaconv}.sh
 	else
-		rm -f "${D}"usr/share/man/man1/gpsd_nmea.sh.1
+		rm -f "${ED}"usr/share/man/man1/gpsd_nmea.sh.1
 	fi
 }
 
