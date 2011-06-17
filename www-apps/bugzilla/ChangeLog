@@ -1,6 +1,28 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.198 2011/02/13 17:26:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.199 2011/06/17 10:38:41 idl0r Exp $
+
+*bugzilla-4.0.1 (17 Jun 2011)
+*bugzilla-3.6.5 (17 Jun 2011)
+*bugzilla-3.4.11 (17 Jun 2011)
+
+  17 Jun 2011; Christian Ruppert <idl0r@gentoo.org> -bugzilla-2.20.6.ebuild,
+  -bugzilla-2.22.7.ebuild, -bugzilla-3.0.11.ebuild, -bugzilla-3.2.9.ebuild,
+  -bugzilla-3.2.10.ebuild, -bugzilla-3.4.9.ebuild, -bugzilla-3.4.10.ebuild,
+  +bugzilla-3.4.11.ebuild, -bugzilla-3.6.3.ebuild, bugzilla-3.6.4.ebuild,
+  -bugzilla-3.6.4-r1.ebuild, +bugzilla-3.6.5.ebuild, +bugzilla-4.0.1.ebuild,
+  -files/2.20/apache.htaccess, -files/2.20/bugzilla.cron.daily,
+  -files/2.20/bugzilla.cron.tab, -files/2.20/postinstall-en.txt,
+  -files/2.20/reconfig, -files/2.22/apache.htaccess,
+  -files/2.22/bugzilla.cron.daily, -files/2.22/bugzilla.cron.tab,
+  -files/2.22/postinstall-en.txt, -files/2.22/reconfig,
+  -files/3.0/bugzilla.cron.daily, -files/3.0/bugzilla.cron.tab,
+  -files/3.0/postinstall-en.txt, -files/3.0/reconfig,
+  +files/4.0/bugzilla.cron.daily, +files/4.0/bugzilla.cron.tab,
+  +files/4.0/bugzilla-queue.confd, +files/4.0/bugzilla-queue.initd,
+  +files/4.0/postinstall-en.txt, +files/4.0/reconfig, metadata.xml:
+  Version bumps. Remove old/unmaintained versions. Fixes bug 314381 and bug
+  365545. Fix licenses. Add init.d/conf.d script for jobqueue.pl. Do tests.
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> bugzilla-2.20.6.ebuild,
   bugzilla-2.22.7.ebuild, bugzilla-3.0.11.ebuild, bugzilla-3.2.9.ebuild,

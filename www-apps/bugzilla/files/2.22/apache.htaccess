@@ -1,3 +1,0 @@
-AddHandler cgi-script .cgi
-Options +Indexes +ExecCGI +FollowSymLinks
-DirectoryIndex index.cgi

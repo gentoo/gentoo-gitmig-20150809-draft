@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.6.4.ebuild,v 1.6 2011/02/13 17:26:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.6.4.ebuild,v 1.7 2011/06/17 10:38:41 idl0r Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
-LICENSE="MPL-1.1 NPL-1.1"
+LICENSE="MPL-1.1"
 # KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 KEYWORDS="amd64 ppc ppc64 x86"
 
@@ -65,7 +65,7 @@ RDEPEND="
 		dev-perl/Template-GD
 		dev-perl/Test-Taint
 		dev-perl/XML-Twig
-		media-gfx/imagemagick[perl]
+		|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
 		dev-perl/TheSchwartz
 		dev-perl/Daemon-Generic
 	)

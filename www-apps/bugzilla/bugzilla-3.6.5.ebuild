@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.4.9.ebuild,v 1.2 2011/02/13 17:26:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.6.5.ebuild,v 1.1 2011/06/17 10:38:41 idl0r Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit webapp depend.apache versionator eutils
 
@@ -12,9 +12,8 @@ DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
-LICENSE="MPL-1.1 NPL-1.1"
-# KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~amd64 ~ppc ~x86"
+LICENSE="MPL-1.1"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="modperl extras graphviz mysql postgres"
 
@@ -33,7 +32,7 @@ RDEPEND="
 	>=dev-perl/MIME-tools-5.427
 	>=dev-perl/Template-Toolkit-2.22
 	>=dev-perl/TimeDate-1.16
-	>=virtual/perl-CGI-3.29
+	>=virtual/perl-CGI-3.510
 	>=virtual/perl-Digest-SHA-5.46
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-MIME-Base64-3.07
@@ -57,15 +56,18 @@ RDEPEND="
 		dev-perl/GDTextUtil
 		>=dev-perl/HTML-Parser-3.60
 		dev-perl/HTML-Scrubber
+		dev-perl/JSON-RPC
 		dev-perl/libwww-perl
 		>=dev-perl/PatchReader-0.9.5
 		dev-perl/perl-ldap
 		dev-perl/SOAP-Lite
 		dev-perl/Template-GD
+		dev-perl/Test-Taint
 		dev-perl/XML-Twig
-		media-gfx/imagemagick[perl]
+		|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
 		dev-perl/TheSchwartz
 		dev-perl/Daemon-Generic
+		dev-perl/Math-Random-Secure
 	)
 "
 # from extras we miss:
@@ -80,13 +82,15 @@ pkg_setup() {
 
 src_prepare() {
 	ecvs_clean
+	# Remove bundled perl modules
+	rm -rf "${S}"/lib || die
 }
 
 src_install () {
 	webapp_src_preinst
 
 	insinto "${MY_HTDOCSDIR}"
-	doins -r .
+	doins -r . || die
 	for f in bugzilla.cron.daily bugzilla.cron.tab; do
 		doins "${FILESDIR}"/${MY_PB}/${f} || die
 	done

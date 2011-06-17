@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.0.11.ebuild,v 1.8 2011/02/13 17:26:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.4.11.ebuild,v 1.1 2011/06/17 10:38:41 idl0r Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit webapp depend.apache versionator eutils
 
@@ -12,8 +12,9 @@ DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
-LICENSE="MPL-1.1 NPL-1.1"
-KEYWORDS="amd64 ppc ppc64 x86"
+LICENSE="MPL-1.1"
+# KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="modperl extras graphviz mysql postgres"
 
@@ -22,13 +23,18 @@ RDEPEND="
 	>=dev-lang/perl-5.8.8
 
 	>=dev-perl/DBI-1.601
+	>=dev-perl/DateTime-0.50
+	>=dev-perl/DateTime-Locale-0.43
+	>=dev-perl/DateTime-TimeZone-0.71
+	>=dev-perl/URI-1.38
 	>=dev-perl/Email-MIME-1.900
 	>=dev-perl/Email-MIME-Encodings-1.313
 	>=dev-perl/Email-Send-2.190
 	>=dev-perl/MIME-tools-5.427
-	>=dev-perl/Template-Toolkit-2.19
+	>=dev-perl/Template-Toolkit-2.22
 	>=dev-perl/TimeDate-1.16
 	>=virtual/perl-CGI-3.29
+	>=virtual/perl-Digest-SHA-5.46
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-MIME-Base64-3.07
 
@@ -57,9 +63,13 @@ RDEPEND="
 		dev-perl/SOAP-Lite
 		dev-perl/Template-GD
 		dev-perl/XML-Twig
-		media-gfx/imagemagick[perl]
+		|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
+		dev-perl/TheSchwartz
+		dev-perl/Daemon-Generic
 	)
 "
+# from extras we miss:
+# (nothing)
 
 want_apache modperl
 
@@ -76,9 +86,9 @@ src_install () {
 	webapp_src_preinst
 
 	insinto "${MY_HTDOCSDIR}"
-	doins -r .
+	doins -r . || die
 	for f in bugzilla.cron.daily bugzilla.cron.tab; do
-		doins "${FILESDIR}"/${MY_PB}/${f}
+		doins "${FILESDIR}"/${MY_PB}/${f} || die
 	done
 
 	webapp_hook_script "${FILESDIR}"/${MY_PB}/reconfig
