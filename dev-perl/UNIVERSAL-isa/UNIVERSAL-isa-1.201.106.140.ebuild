@@ -1,16 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-isa/UNIVERSAL-isa-1.201.106.130.ebuild,v 1.1 2011/06/14 11:07:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-isa/UNIVERSAL-isa-1.201.106.140.ebuild,v 1.1 2011/06/17 19:02:27 tove Exp $
 
 EAPI=4
 
 MODULE_AUTHOR=CHROMATIC
-MODULE_VERSION=1.20110613
+MODULE_VERSION=1.20110614
 inherit perl-module
 
 DESCRIPTION="Attempt to recover from people calling UNIVERSAL::isa as a function"
 
-LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
