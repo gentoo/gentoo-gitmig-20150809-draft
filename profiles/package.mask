@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12842 2011/06/17 08:06:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12843 2011/06/17 09:55:07 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -291,7 +291,10 @@ sys-cluster/pvfs2
 app-crypt/scsign
 
 # Ole Markus With <olemarkus@gentoo.org> (1 May 2011)
-# Masking SVN snaphots.
+# Masking SVN snaphots and release candidates.
+=dev-lang/php-5.3.7_rc1
+=dev-lang/php-5.3.7_rc2
+=dev-lang/php-5.3.7_rc3
 >=dev-lang/php-5.4.0_pre1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (30 Apr 2011)
