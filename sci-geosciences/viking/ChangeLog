@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/viking
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.15 2011/06/17 08:43:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.16 2011/06/17 19:47:45 scarabeus Exp $
+
+  17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.2.1-autoreconf.patch, viking-1.2.1.ebuild:
+  Actualy run eautoreconf due to the required patch for gpsd. Fixes bug #372081
 
 *viking-1.2.1 (17 Jun 2011)
 

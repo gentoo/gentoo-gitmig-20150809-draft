@@ -1,0 +1,13 @@
+diff -urN viking-1.2.1.old/configure.ac viking-1.2.1/configure.ac
+--- viking-1.2.1.old/configure.ac	2011-06-17 21:44:31.920086938 +0200
++++ viking-1.2.1/configure.ac	2011-06-17 21:44:43.574941232 +0200
+@@ -344,9 +344,6 @@
+                  doc/Makefile
+                  doc/examples/Makefile
+                  doc/dev/Makefile])
+-if test x$enable_gtk_doc = xyes; then
+-AC_CONFIG_FILES([doc/reference/Makefile])
+-fi
+ AC_OUTPUT([
+ 	   viking.spec
+ 	   ])
