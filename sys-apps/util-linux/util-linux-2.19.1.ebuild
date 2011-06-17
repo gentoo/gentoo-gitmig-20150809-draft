@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1.ebuild,v 1.7 2011/05/14 19:27:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1.ebuild,v 1.8 2011/06/17 19:06:41 c1pher Exp $
 
 EAPI="2"
 
@@ -18,13 +18,14 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	#KEYWORDS=""
 else
-	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.bz2"
+	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.bz2
+		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-2.19.1-20110510.diff.bz2 )"
 	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+cramfs crypt ncurses nls old-linux perl selinux slang uclibc unicode"
+IUSE="+cramfs crypt loop-aes ncurses nls old-linux perl selinux slang uclibc unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -43,6 +44,8 @@ src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
 		autopoint --force
 		eautoreconf
+	else
+		use loop-aes && epatch "${WORKDIR}"/util-linux-*.diff
 	fi
 	use uclibc && sed -i -e s/versionsort/alphasort/g -e s/strverscmp.h/dirent.h/g mount/lomount.c
 	elibtoolize

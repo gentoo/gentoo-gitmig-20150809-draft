@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.343 2011/06/07 22:25:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.344 2011/06/17 19:06:41 c1pher Exp $
+
+  17 Jun 2011; Dane Smith <c1pher@gentoo.org> util-linux-2.19.1.ebuild,
+  metadata.xml:
+  Re-add support for loop-aes wrt bug 371437.
 
   07 Jun 2011; Mike Frysinger <vapier@gentoo.org> util-linux-9999.ebuild:
   Run the helper po script so the subdir gets the necessary files created
