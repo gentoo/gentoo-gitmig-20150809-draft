@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.37 2011/06/08 11:40:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.38 2011/06/17 10:00:39 scarabeus Exp $
+
+*josm-9999 (17 Jun 2011)
+
+  17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> +josm-9999.ebuild:
+  Add live ebuild. Per bug #371913.
 
 *josm-4064 (08 Jun 2011)
 
