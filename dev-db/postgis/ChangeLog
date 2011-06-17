@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.51 2011/06/17 10:12:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.52 2011/06/17 10:14:09 scarabeus Exp $
+
+  17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> postgis-1.5.2-r3.ebuild:
+  Reorder src_install and set -j1 only once into global MAKEOPTS variable.
 
   17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> postgis-1.5.2-r3.ebuild:
   Reorder configure/compile phases for readability. No functional changes.
