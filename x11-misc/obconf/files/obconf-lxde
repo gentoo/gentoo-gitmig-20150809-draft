@@ -1,0 +1,3 @@
+#!/bin/bash
+# Gentoo bug: 369555
+obconf  --config-file ${OBCONF_DIR}/lxde-rc.xml

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.79 2011/04/25 14:36:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.80 2011/06/17 17:37:18 hwoarang Exp $
+
+  17 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  obconf-2.0.3_p20110314.ebuild, +files/obconf-lxde, metadata.xml:
+  Add LXDE wrapper needed for obconf to find the config file on LXDE
+  environment. Bug #369555
 
   25 Apr 2011; Raúl Porcel <armin76@gentoo.org> obconf-2.0.3-r1.ebuild:
   sparc stable wrt #358543
