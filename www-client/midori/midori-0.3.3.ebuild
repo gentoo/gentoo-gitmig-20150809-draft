@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.3.ebuild,v 1.5 2011/04/28 10:29:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.3.3.ebuild,v 1.6 2011/06/17 09:37:29 angelos Exp $
 
 EAPI=3
 inherit eutils fdo-mime gnome2-utils python waf-utils
@@ -22,10 +22,10 @@ RDEPEND="dev-libs/libxml2:2
 	gnome? ( net-libs/libsoup-gnome:2.4 )
 	idn? ( net-dns/libidn )
 	libnotify? ( x11-libs/libnotify )
-	unique? ( dev-libs/libunique:1 )
-	vala? ( dev-lang/vala:0.10 )"
+	unique? ( dev-libs/libunique:1 )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
+	vala? ( dev-lang/vala:0.10 )
 	dev-util/intltool
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )"

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.62 2011/06/08 22:17:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.63 2011/06/17 09:37:29 angelos Exp $
+
+  17 Jun 2011; Christoph Mende <angelos@gentoo.org> midori-0.3.3.ebuild,
+  midori-0.3.5.ebuild, midori-0.3.6.ebuild, midori-9999.ebuild:
+  Fix vala dependency and vala logic in the 9999 ebuild
 
   08 Jun 2011; Christoph Mende <angelos@gentoo.org> midori-9999.ebuild:
   Update live ebuild

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.34 2011/06/08 22:17:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.35 2011/06/17 09:37:29 angelos Exp $
 
 EAPI=3
 inherit eutils fdo-mime gnome2-utils python waf-utils git-2
@@ -22,10 +22,10 @@ RDEPEND="dev-libs/libxml2:2
 	gnome? ( net-libs/libsoup-gnome:2.4 )
 	idn? ( net-dns/libidn )
 	libnotify? ( x11-libs/libnotify )
-	unique? ( dev-libs/libunique:1 )
-	dev-lang/vala:0.10"
+	unique? ( dev-libs/libunique:1 )"
 DEPEND="${RDEPEND}
 	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
+	dev-lang/vala:0.10
 	dev-util/intltool
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )"
@@ -38,14 +38,10 @@ pkg_setup() {
 	HTML_DOCS=( data/faq.html data/faq.css )
 }
 
-src_prepare() {
-	# Make it work with slotted vala versions
-	sed -i -e "s/conf.env, 'valac'/conf.env, 'valac-0.10', var='VALAC'/" wscript || die
-}
-
 src_configure() {
 	strip-linguas -i po
 
+	VALAC="$(type -p valac-0.10)" \
 	waf-utils_src_configure \
 		--disable-docs \
 		--enable-addons \
