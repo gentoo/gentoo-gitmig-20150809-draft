@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.3.ebuild,v 1.1 2011/06/16 18:50:45 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.3.ebuild,v 1.2 2011/06/17 12:41:24 scarabeus Exp $
 
 EAPI="3"
 
@@ -257,7 +257,7 @@ src_prepare() {
 	fi
 
 	# Some fixes for our patchset
-	epatch "${FILESDIR}/gentoo-${PV}.diff"
+	epatch "${FILESDIR}/gentoo-3.3.2.diff"
 	epatch "${FILESDIR}/gentoo-pythonpath.diff"
 	epatch "${FILESDIR}/env_log.diff"
 	epatch "${FILESDIR}/fix-ooo-collision.diff"

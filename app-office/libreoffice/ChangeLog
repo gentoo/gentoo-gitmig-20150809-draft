@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.30 2011/06/17 07:44:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.31 2011/06/17 12:41:24 scarabeus Exp $
+
+  17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.3.3.ebuild:
+  It is dumb to copy files in filesdir 1:1. Rather use fixed version in the
+  ebuild.
 
   17 Jun 2011; Lars Wendler <polynomial-c@gentoo.org> +files/gentoo-3.3.3.diff:
   Non-maintainer commit: Added missing patch file with kind permission from
