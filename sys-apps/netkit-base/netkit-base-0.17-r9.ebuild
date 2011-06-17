@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.2 2011/04/16 19:13:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r9.ebuild,v 1.3 2011/06/17 06:04:24 vapier Exp $
 
 EAPI=2
 
@@ -23,10 +23,10 @@ PATCHES=( "${FILESDIR}" )
 
 src_configure() {
 	./configure || die
-	sed -e "s:^CFLAGS=.*:CFLAGS=${CFLAGS} -Wall -Wbad-function-cast -Wcast-qual -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline:" \
-		MCONFIG > MCONFIG.new || die "Unable to set CFLAGS for build"
-	sed -e "s:^LDFLAGS=.*:LDFLAGS=${LDFLAGS}:" \
-		MCONFIG.new > MCONFIG || die "Unable to set LDFLAGS for build"
+	sed -i \
+		-e "/^CFLAGS=/s:=.*:=${CFLAGS} -Wall -Wbad-function-cast -Wcast-qual -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline:" \
+		-e "/^LDFLAGS=/s:=.*:=${LDFLAGS}:" \
+		MCONFIG || die
 }
 
 src_install() {
@@ -34,7 +34,7 @@ src_install() {
 		-e 's:in\.telnetd$:in.telnetd -L /usr/sbin/telnetlogin:' \
 		etc.sample/inetd.conf
 
-	dosbin inetd/inetd
+	dosbin inetd/inetd || die
 	doman inetd/inetd.8
 	newinitd "${FILESDIR}"/inetd.rc6 inetd
 
