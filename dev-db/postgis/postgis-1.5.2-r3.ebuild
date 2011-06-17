@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.2-r3.ebuild,v 1.1 2011/05/02 11:40:31 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.2-r3.ebuild,v 1.2 2011/06/17 10:12:05 scarabeus Exp $
 
 EAPI="4"
 
@@ -60,25 +60,18 @@ pkg_setup() {
 }
 
 src_configure() {
-	# Configure interprets --without-gui as being the same as --with-gui
-	if use gtk ; then
-		econf --with-gui
-	else
-		econf
-	fi
+	local myargs=""
+	use gtk && myargs+=" --with-gui"
+	econf \
+		${myargs}
 }
 
 src_compile() {
 	# Occasionally, builds fail because of out of order compilation.
 	# Otherwise, it'd be fine.
 	emake -j1
-	cd topology/
-	emake -j1
-
-	if use doc ; then
-		cd "${S}/doc/"
-		emake -j1
-	fi
+	emake -j1 -C topology
+	use doc && emake -j1 -C doc
 }
 
 src_install() {
