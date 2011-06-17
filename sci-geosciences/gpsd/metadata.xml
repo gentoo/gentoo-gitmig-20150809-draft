@@ -11,14 +11,7 @@
  pygps.
 </longdescription>
 <use>
-  <flag name='garmin'>Enable support for Garmin simple text protocol</flag>
-  <flag name='gpsd_user'>Add gpsd user for daemon privileges.</flag>
-  <flag name='minimal'>Reduced install set, limited number of devices and 
-   client, no X deps</flag>
   <flag name='ntp'>Enable <pkg>net-misc/ntp</pkg> shared memory interface
     and PPS kernel support for GPS time</flag>
-  <flag name='pl2303'>Enable udev rules for PL2303 USB-serial converter</flag>
-  <flag name='ocean'>Enable OceanServer support</flag>
-  <flag name='tntc'>Enable True North Technologies digital compass support</flag>
 </use>
 </pkgmetadata>

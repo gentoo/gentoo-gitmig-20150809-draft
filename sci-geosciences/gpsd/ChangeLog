@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.69 2011/06/17 09:39:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.70 2011/06/17 09:54:00 scarabeus Exp $
+
+  17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Remove unused local usedescs to make repoman happy.
 
 *gpsd-2.96-r1 (17 Jun 2011)
 
