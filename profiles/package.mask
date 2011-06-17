@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12843 2011/06/17 09:55:07 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12844 2011/06/17 13:10:02 redhatter Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Stuart Longland <redhatter@gentoo.org> (17 Jun 2011)
+# Masked for removal within 30 days.  Will be replacing it with updated
+# ebuilds to address numerous issues.  See bugs #336993, #336199, #369881
+# and #335307.
+=media-radio/svxlink-090426
+
+# Stuart Longland <redhatter@gentoo.org> (17 Jun 2011)
+# Masked for removal within 30 days.  There is a newer version upstream but it
+# doesn't compile for me, and upstream is now dead.  As an alternative, have a
+# look at media-radio/fldigi instead. (See bug #259451)
+media-radio/fldigi
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (17 Jun 2011)
 # Mask v8 versions used for www-client/chromium dev channel releases.
