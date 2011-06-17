@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.32 2011/06/10 16:44:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.33 2011/06/17 15:10:48 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -44,12 +44,12 @@ RDEPEND="app-arch/bzip2
 	media-libs/speex
 	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/zlib
-	>=virtual/ffmpeg-0.6.90[threads]
 	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst"
 DEPEND="${RDEPEND}
 	dev-lang/perl
+	dev-lang/yasm
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
 	sys-devel/flex
@@ -193,13 +193,13 @@ src_configure() {
 	myconf+=" -Ddisable_sse2=1"
 
 	# Use system-provided libraries.
+	# TODO: use_system_ffmpeg (bug #71931). That makes yasm unneeded.
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
-		-Duse_system_ffmpeg=1
 		-Duse_system_icu=1
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
@@ -209,6 +209,7 @@ src_configure() {
 		-Duse_system_speex=1
 		-Duse_system_vpx=1
 		-Duse_system_xdg_utils=1
+		-Duse_system_yasm=1
 		-Duse_system_zlib=1"
 
 	# Optional dependencies.
@@ -231,7 +232,8 @@ src_configure() {
 
 	# Our system ffmpeg should support more codecs than the bundled one
 	# for Chromium.
-	myconf+=" -Dproprietary_codecs=1"
+	# TODO: uncomment when bug #371931 is fixed.
+	# myconf+=" -Dproprietary_codecs=1"
 
 	local myarch="$(tc-arch)"
 	if [[ $myarch = amd64 ]] ; then
@@ -375,9 +377,12 @@ src_install() {
 
 	# Chromium looks for these in its folder
 	# See media_posix.cc and base_paths_linux.cc
-	dosym /usr/$(get_libdir)/libavcodec.so.52 "${CHROMIUM_HOME}" || die
-	dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
-	dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
+	# TODO: uncomment when bug #371931 is fixed.
+	#dosym /usr/$(get_libdir)/libavcodec.so.52 "${CHROMIUM_HOME}" || die
+	#dosym /usr/$(get_libdir)/libavformat.so.52 "${CHROMIUM_HOME}" || die
+	#dosym /usr/$(get_libdir)/libavutil.so.50 "${CHROMIUM_HOME}" || die
+	doexe out/Release/ffmpegsumo_nolink || die
+	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icons and desktop entry.
 	for SIZE in 16 22 24 32 48 64 128 256 ; do
