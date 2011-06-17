@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.127 2011/03/20 09:58:10 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.128 2011/06/17 04:35:48 vapier Exp $
+
+*openafs-kernel-1.6.0_pre6 (17 Jun 2011)
+
+  17 Jun 2011; Mike Frysinger <vapier@gentoo.org>
+  +openafs-kernel-1.6.0_pre6.ebuild:
+  Version bump #371274 by Andrej Filipcic.
 
 *openafs-kernel-1.6.0_pre3 (20 Mar 2011)
 
