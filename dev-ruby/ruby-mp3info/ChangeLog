@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-mp3info
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.15 2010/08/11 18:04:34 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.16 2011/06/17 18:41:39 graaff Exp $
+
+*ruby-mp3info-0.6.14 (17 Jun 2011)
+
+  17 Jun 2011; Hans de Graaff <graaff@gentoo.org> +ruby-mp3info-0.6.14.ebuild:
+  Version bump. Enable tests by using github tarball. Add ree18. Drop ia64 due
+  to new test dependency, bug 372089.
 
   11 Aug 2010; Hans de Graaff <graaff@gentoo.org>
   -ruby-mp3info-0.6.13.ebuild:
