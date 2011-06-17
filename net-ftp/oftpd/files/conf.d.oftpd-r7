@@ -13,5 +13,8 @@ FTPUSER=ftp
 FTPROOT=/home/ftp
 
 # FTPPORT (TCP port)
-# 22 is the standard ftp port, but you can change it here to something else
-FTPPORT=22
+# 21 is the standard ftp port, but you can change it here to something else
+FTPPORT=21
+
+## Uncoment this line to activate oftpd service
+OFTPD_OPTS="-p ${FTPPORT} ${FTPUSER} ${FTPPORT}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r6.ebuild,v 1.1 2010/11/06 01:37:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r7.ebuild,v 1.1 2011/06/17 00:35:32 xmw Exp $
 
 EAPI=2
 
@@ -41,6 +41,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS FAQ NEWS README TODO || die
 	keepdir /home/ftp
-	newinitd "${FILESDIR}"/init.d.oftpd-r1 oftpd || die
-	newconfd "${FILESDIR}"/conf.d.oftpd-r6 oftpd || die
+	newinitd "${FILESDIR}"/init.d.oftpd-r7 oftpd || die
+	newconfd "${FILESDIR}"/conf.d.oftpd-r7 oftpd || die
 }

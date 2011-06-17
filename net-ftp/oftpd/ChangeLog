@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/oftpd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.29 2010/11/06 01:37:10 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.30 2011/06/17 00:35:32 xmw Exp $
+
+*oftpd-0.3.7-r7 (17 Jun 2011)
+
+  17 Jun 2011; Michael Weber <xmw@gentoo.org> -oftpd-0.3.7-r6.ebuild,
+  +oftpd-0.3.7-r7.ebuild, +files/conf.d.oftpd-r7, +files/init.d.oftpd-r7,
+  -files/conf.d.oftpd-r6, -files/init.d.oftpd-r1:
+  Revision bump, improvements in the conf.d file, thanks to SpanKY (bug 371967)
 
 *oftpd-0.3.7-r6 (06 Nov 2010)
 
