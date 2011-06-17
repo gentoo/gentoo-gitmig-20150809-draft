@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.2.0_beta2.ebuild,v 1.1 2011/06/17 10:54:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.2.0_beta2.ebuild,v 1.2 2011/06/17 11:00:15 scarabeus Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-subdirs.patch \
 		"${FILESDIR}"/${P}-endianess.patch \
+		"${FILESDIR}"/${P}-64b.patch \
 		"${FILESDIR}"/${PN}-3.1.6-fpic.patch
 	sed 's:O2:O9:g' -i configure || die
 }
