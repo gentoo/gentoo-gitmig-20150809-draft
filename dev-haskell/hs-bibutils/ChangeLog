@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hs-bibutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-bibutils/ChangeLog,v 1.1 2011/04/23 16:47:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-bibutils/ChangeLog,v 1.2 2011/06/17 19:49:10 slyfox Exp $
+
+  17 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> hs-bibutils-4.12.ebuild:
+  Fixed broken homepage to http://gorgias.mine.nu/repos/hs-bibutils/ (bug
+  #371347)
 
 *hs-bibutils-4.12 (23 Apr 2011)
 
