@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.9.0.ebuild,v 1.6 2011/03/08 20:15:19 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.9.0.ebuild,v 1.7 2011/06/17 15:48:22 ssuominen Exp $
 
 EAPI="3"
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# http://sourceforge.net/tracker/index.php?func=detail&aid=1800298&group_id=62274&atid=500028
-	epatch "${FILESDIR}/${P}-qt_detection.patch"
+	epatch "${FILESDIR}"/${P}-qt_detection.patch
+	epatch "${FILESDIR}"/${P}-underlinking.patch #371887
 }
 
 src_configure() {
