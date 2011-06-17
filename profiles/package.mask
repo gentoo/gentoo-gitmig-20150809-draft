@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12845 2011/06/17 13:11:07 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12846 2011/06/17 15:43:04 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -271,16 +271,6 @@ media-video/came
 # Removal on 2011-07-12.
 net-irc/oer
 net-irc/oer-mysql
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 May 2011)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-3.3 versions are used for chromium-13.x versions.
->=dev-lang/v8-3.3
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 May 2011)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-13
 
 # Justin Bronder <jsbronder@gentoo.org> (09 May 2011)
 #
