@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.11 2011/03/24 20:17:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.12 2011/06/17 19:53:45 radhermit Exp $
+
+*libzen-0.4.20 (17 Jun 2011)
+
+  17 Jun 2011; Tim Harder <radhermit@gentoo.org> +libzen-0.4.20.ebuild,
+  +files/libzen-0.4.20-gcc46.patch:
+  Version bump. Apply fix for gcc-4.6 (bug #362841, patch by Alphat-PC).
 
 *libzen-0.4.19 (24 Mar 2011)
 
