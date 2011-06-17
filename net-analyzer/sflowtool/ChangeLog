@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.16 2011/06/13 14:12:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.17 2011/06/17 15:37:20 jer Exp $
+
+  17 Jun 2011; Jeroen Roovers <jer@gentoo.org> sflowtool-3.20.ebuild:
+  Use emake instead of make by Agostino Sarubbo (bug #372043).
 
   13 Jun 2011; Jeroen Roovers <jer@gentoo.org> sflowtool-3.20.ebuild:
   No need to have econf die().

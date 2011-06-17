@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.20.ebuild,v 1.3 2011/06/13 14:12:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/sflowtool-3.20.ebuild,v 1.4 2011/06/17 15:37:20 jer Exp $
 
 EAPI="2"
 
@@ -26,6 +26,6 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
