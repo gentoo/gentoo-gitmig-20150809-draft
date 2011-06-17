@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.252 2011/06/06 06:47:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.253 2011/06/17 15:27:33 chithanh Exp $
+
+*ati-drivers-11.6 (17 Jun 2011)
+
+  17 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-11.6.ebuild:
+  Version bump, bug #371851, fixes bug #368005, thanks to Gert Wollny and Enrico
+  Tagliavini.
 
   06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> ati-drivers-10.10.ebuild,
   ati-drivers-10.11.ebuild, ati-drivers-10.12.ebuild, ati-drivers-11.2.ebuild,
