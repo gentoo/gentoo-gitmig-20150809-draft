@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sg3_utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.70 2010/11/26 07:20:29 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.71 2011/06/17 03:41:42 jer Exp $
+
+*sg3_utils-1.31 (17 Jun 2011)
+
+  17 Jun 2011; Jeroen Roovers <jer@gentoo.org> +sg3_utils-1.31.ebuild:
+  Version bump.
 
 *sg3_utils-1.30 (26 Nov 2010)
 
