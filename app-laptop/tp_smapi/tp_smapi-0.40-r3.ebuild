@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.37.ebuild,v 1.4 2009/09/06 21:13:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.40-r3.ebuild,v 1.1 2011/06/17 13:27:42 scarabeus Exp $
 
-inherit linux-mod
+EAPI=4
+
+inherit eutils linux-mod
 
 DESCRIPTION="IBM ThinkPad SMAPI BIOS driver"
 HOMEPAGE="http://tpctl.sourceforge.net/"
@@ -19,8 +21,9 @@ RESTRICT="userpriv"
 # We need dmideode if the kernel does not support DMI_DEV_TYPE_OEM_STRING
 # in dmi.h
 DEPEND="sys-apps/dmidecode"
+RDEPEND="${DEPEND}"
 
-pkg_setup() {
+pkg_pretend() {
 	linux-mod_pkg_setup
 
 	if kernel_is lt 2 6 19; then
@@ -31,10 +34,14 @@ pkg_setup() {
 	fi
 
 	MODULE_NAMES="thinkpad_ec(extra:) tp_smapi(extra:)"
-	BUILD_PARAMS="KSRC=${KV_DIR} KBUILD=${KV_DIR}"
+	BUILD_PARAMS="KSRC=${KV_DIR} KBUILD=${KV_OUT_DIR}"
 	BUILD_TARGETS="default"
 
 	if use hdaps; then
+		CONFIG_CHECK="~INPUT_UINPUT"
+		WARNING_INPUT_UINPUT="Your kernel needs uinput for the hdaps module to perform better"
+		linux-info_pkg_setup
+
 		MODULE_NAMES="${MODULE_NAMES} hdaps(extra:)"
 		BUILD_PARAMS="${BUILD_PARAMS} HDAPS=1"
 
@@ -44,18 +51,20 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	# run again as pkg_pretend is not var safe
+	pkg_pretend
+}
 
-	epatch "${FILESDIR}/thinkpad_ec_semaphore.patch"
-
-	# Remove usage of `sudo` in Makefile.
-	sed -i 's,sudo ,,' Makefile
+src_prepare() {
+	epatch \
+		"${FILESDIR}/${P}-2.6.37.patch" \
+		"${FILESDIR}/fix_header_check.patch"
 }
 
 src_install() {
 	linux-mod_src_install
-
 	dodoc CHANGES README
+	newinitd "${FILESDIR}"/${P}-initd smapi
+	newconfd "${FILESDIR}"/${P}-confd smapi
 }
