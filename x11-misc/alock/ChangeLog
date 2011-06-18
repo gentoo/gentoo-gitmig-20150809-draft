@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.19 2011/06/17 13:09:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/ChangeLog,v 1.20 2011/06/18 14:13:46 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> alock-94.ebuild:
+  Stable on amd64 wrt bug #371979
 
   17 Jun 2011; Michael Weber <xmw@gentoo.org> alock-94.ebuild:
   ppc stable (bug 371979)
