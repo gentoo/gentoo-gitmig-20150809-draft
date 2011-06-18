@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.8.ebuild,v 1.7 2009/03/04 04:20:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.8.ebuild,v 1.8 2011/06/18 16:30:09 tupone Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils autotools games
 
 DESCRIPTION="BomberMan clone with network game support"
 HOMEPAGE="http://www.bomberclone.de/"
@@ -21,11 +21,8 @@ DEPEND=">=media-libs/libsdl-1.1.0
 
 src_prepare() {
 	ecvs_clean
-	# bug #260894
-	sed -i \
-		-e 's/ -Werror//' \
-		configure \
-		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-underlink.patch
+	eautoreconf
 }
 
 src_configure() {
