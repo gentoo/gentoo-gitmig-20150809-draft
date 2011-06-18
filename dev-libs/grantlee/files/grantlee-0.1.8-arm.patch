@@ -1,0 +1,12 @@
+diff -ruN grantlee-0.1.8.orig/templates/lib/abstractlocalizer.cpp grantlee-0.1.8/templates/lib/abstractlocalizer.cpp
+--- grantlee-0.1.8.orig/templates/lib/abstractlocalizer.cpp	2011-01-24 09:32:38.000000000 +0100
++++ grantlee-0.1.8/templates/lib/abstractlocalizer.cpp	2011-06-18 18:07:49.000000000 +0200
+@@ -47,7 +47,7 @@
+   else if ( isSafeString( variant ) )
+     return localizeString( getSafeString( variant ).get() );
+   else if ( variant.type() == QVariant::Double )
+-    return localizeNumber( variant.toDouble() );
++    return localizeNumber( qreal(variant.toDouble()) );
+   else if ( variant.canConvert( QVariant::LongLong ) )
+     return localizeNumber( variant.toInt() );
+   return QString();

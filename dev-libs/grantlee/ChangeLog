@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.2 2011/04/27 16:45:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.3 2011/06/18 16:35:41 dilfridge Exp $
+
+  18 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> grantlee-0.1.8.ebuild,
+  +files/grantlee-0.1.8-arm.patch:
+  Make grantlee-1.8 build on arm, where qreal!=double...
 
 *grantlee-0.1.8 (27 Apr 2011)
 
