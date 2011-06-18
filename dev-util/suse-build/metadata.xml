@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<maintainer>
+<email>miska@gentoo.org</email>
+<name>Michal Hrušecký</name>
+</maintainer>
 <longdescription lang="en">
 Script for building RPMs for SUSE Linux in a chroot environment.
 </longdescription>
