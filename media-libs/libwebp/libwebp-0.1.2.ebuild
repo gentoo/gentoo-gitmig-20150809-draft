@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.1.2.ebuild,v 1.7 2011/06/17 18:22:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.1.2.ebuild,v 1.8 2011/06/18 07:47:41 hwoarang Exp $
 
 EAPI=4
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="http://webp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc x86"
 IUSE="static-libs"
 
 RDEPEND=">=media-libs/libpng-1.4
