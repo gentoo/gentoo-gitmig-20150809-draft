@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.62 2011/06/12 12:59:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.63 2011/06/18 17:23:18 spock Exp $
+
+  18 Jun 2011; Michał Januszewski <spock@gentoo.org> metadata.xml:
+  Reassigning to maintainer-needed.
 
   12 Jun 2011; Michał Januszewski <spock@gentoo.org> memtest86+-4.20.ebuild:
   Remove the nopie GCC flag. This fixes build problems with GCC 4.6 (bug

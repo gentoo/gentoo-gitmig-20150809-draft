@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakechroot
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.13 2010/11/17 10:55:33 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.14 2011/06/18 17:19:27 spock Exp $
+
+  18 Jun 2011; Michał Januszewski <spock@gentoo.org> metadata.xml:
+  Reassigning to maintainer-needed.
 
   17 Nov 2010; Markus Meier <maekke@gentoo.org> fakechroot-2.11.ebuild:
   x86 stable, bug #345367
