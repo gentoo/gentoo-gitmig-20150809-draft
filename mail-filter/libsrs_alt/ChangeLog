@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libsrs_alt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.22 2011/06/17 00:24:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.23 2011/06/18 20:35:21 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> libsrs_alt-1.0.ebuild:
+  Stable on amd64 wrt bug #370997
 
   17 Jun 2011; Jeroen Roovers <jer@gentoo.org> libsrs_alt-1.0.ebuild:
   Stable for HPPA (bug #370997).
