@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.10 2011/05/21 06:27:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.11 2011/06/18 20:20:43 tove Exp $
+
+*perl-ExtUtils-Manifest-1.580.0-r1 (18 Jun 2011)
+
+  18 Jun 2011; Torsten Veller <tove@gentoo.org>
+  -perl-ExtUtils-Manifest-1.580.0.ebuild,
+  +perl-ExtUtils-Manifest-1.580.0-r1.ebuild:
+  Add perl-5.14 as provider
 
 *perl-ExtUtils-Manifest-1.580.0 (21 May 2011)
 

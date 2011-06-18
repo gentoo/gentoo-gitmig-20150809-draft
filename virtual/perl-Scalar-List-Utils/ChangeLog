@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Scalar-List-Utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.49 2011/05/20 13:26:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.50 2011/06/18 20:20:48 tove Exp $
+
+*perl-Scalar-List-Utils-1.230.0-r1 (18 Jun 2011)
+
+  18 Jun 2011; Torsten Veller <tove@gentoo.org>
+  -perl-Scalar-List-Utils-1.230.0.ebuild,
+  +perl-Scalar-List-Utils-1.230.0-r1.ebuild:
+  Add perl-5.14 as provider
 
 *perl-Scalar-List-Utils-1.230.0 (20 May 2011)
 

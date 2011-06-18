@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Params-Check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Params-Check/ChangeLog,v 1.15 2011/06/13 02:04:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Params-Check/ChangeLog,v 1.16 2011/06/18 20:20:46 tove Exp $
+
+*perl-Params-Check-0.280.0-r1 (18 Jun 2011)
+
+  18 Jun 2011; Torsten Veller <tove@gentoo.org>
+  -perl-Params-Check-0.280.0.ebuild, +perl-Params-Check-0.280.0-r1.ebuild:
+  Add perl-5.14 as provider
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org>
   perl-Params-Check-0.280.0.ebuild:
