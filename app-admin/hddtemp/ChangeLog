@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.97 2011/06/12 13:55:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.98 2011/06/18 17:06:35 spock Exp $
+
+  18 Jun 2011; Michał Januszewski <spock@gentoo.org> metadata.xml:
+  Reassigning to maintainer-needed.
 
   12 Jun 2011; Michał Januszewski <spock@gentoo.org> files/hddgentoo.db:
   Add 3 new drives to the DB (bug #369331).
