@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5460 2011/06/18 17:52:47 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5461 2011/06/18 19:53:17 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask cups-1.5, too new and still needs a lot of testing
 
   18 Jun 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:
