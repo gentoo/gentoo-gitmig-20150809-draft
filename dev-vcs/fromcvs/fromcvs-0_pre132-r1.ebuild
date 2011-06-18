@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fromcvs/fromcvs-0_pre132-r1.ebuild,v 1.1 2011/06/18 09:51:59 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fromcvs/fromcvs-0_pre132-r1.ebuild,v 1.2 2011/06/18 10:08:55 sochotnicky Exp $
 
 EAPI=4
 
@@ -37,15 +37,15 @@ ruby_add_rdepend "dev-ruby/rcsparse
 src_prepare() {
 	# prepare scripts that will go into bin
 	for script in togit.rb tohg.rb todb.rb;do
-		sed -i '1 i #!/usr/bin/ruby' ${script}
-		mv ${script} ${script%.rb}
+		sed -i '1 i #!/usr/bin/ruby' ${script} || die
+		mv ${script} ${script%.rb} || die
 	done
 
 	# this is a workaround because combination of ruby-ng and mercurial is
 	# not working correctly for unpacking
 	for rubyv in ${USE_RUBY} all;do
-		mkdir "${WORKDIR}/${rubyv}"
-		cp -prl "${S}" "${WORKDIR}/${rubyv}/${RUBY_S}"
+		mkdir "${WORKDIR}/${rubyv}" || die
+		cp -prl "${S}" "${WORKDIR}/${rubyv}/${RUBY_S}" || die
 	done
 }
 
