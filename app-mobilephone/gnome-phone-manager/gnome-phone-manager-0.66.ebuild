@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.66.ebuild,v 1.2 2011/03/16 10:03:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.66.ebuild,v 1.3 2011/06/18 11:20:26 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2
 
@@ -29,7 +30,7 @@ RDEPEND=">=dev-libs/glib-2.25.0:2
 	media-libs/libcanberra[gtk]
 	>=x11-themes/gnome-icon-theme-2.19.1
 	>=app-text/gtkspell-2
-	gnome? ( >=net-wireless/gnome-bluetooth-2.27.6:2 )"
+	>=net-wireless/gnome-bluetooth-2.27.6:2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.5
