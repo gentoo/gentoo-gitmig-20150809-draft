@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.10 2010/06/14 21:35:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.11 2011/06/18 17:03:15 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -28,7 +28,7 @@ S=${WORKDIR}/${MY_PN}/src
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed \
-		-e "s/-lglut/-lGL -lGLU/" \
+		-e "s/-lglut/-lGL -lGLU -lm/" \
 		-e "/^CC/d" \
 		-e "/^CXX/d" \
 		-e "/^LDFLAGS/s/=/+=/" \
