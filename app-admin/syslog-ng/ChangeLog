@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.291 2011/06/15 11:17:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.292 2011/06/18 11:11:35 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> syslog-ng-3.2.4.ebuild:
+  Stable on amd64 wrt bug #370845
 
   15 Jun 2011; Christian Ruppert <idl0r@gentoo.org> syslog-ng-3.2.4.ebuild:
   Fix eventlog dependency, bug 371737.
