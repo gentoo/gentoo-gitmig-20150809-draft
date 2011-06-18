@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.55 2011/04/24 17:36:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.56 2011/06/18 04:45:40 graaff Exp $
+
+  18 Jun 2011; Hans de Graaff <graaff@gentoo.org> -daemons-1.1.0-r1.ebuild,
+  -daemons-1.1.2.ebuild:
+  Remove old versions.
 
   24 Apr 2011; Raúl Porcel <armin76@gentoo.org> daemons-1.1.0.ebuild:
   sparc stable wrt #349877
