@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.26 2011/06/18 20:41:50 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/ChangeLog,v 1.27 2011/06/18 20:43:11 rich0 Exp $
+
+  18 Jun 2011; Richard Freeman <rich0@gentoo.org>
+  -eternal-lands-data-1.9.0.ebuild, -eternal-lands-data-1.9.2.ebuild:
+  clean out older versions and broken 1.9.2
 
 *eternal-lands-data-1.9.2-r1 (18 Jun 2011)
 
