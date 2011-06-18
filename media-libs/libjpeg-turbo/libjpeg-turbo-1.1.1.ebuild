@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.1.ebuild,v 1.3 2011/06/02 12:23:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.1.ebuild,v 1.4 2011/06/18 09:25:48 hwoarang Exp $
 
 EAPI=4
 inherit libtool toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="as-is LGPL-2.1 wxWinLL-3.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 NASM_DEPEND="dev-lang/nasm"
