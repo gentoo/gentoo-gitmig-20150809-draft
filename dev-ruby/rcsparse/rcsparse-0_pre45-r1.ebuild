@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcsparse/rcsparse-0_pre45-r1.ebuild,v 1.1 2011/06/18 10:01:46 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcsparse/rcsparse-0_pre45-r1.ebuild,v 1.2 2011/06/18 10:10:00 sochotnicky Exp $
 
 EAPI=4
 
@@ -32,8 +32,8 @@ src_prepare() {
 	# this is a workaround because combination of ruby-ng and mercurial is
 	# not working correctly for unpacking
 	for rubyv in ${USE_RUBY} all;do
-		mkdir "${WORKDIR}/${rubyv}"
-		cp -prl "${S}" "${WORKDIR}/${rubyv}/${RUBY_S}"
+		mkdir "${WORKDIR}/${rubyv}" || die
+		cp -prl "${S}" "${WORKDIR}/${rubyv}/${RUBY_S}" || die
 	done
 }
 
