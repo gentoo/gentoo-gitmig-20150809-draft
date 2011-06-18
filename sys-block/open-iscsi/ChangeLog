@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.33 2011/06/13 01:47:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.34 2011/06/18 20:55:52 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  open-iscsi-2.0.871.3.ebuild:
+  Stable on amd64 wrt bug #370679
 
   13 Jun 2011; Sebastian Pipping <sping@gentoo.org>
   open-iscsi-2.0.870.3-r1.ebuild, open-iscsi-2.0.871.ebuild,
