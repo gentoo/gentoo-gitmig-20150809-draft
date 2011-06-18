@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12846 2011/06/17 15:43:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12847 2011/06/18 10:26:43 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -747,10 +747,6 @@ net-fs/samba-client
 # Masked due to producing build failures in stable
 # lucene and possibly others. see #309961
 =dev-java/javacc-5.0
-
-# Torsten Veller <tove@gentoo.org> (14 Mar 2010)
-# Mask "End Of Life" versions
-<www-apps/bugzilla-3.2
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from

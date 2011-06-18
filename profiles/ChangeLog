@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5454 2011/06/18 09:18:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5455 2011/06/18 10:26:43 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jun 2011; Torsten Veller <tove@gentoo.org> package.mask:
+  Remove bugzilla EOL mask - versions were removed
 
   18 Jun 2011; Hans de Graaff <graaff@gentoo.org> updates/2Q-2011:
   Move incompatible versions of dev-ruby/arel into slots.
