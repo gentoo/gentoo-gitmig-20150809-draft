@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12848 2011/06/18 10:29:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12849 2011/06/18 12:51:24 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (18 Jun 2011)
+# Mask release candidate
+=mail-mta/postfix-2.8.4_rc*
 
 # Torsten Veller <tove@gentoo.org> (18 Jun 2011)
 # Mask perl-5.14. See tracker bug #356171
