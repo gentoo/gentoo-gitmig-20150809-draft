@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.1.ebuild,v 1.2 2011/01/15 15:14:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.1.ebuild,v 1.3 2011/06/18 17:50:22 tupone Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
@@ -31,7 +31,7 @@ src_prepare() {
 	sed -i \
 		-e "s:/usr/local/bin:${GAMES_BINDIR}:g" \
 		-e "s:/usr/local/games:${GAMES_DATADIR}:g" \
-		-e "s:LIBS += -lSDLmain:LIBS += -lSDL:" \
+		-e "s:LIBS += -lSDLmain:LIBS += -lSDL -lX11:" \
 		Game.pro main.cpp editor/editor.pro \
 		|| die "sed failed"
 }
