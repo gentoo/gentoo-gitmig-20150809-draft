@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.42 2011/06/08 08:51:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.43 2011/06/18 14:46:38 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> pyro-3.13.ebuild:
+  Stable on amd64 wrt bug #371659
 
   08 Jun 2011; Markos Chandras <hwoarang@gentoo.org> pyro-4.4.ebuild:
   Stable on amd64 wrt bug #370507
