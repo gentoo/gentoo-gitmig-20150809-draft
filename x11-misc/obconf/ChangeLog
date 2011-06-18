@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.81 2011/06/17 17:45:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.82 2011/06/18 10:51:19 hwoarang Exp $
+
+*obconf-2.0.3_p20110314-r1 (18 Jun 2011)
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  +obconf-2.0.3_p20110314-r1.ebuild,
+  +files/obconf-2.0.3_p20110314-config-path.patch:
+  Revbump with patch to fix compatibility with LXDE
 
   17 Jun 2011; Markos Chandras <hwoarang@gentoo.org> files/obconf-lxde:
   Fix lxde wrapper
