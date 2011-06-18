@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.194 2011/06/10 17:32:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.195 2011/06/18 11:49:51 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  sun-jre-bin-1.6.0.26.ebuild:
+  Stable on amd64 wrt bug #370559
 
   10 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   sun-jre-bin-1.6.0.26.ebuild:
