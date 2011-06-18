@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/extundelete
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/extundelete/ChangeLog,v 1.1 2010/07/07 20:57:14 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/extundelete/ChangeLog,v 1.2 2011/06/18 20:22:40 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> extundelete-0.2.0.ebuild:
+  Stable on amd64 wrt bug #370789
 
 *extundelete-0.2.0 (07 Jul 2010)
 

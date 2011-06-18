@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/extundelete/extundelete-0.2.0.ebuild,v 1.1 2010/07/07 20:57:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/extundelete/extundelete-0.2.0.ebuild,v 1.2 2011/06/18 20:22:40 hwoarang Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=">=sys-fs/e2fsprogs-${_E2FS}
