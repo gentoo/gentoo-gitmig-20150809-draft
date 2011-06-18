@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12851 2011/06/18 13:12:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12852 2011/06/18 17:52:47 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (18 Jun 2011)
+# Add mariadb mask to Robin's earlier mask
+# Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
+# Mask 5.4 series that is nearly a release candidate upstream (expected within the next 6 months)
+# Mask 5.5/6.0 series that are alpha and and crazy experimental.
+# Mask 5.2 virtual that exists in the overlay as well (it is MariaDB only)
+=dev-db/mysql-5.4*
+=virtual/mysql-5.4*
+>=dev-db/mysql-5.5
+>=virtual/mysql-5.5
+=dev-db/mariadb-5.2*
+=virtual/mysql-5.2*
 
 # Eray Aslan <eras@gentoo.org> (18 Jun 2011)
 # Dead upstream.  Lots of alternatives including mailx,
@@ -778,16 +791,6 @@ net-fs/samba-client
 # Robert Piasek <dagger@gentoo.org> (23 Feb 2010)
 # Masking libmapi as it depends on masked samba4
 =net-libs/libmapi-0.9
-
-# Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
-# Mask 5.4 series that is nearly a release candidate upstream (expected within the next 6 months)
-# Mask 5.5/6.0 series that are alpha and and crazy experimental.
-# Mask 5.2 virtual that exists in the overlay as well (it is MariaDB only)
-=dev-db/mysql-5.4*
-=virtual/mysql-5.4*
->=dev-db/mysql-5.5
->=virtual/mysql-5.5
-=virtual/mysql-5.2*
 
 # Matthias Schwarzott <zzam@gentoo.org> (22 Jan 2010)
 # since long time included in media-tv/gentoo-vdr-scripts
