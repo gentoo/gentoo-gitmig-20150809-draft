@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.7.4.ebuild,v 1.8 2010/08/12 03:36:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.7.4.ebuild,v 1.9 2011/06/18 18:34:57 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -23,7 +23,8 @@ DEPEND="virtual/opengl
 	net-libs/enet:0"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-enet.patch
+	epatch "${FILESDIR}"/${P}-enet.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	sed -i \
 		-e "s:\${EGOBOO_PREFIX}/share:${GAMES_DATADIR}:" \
 		-e "s:\${EGOBOO_PREFIX}/libexec:$(games_get_libdir):" \
