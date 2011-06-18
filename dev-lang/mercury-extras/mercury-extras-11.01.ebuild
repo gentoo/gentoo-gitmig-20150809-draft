@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.01.ebuild,v 1.3 2011/06/11 20:30:55 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.01.ebuild,v 1.4 2011/06/18 20:28:16 keri Exp $
 
 EAPI=2
 
@@ -185,9 +185,9 @@ src_install() {
 			insinto /usr/share/doc/${PF}/samples/mopenssl
 			doins mopenssl/*.m || die
 		fi
-	fi
 
-	rm -rf $(find "${D}"/usr/share/doc/${PF}/samples -name CVS)
+		rm -rf $(find "${D}"/usr/share/doc/${PF}/samples -name CVS)
+	fi
 
 	dodoc README || die
 }
