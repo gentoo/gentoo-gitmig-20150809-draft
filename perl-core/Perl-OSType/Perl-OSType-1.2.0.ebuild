@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/Perl-OSType-1.2.ebuild,v 1.7 2011/06/13 00:20:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/Perl-OSType-1.2.0.ebuild,v 1.1 2011/06/18 20:21:41 tove Exp $
 
 EAPI=3
 
