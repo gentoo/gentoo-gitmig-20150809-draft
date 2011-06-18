@@ -1,8 +1,8 @@
-Index: asymptote-2.10/settings.cc
+Index: asymptote-2.11/settings.cc
 ===================================================================
---- asymptote-2.10.orig/settings.cc
-+++ asymptote-2.10/settings.cc
-@@ -89,14 +89,14 @@ bool msdos=false;
+--- asymptote-2.11.orig/settings.cc
++++ asymptote-2.11/settings.cc
+@@ -95,14 +95,14 @@ bool msdos=false;
  string HOME="HOME";
  string docdir=ASYMPTOTE_DOCDIR;
  const char pathSeparator=':';
