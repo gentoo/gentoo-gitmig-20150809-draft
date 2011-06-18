@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrootconsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.24 2011/06/15 15:53:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.25 2011/06/18 11:17:46 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> xrootconsole-0.6.ebuild:
+  Stable on amd64 wrt bug #371797
 
   15 Jun 2011; Jeroen Roovers <jer@gentoo.org> xrootconsole-0.4-r1.ebuild,
   xrootconsole-0.6.ebuild:
