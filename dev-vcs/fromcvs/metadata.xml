@@ -6,5 +6,9 @@
 		<email>sochotnicky@gentoo.org</email>
 		<name>Stanislav Ochotnicky</name>
 	</maintainer>
+        <use>
+          <flag name='git'>Add support for conversion to <pkg>dev-vcs/git</pkg> repositories</flag>
+          <flag name='mercurial'>Add support for conversion to <pkg>dev-vcs/mercurial</pkg> repositories</flag>
+        </use>
 </pkgmetadata>
 
