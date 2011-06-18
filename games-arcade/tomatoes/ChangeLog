@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tomatoes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.17 2010/08/20 16:27:02 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.18 2011/06/18 15:41:59 tupone Exp $
+
+  18 Jun 2011; Tupone Alfredo <tupone@gentoo.org> tomatoes-1.55-r2.ebuild,
+  +files/tomatoes-1.55-underlink.patch:
+  Fix underlink. Bug #369113 by Diego Elio Pettenò
 
   20 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
   tomatoes-1.55-r2.ebuild:

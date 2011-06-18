@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.7 2010/08/20 16:27:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.8 2011/06/18 15:41:59 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -26,12 +26,12 @@ src_prepare() {
 	mv ../tomatoes-1.5/* . || die "mv failed"
 	mv icon.png ${PN}.png
 
+	epatch \
+		"${FILESDIR}"/${P}-c_str.patch \
+		"${FILESDIR}"/${P}-underlink.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
+
 	sed -i \
-		-e '/^CC/d' \
-		-e '/^MARCH/d' \
-		-e "/(CFLAGS)/s/CC/CXX/" \
-		-e "/^CFLAGS/s/=.*$/= ${CXXFLAGS} \$(SDL_FLAGS)/" \
-		-e "/^LDFLAGS/s/-s$/${LDFLAGS}/" \
 		-e "/^MPKDIR = /s:./:${GAMES_DATADIR}/${PN}/:" \
 		-e "/^MUSICDIR = /s:./music/:${GAMES_DATADIR}/${PN}/music/:" \
 		-e "/^HISCOREDIR = /s:./:${GAMES_STATEDIR}/${PN}/:" \
@@ -39,10 +39,6 @@ src_prepare() {
 		-e "/^OVERRIDEDIR = /s:./data/:${GAMES_DATADIR}/${PN}/data/:" \
 		makefile \
 		|| die "sed failed"
-
-	epatch \
-		"${FILESDIR}"/${P}-c_str.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
