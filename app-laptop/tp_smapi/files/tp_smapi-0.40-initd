@@ -27,7 +27,7 @@ start() {
 	state2=$?
 	eend ${state2}
 
-	if [ "${state1}" -ne "0" ] || [ "${state1}" -ne "0" ]; then
+	if [ "${state1}" -ne "0" ] || [ "${state2}" -ne "0" ]; then
 		return 1
 	fi
 
