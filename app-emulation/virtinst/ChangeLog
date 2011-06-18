@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.26 2011/03/28 08:39:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.27 2011/06/18 09:18:55 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> virtinst-0.500.6.ebuild:
+  Stable on amd64 wrt bug #370495
 
 *virtinst-0.500.6 (28 Mar 2011)
 

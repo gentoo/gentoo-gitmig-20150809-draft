@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.500.6.ebuild,v 1.1 2011/03/28 08:39:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.500.6.ebuild,v 1.2 2011/06/18 09:18:55 hwoarang Exp $
 
 #BACKPORTS=1
 
@@ -14,7 +14,7 @@ inherit distutils eutils ${HG_ECLASS}
 
 SRC_URI="http://virt-manager.et.redhat.com/download/sources/${PN}/${P}.tar.gz
 	${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DESCRIPTION="Python modules for starting virtualized guest installations"
 HOMEPAGE="http://virt-manager.et.redhat.com/"
