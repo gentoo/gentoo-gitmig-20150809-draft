@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/scribes-0.3.3.3.ebuild,v 1.7 2010/06/06 12:13:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/scribes-0.3.3.3.ebuild,v 1.8 2011/06/18 12:08:27 pacho Exp $
 
 EAPI=3
 
@@ -22,9 +22,11 @@ RDEPEND="gnome-base/gconf
 	gnome-extra/yelp
 	dev-libs/dbus-glib
 	dev-python/dbus-python
-	dev-python/gnome-python
-	dev-python/gnome-python-extras
-	dev-python/gnome-python-desktop"
+	dev-python/libgnome-python
+	dev-python/pygobject:2
+	dev-python/pygtk:2
+	dev-python/gtksourceview-python
+	dev-python/gtkspell-python"
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	dev-util/pkgconfig
