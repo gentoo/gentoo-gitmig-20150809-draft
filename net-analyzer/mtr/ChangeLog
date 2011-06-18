@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.104 2011/05/21 16:56:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.105 2011/06/18 20:40:17 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> mtr-0.80.ebuild:
+  Stable on amd64 wrt bug #362609
 
   21 May 2011; Raúl Porcel <armin76@gentoo.org> mtr-0.80.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #362609
