@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.72 2011/05/21 17:53:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.73 2011/06/18 17:10:10 spock Exp $
+
+  18 Jun 2011; Michał Januszewski <spock@gentoo.org> metadata.xml:
+  Reassigning to maintainer-needed.
 
   21 May 2011; Raúl Porcel <armin76@gentoo.org> linux-logo-5.10-r1.ebuild:
   sparc stable wrt #367275
