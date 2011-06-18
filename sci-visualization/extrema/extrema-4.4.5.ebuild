@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.4.5.ebuild,v 1.1 2011/04/13 12:24:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.4.5.ebuild,v 1.2 2011/06/18 12:16:03 grozin Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 # File collision, see bug #249423
 RDEPEND="!sci-chemistry/psi
-	>=x11-libs/wxGTK-2.8.7
+	x11-libs/wxGTK:2.8[X]
 	dev-util/desktop-file-utils"
 DEPEND="${RDEPEND}"
 
