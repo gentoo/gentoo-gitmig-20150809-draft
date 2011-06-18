@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5.ebuild,v 1.3 2011/06/16 11:33:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5-r1.ebuild,v 1.1 2011/06/18 15:44:14 pacho Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -91,6 +91,9 @@ src_prepare() {
 
 	# Create symlinks to old icons until apps are ported, bug #339319
 	epatch "${FILESDIR}/${PN}-2.24.4-old-icons.patch"
+
+	# Revert this commit as it causes gnome-panel problems, bug #372147
+	EPATCH_OPTS="-R" epatch "${FILESDIR}/${P}-background-repaint.patch"
 
 	# Stop trying to build unmaintained docs, bug #349754
 	strip_builddir SUBDIRS tutorial docs/Makefile.am docs/Makefile.in
