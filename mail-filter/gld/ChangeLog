@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/gld
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.44 2010/08/11 01:35:43 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.45 2011/06/18 12:49:31 hwoarang Exp $
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> gld-1.7-r1.ebuild:
+  Stable on amd64 wrt bug #371013
 
 *gld-1.7-r1 (11 Aug 2010)
 
