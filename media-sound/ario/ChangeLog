@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ario
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.23 2011/04/30 18:02:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.24 2011/06/19 15:55:08 angelos Exp $
+
+*ario-1.5.1 (19 Jun 2011)
+
+  19 Jun 2011; Christoph Mende <angelos@gentoo.org> +ario-1.5.1.ebuild:
+  Version bump
 
   30 Apr 2011; Christoph Mende <angelos@gentoo.org> -ario-1.4.4.ebuild:
   Remove old
