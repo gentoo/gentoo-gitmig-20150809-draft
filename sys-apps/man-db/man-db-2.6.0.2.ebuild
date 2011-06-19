@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.0.2.ebuild,v 1.4 2011/06/16 17:56:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.0.2.ebuild,v 1.5 2011/06/19 13:32:15 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/man-db/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="berkdb +gdbm nls static-libs"
 
 RDEPEND="
