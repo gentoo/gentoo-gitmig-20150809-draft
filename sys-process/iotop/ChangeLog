@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.52 2011/05/28 13:44:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.53 2011/06/19 16:15:20 armin76 Exp $
+
+  19 Jun 2011; Raúl Porcel <armin76@gentoo.org> iotop-0.4.3.ebuild:
+  sparc stable wrt #365337
 
   28 May 2011; Brent Baude <ranger@gentoo.org> iotop-0.4.3.ebuild:
   Marking iotop-0.4.3 ppc for bug 365337
