@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.38 2010/05/23 23:04:22 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.39 2011/06/19 16:31:49 armin76 Exp $
+
+  19 Jun 2011; Raúl Porcel <armin76@gentoo.org> imaxima-1.0-r2.ebuild:
+  Drop sparc keywords
 
   23 May 2010; Ulrich Mueller <ulm@gentoo.org> -imaxima-1.0.ebuild:
   Remove old.

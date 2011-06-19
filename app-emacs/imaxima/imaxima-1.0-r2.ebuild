@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r2.ebuild,v 1.5 2010/05/23 20:58:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r2.ebuild,v 1.6 2011/06/19 16:31:49 armin76 Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://members3.jcom.home.ne.jp/imaxima/Site/Download_and_Install_files
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="examples"
 
 DEPEND=""
