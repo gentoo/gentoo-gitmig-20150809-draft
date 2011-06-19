@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.194 2011/06/10 17:59:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.195 2011/06/19 00:00:29 dilfridge Exp $
+
+*konsole-4.6.4-r1 (19 Jun 2011)
+
+  19 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/konsole-4.4.2-remember-size.patch, +konsole-4.6.4-r1.ebuild,
+  +files/konsole-4.6.4-imagesize.patch:
+  Added patch by Martin von Gagern, fixes bug 357945
 
 *konsole-4.6.4 (10 Jun 2011)
 
