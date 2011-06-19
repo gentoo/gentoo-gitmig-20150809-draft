@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.45 2011/06/07 18:08:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.46 2011/06/19 08:47:48 hwoarang Exp $
+
+  19 Jun 2011; Markos Chandras <hwoarang@gentoo.org> virt-manager-0.8.7.ebuild:
+  Stable on amd64 wrt bug #370497
 
 *virt-manager-0.8.7-r2 (07 Jun 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.7.ebuild,v 1.1 2011/03/28 08:40:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.8.7.ebuild,v 1.2 2011/06/19 08:47:48 hwoarang Exp $
 
 #BACKPORTS=
 
@@ -15,7 +15,7 @@ inherit eutils gnome2 python ${HG_ECLASS}
 
 SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
 	${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 VIRTINSTDEP=">=app-emulation/virtinst-0.500.6"
 
 DESCRIPTION="A graphical tool for administering virtual machines (KVM/Xen)"
