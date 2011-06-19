@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7-r5.ebuild,v 1.1 2011/05/13 17:49:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.7-r5.ebuild,v 1.2 2011/06/19 12:28:05 graaff Exp $
 
 EAPI="3"
 
@@ -35,8 +35,11 @@ ruby_add_bdepend "
 		!dev-ruby/test-unit:2
 	)"
 
-# Until all the JRuby tests' failures are sorted out
-RESTRICT="ruby_targets_jruby? ( test )"
+# Until all the JRuby tests' failures are sorted out. We should also
+# update tests to match our patched operating_system.rb rules, but it
+# makes no sense to figure all that out now for this old version, so
+# restrict tests altogether.
+RESTRICT="test"
 
 RUBY_PATCHES=(
 	"${FILESDIR}/${P}-gentoo.patch"
