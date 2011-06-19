@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.1-r200.ebuild,v 1.3 2011/06/12 09:09:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.1-r200.ebuild,v 1.4 2011/06/19 16:26:16 angelos Exp $
 
 EAPI="4"
 
@@ -72,6 +72,9 @@ src_prepare() {
 	# Don't build tests if not needed, part of bug #343249
 	# XXX: Fails to apply
 	#epatch "${FILESDIR}/${PN}-1.2.5-tests-build.patch"
+
+	# Fix compilation against libpng-1.5
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
