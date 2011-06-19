@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.13.ebuild,v 1.4 2011/06/14 19:08:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.13.ebuild,v 1.5 2011/06/19 15:49:23 armin76 Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.jeenyus.net/linux/software/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ~mips ~ppc ~sparc x86"
 IUSE=""
 RESTRICT="test"
 
