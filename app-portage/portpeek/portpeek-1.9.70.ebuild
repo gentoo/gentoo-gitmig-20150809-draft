@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.70.ebuild,v 1.3 2011/06/18 14:51:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.9.70.ebuild,v 1.4 2011/06/19 10:59:42 maekke Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://www.mpagano.com/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
