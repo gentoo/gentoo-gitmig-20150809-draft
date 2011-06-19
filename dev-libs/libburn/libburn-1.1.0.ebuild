@@ -1,16 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.0.6.ebuild,v 1.1 2011/04/11 19:16:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.1.0.ebuild,v 1.1 2011/06/19 21:43:35 billie Exp $
 
 EAPI=4
 
-MY_PL=00
-[[ ${PV/_p} != ${PV} ]] && MY_PL=${PV#*_p}
-MY_PV="${PV%_p*}.pl${MY_PL}"
-
 DESCRIPTION="Libburn is an open-source library for reading, mastering and writing optical discs."
 HOMEPAGE="http://libburnia-project.org"
-SRC_URI="http://files.libburnia-project.org/releases/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://files.libburnia-project.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +18,6 @@ IUSE="debug static-libs track-src-odirect"
 RDEPEND=""
 #RDEPEND="cdio? ( >=dev-libs/libcdio-0.83 )"
 DEPEND="dev-util/pkgconfig"
-
-S=${WORKDIR}/${P%_p*}
 
 src_configure() {
 	econf \
