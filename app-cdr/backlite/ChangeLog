@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/backlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.20 2011/06/18 10:47:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.21 2011/06/19 13:44:31 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> backlite-1.0.2.ebuild:
+  x86 stable, bug #370853
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> backlite-1.0.2.ebuild:
   Stable on amd64 wrt bug #370853
