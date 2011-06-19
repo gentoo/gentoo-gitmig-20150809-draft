@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.0.6.ebuild,v 1.1 2011/05/24 05:45:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.0.6.ebuild,v 1.2 2011/06/19 11:45:55 graaff Exp $
 
 EAPI=2
 
@@ -30,6 +30,9 @@ all_ruby_prepare() {
 
 	# We don't have the hanna template available.
 	sed -i -e 's/hanna/rake/' Rakefile || die
+
+	# Remove rake-compiler bits since we don't use it
+	sed -i -e '/extensiontask/d' -e '/ExtensionTask/,/end/d' -e '/GemPackageTask/,/end/d' Rakefile || die
 }
 
 each_ruby_configure() {
