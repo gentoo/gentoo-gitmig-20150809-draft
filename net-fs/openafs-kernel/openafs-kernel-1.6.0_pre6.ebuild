@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.0_pre6.ebuild,v 1.1 2011/06/17 04:35:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.0_pre6.ebuild,v 1.2 2011/06/19 19:15:51 vapier Exp $
 
 EAPI="2"
 
@@ -24,9 +24,10 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-CONFIG_CHECK="!DEBUG_RODATA ~!AFS_FS"
+CONFIG_CHECK="!DEBUG_RODATA ~!AFS_FS KEYS"
 ERROR_DEBUG_RODATA="OpenAFS is incompatible with linux' CONFIG_DEBUG_RODATA option"
 ERROR_AFS_FS="OpenAFS conflicts with the in-kernel AFS-support.  Make sure not to load both at the same time!"
+ERROR_KEYS="OpenAFS needs CONFIG_KEYS option enabled"
 
 pkg_setup() {
 	linux-mod_pkg_setup
