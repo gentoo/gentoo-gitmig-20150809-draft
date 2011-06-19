@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/libapreq2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.42 2011/05/27 10:39:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.43 2011/06/19 15:52:43 armin76 Exp $
+
+  19 Jun 2011; Raúl Porcel <armin76@gentoo.org> libapreq2-2.08-r2.ebuild,
+  libapreq2-2.12.ebuild, libapreq2-2.13.ebuild:
+  Drop alpha/sparc keywords
 
   27 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libapreq2-2.12.ebuild:
   x86 stable wrt bug #368469

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.12 2009/09/05 08:49:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.13 2011/06/19 15:52:43 armin76 Exp $
 
 inherit apache-module perl-module multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://httpd.apache.org/apreq/"
 
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="perl"
 
 DEPEND="${DEPEND}
