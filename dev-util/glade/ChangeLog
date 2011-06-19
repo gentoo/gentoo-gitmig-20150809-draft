@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.131 2011/04/07 14:19:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.132 2011/06/19 03:38:30 nirbheek Exp $
+
+*glade-3.10.0-r1 (19 Jun 2011)
+
+  19 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +glade-3.10.0-r1.ebuild,
+  metadata.xml:
+  Add new 3.10 version that uses gtk3 and GNOME 3 libraries. Slotted because it
+  removes support for all deprecated widgets. Thanks to tetromino.
 
 *glade-3.8.0 (07 Apr 2011)
 
