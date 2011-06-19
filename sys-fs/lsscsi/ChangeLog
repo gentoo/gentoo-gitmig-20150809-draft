@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.59 2011/06/19 10:57:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.60 2011/06/19 15:40:17 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> lsscsi-0.24.ebuild:
+  x86 stable, bug #371697
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> lsscsi-0.24.ebuild:
   arm stable, bug #371697
