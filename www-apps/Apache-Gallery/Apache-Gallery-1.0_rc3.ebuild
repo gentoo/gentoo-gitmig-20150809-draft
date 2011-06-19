@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.14 2009/03/07 20:56:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.15 2011/06/19 15:46:12 armin76 Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://apachegallery.dk/download/${MY_P}.tar.gz"
 HOMEPAGE="http://apachegallery.dk/"
 
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 WEBAPP_MANUAL_SLOT="yes"
