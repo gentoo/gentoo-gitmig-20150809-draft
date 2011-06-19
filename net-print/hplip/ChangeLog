@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.188 2011/06/18 13:44:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.189 2011/06/19 11:34:59 billie Exp $
+
+*hplip-3.11.5-r1 (19 Jun 2011)
+
+  19 Jun 2011; Daniel Pielmeier <billie@gentoo.org> +hplip-3.11.5-r1.ebuild,
+  +files/hplip-3.11.5-cups-1.5.patch:
+  Revision bump. Fix build with cups-1.5, thanks to Dale for the report on the
+  gentoo-user mailing list.
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> hplip-3.11.5.ebuild:
   Stable on amd64 wrt bug #372145
