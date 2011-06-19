@@ -1672,3 +1672,5 @@ slotmove net-analyzer/nagios-check_ipmi_sensor 2 0
 move dev-ruby/fromcvs dev-vcs/fromcvs
 slotmove =dev-ruby/arel-2.0.4 0 2.0
 slotmove =dev-ruby/arel-2.1.1 0 2.1
+slotmove =dev-ruby/deprecated-2* 0 2
+slotmove =dev-ruby/deprecated-3* 0 3
