@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.10-r2.ebuild,v 1.1 2011/06/14 11:50:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.10-r2.ebuild,v 1.2 2011/06/19 16:07:15 mgorny Exp $
 
 EAPI=3
 
@@ -29,7 +29,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 PATCHES=(
-	"${FILESDIR}"/systemd-service.patch
 	"${FILESDIR}"/xwilling-hang.patch
 )
 
@@ -54,5 +53,5 @@ src_install() {
 	# Keep /var/lib/xdm. This is where authfiles are stored. See #286350.
 	keepdir /var/lib/xdm
 
-	systemd_dounit xdm@.service || die
+	systemd_newunit "${FILESDIR}"/xdm.service 'xdm@.service' || die
 }
