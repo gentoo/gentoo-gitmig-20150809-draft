@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-2.1.1.ebuild,v 1.1 2011/02/26 15:23:57 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/bitstring-2.2.0.ebuild,v 1.1 2011/06/19 12:50:06 grozin Exp $
 
 EAPI=3
 PYTHON_DEPEND="*"
