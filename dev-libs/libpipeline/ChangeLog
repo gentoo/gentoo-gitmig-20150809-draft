@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.4 2011/06/15 18:41:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.5 2011/06/19 13:30:02 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> libpipeline-1.2.0.ebuild:
+  add ~arm, bug #371687
 
   15 Jun 2011; Matt Turner <mattst88@gentoo.org> libpipeline-1.2.0.ebuild:
   Added ~mips, bug 371687
