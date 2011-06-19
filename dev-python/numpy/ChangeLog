@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.142 2011/06/18 11:34:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.143 2011/06/19 13:34:36 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> numpy-1.6.0.ebuild:
+  arm stable, bug #371673
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> numpy-1.6.0.ebuild:
   Stable on amd64 wrt bug #371673
