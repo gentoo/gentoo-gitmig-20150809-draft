@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.29 2011/06/19 10:46:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.30 2011/06/19 13:46:17 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> pfl-2.2.ebuild:
+  x86 stable, bug #370855
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> pfl-2.2.ebuild:
   arm stable, bug #370855
