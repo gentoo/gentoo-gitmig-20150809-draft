@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.12.ebuild,v 1.1 2011/06/09 17:09:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.12.ebuild,v 1.2 2011/06/19 09:48:58 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -27,6 +27,7 @@ IUSE=""
 RDEPEND=">=app-admin/eselect-rails-0.15"
 
 ruby_add_rdepend ">=dev-ruby/rake-0.8.3
+	dev-ruby/rdoc
 	~dev-ruby/activerecord-${PV}
 	~dev-ruby/activeresource-${PV}
 	~dev-ruby/activesupport-${PV}
