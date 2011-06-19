@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.2.1.ebuild,v 1.1 2011/05/17 10:54:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.2.2.ebuild,v 1.1 2011/06/19 18:58:46 xarthisius Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -36,7 +36,6 @@ src_prepare() {
 			etc/wbar.cfg.in || die "Removing wbar-config from cfg"
 	fi
 	sed -i -e '/Werror/d' src/Makefile.am || die
-	sed -i configure.ac -e "s/imlib2/& x11/" || die #367549
 	eautoreconf
 }
 
