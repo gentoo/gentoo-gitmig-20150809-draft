@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.3.ebuild,v 1.5 2011/06/18 20:55:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.3.ebuild,v 1.6 2011/06/19 13:56:16 maekke Exp $
 
 EAPI=2
 inherit versionator linux-info eutils flag-o-matic
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.open-iscsi.org/"
 SRC_URI="mirror://kernel/linux/kernel/people/mnc/open-iscsi/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~mips ~ppc x86"
 IUSE="debug"
 DEPEND=""
 RDEPEND="${DEPEND}
