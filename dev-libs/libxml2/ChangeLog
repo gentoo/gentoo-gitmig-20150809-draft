@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.308 2011/06/14 21:05:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.309 2011/06/19 13:08:04 armin76 Exp $
+
+  19 Jun 2011; Raúl Porcel <armin76@gentoo.org> libxml2-2.7.8-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #370715
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> libxml2-2.7.8-r1.ebuild:
   amd64/arm stable, bug #370715
