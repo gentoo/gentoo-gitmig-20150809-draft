@@ -1,25 +1,28 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.41 2011/05/24 11:12:32 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.42 2011/06/19 20:33:42 george Exp $
 
-  24 May 2011; <portage-cvs@gentoo.org> gnat-gcc-4.4.5.ebuild:
+  19 Jun 2011; <george@gentoo.org> gnat-gcc-4.4.5.ebuild:
+  new bootstrap for x86
+
+  24 May 2011; <george@gentoo.org> gnat-gcc-4.4.5.ebuild:
   new bootstrap for sparc
 
 *gnat-gcc-4.4.5 (23 May 2011)
 
-  23 May 2011; George Shapovalov <george-cvs@gentoo.org> +gnat-gcc-4.4.5.ebuild:
+  23 May 2011; George Shapovalov <george@gentoo.org> +gnat-gcc-4.4.5.ebuild:
   new version; using new bootstrap, should fix buig #327043
 
 *gnat-gcc-4.4.3 (10 Mar 2011)
 
-  10 Mar 2011; George Shapovalov <george-cvs@gentoo.org> +gnat-gcc-4.3.5.ebuild,
+  10 Mar 2011; George Shapovalov <george@gentoo.org> +gnat-gcc-4.3.5.ebuild,
   +gnat-gcc-4.4.3.ebuild:
   an overdue major bump. Finally got 4.4 working. Homefully more to follow
   soon..
 
 *gnat-gcc-4.3.5 (04 Jan 2011)
 
-  04 Jan 2011; George Shapovalov <george-cvs@gentoo.org> +gnat-gcc-4.3.5.ebuild:
+  04 Jan 2011; George Shapovalov <george@gentoo.org> +gnat-gcc-4.3.5.ebuild:
   a quick bump, finally coming through buiild failure in new (yet uncommitted)
   versions
 
