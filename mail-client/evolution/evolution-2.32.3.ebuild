@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r2.ebuild,v 1.1 2011/03/27 20:36:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3.ebuild,v 1.1 2011/06/19 21:35:48 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ MY_MAJORV=$(get_version_component_range 1-2)
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.bz2"
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
@@ -173,11 +173,16 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	elog "To change the default browser if you are not using GNOME, do:"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'firefox %s'"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'firefox %s'"
+	elog "To change the default browser if you are not using GNOME, edit"
+	elog "~/.local/share/applications/mimeapps.list so it includes the"
+	elog "following content:"
 	elog ""
-	elog "Replace 'firefox %s' with which ever browser you use."
+	elog "[Default Applications]"
+	elog "x-scheme-handler/http=firefox.desktop"
+	elog "x-scheme-handler/https=firefox.desktop"
+	elog ""
+	elog "(replace firefox.desktop with the name of the appropriate .desktop"
+	elog "file from /usr/share/applications if you use a different browser)."
 	elog ""
 	elog "Junk filters are now a run-time choice. You will get a choice of"
 	elog "bogofilter or spamassassin based on which you have installed"
