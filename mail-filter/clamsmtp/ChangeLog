@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/clamsmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.24 2011/06/18 09:00:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.25 2011/06/19 13:42:32 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> clamsmtp-1.10.ebuild:
+  x86 stable, bug #295286
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> clamsmtp-1.10.ebuild:
   Stable on amd64 wrt bug #295286
