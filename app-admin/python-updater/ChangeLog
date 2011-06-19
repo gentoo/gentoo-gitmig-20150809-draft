@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.58 2011/06/18 14:42:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.59 2011/06/19 13:27:55 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> python-updater-0.9.ebuild:
+  arm stable, bug #371849
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> python-updater-0.9.ebuild:
   Stable on amd64 wrt bug #371849
