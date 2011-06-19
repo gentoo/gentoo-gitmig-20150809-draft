@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3.ebuild,v 1.1 2010/09/08 17:34:33 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r3.ebuild,v 1.1 2011/06/19 15:38:14 alexxy Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs qt4-r2
+inherit eutils toolchain-funcs qt4-r2 systemd
 
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
@@ -13,7 +13,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wps kernel_linux kernel_FreeBSD"
+IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wimax wps kernel_linux kernel_FreeBSD"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
@@ -28,6 +28,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	qt4? ( x11-libs/qt-gui:4
 		x11-libs/qt-svg:4 )
 	readline? ( sys-libs/ncurses sys-libs/readline )
+	wimax? ( !net-wireless/libeap )
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
@@ -67,8 +68,15 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-dbus_path_fix.patch"
 
+	if use wimax; then
+		cd "${WORKDIR}/${P}"
+		epatch "${FILESDIR}/${P}-generate-libeap-peer.patch"
+	fi
+
 	# bug (320097)
 	epatch "${FILESDIR}/do-not-call-dbus-functions-with-NULL-path.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=644634
+	epatch "${FILESDIR}/${P}-dbus-api-changes.patch"
 }
 
 src_configure() {
@@ -99,6 +107,8 @@ src_configure() {
 
 	if use dbus ; then
 		echo "CONFIG_CTRL_IFACE_DBUS=y" >> .config
+		echo "CONFIG_CTRL_IFACE_DBUS_NEW=y" >> .config
+		echo "CONFIG_CTRL_IFACE_DBUS_INTRO=y" >> .config
 	fi
 
 	if use debug ; then
@@ -180,6 +190,11 @@ src_compile() {
 	einfo "Building wpa_supplicant"
 	emake || die "emake failed"
 
+	if use wimax; then
+		emake -C ../src/eap_peer clean || die "emake failed"
+		emake -C ../src/eap_peer || die "emake failed"
+	fi
+
 	if use qt4 ; then
 		cd "${S}"/wpa_gui-qt4
 		einfo "Building wpa_gui"
@@ -219,14 +234,21 @@ src_install() {
 		make_desktop_entry wpa_gui "WPA Supplicant Administration GUI" "wpa_gui" "Qt;Network;"
 	fi
 
+	if use wimax; then
+		emake DESTDIR="${D}" -C ../src/eap_peer install || die
+	fi
+
 	if use dbus ; then
 		cd "${S}"/dbus
 		insinto /etc/dbus-1/system.d
 		newins dbus-wpa_supplicant.conf wpa_supplicant.conf || die
 		insinto /usr/share/dbus-1/system-services
-		doins fi.epitest.hostap.WPASupplicant.service || die
+		doins fi.epitest.hostap.WPASupplicant.service fi.w1.wpa_supplicant1.service || die
 		keepdir /var/run/wpa_supplicant
 	fi
+
+	# SystemD stuff
+	doservice "${FILESDIR}"/wpa_supplicant.service
 }
 
 pkg_postinst() {
