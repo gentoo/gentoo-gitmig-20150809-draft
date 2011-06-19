@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12853 2011/06/18 19:53:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12854 2011/06/19 11:00:48 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -89,11 +89,6 @@ media-radio/gmfsk
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-14
-
-# Anthony G. Basile <blueness@gentoo.org> (15 Jun 2011)
-# Masked for removal in 30 days.
-# We don't have policykit in the tree anymore, bug #371441
-sec-policy/selinux-policykit
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Jun 2011)
 # Retire gpixpod for bugs 221277 and 351307.   Removal in 30 days.

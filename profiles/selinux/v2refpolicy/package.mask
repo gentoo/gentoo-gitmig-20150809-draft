@@ -1,5 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/v2refpolicy/package.mask,v 1.9 2011/06/16 00:21:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/v2refpolicy/package.mask,v 1.10 2011/06/19 11:00:49 blueness Exp $
 
 # force version 2.YYYYMMDD policy over version YYYYMMDD policy
 >=sec-policy/selinux-acct-3
@@ -128,6 +128,7 @@
 >=sec-policy/selinux-pcmcia-3
 >=sec-policy/selinux-perdition-3
 >=sec-policy/selinux-podsleuth-3
+>=sec-policy/selinux-policykit-3
 >=sec-policy/selinux-portmap-3
 >=sec-policy/selinux-postfix-3
 >=sec-policy/selinux-postgresql-3

@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5461 2011/06/18 19:53:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5462 2011/06/19 11:00:48 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
+  features/selinux/package.mask, package.mask, selinux/package.mask,
+  selinux/v2refpolicy/package.mask:
+  Unmasked sec-policy/selinux-policykit, bug #371441
 
   18 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask cups-1.5, too new and still needs a lot of testing
