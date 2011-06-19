@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.89 2011/05/16 20:30:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.90 2011/06/19 09:19:32 jlec Exp $
+
+  19 Jun 2011; Justin Lecher <jlec@gentoo.org> gpac-0.4.5-r4.ebuild:
+  Make it gcc46 resistant, #361077 thanks Vladimir for the patch
 
   16 May 2011; Alexis Ballier <aballier@gentoo.org> gpac-0.4.5-r4.ebuild:
   avoid running wx-config if wxwidgets isnt requested and fix build, again,

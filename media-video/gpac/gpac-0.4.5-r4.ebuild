@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r4.ebuild,v 1.7 2011/05/16 20:30:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r4.ebuild,v 1.8 2011/06/19 09:19:32 jlec Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -96,6 +96,9 @@ src_unpack() {
 	# multilib libdir fix
 	sed -i -e 's:$(prefix)/lib:$(prefix)/'$(get_libdir)':' Makefile src/Makefile
 	sed -i -e 's:/lib/gpac:/'$(get_libdir)'/gpac:' configure
+
+	# --warn-common is linker option, not gcc's one
+	sed -i 's/-Wl --warn-common/-Wl,--warn-common/g' configure
 }
 
 src_compile() {
