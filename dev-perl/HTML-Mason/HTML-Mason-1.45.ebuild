@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.45.ebuild,v 1.1 2010/04/23 18:20:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.45.ebuild,v 1.2 2011/06/19 15:50:32 armin76 Exp $
 
 inherit depend.apache perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.masonhq.com/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="modperl doc test"
 SRC_TEST="do"
 
