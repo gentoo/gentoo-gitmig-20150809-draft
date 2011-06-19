@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.4 2011/06/16 16:39:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.5 2011/06/19 16:05:10 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -51,6 +51,20 @@ systemd_dounit() {
 	(
 		insinto "$(systemd_get_unitdir)"
 		doins "${@}"
+	)
+}
+
+# @FUNCTION: systemd_newunit
+# @USAGE: oldname newname
+# @DESCRIPTION:
+# Install systemd unit with a new name. Uses newins, thus it is fatal
+# in EAPI 4 and non-fatal in earlier EAPIs.
+systemd_newunit() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	(
+		insinto "$(systemd_get_unitdir)"
+		newins "${@}"
 	)
 }
 
