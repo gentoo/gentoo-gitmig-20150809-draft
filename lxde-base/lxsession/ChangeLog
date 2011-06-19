@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.28 2011/06/18 09:22:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.29 2011/06/19 13:54:44 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> lxsession-0.4.5.ebuild:
+  x86 stable, bug #370557
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> lxsession-0.4.5.ebuild:
   Stable on amd64 wrt bug #370557
