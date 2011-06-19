@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.498 2011/06/18 04:02:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.499 2011/06/19 17:48:49 vapier Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  19 Jun 2011; Mike Frysinger <vapier@gentoo.org> baselayout-2.0.3.ebuild:
+  Pull in makedev again #368597.
 
 *baselayout-2.0.3 (18 Jun 2011)
 
