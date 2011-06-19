@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.13.3.ebuild,v 1.1 2011/05/06 14:57:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.13.3.ebuild,v 1.2 2011/06/19 08:00:27 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -22,7 +22,9 @@ IUSE=""
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )"
 
 all_ruby_compile() {
-	rdoc-2 -o htmldoc/rdoc --main README --title kramdown lib README || die "Unable to generate documentation"
+	if use doc; then
+		rdoc-2 -o htmldoc/rdoc --main README --title kramdown lib README || die "Unable to generate documentation"
+	fi
 }
 
 all_ruby_install() {

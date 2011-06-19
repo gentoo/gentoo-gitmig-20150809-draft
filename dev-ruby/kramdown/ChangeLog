@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/kramdown
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.7 2011/06/19 07:44:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.8 2011/06/19 08:00:27 graaff Exp $
+
+  19 Jun 2011; Hans de Graaff <graaff@gentoo.org> kramdown-0.13.3.ebuild:
+  Only generate docs when USE=doc. Fixes bug 372189, thanks to Kai Dietrich for
+  the proposed fix.
 
   19 Jun 2011; Hans de Graaff <graaff@gentoo.org> -kramdown-0.13.2.ebuild:
   Remove old version.
