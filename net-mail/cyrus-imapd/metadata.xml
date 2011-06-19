@@ -6,7 +6,6 @@
   </maintainer>
   <herd>net-mail</herd>
   <use>
-	<flag name="idled">Enable idled vs poll IMAP IDLE method</flag>
 	<flag name="replication">Enable replication support in the cyrus imap server</flag>
 	<flag name="sieve">Enable sieve support</flag>
   </use>
