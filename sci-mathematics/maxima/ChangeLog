@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.88 2011/06/04 21:03:14 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.89 2011/06/19 16:36:32 armin76 Exp $
+
+  19 Jun 2011; Raúl Porcel <armin76@gentoo.org> maxima-5.18.1.ebuild,
+  maxima-5.23.2.ebuild, maxima-5.24.0-r1.ebuild:
+  Drop sparc keywords
 
 *maxima-5.24.0-r1 (04 Jun 2011)
 
