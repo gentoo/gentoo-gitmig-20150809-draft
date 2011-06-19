@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/ngstar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.8 2010/09/10 07:36:08 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ChangeLog,v 1.9 2011/06/19 21:53:04 mr_bones_ Exp $
+
+  19 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org> ngstar-2.1.8-r2.ebuild:
+  upstream went away so update to other values for homepage and src_uri (bug
+  #371693)
 
   10 Sep 2010; Tupone Alfredo <tupone@gentoo.org> ngstar-2.1.8-r2.ebuild,
   +files/ngstar-2.1.8-ldflags.patch:
