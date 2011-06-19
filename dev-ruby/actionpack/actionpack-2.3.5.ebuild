@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.5.ebuild,v 1.8 2010/05/22 14:58:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-2.3.5.ebuild,v 1.9 2011/06/19 09:48:46 a3li Exp $
 
 inherit ruby gems
 USE_RUBY="ruby18"
@@ -15,5 +15,5 @@ IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.6
 	~dev-ruby/activesupport-${PV}
-	>=dev-ruby/rack-1.0.1"
+	=dev-ruby/rack-1.0*"
 RDEPEND="${DEPEND}"
