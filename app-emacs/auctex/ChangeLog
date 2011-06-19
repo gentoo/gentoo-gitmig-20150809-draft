@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.108 2011/05/29 10:03:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.109 2011/06/19 16:38:44 armin76 Exp $
+
+  19 Jun 2011; Raúl Porcel <armin76@gentoo.org> auctex-11.86.ebuild,
+  auctex-11.86-r1.ebuild:
+  Drop sparc keywords
 
   29 May 2011; Christian Faulhammer <fauli@gentoo.org> auctex-11.86-r1.ebuild:
   stable x86, bug 368307
