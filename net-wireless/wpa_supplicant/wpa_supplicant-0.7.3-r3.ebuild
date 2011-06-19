@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r3.ebuild,v 1.2 2011/06/19 15:48:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r3.ebuild,v 1.3 2011/06/19 16:31:51 alexxy Exp $
 
 EAPI="2"
 
@@ -249,6 +249,7 @@ src_install() {
 
 	# SystemD stuff
 	systemd_dounit "${FILESDIR}"/wpa_supplicant.service
+	systemd_newunit "${FILESDIR}"/wpa_supplicant_at.service 'wpa_supplicant@.service' || die
 }
 
 pkg_postinst() {

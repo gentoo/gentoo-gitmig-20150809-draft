@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.157 2011/06/19 15:48:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.158 2011/06/19 16:31:51 alexxy Exp $
+
+  19 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  wpa_supplicant-0.7.3-r3.ebuild, +files/wpa_supplicant_at.service:
+  Fix systemd handling onece more
 
   19 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org>
   wpa_supplicant-0.7.3-r3.ebuild:
