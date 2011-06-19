@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_gnutls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.26 2011/06/18 14:56:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.27 2011/06/19 15:30:38 maekke Exp $
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> mod_gnutls-0.5.9.ebuild:
+  x86 stable, bug #371665
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> mod_gnutls-0.5.9.ebuild:
   Stable on amd64 wrt bug #371665
