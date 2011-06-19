@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r5.ebuild,v 1.1 2011/06/17 21:16:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/clapack-3.2.1-r6.ebuild,v 1.1 2011/06/19 20:35:56 dilfridge Exp $
 
 EAPI=4
 
@@ -24,7 +24,8 @@ S=${WORKDIR}/${P}-CMAKE
 PATCHES=(
 	"${FILESDIR}/${P}-fix_include_file.patch"
 	"${FILESDIR}/${P}-noblasf2c.patch"
-	"${FILESDIR}/${P}-findblas.patch"
+	"${FILESDIR}/${P}-hang.patch"
+	"${FILESDIR}/${P}-findblas-r6.patch"
 )
 
 src_configure() {
