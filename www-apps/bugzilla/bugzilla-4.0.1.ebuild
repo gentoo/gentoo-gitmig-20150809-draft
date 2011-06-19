@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.1.ebuild,v 1.1 2011/06/17 10:38:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.1.ebuild,v 1.2 2011/06/19 16:55:37 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.bugzilla.org"
 LICENSE="MPL-1.1"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="modperl extras graphviz mysql postgres"
+IUSE="modperl extras graphviz mysql postgres test"
 
 DEPEND="test? ( >=dev-lang/perl-5.8.8 )"
 RDEPEND="
