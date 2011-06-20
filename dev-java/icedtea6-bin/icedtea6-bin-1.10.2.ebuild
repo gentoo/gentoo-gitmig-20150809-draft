@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.10.2.ebuild,v 1.2 2011/06/20 09:30:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.10.2.ebuild,v 1.3 2011/06/20 11:43:21 hwoarang Exp $
 
 EAPI="1"
 
@@ -28,7 +28,7 @@ RESTRICT="strip"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 S="${WORKDIR}/${PN}-${TARBALL_VERSION}"
 
