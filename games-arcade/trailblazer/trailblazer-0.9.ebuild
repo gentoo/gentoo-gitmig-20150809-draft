@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.4 2010/10/12 03:48:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.5 2011/06/20 18:54:31 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,7 +25,8 @@ src_prepare() {
 		-e "s:/usr/share/trailblazer/trail\.dat:${GAMES_DATADIR}/${PN}/trail.dat:" \
 		-e "s:/usr/share/trailblazer/trail\.time:${GAMES_STATEDIR}/trail.time:" \
 		map.c || die "sed map.c failed"
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 }
 
 src_install() {
