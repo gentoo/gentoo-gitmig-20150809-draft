@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.56.ebuild,v 1.1 2010/10/14 04:17:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.56.ebuild,v 1.2 2011/06/20 09:20:19 tupone Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -52,6 +52,7 @@ src_prepare() {
 		patch -p0 < "${WORKDIR}"/d1datapt/descent.hog.diff descent.hog
 		patch -p0 < "${WORKDIR}"/d1datapt/descent.pig.diff descent.pig
 	fi
+	epatch "${FILESDIR}"/${P}-underlink.patch
 }
 
 src_compile() {

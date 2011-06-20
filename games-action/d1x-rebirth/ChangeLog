@@ -1,6 +1,10 @@
 # ChangeLog for games-action/d1x-rebirth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.5 2010/10/14 04:17:01 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.6 2011/06/20 09:20:19 tupone Exp $
+
+  20 Jun 2011; Tupone Alfredo <tupone@gentoo.org> d1x-rebirth-0.56.ebuild,
+  +files/d1x-rebirth-0.56-underlink.patch:
+  Fix underlink. Bug #369483 by Diego Elio Pettenò
 
 *d1x-rebirth-0.56 (14 Oct 2010)
 
