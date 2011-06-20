@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.1.0.ebuild,v 1.7 2010/12/28 12:27:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.1.0.ebuild,v 1.8 2011/06/20 18:20:25 graaff Exp $
 
 EAPI="2"
-USE_RUBY="ruby18 ree18 ruby19 jruby"
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 
@@ -22,9 +22,6 @@ IUSE=""
 # memcache-client, thin, mongrel and camping; not sure if we should
 # make them dependencies at all.
 ruby_add_bdepend test dev-ruby/test-spec
-
-USE_RUBY=ruby19 \
-	ruby_add_bdepend "ruby_targets_ruby19 test" '=dev-ruby/test-unit-1*'
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
