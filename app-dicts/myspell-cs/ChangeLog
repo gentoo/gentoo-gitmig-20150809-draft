@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-cs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.21 2011/06/19 10:47:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.22 2011/06/20 14:08:44 scarabeus Exp $
+
+  20 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  myspell-cs-20070926.ebuild:
+  Fix install of the th_cs_CZ.dat as it should be also _v2.
 
 *myspell-cs-20070926 (19 Jun 2011)
 
