@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20100501.ebuild,v 1.9 2011/01/19 19:45:50 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20100501.ebuild,v 1.10 2011/06/20 05:04:41 pva Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -40,7 +40,7 @@ RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
 	svg? ( >=dev-libs/libxml2-2.6.7 )
 	unicode? ( >=media-libs/libuninameslist-030713 )
 	cairo? ( >=x11-libs/cairo-1.6.4[X] )
-	pango? ( >=x11-libs/pango-1.20.3[X] )
+	pango? ( >=x11-libs/pango-1.20.3 )
 	x11-libs/libXi
 	x11-proto/inputproto
 	!media-gfx/pfaedit"
