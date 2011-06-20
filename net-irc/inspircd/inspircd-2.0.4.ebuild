@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.3.ebuild,v 1.7 2011/06/20 16:55:57 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.4.ebuild,v 1.1 2011/06/20 16:55:57 c1pher Exp $
 
 EAPI=2
 inherit eutils multilib flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://www.inspircd.org/downloads/InspIRCd-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="openssl gnutls ipv6 mysql postgres sqlite ldap"
 
 RDEPEND="

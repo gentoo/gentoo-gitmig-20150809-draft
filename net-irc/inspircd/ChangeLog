@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.37 2011/05/11 11:51:29 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.38 2011/06/20 16:55:57 c1pher Exp $
+
+*inspircd-2.0.4 (20 Jun 2011)
+
+  20 Jun 2011; Dane Smith <c1pher@gentoo.org> inspircd-2.0.3.ebuild,
+  -files/inspircd-2.0.3-fix-config.patch, -files/inspircd-2.0.3-init.d,
+  +inspircd-2.0.4.ebuild, +files/inspircd-fix-config.patch,
+  +files/inspircd-init.d:
+  Version bump. Move -2.0.3-fix-config patch and -2.0.3-init.d to
+  ${PN}-fix-config.patch and ${PN}-init.d. Change 2.0.3.ebuild to
+  use new patch and init file.
 
   11 May 2011; Dane Smith <c1pher@gentoo.org> inspircd-2.0.3.ebuild:
   Fix use of || die in subshell in ebuild. No revbump.

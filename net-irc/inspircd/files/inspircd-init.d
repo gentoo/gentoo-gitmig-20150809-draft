@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/files/inspircd-2.0.3-init.d,v 1.1 2011/04/26 14:22:31 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/files/inspircd-init.d,v 1.1 2011/06/20 16:55:57 c1pher Exp $
 
 opts="${opts} rehash"
 
