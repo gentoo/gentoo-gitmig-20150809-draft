@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.36.ebuild,v 1.1 2011/06/16 13:50:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.36.ebuild,v 1.2 2011/06/20 08:26:05 pva Exp $
 
 EAPI="4"
-inherit eutils linux-info linux-mod multilib
+inherit eutils linux-info linux-mod multilib autotools
 
 DESCRIPTION="extensions not yet accepted in the main kernel/iptables (patch-o-matic(-ng) successor)"
 HOMEPAGE="http://xtables-addons.sourceforge.net/"
@@ -107,6 +107,10 @@ XA_get_module_name() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-kernel-detection.patch"
+	epatch "${FILESDIR}/${P}-absolute-M.patch"
+	eautoreconf
+
 	XA_qa_check
 	XA_has_something_to_build
 
