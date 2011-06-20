@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/y4mscaler-9.0-r1.ebuild,v 1.2 2011/06/20 08:01:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/y4mscaler-9.0-r1.ebuild,v 1.3 2011/06/20 08:33:57 phajdan.jr Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 DEPEND=">=media-video/mjpegtools-1.9.0_rc3"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 SLOT="0"
 
