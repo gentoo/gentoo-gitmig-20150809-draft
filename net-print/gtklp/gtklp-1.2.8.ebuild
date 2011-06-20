@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.8.ebuild,v 1.5 2011/03/29 08:05:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.8.ebuild,v 1.6 2011/06/20 10:54:00 pva Exp $
 
 EAPI="2"
 
@@ -33,7 +33,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable nls) \
-		$(use_enable ssl)
+		$(use_enable ssl) \
+		--enable-forte #369003
 }
 
 src_install () {

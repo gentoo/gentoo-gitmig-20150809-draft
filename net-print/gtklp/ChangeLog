@@ -1,6 +1,11 @@
 # ChangeLog for net-print/gtklp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.41 2011/03/29 08:05:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.42 2011/06/20 10:54:00 pva Exp $
+
+  20 Jun 2011; Peter Volkov <pva@gentoo.org> -gtklp-1.2.7.ebuild,
+  gtklp-1.2.8.ebuild:
+  Fix underlinking with libX11 (--enable-forte), bug 369003 by Diego Elio
+  Pettenò. Drop old.
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> gtklp-1.2.7.ebuild,
   gtklp-1.2.8.ebuild:
