@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.62.1.ebuild,v 1.1 2011/06/16 12:01:30 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.64.0.ebuild,v 1.1 2011/06/20 17:04:02 dagger Exp $
 
 inherit bash-completion eutils
 
@@ -101,7 +101,6 @@ pkg_setup() {
 
 src_compile() {
 	local repositories=`echo default unavailable unpackaged | tr -s \  ,`
-	local clients=`echo default accerso appareo cave instruo | tr -s \  ,`
 	local environments=`echo default $(usev portage ) | tr -s \  ,`
 	econf \
 		$(use_enable doc doxygen ) \
@@ -118,7 +117,6 @@ src_compile() {
 		$(use_enable search-index ) \
 		--with-vim-install-dir=/usr/share/vim/vimfiles \
 		--with-repositories=${repositories} \
-		--with-clients=${clients} \
 		--with-environments=${environments} \
 		|| die "econf failed"
 
@@ -129,8 +127,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS README NEWS
 
-	BASHCOMPLETION_NAME="accerso" dobashcompletion bash-completion/accerso
-	BASHCOMPLETION_NAME="instruo" dobashcompletion bash-completion/instruo
 	BASHCOMPLETION_NAME="cave" dobashcompletion bash-completion/cave
 
 	if use zsh-completion ; then
