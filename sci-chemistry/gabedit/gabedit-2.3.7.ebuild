@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.7.ebuild,v 1.1 2011/05/09 20:03:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.7.ebuild,v 1.2 2011/06/20 17:43:54 jlec Exp $
 
 EAPI=2
 
@@ -14,15 +14,19 @@ DESCRIPTION="GUI for computational chemistry packages"
 HOMEPAGE="http://gabedit.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/GabeditDevloppment/${MY_PN}${MY_PV}/${MY_P}.tar.gz"
 
-LICENSE="as-is"
 SLOT="0"
+LICENSE="as-is"
 KEYWORDS="~amd64 ~x86"
 IUSE="openmp"
 
 RDEPEND="
+	dev-libs/glib:2
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
 	x11-libs/gtkglext
 	x11-libs/gl2ps
+	x11-libs/pango[X]
 	virtual/opengl
 	virtual/glu"
 DEPEND="${RDEPEND}
@@ -30,11 +34,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	tc-export CC
-}
-
 src_prepare() {
+	tc-export CC
 	sed -i "/rmdir tmp/d" "${S}"/Makefile
 	sed -e "/GTK_DISABLE_DEPRECATED/s:define:undef:g" \
 		-i "${S}/Config.h" || die

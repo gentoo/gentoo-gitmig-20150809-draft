@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.6.ebuild,v 1.4 2011/06/20 17:43:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.8.ebuild,v 1.1 2011/06/20 17:43:54 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit toolchain-funcs versionator
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/GabeditDevloppment/${MY_PN}${MY_PV}/${MY_P}.
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="openmp"
 
 RDEPEND="
@@ -34,13 +34,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	tc-export CC
-}
-
 src_prepare() {
+	tc-export CC
 	sed -i "/rmdir tmp/d" "${S}"/Makefile
-	sed -e "/GTK_DISABLE_DEPRECATED/s:define:undef:g" \
+	sed \
+		-e "/GTK_DISABLE_DEPRECATED/s:define:undef:g" \
 		-i "${S}/Config.h" || die
 	cp "${FILESDIR}"/CONFIG.Gentoo "${S}"/CONFIG
 
@@ -54,10 +52,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake external_gl2ps=1 || die "emake failed"
+	emake clean
+	emake external_gl2ps=1
 }
 
 src_install() {
-	dobin ${PN} || die
-	dodoc ChangeLog || die
+	dobin ${PN}
+	dodoc ChangeLog
 }
