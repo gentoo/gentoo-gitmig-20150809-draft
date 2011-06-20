@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.0.1.ebuild,v 1.2 2011/06/15 06:47:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.0.4.ebuild,v 1.1 2011/06/20 11:45:03 pacho Exp $
 
-EAPI="2"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
 inherit gnome2 virtualx
 
 DESCRIPTION="A text widget implementing syntax highlighting and other features"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://projects.gnome.org/gtksourceview/"
 
 LICENSE="GPL-2"
 SLOT="3.0"
@@ -38,7 +38,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e 's:--warn-all::' gtksourceview/Makefile.in
+	sed -i -e 's:--warn-all::' gtksourceview/Makefile.in || die
 
 	# Skip broken test until upstream bug #621383 is solved
 	sed -e "/guess-language/d" \
@@ -49,12 +49,12 @@ src_prepare() {
 }
 
 src_test() {
-	Xemake check || die "Test phase failed"
+	Xemake check
 }
 
 src_install() {
 	gnome2_src_install
 
 	insinto /usr/share/${PN}-3.0/language-specs
-	doins "${FILESDIR}"/2.0/gentoo.lang || die "doins failed"
+	doins "${FILESDIR}"/2.0/gentoo.lang
 }
