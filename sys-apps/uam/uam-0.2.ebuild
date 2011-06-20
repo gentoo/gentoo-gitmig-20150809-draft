@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.1.1-r1.ebuild,v 1.1 2011/04/30 21:00:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.2.ebuild,v 1.1 2011/06/20 07:43:21 mgorny Exp $
 
 EAPI=3
 inherit autotools-utils eutils multilib
@@ -40,10 +40,10 @@ pkg_postinst() {
 	elog "is to use [sys-apps/pmount]. If you don't feel like installing"
 	elog "additional tools, remember to sync before removing your USB stick."
 	elog
-	elog "Another feature uam is not capable of is mounting removable media"
-	elog "in fixed drives, like CDs and floppies. You might, however, be able"
-	elog "to mount them as an unprivileged user using appropriate fstab entries"
-	elog "or [sys-apps/pmount]."
+	elog "If you'd like uam to mount ejectable media like CDs/DVDs, you need"
+	elog "to enable in-kernel media polling, e.g.:"
+	elog "	echo 5000 > /sys/module/block/parameters/events_dfl_poll_msecs"
+	elog "where 5000 would mean a poll will occur every 5 seconds."
 	elog
 	elog "If you'd like to receive libnotify-based notifications, you need"
 	elog "to install the [x11-misc/sw-notify-send] tool."
