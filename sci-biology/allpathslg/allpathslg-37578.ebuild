@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-37578.ebuild,v 1.1 2011/06/20 05:34:50 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-37578.ebuild,v 1.2 2011/06/20 15:32:45 weaver Exp $
 
 EAPI="2"
 
-inherit autotools
+inherit autotools flag-o-matic
 
 DESCRIPTION="De novo assembly of whole-genome shotgun microreads"
 HOMEPAGE="http://www.broadinstitute.org/science/programs/genome-biology/crd"
