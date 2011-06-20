@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.110 2011/03/30 08:40:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.111 2011/06/20 10:15:57 pva Exp $
+
+*mrtg-2.17.2 (20 Jun 2011)
+
+  20 Jun 2011; Peter Volkov <pva@gentoo.org> +mrtg-2.17.2.ebuild:
+  Version bump, bug #366777 thank Allen Parker for report.
 
   30 Mar 2011; Michael Weber <xmw@gentoo.org> mrtg-2.16.4-r1.ebuild:
   added ~arm (bug 302981)
