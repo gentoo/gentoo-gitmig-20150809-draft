@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.5 2011/06/13 15:01:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.6 2011/06/20 12:34:46 caster Exp $
+
+  20 Jun 2011; Vlastimil Babka <caster@gentoo.org> icedtea-web-1.1.ebuild:
+  Disable parallel make install until bug #372235 is resolved.
 
 *icedtea-web-1.1 (13 Jun 2011)
 
