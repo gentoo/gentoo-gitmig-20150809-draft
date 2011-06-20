@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>aidecoe@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='network-cron'>
