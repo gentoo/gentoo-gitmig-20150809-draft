@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/openyahtzee-1.9.ebuild,v 1.6 2010/05/18 07:57:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/openyahtzee-1.9.ebuild,v 1.7 2011/06/20 11:48:11 tupone Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -18,10 +18,8 @@ IUSE=""
 DEPEND="x11-libs/wxGTK:2.8[X]"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc45.patch
-	sed -i \
-		-e 's:openyahtzee_LDFLAGS:openyahtzee_LDADD:' \
-		src/Makefile.am || die
+	epatch "${FILESDIR}"/${P}-gcc45.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	eautoreconf
 }
 
