@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/glimmerhmm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.4 2009/09/22 11:33:56 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.5 2011/06/20 08:32:26 jlec Exp $
+
+*glimmerhmm-3.0.1-r1 (20 Jun 2011)
+
+  20 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/3.0.1-gentoo.patch,
+  glimmerhmm-3.0.1.ebuild, +glimmerhmm-3.0.1-r1.ebuild:
+  Respect LDFLAGS and CFLAGS, do not install ELF in usr/share, #297061 & 335257
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> glimmerhmm-3.0.1.ebuild:
   x86 stable, bug #282107

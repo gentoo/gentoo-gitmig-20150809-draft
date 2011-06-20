@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1.ebuild,v 1.5 2009/09/22 11:33:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1.ebuild,v 1.6 2011/06/20 08:32:26 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -15,19 +15,18 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 x86"
 
-DEPEND=""
-RDEPEND=""
-
-S="${WORKDIR}/${MY_P}"
-
 src_unpack() {
 	unpack ${A}
-	sed -i -e 's|\(my $scriptdir=\)$FindBin::Bin|\1"/usr/share/'${PN}'/training_utils"|' \
-		-e 's|\(use lib\) $FindBin::Bin|\1 "/usr/share/'${PN}'/lib"|' "${S}/train/trainGlimmerHMM" || die
-	sed -i -e 's/^CFLAGS[ ]*=.*//' \
+	mv GlimmerHMM ${P}
+	sed \
+		-e 's|\(my $scriptdir=\)$FindBin::Bin|\1"/usr/share/'${PN}'/training_utils"|' \
+		-e 's|\(use lib\) $FindBin::Bin|\1 "/usr/share/'${PN}'/lib"|' \
+		-i "${S}/train/trainGlimmerHMM" || die
+	sed \
+		-e 's/^CFLAGS[ ]*=.*//' \
 		-e 's/C *=.*/C='$(tc-getCC)'/' \
 		-e 's/CC *=.*/CC='$(tc-getCXX)'/' \
-		"${S}"/*/makefile || die
+		-i "${S}"/*/makefile || die
 }
 
 src_compile() {
@@ -38,14 +37,12 @@ src_compile() {
 src_install() {
 	dobin sources/glimmerhmm train/trainGlimmerHMM || die
 
-	dodir /usr/share/${PN}/{lib,models,training_utils}
 	insinto /usr/share/${PN}/lib
 	doins train/*.pm || die
 	insinto /usr/share/${PN}/models
 	doins -r trained_dir/* || die
-	insinto /usr/share/${PN}/training_utils
-	insopts -m755
-	doins train/{build{1,2,-icm,-icm-noframe},erfapp,falsecomp,findsites,karlin,score,score{2,ATG,ATG2,STOP,STOP2},splicescore} || die
+	exeinto /usr/share/${PN}/training_utils
+	doexe train/{build{1,2,-icm,-icm-noframe},erfapp,falsecomp,findsites,karlin,score,score{2,ATG,ATG2,STOP,STOP2},splicescore} || die
 
 	dodoc README.first train/readme.train
 }
