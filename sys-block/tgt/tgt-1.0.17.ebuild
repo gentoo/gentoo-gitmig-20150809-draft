@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.9.ebuild,v 1.3 2011/01/18 14:18:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/tgt-1.0.17.ebuild,v 1.1 2011/06/20 15:19:25 alexxy Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit flag-o-matic linux-info
 
@@ -16,12 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ibmvio infiniband fcp fcoe"
 
 DEPEND="dev-perl/config-general
-		infiniband? (
-				sys-infiniband/libibverbs
-				sys-infiniband/librdmacm
-				)"
+	infiniband? (
+		sys-infiniband/libibverbs
+		sys-infiniband/librdmacm
+	)"
 RDEPEND="${DEPEND}
-		sys-apps/sg3_utils"
+	sys-apps/sg3_utils"
 
 pkg_setup() {
 	CONFIG_CHECK="~SCSI_TGT"
@@ -44,8 +44,8 @@ src_compile() {
 
 src_install() {
 	emake  install-programs install-scripts install-doc DESTDIR="${D}" \
-		docdir=/usr/share/doc/${PF} \
-		|| die "install failed"
+		docdir=/usr/share/doc/${PF}
 	doinitd "${FILESDIR}/tgtd"
-	dodir "/etc/tgt"
+	dodir /etc/tgt
+	keepdir /etc/tgt
 }
