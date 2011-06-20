@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/arb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/ChangeLog,v 1.4 2010/10/10 21:16:13 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/ChangeLog,v 1.5 2011/06/20 07:34:40 jlec Exp $
+
+*arb-5.2 (20 Jun 2011)
+
+  20 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/5.1-bfr-overflow.patch,
+  arb-5.1-r1.ebuild, +arb-5.2.ebuild:
+  Version Bump, fix buffer overflow, make gcc46 resistent, fix build failure,
+  #314665,340579,362633
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> arb-5.1-r1.ebuild:
   Fix openmotif dependency.

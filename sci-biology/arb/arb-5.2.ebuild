@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.4 2011/06/20 07:34:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.2.ebuild,v 1.1 2011/06/20 07:34:40 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -10,11 +10,10 @@ DESCRIPTION="Tools for DNA/RNA sequence database handling and data analysis, phy
 HOMEPAGE="http://www.arb-home.de/"
 SRC_URI="
 	http://download.arb-home.de/release/arb_${PV}/arbsrc.tgz -> ${P}.tgz
-	mirror://gentoo/${P}-glibc2.10.patch.bz2
 	http://dev.gentoo.org/~jlec/${P}-linker.patch.bz2"
 
-LICENSE="arb"
 SLOT="0"
+LICENSE="arb"
 IUSE="+opengl"
 KEYWORDS="~amd64 ~x86"
 
@@ -41,25 +40,23 @@ src_unpack() {
 
 src_prepare() {
 	epatch \
-		"${WORKDIR}"/${P}-glibc2.10.patch\
 		"${WORKDIR}"/${P}-linker.patch \
-		"${FILESDIR}"/${PV}-libs.patch \
-		"${FILESDIR}"/${PV}-bfr-overflow.patch
+		"${FILESDIR}"/5.1-libs.patch \
+		"${FILESDIR}"/5.1-bfr-overflow.patch
 	sed -i \
 		-e 's/all: checks/all:/' \
 		-e "s/GCC:=.*/GCC=$(tc-getCC) ${CFLAGS}/" \
 		-e "s/GPP:=.*/GPP=$(tc-getCXX) ${CXXFLAGS}/" \
-		-e 's/--export-dynamic/-Wl,--export-dynamic/g' \
 		"${S}/Makefile" || die
 	cp config.makefile.template config.makefile
 	sed -i -e '/^[ \t]*read/ d' -e 's/SHELL_ANS=0/SHELL_ANS=1/' "${S}/arb_install.sh" || die
 	use amd64 && sed -i -e 's/ARB_64 := 0/ARB_64 := 1/' config.makefile
 	use opengl || sed -i -e 's/OPENGL := 1/OPENGL := 0/' config.makefile
-	emake ARBHOME="${S}" links || die
+	emake ARBHOME="${S}" links
 }
 
 src_compile() {
-	emake ARBHOME="${S}" PATH="${PATH}:${S}/bin" LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${S}/lib" tarfile || die
+	emake ARBHOME="${S}" PATH="${PATH}:${S}/bin" LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${S}/lib" tarfile
 	use amd64 && mv arb.tgz arb.64.gentoo.tgz
 	use x86 && mv arb.tgz arb.32.gentoo.tgz
 	ln -s arb.*.tgz arb.tgz || die
@@ -72,5 +69,5 @@ src_install() {
 	PATH=/opt/arb/bin
 	LD_LIBRARY_PATH=/opt/arb/lib
 	EOF
-	doenvd "${S}/99${PN}" || die
+	doenvd "${S}/99${PN}"
 }
