@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.2.ebuild,v 1.1 2011/04/10 13:01:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.4.ebuild,v 1.1 2011/06/20 10:37:41 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
 GNOME_ORG_MODULE="GConf"
 
