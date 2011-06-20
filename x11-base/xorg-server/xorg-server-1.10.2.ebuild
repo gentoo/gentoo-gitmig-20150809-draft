@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.2.ebuild,v 1.2 2011/06/09 21:40:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.2.ebuild,v 1.3 2011/06/20 21:56:07 chithanh Exp $
 
 EAPI=4
 
@@ -55,6 +55,8 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	udev? ( >=sys-fs/udev-150 )
 	>=x11-apps/xinit-1.3"
 
+# dmx+doc DEPEND is a hack, a proper solution needs to be implemented in the
+# xorg-2.eclass for next release
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	>=x11-proto/bigreqsproto-1.1.0
@@ -79,7 +81,16 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xf86vidmodeproto-2.2.99.1
 	>=x11-proto/xineramaproto-1.1.3
 	>=x11-proto/xproto-7.0.17
-	dmx? ( >=x11-proto/dmxproto-2.2.99.1 )
+	dmx? (
+		>=x11-proto/dmxproto-2.2.99.1
+		doc? (
+			|| (
+				www-client/links
+				www-client/lynx
+				www-client/w3m
+			)
+		)
+	)
 	!minimal? (
 		>=x11-proto/xf86driproto-2.1.0
 		>=x11-proto/dri2proto-2.3
