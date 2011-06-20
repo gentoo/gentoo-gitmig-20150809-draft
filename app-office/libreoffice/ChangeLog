@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.31 2011/06/17 12:41:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.32 2011/06/20 17:51:07 abcd Exp $
+
+  20 Jun 2011; Jonathan Callen <abcd@gentoo.org> -files/gentoo-3.3.3.diff:
+  Remove unused file
 
   17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.3.3.ebuild:
