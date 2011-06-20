@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.2.ebuild,v 1.3 2011/05/31 06:14:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.6.ebuild,v 1.1 2011/06/20 19:41:50 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -54,16 +54,22 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix outdated version constant.
+	sed -e "s#\\(^numeric_version =\\).*#\\1 (${PV//./, })#" \
+		-i src/calibre/constants.py || \
+		die "sed failed to patch constants.py"
+
 	# Avoid sandbox violation in /usr/share/gnome/apps when linux.py
 	# calls xdg-* (bug #258938).
-	sed -e "s:'xdg-desktop-menu', 'install':'xdg-desktop-menu', 'install', '--mode', 'user':" \
-		-e "s:xdg-icon-resource install:xdg-icon-resource install --mode user:" \
-		-e "s:xdg-mime install:xdg-mime install --mode user:" \
-		-i src/calibre/linux.py || die "sed'ing in the IMAGE path failed"
+	sed -e "s:'xdg-desktop-menu', 'install':\\0, '--mode', 'user':" \
+		-e "s:check_call(\\['xdg-desktop-menu', 'forceupdate'\\]):#\\0:" \
+		-e "s:xdg-icon-resource install:\\0 --mode user:" \
+		-e "s:xdg-mime install:\\0 --mode user:" \
+		-i src/calibre/linux.py || die "sed failed to patch linux.py"
 
 	# Disable unnecessary privilege dropping for bug #287067.
 	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
-		-i setup/install.py || die "sed'ing in the IMAGE path failed"
+		-i setup/install.py || die "sed failed to patch install.py"
 
 	distutils_src_prepare
 }
@@ -80,8 +86,6 @@ src_install() {
 	cp "${T}"/{kbuildsycoca,update-mime-database}
 	chmod +x "${T}"/{kbuildsycoca,update-mime-database}
 
-	# --bindir and --sharedir don't seem to work.
-	# Pass them in anyway so we'll know when they are fixed.
 	# Unset DISPLAY in order to prevent xdg-mime from triggering a sandbox
 	# violation with kbuildsycoca as in bug #287067, comment #13.
 	export -n DISPLAY
@@ -104,29 +108,22 @@ src_install() {
 
 	# Bug #334243 - respect LDFLAGS when building calibre-mount-helper
 	export OVERRIDE_CFLAGS="$CFLAGS $LDFLAGS"
+	local libdir=$(get_libdir)
+	[[ -n $libdir ]] || die "get_libdir returned an empty string"
 
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
-		distutils_src_install --bindir="${D}usr/bin" --sharedir="${D}usr/share"
+		distutils_src_install \
+		--staging-root="${D}usr" \
+		--staging-libdir="${D}usr/${libdir}"
 
 	grep -rlZ "${D}" "${D}" | xargs -0 sed -e "s:${D}:/:g" -i ||
 		die "failed to fix harcoded \$D in paths"
 
-	# Python modules are no longer installed in
-	# site-packages, so remove empty dirs.
-	find "${D}$(python_get_libdir)" -type d -empty -delete
-
-	# This code may fail if behavior of --root, --bindir or
-	# --sharedir changes in the future.
-	local libdir=$(get_libdir)
-	dodir /usr/${libdir}
-	mv "${D}lib/calibre" "${D}usr/${libdir}/" ||
-		die "failed to move libdir"
-	find "${D}"lib -type d -empty -delete
 	grep -rlZ "/usr/lib/calibre" "${D}" | \
 		xargs -0 sed -e "s:/usr/lib/calibre:/usr/${libdir}/calibre:g" -i ||
 		die "failed to fix harcoded libdir paths"
 
-	find "${D}"share/calibre/man -type f -print0 | \
+	find "${D}"usr/share/calibre/man -type f -print0 | \
 		while read -r -d $'\0' ; do
 			if [[ ${REPLY} = *.[0-9]calibre.bz2 ]] ; then
 				newname=${REPLY%calibre.bz2}.bz2
@@ -135,20 +132,10 @@ src_install() {
 				rm -f "${newname}" || die "rm failed"
 			fi
 		done
-	rmdir "${D}"share/calibre/man/* || \
+	rmdir "${D}"usr/share/calibre/man/* || \
 		die "could not remove redundant man subdir(s)"
-	rmdir "${D}"share/calibre/man || \
+	rmdir "${D}"usr/share/calibre/man || \
 		die "could not remove redundant man dir"
-
-	dodir /usr/bin
-	mv "${D}bin/"* "${D}usr/bin/" ||
-		die "failed to move bin dir"
-	find "${D}"bin -type d -empty -delete
-
-	dodir /usr/share
-	mv "${D}share/"* "${D}usr/share/" ||
-		die "failed to move share dir"
-	find "${D}"share -type d -empty -delete
 
 	# The menu entries end up here due to '--mode user' being added to
 	# xdg-* options in src_prepare.
@@ -163,9 +150,9 @@ src_install() {
 	domenu "${HOME}"/.local/share/applications/*.desktop ||
 		die "failed to install .desktop menu files"
 
-	dobashcompletion "${D}"etc/bash_completion.d/calibre
-	rm -r "${D}"etc/bash_completion.d
-	find "${D}"etc -type d -empty -delete
+	dobashcompletion "${D}"usr/etc/bash_completion.d/calibre
+	rm -r "${D}"usr/etc/bash_completion.d
+	find "${D}"usr/etc -type d -empty -delete
 
 	python_convert_shebangs -r $(python_get_version) "${D}"
 }
