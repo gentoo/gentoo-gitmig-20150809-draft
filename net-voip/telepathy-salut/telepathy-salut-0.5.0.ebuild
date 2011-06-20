@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.5.0.ebuild,v 1.2 2011/06/07 03:04:39 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.5.0.ebuild,v 1.3 2011/06/20 10:40:07 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 
-inherit base python
+inherit base python eutils
 
 DESCRIPTION="A link-local XMPP connection manager for Telepathy"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Components"
@@ -40,12 +40,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix uninitialized variable, upstream bug #37701
+	epatch "${FILESDIR}/${PN}-0.5.0-uninitialized.patch"
+
 	python_convert_shebangs -r 2 .
 }
 
 src_configure() {
 	econf \
-		--disable-plugins
+		--disable-plugins \
+		--disable-Werror
 		#--docdir=/usr/share/doc/${PF}
 		#$(use_enable test avahi-tests)
 }
