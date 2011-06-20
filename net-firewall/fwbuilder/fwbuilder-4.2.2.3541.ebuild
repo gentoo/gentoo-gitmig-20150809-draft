@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.2 2011/05/29 17:06:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.3 2011/06/20 12:00:54 hwoarang Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.fwbuilder.org/"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc ~ppc64"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.3
