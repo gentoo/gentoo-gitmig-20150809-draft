@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5465 2011/06/19 13:40:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5466 2011/06/20 05:15:44 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jun 2011; Peter Volkov <pva@gentoo.org> package.mask:
+  Mask dev-util/oprofile-0.9.7 release candidate
 
   19 Jun 2011; Hans de Graaff <graaff@gentoo.org> updates/2Q-2011:
   Add slotmoves for dev-ruby/deprecated.
