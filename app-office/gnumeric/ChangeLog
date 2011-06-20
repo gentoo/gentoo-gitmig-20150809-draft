@@ -1,6 +1,14 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.222 2011/06/03 16:22:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.223 2011/06/20 11:16:17 pacho Exp $
+
+*gnumeric-1.10.16 (20 Jun 2011)
+
+  20 Jun 2011; Pacho Ramos <pacho@gentoo.org> -gnumeric-1.10.14.ebuild,
+  +gnumeric-1.10.16.ebuild:
+  Version bump, also build --without-gnome as suggested by upstream in
+  https://bugzilla.gnome.org/show_bug.cgi?id=652802#c1 since it's going away
+  and let gnumeric stop depending on deprecated stuff. Remove old.
 
 *gnumeric-1.10.15 (03 Jun 2011)
 

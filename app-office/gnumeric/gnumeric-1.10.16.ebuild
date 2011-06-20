@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.14.ebuild,v 1.1 2011/03/26 21:04:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.10.16.ebuild,v 1.1 2011/06/20 11:16:17 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="python? 2:2.4"
 
 inherit gnome2 flag-o-matic python
@@ -15,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="gnome perl python"
+IUSE="perl python"
 # Missing gnome-extra/libgnomedb required version in tree
 # but its upstream is dead and will be dropped soon.
 
@@ -26,20 +28,14 @@ RESTRICT="test"
 RDEPEND="sys-libs/zlib
 	app-arch/bzip2
 	>=dev-libs/glib-2.12:2
-	>=gnome-extra/libgsf-1.14.19[gnome?]
-	>=x11-libs/goffice-0.8.10:0.8
+	>=gnome-extra/libgsf-1.14.19
+	>=x11-libs/goffice-0.8.15:0.8
 	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.12
 
 	>=x11-libs/gtk+-2.18:2
 	x11-libs/cairo[svg]
 
-	gnome? (
-		>=gnome-base/gconf-2:2
-		>=gnome-base/libgnome-2
-		>=gnome-base/libgnomeui-2
-		>=gnome-base/libbonobo-2.2
-		>=gnome-base/libbonoboui-2.2 )
 	perl? ( dev-lang/perl )
 	python? ( >=dev-python/pygtk-2:2 )
 "
@@ -55,20 +51,13 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--enable-ssindex
 		--disable-static
+		--without-gnome
 		--without-gda
 		--with-zlib
 		$(use_with perl)
-		$(use_with python)
-		$(use_with gnome)"
+		$(use_with python)"
 	DOCS="AUTHORS BEVERAGES BUGS ChangeLog HACKING MAINTAINERS NEWS README"
 	use python && python_set_active_version 2
-}
-
-src_install() {
-	gnome2_src_install
-
-	# Remove useless .la files
-	find "${ED}" -name "*.la" -delete || die
 }
 
 pkg_postinst() {
