@@ -1,6 +1,9 @@
 # ChangeLog for media-video/y4mscaler
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/ChangeLog,v 1.10 2008/10/31 12:23:20 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/ChangeLog,v 1.11 2011/06/20 08:01:23 hwoarang Exp $
+
+  20 Jun 2011; Markos Chandras <hwoarang@gentoo.org> y4mscaler-9.0-r1.ebuild:
+  Stable on amd64 wrt bug #372325
 
 *y4mscaler-9.0-r1 (31 Oct 2008)
 
