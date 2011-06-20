@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.108 2011/05/23 08:29:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.109 2011/06/20 14:09:41 pva Exp $
+
+*autofs-5.0.5-r5 (20 Jun 2011)
+
+  20 Jun 2011; Peter Volkov <pva@gentoo.org> +autofs-5.0.5-r5.ebuild:
+  Bump to new upstream snapshot, bug #372361 thank Dustin Polke for this job.
 
 *autofs-5.0.5-r4 (23 May 2011)
 
