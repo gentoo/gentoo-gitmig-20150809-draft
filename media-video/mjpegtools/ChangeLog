@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.159 2011/06/18 20:47:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.160 2011/06/20 08:32:02 phajdan.jr Exp $
+
+  20 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mjpegtools-2.0.0-r1.ebuild:
+  x86 stable wrt bug #372139
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   mjpegtools-2.0.0-r1.ebuild:
