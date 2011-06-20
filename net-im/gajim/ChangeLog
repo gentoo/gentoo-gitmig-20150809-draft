@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.117 2011/04/16 17:42:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.118 2011/06/20 12:19:50 jlec Exp $
+
+*gajim-0.14.3 (20 Jun 2011)
+
+  20 Jun 2011; Justin Lecher <jlec@gentoo.org> gajim-0.14.1-r2.ebuild,
+  gajim-0.14.1-r3.ebuild, +gajim-0.14.3.ebuild:
+  Version BUmp
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> gajim-0.14.1-r2.ebuild:
   ia64/sparc stable wrt #357765

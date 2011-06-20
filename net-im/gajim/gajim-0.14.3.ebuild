@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r3.ebuild,v 1.2 2011/06/20 12:19:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.3.ebuild,v 1.1 2011/06/20 12:19:50 jlec Exp $
 
 EAPI=2
 
@@ -75,8 +75,7 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/0.14-python-version.patch \
-		"${FILESDIR}"/0.14.1-testing.patch \
-		"${FILESDIR}"/0.14.1-link.patch
+		"${FILESDIR}"/0.14.1-testing.patch
 	echo '#!/bin/sh' > config/py-compile
 }
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r2.ebuild,v 1.10 2011/04/16 17:42:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r2.ebuild,v 1.11 2011/06/20 12:19:50 jlec Exp $
 
-EAPI="2"
+EAPI=2
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite xml"
@@ -19,12 +19,12 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gmail gnome idle jingle libnotify networkmanager nls spell srv X xhtml"
 
 COMMON_DEPEND="
-	x11-libs/gtk+:2
-	dev-python/pygtk:2"
+	dev-python/pygtk:2
+	x11-libs/gtk+:2"
 DEPEND="${COMMON_DEPEND}
-	>=sys-devel/gettext-0.17-r1
 	>=dev-util/intltool-0.40.1
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=sys-devel/gettext-0.17-r1"
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyopenssl
 	crypt? (
