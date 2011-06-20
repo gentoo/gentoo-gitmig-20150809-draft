@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.14.ebuild,v 1.1 2011/03/26 21:02:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.16.ebuild,v 1.1 2011/06/20 10:53:47 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit eutils gnome2 flag-o-matic
 
@@ -47,9 +48,4 @@ pkg_setup() {
 		--with-gtk"
 
 	filter-flags -ffast-math
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name "*.la" -delete || die
 }
