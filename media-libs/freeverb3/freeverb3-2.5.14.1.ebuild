@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.5.14.1.ebuild,v 1.1 2011/01/09 19:28:42 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.5.14.1.ebuild,v 1.2 2011/06/20 00:41:22 sping Exp $
 
 EAPI=2
 inherit versionator
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="audacious jack plugdouble sse sse2 sse3 sse4 3dnow forcefpu"
 
 RDEPEND=">=sci-libs/fftw-3.0.1
-	audacious? ( media-sound/audacious
+	audacious? ( <media-sound/audacious-2.5
 		media-libs/libsndfile )
 	jack? ( media-sound/jack-audio-connection-kit
 		media-libs/libsndfile )"
