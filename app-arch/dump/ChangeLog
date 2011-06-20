@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.63 2011/06/16 09:54:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.64 2011/06/20 08:11:49 pva Exp $
+
+*dump-0.4.44-r1 (20 Jun 2011)
+
+  20 Jun 2011; Peter Volkov <pva@gentoo.org> +dump-0.4.44-r1.ebuild,
+  +files/dump-0.4.44-fix-pointers-aliasing.patch,
+  +files/dump-0.4.44-rl_completion_matches-detection.patch:
+  Fix poor programming practices bug 370637 by Hans de Graaff.
 
   16 Jun 2011; Peter Volkov <pva@gentoo.org> dump-0.4.44.ebuild,
   +files/dump-0.4.44-underlinking.patch:
