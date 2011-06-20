@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbdfed/gbdfed-1.4.ebuild,v 1.4 2010/02/11 15:38:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbdfed/gbdfed-1.6.ebuild,v 1.1 2011/06/20 07:13:06 pva Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 DESCRIPTION="gbdfed Bitmap Font Editor"
@@ -21,11 +21,10 @@ RDEPEND=">=x11-libs/gtk+-2.6:2
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	sed "s:-D.*_DISABLE_DEPRECATED::" -i Makefile.in #248562
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dodoc README NEWS
 }
