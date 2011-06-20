@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/construo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.16 2010/09/16 16:54:32 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.17 2011/06/20 19:10:05 tupone Exp $
+
+  20 Jun 2011; Tupone Alfredo <tupone@gentoo.org>
+  files/construo-0.2.2-lGLU.patch:
+  Fix underlink. Bug #369771 by Diego Elio Pettenò
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   construo-0.2.2.ebuild:

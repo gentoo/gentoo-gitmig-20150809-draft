@@ -5,7 +5,7 @@
  [
    ConstruoTargets="$ConstruoTargets construo.glut"
 -  AC_SUBST(glut_LIBS,"-lglut")
-+  AC_SUBST(glut_LIBS,"-lglut -lGLU")
++  AC_SUBST(glut_LIBS,"-lglut -lGLU -lGL -lm")
  ],
  [])
  
