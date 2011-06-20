@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bitefusion/bitefusion-1.0.1.ebuild,v 1.5 2009/11/21 17:54:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bitefusion/bitefusion-1.0.1.ebuild,v 1.6 2011/06/20 19:15:46 tupone Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils autotools games
 
 DESCRIPTION="A snake game with 15 levels"
 HOMEPAGE="http://www.junoplay.com"
@@ -17,7 +17,13 @@ IUSE=""
 DEPEND="media-libs/libsdl"
 
 # just to avoid QA notice
-PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
+PATCHES=( "${FILESDIR}"/${P}-gentoo.patch
+	"${FILESDIR}"/${P}-underlink.patch )
+
+src_prepare() {
+	base_src_prepare
+	eautoreconf
+}
 
 src_install() {
 	dogamesbin ${PN} || die "dogamesbin failed"
