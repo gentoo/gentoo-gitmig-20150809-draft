@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.11.ebuild,v 1.1 2011/05/18 20:04:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/viewvc-1.1.11.ebuild,v 1.2 2011/06/20 09:28:28 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="http://viewvc.tigris.org/files/documents/3330/${DOWNLOAD_NUMBER}/${P}.t
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="cvs cvsgraph mod_python mod_wsgi mysql pygments +subversion"
 
 DEPEND=""

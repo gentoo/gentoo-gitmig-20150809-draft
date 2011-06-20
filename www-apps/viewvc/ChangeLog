@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.76 2011/06/18 09:08:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.77 2011/06/20 09:28:28 phajdan.jr Exp $
+
+  20 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> viewvc-1.1.11.ebuild:
+  x86 stable wrt security bug #369077
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> viewvc-1.1.10.ebuild:
   Stable on amd64 wrt bug #364865
