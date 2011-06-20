@@ -1,6 +1,22 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.68 2011/06/18 17:15:07 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.69 2011/06/20 05:23:29 pva Exp $
+
+*oprofile-0.9.7_rc1 (20 Jun 2011)
+*oprofile-0.9.6-r1 (20 Jun 2011)
+
+  20 Jun 2011; Peter Volkov <pva@gentoo.org> +oprofile-0.9.6-r1.ebuild,
+  +files/oprofile-0.9.6-Add-argument-checking-for-numerical-arguments.patch,
+  +files/oprofile-0.9.6-Avoid-blindly-source-SETUP_FILE-with.patch,
+  +files/oprofile-0.9.6-Avoid-using-bash.patch,
+  +files/oprofile-0.9.6-Do-additional-checks-on-user-supplied-arguments.patch,
+  +files/oprofile-0.9.6-Ensure-that-save-only-saves-things-in-SESSION_DIR.patch
+  ,
+  +files/oprofile-0.9.6-Fix-opcontrol-status-to-show-accurate-information.patch
+  , +oprofile-0.9.7_rc1.ebuild, metadata.xml:
+  Fixes privilege escalation with sudo (CVE-2011-1760), bug #366699 thank Tim
+  Sammut for report. Bump release candidate: new qt4 gui added java support.
+  Took maintaining.
 
   18 Jun 2011; Michał Januszewski <spock@gentoo.org> metadata.xml:
   Reassigning to maintainer-needed.
