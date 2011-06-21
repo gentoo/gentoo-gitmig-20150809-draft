@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/mammoth-1.0.ebuild,v 1.4 2011/06/21 09:40:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/mammoth-1.0.ebuild,v 1.5 2011/06/21 16:07:37 jlec Exp $
 
 inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs
 
@@ -14,6 +14,11 @@ LICENSE="mammoth"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+DEPEND="
+	virtual/fortran
+	"
+RDEPEND="${DEPEND}"
 
 RESTRICT="fetch"
 
