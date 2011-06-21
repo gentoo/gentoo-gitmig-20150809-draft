@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/ikvm-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.14 2010/12/06 14:12:01 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.15 2011/06/21 13:37:56 phajdan.jr Exp $
+
+  21 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ikvm-bin-0.44.0.6.ebuild:
+  x86 stable wrt bug #371163
 
 *ikvm-bin-0.44.0.6 (06 Dec 2010)
 
