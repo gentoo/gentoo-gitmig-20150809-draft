@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.0.ebuild,v 1.5 2011/06/19 15:37:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.0.ebuild,v 1.6 2011/06/21 09:40:15 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -40,6 +40,7 @@ PYTHON_NONVERSIONED_EXECUTABLES=("/usr/bin/f2py[[:digit:]]+\.[[:digit:]]+")
 DOCS="COMPATIBILITY DEV_README.txt THANKS.txt"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	python_pkg_setup
 
 	# See progress in http://projects.scipy.org/scipy/numpy/ticket/573

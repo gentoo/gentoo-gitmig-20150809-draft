@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.15 2011/04/03 11:46:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.16 2011/06/21 09:40:15 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
 
-inherit distutils eutils flag-o-matic toolchain-funcs versionator
+inherit distutils eutils fortran-2 flag-o-matic toolchain-funcs versionator
 
 NP="${PN}-1.5"
 
@@ -37,6 +37,7 @@ PYTHON_CFLAGS=("* + -fno-strict-aliasing")
 DOCS="COMPATIBILITY DEV_README.txt THANKS.txt"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	python_pkg_setup
 
 	# See progress in http://projects.scipy.org/scipy/numpy/ticket/573
