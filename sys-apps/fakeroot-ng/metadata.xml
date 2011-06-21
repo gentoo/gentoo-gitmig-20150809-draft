@@ -3,8 +3,15 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>spock@gentoo.org</email>
-		<name>Michał Januszewski</name>
+		<email>anthoine.bourgeois@gmail.com</email>
+		<description>Maintainer, assign bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>dilfridge@gentoo.org</email>
+		<description>Proxy Maintainer, CC on bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>c1pher@gentoo.org</email>
+		<description>Proxy Maintainer, CC on bugs</description>
 	</maintainer>
 </pkgmetadata>
-
