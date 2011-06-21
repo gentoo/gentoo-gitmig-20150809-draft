@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.3.ebuild,v 1.3 2011/03/28 18:14:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.5.3.ebuild,v 1.4 2011/06/21 09:57:18 jlec Exp $
 
 EAPI=3
-inherit eutils multilib flag-o-matic toolchain-funcs
+inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs
 
 MY_P=${P/-mpi}
 S=${WORKDIR}/${MY_P}
@@ -29,6 +29,7 @@ RDEPEND="pbs? ( sys-cluster/torque )
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if use mpi-threads; then
 		echo
 		ewarn "WARNING: use of MPI_THREAD_MULTIPLE is still disabled by"
