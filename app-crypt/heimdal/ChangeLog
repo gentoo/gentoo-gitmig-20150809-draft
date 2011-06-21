@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.174 2011/03/25 07:27:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.175 2011/06/21 08:20:04 eras Exp $
+
+*heimdal-1.5_pre20110620 (21 Jun 2011)
+
+  21 Jun 2011; Eray Aslan <eras@gentoo.org> +heimdal-1.5_pre20110620.ebuild:
+  Version bump
 
   25 Mar 2011; Eray Aslan <eras@gentoo.org> heimdal-1.3.3-r1.ebuild:
   remove left over virtual/krb5 - bug 360265
