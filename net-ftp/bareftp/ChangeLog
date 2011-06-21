@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/bareftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/ChangeLog,v 1.8 2011/04/18 16:23:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/bareftp/ChangeLog,v 1.9 2011/06/21 13:51:03 phajdan.jr Exp $
+
+  21 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bareftp-0.3.8.ebuild:
+  x86 stable wrt bug #371163
 
 *bareftp-0.3.8 (18 Apr 2011)
 
