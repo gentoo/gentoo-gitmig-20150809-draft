@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.3 2011/06/21 14:05:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.4 2011/06/21 14:11:31 jlec Exp $
 
 # Author Justin Lecher <jlec@gentoo.org>
 # Test functions provided by Sebastien Fabbro and Kacper Kowalik
@@ -11,7 +11,8 @@
 # sci@gentoo.org
 # @BLURB: Simplify fortran compiler management
 # @DESCRIPTION:
-# If you need a fortran compiler, then you should be inheriting this eclass.
+# If you need a fortran compiler, then you should be inheriting this eclass and
+# adding virtual/fortran to your dependencies.
 # The eclass tests for working fortran compilers
 # and exports the variables FC and F77.
 # Optionally, it checks for extended capabilities based on
