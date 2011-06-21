@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.24.ebuild,v 1.6 2011/06/07 16:10:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.24.ebuild,v 1.7 2011/06/21 09:28:05 jlec Exp $
 
 EAPI=2
-inherit versionator autotools
+
+inherit autotools fortran-2 versionator
 
 MV=$(get_major_version)
 MY_PN=${PN}${MV}
@@ -22,12 +23,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	doc? ( http://home.thep.lu.se/~torbjorn/pythia/lutp${DOC_PV}man2.pdf )
 	examples? ( mirror://gentoo/${PN}-${EX_PV}-examples.tar.bz2 )"
 
-LICENSE="public-domain"
 SLOT="6"
+LICENSE="public-domain"
 KEYWORDS="amd64 x86"
 IUSE="doc examples static-libs"
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 src_prepare() {
 	cp ../pythia6/tpythia6_called_from_cc.F .

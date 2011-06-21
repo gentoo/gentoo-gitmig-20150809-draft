@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.45.ebuild,v 1.7 2011/06/07 16:10:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.45.ebuild,v 1.8 2011/06/21 09:28:05 jlec Exp $
 
 EAPI=2
 
@@ -13,8 +13,8 @@ DESCRIPTION="Lund Monte Carlo high-energy physics event generator"
 HOMEPAGE="http://home.thep.lu.se/~torbjorn/Pythia.html"
 SRC_URI="http://home.thep.lu.se/~torbjorn/${PN}${MV}/${MY_P}.tgz"
 
-LICENSE="GPL-2"
 SLOT="8"
+LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE="doc examples +hepmc static-libs"
 
