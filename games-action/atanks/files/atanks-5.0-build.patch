@@ -16,7 +16,7 @@ diff -ru atanks-4.6.orig/src/Makefile atanks-4.6/src/Makefile
  OFLAGS = 
  LFLAGS +=
 -LDFLAGS =  `allegro-config --libs`
-+LDFLAGS +=  `allegro-config --libs`
++LDFLAGS +=  `allegro-config --libs` -lm -lpthread
  
 -CFLAGS += -g -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
 +CXXFLAGS += -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
