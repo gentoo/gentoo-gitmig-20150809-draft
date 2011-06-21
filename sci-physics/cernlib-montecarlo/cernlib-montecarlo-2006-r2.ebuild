@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r2.ebuild,v 1.6 2010/10/10 21:52:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r2.ebuild,v 1.7 2011/06/21 09:54:24 jlec Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 DEB_PN=mclibs
 DEB_PV=${PV}.dfsg.2

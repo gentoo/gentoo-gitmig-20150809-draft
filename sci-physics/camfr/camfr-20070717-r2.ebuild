@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r2.ebuild,v 1.2 2010/06/25 22:37:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r2.ebuild,v 1.3 2011/06/21 09:59:44 jlec Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils distutils toolchain-funcs
+inherit eutils fortran-2 distutils toolchain-funcs
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="true"
 

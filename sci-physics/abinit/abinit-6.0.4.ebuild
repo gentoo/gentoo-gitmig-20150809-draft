@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-6.0.4.ebuild,v 1.2 2010/07/16 22:27:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/abinit-6.0.4.ebuild,v 1.3 2011/06/21 09:54:58 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs autotools
+inherit eutils fortran-2 toolchain-funcs autotools
 
 DESCRIPTION="Find total energy, charge density and electronic structure using density functional theory"
 HOMEPAGE="http://www.abinit.org/"
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	# Doesn't compile with gcc-4.0, only >=4.1
 	if [[ $(tc-getFC) == *gfortran ]]; then
 		if [[ $(gcc-major-version) -eq 4 ]] \

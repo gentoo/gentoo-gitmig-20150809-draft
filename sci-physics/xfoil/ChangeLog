@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/xfoil
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.14 2010/07/16 21:56:01 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.15 2011/06/21 09:55:39 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> xfoil-6.97.ebuild:
+  Added fortran-2.eclass support
 
   16 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> xfoil-6.97.ebuild:
   Remove fortran eclass use, switched to EAPI3

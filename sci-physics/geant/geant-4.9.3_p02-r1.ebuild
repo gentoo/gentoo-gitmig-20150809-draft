@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.4 2011/06/07 16:05:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.5 2011/06/21 09:54:14 jlec Exp $
 
 EAPI=3
 
-inherit eutils versionator toolchain-funcs
+inherit eutils fortran-2 versionator toolchain-funcs
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
@@ -51,6 +51,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	eval unset ${!G4*}
 	tc-export CXX CC
 }

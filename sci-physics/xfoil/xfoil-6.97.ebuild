@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.6 2010/07/16 21:56:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.7 2011/06/21 09:55:39 jlec Exp $
 
 EAPI=3
-inherit eutils
+inherit eutils fortran-2
 
 DESCRIPTION="Design and analysis of subsonic isolated airfoils"
 HOMEPAGE="http://raphael.mit.edu/xfoil/"

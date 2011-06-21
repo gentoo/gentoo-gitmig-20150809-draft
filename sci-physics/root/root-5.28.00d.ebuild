@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.1 2011/05/17 18:14:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.2 2011/06/21 09:55:10 jlec Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
-inherit versionator eutils elisp-common fdo-mime python toolchain-funcs flag-o-matic
+inherit versionator eutils fortran-2 elisp-common fdo-mime python toolchain-funcs flag-o-matic
 
 #DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 DOC_PV=5_26
@@ -82,6 +82,7 @@ RDEPEND="${CDEPEND}
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	elog
 	elog "There are extra options on packages not yet in Gentoo:"
 	elog "AliEn, castor, Chirp, dCache, gfal, gLite, Globus,"

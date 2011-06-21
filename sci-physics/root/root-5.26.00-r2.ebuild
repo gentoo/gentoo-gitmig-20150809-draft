@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r2.ebuild,v 1.11 2011/06/06 01:31:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00-r2.ebuild,v 1.12 2011/06/21 09:55:10 jlec Exp $
 
 EAPI=2
-inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs flag-o-matic
+inherit versionator eutils fortran-2 qt4 elisp-common fdo-mime toolchain-funcs flag-o-matic
 
 DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 ROOFIT_DOC_PV=2.91-33
@@ -75,6 +75,7 @@ RDEPEND="${CDEPEND}
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	elog
 	elog "You may want to build ROOT with these non Gentoo extra packages:"
 	elog "AliEn, castor, Chirp, dCache, gfal, gLite, Globus,"
