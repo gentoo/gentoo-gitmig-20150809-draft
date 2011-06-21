@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.8.ebuild,v 1.1 2011/06/20 17:43:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/gabedit-2.3.8.ebuild,v 1.2 2011/06/21 06:04:55 jlec Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	x11-libs/gtkglext
 	x11-libs/gl2ps
-	x11-libs/pango[X]
+	x11-libs/pango
 	virtual/opengl
 	virtual/glu"
 DEPEND="${RDEPEND}
@@ -40,11 +40,12 @@ src_prepare() {
 	sed \
 		-e "/GTK_DISABLE_DEPRECATED/s:define:undef:g" \
 		-i "${S}/Config.h" || die
+	sed -e 's:-g::g' -i Makefile || die
 	cp "${FILESDIR}"/CONFIG.Gentoo "${S}"/CONFIG
 
 	if use openmp && tc-has-openmp; then
 		cat <<- EOF >> "${S}/CONFIG"
-			OMPLIB=-L/usr/$(get_libdir) -lgomp
+			OMPLIB=-fopenmp
 			OMPCFLAGS=-DENABLE_OMP -fopenmp
 		EOF
 	fi
