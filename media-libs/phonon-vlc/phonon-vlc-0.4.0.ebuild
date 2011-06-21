@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.4.0.ebuild,v 1.3 2011/05/22 14:51:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.4.0.ebuild,v 1.4 2011/06/21 11:58:16 hwoarang Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-vlc"
 SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+[[ ${PV} == 9999 ]] || KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE="debug v4l2"
 
