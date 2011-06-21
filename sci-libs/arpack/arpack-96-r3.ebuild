@@ -1,16 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r3.ebuild,v 1.3 2011/03/13 12:00:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r3.ebuild,v 1.4 2011/06/21 08:13:26 jlec Exp $
 
 EAPI=4
-inherit eutils autotools toolchain-funcs flag-o-matic
+
+inherit autotools eutils flag-o-matic fortran-2 toolchain-funcs
 
 DESCRIPTION="Arnoldi package library to solve large scale eigenvalue problems."
 HOMEPAGE="http://www.caam.rice.edu/software/ARPACK/"
-SRC_URI="http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${PV}.tar.gz
+SRC_URI="
+	http://www.caam.rice.edu/software/ARPACK/SRC/${PN}${PV}.tar.gz
 	http://www.caam.rice.edu/software/ARPACK/SRC/p${PN}${PV}.tar.gz
 	http://dev.gentoo.org/~bicatali/${P}-patches-2.tar.bz2
-	doc? ( http://www.caam.rice.edu/software/ARPACK/SRC/ug.ps.gz
+	doc? (
+		http://www.caam.rice.edu/software/ARPACK/SRC/ug.ps.gz
 		http://www.caam.rice.edu/software/ARPACK/DOCS/tutorial.ps.gz )"
 
 LICENSE="BSD"
