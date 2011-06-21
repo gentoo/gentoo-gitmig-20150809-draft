@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.2 2011/06/21 08:06:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.3 2011/06/21 14:05:30 jlec Exp $
 
 # Author Justin Lecher <jlec@gentoo.org>
 # Test functions provided by Sebastien Fabbro and Kacper Kowalik
@@ -33,9 +33,6 @@
 : ${FORTRAN_STANDARD:=77}
 
 inherit toolchain-funcs
-
-DEPEND="virtual/fortran"
-RDEPEND="${DEPEND}"
 
 # @FUNCTION: _write_testsuite
 # @DESCRIPTION: writes fortran test code
