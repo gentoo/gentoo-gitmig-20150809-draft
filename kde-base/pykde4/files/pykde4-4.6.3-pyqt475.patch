@@ -1,0 +1,30 @@
+diff -ruN pykde4-4.6.3.orig/python/pykde4/tools/pykdeuic4/pykdeuic4.py pykde4-4.6.3/python/pykde4/tools/pykdeuic4/pykdeuic4.py
+--- pykde4-4.6.3.orig/python/pykde4/tools/pykdeuic4/pykdeuic4.py	2011-04-28 15:29:23.000000000 +0200
++++ pykde4-4.6.3/python/pykde4/tools/pykdeuic4/pykdeuic4.py	2011-06-21 21:54:52.992764623 +0200
+@@ -45,7 +45,7 @@
+     def __init__(self,string, disambig=None):
+         original_i18n_string.__init__(self,string, disambig)
+     def __str__(self):
+-        return "kdecore.i18n(\"%s\")" % (qtproxies.escape(self.string),)
++        return "kdecore.i18n(%s)" % (qtproxies.escape(self.string),)
+ 
+ qtproxies.i18n_string = kde_i18n_string
+ 
+@@ -78,7 +78,7 @@
+     indenter.indentwidth = indent
+     comp = compiler.UICompiler()
+     comp.factory._cwFilters.append(kdeFilter())
+-    winfo = comp.compileUi(uifile, output)
++    winfo = comp.compileUi(uifile, output, None)
+ 
+     if exe:
+         output.write("""
+@@ -111,7 +111,7 @@
+     app = kdeui.KApplication()
+     mainWindow = MainWin(None, "main window")
+     mainWindow.show()
+-    app.connect (app, QtCore.SIGNAL ("lastWindowClosed ()"), app.quit)
++    app.lastWindowClosed.connect(app.quit)
+     app.exec_ ()
+ """)
+ 

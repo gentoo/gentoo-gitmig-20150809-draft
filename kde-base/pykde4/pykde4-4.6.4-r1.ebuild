@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.6.4.ebuild,v 1.1 2011/06/10 18:00:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.6.4-r1.ebuild,v 1.1 2011/06/21 20:06:39 dilfridge Exp $
 
 EAPI=3
 
@@ -32,6 +32,8 @@ DEPEND="
 	!aqua? ( >=dev-python/PyQt4-4.8.2[dbus,declarative,sql,svg,webkit,X] )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-4.6.4-pyqt475.patch" )
 
 pkg_setup() {
 	python_pkg_setup
