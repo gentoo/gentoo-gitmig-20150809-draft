@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.38 2011/06/21 10:30:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.39 2011/06/21 16:12:06 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> opencv-2.1.0.ebuild,
+  opencv-2.2.0.ebuild, opencv-2.2.0-r10.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> opencv-2.1.0.ebuild,
   opencv-2.2.0.ebuild, opencv-2.2.0-r10.ebuild:

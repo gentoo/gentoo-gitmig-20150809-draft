@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.4 2011/06/21 10:30:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.5 2011/06/21 16:12:06 jlec Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ inherit base cmake-utils fortran-2 python
 
 MY_P=OpenCV-${PV}
 
-DESCRIPTION="A collection of algorithms and sample code for various computer vision problems."
+DESCRIPTION="A collection of algorithms and sample code for various computer vision problems"
 HOMEPAGE="http://opencv.willowgarage.com"
 SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 
@@ -29,6 +29,7 @@ RDEPEND="
 	>=sci-libs/clapack-3.2.1-r4
 	sci-libs/flann
 	virtual/lapack
+	virtual/fortran
 	cuda? (
 		>=dev-util/nvidia-cuda-toolkit-3.2
 		>=dev-util/nvidia-cuda-npp-3.2

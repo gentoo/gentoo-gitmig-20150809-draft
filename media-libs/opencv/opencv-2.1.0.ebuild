@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.9 2011/06/21 10:30:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.10 2011/06/21 16:12:06 jlec Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ inherit cmake-utils eutils flag-o-matic python
 
 MY_P=OpenCV-${PV}
 
-DESCRIPTION="A collection of algorithms and sample code for various computer vision problems."
+DESCRIPTION="A collection of algorithms and sample code for various computer vision problems"
 HOMEPAGE="http://opencv.willowgarage.com"
 SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 
@@ -19,9 +19,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug +deprecated examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k octave png python sse sse2 sse3 ssse3 test tiff v4l xine"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="
+	sys-libs/zlib
+	virtual/fortran
 	ipp? ( sci-libs/ipp )
-	ieee1394? ( sys-libs/libraw1394
+	ieee1394? (
+		sys-libs/libraw1394
 		media-libs/libdc1394:2 )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? ( media-libs/gstreamer )
