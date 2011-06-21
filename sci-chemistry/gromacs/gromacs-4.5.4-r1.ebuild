@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.5 2011/05/01 16:49:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.6 2011/06/21 06:41:37 jlec Exp $
 
 EAPI="4"
 
@@ -128,8 +128,8 @@ src_configure() {
 	fi
 
 	# if we need external blas or lapack
-	use blas && export LIBS+=" $(pkg-config blas --libs)"
-	use lapack && export LIBS+=" $(pkg-config lapack --libs)"
+	use blas && append-libs $(pkg-config blas --libs)
+	use lapack && append-libs $(pkg-config lapack --libs)
 	local sseflag="x86-64-sse"
 	use x86 && sseflag="ia32-sse"
 

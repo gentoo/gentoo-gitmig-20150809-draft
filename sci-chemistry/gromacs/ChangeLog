@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.86 2011/06/08 16:21:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.87 2011/06/21 06:41:37 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> gromacs-4.5.4-r1.ebuild:
+  Use append-libs
 
 *gromacs-4.5.4-r2 (08 Jun 2011)
 
