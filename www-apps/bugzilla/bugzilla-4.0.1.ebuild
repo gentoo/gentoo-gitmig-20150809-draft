@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.1.ebuild,v 1.2 2011/06/19 16:55:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.1.ebuild,v 1.3 2011/06/21 20:10:31 idl0r Exp $
 
 EAPI="3"
 
@@ -17,9 +17,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="modperl extras graphviz mysql postgres test"
 
-DEPEND="test? ( >=dev-lang/perl-5.8.8 )"
-RDEPEND="
-	virtual/httpd-cgi
+COMMON_DEPS="
 	>=dev-lang/perl-5.8.8
 
 	>=virtual/perl-CGI-3.510
@@ -33,6 +31,19 @@ RDEPEND="
 	>=dev-perl/Email-MIME-1.904
 	dev-perl/URI
 	>=dev-perl/List-MoreUtils-0.22
+
+	virtual/perl-File-Path
+	virtual/perl-Scalar-List-Utils
+
+	>=virtual/perl-File-Spec-3.27.01
+	>=virtual/perl-MIME-Base64-3.07
+"
+
+DEPEND="test? ( ${COMMON_DEPS} )"
+RDEPEND="
+	virtual/httpd-cgi
+
+	${COMMON_DEPS}
 
 	postgres? ( >=dev-perl/DBD-Pg-1.49 )
 	mysql? ( >=dev-perl/DBD-mysql-4.00.5 )
@@ -69,12 +80,6 @@ RDEPEND="
 		www-apache/mod_perl:1
 		>=dev-perl/Apache-SizeLimit-0.93
 	)
-
-	virtual/perl-File-Path
-	virtual/perl-Scalar-List-Utils
-
-	>=virtual/perl-File-Spec-3.27.01
-	>=virtual/perl-MIME-Base64-3.07
 
 	graphviz? ( media-gfx/graphviz )
 "

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.199 2011/06/17 10:38:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.200 2011/06/21 20:10:31 idl0r Exp $
+
+  21 Jun 2011; Christian Ruppert <idl0r@gentoo.org> bugzilla-4.0.1.ebuild:
+  Fix test dependencies.
 
 *bugzilla-4.0.1 (17 Jun 2011)
 *bugzilla-3.6.5 (17 Jun 2011)
