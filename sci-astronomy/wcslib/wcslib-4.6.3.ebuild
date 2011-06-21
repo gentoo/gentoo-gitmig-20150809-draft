@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.6.3.ebuild,v 1.2 2011/06/21 10:09:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.6.3.ebuild,v 1.3 2011/06/21 16:08:55 jlec Exp $
 
 EAPI=3
 
@@ -16,6 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc fortran fits pgplot test"
 
 RDEPEND="
+	fortran? ( virtual/fortran )
+
 	fits? ( sci-libs/cfitsio )
 	pgplot? ( sci-libs/pgplot )"
 DEPEND="${RDEPEND}
