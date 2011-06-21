@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>dertobi123@gentoo.org</email>
-  </maintainer>
   <herd>net-mail</herd>
   <use>
 	<flag name="replication">Enable replication support in the cyrus imap server</flag>
