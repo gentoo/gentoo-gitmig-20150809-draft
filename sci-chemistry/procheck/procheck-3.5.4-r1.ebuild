@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/procheck-3.5.4-r1.ebuild,v 1.3 2011/06/21 09:48:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/procheck-3.5.4-r1.ebuild,v 1.4 2011/06/21 15:58:06 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
-RDEPEND="app-shells/tcsh"
+RDEPEND="
+	virtual/fortran
+	app-shells/tcsh"
 DEPEND="${RDEPEND}"
 
 RESTRICT="fetch"

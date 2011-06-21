@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.9.2.ebuild,v 1.5 2011/06/21 09:49:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.9.2.ebuild,v 1.6 2011/06/21 15:57:37 jlec Exp $
 
 EAPI=3
 
@@ -20,6 +20,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
+	virtual/fortran
+
 	virtual/jpeg
 	media-libs/libpng
 	media-libs/tiff"

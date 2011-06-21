@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.3.0.ebuild,v 1.6 2011/06/21 09:11:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.3.0.ebuild,v 1.7 2011/06/21 15:58:04 jlec Exp $
 
 inherit autotools fortran-2 eutils
 
@@ -14,7 +14,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 # File collision, see bug #249423
-RDEPEND="!sci-visualization/extrema
+RDEPEND="
+	virtual/fortran
+	!sci-visualization/extrema
 	virtual/blas
 	virtual/lapack
 	>=sci-libs/libint-1.1.4"

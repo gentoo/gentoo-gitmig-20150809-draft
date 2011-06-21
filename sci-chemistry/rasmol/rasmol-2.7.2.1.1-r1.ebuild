@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.10 2011/06/21 08:48:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1-r1.ebuild,v 1.11 2011/06/21 15:57:41 jlec Exp $
 
 inherit fortran-2 toolchain-funcs
 
@@ -16,6 +16,8 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="
+	virtual/fortran
+
 	x11-libs/libXext
 	x11-libs/libXi
 	|| ( x11-apps/xdpyinfo x11-apps/xwininfo )"

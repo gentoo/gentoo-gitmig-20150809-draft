@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.13 2011/06/21 09:49:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.14 2011/06/21 15:57:37 jlec Exp $
 
 inherit fortran-2 toolchain-funcs
 
@@ -16,6 +16,8 @@ KEYWORDS="ppc x86"
 IUSE=""
 
 RDEPEND="
+	virtual/fortran
+
 	virtual/jpeg
 	media-libs/libpng
 	media-libs/tiff"

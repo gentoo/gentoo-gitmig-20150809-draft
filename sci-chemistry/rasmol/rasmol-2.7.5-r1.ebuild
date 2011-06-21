@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5-r1.ebuild,v 1.6 2011/06/21 08:48:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5-r1.ebuild,v 1.7 2011/06/21 15:57:41 jlec Exp $
 
 EAPI="3"
 
@@ -19,6 +19,8 @@ KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
+	virtual/fortran
+
 	x11-libs/cairo
 	x11-libs/gtk+:2
 	x11-libs/libXext

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.3 2011/06/21 07:55:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.4 2011/06/21 15:57:34 jlec Exp $
 
 EAPI=2
 
@@ -18,6 +18,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
+	virtual/fortran
+
 	sci-chemistry/makecif
 	>=sci-libs/ccp4-libs-6.1.3-r7
 	sci-libs/mmdb

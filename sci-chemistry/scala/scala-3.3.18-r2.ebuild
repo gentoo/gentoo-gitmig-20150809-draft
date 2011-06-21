@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r2.ebuild,v 1.2 2011/06/21 09:12:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r2.ebuild,v 1.3 2011/06/21 15:57:08 jlec Exp $
 
 EAPI="2"
 
@@ -16,6 +16,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
+	virtual/fortran
+
 	sci-libs/ccp4-libs
 	virtual/lapack
 	!<sci-chemistry/ccp4-6.1.2"
