@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.9 2010/12/16 08:55:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.10 2011/06/21 08:41:13 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
 
-inherit autotools eutils flag-o-matic python toolchain-funcs versionator
+inherit autotools eutils fortran-2 flag-o-matic python toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-3)
 MY_P="${PN}-${MY_PV}"
@@ -31,6 +31,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"/"${MY_P}-source"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	use python && python_set_active_version 2
 }
 

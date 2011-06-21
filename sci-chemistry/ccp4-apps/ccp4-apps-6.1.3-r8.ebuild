@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r8.ebuild,v 1.4 2011/03/04 17:02:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r8.ebuild,v 1.5 2011/06/21 08:41:27 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 
-inherit autotools eutils flag-o-matic gnuconfig python toolchain-funcs
+inherit autotools eutils fortran-2 flag-o-matic gnuconfig python toolchain-funcs
 
 MY_P="${PN/-apps}-${PV}"
 
@@ -103,6 +103,7 @@ PDEPEND="${SCIAPPS}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	python_set_active_version 2
 }
 
