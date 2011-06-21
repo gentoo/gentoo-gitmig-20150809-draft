@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.12.ebuild,v 1.9 2011/03/14 06:54:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.12.ebuild,v 1.10 2011/06/21 12:30:43 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -30,7 +30,6 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	>=app-text/hunspell-1.2
 	>=x11-libs/cairo-1.8.8[X]
-	x11-libs/pango[X]
 	x11-libs/libXt
 	x11-libs/pixman
 	>=dev-libs/libevent-1.4.7

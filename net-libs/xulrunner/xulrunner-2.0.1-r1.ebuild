@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.4 2011/05/16 17:58:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.5 2011/06/21 12:30:43 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -36,7 +36,6 @@ RDEPEND="
 	>=dev-libs/nspr-4.8.7
 	>=dev-libs/glib-2.26
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
-	x11-libs/pango[X]
 	media-libs/libpng[apng]
 	dev-libs/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
