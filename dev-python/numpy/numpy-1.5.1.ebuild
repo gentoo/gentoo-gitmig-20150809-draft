@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.17 2011/06/21 16:12:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.5.1.ebuild,v 1.18 2011/06/21 18:05:21 jlec Exp $
 
-EAPI="3"
+EAPI=3
+
 PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
@@ -27,8 +28,7 @@ IUSE="doc lapack test"
 
 RDEPEND="
 	dev-python/setuptools
-	virtual/fortran
-	lapack? ( virtual/cblas virtual/lapack )"
+	lapack? ( virtual/cblas virtual/lapack virtual/fortran )"
 DEPEND="${RDEPEND}
 	doc? ( app-arch/unzip )
 	lapack? ( dev-util/pkgconfig )
@@ -39,7 +39,7 @@ PYTHON_CFLAGS=("* + -fno-strict-aliasing")
 DOCS="COMPATIBILITY DEV_README.txt THANKS.txt"
 
 pkg_setup() {
-	fortran-2_pkg_setup
+	use lapack && fortran-2_pkg_setup
 	python_pkg_setup
 
 	# See progress in http://projects.scipy.org/scipy/numpy/ticket/573
@@ -53,9 +53,7 @@ pkg_setup() {
 	# linking with cblas and lapack library will force
 	# autodetecting and linking to all available fortran compilers
 	use lapack || return
-	[[ -z ${FC} ]] && FC=$(tc-getFC)
-	# when fortran flags are set, pic is removed.
-	FFLAGS="${FFLAGS} -fPIC"
+	append-fflags -fPIC
 	NUMPY_FCONFIG="config_fc --noopt --noarch"
 	# workaround bug 335908
 	[[ ${FC} == *gfortran* ]] && NUMPY_FCONFIG="${NUMPY_FCONFIG} --fcompiler=gnu95"
