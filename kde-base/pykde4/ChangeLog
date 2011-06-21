@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.117 2011/06/21 20:56:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.118 2011/06/21 21:50:15 dilfridge Exp $
+
+  21 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  pykde4-4.6.3-r1.ebuild, pykde4-4.6.4-r1.ebuild:
+  Optimize / cleanup only files belonging to PyKDE4, on request from Arfrever
 
   21 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   pykde4-4.6.3-r1.ebuild, pykde4-4.6.4-r1.ebuild:
