@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/raxml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/ChangeLog,v 1.5 2010/01/27 15:58:33 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/ChangeLog,v 1.6 2011/06/21 06:38:10 jlec Exp $
+
+*raxml-7.2.5-r1 (21 Jun 2011)
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> raxml-7.2.2.ebuild,
+  raxml-7.2.5.ebuild, +raxml-7.2.5-r1.ebuild,
+  +files/raxml-7.2.5-makefile.patch, metadata.xml:
+  Tweaking ebuild, respect LDFLAGS #335629
 
 *raxml-7.2.5 (27 Jan 2010)
 
