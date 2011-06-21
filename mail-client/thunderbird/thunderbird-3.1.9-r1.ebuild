@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.9-r1.ebuild,v 1.1 2011/04/26 18:10:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.9-r1.ebuild,v 1.2 2011/06/21 12:46:38 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -50,7 +50,6 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nspr-4.8.6
 	>=app-text/hunspell-1.2
 	x11-libs/cairo[X]
-	x11-libs/pango[X]
 	alsa? ( media-libs/alsa-lib )
 	gnome? ( >=gnome-base/gnome-vfs-2.16.3
 		>=gnome-base/libgnomeui-2.16.1
