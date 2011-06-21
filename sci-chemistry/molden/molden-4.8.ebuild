@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8.ebuild,v 1.4 2011/06/21 09:06:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8.ebuild,v 1.5 2011/06/21 16:03:06 jlec Exp $
 
 EAPI="2"
 
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
 IUSE="opengl"
 
-RDEPEND="opengl? ( media-libs/freeglut
+RDEPEND="
+	virtual/fortran
+	opengl? ( media-libs/freeglut
 	virtual/opengl )
 	x11-libs/libXmu"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6.ebuild,v 1.8 2011/06/21 09:06:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6.ebuild,v 1.9 2011/06/21 16:03:09 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,9 @@ IUSE=""
 
 S="${WORKDIR}"/${PN}
 
-DEPEND=""
+DEPEND="
+	virtual/fortran
+	"
 RDEPEND="
 	sci-libs/monomer-db
 	!<sci-chemistry/refmac-5.5.0110-r1"

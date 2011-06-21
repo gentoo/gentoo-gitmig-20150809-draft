@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.8 2011/06/21 09:42:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.9 2011/06/21 16:03:46 jlec Exp $
 
 EAPI="3"
 
@@ -18,7 +18,9 @@ IUSE="examples"
 RESTRICT="fetch"
 
 # we need libg2c for gfortran # 136988
-DEPEND="dev-lang/ifc"
+DEPEND="
+	virtual/fortran
+	dev-lang/ifc"
 RDEPEND="${DEPEND}"
 
 pkg_nofetch() {

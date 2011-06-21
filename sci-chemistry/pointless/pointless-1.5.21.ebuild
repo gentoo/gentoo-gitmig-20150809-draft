@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.5.21.ebuild,v 1.2 2011/06/21 08:46:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.5.21.ebuild,v 1.3 2011/06/21 16:01:55 jlec Exp $
 
 EAPI="3"
 
@@ -17,14 +17,15 @@ LICENSE="ccp4"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
-RDEPEND="
+DEPEND="
 	sci-chemistry/ccp4-apps
 	>=sci-libs/ccp4-libs-6.1.3
 	sci-libs/clipper
 	sci-libs/fftw:2.1
 	sci-libs/mmdb
-	>=sci-libs/cctbx-2010.03.29.2334-r3"
-DEPEND="${RDEPEND}"
+	>=sci-libs/cctbx-2010.03.29.2334-r3
+	virtual/fortran"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 

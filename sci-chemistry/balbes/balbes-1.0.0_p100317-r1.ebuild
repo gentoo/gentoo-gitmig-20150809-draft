@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317-r1.ebuild,v 1.4 2011/06/21 09:42:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317-r1.ebuild,v 1.5 2011/06/21 16:05:18 jlec Exp $
 
 EAPI="3"
 
@@ -20,7 +20,9 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4"
 IUSE=""
 
-COMMON_DEPEND="sci-libs/ccp4-libs"
+COMMON_DEPEND="
+	sci-libs/ccp4-libs
+	virtual/fortran"
 
 RDEPEND="
 	${COMMON_DEPEND}

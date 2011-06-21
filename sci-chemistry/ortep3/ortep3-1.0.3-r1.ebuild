@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ortep3-1.0.3-r1.ebuild,v 1.3 2011/06/21 09:46:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ortep3-1.0.3-r1.ebuild,v 1.4 2011/06/21 16:02:33 jlec Exp $
 
 EAPI=4
 
@@ -16,6 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
+	virtual/fortran
+
 	sci-libs/pgplot
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"

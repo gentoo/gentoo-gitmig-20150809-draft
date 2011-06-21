@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.6 2011/06/21 09:08:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r1.ebuild,v 1.7 2011/06/21 16:02:05 jlec Exp $
 
 EAPI="3"
 
@@ -24,11 +24,12 @@ IUSE="doc examples opal +pdb2pka"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
+	virtual/fortran
 	dev-python/numpy
 	sci-chemistry/openbabel
 	opal? ( dev-python/zsi )
 	pdb2pka? ( sci-chemistry/apbs[python,-mpi] )"
-DEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 

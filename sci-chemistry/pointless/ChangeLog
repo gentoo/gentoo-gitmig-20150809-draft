@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pointless
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.19 2011/06/21 15:59:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.20 2011/06/21 16:01:55 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> pointless-1.5.14.ebuild,
+  pointless-1.5.21.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> pointless-1.5.12.ebuild:
   Add dependency on virtual/fortran

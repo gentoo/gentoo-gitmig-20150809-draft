@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.7 2011/06/21 09:46:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.8 2011/06/21 16:03:14 jlec Exp $
 
 EAPI="4"
 
@@ -37,6 +37,8 @@ mpi +single-precision sse2 static-libs test +threads +xml zsh-completion"
 REQUIRED_USE="fkernels? ( !threads )"
 
 CDEPEND="
+	virtual/fortran
+
 	X? ( x11-libs/libX11
 		x11-libs/libSM
 		x11-libs/libICE )

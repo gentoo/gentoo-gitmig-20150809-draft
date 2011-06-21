@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3.ebuild,v 1.2 2011/06/21 09:44:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3.ebuild,v 1.3 2011/06/21 16:03:51 jlec Exp $
 
 EAPI="3"
 
@@ -22,7 +22,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="hardened mpi neo qmmm-tinker"
 
-CDEPEND="app-shells/tcsh
+CDEPEND="
+	virtual/fortran
+	app-shells/tcsh
 	hardened? ( sys-apps/paxctl )
 	mpi? ( virtual/mpi )
 	virtual/blas"

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20110126.ebuild,v 1.2 2011/06/21 09:10:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20110126.ebuild,v 1.3 2011/06/21 16:00:11 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,9 @@ IUSE="examples"
 
 # Can't do libf2c dependent on whether <gcc-4 is selected for the build,
 # so we must always require it
-RDEPEND="x11-libs/libX11"
+RDEPEND="
+	virtual/fortran
+	x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror"

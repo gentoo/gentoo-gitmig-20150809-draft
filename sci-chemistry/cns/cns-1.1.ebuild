@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.9 2011/06/21 08:46:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.10 2011/06/21 16:05:16 jlec Exp $
 
 inherit eutils fortran-2 toolchain-funcs
 
@@ -19,7 +19,9 @@ LICENSE="cns"
 KEYWORDS="ppc x86"
 IUSE="test"
 
-RDEPEND="app-shells/tcsh"
+RDEPEND="
+	virtual/fortran
+	app-shells/tcsh"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

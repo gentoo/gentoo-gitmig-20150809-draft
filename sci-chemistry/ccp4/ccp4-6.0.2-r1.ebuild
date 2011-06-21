@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.10 2011/06/21 09:42:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2-r1.ebuild,v 1.11 2011/06/21 16:05:14 jlec Exp $
 
 inherit eutils fortran-2 gnuconfig toolchain-funcs
 
@@ -54,6 +54,8 @@ IUSE="X"
 # as do many scripts. app-office/sc can't rename its because that's the name
 # of the package.
 RDEPEND="
+	virtual/fortran
+
 		>=dev-lang/tcl-8.3
 		>=dev-lang/tk-8.3
 		>=dev-tcltk/blt-2.4

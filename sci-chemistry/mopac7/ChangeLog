@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.27 2011/06/21 09:07:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.28 2011/06/21 16:02:40 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> mopac7-1.10-r1.ebuild,
+  mopac7-1.15.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> mopac7-1.10-r1.ebuild,
   mopac7-1.15.ebuild:

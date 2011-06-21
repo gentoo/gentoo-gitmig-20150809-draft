@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/oasis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.11 2011/06/21 09:08:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.12 2011/06/21 16:02:11 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> oasis-4.0-r2.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> oasis-4.0-r2.ebuild:
   Added fortran-2.eclass support

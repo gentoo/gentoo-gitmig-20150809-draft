@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.88 2011/06/21 09:46:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.89 2011/06/21 16:03:14 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> gromacs-4.5.4-r1.ebuild,
+  gromacs-4.5.4-r2.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> gromacs-4.5.4-r1.ebuild,
   gromacs-4.5.4-r2.ebuild:

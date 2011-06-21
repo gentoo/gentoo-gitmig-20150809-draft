@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.6 2011/06/21 09:07:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.7 2011/06/21 16:02:40 jlec Exp $
 
 EAPI="3"
 
@@ -18,7 +18,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="gmxmopac7 static-libs"
 
-DEPEND="dev-libs/libf2c"
+DEPEND="
+	virtual/fortran
+	dev-libs/libf2c"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

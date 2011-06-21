@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.6 2011/06/21 09:07:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.7 2011/06/21 16:02:40 jlec Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -13,7 +13,9 @@ LICENSE="mopac7"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
-RDEPEND="dev-libs/libf2c"
+RDEPEND="
+	virtual/fortran
+	dev-libs/libf2c"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

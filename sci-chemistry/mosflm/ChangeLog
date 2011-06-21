@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mosflm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.10 2011/06/21 09:08:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.11 2011/06/21 16:02:32 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> mosflm-7.0.6-r2.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> mosflm-7.0.6-r2.ebuild:
   Added fortran-2.eclass support
