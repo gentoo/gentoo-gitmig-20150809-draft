@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.768 2011/06/12 23:04:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.769 2011/06/21 20:36:38 dilfridge Exp $
+
+*kdelibs-4.6.4-r1 (21 Jun 2011)
+*kdelibs-4.6.3-r3 (21 Jun 2011)
+
+  21 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdelibs-4.6.3-r3.ebuild, +files/kdelibs-4.6.3-bytecode.patch,
+  +kdelibs-4.6.4-r1.ebuild:
+  Respect PYTHONDONTWRITEBYTECODE environmental variable in PYTHON_INSTALL
+  macro, bug 372407
 
   12 Jun 2011; Jonathan Callen <abcd@gentoo.org>
   -files/kdelibs-4.3.3-klauncher_kdeinit.patch,
