@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.87 2011/06/21 09:55:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.88 2011/06/21 14:31:50 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> root-5.26.00-r2.ebuild,
+  root-5.26.00e-r1.ebuild, root-5.28.00d.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> root-5.26.00-r2.ebuild,
   root-5.26.00e-r1.ebuild, root-5.28.00d.ebuild:

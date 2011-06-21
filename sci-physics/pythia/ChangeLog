@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.41 2011/06/21 09:28:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.42 2011/06/21 14:32:06 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> pythia-8.1.45.ebuild,
+  pythia-8.1.50.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> pythia-6.4.24.ebuild,
   pythia-6.4.25.ebuild, pythia-8.1.45.ebuild, pythia-8.1.50.ebuild:

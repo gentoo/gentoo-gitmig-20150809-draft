@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.19 2011/06/21 09:55:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.20 2011/06/21 14:33:07 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 toolchain-funcs
@@ -20,7 +20,9 @@ KEYWORDS="amd64 hppa sparc x86"
 SLOT="0"
 IUSE="static"
 
-RDEPEND="sci-physics/cernlib
+RDEPEND="
+	virtual/fortran
+sci-physics/cernlib
 	x11-libs/libXaw
 	>=x11-libs/openmotif-2.3:0
 	x11-libs/xbae"

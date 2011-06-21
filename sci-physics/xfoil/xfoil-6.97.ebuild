@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.7 2011/06/21 09:55:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.8 2011/06/21 14:31:36 jlec Exp $
 
 EAPI=3
 inherit eutils fortran-2
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc examples"
 
-RDEPEND="x11-libs/libX11"
+RDEPEND="
+	virtual/fortran
+x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/Xfoil"

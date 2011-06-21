@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.2 2011/06/21 09:55:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.3 2011/06/21 14:31:50 jlec Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -75,7 +75,9 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
 
-RDEPEND="${CDEPEND}
+RDEPEND="
+	virtual/fortran
+${CDEPEND}
 	reflex? ( dev-cpp/gccxml )
 	xinetd? ( sys-apps/xinetd )"
 
