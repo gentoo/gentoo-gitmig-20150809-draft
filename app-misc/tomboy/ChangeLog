@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.120 2011/06/15 16:14:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.121 2011/06/21 13:48:52 phajdan.jr Exp $
+
+  21 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tomboy-1.6.1.ebuild:
+  x86 stable wrt bug #371163
 
   15 Jun 2011; Pacho Ramos <pacho@gentoo.org> tomboy-1.6.1.ebuild:
   Prepare to set 'xz' as default compressor for eapi4.
