@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fceux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.12 2011/06/07 19:54:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.13 2011/06/21 06:21:34 tupone Exp $
+
+  21 Jun 2011; Tupone Alfredo <tupone@gentoo.org>
+  files/fceux-2.1.4a-underlink.patch, files/fceux-2.1.5-underlink.patch:
+  Fix again underlink. Bug #367675 by Diego Elio Pettenò
 
 *fceux-2.1.5 (07 Jun 2011)
 
