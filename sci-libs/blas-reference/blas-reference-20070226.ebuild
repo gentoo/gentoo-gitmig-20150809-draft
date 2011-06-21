@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.23 2011/06/21 08:19:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-20070226.ebuild,v 1.24 2011/06/21 09:24:27 jlec Exp $
 
 inherit eutils fortran-2 autotools multilib flag-o-matic toolchain-funcs
 
@@ -16,9 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 s390 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="
-	app-admin/eselect-blas
-	virtual/fortran"
+DEPEND="app-admin/eselect-blas"
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs )"
 

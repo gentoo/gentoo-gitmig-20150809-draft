@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r1.ebuild,v 1.8 2011/06/21 08:26:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r1.ebuild,v 1.9 2011/06/21 09:27:53 jlec Exp $
 
 EAPI=3
 
@@ -22,8 +22,7 @@ IUSE="doc"
 
 RDEPEND="
 	app-admin/eselect-lapack
-	virtual/blas
-	virtual/fortran"
+	virtual/blas"
 DEPEND="
 	${RDEPEND}
 	dev-util/pkgconfig
