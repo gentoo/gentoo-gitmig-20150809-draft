@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.320 2011/04/15 21:39:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.321 2011/06/21 20:14:18 williamh Exp $
+
+*dhcpcd-5.2.12-r1 (21 Jun 2011)
+
+  21 Jun 2011; William Hubbs <williamh@gentoo.org> +dhcpcd-5.2.12-r1.ebuild,
+  +files/dhcpcd.service:
+  revert patch from bug 350511, add systemd support for bug 372437 and
+  migrate to eapi 4. Thanks to mgorny@gentoo.org for systemd support.
 
   15 Apr 2011; Ulrich Mueller <ulm@gentoo.org> dhcpcd-5.2.12.ebuild:
   Don't PROVIDE virtual/dhcpc, bug 358827.
