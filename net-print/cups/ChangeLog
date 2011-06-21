@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.419 2011/06/18 20:01:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.420 2011/06/21 11:08:38 hwoarang Exp $
+
+  21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> cups-1.4.6-r2.ebuild:
+  Stable on amd64 wrt bug #333781
 
   18 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.4.6-r1.ebuild:
   Remove old
