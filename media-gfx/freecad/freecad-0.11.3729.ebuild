@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.11.3729.ebuild,v 1.3 2011/04/10 20:59:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.11.3729.ebuild,v 1.4 2011/06/21 10:31:12 jlec Exp $
 
 EAPI=3
+
 PYTHON_DEPEND=2
 
-inherit base eutils multilib autotools flag-o-matic python
+inherit base eutils fortran-2 multilib autotools flag-o-matic python
 
 MY_P="freecad-${PV}"
 MY_PD="FreeCAD-${PV}"
@@ -30,7 +31,6 @@ RDEPEND="
 	media-libs/SoQt
 	>=sci-libs/opencascade-6.3-r3
 	sci-libs/gts
-	sys-devel/gcc[fortran]
 	sys-libs/zlib
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
@@ -50,6 +50,7 @@ RESTRICT="bindist mirror"
 S="${WORKDIR}/${MY_PD}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	python_set_active_version 2
 }
 
