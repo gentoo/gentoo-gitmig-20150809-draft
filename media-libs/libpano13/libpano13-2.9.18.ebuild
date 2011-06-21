@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/libpano13-2.9.18.ebuild,v 1.1 2011/05/04 22:55:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/libpano13-2.9.18.ebuild,v 1.2 2011/06/21 18:23:27 maekke Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
 
 src_configure() {
-	econf \
+	LIBS="-lm" econf \
 		$(use_with java java ${JAVA_HOME}) \
 		$(use_enable static-libs static)
 }

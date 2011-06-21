@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpano13
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.27 2011/05/04 22:55:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.28 2011/06/21 18:23:27 maekke Exp $
+
+  21 Jun 2011; Markus Meier <maekke@gentoo.org> libpano13-2.9.18.ebuild:
+  fix underlinking, bug #367487
 
 *libpano13-2.9.18 (04 May 2011)
 
