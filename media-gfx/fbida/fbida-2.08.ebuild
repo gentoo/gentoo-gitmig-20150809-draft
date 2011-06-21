@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.08.ebuild,v 1.1 2011/06/18 18:29:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.08.ebuild,v 1.2 2011/06/21 21:31:06 spock Exp $
 
 EAPI=2
 
@@ -47,6 +47,7 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/ida-desktop.patch
+	epatch "${FILESDIR}"/fbida-2.08-posix-make.patch
 }
 
 src_configure() {
