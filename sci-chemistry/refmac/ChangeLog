@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/refmac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.45 2011/06/14 07:03:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.46 2011/06/21 07:55:41 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> refmac-5.5.0110-r2.ebuild,
+  refmac-5.5.0110-r3.ebuild, -refmac-5.6.0110.ebuild, -refmac-5.6.0116.ebuild,
+  refmac-5.6.0117.ebuild:
+  Added fortran-2.eclass and fix for ifort and pathscale
 
 *refmac-5.6.0117 (14 Jun 2011)
 

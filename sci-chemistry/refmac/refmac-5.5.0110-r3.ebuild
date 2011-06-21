@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.2 2011/04/21 07:08:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.3 2011/06/21 07:55:41 jlec Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit base toolchain-funcs versionator
+inherit base fortran-2 flag-o-matic toolchain-funcs versionator
 
 DESCRIPTION="Macromolecular crystallographic refinement program"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~garib/refmac"
@@ -25,6 +25,7 @@ RDEPEND="
 	virtual/blas
 	virtual/lapack"
 DEPEND="${RDEPEND}"
+FORTRAN_STANDARD="77 90"
 
 S="${WORKDIR}"
 
@@ -36,6 +37,12 @@ PATCHES=(
 src_prepare() {
 	base_src_prepare
 	use test && epatch "${FILESDIR}"/$(get_version_component_range 1-2 ${PV})-test.log.patch
+	[[ ${FC} == *gfortran* ]] && \
+		append-fflags -fno-second-underscore && \
+		append-cflags -DGFORTRAN -DPROTOTYPE && \
+		append-libs -lgfortran -lgfortranbegin -lstdc++
+	[[ ${FC} == *ifort* ]] && \
+		append-libs -lstdc++
 }
 
 src_compile() {
@@ -46,9 +53,11 @@ src_compile() {
 		COPTIM="${CFLAGS}" \
 		FOPTIM="${FFLAGS:- -O2}" \
 		VERSION="" \
-		XFFLAGS="-fno-second-underscore" \
-		LLIBCCP="-lccp4f -lccp4c -lccif $(pkg-config --libs mmdb) -lstdc++" \
+		XFFLAGS="" \
+		XCFLAGS="" \
+		LLIBCCP="-lccp4f -lccp4c -lccif $(pkg-config --libs mmdb)" \
 		LLIBLAPACK="$(pkg-config --libs lapack blas)" \
+		LLIBOTHERS="${LIBS}" \
 		${PN} libcheck || die
 }
 
