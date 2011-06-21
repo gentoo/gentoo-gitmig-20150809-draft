@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12855 2011/06/20 05:15:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12856 2011/06/21 07:16:58 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -254,16 +254,6 @@ www-client/opera-next
 # Eray Aslan <eras@gentoo.org> (22 May 2011)
 # Mask release candidates
 =mail-filter/amavisd-new-2.7.0_rc*
-
-# Markos Chandras <hwoarang@gentoo.org> (22 May 2011)
-# Does not build against gcc-4.5. Bug #322361
-# Removal in 30 days
-net-p2p/ghostwhitecrab
-
-# Markos Chandras <hwoarang@gentoo.org> (21 May 2011)
-# No upstream, no in-tree dependencies. Does not build.
-# Bug #334779. Pending removal in 30 days
-media-libs/sdl-gui
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 May 2011)
 # Some abandonware that fails to build with linux-headers-2.6.38,

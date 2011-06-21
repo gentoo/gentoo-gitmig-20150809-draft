@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5466 2011/06/20 05:15:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5467 2011/06/21 07:16:58 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  media-libs/sdl-gui and net-p2p/ghostwhitecrab are gone
 
   20 Jun 2011; Peter Volkov <pva@gentoo.org> package.mask:
   Mask dev-util/oprofile-0.9.7 release candidate
