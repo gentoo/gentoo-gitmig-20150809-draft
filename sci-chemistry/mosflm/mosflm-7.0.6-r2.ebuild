@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.6 2011/01/21 10:11:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/mosflm-7.0.6-r2.ebuild,v 1.7 2011/06/21 09:08:02 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs versionator
+inherit eutils fortran-2 toolchain-funcs versionator
 
 MY_PV="$(delete_all_version_separators)"
 MY_P="${PN}${MY_PV}"

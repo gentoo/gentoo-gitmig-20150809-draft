@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-6.ebuild,v 1.3 2010/12/17 08:07:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-6.ebuild,v 1.4 2011/06/21 09:13:12 jlec Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit flag-o-matic java-pkg-opt-2 toolchain-funcs
+inherit flag-o-matic fortran-2 java-pkg-opt-2 toolchain-funcs
 
 DESCRIPTION="Molecular modeling package that includes force fields, such as AMBER and CHARMM"
 HOMEPAGE="http://dasher.wustl.edu/tinker/"
@@ -27,6 +27,7 @@ RESTRICT="mirror"
 S="${WORKDIR}"/${PN}${PV}/source
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	java-pkg-opt-2_pkg_setup
 	tc-has-openmp || die "Please use an openmp capable compiler like gcc[openmp]"
 }

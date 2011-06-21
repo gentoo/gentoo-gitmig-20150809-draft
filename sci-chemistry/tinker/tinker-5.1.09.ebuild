@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.09.ebuild,v 1.4 2010/12/16 13:59:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tinker/tinker-5.1.09.ebuild,v 1.5 2011/06/21 09:13:12 jlec Exp $
 
 EAPI="2"
 
-inherit eutils java-pkg-opt-2 toolchain-funcs
+inherit eutils fortran-2 java-pkg-opt-2 toolchain-funcs
 
 DESCRIPTION="Molecular modeling package that includes force fields, such as AMBER and CHARMM"
 HOMEPAGE="http://dasher.wustl.edu/tinker/"
@@ -26,6 +26,7 @@ RESTRICT="mirror"
 S="${WORKDIR}"/tinker/source
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	java-pkg-opt-2_pkg_setup
 }
 

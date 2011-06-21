@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.02.ebuild,v 1.4 2011/01/31 19:43:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.02.ebuild,v 1.5 2011/06/21 09:07:02 jlec Exp $
 
 EAPI="3"
 
-inherit eutils multilib toolchain-funcs
+inherit eutils fortran-2 multilib toolchain-funcs
 
 DESCRIPTION="molecular replacement program"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/molrep.html"

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.8 2011/01/16 12:38:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.9 2011/06/21 09:13:05 jlec Exp $
 
-inherit autotools eutils flag-o-matic toolchain-funcs
+inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs
 
 DESCRIPTION="Programs for crystal structure determination from single-crystal diffraction data"
 HOMEPAGE="http://shelx.uni-ac.gwdg.de/SHELX/"

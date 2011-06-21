@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.24 2011/01/26 10:19:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.25 2011/06/21 09:10:27 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> platon-20110126.ebuild:
+  Added fortran-2.eclass support
 
 *platon-20110126 (26 Jan 2011)
 

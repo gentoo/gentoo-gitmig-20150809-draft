@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20110126.ebuild,v 1.1 2011/01/26 10:19:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20110126.ebuild,v 1.2 2011/06/21 09:10:27 jlec Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic multilib toolchain-funcs
+inherit eutils fortran-2 flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Versatile, SHELX-97 compatible, multipurpose crystallographic tool"
 HOMEPAGE="http://www.cryst.chem.uu.nl/platon/"

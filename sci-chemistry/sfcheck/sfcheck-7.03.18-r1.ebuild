@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/sfcheck-7.03.18-r1.ebuild,v 1.4 2011/01/18 16:16:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/sfcheck-7.03.18-r1.ebuild,v 1.5 2011/06/21 09:12:05 jlec Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="Program for assessing the agreement between the atomic model and X-ray data or EM map"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/sfcheck.html"

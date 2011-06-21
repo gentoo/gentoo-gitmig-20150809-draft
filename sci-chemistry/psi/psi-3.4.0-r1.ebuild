@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0-r1.ebuild,v 1.1 2010/07/06 11:36:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0-r1.ebuild,v 1.2 2011/06/21 09:11:41 jlec Exp $
 
 EAPI="3"
 
-inherit autotools eutils
+inherit autotools fortran-2 eutils
 
 DESCRIPTION="Suite of ab initio quantum chemistry programs to compute various molecular properties"
 HOMEPAGE="http://www.psicode.org/"

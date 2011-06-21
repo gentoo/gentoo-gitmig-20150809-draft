@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/sfcheck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/ChangeLog,v 1.8 2011/01/18 16:16:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/ChangeLog,v 1.9 2011/06/21 09:12:05 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> sfcheck-7.03.18-r1.ebuild:
+  Added fortran-2.eclass support
 
   18 Jan 2011; Thomas Kahle <tomka@gentoo.org> sfcheck-7.03.18-r1.ebuild:
   x86 stable per bug 351754

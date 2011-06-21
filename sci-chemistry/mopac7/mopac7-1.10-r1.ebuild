@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.5 2010/06/15 16:57:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.6 2011/06/21 09:07:54 jlec Exp $
 
 WANT_AUTOMAKE="1.8"
 
-inherit autotools
+inherit autotools fortran-2
 
 DESCRIPTION="Autotooled, updated version of a powerful, fast semi-empirical package"
 HOMEPAGE="http://sourceforge.net/projects/mopac7/"

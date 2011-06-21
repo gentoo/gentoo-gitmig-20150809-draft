@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.7 2010/12/16 15:09:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.8 2011/06/21 09:06:35 jlec Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils fortran-2 toolchain-funcs flag-o-matic
 
 MY_P="${PN}${PV}"
 DESCRIPTION="Display molecular density from GAMESS-UK, GAMESS-US, GAUSSIAN and Mopac/Ampac."
