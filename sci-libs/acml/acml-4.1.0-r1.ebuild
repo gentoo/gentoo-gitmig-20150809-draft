@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.8 2011/06/21 15:55:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.9 2011/06/21 20:06:52 mr_bones_ Exp $
 
 EAPI=1
 
@@ -23,7 +23,6 @@ SRC_URI="
 		ifc? ( ${MY_P}-ifort-32bit.tgz )
 		gfortran? ( ${MY_P}-gfortran-32bit.tgz )
 		!ifc? ( !gfortran? ( ${MY_P}-gfortran-32bit.tgz ) ) )"
-
 
 SLOT="0"
 LICENSE="ACML"
