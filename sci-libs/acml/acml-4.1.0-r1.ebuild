@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.7 2011/06/21 09:49:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.8 2011/06/21 15:55:47 jlec Exp $
 
-EAPI="1"
+EAPI=1
 
 inherit eutils fortran-2 toolchain-funcs versionator
 
@@ -24,13 +24,17 @@ SRC_URI="
 		gfortran? ( ${MY_P}-gfortran-32bit.tgz )
 		!ifc? ( !gfortran? ( ${MY_P}-gfortran-32bit.tgz ) ) )"
 
-LICENSE="ACML"
+
 SLOT="0"
+LICENSE="ACML"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="doc examples gfortran ifc int64 openmp test"
+
 RESTRICT="strip fetch"
 
-CDEPEND="ifc? ( dev-lang/ifc )
+CDEPEND="
+	virtual/fortran
+	ifc? ( dev-lang/ifc )
 	gfortran? ( sys-devel/gcc:4.2 )
 	!gfortran? ( !ifc? ( sys-devel/gcc:4.2 ) )"
 
@@ -66,7 +70,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
-	fortran-2_pkg_setup
+
 	if use test; then
 		# work around incomplete fortran eclass
 		if use gfortran &&
@@ -80,7 +84,9 @@ pkg_setup() {
 	fi
 	if use openmp; then
 		tc-has-openmp || die "Please ensure your compiler has openmp support"
+		FORTRAN_NEED_OPENMP=1
 	fi
+	fortran-2_pkg_setup
 	get_fcomp
 	# construct default profile dprof from default ddir
 	local ddir=gfortran

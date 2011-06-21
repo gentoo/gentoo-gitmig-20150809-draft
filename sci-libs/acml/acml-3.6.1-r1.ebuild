@@ -1,35 +1,37 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.12 2011/06/21 09:49:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.13 2011/06/21 15:55:47 jlec Exp $
 
 inherit eutils fortran-2 toolchain-funcs
 
+MY_PV=${PV//\./\-}
+
 DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
 HOMEPAGE="http://developer.amd.com/acml.jsp"
-
-MY_PV=${PV//\./\-}
-S=${WORKDIR}
 SRC_URI="x86? ( acml-${MY_PV}-gfortran-32bit.tgz )
 	   amd64? ( acml-${MY_PV}-gfortran-64bit.tgz
 	   int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz ) )"
 
-RESTRICT="strip fetch"
-IUSE="openmp int64 doc examples"
+SLOT="0"
 LICENSE="ACML"
 KEYWORDS="~amd64 ~x86"
-SLOT="0"
+IUSE="openmp int64 doc examples"
 
-DEPEND="openmp? ( >=sys-devel/gcc-4.2 )
-	!openmp? ( =sys-devel/gcc-4.1* )
+RESTRICT="strip fetch"
+
+DEPEND="
+	virtual/fortran
 	app-admin/eselect-blas
 	app-admin/eselect-lapack"
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )"
 
+S="${WORKDIR}"
+
 pkg_nofetch() {
 	einfo "Please download the ACML from:"
 	einfo "${HOMEPAGE}"
-	einfo "and place it in ${DISTDIR}"
+	einfo "and place it in ${DISTDIR}."
 	einfo "The previous versions could be found at"
 	einfo "http://developer.amd.com/acmlarchive.jsp"
 }
@@ -46,22 +48,15 @@ get_fcomp() {
 }
 
 pkg_setup() {
-	fortran-2_pkg_setup
 	elog "From version 3.5.0 on, ACML no longer supports"
 	elog "hardware without SSE/SSE2 instructions. "
 	elog "For older 32-bit without SSE/SSE2, use other blas/lapack libraries,"
 	elog "or file a bug if you wish to have earlier ACML versions supported."
-	if [[ $(tc-getFC) =~ gfortran ]]; then
-		local gcc_version=$(gcc-major-version)$(gcc-minor-version)
-		if ! use openmp && (( ${gcc_version} != 41 )); then
-			eerror "You need gcc-4.1.x to test acml."
-			eerror "Please use gcc-config to swicth gcc version 4.1.x"
-			die "setup gcc failed"
-		fi
-	fi
 	if use openmp; then
 		tc-has-openmp || die "Please ensure your compiler has openmp support"
+		FORTRAN_NEED_OPENMP=1
 	fi
+	fortran-2_pkg_setup
 	get_fcomp
 }
 

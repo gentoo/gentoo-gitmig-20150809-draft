@@ -1,33 +1,40 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.12 2011/06/21 09:49:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.13 2011/06/21 15:55:47 jlec Exp $
 
 inherit eutils fortran-2 toolchain-funcs
 
-DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
-HOMEPAGE="http://developer.amd.com/acml.jsp"
-
 MY_PV=${PV//\./\-}
 
-IUSE="openmp ifc doc examples"
-KEYWORDS="~amd64 ~x86"
+DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
+HOMEPAGE="http://developer.amd.com/acml.jsp"
+SRC_URI="
+	amd64? (
+		ifc?			( acml-${MY_PV}-ifort-64bit.tgz )
+	   !ifc? (
+			openmp? 	( acml-${MY_PV}-ifort-64bit.tgz )
+			!openmp?	( acml-${MY_PV}-gnu-64bit.tgz ) )
+		openmp?			( acml-${MY_PV}-ifort-64bit.tgz )
+			)
+	x86? (
+		ifc? 			( acml-${MY_PV}-ifort-32bit.tgz )
+		!ifc? (
+			openmp?		( acml-${MY_PV}-ifort-32bit.tgz )
+			!openmp?	( acml-${MY_PV}-gnu-32bit.tgz ) )
+		openmp?			( acml-${MY_PV}-ifort-32bit.tgz )
+		)"
 
-SRC_URI="amd64? ( ifc? ( acml-${MY_PV}-ifort-64bit.tgz )
-	   !ifc? ( openmp? ( acml-${MY_PV}-ifort-64bit.tgz )
-			  !openmp? ( acml-${MY_PV}-gnu-64bit.tgz ) )
-	   openmp?         ( acml-${MY_PV}-ifort-64bit.tgz ) )
-		   x86? ( ifc? ( acml-${MY_PV}-ifort-32bit.tgz )
-	   !ifc? ( openmp? ( acml-${MY_PV}-ifort-32bit.tgz )
-			  !openmp? ( acml-${MY_PV}-gnu-32bit.tgz ) )
-	   openmp?         ( acml-${MY_PV}-ifort-32bit.tgz ) )"
+SLOT="0"
+LICENSE="ACML"
+KEYWORDS="~amd64 ~x86"
+IUSE="openmp ifc doc examples"
 
 RESTRICT="strip fetch"
-LICENSE="ACML"
-SLOT="0"
 
-DEPEND="app-admin/eselect-blas
+DEPEND="
+	virtual/fortran
+	app-admin/eselect-blas
 	app-admin/eselect-lapack"
-
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )"
 
@@ -54,7 +61,6 @@ get_fcomp() {
 }
 
 pkg_setup() {
-	fortran-2_pkg_setup
 	elog "From version 3.5.0 on, ACML no longer supports"
 	elog "hardware without SSE/SSE2 instructions. "
 	elog "For older 32-bit without SSE/SSE2, use other blas/lapack libraries,"
@@ -65,7 +71,9 @@ pkg_setup() {
 	! use ifc && ! use openmp && FORTRAN=g77 && FORT=gnu
 	if use openmp; then
 		tc-has-openmp || die "Please ensure your compiler has openmp support"
+		FORTRAN_NEED_OPENMP=1
 	fi
+	fortran-2_pkg_setup
 	get_fcomp
 }
 
