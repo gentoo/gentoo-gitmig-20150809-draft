@@ -1,0 +1,10 @@
+--- Makefile.old	2011-06-21 16:29:54.921651946 +0200
++++ Makefile	2011-06-21 16:30:21.145295079 +0200
+@@ -8,6 +8,6 @@
+ LDLIBS :=  -lalleg 
+ CFLAGS += -DMINGW 
+ else
+-LDLIBS :=  `allegro-config --libs`
++LDLIBS :=  `allegro-config --libs` -lm
+ CFLAGS += `allegro-config --cflags` -DLINUX 
+ endif

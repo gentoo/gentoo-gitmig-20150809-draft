@@ -1,6 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20040629.ebuild,v 1.4 2011/03/26 17:26:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20040629.ebuild,v 1.5 2011/06/21 14:46:50 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -17,11 +18,9 @@ RDEPEND="<media-libs/allegro-5"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}/src"
+src_prepare() {
 	epatch "${FILESDIR}/gentoo-home-write.patch"
 	sed -i \
 		-e "s/-O3/${CFLAGS}/" \
@@ -35,13 +34,11 @@ src_unpack() {
 	sed -i \
 		-e "s:agreement.txt:${GAMES_DATADIR}/${PN}/&:" main.c \
 		|| die "sed failed"
-}
-
-src_compile() {
-	emake -C src || die "emake failed"
+	epatch "${FILESDIR}"/${P}-underlink.patch
 }
 
 src_install() {
+	cd ..
 	# install as fargoal instead of sword since that may conflict with
 	# other packages.
 	newgamesbin sword fargoal || die "newgamesbin failed"
