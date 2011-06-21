@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.35 2011/05/20 15:24:03 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.36 2011/06/21 11:12:37 hwoarang Exp $
+
+  21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> inn-2.5.2.ebuild:
+  Stable on amd64 wrt bug #362517
 
   20 May 2011; Thomas Kahle <tomka@gentoo.org> inn-2.5.2.ebuild:
   x86 stable per bug 362517
