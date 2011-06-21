@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.1 2011/06/21 06:44:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.2 2011/06/21 08:06:56 jlec Exp $
 
 # Author Justin Lecher <jlec@gentoo.org>
 # Test functions provided by Sebastien Fabbro and Kacper Kowalik
@@ -149,6 +149,6 @@ fortran-2_pkg_setup() {
 }
 
 case ${EAPI:-0} in
-	1|2|3|4) EXPORT_FUNCTIONS pkg_setup ;;
+	0|1|2|3|4) EXPORT_FUNCTIONS pkg_setup ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
