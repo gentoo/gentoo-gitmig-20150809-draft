@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.200 2011/06/19 19:26:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.201 2011/06/21 20:31:44 angelos Exp $
+
+*xfce4-panel-4.8.5 (21 Jun 2011)
+
+  21 Jun 2011; Christoph Mende <angelos@gentoo.org> +xfce4-panel-4.8.5.ebuild:
+  Version bump
 
 *xfce4-panel-4.8.4 (19 Jun 2011)
 
