@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5-r1.ebuild,v 1.3 2011/06/21 08:24:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5-r1.ebuild,v 1.4 2011/06/21 15:18:12 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 autotools
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples fortran jpeg2k openmp png perl python static-libs"
 
-DEPEND="jpeg2k? ( || ( media-libs/jasper media-libs/openjpeg ) )
+DEPEND="
+	fortran? ( virtual/fortran )
+	jpeg2k? ( || ( media-libs/jasper media-libs/openjpeg ) )
 	png? ( media-libs/libpng )
 	python? ( dev-python/numpy )"
 RDEPEND="${DEPEND}"

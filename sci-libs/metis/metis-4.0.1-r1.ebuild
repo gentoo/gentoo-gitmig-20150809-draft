@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.1-r1.ebuild,v 1.16 2011/06/21 08:32:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.1-r1.ebuild,v 1.17 2011/06/21 15:12:09 jlec Exp $
 
 inherit autotools eutils fortran-2
 
@@ -15,7 +15,9 @@ LICENSE="free-noncomm"
 IUSE="doc static-libs"
 SLOT="0"
 
-DEPEND=""
+DEPEND="
+	virtual/fortran
+	"
 RDEPEND="!sci-libs/parmetis"
 
 S="${WORKDIR}/${MYP}"

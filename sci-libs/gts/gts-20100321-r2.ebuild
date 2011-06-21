@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r2.ebuild,v 1.2 2011/06/21 08:25:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r2.ebuild,v 1.3 2011/06/21 15:18:09 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 autotools
@@ -15,6 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples test"
 
 RDEPEND="
+	virtual/fortran
+
 	dev-libs/glib:2
 	!<=sci-chemistry/ccp4-apps-6.1.3-r2"
 DEPEND="${RDEPEND}

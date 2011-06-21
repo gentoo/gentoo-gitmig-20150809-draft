@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.9 2011/06/21 09:51:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.10 2011/06/21 15:14:59 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 toolchain-funcs
@@ -13,7 +13,9 @@ LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc motif tk"
-RDEPEND="x11-libs/libX11
+RDEPEND="
+	virtual/fortran
+	x11-libs/libX11
 	x11-libs/libXt
 	media-libs/libpng
 	motif? ( >=x11-libs/openmotif-2.3:0 )

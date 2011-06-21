@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libnc-dap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/ChangeLog,v 1.7 2011/06/21 09:50:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/ChangeLog,v 1.8 2011/06/21 15:14:13 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> libnc-dap-3.7.3-r1.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> libnc-dap-3.7.3-r1.ebuild:
   Added fortran-2.eclass support

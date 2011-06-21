@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/qd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.6 2011/06/21 10:21:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.7 2011/06/21 15:08:06 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> qd-2.3.9.ebuild,
+  qd-2.3.11.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> qd-2.3.9.ebuild,
   qd-2.3.11.ebuild:

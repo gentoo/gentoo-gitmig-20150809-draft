@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.16 2011/06/21 08:25:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.17 2011/06/21 15:18:09 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> gts-20081607.ebuild,
+  gts-20090909.ebuild, gts-20100321-r1.ebuild, gts-20100321-r2.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> gts-20081607.ebuild,
   gts-20090909.ebuild, gts-20100321-r1.ebuild, gts-20100321-r2.ebuild:

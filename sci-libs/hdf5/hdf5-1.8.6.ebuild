@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.6.ebuild,v 1.3 2011/06/21 09:50:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.6.ebuild,v 1.4 2011/06/21 15:18:04 jlec Exp $
 
 EAPI=2
 
@@ -16,7 +16,9 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="cxx debug examples fortran mpi szip threads zlib"
 
-RDEPEND="mpi? ( virtual/mpi[romio] )
+RDEPEND="
+	fortran? ( virtual/fortran )
+	mpi? ( virtual/mpi[romio] )
 	szip? ( >=sci-libs/szip-2.1 )
 	zlib? ( sys-libs/zlib )"
 

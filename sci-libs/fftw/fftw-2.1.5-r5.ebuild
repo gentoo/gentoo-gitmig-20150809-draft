@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.20 2011/06/21 10:11:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.21 2011/06/21 15:19:08 jlec Exp $
 
 inherit eutils fortran-2 flag-o-matic autotools toolchain-funcs
 
@@ -8,7 +8,9 @@ DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
 HOMEPAGE="http://www.fftw.org"
 
-DEPEND="mpi? ( virtual/mpi )"
+DEPEND="
+	fortran? ( virtual/fortran )
+	mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
 SLOT="2.1"

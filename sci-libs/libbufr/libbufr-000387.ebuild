@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.5 2011/06/21 08:26:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.6 2011/06/21 15:15:13 jlec Exp $
 
 EAPI=3
 
@@ -19,7 +19,9 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE="debug doc examples"
 
-RDEPEND=""
+RDEPEND="
+	virtual/fortran
+	"
 
 DEPEND="sys-apps/findutils"
 

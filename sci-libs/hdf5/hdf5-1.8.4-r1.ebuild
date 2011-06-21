@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.14 2011/06/21 09:50:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.15 2011/06/21 15:18:04 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 autotools
@@ -15,7 +15,9 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 IUSE="cxx examples fortran mpi szip threads zlib"
 
-RDEPEND="mpi? ( || (
+RDEPEND="
+	fortran? ( virtual/fortran )
+	mpi? ( || (
 			sys-cluster/openmpi[romio]
 			sys-cluster/mpich2[romio] ) )
 	szip? ( >=sci-libs/szip-2.1 )

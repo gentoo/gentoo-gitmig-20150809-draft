@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.0.3.ebuild,v 1.3 2011/06/21 08:31:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.0.3.ebuild,v 1.4 2011/06/21 15:13:10 jlec Exp $
 
 inherit fortran-2
 
@@ -13,7 +13,9 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 x86"
 IUSE="examples"
 
-DEPEND=">=dev-scheme/guile-1.6"
+DEPEND="
+	virtual/fortran
+	>=dev-scheme/guile-1.6"
 RDEPEND="${DEPEND}"
 
 src_compile() {

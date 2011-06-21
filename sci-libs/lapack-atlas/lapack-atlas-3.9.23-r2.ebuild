@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r2.ebuild,v 1.5 2011/06/21 08:07:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r2.ebuild,v 1.6 2011/06/21 15:17:25 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,9 @@ SLOT="0"
 IUSE="doc"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
-CDEPEND="virtual/blas
+CDEPEND="
+	virtual/fortran
+	virtual/blas
 	virtual/cblas
 	app-admin/eselect-lapack
 	~sci-libs/blas-atlas-${BlasRelease}"

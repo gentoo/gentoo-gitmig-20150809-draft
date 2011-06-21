@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.91 2011/06/21 08:33:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.92 2011/06/21 15:08:50 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> netcdf-3.6.3.ebuild,
+  netcdf-4.1.1-r4.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> netcdf-3.6.3.ebuild,
   netcdf-4.1.1-r4.ebuild:

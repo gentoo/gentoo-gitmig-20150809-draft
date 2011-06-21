@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.15 2011/06/21 08:33:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.16 2011/06/21 15:12:15 jlec Exp $
 
 inherit eutils fortran-2 versionator toolchain-funcs
 
@@ -25,9 +25,11 @@ LICENSE="Intel-SDP"
 IUSE="serial int64 fortran95 fftw doc examples"
 RESTRICT="strip mirror"
 
-DEPEND="app-admin/eselect-blas
+DEPEND="
+	app-admin/eselect-blas
 	app-admin/eselect-cblas
-	app-admin/eselect-lapack"
+	app-admin/eselect-lapack
+	virtual/fortran"
 
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )"

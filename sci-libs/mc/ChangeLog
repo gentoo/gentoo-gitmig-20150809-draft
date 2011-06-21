@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/ChangeLog,v 1.4 2011/06/21 08:32:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/ChangeLog,v 1.5 2011/06/21 15:12:17 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> mc-1.4.ebuild, mc-1.5.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> mc-1.4.ebuild, mc-1.5.ebuild:
   Added fortran-2.eclass support
