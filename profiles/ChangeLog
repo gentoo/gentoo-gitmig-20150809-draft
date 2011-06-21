@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5467 2011/06/21 07:16:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5468 2011/06/21 07:55:42 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Mask libav 0.7 release instead of rc as lots still does not compile.
 
   21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   media-libs/sdl-gui and net-p2p/ghostwhitecrab are gone
