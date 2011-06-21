@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.7 2010/05/22 14:48:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.8 2011/06/21 09:57:06 jlec Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="scientific visualization tool"
 HOMEPAGE="http://www.cmap.polytechnique.fr/~jouve/xd3d/"

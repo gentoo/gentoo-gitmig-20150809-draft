@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.13 2011/06/13 11:33:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.14 2011/06/21 09:56:24 jlec Exp $
 
 EAPI=3
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="Motif based XY-plotting tool"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
