@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.14 2011/06/21 09:56:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.15 2011/06/21 14:24:39 jlec Exp $
 
 EAPI="3"
 
@@ -20,7 +20,9 @@ DEPEND="pbs? ( sys-cluster/torque )
 	!sys-cluster/mpich2
 	!app-misc/wipe"
 
-RDEPEND="${DEPEND}
+RDEPEND="
+	fortran? ( virtual/fortran )
+${DEPEND}
 	crypt? ( net-misc/openssh )
 	!crypt? ( net-misc/netkit-rsh )"
 

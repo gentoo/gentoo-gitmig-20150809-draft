@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.83 2011/06/21 09:57:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.84 2011/06/21 14:22:59 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> openmpi-1.4.2.ebuild,
+  openmpi-1.4.3.ebuild, openmpi-1.5.3.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> openmpi-1.4.2.ebuild,
   openmpi-1.4.3.ebuild, openmpi-1.5.3.ebuild:

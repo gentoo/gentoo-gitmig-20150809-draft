@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.7 2011/06/21 09:57:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1.ebuild,v 1.8 2011/06/21 14:24:37 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 java-utils-2 toolchain-funcs
@@ -23,7 +23,9 @@ COMMON_DEPEND="!minimal? ( x11-libs/libXtst
 DEPEND="!minimal? ( >=virtual/jdk-1.4 )
 	${COMMON_DEPEND}"
 
-RDEPEND="!minimal? ( >=virtual/jre-1.4 )
+RDEPEND="
+	fortran? ( virtual/fortran )
+!minimal? ( >=virtual/jre-1.4 )
 	${COMMON_DEPEND}"
 
 S="${WORKDIR}"/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.2.ebuild,v 1.15 2011/06/21 09:57:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.2.ebuild,v 1.16 2011/06/21 14:22:59 jlec Exp $
 
 EAPI=3
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs
@@ -16,7 +16,9 @@ SLOT="0"
 RESTRICT="mpi-threads? ( test )"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="+cxx elibc_FreeBSD fortran heterogeneous ipv6 mpi-threads pbs romio threads vt"
-RDEPEND="pbs? ( sys-cluster/torque )
+RDEPEND="
+	fortran? ( virtual/fortran )
+pbs? ( sys-cluster/torque )
 	vt? (
 		!dev-libs/libotf
 		!app-text/lcdf-typetools
