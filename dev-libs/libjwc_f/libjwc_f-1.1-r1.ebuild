@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.8 2011/06/21 10:04:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r1.ebuild,v 1.9 2011/06/21 16:12:50 jlec Exp $
 
 EAPI="2"
 
@@ -18,7 +18,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos"
 
 IUSE=""
-RDEPEND=""
+RDEPEND="
+	virtual/fortran
+	"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

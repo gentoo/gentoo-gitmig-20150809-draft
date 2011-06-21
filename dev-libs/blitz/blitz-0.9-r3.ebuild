@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.5 2011/06/21 09:39:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.6 2011/06/21 16:12:43 jlec Exp $
 
 EAPI=3
 
@@ -15,7 +15,9 @@ LICENSE="|| ( GPL-2 Blitz-Artistic )"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
 IUSE="debug doc examples"
 
-DEPEND="doc? ( app-doc/doxygen )"
+DEPEND="
+	virtual/fortran
+	doc? ( app-doc/doxygen )"
 RDEPEND=""
 
 src_prepare() {
