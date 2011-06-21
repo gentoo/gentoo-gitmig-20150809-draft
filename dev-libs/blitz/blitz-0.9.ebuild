@@ -1,17 +1,17 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.12 2010/12/16 15:01:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.13 2011/06/21 09:39:53 jlec Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.oonumerics.org/blitz"
 
-IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
+KEYWORDS="~amd64 ppc x86"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

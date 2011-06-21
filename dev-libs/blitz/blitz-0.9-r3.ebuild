@@ -1,18 +1,19 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.4 2010/12/16 15:01:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9-r3.ebuild,v 1.5 2011/06/21 09:39:53 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
-inherit eutils
+inherit eutils fortran-2
 
 DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.oonumerics.org/blitz"
-IUSE="debug doc examples"
+
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
 LICENSE="|| ( GPL-2 Blitz-Artistic )"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
+IUSE="debug doc examples"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
