@@ -1,6 +1,9 @@
 # ChangeLog for virtual/fortran
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.3 2011/05/28 11:17:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.4 2011/06/21 08:01:42 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> fortran-0.ebuild:
+  Added openmp support
 
   28 May 2011; Justin Lecher <jlec@gentoo.org> fortran-0.ebuild:
   Compiler is needed at build and runtime
