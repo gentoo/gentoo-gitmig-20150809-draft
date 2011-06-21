@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.1.ebuild,v 1.7 2010/12/17 08:08:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.0.1.ebuild,v 1.8 2011/06/21 09:49:53 jlec Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 MY_PV=${PV//\./\-}
 
@@ -50,6 +50,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if [[ $(tc-getFC) =~ gfortran ]]; then
 		local gcc_version=$(gcc-major-version)$(gcc-minor-version)
 		if ! use openmp && (( ${gcc_version} != 41 )); then

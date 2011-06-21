@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3-r1.ebuild,v 1.4 2011/03/02 20:57:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3-r1.ebuild,v 1.5 2011/06/21 09:50:51 jlec Exp $
 
 EAPI="1"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils fortran-2 flag-o-matic toolchain-funcs
 
 DESCRIPTION="An OPeNDAP-enabled version of the NetCDF 3.6 API that replaces the standard NetCDF library."
 HOMEPAGE="http://opendap.org/index.html"
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	<=sci-libs/libdap-3.8.2"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if use fortran; then
 		case "$(tc-getFC)" in
 			# probably needs more compilers here, of which I have

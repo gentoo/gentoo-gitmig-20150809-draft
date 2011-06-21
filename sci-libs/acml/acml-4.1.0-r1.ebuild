@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.6 2010/12/17 08:08:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.7 2011/06/21 09:49:53 jlec Exp $
 
 EAPI="1"
 
-inherit eutils toolchain-funcs versionator
+inherit eutils fortran-2 toolchain-funcs versionator
 
 MY_P=${PN}-$(replace_all_version_separators -)
 
@@ -66,6 +66,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if use test; then
 		# work around incomplete fortran eclass
 		if use gfortran &&

@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.8 2010/10/10 21:47:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.9 2011/06/21 09:51:45 jlec Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 MY_P="${PN}${PV//.}"
 DESCRIPTION="FORTRAN/C device-independent scientific graphic library"

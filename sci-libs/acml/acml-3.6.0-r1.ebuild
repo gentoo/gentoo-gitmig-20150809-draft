@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.11 2010/12/17 08:08:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.0-r1.ebuild,v 1.12 2011/06/21 09:49:53 jlec Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
 HOMEPAGE="http://developer.amd.com/acml.jsp"
@@ -54,6 +54,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	elog "From version 3.5.0 on, ACML no longer supports"
 	elog "hardware without SSE/SSE2 instructions. "
 	elog "For older 32-bit without SSE/SSE2, use other blas/lapack libraries,"
