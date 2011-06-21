@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.4 2009/09/20 21:46:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.5 2011/06/21 16:11:13 eras Exp $
 
 inherit eutils
 
@@ -15,11 +15,10 @@ RDEPEND="dev-lang/perl
 	dev-perl/net-server
 	dev-perl/Date-Calc
 	virtual/mailx
-	|| ( postgres? ( dev-perl/DBD-Pg )
-		sqlite? ( dev-perl/DBD-SQLite )
-		mysql? ( dev-perl/DBD-mysql )
-		dev-perl/DBD-Pg
-	)"
+	postgres? ( dev-perl/DBD-Pg )
+	sqlite? ( dev-perl/DBD-SQLite )
+	mysql? ( dev-perl/DBD-mysql )
+	!postgres? ( !mysql? ( !sqlite? ( dev-perl/DBD-Pg ) ) )"
 DEPEND="$RDEPEND
 	sys-apps/sed"
 KEYWORDS="amd64 ~sparc x86"

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/sqlgrey
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.13 2009/10/17 17:52:02 dertobi123 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.14 2011/06/21 16:11:13 eras Exp $
+
+  21 Jun 2011; Eray Aslan <eras@gentoo.org> sqlgrey-1.7.6.ebuild:
+  Fix conditional USE dependency - bug #168179
 
   17 Oct 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   -sqlgrey-1.6.7.ebuild, -sqlgrey-1.7.4.ebuild:
