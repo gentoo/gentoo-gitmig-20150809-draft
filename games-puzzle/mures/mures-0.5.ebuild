@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.8 2008/06/26 17:35:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.9 2011/06/21 12:42:28 tupone Exp $
+EAPI=2
 
 inherit autotools eutils games
 
@@ -21,10 +22,7 @@ DEPEND="media-libs/libsdl
 
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Disable OpenGL support if USE flag is not set
 	if ! use opengl ; then
 		sed -i \
@@ -37,6 +35,8 @@ src_unpack() {
 		src/lua/Makefile.am \
 		src/maps/battle/Makefile.am \
 		|| die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-underlink.patch
 
 	eautoreconf
 
