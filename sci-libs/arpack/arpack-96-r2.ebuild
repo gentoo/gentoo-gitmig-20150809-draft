@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.24 2011/06/21 08:13:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r2.ebuild,v 1.25 2011/06/21 15:42:33 jlec Exp $
 
 EAPI=2
 
@@ -21,7 +21,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc examples mpi static-libs"
 
-RDEPEND="virtual/blas
+RDEPEND="
+	virtual/fortran
+	virtual/blas
 	virtual/lapack
 	mpi? ( virtual/mpi[fortran] )"
 DEPEND="${RDEPEND}

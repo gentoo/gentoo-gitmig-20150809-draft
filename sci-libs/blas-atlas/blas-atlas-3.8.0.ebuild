@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.14 2011/06/21 08:18:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.15 2011/06/21 15:42:16 jlec Exp $
 
 inherit eutils fortran-2 toolchain-funcs multilib
 
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="doc"
 
-RDEPEND="app-admin/eselect-blas
+RDEPEND="
+	virtual/fortran
+	app-admin/eselect-blas
 	app-admin/eselect-cblas
 	doc? ( app-doc/blas-docs )"
 DEPEND="app-admin/eselect-blas

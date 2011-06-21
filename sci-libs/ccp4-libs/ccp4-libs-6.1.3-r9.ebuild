@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r9.ebuild,v 1.4 2011/06/21 08:22:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r9.ebuild,v 1.5 2011/06/21 15:37:52 jlec Exp $
 
 EAPI="3"
 
@@ -47,6 +47,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
+	virtual/fortran
 	dev-lang/tcl
 	app-shells/tcsh
 	!<sci-chemistry/ccp4-6.1.3

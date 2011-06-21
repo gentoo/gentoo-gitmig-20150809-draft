@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.104 2011/06/21 08:18:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.105 2011/06/21 15:42:16 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> blas-atlas-3.8.0.ebuild,
+  blas-atlas-3.8.2.ebuild, blas-atlas-3.9.3.ebuild, blas-atlas-3.9.21.ebuild,
+  blas-atlas-3.9.21-r1.ebuild, blas-atlas-3.9.23.ebuild,
+  blas-atlas-3.9.23-r2.ebuild, blas-atlas-3.9.23-r4.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> blas-atlas-3.8.0.ebuild,
   blas-atlas-3.8.2.ebuild, blas-atlas-3.9.3.ebuild, blas-atlas-3.9.21.ebuild,

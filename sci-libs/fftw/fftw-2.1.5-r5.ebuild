@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.21 2011/06/21 15:19:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r5.ebuild,v 1.22 2011/06/21 15:37:40 jlec Exp $
 
 inherit eutils fortran-2 flag-o-matic autotools toolchain-funcs
 
@@ -20,6 +20,7 @@ IUSE="doc float fortran mpi openmp threads"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86"
 
 pkg_setup() {
+	use openmp && FORTRAN_NEED_OPENMP="1"
 	use fortran && fortran-2_pkg_setup
 	# this one is reported to cause trouble on pentium4 m series
 	filter-mfpmath "sse"

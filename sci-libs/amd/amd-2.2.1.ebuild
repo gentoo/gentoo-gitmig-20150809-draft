@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.6 2011/06/21 08:11:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/amd-2.2.1.ebuild,v 1.7 2011/06/21 15:43:02 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc static-libs"
 
-RDEPEND="sci-libs/ufconfig"
+RDEPEND="
+	virtual/fortran
+	sci-libs/ufconfig"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
