@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.25.ebuild,v 1.2 2011/06/21 09:28:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.25.ebuild,v 1.3 2011/06/21 14:39:48 jlec Exp $
 
 EAPI=4
 
@@ -27,6 +27,9 @@ SLOT="6"
 LICENSE="public-domain"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples static-libs"
+
+DEPEND="virtual/fortran"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	cp ../pythia6/tpythia6_called_from_cc.F .
