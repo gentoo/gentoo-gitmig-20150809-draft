@@ -1,20 +1,23 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/qd-2.3.9.ebuild,v 1.1 2010/01/13 17:19:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/qd-2.3.9.ebuild,v 1.2 2011/06/21 10:21:34 jlec Exp $
 
 EAPI=2
-inherit eutils
+
+inherit eutils fortran-2
 
 DESCRIPTION="Quad-double and double-double float arithmetics"
-IUSE="fortran"
 HOMEPAGE="http://crd.lbl.gov/~dhbailey/mpdist/"
-LICENSE="BSD"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
-
 SRC_URI="http://crd.lbl.gov/~dhbailey/mpdist/${P}.tar.gz"
 
-DEPEND=""
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="~amd64 ~x86"
+IUSE="fortran"
+
+pkg_setup() {
+	use fortran && fortran-2_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.3.7-test.patch

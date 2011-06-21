@@ -1,19 +1,26 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.2.ebuild,v 1.3 2009/08/25 13:09:27 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.2.ebuild,v 1.4 2011/06/21 10:25:42 jlec Exp $
+
 EAPI=2
-inherit eutils
+
+inherit eutils fortran-2
 
 DESCRIPTION="Arbitrary precision float arithmetics and functions"
-IUSE="fortran qd"
 HOMEPAGE="http://crd.lbl.gov/~dhbailey/mpdist/"
-LICENSE="BSD"
-SLOT="0"
-KEYWORDS="~x86"
-
 SRC_URI="http://crd.lbl.gov/~dhbailey/mpdist/${P}.tar.gz"
 
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="~x86"
+IUSE="fortran qd"
+
 DEPEND="qd? ( sci-libs/qd )"
+RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	use fortran && fortran-2_pkg_setup
+}
 
 src_prepare() {
 	# bug #273996
@@ -21,7 +28,8 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable fortran enable_fortran) \
+	econf \
+		$(use_enable fortran enable_fortran) \
 		$(use_enable qd enable_qd)
 }
 
