@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.6 2009/08/17 21:36:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.7 2011/06/21 07:00:38 tupone Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
-inherit eutils wxwidgets games
+inherit eutils autotools wxwidgets games
 
 MY_P="${PN}_v${PV}"
 DESCRIPTION="Open source clone of the four-player board game Blokus"
@@ -22,11 +22,13 @@ DEPEND="x11-libs/wxGTK:2.8[X,opengl]
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	sed -i \
 		-e "s:wx-config:${WX_CONFIG}:" \
-		configure makefile.in \
+		configure.in makefile.am \
 		|| die "sed failed"
+	eautoreconf
 }
 
 src_install() {
