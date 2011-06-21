@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pointless
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.17 2011/05/12 15:06:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.18 2011/06/21 08:46:47 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> pointless-1.5.12.ebuild,
+  pointless-1.5.14.ebuild, pointless-1.5.21.ebuild:
+  Added fortran-2.eclass support
 
 *pointless-1.5.21 (12 May 2011)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5-r1.ebuild,v 1.5 2011/03/07 10:40:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5-r1.ebuild,v 1.6 2011/06/21 08:48:11 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs prefix
+inherit eutils fortran-2 toolchain-funcs prefix
 
 MY_P="RasMol_${PV}"
 VERS="23Jul09"

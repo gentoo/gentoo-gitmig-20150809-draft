@@ -1,20 +1,21 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.8 2010/12/17 07:54:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.9 2011/06/21 08:46:59 jlec Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 MY_PN="${PN}_solve"
 MY_P="${MY_PN}_${PV}"
 
 DESCRIPTION="Crystallography and NMR System"
 HOMEPAGE="http://cns.csb.yale.edu/"
-SRC_URI="${MY_P}_basic_inputs.tar.gz
+SRC_URI="
+	${MY_P}_basic_inputs.tar.gz
 	${MY_P}_data.tar.gz
 	test? ( ${MY_P}_test.tar.gz )"
 
-LICENSE="cns"
 SLOT="0"
+LICENSE="cns"
 KEYWORDS="ppc x86"
 IUSE="test"
 

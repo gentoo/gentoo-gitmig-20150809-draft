@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.23 2011/04/15 14:59:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.24 2011/06/21 08:48:11 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> rasmol-2.7.2.1.1-r1.ebuild,
+  rasmol-2.7.5-r1.ebuild, rasmol-2.7.5.1.ebuild:
+  Added fortran-2.eclass support
 
 *rasmol-2.7.5.1 (15 Apr 2011)
 

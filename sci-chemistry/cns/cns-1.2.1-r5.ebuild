@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.9 2011/05/28 12:20:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1-r5.ebuild,v 1.10 2011/06/21 08:46:59 jlec Exp $
 
 EAPI=3
 
-inherit eutils toolchain-funcs versionator flag-o-matic
+inherit eutils fortran-2 toolchain-funcs versionator flag-o-matic
 
 MY_PN="${PN}_solve"
 MY_PV="$(delete_version_separator 2)"
@@ -12,7 +12,8 @@ MY_P="${MY_PN}_${MY_PV}"
 
 DESCRIPTION="Crystallography and NMR System"
 HOMEPAGE="http://cns.csb.yale.edu/"
-SRC_URI="${MY_P}_all-mp.tar.gz
+SRC_URI="
+	${MY_P}_all-mp.tar.gz
 	aria? ( aria2.3.1.tar.gz )"
 
 SLOT="0"
@@ -23,8 +24,11 @@ IUSE="aria openmp"
 RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
 
-RESTRICT="fetch"
+FORTRAN_NEED_OPENMP=1
+
 S="${WORKDIR}/${MY_P}"
+
+RESTRICT="fetch"
 
 pkg_nofetch() {
 	elog "Fill out the form at http://cns.csb.yale.edu/cns_request/"
@@ -46,9 +50,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
-	if [[ $(tc-getFC) =~ gfortran ]]; then
-		tc-has-openmp || die "Please ensure your compiler has openmp support"
-	fi
+	fortran-2_pkg_setup
 	get_fcomp
 }
 
